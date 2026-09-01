@@ -590,7 +590,7 @@ function parseLinearGradientCSSString(str) {
             result = 0.9 * parsed;
           } else if ("rad" === tmp11) {
             const _Math = Math;
-            result = 180 * parsed / Math.PI;
+            result = (180 * parsed) / Math.PI;
           } else if ("turn" === tmp11) {
             result = 360 * parsed;
           } else {
@@ -768,7 +768,7 @@ function getAngleInDegrees(str) {
         return 0.9 * parsed;
       } else if ("rad" === tmp3) {
         const _Math = Math;
-        return 180 * parsed / Math.PI;
+        return (180 * parsed) / Math.PI;
       } else if ("turn" === tmp3) {
         return 360 * parsed;
       } else {
@@ -1061,4 +1061,4 @@ export default function processBackgroundImage(str) {
     }
     return items;
   }
-};
+}

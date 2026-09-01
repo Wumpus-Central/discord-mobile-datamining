@@ -6,8 +6,12 @@ import cancelAnimation from "01653_cancelAnimation.js";
 const useMemo = noop.useMemo;
 const Dimensions = get_ActivityIndicator.Dimensions;
 let closure_3 = Dimensions.get("window");
-let closure_4 = { code: "function pnpm_stackTs1(_value){const{screen,modeConfig,getCommonVariables,getCommonStyles,interpolate,Extrapolation}=this.__closure;const{showLength:showLength,snapDirection=\"left\",moveSize=screen.width,stackInterval=18,scaleInterval=0.04,opacityInterval=0.1,rotateZDeg=30}=modeConfig;const{validLength:validLength,value:value,inputRange:inputRange}=getCommonVariables({showLength:showLength,value:_value,snapDirection:snapDirection});const{zIndex:zIndex,opacity:opacity}=getCommonStyles({validLength:validLength,value:value,opacityInterval:opacityInterval,snapDirection:snapDirection});let translateX;let scale;let rotateZ;if(snapDirection===\"left\"){translateX=interpolate(value,inputRange,[-moveSize,0,validLength*stackInterval],Extrapolation.CLAMP);scale=interpolate(value,inputRange,[1,1,1-validLength*scaleInterval],Extrapolation.CLAMP);rotateZ=interpolate(value,inputRange,[-rotateZDeg,0,0],Extrapolation.CLAMP)+\"deg\";}else if(snapDirection===\"right\"){translateX=interpolate(value,inputRange,[-validLength*stackInterval,0,moveSize],Extrapolation.CLAMP);scale=interpolate(value,inputRange,[1-validLength*scaleInterval,1,1],Extrapolation.CLAMP);rotateZ=interpolate(value,inputRange,[0,0,rotateZDeg],Extrapolation.CLAMP)+\"deg\";}const transform=[{translateX:translateX},{scale:scale},{rotateZ:rotateZ}];const styles={transform:transform,zIndex:zIndex,opacity:opacity};return styles;}" };
-let closure_5 = { code: "function pnpm_stackTs2(_value){const{screen,modeConfig,getCommonVariables,getCommonStyles,interpolate,Extrapolation}=this.__closure;const{showLength:showLength,snapDirection=\"left\",moveSize=screen.width,stackInterval=18,scaleInterval=0.04,opacityInterval=0.1,rotateZDeg=30}=modeConfig;const{validLength:validLength,value:value,inputRange:inputRange}=getCommonVariables({showLength:showLength,value:_value,snapDirection:snapDirection});const{zIndex:zIndex,opacity:opacity}=getCommonStyles({validLength:validLength,value:value,opacityInterval:opacityInterval,snapDirection:snapDirection});let translateX;let scale;let rotateZ;let translateY;if(snapDirection===\"left\"){translateX=interpolate(value,inputRange,[-moveSize,0,0],Extrapolation.CLAMP);scale=interpolate(value,inputRange,[1,1,1-validLength*scaleInterval],Extrapolation.CLAMP);rotateZ=interpolate(value,inputRange,[-rotateZDeg,0,0],Extrapolation.CLAMP)+\"deg\";translateY=interpolate(value,inputRange,[0,0,validLength*stackInterval],Extrapolation.CLAMP);}else if(snapDirection===\"right\"){translateX=interpolate(value,inputRange,[0,0,moveSize],Extrapolation.CLAMP);scale=interpolate(value,inputRange,[1-validLength*scaleInterval,1,1],Extrapolation.CLAMP);rotateZ=interpolate(value,inputRange,[0,0,rotateZDeg],Extrapolation.CLAMP)+\"deg\";translateY=interpolate(value,inputRange,[validLength*stackInterval,0,0],Extrapolation.CLAMP);}const transform=[{translateX:translateX},{scale:scale},{rotateZ:rotateZ},{translateY:translateY}];const styles={transform:transform,zIndex:zIndex,opacity:opacity};return styles;}" };
+let closure_4 = {
+  code: 'function pnpm_stackTs1(_value){const{screen,modeConfig,getCommonVariables,getCommonStyles,interpolate,Extrapolation}=this.__closure;const{showLength:showLength,snapDirection="left",moveSize=screen.width,stackInterval=18,scaleInterval=0.04,opacityInterval=0.1,rotateZDeg=30}=modeConfig;const{validLength:validLength,value:value,inputRange:inputRange}=getCommonVariables({showLength:showLength,value:_value,snapDirection:snapDirection});const{zIndex:zIndex,opacity:opacity}=getCommonStyles({validLength:validLength,value:value,opacityInterval:opacityInterval,snapDirection:snapDirection});let translateX;let scale;let rotateZ;if(snapDirection==="left"){translateX=interpolate(value,inputRange,[-moveSize,0,validLength*stackInterval],Extrapolation.CLAMP);scale=interpolate(value,inputRange,[1,1,1-validLength*scaleInterval],Extrapolation.CLAMP);rotateZ=interpolate(value,inputRange,[-rotateZDeg,0,0],Extrapolation.CLAMP)+"deg";}else if(snapDirection==="right"){translateX=interpolate(value,inputRange,[-validLength*stackInterval,0,moveSize],Extrapolation.CLAMP);scale=interpolate(value,inputRange,[1-validLength*scaleInterval,1,1],Extrapolation.CLAMP);rotateZ=interpolate(value,inputRange,[0,0,rotateZDeg],Extrapolation.CLAMP)+"deg";}const transform=[{translateX:translateX},{scale:scale},{rotateZ:rotateZ}];const styles={transform:transform,zIndex:zIndex,opacity:opacity};return styles;}',
+};
+let closure_5 = {
+  code: 'function pnpm_stackTs2(_value){const{screen,modeConfig,getCommonVariables,getCommonStyles,interpolate,Extrapolation}=this.__closure;const{showLength:showLength,snapDirection="left",moveSize=screen.width,stackInterval=18,scaleInterval=0.04,opacityInterval=0.1,rotateZDeg=30}=modeConfig;const{validLength:validLength,value:value,inputRange:inputRange}=getCommonVariables({showLength:showLength,value:_value,snapDirection:snapDirection});const{zIndex:zIndex,opacity:opacity}=getCommonStyles({validLength:validLength,value:value,opacityInterval:opacityInterval,snapDirection:snapDirection});let translateX;let scale;let rotateZ;let translateY;if(snapDirection==="left"){translateX=interpolate(value,inputRange,[-moveSize,0,0],Extrapolation.CLAMP);scale=interpolate(value,inputRange,[1,1,1-validLength*scaleInterval],Extrapolation.CLAMP);rotateZ=interpolate(value,inputRange,[-rotateZDeg,0,0],Extrapolation.CLAMP)+"deg";translateY=interpolate(value,inputRange,[0,0,validLength*stackInterval],Extrapolation.CLAMP);}else if(snapDirection==="right"){translateX=interpolate(value,inputRange,[0,0,moveSize],Extrapolation.CLAMP);scale=interpolate(value,inputRange,[1-validLength*scaleInterval,1,1],Extrapolation.CLAMP);rotateZ=interpolate(value,inputRange,[0,0,rotateZDeg],Extrapolation.CLAMP)+"deg";translateY=interpolate(value,inputRange,[validLength*stackInterval,0,0],Extrapolation.CLAMP);}const transform=[{translateX:translateX},{scale:scale},{rotateZ:rotateZ},{translateY:translateY}];const styles={transform:transform,zIndex:zIndex,opacity:opacity};return styles;}',
+};
 function getCommonVariables(showLength) {
   ({ value, snapDirection } = showLength);
   let rounded = Math.floor(Math.abs(value));
@@ -46,7 +50,9 @@ function getCommonVariables(showLength) {
 }
 getCommonVariables.__closure = {};
 getCommonVariables.__workletHash = 9545327827217;
-getCommonVariables.__initData = { code: "function getCommonVariables_Pnpm_stackTs3(opts){const{showLength:showLength,value:_value,snapDirection:snapDirection}=opts;function easeInOutCubic(v){return v<0.5?4*v*v*v:1-(-2*v+2)**3/2;}const page=Math.floor(Math.abs(_value));const diff=Math.abs(_value)%1;const value=_value<0?-(page+easeInOutCubic(diff)):page+easeInOutCubic(diff);const validLength=showLength-1;let inputRange;if(snapDirection===\"left\")inputRange=[-1,0,validLength];else if(snapDirection===\"right\")inputRange=[-validLength,0,1];else throw new Error(\"snapDirection must be set to either left or right\");return{inputRange:inputRange,validLength:validLength,value:value};}" };
+getCommonVariables.__initData = {
+  code: 'function getCommonVariables_Pnpm_stackTs3(opts){const{showLength:showLength,value:_value,snapDirection:snapDirection}=opts;function easeInOutCubic(v){return v<0.5?4*v*v*v:1-(-2*v+2)**3/2;}const page=Math.floor(Math.abs(_value));const diff=Math.abs(_value)%1;const value=_value<0?-(page+easeInOutCubic(diff)):page+easeInOutCubic(diff);const validLength=showLength-1;let inputRange;if(snapDirection==="left")inputRange=[-1,0,validLength];else if(snapDirection==="right")inputRange=[-validLength,0,1];else throw new Error("snapDirection must be set to either left or right");return{inputRange:inputRange,validLength:validLength,value:value};}',
+};
 function getCommonStyles(arg0) {
   ({ snapDirection, validLength, value, opacityInterval } = arg0);
   if ("left" === snapDirection) {
@@ -67,7 +73,7 @@ function getCommonStyles(arg0) {
     throw error;
   } else {
     const _Math2 = Math;
-    const items4 = [-validLength, 0, , , ];
+    const items4 = [-validLength, 0, , ,];
     const _Number3 = Number;
     items4[2] = 1 - Number.MIN_VALUE;
     items4[3] = 1;
@@ -87,7 +93,9 @@ function getCommonStyles(arg0) {
 }
 getCommonStyles.__closure = { interpolate: cancelAnimation.interpolate };
 getCommonStyles.__workletHash = 9067239849373;
-getCommonStyles.__initData = { code: "function getCommonStyles_Pnpm_stackTs4(opts){const{interpolate}=this.__closure;const{snapDirection:snapDirection,validLength:validLength,value:value,opacityInterval:opacityInterval}=opts;let zIndex;let opacity;if(snapDirection===\"left\"){zIndex=Math.floor(interpolate(value,[-1.5,-1,-1+Number.MIN_VALUE,0,validLength],[Number.MIN_VALUE,validLength,validLength,validLength-1,-1])*10000)/100;opacity=interpolate(value,[-1,0,validLength-1,validLength],[0.25,1,1-(validLength-1)*opacityInterval,0.25]);}else if(snapDirection===\"right\"){zIndex=Math.floor(interpolate(value,[-validLength,0,1-Number.MIN_VALUE,1,1.5],[1,validLength-1,validLength,validLength,Number.MIN_VALUE])*10000)/100;opacity=interpolate(value,[-validLength,1-validLength,0,1],[0.25,1-(validLength-1)*opacityInterval,1,0.25]);}else{throw new Error(\"snapDirection must be set to either left or right\");}return{zIndex:Math.round(zIndex),opacity:opacity};}" };
+getCommonStyles.__initData = {
+  code: 'function getCommonStyles_Pnpm_stackTs4(opts){const{interpolate}=this.__closure;const{snapDirection:snapDirection,validLength:validLength,value:value,opacityInterval:opacityInterval}=opts;let zIndex;let opacity;if(snapDirection==="left"){zIndex=Math.floor(interpolate(value,[-1.5,-1,-1+Number.MIN_VALUE,0,validLength],[Number.MIN_VALUE,validLength,validLength,validLength-1,-1])*10000)/100;opacity=interpolate(value,[-1,0,validLength-1,validLength],[0.25,1,1-(validLength-1)*opacityInterval,0.25]);}else if(snapDirection==="right"){zIndex=Math.floor(interpolate(value,[-validLength,0,1-Number.MIN_VALUE,1,1.5],[1,validLength-1,validLength,validLength,Number.MIN_VALUE])*10000)/100;opacity=interpolate(value,[-validLength,1-validLength,0,1],[0.25,1-(validLength-1)*opacityInterval,1,0.25]);}else{throw new Error("snapDirection must be set to either left or right");}return{zIndex:Math.round(zIndex),opacity:opacity};}',
+};
 
 export const horizontalStackLayout = function horizontalStackLayout() {
   let obj = arg0;
@@ -154,7 +162,14 @@ export const horizontalStackLayout = function horizontalStackLayout() {
     const transform = [{ translateX: interpolateResult }, { scale: interpolateResult1 }, { rotateZ: combined }];
     return { transform, zIndex, opacity };
   };
-  obj = { screen: closure_3, modeConfig: obj, getCommonVariables, getCommonStyles, interpolate: obj(1653).interpolate, Extrapolation: obj(1653).Extrapolation };
+  obj = {
+    screen: closure_3,
+    modeConfig: obj,
+    getCommonVariables,
+    getCommonStyles,
+    interpolate: obj(1653).interpolate,
+    Extrapolation: obj(1653).Extrapolation,
+  };
   fn.__closure = obj;
   fn.__workletHash = 13118376883684;
   fn.__initData = closure_4;
@@ -244,7 +259,14 @@ export const useHorizontalStackLayout = function useHorizontalStackLayout() {
     const merged = Object.assign(obj);
     return obj;
   }, items);
-  fn.__closure = { screen: closure_3, modeConfig: obj, getCommonVariables, getCommonStyles, interpolate: obj(obj[2]).interpolate, Extrapolation: obj(obj[2]).Extrapolation };
+  fn.__closure = {
+    screen: closure_3,
+    modeConfig: obj,
+    getCommonVariables,
+    getCommonStyles,
+    interpolate: obj(obj[2]).interpolate,
+    Extrapolation: obj(obj[2]).Extrapolation,
+  };
   fn.__workletHash = 13118376883684;
   fn.__initData = closure_4;
   obj[0] = fn;
@@ -319,10 +341,22 @@ export const verticalStackLayout = function verticalStackLayout() {
       const items7 = [validLength * num, 0, 0];
       interpolateResult2 = obj9.interpolate(value, inputRange, items7, obj(closure_1_1[2]).Extrapolation.CLAMP);
     }
-    const transform = [{ translateX: interpolateResult }, { scale: interpolateResult1 }, { rotateZ: combined }, { translateY: interpolateResult2 }];
+    const transform = [
+      { translateX: interpolateResult },
+      { scale: interpolateResult1 },
+      { rotateZ: combined },
+      { translateY: interpolateResult2 },
+    ];
     return { transform, zIndex, opacity };
   };
-  obj = { screen: closure_3, modeConfig: obj, getCommonVariables, getCommonStyles, interpolate: obj(1653).interpolate, Extrapolation: obj(1653).Extrapolation };
+  obj = {
+    screen: closure_3,
+    modeConfig: obj,
+    getCommonVariables,
+    getCommonStyles,
+    interpolate: obj(1653).interpolate,
+    Extrapolation: obj(1653).Extrapolation,
+  };
   fn.__closure = obj;
   fn.__workletHash = 9752649608963;
   fn.__initData = closure_5;

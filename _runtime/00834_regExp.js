@@ -144,7 +144,13 @@ arg5.shouldContinueTrace = function shouldContinueTrace(client, org_id) {
       if (org_id !== result) {
         const debug2 = tmp(824).debug;
         const _HermesInternal2 = HermesInternal;
-        debug2.log("Won't continue trace because org IDs don't match (incoming baggage: " + org_id + ", SDK options: " + result + ")");
+        debug2.log(
+          "Won't continue trace because org IDs don't match (incoming baggage: " +
+            org_id +
+            ", SDK options: " +
+            result +
+            ")",
+        );
         let flag = false;
       }
       return flag;
@@ -169,7 +175,13 @@ arg5.shouldContinueTrace = function shouldContinueTrace(client, org_id) {
   if (!flag) {
     const debug = tmp(824).debug;
     const _HermesInternal = HermesInternal;
-    debug.log("Starting a new trace because strict trace continuation is enabled but one org ID is missing (incoming baggage: " + org_id + ", Sentry client: " + result + ")");
+    debug.log(
+      "Starting a new trace because strict trace continuation is enabled but one org ID is missing (incoming baggage: " +
+        org_id +
+        ", Sentry client: " +
+        result +
+        ")",
+    );
     flag = false;
   }
 };

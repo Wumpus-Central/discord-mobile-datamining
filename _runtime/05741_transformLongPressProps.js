@@ -11,7 +11,10 @@ function transformLongPressProps(shouldCancelWhenOutside) {
   }
   return shouldCancelWhenOutside;
 }
-const items = [["minDuration", "minDurationMs"], ["maxDistance", "maxDist"]];
+const items = [
+  ["minDuration", "minDurationMs"],
+  ["maxDistance", "maxDist"],
+];
 const map = new Map(items);
 let closure_4 = {};
 arg5.useLongPressGesture = function useLongPressGesture(gestureHandlerProps) {

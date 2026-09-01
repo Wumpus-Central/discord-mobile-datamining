@@ -71,31 +71,31 @@ const items = [
     key: "metadataRegistry",
     get() {
       return this.ctx.metadataRegistry;
-    }
+    },
   },
   {
     key: "target",
     get() {
       return this.ctx.target;
-    }
+    },
   },
   {
     key: "unrepresentable",
     get() {
       return this.ctx.unrepresentable;
-    }
+    },
   },
   {
     key: "override",
     get() {
       return this.ctx.override;
-    }
+    },
   },
   {
     key: "io",
     get() {
       return this.ctx.io;
-    }
+    },
   },
   {
     key: "counter",
@@ -104,13 +104,13 @@ const items = [
     },
     set(counter) {
       this.ctx.counter = counter;
-    }
+    },
   },
   {
     key: "seen",
     get() {
       return this.ctx.seen;
-    }
+    },
   },
   {
     key: "process",
@@ -123,7 +123,7 @@ const items = [
         tmp = obj;
       }
       return JSONSchemaGenerator(12740).process(arg0, this.ctx, tmp);
-    }
+    },
   },
   {
     key: "emit",
@@ -142,8 +142,8 @@ const items = [
       }
       JSONSchemaGenerator(12740).extractDefs(self.ctx, _idmap);
       return callback(JSONSchemaGenerator(12740).finalize(self.ctx, _idmap), closure_4);
-    }
-  }
+    },
+  },
 ];
 
 export const JSONSchemaGenerator = _createClass(JSONSchemaGenerator, items);

@@ -28,8 +28,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 function missingTag() {
   return null;
@@ -160,7 +159,21 @@ function _parse(closure_0) {
         str4 = str3;
       } while (tmp11);
     }
-    error = new Error("" + arg0 + " (" + num2 + ":" + tmp3 + "). If this is valid SVG, it's probably a bug. Please raise an issue\n\n" + "" + str2 + first + "\n" + str4 + "^");
+    error = new Error(
+      "" +
+        arg0 +
+        " (" +
+        num2 +
+        ":" +
+        tmp3 +
+        "). If this is valid SVG, it's probably a bug. Please raise an issue\n\n" +
+        "" +
+        str2 +
+        first +
+        "\n" +
+        str4 +
+        "^",
+    );
     throw error;
   };
   function neutral() {
@@ -721,7 +734,7 @@ let obj = {
   key: "componentDidMount",
   value: function componentDidMount() {
     const parsed = this.parse(this.props.xml);
-  }
+  },
 };
 let items = [
   obj,
@@ -733,7 +746,7 @@ let items = [
       if (xml !== xml.xml) {
         const parsed = self.parse(xml);
       }
-    }
+    },
   },
   {
     key: "parse",
@@ -754,7 +767,7 @@ let items = [
         obj.message = "[RNSVG] Couldn't parse SVG, reason: " + tmp8.message;
         tmp2(obj);
       }
-    }
+    },
   },
   {
     key: "render",
@@ -767,8 +780,8 @@ let items = [
       }
       obj[1] = override;
       return <SvgAst ast={this.state.ast} override={null} />;
-    }
-  }
+    },
+  },
 ];
 const importDefaultResult1Result = importDefaultResult1(SvgFromXml, items);
 closure_1 = undefined;
@@ -798,7 +811,7 @@ obj = {
   key: "componentDidMount",
   value: function componentDidMount() {
     const response = this.fetch(this.props.uri);
-  }
+  },
 };
 let items1 = [
   obj,
@@ -810,19 +823,18 @@ let items1 = [
       if (uri !== uri.uri) {
         const response = self.fetch(uri);
       }
-    }
+    },
   },
-,
-
+  ,
 ];
 obj = { key: "fetch", value: null };
-closure_1 = asyncGeneratorStepDefault(function(arg0) {
+closure_1 = asyncGeneratorStepDefault(function (arg0) {
   const self = this;
   closure_1 = arg0;
   c8 = 0;
   c9 = 0;
   c6 = 0;
-  return (function*(arg0) {
+  return (function* (arg0) {
     if (c9 === 2) {
       c9 = 3;
       HermesBuiltin.throwTypeError();
@@ -916,7 +928,7 @@ items1[3] = {
   value: function render() {
     const props = this.props;
     return <closure_15 xml={this.state.xml} override={props} onError={props.onError} />;
-  }
+  },
 };
 function upperCase(arg0, str) {
   return str.toUpperCase();
@@ -964,18 +976,20 @@ export const SvgUri = function SvgUri(onError) {
     if (uri) {
       const text = onError(uri[10]).fetchText(tmp);
       const obj = onError(uri[10]);
-      text.then((arg0) => {
-        callback3(arg0);
-        if (closure_4) {
-          callback4(false);
-        }
-        if (callback2 != null) {
-          callback2();
-        }
-      }).catch((arg0) => {
-        callback(arg0);
-        callback4(true);
-      });
+      text
+        .then((arg0) => {
+          callback3(arg0);
+          if (closure_4) {
+            callback4(false);
+          }
+          if (callback2 != null) {
+            callback2();
+          }
+        })
+        .catch((arg0) => {
+          callback(arg0);
+          callback4(true);
+        });
       const nextPromise = text.then((arg0) => {
         callback3(arg0);
         if (closure_4) {

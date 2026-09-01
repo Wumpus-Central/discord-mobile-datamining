@@ -12,12 +12,12 @@ export function buildLaunchDarklyFlagUsedHandler() {
       const result = callback(817)._INTERNAL_insertFlagToScope(closure_2, arg1.value);
       const obj = callback(817);
       const result1 = callback(817)._INTERNAL_addFeatureFlagToActiveSpan(closure_2, arg1.value);
-    }
+    },
   };
 }
 export const launchDarklyIntegration = registerSpanErrorInstrumentation.defineIntegration(() => ({
   name: "LaunchDarkly",
   processEvent(contexts) {
     return callback(table[0])._INTERNAL_copyFlagsFromScopeToEvent(contexts);
-  }
+  },
 }));

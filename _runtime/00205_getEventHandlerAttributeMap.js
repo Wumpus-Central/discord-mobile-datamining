@@ -40,8 +40,7 @@ arg5.setEventHandlerAttribute = function setEventHandlerAttribute(removeEventLis
           setEventHandlerAttributeMap(removeEventListener, map);
         }
         const result = obj.set(error, obj);
-      } catch (err) {
-      }
+      } catch (err) {}
     }
   }
   if (tmp18) {

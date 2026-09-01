@@ -27,7 +27,7 @@ arg5.default = () => {
           obj[1] = JSON.stringify(obj);
           const response = fetch(combined, obj);
         }
-      }
+      },
     };
     return obj;
   };

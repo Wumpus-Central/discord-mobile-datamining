@@ -80,7 +80,7 @@ export const captureConsoleIntegration = setupIntegration.defineIntegration(() =
         });
         let tmpResult = CONSOLE_LEVELS(flag[2]);
       }
-    }
+    },
   };
   return obj;
 });

@@ -16,8 +16,7 @@ function _getUnhandledRejectionError(reason) {
         }
         return reason;
       }
-    } catch (err) {
-    }
+    } catch (err) {}
   }
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
@@ -161,7 +160,13 @@ export const globalHandlersIntegration = registerSpanErrorInstrumentation.define
                 let result = obj;
               } else {
                 const captureEventResult3 = captureEvent(captureEventResult5[2]);
-                result = captureEventResult3.eventFromUnknownInput(stackParser, obj4, undefined, attachStacktrace, true);
+                result = captureEventResult3.eventFromUnknownInput(
+                  stackParser,
+                  obj4,
+                  undefined,
+                  attachStacktrace,
+                  true,
+                );
               }
               result.level = "error";
               captureEventResult2 = captureEvent(captureEventResult5[0]);
@@ -185,7 +190,7 @@ export const globalHandlersIntegration = registerSpanErrorInstrumentation.define
         tmp12 = obj;
         tmp13 = closure_1_1;
       }
-    }
+    },
   };
   return obj;
 });

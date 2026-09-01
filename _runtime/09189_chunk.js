@@ -3,7 +3,6 @@ import toInteger from "04563_toInteger.js";
 import isIterateeCall from "08657_isIterateeCall.js";
 import baseSlice from "09190_baseSlice.js";
 
-
 export default function chunk(arg0, arg1, arg2) {
   let sum1;
   if (arg2) {
@@ -40,4 +39,4 @@ export default function chunk(arg0, arg1, arg2) {
     }
   }
   return [];
-};
+}

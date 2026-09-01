@@ -37,7 +37,7 @@ function PQueue(arg0) {
         c2 = true;
       }
       return arr;
-    }
+    },
   };
 }
 class VBox {
@@ -67,39 +67,39 @@ class CMap {
     c2 = false;
     obj = {
       push(arg0) {
-            c2 = false;
-          },
+        c2 = false;
+      },
       peek(arg0) {
-            if (!c2) {
-              const sorted = arr.sort(f105874);
-              c2 = true;
-            }
-            let diff = arg0;
-            if (undefined === arg0) {
-              diff = arr.length - 1;
-            }
-            return arr[diff];
-          },
+        if (!c2) {
+          const sorted = arr.sort(f105874);
+          c2 = true;
+        }
+        let diff = arg0;
+        if (undefined === arg0) {
+          diff = arr.length - 1;
+        }
+        return arr[diff];
+      },
       pop() {
-            if (!c2) {
-              const sorted = arr.sort(f105874);
-              c2 = true;
-            }
-            return arr.pop();
-          },
+        if (!c2) {
+          const sorted = arr.sort(f105874);
+          c2 = true;
+        }
+        return arr.pop();
+      },
       size() {
-            return arr.length;
-          },
+        return arr.length;
+      },
       map(arg0) {
-            return arr.map(arg0);
-          },
+        return arr.map(arg0);
+      },
       debug() {
-            if (!c2) {
-              const sorted = arr.sort(f105874);
-              c2 = true;
-            }
-            return arr;
-          }
+        if (!c2) {
+          const sorted = arr.sort(f105874);
+          c2 = true;
+        }
+        return arr;
+      },
     };
     this.vboxes = obj;
     return;
@@ -256,7 +256,7 @@ VBox.prototype = {
       num8 = tmp11;
     }
     if (num8) {
-      const items = [, , ];
+      const items = [, ,];
       num7 = ~~num7 / num8;
       items[0] = num7;
       num6 = ~~num6 / num8;
@@ -265,7 +265,11 @@ VBox.prototype = {
       items[2] = num5;
       let items1 = items;
     } else {
-      items1 = [~~8 * (self.r1 + self.r2 + 1) / 2, ~~8 * (self.g1 + self.g2 + 1) / 2, ~~8 * (self.b1 + self.b2 + 1) / 2];
+      items1 = [
+        (~~8 * (self.r1 + self.r2 + 1)) / 2,
+        (~~8 * (self.g1 + self.g2 + 1)) / 2,
+        (~~8 * (self.b1 + self.b2 + 1)) / 2,
+      ];
     }
     self._avg = items1;
   },
@@ -287,7 +291,7 @@ VBox.prototype = {
       tmp2 = globalThis.bval <= self.b2;
     }
     return tmp2;
-  }
+  },
 };
 CMap.prototype = {
   push(avg) {
@@ -349,7 +353,9 @@ CMap.prototype = {
   },
   forcebw() {
     const vboxes = this.vboxes;
-    const sorted = vboxes.sort((color, color2) => closure_0.naturalOrder(closure_0.sum(color.color), closure_0.sum(color2.color)));
+    const sorted = vboxes.sort((color, color2) =>
+      closure_0.naturalOrder(closure_0.sum(color.color), closure_0.sum(color2.color)),
+    );
     const color = vboxes[0].color;
     if (tmp2) {
       vboxes[0].color = [0, 0, 0];
@@ -359,7 +365,7 @@ CMap.prototype = {
     if (tmp4) {
       vboxes[diff].color = [255, 255, 255];
     }
-  }
+  },
 };
 
 export default function quantize(arr) {
@@ -612,9 +618,7 @@ export default function quantize(arr) {
           table[sum] = num + 1;
         });
         let f105874 = array;
-        const item1 = array.forEach(() => {
-
-        });
+        const item1 = array.forEach(() => {});
         f105874 = undefined;
         VBox = undefined;
         CMap = undefined;
@@ -803,4 +807,4 @@ export default function quantize(arr) {
     }
   }
   return false;
-};
+}

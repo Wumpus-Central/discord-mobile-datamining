@@ -11,9 +11,9 @@ class Buffer {
         tmp = globalThis;
         _TypeError = TypeError;
         tmp2 = new.target;
-        str = "The \"string\" argument must be of type string. Received type number";
+        str = 'The "string" argument must be of type string. Received type number';
         tmp3 = new.target;
-        typeError = new TypeError("The \"string\" argument must be of type string. Received type number");
+        typeError = new TypeError('The "string" argument must be of type string. Received type number');
         tmp5 = typeError;
         throw typeError;
       } else {
@@ -36,9 +36,9 @@ class Buffer {
       tmp62 = globalThis;
       _TypeError = TypeError;
       tmp63 = new.target;
-      str11 = "\"size\" argument must be of type number";
+      str11 = '"size" argument must be of type number';
       tmp64 = new.target;
-      typeError = new TypeError("\"size\" argument must be of type number");
+      typeError = new TypeError('"size" argument must be of type number');
       tmp66 = typeError;
       throw typeError;
     } else {
@@ -46,11 +46,11 @@ class Buffer {
       if (arg0 < 0) {
         tmp57 = globalThis;
         _RangeError5 = RangeError;
-        str9 = "The value \"";
+        str9 = 'The value "';
         tmp58 = new.target;
-        str10 = "\" is invalid for option \"size\"";
+        str10 = '" is invalid for option "size"';
         tmp59 = new.target;
-        rangeError = new RangeError("The value \"" + arg0 + "\" is invalid for option \"size\"");
+        rangeError = new RangeError('The value "' + arg0 + '" is invalid for option "size"');
         tmp61 = rangeError;
         throw rangeError;
       } else {
@@ -59,11 +59,11 @@ class Buffer {
           if (arg0 > c3) {
             tmp52 = globalThis;
             _RangeError4 = RangeError;
-            str7 = "The value \"";
+            str7 = 'The value "';
             tmp53 = new.target;
-            str8 = "\" is invalid for option \"size\"";
+            str8 = '" is invalid for option "size"';
             tmp54 = new.target;
-            rangeError1 = new RangeError("The value \"" + arg0 + "\" is invalid for option \"size\"");
+            rangeError1 = new RangeError('The value "' + arg0 + '" is invalid for option "size"');
             tmp56 = rangeError1;
             throw rangeError1;
           } else {
@@ -88,11 +88,11 @@ class Buffer {
               if (arg0 > c3) {
                 tmp38 = globalThis;
                 _RangeError3 = RangeError;
-                str5 = "The value \"";
+                str5 = 'The value "';
                 tmp39 = new.target;
-                str6 = "\" is invalid for option \"size\"";
+                str6 = '" is invalid for option "size"';
                 tmp40 = new.target;
-                rangeError2 = new RangeError("The value \"" + arg0 + "\" is invalid for option \"size\"");
+                rangeError2 = new RangeError('The value "' + arg0 + '" is invalid for option "size"');
                 tmp42 = rangeError2;
                 throw rangeError2;
               } else {
@@ -127,11 +127,11 @@ class Buffer {
             }
             tmp24 = globalThis;
             _RangeError2 = RangeError;
-            str3 = "The value \"";
+            str3 = 'The value "';
             tmp25 = new.target;
-            str4 = "\" is invalid for option \"size\"";
+            str4 = '" is invalid for option "size"';
             tmp26 = new.target;
-            rangeError3 = new RangeError("The value \"" + arg0 + "\" is invalid for option \"size\"");
+            rangeError3 = new RangeError('The value "' + arg0 + '" is invalid for option "size"');
             tmp28 = rangeError3;
             throw rangeError3;
           } else {
@@ -139,11 +139,11 @@ class Buffer {
             if (arg0 > c3) {
               tmp10 = globalThis;
               _RangeError = RangeError;
-              str = "The value \"";
+              str = 'The value "';
               tmp11 = new.target;
-              str2 = "\" is invalid for option \"size\"";
+              str2 = '" is invalid for option "size"';
               tmp12 = new.target;
-              rangeError4 = new RangeError("The value \"" + arg0 + "\" is invalid for option \"size\"");
+              rangeError4 = new RangeError('The value "' + arg0 + '" is invalid for option "size"');
               tmp14 = rangeError4;
               throw rangeError4;
             } else {
@@ -186,7 +186,8 @@ class Buffer {
     tmp2 = arg0 instanceof Uint8Array;
     if (!tmp2) {
       tmp3 = null;
-      tmp4 = null != arg0 && null != arg0.constructor && null != arg0.constructor.name && arg0.constructor.name === tmp.name;
+      tmp4 =
+        null != arg0 && null != arg0.constructor && null != arg0.constructor.name && arg0.constructor.name === tmp.name;
       tmp2 = tmp4;
     }
     fromResult = arg0;
@@ -197,7 +198,11 @@ class Buffer {
     tmp7 = arg1 instanceof Uint8Array;
     if (!tmp7) {
       tmp8 = null;
-      tmp9 = null != arg1 && null != arg1.constructor && null != arg1.constructor.name && arg1.constructor.name === tmp6.name;
+      tmp9 =
+        null != arg1 &&
+        null != arg1.constructor &&
+        null != arg1.constructor.name &&
+        arg1.constructor.name === tmp6.name;
       tmp7 = tmp9;
     }
     fromResult1 = arg1;
@@ -243,7 +248,7 @@ class Buffer {
         }
       }
     }
-    typeError = new TypeError("The \"buf1\", \"buf2\" arguments must be one of type Buffer or Uint8Array");
+    typeError = new TypeError('The "buf1", "buf2" arguments must be one of type Buffer or Uint8Array');
     throw typeError;
   }
   static isEncoding(arg0) {
@@ -284,7 +289,11 @@ class Buffer {
             tmp11 = num7;
             tmp12 = num8;
             if (!tmp10) {
-              tmp13 = null != tmp8 && null != tmp8.constructor && null != tmp8.constructor.name && tmp8.constructor.name === tmp9.name;
+              tmp13 =
+                null != tmp8 &&
+                null != tmp8.constructor &&
+                null != tmp8.constructor.name &&
+                tmp8.constructor.name === tmp9.name;
               tmp10 = tmp13;
             }
             fromResult = tmp8;
@@ -303,9 +312,9 @@ class Buffer {
           }
           _TypeError2 = TypeError;
           tmp16 = new.target;
-          str2 = "\"list\" argument must be an Array of Buffers";
+          str2 = '"list" argument must be an Array of Buffers';
           tmp17 = new.target;
-          typeError = new TypeError("\"list\" argument must be an Array of Buffers");
+          typeError = new TypeError('"list" argument must be an Array of Buffers');
           tmp19 = typeError;
           throw typeError;
         }
@@ -314,9 +323,9 @@ class Buffer {
     } else {
       _TypeError = TypeError;
       tmp = new.target;
-      str = "\"list\" argument must be an Array of Buffers";
+      str = '"list" argument must be an Array of Buffers';
       tmp2 = new.target;
-      typeError1 = new TypeError("\"list\" argument must be an Array of Buffers");
+      typeError1 = new TypeError('"list" argument must be an Array of Buffers');
       tmp4 = typeError1;
       throw typeError1;
     }
@@ -465,7 +474,8 @@ class Buffer {
     tmp2 = arg0 instanceof Uint8Array;
     if (!tmp2) {
       tmp3 = null;
-      tmp4 = null != arg0 && null != arg0.constructor && null != arg0.constructor.name && arg0.constructor.name === tmp.name;
+      tmp4 =
+        null != arg0 && null != arg0.constructor && null != arg0.constructor.name && arg0.constructor.name === tmp.name;
       tmp2 = tmp4;
     }
     fromResult = arg0;
@@ -562,9 +572,11 @@ class Buffer {
     } else {
       _TypeError = TypeError;
       tmp6 = new.target;
-      str = "The \"target\" argument must be one of type Buffer or Uint8Array. Received type ";
+      str = 'The "target" argument must be one of type Buffer or Uint8Array. Received type ';
       tmp7 = new.target;
-      typeError = new TypeError("The \"target\" argument must be one of type Buffer or Uint8Array. Received type " + typeof fromResult);
+      typeError = new TypeError(
+        'The "target" argument must be one of type Buffer or Uint8Array. Received type ' + typeof fromResult,
+      );
       tmp9 = typeError;
       throw typeError;
     }
@@ -904,7 +916,7 @@ class Buffer {
       tmp12 = rangeError1;
       throw rangeError1;
     }
-    return self[tmp] | self[tmp + 1] << 8;
+    return self[tmp] | (self[tmp + 1] << 8);
   }
   readUInt16BE(arg0, arg1) {
     self = this;
@@ -935,7 +947,7 @@ class Buffer {
       tmp12 = rangeError1;
       throw rangeError1;
     }
-    return self[tmp] << 8 | self[tmp + 1];
+    return (self[tmp] << 8) | self[tmp + 1];
   }
   readUInt32LE(arg0, arg1) {
     self = this;
@@ -966,7 +978,7 @@ class Buffer {
       tmp12 = rangeError1;
       throw rangeError1;
     }
-    return (self[tmp] | self[tmp + 1] << 8 | self[tmp + 2] << 16) + 16777216 * self[tmp + 3];
+    return (self[tmp] | (self[tmp + 1] << 8) | (self[tmp + 2] << 16)) + 16777216 * self[tmp + 3];
   }
   readUInt32BE(arg0, arg1) {
     self = this;
@@ -997,7 +1009,7 @@ class Buffer {
       tmp12 = rangeError1;
       throw rangeError1;
     }
-    return 16777216 * self[tmp] + (self[tmp + 1] << 16 | self[tmp + 2] << 8 | self[tmp + 3]);
+    return 16777216 * self[tmp] + ((self[tmp + 1] << 16) | (self[tmp + 2] << 8) | self[tmp + 3]);
   }
   readIntLE(arg0, arg1, arg2) {
     self = this;
@@ -1189,7 +1201,7 @@ class Buffer {
       tmp12 = rangeError1;
       throw rangeError1;
     }
-    tmp13 = self[tmp] | self[tmp + 1] << 8;
+    tmp13 = self[tmp] | (self[tmp + 1] << 8);
     tmp14 = tmp13;
     if (32768 & tmp13) {
       num3 = 4294901760;
@@ -1226,7 +1238,7 @@ class Buffer {
       tmp12 = rangeError1;
       throw rangeError1;
     }
-    tmp13 = self[tmp + 1] | self[tmp] << 8;
+    tmp13 = self[tmp + 1] | (self[tmp] << 8);
     tmp14 = tmp13;
     if (32768 & tmp13) {
       num3 = 4294901760;
@@ -1263,7 +1275,7 @@ class Buffer {
       tmp12 = rangeError1;
       throw rangeError1;
     }
-    return self[tmp] | self[tmp + 1] << 8 | self[tmp + 2] << 16 | self[tmp + 3] << 24;
+    return self[tmp] | (self[tmp + 1] << 8) | (self[tmp + 2] << 16) | (self[tmp + 3] << 24);
   }
   readInt32BE(arg0, arg1) {
     self = this;
@@ -1294,7 +1306,7 @@ class Buffer {
       tmp12 = rangeError1;
       throw rangeError1;
     }
-    return self[tmp] << 24 | self[tmp + 1] << 16 | self[tmp + 2] << 8 | self[tmp + 3];
+    return (self[tmp] << 24) | (self[tmp + 1] << 16) | (self[tmp + 2] << 8) | self[tmp + 3];
   }
   readFloatLE(arg0, arg1) {
     self = this;
@@ -1453,17 +1465,17 @@ class Buffer {
         }
         _RangeError2 = RangeError;
         tmp15 = new.target;
-        str3 = "\"value\" argument is out of bounds";
+        str3 = '"value" argument is out of bounds';
         tmp16 = new.target;
-        rangeError1 = new RangeError("\"value\" argument is out of bounds");
+        rangeError1 = new RangeError('"value" argument is out of bounds');
         tmp18 = rangeError1;
         throw rangeError1;
       } else {
         _TypeError = TypeError;
         tmp7 = new.target;
-        str = "\"buffer\" argument must be a Buffer instance";
+        str = '"buffer" argument must be a Buffer instance';
         tmp8 = new.target;
-        typeError = new TypeError("\"buffer\" argument must be a Buffer instance");
+        typeError = new TypeError('"buffer" argument must be a Buffer instance');
         tmp10 = typeError;
         throw typeError;
       }
@@ -1472,7 +1484,7 @@ class Buffer {
     num4 = 256;
     num5 = 1;
     if (1 < tmp3) {
-      self[tmp2 + num5] = tmp / num4 & 255;
+      self[tmp2 + num5] = (tmp / num4) & 255;
       sum = num5 + 1;
       tmp20 = num4;
       while (sum < tmp3) {
@@ -1514,17 +1526,17 @@ class Buffer {
         }
         _RangeError2 = RangeError;
         tmp15 = new.target;
-        str3 = "\"value\" argument is out of bounds";
+        str3 = '"value" argument is out of bounds';
         tmp16 = new.target;
-        rangeError1 = new RangeError("\"value\" argument is out of bounds");
+        rangeError1 = new RangeError('"value" argument is out of bounds');
         tmp18 = rangeError1;
         throw rangeError1;
       } else {
         _TypeError = TypeError;
         tmp7 = new.target;
-        str = "\"buffer\" argument must be a Buffer instance";
+        str = '"buffer" argument must be a Buffer instance';
         tmp8 = new.target;
-        typeError = new TypeError("\"buffer\" argument must be a Buffer instance");
+        typeError = new TypeError('"buffer" argument must be a Buffer instance');
         tmp10 = typeError;
         throw typeError;
       }
@@ -1534,7 +1546,7 @@ class Buffer {
     diff2 = diff1 - 1;
     num4 = 256;
     if (0 <= diff2) {
-      self[tmp2 + diff2] = tmp / num4 & 255;
+      self[tmp2 + diff2] = (tmp / num4) & 255;
       diff3 = diff2 - 1;
       tmp22 = num4;
       while (0 <= diff3) {
@@ -1573,18 +1585,18 @@ class Buffer {
         tmp14 = globalThis;
         _RangeError2 = RangeError;
         tmp15 = new.target;
-        str3 = "\"value\" argument is out of bounds";
+        str3 = '"value" argument is out of bounds';
         tmp16 = new.target;
-        rangeError1 = new RangeError("\"value\" argument is out of bounds");
+        rangeError1 = new RangeError('"value" argument is out of bounds');
         tmp18 = rangeError1;
         throw rangeError1;
       } else {
         tmp4 = globalThis;
         _TypeError = TypeError;
         tmp5 = new.target;
-        str = "\"buffer\" argument must be a Buffer instance";
+        str = '"buffer" argument must be a Buffer instance';
         tmp6 = new.target;
-        typeError = new TypeError("\"buffer\" argument must be a Buffer instance");
+        typeError = new TypeError('"buffer" argument must be a Buffer instance');
         tmp8 = typeError;
         throw typeError;
       }
@@ -1618,18 +1630,18 @@ class Buffer {
         tmp14 = globalThis;
         _RangeError2 = RangeError;
         tmp15 = new.target;
-        str3 = "\"value\" argument is out of bounds";
+        str3 = '"value" argument is out of bounds';
         tmp16 = new.target;
-        rangeError1 = new RangeError("\"value\" argument is out of bounds");
+        rangeError1 = new RangeError('"value" argument is out of bounds');
         tmp18 = rangeError1;
         throw rangeError1;
       } else {
         tmp4 = globalThis;
         _TypeError = TypeError;
         tmp5 = new.target;
-        str = "\"buffer\" argument must be a Buffer instance";
+        str = '"buffer" argument must be a Buffer instance';
         tmp6 = new.target;
-        typeError = new TypeError("\"buffer\" argument must be a Buffer instance");
+        typeError = new TypeError('"buffer" argument must be a Buffer instance');
         tmp8 = typeError;
         throw typeError;
       }
@@ -1664,18 +1676,18 @@ class Buffer {
         tmp14 = globalThis;
         _RangeError2 = RangeError;
         tmp15 = new.target;
-        str3 = "\"value\" argument is out of bounds";
+        str3 = '"value" argument is out of bounds';
         tmp16 = new.target;
-        rangeError1 = new RangeError("\"value\" argument is out of bounds");
+        rangeError1 = new RangeError('"value" argument is out of bounds');
         tmp18 = rangeError1;
         throw rangeError1;
       } else {
         tmp4 = globalThis;
         _TypeError = TypeError;
         tmp5 = new.target;
-        str = "\"buffer\" argument must be a Buffer instance";
+        str = '"buffer" argument must be a Buffer instance';
         tmp6 = new.target;
-        typeError = new TypeError("\"buffer\" argument must be a Buffer instance");
+        typeError = new TypeError('"buffer" argument must be a Buffer instance');
         tmp8 = typeError;
         throw typeError;
       }
@@ -1710,18 +1722,18 @@ class Buffer {
         tmp14 = globalThis;
         _RangeError2 = RangeError;
         tmp15 = new.target;
-        str3 = "\"value\" argument is out of bounds";
+        str3 = '"value" argument is out of bounds';
         tmp16 = new.target;
-        rangeError1 = new RangeError("\"value\" argument is out of bounds");
+        rangeError1 = new RangeError('"value" argument is out of bounds');
         tmp18 = rangeError1;
         throw rangeError1;
       } else {
         tmp4 = globalThis;
         _TypeError = TypeError;
         tmp5 = new.target;
-        str = "\"buffer\" argument must be a Buffer instance";
+        str = '"buffer" argument must be a Buffer instance';
         tmp6 = new.target;
-        typeError = new TypeError("\"buffer\" argument must be a Buffer instance");
+        typeError = new TypeError('"buffer" argument must be a Buffer instance');
         tmp8 = typeError;
         throw typeError;
       }
@@ -1758,18 +1770,18 @@ class Buffer {
         tmp14 = globalThis;
         _RangeError2 = RangeError;
         tmp15 = new.target;
-        str3 = "\"value\" argument is out of bounds";
+        str3 = '"value" argument is out of bounds';
         tmp16 = new.target;
-        rangeError1 = new RangeError("\"value\" argument is out of bounds");
+        rangeError1 = new RangeError('"value" argument is out of bounds');
         tmp18 = rangeError1;
         throw rangeError1;
       } else {
         tmp4 = globalThis;
         _TypeError = TypeError;
         tmp5 = new.target;
-        str = "\"buffer\" argument must be a Buffer instance";
+        str = '"buffer" argument must be a Buffer instance';
         tmp6 = new.target;
-        typeError = new TypeError("\"buffer\" argument must be a Buffer instance");
+        typeError = new TypeError('"buffer" argument must be a Buffer instance');
         tmp8 = typeError;
         throw typeError;
       }
@@ -1810,17 +1822,17 @@ class Buffer {
         }
         _RangeError2 = RangeError;
         tmp16 = new.target;
-        str3 = "\"value\" argument is out of bounds";
+        str3 = '"value" argument is out of bounds';
         tmp17 = new.target;
-        rangeError1 = new RangeError("\"value\" argument is out of bounds");
+        rangeError1 = new RangeError('"value" argument is out of bounds');
         tmp19 = rangeError1;
         throw rangeError1;
       } else {
         _TypeError = TypeError;
         tmp8 = new.target;
-        str = "\"buffer\" argument must be a Buffer instance";
+        str = '"buffer" argument must be a Buffer instance';
         tmp9 = new.target;
-        typeError = new TypeError("\"buffer\" argument must be a Buffer instance");
+        typeError = new TypeError('"buffer" argument must be a Buffer instance');
         tmp11 = typeError;
         throw typeError;
       }
@@ -1844,7 +1856,7 @@ class Buffer {
         if (tmp23) {
           num7 = 1;
         }
-        self[tmp2 + num6] = (tmp / num5 | 0) - num7 & 255;
+        self[tmp2 + num6] = (((tmp / num5) | 0) - num7) & 255;
         sum = num6 + 1;
         if (sum >= arg2) {
           break;
@@ -1890,17 +1902,17 @@ class Buffer {
         }
         _RangeError2 = RangeError;
         tmp16 = new.target;
-        str3 = "\"value\" argument is out of bounds";
+        str3 = '"value" argument is out of bounds';
         tmp17 = new.target;
-        rangeError1 = new RangeError("\"value\" argument is out of bounds");
+        rangeError1 = new RangeError('"value" argument is out of bounds');
         tmp19 = rangeError1;
         throw rangeError1;
       } else {
         _TypeError = TypeError;
         tmp8 = new.target;
-        str = "\"buffer\" argument must be a Buffer instance";
+        str = '"buffer" argument must be a Buffer instance';
         tmp9 = new.target;
-        typeError = new TypeError("\"buffer\" argument must be a Buffer instance");
+        typeError = new TypeError('"buffer" argument must be a Buffer instance');
         tmp11 = typeError;
         throw typeError;
       }
@@ -1925,7 +1937,7 @@ class Buffer {
         if (tmp25) {
           num6 = 1;
         }
-        self[tmp2 + diff2] = (tmp / num4 | 0) - num6 & 255;
+        self[tmp2 + diff2] = (((tmp / num4) | 0) - num6) & 255;
         diff3 = diff2 - 1;
         if (0 > diff3) {
           break;
@@ -1968,18 +1980,18 @@ class Buffer {
         tmp14 = globalThis;
         _RangeError2 = RangeError;
         tmp15 = new.target;
-        str3 = "\"value\" argument is out of bounds";
+        str3 = '"value" argument is out of bounds';
         tmp16 = new.target;
-        rangeError1 = new RangeError("\"value\" argument is out of bounds");
+        rangeError1 = new RangeError('"value" argument is out of bounds');
         tmp18 = rangeError1;
         throw rangeError1;
       } else {
         tmp4 = globalThis;
         _TypeError = TypeError;
         tmp5 = new.target;
-        str = "\"buffer\" argument must be a Buffer instance";
+        str = '"buffer" argument must be a Buffer instance';
         tmp6 = new.target;
-        typeError = new TypeError("\"buffer\" argument must be a Buffer instance");
+        typeError = new TypeError('"buffer" argument must be a Buffer instance');
         tmp8 = typeError;
         throw typeError;
       }
@@ -2020,18 +2032,18 @@ class Buffer {
         tmp14 = globalThis;
         _RangeError2 = RangeError;
         tmp15 = new.target;
-        str3 = "\"value\" argument is out of bounds";
+        str3 = '"value" argument is out of bounds';
         tmp16 = new.target;
-        rangeError1 = new RangeError("\"value\" argument is out of bounds");
+        rangeError1 = new RangeError('"value" argument is out of bounds');
         tmp18 = rangeError1;
         throw rangeError1;
       } else {
         tmp4 = globalThis;
         _TypeError = TypeError;
         tmp5 = new.target;
-        str = "\"buffer\" argument must be a Buffer instance";
+        str = '"buffer" argument must be a Buffer instance';
         tmp6 = new.target;
-        typeError = new TypeError("\"buffer\" argument must be a Buffer instance");
+        typeError = new TypeError('"buffer" argument must be a Buffer instance');
         tmp8 = typeError;
         throw typeError;
       }
@@ -2067,18 +2079,18 @@ class Buffer {
         tmp14 = globalThis;
         _RangeError2 = RangeError;
         tmp15 = new.target;
-        str3 = "\"value\" argument is out of bounds";
+        str3 = '"value" argument is out of bounds';
         tmp16 = new.target;
-        rangeError1 = new RangeError("\"value\" argument is out of bounds");
+        rangeError1 = new RangeError('"value" argument is out of bounds');
         tmp18 = rangeError1;
         throw rangeError1;
       } else {
         tmp4 = globalThis;
         _TypeError = TypeError;
         tmp5 = new.target;
-        str = "\"buffer\" argument must be a Buffer instance";
+        str = '"buffer" argument must be a Buffer instance';
         tmp6 = new.target;
-        typeError = new TypeError("\"buffer\" argument must be a Buffer instance");
+        typeError = new TypeError('"buffer" argument must be a Buffer instance');
         tmp8 = typeError;
         throw typeError;
       }
@@ -2114,18 +2126,18 @@ class Buffer {
         tmp14 = globalThis;
         _RangeError2 = RangeError;
         tmp15 = new.target;
-        str3 = "\"value\" argument is out of bounds";
+        str3 = '"value" argument is out of bounds';
         tmp16 = new.target;
-        rangeError1 = new RangeError("\"value\" argument is out of bounds");
+        rangeError1 = new RangeError('"value" argument is out of bounds');
         tmp18 = rangeError1;
         throw rangeError1;
       } else {
         tmp4 = globalThis;
         _TypeError = TypeError;
         tmp5 = new.target;
-        str = "\"buffer\" argument must be a Buffer instance";
+        str = '"buffer" argument must be a Buffer instance';
         tmp6 = new.target;
-        typeError = new TypeError("\"buffer\" argument must be a Buffer instance");
+        typeError = new TypeError('"buffer" argument must be a Buffer instance');
         tmp8 = typeError;
         throw typeError;
       }
@@ -2163,18 +2175,18 @@ class Buffer {
         tmp14 = globalThis;
         _RangeError2 = RangeError;
         tmp15 = new.target;
-        str3 = "\"value\" argument is out of bounds";
+        str3 = '"value" argument is out of bounds';
         tmp16 = new.target;
-        rangeError1 = new RangeError("\"value\" argument is out of bounds");
+        rangeError1 = new RangeError('"value" argument is out of bounds');
         tmp18 = rangeError1;
         throw rangeError1;
       } else {
         tmp4 = globalThis;
         _TypeError = TypeError;
         tmp5 = new.target;
-        str = "\"buffer\" argument must be a Buffer instance";
+        str = '"buffer" argument must be a Buffer instance';
         tmp6 = new.target;
-        typeError = new TypeError("\"buffer\" argument must be a Buffer instance");
+        typeError = new TypeError('"buffer" argument must be a Buffer instance');
         tmp8 = typeError;
         throw typeError;
       }
@@ -2553,11 +2565,11 @@ class Buffer {
               if (0 === length2) {
                 tmp14 = globalThis;
                 _TypeError2 = TypeError;
-                str4 = "The value \"";
+                str4 = 'The value "';
                 tmp15 = new.target;
-                str5 = "\" is invalid for argument \"value\"";
+                str5 = '" is invalid for argument "value"';
                 tmp16 = new.target;
-                typeError2 = new TypeError("The value \"" + num2 + "\" is invalid for argument \"value\"");
+                typeError2 = new TypeError('The value "' + num2 + '" is invalid for argument "value"');
                 tmp18 = typeError2;
                 throw typeError2;
               } else {
@@ -2601,7 +2613,7 @@ function from(data, str) {
         const _RangeError8 = RangeError;
         rangeError = new.target;
         rangeError = new.target;
-        rangeError = new RangeError("The value \"" + rangeError + "\" is invalid for option \"size\"");
+        rangeError = new RangeError('The value "' + rangeError + '" is invalid for option "size"');
         throw rangeError;
       } else {
         rangeError = globalThis;
@@ -2636,37 +2648,72 @@ function from(data, str) {
       rangeError = null;
       if (null == data) {
         const _TypeError3 = TypeError;
-        const typeError = new TypeError("The first argument must be one of type string, Buffer, ArrayBuffer, Array, or Array-like Object. Received type " + typeof data);
+        const typeError = new TypeError(
+          "The first argument must be one of type string, Buffer, ArrayBuffer, Array, or Array-like Object. Received type " +
+            typeof data,
+        );
         throw typeError;
       } else {
         let tmp3 = data instanceof ArrayBuffer;
         if (!tmp3) {
-          tmp3 = null != data && null != data.constructor && null != data.constructor.name && data.constructor.name === rangeError.name;
-          const tmp2 = null != data && null != data.constructor && null != data.constructor.name && data.constructor.name === rangeError.name;
+          tmp3 =
+            null != data &&
+            null != data.constructor &&
+            null != data.constructor.name &&
+            data.constructor.name === rangeError.name;
+          const tmp2 =
+            null != data &&
+            null != data.constructor &&
+            null != data.constructor.name &&
+            data.constructor.name === rangeError.name;
         }
         if (!tmp3) {
           if (data) {
             const buffer = data.buffer;
             let tmp6 = buffer instanceof ArrayBuffer;
             if (!tmp6) {
-              tmp6 = null != buffer && null != buffer.constructor && null != buffer.constructor.name && buffer.constructor.name === tmp5.name;
-              const tmp7 = null != buffer && null != buffer.constructor && null != buffer.constructor.name && buffer.constructor.name === tmp5.name;
+              tmp6 =
+                null != buffer &&
+                null != buffer.constructor &&
+                null != buffer.constructor.name &&
+                buffer.constructor.name === tmp5.name;
+              const tmp7 =
+                null != buffer &&
+                null != buffer.constructor &&
+                null != buffer.constructor.name &&
+                buffer.constructor.name === tmp5.name;
             }
           }
           const _SharedArrayBuffer = SharedArrayBuffer;
           if (typeof SharedArrayBuffer !== "undefined") {
             let tmp9 = data instanceof SharedArrayBuffer;
             if (!tmp9) {
-              tmp9 = null != data && null != data.constructor && null != data.constructor.name && data.constructor.name === rangeError.name;
-              const tmp8 = null != data && null != data.constructor && null != data.constructor.name && data.constructor.name === rangeError.name;
+              tmp9 =
+                null != data &&
+                null != data.constructor &&
+                null != data.constructor.name &&
+                data.constructor.name === rangeError.name;
+              const tmp8 =
+                null != data &&
+                null != data.constructor &&
+                null != data.constructor.name &&
+                data.constructor.name === rangeError.name;
             }
             if (!tmp9) {
               if (data) {
                 const buffer2 = data.buffer;
                 let tmp11 = buffer2 instanceof SharedArrayBuffer;
                 if (!tmp11) {
-                  tmp11 = null != buffer2 && null != buffer2.constructor && null != buffer2.constructor.name && buffer2.constructor.name === tmp10.name;
-                  const tmp12 = null != buffer2 && null != buffer2.constructor && null != buffer2.constructor.name && buffer2.constructor.name === tmp10.name;
+                  tmp11 =
+                    null != buffer2 &&
+                    null != buffer2.constructor &&
+                    null != buffer2.constructor.name &&
+                    buffer2.constructor.name === tmp10.name;
+                  const tmp12 =
+                    null != buffer2 &&
+                    null != buffer2.constructor &&
+                    null != buffer2.constructor.name &&
+                    buffer2.constructor.name === tmp10.name;
                 }
               }
             }
@@ -2678,7 +2725,7 @@ function from(data, str) {
                 }
                 if (data.byteLength < str + num9) {
                   const _RangeError4 = RangeError;
-                  const rangeError1 = new RangeError("\"length\" is outside of buffer bounds");
+                  const rangeError1 = new RangeError('"length" is outside of buffer bounds');
                   throw rangeError1;
                 } else {
                   if (undefined === str) {
@@ -2701,12 +2748,12 @@ function from(data, str) {
               }
             }
             const _RangeError5 = RangeError;
-            const rangeError2 = new RangeError("\"offset\" is outside of buffer bounds");
+            const rangeError2 = new RangeError('"offset" is outside of buffer bounds');
             throw rangeError2;
           }
           if (typeof data === "number") {
             const _TypeError2 = TypeError;
-            const typeError1 = new TypeError("The \"value\" argument must not be of type number. Received type number");
+            const typeError1 = new TypeError('The "value" argument must not be of type number. Received type number');
             throw typeError1;
           } else {
             const tmp13 = data.valueOf && data.valueOf();
@@ -2718,13 +2765,15 @@ function from(data, str) {
             if (Buffer.isBuffer(data)) {
               if (length >= c3) {
                 const _RangeError3 = RangeError;
-                const rangeError3 = new RangeError("Attempt to allocate Buffer larger than maximum size: 0x" + str4.toString(16) + " bytes");
+                const rangeError3 = new RangeError(
+                  "Attempt to allocate Buffer larger than maximum size: 0x" + str4.toString(16) + " bytes",
+                );
                 throw rangeError3;
               } else {
                 rangeError = length | 0 | 0;
                 if (rangeError > str4) {
                   const _RangeError2 = RangeError;
-                  const rangeError4 = new RangeError("The value \"" + rangeError + "\" is invalid for option \"size\"");
+                  const rangeError4 = new RangeError('The value "' + rangeError + '" is invalid for option "size"');
                   throw rangeError4;
                 } else {
                   const _Uint8Array9 = Uint8Array;
@@ -2750,7 +2799,7 @@ function from(data, str) {
               }
               if (0 > c3) {
                 const _RangeError = RangeError;
-                const rangeError5 = new RangeError("The value \"" + "\" is invalid for option \"size\"");
+                const rangeError5 = new RangeError('The value "' + '" is invalid for option "size"');
                 throw rangeError5;
               } else {
                 const _Uint8Array = Uint8Array;
@@ -2780,7 +2829,10 @@ function from(data, str) {
                 }
               }
               const _TypeError = TypeError;
-              const typeError2 = new TypeError("The first argument must be one of type string, Buffer, ArrayBuffer, Array, or Array-like Object. Received type " + typeof data);
+              const typeError2 = new TypeError(
+                "The first argument must be one of type string, Buffer, ArrayBuffer, Array, or Array-like Object. Received type " +
+                  typeof data,
+              );
               throw typeError2;
             }
           }
@@ -2793,7 +2845,7 @@ function from(data, str) {
             }
             if (data.byteLength < str + num11) {
               const _RangeError6 = RangeError;
-              const rangeError6 = new RangeError("\"length\" is outside of buffer bounds");
+              const rangeError6 = new RangeError('"length" is outside of buffer bounds');
               throw rangeError6;
             } else {
               if (undefined === str) {
@@ -2816,7 +2868,7 @@ function from(data, str) {
           }
         }
         const _RangeError7 = RangeError;
-        const rangeError7 = new RangeError("\"offset\" is outside of buffer bounds");
+        const rangeError7 = new RangeError('"offset" is outside of buffer bounds');
         throw rangeError7;
       }
     }
@@ -2825,18 +2877,20 @@ function from(data, str) {
 function allocUnsafe(num) {
   if (typeof num !== "number") {
     const _TypeError = TypeError;
-    const typeError = new TypeError("\"size\" argument must be of type number");
+    const typeError = new TypeError('"size" argument must be of type number');
     throw typeError;
   } else if (num < 0) {
     const _RangeError3 = RangeError;
-    const rangeError = new RangeError("The value \"" + num + "\" is invalid for option \"size\"");
+    const rangeError = new RangeError('The value "' + num + '" is invalid for option "size"');
     throw rangeError;
   } else {
     num = 0;
     if (num >= 0) {
       if (num >= c3) {
         const _RangeError = RangeError;
-        const rangeError1 = new RangeError("Attempt to allocate Buffer larger than maximum size: 0x" + str.toString(16) + " bytes");
+        const rangeError1 = new RangeError(
+          "Attempt to allocate Buffer larger than maximum size: 0x" + str.toString(16) + " bytes",
+        );
         throw rangeError1;
       } else {
         num = num | 0 | 0;
@@ -2845,7 +2899,7 @@ function allocUnsafe(num) {
     }
     if (num > c3) {
       const _RangeError2 = RangeError;
-      const rangeError2 = new RangeError("The value \"" + num + "\" is invalid for option \"size\"");
+      const rangeError2 = new RangeError('The value "' + num + '" is invalid for option "size"');
       throw rangeError2;
     } else {
       const _Uint8Array = Uint8Array;
@@ -2861,7 +2915,9 @@ function fromArrayLike(data) {
   if (data.length >= 0) {
     if (data.length >= c3) {
       const _RangeError = RangeError;
-      const rangeError = new RangeError("Attempt to allocate Buffer larger than maximum size: 0x" + str.toString(16) + " bytes");
+      const rangeError = new RangeError(
+        "Attempt to allocate Buffer larger than maximum size: 0x" + str.toString(16) + " bytes",
+      );
       throw rangeError;
     } else {
       num = length | 0 | 0;
@@ -2870,7 +2926,7 @@ function fromArrayLike(data) {
   }
   if (num > c3) {
     const _RangeError2 = RangeError;
-    const rangeError1 = new RangeError("The value \"" + num + "\" is invalid for option \"size\"");
+    const rangeError1 = new RangeError('The value "' + num + '" is invalid for option "size"');
     throw rangeError1;
   } else {
     const _Uint8Array = Uint8Array;
@@ -2896,13 +2952,17 @@ function byteLength(str) {
     if (!ArrayBuffer.isView(str)) {
       let tmp2 = str instanceof ArrayBuffer;
       if (!tmp2) {
-        tmp2 = null != str && null != str.constructor && null != str.constructor.name && str.constructor.name === tmp.name;
-        const tmp4 = null != str && null != str.constructor && null != str.constructor.name && str.constructor.name === tmp.name;
+        tmp2 =
+          null != str && null != str.constructor && null != str.constructor.name && str.constructor.name === tmp.name;
+        const tmp4 =
+          null != str && null != str.constructor && null != str.constructor.name && str.constructor.name === tmp.name;
       }
       if (!tmp2) {
         if (typeof str !== "string") {
           const _TypeError = TypeError;
-          const typeError = new TypeError("The \"string\" argument must be one of type string, Buffer, or ArrayBuffer. Received type " + typeof str);
+          const typeError = new TypeError(
+            'The "string" argument must be one of type string, Buffer, or ArrayBuffer. Received type ' + typeof str,
+          );
           throw typeError;
         } else {
           let tmp5 = arguments.length > 2;
@@ -3201,7 +3261,7 @@ function utf8Slice(arg0, arg1, arg2) {
           let tmp21 = 128 === tmp20;
           let tmp22 = tmp3;
           if (128 === tmp20) {
-            let tmp23 = (31 & tmp4) << 6 | 63 & tmp19;
+            let tmp23 = ((31 & tmp4) << 6) | (63 & tmp19);
             tmp21 = tmp23 > 127;
             tmp22 = tmp23;
           }
@@ -3221,7 +3281,7 @@ function utf8Slice(arg0, arg1, arg2) {
           }
           let tmp16 = tmp3;
           if (tmp15) {
-            let tmp17 = (15 & tmp4) << 12 | (63 & tmp12) << 6 | 63 & tmp13;
+            let tmp17 = ((15 & tmp4) << 12) | ((63 & tmp12) << 6) | (63 & tmp13);
             tmp15 = tmp17 > 2047;
             tmp16 = tmp17;
           }
@@ -3252,7 +3312,7 @@ function utf8Slice(arg0, arg1, arg2) {
             }
             let tmp10 = tmp3;
             if (tmp9) {
-              let tmp11 = (15 & tmp4) << 18 | (63 & tmp30) << 12 | (63 & tmp31) << 6 | 63 & tmp32;
+              let tmp11 = ((15 & tmp4) << 18) | ((63 & tmp30) << 12) | ((63 & tmp31) << 6) | (63 & tmp32);
               tmp9 = tmp11 > 65535;
               tmp10 = tmp11;
             }
@@ -3275,8 +3335,8 @@ function utf8Slice(arg0, arg1, arg2) {
         num5 = tmp7;
         if (tmp7 > 65535) {
           let diff = tmp7 - 65536;
-          let arr = items.push(diff >>> 10 & 1023 | 55296);
-          num5 = 56320 | 1023 & diff;
+          let arr = items.push(((diff >>> 10) & 1023) | 55296);
+          num5 = 56320 | (1023 & diff);
           num4 = num;
         }
       }
@@ -3334,7 +3394,7 @@ function utf8ToBytes(str) {
                 tmp13 = diff;
               }
             } else {
-              let sum = 65536 + (tmp - 55296 << 10 | charCodeAtResult - 56320);
+              let sum = 65536 + (((tmp - 55296) << 10) | (charCodeAtResult - 56320));
               let tmp10 = num;
             }
             if (sum < 128) {
@@ -3347,14 +3407,14 @@ function utf8ToBytes(str) {
             } else if (sum < 2048) {
               let diff2 = tmp10 - 2;
               if (diff2 >= 0) {
-                let arr1 = items.push(sum >> 6 | 192, 63 & sum | 128);
+                let arr1 = items.push((sum >> 6) | 192, (63 & sum) | 128);
                 tmp12 = null;
                 tmp13 = diff2;
               }
             } else if (sum < 65536) {
               let diff3 = tmp10 - 3;
               if (diff3 >= 0) {
-                let arr2 = items.push(sum >> 12 | 224, sum >> 6 & 63 | 128, 63 & sum | 128);
+                let arr2 = items.push((sum >> 12) | 224, ((sum >> 6) & 63) | 128, (63 & sum) | 128);
                 tmp12 = null;
                 tmp13 = diff3;
               }
@@ -3364,7 +3424,12 @@ function utf8ToBytes(str) {
               let diff4 = tmp10 - 4;
               if (diff4 >= 0) {
                 let tmp31 = items;
-                let arr3 = items.push(sum >> 18 | 240, sum >> 12 & 63 | 128, sum >> 6 & 63 | 128, 63 & sum | 128);
+                let arr3 = items.push(
+                  (sum >> 18) | 240,
+                  ((sum >> 12) & 63) | 128,
+                  ((sum >> 6) & 63) | 128,
+                  (63 & sum) | 128,
+                );
                 tmp12 = null;
                 tmp13 = diff4;
               }
@@ -3467,7 +3532,9 @@ if (!TYPED_ARRAY_SUPPORT) {
 }
 if (!TYPED_ARRAY_SUPPORT) {
   const _console3 = console;
-  console.error("This browser lacks typed array (Uint8Array) support which is required by `buffer` v5.x. Use `buffer` v4.x if you require old browser support.");
+  console.error(
+    "This browser lacks typed array (Uint8Array) support which is required by `buffer` v5.x. Use `buffer` v4.x if you require old browser support.",
+  );
 }
 let obj = {
   enumerable: true,
@@ -3475,7 +3542,7 @@ let obj = {
     if (Buffer.isBuffer(this)) {
       return this.buffer;
     }
-  }
+  },
 };
 Object.defineProperty(Buffer.prototype, "parent", obj);
 obj = {
@@ -3484,7 +3551,7 @@ obj = {
     if (Buffer.isBuffer(this)) {
       return this.byteOffset;
     }
-  }
+  },
 };
 Object.defineProperty(Buffer.prototype, "offset", obj);
 Buffer.poolSize = 8192;

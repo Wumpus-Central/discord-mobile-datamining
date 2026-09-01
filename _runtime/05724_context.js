@@ -57,8 +57,8 @@ export default function _default(children) {
           obj.addListener("keyboardDidShow", setVisible),
           obj.addListener("keyboardWillShow", setVisible),
           obj.addListener("keyboardDidHide", () => {
-                c9 = false;
-              })
+            c9 = false;
+          }),
         ];
       }
     }
@@ -96,31 +96,51 @@ export default function _default(children) {
     }, items1),
     pointerEvents: "box-none",
     style: logicalResponder.logicalResponder,
-    children: children.children
+    children: children.children,
   };
-  obj[1] = <closure_5 collapsable={false} onStartShouldSetResponderCapture={keyboardShouldPersistTaps(() => {
-    closure_1.current = false;
-    return false;
-  }, [])} onStartShouldSetResponder={keyboardShouldPersistTaps(() => {
-    let current = "handled" === keyboardShouldPersistTaps;
-    if (current) {
-      current = ref.current;
-    }
-    ref.current = false;
-    return current;
-  }, items1)} pointerEvents="box-none" style={logicalResponder.logicalResponder}>{arg0.children}</closure_5>;
-  return <context collapsable={false} onStartShouldSetResponderCapture={keyboardShouldPersistTaps(() => {
-    closure_1.current = false;
-    return false;
-  }, [])} onStartShouldSetResponder={keyboardShouldPersistTaps(() => {
-    let current = "handled" === keyboardShouldPersistTaps;
-    if (current) {
-      current = ref.current;
-    }
-    ref.current = false;
-    return current;
-  }, items1)} pointerEvents="box-none" style={logicalResponder.logicalResponder}>{arg0.children}</context>;
-};
+  obj[1] = (
+    <closure_5
+      collapsable={false}
+      onStartShouldSetResponderCapture={keyboardShouldPersistTaps(() => {
+        closure_1.current = false;
+        return false;
+      }, [])}
+      onStartShouldSetResponder={keyboardShouldPersistTaps(() => {
+        let current = "handled" === keyboardShouldPersistTaps;
+        if (current) {
+          current = ref.current;
+        }
+        ref.current = false;
+        return current;
+      }, items1)}
+      pointerEvents="box-none"
+      style={logicalResponder.logicalResponder}
+    >
+      {arg0.children}
+    </closure_5>
+  );
+  return (
+    <context
+      collapsable={false}
+      onStartShouldSetResponderCapture={keyboardShouldPersistTaps(() => {
+        closure_1.current = false;
+        return false;
+      }, [])}
+      onStartShouldSetResponder={keyboardShouldPersistTaps(() => {
+        let current = "handled" === keyboardShouldPersistTaps;
+        if (current) {
+          current = ref.current;
+        }
+        ref.current = false;
+        return current;
+      }, items1)}
+      pointerEvents="box-none"
+      style={logicalResponder.logicalResponder}
+    >
+      {arg0.children}
+    </context>
+  );
+}
 export const JSResponderContext = context;
 export const updateResponderEventValue = function updateResponderEventValue(closure_1, current) {
   let isRNGHResponderEvent;

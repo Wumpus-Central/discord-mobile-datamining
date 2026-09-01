@@ -29,6 +29,11 @@ arg5.getEnforcing = function getEnforcing(RNGestureHandlerModule) {
   } else {
     tmpResult = tmp(RNGestureHandlerModule);
   }
-  module(38)(null != tmpResult, "TurboModuleRegistry.getEnforcing(...): '" + RNGestureHandlerModule + "' could not be found. Verify that a module by this name is registered in the native binary.");
+  module(38)(
+    null != tmpResult,
+    "TurboModuleRegistry.getEnforcing(...): '" +
+      RNGestureHandlerModule +
+      "' could not be found. Verify that a module by this name is registered in the native binary.",
+  );
   return tmpResult;
 };

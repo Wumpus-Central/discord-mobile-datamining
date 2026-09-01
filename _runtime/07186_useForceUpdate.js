@@ -7,4 +7,4 @@ import noop from "00019_noop.js";
 export default function useForceUpdate() {
   callback = callback(callback3({}), 2)[1];
   return callback2(() => callback({}), []);
-};
+}

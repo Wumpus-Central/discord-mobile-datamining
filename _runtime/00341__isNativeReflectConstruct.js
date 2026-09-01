@@ -28,10 +28,17 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
-let closure_2 = ["behavior", "children", "contentContainerStyle", "enabled", "keyboardVerticalOffset", "style", "onLayout"];
+let closure_2 = [
+  "behavior",
+  "children",
+  "contentContainerStyle",
+  "enabled",
+  "keyboardVerticalOffset",
+  "style",
+  "onLayout",
+];
 let c4 = importDefaultResult;
 closure_1 = undefined;
 class KeyboardAvoidingView {
@@ -70,7 +77,7 @@ class KeyboardAvoidingView {
       closure_0 = arg0;
       c3 = 0;
       c4 = 0;
-      return (function*(arg0) {
+      return (function* (arg0) {
         if (c4 === 2) {
           c4 = 3;
           HermesBuiltin.throwTypeError();
@@ -139,7 +146,7 @@ class KeyboardAvoidingView {
         }
       })();
     });
-    tmp3Result._onLayout = function(arg0) {
+    tmp3Result._onLayout = function (arg0) {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -162,7 +169,7 @@ class KeyboardAvoidingView {
         obj.setState(obj);
       }
     };
-    tmp3Result._updateBottomIfNecessary = closure_4(function*() {
+    tmp3Result._updateBottomIfNecessary = closure_4(function* () {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -267,11 +274,11 @@ class KeyboardAvoidingView {
 }
 importDefaultResult2(KeyboardAvoidingView, noopAll.Component);
 let obj = { key: "_relativeKeyboardHeight", value: null };
-closure_1 = importDefaultResult(function(arg0) {
+closure_1 = importDefaultResult(function (arg0) {
   const self = this;
   closure_1 = arg0;
   c3 = 0;
-  return (function*(arg0) {
+  return (function* (arg0) {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -358,7 +365,7 @@ let items = [
         obj[0] = self._bottom;
         self.setState(obj);
       }
-    }
+    },
   },
   {
     key: "componentDidMount",
@@ -369,11 +376,11 @@ let items = [
         self._setBottom(0);
       }
       let tmpResult = tmp(343);
-      const items = [tmpResult.addListener("keyboardDidHide", self._onKeyboardHide), ];
+      const items = [tmpResult.addListener("keyboardDidHide", self._onKeyboardHide)];
       tmpResult = tmp(343);
       items[1] = tmpResult.addListener("keyboardDidShow", self._onKeyboardChange);
       self._subscriptions = items;
-    }
+    },
   },
   {
     key: "componentWillUnmount",
@@ -382,7 +389,7 @@ let items = [
       const item = _subscriptions.forEach((remove) => {
         remove.remove();
       });
-    }
+    },
   },
   {
     key: "render",
@@ -450,8 +457,8 @@ let items = [
         obj.children = children;
         return jsx(KeyboardAvoidingView(108), { ref: null, onLayout: null, style: null });
       }
-    }
-  }
+    },
+  },
 ];
 
 export default importDefaultResult1(KeyboardAvoidingView, items);

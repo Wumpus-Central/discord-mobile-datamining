@@ -6,11 +6,67 @@ import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import jsxProd from "react/00021_jsxProd.js";
 
 const require = arg1;
-let closure_3 = ["height", "maxHeight", "minHeight", "backfaceVisibility", "backgroundColor", "borderBlockColor", "borderBlockEndColor", "borderBlockStartColor", "borderBottomColor", "borderBottomEndRadius", "borderBottomLeftRadius", "borderBottomRightRadius", "borderBottomStartRadius", "borderBottomWidth", "borderColor", "borderCurve", "borderEndColor", "borderEndEndRadius", "borderEndStartRadius", "borderEndWidth", "borderLeftColor", "borderLeftWidth", "borderRadius", "borderRightColor", "borderRightWidth", "borderStartColor", "borderStartEndRadius", "borderStartStartRadius", "borderStartWidth", "borderStyle", "borderTopColor", "borderTopEndRadius", "borderTopLeftRadius", "borderTopRightRadius", "borderTopStartRadius", "borderTopWidth", "borderWidth", "boxShadow", "elevation", "filter", "mixBlendMode", "opacity", "shadowColor", "shadowOffset", "shadowOpacity", "shadowRadius", "transform", "transformOrigin"];
+let closure_3 = [
+  "height",
+  "maxHeight",
+  "minHeight",
+  "backfaceVisibility",
+  "backgroundColor",
+  "borderBlockColor",
+  "borderBlockEndColor",
+  "borderBlockStartColor",
+  "borderBottomColor",
+  "borderBottomEndRadius",
+  "borderBottomLeftRadius",
+  "borderBottomRightRadius",
+  "borderBottomStartRadius",
+  "borderBottomWidth",
+  "borderColor",
+  "borderCurve",
+  "borderEndColor",
+  "borderEndEndRadius",
+  "borderEndStartRadius",
+  "borderEndWidth",
+  "borderLeftColor",
+  "borderLeftWidth",
+  "borderRadius",
+  "borderRightColor",
+  "borderRightWidth",
+  "borderStartColor",
+  "borderStartEndRadius",
+  "borderStartStartRadius",
+  "borderStartWidth",
+  "borderStyle",
+  "borderTopColor",
+  "borderTopEndRadius",
+  "borderTopLeftRadius",
+  "borderTopRightRadius",
+  "borderTopStartRadius",
+  "borderTopWidth",
+  "borderWidth",
+  "boxShadow",
+  "elevation",
+  "filter",
+  "mixBlendMode",
+  "opacity",
+  "shadowColor",
+  "shadowOffset",
+  "shadowOpacity",
+  "shadowRadius",
+  "transform",
+  "transformOrigin",
+];
 ({ Animated: error, Platform, StyleSheet } = get_ActivityIndicator);
 const View = get_ActivityIndicator.View;
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
-const styles = StyleSheet.create({ content: { flex: 1, flexDirection: "row", alignItems: "stretch" }, large: { marginHorizontal: 5 }, title: { justifyContent: "center" }, start: { flexDirection: "row", alignItems: "center", justifyContent: "flex-start" }, end: { flexDirection: "row", alignItems: "center", justifyContent: "flex-end" }, expand: { flexGrow: 1, flexBasis: 0 } });
+const styles = StyleSheet.create({
+  content: { flex: 1, flexDirection: "row", alignItems: "stretch" },
+  large: { marginHorizontal: 5 },
+  title: { justifyContent: "center" },
+  start: { flexDirection: "row", alignItems: "center", justifyContent: "flex-start" },
+  end: { flexDirection: "row", alignItems: "center", justifyContent: "flex-end" },
+  expand: { flexGrow: 1, flexBasis: 0 },
+});
 
 export const Header = function Header(layout) {
   let obj = require(headerSearchBarOptions[5]);
@@ -48,11 +104,25 @@ export const Header = function Header(layout) {
   headerSearchBarOptions = layout.headerSearchBarOptions;
   ({ headerTransparent, headerTintColor, headerBackground, headerRight, headerBackButtonDisplayMode } = layout);
   let str2 = "minimal";
-  ({ headerTitleAllowFontScaling, headerTitleStyle, headerLeftContainerStyle, headerRightContainerStyle, headerTitleContainerStyle } = layout);
+  ({
+    headerTitleAllowFontScaling,
+    headerTitleStyle,
+    headerLeftContainerStyle,
+    headerRightContainerStyle,
+    headerTitleContainerStyle,
+  } = layout);
   if (undefined !== headerBackButtonDisplayMode) {
     str2 = headerBackButtonDisplayMode;
   }
-  ({ headerStyle, headerPressColor, headerPressOpacity, headerStatusBarHeight, headerBackTitleStyle, headerBackgroundContainerStyle, headerShadowVisible } = layout);
+  ({
+    headerStyle,
+    headerPressColor,
+    headerPressOpacity,
+    headerStatusBarHeight,
+    headerBackTitleStyle,
+    headerBackgroundContainerStyle,
+    headerShadowVisible,
+  } = layout);
   if (undefined === headerStatusBarHeight) {
     let num = 0;
     if (!context) {
@@ -64,7 +134,11 @@ export const Header = function Header(layout) {
   const tmp2 = headerSearchBarOptions;
   const tmp6 = callback2(React.useState(false), 2);
   const tmp9 = undefined !== modal && modal;
-  const defaultHeaderHeight = require(headerSearchBarOptions[10]).getDefaultHeaderHeight(layout, tmp9, headerStatusBarHeight);
+  const defaultHeaderHeight = require(headerSearchBarOptions[10]).getDefaultHeaderHeight(
+    layout,
+    tmp9,
+    headerStatusBarHeight,
+  );
   if (!headerStyle) {
     headerStyle = {};
   }
@@ -74,9 +148,101 @@ export const Header = function Header(layout) {
     height = defaultHeaderHeight;
   }
   ({ opacity, transform } = flattenResult);
-  ({ maxHeight, minHeight, backfaceVisibility, backgroundColor, borderBlockColor, borderBlockEndColor, borderBlockStartColor, borderBottomColor, borderBottomEndRadius, borderBottomLeftRadius, borderBottomRightRadius, borderBottomStartRadius, borderBottomWidth, borderColor, borderCurve, borderEndColor, borderEndEndRadius, borderEndStartRadius, borderEndWidth, borderLeftColor, borderLeftWidth, borderRadius, borderRightColor, borderRightWidth, borderStartColor, borderStartEndRadius, borderStartStartRadius, borderStartWidth, borderStyle, borderTopColor, borderTopEndRadius, borderTopLeftRadius, borderTopRightRadius, borderTopStartRadius, borderTopWidth, borderWidth, boxShadow, elevation, filter, mixBlendMode, shadowColor, shadowOffset, shadowOpacity, shadowRadius, transformOrigin } = flattenResult);
+  ({
+    maxHeight,
+    minHeight,
+    backfaceVisibility,
+    backgroundColor,
+    borderBlockColor,
+    borderBlockEndColor,
+    borderBlockStartColor,
+    borderBottomColor,
+    borderBottomEndRadius,
+    borderBottomLeftRadius,
+    borderBottomRightRadius,
+    borderBottomStartRadius,
+    borderBottomWidth,
+    borderColor,
+    borderCurve,
+    borderEndColor,
+    borderEndEndRadius,
+    borderEndStartRadius,
+    borderEndWidth,
+    borderLeftColor,
+    borderLeftWidth,
+    borderRadius,
+    borderRightColor,
+    borderRightWidth,
+    borderStartColor,
+    borderStartEndRadius,
+    borderStartStartRadius,
+    borderStartWidth,
+    borderStyle,
+    borderTopColor,
+    borderTopEndRadius,
+    borderTopLeftRadius,
+    borderTopRightRadius,
+    borderTopStartRadius,
+    borderTopWidth,
+    borderWidth,
+    boxShadow,
+    elevation,
+    filter,
+    mixBlendMode,
+    shadowColor,
+    shadowOffset,
+    shadowOpacity,
+    shadowRadius,
+    transformOrigin,
+  } = flattenResult);
   callback(flattenResult, closure_3);
-  obj = { backfaceVisibility, backgroundColor, borderBlockColor, borderBlockEndColor, borderBlockStartColor, borderBottomColor, borderBottomEndRadius, borderBottomLeftRadius, borderBottomRightRadius, borderBottomStartRadius, borderBottomWidth, borderColor, borderCurve, borderEndColor, borderEndEndRadius, borderEndStartRadius, borderEndWidth, borderLeftColor, borderLeftWidth, borderRadius, borderRightColor, borderRightWidth, borderStartColor, borderStartEndRadius, borderStartStartRadius, borderStartWidth, borderStyle, borderTopColor, borderTopEndRadius, borderTopLeftRadius, borderTopRightRadius, borderTopStartRadius, borderTopWidth, borderWidth, boxShadow, elevation, filter, mixBlendMode, opacity, shadowColor, shadowOffset, shadowOpacity, shadowRadius, transform, transformOrigin };
+  obj = {
+    backfaceVisibility,
+    backgroundColor,
+    borderBlockColor,
+    borderBlockEndColor,
+    borderBlockStartColor,
+    borderBottomColor,
+    borderBottomEndRadius,
+    borderBottomLeftRadius,
+    borderBottomRightRadius,
+    borderBottomStartRadius,
+    borderBottomWidth,
+    borderColor,
+    borderCurve,
+    borderEndColor,
+    borderEndEndRadius,
+    borderEndStartRadius,
+    borderEndWidth,
+    borderLeftColor,
+    borderLeftWidth,
+    borderRadius,
+    borderRightColor,
+    borderRightWidth,
+    borderStartColor,
+    borderStartEndRadius,
+    borderStartStartRadius,
+    borderStartWidth,
+    borderStyle,
+    borderTopColor,
+    borderTopEndRadius,
+    borderTopLeftRadius,
+    borderTopRightRadius,
+    borderTopStartRadius,
+    borderTopWidth,
+    borderWidth,
+    boxShadow,
+    elevation,
+    filter,
+    mixBlendMode,
+    opacity,
+    shadowColor,
+    shadowOffset,
+    shadowOpacity,
+    shadowRadius,
+    transform,
+    transformOrigin,
+  };
   const entries = Object.entries(obj);
   for (const item10141 of entries) {
     let tmp15 = callback2;
@@ -110,7 +276,19 @@ export const Header = function Header(layout) {
   }
   let headerLeftResult = null;
   if (headerLeft) {
-    obj3 = { tintColor: null, pressColor: null, pressOpacity: null, displayMode: null, titleLayout: null, screenLayout: null, canGoBack: null, onPress: null, label: null, labelStyle: null, href: null };
+    obj3 = {
+      tintColor: null,
+      pressColor: null,
+      pressOpacity: null,
+      displayMode: null,
+      titleLayout: null,
+      screenLayout: null,
+      canGoBack: null,
+      onPress: null,
+      label: null,
+      labelStyle: null,
+      href: null,
+    };
     obj3[0] = text;
     obj3[1] = headerPressColor;
     obj3[2] = headerPressOpacity;
@@ -179,10 +357,13 @@ export const Header = function Header(layout) {
     tmp32 = headerSearchBarOptions;
   }
   obj6[2] = headerBackgroundResult;
-  const items2 = [closure_10(View2, obj6), closure_10(View, { pointerEvents: "none", style: { height: headerStatusBarHeight } }), ];
+  const items2 = [
+    closure_10(View2, obj6),
+    closure_10(View, { pointerEvents: "none", style: { height: headerStatusBarHeight } }),
+  ];
   const obj9 = { pointerEvents: "box-none", style: items3, children: null };
   items3 = [closure_13.content, null];
-  const items4 = [closure_13.start, , , ];
+  const items4 = [closure_13.start, , ,];
   let expand = !tmp7;
   if (!tmp7) {
     expand = "center" === str;
@@ -193,10 +374,13 @@ export const Header = function Header(layout) {
   items4[1] = expand;
   items4[2] = { marginStart: rect.left };
   items4[3] = headerLeftContainerStyle;
-  const items5 = [closure_10(closure_7.View, { pointerEvents: "box-none", style: items4, children: headerLeftResult }), , ];
+  const items5 = [
+    closure_10(closure_7.View, { pointerEvents: "box-none", style: items4, children: headerLeftResult }),
+    ,
+  ];
   let tmp28Result = null;
   if (!tmp7) {
-    const items6 = [tmp36.title, , , ];
+    const items6 = [tmp36.title, , ,];
     if ("center" === str) {
       let num6 = 16;
       if (headerLeftResult) {
@@ -251,16 +435,16 @@ export const Header = function Header(layout) {
       };
       obj13[4] = headerTitleStyle;
       obj12[2] = headerTitle(obj13);
-      const items7 = [tmp30(tmp29.View, obj12), ];
+      const items7 = [tmp30(tmp29.View, obj12)];
       const obj14 = { pointerEvents: "box-none", style: null, children: null };
-      const items8 = [, , , ];
+      const items8 = [, , ,];
       ({ end: arr9[0], expand: arr9[1] } = tmp36);
       const obj15 = { marginEnd: null };
       obj15[0] = rect.right;
       items8[2] = obj15;
       items8[3] = headerRightContainerStyle;
       obj14[1] = items8;
-      const items9 = [headerRightResult, ];
+      const items9 = [headerRightResult];
       let tmp30Result = null;
       if (headerSearchBarOptions) {
         const obj16 = { tintColor: null, pressColor: null, pressOpacity: null, onPress: null, children: null };

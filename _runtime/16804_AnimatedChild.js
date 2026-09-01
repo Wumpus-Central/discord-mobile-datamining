@@ -7,7 +7,9 @@ import jsxProd from "react/00021_jsxProd.js";
 const require = arg1;
 let c4 = importAllResult;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = { code: "function pnpm_indexTsx1(){const{index,textWidth,spacing,anim}=this.__closure;return{position:'absolute',left:index*(textWidth.value+spacing),transform:[{translateX:-(anim.value%(textWidth.value+spacing))}]};}" };
+let closure_8 = {
+  code: "function pnpm_indexTsx1(){const{index,textWidth,spacing,anim}=this.__closure;return{position:'absolute',left:index*(textWidth.value+spacing),transform:[{translateX:-(anim.value%(textWidth.value+spacing))}]};}",
+};
 function AnimatedChild(children) {
   const index = children.index;
   const anim = children.anim;
@@ -27,9 +29,16 @@ function AnimatedChild(children) {
   return callback(anim(textWidth[4]).View, { style, children: children.children });
 }
 let closure_10 = { code: "function pnpm_indexTsx2(){const{anim,speed}=this.__closure;anim.value+=speed;}" };
-let closure_11 = { code: "function pnpm_indexTsx3(){const{textWidth,parentWidth}=this.__closure;if(textWidth.value===0||parentWidth.value===0){return 0;}return Math.round(parentWidth.value/textWidth.value)+1;}" };
-let closure_12 = { code: "function pnpm_indexTsx4(v){const{runOnJS,setCloneTimes}=this.__closure;if(v===0){return;}runOnJS(setCloneTimes)(v*2);}" };
-const styles = StyleSheet.create({ hidden: { opacity: 0, zIndex: -9999 }, row: { flexDirection: "row", overflow: "hidden" } });
+let closure_11 = {
+  code: "function pnpm_indexTsx3(){const{textWidth,parentWidth}=this.__closure;if(textWidth.value===0||parentWidth.value===0){return 0;}return Math.round(parentWidth.value/textWidth.value)+1;}",
+};
+let closure_12 = {
+  code: "function pnpm_indexTsx4(v){const{runOnJS,setCloneTimes}=this.__closure;if(v===0){return;}runOnJS(setCloneTimes)(v*2);}",
+};
+const styles = StyleSheet.create({
+  hidden: { opacity: 0, zIndex: -9999 },
+  row: { flexDirection: "row", overflow: "hidden" },
+});
 
 export const Marquee = importAllResult.memo((speed) => {
   let num = speed.speed;
@@ -97,7 +106,7 @@ export const Marquee = importAllResult.memo((speed) => {
       sharedValue.value = nativeEvent.nativeEvent.layout.width;
     },
     pointerEvents: "box-none",
-    children: null
+    children: null,
   };
   obj1 = { style: closure_13.row, pointerEvents: "box-none", children: null };
   obj2 = { horizontal: true, style: closure_13.hidden, pointerEvents: "box-none", children: sharedValue2(c5, obj3) };
@@ -105,15 +114,21 @@ export const Marquee = importAllResult.memo((speed) => {
     onLayout(nativeEvent) {
       sharedValue1.value = nativeEvent.nativeEvent.layout.width;
     },
-    children
+    children,
   };
-  const items = [sharedValue2(children(num2[4]).ScrollView, obj2), ];
+  const items = [sharedValue2(children(num2[4]).ScrollView, obj2)];
   let mapped = tmp4 > 0;
   if (mapped) {
     const _Array = Array;
     const items1 = [];
     HermesBuiltin.arraySpread(Array(tmp4).keys(), 0);
-    mapped = items1.map((index) => sharedValue2(closure_1_9, { index, anim: sharedValue2, textWidth: sharedValue1, spacing: num2, children }, "clone-" + index));
+    mapped = items1.map((index) =>
+      sharedValue2(
+        closure_1_9,
+        { index, anim: sharedValue2, textWidth: sharedValue1, spacing: num2, children },
+        "clone-" + index,
+      ),
+    );
     const ArrayResult = Array(tmp4);
   }
   items[1] = mapped;

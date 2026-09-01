@@ -10,7 +10,16 @@ import _modDef5187 from "metro/05187__.js";
 import getDataView from "05157_getDataView.js";
 
 const objectAssignResult = getDataView.objectAssign({}, decodeXPValueDefault, _modDef5181);
-const obj = { "0th": objectAssignResult, "1st": decodeXPValueDefault, exif: objectAssignResult, gps: _modDef5183, interoperability: getStringValueDefault, mpf: null, canon: null, pentax: null };
+const obj = {
+  "0th": objectAssignResult,
+  "1st": decodeXPValueDefault,
+  exif: objectAssignResult,
+  gps: _modDef5183,
+  interoperability: getStringValueDefault,
+  mpf: null,
+  canon: null,
+  pentax: null,
+};
 if (_modDef5160.USE_MPF) {
   let importDefaultResult1 = getStringValueDefault2;
 } else {

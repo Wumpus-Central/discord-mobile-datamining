@@ -23,7 +23,7 @@ function _runScrollBenchmark() {
     closure_3 = arg3;
     c6 = 0;
     c7 = 0;
-    return (function*(arg0, arg1, arg2, arg3) {
+    return (function* (arg0, arg1, arg2, arg3) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -149,7 +149,7 @@ export const useFlatListBenchmark = function useFlatListBenchmark(arg0, arg1, ar
   isBenchmarkRunning = tmp[0];
   const callback2 = tmp[1];
   const callback3 = startBenchmark(null);
-  const items = [arg1, arg0, isBenchmarkRunning, , , ];
+  const items = [arg1, arg0, isBenchmarkRunning, , ,];
   ({ repeatCount: arr[3], speedMultiplier: arr[4], targetOffset: arr[5] } = arg2);
   startBenchmark = callback2(() => {
     if (!isBenchmarkRunning) {
@@ -172,7 +172,7 @@ export const useFlatListBenchmark = function useFlatListBenchmark(arg0, arg1, ar
       }
       callback(true);
       ref = undefined;
-      ref = lib(function*() {
+      ref = lib(function* () {
         if (c3 === 2) {
           c3 = 3;
           HermesBuiltin.throwTypeError();

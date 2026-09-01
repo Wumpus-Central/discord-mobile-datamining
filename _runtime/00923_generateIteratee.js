@@ -149,7 +149,7 @@ export const rewriteFramesIntegration = setupIntegration.defineIntegration(() =>
         })(exception);
       }
       return tmp2;
-    }
+    },
   };
   return obj;
 });

@@ -49,4 +49,4 @@ export default function createBaseEach(arg0) {
       return callback(arg0, arg1);
     }
   };
-};
+}

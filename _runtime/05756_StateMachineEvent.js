@@ -2,7 +2,13 @@
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 const Platform = get_ActivityIndicator.Platform;
-let obj = { NATIVE_BEGIN: "nativeBegin", NATIVE_START: "nativeStart", FINALIZE: "finalize", LONG_PRESS_TOUCHES_DOWN: "longPressTouchesDown", CANCEL: "cancel" };
+let obj = {
+  NATIVE_BEGIN: "nativeBegin",
+  NATIVE_START: "nativeStart",
+  FINALIZE: "finalize",
+  LONG_PRESS_TOUCHES_DOWN: "longPressTouchesDown",
+  CANCEL: "cancel",
+};
 
 export const StateMachineEvent = obj;
 export const getStatesConfig = function getStatesConfig(closure_28, closure_29, isScreenReaderEnabled) {
@@ -10,7 +16,7 @@ export const getStatesConfig = function getStatesConfig(closure_28, closure_29, 
     obj = { eventName: null, callback: null };
     obj[0] = obj.NATIVE_BEGIN;
     obj[1] = closure_28;
-    const items = [obj, , ];
+    const items = [obj, ,];
     obj = { eventName: null, optional: true };
     obj[0] = obj.LONG_PRESS_TOUCHES_DOWN;
     items[1] = obj;
@@ -22,7 +28,7 @@ export const getStatesConfig = function getStatesConfig(closure_28, closure_29, 
   } else {
     obj = { eventName: null };
     obj[0] = obj.NATIVE_BEGIN;
-    items1 = [obj, , ];
+    items1 = [obj, ,];
     const obj2 = { eventName: null, callback: null };
     obj2[0] = obj.LONG_PRESS_TOUCHES_DOWN;
     obj2[1] = closure_28;

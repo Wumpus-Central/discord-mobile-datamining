@@ -22,8 +22,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class FePointLight {
   constructor() {
@@ -52,8 +51,8 @@ const items = [
     value: function render() {
       const result = FePointLight(8257).warnUnimplementedFilter();
       return null;
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(FePointLight, items);
 importDefaultResultResult.displayName = "FePointLight";

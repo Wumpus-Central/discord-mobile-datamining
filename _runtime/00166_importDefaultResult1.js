@@ -20,7 +20,11 @@ class MemoryInfo {
     definePropertyResult2 = Object.defineProperty(this, closure_4, { writable: true, value: "a" });
     if (null != global) {
       tmp8 = closure_1;
-      ({ jsHeapSizeLimit: closure_1(undefined, self, tmp2)[tmp2], totalJSHeapSize: closure_1(undefined, self, tmp4)[tmp4], usedJSHeapSize: closure_1(undefined, self, tmp6)[tmp6] } = global);
+      ({
+        jsHeapSizeLimit: closure_1(undefined, self, tmp2)[tmp2],
+        totalJSHeapSize: closure_1(undefined, self, tmp4)[tmp4],
+        usedJSHeapSize: closure_1(undefined, self, tmp6)[tmp6],
+      } = global);
     }
     return;
   }
@@ -30,20 +34,20 @@ const items = [
     key: "jsHeapSizeLimit",
     get() {
       return callback(this, closure_2)[closure_2];
-    }
+    },
   },
   {
     key: "totalJSHeapSize",
     get() {
       return callback(this, closure_3)[closure_3];
-    }
+    },
   },
   {
     key: "usedJSHeapSize",
     get() {
       return callback(this, closure_4)[closure_4];
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = _createClassDefault(MemoryInfo, items);
 setPlatformObject.setPlatformObject(importDefaultResultResult);

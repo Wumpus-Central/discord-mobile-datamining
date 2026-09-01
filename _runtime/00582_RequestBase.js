@@ -178,8 +178,11 @@ class RequestBase {
       if (self._endCalled) {
         tmp = globalThis;
         _console = console;
-        str = "Warning: superagent request was sent twice, because both .end() and .then() were called. Never call .end() if you use promises";
-        warnResult = console.warn("Warning: superagent request was sent twice, because both .end() and .then() were called. Never call .end() if you use promises");
+        str =
+          "Warning: superagent request was sent twice, because both .end() and .then() were called. Never call .end() if you use promises";
+        warnResult = console.warn(
+          "Warning: superagent request was sent twice, because both .end() and .then() were called. Never call .end() if you use promises",
+        );
       }
       tmp3 = globalThis;
       _Promise = Promise;
@@ -312,7 +315,9 @@ class RequestBase {
         tmp19 = new.target;
         str2 = ".field() can't be used if .send() is used. Please use only .send() or only .field() & .attach()";
         tmp20 = new.target;
-        error1 = new Error(".field() can't be used if .send() is used. Please use only .send() or only .field() & .attach()");
+        error1 = new Error(
+          ".field() can't be used if .send() is used. Please use only .send() or only .field() & .attach()",
+        );
         tmp22 = error1;
         throw error1;
       } else {
@@ -498,9 +503,12 @@ class RequestBase {
       tmp35 = globalThis;
       _Error4 = Error;
       tmp36 = new.target;
-      str11 = ".send() can't be used if .attach() or .field() is used. Please use only .send() or only .field() & .attach()";
+      str11 =
+        ".send() can't be used if .attach() or .field() is used. Please use only .send() or only .field() & .attach()";
       tmp37 = new.target;
-      error = new Error(".send() can't be used if .attach() or .field() is used. Please use only .send() or only .field() & .attach()");
+      error = new Error(
+        ".send() can't be used if .attach() or .field() is used. Please use only .send() or only .field() & .attach()",
+      );
       tmp39 = error;
       throw error;
     } else {
@@ -714,7 +722,16 @@ class RequestBase {
     return;
   }
 }
-const set = new Set(["ETIMEDOUT", "ECONNRESET", "EADDRINUSE", "ECONNREFUSED", "EPIPE", "ENOTFOUND", "ENETUNREACH", "EAI_AGAIN"]);
+const set = new Set([
+  "ETIMEDOUT",
+  "ECONNRESET",
+  "EADDRINUSE",
+  "ECONNREFUSED",
+  "EPIPE",
+  "ENOTFOUND",
+  "ENETUNREACH",
+  "EAI_AGAIN",
+]);
 const set1 = new Set([408, 413, 429, 500, 502, 503, 504, 521, 522, 524]);
 RequestBase.prototype.getHeader = RequestBase.prototype.get;
 

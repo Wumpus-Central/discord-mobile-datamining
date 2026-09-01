@@ -38,7 +38,7 @@ class State {
       closure_0 = arg0;
       c3 = 0;
       c4 = 0;
-      return (function*(arg0) {
+      return (function* (arg0) {
         closure_2 = tmp5;
         closure_1 = tmp2;
         const obj2 = lib(closure_2_2[3]);
@@ -54,7 +54,7 @@ class State {
         return closure_2;
       })();
     });
-    this._fetchCurrentState = function(arg0) {
+    this._fetchCurrentState = function (arg0) {
       self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -114,7 +114,10 @@ class State {
     tmp3 = new require("InternetReachability")(global, this._handleInternetReachabilityUpdate);
     this._internetReachability = tmp3;
     eventEmitter = require("get ActivityIndicator").eventEmitter;
-    this._nativeEventSubscription = eventEmitter.addListener(require("metro/01481__.js").DEVICE_CONNECTIVITY_EVENT, this._handleNativeStateUpdate);
+    this._nativeEventSubscription = eventEmitter.addListener(
+      require("metro/01481__.js").DEVICE_CONNECTIVITY_EVENT,
+      this._handleNativeStateUpdate,
+    );
     _fetchCurrentStateResult = this._fetchCurrentState();
     return;
   }

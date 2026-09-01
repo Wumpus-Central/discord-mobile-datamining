@@ -1,7 +1,6 @@
 // _runtime/04814_ToPropertyDescriptor.js
 import isObject from "04762_isObject.js";
 
-
 export default function ToPropertyDescriptor(enumerable) {
   if (isObject(enumerable)) {
     const obj = {};
@@ -37,7 +36,9 @@ export default function ToPropertyDescriptor(enumerable) {
       obj["[[Set]]"] = enumerable.set;
     }
     if (tmp(573)(obj, "[[Get]]")) {
-      const tmp17 = new tmp(541)("Invalid property descriptor. Cannot both specify accessors and a value or writable attribute");
+      const tmp17 = new tmp(541)(
+        "Invalid property descriptor. Cannot both specify accessors and a value or writable attribute",
+      );
       throw tmp17;
     }
     return obj;
@@ -45,4 +46,4 @@ export default function ToPropertyDescriptor(enumerable) {
     const tmp5 = new tmp(541)("ToPropertyDescriptor requires an object");
     throw tmp5;
   }
-};
+}

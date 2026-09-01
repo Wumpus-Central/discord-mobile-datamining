@@ -16,15 +16,21 @@ if (Object.keys) {
   }
   let closure_3 = !propertyIsEnumerableResult;
   let call2 = propertyIsEnumerable.call;
-  const fn = () => {
-
-  };
+  const fn = () => {};
   if (typeof call2 === "unknown") {
     let propertyIsEnumerableResult1 = propertyIsEnumerable("prototype");
   } else {
     propertyIsEnumerableResult1 = call2(fn, "prototype");
   }
-  let closure_5 = ["toString", "toLocaleString", "valueOf", "hasOwnProperty", "isPrototypeOf", "propertyIsEnumerable", "constructor"];
+  let closure_5 = [
+    "toString",
+    "toLocaleString",
+    "valueOf",
+    "hasOwnProperty",
+    "isPrototypeOf",
+    "propertyIsEnumerable",
+    "constructor",
+  ];
   function equalsConstructorPrototype(arg0) {
     const constructor = arg0.constructor;
     let tmp = constructor;
@@ -33,7 +39,31 @@ if (Object.keys) {
     }
     return tmp;
   }
-  let closure_7 = { $applicationCache: true, $console: true, $external: true, $frame: true, $frameElement: true, $frames: true, $innerHeight: true, $innerWidth: true, $onmozfullscreenchange: true, $onmozfullscreenerror: true, $outerHeight: true, $outerWidth: true, $pageXOffset: true, $pageYOffset: true, $parent: true, $scrollLeft: true, $scrollTop: true, $scrollX: true, $scrollY: true, $self: true, $webkitIndexedDB: true, $webkitStorageInfo: true, $window: true };
+  let closure_7 = {
+    $applicationCache: true,
+    $console: true,
+    $external: true,
+    $frame: true,
+    $frameElement: true,
+    $frames: true,
+    $innerHeight: true,
+    $innerWidth: true,
+    $onmozfullscreenchange: true,
+    $onmozfullscreenerror: true,
+    $outerHeight: true,
+    $outerWidth: true,
+    $pageXOffset: true,
+    $pageYOffset: true,
+    $parent: true,
+    $scrollLeft: true,
+    $scrollTop: true,
+    $scrollX: true,
+    $scrollY: true,
+    $self: true,
+    $webkitIndexedDB: true,
+    $webkitStorageInfo: true,
+    $window: true,
+  };
   let closure_8 = (() => {
     if (typeof window === "undefined") {
       return false;

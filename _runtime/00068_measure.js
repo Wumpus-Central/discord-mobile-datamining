@@ -67,7 +67,9 @@ obj.measureLayoutRelativeToParent = function measureLayoutRelativeToParent(arg0,
   const _require = arg2;
   if (arg0 % 2 === 0) {
     const _console = console;
-    console.warn("RCTUIManager.measureLayoutRelativeToParent method is deprecated and it will not be implemented in newer versions of RN (Fabric) - T47686450");
+    console.warn(
+      "RCTUIManager.measureLayoutRelativeToParent method is deprecated and it will not be implemented in newer versions of RN (Fabric) - T47686450",
+    );
     const tmp8 = nullthrowsDefault;
     const tmp8Result = tmp8(require("00071_getFabricUIManager.js").getFabricUIManager());
     const result = tmp8Result.findShadowNodeByTag_DEPRECATED(arg0);

@@ -26,8 +26,12 @@ const items = [
         }
       }
       const _queue1 = self._queue;
-      _queue1.splice(PriorityQueue(16999).default(self._queue, obj, (priority, priority2) => priority2.priority - priority.priority), 0, obj);
-    }
+      _queue1.splice(
+        PriorityQueue(16999).default(self._queue, obj, (priority, priority2) => priority2.priority - priority.priority),
+        0,
+        obj,
+      );
+    },
   },
   {
     key: "dequeue",
@@ -39,7 +43,7 @@ const items = [
         run = arr.run;
       }
       return run;
-    }
+    },
   },
   {
     key: "filter",
@@ -48,14 +52,14 @@ const items = [
       const _queue = this._queue;
       const found = _queue.filter((priority) => priority.priority === priority.priority);
       return found.map((run) => run.run);
-    }
+    },
   },
   {
     key: "size",
     get() {
       return this._queue.length;
-    }
-  }
+    },
+  },
 ];
 
 export default _createClass(PriorityQueue, items);

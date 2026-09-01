@@ -15,19 +15,20 @@ arg5.match = function match(arg0, arg1, arg2, algorithm) {
   if (!str) {
     str = "best fit";
   }
-  return require("13894_ResolveLocale.js").ResolveLocale(arg1, result, { localeMatcher: str }, [], {}, () => closure_0).locale;
+  return require("13894_ResolveLocale.js").ResolveLocale(arg1, result, { localeMatcher: str }, [], {}, () => closure_0)
+    .locale;
 };
 let obj = {
   enumerable: true,
   get() {
     return LookupSupportedLocales /* LookupSupportedLocales */.LookupSupportedLocales;
-  }
+  },
 };
 Object.defineProperty(arg5, "LookupSupportedLocales", obj);
 obj = {
   enumerable: true,
   get() {
     return ResolveLocale /* ResolveLocale */.ResolveLocale;
-  }
+  },
 };
 Object.defineProperty(arg5, "ResolveLocale", obj);

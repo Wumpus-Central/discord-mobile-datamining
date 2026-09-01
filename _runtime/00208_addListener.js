@@ -58,5 +58,5 @@ export default {
   },
   clearCookies(arg0) {
     NetworkingDefault.clearCookies(arg0);
-  }
+  },
 };

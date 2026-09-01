@@ -2,7 +2,7 @@
 let self = this;
 const dependencyMap = arg4;
 const exports = arg5;
-const fn = function() {
+const fn = function () {
   const self = this;
   let obj = this.humanize;
   obj = {};
@@ -22,7 +22,7 @@ const fn = function() {
     }
     tmp.humanize = obj;
   }
-  obj.noConflict = function() {
+  obj.noConflict = function () {
     self.humanize = obj;
     return this;
   };
@@ -91,7 +91,20 @@ const fn = function() {
       return tmp;
     }
     closure_3 = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    closure_4 = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    closure_4 = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
     closure_5 = {
       d() {
         return formatChrCb.pad(closure_5.j(), 2, "0");
@@ -193,12 +206,12 @@ const fn = function() {
       },
       B() {
         const result = date.getTime() / 1000;
-        const sum = result % 86400 + 3600;
+        const sum = (result % 86400) + 3600;
         let sum1 = sum;
         if (sum < 0) {
           sum1 = sum + 86400;
         }
-        const result1 = sum1 / 86.4 % 1000;
+        const result1 = (sum1 / 86.4) % 1000;
         if (result < 0) {
           const _Math2 = Math;
           let rounded = Math.ceil(result1);
@@ -236,7 +249,7 @@ const fn = function() {
         if (timezoneOffset > 0) {
           str = "-";
         }
-        return str + formatChrCb.pad(100 * Math.floor(absolute / 60) + absolute % 60, 4, "0");
+        return str + formatChrCb.pad(100 * Math.floor(absolute / 60) + (absolute % 60), 4, "0");
       },
       P() {
         const str = closure_5.O();
@@ -254,7 +267,7 @@ const fn = function() {
       },
       U() {
         return date.getTime() / 1000 || 0;
-      }
+      },
     };
     return str.replace(tmp11, formatChrCb);
   };
@@ -555,8 +568,20 @@ const fn = function() {
   obj.linebreaks = (str) => {
     str = str.replace(/^([\n|\r]*)/, "");
     const str2 = str.replace(/^([\n|\r]*)/, "").replace(/([\n|\r]*)$/, "");
-    const str3 = str.replace(/^([\n|\r]*)/, "").replace(/([\n|\r]*)$/, "").replace(/(\r\n|\n|\r)/g, "\n");
-    return "<p>" + str.replace(/^([\n|\r]*)/, "").replace(/([\n|\r]*)$/, "").replace(/(\r\n|\n|\r)/g, "\n").replace(/(\n{2,})/g, "</p><p>").replace(/\n/g, "<br />") + "</p>";
+    const str3 = str
+      .replace(/^([\n|\r]*)/, "")
+      .replace(/([\n|\r]*)$/, "")
+      .replace(/(\r\n|\n|\r)/g, "\n");
+    return (
+      "<p>" +
+      str
+        .replace(/^([\n|\r]*)/, "")
+        .replace(/([\n|\r]*)$/, "")
+        .replace(/(\r\n|\n|\r)/g, "\n")
+        .replace(/(\n{2,})/g, "</p><p>")
+        .replace(/\n/g, "<br />") +
+      "</p>"
+    );
   };
   obj.nl2br = (str) => str.replace(/(\r\n|\n|\r)/g, "<br />");
   obj.truncatechars = (arg0, arg1) => {

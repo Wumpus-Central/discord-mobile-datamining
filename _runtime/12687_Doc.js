@@ -24,7 +24,7 @@ let items = [
       this.indent = this.indent + 1;
       arg0(this);
       this.indent = this.indent - 1;
-    }
+    },
   },
   {
     key: "write",
@@ -39,7 +39,10 @@ let items = [
         const found = parts.filter((arg0) => arg0);
         const _Math = Math;
         const items = [];
-        HermesBuiltin.arraySpread(found.map((str) => str.length - str.trimStart().length), 0);
+        HermesBuiltin.arraySpread(
+          found.map((str) => str.length - str.trimStart().length),
+          0,
+        );
         const _Math2 = Math;
         closure_0 = HermesBuiltin.apply(items, Math);
         const mapped = found.map((arr) => arr.slice(closure_0));
@@ -50,7 +53,7 @@ let items = [
           continue;
         }
       }
-    }
+    },
   },
   {
     key: "compile",
@@ -70,8 +73,8 @@ let items = [
       const items1 = [...content.map((arg0) => "  " + arg0)];
       items[tmp] = items1.join("\n");
       return Function(...args);
-    }
-  }
+    },
+  },
 ];
 
 export const Doc = _createClass(Doc, items);

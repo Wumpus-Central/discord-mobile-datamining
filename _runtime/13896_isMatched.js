@@ -85,12 +85,12 @@ function findMatchingDistanceForLSR(arg0, arg1, matches) {
     }
     const result = 10 * tmp.distance;
     const paradigmLocales = matches.paradigmLocales;
-    const items = [, , ];
+    const items = [, ,];
     ({ language: arr3[0], script: arr3[1], region: arr3[2] } = arg0);
     const _Boolean = Boolean;
     const found = items.filter(Boolean);
     const paradigmLocales1 = matches.paradigmLocales;
-    const items1 = [, , ];
+    const items1 = [, ,];
     ({ language: arr5[0], script: arr5[1], region: arr5[2] } = arg1);
     const _Boolean2 = Boolean;
     const found1 = items1.filter(Boolean);
@@ -133,7 +133,12 @@ function findMatchingDistance(arg0, arg1) {
     obj1 = { matches: null, matchVariables: null, paradigmLocales: null };
     obj1[0] = substr1.map((arg0) => {
       const first = Object.keys(arg0)[0];
-      return { supported: first, desired: arg0[first]._desired, distance: +arg0[first]._distance, oneway: "true" === arg0[first].oneway };
+      return {
+        supported: first,
+        desired: arg0[first]._desired,
+        distance: +arg0[first]._distance,
+        oneway: "true" === arg0[first].oneway,
+      };
     }, {});
     obj1[1] = substr.reduce((arg0, arg1) => {
       const first = Object.keys(arg1)[0];
@@ -143,10 +148,14 @@ function findMatchingDistance(arg0, arg1) {
     }, {});
     let tmp8Result = tmp8(1281);
     tmp8Result = tmp8(1281);
-    obj1[2] = tmp8Result.__spreadArray(tmp8Result.__spreadArray([], parts, true), parts.map((str) => {
-      const locale = new Intl.Locale(str.replace(/_/g, "-"));
-      return locale.maximize().toString();
-    }), true);
+    obj1[2] = tmp8Result.__spreadArray(
+      tmp8Result.__spreadArray([], parts, true),
+      parts.map((str) => {
+        const locale = new Intl.Locale(str.replace(/_/g, "-"));
+        return locale.maximize().toString();
+      }),
+      true,
+    );
     tmp7 = obj1;
     const __spreadArrayResult = tmp8Result.__spreadArray([], parts, true);
   }

@@ -7,7 +7,7 @@ function _asyncOptionalChain2() {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();

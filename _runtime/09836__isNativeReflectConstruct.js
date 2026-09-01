@@ -23,8 +23,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class HashMD {
   constructor(arg0, arg1, arg2, arg3) {
@@ -102,7 +101,7 @@ let items = [
       self.length = self.length + toBytesResult.length;
       self.roundClean();
       return self;
-    }
+    },
   },
   {
     key: "digestInto",
@@ -138,7 +137,7 @@ let items = [
         const _Number2 = Number;
         const BigIntResult1 = BigInt(32);
         let num2 = 0;
-        const NumberResult = Number(BigIntResult >> BigInt(32) & BigIntResult2);
+        const NumberResult = Number((BigIntResult >> BigInt(32)) & BigIntResult2);
         if (isLE) {
           num2 = 4;
         }
@@ -175,7 +174,7 @@ let items = [
         }
       }
       const subarrayResult = buffer2.subarray(num);
-    }
+    },
   },
   {
     key: "digest",
@@ -185,7 +184,7 @@ let items = [
       const substr = buffer.slice(0, outputLen);
       this.destroy();
       return substr;
-    }
+    },
   },
   {
     key: "_cloneInto",
@@ -204,10 +203,10 @@ let items = [
         const result = buffer.set(tmp5);
       }
       return constructor;
-    }
-  }
+    },
+  },
 ];
 
-export const Chi = (arg0, arg1, arg2) => arg0 & arg1 ^ ~arg0 & arg2;
-export const Maj = (arg0, arg1, arg2) => arg0 & arg1 ^ arg0 & arg2 ^ arg1 & arg2;
+export const Chi = (arg0, arg1, arg2) => (arg0 & arg1) ^ (~arg0 & arg2);
+export const Maj = (arg0, arg1, arg2) => (arg0 & arg1) ^ (arg0 & arg2) ^ (arg1 & arg2);
 export const HashMD = _createClass(HashMD, items);

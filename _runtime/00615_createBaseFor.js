@@ -33,4 +33,4 @@ export default function createBaseFor(arg0) {
     }
     return arg0;
   };
-};
+}

@@ -136,7 +136,11 @@ export const extraErrorDataIntegration = setupIntegration.defineIntegration(() =
             const normalizeResult = tmp4Result.normalize(tmp8, num);
             tmp4Result = tmp4(tmp5[1]);
             if (tmp4Result.isPlainObject(normalizeResult)) {
-              const result = tmp4(tmp5[3]).addNonEnumerableProperty(normalizeResult, "__sentry_skip_normalization__", true);
+              const result = tmp4(tmp5[3]).addNonEnumerableProperty(
+                normalizeResult,
+                "__sentry_skip_normalization__",
+                true,
+              );
               obj[tmp6] = normalizeResult;
               const tmp4Result1 = tmp4(tmp5[3]);
             }
@@ -150,7 +154,7 @@ export const extraErrorDataIntegration = setupIntegration.defineIntegration(() =
         obj2 = num(table[1]);
       }
       return tmp3;
-    }
+    },
   };
   return obj;
 });

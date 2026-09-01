@@ -4,7 +4,6 @@ import baseRest from "../08656_baseRest.js";
 import isIterateeCall from "../08657_isIterateeCall.js";
 import baseOrderBy from "../08658_baseOrderBy.js";
 
-
 export default baseRest((arg0, arg1) => {
   if (null == arg0) {
     return [];

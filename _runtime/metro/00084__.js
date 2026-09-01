@@ -7,5 +7,5 @@ export default {
   },
   getAssetByID(source) {
     return arr[source - 1];
-  }
+  },
 };

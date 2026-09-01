@@ -57,7 +57,24 @@ let fn = () => {
     }
     if (_d) {
       if (null == _d._pf) {
-        obj = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidEra: null, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, era: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
+        obj = {
+          empty: false,
+          unusedTokens: null,
+          unusedInput: null,
+          overflow: -2,
+          charsLeftOver: 0,
+          nullInput: false,
+          invalidEra: null,
+          invalidMonth: null,
+          invalidFormat: false,
+          userInvalidated: false,
+          iso: false,
+          parsedDateParts: null,
+          era: null,
+          meridiem: null,
+          rfc2822: false,
+          weekdayMismatch: false,
+        };
         obj[1] = [];
         obj[2] = [];
         obj[11] = [];
@@ -155,7 +172,24 @@ let fn = () => {
     }
     if (undefined !== self._pf) {
       if (null == self._pf) {
-        obj = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidEra: null, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, era: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
+        obj = {
+          empty: false,
+          unusedTokens: null,
+          unusedInput: null,
+          overflow: -2,
+          charsLeftOver: 0,
+          nullInput: false,
+          invalidEra: null,
+          invalidMonth: null,
+          invalidFormat: false,
+          userInvalidated: false,
+          iso: false,
+          parsedDateParts: null,
+          era: null,
+          meridiem: null,
+          rfc2822: false,
+          weekdayMismatch: false,
+        };
         obj[1] = [];
         obj[2] = [];
         obj[11] = [];
@@ -573,7 +607,10 @@ let fn = () => {
       if ("MMM" === arg1) {
         const call6 = closure_35.call;
         const _shortMonthsParse3 = tmp._shortMonthsParse;
-        const tmp18 = typeof call6 === "unknown" ? closure_35(toLocaleLowerCaseResult) : call6(_shortMonthsParse3, toLocaleLowerCaseResult);
+        const tmp18 =
+          typeof call6 === "unknown"
+            ? closure_35(toLocaleLowerCaseResult)
+            : call6(_shortMonthsParse3, toLocaleLowerCaseResult);
         tmp = null;
         if (-1 !== tmp18) {
           tmp = tmp18;
@@ -583,7 +620,10 @@ let fn = () => {
       } else {
         const call5 = closure_35.call;
         const _longMonthsParse3 = tmp._longMonthsParse;
-        const tmp15 = typeof call5 === "unknown" ? closure_35(toLocaleLowerCaseResult) : call5(_longMonthsParse3, toLocaleLowerCaseResult);
+        const tmp15 =
+          typeof call5 === "unknown"
+            ? closure_35(toLocaleLowerCaseResult)
+            : call5(_longMonthsParse3, toLocaleLowerCaseResult);
         tmp16 = null;
         if (-1 !== tmp15) {
           tmp16 = tmp15;
@@ -594,13 +634,19 @@ let fn = () => {
       if ("MMM" === arg1) {
         const call3 = closure_35.call;
         const _shortMonthsParse2 = tmp._shortMonthsParse;
-        let tmp11 = typeof call3 === "unknown" ? tmp10(toLocaleLowerCaseResult) : call3(_shortMonthsParse2, toLocaleLowerCaseResult);
+        let tmp11 =
+          typeof call3 === "unknown"
+            ? tmp10(toLocaleLowerCaseResult)
+            : call3(_shortMonthsParse2, toLocaleLowerCaseResult);
         if (-1 !== tmp11) {
           let tmp13 = tmp11;
         } else {
           const call4 = tmp10.call;
           const _longMonthsParse2 = tmp._longMonthsParse;
-          const tmp12 = typeof call4 === "unknown" ? tmp10(toLocaleLowerCaseResult) : call4(_longMonthsParse2, toLocaleLowerCaseResult);
+          const tmp12 =
+            typeof call4 === "unknown"
+              ? tmp10(toLocaleLowerCaseResult)
+              : call4(_longMonthsParse2, toLocaleLowerCaseResult);
           tmp11 = tmp12;
           tmp13 = null;
         }
@@ -608,13 +654,17 @@ let fn = () => {
       } else {
         const call = closure_35.call;
         const _longMonthsParse = tmp._longMonthsParse;
-        let tmp7 = typeof call === "unknown" ? tmp6(toLocaleLowerCaseResult) : call(_longMonthsParse, toLocaleLowerCaseResult);
+        let tmp7 =
+          typeof call === "unknown" ? tmp6(toLocaleLowerCaseResult) : call(_longMonthsParse, toLocaleLowerCaseResult);
         if (-1 !== tmp7) {
           tmp9 = tmp7;
         } else {
           const call2 = tmp6.call;
           const _shortMonthsParse = tmp._shortMonthsParse;
-          const tmp8 = typeof call2 === "unknown" ? tmp6(toLocaleLowerCaseResult) : call2(_shortMonthsParse, toLocaleLowerCaseResult);
+          const tmp8 =
+            typeof call2 === "unknown"
+              ? tmp6(toLocaleLowerCaseResult)
+              : call2(_shortMonthsParse, toLocaleLowerCaseResult);
           tmp7 = tmp8;
           tmp9 = null;
         }
@@ -670,7 +720,7 @@ let fn = () => {
           const _isNaN = isNaN;
           num5 = NaN;
           if (!isNaN(num)) {
-            const result = (num % 12 + 12) % 12;
+            const result = ((num % 12) + 12) % 12;
             const sum = yearResult + (num - result) / 12;
             if (1 === result) {
               const result1 = sum % 4;
@@ -687,7 +737,7 @@ let fn = () => {
               }
               let diff = num15;
             } else {
-              diff = 31 - result % 7 % 2;
+              diff = 31 - ((result % 7) % 2);
             }
           }
         }
@@ -787,7 +837,7 @@ let fn = () => {
     const diff = 7 + dow - doy;
     const diff1 = arg1 - 1;
     const diff2 = 7 + isoWeekdayResult - dow;
-    const sum = 1 + 7 * diff1 + diff2 % 7 + (-(7 + createUTCDate(year, 0, diff).getUTCDay() - dow) % 7 + diff - 1);
+    const sum = 1 + 7 * diff1 + (diff2 % 7) + ((-(7 + createUTCDate(year, 0, diff).getUTCDay() - dow) % 7) + diff - 1);
     if (sum <= 0) {
       const diff3 = year - 1;
       const result = diff3 % 4;
@@ -841,7 +891,7 @@ let fn = () => {
   function weekOfYear(self, dow, doy) {
     const diff = 7 + dow - doy;
     const diff1 = 7 + createUTCDate(self.year(), 0, diff).getUTCDay() - dow;
-    const sum = Math.floor((self.dayOfYear() - (-diff1 % 7 + diff - 1) - 1) / 7) + 1;
+    const sum = Math.floor((self.dayOfYear() - ((-diff1 % 7) + diff - 1) - 1) / 7) + 1;
     if (sum < 1) {
       const diff2 = self.year() - 1;
       let week = sum + weeksInYear(diff2, dow, doy);
@@ -876,7 +926,7 @@ let fn = () => {
     if (tmp6) {
       num3 = 366;
     }
-    return (num3 - (-diff2 % 7 + diff - 1) + (-diff3 % 7 + diff1 - 1)) / 7;
+    return (num3 - ((-diff2 % 7) + diff - 1) + ((-diff3 % 7) + diff1 - 1)) / 7;
   }
   function handleStrictParse$1(toLocaleLowerCase) {
     let tmp = this;
@@ -906,7 +956,10 @@ let fn = () => {
       if ("dddd" === arg1) {
         const call12 = closure_35.call;
         const _weekdaysParse4 = tmp._weekdaysParse;
-        const tmp27 = typeof call12 === "unknown" ? closure_35(toLocaleLowerCaseResult) : call12(_weekdaysParse4, toLocaleLowerCaseResult);
+        const tmp27 =
+          typeof call12 === "unknown"
+            ? closure_35(toLocaleLowerCaseResult)
+            : call12(_weekdaysParse4, toLocaleLowerCaseResult);
         tmp = null;
         if (-1 !== tmp27) {
           tmp = tmp27;
@@ -916,7 +969,10 @@ let fn = () => {
       } else if ("ddd" === arg1) {
         const call11 = closure_35.call;
         const _shortWeekdaysParse4 = tmp._shortWeekdaysParse;
-        const tmp24 = typeof call11 === "unknown" ? closure_35(toLocaleLowerCaseResult) : call11(_shortWeekdaysParse4, toLocaleLowerCaseResult);
+        const tmp24 =
+          typeof call11 === "unknown"
+            ? closure_35(toLocaleLowerCaseResult)
+            : call11(_shortWeekdaysParse4, toLocaleLowerCaseResult);
         let tmp25 = null;
         if (-1 !== tmp24) {
           tmp25 = tmp24;
@@ -926,7 +982,10 @@ let fn = () => {
       } else {
         const call10 = closure_35.call;
         const _minWeekdaysParse4 = tmp._minWeekdaysParse;
-        const tmp21 = typeof call10 === "unknown" ? closure_35(toLocaleLowerCaseResult) : call10(_minWeekdaysParse4, toLocaleLowerCaseResult);
+        const tmp21 =
+          typeof call10 === "unknown"
+            ? closure_35(toLocaleLowerCaseResult)
+            : call10(_minWeekdaysParse4, toLocaleLowerCaseResult);
         tmp22 = null;
         if (-1 !== tmp21) {
           tmp22 = tmp21;
@@ -937,16 +996,23 @@ let fn = () => {
       if ("dddd" === arg1) {
         const call7 = closure_35.call;
         const _weekdaysParse3 = tmp._weekdaysParse;
-        let tmp16 = typeof call7 === "unknown" ? tmp15(toLocaleLowerCaseResult) : call7(_weekdaysParse3, toLocaleLowerCaseResult);
+        let tmp16 =
+          typeof call7 === "unknown" ? tmp15(toLocaleLowerCaseResult) : call7(_weekdaysParse3, toLocaleLowerCaseResult);
         if (-1 === tmp16) {
           const call8 = tmp15.call;
           const _shortWeekdaysParse3 = tmp._shortWeekdaysParse;
-          const tmp17 = typeof call8 === "unknown" ? tmp15(toLocaleLowerCaseResult) : call8(_shortWeekdaysParse3, toLocaleLowerCaseResult);
+          const tmp17 =
+            typeof call8 === "unknown"
+              ? tmp15(toLocaleLowerCaseResult)
+              : call8(_shortWeekdaysParse3, toLocaleLowerCaseResult);
           tmp16 = tmp17;
           if (-1 === tmp17) {
             const call9 = tmp15.call;
             const _minWeekdaysParse3 = tmp._minWeekdaysParse;
-            const tmp18 = typeof call9 === "unknown" ? tmp15(toLocaleLowerCaseResult) : call9(_minWeekdaysParse3, toLocaleLowerCaseResult);
+            const tmp18 =
+              typeof call9 === "unknown"
+                ? tmp15(toLocaleLowerCaseResult)
+                : call9(_minWeekdaysParse3, toLocaleLowerCaseResult);
             tmp16 = tmp18;
             let tmp19 = null;
           }
@@ -956,16 +1022,25 @@ let fn = () => {
       } else if ("ddd" === arg1) {
         const call4 = closure_35.call;
         const _shortWeekdaysParse2 = tmp._shortWeekdaysParse;
-        let tmp11 = typeof call4 === "unknown" ? tmp10(toLocaleLowerCaseResult) : call4(_shortWeekdaysParse2, toLocaleLowerCaseResult);
+        let tmp11 =
+          typeof call4 === "unknown"
+            ? tmp10(toLocaleLowerCaseResult)
+            : call4(_shortWeekdaysParse2, toLocaleLowerCaseResult);
         if (-1 === tmp11) {
           const call5 = tmp10.call;
           const _weekdaysParse2 = tmp._weekdaysParse;
-          const tmp12 = typeof call5 === "unknown" ? tmp10(toLocaleLowerCaseResult) : call5(_weekdaysParse2, toLocaleLowerCaseResult);
+          const tmp12 =
+            typeof call5 === "unknown"
+              ? tmp10(toLocaleLowerCaseResult)
+              : call5(_weekdaysParse2, toLocaleLowerCaseResult);
           tmp11 = tmp12;
           if (-1 === tmp12) {
             const call6 = tmp10.call;
             const _minWeekdaysParse2 = tmp._minWeekdaysParse;
-            const tmp13 = typeof call6 === "unknown" ? tmp10(toLocaleLowerCaseResult) : call6(_minWeekdaysParse2, toLocaleLowerCaseResult);
+            const tmp13 =
+              typeof call6 === "unknown"
+                ? tmp10(toLocaleLowerCaseResult)
+                : call6(_minWeekdaysParse2, toLocaleLowerCaseResult);
             tmp11 = tmp13;
             let tmp14 = null;
           }
@@ -975,16 +1050,21 @@ let fn = () => {
       } else {
         const call = closure_35.call;
         const _minWeekdaysParse = tmp._minWeekdaysParse;
-        let tmp6 = typeof call === "unknown" ? tmp5(toLocaleLowerCaseResult) : call(_minWeekdaysParse, toLocaleLowerCaseResult);
+        let tmp6 =
+          typeof call === "unknown" ? tmp5(toLocaleLowerCaseResult) : call(_minWeekdaysParse, toLocaleLowerCaseResult);
         if (-1 === tmp6) {
           const call2 = tmp5.call;
           const _weekdaysParse = tmp._weekdaysParse;
-          const tmp7 = typeof call2 === "unknown" ? tmp5(toLocaleLowerCaseResult) : call2(_weekdaysParse, toLocaleLowerCaseResult);
+          const tmp7 =
+            typeof call2 === "unknown" ? tmp5(toLocaleLowerCaseResult) : call2(_weekdaysParse, toLocaleLowerCaseResult);
           tmp6 = tmp7;
           if (-1 === tmp7) {
             const call3 = tmp5.call;
             const _shortWeekdaysParse = tmp._shortWeekdaysParse;
-            const tmp8 = typeof call3 === "unknown" ? tmp5(toLocaleLowerCaseResult) : call3(_shortWeekdaysParse, toLocaleLowerCaseResult);
+            const tmp8 =
+              typeof call3 === "unknown"
+                ? tmp5(toLocaleLowerCaseResult)
+                : call3(_shortWeekdaysParse, toLocaleLowerCaseResult);
             tmp6 = tmp8;
             tmp9 = null;
           }
@@ -1047,13 +1127,15 @@ let fn = () => {
       if (undefined !== closure_1) {
         if (tmp4) {
           if (tmp4.exports) {
-            if ((function isLocaleNameSane(_abbr2) {
-              let tmp = !_abbr2;
-              if (_abbr2) {
-                tmp = !_abbr2.match("^[^/\\\\]*$");
-              }
-              return !tmp;
-            })(_abbr2)) {
+            if (
+              (function isLocaleNameSane(_abbr2) {
+                let tmp = !_abbr2;
+                if (_abbr2) {
+                  tmp = !_abbr2.match("^[^/\\\\]*$");
+                }
+                return !tmp;
+              })(_abbr2)
+            ) {
               try {
                 callback("./locale/" + _abbr2);
                 getSetGlobalLocale(closure_57._abbr);
@@ -1097,7 +1179,10 @@ let fn = () => {
       parentLocale.abbr = bg;
       if (null != dependencyMap4[bg]) {
         if (null != year.deprecationHandler) {
-          obj2.deprecationHandler("defineLocaleOverride", "use moment.updateLocale(localeName, config) to change an existing locale. moment.defineLocale(localeName, config) should only be used for creating a new locale See http://momentjs.com/guides/#/warnings/define-locale/ for more info.");
+          obj2.deprecationHandler(
+            "defineLocaleOverride",
+            "use moment.updateLocale(localeName, config) to change an existing locale. moment.defineLocale(localeName, config) should only be used for creating a new locale See http://momentjs.com/guides/#/warnings/define-locale/ for more info.",
+          );
         }
         if (!defineLocaleOverride.defineLocaleOverride) {
           let warn = false === obj2.suppressDeprecationWarnings;
@@ -1111,7 +1196,9 @@ let fn = () => {
           }
           if (warn) {
             const _console3 = console;
-            console.warn("Deprecation warning: use moment.updateLocale(localeName, config) to change an existing locale. moment.defineLocale(localeName, config) should only be used for creating a new locale See http://momentjs.com/guides/#/warnings/define-locale/ for more info.");
+            console.warn(
+              "Deprecation warning: use moment.updateLocale(localeName, config) to change an existing locale. moment.defineLocale(localeName, config) should only be used for creating a new locale See http://momentjs.com/guides/#/warnings/define-locale/ for more info.",
+            );
           }
           tmp10.defineLocaleOverride = true;
         }
@@ -1268,7 +1355,24 @@ let fn = () => {
     let tmp = _a;
     if (_a) {
       if (null == _a._pf) {
-        obj = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidEra: null, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, era: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
+        obj = {
+          empty: false,
+          unusedTokens: null,
+          unusedInput: null,
+          overflow: -2,
+          charsLeftOver: 0,
+          nullInput: false,
+          invalidEra: null,
+          invalidMonth: null,
+          invalidFormat: false,
+          userInvalidated: false,
+          iso: false,
+          parsedDateParts: null,
+          era: null,
+          meridiem: null,
+          rfc2822: false,
+          weekdayMismatch: false,
+        };
         obj[1] = [];
         obj[2] = [];
         obj[11] = [];
@@ -1289,7 +1393,7 @@ let fn = () => {
               const _isNaN = isNaN;
               num3 = NaN;
               if (!isNaN(tmp27)) {
-                const result = (tmp27 % 12 + 12) % 12;
+                const result = ((tmp27 % 12) + 12) % 12;
                 const sum = tmp26 + (tmp27 - result) / 12;
                 if (1 === result) {
                   const result1 = sum % 4;
@@ -1306,7 +1410,7 @@ let fn = () => {
                   }
                   let diff = num11;
                 } else {
-                  diff = 31 - result % 7 % 2;
+                  diff = 31 - ((result % 7) % 2);
                 }
               }
             }
@@ -1355,7 +1459,24 @@ let fn = () => {
         }
       }
       if (null == _a._pf) {
-        obj = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidEra: null, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, era: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
+        obj = {
+          empty: false,
+          unusedTokens: null,
+          unusedInput: null,
+          overflow: -2,
+          charsLeftOver: 0,
+          nullInput: false,
+          invalidEra: null,
+          invalidMonth: null,
+          invalidFormat: false,
+          userInvalidated: false,
+          iso: false,
+          parsedDateParts: null,
+          era: null,
+          meridiem: null,
+          rfc2822: false,
+          weekdayMismatch: false,
+        };
         obj[1] = [];
         obj[2] = [];
         obj[11] = [];
@@ -1373,7 +1494,24 @@ let fn = () => {
         tmp4 = c28;
       }
       if (null == _a._pf) {
-        obj = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidEra: null, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, era: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
+        obj = {
+          empty: false,
+          unusedTokens: null,
+          unusedInput: null,
+          overflow: -2,
+          charsLeftOver: 0,
+          nullInput: false,
+          invalidEra: null,
+          invalidMonth: null,
+          invalidFormat: false,
+          userInvalidated: false,
+          iso: false,
+          parsedDateParts: null,
+          era: null,
+          meridiem: null,
+          rfc2822: false,
+          weekdayMismatch: false,
+        };
         obj[1] = [];
         obj[2] = [];
         obj[11] = [];
@@ -1387,7 +1525,24 @@ let fn = () => {
         tmp4 = c33;
       }
       if (null == _a._pf) {
-        obj1 = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidEra: null, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, era: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
+        obj1 = {
+          empty: false,
+          unusedTokens: null,
+          unusedInput: null,
+          overflow: -2,
+          charsLeftOver: 0,
+          nullInput: false,
+          invalidEra: null,
+          invalidMonth: null,
+          invalidFormat: false,
+          userInvalidated: false,
+          iso: false,
+          parsedDateParts: null,
+          era: null,
+          meridiem: null,
+          rfc2822: false,
+          weekdayMismatch: false,
+        };
         obj1[1] = [];
         obj1[2] = [];
         obj1[11] = [];
@@ -1401,7 +1556,24 @@ let fn = () => {
         tmp4 = c34;
       }
       if (null == _a._pf) {
-        const obj2 = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidEra: null, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, era: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
+        const obj2 = {
+          empty: false,
+          unusedTokens: null,
+          unusedInput: null,
+          overflow: -2,
+          charsLeftOver: 0,
+          nullInput: false,
+          invalidEra: null,
+          invalidMonth: null,
+          invalidFormat: false,
+          userInvalidated: false,
+          iso: false,
+          parsedDateParts: null,
+          era: null,
+          meridiem: null,
+          rfc2822: false,
+          weekdayMismatch: false,
+        };
         obj2[1] = [];
         obj2[2] = [];
         obj2[11] = [];
@@ -1419,7 +1591,24 @@ let fn = () => {
     }
     if (match) {
       if (null == _i._pf) {
-        obj = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidEra: null, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, era: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
+        obj = {
+          empty: false,
+          unusedTokens: null,
+          unusedInput: null,
+          overflow: -2,
+          charsLeftOver: 0,
+          nullInput: false,
+          invalidEra: null,
+          invalidMonth: null,
+          invalidFormat: false,
+          userInvalidated: false,
+          iso: false,
+          parsedDateParts: null,
+          era: null,
+          meridiem: null,
+          rfc2822: false,
+          weekdayMismatch: false,
+        };
         obj[1] = [];
         obj[2] = [];
         obj[11] = [];
@@ -1489,7 +1678,13 @@ let fn = () => {
     const str = _i._i;
     const str2 = _i._i.replace(/\([^()]*\)|[\n\t]/g, " ");
     const str3 = _i._i.replace(/\([^()]*\)|[\n\t]/g, " ").replace(/(\s\s+)/g, " ");
-    const match = regex7.exec(_i._i.replace(/\([^()]*\)|[\n\t]/g, " ").replace(/(\s\s+)/g, " ").replace(/^\s\s*/, "").replace(/\s\s*$/, ""));
+    const match = regex7.exec(
+      _i._i
+        .replace(/\([^()]*\)|[\n\t]/g, " ")
+        .replace(/(\s\s+)/g, " ")
+        .replace(/^\s\s*/, "")
+        .replace(/\s\s*$/, ""),
+    );
     if (match) {
       const _parseInt = parseInt;
       const parsed = parseInt(match[4], 10);
@@ -1501,7 +1696,7 @@ let fn = () => {
           sum = 1900 + parsed;
         }
       }
-      items = [sum, closure_38.indexOf(match[3]), , , ];
+      items = [sum, closure_38.indexOf(match[3]), , ,];
       const _parseInt2 = parseInt;
       items[2] = parseInt(match[2], 10);
       const _parseInt3 = parseInt;
@@ -1521,7 +1716,24 @@ let fn = () => {
       }
       if (!flag2) {
         if (null == _i._pf) {
-          obj = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidEra: null, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, era: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
+          obj = {
+            empty: false,
+            unusedTokens: null,
+            unusedInput: null,
+            overflow: -2,
+            charsLeftOver: 0,
+            nullInput: false,
+            invalidEra: null,
+            invalidMonth: null,
+            invalidFormat: false,
+            userInvalidated: false,
+            iso: false,
+            parsedDateParts: null,
+            era: null,
+            meridiem: null,
+            rfc2822: false,
+            weekdayMismatch: false,
+          };
           obj[1] = [];
           obj[2] = [];
           obj[11] = [];
@@ -1541,7 +1753,7 @@ let fn = () => {
             const _parseInt6 = parseInt;
             const parsed1 = parseInt(tmp17, 10);
             const result = parsed1 % 100;
-            num6 = (parsed1 - result) / 100 * 60 + result;
+            num6 = ((parsed1 - result) / 100) * 60 + result;
           }
         }
         _i._tzm = num6;
@@ -1549,7 +1761,24 @@ let fn = () => {
         ({ _d, _d: _d2 } = _i);
         _d.setUTCMinutes(_d2.getUTCMinutes() - _i._tzm);
         if (null == _i._pf) {
-          obj = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidEra: null, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, era: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
+          obj = {
+            empty: false,
+            unusedTokens: null,
+            unusedInput: null,
+            overflow: -2,
+            charsLeftOver: 0,
+            nullInput: false,
+            invalidEra: null,
+            invalidMonth: null,
+            invalidFormat: false,
+            userInvalidated: false,
+            iso: false,
+            parsedDateParts: null,
+            era: null,
+            meridiem: null,
+            rfc2822: false,
+            weekdayMismatch: false,
+          };
           obj[1] = [];
           obj[2] = [];
           obj[11] = [];
@@ -1659,7 +1888,24 @@ let fn = () => {
               if (tmp14 <= weeksInYear(tmp15, num2, num)) {
                 if (null != flag) {
                   if (null == _d._pf) {
-                    obj = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidEra: null, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, era: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
+                    obj = {
+                      empty: false,
+                      unusedTokens: null,
+                      unusedInput: null,
+                      overflow: -2,
+                      charsLeftOver: 0,
+                      nullInput: false,
+                      invalidEra: null,
+                      invalidMonth: null,
+                      invalidFormat: false,
+                      userInvalidated: false,
+                      iso: false,
+                      parsedDateParts: null,
+                      era: null,
+                      meridiem: null,
+                      rfc2822: false,
+                      weekdayMismatch: false,
+                    };
                     obj[1] = [];
                     obj[2] = [];
                     obj[11] = [];
@@ -1667,13 +1913,36 @@ let fn = () => {
                   }
                   _d._pf._overflowWeekday = true;
                 } else {
-                  ({ year: _d._a[tmp12], dayOfYear: _d._dayOfYear } = dayOfYearFromWeeks(tmp15, tmp14, tmp13, num2, num));
+                  ({ year: _d._a[tmp12], dayOfYear: _d._dayOfYear } = dayOfYearFromWeeks(
+                    tmp15,
+                    tmp14,
+                    tmp13,
+                    num2,
+                    num,
+                  ));
                   const tmp30 = dayOfYearFromWeeks(tmp15, tmp14, tmp13, num2, num);
                 }
               }
             }
             if (null == _d._pf) {
-              obj = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidEra: null, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, era: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
+              obj = {
+                empty: false,
+                unusedTokens: null,
+                unusedInput: null,
+                overflow: -2,
+                charsLeftOver: 0,
+                nullInput: false,
+                invalidEra: null,
+                invalidMonth: null,
+                invalidFormat: false,
+                userInvalidated: false,
+                iso: false,
+                parsedDateParts: null,
+                era: null,
+                meridiem: null,
+                rfc2822: false,
+                weekdayMismatch: false,
+              };
               obj[1] = [];
               obj[2] = [];
               obj[11] = [];
@@ -1741,7 +2010,24 @@ let fn = () => {
         }
         if (tmp36) {
           if (null == _d._pf) {
-            obj1 = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidEra: null, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, era: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
+            obj1 = {
+              empty: false,
+              unusedTokens: null,
+              unusedInput: null,
+              overflow: -2,
+              charsLeftOver: 0,
+              nullInput: false,
+              invalidEra: null,
+              invalidMonth: null,
+              invalidFormat: false,
+              userInvalidated: false,
+              iso: false,
+              parsedDateParts: null,
+              era: null,
+              meridiem: null,
+              rfc2822: false,
+              weekdayMismatch: false,
+            };
             obj1[1] = [];
             obj1[2] = [];
             obj1[11] = [];
@@ -1824,7 +2110,24 @@ let fn = () => {
       }
       if (_w3) {
         if (null == _d._pf) {
-          const obj2 = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidEra: null, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, era: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
+          const obj2 = {
+            empty: false,
+            unusedTokens: null,
+            unusedInput: null,
+            overflow: -2,
+            charsLeftOver: 0,
+            nullInput: false,
+            invalidEra: null,
+            invalidMonth: null,
+            invalidFormat: false,
+            userInvalidated: false,
+            iso: false,
+            parsedDateParts: null,
+            era: null,
+            meridiem: null,
+            rfc2822: false,
+            weekdayMismatch: false,
+          };
           obj2[1] = [];
           obj2[2] = [];
           obj2[11] = [];
@@ -1841,7 +2144,24 @@ let fn = () => {
       if (_f._f !== tmp.RFC_2822) {
         _f._a = [];
         if (null == _f._pf) {
-          obj = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidEra: null, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, era: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
+          obj = {
+            empty: false,
+            unusedTokens: null,
+            unusedInput: null,
+            overflow: -2,
+            charsLeftOver: 0,
+            nullInput: false,
+            invalidEra: null,
+            invalidMonth: null,
+            invalidFormat: false,
+            userInvalidated: false,
+            iso: false,
+            parsedDateParts: null,
+            era: null,
+            meridiem: null,
+            rfc2822: false,
+            weekdayMismatch: false,
+          };
           obj[1] = [];
           obj[2] = [];
           obj[11] = [];
@@ -1917,7 +2237,24 @@ let fn = () => {
               let substr = str6.substr(0, str6.indexOf(first));
               if (substr.length > 0) {
                 if (null == _f._pf) {
-                  obj = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidEra: null, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, era: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
+                  obj = {
+                    empty: false,
+                    unusedTokens: null,
+                    unusedInput: null,
+                    overflow: -2,
+                    charsLeftOver: 0,
+                    nullInput: false,
+                    invalidEra: null,
+                    invalidMonth: null,
+                    invalidFormat: false,
+                    userInvalidated: false,
+                    iso: false,
+                    parsedDateParts: null,
+                    era: null,
+                    meridiem: null,
+                    rfc2822: false,
+                    weekdayMismatch: false,
+                  };
                   obj[1] = [];
                   obj[2] = [];
                   obj[11] = [];
@@ -1934,7 +2271,24 @@ let fn = () => {
               let _pf = _f._pf;
               if (first) {
                 if (null == _pf) {
-                  obj = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidEra: null, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, era: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
+                  obj = {
+                    empty: false,
+                    unusedTokens: null,
+                    unusedInput: null,
+                    overflow: -2,
+                    charsLeftOver: 0,
+                    nullInput: false,
+                    invalidEra: null,
+                    invalidMonth: null,
+                    invalidFormat: false,
+                    userInvalidated: false,
+                    iso: false,
+                    parsedDateParts: null,
+                    era: null,
+                    meridiem: null,
+                    rfc2822: false,
+                    weekdayMismatch: false,
+                  };
                   obj[1] = [];
                   obj[2] = [];
                   obj[11] = [];
@@ -1943,7 +2297,24 @@ let fn = () => {
                 _f._pf.empty = false;
               } else {
                 if (null == _pf) {
-                  obj1 = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidEra: null, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, era: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
+                  obj1 = {
+                    empty: false,
+                    unusedTokens: null,
+                    unusedInput: null,
+                    overflow: -2,
+                    charsLeftOver: 0,
+                    nullInput: false,
+                    invalidEra: null,
+                    invalidMonth: null,
+                    invalidFormat: false,
+                    userInvalidated: false,
+                    iso: false,
+                    parsedDateParts: null,
+                    era: null,
+                    meridiem: null,
+                    rfc2822: false,
+                    weekdayMismatch: false,
+                  };
                   obj1[1] = [];
                   obj1[2] = [];
                   obj1[11] = [];
@@ -1967,7 +2338,24 @@ let fn = () => {
               let tmp25 = _f._strict && !first;
               if (tmp25) {
                 if (null == _f._pf) {
-                  let obj2 = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidEra: null, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, era: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
+                  let obj2 = {
+                    empty: false,
+                    unusedTokens: null,
+                    unusedInput: null,
+                    overflow: -2,
+                    charsLeftOver: 0,
+                    nullInput: false,
+                    invalidEra: null,
+                    invalidMonth: null,
+                    invalidFormat: false,
+                    userInvalidated: false,
+                    iso: false,
+                    parsedDateParts: null,
+                    era: null,
+                    meridiem: null,
+                    rfc2822: false,
+                    weekdayMismatch: false,
+                  };
                   obj2[1] = [];
                   obj2[2] = [];
                   obj2[11] = [];
@@ -1989,7 +2377,24 @@ let fn = () => {
           const tmp29 = dependencyMap3;
         }
         if (null == _f._pf) {
-          const obj3 = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidEra: null, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, era: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
+          const obj3 = {
+            empty: false,
+            unusedTokens: null,
+            unusedInput: null,
+            overflow: -2,
+            charsLeftOver: 0,
+            nullInput: false,
+            invalidEra: null,
+            invalidMonth: null,
+            invalidFormat: false,
+            userInvalidated: false,
+            iso: false,
+            parsedDateParts: null,
+            era: null,
+            meridiem: null,
+            rfc2822: false,
+            weekdayMismatch: false,
+          };
           obj3[1] = [];
           obj3[2] = [];
           obj3[11] = [];
@@ -1998,7 +2403,24 @@ let fn = () => {
         _f._pf.charsLeftOver = `${_f._i}`.length - num8;
         if (arr1.length > 0) {
           if (null == _f._pf) {
-            const obj4 = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidEra: null, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, era: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
+            const obj4 = {
+              empty: false,
+              unusedTokens: null,
+              unusedInput: null,
+              overflow: -2,
+              charsLeftOver: 0,
+              nullInput: false,
+              invalidEra: null,
+              invalidMonth: null,
+              invalidFormat: false,
+              userInvalidated: false,
+              iso: false,
+              parsedDateParts: null,
+              era: null,
+              meridiem: null,
+              rfc2822: false,
+              weekdayMismatch: false,
+            };
             obj4[1] = [];
             obj4[2] = [];
             obj4[11] = [];
@@ -2010,7 +2432,24 @@ let fn = () => {
         let tmp39 = _f._a[c29] <= 12;
         if (tmp39) {
           if (null == _f._pf) {
-            const obj5 = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidEra: null, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, era: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
+            const obj5 = {
+              empty: false,
+              unusedTokens: null,
+              unusedInput: null,
+              overflow: -2,
+              charsLeftOver: 0,
+              nullInput: false,
+              invalidEra: null,
+              invalidMonth: null,
+              invalidFormat: false,
+              userInvalidated: false,
+              iso: false,
+              parsedDateParts: null,
+              era: null,
+              meridiem: null,
+              rfc2822: false,
+              weekdayMismatch: false,
+            };
             obj5[1] = [];
             obj5[2] = [];
             obj5[11] = [];
@@ -2023,7 +2462,24 @@ let fn = () => {
         }
         if (tmp39) {
           if (null == _f._pf) {
-            const obj6 = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidEra: null, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, era: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
+            const obj6 = {
+              empty: false,
+              unusedTokens: null,
+              unusedInput: null,
+              overflow: -2,
+              charsLeftOver: 0,
+              nullInput: false,
+              invalidEra: null,
+              invalidMonth: null,
+              invalidFormat: false,
+              userInvalidated: false,
+              iso: false,
+              parsedDateParts: null,
+              era: null,
+              meridiem: null,
+              rfc2822: false,
+              weekdayMismatch: false,
+            };
             obj6[1] = [];
             obj6[2] = [];
             obj6[11] = [];
@@ -2032,7 +2488,24 @@ let fn = () => {
           _f._pf.bigHour = undefined;
         }
         if (null == _f._pf) {
-          const obj7 = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidEra: null, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, era: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
+          const obj7 = {
+            empty: false,
+            unusedTokens: null,
+            unusedInput: null,
+            overflow: -2,
+            charsLeftOver: 0,
+            nullInput: false,
+            invalidEra: null,
+            invalidMonth: null,
+            invalidFormat: false,
+            userInvalidated: false,
+            iso: false,
+            parsedDateParts: null,
+            era: null,
+            meridiem: null,
+            rfc2822: false,
+            weekdayMismatch: false,
+          };
           obj7[1] = [];
           obj7[2] = [];
           obj7[11] = [];
@@ -2041,7 +2514,24 @@ let fn = () => {
         ({ _a, _pf: _pf2 } = _f);
         _pf2.parsedDateParts = _a.slice(0);
         if (null == _f._pf) {
-          const obj8 = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidEra: null, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, era: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
+          const obj8 = {
+            empty: false,
+            unusedTokens: null,
+            unusedInput: null,
+            overflow: -2,
+            charsLeftOver: 0,
+            nullInput: false,
+            invalidEra: null,
+            invalidMonth: null,
+            invalidFormat: false,
+            userInvalidated: false,
+            iso: false,
+            parsedDateParts: null,
+            era: null,
+            meridiem: null,
+            rfc2822: false,
+            weekdayMismatch: false,
+          };
           obj8[1] = [];
           obj8[2] = [];
           obj8[11] = [];
@@ -2052,7 +2542,24 @@ let fn = () => {
         if (null == _meridiem) {
           _f._a[tmp38] = tmp40;
           if (null == _f._pf) {
-            const obj9 = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidEra: null, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, era: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
+            const obj9 = {
+              empty: false,
+              unusedTokens: null,
+              unusedInput: null,
+              overflow: -2,
+              charsLeftOver: 0,
+              nullInput: false,
+              invalidEra: null,
+              invalidMonth: null,
+              invalidFormat: false,
+              userInvalidated: false,
+              iso: false,
+              parsedDateParts: null,
+              era: null,
+              meridiem: null,
+              rfc2822: false,
+              weekdayMismatch: false,
+            };
             obj9[1] = [];
             obj9[2] = [];
             obj9[11] = [];
@@ -2161,7 +2668,24 @@ let fn = () => {
               if (tmp13) {
                 if (0 === _l._f.length) {
                   if (null == _l._pf) {
-                    obj = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidEra: null, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, era: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
+                    obj = {
+                      empty: false,
+                      unusedTokens: null,
+                      unusedInput: null,
+                      overflow: -2,
+                      charsLeftOver: 0,
+                      nullInput: false,
+                      invalidEra: null,
+                      invalidMonth: null,
+                      invalidFormat: false,
+                      userInvalidated: false,
+                      iso: false,
+                      parsedDateParts: null,
+                      era: null,
+                      meridiem: null,
+                      rfc2822: false,
+                      weekdayMismatch: false,
+                    };
                     obj[1] = [];
                     obj[2] = [];
                     obj[11] = [];
@@ -2196,14 +2720,48 @@ let fn = () => {
                         flag2 = true;
                       }
                       if (null == obj1._pf) {
-                        let obj2 = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidEra: null, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, era: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
+                        let obj2 = {
+                          empty: false,
+                          unusedTokens: null,
+                          unusedInput: null,
+                          overflow: -2,
+                          charsLeftOver: 0,
+                          nullInput: false,
+                          invalidEra: null,
+                          invalidMonth: null,
+                          invalidFormat: false,
+                          userInvalidated: false,
+                          iso: false,
+                          parsedDateParts: null,
+                          era: null,
+                          meridiem: null,
+                          rfc2822: false,
+                          weekdayMismatch: false,
+                        };
                         obj2[1] = [];
                         obj2[2] = [];
                         obj2[11] = [];
                         obj1._pf = obj2;
                       }
                       if (null == obj1._pf) {
-                        let obj3 = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidEra: null, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, era: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
+                        let obj3 = {
+                          empty: false,
+                          unusedTokens: null,
+                          unusedInput: null,
+                          overflow: -2,
+                          charsLeftOver: 0,
+                          nullInput: false,
+                          invalidEra: null,
+                          invalidMonth: null,
+                          invalidFormat: false,
+                          userInvalidated: false,
+                          iso: false,
+                          parsedDateParts: null,
+                          era: null,
+                          meridiem: null,
+                          rfc2822: false,
+                          weekdayMismatch: false,
+                        };
                         obj3[1] = [];
                         obj3[2] = [];
                         obj3[11] = [];
@@ -2211,7 +2769,24 @@ let fn = () => {
                       }
                       let result = 10 * obj1._pf.unusedTokens.length;
                       if (null == obj1._pf) {
-                        let obj4 = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidEra: null, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, era: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
+                        let obj4 = {
+                          empty: false,
+                          unusedTokens: null,
+                          unusedInput: null,
+                          overflow: -2,
+                          charsLeftOver: 0,
+                          nullInput: false,
+                          invalidEra: null,
+                          invalidMonth: null,
+                          invalidFormat: false,
+                          userInvalidated: false,
+                          iso: false,
+                          parsedDateParts: null,
+                          era: null,
+                          meridiem: null,
+                          rfc2822: false,
+                          weekdayMismatch: false,
+                        };
                         obj4[1] = [];
                         obj4[2] = [];
                         obj4[11] = [];
@@ -2342,7 +2917,7 @@ let fn = () => {
                                   continue;
                                 }
                               }
-                              const items1 = [, , , , , , ];
+                              const items1 = [, , , , , ,];
                               ({ year: arr2[0], month: arr2[1] } = obj);
                               items1[2] = undefined === obj.day ? obj.date : obj.day;
                               ({ hour: arr2[3], minute: arr2[4], second: arr2[5], millisecond: arr2[6] } = obj);
@@ -2426,7 +3001,24 @@ let fn = () => {
     preparseResult = createLocalOrUTC(NaN, undefined, undefined, undefined, true).utc();
     preparseResult = s;
     if (null == preparseResult._pf) {
-      const obj5 = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidEra: null, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, era: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
+      const obj5 = {
+        empty: false,
+        unusedTokens: null,
+        unusedInput: null,
+        overflow: -2,
+        charsLeftOver: 0,
+        nullInput: false,
+        invalidEra: null,
+        invalidMonth: null,
+        invalidFormat: false,
+        userInvalidated: false,
+        iso: false,
+        parsedDateParts: null,
+        era: null,
+        meridiem: null,
+        rfc2822: false,
+        weekdayMismatch: false,
+      };
       obj5[1] = [];
       obj5[2] = [];
       obj5[11] = [];
@@ -3237,7 +3829,10 @@ let fn = () => {
       if (null != tmp4) {
         const tmp11 = getLocale();
         const obj3 = createLocalOrUTC(undefined, undefined, undefined, undefined, true);
-        return tmp11[months](createLocalOrUTC(undefined, undefined, undefined, undefined, true).utc().set("month", tmp4), str2);
+        return tmp11[months](
+          createLocalOrUTC(undefined, undefined, undefined, undefined, true).utc().set("month", tmp4),
+          str2,
+        );
       } else {
         items = [];
         let num3 = 0;
@@ -3306,7 +3901,10 @@ let fn = () => {
       const result = (tmp3 + num) % 7;
       const tmp9Result = tmp9();
       const obj3 = createLocalOrUTC(undefined, undefined, undefined, undefined, true);
-      return tmp9Result[weekdays](createLocalOrUTC(undefined, undefined, undefined, undefined, true).utc().set("day", result), str2);
+      return tmp9Result[weekdays](
+        createLocalOrUTC(undefined, undefined, undefined, undefined, true).utc().set("day", result),
+        str2,
+      );
     } else {
       do {
         let tmp11 = getLocale;
@@ -3335,7 +3933,7 @@ let fn = () => {
     let _Array = Array;
     let fn = Array.prototype.some;
   } else {
-    fn = function(call) {
+    fn = function (call) {
       const self = this;
       const ObjectResult = Object(this);
       let num = 0;
@@ -3398,12 +3996,79 @@ let fn = () => {
       return items;
     };
   }
-  const re13 = /(\[[^\[]*\])|(\\)?([Hh]mm(ss)?|Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|W[o|W]?|Qo?|N{1,5}|YYYYYY|YYYYY|YYYY|YY|y{2,4}|yo?|gg(ggg?)?|GG(GGG?)?|e|E|a|A|hh?|HH?|kk?|mm?|ss?|S{1,9}|x|X|zz?|ZZ?|.)/g;
+  const re13 =
+    /(\[[^\[]*\])|(\\)?([Hh]mm(ss)?|Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|W[o|W]?|Qo?|N{1,5}|YYYYYY|YYYYY|YYYY|YY|y{2,4}|yo?|gg(ggg?)?|GG(GGG?)?|e|E|a|A|hh?|HH?|kk?|mm?|ss?|S{1,9}|x|X|zz?|ZZ?|.)/g;
   const re14 = /(\[[^\[]*\])|(\\)?(LTS|LT|LL?L?L?|l{1,4})/g;
   closure_15 = {};
   let obj = {};
-  closure_18 = { D: "date", dates: "date", date: "date", d: "day", days: "day", day: "day", e: "weekday", weekdays: "weekday", weekday: "weekday", E: "isoWeekday", isoweekdays: "isoWeekday", isoweekday: "isoWeekday", DDD: "dayOfYear", dayofyears: "dayOfYear", dayofyear: "dayOfYear", h: "hour", hours: "hour", hour: "hour", ms: "millisecond", milliseconds: "millisecond", millisecond: "millisecond", m: "minute", minutes: "minute", minute: "minute", M: "month", months: "month", month: "month", Q: "quarter", quarters: "quarter", quarter: "quarter", s: "second", seconds: "second", second: "second", gg: "weekYear", weekyears: "weekYear", weekyear: "weekYear", GG: "isoWeekYear", isoweekyears: "isoWeekYear", isoweekyear: "isoWeekYear", w: "week", weeks: "week", week: "week", W: "isoWeek", isoweeks: "isoWeek", isoweek: "isoWeek", y: "year", years: "year", year: "year" };
-  closure_19 = { date: 9, day: 11, weekday: 11, isoWeekday: 11, dayOfYear: 4, hour: 13, millisecond: 16, minute: 14, month: 8, quarter: 7, second: 15, weekYear: 1, isoWeekYear: 1, week: 5, isoWeek: 5, year: 1 };
+  closure_18 = {
+    D: "date",
+    dates: "date",
+    date: "date",
+    d: "day",
+    days: "day",
+    day: "day",
+    e: "weekday",
+    weekdays: "weekday",
+    weekday: "weekday",
+    E: "isoWeekday",
+    isoweekdays: "isoWeekday",
+    isoweekday: "isoWeekday",
+    DDD: "dayOfYear",
+    dayofyears: "dayOfYear",
+    dayofyear: "dayOfYear",
+    h: "hour",
+    hours: "hour",
+    hour: "hour",
+    ms: "millisecond",
+    milliseconds: "millisecond",
+    millisecond: "millisecond",
+    m: "minute",
+    minutes: "minute",
+    minute: "minute",
+    M: "month",
+    months: "month",
+    month: "month",
+    Q: "quarter",
+    quarters: "quarter",
+    quarter: "quarter",
+    s: "second",
+    seconds: "second",
+    second: "second",
+    gg: "weekYear",
+    weekyears: "weekYear",
+    weekyear: "weekYear",
+    GG: "isoWeekYear",
+    isoweekyears: "isoWeekYear",
+    isoweekyear: "isoWeekYear",
+    w: "week",
+    weeks: "week",
+    week: "week",
+    W: "isoWeek",
+    isoweeks: "isoWeek",
+    isoweek: "isoWeek",
+    y: "year",
+    years: "year",
+    year: "year",
+  };
+  closure_19 = {
+    date: 9,
+    day: 11,
+    weekday: 11,
+    isoWeekday: 11,
+    dayOfYear: 4,
+    hour: 13,
+    millisecond: 16,
+    minute: 14,
+    month: 8,
+    quarter: 7,
+    second: 15,
+    weekYear: 1,
+    isoWeekYear: 1,
+    week: 5,
+    isoWeek: 5,
+    year: 1,
+  };
   let tmp = /\d\d?/;
   const re21 = tmp;
   const re22 = /\d+/;
@@ -3420,7 +4085,7 @@ let fn = () => {
   c32 = 6;
   c33 = 7;
   c34 = 8;
-  const fn3 = function() {
+  const fn3 = function () {
     const yearResult = this.year();
     if (yearResult <= 9999) {
       const _Math = Math;
@@ -3446,14 +4111,14 @@ let fn = () => {
   s = fn3;
   obj.Y = fn3;
   let items1 = ["YY", 2];
-  const fn4 = function() {
+  const fn4 = function () {
     return this.year() % 100;
   };
   closure_0 = 0;
   closure_1 = items1;
   year = fn4;
   s = fn4;
-  obj[items1[0]] = function() {
+  obj[items1[0]] = function () {
     const self = this;
     const apply = s.apply;
     if (typeof apply === "unknown") {
@@ -3485,7 +4150,7 @@ let fn = () => {
       return this[year]();
     };
   }
-  obj[items2[0]] = function() {
+  obj[items2[0]] = function () {
     const self = this;
     const apply = s.apply;
     if (typeof apply === "unknown") {
@@ -3517,7 +4182,7 @@ let fn = () => {
       return this[year]();
     };
   }
-  obj[items3[0]] = function() {
+  obj[items3[0]] = function () {
     const self = this;
     const apply = s.apply;
     if (typeof apply === "unknown") {
@@ -3550,7 +4215,7 @@ let fn = () => {
     };
   }
   let tmp2 = /[+-]?\d+/;
-  obj[items4[0]] = function() {
+  obj[items4[0]] = function () {
     const self = this;
     const apply = s.apply;
     if (typeof apply === "unknown") {

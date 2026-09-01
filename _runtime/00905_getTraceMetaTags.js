@@ -13,7 +13,7 @@ arg5.getTraceMetaTags = function getTraceMetaTags(arg0) {
   const entries = Object.entries(traceData);
   const mapped = entries.map((arg0) => {
     [tmp, tmp2] = arg0;
-    return "<meta name=\"" + tmp + "\" content=\"" + tmp2 + "\"/>";
+    return '<meta name="' + tmp + '" content="' + tmp2 + '"/>';
   });
   return mapped.join("\n");
 };

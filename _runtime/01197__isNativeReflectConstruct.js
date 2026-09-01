@@ -22,12 +22,9 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
-function NOOP_SET_VISIBILITY() {
-
-}
+function NOOP_SET_VISIBILITY() {}
 class FeedbackManager {
   constructor() {
     tmp = closure_4(this, ScreenshotButtonManager);
@@ -40,7 +37,7 @@ let obj = {
   get() {
     error = new Error("Subclasses must override feedbackComponentName");
     throw error;
-  }
+  },
 };
 const items = [
   obj,
@@ -48,13 +45,11 @@ const items = [
     key: "initialize",
     value: function initialize(_setVisibility) {
       this._setVisibility = _setVisibility;
-    }
+    },
   },
   {
     key: "reset",
-    value: function reset() {
-
-    }
+    value: function reset() {},
   },
   {
     key: "show",
@@ -66,9 +61,15 @@ const items = [
       } else {
         const _console = console;
         const _HermesInternal = HermesInternal;
-        console.warn("[Sentry] " + self._feedbackComponentName + " requires 'Sentry.wrap(RootComponent)' to be called before 'show" + self._feedbackComponentName + "()'.");
+        console.warn(
+          "[Sentry] " +
+            self._feedbackComponentName +
+            " requires 'Sentry.wrap(RootComponent)' to be called before 'show" +
+            self._feedbackComponentName +
+            "()'.",
+        );
       }
-    }
+    },
   },
   {
     key: "hide",
@@ -80,16 +81,20 @@ const items = [
       } else {
         const _console = console;
         const _HermesInternal = HermesInternal;
-        console.warn("[Sentry] " + self._feedbackComponentName + " requires 'Sentry.wrap(RootComponent)' before interacting with the widget.");
+        console.warn(
+          "[Sentry] " +
+            self._feedbackComponentName +
+            " requires 'Sentry.wrap(RootComponent)' before interacting with the widget.",
+        );
       }
-    }
+    },
   },
   {
     key: "isFormVisible",
     value: function isFormVisible() {
       return this._isVisible;
-    }
-  }
+    },
+  },
 ];
 const importDefaultResult1Result = importDefaultResult1(FeedbackManager, null, items);
 importDefaultResult1Result._isVisible = false;
@@ -119,7 +124,7 @@ obj = {
   key: "_feedbackComponentName",
   get() {
     return "FeedbackWidget";
-  }
+  },
 };
 const items1 = [obj];
 const importDefaultResult1Result1 = importDefaultResult1(FeedbackWidgetManager, null, items1);
@@ -149,7 +154,7 @@ obj = {
   key: "_feedbackComponentName",
   get() {
     return "FeedbackButton";
-  }
+  },
 };
 const items2 = [obj];
 const importDefaultResult1Result2 = importDefaultResult1(FeedbackButtonManager, null, items2);
@@ -179,8 +184,8 @@ const items3 = [
     key: "_feedbackComponentName",
     get() {
       return "ScreenshotButton";
-    }
-  }
+    },
+  },
 ];
 const importDefaultResult1Result3 = importDefaultResult1(ScreenshotButtonManager, null, items3);
 

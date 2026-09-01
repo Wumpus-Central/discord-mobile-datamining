@@ -22,5 +22,4 @@ try {
     }
     return tmp2;
   };
-} catch (err) {
-}
+} catch (err) {}

@@ -39,7 +39,7 @@ const memoResult = noop.memo(function BottomSheetHandleComponent(style) {
     accessibilityLabel: null,
     accessibilityHint: null,
     collapsable: true,
-    children: null
+    children: null,
   };
   const tmp9 = useMemo(() => {
     const items = [style(indicatorStyle[4]).styles.container, closure_1_3.flatten(style)];
@@ -54,9 +54,9 @@ const memoResult = noop.memo(function BottomSheetHandleComponent(style) {
       style: useMemo(() => {
         const items = [style(indicatorStyle[4]).styles.indicator, closure_1_3.flatten(indicatorStyle)];
         return items;
-      }, items1)
+      }, items1),
     }),
-    style.children
+    style.children,
   ];
   obj[6] = items2;
   return closure_6(closure_4, obj);

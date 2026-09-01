@@ -29,10 +29,12 @@ let c6 = false;
 export const selectProperties = (arg0, arr) => {
   closure_0 = arg0;
   const found = arr.filter((arg0) => arg0 in closure_0);
-  return Object.fromEntries(found.map((arg0) => {
-    const items = [arg0, table[arg0]];
-    return items;
-  }));
+  return Object.fromEntries(
+    found.map((arg0) => {
+      const items = [arg0, table[arg0]];
+      return items;
+    }),
+  );
 };
 export const filterConfig = function filterConfig(config, ALLOWED_PROPS, config2) {
   let obj = config2;

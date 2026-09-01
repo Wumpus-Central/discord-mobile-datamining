@@ -18,7 +18,11 @@ function configureProps() {
       let str2 = "Property `";
       let tmp2 = new.target;
       let tmp3 = new.target;
-      let reanimatedError = new tmp9(1664).ReanimatedError("Property `" + key10008 + "` was whitelisted both as UI and native prop. Please remove it from one of the lists.");
+      let reanimatedError = new tmp9(1664).ReanimatedError(
+        "Property `" +
+          key10008 +
+          "` was whitelisted both as UI and native prop. Please remove it from one of the lists.",
+      );
       let tmp5 = reanimatedError;
       throw reanimatedError;
     }
@@ -35,7 +39,10 @@ export const addWhitelistedNativeProps = function addWhitelistedNativeProps(arg0
   const merged = Object.assign(_mod1666.PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST);
   const merged1 = Object.assign(arg0);
   _mod1666.PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST = {};
-  if (Object.keys(_mod1666.PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST).length !== Object.keys(_mod1666.PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST).length) {
+  if (
+    Object.keys(_mod1666.PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST).length !==
+    Object.keys(_mod1666.PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST).length
+  ) {
     configureProps();
   }
 };
@@ -43,7 +50,10 @@ export const addWhitelistedUIProps = function addWhitelistedUIProps(arg0) {
   const merged = Object.assign(_mod1666.PropsAllowlists.UI_THREAD_PROPS_WHITELIST);
   const merged1 = Object.assign(arg0);
   _mod1666.PropsAllowlists.UI_THREAD_PROPS_WHITELIST = {};
-  if (Object.keys(_mod1666.PropsAllowlists.UI_THREAD_PROPS_WHITELIST).length !== Object.keys(_mod1666.PropsAllowlists.UI_THREAD_PROPS_WHITELIST).length) {
+  if (
+    Object.keys(_mod1666.PropsAllowlists.UI_THREAD_PROPS_WHITELIST).length !==
+    Object.keys(_mod1666.PropsAllowlists.UI_THREAD_PROPS_WHITELIST).length
+  ) {
     configureProps();
   }
 };
@@ -72,7 +82,10 @@ export const adaptViewConfig = function adaptViewConfig(viewConfig) {
     const merged1 = Object.assign(obj);
     obj(1666).PropsAllowlists.UI_THREAD_PROPS_WHITELIST = obj;
     const _Object3 = Object;
-    if (Object.keys(obj(1666).PropsAllowlists.UI_THREAD_PROPS_WHITELIST).length !== Object.keys(obj(1666).PropsAllowlists.UI_THREAD_PROPS_WHITELIST).length) {
+    if (
+      Object.keys(obj(1666).PropsAllowlists.UI_THREAD_PROPS_WHITELIST).length !==
+      Object.keys(obj(1666).PropsAllowlists.UI_THREAD_PROPS_WHITELIST).length
+    ) {
       configureProps();
     }
     obj.add(uiViewClassName);

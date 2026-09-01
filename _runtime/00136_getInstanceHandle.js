@@ -34,13 +34,16 @@ arg5.getPublicInstanceFromInstanceHandle = function getPublicInstanceFromInstanc
     let getPublicInstanceFromReactNativeDocumentInstanceHandle = dependencyMap;
     if (obj.isReactNativeDocumentInstanceHandle(element)) {
       tmp4 = tmp4(137);
-      getPublicInstanceFromReactNativeDocumentInstanceHandle = tmp4.getPublicInstanceFromReactNativeDocumentInstanceHandle;
-      let publicInstanceFromReactNativeDocumentInstanceHandle = getPublicInstanceFromReactNativeDocumentInstanceHandle(element);
+      getPublicInstanceFromReactNativeDocumentInstanceHandle =
+        tmp4.getPublicInstanceFromReactNativeDocumentInstanceHandle;
+      let publicInstanceFromReactNativeDocumentInstanceHandle =
+        getPublicInstanceFromReactNativeDocumentInstanceHandle(element);
     } else {
       let tmp4Result = tmp4(138);
       if (tmp4Result.isReactNativeDocumentElementInstanceHandle(element)) {
         tmp4Result = tmp4(138);
-        publicInstanceFromReactNativeDocumentInstanceHandle = tmp4Result.getPublicInstanceFromReactNativeDocumentElementInstanceHandle(element);
+        publicInstanceFromReactNativeDocumentInstanceHandle =
+          tmp4Result.getPublicInstanceFromReactNativeDocumentElementInstanceHandle(element);
       }
     }
     obj = createReactNativeDocumentInstanceHandle;
@@ -58,13 +61,16 @@ arg5.getNativeNodeReference = function getNativeNodeReference(target) {
     let getNativeNodeReferenceFromReactNativeDocumentInstanceHandle = dependencyMap;
     if (obj.isReactNativeDocumentInstanceHandle(tmp)) {
       tmp5 = tmp5(137);
-      getNativeNodeReferenceFromReactNativeDocumentInstanceHandle = tmp5.getNativeNodeReferenceFromReactNativeDocumentInstanceHandle;
-      let nativeNodeReferenceFromReactNativeDocumentInstanceHandle = getNativeNodeReferenceFromReactNativeDocumentInstanceHandle(tmp);
+      getNativeNodeReferenceFromReactNativeDocumentInstanceHandle =
+        tmp5.getNativeNodeReferenceFromReactNativeDocumentInstanceHandle;
+      let nativeNodeReferenceFromReactNativeDocumentInstanceHandle =
+        getNativeNodeReferenceFromReactNativeDocumentInstanceHandle(tmp);
     } else {
       let tmp5Result = tmp5(138);
       if (tmp5Result.isReactNativeDocumentElementInstanceHandle(tmp)) {
         tmp5Result = tmp5(138);
-        nativeNodeReferenceFromReactNativeDocumentInstanceHandle = tmp5Result.getNativeElementReferenceFromReactNativeDocumentElementInstanceHandle(tmp);
+        nativeNodeReferenceFromReactNativeDocumentInstanceHandle =
+          tmp5Result.getNativeElementReferenceFromReactNativeDocumentElementInstanceHandle(tmp);
       }
     }
     obj = createReactNativeDocumentInstanceHandle;
@@ -72,7 +78,8 @@ arg5.getNativeNodeReference = function getNativeNodeReference(target) {
 };
 arg5.getNativeElementReference = function getNativeElementReference(nativeElementReference3) {
   if (obj.isReactNativeDocumentElementInstanceHandle(nativeElementReference3[closure_4])) {
-    let nativeElementReferenceFromReactNativeDocumentElementInstanceHandle = tmp2(138).getNativeElementReferenceFromReactNativeDocumentElementInstanceHandle(tmp);
+    let nativeElementReferenceFromReactNativeDocumentElementInstanceHandle =
+      tmp2(138).getNativeElementReferenceFromReactNativeDocumentElementInstanceHandle(tmp);
     const tmp2Result = tmp2(138);
   } else {
     if (null == callback) {

@@ -57,8 +57,8 @@ const items = [
         const merged = Object.assign(arg0);
         return { activityType: null };
       });
-    }
-  }
+    },
+  },
 ];
 const tmp2 = _createClassDefault(Share, null, items);
 tmp2.sharedAction = "sharedAction";

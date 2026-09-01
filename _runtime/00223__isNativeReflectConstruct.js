@@ -25,8 +25,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class FileReader {
   constructor() {
@@ -55,9 +54,7 @@ _inheritsDefault(FileReader, dispatchDefault);
 const items = [
   {
     key: "_reset",
-    value: function _reset() {
-
-    }
+    value: function _reset() {},
   },
   {
     key: "_setReadyState",
@@ -88,7 +85,7 @@ const items = [
         const tmpResult2 = new tmpResult("error");
         dispatchEvent(tmpResult2);
       }
-    }
+    },
   },
   {
     key: "readAsArrayBuffer",
@@ -97,24 +94,29 @@ const items = [
       this._aborted = false;
       if (null == closure_0) {
         const _TypeError = TypeError;
-        const typeError = new TypeError("Failed to execute 'readAsArrayBuffer' on 'FileReader': parameter 1 is not of type 'Blob'");
+        const typeError = new TypeError(
+          "Failed to execute 'readAsArrayBuffer' on 'FileReader': parameter 1 is not of type 'Blob'",
+        );
         throw typeError;
       } else {
         const asDataURL = FileReaderModuleDefault.readAsDataURL(closure_0.data);
-        asDataURL.then((arg0) => {
-          if (!self._aborted) {
-            obj._result = self(closure_1_2[7]).toByteArray(arg0.split(",")[1]).buffer;
-            obj._setReadyState(2);
-            const obj2 = self(closure_1_2[7]);
-          }
-        }, (_error) => {
-          if (!self._aborted) {
-            obj._error = _error;
-            obj._setReadyState(2);
-          }
-        });
+        asDataURL.then(
+          (arg0) => {
+            if (!self._aborted) {
+              obj._result = self(closure_1_2[7]).toByteArray(arg0.split(",")[1]).buffer;
+              obj._setReadyState(2);
+              const obj2 = self(closure_1_2[7]);
+            }
+          },
+          (_error) => {
+            if (!self._aborted) {
+              obj._error = _error;
+              obj._setReadyState(2);
+            }
+          },
+        );
       }
-    }
+    },
   },
   {
     key: "readAsDataURL",
@@ -123,23 +125,28 @@ const items = [
       this._aborted = false;
       if (null == closure_0) {
         const _TypeError = TypeError;
-        const typeError = new TypeError("Failed to execute 'readAsDataURL' on 'FileReader': parameter 1 is not of type 'Blob'");
+        const typeError = new TypeError(
+          "Failed to execute 'readAsDataURL' on 'FileReader': parameter 1 is not of type 'Blob'",
+        );
         throw typeError;
       } else {
         const asDataURL = FileReaderModuleDefault.readAsDataURL(closure_0.data);
-        asDataURL.then((_result) => {
-          if (!self._aborted) {
-            obj._result = _result;
-            obj._setReadyState(2);
-          }
-        }, (_error) => {
-          if (!self._aborted) {
-            obj._error = _error;
-            obj._setReadyState(2);
-          }
-        });
+        asDataURL.then(
+          (_result) => {
+            if (!self._aborted) {
+              obj._result = _result;
+              obj._setReadyState(2);
+            }
+          },
+          (_error) => {
+            if (!self._aborted) {
+              obj._error = _error;
+              obj._setReadyState(2);
+            }
+          },
+        );
       }
-    }
+    },
   },
   {
     key: "readAsText",
@@ -152,23 +159,28 @@ const items = [
       this._aborted = false;
       if (null == _bodyBlob) {
         const _TypeError = TypeError;
-        const typeError = new TypeError("Failed to execute 'readAsText' on 'FileReader': parameter 1 is not of type 'Blob'");
+        const typeError = new TypeError(
+          "Failed to execute 'readAsText' on 'FileReader': parameter 1 is not of type 'Blob'",
+        );
         throw typeError;
       } else {
         const asText = FileReaderModuleDefault.readAsText(_bodyBlob.data, str);
-        asText.then((_result) => {
-          if (!self._aborted) {
-            obj._result = _result;
-            obj._setReadyState(2);
-          }
-        }, (_error) => {
-          if (!self._aborted) {
-            obj._error = _error;
-            obj._setReadyState(2);
-          }
-        });
+        asText.then(
+          (_result) => {
+            if (!self._aborted) {
+              obj._result = _result;
+              obj._setReadyState(2);
+            }
+          },
+          (_error) => {
+            if (!self._aborted) {
+              obj._error = _error;
+              obj._setReadyState(2);
+            }
+          },
+        );
       }
-    }
+    },
   },
   {
     key: "abort",
@@ -184,25 +196,25 @@ const items = [
         self._setReadyState(2);
       }
       self._reset();
-    }
+    },
   },
   {
     key: "readyState",
     get() {
       return this._readyState;
-    }
+    },
   },
   {
     key: "error",
     get() {
       return this._error;
-    }
+    },
   },
   {
     key: "result",
     get() {
       return this._result;
-    }
+    },
   },
   {
     key: "onabort",
@@ -211,7 +223,7 @@ const items = [
     },
     set(fn) {
       const result = FileReader(205).setEventHandlerAttribute(this, "abort", fn);
-    }
+    },
   },
   {
     key: "onerror",
@@ -220,7 +232,7 @@ const items = [
     },
     set(fn) {
       const result = FileReader(205).setEventHandlerAttribute(this, "error", fn);
-    }
+    },
   },
   {
     key: "onload",
@@ -229,7 +241,7 @@ const items = [
     },
     set(fn) {
       const result = FileReader(205).setEventHandlerAttribute(this, "load", fn);
-    }
+    },
   },
   {
     key: "onloadstart",
@@ -238,7 +250,7 @@ const items = [
     },
     set(fn) {
       const result = FileReader(205).setEventHandlerAttribute(this, "loadstart", fn);
-    }
+    },
   },
   {
     key: "onloadend",
@@ -247,7 +259,7 @@ const items = [
     },
     set(fn) {
       const result = FileReader(205).setEventHandlerAttribute(this, "loadend", fn);
-    }
+    },
   },
   {
     key: "onprogress",
@@ -256,8 +268,8 @@ const items = [
     },
     set(fn) {
       const result = FileReader(205).setEventHandlerAttribute(this, "progress", fn);
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(FileReader, items);
 importDefaultResultResult.EMPTY = 0;

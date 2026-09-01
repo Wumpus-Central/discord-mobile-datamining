@@ -22,10 +22,11 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
-let closure_5 = { code: "function pnpm_RollTs1(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,animation(0,config))},{rotate:delayFunction(delay,animation('0deg',config))}]},initialValues:{transform:[{translateX:-values.windowWidth},{rotate:'-180deg'}],...initialValues},callback:callback};}" };
+let closure_5 = {
+  code: "function pnpm_RollTs1(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,animation(0,config))},{rotate:delayFunction(delay,animation('0deg',config))}]},initialValues:{transform:[{translateX:-values.windowWidth},{rotate:'-180deg'}],...initialValues},callback:callback};}",
+};
 class RollInLeft {
   constructor() {
     self = this;
@@ -80,12 +81,14 @@ let obj = {
   key: "createInstance",
   value: function createInstance() {
     return RollOutRight();
-  }
+  },
 };
 let items = [obj];
 const importDefaultResultResult = importDefaultResult(RollInLeft, null, items);
 importDefaultResultResult.presetName = "RollInLeft";
-let closure_6 = { code: "function pnpm_RollTs2(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,animation(0,config))},{rotate:delayFunction(delay,animation('0deg',config))}]},initialValues:{transform:[{translateX:values.windowWidth},{rotate:'180deg'}],...initialValues},callback:callback};}" };
+let closure_6 = {
+  code: "function pnpm_RollTs2(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,animation(0,config))},{rotate:delayFunction(delay,animation('0deg',config))}]},initialValues:{transform:[{translateX:values.windowWidth},{rotate:'180deg'}],...initialValues},callback:callback};}",
+};
 class RollInRight {
   constructor() {
     self = this;
@@ -140,12 +143,14 @@ obj = {
   key: "createInstance",
   value: function createInstance() {
     return RollOutRight();
-  }
+  },
 };
 let items1 = [obj];
 const importDefaultResultResult1 = importDefaultResult(RollInRight, null, items1);
 importDefaultResultResult1.presetName = "RollInRight";
-let closure_7 = { code: "function pnpm_RollTs3(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,animation(-values.windowWidth,config))},{rotate:delayFunction(delay,animation('-180deg',config))}]},initialValues:{transform:[{translateX:0},{rotate:'0deg'}],...initialValues},callback:callback};}" };
+let closure_7 = {
+  code: "function pnpm_RollTs3(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,animation(-values.windowWidth,config))},{rotate:delayFunction(delay,animation('-180deg',config))}]},initialValues:{transform:[{translateX:0},{rotate:'0deg'}],...initialValues},callback:callback};}",
+};
 class RollOutLeft {
   constructor() {
     self = this;
@@ -200,12 +205,14 @@ obj = {
   key: "createInstance",
   value: function createInstance() {
     return RollOutRight();
-  }
+  },
 };
 const items2 = [obj];
 const importDefaultResultResult2 = importDefaultResult(RollOutLeft, null, items2);
 importDefaultResultResult2.presetName = "RollOutLeft";
-let closure_8 = { code: "function pnpm_RollTs4(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,animation(values.windowWidth,config))},{rotate:delayFunction(delay,animation('180deg',config))}]},initialValues:{transform:[{translateX:0},{rotate:'0deg'}],...initialValues},callback:callback};}" };
+let closure_8 = {
+  code: "function pnpm_RollTs4(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,animation(values.windowWidth,config))},{rotate:delayFunction(delay,animation('180deg',config))}]},initialValues:{transform:[{translateX:0},{rotate:'0deg'}],...initialValues},callback:callback};}",
+};
 class RollOutRight {
   constructor() {
     self = this;
@@ -260,8 +267,8 @@ const items3 = [
     key: "createInstance",
     value: function createInstance() {
       return RollOutRight();
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult3 = importDefaultResult(RollOutRight, null, items3);
 importDefaultResultResult3.presetName = "RollOutRight";

@@ -304,7 +304,7 @@ arg5.nodeStackLineParser = function nodeStackLineParser(arg0) {
           return tmp5;
         }
       }
-    }
+    },
   ];
   return items;
 };

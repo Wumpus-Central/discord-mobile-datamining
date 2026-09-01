@@ -23,11 +23,11 @@ class SemVer {
         tmp33 = globalThis;
         _TypeError6 = TypeError;
         _HermesInternal3 = HermesInternal;
-        str11 = "\".";
-        str12 = "Invalid version. Must be a string. Got type \"";
+        str11 = '".';
+        str12 = 'Invalid version. Must be a string. Got type "';
         tmp34 = new.target;
         tmp35 = new.target;
-        typeError = new TypeError("Invalid version. Must be a string. Got type \"" + typeof global + "\".");
+        typeError = new TypeError('Invalid version. Must be a string. Got type "' + typeof global + '".');
         tmp37 = typeError;
         throw typeError;
       }
@@ -153,13 +153,13 @@ let items = [
         self.version = version + "-" + prerelease.join(".");
       }
       return self.version;
-    }
+    },
   },
   {
     key: "toString",
     value: function toString() {
       return this.version;
-    }
+    },
   },
   {
     key: "compare",
@@ -180,7 +180,7 @@ let items = [
         const tmp4 = self.compareMain(tmp2Result) || self.comparePre(tmp2Result);
       }
       return num2;
-    }
+    },
   },
   {
     key: "compareMain",
@@ -200,7 +200,7 @@ let items = [
         compareIdentifiersResult = tmp3Result.compareIdentifiers(self.patch, tmpResult.patch);
       }
       return compareIdentifiersResult;
-    }
+    },
   },
   {
     key: "comparePre",
@@ -259,7 +259,7 @@ let items = [
         }
       }
       return 0;
-    }
+    },
   },
   {
     key: "compareBuild",
@@ -300,7 +300,7 @@ let items = [
         }
       }
       return 0;
-    }
+    },
   },
   {
     key: "inc",
@@ -420,8 +420,8 @@ let items = [
         self.raw = self.raw + "+" + build.join(".");
       }
       return self;
-    }
-  }
+    },
+  },
 ];
 
 export default _createClass(SemVer, items);

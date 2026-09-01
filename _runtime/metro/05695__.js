@@ -10,9 +10,7 @@ try {
   try {
     const _module1 = _mod4216;
     if (_module1 != null) {
-      const fn = function t() {
-
-      };
+      const fn = function t() {};
       fn.__closure = {};
       fn.__workletHash = 1792171573139;
       fn.__initData = { code: "function pnpm_reanimatedWrapperTs1(){}" };
@@ -23,7 +21,11 @@ try {
       const NativeProxy = n.NativeProxy;
       if (!NativeProxy.installUIRuntimeBindings()) {
         const _console = console;
-        console.warn(tagMessage.tagMessage("Failed to install UI runtime bindings. Please report this at https://github.com/software-mansion/react-native-gesture-handler/issues."));
+        console.warn(
+          tagMessage.tagMessage(
+            "Failed to install UI runtime bindings. Please report this at https://github.com/software-mansion/react-native-gesture-handler/issues.",
+          ),
+        );
         const tmpResult = tagMessage;
       }
     });
@@ -37,10 +39,16 @@ try {
     }
     if (!setGestureState) {
       const fn2 = function o() {
-        console.warn(tagMessage.tagMessage("Please use newer version of react-native-reanimated in order to control state of the gestures."));
+        console.warn(
+          tagMessage.tagMessage(
+            "Please use newer version of react-native-reanimated in order to control state of the gestures.",
+          ),
+        );
       };
       let obj = { tagMessage: null };
-      obj = { code: "function pnpm_reanimatedWrapperTs2(){const{tagMessage}=this.__closure;console.warn(tagMessage('Please use newer version of react-native-reanimated in order to control state of the gestures.'));}" };
+      obj = {
+        code: "function pnpm_reanimatedWrapperTs2(){const{tagMessage}=this.__closure;console.warn(tagMessage('Please use newer version of react-native-reanimated in order to control state of the gestures.'));}",
+      };
       obj[0] = tagMessage.tagMessage;
       fn2.__closure = obj;
       fn2.__workletHash = 3596069664305;
@@ -48,7 +56,5 @@ try {
       _module.setGestureState = fn2;
     }
     exports.Reanimated = _module;
-  } catch (err) {
-  }
-} catch (err) {
-}
+  } catch (err) {}
+} catch (err) {}

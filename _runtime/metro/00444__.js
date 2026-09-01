@@ -58,16 +58,18 @@ obj = {
       return obj;
     } else {
       const _Error = Error;
-      error = new Error("Expected target to be a ReactNativeElement. VirtualRow requires DOM APIs to be enabled in React Native.");
+      error = new Error(
+        "Expected target to be a ReactNativeElement. VirtualRow requires DOM APIs to be enabled in React Native.",
+      );
       throw error;
     }
-  }
+  },
 };
 obj = {
   itemCount: DEFAULT_INITIAL_NUM_TO_RENDER.INITIAL_NUM_TO_RENDER,
   spacerStyle(arg0) {
     return { width: arg0 * FALLBACK_ESTIMATED_WIDTH };
-  }
+  },
 };
 
 export default obj;

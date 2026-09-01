@@ -37,7 +37,10 @@ function getNativeImplementation(fetch) {
             if (tmp3(tmp[2]).DEBUG_BUILD) {
               const debug = tmp3(tmp[1]).debug;
               const _HermesInternal = HermesInternal;
-              debug.warn("Could not create sandbox iframe for " + tmp2 + " check, bailing to window." + tmp2 + ": ", tmp17);
+              debug.warn(
+                "Could not create sandbox iframe for " + tmp2 + " check, bailing to window." + tmp2 + ": ",
+                tmp17,
+              );
             }
           }
         }

@@ -4,22 +4,23 @@ const dependencyMap = arg6;
 arg5.getSupportedNumberingSystems = function getSupportedNumberingSystems(locale) {
   const _require = locale;
   const numberingSystemNames = require("metro/13941__.js").numberingSystemNames;
-  return numberingSystemNames.filter((arg0) => (function isSupportedNumberingSystem(arg0, closure_0) {
-    let str = closure_0;
-    if (undefined === closure_0) {
-      str = "en";
-    }
-    try {
-      const concat = "".concat;
-      const combined = "".concat(str, "-u-nu-");
-      const memoizedNumberFormat = callback(table[0]).createMemoizedNumberFormat(combined.concat(arg0));
-      if (memoizedNumberFormat.resolvedOptions().numberingSystem !== arg0) {
-        if ("123" === memoizedNumberFormat.format(123)) {
-          return false;
-        }
+  return numberingSystemNames.filter((arg0) =>
+    (function isSupportedNumberingSystem(arg0, closure_0) {
+      let str = closure_0;
+      if (undefined === closure_0) {
+        str = "en";
       }
-      return true;
-    } catch (err) {
-    }
-  })(arg0, closure_0));
+      try {
+        const concat = "".concat;
+        const combined = "".concat(str, "-u-nu-");
+        const memoizedNumberFormat = callback(table[0]).createMemoizedNumberFormat(combined.concat(arg0));
+        if (memoizedNumberFormat.resolvedOptions().numberingSystem !== arg0) {
+          if ("123" === memoizedNumberFormat.format(123)) {
+            return false;
+          }
+        }
+        return true;
+      } catch (err) {}
+    })(arg0, closure_0),
+  );
 };

@@ -15,7 +15,12 @@ arg5.register = function register(arg0, fn) {
   if (null !== fn) {
     str = typeof fn;
   }
-  module(38)(typeof fn === "function", "View config getter callback for component `%s` must be a function (received `%s`)", arg0, str);
+  module(38)(
+    typeof fn === "function",
+    "View config getter callback for component `%s` must be a function (received `%s`)",
+    arg0,
+    str,
+  );
   const result = obj.set(arg0, fn);
   return arg0;
 };
@@ -36,7 +41,13 @@ arg5.get = function get(arg0) {
         }
         obj3 = /[a-z]/;
       }
-      module(38)(false, "View config getter callback for component `%s` must be a function (received `%s`).%s", arg0, str, str3);
+      module(38)(
+        false,
+        "View config getter callback for component `%s` must be a function (received `%s`).%s",
+        arg0,
+        str,
+        str3,
+      );
       const tmp17 = module(38);
     }
     const value1Result = value();

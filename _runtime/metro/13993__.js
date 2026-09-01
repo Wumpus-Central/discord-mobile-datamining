@@ -7,12 +7,13 @@ import _mod14005 from "14005__.js";
 
 let closure_2 = call([].concat);
 
-export default all("Reflect", "ownKeys") || (function ownKeys(arg0) {
-  const fResult = f2.f(all2(arg0));
-  const f = _mod14005.f;
-  let tmp2 = fResult;
-  if (f) {
-    tmp2 = callback(fResult, f(arg0));
-  }
-  return tmp2;
-});
+export default all("Reflect", "ownKeys") ||
+  function ownKeys(arg0) {
+    const fResult = f2.f(all2(arg0));
+    const f = _mod14005.f;
+    let tmp2 = fResult;
+    if (f) {
+      tmp2 = callback(fResult, f(arg0));
+    }
+    return tmp2;
+  };

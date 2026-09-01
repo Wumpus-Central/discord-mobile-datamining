@@ -11,4 +11,4 @@ export default function createAggregator(arg0, arg1) {
     }
     return tmpResult(arg0, callback, callback(720)(arg1, 2), dependencyMap ? dependencyMap() : {});
   };
-};
+}

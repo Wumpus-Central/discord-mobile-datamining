@@ -230,8 +230,13 @@ arg5.default = {
           let dataView = new DataView(buffer.slice(arr[0].offset, arr[0].offset + arr[0].length));
           const tmpResult = tmp(5157);
           const decompressResult = tmpResult.decompress(dataView, arr[0].compressionMethod, "utf-8", "dataview");
-          let catchPromise = tmpResult.decompress(dataView, arr[0].compressionMethod, "utf-8", "dataview").then(parseTags).catch(() => ({}));
-          const nextPromise = tmpResult.decompress(dataView, arr[0].compressionMethod, "utf-8", "dataview").then(parseTags);
+          let catchPromise = tmpResult
+            .decompress(dataView, arr[0].compressionMethod, "utf-8", "dataview")
+            .then(parseTags)
+            .catch(() => ({}));
+          const nextPromise = tmpResult
+            .decompress(dataView, arr[0].compressionMethod, "utf-8", "dataview")
+            .then(parseTags);
         } else {
           catchPromise = {};
         }
@@ -289,6 +294,6 @@ arg5.default = {
         return {};
       }
     })(buffer, arr);
-  }
+  },
 };
 arg5.parseTags = parseTags;

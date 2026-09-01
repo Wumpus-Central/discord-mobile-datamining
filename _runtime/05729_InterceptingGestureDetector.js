@@ -23,7 +23,10 @@ export const InterceptingGestureDetector = function InterceptingGestureDetector(
   ({ children, touchAction, userSelect, enableContextMenu } = gesture);
   let obj = gesture(5670);
   obj.useEnsureGestureHandlerRootView();
-  const tmp6 = first1(callback3(() => new Set()), 2);
+  const tmp6 = first1(
+    callback3(() => new Set()),
+    2,
+  );
   first = tmp6[0];
   dependencyMap = tmp6[1];
   let items = [first];
@@ -71,20 +74,27 @@ export const InterceptingGestureDetector = function InterceptingGestureDetector(
   }, []);
   callback2 = tmp18;
   const items1 = [first1, tmp17, tmp18];
-  let tmp8Result = tmp8(() => ({
-    mode: first1,
-    setMode(arg0) {
-      if (arg0 !== closure_1_0(closure_1_2[5]).InterceptingDetectorMode.REANIMATED) {
-        callback(arg0);
-      }
-      error = new Error(closure_1_0(closure_1_2[9]).tagMessage("InterceptingGestureDetector can only handle either Reanimated or Animated events."));
-      throw error;
-    },
-    register: closure_5,
-    unregister: closure_6
-  }), items1);
+  let tmp8Result = tmp8(
+    () => ({
+      mode: first1,
+      setMode(arg0) {
+        if (arg0 !== closure_1_0(closure_1_2[5]).InterceptingDetectorMode.REANIMATED) {
+          callback(arg0);
+        }
+        error = new Error(
+          closure_1_0(closure_1_2[9]).tagMessage(
+            "InterceptingGestureDetector can only handle either Reanimated or Animated events.",
+          ),
+        );
+        throw error;
+      },
+      register: closure_5,
+      unregister: closure_6,
+    }),
+    items1,
+  );
   callback3 = tmp8Result;
-  const items2 = [tmp8Result, , ];
+  const items2 = [tmp8Result, ,];
   let prop2;
   if (gesture != null) {
     let config = gesture.config;
@@ -146,7 +156,7 @@ export const InterceptingGestureDetector = function InterceptingGestureDetector(
       };
     }, items3);
     closure_8 = tmp16Result;
-    const items4 = [first, ];
+    const items4 = [first];
     let detectorCallbacks;
     if (gesture != null) {
       detectorCallbacks = gesture.detectorCallbacks;
@@ -201,7 +211,24 @@ export const InterceptingGestureDetector = function InterceptingGestureDetector(
     const tmp8Result2 = tmp8(() => callback("jsEventHandler"), items7);
     obj = { value: null, children: null };
     obj[0] = tmp8Result;
-    obj1 = { touchAction: null, userSelect: null, enableContextMenu: null, pointerEvents: "box-none", onGestureHandlerStateChange: null, onGestureHandlerEvent: null, onGestureHandlerTouchEvent: null, onGestureHandlerAnimatedEvent: null, onGestureHandlerReanimatedStateChange: null, onGestureHandlerReanimatedEvent: null, onGestureHandlerReanimatedTouchEvent: null, handlerTags: null, style: null, virtualChildren: null, moduleId: null, children: null };
+    obj1 = {
+      touchAction: null,
+      userSelect: null,
+      enableContextMenu: null,
+      pointerEvents: "box-none",
+      onGestureHandlerStateChange: null,
+      onGestureHandlerEvent: null,
+      onGestureHandlerTouchEvent: null,
+      onGestureHandlerAnimatedEvent: null,
+      onGestureHandlerReanimatedStateChange: null,
+      onGestureHandlerReanimatedEvent: null,
+      onGestureHandlerReanimatedTouchEvent: null,
+      handlerTags: null,
+      style: null,
+      virtualChildren: null,
+      moduleId: null,
+      children: null,
+    };
     obj1[0] = touchAction;
     obj1[1] = userSelect;
     obj1[2] = enableContextMenu;
@@ -238,11 +265,18 @@ export const InterceptingGestureDetector = function InterceptingGestureDetector(
     return closure_8(tmp(5730).InterceptingDetectorContext, obj);
   } else {
     const _Error = Error;
-    error = new Error(tmp(5657).tagMessage("Gesture expects to run on the UI thread, but failed to create the Reanimated NativeDetector."));
+    error = new Error(
+      tmp(5657).tagMessage(
+        "Gesture expects to run on the UI thread, but failed to create the Reanimated NativeDetector.",
+      ),
+    );
     throw error;
   }
   const tmp20 = closure_5;
   const tmp4 = callback3;
   const tmp5 = first1;
-  tmp9 = callback2(() => Array.from(first).map((viewTag) => ({ viewTag: viewTag.viewTag, handlerTags: viewTag.handlerTags })), items);
+  tmp9 = callback2(
+    () => Array.from(first).map((viewTag) => ({ viewTag: viewTag.viewTag, handlerTags: viewTag.handlerTags })),
+    items,
+  );
 };

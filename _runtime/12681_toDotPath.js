@@ -378,7 +378,7 @@ if (self2) {
         value() {
           return message.message;
         },
-        enumerable: false
+        enumerable: false,
       };
       Object.defineProperty(_zod, "toString", obj);
     }

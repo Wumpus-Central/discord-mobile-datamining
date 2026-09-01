@@ -90,7 +90,7 @@ export const consoleLoggingIntegration = setupIntegration.defineIntegration(() =
         const debug = CONSOLE_LEVELS(closure_1_1[1]).debug;
         debug.warn("`enableLogs` is not enabled, ConsoleLogs integration disabled");
       }
-    }
+    },
   };
   return obj;
 });

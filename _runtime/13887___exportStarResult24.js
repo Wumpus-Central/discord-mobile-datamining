@@ -11,7 +11,9 @@ let closure_3 = e.__importDefault(formatToParts);
 
 export const PartitionNumberPattern = function PartitionNumberPattern(internalSlots, isNaN) {
   ({ pl, dataLocaleData } = internalSlots);
-  const tmp = dataLocaleData.numbers.symbols[internalSlots.numberingSystem] || dataLocaleData.numbers.symbols[dataLocaleData.numbers.nu[0]];
+  const tmp =
+    dataLocaleData.numbers.symbols[internalSlots.numberingSystem] ||
+    dataLocaleData.numbers.symbols[dataLocaleData.numbers.nu[0]];
   if (isNaN.isNaN()) {
     formattedString = tmp.nan;
     let num = 0;
@@ -71,7 +73,7 @@ export const PartitionNumberPattern = function PartitionNumberPattern(internalSl
       }
       num7 = num9;
     } else {
-      getMultiInternalSlots.invariant("negative" === signDisplay, "signDisplay must be \"negative\"");
+      getMultiInternalSlots.invariant("negative" === signDisplay, 'signDisplay must be "negative"');
       let num8 = 0;
       if (roundedNumber.isNegative()) {
         num8 = 0;
@@ -82,5 +84,10 @@ export const PartitionNumberPattern = function PartitionNumberPattern(internalSl
       num7 = num8;
     }
   }
-  return closure_3.default({ roundedNumber, formattedString, exponent: num, magnitude: num2, sign: num7 }, internalSlots.dataLocaleData, pl, internalSlots);
+  return closure_3.default(
+    { roundedNumber, formattedString, exponent: num, magnitude: num2, sign: num7 },
+    internalSlots.dataLocaleData,
+    pl,
+    internalSlots,
+  );
 };

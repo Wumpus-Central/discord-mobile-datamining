@@ -2,14 +2,32 @@
 import addNonEnumerableProperty from "12341_addNonEnumerableProperty.js";
 import closure_2 from "metro/00032__slicedToArray.js";
 
-let items = [["\n", "\\n"], ["\r", "\\r"], ["\t", "\\t"], ["\\", "\\\\"], ["|", "\\u{7c}"], [",", "\\u{2c}"]];
+let items = [
+  ["\n", "\\n"],
+  ["\r", "\\r"],
+  ["\t", "\\t"],
+  ["\\", "\\\\"],
+  ["|", "\\u{7c}"],
+  [",", "\\u{2c}"],
+];
 
-export const getBucketKey = function getBucketKey(arg0, sanitizeMetricKeyResult, sanitizeUnitResult, sanitizeTagsResult) {
+export const getBucketKey = function getBucketKey(
+  arg0,
+  sanitizeMetricKeyResult,
+  sanitizeUnitResult,
+  sanitizeTagsResult,
+) {
   const entries = Object.entries(addNonEnumerableProperty.dropUndefinedKeys(sanitizeTagsResult));
-  return "" + arg0 + sanitizeMetricKeyResult + sanitizeUnitResult + entries.sort((arg0, arg1) => {
-    const first = arg0[0];
-    return first.localeCompare(arg1[0]);
-  });
+  return (
+    "" +
+    arg0 +
+    sanitizeMetricKeyResult +
+    sanitizeUnitResult +
+    entries.sort((arg0, arg1) => {
+      const first = arg0[0];
+      return first.localeCompare(arg1[0]);
+    })
+  );
 };
 export const sanitizeMetricKey = function sanitizeMetricKey(str) {
   return str.replace(/[^\w\-.]+/gi, "_");
@@ -34,19 +52,24 @@ export const sanitizeTags = function sanitizeTags(obj) {
       let tmp3 = items;
       let num = 0;
       let arraySpreadResult = HermesBuiltin.arraySpread(String(arg0[key10007]), 0);
-      obj[replaced] = items.reduce((arg0, arg1) => arg0 + (function getCharOrReplacement(arg0) {
-        const obj = dependencyMap[Symbol.iterator]();
-        while (obj !== undefined) {
-          let tmp3 = callback;
-          let tmp4 = callback(tmp2, 2);
-          if (arg0 === tmp4[0]) {
-            let tmp6 = obj;
-            obj.return();
-            return tmp5;
-          }
-        }
-        return arg0;
-      })(arg1), "");
+      obj[replaced] = items.reduce(
+        (arg0, arg1) =>
+          arg0 +
+          (function getCharOrReplacement(arg0) {
+            const obj = dependencyMap[Symbol.iterator]();
+            while (obj !== undefined) {
+              let tmp3 = callback;
+              let tmp4 = callback(tmp2, 2);
+              if (arg0 === tmp4[0]) {
+                let tmp6 = obj;
+                obj.return();
+                return tmp5;
+              }
+            }
+            return arg0;
+          })(arg1),
+        "",
+      );
       continue;
     }
     continue;
@@ -85,7 +108,20 @@ export const serializeMetricBuckets = function serializeMetricBuckets(arg0) {
     let tmp6 = str2;
     let str7 = "|T";
     let str8 = "\n";
-    str = str + "" + tmp2.name + "@" + tmp2.unit + ":" + tmp2.metric + "|" + tmp2.metricType + str2 + "|T" + tmp2.timestamp + "\n";
+    str =
+      str +
+      "" +
+      tmp2.name +
+      "@" +
+      tmp2.unit +
+      ":" +
+      tmp2.metric +
+      "|" +
+      tmp2.metricType +
+      str2 +
+      "|T" +
+      tmp2.timestamp +
+      "\n";
     continue;
   }
   return str;

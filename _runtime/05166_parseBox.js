@@ -270,17 +270,19 @@ arg5.findOffsets = function findOffsets(byteLength) {
     if (tmp(5160).USE_EXIF) {
       obj.tiffHeaderOffset = (function findExifOffset(byteLength, subBoxes) {
         try {
-          const tmp4 = callback(subBoxes, (function findIinfExifItemId(subBoxes) {
-            subBoxes = subBoxes.subBoxes;
-            const itemInfos = subBoxes.find((type) => "iinf" === type.type).itemInfos;
-            return itemInfos.find((itemType) => itemType.itemType === closure_3);
-          })(subBoxes).itemId);
+          const tmp4 = callback(
+            subBoxes,
+            (function findIinfExifItemId(subBoxes) {
+              subBoxes = subBoxes.subBoxes;
+              const itemInfos = subBoxes.find((type) => "iinf" === type.type).itemInfos;
+              return itemInfos.find((itemType) => itemType.itemType === closure_3);
+            })(subBoxes).itemId,
+          );
           return (function getTiffHeaderOffset(getUint32, sum) {
             sum = sum + 4;
             return sum + getUint32.getUint32(sum);
           })(byteLength, tmp4.baseOffset + tmp4.extents[0].extentOffset);
-        } catch (err) {
-        }
+        } catch (err) {}
       })(byteLength, tmp3);
     }
     if (tmp(5160).USE_XMP) {
@@ -303,8 +305,7 @@ arg5.findOffsets = function findOffsets(byteLength) {
           obj[1] = first.extentLength;
           const items = [obj];
           return items;
-        } catch (err) {
-        }
+        } catch (err) {}
       })(tmp3);
     }
     if (tmp(5160).USE_ICC) {
@@ -318,11 +319,11 @@ arg5.findOffsets = function findOffsets(byteLength) {
             const items = [tmp2];
             return items;
           }
-        } catch (err) {
-        }
+        } catch (err) {}
       })(tmp3);
     }
-    obj.hasAppMarkers = undefined !== obj.tiffHeaderOffset || undefined !== obj.xmpChunks || undefined !== obj.iccChunks;
+    obj.hasAppMarkers =
+      undefined !== obj.tiffHeaderOffset || undefined !== obj.xmpChunks || undefined !== obj.iccChunks;
   } else {
     obj = { hasAppMarkers: false };
   }

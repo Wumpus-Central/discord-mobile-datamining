@@ -28,8 +28,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 let closure_3 = ["onBlur", "onFocus"];
 class TouchableNativeFeedback {
@@ -72,7 +71,22 @@ let items = [
           disabled = accessibilityState.disabled;
         }
       }
-      const obj = { cancelable: !self.props.rejectResponderTermination, disabled: null, hitSlop: null, delayLongPress: null, delayPressIn: null, delayPressOut: null, minPressDuration: 0, pressRectOffset: null, android_disableSound: null, onLongPress: null, onPress: null, onPressIn: null, onPressMove: null, onPressOut: null };
+      const obj = {
+        cancelable: !self.props.rejectResponderTermination,
+        disabled: null,
+        hitSlop: null,
+        delayLongPress: null,
+        delayPressIn: null,
+        delayPressOut: null,
+        minPressDuration: 0,
+        pressRectOffset: null,
+        android_disableSound: null,
+        onLongPress: null,
+        onPress: null,
+        onPressIn: null,
+        onPressMove: null,
+        onPressOut: null,
+      };
       if (null != self.props.disabled) {
         disabled = self.props.disabled;
       }
@@ -104,7 +118,7 @@ let items = [
         }
       };
       return obj;
-    }
+    },
   },
   {
     key: "_dispatchPressedStateChange",
@@ -117,7 +131,7 @@ let items = [
         const Commands = TouchableNativeFeedback(112).Commands;
         Commands.setPressed(result, arg0);
       }
-    }
+    },
   },
   {
     key: "_dispatchHotspotUpdate",
@@ -137,7 +151,7 @@ let items = [
         }
         Commands.hotspotUpdate(result, locationX, locationY);
       }
-    }
+    },
   },
   {
     key: "render",
@@ -258,7 +272,7 @@ let items = [
       if (accessibilityLabel == null) {
         accessibilityLabel = self.props.accessibilityLabel;
       }
-      const items1 = [onlyResult, ];
+      const items1 = [onlyResult];
       obj1 = {};
       const merged1 = Object.assign(callback(eventHandlers, closure_3));
       if (undefined === self.props.background) {
@@ -321,39 +335,50 @@ let items = [
         return HermesBuiltin.apply(items1, undefined);
       }
       obj3 = { nativeBackgroundAndroid: background };
-    }
+    },
   },
   {
     key: "componentDidUpdate",
     value: function componentDidUpdate(arg0, arg1) {
       const pressability = this.state.pressability;
       pressability.configure(this._createPressabilityConfig());
-    }
+    },
   },
   {
     key: "componentDidMount",
     value: function componentDidMount() {
       const pressability = this.state.pressability;
       pressability.configure(this._createPressabilityConfig());
-    }
+    },
   },
   {
     key: "componentWillUnmount",
     value: function componentWillUnmount() {
       const pressability = this.state.pressability;
       pressability.reset();
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(TouchableNativeFeedback, items);
 const unpackModuleId = importDefaultResultResult;
-importDefaultResultResult.SelectableBackground = (rippleRadius) => ({ type: "ThemeAttrAndroid", attribute: "selectableItemBackground", rippleRadius });
-importDefaultResultResult.SelectableBackgroundBorderless = (rippleRadius) => ({ type: "ThemeAttrAndroid", attribute: "selectableItemBackgroundBorderless", rippleRadius });
-importDefaultResultResult.Ripple = (arg0, borderless, rippleRadius) => ({ type: "RippleAndroid", color: processColorDefault(arg0), borderless, rippleRadius });
+importDefaultResultResult.SelectableBackground = (rippleRadius) => ({
+  type: "ThemeAttrAndroid",
+  attribute: "selectableItemBackground",
+  rippleRadius,
+});
+importDefaultResultResult.SelectableBackgroundBorderless = (rippleRadius) => ({
+  type: "ThemeAttrAndroid",
+  attribute: "selectableItemBackgroundBorderless",
+  rippleRadius,
+});
+importDefaultResultResult.Ripple = (arg0, borderless, rippleRadius) => ({
+  type: "RippleAndroid",
+  color: processColorDefault(arg0),
+  borderless,
+  rippleRadius,
+});
 importDefaultResultResult.canUseNativeForeground = () => true;
-function getBackgroundProp(arg0, arg1) {
-
-}
+function getBackgroundProp(arg0, arg1) {}
 importDefaultResultResult.displayName = "TouchableNativeFeedback";
 
 export default importDefaultResultResult;

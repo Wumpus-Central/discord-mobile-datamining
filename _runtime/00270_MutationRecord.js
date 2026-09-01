@@ -20,50 +20,50 @@ const items = [
     key: "addedNodes",
     get() {
       return this._addedNodes;
-    }
+    },
   },
   {
     key: "attributeName",
     get() {
       return null;
-    }
+    },
   },
   {
     key: "nextSibling",
     get() {
       return null;
-    }
+    },
   },
   {
     key: "oldValue",
     get() {
       return null;
-    }
+    },
   },
   {
     key: "previousSibling",
     get() {
       return null;
-    }
+    },
   },
   {
     key: "removedNodes",
     get() {
       return this._removedNodes;
-    }
+    },
   },
   {
     key: "target",
     get() {
       return this._target;
-    }
+    },
   },
   {
     key: "type",
     get() {
       return "childList";
-    }
-  }
+    },
+  },
 ];
 const tmp2 = _createClassDefault(MutationRecord, items);
 let closure_3 = tmp2;

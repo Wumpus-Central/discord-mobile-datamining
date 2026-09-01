@@ -21,7 +21,16 @@ function colorPropType(arg0, arg1, arg2, arg3, arg4, arg5) {
         if (!tmp) {
           tmp5 = arg2;
         }
-        error1 = new Error(text1 + " `" + tmp5 + "` supplied to `" + arg3 + "`: " + tmp2 + "\nValid color formats are\n  - '#f0f' (#rgb)\n  - '#f0fc' (#rgba)\n  - '#ff00ff' (#rrggbb)\n  - '#ff00ff00' (#rrggbbaa)\n  - 'rgb(255, 255, 255)'\n  - 'rgba(255, 255, 255, 1.0)'\n  - 'hsl(360, 100%, 100%)'\n  - 'hsla(360, 100%, 100%, 1.0)'\n  - 'transparent'\n  - 'red'\n  - 0xff00ff00 (0xrrggbbaa)\n");
+        error1 = new Error(
+          text1 +
+            " `" +
+            tmp5 +
+            "` supplied to `" +
+            arg3 +
+            "`: " +
+            tmp2 +
+            "\nValid color formats are\n  - '#f0f' (#rgb)\n  - '#f0fc' (#rgba)\n  - '#ff00ff' (#rrggbb)\n  - '#ff00ff00' (#rrggbbaa)\n  - 'rgb(255, 255, 255)'\n  - 'rgba(255, 255, 255, 1.0)'\n  - 'hsl(360, 100%, 100%)'\n  - 'hsla(360, 100%, 100%, 1.0)'\n  - 'transparent'\n  - 'red'\n  - 0xff00ff00 (0xrrggbbaa)\n",
+        );
       }
     }
   }

@@ -27,7 +27,7 @@ arg5.read = (arg0, arg1, arg2, exponent) => {
       tmp11 = sum1;
     } while (0 < sum1);
   }
-  let sum4 = tmp10 & (num3 << tmp12) - num3;
+  let sum4 = tmp10 & ((num3 << tmp12) - num3);
   let sum3 = tmp11 + exponent;
   let tmp15 = sum4;
   if (sum3 > 0) {
@@ -151,7 +151,7 @@ arg5.write = (arg0, arg1, arg2, arg3, exponent) => {
         tmp23 = diff5;
       } while (8 <= diff5);
     }
-    let result5 = num12 << tmp23 | tmp22;
+    let result5 = (num12 << tmp23) | tmp22;
     let sum3 = diff1 + tmp23;
     let sum4 = tmp21;
     let tmp27 = tmp21;
@@ -165,7 +165,7 @@ arg5.write = (arg0, arg1, arg2, arg3, exponent) => {
       } while (0 < sum3);
     }
     const diff6 = arg2 + tmp27 - num7;
-    arg0[diff6] = arg0[diff6] | 128 * num8;
+    arg0[diff6] = arg0[diff6] | (128 * num8);
   }
   let num13 = 0;
   if (isNaN(absolute)) {

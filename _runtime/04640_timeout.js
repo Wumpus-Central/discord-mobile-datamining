@@ -20,7 +20,7 @@ exports.exports.timeout = (arg0, arg1) => {
       const timeout = setTimeout(() => {
         callback(closure_1_2);
       }, closure_0);
-    })
+    }),
   ];
   const promise = new Promise((arg0, arg1) => {
     closure_0 = arg1;
@@ -28,13 +28,16 @@ exports.exports.timeout = (arg0, arg1) => {
       callback(closure_1_2);
     }, closure_0);
   });
-  return Promise.race(items).then((arg0) => {
-    clearTimeout(closure_1);
-    return arg0;
-  }, (arg0) => {
-    clearTimeout(closure_1);
-    throw arg0;
-  });
+  return Promise.race(items).then(
+    (arg0) => {
+      clearTimeout(closure_1);
+      return arg0;
+    },
+    (arg0) => {
+      clearTimeout(closure_1);
+      throw arg0;
+    },
+  );
 };
 class tmp {
   constructor() {

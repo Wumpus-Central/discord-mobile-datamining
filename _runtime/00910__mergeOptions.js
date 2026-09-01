@@ -11,11 +11,11 @@ function _mergeOptions() {
   if (arg1 === undefined) {
     obj = {};
   }
-  items = [...obj.allowUrls || [], ...tmp2];
+  items = [...(obj.allowUrls || []), ...tmp2];
   obj = { allowUrls: items, denyUrls: items1, ignoreErrors: items2, ignoreTransactions: items3 };
-  items1 = [...obj.denyUrls || [], ...tmp4];
-  items2 = [...obj.ignoreErrors || [], ...tmp6, ...tmp7];
-  items3 = [...obj.ignoreTransactions || [], ...tmp9];
+  items1 = [...(obj.denyUrls || []), ...tmp4];
+  items2 = [...(obj.ignoreErrors || []), ...tmp6, ...tmp7];
+  items3 = [...(obj.ignoreTransactions || []), ...tmp9];
   return obj;
 }
 function _getEventFilterUrl(exception) {
@@ -97,7 +97,19 @@ function _getEventFilterUrl(exception) {
   }
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
-let items = [/^Script error\.?$/, /^Javascript error: Script error\.? on line 0$/, /^ResizeObserver loop completed with undelivered notifications.$/, /^Cannot redefine property: googletag$/, /^Can't find variable: gmo$/, /^undefined is not an object \(evaluating 'a\.[A-Z]'\)$/, "can't redefine non-configurable property \"solana\"", "vv().getRestrictions is not a function. (In 'vv().getRestrictions(1,a)', 'vv().getRestrictions' is undefined)", "Can't find variable: _AutofillCallbackHandler", /^Non-Error promise rejection captured with value: Object Not Found Matching Id:\d+, MethodName:simulateEvent, ParamCount:\d+$/, /^Java exception was raised during method invocation$/];
+let items = [
+  /^Script error\.?$/,
+  /^Javascript error: Script error\.? on line 0$/,
+  /^ResizeObserver loop completed with undelivered notifications.$/,
+  /^Cannot redefine property: googletag$/,
+  /^Can't find variable: gmo$/,
+  /^undefined is not an object \(evaluating 'a\.[A-Z]'\)$/,
+  'can\'t redefine non-configurable property "solana"',
+  "vv().getRestrictions is not a function. (In 'vv().getRestrictions(1,a)', 'vv().getRestrictions' is undefined)",
+  "Can't find variable: _AutofillCallbackHandler",
+  /^Non-Error promise rejection captured with value: Object Not Found Matching Id:\d+, MethodName:simulateEvent, ParamCount:\d+$/,
+  /^Java exception was raised during method invocation$/,
+];
 const defineIntegrationResult = setupIntegration.defineIntegration(() => {
   let obj = arg0;
   if (arg0 === undefined) {
@@ -140,7 +152,10 @@ const defineIntegrationResult = setupIntegration.defineIntegration(() => {
             if (obj(_undefined[1]).DEBUG_BUILD) {
               const debug5 = obj(_undefined[2]).debug;
               const _HermesInternal5 = HermesInternal;
-              debug5.warn("Event dropped due to being matched by `ignoreTransactions` option.\nEvent: " + obj(_undefined[3]).getEventDescription(type));
+              debug5.warn(
+                "Event dropped due to being matched by `ignoreTransactions` option.\nEvent: " +
+                  obj(_undefined[3]).getEventDescription(type),
+              );
               flag5 = true;
               const obj10 = obj(_undefined[3]);
             }
@@ -156,14 +171,19 @@ const defineIntegrationResult = setupIntegration.defineIntegration(() => {
         if (length1) {
           obj = obj(_undefined[4]);
           const possibleEventMessages = obj.getPossibleEventMessages(type);
-          flag = possibleEventMessages.some((arg0) => ignoreErrors(table[5]).stringMatchesSomePattern(arg0, ignoreErrors));
+          flag = possibleEventMessages.some((arg0) =>
+            ignoreErrors(table[5]).stringMatchesSomePattern(arg0, ignoreErrors),
+          );
         }
         if (flag) {
           flag5 = true;
           if (obj(_undefined[1]).DEBUG_BUILD) {
             const debug4 = obj(_undefined[2]).debug;
             const _HermesInternal4 = HermesInternal;
-            debug4.warn("Event dropped due to being matched by `ignoreErrors` option.\nEvent: " + obj(_undefined[3]).getEventDescription(type));
+            debug4.warn(
+              "Event dropped due to being matched by `ignoreErrors` option.\nEvent: " +
+                obj(_undefined[3]).getEventDescription(type),
+            );
             flag5 = true;
             const obj8 = obj(_undefined[3]);
           }
@@ -204,7 +224,10 @@ const defineIntegrationResult = setupIntegration.defineIntegration(() => {
             if (obj(_undefined[1]).DEBUG_BUILD) {
               const debug3 = obj(_undefined[2]).debug;
               const _HermesInternal3 = HermesInternal;
-              debug3.warn("Event dropped due to not having an error message, error type or stacktrace.\nEvent: " + obj(_undefined[3]).getEventDescription(type));
+              debug3.warn(
+                "Event dropped due to not having an error message, error type or stacktrace.\nEvent: " +
+                  obj(_undefined[3]).getEventDescription(type),
+              );
               flag5 = true;
               const obj7 = obj(_undefined[3]);
             }
@@ -230,7 +253,12 @@ const defineIntegrationResult = setupIntegration.defineIntegration(() => {
                 const debug2 = obj(_undefined[2]).debug;
                 const eventDescription = obj(_undefined[3]).getEventDescription(type);
                 const _HermesInternal2 = HermesInternal;
-                debug2.warn("Event dropped due to being matched by `denyUrls` option.\nEvent: " + eventDescription + ".\nUrl: " + closure_1_5(type));
+                debug2.warn(
+                  "Event dropped due to being matched by `denyUrls` option.\nEvent: " +
+                    eventDescription +
+                    ".\nUrl: " +
+                    closure_1_5(type),
+                );
                 flag5 = true;
                 const obj6 = obj(_undefined[3]);
               }
@@ -257,7 +285,12 @@ const defineIntegrationResult = setupIntegration.defineIntegration(() => {
                   const debug = obj(_undefined[2]).debug;
                   const eventDescription1 = obj(_undefined[3]).getEventDescription(type);
                   const _HermesInternal = HermesInternal;
-                  debug.warn("Event dropped due to not being matched by `allowUrls` option.\nEvent: " + eventDescription1 + ".\nUrl: " + closure_1_5(type));
+                  debug.warn(
+                    "Event dropped due to not being matched by `allowUrls` option.\nEvent: " +
+                      eventDescription1 +
+                      ".\nUrl: " +
+                      closure_1_5(type),
+                  );
                   flag5 = true;
                   const obj5 = obj(_undefined[3]);
                 }
@@ -271,7 +304,7 @@ const defineIntegrationResult = setupIntegration.defineIntegration(() => {
         tmp72 = type;
       }
       return tmp72;
-    }
+    },
   };
   return obj;
 });

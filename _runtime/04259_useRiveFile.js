@@ -110,7 +110,7 @@ export const useRiveFile = function useRiveFile(src, arg1) {
   const items1 = [str2, uri];
   uri(() => {
     closure_0 = null;
-    closure_0 = callback(function*() {
+    closure_0 = callback(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();

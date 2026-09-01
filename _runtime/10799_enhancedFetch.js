@@ -6,7 +6,7 @@ let closure_0 = asyncGeneratorStepDefault((arg0, arg1) => {
   closure_1 = arg1;
   c4 = 0;
   c5 = 0;
-  return (function*(arg0, arg1) {
+  return (function* (arg0, arg1) {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();

@@ -19,7 +19,19 @@ function spanToJSON(getSpanJSON) {
     ({ spanId, traceId } = getSpanJSON.spanContext());
     if (tmp) {
       ({ attributes, startTime, endTime, status, links } = getSpanJSON);
-      let obj = { span_id: null, trace_id: null, data: null, description: null, parent_span_id: null, start_timestamp: null, timestamp: null, status: null, op: null, origin: null, links: null };
+      let obj = {
+        span_id: null,
+        trace_id: null,
+        data: null,
+        description: null,
+        parent_span_id: null,
+        start_timestamp: null,
+        timestamp: null,
+        status: null,
+        op: null,
+        origin: null,
+        links: null,
+      };
       obj[0] = spanId;
       obj[1] = traceId;
       obj[2] = attributes;
@@ -123,7 +135,8 @@ function spanToJSON(getSpanJSON) {
       return obj;
     }
     const spanContextResult = getSpanJSON.spanContext();
-    tmp = getSpanJSON.attributes && getSpanJSON.startTime && getSpanJSON.name && getSpanJSON.endTime && getSpanJSON.status;
+    tmp =
+      getSpanJSON.attributes && getSpanJSON.startTime && getSpanJSON.name && getSpanJSON.endTime && getSpanJSON.status;
   }
 }
 function spanIsSampled(spanContext) {
@@ -225,7 +238,9 @@ arg5.removeChildSpanFromSpan = function removeChildSpanFromSpan(arg0, arg1) {
 arg5.showSpanDropWarning = function showSpanDropWarning() {
   if (!c2) {
     consoleSandbox.consoleSandbox(() => {
-      console.warn("[Sentry] Returning null from `beforeSendSpan` is disallowed. To drop certain spans, configure the respective integrations directly or use `ignoreSpans`.");
+      console.warn(
+        "[Sentry] Returning null from `beforeSendSpan` is disallowed. To drop certain spans, configure the respective integrations directly or use `ignoreSpans`.",
+      );
     });
     c2 = true;
     const obj = consoleSandbox;
@@ -299,9 +314,21 @@ arg5.spanToTraceparentHeader = function spanToTraceparentHeader(span) {
 arg5.spanToTransactionTraceContext = function spanToTransactionTraceContext(spanContext) {
   ({ spanId, traceId } = spanContext.spanContext());
   const tmp2 = spanToJSON(spanContext);
-  return { parent_span_id: tmp2.parent_span_id, span_id: spanId, trace_id: traceId, data: tmp2.data, op: tmp2.op, status: tmp2.status, origin: tmp2.origin, links: tmp2.links };
+  return {
+    parent_span_id: tmp2.parent_span_id,
+    span_id: spanId,
+    trace_id: traceId,
+    data: tmp2.data,
+    op: tmp2.op,
+    status: tmp2.status,
+    origin: tmp2.origin,
+    links: tmp2.links,
+  };
 };
 arg5.updateSpanName = function updateSpanName(updateName) {
   updateName.updateName(arg1);
-  updateName.setAttributes({ [closure_0(closure_1[4]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE]: "custom", [closure_0(closure_1[4]).SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME]: arg1 });
+  updateName.setAttributes({
+    [closure_0(closure_1[4]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE]: "custom",
+    [closure_0(closure_1[4]).SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME]: arg1,
+  });
 };

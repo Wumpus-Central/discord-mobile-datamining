@@ -2,7 +2,6 @@
 import _modDef1562 from "metro/01562__.js";
 import closure_2 from "00853__toArray.js";
 
-
 export const extractPathFromURL = function extractPathFromURL(current, AUTO_DISMISS) {
   const iter = current[Symbol.iterator]();
   let str = iter.next();

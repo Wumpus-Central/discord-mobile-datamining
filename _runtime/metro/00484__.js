@@ -13,5 +13,5 @@ arg5.default = {
   },
   clearWatch(arg0) {
     console.warn("Settings is not yet supported on this platform.");
-  }
+  },
 };

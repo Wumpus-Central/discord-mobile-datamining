@@ -7,22 +7,52 @@ import jsxProd from "react/00021_jsxProd.js";
 const require = arg1;
 ({ useCallback: c4, useEffect: c5, useImperativeHandle: closure_6, useMemo: error, forwardRef } = noop);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-let closure_11 = { code: "function pnpm_indexTsx1(e,animated=false){const{enabled,layout,scrollViewTarget,height,keyboardHeight,bottomOffset,interpolate,initialKeyboardSize,scrollDistanceWithRespectToSnapPoints,scrollPosition,snapToOffsets,scrollTo,scrollViewAnimatedRef,scrollViewPageY}=this.__closure;var _layout$value,_layout$value2,_layout$value3;if(!enabled){return 0;}if(((_layout$value=layout.value)===null||_layout$value===void 0?void 0:_layout$value.parentScrollViewTarget)!==scrollViewTarget.value){return 0;}const visibleRect=height-keyboardHeight.value;const absoluteY=((_layout$value2=layout.value)===null||_layout$value2===void 0?void 0:_layout$value2.layout.absoluteY)||0;const inputHeight=((_layout$value3=layout.value)===null||_layout$value3===void 0?void 0:_layout$value3.layout.height)||0;const point=absoluteY+inputHeight;if(visibleRect-point<=bottomOffset){const relativeScrollTo=keyboardHeight.value-(height-point)+bottomOffset;const interpolatedScrollTo=interpolate(e,[initialKeyboardSize.value,keyboardHeight.value],[0,scrollDistanceWithRespectToSnapPoints(relativeScrollTo+scrollPosition.value,snapToOffsets)-scrollPosition.value]);const targetScrollY=Math.max(interpolatedScrollTo,0)+scrollPosition.value;scrollTo(scrollViewAnimatedRef,0,targetScrollY,animated);return interpolatedScrollTo;}if(point<scrollViewPageY.value){const positionOnScreen=visibleRect-bottomOffset;const topOfScreen=scrollPosition.value+point;scrollTo(scrollViewAnimatedRef,0,topOfScreen-positionOnScreen,animated);}return 0;}" };
-let closure_12 = { code: "function pnpm_indexTsx2(e){const{mode,keyboardWillAppear,ghostViewSpace,scrollTo,scrollViewAnimatedRef,scrollPosition,interpolate,initialKeyboardSize,keyboardHeight}=this.__closure;if(mode===\"layout\"){return false;}if(!keyboardWillAppear.value&&ghostViewSpace.value>0){scrollTo(scrollViewAnimatedRef,0,scrollPosition.value-interpolate(e,[initialKeyboardSize.value,keyboardHeight.value],[ghostViewSpace.value,0]),false);return true;}return false;}" };
-let closure_13 = { code: "function pnpm_indexTsx3(newPosition){const{scrollPosition,maybeScroll,keyboardHeight}=this.__closure;const prevScroll=scrollPosition.value;scrollPosition.value=newPosition;maybeScroll(keyboardHeight.value,true);scrollPosition.value=prevScroll;}" };
-let closure_14 = { code: "function pnpm_indexTsx4(e){const{interpolate,keyboardHeight,extraKeyboardSpace,currentKeyboardFrameHeight}=this.__closure;const keyboardFrame=interpolate(e.height,[0,keyboardHeight.value],[0,keyboardHeight.value+extraKeyboardSpace]);currentKeyboardFrameHeight.value=keyboardFrame;}" };
-let closure_15 = { code: "function pnpm_indexTsx5(){const{lastSelection,input,layout,clamp}=this.__closure;var _lastSelection$value,_input$value;const customHeight=(_lastSelection$value=lastSelection.value)===null||_lastSelection$value===void 0?void 0:_lastSelection$value.selection.end.y;if(!((_input$value=input.value)!==null&&_input$value!==void 0&&_input$value.layout)||!customHeight){return false;}layout.value={...input.value,layout:{...input.value.layout,height:clamp(customHeight,0,input.value.layout.height)}};return true;}" };
-let closure_16 = { code: "function pnpm_indexTsx6(){const{layout,updateLayoutFromSelection,performScrollWithPositionRestoration,position}=this.__closure;const prevLayout=layout.value;if(!updateLayoutFromSelection()){return;}performScrollWithPositionRestoration(position.value);layout.value=prevLayout;}" };
-let closure_17 = { code: "function pnpm_indexTsx7(){const{scrollFromCurrentPosition}=this.__closure;scrollFromCurrentPosition();}" };
-let closure_18 = { code: "function pnpm_indexTsx8(e){const{lastSelection,selectionUpdatedSinceHide,pendingSelectionForFocus,updateLayoutFromSelection,keyboardWillAppear,keyboardHeight,position,maybeScroll,scrollFromCurrentPosition,onChangeTextHandler}=this.__closure;var _lastSelection$value,_lastSelection$value2;const lastTarget=(_lastSelection$value=lastSelection.value)===null||_lastSelection$value===void 0?void 0:_lastSelection$value.target;const latestSelection=(_lastSelection$value2=lastSelection.value)===null||_lastSelection$value2===void 0?void 0:_lastSelection$value2.selection;lastSelection.value=e;selectionUpdatedSinceHide.value=true;if(e.target!==lastTarget||pendingSelectionForFocus.value){if(pendingSelectionForFocus.value){pendingSelectionForFocus.value=false;updateLayoutFromSelection();if(!keyboardWillAppear.value&&keyboardHeight.value>0){position.value+=maybeScroll(keyboardHeight.value,true);}}return;}if(e.selection.end.position===e.selection.start.position&&(latestSelection===null||latestSelection===void 0?void 0:latestSelection.end.y)!==e.selection.end.y){return scrollFromCurrentPosition();}if(e.selection.start.position!==e.selection.end.position){return scrollFromCurrentPosition();}onChangeTextHandler();}" };
-let closure_19 = { code: "function pnpm_indexTsx9(e){const{keyboardHeight,keyboardWillAppear,tag,initialKeyboardSize,scrollPosition,scrollBeforeKeyboardMovement,pendingSelectionForFocus,position,mode,syncKeyboardFrame,lastSelection,selectionUpdatedSinceHide,updateLayoutFromSelection,input,layout,maybeScroll,ghostViewSpace,scrollViewLayout,scrollViewContentSize}=this.__closure;const keyboardWillChangeSize=keyboardHeight.value!==e.height&&e.height>0;keyboardWillAppear.value=e.height>0&&keyboardHeight.value===0;const keyboardWillHide=e.height===0;const focusWasChanged=tag.value!==e.target&&e.target!==-1||keyboardWillChangeSize;if(keyboardWillChangeSize){initialKeyboardSize.value=keyboardHeight.value;}if(keyboardWillHide){initialKeyboardSize.value=0;scrollPosition.value=scrollBeforeKeyboardMovement.value;pendingSelectionForFocus.value=false;}if(keyboardWillAppear.value||keyboardWillChangeSize||focusWasChanged){scrollPosition.value=position.value;keyboardHeight.value=e.height;if(mode===\"insets\"){syncKeyboardFrame(e);}}if(focusWasChanged){var _lastSelection$value;tag.value=e.target;if(((_lastSelection$value=lastSelection.value)===null||_lastSelection$value===void 0?void 0:_lastSelection$value.target)===e.target&&selectionUpdatedSinceHide.value){updateLayoutFromSelection();pendingSelectionForFocus.value=false;}else{var _lastSelection$value2;if(((_lastSelection$value2=lastSelection.value)===null||_lastSelection$value2===void 0?void 0:_lastSelection$value2.target)===e.target){updateLayoutFromSelection();}else if(input.value){layout.value=input.value;}pendingSelectionForFocus.value=true;}scrollBeforeKeyboardMovement.value=position.value;}if(focusWasChanged&&!keyboardWillAppear.value){if(!pendingSelectionForFocus.value){position.value+=maybeScroll(e.height,true);}}if(mode===\"insets\"){ghostViewSpace.value=position.value+scrollViewLayout.value.height-scrollViewContentSize.value.height;if(ghostViewSpace.value>0){scrollPosition.value=position.value;}}}" };
-let closure_20 = { code: "function pnpm_indexTsx10(e){const{removeGhostPadding,mode,syncKeyboardFrame,disableScrollOnKeyboardHide,keyboardWillAppear,maybeScroll}=this.__closure;if(removeGhostPadding(e.height)){return;}if(mode===\"layout\"){syncKeyboardFrame(e);}if(!disableScrollOnKeyboardHide||keyboardWillAppear.value){maybeScroll(e.height);}}" };
-let closure_21 = { code: "function pnpm_indexTsx11(e){const{removeGhostPadding,keyboardHeight,scrollPosition,position,selectionUpdatedSinceHide,keyboardWillAppear,pendingSelectionForFocus,syncKeyboardFrame}=this.__closure;removeGhostPadding(e.height);keyboardHeight.value=e.height;scrollPosition.value=position.value;if(e.height===0){selectionUpdatedSinceHide.value=false;}else if(keyboardWillAppear.value){pendingSelectionForFocus.value=false;}syncKeyboardFrame(e);}" };
-let closure_22 = { code: "function pnpm_indexTsx12(){const{scrollFromCurrentPosition}=this.__closure;scrollFromCurrentPosition();}" };
+let closure_11 = {
+  code: "function pnpm_indexTsx1(e,animated=false){const{enabled,layout,scrollViewTarget,height,keyboardHeight,bottomOffset,interpolate,initialKeyboardSize,scrollDistanceWithRespectToSnapPoints,scrollPosition,snapToOffsets,scrollTo,scrollViewAnimatedRef,scrollViewPageY}=this.__closure;var _layout$value,_layout$value2,_layout$value3;if(!enabled){return 0;}if(((_layout$value=layout.value)===null||_layout$value===void 0?void 0:_layout$value.parentScrollViewTarget)!==scrollViewTarget.value){return 0;}const visibleRect=height-keyboardHeight.value;const absoluteY=((_layout$value2=layout.value)===null||_layout$value2===void 0?void 0:_layout$value2.layout.absoluteY)||0;const inputHeight=((_layout$value3=layout.value)===null||_layout$value3===void 0?void 0:_layout$value3.layout.height)||0;const point=absoluteY+inputHeight;if(visibleRect-point<=bottomOffset){const relativeScrollTo=keyboardHeight.value-(height-point)+bottomOffset;const interpolatedScrollTo=interpolate(e,[initialKeyboardSize.value,keyboardHeight.value],[0,scrollDistanceWithRespectToSnapPoints(relativeScrollTo+scrollPosition.value,snapToOffsets)-scrollPosition.value]);const targetScrollY=Math.max(interpolatedScrollTo,0)+scrollPosition.value;scrollTo(scrollViewAnimatedRef,0,targetScrollY,animated);return interpolatedScrollTo;}if(point<scrollViewPageY.value){const positionOnScreen=visibleRect-bottomOffset;const topOfScreen=scrollPosition.value+point;scrollTo(scrollViewAnimatedRef,0,topOfScreen-positionOnScreen,animated);}return 0;}",
+};
+let closure_12 = {
+  code: 'function pnpm_indexTsx2(e){const{mode,keyboardWillAppear,ghostViewSpace,scrollTo,scrollViewAnimatedRef,scrollPosition,interpolate,initialKeyboardSize,keyboardHeight}=this.__closure;if(mode==="layout"){return false;}if(!keyboardWillAppear.value&&ghostViewSpace.value>0){scrollTo(scrollViewAnimatedRef,0,scrollPosition.value-interpolate(e,[initialKeyboardSize.value,keyboardHeight.value],[ghostViewSpace.value,0]),false);return true;}return false;}',
+};
+let closure_13 = {
+  code: "function pnpm_indexTsx3(newPosition){const{scrollPosition,maybeScroll,keyboardHeight}=this.__closure;const prevScroll=scrollPosition.value;scrollPosition.value=newPosition;maybeScroll(keyboardHeight.value,true);scrollPosition.value=prevScroll;}",
+};
+let closure_14 = {
+  code: "function pnpm_indexTsx4(e){const{interpolate,keyboardHeight,extraKeyboardSpace,currentKeyboardFrameHeight}=this.__closure;const keyboardFrame=interpolate(e.height,[0,keyboardHeight.value],[0,keyboardHeight.value+extraKeyboardSpace]);currentKeyboardFrameHeight.value=keyboardFrame;}",
+};
+let closure_15 = {
+  code: "function pnpm_indexTsx5(){const{lastSelection,input,layout,clamp}=this.__closure;var _lastSelection$value,_input$value;const customHeight=(_lastSelection$value=lastSelection.value)===null||_lastSelection$value===void 0?void 0:_lastSelection$value.selection.end.y;if(!((_input$value=input.value)!==null&&_input$value!==void 0&&_input$value.layout)||!customHeight){return false;}layout.value={...input.value,layout:{...input.value.layout,height:clamp(customHeight,0,input.value.layout.height)}};return true;}",
+};
+let closure_16 = {
+  code: "function pnpm_indexTsx6(){const{layout,updateLayoutFromSelection,performScrollWithPositionRestoration,position}=this.__closure;const prevLayout=layout.value;if(!updateLayoutFromSelection()){return;}performScrollWithPositionRestoration(position.value);layout.value=prevLayout;}",
+};
+let closure_17 = {
+  code: "function pnpm_indexTsx7(){const{scrollFromCurrentPosition}=this.__closure;scrollFromCurrentPosition();}",
+};
+let closure_18 = {
+  code: "function pnpm_indexTsx8(e){const{lastSelection,selectionUpdatedSinceHide,pendingSelectionForFocus,updateLayoutFromSelection,keyboardWillAppear,keyboardHeight,position,maybeScroll,scrollFromCurrentPosition,onChangeTextHandler}=this.__closure;var _lastSelection$value,_lastSelection$value2;const lastTarget=(_lastSelection$value=lastSelection.value)===null||_lastSelection$value===void 0?void 0:_lastSelection$value.target;const latestSelection=(_lastSelection$value2=lastSelection.value)===null||_lastSelection$value2===void 0?void 0:_lastSelection$value2.selection;lastSelection.value=e;selectionUpdatedSinceHide.value=true;if(e.target!==lastTarget||pendingSelectionForFocus.value){if(pendingSelectionForFocus.value){pendingSelectionForFocus.value=false;updateLayoutFromSelection();if(!keyboardWillAppear.value&&keyboardHeight.value>0){position.value+=maybeScroll(keyboardHeight.value,true);}}return;}if(e.selection.end.position===e.selection.start.position&&(latestSelection===null||latestSelection===void 0?void 0:latestSelection.end.y)!==e.selection.end.y){return scrollFromCurrentPosition();}if(e.selection.start.position!==e.selection.end.position){return scrollFromCurrentPosition();}onChangeTextHandler();}",
+};
+let closure_19 = {
+  code: 'function pnpm_indexTsx9(e){const{keyboardHeight,keyboardWillAppear,tag,initialKeyboardSize,scrollPosition,scrollBeforeKeyboardMovement,pendingSelectionForFocus,position,mode,syncKeyboardFrame,lastSelection,selectionUpdatedSinceHide,updateLayoutFromSelection,input,layout,maybeScroll,ghostViewSpace,scrollViewLayout,scrollViewContentSize}=this.__closure;const keyboardWillChangeSize=keyboardHeight.value!==e.height&&e.height>0;keyboardWillAppear.value=e.height>0&&keyboardHeight.value===0;const keyboardWillHide=e.height===0;const focusWasChanged=tag.value!==e.target&&e.target!==-1||keyboardWillChangeSize;if(keyboardWillChangeSize){initialKeyboardSize.value=keyboardHeight.value;}if(keyboardWillHide){initialKeyboardSize.value=0;scrollPosition.value=scrollBeforeKeyboardMovement.value;pendingSelectionForFocus.value=false;}if(keyboardWillAppear.value||keyboardWillChangeSize||focusWasChanged){scrollPosition.value=position.value;keyboardHeight.value=e.height;if(mode==="insets"){syncKeyboardFrame(e);}}if(focusWasChanged){var _lastSelection$value;tag.value=e.target;if(((_lastSelection$value=lastSelection.value)===null||_lastSelection$value===void 0?void 0:_lastSelection$value.target)===e.target&&selectionUpdatedSinceHide.value){updateLayoutFromSelection();pendingSelectionForFocus.value=false;}else{var _lastSelection$value2;if(((_lastSelection$value2=lastSelection.value)===null||_lastSelection$value2===void 0?void 0:_lastSelection$value2.target)===e.target){updateLayoutFromSelection();}else if(input.value){layout.value=input.value;}pendingSelectionForFocus.value=true;}scrollBeforeKeyboardMovement.value=position.value;}if(focusWasChanged&&!keyboardWillAppear.value){if(!pendingSelectionForFocus.value){position.value+=maybeScroll(e.height,true);}}if(mode==="insets"){ghostViewSpace.value=position.value+scrollViewLayout.value.height-scrollViewContentSize.value.height;if(ghostViewSpace.value>0){scrollPosition.value=position.value;}}}',
+};
+let closure_20 = {
+  code: 'function pnpm_indexTsx10(e){const{removeGhostPadding,mode,syncKeyboardFrame,disableScrollOnKeyboardHide,keyboardWillAppear,maybeScroll}=this.__closure;if(removeGhostPadding(e.height)){return;}if(mode==="layout"){syncKeyboardFrame(e);}if(!disableScrollOnKeyboardHide||keyboardWillAppear.value){maybeScroll(e.height);}}',
+};
+let closure_21 = {
+  code: "function pnpm_indexTsx11(e){const{removeGhostPadding,keyboardHeight,scrollPosition,position,selectionUpdatedSinceHide,keyboardWillAppear,pendingSelectionForFocus,syncKeyboardFrame}=this.__closure;removeGhostPadding(e.height);keyboardHeight.value=e.height;scrollPosition.value=position.value;if(e.height===0){selectionUpdatedSinceHide.value=false;}else if(keyboardWillAppear.value){pendingSelectionForFocus.value=false;}syncKeyboardFrame(e);}",
+};
+let closure_22 = {
+  code: "function pnpm_indexTsx12(){const{scrollFromCurrentPosition}=this.__closure;scrollFromCurrentPosition();}",
+};
 let closure_23 = { code: "function pnpm_indexTsx13(){const{input}=this.__closure;return input.value;}" };
-let closure_24 = { code: "function pnpm_indexTsx14(current,previous){const{scrollFromCurrentPosition}=this.__closure;if((current===null||current===void 0?void 0:current.target)===(previous===null||previous===void 0?void 0:previous.target)&&(current===null||current===void 0?void 0:current.layout.height)!==(previous===null||previous===void 0?void 0:previous.layout.height)){scrollFromCurrentPosition();}}" };
-let closure_25 = { code: "function pnpm_indexTsx15(){const{enabled,currentKeyboardFrameHeight}=this.__closure;return enabled?currentKeyboardFrameHeight.value:0;}" };
-let closure_26 = { code: "function pnpm_indexTsx16(){const{enabled,mode,currentKeyboardFrameHeight}=this.__closure;return enabled&&mode===\"layout\"?{paddingBottom:currentKeyboardFrameHeight.value+1}:{};}" };
+let closure_24 = {
+  code: "function pnpm_indexTsx14(current,previous){const{scrollFromCurrentPosition}=this.__closure;if((current===null||current===void 0?void 0:current.target)===(previous===null||previous===void 0?void 0:previous.target)&&(current===null||current===void 0?void 0:current.layout.height)!==(previous===null||previous===void 0?void 0:previous.layout.height)){scrollFromCurrentPosition();}}",
+};
+let closure_25 = {
+  code: "function pnpm_indexTsx15(){const{enabled,currentKeyboardFrameHeight}=this.__closure;return enabled?currentKeyboardFrameHeight.value:0;}",
+};
+let closure_26 = {
+  code: 'function pnpm_indexTsx16(){const{enabled,mode,currentKeyboardFrameHeight}=this.__closure;return enabled&&mode==="layout"?{paddingBottom:currentKeyboardFrameHeight.value+1}:{};}',
+};
 
 export default forwardRef((bottomOffset) => {
   ({ children, onLayout } = bottomOffset);
@@ -131,7 +161,7 @@ export default forwardRef((bottomOffset) => {
     c4 = 0;
     c5 = 0;
     c3 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -210,7 +240,7 @@ export default forwardRef((bottomOffset) => {
     })();
   });
   let items = [onLayout];
-  const tmp25 = num2(function(arg0) {
+  const tmp25 = num2(function (arg0) {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -267,7 +297,7 @@ export default forwardRef((bottomOffset) => {
             sum1 = iter2.value - (tmp34 - sum) + tmp5;
             obj2 = closure_0(c2[3]);
             tmp20 = closure_18;
-            items = [, ];
+            items = [,];
             items[0] = closure_18.value;
             items[1] = iter2.value;
             tmp21 = closure_0;
@@ -276,7 +306,8 @@ export default forwardRef((bottomOffset) => {
             tmp23 = closure_10;
             tmp24 = snapToOffsets;
             items1 = [0];
-            items1[1] = obj3.scrollDistanceWithRespectToSnapPoints(sum1 + closure_10.value, snapToOffsets) - closure_10.value;
+            items1[1] =
+              obj3.scrollDistanceWithRespectToSnapPoints(sum1 + closure_10.value, snapToOffsets) - closure_10.value;
             interpolateResult = obj2.interpolate(bottomOffset, items, items1);
             tmp26 = globalThis;
             _Math = Math;
@@ -316,7 +347,22 @@ export default forwardRef((bottomOffset) => {
       }
     }
   }
-  obj = { enabled: flag2, layout: sharedValue8, scrollViewTarget: sharedValue, height, keyboardHeight: sharedValue3, bottomOffset: num, interpolate: _require(flag[3]).interpolate, initialKeyboardSize: sharedValue6, scrollDistanceWithRespectToSnapPoints: _require(flag[9]).scrollDistanceWithRespectToSnapPoints, scrollPosition: sharedValue1, snapToOffsets, scrollTo: _require(flag[3]).scrollTo, scrollViewAnimatedRef: animatedRef, scrollViewPageY: sharedValue13 };
+  obj = {
+    enabled: flag2,
+    layout: sharedValue8,
+    scrollViewTarget: sharedValue,
+    height,
+    keyboardHeight: sharedValue3,
+    bottomOffset: num,
+    interpolate: _require(flag[3]).interpolate,
+    initialKeyboardSize: sharedValue6,
+    scrollDistanceWithRespectToSnapPoints: _require(flag[9]).scrollDistanceWithRespectToSnapPoints,
+    scrollPosition: sharedValue1,
+    snapToOffsets,
+    scrollTo: _require(flag[3]).scrollTo,
+    scrollViewAnimatedRef: animatedRef,
+    scrollViewPageY: sharedValue13,
+  };
   M.__closure = obj;
   M.__workletHash = 1454504363777;
   M.__initData = offset;
@@ -344,12 +390,12 @@ export default forwardRef((bottomOffset) => {
         tmp7 = closure_10;
         obj2 = closure_0(c2[3]);
         tmp8 = closure_18;
-        items = [, ];
+        items = [,];
         items[0] = closure_18.value;
         tmp9 = closure_15;
         items[1] = closure_15.value;
         tmp10 = closure_24;
-        items1 = [, ];
+        items1 = [,];
         items1[0] = closure_24.value;
         num2 = 0;
         items1[1] = 0;
@@ -357,13 +403,28 @@ export default forwardRef((bottomOffset) => {
         tmp11 = obj;
         tmp12 = closure_7;
         num3 = 0;
-        scrollToResult = obj.scrollTo(closure_7, 0, closure_10.value - obj2.interpolate(bottomOffset, items, items1), false);
+        scrollToResult = obj.scrollTo(
+          closure_7,
+          0,
+          closure_10.value - obj2.interpolate(bottomOffset, items, items1),
+          false,
+        );
         flag = true;
       }
       return flag;
     }
   }
-  obj = { mode: str, keyboardWillAppear: sharedValue4, ghostViewSpace: sharedValue10, scrollTo: _require(flag[3]).scrollTo, scrollViewAnimatedRef: animatedRef, scrollPosition: sharedValue1, interpolate: _require(flag[3]).interpolate, initialKeyboardSize: sharedValue6, keyboardHeight: sharedValue3 };
+  obj = {
+    mode: str,
+    keyboardWillAppear: sharedValue4,
+    ghostViewSpace: sharedValue10,
+    scrollTo: _require(flag[3]).scrollTo,
+    scrollViewAnimatedRef: animatedRef,
+    scrollPosition: sharedValue1,
+    interpolate: _require(flag[3]).interpolate,
+    initialKeyboardSize: sharedValue6,
+    keyboardHeight: sharedValue3,
+  };
   Y.__closure = obj;
   Y.__workletHash = 17351526068375;
   Y.__initData = layout;
@@ -395,7 +456,12 @@ export default forwardRef((bottomOffset) => {
       return;
     }
   }
-  obj1 = { interpolate: _require(flag[3]).interpolate, keyboardHeight: sharedValue3, extraKeyboardSpace: num2, currentKeyboardFrameHeight: sharedValue2 };
+  obj1 = {
+    interpolate: _require(flag[3]).interpolate,
+    keyboardHeight: sharedValue3,
+    extraKeyboardSpace: num2,
+    currentKeyboardFrameHeight: sharedValue2,
+  };
   B.__closure = obj1;
   B.__workletHash = 6643520179794;
   B.__initData = sharedValue2;
@@ -457,7 +523,12 @@ export default forwardRef((bottomOffset) => {
       return;
     }
   }
-  E.__closure = { layout: sharedValue8, updateLayoutFromSelection: tmp30, performScrollWithPositionRestoration: tmp28, position: offset };
+  E.__closure = {
+    layout: sharedValue8,
+    updateLayoutFromSelection: tmp30,
+    performScrollWithPositionRestoration: tmp28,
+    position: offset,
+  };
   E.__workletHash = 11406147562112;
   E.__initData = sharedValue4;
   const items6 = [tmp28];
@@ -531,7 +602,18 @@ export default forwardRef((bottomOffset) => {
       return;
     }
   }
-  N.__closure = { lastSelection: sharedValue9, selectionUpdatedSinceHide: sharedValue12, pendingSelectionForFocus: sharedValue11, updateLayoutFromSelection: tmp30, keyboardWillAppear: sharedValue4, keyboardHeight: sharedValue3, position: offset, maybeScroll: tmp26, scrollFromCurrentPosition: tmp31, onChangeTextHandler: tmp33 };
+  N.__closure = {
+    lastSelection: sharedValue9,
+    selectionUpdatedSinceHide: sharedValue12,
+    pendingSelectionForFocus: sharedValue11,
+    updateLayoutFromSelection: tmp30,
+    keyboardWillAppear: sharedValue4,
+    keyboardHeight: sharedValue3,
+    position: offset,
+    maybeScroll: tmp26,
+    scrollFromCurrentPosition: tmp31,
+    onChangeTextHandler: tmp33,
+  };
   N.__workletHash = 7363285427351;
   N.__initData = sharedValue6;
   const items9 = [tmp31, tmp33, tmp30, tmp26];
@@ -654,7 +736,27 @@ export default forwardRef((bottomOffset) => {
       return;
     }
   }
-  Q.__closure = { keyboardHeight: sharedValue3, keyboardWillAppear: sharedValue4, tag: sharedValue5, initialKeyboardSize: sharedValue6, scrollPosition: sharedValue1, scrollBeforeKeyboardMovement: sharedValue7, pendingSelectionForFocus: sharedValue11, position: offset, mode: str, syncKeyboardFrame: tmp29, lastSelection: sharedValue9, selectionUpdatedSinceHide: sharedValue12, updateLayoutFromSelection: tmp30, input, layout: sharedValue8, maybeScroll: tmp26, ghostViewSpace: sharedValue10, scrollViewLayout: layout, scrollViewContentSize: size };
+  Q.__closure = {
+    keyboardHeight: sharedValue3,
+    keyboardWillAppear: sharedValue4,
+    tag: sharedValue5,
+    initialKeyboardSize: sharedValue6,
+    scrollPosition: sharedValue1,
+    scrollBeforeKeyboardMovement: sharedValue7,
+    pendingSelectionForFocus: sharedValue11,
+    position: offset,
+    mode: str,
+    syncKeyboardFrame: tmp29,
+    lastSelection: sharedValue9,
+    selectionUpdatedSinceHide: sharedValue12,
+    updateLayoutFromSelection: tmp30,
+    input,
+    layout: sharedValue8,
+    maybeScroll: tmp26,
+    ghostViewSpace: sharedValue10,
+    scrollViewLayout: layout,
+    scrollViewContentSize: size,
+  };
   Q.__workletHash = 4279285643383;
   Q.__initData = sharedValue7;
   obj3[0] = Q;
@@ -680,7 +782,14 @@ export default forwardRef((bottomOffset) => {
       return;
     }
   }
-  J.__closure = { removeGhostPadding: tmp27, mode: str, syncKeyboardFrame: tmp29, disableScrollOnKeyboardHide: flag, keyboardWillAppear: sharedValue4, maybeScroll: tmp26 };
+  J.__closure = {
+    removeGhostPadding: tmp27,
+    mode: str,
+    syncKeyboardFrame: tmp29,
+    disableScrollOnKeyboardHide: flag,
+    keyboardWillAppear: sharedValue4,
+    maybeScroll: tmp26,
+  };
   J.__workletHash = 15263617220981;
   J.__initData = input;
   obj3[1] = J;
@@ -695,32 +804,60 @@ export default forwardRef((bottomOffset) => {
     }
     callback5(height);
   };
-  fn2.__closure = { removeGhostPadding: tmp27, keyboardHeight: sharedValue3, scrollPosition: sharedValue1, position: offset, selectionUpdatedSinceHide: sharedValue12, keyboardWillAppear: sharedValue4, pendingSelectionForFocus: sharedValue11, syncKeyboardFrame: tmp29 };
+  fn2.__closure = {
+    removeGhostPadding: tmp27,
+    keyboardHeight: sharedValue3,
+    scrollPosition: sharedValue1,
+    position: offset,
+    selectionUpdatedSinceHide: sharedValue12,
+    keyboardWillAppear: sharedValue4,
+    pendingSelectionForFocus: sharedValue11,
+    syncKeyboardFrame: tmp29,
+  };
   fn2.__workletHash = 15672596601321;
   fn2.__initData = update;
   obj3[2] = fn2;
   const items11 = [str, tmp26, tmp27, flag, tmp29];
   _require(flag[10]).useSmoothKeyboardHandler(obj3, items11);
   const items12 = [update, tmp31];
-  const tmp37 = num2(flag2(function*() {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  const tmp37 = num2(
+    flag2(function* () {
+      if (c3 === 2) {
+        c3 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c3 = 2;
-        if (0 === table) {
-          if (arg0 === 1) {
+        try {
+          c3 = 2;
+          if (0 === table) {
+            if (arg0 === 1) {
+              c3 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c3 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_1 = tmp5;
+              let fn = tmp2;
+              fn = undefined;
+              table = 1;
+              c3 = 1;
+              obj1 = { value: null, done: false };
+              obj1[0] = closure_1_21();
+              return obj1;
+            }
+          } else if (arg0 === 1) {
             c3 = 3;
             throw arg1;
           } else if (arg0 === 2) {
@@ -729,59 +866,47 @@ export default forwardRef((bottomOffset) => {
             obj[0] = arg1;
             return obj;
           } else {
-            closure_1 = tmp5;
-            let fn = tmp2;
-            fn = undefined;
-            table = 1;
-            c3 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = closure_1_21();
-            return obj1;
+            fn = function e() {
+              callback();
+            };
+            const obj2 = { scrollFromCurrentPosition: null };
+            obj2[0] = closure_34;
+            fn.__closure = obj2;
+            fn.__workletHash = 15498084251450;
+            fn.__initData = closure_1_22;
+            closure_1_0(table[3]).runOnUI(fn)();
+            c3 = 3;
+            return { value: "HermesInternal", done: null };
           }
-        } else if (arg0 === 1) {
-          c3 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c3 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          fn = function e() {
-            callback();
-          };
-          const obj2 = { scrollFromCurrentPosition: null };
-          obj2[0] = closure_34;
-          fn.__closure = obj2;
-          fn.__workletHash = 15498084251450;
-          fn.__initData = closure_1_22;
-          closure_1_0(table[3]).runOnUI(fn)();
-          c3 = 3;
-          return { value: "HermesInternal", done: null };
+        } catch (tmp7) {
+          c3 = tmp;
+          throw tmp7;
         }
-      } catch (tmp7) {
-        c3 = tmp;
-        throw tmp7;
       }
-    }
-  }), items12);
+    }),
+    items12,
+  );
   closure_37 = tmp37;
   const items13 = [tmp37];
-  snapToOffsets(arg1, () => {
-    const current = ref.current;
-    if (current) {
-      current.assureFocusedInputVisible = () => {
-        callback();
-      };
-      return current;
-    } else {
-      const obj = { assureFocusedInputVisible: null };
-      obj[0] = function assureFocusedInputVisible() {
-        callback();
-      };
-      return obj;
-    }
-  }, items13);
+  snapToOffsets(
+    arg1,
+    () => {
+      const current = ref.current;
+      if (current) {
+        current.assureFocusedInputVisible = () => {
+          callback();
+        };
+        return current;
+      } else {
+        const obj = { assureFocusedInputVisible: null };
+        obj[0] = function assureFocusedInputVisible() {
+          callback();
+        };
+        return obj;
+      }
+    },
+    items13,
+  );
   const items14 = [num];
   str(() => {
     callback9();
@@ -864,7 +989,7 @@ export default forwardRef((bottomOffset) => {
     let merged1 = Object.assign(merged);
     obj4.scrollEventThrottle = 16;
     obj4.onLayout = tmp25;
-    const items17 = [children, ];
+    const items17 = [children];
     if (flag2) {
       obj5 = { style: null };
       obj5[0] = tmp43;

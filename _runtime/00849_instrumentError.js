@@ -6,7 +6,7 @@ require = arg1;
 const dependencyMap = arg6;
 function instrumentError() {
   const onerror = _mod821.GLOBAL_OBJ.onerror;
-  _mod821.GLOBAL_OBJ.onerror = function(msg, url, line, column, error) {
+  _mod821.GLOBAL_OBJ.onerror = function (msg, url, line, column, error) {
     callback(table[0]).triggerHandlers("error", { column, error, line, msg, url });
     if (!onerror) {
       return tmp2;

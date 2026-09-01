@@ -10,12 +10,9 @@ import closure_2 from "14011___core-js_shared__.js";
 let closure_5 = call("".slice);
 let closure_6 = call("".replace);
 let closure_7 = call([].join);
-let closure_8 = getOwnPropertyDescriptor && !_mod13956(() => 8 !== defineProperty(() => {
-
-}, "length", { value: 8 }).length);
-const tmp = getOwnPropertyDescriptor && !_mod13956(() => 8 !== defineProperty(() => {
-
-}, "length", { value: 8 }).length);
+let closure_8 =
+  getOwnPropertyDescriptor && !_mod13956(() => 8 !== defineProperty(() => {}, "length", { value: 8 }).length);
+const tmp = getOwnPropertyDescriptor && !_mod13956(() => 8 !== defineProperty(() => {}, "length", { value: 8 }).length);
 let closure_9 = String(String).split("String");
 const fn = (toString, toString2) => {
   let text = toString2;
@@ -92,8 +89,7 @@ const fn = (toString, toString2) => {
     if (toString.prototype) {
       toString.prototype = undefined;
     }
-  } catch (err) {
-  }
+  } catch (err) {}
 };
 function toString() {
   const self = this;

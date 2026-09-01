@@ -9,16 +9,32 @@ import isJest from "01656_isJest.js";
 
 const ProgressTransitionManager = global;
 require = arg1;
-let closure_4 = { code: "function pnpm_ProgressTransitionManagerTs1(){const{viewTag,progressAnimation}=this.__closure;global.ProgressTransitionRegister.addProgressAnimation(viewTag,progressAnimation);}" };
-let closure_5 = { code: "function pnpm_ProgressTransitionManagerTs2(){const{viewTag,isUnmounting}=this.__closure;global.ProgressTransitionRegister.removeProgressAnimation(viewTag,isUnmounting);}" };
-let closure_6 = { code: "function pnpm_ProgressTransitionManagerTs3(event){const{lastProgressValue}=this.__closure;const progress=event.progress;if(progress===lastProgressValue){return;}lastProgressValue=progress;global.ProgressTransitionRegister.frame(progress);}" };
-let closure_7 = { code: "function pnpm_ProgressTransitionManagerTs4(){global.ProgressTransitionRegister.onTransitionEnd();}" };
-let closure_8 = { code: "function pnpm_ProgressTransitionManagerTs5(){global.ProgressTransitionRegister.onAndroidFinishTransitioning();}" };
+let closure_4 = {
+  code: "function pnpm_ProgressTransitionManagerTs1(){const{viewTag,progressAnimation}=this.__closure;global.ProgressTransitionRegister.addProgressAnimation(viewTag,progressAnimation);}",
+};
+let closure_5 = {
+  code: "function pnpm_ProgressTransitionManagerTs2(){const{viewTag,isUnmounting}=this.__closure;global.ProgressTransitionRegister.removeProgressAnimation(viewTag,isUnmounting);}",
+};
+let closure_6 = {
+  code: "function pnpm_ProgressTransitionManagerTs3(event){const{lastProgressValue}=this.__closure;const progress=event.progress;if(progress===lastProgressValue){return;}lastProgressValue=progress;global.ProgressTransitionRegister.frame(progress);}",
+};
+let closure_7 = {
+  code: "function pnpm_ProgressTransitionManagerTs4(){global.ProgressTransitionRegister.onTransitionEnd();}",
+};
+let closure_8 = {
+  code: "function pnpm_ProgressTransitionManagerTs5(){global.ProgressTransitionRegister.onAndroidFinishTransitioning();}",
+};
 class ProgressTransitionManager {
   constructor() {
     tmp = closure_3(this, ProgressTransitionManager);
     this._sharedElementCount = 0;
-    this._eventHandler = { isRegistered: false, onTransitionProgress: -1, onAppear: -1, onDisappear: -1, onSwipeDismiss: -1 };
+    this._eventHandler = {
+      isRegistered: false,
+      onTransitionProgress: -1,
+      onAppear: -1,
+      onDisappear: -1,
+      onSwipeDismiss: -1,
+    };
     return;
   }
 }
@@ -36,7 +52,7 @@ let obj = {
     fn.__initData = closure_4;
     require("01660_runWorkletOnJS.js").runOnUIImmediately(fn)();
     const result = this.registerEventHandlers();
-  }
+  },
 };
 const items = [
   obj,
@@ -57,7 +73,7 @@ const items = [
       fn.__workletHash = 3239143402257;
       fn.__initData = closure_5;
       flag(1660).runOnUIImmediately(fn)();
-    }
+    },
   },
   {
     key: "registerEventHandlers",
@@ -99,7 +115,7 @@ const items = [
         _eventHandler.onDisappear = isReanimated3.registerEventHandler(fn3, "onFinishTransitioning");
         const obj4 = isReanimated3;
       }
-    }
+    },
   },
   {
     key: "unregisterEventHandlers",
@@ -128,8 +144,8 @@ const items = [
           const obj4 = isReanimated3;
         }
       }
-    }
-  }
+    },
+  },
 ];
 function createProgressTransitionRegister() {
   const map = new Map();
@@ -217,17 +233,21 @@ function createProgressTransitionRegister() {
       } else {
         set1.clear();
       }
-    }
+    },
   };
   return obj;
 }
 createProgressTransitionRegister.__closure = { IS_ANDROID: true };
 createProgressTransitionRegister.__workletHash = 2226368593346;
-createProgressTransitionRegister.__initData = { code: "function createProgressTransitionRegister_Pnpm_ProgressTransitionManagerTs8(){const{IS_ANDROID}=this.__closure;const progressAnimations=new Map();const snapshots=new Map();const currentTransitions=new Set();const toRemove=new Set();let skipCleaning=false;let isTransitionRestart=false;const progressTransitionManager={addProgressAnimation:function(viewTag,progressAnimation){if(currentTransitions.size>0&&!progressAnimations.has(viewTag)){isTransitionRestart=!IS_ANDROID;}progressAnimations.set(viewTag,progressAnimation);},removeProgressAnimation:function(viewTag,isUnmounting){if(currentTransitions.size>0){isTransitionRestart=!IS_ANDROID;}if(isUnmounting){toRemove.add(viewTag);}else{progressAnimations.delete(viewTag);}},onTransitionStart:function(viewTag,snapshot){skipCleaning=isTransitionRestart;snapshots.set(viewTag,snapshot);currentTransitions.add(viewTag);progressTransitionManager.frame(0);},frame:function(progress){for(const viewTag of currentTransitions){const progressAnimation=progressAnimations.get(viewTag);if(!progressAnimation){continue;}const snapshot=snapshots.get(viewTag);progressAnimation(viewTag,snapshot,progress);}},onAndroidFinishTransitioning:function(){if(toRemove.size>0){progressTransitionManager.onTransitionEnd();}},onTransitionEnd:function(removeViews=false){if(currentTransitions.size===0){toRemove.clear();return;}if(skipCleaning){skipCleaning=false;isTransitionRestart=false;return;}for(const viewTag of currentTransitions){global._notifyAboutEnd(viewTag,removeViews);}currentTransitions.clear();if(isTransitionRestart){return;}snapshots.clear();if(toRemove.size>0){for(const viewTag of toRemove){progressAnimations.delete(viewTag);global._notifyAboutEnd(viewTag,removeViews);}toRemove.clear();}}};return progressTransitionManager;}" };
+createProgressTransitionRegister.__initData = {
+  code: "function createProgressTransitionRegister_Pnpm_ProgressTransitionManagerTs8(){const{IS_ANDROID}=this.__closure;const progressAnimations=new Map();const snapshots=new Map();const currentTransitions=new Set();const toRemove=new Set();let skipCleaning=false;let isTransitionRestart=false;const progressTransitionManager={addProgressAnimation:function(viewTag,progressAnimation){if(currentTransitions.size>0&&!progressAnimations.has(viewTag)){isTransitionRestart=!IS_ANDROID;}progressAnimations.set(viewTag,progressAnimation);},removeProgressAnimation:function(viewTag,isUnmounting){if(currentTransitions.size>0){isTransitionRestart=!IS_ANDROID;}if(isUnmounting){toRemove.add(viewTag);}else{progressAnimations.delete(viewTag);}},onTransitionStart:function(viewTag,snapshot){skipCleaning=isTransitionRestart;snapshots.set(viewTag,snapshot);currentTransitions.add(viewTag);progressTransitionManager.frame(0);},frame:function(progress){for(const viewTag of currentTransitions){const progressAnimation=progressAnimations.get(viewTag);if(!progressAnimation){continue;}const snapshot=snapshots.get(viewTag);progressAnimation(viewTag,snapshot,progress);}},onAndroidFinishTransitioning:function(){if(toRemove.size>0){progressTransitionManager.onTransitionEnd();}},onTransitionEnd:function(removeViews=false){if(currentTransitions.size===0){toRemove.clear();return;}if(skipCleaning){skipCleaning=false;isTransitionRestart=false;return;}for(const viewTag of currentTransitions){global._notifyAboutEnd(viewTag,removeViews);}currentTransitions.clear();if(isTransitionRestart){return;}snapshots.clear();if(toRemove.size>0){for(const viewTag of toRemove){progressAnimations.delete(viewTag);global._notifyAboutEnd(viewTag,removeViews);}toRemove.clear();}}};return progressTransitionManager;}",
+};
 if (isJest.shouldBeUseWeb()) {
   function maybeThrowError() {
     if (!obj.isJest()) {
-      const reanimatedError = new t.ReanimatedError("`ProgressTransitionRegister` is not available on non-native platform.");
+      const reanimatedError = new t.ReanimatedError(
+        "`ProgressTransitionRegister` is not available on non-native platform.",
+      );
       throw reanimatedError;
     }
     obj = isJest2;
@@ -243,7 +263,9 @@ if (isJest.shouldBeUseWeb()) {
     if (obj.isJest()) {
       return false;
     } else {
-      const reanimatedError = new t.ReanimatedError("`ProgressTransitionRegister` is not available on non-native platform.");
+      const reanimatedError = new t.ReanimatedError(
+        "`ProgressTransitionRegister` is not available on non-native platform.",
+      );
       throw reanimatedError;
     }
     obj = isJest2;
@@ -252,7 +274,9 @@ if (isJest.shouldBeUseWeb()) {
   const proxy = new Proxy({}, obj);
   global.ProgressTransitionRegister = proxy;
 } else {
-  obj = { code: "function pnpm_ProgressTransitionManagerTs9(){const{createProgressTransitionRegister}=this.__closure;global.ProgressTransitionRegister=createProgressTransitionRegister();}" };
+  obj = {
+    code: "function pnpm_ProgressTransitionManagerTs9(){const{createProgressTransitionRegister}=this.__closure;global.ProgressTransitionRegister=createProgressTransitionRegister();}",
+  };
   let fn = function n() {
     if (typeof createProgressTransitionRegister !== "function") {
       HermesBuiltin.throwTypeError();
@@ -342,7 +366,7 @@ if (isJest.shouldBeUseWeb()) {
         } else {
           set1.clear();
         }
-      }
+      },
     };
     map.ProgressTransitionRegister = obj;
   };

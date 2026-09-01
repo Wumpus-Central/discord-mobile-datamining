@@ -23,8 +23,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class HMAC {
   constructor(arg0, arg1) {
@@ -112,7 +111,7 @@ const items = [
       const iHash = this.iHash;
       iHash.update(arg0);
       return this;
-    }
+    },
   },
   {
     key: "digestInto",
@@ -127,7 +126,7 @@ const items = [
       const oHash2 = this.oHash;
       oHash2.digestInto(arg0);
       this.destroy();
-    }
+    },
   },
   {
     key: "digest",
@@ -135,7 +134,7 @@ const items = [
       const uint8Array = new Uint8Array(this.oHash.outputLen);
       this.digestInto(uint8Array);
       return uint8Array;
-    }
+    },
   },
   {
     key: "_cloneInto",
@@ -147,11 +146,18 @@ const items = [
         const _Object2 = Object;
         obj = Object.create(Object.getPrototypeOf(self), {});
       }
-      ({ oHash, iHash, finished: tmp.finished, destroyed: tmp.destroyed, blockLen: tmp.blockLen, outputLen: tmp.outputLen } = self);
+      ({
+        oHash,
+        iHash,
+        finished: tmp.finished,
+        destroyed: tmp.destroyed,
+        blockLen: tmp.blockLen,
+        outputLen: tmp.outputLen,
+      } = self);
       obj.oHash = oHash._cloneInto(obj.oHash);
       obj.iHash = iHash._cloneInto(obj.iHash);
       return obj;
-    }
+    },
   },
   {
     key: "destroy",
@@ -161,8 +167,8 @@ const items = [
       oHash.destroy();
       const iHash = this.iHash;
       iHash.destroy();
-    }
-  }
+    },
+  },
 ];
 const _moduleResult = _createClass(HMAC, items);
 exports.hmac.create = (arg0, arg1) => new closure_6(arg0, arg1);

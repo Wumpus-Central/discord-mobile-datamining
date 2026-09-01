@@ -24,8 +24,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class RCTDeviceEventEmitterImpl {
   constructor() {
@@ -74,7 +73,12 @@ let items = [
             }
           }
           return fn;
-        })(closure_0, "emit", this, 3)(items);
+        })(
+          closure_0,
+          "emit",
+          this,
+          3,
+        )(items);
         const tmp9 = (function _superPropGet(closure_0, emit, arg2, arg3) {
           closure_0 = arg2;
           let prototype = closure_0;
@@ -97,8 +101,8 @@ let items = [
         tmp3(tmp[6]).endEvent();
         throw tmp15;
       }
-    }
-  }
+    },
+  },
 ];
 const tmp5 = new importDefaultResult(RCTDeviceEventEmitterImpl, items)();
 Object.defineProperty(global, "__rctDeviceEventEmitter", { configurable: true, value: tmp5 });

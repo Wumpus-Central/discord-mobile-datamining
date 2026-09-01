@@ -202,7 +202,14 @@ if (self2) {
     };
     exports._isoDateTime = function _isoDateTime(ZodISODateTime, enc) {
       const merged = Object.assign(closure_5.normalizeParams(enc));
-      return new ZodISODateTime({ type: "string", format: "datetime", check: "string_format", offset: false, local: false, precision: null });
+      return new ZodISODateTime({
+        type: "string",
+        format: "datetime",
+        check: "string_format",
+        offset: false,
+        local: false,
+        precision: null,
+      });
     };
     exports._isoDate = function _isoDate(ZodISODate, enc) {
       const merged = Object.assign(closure_5.normalizeParams(enc));
@@ -448,7 +455,10 @@ if (self2) {
     exports._overwrite = _overwrite;
     exports._normalize = function _normalize(arg0) {
       closure_0 = arg0;
-      const ZodCheckOverwrite = new closure_2.$ZodCheckOverwrite({ check: "overwrite", tx: (str) => str.normalize(closure_0) });
+      const ZodCheckOverwrite = new closure_2.$ZodCheckOverwrite({
+        check: "overwrite",
+        tx: (str) => str.normalize(closure_0),
+      });
       return ZodCheckOverwrite;
     };
     exports._trim = function _trim() {
@@ -456,15 +466,24 @@ if (self2) {
       return ZodCheckOverwrite;
     };
     exports._toLowerCase = function _toLowerCase() {
-      const ZodCheckOverwrite = new closure_2.$ZodCheckOverwrite({ check: "overwrite", tx: (str) => str.toLowerCase() });
+      const ZodCheckOverwrite = new closure_2.$ZodCheckOverwrite({
+        check: "overwrite",
+        tx: (str) => str.toLowerCase(),
+      });
       return ZodCheckOverwrite;
     };
     exports._toUpperCase = function _toUpperCase() {
-      const ZodCheckOverwrite = new closure_2.$ZodCheckOverwrite({ check: "overwrite", tx: (str) => str.toUpperCase() });
+      const ZodCheckOverwrite = new closure_2.$ZodCheckOverwrite({
+        check: "overwrite",
+        tx: (str) => str.toUpperCase(),
+      });
       return ZodCheckOverwrite;
     };
     exports._slugify = function _slugify() {
-      const ZodCheckOverwrite = new closure_2.$ZodCheckOverwrite({ check: "overwrite", tx: (arg0) => closure_5.slugify(arg0) });
+      const ZodCheckOverwrite = new closure_2.$ZodCheckOverwrite({
+        check: "overwrite",
+        tx: (arg0) => closure_5.slugify(arg0),
+      });
       return ZodCheckOverwrite;
     };
     exports._array = function _array(ZodArray, closure_0, enc) {
@@ -516,10 +535,12 @@ if (self2) {
       let fromEntriesResult = arr;
       if (Array.isArray(arr)) {
         const _Object = Object;
-        fromEntriesResult = Object.fromEntries(arr.map((arg0) => {
-          const items = [arg0, arg0];
-          return items;
-        }));
+        fromEntriesResult = Object.fromEntries(
+          arr.map((arg0) => {
+            const items = [arg0, arg0];
+            return items;
+          }),
+        );
       }
       const merged = Object.assign(closure_5.normalizeParams(enc));
       return new arg0({ type: "enum", entries: fromEntriesResult });
@@ -562,7 +583,7 @@ if (self2) {
           }
           return shallowCloneResult;
         },
-        set: undefined
+        set: undefined,
       });
       return new arg0(obj);
     };
@@ -660,12 +681,10 @@ if (self2) {
           const merged = Object.assign(obj);
           obj.description = closure_0;
           globalRegistry2.add(arg0, obj);
-        }
+        },
       ];
       ZodCheck._zod.onattach = items;
-      ZodCheck._zod.check = () => {
-
-      };
+      ZodCheck._zod.check = () => {};
       return ZodCheck;
     };
     exports.meta = function meta(arg0) {
@@ -683,12 +702,10 @@ if (self2) {
           const merged = Object.assign(obj);
           const merged1 = Object.assign(closure_0);
           globalRegistry2.add(arg0, obj);
-        }
+        },
       ];
       ZodCheck._zod.onattach = items;
-      ZodCheck._zod.check = () => {
-
-      };
+      ZodCheck._zod.check = () => {};
       return ZodCheck;
     };
     exports._stringbool = function _stringbool(Codec, enc) {
@@ -757,7 +774,14 @@ if (self2) {
             let obj = !hasItem;
             if (!hasItem) {
               issues = issues.issues;
-              obj = { code: "invalid_value", expected: "stringbool", values: null, input: null, inst: null, continue: false };
+              obj = {
+                code: "invalid_value",
+                expected: "stringbool",
+                values: null,
+                input: null,
+                inst: null,
+                continue: false,
+              };
               const items = [];
               HermesBuiltin.arraySpread(tmp4, HermesBuiltin.arraySpread(tmp2, 0));
               obj[2] = items;
@@ -779,7 +803,7 @@ if (self2) {
           }
           return tmp2;
         },
-        error: normalizeParamsResult.error
+        error: normalizeParamsResult.error,
       };
       ZodCodec = new $ZodCodec(obj);
       return ZodCodec;

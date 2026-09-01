@@ -42,7 +42,7 @@ function _htmlElementAsString(tagName, arr) {
     }
     if (length1) {
       const item = mapped.forEach((arg0) => {
-        items.push("[" + arg0[0] + "=\"" + arg0[1] + "\"]");
+        items.push("[" + arg0[0] + '="' + arg0[1] + '"]');
       });
     } else {
       if (tagName.id) {
@@ -73,9 +73,9 @@ function _htmlElementAsString(tagName, arr) {
         let tmp29 = attr;
         let _HermesInternal3 = HermesInternal;
         let str9 = "[";
-        let str10 = "=\"";
-        let str11 = "\"]";
-        let arr2 = items.push("[" + tmp25 + "=\"" + tmp27 + "\"]");
+        let str10 = '="';
+        let str11 = '"]';
+        let arr2 = items.push("[" + tmp25 + '="' + tmp27 + '"]');
       }
       continue;
     }

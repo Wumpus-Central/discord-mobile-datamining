@@ -29,8 +29,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 let closure_3 = ["headers"];
 let closure_9 = 0;
@@ -78,7 +77,9 @@ class WebSocket {
       tmp11 = globalThis;
       _console = console;
       str = "Specifying `origin` as a WebSocket connection option is deprecated. Include it under `headers` instead.";
-      warnResult = console.warn("Specifying `origin` as a WebSocket connection option is deprecated. Include it under `headers` instead.");
+      warnResult = console.warn(
+        "Specifying `origin` as a WebSocket connection option is deprecated. Include it under `headers` instead.",
+      );
       headers.origin = tmp9.origin;
       str2 = "origin";
       delete tmp2[tmp];
@@ -90,7 +91,9 @@ class WebSocket {
       str3 = "`, `";
       str4 = "Unrecognized WebSocket connection option(s) `";
       str5 = "`. Did you mean to put these under `headers`?";
-      warnResult1 = console.warn(`Unrecognized WebSocket connection option(s) \`${obj5.join("`, `")}\`. Did you mean to put these under \`headers\`?`);
+      warnResult1 = console.warn(
+        `Unrecognized WebSocket connection option(s) \`${obj5.join("`, `")}\`. Did you mean to put these under \`headers\`?`,
+      );
     }
     tmp14 = tmp8;
     if (!Array.isArray(tmp8)) {
@@ -136,7 +139,7 @@ let items = [
         const tmp5 = _modDef38;
       }
       self._binaryType = _binaryType;
-    }
+    },
   },
   {
     key: "close",
@@ -146,7 +149,7 @@ let items = [
         self.readyState = self.CLOSING;
         self._close(arg0, arg1);
       }
-    }
+    },
   },
   {
     key: "send",
@@ -177,7 +180,7 @@ let items = [
         tmp16(218).send(str, self._socketId);
         const tmp16Result2 = tmp16(218);
       }
-    }
+    },
   },
   {
     key: "ping",
@@ -189,7 +192,7 @@ let items = [
       } else {
         WebSocketModuleDefault.ping(tmp._socketId);
       }
-    }
+    },
   },
   {
     key: "_close",
@@ -206,7 +209,7 @@ let items = [
         const result = BlobManagerDefault.removeWebSocketHandler(self._socketId);
         const tmpResult = BlobManagerDefault;
       }
-    }
+    },
   },
   {
     key: "_unregisterEvents",
@@ -214,7 +217,7 @@ let items = [
       const _subscriptions = this._subscriptions;
       const item = _subscriptions.forEach((remove) => remove.remove());
       this._subscriptions = [];
-    }
+    },
   },
   {
     key: "_registerEvents",
@@ -241,9 +244,8 @@ let items = [
             dispatchEventResult = obj.dispatchEvent(tmp11);
           }
         }),
-      ,
-      ,
-
+        ,
+        ,
       ];
       const _eventEmitter2 = this._eventEmitter;
       items[1] = _eventEmitter2.addListener("websocketOpen", (id) => {
@@ -283,7 +285,7 @@ let items = [
         }
       });
       this._subscriptions = items;
-    }
+    },
   },
   {
     key: "onclose",
@@ -292,7 +294,7 @@ let items = [
     },
     set(fn) {
       const result = WebSocket(205).setEventHandlerAttribute(this, "close", fn);
-    }
+    },
   },
   {
     key: "onerror",
@@ -301,7 +303,7 @@ let items = [
     },
     set(fn) {
       const result = WebSocket(205).setEventHandlerAttribute(this, "error", fn);
-    }
+    },
   },
   {
     key: "onmessage",
@@ -310,7 +312,7 @@ let items = [
     },
     set(fn) {
       const result = WebSocket(205).setEventHandlerAttribute(this, "message", fn);
-    }
+    },
   },
   {
     key: "onopen",
@@ -319,8 +321,8 @@ let items = [
     },
     set(fn) {
       const result = WebSocket(205).setEventHandlerAttribute(this, "open", fn);
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(WebSocket, items);
 importDefaultResultResult.CONNECTING = 0;

@@ -3,7 +3,15 @@ import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 let closure_0 = { top: 20, left: 20, right: 20, bottom: 30 };
 const Mixin = get_ActivityIndicator.Touchable.Mixin;
-({ touchableHandleStartShouldSetResponder: closure_1, touchableHandleResponderTerminationRequest: obj1, touchableHandleResponderGrant: c3, touchableHandleResponderMove: c4, touchableHandleResponderRelease: c5, touchableHandleResponderTerminate: closure_6, touchableGetInitialState: error } = Mixin);
+({
+  touchableHandleStartShouldSetResponder: closure_1,
+  touchableHandleResponderTerminationRequest: obj1,
+  touchableHandleResponderGrant: c3,
+  touchableHandleResponderMove: c4,
+  touchableHandleResponderRelease: c5,
+  touchableHandleResponderTerminate: closure_6,
+  touchableGetInitialState: error,
+} = Mixin);
 let obj = {};
 const merged = Object.assign(Mixin);
 obj.touchableHandleStartShouldSetResponder = function touchableHandleStartShouldSetResponder(arg0) {

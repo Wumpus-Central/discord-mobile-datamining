@@ -46,7 +46,9 @@ if (!fn) {
           }
           const _Object = Object;
           const call = propertyIsEnumerable.call;
-          typeof call === "unknown" ? propertyIsEnumerable(ownPropertySymbols[num]) : call(obj, ownPropertySymbols[num]);
+          typeof call === "unknown"
+            ? propertyIsEnumerable(ownPropertySymbols[num])
+            : call(obj, ownPropertySymbols[num]);
         }
       }
     }
@@ -54,9 +56,7 @@ if (!fn) {
   };
 }
 const MobileFeedback = "MobileFeedback";
-function _getClientIntegration() {
-
-}
+function _getClientIntegration() {}
 arg5.MOBILE_FEEDBACK_INTEGRATION_NAME = "MobileFeedback";
 arg5.feedbackIntegration = (D) => {
   let obj = D;
@@ -64,7 +64,15 @@ arg5.feedbackIntegration = (D) => {
     obj = {};
   }
   ({ buttonOptions, screenshotButtonOptions, colorScheme, themeLight, themeDark } = obj);
-  obj = { name: MobileFeedback, options: fn(obj, ["buttonOptions", "screenshotButtonOptions", "colorScheme", "themeLight", "themeDark"]), buttonOptions: null, screenshotButtonOptions: null, colorScheme: null, themeLight: null, themeDark: null };
+  obj = {
+    name: MobileFeedback,
+    options: fn(obj, ["buttonOptions", "screenshotButtonOptions", "colorScheme", "themeLight", "themeDark"]),
+    buttonOptions: null,
+    screenshotButtonOptions: null,
+    colorScheme: null,
+    themeLight: null,
+    themeDark: null,
+  };
   if (!buttonOptions) {
     buttonOptions = {};
   }

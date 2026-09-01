@@ -37,10 +37,10 @@ export default function extractBrush(str) {
         const _console = console;
         const _String = String;
         const _HermesInternal = HermesInternal;
-        console.warn("\"" + String(str) + "\" is not a valid color or brush");
+        console.warn('"' + String(str) + '" is not a valid color or brush');
         tmp7 = null;
       }
       return tmp7;
     }
   }
-};
+}

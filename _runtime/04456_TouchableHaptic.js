@@ -64,6 +64,6 @@ export const TouchableHaptic = function TouchableHaptic(hapticType) {
       if (onLongPress != null) {
         tmp3(arg0);
       }
-    }, items3)
+    }, items3),
   });
 };

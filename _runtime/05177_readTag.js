@@ -17,10 +17,12 @@ function readTag(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5) {
   const obj5 = _modDef5174;
   const longAt = _modDef5174.getLongAt(byteLength, sum + sum, byteOrder);
   if (undefined !== _modDef5174.typeSizes[shortAt1]) {
-    if ((function tagValueFitsInOffsetSlot(shortAt1, longAt) {
-      const result = callback(5174).typeSizes[shortAt1] * longAt;
-      return result <= callback(5174).getTypeSize("LONG");
-    })(shortAt1, longAt)) {
+    if (
+      (function tagValueFitsInOffsetSlot(shortAt1, longAt) {
+        const result = callback(5174).typeSizes[shortAt1] * longAt;
+        return result <= callback(5174).getTypeSize("LONG");
+      })(shortAt1, longAt)
+    ) {
       const sum2 = sum + sum1;
       let str = getTagValue(byteLength, sum2, shortAt1, longAt, byteOrder);
       let tmp21 = sum2;
@@ -28,10 +30,12 @@ function readTag(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5) {
       const longAt1 = tmp4(5174).getLongAt(byteLength, sum + sum1, byteOrder);
       str = "<faulty value>";
       tmp21 = longAt1;
-      if ((function tagValueFitsInDataView(byteLength, sum, longAt1, shortAt1, longAt) {
-        sum = sum + longAt1;
-        return sum + callback(5174).typeSizes[shortAt1] * longAt <= byteLength.byteLength;
-      })(byteLength, sum, longAt1, shortAt1, longAt)) {
+      if (
+        (function tagValueFitsInDataView(byteLength, sum, longAt1, shortAt1, longAt) {
+          sum = sum + longAt1;
+          return sum + callback(5174).typeSizes[shortAt1] * longAt <= byteLength.byteLength;
+        })(byteLength, sum, longAt1, shortAt1, longAt)
+      ) {
         str = getTagValue(byteLength, sum + longAt1, shortAt1, longAt, byteOrder, 33723 === shortAt);
         tmp21 = longAt1;
       }
@@ -45,29 +49,31 @@ function readTag(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5) {
         } catch (err) {
           return tmp;
         }
-      })((function splitNullSeparatedAsciiString(arg0) {
-        const items = [];
-        let num = 0;
-        let num2 = 0;
-        if (0 < arg0.length) {
-          do {
-            let tmp = num2;
-            let tmp2 = num;
-            if ("\0" !== arg0[num2]) {
-              if (undefined === items[num]) {
-                items[num] = "";
+      })(
+        (function splitNullSeparatedAsciiString(arg0) {
+          const items = [];
+          let num = 0;
+          let num2 = 0;
+          if (0 < arg0.length) {
+            do {
+              let tmp = num2;
+              let tmp2 = num;
+              if ("\0" !== arg0[num2]) {
+                if (undefined === items[num]) {
+                  items[num] = "";
+                }
+                items[num] = items[num] + arg0[num2];
+                let sum = num;
+              } else {
+                sum = num + 1;
               }
-              items[num] = items[num] + arg0[num2];
-              let sum = num;
-            } else {
-              sum = num + 1;
-            }
-            num2 = num2 + 1;
-            num = sum;
-          } while (num2 < arg0.length);
-        }
-        return items;
-      })(str));
+              num2 = num2 + 1;
+              num = sum;
+            } while (num2 < arg0.length);
+          }
+          return items;
+        })(str),
+      );
     }
     const _HermesInternal = HermesInternal;
     let combined = "undefined-" + shortAt;
@@ -141,7 +147,17 @@ function getDescriptionFromTagValue(join) {
   }
   return joined;
 }
-let obj = { 1: null, 2: _modDef5174.getByteAt, 3: _modDef5174.getAsciiAt, 4: _modDef5174.getShortAt, 5: _modDef5174.getLongAt, 7: _modDef5174.getRationalAt, 9: null, 10: _modDef5174.getUndefinedAt, 13: null };
+let obj = {
+  1: null,
+  2: _modDef5174.getByteAt,
+  3: _modDef5174.getAsciiAt,
+  4: _modDef5174.getShortAt,
+  5: _modDef5174.getLongAt,
+  7: _modDef5174.getRationalAt,
+  9: null,
+  10: _modDef5174.getUndefinedAt,
+  13: null,
+};
 obj[9] = _modDef5174.getSlongAt;
 obj[10] = _modDef5174.getSrationalAt;
 obj[13] = _modDef5174.getIfdPointerAt;

@@ -42,12 +42,15 @@ const items = [
           let workletEventHandler = tmp6.workletEventHandler;
           let tmp2 = callback2;
           let tmp3 = closure_6;
-          let registerForEventsResult = workletEventHandler.registerForEvents(callback2(this, closure_6)[closure_6], key10010);
+          let registerForEventsResult = workletEventHandler.registerForEvents(
+            callback2(this, closure_6)[closure_6],
+            key10010,
+          );
           continue;
         }
         continue;
       }
-    }
+    },
   },
   {
     key: "detachEvents",
@@ -69,12 +72,14 @@ const items = [
           let workletEventHandler = tmp6.workletEventHandler;
           let tmp2 = callback2;
           let tmp3 = closure_6;
-          let unregisterFromEventsResult = workletEventHandler.unregisterFromEvents(callback2(this, closure_6)[closure_6]);
+          let unregisterFromEventsResult = workletEventHandler.unregisterFromEvents(
+            callback2(this, closure_6)[closure_6],
+          );
           continue;
         }
         continue;
       }
-    }
+    },
   },
   {
     key: "updateEvents",
@@ -98,7 +103,9 @@ const items = [
             let workletEventHandler4 = tmp37.workletEventHandler;
             let tmp21 = callback2;
             let tmp22 = closure_6;
-            let unregisterFromEventsResult = workletEventHandler4.unregisterFromEvents(callback2(self, closure_6)[closure_6]);
+            let unregisterFromEventsResult = workletEventHandler4.unregisterFromEvents(
+              callback2(self, closure_6)[closure_6],
+            );
             continue;
           }
           continue;
@@ -136,7 +143,9 @@ const items = [
                 continue;
               } else {
                 let tmp9 = closure_6;
-                let unregisterFromEventsResult1 = workletEventHandler.unregisterFromEvents(tmp3(self, closure_6)[closure_6]);
+                let unregisterFromEventsResult1 = workletEventHandler.unregisterFromEvents(
+                  tmp3(self, closure_6)[closure_6],
+                );
                 let workletEventHandler2 = tmp5.workletEventHandler;
                 let registerForEventsResult = workletEventHandler2.registerForEvents(tmp3(self, closure_6)[closure_6]);
                 continue;
@@ -144,7 +153,9 @@ const items = [
               continue;
             } else {
               let tmp6 = closure_6;
-              let unregisterFromEventsResult2 = workletEventHandler.unregisterFromEvents(tmp3(self, closure_6)[closure_6]);
+              let unregisterFromEventsResult2 = workletEventHandler.unregisterFromEvents(
+                tmp3(self, closure_6)[closure_6],
+              );
               continue;
             }
             continue;
@@ -171,7 +182,9 @@ const items = [
             } else {
               let tmp16 = callback2;
               let tmp17 = closure_6;
-              let registerForEventsResult1 = workletEventHandler3.registerForEvents(callback2(self, closure_6)[closure_6]);
+              let registerForEventsResult1 = workletEventHandler3.registerForEvents(
+                callback2(self, closure_6)[closure_6],
+              );
               continue;
             }
             continue;
@@ -179,7 +192,7 @@ const items = [
           continue;
         }
       }
-    }
+    },
   },
   {
     key: "getEventViewTag",
@@ -251,8 +264,8 @@ const items = [
         }
         return componentViewTag;
       }
-    }
-  }
+    },
+  },
 ];
 
 export const NativeEventsManager = _createClassDefault(NativeEventsManager, items);

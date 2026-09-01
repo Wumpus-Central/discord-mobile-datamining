@@ -1,7 +1,6 @@
 // _runtime/04563_toInteger.js
 import toFinite from "04564_toFinite.js";
 
-
 export default function toInteger(arg0) {
   const tmp = toFinite(arg0);
   const result = tmp % 1;
@@ -14,4 +13,4 @@ export default function toInteger(arg0) {
     num = diff;
   }
   return num;
-};
+}

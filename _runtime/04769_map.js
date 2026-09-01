@@ -47,4 +47,4 @@ export default function map(arg0) {
     const typeError = new TypeError("Array.prototype.map callback must be a function");
     throw typeError;
   }
-};
+}

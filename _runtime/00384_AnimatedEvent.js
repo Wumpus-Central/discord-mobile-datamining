@@ -41,7 +41,7 @@ let items = [
     value: function __addListener(listener) {
       const _listeners = this._listeners;
       _listeners.push(listener);
-    }
+    },
   },
   {
     key: "__removeListener",
@@ -49,7 +49,7 @@ let items = [
       closure_0 = arg0;
       const _listeners = this._listeners;
       this._listeners = _listeners.filter((arg0) => arg0 !== closure_0);
-    }
+    },
   },
   {
     key: "__attach",
@@ -83,7 +83,10 @@ let items = [
       if (nativeEvent) {
         nativeEvent = _argMapping[0].nativeEvent;
       }
-      __platformConfig(items[4])(nativeEvent, "Native driven events only support animated values contained inside `nativeEvent`.");
+      __platformConfig(items[4])(
+        nativeEvent,
+        "Native driven events only support animated values contained inside `nativeEvent`.",
+      );
       traverse(_argMapping[0].nativeEvent, []);
       const tmp = items;
       const tmp3 = __platformConfig(items[4]);
@@ -103,9 +106,9 @@ let items = [
               const result = API.removeAnimatedEventFromView(closure_4, closure_0, animatedValueTag.animatedValueTag);
             });
           }
-        }
+        },
       };
-    }
+    },
   },
   {
     key: "__detach",
@@ -115,141 +118,143 @@ let items = [
         const _attachedEvent = this._attachedEvent;
         _attachedEvent.detach();
       }
-    }
+    },
   },
   {
     key: "__getHandler",
     value: function __getHandler() {
       const self = this;
-      return this.__isNative ? this._callListeners : (() => {
-        const items = [...arguments];
-        function traverse(setValue, num) {
-          if (setValue instanceof traverse(closure_1_2[2])) {
-            if (typeof num === "number") {
-              setValue.setValue(num);
-            }
-          } else if (setValue instanceof traverse(closure_1_2[3])) {
-            if (typeof num === "object") {
-              traverse(setValue.x, num.x);
-              traverse(setValue.y, num.y);
-            }
-          } else if (typeof setValue === "object") {
-            for (const key10011 in arg0) {
-              let tmp4 = key10011;
-              let tmp5 = traverse;
-              let tmp6 = traverse(arg0[key10011], arg1[key10011]);
-              continue;
-            }
-          }
-        }
-        const _argMapping = items._argMapping;
-        const item = _argMapping.forEach((setValue) => {
-          const point = items[arg1];
-          if (setValue instanceof traverse(closure_1_2[2])) {
-            if (typeof point === "number") {
-              setValue.setValue(point);
-            }
-          } else if (setValue instanceof tmp2(tmp3[3])) {
-            if (typeof point === "object") {
-              const x = setValue.x;
-              const x2 = point.x;
-              if (x instanceof tmp2(tmp3[2])) {
-                if (typeof x2 === "number") {
-                  x.setValue(x2);
+      return this.__isNative
+        ? this._callListeners
+        : () => {
+            const items = [...arguments];
+            function traverse(setValue, num) {
+              if (setValue instanceof traverse(closure_1_2[2])) {
+                if (typeof num === "number") {
+                  setValue.setValue(num);
                 }
-              } else if (x instanceof tmp2(tmp3[3])) {
-                if (typeof x2 === "object") {
-                  traverse(x.x, x2.x);
-                  traverse(x.y, x2.y);
+              } else if (setValue instanceof traverse(closure_1_2[3])) {
+                if (typeof num === "object") {
+                  traverse(setValue.x, num.x);
+                  traverse(setValue.y, num.y);
                 }
-              } else if (typeof x === "object") {
-                for (const key10021 in x) {
-                  let tmp21 = key10021;
-                  let tmp22 = traverse;
-                  let tmp23 = traverse(x[key10021], x2[key10021]);
+              } else if (typeof setValue === "object") {
+                for (const key10011 in arg0) {
+                  let tmp4 = key10011;
+                  let tmp5 = traverse;
+                  let tmp6 = traverse(arg0[key10011], arg1[key10011]);
                   continue;
                 }
               }
-              const y = setValue.y;
-              const y2 = point.y;
-              if (y instanceof traverse(closure_1_2[2])) {
-                if (typeof y2 === "number") {
-                  y.setValue(y2);
-                }
-              } else if (y instanceof tmp5(tmp6[3])) {
-                if (typeof y2 === "object") {
-                  traverse(y.x, y2.x);
-                  traverse(y.y, y2.y);
-                }
-              } else if (typeof y === "object") {
-                for (const key10032 in y) {
-                  let tmp29 = key10032;
-                  let tmp30 = traverse;
-                  let tmp31 = traverse(y[key10032], y2[key10032]);
-                  continue;
-                }
-              }
-              tmp5 = traverse;
-              tmp6 = closure_1_2;
             }
-          } else if (typeof setValue === "object") {
-            for (const key10013 in arg0) {
-              let tmp8 = key10013;
-              let point2 = arg0[key10013];
-              let point3 = point[key10013];
-              let tmp9 = traverse;
-              let tmp10 = closure_1_2;
-              if (point2 instanceof traverse(closure_1_2[2])) {
-                if (typeof point3 !== "number") {
-                  continue;
-                } else {
-                  let setValueResult3 = point2.setValue(point3);
-                  continue;
+            const _argMapping = items._argMapping;
+            const item = _argMapping.forEach((setValue) => {
+              const point = items[arg1];
+              if (setValue instanceof traverse(closure_1_2[2])) {
+                if (typeof point === "number") {
+                  setValue.setValue(point);
                 }
-                continue;
-              } else {
-                if (point2 instanceof tmp9(tmp10[3])) {
-                  if (typeof point3 !== "object") {
-                    continue;
-                  } else {
-                    let tmp16 = traverse;
-                    let tmp17 = traverse(point2.x, point3.x);
-                    let tmp18 = traverse(point2.y, point3.y);
-                    continue;
+              } else if (setValue instanceof tmp2(tmp3[3])) {
+                if (typeof point === "object") {
+                  const x = setValue.x;
+                  const x2 = point.x;
+                  if (x instanceof tmp2(tmp3[2])) {
+                    if (typeof x2 === "number") {
+                      x.setValue(x2);
+                    }
+                  } else if (x instanceof tmp2(tmp3[3])) {
+                    if (typeof x2 === "object") {
+                      traverse(x.x, x2.x);
+                      traverse(x.y, x2.y);
+                    }
+                  } else if (typeof x === "object") {
+                    for (const key10021 in x) {
+                      let tmp21 = key10021;
+                      let tmp22 = traverse;
+                      let tmp23 = traverse(x[key10021], x2[key10021]);
+                      continue;
+                    }
                   }
-                  continue;
-                } else {
-                  if (typeof point2 !== "object") {
-                    continue;
-                  } else {
-                    let tmp11 = point2;
-                    let keys = Object.keys();
-                    if (keys === undefined) {
+                  const y = setValue.y;
+                  const y2 = point.y;
+                  if (y instanceof traverse(closure_1_2[2])) {
+                    if (typeof y2 === "number") {
+                      y.setValue(y2);
+                    }
+                  } else if (y instanceof tmp5(tmp6[3])) {
+                    if (typeof y2 === "object") {
+                      traverse(y.x, y2.x);
+                      traverse(y.y, y2.y);
+                    }
+                  } else if (typeof y === "object") {
+                    for (const key10032 in y) {
+                      let tmp29 = key10032;
+                      let tmp30 = traverse;
+                      let tmp31 = traverse(y[key10032], y2[key10032]);
+                      continue;
+                    }
+                  }
+                  tmp5 = traverse;
+                  tmp6 = closure_1_2;
+                }
+              } else if (typeof setValue === "object") {
+                for (const key10013 in arg0) {
+                  let tmp8 = key10013;
+                  let point2 = arg0[key10013];
+                  let point3 = point[key10013];
+                  let tmp9 = traverse;
+                  let tmp10 = closure_1_2;
+                  if (point2 instanceof traverse(closure_1_2[2])) {
+                    if (typeof point3 !== "number") {
                       continue;
                     } else {
-                      let tmp4 = keys[tmp];
-                      while (tmp4 !== undefined) {
-                        let tmp13 = tmp4;
-                        let tmp14 = traverse;
-                        let tmp15 = traverse(point2[tmp4], point3[tmp4]);
+                      let setValueResult3 = point2.setValue(point3);
+                      continue;
+                    }
+                    continue;
+                  } else {
+                    if (point2 instanceof tmp9(tmp10[3])) {
+                      if (typeof point3 !== "object") {
+                        continue;
+                      } else {
+                        let tmp16 = traverse;
+                        let tmp17 = traverse(point2.x, point3.x);
+                        let tmp18 = traverse(point2.y, point3.y);
                         continue;
                       }
+                      continue;
+                    } else {
+                      if (typeof point2 !== "object") {
+                        continue;
+                      } else {
+                        let tmp11 = point2;
+                        let keys = Object.keys();
+                        if (keys === undefined) {
+                          continue;
+                        } else {
+                          let tmp4 = keys[tmp];
+                          while (tmp4 !== undefined) {
+                            let tmp13 = tmp4;
+                            let tmp14 = traverse;
+                            let tmp15 = traverse(point2[tmp4], point3[tmp4]);
+                            continue;
+                          }
+                        }
+                        continue;
+                      }
+                      continue;
                     }
                     continue;
                   }
                   continue;
                 }
-                continue;
               }
-              continue;
-            }
-          }
-        });
-        const items1 = [...items];
-        items._callListeners.apply(items1);
-      });
-    }
-  }
+            });
+            const items1 = [...items];
+            items._callListeners.apply(items1);
+          };
+    },
+  },
 ];
 
 export const attachNativeEventImpl = function attachNativeEventImpl(current) {
@@ -279,7 +284,10 @@ export const attachNativeEventImpl = function attachNativeEventImpl(current) {
   if (nativeEvent) {
     nativeEvent = arg2[0].nativeEvent;
   }
-  importDefault(items[4])(nativeEvent, "Native driven events only support animated values contained inside `nativeEvent`.");
+  importDefault(items[4])(
+    nativeEvent,
+    "Native driven events only support animated values contained inside `nativeEvent`.",
+  );
   traverse(arg2[0].nativeEvent, []);
   let obj = AnimatedEvent(items[5]);
   const findNodeHandleResult = obj.findNodeHandle(current);
@@ -298,7 +306,7 @@ export const attachNativeEventImpl = function attachNativeEventImpl(current) {
           const result = API.removeAnimatedEventFromView(closure_4, closure_0, animatedValueTag.animatedValueTag);
         });
       }
-    }
+    },
   };
   return obj;
 };

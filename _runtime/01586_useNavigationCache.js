@@ -35,13 +35,9 @@ export const useNavigationCache = function useNavigationCache(getState) {
     const merged2 = Object.assign(tmp);
     const merged3 = Object.assign(reduced);
     obj.addListener = function addListener() {
-      return () => {
-
-      };
+      return () => {};
     };
-    obj.removeListener = function removeListener() {
-
-    };
+    obj.removeListener = function removeListener() {};
     obj.dispatch = dispatch;
     obj.getParent = function getParent(arg0) {
       if (undefined !== arg0) {
@@ -70,9 +66,7 @@ export const useNavigationCache = function useNavigationCache(getState) {
     if (ref.current[key.key]) {
       arg0[key.key] = tmp;
     } else {
-      function dispatch(arg0) {
-
-      }
+      function dispatch(arg0) {}
       function withStack(arg0) {
         arg0();
       }

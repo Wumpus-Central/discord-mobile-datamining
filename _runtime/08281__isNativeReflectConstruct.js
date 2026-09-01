@@ -26,8 +26,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 noopDefault;
 class FeColorMatrix {
@@ -58,7 +57,7 @@ let obj = {
     const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
-      }
+      },
     };
     const tmp = __INTERNAL_VIEW_CONFIGDefault;
     const merged = Object.assign(self(8279).extractFilter(this.props));
@@ -66,10 +65,14 @@ let obj = {
     const merged1 = Object.assign(self(8279).extractIn(this.props));
     const obj3 = self(8279);
     const merged2 = Object.assign(self(8279).extractFeColorMatrix(this.props));
-    return <tmp ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
-  }
+    return (
+      <tmp
+        ref={function ref(arg0) {
+          return self.refMethod(arg0);
+        }}
+      />
+    );
+  },
 };
 const items = [obj];
 const importDefaultResultResult = importDefaultResult(FeColorMatrix, items);

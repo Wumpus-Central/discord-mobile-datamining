@@ -20,7 +20,7 @@ const items = [
     value: function get(arg0) {
       Dimensions(38)(dependencyMap[arg0], `No dimension set for key ${arg0}`);
       return dependencyMap[arg0];
-    }
+    },
   },
   {
     key: "set",
@@ -49,15 +49,15 @@ const items = [
       } else {
         c5 = true;
       }
-    }
+    },
   },
   {
     key: "addEventListener",
     value: function addEventListener(arg0, arg1) {
-      Dimensions(38)("change" === arg0, "Trying to subscribe to unknown event: \"%s\"", arg0);
+      Dimensions(38)("change" === arg0, 'Trying to subscribe to unknown event: "%s"', arg0);
       return closure_4.addListener(arg0, arg1);
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(Dimensions, null, items);
 let obj = {
@@ -65,7 +65,7 @@ let obj = {
   value: function get(arg0) {
     Dimensions(38)(dependencyMap[arg0], `No dimension set for key ${arg0}`);
     return dependencyMap[arg0];
-  }
+  },
 };
 const tmp3 = new EventEmitterDefault();
 importDefaultResult1.addListener("didUpdateDimensions", (arg0) => {

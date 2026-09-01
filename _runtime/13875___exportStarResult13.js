@@ -19,7 +19,10 @@ export const ComputeExponent = function ComputeExponent(internalSlots, timesResu
     const _default = mod.default;
     const logResult = negatedResult.log(10);
     const tmp2 = require;
-    const result1 = __exportStarResult21.FormatNumericToString(internalSlots, negatedResult.times(mod.default.pow(10, -result)));
+    const result1 = __exportStarResult21.FormatNumericToString(
+      internalSlots,
+      negatedResult.times(mod.default.pow(10, -result)),
+    );
     const roundedNumber = result1.roundedNumber;
     if (roundedNumber.isZero()) {
       const items = [result, floorResult.toNumber()];
@@ -31,7 +34,10 @@ export const ComputeExponent = function ComputeExponent(internalSlots, timesResu
         const items1 = [result, floorResult.toNumber()];
         return items1;
       } else {
-        const items2 = [tmp2(13876).ComputeExponentForMagnitude(internalSlots, floorResult.plus(1)), floorResult.plus(1).toNumber()];
+        const items2 = [
+          tmp2(13876).ComputeExponentForMagnitude(internalSlots, floorResult.plus(1)),
+          floorResult.plus(1).toNumber(),
+        ];
         return items2;
       }
       floorResult1 = roundedNumber2.log(10).floor();

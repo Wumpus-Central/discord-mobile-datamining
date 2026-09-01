@@ -31,8 +31,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 let closure_3 = ["style", "opacity", "viewBox", "children", "onLayout", "preserveAspectRatio"];
 noopAll;
@@ -114,7 +113,22 @@ let items = [
       const merged1 = Object.assign(tmp);
       ({ width, height, focusable } = obj);
       let tmp10 = undefined === width;
-      ({ transform, font, fill, fillOpacity, fillRule, stroke, strokeWidth, strokeOpacity, strokeDasharray, strokeDashoffset, strokeLinecap, strokeLinejoin, strokeMiterlimit, position } = obj);
+      ({
+        transform,
+        font,
+        fill,
+        fillOpacity,
+        fillRule,
+        stroke,
+        strokeWidth,
+        strokeOpacity,
+        strokeDasharray,
+        strokeDashoffset,
+        strokeLinecap,
+        strokeLinejoin,
+        strokeMiterlimit,
+        position,
+      } = obj);
       if (tmp10) {
         tmp10 = undefined === height;
       }
@@ -203,10 +217,26 @@ let items = [
         return self.refMethod(arg0);
       };
       const merged4 = Object.assign(tmp21(8254)({ viewBox, preserveAspectRatio }));
-      obj.children = jsx(_isNativeReflectConstructDefault, { children, style: merged2, font, fill, fillOpacity, fillRule, stroke, strokeWidth, strokeOpacity, strokeDasharray, strokeDashoffset, strokeLinecap, strokeLinejoin, strokeMiterlimit, onLayout });
+      obj.children = jsx(_isNativeReflectConstructDefault, {
+        children,
+        style: merged2,
+        font,
+        fill,
+        fillOpacity,
+        fillRule,
+        stroke,
+        strokeWidth,
+        strokeOpacity,
+        strokeDasharray,
+        strokeDashoffset,
+        strokeLinecap,
+        strokeLinejoin,
+        strokeMiterlimit,
+        onLayout,
+      });
       return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(Svg, items);
 importDefaultResultResult.displayName = "Svg";

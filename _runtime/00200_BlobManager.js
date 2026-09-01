@@ -20,10 +20,10 @@ const items = [
     value: function createFromParts(arr, type) {
       _modDef38(BlobModuleDefault, "NativeBlobModule is available.");
       const replaced = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (arg0) => {
-        const tmp = 16 * Math.random() | 0;
+        const tmp = (16 * Math.random()) | 0;
         let str = tmp;
         if ("x" != arg0) {
-          str = 3 & tmp | 8;
+          str = (3 & tmp) | 8;
         }
         return str.toString(16);
       });
@@ -70,7 +70,7 @@ const items = [
       }
       obj[4] = lastModified;
       return BlobManager.createFromOptions(obj);
-    }
+    },
   },
   {
     key: "createFromOptions",
@@ -91,7 +91,7 @@ const items = [
         obj3 = BlobManager;
       }
       return Object.assign(obj, { data });
-    }
+    },
   },
   {
     key: "release",
@@ -105,7 +105,7 @@ const items = [
         BlobModuleDefault.release(arg0);
         const tmpResult = BlobModuleDefault;
       }
-    }
+    },
   },
   {
     key: "addNetworkingHandler",
@@ -113,7 +113,7 @@ const items = [
       _modDef38(BlobModuleDefault, "NativeBlobModule is available.");
       const tmp = _modDef38;
       BlobModuleDefault.addNetworkingHandler();
-    }
+    },
   },
   {
     key: "addWebSocketHandler",
@@ -121,7 +121,7 @@ const items = [
       _modDef38(BlobModuleDefault, "NativeBlobModule is available.");
       const tmp = _modDef38;
       BlobModuleDefault.addWebSocketHandler(arg0);
-    }
+    },
   },
   {
     key: "removeWebSocketHandler",
@@ -129,7 +129,7 @@ const items = [
       _modDef38(BlobModuleDefault, "NativeBlobModule is available.");
       const tmp = _modDef38;
       const result = BlobModuleDefault.removeWebSocketHandler(arg0);
-    }
+    },
   },
   {
     key: "sendOverSocket",
@@ -137,8 +137,8 @@ const items = [
       _modDef38(BlobModuleDefault, "NativeBlobModule is available.");
       const tmp = _modDef38;
       BlobModuleDefault.sendOverSocket(data.data, arg1);
-    }
-  }
+    },
+  },
 ];
 const tmp2 = _createClassDefault(BlobManager, null, items);
 tmp2.isAvailable = BlobModuleDefault;

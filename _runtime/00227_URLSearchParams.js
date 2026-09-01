@@ -18,7 +18,10 @@ class URLSearchParams {
         item = parts.forEach((str) => {
           if (str) {
             const parts = str.split("=");
-            const tmp2 = self(parts.map((str) => decodeURIComponent(str.replace(/\+/g, " "))), 2);
+            const tmp2 = self(
+              parts.map((str) => decodeURIComponent(str.replace(/\+/g, " "))),
+              2,
+            );
             self.append(tmp2[0], tmp2[1]);
           }
         });
@@ -46,7 +49,7 @@ let obj = {
   key: "size",
   get() {
     return this._searchParams.size;
-  }
+  },
 };
 let items = [
   obj,
@@ -63,14 +66,14 @@ let items = [
         const items = [arg1];
         const result = _searchParams2.set(arg0, items);
       }
-    }
+    },
   },
   {
     key: "delete",
     value: function _delete(arg0) {
       const _searchParams = this._searchParams;
       _searchParams.delete(arg0);
-    }
+    },
   },
   {
     key: "get",
@@ -82,7 +85,7 @@ let items = [
         first = value[0];
       }
       return first;
-    }
+    },
   },
   {
     key: "getAll",
@@ -93,14 +96,14 @@ let items = [
         items = [];
       }
       return items;
-    }
+    },
   },
   {
     key: "has",
     value: function has(arg0) {
       const _searchParams = this._searchParams;
       return _searchParams.has(arg0);
-    }
+    },
   },
   {
     key: "set",
@@ -108,14 +111,14 @@ let items = [
       const _searchParams = this._searchParams;
       const items = [arg1];
       const result = _searchParams.set(arg0, items);
-    }
+    },
   },
   {
     key: "keys",
     value: function keys() {
       const _searchParams = this._searchParams;
       return _searchParams.keys();
-    }
+    },
   },
   {
     key: "values",
@@ -232,7 +235,7 @@ let items = [
           }
         })();
       })(this._searchParams);
-    }
+    },
   },
   {
     key: "entries",
@@ -352,7 +355,7 @@ let items = [
                 c8 = 2;
                 closure_4 = tmp19;
                 let tmp21 = closure_2;
-                let items = [closure_2, ];
+                let items = [closure_2];
                 let tmp22 = closure_4;
                 items[1] = closure_4;
                 c9 = 3;
@@ -366,7 +369,7 @@ let items = [
           }
         })();
       })(this._searchParams);
-    }
+    },
   },
   {
     key: "forEach",
@@ -384,22 +387,23 @@ let items = [
         }
         continue;
       }
-    }
+    },
   },
   {
     key: "sort",
     value: function sort() {
       const _searchParams = this._searchParams;
       const items = [..._searchParams.entries()];
-      this._searchParams = new Map(items.sort((arg0, arg1) => {
-        [obj] = arg0;
-        [tmp] = arg1;
-        return obj.localeCompare(tmp);
-      }));
-    }
+      this._searchParams = new Map(
+        items.sort((arg0, arg1) => {
+          [obj] = arg0;
+          [tmp] = arg1;
+          return obj.localeCompare(tmp);
+        }),
+      );
+    },
   },
-,
-
+  ,
 ];
 obj = {
   key: Symbol.iterator,
@@ -420,7 +424,7 @@ obj = {
       continue;
     }
     return items[Symbol.iterator]();
-  }
+  },
 };
 items[12] = obj;
 items[13] = {
@@ -437,7 +441,7 @@ items[13] = {
       return mapped.join("&");
     });
     return mapped.join("&");
-  }
+  },
 };
 
 export const URLSearchParams = _createClassDefault(URLSearchParams, items);

@@ -92,7 +92,12 @@ class YearParser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 130, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", {
+            value: 130,
+            enumerable: true,
+            configurable: true,
+            writable: true,
+          });
         } else {
           num3 = 130;
           applyResult.priority = 130;
@@ -217,9 +222,12 @@ obj = {
     } else if ("yo" === arg1) {
       return _createSuperInternal(3880).mapValue(ordinalNumber.ordinalNumber(arg0, { unit: "year" }), valueCallback);
     } else {
-      return _createSuperInternal(3880).mapValue(_createSuperInternal(3880).parseNDigits(arg1.length, arg0), valueCallback);
+      return _createSuperInternal(3880).mapValue(
+        _createSuperInternal(3880).parseNDigits(arg1.length, arg0),
+        valueCallback,
+      );
     }
-  }
+  },
 };
 let items = [
   obj,
@@ -231,7 +239,7 @@ let items = [
         isTwoDigitYear = isTwoDigitYear.year > 0;
       }
       return isTwoDigitYear;
-    }
+    },
   },
   {
     key: "set",
@@ -251,8 +259,8 @@ let items = [
         }
         year = isTwoDigitYear.year;
       }
-    }
-  }
+    },
+  },
 ];
 if (0 < items.length) {
   do {

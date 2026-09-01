@@ -9,7 +9,7 @@ closure_0 = importDefaultResult((arg0) => {
   closure_0 = arg0;
   c5 = 0;
   c6 = 0;
-  const iter = (function*(arg0) {
+  const iter = (function* (arg0) {
     closure_4 = tmp2;
     sku = sku.sku;
     yield "PX_16";
@@ -28,7 +28,7 @@ closure_0 = importDefaultResult((arg0) => {
   closure_0 = arg0;
   c2 = 0;
   c3 = 0;
-  const iter = (function*(arg0) {
+  const iter = (function* (arg0) {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -83,7 +83,17 @@ closure_0 = importDefaultResult((arg0) => {
               str = "subscriptions";
             }
             const _HermesInternal = HermesInternal;
-            closure_5 = "https://androidpublisher.googleapis.com/androidpublisher/v3/applications/" + tmp31 + "/purchases/" + str + "/" + c1 + "/tokens/" + c2 + "?access_token=" + c3;
+            closure_5 =
+              "https://androidpublisher.googleapis.com/androidpublisher/v3/applications/" +
+              tmp31 +
+              "/purchases/" +
+              str +
+              "/" +
+              c1 +
+              "/tokens/" +
+              c2 +
+              "?access_token=" +
+              c3;
             const _fetch = fetch;
             const obj2 = { method: "GET", headers: null };
             obj2[1] = { "Content-Type": "application/json" };

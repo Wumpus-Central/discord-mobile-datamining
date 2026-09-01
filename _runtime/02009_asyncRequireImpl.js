@@ -39,7 +39,7 @@ function _asyncRequire() {
     closure_0 = arg0;
     closure_1 = arg1;
     c2 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c2 === 2) {
         c2 = 3;
         HermesBuiltin.throwTypeError();
@@ -121,11 +121,10 @@ asyncRequire.prefetch = (arg0, arg1, arg2) => {
     }
   }
   if (tmpResult != null) {
-    tmpResult.then(() => {
-
-    }, () => {
-
-    });
+    tmpResult.then(
+      () => {},
+      () => {},
+    );
   }
 };
 

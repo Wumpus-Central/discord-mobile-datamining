@@ -9,7 +9,7 @@ function _fetchText() {
   const tmp = callback((arg0) => {
     closure_0 = arg0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c1 === 2) {
         c1 = 3;
         HermesBuiltin.throwTypeError();
@@ -89,7 +89,7 @@ function _fetchUriData() {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       const _fetch = fetch;
       closure_1 = yield fetch(closure_0);
       if (!closure_1.ok) {

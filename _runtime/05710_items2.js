@@ -7,13 +7,52 @@ import set9 from "05716_set.js";
 import set10 from "05717_set.js";
 import set11 from "05718_set.js";
 
-const set = new Set(["enabled", "shouldCancelWhenOutside", "hitSlop", "activeCursor", "mouseButton", "testID", "cancelsTouchesInView", "cancelsJSResponder", "manualActivation"]);
-const items = [...set, "userSelect", "enableContextMenu", "touchAction", "dispatchesAnimatedEvents", "needsPointerData"];
+const set = new Set([
+  "enabled",
+  "shouldCancelWhenOutside",
+  "hitSlop",
+  "activeCursor",
+  "mouseButton",
+  "testID",
+  "cancelsTouchesInView",
+  "cancelsJSResponder",
+  "manualActivation",
+]);
+const items = [
+  ...set,
+  "userSelect",
+  "enableContextMenu",
+  "touchAction",
+  "dispatchesAnimatedEvents",
+  "needsPointerData",
+];
 const sum = tmp4 + 1;
 const sum1 = sum + 1;
 const set2 = new Set(items);
-const set3 = new Set(["onBegin", "onActivate", "onUpdate", "onDeactivate", "onFinalize", "onTouchesDown", "onTouchesMove", "onTouchesUp", "onTouchesCancel"]);
-const items1 = [...new Set(["simultaneousWith", "requireToFail", "block"]), "fillInDefaultValues", "changeEventCalculator", "disableReanimated", "shouldUseReanimatedDetector", "useAnimated", "runOnJS", "activeOffsetY", "failOffsetX", "failOffsetY", "activeOffsetX"];
+const set3 = new Set([
+  "onBegin",
+  "onActivate",
+  "onUpdate",
+  "onDeactivate",
+  "onFinalize",
+  "onTouchesDown",
+  "onTouchesMove",
+  "onTouchesUp",
+  "onTouchesCancel",
+]);
+const items1 = [
+  ...new Set(["simultaneousWith", "requireToFail", "block"]),
+  "fillInDefaultValues",
+  "changeEventCalculator",
+  "disableReanimated",
+  "shouldUseReanimatedDetector",
+  "useAnimated",
+  "runOnJS",
+  "activeOffsetY",
+  "failOffsetX",
+  "failOffsetY",
+  "activeOffsetX",
+];
 const sum2 = tmp8 + 1;
 const sum3 = sum2 + 1;
 const sum4 = sum3 + 1;
@@ -25,7 +64,7 @@ const set4 = new Set(items1);
 set2.delete("testID");
 set4.add("testID");
 const items2 = [ComposedGestureName.SingleGestureName.Pan, set6.PanNativeProperties];
-const items3 = [items2, , , , , ];
+const items3 = [items2, , , , ,];
 const items4 = [ComposedGestureName.SingleGestureName.Tap, set7.TapNativeProperties];
 items3[1] = items4;
 const items5 = [ComposedGestureName.SingleGestureName.Native, set8.NativeHandlerNativeProperties];

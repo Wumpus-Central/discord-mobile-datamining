@@ -33,6 +33,5 @@ arg5.captureError = function captureError(error, prompt_execution, arg2) {
       obj[0] = obj1;
       tmpResult.captureException(error, obj);
     }
-  } catch (err) {
-  }
+  } catch (err) {}
 };

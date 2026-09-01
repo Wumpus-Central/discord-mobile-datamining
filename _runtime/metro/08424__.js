@@ -10,7 +10,9 @@ obj.fontFamily = emptyFunction.string;
 obj.fontSize = emptyFunction.number;
 obj.fontStyle = emptyFunction.oneOf(["normal", "italic"]);
 obj.fontWeight = emptyFunction.oneOf(["normal", "bold", "100", "200", "300", "400", "500", "600", "700", "800", "900"]);
-obj.fontVariant = emptyFunction.arrayOf(emptyFunction.oneOf(["small-caps", "oldstyle-nums", "lining-nums", "tabular-nums", "proportional-nums"]));
+obj.fontVariant = emptyFunction.arrayOf(
+  emptyFunction.oneOf(["small-caps", "oldstyle-nums", "lining-nums", "tabular-nums", "proportional-nums"]),
+);
 obj = { width: emptyFunction.number, height: emptyFunction.number };
 obj.textShadowOffset = emptyFunction.shape(obj);
 obj.textShadowRadius = emptyFunction.number;

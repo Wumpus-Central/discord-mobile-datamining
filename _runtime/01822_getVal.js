@@ -20,13 +20,17 @@ function getVal(arg0, arg1, arg2, arg3, arg4, arg5) {
 }
 getVal.__closure = { Extrapolation: obj };
 getVal.__workletHash = 15103214376416;
-getVal.__initData = { code: "function getVal_Pnpm_interpolationTs1(type,coef,val,leftEdgeOutput,rightEdgeOutput,x){const{Extrapolation}=this.__closure;switch(type){case Extrapolation.IDENTITY:return x;case Extrapolation.CLAMP:if(coef*val<coef*leftEdgeOutput){return leftEdgeOutput;}return rightEdgeOutput;case Extrapolation.EXTEND:default:return val;}}" };
+getVal.__initData = {
+  code: "function getVal_Pnpm_interpolationTs1(type,coef,val,leftEdgeOutput,rightEdgeOutput,x){const{Extrapolation}=this.__closure;switch(type){case Extrapolation.IDENTITY:return x;case Extrapolation.CLAMP:if(coef*val<coef*leftEdgeOutput){return leftEdgeOutput;}return rightEdgeOutput;case Extrapolation.EXTEND:default:return val;}}",
+};
 function isExtrapolate(arg0) {
   return arg0 === obj.EXTEND || arg0 === obj.CLAMP || arg0 === obj.IDENTITY;
 }
 isExtrapolate.__closure = { Extrapolation: obj };
 isExtrapolate.__workletHash = 1560831703072;
-isExtrapolate.__initData = { code: "function isExtrapolate_Pnpm_interpolationTs2(value){const{Extrapolation}=this.__closure;return value===Extrapolation.EXTEND||value===Extrapolation.CLAMP||value===Extrapolation.IDENTITY;}" };
+isExtrapolate.__initData = {
+  code: "function isExtrapolate_Pnpm_interpolationTs2(value){const{Extrapolation}=this.__closure;return value===Extrapolation.EXTEND||value===Extrapolation.CLAMP||value===Extrapolation.IDENTITY;}",
+};
 function validateType(str) {
   obj = { extrapolateLeft: obj.EXTEND, extrapolateRight: obj.EXTEND };
   if (str) {
@@ -39,7 +43,9 @@ function validateType(str) {
         obj.extrapolateRight = str;
         return obj;
       } else {
-        const reanimatedError = new t.ReanimatedError("Unsupported value for \"interpolate\" \nSupported values: [\"extend\", \"clamp\", \"identity\", Extrapolatation.CLAMP, Extrapolatation.EXTEND, Extrapolatation.IDENTITY]\n Valid example:\n        interpolate(value, [inputRange], [outputRange], \"clamp\")");
+        const reanimatedError = new t.ReanimatedError(
+          'Unsupported value for "interpolate" \nSupported values: ["extend", "clamp", "identity", Extrapolatation.CLAMP, Extrapolatation.EXTEND, Extrapolatation.IDENTITY]\n Valid example:\n        interpolate(value, [inputRange], [outputRange], "clamp")',
+        );
         throw reanimatedError;
       }
       tmp15 = str === tmp.EXTEND || str === tmp.CLAMP || str === tmp.IDENTITY;
@@ -50,7 +56,8 @@ function validateType(str) {
           if (typeof isExtrapolate !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          const tmp5 = extrapolateRight === tmp.EXTEND || extrapolateRight === tmp.CLAMP || extrapolateRight === tmp.IDENTITY;
+          const tmp5 =
+            extrapolateRight === tmp.EXTEND || extrapolateRight === tmp.CLAMP || extrapolateRight === tmp.IDENTITY;
         }
         const _Object = Object;
         const merged = Object.assign(obj, str);
@@ -60,9 +67,12 @@ function validateType(str) {
         if (typeof isExtrapolate !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        const tmp3 = extrapolateLeft === tmp.EXTEND || extrapolateLeft === tmp.CLAMP || extrapolateLeft === tmp.IDENTITY;
+        const tmp3 =
+          extrapolateLeft === tmp.EXTEND || extrapolateLeft === tmp.CLAMP || extrapolateLeft === tmp.IDENTITY;
       }
-      const reanimatedError1 = new t.ReanimatedError("Unsupported value for \"interpolate\" \nSupported values: [\"extend\", \"clamp\", \"identity\", Extrapolatation.CLAMP, Extrapolatation.EXTEND, Extrapolatation.IDENTITY]\n Valid example:\n      interpolate(value, [inputRange], [outputRange], {\n        extrapolateLeft: Extrapolation.CLAMP,\n        extrapolateRight: Extrapolation.IDENTITY\n      }})");
+      const reanimatedError1 = new t.ReanimatedError(
+        'Unsupported value for "interpolate" \nSupported values: ["extend", "clamp", "identity", Extrapolatation.CLAMP, Extrapolatation.EXTEND, Extrapolatation.IDENTITY]\n Valid example:\n      interpolate(value, [inputRange], [outputRange], {\n        extrapolateLeft: Extrapolation.CLAMP,\n        extrapolateRight: Extrapolation.IDENTITY\n      }})',
+      );
       throw reanimatedError1;
     }
   } else {
@@ -71,14 +81,17 @@ function validateType(str) {
 }
 validateType.__closure = { Extrapolation: obj, isExtrapolate };
 validateType.__workletHash = 9722315466599;
-validateType.__initData = { code: "function validateType_Pnpm_interpolationTs3(type){const{Extrapolation,isExtrapolate}=this.__closure;const extrapolationConfig={extrapolateLeft:Extrapolation.EXTEND,extrapolateRight:Extrapolation.EXTEND};if(!type){return extrapolationConfig;}if(typeof type==='string'){if(!isExtrapolate(type)){throw new ReanimatedError(\"Unsupported value for \\\"interpolate\\\" \\nSupported values: [\\\"extend\\\", \\\"clamp\\\", \\\"identity\\\", Extrapolatation.CLAMP, Extrapolatation.EXTEND, Extrapolatation.IDENTITY]\\n Valid example:\\n        interpolate(value, [inputRange], [outputRange], \\\"clamp\\\")\");}extrapolationConfig.extrapolateLeft=type;extrapolationConfig.extrapolateRight=type;return extrapolationConfig;}if(type.extrapolateLeft&&!isExtrapolate(type.extrapolateLeft)||type.extrapolateRight&&!isExtrapolate(type.extrapolateRight)){throw new ReanimatedError(\"Unsupported value for \\\"interpolate\\\" \\nSupported values: [\\\"extend\\\", \\\"clamp\\\", \\\"identity\\\", Extrapolatation.CLAMP, Extrapolatation.EXTEND, Extrapolatation.IDENTITY]\\n Valid example:\\n      interpolate(value, [inputRange], [outputRange], {\\n        extrapolateLeft: Extrapolation.CLAMP,\\n        extrapolateRight: Extrapolation.IDENTITY\\n      }})\");}Object.assign(extrapolationConfig,type);return extrapolationConfig;}" };
+validateType.__initData = {
+  code: 'function validateType_Pnpm_interpolationTs3(type){const{Extrapolation,isExtrapolate}=this.__closure;const extrapolationConfig={extrapolateLeft:Extrapolation.EXTEND,extrapolateRight:Extrapolation.EXTEND};if(!type){return extrapolationConfig;}if(typeof type===\'string\'){if(!isExtrapolate(type)){throw new ReanimatedError("Unsupported value for \\"interpolate\\" \\nSupported values: [\\"extend\\", \\"clamp\\", \\"identity\\", Extrapolatation.CLAMP, Extrapolatation.EXTEND, Extrapolatation.IDENTITY]\\n Valid example:\\n        interpolate(value, [inputRange], [outputRange], \\"clamp\\")");}extrapolationConfig.extrapolateLeft=type;extrapolationConfig.extrapolateRight=type;return extrapolationConfig;}if(type.extrapolateLeft&&!isExtrapolate(type.extrapolateLeft)||type.extrapolateRight&&!isExtrapolate(type.extrapolateRight)){throw new ReanimatedError("Unsupported value for \\"interpolate\\" \\nSupported values: [\\"extend\\", \\"clamp\\", \\"identity\\", Extrapolatation.CLAMP, Extrapolatation.EXTEND, Extrapolatation.IDENTITY]\\n Valid example:\\n      interpolate(value, [inputRange], [outputRange], {\\n        extrapolateLeft: Extrapolation.CLAMP,\\n        extrapolateRight: Extrapolation.IDENTITY\\n      }})");}Object.assign(extrapolationConfig,type);return extrapolationConfig;}',
+};
 function internalInterpolate(arg0, arg1, extrapolateLeft) {
   ({ leftEdgeInput, rightEdgeInput, leftEdgeOutput, rightEdgeOutput } = arg1);
   if (rightEdgeInput - leftEdgeInput == 0) {
     return leftEdgeOutput;
   } else {
     let tmp10 = arg0;
-    const sum = leftEdgeOutput + (arg0 - leftEdgeInput) / (rightEdgeInput - leftEdgeInput) * (rightEdgeOutput - leftEdgeOutput);
+    const sum =
+      leftEdgeOutput + ((arg0 - leftEdgeInput) / (rightEdgeInput - leftEdgeInput)) * (rightEdgeOutput - leftEdgeOutput);
     let num = -1;
     if (rightEdgeOutput >= leftEdgeOutput) {
       num = 1;
@@ -124,7 +137,9 @@ function internalInterpolate(arg0, arg1, extrapolateLeft) {
 }
 internalInterpolate.__closure = { getVal };
 internalInterpolate.__workletHash = 16257995045856;
-internalInterpolate.__initData = { code: "function internalInterpolate_Pnpm_interpolationTs4(x,narrowedInput,extrapolationConfig){const{getVal}=this.__closure;const{leftEdgeInput:leftEdgeInput,rightEdgeInput:rightEdgeInput,leftEdgeOutput:leftEdgeOutput,rightEdgeOutput:rightEdgeOutput}=narrowedInput;if(rightEdgeInput-leftEdgeInput===0){return leftEdgeOutput;}const progress=(x-leftEdgeInput)/(rightEdgeInput-leftEdgeInput);const val=leftEdgeOutput+progress*(rightEdgeOutput-leftEdgeOutput);const coef=rightEdgeOutput>=leftEdgeOutput?1:-1;if(coef*val<coef*leftEdgeOutput){return getVal(extrapolationConfig.extrapolateLeft,coef,val,leftEdgeOutput,rightEdgeOutput,x);}else if(coef*val>coef*rightEdgeOutput){return getVal(extrapolationConfig.extrapolateRight,coef,val,leftEdgeOutput,rightEdgeOutput,x);}return val;}" };
+internalInterpolate.__initData = {
+  code: "function internalInterpolate_Pnpm_interpolationTs4(x,narrowedInput,extrapolationConfig){const{getVal}=this.__closure;const{leftEdgeInput:leftEdgeInput,rightEdgeInput:rightEdgeInput,leftEdgeOutput:leftEdgeOutput,rightEdgeOutput:rightEdgeOutput}=narrowedInput;if(rightEdgeInput-leftEdgeInput===0){return leftEdgeOutput;}const progress=(x-leftEdgeInput)/(rightEdgeInput-leftEdgeInput);const val=leftEdgeOutput+progress*(rightEdgeOutput-leftEdgeOutput);const coef=rightEdgeOutput>=leftEdgeOutput?1:-1;if(coef*val<coef*leftEdgeOutput){return getVal(extrapolationConfig.extrapolateLeft,coef,val,leftEdgeOutput,rightEdgeOutput,x);}else if(coef*val>coef*rightEdgeOutput){return getVal(extrapolationConfig.extrapolateRight,coef,val,leftEdgeOutput,rightEdgeOutput,x);}return val;}",
+};
 function interpolate(arg0, arg1, arg2, arg3) {
   if (arg1.length >= 2) {
     if (arg2.length >= 2) {
@@ -154,18 +169,24 @@ function interpolate(arg0, arg1, arg2, arg3) {
       return internalInterpolate(arg0, obj, validateType(arg3));
     }
   }
-  const reanimatedError = new t.ReanimatedError("Interpolation input and output ranges should contain at least two values.");
+  const reanimatedError = new t.ReanimatedError(
+    "Interpolation input and output ranges should contain at least two values.",
+  );
   throw reanimatedError;
 }
 interpolate.__closure = { validateType, internalInterpolate };
 interpolate.__workletHash = 16263308339935;
-interpolate.__initData = { code: "function interpolate_Pnpm_interpolationTs5(x,inputRange,outputRange,type){const{validateType,internalInterpolate}=this.__closure;if(inputRange.length<2||outputRange.length<2){throw new ReanimatedError('Interpolation input and output ranges should contain at least two values.');}const extrapolationConfig=validateType(type);const length=inputRange.length;const narrowedInput={leftEdgeInput:inputRange[0],rightEdgeInput:inputRange[1],leftEdgeOutput:outputRange[0],rightEdgeOutput:outputRange[1]};if(length>2){if(x>inputRange[length-1]){narrowedInput.leftEdgeInput=inputRange[length-2];narrowedInput.rightEdgeInput=inputRange[length-1];narrowedInput.leftEdgeOutput=outputRange[length-2];narrowedInput.rightEdgeOutput=outputRange[length-1];}else{for(let i=1;i<length;++i){if(x<=inputRange[i]){narrowedInput.leftEdgeInput=inputRange[i-1];narrowedInput.rightEdgeInput=inputRange[i];narrowedInput.leftEdgeOutput=outputRange[i-1];narrowedInput.rightEdgeOutput=outputRange[i];break;}}}}return internalInterpolate(x,narrowedInput,extrapolationConfig);}" };
+interpolate.__initData = {
+  code: "function interpolate_Pnpm_interpolationTs5(x,inputRange,outputRange,type){const{validateType,internalInterpolate}=this.__closure;if(inputRange.length<2||outputRange.length<2){throw new ReanimatedError('Interpolation input and output ranges should contain at least two values.');}const extrapolationConfig=validateType(type);const length=inputRange.length;const narrowedInput={leftEdgeInput:inputRange[0],rightEdgeInput:inputRange[1],leftEdgeOutput:outputRange[0],rightEdgeOutput:outputRange[1]};if(length>2){if(x>inputRange[length-1]){narrowedInput.leftEdgeInput=inputRange[length-2];narrowedInput.rightEdgeInput=inputRange[length-1];narrowedInput.leftEdgeOutput=outputRange[length-2];narrowedInput.rightEdgeOutput=outputRange[length-1];}else{for(let i=1;i<length;++i){if(x<=inputRange[i]){narrowedInput.leftEdgeInput=inputRange[i-1];narrowedInput.rightEdgeInput=inputRange[i];narrowedInput.leftEdgeOutput=outputRange[i-1];narrowedInput.rightEdgeOutput=outputRange[i];break;}}}}return internalInterpolate(x,narrowedInput,extrapolationConfig);}",
+};
 function clamp(arg0, arg1, arg2) {
   return Math.min(Math.max(arg0, arg1), arg2);
 }
 clamp.__closure = {};
 clamp.__workletHash = 13846341562950;
-clamp.__initData = { code: "function clamp_Pnpm_interpolationTs6(value,min,max){return Math.min(Math.max(value,min),max);}" };
+clamp.__initData = {
+  code: "function clamp_Pnpm_interpolationTs6(value,min,max){return Math.min(Math.max(value,min),max);}",
+};
 arg5.Extrapolation = obj;
 arg5.interpolate = interpolate;
 arg5.clamp = clamp;

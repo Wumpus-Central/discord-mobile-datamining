@@ -38,7 +38,13 @@ arg5.sampleSpan = function sampleSpan(tracesSampler, parentSampled) {
         const json = JSON.stringify(tracesSampleRate);
         const _JSON2 = JSON;
         const _HermesInternal2 = HermesInternal;
-        debug3.warn("[Tracing] Discarding root span because of invalid sample rate. Sample rate must be a boolean or a number between 0 and 1. Got " + json + " of type " + JSON.stringify(typeof tracesSampleRate) + ".");
+        debug3.warn(
+          "[Tracing] Discarding root span because of invalid sample rate. Sample rate must be a boolean or a number between 0 and 1. Got " +
+            json +
+            " of type " +
+            JSON.stringify(typeof tracesSampleRate) +
+            ".",
+        );
       }
       const items = [false];
       return items;
@@ -48,7 +54,11 @@ arg5.sampleSpan = function sampleSpan(tracesSampler, parentSampled) {
           const debug2 = tmp(824).debug;
           let _Number = Number;
           const _HermesInternal = HermesInternal;
-          debug2.log("[Tracing] Discarding transaction because it's not included in the random sample (sampling rate = " + Number(tracesSampleRate) + ")");
+          debug2.log(
+            "[Tracing] Discarding transaction because it's not included in the random sample (sampling rate = " +
+              Number(tracesSampleRate) +
+              ")",
+          );
         }
       }
       const items1 = [arg2 < parseSampleRateResult, parseSampleRateResult, flag2];

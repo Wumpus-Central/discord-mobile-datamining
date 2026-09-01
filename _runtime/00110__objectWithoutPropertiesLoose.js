@@ -29,4 +29,4 @@ export default function _objectWithoutPropertiesLoose(obj, arr) {
     }
     return obj;
   }
-};
+}

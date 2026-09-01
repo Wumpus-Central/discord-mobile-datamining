@@ -32,5 +32,5 @@ arg5.uiProfiler = {
       const debug = tmp(817).debug;
       debug.warn("No Sentry client available, profiling is not started");
     }
-  }
+  },
 };

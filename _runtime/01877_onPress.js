@@ -8,7 +8,10 @@ const require = arg1;
 noopDefault;
 ({ useCallback: c3, useMemo: c4 } = noop);
 ({ StyleSheet, Text: c5 } = get_ActivityIndicator);
-const styles = StyleSheet.create({ doneButton: { fontWeight: "600", fontSize: 15 }, doneButtonContainer: { marginRight: 16, marginLeft: 8 } });
+const styles = StyleSheet.create({
+  doneButton: { fontWeight: "600", fontSize: 15 },
+  doneButtonContainer: { marginRight: 16, marginLeft: 8 },
+});
 
 export default function _default(rippleRadius) {
   ({ children, onPress } = rippleRadius);
@@ -28,7 +31,16 @@ export default function _default(rippleRadius) {
   let items = [keyboardState, theme];
   const items1 = [onPress];
   const obj2 = onPress(theme[5]);
-  obj = { accessibilityHint: "Closes the keyboard", accessibilityLabel: "Done", rippleRadius: num, style: doneButtonContainer.doneButtonContainer, testID: null, theme: null, onPress: null, children: null };
+  obj = {
+    accessibilityHint: "Closes the keyboard",
+    accessibilityLabel: "Done",
+    rippleRadius: num,
+    style: doneButtonContainer.doneButtonContainer,
+    testID: null,
+    theme: null,
+    onPress: null,
+    children: null,
+  };
   const tmp4 = callback2(() => {
     const items = [closure_1_7.doneButton, { color: theme[keyboardState].primary }];
     return items;
@@ -52,6 +64,14 @@ export default function _default(rippleRadius) {
     children = "Done";
   }
   obj[2] = children;
-  obj[7] = <closure_5 maxFontSizeMultiplier={1.3} style={tmp4}>{null}</closure_5>;
-  return <button maxFontSizeMultiplier={1.3} style={tmp4}>{null}</button>;
-};
+  obj[7] = (
+    <closure_5 maxFontSizeMultiplier={1.3} style={tmp4}>
+      {null}
+    </closure_5>
+  );
+  return (
+    <button maxFontSizeMultiplier={1.3} style={tmp4}>
+      {null}
+    </button>
+  );
+}

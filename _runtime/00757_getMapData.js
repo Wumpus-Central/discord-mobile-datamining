@@ -1,7 +1,6 @@
 // _runtime/00757_getMapData.js
 import isKeyable from "00758_isKeyable.js";
 
-
 export default function getMapData(__data__, str) {
   __data__ = __data__.__data__;
   if (isKeyable(str)) {
@@ -14,4 +13,4 @@ export default function getMapData(__data__, str) {
     map = __data__.map;
   }
   return map;
-};
+}

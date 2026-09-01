@@ -10,9 +10,7 @@ if (LogBox != null) {
   }
 }
 if (fn == null) {
-  fn = () => {
-
-  };
+  fn = () => {};
 }
 
 export const addLogBoxLog = fn;

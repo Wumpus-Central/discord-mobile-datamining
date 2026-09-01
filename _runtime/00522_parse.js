@@ -8,8 +8,8 @@ arg5.default = function parse(arr) {
     const _parseInt = parseInt;
     const parsed = parseInt(arr.slice(0, 8), 16);
     uint8Array[0] = parsed >>> 24;
-    uint8Array[1] = parsed >>> 16 & 255;
-    uint8Array[2] = parsed >>> 8 & 255;
+    uint8Array[1] = (parsed >>> 16) & 255;
+    uint8Array[2] = (parsed >>> 8) & 255;
     uint8Array[3] = 255 & parsed;
     const _parseInt2 = parseInt;
     const parsed1 = parseInt(arr.slice(9, 13), 16);
@@ -25,11 +25,11 @@ arg5.default = function parse(arr) {
     uint8Array[9] = 255 & parsed3;
     const _parseInt5 = parseInt;
     const parsed4 = parseInt(arr.slice(24, 36), 16);
-    uint8Array[10] = parsed4 / 1099511627776 & 255;
-    uint8Array[11] = parsed4 / 4294967296 & 255;
-    uint8Array[12] = parsed4 >>> 24 & 255;
-    uint8Array[13] = parsed4 >>> 16 & 255;
-    uint8Array[14] = parsed4 >>> 8 & 255;
+    uint8Array[10] = (parsed4 / 1099511627776) & 255;
+    uint8Array[11] = (parsed4 / 4294967296) & 255;
+    uint8Array[12] = (parsed4 >>> 24) & 255;
+    uint8Array[13] = (parsed4 >>> 16) & 255;
+    uint8Array[14] = (parsed4 >>> 8) & 255;
     uint8Array[15] = 255 & parsed4;
     return uint8Array;
   } else {

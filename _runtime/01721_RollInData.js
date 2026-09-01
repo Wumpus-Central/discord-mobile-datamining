@@ -1,7 +1,10 @@
 // _runtime/01721_RollInData.js
 import convertAnimationObjectToKeyframes from "01711_convertAnimationObjectToKeyframes.js";
 
-obj = { RollInLeft: { name: "RollInLeft", style: obj, duration: 0.3 }, RollInRight: { name: "RollInRight", style: obj, duration: 0.3 } };
+obj = {
+  RollInLeft: { name: "RollInLeft", style: obj, duration: 0.3 },
+  RollInRight: { name: "RollInRight", style: obj, duration: 0.3 },
+};
 obj = { 0: { transform: items }, 100: null };
 items = [{ translateX: "-100vw", rotate: "-180deg" }];
 const items1 = [{ translateX: "0vw", rotate: "0deg" }];
@@ -10,7 +13,10 @@ obj = { 0: { transform: items2 }, 100: null };
 items2 = [{ translateX: "100vw", rotate: "180deg" }];
 const items3 = [{ translateX: "0vw", rotate: "0deg" }];
 obj[100] = { transform: items3 };
-const obj1 = { RollOutLeft: { name: "RollOutLeft", style: obj2, duration: 0.3 }, RollOutRight: { name: "RollOutRight", style: obj3, duration: 0.3 } };
+const obj1 = {
+  RollOutLeft: { name: "RollOutLeft", style: obj2, duration: 0.3 },
+  RollOutRight: { name: "RollOutRight", style: obj3, duration: 0.3 },
+};
 obj2 = { 0: { transform: items4 }, 100: null };
 items4 = [{ translateX: "0vw", rotate: "0deg" }];
 const items5 = [{ translateX: "-100vw", rotate: "-180deg" }];

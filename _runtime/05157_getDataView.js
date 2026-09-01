@@ -69,7 +69,7 @@ arg5.getUnicodeStringFromDataView = function getUnicodeStringFromDataView(byteLe
 };
 arg5.getPascalStringFromDataView = function getPascalStringFromDataView(getUint8, sum1) {
   const uint8 = getUint8.getUint8(sum1);
-  const items = [uint8, ];
+  const items = [uint8];
   const sum = sum1 + 1;
   const items1 = [];
   if (0 < uint8) {
@@ -125,7 +125,7 @@ arg5.deferInit = function deferInit(Compression, base64, arg2) {
       return Compression[closure_1];
     },
     configurable: true,
-    enumerable: true
+    enumerable: true,
   });
 };
 arg5.getBase64Image = function getBase64Image(image) {

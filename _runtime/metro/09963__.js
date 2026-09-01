@@ -18,7 +18,7 @@ const obj = {
       do {
         let tmp6 = obj;
         let bCHDigit1 = obj.getBCHDigit(tmp4);
-        let tmp8 = tmp4 ^ obj.G15 << bCHDigit1 - obj.getBCHDigit(obj.G15);
+        let tmp8 = tmp4 ^ (obj.G15 << (bCHDigit1 - obj.getBCHDigit(obj.G15)));
         let bCHDigit2 = obj.getBCHDigit(tmp8);
         tmp4 = tmp8;
         tmp5 = tmp8;
@@ -26,7 +26,7 @@ const obj = {
         diff = bCHDigit2 - obj.getBCHDigit(obj.G15);
       } while (diff >= 0);
     }
-    return (arg0 << 10 | tmp5) ^ tmp2.G15_MASK;
+    return ((arg0 << 10) | tmp5) ^ tmp2.G15_MASK;
   },
   getBCHTypeNumber(typeNumber) {
     let diff;
@@ -37,14 +37,14 @@ const obj = {
       do {
         let tmp5 = obj;
         let bCHDigit1 = obj.getBCHDigit(tmp3);
-        let tmp7 = tmp3 ^ obj.G18 << bCHDigit1 - obj.getBCHDigit(obj.G18);
+        let tmp7 = tmp3 ^ (obj.G18 << (bCHDigit1 - obj.getBCHDigit(obj.G18)));
         let bCHDigit2 = obj.getBCHDigit(tmp7);
         tmp3 = tmp7;
         tmp4 = tmp7;
         diff = bCHDigit2 - obj.getBCHDigit(obj.G18);
       } while (diff >= 0);
     }
-    return typeNumber << 12 | tmp4;
+    return (typeNumber << 12) | tmp4;
   },
   getBCHDigit(G15) {
     let tmp = G15;
@@ -77,11 +77,11 @@ const obj = {
       const rounded = Math.floor(arg1 / 2);
       return (rounded + Math.floor(diff3 / 3)) % 2 === 0;
     } else if (5 === arg0) {
-      return arg1 * diff3 % 2 + arg1 * diff3 % 3 === 0;
+      return ((arg1 * diff3) % 2) + ((arg1 * diff3) % 3) === 0;
     } else if (6 === arg0) {
-      return (arg1 * diff3 % 2 + arg1 * diff3 % 3) % 2 === 0;
+      return (((arg1 * diff3) % 2) + ((arg1 * diff3) % 3)) % 2 === 0;
     } else if (7 === arg0) {
-      return (arg1 * diff3 % 3 + (arg1 + diff3) % 2) % 2 === 0;
+      return (((arg1 * diff3) % 3) + ((arg1 + diff3) % 2)) % 2 === 0;
     } else {
       const _Error = Error;
       error = new Error("bad maskPattern:" + arg0);
@@ -408,9 +408,50 @@ const obj = {
         num17 = tmp56;
       } while (num16 < moduleCount);
     }
-    return tmp46 + 10 * (Math.abs(100 * num17 / moduleCount / moduleCount - 50) / 5);
-  }
+    return tmp46 + 10 * (Math.abs((100 * num17) / moduleCount / moduleCount - 50) / 5);
+  },
 };
-items = [[], [6, 18], [6, 22], [6, 26], [6, 30], [6, 34], [6, 22, 38], [6, 24, 42], [6, 26, 46], [6, 28, 50], [6, 30, 54], [6, 32, 58], [6, 34, 62], [6, 26, 46, 66], [6, 26, 48, 70], [6, 26, 50, 74], [6, 30, 54, 78], [6, 30, 56, 82], [6, 30, 58, 86], [6, 34, 62, 90], [6, 28, 50, 72, 94], [6, 26, 50, 74, 98], [6, 30, 54, 78, 102], [6, 28, 54, 80, 106], [6, 32, 58, 84, 110], [6, 30, 58, 86, 114], [6, 34, 62, 90, 118], [6, 26, 50, 74, 98, 122], [6, 30, 54, 78, 102, 126], [6, 26, 52, 78, 104, 130], [6, 30, 56, 82, 108, 134], [6, 34, 60, 86, 112, 138], [6, 30, 58, 86, 114, 142], [6, 34, 62, 90, 118, 146], [6, 30, 54, 78, 102, 126, 150], [6, 24, 50, 76, 102, 128, 154], [6, 28, 54, 80, 106, 132, 158], [6, 32, 58, 84, 110, 136, 162], [6, 26, 54, 82, 110, 138, 166], [6, 30, 58, 86, 114, 142, 170]];
+items = [
+  [],
+  [6, 18],
+  [6, 22],
+  [6, 26],
+  [6, 30],
+  [6, 34],
+  [6, 22, 38],
+  [6, 24, 42],
+  [6, 26, 46],
+  [6, 28, 50],
+  [6, 30, 54],
+  [6, 32, 58],
+  [6, 34, 62],
+  [6, 26, 46, 66],
+  [6, 26, 48, 70],
+  [6, 26, 50, 74],
+  [6, 30, 54, 78],
+  [6, 30, 56, 82],
+  [6, 30, 58, 86],
+  [6, 34, 62, 90],
+  [6, 28, 50, 72, 94],
+  [6, 26, 50, 74, 98],
+  [6, 30, 54, 78, 102],
+  [6, 28, 54, 80, 106],
+  [6, 32, 58, 84, 110],
+  [6, 30, 58, 86, 114],
+  [6, 34, 62, 90, 118],
+  [6, 26, 50, 74, 98, 122],
+  [6, 30, 54, 78, 102, 126],
+  [6, 26, 52, 78, 104, 130],
+  [6, 30, 56, 82, 108, 134],
+  [6, 34, 60, 86, 112, 138],
+  [6, 30, 58, 86, 114, 142],
+  [6, 34, 62, 90, 118, 146],
+  [6, 30, 54, 78, 102, 126, 150],
+  [6, 24, 50, 76, 102, 128, 154],
+  [6, 28, 54, 80, 106, 132, 158],
+  [6, 32, 58, 84, 110, 136, 162],
+  [6, 26, 54, 82, 110, 138, 166],
+  [6, 30, 58, 86, 114, 142, 170],
+];
 
 export default obj;

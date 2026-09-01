@@ -11,5 +11,5 @@ globalThis.IntlMessageFormat.__addLocaleData({
       str2 = str;
     }
     return str2;
-  }
+  },
 });

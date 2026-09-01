@@ -32,5 +32,5 @@ arg5.default = {
   },
   cancel() {
     module(497).cancel();
-  }
+  },
 };

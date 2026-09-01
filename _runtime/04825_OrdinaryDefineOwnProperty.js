@@ -1,7 +1,6 @@
 // _runtime/04825_OrdinaryDefineOwnProperty.js
 import isObject from "04762_isObject.js";
 
-
 export default function OrdinaryDefineOwnProperty(arg0, arg1, __Writable__) {
   if (isObject(arg0)) {
     if (tmp(4809)(arg1)) {
@@ -17,7 +16,11 @@ export default function OrdinaryDefineOwnProperty(arg0, arg1, __Writable__) {
           const tmp28 = new tmp(562)("This environment does not support accessor property descriptors.");
           throw tmp28;
         } else {
-          let tmp17 = !(arg1 in arg0) && __Writable__["[[Writable]]"] && __Writable__["[[Enumerable]]"] && __Writable__["[[Configurable]]"];
+          let tmp17 =
+            !(arg1 in arg0) &&
+            __Writable__["[[Writable]]"] &&
+            __Writable__["[[Enumerable]]"] &&
+            __Writable__["[[Configurable]]"];
           if (tmp17) {
             tmp17 = "[[Value]]" in __Writable__;
           }
@@ -39,7 +42,9 @@ export default function OrdinaryDefineOwnProperty(arg0, arg1, __Writable__) {
           }
           if (!tmp17) {
             if (!tmp18) {
-              const tmp24 = new tmp(562)("This environment does not support defining non-writable, non-enumerable, or non-configurable properties");
+              const tmp24 = new tmp(562)(
+                "This environment does not support defining non-writable, non-enumerable, or non-configurable properties",
+              );
               throw tmp24;
             }
           }
@@ -58,4 +63,4 @@ export default function OrdinaryDefineOwnProperty(arg0, arg1, __Writable__) {
     const tmp5 = new tmp(541)("Assertion failed: O must be an Object");
     throw tmp5;
   }
-};
+}

@@ -127,7 +127,18 @@ arg5.makeSession = function makeSession(arg0) {
     errors: 0,
     ignoreDuration: false,
     toJSON() {
-      obj = { sid: "" + obj.sid, init: obj.init, started: new Date(1000 * obj.started).toISOString(), timestamp: null, status: null, errors: null, did: null, duration: null, abnormal_mechanism: null, attrs: null };
+      obj = {
+        sid: "" + obj.sid,
+        init: obj.init,
+        started: new Date(1000 * obj.started).toISOString(),
+        timestamp: null,
+        status: null,
+        errors: null,
+        did: null,
+        duration: null,
+        abnormal_mechanism: null,
+        attrs: null,
+      };
       const date = new Date(1000 * obj.started);
       obj[3] = new Date(1000 * obj.timestamp).toISOString();
       ({ status: obj[4], errors: obj[5] } = obj);
@@ -137,9 +148,14 @@ arg5.makeSession = function makeSession(arg0) {
       }
       obj[6] = combined;
       ({ duration: obj[7], abnormal_mechanism: obj[8] } = obj);
-      obj[9] = { release: obj.release, environment: obj.environment, ip_address: obj.ipAddress, user_agent: obj.userAgent };
+      obj[9] = {
+        release: obj.release,
+        environment: obj.environment,
+        ip_address: obj.ipAddress,
+        user_agent: obj.userAgent,
+      };
       return obj;
-    }
+    },
   };
   if (arg0) {
     updateSession(obj, arg0);

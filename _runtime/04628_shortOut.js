@@ -18,4 +18,4 @@ export default function shortOut(arg0) {
     }
     return callback(...arguments);
   };
-};
+}

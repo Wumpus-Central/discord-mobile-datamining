@@ -1,7 +1,6 @@
 // _runtime/00753_listCacheGet.js
 import assocIndexOf from "00751_assocIndexOf.js";
 
-
 export default function listCacheGet(arg0) {
   const __data__ = this.__data__;
   const tmp = assocIndexOf(__data__, arg0);
@@ -10,4 +9,4 @@ export default function listCacheGet(arg0) {
     tmp2 = __data__[tmp][1];
   }
   return tmp2;
-};
+}

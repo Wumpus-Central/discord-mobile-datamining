@@ -35,5 +35,29 @@ arg5.getRandomNumber = () => {
   return Math.floor(random * Math.floor(random1 * Date.now()));
 };
 arg5.warnUnimplementedFilter = () => {
-  module(4874)(true, "Some of the used filters are not yet supported on native platforms. Please check the USAGE.md for more info. Not implemented filters:\n", JSON.stringify(["FeComponentTransfer", "FeConvolveMatrix", "FeDiffuseLighting", "FeDisplacementMap", "FeFuncA", "FeFuncB", "FeFuncG", "FeFuncR", "FeImage", "FeMorphology", "FePointLight", "FeSpecularLighting", "FeSpotLight", "FeTile", "FeTurbulence"], null, 2));
+  module(4874)(
+    true,
+    "Some of the used filters are not yet supported on native platforms. Please check the USAGE.md for more info. Not implemented filters:\n",
+    JSON.stringify(
+      [
+        "FeComponentTransfer",
+        "FeConvolveMatrix",
+        "FeDiffuseLighting",
+        "FeDisplacementMap",
+        "FeFuncA",
+        "FeFuncB",
+        "FeFuncG",
+        "FeFuncR",
+        "FeImage",
+        "FeMorphology",
+        "FePointLight",
+        "FeSpecularLighting",
+        "FeSpotLight",
+        "FeTile",
+        "FeTurbulence",
+      ],
+      null,
+      2,
+    ),
+  );
 };

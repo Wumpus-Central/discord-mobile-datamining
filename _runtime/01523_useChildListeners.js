@@ -1,7 +1,6 @@
 // _runtime/01523_useChildListeners.js
 import closure_0 from "00019_noop.js";
 
-
 export const useChildListeners = function useChildListeners() {
   current = current.useRef({ action: [], focus: [] }).current;
   const items = [current];
@@ -25,6 +24,6 @@ export const useChildListeners = function useChildListeners() {
           const arr2 = table[tmp2];
         }
       };
-    }, items)
+    }, items),
   };
 };

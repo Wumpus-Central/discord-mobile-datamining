@@ -381,5 +381,5 @@ arg5.default = {
   },
   YResolution(arg0) {
     return "" + Math.round(arg0[0] / arg0[1]);
-  }
+  },
 };

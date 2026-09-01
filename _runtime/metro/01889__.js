@@ -16,6 +16,12 @@ export default function _default(children) {
     tmp = enabled;
   }
   let obj = useResizeMode;
-  obj = { enabled: tmp, children: <closure_3 style={{ opacity: obj.useKeyboardAnimation().progress }}>{arg0.children}</closure_3> };
-  return jsx(KeyboardAvoidingView.KeyboardStickyView, { enabled: tmp, children: <closure_3 style={{ opacity: obj.useKeyboardAnimation().progress }}>{arg0.children}</closure_3> });
-};
+  obj = {
+    enabled: tmp,
+    children: <closure_3 style={{ opacity: obj.useKeyboardAnimation().progress }}>{arg0.children}</closure_3>,
+  };
+  return jsx(KeyboardAvoidingView.KeyboardStickyView, {
+    enabled: tmp,
+    children: <closure_3 style={{ opacity: obj.useKeyboardAnimation().progress }}>{arg0.children}</closure_3>,
+  });
+}

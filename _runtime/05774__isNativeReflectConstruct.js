@@ -22,8 +22,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 function changeEventCalculator(translationX, translationX2) {
   if (undefined === translationX2) {
@@ -41,7 +40,9 @@ function changeEventCalculator(translationX, translationX2) {
 }
 changeEventCalculator.__closure = {};
 changeEventCalculator.__workletHash = 1947784830943;
-changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_panGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={changeX:current.translationX,changeY:current.translationY};}else{changePayload={changeX:current.translationX-previous.translationX,changeY:current.translationY-previous.translationY};}return{...current,...changePayload};}" };
+changeEventCalculator.__initData = {
+  code: "function changeEventCalculator_Pnpm_panGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={changeX:current.translationX,changeY:current.translationY};}else{changePayload={changeX:current.translationX-previous.translationX,changeY:current.translationY-previous.translationY};}return{...current,...changePayload};}",
+};
 class PanGesture {
   constructor() {
     self = this;
@@ -76,7 +77,7 @@ let items = [
         self.config.activeOffsetYEnd = items;
       }
       return self;
-    }
+    },
   },
   {
     key: "activeOffsetX",
@@ -90,7 +91,7 @@ let items = [
         self.config.activeOffsetXEnd = items;
       }
       return self;
-    }
+    },
   },
   {
     key: "failOffsetY",
@@ -104,7 +105,7 @@ let items = [
         self.config.failOffsetYEnd = GestureDetector;
       }
       return self;
-    }
+    },
   },
   {
     key: "failOffsetX",
@@ -118,70 +119,70 @@ let items = [
         self.config.failOffsetXEnd = items1;
       }
       return self;
-    }
+    },
   },
   {
     key: "minPointers",
     value: function minPointers(minPointers) {
       this.config.minPointers = minPointers;
       return this;
-    }
+    },
   },
   {
     key: "maxPointers",
     value: function maxPointers(maxPointers) {
       this.config.maxPointers = maxPointers;
       return this;
-    }
+    },
   },
   {
     key: "minDistance",
     value: function minDistance(minDist) {
       this.config.minDist = minDist;
       return this;
-    }
+    },
   },
   {
     key: "minVelocity",
     value: function minVelocity(minVelocity) {
       this.config.minVelocity = minVelocity;
       return this;
-    }
+    },
   },
   {
     key: "minVelocityX",
     value: function minVelocityX(minVelocityX) {
       this.config.minVelocityX = minVelocityX;
       return this;
-    }
+    },
   },
   {
     key: "minVelocityY",
     value: function minVelocityY(minVelocityY) {
       this.config.minVelocityY = minVelocityY;
       return this;
-    }
+    },
   },
   {
     key: "averageTouches",
     value: function averageTouches(avgTouches) {
       this.config.avgTouches = avgTouches;
       return this;
-    }
+    },
   },
   {
     key: "enableTrackpadTwoFingerGesture",
     value: function enableTrackpadTwoFingerGesture(enableTrackpadTwoFingerGesture) {
       this.config.enableTrackpadTwoFingerGesture = enableTrackpadTwoFingerGesture;
       return this;
-    }
+    },
   },
   {
     key: "activateAfterLongPress",
     value: function activateAfterLongPress(activateAfterLongPress) {
       this.config.activateAfterLongPress = activateAfterLongPress;
       return this;
-    }
+    },
   },
   {
     key: "onChange",
@@ -195,8 +196,8 @@ let items = [
       }
       const items = [arg0];
       return fn(items);
-    }
-  }
+    },
+  },
 ];
 
 export const PanGesture = importDefaultResult(PanGesture, items);

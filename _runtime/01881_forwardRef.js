@@ -11,10 +11,18 @@ import closure_9 from "../discord_app/index.native.tsx";
 noopDefault;
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-let closure_10 = { code: "function pnpm_indexTsx1(){const{freeze}=this.__closure;return typeof freeze===\"boolean\"?freeze:freeze.value;}" };
-let closure_11 = { code: "function pnpm_indexTsx2(){const{blankSpace,padding,extraContentPadding}=this.__closure;return Math.max(blankSpace.value,padding.value+extraContentPadding.value);}" };
-let closure_12 = { code: "function pnpm_indexTsx3(){const{padding,extraContentPadding}=this.__closure;return padding.value+extraContentPadding.value;}" };
-let closure_13 = { code: "function pnpm_indexTsx4(){const{currentHeight}=this.__closure;return{transform:[{translateY:-currentHeight.value}]};}" };
+let closure_10 = {
+  code: 'function pnpm_indexTsx1(){const{freeze}=this.__closure;return typeof freeze==="boolean"?freeze:freeze.value;}',
+};
+let closure_11 = {
+  code: "function pnpm_indexTsx2(){const{blankSpace,padding,extraContentPadding}=this.__closure;return Math.max(blankSpace.value,padding.value+extraContentPadding.value);}",
+};
+let closure_12 = {
+  code: "function pnpm_indexTsx3(){const{padding,extraContentPadding}=this.__closure;return padding.value+extraContentPadding.value;}",
+};
+let closure_13 = {
+  code: "function pnpm_indexTsx4(){const{currentHeight}=this.__closure;return{transform:[{translateY:-currentHeight.value}]};}",
+};
 const styles = StyleSheet.create({ commitView: { display: "none", position: "absolute" } });
 
 export default forwardRef((onEndVisible) => {
@@ -75,15 +83,40 @@ export default forwardRef((onEndVisible) => {
   M.__initData = closure_10;
   const derivedValue = flag2(blankSpace[3]).useDerivedValue(M);
   const obj2 = flag2(blankSpace[3]);
-  const chatKeyboard = flag2(blankSpace[5]).useChatKeyboard(animatedRef, { inverted: flag, keyboardLiftBehavior: str, freeze: derivedValue, offset: num, blankSpace, extraContentPadding });
+  const chatKeyboard = flag2(blankSpace[5]).useChatKeyboard(animatedRef, {
+    inverted: flag,
+    keyboardLiftBehavior: str,
+    freeze: derivedValue,
+    offset: num,
+    blankSpace,
+    extraContentPadding,
+  });
   padding = chatKeyboard.padding;
   currentHeight = chatKeyboard.currentHeight;
   ({ contentOffsetY, scroll, layout, size, onLayout: onLayout2 } = chatKeyboard);
   onContentSizeChange2 = chatKeyboard.onContentSizeChange;
   const obj3 = flag2(blankSpace[5]);
-  extraContentPadding = flag2(blankSpace[6]).useExtraContentPadding({ scrollViewRef: animatedRef, extraContentPadding, keyboardPadding: padding, blankSpace, scroll, layout, size, contentOffsetY, inverted: flag, keyboardLiftBehavior: str, freeze: derivedValue });
+  extraContentPadding = flag2(blankSpace[6]).useExtraContentPadding({
+    scrollViewRef: animatedRef,
+    extraContentPadding,
+    keyboardPadding: padding,
+    blankSpace,
+    scroll,
+    layout,
+    size,
+    contentOffsetY,
+    inverted: flag,
+    keyboardLiftBehavior: str,
+    freeze: derivedValue,
+  });
   const obj4 = flag2(blankSpace[6]);
-  const endVisible = flag2(blankSpace[7]).useEndVisible({ scroll, layout, size, inverted: flag, onEndVisible: onEndVisible.onEndVisible });
+  const endVisible = flag2(blankSpace[7]).useEndVisible({
+    scroll,
+    layout,
+    size,
+    inverted: flag,
+    onEndVisible: onEndVisible.onEndVisible,
+  });
   const obj5 = flag2(blankSpace[7]);
   const fn = function q() {
     return Math.max(blankSpace.value, padding.value + extraContentPadding.value);
@@ -147,7 +180,10 @@ export default forwardRef((onEndVisible) => {
   obj.onContentSizeChange = tmp13;
   obj.onLayout = tmp12;
   obj.children = onEndVisible.children;
-  const items3 = [padding(extraContentPadding(blankSpace[8]), obj), padding(extraContentPadding(blankSpace[3]).View, { style: tmp15 })];
+  const items3 = [
+    padding(extraContentPadding(blankSpace[8]), obj),
+    padding(extraContentPadding(blankSpace[3]).View, { style: tmp15 }),
+  ];
   obj[0] = items3;
   return onLayout2(currentHeight, obj);
 });

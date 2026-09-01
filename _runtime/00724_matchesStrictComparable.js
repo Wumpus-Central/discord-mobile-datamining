@@ -19,4 +19,4 @@ export default function matchesStrictComparable(arg0, arg1) {
     }
     return tmp;
   };
-};
+}

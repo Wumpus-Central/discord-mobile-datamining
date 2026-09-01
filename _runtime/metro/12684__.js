@@ -123,7 +123,15 @@ if (self2) {
         value = closure_1.value;
         if (!(closure_1.inclusive ? value <= value : value < value)) {
           const issues = iter.issues;
-          let obj = { origin: null, code: "too_big", maximum: null, input: null, inclusive: null, inst: null, continue: null };
+          let obj = {
+            origin: null,
+            code: "too_big",
+            maximum: null,
+            input: null,
+            inclusive: null,
+            inst: null,
+            continue: null,
+          };
           obj[0] = closure_2;
           if (typeof iter2.value === "object") {
             value = iter2.value;
@@ -172,7 +180,15 @@ if (self2) {
         value = closure_1.value;
         if (!(closure_1.inclusive ? value >= value : value > value)) {
           const issues = iter.issues;
-          let obj = { origin: null, code: "too_small", minimum: null, input: null, inclusive: null, inst: null, continue: null };
+          let obj = {
+            origin: null,
+            code: "too_small",
+            minimum: null,
+            input: null,
+            inclusive: null,
+            inst: null,
+            continue: null,
+          };
           obj[0] = closure_2;
           if (typeof iter2.value === "object") {
             value = iter2.value;
@@ -218,7 +234,14 @@ if (self2) {
           }
           if (!tmp3) {
             const issues = value.issues;
-            const obj = { origin: null, code: "not_multiple_of", divisor: null, input: null, inst: null, continue: null };
+            const obj = {
+              origin: null,
+              code: "not_multiple_of",
+              divisor: null,
+              input: null,
+              inst: null,
+              continue: null,
+            };
             obj[0] = typeof value.value;
             obj[2] = iter.value;
             obj[3] = value.value;
@@ -264,7 +287,16 @@ if (self2) {
             if (!Number.isSafeInteger(value)) {
               if (value > 0) {
                 const issues = value.issues;
-                let obj = { input: null, code: "too_big", maximum: null, note: "Integers must be within the safe integer range.", inst: null, origin: null, inclusive: true, continue: null };
+                let obj = {
+                  input: null,
+                  code: "too_big",
+                  maximum: null,
+                  note: "Integers must be within the safe integer range.",
+                  inst: null,
+                  origin: null,
+                  inclusive: true,
+                  continue: null,
+                };
                 obj[0] = value;
                 const _Number4 = Number;
                 obj[2] = Number.MAX_SAFE_INTEGER;
@@ -274,7 +306,16 @@ if (self2) {
                 issues.push(obj);
               } else {
                 const issues1 = value.issues;
-                obj = { input: null, code: "too_small", minimum: null, note: "Integers must be within the safe integer range.", inst: null, origin: null, inclusive: true, continue: null };
+                obj = {
+                  input: null,
+                  code: "too_small",
+                  minimum: null,
+                  note: "Integers must be within the safe integer range.",
+                  inst: null,
+                  origin: null,
+                  inclusive: true,
+                  continue: null,
+                };
                 obj[0] = value;
                 const _Number3 = Number;
                 obj[2] = Number.MIN_SAFE_INTEGER;
@@ -296,7 +337,15 @@ if (self2) {
         }
         if (value < closure_4) {
           const issues3 = value.issues;
-          obj1 = { origin: "number", input: null, code: "too_small", minimum: null, inclusive: true, inst: null, continue: null };
+          obj1 = {
+            origin: "number",
+            input: null,
+            code: "too_small",
+            minimum: null,
+            inclusive: true,
+            inst: null,
+            continue: null,
+          };
           obj1[1] = value;
           obj1[3] = tmp14;
           obj1[5] = closure_0;
@@ -305,7 +354,15 @@ if (self2) {
         }
         if (value > closure_5) {
           const issues4 = value.issues;
-          const obj2 = { origin: "number", input: null, code: "too_big", maximum: null, inclusive: true, inst: null, continue: null };
+          const obj2 = {
+            origin: "number",
+            input: null,
+            code: "too_big",
+            maximum: null,
+            inclusive: true,
+            inst: null,
+            continue: null,
+          };
           obj2[1] = value;
           obj2[3] = tmp18;
           obj2[5] = closure_0;
@@ -331,7 +388,15 @@ if (self2) {
         value = value.value;
         if (value < closure_2) {
           const issues = value.issues;
-          let obj = { origin: "bigint", input: null, code: "too_small", minimum: null, inclusive: true, inst: null, continue: null };
+          let obj = {
+            origin: "bigint",
+            input: null,
+            code: "too_small",
+            minimum: null,
+            inclusive: true,
+            inst: null,
+            continue: null,
+          };
           obj[1] = value;
           obj[3] = tmp;
           obj[5] = closure_0;
@@ -340,7 +405,15 @@ if (self2) {
         }
         if (value > closure_3) {
           const issues1 = value.issues;
-          obj = { origin: "bigint", input: null, code: "too_big", maximum: null, inclusive: true, inst: null, continue: null };
+          obj = {
+            origin: "bigint",
+            input: null,
+            code: "too_big",
+            maximum: null,
+            inclusive: true,
+            inst: null,
+            continue: null,
+          };
           obj[1] = value;
           obj[3] = tmp5;
           obj[5] = closure_0;
@@ -381,7 +454,15 @@ if (self2) {
         value = value.value;
         if (value.size > closure_1.maximum) {
           const issues = value.issues;
-          const obj = { origin: null, code: "too_big", maximum: null, inclusive: true, input: null, inst: null, continue: null };
+          const obj = {
+            origin: null,
+            code: "too_big",
+            maximum: null,
+            inclusive: true,
+            input: null,
+            inst: null,
+            continue: null,
+          };
           obj[0] = closure_1_5.getSizableOrigin(value);
           obj[2] = tmp.maximum;
           obj[4] = value;
@@ -423,7 +504,15 @@ if (self2) {
         value = value.value;
         if (value.size < closure_1.minimum) {
           const issues = value.issues;
-          const obj = { origin: null, code: "too_small", minimum: null, inclusive: true, input: null, inst: null, continue: null };
+          const obj = {
+            origin: null,
+            code: "too_small",
+            minimum: null,
+            inclusive: true,
+            input: null,
+            inst: null,
+            continue: null,
+          };
           obj[0] = closure_1_5.getSizableOrigin(value);
           obj[2] = tmp.minimum;
           obj[4] = value;
@@ -517,7 +606,15 @@ if (self2) {
         value = value.value;
         if (value.length > closure_1.maximum) {
           const issues = value.issues;
-          const obj = { origin: null, code: "too_big", maximum: null, inclusive: true, input: null, inst: null, continue: null };
+          const obj = {
+            origin: null,
+            code: "too_big",
+            maximum: null,
+            inclusive: true,
+            input: null,
+            inst: null,
+            continue: null,
+          };
           obj[0] = closure_1_5.getLengthableOrigin(value);
           obj[2] = tmp.maximum;
           obj[4] = value;
@@ -559,7 +656,15 @@ if (self2) {
         value = value.value;
         if (value.length < closure_1.minimum) {
           const issues = value.issues;
-          const obj = { origin: null, code: "too_small", minimum: null, inclusive: true, input: null, inst: null, continue: null };
+          const obj = {
+            origin: null,
+            code: "too_small",
+            minimum: null,
+            inclusive: true,
+            input: null,
+            inst: null,
+            continue: null,
+          };
           obj[0] = closure_1_5.getLengthableOrigin(value);
           obj[2] = tmp.minimum;
           obj[4] = value;
@@ -668,9 +773,7 @@ if (self2) {
           };
         }
       } else if (check == null) {
-        _zod.check = () => {
-
-        };
+        _zod.check = () => {};
       }
     });
     exports.$ZodCheckRegex = fnResult.$constructor("$ZodCheckRegex", (_zod) => {
@@ -683,7 +786,15 @@ if (self2) {
         const pattern = closure_1.pattern;
         if (!pattern.test(value.value)) {
           const issues = value.issues;
-          const obj = { origin: "string", code: "invalid_format", format: "regex", input: null, pattern: null, inst: null, continue: null };
+          const obj = {
+            origin: "string",
+            code: "invalid_format",
+            format: "regex",
+            input: null,
+            pattern: null,
+            inst: null,
+            continue: null,
+          };
           obj[3] = value.value;
           obj[4] = tmp.pattern.toString();
           obj[5] = closure_0;
@@ -735,7 +846,15 @@ if (self2) {
         value = value.value;
         if (!value.includes(position.includes, position.position)) {
           const issues = value.issues;
-          const obj = { origin: "string", code: "invalid_format", format: "includes", includes: null, input: null, inst: null, continue: null };
+          const obj = {
+            origin: "string",
+            code: "invalid_format",
+            format: "includes",
+            includes: null,
+            input: null,
+            inst: null,
+            continue: null,
+          };
           obj[3] = tmp.includes;
           obj[4] = value.value;
           obj[5] = closure_0;
@@ -768,7 +887,15 @@ if (self2) {
         value = value.value;
         if (!value.startsWith(prefix.prefix)) {
           const issues = value.issues;
-          const obj = { origin: "string", code: "invalid_format", format: "starts_with", prefix: null, input: null, inst: null, continue: null };
+          const obj = {
+            origin: "string",
+            code: "invalid_format",
+            format: "starts_with",
+            prefix: null,
+            input: null,
+            inst: null,
+            continue: null,
+          };
           obj[3] = tmp.prefix;
           obj[4] = value.value;
           obj[5] = closure_0;
@@ -801,7 +928,15 @@ if (self2) {
         value = value.value;
         if (!value.endsWith(suffix.suffix)) {
           const issues = value.issues;
-          const obj = { origin: "string", code: "invalid_format", format: "ends_with", suffix: null, input: null, inst: null, continue: null };
+          const obj = {
+            origin: "string",
+            code: "invalid_format",
+            format: "ends_with",
+            suffix: null,
+            input: null,
+            inst: null,
+            continue: null,
+          };
           obj[3] = tmp.suffix;
           obj[4] = value.value;
           obj[5] = closure_0;

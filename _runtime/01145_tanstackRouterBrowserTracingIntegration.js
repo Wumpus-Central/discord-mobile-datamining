@@ -30,7 +30,10 @@ arg5.tanstackRouterBrowserTracingIntegration = function tanstackRouterBrowserTra
     if (closure_2) {
       if (_location) {
         ({ options, matchRoutes } = obj1);
-        let matchRoutesResult = matchRoutes(_location.pathname, options.parseSearch(_location.search), { preload: false, throwOnError: false });
+        let matchRoutesResult = matchRoutes(_location.pathname, options.parseSearch(_location.search), {
+          preload: false,
+          throwOnError: false,
+        });
         let routeId;
         if (matchRoutesResult[matchRoutesResult.length - 1] != null) {
           routeId = tmp5.routeId;
@@ -75,7 +78,10 @@ arg5.tanstackRouterBrowserTracingIntegration = function tanstackRouterBrowserTra
       const subscription = obj1.subscribe("onBeforeNavigate", (fromLocation) => {
         if (fromLocation.fromLocation) {
           if (fromLocation.toLocation.state !== fromLocation.fromLocation.state) {
-            let matchRoutesResult = obj1.matchRoutes(fromLocation.toLocation.pathname, fromLocation.toLocation.search, { preload: false, throwOnError: false });
+            let matchRoutesResult = obj1.matchRoutes(fromLocation.toLocation.pathname, fromLocation.toLocation.search, {
+              preload: false,
+              throwOnError: false,
+            });
             let routeId;
             if (matchRoutesResult[matchRoutesResult.length - 1] != null) {
               routeId = tmp6.routeId;
@@ -100,7 +106,11 @@ arg5.tanstackRouterBrowserTracingIntegration = function tanstackRouterBrowserTra
             closure_1 = obj1.subscribe("onResolved", (toLocation) => {
               callback();
               if (obj) {
-                const matchRoutesResult = closure_0.matchRoutes(toLocation.toLocation.pathname, toLocation.toLocation.search, { preload: false, throwOnError: false });
+                const matchRoutesResult = closure_0.matchRoutes(
+                  toLocation.toLocation.pathname,
+                  toLocation.toLocation.search,
+                  { preload: false, throwOnError: false },
+                );
                 let routeId;
                 if (matchRoutesResult[matchRoutesResult.length - 1] != null) {
                   routeId = tmp4.routeId;

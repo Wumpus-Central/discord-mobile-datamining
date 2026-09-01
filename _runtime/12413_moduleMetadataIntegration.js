@@ -1,7 +1,6 @@
 // _runtime/12413_moduleMetadataIntegration.js
 import setupIntegration from "12391_setupIntegration.js";
 
-
 export const moduleMetadataIntegration = setupIntegration.defineIntegration(() => ({
   name: "ModuleMetadata",
   setup(on) {
@@ -28,5 +27,5 @@ export const moduleMetadataIntegration = setupIntegration.defineIntegration(() =
         const obj = options(closure_1_1[2]);
       }
     });
-  }
+  },
 }));

@@ -25,17 +25,22 @@ let obj = {
   updateGestureHandlerConfig: null,
   dropGestureHandler: null,
   configureRelations: null,
-  installUIRuntimeBindings: null
+  installUIRuntimeBindings: null,
 };
 const fn = function n(arg0, arg1) {
   const result = module(5681).updateGestureHandlerConfig(arg0, arg1);
   const obj = module(5681);
   module(5681).flushOperations();
 };
-obj = { updateGestureHandlerConfig: require("RNGestureHandlerModule").updateGestureHandlerConfig, flushOperations: require("RNGestureHandlerModule").flushOperations };
+obj = {
+  updateGestureHandlerConfig: require("RNGestureHandlerModule").updateGestureHandlerConfig,
+  flushOperations: require("RNGestureHandlerModule").flushOperations,
+};
 fn.__closure = obj;
 fn.__workletHash = 12442858879797;
-fn.__initData = { code: "function pnpm_NativeProxyTs1(handlerTag,newConfig){const{updateGestureHandlerConfig,flushOperations}=this.__closure;updateGestureHandlerConfig(handlerTag,newConfig);flushOperations();}" };
+fn.__initData = {
+  code: "function pnpm_NativeProxyTs1(handlerTag,newConfig){const{updateGestureHandlerConfig,flushOperations}=this.__closure;updateGestureHandlerConfig(handlerTag,newConfig);flushOperations();}",
+};
 obj[2] = fn;
 obj[3] = function dropGestureHandler(handlerTag) {
   const _require = handlerTag;

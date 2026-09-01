@@ -6,9 +6,7 @@ const tmp = getEvalledConstructor("%Reflect.construct%", true);
 let closure_0 = tmp;
 try {
   let obj = { "[[Get]]": null };
-  obj[0] = () => {
-
-  };
+  obj[0] = () => {};
   DefinePropertyOrThrow({}, "", obj);
   let tmp4 = DefinePropertyOrThrow;
   if (tmp4) {

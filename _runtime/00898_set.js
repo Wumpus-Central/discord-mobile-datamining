@@ -22,7 +22,7 @@ arg5._INTERNAL_skipAiProviderWrapping = function _INTERNAL_skipAiProviderWrappin
     if (callback(table[0]).DEBUG_BUILD) {
       const debug = callback(table[1]).debug;
       const _HermesInternal = HermesInternal;
-      debug.log("AI provider \"" + arg0 + "\" wrapping will be skipped");
+      debug.log('AI provider "' + arg0 + '" wrapping will be skipped');
     }
   });
 };

@@ -3,7 +3,6 @@ import _mod599 from "metro/00599__.js";
 import identity from "00634_identity.js";
 import property from "00801_property.js";
 
-
 export default function baseIteratee(fn) {
   if (typeof fn === "function") {
     return tmp;
@@ -22,4 +21,4 @@ export default function baseIteratee(fn) {
   } else {
     tmp8 = property(tmp);
   }
-};
+}

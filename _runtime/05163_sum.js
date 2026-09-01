@@ -437,7 +437,16 @@ arg5.default = {
       tmp91 = sum5;
       tmp82 = c7;
     }
-    obj2 = { hasAppMarkers: tmp10 > c5, fileDataOffset: null, jfifDataOffset: null, tiffHeaderOffset: null, iptcDataOffset: null, xmpChunks: null, iccChunks: null, mpfDataOffset: null };
+    obj2 = {
+      hasAppMarkers: tmp10 > c5,
+      fileDataOffset: null,
+      jfifDataOffset: null,
+      tiffHeaderOffset: null,
+      iptcDataOffset: null,
+      xmpChunks: null,
+      iccChunks: null,
+      mpfDataOffset: null,
+    };
     if (!tmp18) {
       tmp18 = tmp17;
     }
@@ -449,5 +458,5 @@ arg5.default = {
     obj2[6] = tmp12;
     obj2[7] = tmp11;
     return obj2;
-  }
+  },
 };

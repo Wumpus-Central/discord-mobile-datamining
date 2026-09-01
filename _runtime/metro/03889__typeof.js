@@ -110,7 +110,12 @@ class LocalWeekParser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 100, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", {
+            value: 100,
+            enumerable: true,
+            configurable: true,
+            writable: true,
+          });
         } else {
           num3 = 100;
           applyResult.priority = 100;
@@ -234,7 +239,7 @@ let items = [
       } else {
         return _createSuperInternal(3880).parseNDigits(arg1.length, arg0);
       }
-    }
+    },
   },
   {
     key: "validate",
@@ -244,14 +249,14 @@ let items = [
         tmp = arg1 <= 53;
       }
       return tmp;
-    }
+    },
   },
   {
     key: "set",
     value: function set(arg0, arg1, arg2, arg3) {
       return startOfUTCWeek.default(setUTCWeek.default(arg0, arg2, arg3), arg3);
-    }
-  }
+    },
+  },
 ];
 if (0 < items.length) {
   do {

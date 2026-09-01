@@ -3,7 +3,6 @@ import isObject from "00606_isObject.js";
 import toKey from "00725_toKey.js";
 import castPath from "00728_castPath.js";
 
-
 export default function baseSet(arg0, arg1, arg2, arg3) {
   if (isObject(arg0)) {
     const arr = castPath(arg1, arg0);
@@ -50,4 +49,4 @@ export default function baseSet(arg0, arg1, arg2, arg3) {
     return arg0;
   }
   const tmp = require;
-};
+}

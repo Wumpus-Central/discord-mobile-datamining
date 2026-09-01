@@ -13,7 +13,9 @@ const fn = function t(arg0) {
 };
 fn.__closure = {};
 fn.__workletHash = 17260882889510;
-fn.__initData = { code: "function ReanimatedError_Pnpm_errorsTs1(message){const prefix='[Reanimated]';const errorInstance=new Error(message?prefix+\" \"+message:prefix);errorInstance.name='ReanimatedError';return errorInstance;}" };
+fn.__initData = {
+  code: "function ReanimatedError_Pnpm_errorsTs1(message){const prefix='[Reanimated]';const errorInstance=new Error(message?prefix+\" \"+message:prefix);errorInstance.name='ReanimatedError';return errorInstance;}",
+};
 function registerReanimatedError() {
   if (globalThis._WORKLET) {
     global.ReanimatedError = fn;
@@ -25,7 +27,9 @@ function registerReanimatedError() {
 }
 registerReanimatedError.__closure = { ReanimatedErrorConstructor: fn };
 registerReanimatedError.__workletHash = 12525509537607;
-registerReanimatedError.__initData = { code: "function registerReanimatedError_Pnpm_errorsTs2(){const{ReanimatedErrorConstructor}=this.__closure;if(!_WORKLET){throw new Error('[Reanimated] registerReanimatedError() must be called on Worklet runtime');}global.ReanimatedError=ReanimatedErrorConstructor;}" };
+registerReanimatedError.__initData = {
+  code: "function registerReanimatedError_Pnpm_errorsTs2(){const{ReanimatedErrorConstructor}=this.__closure;if(!_WORKLET){throw new Error('[Reanimated] registerReanimatedError() must be called on Worklet runtime');}global.ReanimatedError=ReanimatedErrorConstructor;}",
+};
 const map = new Map();
 
 export const ReanimatedError = fn;

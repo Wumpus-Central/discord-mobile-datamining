@@ -84,7 +84,7 @@ function AsyncFromSyncIterator(arg0) {
         }
       }
       return rejectResult;
-    }
+    },
   };
   return new AsyncFromSyncIterator(arg0);
 }
@@ -232,7 +232,7 @@ function _instrumentAsyncIterableStream() {
     c11 = 0;
     c12 = 0;
     c9 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c12 === 2) {
         c12 = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -303,7 +303,13 @@ function _instrumentAsyncIterableStream() {
                   throwTypeErrorResult = closure_2;
                   throwTypeErrorResult = closure_2;
                   throwTypeErrorResult = obj10;
-                  throwTypeErrorResult = obj10.setTokenUsageAttributes(store, closure_2.promptTokens, closure_2.completionTokens, closure_2.cacheCreationInputTokens, closure_2.cacheReadInputTokens);
+                  throwTypeErrorResult = obj10.setTokenUsageAttributes(
+                    store,
+                    closure_2.promptTokens,
+                    closure_2.completionTokens,
+                    closure_2.cacheCreationInputTokens,
+                    closure_2.cacheReadInputTokens,
+                  );
                   throwTypeErrorResult = store;
                   let obj2 = {};
                   throwTypeErrorResult = store;
@@ -386,7 +392,13 @@ function _instrumentAsyncIterableStream() {
                   store.setAttributes(obj6);
                 }
                 obj2 = store(960);
-                const result = obj2.setTokenUsageAttributes(store, closure_2.promptTokens, closure_2.completionTokens, closure_2.cacheCreationInputTokens, closure_2.cacheReadInputTokens);
+                const result = obj2.setTokenUsageAttributes(
+                  store,
+                  closure_2.promptTokens,
+                  closure_2.completionTokens,
+                  closure_2.cacheCreationInputTokens,
+                  closure_2.cacheReadInputTokens,
+                );
                 const obj7 = {};
                 obj7[store(958).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
                 store.setAttributes(obj7);
@@ -476,7 +488,18 @@ export const instrumentAsyncIterableStream = function instrumentAsyncIterableStr
 export const instrumentMessageStream = function instrumentMessageStream(applyResult, arg1, flag) {
   closure_0 = arg1;
   closure_1 = flag;
-  closure_2 = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "disabled", cacheCreationInputTokens: "resizeMode", cacheReadInputTokens: "isArray", toolCalls: [], activeToolBlocks: {} };
+  closure_2 = {
+    responseTexts: [],
+    finishReasons: [],
+    responseId: "",
+    responseModel: "",
+    promptTokens: "r",
+    completionTokens: "disabled",
+    cacheCreationInputTokens: "resizeMode",
+    cacheReadInputTokens: "isArray",
+    toolCalls: [],
+    activeToolBlocks: {},
+  };
   applyResult.on("streamEvent", (arg0) => {
     closure_1_5(arg0, closure_2, closure_1, closure_0);
   });
@@ -495,7 +518,13 @@ export const instrumentMessageStream = function instrumentMessageStream(applyRes
         obj.setAttributes(obj);
       }
       let obj3 = lib(960);
-      const result = obj3.setTokenUsageAttributes(obj, tmp.promptTokens, tmp.completionTokens, tmp.cacheCreationInputTokens, tmp.cacheReadInputTokens);
+      const result = obj3.setTokenUsageAttributes(
+        obj,
+        tmp.promptTokens,
+        tmp.completionTokens,
+        tmp.cacheCreationInputTokens,
+        tmp.cacheReadInputTokens,
+      );
       obj1 = {};
       obj1[lib(958).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
       obj.setAttributes(obj1);

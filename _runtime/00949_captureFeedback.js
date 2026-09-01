@@ -15,7 +15,14 @@ arg5.captureFeedback = function captureFeedback(tags) {
     const obj3 = getClient;
   }
   obj = { contexts: { feedback: obj }, type: "feedback", level: "info", tags: tags.tags };
-  obj = { contact_email: tags.email, name: tags.name, message: tags.message, url: tags.url, source: tags.source, associated_event_id: tags.associatedEventId };
+  obj = {
+    contact_email: tags.email,
+    name: tags.name,
+    message: tags.message,
+    url: tags.url,
+    source: tags.source,
+    associated_event_id: tags.associatedEventId,
+  };
   let client;
   if (currentScope != null) {
     client = currentScope.getClient();

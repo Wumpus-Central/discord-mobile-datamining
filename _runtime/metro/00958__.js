@@ -42,7 +42,12 @@ arg5.GEN_AI_USAGE_INPUT_TOKENS_CACHED_ATTRIBUTE = "gen_ai.usage.input_tokens.cac
 arg5.GEN_AI_USAGE_INPUT_TOKENS_CACHE_WRITE_ATTRIBUTE = "gen_ai.usage.input_tokens.cache_write";
 arg5.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE = "gen_ai.usage.output_tokens";
 arg5.GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE = "gen_ai.usage.total_tokens";
-arg5.OPENAI_OPERATIONS = { CHAT: "chat", RESPONSES: "responses", EMBEDDINGS: "embeddings", CONVERSATIONS: "conversations" };
+arg5.OPENAI_OPERATIONS = {
+  CHAT: "chat",
+  RESPONSES: "responses",
+  EMBEDDINGS: "embeddings",
+  CONVERSATIONS: "conversations",
+};
 arg5.OPENAI_RESPONSE_ID_ATTRIBUTE = "openai.response.id";
 arg5.OPENAI_RESPONSE_MODEL_ATTRIBUTE = "openai.response.model";
 arg5.OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE = "openai.response.timestamp";

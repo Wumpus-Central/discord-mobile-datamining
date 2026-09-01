@@ -11,9 +11,7 @@ if (!isJest) {
 }
 const obj = { set: null, get: null };
 if (isJest) {
-  obj[0] = function set() {
-
-  };
+  obj[0] = function set() {};
   obj[1] = function get() {
     return null;
   };

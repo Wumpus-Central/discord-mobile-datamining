@@ -24,8 +24,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class ReanimatedScreenWrapper {
   constructor() {
@@ -66,7 +65,7 @@ let items = [
       if (this.ref != null) {
         ref.setNativeProps(arg0);
       }
-    }
+    },
   },
   {
     key: "render",
@@ -81,11 +80,11 @@ let items = [
       const merged = Object.assign(self.props);
       obj.ref = self.setRef;
       return <tmpResult />;
-    }
-  }
+    },
+  },
 ];
 let closure_8 = importDefaultResult(ReanimatedScreenWrapper, items);
 
 export default function ReanimatedScreenProvider(children) {
   return jsx(ReanimatedScreenWrapper(4869).ScreenContext.Provider, { value: closure_8, children: children.children });
-};
+}

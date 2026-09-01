@@ -21,4 +21,4 @@ export default function callBind(arg0) {
     num = diff;
   }
   return setFunctionLength(tmp, 1 + num, true);
-};
+}

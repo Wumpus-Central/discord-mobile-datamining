@@ -10,16 +10,18 @@ function getStylesFromObject(jestInlineStyle) {
     const _Object = Object;
     const _Object2 = Object;
     const entries = Object.entries(jestInlineStyle);
-    fromEntriesResult = Object.fromEntries(entries.map((arg0) => {
-      [tmp, iter] = arg0;
-      const items = [tmp, ];
-      let value = iter;
-      if (iter._isReanimatedSharedValue) {
-        value = iter.value;
-      }
-      items[1] = value;
-      return items;
-    }));
+    fromEntriesResult = Object.fromEntries(
+      entries.map((arg0) => {
+        [tmp, iter] = arg0;
+        const items = [tmp];
+        let value = iter;
+        if (iter._isReanimatedSharedValue) {
+          value = iter.value;
+        }
+        items[1] = value;
+        return items;
+      }),
+    );
   }
   return fromEntriesResult;
 }
@@ -62,14 +64,16 @@ function getCurrentStyle(props) {
   } else {
     const tmp3 = getStylesFromObject(jestInlineStyle);
     obj = {};
-    if (((value) => {
-      let tmp = !value;
-      if (value) {
-        const _Object = Object;
-        tmp = 0 === Object.keys(value).length;
-      }
-      return tmp;
-    })(value)) {
+    if (
+      ((value) => {
+        let tmp = !value;
+        if (value) {
+          const _Object = Object;
+          tmp = 0 === Object.keys(value).length;
+        }
+        return tmp;
+      })(value)
+    ) {
       const merged4 = Object.assign(tmp3);
       let tmp7 = obj;
     } else {
@@ -397,7 +401,9 @@ if (!isJest.isJest()) {
 }
 
 export const withReanimatedTimer = (arg0) => {
-  console.warn("This method is deprecated, you should define your own before and after test hooks to enable jest.useFakeTimers(). Check out the documentation for details on testing");
+  console.warn(
+    "This method is deprecated, you should define your own before and after test hooks to enable jest.useFakeTimers(). Check out the documentation for details on testing",
+  );
   const fakeTimers = globalThis.jest.useFakeTimers();
   arg0();
   globalThis.jest.runOnlyPendingTimers();
@@ -460,7 +466,7 @@ export const setUpTests = () => {
         tmp3 = obj;
       }
       tmp7 = callback2(tmp3, arg1);
-    }
+    },
   };
   _default.extend(obj);
   _default.extend({
@@ -478,7 +484,7 @@ export const setUpTests = () => {
         };
       }
       return obj;
-    }
+    },
   });
 };
 export const getAnimatedStyle = (props) => getCurrentStyle(props);

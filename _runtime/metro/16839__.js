@@ -42,7 +42,7 @@ globalThis.IntlMessageFormat.__addLocaleData({
       str6 = "many";
     }
     return str2;
-  }
+  },
 });
 globalThis.IntlMessageFormat.__addLocaleData({ locale: "ru-BY", parentLocale: "ru" });
 globalThis.IntlMessageFormat.__addLocaleData({ locale: "ru-KG", parentLocale: "ru" });

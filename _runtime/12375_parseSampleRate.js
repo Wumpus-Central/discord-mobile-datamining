@@ -30,7 +30,13 @@ arg5.parseSampleRate = function parseSampleRate(flag) {
       const json = JSON.stringify(flag);
       const _JSON2 = JSON;
       const _HermesInternal = HermesInternal;
-      logger.warn("[Tracing] Given sample rate is invalid. Sample rate must be a boolean or a number between 0 and 1. Got " + json + " of type " + JSON.stringify(typeof flag) + ".");
+      logger.warn(
+        "[Tracing] Given sample rate is invalid. Sample rate must be a boolean or a number between 0 and 1. Got " +
+          json +
+          " of type " +
+          JSON.stringify(typeof flag) +
+          ".",
+      );
     }
   }
 };

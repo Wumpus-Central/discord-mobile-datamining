@@ -67,8 +67,7 @@ export const useRiveList = function useRiveList(arg0, arg1) {
                       try {
                         callback();
                         closure_1_4.removeListeners();
-                      } catch (err) {
-                      }
+                      } catch (err) {}
                     };
                   } else {
                     return;
@@ -93,8 +92,7 @@ export const useRiveList = function useRiveList(arg0, arg1) {
                       try {
                         callback();
                         closure_1_4.removeListeners();
-                      } catch (err) {
-                      }
+                      } catch (err) {}
                     };
                   } else {
                     return;
@@ -116,8 +114,7 @@ export const useRiveList = function useRiveList(arg0, arg1) {
                       try {
                         callback();
                         closure_1_4.removeListeners();
-                      } catch (err) {
-                      }
+                      } catch (err) {}
                     };
                   } else {
                     return;
@@ -137,8 +134,7 @@ export const useRiveList = function useRiveList(arg0, arg1) {
                       try {
                         callback();
                         closure_1_4.removeListeners();
-                      } catch (err) {
-                      }
+                      } catch (err) {}
                     };
                   } else {
                     return;
@@ -322,7 +318,16 @@ export const useRiveList = function useRiveList(arg0, arg1) {
                 }
               }
             }
-            obj = { length: null, getInstanceAt: null, addInstance: null, addInstanceAt: null, removeInstance: null, removeInstanceAt: null, swap: null, error: null };
+            obj = {
+              length: null,
+              getInstanceAt: null,
+              addInstance: null,
+              addInstanceAt: null,
+              removeInstance: null,
+              removeInstanceAt: null,
+              swap: null,
+              error: null,
+            };
             obj[0] = undefined;
             obj[1] = tmp22;
             obj[2] = tmp23;
@@ -350,7 +355,7 @@ export const useRiveList = function useRiveList(arg0, arg1) {
           if (tmp) {
             const _Error = Error;
             const _HermesInternal = HermesInternal;
-            error = new Error("List property \"" + closure_0 + "\" not found in the ViewModel instance");
+            error = new Error('List property "' + closure_0 + '" not found in the ViewModel instance');
             callback(error);
           }
         };

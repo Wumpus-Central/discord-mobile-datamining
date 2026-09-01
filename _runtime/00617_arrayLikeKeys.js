@@ -2,7 +2,6 @@
 import _mod599 from "metro/00599__.js";
 import isIndex from "00628_isIndex.js";
 
-
 export default function arrayLikeKeys(obj) {
   const tmp3 = _mod599(obj);
   let tmp4 = !tmp3;
@@ -103,4 +102,4 @@ export default function arrayLikeKeys(obj) {
     }
   }
   return items;
-};
+}

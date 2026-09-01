@@ -5,7 +5,7 @@ const useMemo = noop.useMemo;
 
 export const useBottomSheetTimingConfigs = (arg0) => {
   closure_0 = arg0;
-  const items = [, , ];
+  const items = [, ,];
   ({ duration: arr[0], easing: arr[1], reduceMotion: arr[2] } = arg0);
   return useMemo(() => {
     let ANIMATION_EASING = lib.easing;

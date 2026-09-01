@@ -2,7 +2,6 @@
 import _setPrototypeOf from "../00099__setPrototypeOf.js";
 import _isNativeReflectConstruct from "../00161__isNativeReflectConstruct.js";
 
-
 export default function _construct(bind) {
   if (_isNativeReflectConstruct()) {
     const _Reflect = Reflect;
@@ -25,4 +24,4 @@ export default function _construct(bind) {
     return tmp9;
   }
   const tmp = require;
-};
+}

@@ -2,7 +2,6 @@
 import setupIntegration from "12391_setupIntegration.js";
 import { dateTimestampInSeconds } from "12349_dateTimestampInSeconds.js";
 
-
 export const sessionTimingIntegration = setupIntegration.defineIntegration(() => {
   let obj = dateTimestampInSeconds;
   _require = 1000 * obj.timestampInSeconds();
@@ -20,7 +19,7 @@ export const sessionTimingIntegration = setupIntegration.defineIntegration(() =>
       obj["session:end"] = result;
       obj.extra = obj;
       return obj;
-    }
+    },
   };
   return obj;
 });

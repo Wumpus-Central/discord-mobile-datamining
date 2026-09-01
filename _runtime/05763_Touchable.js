@@ -6,7 +6,23 @@ import { Platform } from "00017_get_ActivityIndicator.js";
 import { jsx } from "react/00021_jsxProd.js";
 
 const require = arg1;
-let closure_3 = ["underlayColor", "defaultUnderlayOpacity", "activeUnderlayOpacity", "defaultOpacity", "animationDuration", "androidRipple", "delayLongPress", "onLongPress", "onPress", "onPressIn", "onPressOut", "children", "disabled", "cancelOnLeave", "ref"];
+let closure_3 = [
+  "underlayColor",
+  "defaultUnderlayOpacity",
+  "activeUnderlayOpacity",
+  "defaultOpacity",
+  "animationDuration",
+  "androidRipple",
+  "delayLongPress",
+  "onLongPress",
+  "onPress",
+  "onPressIn",
+  "onPressOut",
+  "children",
+  "disabled",
+  "cancelOnLeave",
+  "ref",
+];
 ({ use: c5, useCallback: closure_6, useRef: error } = noop);
 noopDefault;
 let closure_9 = { rippleColor: "transparent" };
@@ -51,7 +67,13 @@ export const Touchable = (hitSlop) => {
   let ref = hitSlop.ref;
   const tmp4 = num13(hitSlop, onPressOut);
   if (undefined === animationDuration) {
-    let obj = { tapAnimationInDuration: 50, tapAnimationOutDuration: 100, longPressAnimationOutDuration: 100, hoverAnimationInDuration: 50, hoverAnimationOutDuration: 100 };
+    let obj = {
+      tapAnimationInDuration: 50,
+      tapAnimationOutDuration: 100,
+      longPressAnimationOutDuration: 100,
+      hoverAnimationInDuration: 50,
+      hoverAnimationOutDuration: 100,
+    };
   } else if (typeof animationDuration === "number") {
     const _Number6 = Number;
     let num12 = 0;
@@ -61,7 +83,13 @@ export const Touchable = (hitSlop) => {
         num12 = animationDuration;
       }
     }
-    obj = { tapAnimationInDuration: null, tapAnimationOutDuration: null, longPressAnimationOutDuration: null, hoverAnimationInDuration: null, hoverAnimationOutDuration: null };
+    obj = {
+      tapAnimationInDuration: null,
+      tapAnimationOutDuration: null,
+      longPressAnimationOutDuration: null,
+      hoverAnimationInDuration: null,
+      hoverAnimationOutDuration: null,
+    };
     obj[0] = num12;
     obj[1] = num12;
     obj[2] = num12;
@@ -100,7 +128,13 @@ export const Touchable = (hitSlop) => {
         num7 = _in;
       }
     }
-    obj = { tapAnimationInDuration: null, tapAnimationOutDuration: null, longPressAnimationOutDuration: null, hoverAnimationInDuration: null, hoverAnimationOutDuration: null };
+    obj = {
+      tapAnimationInDuration: null,
+      tapAnimationOutDuration: null,
+      longPressAnimationOutDuration: null,
+      hoverAnimationInDuration: null,
+      hoverAnimationOutDuration: null,
+    };
     obj[0] = num7;
     const _Number2 = Number;
     let num8 = 0;
@@ -306,7 +340,7 @@ export const Touchable = (hitSlop) => {
     disableReanimated: true,
     shouldActivateOnStart: false,
     disallowInterruption: true,
-    yieldsToContinuousGestures: true
+    yieldsToContinuousGestures: true,
   };
   const nativeGesture = obj2.useNativeGesture(obj);
   if (undefined !== androidRipple) {

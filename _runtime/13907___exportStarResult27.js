@@ -10,7 +10,13 @@ arg5.SetNumberFormatUnitOptions = function SetNumberFormatUnitOptions(internalSl
     const _Object = Object;
     obj = Object.create(null);
   }
-  const GetOptionResult = __exportStarResult4.GetOption(obj, "style", "string", ["decimal", "percent", "currency", "unit"], "decimal");
+  const GetOptionResult = __exportStarResult4.GetOption(
+    obj,
+    "style",
+    "string",
+    ["decimal", "percent", "currency", "unit"],
+    "decimal",
+  );
   internalSlots.style = GetOptionResult;
   const str = __exportStarResult4.GetOption(obj, "currency", "string", undefined, undefined);
   let result = undefined === str;
@@ -23,7 +29,13 @@ arg5.SetNumberFormatUnitOptions = function SetNumberFormatUnitOptions(internalSl
     tmp10 = undefined !== str;
   }
   getMultiInternalSlots.invariant(tmp10, "currency cannot be undefined", TypeError);
-  const GetOptionResult1 = __exportStarResult4.GetOption(obj, "currencyDisplay", "string", ["code", "symbol", "narrowSymbol", "name"], "symbol");
+  const GetOptionResult1 = __exportStarResult4.GetOption(
+    obj,
+    "currencyDisplay",
+    "string",
+    ["code", "symbol", "narrowSymbol", "name"],
+    "symbol",
+  );
   const GetOptionResult3 = __exportStarResult4.GetOption(obj, "unit", "string", undefined, undefined);
   result1 = undefined === GetOptionResult3;
   if (!result1) {
@@ -35,7 +47,13 @@ arg5.SetNumberFormatUnitOptions = function SetNumberFormatUnitOptions(internalSl
     tmp17 = undefined !== GetOptionResult3;
   }
   getMultiInternalSlots.invariant(tmp17, "unit cannot be undefined", TypeError);
-  const GetOptionResult2 = __exportStarResult4.GetOption(obj, "currencySign", "string", ["standard", "accounting"], "standard");
+  const GetOptionResult2 = __exportStarResult4.GetOption(
+    obj,
+    "currencySign",
+    "string",
+    ["standard", "accounting"],
+    "standard",
+  );
   if ("currency" === GetOptionResult) {
     internalSlots.currency = str.toUpperCase();
     internalSlots.currencyDisplay = GetOptionResult1;

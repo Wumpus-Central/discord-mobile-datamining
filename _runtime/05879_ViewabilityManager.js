@@ -54,17 +54,26 @@ class ViewabilityManager {
             if (flag == null) {
               flag = false;
             }
-            updateViewableItems.updateViewableItems(flag, closure_2, num2, windowSize, (arg0) => {
-              rvManager = rvManager.rvManager;
-              return rvManager.getLayout(arg0);
-            }, closure_0);
+            updateViewableItems.updateViewableItems(
+              flag,
+              closure_2,
+              num2,
+              windowSize,
+              (arg0) => {
+                rvManager = rvManager.rvManager;
+                return rvManager.getLayout(arg0);
+              },
+              closure_0,
+            );
           });
         }
       }
     };
     this.clearLastReportedViewableIndices = () => {
       const viewabilityHelpers = self.viewabilityHelpers;
-      const item = viewabilityHelpers.forEach((clearLastReportedViewableIndices) => clearLastReportedViewableIndices.clearLastReportedViewableIndices());
+      const item = viewabilityHelpers.forEach((clearLastReportedViewableIndices) =>
+        clearLastReportedViewableIndices.clearLastReportedViewableIndices(),
+      );
     };
     this.createViewabilityHelper = (arg0, arg1) => {
       const lib = arg1;
@@ -88,38 +97,44 @@ class ViewabilityManager {
             keyExtractorResult = arg0.toString();
           });
           const items = [];
-          let arraySpreadResult = HermesBuiltin.arraySpread(arr2.map((arg0) => {
-            if (undefined !== closure_1.rvManager.props.data[arg0]) {
-              if (undefined !== tmp.rvManager.props.keyExtractor) {
-                const props = tmp.rvManager.props;
-                let keyExtractorResult = props.keyExtractor(tmp2, arg0);
+          let arraySpreadResult = HermesBuiltin.arraySpread(
+            arr2.map((arg0) => {
+              if (undefined !== closure_1.rvManager.props.data[arg0]) {
+                if (undefined !== tmp.rvManager.props.keyExtractor) {
+                  const props = tmp.rvManager.props;
+                  let keyExtractorResult = props.keyExtractor(tmp2, arg0);
+                }
+                const obj = { index: null, isViewable: true, item: null, key: null, timestamp: null };
+                obj[0] = arg0;
+                obj[2] = tmp2;
+                obj[3] = keyExtractorResult;
+                const _Date = Date;
+                obj[4] = Date.now();
+                return obj;
               }
-              const obj = { index: null, isViewable: true, item: null, key: null, timestamp: null };
-              obj[0] = arg0;
-              obj[2] = tmp2;
-              obj[3] = keyExtractorResult;
-              const _Date = Date;
-              obj[4] = Date.now();
-              return obj;
-            }
-            keyExtractorResult = arg0.toString();
-          }), 0);
-          arraySpreadResult = HermesBuiltin.arraySpread(arr3.map((arg0) => {
-            if (undefined !== closure_1.rvManager.props.data[arg0]) {
-              if (undefined !== tmp.rvManager.props.keyExtractor) {
-                const props = tmp.rvManager.props;
-                let keyExtractorResult = props.keyExtractor(tmp2, arg0);
+              keyExtractorResult = arg0.toString();
+            }),
+            0,
+          );
+          arraySpreadResult = HermesBuiltin.arraySpread(
+            arr3.map((arg0) => {
+              if (undefined !== closure_1.rvManager.props.data[arg0]) {
+                if (undefined !== tmp.rvManager.props.keyExtractor) {
+                  const props = tmp.rvManager.props;
+                  let keyExtractorResult = props.keyExtractor(tmp2, arg0);
+                }
+                const obj = { index: null, isViewable: false, item: null, key: null, timestamp: null };
+                obj[0] = arg0;
+                obj[2] = tmp2;
+                obj[3] = keyExtractorResult;
+                const _Date = Date;
+                obj[4] = Date.now();
+                return obj;
               }
-              const obj = { index: null, isViewable: false, item: null, key: null, timestamp: null };
-              obj[0] = arg0;
-              obj[2] = tmp2;
-              obj[3] = keyExtractorResult;
-              const _Date = Date;
-              obj[4] = Date.now();
-              return obj;
-            }
-            keyExtractorResult = arg0.toString();
-          }), arraySpreadResult);
+              keyExtractorResult = arg0.toString();
+            }),
+            arraySpreadResult,
+          );
           obj[1] = items;
           tmp(obj);
         }
@@ -129,13 +144,15 @@ class ViewabilityManager {
     tmp2 = null !== global.props.onViewableItemsChanged && undefined !== global.props.onViewableItemsChanged;
     if (tmp2) {
       viewabilityHelpers = self.viewabilityHelpers;
-      arr = viewabilityHelpers.push(self.createViewabilityHelper(global.props.viewabilityConfig, (arg0) => {
-        const props = lib.props;
-        const onViewableItemsChanged = props.onViewableItemsChanged;
-        if (onViewableItemsChanged != null) {
-          const result = onViewableItemsChanged(arg0);
-        }
-      }));
+      arr = viewabilityHelpers.push(
+        self.createViewabilityHelper(global.props.viewabilityConfig, (arg0) => {
+          const props = lib.props;
+          const onViewableItemsChanged = props.onViewableItemsChanged;
+          if (onViewableItemsChanged != null) {
+            const result = onViewableItemsChanged(arg0);
+          }
+        }),
+      );
     }
     prop = global.props.viewabilityConfigCallbackPairs;
     if (prop == null) {
@@ -144,17 +161,19 @@ class ViewabilityManager {
     item = prop.forEach((viewabilityConfig) => {
       closure_0 = arg1;
       const viewabilityHelpers = self.viewabilityHelpers;
-      viewabilityHelpers.push(self.createViewabilityHelper(viewabilityConfig.viewabilityConfig, (arg0) => {
-        let prop;
-        if (props.props.viewabilityConfigCallbackPairs != null) {
-          if (viewabilityConfigCallbackPairs[props] != null) {
-            prop = tmp3.onViewableItemsChanged;
+      viewabilityHelpers.push(
+        self.createViewabilityHelper(viewabilityConfig.viewabilityConfig, (arg0) => {
+          let prop;
+          if (props.props.viewabilityConfigCallbackPairs != null) {
+            if (viewabilityConfigCallbackPairs[props] != null) {
+              prop = tmp3.onViewableItemsChanged;
+            }
           }
-        }
-        if (prop != null) {
-          prop(arg0);
-        }
-      }));
+          if (prop != null) {
+            prop(arg0);
+          }
+        }),
+      );
     });
     return;
   }
@@ -164,8 +183,8 @@ let items = [
     key: "shouldListenToVisibleIndices",
     get() {
       return this.viewabilityHelpers.length > 0;
-    }
-  }
+    },
+  },
 ];
 
 export default _createClassDefault(ViewabilityManager, items);

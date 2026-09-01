@@ -10,4 +10,4 @@ export default function baseTrim(arr) {
     const str = arr.slice(0, trimmedEndIndex(arr) + 1);
   }
   return replaced;
-};
+}

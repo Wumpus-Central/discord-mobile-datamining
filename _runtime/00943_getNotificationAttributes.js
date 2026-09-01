@@ -85,7 +85,7 @@ function getNotificationAttributes(arg0, requestId) {
         progress1 = requestId.progress;
       }
       if (typeof progress1 === "number") {
-        obj["mcp.progress.percentage"] = requestId.progress / requestId.total * 100;
+        obj["mcp.progress.percentage"] = (requestId.progress / requestId.total) * 100;
       }
     }
     let message;

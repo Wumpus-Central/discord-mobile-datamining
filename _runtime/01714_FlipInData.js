@@ -1,7 +1,14 @@
 // _runtime/01714_FlipInData.js
 import convertAnimationObjectToKeyframes from "01711_convertAnimationObjectToKeyframes.js";
 
-obj = { FlipInYRight: { name: "FlipInYRight", style: obj, duration: 0.3 }, FlipInYLeft: { name: "FlipInYLeft", style: obj, duration: 0.3 }, FlipInXUp: { name: "FlipInXUp", style: obj1, duration: 0.3 }, FlipInXDown: { name: "FlipInXDown", style: obj2, duration: 0.3 }, FlipInEasyX: { name: "FlipInEasyX", style: obj3, duration: 0.3 }, FlipInEasyY: { name: "FlipInEasyY", style: obj4, duration: 0.3 } };
+obj = {
+  FlipInYRight: { name: "FlipInYRight", style: obj, duration: 0.3 },
+  FlipInYLeft: { name: "FlipInYLeft", style: obj, duration: 0.3 },
+  FlipInXUp: { name: "FlipInXUp", style: obj1, duration: 0.3 },
+  FlipInXDown: { name: "FlipInXDown", style: obj2, duration: 0.3 },
+  FlipInEasyX: { name: "FlipInEasyX", style: obj3, duration: 0.3 },
+  FlipInEasyY: { name: "FlipInEasyY", style: obj4, duration: 0.3 },
+};
 obj = { 0: { transform: items }, 100: null };
 items = [{ perspective: "500px", rotateY: "90deg", translateX: "100%" }];
 const items1 = [{ perspective: "500px", rotateY: "0deg", translateX: "0%" }];
@@ -26,7 +33,14 @@ obj4 = { 0: { transform: items10 }, 100: null };
 items10 = [{ perspective: "500px", rotateY: "90deg" }];
 const items11 = [{ perspective: "500px", rotateY: "0deg" }];
 obj4[100] = { transform: items11 };
-const obj5 = { FlipOutYRight: { name: "FlipOutYRight", style: obj6, duration: 0.3 }, FlipOutYLeft: { name: "FlipOutYLeft", style: obj7, duration: 0.3 }, FlipOutXUp: { name: "FlipOutXUp", style: obj8, duration: 0.3 }, FlipOutXDown: { name: "FlipOutXDown", style: obj9, duration: 0.3 }, FlipOutEasyX: { name: "FlipOutEasyX", style: obj10, duration: 0.3 }, FlipOutEasyY: { name: "FlipOutEasyY", style: obj11, duration: 0.3 } };
+const obj5 = {
+  FlipOutYRight: { name: "FlipOutYRight", style: obj6, duration: 0.3 },
+  FlipOutYLeft: { name: "FlipOutYLeft", style: obj7, duration: 0.3 },
+  FlipOutXUp: { name: "FlipOutXUp", style: obj8, duration: 0.3 },
+  FlipOutXDown: { name: "FlipOutXDown", style: obj9, duration: 0.3 },
+  FlipOutEasyX: { name: "FlipOutEasyX", style: obj10, duration: 0.3 },
+  FlipOutEasyY: { name: "FlipOutEasyY", style: obj11, duration: 0.3 },
+};
 obj6 = { 0: { transform: items12 }, 100: null };
 items12 = [{ perspective: "500px", rotateY: "0deg", translateX: "0%" }];
 const items13 = [{ perspective: "500px", rotateY: "90deg", translateX: "100%" }];
@@ -51,7 +65,14 @@ obj11 = { 0: { transform: items22 }, 100: null };
 items22 = [{ perspective: "500px", rotateY: "0deg" }];
 const items23 = [{ perspective: "500px", rotateY: "90deg" }];
 obj11[100] = { transform: items23 };
-const obj12 = { FlipInYRight: null, FlipInYLeft: null, FlipInXUp: null, FlipInXDown: null, FlipInEasyX: null, FlipInEasyY: null };
+const obj12 = {
+  FlipInYRight: null,
+  FlipInYLeft: null,
+  FlipInXUp: null,
+  FlipInXDown: null,
+  FlipInEasyX: null,
+  FlipInEasyY: null,
+};
 const obj13 = { style: null, duration: null };
 obj13[0] = convertAnimationObjectToKeyframes.convertAnimationObjectToKeyframes(obj.FlipInYRight);
 obj13[1] = obj.FlipInYRight.duration;
@@ -76,7 +97,14 @@ const obj18 = { style: null, duration: null };
 obj18[0] = convertAnimationObjectToKeyframes.convertAnimationObjectToKeyframes(obj.FlipInEasyY);
 obj18[1] = obj.FlipInEasyY.duration;
 obj12[5] = obj18;
-const obj19 = { FlipOutYRight: null, FlipOutYLeft: null, FlipOutXUp: null, FlipOutXDown: null, FlipOutEasyX: null, FlipOutEasyY: null };
+const obj19 = {
+  FlipOutYRight: null,
+  FlipOutYLeft: null,
+  FlipOutXUp: null,
+  FlipOutXDown: null,
+  FlipOutEasyX: null,
+  FlipOutEasyY: null,
+};
 const obj20 = { style: null, duration: null };
 obj20[0] = convertAnimationObjectToKeyframes.convertAnimationObjectToKeyframes(obj5.FlipOutYRight);
 obj20[1] = obj5.FlipOutYRight.duration;

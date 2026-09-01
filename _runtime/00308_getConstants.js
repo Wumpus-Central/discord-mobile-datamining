@@ -28,5 +28,5 @@ export default {
   },
   setHidden(arg0, arg1) {
     uiStore.setHidden(arg0, arg1);
-  }
+  },
 };

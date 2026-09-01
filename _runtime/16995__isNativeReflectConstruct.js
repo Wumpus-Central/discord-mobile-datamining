@@ -26,13 +26,10 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 let closure_2 = asyncGeneratorStep;
-function empty() {
-
-}
+function empty() {}
 const timeoutError = new _isNativeReflectConstruct2.TimeoutError();
 closure_1 = undefined;
 closure_2 = undefined;
@@ -58,7 +55,14 @@ class PQueue {
     tmp3Result._pendingCount = 0;
     tmp3Result._resolveEmpty = empty;
     tmp3Result._resolveIdle = empty;
-    obj = { carryoverConcurrencyCount: false, intervalCap: Infinity, interval: 0, concurrency: Infinity, autoStart: true, queueClass: require("PriorityQueue").default };
+    obj = {
+      carryoverConcurrencyCount: false,
+      intervalCap: Infinity,
+      interval: 0,
+      concurrency: Infinity,
+      autoStart: true,
+      queueClass: require("PriorityQueue").default,
+    };
     merged = Object.assign(obj, global);
     if (typeof merged.intervalCap === "number") {
       num = 1;
@@ -108,7 +112,9 @@ class PQueue {
         tmp16 = str5;
         tmp17 = new.target;
         tmp18 = new.target;
-        typeError = new TypeError("Expected `interval` to be a finite number >= 0, got `" + str5 + "` (" + typeof merged.interval + ")");
+        typeError = new TypeError(
+          "Expected `interval` to be a finite number >= 0, got `" + str5 + "` (" + typeof merged.interval + ")",
+        );
         tmp20 = typeError;
         throw typeError;
       }
@@ -127,7 +133,9 @@ class PQueue {
         str2 = str1;
       }
     }
-    typeError1 = new TypeError("Expected `intervalCap` to be a number from 1 and up, got `" + str2 + "` (" + typeof merged.intervalCap + ")");
+    typeError1 = new TypeError(
+      "Expected `intervalCap` to be a number from 1 and up, got `" + str2 + "` (" + typeof merged.intervalCap + ")",
+    );
     throw typeError1;
   }
 }
@@ -137,7 +145,7 @@ let obj = {
   get() {
     const self = this;
     return this._isIntervalIgnored || self._intervalCount < self._intervalCap;
-  }
+  },
 };
 const items = [
   obj,
@@ -145,7 +153,7 @@ const items = [
     key: "_doesConcurrentAllowAnother",
     get() {
       return this._pendingCount < this._concurrency;
-    }
+    },
   },
   {
     key: "_next",
@@ -153,7 +161,7 @@ const items = [
       this._pendingCount = this._pendingCount - 1;
       this._tryToStartAnother();
       this.emit("next");
-    }
+    },
   },
   {
     key: "_resolvePromises",
@@ -166,7 +174,7 @@ const items = [
         self._resolveIdle = tmp2;
         self.emit("idle");
       }
-    }
+    },
   },
   {
     key: "_onResumeInterval",
@@ -174,7 +182,7 @@ const items = [
       this._onInterval();
       const result = this._initializeIntervalIfNeeded();
       this._timeoutId = undefined;
-    }
+    },
   },
   {
     key: "_isIntervalPaused",
@@ -200,7 +208,7 @@ const items = [
         }
       }
       return false;
-    }
+    },
   },
   {
     key: "_tryToStartAnother",
@@ -237,7 +245,7 @@ const items = [
         }
         return false;
       }
-    }
+    },
   },
   {
     key: "_initializeIntervalIfNeeded",
@@ -256,7 +264,7 @@ const items = [
         const _Date = Date;
         self._intervalEnd = Date.now() + self._interval;
       }
-    }
+    },
   },
   {
     key: "_onInterval",
@@ -273,7 +281,7 @@ const items = [
       }
       self._intervalCount = num;
       self._processQueue();
-    }
+    },
   },
   {
     key: "_processQueue",
@@ -285,7 +293,7 @@ const items = [
           _tryToStartAnotherResult = self._tryToStartAnother();
         } while (_tryToStartAnotherResult);
       }
-    }
+    },
   },
   {
     key: "concurrency",
@@ -300,31 +308,32 @@ const items = [
           this._processQueue();
         }
       }
-      const typeError = new TypeError("Expected `concurrency` to be a number from 1 and up, got `" + num + "` (" + typeof num + ")");
+      const typeError = new TypeError(
+        "Expected `concurrency` to be a number from 1 and up, got `" + num + "` (" + typeof num + ")",
+      );
       throw typeError;
-    }
+    },
   },
-,
-,
-,
-,
-,
-,
-,
-,
-,
-,
-,
-
+  ,
+  ,
+  ,
+  ,
+  ,
+  ,
+  ,
+  ,
+  ,
+  ,
+  ,
 ];
 obj = { key: "add", value: null };
-closure_4 = asyncGeneratorStep(function(arg0) {
+closure_4 = asyncGeneratorStep(function (arg0) {
   let self = this;
   closure_1 = arg0;
   closure_2 = arg1;
   c5 = 0;
   c6 = 0;
-  const iter = (function*(arg0) {
+  const iter = (function* (arg0) {
     closure_4 = closure_0;
     closure_3 = tmp2;
     closure_3 = closure_0;
@@ -336,7 +345,7 @@ closure_4 = asyncGeneratorStep(function(arg0) {
     const promise = new Promise((arg0, arg1) => {
       closure_0 = arg0;
       closure_1 = arg1;
-      closure_0 = obj1(function*() {
+      closure_0 = obj1(function* () {
         if (c5 === 2) {
           c5 = 3;
           HermesBuiltin.throwTypeError();
@@ -452,12 +461,12 @@ obj[1] = function add(arg0) {
 };
 items[11] = obj;
 obj = { key: "addAll", value: null };
-closure_3 = asyncGeneratorStep(function(arg0, arg1) {
+closure_3 = asyncGeneratorStep(function (arg0, arg1) {
   let self = this;
   closure_1 = arg0;
   closure_2 = arg1;
   c3 = 0;
-  return (function*(arg0, arg1) {
+  return (function* (arg0, arg1) {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -487,59 +496,63 @@ closure_3 = asyncGeneratorStep(function(arg0, arg1) {
           closure_1 = closure_0;
           c3 = 3;
           obj = { value: null, done: true };
-          obj[0] = Promise.all(closure_1.map((() => {
-            closure_0 = closure_1_2((arg0) => {
-              closure_0 = arg0;
-              c1 = 0;
-              return (function*(arg0) {
-                if (set === 2) {
-                  set = 3;
-                  HermesBuiltin.throwTypeError();
-                } else if (tmp3 === 3) {
-                  if (arg0 === 1) {
-                    throw arg1;
-                  } else if (arg0 === 2) {
-                    let obj = { value: null, done: true };
-                    obj[0] = arg1;
-                    return obj;
-                  } else {
-                    return { value: "HermesInternal", done: null };
-                  }
-                } else {
-                  try {
-                    set = 2;
-                    if (arg0 === 1) {
+          obj[0] = Promise.all(
+            closure_1.map(
+              (() => {
+                closure_0 = closure_1_2((arg0) => {
+                  closure_0 = arg0;
+                  c1 = 0;
+                  return (function* (arg0) {
+                    if (set === 2) {
                       set = 3;
-                      throw arg1;
-                    } else if (arg0 === 2) {
-                      set = 3;
-                      obj = { value: null, done: true };
-                      obj[0] = arg1;
-                      return obj;
+                      HermesBuiltin.throwTypeError();
+                    } else if (tmp3 === 3) {
+                      if (arg0 === 1) {
+                        throw arg1;
+                      } else if (arg0 === 2) {
+                        let obj = { value: null, done: true };
+                        obj[0] = arg1;
+                        return obj;
+                      } else {
+                        return { value: "HermesInternal", done: null };
+                      }
                     } else {
-                      set = 3;
-                      obj = { value: null, done: true };
-                      obj[0] = set.add(closure_0, closure_0);
-                      return obj;
+                      try {
+                        set = 2;
+                        if (arg0 === 1) {
+                          set = 3;
+                          throw arg1;
+                        } else if (arg0 === 2) {
+                          set = 3;
+                          obj = { value: null, done: true };
+                          obj[0] = arg1;
+                          return obj;
+                        } else {
+                          set = 3;
+                          obj = { value: null, done: true };
+                          obj[0] = set.add(closure_0, closure_0);
+                          return obj;
+                        }
+                      } catch (tmp7) {
+                        set = tmp;
+                        throw tmp7;
+                      }
                     }
-                  } catch (tmp7) {
-                    set = tmp;
-                    throw tmp7;
+                  })();
+                });
+                return function (arg0) {
+                  self = this;
+                  const apply = closure_0.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
                   }
-                }
-              })();
-            });
-            return function(arg0) {
-              self = this;
-              const apply = closure_0.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
-            };
-          })()));
+                  return applyArgumentsResult;
+                };
+              })(),
+            ),
+          );
           return obj;
         }
       } catch (tmp8) {
@@ -569,26 +582,26 @@ items[13] = {
       self._processQueue();
     }
     return self;
-  }
+  },
 };
 items[14] = {
   key: "pause",
   value: function pause() {
     this._isPaused = true;
-  }
+  },
 };
 items[15] = {
   key: "clear",
   value: function clear() {
     const _queueClass = new this._queueClass();
     this._queue = _queueClass;
-  }
+  },
 };
 let obj1 = { key: "onEmpty", value: null };
-closure_2 = asyncGeneratorStep(function() {
+closure_2 = asyncGeneratorStep(function () {
   const self = this;
   c1 = 0;
-  return (function*() {
+  return (function* () {
     if (c1 === 2) {
       c1 = 3;
       HermesBuiltin.throwTypeError();
@@ -649,10 +662,10 @@ obj1[1] = function onEmpty() {
 };
 items[16] = obj1;
 let obj2 = { key: "onIdle", value: null };
-closure_1 = asyncGeneratorStep(function() {
+closure_1 = asyncGeneratorStep(function () {
   const self = this;
   c1 = 0;
-  return (function*() {
+  return (function* () {
     if (c1 === 2) {
       c1 = 3;
       HermesBuiltin.throwTypeError();
@@ -719,26 +732,26 @@ items[18] = {
   key: "size",
   get() {
     return this._queue.size;
-  }
+  },
 };
 items[19] = {
   key: "sizeBy",
   value: function sizeBy(arg0) {
     const _queue = this._queue;
     return _queue.filter(arg0).length;
-  }
+  },
 };
 items[20] = {
   key: "pending",
   get() {
     return this._pendingCount;
-  }
+  },
 };
 items[21] = {
   key: "isPaused",
   get() {
     return this._isPaused;
-  }
+  },
 };
 items[22] = {
   key: "timeout",
@@ -747,7 +760,7 @@ items[22] = {
   },
   set(_timeout) {
     this._timeout = _timeout;
-  }
+  },
 };
 
 export default _createClass(PQueue, items);

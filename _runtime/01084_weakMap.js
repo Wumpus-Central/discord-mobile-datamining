@@ -63,7 +63,7 @@ export const reportingObserverIntegration = registerSpanErrorInstrumentation.def
     },
     setup(arg0) {
       const result = map.set(arg0, true);
-    }
+    },
   };
   return obj;
 });

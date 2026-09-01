@@ -3,9 +3,7 @@ import init from "01135_init.js";
 
 require = arg1;
 const dependencyMap = arg6;
-function browserReplayIntegrationNoop() {
-
-}
+function browserReplayIntegrationNoop() {}
 arg5.browserReplayIntegration = () => {
   let obj = arg0;
   if (arg0 === undefined) {
@@ -15,25 +13,25 @@ arg5.browserReplayIntegration = () => {
     if (typeof browserReplayIntegrationNoop !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    obj = { name: "Replay", start: null, startBuffering: null, stop: null, flush: null, getReplayId: null, getRecordingMode: null };
-    obj[1] = function start() {
-
+    obj = {
+      name: "Replay",
+      start: null,
+      startBuffering: null,
+      stop: null,
+      flush: null,
+      getReplayId: null,
+      getRecordingMode: null,
     };
-    obj[2] = function startBuffering() {
-
-    };
+    obj[1] = function start() {};
+    obj[2] = function startBuffering() {};
     obj[3] = function stop() {
       return Promise.resolve();
     };
     obj[4] = function flush() {
       return Promise.resolve();
     };
-    obj[5] = function getReplayId() {
-
-    };
-    obj[6] = function getRecordingMode() {
-
-    };
+    obj[5] = function getReplayId() {};
+    obj[6] = function getRecordingMode() {};
     let replayIntegrationResult = obj;
   } else {
     const _Object = Object;

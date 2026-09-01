@@ -218,41 +218,42 @@ arg5.default = {
             obj = {};
             let _Promise2 = Promise;
             if (obj instanceof Promise) {
-              let arr2 = items.push(obj.then((arg0) => {
-                ({ name, value } = arg0);
-                try {
-                  if (items1(items2[0]).USE_EXIF) {
-                    if (closure_1_12(name, value)) {
-                      let obj = { __exif: null };
-                      let tmp2Result = tmp2(tmp3[1]);
-                      obj[0] = tmp2Result.read(closure_1_14(value), closure_1_10, type).tags;
-                      return obj;
-                    }
-                  }
-                  if (items1(items2[0]).USE_IPTC) {
-                    if (closure_1_13(name, value)) {
-                      obj = { __iptc: null };
-                      tmp2Result = tmp2(tmp3[2]);
-                      obj[0] = tmp2Result.read(closure_1_14(value), 0, type);
-                      return obj;
-                    }
-                  }
-                  if (name) {
-                    if (!closure_1_12(name, value)) {
-                      if (!closure_1_13(name, value)) {
-                        obj = {};
-                        obj1 = { value: null, description: null };
-                        obj1[0] = value;
-                        obj1[1] = tmp;
-                        obj[name] = obj1;
+              let arr2 = items.push(
+                obj.then((arg0) => {
+                  ({ name, value } = arg0);
+                  try {
+                    if (items1(items2[0]).USE_EXIF) {
+                      if (closure_1_12(name, value)) {
+                        let obj = { __exif: null };
+                        let tmp2Result = tmp2(tmp3[1]);
+                        obj[0] = tmp2Result.read(closure_1_14(value), closure_1_10, type).tags;
                         return obj;
                       }
                     }
-                  }
-                  return {};
-                } catch (err) {
-                }
-              }));
+                    if (items1(items2[0]).USE_IPTC) {
+                      if (closure_1_13(name, value)) {
+                        obj = { __iptc: null };
+                        tmp2Result = tmp2(tmp3[2]);
+                        obj[0] = tmp2Result.read(closure_1_14(value), 0, type);
+                        return obj;
+                      }
+                    }
+                    if (name) {
+                      if (!closure_1_12(name, value)) {
+                        if (!closure_1_13(name, value)) {
+                          obj = {};
+                          obj1 = { value: null, description: null };
+                          obj1[0] = value;
+                          obj1[1] = tmp;
+                          obj[name] = obj1;
+                          return obj;
+                        }
+                      }
+                    }
+                    return {};
+                  } catch (err) {}
+                }),
+              );
             } else {
               let name = obj.name;
               if (name) {
@@ -275,7 +276,9 @@ arg5.default = {
         let _Promise = Promise;
         if (decompressResult instanceof Promise) {
           let nextPromise = decompressResult.then((arg0) => closure_1_11(arg0, type, items2, items1));
-          let catchPromise = nextPromise.catch(() => closure_1_11("<text using unknown compression>".split(""), type, items2, items1));
+          let catchPromise = nextPromise.catch(() =>
+            closure_1_11("<text using unknown compression>".split(""), type, items2, items1),
+          );
         } else {
           let tmp40 = constructTag;
           let num3 = 0;
@@ -295,5 +298,5 @@ arg5.default = {
     }
     obj1[1] = allPromises;
     return obj1;
-  }
+  },
 };

@@ -26,8 +26,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 let closure_2 = ["onBlur", "onFocus"];
 const error = importAllResult;
@@ -70,7 +69,23 @@ let items = [
     value: function _createPressabilityConfig() {
       let self = this;
       self = this;
-      const obj = { cancelable: !this.props.rejectResponderTermination, disabled: null, hitSlop: null, delayLongPress: null, delayPressIn: null, delayPressOut: null, minPressDuration: 0, pressRectOffset: null, android_disableSound: null, onBlur: null, onFocus: null, onLongPress: null, onPress: null, onPressIn: null, onPressOut: null };
+      const obj = {
+        cancelable: !this.props.rejectResponderTermination,
+        disabled: null,
+        hitSlop: null,
+        delayLongPress: null,
+        delayPressIn: null,
+        delayPressOut: null,
+        minPressDuration: 0,
+        pressRectOffset: null,
+        android_disableSound: null,
+        onBlur: null,
+        onFocus: null,
+        onLongPress: null,
+        onPress: null,
+        onPressIn: null,
+        onPressOut: null,
+      };
       if (null != this.props.disabled) {
         let disabled = self.props.disabled;
       } else {
@@ -147,7 +162,7 @@ let items = [
         }
       };
       return obj;
-    }
+    },
   },
   {
     key: "_createExtraStyles",
@@ -164,7 +179,7 @@ let items = [
       }
       obj[1] = { backgroundColor: str };
       return obj;
-    }
+    },
   },
   {
     key: "_showUnderlay",
@@ -179,7 +194,7 @@ let items = [
           props.onShowUnderlay();
         }
       }
-    }
+    },
   },
   {
     key: "_hideUnderlay",
@@ -197,14 +212,19 @@ let items = [
           props.onHideUnderlay();
         }
       }
-    }
+    },
   },
   {
     key: "_hasPressHandler",
     value: function _hasPressHandler() {
       const self = this;
-      return null != this.props.onPress || null != self.props.onPressIn || null != self.props.onPressOut || null != self.props.onLongPress;
-    }
+      return (
+        null != this.props.onPress ||
+        null != self.props.onPressIn ||
+        null != self.props.onPressOut ||
+        null != self.props.onLongPress
+      );
+    },
   },
   {
     key: "render",
@@ -275,7 +295,34 @@ let items = [
       if (accessibilityLabel == null) {
         accessibilityLabel = self.props.accessibilityLabel;
       }
-      obj = { accessible: false !== self.props.accessible, accessibilityLabel, accessibilityHint: self.props.accessibilityHint, accessibilityLanguage: self.props.accessibilityLanguage, accessibilityRole: self.props.accessibilityRole, accessibilityState, accessibilityValue: obj, accessibilityActions: self.props.accessibilityActions, onAccessibilityAction: self.props.onAccessibilityAction, importantForAccessibility: null, accessibilityViewIsModal: null, accessibilityLiveRegion: null, accessibilityElementsHidden: null, style: null, onLayout: null, hitSlop: null, hasTVPreferredFocus: null, nextFocusDown: null, nextFocusForward: null, nextFocusLeft: null, nextFocusRight: null, nextFocusUp: null, focusable: null, nativeID: null, testID: null, ref: null };
+      obj = {
+        accessible: false !== self.props.accessible,
+        accessibilityLabel,
+        accessibilityHint: self.props.accessibilityHint,
+        accessibilityLanguage: self.props.accessibilityLanguage,
+        accessibilityRole: self.props.accessibilityRole,
+        accessibilityState,
+        accessibilityValue: obj,
+        accessibilityActions: self.props.accessibilityActions,
+        onAccessibilityAction: self.props.onAccessibilityAction,
+        importantForAccessibility: null,
+        accessibilityViewIsModal: null,
+        accessibilityLiveRegion: null,
+        accessibilityElementsHidden: null,
+        style: null,
+        onLayout: null,
+        hitSlop: null,
+        hasTVPreferredFocus: null,
+        nextFocusDown: null,
+        nextFocusForward: null,
+        nextFocusLeft: null,
+        nextFocusRight: null,
+        nextFocusUp: null,
+        focusable: null,
+        nativeID: null,
+        testID: null,
+        ref: null,
+      };
       let str2 = "no-hide-descendants";
       const tmp10 = closure_10;
       const tmp3 = callback(eventHandlers, closure_2);
@@ -329,7 +376,7 @@ let items = [
       const items = [tmp16(onlyResult, { style: tmp11Result.compose(onlyResult.props.style, child) }), null];
       obj.children = items;
       return tmp10(tmp13, obj);
-    }
+    },
   },
   {
     key: "componentDidMount",
@@ -337,14 +384,14 @@ let items = [
       this._isMounted = true;
       const pressability = this.state.pressability;
       pressability.configure(this._createPressabilityConfig());
-    }
+    },
   },
   {
     key: "componentDidUpdate",
     value: function componentDidUpdate(arg0, arg1) {
       const pressability = this.state.pressability;
       pressability.configure(this._createPressabilityConfig());
-    }
+    },
   },
   {
     key: "componentWillUnmount",
@@ -357,8 +404,8 @@ let items = [
       }
       const pressability = self.state.pressability;
       pressability.reset();
-    }
-  }
+    },
+  },
 ];
 let closure_12 = importDefaultResult(TouchableHighlightImpl, items);
 class TouchableHighlight {

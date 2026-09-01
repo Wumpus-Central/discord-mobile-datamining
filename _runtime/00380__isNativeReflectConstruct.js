@@ -32,12 +32,11 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 function _connectAnimatedView2(instance) {
   const self = this;
-  _modDef38(this.__isNative, "Expected node to be marked as \"native\"");
+  _modDef38(this.__isNative, 'Expected node to be marked as "native"');
   const findNodeHandleResult = AnimatedProps(114).findNodeHandle(instance.instance);
   if (null == findNodeHandleResult) {
     const _Error = Error;
@@ -55,7 +54,7 @@ function _connectShadowNode2(instance) {
   if (obj.cxxNativeAnimatedEnabled()) {
     if (tmpResult.useSharedAnimatedBackend()) {
       const self = this;
-      _modDef38(this.__isNative, "Expected node to be marked as \"native\"");
+      _modDef38(this.__isNative, 'Expected node to be marked as "native"');
       const nodeFromPublicInstance = AnimatedProps(272).getNodeFromPublicInstance(instance.instance);
       if (null != nodeFromPublicInstance) {
         const API = tmp4(357).API;
@@ -69,7 +68,7 @@ function _connectShadowNode2(instance) {
 }
 function _disconnectAnimatedView2(connectedViewTag) {
   const self = this;
-  _modDef38(this.__isNative, "Expected node to be marked as \"native\"");
+  _modDef38(this.__isNative, 'Expected node to be marked as "native"');
   connectedViewTag = connectedViewTag.connectedViewTag;
   if (null != connectedViewTag) {
     const API = setDefault.API;
@@ -162,7 +161,7 @@ class AnimatedProps {
         }
       }
     }
-    items3 = [, , ];
+    items3 = [, ,];
     items3[0] = items1;
     items3[1] = items2;
     items3[2] = obj3;
@@ -198,7 +197,7 @@ let items = [
         }
       }
       return obj;
-    }
+    },
   },
   {
     key: "__getValueWithStaticProps",
@@ -250,7 +249,7 @@ let items = [
         obj[tmp2] = obj2.__getValueForStyle(obj);
       }
       return obj;
-    }
+    },
   },
   {
     key: "__getNativeAnimatedEventTuples",
@@ -273,7 +272,7 @@ let items = [
         }
       }
       return items;
-    }
+    },
   },
   {
     key: "__getAnimatedValue",
@@ -285,7 +284,7 @@ let items = [
         obj[this._nodeKeys[num]] = obj2.__getAnimatedValue();
       }
       return obj;
-    }
+    },
   },
   {
     key: "__attach",
@@ -301,7 +300,7 @@ let items = [
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
-    }
+    },
   },
   {
     key: "__detach",
@@ -326,13 +325,13 @@ let items = [
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
-    }
+    },
   },
   {
     key: "update",
     value: function update() {
       this._callback();
-    }
+    },
   },
   {
     key: "__makeNative",
@@ -360,7 +359,7 @@ let items = [
           const tmp12 = callback5(self, closure_12);
         }
       }
-    }
+    },
   },
   {
     key: "setNativeView",
@@ -382,7 +381,7 @@ let items = [
           const tmp7 = callback5(self, closure_12);
         }
       }
-    }
+    },
   },
   {
     key: "__restoreDefaultValues",
@@ -392,7 +391,7 @@ let items = [
         const API = setDefault.API;
         API.restoreDefaultValues(self.__getNativeTag());
       }
-    }
+    },
   },
   {
     key: "__getNativeConfig",
@@ -408,8 +407,8 @@ let items = [
       obj = { type: "props", props: obj, rootTag: _rootTag, debugID: self.__getDebugID() };
       _rootTag = self._rootTag;
       return obj;
-    }
-  }
+    },
+  },
 ];
 let fn = Object.hasOwn;
 let obj = {
@@ -435,7 +434,7 @@ let obj = {
       }
     }
     return obj;
-  }
+  },
 };
 if (fn == null) {
   fn = (arg0, arg1) => {

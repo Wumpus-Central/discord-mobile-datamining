@@ -7,18 +7,20 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let c2 = -1;
 const set = new Set();
 function onVisibilityUpdate(type) {
-  if ((function isPageHidden(type) {
-    let tmp = "pagehide" === type.type;
-    if (!tmp) {
-      const _document = callback(table[0]).WINDOW.document;
-      let visibilityState;
-      if (_document != null) {
-        visibilityState = _document.visibilityState;
+  if (
+    (function isPageHidden(type) {
+      let tmp = "pagehide" === type.type;
+      if (!tmp) {
+        const _document = callback(table[0]).WINDOW.document;
+        let visibilityState;
+        if (_document != null) {
+          visibilityState = _document.visibilityState;
+        }
+        tmp = "hidden" === visibilityState;
       }
-      tmp = "hidden" === visibilityState;
-    }
-    return tmp;
-  })(type)) {
+      return tmp;
+    })(type)
+  ) {
     if (num2 > -1) {
       if ("visibilitychange" === type.type) {
         for (const item10012 of set) {

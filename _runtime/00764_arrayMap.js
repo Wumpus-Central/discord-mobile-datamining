@@ -10,4 +10,4 @@ export default function arrayMap(arg0, arg1) {
     ArrayResult[num2] = arg1(arg0[num2], num2, arg0);
   }
   return ArrayResult;
-};
+}

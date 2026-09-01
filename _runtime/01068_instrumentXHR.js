@@ -53,8 +53,7 @@ function instrumentXHR() {
                   const obj2 = onreadystatechange(error[1]);
                   onreadystatechange(error[1]).triggerHandlers("xhr", obj);
                   const obj3 = onreadystatechange(error[1]);
-                } catch (err) {
-                }
+                } catch (err) {}
               }
             }
           };

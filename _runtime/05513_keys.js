@@ -8,7 +8,23 @@ for (const item10016 of keys) {
   obj[require("keys")[item10016]] = item10016;
   continue;
 }
-obj = { rgb: { channels: 3, labels: "rgb" }, hsl: { channels: 3, labels: "hsl" }, hsv: { channels: 3, labels: "hsv" }, hwb: { channels: 3, labels: "hwb" }, cmyk: { channels: 4, labels: "cmyk" }, xyz: { channels: 3, labels: "xyz" }, lab: { channels: 3, labels: "lab" }, lch: { channels: 3, labels: "lch" }, hex: { channels: 1, labels: ["hex"] }, keyword: { channels: 1, labels: ["keyword"] }, ansi16: { channels: 1, labels: ["ansi16"] }, ansi256: { channels: 1, labels: ["ansi256"] }, hcg: { channels: 3, labels: ["h", "c", "g"] }, apple: { channels: 3, labels: ["r16", "g16", "b16"] }, gray: { channels: 1, labels: ["gray"] } };
+obj = {
+  rgb: { channels: 3, labels: "rgb" },
+  hsl: { channels: 3, labels: "hsl" },
+  hsv: { channels: 3, labels: "hsv" },
+  hwb: { channels: 3, labels: "hwb" },
+  cmyk: { channels: 4, labels: "cmyk" },
+  xyz: { channels: 3, labels: "xyz" },
+  lab: { channels: 3, labels: "lab" },
+  lch: { channels: 3, labels: "lch" },
+  hex: { channels: 1, labels: ["hex"] },
+  keyword: { channels: 1, labels: ["keyword"] },
+  ansi16: { channels: 1, labels: ["ansi16"] },
+  ansi256: { channels: 1, labels: ["ansi256"] },
+  hcg: { channels: 3, labels: ["h", "c", "g"] },
+  apple: { channels: 3, labels: ["r16", "g16", "b16"] },
+  gray: { channels: 1, labels: ["gray"] },
+};
 const keys1 = Object.keys(obj);
 let iter = keys1[Symbol.iterator]();
 let nextResult = iter.next();
@@ -88,7 +104,7 @@ obj.rgb.hsl = (arg0) => {
     sum = bound2 + 360;
   }
   const result3 = (bound + bound1) / 2;
-  const items = [sum, , ];
+  const items = [sum, ,];
   if (bound1 === bound) {
     items[1] = 0;
     items[2] = 100 * result3;
@@ -140,7 +156,11 @@ obj.rgb.hsv = (arg0) => {
 obj.rgb.hwb = (arg0) => {
   [tmp, tmp2, tmp3] = arg0;
   const rgb = obj.rgb;
-  const items = [rgb.hsl(arg0)[0], 100 * (0.00392156862745098 * Math.min(tmp, Math.min(tmp2, tmp3))), 100 * (1 - 0.00392156862745098 * Math.max(tmp, Math.max(tmp2, tmp3)))];
+  const items = [
+    rgb.hsl(arg0)[0],
+    100 * (0.00392156862745098 * Math.min(tmp, Math.min(tmp2, tmp3))),
+    100 * (1 - 0.00392156862745098 * Math.max(tmp, Math.max(tmp2, tmp3))),
+  ];
   return items;
 };
 obj.rgb.cmyk = (arg0) => {
@@ -148,7 +168,12 @@ obj.rgb.cmyk = (arg0) => {
   const diff1 = 1 - arg0[1] / 255;
   const diff2 = 1 - arg0[2] / 255;
   const bound = Math.min(diff, diff1, diff2);
-  const items = [100 * ((diff - bound) / (1 - bound) || 0), 100 * ((diff1 - bound) / (1 - bound) || 0), 100 * ((diff2 - bound) / (1 - bound) || 0), 100 * bound];
+  const items = [
+    100 * ((diff - bound) / (1 - bound) || 0),
+    100 * ((diff1 - bound) / (1 - bound) || 0),
+    100 * ((diff2 - bound) / (1 - bound) || 0),
+    100 * bound,
+  ];
   return items;
 };
 obj.rgb.keyword = (arg0) => {
@@ -199,7 +224,11 @@ obj.rgb.xyz = (arg0) => {
   } else {
     result5 = result2 / 12.92;
   }
-  const items = [100 * (0.4124 * result3 + 0.3576 * result4 + 0.1805 * result5), 100 * (0.2126 * result3 + 0.7152 * result4 + 0.0722 * result5), 100 * (0.0193 * result3 + 0.1192 * result4 + 0.9505 * result5)];
+  const items = [
+    100 * (0.4124 * result3 + 0.3576 * result4 + 0.1805 * result5),
+    100 * (0.2126 * result3 + 0.7152 * result4 + 0.0722 * result5),
+    100 * (0.0193 * result3 + 0.1192 * result4 + 0.9505 * result5),
+  ];
   return items;
 };
 obj.rgb.lab = (arg0) => {
@@ -211,7 +240,7 @@ obj.rgb.lab = (arg0) => {
   } else {
     sum = 7.787 * result + 0.13793103448275862;
   }
-  const items = [116 * sum - 16, , ];
+  const items = [116 * sum - 16, ,];
   const result1 = xyzResult[0] / 95.047;
   if (0.008856 < result1) {
     let sum1 = result1 ** 0.3333333333333333;
@@ -261,11 +290,11 @@ obj.hsl.hsv = (arg0) => {
   }
   const result3 = result * diff;
   const result4 = result * diff1;
-  const items = [arg0[0], , ];
+  const items = [arg0[0], ,];
   if (0 === result2) {
-    let result5 = 2 * result4 / (bound + result4);
+    let result5 = (2 * result4) / (bound + result4);
   } else {
-    result5 = 2 * result3 / (result2 + result3);
+    result5 = (2 * result3) / (result2 + result3);
   }
   items[1] = 100 * result5;
   items[2] = 100 * ((result2 + result3) / 2);
@@ -310,14 +339,14 @@ obj.hsv.hsl = (arg0) => {
   const bound = Math.max(result1, 0.01);
   const diff = 2 - result;
   const result2 = diff * bound;
-  const items = [arg0[0], , ];
+  const items = [arg0[0], ,];
   let diff1 = result2;
   const result3 = result * bound;
   if (result2 > 1) {
     diff1 = 2 - result2;
   }
   items[1] = 100 * (result3 / diff1 || 0);
-  items[2] = 100 * (diff * result1 / 2);
+  items[2] = 100 * ((diff * result1) / 2);
   return items;
 };
 obj.hwb.rgb = (arg0) => {
@@ -384,7 +413,11 @@ obj.cmyk.rgb = (arg0) => {
   const diff = 1 - result;
   const result1 = arg0[1] / 100;
   const result2 = arg0[2] / 100;
-  const items = [255 * (1 - Math.min(1, arg0[0] / 100 * diff + result)), 255 * (1 - Math.min(1, result1 * diff + result)), 255 * (1 - Math.min(1, result2 * diff + result))];
+  const items = [
+    255 * (1 - Math.min(1, (arg0[0] / 100) * diff + result)),
+    255 * (1 - Math.min(1, result1 * diff + result)),
+    255 * (1 - Math.min(1, result2 * diff + result)),
+  ];
   return items;
 };
 obj.xyz.rgb = (arg0) => {
@@ -409,7 +442,11 @@ obj.xyz.rgb = (arg0) => {
   } else {
     diff2 = 12.92 * sum2;
   }
-  const items = [255 * Math.min(Math.max(0, diff), 1), 255 * Math.min(Math.max(0, diff1), 1), 255 * Math.min(Math.max(0, diff2), 1)];
+  const items = [
+    255 * Math.min(Math.max(0, diff), 1),
+    255 * Math.min(Math.max(0, diff1), 1),
+    255 * Math.min(Math.max(0, diff2), 1),
+  ];
   return items;
 };
 obj.xyz.lab = (arg0) => {
@@ -419,7 +456,7 @@ obj.xyz.lab = (arg0) => {
   } else {
     sum = 7.787 * result + 0.13793103448275862;
   }
-  const items = [116 * sum - 16, , ];
+  const items = [116 * sum - 16, ,];
   const result1 = arg0[0] / 95.047;
   if (0.008856 < result1) {
     let sum1 = result1 ** 0.3333333333333333;
@@ -456,7 +493,7 @@ obj.lab.xyz = (arg0) => {
   return items;
 };
 obj.lab.lch = (result2) => {
-  const result = 360 * Math.atan2(tmp2, tmp) / 2 / Math.PI;
+  const result = (360 * Math.atan2(tmp2, tmp)) / 2 / Math.PI;
   let sum = result;
   if (result < 0) {
     sum = result + 360;
@@ -465,7 +502,7 @@ obj.lab.lch = (result2) => {
   return items;
 };
 obj.lch.lab = (arg0) => {
-  const result = arg0[2] / 360 * 2 * Math.PI;
+  const result = (arg0[2] / 360) * 2 * Math.PI;
   const items = [arg0[0], arg0[1] * Math.cos(result), arg0[1] * Math.sin(result)];
   return items;
 };
@@ -487,7 +524,7 @@ obj.rgb.ansi16 = (arg0) => {
     const _Math2 = Math;
     const _Math3 = Math;
     const tmp8 = Math.round(tmp5 / 255) << 2;
-    const sum = 30 + (tmp8 | Math.round(tmp4 / 255) << 1 | Math.round(tmp3 / 255));
+    const sum = 30 + (tmp8 | (Math.round(tmp4 / 255) << 1) | Math.round(tmp3 / 255));
     let sum1 = sum;
     if (2 === rounded) {
       sum1 = sum + 60;
@@ -509,7 +546,7 @@ obj.rgb.ansi256 = (arg0) => {
         let num4 = 231;
         if (tmp <= 248) {
           const _Math = Math;
-          num4 = Math.round((tmp - 8) / 247 * 24) + 232;
+          num4 = Math.round(((tmp - 8) / 247) * 24) + 232;
         }
         num2 = num4;
       }
@@ -517,16 +554,20 @@ obj.rgb.ansi256 = (arg0) => {
     }
     return sum;
   }
-  const result = 36 * Math.round(tmp / 255 * 5);
-  const result1 = 6 * Math.round(tmp2 / 255 * 5);
-  sum = 16 + result + result1 + Math.round(tmp3 / 255 * 5);
+  const result = 36 * Math.round((tmp / 255) * 5);
+  const result1 = 6 * Math.round((tmp2 / 255) * 5);
+  sum = 16 + result + result1 + Math.round((tmp3 / 255) * 5);
 };
 obj.ansi16.rgb = (arg0) => {
   const result = arg0 % 10;
   if (0 !== result) {
     if (7 !== result) {
       const result1 = 0.5 * (1 + ~~arg0 > 50);
-      const items = [(1 & result) * result1 * 255, (result >> 1 & 1) * result1 * 255, (result >> 2 & 1) * result1 * 255];
+      const items = [
+        (1 & result) * result1 * 255,
+        ((result >> 1) & 1) * result1 * 255,
+        ((result >> 2) & 1) * result1 * 255,
+      ];
       return items;
     }
   }
@@ -534,7 +575,7 @@ obj.ansi16.rgb = (arg0) => {
   if (arg0 > 50) {
     sum = result + 3.5;
   }
-  const result2 = sum / 10.5 * 255;
+  const result2 = (sum / 10.5) * 255;
   const items1 = [result2, result2, result2];
   return items1;
 };
@@ -546,11 +587,11 @@ obj.ansi256.rgb = (arg0) => {
   } else {
     const diff = arg0 - 16;
     const _Math = Math;
-    const items1 = [Math.floor(diff / 36) / 5 * 255, , ];
+    const items1 = [(Math.floor(diff / 36) / 5) * 255, ,];
     const _Math2 = Math;
     const result = diff % 36;
-    items1[1] = Math.floor(result / 6) / 5 * 255;
-    items1[2] = result % 6 / 5 * 255;
+    items1[1] = (Math.floor(result / 6) / 5) * 255;
+    items1[2] = ((result % 6) / 5) * 255;
     return items1;
   }
 };
@@ -558,7 +599,8 @@ obj.rgb.hex = (arg0) => {
   const tmp = 255 & Math.round(arg0[0]);
   const tmp2 = 255 & Math.round(arg0[1]);
   const str = (tmp << 16) + ((255 & Math.round(arg0[1])) << 8) + (255 & Math.round(arg0[2]));
-  const formatted = (tmp << 16) + ((255 & Math.round(arg0[1])) << 8) + (255 & Math.round(arg0[2])).toString(16).toUpperCase();
+  const formatted =
+    (tmp << 16) + ((255 & Math.round(arg0[1])) << 8) + (255 & Math.round(arg0[2])).toString(16).toUpperCase();
   return "000000".substring(formatted.length) + formatted;
 };
 obj.hex.rgb = (arg0) => {
@@ -572,7 +614,7 @@ obj.hex.rgb = (arg0) => {
     }
     const _parseInt = parseInt;
     const parsed = parseInt(joined, 16);
-    const items = [parsed >> 16 & 255, parsed >> 8 & 255, 255 & parsed];
+    const items = [(parsed >> 16) & 255, (parsed >> 8) & 255, 255 & parsed];
     return items;
   } else {
     return [0, 0, 0];
@@ -587,7 +629,7 @@ obj.rgb.hcg = (arg0) => {
   const bound1 = Math.min(Math.min(result, result1), num);
   const diff = bound - bound1;
   if (diff <= 0) {
-    const items = [0, 100 * diff, ];
+    const items = [0, 100 * diff];
     let num8 = 0;
     if (diff < 1) {
       num8 = bound1 / (1 - diff);
@@ -621,7 +663,7 @@ obj.hsl.hcg = (arg0) => {
 };
 obj.hsv.hcg = (arg0) => {
   const result = arg0[2] / 100;
-  const result1 = arg0[1] / 100 * result;
+  const result1 = (arg0[1] / 100) * result;
   let num = 0;
   if (result1 < 1) {
     num = (result - result1) / (1 - result1);
@@ -637,7 +679,7 @@ obj.hcg.rgb = (arg0) => {
     const items = [result2, result2, result2];
     return items;
   } else {
-    const result3 = tmp % 1 * 6;
+    const result3 = (tmp % 1) * 6;
     const _Math = Math;
     const rounded = Math.floor(result3);
     const items1 = [0, 0, 0];
@@ -671,13 +713,17 @@ obj.hcg.rgb = (arg0) => {
       }
     }
     const result5 = (1 - result) * result1;
-    const items2 = [255 * (result * items1[0] + result5), 255 * (result * items1[1] + result5), 255 * (result * items1[2] + result5)];
+    const items2 = [
+      255 * (result * items1[0] + result5),
+      255 * (result * items1[1] + result5),
+      255 * (result * items1[2] + result5),
+    ];
     return items2;
   }
 };
 obj.hcg.hsv = (arg0) => {
   const result = arg0[1] / 100;
-  const sum = result + arg0[2] / 100 * (1 - result);
+  const sum = result + (arg0[2] / 100) * (1 - result);
   let num = 0;
   if (0 < sum) {
     num = result / sum;
@@ -687,7 +733,7 @@ obj.hcg.hsv = (arg0) => {
 };
 obj.hcg.hsl = (arg0) => {
   const result = arg0[1] / 100;
-  const sum = arg0[2] / 100 * (1 - result) + 0.5 * result;
+  const sum = (arg0[2] / 100) * (1 - result) + 0.5 * result;
   if (0 < sum) {
     if (sum < 0.5) {
       let num = result / (2 * sum);
@@ -706,7 +752,7 @@ obj.hcg.hsl = (arg0) => {
 };
 obj.hcg.hwb = (arg0) => {
   const result = arg0[1] / 100;
-  const sum = result + arg0[2] / 100 * (1 - result);
+  const sum = result + (arg0[2] / 100) * (1 - result);
   const items = [arg0[0], 100 * (sum - result), 100 * (1 - sum)];
   return items;
 };
@@ -721,15 +767,15 @@ obj.hwb.hcg = (arg0) => {
   return items;
 };
 obj.apple.rgb = (arg0) => {
-  const items = [arg0[0] / 65535 * 255, arg0[1] / 65535 * 255, arg0[2] / 65535 * 255];
+  const items = [(arg0[0] / 65535) * 255, (arg0[1] / 65535) * 255, (arg0[2] / 65535) * 255];
   return items;
 };
 obj.rgb.apple = (arg0) => {
-  const items = [arg0[0] / 255 * 65535, arg0[1] / 255 * 65535, arg0[2] / 255 * 65535];
+  const items = [(arg0[0] / 255) * 65535, (arg0[1] / 255) * 65535, (arg0[2] / 255) * 65535];
   return items;
 };
 obj.gray.rgb = (arg0) => {
-  const items = [arg0[0] / 100 * 255, arg0[0] / 100 * 255, arg0[0] / 100 * 255];
+  const items = [(arg0[0] / 100) * 255, (arg0[0] / 100) * 255, (arg0[0] / 100) * 255];
   return items;
 };
 obj.gray.hsl = (arg0) => {
@@ -750,12 +796,12 @@ obj.gray.lab = (arg0) => {
   return items;
 };
 obj.gray.hex = (arg0) => {
-  const tmp = 255 & Math.round(arg0[0] / 100 * 255);
+  const tmp = 255 & Math.round((arg0[0] / 100) * 255);
   const formatted = (tmp << 16) + (tmp << 8) + tmp.toString(16).toUpperCase();
   return "000000".substring(formatted.length) + formatted;
 };
 obj.rgb.gray = (arg0) => {
-  const items = [(arg0[0] + arg0[1] + arg0[2]) / 3 / 255 * 100];
+  const items = [((arg0[0] + arg0[1] + arg0[2]) / 3 / 255) * 100];
   return items;
 };
 

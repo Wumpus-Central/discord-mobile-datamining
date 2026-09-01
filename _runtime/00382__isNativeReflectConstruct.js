@@ -25,8 +25,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 function flatAnimatedNodes(_value, items, arg2) {
   if (items === undefined) {
@@ -160,7 +159,7 @@ let obj = {
   key: "__getValue",
   value: function __getValue() {
     return mapAnimatedNodes(this._value, (__getValue) => __getValue.__getValue());
-  }
+  },
 };
 let items = [
   obj,
@@ -173,13 +172,13 @@ let items = [
         closure_1 = tmp + 1;
         return _nodes[+closure_1].__getValue();
       });
-    }
+    },
   },
   {
     key: "__getAnimatedValue",
     value: function __getAnimatedValue() {
       return mapAnimatedNodes(this._value, (__getAnimatedValue) => __getAnimatedValue.__getAnimatedValue());
-    }
+    },
   },
   {
     key: "__attach",
@@ -195,7 +194,7 @@ let items = [
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
-    }
+    },
   },
   {
     key: "__detach",
@@ -211,7 +210,7 @@ let items = [
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
-    }
+    },
   },
   {
     key: "__makeNative",
@@ -228,14 +227,18 @@ let items = [
       }
       const items = [arg0];
       fn(items);
-    }
+    },
   },
   {
     key: "__getNativeConfig",
     value: function __getNativeConfig() {
-      return { type: "object", value: mapAnimatedNodes(this._value, (__getNativeTag) => ({ nodeTag: __getNativeTag.__getNativeTag() })), debugID: this.__getDebugID() };
-    }
-  }
+      return {
+        type: "object",
+        value: mapAnimatedNodes(this._value, (__getNativeTag) => ({ nodeTag: __getNativeTag.__getNativeTag() })),
+        debugID: this.__getDebugID(),
+      };
+    },
+  },
 ];
 obj = {
   key: "from",
@@ -261,7 +264,7 @@ obj = {
       tmp9Result._value = _value;
       const tmp9 = closure_3;
     }
-  }
+  },
 };
 const items1 = [obj];
 

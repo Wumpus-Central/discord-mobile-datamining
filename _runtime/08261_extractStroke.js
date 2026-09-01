@@ -5,7 +5,17 @@ let closure_2 = { butt: 0, square: 2, round: 1 };
 let closure_3 = { miter: 0, bevel: 2, round: 1 };
 let closure_4 = { none: 0, default: 0, nonScalingStroke: 1, "non-scaling-stroke": 1, inherit: 2, uri: 3 };
 arg5.default = function extractStroke(arg0, arg1, arr) {
-  ({ stroke, strokeOpacity, strokeLinecap, strokeLinejoin, strokeDasharray, strokeWidth, strokeDashoffset, strokeMiterlimit, vectorEffect } = arg1);
+  ({
+    stroke,
+    strokeOpacity,
+    strokeLinecap,
+    strokeLinejoin,
+    strokeDasharray,
+    strokeWidth,
+    strokeDashoffset,
+    strokeMiterlimit,
+    vectorEffect,
+  } = arg1);
   if (null != stroke) {
     arr.push("stroke");
     arg0.stroke = module(8259)(stroke);

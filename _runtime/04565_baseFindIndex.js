@@ -28,4 +28,4 @@ export default function baseFindIndex(arg0, arg1, arg2, arg3) {
     return diff;
   }
   return -1;
-};
+}

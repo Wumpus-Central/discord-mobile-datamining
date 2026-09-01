@@ -8,7 +8,9 @@ function isAutoFillData(loop) {
 }
 isAutoFillData.__closure = {};
 isAutoFillData.__workletHash = 3243810595903;
-isAutoFillData.__initData = { code: "function isAutoFillData_Pnpm_computedWithAutoFillDataTs1(params){return!!params.loop&&!!params.autoFillData;}" };
+isAutoFillData.__initData = {
+  code: "function isAutoFillData_Pnpm_computedWithAutoFillDataTs1(params){return!!params.loop&&!!params.autoFillData;}",
+};
 function convertToSharedIndex(arg0) {
   ({ rawDataLength, index } = arg0);
   ({ loop, autoFillData } = arg0);
@@ -26,7 +28,9 @@ function convertToSharedIndex(arg0) {
 }
 convertToSharedIndex.__closure = { isAutoFillData, SINGLE_ITEM, DOUBLE_ITEM };
 convertToSharedIndex.__workletHash = 6582547575185;
-convertToSharedIndex.__initData = { code: "function convertToSharedIndex_Pnpm_computedWithAutoFillDataTs2(params){const{isAutoFillData,SINGLE_ITEM,DOUBLE_ITEM}=this.__closure;const{loop:loop,rawDataLength:rawDataLength,index:index,autoFillData:autoFillData}=params;if(isAutoFillData({loop:loop,autoFillData:autoFillData})){switch(rawDataLength){case SINGLE_ITEM:return 0;case DOUBLE_ITEM:return index%2;}}return index;}" };
+convertToSharedIndex.__initData = {
+  code: "function convertToSharedIndex_Pnpm_computedWithAutoFillDataTs2(params){const{isAutoFillData,SINGLE_ITEM,DOUBLE_ITEM}=this.__closure;const{loop:loop,rawDataLength:rawDataLength,index:index,autoFillData:autoFillData}=params;if(isAutoFillData({loop:loop,autoFillData:autoFillData})){switch(rawDataLength){case SINGLE_ITEM:return 0;case DOUBLE_ITEM:return index%2;}}return index;}",
+};
 function computedOffsetXValueWithAutoFillData(arg0) {
   ({ rawDataLength, value, size } = arg0);
   ({ loop, autoFillData } = arg0);
@@ -44,7 +48,9 @@ function computedOffsetXValueWithAutoFillData(arg0) {
 }
 computedOffsetXValueWithAutoFillData.__closure = { isAutoFillData, SINGLE_ITEM, DOUBLE_ITEM };
 computedOffsetXValueWithAutoFillData.__workletHash = 4588043425301;
-computedOffsetXValueWithAutoFillData.__initData = { code: "function computedOffsetXValueWithAutoFillData_Pnpm_computedWithAutoFillDataTs3(params){const{isAutoFillData,SINGLE_ITEM,DOUBLE_ITEM}=this.__closure;const{rawDataLength:rawDataLength,value:value,size:size,loop:loop,autoFillData:autoFillData}=params;if(isAutoFillData({loop:loop,autoFillData:autoFillData})){switch(rawDataLength){case SINGLE_ITEM:return value%size;case DOUBLE_ITEM:return value%(size*2);}}return value;}" };
+computedOffsetXValueWithAutoFillData.__initData = {
+  code: "function computedOffsetXValueWithAutoFillData_Pnpm_computedWithAutoFillDataTs3(params){const{isAutoFillData,SINGLE_ITEM,DOUBLE_ITEM}=this.__closure;const{rawDataLength:rawDataLength,value:value,size:size,loop:loop,autoFillData:autoFillData}=params;if(isAutoFillData({loop:loop,autoFillData:autoFillData})){switch(rawDataLength){case SINGLE_ITEM:return value%size;case DOUBLE_ITEM:return value%(size*2);}}return value;}",
+};
 
 export { convertToSharedIndex };
 export { computedOffsetXValueWithAutoFillData };
@@ -74,7 +80,7 @@ export const computedFillDataWithAutoFillData = function computedFillDataWithAut
       const items = [data[0], data[0], data[0]];
       return items;
     } else if (DOUBLE_ITEM === dataLength) {
-      const items1 = [data[0], data[1], , ];
+      const items1 = [data[0], data[1], ,];
       [arr[2], arr[3]] = data;
       return items1;
     }

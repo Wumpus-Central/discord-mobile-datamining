@@ -2,9 +2,15 @@
 import { cancelAnimation } from "01653_cancelAnimation.js";
 const require = arg1;
 let dependencyMap = arg6;
-let closure_2 = { code: "function pnpm_useScrollHandlerTs1(event,context){const{handleOnScroll,onScroll,runOnJS}=this.__closure;handleOnScroll(event,context);if(onScroll){runOnJS(onScroll)({nativeEvent:event});}}" };
-let closure_3 = { code: "function pnpm_useScrollHandlerTs2(event,context){const{handleOnBeginDrag,onScrollBeginDrag,runOnJS}=this.__closure;handleOnBeginDrag(event,context);if(onScrollBeginDrag){runOnJS(onScrollBeginDrag)({nativeEvent:event});}}" };
-let closure_4 = { code: "function pnpm_useScrollHandlerTs3(event,context){const{handleOnEndDrag,onScrollEndDrag,runOnJS}=this.__closure;handleOnEndDrag(event,context);if(onScrollEndDrag){runOnJS(onScrollEndDrag)({nativeEvent:event});}}" };
+let closure_2 = {
+  code: "function pnpm_useScrollHandlerTs1(event,context){const{handleOnScroll,onScroll,runOnJS}=this.__closure;handleOnScroll(event,context);if(onScroll){runOnJS(onScroll)({nativeEvent:event});}}",
+};
+let closure_3 = {
+  code: "function pnpm_useScrollHandlerTs2(event,context){const{handleOnBeginDrag,onScrollBeginDrag,runOnJS}=this.__closure;handleOnBeginDrag(event,context);if(onScrollBeginDrag){runOnJS(onScrollBeginDrag)({nativeEvent:event});}}",
+};
+let closure_4 = {
+  code: "function pnpm_useScrollHandlerTs3(event,context){const{handleOnEndDrag,onScrollEndDrag,runOnJS}=this.__closure;handleOnEndDrag(event,context);if(onScrollEndDrag){runOnJS(onScrollEndDrag)({nativeEvent:event});}}",
+};
 arg5.useScrollHandler = (arg0, onScroll, onScrollBeginDrag, onScrollEndDrag) => {
   let useScrollEventsHandlersDefault = arg0;
   if (arg0 === undefined) {
@@ -67,7 +73,11 @@ arg5.useScrollHandler = (arg0, onScroll, onScrollBeginDrag, onScrollEndDrag) => 
     }
   };
   const tmp3Result = cancelAnimation;
-  fn2.__closure = { handleOnBeginDrag: workletNoop2, onScrollBeginDrag, runOnJS: require("01653_cancelAnimation.js").runOnJS };
+  fn2.__closure = {
+    handleOnBeginDrag: workletNoop2,
+    onScrollBeginDrag,
+    runOnJS: require("01653_cancelAnimation.js").runOnJS,
+  };
   fn2.__workletHash = 803385440782;
   fn2.__initData = workletNoop;
   obj[1] = fn2;
@@ -85,14 +95,31 @@ arg5.useScrollHandler = (arg0, onScroll, onScrollBeginDrag, onScrollEndDrag) => 
       return;
     }
   }
-  const obj2 = { handleOnBeginDrag: workletNoop2, onScrollBeginDrag, runOnJS: require("01653_cancelAnimation.js").runOnJS };
-  O.__closure = { handleOnEndDrag: workletNoop3, onScrollEndDrag, runOnJS: require("01653_cancelAnimation.js").runOnJS };
+  const obj2 = {
+    handleOnBeginDrag: workletNoop2,
+    onScrollBeginDrag,
+    runOnJS: require("01653_cancelAnimation.js").runOnJS,
+  };
+  O.__closure = {
+    handleOnEndDrag: workletNoop3,
+    onScrollEndDrag,
+    runOnJS: require("01653_cancelAnimation.js").runOnJS,
+  };
   O.__workletHash = 3274737678599;
   O.__initData = workletNoop2;
   obj[2] = O;
   obj[3] = workletNoop5;
   obj[4] = workletNoop4;
-  const items = [workletNoop, workletNoop2, workletNoop3, workletNoop5, workletNoop4, onScroll, onScrollBeginDrag, onScrollEndDrag];
+  const items = [
+    workletNoop,
+    workletNoop2,
+    workletNoop3,
+    workletNoop5,
+    workletNoop4,
+    onScroll,
+    onScrollBeginDrag,
+    onScrollEndDrag,
+  ];
   obj[0] = tmp3Result.useAnimatedScrollHandler(obj, items);
   obj[1] = animatedRef;
   obj[2] = sharedValue;

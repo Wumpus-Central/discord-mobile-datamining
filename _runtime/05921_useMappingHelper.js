@@ -13,7 +13,7 @@ export const useMappingHelper = () => {
         tmp = arg1;
       }
       return tmp;
-    }, items)
+    }, items),
   };
   items = [recyclerViewContext];
   return obj;

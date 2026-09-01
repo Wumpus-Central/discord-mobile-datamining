@@ -51,6 +51,19 @@ const merged35 = Object.assign(RotateInData.RotateOut);
 const merged36 = Object.assign(RollInData.RollIn);
 const merged37 = Object.assign(RollInData.RollOut);
 
-export const TransitionType = { LINEAR: 0, [0]: "LINEAR", SEQUENCED: 1, [1]: "SEQUENCED", FADING: 2, [2]: "FADING", JUMPING: 3, [3]: "JUMPING", CURVED: 4, [4]: "CURVED", ENTRY_EXIT: 5, [5]: "ENTRY_EXIT" };
+export const TransitionType = {
+  LINEAR: 0,
+  [0]: "LINEAR",
+  SEQUENCED: 1,
+  [1]: "SEQUENCED",
+  FADING: 2,
+  [2]: "FADING",
+  JUMPING: 3,
+  [3]: "JUMPING",
+  CURVED: 4,
+  [4]: "CURVED",
+  ENTRY_EXIT: 5,
+  [5]: "ENTRY_EXIT",
+};
 export const AnimationsData = obj;
 export const Animations = obj;

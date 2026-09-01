@@ -84,7 +84,7 @@ let closure_5 = {
     }
     new.target.cache = Object.create(null);
     return new.target;
-  }
+  },
 };
 arg5.strategies = {
   variadic: function strategyVariadic(c165, cache) {
@@ -94,5 +94,5 @@ arg5.strategies = {
   monadic: function strategyMonadic(c165, cache) {
     cache = cache.cache;
     return monadic.bind(this, c165, cache.create(), cache.serializer);
-  }
+  },
 };

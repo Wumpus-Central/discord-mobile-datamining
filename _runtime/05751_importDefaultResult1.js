@@ -9,11 +9,24 @@ import { jsx } from "react/00021_jsxProd.js";
 import importDefaultResult from "05664_createNativeWrapper.js";
 
 require = arg1;
-let closure_3 = ["children", "refreshControl", "onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER", "keyboardShouldPersistTaps"];
+let closure_3 = [
+  "children",
+  "refreshControl",
+  "onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER",
+  "keyboardShouldPersistTaps",
+];
 let closure_4 = ["refreshControl", "ref", "onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER"];
 ({ FlatList: c9, RefreshControl, ScrollView: ScrollView2, Switch, TextInput } = get_ActivityIndicator);
-const importDefaultResultResult = importDefaultResult(RefreshControl, { disallowInterruption: true, shouldCancelWhenOutside: false }, require("GestureDetectorType").GestureDetectorType.Virtual);
-let closure_11 = importDefaultResult(ScrollView2, { disallowInterruption: true, shouldCancelWhenOutside: false }, require("GestureDetectorType").GestureDetectorType.Intercepting);
+const importDefaultResultResult = importDefaultResult(
+  RefreshControl,
+  { disallowInterruption: true, shouldCancelWhenOutside: false },
+  require("GestureDetectorType").GestureDetectorType.Virtual,
+);
+let closure_11 = importDefaultResult(
+  ScrollView2,
+  { disallowInterruption: true, shouldCancelWhenOutside: false },
+  require("GestureDetectorType").GestureDetectorType.Intercepting,
+);
 class ScrollView {
   constructor(arg0) {
     ({ refreshControl, onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER: closure_0, keyboardShouldPersistTaps } = global);
@@ -71,7 +84,11 @@ const importDefaultResult1 = importDefaultResult;
 
 export const RefreshControl = importDefaultResultResult;
 export { ScrollView };
-export const Switch = importDefaultResult(Switch, { shouldCancelWhenOutside: false, shouldActivateOnStart: true, disallowInterruption: true });
+export const Switch = importDefaultResult(Switch, {
+  shouldCancelWhenOutside: false,
+  shouldActivateOnStart: true,
+  disallowInterruption: true,
+});
 export const TextInput = importDefaultResult(TextInput);
 export const FlatList = (ref) => {
   ({ refreshControl, onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER: require } = ref);

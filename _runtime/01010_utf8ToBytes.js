@@ -26,7 +26,7 @@ arg5.utf8ToBytes = function utf8ToBytes(str) {
                 tmp13 = diff;
               }
             } else {
-              let sum = 65536 + (tmp - 55296 << 10 | charCodeAtResult - 56320);
+              let sum = 65536 + (((tmp - 55296) << 10) | (charCodeAtResult - 56320));
               let tmp10 = num;
             }
             if (sum < 128) {
@@ -39,14 +39,14 @@ arg5.utf8ToBytes = function utf8ToBytes(str) {
             } else if (sum < 2048) {
               let diff2 = tmp10 - 2;
               if (diff2 >= 0) {
-                let arr1 = items.push(sum >> 6 | 192, 63 & sum | 128);
+                let arr1 = items.push((sum >> 6) | 192, (63 & sum) | 128);
                 tmp12 = null;
                 tmp13 = diff2;
               }
             } else if (sum < 65536) {
               let diff3 = tmp10 - 3;
               if (diff3 >= 0) {
-                let arr2 = items.push(sum >> 12 | 224, sum >> 6 & 63 | 128, 63 & sum | 128);
+                let arr2 = items.push((sum >> 12) | 224, ((sum >> 6) & 63) | 128, (63 & sum) | 128);
                 tmp12 = null;
                 tmp13 = diff3;
               }
@@ -56,7 +56,12 @@ arg5.utf8ToBytes = function utf8ToBytes(str) {
               let diff4 = tmp10 - 4;
               if (diff4 >= 0) {
                 let tmp31 = items;
-                let arr3 = items.push(sum >> 18 | 240, sum >> 12 & 63 | 128, sum >> 6 & 63 | 128, 63 & sum | 128);
+                let arr3 = items.push(
+                  (sum >> 18) | 240,
+                  ((sum >> 12) & 63) | 128,
+                  ((sum >> 6) & 63) | 128,
+                  (63 & sum) | 128,
+                );
                 tmp12 = null;
                 tmp13 = diff4;
               }

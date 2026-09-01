@@ -22,8 +22,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 class SentryError {

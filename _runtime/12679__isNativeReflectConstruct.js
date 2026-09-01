@@ -23,8 +23,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 export function $ZodAsyncError() {
   const self = this;
@@ -170,7 +169,7 @@ export const $constructor = function $constructor(ZodError, initializer, Parent)
         tmp3 = hasItem;
       }
       return tmp3;
-    }
+    },
   };
   Object.defineProperty(fn, Symbol.hasInstance, obj);
   obj = { value: ZodError };

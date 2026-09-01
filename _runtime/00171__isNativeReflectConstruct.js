@@ -22,8 +22,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class TaskAttributionTiming {
   constructor() {
@@ -81,7 +80,7 @@ let items = [
     key: "attribution",
     get() {
       return closure_5;
-    }
+    },
   },
   {
     key: "toJSON",
@@ -97,8 +96,8 @@ let items = [
       const merged = Object.assign(fn([]));
       obj.attribution = this.attribution;
       return obj;
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult1 = importDefaultResult(PerformanceLongTaskTiming, items);
 class PerformanceLongTaskTiming {

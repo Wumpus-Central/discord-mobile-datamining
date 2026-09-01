@@ -1,7 +1,6 @@
 // _runtime/04826_IsAccessorDescriptor.js
 import isPropertyDescriptor from "04813_isPropertyDescriptor.js";
 
-
 export default function IsAccessorDescriptor(arg0) {
   if (undefined === arg0) {
     return false;
@@ -16,4 +15,4 @@ export default function IsAccessorDescriptor(arg0) {
     const tmp5 = new tmp(541)("Assertion failed: `Desc` must be a Property Descriptor");
     throw tmp5;
   }
-};
+}

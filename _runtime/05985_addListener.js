@@ -21,7 +21,7 @@ export const addListener = (arg0) => {
   }
   const addListenerResult = nativeEventEmitter.addListener(RNCClipboard_TEXT_CHANGED, arg0);
   addListenerResult._remove = addListenerResult.remove;
-  addListenerResult.remove = function() {
+  addListenerResult.remove = function () {
     this._remove();
     if (0 === callback(closure_1)) {
       closure_0.removeListener();

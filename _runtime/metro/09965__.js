@@ -31,7 +31,7 @@ const obj = {
     return obj.EXP_TABLE[tmp4];
   },
   EXP_TABLE: null,
-  LOG_TABLE: null
+  LOG_TABLE: null,
 };
 let array = new Array(256);
 obj[2] = array;
@@ -44,7 +44,8 @@ do {
   num2 = 8;
 } while (num < 8);
 do {
-  obj.EXP_TABLE[num2] = obj.EXP_TABLE[num2 - 4] ^ obj.EXP_TABLE[num2 - 5] ^ obj.EXP_TABLE[num2 - 6] ^ obj.EXP_TABLE[num2 - 8];
+  obj.EXP_TABLE[num2] =
+    obj.EXP_TABLE[num2 - 4] ^ obj.EXP_TABLE[num2 - 5] ^ obj.EXP_TABLE[num2 - 6] ^ obj.EXP_TABLE[num2 - 8];
   num2 = num2 + 1;
   num3 = 0;
 } while (num2 < 256);

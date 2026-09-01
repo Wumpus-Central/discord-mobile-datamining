@@ -6,15 +6,35 @@ import createStandardNavigationFactories from "01500_createStandardNavigationFac
 
 require = arg1;
 function StackNavigator(arg0) {
-  ({ id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router } = arg0);
+  ({
+    id,
+    initialRouteName,
+    UNSTABLE_routeNamesChangeBehavior,
+    children,
+    layout,
+    screenListeners,
+    screenOptions,
+    screenLayout,
+    UNSTABLE_router,
+  } = arg0);
   let merged = Object.assign(arg0, Object.create(null));
   let state;
   let navigation;
   let obj = state(navigation[2]);
-  const navigationBuilder = state(navigation[2]).useNavigationBuilder(state(navigation[2]).StackRouter, { id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router });
+  const navigationBuilder = state(navigation[2]).useNavigationBuilder(state(navigation[2]).StackRouter, {
+    id,
+    initialRouteName,
+    UNSTABLE_routeNamesChangeBehavior,
+    children,
+    layout,
+    screenListeners,
+    screenOptions,
+    screenLayout,
+    UNSTABLE_router,
+  });
   state = navigationBuilder.state;
   navigation = navigationBuilder.navigation;
-  const items = [navigation, , ];
+  const items = [navigation, ,];
   ({ index: arr[1], key: arr[2] } = state);
   ({ describe, descriptors, NavigationContent } = navigationBuilder);
   const effect = React.useEffect(() => {

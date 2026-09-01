@@ -45,7 +45,7 @@ class Compiler {
         return items;
       }
     }
-    error1 = new Error("Message AST is not of type: \"messageFormatPattern\"");
+    error1 = new Error('Message AST is not of type: "messageFormatPattern"');
     throw error1;
   }
   compileMessageText(arg0) {

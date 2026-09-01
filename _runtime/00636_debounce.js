@@ -161,4 +161,4 @@ export default function debounce(fn, arg1, leading) {
     };
     return debounced;
   }
-};
+}

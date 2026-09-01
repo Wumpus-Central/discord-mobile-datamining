@@ -21,8 +21,7 @@ export const useDisposableMemo = function useDisposableMemo(arg0, _temp, items, 
       }
       try {
         obj2.current(tmp2.current.value);
-      } catch (err) {
-      }
+      } catch (err) {}
     }
     obj = { value: null, deps: null, pendingDisposal: null };
     obj[0] = arg0();
@@ -32,14 +31,16 @@ export const useDisposableMemo = function useDisposableMemo(arg0, _temp, items, 
       tmp3.current.current = tmp2.current.value;
     }
   }
-  obj2(() => () => {
-    if (ref3.current) {
-      ref3.current.current = undefined;
-    }
-    try {
-      ref2.current(ref.current.value);
-    } catch (err) {
-    }
-  }, []);
+  obj2(
+    () => () => {
+      if (ref3.current) {
+        ref3.current.current = undefined;
+      }
+      try {
+        ref2.current(ref.current.value);
+      } catch (err) {}
+    },
+    [],
+  );
   return tmp2.current.value;
 };

@@ -27,8 +27,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 _readOnlyErrorDefault;
 class SpringAnimation {
@@ -117,8 +116,12 @@ class SpringAnimation {
           if (tmp13) {
             tmp13 = undefined === global.mass;
           }
-          str = "You can define one of bounciness/speed, tension/friction, or stiffness/damping/mass, but not more than one";
-          tmp12Result = tmp12(tmp13, "You can define one of bounciness/speed, tension/friction, or stiffness/damping/mass, but not more than one");
+          str =
+            "You can define one of bounciness/speed, tension/friction, or stiffness/damping/mass, but not more than one";
+          tmp12Result = tmp12(
+            tmp13,
+            "You can define one of bounciness/speed, tension/friction, or stiffness/damping/mass, but not more than one",
+          );
           tmp15 = closure_2;
           obj3 = require("fromOrigamiTensionAndFriction");
           num8 = global.bounciness;
@@ -158,7 +161,10 @@ class SpringAnimation {
     if (tmp19) {
       tmp19 = undefined === global.friction;
     }
-    tmp18Result = tmp18(tmp19, "You can define one of bounciness/speed, tension/friction, or stiffness/damping/mass, but not more than one");
+    tmp18Result = tmp18(
+      tmp19,
+      "You can define one of bounciness/speed, tension/friction, or stiffness/damping/mass, but not more than one",
+    );
     num11 = global.stiffness;
     if (num11 == null) {
       num11 = 100;
@@ -184,7 +190,20 @@ let items = [
     key: "__getNativeAnimationConfig",
     value: function __getNativeAnimationConfig() {
       const self = this;
-      const obj = { type: "spring", overshootClamping: this._overshootClamping, restDisplacementThreshold: this._restDisplacementThreshold, restSpeedThreshold: this._restSpeedThreshold, stiffness: this._stiffness, damping: this._damping, mass: this._mass, initialVelocity: null, toValue: null, iterations: null, platformConfig: null, debugID: null };
+      const obj = {
+        type: "spring",
+        overshootClamping: this._overshootClamping,
+        restDisplacementThreshold: this._restDisplacementThreshold,
+        restSpeedThreshold: this._restSpeedThreshold,
+        stiffness: this._stiffness,
+        damping: this._damping,
+        mass: this._mass,
+        initialVelocity: null,
+        toValue: null,
+        iterations: null,
+        platformConfig: null,
+        debugID: null,
+      };
       let _lastVelocity = this._initialVelocity;
       if (_lastVelocity == null) {
         _lastVelocity = self._lastVelocity;
@@ -193,7 +212,7 @@ let items = [
       ({ _toValue: obj[8], __iterations: obj[9], _platformConfig: obj[10] } = self);
       obj[11] = self.__getDebugID();
       return obj;
-    }
+    },
   },
   {
     key: "start",
@@ -230,13 +249,13 @@ let items = [
       } else if (!self.__startAnimationIfNative(self)) {
         self.onUpdate();
       }
-    }
+    },
   },
   {
     key: "getInternalState",
     value: function getInternalState() {
       return { lastPosition: this._lastPosition, lastVelocity: this._lastVelocity, lastTime: this._lastTime };
-    }
+    },
   },
   {
     key: "onUpdate",
@@ -264,7 +283,7 @@ let items = [
         const _Math5 = Math;
         const result4 = result * sqrtResult * expResult;
         const _Math6 = Math;
-        const result5 = Math.sin(result1 * _frameTime) * (tmp2 + result * sqrtResult * diff) / result1;
+        const result5 = (Math.sin(result1 * _frameTime) * (tmp2 + result * sqrtResult * diff)) / result1;
         const _Math7 = Math;
         const sum = result5 + diff * Math.cos(result1 * _frameTime);
         const _Math8 = Math;
@@ -310,7 +329,7 @@ let items = [
           tmp19 = diff1 < self._toValue;
         }
       }
-    }
+    },
   },
   {
     key: "stop",
@@ -327,8 +346,8 @@ let items = [
         SpringAnimation.cancelAnimationFrame(self._animationFrame);
       }
       self.__notifyAnimationEnd({ finished: false });
-    }
-  }
+    },
+  },
 ];
 
 export default importDefaultResult1(SpringAnimation, items);

@@ -21,13 +21,17 @@ function diffCalculator(scale, scale2) {
 }
 diffCalculator.__closure = {};
 diffCalculator.__workletHash = 7517335332069;
-diffCalculator.__initData = { code: "function diffCalculator_Pnpm_usePinchGestureTs1(current,previous){return{scaleChange:previous?current.scale/previous.scale:current.scale};}" };
+diffCalculator.__initData = {
+  code: "function diffCalculator_Pnpm_usePinchGestureTs1(current,previous){return{scaleChange:previous?current.scale/previous.scale:current.scale};}",
+};
 function fillInDefaultValues(arg0) {
   arg0.scaleChange = 1;
 }
 fillInDefaultValues.__closure = {};
 fillInDefaultValues.__workletHash = 10393435493424;
-fillInDefaultValues.__initData = { code: "function fillInDefaultValues_Pnpm_usePinchGestureTs2(event){event.scaleChange=1;}" };
+fillInDefaultValues.__initData = {
+  code: "function fillInDefaultValues_Pnpm_usePinchGestureTs2(event){event.scaleChange=1;}",
+};
 const map = new Map();
 let closure_6 = {};
 arg5.usePinchGesture = function usePinchGesture(gestureHandlerProps) {

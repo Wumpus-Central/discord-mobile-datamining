@@ -155,7 +155,7 @@ arg5.expoContextIntegration = () => {
         const tmp11 = closure_1_2;
       }
       return contexts;
-    }
+    },
   };
 };
 arg5.getExpoUpdatesContext = getExpoUpdatesContext;

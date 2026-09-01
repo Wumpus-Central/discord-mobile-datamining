@@ -42,7 +42,9 @@ export default (str, SEPARATOR, arg2, maxKeys) => {
         let decodeURIComponentResult1 = decodeURIComponent(str6);
         let _Object = Object;
         let call = hasOwnProperty.call;
-        if (typeof call === "unknown" ? hasOwnProperty(decodeURIComponentResult) : call(obj, decodeURIComponentResult)) {
+        if (
+          typeof call === "unknown" ? hasOwnProperty(decodeURIComponentResult) : call(obj, decodeURIComponentResult)
+        ) {
           let _Array = Array;
           let arr2 = obj[decodeURIComponentResult];
           if (Array.isArray(obj[decodeURIComponentResult])) {

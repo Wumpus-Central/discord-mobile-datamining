@@ -27,20 +27,26 @@ const items = [
       let tmp = null;
       if (iter) {
         const obj = { setter: null, rest: null };
-        const valueSetter = new Parser(3875).ValueSetter(iter.value, self.validate, self.set, self.priority, self.subPriority);
+        const valueSetter = new Parser(3875).ValueSetter(
+          iter.value,
+          self.validate,
+          self.set,
+          self.priority,
+          self.subPriority,
+        );
         obj[0] = valueSetter;
         obj[1] = iter.rest;
         tmp = obj;
       }
       return tmp;
-    }
+    },
   },
   {
     key: "validate",
     value: function validate(arg0, arg1, arg2) {
       return true;
-    }
-  }
+    },
+  },
 ];
 for (let num = 0; num < items.length; num = num + 1) {
   let tmp3 = items[num];

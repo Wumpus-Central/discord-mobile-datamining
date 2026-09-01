@@ -82,7 +82,9 @@ obj.get.rgb = (str) => {
           num7 = 0;
         }
       } else {
-        const match2 = str.match(/^rgba?\(\s*([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/);
+        const match2 = str.match(
+          /^rgba?\(\s*([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/,
+        );
         let num4 = 0;
         if (match2) {
           do {
@@ -104,7 +106,9 @@ obj.get.rgb = (str) => {
             }
           }
         } else {
-          const match3 = str.match(/^rgba?\(\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/);
+          const match3 = str.match(
+            /^rgba?\(\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/,
+          );
           let num6 = 0;
           if (match3) {
             do {
@@ -169,12 +173,14 @@ obj.get.rgb = (str) => {
 };
 obj.get.hsl = (str) => {
   if (str) {
-    const match = str.match(/^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
+    const match = str.match(
+      /^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/,
+    );
     if (match) {
       const _parseFloat = parseFloat;
       const parsed = parseFloat(match[4]);
       const _parseFloat2 = parseFloat;
-      const items = [(parseFloat(match[1]) % 360 + 360) % 360, , , ];
+      const items = [((parseFloat(match[1]) % 360) + 360) % 360, , ,];
       const _parseFloat3 = parseFloat;
       const _Math = Math;
       const _Math2 = Math;
@@ -201,12 +207,14 @@ obj.get.hsl = (str) => {
 };
 obj.get.hwb = (str) => {
   if (str) {
-    const match = str.match(/^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
+    const match = str.match(
+      /^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/,
+    );
     if (match) {
       const _parseFloat = parseFloat;
       const parsed = parseFloat(match[4]);
       const _parseFloat2 = parseFloat;
-      const items = [(parseFloat(match[1]) % 360 + 360) % 360, , , ];
+      const items = [((parseFloat(match[1]) % 360) + 360) % 360, , ,];
       const _parseFloat3 = parseFloat;
       const _Math = Math;
       const _Math2 = Math;
@@ -261,7 +269,9 @@ obj.to.hex = () => {
     const _Math = Math;
     const _Math2 = Math;
     const str11 = Math.round(Math.round(255 * tmp[3]));
-    const formatted3 = Math.round(Math.round(255 * tmp[3])).toString(16).toUpperCase();
+    const formatted3 = Math.round(Math.round(255 * tmp[3]))
+      .toString(16)
+      .toUpperCase();
     let text4 = formatted3;
     if (formatted3.length < 2) {
       text4 = `0${arr4}`;
@@ -290,9 +300,9 @@ obj.to.rgb = () => {
 };
 obj.to.rgb.percent = () => {
   const arr = swizzle(arguments);
-  const rounded = Math.round(arr[0] / 255 * 100);
-  const rounded1 = Math.round(arr[1] / 255 * 100);
-  const rounded2 = Math.round(arr[2] / 255 * 100);
+  const rounded = Math.round((arr[0] / 255) * 100);
+  const rounded1 = Math.round((arr[1] / 255) * 100);
+  const rounded2 = Math.round((arr[2] / 255) * 100);
   if (arr.length >= 4) {
     if (1 !== arr[3]) {
       let text = `${"rgba(" + tmp + "%, " + tmp2 + "%, " + tmp3 + "%, " + arr[3]})`;

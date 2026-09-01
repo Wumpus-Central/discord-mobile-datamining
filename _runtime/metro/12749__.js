@@ -65,7 +65,19 @@ if (self2) {
       return closure_4.config().customError;
     };
     let closure_4 = fn(_mod12678);
-    exports.ZodIssueCode = { invalid_type: "invalid_type", too_big: "too_big", too_small: "too_small", invalid_format: "invalid_format", not_multiple_of: "not_multiple_of", unrecognized_keys: "unrecognized_keys", invalid_union: "invalid_union", invalid_key: "invalid_key", invalid_element: "invalid_element", invalid_value: "invalid_value", custom: "custom" };
+    exports.ZodIssueCode = {
+      invalid_type: "invalid_type",
+      too_big: "too_big",
+      too_small: "too_small",
+      invalid_format: "invalid_format",
+      not_multiple_of: "not_multiple_of",
+      unrecognized_keys: "unrecognized_keys",
+      invalid_union: "invalid_union",
+      invalid_key: "invalid_key",
+      invalid_element: "invalid_element",
+      invalid_value: "invalid_value",
+      custom: "custom",
+    };
     const _Object4 = Object;
     let obj = { enumerable: true, get: null };
     obj[1] = function get() {

@@ -29,7 +29,14 @@ function walkErrorTree(arg0, arg1, arg2, arg3) {
         obj1 = { frames: null };
         const stackElements = tmp.stackElements;
         const mapped = stackElements.map((className) => {
-          const obj = { platform: "java", module: className.className, filename: className.fileName, lineno: null, function: null, in_app: null };
+          const obj = {
+            platform: "java",
+            module: className.className,
+            filename: className.fileName,
+            lineno: null,
+            function: null,
+            in_app: null,
+          };
           let lineNumber;
           if (className.lineNumber >= 0) {
             lineNumber = className.lineNumber;
@@ -125,9 +132,7 @@ arg5.nativeLinkedErrorsIntegration = () => {
   closure_1 = obj.limit || 5;
   obj = {
     name: "NativeLinkedErrors",
-    setupOnce() {
-
-    },
+    setupOnce() {},
     preprocessEvent(exception, originalException, getOptions) {
       exception = exception.exception;
       let values;
@@ -140,7 +145,12 @@ arg5.nativeLinkedErrorsIntegration = () => {
         if (originalException) {
           const _Error = Error;
           if (obj.isInstanceOf(originalException.originalException, Error)) {
-            ({ exceptions, debugImages } = closure_1_2(getOptions.getOptions().stackParser, tmp, originalException.originalException, tmp2));
+            ({ exceptions, debugImages } = closure_1_2(
+              getOptions.getOptions().stackParser,
+              tmp,
+              originalException.originalException,
+              tmp2,
+            ));
             const items = [];
             HermesBuiltin.arraySpread(exceptions, HermesBuiltin.arraySpread(exception.exception.values, 0));
             exception.exception.values = items;
@@ -158,12 +168,17 @@ arg5.nativeLinkedErrorsIntegration = () => {
             const items1 = [];
             HermesBuiltin.arraySpread(debugImages, 0);
             HermesBuiltin.apply(items1, images1);
-            const tmp12 = closure_1_2(getOptions.getOptions().stackParser, tmp, originalException.originalException, tmp2);
+            const tmp12 = closure_1_2(
+              getOptions.getOptions().stackParser,
+              tmp,
+              originalException.originalException,
+              tmp2,
+            );
           }
           obj = callback(table[0]);
         }
       }
-    }
+    },
   };
   return obj;
 };

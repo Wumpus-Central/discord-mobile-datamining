@@ -14,9 +14,7 @@ class Yallist {
     self.length = 0;
     if (global) {
       if (typeof global.forEach === "function") {
-        item = global.forEach((arg0) => {
-
-        });
+        item = global.forEach((arg0) => {});
       }
       return self;
     }

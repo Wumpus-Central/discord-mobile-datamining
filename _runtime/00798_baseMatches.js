@@ -16,4 +16,4 @@ export default function baseMatches(arg0) {
     }
     return tmp2;
   };
-};
+}

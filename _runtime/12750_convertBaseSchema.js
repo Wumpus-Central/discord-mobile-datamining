@@ -75,42 +75,47 @@ function convertBaseSchema(not, refs) {
                     error = processing2.add($ref);
                     error = convertSchema;
                     error = convertSchema;
-                    error = convertSchema((function resolveRef($ref, rootSchema) {
-                      if ($ref.startsWith("#")) {
-                        const parts = $ref.slice(1).split("/");
-                        const _Boolean = Boolean;
-                        const found = parts.filter(Boolean);
-                        if (0 === found.length) {
-                          return rootSchema.rootSchema;
-                        } else {
-                          let str4 = "definitions";
-                          if ("draft-2020-12" === rootSchema.version) {
-                            str4 = "$defs";
-                          }
-                          if (found[0] === str4) {
-                            if (found[1]) {
-                              if (rootSchema.defs[tmp12]) {
-                                return rootSchema.defs[tmp12];
-                              }
-                            }
-                            const _Error3 = Error;
-                            const _HermesInternal2 = HermesInternal;
-                            error = new Error("Reference not found: " + $ref);
-                            throw error;
+                    error = convertSchema(
+                      (function resolveRef($ref, rootSchema) {
+                        if ($ref.startsWith("#")) {
+                          const parts = $ref.slice(1).split("/");
+                          const _Boolean = Boolean;
+                          const found = parts.filter(Boolean);
+                          if (0 === found.length) {
+                            return rootSchema.rootSchema;
                           } else {
-                            const _Error2 = Error;
-                            const _HermesInternal = HermesInternal;
-                            const error1 = new Error("Reference not found: " + $ref);
-                            throw error1;
+                            let str4 = "definitions";
+                            if ("draft-2020-12" === rootSchema.version) {
+                              str4 = "$defs";
+                            }
+                            if (found[0] === str4) {
+                              if (found[1]) {
+                                if (rootSchema.defs[tmp12]) {
+                                  return rootSchema.defs[tmp12];
+                                }
+                              }
+                              const _Error3 = Error;
+                              const _HermesInternal2 = HermesInternal;
+                              error = new Error("Reference not found: " + $ref);
+                              throw error;
+                            } else {
+                              const _Error2 = Error;
+                              const _HermesInternal = HermesInternal;
+                              const error1 = new Error("Reference not found: " + $ref);
+                              throw error1;
+                            }
                           }
+                          const str2 = $ref.slice(1);
+                        } else {
+                          const _Error = Error;
+                          const error2 = new Error(
+                            "External $ref is not supported, only local refs (#/...) are allowed",
+                          );
+                          throw error2;
                         }
-                        const str2 = $ref.slice(1);
-                      } else {
-                        const _Error = Error;
-                        const error2 = new Error("External $ref is not supported, only local refs (#/...) are allowed");
-                        throw error2;
-                      }
-                    })($ref, refs), refs);
+                      })($ref, refs),
+                      refs,
+                    );
                     let refs2 = refs.refs;
                     error = refs2.set($ref, error);
                     const processing3 = refs.processing;
@@ -151,7 +156,7 @@ function convertBaseSchema(not, refs) {
                   } else {
                     error = obj;
                     error = obj;
-                    items = [, ];
+                    items = [,];
                     [arr8[0], arr8[1]] = mapped;
                     error = items;
                     error = HermesBuiltin.arraySpread(mapped.slice(2), 2);
@@ -317,7 +322,10 @@ function convertBaseSchema(not, refs) {
                                 booleanResult = obj.record(tmp80, anyResult);
                               } else {
                                 let objectResult = obj.object(obj);
-                                booleanResult = obj.intersection(objectResult.passthrough(), obj.looseRecord(tmp80, anyResult));
+                                booleanResult = obj.intersection(
+                                  objectResult.passthrough(),
+                                  obj.looseRecord(tmp80, anyResult),
+                                );
                                 const passthroughResult = objectResult.passthrough();
                               }
                             }
@@ -773,7 +781,65 @@ if (self2) {
     const merged1 = Object.assign(fnResult);
     obj.iso = fn(_mod12746);
     let _Set = Set;
-    let set = new Set(["$schema", "$ref", "$defs", "definitions", "$id", "id", "$comment", "$anchor", "$vocabulary", "$dynamicRef", "$dynamicAnchor", "type", "enum", "const", "anyOf", "oneOf", "allOf", "not", "properties", "required", "additionalProperties", "patternProperties", "propertyNames", "minProperties", "maxProperties", "items", "prefixItems", "additionalItems", "minItems", "maxItems", "uniqueItems", "contains", "minContains", "maxContains", "minLength", "maxLength", "pattern", "format", "minimum", "maximum", "exclusiveMinimum", "exclusiveMaximum", "multipleOf", "description", "default", "contentEncoding", "contentMediaType", "contentSchema", "unevaluatedItems", "unevaluatedProperties", "if", "then", "else", "dependentSchemas", "dependentRequired", "nullable", "readOnly"]);
+    let set = new Set([
+      "$schema",
+      "$ref",
+      "$defs",
+      "definitions",
+      "$id",
+      "id",
+      "$comment",
+      "$anchor",
+      "$vocabulary",
+      "$dynamicRef",
+      "$dynamicAnchor",
+      "type",
+      "enum",
+      "const",
+      "anyOf",
+      "oneOf",
+      "allOf",
+      "not",
+      "properties",
+      "required",
+      "additionalProperties",
+      "patternProperties",
+      "propertyNames",
+      "minProperties",
+      "maxProperties",
+      "items",
+      "prefixItems",
+      "additionalItems",
+      "minItems",
+      "maxItems",
+      "uniqueItems",
+      "contains",
+      "minContains",
+      "maxContains",
+      "minLength",
+      "maxLength",
+      "pattern",
+      "format",
+      "minimum",
+      "maximum",
+      "exclusiveMinimum",
+      "exclusiveMaximum",
+      "multipleOf",
+      "description",
+      "default",
+      "contentEncoding",
+      "contentMediaType",
+      "contentSchema",
+      "unevaluatedItems",
+      "unevaluatedProperties",
+      "if",
+      "then",
+      "else",
+      "dependentSchemas",
+      "dependentRequired",
+      "nullable",
+      "readOnly",
+    ]);
   } else {
     let _Object2 = Object;
   }

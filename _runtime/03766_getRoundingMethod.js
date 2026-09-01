@@ -20,6 +20,6 @@ const obj = {
       rounded = Math.floor(result);
     }
     return rounded;
-  }
+  },
 };
 const trunc = "trunc";

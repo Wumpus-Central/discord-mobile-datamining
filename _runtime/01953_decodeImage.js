@@ -13,7 +13,7 @@ let tmp62;
 let tmp64;
 c1 = function decodeImage(uint8Array, arg1, arg2, depth) {
   const result = arg1 * arg2;
-  const rounded = Math.ceil(arg1 * ([1, null, 3, 1, 2, null, 4][depth.ctype] * depth.depth) / 8);
+  const rounded = Math.ceil((arg1 * ([1, null, 3, 1, 2, null, 4][depth.ctype] * depth.depth)) / 8);
   uint8Array = new Uint8Array(4 * result);
   const uint32Array = new Uint32Array(uint8Array.buffer);
   ({ ctype, depth } = depth);
@@ -52,7 +52,8 @@ c1 = function decodeImage(uint8Array, arg1, arg2, depth) {
         if (0 < result) {
           do {
             let result1 = 3 * num46;
-            uint32Array[num46] = -16777216 | uint8Array[result1 + 2] << 16 | uint8Array[result1 + 1] << 8 | uint8Array[result1];
+            uint32Array[num46] =
+              -16777216 | (uint8Array[result1 + 2] << 16) | (uint8Array[result1 + 1] << 8) | uint8Array[result1];
             num46 = num46 + 1;
           } while (num46 < result);
         }
@@ -62,7 +63,8 @@ c1 = function decodeImage(uint8Array, arg1, arg2, depth) {
         if (0 < result) {
           do {
             let result2 = 6 * num48;
-            uint32Array[num48] = -16777216 | uint8Array[result2 + 4] << 16 | uint8Array[result2 + 2] << 8 | uint8Array[result2];
+            uint32Array[num48] =
+              -16777216 | (uint8Array[result2 + 4] << 16) | (uint8Array[result2 + 2] << 8) | uint8Array[result2];
             num48 = num48 + 1;
           } while (num48 < result);
         }
@@ -76,7 +78,7 @@ c1 = function decodeImage(uint8Array, arg1, arg2, depth) {
             let result3 = 3 * num39;
             let sum3 = result3 + 2;
             let sum4 = result3 + 1;
-            uint32Array[num39] = -16777216 | uint8Array[sum3] << 16 | uint8Array[sum4] << 8 | uint8Array[result3];
+            uint32Array[num39] = -16777216 | (uint8Array[sum3] << 16) | (uint8Array[sum4] << 8) | uint8Array[result3];
             let tmp55 = uint8Array[result3] == tmp69;
             let tmp56 = num39;
             if (tmp55) {
@@ -99,7 +101,7 @@ c1 = function decodeImage(uint8Array, arg1, arg2, depth) {
             let result4 = 6 * num41;
             let sum5 = result4 + 4;
             let sum6 = result4 + 2;
-            uint32Array[num41] = -16777216 | uint8Array[sum5] << 16 | uint8Array[sum6] << 8 | uint8Array[result4];
+            uint32Array[num41] = -16777216 | (uint8Array[sum5] << 16) | (uint8Array[sum6] << 8) | uint8Array[result4];
             let tmp60 = readUshort(uint8Array, result4) == tmp69;
             let tmp61 = num41;
             if (tmp60) {
@@ -127,8 +129,8 @@ c1 = function decodeImage(uint8Array, arg1, arg2, depth) {
       for (let num30 = 0; num30 < arg2; num30 = num30 + 1) {
         let tmp28 = num30;
         for (let num28 = 0; num28 < arg1; num28 = num28 + 1) {
-          let tmp29 = tmp27 + num28 << 2;
-          let tmp30 = uint8Array[tmp26 + (num28 >> 3)] >> 7 - (7 & num28) & 1;
+          let tmp29 = (tmp27 + num28) << 2;
+          let tmp30 = (uint8Array[tmp26 + (num28 >> 3)] >> (7 - (7 & num28))) & 1;
           let result5 = 3 * tmp30;
           uint8Array[tmp29] = PLTE[result5];
           uint8Array[tmp29 + 1] = PLTE[result5 + 1];
@@ -146,8 +148,8 @@ c1 = function decodeImage(uint8Array, arg1, arg2, depth) {
       for (let num33 = 0; num33 < arg2; num33 = num33 + 1) {
         let tmp35 = num33;
         for (let num31 = 0; num31 < arg1; num31 = num31 + 1) {
-          let tmp36 = tmp34 + num31 << 2;
-          let tmp37 = uint8Array[tmp33 + (num31 >> 2)] >> 6 - ((3 & num31) << 1) & 3;
+          let tmp36 = (tmp34 + num31) << 2;
+          let tmp37 = (uint8Array[tmp33 + (num31 >> 2)] >> (6 - ((3 & num31) << 1))) & 3;
           let result6 = 3 * tmp37;
           uint8Array[tmp36] = PLTE[result6];
           uint8Array[tmp36 + 1] = PLTE[result6 + 1];
@@ -165,8 +167,8 @@ c1 = function decodeImage(uint8Array, arg1, arg2, depth) {
       for (let num36 = 0; num36 < arg2; num36 = num36 + 1) {
         let tmp42 = num36;
         for (let num34 = 0; num34 < arg1; num34 = num34 + 1) {
-          let tmp43 = tmp41 + num34 << 2;
-          let tmp44 = uint8Array[tmp40 + (num34 >> 1)] >> 4 - ((1 & num34) << 2) & 15;
+          let tmp43 = (tmp41 + num34) << 2;
+          let tmp44 = (uint8Array[tmp40 + (num34 >> 1)] >> (4 - ((1 & num34) << 2))) & 15;
           let result7 = 3 * tmp44;
           uint8Array[tmp43] = PLTE[result7];
           uint8Array[tmp43 + 1] = PLTE[result7 + 1];
@@ -242,33 +244,33 @@ c1 = function decodeImage(uint8Array, arg1, arg2, depth) {
       let tmp8 = num10;
       if (1 == depth) {
         for (let num19 = 0; num19 < arg1; num19 = num19 + 1) {
-          let result11 = 255 * (uint8Array[result9 + (num19 >>> 3)] >>> 7 - (7 & num19) & 1);
+          let result11 = 255 * ((uint8Array[result9 + (num19 >>> 3)] >>> (7 - (7 & num19))) & 1);
           let tmp19 = num19;
           let num20 = 255;
           if (result11 === 255 * num) {
             num20 = 0;
           }
-          uint32Array[result10 + num19] = num20 << 24 | result11 << 16 | result11 << 8 | result11;
+          uint32Array[result10 + num19] = (num20 << 24) | (result11 << 16) | (result11 << 8) | result11;
         }
       } else if (2 == depth) {
         for (let num17 = 0; num17 < arg1; num17 = num17 + 1) {
-          let result12 = 85 * (uint8Array[result9 + (num17 >>> 2)] >>> 6 - ((3 & num17) << 1) & 3);
+          let result12 = 85 * ((uint8Array[result9 + (num17 >>> 2)] >>> (6 - ((3 & num17) << 1))) & 3);
           let tmp17 = num17;
           let num18 = 255;
           if (result12 === 85 * num) {
             num18 = 0;
           }
-          uint32Array[result10 + num17] = num18 << 24 | result12 << 16 | result12 << 8 | result12;
+          uint32Array[result10 + num17] = (num18 << 24) | (result12 << 16) | (result12 << 8) | result12;
         }
       } else if (4 == depth) {
         for (let num15 = 0; num15 < arg1; num15 = num15 + 1) {
-          let result13 = 17 * (uint8Array[result9 + (num15 >>> 1)] >>> 4 - ((1 & num15) << 2) & 15);
+          let result13 = 17 * ((uint8Array[result9 + (num15 >>> 1)] >>> (4 - ((1 & num15) << 2))) & 15);
           let tmp15 = num15;
           let num16 = 255;
           if (result13 === 17 * num) {
             num16 = 0;
           }
-          uint32Array[result10 + num15] = num16 << 24 | result13 << 16 | result13 << 8 | result13;
+          uint32Array[result10 + num15] = (num16 << 24) | (result13 << 16) | (result13 << 8) | result13;
         }
       } else if (8 == depth) {
         for (let num13 = 0; num13 < arg1; num13 = num13 + 1) {
@@ -278,7 +280,7 @@ c1 = function decodeImage(uint8Array, arg1, arg2, depth) {
           if (tmp12 == num) {
             num14 = 0;
           }
-          uint32Array[result10 + num13] = num14 << 24 | tmp12 << 16 | tmp12 << 8 | tmp12;
+          uint32Array[result10 + num13] = (num14 << 24) | (tmp12 << 16) | (tmp12 << 8) | tmp12;
         }
       } else if (16 == depth) {
         for (let num12 = 0; num12 < arg1; num12 = num12 + 1) {
@@ -289,7 +291,7 @@ c1 = function decodeImage(uint8Array, arg1, arg2, depth) {
           if (readUshort(uint8Array, sum8) == num) {
             num11 = 0;
           }
-          uint32Array[result10 + num12] = num11 << 24 | tmp10 << 16 | tmp10 << 8 | tmp10;
+          uint32Array[result10 + num12] = (num11 << 24) | (tmp10 << 16) | (tmp10 << 8) | tmp10;
         }
       }
     }
@@ -298,7 +300,9 @@ c1 = function decodeImage(uint8Array, arg1, arg2, depth) {
 };
 c2 = function _decompress(depth, buffer) {
   const timestamp = Date.now();
-  const uint8Array = new Uint8Array((Math.ceil(arg2 * ([1, null, 3, 1, 2, null, 4][depth.ctype] * depth.depth) / 8) + 1 + depth.interlace) * arg3);
+  const uint8Array = new Uint8Array(
+    (Math.ceil((arg2 * ([1, null, 3, 1, 2, null, 4][depth.ctype] * depth.depth)) / 8) + 1 + depth.interlace) * arg3,
+  );
   if (depth.tabs.CgBI) {
     let tmp3Result = tmp3(buffer, uint8Array);
   } else {
@@ -316,7 +320,7 @@ c2 = function _decompress(depth, buffer) {
       ({ width, height } = depth);
       const result = [1, null, 3, 1, 2, null, 4][depth.ctype] * depth.depth;
       const _Math2 = Math;
-      const rounded = Math.ceil(width * result / 8);
+      const rounded = Math.ceil((width * result) / 8);
       const _Uint8Array2 = Uint8Array;
       const uint8Array2 = new Uint8Array(height * rounded);
       const items = [0, 0, 4, 0, 2, 0, 1];
@@ -345,7 +349,7 @@ c2 = function _decompress(depth, buffer) {
           num6 = num5;
         }
         let _Math = Math;
-        let rounded1 = Math.ceil(num6 * result / 8);
+        let rounded1 = Math.ceil((num6 * result) / 8);
         let tmp17 = _main;
         let tmp18 = tmp3Result;
         let tmp19 = depth;
@@ -357,7 +361,7 @@ c2 = function _decompress(depth, buffer) {
         let num7 = 0;
         while (sum7 < height) {
           let sum6 = items1[num9];
-          let sum5 = num10 + num7 * rounded1 << 3;
+          let sum5 = (num10 + num7 * rounded1) << 3;
           let tmp27 = sum7;
           let tmp28 = num7;
           if (sum6 < width) {
@@ -366,15 +370,18 @@ c2 = function _decompress(depth, buffer) {
               let tmp30 = sum6;
               if (1 == result) {
                 let sum2 = sum7 * rounded + (sum6 >> 3);
-                uint8Array2[sum2] = uint8Array2[sum2] | (tmp3Result[sum5 >> 3] >> 7 - (7 & sum5) & 1) << 7 - (7 & sum6);
+                uint8Array2[sum2] =
+                  uint8Array2[sum2] | (((tmp3Result[sum5 >> 3] >> (7 - (7 & sum5))) & 1) << (7 - (7 & sum6)));
               }
               if (2 == result) {
                 let sum3 = sum7 * rounded + (sum6 >> 2);
-                uint8Array2[sum3] = uint8Array2[sum3] | (tmp3Result[sum5 >> 3] >> 6 - (7 & sum5) & 3) << 6 - ((3 & sum6) << 1);
+                uint8Array2[sum3] =
+                  uint8Array2[sum3] | (((tmp3Result[sum5 >> 3] >> (6 - (7 & sum5))) & 3) << (6 - ((3 & sum6) << 1)));
               }
               if (4 == result) {
                 let sum4 = sum7 * rounded + (sum6 >> 1);
-                uint8Array2[sum4] = uint8Array2[sum4] | (tmp3Result[sum5 >> 3] >> 4 - (7 & sum5) & 15) << 4 - ((1 & sum6) << 2);
+                uint8Array2[sum4] =
+                  uint8Array2[sum4] | (((tmp3Result[sum5 >> 3] >> (4 - (7 & sum5))) & 15) << (4 - ((1 & sum6) << 2)));
               }
               if (result >= 8) {
                 let num8 = 0;
@@ -410,7 +417,7 @@ let c3 = function _inflate(buffer, width) {
 };
 let _main = function _filterZero(arg0, depth) {
   const result = [1, null, 3, 1, 2, null, 4][depth.ctype] * depth.depth;
-  const rounded = Math.ceil(arg3 * result / 8);
+  const rounded = Math.ceil((arg3 * result) / 8);
   const rounded1 = Math.ceil(result / 8);
   if (arg0[arg2] > 1) {
     arg0[arg2] = [0, 0, 1][tmp4 - 2];
@@ -419,7 +426,7 @@ let _main = function _filterZero(arg0, depth) {
     let sum = rounded1;
     if (rounded1 < rounded) {
       do {
-        arg0[sum + 1] = arg0[sum + 1] + (arg0[sum + 1 - rounded1] >>> 1) & 255;
+        arg0[sum + 1] = (arg0[sum + 1] + (arg0[sum + 1 - rounded1] >>> 1)) & 255;
         sum = sum + 1;
       } while (sum < rounded);
     }
@@ -469,7 +476,7 @@ let _main = function _filterZero(arg0, depth) {
       if (num9 < rounded) {
         do {
           let sum6 = sum1 + num9;
-          arg0[sum6] = arg0[sum2 + num9] + (arg0[sum6 - rounded] + arg0[sum6 - rounded1] >>> 1);
+          arg0[sum6] = arg0[sum2 + num9] + ((arg0[sum6 - rounded] + arg0[sum6 - rounded1]) >>> 1);
           num9 = num9 + 1;
         } while (num9 < rounded);
       }
@@ -550,8 +557,8 @@ function _copyTile(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) {
         let tmp4 = num2;
         if (arg6 >= 0) {
           if (arg7 >= 0) {
-            let tmp5 = num * arg1 + num2 << 2;
-            let tmp6 = (arg7 + num) * arg4 + arg6 + num2 << 2;
+            let tmp5 = (num * arg1 + num2) << 2;
+            let tmp6 = ((arg7 + num) * arg4 + arg6 + num2) << 2;
             if (0 == arg8) {
               arg3[tmp6] = arg0[tmp5];
               arg3[tmp6 + 1] = arg0[tmp5 + 1];
@@ -619,8 +626,8 @@ function _copyTile(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) {
             }
           }
         }
-        tmp5 = (-arg7 + num) * arg1 - arg6 + num2 << 2;
-        tmp6 = num * arg4 + num2 << 2;
+        tmp5 = ((-arg7 + num) * arg1 - arg6 + num2) << 2;
+        tmp6 = (num * arg4 + num2) << 2;
       }
     }
   }
@@ -643,19 +650,21 @@ let obj = {
     return tmp2;
   },
   readUshort(uint8Array, sum1) {
-    return uint8Array[sum1] << 8 | uint8Array[sum1 + 1];
+    return (uint8Array[sum1] << 8) | uint8Array[sum1 + 1];
   },
   writeUshort(uint8Array, sum40, arg2) {
-    uint8Array[sum40] = arg2 >> 8 & 255;
+    uint8Array[sum40] = (arg2 >> 8) & 255;
     uint8Array[sum40 + 1] = 255 & arg2;
   },
   readUint(uint8Array, sum1) {
-    return 16777216 * uint8Array[sum1] + (uint8Array[sum1 + 1] << 16 | uint8Array[sum1 + 2] << 8 | uint8Array[sum1 + 3]);
+    return (
+      16777216 * uint8Array[sum1] + ((uint8Array[sum1 + 1] << 16) | (uint8Array[sum1 + 2] << 8) | uint8Array[sum1 + 3])
+    );
   },
   writeUint(uint8Array, writeUintResult16, height) {
-    uint8Array[writeUintResult16] = height >> 24 & 255;
-    uint8Array[writeUintResult16 + 1] = height >> 16 & 255;
-    uint8Array[writeUintResult16 + 2] = height >> 8 & 255;
+    uint8Array[writeUintResult16] = (height >> 24) & 255;
+    uint8Array[writeUintResult16 + 1] = (height >> 16) & 255;
+    uint8Array[writeUintResult16 + 2] = (height >> 8) & 255;
     uint8Array[writeUintResult16 + 3] = 255 & height;
   },
   readASCII(uint8Array, sum1, diff2) {
@@ -717,20 +726,54 @@ let obj = {
     } catch (err) {
       return _undefined.readASCII(tmp3, tmp2, tmp);
     }
-  }
+  },
 };
 c0 = obj;
-obj = { m: null, v: null, d: null, o: null, z: null, B: null, p: null, w: null, h: null, g: null, s: null, A: null, t: null, k: null, c: null, a: null, n: null, e: null, C: null, b: null, i: null, r: null, f: null, l: null, u: null, q: null, j: null };
+obj = {
+  m: null,
+  v: null,
+  d: null,
+  o: null,
+  z: null,
+  B: null,
+  p: null,
+  w: null,
+  h: null,
+  g: null,
+  s: null,
+  A: null,
+  t: null,
+  k: null,
+  c: null,
+  a: null,
+  n: null,
+  e: null,
+  C: null,
+  b: null,
+  i: null,
+  r: null,
+  f: null,
+  l: null,
+  u: null,
+  q: null,
+  j: null,
+};
 const uint16Array = new Uint16Array(16);
 obj[0] = uint16Array;
 const uint16Array1 = new Uint16Array(16);
 obj[1] = uint16Array1;
 obj[2] = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15];
-obj[3] = [3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 15, 17, 19, 23, 27, 31, 35, 43, 51, 59, 67, 83, 99, 115, 131, 163, 195, 227, 258, 999, 999, 999];
+obj[3] = [
+  3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 15, 17, 19, 23, 27, 31, 35, 43, 51, 59, 67, 83, 99, 115, 131, 163, 195, 227, 258,
+  999, 999, 999,
+];
 obj[4] = [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 0, 0, 0, 0];
 const uint16Array2 = new Uint16Array(32);
 obj[5] = uint16Array2;
-obj[6] = [1, 2, 3, 4, 5, 7, 9, 13, 17, 25, 33, 49, 65, 97, 129, 193, 257, 385, 513, 769, 1025, 1537, 2049, 3073, 4097, 6145, 8193, 12289, 16385, 24577, 65535, 65535];
+obj[6] = [
+  1, 2, 3, 4, 5, 7, 9, 13, 17, 25, 33, 49, 65, 97, 129, 193, 257, 385, 513, 769, 1025, 1537, 2049, 3073, 4097, 6145,
+  8193, 12289, 16385, 24577, 65535, 65535,
+];
 obj[7] = [0, 0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 0, 0];
 let uint32Array = new Uint32Array(32);
 obj[8] = uint32Array;
@@ -767,17 +810,17 @@ obj[26] = uint16Array10;
 c0 = obj;
 let num = 0;
 do {
-  let tmp17 = (2863311530 & num) >>> 1 | (1431655765 & num) << 1;
-  let tmp18 = (3435973836 & tmp17) >>> 2 | (858993459 & tmp17) << 2;
-  let tmp19 = (4042322160 & tmp18) >>> 4 | (252645135 & tmp18) << 4;
-  let tmp20 = (4278255360 & tmp19) >>> 8 | (16711935 & tmp19) << 8;
-  obj.i[num] = (tmp20 >>> 16 | tmp20 << 16) >>> 17;
+  let tmp17 = ((2863311530 & num) >>> 1) | ((1431655765 & num) << 1);
+  let tmp18 = ((3435973836 & tmp17) >>> 2) | ((858993459 & tmp17) << 2);
+  let tmp19 = ((4042322160 & tmp18) >>> 4) | ((252645135 & tmp18) << 4);
+  let tmp20 = ((4278255360 & tmp19) >>> 8) | ((16711935 & tmp19) << 8);
+  obj.i[num] = ((tmp20 >>> 16) | (tmp20 << 16)) >>> 17;
   num = num + 1;
   num2 = 0;
 } while (num < 32768);
 do {
-  obj.B[num2] = obj.o[num2] << 3 | obj.z[num2];
-  obj.h[num2] = obj.p[num2] << 4 | obj.w[num2];
+  obj.B[num2] = (obj.o[num2] << 3) | obj.z[num2];
+  obj.h[num2] = (obj.p[num2] << 4) | obj.w[num2];
   num2 = num2 + 1;
 } while (num2 < 32);
 const s = obj.s;
@@ -824,7 +867,7 @@ v[0] = 0;
 let num9 = 1;
 let num10 = 0;
 do {
-  let tmp30 = num10 + v[num9 - 1] << 1;
+  let tmp30 = (num10 + v[num9 - 1]) << 1;
   m[num9] = tmp30;
   num9 = num9 + 1;
   num10 = tmp30;
@@ -857,7 +900,7 @@ const s6 = obj.s;
 let num13 = 0;
 if (0 < s6.length) {
   do {
-    s6[num13] = tmp41[s6[num13] << 9 - s6[num13 + 1]] >>> 6;
+    s6[num13] = tmp41[s6[num13] << (9 - s6[num13 + 1])] >>> 6;
     num13 = num13 + 2;
     length3 = s6.length;
   } while (num13 < length3);
@@ -885,7 +928,7 @@ v2[0] = 0;
 let num17 = 1;
 let num18 = 0;
 do {
-  let tmp45 = num18 + v2[num17 - 1] << 1;
+  let tmp45 = (num18 + v2[num17 - 1]) << 1;
   m2[num17] = tmp45;
   num17 = num17 + 1;
   num18 = tmp45;
@@ -918,7 +961,7 @@ const t3 = obj.t;
 let num21 = 0;
 if (0 < t3.length) {
   do {
-    t3[num21] = tmp56[t3[num21] << 5 - t3[num21 + 1]] >>> 10;
+    t3[num21] = tmp56[t3[num21] << (5 - t3[num21 + 1])] >>> 10;
     num21 = num21 + 2;
     length6 = t3.length;
   } while (num21 < length6);
@@ -968,7 +1011,7 @@ let dither = function v(buffer) {
   }
   let _Uint8Array1 = _Uint8Array;
   if (null == _Uint8Array) {
-    _Uint8Array1 = new _Uint8Array(buffer.length >>> 2 << 3);
+    _Uint8Array1 = new _Uint8Array((buffer.length >>> 2) << 3);
   }
   let num3 = 0;
   let num4 = 0;
@@ -978,7 +1021,7 @@ let dither = function v(buffer) {
     let tmp7 = num3 >>> 3;
     let sum = num3 + 1;
     let tmp11 = sum >>> 3;
-    let tmp12 = (buffer[tmp11] | buffer[1 + tmp11] << 8 | buffer[2 + tmp11] << 16) >>> (7 & sum) & 3;
+    let tmp12 = ((buffer[tmp11] | (buffer[1 + tmp11] << 8) | (buffer[2 + tmp11] << 16)) >>> (7 & sum)) & 3;
     let sum1 = num3 + 3;
     let tmp14 = num3;
     let tmp15 = num4;
@@ -987,7 +1030,7 @@ let dither = function v(buffer) {
     A = tmp5;
     g = tmp6;
     let tmp16 = _Uint8Array1;
-    let tmp8 = buffer[tmp7] | buffer[1 + tmp7] << 8;
+    let tmp8 = buffer[tmp7] | (buffer[1 + tmp7] << 8);
     let tmp9 = buffer[2 + tmp7] << 16;
     if (0 !== tmp12) {
       let tmp38 = _Uint8Array1;
@@ -1023,16 +1066,16 @@ let dither = function v(buffer) {
         _Uint8Array = sum1 + 10;
         _Uint8Array = _Uint8Array >>> 3;
         let num9 = 0;
-        _Uint8Array = buffer[_Uint8Array] | buffer[1 + _Uint8Array] << 8;
-        _Uint8Array = buffer[_Uint8Array] | buffer[1 + _Uint8Array] << 8;
-        _Uint8Array = buffer[_Uint8Array] | buffer[1 + _Uint8Array] << 8;
+        _Uint8Array = buffer[_Uint8Array] | (buffer[1 + _Uint8Array] << 8);
+        _Uint8Array = buffer[_Uint8Array] | (buffer[1 + _Uint8Array] << 8);
+        _Uint8Array = buffer[_Uint8Array] | (buffer[1 + _Uint8Array] << 8);
         do {
           let tmp48 = _undefined;
           _undefined.b[num9] = 0;
           _undefined.b[num9 + 1] = 0;
           num9 = num9 + 2;
         } while (num9 < 38);
-        let sum3 = (_Uint8Array >>> (7 & _Uint8Array) & 15) + 4;
+        let sum3 = ((_Uint8Array >>> (7 & _Uint8Array)) & 15) + 4;
         let sum4 = sum1 + 14;
         let num10 = 0;
         let num11 = 1;
@@ -1041,7 +1084,7 @@ let dither = function v(buffer) {
           do {
             let sum5 = sum4 + 3 * num10;
             let tmp52 = sum5 >>> 3;
-            let tmp53 = (buffer[tmp52] | buffer[1 + tmp52] << 8) >>> (7 & sum5) & 7;
+            let tmp53 = ((buffer[tmp52] | (buffer[1 + tmp52] << 8)) >>> (7 & sum5)) & 7;
             _undefined.b[1 + (_undefined.d[num10] << 1)] = tmp53;
             let tmp55 = num10;
             let tmp56 = num11;
@@ -1076,7 +1119,7 @@ let dither = function v(buffer) {
         let num16 = 0;
         if (1 <= num12) {
           do {
-            let tmp59 = num16 + v[num15 - 1] << 1;
+            let tmp59 = (num16 + v[num15 - 1]) << 1;
             m[num15] = tmp59;
             num15 = num15 + 1;
             num16 = tmp59;
@@ -1108,8 +1151,8 @@ let dither = function v(buffer) {
             }
           }
         }
-        let sum9 = (_Uint8Array >>> (7 & sum1) & 31) + 257;
-        let sum10 = (_Uint8Array >>> (7 & _Uint8Array) & 31) + 1;
+        let sum9 = ((_Uint8Array >>> (7 & sum1)) & 31) + 257;
+        let sum10 = ((_Uint8Array >>> (7 & _Uint8Array)) & 31) + 1;
         let sum11 = sum4 + 3 * sum3;
         ({ k, n } = tmp48);
         let sum12 = sum9 + sum10;
@@ -1120,7 +1163,8 @@ let dither = function v(buffer) {
         if (0 < sum12) {
           do {
             let tmp80 = tmp78 >>> 3;
-            let tmp81 = tmp75[(buffer[tmp80] | buffer[1 + tmp80] << 8 | buffer[2 + tmp80] << 16) >>> (7 & tmp78) & tmp76];
+            let tmp81 =
+              tmp75[((buffer[tmp80] | (buffer[1 + tmp80] << 8) | (buffer[2 + tmp80] << 16)) >>> (7 & tmp78)) & tmp76];
             let sum13 = tmp78 + (15 & tmp81);
             let tmp83 = tmp81 >>> 4;
             let tmp84 = num19;
@@ -1131,12 +1175,12 @@ let dither = function v(buffer) {
             } else {
               if (16 === tmp83) {
                 let tmp87 = sum13 >>> 3;
-                let num20 = 3 + ((buffer[tmp87] | buffer[1 + tmp87] << 8) >>> (7 & sum13) & 3);
+                let num20 = 3 + (((buffer[tmp87] | (buffer[1 + tmp87] << 8)) >>> (7 & sum13)) & 3);
                 let sum15 = sum13 + 2;
                 let num21 = a[num19 - 1];
               } else if (17 === tmp83) {
                 let tmp86 = sum13 >>> 3;
-                num20 = 3 + ((buffer[tmp86] | buffer[1 + tmp86] << 8) >>> (7 & sum13) & 7);
+                num20 = 3 + (((buffer[tmp86] | (buffer[1 + tmp86] << 8)) >>> (7 & sum13)) & 7);
                 sum15 = sum13 + 3;
                 num21 = 0;
               } else {
@@ -1145,7 +1189,7 @@ let dither = function v(buffer) {
                 sum15 = sum13;
                 if (18 === tmp83) {
                   _Uint8Array = sum13 >>> 3;
-                  num20 = 11 + ((buffer[_Uint8Array] | buffer[1 + _Uint8Array] << 8) >>> (7 & sum13) & 127);
+                  num20 = 11 + (((buffer[_Uint8Array] | (buffer[1 + _Uint8Array] << 8)) >>> (7 & sum13)) & 127);
                   sum15 = sum13 + 7;
                   num21 = 0;
                 }
@@ -1251,7 +1295,7 @@ let dither = function v(buffer) {
         let num33 = 0;
         if (1 <= num25) {
           do {
-            _Uint8Array = num33 + v2[num32 - 1] << 1;
+            _Uint8Array = (num33 + v2[num32 - 1]) << 1;
             m2[num32] = _Uint8Array;
             num32 = num32 + 1;
             num33 = _Uint8Array;
@@ -1277,7 +1321,7 @@ let dither = function v(buffer) {
             _Uint8Array = _Uint8Array + (1 << _Uint8Array);
             if (_Uint8Array != _Uint8Array) {
               do {
-                k[_Uint8Array[_Uint8Array] >>> 15 - num25] = _Uint8Array;
+                k[_Uint8Array[_Uint8Array] >>> (15 - num25)] = _Uint8Array;
                 _Uint8Array = _Uint8Array + 1;
               } while (_Uint8Array != _Uint8Array);
             }
@@ -1301,7 +1345,7 @@ let dither = function v(buffer) {
         let num39 = 0;
         if (1 <= num29) {
           do {
-            _Uint8Array = num39 + v3[num38 - 1] << 1;
+            _Uint8Array = (num39 + v3[num38 - 1]) << 1;
             m3[num38] = _Uint8Array;
             num38 = num38 + 1;
             num39 = _Uint8Array;
@@ -1338,7 +1382,7 @@ let dither = function v(buffer) {
               _Uint8Array = _Uint8Array + (1 << _Uint8Array);
               if (_Uint8Array != _Uint8Array) {
                 do {
-                  n[_Uint8Array[_Uint8Array] >>> 15 - num29] = _Uint8Array;
+                  n[_Uint8Array[_Uint8Array] >>> (15 - num29)] = _Uint8Array;
                   _Uint8Array = _Uint8Array + 1;
                 } while (_Uint8Array != _Uint8Array);
               }
@@ -1356,7 +1400,11 @@ let dither = function v(buffer) {
       }
       while (true) {
         _Uint8Array = tmp46 >>> 3;
-        _Uint8Array = g[(buffer[_Uint8Array] | buffer[1 + _Uint8Array] << 8 | buffer[2 + _Uint8Array] << 16) >>> (7 & tmp46) & num8];
+        _Uint8Array =
+          g[
+            ((buffer[_Uint8Array] | (buffer[1 + _Uint8Array] << 8) | (buffer[2 + _Uint8Array] << 16)) >>> (7 & tmp46)) &
+              num8
+          ];
         _Uint8Array = tmp46 + (15 & _Uint8Array);
         _Uint8Array = _Uint8Array >>> 4;
         _Uint8Array = sum18;
@@ -1382,16 +1430,29 @@ let dither = function v(buffer) {
               _Uint8Array = _undefined;
               _Uint8Array = _undefined.B[_Uint8Array - 257];
               _Uint8Array = _Uint8Array >>> 3;
-              _Uint8Array = sum18 + (_Uint8Array >>> 3) + ((buffer[_Uint8Array] | buffer[1 + _Uint8Array] << 8) >>> (7 & _Uint8Array) & (1 << (7 & _Uint8Array)) - 1);
+              _Uint8Array =
+                sum18 +
+                (_Uint8Array >>> 3) +
+                (((buffer[_Uint8Array] | (buffer[1 + _Uint8Array] << 8)) >>> (7 & _Uint8Array)) &
+                  ((1 << (7 & _Uint8Array)) - 1));
               _Uint8Array = _Uint8Array + (7 & _Uint8Array);
             }
             _Uint8Array = _Uint8Array >>> 3;
-            _Uint8Array = A[(buffer[_Uint8Array] | buffer[1 + _Uint8Array] << 8 | buffer[2 + _Uint8Array] << 16) >>> (7 & _Uint8Array) & num7];
+            _Uint8Array =
+              A[
+                ((buffer[_Uint8Array] | (buffer[1 + _Uint8Array] << 8) | (buffer[2 + _Uint8Array] << 16)) >>>
+                  (7 & _Uint8Array)) &
+                  num7
+              ];
             _Uint8Array = _Uint8Array + (15 & _Uint8Array);
             _Uint8Array = _undefined;
             _Uint8Array = _undefined.h[_Uint8Array >>> 4];
             _Uint8Array = _Uint8Array >>> 3;
-            _Uint8Array = (_Uint8Array >>> 4) + ((buffer[_Uint8Array] | buffer[1 + _Uint8Array] << 8 | buffer[2 + _Uint8Array] << 16) >>> (7 & _Uint8Array) & (1 << (15 & _Uint8Array)) - 1);
+            _Uint8Array =
+              (_Uint8Array >>> 4) +
+              (((buffer[_Uint8Array] | (buffer[1 + _Uint8Array] << 8) | (buffer[2 + _Uint8Array] << 16)) >>>
+                (7 & _Uint8Array)) &
+                ((1 << (15 & _Uint8Array)) - 1));
             _Uint8Array = arr3;
             _Uint8Array = 15 & _Uint8Array;
             if (tmp2) {
@@ -1446,7 +1507,7 @@ let dither = function v(buffer) {
         sum19 = sum1 + (8 - _Uint8Array);
       }
       let sum20 = 4 + (sum19 >>> 3);
-      let tmp19 = buffer[sum20 - 4] | buffer[sum20 - 3] << 8;
+      let tmp19 = buffer[sum20 - 4] | (buffer[sum20 - 3] << 8);
       let obj = _Uint8Array1;
       if (tmp2) {
         let sum21 = num4 + tmp19;
@@ -1470,7 +1531,7 @@ let dither = function v(buffer) {
       _Uint8Array2 = new _Uint8Array(buffer.buffer, buffer.byteOffset + sum20, tmp19);
       let tmp30 = _Uint8Array2;
       let result2 = obj.set(_Uint8Array2, num4);
-      tmp32 = sum20 + tmp19 << 3;
+      tmp32 = (sum20 + tmp19) << 3;
       sum22 = num4 + tmp19;
       arr2 = obj;
       tmp34 = num7;
@@ -1478,7 +1539,7 @@ let dither = function v(buffer) {
       tmp36 = A;
       tmp37 = g;
     }
-    _Uint8Array = (tmp8 | tmp9) >>> (7 & num3) & 1;
+    _Uint8Array = ((tmp8 | tmp9) >>> (7 & num3)) & 1;
     num3 = tmp32;
     num5 = tmp34;
     num6 = tmp35;
@@ -1734,7 +1795,11 @@ obj = {
                     sum3 = num16;
                     uint8Array2 = arr1;
                     if (2 == size.ctype) {
-                      let items1 = [readUshort(uint8Array, sum1), readUshort(uint8Array, sum1 + 2), readUshort(uint8Array, sum1 + 4)];
+                      let items1 = [
+                        readUshort(uint8Array, sum1),
+                        readUshort(uint8Array, sum1 + 2),
+                        readUshort(uint8Array, sum1 + 4),
+                      ];
                       size.tabs[aSCII] = items1;
                       sum4 = num15;
                       sum3 = num16;
@@ -1767,7 +1832,11 @@ obj = {
                           }
                         }
                       }
-                      let items2 = [readUshort(uint8Array, sum1), readUshort(uint8Array, sum1 + 2), readUshort(uint8Array, sum1 + 4)];
+                      let items2 = [
+                        readUshort(uint8Array, sum1),
+                        readUshort(uint8Array, sum1 + 2),
+                        readUshort(uint8Array, sum1 + 4),
+                      ];
                       size.tabs[aSCII] = items2;
                       sum4 = num15;
                       sum3 = num16;
@@ -1944,7 +2013,7 @@ obj = {
     return tmp;
   },
   _copyTile,
-  _bin: obj
+  _bin: obj,
 };
 c0 = undefined;
 c1 = undefined;
@@ -1960,7 +2029,7 @@ dither = function dither(img, width, height, plte, first, first2) {
   const items = [];
   for (let num2 = 0; num2 < length; num2 = num2 + 1) {
     let tmp = plte[num2];
-    let items1 = [tmp >>> 0 & 255, tmp >>> 8 & 255, tmp >>> 16 & 255, tmp >>> 24 & 255];
+    let items1 = [(tmp >>> 0) & 255, (tmp >>> 8) & 255, (tmp >>> 16) & 255, (tmp >>> 24) & 255];
     let arr = items.push(items1);
   }
   for (let num3 = 0; num3 < length; num3 = num3 + 1) {
@@ -2014,7 +2083,7 @@ dither = function dither(img, width, height, plte, first, first2) {
       if (2 != num) {
         let _Math2 = Math;
         let _Math3 = Math;
-        let items3 = [Math.max(0, Math.min(255, img[result1] + int16Array[result1])), , , ];
+        let items3 = [Math.max(0, Math.min(255, img[result1] + int16Array[result1])), , ,];
         let sum1 = result1 + 1;
         let _Math4 = Math;
         let _Math5 = Math;
@@ -2032,7 +2101,7 @@ dither = function dither(img, width, height, plte, first, first2) {
         let tmp51 = items2[tmp17 + (3 & num9)];
         let _Math10 = Math;
         let _Math11 = Math;
-        items4 = [Math.max(0, Math.min(255, img[result1] + tmp51)), , , ];
+        items4 = [Math.max(0, Math.min(255, img[result1] + tmp51)), , ,];
         let _Math12 = Math;
         let _Math13 = Math;
         items4[1] = Math.max(0, Math.min(255, img[result1 + 1] + tmp51));
@@ -2073,33 +2142,33 @@ dither = function dither(img, width, height, plte, first, first2) {
       if (1 == num) {
         if (num9 !== width - 1) {
           let sum5 = result1 + 4;
-          int16Array[sum5] = int16Array[sum5] + (items5[0] * 7 >> 4);
+          int16Array[sum5] = int16Array[sum5] + ((items5[0] * 7) >> 4);
           let sum6 = sum5 + 1;
-          int16Array[sum6] = int16Array[sum6] + (items5[1] * 7 >> 4);
+          int16Array[sum6] = int16Array[sum6] + ((items5[1] * 7) >> 4);
           let sum7 = sum5 + 2;
-          int16Array[sum7] = int16Array[sum7] + (items5[2] * 7 >> 4);
+          int16Array[sum7] = int16Array[sum7] + ((items5[2] * 7) >> 4);
           let sum8 = sum5 + 3;
-          int16Array[sum8] = int16Array[sum8] + (items5[3] * 7 >> 4);
+          int16Array[sum8] = int16Array[sum8] + ((items5[3] * 7) >> 4);
         }
         if (num8 !== height - 1) {
           if (0 !== num9) {
             let diff8 = result1 + 4 * width - 4;
-            int16Array[diff8] = int16Array[diff8] + (items5[0] * 3 >> 4);
+            int16Array[diff8] = int16Array[diff8] + ((items5[0] * 3) >> 4);
             let sum9 = diff8 + 1;
-            int16Array[sum9] = int16Array[sum9] + (items5[1] * 3 >> 4);
+            int16Array[sum9] = int16Array[sum9] + ((items5[1] * 3) >> 4);
             let sum10 = diff8 + 2;
-            int16Array[sum10] = int16Array[sum10] + (items5[2] * 3 >> 4);
+            int16Array[sum10] = int16Array[sum10] + ((items5[2] * 3) >> 4);
             let sum11 = diff8 + 3;
-            int16Array[sum11] = int16Array[sum11] + (items5[3] * 3 >> 4);
+            int16Array[sum11] = int16Array[sum11] + ((items5[3] * 3) >> 4);
           }
           let sum12 = result1 + 4 * width;
-          int16Array[sum12] = int16Array[sum12] + (items5[0] * 5 >> 4);
+          int16Array[sum12] = int16Array[sum12] + ((items5[0] * 5) >> 4);
           let sum13 = sum12 + 1;
-          int16Array[sum13] = int16Array[sum13] + (items5[1] * 5 >> 4);
+          int16Array[sum13] = int16Array[sum13] + ((items5[1] * 5) >> 4);
           let sum14 = sum12 + 2;
-          int16Array[sum14] = int16Array[sum14] + (items5[2] * 5 >> 4);
+          int16Array[sum14] = int16Array[sum14] + ((items5[2] * 5) >> 4);
           let sum15 = sum12 + 3;
-          int16Array[sum15] = int16Array[sum15] + (items5[3] * 5 >> 4);
+          int16Array[sum15] = int16Array[sum15] + ((items5[3] * 5) >> 4);
           if (num9 !== width - 1) {
             let sum16 = result1 + 4 * width + 4;
             int16Array[sum16] = int16Array[sum16] + (items5[0] >> 4);
@@ -2272,11 +2341,15 @@ _main = function _main(tmp3Result, depth, height, arg3, arg4) {
       let tmp59 = tmp3Result.plte[num25];
       let sum26 = writeUintResult16 + 3 * num25;
       uint8Array[sum26] = 255 & tmp59;
-      uint8Array[sum26 + 1] = tmp59 >>> 8 & 255;
-      uint8Array[sum26 + 2] = tmp59 >>> 16 & 255;
+      uint8Array[sum26 + 1] = (tmp59 >>> 8) & 255;
+      uint8Array[sum26 + 2] = (tmp59 >>> 16) & 255;
     }
     const sum27 = writeUintResult16 + 3 * length3;
-    writeUint(uint8Array, sum27, crc(uint8Array, sum27 - 3 * tmp3Result.plte.length - 4, 3 * tmp3Result.plte.length + 4));
+    writeUint(
+      uint8Array,
+      sum27,
+      crc(uint8Array, sum27 - 3 * tmp3Result.plte.length - 4, 3 * tmp3Result.plte.length + 4),
+    );
     const sum28 = sum27 + 4;
     sum32 = sum28;
     if (flag) {
@@ -2285,7 +2358,7 @@ _main = function _main(tmp3Result, depth, height, arg3, arg4) {
       writeASCII(uint8Array, sum29, "tRNS");
       const sum30 = sum29 + 4;
       for (let num26 = 0; num26 < length3; num26 = num26 + 1) {
-        uint8Array[sum30 + num26] = tmp3Result.plte[num26] >>> 24 & 255;
+        uint8Array[sum30 + num26] = (tmp3Result.plte[num26] >>> 24) & 255;
       }
       const sum31 = sum30 + length3;
       writeUint(uint8Array, sum31, crc(uint8Array, sum31 - length3 - 4, length3 + 4));
@@ -2353,7 +2426,11 @@ _main = function _main(tmp3Result, depth, height, arg3, arg4) {
       }
       writeUintResult16 = uint8Array.set(cimg, writeUintResult16);
       writeUintResult16 = writeUintResult16 + length2;
-      writeUintResult16 = writeUint(uint8Array, writeUintResult16, crc(uint8Array, writeUintResult16, writeUintResult16 - writeUintResult16));
+      writeUintResult16 = writeUint(
+        uint8Array,
+        writeUintResult16,
+        crc(uint8Array, writeUintResult16, writeUintResult16 - writeUintResult16),
+      );
       sum46 = writeUintResult16 + 4;
       num28 = num28 + 1;
       num27 = writeUintResult16;
@@ -2433,7 +2510,7 @@ compressPNG = function compressPNG(uint8Array, sum1, size) {
                 let sum2 = bpp;
                 if (bpp < bpl) {
                   do {
-                    uint8Array[sum1 + sum2] = img[result + sum2] - img[result + sum2 - bpp] + 256 & 255;
+                    uint8Array[sum1 + sum2] = (img[result + sum2] - img[result + sum2 - bpp] + 256) & 255;
                     sum2 = sum2 + 1;
                   } while (sum2 < bpl);
                 }
@@ -2454,7 +2531,7 @@ compressPNG = function compressPNG(uint8Array, sum1, size) {
                   let sum4 = bpp;
                   if (bpp < bpl) {
                     do {
-                      uint8Array[sum1 + sum4] = img[result + sum4] - (img[result + sum4 - bpp] >> 1) + 256 & 255;
+                      uint8Array[sum1 + sum4] = (img[result + sum4] - (img[result + sum4 - bpp] >> 1) + 256) & 255;
                       sum4 = sum4 + 1;
                     } while (sum4 < bpl);
                   }
@@ -2465,7 +2542,7 @@ compressPNG = function compressPNG(uint8Array, sum1, size) {
                     do {
                       let tmp27 = _undefined3;
                       let sum5 = sum1 + sum6;
-                      uint8Array[sum5] = img[result + sum6] - _undefined3(img[result + sum6 - bpp], 0, 0) + 256 & 255;
+                      uint8Array[sum5] = (img[result + sum6] - _undefined3(img[result + sum6 - bpp], 0, 0) + 256) & 255;
                       sum6 = sum6 + 1;
                     } while (sum6 < bpl);
                   }
@@ -2474,18 +2551,19 @@ compressPNG = function compressPNG(uint8Array, sum1, size) {
                 if (2 == tmp9) {
                   for (let num4 = 0; num4 < bpl; num4 = num4 + 1) {
                     let sum7 = result + num4;
-                    uint8Array[sum1 + num4] = img[sum7] + 256 - img[sum7 - bpl] & 255;
+                    uint8Array[sum1 + num4] = (img[sum7] + 256 - img[sum7 - bpl]) & 255;
                   }
                 }
                 if (3 == tmp9) {
                   for (let num5 = 0; num5 < bpp; num5 = num5 + 1) {
                     let sum8 = result + num5;
-                    uint8Array[sum1 + num5] = img[sum8] + 256 - (img[sum8 - bpl] >> 1) & 255;
+                    uint8Array[sum1 + num5] = (img[sum8] + 256 - (img[sum8 - bpl] >> 1)) & 255;
                   }
                   let sum9 = bpp;
                   if (bpp < bpl) {
                     do {
-                      uint8Array[sum1 + sum9] = img[result + sum9] + 256 - (img[result + sum9 - bpl] + img[result + sum9 - bpp] >> 1) & 255;
+                      uint8Array[sum1 + sum9] =
+                        (img[result + sum9] + 256 - ((img[result + sum9 - bpl] + img[result + sum9 - bpp]) >> 1)) & 255;
                       sum9 = sum9 + 1;
                     } while (sum9 < bpl);
                   }
@@ -2495,7 +2573,7 @@ compressPNG = function compressPNG(uint8Array, sum1, size) {
                     let sum10 = result + num6;
                     let tmp19 = _undefined3;
                     let sum11 = img[sum10] + 256;
-                    uint8Array[sum1 + num6] = sum11 - _undefined3(0, img[sum10 - bpl], 0) & 255;
+                    uint8Array[sum1 + num6] = (sum11 - _undefined3(0, img[sum10 - bpl], 0)) & 255;
                   }
                   let sum14 = bpp;
                   if (bpp < bpl) {
@@ -2503,7 +2581,14 @@ compressPNG = function compressPNG(uint8Array, sum1, size) {
                       let tmp23 = _undefined3;
                       let sum12 = sum1 + sum14;
                       let sum13 = img[result + sum14] + 256;
-                      uint8Array[sum12] = sum13 - _undefined3(img[result + sum14 - bpp], img[result + sum14 - bpl], img[result + sum14 - bpp - bpl]) & 255;
+                      uint8Array[sum12] =
+                        (sum13 -
+                          _undefined3(
+                            img[result + sum14 - bpp],
+                            img[result + sum14 - bpl],
+                            img[result + sum14 - bpp - bpl],
+                          )) &
+                        255;
                       sum14 = sum14 + 1;
                     } while (sum14 < bpl);
                   }
@@ -3072,7 +3157,7 @@ compress = function compress(arg0, width2, height2, arg3, width, height, arg6, a
       if (length10 <= 256) {
         if (0 == tmp4) {
           let _Math2 = Math;
-          first = Math.ceil(depth * width2 / 8);
+          first = Math.ceil((depth * width2) / 8);
           let _Uint8Array12 = Uint8Array;
           first = new.target;
           first = new.target;
@@ -3093,17 +3178,17 @@ compress = function compress(arg0, width2, height2, arg3, width, height, arg6, a
               } else if (4 == depth) {
                 for (let num62 = 0; num62 < width2; num62 = num62 + 1) {
                   first = first + (num62 >> 1);
-                  first[first] = first[first] | first[first + num62] << 4 - 4 * (1 & num62);
+                  first[first] = first[first] | (first[first + num62] << (4 - 4 * (1 & num62)));
                 }
               } else if (2 == depth) {
                 for (let num61 = 0; num61 < width2; num61 = num61 + 1) {
                   first = first + (num61 >> 2);
-                  first[first] = first[first] | first[first + num61] << 6 - 2 * (3 & num61);
+                  first[first] = first[first] | (first[first + num61] << (6 - 2 * (3 & num61)));
                 }
               } else if (1 == depth) {
                 for (let num60 = 0; num60 < width2; num60 = num60 + 1) {
                   first = first + (num60 >> 3);
-                  first[first] = first[first] | first[first + num60] << 7 - (7 & num60);
+                  first[first] = first[first] | (first[first + num60] << (7 - (7 & num60)));
                 }
               }
               first = num59 + 1;
@@ -3315,7 +3400,13 @@ function quantize(arg0, arg1, arg2) {
     for (let num6 = 0; num6 < length2; num6 = num6 + 4) {
       let tmp16 = getNearest;
       let tmp17 = tmp5;
-      let tmp18 = getNearest(tmp5, 0.00392156862745098 * uint8Array[num6], 0.00392156862745098 * uint8Array[num6 + 1], 0.00392156862745098 * uint8Array[num6 + 2], 0.00392156862745098 * uint8Array[num6 + 3]);
+      let tmp18 = getNearest(
+        tmp5,
+        0.00392156862745098 * uint8Array[num6],
+        0.00392156862745098 * uint8Array[num6 + 1],
+        0.00392156862745098 * uint8Array[num6 + 2],
+        0.00392156862745098 * uint8Array[num6 + 3],
+      );
       let tmp19 = num6 >> 2;
       uint8Array2[tmp19] = tmp18.ind;
       uint32Array[tmp19] = tmp18.est.rgba;
@@ -3573,7 +3664,10 @@ function getKDtree(substr, arg1) {
             let tmp5 = diff;
             let tmp6 = sum3;
             let tmp7 = sum3;
-            if (substr[sum3] * e[0] + substr[sum3 + 1] * e[1] + substr[sum3 + 2] * e[2] + substr[sum3 + 3] * e[3] <= eMq255) {
+            if (
+              substr[sum3] * e[0] + substr[sum3 + 1] * e[1] + substr[sum3 + 2] * e[2] + substr[sum3 + 3] * e[3] <=
+              eMq255
+            ) {
               do {
                 let sum = tmp6 + 4;
                 tmp4 = vecDot;
@@ -3589,7 +3683,8 @@ function getKDtree(substr, arg1) {
                 let diff1 = tmp10 - 4;
                 tmp10 = diff1;
                 tmp11 = diff1;
-                sum2 = substr[diff1] * e[0] + substr[diff1 + 1] * e[1] + substr[diff1 + 2] * e[2] + substr[diff1 + 3] * e[3];
+                sum2 =
+                  substr[diff1] * e[0] + substr[diff1 + 1] * e[1] + substr[diff1 + 2] * e[2] + substr[diff1 + 3] * e[3];
               } while (sum2 > eMq255);
             }
             tmp14 = tmp7;
@@ -3610,12 +3705,16 @@ function getKDtree(substr, arg1) {
         }
         let tmp18 = tmp14;
         let tmp19 = tmp14;
-        if (substr[tmp14] * e[0] + substr[tmp14 + 1] * e[1] + substr[tmp14 + 2] * e[2] + substr[tmp14 + 3] * e[3] > eMq255) {
+        if (
+          substr[tmp14] * e[0] + substr[tmp14 + 1] * e[1] + substr[tmp14 + 2] * e[2] + substr[tmp14 + 3] * e[3] >
+          eMq255
+        ) {
           do {
             let diff2 = tmp18 - 4;
             tmp18 = diff2;
             tmp19 = diff2;
-            sum4 = substr[diff2] * e[0] + substr[diff2 + 1] * e[1] + substr[diff2 + 2] * e[2] + substr[diff2 + 3] * e[3];
+            sum4 =
+              substr[diff2] * e[0] + substr[diff2 + 1] * e[1] + substr[diff2 + 2] * e[2] + substr[diff2 + 3] * e[3];
           } while (sum4 > eMq255);
         }
         let sum5 = tmp19 + 4;
@@ -3711,7 +3810,7 @@ function stats(substr, i0, i1) {
   let sum = i0;
   const R = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
   const m = [0, 0, 0, 0];
-  const N = i1 - i0 >> 2;
+  const N = (i1 - i0) >> 2;
   if (i0 < i1) {
     do {
       let result = 0.00392156862745098 * substr[sum];
@@ -3750,7 +3849,24 @@ function estats(bst) {
   if (0 != N) {
     num = 1 / N;
   }
-  const items = [R[0] - tmp * tmp * num, R[1] - tmp * tmp2 * num, R[2] - tmp * tmp3 * num, R[3] - tmp * tmp4 * num, R[4] - tmp2 * tmp * num, R[5] - tmp2 * tmp2 * num, R[6] - tmp2 * tmp3 * num, R[7] - tmp2 * tmp4 * num, R[8] - tmp3 * tmp * num, R[9] - tmp3 * tmp2 * num, R[10] - tmp3 * tmp3 * num, R[11] - tmp3 * tmp4 * num, R[12] - tmp4 * tmp * num, R[13] - tmp4 * tmp2 * num, R[14] - tmp4 * tmp3 * num, R[15] - tmp4 * tmp4 * num];
+  const items = [
+    R[0] - tmp * tmp * num,
+    R[1] - tmp * tmp2 * num,
+    R[2] - tmp * tmp3 * num,
+    R[3] - tmp * tmp4 * num,
+    R[4] - tmp2 * tmp * num,
+    R[5] - tmp2 * tmp2 * num,
+    R[6] - tmp2 * tmp3 * num,
+    R[7] - tmp2 * tmp4 * num,
+    R[8] - tmp3 * tmp * num,
+    R[9] - tmp3 * tmp2 * num,
+    R[10] - tmp3 * tmp3 * num,
+    R[11] - tmp3 * tmp4 * num,
+    R[12] - tmp4 * tmp * num,
+    R[13] - tmp4 * tmp2 * num,
+    R[14] - tmp4 * tmp3 * num,
+    R[15] - tmp4 * tmp4 * num,
+  ];
   let obj = c16;
   const items1 = [Math.random(), Math.random(), Math.random(), Math.random()];
   let num3 = 0;
@@ -3790,10 +3906,18 @@ function estats(bst) {
     }
   }
   const items2 = [tmp * num, tmp2 * num, tmp3 * num, tmp4 * num];
-  obj = { Cov: items, q: items2, e: tmp5, L: num3, eMq255: obj.dot(obj.sml(255, items2), tmp5), eMq: obj.dot(tmp5, items2), rgba: null };
+  obj = {
+    Cov: items,
+    q: items2,
+    e: tmp5,
+    L: num3,
+    eMq255: obj.dot(obj.sml(255, items2), tmp5),
+    eMq: obj.dot(tmp5, items2),
+    rgba: null,
+  };
   const tmp16 = Math.round(255 * items2[3]) << 24;
   const tmp17 = Math.round(255 * items2[2]) << 16;
-  obj[6] = (tmp16 | tmp17 | Math.round(255 * items2[1]) << 8 | Math.round(255 * items2[0])) >>> 0;
+  obj[6] = (tmp16 | tmp17 | (Math.round(255 * items2[1]) << 8) | Math.round(255 * items2[0])) >>> 0;
   return obj;
 }
 ({ _copyTile: c0, _bin: c1, _paeth: c2 } = obj);

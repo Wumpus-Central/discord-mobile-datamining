@@ -5,14 +5,30 @@ import noop from "00019_noop.js";
 const useLayoutEffect = noop.useLayoutEffect;
 const Platform = get_ActivityIndicator.Platform;
 const android = "android";
-let closure_4 = { code: "function pnpm_hooksTs1(e){const{isClosed,heightWhenOpened}=this.__closure;if(e.height>0){isClosed.value=false;heightWhenOpened.value=e.height;}}" };
-let closure_5 = { code: "function pnpm_hooksTs2(e){const{progress,height}=this.__closure;progress.value=e.progress;height.value=e.height;}" };
-let closure_6 = { code: "function pnpm_hooksTs3(e){const{progress,height}=this.__closure;progress.value=e.progress;height.value=e.height;}" };
-let closure_7 = { code: "function pnpm_hooksTs4(e){const{isClosed,height,progress}=this.__closure;isClosed.value=e.height===0;height.value=e.height;progress.value=e.progress;}" };
-let closure_8 = { code: "function pnpm_hooksTs5(e){const{padding,OS,translate}=this.__closure;if(e.height===0){padding.value=0;}if(OS===\"ios\"){translate.value=e.progress;}}" };
-let closure_9 = { code: "function pnpm_hooksTs6(e){const{OS,translate}=this.__closure;if(OS!==\"ios\"){translate.value=e.progress;}}" };
-let closure_10 = { code: "function pnpm_hooksTs7(e){const{padding,translate}=this.__closure;padding.value=0;translate.value=e.progress;}" };
-let closure_11 = { code: "function pnpm_hooksTs8(e){const{padding,OS,translate}=this.__closure;padding.value=e.progress;if(OS!==\"ios\"){translate.value=e.progress;}}" };
+let closure_4 = {
+  code: "function pnpm_hooksTs1(e){const{isClosed,heightWhenOpened}=this.__closure;if(e.height>0){isClosed.value=false;heightWhenOpened.value=e.height;}}",
+};
+let closure_5 = {
+  code: "function pnpm_hooksTs2(e){const{progress,height}=this.__closure;progress.value=e.progress;height.value=e.height;}",
+};
+let closure_6 = {
+  code: "function pnpm_hooksTs3(e){const{progress,height}=this.__closure;progress.value=e.progress;height.value=e.height;}",
+};
+let closure_7 = {
+  code: "function pnpm_hooksTs4(e){const{isClosed,height,progress}=this.__closure;isClosed.value=e.height===0;height.value=e.height;progress.value=e.progress;}",
+};
+let closure_8 = {
+  code: 'function pnpm_hooksTs5(e){const{padding,OS,translate}=this.__closure;if(e.height===0){padding.value=0;}if(OS==="ios"){translate.value=e.progress;}}',
+};
+let closure_9 = {
+  code: 'function pnpm_hooksTs6(e){const{OS,translate}=this.__closure;if(OS!=="ios"){translate.value=e.progress;}}',
+};
+let closure_10 = {
+  code: "function pnpm_hooksTs7(e){const{padding,translate}=this.__closure;padding.value=0;translate.value=e.progress;}",
+};
+let closure_11 = {
+  code: 'function pnpm_hooksTs8(e){const{padding,OS,translate}=this.__closure;padding.value=e.progress;if(OS!=="ios"){translate.value=e.progress;}}',
+};
 
 export const useKeyboardAnimation = () => {
   reanimated = reanimated(heightWhenOpened[2]).useKeyboardContext().reanimated;

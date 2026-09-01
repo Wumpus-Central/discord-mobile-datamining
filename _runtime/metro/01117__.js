@@ -45,5 +45,5 @@ arg5.PROFILE_QUEUE = {
     } else {
       return false;
     }
-  }
+  },
 };

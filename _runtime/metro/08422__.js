@@ -8,16 +8,59 @@ const items = ["phoneNumber", "link", "address", "calendarEvent", "none", "all"]
 let obj = {};
 const module_8412 = Object.assign(_mod8412);
 obj.autoCapitalize = emptyFunction.oneOf(["none", "sentences", "words", "characters"]);
-obj.autoCompleteType = emptyFunction.oneOf(["cc-csc", "cc-exp", "cc-exp-month", "cc-exp-year", "cc-number", "email", "name", "password", "postal-code", "street-address", "tel", "username", "off"]);
+obj.autoCompleteType = emptyFunction.oneOf([
+  "cc-csc",
+  "cc-exp",
+  "cc-exp-month",
+  "cc-exp-year",
+  "cc-number",
+  "email",
+  "name",
+  "password",
+  "postal-code",
+  "street-address",
+  "tel",
+  "username",
+  "off",
+]);
 obj.autoCorrect = emptyFunction.bool;
 obj.spellCheck = emptyFunction.bool;
 obj.autoFocus = emptyFunction.bool;
 obj.allowFontScaling = emptyFunction.bool;
 obj.maxFontSizeMultiplier = emptyFunction.number;
 obj.editable = emptyFunction.bool;
-obj.keyboardType = emptyFunction.oneOf(["default", "email-address", "numeric", "phone-pad", "number-pad", "ascii-capable", "numbers-and-punctuation", "url", "name-phone-pad", "decimal-pad", "twitter", "web-search", "ascii-capable-number-pad", "visible-password"]);
+obj.keyboardType = emptyFunction.oneOf([
+  "default",
+  "email-address",
+  "numeric",
+  "phone-pad",
+  "number-pad",
+  "ascii-capable",
+  "numbers-and-punctuation",
+  "url",
+  "name-phone-pad",
+  "decimal-pad",
+  "twitter",
+  "web-search",
+  "ascii-capable-number-pad",
+  "visible-password",
+]);
 obj.keyboardAppearance = emptyFunction.oneOf(["default", "light", "dark"]);
-obj.returnKeyType = emptyFunction.oneOf(["done", "go", "next", "search", "send", "none", "previous", "default", "emergency-call", "google", "join", "route", "yahoo"]);
+obj.returnKeyType = emptyFunction.oneOf([
+  "done",
+  "go",
+  "next",
+  "search",
+  "send",
+  "none",
+  "previous",
+  "default",
+  "emergency-call",
+  "google",
+  "join",
+  "route",
+  "yahoo",
+]);
 obj.returnKeyLabel = emptyFunction.string;
 obj.maxLength = emptyFunction.number;
 obj.numberOfLines = emptyFunction.number;
@@ -55,13 +98,42 @@ obj.underlineColorAndroid = colorPropType;
 obj.inlineImageLeft = emptyFunction.string;
 obj.inlineImagePadding = emptyFunction.number;
 obj.rejectResponderTermination = emptyFunction.bool;
-const items1 = [emptyFunction.oneOf(items), ];
+const items1 = [emptyFunction.oneOf(items)];
 items1[1] = emptyFunction.arrayOf(emptyFunction.oneOf(items));
 obj.dataDetectorTypes = emptyFunction.oneOfType(items1);
 obj.caretHidden = emptyFunction.bool;
 obj.contextMenuHidden = emptyFunction.bool;
 obj.inputAccessoryViewID = emptyFunction.string;
-obj.textContentType = emptyFunction.oneOf(["none", "URL", "addressCity", "addressCityAndState", "addressState", "countryName", "creditCardNumber", "emailAddress", "familyName", "fullStreetAddress", "givenName", "jobTitle", "location", "middleName", "name", "namePrefix", "nameSuffix", "nickname", "organizationName", "postalCode", "streetAddressLine1", "streetAddressLine2", "sublocality", "telephoneNumber", "username", "password", "newPassword", "oneTimeCode"]);
+obj.textContentType = emptyFunction.oneOf([
+  "none",
+  "URL",
+  "addressCity",
+  "addressCityAndState",
+  "addressState",
+  "countryName",
+  "creditCardNumber",
+  "emailAddress",
+  "familyName",
+  "fullStreetAddress",
+  "givenName",
+  "jobTitle",
+  "location",
+  "middleName",
+  "name",
+  "namePrefix",
+  "nameSuffix",
+  "nickname",
+  "organizationName",
+  "postalCode",
+  "streetAddressLine1",
+  "streetAddressLine2",
+  "sublocality",
+  "telephoneNumber",
+  "username",
+  "password",
+  "newPassword",
+  "oneTimeCode",
+]);
 obj.showSoftInputOnFocus = emptyFunction.bool;
 
 export default obj;

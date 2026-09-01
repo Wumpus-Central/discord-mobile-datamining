@@ -22,7 +22,7 @@ export const useRoutePath = function useRoutePath() {
     if (options != null) {
       enabled = options.enabled;
     }
-    const items = [enabled, , , ];
+    const items = [enabled, , ,];
     let config;
     if (options != null) {
       config = options.config;

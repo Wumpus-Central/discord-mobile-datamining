@@ -28,10 +28,9 @@ let combined = "".concat("https://js.stripe.com", "/");
 let closure_4 = combined.concat("basil", "/stripe.js");
 const re5 = /^https:\/\/js\.stripe\.com\/v3\/?(\?.*)?$/;
 const re6 = /^https:\/\/js\.stripe\.com\/(v3|[a-z]+)\/stripe\.js(\?.*)?$/;
-let c7 = "loadStripe.setLoadParameters was called but an existing Stripe.js script already exists in the document; existing script parameters will be used";
-function isStripeJSURL(arg0) {
-
-}
+let c7 =
+  "loadStripe.setLoadParameters was called but an existing Stripe.js script already exists in the document; existing script parameters will be used";
+function isStripeJSURL(arg0) {}
 function injectScript(advancedFraudSignals) {
   let str = "";
   if (advancedFraudSignals) {
@@ -60,12 +59,8 @@ function injectScript(advancedFraudSignals) {
 let c10 = null;
 let c11 = null;
 let c12 = null;
-function loadScript(arg0) {
-
-}
-function validateLoadParams(arg0) {
-
-}
+function loadScript(arg0) {}
+function validateLoadParams(arg0) {}
 let c15 = false;
 function loadStripe(KEY) {
   const length = arguments.length;
@@ -98,7 +93,7 @@ function loadStripe(KEY) {
           } else {
             try {
               const tmp8 = (function findScript() {
-                const elements = document.querySelectorAll("script[src^=\"".concat(closure_3, "\"]"));
+                const elements = document.querySelectorAll('script[src^="'.concat(closure_3, '"]'));
                 let num = 0;
                 if (0 < elements.length) {
                   while (true) {
@@ -207,7 +202,12 @@ function loadStripe(KEY) {
         const concat = "Stripe.js@".concat;
         const combined = "Stripe.js@".concat(str, " was loaded on the page, but @stripe/stripe-js@");
         const combined1 = combined.concat("7.3.1", " expected Stripe.js@");
-        console.warn(combined1.concat(tmp4, ". This may result in unexpected behavior. For more information, see https://docs.stripe.com/sdks/stripejs-versioning"));
+        console.warn(
+          combined1.concat(
+            tmp4,
+            ". This may result in unexpected behavior. For more information, see https://docs.stripe.com/sdks/stripejs-versioning",
+          ),
+        );
       }
       const applyResult = version.apply(undefined, tmp);
       let _registerWrapper = applyResult;
@@ -233,9 +233,15 @@ loadStripe.setLoadParameters = (advancedFraudSignals) => {
       if (typeof validateLoadParams !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      const concat = "invalid load parameters; expected object of shape\n\n    {advancedFraudSignals: boolean}\n\nbut received\n\n    ".concat;
+      const concat =
+        "invalid load parameters; expected object of shape\n\n    {advancedFraudSignals: boolean}\n\nbut received\n\n    "
+          .concat;
       const _JSON = JSON;
-      const combined = "invalid load parameters; expected object of shape\n\n    {advancedFraudSignals: boolean}\n\nbut received\n\n    ".concat(JSON.stringify(advancedFraudSignals), "\n");
+      const combined =
+        "invalid load parameters; expected object of shape\n\n    {advancedFraudSignals: boolean}\n\nbut received\n\n    ".concat(
+          JSON.stringify(advancedFraudSignals),
+          "\n",
+        );
       if (null !== advancedFraudSignals) {
         if ("object" === _typeof(advancedFraudSignals)) {
           const _Object3 = Object;
@@ -263,9 +269,15 @@ loadStripe.setLoadParameters = (advancedFraudSignals) => {
     if (typeof validateLoadParams !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const concat2 = "invalid load parameters; expected object of shape\n\n    {advancedFraudSignals: boolean}\n\nbut received\n\n    ".concat;
+    const concat2 =
+      "invalid load parameters; expected object of shape\n\n    {advancedFraudSignals: boolean}\n\nbut received\n\n    "
+        .concat;
     const _JSON2 = JSON;
-    const combined1 = "invalid load parameters; expected object of shape\n\n    {advancedFraudSignals: boolean}\n\nbut received\n\n    ".concat(JSON.stringify(advancedFraudSignals), "\n");
+    const combined1 =
+      "invalid load parameters; expected object of shape\n\n    {advancedFraudSignals: boolean}\n\nbut received\n\n    ".concat(
+        JSON.stringify(advancedFraudSignals),
+        "\n",
+      );
     if (null !== advancedFraudSignals) {
       if ("object" === _typeof(advancedFraudSignals)) {
         const _Object2 = Object;

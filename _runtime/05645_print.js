@@ -1,7 +1,5 @@
 // _runtime/05645_print.js
-function print() {
-
-}
+function print() {}
 const frozen = Object.freeze(print);
 arg5.print = print;
 arg5.enableLogging = (arg0) => {

@@ -31,4 +31,4 @@ export default function useLatestCallback(stateFromStores) {
     const current = ref.current;
     return current.apply(this, items);
   }).current;
-};
+}

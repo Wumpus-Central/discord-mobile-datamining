@@ -5,4 +5,4 @@ export default function arrayPush(arg0, arg1) {
     arg0[arg0.length + num] = arg1[num];
   }
   return arg0;
-};
+}

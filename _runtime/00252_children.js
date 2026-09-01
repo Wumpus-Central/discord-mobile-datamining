@@ -24,5 +24,8 @@ export default function _default(rootTag) {
     rootViewStyle = root.root;
   }
   obj[1] = jsx(ViewDefault, { style: rootViewStyle, pointerEvents: "box-none", children: tmp2 });
-  return jsx(RootTagContext.RootTagContext.Provider, { value: RootTagContext.createRootTag(rootTag.rootTag), children: null });
-};
+  return jsx(RootTagContext.RootTagContext.Provider, {
+    value: RootTagContext.createRootTag(rootTag.rootTag),
+    children: null,
+  });
+}

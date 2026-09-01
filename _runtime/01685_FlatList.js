@@ -7,7 +7,6 @@ import AnimatedImage from "01794_AnimatedImage.js";
 import AnimatedScrollView from "01795_AnimatedScrollView.js";
 import AnimatedText from "01818_AnimatedText.js";
 
-
 export const FlatList = ReanimatedFlatList.ReanimatedFlatList;
 export const Image = AnimatedImage.AnimatedImage;
 export const ScrollView = AnimatedScrollView.AnimatedScrollView;

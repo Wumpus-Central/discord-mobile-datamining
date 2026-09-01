@@ -23,4 +23,4 @@ export default function arrayFilter(arg0, arg1) {
     } while (num3 < num);
   }
   return items;
-};
+}

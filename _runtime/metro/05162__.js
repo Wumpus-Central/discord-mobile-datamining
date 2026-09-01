@@ -14,5 +14,5 @@ arg5.default = {
       error = new Error("Illegal byte order value. Faulty image.");
       throw error;
     }
-  }
+  },
 };

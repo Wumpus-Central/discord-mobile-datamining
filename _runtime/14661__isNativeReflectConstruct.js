@@ -26,8 +26,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 ({ View: c5, Animated } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
@@ -56,9 +55,9 @@ importDefaultResult1(CircularProgress, importDefaultResult2.PureComponent);
 let obj = {
   key: "polarToCartesian",
   value: function polarToCartesian(sum, sum2, diff, arg3) {
-    const result = (arg3 - 90) * Math.PI / 180;
+    const result = ((arg3 - 90) * Math.PI) / 180;
     return { x: sum + diff * Math.cos(result), y: sum2 + diff * Math.sin(result) };
-  }
+  },
 };
 let items = [
   obj,
@@ -80,7 +79,7 @@ let items = [
       items[8] = 0;
       ({ x: arr[9], y: arr[10] } = this.polarToCartesian(sum, sum2, diff, arg3));
       return items.join(" ");
-    }
+    },
   },
   {
     key: "render",
@@ -92,7 +91,8 @@ let items = [
       if (undefined === fillLineCap) {
         fillLineCap = lineCap;
       }
-      ({ arcSweepAngle, fill, children, childrenContainerStyle, padding, renderCap, dashedBackground, dashedTint } = props);
+      ({ arcSweepAngle, fill, children, childrenContainerStyle, padding, renderCap, dashedBackground, dashedTint } =
+        props);
       let bound = width;
       if (backgroundWidth) {
         const _Math = Math;
@@ -103,7 +103,7 @@ let items = [
       const result2 = size / 2;
       const result3 = bound / 2;
       const result4 = padding / 2;
-      const result5 = arcSweepAngle * self.clampFill(fill) / 100;
+      const result5 = (arcSweepAngle * self.clampFill(fill)) / 100;
       let num = 0;
       if (!tintTransparency) {
         num = result5;
@@ -119,7 +119,17 @@ let items = [
         renderCapResult = props2.renderCap(obj);
       }
       const diff1 = size - 2 * bound;
-      obj = { position: "absolute", left: bound + padding / 2, top: bound + padding / 2, width: diff1, height: diff1, borderRadius: diff1 / 2, alignItems: "center", justifyContent: "center", overflow: "hidden" };
+      obj = {
+        position: "absolute",
+        left: bound + padding / 2,
+        top: bound + padding / 2,
+        width: diff1,
+        height: diff1,
+        borderRadius: diff1 / 2,
+        alignItems: "center",
+        justifyContent: "center",
+        overflow: "hidden",
+      };
       const merged = Object.assign(childrenContainerStyle);
       let mapped = null;
       if (dashedTint.gap > 0) {
@@ -138,7 +148,14 @@ let items = [
       const obj2 = { rotation, originX: (size + padding) / 2, originY: (size + padding) / 2, children: null };
       let tmp23Result = backgroundColor;
       if (backgroundColor) {
-        const obj3 = { d: null, stroke: null, strokeWidth: null, strokeLinecap: null, strokeDasharray: null, fill: "transparent" };
+        const obj3 = {
+          d: null,
+          stroke: null,
+          strokeWidth: null,
+          strokeLinecap: null,
+          strokeDasharray: null,
+          fill: "transparent",
+        };
         obj3[0] = circlePathResult;
         obj3[1] = backgroundColor;
         if (!backgroundWidth) {
@@ -149,10 +166,17 @@ let items = [
         obj3[4] = mapped1;
         tmp23Result = tmp23(tmp24(8241).Path, obj3);
       }
-      const items = [tmp23Result, , ];
+      const items = [tmp23Result, ,];
       tmp23Result = fill > 0;
       if (tmp23Result) {
-        const obj4 = { d: null, stroke: null, strokeWidth: null, strokeLinecap: null, strokeDasharray: null, fill: "transparent" };
+        const obj4 = {
+          d: null,
+          stroke: null,
+          strokeWidth: null,
+          strokeLinecap: null,
+          strokeDasharray: null,
+          fill: "transparent",
+        };
         obj4[0] = circlePathResult1;
         obj4[1] = tintColor;
         obj4[2] = width;
@@ -164,7 +188,7 @@ let items = [
       items[2] = renderCapResult;
       obj2[3] = items;
       obj1[2] = closure_7(CircularProgress(8241).G, obj2);
-      const items1 = [closure_6(CircularProgress(8241).Svg, obj1), ];
+      const items1 = [closure_6(CircularProgress(8241).Svg, obj1)];
       let tmp23Result1 = children;
       if (children) {
         const obj5 = { style: null, children: null };
@@ -175,12 +199,30 @@ let items = [
       items1[1] = tmp23Result1;
       obj[1] = items1;
       return closure_7(closure_5, obj);
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(CircularProgress, items);
-obj = { style: importDefaultResult3.object, size: null, fill: null, width: null, backgroundWidth: null, tintColor: null, tintTransparency: null, backgroundColor: null, rotation: null, lineCap: null, arcSweepAngle: null, children: null, childrenContainerStyle: null, padding: null, renderCap: null, dashedBackground: null, dashedTint: null };
-let items1 = [importDefaultResult3.number, ];
+obj = {
+  style: importDefaultResult3.object,
+  size: null,
+  fill: null,
+  width: null,
+  backgroundWidth: null,
+  tintColor: null,
+  tintTransparency: null,
+  backgroundColor: null,
+  rotation: null,
+  lineCap: null,
+  arcSweepAngle: null,
+  children: null,
+  childrenContainerStyle: null,
+  padding: null,
+  renderCap: null,
+  dashedBackground: null,
+  dashedTint: null,
+};
+let items1 = [importDefaultResult3.number];
 items1[1] = importDefaultResult3.instanceOf(Animated.Value);
 obj[1] = importDefaultResult3.oneOfType(items1).isRequired;
 obj[2] = importDefaultResult3.number.isRequired;
@@ -199,6 +241,15 @@ obj[14] = importDefaultResult3.func;
 obj[15] = importDefaultResult3.object;
 obj[16] = importDefaultResult3.object;
 importDefaultResultResult.propTypes = obj;
-importDefaultResultResult.defaultProps = { tintColor: "black", tintTransparency: true, rotation: 90, lineCap: "butt", arcSweepAngle: 360, padding: 0, dashedBackground: { width: 0, gap: 0 }, dashedTint: { width: 0, gap: 0 } };
+importDefaultResultResult.defaultProps = {
+  tintColor: "black",
+  tintTransparency: true,
+  rotation: 90,
+  lineCap: "butt",
+  arcSweepAngle: 360,
+  padding: 0,
+  dashedBackground: { width: 0, gap: 0 },
+  dashedTint: { width: 0, gap: 0 },
+};
 
 export default importDefaultResultResult;

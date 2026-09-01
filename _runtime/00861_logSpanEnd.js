@@ -25,7 +25,7 @@ arg5.logSpanEnd = function logSpanEnd(spanContext) {
       str3 = "root ";
     }
     const _HermesInternal = HermesInternal;
-    const combined = "[Tracing] Finishing \"" + str2 + "\" " + str3 + "span \"" + str + "\" with ID " + spanId;
+    const combined = '[Tracing] Finishing "' + str2 + '" ' + str3 + 'span "' + str + '" with ID ' + spanId;
     const debug = tmp(824).debug;
     debug.log(combined);
   }
@@ -59,7 +59,7 @@ arg5.logSpanStart = function logSpanStart(spanContext) {
     const _HermesInternal = HermesInternal;
     const _HermesInternal2 = HermesInternal;
     const combined = "[Tracing] Starting " + str3 + " " + str5 + "span";
-    const items = ["op: " + str2, , ];
+    const items = ["op: " + str2, ,];
     const _HermesInternal3 = HermesInternal;
     items[1] = "name: " + str;
     const _HermesInternal4 = HermesInternal;

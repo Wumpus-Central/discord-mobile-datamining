@@ -26,7 +26,11 @@ class ToNumber {
       tmp4 = globalThis;
       _TypeError = TypeError;
       str = "BigInt and Symbol are not supported";
-      invariantResult = require("getMultiInternalSlots").invariant(tmp32, "BigInt and Symbol are not supported", TypeError);
+      invariantResult = require("getMultiInternalSlots").invariant(
+        tmp32,
+        "BigInt and Symbol are not supported",
+        TypeError,
+      );
       if (undefined === arg0) {
         tmp19 = new.target;
         num3 = NaN;
@@ -66,12 +70,20 @@ class ToNumber {
             } else {
               _TypeError2 = TypeError;
               str2 = "object expected";
-              invariantResult1 = require("getMultiInternalSlots").invariant(typeof arg0 === "object", "object expected", TypeError);
+              invariantResult1 = require("getMultiInternalSlots").invariant(
+                typeof arg0 === "object",
+                "object expected",
+                TypeError,
+              );
               tmp35 = ToPrimitive;
               str3 = "number";
               tmp36 = ToPrimitive(arg0, "number");
               _TypeError3 = TypeError;
-              invariantResult2 = require("getMultiInternalSlots").invariant(typeof tmp36 !== "object", "object expected", TypeError);
+              invariantResult2 = require("getMultiInternalSlots").invariant(
+                typeof tmp36 !== "object",
+                "object expected",
+                TypeError,
+              );
               tmp38 = ToNumber;
               return ToNumber(tmp36);
             }
@@ -225,9 +237,12 @@ class ToPrimitive {
             if ("string" !== arg1) {
               tmp11 = closure_0;
               tmp12 = closure_1;
-              str5 = "preferredType must be \"string\" or \"number\"";
+              str5 = 'preferredType must be "string" or "number"';
               str6 = "number";
-              invariantResult = require("getMultiInternalSlots").invariant("number" === arg1, "preferredType must be \"string\" or \"number\"");
+              invariantResult = require("getMultiInternalSlots").invariant(
+                "number" === arg1,
+                'preferredType must be "string" or "number"',
+              );
               str4 = "number";
             }
           }

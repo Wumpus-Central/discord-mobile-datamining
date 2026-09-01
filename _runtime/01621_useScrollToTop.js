@@ -22,60 +22,62 @@ export const useScrollToTop = function useScrollToTop(ref) {
         }
       }
       if (0 !== items.length) {
-        closure_1 = items.map((addListener) => addListener.addListener("tabPress", (arg0) => {
-          closure_0 = arg0;
-          closure_1 = closure_1_1.isFocused();
-          let hasItem = closure_0.includes(closure_1_1);
-          if (!hasItem) {
-            hasItem = closure_1_1.getState().routes[0].key === closure_1_2.key;
-          }
-          const animationFrame = requestAnimationFrame(() => {
-            if (null == ref.current) {
-              let tmp3 = closure_1;
-              if (closure_1) {
-                tmp3 = hasItem;
-              }
-              if (tmp3) {
-                tmp3 = null;
-              }
-              if (tmp3) {
-                tmp3 = !ref.defaultPrevented;
-              }
-              if (tmp3) {
-                if ("scrollToTop" in null) {
-                  null.scrollToTop();
-                } else if ("scrollTo" in null) {
-                  null.scrollTo({ y: 0, animated: true });
-                } else if ("scrollToOffset" in null) {
-                  null.scrollToOffset({ offset: 0, animated: true });
-                } else if ("scrollResponderScrollTo" in null) {
-                  const result = null.scrollResponderScrollTo({ y: 0, animated: true });
+        closure_1 = items.map((addListener) =>
+          addListener.addListener("tabPress", (arg0) => {
+            closure_0 = arg0;
+            closure_1 = closure_1_1.isFocused();
+            let hasItem = closure_0.includes(closure_1_1);
+            if (!hasItem) {
+              hasItem = closure_1_1.getState().routes[0].key === closure_1_2.key;
+            }
+            const animationFrame = requestAnimationFrame(() => {
+              if (null == ref.current) {
+                let tmp3 = closure_1;
+                if (closure_1) {
+                  tmp3 = hasItem;
                 }
-              }
-            } else {
-              if (!("scrollToTop" in tmp.current)) {
-                if (!("scrollTo" in tmp.current)) {
-                  if (!("scrollToOffset" in tmp.current)) {
-                    if (!("scrollResponderScrollTo" in tmp.current)) {
-                      const current = tmp.current;
-                      if ("getScrollResponder" in tmp.current) {
-                        let current3 = current.getScrollResponder();
-                      } else {
-                        const current2 = tmp.current;
-                        if ("getNode" in current) {
-                          current3 = current2.getNode();
+                if (tmp3) {
+                  tmp3 = null;
+                }
+                if (tmp3) {
+                  tmp3 = !ref.defaultPrevented;
+                }
+                if (tmp3) {
+                  if ("scrollToTop" in null) {
+                    null.scrollToTop();
+                  } else if ("scrollTo" in null) {
+                    null.scrollTo({ y: 0, animated: true });
+                  } else if ("scrollToOffset" in null) {
+                    null.scrollToOffset({ offset: 0, animated: true });
+                  } else if ("scrollResponderScrollTo" in null) {
+                    const result = null.scrollResponderScrollTo({ y: 0, animated: true });
+                  }
+                }
+              } else {
+                if (!("scrollToTop" in tmp.current)) {
+                  if (!("scrollTo" in tmp.current)) {
+                    if (!("scrollToOffset" in tmp.current)) {
+                      if (!("scrollResponderScrollTo" in tmp.current)) {
+                        const current = tmp.current;
+                        if ("getScrollResponder" in tmp.current) {
+                          let current3 = current.getScrollResponder();
                         } else {
-                          current3 = current2;
+                          const current2 = tmp.current;
+                          if ("getNode" in current) {
+                            current3 = current2.getNode();
+                          } else {
+                            current3 = current2;
+                          }
                         }
                       }
                     }
                   }
                 }
+                current3 = tmp.current;
               }
-              current3 = tmp.current;
-            }
-          });
-        }));
+            });
+          }),
+        );
         return () => {
           const item = closure_1.forEach((arg0) => arg0());
         };

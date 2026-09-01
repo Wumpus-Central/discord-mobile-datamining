@@ -25,8 +25,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 let closure_2 = ["children", "style", "imageStyle", "imageRef", "importantForAccessibility"];
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
@@ -65,7 +64,7 @@ let items = [
       if (_viewRef) {
         _viewRef.setNativeProps(arg0);
       }
-    }
+    },
   },
   {
     key: "render",
@@ -74,7 +73,13 @@ let items = [
       ({ style, importantForAccessibility } = props);
       ({ children, imageStyle, imageRef } = props);
       const size = ImageBackground(148)(style);
-      let obj = { accessibilityIgnoresInvertColors: true, importantForAccessibility, style, ref: this._captureRef, children: null };
+      let obj = {
+        accessibilityIgnoresInvertColors: true,
+        importantForAccessibility,
+        style,
+        ref: this._captureRef,
+        children: null,
+      };
       const tmp = callback(props, closure_2);
       const tmp2 = closure_8;
       obj = {};
@@ -82,7 +87,7 @@ let items = [
       const tmp4 = closure_7;
       const merged = Object.assign(tmp);
       obj.importantForAccessibility = importantForAccessibility;
-      const items = [ImageBackground(254).absoluteFill, , ];
+      const items = [ImageBackground(254).absoluteFill, ,];
       let width;
       if (size != null) {
         width = size.width;
@@ -100,8 +105,8 @@ let items = [
       const items1 = [tmp4(ImageBackground(328), obj), children];
       obj[4] = items1;
       return tmp2(tmp3, obj);
-    }
-  }
+    },
+  },
 ];
 
 export default importDefaultResult(ImageBackground, items);

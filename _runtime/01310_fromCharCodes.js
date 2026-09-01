@@ -1,8 +1,6 @@
 // _runtime/01310_fromCharCodes.js
 arg5.utf8read = undefined;
-function fromCharCodes(arg0) {
-
-}
+function fromCharCodes(arg0) {}
 arg5.utf8read = function utf8read(arg0) {
   let sum1;
   if (arg0.length < 1) {
@@ -27,7 +25,7 @@ arg5.utf8read = function utf8read(arg0) {
             if (tmp2 < 224) {
               num = num2 + 1;
               sum1 = sum + 1;
-              items1[num2] = (31 & tmp2) << 6 | 63 & arg0[sum];
+              items1[num2] = ((31 & tmp2) << 6) | (63 & arg0[sum]);
             }
           }
           if (tmp2 > 239) {
@@ -35,7 +33,8 @@ arg5.utf8read = function utf8read(arg0) {
               let sum2 = sum + 1;
               let sum3 = sum2 + 1;
               sum1 = sum3 + 1;
-              let diff = ((7 & tmp2) << 18 | (63 & arg0[sum]) << 12 | (63 & arg0[sum2]) << 6 | 63 & arg0[sum3]) - 65536;
+              let diff =
+                (((7 & tmp2) << 18) | ((63 & arg0[sum]) << 12) | ((63 & arg0[sum2]) << 6) | (63 & arg0[sum3])) - 65536;
               let sum4 = num2 + 1;
               items1[num2] = 55296 + (diff >> 10);
               num = sum4 + 1;
@@ -45,7 +44,7 @@ arg5.utf8read = function utf8read(arg0) {
           num = num2 + 1;
           let sum5 = sum + 1;
           sum1 = sum5 + 1;
-          items1[num2] = (15 & tmp2) << 12 | (63 & arg0[sum]) << 6 | 63 & arg0[sum5];
+          items1[num2] = ((15 & tmp2) << 12) | ((63 & arg0[sum]) << 6) | (63 & arg0[sum5]);
         }
         if (8191 < num) {
           let tmp10 = fromCharCodes;

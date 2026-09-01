@@ -27,12 +27,34 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
-let closure_3 = ["style", "source", "autoPlay", "duration", "textFiltersAndroid", "textFiltersIOS", "resizeMode", "containerStyle"];
+let closure_3 = [
+  "style",
+  "source",
+  "autoPlay",
+  "duration",
+  "textFiltersAndroid",
+  "textFiltersIOS",
+  "resizeMode",
+  "containerStyle",
+];
 ({ View: closure_8, processColor: c9 } = get_ActivityIndicator);
-let obj = { source: "sa", progress: null, speed: true, loop: false, autoPlay: false, enableMergePathsAndroidForKitKatAndAbove: false, enableSafeModeAndroid: true, cacheComposition: false, useNativeLooping: "contain", resizeMode: null, colorFilters: [], textFiltersAndroid: [], textFiltersIOS: true };
+let obj = {
+  source: "sa",
+  progress: null,
+  speed: true,
+  loop: false,
+  autoPlay: false,
+  enableMergePathsAndroidForKitKatAndAbove: false,
+  enableSafeModeAndroid: true,
+  cacheComposition: false,
+  useNativeLooping: "contain",
+  resizeMode: null,
+  colorFilters: [],
+  textFiltersAndroid: [],
+  textFiltersIOS: true,
+};
 obj[12] = [];
 class LottieView {
   constructor(arg0) {
@@ -102,7 +124,7 @@ obj = {
       num2 = -1;
     }
     Commands.play(this.lottieAnimationViewRef, num, num2);
-  }
+  },
 };
 let items = [
   obj,
@@ -111,21 +133,21 @@ let items = [
     value: function reset() {
       const Commands = LottieView(5947).Commands;
       Commands.reset(this.lottieAnimationViewRef);
-    }
+    },
   },
   {
     key: "pause",
     value: function pause() {
       const Commands = LottieView(5947).Commands;
       Commands.pause(this.lottieAnimationViewRef);
-    }
+    },
   },
   {
     key: "resume",
     value: function resume() {
       const Commands = LottieView(5947).Commands;
       Commands.resume(this.lottieAnimationViewRef);
-    }
+    },
   },
   {
     key: "captureRef",
@@ -137,7 +159,7 @@ let items = [
           self.play();
         }
       }
-    }
+    },
   },
   {
     key: "renderLottieView",
@@ -153,7 +175,7 @@ let items = [
         if (parsePossibleSourcesResult.sourceJson) {
           if (source.fr) {
             const _Math = Math;
-            let speed = Math.round(source.op / source.fr * 1000 / duration);
+            let speed = Math.round(((source.op / source.fr) * 1000) / duration);
           }
           const colorFilters = self.props.colorFilters;
           let mapped;
@@ -173,7 +195,11 @@ let items = [
           obj.textFiltersIOS = textFiltersIOS;
           obj.speed = speed;
           obj.style = style;
-          ({ onAnimationFinish: obj2.onAnimationFinish, onAnimationFailure: obj2.onAnimationFailure, onAnimationLoaded: obj2.onAnimationLoaded } = self);
+          ({
+            onAnimationFinish: obj2.onAnimationFinish,
+            onAnimationFailure: obj2.onAnimationFailure,
+            onAnimationLoaded: obj2.onAnimationLoaded,
+          } = self);
           obj.autoPlay = autoPlay;
           obj.resizeMode = resizeMode;
           const merged1 = Object.assign(parsePossibleSourcesResult);
@@ -181,7 +207,7 @@ let items = [
         }
       }
       speed = self.props.speed;
-    }
+    },
   },
   {
     key: "render",
@@ -196,13 +222,17 @@ let items = [
         const obj = { style: null, collapsable: false, children: null };
         obj[0] = containerStyle;
         obj[2] = self.renderLottieView();
-        renderLottieViewResult = <closure_8 style={null} collapsable={false}>{null}</closure_8>;
+        renderLottieViewResult = (
+          <closure_8 style={null} collapsable={false}>
+            {null}
+          </closure_8>
+        );
       } else {
         renderLottieViewResult = self.renderLottieView();
       }
       return renderLottieViewResult;
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(LottieView, items);
 importDefaultResultResult.defaultProps = obj;

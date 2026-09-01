@@ -15,12 +15,34 @@ arg5.FormatNumericToString = function FormatNumericToString(roundingType, timesR
     roundingType = roundingType.roundingType;
     const result = tmp5(13878).GetUnsignedRoundingMode(roundingType.roundingMode, tmp9);
     if ("significantDigits" === roundingType) {
-      let ToRawPrecisionResult = tmp5(13879).ToRawPrecision(ZERO, roundingType.minimumSignificantDigits, roundingType.maximumSignificantDigits, result);
+      let ToRawPrecisionResult = tmp5(13879).ToRawPrecision(
+        ZERO,
+        roundingType.minimumSignificantDigits,
+        roundingType.maximumSignificantDigits,
+        result,
+      );
     } else if ("fractionDigits" === roundingType) {
-      ToRawPrecisionResult = tmp5(13880).ToRawFixed(ZERO, roundingType.minimumFractionDigits, roundingType.maximumFractionDigits, roundingType.roundingIncrement, result);
+      ToRawPrecisionResult = tmp5(13880).ToRawFixed(
+        ZERO,
+        roundingType.minimumFractionDigits,
+        roundingType.maximumFractionDigits,
+        roundingType.roundingIncrement,
+        result,
+      );
     } else {
-      const ToRawPrecisionResult1 = tmp5(13879).ToRawPrecision(ZERO, roundingType.minimumSignificantDigits, roundingType.maximumSignificantDigits, result);
-      let ToRawFixedResult = tmp5(13880).ToRawFixed(ZERO, roundingType.minimumFractionDigits, roundingType.maximumFractionDigits, roundingType.roundingIncrement, result);
+      const ToRawPrecisionResult1 = tmp5(13879).ToRawPrecision(
+        ZERO,
+        roundingType.minimumSignificantDigits,
+        roundingType.maximumSignificantDigits,
+        result,
+      );
+      let ToRawFixedResult = tmp5(13880).ToRawFixed(
+        ZERO,
+        roundingType.minimumFractionDigits,
+        roundingType.maximumFractionDigits,
+        roundingType.roundingIncrement,
+        result,
+      );
       if ("morePrecision" === roundingType.roundingType) {
         if (ToRawPrecisionResult1.roundingMagnitude <= ToRawFixedResult.roundingMagnitude) {
           ToRawFixedResult = ToRawPrecisionResult1;

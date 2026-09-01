@@ -22,14 +22,13 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class RVGridLayoutManagerImpl {
   constructor(arg0, arg1) {
     self = this;
     tmp = RVGridLayoutManagerImpl(this, RVGridLayoutManagerImpl);
-    items = [, ];
+    items = [,];
     items[0] = global;
     items[1] = arg1;
     tmp2 = closure_2;
@@ -72,7 +71,7 @@ let items = [
           self.requiresRepaint = true;
         }
       }
-    }
+    },
   },
   {
     key: "processLayoutInfo",
@@ -92,7 +91,7 @@ let items = [
         self.fullRelayoutRequired = false;
         return 0;
       }
-    }
+    },
   },
   {
     key: "estimateLayout",
@@ -101,13 +100,13 @@ let items = [
       this.layouts[arg0].height = this.getEstimatedHeight(arg0);
       this.layouts[arg0].isWidthMeasured = true;
       this.layouts[arg0].enforcedWidth = true;
-    }
+    },
   },
   {
     key: "handleSpanChange",
     value: function handleSpanChange(arg0) {
       this.fullRelayoutRequired = true;
-    }
+    },
   },
   {
     key: "getLayoutSize",
@@ -121,7 +120,7 @@ let items = [
         obj[1] = self.computeTotalHeightTillRow(self.layouts.length - 1);
         return obj;
       }
-    }
+    },
   },
   {
     key: "recomputeLayouts",
@@ -151,14 +150,14 @@ let items = [
       if (arg1 === self.layouts.length - 1) {
         const result2 = self.processAndReturnTallestItemInRow(arg1);
       }
-    }
+    },
   },
   {
     key: "getWidth",
     value: function getWidth(sum) {
       const result = this.boundedSize / this.maxColumns;
       return result * this.getSpan(sum);
-    }
+    },
   },
   {
     key: "processAndReturnTallestItemInRow",
@@ -265,7 +264,7 @@ let items = [
       } else {
         return tmp4;
       }
-    }
+    },
   },
   {
     key: "computeTotalHeightTillRow",
@@ -292,7 +291,7 @@ let items = [
         }
       }
       return this.layouts[result].y + num;
-    }
+    },
   },
   {
     key: "updateAllWidths",
@@ -307,13 +306,13 @@ let items = [
           length = self.layouts.length;
         } while (num < length);
       }
-    }
+    },
   },
   {
     key: "checkBounds",
     value: function checkBounds(arg0, width) {
       return arg0 + width <= this.boundedSize + 0.9;
-    }
+    },
   },
   {
     key: "locateFirstIndexInRow",
@@ -340,7 +339,7 @@ let items = [
         const _Math = Math;
         return Math.max(tmp, 0);
       }
-    }
+    },
   },
   {
     key: "isInLastRow",
@@ -364,8 +363,8 @@ let items = [
         }
         return tmp3;
       }
-    }
-  }
+    },
+  },
 ];
 
 export const RVGridLayoutManagerImpl = importDefaultResult(RVGridLayoutManagerImpl, items);

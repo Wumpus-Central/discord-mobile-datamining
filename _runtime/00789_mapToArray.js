@@ -10,4 +10,4 @@ export default function mapToArray(size) {
     closure_1[sum] = items;
   });
   return ArrayResult;
-};
+}

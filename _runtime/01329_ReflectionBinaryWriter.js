@@ -25,7 +25,7 @@ let items = [
         }
         self.fields = combined.sort((no, no2) => no.no - no2.no);
       }
-    }
+    },
   },
   {
     key: "write",
@@ -191,7 +191,7 @@ let items = [
         }
         onWrite(self.info.typeName, arg0, tag);
       }
-    }
+    },
   },
   {
     key: "mapEntry",
@@ -233,17 +233,21 @@ let items = [
         }
       }
       parsed = Number.parseInt(joined);
-    }
+    },
   },
   {
     key: "message",
     value: function message(tag, arg1, internalBinaryWrite) {
       if (undefined !== arg4) {
-        internalBinaryWrite.internalBinaryWrite(arg4, tag.tag(arg3, ReflectionBinaryWriter(1311).WireType.LengthDelimited).fork(), arg1);
+        internalBinaryWrite.internalBinaryWrite(
+          arg4,
+          tag.tag(arg3, ReflectionBinaryWriter(1311).WireType.LengthDelimited).fork(),
+          arg1,
+        );
         const joined = tag.join();
         const tagResult = tag.tag(arg3, ReflectionBinaryWriter(1311).WireType.LengthDelimited);
       }
-    }
+    },
   },
   {
     key: "scalar",
@@ -253,7 +257,7 @@ let items = [
         tag.tag(arg2, tmp2);
         tag[tmp3](byteLength);
       }
-    }
+    },
   },
   {
     key: "packed",
@@ -262,7 +266,10 @@ let items = [
       if (arg3.length) {
         const obj = ReflectionBinaryWriter(1316);
         const self = this;
-        obj.assert(arg1 !== ReflectionBinaryWriter(1320).ScalarType.BYTES && arg1 !== ReflectionBinaryWriter(1320).ScalarType.STRING);
+        obj.assert(
+          arg1 !== ReflectionBinaryWriter(1320).ScalarType.BYTES &&
+            arg1 !== ReflectionBinaryWriter(1320).ScalarType.STRING,
+        );
         tag.tag(no, ReflectionBinaryWriter(1311).WireType.LengthDelimited);
         tag.fork();
         let num2 = 0;
@@ -274,9 +281,11 @@ let items = [
           } while (num2 < length);
         }
         const joined = tag.join();
-        const tmp4 = arg1 !== ReflectionBinaryWriter(1320).ScalarType.BYTES && arg1 !== ReflectionBinaryWriter(1320).ScalarType.STRING;
+        const tmp4 =
+          arg1 !== ReflectionBinaryWriter(1320).ScalarType.BYTES &&
+          arg1 !== ReflectionBinaryWriter(1320).ScalarType.STRING;
       }
-    }
+    },
   },
   {
     key: "scalarInfo",
@@ -391,14 +400,14 @@ let items = [
           }
         }
       }
-      const items = [Bit64, str, ];
+      const items = [Bit64, str];
       if (!tmp3) {
         tmp3 = tmp5;
       }
       items[2] = tmp3;
       return items;
-    }
-  }
+    },
+  },
 ];
 
 export const ReflectionBinaryWriter = _createClass(ReflectionBinaryWriter, items);

@@ -22,6 +22,6 @@ arg5.default = () => (arg0) => {
         debug(...items);
         log.debug(items[0]);
       };
-    }
+    },
   };
 };

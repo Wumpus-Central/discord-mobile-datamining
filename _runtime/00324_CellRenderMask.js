@@ -27,7 +27,7 @@ let items = [
     key: "enumerateRegions",
     value: function enumerateRegions() {
       return this._regions;
-    }
+    },
   },
   {
     key: "addCells",
@@ -88,13 +88,13 @@ let items = [
         items1.push(obj);
         const tmp26 = callback(self._findRegion(VirtualizedList.last), 2);
       }
-    }
+    },
   },
   {
     key: "numCells",
     value: function numCells() {
       return this._numCells;
-    }
+    },
   },
   {
     key: "equals",
@@ -104,10 +104,15 @@ let items = [
       let everyResult = this._numCells === _numCells._numCells && self._regions.length === _numCells._regions.length;
       if (everyResult) {
         const _regions = self._regions;
-        everyResult = _regions.every((first) => first.first === _regions._regions[arg1].first && first.last === _regions._regions[arg1].last && first.isSpacer === _regions._regions[arg1].isSpacer);
+        everyResult = _regions.every(
+          (first) =>
+            first.first === _regions._regions[arg1].first &&
+            first.last === _regions._regions[arg1].last &&
+            first.isSpacer === _regions._regions[arg1].isSpacer,
+        );
       }
       return everyResult;
-    }
+    },
   },
   {
     key: "_findRegion",
@@ -146,8 +151,8 @@ let items = [
         return items;
       }
       CellRenderMask(38)(false, "A region was not found containing cellIdx " + first);
-    }
-  }
+    },
+  },
 ];
 
 export const CellRenderMask = _createClassDefault(CellRenderMask, items);

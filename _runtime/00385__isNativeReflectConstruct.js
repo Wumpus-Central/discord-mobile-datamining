@@ -27,8 +27,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 _readOnlyErrorDefault;
 class TimingAnimation {
@@ -88,8 +87,15 @@ let items = [
         let arr = items.push(self._easing(num / rounded));
       }
       items.push(self._easing(1));
-      return { type: "frames", frames: items, toValue: self._toValue, iterations: self.__iterations, platformConfig: self._platformConfig, debugID: self.__getDebugID() };
-    }
+      return {
+        type: "frames",
+        frames: items,
+        toValue: self._toValue,
+        iterations: self.__iterations,
+        platformConfig: self._platformConfig,
+        debugID: self.__getDebugID(),
+      };
+    },
   },
   {
     key: "start",
@@ -134,7 +140,7 @@ let items = [
           }
         }
       }
-    }
+    },
   },
   {
     key: "onUpdate",
@@ -151,14 +157,17 @@ let items = [
         self.__notifyAnimationEnd({ finished: true });
       } else {
         ({ _onUpdate: _onUpdate2, _fromValue: _fromValue2 } = self);
-        _onUpdate2(_fromValue2 + self._easing((timestamp - self._startTime) / self._duration) * (self._toValue - self._fromValue));
+        _onUpdate2(
+          _fromValue2 +
+            self._easing((timestamp - self._startTime) / self._duration) * (self._toValue - self._fromValue),
+        );
         if (self.__active) {
           const _requestAnimationFrame = requestAnimationFrame;
           const onUpdate = self.onUpdate;
           self._animationFrame = requestAnimationFrame(onUpdate.bind(self));
         }
       }
-    }
+    },
   },
   {
     key: "stop",
@@ -175,8 +184,8 @@ let items = [
         TimingAnimation.cancelAnimationFrame(self._animationFrame);
       }
       self.__notifyAnimationEnd({ finished: false });
-    }
-  }
+    },
+  },
 ];
 
 export default importDefaultResult1(TimingAnimation, items);

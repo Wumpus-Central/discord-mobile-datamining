@@ -24,8 +24,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const unknown = "unknown";
@@ -54,7 +53,15 @@ class Profiler {
       return tmp3Result1;
     }
     obj2 = require("feedbackAsyncIntegration");
-    obj = { name: "<" + name + ">", onlyIfParent: true, op: require("metro/01139__.js").REACT_MOUNT_OP, attributes: { [closure_1_0(closure_1_1[9]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.ui.react.profiler", "ui.component_name": name } };
+    obj = {
+      name: "<" + name + ">",
+      onlyIfParent: true,
+      op: require("metro/01139__.js").REACT_MOUNT_OP,
+      attributes: {
+        [closure_1_0(closure_1_1[9]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.ui.react.profiler",
+        "ui.component_name": name,
+      },
+    };
     tmp3Result._mountSpan = obj2.startInactiveSpan(obj);
     tmp3Result1 = tmp3Result;
     return;
@@ -69,7 +76,7 @@ let items = [
         const _mountSpan = this._mountSpan;
         _mountSpan.end();
       }
-    }
+    },
   },
   {
     key: "shouldComponentUpdate",
@@ -94,8 +101,18 @@ let items = [
               let obj = Profiler(updateProps[9]);
               self._updateSpan = Profiler(updateProps[9]).withActiveSpan(self._mountSpan, () => {
                 let obj = callback(updateProps[7]);
-                obj = { name: "<" + self.props.name + ">", onlyIfParent: true, op: callback(updateProps[8]).REACT_UPDATE_OP, startTime: callback, attributes: obj };
-                obj = { [closure_1_0(closure_1_1[9]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.ui.react.profiler", "ui.component_name": self.props.name, "ui.react.changed_props": found };
+                obj = {
+                  name: "<" + self.props.name + ">",
+                  onlyIfParent: true,
+                  op: callback(updateProps[8]).REACT_UPDATE_OP,
+                  startTime: callback,
+                  attributes: obj,
+                };
+                obj = {
+                  [closure_1_0(closure_1_1[9]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.ui.react.profiler",
+                  "ui.component_name": self.props.name,
+                  "ui.react.changed_props": found,
+                };
                 return obj.startInactiveSpan(obj);
               });
               const obj2 = Profiler(updateProps[9]);
@@ -104,7 +121,7 @@ let items = [
         }
       }
       return true;
-    }
+    },
   },
   {
     key: "componentDidUpdate",
@@ -115,7 +132,7 @@ let items = [
         _updateSpan.end();
         self._updateSpan = undefined;
       }
-    }
+    },
   },
   {
     key: "componentWillUnmount",
@@ -130,8 +147,17 @@ let items = [
           tmpResult = tmp(817);
           tmpResult.withActiveSpan(self._mountSpan, () => {
             let obj = callback(closure_1_1[7]);
-            obj = { onlyIfParent: true, name: "<" + closure_1 + ">", op: callback(closure_1_1[8]).REACT_RENDER_OP, startTime: timestamp, attributes: obj };
-            obj = { [closure_1_0(closure_1_1[9]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.ui.react.profiler", "ui.component_name": closure_1 };
+            obj = {
+              onlyIfParent: true,
+              name: "<" + closure_1 + ">",
+              op: callback(closure_1_1[8]).REACT_RENDER_OP,
+              startTime: timestamp,
+              attributes: obj,
+            };
+            obj = {
+              [closure_1_0(closure_1_1[9]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.ui.react.profiler",
+              "ui.component_name": closure_1,
+            };
             const startInactiveSpanResult = obj.startInactiveSpan(obj);
             if (startInactiveSpanResult) {
               startInactiveSpanResult.end(callback);
@@ -139,18 +165,20 @@ let items = [
           });
         }
       }
-    }
+    },
   },
   {
     key: "render",
     value: function render() {
       return this.props.children;
-    }
-  }
+    },
+  },
 ];
 const _moduleResult = _createClass(Profiler, items);
 let c9 = _moduleResult;
-let merged = Object.assign(_moduleResult, { defaultProps: { disabled: false, includeRender: true, includeUpdates: true } });
+let merged = Object.assign(_moduleResult, {
+  defaultProps: { disabled: false, includeRender: true, includeUpdates: true },
+});
 
 export const Profiler = _moduleResult;
 export const UNKNOWN_COMPONENT = "unknown";
@@ -161,24 +189,27 @@ export const useProfiler = function useProfiler(arg0) {
     obj = { disabled: false, hasRenderSpan: true };
   }
   let callback;
-  callback = callback(noop.useState(() => {
-    let disabled;
-    if (obj != null) {
-      disabled = obj.disabled;
-    }
-    if (!disabled) {
-      obj = callback(obj[7]);
-      obj = { name: null, onlyIfParent: true, op: null, attributes: null };
-      const _HermesInternal = HermesInternal;
-      obj[0] = "<" + callback + ">";
-      obj[2] = callback(obj[8]).REACT_MOUNT_OP;
-      obj = {};
-      obj[callback(obj[9]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ui.react.profiler";
-      obj["ui.component_name"] = callback;
-      obj[3] = obj;
-      return obj.startInactiveSpan(obj);
-    }
-  }), 1)[0];
+  callback = callback(
+    noop.useState(() => {
+      let disabled;
+      if (obj != null) {
+        disabled = obj.disabled;
+      }
+      if (!disabled) {
+        obj = callback(obj[7]);
+        obj = { name: null, onlyIfParent: true, op: null, attributes: null };
+        const _HermesInternal = HermesInternal;
+        obj[0] = "<" + callback + ">";
+        obj[2] = callback(obj[8]).REACT_MOUNT_OP;
+        obj = {};
+        obj[callback(obj[9]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ui.react.profiler";
+        obj["ui.component_name"] = callback;
+        obj[3] = obj;
+        return obj.startInactiveSpan(obj);
+      }
+    }),
+    1,
+  )[0];
   const effect = noop.useEffect(() => {
     if (closure_2) {
       closure_2.end();

@@ -3,7 +3,6 @@ import forEachEnvelopeItem from "12379_forEachEnvelopeItem.js";
 import __SENTRY_DEBUG__ from "metro/12334___SENTRY_DEBUG__.js";
 import consoleSandbox from "12335_consoleSandbox.js";
 
-
 export const createEventEnvelope = function createEventEnvelope(type, arg1, sdk) {
   const sdkMetadataForEnvelopeHeader = forEachEnvelopeItem.getSdkMetadataForEnvelopeHeader(sdk);
   let str = "event";

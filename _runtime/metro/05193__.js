@@ -14,9 +14,8 @@ arg5.default = {
           obj[0] = result.onErrorStopParsing;
           const dOMParser1 = new result.DOMParser(obj);
           return dOMParser1;
-        } catch (err) {
-        }
+        } catch (err) {}
       }
     }
-  }
+  },
 };

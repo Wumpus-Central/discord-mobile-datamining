@@ -102,7 +102,10 @@ export const SafeAreaProvider = function SafeAreaProvider(initialMetrics) {
     tmp15Result = tmp15(tmp4.Provider, obj1);
   }
   obj.children = tmp15Result;
-  return jsx(require("01633_NativeSafeAreaProvider.js").NativeSafeAreaProvider, { style: items, onInsetsChange: callback });
+  return jsx(require("01633_NativeSafeAreaProvider.js").NativeSafeAreaProvider, {
+    style: items,
+    onInsetsChange: callback,
+  });
 };
 export const SafeAreaListener = function SafeAreaListener(onChange) {
   onChange = onChange.onChange;

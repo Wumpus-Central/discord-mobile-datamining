@@ -24,26 +24,26 @@ const items = [
     value: function addListener(arg0, arg1, arg2) {
       const _emitter = this._emitter;
       return _emitter.addListener(arg0, arg1);
-    }
+    },
   },
   {
     key: "removeAllListeners",
     value: function removeAllListeners(arg0) {
       const _emitter = this._emitter;
       _emitter.removeAllListeners(arg0);
-    }
+    },
   },
   {
     key: "dismiss",
     value: function dismiss() {
       KeyboardImpl(303)();
-    }
+    },
   },
   {
     key: "isVisible",
     value: function isVisible() {
       return this._currentlyShowing;
-    }
+    },
   },
   {
     key: "metrics",
@@ -54,7 +54,7 @@ const items = [
         endCoordinates = _currentlyShowing.endCoordinates;
       }
       return endCoordinates;
-    }
+    },
   },
   {
     key: "scheduleLayoutAnimation",
@@ -82,8 +82,8 @@ const items = [
         obj.configureNext(obj);
         tmp2 = KeyboardImpl;
       }
-    }
-  }
+    },
+  },
 ];
 
 export default new _createClassDefault(KeyboardImpl, items)();

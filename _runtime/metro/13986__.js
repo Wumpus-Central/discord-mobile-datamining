@@ -1,7 +1,6 @@
 // _runtime/metro/13986__.js
 import all from "../13978_all.js";
 
-
 export default (arg0, arg1) => {
   if ("string" === arg1) {
     const toString = arg0.toString;

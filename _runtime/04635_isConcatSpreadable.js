@@ -22,4 +22,4 @@ export default function isFlattenable(arg0) {
     tmp4 = isConcatSpreadable;
   }
   return tmp3;
-};
+}

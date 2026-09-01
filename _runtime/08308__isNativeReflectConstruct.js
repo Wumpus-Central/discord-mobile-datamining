@@ -25,8 +25,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 noopDefault;
 class Filter {
@@ -56,24 +55,39 @@ const items = [
     value: function render() {
       const self = this;
       const props = this.props;
-      let obj = { name: props.id, x: props.x, y: props.y, width: props.width, height: props.height, filterUnits: props.filterUnits, primitiveUnits: props.primitiveUnits };
+      let obj = {
+        name: props.id,
+        x: props.x,
+        y: props.y,
+        width: props.width,
+        height: props.height,
+        filterUnits: props.filterUnits,
+        primitiveUnits: props.primitiveUnits,
+      };
       obj = {
         ref(arg0) {
           return self.refMethod(arg0);
-        }
+        },
       };
       const merged = Object.assign(obj);
       obj.children = this.props.children;
       return jsx(self(8309), {
         ref(arg0) {
           return self.refMethod(arg0);
-        }
+        },
       });
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(Filter, items);
 importDefaultResultResult.displayName = "Filter";
-importDefaultResultResult.defaultProps = { x: "-10%", y: "-10%", width: "120%", height: "120%", filterUnits: "objectBoundingBox", primitiveUnits: "userSpaceOnUse" };
+importDefaultResultResult.defaultProps = {
+  x: "-10%",
+  y: "-10%",
+  width: "120%",
+  height: "120%",
+  filterUnits: "objectBoundingBox",
+  primitiveUnits: "userSpaceOnUse",
+};
 
 export default importDefaultResultResult;

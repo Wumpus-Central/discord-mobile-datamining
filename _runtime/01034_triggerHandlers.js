@@ -42,10 +42,13 @@ arg5.addClsInstrumentationHandler = function addClsInstrumentationHandler(arg0, 
   if (!closure_7.cls) {
     let obj = cls(1036);
     tmp5.cls = true;
-    const onCLSResult = obj.onCLS((metric) => {
-      callback("cls", { metric });
-      closure_2 = metric;
-    }, { reportAllChanges: true });
+    const onCLSResult = obj.onCLS(
+      (metric) => {
+        callback("cls", { metric });
+        closure_2 = metric;
+      },
+      { reportAllChanges: true },
+    );
   }
   if (closure_2) {
     obj = { metric: null };
@@ -116,10 +119,13 @@ arg5.addLcpInstrumentationHandler = function addLcpInstrumentationHandler(arg0, 
   if (!closure_7.lcp) {
     let obj = lcp(1051);
     tmp5.lcp = true;
-    const onLCPResult = obj.onLCP((metric) => {
-      callback("lcp", { metric });
-      closure_3 = metric;
-    }, { reportAllChanges: true });
+    const onLCPResult = obj.onLCP(
+      (metric) => {
+        callback("lcp", { metric });
+        closure_3 = metric;
+      },
+      { reportAllChanges: true },
+    );
   }
   if (closure_3) {
     obj = { metric: null };
@@ -155,9 +161,13 @@ arg5.addPerformanceInstrumentationHandler = function addPerformanceInstrumentati
     if ("event" === event) {
       obj.durationThreshold = 0;
     }
-    require("01046_observe.js").observe(event, (entries) => {
-      closure_1_8(closure_0, { entries });
-    }, obj);
+    require("01046_observe.js").observe(
+      event,
+      (entries) => {
+        closure_1_8(closure_0, { entries });
+      },
+      obj,
+    );
     tmp4[event] = true;
     const obj2 = observe;
   }

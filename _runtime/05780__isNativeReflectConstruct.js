@@ -21,8 +21,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class NativeGesture {
   constructor() {
@@ -51,15 +50,15 @@ const items = [
     value: function shouldActivateOnStart(shouldActivateOnStart) {
       this.config.shouldActivateOnStart = shouldActivateOnStart;
       return this;
-    }
+    },
   },
   {
     key: "disallowInterruption",
     value: function disallowInterruption(disallowInterruption) {
       this.config.disallowInterruption = disallowInterruption;
       return this;
-    }
-  }
+    },
+  },
 ];
 
 export const NativeGesture = importDefaultResult(NativeGesture, items);

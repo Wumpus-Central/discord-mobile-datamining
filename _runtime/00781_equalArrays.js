@@ -55,4 +55,4 @@ export default function equalArrays(arg0, arg1, arg2, arg3, arg4, get) {
   get.delete(arg0);
   get.delete(arg1);
   return flag2;
-};
+}

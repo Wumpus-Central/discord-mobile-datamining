@@ -63,15 +63,14 @@ function captureHandlerError(name, arg1, tool_name) {
       captureError.captureError(name, "prompt_execution", obj);
       const obj6 = captureError;
     }
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.wrapAllMCPHandlers = function wrapAllMCPHandlers(arg0) {
   let prompt = "tool";
   prompt(822).fill(arg0, "tool", (arg0) => {
     closure_0 = arg0;
-    return function(arg0) {
+    return function (arg0) {
       let self = this;
       const substr = [...arguments].slice();
       if (typeof substr[substr.length - 1] !== "function") {
@@ -84,8 +83,8 @@ arg5.wrapAllMCPHandlers = function wrapAllMCPHandlers(arg0) {
         closure_1 = closure_0;
         closure_2 = arg0;
         const call2 = closure_0.call;
-        const items1 = [self, arg0, ];
-        items1[HermesBuiltin.arraySpread(substr.slice(0, -1), 2)] = function() {
+        const items1 = [self, arg0];
+        items1[HermesBuiltin.arraySpread(substr.slice(0, -1), 2)] = function () {
           const self = this;
           const items = [...arguments];
           try {
@@ -112,7 +111,7 @@ arg5.wrapAllMCPHandlers = function wrapAllMCPHandlers(arg0) {
   const obj = prompt(822);
   prompt(822).fill(arg0, "resource", (arg0) => {
     closure_0 = arg0;
-    return function(arg0) {
+    return function (arg0) {
       let self = this;
       const substr = [...arguments].slice();
       if (typeof substr[substr.length - 1] !== "function") {
@@ -125,8 +124,8 @@ arg5.wrapAllMCPHandlers = function wrapAllMCPHandlers(arg0) {
         closure_1 = closure_0;
         closure_2 = arg0;
         const call2 = closure_0.call;
-        const items1 = [self, arg0, ];
-        items1[HermesBuiltin.arraySpread(substr.slice(0, -1), 2)] = function() {
+        const items1 = [self, arg0];
+        items1[HermesBuiltin.arraySpread(substr.slice(0, -1), 2)] = function () {
           const self = this;
           const items = [...arguments];
           try {
@@ -153,7 +152,7 @@ arg5.wrapAllMCPHandlers = function wrapAllMCPHandlers(arg0) {
   const obj2 = prompt(822);
   prompt(822).fill(arg0, "prompt", (arg0) => {
     closure_0 = arg0;
-    return function(arg0) {
+    return function (arg0) {
       let self = this;
       const substr = [...arguments].slice();
       if (typeof substr[substr.length - 1] !== "function") {
@@ -166,8 +165,8 @@ arg5.wrapAllMCPHandlers = function wrapAllMCPHandlers(arg0) {
         closure_1 = closure_0;
         closure_2 = arg0;
         const call2 = closure_0.call;
-        const items1 = [self, arg0, ];
-        items1[HermesBuiltin.arraySpread(substr.slice(0, -1), 2)] = function() {
+        const items1 = [self, arg0];
+        items1[HermesBuiltin.arraySpread(substr.slice(0, -1), 2)] = function () {
           const self = this;
           const items = [...arguments];
           try {
@@ -195,7 +194,7 @@ arg5.wrapPromptHandlers = function wrapPromptHandlers(arg0) {
   const prompt = "prompt";
   prompt(822).fill(arg0, "prompt", (arg0) => {
     closure_0 = arg0;
-    return function(arg0) {
+    return function (arg0) {
       let self = this;
       const substr = [...arguments].slice();
       if (typeof substr[substr.length - 1] !== "function") {
@@ -208,8 +207,8 @@ arg5.wrapPromptHandlers = function wrapPromptHandlers(arg0) {
         closure_1 = closure_0;
         closure_2 = arg0;
         const call2 = closure_0.call;
-        const items1 = [self, arg0, ];
-        items1[HermesBuiltin.arraySpread(substr.slice(0, -1), 2)] = function() {
+        const items1 = [self, arg0];
+        items1[HermesBuiltin.arraySpread(substr.slice(0, -1), 2)] = function () {
           const self = this;
           const items = [...arguments];
           try {
@@ -237,7 +236,7 @@ arg5.wrapResourceHandlers = function wrapResourceHandlers(arg0) {
   const resource = "resource";
   resource(822).fill(arg0, "resource", (arg0) => {
     closure_0 = arg0;
-    return function(arg0) {
+    return function (arg0) {
       let self = this;
       const substr = [...arguments].slice();
       if (typeof substr[substr.length - 1] !== "function") {
@@ -250,8 +249,8 @@ arg5.wrapResourceHandlers = function wrapResourceHandlers(arg0) {
         closure_1 = closure_0;
         closure_2 = arg0;
         const call2 = closure_0.call;
-        const items1 = [self, arg0, ];
-        items1[HermesBuiltin.arraySpread(substr.slice(0, -1), 2)] = function() {
+        const items1 = [self, arg0];
+        items1[HermesBuiltin.arraySpread(substr.slice(0, -1), 2)] = function () {
           const self = this;
           const items = [...arguments];
           try {
@@ -279,7 +278,7 @@ arg5.wrapToolHandlers = function wrapToolHandlers(arg0) {
   const tool = "tool";
   tool(822).fill(arg0, "tool", (arg0) => {
     closure_0 = arg0;
-    return function(arg0) {
+    return function (arg0) {
       let self = this;
       const substr = [...arguments].slice();
       if (typeof substr[substr.length - 1] !== "function") {
@@ -292,8 +291,8 @@ arg5.wrapToolHandlers = function wrapToolHandlers(arg0) {
         closure_1 = closure_0;
         closure_2 = arg0;
         const call2 = closure_0.call;
-        const items1 = [self, arg0, ];
-        items1[HermesBuiltin.arraySpread(substr.slice(0, -1), 2)] = function() {
+        const items1 = [self, arg0];
+        items1[HermesBuiltin.arraySpread(substr.slice(0, -1), 2)] = function () {
           const self = this;
           const items = [...arguments];
           try {

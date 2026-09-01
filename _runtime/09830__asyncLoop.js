@@ -12,7 +12,7 @@ function _asyncLoop() {
     closure_2 = arg2;
     c5 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -98,7 +98,7 @@ let uint32Array = new Uint32Array([287454020]);
 let uint8Array = new Uint8Array(uint32Array.buffer);
 let closure_5 = Array.from({ length: 256 }, (arg0, arg1) => arg1.toString(16).padStart(2, "0"));
 let closure_6 = { _0: 48, _9: 57, _A: 65, _F: 70, _a: 97, _f: 102 };
-Hash = asyncGeneratorStep(function*() {
+Hash = asyncGeneratorStep(function* () {
   if (c0 === 2) {
     c0 = 3;
     HermesBuiltin.throwTypeError();
@@ -144,8 +144,8 @@ let items = [
     key: "clone",
     value: function clone() {
       return this._cloneInto();
-    }
-  }
+    },
+  },
 ];
 const toString = {}.toString;
 
@@ -255,7 +255,9 @@ export const hexToBytes = function hexToBytes(str) {
           }
         }
         const _Error = Error;
-        const error2 = new Error("hex string expected, got non-hex character \"" + (str[num] + str[sum]) + "\" at index " + num);
+        const error2 = new Error(
+          'hex string expected, got non-hex character "' + (str[num] + str[sum]) + '" at index ' + num,
+        );
         throw error2;
       }
       return uint8Array;
@@ -453,11 +455,12 @@ export const createView = (buffer) => {
   const dataView = new DataView(buffer.buffer, buffer.byteOffset, buffer.byteLength);
   return dataView;
 };
-export const rotr = (arg0, arg1) => arg0 << 32 - arg1 | arg0 >>> arg1;
-export const rotl = (arg0, arg1) => arg0 << arg1 | arg0 >>> 32 - arg1 >>> 0;
+export const rotr = (arg0, arg1) => (arg0 << (32 - arg1)) | (arg0 >>> arg1);
+export const rotl = (arg0, arg1) => (arg0 << arg1) | ((arg0 >>> (32 - arg1)) >>> 0);
 export const isLE = 68 === uint8Array[0];
-export const byteSwap = (arg0) => arg0 << 24 & 4278190080 | arg0 << 8 & 16711680 | arg0 >>> 8 & 65280 | arg0 >>> 24 & 255;
-export const byteSwapIfBE = exports.isLE ? ((arg0) => arg0) : ((arg0) => exports.byteSwap(arg0));
+export const byteSwap = (arg0) =>
+  ((arg0 << 24) & 4278190080) | ((arg0 << 8) & 16711680) | ((arg0 >>> 8) & 65280) | ((arg0 >>> 24) & 255);
+export const byteSwapIfBE = exports.isLE ? (arg0) => arg0 : (arg0) => exports.byteSwap(arg0);
 export const nextTick = function nextTick(cb) {
   const self = this;
   const apply = Hash.apply;

@@ -116,18 +116,10 @@ const memoResult = noopDefault.memo((date) => {
   }
   return tmp11;
 });
-function getStyle(arg0) {
-
-}
-function getTimezoneOffsetInMinutes(arg0) {
-
-}
-function toIsoWithTimeZoneOffset(arg0) {
-
-}
-function fromIsoWithTimeZoneOffset(arg0) {
-
-}
+function getStyle(arg0) {}
+function getTimezoneOffsetInMinutes(arg0) {}
+function toIsoWithTimeZoneOffset(arg0) {}
+function fromIsoWithTimeZoneOffset(arg0) {}
 
 export default memoResult;
 export const DatePickerAndroid = memoResult;

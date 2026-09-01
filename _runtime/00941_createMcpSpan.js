@@ -37,7 +37,9 @@ function createMcpSpan(arg0) {
   if (options != null) {
     recordInputs = options.recordInputs;
   }
-  const merged1 = Object.assign(getNotificationAttributes.buildTypeSpecificAttributes(type, message, params, recordInputs));
+  const merged1 = Object.assign(
+    getNotificationAttributes.buildTypeSpecificAttributes(type, message, params, recordInputs),
+  );
   if ("request" === type) {
     let MCP_NOTIFICATION_SERVER_TO_CLIENT_OP_VALUE = tmp6(940).MCP_SERVER_OP_VALUE;
     let MCP_NOTIFICATION_ORIGIN_VALUE = tmp6(940).MCP_FUNCTION_ORIGIN_VALUE;
@@ -108,8 +110,26 @@ arg5.buildMcpServerSpanConfig = function buildMcpServerSpanConfig(closure_1, sel
   return obj2;
 };
 arg5.createMcpNotificationSpan = function createMcpNotificationSpan(message, self, extra, closure_0, callback) {
-  return createMcpSpan({ type: "notification-incoming", message, transport: self, extra, callback, options: closure_0 });
+  return createMcpSpan({
+    type: "notification-incoming",
+    message,
+    transport: self,
+    extra,
+    callback,
+    options: closure_0,
+  });
 };
-arg5.createMcpOutgoingNotificationSpan = function createMcpOutgoingNotificationSpan(closure_2, closure_4, self, callback) {
-  return createMcpSpan({ type: "notification-outgoing", message: closure_2, transport: closure_4, options: self, callback });
+arg5.createMcpOutgoingNotificationSpan = function createMcpOutgoingNotificationSpan(
+  closure_2,
+  closure_4,
+  self,
+  callback,
+) {
+  return createMcpSpan({
+    type: "notification-outgoing",
+    message: closure_2,
+    transport: closure_4,
+    options: self,
+    callback,
+  });
 };

@@ -200,8 +200,7 @@ export const dedupeIntegration = setupIntegration.defineIntegration(() => ({
           closure_0 = type;
           return type;
         }
-      } catch (err) {
-      }
+      } catch (err) {}
     }
-  }
+  },
 }));

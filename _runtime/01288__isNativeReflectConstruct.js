@@ -22,8 +22,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 function formatToPlainString(k2UNz_, maxSettingsForPreset) {
   let first = k2UNz_;
@@ -65,13 +64,13 @@ let items = [
         self.result = self.result + tmp2;
         continue;
       }
-    }
+    },
   },
   {
     key: "pushLiteralText",
     value: function pushLiteralText(arg0) {
       this.result = this.result + arg0;
-    }
+    },
   },
   {
     key: "pushObject",
@@ -84,15 +83,15 @@ let items = [
         const self = this;
         this.result = this.result + arg0.toString();
       }
-    }
+    },
   },
   {
     key: "finish",
     value: function finish() {
       const items = [this.result];
       return items;
-    }
-  }
+    },
+  },
 ];
 const _moduleResult = _createClass(StringBuilder, items);
 let c4 = _moduleResult;

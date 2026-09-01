@@ -27,8 +27,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 let closure_8 = 0;
 class Modal {
@@ -60,9 +59,7 @@ importDefaultResult1(Modal, importAllResult.Component);
 let items = [
   {
     key: "componentDidMount",
-    value: function componentDidMount() {
-
-    }
+    value: function componentDidMount() {},
   },
   {
     key: "componentWillUnmount",
@@ -71,7 +68,7 @@ let items = [
         const _eventSubscription = this._eventSubscription;
         _eventSubscription.remove();
       }
-    }
+    },
   },
   {
     key: "componentDidUpdate",
@@ -84,13 +81,13 @@ let items = [
       if (tmp) {
         self.setState({ isRendered: true });
       }
-    }
+    },
   },
   {
     key: "_shouldShowModal",
     value: function _shouldShowModal() {
       return true === this.props.visible;
-    }
+    },
   },
   {
     key: "render",
@@ -111,16 +108,34 @@ let items = [
           }
           presentationStyle = str2;
         }
-        obj = { animationType: null, presentationStyle: null, transparent: null, hardwareAccelerated: null, onRequestClose: null, onShow: null, onDismiss: null, ref: null, visible: null, statusBarTranslucent: null, navigationBarTranslucent: null, identifier: null, style: null, onStartShouldSetResponder: null, supportedOrientations: null, onOrientationChange: null, allowSwipeDismissal: null, testID: null, children: null };
+        obj = {
+          animationType: null,
+          presentationStyle: null,
+          transparent: null,
+          hardwareAccelerated: null,
+          onRequestClose: null,
+          onShow: null,
+          onDismiss: null,
+          ref: null,
+          visible: null,
+          statusBarTranslucent: null,
+          navigationBarTranslucent: null,
+          identifier: null,
+          style: null,
+          onStartShouldSetResponder: null,
+          supportedOrientations: null,
+          onOrientationChange: null,
+          allowSwipeDismissal: null,
+          testID: null,
+          children: null,
+        };
         obj[0] = self.props.animationType || "none";
         obj[1] = presentationStyle;
         obj[2] = self.props.transparent;
         obj[3] = self.props.hardwareAccelerated;
         obj[4] = self.props.onRequestClose;
         obj[5] = self.props.onShow;
-        obj[6] = function onDismiss() {
-
-        };
+        obj[6] = function onDismiss() {};
         obj[7] = self.props.modalRef;
         obj[8] = self.props.visible;
         obj[9] = self.props.statusBarTranslucent;
@@ -145,14 +160,14 @@ let items = [
       } else {
         return null;
       }
-    }
+    },
   },
   {
     key: "_shouldSetResponder",
     value: function _shouldSetResponder() {
       return true;
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(Modal, items);
 let c9 = importDefaultResultResult;
@@ -160,9 +175,7 @@ importDefaultResultResult.defaultProps = { visible: true, hardwareAccelerated: f
 importDefaultResultResult.contextType = require("RootTagContext").RootTagContext;
 let obj = {
   key: "componentDidMount",
-  value: function componentDidMount() {
-
-  }
+  value: function componentDidMount() {},
 };
 let str = "left";
 if (_default.getConstants().isRTL) {
@@ -176,7 +189,10 @@ class Wrapper {
     return jsx(closure_9, obj);
   }
 }
-let closure_10 = require("get hairlineWidth").default.create({ modal: { position: "absolute" }, container: { [str]: 0, top: 0, flex: 1, backgroundColor: "white" } });
+let closure_10 = require("get hairlineWidth").default.create({
+  modal: { position: "absolute" },
+  container: { [str]: 0, top: 0, flex: 1, backgroundColor: "white" },
+});
 Wrapper.displayName = "Modal";
 Wrapper.Context = get_VirtualizedListDefault.VirtualizedListContextResetter;
 

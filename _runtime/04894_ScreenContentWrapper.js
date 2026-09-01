@@ -8,4 +8,4 @@ noopDefault;
 export default function ScreenContentWrapper(arg0) {
   const merged = Object.assign(arg0);
   return jsx(__INTERNAL_VIEW_CONFIGDefault, { collapsable: false });
-};
+}

@@ -99,11 +99,11 @@ function checkRoundingDigits(d, precision, rounding, arg3) {
   if (null == arg3) {
     if (sum < 3) {
       if (0 === sum) {
-        let tmp21 = tmp9 / 100 | 0;
+        let tmp21 = (tmp9 / 100) | 0;
       } else {
         tmp21 = tmp9;
         if (1 === sum) {
-          tmp21 = tmp9 / 10 | 0;
+          tmp21 = (tmp9 / 10) | 0;
         }
       }
       let tmp22 = rounding < 4;
@@ -137,8 +137,8 @@ function checkRoundingDigits(d, precision, rounding, arg3) {
         tmp16 = tmp17;
       }
       if (tmp16) {
-        tmp16 = (d[num3 + 1] / tmp8 / 100 | 0) === tmp7(10, sum - 2) - 1;
-        const tmp18 = d[num3 + 1] / tmp8 / 100 | 0;
+        tmp16 = ((d[num3 + 1] / tmp8 / 100) | 0) === tmp7(10, sum - 2) - 1;
+        const tmp18 = (d[num3 + 1] / tmp8 / 100) | 0;
       }
       if (!tmp16) {
         const result = tmp8 / 2;
@@ -147,7 +147,7 @@ function checkRoundingDigits(d, precision, rounding, arg3) {
           tmp20 = 0 === tmp9;
         }
         if (tmp20) {
-          tmp20 = !(d[num3 + 1] / tmp8 / 100 | 0);
+          tmp20 = !((d[num3 + 1] / tmp8 / 100) | 0);
         }
         tmp16 = tmp20;
       }
@@ -155,13 +155,13 @@ function checkRoundingDigits(d, precision, rounding, arg3) {
     }
   } else if (sum < 4) {
     if (0 === sum) {
-      let tmp13 = tmp9 / 1000 | 0;
+      let tmp13 = (tmp9 / 1000) | 0;
     } else if (1 === sum) {
-      tmp13 = tmp9 / 100 | 0;
+      tmp13 = (tmp9 / 100) | 0;
     } else {
       tmp13 = tmp9;
       if (2 === sum) {
-        tmp13 = tmp9 / 10 | 0;
+        tmp13 = (tmp9 / 10) | 0;
       }
     }
     let tmp14 = arg3;
@@ -201,8 +201,8 @@ function checkRoundingDigits(d, precision, rounding, arg3) {
       tmp10 = tmp11;
     }
     if (tmp10) {
-      tmp10 = (d[num3 + 1] / tmp8 / 1000 | 0) === tmp7(10, sum - 3) - 1;
-      const tmp12 = d[num3 + 1] / tmp8 / 1000 | 0;
+      tmp10 = ((d[num3 + 1] / tmp8 / 1000) | 0) === tmp7(10, sum - 3) - 1;
+      const tmp12 = (d[num3 + 1] / tmp8 / 1000) | 0;
     }
   }
   return tmp10;
@@ -229,7 +229,7 @@ function convertBase(str, arg1, arg2) {
         if (undefined === items[sum]) {
           items[sum] = 0;
         }
-        items[sum] = items[sum] + (items[num2] / arg2 | 0);
+        items[sum] = items[sum] + ((items[num2] / arg2) | 0);
         items[num2] = items[num2] % arg2;
       }
     }
@@ -258,7 +258,7 @@ function finalise(constructor, precision, rounding, arg3) {
       if (diff < 0) {
         sum = diff + 7;
         const first1 = d[0];
-        let num9 = first1 / pow(10, num4 - precision - 1) % 10 | 0;
+        let num9 = ((first1 / pow(10, num4 - precision - 1)) % 10) | 0;
         let num10 = 0;
         let num6 = first1;
         let sum3 = precision;
@@ -335,7 +335,7 @@ function finalise(constructor, precision, rounding, arg3) {
               let num19 = 0;
               if (sum3 > 0) {
                 const result1 = num6 / tmp26(10, num8 - sum3);
-                num19 = (result1 % tmp26(10, sum3) | 0) * num18;
+                num19 = ((result1 % tmp26(10, sum3)) | 0) * num18;
               }
               d[num10] = num19;
               diff1 = num10;
@@ -394,7 +394,7 @@ function finalise(constructor, precision, rounding, arg3) {
         d.length = 0;
         if (tmp24) {
           const diff4 = precision - (constructor.e + 1);
-          d[0] = pow(10, (7 - diff4 % 7) % 7);
+          d[0] = pow(10, (7 - (diff4 % 7)) % 7);
           constructor.e = -diff4 || 0;
         } else {
           constructor.e = 0;
@@ -438,7 +438,7 @@ function finalise(constructor, precision, rounding, arg3) {
           sum3 = sum - 7 + num8;
           num9 = 0;
           if (sum3 >= 0) {
-            num9 = num6 / pow(10, num8 - sum3 - 1) % 10 | 0;
+            num9 = ((num6 / pow(10, num8 - sum3 - 1)) % 10) | 0;
           }
           num10 = rounded;
         }
@@ -607,7 +607,7 @@ function finiteToString(constructor, arg1, arg2) {
     return sum1;
   } else {
     const _String = String;
-    return String(constructor.s * constructor.s / 0);
+    return String((constructor.s * constructor.s) / 0);
   }
 }
 function intPow(constructor, constructor, arg2, precision) {
@@ -703,7 +703,7 @@ function naturalExponential(constructor, precision) {
         }
         const _Math = Math;
         const _Math2 = Math;
-        const tmp10 = Math.log(pow(2, num7)) / Math.LN10 * 2 + 5 | 0;
+        const tmp10 = ((Math.log(pow(2, num7)) / Math.LN10) * 2 + 5) | 0;
         sum = tmp + tmp10;
         const constructor1 = new constructor(1);
         let obj2 = constructor1;
@@ -1480,7 +1480,7 @@ function toStringBinary(isFinite, arg1, arg2, arg3) {
     tmp9 = finiteToString;
   } else {
     const _String = String;
-    sum6 = String(isFinite.s * isFinite.s / 0);
+    sum6 = String((isFinite.s * isFinite.s) / 0);
     tmp6 = isFinite;
   }
   let text5 = sum6;
@@ -1616,7 +1616,29 @@ function config(obj) {
   if (obj) {
     if (typeof obj === "object") {
       self = this;
-      const items = ["precision", 1, 1000000000, "rounding", 0, 8, "toExpNeg", -9000000000000000, 0, "toExpPos", 0, 9000000000000000, "maxE", 0, 9000000000000000, "minE", -9000000000000000, 0, "modulo", 0, 9];
+      const items = [
+        "precision",
+        1,
+        1000000000,
+        "rounding",
+        0,
+        8,
+        "toExpNeg",
+        -9000000000000000,
+        0,
+        "toExpPos",
+        0,
+        9000000000000000,
+        "maxE",
+        0,
+        9000000000000000,
+        "minE",
+        -9000000000000000,
+        0,
+        "modulo",
+        0,
+        9,
+      ];
       let num = 0;
       if (0 < items.length) {
         while (true) {
@@ -1887,7 +1909,11 @@ function random(arg0) {
       let num14 = 0;
       if (0 < result) {
         do {
-          let sum1 = randomBytesResult[num14] + (randomBytesResult[num14 + 1] << 8) + (randomBytesResult[num14 + 2] << 16) + ((127 & randomBytesResult[num14 + 3]) << 24);
+          let sum1 =
+            randomBytesResult[num14] +
+            (randomBytesResult[num14 + 1] << 8) +
+            (randomBytesResult[num14 + 2] << 16) +
+            ((127 & randomBytesResult[num14 + 3]) << 24);
           let tmp10 = num14;
           if (sum1 >= 2140000000) {
             let _crypto4 = crypto;
@@ -1913,7 +1939,7 @@ function random(arg0) {
       do {
         sum3 = num4 + 1;
         let _Math = Math;
-        items[num4] = 10000000 * Math.random() | 0;
+        items[num4] = (10000000 * Math.random()) | 0;
         num4 = sum3;
         num2 = sum3;
       } while (sum3 < rounded);
@@ -1927,7 +1953,7 @@ function random(arg0) {
   }
   if (tmp30) {
     const tmp32 = pow(10, 7 - result1);
-    items[diff] = (tmp29 / tmp32 | 0) * tmp32;
+    items[diff] = ((tmp29 / tmp32) | 0) * tmp32;
   }
   let tmp33 = diff;
   let tmp34 = diff;
@@ -2041,9 +2067,20 @@ function trunc(arg0) {
   finalise(tmp, tmp.e + 1, 1);
   return tmp;
 }
-let c5 = "2.3025850929940456840179914546843642076011014886287729760333279009675726096773524802359972050895982983419677840422862486334095254650828067566662873690987816894829072083255546808437998948262331985283935053089653777326288461633662222876982198867465436674744042432743651550489343149393914796194044002221051017141748003688084012647080685567743216228355220114804663715659121373450747856947683463616792101806445070648000277502684916746550586856935673420670581136429224554405758925724208241314695689016758940256776311356919292033376587141660230105703089634572075440370847469940168269282808481184289314848524948644871927809676271275775397027668605952496716674183485704422507197965004714951050492214776567636938662976979522110718264549734772662425709429322582798502585509785265383207606726317164309505995087807523710333101197857547331541421808427543863591778117054309827482385045648019095610299291824318237525357709750539565187697510374970888692180205189339507238539205144634197265287286965110862571492198849978748873771345686209167058";
-let cloneResult1 = "3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679821480865132823066470938446095505822317253594081284811174502841027019385211055596446229489549303819644288109756659334461284756482337867831652712019091456485669234603486104543266482133936072602491412737245870066063155881748815209209628292540917153643678925903600113305305488204665213841469519415116094330572703657595919530921861173819326117931051185480744623799627495673518857527248912279381830119491298336733624406566430860213949463952247371907021798609437027705392171762931767523846748184676694051320005681271452635608277857713427577896091736371787214684409012249534301465495853710507922796892589235420199561121290219608640344181598136297747713099605187072113499999983729780499510597317328160963185950244594553469083026425223082533446850352619311881710100031378387528865875332083814206171776691473035982534904287554687311595628638823537875937519577818577805321712268066130019278766111959092164201989380952572010654858632789";
-let obj = { precision: 20, rounding: 4, modulo: 1, toExpNeg: -7, toExpPos: 21, minE: -9000000000000000, maxE: 9000000000000000, crypto: false };
+let c5 =
+  "2.3025850929940456840179914546843642076011014886287729760333279009675726096773524802359972050895982983419677840422862486334095254650828067566662873690987816894829072083255546808437998948262331985283935053089653777326288461633662222876982198867465436674744042432743651550489343149393914796194044002221051017141748003688084012647080685567743216228355220114804663715659121373450747856947683463616792101806445070648000277502684916746550586856935673420670581136429224554405758925724208241314695689016758940256776311356919292033376587141660230105703089634572075440370847469940168269282808481184289314848524948644871927809676271275775397027668605952496716674183485704422507197965004714951050492214776567636938662976979522110718264549734772662425709429322582798502585509785265383207606726317164309505995087807523710333101197857547331541421808427543863591778117054309827482385045648019095610299291824318237525357709750539565187697510374970888692180205189339507238539205144634197265287286965110862571492198849978748873771345686209167058";
+let cloneResult1 =
+  "3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679821480865132823066470938446095505822317253594081284811174502841027019385211055596446229489549303819644288109756659334461284756482337867831652712019091456485669234603486104543266482133936072602491412737245870066063155881748815209209628292540917153643678925903600113305305488204665213841469519415116094330572703657595919530921861173819326117931051185480744623799627495673518857527248912279381830119491298336733624406566430860213949463952247371907021798609437027705392171762931767523846748184676694051320005681271452635608277857713427577896091736371787214684409012249534301465495853710507922796892589235420199561121290219608640344181598136297747713099605187072113499999983729780499510597317328160963185950244594553469083026425223082533446850352619311881710100031378387528865875332083814206171776691473035982534904287554687311595628638823537875937519577818577805321712268066130019278766111959092164201989380952572010654858632789";
+let obj = {
+  precision: 20,
+  rounding: 4,
+  modulo: 1,
+  toExpNeg: -7,
+  toExpPos: 21,
+  minE: -9000000000000000,
+  maxE: 9000000000000000,
+  crypto: false,
+};
 let c8 = true;
 let c9 = "[DecimalError] Invalid argument: ";
 let c10 = "[DecimalError] Precision limit exceeded";
@@ -2056,10 +2093,14 @@ const re16 = /^0x([0-9a-f]+(\.[0-9a-f]*)?|\.[0-9a-f]+)(p[+-]?\d+)?$/i;
 const re17 = /^0o([0-7]+(\.[0-7]*)?|\.[0-7]+)(p[+-]?\d+)?$/i;
 const re18 = /^(\d+(\.\d*)?|\.\d+)(e[+-]?\d+)?$/i;
 let c19 = 10000000;
-let closure_20 = "2.3025850929940456840179914546843642076011014886287729760333279009675726096773524802359972050895982983419677840422862486334095254650828067566662873690987816894829072083255546808437998948262331985283935053089653777326288461633662222876982198867465436674744042432743651550489343149393914796194044002221051017141748003688084012647080685567743216228355220114804663715659121373450747856947683463616792101806445070648000277502684916746550586856935673420670581136429224554405758925724208241314695689016758940256776311356919292033376587141660230105703089634572075440370847469940168269282808481184289314848524948644871927809676271275775397027668605952496716674183485704422507197965004714951050492214776567636938662976979522110718264549734772662425709429322582798502585509785265383207606726317164309505995087807523710333101197857547331541421808427543863591778117054309827482385045648019095610299291824318237525357709750539565187697510374970888692180205189339507238539205144634197265287286965110862571492198849978748873771345686209167058".length - 1;
-let closure_21 = "3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679821480865132823066470938446095505822317253594081284811174502841027019385211055596446229489549303819644288109756659334461284756482337867831652712019091456485669234603486104543266482133936072602491412737245870066063155881748815209209628292540917153643678925903600113305305488204665213841469519415116094330572703657595919530921861173819326117931051185480744623799627495673518857527248912279381830119491298336733624406566430860213949463952247371907021798609437027705392171762931767523846748184676694051320005681271452635608277857713427577896091736371787214684409012249534301465495853710507922796892589235420199561121290219608640344181598136297747713099605187072113499999983729780499510597317328160963185950244594553469083026425223082533446850352619311881710100031378387528865875332083814206171776691473035982534904287554687311595628638823537875937519577818577805321712268066130019278766111959092164201989380952572010654858632789".length - 1;
+let closure_20 =
+  "2.3025850929940456840179914546843642076011014886287729760333279009675726096773524802359972050895982983419677840422862486334095254650828067566662873690987816894829072083255546808437998948262331985283935053089653777326288461633662222876982198867465436674744042432743651550489343149393914796194044002221051017141748003688084012647080685567743216228355220114804663715659121373450747856947683463616792101806445070648000277502684916746550586856935673420670581136429224554405758925724208241314695689016758940256776311356919292033376587141660230105703089634572075440370847469940168269282808481184289314848524948644871927809676271275775397027668605952496716674183485704422507197965004714951050492214776567636938662976979522110718264549734772662425709429322582798502585509785265383207606726317164309505995087807523710333101197857547331541421808427543863591778117054309827482385045648019095610299291824318237525357709750539565187697510374970888692180205189339507238539205144634197265287286965110862571492198849978748873771345686209167058"
+    .length - 1;
+let closure_21 =
+  "3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679821480865132823066470938446095505822317253594081284811174502841027019385211055596446229489549303819644288109756659334461284756482337867831652712019091456485669234603486104543266482133936072602491412737245870066063155881748815209209628292540917153643678925903600113305305488204665213841469519415116094330572703657595919530921861173819326117931051185480744623799627495673518857527248912279381830119491298336733624406566430860213949463952247371907021798609437027705392171762931767523846748184676694051320005681271452635608277857713427577896091736371787214684409012249534301465495853710507922796892589235420199561121290219608640344181598136297747713099605187072113499999983729780499510597317328160963185950244594553469083026425223082533446850352619311881710100031378387528865875332083814206171776691473035982534904287554687311595628638823537875937519577818577805321712268066130019278766111959092164201989380952572010654858632789"
+    .length - 1;
 obj = { toStringTag: "[object Decimal]" };
-const fn = function() {
+const fn = function () {
   const constructor = new this.constructor(this);
   if (constructor.s < 0) {
     constructor.s = 1;
@@ -2069,12 +2110,12 @@ const fn = function() {
 };
 obj.abs = fn;
 obj.absoluteValue = fn;
-obj.ceil = function() {
+obj.ceil = function () {
   const constructor = new this.constructor(this);
   finalise(constructor, this.e + 1, 2);
   return constructor;
 };
-const fn2 = function(arg0, arg1) {
+const fn2 = function (arg0, arg1) {
   self = this;
   let constructor = this.constructor;
   constructor = new constructor(arg0);
@@ -2102,7 +2143,7 @@ const fn2 = function(arg0, arg1) {
 };
 obj.clamp = fn2;
 obj.clampedTo = fn2;
-const fn3 = function(arg0) {
+const fn3 = function (arg0) {
   self = this;
   const d = this.d;
   const constructor = new this.constructor(arg0);
@@ -2117,7 +2158,7 @@ const fn3 = function(arg0) {
             return s;
           } else if (self.e !== constructor.e) {
             let num13 = -1;
-            if (self.e > constructor.e ^ s < 0) {
+            if ((self.e > constructor.e) ^ (s < 0)) {
               num13 = 1;
             }
             return num13;
@@ -2132,7 +2173,7 @@ const fn3 = function(arg0) {
                 num8 = num8 + 1;
               }
               let num11 = -1;
-              if (d[num8] > d1[num8] ^ s < 0) {
+              if ((d[num8] > d1[num8]) ^ (s < 0)) {
                 num11 = 1;
               }
               return num11;
@@ -2140,7 +2181,7 @@ const fn3 = function(arg0) {
             let num9 = 0;
             if (d.length !== d1.length) {
               let num10 = -1;
-              if (length > length2 ^ s < 0) {
+              if ((length > length2) ^ (s < 0)) {
                 num10 = 1;
               }
               num9 = num10;
@@ -2169,7 +2210,7 @@ const fn3 = function(arg0) {
         let num3 = 0;
         if (d !== d1) {
           let num4 = -1;
-          if (!d ^ s < 0) {
+          if (!d ^ (s < 0)) {
             num4 = 1;
           }
           num3 = num4;
@@ -2183,7 +2224,7 @@ const fn3 = function(arg0) {
 };
 obj.cmp = fn3;
 obj.comparedTo = fn3;
-const fn4 = function() {
+const fn4 = function () {
   let tmp22;
   self = this;
   let constructor = this.constructor;
@@ -2256,7 +2297,7 @@ const fn4 = function() {
 };
 obj.cos = fn4;
 obj.cosine = fn4;
-const fn5 = function() {
+const fn5 = function () {
   self = this;
   let constructor = this.constructor;
   if (this.isFinite()) {
@@ -2307,7 +2348,7 @@ const fn5 = function() {
 };
 obj.cbrt = fn5;
 obj.cubeRoot = fn5;
-const fn6 = function() {
+const fn6 = function () {
   let result2;
   const d = this.d;
   let num = NaN;
@@ -2338,13 +2379,13 @@ const fn6 = function() {
 };
 obj.dp = fn6;
 obj.decimalPlaces = fn6;
-const fn7 = function(arg0) {
+const fn7 = function (arg0) {
   const constructor = new this.constructor(arg0);
   return f113060(this, constructor);
 };
 obj.div = fn7;
 obj.dividedBy = fn7;
-const fn8 = function(arg0) {
+const fn8 = function (arg0) {
   let constructor = this.constructor;
   constructor = new constructor(arg0);
   const tmp2 = f113060(this, constructor, 0, 1, 1);
@@ -2353,22 +2394,22 @@ const fn8 = function(arg0) {
 };
 obj.divToInt = fn8;
 obj.dividedToIntegerBy = fn8;
-const fn9 = function(arg0) {
+const fn9 = function (arg0) {
   return 0 === this.cmp(arg0);
 };
 obj.eq = fn9;
 obj.equals = fn9;
-obj.floor = function() {
+obj.floor = function () {
   const constructor = new this.constructor(this);
   finalise(constructor, this.e + 1, 3);
   return constructor;
 };
-const fn10 = function(arg0) {
+const fn10 = function (arg0) {
   return this.cmp(arg0) > 0;
 };
 obj.gt = fn10;
 obj.greaterThan = fn10;
-const fn11 = function(arg0) {
+const fn11 = function (arg0) {
   const cmpResult = this.cmp(arg0);
   let tmp2 = 1 == cmpResult;
   if (!tmp2) {
@@ -2378,7 +2419,7 @@ const fn11 = function(arg0) {
 };
 obj.gte = fn11;
 obj.greaterThanOrEqualTo = fn11;
-const fn12 = function() {
+const fn12 = function () {
   let tmp24;
   self = this;
   let constructor = this.constructor;
@@ -2439,7 +2480,7 @@ const fn12 = function() {
 };
 obj.cosh = fn12;
 obj.hyperbolicCosine = fn12;
-const fn13 = function() {
+const fn13 = function () {
   let tmp21;
   self = this;
   let constructor = this.constructor;
@@ -2499,7 +2540,7 @@ const fn13 = function() {
 };
 obj.sinh = fn13;
 obj.hyperbolicSine = fn13;
-const fn14 = function() {
+const fn14 = function () {
   self = this;
   let constructor = this.constructor;
   if (this.isFinite()) {
@@ -2522,7 +2563,7 @@ const fn14 = function() {
 };
 obj.tanh = fn14;
 obj.hyperbolicTangent = fn14;
-const fn15 = function() {
+const fn15 = function () {
   self = this;
   let constructor = this.constructor;
   const cmpResult = this.abs().cmp(1);
@@ -2571,7 +2612,7 @@ const fn15 = function() {
 };
 obj.acos = fn15;
 obj.inverseCosine = fn15;
-const fn16 = function() {
+const fn16 = function () {
   self = this;
   let constructor = this.constructor;
   if (this.lte(1)) {
@@ -2603,7 +2644,7 @@ const fn16 = function() {
 };
 obj.acosh = fn16;
 obj.inverseHyperbolicCosine = fn16;
-const fn17 = function() {
+const fn17 = function () {
   self = this;
   const constructor = this.constructor;
   if (this.isFinite()) {
@@ -2630,7 +2671,7 @@ const fn17 = function() {
 };
 obj.asinh = fn17;
 obj.inverseHyperbolicSine = fn17;
-const fn18 = function() {
+const fn18 = function () {
   self = this;
   let constructor = this.constructor;
   if (this.isFinite()) {
@@ -2652,7 +2693,9 @@ const fn18 = function() {
         const obj3 = f113060(plusResult, constructor1.minus(self), diff + precision, 1);
         constructor.precision = precision;
         constructor.rounding = rounding;
-        timesResult = f113060(plusResult, constructor1.minus(self), diff + precision, 1).ln().times(0.5);
+        timesResult = f113060(plusResult, constructor1.minus(self), diff + precision, 1)
+          .ln()
+          .times(0.5);
         const lnResult = f113060(plusResult, constructor1.minus(self), diff + precision, 1).ln();
       }
     }
@@ -2674,7 +2717,7 @@ const fn18 = function() {
 };
 obj.atanh = fn18;
 obj.inverseHyperbolicTangent = fn18;
-const fn19 = function() {
+const fn19 = function () {
   self = this;
   let constructor = this.constructor;
   if (this.isZero()) {
@@ -2707,7 +2750,10 @@ const fn19 = function() {
       const divResult = self.div(constructor3.minus(self.times(self)).sqrt().plus(1));
       constructor.precision = precision;
       constructor.rounding = rounding;
-      constructor = self.div(constructor3.minus(self.times(self)).sqrt().plus(1)).atan().times(2);
+      constructor = self
+        .div(constructor3.minus(self.times(self)).sqrt().plus(1))
+        .atan()
+        .times(2);
       const atanResult = self.div(constructor3.minus(self.times(self)).sqrt().plus(1)).atan();
     }
     const absResult = self.abs();
@@ -2716,7 +2762,7 @@ const fn19 = function() {
 };
 obj.asin = fn19;
 obj.inverseSine = fn19;
-const fn20 = function() {
+const fn20 = function () {
   let tmp30;
   self = this;
   let constructor = this.constructor;
@@ -2765,7 +2811,7 @@ const fn20 = function() {
   constructor.precision = sum2;
   constructor.rounding = 1;
   const result = sum2 / 7;
-  const bound = Math.min(28, result + 2 | 0);
+  const bound = Math.min(28, (result + 2) | 0);
   let divResult = self;
   let diff = bound;
   let obj4 = self;
@@ -2827,7 +2873,7 @@ const fn20 = function() {
   }
   let timesResult6 = obj10;
   if (bound) {
-    timesResult6 = obj10.times(2 << bound - 1);
+    timesResult6 = obj10.times(2 << (bound - 1));
   }
   c8 = true;
   constructor.precision = precision;
@@ -2837,10 +2883,10 @@ const fn20 = function() {
 };
 obj.atan = fn20;
 obj.inverseTangent = fn20;
-obj.isFinite = function() {
+obj.isFinite = function () {
   return this.d;
 };
-const fn21 = function() {
+const fn21 = function () {
   self = this;
   let d = this.d;
   if (d) {
@@ -2850,37 +2896,37 @@ const fn21 = function() {
 };
 obj.isInt = fn21;
 obj.isInteger = fn21;
-obj.isNaN = function() {
+obj.isNaN = function () {
   return !this.s;
 };
-const fn22 = function() {
+const fn22 = function () {
   return this.s < 0;
 };
 obj.isNeg = fn22;
 obj.isNegative = fn22;
-const fn23 = function() {
+const fn23 = function () {
   return this.s > 0;
 };
 obj.isPos = fn23;
 obj.isPositive = fn23;
-obj.isZero = function() {
+obj.isZero = function () {
   let d = this.d;
   if (d) {
     d = 0 === this.d[0];
   }
   return d;
 };
-const fn24 = function(arg0) {
+const fn24 = function (arg0) {
   return this.cmp(arg0) < 0;
 };
 obj.lt = fn24;
 obj.lessThan = fn24;
-const fn25 = function(arg0) {
+const fn25 = function (arg0) {
   return this.cmp(arg0) < 1;
 };
 obj.lte = fn25;
 obj.lessThanOrEqualTo = fn25;
-const fn26 = function(arg0) {
+const fn26 = function (arg0) {
   let result1;
   self = this;
   let constructor = this.constructor;
@@ -3028,7 +3074,7 @@ const fn26 = function(arg0) {
 };
 obj.log = fn26;
 obj.logarithm = fn26;
-const fn27 = function(arg0) {
+const fn27 = function (arg0) {
   let diff3;
   let first;
   let tmp34;
@@ -3237,7 +3283,7 @@ const fn27 = function(arg0) {
 };
 obj.sub = fn27;
 obj.minus = fn27;
-const fn28 = function(arg0) {
+const fn28 = function (arg0) {
   self = this;
   let constructor = this.constructor;
   constructor = new constructor(arg0);
@@ -3264,17 +3310,17 @@ const fn28 = function(arg0) {
 };
 obj.mod = fn28;
 obj.modulo = fn28;
-const fn29 = function() {
+const fn29 = function () {
   return naturalExponential(this);
 };
 obj.exp = fn29;
 obj.naturalExponential = fn29;
-const fn30 = function() {
+const fn30 = function () {
   return naturalLogarithm(this);
 };
 obj.ln = fn30;
 obj.naturalLogarithm = fn30;
-const fn31 = function() {
+const fn31 = function () {
   const constructor = new this.constructor(this);
   constructor.s = -constructor.s;
   finalise(constructor);
@@ -3282,7 +3328,7 @@ const fn31 = function() {
 };
 obj.neg = fn31;
 obj.negated = fn31;
-const fn32 = function(arg0) {
+const fn32 = function (arg0) {
   let diff2;
   let tmp26;
   let tmp37;
@@ -3355,7 +3401,7 @@ const fn32 = function(arg0) {
                 let sum1 = arr3[diff2] + tmp28[diff2] + num8;
                 arr3[diff2] = sum1;
                 let tmp31 = c19;
-                num8 = sum1 / c19 | 0;
+                num8 = (sum1 / c19) | 0;
                 arr3[diff2] = arr3[diff2] % c19;
                 num9 = num8;
                 length3 = diff2;
@@ -3422,7 +3468,7 @@ const fn32 = function(arg0) {
 };
 obj.add = fn32;
 obj.plus = fn32;
-const fn33 = function(arg0) {
+const fn33 = function (arg0) {
   let result1;
   if (undefined !== arg0) {
     if (arg0 !== arg0) {
@@ -3478,13 +3524,13 @@ const fn33 = function(arg0) {
 };
 obj.sd = fn33;
 obj.precision = fn33;
-obj.round = function() {
+obj.round = function () {
   let constructor = this.constructor;
   constructor = new constructor(this);
   finalise(constructor, this.e + 1, constructor.rounding);
   return constructor;
 };
-const fn34 = function() {
+const fn34 = function () {
   let tmp25;
   self = this;
   let constructor = this.constructor;
@@ -3556,7 +3602,7 @@ const fn34 = function() {
 };
 obj.sin = fn34;
 obj.sine = fn34;
-const fn35 = function() {
+const fn35 = function () {
   self = this;
   ({ d, e, s, constructor } = this);
   if (1 === s) {
@@ -3614,7 +3660,7 @@ const fn35 = function() {
 };
 obj.sqrt = fn35;
 obj.squareRoot = fn35;
-const fn36 = function() {
+const fn36 = function () {
   self = this;
   let constructor = this.constructor;
   if (this.isFinite()) {
@@ -3647,7 +3693,7 @@ const fn36 = function() {
 };
 obj.tan = fn36;
 obj.tangent = fn36;
-const fn37 = function(arg0) {
+const fn37 = function (arg0) {
   let tmp15;
   let tmp28;
   ({ constructor, d } = this);
@@ -3694,14 +3740,14 @@ const fn37 = function(arg0) {
                   let tmp22 = +sum2;
                   sum2 = tmp22 - 1;
                   let tmp23 = c19;
-                  items[tmp22] = sum3 % c19 | 0;
-                  num8 = sum3 / c19 | 0;
+                  items[tmp22] = (sum3 % c19) | 0;
+                  num8 = (sum3 / c19) | 0;
                   num9 = num8;
                   tmp20 = sum2;
                 } while (sum2 > diff1);
               }
               let tmp24 = c19;
-              items[tmp20] = (items[tmp20] + num9) % c19 | 0;
+              items[tmp20] = ((items[tmp20] + num9) % c19) | 0;
               diff1 = diff1 - 1;
               tmp17 = num9;
             } while (diff1 >= 0);
@@ -3764,10 +3810,10 @@ const fn37 = function(arg0) {
 };
 obj.mul = fn37;
 obj.times = fn37;
-obj.toBinary = function(arg0, arg1) {
+obj.toBinary = function (arg0, arg1) {
   return toStringBinary(this, 2, arg0, arg1);
 };
-const fn38 = function(arg0, rounding) {
+const fn38 = function (arg0, rounding) {
   let constructor = this.constructor;
   constructor = new constructor(this);
   if (undefined !== arg0) {
@@ -3791,7 +3837,7 @@ const fn38 = function(arg0, rounding) {
 };
 obj.toDP = fn38;
 obj.toDecimalPlaces = fn38;
-obj.toExponential = function(arg0, rounding) {
+obj.toExponential = function (arg0, rounding) {
   self = this;
   let constructor = this.constructor;
   if (undefined === arg0) {
@@ -3826,7 +3872,7 @@ obj.toExponential = function(arg0, rounding) {
   }
   return text;
 };
-obj.toFixed = function(arg0, rounding) {
+obj.toFixed = function (arg0, rounding) {
   self = this;
   let constructor = this.constructor;
   if (undefined === arg0) {
@@ -3859,7 +3905,7 @@ obj.toFixed = function(arg0, rounding) {
   }
   return text;
 };
-obj.toFraction = function(arg0) {
+obj.toFraction = function (arg0) {
   let cmpResult;
   let result1;
   self = this;
@@ -3998,12 +4044,12 @@ obj.toFraction = function(arg0) {
     return constructor5;
   }
 };
-const fn39 = function(arg0, arg1) {
+const fn39 = function (arg0, arg1) {
   return toStringBinary(this, 16, arg0, arg1);
 };
 obj.toHex = fn39;
 obj.toHexadecimal = fn39;
-obj.toNearest = function(arg0, arg1) {
+obj.toNearest = function (arg0, arg1) {
   let constructor = this.constructor;
   constructor = new constructor(this);
   if (null == arg0) {
@@ -4055,13 +4101,13 @@ obj.toNearest = function(arg0, arg1) {
   }
   return tmp9;
 };
-obj.toNumber = function() {
+obj.toNumber = function () {
   return +this;
 };
-obj.toOctal = function(arg0, arg1) {
+obj.toOctal = function (arg0, arg1) {
   return toStringBinary(this, 8, arg0, arg1);
 };
-const fn40 = function(arg0) {
+const fn40 = function (arg0) {
   self = this;
   let constructor = this.constructor;
   constructor = new constructor(arg0);
@@ -4133,7 +4179,10 @@ const fn40 = function(arg0) {
                     constructor.rounding = 1;
                     const _Math3 = Math;
                     const bound = Math.min(12, "" + e.length);
-                    let constructor5 = naturalExponential(constructor.times(naturalLogarithm(constructor1, precision + bound)), precision);
+                    let constructor5 = naturalExponential(
+                      constructor.times(naturalLogarithm(constructor1, precision + bound)),
+                      precision,
+                    );
                     let d = constructor5.d;
                     if (d) {
                       finalise(constructor5, precision + 5, 1);
@@ -4182,7 +4231,7 @@ const fn40 = function(arg0) {
 };
 obj.pow = fn40;
 obj.toPower = fn40;
-obj.toPrecision = function(precision, rounding) {
+obj.toPrecision = function (precision, rounding) {
   self = this;
   let constructor = this.constructor;
   if (undefined === precision) {
@@ -4224,7 +4273,7 @@ obj.toPrecision = function(precision, rounding) {
   }
   return text;
 };
-const fn41 = function(precision, rounding) {
+const fn41 = function (precision, rounding) {
   self = this;
   let constructor = this.constructor;
   if (undefined === precision) {
@@ -4251,7 +4300,7 @@ const fn41 = function(precision, rounding) {
 };
 obj.toSD = fn41;
 obj.toSignificantDigits = fn41;
-obj.toString = function() {
+obj.toString = function () {
   self = this;
   const constructor = this.constructor;
   let tmp2 = this.e <= constructor.toExpNeg;
@@ -4268,14 +4317,14 @@ obj.toString = function() {
   }
   return text;
 };
-const fn42 = function() {
+const fn42 = function () {
   const constructor = new this.constructor(this);
   finalise(constructor, this.e + 1, 1);
   return constructor;
 };
 obj.trunc = fn42;
 obj.truncated = fn42;
-const fn43 = function() {
+const fn43 = function () {
   self = this;
   const constructor = this.constructor;
   let tmp2 = this.e <= constructor.toExpNeg;
@@ -4359,7 +4408,7 @@ const f113060 = (s, s2, arg2, _exports2) => {
             let first = items.push(1);
             let flag = true;
           } else {
-            first = precision / num7 + 2 | 0;
+            first = (precision / num7 + 2) | 0;
             if (1 == length) {
               first = d1[0];
               let num40 = 0;
@@ -4381,8 +4430,8 @@ const f113060 = (s, s2, arg2, _exports2) => {
                       num44 = 0;
                     }
                     let sum2 = result + num44;
-                    items[num43] = sum2 / first | 0;
-                    let tmp98 = sum2 % first | 0;
+                    items[num43] = (sum2 / first) | 0;
+                    let tmp98 = (sum2 % first) | 0;
                     let sum3 = num43 + 1;
                     if (sum3 < length2) {
                       diff2 = diff2 - 1;
@@ -4409,7 +4458,7 @@ const f113060 = (s, s2, arg2, _exports2) => {
               }
               let tmp90 = num40;
             } else {
-              first = tmp6 / (d1[0] + 1) | 0;
+              first = (tmp6 / (d1[0] + 1)) | 0;
               let arr4 = d1;
               let arr5 = d;
               let length3 = length2;
@@ -4422,8 +4471,8 @@ const f113060 = (s, s2, arg2, _exports2) => {
                 if (first) {
                   do {
                     let sum4 = substr[diff3] * first + num15;
-                    substr[diff3] = sum4 % tmp6 | 0;
-                    num15 = sum4 / tmp6 | 0;
+                    substr[diff3] = (sum4 % tmp6) | 0;
+                    num15 = (sum4 / tmp6) | 0;
                     tmp21 = +diff3;
                     diff3 = tmp21 - 1;
                     num16 = num15;
@@ -4439,8 +4488,8 @@ const f113060 = (s, s2, arg2, _exports2) => {
                 if (+d.length) {
                   do {
                     let sum5 = substr1[diff4] * first + num17;
-                    substr1[diff4] = sum5 % tmp6 | 0;
-                    num17 = sum5 / tmp6 | 0;
+                    substr1[diff4] = (sum5 % tmp6) | 0;
+                    num17 = (sum5 / tmp6) | 0;
                     tmp27 = +diff4;
                     diff4 = tmp27 - 1;
                     num18 = num17;
@@ -4523,7 +4572,7 @@ const f113060 = (s, s2, arg2, _exports2) => {
                     }
                     sum9 = result1 + num25;
                   }
-                  let diff5 = sum9 / sum7 | 0;
+                  let diff5 = (sum9 / sum7) | 0;
                   if (1 < diff5) {
                     if (diff5 >= tmp6) {
                       diff5 = tmp6 - 1;
@@ -4536,8 +4585,8 @@ const f113060 = (s, s2, arg2, _exports2) => {
                     if (tmp53) {
                       do {
                         let sum10 = substr4[diff6] * diff5 + num27;
-                        substr4[diff6] = sum10 % tmp6 | 0;
-                        num27 = sum10 / tmp6 | 0;
+                        substr4[diff6] = (sum10 % tmp6) | 0;
+                        num27 = (sum10 / tmp6) | 0;
                         tmp56 = +diff6;
                         diff6 = tmp56 - 1;
                         num28 = num27;
@@ -5559,9 +5608,13 @@ let cloneResult = clone(obj);
 cloneResult.prototype.constructor = cloneResult;
 cloneResult.Decimal = cloneResult;
 cloneResult.default = cloneResult;
-cloneResult = new cloneResult("2.3025850929940456840179914546843642076011014886287729760333279009675726096773524802359972050895982983419677840422862486334095254650828067566662873690987816894829072083255546808437998948262331985283935053089653777326288461633662222876982198867465436674744042432743651550489343149393914796194044002221051017141748003688084012647080685567743216228355220114804663715659121373450747856947683463616792101806445070648000277502684916746550586856935673420670581136429224554405758925724208241314695689016758940256776311356919292033376587141660230105703089634572075440370847469940168269282808481184289314848524948644871927809676271275775397027668605952496716674183485704422507197965004714951050492214776567636938662976979522110718264549734772662425709429322582798502585509785265383207606726317164309505995087807523710333101197857547331541421808427543863591778117054309827482385045648019095610299291824318237525357709750539565187697510374970888692180205189339507238539205144634197265287286965110862571492198849978748873771345686209167058");
+cloneResult = new cloneResult(
+  "2.3025850929940456840179914546843642076011014886287729760333279009675726096773524802359972050895982983419677840422862486334095254650828067566662873690987816894829072083255546808437998948262331985283935053089653777326288461633662222876982198867465436674744042432743651550489343149393914796194044002221051017141748003688084012647080685567743216228355220114804663715659121373450747856947683463616792101806445070648000277502684916746550586856935673420670581136429224554405758925724208241314695689016758940256776311356919292033376587141660230105703089634572075440370847469940168269282808481184289314848524948644871927809676271275775397027668605952496716674183485704422507197965004714951050492214776567636938662976979522110718264549734772662425709429322582798502585509785265383207606726317164309505995087807523710333101197857547331541421808427543863591778117054309827482385045648019095610299291824318237525357709750539565187697510374970888692180205189339507238539205144634197265287286965110862571492198849978748873771345686209167058",
+);
 c5 = cloneResult;
-cloneResult1 = new cloneResult("3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679821480865132823066470938446095505822317253594081284811174502841027019385211055596446229489549303819644288109756659334461284756482337867831652712019091456485669234603486104543266482133936072602491412737245870066063155881748815209209628292540917153643678925903600113305305488204665213841469519415116094330572703657595919530921861173819326117931051185480744623799627495673518857527248912279381830119491298336733624406566430860213949463952247371907021798609437027705392171762931767523846748184676694051320005681271452635608277857713427577896091736371787214684409012249534301465495853710507922796892589235420199561121290219608640344181598136297747713099605187072113499999983729780499510597317328160963185950244594553469083026425223082533446850352619311881710100031378387528865875332083814206171776691473035982534904287554687311595628638823537875937519577818577805321712268066130019278766111959092164201989380952572010654858632789");
+cloneResult1 = new cloneResult(
+  "3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679821480865132823066470938446095505822317253594081284811174502841027019385211055596446229489549303819644288109756659334461284756482337867831652712019091456485669234603486104543266482133936072602491412737245870066063155881748815209209628292540917153643678925903600113305305488204665213841469519415116094330572703657595919530921861173819326117931051185480744623799627495673518857527248912279381830119491298336733624406566430860213949463952247371907021798609437027705392171762931767523846748184676694051320005681271452635608277857713427577896091736371787214684409012249534301465495853710507922796892589235420199561121290219608640344181598136297747713099605187072113499999983729780499510597317328160963185950244594553469083026425223082533446850352619311881710100031378387528865875332083814206171776691473035982534904287554687311595628638823537875937519577818577805321712268066130019278766111959092164201989380952572010654858632789",
+);
 if (typeof globalThis.define === "function") {
   if (globalThis.define.amd) {
     globalThis.define(() => closure_1);

@@ -1,7 +1,6 @@
 // _runtime/04761_Type.js
 import isObject from "04762_isObject.js";
 
-
 export default function Type(num) {
   let str = "Null";
   if (null !== num) {
@@ -28,4 +27,4 @@ export default function Type(num) {
     str = str2;
   }
   return str;
-};
+}

@@ -18,7 +18,14 @@ arg5.callFrameToStackFrame = function callFrameToStackFrame(location, str) {
     sum1 = location.location.lineNumber + 1;
   }
   let obj = addNonEnumerableProperty;
-  obj = { filename: replaced, module: arg2(replaced), function: location.functionName || createStackParser.UNKNOWN_FUNCTION, colno: sum, lineno: sum1, in_app: null };
+  obj = {
+    filename: replaced,
+    module: arg2(replaced),
+    function: location.functionName || createStackParser.UNKNOWN_FUNCTION,
+    colno: sum,
+    lineno: sum1,
+    in_app: null,
+  };
   let filenameIsInAppResult;
   if (replaced) {
     filenameIsInAppResult = tmp4(12451).filenameIsInApp(replaced);
@@ -56,6 +63,6 @@ arg5.watchdogTimer = function watchdogTimer(arg0, arg1, arg2, arg3) {
     },
     enabled(arg0) {
       closure_5 = arg0;
-    }
+    },
   };
 };

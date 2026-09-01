@@ -17,4 +17,4 @@ export default function shimStringTrim() {
     }
   }
   return tmp3;
-};
+}

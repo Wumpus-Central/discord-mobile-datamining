@@ -21,7 +21,7 @@ export const useLinking = function useLinking(ref, enabled) {
         filter.getInitialURL(),
         new Promise((arg0) => {
           const timerId = setTimeout(arg0, 150);
-        })
+        }),
       ];
       return Promise.race(items);
     };
@@ -70,9 +70,7 @@ export const useLinking = function useLinking(ref, enabled) {
   closure_15 = undefined;
   let callback;
   let items = [flag, _require(flag[2]).useNavigationIndependentTree()];
-  const effect = prefixes.useEffect(() => {
-
-  }, items);
+  const effect = prefixes.useEffect(() => {}, items);
   closure_9 = prefixes.useRef(flag);
   closure_10 = prefixes.useRef(prefixes);
   closure_11 = prefixes.useRef(filter);
@@ -129,42 +127,46 @@ export const useLinking = function useLinking(ref, enabled) {
       },
       catch() {
         return obj;
-      }
+      },
     };
     return obj;
   }, items1);
-  const effect2 = prefixes.useEffect(() => fn2((arg0) => {
-    if (closure_1) {
-      const current = ref.current;
-      if (current) {
-        const tmp4 = callback(arg0);
-      }
-      if (current) {
-        if (tmp4) {
-          const currentResult = ref3.current(tmp4, ref2.current);
-          if (undefined !== currentResult) {
-            try {
-              current.dispatch(currentResult);
-            } catch (tmp11) {
-              let message = tmp11;
-              if (typeof tmp11 === "object") {
-                message = tmp11;
-                if (null != tmp11) {
-                  message = tmp11;
-                  if ("message" in tmp11) {
-                    message = tmp11.message;
+  const effect2 = prefixes.useEffect(
+    () =>
+      fn2((arg0) => {
+        if (closure_1) {
+          const current = ref.current;
+          if (current) {
+            const tmp4 = callback(arg0);
+          }
+          if (current) {
+            if (tmp4) {
+              const currentResult = ref3.current(tmp4, ref2.current);
+              if (undefined !== currentResult) {
+                try {
+                  current.dispatch(currentResult);
+                } catch (tmp11) {
+                  let message = tmp11;
+                  if (typeof tmp11 === "object") {
+                    message = tmp11;
+                    if (null != tmp11) {
+                      message = tmp11;
+                      if ("message" in tmp11) {
+                        message = tmp11.message;
+                      }
+                    }
                   }
+                  const _HermesInternal = HermesInternal;
+                  console.warn("An error occurred when trying to handle the link '" + tmp + "': " + message);
                 }
+              } else {
+                current.resetRoot(tmp4);
               }
-              const _HermesInternal = HermesInternal;
-              console.warn("An error occurred when trying to handle the link '" + tmp + "': " + message);
             }
-          } else {
-            current.resetRoot(tmp4);
           }
         }
-      }
-    }
-  }), items2);
+      }),
+    items2,
+  );
   return { getInitialState };
 };

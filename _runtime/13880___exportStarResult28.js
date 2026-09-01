@@ -7,20 +7,37 @@ import e from "01281_e.js";
 const digitsToString = e.__importDefault(digitsToString2);
 let result = digitsToString.default.set({ toExpPos: 100 });
 
-export const ToRawFixed = function ToRawFixed(ZERO, minimumFractionDigits, maximumFractionDigits, roundingIncrement, result) {
+export const ToRawFixed = function ToRawFixed(
+  ZERO,
+  minimumFractionDigits,
+  maximumFractionDigits,
+  roundingIncrement,
+  result,
+) {
   const _default = digitsToString.default;
   const timesResult = ZERO.times(digitsToString.default.pow(10, maximumFractionDigits));
   const floorResult = ZERO.times(digitsToString.default.pow(10, maximumFractionDigits)).floor();
   const divResult = ZERO.times(digitsToString.default.pow(10, maximumFractionDigits)).floor().div(roundingIncrement);
-  const timesResult1 = ZERO.times(digitsToString.default.pow(10, maximumFractionDigits)).floor().div(roundingIncrement).floor().times(roundingIncrement);
+  const timesResult1 = ZERO.times(digitsToString.default.pow(10, maximumFractionDigits))
+    .floor()
+    .div(roundingIncrement)
+    .floor()
+    .times(roundingIncrement);
   const timesResult2 = timesResult1.times(digitsToString.default.pow(10, -maximumFractionDigits));
   const _default2 = digitsToString.default;
   const _default3 = digitsToString.default;
-  const floorResult1 = ZERO.times(digitsToString.default.pow(10, maximumFractionDigits)).floor().div(roundingIncrement).floor();
+  const floorResult1 = ZERO.times(digitsToString.default.pow(10, maximumFractionDigits))
+    .floor()
+    .div(roundingIncrement)
+    .floor();
   const timesResult3 = ZERO.times(digitsToString.default.pow(10, maximumFractionDigits));
   const ceilResult = ZERO.times(digitsToString.default.pow(10, maximumFractionDigits)).ceil();
   const divResult1 = ZERO.times(digitsToString.default.pow(10, maximumFractionDigits)).ceil().div(roundingIncrement);
-  let str = ZERO.times(digitsToString.default.pow(10, maximumFractionDigits)).ceil().div(roundingIncrement).ceil().times(roundingIncrement);
+  let str = ZERO.times(digitsToString.default.pow(10, maximumFractionDigits))
+    .ceil()
+    .div(roundingIncrement)
+    .ceil()
+    .times(roundingIncrement);
   let timesResult4 = str.times(digitsToString.default.pow(10, -maximumFractionDigits));
   result = __exportStarResult11.ApplyUnsignedRoundingMode(ZERO, timesResult2, timesResult4, result);
   if (result.eq(timesResult2)) {
@@ -68,5 +85,10 @@ export const ToRawFixed = function ToRawFixed(ZERO, minimumFractionDigits, maxim
   if ("." === arr4[arr4.length - 1]) {
     substr2 = arr4.slice(0, arr4.length - 1);
   }
-  return { formattedString: substr2, roundedNumber: timesResult4, integerDigitsCount: length, roundingMagnitude: -maximumFractionDigits };
+  return {
+    formattedString: substr2,
+    roundedNumber: timesResult4,
+    integerDigitsCount: length,
+    roundingMagnitude: -maximumFractionDigits,
+  };
 };

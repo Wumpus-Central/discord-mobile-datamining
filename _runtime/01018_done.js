@@ -1,7 +1,7 @@
 // _runtime/01018_done.js
 import noop from "01019_noop.js";
 
-noop.prototype.done = function(arg0, arg1) {
+noop.prototype.done = function (arg0, arg1) {
   const self = this;
   let self2 = this;
   if (arguments.length) {

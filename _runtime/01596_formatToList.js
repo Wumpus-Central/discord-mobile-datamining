@@ -1,7 +1,5 @@
 // _runtime/01596_formatToList.js
-function formatToList(arg0) {
-
-}
+function formatToList(arg0) {}
 function validatePathConfig(config) {
   closure_0 = config;
   let flag = arg1;
@@ -26,13 +24,13 @@ function validatePathConfig(config) {
             if ("array" === tmp) {
               const _Array = Array;
               if (!Array.isArray(tmp3)) {
-                const items = [arg0, ];
+                const items = [arg0];
                 const _HermesInternal2 = HermesInternal;
                 items[1] = "expected 'Array', got '" + typeof tmp3 + "'";
                 return items;
               }
             } else if (typeof tmp3 !== tmp) {
-              const items1 = [arg0, ];
+              const items1 = [arg0];
               const _HermesInternal = HermesInternal;
               items1[1] = "expected '" + tmp + "', got '" + tmp4 + "'";
               return items1;
@@ -68,7 +66,13 @@ function validatePathConfig(config) {
           return "- " + tmp + " (" + tmp2 + ")";
         });
         let _HermesInternal2 = HermesInternal;
-        error = new Error("Found invalid properties in the configuration:\n" + joined + "\n\nYou can only specify the following properties:\n" + mapped2.join("\n") + "\n\nIf you want to specify configuration for screens, you need to specify them under a 'screens' property.\n\nSee https://reactnavigation.org/docs/configuring-links for more details on how to specify a linking configuration.");
+        error = new Error(
+          "Found invalid properties in the configuration:\n" +
+            joined +
+            "\n\nYou can only specify the following properties:\n" +
+            mapped2.join("\n") +
+            "\n\nIf you want to specify configuration for screens, you need to specify them under a 'screens' property.\n\nSee https://reactnavigation.org/docs/configuring-links for more details on how to specify a linking configuration.",
+        );
         throw error;
       } else {
         if (flag) {
@@ -78,7 +82,11 @@ function validatePathConfig(config) {
               if (path.includes(":")) {
                 const _Error = Error;
                 let _HermesInternal = HermesInternal;
-                const error1 = new Error("Found invalid path '" + config.path + "'. The 'path' in the top-level configuration cannot contain patterns for params.");
+                const error1 = new Error(
+                  "Found invalid path '" +
+                    config.path +
+                    "'. The 'path' in the top-level configuration cannot contain patterns for params.",
+                );
                 throw error1;
               }
             }

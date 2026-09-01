@@ -4,7 +4,11 @@ import weakSet from "../00106_weakSet.js";
 import setRuntimeConfigProvider from "../00065_setRuntimeConfigProvider.js";
 
 const codegenNativeComponent = get_ActivityIndicator.codegenNativeComponent;
-let obj = { uiViewClassName: "RNSTabsBottomAccessory", directEventTypes: { topEnvironmentChange: { registrationName: "onEnvironmentChange" } }, validAttributes: null };
+let obj = {
+  uiViewClassName: "RNSTabsBottomAccessory",
+  directEventTypes: { topEnvironmentChange: { registrationName: "onEnvironmentChange" } },
+  validAttributes: null,
+};
 obj = {};
 const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onEnvironmentChange: true }));
 obj[2] = obj;

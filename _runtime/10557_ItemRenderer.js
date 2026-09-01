@@ -7,15 +7,25 @@ import jsxProd from "react/00021_jsxProd.js";
 
 require = arg1;
 ({ jsx: c4, Fragment: c5 } = jsxProd);
-let closure_6 = { code: "function pnpm_ItemRendererTsx1(){const{visibleRanges}=this.__closure;return visibleRanges.value;}" };
-let closure_7 = { code: "function pnpm_ItemRendererTsx2(ranges){const{runOnJS,setDisplayedItems}=this.__closure;return runOnJS(setDisplayedItems)(ranges);}" };
+let closure_6 = {
+  code: "function pnpm_ItemRendererTsx1(){const{visibleRanges}=this.__closure;return visibleRanges.value;}",
+};
+let closure_7 = {
+  code: "function pnpm_ItemRendererTsx2(ranges){const{runOnJS,setDisplayedItems}=this.__closure;return runOnJS(setDisplayedItems)(ranges);}",
+};
 
 export const ItemRenderer = (arg0) => {
   ({ data, offsetX: require, rawDataLength: dependencyMap, loop } = arg0);
   ({ autoFillData: closure_3, layoutConfig: closure_4, renderItem: closure_5, customAnimation: closure_6 } = arg0);
   ({ size, windowSize, handlerOffset, dataLength } = arg0);
   let obj = isArraysEqual;
-  const visibleRanges = obj.useVisibleRanges({ total: dataLength, viewSize: size, translation: handlerOffset, windowSize, loop });
+  const visibleRanges = obj.useVisibleRanges({
+    total: dataLength,
+    viewSize: size,
+    translation: handlerOffset,
+    windowSize,
+    loop,
+  });
   const tmp2 = loop(React.useState(null), 2);
   const first = tmp2[0];
   closure_9 = tmp4;

@@ -6,7 +6,10 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.createLogContainerEnvelopeItem = function createLogContainerEnvelopeItem(item_count) {
-  const items = [{ type: "log", item_count: item_count.length, content_type: "application/vnd.sentry.items.log+json" }, { items: item_count }];
+  const items = [
+    { type: "log", item_count: item_count.length, content_type: "application/vnd.sentry.items.log+json" },
+    { items: item_count },
+  ];
   return items;
 };
 arg5.createLogEnvelope = function createLogEnvelope(items, _metadata, tunnel, dsn) {

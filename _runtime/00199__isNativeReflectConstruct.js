@@ -26,14 +26,20 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 if (require("BlobManager").default.isAvailable) {
   require("BlobManager").default.addNetworkingHandler();
   let _default = require("BlobManager").default;
 }
-let closure_8 = { arraybuffer: typeof global.ArrayBuffer === "function", blob: typeof global.Blob === "function", document: false, json: true, text: true, "": true };
+let closure_8 = {
+  arraybuffer: typeof global.ArrayBuffer === "function",
+  blob: typeof global.Blob === "function",
+  document: false,
+  json: true,
+  text: true,
+  "": true,
+};
 class XMLHttpRequestEventTarget {
   constructor() {
     self = this;
@@ -63,7 +69,7 @@ let obj = {
   },
   set(fn) {
     const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "load", fn);
-  }
+  },
 };
 let items = [
   obj,
@@ -74,7 +80,7 @@ let items = [
     },
     set(fn) {
       const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "loadstart", fn);
-    }
+    },
   },
   {
     key: "onprogress",
@@ -83,7 +89,7 @@ let items = [
     },
     set(fn) {
       const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "progress", fn);
-    }
+    },
   },
   {
     key: "ontimeout",
@@ -92,7 +98,7 @@ let items = [
     },
     set(fn) {
       const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "timeout", fn);
-    }
+    },
   },
   {
     key: "onerror",
@@ -101,7 +107,7 @@ let items = [
     },
     set(fn) {
       const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "error", fn);
-    }
+    },
   },
   {
     key: "onabort",
@@ -110,7 +116,7 @@ let items = [
     },
     set(fn) {
       const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "abort", fn);
-    }
+    },
   },
   {
     key: "onloadend",
@@ -119,8 +125,8 @@ let items = [
     },
     set(fn) {
       const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "loadend", fn);
-    }
-  }
+    },
+  },
 ];
 let closure_9 = importDefaultResult(XMLHttpRequestEventTarget, items);
 class XMLHttpRequest {
@@ -180,7 +186,7 @@ obj = {
     this._lowerCaseResponseHeaders = {};
     this._clearSubscriptions();
     this._timedOut = false;
-  }
+  },
 };
 const items1 = [
   obj,
@@ -192,7 +198,9 @@ const items1 = [
     set(_responseType) {
       if (this._sent) {
         const _Error = Error;
-        error = new Error("Failed to set the 'responseType' property on 'XMLHttpRequest': The response type cannot be set after the request has been sent.");
+        error = new Error(
+          "Failed to set the 'responseType' property on 'XMLHttpRequest': The response type cannot be set after the request has been sent.",
+        );
         throw error;
       } else if (closure_8.hasOwnProperty(_responseType)) {
         let tmp9 = closure_8[_responseType];
@@ -212,7 +220,7 @@ const items1 = [
         const _HermesInternal = HermesInternal;
         console.warn("The provided value '" + _responseType + "' is not a valid 'responseType'.");
       }
-    }
+    },
   },
   {
     key: "responseText",
@@ -223,7 +231,11 @@ const items1 = [
         if ("text" !== self._responseType) {
           const _Error = Error;
           const _HermesInternal = HermesInternal;
-          error = new Error("The 'responseText' property is only available if 'responseType' is set to '' or 'text', but it is '" + self._responseType + "'.");
+          error = new Error(
+            "The 'responseText' property is only available if 'responseType' is set to '' or 'text', but it is '" +
+              self._responseType +
+              "'.",
+          );
           throw error;
         }
       }
@@ -231,7 +243,7 @@ const items1 = [
         str = self._response;
       }
       return str;
-    }
+    },
   },
   {
     key: "response",
@@ -261,7 +273,9 @@ const items1 = [
                 const _Error = Error;
                 ({ _response: _response2, _response } = self);
                 const _HermesInternal = HermesInternal;
-                error = new Error("Invalid response for blob - expecting object, was " + typeof _response + ": " + _response2.trim());
+                error = new Error(
+                  "Invalid response for blob - expecting object, was " + typeof _response + ": " + _response2.trim(),
+                );
                 throw error;
               } else {
                 self._cachedResponse = XMLHttpRequest(200).default.createFromParts([]);
@@ -287,7 +301,7 @@ const items1 = [
         }
       }
       return str4;
-    }
+    },
   },
   {
     key: "__didCreateRequest",
@@ -302,7 +316,7 @@ const items1 = [
         }
         const sent = _interceptor.requestSent(_requestId, str, tmp, self._headers);
       }
-    }
+    },
   },
   {
     key: "__didUploadProgress",
@@ -315,7 +329,7 @@ const items1 = [
         const tmp10 = new _isNativeReflectConstructDefault("progress", obj);
         obj.dispatchTrustedEvent(tmp.upload, tmp10);
       }
-    }
+    },
   },
   {
     key: "__didReceiveResponse",
@@ -352,7 +366,7 @@ const items1 = [
         self.responseURL = str;
         tmp3 = null != self._perfKey && null != _performanceLogger;
       }
-    }
+    },
   },
   {
     key: "__didReceiveData",
@@ -367,7 +381,7 @@ const items1 = [
           _interceptor.dataReceived(arg0, _response);
         }
       }
-    }
+    },
   },
   {
     key: "__didReceiveIncrementalData",
@@ -386,7 +400,7 @@ const items1 = [
         self.setReadyState(self.LOADING);
         const result = self.__didReceiveDataProgress(arg0, arg2, arg3);
       }
-    }
+    },
   },
   {
     key: "__didReceiveDataProgress",
@@ -400,7 +414,7 @@ const items1 = [
         const tmp10 = new _isNativeReflectConstructDefault("progress", obj);
         obj.dispatchTrustedEvent(tmp, tmp10);
       }
-    }
+    },
   },
   {
     key: "__didCompleteResponse",
@@ -434,7 +448,7 @@ const items1 = [
           _interceptor2.loadingFinished(arg0, self._response.length);
         }
       }
-    }
+    },
   },
   {
     key: "_clearSubscriptions",
@@ -449,7 +463,7 @@ const items1 = [
         }
       });
       this._subscriptions = [];
-    }
+    },
   },
   {
     key: "getAllResponseHeaders",
@@ -500,12 +514,14 @@ const items1 = [
           }
           return num;
         });
-        const mapped = sorted.map((lowerHeaderName) => lowerHeaderName.lowerHeaderName + ": " + lowerHeaderName.headerValue);
+        const mapped = sorted.map(
+          (lowerHeaderName) => lowerHeaderName.lowerHeaderName + ": " + lowerHeaderName.headerValue,
+        );
         return mapped.join("\r\n") + "\r\n";
       } else {
         return null;
       }
-    }
+    },
   },
   {
     key: "getResponseHeader",
@@ -516,7 +532,7 @@ const items1 = [
         tmp2 = tmp;
       }
       return tmp2;
-    }
+    },
   },
   {
     key: "setRequestHeader",
@@ -530,21 +546,21 @@ const items1 = [
         const formatted = baggage.toLowerCase();
         tmp._headers[formatted] = String(StringResult);
       }
-    }
+    },
   },
   {
     key: "setTrackingName",
     value: function setTrackingName(_trackingName) {
       this._trackingName = _trackingName;
       return this;
-    }
+    },
   },
   {
     key: "setPerformanceLogger",
     value: function setPerformanceLogger(_performanceLogger) {
       this._performanceLogger = _performanceLogger;
       return this;
-    }
+    },
   },
   {
     key: "open",
@@ -573,7 +589,7 @@ const items1 = [
           throw error2;
         }
       }
-    }
+    },
   },
   {
     key: "send",
@@ -591,40 +607,52 @@ const items1 = [
       } else {
         self._sent = true;
         const _subscriptions = self._subscriptions;
-        _subscriptions.push(self(208).default.addListener("didSendNetworkData", (arg0) => {
-          const items = [...arg0];
-          return self.__didUploadProgress.apply(items);
-        }));
+        _subscriptions.push(
+          self(208).default.addListener("didSendNetworkData", (arg0) => {
+            const items = [...arg0];
+            return self.__didUploadProgress.apply(items);
+          }),
+        );
         const _subscriptions1 = self._subscriptions;
         const _default = self(208).default;
-        _subscriptions1.push(self(208).default.addListener("didReceiveNetworkResponse", (arg0) => {
-          const items = [...arg0];
-          return self.__didReceiveResponse.apply(items);
-        }));
+        _subscriptions1.push(
+          self(208).default.addListener("didReceiveNetworkResponse", (arg0) => {
+            const items = [...arg0];
+            return self.__didReceiveResponse.apply(items);
+          }),
+        );
         const _subscriptions2 = self._subscriptions;
         const _default2 = self(208).default;
-        _subscriptions2.push(self(208).default.addListener("didReceiveNetworkData", (arg0) => {
-          const items = [...arg0];
-          return self.__didReceiveData.apply(items);
-        }));
+        _subscriptions2.push(
+          self(208).default.addListener("didReceiveNetworkData", (arg0) => {
+            const items = [...arg0];
+            return self.__didReceiveData.apply(items);
+          }),
+        );
         const _subscriptions3 = self._subscriptions;
         const _default3 = self(208).default;
-        _subscriptions3.push(self(208).default.addListener("didReceiveNetworkIncrementalData", (arg0) => {
-          const items = [...arg0];
-          return self.__didReceiveIncrementalData.apply(items);
-        }));
+        _subscriptions3.push(
+          self(208).default.addListener("didReceiveNetworkIncrementalData", (arg0) => {
+            const items = [...arg0];
+            return self.__didReceiveIncrementalData.apply(items);
+          }),
+        );
         const _subscriptions4 = self._subscriptions;
         const _default4 = self(208).default;
-        _subscriptions4.push(self(208).default.addListener("didReceiveNetworkDataProgress", (arg0) => {
-          const items = [...arg0];
-          return self.__didReceiveDataProgress.apply(items);
-        }));
+        _subscriptions4.push(
+          self(208).default.addListener("didReceiveNetworkDataProgress", (arg0) => {
+            const items = [...arg0];
+            return self.__didReceiveDataProgress.apply(items);
+          }),
+        );
         const _subscriptions5 = self._subscriptions;
         const _default5 = self(208).default;
-        _subscriptions5.push(self(208).default.addListener("didCompleteNetworkResponse", (arg0) => {
-          const items = [...arg0];
-          return self.__didCompleteResponse.apply(items);
-        }));
+        _subscriptions5.push(
+          self(208).default.addListener("didCompleteNetworkResponse", (arg0) => {
+            const items = [...arg0];
+            return self.__didCompleteResponse.apply(items);
+          }),
+        );
         let str7 = "text";
         if ("arraybuffer" === self._responseType) {
           str7 = "base64";
@@ -647,9 +675,20 @@ const items1 = [
         const _default7 = self(208).default;
         ({ _method, _trackingName } = self);
         ({ __didCreateRequest, _url: _url2, _headers, timeout } = self);
-        _default7.sendRequest(_method, _trackingName, _url2, _headers, arg0, str7, self._incrementalEvents || self.onreadystatechange || self.onprogress, timeout, __didCreateRequest.bind(self), self.withCredentials);
+        _default7.sendRequest(
+          _method,
+          _trackingName,
+          _url2,
+          _headers,
+          arg0,
+          str7,
+          self._incrementalEvents || self.onreadystatechange || self.onprogress,
+          timeout,
+          __didCreateRequest.bind(self),
+          self.withCredentials,
+        );
       }
-    }
+    },
   },
   {
     key: "abort",
@@ -673,7 +712,7 @@ const items1 = [
         self.setReadyState(self.DONE);
       }
       self._reset();
-    }
+    },
   },
   {
     key: "setResponseHeaders",
@@ -692,7 +731,7 @@ const items1 = [
         arg0[str.toLowerCase()] = obj[str];
         return arg0;
       }, {});
-    }
+    },
   },
   {
     key: "setReadyState",
@@ -729,7 +768,7 @@ const items1 = [
         }
         const objResult1 = obj(135);
       }
-    }
+    },
   },
   {
     key: "addEventListener",
@@ -748,7 +787,7 @@ const items1 = [
       }
       const items = [arg0, arg1];
       fn(items);
-    }
+    },
   },
   {
     key: "onabort",
@@ -757,7 +796,7 @@ const items1 = [
     },
     set(fn) {
       const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "abort", fn);
-    }
+    },
   },
   {
     key: "onerror",
@@ -766,7 +805,7 @@ const items1 = [
     },
     set(fn) {
       const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "error", fn);
-    }
+    },
   },
   {
     key: "onload",
@@ -775,7 +814,7 @@ const items1 = [
     },
     set(fn) {
       const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "load", fn);
-    }
+    },
   },
   {
     key: "onloadstart",
@@ -784,7 +823,7 @@ const items1 = [
     },
     set(fn) {
       const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "loadstart", fn);
-    }
+    },
   },
   {
     key: "onprogress",
@@ -793,7 +832,7 @@ const items1 = [
     },
     set(fn) {
       const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "progress", fn);
-    }
+    },
   },
   {
     key: "ontimeout",
@@ -802,7 +841,7 @@ const items1 = [
     },
     set(fn) {
       const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "timeout", fn);
-    }
+    },
   },
   {
     key: "onloadend",
@@ -811,7 +850,7 @@ const items1 = [
     },
     set(fn) {
       const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "loadend", fn);
-    }
+    },
   },
   {
     key: "onreadystatechange",
@@ -820,14 +859,14 @@ const items1 = [
     },
     set(fn) {
       const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "readystatechange", fn);
-    }
-  }
+    },
+  },
 ];
 obj = {
   key: "__setInterceptor_DO_NOT_USE",
   value: function __setInterceptor_DO_NOT_USE(_interceptor) {
     XMLHttpRequest._interceptor = _interceptor;
-  }
+  },
 };
 const items2 = [obj];
 const importDefaultResultResult = importDefaultResult(XMLHttpRequest, items1, items2);

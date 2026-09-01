@@ -19,7 +19,17 @@ const obj8 = { animation: "timing", config: null };
 const obj7 = { duration: 450, easing: Easing.bezier(0.20833, 0.82, 0.25, 1) };
 obj8[1] = { duration: 450, easing: Easing.bezier(0.20833, 0.82, 0.25, 1) };
 
-export const TransitionIOSSpec = { animation: "spring", config: { stiffness: 1000, damping: 500, mass: 3, overshootClamping: true, restDisplacementThreshold: 10, restSpeedThreshold: 10 } };
+export const TransitionIOSSpec = {
+  animation: "spring",
+  config: {
+    stiffness: 1000,
+    damping: 500,
+    mass: 3,
+    overshootClamping: true,
+    restDisplacementThreshold: 10,
+    restSpeedThreshold: 10,
+  },
+};
 export const FadeInFromBottomAndroidSpec = obj;
 export const FadeOutToBottomAndroidSpec = obj;
 export const RevealFromBottomAndroidSpec = obj2;
@@ -32,8 +42,8 @@ export const BottomSheetSlideInSpec = {
     duration: 250,
     easing(arg0) {
       return Math.cos((arg0 + 1) * Math.PI) / 2 + 0.5;
-    }
-  }
+    },
+  },
 };
 export const BottomSheetSlideOutSpec = {
   animation: "timing",
@@ -46,6 +56,6 @@ export const BottomSheetSlideOutSpec = {
         num = Math.pow(sum, 2);
       }
       return num;
-    }
-  }
+    },
+  },
 };

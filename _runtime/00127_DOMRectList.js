@@ -31,7 +31,7 @@ let obj = {
   key: "length",
   get() {
     return callback2(this, closure_4)[closure_4];
-  }
+  },
 };
 const items = [
   obj,
@@ -45,15 +45,14 @@ const items = [
         }
       }
       return null;
-    }
+    },
   },
-
 ];
 obj = {
   key: Symbol.iterator,
   value() {
     return DOMRectList(128).createValueIterator(this);
-  }
+  },
 };
 items[2] = obj;
 const importDefaultResultResult = _createClassDefault(DOMRectList, items);

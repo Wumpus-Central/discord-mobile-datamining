@@ -82,13 +82,13 @@ let items = [
       }
       const obj = URLImpl(14029);
       tmp = URLImpl;
-    }
+    },
   },
   {
     key: "origin",
     get() {
       return URLImpl(14029).serializeURLOrigin(this._url);
-    }
+    },
   },
   {
     key: "protocol",
@@ -99,7 +99,7 @@ let items = [
       let obj = URLImpl(14029);
       obj = { url: this._url, stateOverride: "scheme start" };
       obj.basicURLParse(`${arg0}:`, obj);
-    }
+    },
   },
   {
     key: "username",
@@ -111,7 +111,7 @@ let items = [
         URLImpl(14029).setTheUsername(this._url, arg0);
         const tmpResult = URLImpl(14029);
       }
-    }
+    },
   },
   {
     key: "password",
@@ -123,7 +123,7 @@ let items = [
         URLImpl(14029).setThePassword(this._url, arg0);
         const tmpResult = URLImpl(14029);
       }
-    }
+    },
   },
   {
     key: "host",
@@ -149,7 +149,7 @@ let items = [
         obj[0] = tmp._url;
         obj.basicURLParse(arg0, obj);
       }
-    }
+    },
   },
   {
     key: "hostname",
@@ -168,7 +168,7 @@ let items = [
         obj[0] = tmp._url;
         obj.basicURLParse(arg0, obj);
       }
-    }
+    },
   },
   {
     key: "port",
@@ -193,7 +193,7 @@ let items = [
           const tmpResult = URLImpl(14029);
         }
       }
-    }
+    },
   },
   {
     key: "pathname",
@@ -219,7 +219,7 @@ let items = [
         obj[0] = self._url;
         obj.basicURLParse(arg0, obj);
       }
-    }
+    },
   },
   {
     key: "search",
@@ -252,13 +252,13 @@ let items = [
         obj.basicURLParse(substr, obj);
         self._query._list = URLImpl(14032).parseUrlencoded(substr);
       }
-    }
+    },
   },
   {
     key: "searchParams",
     get() {
       return this._query;
-    }
+    },
   },
   {
     key: "hash",
@@ -288,14 +288,14 @@ let items = [
       } else {
         self._url.fragment = null;
       }
-    }
+    },
   },
   {
     key: "toJSON",
     value: function toJSON() {
       return this.href;
-    }
-  }
+    },
+  },
 ];
 
 export const implementation = _createClass(URLImpl, items);

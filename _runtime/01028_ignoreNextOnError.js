@@ -16,9 +16,11 @@ function wrap(__sentry_wrapped__) {
   if (arg1 === undefined) {
     obj = {};
   }
-  if ((function isFunction(fn) {
-    return typeof fn === "function";
-  })(__sentry_wrapped__)) {
+  if (
+    (function isFunction(fn) {
+      return typeof fn === "function";
+    })(__sentry_wrapped__)
+  ) {
     try {
       __sentry_wrapped__ = __sentry_wrapped__.__sentry_wrapped__;
       if (__sentry_wrapped__) {
@@ -35,7 +37,10 @@ function wrap(__sentry_wrapped__) {
             const items = [...arguments];
             try {
               const self = this;
-              return items.apply(this, items.map((arg0) => closure_1_4(arg0, closure_1)));
+              return items.apply(
+                this,
+                items.map((arg0) => closure_1_4(arg0, closure_1)),
+              );
             } catch (tmp2) {
               obj = tmp2;
               closure_1_3();
@@ -84,8 +89,7 @@ function wrap(__sentry_wrapped__) {
             tmp2 = _require(obj[0]);
             let result = tmp2.addNonEnumerableProperty(__sentry_wrapped__, "__sentry_wrapped__", sentryWrapped);
             const obj3 = _require(obj[0]);
-          } catch (err) {
-          }
+          } catch (err) {}
         }
         obj2 = _require(obj[0]);
       }

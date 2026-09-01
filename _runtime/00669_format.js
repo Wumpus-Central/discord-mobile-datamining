@@ -3,7 +3,7 @@ let self = this;
 const global = arg0;
 const dependencyMap = arg4;
 const exports = arg5;
-const fn = function() {
+const fn = function () {
   function format(arg0) {
     const replaced = String(arg0).replace(/^ +| +$/g, "");
     let sum = replaced;
@@ -104,7 +104,7 @@ const fn = function() {
     return String(arg0).replace(/^ +| +$/g, "");
   }
   let obj = { function: true, object: true };
-  let tmp = obj[typeof window] && window || this;
+  let tmp = (obj[typeof window] && window) || this;
   closure_0 = tmp;
   let tmp4 = obj[typeof closure_1] && closure_1 && !closure_1.nodeType && closure_1;
   let tmp5 = tmp2;
@@ -268,8 +268,15 @@ const fn = function() {
             const str14 = parts[0].replace(RegExp(pattern, "i"), pattern.label || pattern);
             const _RegExp7 = RegExp;
             const _String2 = String;
-            const str18 = parts[0].replace(RegExp(pattern, "i"), pattern.label || pattern).replace(RegExp(`; *(?:${pattern.label || pattern}[_-])?`, "i"), " ");
-            replaced = String(parts[0].replace(RegExp(pattern, "i"), pattern.label || pattern).replace(RegExp(`; *(?:${pattern.label || pattern}[_-])?`, "i"), " ").replace(RegExp(`(${pattern.label || pattern})[-_.]?(\\w)`, "i"), "$1 $2")).replace(/^ +| +$/g, "");
+            const str18 = parts[0]
+              .replace(RegExp(pattern, "i"), pattern.label || pattern)
+              .replace(RegExp(`; *(?:${pattern.label || pattern}[_-])?`, "i"), " ");
+            replaced = String(
+              parts[0]
+                .replace(RegExp(pattern, "i"), pattern.label || pattern)
+                .replace(RegExp(`; *(?:${pattern.label || pattern}[_-])?`, "i"), " ")
+                .replace(RegExp(`(${pattern.label || pattern})[-_.]?(\\w)`, "i"), "$1 $2"),
+            ).replace(/^ +| +$/g, "");
             let sum = replaced;
             if (!obj6.test(replaced)) {
               const _String3 = String;
@@ -280,13 +287,27 @@ const fn = function() {
             }
             tmp7 = sum;
             obj6 = /^(?:webOS|i(?:OS|P))/;
-            const str22 = String(parts[0].replace(RegExp(pattern, "i"), pattern.label || pattern).replace(RegExp(`; *(?:${pattern.label || pattern}[_-])?`, "i"), " ").replace(RegExp(`(${pattern.label || pattern})[-_.]?(\\w)`, "i"), "$1 $2"));
+            const str22 = String(
+              parts[0]
+                .replace(RegExp(pattern, "i"), pattern.label || pattern)
+                .replace(RegExp(`; *(?:${pattern.label || pattern}[_-])?`, "i"), " ")
+                .replace(RegExp(`(${pattern.label || pattern})[-_.]?(\\w)`, "i"), "$1 $2"),
+            );
           }
           return tmp7;
         });
       }
       let version = versionResult;
-      const items = [{ label: "EdgeHTML", pattern: "Edge" }, "Trident", { label: "WebKit", pattern: "AppleWebKit" }, "iCab", , , , , ];
+      const items = [
+        { label: "EdgeHTML", pattern: "Edge" },
+        "Trident",
+        { label: "WebKit", pattern: "AppleWebKit" },
+        "iCab",
+        ,
+        ,
+        ,
+        ,
+      ];
       let str10 = "Presto";
       items[4] = "Presto";
       items[5] = "NetFront";
@@ -314,7 +335,59 @@ const fn = function() {
           return tmp;
         });
       })(items);
-      const items1 = ["Adobe AIR", "Arora", "Avant Browser", "Breach", "Camino", "Electron", "Epiphany", "Fennec", "Flock", "Galeon", "GreenBrowser", "iCab", "Iceweasel", "K-Meleon", "Konqueror", "Lunascape", "Maxthon", { label: "Microsoft Edge", pattern: "(?:Edge|Edg|EdgA|EdgiOS)" }, "Midori", "Nook Browser", "PaleMoon", "PhantomJS", "Raven", "Rekonq", "RockMelt", { label: "Samsung Internet", pattern: "SamsungBrowser" }, "SeaMonkey", { label: "Silk", pattern: "(?:Cloud9|Silk-Accelerated)" }, "Sleipnir", "SlimBrowser", { label: "SRWare Iron", pattern: "Iron" }, "Sunrise", "Swiftfox", "Vivaldi", "Waterfox", "WebPositive", { label: "Yandex Browser", pattern: "YaBrowser" }, { label: "UC Browser", pattern: "UCBrowser" }, "Opera Mini", { label: "Opera Mini", pattern: "OPiOS" }, "Opera", { label: "Opera", pattern: "OPR" }, "Chromium", "Chrome", { label: "Chrome", pattern: "(?:HeadlessChrome)" }, { label: "Chrome Mobile", pattern: "(?:CriOS|CrMo)" }, { label: "Firefox", pattern: "(?:Firefox|Minefield)" }, { label: "Firefox for iOS", pattern: "FxiOS" }, { label: "IE", pattern: "IEMobile" }, { label: "IE", pattern: "MSIE" }, "Safari"];
+      const items1 = [
+        "Adobe AIR",
+        "Arora",
+        "Avant Browser",
+        "Breach",
+        "Camino",
+        "Electron",
+        "Epiphany",
+        "Fennec",
+        "Flock",
+        "Galeon",
+        "GreenBrowser",
+        "iCab",
+        "Iceweasel",
+        "K-Meleon",
+        "Konqueror",
+        "Lunascape",
+        "Maxthon",
+        { label: "Microsoft Edge", pattern: "(?:Edge|Edg|EdgA|EdgiOS)" },
+        "Midori",
+        "Nook Browser",
+        "PaleMoon",
+        "PhantomJS",
+        "Raven",
+        "Rekonq",
+        "RockMelt",
+        { label: "Samsung Internet", pattern: "SamsungBrowser" },
+        "SeaMonkey",
+        { label: "Silk", pattern: "(?:Cloud9|Silk-Accelerated)" },
+        "Sleipnir",
+        "SlimBrowser",
+        { label: "SRWare Iron", pattern: "Iron" },
+        "Sunrise",
+        "Swiftfox",
+        "Vivaldi",
+        "Waterfox",
+        "WebPositive",
+        { label: "Yandex Browser", pattern: "YaBrowser" },
+        { label: "UC Browser", pattern: "UCBrowser" },
+        "Opera Mini",
+        { label: "Opera Mini", pattern: "OPiOS" },
+        "Opera",
+        { label: "Opera", pattern: "OPR" },
+        "Chromium",
+        "Chrome",
+        { label: "Chrome", pattern: "(?:HeadlessChrome)" },
+        { label: "Chrome Mobile", pattern: "(?:CriOS|CrMo)" },
+        { label: "Firefox", pattern: "(?:Firefox|Minefield)" },
+        { label: "Firefox for iOS", pattern: "FxiOS" },
+        { label: "IE", pattern: "IEMobile" },
+        { label: "IE", pattern: "MSIE" },
+        "Safari",
+      ];
       let text1 = (function getName(items1) {
         return closure_1_9(items1, (arg0, pattern) => {
           let tmp = arg0;
@@ -336,10 +409,63 @@ const fn = function() {
           return tmp;
         });
       })(items1);
-      const items2 = [{ label: "BlackBerry", pattern: "BB10" }, "BlackBerry", { label: "Galaxy S", pattern: "GT-I9000" }, { label: "Galaxy S2", pattern: "GT-I9100" }, { label: "Galaxy S3", pattern: "GT-I9300" }, { label: "Galaxy S4", pattern: "GT-I9500" }, { label: "Galaxy S5", pattern: "SM-G900" }, { label: "Galaxy S6", pattern: "SM-G920" }, { label: "Galaxy S6 Edge", pattern: "SM-G925" }, { label: "Galaxy S7", pattern: "SM-G930" }, { label: "Galaxy S7 Edge", pattern: "SM-G935" }, "Google TV", "Lumia", "iPad", "iPod", "iPhone", "Kindle", { label: "Kindle Fire", pattern: "(?:Cloud9|Silk-Accelerated)" }, "Nexus", "Nook", "PlayBook", "PlayStation Vita", "PlayStation", "TouchPad", "Transformer", { label: "Wii U", pattern: "WiiU" }, "Wii", "Xbox One", { label: "Xbox 360", pattern: "Xbox" }, "Xoom"];
+      const items2 = [
+        { label: "BlackBerry", pattern: "BB10" },
+        "BlackBerry",
+        { label: "Galaxy S", pattern: "GT-I9000" },
+        { label: "Galaxy S2", pattern: "GT-I9100" },
+        { label: "Galaxy S3", pattern: "GT-I9300" },
+        { label: "Galaxy S4", pattern: "GT-I9500" },
+        { label: "Galaxy S5", pattern: "SM-G900" },
+        { label: "Galaxy S6", pattern: "SM-G920" },
+        { label: "Galaxy S6 Edge", pattern: "SM-G925" },
+        { label: "Galaxy S7", pattern: "SM-G930" },
+        { label: "Galaxy S7 Edge", pattern: "SM-G935" },
+        "Google TV",
+        "Lumia",
+        "iPad",
+        "iPod",
+        "iPhone",
+        "Kindle",
+        { label: "Kindle Fire", pattern: "(?:Cloud9|Silk-Accelerated)" },
+        "Nexus",
+        "Nook",
+        "PlayBook",
+        "PlayStation Vita",
+        "PlayStation",
+        "TouchPad",
+        "Transformer",
+        { label: "Wii U", pattern: "WiiU" },
+        "Wii",
+        "Xbox One",
+        { label: "Xbox 360", pattern: "Xbox" },
+        "Xoom",
+      ];
       product = getProduct(items2);
       let replaced = product;
-      obj = { Apple: null, Alcatel: null, Archos: null, Amazon: null, Asus: null, "Barnes & Noble": null, BlackBerry: null, Google: null, HP: null, HTC: null, Huawei: null, Lenovo: null, LG: null, Microsoft: null, Motorola: null, Nintendo: null, Nokia: null, Oppo: null, Samsung: null, Sony: null, Xiaomi: null };
+      obj = {
+        Apple: null,
+        Alcatel: null,
+        Archos: null,
+        Amazon: null,
+        Asus: null,
+        "Barnes & Noble": null,
+        BlackBerry: null,
+        Google: null,
+        HP: null,
+        HTC: null,
+        Huawei: null,
+        Lenovo: null,
+        LG: null,
+        Microsoft: null,
+        Motorola: null,
+        Nintendo: null,
+        Nokia: null,
+        Oppo: null,
+        Samsung: null,
+        Sony: null,
+        Xiaomi: null,
+      };
       obj[0] = { iPad: 1, iPhone: 1, iPod: 1 };
       obj[1] = {};
       obj[2] = {};
@@ -385,7 +511,19 @@ const fn = function() {
           return tmp;
         });
       })(obj);
-      const items3 = ["Windows Phone", "KaiOS", "Android", "CentOS", { label: "Chrome OS", pattern: "CrOS" }, "Debian", { label: "DragonFly BSD", pattern: "DragonFly" }, "Fedora", "FreeBSD", "Gentoo", "Haiku"];
+      const items3 = [
+        "Windows Phone",
+        "KaiOS",
+        "Android",
+        "CentOS",
+        { label: "Chrome OS", pattern: "CrOS" },
+        "Debian",
+        { label: "DragonFly BSD", pattern: "DragonFly" },
+        "Fedora",
+        "FreeBSD",
+        "Gentoo",
+        "Haiku",
+      ];
       let str57 = "Kubuntu";
       items3[11] = "Kubuntu";
       items3[12] = "Linux Mint";
@@ -437,7 +575,20 @@ const fn = function() {
               isMatch = !/^Windows Phone /i.test(text);
               const obj3 = /^Windows Phone /i;
             }
-            const obj = { "10.0": "10", "6.4": "10 Technical Preview", "6.3": "8.1", "6.2": "8", "6.1": "Server 2008 R2 / 7", "6.0": "Server 2008 / Vista", "5.2": "Server 2003 / XP 64-bit", "5.1": "XP", "5.01": "2000 SP1", "5.0": "2000", "4.0": "NT", "4.90": "ME" };
+            const obj = {
+              "10.0": "10",
+              6.4: "10 Technical Preview",
+              6.3: "8.1",
+              6.2: "8",
+              6.1: "Server 2008 R2 / 7",
+              "6.0": "Server 2008 / Vista",
+              5.2: "Server 2003 / XP 64-bit",
+              5.1: "XP",
+              5.01: "2000 SP1",
+              "5.0": "2000",
+              "4.0": "NT",
+              "4.90": "ME",
+            };
             let tmp9 = obj;
             if (isMatch) {
               const obj5 = /[\d.]+$/;
@@ -459,18 +610,108 @@ const fn = function() {
             }
             const str11 = str8.replace(/ ce$/i, " CE");
             const str13 = str8.replace(/ ce$/i, " CE").replace(/\bhpw/i, "web");
-            const str15 = str8.replace(/ ce$/i, " CE").replace(/\bhpw/i, "web").replace(/\bMacintosh\b/, "Mac OS");
-            const str17 = str8.replace(/ ce$/i, " CE").replace(/\bhpw/i, "web").replace(/\bMacintosh\b/, "Mac OS").replace(/_PowerPC\b/i, " OS");
-            const str19 = str8.replace(/ ce$/i, " CE").replace(/\bhpw/i, "web").replace(/\bMacintosh\b/, "Mac OS").replace(/_PowerPC\b/i, " OS").replace(/\b(OS X) [^ \d]+/i, "$1");
-            const str20 = str8.replace(/ ce$/i, " CE").replace(/\bhpw/i, "web").replace(/\bMacintosh\b/, "Mac OS").replace(/_PowerPC\b/i, " OS").replace(/\b(OS X) [^ \d]+/i, "$1").replace(/\bMac (OS X)\b/, "$1");
-            const str22 = str8.replace(/ ce$/i, " CE").replace(/\bhpw/i, "web").replace(/\bMacintosh\b/, "Mac OS").replace(/_PowerPC\b/i, " OS").replace(/\b(OS X) [^ \d]+/i, "$1").replace(/\bMac (OS X)\b/, "$1").replace(/\/(\d)/, " $1");
-            const str24 = str8.replace(/ ce$/i, " CE").replace(/\bhpw/i, "web").replace(/\bMacintosh\b/, "Mac OS").replace(/_PowerPC\b/i, " OS").replace(/\b(OS X) [^ \d]+/i, "$1").replace(/\bMac (OS X)\b/, "$1").replace(/\/(\d)/, " $1").replace(/_/g, ".");
-            const str26 = str8.replace(/ ce$/i, " CE").replace(/\bhpw/i, "web").replace(/\bMacintosh\b/, "Mac OS").replace(/_PowerPC\b/i, " OS").replace(/\b(OS X) [^ \d]+/i, "$1").replace(/\bMac (OS X)\b/, "$1").replace(/\/(\d)/, " $1").replace(/_/g, ".").replace(/(?: BePC|[ .]*fc[ \d.]+)$/i, "");
-            const str28 = str8.replace(/ ce$/i, " CE").replace(/\bhpw/i, "web").replace(/\bMacintosh\b/, "Mac OS").replace(/_PowerPC\b/i, " OS").replace(/\b(OS X) [^ \d]+/i, "$1").replace(/\bMac (OS X)\b/, "$1").replace(/\/(\d)/, " $1").replace(/_/g, ".").replace(/(?: BePC|[ .]*fc[ \d.]+)$/i, "").replace(/\bx86\.64\b/gi, "x86_64");
-            const str29 = str8.replace(/ ce$/i, " CE").replace(/\bhpw/i, "web").replace(/\bMacintosh\b/, "Mac OS").replace(/_PowerPC\b/i, " OS").replace(/\b(OS X) [^ \d]+/i, "$1").replace(/\bMac (OS X)\b/, "$1").replace(/\/(\d)/, " $1").replace(/_/g, ".").replace(/(?: BePC|[ .]*fc[ \d.]+)$/i, "").replace(/\bx86\.64\b/gi, "x86_64").replace(/\b(Windows Phone) OS\b/, "$1");
+            const str15 = str8
+              .replace(/ ce$/i, " CE")
+              .replace(/\bhpw/i, "web")
+              .replace(/\bMacintosh\b/, "Mac OS");
+            const str17 = str8
+              .replace(/ ce$/i, " CE")
+              .replace(/\bhpw/i, "web")
+              .replace(/\bMacintosh\b/, "Mac OS")
+              .replace(/_PowerPC\b/i, " OS");
+            const str19 = str8
+              .replace(/ ce$/i, " CE")
+              .replace(/\bhpw/i, "web")
+              .replace(/\bMacintosh\b/, "Mac OS")
+              .replace(/_PowerPC\b/i, " OS")
+              .replace(/\b(OS X) [^ \d]+/i, "$1");
+            const str20 = str8
+              .replace(/ ce$/i, " CE")
+              .replace(/\bhpw/i, "web")
+              .replace(/\bMacintosh\b/, "Mac OS")
+              .replace(/_PowerPC\b/i, " OS")
+              .replace(/\b(OS X) [^ \d]+/i, "$1")
+              .replace(/\bMac (OS X)\b/, "$1");
+            const str22 = str8
+              .replace(/ ce$/i, " CE")
+              .replace(/\bhpw/i, "web")
+              .replace(/\bMacintosh\b/, "Mac OS")
+              .replace(/_PowerPC\b/i, " OS")
+              .replace(/\b(OS X) [^ \d]+/i, "$1")
+              .replace(/\bMac (OS X)\b/, "$1")
+              .replace(/\/(\d)/, " $1");
+            const str24 = str8
+              .replace(/ ce$/i, " CE")
+              .replace(/\bhpw/i, "web")
+              .replace(/\bMacintosh\b/, "Mac OS")
+              .replace(/_PowerPC\b/i, " OS")
+              .replace(/\b(OS X) [^ \d]+/i, "$1")
+              .replace(/\bMac (OS X)\b/, "$1")
+              .replace(/\/(\d)/, " $1")
+              .replace(/_/g, ".");
+            const str26 = str8
+              .replace(/ ce$/i, " CE")
+              .replace(/\bhpw/i, "web")
+              .replace(/\bMacintosh\b/, "Mac OS")
+              .replace(/_PowerPC\b/i, " OS")
+              .replace(/\b(OS X) [^ \d]+/i, "$1")
+              .replace(/\bMac (OS X)\b/, "$1")
+              .replace(/\/(\d)/, " $1")
+              .replace(/_/g, ".")
+              .replace(/(?: BePC|[ .]*fc[ \d.]+)$/i, "");
+            const str28 = str8
+              .replace(/ ce$/i, " CE")
+              .replace(/\bhpw/i, "web")
+              .replace(/\bMacintosh\b/, "Mac OS")
+              .replace(/_PowerPC\b/i, " OS")
+              .replace(/\b(OS X) [^ \d]+/i, "$1")
+              .replace(/\bMac (OS X)\b/, "$1")
+              .replace(/\/(\d)/, " $1")
+              .replace(/_/g, ".")
+              .replace(/(?: BePC|[ .]*fc[ \d.]+)$/i, "")
+              .replace(/\bx86\.64\b/gi, "x86_64");
+            const str29 = str8
+              .replace(/ ce$/i, " CE")
+              .replace(/\bhpw/i, "web")
+              .replace(/\bMacintosh\b/, "Mac OS")
+              .replace(/_PowerPC\b/i, " OS")
+              .replace(/\b(OS X) [^ \d]+/i, "$1")
+              .replace(/\bMac (OS X)\b/, "$1")
+              .replace(/\/(\d)/, " $1")
+              .replace(/_/g, ".")
+              .replace(/(?: BePC|[ .]*fc[ \d.]+)$/i, "")
+              .replace(/\bx86\.64\b/gi, "x86_64")
+              .replace(/\b(Windows Phone) OS\b/, "$1");
             const _String3 = String;
-            const str30 = str8.replace(/ ce$/i, " CE").replace(/\bhpw/i, "web").replace(/\bMacintosh\b/, "Mac OS").replace(/_PowerPC\b/i, " OS").replace(/\b(OS X) [^ \d]+/i, "$1").replace(/\bMac (OS X)\b/, "$1").replace(/\/(\d)/, " $1").replace(/_/g, ".").replace(/(?: BePC|[ .]*fc[ \d.]+)$/i, "").replace(/\bx86\.64\b/gi, "x86_64").replace(/\b(Windows Phone) OS\b/, "$1").replace(/\b(Chrome OS \w+) [\d.]+\b/, "$1");
-            replaced = String(str8.replace(/ ce$/i, " CE").replace(/\bhpw/i, "web").replace(/\bMacintosh\b/, "Mac OS").replace(/_PowerPC\b/i, " OS").replace(/\b(OS X) [^ \d]+/i, "$1").replace(/\bMac (OS X)\b/, "$1").replace(/\/(\d)/, " $1").replace(/_/g, ".").replace(/(?: BePC|[ .]*fc[ \d.]+)$/i, "").replace(/\bx86\.64\b/gi, "x86_64").replace(/\b(Windows Phone) OS\b/, "$1").replace(/\b(Chrome OS \w+) [\d.]+\b/, "$1").split(" on ")[0]).replace(/^ +| +$/g, "");
+            const str30 = str8
+              .replace(/ ce$/i, " CE")
+              .replace(/\bhpw/i, "web")
+              .replace(/\bMacintosh\b/, "Mac OS")
+              .replace(/_PowerPC\b/i, " OS")
+              .replace(/\b(OS X) [^ \d]+/i, "$1")
+              .replace(/\bMac (OS X)\b/, "$1")
+              .replace(/\/(\d)/, " $1")
+              .replace(/_/g, ".")
+              .replace(/(?: BePC|[ .]*fc[ \d.]+)$/i, "")
+              .replace(/\bx86\.64\b/gi, "x86_64")
+              .replace(/\b(Windows Phone) OS\b/, "$1")
+              .replace(/\b(Chrome OS \w+) [\d.]+\b/, "$1");
+            replaced = String(
+              str8
+                .replace(/ ce$/i, " CE")
+                .replace(/\bhpw/i, "web")
+                .replace(/\bMacintosh\b/, "Mac OS")
+                .replace(/_PowerPC\b/i, " OS")
+                .replace(/\b(OS X) [^ \d]+/i, "$1")
+                .replace(/\bMac (OS X)\b/, "$1")
+                .replace(/\/(\d)/, " $1")
+                .replace(/_/g, ".")
+                .replace(/(?: BePC|[ .]*fc[ \d.]+)$/i, "")
+                .replace(/\bx86\.64\b/gi, "x86_64")
+                .replace(/\b(Windows Phone) OS\b/, "$1")
+                .replace(/\b(Chrome OS \w+) [\d.]+\b/, "$1")
+                .split(" on ")[0],
+            ).replace(/^ +| +$/g, "");
             let sum = replaced;
             if (!obj6.test(replaced)) {
               const _String4 = String;
@@ -481,7 +722,22 @@ const fn = function() {
             }
             tmp6 = sum;
             obj6 = /^(?:webOS|i(?:OS|P))/;
-            const str32 = String(str8.replace(/ ce$/i, " CE").replace(/\bhpw/i, "web").replace(/\bMacintosh\b/, "Mac OS").replace(/_PowerPC\b/i, " OS").replace(/\b(OS X) [^ \d]+/i, "$1").replace(/\bMac (OS X)\b/, "$1").replace(/\/(\d)/, " $1").replace(/_/g, ".").replace(/(?: BePC|[ .]*fc[ \d.]+)$/i, "").replace(/\bx86\.64\b/gi, "x86_64").replace(/\b(Windows Phone) OS\b/, "$1").replace(/\b(Chrome OS \w+) [\d.]+\b/, "$1").split(" on ")[0]);
+            const str32 = String(
+              str8
+                .replace(/ ce$/i, " CE")
+                .replace(/\bhpw/i, "web")
+                .replace(/\bMacintosh\b/, "Mac OS")
+                .replace(/_PowerPC\b/i, " OS")
+                .replace(/\b(OS X) [^ \d]+/i, "$1")
+                .replace(/\bMac (OS X)\b/, "$1")
+                .replace(/\/(\d)/, " $1")
+                .replace(/_/g, ".")
+                .replace(/(?: BePC|[ .]*fc[ \d.]+)$/i, "")
+                .replace(/\bx86\.64\b/gi, "x86_64")
+                .replace(/\b(Windows Phone) OS\b/, "$1")
+                .replace(/\b(Chrome OS \w+) [\d.]+\b/, "$1")
+                .split(" on ")[0],
+            );
           }
           return tmp6;
         });
@@ -551,8 +807,11 @@ const fn = function() {
               if (!arg0) {
                 const _RegExp = RegExp;
                 const RegExpResult = RegExp(`${arg1}(?:-[\\d.]+/|(?: for [\\w-]+)?[ /-])([\\d.]+[^ ();/_-]*)`, "i");
-                tmp = RegExp(`${arg1}(?:-[\\d.]+/|(?: for [\\w-]+)?[ /-])([\\d.]+[^ ();/_-]*)`, "i").exec(closure_0) || 0[1];
-                const tmp5 = RegExp(`${arg1}(?:-[\\d.]+/|(?: for [\\w-]+)?[ /-])([\\d.]+[^ ();/_-]*)`, "i").exec(closure_0) || 0;
+                tmp =
+                  RegExp(`${arg1}(?:-[\\d.]+/|(?: for [\\w-]+)?[ /-])([\\d.]+[^ ();/_-]*)`, "i").exec(closure_0) ||
+                  (0)[1];
+                const tmp5 =
+                  RegExp(`${arg1}(?:-[\\d.]+/|(?: for [\\w-]+)?[ /-])([\\d.]+[^ ();/_-]*)`, "i").exec(closure_0) || 0;
               }
               if (!tmp) {
                 tmp = null;
@@ -561,7 +820,11 @@ const fn = function() {
             });
           }
           if (!version) {
-            const items7 = ["(?:Cloud9|CriOS|CrMo|Edge|Edg|EdgA|EdgiOS|FxiOS|HeadlessChrome|IEMobile|Iron|Opera ?Mini|OPiOS|OPR|Raven|SamsungBrowser|Silk(?!/[\\d.]+$)|UCBrowser|YaBrowser)", "Version", qualify(text1)];
+            const items7 = [
+              "(?:Cloud9|CriOS|CrMo|Edge|Edg|EdgA|EdgiOS|FxiOS|HeadlessChrome|IEMobile|Iron|Opera ?Mini|OPiOS|OPR|Raven|SamsungBrowser|Silk(?!/[\\d.]+$)|UCBrowser|YaBrowser)",
+              "Version",
+              qualify(text1),
+            ];
             str = "(?:Firefox|Minefield|NetFront)";
             items7[3] = "(?:Firefox|Minefield|NetFront)";
             version = getVersion(items7);
@@ -625,7 +888,7 @@ const fn = function() {
             tmp92 = items8;
           }
           if ("IE" == text1) {
-            const tmp95 = /; *(?:XBLWP|ZuneWP)(\d+)/i.exec(tmp9) || 0[1];
+            const tmp95 = /; *(?:XBLWP|ZuneWP)(\d+)/i.exec(tmp9) || (0)[1];
             str = tmp95;
             if (tmp95) {
               let text2 = text1;
@@ -649,18 +912,20 @@ const fn = function() {
             text2 = tmp99;
             if (isMatch4) {
               str = "global";
-              if ((function isHostType(global, global) {
-                let str = "number";
-                if (null != global) {
-                  str = typeof global.global;
-                }
-                let isMatch = /^(?:boolean|number|string|undefined)$/.test(str);
-                if (!isMatch) {
-                  isMatch = "object" === str && !global.global;
-                  const tmp2 = "object" === str && !global.global;
-                }
-                return !isMatch;
-              })(obj, "global")) {
+              if (
+                (function isHostType(global, global) {
+                  let str = "number";
+                  if (null != global) {
+                    str = typeof global.global;
+                  }
+                  let isMatch = /^(?:boolean|number|string|undefined)$/.test(str);
+                  if (!isMatch) {
+                    isMatch = "object" === str && !global.global;
+                    const tmp2 = "object" === str && !global.global;
+                  }
+                  return !isMatch;
+                })(obj, "global")
+              ) {
                 text2 = str;
                 text2 = tmp9;
                 if (tmp16) {
@@ -1274,8 +1539,12 @@ const fn = function() {
                     }
                     if (!text2) {
                       text2 = text1;
-                      text2 = /^(?:Adobe|Arora|Breach|Midori|Opera|Phantom|Rekonq|Rock|Samsung Internet|Sleipnir|SRWare Iron|Vivaldi|Web)/.test(text1) && arr16[1];
-                      const obj83 = /^(?:Adobe|Arora|Breach|Midori|Opera|Phantom|Rekonq|Rock|Samsung Internet|Sleipnir|SRWare Iron|Vivaldi|Web)/;
+                      text2 =
+                        /^(?:Adobe|Arora|Breach|Midori|Opera|Phantom|Rekonq|Rock|Samsung Internet|Sleipnir|SRWare Iron|Vivaldi|Web)/.test(
+                          text1,
+                        ) && arr16[1];
+                      const obj83 =
+                        /^(?:Adobe|Arora|Breach|Midori|Opera|Phantom|Rekonq|Rock|Samsung Internet|Sleipnir|SRWare Iron|Vivaldi|Web)/;
                     }
                     const obj80 = /Browser|Lunascape|Maxthon/;
                   }
@@ -1731,7 +2000,10 @@ const fn = function() {
                   str = "";
                   str = ";";
                   text2 = `${tmp9.replace(obj5, "")};`;
-                  text2 = typeof call === "unknown" ? text2(`${tmp9.replace(obj5, "")};`) : call(text2, `${tmp9.replace(obj5, "")};`);
+                  text2 =
+                    typeof call === "unknown"
+                      ? text2(`${tmp9.replace(obj5, "")};`)
+                      : call(text2, `${tmp9.replace(obj5, "")};`);
                   test = test(text2);
                   text2 = !test;
                 }
@@ -1915,7 +2187,7 @@ const fn = function() {
               tmp57 = match6;
               if (!match6) {
                 if ("Electron" == text1) {
-                  match6 = /\bChrome\/([\d.]+)\b/.exec(tmp9) || 0[1];
+                  match6 = /\bChrome\/([\d.]+)\b/.exec(tmp9) || (0)[1];
                   const obj26 = /\bChrome\/([\d.]+)\b/;
                   const tmp67 = /\bChrome\/([\d.]+)\b/.exec(tmp9) || 0;
                 }
@@ -1994,7 +2266,9 @@ const fn = function() {
       if (tmp39) {
         let _RegExp = RegExp;
         let _RegExp2 = RegExp;
-        replaced = str77.replace(RegExp(`^(${qualify(tmp31)})[-_.\\s]`, "i"), `${tmp31} `).replace(RegExp(`^(${qualify(tmp31)})[-_.]?(\\w)`, "i"), `${tmp31} $2`);
+        replaced = str77
+          .replace(RegExp(`^(${qualify(tmp31)})[-_.\\s]`, "i"), `${tmp31} `)
+          .replace(RegExp(`^(${qualify(tmp31)})[-_.]?(\\w)`, "i"), `${tmp31} $2`);
         product1 = replaced;
         const str84 = str77.replace(RegExp(`^(${qualify(tmp31)})[-_.\\s]`, "i"), `${tmp31} `);
       }

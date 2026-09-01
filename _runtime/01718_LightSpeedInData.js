@@ -1,7 +1,10 @@
 // _runtime/01718_LightSpeedInData.js
 import convertAnimationObjectToKeyframes from "01711_convertAnimationObjectToKeyframes.js";
 
-obj = { LightSpeedInRight: { name: "LightSpeedInRight", style: obj, duration: 0.3 }, LightSpeedInLeft: { name: "LightSpeedInLeft", style: obj, duration: 0.3 } };
+obj = {
+  LightSpeedInRight: { name: "LightSpeedInRight", style: obj, duration: 0.3 },
+  LightSpeedInLeft: { name: "LightSpeedInLeft", style: obj, duration: 0.3 },
+};
 obj = { 0: { transform: items, opacity: 0 }, 70: null, 85: null, 100: null };
 items = [{ translateX: "100vw", skewX: "-45deg" }];
 const items1 = [{ skewX: "10deg" }];
@@ -18,7 +21,10 @@ const items6 = [{ skewX: "5deg" }];
 obj[85] = { transform: items6 };
 const items7 = [{ skewX: "0deg" }];
 obj[100] = { transform: items7 };
-const obj1 = { LightSpeedOutRight: { name: "LightSpeedOutRight", style: obj2, duration: 0.3 }, LightSpeedOutLeft: { name: "LightSpeedOutLeft", style: obj3, duration: 0.3 } };
+const obj1 = {
+  LightSpeedOutRight: { name: "LightSpeedOutRight", style: obj2, duration: 0.3 },
+  LightSpeedOutLeft: { name: "LightSpeedOutLeft", style: obj3, duration: 0.3 },
+};
 obj2 = { 0: { transform: items8, opacity: 1 }, 100: null };
 items8 = [{ translateX: "0vw", skewX: "0deg" }];
 const items9 = [{ translateX: "100vw", skewX: "-45deg" }];

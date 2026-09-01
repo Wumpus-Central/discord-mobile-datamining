@@ -58,18 +58,20 @@ function createAsyncHandlerProxy(arg0, item10034, item10008, closure_1_18) {
       closure_3 = tmp;
       tmp2Result = tmp2(tmp3[3]);
       if (tmp2Result.isThenable(applyResult)) {
-        applyResult.then((arg0) => {
-          if (Array.isArray(arg0)) {
-            closure_2(arg0, closure_0, closure_3, span);
-            const tmp = closure_2;
-          }
-        }).catch((arg0) => {
-          if (callback(1142).DEBUG_BUILD) {
-            const debug = callback(817).debug;
-            const _HermesInternal = HermesInternal;
-            debug.warn("Error resolving async handler '" + dependencyMap + "' for route", callback, arg0);
-          }
-        });
+        applyResult
+          .then((arg0) => {
+            if (Array.isArray(arg0)) {
+              closure_2(arg0, closure_0, closure_3, span);
+              const tmp = closure_2;
+            }
+          })
+          .catch((arg0) => {
+            if (callback(1142).DEBUG_BUILD) {
+              const debug = callback(817).debug;
+              const _HermesInternal = HermesInternal;
+              debug.warn("Error resolving async handler '" + dependencyMap + "' for route", callback, arg0);
+            }
+          });
         const nextPromise = applyResult.then((arg0) => {
           if (Array.isArray(arg0)) {
             closure_2(arg0, closure_0, closure_3, span);
@@ -83,9 +85,13 @@ function createAsyncHandlerProxy(arg0, item10034, item10008, closure_1_18) {
         }
       }
       return applyResult;
-    }
+    },
   });
-  const result = require("00817_registerSpanErrorInstrumentation.js").addNonEnumerableProperty(proxy, "__sentry_proxied__", true);
+  const result = require("00817_registerSpanErrorInstrumentation.js").addNonEnumerableProperty(
+    proxy,
+    "__sentry_proxied__",
+    true,
+  );
   return proxy;
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
@@ -134,18 +140,20 @@ arg5.handleAsyncHandlerResult = function handleAsyncHandlerResult(promise) {
   closure_3 = arg4;
   closure_4 = arg5;
   if (obj.isThenable(promise)) {
-    promise.then((arg0) => {
-      if (Array.isArray(arg0)) {
-        closure_2(arg0, closure_0, closure_3, span);
-        const tmp = closure_2;
-      }
-    }).catch((arg0) => {
-      if (callback(1142).DEBUG_BUILD) {
-        const debug = callback(817).debug;
-        const _HermesInternal = HermesInternal;
-        debug.warn("Error resolving async handler '" + dependencyMap + "' for route", callback, arg0);
-      }
-    });
+    promise
+      .then((arg0) => {
+        if (Array.isArray(arg0)) {
+          closure_2(arg0, closure_0, closure_3, span);
+          const tmp = closure_2;
+        }
+      })
+      .catch((arg0) => {
+        if (callback(1142).DEBUG_BUILD) {
+          const debug = callback(817).debug;
+          const _HermesInternal = HermesInternal;
+          debug.warn("Error resolving async handler '" + dependencyMap + "' for route", callback, arg0);
+        }
+      });
     const nextPromise = promise.then((arg0) => {
       if (Array.isArray(arg0)) {
         closure_2(arg0, closure_0, closure_3, span);

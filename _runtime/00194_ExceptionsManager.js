@@ -22,7 +22,7 @@ const obj = {
     } else {
       obj2.reportSoftException(isFatal.message, isFatal.stack, isFatal.id);
     }
-  }
+  },
 };
 
 export default obj;

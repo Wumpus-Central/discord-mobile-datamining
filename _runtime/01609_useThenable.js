@@ -3,7 +3,6 @@ import closure_0 from "00005_asyncGeneratorStep.js";
 import closure_1 from "metro/00032__slicedToArray.js";
 import closure_2 from "00019_noop.js";
 
-
 export const useThenable = function useThenable(arg0) {
   const first = items(React.useState(arg0), 1)[0];
   items = [false, undefined];
@@ -15,7 +14,7 @@ export const useThenable = function useThenable(arg0) {
   let items1 = [first, first1];
   const effect = React.useEffect(() => {
     closure_0 = false;
-    closure_0 = first(function*() {
+    closure_0 = first(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();

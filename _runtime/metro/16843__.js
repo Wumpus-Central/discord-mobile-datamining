@@ -59,5 +59,5 @@ globalThis.IntlMessageFormat.__addLocaleData({
       str6 = "many";
     }
     return str2;
-  }
+  },
 });

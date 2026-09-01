@@ -23,7 +23,13 @@ arg5.default = {
       obj[1] = "" + byteAt1;
       tmp6 = obj;
     }
-    obj1 = { "Bits Per Sample": tmp6, "Image Height": null, "Image Width": null, "Color Components": null, Subsampling: null };
+    obj1 = {
+      "Bits Per Sample": tmp6,
+      "Image Height": null,
+      "Image Width": null,
+      "Color Components": null,
+      Subsampling: null,
+    };
     let tmp8;
     if (5 <= shortAt) {
       const shortAt1 = tmp(5174).getShortAt(dataView, sum + 3);
@@ -58,7 +64,7 @@ arg5.default = {
           let tmp17 = _module;
           let tmp18 = dependencyMap;
           let obj11 = _module(5174);
-          let items1 = [obj11.getByteAt(dataView, sum), , ];
+          let items1 = [obj11.getByteAt(dataView, sum), ,];
           let obj12 = _module(5174);
           items1[1] = obj12.getByteAt(dataView, sum + 1);
           let obj13 = _module(5174);
@@ -76,7 +82,16 @@ arg5.default = {
           if (0 !== items.length) {
             str7 = "";
             if (undefined !== items[0][1]) {
-              const obj5 = { 17: "4:4:4 (1 1)", 18: "4:4:0 (1 2)", 20: "4:4:1 (1 4)", 33: "4:2:2 (2 1)", 34: "4:2:0 (2 2)", 36: "4:2:1 (2 4)", 65: "4:1:1 (4 1)", 66: "4:1:0 (4 2)" };
+              const obj5 = {
+                17: "4:4:4 (1 1)",
+                18: "4:4:0 (1 2)",
+                20: "4:4:1 (1 4)",
+                33: "4:2:2 (2 1)",
+                34: "4:2:0 (2 2)",
+                36: "4:2:1 (2 4)",
+                65: "4:1:1 (4 1)",
+                66: "4:1:0 (4 2)",
+              };
               str7 = "";
               if (undefined !== obj5[items[0][1]]) {
                 str7 = obj5[items[0][1]];
@@ -92,5 +107,5 @@ arg5.default = {
     }
     obj1[4] = tmp14;
     return obj1;
-  }
+  },
 };

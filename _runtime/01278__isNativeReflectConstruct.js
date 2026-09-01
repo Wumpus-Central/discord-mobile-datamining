@@ -23,8 +23,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 function isRichTextTag(arg0) {
   return "$" === arg0[0];
@@ -34,7 +33,14 @@ function bindFormatValuesWithBuilder(builder) {
   let sum;
   builder = builder.builder;
   ({ originalMessage: dependencyMap, nodes } = builder);
-  ({ locales: closure_3, values: closure_4, dataFormatters: _isNativeReflectConstruct, formatConfig: isRichTextTag, currentPluralValue: closure_7, keyPrefix: bindFormatValuesWithBuilder } = builder);
+  ({
+    locales: closure_3,
+    values: closure_4,
+    dataFormatters: _isNativeReflectConstruct,
+    formatConfig: isRichTextTag,
+    currentPluralValue: closure_7,
+    keyPrefix: bindFormatValuesWithBuilder,
+  } = builder);
   if (1 === nodes.length) {
     if (typeof nodes[0] === "string") {
       builder.pushLiteralText(nodes[0]);
@@ -98,7 +104,9 @@ function bindFormatValuesWithBuilder(builder) {
               if (tmp2[2] in formatConfig.number) {
                 let parseNumberSkeletonResult = formatConfig.number[tmp67];
               } else if (null != tmp67) {
-                parseNumberSkeletonResult = tmp98(tmp99[7]).parseNumberSkeleton(tmp98(tmp99[7]).parseNumberSkeletonFromString(tmp67));
+                parseNumberSkeletonResult = tmp98(tmp99[7]).parseNumberSkeleton(
+                  tmp98(tmp99[7]).parseNumberSkeletonFromString(tmp67),
+                );
               }
               let result2 = tmp12;
               if (typeof tmp12 === "number") {
@@ -118,7 +126,16 @@ function bindFormatValuesWithBuilder(builder) {
               }
               builder.pushLiteralText(dataFormatters.formatNumber(result2, parseNumberSkeletonResult));
             } else if (tmp98(tmp99[6]).FormatJsNodeType.Tag === first) {
-              let obj = { Builder: null, nodes: null, locales: null, dataFormatters: null, formatConfig: null, values: null, currentPluralValue: null, keyPrefix: null };
+              let obj = {
+                Builder: null,
+                nodes: null,
+                locales: null,
+                dataFormatters: null,
+                formatConfig: null,
+                values: null,
+                currentPluralValue: null,
+                keyPrefix: null,
+              };
               obj[0] = builder.constructor;
               obj[1] = tmp2[2];
               obj[2] = closure_3;
@@ -130,7 +147,16 @@ function bindFormatValuesWithBuilder(builder) {
               obj[7] = "" + keyPrefix + "." + pushLiteralTextResult1;
               const tmp49 = v0(obj);
               if (null != tmp2[3]) {
-                obj = { Builder: null, nodes: null, locales: null, dataFormatters: null, formatConfig: null, values: null, currentPluralValue: null, keyPrefix: null };
+                obj = {
+                  Builder: null,
+                  nodes: null,
+                  locales: null,
+                  dataFormatters: null,
+                  formatConfig: null,
+                  values: null,
+                  currentPluralValue: null,
+                  keyPrefix: null,
+                };
                 obj[0] = obj6.constructor;
                 obj[1] = tmp40;
                 obj[2] = tmp43;
@@ -148,7 +174,14 @@ function bindFormatValuesWithBuilder(builder) {
                 obj6.pushRichTextTag(pushLiteralTextResult1, tmp49, items);
               } else if (typeof tmp12 !== "function") {
                 const _HermesInternal7 = HermesInternal;
-                throw "expected a function type for a Tag formatting value, " + pushLiteralTextResult1 + ". got " + typeof tmp12 + ": " + tmp12;
+                throw (
+                  "expected a function type for a Tag formatting value, " +
+                  pushLiteralTextResult1 +
+                  ". got " +
+                  typeof tmp12 +
+                  ": " +
+                  tmp12
+                );
               } else {
                 const _HermesInternal8 = HermesInternal;
                 pushLiteralTextResult1 = tmp12(tmp49, "" + tmp47 + "." + pushLiteralTextResult1);
@@ -185,9 +218,24 @@ function bindFormatValuesWithBuilder(builder) {
                 const _Object2 = Object;
                 const keys = Object.keys(tmp25);
                 const _HermesInternal4 = HermesInternal;
-                throw "" + tmp12 + " is not a known option for select value " + pushLiteralTextResult1 + ". Valid options are " + keys.join(", ");
+                throw (
+                  "" +
+                  tmp12 +
+                  " is not a known option for select value " +
+                  pushLiteralTextResult1 +
+                  ". Valid options are " +
+                  keys.join(", ")
+                );
               } else {
-                obj1 = { builder: null, nodes: null, locales: null, dataFormatters: null, formatConfig: null, values: null, keyPrefix: null };
+                obj1 = {
+                  builder: null,
+                  nodes: null,
+                  locales: null,
+                  dataFormatters: null,
+                  formatConfig: null,
+                  values: null,
+                  keyPrefix: null,
+                };
                 obj1[0] = builder;
                 obj1[1] = tmp26;
                 obj1[2] = closure_3;
@@ -227,9 +275,25 @@ function bindFormatValuesWithBuilder(builder) {
                 const _Object = Object;
                 const keys1 = Object.keys(pushLiteralTextResult1);
                 const _HermesInternal2 = HermesInternal;
-                throw "" + tmp12 + " is not a known option for plural value " + pushLiteralTextResult1 + ". Valid options are " + keys1.join(", ");
+                throw (
+                  "" +
+                  tmp12 +
+                  " is not a known option for plural value " +
+                  pushLiteralTextResult1 +
+                  ". Valid options are " +
+                  keys1.join(", ")
+                );
               } else {
-                obj = { builder: null, nodes: null, locales: null, dataFormatters: null, formatConfig: null, values: null, currentPluralValue: null, keyPrefix: null };
+                obj = {
+                  builder: null,
+                  nodes: null,
+                  locales: null,
+                  dataFormatters: null,
+                  formatConfig: null,
+                  values: null,
+                  currentPluralValue: null,
+                  keyPrefix: null,
+                };
                 obj[0] = builder;
                 obj[1] = pushLiteralTextResult1;
                 obj[2] = closure_3;
@@ -331,7 +395,9 @@ function bindFormatValues(Builder) {
                 if (tmp2[2] in formatConfig.number) {
                   let parseNumberSkeletonResult = formatConfig.number[tmp67];
                 } else if (null != tmp67) {
-                  parseNumberSkeletonResult = tmp98(tmp99[7]).parseNumberSkeleton(tmp98(tmp99[7]).parseNumberSkeletonFromString(tmp67));
+                  parseNumberSkeletonResult = tmp98(tmp99[7]).parseNumberSkeleton(
+                    tmp98(tmp99[7]).parseNumberSkeletonFromString(tmp67),
+                  );
                 }
                 let result2 = tmp12;
                 if (typeof tmp12 === "number") {
@@ -351,7 +417,16 @@ function bindFormatValues(Builder) {
                 }
                 builder.pushLiteralText(dataFormatters.formatNumber(result2, parseNumberSkeletonResult));
               } else if (tmp98(tmp99[6]).FormatJsNodeType.Tag === first) {
-                let obj = { Builder: null, nodes: null, locales: null, dataFormatters: null, formatConfig: null, values: null, currentPluralValue: null, keyPrefix: null };
+                let obj = {
+                  Builder: null,
+                  nodes: null,
+                  locales: null,
+                  dataFormatters: null,
+                  formatConfig: null,
+                  values: null,
+                  currentPluralValue: null,
+                  keyPrefix: null,
+                };
                 obj[0] = builder.constructor;
                 obj[1] = tmp2[2];
                 obj[2] = closure_3;
@@ -363,7 +438,16 @@ function bindFormatValues(Builder) {
                 obj[7] = "" + keyPrefix + "." + pushLiteralTextResult1;
                 const tmp49 = v0(obj);
                 if (null != tmp2[3]) {
-                  obj = { Builder: null, nodes: null, locales: null, dataFormatters: null, formatConfig: null, values: null, currentPluralValue: null, keyPrefix: null };
+                  obj = {
+                    Builder: null,
+                    nodes: null,
+                    locales: null,
+                    dataFormatters: null,
+                    formatConfig: null,
+                    values: null,
+                    currentPluralValue: null,
+                    keyPrefix: null,
+                  };
                   obj[0] = obj6.constructor;
                   obj[1] = tmp40;
                   obj[2] = tmp43;
@@ -381,7 +465,14 @@ function bindFormatValues(Builder) {
                   obj6.pushRichTextTag(pushLiteralTextResult1, tmp49, items);
                 } else if (typeof tmp12 !== "function") {
                   const _HermesInternal7 = HermesInternal;
-                  throw "expected a function type for a Tag formatting value, " + pushLiteralTextResult1 + ". got " + typeof tmp12 + ": " + tmp12;
+                  throw (
+                    "expected a function type for a Tag formatting value, " +
+                    pushLiteralTextResult1 +
+                    ". got " +
+                    typeof tmp12 +
+                    ": " +
+                    tmp12
+                  );
                 } else {
                   const _HermesInternal8 = HermesInternal;
                   pushLiteralTextResult1 = tmp12(tmp49, "" + tmp47 + "." + pushLiteralTextResult1);
@@ -418,9 +509,24 @@ function bindFormatValues(Builder) {
                   const _Object2 = Object;
                   const keys = Object.keys(tmp25);
                   const _HermesInternal4 = HermesInternal;
-                  throw "" + tmp12 + " is not a known option for select value " + pushLiteralTextResult1 + ". Valid options are " + keys.join(", ");
+                  throw (
+                    "" +
+                    tmp12 +
+                    " is not a known option for select value " +
+                    pushLiteralTextResult1 +
+                    ". Valid options are " +
+                    keys.join(", ")
+                  );
                 } else {
-                  obj1 = { builder: null, nodes: null, locales: null, dataFormatters: null, formatConfig: null, values: null, keyPrefix: null };
+                  obj1 = {
+                    builder: null,
+                    nodes: null,
+                    locales: null,
+                    dataFormatters: null,
+                    formatConfig: null,
+                    values: null,
+                    keyPrefix: null,
+                  };
                   obj1[0] = builder;
                   obj1[1] = tmp26;
                   obj1[2] = closure_3;
@@ -460,9 +566,25 @@ function bindFormatValues(Builder) {
                   const _Object = Object;
                   const keys1 = Object.keys(pushLiteralTextResult1);
                   const _HermesInternal2 = HermesInternal;
-                  throw "" + tmp12 + " is not a known option for plural value " + pushLiteralTextResult1 + ". Valid options are " + keys1.join(", ");
+                  throw (
+                    "" +
+                    tmp12 +
+                    " is not a known option for plural value " +
+                    pushLiteralTextResult1 +
+                    ". Valid options are " +
+                    keys1.join(", ")
+                  );
                 } else {
-                  obj = { builder: null, nodes: null, locales: null, dataFormatters: null, formatConfig: null, values: null, currentPluralValue: null, keyPrefix: null };
+                  obj = {
+                    builder: null,
+                    nodes: null,
+                    locales: null,
+                    dataFormatters: null,
+                    formatConfig: null,
+                    values: null,
+                    currentPluralValue: null,
+                    keyPrefix: null,
+                  };
                   obj[0] = builder;
                   obj[1] = pushLiteralTextResult1;
                   obj[2] = closure_3;

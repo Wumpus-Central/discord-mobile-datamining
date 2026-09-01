@@ -34,7 +34,29 @@ if (result2) {
   result2 = importAllResult1.useSharedAnimatedBackend();
   const importAllResult3 = importAllResult1;
 }
-let items = ["createAnimatedNode", "updateAnimatedNodeConfig", "getValue", "startListeningToAnimatedNodeValue", "stopListeningToAnimatedNodeValue", "connectAnimatedNodes", "disconnectAnimatedNodes", "startAnimatingNode", "stopAnimation", "setAnimatedNodeValue", "setAnimatedNodeOffset", "flattenAnimatedNodeOffset", "extractAnimatedNodeOffset", "connectAnimatedNodeToView", "disconnectAnimatedNodeFromView", "restoreDefaultValues", "dropAnimatedNode", "addAnimatedEventToView", "removeAnimatedEventFromView", "addListener", "removeListener"];
+let items = [
+  "createAnimatedNode",
+  "updateAnimatedNodeConfig",
+  "getValue",
+  "startListeningToAnimatedNodeValue",
+  "stopListeningToAnimatedNodeValue",
+  "connectAnimatedNodes",
+  "disconnectAnimatedNodes",
+  "startAnimatingNode",
+  "stopAnimation",
+  "setAnimatedNodeValue",
+  "setAnimatedNodeOffset",
+  "flattenAnimatedNodeOffset",
+  "extractAnimatedNodeOffset",
+  "connectAnimatedNodeToView",
+  "disconnectAnimatedNodeFromView",
+  "restoreDefaultValues",
+  "dropAnimatedNode",
+  "addAnimatedEventToView",
+  "removeAnimatedEventFromView",
+  "addListener",
+  "removeListener",
+];
 if (result2) {
   items.push("connectAnimatedNodeToShadowNodeFamily");
 }
@@ -145,85 +167,89 @@ obj = {
   flattenAnimatedNodeOffset(self) {
     const result = obj.flattenAnimatedNodeOffset(self);
   },
-  flushQueue: result ? (() => {
-    callback(38)(closure_4, "Native animated module is not available");
-    c11 = null;
-    if (0 !== closure_10.length) {
-      if (!closure_14) {
-        let tmpResult = tmp(92);
-        closure_14 = tmpResult.addListener("onNativeAnimatedModuleGetValue", (value) => {
-          if (table[value.tag]) {
-            tmp3(value.value);
-            delete tmp[tmp2];
+  flushQueue: result
+    ? () => {
+        callback(38)(closure_4, "Native animated module is not available");
+        c11 = null;
+        if (0 !== closure_10.length) {
+          if (!closure_14) {
+            let tmpResult = tmp(92);
+            closure_14 = tmpResult.addListener("onNativeAnimatedModuleGetValue", (value) => {
+              if (table[value.tag]) {
+                tmp3(value.value);
+                delete tmp[tmp2];
+              }
+            });
+            tmpResult = tmp(92);
+            closure_15 = tmpResult.addListener("onNativeAnimatedModuleAnimationFinished", (arg0) => {
+              let tmp3 = arg0;
+              if (!Array.isArray(arg0)) {
+                const items = [arg0];
+                tmp3 = items;
+              }
+              for (const item10014 of tmp3) {
+                let animationId = item10014.animationId;
+                let tmp5 = animationId;
+                let tmp6 = table2;
+                let tmp7 = table2[animationId];
+                if (tmp7) {
+                  let tmp9 = tmp7;
+                  let tmp10 = item10014;
+                  let tmp8Result = tmp8(tmp4);
+                  let tmp12 = animationId;
+                  delete tmp2[tmp];
+                }
+                continue;
+              }
+            });
           }
-        });
-        tmpResult = tmp(92);
-        closure_15 = tmpResult.addListener("onNativeAnimatedModuleAnimationFinished", (arg0) => {
-          let tmp3 = arg0;
-          if (!Array.isArray(arg0)) {
-            const items = [arg0];
-            tmp3 = items;
-          }
-          for (const item10014 of tmp3) {
-            let animationId = item10014.animationId;
-            let tmp5 = animationId;
-            let tmp6 = table2;
-            let tmp7 = table2[animationId];
-            if (tmp7) {
-              let tmp9 = tmp7;
-              let tmp10 = item10014;
-              let tmp8Result = tmp8(tmp4);
-              let tmp12 = animationId;
-              delete tmp2[tmp];
+          if (tmp3 != null) {
+            const queueAndExecuteBatchedOperations = tmp3.queueAndExecuteBatchedOperations;
+            if (queueAndExecuteBatchedOperations != null) {
+              const result = queueAndExecuteBatchedOperations(tmp5);
             }
-            continue;
           }
-        });
-      }
-      if (tmp3 != null) {
-        const queueAndExecuteBatchedOperations = tmp3.queueAndExecuteBatchedOperations;
-        if (queueAndExecuteBatchedOperations != null) {
-          const result = queueAndExecuteBatchedOperations(tmp5);
+          tmp5.length = 0;
         }
       }
-      tmp5.length = 0;
-    }
-  }) : (() => {
-    callback(38)(closure_4, "Native animated module is not available");
-    c11 = null;
-    if (0 !== arr.length) {
-      if (tmp != null) {
-        const startOperationBatch = tmp.startOperationBatch;
-        if (startOperationBatch != null) {
-          startOperationBatch();
+    : () => {
+        callback(38)(closure_4, "Native animated module is not available");
+        c11 = null;
+        if (0 !== arr.length) {
+          if (tmp != null) {
+            const startOperationBatch = tmp.startOperationBatch;
+            if (startOperationBatch != null) {
+              startOperationBatch();
+            }
+          }
+          let num2 = 0;
+          if (0 < arr.length) {
+            do {
+              let tmp4 = arr;
+              let tmp5 = arr[num2]();
+              num2 = num2 + 1;
+            } while (num2 < length);
+          }
+          arr.length = 0;
+          if (closure_4 != null) {
+            const finishOperationBatch = tmp6.finishOperationBatch;
+            if (finishOperationBatch != null) {
+              finishOperationBatch();
+            }
+          }
+          tmp6 = closure_4;
         }
-      }
-      let num2 = 0;
-      if (0 < arr.length) {
-        do {
-          let tmp4 = arr;
-          let tmp5 = arr[num2]();
-          num2 = num2 + 1;
-        } while (num2 < length);
-      }
-      arr.length = 0;
-      if (closure_4 != null) {
-        const finishOperationBatch = tmp6.finishOperationBatch;
-        if (finishOperationBatch != null) {
-          finishOperationBatch();
+      },
+  getValue: result
+    ? (arg0, arg1) => {
+        if (arg1) {
+          closure_12[arg0] = arg1;
         }
+        const value = obj.getValue(arg0);
       }
-      tmp6 = closure_4;
-    }
-  }),
-  getValue: result ? ((arg0, arg1) => {
-    if (arg1) {
-      closure_12[arg0] = arg1;
-    }
-    const value = obj.getValue(arg0);
-  }) : ((arg0, arg1) => {
-    const value = obj.getValue(arg0, arg1);
-  }),
+    : (arg0, arg1) => {
+        const value = obj.getValue(arg0, arg1);
+      },
   removeAnimatedEventFromView(closure_4, closure_0, animatedValueTag) {
     const result = obj.removeAnimatedEventFromView(closure_4, closure_0, animatedValueTag);
   },
@@ -251,14 +277,16 @@ obj = {
       tmp6 = importAllResult1.animatedShouldDebounceQueueFlush() && closure_11;
     }
   },
-  startAnimatingNode: result ? ((arg0, arg1, arg2, arg3) => {
-    if (arg3) {
-      closure_13[arg0] = arg3;
-    }
-    obj.startAnimatingNode(arg0, arg1, arg2);
-  }) : ((arg0, arg1, arg2, arg3) => {
-    obj.startAnimatingNode(arg0, arg1, arg2, arg3);
-  }),
+  startAnimatingNode: result
+    ? (arg0, arg1, arg2, arg3) => {
+        if (arg3) {
+          closure_13[arg0] = arg3;
+        }
+        obj.startAnimatingNode(arg0, arg1, arg2);
+      }
+    : (arg0, arg1, arg2, arg3) => {
+        obj.startAnimatingNode(arg0, arg1, arg2, arg3);
+      },
   startListeningToAnimatedNodeValue(__getNativeTagResult) {
     const result = obj.startListeningToAnimatedNodeValue(__getNativeTagResult);
   },
@@ -282,7 +310,7 @@ obj = {
     if (updateAnimatedNodeConfig != null) {
       const result = updateAnimatedNodeConfig(arg0, self);
     }
-  }
+  },
 };
 let c19 = false;
 const obj1 = {
@@ -297,7 +325,7 @@ const obj1 = {
   generateNewNodeTag() {
     closure_5 = tmp + 1;
     return +closure_5;
-  }
+  },
 };
 Object.defineProperty(obj1, "nativeEventEmitter", {
   get: () => {
@@ -309,20 +337,24 @@ Object.defineProperty(obj1, "nativeEventEmitter", {
     }
     return tmp;
   },
-  set: undefined
+  set: undefined,
 });
 obj1.shouldSignalBatch = result1;
 obj1.shouldUseNativeDriver = function shouldUseNativeDriver(useNativeDriver) {
   if (null == useNativeDriver.useNativeDriver) {
     const _console = console;
-    console.warn("Animated: `useNativeDriver` was not specified. This is a required option and must be explicitly set to `true` or `false`");
+    console.warn(
+      "Animated: `useNativeDriver` was not specified. This is a required option and must be explicitly set to `true` or `false`",
+    );
   }
   if (true === useNativeDriver.useNativeDriver) {
     if (!closure_4) {
       let flag = false;
       if (!c19) {
         const _console2 = console;
-        console.warn("Animated: `useNativeDriver` is not supported because the native animated module is missing. Falling back to JS-based animation. To resolve this, add `RCTAnimation` module to this app, or remove `useNativeDriver`. Make sure to run `bundle exec pod install` first. Read more about autolinking: https://github.com/react-native-community/cli/blob/master/docs/autolinking.md");
+        console.warn(
+          "Animated: `useNativeDriver` is not supported because the native animated module is missing. Falling back to JS-based animation. To resolve this, add `RCTAnimation` module to this app, or remove `useNativeDriver`. Make sure to run `bundle exec pod install` first. Read more about autolinking: https://github.com/react-native-community/cli/blob/master/docs/autolinking.md",
+        );
         c19 = true;
         flag = false;
       }
@@ -337,7 +369,7 @@ obj1.transformDataType = function transformDataType(str) {
   } else if (str.endsWith("deg")) {
     const _parseFloat2 = parseFloat;
     const _Math = Math;
-    let result = (parseFloat(str) || 0) * Math.PI / 180;
+    let result = ((parseFloat(str) || 0) * Math.PI) / 180;
     const tmp5 = parseFloat(str) || 0;
   } else {
     result = str;

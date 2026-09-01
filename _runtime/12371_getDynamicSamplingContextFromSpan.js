@@ -79,12 +79,20 @@ arg5.getDynamicSamplingContextFromClient = function getDynamicSamplingContextFro
   if (!DEFAULT_ENVIRONMENT) {
     DEFAULT_ENVIRONMENT = _mod12372.DEFAULT_ENVIRONMENT;
   }
-  obj = { environment: DEFAULT_ENVIRONMENT, release: options.release, public_key: getOptions.getDsn() || {}.publicKey, trace_id };
+  obj = {
+    environment: DEFAULT_ENVIRONMENT,
+    release: options.release,
+    public_key: getOptions.getDsn() || {}.publicKey,
+    trace_id,
+  };
   const dropUndefinedKeysResult = obj.dropUndefinedKeys(obj);
   getOptions.emit("createDsc", dropUndefinedKeysResult);
   return dropUndefinedKeysResult;
 };
-arg5.getDynamicSamplingContextFromScope = function getDynamicSamplingContextFromScope(getOptions, getPropagationContext) {
+arg5.getDynamicSamplingContextFromScope = function getDynamicSamplingContextFromScope(
+  getOptions,
+  getPropagationContext,
+) {
   const propagationContext = getPropagationContext.getPropagationContext();
   let dsc = propagationContext.dsc;
   if (!dsc) {

@@ -7,7 +7,6 @@ import o from "05646_o.js";
 import isFabricInstalled from "05647_isFabricInstalled.js";
 import findNodeHandle from "05648_findNodeHandle.js";
 
-
 export const normalizeSnapPoint = n.normalizeSnapPoint;
 export const animate = n2.animate;
 export const getKeyboardAnimationConfigs = n3.getKeyboardAnimationConfigs;

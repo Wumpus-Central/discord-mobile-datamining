@@ -92,7 +92,12 @@ class DayOfYearParser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 90, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", {
+            value: 90,
+            enumerable: true,
+            configurable: true,
+            writable: true,
+          });
         } else {
           num3 = 90;
           applyResult.priority = 90;
@@ -109,7 +114,12 @@ class DayOfYearParser {
           str3 = "subpriority";
           if ("subpriority" in applyResult) {
             _Object2 = Object;
-            definePropertyResult1 = Object.defineProperty(applyResult, "subpriority", { value: 1, enumerable: true, configurable: true, writable: true });
+            definePropertyResult1 = Object.defineProperty(applyResult, "subpriority", {
+              value: 1,
+              enumerable: true,
+              configurable: true,
+              writable: true,
+            });
           } else {
             applyResult.subpriority = 1;
           }
@@ -235,7 +245,7 @@ obj = {
       }
     }
     return _createSuperInternal(3880).parseNumericPattern(_createSuperInternal(3881).numericPatterns.dayOfYear, arg0);
-  }
+  },
 };
 let items = [
   obj,
@@ -256,7 +266,7 @@ let items = [
         }
       }
       return tmp3;
-    }
+    },
   },
   {
     key: "set",
@@ -264,8 +274,8 @@ let items = [
       setUTCMonth.setUTCMonth(0, arg2);
       setUTCMonth.setUTCHours(0, 0, 0, 0);
       return setUTCMonth;
-    }
-  }
+    },
+  },
 ];
 if (0 < items.length) {
   do {

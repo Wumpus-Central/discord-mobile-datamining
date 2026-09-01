@@ -67,4 +67,4 @@ export default function setFunctionLength(fn, num) {
     const tmp19 = new _mod541("`length` must be a positive 32-bit integer");
     throw tmp19;
   }
-};
+}

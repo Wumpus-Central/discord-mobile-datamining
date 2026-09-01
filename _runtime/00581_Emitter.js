@@ -73,7 +73,7 @@ class Emitter {
 if (undefined !== module) {
   module.exports = Emitter;
 }
-const fn = function(arg0, arg1) {
+const fn = function (arg0, arg1) {
   const self = this;
   self._callbacks = this._callbacks || {};
   let items = self._callbacks["$" + arg0];
@@ -87,7 +87,7 @@ const fn = function(arg0, arg1) {
 };
 Emitter.prototype.addEventListener = fn;
 Emitter.prototype.on = fn;
-const fn2 = function(arg0, arg1) {
+const fn2 = function (arg0, arg1) {
   const self = this;
   self._callbacks = this._callbacks || {};
   if (0 == arguments.length) {

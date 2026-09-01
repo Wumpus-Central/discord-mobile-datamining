@@ -12,17 +12,22 @@ export const useRiveProperty = function useRiveProperty(instance, FillColor, f29
   let tmp = first(undefined);
   const callback2 = tmp;
   const items = [instance, FillColor];
-  const disposableMemo = require("04251_useDisposableMemo.js").useDisposableMemo(() => {
-    if (closure_0) {
-      return callback(tmp, closure_1);
-    }
-  }, (dispose) => {
-    let disposeResult;
-    if (dispose != null) {
-      disposeResult = dispose.dispose();
-    }
-    return disposeResult;
-  }, items, tmp);
+  const disposableMemo = require("04251_useDisposableMemo.js").useDisposableMemo(
+    () => {
+      if (closure_0) {
+        return callback(tmp, closure_1);
+      }
+    },
+    (dispose) => {
+      let disposeResult;
+      if (dispose != null) {
+        disposeResult = dispose.dispose();
+      }
+      return disposeResult;
+    },
+    items,
+    tmp,
+  );
   const tmp3 = callback(callback3(undefined), 2);
   first = tmp3[0];
   callback3 = tmp3[1];
@@ -41,7 +46,7 @@ export const useRiveProperty = function useRiveProperty(instance, FillColor, f29
     if (tmp) {
       const _Error = Error;
       const _HermesInternal = HermesInternal;
-      error = new Error("Property \"" + closure_1 + "\" not found in the ViewModel instance");
+      error = new Error('Property "' + closure_1 + '" not found in the ViewModel instance');
       callback3(error);
     }
   }, items2);
@@ -55,8 +60,7 @@ export const useRiveProperty = function useRiveProperty(instance, FillColor, f29
       return () => {
         try {
           callback();
-        } catch (err) {
-        }
+        } catch (err) {}
       };
     }
   }, items3);
@@ -74,7 +78,7 @@ export const useRiveProperty = function useRiveProperty(instance, FillColor, f29
       }
     }, items4),
     tmp5[0],
-    disposableMemo
+    disposableMemo,
   ];
   return items5;
 };

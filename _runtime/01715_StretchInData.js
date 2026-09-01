@@ -1,7 +1,10 @@
 // _runtime/01715_StretchInData.js
 import convertAnimationObjectToKeyframes from "01711_convertAnimationObjectToKeyframes.js";
 
-obj = { StretchInX: { name: "StretchInX", style: obj, duration: 0.3 }, StretchInY: { name: "StretchInY", style: obj, duration: 0.3 } };
+obj = {
+  StretchInX: { name: "StretchInX", style: obj, duration: 0.3 },
+  StretchInY: { name: "StretchInY", style: obj, duration: 0.3 },
+};
 obj = { 0: { transform: items }, 100: null };
 items = [{ scaleX: 0 }];
 const items1 = [{ scaleX: 1 }];
@@ -10,7 +13,10 @@ obj = { 0: { transform: items2 }, 100: null };
 items2 = [{ scaleY: 0 }];
 const items3 = [{ scaleY: 1 }];
 obj[100] = { transform: items3 };
-const obj1 = { StretchOutX: { name: "StretchOutX", style: obj2, duration: 0.3 }, StretchOutY: { name: "StretchOutY", style: obj3, duration: 0.3 } };
+const obj1 = {
+  StretchOutX: { name: "StretchOutX", style: obj2, duration: 0.3 },
+  StretchOutY: { name: "StretchOutY", style: obj3, duration: 0.3 },
+};
 obj2 = { 0: { transform: items4 }, 100: null };
 items4 = [{ scaleX: 1 }];
 const items5 = [{ scaleX: 0 }];

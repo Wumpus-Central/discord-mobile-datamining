@@ -7,13 +7,13 @@ let obj = {
   enumerable: true,
   get() {
     return isIterable /* isIterable */.shallow;
-  }
+  },
 };
 Object.defineProperty(arg5, "shallow", obj);
 obj = {
   enumerable: true,
   get() {
     return useShallow /* useShallow */.useShallow;
-  }
+  },
 };
 Object.defineProperty(arg5, "useShallow", obj);

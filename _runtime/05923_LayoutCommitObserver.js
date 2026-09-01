@@ -23,68 +23,74 @@ const memoResult = noopDefault.memo((children) => {
     }
   });
   const items = [recyclerViewContext, current, tmp3];
-  const value = callback2(() => ({
-    layout() {
-      callback((arg0) => arg0 + 1);
-    },
-    getRef() {
-      let ref;
-      if (closure_1 != null) {
-        ref = closure_1.getRef();
-      }
-      if (ref == null) {
-        ref = null;
-      }
-      return ref;
-    },
-    getParentRef() {
-      let parentRef;
-      if (closure_1 != null) {
-        parentRef = closure_1.getParentRef();
-      }
-      if (parentRef == null) {
-        parentRef = null;
-      }
-      return parentRef;
-    },
-    getParentScrollViewRef() {
-      let parentScrollViewRef;
-      if (closure_1 != null) {
-        parentScrollViewRef = closure_1.getParentScrollViewRef();
-      }
-      if (parentScrollViewRef == null) {
-        parentScrollViewRef = null;
-      }
-      return parentScrollViewRef;
-    },
-    getScrollViewRef() {
-      let scrollViewRef;
-      if (closure_1 != null) {
-        scrollViewRef = closure_1.getScrollViewRef();
-      }
-      if (scrollViewRef == null) {
-        scrollViewRef = null;
-      }
-      return scrollViewRef;
-    },
-    markChildLayoutAsPending(arg0) {
-      if (closure_1 != null) {
-        const result = closure_1.markChildLayoutAsPending(arg0);
-      }
-      set.add(arg0);
-    },
-    unmarkChildLayoutAsPending(arg0) {
-      if (closure_1 != null) {
-        const result = closure_1.unmarkChildLayoutAsPending(arg0);
-      }
-      if (set.has(arg0)) {
-        set.delete(arg0);
-        closure_4.layout();
-      }
-    }
-  }), items);
+  const value = callback2(
+    () => ({
+      layout() {
+        callback((arg0) => arg0 + 1);
+      },
+      getRef() {
+        let ref;
+        if (closure_1 != null) {
+          ref = closure_1.getRef();
+        }
+        if (ref == null) {
+          ref = null;
+        }
+        return ref;
+      },
+      getParentRef() {
+        let parentRef;
+        if (closure_1 != null) {
+          parentRef = closure_1.getParentRef();
+        }
+        if (parentRef == null) {
+          parentRef = null;
+        }
+        return parentRef;
+      },
+      getParentScrollViewRef() {
+        let parentScrollViewRef;
+        if (closure_1 != null) {
+          parentScrollViewRef = closure_1.getParentScrollViewRef();
+        }
+        if (parentScrollViewRef == null) {
+          parentScrollViewRef = null;
+        }
+        return parentScrollViewRef;
+      },
+      getScrollViewRef() {
+        let scrollViewRef;
+        if (closure_1 != null) {
+          scrollViewRef = closure_1.getScrollViewRef();
+        }
+        if (scrollViewRef == null) {
+          scrollViewRef = null;
+        }
+        return scrollViewRef;
+      },
+      markChildLayoutAsPending(arg0) {
+        if (closure_1 != null) {
+          const result = closure_1.markChildLayoutAsPending(arg0);
+        }
+        set.add(arg0);
+      },
+      unmarkChildLayoutAsPending(arg0) {
+        if (closure_1 != null) {
+          const result = closure_1.unmarkChildLayoutAsPending(arg0);
+        }
+        if (set.has(arg0)) {
+          set.delete(arg0);
+          closure_4.layout();
+        }
+      },
+    }),
+    items,
+  );
   callback2 = value;
-  return jsx(onCommitLayoutEffect(recyclerViewContext[3]).RecyclerViewContextProvider, { value, children: children.children });
+  return jsx(onCommitLayoutEffect(recyclerViewContext[3]).RecyclerViewContextProvider, {
+    value,
+    children: children.children,
+  });
 });
 memoResult.displayName = "LayoutCommitObserver";
 

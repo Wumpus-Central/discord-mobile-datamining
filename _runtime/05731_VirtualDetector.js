@@ -37,7 +37,7 @@ export const VirtualDetector = function VirtualDetector(children) {
     callback3 = tmp20;
     tmpResult = tmp(tmp2[8]);
     const detectorAttachmentGuard = tmpResult.useDetectorAttachmentGuard(tmp20);
-    const items2 = [first, children.gesture, tmp20, , , , , , ];
+    const items2 = [first, children.gesture, tmp20, , , , , ,];
     ({ userSelect: arr3[3], touchAction: arr3[4], enableContextMenu: arr3[5] } = children);
     items2[6] = register;
     items2[7] = unregister;
@@ -46,13 +46,25 @@ export const VirtualDetector = function VirtualDetector(children) {
       if (-1 !== first) {
         if (obj.gesture.config.dispatchesAnimatedEvents) {
           const _Error = Error;
-          error = new Error(children(register[5]).tagMessage("VirtualGestureDetector cannot handle Animated events with native driver when used inside InterceptingGestureDetector. Use Reanimated or Animated events without native driver instead."));
+          error = new Error(
+            children(register[5]).tagMessage(
+              "VirtualGestureDetector cannot handle Animated events with native driver when used inside InterceptingGestureDetector. Use Reanimated or Animated events without native driver instead.",
+            ),
+          );
           throw error;
         } else {
           if (tmp2.gesture.config.shouldUseReanimatedDetector) {
             setMode(children(register[4]).InterceptingDetectorMode.REANIMATED);
           }
-          obj = { viewTag: null, handlerTags: null, methods: null, viewRef: "a", userSelect: null, touchAction: null, enableContextMenu: null };
+          obj = {
+            viewTag: null,
+            handlerTags: null,
+            methods: null,
+            viewRef: "a",
+            userSelect: null,
+            touchAction: null,
+            enableContextMenu: null,
+          };
           obj[0] = tmp;
           obj[1] = closure_7;
           obj[2] = tmp2.gesture.detectorCallbacks;
@@ -84,7 +96,9 @@ export const VirtualDetector = function VirtualDetector(children) {
     return jsx(tmp(tmp2[10]).Wrap, { ref: null, children: null });
   } else {
     let _Error = Error;
-    error = new Error(tmp(tmp2[5]).tagMessage("VirtualGestureDetector must be a descendant of an InterceptingGestureDetector"));
+    error = new Error(
+      tmp(tmp2[5]).tagMessage("VirtualGestureDetector must be a descendant of an InterceptingGestureDetector"),
+    );
     throw error;
   }
 };

@@ -45,7 +45,12 @@ export const EntryExitTransition = function EntryExitTransition(name, translateX
   obj[2] = "" + translateX.scaleX + "," + translateX.scaleY;
   obj = { name, style: {}, duration: 300 };
   addTransformToKeepPosition(obj.style, structuredCloneResult.style, obj, true);
-  addTransformToKeepPosition(obj.style, structuredClone(TransitionType.AnimationsData[translateX.entering]).style, { translateX: "0px", translateY: "0px", scale: "1,1" }, false);
+  addTransformToKeepPosition(
+    obj.style,
+    structuredClone(TransitionType.AnimationsData[translateX.entering]).style,
+    { translateX: "0px", translateY: "0px", scale: "1,1" },
+    false,
+  );
   (function hideComponentBetweenAnimations(style) {
     const map = new Map();
     if (undefined === style[0].opacity) {

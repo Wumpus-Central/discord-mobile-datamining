@@ -1,7 +1,6 @@
 // _runtime/12423_debugIntegration.js
 import setupIntegration from "12391_setupIntegration.js";
 
-
 export const debugIntegration = setupIntegration.defineIntegration(() => {
   let obj = arg0;
   if (arg0 === undefined) {
@@ -45,7 +44,7 @@ export const debugIntegration = setupIntegration.defineIntegration(() => {
           }
         });
       });
-    }
+    },
   };
   return obj;
 });

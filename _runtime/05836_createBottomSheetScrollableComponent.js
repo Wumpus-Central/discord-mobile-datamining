@@ -6,8 +6,8 @@ import BottomSheetScrollViewDefault from "05846_BottomSheetScrollView.js";
 import BottomSheetVirtualizedListDefault from "05847_BottomSheetVirtualizedList.js";
 import forwardRefDefault from "05848_forwardRef.js";
 
-
-export const createBottomSheetScrollableComponent = createBottomSheetScrollableComponent.createBottomSheetScrollableComponent;
+export const createBottomSheetScrollableComponent =
+  createBottomSheetScrollableComponent.createBottomSheetScrollableComponent;
 export const BottomSheetSectionList = BottomSheetSectionListDefault;
 export const BottomSheetFlatList = BottomSheetFlatListDefault;
 export const BottomSheetScrollView = BottomSheetScrollViewDefault;

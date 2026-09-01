@@ -6,7 +6,7 @@ require = arg1;
 const dependencyMap = arg6;
 function instrumentUnhandledRejection() {
   const onunhandledrejection = _mod821.GLOBAL_OBJ.onunhandledrejection;
-  _mod821.GLOBAL_OBJ.onunhandledrejection = function(arg0) {
+  _mod821.GLOBAL_OBJ.onunhandledrejection = function (arg0) {
     callback(table[0]).triggerHandlers("unhandledrejection", arg0);
     if (!onunhandledrejection) {
       return !onunhandledrejection;
@@ -25,7 +25,9 @@ function instrumentUnhandledRejection() {
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let c2 = null;
-arg5.addGlobalUnhandledRejectionInstrumentationHandler = function addGlobalUnhandledRejectionInstrumentationHandler(arg0) {
+arg5.addGlobalUnhandledRejectionInstrumentationHandler = function addGlobalUnhandledRejectionInstrumentationHandler(
+  arg0,
+) {
   addHandler.addHandler("unhandledrejection", arg0);
   const obj = addHandler;
   addHandler.maybeInstrument("unhandledrejection", instrumentUnhandledRejection);

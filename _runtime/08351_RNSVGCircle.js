@@ -30,7 +30,6 @@ import __INTERNAL_VIEW_CONFIGDefault28 from "metro/08344___INTERNAL_VIEW_CONFIG.
 import __INTERNAL_VIEW_CONFIGDefault29 from "metro/08346___INTERNAL_VIEW_CONFIG.js";
 import __INTERNAL_VIEW_CONFIGDefault30 from "metro/08352___INTERNAL_VIEW_CONFIG.js";
 
-
 export const RNSVGCircle = __INTERNAL_VIEW_CONFIGDefault3;
 export const RNSVGClipPath = __INTERNAL_VIEW_CONFIGDefault4;
 export const RNSVGDefs = __INTERNAL_VIEW_CONFIGDefault5;

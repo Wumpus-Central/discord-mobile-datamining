@@ -32,19 +32,21 @@ const items = [
     value: function send(arg0) {
       closure_0 = arg0;
       const _buffer = this._buffer;
-      return _buffer.add(() => {
-        const NATIVE = callback(closure_1_1[3]).NATIVE;
-        return NATIVE.sendEnvelope(callback);
-      }).then(() => ({}));
-    }
+      return _buffer
+        .add(() => {
+          const NATIVE = callback(closure_1_1[3]).NATIVE;
+          return NATIVE.sendEnvelope(callback);
+        })
+        .then(() => ({}));
+    },
   },
   {
     key: "flush",
     value: function flush(arg0) {
       const _buffer = this._buffer;
       return _buffer.drain(arg0);
-    }
-  }
+    },
+  },
 ];
 const tmp2 = _createClassDefault(NativeTransport, items);
 let closure_3 = tmp2;

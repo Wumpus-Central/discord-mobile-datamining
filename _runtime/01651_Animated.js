@@ -18,15 +18,29 @@ let Animated = get_ActivityIndicator.Animated;
 ({ Platform, StyleSheet } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = controlEdgeToEdgeValues.isEdgeToEdge();
-let closure_13 = cancelAnimationDefault.createAnimatedComponent(Animated.createAnimatedComponent(require("nativeEventEmitter").KeyboardControllerView));
+let closure_13 = cancelAnimationDefault.createAnimatedComponent(
+  Animated.createAnimatedComponent(require("nativeEventEmitter").KeyboardControllerView),
+);
 const styles = StyleSheet.create({ container: { flex: 1 }, hidden: { display: "none", position: "absolute" } });
 const android = "android";
-let closure_16 = { code: "function pnpm_animatedTsx1(event,platforms){const{OS,progressSV,heightSV}=this.__closure;if(platforms.includes(OS)){progressSV.value=event.progress;heightSV.value=-event.height;}}" };
-let closure_17 = { code: "function pnpm_animatedTsx2(event){const{updateSharedValues}=this.__closure;updateSharedValues(event,[\"ios\"]);}" };
-let closure_18 = { code: "function pnpm_animatedTsx3(event){const{updateSharedValues}=this.__closure;updateSharedValues(event,[\"android\"]);}" };
-let closure_19 = { code: "function pnpm_animatedTsx4(event){const{updateSharedValues}=this.__closure;updateSharedValues(event,[\"android\",\"ios\"]);}" };
-let closure_20 = { code: "function pnpm_animatedTsx5(event){const{updateSharedValues}=this.__closure;updateSharedValues(event,[\"android\"]);}" };
-let closure_21 = { code: "function pnpm_animatedTsx6(e){const{layout}=this.__closure;if(e.target!==-1){layout.value=e;}else{layout.value=null;}}" };
+let closure_16 = {
+  code: "function pnpm_animatedTsx1(event,platforms){const{OS,progressSV,heightSV}=this.__closure;if(platforms.includes(OS)){progressSV.value=event.progress;heightSV.value=-event.height;}}",
+};
+let closure_17 = {
+  code: 'function pnpm_animatedTsx2(event){const{updateSharedValues}=this.__closure;updateSharedValues(event,["ios"]);}',
+};
+let closure_18 = {
+  code: 'function pnpm_animatedTsx3(event){const{updateSharedValues}=this.__closure;updateSharedValues(event,["android"]);}',
+};
+let closure_19 = {
+  code: 'function pnpm_animatedTsx4(event){const{updateSharedValues}=this.__closure;updateSharedValues(event,["android","ios"]);}',
+};
+let closure_20 = {
+  code: 'function pnpm_animatedTsx5(event){const{updateSharedValues}=this.__closure;updateSharedValues(event,["android"]);}',
+};
+let closure_21 = {
+  code: "function pnpm_animatedTsx6(e){const{layout}=this.__closure;if(e.target!==-1){layout.value=e;}else{layout.value=null;}}",
+};
 
 export const KeyboardProvider = (enabled) => {
   enabled = enabled.enabled;
@@ -55,25 +69,50 @@ export const KeyboardProvider = (enabled) => {
   Animated = require("01842_useEventHandlerRegistration.js").useEventHandlerRegistration(tmp3);
   const obj6 = useEventHandlerRegistration;
   closure_10 = require("01842_useEventHandlerRegistration.js").useEventHandlerRegistration(tmp3);
-  closure_11 = callback2(first(function*() {
-    if (v0 === 2) {
-      v0 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  closure_11 = callback2(
+    first(function* () {
+      if (v0 === 2) {
+        v0 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        v0 = 2;
-        if (0 === ref) {
-          if (arg0 === 1) {
+        try {
+          v0 = 2;
+          if (0 === ref) {
+            if (arg0 === 1) {
+              v0 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              v0 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              const KeyboardControllerViewCommands = v0(ref[7]).KeyboardControllerViewCommands;
+              const result = KeyboardControllerViewCommands.synchronizeFocusedInputLayout(ref.current);
+              const promise = new Promise((arg0) => {
+                const v3 = arg0;
+                const FocusedInputEvents = v3(table[7]).FocusedInputEvents;
+                table = FocusedInputEvents.addListener("layoutDidSynchronize", () => {
+                  closure_1.remove();
+                  callback(null);
+                });
+              });
+              v0 = 1;
+              obj1 = { value: null, done: false };
+              obj1[0] = promise;
+              return obj1;
+            }
+          } else if (arg0 === 1) {
             v0 = 3;
             throw arg1;
           } else if (arg0 === 2) {
@@ -82,43 +121,30 @@ export const KeyboardProvider = (enabled) => {
             obj[0] = arg1;
             return obj;
           } else {
-            const KeyboardControllerViewCommands = v0(ref[7]).KeyboardControllerViewCommands;
-            const result = KeyboardControllerViewCommands.synchronizeFocusedInputLayout(ref.current);
-            const promise = new Promise((arg0) => {
-              const v3 = arg0;
-              const FocusedInputEvents = v3(table[7]).FocusedInputEvents;
-              table = FocusedInputEvents.addListener("layoutDidSynchronize", () => {
-                closure_1.remove();
-                callback(null);
-              });
-            });
-            v0 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = promise;
-            return obj1;
+            v0 = 3;
+            return { value: "HermesInternal", done: null };
           }
-        } else if (arg0 === 1) {
-          v0 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          v0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          v0 = 3;
-          return { value: "HermesInternal", done: null };
+        } catch (tmp14) {
+          v0 = tmp;
+          throw tmp14;
         }
-      } catch (tmp14) {
-        v0 = tmp;
-        throw tmp14;
       }
-    }
-  }), []);
+    }),
+    [],
+  );
   let items = [first];
   const obj7 = useEventHandlerRegistration;
   const tmp9 = sharedValue(() => {
-    let obj = { enabled: first, animated: null, reanimated: null, layout: null, update: null, setKeyboardHandlers: null, setInputHandlers: null, setEnabled: null };
+    let obj = {
+      enabled: first,
+      animated: null,
+      reanimated: null,
+      layout: null,
+      update: null,
+      setKeyboardHandlers: null,
+      setInputHandlers: null,
+      setEnabled: null,
+    };
     obj = { progress: closure_4, height: closure_9.multiply(closure_5, -1) };
     obj[1] = obj;
     obj = { progress: sharedValue, height: sharedValue1 };
@@ -145,9 +171,9 @@ export const KeyboardProvider = (enabled) => {
   fn.__workletHash = 2170890222740;
   fn.__initData = closure_16;
   const tmp10 = sharedValue(() => {
-    const items = [closure_1_14.hidden, ];
+    const items = [closure_1_14.hidden];
     let obj = { translateX: closure_5 };
-    const items1 = [obj, ];
+    const items1 = [obj];
     obj = { translateY: closure_4 };
     items1[1] = obj;
     items[1] = { transform: items1 };
@@ -253,7 +279,21 @@ export const KeyboardProvider = (enabled) => {
     }
   }, items1);
   obj2 = { value: tmp9, children: null };
-  obj3 = { ref: tmp3, enabled: first, navigationBarTranslucent: null, statusBarTranslucent: null, preserveEdgeToEdge: null, style: null, onKeyboardMoveReanimated: null, onKeyboardMoveStart: "Boolean", onKeyboardMove: "EMBEDDED_ACTIVITY_LAUNCH_FAIL", onKeyboardMoveInteractive: null, onKeyboardMoveEnd: null, onFocusedInputLayoutChangedReanimated: null, children: null };
+  obj3 = {
+    ref: tmp3,
+    enabled: first,
+    navigationBarTranslucent: null,
+    statusBarTranslucent: null,
+    preserveEdgeToEdge: null,
+    style: null,
+    onKeyboardMoveReanimated: null,
+    onKeyboardMoveStart: "Boolean",
+    onKeyboardMove: "EMBEDDED_ACTIVITY_LAUNCH_FAIL",
+    onKeyboardMoveInteractive: null,
+    onKeyboardMoveEnd: null,
+    onFocusedInputLayoutChangedReanimated: null,
+    children: null,
+  };
   let tmp18 = fn;
   let tmp19 = fn;
   if (!fn) {

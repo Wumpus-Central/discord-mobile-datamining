@@ -9,7 +9,7 @@ export const useLayoutState = function useLayoutState(arg0) {
   const tmp = callback(callback2(arg0), 2);
   const _require = tmp[1];
   recyclerViewContext = _require(recyclerViewContext[2]).useRecyclerViewContext();
-  const items = [tmp[0], ];
+  const items = [tmp[0]];
   const items1 = [recyclerViewContext];
   items[1] = callback3((arg0, arg1) => {
     const callback = arg0;

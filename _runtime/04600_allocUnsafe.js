@@ -47,4 +47,4 @@ export default function cloneBuffer(arr) {
     arr.copy(constructor);
     return constructor;
   }
-};
+}

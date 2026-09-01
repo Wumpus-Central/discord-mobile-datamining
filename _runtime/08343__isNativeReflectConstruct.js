@@ -29,10 +29,19 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
-let closure_3 = ["children", "xlinkHref", "href", "startOffset", "method", "spacing", "side", "alignmentBaseline", "midLine"];
+let closure_3 = [
+  "children",
+  "xlinkHref",
+  "href",
+  "startOffset",
+  "method",
+  "spacing",
+  "side",
+  "alignmentBaseline",
+  "midLine",
+];
 noopAll;
 class TextPath {
   constructor() {
@@ -102,7 +111,15 @@ let items = [
         const _Object = Object;
         let obj = { children: null };
         obj[0] = children;
-        obj = { href: null, startOffset: null, method: null, spacing: null, side: null, alignmentBaseline: null, midLine: null };
+        obj = {
+          href: null,
+          startOffset: null,
+          method: null,
+          spacing: null,
+          side: null,
+          alignmentBaseline: null,
+          midLine: null,
+        };
         obj[0] = tmp5;
         obj[1] = num;
         obj[2] = method;
@@ -124,8 +141,8 @@ let items = [
         return jsx(_isNativeReflectConstructDefault2, { ref: null, children: null });
       }
       tmp = callback(props, closure_3);
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(TextPath, items);
 importDefaultResultResult.displayName = "TextPath";

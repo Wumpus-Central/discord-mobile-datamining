@@ -32,9 +32,14 @@ export const browserProfilingIntegration = registerSpanErrorInstrumentation.defi
     const tmp2Result2 = uIProfiler(1101);
     if (tmp8) {
       let debug2 = tmp2(817).debug;
-      debug2.warn("[Profiling] Both legacy profiling (`profilesSampleRate`) and UI profiling settings are defined. `profileSessionSampleRate` has no effect when legacy profiling is enabled.");
+      debug2.warn(
+        "[Profiling] Both legacy profiling (`profilesSampleRate`) and UI profiling settings are defined. `profileSessionSampleRate` has no effect when legacy profiling is enabled.",
+      );
     }
-    tmp8 = uIProfiler(1101).hasLegacyProfiling(options) && undefined !== options.profileSessionSampleRate && uIProfiler(1072).DEBUG_BUILD;
+    tmp8 =
+      uIProfiler(1101).hasLegacyProfiling(options) &&
+      undefined !== options.profileSessionSampleRate &&
+      uIProfiler(1072).DEBUG_BUILD;
     if (tmp2Result3.hasLegacyProfiling(options)) {
       let result = rootSpan;
       if (rootSpan) {
@@ -189,7 +194,9 @@ export const browserProfilingIntegration = registerSpanErrorInstrumentation.defi
           }, 0);
         } else if (tmp2(1072).DEBUG_BUILD) {
           let debug3 = tmp2(817).debug;
-          debug3.warn("[Profiling] `profileLifecycle` is 'trace' but tracing is disabled. Set a `tracesSampleRate` or `tracesSampler` to enable span tracing.");
+          debug3.warn(
+            "[Profiling] `profileLifecycle` is 'trace' but tracing is disabled. Set a `tracesSampleRate` or `tracesSampler` to enable span tracing.",
+          );
         }
         tmp2Result7 = tmp2(817);
       }
@@ -197,5 +204,5 @@ export const browserProfilingIntegration = registerSpanErrorInstrumentation.defi
   },
   processEvent(contexts) {
     return callback(1101).attachProfiledThreadToEvent(contexts);
-  }
+  },
 }));

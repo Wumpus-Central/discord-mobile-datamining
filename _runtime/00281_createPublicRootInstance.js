@@ -25,6 +25,10 @@ arg5.getNodeFromPublicInstance = function getNodeFromPublicInstance(instance) {
   }
   return nodeFromInternalInstanceHandle;
 };
-arg5.getInternalInstanceHandleFromPublicInstance = function getInternalInstanceHandleFromPublicInstance(_internalInstanceHandle) {
-  return null != _internalInstanceHandle._internalInstanceHandle ? _internalInstanceHandle._internalInstanceHandle : _internalInstanceHandle.__internalInstanceHandle;
+arg5.getInternalInstanceHandleFromPublicInstance = function getInternalInstanceHandleFromPublicInstance(
+  _internalInstanceHandle,
+) {
+  return null != _internalInstanceHandle._internalInstanceHandle
+    ? _internalInstanceHandle._internalInstanceHandle
+    : _internalInstanceHandle.__internalInstanceHandle;
 };

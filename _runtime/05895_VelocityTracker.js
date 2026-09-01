@@ -41,7 +41,7 @@ const items = [
         self.velocity.y = 0;
         callback(self.velocity, true);
       }, 100);
-    }
+    },
   },
   {
     key: "cleanUp",
@@ -52,8 +52,8 @@ const items = [
         clearTimeout(self.timeoutId);
         self.timeoutId = null;
       }
-    }
-  }
+    },
+  },
 ];
 
 export const VelocityTracker = _createClassDefault(VelocityTracker, items);

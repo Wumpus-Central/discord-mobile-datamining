@@ -16,8 +16,15 @@ export const linkedErrorsIntegration = setupIntegration.defineIntegration(() => 
     name: "LinkedErrors",
     preprocessEvent(arg0, arg1, getOptions) {
       const options = getOptions.getOptions();
-      const result = callback(912).applyAggregateErrorsToEvent(callback(893).exceptionFromError, options.stackParser, dependencyMap, callback, arg0, arg1);
-    }
+      const result = callback(912).applyAggregateErrorsToEvent(
+        callback(893).exceptionFromError,
+        options.stackParser,
+        dependencyMap,
+        callback,
+        arg0,
+        arg1,
+      );
+    },
   };
   return obj;
 });

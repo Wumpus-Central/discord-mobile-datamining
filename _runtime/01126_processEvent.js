@@ -4,7 +4,7 @@ const dependencyMap = arg6;
 function processEvent(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  return fn(this, undefined, undefined, function*() {
+  return fn(this, undefined, undefined, function* () {
     if (c6 === 2) {
       c6 = 3;
       HermesBuiltin.throwTypeError();
@@ -78,7 +78,12 @@ function processEvent(arg0, arg1) {
             c4 = 0;
           }
           if (closure_0) {
-            const obj3 = { filename: "view-hierarchy.json", contentType: "application/json", attachmentType: "event.view_hierarchy", data: null };
+            const obj3 = {
+              filename: "view-hierarchy.json",
+              contentType: "application/json",
+              attachmentType: "event.view_hierarchy",
+              data: null,
+            };
             obj3[3] = closure_0;
             const items = [obj3];
             closure_0 = 1;
@@ -180,8 +185,6 @@ if (!fn) {
 }
 arg5.viewHierarchyIntegration = () => ({
   name: "ViewHierarchy",
-  setupOnce() {
-
-  },
-  processEvent
+  setupOnce() {},
+  processEvent,
 });

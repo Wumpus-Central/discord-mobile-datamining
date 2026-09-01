@@ -111,7 +111,12 @@ class MonthParser {
           str3 = "priority";
           if ("priority" in applyResult) {
             _Object2 = Object;
-            definePropertyResult1 = Object.defineProperty(applyResult, "priority", { value: 110, enumerable: true, configurable: true, writable: true });
+            definePropertyResult1 = Object.defineProperty(applyResult, "priority", {
+              value: 110,
+              enumerable: true,
+              configurable: true,
+              writable: true,
+            });
           } else {
             num3 = 110;
             applyResult.priority = 110;
@@ -212,19 +217,29 @@ obj = {
       return arg0 - 1;
     }
     if ("M" === arg1) {
-      return _createSuperInternal(3880).mapValue(_createSuperInternal(3880).parseNumericPattern(_createSuperInternal(3881).numericPatterns.month, arg0), valueCallback);
+      return _createSuperInternal(3880).mapValue(
+        _createSuperInternal(3880).parseNumericPattern(_createSuperInternal(3881).numericPatterns.month, arg0),
+        valueCallback,
+      );
     } else if ("MM" === arg1) {
       return _createSuperInternal(3880).mapValue(_createSuperInternal(3880).parseNDigits(2, arg0), valueCallback);
     } else if ("Mo" === arg1) {
       return _createSuperInternal(3880).mapValue(ordinalNumber.ordinalNumber(arg0, { unit: "month" }), valueCallback);
     } else if ("MMM" === arg1) {
-      return ordinalNumber.month(arg0, { width: "abbreviated", context: "formatting" }) || ordinalNumber.month(arg0, { width: "narrow", context: "formatting" });
+      return (
+        ordinalNumber.month(arg0, { width: "abbreviated", context: "formatting" }) ||
+        ordinalNumber.month(arg0, { width: "narrow", context: "formatting" })
+      );
     } else if ("MMMMM" === arg1) {
       return ordinalNumber.month(arg0, { width: "narrow", context: "formatting" });
     } else {
-      return ordinalNumber.month(arg0, { width: "wide", context: "formatting" }) || ordinalNumber.month(arg0, { width: "abbreviated", context: "formatting" }) || ordinalNumber.month(arg0, { width: "narrow", context: "formatting" });
+      return (
+        ordinalNumber.month(arg0, { width: "wide", context: "formatting" }) ||
+        ordinalNumber.month(arg0, { width: "abbreviated", context: "formatting" }) ||
+        ordinalNumber.month(arg0, { width: "narrow", context: "formatting" })
+      );
     }
-  }
+  },
 };
 let items = [
   obj,
@@ -236,7 +251,7 @@ let items = [
         tmp = arg1 <= 11;
       }
       return tmp;
-    }
+    },
   },
   {
     key: "set",
@@ -244,8 +259,8 @@ let items = [
       setUTCMonth.setUTCMonth(arg2, 1);
       setUTCMonth.setUTCHours(0, 0, 0, 0);
       return setUTCMonth;
-    }
-  }
+    },
+  },
 ];
 if (0 < items.length) {
   do {

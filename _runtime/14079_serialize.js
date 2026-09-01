@@ -3,7 +3,7 @@ arg5.default = undefined;
 let c0 = "~~~ zero ~~~";
 if (typeof BigInt !== "undefined") {
   const _BigInt = BigInt;
-  BigInt.prototype.toJSON = function() {
+  BigInt.prototype.toJSON = function () {
     return this.toString();
   };
 }
@@ -14,7 +14,7 @@ arg5.default = function serialize(arg0) {
   }
   closure_1 = [];
   closure_2 = [];
-  return JSON.stringify(arg0, function(arg0, obj) {
+  return JSON.stringify(arg0, function (arg0, obj) {
     if (true === obj) {
       return true;
     } else if (obj === Infinity) {

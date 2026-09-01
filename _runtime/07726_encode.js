@@ -1,5 +1,9 @@
 // _runtime/07726_encode.js
-let closure_0 = [255, 255, 26, 27, 28, 29, 30, 31, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 255, 255, 255, 255, 255, 255, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 255, 255, 255, 255, 255];
+let closure_0 = [
+  255, 255, 26, 27, 28, 29, 30, 31, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
+  12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 255, 255, 255, 255, 255, 255, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+  10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 255, 255, 255, 255, 255,
+];
 arg5.encode = (arg0) => {
   let length;
   let sum3;
@@ -27,17 +31,17 @@ arg5.encode = (arg0) => {
       if (3 < num2) {
         let sum1 = num4 + 1;
         let num6 = 0;
-        let tmp16 = tmp6 & 255 >> num2;
+        let tmp16 = tmp6 & (255 >> num2);
         if (sum1 < buffer.length) {
           num6 = buffer[sum1];
         }
         let result = (num2 + 5) % 8;
-        let tmp13 = tmp16 << result | num6 >> 8 - result;
+        let tmp13 = (tmp16 << result) | (num6 >> (8 - result));
         let tmp14 = result;
         sum3 = sum1;
       } else {
         let sum2 = num2 + 5;
-        let tmp11 = tmp6 >> 8 - sum2 & 31;
+        let tmp11 = (tmp6 >> (8 - sum2)) & 31;
         let result1 = sum2 % 8;
         tmp13 = tmp11;
         tmp14 = result1;
@@ -71,7 +75,7 @@ arg5.decode = (arg0) => {
     const _Buffer = Buffer;
     buffer = new Buffer(arg0);
   }
-  const buffer1 = new Buffer(Math.ceil(5 * buffer.length / 8));
+  const buffer1 = new Buffer(Math.ceil((5 * buffer.length) / 8));
   let num = 0;
   if (0 < buffer.length) {
     let num7 = 0;
@@ -90,15 +94,15 @@ arg5.decode = (arg0) => {
             let result1 = result;
             let num10 = 0;
           } else {
-            num10 = tmp4 | 255 & tmp14 << 8 - result;
+            num10 = tmp4 | (255 & (tmp14 << (8 - result)));
             sum = num8;
             result1 = result;
           }
         } else {
           result1 = (num9 + 5) % 8;
-          buffer1[num8] = tmp4 | 255 & tmp14 >>> result1;
+          buffer1[num8] = tmp4 | (255 & (tmp14 >>> result1));
           sum = num8 + 1;
-          num10 = 255 & tmp14 << 8 - result1;
+          num10 = 255 & (tmp14 << (8 - result1));
         }
         let sum1 = num7 + 1;
         num = sum;

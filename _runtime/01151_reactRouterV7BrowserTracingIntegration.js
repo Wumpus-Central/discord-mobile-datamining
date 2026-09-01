@@ -5,7 +5,9 @@ import feedbackAsyncIntegration from "01024_feedbackAsyncIntegration.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export const reactRouterV7BrowserTracingIntegration = function reactRouterV7BrowserTracingIntegration(instrumentPageLoad) {
+export const reactRouterV7BrowserTracingIntegration = function reactRouterV7BrowserTracingIntegration(
+  instrumentPageLoad,
+) {
   return computeLocationKey.createReactRouterV6CompatibleTracingIntegration(instrumentPageLoad, "7");
 };
 export const withSentryReactRouterV7Routing = function withSentryReactRouterV7Routing(arg0) {

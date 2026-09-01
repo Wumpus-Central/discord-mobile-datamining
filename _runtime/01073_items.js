@@ -4,7 +4,8 @@ import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumenta
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const re3 = /^\s*at (\S+?)(?::(\d+))(?::(\d+))\s*$/i;
-const re4 = /^\s*at (?:(.+?\)(?: \[.+\])?|.*?) ?\((?:address at )?)?(?:async )?((?:<anonymous>|[-a-z]+:|.*bundle|\/)?.*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i;
+const re4 =
+  /^\s*at (?:(.+?\)(?: \[.+\])?|.*?) ?\((?:address at )?)?(?:async )?((?:<anonymous>|[-a-z]+:|.*bundle|\/)?.*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i;
 const re5 = /\((\S*)(?::(\d+))(?::(\d+))\)/;
 const re6 = /at (.+?) ?\(data:(.+?),/;
 let items = [
@@ -86,7 +87,7 @@ let items = [
           } else {
             UNKNOWN_FUNCTION = registerSpanErrorInstrumentation.UNKNOWN_FUNCTION;
           }
-          const items1 = [UNKNOWN_FUNCTION, ];
+          const items1 = [UNKNOWN_FUNCTION];
           const _HermesInternal = HermesInternal;
           if (tmp12) {
             let combined = concat(tmp11);
@@ -98,9 +99,10 @@ let items = [
         }
       }
     }
-  }
+  },
 ];
-const re7 = /^\s*(.*?)(?:\((.*?)\))?(?:^|@)?((?:[-a-z]+)?:\/.*?|\[native code\]|[^@]*(?:bundle|\d+\.js)|\/[\w\-. /=]+)(?::(\d+))?(?::(\d+))?\s*$/i;
+const re7 =
+  /^\s*(.*?)(?:\((.*?)\))?(?:^|@)?((?:[-a-z]+)?:\/.*?|\[native code\]|[^@]*(?:bundle|\d+\.js)|\/[\w\-. /=]+)(?::(\d+))?(?::(\d+))?\s*$/i;
 const re8 = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i;
 let items1 = [
   50,
@@ -161,7 +163,7 @@ let items1 = [
       } else {
         UNKNOWN_FUNCTION = registerSpanErrorInstrumentation.UNKNOWN_FUNCTION;
       }
-      const items1 = [UNKNOWN_FUNCTION, ];
+      const items1 = [UNKNOWN_FUNCTION];
       const _HermesInternal = HermesInternal;
       if (tmp9) {
         let combined = concat(tmp5);
@@ -170,7 +172,7 @@ let items1 = [
       }
       items1[1] = combined;
     }
-  }
+  },
 ];
 const re9 = /^\s*at (?:((?:\[object object\])?.+) )?\(?((?:[-a-z]+):.*?):(\d+)(?::(\d+))?\)?\s*$/i;
 const items2 = [
@@ -202,7 +204,7 @@ const items2 = [
       const tmp5 = +match[3];
     }
     return tmp2;
-  }
+  },
 ];
 const re10 = / line (\d+).*script (?:in )?(\S+)(?:: in function (\S+))?$/i;
 const items3 = [
@@ -226,7 +228,7 @@ const items3 = [
       const tmp5 = +match[1];
     }
     return tmp2;
-  }
+  },
 ];
 const re11 = / line (\d+), column (\d+)\s*(?:in (?:<anonymous function: ([^>]+)>|([^)]+))\(.*\))? in (.*):\s*$/i;
 const items4 = [
@@ -255,13 +257,11 @@ const items4 = [
       const tmp6 = +match[2];
     }
     return tmp2;
-  }
+  },
 ];
 const items5 = [items, items1];
 const items6 = [...items5];
-function extractSafariExtensionDetails(arg0, arg1) {
-
-}
+function extractSafariExtensionDetails(arg0, arg1) {}
 
 export const chromeStackLineParser = items;
 export const defaultStackLineParsers = items5;

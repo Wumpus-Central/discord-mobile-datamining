@@ -175,7 +175,7 @@ export default {
           let tmp18 = fromResult1;
           let tmp19 = callback3;
           let str = callback3(fromResult);
-          let items1 = [str.toString(), ];
+          let items1 = [str.toString()];
           let str2 = callback3(fromResult1);
           items1[1] = str2.toString();
           let arr = items.push(items1);
@@ -237,5 +237,5 @@ export default {
       continue;
     }
     return str2;
-  }
+  },
 };

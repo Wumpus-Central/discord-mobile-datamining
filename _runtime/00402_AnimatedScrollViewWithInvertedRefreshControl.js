@@ -66,4 +66,4 @@ export default function AnimatedScrollViewWithOrWithoutInvertedRefreshControl(re
   const merged2 = Object.assign(merged);
   obj.ref = ref.ref;
   tmp3 = <closure_7 scrollEventThrottle={0.0001} />;
-};
+}

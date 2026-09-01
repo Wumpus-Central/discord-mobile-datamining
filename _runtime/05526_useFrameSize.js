@@ -78,7 +78,10 @@ export const FrameSizeProvider = function FrameSizeProvider(initialFrame) {
   });
   callback = tmp4;
   const items = [tmp3, tmp4, tmp2];
-  const memo = React.useMemo(() => ({ getCurrent: closure_2, subscribe: closure_3, subscribeThrottled: closure_4 }), items);
+  const memo = React.useMemo(
+    () => ({ getCurrent: closure_2, subscribe: closure_3, subscribeThrottled: closure_4 }),
+    items,
+  );
   const tmp6 = useEffectDefault((height) => {
     if (!tmp2) {
       const obj = { width: null, height: null };
@@ -110,7 +113,7 @@ export const FrameSizeProvider = function FrameSizeProvider(initialFrame) {
     onLayout(nativeEvent) {
       const layout = nativeEvent.nativeEvent.layout;
       callback2({ width: layout.width, height: layout.height });
-    }
+    },
   };
   const items2 = [null, initialFrame.render(obj)];
   obj[1] = items2;

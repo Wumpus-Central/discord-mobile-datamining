@@ -42,5 +42,5 @@ arg5.default = {
     }
     return tmp6;
   },
-  SHOT_INFO_AUTO_ROTATE: 27
+  SHOT_INFO_AUTO_ROTATE: 27,
 };

@@ -8,7 +8,9 @@ export const useFocusEffect = function useFocusEffect(closure_2) {
   navigation = _require(navigation[1]).useNavigation();
   if (undefined !== arguments[1]) {
     const _console = console;
-    console.error("You passed a second argument to 'useFocusEffect', but it only accepts one argument. If you want to pass a dependency array, you can use 'React.useCallback':\n\nuseFocusEffect(\n  React.useCallback(() => {\n    // Your code here\n  }, [depA, depB])\n);\n\nSee usage guide: https://reactnavigation.org/docs/use-focus-effect");
+    console.error(
+      "You passed a second argument to 'useFocusEffect', but it only accepts one argument. If you want to pass a dependency array, you can use 'React.useCallback':\n\nuseFocusEffect(\n  React.useCallback(() => {\n    // Your code here\n  }, [depA, depB])\n);\n\nSee usage guide: https://reactnavigation.org/docs/use-focus-effect",
+    );
   }
   const items = [closure_2, navigation];
   const effect = React.useEffect(() => {

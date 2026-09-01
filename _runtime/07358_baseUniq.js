@@ -1,7 +1,6 @@
 // _runtime/07358_baseUniq.js
 import arrayIncludes from "07359_arrayIncludes.js";
 
-
 export default function baseUniq(arg0, arg1, arg2) {
   let tmpResult = arrayIncludes;
   const items = [];
@@ -73,4 +72,4 @@ export default function baseUniq(arg0, arg1, arg2) {
     }
   }
   return items;
-};
+}

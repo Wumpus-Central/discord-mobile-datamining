@@ -2,7 +2,6 @@
 import isPropertyKey from "04809_isPropertyKey.js";
 import Type from "04829_Type.js";
 
-
 export default function ValidateAndApplyPropertyDescriptor(arg0, arg1, flag, __Configurable__) {
   const tmp3 = Type(arg0);
   if (undefined !== arg0) {
@@ -161,7 +160,9 @@ export default function ValidateAndApplyPropertyDescriptor(arg0, arg1, flag, __C
             const tmpResult12 = tmp(4816);
           }
         } else {
-          const tmp23 = new tmp(541)("`current`, when present, must be a fully populated and valid Property Descriptor");
+          const tmp23 = new tmp(541)(
+            "`current`, when present, must be a fully populated and valid Property Descriptor",
+          );
           throw tmp23;
         }
         tmpResult3 = tmp(4830);
@@ -174,4 +175,4 @@ export default function ValidateAndApplyPropertyDescriptor(arg0, arg1, flag, __C
     const tmp10 = new tmp(541)("Assertion failed: P must be a Property Key");
     throw tmp10;
   }
-};
+}

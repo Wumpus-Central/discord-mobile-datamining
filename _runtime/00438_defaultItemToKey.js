@@ -41,14 +41,17 @@ export const createVirtualCollectionView = function createVirtualCollectionView(
             const merged = Object.assign(itemCount, Object.create(null));
             const items = [itemCount];
             const merged1 = Object.assign(merged);
-            return closure_1_8(closure_1_6(() => spacerStyle(closure_2_2[3]).createHiddenVirtualView(itemCount(itemCount)), items), { ref });
+            return closure_1_8(
+              closure_1_6(() => spacerStyle(closure_2_2[3]).createHiddenVirtualView(itemCount(itemCount)), items),
+              { ref },
+            );
           });
           callback(obj);
           const _Math = Math;
           const _Math2 = Math;
           onRenderMoreItems(Math.min(Math.ceil(tmp2.itemCount), spacerStyle));
         }
-      }
+      },
     };
     return closure_1_8(tmp[0].SpacerView, obj);
   }
@@ -58,8 +61,11 @@ export const createVirtualCollectionView = function createVirtualCollectionView(
       const merged = Object.assign(itemCount, Object.create(null));
       const items = [itemCount];
       const merged1 = Object.assign(merged);
-      return closure_1_8(closure_1_6(() => spacerStyle(closure_2_2[3]).createHiddenVirtualView(itemCount(itemCount)), items), { ref });
-    })
+      return closure_1_8(
+        closure_1_6(() => spacerStyle(closure_2_2[3]).createHiddenVirtualView(itemCount(itemCount)), items),
+        { ref },
+      );
+    }),
   };
   spacerStyle = initial.spacerStyle;
   return function VirtualCollectionView(children) {

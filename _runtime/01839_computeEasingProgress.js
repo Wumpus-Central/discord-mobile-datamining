@@ -7,13 +7,15 @@ let c2 = 400;
 function computeEasingProgress(arg0, arg1, arg2) {
   let num = 1;
   if (Math.abs(arg1) >= 1) {
-    num = arg2 * ((globalThis._getAnimationTimestamp() - arg0) / 1000) / arg1;
+    num = (arg2 * ((globalThis._getAnimationTimestamp() - arg0) / 1000)) / arg1;
   }
   return num;
 }
 computeEasingProgress.__closure = {};
 computeEasingProgress.__workletHash = 11092056948922;
-computeEasingProgress.__initData = { code: "function computeEasingProgress_Pnpm_swipeSimulatorTs1(startingTimestamp,distance,velocity){if(Math.abs(distance)<1){return 1;}const elapsedTime=(_getAnimationTimestamp()-startingTimestamp)/1000;const currentPosition=velocity*elapsedTime;const progress=currentPosition/distance;return progress;}" };
+computeEasingProgress.__initData = {
+  code: "function computeEasingProgress_Pnpm_swipeSimulatorTs1(startingTimestamp,distance,velocity){if(Math.abs(distance)<1){return 1;}const elapsedTime=(_getAnimationTimestamp()-startingTimestamp)/1000;const currentPosition=velocity*elapsedTime;const progress=currentPosition/distance;return progress;}",
+};
 function easing(arg0) {
   return 1 - Math.pow(1 - arg0, 5);
 }
@@ -32,7 +34,9 @@ function computeProgress(screenDimensions, translationX) {
 }
 computeProgress.__closure = {};
 computeProgress.__workletHash = 3778680834909;
-computeProgress.__initData = { code: "function computeProgress_Pnpm_swipeSimulatorTs3(screenTransitionConfig,event,isTransitionCanceled){const screenDimensions=screenTransitionConfig.screenDimensions;const progressX=Math.abs(event.translationX/screenDimensions.width);const progressY=Math.abs(event.translationY/screenDimensions.height);const maxProgress=Math.max(progressX,progressY);const progress=isTransitionCanceled?maxProgress/2:maxProgress;return progress;}" };
+computeProgress.__initData = {
+  code: "function computeProgress_Pnpm_swipeSimulatorTs3(screenTransitionConfig,event,isTransitionCanceled){const screenDimensions=screenTransitionConfig.screenDimensions;const progressX=Math.abs(event.translationX/screenDimensions.width);const progressY=Math.abs(event.translationY/screenDimensions.height);const maxProgress=Math.max(progressX,progressY);const progress=isTransitionCanceled?maxProgress/2:maxProgress;return progress;}",
+};
 function maybeScheduleNextFrame(scrollAnimation, arg1, onFinishAnimation, translationX) {
   if (arg1) {
     onFinishAnimation = onFinishAnimation.onFinishAnimation;
@@ -62,7 +66,9 @@ function maybeScheduleNextFrame(scrollAnimation, arg1, onFinishAnimation, transl
 let obj = { computeProgress, RNScreensTurboModule: require("RNScreensTurboModule").RNScreensTurboModule };
 maybeScheduleNextFrame.__closure = obj;
 maybeScheduleNextFrame.__workletHash = 7657931427196;
-maybeScheduleNextFrame.__initData = { code: "function maybeScheduleNextFrame_Pnpm_swipeSimulatorTs4(step,didScreenReachDestination,screenTransitionConfig,event,isTransitionCanceled){const{computeProgress,RNScreensTurboModule}=this.__closure;if(!didScreenReachDestination){const stackTag=screenTransitionConfig.stackTag;const progress=computeProgress(screenTransitionConfig,event,isTransitionCanceled);RNScreensTurboModule.updateTransition(stackTag,progress);requestAnimationFrame(step);}else{var _screenTransitionConf;(_screenTransitionConf=screenTransitionConfig.onFinishAnimation)===null||_screenTransitionConf===void 0||_screenTransitionConf.call(screenTransitionConfig);}}" };
+maybeScheduleNextFrame.__initData = {
+  code: "function maybeScheduleNextFrame_Pnpm_swipeSimulatorTs4(step,didScreenReachDestination,screenTransitionConfig,event,isTransitionCanceled){const{computeProgress,RNScreensTurboModule}=this.__closure;if(!didScreenReachDestination){const stackTag=screenTransitionConfig.stackTag;const progress=computeProgress(screenTransitionConfig,event,isTransitionCanceled);RNScreensTurboModule.updateTransition(stackTag,progress);requestAnimationFrame(step);}else{var _screenTransitionConf;(_screenTransitionConf=screenTransitionConfig.onFinishAnimation)===null||_screenTransitionConf===void 0||_screenTransitionConf.call(screenTransitionConfig);}}",
+};
 function getSwipeSimulator(value, screenDimensions, arg2) {
   closure_0 = value;
   closure_1 = screenDimensions;
@@ -86,14 +92,17 @@ function getSwipeSimulator(value, screenDimensions, arg2) {
   const point4 = { x: closure_2, y: closure_2 };
   if ("x" === arg2) {
     point4.y = 0;
-    point4.x = point4.x + 400 * point3.x / screenDimensions.width;
+    point4.x = point4.x + (400 * point3.x) / screenDimensions.width;
   } else if ("y" === arg2) {
     point4.x = 0;
-    point4.y = point4.y + 500 * point3.y / screenDimensions.height;
+    point4.y = point4.y + (500 * point3.y) / screenDimensions.height;
   } else {
     let _Math3 = Math;
     const _Math4 = Math;
-    const sum = tmp3 + 600 * Math.sqrt(point3.x ** 2 + point3.y ** 2) / Math.sqrt(screenDimensions.width ** 2 + screenDimensions.height ** 2);
+    const sum =
+      tmp3 +
+      (600 * Math.sqrt(point3.x ** 2 + point3.y ** 2)) /
+        Math.sqrt(screenDimensions.width ** 2 + screenDimensions.height ** 2);
     const _Math5 = Math;
     const _Math6 = Math;
     let absolute = Math.abs(point.x);
@@ -117,7 +126,7 @@ function getSwipeSimulator(value, screenDimensions, arg2) {
       }
       let num = 1;
       if (Math.abs(x) >= 1) {
-        num = point4.x * ((globalThis._getAnimationTimestamp() - tmp2) / 1000) / x;
+        num = (point4.x * ((globalThis._getAnimationTimestamp() - tmp2) / 1000)) / x;
       }
       const y = point.y;
       if (typeof screenDimensions !== "function") {
@@ -125,7 +134,7 @@ function getSwipeSimulator(value, screenDimensions, arg2) {
       }
       let num3 = 1;
       if (Math.abs(y) >= 1) {
-        num3 = point4.y * ((globalThis._getAnimationTimestamp() - tmp2) / 1000) / y;
+        num3 = (point4.y * ((globalThis._getAnimationTimestamp() - tmp2) / 1000)) / y;
       }
       const result = closure_7 * point.x;
       if (typeof closure_4 !== "function") {
@@ -211,7 +220,7 @@ function getSwipeSimulator(value, screenDimensions, arg2) {
       }
       let num = 1;
       if (Math.abs(x) >= 1) {
-        num = point4.x * ((globalThis._getAnimationTimestamp() - tmp2) / 1000) / x;
+        num = (point4.x * ((globalThis._getAnimationTimestamp() - tmp2) / 1000)) / x;
       }
       const y = point.y;
       if (typeof screenDimensions !== "function") {
@@ -219,7 +228,7 @@ function getSwipeSimulator(value, screenDimensions, arg2) {
       }
       let num3 = 1;
       if (Math.abs(y) >= 1) {
-        num3 = point4.y * ((globalThis._getAnimationTimestamp() - tmp2) / 1000) / y;
+        num3 = (point4.y * ((globalThis._getAnimationTimestamp() - tmp2) / 1000)) / y;
       }
       const result = closure_7 * point.x;
       if (typeof closure_4 !== "function") {
@@ -291,8 +300,20 @@ function getSwipeSimulator(value, screenDimensions, arg2) {
     return _computeFrame;
   }
 }
-obj = { BASE_VELOCITY: 400, ADDITIONAL_VELOCITY_FACTOR_X: 400, ADDITIONAL_VELOCITY_FACTOR_Y: 500, ADDITIONAL_VELOCITY_FACTOR_XY: 600, applyStyleForBelowTopScreen: require("createViewDescriptorPaper").applyStyleForBelowTopScreen, computeEasingProgress, easing, applyStyle: require("createViewDescriptorPaper").applyStyle, maybeScheduleNextFrame };
+obj = {
+  BASE_VELOCITY: 400,
+  ADDITIONAL_VELOCITY_FACTOR_X: 400,
+  ADDITIONAL_VELOCITY_FACTOR_Y: 500,
+  ADDITIONAL_VELOCITY_FACTOR_XY: 600,
+  applyStyleForBelowTopScreen: require("createViewDescriptorPaper").applyStyleForBelowTopScreen,
+  computeEasingProgress,
+  easing,
+  applyStyle: require("createViewDescriptorPaper").applyStyle,
+  maybeScheduleNextFrame,
+};
 getSwipeSimulator.__closure = obj;
 getSwipeSimulator.__workletHash = 11722244836970;
-getSwipeSimulator.__initData = { code: "function getSwipeSimulator_Pnpm_swipeSimulatorTs5(event,screenTransitionConfig,lockAxis){const{BASE_VELOCITY,ADDITIONAL_VELOCITY_FACTOR_X,ADDITIONAL_VELOCITY_FACTOR_Y,ADDITIONAL_VELOCITY_FACTOR_XY,applyStyleForBelowTopScreen,computeEasingProgress,easing,applyStyle,maybeScheduleNextFrame}=this.__closure;const screenDimensions=screenTransitionConfig.screenDimensions;const startTimestamp=_getAnimationTimestamp();const{isTransitionCanceled:isTransitionCanceled}=screenTransitionConfig;const startingPosition={x:event.translationX,y:event.translationY};const direction={x:Math.sign(event.translationX),y:Math.sign(event.translationY)};const finalPosition=isTransitionCanceled?{x:0,y:0}:{x:direction.x*screenDimensions.width,y:direction.y*screenDimensions.height};const distance={x:Math.abs(finalPosition.x-startingPosition.x),y:Math.abs(finalPosition.y-startingPosition.y)};const didScreenReachDestination={x:false,y:false};const velocity={x:BASE_VELOCITY,y:BASE_VELOCITY};if(lockAxis==='x'){velocity.y=0;velocity.x+=ADDITIONAL_VELOCITY_FACTOR_X*distance.x/screenDimensions.width;}else if(lockAxis==='y'){velocity.x=0;velocity.y+=ADDITIONAL_VELOCITY_FACTOR_Y*distance.y/screenDimensions.height;}else{const euclideanDistance=Math.sqrt(distance.x**2+distance.y**2);const screenDiagonal=Math.sqrt(screenDimensions.width**2+screenDimensions.height**2);const velocityVectorLength=BASE_VELOCITY+ADDITIONAL_VELOCITY_FACTOR_XY*euclideanDistance/screenDiagonal;if(Math.abs(startingPosition.x)>Math.abs(startingPosition.y)){velocity.x=velocityVectorLength;velocity.y=velocityVectorLength*Math.abs(startingPosition.y/startingPosition.x);}else{velocity.x=velocityVectorLength*Math.abs(startingPosition.x/startingPosition.y);velocity.y=velocityVectorLength;}}if(isTransitionCanceled){function didScreenReachDestinationCheck(){if(lockAxis==='x'){return didScreenReachDestination.x;}else if(lockAxis==='y'){return didScreenReachDestination.y;}else{return didScreenReachDestination.x&&didScreenReachDestination.y;}}function restoreOriginalStyleForBelowTopScreen(){event.translationX=direction.x*screenDimensions.width;event.translationY=direction.y*screenDimensions.height;applyStyleForBelowTopScreen(screenTransitionConfig,event);}const computeFrame=function(){const progress={x:computeEasingProgress(startTimestamp,distance.x,velocity.x),y:computeEasingProgress(startTimestamp,distance.y,velocity.y)};event.translationX=startingPosition.x-direction.x*distance.x*easing(progress.x);event.translationY=startingPosition.y-direction.y*distance.y*easing(progress.y);if(direction.x>0){if(event.translationX<=0){didScreenReachDestination.x=true;event.translationX=0;}}else{if(event.translationX>=0){didScreenReachDestination.x=true;event.translationX=0;}}if(direction.y>0){if(event.translationY<=0){didScreenReachDestination.y=true;event.translationY=0;}}else{if(event.translationY>=0){didScreenReachDestination.y=true;event.translationY=0;}}applyStyle(screenTransitionConfig,event);const finished=didScreenReachDestinationCheck();if(finished){restoreOriginalStyleForBelowTopScreen();}maybeScheduleNextFrame(computeFrame,finished,screenTransitionConfig,event,isTransitionCanceled);};return computeFrame;}else{const computeFrame=function(){const progress={x:computeEasingProgress(startTimestamp,distance.x,velocity.x),y:computeEasingProgress(startTimestamp,distance.y,velocity.y)};event.translationX=startingPosition.x+direction.x*distance.x*easing(progress.x);event.translationY=startingPosition.y+direction.y*distance.y*easing(progress.y);if(direction.x>0){if(event.translationX>=screenDimensions.width){didScreenReachDestination.x=true;event.translationX=screenDimensions.width;}}else{if(event.translationX<=-screenDimensions.width){didScreenReachDestination.x=true;event.translationX=-screenDimensions.width;}}if(direction.y>0){if(event.translationY>=screenDimensions.height){didScreenReachDestination.y=true;event.translationY=screenDimensions.height;}}else{if(event.translationY<=-screenDimensions.height){didScreenReachDestination.y=true;event.translationY=-screenDimensions.height;}}applyStyle(screenTransitionConfig,event);maybeScheduleNextFrame(computeFrame,didScreenReachDestination.x||didScreenReachDestination.y,screenTransitionConfig,event,isTransitionCanceled);};return computeFrame;}}" };
+getSwipeSimulator.__initData = {
+  code: "function getSwipeSimulator_Pnpm_swipeSimulatorTs5(event,screenTransitionConfig,lockAxis){const{BASE_VELOCITY,ADDITIONAL_VELOCITY_FACTOR_X,ADDITIONAL_VELOCITY_FACTOR_Y,ADDITIONAL_VELOCITY_FACTOR_XY,applyStyleForBelowTopScreen,computeEasingProgress,easing,applyStyle,maybeScheduleNextFrame}=this.__closure;const screenDimensions=screenTransitionConfig.screenDimensions;const startTimestamp=_getAnimationTimestamp();const{isTransitionCanceled:isTransitionCanceled}=screenTransitionConfig;const startingPosition={x:event.translationX,y:event.translationY};const direction={x:Math.sign(event.translationX),y:Math.sign(event.translationY)};const finalPosition=isTransitionCanceled?{x:0,y:0}:{x:direction.x*screenDimensions.width,y:direction.y*screenDimensions.height};const distance={x:Math.abs(finalPosition.x-startingPosition.x),y:Math.abs(finalPosition.y-startingPosition.y)};const didScreenReachDestination={x:false,y:false};const velocity={x:BASE_VELOCITY,y:BASE_VELOCITY};if(lockAxis==='x'){velocity.y=0;velocity.x+=ADDITIONAL_VELOCITY_FACTOR_X*distance.x/screenDimensions.width;}else if(lockAxis==='y'){velocity.x=0;velocity.y+=ADDITIONAL_VELOCITY_FACTOR_Y*distance.y/screenDimensions.height;}else{const euclideanDistance=Math.sqrt(distance.x**2+distance.y**2);const screenDiagonal=Math.sqrt(screenDimensions.width**2+screenDimensions.height**2);const velocityVectorLength=BASE_VELOCITY+ADDITIONAL_VELOCITY_FACTOR_XY*euclideanDistance/screenDiagonal;if(Math.abs(startingPosition.x)>Math.abs(startingPosition.y)){velocity.x=velocityVectorLength;velocity.y=velocityVectorLength*Math.abs(startingPosition.y/startingPosition.x);}else{velocity.x=velocityVectorLength*Math.abs(startingPosition.x/startingPosition.y);velocity.y=velocityVectorLength;}}if(isTransitionCanceled){function didScreenReachDestinationCheck(){if(lockAxis==='x'){return didScreenReachDestination.x;}else if(lockAxis==='y'){return didScreenReachDestination.y;}else{return didScreenReachDestination.x&&didScreenReachDestination.y;}}function restoreOriginalStyleForBelowTopScreen(){event.translationX=direction.x*screenDimensions.width;event.translationY=direction.y*screenDimensions.height;applyStyleForBelowTopScreen(screenTransitionConfig,event);}const computeFrame=function(){const progress={x:computeEasingProgress(startTimestamp,distance.x,velocity.x),y:computeEasingProgress(startTimestamp,distance.y,velocity.y)};event.translationX=startingPosition.x-direction.x*distance.x*easing(progress.x);event.translationY=startingPosition.y-direction.y*distance.y*easing(progress.y);if(direction.x>0){if(event.translationX<=0){didScreenReachDestination.x=true;event.translationX=0;}}else{if(event.translationX>=0){didScreenReachDestination.x=true;event.translationX=0;}}if(direction.y>0){if(event.translationY<=0){didScreenReachDestination.y=true;event.translationY=0;}}else{if(event.translationY>=0){didScreenReachDestination.y=true;event.translationY=0;}}applyStyle(screenTransitionConfig,event);const finished=didScreenReachDestinationCheck();if(finished){restoreOriginalStyleForBelowTopScreen();}maybeScheduleNextFrame(computeFrame,finished,screenTransitionConfig,event,isTransitionCanceled);};return computeFrame;}else{const computeFrame=function(){const progress={x:computeEasingProgress(startTimestamp,distance.x,velocity.x),y:computeEasingProgress(startTimestamp,distance.y,velocity.y)};event.translationX=startingPosition.x+direction.x*distance.x*easing(progress.x);event.translationY=startingPosition.y+direction.y*distance.y*easing(progress.y);if(direction.x>0){if(event.translationX>=screenDimensions.width){didScreenReachDestination.x=true;event.translationX=screenDimensions.width;}}else{if(event.translationX<=-screenDimensions.width){didScreenReachDestination.x=true;event.translationX=-screenDimensions.width;}}if(direction.y>0){if(event.translationY>=screenDimensions.height){didScreenReachDestination.y=true;event.translationY=screenDimensions.height;}}else{if(event.translationY<=-screenDimensions.height){didScreenReachDestination.y=true;event.translationY=-screenDimensions.height;}}applyStyle(screenTransitionConfig,event);maybeScheduleNextFrame(computeFrame,didScreenReachDestination.x||didScreenReachDestination.y,screenTransitionConfig,event,isTransitionCanceled);};return computeFrame;}}",
+};
 arg5.getSwipeSimulator = getSwipeSimulator;

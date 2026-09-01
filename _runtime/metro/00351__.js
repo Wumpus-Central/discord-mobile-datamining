@@ -34,5 +34,5 @@ arg5.default = {
     if (obj != null) {
       obj.endScroll();
     }
-  }
+  },
 };

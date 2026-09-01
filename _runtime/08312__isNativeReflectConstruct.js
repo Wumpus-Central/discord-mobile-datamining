@@ -27,8 +27,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 noopAll;
 const re9 = /\s+/;
@@ -70,7 +69,16 @@ const items = [
       } else {
         parts = [];
       }
-      let obj = { x, y, width, height, onLoad: props.onLoad, meetOrSlice: self(8254).meetOrSliceTypes[tmp3] || 0, align: null, src: null };
+      let obj = {
+        x,
+        y,
+        width,
+        height,
+        onLoad: props.onLoad,
+        meetOrSlice: self(8254).meetOrSliceTypes[tmp3] || 0,
+        align: null,
+        src: null,
+      };
       [tmp2, tmp3] = parts;
       const tmp6 = self(8254).meetOrSliceTypes[tmp3] || 0;
       obj[6] = self(8254).alignEnum[tmp2] || "xMidYMid";
@@ -88,17 +96,21 @@ const items = [
       obj = {
         ref(arg0) {
           return self.refMethod(arg0);
-        }
+        },
       };
       const tmp7 = self(8254).alignEnum[tmp2] || "xMidYMid";
       const tmp11 = __INTERNAL_VIEW_CONFIGDefault;
       const merged = Object.assign(self(8256).withoutXY(this, props));
       const merged1 = Object.assign(obj);
-      return <tmp11 ref={function ref(arg0) {
-        return self.refMethod(arg0);
-      }} />;
-    }
-  }
+      return (
+        <tmp11
+          ref={function ref(arg0) {
+            return self.refMethod(arg0);
+          }}
+        />
+      );
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(SvgImage, items);
 importDefaultResultResult.displayName = "Image";

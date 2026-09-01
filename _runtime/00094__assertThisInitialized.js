@@ -8,4 +8,4 @@ export default function _assertThisInitialized(arg0) {
   } else {
     return arg0;
   }
-};
+}

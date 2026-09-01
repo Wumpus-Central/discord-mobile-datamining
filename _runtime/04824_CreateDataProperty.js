@@ -1,7 +1,6 @@
 // _runtime/04824_CreateDataProperty.js
 import isObject from "04762_isObject.js";
 
-
 export default function CreateDataProperty(arg0, arg1, arg2) {
   if (isObject(arg0)) {
     if (tmp(4809)(arg1)) {
@@ -16,4 +15,4 @@ export default function CreateDataProperty(arg0, arg1, arg2) {
     const tmp5 = new tmp(541)("Assertion failed: Type(O) is not Object");
     throw tmp5;
   }
-};
+}

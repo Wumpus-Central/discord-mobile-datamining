@@ -74,7 +74,7 @@ export default function extractGradient(arg0, arg1) {
           } else {
             let _console = console;
             let _HermesInternal = HermesInternal;
-            let warnResult = console.warn("\"" + num8 + "\" is not a valid number or percentage string.");
+            let warnResult = console.warn('"' + num8 + '" is not a valid number or percentage string.');
             let num10 = 0;
             num9 = 0;
           }
@@ -90,19 +90,21 @@ export default function extractGradient(arg0, arg1) {
             let _Math = Math;
             let tmp12 = importDefault;
             let tmp13 = dependencyMap;
-            let items1 = [num9, 16777215 & tmp10 | Math.round(255 * extractOpacityDefault(stopOpacity)) << 24];
+            let items1 = [num9, (16777215 & tmp10) | (Math.round(255 * extractOpacityDefault(stopOpacity)) << 24)];
             let arr = items.push(items1);
           }
           num7 = num7 + 1;
         }
         let _console2 = console;
         let _HermesInternal2 = HermesInternal;
-        let str7 = "\"";
+        let str7 = '"';
         let tmp15 = stopColor;
-        let str8 = "\" is not a valid color or \"";
+        let str8 = '" is not a valid color or "';
         let tmp16 = offset;
-        let str9 = "\" is not a valid offset";
-        let warnResult1 = console.warn("\"" + stopColor + "\" is not a valid color or \"" + offset + "\" is not a valid offset");
+        let str9 = '" is not a valid offset';
+        let warnResult1 = console.warn(
+          '"' + stopColor + '" is not a valid color or "' + offset + '" is not a valid offset',
+        );
       }
     }
     const sorted = items.sort(offsetComparator);
@@ -134,4 +136,4 @@ export default function extractGradient(arg0, arg1) {
   } else {
     return null;
   }
-};
+}

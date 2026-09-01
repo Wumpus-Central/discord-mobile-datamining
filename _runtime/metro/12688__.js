@@ -119,296 +119,296 @@ let obj = {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 };
 Object.defineProperty(arg5, "ar", obj);
 obj = {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 };
 Object.defineProperty(arg5, "az", obj);
 obj = {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 };
 Object.defineProperty(arg5, "be", obj);
 Object.defineProperty(arg5, "bg", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "ca", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "cs", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "da", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "de", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "en", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "eo", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "es", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "fa", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "fi", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "fr", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "frCA", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "he", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "hu", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "hy", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "id", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "is", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "it", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "ja", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "ka", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "kh", {
   enumerable: true,
   get() {
     return fn(default_1).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "km", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "ko", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "lt", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "mk", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "ms", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "nl", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "no", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "ota", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "ps", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "pl", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "pt", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "ru", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "sl", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "sv", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "ta", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "th", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "tr", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "ua", {
   enumerable: true,
   get() {
     return fn(default_1).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "uk", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "ur", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "uz", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "vi", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "zhCN", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "zhTW", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });
 Object.defineProperty(arg5, "yo", {
   enumerable: true,
   get() {
     return fn(mergeDefs).default;
-  }
+  },
 });

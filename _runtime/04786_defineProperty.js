@@ -11,9 +11,7 @@ if (typeof Symbol === "function") {
 let closure_2 = tmp;
 let tmp2 = hasPropertyDescriptors();
 let closure_5 = tmp2;
-function defineProperty(arg0, arg1, arg2, arg3) {
-
-}
+function defineProperty(arg0, arg1, arg2, arg3) {}
 function defineProperties(prototype, ownPropertyDescriptors) {
   const arr = keys(ownPropertyDescriptors);
   if (!closure_2) {

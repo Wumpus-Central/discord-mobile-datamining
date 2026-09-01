@@ -4,7 +4,7 @@ export default function adler32(arg0, arg1, arg2, arg3) {
   let diff;
   let tmp = arg2;
   let tmp2 = arg3;
-  let result1 = arg0 >>> 16 & 65535;
+  let result1 = (arg0 >>> 16) & 65535;
   let result = tmp3;
   let tmp6 = result1;
   let tmp7 = tmp3;
@@ -22,8 +22,8 @@ export default function adler32(arg0, arg1, arg2, arg3) {
       do {
         let tmp13 = +tmp10;
         let sum = tmp13 + 1;
-        let tmp15 = tmp9 + arg1[tmp13] | 0;
-        let tmp16 = tmp8 + tmp15 | 0;
+        let tmp15 = (tmp9 + arg1[tmp13]) | 0;
+        let tmp16 = (tmp8 + tmp15) | 0;
         num = num - 1;
         tmp8 = tmp16;
         tmp9 = tmp15;
@@ -37,5 +37,5 @@ export default function adler32(arg0, arg1, arg2, arg3) {
       tmp = diff;
     } while (0 !== diff);
   }
-  return tmp7 | tmp6 << 16;
-};
+  return tmp7 | (tmp6 << 16);
+}

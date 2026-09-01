@@ -23,7 +23,9 @@ isAnimated = function isAnimated(arr) {
 };
 isAnimated.__closure = {};
 isAnimated.__workletHash = 4296700641760;
-isAnimated.__initData = { code: "function isAnimated_Pnpm_utilsTs1(prop){const isAnimated_Pnpm_utilsTs1=this._recur;if(Array.isArray(prop)){return prop.some(isAnimated_Pnpm_utilsTs1);}else if(typeof prop==='object'&&prop!==null){if(prop.onFrame!==undefined){return true;}else{return Object.values(prop).some(isAnimated_Pnpm_utilsTs1);}}return false;}" };
+isAnimated.__initData = {
+  code: "function isAnimated_Pnpm_utilsTs1(prop){const isAnimated_Pnpm_utilsTs1=this._recur;if(Array.isArray(prop)){return prop.some(isAnimated_Pnpm_utilsTs1);}else if(typeof prop==='object'&&prop!==null){if(prop.onFrame!==undefined){return true;}else{return Object.values(prop).some(isAnimated_Pnpm_utilsTs1);}}return false;}",
+};
 function shallowEqual(arg0, arg1) {
   const keys = Object.keys(arg0);
   if (keys.length !== Object.keys(arg1).length) {
@@ -41,23 +43,31 @@ function shallowEqual(arg0, arg1) {
 }
 shallowEqual.__closure = {};
 shallowEqual.__workletHash = 6945711106539;
-shallowEqual.__initData = { code: "function shallowEqual_Pnpm_utilsTs2(a,b){const aKeys=Object.keys(a);const bKeys=Object.keys(b);if(aKeys.length!==bKeys.length){return false;}for(let i=0;i<aKeys.length;i++){if(a[aKeys[i]]!==b[aKeys[i]]){return false;}}return true;}" };
+shallowEqual.__initData = {
+  code: "function shallowEqual_Pnpm_utilsTs2(a,b){const aKeys=Object.keys(a);const bKeys=Object.keys(b);if(aKeys.length!==bKeys.length){return false;}for(let i=0;i<aKeys.length;i++){if(a[aKeys[i]]!==b[aKeys[i]]){return false;}}return true;}",
+};
 function validateAnimatedStyles(obj) {
   if (typeof obj !== "object") {
     const _HermesInternal = HermesInternal;
-    const reanimatedError = new isAnimated(1664).ReanimatedError("`useAnimatedStyle` has to return an object, found " + typeof obj + " instead.");
+    const reanimatedError = new isAnimated(1664).ReanimatedError(
+      "`useAnimatedStyle` has to return an object, found " + typeof obj + " instead.",
+    );
     throw reanimatedError;
   } else {
     const _Array = Array;
     if (Array.isArray(obj)) {
-      const reanimatedError1 = new isAnimated(1664).ReanimatedError("`useAnimatedStyle` has to return an object and cannot return static styles combined with dynamic ones. Please do merging where a component receives props.");
+      const reanimatedError1 = new isAnimated(1664).ReanimatedError(
+        "`useAnimatedStyle` has to return an object and cannot return static styles combined with dynamic ones. Please do merging where a component receives props.",
+      );
       throw reanimatedError1;
     }
   }
 }
 validateAnimatedStyles.__closure = {};
 validateAnimatedStyles.__workletHash = 9250446401049;
-validateAnimatedStyles.__initData = { code: "function validateAnimatedStyles_Pnpm_utilsTs3(styles){if(typeof styles!=='object'){throw new ReanimatedError(\"`useAnimatedStyle` has to return an object, found \"+typeof styles+\" instead.\");}else if(Array.isArray(styles)){throw new ReanimatedError('`useAnimatedStyle` has to return an object and cannot return static styles combined with dynamic ones. Please do merging where a component receives props.');}}" };
+validateAnimatedStyles.__initData = {
+  code: "function validateAnimatedStyles_Pnpm_utilsTs3(styles){if(typeof styles!=='object'){throw new ReanimatedError(\"`useAnimatedStyle` has to return an object, found \"+typeof styles+\" instead.\");}else if(Array.isArray(styles)){throw new ReanimatedError('`useAnimatedStyle` has to return an object and cannot return static styles combined with dynamic ones. Please do merging where a component receives props.');}}",
+};
 arg5.buildWorkletsHash = function buildWorkletsHash(items1) {
   const values = Object.values(items1);
   return values.reduce((arg0, __workletHash) => arg0 + __workletHash.__workletHash.toString(), "");
@@ -139,13 +149,15 @@ arg5.areDependenciesEqual = function areDependenciesEqual(dependencies, savedDep
                     let _Object2 = Object;
                     let keys = Object.keys(tmp2.__closure);
                     let _Object3 = Object;
-                    let tmp7 = keys.length === Object.keys(tmp3.__closure).length && keys.every((arg0) => {
-                      let tmp2 = arg0 in __closure2.__closure;
-                      if (tmp2) {
-                        tmp2 = __closure.__closure[arg0] === tmp.__closure[arg0];
-                      }
-                      return tmp2;
-                    });
+                    let tmp7 =
+                      keys.length === Object.keys(tmp3.__closure).length &&
+                      keys.every((arg0) => {
+                        let tmp2 = arg0 in __closure2.__closure;
+                        if (tmp2) {
+                          tmp2 = __closure.__closure[arg0] === tmp.__closure[arg0];
+                        }
+                        return tmp2;
+                      });
                     flag2 = tmp7;
                   }
                   flag = false;

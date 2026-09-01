@@ -1,7 +1,9 @@
 // _runtime/01810_useComposedEventHandler.js
 const require = arg1;
 const dependencyMap = arg6;
-let closure_2 = { code: "function pnpm_useComposedEventHandlerTs1(event){const{workletsMap}=this.__closure;if(workletsMap[event.eventName]){workletsMap[event.eventName].forEach(function(worklet){return worklet(event);});}}" };
+let closure_2 = {
+  code: "function pnpm_useComposedEventHandlerTs1(event){const{workletsMap}=this.__closure;if(workletsMap[event.eventName]){workletsMap[event.eventName].forEach(function(worklet){return worklet(event);});}}",
+};
 arg5.useComposedEventHandler = function useComposedEventHandler(substr) {
   let obj = {};
   const set = new Set();

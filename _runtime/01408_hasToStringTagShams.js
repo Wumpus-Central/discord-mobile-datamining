@@ -1,7 +1,6 @@
 // _runtime/01408_hasToStringTagShams.js
 import hasSymbols from "00545_hasSymbols.js";
 
-
 export default function hasToStringTagShams() {
   let toStringTag = hasSymbols();
   if (toStringTag) {
@@ -9,4 +8,4 @@ export default function hasToStringTagShams() {
     toStringTag = Symbol.toStringTag;
   }
   return toStringTag;
-};
+}

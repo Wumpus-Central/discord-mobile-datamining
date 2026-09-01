@@ -11,4 +11,4 @@ export default function FullWindowOverlay(arg0) {
   console.warn("Using FullWindowOverlay is only valid on iOS devices.");
   const merged = Object.assign(arg0);
   return <closure_0 />;
-};
+}

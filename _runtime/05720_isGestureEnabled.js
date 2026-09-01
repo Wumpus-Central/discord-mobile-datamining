@@ -6,7 +6,6 @@ import map from "05721_map.js";
 import isNativeEvent from "05722_isNativeEvent.js";
 import getHandler from "05723_getHandler.js";
 
-
 export const isGestureEnabled = map.isGestureEnabled;
 export const prepareConfigForNativeSide = map.prepareConfigForNativeSide;
 export const useClonedAndRemappedConfig = map.useClonedAndRemappedConfig;

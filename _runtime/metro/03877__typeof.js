@@ -90,7 +90,12 @@ class EraParser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 140, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", {
+            value: 140,
+            enumerable: true,
+            configurable: true,
+            writable: true,
+          });
         } else {
           num3 = 140;
           applyResult.priority = 140;
@@ -212,13 +217,17 @@ obj = {
           if ("GGGGG" === arg1) {
             return era.era(arg0, { width: "narrow" });
           } else {
-            return era.era(arg0, { width: "wide" }) || era.era(arg0, { width: "abbreviated" }) || era.era(arg0, { width: "narrow" });
+            return (
+              era.era(arg0, { width: "wide" }) ||
+              era.era(arg0, { width: "abbreviated" }) ||
+              era.era(arg0, { width: "narrow" })
+            );
           }
         }
       }
     }
     return era.era(arg0, { width: "abbreviated" }) || era.era(arg0, { width: "narrow" });
-  }
+  },
 };
 let items = [
   obj,
@@ -229,8 +238,8 @@ let items = [
       setUTCFullYear.setUTCFullYear(era, 0, 1);
       setUTCFullYear.setUTCHours(0, 0, 0, 0);
       return setUTCFullYear;
-    }
-  }
+    },
+  },
 ];
 if (0 < items.length) {
   do {

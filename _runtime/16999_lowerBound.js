@@ -6,7 +6,7 @@ arg5.default = function lowerBound(arg0) {
   let num2 = 0;
   if (length > 0) {
     do {
-      let tmp = length / 2 | 0;
+      let tmp = (length / 2) | 0;
       let sum = num + tmp;
       let tmp3 = length;
       let sum1 = num;

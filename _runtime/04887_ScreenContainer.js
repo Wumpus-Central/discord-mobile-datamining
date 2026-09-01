@@ -33,4 +33,4 @@ export default function ScreenContainer(enabled) {
   }
   const merged2 = Object.assign(tmp3);
   return <closure_5 />;
-};
+}

@@ -1,7 +1,6 @@
 // _runtime/metro/13953__.js
 import _mod13952 from "13952__.js";
 
-
 export default (arg0, arg1) => {
   try {
     const obj = { value: null, configurable: true, writable: true };

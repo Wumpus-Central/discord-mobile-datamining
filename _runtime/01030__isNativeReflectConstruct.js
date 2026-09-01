@@ -24,8 +24,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 class BrowserClient {
@@ -129,7 +128,10 @@ class BrowserClient {
     }
     if (sendDefaultPii) {
       str3 = "beforeSendSession";
-      onResult = tmp11Result.on("beforeSendSession", require("registerSpanErrorInstrumentation").addAutoIpAddressToSession);
+      onResult = tmp11Result.on(
+        "beforeSendSession",
+        require("registerSpanErrorInstrumentation").addAutoIpAddressToSession,
+      );
     }
     return tmp11Result;
   }
@@ -139,8 +141,13 @@ let items = [
   {
     key: "eventFromException",
     value: function eventFromException(arg0, arg1) {
-      return BrowserClient(1031).eventFromException(this._options.stackParser, arg0, arg1, this._options.attachStacktrace);
-    }
+      return BrowserClient(1031).eventFromException(
+        this._options.stackParser,
+        arg0,
+        arg1,
+        this._options.attachStacktrace,
+      );
+    },
   },
   {
     key: "eventFromMessage",
@@ -149,8 +156,14 @@ let items = [
       if (arg1 === undefined) {
         str = "info";
       }
-      return BrowserClient(1031).eventFromMessage(this._options.stackParser, arg0, str, arg2, this._options.attachStacktrace);
-    }
+      return BrowserClient(1031).eventFromMessage(
+        this._options.stackParser,
+        arg0,
+        str,
+        arg2,
+        this._options.attachStacktrace,
+      );
+    },
   },
   {
     key: "_prepareEvent",
@@ -164,8 +177,8 @@ let items = [
       }
       const items = [platform, arg1, arg2, arg3];
       return fn(items);
-    }
-  }
+    },
+  },
 ];
 
 export const BrowserClient = _createClass(BrowserClient, items);

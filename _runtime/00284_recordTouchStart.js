@@ -15,7 +15,18 @@ function recordTouchStart(identifier) {
       ({ pageX: tmp3.previousPageX, pageY: tmp3.previousPageY } = identifier);
       tmp3.previousTimeStamp = tmp;
     } else {
-      obj = { touchActive: true, startPageX: null, startPageY: null, startTimeStamp: null, currentPageX: null, currentPageY: null, currentTimeStamp: null, previousPageX: null, previousPageY: null, previousTimeStamp: null };
+      obj = {
+        touchActive: true,
+        startPageX: null,
+        startPageY: null,
+        startTimeStamp: null,
+        currentPageX: null,
+        currentPageY: null,
+        currentTimeStamp: null,
+        previousPageX: null,
+        previousPageY: null,
+        previousTimeStamp: null,
+      };
       ({ pageX: obj[1], pageY: obj[2] } = identifier);
       obj[3] = tmp;
       ({ pageX: obj[4], pageY: obj[5] } = identifier);
@@ -35,7 +46,11 @@ function recordTouchMove(identifier) {
     throw error;
   } else if (tmp[identifier]) {
     tmp2.touchActive = true;
-    ({ currentPageX: tmp2.previousPageX, currentPageY: tmp2.previousPageY, currentTimeStamp: tmp2.previousTimeStamp } = tmp2);
+    ({
+      currentPageX: tmp2.previousPageX,
+      currentPageY: tmp2.previousPageY,
+      currentTimeStamp: tmp2.previousTimeStamp,
+    } = tmp2);
     ({ pageX: tmp2.currentPageX, pageY: tmp2.currentPageY } = identifier);
     tmp2.currentTimeStamp = identifier.timeStamp || identifier.timestamp;
     obj.mostRecentTimeStamp = identifier.timeStamp || identifier.timestamp;
@@ -49,7 +64,11 @@ function recordTouchEnd(identifier) {
     throw error;
   } else if (tmp[identifier]) {
     tmp2.touchActive = false;
-    ({ currentPageX: tmp2.previousPageX, currentPageY: tmp2.previousPageY, currentTimeStamp: tmp2.previousTimeStamp } = tmp2);
+    ({
+      currentPageX: tmp2.previousPageX,
+      currentPageY: tmp2.previousPageY,
+      currentTimeStamp: tmp2.previousTimeStamp,
+    } = tmp2);
     ({ pageX: tmp2.currentPageX, pageY: tmp2.currentPageY } = identifier);
     tmp2.currentTimeStamp = identifier.timeStamp || identifier.timestamp;
     obj.mostRecentTimeStamp = identifier.timeStamp || identifier.timestamp;
@@ -104,5 +123,5 @@ arg5.default = {
       }
     }
   },
-  touchHistory: obj
+  touchHistory: obj,
 };

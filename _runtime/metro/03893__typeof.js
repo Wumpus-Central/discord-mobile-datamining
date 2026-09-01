@@ -94,7 +94,12 @@ class DateParser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 90, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", {
+            value: 90,
+            enumerable: true,
+            configurable: true,
+            writable: true,
+          });
         } else {
           num3 = 90;
           applyResult.priority = 90;
@@ -111,7 +116,12 @@ class DateParser {
           str3 = "subPriority";
           if ("subPriority" in applyResult) {
             _Object2 = Object;
-            definePropertyResult1 = Object.defineProperty(applyResult, "subPriority", { value: 1, enumerable: true, configurable: true, writable: true });
+            definePropertyResult1 = Object.defineProperty(applyResult, "subPriority", {
+              value: 1,
+              enumerable: true,
+              configurable: true,
+              writable: true,
+            });
           } else {
             applyResult.subPriority = 1;
           }
@@ -234,7 +244,7 @@ obj = {
     } else {
       return _createSuperInternal(3880).parseNDigits(arg1.length, arg0);
     }
-  }
+  },
 };
 let items = [
   obj,
@@ -256,7 +266,7 @@ let items = [
         }
       }
       return tmp5;
-    }
+    },
   },
   {
     key: "set",
@@ -264,8 +274,8 @@ let items = [
       setUTCDate.setUTCDate(arg2);
       setUTCDate.setUTCHours(0, 0, 0, 0);
       return setUTCDate;
-    }
-  }
+    },
+  },
 ];
 if (0 < items.length) {
   do {

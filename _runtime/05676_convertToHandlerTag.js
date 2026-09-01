@@ -21,10 +21,18 @@ function convertToHandlerTag(num) {
   }
 }
 ({ useCallback: c3, useRef: c4, useState: c5 } = noop);
-let items = [...require("items1").baseGestureHandlerWithDetectorProps, ...require("items1").tapGestureHandlerProps, ...require("managePanProps").panGestureHandlerProps, ...require("managePanProps").panGestureHandlerCustomNativeProps, ...require("items1").longPressGestureHandlerProps, ...require("_isNativeReflectConstruct").forceTouchGestureHandlerProps, ...require("items1").flingGestureHandlerProps, ...require("_isNativeReflectConstruct").hoverGestureHandlerProps, ...require("items").nativeViewGestureHandlerProps];
-function emptyWorklet() {
-
-}
+let items = [
+  ...require("items1").baseGestureHandlerWithDetectorProps,
+  ...require("items1").tapGestureHandlerProps,
+  ...require("managePanProps").panGestureHandlerProps,
+  ...require("managePanProps").panGestureHandlerCustomNativeProps,
+  ...require("items1").longPressGestureHandlerProps,
+  ...require("_isNativeReflectConstruct").forceTouchGestureHandlerProps,
+  ...require("items1").flingGestureHandlerProps,
+  ...require("_isNativeReflectConstruct").hoverGestureHandlerProps,
+  ...require("items").nativeViewGestureHandlerProps,
+];
+function emptyWorklet() {}
 emptyWorklet.__closure = {};
 emptyWorklet.__workletHash = 11436428848425;
 emptyWorklet.__initData = { code: "function emptyWorklet_Pnpm_utilsTs1(){}" };
@@ -70,9 +78,7 @@ export const extractGestureRelations = function extractGestureRelations(item1000
   obj[2] = Array.from(new Set(found2));
   return obj;
 };
-export function checkGestureCallbacksForWorklets(item10022) {
-
-}
+export function checkGestureCallbacksForWorklets(item10022) {}
 export const useForceRender = function useForceRender() {
   const tmp = callback(callback4(false), 2);
   const first = tmp[0];
@@ -90,8 +96,6 @@ export const useWebEventHandlers = function useWebEventHandlers() {
     onGestureHandlerStateChange(nativeEvent) {
       const result = callback(5655).onGestureHandlerEvent(nativeEvent.nativeEvent);
     },
-    onGestureHandlerTouchEvent() {
-
-    }
+    onGestureHandlerTouchEvent() {},
   });
 };

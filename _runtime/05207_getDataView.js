@@ -14,7 +14,14 @@ arg5.default = {
       obj[1] = stringFromDataView;
       tmp = obj;
     }
-    obj = { "GIF Version": tmp, "Image Width": null, "Image Height": null, "Global Color Map": null, "Bits Per Pixel": null, "Color Resolution Depth": null };
+    obj = {
+      "GIF Version": tmp,
+      "Image Width": null,
+      "Image Height": null,
+      "Global Color Map": null,
+      "Bits Per Pixel": null,
+      "Color Resolution Depth": null,
+    };
     let tmp5;
     if (8 <= byteLength.byteLength) {
       const uint16 = byteLength.getUint16(6, true);
@@ -77,5 +84,5 @@ arg5.default = {
     }
     obj[5] = tmp16;
     return obj;
-  }
+  },
 };

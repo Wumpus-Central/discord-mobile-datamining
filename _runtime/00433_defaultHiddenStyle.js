@@ -33,7 +33,16 @@ if (importDefaultResult.hasViewManagerConfig("VirtualView")) {
     closure_3 = tmp3;
     obj = obj(closure_1_2[6]);
     closure_4 = obj.useVirtualViewLogging(tmp3, nativeID);
-    obj = { initialHidden: callback, nativeID, ref, removeClippedSubviews: hiddenStyle.removeClippedSubviews, renderState: tmp3 ? VirtualViewRenderState.None : VirtualViewRenderState.Rendered, style: null, onModeChange: null, children: null };
+    obj = {
+      initialHidden: callback,
+      nativeID,
+      ref,
+      removeClippedSubviews: hiddenStyle.removeClippedSubviews,
+      renderState: tmp3 ? VirtualViewRenderState.None : VirtualViewRenderState.Rendered,
+      style: null,
+      onModeChange: null,
+      children: null,
+    };
     VirtualViewRenderState = globalThis.VirtualViewRenderState;
     let composeResult = style;
     if (tmp2 !== closure_1_9) {
@@ -44,7 +53,13 @@ if (importDefaultResult.hasViewManagerConfig("VirtualView")) {
     obj[6] = function onModeChange(nativeEvent) {
       closure_0 = nativeEvent;
       const tmpResult = closure_1_1(_undefined[7])(globalThis.VirtualViewMode.cast(nativeEvent.nativeEvent.mode));
-      obj = { mode: tmpResult, renderState: closure_3 ? VirtualViewRenderState.None : VirtualViewRenderState.Rendered, target: nativeEvent.currentTarget, targetRect: nativeEvent.nativeEvent.targetRect, thresholdRect: nativeEvent.nativeEvent.thresholdRect };
+      obj = {
+        mode: tmpResult,
+        renderState: closure_3 ? VirtualViewRenderState.None : VirtualViewRenderState.Rendered,
+        target: nativeEvent.currentTarget,
+        targetRect: nativeEvent.nativeEvent.targetRect,
+        thresholdRect: nativeEvent.nativeEvent.thresholdRect,
+      };
       VirtualViewRenderState = globalThis.VirtualViewRenderState;
       const current = ref.current;
       if (current != null) {
@@ -59,7 +74,10 @@ if (importDefaultResult.hasViewManagerConfig("VirtualView")) {
         if (tmpResult !== globalThis.VirtualViewMode.Prerender) {
           if (tmpResult !== globalThis.VirtualViewMode.Hidden) {
             const _Error = Error;
-            throw Error("Match: No case succesfully matched. Make exhaustive or add a wildcard case using '_'. Argument: " + tmpResult);
+            throw Error(
+              "Match: No case succesfully matched. Make exhaustive or add a wildcard case using '_'. Argument: " +
+                tmpResult,
+            );
           } else {
             closure_1_5(() => {
               obj = nativeEvent(nativeEvent.nativeEvent.targetRect);
@@ -113,7 +131,16 @@ if (importDefaultResult.hasViewManagerConfig("VirtualView")) {
       closure_3 = tmp3;
       obj = obj(closure_1_2[6]);
       closure_4 = obj.useVirtualViewLogging(tmp3, nativeID);
-      obj = { initialHidden: callback, nativeID, ref, removeClippedSubviews: hiddenStyle.removeClippedSubviews, renderState: tmp3 ? VirtualViewRenderState.None : VirtualViewRenderState.Rendered, style: null, onModeChange: null, children: null };
+      obj = {
+        initialHidden: callback,
+        nativeID,
+        ref,
+        removeClippedSubviews: hiddenStyle.removeClippedSubviews,
+        renderState: tmp3 ? VirtualViewRenderState.None : VirtualViewRenderState.Rendered,
+        style: null,
+        onModeChange: null,
+        children: null,
+      };
       VirtualViewRenderState = globalThis.VirtualViewRenderState;
       let composeResult = style;
       if (tmp2 !== closure_1_9) {
@@ -124,7 +151,13 @@ if (importDefaultResult.hasViewManagerConfig("VirtualView")) {
       obj[6] = function onModeChange(nativeEvent) {
         closure_0 = nativeEvent;
         const tmpResult = closure_1_1(_undefined[7])(globalThis.VirtualViewMode.cast(nativeEvent.nativeEvent.mode));
-        obj = { mode: tmpResult, renderState: closure_3 ? VirtualViewRenderState.None : VirtualViewRenderState.Rendered, target: nativeEvent.currentTarget, targetRect: nativeEvent.nativeEvent.targetRect, thresholdRect: nativeEvent.nativeEvent.thresholdRect };
+        obj = {
+          mode: tmpResult,
+          renderState: closure_3 ? VirtualViewRenderState.None : VirtualViewRenderState.Rendered,
+          target: nativeEvent.currentTarget,
+          targetRect: nativeEvent.nativeEvent.targetRect,
+          thresholdRect: nativeEvent.nativeEvent.thresholdRect,
+        };
         VirtualViewRenderState = globalThis.VirtualViewRenderState;
         const current = ref.current;
         if (current != null) {
@@ -139,7 +172,10 @@ if (importDefaultResult.hasViewManagerConfig("VirtualView")) {
           if (tmpResult !== globalThis.VirtualViewMode.Prerender) {
             if (tmpResult !== globalThis.VirtualViewMode.Hidden) {
               const _Error = Error;
-              throw Error("Match: No case succesfully matched. Make exhaustive or add a wildcard case using '_'. Argument: " + tmpResult);
+              throw Error(
+                "Match: No case succesfully matched. Make exhaustive or add a wildcard case using '_'. Argument: " +
+                  tmpResult,
+              );
             } else {
               closure_1_5(() => {
                 obj = nativeEvent(nativeEvent.nativeEvent.targetRect);

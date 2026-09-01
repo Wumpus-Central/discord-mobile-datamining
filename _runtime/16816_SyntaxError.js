@@ -562,7 +562,12 @@ obj = {
                                                       if (typeof peg$c27 !== "function") {
                                                         throwTypeErrorResult = HermesBuiltin.throwTypeError();
                                                       }
-                                                      const obj2 = { type: null, ordinal: true, offset: null, options: null };
+                                                      const obj2 = {
+                                                        type: null,
+                                                        ordinal: true,
+                                                        offset: null,
+                                                        options: null,
+                                                      };
                                                       obj2[0] = throwTypeErrorResult.type;
                                                       obj2[2] = throwTypeErrorResult.offset || 0;
                                                       obj2[3] = throwTypeErrorResult.options;
@@ -612,15 +617,19 @@ obj = {
                                                               if (throwTypeErrorResult() !== throwTypeErrorResult) {
                                                                 throwTypeErrorResult = peg$parseoptionalFormatPattern;
                                                                 throwTypeErrorResult = peg$parseoptionalFormatPattern();
-                                                                throwTypeErrorResult = throwTypeErrorResult !== throwTypeErrorResult;
+                                                                throwTypeErrorResult =
+                                                                  throwTypeErrorResult !== throwTypeErrorResult;
                                                                 if (throwTypeErrorResult) {
                                                                   const items8 = [];
                                                                   str11 = items8;
                                                                   if (throwTypeErrorResult) {
                                                                     do {
-                                                                      throwTypeErrorResult = items8.push(throwTypeErrorResult);
-                                                                      throwTypeErrorResult = peg$parseoptionalFormatPattern;
-                                                                      throwTypeErrorResult = peg$parseoptionalFormatPattern();
+                                                                      throwTypeErrorResult =
+                                                                        items8.push(throwTypeErrorResult);
+                                                                      throwTypeErrorResult =
+                                                                        peg$parseoptionalFormatPattern;
+                                                                      throwTypeErrorResult =
+                                                                        peg$parseoptionalFormatPattern();
                                                                       throwTypeErrorResult = obj;
                                                                       str11 = items8;
                                                                     } while (throwTypeErrorResult !== obj);
@@ -631,7 +640,8 @@ obj = {
                                                                 if (str11 !== throwTypeErrorResult) {
                                                                   throwTypeErrorResult = peg$c30;
                                                                   if (typeof peg$c30 !== "function") {
-                                                                    throwTypeErrorResult = HermesBuiltin.throwTypeError();
+                                                                    throwTypeErrorResult =
+                                                                      HermesBuiltin.throwTypeError();
                                                                   }
                                                                   obj3 = { type: "selectFormat", options: null };
                                                                   obj3[1] = str11;
@@ -1495,63 +1505,41 @@ obj = {
     }
     let obj = {};
     obj = { start: peg$parsestart };
-    function peg$c1(arg0) {
-
-    }
-    function peg$c3(arg0) {
-
-    }
-    function peg$c4(arg0) {
-
-    }
+    function peg$c1(arg0) {}
+    function peg$c3(arg0) {}
+    function peg$c4(arg0) {}
     const re6 = /^[^ \t\n\r,.+={}#]/;
     closure_7 = { type: "class", value: "[^ \\t\\n\\r,.+={}#]", description: "[^ \\t\\n\\r,.+={}#]" };
     c8 = "{";
-    closure_9 = { type: "literal", value: "{", description: "\"{\"" };
+    closure_9 = { type: "literal", value: "{", description: '"{"' };
     c10 = null;
     c11 = ",";
-    closure_12 = { type: "literal", value: ",", description: "\",\"" };
+    closure_12 = { type: "literal", value: ",", description: '","' };
     c13 = "}";
-    closure_14 = { type: "literal", value: "}", description: "\"}\"" };
-    function peg$c14(arg0, arg1) {
-
-    }
+    closure_14 = { type: "literal", value: "}", description: '"}"' };
+    function peg$c14(arg0, arg1) {}
     const number = "number";
-    closure_17 = { type: "literal", value: "number", description: "\"number\"" };
-    closure_19 = { type: "literal", value: "date", description: "\"date\"" };
+    closure_17 = { type: "literal", value: "number", description: '"number"' };
+    closure_19 = { type: "literal", value: "date", description: '"date"' };
     const time = "time";
-    closure_21 = { type: "literal", value: "time", description: "\"time\"" };
-    function peg$c21(arg0, arg1) {
-
-    }
+    closure_21 = { type: "literal", value: "time", description: '"time"' };
+    function peg$c21(arg0, arg1) {}
     const plural = "plural";
-    closure_24 = { type: "literal", value: "plural", description: "\"plural\"" };
-    function peg$c24(arg0) {
-
-    }
+    closure_24 = { type: "literal", value: "plural", description: '"plural"' };
+    function peg$c24(arg0) {}
     const selectordinal = "selectordinal";
-    closure_27 = { type: "literal", value: "selectordinal", description: "\"selectordinal\"" };
-    function peg$c27(arg0) {
-
-    }
+    closure_27 = { type: "literal", value: "selectordinal", description: '"selectordinal"' };
+    function peg$c27(arg0) {}
     const select = "select";
-    closure_30 = { type: "literal", value: "select", description: "\"select\"" };
-    function peg$c30(arg0) {
-
-    }
+    closure_30 = { type: "literal", value: "select", description: '"select"' };
+    function peg$c30(arg0) {}
     c32 = "=";
-    closure_33 = { type: "literal", value: "=", description: "\"=\"" };
-    function peg$c33(arg0, arg1) {
-
-    }
+    closure_33 = { type: "literal", value: "=", description: '"="' };
+    function peg$c33(arg0, arg1) {}
     c35 = "offset:";
-    closure_36 = { type: "literal", value: "offset:", description: "\"offset:\"" };
-    function peg$c36(arg0) {
-
-    }
-    function peg$c37(arg0, arg1) {
-
-    }
+    closure_36 = { type: "literal", value: "offset:", description: '"offset:"' };
+    function peg$c36(arg0) {}
+    function peg$c37(arg0, arg1) {}
     closure_39 = { type: "other", description: "whitespace" };
     const re40 = /^[ \t\n\r]/;
     closure_41 = { type: "class", value: "[ \\t\\n\\r]", description: "[ \\t\\n\\r]" };
@@ -1561,42 +1549,32 @@ obj = {
     const re45 = /^[0-9a-f]/i;
     closure_46 = { type: "class", value: "[0-9a-f]i", description: "[0-9a-f]i" };
     c47 = "0";
-    closure_48 = { type: "literal", value: "0", description: "\"0\"" };
+    closure_48 = { type: "literal", value: "0", description: '"0"' };
     const re49 = /^[1-9]/;
     closure_50 = { type: "class", value: "[1-9]", description: "[1-9]" };
-    function peg$c50(arg0) {
-
-    }
+    function peg$c50(arg0) {}
     const re52 = /^[^{}\\\0-\x1F \t\n\r]/;
-    closure_53 = { type: "class", value: "[^{}\\\\\\0-\\x1F\u007F \\t\\n\\r]", description: "[^{}\\\\\\0-\\x1F\u007F \\t\\n\\r]" };
+    closure_53 = {
+      type: "class",
+      value: "[^{}\\\\\\0-\\x1F\u007F \\t\\n\\r]",
+      description: "[^{}\\\\\\0-\\x1F\u007F \\t\\n\\r]",
+    };
     c54 = "\\\\";
-    closure_55 = { type: "literal", value: "\\\\", description: "\"\\\\\\\\\"" };
-    function peg$c55() {
-
-    }
+    closure_55 = { type: "literal", value: "\\\\", description: '"\\\\\\\\"' };
+    function peg$c55() {}
     c57 = "\\#";
-    closure_58 = { type: "literal", value: "\\#", description: "\"\\\\#\"" };
-    function peg$c58() {
-
-    }
+    closure_58 = { type: "literal", value: "\\#", description: '"\\\\#"' };
+    function peg$c58() {}
     c60 = "\\{";
-    closure_61 = { type: "literal", value: "\\{", description: "\"\\\\{\"" };
-    function peg$c61() {
-
-    }
+    closure_61 = { type: "literal", value: "\\{", description: '"\\\\{"' };
+    function peg$c61() {}
     c63 = "\\}";
-    closure_64 = { type: "literal", value: "\\}", description: "\"\\\\}\"" };
-    function peg$c64() {
-
-    }
+    closure_64 = { type: "literal", value: "\\}", description: '"\\\\}"' };
+    function peg$c64() {}
     c66 = "\\u";
-    closure_67 = { type: "literal", value: "\\u", description: "\"\\\\u\"" };
-    function peg$c67(arg0) {
-
-    }
-    function peg$c68(arg0) {
-
-    }
+    closure_67 = { type: "literal", value: "\\u", description: '"\\\\u"' };
+    function peg$c67(arg0) {}
+    function peg$c68(arg0) {}
     c70 = 0;
     closure_71 = 0;
     let arr = [];
@@ -1606,7 +1584,7 @@ obj = {
         peg$parsestart = obj[tmp.startRule];
       } else {
         const _Error = Error;
-        error = new Error("Can't start parsing from rule \"" + tmp.startRule + "\".");
+        error = new Error("Can't start parsing from rule \"" + tmp.startRule + '".');
         throw error;
       }
     }
@@ -1712,52 +1690,123 @@ obj = {
     const text1 = `Expected ${tmp24}`;
     if (charAtResult1) {
       const str10 = charAtResult1.replace(/\\/g, "\\\\");
-      const str12 = charAtResult1.replace(/\\/g, "\\\\").replace(/"/g, "\\\"");
-      const str14 = charAtResult1.replace(/\\/g, "\\\\").replace(/"/g, "\\\"").replace(/\x08/g, "\\b");
-      const str16 = charAtResult1.replace(/\\/g, "\\\\").replace(/"/g, "\\\"").replace(/\x08/g, "\\b").replace(/\t/g, "\\t");
-      const str18 = charAtResult1.replace(/\\/g, "\\\\").replace(/"/g, "\\\"").replace(/\x08/g, "\\b").replace(/\t/g, "\\t").replace(/\n/g, "\\n");
-      const str20 = charAtResult1.replace(/\\/g, "\\\\").replace(/"/g, "\\\"").replace(/\x08/g, "\\b").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\f/g, "\\f");
-      const str22 = charAtResult1.replace(/\\/g, "\\\\").replace(/"/g, "\\\"").replace(/\x08/g, "\\b").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\f/g, "\\f").replace(/\r/g, "\\r");
-      const str23 = charAtResult1.replace(/\\/g, "\\\\").replace(/"/g, "\\\"").replace(/\x08/g, "\\b").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\f/g, "\\f").replace(/\r/g, "\\r").replace(/[\x00-\x07\x0B\x0E\x0F]/g, (str) => {
-        str = str.charCodeAt(0);
-        return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
-      });
-      const str24 = charAtResult1.replace(/\\/g, "\\\\").replace(/"/g, "\\\"").replace(/\x08/g, "\\b").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\f/g, "\\f").replace(/\r/g, "\\r").replace(/[\x00-\x07\x0B\x0E\x0F]/g, (str) => {
-        str = str.charCodeAt(0);
-        return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
-      }).replace(/[\x10-\x1F\x80-\xFF]/g, (str) => {
-        str = str.charCodeAt(0);
-        return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
-      });
-      str9 = `${"\"" + charAtResult1.replace(/\\/g, "\\\\").replace(/"/g, "\\\"").replace(/\x08/g, "\\b").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\f/g, "\\f").replace(/\r/g, "\\r").replace(/[\x00-\x07\x0B\x0E\x0F]/g, (str) => {
-        str = str.charCodeAt(0);
-        return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
-      }).replace(/[\x10-\x1F\x80-\xFF]/g, (str) => {
-        str = str.charCodeAt(0);
-        return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
-      }).replace(/[\u0180-\u0FFF]/g, (str) => {
-        str = str.charCodeAt(0);
-        return "\\u0" + str.charCodeAt(0).toString(16).toUpperCase();
-      }).replace(/[\u1080-\uFFFF]/g, (str) => {
-        str = str.charCodeAt(0);
-        return "\\u" + str.charCodeAt(0).toString(16).toUpperCase();
-      })}"`;
-      const str25 = charAtResult1.replace(/\\/g, "\\\\").replace(/"/g, "\\\"").replace(/\x08/g, "\\b").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\f/g, "\\f").replace(/\r/g, "\\r").replace(/[\x00-\x07\x0B\x0E\x0F]/g, (str) => {
-        str = str.charCodeAt(0);
-        return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
-      }).replace(/[\x10-\x1F\x80-\xFF]/g, (str) => {
-        str = str.charCodeAt(0);
-        return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
-      }).replace(/[\u0180-\u0FFF]/g, (str) => {
-        str = str.charCodeAt(0);
-        return "\\u0" + str.charCodeAt(0).toString(16).toUpperCase();
-      });
+      const str12 = charAtResult1.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
+      const str14 = charAtResult1.replace(/\\/g, "\\\\").replace(/"/g, '\\"').replace(/\x08/g, "\\b");
+      const str16 = charAtResult1
+        .replace(/\\/g, "\\\\")
+        .replace(/"/g, '\\"')
+        .replace(/\x08/g, "\\b")
+        .replace(/\t/g, "\\t");
+      const str18 = charAtResult1
+        .replace(/\\/g, "\\\\")
+        .replace(/"/g, '\\"')
+        .replace(/\x08/g, "\\b")
+        .replace(/\t/g, "\\t")
+        .replace(/\n/g, "\\n");
+      const str20 = charAtResult1
+        .replace(/\\/g, "\\\\")
+        .replace(/"/g, '\\"')
+        .replace(/\x08/g, "\\b")
+        .replace(/\t/g, "\\t")
+        .replace(/\n/g, "\\n")
+        .replace(/\f/g, "\\f");
+      const str22 = charAtResult1
+        .replace(/\\/g, "\\\\")
+        .replace(/"/g, '\\"')
+        .replace(/\x08/g, "\\b")
+        .replace(/\t/g, "\\t")
+        .replace(/\n/g, "\\n")
+        .replace(/\f/g, "\\f")
+        .replace(/\r/g, "\\r");
+      const str23 = charAtResult1
+        .replace(/\\/g, "\\\\")
+        .replace(/"/g, '\\"')
+        .replace(/\x08/g, "\\b")
+        .replace(/\t/g, "\\t")
+        .replace(/\n/g, "\\n")
+        .replace(/\f/g, "\\f")
+        .replace(/\r/g, "\\r")
+        .replace(/[\x00-\x07\x0B\x0E\x0F]/g, (str) => {
+          str = str.charCodeAt(0);
+          return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+        });
+      const str24 = charAtResult1
+        .replace(/\\/g, "\\\\")
+        .replace(/"/g, '\\"')
+        .replace(/\x08/g, "\\b")
+        .replace(/\t/g, "\\t")
+        .replace(/\n/g, "\\n")
+        .replace(/\f/g, "\\f")
+        .replace(/\r/g, "\\r")
+        .replace(/[\x00-\x07\x0B\x0E\x0F]/g, (str) => {
+          str = str.charCodeAt(0);
+          return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+        })
+        .replace(/[\x10-\x1F\x80-\xFF]/g, (str) => {
+          str = str.charCodeAt(0);
+          return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
+        });
+      str9 = `${
+        '"' +
+        charAtResult1
+          .replace(/\\/g, "\\\\")
+          .replace(/"/g, '\\"')
+          .replace(/\x08/g, "\\b")
+          .replace(/\t/g, "\\t")
+          .replace(/\n/g, "\\n")
+          .replace(/\f/g, "\\f")
+          .replace(/\r/g, "\\r")
+          .replace(/[\x00-\x07\x0B\x0E\x0F]/g, (str) => {
+            str = str.charCodeAt(0);
+            return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+          })
+          .replace(/[\x10-\x1F\x80-\xFF]/g, (str) => {
+            str = str.charCodeAt(0);
+            return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
+          })
+          .replace(/[\u0180-\u0FFF]/g, (str) => {
+            str = str.charCodeAt(0);
+            return "\\u0" + str.charCodeAt(0).toString(16).toUpperCase();
+          })
+          .replace(/[\u1080-\uFFFF]/g, (str) => {
+            str = str.charCodeAt(0);
+            return "\\u" + str.charCodeAt(0).toString(16).toUpperCase();
+          })
+      }"`;
+      const str25 = charAtResult1
+        .replace(/\\/g, "\\\\")
+        .replace(/"/g, '\\"')
+        .replace(/\x08/g, "\\b")
+        .replace(/\t/g, "\\t")
+        .replace(/\n/g, "\\n")
+        .replace(/\f/g, "\\f")
+        .replace(/\r/g, "\\r")
+        .replace(/[\x00-\x07\x0B\x0E\x0F]/g, (str) => {
+          str = str.charCodeAt(0);
+          return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+        })
+        .replace(/[\x10-\x1F\x80-\xFF]/g, (str) => {
+          str = str.charCodeAt(0);
+          return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
+        })
+        .replace(/[\u0180-\u0FFF]/g, (str) => {
+          str = str.charCodeAt(0);
+          return "\\u0" + str.charCodeAt(0).toString(16).toUpperCase();
+        });
     }
     const combined = text1 + " but " + str9 + " found.";
     ({ line, column } = tmp15);
     Object.create(closure_0.prototype);
-    let obj2 = { message: combined, expected: arr, found: charAtResult1, offset: closure_71, line, column, name: "SyntaxError" };
+    let obj2 = {
+      message: combined,
+      expected: arr,
+      found: charAtResult1,
+      offset: closure_71,
+      line,
+      column,
+      name: "SyntaxError",
+    };
     throw obj2;
-  }
+  },
 };
 arg5.default = obj;

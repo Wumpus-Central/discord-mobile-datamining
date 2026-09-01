@@ -76,7 +76,7 @@ export const addTimeToInitialDisplayFallback = (arg0, arg1) => {
 };
 export const getTimeToInitialDisplayFallback = (arg0) => {
   const callback = arg0;
-  return callback(undefined, undefined, undefined, function*() {
+  return callback(undefined, undefined, undefined, function* () {
     if (c0 === 2) {
       c0 = 3;
       HermesBuiltin.throwTypeError();

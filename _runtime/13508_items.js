@@ -12,7 +12,7 @@ const items2 = [];
 obj.src = items2;
 obj = {};
 obj.t = obj;
-const items3 = [["\\s", 1], , ];
+const items3 = [["\\s", 1], ,];
 const items4 = ["\\d", _mod13506.MAX_LENGTH];
 items3[1] = items4;
 const items5 = ["[a-zA-Z0-9-]", _mod13506.MAX_SAFE_BUILD_LENGTH];
@@ -57,34 +57,37 @@ obj.NUMERICIDENTIFIERLOOSE = 1;
 items2[1] = "\\d+";
 const regExp2 = new RegExp("\\d+", undefined);
 items[1] = regExp2;
-const regExp3 = new RegExp(((regExp40) => {
-  let str = regExp40;
-  while (tmp2 !== undefined) {
-    let tmp4 = callback;
-    let tmp5 = callback(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let tmp8 = str;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let tmp9 = tmp6;
-    let str3 = "{0,";
-    let tmp10 = tmp7;
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let tmp11 = tmp6;
-    let str7 = "{1,";
-    let tmp12 = tmp7;
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})("\\d+"), undefined);
+const regExp3 = new RegExp(
+  ((regExp40) => {
+    let str = regExp40;
+    while (tmp2 !== undefined) {
+      let tmp4 = callback;
+      let tmp5 = callback(tmp3, 2);
+      [tmp6, tmp7] = tmp5;
+      let tmp8 = str;
+      let _HermesInternal = HermesInternal;
+      let parts = str.split("" + tmp6 + "*");
+      let _HermesInternal2 = HermesInternal;
+      let str2 = "";
+      let tmp9 = tmp6;
+      let str3 = "{0,";
+      let tmp10 = tmp7;
+      let str4 = "}";
+      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
+      let _HermesInternal3 = HermesInternal;
+      let parts1 = str5.split("" + tmp6 + "+");
+      let _HermesInternal4 = HermesInternal;
+      let str6 = "";
+      let tmp11 = tmp6;
+      let str7 = "{1,";
+      let tmp12 = tmp7;
+      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
+      continue;
+    }
+    return str;
+  })("\\d+"),
+  undefined,
+);
 items1[1] = regExp3;
 const combined = "\\d*[a-zA-Z-]" + "[a-zA-Z0-9-]" + "*";
 let tmp5 = ((regExp40) => {
@@ -120,36 +123,46 @@ obj.NONNUMERICIDENTIFIER = 2;
 items2[2] = combined;
 const regExp4 = new RegExp(combined, undefined);
 items[2] = regExp4;
-const regExp5 = new RegExp(((regExp40) => {
-  let str = regExp40;
-  while (tmp2 !== undefined) {
-    let tmp4 = callback;
-    let tmp5 = callback(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let tmp8 = str;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let tmp9 = tmp6;
-    let str3 = "{0,";
-    let tmp10 = tmp7;
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let tmp11 = tmp6;
-    let str7 = "{1,";
-    let tmp12 = tmp7;
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined), undefined);
+const regExp5 = new RegExp(
+  ((regExp40) => {
+    let str = regExp40;
+    while (tmp2 !== undefined) {
+      let tmp4 = callback;
+      let tmp5 = callback(tmp3, 2);
+      [tmp6, tmp7] = tmp5;
+      let tmp8 = str;
+      let _HermesInternal = HermesInternal;
+      let parts = str.split("" + tmp6 + "*");
+      let _HermesInternal2 = HermesInternal;
+      let str2 = "";
+      let tmp9 = tmp6;
+      let str3 = "{0,";
+      let tmp10 = tmp7;
+      let str4 = "}";
+      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
+      let _HermesInternal3 = HermesInternal;
+      let parts1 = str5.split("" + tmp6 + "+");
+      let _HermesInternal4 = HermesInternal;
+      let str6 = "";
+      let tmp11 = tmp6;
+      let str7 = "{1,";
+      let tmp12 = tmp7;
+      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
+      continue;
+    }
+    return str;
+  })(combined),
+  undefined,
+);
 items1[2] = regExp5;
-const combined1 = "(" + items2[obj.NUMERICIDENTIFIER] + ")\\.(" + items2[obj.NUMERICIDENTIFIER] + ")\\.(" + items2[obj.NUMERICIDENTIFIER] + ")";
+const combined1 =
+  "(" +
+  items2[obj.NUMERICIDENTIFIER] +
+  ")\\.(" +
+  items2[obj.NUMERICIDENTIFIER] +
+  ")\\.(" +
+  items2[obj.NUMERICIDENTIFIER] +
+  ")";
 let tmp10 = ((regExp40) => {
   let str = regExp40;
   while (tmp2 !== undefined) {
@@ -183,36 +196,46 @@ obj.MAINVERSION = 3;
 items2[3] = combined1;
 const regExp6 = new RegExp(combined1, undefined);
 items[3] = regExp6;
-const regExp7 = new RegExp(((regExp40) => {
-  let str = regExp40;
-  while (tmp2 !== undefined) {
-    let tmp4 = callback;
-    let tmp5 = callback(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let tmp8 = str;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let tmp9 = tmp6;
-    let str3 = "{0,";
-    let tmp10 = tmp7;
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let tmp11 = tmp6;
-    let str7 = "{1,";
-    let tmp12 = tmp7;
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined1), undefined);
+const regExp7 = new RegExp(
+  ((regExp40) => {
+    let str = regExp40;
+    while (tmp2 !== undefined) {
+      let tmp4 = callback;
+      let tmp5 = callback(tmp3, 2);
+      [tmp6, tmp7] = tmp5;
+      let tmp8 = str;
+      let _HermesInternal = HermesInternal;
+      let parts = str.split("" + tmp6 + "*");
+      let _HermesInternal2 = HermesInternal;
+      let str2 = "";
+      let tmp9 = tmp6;
+      let str3 = "{0,";
+      let tmp10 = tmp7;
+      let str4 = "}";
+      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
+      let _HermesInternal3 = HermesInternal;
+      let parts1 = str5.split("" + tmp6 + "+");
+      let _HermesInternal4 = HermesInternal;
+      let str6 = "";
+      let tmp11 = tmp6;
+      let str7 = "{1,";
+      let tmp12 = tmp7;
+      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
+      continue;
+    }
+    return str;
+  })(combined1),
+  undefined,
+);
 items1[3] = regExp7;
-const combined2 = "(" + items2[obj.NUMERICIDENTIFIERLOOSE] + ")\\.(" + items2[obj.NUMERICIDENTIFIERLOOSE] + ")\\.(" + items2[obj.NUMERICIDENTIFIERLOOSE] + ")";
+const combined2 =
+  "(" +
+  items2[obj.NUMERICIDENTIFIERLOOSE] +
+  ")\\.(" +
+  items2[obj.NUMERICIDENTIFIERLOOSE] +
+  ")\\.(" +
+  items2[obj.NUMERICIDENTIFIERLOOSE] +
+  ")";
 const tmp15 = ((regExp40) => {
   let str = regExp40;
   while (tmp2 !== undefined) {
@@ -246,34 +269,37 @@ obj.MAINVERSIONLOOSE = 4;
 items2[4] = combined2;
 const regExp8 = new RegExp(combined2, undefined);
 items[4] = regExp8;
-const regExp9 = new RegExp(((regExp40) => {
-  let str = regExp40;
-  while (tmp2 !== undefined) {
-    let tmp4 = callback;
-    let tmp5 = callback(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let tmp8 = str;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let tmp9 = tmp6;
-    let str3 = "{0,";
-    let tmp10 = tmp7;
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let tmp11 = tmp6;
-    let str7 = "{1,";
-    let tmp12 = tmp7;
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined2), undefined);
+const regExp9 = new RegExp(
+  ((regExp40) => {
+    let str = regExp40;
+    while (tmp2 !== undefined) {
+      let tmp4 = callback;
+      let tmp5 = callback(tmp3, 2);
+      [tmp6, tmp7] = tmp5;
+      let tmp8 = str;
+      let _HermesInternal = HermesInternal;
+      let parts = str.split("" + tmp6 + "*");
+      let _HermesInternal2 = HermesInternal;
+      let str2 = "";
+      let tmp9 = tmp6;
+      let str3 = "{0,";
+      let tmp10 = tmp7;
+      let str4 = "}";
+      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
+      let _HermesInternal3 = HermesInternal;
+      let parts1 = str5.split("" + tmp6 + "+");
+      let _HermesInternal4 = HermesInternal;
+      let str6 = "";
+      let tmp11 = tmp6;
+      let str7 = "{1,";
+      let tmp12 = tmp7;
+      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
+      continue;
+    }
+    return str;
+  })(combined2),
+  undefined,
+);
 items1[4] = regExp9;
 const combined3 = "(?:" + items2[obj.NUMERICIDENTIFIER] + "|" + items2[obj.NONNUMERICIDENTIFIER] + ")";
 const tmp20 = ((regExp40) => {
@@ -309,34 +335,37 @@ obj.PRERELEASEIDENTIFIER = 5;
 items2[5] = combined3;
 const regExp10 = new RegExp(combined3, undefined);
 items[5] = regExp10;
-const regExp11 = new RegExp(((regExp40) => {
-  let str = regExp40;
-  while (tmp2 !== undefined) {
-    let tmp4 = callback;
-    let tmp5 = callback(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let tmp8 = str;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let tmp9 = tmp6;
-    let str3 = "{0,";
-    let tmp10 = tmp7;
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let tmp11 = tmp6;
-    let str7 = "{1,";
-    let tmp12 = tmp7;
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined3), undefined);
+const regExp11 = new RegExp(
+  ((regExp40) => {
+    let str = regExp40;
+    while (tmp2 !== undefined) {
+      let tmp4 = callback;
+      let tmp5 = callback(tmp3, 2);
+      [tmp6, tmp7] = tmp5;
+      let tmp8 = str;
+      let _HermesInternal = HermesInternal;
+      let parts = str.split("" + tmp6 + "*");
+      let _HermesInternal2 = HermesInternal;
+      let str2 = "";
+      let tmp9 = tmp6;
+      let str3 = "{0,";
+      let tmp10 = tmp7;
+      let str4 = "}";
+      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
+      let _HermesInternal3 = HermesInternal;
+      let parts1 = str5.split("" + tmp6 + "+");
+      let _HermesInternal4 = HermesInternal;
+      let str6 = "";
+      let tmp11 = tmp6;
+      let str7 = "{1,";
+      let tmp12 = tmp7;
+      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
+      continue;
+    }
+    return str;
+  })(combined3),
+  undefined,
+);
 items1[5] = regExp11;
 const combined4 = "(?:" + items2[obj.NUMERICIDENTIFIERLOOSE] + "|" + items2[obj.NONNUMERICIDENTIFIER] + ")";
 const tmp25 = ((regExp40) => {
@@ -372,34 +401,37 @@ obj.PRERELEASEIDENTIFIERLOOSE = 6;
 items2[6] = combined4;
 const regExp12 = new RegExp(combined4, undefined);
 items[6] = regExp12;
-const regExp13 = new RegExp(((regExp40) => {
-  let str = regExp40;
-  while (tmp2 !== undefined) {
-    let tmp4 = callback;
-    let tmp5 = callback(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let tmp8 = str;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let tmp9 = tmp6;
-    let str3 = "{0,";
-    let tmp10 = tmp7;
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let tmp11 = tmp6;
-    let str7 = "{1,";
-    let tmp12 = tmp7;
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined4), undefined);
+const regExp13 = new RegExp(
+  ((regExp40) => {
+    let str = regExp40;
+    while (tmp2 !== undefined) {
+      let tmp4 = callback;
+      let tmp5 = callback(tmp3, 2);
+      [tmp6, tmp7] = tmp5;
+      let tmp8 = str;
+      let _HermesInternal = HermesInternal;
+      let parts = str.split("" + tmp6 + "*");
+      let _HermesInternal2 = HermesInternal;
+      let str2 = "";
+      let tmp9 = tmp6;
+      let str3 = "{0,";
+      let tmp10 = tmp7;
+      let str4 = "}";
+      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
+      let _HermesInternal3 = HermesInternal;
+      let parts1 = str5.split("" + tmp6 + "+");
+      let _HermesInternal4 = HermesInternal;
+      let str6 = "";
+      let tmp11 = tmp6;
+      let str7 = "{1,";
+      let tmp12 = tmp7;
+      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
+      continue;
+    }
+    return str;
+  })(combined4),
+  undefined,
+);
 items1[6] = regExp13;
 const combined5 = "(?:-(" + items2[obj.PRERELEASEIDENTIFIER] + "(?:\\." + items2[obj.PRERELEASEIDENTIFIER] + ")*))";
 const tmp30 = ((regExp40) => {
@@ -435,36 +467,40 @@ obj.PRERELEASE = 7;
 items2[7] = combined5;
 const regExp14 = new RegExp(combined5, undefined);
 items[7] = regExp14;
-const regExp15 = new RegExp(((regExp40) => {
-  let str = regExp40;
-  while (tmp2 !== undefined) {
-    let tmp4 = callback;
-    let tmp5 = callback(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let tmp8 = str;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let tmp9 = tmp6;
-    let str3 = "{0,";
-    let tmp10 = tmp7;
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let tmp11 = tmp6;
-    let str7 = "{1,";
-    let tmp12 = tmp7;
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined5), undefined);
+const regExp15 = new RegExp(
+  ((regExp40) => {
+    let str = regExp40;
+    while (tmp2 !== undefined) {
+      let tmp4 = callback;
+      let tmp5 = callback(tmp3, 2);
+      [tmp6, tmp7] = tmp5;
+      let tmp8 = str;
+      let _HermesInternal = HermesInternal;
+      let parts = str.split("" + tmp6 + "*");
+      let _HermesInternal2 = HermesInternal;
+      let str2 = "";
+      let tmp9 = tmp6;
+      let str3 = "{0,";
+      let tmp10 = tmp7;
+      let str4 = "}";
+      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
+      let _HermesInternal3 = HermesInternal;
+      let parts1 = str5.split("" + tmp6 + "+");
+      let _HermesInternal4 = HermesInternal;
+      let str6 = "";
+      let tmp11 = tmp6;
+      let str7 = "{1,";
+      let tmp12 = tmp7;
+      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
+      continue;
+    }
+    return str;
+  })(combined5),
+  undefined,
+);
 items1[7] = regExp15;
-const combined6 = "(?:-?(" + items2[obj.PRERELEASEIDENTIFIERLOOSE] + "(?:\\." + items2[obj.PRERELEASEIDENTIFIERLOOSE] + ")*))";
+const combined6 =
+  "(?:-?(" + items2[obj.PRERELEASEIDENTIFIERLOOSE] + "(?:\\." + items2[obj.PRERELEASEIDENTIFIERLOOSE] + ")*))";
 const tmp35 = ((regExp40) => {
   let str = regExp40;
   while (tmp2 !== undefined) {
@@ -498,34 +534,37 @@ obj.PRERELEASELOOSE = 8;
 items2[8] = combined6;
 const regExp16 = new RegExp(combined6, undefined);
 items[8] = regExp16;
-const regExp17 = new RegExp(((regExp40) => {
-  let str = regExp40;
-  while (tmp2 !== undefined) {
-    let tmp4 = callback;
-    let tmp5 = callback(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let tmp8 = str;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let tmp9 = tmp6;
-    let str3 = "{0,";
-    let tmp10 = tmp7;
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let tmp11 = tmp6;
-    let str7 = "{1,";
-    let tmp12 = tmp7;
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined6), undefined);
+const regExp17 = new RegExp(
+  ((regExp40) => {
+    let str = regExp40;
+    while (tmp2 !== undefined) {
+      let tmp4 = callback;
+      let tmp5 = callback(tmp3, 2);
+      [tmp6, tmp7] = tmp5;
+      let tmp8 = str;
+      let _HermesInternal = HermesInternal;
+      let parts = str.split("" + tmp6 + "*");
+      let _HermesInternal2 = HermesInternal;
+      let str2 = "";
+      let tmp9 = tmp6;
+      let str3 = "{0,";
+      let tmp10 = tmp7;
+      let str4 = "}";
+      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
+      let _HermesInternal3 = HermesInternal;
+      let parts1 = str5.split("" + tmp6 + "+");
+      let _HermesInternal4 = HermesInternal;
+      let str6 = "";
+      let tmp11 = tmp6;
+      let str7 = "{1,";
+      let tmp12 = tmp7;
+      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
+      continue;
+    }
+    return str;
+  })(combined6),
+  undefined,
+);
 items1[8] = regExp17;
 const combined7 = "" + "[a-zA-Z0-9-]" + "+";
 const tmp40 = ((regExp40) => {
@@ -561,34 +600,37 @@ obj.BUILDIDENTIFIER = 9;
 items2[9] = combined7;
 const regExp18 = new RegExp(combined7, undefined);
 items[9] = regExp18;
-const regExp19 = new RegExp(((regExp40) => {
-  let str = regExp40;
-  while (tmp2 !== undefined) {
-    let tmp4 = callback;
-    let tmp5 = callback(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let tmp8 = str;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let tmp9 = tmp6;
-    let str3 = "{0,";
-    let tmp10 = tmp7;
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let tmp11 = tmp6;
-    let str7 = "{1,";
-    let tmp12 = tmp7;
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined7), undefined);
+const regExp19 = new RegExp(
+  ((regExp40) => {
+    let str = regExp40;
+    while (tmp2 !== undefined) {
+      let tmp4 = callback;
+      let tmp5 = callback(tmp3, 2);
+      [tmp6, tmp7] = tmp5;
+      let tmp8 = str;
+      let _HermesInternal = HermesInternal;
+      let parts = str.split("" + tmp6 + "*");
+      let _HermesInternal2 = HermesInternal;
+      let str2 = "";
+      let tmp9 = tmp6;
+      let str3 = "{0,";
+      let tmp10 = tmp7;
+      let str4 = "}";
+      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
+      let _HermesInternal3 = HermesInternal;
+      let parts1 = str5.split("" + tmp6 + "+");
+      let _HermesInternal4 = HermesInternal;
+      let str6 = "";
+      let tmp11 = tmp6;
+      let str7 = "{1,";
+      let tmp12 = tmp7;
+      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
+      continue;
+    }
+    return str;
+  })(combined7),
+  undefined,
+);
 items1[9] = regExp19;
 const combined8 = "(?:\\+(" + items2[obj.BUILDIDENTIFIER] + "(?:\\." + items2[obj.BUILDIDENTIFIER] + ")*))";
 const tmp45 = ((regExp40) => {
@@ -624,34 +666,37 @@ obj.BUILD = 10;
 items2[10] = combined8;
 const regExp20 = new RegExp(combined8, undefined);
 items[10] = regExp20;
-const regExp21 = new RegExp(((regExp40) => {
-  let str = regExp40;
-  while (tmp2 !== undefined) {
-    let tmp4 = callback;
-    let tmp5 = callback(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let tmp8 = str;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let tmp9 = tmp6;
-    let str3 = "{0,";
-    let tmp10 = tmp7;
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let tmp11 = tmp6;
-    let str7 = "{1,";
-    let tmp12 = tmp7;
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined8), undefined);
+const regExp21 = new RegExp(
+  ((regExp40) => {
+    let str = regExp40;
+    while (tmp2 !== undefined) {
+      let tmp4 = callback;
+      let tmp5 = callback(tmp3, 2);
+      [tmp6, tmp7] = tmp5;
+      let tmp8 = str;
+      let _HermesInternal = HermesInternal;
+      let parts = str.split("" + tmp6 + "*");
+      let _HermesInternal2 = HermesInternal;
+      let str2 = "";
+      let tmp9 = tmp6;
+      let str3 = "{0,";
+      let tmp10 = tmp7;
+      let str4 = "}";
+      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
+      let _HermesInternal3 = HermesInternal;
+      let parts1 = str5.split("" + tmp6 + "+");
+      let _HermesInternal4 = HermesInternal;
+      let str6 = "";
+      let tmp11 = tmp6;
+      let str7 = "{1,";
+      let tmp12 = tmp7;
+      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
+      continue;
+    }
+    return str;
+  })(combined8),
+  undefined,
+);
 items1[10] = regExp21;
 const combined9 = "v?" + items2[obj.MAINVERSION] + items2[obj.PRERELEASE] + "?" + items2[obj.BUILD] + "?";
 const tmp50 = ((regExp40) => {
@@ -687,34 +732,37 @@ obj.FULLPLAIN = 11;
 items2[11] = combined9;
 const regExp22 = new RegExp(combined9, undefined);
 items[11] = regExp22;
-const regExp23 = new RegExp(((regExp40) => {
-  let str = regExp40;
-  while (tmp2 !== undefined) {
-    let tmp4 = callback;
-    let tmp5 = callback(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let tmp8 = str;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let tmp9 = tmp6;
-    let str3 = "{0,";
-    let tmp10 = tmp7;
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let tmp11 = tmp6;
-    let str7 = "{1,";
-    let tmp12 = tmp7;
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined9), undefined);
+const regExp23 = new RegExp(
+  ((regExp40) => {
+    let str = regExp40;
+    while (tmp2 !== undefined) {
+      let tmp4 = callback;
+      let tmp5 = callback(tmp3, 2);
+      [tmp6, tmp7] = tmp5;
+      let tmp8 = str;
+      let _HermesInternal = HermesInternal;
+      let parts = str.split("" + tmp6 + "*");
+      let _HermesInternal2 = HermesInternal;
+      let str2 = "";
+      let tmp9 = tmp6;
+      let str3 = "{0,";
+      let tmp10 = tmp7;
+      let str4 = "}";
+      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
+      let _HermesInternal3 = HermesInternal;
+      let parts1 = str5.split("" + tmp6 + "+");
+      let _HermesInternal4 = HermesInternal;
+      let str6 = "";
+      let tmp11 = tmp6;
+      let str7 = "{1,";
+      let tmp12 = tmp7;
+      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
+      continue;
+    }
+    return str;
+  })(combined9),
+  undefined,
+);
 items1[11] = regExp23;
 const combined10 = "^" + items2[obj.FULLPLAIN] + "$";
 const tmp55 = ((regExp40) => {
@@ -750,36 +798,40 @@ obj.FULL = 12;
 items2[12] = combined10;
 const regExp24 = new RegExp(combined10, undefined);
 items[12] = regExp24;
-const regExp25 = new RegExp(((regExp40) => {
-  let str = regExp40;
-  while (tmp2 !== undefined) {
-    let tmp4 = callback;
-    let tmp5 = callback(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let tmp8 = str;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let tmp9 = tmp6;
-    let str3 = "{0,";
-    let tmp10 = tmp7;
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let tmp11 = tmp6;
-    let str7 = "{1,";
-    let tmp12 = tmp7;
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined10), undefined);
+const regExp25 = new RegExp(
+  ((regExp40) => {
+    let str = regExp40;
+    while (tmp2 !== undefined) {
+      let tmp4 = callback;
+      let tmp5 = callback(tmp3, 2);
+      [tmp6, tmp7] = tmp5;
+      let tmp8 = str;
+      let _HermesInternal = HermesInternal;
+      let parts = str.split("" + tmp6 + "*");
+      let _HermesInternal2 = HermesInternal;
+      let str2 = "";
+      let tmp9 = tmp6;
+      let str3 = "{0,";
+      let tmp10 = tmp7;
+      let str4 = "}";
+      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
+      let _HermesInternal3 = HermesInternal;
+      let parts1 = str5.split("" + tmp6 + "+");
+      let _HermesInternal4 = HermesInternal;
+      let str6 = "";
+      let tmp11 = tmp6;
+      let str7 = "{1,";
+      let tmp12 = tmp7;
+      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
+      continue;
+    }
+    return str;
+  })(combined10),
+  undefined,
+);
 items1[12] = regExp25;
-const combined11 = "[v=\\s]*" + items2[obj.MAINVERSIONLOOSE] + items2[obj.PRERELEASELOOSE] + "?" + items2[obj.BUILD] + "?";
+const combined11 =
+  "[v=\\s]*" + items2[obj.MAINVERSIONLOOSE] + items2[obj.PRERELEASELOOSE] + "?" + items2[obj.BUILD] + "?";
 const tmp60 = ((regExp40) => {
   let str = regExp40;
   while (tmp2 !== undefined) {
@@ -813,34 +865,37 @@ obj.LOOSEPLAIN = 13;
 items2[13] = combined11;
 const regExp26 = new RegExp(combined11, undefined);
 items[13] = regExp26;
-const regExp27 = new RegExp(((regExp40) => {
-  let str = regExp40;
-  while (tmp2 !== undefined) {
-    let tmp4 = callback;
-    let tmp5 = callback(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let tmp8 = str;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let tmp9 = tmp6;
-    let str3 = "{0,";
-    let tmp10 = tmp7;
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let tmp11 = tmp6;
-    let str7 = "{1,";
-    let tmp12 = tmp7;
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined11), undefined);
+const regExp27 = new RegExp(
+  ((regExp40) => {
+    let str = regExp40;
+    while (tmp2 !== undefined) {
+      let tmp4 = callback;
+      let tmp5 = callback(tmp3, 2);
+      [tmp6, tmp7] = tmp5;
+      let tmp8 = str;
+      let _HermesInternal = HermesInternal;
+      let parts = str.split("" + tmp6 + "*");
+      let _HermesInternal2 = HermesInternal;
+      let str2 = "";
+      let tmp9 = tmp6;
+      let str3 = "{0,";
+      let tmp10 = tmp7;
+      let str4 = "}";
+      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
+      let _HermesInternal3 = HermesInternal;
+      let parts1 = str5.split("" + tmp6 + "+");
+      let _HermesInternal4 = HermesInternal;
+      let str6 = "";
+      let tmp11 = tmp6;
+      let str7 = "{1,";
+      let tmp12 = tmp7;
+      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
+      continue;
+    }
+    return str;
+  })(combined11),
+  undefined,
+);
 items1[13] = regExp27;
 const combined12 = "^" + items2[obj.LOOSEPLAIN] + "$";
 const tmp65 = ((regExp40) => {
@@ -876,34 +931,37 @@ obj.LOOSE = 14;
 items2[14] = combined12;
 const regExp28 = new RegExp(combined12, undefined);
 items[14] = regExp28;
-const regExp29 = new RegExp(((regExp40) => {
-  let str = regExp40;
-  while (tmp2 !== undefined) {
-    let tmp4 = callback;
-    let tmp5 = callback(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let tmp8 = str;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let tmp9 = tmp6;
-    let str3 = "{0,";
-    let tmp10 = tmp7;
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let tmp11 = tmp6;
-    let str7 = "{1,";
-    let tmp12 = tmp7;
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined12), undefined);
+const regExp29 = new RegExp(
+  ((regExp40) => {
+    let str = regExp40;
+    while (tmp2 !== undefined) {
+      let tmp4 = callback;
+      let tmp5 = callback(tmp3, 2);
+      [tmp6, tmp7] = tmp5;
+      let tmp8 = str;
+      let _HermesInternal = HermesInternal;
+      let parts = str.split("" + tmp6 + "*");
+      let _HermesInternal2 = HermesInternal;
+      let str2 = "";
+      let tmp9 = tmp6;
+      let str3 = "{0,";
+      let tmp10 = tmp7;
+      let str4 = "}";
+      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
+      let _HermesInternal3 = HermesInternal;
+      let parts1 = str5.split("" + tmp6 + "+");
+      let _HermesInternal4 = HermesInternal;
+      let str6 = "";
+      let tmp11 = tmp6;
+      let str7 = "{1,";
+      let tmp12 = tmp7;
+      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
+      continue;
+    }
+    return str;
+  })(combined12),
+  undefined,
+);
 items1[14] = regExp29;
 const tmp70 = ((regExp40) => {
   let str = regExp40;
@@ -938,34 +996,37 @@ obj.GTLT = 15;
 items2[15] = "((?:<|>)?=?)";
 const regExp30 = new RegExp("((?:<|>)?=?)", undefined);
 items[15] = regExp30;
-const regExp31 = new RegExp(((regExp40) => {
-  let str = regExp40;
-  while (tmp2 !== undefined) {
-    let tmp4 = callback;
-    let tmp5 = callback(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let tmp8 = str;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let tmp9 = tmp6;
-    let str3 = "{0,";
-    let tmp10 = tmp7;
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let tmp11 = tmp6;
-    let str7 = "{1,";
-    let tmp12 = tmp7;
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})("((?:<|>)?=?)"), undefined);
+const regExp31 = new RegExp(
+  ((regExp40) => {
+    let str = regExp40;
+    while (tmp2 !== undefined) {
+      let tmp4 = callback;
+      let tmp5 = callback(tmp3, 2);
+      [tmp6, tmp7] = tmp5;
+      let tmp8 = str;
+      let _HermesInternal = HermesInternal;
+      let parts = str.split("" + tmp6 + "*");
+      let _HermesInternal2 = HermesInternal;
+      let str2 = "";
+      let tmp9 = tmp6;
+      let str3 = "{0,";
+      let tmp10 = tmp7;
+      let str4 = "}";
+      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
+      let _HermesInternal3 = HermesInternal;
+      let parts1 = str5.split("" + tmp6 + "+");
+      let _HermesInternal4 = HermesInternal;
+      let str6 = "";
+      let tmp11 = tmp6;
+      let str7 = "{1,";
+      let tmp12 = tmp7;
+      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
+      continue;
+    }
+    return str;
+  })("((?:<|>)?=?)"),
+  undefined,
+);
 items1[15] = regExp31;
 const combined13 = "" + items2[obj.NUMERICIDENTIFIERLOOSE] + "|x|X|\\*";
 const tmp74 = ((regExp40) => {
@@ -1001,34 +1062,37 @@ obj.XRANGEIDENTIFIERLOOSE = 16;
 items2[16] = combined13;
 const regExp32 = new RegExp(combined13, undefined);
 items[16] = regExp32;
-const regExp33 = new RegExp(((regExp40) => {
-  let str = regExp40;
-  while (tmp2 !== undefined) {
-    let tmp4 = callback;
-    let tmp5 = callback(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let tmp8 = str;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let tmp9 = tmp6;
-    let str3 = "{0,";
-    let tmp10 = tmp7;
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let tmp11 = tmp6;
-    let str7 = "{1,";
-    let tmp12 = tmp7;
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined13), undefined);
+const regExp33 = new RegExp(
+  ((regExp40) => {
+    let str = regExp40;
+    while (tmp2 !== undefined) {
+      let tmp4 = callback;
+      let tmp5 = callback(tmp3, 2);
+      [tmp6, tmp7] = tmp5;
+      let tmp8 = str;
+      let _HermesInternal = HermesInternal;
+      let parts = str.split("" + tmp6 + "*");
+      let _HermesInternal2 = HermesInternal;
+      let str2 = "";
+      let tmp9 = tmp6;
+      let str3 = "{0,";
+      let tmp10 = tmp7;
+      let str4 = "}";
+      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
+      let _HermesInternal3 = HermesInternal;
+      let parts1 = str5.split("" + tmp6 + "+");
+      let _HermesInternal4 = HermesInternal;
+      let str6 = "";
+      let tmp11 = tmp6;
+      let str7 = "{1,";
+      let tmp12 = tmp7;
+      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
+      continue;
+    }
+    return str;
+  })(combined13),
+  undefined,
+);
 items1[16] = regExp33;
 const combined14 = "" + items2[obj.NUMERICIDENTIFIER] + "|x|X|\\*";
 const tmp79 = ((regExp40) => {
@@ -1064,36 +1128,50 @@ obj.XRANGEIDENTIFIER = 17;
 items2[17] = combined14;
 const regExp34 = new RegExp(combined14, undefined);
 items[17] = regExp34;
-const regExp35 = new RegExp(((regExp40) => {
-  let str = regExp40;
-  while (tmp2 !== undefined) {
-    let tmp4 = callback;
-    let tmp5 = callback(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let tmp8 = str;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let tmp9 = tmp6;
-    let str3 = "{0,";
-    let tmp10 = tmp7;
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let tmp11 = tmp6;
-    let str7 = "{1,";
-    let tmp12 = tmp7;
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined14), undefined);
+const regExp35 = new RegExp(
+  ((regExp40) => {
+    let str = regExp40;
+    while (tmp2 !== undefined) {
+      let tmp4 = callback;
+      let tmp5 = callback(tmp3, 2);
+      [tmp6, tmp7] = tmp5;
+      let tmp8 = str;
+      let _HermesInternal = HermesInternal;
+      let parts = str.split("" + tmp6 + "*");
+      let _HermesInternal2 = HermesInternal;
+      let str2 = "";
+      let tmp9 = tmp6;
+      let str3 = "{0,";
+      let tmp10 = tmp7;
+      let str4 = "}";
+      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
+      let _HermesInternal3 = HermesInternal;
+      let parts1 = str5.split("" + tmp6 + "+");
+      let _HermesInternal4 = HermesInternal;
+      let str6 = "";
+      let tmp11 = tmp6;
+      let str7 = "{1,";
+      let tmp12 = tmp7;
+      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
+      continue;
+    }
+    return str;
+  })(combined14),
+  undefined,
+);
 items1[17] = regExp35;
-const combined15 = "[v=\\s]*(" + items2[obj.XRANGEIDENTIFIER] + ")(?:\\.(" + items2[obj.XRANGEIDENTIFIER] + ")(?:\\.(" + items2[obj.XRANGEIDENTIFIER] + ")(?:" + items2[obj.PRERELEASE] + ")?" + items2[obj.BUILD] + "?)?)?";
+const combined15 =
+  "[v=\\s]*(" +
+  items2[obj.XRANGEIDENTIFIER] +
+  ")(?:\\.(" +
+  items2[obj.XRANGEIDENTIFIER] +
+  ")(?:\\.(" +
+  items2[obj.XRANGEIDENTIFIER] +
+  ")(?:" +
+  items2[obj.PRERELEASE] +
+  ")?" +
+  items2[obj.BUILD] +
+  "?)?)?";
 const tmp84 = ((regExp40) => {
   let str = regExp40;
   while (tmp2 !== undefined) {
@@ -1127,36 +1205,50 @@ obj.XRANGEPLAIN = 18;
 items2[18] = combined15;
 const regExp36 = new RegExp(combined15, undefined);
 items[18] = regExp36;
-const regExp37 = new RegExp(((regExp40) => {
-  let str = regExp40;
-  while (tmp2 !== undefined) {
-    let tmp4 = callback;
-    let tmp5 = callback(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let tmp8 = str;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let tmp9 = tmp6;
-    let str3 = "{0,";
-    let tmp10 = tmp7;
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let tmp11 = tmp6;
-    let str7 = "{1,";
-    let tmp12 = tmp7;
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined15), undefined);
+const regExp37 = new RegExp(
+  ((regExp40) => {
+    let str = regExp40;
+    while (tmp2 !== undefined) {
+      let tmp4 = callback;
+      let tmp5 = callback(tmp3, 2);
+      [tmp6, tmp7] = tmp5;
+      let tmp8 = str;
+      let _HermesInternal = HermesInternal;
+      let parts = str.split("" + tmp6 + "*");
+      let _HermesInternal2 = HermesInternal;
+      let str2 = "";
+      let tmp9 = tmp6;
+      let str3 = "{0,";
+      let tmp10 = tmp7;
+      let str4 = "}";
+      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
+      let _HermesInternal3 = HermesInternal;
+      let parts1 = str5.split("" + tmp6 + "+");
+      let _HermesInternal4 = HermesInternal;
+      let str6 = "";
+      let tmp11 = tmp6;
+      let str7 = "{1,";
+      let tmp12 = tmp7;
+      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
+      continue;
+    }
+    return str;
+  })(combined15),
+  undefined,
+);
 items1[18] = regExp37;
-const combined16 = "[v=\\s]*(" + items2[obj.XRANGEIDENTIFIERLOOSE] + ")(?:\\.(" + items2[obj.XRANGEIDENTIFIERLOOSE] + ")(?:\\.(" + items2[obj.XRANGEIDENTIFIERLOOSE] + ")(?:" + items2[obj.PRERELEASELOOSE] + ")?" + items2[obj.BUILD] + "?)?)?";
+const combined16 =
+  "[v=\\s]*(" +
+  items2[obj.XRANGEIDENTIFIERLOOSE] +
+  ")(?:\\.(" +
+  items2[obj.XRANGEIDENTIFIERLOOSE] +
+  ")(?:\\.(" +
+  items2[obj.XRANGEIDENTIFIERLOOSE] +
+  ")(?:" +
+  items2[obj.PRERELEASELOOSE] +
+  ")?" +
+  items2[obj.BUILD] +
+  "?)?)?";
 const tmp89 = ((regExp40) => {
   let str = regExp40;
   while (tmp2 !== undefined) {
@@ -1190,34 +1282,37 @@ obj.XRANGEPLAINLOOSE = 19;
 items2[19] = combined16;
 const regExp38 = new RegExp(combined16, undefined);
 items[19] = regExp38;
-const regExp39 = new RegExp(((regExp40) => {
-  let str = regExp40;
-  while (tmp2 !== undefined) {
-    let tmp4 = callback;
-    let tmp5 = callback(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let tmp8 = str;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let tmp9 = tmp6;
-    let str3 = "{0,";
-    let tmp10 = tmp7;
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let tmp11 = tmp6;
-    let str7 = "{1,";
-    let tmp12 = tmp7;
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined16), undefined);
+const regExp39 = new RegExp(
+  ((regExp40) => {
+    let str = regExp40;
+    while (tmp2 !== undefined) {
+      let tmp4 = callback;
+      let tmp5 = callback(tmp3, 2);
+      [tmp6, tmp7] = tmp5;
+      let tmp8 = str;
+      let _HermesInternal = HermesInternal;
+      let parts = str.split("" + tmp6 + "*");
+      let _HermesInternal2 = HermesInternal;
+      let str2 = "";
+      let tmp9 = tmp6;
+      let str3 = "{0,";
+      let tmp10 = tmp7;
+      let str4 = "}";
+      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
+      let _HermesInternal3 = HermesInternal;
+      let parts1 = str5.split("" + tmp6 + "+");
+      let _HermesInternal4 = HermesInternal;
+      let str6 = "";
+      let tmp11 = tmp6;
+      let str7 = "{1,";
+      let tmp12 = tmp7;
+      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
+      continue;
+    }
+    return str;
+  })(combined16),
+  undefined,
+);
 items1[19] = regExp39;
 const combined17 = "^" + items2[obj.GTLT] + "\\s*" + items2[obj.XRANGEPLAIN] + "$";
 const tmp94 = ((regExp40) => {
@@ -1253,34 +1348,37 @@ obj.XRANGE = 20;
 items2[20] = combined17;
 regExp40 = new RegExp(combined17, undefined);
 items[20] = regExp40;
-regExp40 = new RegExp(((regExp40) => {
-  let str = regExp40;
-  while (tmp2 !== undefined) {
-    let tmp4 = callback;
-    let tmp5 = callback(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let tmp8 = str;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let tmp9 = tmp6;
-    let str3 = "{0,";
-    let tmp10 = tmp7;
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let tmp11 = tmp6;
-    let str7 = "{1,";
-    let tmp12 = tmp7;
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined17), undefined);
+regExp40 = new RegExp(
+  ((regExp40) => {
+    let str = regExp40;
+    while (tmp2 !== undefined) {
+      let tmp4 = callback;
+      let tmp5 = callback(tmp3, 2);
+      [tmp6, tmp7] = tmp5;
+      let tmp8 = str;
+      let _HermesInternal = HermesInternal;
+      let parts = str.split("" + tmp6 + "*");
+      let _HermesInternal2 = HermesInternal;
+      let str2 = "";
+      let tmp9 = tmp6;
+      let str3 = "{0,";
+      let tmp10 = tmp7;
+      let str4 = "}";
+      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
+      let _HermesInternal3 = HermesInternal;
+      let parts1 = str5.split("" + tmp6 + "+");
+      let _HermesInternal4 = HermesInternal;
+      let str6 = "";
+      let tmp11 = tmp6;
+      let str7 = "{1,";
+      let tmp12 = tmp7;
+      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
+      continue;
+    }
+    return str;
+  })(combined17),
+  undefined,
+);
 items1[20] = regExp40;
 regExp40 = "^" + items2[obj.GTLT] + "\\s*" + items2[obj.XRANGEPLAINLOOSE] + "$";
 regExp40 = ((regExp40) => {
@@ -1318,7 +1416,14 @@ regExp40 = new RegExp(regExp40, undefined);
 items[21] = regExp40;
 regExp40 = new RegExp(regExp40, undefined);
 items1[21] = regExp40;
-regExp40 = "(^|[^\\d])(\\d{1," + _mod13506.MAX_SAFE_COMPONENT_LENGTH + "})(?:\\.(\\d{1," + _mod13506.MAX_SAFE_COMPONENT_LENGTH + "}))?(?:\\.(\\d{1," + _mod13506.MAX_SAFE_COMPONENT_LENGTH + "}))?";
+regExp40 =
+  "(^|[^\\d])(\\d{1," +
+  _mod13506.MAX_SAFE_COMPONENT_LENGTH +
+  "})(?:\\.(\\d{1," +
+  _mod13506.MAX_SAFE_COMPONENT_LENGTH +
+  "}))?(?:\\.(\\d{1," +
+  _mod13506.MAX_SAFE_COMPONENT_LENGTH +
+  "}))?";
 regExp40 = ((regExp40) => {
   let str = regExp40;
   while (tmp2 !== undefined) {

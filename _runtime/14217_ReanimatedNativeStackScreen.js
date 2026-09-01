@@ -9,8 +9,12 @@ const require = arg1;
 let closure_3 = ["children"];
 let c5 = importDefaultResult;
 let closure_7 = cancelAnimationDefault.createAnimatedComponent(require("Animated").InnerScreen);
-let closure_8 = { code: "function pnpm_ReanimatedNativeStackScreenTsx1(event){const{progress,closing,goingForward}=this.__closure;progress.value=event.progress;closing.value=event.closing;goingForward.value=event.goingForward;}" };
-let closure_9 = { code: "function pnpm_ReanimatedNativeStackScreenTsx2(event){const{cachedHeaderHeight,headerHeight}=this.__closure;if(event.headerHeight!==cachedHeaderHeight.current){headerHeight.value=event.headerHeight;cachedHeaderHeight.current=event.headerHeight;}}" };
+let closure_8 = {
+  code: "function pnpm_ReanimatedNativeStackScreenTsx1(event){const{progress,closing,goingForward}=this.__closure;progress.value=event.progress;closing.value=event.closing;goingForward.value=event.goingForward;}",
+};
+let closure_9 = {
+  code: "function pnpm_ReanimatedNativeStackScreenTsx2(event){const{cachedHeaderHeight,headerHeight}=this.__closure;if(event.headerHeight!==cachedHeaderHeight.current){headerHeight.value=event.headerHeight;cachedHeaderHeight.current=event.headerHeight;}}",
+};
 const forwardRefResult = importDefaultResult.forwardRef((children, ref) => {
   const tmp = sharedValue3(children, sharedValue2);
   ({ stackPresentation, hasLargeHeader } = tmp);
@@ -60,9 +64,28 @@ const forwardRefResult = importDefaultResult.forwardRef((children, ref) => {
   H.__initData = closure_9;
   obj[2] = ref(sharedValue1[4]).useEvent(H, ["onHeaderHeightChange"]);
   const merged = Object.assign(tmp);
-  obj = { value: sharedValue, children: jsx(sharedValue(tmp3[8]).Provider, { value: { progress: sharedValue1, closing: sharedValue2, goingForward: sharedValue3 }, children: children.children }) };
-  obj.children = jsx(sharedValue(sharedValue1[7]).Provider, { value: sharedValue, children: jsx(sharedValue(tmp3[8]).Provider, { value: { progress: sharedValue1, closing: sharedValue2, goingForward: sharedValue3 }, children: children.children }) });
-  return <closure_7 value={sharedValue}>{jsx(sharedValue(tmp3[8]).Provider, { value: { progress: sharedValue1, closing: sharedValue2, goingForward: sharedValue3 }, children: arg0.children })}</closure_7>;
+  obj = {
+    value: sharedValue,
+    children: jsx(sharedValue(tmp3[8]).Provider, {
+      value: { progress: sharedValue1, closing: sharedValue2, goingForward: sharedValue3 },
+      children: children.children,
+    }),
+  };
+  obj.children = jsx(sharedValue(sharedValue1[7]).Provider, {
+    value: sharedValue,
+    children: jsx(sharedValue(tmp3[8]).Provider, {
+      value: { progress: sharedValue1, closing: sharedValue2, goingForward: sharedValue3 },
+      children: children.children,
+    }),
+  });
+  return (
+    <closure_7 value={sharedValue}>
+      {jsx(sharedValue(tmp3[8]).Provider, {
+        value: { progress: sharedValue1, closing: sharedValue2, goingForward: sharedValue3 },
+        children: arg0.children,
+      })}
+    </closure_7>
+  );
 });
 forwardRefResult.displayName = "ReanimatedNativeStackScreen";
 

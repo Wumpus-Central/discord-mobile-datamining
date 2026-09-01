@@ -17,5 +17,7 @@ function getRelativeCoords(arg0, arg1, arg2) {
 }
 getRelativeCoords.__closure = { measure: require("measureFabric").measure };
 getRelativeCoords.__workletHash = 11016839059094;
-getRelativeCoords.__initData = { code: "function getRelativeCoords_Pnpm_getRelativeCoordsTs1(animatedRef,absoluteX,absoluteY){const{measure}=this.__closure;const parentCoords=measure(animatedRef);if(parentCoords===null){return null;}return{x:absoluteX-parentCoords.pageX,y:absoluteY-parentCoords.pageY};}" };
+getRelativeCoords.__initData = {
+  code: "function getRelativeCoords_Pnpm_getRelativeCoordsTs1(animatedRef,absoluteX,absoluteY){const{measure}=this.__closure;const parentCoords=measure(animatedRef);if(parentCoords===null){return null;}return{x:absoluteX-parentCoords.pageX,y:absoluteY-parentCoords.pageY};}",
+};
 arg5.getRelativeCoords = getRelativeCoords;

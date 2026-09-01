@@ -54,8 +54,24 @@ const memoResult = memo((nativeGestureRef) => {
     return items;
   }, items);
   closure_10 = tmp3;
-  let items1 = [activeOffsetX, activeOffsetY, enableContentPanningGesture, failOffsetX, failOffsetY, tmp3, waitFor, , , , ];
-  ({ handleOnChange: arr2[7], handleOnEnd: arr2[8], handleOnFinalize: arr2[9], handleOnStart: arr2[10] } = contentPanGestureHandler);
+  let items1 = [
+    activeOffsetX,
+    activeOffsetY,
+    enableContentPanningGesture,
+    failOffsetX,
+    failOffsetY,
+    tmp3,
+    waitFor,
+    ,
+    ,
+    ,
+  ];
+  ({
+    handleOnChange: arr2[7],
+    handleOnEnd: arr2[8],
+    handleOnFinalize: arr2[9],
+    handleOnStart: arr2[10],
+  } = contentPanGestureHandler);
   const tmp4 = simultaneousHandlers(() => {
     const Gesture = nativeGestureRef(enableContentPanningGesture[3]).Gesture;
     const PanResult = Gesture.Pan();
@@ -63,8 +79,16 @@ const memoResult = memo((nativeGestureRef) => {
     const enabledResult = Gesture.Pan().enabled(enableContentPanningGesture);
     const runOnJSResult = result.runOnJS(false);
     const onStartResult = result.runOnJS(false).onStart(contentPanGestureHandler.handleOnStart);
-    const onChangeResult = result.runOnJS(false).onStart(contentPanGestureHandler.handleOnStart).onChange(contentPanGestureHandler.handleOnChange);
-    const onFinalizeResult = result.runOnJS(false).onStart(contentPanGestureHandler.handleOnStart).onChange(contentPanGestureHandler.handleOnChange).onEnd(contentPanGestureHandler.handleOnEnd).onFinalize(contentPanGestureHandler.handleOnFinalize);
+    const onChangeResult = result
+      .runOnJS(false)
+      .onStart(contentPanGestureHandler.handleOnStart)
+      .onChange(contentPanGestureHandler.handleOnChange);
+    const onFinalizeResult = result
+      .runOnJS(false)
+      .onStart(contentPanGestureHandler.handleOnStart)
+      .onChange(contentPanGestureHandler.handleOnChange)
+      .onEnd(contentPanGestureHandler.handleOnEnd)
+      .onFinalize(contentPanGestureHandler.handleOnFinalize);
     let result1 = onFinalizeResult;
     if (waitFor) {
       result1 = onFinalizeResult.requireExternalGestureToFail(tmp);

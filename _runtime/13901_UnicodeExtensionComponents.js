@@ -36,13 +36,16 @@ arg5.UnicodeExtensionComponents = function UnicodeExtensionComponents(str) {
         obj = { key: null, value: "" };
         obj[0] = substr;
         tmp13 = obj;
-        if (undefined === keywords.find((key) => {
-          key = undefined;
-          if (null != obj) {
-            key = obj.key;
-          }
-          return key.key === key;
-        })) {
+        if (
+          undefined ===
+          keywords.find((key) => {
+            key = undefined;
+            if (null != obj) {
+              key = obj.key;
+            }
+            return key.key === key;
+          })
+        ) {
           arr = keywords.push(obj);
           tmp13 = obj;
         }

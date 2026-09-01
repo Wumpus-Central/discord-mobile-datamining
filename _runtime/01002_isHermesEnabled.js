@@ -95,7 +95,8 @@ export const getHermesVersion = function getHermesVersion() {
   if (null !== getRuntimeProperties) {
     if (undefined !== getRuntimeProperties) {
       const call = getRuntimeProperties.call;
-      OSS_Release_Version = typeof call === "unknown" ? getRuntimeProperties() : call(_HermesInternal)["OSS Release Version"];
+      OSS_Release_Version =
+        typeof call === "unknown" ? getRuntimeProperties() : call(_HermesInternal)["OSS Release Version"];
     }
   }
 };

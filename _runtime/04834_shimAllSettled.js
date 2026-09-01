@@ -7,10 +7,14 @@ export default function shimAllSettled() {
   requirePromise();
   const tmp2 = getPolyfill();
   _require = tmp2;
-  defineProperty(Promise, { allSettled: tmp2 }, {
-    allSettled: function testAllSettled() {
-      return Promise.allSettled !== closure_0;
-    }
-  });
+  defineProperty(
+    Promise,
+    { allSettled: tmp2 },
+    {
+      allSettled: function testAllSettled() {
+        return Promise.allSettled !== closure_0;
+      },
+    },
+  );
   return tmp2;
-};
+}

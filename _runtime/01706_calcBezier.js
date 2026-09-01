@@ -46,7 +46,9 @@ function calcBezier(arg0, arg1, arg2) {
 }
 calcBezier.__closure = { A, B, C };
 calcBezier.__workletHash = 6436686649451;
-calcBezier.__initData = { code: "function calcBezier_Pnpm_BezierTs4(aT,aA1,aA2){const{A,B,C}=this.__closure;return((A(aA1,aA2)*aT+B(aA1,aA2))*aT+C(aA1))*aT;}" };
+calcBezier.__initData = {
+  code: "function calcBezier_Pnpm_BezierTs4(aT,aA1,aA2){const{A,B,C}=this.__closure;return((A(aA1,aA2)*aT+B(aA1,aA2))*aT+C(aA1))*aT;}",
+};
 function getSlope(arg0, arg1, arg2) {
   if (typeof closure_4 !== "function") {
     HermesBuiltin.throwTypeError();
@@ -63,7 +65,9 @@ function getSlope(arg0, arg1, arg2) {
 }
 getSlope.__closure = { A, B, C };
 getSlope.__workletHash = 7144143660854;
-getSlope.__initData = { code: "function getSlope_Pnpm_BezierTs5(aT,aA1,aA2){const{A,B,C}=this.__closure;return 3.0*A(aA1,aA2)*aT*aT+2.0*B(aA1,aA2)*aT+C(aA1);}" };
+getSlope.__initData = {
+  code: "function getSlope_Pnpm_BezierTs5(aT,aA1,aA2){const{A,B,C}=this.__closure;return 3.0*A(aA1,aA2)*aT*aT+2.0*B(aA1,aA2)*aT+C(aA1);}",
+};
 function binarySubdivide(arg0, arg1, arg2, arg3, arg4) {
   let sum;
   let tmp = arg1;
@@ -120,7 +124,9 @@ function binarySubdivide(arg0, arg1, arg2, arg3, arg4) {
 }
 binarySubdivide.__closure = { calcBezier, SUBDIVISION_PRECISION: 0.0000001, SUBDIVISION_MAX_ITERATIONS: 10 };
 binarySubdivide.__workletHash = 16502327865282;
-binarySubdivide.__initData = { code: "function binarySubdivide_Pnpm_BezierTs6(aX,aA,aB,mX1,mX2){const{calcBezier,SUBDIVISION_PRECISION,SUBDIVISION_MAX_ITERATIONS}=this.__closure;let currentX;let currentT;let i=0;do{currentT=aA+(aB-aA)/2.0;currentX=calcBezier(currentT,mX1,mX2)-aX;if(currentX>0.0){aB=currentT;}else{aA=currentT;}}while(Math.abs(currentX)>SUBDIVISION_PRECISION&&++i<SUBDIVISION_MAX_ITERATIONS);return currentT;}" };
+binarySubdivide.__initData = {
+  code: "function binarySubdivide_Pnpm_BezierTs6(aX,aA,aB,mX1,mX2){const{calcBezier,SUBDIVISION_PRECISION,SUBDIVISION_MAX_ITERATIONS}=this.__closure;let currentX;let currentT;let i=0;do{currentT=aA+(aB-aA)/2.0;currentX=calcBezier(currentT,mX1,mX2)-aX;if(currentX>0.0){aB=currentT;}else{aA=currentT;}}while(Math.abs(currentX)>SUBDIVISION_PRECISION&&++i<SUBDIVISION_MAX_ITERATIONS);return currentT;}",
+};
 function newtonRaphsonIterate(arg0, arg1, arg2, arg3) {
   let tmp = arg1;
   let num = 0;
@@ -186,10 +192,16 @@ function newtonRaphsonIterate(arg0, arg1, arg2, arg3) {
 }
 newtonRaphsonIterate.__closure = { NEWTON_ITERATIONS: 4, getSlope, calcBezier };
 newtonRaphsonIterate.__workletHash = 13998382484908;
-newtonRaphsonIterate.__initData = { code: "function newtonRaphsonIterate_Pnpm_BezierTs7(aX,aGuessT,mX1,mX2){const{NEWTON_ITERATIONS,getSlope,calcBezier}=this.__closure;for(let i=0;i<NEWTON_ITERATIONS;++i){const currentSlope=getSlope(aGuessT,mX1,mX2);if(currentSlope===0.0){return aGuessT;}const currentX=calcBezier(aGuessT,mX1,mX2)-aX;aGuessT-=currentX/currentSlope;}return aGuessT;}" };
+newtonRaphsonIterate.__initData = {
+  code: "function newtonRaphsonIterate_Pnpm_BezierTs7(aX,aGuessT,mX1,mX2){const{NEWTON_ITERATIONS,getSlope,calcBezier}=this.__closure;for(let i=0;i<NEWTON_ITERATIONS;++i){const currentSlope=getSlope(aGuessT,mX1,mX2);if(currentSlope===0.0){return aGuessT;}const currentX=calcBezier(aGuessT,mX1,mX2)-aX;aGuessT-=currentX/currentSlope;}return aGuessT;}",
+};
 let closure_11 = { code: "function LinearEasing_Pnpm_BezierTs9(x){return x;}" };
-let closure_12 = { code: "function getTForX_Pnpm_BezierTs10(aX){const{kSplineTableSize,sampleValues,kSampleStepSize,getSlope,mX1,mX2,NEWTON_MIN_SLOPE,newtonRaphsonIterate,binarySubdivide}=this.__closure;let intervalStart=0.0;let currentSample=1;const lastSample=kSplineTableSize-1;for(;currentSample!==lastSample&&sampleValues[currentSample]<=aX;++currentSample){intervalStart+=kSampleStepSize;}--currentSample;const dist=(aX-sampleValues[currentSample])/(sampleValues[currentSample+1]-sampleValues[currentSample]);const guessForT=intervalStart+dist*kSampleStepSize;const initialSlope=getSlope(guessForT,mX1,mX2);if(initialSlope>=NEWTON_MIN_SLOPE){return newtonRaphsonIterate(aX,guessForT,mX1,mX2);}else if(initialSlope===0.0){return guessForT;}else{return binarySubdivide(aX,intervalStart,intervalStart+kSampleStepSize,mX1,mX2);}}" };
-let closure_13 = { code: "function BezierEasing_Pnpm_BezierTs11(x){const{mX1,mY1,mX2,mY2,calcBezier,getTForX}=this.__closure;if(mX1===mY1&&mX2===mY2){return x;}if(x===0){return 0;}if(x===1){return 1;}return calcBezier(getTForX(x),mY1,mY2);}" };
+let closure_12 = {
+  code: "function getTForX_Pnpm_BezierTs10(aX){const{kSplineTableSize,sampleValues,kSampleStepSize,getSlope,mX1,mX2,NEWTON_MIN_SLOPE,newtonRaphsonIterate,binarySubdivide}=this.__closure;let intervalStart=0.0;let currentSample=1;const lastSample=kSplineTableSize-1;for(;currentSample!==lastSample&&sampleValues[currentSample]<=aX;++currentSample){intervalStart+=kSampleStepSize;}--currentSample;const dist=(aX-sampleValues[currentSample])/(sampleValues[currentSample+1]-sampleValues[currentSample]);const guessForT=intervalStart+dist*kSampleStepSize;const initialSlope=getSlope(guessForT,mX1,mX2);if(initialSlope>=NEWTON_MIN_SLOPE){return newtonRaphsonIterate(aX,guessForT,mX1,mX2);}else if(initialSlope===0.0){return guessForT;}else{return binarySubdivide(aX,intervalStart,intervalStart+kSampleStepSize,mX1,mX2);}}",
+};
+let closure_13 = {
+  code: "function BezierEasing_Pnpm_BezierTs11(x){const{mX1,mY1,mX2,mY2,calcBezier,getTForX}=this.__closure;if(mX1===mY1&&mX2===mY2){return x;}if(x===0){return 0;}if(x===1){return 1;}return calcBezier(getTForX(x),mY1,mY2);}",
+};
 class Bezier {
   constructor(arg0, arg1, arg2, arg3) {
     closure_0 = arg0;
@@ -284,7 +296,8 @@ class Bezier {
                 }
               }
               const diff = num3 - 1;
-              const result = (arg0 - dependencyMap[diff]) / (dependencyMap[diff + 1] - dependencyMap[diff]) * closure_3;
+              const result =
+                ((arg0 - dependencyMap[diff]) / (dependencyMap[diff + 1] - dependencyMap[diff])) * closure_3;
               if (typeof closure_1_8 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
@@ -313,7 +326,17 @@ class Bezier {
               }
               return tmp15;
             };
-            obj = { kSplineTableSize: 11, sampleValues: null, kSampleStepSize: null, getSlope: null, mX1: null, mX2: null, NEWTON_MIN_SLOPE: null, newtonRaphsonIterate: null, binarySubdivide: null };
+            obj = {
+              kSplineTableSize: 11,
+              sampleValues: null,
+              kSampleStepSize: null,
+              getSlope: null,
+              mX1: null,
+              mX2: null,
+              NEWTON_MIN_SLOPE: null,
+              newtonRaphsonIterate: null,
+              binarySubdivide: null,
+            };
             obj[1] = array;
             obj[2] = tmp8;
             tmp21 = getSlope;
@@ -383,7 +406,17 @@ class Bezier {
     throw reanimatedError;
   }
 }
-Bezier.__closure = { kSplineTableSize: 11, calcBezier, kSampleStepSize: 0.1, getSlope, NEWTON_MIN_SLOPE: 0.001, newtonRaphsonIterate, binarySubdivide };
+Bezier.__closure = {
+  kSplineTableSize: 11,
+  calcBezier,
+  kSampleStepSize: 0.1,
+  getSlope,
+  NEWTON_MIN_SLOPE: 0.001,
+  newtonRaphsonIterate,
+  binarySubdivide,
+};
 Bezier.__workletHash = 1707642440340;
-Bezier.__initData = { code: "function Bezier_Pnpm_BezierTs8(mX1,mY1,mX2,mY2){const{kSplineTableSize,calcBezier,kSampleStepSize,getSlope,NEWTON_MIN_SLOPE,newtonRaphsonIterate,binarySubdivide}=this.__closure;function LinearEasing(x){'worklet';return x;}if(!(mX1>=0&&mX1<=1&&mX2>=0&&mX2<=1)){throw new ReanimatedError('Bezier x values must be in [0, 1] range.');}if(mX1===mY1&&mX2===mY2){return LinearEasing;}const sampleValues=new Array(kSplineTableSize);for(let i=0;i<kSplineTableSize;++i){sampleValues[i]=calcBezier(i*kSampleStepSize,mX1,mX2);}function getTForX(aX){'worklet';let intervalStart=0.0;let currentSample=1;const lastSample=kSplineTableSize-1;for(;currentSample!==lastSample&&sampleValues[currentSample]<=aX;++currentSample){intervalStart+=kSampleStepSize;}--currentSample;const dist=(aX-sampleValues[currentSample])/(sampleValues[currentSample+1]-sampleValues[currentSample]);const guessForT=intervalStart+dist*kSampleStepSize;const initialSlope=getSlope(guessForT,mX1,mX2);if(initialSlope>=NEWTON_MIN_SLOPE){return newtonRaphsonIterate(aX,guessForT,mX1,mX2);}else if(initialSlope===0.0){return guessForT;}else{return binarySubdivide(aX,intervalStart,intervalStart+kSampleStepSize,mX1,mX2);}}return function Bezier_Pnpm_BezierTs8(x){'worklet';if(mX1===mY1&&mX2===mY2){return x;}if(x===0){return 0;}if(x===1){return 1;}return calcBezier(getTForX(x),mY1,mY2);};}" };
+Bezier.__initData = {
+  code: "function Bezier_Pnpm_BezierTs8(mX1,mY1,mX2,mY2){const{kSplineTableSize,calcBezier,kSampleStepSize,getSlope,NEWTON_MIN_SLOPE,newtonRaphsonIterate,binarySubdivide}=this.__closure;function LinearEasing(x){'worklet';return x;}if(!(mX1>=0&&mX1<=1&&mX2>=0&&mX2<=1)){throw new ReanimatedError('Bezier x values must be in [0, 1] range.');}if(mX1===mY1&&mX2===mY2){return LinearEasing;}const sampleValues=new Array(kSplineTableSize);for(let i=0;i<kSplineTableSize;++i){sampleValues[i]=calcBezier(i*kSampleStepSize,mX1,mX2);}function getTForX(aX){'worklet';let intervalStart=0.0;let currentSample=1;const lastSample=kSplineTableSize-1;for(;currentSample!==lastSample&&sampleValues[currentSample]<=aX;++currentSample){intervalStart+=kSampleStepSize;}--currentSample;const dist=(aX-sampleValues[currentSample])/(sampleValues[currentSample+1]-sampleValues[currentSample]);const guessForT=intervalStart+dist*kSampleStepSize;const initialSlope=getSlope(guessForT,mX1,mX2);if(initialSlope>=NEWTON_MIN_SLOPE){return newtonRaphsonIterate(aX,guessForT,mX1,mX2);}else if(initialSlope===0.0){return guessForT;}else{return binarySubdivide(aX,intervalStart,intervalStart+kSampleStepSize,mX1,mX2);}}return function Bezier_Pnpm_BezierTs8(x){'worklet';if(mX1===mY1&&mX2===mY2){return x;}if(x===0){return 0;}if(x===1){return 1;}return calcBezier(getTForX(x),mY1,mY2);};}",
+};
 arg5.Bezier = Bezier;

@@ -24,8 +24,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 let c5 = importAllResult;
 ({ StyleSheet, View: closure_6 } = get_ActivityIndicator);
@@ -77,14 +76,18 @@ let items = [
         }
         const tmpResult = TouchEventBoundary(1192);
       }
-    }
+    },
   },
   {
     key: "render",
     value: function render() {
       const _onTouchStart = this._onTouchStart;
-      return <closure_6 style={wrapperView.wrapperView} onTouchStart={_onTouchStart.bind(this)}>{this.props.children}</closure_6>;
-    }
+      return (
+        <closure_6 style={wrapperView.wrapperView} onTouchStart={_onTouchStart.bind(this)}>
+          {this.props.children}
+        </closure_6>
+      );
+    },
   },
   {
     key: "_logTouchEvent",
@@ -119,7 +122,7 @@ let items = [
         const debug = TouchEventBoundary(817).debug;
         debug.warn("[TouchEvents] No root component found in touch path.");
       }
-    }
+    },
   },
   {
     key: "_isNameIgnored",
@@ -148,7 +151,7 @@ let items = [
         }
         return tmp;
       });
-    }
+    },
   },
   {
     key: "_onTouchStart",
@@ -276,11 +279,14 @@ let items = [
         obj[1] = TouchEventBoundary(1155).UI_ACTION_TOUCH;
         const result = TouchEventBoundary(1165).startUserInteractionSpan(obj);
         if (result) {
-          const attr = result.setAttribute(TouchEventBoundary(817).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, TouchEventBoundary(1158).SPAN_ORIGIN_AUTO_INTERACTION);
+          const attr = result.setAttribute(
+            TouchEventBoundary(817).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
+            TouchEventBoundary(1158).SPAN_ORIGIN_AUTO_INTERACTION,
+          );
         }
         const obj4 = TouchEventBoundary(1165);
       }
-    }
+    },
   },
   {
     key: "_pushIfNotIgnored",
@@ -328,12 +334,17 @@ let items = [
         tmp = tmp3;
       }
       return tmp;
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(TouchEventBoundary, items);
 importDefaultResultResult.displayName = "__Sentry.TouchEventBoundary";
-importDefaultResultResult.defaultProps = { breadcrumbCategory: "touch", breadcrumbType: "user", ignoreNames: [], maxComponentTreeSize: 20 };
+importDefaultResultResult.defaultProps = {
+  breadcrumbCategory: "touch",
+  breadcrumbType: "user",
+  ignoreNames: [],
+  maxComponentTreeSize: 20,
+};
 
 export const TouchEventBoundary = importDefaultResultResult;
 export const withTouchEventBoundary = (arg0, arg1) => {

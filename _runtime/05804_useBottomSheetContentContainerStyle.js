@@ -7,10 +7,17 @@ import { useBottomSheetInternal } from "05632_useBottomSheetInternal.js";
 const require = arg1;
 ({ useMemo: c3, useState: c4 } = noop);
 ({ Platform: c5, StyleSheet: closure_6 } = get_ActivityIndicator);
-let closure_7 = { code: "function pnpm_useBottomSheetContentContainerStyleTs1(){const{animatedFooterHeight}=this.__closure;return animatedFooterHeight.get();}" };
-let closure_8 = { code: "function pnpm_useBottomSheetContentContainerStyleTs2(result,previousFooterHeight){const{enableFooterMarginAdjustment,runOnJS,setFooterHeight,Platform,animatedContentHeight}=this.__closure;if(!enableFooterMarginAdjustment){return;}runOnJS(setFooterHeight)(result);if(Platform.OS==='web'){if(result&&!previousFooterHeight){const contentHeight=animatedContentHeight.get();animatedContentHeight.set(contentHeight+result);}}}" };
+let closure_7 = {
+  code: "function pnpm_useBottomSheetContentContainerStyleTs1(){const{animatedFooterHeight}=this.__closure;return animatedFooterHeight.get();}",
+};
+let closure_8 = {
+  code: "function pnpm_useBottomSheetContentContainerStyleTs2(result,previousFooterHeight){const{enableFooterMarginAdjustment,runOnJS,setFooterHeight,Platform,animatedContentHeight}=this.__closure;if(!enableFooterMarginAdjustment){return;}runOnJS(setFooterHeight)(result);if(Platform.OS==='web'){if(result&&!previousFooterHeight){const contentHeight=animatedContentHeight.get();animatedContentHeight.set(contentHeight+result);}}}",
+};
 
-export const useBottomSheetContentContainerStyle = function useBottomSheetContentContainerStyle(flag, contentContainerStyle) {
+export const useBottomSheetContentContainerStyle = function useBottomSheetContentContainerStyle(
+  flag,
+  contentContainerStyle,
+) {
   const _require = flag;
   dependencyMap = contentContainerStyle;
   const tmp = first(animatedFooterHeight(0), 2);
@@ -61,7 +68,7 @@ export const useBottomSheetContentContainerStyle = function useBottomSheetConten
           }
         }
       }
-      const items = [tmp, ];
+      const items = [tmp];
       const obj = { paddingBottom: null, overflow: "visible" };
       obj[0] = num + first;
       items[1] = obj;
@@ -84,7 +91,13 @@ export const useBottomSheetContentContainerStyle = function useBottomSheetConten
       const obj = callback(table[4]);
     }
   };
-  obj = { enableFooterMarginAdjustment: flag, runOnJS: require("01653_cancelAnimation.js").runOnJS, setFooterHeight: tmp3, Platform: closure_5, animatedContentHeight };
+  obj = {
+    enableFooterMarginAdjustment: flag,
+    runOnJS: require("01653_cancelAnimation.js").runOnJS,
+    setFooterHeight: tmp3,
+    Platform: closure_5,
+    animatedContentHeight,
+  };
   fn.__closure = obj;
   fn.__workletHash = 1149497927090;
   fn.__initData = closure_8;

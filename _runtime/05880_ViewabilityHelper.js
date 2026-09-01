@@ -23,7 +23,7 @@ const items = [
     value: function dispose() {
       const timers = this.timers;
       const item = timers.forEach(clearTimeout);
-    }
+    },
   },
   {
     key: "updateViewableItems",
@@ -111,7 +111,7 @@ const items = [
           let result = self.checkViewableIndicesChanges(found);
         }
       }
-    }
+    },
   },
   {
     key: "checkViewableIndicesChanges",
@@ -132,13 +132,13 @@ const items = [
         self.lastReportedViewableIndices = found;
         const result = self.viewableIndicesChanged(found, found1, found2);
       }
-    }
+    },
   },
   {
     key: "clearLastReportedViewableIndices",
     value: function clearLastReportedViewableIndices() {
       this.lastReportedViewableIndices = [];
-    }
+    },
   },
   {
     key: "isItemViewable",
@@ -175,8 +175,8 @@ const items = [
           return (null != prop ? diff1 / width : diff1 / tmp3) >= result;
         }
       }
-    }
-  }
+    },
+  },
 ];
 
 export default _createClassDefault(ViewabilityHelper, items);

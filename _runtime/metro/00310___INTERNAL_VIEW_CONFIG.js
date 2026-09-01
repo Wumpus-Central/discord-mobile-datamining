@@ -6,9 +6,32 @@ import setRuntimeConfigProvider from "../00065_setRuntimeConfigProvider.js";
 
 require = arg1;
 noopAll;
-let obj = { uiViewClassName: "AndroidDrawerLayout", directEventTypes: { topDrawerSlide: { registrationName: "onDrawerSlide" }, topDrawerStateChanged: { registrationName: "onDrawerStateChanged" }, topDrawerOpen: { registrationName: "onDrawerOpen" }, topDrawerClose: { registrationName: "onDrawerClose" } }, validAttributes: null };
-obj = { keyboardDismissMode: true, drawerBackgroundColor: require("result").colorAttribute, drawerPosition: true, drawerWidth: true, drawerLockMode: true, statusBarBackgroundColor: require("result").colorAttribute };
-const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onDrawerSlide: true, onDrawerStateChanged: true, onDrawerOpen: true, onDrawerClose: true }));
+let obj = {
+  uiViewClassName: "AndroidDrawerLayout",
+  directEventTypes: {
+    topDrawerSlide: { registrationName: "onDrawerSlide" },
+    topDrawerStateChanged: { registrationName: "onDrawerStateChanged" },
+    topDrawerOpen: { registrationName: "onDrawerOpen" },
+    topDrawerClose: { registrationName: "onDrawerClose" },
+  },
+  validAttributes: null,
+};
+obj = {
+  keyboardDismissMode: true,
+  drawerBackgroundColor: require("result").colorAttribute,
+  drawerPosition: true,
+  drawerWidth: true,
+  drawerLockMode: true,
+  statusBarBackgroundColor: require("result").colorAttribute,
+};
+const merged = Object.assign(
+  weakSet.ConditionallyIgnoredEventHandlers({
+    onDrawerSlide: true,
+    onDrawerStateChanged: true,
+    onDrawerOpen: true,
+    onDrawerClose: true,
+  }),
+);
 obj[2] = obj;
 obj = {
   openDrawer(arg0) {
@@ -16,7 +39,7 @@ obj = {
   },
   closeDrawer(arg0) {
     renderElement.dispatchCommand(arg0, "closeDrawer", []);
-  }
+  },
 };
 
 export default setRuntimeConfigProvider.get("AndroidDrawerLayout", () => obj);

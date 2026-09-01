@@ -53,7 +53,7 @@ export const addIntegration = function addIntegration(name) {
   } else if (tmp(12363).DEBUG_BUILD) {
     const logger = tmp(12335).logger;
     const _HermesInternal = HermesInternal;
-    logger.warn("Cannot add integration \"" + name.name + "\" because no SDK Client is available.");
+    logger.warn('Cannot add integration "' + name.name + '" because no SDK Client is available.');
   }
 };
 export const afterSetupIntegrations = function afterSetupIntegrations(arg0, arg1) {

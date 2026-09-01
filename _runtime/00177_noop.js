@@ -1,7 +1,5 @@
 // _runtime/00177_noop.js
-function noop() {
-
-}
+function noop() {}
 class Promise {
   constructor(arg0) {
     self = this;

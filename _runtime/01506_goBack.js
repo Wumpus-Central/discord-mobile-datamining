@@ -8,7 +8,9 @@ arg5.navigate = function navigate() {
     [tmp8, tmp9, arr2] = items;
     if (typeof arr2 === "boolean") {
       const _console2 = console;
-      console.warn("Passing a boolean as the third argument to 'navigate' is deprecated. Pass '{ merge: true }' instead.");
+      console.warn(
+        "Passing a boolean as the third argument to 'navigate' is deprecated. Pass '{ merge: true }' instead.",
+      );
     }
     let obj = { name: null, params: null, merge: null, pop: null };
     obj[0] = tmp8;
@@ -34,13 +36,17 @@ arg5.navigate = function navigate() {
     const tmp = items[0] || {};
     if ("name" in tmp) {
       const _console = console;
-      console.warn("Passing an object as the argument to 'navigate' is deprecated. Use 'navigate(name, params, options)' instead.");
+      console.warn(
+        "Passing an object as the argument to 'navigate' is deprecated. Use 'navigate(name, params, options)' instead.",
+      );
       obj = { type: "NAVIGATE", payload: null };
       obj[1] = tmp;
       return obj;
     } else {
       const _Error = Error;
-      error = new Error("You need to specify a name when calling navigate with an object as the argument. See https://reactnavigation.org/docs/navigation-actions#navigate for usage.");
+      error = new Error(
+        "You need to specify a name when calling navigate with an object as the argument. See https://reactnavigation.org/docs/navigation-actions#navigate for usage.",
+      );
       throw error;
     }
   }
@@ -61,7 +67,9 @@ arg5.navigateDeprecated = function navigateDeprecated() {
       return obj;
     } else {
       const _Error = Error;
-      error = new Error("You need to specify a name when calling navigateDeprecated with an object as the argument. See https://reactnavigation.org/docs/navigation-actions#navigatelegacy for usage.");
+      error = new Error(
+        "You need to specify a name when calling navigateDeprecated with an object as the argument. See https://reactnavigation.org/docs/navigation-actions#navigatelegacy for usage.",
+      );
       throw error;
     }
   }

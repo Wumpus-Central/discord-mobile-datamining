@@ -77,8 +77,18 @@ function accumulateDifferences(items, arr2, obj, arg3) {
 }
 arg5.validate = function validate(arg0, bubblingEventTypes, bubblingEventTypes2) {
   const items = [];
-  let obj = { bubblingEventTypes: bubblingEventTypes.bubblingEventTypes, directEventTypes: bubblingEventTypes.directEventTypes, uiViewClassName: bubblingEventTypes.uiViewClassName, validAttributes: bubblingEventTypes.validAttributes };
-  obj = { bubblingEventTypes: bubblingEventTypes2.bubblingEventTypes, directEventTypes: bubblingEventTypes2.directEventTypes, uiViewClassName: bubblingEventTypes2.uiViewClassName, validAttributes: bubblingEventTypes2.validAttributes };
+  let obj = {
+    bubblingEventTypes: bubblingEventTypes.bubblingEventTypes,
+    directEventTypes: bubblingEventTypes.directEventTypes,
+    uiViewClassName: bubblingEventTypes.uiViewClassName,
+    validAttributes: bubblingEventTypes.validAttributes,
+  };
+  obj = {
+    bubblingEventTypes: bubblingEventTypes2.bubblingEventTypes,
+    directEventTypes: bubblingEventTypes2.directEventTypes,
+    uiViewClassName: bubblingEventTypes2.uiViewClassName,
+    validAttributes: bubblingEventTypes2.validAttributes,
+  };
   accumulateDifferences(items, [], obj, obj);
   if (0 === items.length) {
     obj = { type: "valid" };
@@ -89,17 +99,22 @@ arg5.validate = function validate(arg0, bubblingEventTypes, bubblingEventTypes2)
   return obj;
 };
 arg5.stringifyValidationResult = function stringifyValidationResult(arg0, validateResult) {
-  const items = ["StaticViewConfigValidator: Invalid static view config for '" + arg0 + "'.", "", ];
+  const items = ["StaticViewConfigValidator: Invalid static view config for '" + arg0 + "'.", ""];
   const differences = validateResult.differences;
-  items[HermesBuiltin.arraySpread(differences.map((arg0) => {
-    ({ type, path } = arg0);
-    if ("missing" === type) {
-      const _HermesInternal2 = HermesInternal;
-      return "- '" + path.join(".") + "' is missing.";
-    } else if ("unequal" === type) {
-      const _HermesInternal = HermesInternal;
-      return "- '" + path.join(".") + "' is the wrong value.";
-    }
-  }), 2)] = "";
+  items[
+    HermesBuiltin.arraySpread(
+      differences.map((arg0) => {
+        ({ type, path } = arg0);
+        if ("missing" === type) {
+          const _HermesInternal2 = HermesInternal;
+          return "- '" + path.join(".") + "' is missing.";
+        } else if ("unequal" === type) {
+          const _HermesInternal = HermesInternal;
+          return "- '" + path.join(".") + "' is the wrong value.";
+        }
+      }),
+      2,
+    )
+  ] = "";
   return items.join("\n");
 };

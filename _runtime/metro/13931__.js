@@ -9,13 +9,13 @@ let obj = {
   enumerable: true,
   get() {
     return shouldPolyfill /* shouldPolyfill */.shouldPolyfill;
-  }
+  },
 };
 Object.defineProperty(arg5, "shouldPolyfill", obj);
 obj = {
   enumerable: true,
   get() {
     return supportedValuesOf /* supportedValuesOf */.supportedValuesOf;
-  }
+  },
 };
 Object.defineProperty(arg5, "supportedValuesOf", obj);

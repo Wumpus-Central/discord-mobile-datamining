@@ -79,7 +79,9 @@ arg5.parseItemLocationBox = function parseItemLocationBox(getUint8, uint8, arg2,
           num4 = 0;
           if (8 === baseOffset) {
             let _console = console;
-            let warnResult = console.warn("This file uses an 8-bit offset which is currently not supported by ExifReader. Contact the maintainer to get it fixed.");
+            let warnResult = console.warn(
+              "This file uses an 8-bit offset which is currently not supported by ExifReader. Contact the maintainer to get it fixed.",
+            );
             let tmp17 = require;
             let tmp18 = dependencyMap;
             let obj4 = get64BitValue;
@@ -109,7 +111,9 @@ arg5.parseItemLocationBox = function parseItemLocationBox(getUint8, uint8, arg2,
               num7 = 0;
               if (8 === tmp4) {
                 let _console3 = console;
-                let warnResult1 = console.warn("This file uses an 8-bit offset which is currently not supported by ExifReader. Contact the maintainer to get it fixed.");
+                let warnResult1 = console.warn(
+                  "This file uses an 8-bit offset which is currently not supported by ExifReader. Contact the maintainer to get it fixed.",
+                );
                 let tmp31 = require;
                 let tmp32 = dependencyMap;
                 let obj7 = get64BitValue;
@@ -124,7 +128,9 @@ arg5.parseItemLocationBox = function parseItemLocationBox(getUint8, uint8, arg2,
               num8 = 0;
               if (8 === tmp5) {
                 let _console4 = console;
-                let warnResult2 = console.warn("This file uses an 8-bit offset which is currently not supported by ExifReader. Contact the maintainer to get it fixed.");
+                let warnResult2 = console.warn(
+                  "This file uses an 8-bit offset which is currently not supported by ExifReader. Contact the maintainer to get it fixed.",
+                );
                 let tmp35 = require;
                 let tmp36 = dependencyMap;
                 let obj8 = get64BitValue;
@@ -145,7 +151,9 @@ arg5.parseItemLocationBox = function parseItemLocationBox(getUint8, uint8, arg2,
             num6 = 0;
             if (8 === tmp7) {
               let _console2 = console;
-              let warnResult3 = console.warn("This file uses an 8-bit offset which is currently not supported by ExifReader. Contact the maintainer to get it fixed.");
+              let warnResult3 = console.warn(
+                "This file uses an 8-bit offset which is currently not supported by ExifReader. Contact the maintainer to get it fixed.",
+              );
               let tmp26 = require;
               let tmp27 = dependencyMap;
               let obj5 = get64BitValue;

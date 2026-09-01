@@ -8,10 +8,13 @@ arg5.default = function getInternalSlots(arg0) {
   let value = weakMap.get(arg0);
   if (!value) {
     const _Object = Object;
-    obj = Object.create(null, items.reduce((arg0, arg1) => {
-      arg0[arg1] = { enumerable: false, writable: true, configurable: true };
-      return arg0;
-    }, {}));
+    obj = Object.create(
+      null,
+      items.reduce((arg0, arg1) => {
+        arg0[arg1] = { enumerable: false, writable: true, configurable: true };
+        return arg0;
+      }, {}),
+    );
     const result = obj.set(arg0, obj);
     value = obj;
   }

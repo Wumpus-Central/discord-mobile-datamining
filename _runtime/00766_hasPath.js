@@ -6,7 +6,6 @@ import isIndex from "00628_isIndex.js";
 import toKey from "00725_toKey.js";
 import castPath from "00728_castPath.js";
 
-
 export default function hasPath(arg0, arg1, arg2) {
   let tmp4;
   let tmp = require;
@@ -67,4 +66,4 @@ export default function hasPath(arg0, arg1, arg2) {
     }
   }
   return tmp11;
-};
+}

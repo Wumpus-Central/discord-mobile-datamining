@@ -10,7 +10,7 @@ export const useIsScreenReaderEnabled = function useIsScreenReaderEnabled() {
   const tmp = callback(callback3(false), 2);
   closure_0 = tmp[1];
   callback2(() => {
-    callback = callback(function*() {
+    callback = callback(function* () {
       closure_1 = tmp3;
       c3 = 1;
       yield closure_2_4.isScreenReaderEnabled();

@@ -27,7 +27,7 @@ let obj = {
   key: "x",
   get() {
     return callback(this, closure_2)[closure_2];
-  }
+  },
 };
 const items = [
   obj,
@@ -35,19 +35,19 @@ const items = [
     key: "y",
     get() {
       return callback(this, closure_3)[closure_3];
-    }
+    },
   },
   {
     key: "width",
     get() {
       return callback(this, closure_4)[closure_4];
-    }
+    },
   },
   {
     key: "height",
     get() {
       return callback(this, closure_5)[closure_5];
-    }
+    },
   },
   {
     key: "top",
@@ -59,7 +59,7 @@ const items = [
         sum = tmp2 + tmp;
       }
       return sum;
-    }
+    },
   },
   {
     key: "right",
@@ -71,7 +71,7 @@ const items = [
         sum = tmp2 + tmp;
       }
       return sum;
-    }
+    },
   },
   {
     key: "bottom",
@@ -83,7 +83,7 @@ const items = [
         sum = tmp2 + tmp;
       }
       return sum;
-    }
+    },
   },
   {
     key: "left",
@@ -95,37 +95,46 @@ const items = [
         sum = tmp2 + tmp;
       }
       return sum;
-    }
+    },
   },
   {
     key: "toJSON",
     value: function toJSON() {
-      return { x: this.x, y: this.y, width: this.width, height: this.height, top: this.top, left: this.left, bottom: this.bottom, right: this.right };
-    }
+      return {
+        x: this.x,
+        y: this.y,
+        width: this.width,
+        height: this.height,
+        top: this.top,
+        left: this.left,
+        bottom: this.bottom,
+        right: this.right,
+      };
+    },
   },
   {
     key: "__getInternalX",
     value: function __getInternalX() {
       return callback(this, closure_2)[closure_2];
-    }
+    },
   },
   {
     key: "__getInternalY",
     value: function __getInternalY() {
       return callback(this, closure_3)[closure_3];
-    }
+    },
   },
   {
     key: "__getInternalWidth",
     value: function __getInternalWidth() {
       return callback(this, closure_4)[closure_4];
-    }
+    },
   },
   {
     key: "__getInternalHeight",
     value: function __getInternalHeight() {
       return callback(this, closure_5)[closure_5];
-    }
+    },
   },
   {
     key: "__setInternalX",
@@ -136,7 +145,7 @@ const items = [
         num = Number(arg0);
       }
       callback(this, closure_2)[closure_2] = num;
-    }
+    },
   },
   {
     key: "__setInternalY",
@@ -147,7 +156,7 @@ const items = [
         num = Number(DOMRectReadOnly);
       }
       callback(this, closure_3)[closure_3] = num;
-    }
+    },
   },
   {
     key: "__setInternalWidth",
@@ -158,7 +167,7 @@ const items = [
         num = Number(width);
       }
       callback(this, closure_4)[closure_4] = num;
-    }
+    },
   },
   {
     key: "__setInternalHeight",
@@ -169,8 +178,8 @@ const items = [
         num = Number(height);
       }
       callback(this, closure_5)[closure_5] = num;
-    }
-  }
+    },
+  },
 ];
 obj = {
   key: "fromRect",
@@ -208,14 +217,14 @@ obj = {
       obj.__setInternalHeight(undefined);
     }
     return obj;
-  }
+  },
 };
 const items1 = [obj];
 const importDefaultResultResult = _createClassDefault(DOMRectReadOnly, items, items1);
 obj = {
   clone(arg0) {
     return new closure_6(arg0.x, arg0.y, arg0.width, arg0.height);
-  }
+  },
 };
 setPlatformObject.setPlatformObject(importDefaultResultResult, obj);
 

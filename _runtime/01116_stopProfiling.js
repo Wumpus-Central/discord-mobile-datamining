@@ -32,7 +32,11 @@ function stopProfiling(arg0) {
           obj = { profile: null };
           const profile = hermesProfilingEvent.profile;
           const merged1 = Object.assign({}, hermesProfilingEvent);
-          addNativeThreadCpuProfileToHermes(profile, measurements.profile, hermesProfilingEvent.transaction.active_thread_id);
+          addNativeThreadCpuProfileToHermes(
+            profile,
+            measurements.profile,
+            hermesProfilingEvent.transaction.active_thread_id,
+          );
           obj[0] = profile;
           let merged2 = Object.assign(merged1, obj);
           const debug_meta = measurements.debug_meta;
@@ -81,11 +85,14 @@ function addNativeThreadCpuProfileToHermes(profile, profile2, active_thread_id) 
       continue;
     }
   }
-  const items = [...profile.stacks || [], ...arr3.map((arr) => arr.map((arg0) => arg0 + closure_1))];
+  const items = [...(profile.stacks || []), ...arr3.map((arr) => arr.map((arg0) => arg0 + closure_1))];
   profile.stacks = items;
-  const items1 = [...profile.samples || []];
+  const items1 = [...(profile.samples || [])];
   const found = profile2.samples || [].filter((thread_id) => thread_id.thread_id !== closure_0);
-  HermesBuiltin.arraySpread(found.map((stack_id) => Object.assign(Object.assign({}, stack_id), { stack_id: length + stack_id.stack_id })), tmp6);
+  HermesBuiltin.arraySpread(
+    found.map((stack_id) => Object.assign(Object.assign({}, stack_id), { stack_id: length + stack_id.stack_id })),
+    tmp6,
+  );
   profile.samples = items1;
   return profile;
 }
@@ -113,9 +120,7 @@ export const hermesProfilingIntegration = () => {
   const platformProfilers = tmp.platformProfilers;
   closure_2 = null === platformProfilers || undefined === platformProfilers || platformProfilers;
   c3 = false;
-  _startCurrentProfileForActiveTransaction = function _startCurrentProfileForActiveTransaction(startTimestampNs) {
-
-  };
+  _startCurrentProfileForActiveTransaction = function _startCurrentProfileForActiveTransaction(startTimestampNs) {};
   _startCurrentProfile = function _startCurrentProfile(activeSpan) {
     if (obj.isRootSpan(activeSpan)) {
       _finishCurrentProfile();
@@ -144,7 +149,9 @@ export const hermesProfilingIntegration = () => {
         }
         if (undefined === profilesSampleRate) {
           const debug3 = tmp(tmp2[2]).debug;
-          debug3.log("[Profiling] Profiling disabled, enable it by setting `profilesSampleRate` option to SDK init call.");
+          debug3.log(
+            "[Profiling] Profiling disabled, enable it by setting `profilesSampleRate` option to SDK init call.",
+          );
           let flag2 = false;
         } else {
           const _Math = Math;
@@ -163,12 +170,8 @@ export const hermesProfilingIntegration = () => {
       spanIsSampledResult = tmpResult.spanIsSampled(activeSpan);
     }
   };
-  _shouldStartProfiling = function _shouldStartProfiling(arg0) {
-
-  };
-  _startNewProfile = function _startNewProfile(arg0) {
-
-  };
+  _shouldStartProfiling = function _shouldStartProfiling(arg0) {};
+  _startNewProfile = function _startNewProfile(arg0) {};
   _finishCurrentProfileForSpan = function _finishCurrentProfileForSpan(spanContext) {
     if (obj.isRootSpan(spanContext)) {
       let span_id;
@@ -185,7 +188,13 @@ export const hermesProfilingIntegration = () => {
           span_id1 = _undefined.span_id;
         }
         const _HermesInternal = HermesInternal;
-        debug.log("[Profiling] Span (" + spanId + ") ended is not the currently profiled span (" + span_id1 + "). Not stopping profiling.");
+        debug.log(
+          "[Profiling] Span (" +
+            spanId +
+            ") ended is not the currently profiled span (" +
+            span_id1 +
+            "). Not stopping profiling.",
+        );
       }
     }
   };
@@ -285,9 +294,7 @@ export const hermesProfilingIntegration = () => {
       }
     }
   };
-  _clearCurrentProfileTimeout = function _clearCurrentProfileTimeout() {
-
-  };
+  _clearCurrentProfileTimeout = function _clearCurrentProfileTimeout() {};
   return {
     name: "HermesProfiling",
     setupOnce() {
@@ -348,7 +355,7 @@ export const hermesProfilingIntegration = () => {
         }
         isHermesEnabledResult = _undefined(_undefined2[1]).isHermesEnabled();
       }
-    }
+    },
   };
 };
 export const startProfiling = function startProfiling(arg0) {

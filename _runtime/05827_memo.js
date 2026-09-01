@@ -33,7 +33,8 @@ const memoResult = memo(function BottomSheetHandleContainerComponent(simultaneou
   failOffsetY = bottomSheetInternal.failOffsetY;
   waitFor = bottomSheetInternal.waitFor;
   simultaneousHandlers2 = bottomSheetInternal.simultaneousHandlers;
-  handlePanGestureHandler = simultaneousHandlers(handleHeight[3]).useBottomSheetGestureHandlers().handlePanGestureHandler;
+  handlePanGestureHandler = simultaneousHandlers(handleHeight[3]).useBottomSheetGestureHandlers()
+    .handlePanGestureHandler;
   let items = [simultaneousHandlers2, simultaneousHandlers];
   const tmp7 = activeOffsetY(() => {
     const items = [];
@@ -54,8 +55,24 @@ const memoResult = memo(function BottomSheetHandleContainerComponent(simultaneou
     return items;
   }, items);
   closure_10 = tmp7;
-  let items1 = [activeOffsetX, activeOffsetY, DEFAULT_ENABLE_HANDLE_PANNING_GESTURE, failOffsetX, failOffsetY, tmp7, waitFor, , , , ];
-  ({ handleOnChange: arr2[7], handleOnEnd: arr2[8], handleOnFinalize: arr2[9], handleOnStart: arr2[10] } = handlePanGestureHandler);
+  let items1 = [
+    activeOffsetX,
+    activeOffsetY,
+    DEFAULT_ENABLE_HANDLE_PANNING_GESTURE,
+    failOffsetX,
+    failOffsetY,
+    tmp7,
+    waitFor,
+    ,
+    ,
+    ,
+  ];
+  ({
+    handleOnChange: arr2[7],
+    handleOnEnd: arr2[8],
+    handleOnFinalize: arr2[9],
+    handleOnStart: arr2[10],
+  } = handlePanGestureHandler);
   const items2 = [handleHeight];
   const obj2 = simultaneousHandlers(handleHeight[3]);
   const tmp4 = simultaneousHandlers;
@@ -67,8 +84,16 @@ const memoResult = memo(function BottomSheetHandleContainerComponent(simultaneou
     const enabledResult = Gesture.Pan().enabled(DEFAULT_ENABLE_HANDLE_PANNING_GESTURE);
     const runOnJSResult = result.runOnJS(false);
     const onStartResult = result.runOnJS(false).onStart(handlePanGestureHandler.handleOnStart);
-    const onChangeResult = result.runOnJS(false).onStart(handlePanGestureHandler.handleOnStart).onChange(handlePanGestureHandler.handleOnChange);
-    const onFinalizeResult = result.runOnJS(false).onStart(handlePanGestureHandler.handleOnStart).onChange(handlePanGestureHandler.handleOnChange).onEnd(handlePanGestureHandler.handleOnEnd).onFinalize(handlePanGestureHandler.handleOnFinalize);
+    const onChangeResult = result
+      .runOnJS(false)
+      .onStart(handlePanGestureHandler.handleOnStart)
+      .onChange(handlePanGestureHandler.handleOnChange);
+    const onFinalizeResult = result
+      .runOnJS(false)
+      .onStart(handlePanGestureHandler.handleOnStart)
+      .onChange(handlePanGestureHandler.handleOnChange)
+      .onEnd(handlePanGestureHandler.handleOnEnd)
+      .onFinalize(handlePanGestureHandler.handleOnFinalize);
     let result1 = onFinalizeResult;
     if (waitFor) {
       result1 = onFinalizeResult.requireExternalGestureToFail(tmp);
@@ -106,7 +131,16 @@ const memoResult = memo(function BottomSheetHandleContainerComponent(simultaneou
     handleComponent = DEFAULT_ENABLE_HANDLE_PANNING_GESTURE(tmp5[5]);
   }
   obj = { gesture: tmp8, children: null };
-  obj = { ref: tmp3, onLayout: tmp9, children: failOffsetY(handleComponent, { animatedIndex, animatedPosition, style: handleStyle, indicatorStyle: handleIndicatorStyle }) };
+  obj = {
+    ref: tmp3,
+    onLayout: tmp9,
+    children: failOffsetY(handleComponent, {
+      animatedIndex,
+      animatedPosition,
+      style: handleStyle,
+      indicatorStyle: handleIndicatorStyle,
+    }),
+  };
   obj[1] = failOffsetY(DEFAULT_ENABLE_HANDLE_PANNING_GESTURE(handleHeight[6]).View, obj, "BottomSheetHandleContainer");
   return failOffsetY(tmp4(handleHeight[4]).GestureDetector, obj);
 });

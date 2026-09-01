@@ -26,13 +26,13 @@ const items = [
         const map3 = self.map;
       }
       return tmp2;
-    }
+    },
   },
   {
     key: "delete",
     value: function _delete(arg0) {
       return this.map.delete(arg0);
-    }
+    },
   },
   {
     key: "set",
@@ -50,8 +50,8 @@ const items = [
         }
       }
       return self;
-    }
-  }
+    },
+  },
 ];
 
 export default _createClass(LRUCache, items);

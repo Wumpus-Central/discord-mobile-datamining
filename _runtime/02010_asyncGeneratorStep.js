@@ -16,7 +16,7 @@ function asyncGeneratorStep(arg0, arg1, arg2, arg3, arg4, arg5, arg6) {
 
 export default function _asyncToGenerator(arg0) {
   closure_0 = arg0;
-  return function() {
+  return function () {
     const self = this;
     closure_1 = arguments;
     return new Promise((arg0, arg1) => {
@@ -33,4 +33,4 @@ export default function _asyncToGenerator(arg0) {
       _self(applyResult, arg0, arg1, _next, _throw, "next", undefined);
     });
   };
-};
+}

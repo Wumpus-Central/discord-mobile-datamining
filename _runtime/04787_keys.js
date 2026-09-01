@@ -11,14 +11,16 @@ if (keys) {
 keys = Object.keys;
 keys2.shim = function shimObjectKeys() {
   if (Object.keys) {
-    if (!((arg0, arg1) => {
-      keys = Object.keys(arguments);
-      let tmp = keys;
-      if (keys) {
-        tmp = keys.length === arguments.length;
-      }
-      return tmp;
-    })(1, 2)) {
+    if (
+      !((arg0, arg1) => {
+        keys = Object.keys(arguments);
+        let tmp = keys;
+        if (keys) {
+          tmp = keys.length === arguments.length;
+        }
+        return tmp;
+      })(1, 2)
+    ) {
       const _Object2 = Object;
       Object.keys = function keys(arg0) {
         if (callback(table[1])(arg0)) {

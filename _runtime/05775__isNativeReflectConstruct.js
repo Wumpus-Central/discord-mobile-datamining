@@ -22,8 +22,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 function changeEventCalculator(scale, scale2) {
   if (undefined === scale2) {
@@ -40,7 +39,9 @@ function changeEventCalculator(scale, scale2) {
 }
 changeEventCalculator.__closure = {};
 changeEventCalculator.__workletHash = 9876979738005;
-changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_pinchGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={scaleChange:current.scale};}else{changePayload={scaleChange:current.scale/previous.scale};}return{...current,...changePayload};}" };
+changeEventCalculator.__initData = {
+  code: "function changeEventCalculator_Pnpm_pinchGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={scaleChange:current.scale};}else{changePayload={scaleChange:current.scale/previous.scale};}return{...current,...changePayload};}",
+};
 class PinchGesture {
   constructor() {
     self = this;
@@ -74,8 +75,8 @@ let items = [
       }
       const items = [arg0];
       return fn(items);
-    }
-  }
+    },
+  },
 ];
 
 export const PinchGesture = importDefaultResult(PinchGesture, items);

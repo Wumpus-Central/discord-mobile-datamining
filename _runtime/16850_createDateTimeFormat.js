@@ -369,8 +369,13 @@ arg5.createDateTimeFormats = function createDateTimeFormats(formats) {
   }
   return items;
 };
-const re0 = /(?:[Eec]{1,6}|G{1,5}|(?:[yYu]+|U{1,5})|[ML]{1,5}|d{1,2}|a|[hkHK]{1,2}|m{1,2}|s{1,2}|z{1,4})(?=([^']*'[^']*')*[^']*$)/g;
+const re0 =
+  /(?:[Eec]{1,6}|G{1,5}|(?:[yYu]+|U{1,5})|[ML]{1,5}|d{1,2}|a|[hkHK]{1,2}|m{1,2}|s{1,2}|z{1,4})(?=([^']*'[^']*')*[^']*$)/g;
 const re1 = /[QxXVOvZASjgFDwWIQqH]/;
-let closure_2 = { month: ["numeric", "2-digit", "short", "long", "narrow"], weekday: ["short", "short", "short", "long", "narrow"], era: ["short", "short", "short", "long", "narrow"] };
+let closure_2 = {
+  month: ["numeric", "2-digit", "short", "long", "narrow"],
+  weekday: ["short", "short", "short", "long", "narrow"],
+  era: ["short", "short", "short", "long", "narrow"],
+};
 let closure_3 = ["weekday", "era", "year", "month", "day"];
 let closure_4 = ["hour", "minute", "second", "timeZoneName"];

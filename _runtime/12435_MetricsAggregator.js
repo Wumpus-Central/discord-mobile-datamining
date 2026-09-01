@@ -21,7 +21,7 @@ class MetricsAggregator {
       unrefResult = _interval.unref();
     }
     random = Math.random();
-    self._flushShift = Math.floor(random * require("metro/12432__.js").DEFAULT_FLUSH_INTERVAL / 1000);
+    self._flushShift = Math.floor((random * require("metro/12432__.js").DEFAULT_FLUSH_INTERVAL) / 1000);
     self._forceFlush = false;
     return;
   }
@@ -51,7 +51,12 @@ const items = [
       const obj4 = MetricsAggregator(12436);
       const sanitizeUnitResult = MetricsAggregator(12436).sanitizeUnit(str);
       const obj5 = MetricsAggregator(12436);
-      const bucketKey = MetricsAggregator(12436).getBucketKey(arg0, sanitizeMetricKeyResult, sanitizeUnitResult, sanitizeTagsResult);
+      const bucketKey = MetricsAggregator(12436).getBucketKey(
+        arg0,
+        sanitizeMetricKeyResult,
+        sanitizeUnitResult,
+        sanitizeTagsResult,
+      );
       const _buckets = this._buckets;
       const value = _buckets.get(bucketKey);
       let num = 0;
@@ -85,19 +90,26 @@ const items = [
         diff = obj.metric.weight - num;
       }
       const obj6 = MetricsAggregator(12436);
-      const result1 = MetricsAggregator(12340).updateMetricSummaryOnActiveSpan(arg0, sanitizeMetricKeyResult, diff, sanitizeUnitResult, obj, bucketKey);
+      const result1 = MetricsAggregator(12340).updateMetricSummaryOnActiveSpan(
+        arg0,
+        sanitizeMetricKeyResult,
+        diff,
+        sanitizeUnitResult,
+        obj,
+        bucketKey,
+      );
       self._bucketsTotalWeight = self._bucketsTotalWeight + obj.metric.weight;
       if (self._bucketsTotalWeight >= MetricsAggregator(12432).MAX_WEIGHT) {
         self.flush();
       }
-    }
+    },
   },
   {
     key: "flush",
     value: function flush() {
       this._forceFlush = true;
       this._flush();
-    }
+    },
   },
   {
     key: "close",
@@ -105,7 +117,7 @@ const items = [
       this._forceFlush = true;
       clearInterval(this._interval);
       this._flush();
-    }
+    },
   },
   {
     key: "_flush",
@@ -147,7 +159,7 @@ const items = [
         }
         self._captureMetrics(map);
       }
-    }
+    },
   },
   {
     key: "_captureMetrics",
@@ -163,8 +175,8 @@ const items = [
         const result = MetricsAggregator(12438).captureAggregateMetrics(this._client, mapped);
         const obj = MetricsAggregator(12438);
       }
-    }
-  }
+    },
+  },
 ];
 
 export const MetricsAggregator = _createClass(MetricsAggregator, items);

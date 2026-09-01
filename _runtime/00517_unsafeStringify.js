@@ -6,7 +6,28 @@ function unsafeStringify(array, arg1) {
   if (arg1 === undefined) {
     num = 0;
   }
-  return items[array[num]] + items[array[num + 1]] + items[array[num + 2]] + items[array[num + 3]] + "-" + items[array[num + 4]] + items[array[num + 5]] + "-" + items[array[num + 6]] + items[array[num + 7]] + "-" + items[array[num + 8]] + items[array[num + 9]] + "-" + items[array[num + 10]] + items[array[num + 11]] + items[array[num + 12]] + items[array[num + 13]] + items[array[num + 14]] + items[array[num + 15]];
+  return (
+    items[array[num]] +
+    items[array[num + 1]] +
+    items[array[num + 2]] +
+    items[array[num + 3]] +
+    "-" +
+    items[array[num + 4]] +
+    items[array[num + 5]] +
+    "-" +
+    items[array[num + 6]] +
+    items[array[num + 7]] +
+    "-" +
+    items[array[num + 8]] +
+    items[array[num + 9]] +
+    "-" +
+    items[array[num + 10]] +
+    items[array[num + 11]] +
+    items[array[num + 12]] +
+    items[array[num + 13]] +
+    items[array[num + 14]] +
+    items[array[num + 15]]
+  );
 }
 const items = [];
 let num = 0;

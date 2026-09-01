@@ -38,7 +38,12 @@ const items = [
       const obj4 = BrowserMetricsAggregator(12436);
       const sanitizeUnitResult = BrowserMetricsAggregator(12436).sanitizeUnit(str);
       const obj5 = BrowserMetricsAggregator(12436);
-      const bucketKey = BrowserMetricsAggregator(12436).getBucketKey(arg0, sanitizeMetricKeyResult, sanitizeUnitResult, sanitizeTagsResult);
+      const bucketKey = BrowserMetricsAggregator(12436).getBucketKey(
+        arg0,
+        sanitizeMetricKeyResult,
+        sanitizeUnitResult,
+        sanitizeTagsResult,
+      );
       const _buckets = this._buckets;
       const value = _buckets.get(bucketKey);
       let num = 0;
@@ -72,8 +77,15 @@ const items = [
         diff = obj.metric.weight - num;
       }
       const obj6 = BrowserMetricsAggregator(12436);
-      const result1 = BrowserMetricsAggregator(12340).updateMetricSummaryOnActiveSpan(arg0, sanitizeMetricKeyResult, diff, sanitizeUnitResult, obj, bucketKey);
-    }
+      const result1 = BrowserMetricsAggregator(12340).updateMetricSummaryOnActiveSpan(
+        arg0,
+        sanitizeMetricKeyResult,
+        diff,
+        sanitizeUnitResult,
+        obj,
+        bucketKey,
+      );
+    },
   },
   {
     key: "flush",
@@ -88,15 +100,15 @@ const items = [
         _buckets2.clear();
         const obj = BrowserMetricsAggregator(12438);
       }
-    }
+    },
   },
   {
     key: "close",
     value: function close() {
       clearInterval(this._interval);
       this.flush();
-    }
-  }
+    },
+  },
 ];
 
 export const BrowserMetricsAggregator = _createClass(BrowserMetricsAggregator, items);

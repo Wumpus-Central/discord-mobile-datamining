@@ -74,7 +74,7 @@ let items = [
         obj[2] = Object.values(items2);
         self.data = obj;
       }
-    }
+    },
   },
   {
     key: "is",
@@ -103,10 +103,12 @@ let items = [
               const req = data.req;
               if (!req.some((arg0) => !keys.includes(arg0))) {
                 if (!flag) {
-                  if (keys.some((arg0) => {
-                    const known = data.known;
-                    return !known.includes(arg0);
-                  })) {
+                  if (
+                    keys.some((arg0) => {
+                      const known = data.known;
+                      return !known.includes(arg0);
+                    })
+                  ) {
                     return false;
                   }
                 }
@@ -153,7 +155,7 @@ let items = [
         }
         return false;
       }
-    }
+    },
   },
   {
     key: "field",
@@ -216,7 +218,7 @@ let items = [
         }
         return true;
       }
-    }
+    },
   },
   {
     key: "message",
@@ -227,7 +229,7 @@ let items = [
         isAssignableResult = isAssignable.is(arg0, arg3);
       }
       return isAssignableResult;
-    }
+    },
   },
   {
     key: "messages",
@@ -266,7 +268,7 @@ let items = [
       } else {
         return false;
       }
-    }
+    },
   },
   {
     key: "scalar",
@@ -318,7 +320,7 @@ let items = [
       } else {
         return typeof flag === "string";
       }
-    }
+    },
   },
   {
     key: "scalars",
@@ -348,7 +350,7 @@ let items = [
       } else {
         return false;
       }
-    }
+    },
   },
   {
     key: "mapKeys",
@@ -362,14 +364,18 @@ let items = [
               if (tmp(1320).ScalarType.UINT32 !== INT32) {
                 if (tmp(1320).ScalarType.BOOL === INT32) {
                   const substr = keys.slice(0, arg2);
-                  return self.scalars(substr.map((arg0) => {
-                    let tmp = "true" == arg0;
-                    if (!tmp) {
-                      tmp = "false" != arg0 && arg0;
-                      const tmp2 = "false" != arg0 && arg0;
-                    }
-                    return tmp;
-                  }), INT32, arg2);
+                  return self.scalars(
+                    substr.map((arg0) => {
+                      let tmp = "true" == arg0;
+                      if (!tmp) {
+                        tmp = "false" != arg0 && arg0;
+                        const tmp2 = "false" != arg0 && arg0;
+                      }
+                      return tmp;
+                    }),
+                    INT32,
+                    arg2,
+                  );
                 } else {
                   return self.scalars(keys, INT32, arg2, tmp(1320).LongType.STRING);
                 }
@@ -379,9 +385,13 @@ let items = [
         }
       }
       const substr1 = keys.slice(0, arg2);
-      return self.scalars(substr1.map((joined) => parseInt(joined)), INT32, arg2);
-    }
-  }
+      return self.scalars(
+        substr1.map((joined) => parseInt(joined)),
+        INT32,
+        arg2,
+      );
+    },
+  },
 ];
 
 export const ReflectionTypeCheck = _createClass(ReflectionTypeCheck, items);

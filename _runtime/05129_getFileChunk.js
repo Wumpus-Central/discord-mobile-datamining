@@ -24,20 +24,26 @@ arg5.getFileChunk = function getFileChunk(fileChunk, chunkSize) {
       if (!(fileChunk instanceof Uint8Array)) {
         const _TypeError = TypeError;
         const _HermesInternal = HermesInternal;
-        const typeError = new TypeError("Expected the `file` argument to be of type `Array<number>`, `Uint8Array`, or `ArrayBuffer`, got `" + typeof fileChunk + "`");
+        const typeError = new TypeError(
+          "Expected the `file` argument to be of type `Array<number>`, `Uint8Array`, or `ArrayBuffer`, got `" +
+            typeof fileChunk +
+            "`",
+        );
         throw typeError;
       }
     }
   }
   const arr = Array.from(uint8Array.slice(0, num));
-  if (arr.every((num) => {
-    let tmp = typeof num === "number";
-    if (typeof num === "number") {
-      const _isNaN = isNaN;
-      tmp = !isNaN(num);
-    }
-    return tmp;
-  })) {
+  if (
+    arr.every((num) => {
+      let tmp = typeof num === "number";
+      if (typeof num === "number") {
+        const _isNaN = isNaN;
+        tmp = !isNaN(num);
+      }
+      return tmp;
+    })
+  ) {
     return arr;
   } else {
     const _TypeError2 = TypeError;

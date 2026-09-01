@@ -14,7 +14,7 @@ class PseudoMap {
           }
           _Array = Array;
           if (Array.isArray(global)) {
-            item = global.forEach(function(arg0) {
+            item = global.forEach(function (arg0) {
               const result = this.set(arg0[0], arg0[1]);
             }, self);
           } else {
@@ -27,7 +27,7 @@ class PseudoMap {
             throw typeError;
           }
         }
-        item1 = global.forEach(function(arg0, arg1) {
+        item1 = global.forEach(function (arg0, arg1) {
           const result = this.set(arg1, arg0);
         }, self);
       }
@@ -53,7 +53,7 @@ class PseudoMap {
     }
     self = tmp;
     keys = Object.keys(self._data);
-    item = keys.forEach(function(arg0) {
+    item = keys.forEach(function (arg0) {
       if ("size" !== arg0) {
         self = this;
         const call = closure_0.call;
@@ -222,22 +222,23 @@ class PseudoMap {
   clear() {
     obj = Object.create(null);
     obj.size = 0;
-    definePropertyResult = Object.defineProperty(this, "_data", { value: obj, enumerable: false, configurable: true, writable: false });
+    definePropertyResult = Object.defineProperty(this, "_data", {
+      value: obj,
+      enumerable: false,
+      configurable: true,
+      writable: false,
+    });
     return;
   }
 }
-function Entry(arg0, arg1, arg2) {
-
-}
+function Entry(arg0, arg1, arg2) {}
 Object.defineProperty(PseudoMap.prototype, "size", {
   get() {
     return this._data.size;
   },
-  set(arg0) {
-
-  },
+  set(arg0) {},
   enumerable: true,
-  configurable: true
+  configurable: true,
 });
 const fn = () => {
   error = new Error("iterators are not implemented in this version");

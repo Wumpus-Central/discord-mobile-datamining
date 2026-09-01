@@ -180,7 +180,10 @@ function CanonicalizeLocaleList(str) {
                     let _RegExp = RegExp;
                     let call2 = tmp16.call;
                     let RegExpResult = RegExp(`(?:${tmp17(16849).expExtSequences.source})+`, "i");
-                    let replaced = str8.replace(RegExpResult, typeof call2 === "unknown" ? tmp16("") : call2(match, ""));
+                    let replaced = str8.replace(
+                      RegExpResult,
+                      typeof call2 === "unknown" ? tmp16("") : call2(match, ""),
+                    );
                   }
                 } else {
                   let _RangeError = RangeError;
@@ -575,8 +578,25 @@ function InitializeNumberFormat(__getInternalProperties) {
     obj["[[localeMatcher]]"] = str5;
     __localeData__ = closure_15.NumberFormat["[[localeData]]"];
     obj2 = Object.create(List.prototype);
-    ({ [[locale]]: tmp5["[[locale]]"], [[nu]]: tmp5["[[numberingSystem]]"], [[dataLocale]]: tmp5["[[dataLocale]]"], [[dataLocale]]: tmp34 } = ResolveLocale(closure_15.NumberFormat["[[availableLocales]]"], typeError, obj, closure_15.NumberFormat["[[relevantExtensionKeys]]"], __localeData__));
-    const tmp33 = ResolveLocale(closure_15.NumberFormat["[[availableLocales]]"], typeError, obj, closure_15.NumberFormat["[[relevantExtensionKeys]]"], __localeData__);
+    ({
+      [[locale]]: tmp5["[[locale]]"],
+      [[nu]]: tmp5["[[numberingSystem]]"],
+      [[dataLocale]]: tmp5["[[dataLocale]]"],
+      [[dataLocale]]: tmp34,
+    } = ResolveLocale(
+      closure_15.NumberFormat["[[availableLocales]]"],
+      typeError,
+      obj,
+      closure_15.NumberFormat["[[relevantExtensionKeys]]"],
+      __localeData__,
+    ));
+    const tmp33 = ResolveLocale(
+      closure_15.NumberFormat["[[availableLocales]]"],
+      typeError,
+      obj,
+      closure_15.NumberFormat["[[relevantExtensionKeys]]"],
+      __localeData__,
+    );
     List("decimal", "percent", "currency");
     const style = ObjectResult.style;
     let str9 = "decimal";
@@ -792,7 +812,8 @@ function InitializeNumberFormat(__getInternalProperties) {
       flag2 = Boolean(useGrouping);
     }
     result["[[useGrouping]]"] = flag2;
-    ({ positivePattern: tmp5["[[positivePattern]]"], negativePattern: tmp5["[[negativePattern]]"] } = __localeData__[tmp34].patterns[str9]);
+    ({ positivePattern: tmp5["[[positivePattern]]"], negativePattern: tmp5["[[negativePattern]]"] } =
+      __localeData__[tmp34].patterns[str9]);
     result["[[boundFormat]]"] = undefined;
     result["[[initializedNumberFormat]]"] = true;
     if (!closure_4) {
@@ -820,7 +841,7 @@ class GetFormatNumber {
           } else {
             tmp13 = f65549;
             call2 = f65549.call;
-            fn = function(arg0) {
+            fn = function (arg0) {
               return callback(this, Number(arg0));
             };
             tmp["[[boundFormat]]"] = typeof call2 === "unknown" ? tmp13(self) : call2(fn, self);
@@ -871,7 +892,9 @@ function FormatNumber(numberFormat, diff) {
     result = callback(null);
   }
   __numberingSystem__ = result["[[numberingSystem]]"];
-  const tmp9 = closure_15.NumberFormat["[[localeData]]"][result["[[dataLocale]]"]].symbols[__numberingSystem__] || closure_15.NumberFormat["[[localeData]]"][result["[[dataLocale]]"]].symbols.latn;
+  const tmp9 =
+    closure_15.NumberFormat["[[localeData]]"][result["[[dataLocale]]"]].symbols[__numberingSystem__] ||
+    closure_15.NumberFormat["[[localeData]]"][result["[[dataLocale]]"]].symbols.latn;
   if (false === isFinite(diff)) {
     const _isNaN = isNaN;
     if (isNaN(diff)) {
@@ -1274,8 +1297,19 @@ function InitializeDateTimeFormat(prototype) {
     obj["[[localeMatcher]]"] = str4;
     const DateTimeFormat = closure_15.DateTimeFormat;
     __localeData__ = DateTimeFormat["[[localeData]]"];
-    const tmp24 = ResolveLocale(DateTimeFormat["[[availableLocales]]"], tmp95, obj, DateTimeFormat["[[relevantExtensionKeys]]"], __localeData__);
-    ({ [[locale]]: tmp5["[[locale]]"], [[ca]]: tmp5["[[calendar]]"], [[nu]]: tmp5["[[numberingSystem]]"], [[dataLocale]]: tmp5["[[dataLocale]]"] } = tmp24);
+    const tmp24 = ResolveLocale(
+      DateTimeFormat["[[availableLocales]]"],
+      tmp95,
+      obj,
+      DateTimeFormat["[[relevantExtensionKeys]]"],
+      __localeData__,
+    );
+    ({
+      [[locale]]: tmp5["[[locale]]"],
+      [[ca]]: tmp5["[[calendar]]"],
+      [[nu]]: tmp5["[[numberingSystem]]"],
+      [[dataLocale]]: tmp5["[[dataLocale]]"],
+    } = tmp24);
     const timeZone = tmp97.timeZone;
     let tmp25 = timeZone;
     if (undefined !== timeZone) {
@@ -1375,7 +1409,9 @@ function InitializeDateTimeFormat(prototype) {
               let tmp50 = new.target;
               let str12 = "`";
               let tmp51 = new.target;
-              let rangeError2 = new RangeError("'" + StringResult1 + "' is not an allowed value for `" + key10096 + "`");
+              let rangeError2 = new RangeError(
+                "'" + StringResult1 + "' is not an allowed value for `" + key10096 + "`",
+              );
               let tmp53 = rangeError2;
               throw rangeError2;
             }
@@ -1528,8 +1564,10 @@ function ToDateTimeOptions(arg0, any, date) {
     tmp17 = "any" !== any;
   }
   if (!tmp17) {
-    tmp17 = undefined === tmp16.weekday && undefined === tmp16.year && undefined === tmp16.month && undefined === tmp16.day;
-    const tmp18 = undefined === tmp16.weekday && undefined === tmp16.year && undefined === tmp16.month && undefined === tmp16.day;
+    tmp17 =
+      undefined === tmp16.weekday && undefined === tmp16.year && undefined === tmp16.month && undefined === tmp16.day;
+    const tmp18 =
+      undefined === tmp16.weekday && undefined === tmp16.year && undefined === tmp16.month && undefined === tmp16.day;
   }
   let flag = true;
   if (!tmp17) {
@@ -1625,10 +1663,13 @@ function calculateScore(arg0, arg1, arg2) {
             let tmp16 = typeof call2 === "unknown" ? tmp15(tmp13) : call2(items, tmp13);
             let _Math = Math;
             let _Math2 = Math;
-            let bound = Math.max(Math.min((typeof call3 === "unknown" ? tmp15(tmp14) : call3(items, tmp14)) - tmp16, 2), -2);
+            let bound = Math.max(
+              Math.min((typeof call3 === "unknown" ? tmp15(tmp14) : call3(items, tmp14)) - tmp16, 2),
+              -2,
+            );
             let tmp18 = tmp2;
             if (arg2) {
-              let tmp19 = "numeric" !== tmp13 && "2-digit" !== tmp13 || "numeric" === tmp14 || "2-digit" === tmp14;
+              let tmp19 = ("numeric" !== tmp13 && "2-digit" !== tmp13) || "numeric" === tmp14 || "2-digit" === tmp14;
               if (tmp19) {
                 let tmp20 = "numeric" === tmp13 || "2-digit" === tmp13;
                 if (!tmp20) {
@@ -1697,7 +1738,7 @@ class GetFormatDateTime {
           } else {
             tmp13 = f65549;
             call2 = f65549.call;
-            fn = function() {
+            fn = function () {
               if (0 === arguments.length) {
                 const _Date = Date;
                 let timestamp = Date.now();
@@ -1757,7 +1798,17 @@ function FormatDateTime(__getInternalProperties, arg1) {
       if (!__timeZone__) {
         str = "";
       }
-      obj = { "[[weekday]]": date[`get${str}` + "Day"](), "[[era]]": +date[`get${str}` + "FullYear"]() >= 0, "[[year]]": date[`get${str}` + "FullYear"](), "[[month]]": date[`get${str}` + "Month"](), "[[day]]": date[`get${str}` + "Date"](), "[[hour]]": date[`get${str}` + "Hours"](), "[[minute]]": date[`get${str}` + "Minutes"](), "[[second]]": date[`get${str}` + "Seconds"](), "[[inDST]]": false };
+      obj = {
+        "[[weekday]]": date[`get${str}` + "Day"](),
+        "[[era]]": +date[`get${str}` + "FullYear"]() >= 0,
+        "[[year]]": date[`get${str}` + "FullYear"](),
+        "[[month]]": date[`get${str}` + "Month"](),
+        "[[day]]": date[`get${str}` + "Date"](),
+        "[[hour]]": date[`get${str}` + "Hours"](),
+        "[[minute]]": date[`get${str}` + "Minutes"](),
+        "[[second]]": date[`get${str}` + "Seconds"](),
+        "[[inDST]]": false,
+      };
       obj = Object.create(ctor.prototype);
       for (const key10051 in obj) {
         let tmp8 = key10051;
@@ -2084,88 +2135,102 @@ if (tmp) {
     }
   };
 }
-let closure_7 = Array.prototype.indexOf || (function(arg0) {
-  const self = this;
-  if (this.length) {
-    let sum = arguments[1] || 0;
-    if (sum < self.length) {
-      while (self[sum] !== arg0) {
-        sum = sum + 1;
+let closure_7 =
+  Array.prototype.indexOf ||
+  function (arg0) {
+    const self = this;
+    if (this.length) {
+      let sum = arguments[1] || 0;
+      if (sum < self.length) {
+        while (self[sum] !== arg0) {
+          sum = sum + 1;
+        }
+        return sum;
       }
-      return sum;
+      return -1;
+    } else {
+      return -1;
     }
-    return -1;
-  } else {
-    return -1;
-  }
-});
-let tmp4 = Object.create || ((arg0, obj) => {
-  class F {
-    constructor() {
-      return;
-    }
-  }
-  F.prototype = arg0;
-  obj = Object.create(F.prototype);
-  for (const key10008 in arg1) {
-    let tmp5 = key10008;
-    let tmp6 = hasOwnProperty;
+  };
+let tmp4 =
+  Object.create ||
+  ((arg0, obj) => {
     class F {
       constructor() {
         return;
       }
     }
-    if (typeof tmp7 === "unknown") {
-      let tmp7Result = tmp6(key10008);
-    } else {
-      tmp7Result = tmp7(arg1, key10008);
-    }
-    if (!tmp7Result) {
-      continue;
-    } else {
-      let tmp3 = fn;
-      let tmp4 = fn(obj, key10008, arg1[key10008]);
+    F.prototype = arg0;
+    obj = Object.create(F.prototype);
+    for (const key10008 in arg1) {
+      let tmp5 = key10008;
+      let tmp6 = hasOwnProperty;
       class F {
         constructor() {
           return;
         }
       }
+      if (typeof tmp7 === "unknown") {
+        let tmp7Result = tmp6(key10008);
+      } else {
+        tmp7Result = tmp7(arg1, key10008);
+      }
+      if (!tmp7Result) {
+        continue;
+      } else {
+        let tmp3 = fn;
+        let tmp4 = fn(obj, key10008, arg1[key10008]);
+        class F {
+          constructor() {
+            return;
+          }
+        }
+      }
+      continue;
     }
-    continue;
-  }
-  return obj;
-});
-let closure_8 = tmp4;
-let tmp5 = Function.prototype.bind || (function(arg0) {
-  closure_0 = arg0;
-  const self = this;
-  let call = slice.call;
-  if (typeof call === "unknown") {
-    let callResult = slice(1);
-  } else {
-    callResult = call(arguments, 1);
-  }
-  closure_2 = callResult;
-  return 1 === this.length ? ((arg0) => {
-    const call = closure_1_10.call;
-    const call2 = closure_1_9.call;
-    if (typeof call2 === "unknown") {
-      let call2Result = closure_1_9();
-    } else {
-      call2Result = call2(arguments);
-    }
-    return self.apply(closure_0, typeof call === "unknown" ? closure_1_10(call2Result) : call(closure_2, call2Result));
-  }) : (() => {
-    const call = closure_1_10.call;
-    const call2 = closure_1_9.call;
-    if (typeof call2 === "unknown") {
-      let call2Result = closure_1_9();
-    } else {
-      call2Result = call2(arguments);
-    }
-    return self.apply(closure_0, typeof call === "unknown" ? closure_1_10(call2Result) : call(closure_2, call2Result));
+    return obj;
   });
-});
+let closure_8 = tmp4;
+let tmp5 =
+  Function.prototype.bind ||
+  function (arg0) {
+    closure_0 = arg0;
+    const self = this;
+    let call = slice.call;
+    if (typeof call === "unknown") {
+      let callResult = slice(1);
+    } else {
+      callResult = call(arguments, 1);
+    }
+    closure_2 = callResult;
+    return 1 === this.length
+      ? (arg0) => {
+          const call = closure_1_10.call;
+          const call2 = closure_1_9.call;
+          if (typeof call2 === "unknown") {
+            let call2Result = closure_1_9();
+          } else {
+            call2Result = call2(arguments);
+          }
+          return self.apply(
+            closure_0,
+            typeof call === "unknown" ? closure_1_10(call2Result) : call(closure_2, call2Result),
+          );
+        }
+      : () => {
+          const call = closure_1_10.call;
+          const call2 = closure_1_9.call;
+          if (typeof call2 === "unknown") {
+            let call2Result = closure_1_9();
+          } else {
+            call2Result = call2(arguments);
+          }
+          return self.apply(
+            closure_0,
+            typeof call === "unknown" ? closure_1_10(call2Result) : call(closure_2, call2Result),
+          );
+        };
+  };
 function supportedLocalesOf(arg0) {
   const self = this;
   const call = hasOwnProperty.call;
@@ -2227,7 +2292,7 @@ function supportedLocalesOf(arg0) {
             tmp15 = StringResult;
             if ("best fit" !== StringResult) {
               const _RangeError = RangeError;
-              const rangeError = new RangeError("matcher should be \"lookup\" or \"best fit\"");
+              const rangeError = new RangeError('matcher should be "lookup" or "best fit"');
               throw rangeError;
             }
           }
@@ -2275,18 +2340,385 @@ let c18 = false;
 let c19 = false;
 const re20 = /^[A-Z]{3}$/;
 const re21 = /-u(?:-[0-9a-z]{2,8})+/gi;
-let closure_22 = { tags: { "art-lojban": "jbo", "i-ami": "ami", "i-bnn": "bnn", "i-hak": "hak", "i-klingon": "tlh", "i-lux": "lb", "i-navajo": "nv", "i-pwn": "pwn", "i-tao": "tao", "i-tay": "tay", "i-tsu": "tsu", "no-bok": "nb", "no-nyn": "nn", "sgn-BE-FR": "sfb", "sgn-BE-NL": "vgt", "sgn-CH-DE": "sgg", "zh-guoyu": "cmn", "zh-hakka": "hak", "zh-min-nan": "nan", "zh-xiang": "hsn", "sgn-BR": "bzs", "sgn-CO": "csn", "sgn-DE": "gsg", "sgn-DK": "dsl", "sgn-ES": "ssp", "sgn-FR": "fsl", "sgn-GB": "bfi", "sgn-GR": "gss", "sgn-IE": "isg", "sgn-IT": "ise", "sgn-JP": "jsl", "sgn-MX": "mfs", "sgn-NI": "ncs", "sgn-NL": "dse", "sgn-NO": "nsl", "sgn-PT": "psr", "sgn-SE": "swl", "sgn-US": "ase", "sgn-ZA": "sfs", "zh-cmn": "cmn", "zh-cmn-Hans": "cmn-Hans", "zh-cmn-Hant": "cmn-Hant", "zh-gan": "gan", "zh-wuu": "wuu", "zh-yue": "yue" }, subtags: { BU: "MM", DD: "DE", FX: "FR", TP: "TL", YD: "YE", ZR: "CD", heploc: "alalc97", in: "id", iw: "he", ji: "yi", jw: "jv", mo: "ro", ayx: "nun", bjd: "drl", ccq: "rki", cjr: "mom", cka: "cmr", cmk: "xch", drh: "khk", drw: "prs", gav: "dev", hrr: "jal", ibi: "opa", kgh: "kml", lcq: "ppr", mst: "mry", myt: "mry", sca: "hle", tie: "ras", tkk: "twm", tlw: "weo", tnf: "prs", ybd: "rki", yma: "lrr" }, extLang: { aao: ["aao", "ar"], abh: ["abh", "ar"], abv: ["abv", "ar"], acm: ["acm", "ar"], acq: ["acq", "ar"], acw: ["acw", "ar"], acx: ["acx", "ar"], acy: ["acy", "ar"], adf: ["adf", "ar"], ads: ["ads", "sgn"], aeb: ["aeb", "ar"], aec: ["aec", "ar"], aed: ["aed", "sgn"], aen: ["aen", "sgn"], afb: ["afb", "ar"], afg: ["afg", "sgn"], ajp: ["ajp", "ar"], apc: ["apc", "ar"], apd: ["apd", "ar"], arb: ["arb", "ar"], arq: ["arq", "ar"], ars: ["ars", "ar"], ary: ["ary", "ar"], arz: ["arz", "ar"], ase: ["ase", "sgn"], asf: ["asf", "sgn"], asp: ["asp", "sgn"], asq: ["asq", "sgn"], asw: ["asw", "sgn"], auz: ["auz", "ar"], avl: ["avl", "ar"], ayh: ["ayh", "ar"], ayl: ["ayl", "ar"], ayn: ["ayn", "ar"], ayp: ["ayp", "ar"], bbz: ["bbz", "ar"], bfi: ["bfi", "sgn"], bfk: ["bfk", "sgn"], bjn: ["bjn", "ms"], bog: ["bog", "sgn"], bqn: ["bqn", "sgn"], bqy: ["bqy", "sgn"], btj: ["btj", "ms"], bve: ["bve", "ms"], bvl: ["bvl", "sgn"], bvu: ["bvu", "ms"], bzs: ["bzs", "sgn"], cdo: ["cdo", "zh"], cds: ["cds", "sgn"], cjy: ["cjy", "zh"], cmn: ["cmn", "zh"], coa: ["coa", "ms"], cpx: ["cpx", "zh"], csc: ["csc", "sgn"], csd: ["csd", "sgn"], cse: ["cse", "sgn"], csf: ["csf", "sgn"], csg: ["csg", "sgn"], csl: ["csl", "sgn"], csn: ["csn", "sgn"], csq: ["csq", "sgn"], csr: ["csr", "sgn"], czh: ["czh", "zh"], czo: ["czo", "zh"], doq: ["doq", "sgn"], dse: ["dse", "sgn"], dsl: ["dsl", "sgn"], dup: ["dup", "ms"], ecs: ["ecs", "sgn"], esl: ["esl", "sgn"], esn: ["esn", "sgn"], eso: ["eso", "sgn"], eth: ["eth", "sgn"], fcs: ["fcs", "sgn"], fse: ["fse", "sgn"], fsl: ["fsl", "sgn"], fss: ["fss", "sgn"], gan: ["gan", "zh"], gds: ["gds", "sgn"], gom: ["gom", "kok"], gse: ["gse", "sgn"], gsg: ["gsg", "sgn"], gsm: ["gsm", "sgn"], gss: ["gss", "sgn"], gus: ["gus", "sgn"], hab: ["hab", "sgn"], haf: ["haf", "sgn"], hak: ["hak", "zh"], hds: ["hds", "sgn"], hji: ["hji", "ms"], hks: ["hks", "sgn"], hos: ["hos", "sgn"], hps: ["hps", "sgn"], hsh: ["hsh", "sgn"], hsl: ["hsl", "sgn"], hsn: ["hsn", "zh"], icl: ["icl", "sgn"], ils: ["ils", "sgn"], inl: ["inl", "sgn"], ins: ["ins", "sgn"], ise: ["ise", "sgn"], isg: ["isg", "sgn"], isr: ["isr", "sgn"], jak: ["jak", "ms"], jax: ["jax", "ms"], jcs: ["jcs", "sgn"], jhs: ["jhs", "sgn"], jls: ["jls", "sgn"], jos: ["jos", "sgn"], jsl: ["jsl", "sgn"], jus: ["jus", "sgn"], kgi: ["kgi", "sgn"], knn: ["knn", "kok"], kvb: ["kvb", "ms"], kvk: ["kvk", "sgn"], kvr: ["kvr", "ms"], kxd: ["kxd", "ms"], lbs: ["lbs", "sgn"], lce: ["lce", "ms"], lcf: ["lcf", "ms"], liw: ["liw", "ms"], lls: ["lls", "sgn"], lsg: ["lsg", "sgn"], lsl: ["lsl", "sgn"], lso: ["lso", "sgn"], lsp: ["lsp", "sgn"], lst: ["lst", "sgn"], lsy: ["lsy", "sgn"], ltg: ["ltg", "lv"], lvs: ["lvs", "lv"], lzh: ["lzh", "zh"], max: ["max", "ms"], mdl: ["mdl", "sgn"], meo: ["meo", "ms"], mfa: ["mfa", "ms"], mfb: ["mfb", "ms"], mfs: ["mfs", "sgn"], min: ["min", "ms"], mnp: ["mnp", "zh"], mqg: ["mqg", "ms"], mre: ["mre", "sgn"], msd: ["msd", "sgn"], msi: ["msi", "ms"], msr: ["msr", "sgn"], mui: ["mui", "ms"], mzc: ["mzc", "sgn"], mzg: ["mzg", "sgn"], mzy: ["mzy", "sgn"], nan: ["nan", "zh"], nbs: ["nbs", "sgn"], ncs: ["ncs", "sgn"], nsi: ["nsi", "sgn"], nsl: ["nsl", "sgn"], nsp: ["nsp", "sgn"], nsr: ["nsr", "sgn"], nzs: ["nzs", "sgn"], okl: ["okl", "sgn"], orn: ["orn", "ms"], ors: ["ors", "ms"], pel: ["pel", "ms"], pga: ["pga", "ar"], pks: ["pks", "sgn"], prl: ["prl", "sgn"], prz: ["prz", "sgn"], psc: ["psc", "sgn"], psd: ["psd", "sgn"], pse: ["pse", "ms"], psg: ["psg", "sgn"], psl: ["psl", "sgn"], pso: ["pso", "sgn"], psp: ["psp", "sgn"], psr: ["psr", "sgn"], pys: ["pys", "sgn"], rms: ["rms", "sgn"], rsi: ["rsi", "sgn"], rsl: ["rsl", "sgn"], sdl: ["sdl", "sgn"], sfb: ["sfb", "sgn"], sfs: ["sfs", "sgn"], sgg: ["sgg", "sgn"], sgx: ["sgx", "sgn"], shu: ["shu", "ar"], slf: ["slf", "sgn"], sls: ["sls", "sgn"], sqk: ["sqk", "sgn"], sqs: ["sqs", "sgn"], ssh: ["ssh", "ar"], ssp: ["ssp", "sgn"], ssr: ["ssr", "sgn"], svk: ["svk", "sgn"], swc: ["swc", "sw"], swh: ["swh", "sw"], swl: ["swl", "sgn"], syy: ["syy", "sgn"], tmw: ["tmw", "ms"], tse: ["tse", "sgn"], tsm: ["tsm", "sgn"], tsq: ["tsq", "sgn"], tss: ["tss", "sgn"], tsy: ["tsy", "sgn"], tza: ["tza", "sgn"], ugn: ["ugn", "sgn"], ugy: ["ugy", "sgn"], ukl: ["ukl", "sgn"], uks: ["uks", "sgn"], urk: ["urk", "ms"], uzn: ["uzn", "uz"], uzs: ["uzs", "uz"], vgt: ["vgt", "sgn"], vkk: ["vkk", "ms"], vkt: ["vkt", "ms"], vsi: ["vsi", "sgn"], vsl: ["vsl", "sgn"], vsv: ["vsv", "sgn"], wuu: ["wuu", "zh"], xki: ["xki", "sgn"], xml: ["xml", "sgn"], xmm: ["xmm", "ms"], xms: ["xms", "sgn"], yds: ["yds", "sgn"], ysl: ["ysl", "sgn"], yue: ["yue", "zh"], zib: ["zib", "sgn"], zlm: ["zlm", "ms"], zmi: ["zmi", "ms"], zsl: ["zsl", "sgn"], zsm: ["zsm", "ms"] } };
-let closure_23 = { BHD: 3, BYR: 0, XOF: 0, BIF: 0, XAF: 0, CLF: 4, CLP: 0, KMF: 0, DJF: 0, XPF: 0, GNF: 0, ISK: 0, IQD: 3, JPY: 0, JOD: 3, KRW: 0, KWD: 3, LYD: 3, OMR: 3, PYG: 0, RWF: 0, TND: 3, UGX: 0, UYI: 0, VUV: 0, VND: 0 };
+let closure_22 = {
+  tags: {
+    "art-lojban": "jbo",
+    "i-ami": "ami",
+    "i-bnn": "bnn",
+    "i-hak": "hak",
+    "i-klingon": "tlh",
+    "i-lux": "lb",
+    "i-navajo": "nv",
+    "i-pwn": "pwn",
+    "i-tao": "tao",
+    "i-tay": "tay",
+    "i-tsu": "tsu",
+    "no-bok": "nb",
+    "no-nyn": "nn",
+    "sgn-BE-FR": "sfb",
+    "sgn-BE-NL": "vgt",
+    "sgn-CH-DE": "sgg",
+    "zh-guoyu": "cmn",
+    "zh-hakka": "hak",
+    "zh-min-nan": "nan",
+    "zh-xiang": "hsn",
+    "sgn-BR": "bzs",
+    "sgn-CO": "csn",
+    "sgn-DE": "gsg",
+    "sgn-DK": "dsl",
+    "sgn-ES": "ssp",
+    "sgn-FR": "fsl",
+    "sgn-GB": "bfi",
+    "sgn-GR": "gss",
+    "sgn-IE": "isg",
+    "sgn-IT": "ise",
+    "sgn-JP": "jsl",
+    "sgn-MX": "mfs",
+    "sgn-NI": "ncs",
+    "sgn-NL": "dse",
+    "sgn-NO": "nsl",
+    "sgn-PT": "psr",
+    "sgn-SE": "swl",
+    "sgn-US": "ase",
+    "sgn-ZA": "sfs",
+    "zh-cmn": "cmn",
+    "zh-cmn-Hans": "cmn-Hans",
+    "zh-cmn-Hant": "cmn-Hant",
+    "zh-gan": "gan",
+    "zh-wuu": "wuu",
+    "zh-yue": "yue",
+  },
+  subtags: {
+    BU: "MM",
+    DD: "DE",
+    FX: "FR",
+    TP: "TL",
+    YD: "YE",
+    ZR: "CD",
+    heploc: "alalc97",
+    in: "id",
+    iw: "he",
+    ji: "yi",
+    jw: "jv",
+    mo: "ro",
+    ayx: "nun",
+    bjd: "drl",
+    ccq: "rki",
+    cjr: "mom",
+    cka: "cmr",
+    cmk: "xch",
+    drh: "khk",
+    drw: "prs",
+    gav: "dev",
+    hrr: "jal",
+    ibi: "opa",
+    kgh: "kml",
+    lcq: "ppr",
+    mst: "mry",
+    myt: "mry",
+    sca: "hle",
+    tie: "ras",
+    tkk: "twm",
+    tlw: "weo",
+    tnf: "prs",
+    ybd: "rki",
+    yma: "lrr",
+  },
+  extLang: {
+    aao: ["aao", "ar"],
+    abh: ["abh", "ar"],
+    abv: ["abv", "ar"],
+    acm: ["acm", "ar"],
+    acq: ["acq", "ar"],
+    acw: ["acw", "ar"],
+    acx: ["acx", "ar"],
+    acy: ["acy", "ar"],
+    adf: ["adf", "ar"],
+    ads: ["ads", "sgn"],
+    aeb: ["aeb", "ar"],
+    aec: ["aec", "ar"],
+    aed: ["aed", "sgn"],
+    aen: ["aen", "sgn"],
+    afb: ["afb", "ar"],
+    afg: ["afg", "sgn"],
+    ajp: ["ajp", "ar"],
+    apc: ["apc", "ar"],
+    apd: ["apd", "ar"],
+    arb: ["arb", "ar"],
+    arq: ["arq", "ar"],
+    ars: ["ars", "ar"],
+    ary: ["ary", "ar"],
+    arz: ["arz", "ar"],
+    ase: ["ase", "sgn"],
+    asf: ["asf", "sgn"],
+    asp: ["asp", "sgn"],
+    asq: ["asq", "sgn"],
+    asw: ["asw", "sgn"],
+    auz: ["auz", "ar"],
+    avl: ["avl", "ar"],
+    ayh: ["ayh", "ar"],
+    ayl: ["ayl", "ar"],
+    ayn: ["ayn", "ar"],
+    ayp: ["ayp", "ar"],
+    bbz: ["bbz", "ar"],
+    bfi: ["bfi", "sgn"],
+    bfk: ["bfk", "sgn"],
+    bjn: ["bjn", "ms"],
+    bog: ["bog", "sgn"],
+    bqn: ["bqn", "sgn"],
+    bqy: ["bqy", "sgn"],
+    btj: ["btj", "ms"],
+    bve: ["bve", "ms"],
+    bvl: ["bvl", "sgn"],
+    bvu: ["bvu", "ms"],
+    bzs: ["bzs", "sgn"],
+    cdo: ["cdo", "zh"],
+    cds: ["cds", "sgn"],
+    cjy: ["cjy", "zh"],
+    cmn: ["cmn", "zh"],
+    coa: ["coa", "ms"],
+    cpx: ["cpx", "zh"],
+    csc: ["csc", "sgn"],
+    csd: ["csd", "sgn"],
+    cse: ["cse", "sgn"],
+    csf: ["csf", "sgn"],
+    csg: ["csg", "sgn"],
+    csl: ["csl", "sgn"],
+    csn: ["csn", "sgn"],
+    csq: ["csq", "sgn"],
+    csr: ["csr", "sgn"],
+    czh: ["czh", "zh"],
+    czo: ["czo", "zh"],
+    doq: ["doq", "sgn"],
+    dse: ["dse", "sgn"],
+    dsl: ["dsl", "sgn"],
+    dup: ["dup", "ms"],
+    ecs: ["ecs", "sgn"],
+    esl: ["esl", "sgn"],
+    esn: ["esn", "sgn"],
+    eso: ["eso", "sgn"],
+    eth: ["eth", "sgn"],
+    fcs: ["fcs", "sgn"],
+    fse: ["fse", "sgn"],
+    fsl: ["fsl", "sgn"],
+    fss: ["fss", "sgn"],
+    gan: ["gan", "zh"],
+    gds: ["gds", "sgn"],
+    gom: ["gom", "kok"],
+    gse: ["gse", "sgn"],
+    gsg: ["gsg", "sgn"],
+    gsm: ["gsm", "sgn"],
+    gss: ["gss", "sgn"],
+    gus: ["gus", "sgn"],
+    hab: ["hab", "sgn"],
+    haf: ["haf", "sgn"],
+    hak: ["hak", "zh"],
+    hds: ["hds", "sgn"],
+    hji: ["hji", "ms"],
+    hks: ["hks", "sgn"],
+    hos: ["hos", "sgn"],
+    hps: ["hps", "sgn"],
+    hsh: ["hsh", "sgn"],
+    hsl: ["hsl", "sgn"],
+    hsn: ["hsn", "zh"],
+    icl: ["icl", "sgn"],
+    ils: ["ils", "sgn"],
+    inl: ["inl", "sgn"],
+    ins: ["ins", "sgn"],
+    ise: ["ise", "sgn"],
+    isg: ["isg", "sgn"],
+    isr: ["isr", "sgn"],
+    jak: ["jak", "ms"],
+    jax: ["jax", "ms"],
+    jcs: ["jcs", "sgn"],
+    jhs: ["jhs", "sgn"],
+    jls: ["jls", "sgn"],
+    jos: ["jos", "sgn"],
+    jsl: ["jsl", "sgn"],
+    jus: ["jus", "sgn"],
+    kgi: ["kgi", "sgn"],
+    knn: ["knn", "kok"],
+    kvb: ["kvb", "ms"],
+    kvk: ["kvk", "sgn"],
+    kvr: ["kvr", "ms"],
+    kxd: ["kxd", "ms"],
+    lbs: ["lbs", "sgn"],
+    lce: ["lce", "ms"],
+    lcf: ["lcf", "ms"],
+    liw: ["liw", "ms"],
+    lls: ["lls", "sgn"],
+    lsg: ["lsg", "sgn"],
+    lsl: ["lsl", "sgn"],
+    lso: ["lso", "sgn"],
+    lsp: ["lsp", "sgn"],
+    lst: ["lst", "sgn"],
+    lsy: ["lsy", "sgn"],
+    ltg: ["ltg", "lv"],
+    lvs: ["lvs", "lv"],
+    lzh: ["lzh", "zh"],
+    max: ["max", "ms"],
+    mdl: ["mdl", "sgn"],
+    meo: ["meo", "ms"],
+    mfa: ["mfa", "ms"],
+    mfb: ["mfb", "ms"],
+    mfs: ["mfs", "sgn"],
+    min: ["min", "ms"],
+    mnp: ["mnp", "zh"],
+    mqg: ["mqg", "ms"],
+    mre: ["mre", "sgn"],
+    msd: ["msd", "sgn"],
+    msi: ["msi", "ms"],
+    msr: ["msr", "sgn"],
+    mui: ["mui", "ms"],
+    mzc: ["mzc", "sgn"],
+    mzg: ["mzg", "sgn"],
+    mzy: ["mzy", "sgn"],
+    nan: ["nan", "zh"],
+    nbs: ["nbs", "sgn"],
+    ncs: ["ncs", "sgn"],
+    nsi: ["nsi", "sgn"],
+    nsl: ["nsl", "sgn"],
+    nsp: ["nsp", "sgn"],
+    nsr: ["nsr", "sgn"],
+    nzs: ["nzs", "sgn"],
+    okl: ["okl", "sgn"],
+    orn: ["orn", "ms"],
+    ors: ["ors", "ms"],
+    pel: ["pel", "ms"],
+    pga: ["pga", "ar"],
+    pks: ["pks", "sgn"],
+    prl: ["prl", "sgn"],
+    prz: ["prz", "sgn"],
+    psc: ["psc", "sgn"],
+    psd: ["psd", "sgn"],
+    pse: ["pse", "ms"],
+    psg: ["psg", "sgn"],
+    psl: ["psl", "sgn"],
+    pso: ["pso", "sgn"],
+    psp: ["psp", "sgn"],
+    psr: ["psr", "sgn"],
+    pys: ["pys", "sgn"],
+    rms: ["rms", "sgn"],
+    rsi: ["rsi", "sgn"],
+    rsl: ["rsl", "sgn"],
+    sdl: ["sdl", "sgn"],
+    sfb: ["sfb", "sgn"],
+    sfs: ["sfs", "sgn"],
+    sgg: ["sgg", "sgn"],
+    sgx: ["sgx", "sgn"],
+    shu: ["shu", "ar"],
+    slf: ["slf", "sgn"],
+    sls: ["sls", "sgn"],
+    sqk: ["sqk", "sgn"],
+    sqs: ["sqs", "sgn"],
+    ssh: ["ssh", "ar"],
+    ssp: ["ssp", "sgn"],
+    ssr: ["ssr", "sgn"],
+    svk: ["svk", "sgn"],
+    swc: ["swc", "sw"],
+    swh: ["swh", "sw"],
+    swl: ["swl", "sgn"],
+    syy: ["syy", "sgn"],
+    tmw: ["tmw", "ms"],
+    tse: ["tse", "sgn"],
+    tsm: ["tsm", "sgn"],
+    tsq: ["tsq", "sgn"],
+    tss: ["tss", "sgn"],
+    tsy: ["tsy", "sgn"],
+    tza: ["tza", "sgn"],
+    ugn: ["ugn", "sgn"],
+    ugy: ["ugy", "sgn"],
+    ukl: ["ukl", "sgn"],
+    uks: ["uks", "sgn"],
+    urk: ["urk", "ms"],
+    uzn: ["uzn", "uz"],
+    uzs: ["uzs", "uz"],
+    vgt: ["vgt", "sgn"],
+    vkk: ["vkk", "ms"],
+    vkt: ["vkt", "ms"],
+    vsi: ["vsi", "sgn"],
+    vsl: ["vsl", "sgn"],
+    vsv: ["vsv", "sgn"],
+    wuu: ["wuu", "zh"],
+    xki: ["xki", "sgn"],
+    xml: ["xml", "sgn"],
+    xmm: ["xmm", "ms"],
+    xms: ["xms", "sgn"],
+    yds: ["yds", "sgn"],
+    ysl: ["ysl", "sgn"],
+    yue: ["yue", "zh"],
+    zib: ["zib", "sgn"],
+    zlm: ["zlm", "ms"],
+    zmi: ["zmi", "ms"],
+    zsl: ["zsl", "sgn"],
+    zsm: ["zsm", "ms"],
+  },
+};
+let closure_23 = {
+  BHD: 3,
+  BYR: 0,
+  XOF: 0,
+  BIF: 0,
+  XAF: 0,
+  CLF: 4,
+  CLP: 0,
+  KMF: 0,
+  DJF: 0,
+  XPF: 0,
+  GNF: 0,
+  ISK: 0,
+  IQD: 3,
+  JPY: 0,
+  JOD: 3,
+  KRW: 0,
+  KWD: 3,
+  LYD: 3,
+  OMR: 3,
+  PYG: 0,
+  RWF: 0,
+  TND: 3,
+  UGX: 0,
+  UYI: 0,
+  VUV: 0,
+  VND: 0,
+};
 obj = { configurable: true, writable: true, value: NumberFormatConstructor };
 fn(obj, "NumberFormat", obj);
 fn(obj.NumberFormat, "prototype", { writable: false });
 tmp4Result.NumberFormat = { "[[availableLocales]]": [], "[[relevantExtensionKeys]]": ["nu"], "[[localeData]]": {} };
 let call = tmp5.call;
 const NumberFormat = tmp4Result.NumberFormat;
-obj = { configurable: true, writable: true, value: typeof call === "unknown" ? tmp5(NumberFormat) : call(supportedLocalesOf, NumberFormat) };
+obj = {
+  configurable: true,
+  writable: true,
+  value: typeof call === "unknown" ? tmp5(NumberFormat) : call(supportedLocalesOf, NumberFormat),
+};
 fn(obj.NumberFormat, "supportedLocalesOf", obj);
 fn(obj.NumberFormat.prototype, "format", { configurable: true, get: GetFormatNumber });
-let closure_32 = { arab: ["\u0660", "\u0661", "\u0662", "\u0663", "\u0664", "\u0665", "\u0666", "\u0667", "\u0668", "\u0669"], arabext: ["\u06F0", "\u06F1", "\u06F2", "\u06F3", "\u06F4", "\u06F5", "\u06F6", "\u06F7", "\u06F8", "\u06F9"], bali: ["\u1B50", "\u1B51", "\u1B52", "\u1B53", "\u1B54", "\u1B55", "\u1B56", "\u1B57", "\u1B58", "\u1B59"], beng: ["\u09E6", "\u09E7", "\u09E8", "\u09E9", "\u09EA", "\u09EB", "\u09EC", "\u09ED", "\u09EE", "\u09EF"], deva: ["\u0966", "\u0967", "\u0968", "\u0969", "\u096A", "\u096B", "\u096C", "\u096D", "\u096E", "\u096F"], fullwide: ["\uFF10", "\uFF11", "\uFF12", "\uFF13", "\uFF14", "\uFF15", "\uFF16", "\uFF17", "\uFF18", "\uFF19"], gujr: ["\u0AE6", "\u0AE7", "\u0AE8", "\u0AE9", "\u0AEA", "\u0AEB", "\u0AEC", "\u0AED", "\u0AEE", "\u0AEF"], guru: ["\u0A66", "\u0A67", "\u0A68", "\u0A69", "\u0A6A", "\u0A6B", "\u0A6C", "\u0A6D", "\u0A6E", "\u0A6F"], hanidec: ["\u3007", "\u4E00", "\u4E8C", "\u4E09", "\u56DB", "\u4E94", "\u516D", "\u4E03", "\u516B", "\u4E5D"], khmr: ["\u17E0", "\u17E1", "\u17E2", "\u17E3", "\u17E4", "\u17E5", "\u17E6", "\u17E7", "\u17E8", "\u17E9"], knda: ["\u0CE6", "\u0CE7", "\u0CE8", "\u0CE9", "\u0CEA", "\u0CEB", "\u0CEC", "\u0CED", "\u0CEE", "\u0CEF"], laoo: ["\u0ED0", "\u0ED1", "\u0ED2", "\u0ED3", "\u0ED4", "\u0ED5", "\u0ED6", "\u0ED7", "\u0ED8", "\u0ED9"], latn: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"], limb: ["\u1946", "\u1947", "\u1948", "\u1949", "\u194A", "\u194B", "\u194C", "\u194D", "\u194E", "\u194F"], mlym: ["\u0D66", "\u0D67", "\u0D68", "\u0D69", "\u0D6A", "\u0D6B", "\u0D6C", "\u0D6D", "\u0D6E", "\u0D6F"], mong: ["\u1810", "\u1811", "\u1812", "\u1813", "\u1814", "\u1815", "\u1816", "\u1817", "\u1818", "\u1819"], mymr: ["\u1040", "\u1041", "\u1042", "\u1043", "\u1044", "\u1045", "\u1046", "\u1047", "\u1048", "\u1049"], orya: ["\u0B66", "\u0B67", "\u0B68", "\u0B69", "\u0B6A", "\u0B6B", "\u0B6C", "\u0B6D", "\u0B6E", "\u0B6F"], tamldec: ["\u0BE6", "\u0BE7", "\u0BE8", "\u0BE9", "\u0BEA", "\u0BEB", "\u0BEC", "\u0BED", "\u0BEE", "\u0BEF"], telu: ["\u0C66", "\u0C67", "\u0C68", "\u0C69", "\u0C6A", "\u0C6B", "\u0C6C", "\u0C6D", "\u0C6E", "\u0C6F"], thai: ["\u0E50", "\u0E51", "\u0E52", "\u0E53", "\u0E54", "\u0E55", "\u0E56", "\u0E57", "\u0E58", "\u0E59"], tibt: ["\u0F20", "\u0F21", "\u0F22", "\u0F23", "\u0F24", "\u0F25", "\u0F26", "\u0F27", "\u0F28", "\u0F29"] };
+let closure_32 = {
+  arab: ["\u0660", "\u0661", "\u0662", "\u0663", "\u0664", "\u0665", "\u0666", "\u0667", "\u0668", "\u0669"],
+  arabext: ["\u06F0", "\u06F1", "\u06F2", "\u06F3", "\u06F4", "\u06F5", "\u06F6", "\u06F7", "\u06F8", "\u06F9"],
+  bali: ["\u1B50", "\u1B51", "\u1B52", "\u1B53", "\u1B54", "\u1B55", "\u1B56", "\u1B57", "\u1B58", "\u1B59"],
+  beng: ["\u09E6", "\u09E7", "\u09E8", "\u09E9", "\u09EA", "\u09EB", "\u09EC", "\u09ED", "\u09EE", "\u09EF"],
+  deva: ["\u0966", "\u0967", "\u0968", "\u0969", "\u096A", "\u096B", "\u096C", "\u096D", "\u096E", "\u096F"],
+  fullwide: ["\uFF10", "\uFF11", "\uFF12", "\uFF13", "\uFF14", "\uFF15", "\uFF16", "\uFF17", "\uFF18", "\uFF19"],
+  gujr: ["\u0AE6", "\u0AE7", "\u0AE8", "\u0AE9", "\u0AEA", "\u0AEB", "\u0AEC", "\u0AED", "\u0AEE", "\u0AEF"],
+  guru: ["\u0A66", "\u0A67", "\u0A68", "\u0A69", "\u0A6A", "\u0A6B", "\u0A6C", "\u0A6D", "\u0A6E", "\u0A6F"],
+  hanidec: ["\u3007", "\u4E00", "\u4E8C", "\u4E09", "\u56DB", "\u4E94", "\u516D", "\u4E03", "\u516B", "\u4E5D"],
+  khmr: ["\u17E0", "\u17E1", "\u17E2", "\u17E3", "\u17E4", "\u17E5", "\u17E6", "\u17E7", "\u17E8", "\u17E9"],
+  knda: ["\u0CE6", "\u0CE7", "\u0CE8", "\u0CE9", "\u0CEA", "\u0CEB", "\u0CEC", "\u0CED", "\u0CEE", "\u0CEF"],
+  laoo: ["\u0ED0", "\u0ED1", "\u0ED2", "\u0ED3", "\u0ED4", "\u0ED5", "\u0ED6", "\u0ED7", "\u0ED8", "\u0ED9"],
+  latn: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  limb: ["\u1946", "\u1947", "\u1948", "\u1949", "\u194A", "\u194B", "\u194C", "\u194D", "\u194E", "\u194F"],
+  mlym: ["\u0D66", "\u0D67", "\u0D68", "\u0D69", "\u0D6A", "\u0D6B", "\u0D6C", "\u0D6D", "\u0D6E", "\u0D6F"],
+  mong: ["\u1810", "\u1811", "\u1812", "\u1813", "\u1814", "\u1815", "\u1816", "\u1817", "\u1818", "\u1819"],
+  mymr: ["\u1040", "\u1041", "\u1042", "\u1043", "\u1044", "\u1045", "\u1046", "\u1047", "\u1048", "\u1049"],
+  orya: ["\u0B66", "\u0B67", "\u0B68", "\u0B69", "\u0B6A", "\u0B6B", "\u0B6C", "\u0B6D", "\u0B6E", "\u0B6F"],
+  tamldec: ["\u0BE6", "\u0BE7", "\u0BE8", "\u0BE9", "\u0BEA", "\u0BEB", "\u0BEC", "\u0BED", "\u0BEE", "\u0BEF"],
+  telu: ["\u0C66", "\u0C67", "\u0C68", "\u0C69", "\u0C6A", "\u0C6B", "\u0C6C", "\u0C6D", "\u0C6E", "\u0C6F"],
+  thai: ["\u0E50", "\u0E51", "\u0E52", "\u0E53", "\u0E54", "\u0E55", "\u0E56", "\u0E57", "\u0E58", "\u0E59"],
+  tibt: ["\u0F20", "\u0F21", "\u0F22", "\u0F23", "\u0F24", "\u0F25", "\u0F26", "\u0F27", "\u0F28", "\u0F29"],
+};
 fn(obj.NumberFormat.prototype, "resolvedOptions", {
   configurable: true,
   writable: true,
@@ -2322,7 +2754,19 @@ fn(obj.NumberFormat.prototype, "resolvedOptions", {
     if (!(null != this && typeof self === "object")) {
       if (tmp7) {
         if (tmp7["[[initializedNumberFormat]]"]) {
-          const items = ["locale", "numberingSystem", "style", "currency", "currencyDisplay", "minimumIntegerDigits", "minimumFractionDigits", "maximumFractionDigits", "minimumSignificantDigits", "maximumSignificantDigits", "useGrouping"];
+          const items = [
+            "locale",
+            "numberingSystem",
+            "style",
+            "currency",
+            "currencyDisplay",
+            "minimumIntegerDigits",
+            "minimumFractionDigits",
+            "maximumFractionDigits",
+            "minimumSignificantDigits",
+            "maximumSignificantDigits",
+            "useGrouping",
+          ];
           let num = 0;
           if (0 < items.length) {
             do {
@@ -2342,7 +2786,9 @@ fn(obj.NumberFormat.prototype, "resolvedOptions", {
         }
       }
       const _TypeError = TypeError;
-      const typeError = new TypeError("`this` value for resolvedOptions() is not an initialized Intl.NumberFormat object.");
+      const typeError = new TypeError(
+        "`this` value for resolvedOptions() is not an initialized Intl.NumberFormat object.",
+      );
       throw typeError;
     } else {
       const call2 = hasOwnProperty.call;
@@ -2358,15 +2804,33 @@ fn(obj.NumberFormat.prototype, "resolvedOptions", {
       }
       tmp8 = hasOwnProperty;
     }
-  }
+  },
 });
 fn(obj, "DateTimeFormat", { configurable: true, writable: true, value: DateTimeFormatConstructor });
 fn(DateTimeFormatConstructor, "prototype", { writable: false });
-let closure_35 = { weekday: ["narrow", "short", "long"], era: ["narrow", "short", "long"], year: ["2-digit", "numeric"], month: ["2-digit", "numeric", "narrow", "short", "long"], day: ["2-digit", "numeric"], hour: ["2-digit", "numeric"], minute: ["2-digit", "numeric"], second: ["2-digit", "numeric"], timeZoneName: ["short", "long"] };
-tmp4Result.DateTimeFormat = { "[[availableLocales]]": [], "[[relevantExtensionKeys]]": ["ca", "nu"], "[[localeData]]": {} };
+let closure_35 = {
+  weekday: ["narrow", "short", "long"],
+  era: ["narrow", "short", "long"],
+  year: ["2-digit", "numeric"],
+  month: ["2-digit", "numeric", "narrow", "short", "long"],
+  day: ["2-digit", "numeric"],
+  hour: ["2-digit", "numeric"],
+  minute: ["2-digit", "numeric"],
+  second: ["2-digit", "numeric"],
+  timeZoneName: ["short", "long"],
+};
+tmp4Result.DateTimeFormat = {
+  "[[availableLocales]]": [],
+  "[[relevantExtensionKeys]]": ["ca", "nu"],
+  "[[localeData]]": {},
+};
 let call2 = tmp5.call;
 let DateTimeFormat = tmp4Result.DateTimeFormat;
-fn(obj.DateTimeFormat, "supportedLocalesOf", { configurable: true, writable: true, value: typeof call2 === "unknown" ? tmp5(DateTimeFormat) : call2(supportedLocalesOf, DateTimeFormat) });
+fn(obj.DateTimeFormat, "supportedLocalesOf", {
+  configurable: true,
+  writable: true,
+  value: typeof call2 === "unknown" ? tmp5(DateTimeFormat) : call2(supportedLocalesOf, DateTimeFormat),
+});
 fn(obj.DateTimeFormat.prototype, "format", { configurable: true, get: GetFormatDateTime });
 fn(obj.DateTimeFormat.prototype, "resolvedOptions", {
   writable: true,
@@ -2403,7 +2867,22 @@ fn(obj.DateTimeFormat.prototype, "resolvedOptions", {
     if (!(null != this && typeof self === "object")) {
       if (tmp7) {
         if (tmp7["[[initializedDateTimeFormat]]"]) {
-          const items = ["locale", "calendar", "numberingSystem", "timeZone", "hour12", "weekday", "era", "year", "month", "day", "hour", "minute", "second", "timeZoneName"];
+          const items = [
+            "locale",
+            "calendar",
+            "numberingSystem",
+            "timeZone",
+            "hour12",
+            "weekday",
+            "era",
+            "year",
+            "month",
+            "day",
+            "hour",
+            "minute",
+            "second",
+            "timeZoneName",
+          ];
           let num = 0;
           if (0 < items.length) {
             do {
@@ -2423,7 +2902,9 @@ fn(obj.DateTimeFormat.prototype, "resolvedOptions", {
         }
       }
       const _TypeError = TypeError;
-      const typeError = new TypeError("`this` value for resolvedOptions() is not an initialized Intl.DateTimeFormat object.");
+      const typeError = new TypeError(
+        "`this` value for resolvedOptions() is not an initialized Intl.DateTimeFormat object.",
+      );
       throw typeError;
     } else {
       const call2 = hasOwnProperty.call;
@@ -2439,11 +2920,11 @@ fn(obj.DateTimeFormat.prototype, "resolvedOptions", {
       }
       tmp8 = hasOwnProperty;
     }
-  }
+  },
 });
 const obj7 = { Number: {}, Date: {} };
 obj.__localeSensitiveProtos = obj7;
-obj7.Number.toLocaleString = function() {
+obj7.Number.toLocaleString = function () {
   const self = this;
   const call = toString.call;
   if ("[object Number]" !== (typeof call === "unknown" ? toString() : call(self))) {
@@ -2456,7 +2937,7 @@ obj7.Number.toLocaleString = function() {
     return FormatNumber(tmp5, self);
   }
 };
-obj7.Date.toLocaleString = function() {
+obj7.Date.toLocaleString = function () {
   const self = this;
   const call = toString.call;
   if ("[object Date]" !== (typeof call === "unknown" ? toString() : call(self))) {
@@ -2474,7 +2955,7 @@ obj7.Date.toLocaleString = function() {
     return str;
   }
 };
-obj7.Date.toLocaleDateString = function() {
+obj7.Date.toLocaleDateString = function () {
   const self = this;
   const call = toString.call;
   if ("[object Date]" !== (typeof call === "unknown" ? toString() : call(self))) {
@@ -2492,7 +2973,7 @@ obj7.Date.toLocaleDateString = function() {
     return str;
   }
 };
-obj7.Date.toLocaleTimeString = function() {
+obj7.Date.toLocaleTimeString = function () {
   const self = this;
   const call = toString.call;
   if ("[object Date]" !== (typeof call === "unknown" ? toString() : call(self))) {
@@ -2541,7 +3022,7 @@ fn(obj, "__applyLocaleSensitivePrototypes", {
       }
       continue;
     }
-  }
+  },
 });
 fn(obj, "__addLocaleData", {
   value(locale) {
@@ -2636,7 +3117,7 @@ fn(obj, "__addLocaleData", {
       const error1 = new Error("Object passed doesn't identify itself with a valid language tag");
       throw error1;
     }
-  }
+  },
 });
 Record.prototype = tmp4(null);
 List.prototype = tmp4(null);

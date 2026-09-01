@@ -98,7 +98,7 @@ function _setAppStartEndData(arg0) {
 }
 arg5.captureAppStart = function captureAppStart() {
   c0 = true;
-  return fn(undefined, undefined, undefined, function*() {
+  return fn(undefined, undefined, undefined, function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -214,7 +214,7 @@ arg5.captureAppStart = function captureAppStart() {
 arg5._captureAppStart = function _captureAppStart(isManual) {
   isManual = isManual.isManual;
   c1 = undefined;
-  return fn(this, undefined, undefined, function*() {
+  return fn(this, undefined, undefined, function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -377,7 +377,7 @@ arg5.appStartIntegration = () => {
     return _true(undefined, undefined, undefined, () => {
       c3 = 0;
       let SPAN_ORIGIN_AUTO_APP_START = 0;
-      return (function*() {
+      return (function* () {
         if (c4 === 2) {
           c4 = 3;
           let throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -449,7 +449,9 @@ arg5.appStartIntegration = () => {
                             throwTypeErrorResult = lib;
                             throwTypeErrorResult = closure_2_1;
                             const debug13 = lib(closure_2_1[0]).debug;
-                            throwTypeErrorResult = debug13.warn("[AppStart] First started active root span id does not match the transaction event span id. Can not attached app start.");
+                            throwTypeErrorResult = debug13.warn(
+                              "[AppStart] First started active root span id does not match the transaction event span id. Can not attached app start.",
+                            );
                             c4 = 3;
                             obj1 = { value: null, done: true };
                             obj1[0] = undefined;
@@ -459,7 +461,9 @@ arg5.appStartIntegration = () => {
                           throwTypeErrorResult = lib;
                           throwTypeErrorResult = closure_2_1;
                           const debug12 = lib(closure_2_1[0]).debug;
-                          throwTypeErrorResult = debug12.warn("[AppStart] No first started active root span id recorded. Can not attach app start.");
+                          throwTypeErrorResult = debug12.warn(
+                            "[AppStart] No first started active root span id recorded. Can not attach app start.",
+                          );
                           c4 = 3;
                           let obj2 = { value: null, done: true };
                           obj2[0] = undefined;
@@ -478,7 +482,9 @@ arg5.appStartIntegration = () => {
                       throwTypeErrorResult = lib;
                       throwTypeErrorResult = closure_2_1;
                       const debug11 = lib(closure_2_1[0]).debug;
-                      throwTypeErrorResult = debug11.warn("[AppStart] Transaction event is missing trace context. Can not attach app start.");
+                      throwTypeErrorResult = debug11.warn(
+                        "[AppStart] Transaction event is missing trace context. Can not attach app start.",
+                      );
                     }
                   }
                   c4 = 3;
@@ -508,7 +514,9 @@ arg5.appStartIntegration = () => {
                 throwTypeErrorResult = lib;
                 throwTypeErrorResult = closure_2_1;
                 const debug10 = lib(closure_2_1[0]).debug;
-                throwTypeErrorResult = debug10.warn("[AppStart] Measured app start metrics were already reported from the native layer.");
+                throwTypeErrorResult = debug10.warn(
+                  "[AppStart] Measured app start metrics were already reported from the native layer.",
+                );
               } else {
                 app_start_timestamp_ms = lib.app_start_timestamp_ms;
                 if (app_start_timestamp_ms) {
@@ -529,7 +537,9 @@ arg5.appStartIntegration = () => {
                           throwTypeErrorResult = lib;
                           throwTypeErrorResult = closure_2_1;
                           const debug9 = lib(closure_2_1[0]).debug;
-                          throwTypeErrorResult = debug9.warn("[AppStart] App start duration is over a minute long, not adding app start span.");
+                          throwTypeErrorResult = debug9.warn(
+                            "[AppStart] App start duration is over a minute long, not adding app start span.",
+                          );
                         } else {
                           throwTypeErrorResult = app_start_timestamp_ms;
                           throwTypeErrorResult = closure_3;
@@ -538,7 +548,10 @@ arg5.appStartIntegration = () => {
                             throwTypeErrorResult = lib;
                             throwTypeErrorResult = closure_2_1;
                             const debug8 = lib(closure_2_1[0]).debug;
-                            throwTypeErrorResult = debug8.warn("[AppStart] Last recorded app start end timestamp is before the app start timestamp.", "This is usually caused by missing `Sentry.wrap(RootComponent)` call.");
+                            throwTypeErrorResult = debug8.warn(
+                              "[AppStart] Last recorded app start end timestamp is before the app start timestamp.",
+                              "This is usually caused by missing `Sentry.wrap(RootComponent)` call.",
+                            );
                           } else {
                             throwTypeErrorResult = c2;
                             c3 = true;
@@ -549,7 +562,9 @@ arg5.appStartIntegration = () => {
                               data = {};
                             }
                             lib.contexts.trace.data = data;
-                            closure_1_0.contexts.trace.data[lib(closure_2_1[6]).SEMANTIC_ATTRIBUTE_SENTRY_OP] = lib(closure_2_1[4]).UI_LOAD;
+                            closure_1_0.contexts.trace.data[lib(closure_2_1[6]).SEMANTIC_ATTRIBUTE_SENTRY_OP] = lib(
+                              closure_2_1[4],
+                            ).UI_LOAD;
                             closure_1_0.contexts.trace.op = lib(closure_2_1[4]).UI_LOAD;
                             const tmp59 = lib(closure_2_1[7]);
                             if (closure_2_5) {
@@ -557,7 +572,8 @@ arg5.appStartIntegration = () => {
                             } else {
                               SPAN_ORIGIN_AUTO_APP_START = tmp59.SPAN_ORIGIN_AUTO_APP_START;
                             }
-                            lib.contexts.trace.data[lib(closure_2_1[0]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = SPAN_ORIGIN_AUTO_APP_START;
+                            lib.contexts.trace.data[lib(closure_2_1[0]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] =
+                              SPAN_ORIGIN_AUTO_APP_START;
                             lib.contexts.trace.origin = SPAN_ORIGIN_AUTO_APP_START;
                             closure_5 = closure_1_1 / 1000;
                             lib.start_timestamp = closure_5;
@@ -593,7 +609,9 @@ arg5.appStartIntegration = () => {
                               throwTypeErrorResult = lib;
                               throwTypeErrorResult = closure_2_1;
                               const debug5 = lib(closure_2_1[0]).debug;
-                              throwTypeErrorResult = debug5.log("[AppStart] Transaction event timestamp is before app start end. Adjusting transaction event timestamp.");
+                              throwTypeErrorResult = debug5.log(
+                                "[AppStart] Transaction event timestamp is before app start end. Adjusting transaction event timestamp.",
+                              );
                               throwTypeErrorResult = closure_1_0;
                               throwTypeErrorResult = callback;
                               closure_1_0.timestamp = callback;
@@ -616,7 +634,15 @@ arg5.appStartIntegration = () => {
                             throwTypeErrorResult = lib;
                             throwTypeErrorResult = closure_2_1;
                             obj2 = lib(closure_2_1[5]);
-                            let obj5 = { op: null, description: null, start_timestamp: null, timestamp: null, trace_id: null, parent_span_id: null, origin: null };
+                            let obj5 = {
+                              op: null,
+                              description: null,
+                              start_timestamp: null,
+                              timestamp: null,
+                              trace_id: null,
+                              parent_span_id: null,
+                              origin: null,
+                            };
                             throwTypeErrorResult = APP_START_WARM;
                             obj5[0] = APP_START_WARM;
                             throwTypeErrorResult = lib;
@@ -656,15 +682,27 @@ arg5.appStartIntegration = () => {
                                     if (endFrames.totalFrames <= 0) {
                                       const debug2 = callback(app_start_timestamp_ms[0]).debug;
                                       const _HermesInternal = HermesInternal;
-                                      debug2.warn("[AppStart] Detected zero slow or frozen frames. Not adding measurements to spanId (" + closure_2_11.span_id + ").");
+                                      debug2.warn(
+                                        "[AppStart] Detected zero slow or frozen frames. Not adding measurements to spanId (" +
+                                          closure_2_11.span_id +
+                                          ").",
+                                      );
                                     }
                                   }
                                 }
                                 closure_2_11.data = closure_2_11.data || {};
-                                ({ totalFrames: closure_2_11.data["frames.total"], slowFrames: closure_2_11.data["frames.slow"], frozenFrames: closure_2_11.data["frames.frozen"] } = endFrames);
+                                ({
+                                  totalFrames: closure_2_11.data["frames.total"],
+                                  slowFrames: closure_2_11.data["frames.slow"],
+                                  frozenFrames: closure_2_11.data["frames.frozen"],
+                                } = endFrames);
                                 const debug = callback(app_start_timestamp_ms[0]).debug;
                                 obj = { spanId: closure_2_11.span_id, frameData: obj };
-                                obj = { total: endFrames.totalFrames, slow: endFrames.slowFrames, frozen: endFrames.frozenFrames };
+                                obj = {
+                                  total: endFrames.totalFrames,
+                                  slow: endFrames.slowFrames,
+                                  frozen: endFrames.frozenFrames,
+                                };
                                 debug.log("[AppStart] Attached frame data to span.", obj);
                               })(closure_2_11, closure_2_4.endFrames);
                             }
@@ -679,19 +717,33 @@ arg5.appStartIntegration = () => {
                                 const result = bundleStartTimestampMs / 1000;
                                 if (result < closure_1_11.start_timestamp) {
                                   const debug2 = tmp(tmp2[0]).debug;
-                                  debug2.warn("Bundle start timestamp is before the app start span start timestamp. Skipping JS execution span.");
+                                  debug2.warn(
+                                    "Bundle start timestamp is before the app start span start timestamp. Skipping JS execution span.",
+                                  );
                                 } else if (spans) {
                                   let tmpResult = tmp(tmp2[5]);
-                                  obj = { description: "JS Bundle Execution Before React Root", start_timestamp: null, timestamp: null, origin: null };
+                                  obj = {
+                                    description: "JS Bundle Execution Before React Root",
+                                    start_timestamp: null,
+                                    timestamp: null,
+                                    origin: null,
+                                  };
                                   obj[1] = result;
                                   obj[2] = spans / 1000;
                                   tmpResult = tmp(tmp2[7]);
-                                  obj[3] = c7 ? tmpResult.SPAN_ORIGIN_MANUAL_APP_START : tmpResult.SPAN_ORIGIN_AUTO_APP_START;
+                                  obj[3] = c7
+                                    ? tmpResult.SPAN_ORIGIN_MANUAL_APP_START
+                                    : tmpResult.SPAN_ORIGIN_AUTO_APP_START;
                                   return tmpResult.createChildSpanJSON(closure_1_11, obj);
                                 } else {
                                   const debug = tmp(tmp2[0]).debug;
                                   debug.warn("Missing the root component first constructor call timestamp.");
-                                  obj = { description: "JS Bundle Execution Start", start_timestamp: null, timestamp: null, origin: null };
+                                  obj = {
+                                    description: "JS Bundle Execution Start",
+                                    start_timestamp: null,
+                                    timestamp: null,
+                                    origin: null,
+                                  };
                                   obj[1] = result;
                                   obj[2] = result;
                                   obj[3] = tmp(tmp2[7]).SPAN_ORIGIN_AUTO_APP_START;
@@ -722,42 +774,63 @@ arg5.appStartIntegration = () => {
                             throwTypeErrorResult = closure_1_0;
                             spans = closure_1_0.spans;
                             throwTypeErrorResult = spans;
-                            const found = spans.filter((start_timestamp_ms) => start_timestamp_ms.start_timestamp_ms / 1000 >= _undefined.start_timestamp);
+                            const found = spans.filter(
+                              (start_timestamp_ms) =>
+                                start_timestamp_ms.start_timestamp_ms / 1000 >= _undefined.start_timestamp,
+                            );
                             throwTypeErrorResult = lib;
                             throwTypeErrorResult = items;
-                            lib = HermesBuiltin.arraySpread(found.map((description) => {
-                              let start_timestamp_ms = description;
-                              if ("UIKit init" === description.description) {
-                                let obj = callback(app_start_timestamp_ms[9]);
-                                obj1 = callback(app_start_timestamp_ms[5]);
-                                let bundleStartTimestampMs = obj1.getBundleStartTimestampMs();
-                                if (!bundleStartTimestampMs) {
-                                  obj = { description: "UIKit Init", start_timestamp: null, timestamp: null, origin: null };
-                                  obj[1] = start_timestamp_ms.start_timestamp_ms / 1000;
-                                  obj[2] = start_timestamp_ms.end_timestamp_ms / 1000;
+                            lib = HermesBuiltin.arraySpread(
+                              found.map((description) => {
+                                let start_timestamp_ms = description;
+                                if ("UIKit init" === description.description) {
+                                  let obj = callback(app_start_timestamp_ms[9]);
+                                  obj1 = callback(app_start_timestamp_ms[5]);
+                                  let bundleStartTimestampMs = obj1.getBundleStartTimestampMs();
+                                  if (!bundleStartTimestampMs) {
+                                    obj = {
+                                      description: "UIKit Init",
+                                      start_timestamp: null,
+                                      timestamp: null,
+                                      origin: null,
+                                    };
+                                    obj[1] = start_timestamp_ms.start_timestamp_ms / 1000;
+                                    obj[2] = start_timestamp_ms.end_timestamp_ms / 1000;
+                                    obj[3] = callback(app_start_timestamp_ms[7]).SPAN_ORIGIN_AUTO_APP_START;
+                                    let childSpanJSON = callback(app_start_timestamp_ms[5]).createChildSpanJSON(
+                                      tmp3,
+                                      obj,
+                                    );
+                                    obj.setMainThreadInfo(childSpanJSON);
+                                    const obj3 = callback(app_start_timestamp_ms[5]);
+                                  }
+                                  obj = {
+                                    description: "UIKit Init to JS Exec Start",
+                                    start_timestamp: null,
+                                    timestamp: null,
+                                    origin: null,
+                                  };
+                                  start_timestamp_ms = start_timestamp_ms.start_timestamp_ms;
+                                  obj[1] = start_timestamp_ms / 1000;
+                                  obj[2] = bundleStartTimestampMs / 1000;
+                                  bundleStartTimestampMs = callback;
                                   obj[3] = callback(app_start_timestamp_ms[7]).SPAN_ORIGIN_AUTO_APP_START;
-                                  let childSpanJSON = callback(app_start_timestamp_ms[5]).createChildSpanJSON(tmp3, obj);
-                                  obj.setMainThreadInfo(childSpanJSON);
-                                  const obj3 = callback(app_start_timestamp_ms[5]);
+                                  childSpanJSON = callback(app_start_timestamp_ms[5]).createChildSpanJSON(tmp3, obj);
+                                  const obj5 = callback(app_start_timestamp_ms[5]);
+                                } else {
+                                  const obj7 = callback(app_start_timestamp_ms[9]);
+                                  obj1 = { description: null, start_timestamp: null, timestamp: null, origin: null };
+                                  obj1[0] = start_timestamp_ms.description;
+                                  obj1[1] = start_timestamp_ms.start_timestamp_ms / 1000;
+                                  obj1[2] = start_timestamp_ms.end_timestamp_ms / 1000;
+                                  obj1[3] = callback(app_start_timestamp_ms[7]).SPAN_ORIGIN_AUTO_APP_START;
+                                  return obj7.setMainThreadInfo(
+                                    callback(app_start_timestamp_ms[5]).createChildSpanJSON(c12, obj1),
+                                  );
                                 }
-                                obj = { description: "UIKit Init to JS Exec Start", start_timestamp: null, timestamp: null, origin: null };
-                                start_timestamp_ms = start_timestamp_ms.start_timestamp_ms;
-                                obj[1] = start_timestamp_ms / 1000;
-                                obj[2] = bundleStartTimestampMs / 1000;
-                                bundleStartTimestampMs = callback;
-                                obj[3] = callback(app_start_timestamp_ms[7]).SPAN_ORIGIN_AUTO_APP_START;
-                                childSpanJSON = callback(app_start_timestamp_ms[5]).createChildSpanJSON(tmp3, obj);
-                                const obj5 = callback(app_start_timestamp_ms[5]);
-                              } else {
-                                const obj7 = callback(app_start_timestamp_ms[9]);
-                                obj1 = { description: null, start_timestamp: null, timestamp: null, origin: null };
-                                obj1[0] = start_timestamp_ms.description;
-                                obj1[1] = start_timestamp_ms.start_timestamp_ms / 1000;
-                                obj1[2] = start_timestamp_ms.end_timestamp_ms / 1000;
-                                obj1[3] = callback(app_start_timestamp_ms[7]).SPAN_ORIGIN_AUTO_APP_START;
-                                return obj7.setMainThreadInfo(callback(app_start_timestamp_ms[5]).createChildSpanJSON(c12, obj1));
-                              }
-                            }), lib);
+                              }),
+                              lib,
+                            );
                             throwTypeErrorResult = closure_1_6;
                             const push = closure_1_6.push;
                             throwTypeErrorResult = items;
@@ -774,7 +847,10 @@ arg5.appStartIntegration = () => {
                             throwTypeErrorResult = globalThis;
                             num2 = JSON;
                             throwTypeErrorResult = items;
-                            throwTypeErrorResult = debug6.log("[AppStart] Added app start spans to transaction event.", JSON.stringify(items, undefined, 2));
+                            throwTypeErrorResult = debug6.log(
+                              "[AppStart] Added app start spans to transaction event.",
+                              JSON.stringify(items, undefined, 2),
+                            );
                             throwTypeErrorResult = closure_1_0;
                             if ("cold" === closure_1_0.type) {
                               throwTypeErrorResult = c2;
@@ -811,7 +887,10 @@ arg5.appStartIntegration = () => {
                             const debug7 = lib(closure_2_1[0]).debug;
                             const _JSON = JSON;
                             throwTypeErrorResult = obj6;
-                            throwTypeErrorResult = debug7.log("[AppStart] Added app start measurement to transaction event.", JSON.stringify(obj6, undefined, 2));
+                            throwTypeErrorResult = debug7.log(
+                              "[AppStart] Added app start measurement to transaction event.",
+                              JSON.stringify(obj6, undefined, 2),
+                            );
                             const tmp71 = lib;
                           }
                         }
@@ -821,7 +900,9 @@ arg5.appStartIntegration = () => {
                     debug4.warn("[AppStart] App start timestamp is too far in the past to be used for app start span.");
                   } else {
                     const debug3 = lib(closure_2_1[0]).debug;
-                    debug3.warn("[AppStart] Javascript failed to record app start end. `_setAppStartEndData` was not called nor could the bundle start be found.");
+                    debug3.warn(
+                      "[AppStart] Javascript failed to record app start end. `_setAppStartEndData` was not called nor could the bundle start be found.",
+                    );
                   }
                 } else {
                   let debug2 = lib(closure_2_1[0]).debug;
@@ -878,7 +959,9 @@ arg5.appStartIntegration = () => {
               c3 = false;
               c5 = undefined;
             } else {
-              log("[AppStartIntegration] Waiting for initial app start was flush, before updating based on runApplication call.");
+              log(
+                "[AppStartIntegration] Waiting for initial app start was flush, before updating based on runApplication call.",
+              );
             }
           });
         }
@@ -888,7 +971,7 @@ arg5.appStartIntegration = () => {
     },
     processEvent(arg0) {
       closure_0 = arg0;
-      return _true(undefined, undefined, undefined, function*() {
+      return _true(undefined, undefined, undefined, function* () {
         if (c2 === 2) {
           c2 = 3;
           HermesBuiltin.throwTypeError();
@@ -952,7 +1035,7 @@ arg5.appStartIntegration = () => {
       });
     },
     captureStandaloneAppStart() {
-      return _true(this, undefined, undefined, function*() {
+      return _true(this, undefined, undefined, function* () {
         if (c5 === 2) {
           c5 = 3;
           HermesBuiltin.throwTypeError();
@@ -1007,7 +1090,9 @@ arg5.appStartIntegration = () => {
                       }
                     }
                   } else {
-                    log("[AppStart] App start tracking is enabled. App start will be added to the first transaction as a child span.");
+                    log(
+                      "[AppStart] App start tracking is enabled. App start will be added to the first transaction as a child span.",
+                    );
                   }
                 } else {
                   const _console = console;
@@ -1108,7 +1193,7 @@ arg5.appStartIntegration = () => {
       closure_5 = arg0;
       const debug = flag(_undefined[0]).debug;
       debug.log("[AppStart] First started active root span id recorded.", closure_5);
-    }
+    },
   };
   return obj;
 };

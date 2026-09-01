@@ -13,9 +13,13 @@ arg5.BestFitMatcher = function BestFitMatcher(arg0, arr) {
   let prop;
   if (tmp3) {
     const arr2 = reduced[findBestMatchResult.matchedDesiredLocale];
-    const tmp6 = reduced[findBestMatchResult.matchedDesiredLocale].slice(findBestMatchResult.matchedDesiredLocale.length) || undefined;
+    const tmp6 =
+      reduced[findBestMatchResult.matchedDesiredLocale].slice(findBestMatchResult.matchedDesiredLocale.length) ||
+      undefined;
     prop = findBestMatchResult.matchedSupportedLocale;
-    const tmp4 = reduced[findBestMatchResult.matchedDesiredLocale].slice(findBestMatchResult.matchedDesiredLocale.length) || undefined;
+    const tmp4 =
+      reduced[findBestMatchResult.matchedDesiredLocale].slice(findBestMatchResult.matchedDesiredLocale.length) ||
+      undefined;
   }
   if (prop) {
     let obj = { locale: null, extension: null };

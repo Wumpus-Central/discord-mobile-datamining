@@ -24,8 +24,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 let closure_6 = importDefaultResult2("fetchStart");
 let closure_7 = importDefaultResult2("requestStart");
@@ -64,7 +63,18 @@ class PerformanceResourceTiming {
     definePropertyResult7 = Object.defineProperty(tmp3Result, closure_13, { writable: true, value: "a" });
     definePropertyResult8 = Object.defineProperty(tmp3Result, closure_14, { writable: true, value: "a" });
     definePropertyResult9 = Object.defineProperty(tmp3Result, closure_15, { writable: true, value: "a" });
-    ({ fetchStart: closure_4(undefined, tmp6, closure_6)[closure_6], requestStart: closure_4(undefined, tmp6, closure_7)[closure_7], connectStart: closure_4(undefined, tmp6, closure_8)[closure_8], connectEnd: closure_4(undefined, tmp6, closure_9)[closure_9], responseStart: closure_4(undefined, tmp6, closure_10)[closure_10], responseEnd: closure_4(undefined, tmp6, closure_11)[closure_11], responseStatus: closure_4(undefined, tmp6, closure_12)[closure_12], contentType: closure_4(undefined, tmp6, closure_13)[closure_13], encodedBodySize: closure_4(undefined, tmp6, closure_14)[closure_14], decodedBodySize: closure_4(undefined, tmp6, closure_15)[closure_15] } = global);
+    ({
+      fetchStart: closure_4(undefined, tmp6, closure_6)[closure_6],
+      requestStart: closure_4(undefined, tmp6, closure_7)[closure_7],
+      connectStart: closure_4(undefined, tmp6, closure_8)[closure_8],
+      connectEnd: closure_4(undefined, tmp6, closure_9)[closure_9],
+      responseStart: closure_4(undefined, tmp6, closure_10)[closure_10],
+      responseEnd: closure_4(undefined, tmp6, closure_11)[closure_11],
+      responseStatus: closure_4(undefined, tmp6, closure_12)[closure_12],
+      contentType: closure_4(undefined, tmp6, closure_13)[closure_13],
+      encodedBodySize: closure_4(undefined, tmp6, closure_14)[closure_14],
+      decodedBodySize: closure_4(undefined, tmp6, closure_15)[closure_15],
+    } = global);
     return tmp3Result;
   }
 }
@@ -74,61 +84,61 @@ let items = [
     key: "fetchStart",
     get() {
       return callback3(this, closure_6)[closure_6];
-    }
+    },
   },
   {
     key: "requestStart",
     get() {
       return callback3(this, closure_7)[closure_7];
-    }
+    },
   },
   {
     key: "connectStart",
     get() {
       return callback3(this, closure_8)[closure_8];
-    }
+    },
   },
   {
     key: "connectEnd",
     get() {
       return callback3(this, closure_9)[closure_9];
-    }
+    },
   },
   {
     key: "responseStart",
     get() {
       return callback3(this, closure_10)[closure_10];
-    }
+    },
   },
   {
     key: "responseEnd",
     get() {
       return callback3(this, closure_11)[closure_11];
-    }
+    },
   },
   {
     key: "responseStatus",
     get() {
       return callback3(this, closure_12)[closure_12];
-    }
+    },
   },
   {
     key: "contentType",
     get() {
       return callback3(this, closure_13)[closure_13];
-    }
+    },
   },
   {
     key: "encodedBodySize",
     get() {
       return callback3(this, closure_14)[closure_14];
-    }
+    },
   },
   {
     key: "decodedBodySize",
     get() {
       return callback3(this, closure_15)[closure_15];
-    }
+    },
   },
   {
     key: "toJSON",
@@ -150,10 +160,14 @@ let items = [
       obj.responseStart = callback3(self, closure_10)[closure_10];
       obj.responseEnd = callback3(self, closure_11)[closure_11];
       obj.responseStatus = callback3(self, closure_12)[closure_12];
-      ({ contentType: obj.contentType, encodedBodySize: obj.encodedBodySize, decodedBodySize: obj.decodedBodySize } = self);
+      ({
+        contentType: obj.contentType,
+        encodedBodySize: obj.encodedBodySize,
+        decodedBodySize: obj.decodedBodySize,
+      } = self);
       return obj;
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(PerformanceResourceTiming, items);
 class PerformanceResourceTiming {

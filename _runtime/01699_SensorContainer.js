@@ -18,7 +18,7 @@ const items = [
       const result = 100 * arg0;
       const result1 = 10 * iosReferenceFrame.iosReferenceFrame;
       return result + result1 + Number(iosReferenceFrame.adjustToInterfaceOrientation);
-    }
+    },
   },
   {
     key: "initializeSensor",
@@ -34,7 +34,7 @@ const items = [
       const nativeSensors3 = self.nativeSensors;
       const value = nativeSensors3.get(sensorId);
       return value.getSharedValue();
-    }
+    },
   },
   {
     key: "registerSensor",
@@ -60,7 +60,7 @@ const items = [
       } else {
         return -1;
       }
-    }
+    },
   },
   {
     key: "unregisterSensor",
@@ -80,8 +80,8 @@ const items = [
           }
         }
       }
-    }
-  }
+    },
+  },
 ];
 
 export const SensorContainer = _createClassDefault(SensorContainer, items);

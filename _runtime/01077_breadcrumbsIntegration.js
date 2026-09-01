@@ -72,7 +72,11 @@ export const breadcrumbsIntegration = registerSpanErrorInstrumentation.defineInt
               if (tmp(tmp2[2]).DEBUG_BUILD) {
                 const debug = tmp(tmp2[0]).debug;
                 const _HermesInternal = HermesInternal;
-                debug.warn("`dom.maxStringLength` cannot exceed 1024, but a value of " + maxStringLength + " was configured. Sentry will use 1024 instead.");
+                debug.warn(
+                  "`dom.maxStringLength` cannot exceed 1024, but a value of " +
+                    maxStringLength +
+                    " was configured. Sentry will use 1024 instead.",
+                );
               }
               tmp6 = closure_1_2;
             }
@@ -83,9 +87,11 @@ export const breadcrumbsIntegration = registerSpanErrorInstrumentation.defineInt
             }
             try {
               event = event.event;
-              if ((function _isEvent(event) {
-                return event && event.target;
-              })(event)) {
+              if (
+                (function _isEvent(event) {
+                  return event && event.target;
+                })(event)
+              ) {
                 let target = event.target;
               } else {
                 target = event;
@@ -268,7 +274,7 @@ export const breadcrumbsIntegration = registerSpanErrorInstrumentation.defineInt
           }
         });
       }
-    }
+    },
   };
   return obj;
 });

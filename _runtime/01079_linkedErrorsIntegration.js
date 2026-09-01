@@ -16,8 +16,15 @@ export const linkedErrorsIntegration = registerSpanErrorInstrumentation.defineIn
     name: "LinkedErrors",
     preprocessEvent(arg0, arg1, getOptions) {
       const options = getOptions.getOptions();
-      const result = callback(817).applyAggregateErrorsToEvent(callback(1031).exceptionFromError, options.stackParser, dependencyMap, callback, arg0, arg1);
-    }
+      const result = callback(817).applyAggregateErrorsToEvent(
+        callback(1031).exceptionFromError,
+        options.stackParser,
+        dependencyMap,
+        callback,
+        arg0,
+        arg1,
+      );
+    },
   };
   return obj;
 });

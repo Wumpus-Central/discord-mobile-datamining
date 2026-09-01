@@ -1,7 +1,6 @@
 // _runtime/00746_hashSet.js
 import getNative from "00736_getNative.js";
 
-
 export default function hashSet(arg0, arg1) {
   const self = this;
   ({ __data__, size } = this);
@@ -17,4 +16,4 @@ export default function hashSet(arg0, arg1) {
   }
   __data__[arg0] = str;
   return self;
-};
+}

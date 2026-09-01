@@ -100,6 +100,6 @@ const obj = {
   currentCentroidY(touchBank) {
     return obj.centroidDimension(touchBank, 0, false, true);
   },
-  noCentroid: -1
+  noCentroid: -1,
 };
 arg5.default = obj;

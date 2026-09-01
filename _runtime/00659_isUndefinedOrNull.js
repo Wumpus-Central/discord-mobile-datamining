@@ -50,7 +50,11 @@ const fn = (time, obj) => {
                   } else {
                     const call = closure_2.call;
                     const call2 = tmp18.call;
-                    callback2(typeof call === "unknown" ? closure_2() : call(time), typeof call2 === "unknown" ? closure_2() : call2(arg1), arg2);
+                    callback2(
+                      typeof call === "unknown" ? closure_2() : call(time),
+                      typeof call2 === "unknown" ? closure_2() : call2(arg1),
+                      arg2,
+                    );
                     const tmp19 = typeof call === "unknown" ? closure_2() : call(time);
                   }
                 } else {

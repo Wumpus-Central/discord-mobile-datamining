@@ -27,8 +27,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 function ItemWithSeparator(leadingItem) {
   const LeadingSeparatorComponent = leadingItem.LeadingSeparatorComponent;
@@ -40,11 +39,23 @@ function ItemWithSeparator(leadingItem) {
   ({ item, index, section } = leadingItem);
   [tmp2, closure_8] = setSelfHighlightCallback(callback4(false), 2);
   const tmp3 = setSelfHighlightCallback(callback4(false), 2);
-  let obj = { leadingItem: leadingItem.leadingItem, leadingSection: leadingItem.leadingSection, section: leadingItem.section, trailingItem: leadingItem.item, trailingSection: leadingItem.trailingSection };
+  let obj = {
+    leadingItem: leadingItem.leadingItem,
+    leadingSection: leadingItem.leadingSection,
+    section: leadingItem.section,
+    trailingItem: leadingItem.item,
+    trailingSection: leadingItem.trailingSection,
+  };
   const tmp4 = setSelfHighlightCallback(callback4(obj), 2);
   const first = tmp4[0];
   callback4 = tmp4[1];
-  obj = { leadingItem: leadingItem.item, leadingSection: leadingItem.leadingSection, section: leadingItem.section, trailingItem: leadingItem.trailingItem, trailingSection: leadingItem.trailingSection };
+  obj = {
+    leadingItem: leadingItem.item,
+    leadingSection: leadingItem.leadingSection,
+    section: leadingItem.section,
+    trailingItem: leadingItem.trailingItem,
+    trailingSection: leadingItem.trailingSection,
+  };
   const tmp6 = setSelfHighlightCallback(callback4(obj), 2);
   const first1 = tmp6[0];
   closure_13 = tmp8;
@@ -97,7 +108,7 @@ function ItemWithSeparator(leadingItem) {
           callback6(obj);
         }
       }
-    }
+    },
   };
   let tmp11 = null != LeadingSeparatorComponent;
   let tmp = setSelfHighlightCallback(callback4(false), 2);
@@ -134,7 +145,7 @@ function ItemWithSeparator(leadingItem) {
     }
     tmp28 = tmp29;
   }
-  const children = [tmp28, leadingItem.renderItem({ item, index, section, separators: obj }), ];
+  const children = [tmp28, leadingItem.renderItem({ item, index, section, separators: obj })];
   let tmp30 = null;
   if (tmp25) {
     if (false === inverted) {
@@ -145,7 +156,15 @@ function ItemWithSeparator(leadingItem) {
   children[2] = tmp30;
   return closure_14(closure_13, { children });
 }
-let closure_3 = ["ItemSeparatorComponent", "SectionSeparatorComponent", "renderItem", "renderSectionFooter", "renderSectionHeader", "sections", "stickySectionHeadersEnabled"];
+let closure_3 = [
+  "ItemSeparatorComponent",
+  "SectionSeparatorComponent",
+  "renderItem",
+  "renderSectionFooter",
+  "renderSectionHeader",
+  "sections",
+  "stickySectionHeadersEnabled",
+];
 let c9 = importAllResult;
 ({ useEffect: c10, useState: unpackModuleId } = noop);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
@@ -255,8 +274,29 @@ class VirtualizedSectionList {
             }
           } else {
             const result = obj._getSeparatorComponent(index, _subExtractorResult, closure_0);
-            closure_2_1(closure_2_2[9])(_subExtractorResult.section.renderItem || obj.props.renderItem, "no renderItem!");
-            obj1 = { SeparatorComponent: null, LeadingSeparatorComponent: null, cellKey: null, index: null, item: null, leadingItem: null, leadingSection: null, prevCellKey: null, setSelfHighlightCallback: null, setSelfUpdatePropsCallback: null, updateHighlightFor: null, updatePropsFor: null, renderItem: null, section: null, trailingItem: null, trailingSection: null, inverted: null };
+            closure_2_1(closure_2_2[9])(
+              _subExtractorResult.section.renderItem || obj.props.renderItem,
+              "no renderItem!",
+            );
+            obj1 = {
+              SeparatorComponent: null,
+              LeadingSeparatorComponent: null,
+              cellKey: null,
+              index: null,
+              item: null,
+              leadingItem: null,
+              leadingSection: null,
+              prevCellKey: null,
+              setSelfHighlightCallback: null,
+              setSelfUpdatePropsCallback: null,
+              updateHighlightFor: null,
+              updatePropsFor: null,
+              renderItem: null,
+              section: null,
+              trailingItem: null,
+              trailingSection: null,
+              inverted: null,
+            };
             obj1[0] = result;
             let prop;
             if (0 === index2) {
@@ -268,7 +308,12 @@ class VirtualizedSectionList {
             obj1[4] = index.item;
             ({ leadingItem: obj2[5], leadingSection: obj2[6] } = _subExtractorResult);
             obj1[7] = obj._subExtractor(index - 1) || {}.key;
-            ({ _setUpdateHighlightFor: obj2[8], _setUpdatePropsFor: obj2[9], _updateHighlightFor: obj2[10], _updatePropsFor: obj2[11] } = obj);
+            ({
+              _setUpdateHighlightFor: obj2[8],
+              _setUpdatePropsFor: obj2[9],
+              _updateHighlightFor: obj2[10],
+              _updatePropsFor: obj2[11],
+            } = obj);
             obj1[12] = _subExtractorResult.section.renderItem || obj.props.renderItem;
             ({ section: obj2[13], trailingItem: obj2[14], trailingSection: obj2[15] } = _subExtractorResult);
             obj1[16] = obj.props.inverted;
@@ -338,7 +383,9 @@ let items = [
         if (itemIndex.itemIndex > 0) {
           sum = tmp2;
           if (self.props.stickySectionHeadersEnabled) {
-            sum = tmp2 + _listRef2.__getListMetrics().getCellMetricsApprox(tmp - itemIndex.itemIndex, _listRef2.props).length;
+            sum =
+              tmp2 +
+              _listRef2.__getListMetrics().getCellMetricsApprox(tmp - itemIndex.itemIndex, _listRef2.props).length;
             const __getListMetricsResult = _listRef2.__getListMetrics();
           }
         }
@@ -349,13 +396,13 @@ let items = [
         const _listRef = self._listRef;
         _listRef.scrollToIndex(obj);
       }
-    }
+    },
   },
   {
     key: "getListRef",
     value: function getListRef() {
       return this._listRef;
-    }
+    },
   },
   {
     key: "render",
@@ -363,7 +410,15 @@ let items = [
       let self = this;
       self = this;
       const props = this.props;
-      ({ ItemSeparatorComponent, SectionSeparatorComponent, renderItem, renderSectionFooter, renderSectionHeader, sections, stickySectionHeadersEnabled } = props);
+      ({
+        ItemSeparatorComponent,
+        SectionSeparatorComponent,
+        renderItem,
+        renderSectionFooter,
+        renderSectionHeader,
+        sections,
+        stickySectionHeadersEnabled,
+      } = props);
       let num = 0;
       if (this.props.ListHeaderComponent) {
         num = 1;
@@ -414,7 +469,7 @@ let items = [
       obj.onViewableItemsChanged = prop;
       obj.ref = self._captureRef;
       return tmp12(self(314), obj);
-    }
+    },
   },
   {
     key: "_getItem",
@@ -441,7 +496,7 @@ let items = [
       } else {
         return null;
       }
-    }
+    },
   },
   {
     key: "_subExtractor",
@@ -478,7 +533,15 @@ let items = [
           obj[1] = `${key}:footer`;
           obj[4] = sections[num + 1];
         } else {
-          obj = { section: null, key: null, index: null, leadingItem: null, leadingSection: null, trailingItem: null, trailingSection: null };
+          obj = {
+            section: null,
+            key: null,
+            index: null,
+            leadingItem: null,
+            leadingSection: null,
+            trailingItem: null,
+            trailingSection: null,
+          };
           obj[0] = tmp3;
           let keyExtractor = tmp3.keyExtractor;
           const text = `${key}:`;
@@ -497,7 +560,7 @@ let items = [
         }
         return obj;
       }
-    }
+    },
   },
   {
     key: "_getSeparatorComponent",
@@ -528,8 +591,8 @@ let items = [
       } else {
         return null;
       }
-    }
-  }
+    },
+  },
 ];
 
 export default importDefaultResult(VirtualizedSectionList, items);

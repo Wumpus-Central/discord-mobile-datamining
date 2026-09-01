@@ -5,7 +5,7 @@ let closure_0 = arg1;
 closure_0 = importDefaultResult((arg0) => {
   closure_0 = arg0;
   c1 = 0;
-  return (function*(arg0) {
+  return (function* (arg0) {
     if (table === 2) {
       table = 3;
       HermesBuiltin.throwTypeError();
@@ -47,7 +47,7 @@ closure_0 = importDefaultResult((arg0) => {
 closure_0 = importDefaultResult((arg0) => {
   closure_0 = arg0;
   c1 = 0;
-  return (function*(arg0) {
+  return (function* (arg0) {
     if (table === 2) {
       table = 3;
       HermesBuiltin.throwTypeError();

@@ -11,7 +11,8 @@ export const useBoundDetection = function useBoundDetection(recyclerViewManager,
   const callback3 = callback4(false);
   callback4 = callback4(Date.now());
   const data = recyclerViewManager.props.data;
-  const _requestAnimationFrame = require("05899_useUnmountAwareTimeout.js").useUnmountAwareAnimationFrame().requestAnimationFrame;
+  const _requestAnimationFrame = require("05899_useUnmountAwareTimeout.js").useUnmountAwareAnimationFrame()
+    .requestAnimationFrame;
   let num = 0;
   if (recyclerViewManager.hasLayout()) {
     num = recyclerViewManager.getWindowSize().height;
@@ -33,7 +34,8 @@ export const useBoundDetection = function useBoundDetection(recyclerViewManager,
   const checkBounds = callback(() => {
     closure_5.current = Date.now();
     const props = closure_0.props;
-    ({ onEndReached, onStartReached, maintainVisibleContentPosition, onEndReachedThreshold, onStartReachedThreshold } = props);
+    ({ onEndReached, onStartReached, maintainVisibleContentPosition, onEndReachedThreshold, onStartReachedThreshold } =
+      props);
     let num;
     if (maintainVisibleContentPosition != null) {
       num = maintainVisibleContentPosition.autoscrollToBottomThreshold;

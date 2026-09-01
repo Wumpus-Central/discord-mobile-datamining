@@ -19,6 +19,11 @@ export const useEdgeInsetApplication = function useEdgeInsetApplication(flag, fl
     bottomDisabled = flag3;
   }
   const items = [leftDisabled, rightDisabled, bottomDisabled];
-  obj = { consumeLeftInset: !leftDisabled, consumeRightInset: !rightDisabled, consumeBottomInset: !bottomDisabled, nextContextValue: obj.useMemo(() => ({ leftDisabled, rightDisabled, bottomDisabled }), items) };
+  obj = {
+    consumeLeftInset: !leftDisabled,
+    consumeRightInset: !rightDisabled,
+    consumeBottomInset: !bottomDisabled,
+    nextContextValue: obj.useMemo(() => ({ leftDisabled, rightDisabled, bottomDisabled }), items),
+  };
   return obj;
 };

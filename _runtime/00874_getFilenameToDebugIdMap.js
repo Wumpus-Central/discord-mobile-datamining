@@ -59,7 +59,7 @@ function getFilenameToDebugIdMap(arg0) {
             if (closure_2) {
               let tmp32 = nextResult;
               let tmp33 = tmp5;
-              let items = [tmp7[0], ];
+              let items = [tmp7[0]];
               let tmp34 = tmp3;
               items[1] = tmp3;
               tmp31[tmp2] = items;

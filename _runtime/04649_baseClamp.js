@@ -22,4 +22,4 @@ export default function baseClamp(arg0, arg1, arg2) {
     tmp = tmp5;
   }
   return tmp;
-};
+}

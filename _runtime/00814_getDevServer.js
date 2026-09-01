@@ -87,7 +87,7 @@ if (!fn) {
 }
 arg5.fetchSourceContext = function fetchSourceContext(c4) {
   closure_0 = c4;
-  return fn(this, undefined, undefined, function*() {
+  return fn(this, undefined, undefined, function* () {
     if (c0 === 2) {
       c0 = 3;
       HermesBuiltin.throwTypeError();

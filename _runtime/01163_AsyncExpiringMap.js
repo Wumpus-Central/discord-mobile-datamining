@@ -42,21 +42,24 @@ const items = [
             obj[2] = value;
             const _map2 = self._map;
             const result = _map2.set(arg0, obj);
-            value.then((value) => {
-              obj.value = value;
-              obj.expiresAt = Date.now() + self._ttl;
-              obj.promise = null;
-            }, () => {
-              obj.expiresAt = Date.now() + self._ttl;
-              obj.promise = null;
-            });
+            value.then(
+              (value) => {
+                obj.value = value;
+                obj.expiresAt = Date.now() + self._ttl;
+                obj.promise = null;
+              },
+              () => {
+                obj.expiresAt = Date.now() + self._ttl;
+                obj.promise = null;
+              },
+            );
           }
         }
       }
       const _map = self._map;
       obj = { value, expiresAt: Date.now() + self._ttl, promise: null };
       const result1 = _map.set(arg0, obj);
-    }
+    },
   },
   {
     key: "pop",
@@ -65,7 +68,7 @@ const items = [
       const value = this.get(arg0);
       _map.delete(arg0);
       return value;
-    }
+    },
   },
   {
     key: "get",
@@ -89,7 +92,7 @@ const items = [
         }
         return value;
       }
-    }
+    },
   },
   {
     key: "has",
@@ -116,7 +119,7 @@ const items = [
         tmp2 = promise;
       }
       return tmp2;
-    }
+    },
   },
   {
     key: "ttl",
@@ -136,7 +139,7 @@ const items = [
         }
         return num;
       }
-    }
+    },
   },
   {
     key: "cleanup",
@@ -164,7 +167,7 @@ const items = [
       if (!self._map.size) {
         self.stopCleanup();
       }
-    }
+    },
   },
   {
     key: "clear",
@@ -176,7 +179,7 @@ const items = [
       }
       const _map = self._map;
       _map.clear();
-    }
+    },
   },
   {
     key: "stopCleanup",
@@ -185,15 +188,15 @@ const items = [
         const _clearInterval = clearInterval;
         clearInterval(tmp._cleanupInterval);
       }
-    }
+    },
   },
   {
     key: "startCleanup",
     value: function startCleanup() {
       const self = this;
       this._cleanupInterval = setInterval(() => self.cleanup(), this._cleanupIntervalMs);
-    }
-  }
+    },
+  },
 ];
 
 export const AsyncExpiringMap = _createClassDefault(AsyncExpiringMap, items);

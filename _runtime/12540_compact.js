@@ -23,4 +23,4 @@ export default function compact(arg0) {
     } while (num3 < num);
   }
   return items;
-};
+}

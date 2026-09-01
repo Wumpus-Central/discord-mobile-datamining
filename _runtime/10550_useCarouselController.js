@@ -3,11 +3,21 @@ import closure_2 from "00019_noop.js";
 import { useRef } from "00019_noop.js";
 
 const require = arg1;
-let closure_4 = { code: "function pnpm_useCarouselControllerTsx1(){const{handlerOffset,round,size,dataInfo,convertToSharedIndex,loop,autoFillData}=this.__closure;const handlerOffsetValue=handlerOffset.value;const toInt=round(handlerOffsetValue/size)%dataInfo.length;const isPositive=handlerOffsetValue<=0;const i=isPositive?Math.abs(toInt):Math.abs(toInt>0?dataInfo.length-toInt:0);const newSharedIndexValue=convertToSharedIndex({loop:loop,rawDataLength:dataInfo.originalLength,autoFillData:autoFillData,index:i});return{i:i,newSharedIndexValue:newSharedIndexValue};}" };
-let closure_5 = { code: "function pnpm_useCarouselControllerTsx2({i:i,newSharedIndexValue:newSharedIndexValue}){const{index,runOnJS,setSharedIndex}=this.__closure;index.value=i;runOnJS(setSharedIndex)(newSharedIndexValue);}" };
-let closure_6 = { code: "function pnpm_useCarouselControllerTsx3(toValue,onFinished){const{runOnJS,onScrollEnd,duration,Easing,dealWithAnimation,withAnimation}=this.__closure;var _withAnimation;const callback=function(isFinished){\"worklet\";if(isFinished){runOnJS(onScrollEnd)();onFinished&&runOnJS(onFinished)();}};const defaultWithAnimation={type:\"timing\",config:{duration:duration,easing:Easing.easeOutQuart}};return dealWithAnimation((_withAnimation=withAnimation)!==null&&_withAnimation!==void 0?_withAnimation:defaultWithAnimation)(toValue,callback);}" };
-let closure_7 = { code: "function pnpm_useCarouselControllerTsx4(isFinished){const{runOnJS,onScrollEnd,onFinished}=this.__closure;if(isFinished){runOnJS(onScrollEnd)();onFinished&&runOnJS(onFinished)();}}" };
-let closure_8 = { code: "function pnpm_useCarouselControllerTsx5(opts={}){const{canSliding,loop,index,dataInfo,size,overscrollEnabled,containerSize,onScrollStart,currentFixedPage,handlerOffset,scrollWithTiming}=this.__closure;var _onScrollStart;const{count=1,animated=true,onFinished:onFinished}=opts;if(!canSliding())return;if(!loop&&index.value>=dataInfo.length-1)return;const visibleContentWidth=(dataInfo.length-index.value)*size;if(!overscrollEnabled&&!(visibleContentWidth>containerSize.value.width)){return;}(_onScrollStart=onScrollStart)===null||_onScrollStart===void 0||_onScrollStart();const nextPage=currentFixedPage()+count;index.value=nextPage;if(animated){handlerOffset.value=scrollWithTiming(-nextPage*size,onFinished);}else{handlerOffset.value=-nextPage*size;onFinished===null||onFinished===void 0||onFinished();}}" };
+let closure_4 = {
+  code: "function pnpm_useCarouselControllerTsx1(){const{handlerOffset,round,size,dataInfo,convertToSharedIndex,loop,autoFillData}=this.__closure;const handlerOffsetValue=handlerOffset.value;const toInt=round(handlerOffsetValue/size)%dataInfo.length;const isPositive=handlerOffsetValue<=0;const i=isPositive?Math.abs(toInt):Math.abs(toInt>0?dataInfo.length-toInt:0);const newSharedIndexValue=convertToSharedIndex({loop:loop,rawDataLength:dataInfo.originalLength,autoFillData:autoFillData,index:i});return{i:i,newSharedIndexValue:newSharedIndexValue};}",
+};
+let closure_5 = {
+  code: "function pnpm_useCarouselControllerTsx2({i:i,newSharedIndexValue:newSharedIndexValue}){const{index,runOnJS,setSharedIndex}=this.__closure;index.value=i;runOnJS(setSharedIndex)(newSharedIndexValue);}",
+};
+let closure_6 = {
+  code: 'function pnpm_useCarouselControllerTsx3(toValue,onFinished){const{runOnJS,onScrollEnd,duration,Easing,dealWithAnimation,withAnimation}=this.__closure;var _withAnimation;const callback=function(isFinished){"worklet";if(isFinished){runOnJS(onScrollEnd)();onFinished&&runOnJS(onFinished)();}};const defaultWithAnimation={type:"timing",config:{duration:duration,easing:Easing.easeOutQuart}};return dealWithAnimation((_withAnimation=withAnimation)!==null&&_withAnimation!==void 0?_withAnimation:defaultWithAnimation)(toValue,callback);}',
+};
+let closure_7 = {
+  code: "function pnpm_useCarouselControllerTsx4(isFinished){const{runOnJS,onScrollEnd,onFinished}=this.__closure;if(isFinished){runOnJS(onScrollEnd)();onFinished&&runOnJS(onFinished)();}}",
+};
+let closure_8 = {
+  code: "function pnpm_useCarouselControllerTsx5(opts={}){const{canSliding,loop,index,dataInfo,size,overscrollEnabled,containerSize,onScrollStart,currentFixedPage,handlerOffset,scrollWithTiming}=this.__closure;var _onScrollStart;const{count=1,animated=true,onFinished:onFinished}=opts;if(!canSliding())return;if(!loop&&index.value>=dataInfo.length-1)return;const visibleContentWidth=(dataInfo.length-index.value)*size;if(!overscrollEnabled&&!(visibleContentWidth>containerSize.value.width)){return;}(_onScrollStart=onScrollStart)===null||_onScrollStart===void 0||_onScrollStart();const nextPage=currentFixedPage()+count;index.value=nextPage;if(animated){handlerOffset.value=scrollWithTiming(-nextPage*size,onFinished);}else{handlerOffset.value=-nextPage*size;onFinished===null||onFinished===void 0||onFinished();}}",
+};
 
 export const useCarouselController = function useCarouselController(size) {
   const _require = size;
@@ -43,7 +53,7 @@ export const useCarouselController = function useCarouselController(size) {
       const _Math2 = Math;
       return -Math.round(handlerOffset.value / size);
     } else {
-      const result = handlerOffset.value / size % memo.length;
+      const result = (handlerOffset.value / size) % memo.length;
       if (handlerOffset.value <= 0) {
         const _Math = Math;
         let absolute = Math.abs(result);
@@ -77,7 +87,15 @@ export const useCarouselController = function useCarouselController(size) {
     obj[1] = size(size[4]).convertToSharedIndex(obj);
     return obj;
   };
-  obj = { handlerOffset, round: _require(size[3]).round, size, dataInfo: memo, convertToSharedIndex: _require(size[4]).convertToSharedIndex, loop, autoFillData };
+  obj = {
+    handlerOffset,
+    round: _require(size[3]).round,
+    size,
+    dataInfo: memo,
+    convertToSharedIndex: _require(size[4]).convertToSharedIndex,
+    loop,
+    autoFillData,
+  };
   fn.__closure = obj;
   fn.__workletHash = 15925793381075;
   fn.__initData = handlerOffset;
@@ -140,7 +158,14 @@ export const useCarouselController = function useCarouselController(size) {
     }
     return size(size[6]).dealWithAnimation(tmp)(arg0, fn);
   };
-  obj1 = { runOnJS: _require(size[2]).runOnJS, onScrollEnd: callback3, duration, Easing: _require(size[5]).Easing, dealWithAnimation: _require(size[6]).dealWithAnimation, withAnimation };
+  obj1 = {
+    runOnJS: _require(size[2]).runOnJS,
+    onScrollEnd: callback3,
+    duration,
+    Easing: _require(size[5]).Easing,
+    dealWithAnimation: _require(size[6]).dealWithAnimation,
+    withAnimation,
+  };
   fn3.__closure = obj1;
   fn3.__workletHash = 4740828363382;
   fn3.__initData = duration;
@@ -196,7 +221,19 @@ export const useCarouselController = function useCarouselController(size) {
       return;
     }
   }
-  W.__closure = { canSliding: callback2, loop, index: sharedValue, dataInfo: memo, size, overscrollEnabled, containerSize, onScrollStart: callback4, currentFixedPage: callback, handlerOffset, scrollWithTiming: callback5 };
+  W.__closure = {
+    canSliding: callback2,
+    loop,
+    index: sharedValue,
+    dataInfo: memo,
+    size,
+    overscrollEnabled,
+    containerSize,
+    onScrollStart: callback4,
+    currentFixedPage: callback,
+    handlerOffset,
+    scrollWithTiming: callback5,
+  };
   W.__workletHash = 4352275578667;
   W.__initData = fixedDirection;
   const items8 = [callback2, loop, sharedValue, memo, callback4, handlerOffset, size, callback5, callback];
@@ -232,7 +269,17 @@ export const useCarouselController = function useCarouselController(size) {
       }
     }
   }, items9);
-  const items10 = [size, loop, sharedValue, fixedDirection, handlerOffset, memo.length, callback2, callback4, callback5];
+  const items10 = [
+    size,
+    loop,
+    sharedValue,
+    fixedDirection,
+    handlerOffset,
+    memo.length,
+    callback2,
+    callback4,
+    callback5,
+  ];
   const callback8 = loop.useCallback((onFinished) => {
     ({ i, animated } = onFinished);
     onFinished = onFinished.onFinished;
@@ -308,7 +355,11 @@ export const useCarouselController = function useCarouselController(size) {
     }
   }, items11);
   const items12 = [callback1, callback6, callback7, callback9];
-  const imperativeHandle = loop.useImperativeHandle(size.ref, () => ({ next: callback6, prev: callback7, getCurrentIndex: callback1, scrollTo: callback9 }), items12);
+  const imperativeHandle = loop.useImperativeHandle(
+    size.ref,
+    () => ({ next: callback6, prev: callback7, getCurrentIndex: callback1, scrollTo: callback9 }),
+    items12,
+  );
   obj2 = {
     next: callback6,
     prev: callback7,
@@ -317,7 +368,7 @@ export const useCarouselController = function useCarouselController(size) {
     getSharedIndex() {
       return ref.current;
     },
-    index: sharedValue
+    index: sharedValue,
   };
   return obj2;
 };

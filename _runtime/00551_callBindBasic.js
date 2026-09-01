@@ -4,7 +4,6 @@ import _mod552 from "metro/00552__.js";
 import bind from "00554_bind.js";
 import _mod556 from "metro/00556__.js";
 
-
 export default function callBindBasic(items) {
   if (items.length >= 1) {
     if (typeof items[0] === "function") {
@@ -13,4 +12,4 @@ export default function callBindBasic(items) {
     }
   }
   throw new _mod541("a function is required");
-};
+}

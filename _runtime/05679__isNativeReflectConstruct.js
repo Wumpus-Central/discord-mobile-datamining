@@ -29,12 +29,20 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 ({ DeviceEventEmitter, Platform } = get_ActivityIndicator);
-require("customDirectEventTypes").customDirectEventTypes.topGestureHandlerEvent = { registrationName: "onGestureHandlerEvent" };
-let closure_10 = { [arg1(5658).State.UNDETERMINED]: undefined, [arg1(5658).State.BEGAN]: "onBegan", [arg1(5658).State.FAILED]: "onFailed", [arg1(5658).State.CANCELLED]: "onCancelled", [arg1(5658).State.ACTIVE]: "onActivated", [arg1(5658).State.END]: "onEnded" };
+require("customDirectEventTypes").customDirectEventTypes.topGestureHandlerEvent = {
+  registrationName: "onGestureHandlerEvent",
+};
+let closure_10 = {
+  [arg1(5658).State.UNDETERMINED]: undefined,
+  [arg1(5658).State.BEGAN]: "onBegan",
+  [arg1(5658).State.FAILED]: "onFailed",
+  [arg1(5658).State.CANCELLED]: "onCancelled",
+  [arg1(5658).State.ACTIVE]: "onActivated",
+  [arg1(5658).State.END]: "onEnded",
+};
 
 export default function createHandler(name) {
   name = name.name;
@@ -135,12 +143,18 @@ export default function createHandler(name) {
         allowedProps(config[11]).createGestureHandler(closure_0, closure_0.handlerTag, config);
         const obj2 = allowedProps(config[11]);
         const obj3 = allowedProps(config[11]);
-        obj3.configureRelations(closure_0.handlerTag, Handler(config[12]).selectProperties(config, ["waitFor", "simultaneousHandlers", "blocksHandlers"]));
+        obj3.configureRelations(
+          closure_0.handlerTag,
+          Handler(config[12]).selectProperties(config, ["waitFor", "simultaneousHandlers", "blocksHandlers"]),
+        );
       };
       tmp3Result.attachGestureHandler = (viewTag) => {
         closure_0.viewTag = viewTag;
         let obj = Handler(config[13]);
-        obj = { onGestureEvent: closure_0.onGestureHandlerEvent, onGestureStateChange: closure_0.onGestureHandlerStateChange };
+        obj = {
+          onGestureEvent: closure_0.onGestureHandlerEvent,
+          onGestureStateChange: closure_0.onGestureHandlerStateChange,
+        };
         let result = obj.registerOldGestureHandler(closure_0.handlerTag, obj);
         const props = closure_0.props;
         let onGestureEvent;
@@ -181,7 +195,10 @@ export default function createHandler(name) {
         const result = allowedProps(config[11]).setGestureHandlerConfig(closure_0.handlerTag, config);
         const obj = allowedProps(config[11]);
         const obj2 = allowedProps(config[11]);
-        obj2.configureRelations(closure_0.handlerTag, Handler(config[12]).selectProperties(config, ["waitFor", "simultaneousHandlers", "blocksHandlers"]));
+        obj2.configureRelations(
+          closure_0.handlerTag,
+          Handler(config[12]).selectProperties(config, ["waitFor", "simultaneousHandlers", "blocksHandlers"]),
+        );
         const obj3 = Handler(config[12]);
         const result1 = Handler(config[12]).scheduleFlushOperations();
       };
@@ -196,11 +213,11 @@ export default function createHandler(name) {
           tmp9 = globalThis;
           _Error = Error;
           _HermesInternal = HermesInternal;
-          str = "\" already registered";
-          str2 = "Handler with ID \"";
+          str = '" already registered';
+          str2 = 'Handler with ID "';
           tmp10 = new.target;
           tmp11 = new.target;
-          error = new Error("Handler with ID \"" + name.id + "\" already registered");
+          error = new Error('Handler with ID "' + name.id + '" already registered');
           tmp13 = error;
           throw error;
         } else {
@@ -250,7 +267,11 @@ export default function createHandler(name) {
           } else {
             const _Error = Error;
             const _HermesInternal = HermesInternal;
-            error = new Error("[Gesture Handler] Failed to obtain view for " + self.displayName + ". Note that old API doesn't support functional components.");
+            error = new Error(
+              "[Gesture Handler] Failed to obtain view for " +
+                self.displayName +
+                ". Note that old API doesn't support functional components.",
+            );
             throw error;
           }
           const tmp11 = closure_1_3 ? closure_1_3(props2) : props2;
@@ -272,7 +293,7 @@ export default function createHandler(name) {
             }
           }
         }
-      }
+      },
     },
     {
       key: "componentDidUpdate",
@@ -283,7 +304,7 @@ export default function createHandler(name) {
           self.attachGestureHandler(tmp);
         }
         self.update(1);
-      }
+      },
     },
     {
       key: "componentWillUnmount",
@@ -305,7 +326,7 @@ export default function createHandler(name) {
         }
         const MountRegistry = tmp4(tmp5[16]).MountRegistry;
         const result2 = MountRegistry.gestureHandlerWillUnmount(self);
-      }
+      },
     },
     {
       key: "update",
@@ -370,7 +391,7 @@ export default function createHandler(name) {
             }
           }
         }
-      }
+      },
     },
     {
       key: "setNativeProps",
@@ -385,7 +406,7 @@ export default function createHandler(name) {
         }
         const items = [...customNativeProps];
         const result = self.setGestureHandlerConfig(Handler(config[12]).filterConfig(tmp3, items, config));
-      }
+      },
     },
     {
       key: "render",
@@ -451,7 +472,13 @@ export default function createHandler(name) {
             } catch (err) {
               const _Error = Error;
               const _HermesInternal = HermesInternal;
-              const error2 = new Error(Handler(config[18]).tagMessage("" + Handler + " got more than one view as a child. If you want the gesture to work on multiple views, wrap them with a common parent and attach the gesture to that view."));
+              const error2 = new Error(
+                Handler(config[18]).tagMessage(
+                  "" +
+                    Handler +
+                    " got more than one view as a child. If you want the gesture to work on multiple views, wrap them with a common parent and attach the gesture to that view.",
+                ),
+              );
               throw error2;
             }
           }
@@ -474,11 +501,11 @@ export default function createHandler(name) {
             throw error4;
           }
         }
-      }
-    }
+      },
+    },
   ];
   let tmp2 = customNativeProps(Handler, items);
   tmp2.displayName = name;
   tmp2.contextType = allowedProps(config[19]);
   return tmp2;
-};
+}

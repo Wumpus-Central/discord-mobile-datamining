@@ -1,7 +1,6 @@
 // _runtime/01527_useEventEmitter.js
 import closure_0 from "00019_noop.js";
 
-
 export const useEventEmitter = function useEventEmitter(stateFromStores, onEmitEvent) {
   const React = stateFromStores;
   closure_1 = onEmitEvent;
@@ -58,7 +57,7 @@ export const useEventEmitter = function useEventEmitter(stateFromStores, onEmitE
             tmp.splice(index, 1);
           }
         }
-      }
+      },
     };
   }, []);
   const callback1 = React.useCallback((arg0) => {
@@ -122,7 +121,10 @@ export const useEventEmitter = function useEventEmitter(stateFromStores, onEmitE
       const _Object = Object;
       const keys = Object.keys(substr);
       const items1 = [];
-      HermesBuiltin.arraySpread(keys.map((arg0) => substr[arg0]), 0);
+      HermesBuiltin.arraySpread(
+        keys.map((arg0) => substr[arg0]),
+        0,
+      );
       found = HermesBuiltin.apply(items1, items).filter((arg0, arg1, arr) => arr.lastIndexOf(arg0) === arg1);
       const applyResult = HermesBuiltin.apply(items1, items);
     }

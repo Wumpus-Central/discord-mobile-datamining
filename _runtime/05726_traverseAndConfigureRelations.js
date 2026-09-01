@@ -113,7 +113,11 @@ arg5.configureRelations = function configureRelations(externalSimultaneousHandle
 arg5.ensureNativeDetectorComponent = function ensureNativeDetectorComponent(ReanimatedNativeDetector) {
   if (!ReanimatedNativeDetector) {
     const _Error = Error;
-    error = new Error(tagMessage.tagMessage("Gesture expects to run on the UI thread, but failed to create the Reanimated NativeDetector."));
+    error = new Error(
+      tagMessage.tagMessage(
+        "Gesture expects to run on the UI thread, but failed to create the Reanimated NativeDetector.",
+      ),
+    );
     throw error;
   }
 };

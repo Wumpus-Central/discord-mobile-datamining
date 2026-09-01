@@ -25,8 +25,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 noopAll;
 class RadialGradient {
@@ -79,17 +78,17 @@ const items = [
       obj = {
         ref(arg0) {
           return self.refMethod(arg0);
-        }
+        },
       };
       const merged = Object.assign(obj);
       const merged1 = Object.assign(self(8318)(props, this));
       return jsx(self(8333), {
         ref(arg0) {
           return self.refMethod(arg0);
-        }
+        },
       });
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(RadialGradient, items);
 importDefaultResultResult.displayName = "RadialGradient";

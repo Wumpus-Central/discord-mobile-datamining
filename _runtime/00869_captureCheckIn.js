@@ -28,7 +28,7 @@ function _flush() {
   const tmp = callback((arg0) => {
     closure_0 = arg0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (table === 2) {
         table = 3;
         HermesBuiltin.throwTypeError();
@@ -89,7 +89,7 @@ function _close() {
   const tmp = callback((arg0) => {
     closure_0 = arg0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (table === 2) {
         table = 3;
         HermesBuiltin.throwTypeError();
@@ -363,7 +363,12 @@ export const withMonitor = function withMonitor(arg0, arg1, arg2) {
   closure_2 = arg2;
   function runCallback() {
     function finishCheckIn(ok) {
-      const obj = { monitorSlug: callback, status: ok, checkInId: callback, duration: callback(838).timestampInSeconds() - dependencyMap };
+      const obj = {
+        monitorSlug: callback,
+        status: ok,
+        checkInId: callback,
+        duration: callback(838).timestampInSeconds() - dependencyMap,
+      };
       const obj2 = callback(838);
       const currentScope = callback(848).getCurrentScope();
       const obj3 = callback(848);
@@ -387,13 +392,16 @@ export const withMonitor = function withMonitor(arg0, arg1, arg2) {
     try {
       const promise = dependencyMap();
       if (tmp3Result.isThenable(promise)) {
-        let nextPromise = promise.then((arg0) => {
-          finishCheckIn("ok");
-          return arg0;
-        }, (arg0) => {
-          finishCheckIn("error");
-          throw arg0;
-        });
+        let nextPromise = promise.then(
+          (arg0) => {
+            finishCheckIn("ok");
+            return arg0;
+          },
+          (arg0) => {
+            finishCheckIn("error");
+            throw arg0;
+          },
+        );
       } else {
         finishCheckIn("ok");
         nextPromise = promise;

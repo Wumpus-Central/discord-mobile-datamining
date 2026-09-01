@@ -71,10 +71,16 @@ if (!fn) {
   };
 }
 const MobileReplay = "MobileReplay";
-let closure_4 = { maskAllText: true, maskAllImages: true, maskAllVectors: true, enableExperimentalViewRenderer: false, enableViewRendererV2: true, enableFastViewRendering: false, screenshotStrategy: "pixelCopy" };
-function mobileReplayIntegrationNoop() {
-
-}
+let closure_4 = {
+  maskAllText: true,
+  maskAllImages: true,
+  maskAllVectors: true,
+  enableExperimentalViewRenderer: false,
+  enableViewRendererV2: true,
+  enableFastViewRendering: false,
+  screenshotStrategy: "pixelCopy",
+};
+function mobileReplayIntegrationNoop() {}
 arg5.MOBILE_REPLAY_INTEGRATION_NAME = "MobileReplay";
 arg5.mobileReplayIntegration = () => {
   let tmp = arg0;
@@ -90,7 +96,9 @@ arg5.mobileReplayIntegration = () => {
   if (obj.isExpoGo()) {
     let debug = tmp2(817).debug;
     let _HermesInternal = HermesInternal;
-    debug.warn("[Sentry] " + MobileReplay + " is not supported in Expo Go. Use EAS Build or `expo prebuild` to enable it.");
+    debug.warn(
+      "[Sentry] " + MobileReplay + " is not supported in Expo Go. Use EAS Build or `expo prebuild` to enable it.",
+    );
   }
   let tmp2Result = tmp2(1002);
   if (tmp2Result.notMobileOs()) {
@@ -151,7 +159,7 @@ arg5.mobileReplayIntegration = () => {
       obj[2] = function processEvent(arg0, arg1) {
         closure_0 = arg0;
         closure_1 = arg1;
-        return updateCachedReplayId(this, undefined, undefined, function*() {
+        return updateCachedReplayId(this, undefined, undefined, function* () {
           if (c5 === 2) {
             c5 = 3;
             HermesBuiltin.throwTypeError();
@@ -197,7 +205,13 @@ arg5.mobileReplayIntegration = () => {
                         if (false === obj7.beforeErrorSampling(closure_1_0, closure_1_1)) {
                           const debug5 = lib(817).debug;
                           const _HermesInternal5 = HermesInternal;
-                          debug5.log("[Sentry] " + closure_2_3 + " not sent; beforeErrorSampling conditions not met for event " + closure_1_0.event_id + ".");
+                          debug5.log(
+                            "[Sentry] " +
+                              closure_2_3 +
+                              " not sent; beforeErrorSampling conditions not met for event " +
+                              closure_1_0.event_id +
+                              ".",
+                          );
                           c3 = 0;
                           c5 = 3;
                           obj1 = { value: null, done: true };
@@ -219,7 +233,12 @@ arg5.mobileReplayIntegration = () => {
                 c3 = 0;
                 const debug4 = lib(817).debug;
                 const _HermesInternal4 = HermesInternal;
-                debug4.error("[Sentry] " + closure_2_3 + " beforeErrorSampling callback threw an error, proceeding with replay capture", closure_2);
+                debug4.error(
+                  "[Sentry] " +
+                    closure_2_3 +
+                    " beforeErrorSampling callback threw an error, proceeding with replay capture",
+                  closure_2,
+                );
               } else if (arg0 === 1) {
                 c5 = 3;
                 throw arg1;
@@ -234,7 +253,15 @@ arg5.mobileReplayIntegration = () => {
                   closure_1_2(lib);
                   const debug3 = lib(817).debug;
                   const _HermesInternal3 = HermesInternal;
-                  debug3.log("[Sentry] " + closure_2_3 + " Captured recording replay " + lib + " for event " + lib.event_id + ".");
+                  debug3.log(
+                    "[Sentry] " +
+                      closure_2_3 +
+                      " Captured recording replay " +
+                      lib +
+                      " for event " +
+                      lib.event_id +
+                      ".",
+                  );
                   let contexts = lib.contexts;
                   if (!contexts) {
                     contexts = {};
@@ -260,7 +287,15 @@ arg5.mobileReplayIntegration = () => {
                 closure_1_2(closure_1_1);
                 const debug2 = lib(817).debug;
                 const _HermesInternal2 = HermesInternal;
-                debug2.log("[Sentry] " + closure_2_3 + " assign already recording replay " + closure_1_1 + " for event " + lib.event_id + ".");
+                debug2.log(
+                  "[Sentry] " +
+                    closure_2_3 +
+                    " assign already recording replay " +
+                    closure_1_1 +
+                    " for event " +
+                    lib.event_id +
+                    ".",
+                );
                 let contexts1 = lib.contexts;
                 if (!contexts1) {
                   contexts1 = {};
@@ -316,7 +351,7 @@ arg5.mobileReplayIntegration = () => {
     options: closure_4,
     getReplayId() {
       return null;
-    }
+    },
   };
   return obj;
 };

@@ -12,8 +12,22 @@ arg5.RawPerformanceEntryTypeValues = obj;
 arg5.rawToPerformanceEntry = function rawToPerformanceEntry(entryType) {
   entryType = entryType.entryType;
   if (obj.EVENT === entryType) {
-    obj = { name: null, startTime: null, duration: null, processingStart: null, processingEnd: null, interactionId: null };
-    ({ name: obj6[0], startTime: obj6[1], duration: obj6[2], processingStart: obj6[3], processingEnd: obj6[4], interactionId: obj6[5] } = entryType);
+    obj = {
+      name: null,
+      startTime: null,
+      duration: null,
+      processingStart: null,
+      processingEnd: null,
+      interactionId: null,
+    };
+    ({
+      name: obj6[0],
+      startTime: obj6[1],
+      duration: obj6[2],
+      processingStart: obj6[3],
+      processingEnd: obj6[4],
+      interactionId: obj6[5],
+    } = entryType);
     const performanceEventTiming = new _isNativeReflectConstruct.PerformanceEventTiming(obj);
     return performanceEventTiming;
   } else if (tmp.LONGTASK === entryType) {
@@ -32,7 +46,21 @@ arg5.rawToPerformanceEntry = function rawToPerformanceEntry(entryType) {
     const performanceMeasure = new _isNativeReflectConstruct2.PerformanceMeasure(obj2);
     return performanceMeasure;
   } else if (tmp.RESOURCE === entryType) {
-    const obj3 = { name: null, startTime: null, duration: null, fetchStart: null, requestStart: null, connectStart: null, connectEnd: null, responseStart: null, responseEnd: null, responseStatus: null, contentType: null, encodedBodySize: null, decodedBodySize: null };
+    const obj3 = {
+      name: null,
+      startTime: null,
+      duration: null,
+      fetchStart: null,
+      requestStart: null,
+      connectStart: null,
+      connectEnd: null,
+      responseStart: null,
+      responseEnd: null,
+      responseStatus: null,
+      contentType: null,
+      encodedBodySize: null,
+      decodedBodySize: null,
+    };
     ({ name: obj2[0], startTime: obj2[1], duration: obj2[2], fetchStart } = entryType);
     if (fetchStart == null) {
       fetchStart = 0;
@@ -99,7 +127,9 @@ arg5.rawToPerformanceEntry = function rawToPerformanceEntry(entryType) {
             if (tmp.RESOURCE !== entryType2) {
               const _TypeError = TypeError;
               const _HermesInternal = HermesInternal;
-              const typeError = new TypeError("rawToPerformanceEntryType: unexpected performance entry type received: " + entryType2);
+              const typeError = new TypeError(
+                "rawToPerformanceEntryType: unexpected performance entry type received: " + entryType2,
+              );
               throw typeError;
             }
           }

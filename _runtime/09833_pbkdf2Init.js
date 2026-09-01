@@ -50,7 +50,7 @@ function _pbkdf2Async() {
     c12 = 0;
     c13 = 0;
     c10 = 0;
-    return (function*(arg0, arg1, arg2, arg3) {
+    return (function* (arg0, arg1, arg2, arg3) {
       if (c13 === 2) {
         c13 = 3;
         HermesBuiltin.throwTypeError();

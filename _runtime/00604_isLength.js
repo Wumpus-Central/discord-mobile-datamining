@@ -12,4 +12,4 @@ export default function isLength(num) {
     tmp = num <= 9007199254740991;
   }
   return tmp;
-};
+}

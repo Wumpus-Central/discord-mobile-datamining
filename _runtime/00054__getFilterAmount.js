@@ -24,7 +24,7 @@ function _getFilterAmount(arg0, str) {
       let result = NumberResult;
       if ("rad" === tmp5) {
         const _Math = Math;
-        result = 180 * NumberResult / Math.PI;
+        result = (180 * NumberResult) / Math.PI;
       }
       return result;
     }
@@ -363,4 +363,4 @@ export default function processFilter(str) {
     }
     return items;
   }
-};
+}

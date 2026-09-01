@@ -22,14 +22,13 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class ProgressEvent {
   constructor(arg0, arg1) {
     self = this;
     tmp = ProgressEvent(this, ProgressEvent);
-    items = [, ];
+    items = [,];
     items[0] = global;
     items[1] = arg1;
     tmp2 = closure_2;
@@ -69,20 +68,20 @@ let items = [
     key: "lengthComputable",
     get() {
       return this._lengthComputable;
-    }
+    },
   },
   {
     key: "loaded",
     get() {
       return this._loaded;
-    }
+    },
   },
   {
     key: "total",
     get() {
       return this._total;
-    }
-  }
+    },
+  },
 ];
 
 export default importDefaultResult(ProgressEvent, items);

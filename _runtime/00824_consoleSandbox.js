@@ -99,7 +99,7 @@ obj = {
     const items = ["error"];
     HermesBuiltin.arraySpread(HermesBuiltin.copyRestArgs(), 1);
     _maybeLog();
-  }
+  },
 };
 arg5.CONSOLE_LEVELS = ["debug", "info", "warn", "error", "log", "assert", "trace"];
 arg5.consoleSandbox = consoleSandbox;

@@ -26,8 +26,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 noopAll;
 class Ellipse {
@@ -67,17 +66,17 @@ const items = [
       obj = {
         ref(arg0) {
           return self.refMethod(arg0);
-        }
+        },
       };
       const obj2 = self(8256);
       const merged1 = Object.assign(obj);
       return jsx(__INTERNAL_VIEW_CONFIGDefault, {
         ref(arg0) {
           return self.refMethod(arg0);
-        }
+        },
       });
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(Ellipse, items);
 importDefaultResultResult.displayName = "Ellipse";

@@ -13,7 +13,12 @@ export const Custom = (activeDotStyle) => {
   closure_3 = tmp;
   const data = activeDotStyle.data;
   let num = activeDotStyle.size;
-  ({ renderItem: closure_6, onPress: closure_7, customReanimatedStyle: closure_8, carouselName: closure_9 } = activeDotStyle);
+  ({
+    renderItem: closure_6,
+    onPress: closure_7,
+    customReanimatedStyle: closure_8,
+    carouselName: closure_9,
+  } = activeDotStyle);
   if (typeof num !== "string") {
     let width;
     if (dotStyle != null) {
@@ -74,7 +79,7 @@ export const Custom = (activeDotStyle) => {
             let obj = { justifyContent: "space-between", alignSelf: "center", minWidth: null, minHeight: null };
             obj[2] = bound;
             obj[3] = Math.max(num, num5, num6);
-            const items = [obj, , ];
+            const items = [obj, ,];
             obj = { style: null, children: null };
             items[1] = tmp ? { flexDirection: "row" } : { flexDirection: "column" };
             items[2] = tmp2;
@@ -98,7 +103,7 @@ export const Custom = (activeDotStyle) => {
                   return tmpResult;
                 },
                 accessibilityLabel: "Slide " + index + 1 + " of " + data.length + " - " + closure_9,
-                children: null
+                children: null,
               };
               let tmp2Result;
               if (closure_6 != null) {

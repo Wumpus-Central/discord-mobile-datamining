@@ -24,8 +24,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 let c7 = 1;
 class AnimatedValueXY {
@@ -95,7 +94,7 @@ let items = [
       x.setValue(arg0.x);
       const y = this.y;
       y.setValue(arg0.y);
-    }
+    },
   },
   {
     key: "setOffset",
@@ -104,7 +103,7 @@ let items = [
       x.setOffset(arg0.x);
       const y = this.y;
       y.setOffset(arg0.y);
-    }
+    },
   },
   {
     key: "flattenOffset",
@@ -113,7 +112,7 @@ let items = [
       x.flattenOffset();
       const y = this.y;
       y.flattenOffset();
-    }
+    },
   },
   {
     key: "extractOffset",
@@ -122,14 +121,14 @@ let items = [
       x.extractOffset();
       const y = this.y;
       y.extractOffset();
-    }
+    },
   },
   {
     key: "__getValue",
     value: function __getValue() {
       ({ x, y } = this);
       return { x: x.__getValue(), y: y.__getValue() };
-    }
+    },
   },
   {
     key: "resetAnimation",
@@ -142,7 +141,7 @@ let items = [
       if (arg0) {
         arg0(self.__getValue());
       }
-    }
+    },
   },
   {
     key: "stopAnimation",
@@ -155,7 +154,7 @@ let items = [
       if (arg0) {
         arg0(self.__getValue());
       }
-    }
+    },
   },
   {
     key: "addListener",
@@ -170,7 +169,7 @@ let items = [
       ({ x, _listeners, y } = this);
       _listeners[StringResult] = { x: x.addListener(jointCallback), y: y.addListener(jointCallback) };
       return StringResult;
-    }
+    },
   },
   {
     key: "removeListener",
@@ -180,7 +179,7 @@ let items = [
       const y = this.y;
       y.removeListener(this._listeners[arg0].y);
       delete tmp[tmp2];
-    }
+    },
   },
   {
     key: "removeAllListeners",
@@ -190,20 +189,20 @@ let items = [
       const y = this.y;
       y.removeAllListeners();
       this._listeners = {};
-    }
+    },
   },
   {
     key: "getLayout",
     value: function getLayout() {
       return { left: this.x, top: this.y };
-    }
+    },
   },
   {
     key: "getTranslateTransform",
     value: function getTranslateTransform() {
       const items = [{ translateX: this.x }, { translateY: this.y }];
       return items;
-    }
+    },
   },
   {
     key: "__attach",
@@ -219,7 +218,7 @@ let items = [
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
-    }
+    },
   },
   {
     key: "__detach",
@@ -235,7 +234,7 @@ let items = [
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
-    }
+    },
   },
   {
     key: "__makeNative",
@@ -252,8 +251,8 @@ let items = [
       }
       const items = [arg0];
       fn(items);
-    }
-  }
+    },
+  },
 ];
 
 export default importDefaultResult(AnimatedValueXY, items);

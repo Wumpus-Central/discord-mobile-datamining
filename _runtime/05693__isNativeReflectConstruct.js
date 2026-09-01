@@ -22,8 +22,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 function changeEventCalculator(arg0, arg1) {
   if (undefined === arg1) {
@@ -41,7 +40,9 @@ function changeEventCalculator(arg0, arg1) {
 }
 changeEventCalculator.__closure = {};
 changeEventCalculator.__workletHash = 2074844346342;
-changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_hoverGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={changeX:current.x,changeY:current.y};}else{changePayload={changeX:current.x-previous.x,changeY:current.y-previous.y};}return{...current,...changePayload};}" };
+changeEventCalculator.__initData = {
+  code: "function changeEventCalculator_Pnpm_hoverGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={changeX:current.x,changeY:current.y};}else{changePayload={changeX:current.x-previous.x,changeY:current.y-previous.y};}return{...current,...changePayload};}",
+};
 class HoverGesture {
   constructor() {
     self = this;
@@ -69,7 +70,7 @@ let items = [
     value: function effect(hoverEffect) {
       this.config.hoverEffect = hoverEffect;
       return this;
-    }
+    },
   },
   {
     key: "onChange",
@@ -83,8 +84,8 @@ let items = [
       }
       const items = [arg0];
       return fn(items);
-    }
-  }
+    },
+  },
 ];
 
 export const HoverEffect = { NONE: 0, [0]: "NONE", LIFT: 1, [1]: "LIFT", HIGHLIGHT: 2, [2]: "HIGHLIGHT" };

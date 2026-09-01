@@ -10,8 +10,7 @@ function getExtendedError(value, componentStack) {
       value.componentStack = componentStack.componentStack;
       value.isComponentError = true;
       return value;
-    } catch (err) {
-    }
+    } catch (err) {}
   } else if (typeof value === "string") {
     let syntheticError = new _isNativeReflectConstruct.SyntheticError(value);
   } else {

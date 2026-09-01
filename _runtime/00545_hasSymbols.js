@@ -74,4 +74,4 @@ export default function hasSymbols() {
     }
   }
   return false;
-};
+}

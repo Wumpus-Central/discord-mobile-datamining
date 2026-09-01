@@ -40,8 +40,7 @@ arg5.enrichXhrBreadcrumbsForMobileReplay = function enrichXhrBreadcrumbsForMobil
                 }
               }
               return callback(table[0]).getBodySize(json);
-            } catch (err) {
-            }
+            } catch (err) {}
           })(xhr.response, xhr.responseType);
         }
         tmp2 = tmp2(817);

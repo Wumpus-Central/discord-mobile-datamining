@@ -32,7 +32,7 @@ arg5.default = {
             } else {
               const _TypeError2 = TypeError;
               const _HermesInternal = HermesInternal;
-              const typeError = new TypeError("Task \"" + obj.name + "\" missing gen or run.");
+              const typeError = new TypeError('Task "' + obj.name + '" missing gen or run.');
               closure_2_2(typeError);
             }
           }
@@ -57,7 +57,7 @@ arg5.default = {
       then: then.bind(promise),
       cancel() {
         clearImmediate(closure_1);
-      }
+      },
     };
   },
   createInteractionHandle() {
@@ -68,12 +68,8 @@ arg5.default = {
   },
   addListener(arg0, arg1, arg2) {
     return {
-      remove() {
-
-      }
+      remove() {},
     };
   },
-  setDeadline(arg0) {
-
-  }
+  setDeadline(arg0) {},
 };

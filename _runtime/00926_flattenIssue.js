@@ -86,17 +86,19 @@ function applyZodErrorsToEvent(arg0, arg1, exception, originalException) {
   }
   if (values) {
     if (originalException.originalException) {
-      if ((function originalExceptionIsZodError(originalException) {
-        let isErrorResult = callback(table[0]).isError(originalException);
-        if (isErrorResult) {
-          isErrorResult = "ZodError" === originalException.name;
-        }
-        if (isErrorResult) {
-          const _Array = Array;
-          isErrorResult = Array.isArray(originalException.issues);
-        }
-        return isErrorResult;
-      })(originalException.originalException)) {
+      if (
+        (function originalExceptionIsZodError(originalException) {
+          let isErrorResult = callback(table[0]).isError(originalException);
+          if (isErrorResult) {
+            isErrorResult = "ZodError" === originalException.name;
+          }
+          if (isErrorResult) {
+            const _Array = Array;
+            isErrorResult = Array.isArray(originalException.issues);
+          }
+          return isErrorResult;
+        })(originalException.originalException)
+      ) {
         if (0 !== originalException.originalException.issues.length) {
           try {
             const issues = originalException.originalException.issues;
@@ -147,7 +149,10 @@ function applyZodErrorsToEvent(arg0, arg1, exception, originalException) {
               const _HermesInternal = HermesInternal;
               str = "" + error.name + ": " + error.message + "\n" + error.stack;
             }
-            const obj6 = { message: "an exception was thrown while processing ZodError within applyZodErrorsToEvent()", error: null };
+            const obj6 = {
+              message: "an exception was thrown while processing ZodError within applyZodErrorsToEvent()",
+              error: null,
+            };
             obj6[1] = str;
             obj5["zoderrors sentry integration parse error"] = obj6;
             obj4.extra = obj5;
@@ -179,7 +184,7 @@ export const zodErrorsIntegration = setupIntegration.defineIntegration(() => {
     name: "ZodErrors",
     processEvent(arg0, arg1) {
       return closure_1_5(num, obj.saveZodIssuesAsAttachment, arg0, arg1);
-    }
+    },
   };
   return obj;
 });

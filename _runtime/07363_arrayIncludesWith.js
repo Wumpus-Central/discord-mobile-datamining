@@ -13,4 +13,4 @@ export default function arrayIncludesWith(arg0, arg1, arg2) {
     return true;
   }
   return false;
-};
+}

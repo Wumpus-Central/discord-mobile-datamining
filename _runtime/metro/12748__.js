@@ -68,19 +68,19 @@ if (self2) {
       let obj = {
         value(arg0) {
           return closure_1_4.formatError(closure_0, arg0);
-        }
+        },
       };
       obj = {
         value(arg0) {
           return closure_1_4.flattenError(closure_0, arg0);
-        }
+        },
       };
       obj = {
         value(arg0) {
           const issues = prototype.issues;
           issues.push(arg0);
           prototype.message = JSON.stringify(prototype.issues, closure_1_5.jsonStringifyReplacer, 2);
-        }
+        },
       };
       Object.defineProperties(prototype, {
         format: obj,
@@ -92,13 +92,13 @@ if (self2) {
             const items = [...arg0];
             issues.push.apply(items);
             prototype.message = JSON.stringify(prototype.issues, closure_1_5.jsonStringifyReplacer, 2);
-          }
+          },
         },
         isEmpty: {
           get() {
             return 0 === prototype.issues.length;
-          }
-        }
+          },
+        },
       });
     }
     exports.ZodError = fnResult.$constructor("ZodError", initializer);

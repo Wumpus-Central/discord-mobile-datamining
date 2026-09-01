@@ -37,7 +37,7 @@ arg5.default = () => (arg0) => {
     },
     stateBackupResponse(state) {
       return closure_0.send("state.backup.response", { state });
-    }
+    },
   };
   return { features };
 };
@@ -113,7 +113,9 @@ arg5.assertHasStateResponsePlugin = (stateActionComplete) => {
   }
   if (!tmp) {
     const _Error = Error;
-    error = new Error("This Reactotron client has not had the state responses plugin applied to it. Make sure that you add `use(stateResponse())` before adding this plugin.");
+    error = new Error(
+      "This Reactotron client has not had the state responses plugin applied to it. Make sure that you add `use(stateResponse())` before adding this plugin.",
+    );
     throw error;
   }
 };

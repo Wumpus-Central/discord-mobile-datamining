@@ -3,9 +3,7 @@ import _createClassDefault from "metro/00042__createClass.js";
 import closure_2 from "metro/00041__classCallCheck.js";
 
 const PropsFilter = arg1;
-function dummyListener() {
-
-}
+function dummyListener() {}
 class PropsFilter {
   constructor() {
     tmp = closure_2(this, PropsFilter);
@@ -41,7 +39,9 @@ const items = [
                   const _initialPropsMap = animatedProps._initialPropsMap;
                   obj = {};
                   const merged = Object.assign(viewDescriptors.initial.value);
-                  const merged1 = Object.assign(iter(animatedProps[3]).initialUpdaterRun(viewDescriptors.initial.updater));
+                  const merged1 = Object.assign(
+                    iter(animatedProps[3]).initialUpdaterRun(viewDescriptors.initial.updater),
+                  );
                   const result = _initialPropsMap.set(viewDescriptors, obj);
                   const obj4 = iter(animatedProps[3]);
                 }
@@ -136,8 +136,8 @@ const items = [
         continue;
       }
       return obj;
-    }
-  }
+    },
+  },
 ];
 
 export const PropsFilter = _createClassDefault(PropsFilter, items);

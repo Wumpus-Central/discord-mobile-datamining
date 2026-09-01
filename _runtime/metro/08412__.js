@@ -5,7 +5,44 @@ import _mod8419 from "08419__.js";
 import flattenStyle from "../08413_flattenStyle.js";
 import emptyFunction from "../04307_emptyFunction.js";
 
-const obj = { accessible: null, accessibilityLabel: null, accessibilityHint: null, accessibilityActions: null, accessibilityIgnoresInvertColors: null, accessibilityRole: null, accessibilityState: null, accessibilityValue: null, accessibilityLiveRegion: null, importantForAccessibility: null, accessibilityViewIsModal: null, accessibilityElementsHidden: null, onAccessibilityAction: null, onAccessibilityTap: null, onMagicTap: null, testID: null, nativeID: null, onResponderGrant: null, onResponderMove: null, onResponderReject: null, onResponderRelease: null, onResponderTerminate: null, onResponderTerminationRequest: null, onStartShouldSetResponder: null, onStartShouldSetResponderCapture: null, onMoveShouldSetResponder: null, onMoveShouldSetResponderCapture: null, hitSlop: null, onLayout: null, pointerEvents: null, style: null, removeClippedSubviews: null, renderToHardwareTextureAndroid: null, shouldRasterizeIOS: null, collapsable: null, needsOffscreenAlphaCompositing: null };
+const obj = {
+  accessible: null,
+  accessibilityLabel: null,
+  accessibilityHint: null,
+  accessibilityActions: null,
+  accessibilityIgnoresInvertColors: null,
+  accessibilityRole: null,
+  accessibilityState: null,
+  accessibilityValue: null,
+  accessibilityLiveRegion: null,
+  importantForAccessibility: null,
+  accessibilityViewIsModal: null,
+  accessibilityElementsHidden: null,
+  onAccessibilityAction: null,
+  onAccessibilityTap: null,
+  onMagicTap: null,
+  testID: null,
+  nativeID: null,
+  onResponderGrant: null,
+  onResponderMove: null,
+  onResponderReject: null,
+  onResponderRelease: null,
+  onResponderTerminate: null,
+  onResponderTerminationRequest: null,
+  onStartShouldSetResponder: null,
+  onStartShouldSetResponderCapture: null,
+  onMoveShouldSetResponder: null,
+  onMoveShouldSetResponderCapture: null,
+  hitSlop: null,
+  onLayout: null,
+  pointerEvents: null,
+  style: null,
+  removeClippedSubviews: null,
+  renderToHardwareTextureAndroid: null,
+  shouldRasterizeIOS: null,
+  collapsable: null,
+  needsOffscreenAlphaCompositing: null,
+};
 const module_8415 = flattenStyle(_mod8415);
 obj[0] = emptyFunction.bool;
 obj[1] = emptyFunction.node;

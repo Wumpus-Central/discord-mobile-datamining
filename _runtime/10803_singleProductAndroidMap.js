@@ -1,9 +1,22 @@
 // _runtime/10803_singleProductAndroidMap.js
-arg5.AndroidPurchaseState = { purchased: 0, [0]: "purchased", canceled: 1, [1]: "canceled", pending: 2, [2]: "pending" };
+arg5.AndroidPurchaseState = {
+  purchased: 0,
+  [0]: "purchased",
+  canceled: 1,
+  [1]: "canceled",
+  pending: 2,
+  [2]: "pending",
+};
 arg5.AndroidPurchaseType = { test: 0, [0]: "test", promo: 1, [1]: "promo", rewarded: 2, [2]: "rewarded" };
 arg5.AndroidConsumptionState = { yet: 0, [0]: "yet", consumed: 1, [1]: "consumed" };
 arg5.AndroidAcknowledgementState = { yet: 0, [0]: "yet", acknowledged: 1, [1]: "acknowledged" };
-arg5.FeatureType = { IN_APP_MESSAGING: "IN_APP_MESSAGING", PRICE_CHANGE_CONFIRMATION: "PRICE_CHANGE_CONFIRMATION", PRODUCT_DETAILS: "PRODUCT_DETAILS", SUBSCRIPTIONS: "SUBSCRIPTIONS", SUBSCRIPTIONS_UPDATE: "SUBSCRIPTIONS_UPDATE" };
+arg5.FeatureType = {
+  IN_APP_MESSAGING: "IN_APP_MESSAGING",
+  PRICE_CHANGE_CONFIRMATION: "PRICE_CHANGE_CONFIRMATION",
+  PRODUCT_DETAILS: "PRODUCT_DETAILS",
+  SUBSCRIPTIONS: "SUBSCRIPTIONS",
+  SUBSCRIPTIONS_UPDATE: "SUBSCRIPTIONS_UPDATE",
+};
 arg5.singleProductAndroidMap = (oneTimePurchaseOfferDetails) => {
   const obj = {};
   const merged = Object.assign(oneTimePurchaseOfferDetails);

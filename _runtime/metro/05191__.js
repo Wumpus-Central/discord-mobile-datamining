@@ -5,5 +5,5 @@ arg5.default = {
       const _TextDecoder = TextDecoder;
       return TextDecoder;
     }
-  }
+  },
 };

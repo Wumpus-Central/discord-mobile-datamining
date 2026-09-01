@@ -92,7 +92,7 @@ export const requestDataIntegration = setupIntegration.defineIntegration(() => {
         }
       }
       return sdkProcessingMetadata;
-    }
+    },
   };
   return obj;
 });

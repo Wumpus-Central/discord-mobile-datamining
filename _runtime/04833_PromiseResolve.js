@@ -17,4 +17,4 @@ export default function PromiseResolve(arg0, arg1) {
     const tmp6 = new _mod562("This environment does not support Promises.");
     throw tmp6;
   }
-};
+}

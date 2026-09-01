@@ -19,5 +19,5 @@ arg5.default = {
     } else {
       return {};
     }
-  }
+  },
 };

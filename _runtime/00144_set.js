@@ -31,12 +31,8 @@ arg5.default = {
   currentlyFocusedField() {
     return renderElement.findNodeHandle(c2);
   },
-  focusField(arg0) {
-
-  },
-  blurField(arg0) {
-
-  },
+  focusField(arg0) {},
+  blurField(arg0) {},
   focusTextInput(self) {
     if (typeof self !== "number") {
       if (null != self) {
@@ -94,5 +90,5 @@ arg5.default = {
       hasItem = set.has(result);
     }
     return hasItem;
-  }
+  },
 };

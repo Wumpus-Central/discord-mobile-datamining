@@ -11,6 +11,6 @@ globalThis.IntlMessageFormat.__addLocaleData({
       str2 = str;
     }
     return str2;
-  }
+  },
 });
 globalThis.IntlMessageFormat.__addLocaleData({ locale: "el-CY", parentLocale: "el" });

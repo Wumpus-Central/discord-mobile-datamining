@@ -3,7 +3,6 @@ import startWebLayoutAnimation from "01708_startWebLayoutAnimation.js";
 import setElementAnimation from "01722_setElementAnimation.js";
 import findDescendantWithExitingAnimation from "01740_findDescendantWithExitingAnimation.js";
 
-
 export const startWebLayoutAnimation = startWebLayoutAnimation.startWebLayoutAnimation;
 export const tryActivateLayoutTransition = startWebLayoutAnimation.tryActivateLayoutTransition;
 export const getReducedMotionFromConfig = setElementAnimation.getReducedMotionFromConfig;

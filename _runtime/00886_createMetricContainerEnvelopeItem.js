@@ -6,7 +6,14 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.createMetricContainerEnvelopeItem = function createMetricContainerEnvelopeItem(item_count) {
-  const items = [{ type: "trace_metric", item_count: item_count.length, content_type: "application/vnd.sentry.items.trace-metric+json" }, { items: item_count }];
+  const items = [
+    {
+      type: "trace_metric",
+      item_count: item_count.length,
+      content_type: "application/vnd.sentry.items.trace-metric+json",
+    },
+    { items: item_count },
+  ];
   return items;
 };
 arg5.createMetricEnvelope = function createMetricEnvelope(item_count, sdk) {
@@ -29,7 +36,11 @@ arg5.createMetricEnvelope = function createMetricEnvelope(item_count, sdk) {
     obj.dsn = dsnFromString.dsnToString(arg3);
     const obj3 = dsnFromString;
   }
-  obj = { type: "trace_metric", item_count: item_count.length, content_type: "application/vnd.sentry.items.trace-metric+json" };
+  obj = {
+    type: "trace_metric",
+    item_count: item_count.length,
+    content_type: "application/vnd.sentry.items.trace-metric+json",
+  };
   const items = [obj, { items: item_count }];
   const items1 = [items];
   return forEachEnvelopeItem.createEnvelope(obj, items1);

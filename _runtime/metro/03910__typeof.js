@@ -92,7 +92,12 @@ class FractionOfSecondParser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 30, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", {
+            value: 30,
+            enumerable: true,
+            configurable: true,
+            writable: true,
+          });
         } else {
           num3 = 30;
           applyResult.priority = 30;
@@ -209,10 +214,13 @@ obj = {
   key: "parse",
   value: function parse(arg0, arg1) {
     _createSuperInternal = arg1;
-    return _createSuperInternal(3880).mapValue(_createSuperInternal(3880).parseNDigits(arg1.length, arg0), function valueCallback(arg0) {
-      return Math.floor(arg0 * Math.pow(10, 3 - length.length));
-    });
-  }
+    return _createSuperInternal(3880).mapValue(
+      _createSuperInternal(3880).parseNDigits(arg1.length, arg0),
+      function valueCallback(arg0) {
+        return Math.floor(arg0 * Math.pow(10, 3 - length.length));
+      },
+    );
+  },
 };
 let items = [
   obj,
@@ -221,8 +229,8 @@ let items = [
     value: function set(setUTCMilliseconds) {
       setUTCMilliseconds.setUTCMilliseconds(arg2);
       return setUTCMilliseconds;
-    }
-  }
+    },
+  },
 ];
 if (0 < items.length) {
   do {

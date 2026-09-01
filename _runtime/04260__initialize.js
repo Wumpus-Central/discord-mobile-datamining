@@ -5,7 +5,7 @@ import { NitroModules } from "metro/04214__.js";
 let closure_1 = NitroModules.createHybridObject("RiveRuntime");
 _initialize = function _initialize() {
   const self = this;
-  const tmp = _initialize(function*() {
+  const tmp = _initialize(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -91,5 +91,5 @@ export const RiveRuntime = {
     const obj = { isInitialized: closure_1.isInitialized, error: initError };
     initError = closure_1.initError;
     return obj;
-  }
+  },
 };

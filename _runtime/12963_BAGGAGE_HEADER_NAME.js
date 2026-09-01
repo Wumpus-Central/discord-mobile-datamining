@@ -1,7 +1,6 @@
 // _runtime/12963_BAGGAGE_HEADER_NAME.js
 import registerSpanErrorInstrumentation from "12330_registerSpanErrorInstrumentation.js";
 
-
 export const BAGGAGE_HEADER_NAME = registerSpanErrorInstrumentation.BAGGAGE_HEADER_NAME;
 export const CONSOLE_LEVELS = registerSpanErrorInstrumentation.CONSOLE_LEVELS;
 export const DEFAULT_RETRY_AFTER = registerSpanErrorInstrumentation.DEFAULT_RETRY_AFTER;
@@ -29,8 +28,10 @@ export const addExceptionMechanism = registerSpanErrorInstrumentation.addExcepti
 export const addExceptionTypeValue = registerSpanErrorInstrumentation.addExceptionTypeValue;
 export const addFetchEndInstrumentationHandler = registerSpanErrorInstrumentation.addFetchEndInstrumentationHandler;
 export const addFetchInstrumentationHandler = registerSpanErrorInstrumentation.addFetchInstrumentationHandler;
-export const addGlobalErrorInstrumentationHandler = registerSpanErrorInstrumentation.addGlobalErrorInstrumentationHandler;
-export const addGlobalUnhandledRejectionInstrumentationHandler = registerSpanErrorInstrumentation.addGlobalUnhandledRejectionInstrumentationHandler;
+export const addGlobalErrorInstrumentationHandler =
+  registerSpanErrorInstrumentation.addGlobalErrorInstrumentationHandler;
+export const addGlobalUnhandledRejectionInstrumentationHandler =
+  registerSpanErrorInstrumentation.addGlobalUnhandledRejectionInstrumentationHandler;
 export const addHandler = registerSpanErrorInstrumentation.addHandler;
 export const addItemToEnvelope = registerSpanErrorInstrumentation.addItemToEnvelope;
 export const addNonEnumerableProperty = registerSpanErrorInstrumentation.addNonEnumerableProperty;
@@ -38,7 +39,8 @@ export const addNormalizedRequestDataToEvent = registerSpanErrorInstrumentation.
 export const addRequestDataToEvent = registerSpanErrorInstrumentation.addRequestDataToEvent;
 export const applyAggregateErrorsToEvent = registerSpanErrorInstrumentation.applyAggregateErrorsToEvent;
 export const arrayify = registerSpanErrorInstrumentation.arrayify;
-export const baggageHeaderToDynamicSamplingContext = registerSpanErrorInstrumentation.baggageHeaderToDynamicSamplingContext;
+export const baggageHeaderToDynamicSamplingContext =
+  registerSpanErrorInstrumentation.baggageHeaderToDynamicSamplingContext;
 export const basename = registerSpanErrorInstrumentation.basename;
 export const browserPerformanceTimeOrigin = registerSpanErrorInstrumentation.browserPerformanceTimeOrigin;
 export const callFrameToStackFrame = registerSpanErrorInstrumentation.callFrameToStackFrame;
@@ -58,7 +60,8 @@ export const dropUndefinedKeys = registerSpanErrorInstrumentation.dropUndefinedK
 export const dsnFromString = registerSpanErrorInstrumentation.dsnFromString;
 export const dsnToString = registerSpanErrorInstrumentation.dsnToString;
 export const dynamicRequire = registerSpanErrorInstrumentation.dynamicRequire;
-export const dynamicSamplingContextToSentryBaggageHeader = registerSpanErrorInstrumentation.dynamicSamplingContextToSentryBaggageHeader;
+export const dynamicSamplingContextToSentryBaggageHeader =
+  registerSpanErrorInstrumentation.dynamicSamplingContextToSentryBaggageHeader;
 export const envelopeContainsItemType = registerSpanErrorInstrumentation.envelopeContainsItemType;
 export const envelopeItemTypeToDataCategory = registerSpanErrorInstrumentation.envelopeItemTypeToDataCategory;
 export const escapeStringForRegex = registerSpanErrorInstrumentation.escapeStringForRegex;
@@ -75,7 +78,8 @@ export const flatten = registerSpanErrorInstrumentation.flatten;
 export const forEachEnvelopeItem = registerSpanErrorInstrumentation.forEachEnvelopeItem;
 export const generatePropagationContext = registerSpanErrorInstrumentation.generatePropagationContext;
 export const generateSentryTraceHeader = registerSpanErrorInstrumentation.generateSentryTraceHeader;
-export const getBreadcrumbLogLevelFromHttpStatusCode = registerSpanErrorInstrumentation.getBreadcrumbLogLevelFromHttpStatusCode;
+export const getBreadcrumbLogLevelFromHttpStatusCode =
+  registerSpanErrorInstrumentation.getBreadcrumbLogLevelFromHttpStatusCode;
 export const getComponentName = registerSpanErrorInstrumentation.getComponentName;
 export const getDebugImagesForResources = registerSpanErrorInstrumentation.getDebugImagesForResources;
 export const getDomElement = registerSpanErrorInstrumentation.getDomElement;

@@ -110,6 +110,6 @@ export const useOptionsGetters = function useOptionsGetters(key) {
         closure_1_7();
       };
     }, items5),
-    getCurrentOptions: callback2
+    getCurrentOptions: callback2,
   };
 };

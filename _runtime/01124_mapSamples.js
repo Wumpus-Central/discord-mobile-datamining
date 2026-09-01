@@ -33,7 +33,13 @@ function mapSamples(samples) {
         let str3 = "ns greater than the max elapsed time ";
         let str4 = "[Profiling] Sample has elapsed time since start ";
         let tmp21 = tmp;
-        let warnResult = debug2.warn("[Profiling] Sample has elapsed time since start " + obj4 + "ns greater than the max elapsed time " + tmp + "ns.");
+        let warnResult = debug2.warn(
+          "[Profiling] Sample has elapsed time since start " +
+            obj4 +
+            "ns greater than the max elapsed time " +
+            tmp +
+            "ns.",
+        );
         let tmp23 = iter;
         iter.return();
         break;
@@ -202,7 +208,9 @@ export const convertToSentryProfile = function convertToSentryProfile(hermesProf
         let debug = registerSpanErrorInstrumentation.debug;
         let tmp11 = nextResult;
         let _HermesInternal = HermesInternal;
-        let errorResult = debug.error("[Profiling] Hermes Stack ID " + tmp4.stack_id + " not found when mapping to Sentry Stack ID.");
+        let errorResult = debug.error(
+          "[Profiling] Hermes Stack ID " + tmp4.stack_id + " not found when mapping to Sentry Stack ID.",
+        );
         tmp4.stack_id = -1;
       } else {
         let tmp7 = nextResult;

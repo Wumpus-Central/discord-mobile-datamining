@@ -9,7 +9,8 @@ export default function extractResponder(arg0, pointerEvents) {
   let num = 0;
   let flag = false;
   let flag2 = false;
-  ({ onPress, disabled, onPressIn, onPressOut, onLongPress, delayPressIn, delayPressOut, delayLongPress } = pointerEvents);
+  ({ onPress, disabled, onPressIn, onPressOut, onLongPress, delayPressIn, delayPressOut, delayLongPress } =
+    pointerEvents);
   if (0 < length) {
     do {
       let tmp = keys;
@@ -31,10 +32,17 @@ export default function extractResponder(arg0, pointerEvents) {
     arg0.pointerEvents = pointerEvents;
   }
   if (tmp6) {
-    ({ touchableHandleResponderMove: arg0.onResponderMove, touchableHandleResponderGrant: arg0.onResponderGrant, touchableHandleResponderRelease: arg0.onResponderRelease, touchableHandleResponderTerminate: arg0.onResponderTerminate, touchableHandleStartShouldSetResponder: arg0.onStartShouldSetResponder, touchableHandleResponderTerminationRequest: arg0.onResponderTerminationRequest } = arg2);
+    ({
+      touchableHandleResponderMove: arg0.onResponderMove,
+      touchableHandleResponderGrant: arg0.onResponderGrant,
+      touchableHandleResponderRelease: arg0.onResponderRelease,
+      touchableHandleResponderTerminate: arg0.onResponderTerminate,
+      touchableHandleStartShouldSetResponder: arg0.onStartShouldSetResponder,
+      touchableHandleResponderTerminationRequest: arg0.onResponderTerminationRequest,
+    } = arg2);
     flag2 = true;
   }
   if (flag2) {
     arg0.responsible = true;
   }
-};
+}

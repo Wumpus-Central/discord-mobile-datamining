@@ -28,4 +28,4 @@ export default function isIndex(num) {
     tmp = num < num;
   }
   return tmp;
-};
+}

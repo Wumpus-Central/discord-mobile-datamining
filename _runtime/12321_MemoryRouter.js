@@ -5,7 +5,6 @@ import _isNativeReflectConstructDefault2 from "12323__isNativeReflectConstruct.j
 import _isNativeReflectConstructDefault3 from "12324__isNativeReflectConstruct.js";
 import NativeRouterDefault from "12325_NativeRouter.js";
 
-
 export const MemoryRouter = _extends.MemoryRouter;
 export const Prompt = _extends.Prompt;
 export const Redirect = _extends.Redirect;

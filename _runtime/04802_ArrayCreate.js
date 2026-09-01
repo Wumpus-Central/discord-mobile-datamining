@@ -18,7 +18,9 @@ export default function ArrayCreate(arg0) {
           if (tmp(4804)) {
             tmp(4804)(items, tmp3);
           } else {
-            const tmp7 = new tmp(562)("ArrayCreate: a `proto` argument that is not `Array.prototype` is not supported in an environment that does not support setting the [[Prototype]]");
+            const tmp7 = new tmp(562)(
+              "ArrayCreate: a `proto` argument that is not `Array.prototype` is not supported in an environment that does not support setting the [[Prototype]]",
+            );
             throw tmp7;
           }
         }
@@ -30,4 +32,4 @@ export default function ArrayCreate(arg0) {
     }
   }
   throw new _mod541("Assertion failed: `length` must be an integer Number >= 0");
-};
+}

@@ -1,7 +1,13 @@
 // _runtime/01710_FadeInData.js
 import convertAnimationObjectToKeyframes from "01711_convertAnimationObjectToKeyframes.js";
 
-obj = { FadeIn: { name: "FadeIn", style: obj, duration: 0.3 }, FadeInRight: { name: "FadeInRight", style: obj, duration: 0.3 }, FadeInLeft: { name: "FadeInLeft", style: obj1, duration: 0.3 }, FadeInUp: { name: "FadeInUp", style: obj2, duration: 0.3 }, FadeInDown: { name: "FadeInDown", style: obj3, duration: 0.3 } };
+obj = {
+  FadeIn: { name: "FadeIn", style: obj, duration: 0.3 },
+  FadeInRight: { name: "FadeInRight", style: obj, duration: 0.3 },
+  FadeInLeft: { name: "FadeInLeft", style: obj1, duration: 0.3 },
+  FadeInUp: { name: "FadeInUp", style: obj2, duration: 0.3 },
+  FadeInDown: { name: "FadeInDown", style: obj3, duration: 0.3 },
+};
 obj = { 0: { opacity: 0 }, 100: null };
 obj[100] = { opacity: 1 };
 obj = { 0: { opacity: 0, transform: items }, 100: null };
@@ -20,7 +26,13 @@ obj3 = { 0: { opacity: 0, transform: items6 }, 100: null };
 items6 = [{ translateY: "25px" }];
 const items7 = [{ translateY: "0px" }];
 obj3[100] = { opacity: 1, transform: items7 };
-const obj4 = { FadeOut: { name: "FadeOut", style: obj5, duration: 0.3 }, FadeOutRight: { name: "FadeOutRight", style: obj6, duration: 0.3 }, FadeOutLeft: { name: "FadeOutLeft", style: obj7, duration: 0.3 }, FadeOutUp: { name: "FadeOutUp", style: obj8, duration: 0.3 }, FadeOutDown: { name: "FadeOutDown", style: obj9, duration: 0.3 } };
+const obj4 = {
+  FadeOut: { name: "FadeOut", style: obj5, duration: 0.3 },
+  FadeOutRight: { name: "FadeOutRight", style: obj6, duration: 0.3 },
+  FadeOutLeft: { name: "FadeOutLeft", style: obj7, duration: 0.3 },
+  FadeOutUp: { name: "FadeOutUp", style: obj8, duration: 0.3 },
+  FadeOutDown: { name: "FadeOutDown", style: obj9, duration: 0.3 },
+};
 obj5 = { 0: { opacity: 1 }, 100: null };
 obj5[100] = { opacity: 0 };
 obj6 = { 0: { opacity: 1, transform: items8 }, 100: null };

@@ -91,5 +91,12 @@ arg5.appendTransform = function appendTransform(arg0, arg1, scaleX, scaleY, rota
   }
   const tanResult = Math.tan(skewY * closure_0);
   const tanResult1 = Math.tan(skewX * closure_0);
-  append(result1 + tanResult1 * result2, tanResult * result1 + result2, result3 + tanResult1 * result4, tanResult * result3 + result4, arg0, arg1);
+  append(
+    result1 + tanResult1 * result2,
+    tanResult * result1 + result2,
+    result3 + tanResult1 * result4,
+    tanResult * result3 + result4,
+    arg0,
+    arg1,
+  );
 };

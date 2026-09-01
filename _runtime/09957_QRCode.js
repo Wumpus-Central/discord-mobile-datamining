@@ -11,12 +11,12 @@ class QRCode {
   }
 }
 const prototype = QRCode.prototype;
-prototype.addData = function(arg0) {
+prototype.addData = function (arg0) {
   const dataList = this.dataList;
   dataList.push(new QR8bitByte(arg0));
   this.dataCache = null;
 };
-prototype.isDark = function(arg0, arg1) {
+prototype.isDark = function (arg0, arg1) {
   if (arg0 >= 0) {
     const self = this;
     if (this.moduleCount > arg0) {
@@ -30,10 +30,10 @@ prototype.isDark = function(arg0, arg1) {
   error = new Error(arg0 + "," + arg1);
   throw error;
 };
-prototype.getModuleCount = function() {
+prototype.getModuleCount = function () {
   return this.moduleCount;
 };
-prototype.make = function() {
+prototype.make = function () {
   let tmp13;
   const self = this;
   let num = 1;
@@ -89,7 +89,7 @@ prototype.make = function() {
   }
   const impl = self.makeImpl(false, self.getBestMaskPattern());
 };
-prototype.makeImpl = function(arg0, arg1) {
+prototype.makeImpl = function (arg0, arg1) {
   const self = this;
   this.moduleCount = 4 * this.typeNumber + 17;
   let array = new Array(this.moduleCount);
@@ -129,7 +129,7 @@ prototype.makeImpl = function(arg0, arg1) {
   }
   self.mapData(self.dataCache, arg1);
 };
-prototype.setupPositionProbePattern = function(arg0, arg1) {
+prototype.setupPositionProbePattern = function (arg0, arg1) {
   const self = this;
   let num = -1;
   do {
@@ -192,7 +192,7 @@ prototype.setupPositionProbePattern = function(arg0, arg1) {
     num = num + 1;
   } while (num <= 7);
 };
-prototype.getBestMaskPattern = function() {
+prototype.getBestMaskPattern = function () {
   let tmp7;
   const self = this;
   let num = 0;
@@ -221,7 +221,7 @@ prototype.getBestMaskPattern = function() {
   } while (num < 8);
   return tmp7;
 };
-prototype.createMovieClip = function(createEmptyMovieClip) {
+prototype.createMovieClip = function (createEmptyMovieClip) {
   const self = this;
   const emptyMovieClip = createEmptyMovieClip.createEmptyMovieClip(arg1, arg2);
   this.make();
@@ -249,7 +249,7 @@ prototype.createMovieClip = function(createEmptyMovieClip) {
   }
   return emptyMovieClip;
 };
-prototype.setupTimingPattern = function() {
+prototype.setupTimingPattern = function () {
   const self = this;
   let num = 8;
   if (8 < this.moduleCount - 8) {
@@ -272,7 +272,7 @@ prototype.setupTimingPattern = function() {
     } while (num2 < self.moduleCount - 8);
   }
 };
-prototype.setupPositionAdjustPattern = function() {
+prototype.setupPositionAdjustPattern = function () {
   const self = this;
   const patternPosition = _mod9963.getPatternPosition(this.typeNumber);
   for (let num = 0; num < patternPosition.length; num = num + 1) {
@@ -315,7 +315,7 @@ prototype.setupPositionAdjustPattern = function() {
     }
   }
 };
-prototype.setupTypeNumber = function(arg0) {
+prototype.setupTypeNumber = function (arg0) {
   let num2;
   const self = this;
   const bCHTypeNumber = _mod9963.getBCHTypeNumber(this.typeNumber);
@@ -324,10 +324,10 @@ prototype.setupTypeNumber = function(arg0) {
     let tmp2 = !arg0;
     let tmp3 = num;
     if (!arg0) {
-      tmp2 = 1 === (bCHTypeNumber >> num & 1);
+      tmp2 = 1 === ((bCHTypeNumber >> num) & 1);
     }
     let _Math = Math;
-    self.modules[Math.floor(Math, num / 3)][num % 3 + self.moduleCount - 8 - 3] = tmp2;
+    self.modules[Math.floor(Math, num / 3)][(num % 3) + self.moduleCount - 8 - 3] = tmp2;
     num = num + 1;
     num2 = 0;
   } while (num < 18);
@@ -335,23 +335,23 @@ prototype.setupTypeNumber = function(arg0) {
     let tmp4 = !arg0;
     let tmp5 = num2;
     if (!arg0) {
-      tmp4 = 1 === (bCHTypeNumber >> num2 & 1);
+      tmp4 = 1 === ((bCHTypeNumber >> num2) & 1);
     }
     let _Math2 = Math;
-    self.modules[num2 % 3 + self.moduleCount - 8 - 3][Math.floor(num2 / 3)] = tmp4;
+    self.modules[(num2 % 3) + self.moduleCount - 8 - 3][Math.floor(num2 / 3)] = tmp4;
     num2 = num2 + 1;
   } while (num2 < 18);
 };
-prototype.setupTypeInfo = function(arg0, arg1) {
+prototype.setupTypeInfo = function (arg0, arg1) {
   let num2;
   const self = this;
-  const bCHTypeInfo = _mod9963.getBCHTypeInfo(this.errorCorrectLevel << 3 | arg1);
+  const bCHTypeInfo = _mod9963.getBCHTypeInfo((this.errorCorrectLevel << 3) | arg1);
   let num = 0;
   do {
     let tmp3 = !arg0;
     let tmp4 = num;
     if (!arg0) {
-      tmp3 = 1 === (bCHTypeInfo >> num & 1);
+      tmp3 = 1 === ((bCHTypeInfo >> num) & 1);
     }
     if (num < 6) {
       self.modules[num][8] = tmp3;
@@ -367,7 +367,7 @@ prototype.setupTypeInfo = function(arg0, arg1) {
     let tmp5 = !arg0;
     let tmp6 = num2;
     if (!arg0) {
-      tmp5 = 1 === (bCHTypeInfo >> num2 & 1);
+      tmp5 = 1 === ((bCHTypeInfo >> num2) & 1);
     }
     if (num2 < 8) {
       self.modules[8][self.moduleCount - num2 - 1] = tmp5;
@@ -380,7 +380,7 @@ prototype.setupTypeInfo = function(arg0, arg1) {
   } while (num2 < 15);
   self.modules[self.moduleCount - 8][8] = !arg0;
 };
-prototype.mapData = function(arg0, arg1) {
+prototype.mapData = function (arg0, arg1) {
   const self = this;
   const diff = this.moduleCount - 1;
   const diff1 = this.moduleCount - 1;
@@ -417,7 +417,7 @@ prototype.mapData = function(arg0, arg1) {
           if (null == self.modules[tmp10][diff3]) {
             let flag = false;
             if (tmp13 < arg0.length) {
-              flag = 1 === (arg0[tmp13] >>> tmp14 & 1);
+              flag = 1 === ((arg0[tmp13] >>> tmp14) & 1);
             }
             let tmp21 = require;
             let tmp22 = dependencyMap;

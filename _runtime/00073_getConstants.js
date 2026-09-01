@@ -131,7 +131,7 @@ if (arr.ViewManagerNames) {
     obj = {
       get() {
         return closure_1_2(closure_1_3[1])(closure_1_2(closure_1_3[0]).getConstantsForViewManager)(closure_0);
-      }
+      },
     };
     obj.default(UIManagerDefault, arg0, obj);
   });
@@ -157,7 +157,13 @@ if (!global.nativeCallSyncHook) {
       }
       obj = { get: null };
       obj[0] = function get() {
-        console.warn("Accessing view manager configs directly off UIManager via UIManager['" + closure_0 + "'] is no longer supported. Use UIManager.getViewManagerConfig('" + closure_0 + "') instead.");
+        console.warn(
+          "Accessing view manager configs directly off UIManager via UIManager['" +
+            closure_0 +
+            "'] is no longer supported. Use UIManager.getViewManagerConfig('" +
+            closure_0 +
+            "') instead.",
+        );
         return closure_1_10.getViewManagerConfig(closure_0);
       };
       defineLazyObjectProperty.default(UIManagerDefault, arg0, obj);

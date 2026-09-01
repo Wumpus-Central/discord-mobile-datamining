@@ -1,7 +1,6 @@
 // _runtime/00035__unsupportedIterableToArray.js
 import _arrayLikeToArray from "00036__arrayLikeToArray.js";
 
-
 export default function _unsupportedIterableToArray(str) {
   if (str) {
     if (typeof str === "string") {
@@ -30,4 +29,4 @@ export default function _unsupportedIterableToArray(str) {
       tmp3 = "Object" === substr && str.constructor;
     }
   }
-};
+}

@@ -1,7 +1,6 @@
 // _runtime/12420_captureConsoleIntegration.js
 import setupIntegration from "12391_setupIntegration.js";
 
-
 export const captureConsoleIntegration = setupIntegration.defineIntegration(() => {
   let obj = arg0;
   if (arg0 === undefined) {
@@ -69,7 +68,7 @@ export const captureConsoleIntegration = setupIntegration.defineIntegration(() =
         });
         let tmpResult = CONSOLE_LEVELS(handled[2]);
       }
-    }
+    },
   };
   return obj;
 });

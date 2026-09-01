@@ -91,7 +91,7 @@ let closure_1 = {
       num4 = num4 + arr.length;
     }
     return uint8Array;
-  }
+  },
 };
 let closure_2 = {
   arraySet(arg0, arg1, arg2, arg3, arg4) {
@@ -102,7 +102,7 @@ let closure_2 = {
   flattenChunks(arg0) {
     const concat = [].concat;
     return concat.apply([], arg0);
-  }
+  },
 };
 setTyped.setTyped = (arg0) => {
   let obj = exports;

@@ -23,7 +23,12 @@ class ReactNativeStartupTiming {
     definePropertyResult3 = Object.defineProperty(this, closure_5, { writable: true, value: "a" });
     if (null != global) {
       tmp10 = closure_1;
-      ({ startTime: closure_1(undefined, self, tmp2)[tmp2], initializeRuntimeStart: closure_1(undefined, self, tmp4)[tmp4], executeJavaScriptBundleEntryPointStart: closure_1(undefined, self, tmp6)[tmp6], endTime: closure_1(undefined, self, tmp8)[tmp8] } = global);
+      ({
+        startTime: closure_1(undefined, self, tmp2)[tmp2],
+        initializeRuntimeStart: closure_1(undefined, self, tmp4)[tmp4],
+        executeJavaScriptBundleEntryPointStart: closure_1(undefined, self, tmp6)[tmp6],
+        endTime: closure_1(undefined, self, tmp8)[tmp8],
+      } = global);
     }
     return;
   }
@@ -33,26 +38,26 @@ const items = [
     key: "startTime",
     get() {
       return callback(this, closure_2)[closure_2];
-    }
+    },
   },
   {
     key: "endTime",
     get() {
       return callback(this, closure_5)[closure_5];
-    }
+    },
   },
   {
     key: "initializeRuntimeStart",
     get() {
       return callback(this, closure_3)[closure_3];
-    }
+    },
   },
   {
     key: "executeJavaScriptBundleEntryPointStart",
     get() {
       return callback(this, closure_4)[closure_4];
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = _createClassDefault(ReactNativeStartupTiming, items);
 setPlatformObject.setPlatformObject(importDefaultResultResult);

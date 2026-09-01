@@ -25,14 +25,13 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class ReactNativeDocument {
   constructor(arg0, arg1) {
     self = this;
     tmp = closure_3(this, ReactNativeDocument);
-    items = [, ];
+    items = [,];
     items[0] = arg1;
     items[1] = null;
     tmp2 = closure_5;
@@ -53,9 +52,15 @@ class ReactNativeDocument {
     obj3 = require("NativeDOMCxx");
     linkRootNodeResult = obj3.linkRootNode(global, reactNativeDocumentElementInstanceHandle);
     obj4 = require("ReactNativeDocumentElementInstanceHandleImpl");
-    result = obj4.setNativeElementReferenceForReactNativeDocumentElementInstanceHandle(reactNativeDocumentElementInstanceHandle, linkRootNodeResult);
+    result = obj4.setNativeElementReferenceForReactNativeDocumentElementInstanceHandle(
+      reactNativeDocumentElementInstanceHandle,
+      linkRootNodeResult,
+    );
     obj5 = require("ReactNativeDocumentElementInstanceHandleImpl");
-    result1 = obj5.setPublicInstanceForReactNativeDocumentElementInstanceHandle(reactNativeDocumentElementInstanceHandle, tmp8);
+    result1 = obj5.setPublicInstanceForReactNativeDocumentElementInstanceHandle(
+      reactNativeDocumentElementInstanceHandle,
+      tmp8,
+    );
     tmp3Result._documentElement = tmp8;
     return tmp3Result;
   }
@@ -66,56 +71,56 @@ let items = [
     key: "childElementCount",
     get() {
       return 1;
-    }
+    },
   },
   {
     key: "children",
     get() {
       const items = [this.documentElement];
       return ReactNativeDocument(129).createHTMLCollection(items);
-    }
+    },
   },
   {
     key: "documentElement",
     get() {
       return this._documentElement;
-    }
+    },
   },
   {
     key: "firstElementChild",
     get() {
       return this.documentElement;
-    }
+    },
   },
   {
     key: "lastElementChild",
     get() {
       return this.documentElement;
-    }
+    },
   },
   {
     key: "nodeName",
     get() {
       return "#document";
-    }
+    },
   },
   {
     key: "nodeType",
     get() {
       return require("00131__isNativeReflectConstruct.js").DOCUMENT_NODE;
-    }
+    },
   },
   {
     key: "nodeValue",
     get() {
       return null;
-    }
+    },
   },
   {
     key: "textContent",
     get() {
       return null;
-    }
+    },
   },
   {
     key: "getElementById",
@@ -133,8 +138,8 @@ let items = [
       }
       const obj = NativeDOMCxxDefault;
       const tmp = importDefault;
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(ReactNativeDocument, items);
 const error = importDefaultResultResult;

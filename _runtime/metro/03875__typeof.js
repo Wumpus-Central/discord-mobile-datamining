@@ -79,7 +79,12 @@ class Setter {
       if ("subPriority" in self) {
         tmp6 = globalThis;
         _Object = Object;
-        definePropertyResult = Object.defineProperty(self, "subPriority", { value: 0, enumerable: true, configurable: true, writable: true });
+        definePropertyResult = Object.defineProperty(self, "subPriority", {
+          value: 0,
+          enumerable: true,
+          configurable: true,
+          writable: true,
+        });
       } else {
         num = 0;
         self.subPriority = 0;
@@ -102,7 +107,7 @@ let obj = {
   key: "validate",
   value: function validate(arg0, arg1) {
     return true;
-  }
+  },
 };
 let items = [obj];
 _createClass(Setter, items);
@@ -205,7 +210,7 @@ obj = {
   key: "validate",
   value: function validate(arg0, arg1) {
     return this.validateValue(arg0, this.value, arg1);
-  }
+  },
 };
 const items1 = [
   obj,
@@ -213,8 +218,8 @@ const items1 = [
     key: "set",
     value: function set(arg0, arg1, arg2) {
       return this.setValue(arg0, arg1, this.value, arg2);
-    }
-  }
+    },
+  },
 ];
 _createClass(ValueSetter, items1);
 arg5.ValueSetter = ValueSetter;
@@ -255,7 +260,12 @@ class DateToSystemTimezoneSetter {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 10, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", {
+            value: 10,
+            enumerable: true,
+            configurable: true,
+            writable: true,
+          });
         } else {
           num3 = 10;
           applyResult.priority = 10;
@@ -272,7 +282,12 @@ class DateToSystemTimezoneSetter {
           str3 = "subPriority";
           if ("subPriority" in applyResult) {
             _Object2 = Object;
-            definePropertyResult1 = Object.defineProperty(applyResult, "subPriority", { value: -1, enumerable: true, configurable: true, writable: true });
+            definePropertyResult1 = Object.defineProperty(applyResult, "subPriority", {
+              value: -1,
+              enumerable: true,
+              configurable: true,
+              writable: true,
+            });
           } else {
             num4 = -1;
             applyResult.subPriority = -1;
@@ -292,7 +307,9 @@ class DateToSystemTimezoneSetter {
   }
 }
 store = DateToSystemTimezoneSetter;
-DateToSystemTimezoneSetter.prototype = Object.create(Setter.prototype, { constructor: { value: DateToSystemTimezoneSetter, writable: true, configurable: true } });
+DateToSystemTimezoneSetter.prototype = Object.create(Setter.prototype, {
+  constructor: { value: DateToSystemTimezoneSetter, writable: true, configurable: true },
+});
 store(DateToSystemTimezoneSetter, Setter);
 _createSuperInternal = DateToSystemTimezoneSetter;
 store = (function _isNativeReflectConstruct() {
@@ -369,8 +386,8 @@ const items2 = [
         date.setHours(uTCHours, uTCMinutes, uTCSeconds, getUTCFullYear.getUTCMilliseconds());
         return date;
       }
-    }
-  }
+    },
+  },
 ];
 _createClass(DateToSystemTimezoneSetter, items2);
 arg5.DateToSystemTimezoneSetter = DateToSystemTimezoneSetter;

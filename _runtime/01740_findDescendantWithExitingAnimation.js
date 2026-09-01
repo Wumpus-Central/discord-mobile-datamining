@@ -22,7 +22,7 @@ function findDescendantWithExitingAnimation(isDummy, appendChild) {
         appendChild.appendChild(isDummy);
         tmp2(1739).setElementPosition(isDummy, value);
         const onanimationend = isDummy.onanimationend;
-        isDummy.onanimationend = function(arg0) {
+        isDummy.onanimationend = function (arg0) {
           appendChild.removeChild(closure_0);
           if (onanimationend != null) {
             const self = this;
@@ -120,35 +120,38 @@ arg5.insertWebAnimation = function insertWebAnimation(name, result) {
 arg5.scheduleAnimationCleanup = function scheduleAnimationCleanup(animationName, arg1, arg2) {
   closure_0 = animationName;
   closure_1 = arg2;
-  const timerId = setTimeout(() => {
-    if (obj.isWindowAvailable()) {
-      const _document = document;
-      const element = document.getElementById(closure_1_3);
-      let sum = closure_1_4.get(tmp);
-      if (undefined === sum) {
-        const reanimatedError = new animationName(1664).ReanimatedError("Failed to obtain animation index.");
-        throw reanimatedError;
-      } else {
-        dependencyMap();
-        const sheet = element.sheet;
-        if (sheet != null) {
-          sheet.deleteRule(sum);
-        }
-        closure_1_5.splice(sum, 1);
-        obj2.delete(tmp);
-        if (sum < closure_1_5.length) {
-          const value = closure_1_4.get(closure_1_5[sum]);
-          while (undefined !== value) {
-            let result = closure_1_4.set(arr[sum], value - 1);
-            sum = sum + 1;
+  const timerId = setTimeout(
+    () => {
+      if (obj.isWindowAvailable()) {
+        const _document = document;
+        const element = document.getElementById(closure_1_3);
+        let sum = closure_1_4.get(tmp);
+        if (undefined === sum) {
+          const reanimatedError = new animationName(1664).ReanimatedError("Failed to obtain animation index.");
+          throw reanimatedError;
+        } else {
+          dependencyMap();
+          const sheet = element.sheet;
+          if (sheet != null) {
+            sheet.deleteRule(sum);
           }
-          const reanimatedError1 = new animationName(1664).ReanimatedError("Failed to obtain animation index.");
-          throw reanimatedError1;
+          closure_1_5.splice(sum, 1);
+          obj2.delete(tmp);
+          if (sum < closure_1_5.length) {
+            const value = closure_1_4.get(closure_1_5[sum]);
+            while (undefined !== value) {
+              let result = closure_1_4.set(arr[sum], value - 1);
+              sum = sum + 1;
+            }
+            const reanimatedError1 = new animationName(1664).ReanimatedError("Failed to obtain animation index.");
+            throw reanimatedError1;
+          }
         }
+        obj2 = closure_1_4;
       }
-      obj2 = closure_1_4;
-    }
-  }, Math.max(5 * arg1 * 1000, arg1 + 160));
+    },
+    Math.max(5 * arg1 * 1000, arg1 + 160),
+  );
 };
 arg5.addHTMLMutationObserver = function addHTMLMutationObserver() {
   let isWindowAvailableResult = !c6;
@@ -160,32 +163,34 @@ arg5.addHTMLMutationObserver = function addHTMLMutationObserver() {
     c6 = true;
     const mutationObserver = new globalThis.MutationObserver((arg0) => {
       let length;
-      if (!(function checkIfScreenWasChanged(target) {
-        let str = "__reactFiber";
-        const keys = Object.keys(target);
-        for (const item10012 of keys) {
-          let tmp2 = item10012;
-          if (item10012.startsWith("__reactFiber")) {
-            str = item10012;
-            let tmp3 = obj;
-            obj.return();
-            break;
-          }
-          let tmp4 = arg0[str];
-          let tmp5 = null;
-          let navigation;
-          if (tmp4 != null) {
-            let child = tmp4.child;
-            if (child != null) {
-              let memoizedProps = child.memoizedProps;
-              if (memoizedProps != null) {
-                navigation = memoizedProps.navigation;
+      if (
+        !(function checkIfScreenWasChanged(target) {
+          let str = "__reactFiber";
+          const keys = Object.keys(target);
+          for (const item10012 of keys) {
+            let tmp2 = item10012;
+            if (item10012.startsWith("__reactFiber")) {
+              str = item10012;
+              let tmp3 = obj;
+              obj.return();
+              break;
+            }
+            let tmp4 = arg0[str];
+            let tmp5 = null;
+            let navigation;
+            if (tmp4 != null) {
+              let child = tmp4.child;
+              if (child != null) {
+                let memoizedProps = child.memoizedProps;
+                if (memoizedProps != null) {
+                  navigation = memoizedProps.navigation;
+                }
               }
             }
+            return undefined !== navigation;
           }
-          return undefined !== navigation;
-        }
-      })(arg0[arg0.length - 1].target)) {
+        })(arg0[arg0.length - 1].target)
+      ) {
         let num = 0;
         if (0 < tmp.removedNodes.length) {
           do {

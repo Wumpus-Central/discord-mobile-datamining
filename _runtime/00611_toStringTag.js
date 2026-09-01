@@ -16,4 +16,4 @@ export default function getRawTag(arg0) {
     call(arg0, tmp2);
   }
   tmp = arg0[tmp2];
-};
+}

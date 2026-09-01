@@ -2,9 +2,7 @@
 import { print } from "04356_print.js";
 const require = arg1;
 const dependencyMap = arg6;
-function registerHost(arg0, arg1) {
-
-}
+function registerHost(arg0, arg1) {}
 function removePortal(closure_21) {
   const _require = arg2;
   if (arg1 in closure_21) {

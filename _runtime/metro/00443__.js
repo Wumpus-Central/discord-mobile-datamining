@@ -8,7 +8,7 @@ noopAll;
 ({ Fragment: c0, jsxs: closure_1 } = jsxProd);
 
 export default defaultItemToKey.createVirtualCollectionView(function VirtualRowLayout(arg0) {
-  const children = [, ];
+  const children = [,];
   ({ children: arr[0], spacer: arr[1] } = arg0);
   return callback(closure_0, { children });
 }, _modDef444);

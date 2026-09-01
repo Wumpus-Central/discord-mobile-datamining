@@ -62,7 +62,7 @@ class TDigest {
       str = "exact ";
     }
     sum = str + self.n;
-    items = [, , , , , ];
+    items = [, , , , ,];
     items[0] = `${tmp} samples using ${self.size()} centroids`;
     items[1] = `min = ${require("../discord_app/index.native.tsx")}`;
     items[2] = `Q1  = ${self.percentile(0.25)}`;
@@ -180,7 +180,7 @@ class TDigest {
   }
   _addweight(arg0, arg1, arg2) {
     if (require !== global.mean) {
-      global.mean = global.mean + importDefault * (require - global.mean) / (global.n + importDefault);
+      global.mean = global.mean + (importDefault * (require - global.mean)) / (global.n + importDefault);
     }
     global.cumn = global.cumn + importDefault;
     global.mean_cumn = global.mean_cumn + importDefault / 2;
@@ -239,7 +239,7 @@ class TDigest {
     obj = { mean: global };
     iter = centroids.upperBound(obj);
     prevResult = iter.prev();
-    items = [, ];
+    items = [,];
     items[0] = prevResult;
     if (prevResult.mean !== global) {
       prevResult = iter.next();
@@ -284,7 +284,7 @@ class TDigest {
             mean_cumn = tmp5.mean_cumn;
             sum = mean_cumn;
             if (tmp5 !== tmp6) {
-              sum = mean_cumn + (global - tmp5.mean) * (tmp6.mean_cumn - tmp5.mean_cumn) / (tmp6.mean - tmp5.mean);
+              sum = mean_cumn + ((global - tmp5.mean) * (tmp6.mean_cumn - tmp5.mean_cumn)) / (tmp6.mean - tmp5.mean);
             }
             return sum / self.n;
           }
@@ -301,7 +301,7 @@ class TDigest {
     iter = centroids.upperBound(obj);
     this.centroids._comparator = compare_centroid_means;
     prevResult = iter.prev();
-    items = [, ];
+    items = [,];
     items[0] = prevResult;
     if (!prevResult) {
       prevResult = iter.next();
@@ -343,7 +343,8 @@ class TDigest {
             if (self.discrete) {
               tmp10 = result <= tmp7.cumn ? tmp7.mean : tmp8.mean;
             } else {
-              mean = tmp7.mean + (result - tmp7.mean_cumn) * (tmp8.mean - tmp7.mean) / (tmp8.mean_cumn - tmp7.mean_cumn);
+              mean =
+                tmp7.mean + ((result - tmp7.mean_cumn) * (tmp8.mean - tmp7.mean)) / (tmp8.mean_cumn - tmp7.mean_cumn);
             }
           }
           return mean;

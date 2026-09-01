@@ -31,7 +31,7 @@ let items = [
       const result = _cellKeyToChildren2.set(arg1, set);
       const _childrenToCellKey2 = self._childrenToCellKey;
       const result1 = _childrenToCellKey2.set(arg0, arg1);
-    }
+    },
   },
   {
     key: "remove",
@@ -49,7 +49,7 @@ let items = [
         const _cellKeyToChildren2 = this._cellKeyToChildren;
         _cellKeyToChildren2.delete(value);
       }
-    }
+    },
   },
   {
     key: "forEach",
@@ -65,7 +65,7 @@ let items = [
         }
         continue;
       }
-    }
+    },
   },
   {
     key: "forEachInCell",
@@ -79,7 +79,7 @@ let items = [
         let tmp = arg1(item10011);
         continue;
       }
-    }
+    },
   },
   {
     key: "anyInCell",
@@ -98,14 +98,14 @@ let items = [
         }
       }
       return false;
-    }
+    },
   },
   {
     key: "size",
     value: function size() {
       return this._childrenToCellKey.size;
-    }
-  }
+    },
+  },
 ];
 
 export default _createClassDefault(ChildListCollection, items);

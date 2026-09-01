@@ -55,7 +55,7 @@ let obj = {
       const _performance = FillRateHelper.performance;
       self._samplesStartTime = _performance.now();
     }
-  }
+  },
 };
 const items = [
   obj,
@@ -79,7 +79,7 @@ const items = [
           }
         }
       }
-    }
+    },
   },
   {
     key: "computeBlankness",
@@ -231,20 +231,25 @@ const items = [
         }
       }
       return 0;
-    }
+    },
   },
   {
     key: "enabled",
     value: function enabled() {
       return this._enabled;
-    }
+    },
   },
   {
     key: "_resetData",
     value: function _resetData() {
-      const obj = { _anyBlankStartTime: null, _info: new closure_2(), _mostlyBlankStartTime: null, _samplesStartTime: null };
-    }
-  }
+      const obj = {
+        _anyBlankStartTime: null,
+        _info: new closure_2(),
+        _mostlyBlankStartTime: null,
+        _samplesStartTime: null,
+      };
+    },
+  },
 ];
 obj = {
   key: "addListener",
@@ -257,9 +262,9 @@ obj = {
     return {
       remove() {
         closure_3 = closure_3.filter((arg0) => closure_0 !== arg0);
-      }
+      },
     };
-  }
+  },
 };
 const items1 = [
   obj,
@@ -267,14 +272,14 @@ const items1 = [
     key: "setSampleRate",
     value: function setSampleRate(arg0) {
       closure_5 = arg0;
-    }
+    },
   },
   {
     key: "setMinSampleCount",
     value: function setMinSampleCount(arg0) {
       closure_4 = arg0;
-    }
-  }
+    },
+  },
 ];
 
 export default importDefaultResult(FillRateHelper, items, items1);

@@ -15,7 +15,10 @@ noopDefault;
 const Animated = get_ActivityIndicator.Animated;
 ({ Platform, StyleSheet } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-let closure_11 = createNativeWrapperDefault(ButtonComponentDefault, { shouldCancelWhenOutside: false, shouldActivateOnStart: false });
+let closure_11 = createNativeWrapperDefault(ButtonComponentDefault, {
+  shouldCancelWhenOutside: false,
+  shouldActivateOnStart: false,
+});
 class RawButton {
   constructor(arg0) {
     obj = {};
@@ -45,7 +48,7 @@ class BaseButton {
     obj = require("getTVProps");
     tVProps = obj.getTVProps(tmp);
     obj = { style: items };
-    items = [, ];
+    items = [,];
     items[0] = global.style;
     items[1] = false;
     merged = Object.assign(tmp);
@@ -139,7 +142,18 @@ export const RectButton = (children) => {
       onActiveStateChange(arg0);
     }
   };
-  const items = [underlay.underlay, { opacity: useRef(value).current, backgroundColor: str, borderRadius: flattenResult.borderRadius, borderTopLeftRadius: flattenResult.borderTopLeftRadius, borderTopRightRadius: flattenResult.borderTopRightRadius, borderBottomLeftRadius: flattenResult.borderBottomLeftRadius, borderBottomRightRadius: flattenResult.borderBottomRightRadius }];
+  const items = [
+    underlay.underlay,
+    {
+      opacity: useRef(value).current,
+      backgroundColor: str,
+      borderRadius: flattenResult.borderRadius,
+      borderTopLeftRadius: flattenResult.borderTopLeftRadius,
+      borderTopRightRadius: flattenResult.borderTopRightRadius,
+      borderBottomLeftRadius: flattenResult.borderBottomLeftRadius,
+      borderBottomRightRadius: flattenResult.borderBottomRightRadius,
+    },
+  ];
   const items1 = [callback2(Animated.View, { style: items }), children.children];
   obj.children = items1;
   return callback3(BaseButton, obj);

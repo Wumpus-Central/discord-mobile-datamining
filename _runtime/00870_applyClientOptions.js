@@ -362,7 +362,7 @@ arg5.prepareEvent = function prepareEvent(normalizeDepth, event_id, event_id2, c
             }
             tmp32 = obj;
             if (flags) {
-              obj.contexts.flags = callback(3[7]).normalize(exception.contexts.flags, 3, tmp35);
+              obj.contexts.flags = callback((3)[7]).normalize(exception.contexts.flags, 3, tmp35);
               tmp32 = obj;
               const obj11 = callback(num2[7]);
             }

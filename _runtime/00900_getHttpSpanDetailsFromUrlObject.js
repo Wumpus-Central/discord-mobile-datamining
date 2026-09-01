@@ -4,7 +4,10 @@ const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.getHttpSpanDetailsFromUrlObject = function getHttpSpanDetailsFromUrlObject(hash, arg1, arg2, method) {
   let str = arg4;
-  const obj = { [closure_0(closure_1[0]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: arg2, [closure_0(closure_1[0]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE]: "url" };
+  const obj = {
+    [closure_0(closure_1[0]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: arg2,
+    [closure_0(closure_1[0]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE]: "url",
+  };
   if (arg4) {
     let str2 = "url.template";
     if ("server" === arg1) {
@@ -101,7 +104,10 @@ arg5.getSanitizedUrlString = function getSanitizedUrlString(path) {
   let str3;
   if (host != null) {
     const str5 = host.replace(/^.*@/, "[filtered]:[filtered]@");
-    str3 = host.replace(/^.*@/, "[filtered]:[filtered]@").replace(/(:80)$/, "").replace(/(:443)$/, "");
+    str3 = host
+      .replace(/^.*@/, "[filtered]:[filtered]@")
+      .replace(/(:80)$/, "")
+      .replace(/(:443)$/, "");
     const str6 = host.replace(/^.*@/, "[filtered]:[filtered]@").replace(/(:80)$/, "");
   }
   if (!str3) {

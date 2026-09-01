@@ -1,7 +1,6 @@
 // _runtime/08657_isIterateeCall.js
 import isObject from "00606_isObject.js";
 
-
 export default function isIterateeCall(arg0, num) {
   if (isObject(arg2)) {
     if (typeof num === "number") {
@@ -21,4 +20,4 @@ export default function isIterateeCall(arg0, num) {
   } else {
     return false;
   }
-};
+}

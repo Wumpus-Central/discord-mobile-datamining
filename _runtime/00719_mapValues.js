@@ -8,4 +8,4 @@ export default function mapValues(arg0, arg1) {
     callback(obj[2])(obj, arg1, callback(arg0, arg1, arg2));
   });
   return obj;
-};
+}

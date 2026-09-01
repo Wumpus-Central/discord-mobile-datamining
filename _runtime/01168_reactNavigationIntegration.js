@@ -129,10 +129,16 @@ arg5.reactNavigationIntegration = () => {
       beforeStartSpanResult = num(flag[0]).getDefaultIdleNavigationSpanOptions();
       const obj3 = num(flag[0]);
     }
-    const result = num(flag[0]).startIdleNavigationSpan(beforeStartSpanResult, Object.assign(Object.assign({}, defaultIdleOptions), { isAppRestart: flag }));
+    const result = num(flag[0]).startIdleNavigationSpan(
+      beforeStartSpanResult,
+      Object.assign(Object.assign({}, defaultIdleOptions), { isAppRestart: flag }),
+    );
     _undefined3 = result;
     if (null != result) {
-      const attr = _undefined3.setAttribute(num(flag[2]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, num(flag[6]).SPAN_ORIGIN_AUTO_NAVIGATION_REACT_NAVIGATION);
+      const attr = _undefined3.setAttribute(
+        num(flag[2]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
+        num(flag[6]).SPAN_ORIGIN_AUTO_NAVIGATION_REACT_NAVIGATION,
+      );
     }
     if (null != _undefined3) {
       const attr1 = _undefined3.setAttribute(num(flag[7]).SEMANTIC_ATTRIBUTE_NAVIGATION_ACTION_TYPE, tmp4);
@@ -146,7 +152,12 @@ arg5.reactNavigationIntegration = () => {
     const obj2 = num(flag[0]);
     const obj7 = num(flag[8]);
     const client = num(flag[2]).getClient();
-    const result2 = obj7.ignoreEmptyRouteChangeTransactions(client, _undefined3, num(flag[0]).DEFAULT_NAVIGATION_SPAN_NAME, () => c8 === closure_0);
+    const result2 = obj7.ignoreEmptyRouteChangeTransactions(
+      client,
+      _undefined3,
+      num(flag[0]).DEFAULT_NAVIGATION_SPAN_NAME,
+      () => c8 === closure_0,
+    );
     let tmp52 = flag;
     if (flag) {
       tmp52 = _undefined3;
@@ -154,12 +165,19 @@ arg5.reactNavigationIntegration = () => {
     if (tmp52) {
       const NATIVE = num(flag[1]).NATIVE;
       NATIVE.setActiveSpanId(_undefined3.spanContext().spanId);
-      obj = { op: "navigation.processing", name: "Navigation dispatch to navigation cancelled or screen mounted", startTime: null };
+      obj = {
+        op: "navigation.processing",
+        name: "Navigation dispatch to navigation cancelled or screen mounted",
+        startTime: null,
+      };
       const obj9 = num(flag[2]);
       obj[2] = num(flag[2]).spanToJSON(_undefined3).start_timestamp;
       const startInactiveSpanResult = obj9.startInactiveSpan(obj);
       c9 = startInactiveSpanResult;
-      const attr2 = startInactiveSpanResult.setAttribute(num(flag[2]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, num(flag[6]).SPAN_ORIGIN_AUTO_NAVIGATION_REACT_NAVIGATION);
+      const attr2 = startInactiveSpanResult.setAttribute(
+        num(flag[2]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
+        num(flag[6]).SPAN_ORIGIN_AUTO_NAVIGATION_REACT_NAVIGATION,
+      );
       const obj11 = num(flag[2]);
     }
     timeout = setTimeout(_discardLatestTransaction, closure_0);
@@ -173,7 +191,10 @@ arg5.reactNavigationIntegration = () => {
       if (currentRoute) {
         if (_undefined3) {
           const NATIVE = tmp(tmp2[1]).NATIVE;
-          const result = tmp(tmp2[9]).addTimeToInitialDisplayFallback(_undefined3.spanContext().spanId, NATIVE.getNewScreenTimeToDisplay());
+          const result = tmp(tmp2[9]).addTimeToInitialDisplayFallback(
+            _undefined3.spanContext().spanId,
+            NATIVE.getNewScreenTimeToDisplay(),
+          );
           if (tmp5) {
             if (tmp5.key === currentRoute.key) {
               const debug4 = tmp(tmp2[2]).debug;
@@ -251,7 +272,13 @@ arg5.reactNavigationIntegration = () => {
           if (obj3.spanToJSON(_undefined3).description === num(flag[0]).DEFAULT_NAVIGATION_SPAN_NAME) {
             _undefined3.updateName(name);
           }
-          obj = { "route.name": null, "route.key": null, "route.has_been_seen": null, "previous_route.name": null, "previous_route.key": null };
+          obj = {
+            "route.name": null,
+            "route.key": null,
+            "route.has_been_seen": null,
+            "previous_route.name": null,
+            "previous_route.key": null,
+          };
           obj[0] = name;
           obj[1] = currentRoute.key;
           obj[2] = hasItem;
@@ -313,7 +340,9 @@ arg5.reactNavigationIntegration = () => {
         } else {
           const debug3 = tmp(tmp2[2]).debug;
           const _HermesInternal3 = HermesInternal;
-          debug3.log("[" + flag2 + "] Navigation state changed, but navigation transaction was not started on dispatch.");
+          debug3.log(
+            "[" + flag2 + "] Navigation state changed, but navigation transaction was not started on dispatch.",
+          );
         }
       } else {
         const debug2 = tmp(tmp2[2]).debug;
@@ -326,9 +355,7 @@ arg5.reactNavigationIntegration = () => {
       debug.warn("" + flag2 + " Missing navigation container ref. Route transactions will not be sent.");
     }
   };
-  pushRecentRouteKey = function pushRecentRouteKey(arg0) {
-
-  };
+  pushRecentRouteKey = function pushRecentRouteKey(arg0) {};
   _discardLatestTransaction = function _discardLatestTransaction() {
     if (_undefined3) {
       if (obj.isSentrySpan(_undefined3)) {
@@ -342,9 +369,7 @@ arg5.reactNavigationIntegration = () => {
       c9 = undefined;
     }
   };
-  clearStateChangeTimeout = function clearStateChangeTimeout() {
-
-  };
+  clearStateChangeTimeout = function clearStateChangeTimeout() {};
   obj = {
     name: flag2,
     afterAllSetup(getIntegrationByName) {
@@ -415,7 +440,14 @@ arg5.reactNavigationIntegration = () => {
         debug2.log("" + flag2 + " Navigation container ref is the same as the one already registered.");
       }
     },
-    options: { routeChangeTimeoutMs: num, enableTimeToInitialDisplay: flag, ignoreEmptyBackNavigationTransactions: flag2, enableTimeToInitialDisplayForPreloadedRoutes: flag3, useDispatchedActionData: flag4, useFullPathsForNavigationRoutes: flag5 }
+    options: {
+      routeChangeTimeoutMs: num,
+      enableTimeToInitialDisplay: flag,
+      ignoreEmptyBackNavigationTransactions: flag2,
+      enableTimeToInitialDisplayForPreloadedRoutes: flag3,
+      useDispatchedActionData: flag4,
+      useFullPathsForNavigationRoutes: flag5,
+    },
   };
   return obj;
 };

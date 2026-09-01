@@ -25,7 +25,13 @@ export const useInvalidPreventRemoveError = function useInvalidPreventRemoveErro
       if (prop) {
         const _HermesInternal = HermesInternal;
         const _console = console;
-        console.error("The screen " + name + " uses 'usePreventRemove' hook alongside 'headerBackButtonMenuEnabled: true', which is not supported. \n\nConsider removing 'headerBackButtonMenuEnabled: true' from " + name + " screen to get rid of this error.");
+        console.error(
+          "The screen " +
+            name +
+            " uses 'usePreventRemove' hook alongside 'headerBackButtonMenuEnabled: true', which is not supported. \n\nConsider removing 'headerBackButtonMenuEnabled: true' from " +
+            name +
+            " screen to get rid of this error.",
+        );
       }
     }
   }, items);

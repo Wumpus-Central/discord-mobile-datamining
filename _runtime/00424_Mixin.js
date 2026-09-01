@@ -9,15 +9,22 @@ import BoundingDimensionsDefault from "00427_BoundingDimensions.js";
 import { jsx } from "react/00021_jsxProd.js";
 
 noopAll;
-const f19010 = (arg0) => {
-
-};
+const f19010 = (arg0) => {};
 const NOT_RESPONDER = "NOT_RESPONDER";
 const RESPONDER_INACTIVE_PRESS_IN = "RESPONDER_INACTIVE_PRESS_IN";
 const RESPONDER_ACTIVE_PRESS_IN = "RESPONDER_ACTIVE_PRESS_IN";
 const RESPONDER_ACTIVE_LONG_PRESS_IN = "RESPONDER_ACTIVE_LONG_PRESS_IN";
 const ERROR = "ERROR";
-let obj = { NOT_RESPONDER: false, RESPONDER_INACTIVE_PRESS_IN: false, RESPONDER_INACTIVE_PRESS_OUT: false, RESPONDER_ACTIVE_PRESS_IN: false, RESPONDER_ACTIVE_PRESS_OUT: false, RESPONDER_ACTIVE_LONG_PRESS_IN: false, RESPONDER_ACTIVE_LONG_PRESS_OUT: false, ERROR: false };
+let obj = {
+  NOT_RESPONDER: false,
+  RESPONDER_INACTIVE_PRESS_IN: false,
+  RESPONDER_INACTIVE_PRESS_OUT: false,
+  RESPONDER_ACTIVE_PRESS_IN: false,
+  RESPONDER_ACTIVE_PRESS_OUT: false,
+  RESPONDER_ACTIVE_LONG_PRESS_IN: false,
+  RESPONDER_ACTIVE_LONG_PRESS_OUT: false,
+  ERROR: false,
+};
 obj = {};
 const merged = Object.assign(obj);
 obj.RESPONDER_ACTIVE_PRESS_OUT = true;
@@ -37,7 +44,80 @@ const RESPONDER_TERMINATED = "RESPONDER_TERMINATED";
 const ENTER_PRESS_RECT = "ENTER_PRESS_RECT";
 const LEAVE_PRESS_RECT = "LEAVE_PRESS_RECT";
 const LONG_PRESS_DETECTED = "LONG_PRESS_DETECTED";
-let closure_18 = { NOT_RESPONDER: { DELAY: "ERROR", RESPONDER_GRANT: "RESPONDER_INACTIVE_PRESS_IN", RESPONDER_RELEASE: "ERROR", RESPONDER_TERMINATED: "ERROR", ENTER_PRESS_RECT: "ERROR", LEAVE_PRESS_RECT: "ERROR", LONG_PRESS_DETECTED: "ERROR" }, RESPONDER_INACTIVE_PRESS_IN: { DELAY: "RESPONDER_ACTIVE_PRESS_IN", RESPONDER_GRANT: "ERROR", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "RESPONDER_INACTIVE_PRESS_IN", LEAVE_PRESS_RECT: "RESPONDER_INACTIVE_PRESS_OUT", LONG_PRESS_DETECTED: "ERROR" }, RESPONDER_INACTIVE_PRESS_OUT: { DELAY: "RESPONDER_ACTIVE_PRESS_OUT", RESPONDER_GRANT: "ERROR", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "RESPONDER_INACTIVE_PRESS_IN", LEAVE_PRESS_RECT: "RESPONDER_INACTIVE_PRESS_OUT", LONG_PRESS_DETECTED: "ERROR" }, RESPONDER_ACTIVE_PRESS_IN: { DELAY: "ERROR", RESPONDER_GRANT: "ERROR", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "RESPONDER_ACTIVE_PRESS_IN", LEAVE_PRESS_RECT: "RESPONDER_ACTIVE_PRESS_OUT", LONG_PRESS_DETECTED: "RESPONDER_ACTIVE_LONG_PRESS_IN" }, RESPONDER_ACTIVE_PRESS_OUT: { DELAY: "ERROR", RESPONDER_GRANT: "ERROR", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "RESPONDER_ACTIVE_PRESS_IN", LEAVE_PRESS_RECT: "RESPONDER_ACTIVE_PRESS_OUT", LONG_PRESS_DETECTED: "ERROR" }, RESPONDER_ACTIVE_LONG_PRESS_IN: { DELAY: "ERROR", RESPONDER_GRANT: "ERROR", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "RESPONDER_ACTIVE_LONG_PRESS_IN", LEAVE_PRESS_RECT: "RESPONDER_ACTIVE_LONG_PRESS_OUT", LONG_PRESS_DETECTED: "RESPONDER_ACTIVE_LONG_PRESS_IN" }, RESPONDER_ACTIVE_LONG_PRESS_OUT: { DELAY: "ERROR", RESPONDER_GRANT: "ERROR", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "RESPONDER_ACTIVE_LONG_PRESS_IN", LEAVE_PRESS_RECT: "RESPONDER_ACTIVE_LONG_PRESS_OUT", LONG_PRESS_DETECTED: "ERROR" }, error: { DELAY: "NOT_RESPONDER", RESPONDER_GRANT: "RESPONDER_INACTIVE_PRESS_IN", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "NOT_RESPONDER", LEAVE_PRESS_RECT: "NOT_RESPONDER", LONG_PRESS_DETECTED: "NOT_RESPONDER" } };
+let closure_18 = {
+  NOT_RESPONDER: {
+    DELAY: "ERROR",
+    RESPONDER_GRANT: "RESPONDER_INACTIVE_PRESS_IN",
+    RESPONDER_RELEASE: "ERROR",
+    RESPONDER_TERMINATED: "ERROR",
+    ENTER_PRESS_RECT: "ERROR",
+    LEAVE_PRESS_RECT: "ERROR",
+    LONG_PRESS_DETECTED: "ERROR",
+  },
+  RESPONDER_INACTIVE_PRESS_IN: {
+    DELAY: "RESPONDER_ACTIVE_PRESS_IN",
+    RESPONDER_GRANT: "ERROR",
+    RESPONDER_RELEASE: "NOT_RESPONDER",
+    RESPONDER_TERMINATED: "NOT_RESPONDER",
+    ENTER_PRESS_RECT: "RESPONDER_INACTIVE_PRESS_IN",
+    LEAVE_PRESS_RECT: "RESPONDER_INACTIVE_PRESS_OUT",
+    LONG_PRESS_DETECTED: "ERROR",
+  },
+  RESPONDER_INACTIVE_PRESS_OUT: {
+    DELAY: "RESPONDER_ACTIVE_PRESS_OUT",
+    RESPONDER_GRANT: "ERROR",
+    RESPONDER_RELEASE: "NOT_RESPONDER",
+    RESPONDER_TERMINATED: "NOT_RESPONDER",
+    ENTER_PRESS_RECT: "RESPONDER_INACTIVE_PRESS_IN",
+    LEAVE_PRESS_RECT: "RESPONDER_INACTIVE_PRESS_OUT",
+    LONG_PRESS_DETECTED: "ERROR",
+  },
+  RESPONDER_ACTIVE_PRESS_IN: {
+    DELAY: "ERROR",
+    RESPONDER_GRANT: "ERROR",
+    RESPONDER_RELEASE: "NOT_RESPONDER",
+    RESPONDER_TERMINATED: "NOT_RESPONDER",
+    ENTER_PRESS_RECT: "RESPONDER_ACTIVE_PRESS_IN",
+    LEAVE_PRESS_RECT: "RESPONDER_ACTIVE_PRESS_OUT",
+    LONG_PRESS_DETECTED: "RESPONDER_ACTIVE_LONG_PRESS_IN",
+  },
+  RESPONDER_ACTIVE_PRESS_OUT: {
+    DELAY: "ERROR",
+    RESPONDER_GRANT: "ERROR",
+    RESPONDER_RELEASE: "NOT_RESPONDER",
+    RESPONDER_TERMINATED: "NOT_RESPONDER",
+    ENTER_PRESS_RECT: "RESPONDER_ACTIVE_PRESS_IN",
+    LEAVE_PRESS_RECT: "RESPONDER_ACTIVE_PRESS_OUT",
+    LONG_PRESS_DETECTED: "ERROR",
+  },
+  RESPONDER_ACTIVE_LONG_PRESS_IN: {
+    DELAY: "ERROR",
+    RESPONDER_GRANT: "ERROR",
+    RESPONDER_RELEASE: "NOT_RESPONDER",
+    RESPONDER_TERMINATED: "NOT_RESPONDER",
+    ENTER_PRESS_RECT: "RESPONDER_ACTIVE_LONG_PRESS_IN",
+    LEAVE_PRESS_RECT: "RESPONDER_ACTIVE_LONG_PRESS_OUT",
+    LONG_PRESS_DETECTED: "RESPONDER_ACTIVE_LONG_PRESS_IN",
+  },
+  RESPONDER_ACTIVE_LONG_PRESS_OUT: {
+    DELAY: "ERROR",
+    RESPONDER_GRANT: "ERROR",
+    RESPONDER_RELEASE: "NOT_RESPONDER",
+    RESPONDER_TERMINATED: "NOT_RESPONDER",
+    ENTER_PRESS_RECT: "RESPONDER_ACTIVE_LONG_PRESS_IN",
+    LEAVE_PRESS_RECT: "RESPONDER_ACTIVE_LONG_PRESS_OUT",
+    LONG_PRESS_DETECTED: "ERROR",
+  },
+  error: {
+    DELAY: "NOT_RESPONDER",
+    RESPONDER_GRANT: "RESPONDER_INACTIVE_PRESS_IN",
+    RESPONDER_RELEASE: "NOT_RESPONDER",
+    RESPONDER_TERMINATED: "NOT_RESPONDER",
+    ENTER_PRESS_RECT: "NOT_RESPONDER",
+    LEAVE_PRESS_RECT: "NOT_RESPONDER",
+    LONG_PRESS_DETECTED: "NOT_RESPONDER",
+  },
+};
 let obj2 = {
   componentDidMount() {
     const isTV = get_VersionDefault.isTV;
@@ -183,7 +263,9 @@ let obj2 = {
           pageY = first.pageY;
         }
         if (self.pressInLocation) {
-          if (self._getDistanceBetweenPoints(pageX, pageY, self.pressInLocation.pageX, self.pressInLocation.pageY) > 10) {
+          if (
+            self._getDistanceBetweenPoints(pageX, pageY, self.pressInLocation.pageX, self.pressInLocation.pageY) > 10
+          ) {
             const result1 = self._cancelLongPressDelayTimeout();
           }
         }
@@ -195,7 +277,9 @@ let obj2 = {
                 if (tmp24) {
                   const result2 = self._cancelLongPressDelayTimeout();
                 }
-                tmp24 = self.state.touchable.touchState === RESPONDER_INACTIVE_PRESS_IN && self.state.touchable.touchState !== RESPONDER_INACTIVE_PRESS_IN;
+                tmp24 =
+                  self.state.touchable.touchState === RESPONDER_INACTIVE_PRESS_IN &&
+                  self.state.touchable.touchState !== RESPONDER_INACTIVE_PRESS_IN;
               }
             }
           }
@@ -294,7 +378,15 @@ let obj2 = {
         if (tmp === ERROR) {
           const _HermesInternal2 = HermesInternal;
           let str9 = "<<host component>>`";
-          if ("Touchable cannot transition from `" + touchState + "` to `" + arg0 + "` for responder `" + typeof self.state.touchable.responderID === "number") {
+          if (
+            "Touchable cannot transition from `" +
+              touchState +
+              "` to `" +
+              arg0 +
+              "` for responder `" +
+              typeof self.state.touchable.responderID ===
+            "number"
+          ) {
             str9 = self.state.touchable.responderID;
           }
           error = new Error(str9);
@@ -306,7 +398,15 @@ let obj2 = {
       } else {
         const _HermesInternal = HermesInternal;
         let str4 = "host component`";
-        if ("Unrecognized signal `" + arg0 + "` or state `" + touchState + "` for Touchable responder `" + typeof self.state.touchable.responderID === "number") {
+        if (
+          "Unrecognized signal `" +
+            arg0 +
+            "` or state `" +
+            touchState +
+            "` for Touchable responder `" +
+            typeof self.state.touchable.responderID ===
+          "number"
+        ) {
           str4 = self.state.touchable.responderID;
         }
         const error1 = new Error(str4);
@@ -491,15 +591,18 @@ let obj2 = {
       let result = self.touchableHandleActivePressOut(closure_0);
     }
   },
-  withoutDefaultFocusAndBlur: {}
+  withoutDefaultFocusAndBlur: {},
 };
 ({ touchableHandleFocus, touchableHandleBlur } = obj2);
-obj2.withoutDefaultFocusAndBlur = _objectWithoutPropertiesDefault(obj2, ["touchableHandleFocus", "touchableHandleBlur"]);
+obj2.withoutDefaultFocusAndBlur = _objectWithoutPropertiesDefault(obj2, [
+  "touchableHandleFocus",
+  "touchableHandleBlur",
+]);
 
 export default {
   Mixin: obj2,
   renderDebugView(arg0) {
     ({ color, hitSlop } = arg0);
     return null;
-  }
+  },
 };

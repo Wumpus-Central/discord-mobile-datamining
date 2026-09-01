@@ -26,8 +26,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 noopAll;
 class ClipPath {
@@ -61,8 +60,8 @@ const items = [
       const merged = Object.assign(ClipPath(8256).extract(this, props));
       obj.children = props.children;
       return <tmp ref={this.refMethod} />;
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(ClipPath, items);
 importDefaultResultResult.displayName = "ClipPath";

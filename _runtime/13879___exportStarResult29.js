@@ -7,7 +7,12 @@ import e from "01281_e.js";
 
 let closure_2 = e.__importDefault(digitsToString);
 
-export const ToRawPrecision = function ToRawPrecision(ZERO, minimumSignificantDigits, maximumSignificantDigits, result) {
+export const ToRawPrecision = function ToRawPrecision(
+  ZERO,
+  minimumSignificantDigits,
+  maximumSignificantDigits,
+  result,
+) {
   let ceilResult1;
   let floorResult;
   let timesResult;

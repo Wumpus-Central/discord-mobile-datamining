@@ -1,7 +1,6 @@
 // _runtime/13511_version.js
 import SemVer from "13503_SemVer.js";
 
-
 export default (str) => {
   const tmp = SemVer;
   const tmpResult = tmp(str.trim().replace(/^[=v]+/, ""), arg1);

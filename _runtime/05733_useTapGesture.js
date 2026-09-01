@@ -9,7 +9,6 @@ import useManualGesture from "05745_useManualGesture.js";
 import useNativeGesture from "05746_useNativeGesture.js";
 import transformPanProps from "05747_transformPanProps.js";
 
-
 export const useTapGesture = map.useTapGesture;
 export const useFlingGesture = useFlingGesture.useFlingGesture;
 export const useLongPressGesture = transformLongPressProps.useLongPressGesture;

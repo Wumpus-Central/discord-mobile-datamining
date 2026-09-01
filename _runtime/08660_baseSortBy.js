@@ -12,4 +12,4 @@ export default function baseSortBy(arr) {
     } while (tmp4);
   }
   return arr;
-};
+}

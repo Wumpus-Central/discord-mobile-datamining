@@ -8,6 +8,6 @@ obj[45056] = {
   name: "MPFVersion",
   description(value) {
     return getStringValue.getStringValue(value);
-  }
+  },
 };
 arg5.default = obj;

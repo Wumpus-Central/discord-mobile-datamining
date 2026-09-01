@@ -1,9 +1,22 @@
 // _runtime/01746_prepareCurvedTransition.js
 const require = arg1;
 const dependencyMap = arg6;
-arg5.prepareCurvedTransition = function prepareCurvedTransition(cloneNode, duration, easingY, dummyTransitionKeyframeName) {
+arg5.prepareCurvedTransition = function prepareCurvedTransition(
+  cloneNode,
+  duration,
+  easingY,
+  dummyTransitionKeyframeName,
+) {
   let length;
-  const dummyAnimationConfig = { animationName: dummyTransitionKeyframeName, animationType: _require(dummy[1]).LayoutAnimationType.LAYOUT, duration: duration.duration, delay: duration.delay, easing: _require(dummy[0]).getEasingByName(easingY.easingY), callback: null, reversed: false };
+  const dummyAnimationConfig = {
+    animationName: dummyTransitionKeyframeName,
+    animationType: _require(dummy[1]).LayoutAnimationType.LAYOUT,
+    duration: duration.duration,
+    delay: duration.delay,
+    easing: _require(dummy[0]).getEasingByName(easingY.easingY),
+    callback: null,
+    reversed: false,
+  };
   dummy = cloneNode.cloneNode(true);
   dummy.isDummy = true;
   dummy.style.animationName = "";
@@ -34,9 +47,7 @@ arg5.prepareCurvedTransition = function prepareCurvedTransition(cloneNode, durat
   }
   backgroundColor = cloneNode.style.backgroundColor;
   cloneNode.style.backgroundColor = "transparent";
-  onFinalize = function onFinalize() {
-
-  };
+  onFinalize = function onFinalize() {};
   animationCancelCallback = function animationCancelCallback() {
     let length;
     if (typeof onFinalize !== "function") {
@@ -87,7 +98,9 @@ arg5.CurvedTransition = function CurvedTransition(name, name2, translateX) {
   obj = { name, style: null, duration: 300 };
   obj = { 0: null };
   obj1 = { transform: null };
-  const items = [{ translateX: "" + translateX.translateX + "px", scale: "" + translateX.scaleX + "," + translateX.scaleY }];
+  const items = [
+    { translateX: "" + translateX.translateX + "px", scale: "" + translateX.scaleX + "," + translateX.scaleY },
+  ];
   obj1[0] = items;
   obj[0] = obj1;
   obj[1] = obj;
@@ -95,8 +108,13 @@ arg5.CurvedTransition = function CurvedTransition(name, name2, translateX) {
   const obj3 = { name: name2, style: null, duration: 300 };
   const obj4 = { 0: null };
   const obj5 = { transform: null };
-  const obj2 = { translateX: "" + translateX.translateX + "px", scale: "" + translateX.scaleX + "," + translateX.scaleY };
-  const items1 = [{ translateY: "" + translateX.translateY + "px", scale: "" + translateX.scaleX + "," + translateX.scaleY }];
+  const obj2 = {
+    translateX: "" + translateX.translateX + "px",
+    scale: "" + translateX.scaleX + "," + translateX.scaleY,
+  };
+  const items1 = [
+    { translateY: "" + translateX.translateY + "px", scale: "" + translateX.scaleX + "," + translateX.scaleY },
+  ];
   obj5[0] = items1;
   obj4[0] = obj5;
   obj3[1] = obj4;

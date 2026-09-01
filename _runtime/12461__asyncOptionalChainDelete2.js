@@ -7,7 +7,7 @@ function _asyncOptionalChainDelete2() {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       closure_1 = tmp2;
       const obj2 = callback(closure_1_1[1]);
       callback = yield obj2._asyncOptionalChain(callback);

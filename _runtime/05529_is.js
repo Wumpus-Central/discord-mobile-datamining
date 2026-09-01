@@ -74,7 +74,6 @@ export const useSyncExternalStoreWithSelector = (arg0, arg1, arg2, arg3, arg4) =
         }
         return tmp3;
       },
-
     ];
     let fn;
     if (null !== tmp) {

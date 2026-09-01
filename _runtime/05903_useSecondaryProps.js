@@ -98,7 +98,7 @@ export const useSecondaryProps = function useSecondaryProps(ListHeaderComponent)
       return null;
     }, items3),
     CompatScrollView: null,
-    renderStickyHeaderBackdrop: null
+    renderStickyHeaderBackdrop: null,
   };
   const items5 = [renderScrollComponent];
   const tmp9 = ListEmptyComponentStyle(() => {

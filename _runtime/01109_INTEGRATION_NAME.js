@@ -240,6 +240,6 @@ export const webWorkerIntegration = registerSpanErrorInstrumentation.defineInteg
           }
         }
       });
-    }
+    },
   };
 });

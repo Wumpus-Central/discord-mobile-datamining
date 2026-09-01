@@ -1,7 +1,12 @@
 // _runtime/01720_RotateInData.js
 import convertAnimationObjectToKeyframes from "01711_convertAnimationObjectToKeyframes.js";
 
-obj = { RotateInDownLeft: { name: "RotateInDownLeft", style: obj, duration: 0.3 }, RotateInDownRight: { name: "RotateInDownRight", style: obj, duration: 0.3 }, RotateInUpLeft: { name: "RotateInUpLeft", style: obj1, duration: 0.3 }, RotateInUpRight: { name: "RotateInUpRight", style: obj2, duration: 0.3 } };
+obj = {
+  RotateInDownLeft: { name: "RotateInDownLeft", style: obj, duration: 0.3 },
+  RotateInDownRight: { name: "RotateInDownRight", style: obj, duration: 0.3 },
+  RotateInUpLeft: { name: "RotateInUpLeft", style: obj1, duration: 0.3 },
+  RotateInUpRight: { name: "RotateInUpRight", style: obj2, duration: 0.3 },
+};
 obj = { 0: { transform: items, opacity: 0 }, 100: null };
 items = [{ translateX: "-50%", translateY: "-250%", rotate: "-90deg" }];
 const items1 = [{ translateX: "0%", translateY: "0%", rotate: "0deg" }];
@@ -18,7 +23,12 @@ obj2 = { 0: { transform: items6, opacity: 0 }, 100: null };
 items6 = [{ translateX: "40%", translateY: "250%", rotate: "-90deg" }];
 const items7 = [{ translateX: "0%", translateY: "0%", rotate: "0deg" }];
 obj2[100] = { transform: items7, opacity: 1 };
-const obj3 = { RotateOutDownLeft: { name: "RotateOutDownLeft", style: obj4, duration: 0.3 }, RotateOutDownRight: { name: "RotateOutDownRight", style: obj5, duration: 0.3 }, RotateOutUpLeft: { name: "RotateOutUpLeft", style: obj6, duration: 0.3 }, RotateOutUpRight: { name: "RotateOutUpRight", style: obj7, duration: 0.3 } };
+const obj3 = {
+  RotateOutDownLeft: { name: "RotateOutDownLeft", style: obj4, duration: 0.3 },
+  RotateOutDownRight: { name: "RotateOutDownRight", style: obj5, duration: 0.3 },
+  RotateOutUpLeft: { name: "RotateOutUpLeft", style: obj6, duration: 0.3 },
+  RotateOutUpRight: { name: "RotateOutUpRight", style: obj7, duration: 0.3 },
+};
 obj4 = { 0: { transform: items8, opacity: 1 }, 100: null };
 items8 = [{ translateX: "0%", translateY: "0%", rotate: "0deg" }];
 const items9 = [{ translateX: "-40%", translateY: "250%", rotate: "90deg" }];

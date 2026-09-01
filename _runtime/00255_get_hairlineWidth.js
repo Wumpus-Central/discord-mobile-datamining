@@ -19,7 +19,7 @@ Object.defineProperty(obj, "hairlineWidth", {
     }
     return closure_3;
   },
-  set: undefined
+  set: undefined,
 });
 obj.absoluteFill = obj;
 obj.absoluteFillObject = obj;

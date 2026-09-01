@@ -42,5 +42,5 @@ arg5.default = {
       }
     }
     return str3;
-  }
+  },
 };

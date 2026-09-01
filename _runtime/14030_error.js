@@ -38,7 +38,11 @@ function ucs2decode(str) {
 const re0 = /^xn--/;
 const re1 = /[^\0-\x7F]/;
 const re2 = /[\x2E\u3002\uFF0E\uFF61]/g;
-let closure_3 = { overflow: "Overflow: input needs wider integers to process", "not-basic": "Illegal input >= 0x80 (not a basic code point)", "invalid-input": "Invalid input" };
+let closure_3 = {
+  overflow: "Overflow: input needs wider integers to process",
+  "not-basic": "Illegal input >= 0x80 (not a basic code point)",
+  "invalid-input": "Invalid input",
+};
 function digitToBasic(arg0, arg1) {
   return arg0 + 22 + 75 * (arg0 < 26) - (false << 5);
 }
@@ -63,7 +67,7 @@ function adapt(arg0, arg1, arg2) {
       tmp5 = sum;
     } while (sum > 455);
   }
-  return tmp3(num4 + 36 * tmp5 / (tmp5 + 38));
+  return tmp3(num4 + (36 * tmp5) / (tmp5 + 38));
 }
 function decode(arr) {
   let num = arr.lastIndexOf("-");
@@ -164,7 +168,7 @@ function decode(arr) {
                     } while (sum3 > 455);
                   }
                   let result = sum1 / sum2;
-                  let tmp25Result = tmp25(num13 + 36 * tmp26 / (tmp26 + 38));
+                  let tmp25Result = tmp25(num13 + (36 * tmp26) / (tmp26 + 38));
                   if (tmp66(result) > 2147483647 - num2) {
                     let tmp33 = globalThis;
                     let _RangeError2 = RangeError;
@@ -333,7 +337,7 @@ function encode(arg0) {
                   let diff2 = 36 - tmp35;
                   let tmp41 = fromCharCode;
                   let tmp42 = digitToBasic;
-                  arr1 = items.push(fromCharCode(digitToBasic(tmp35 + diff1 % diff2, 0)));
+                  arr1 = items.push(fromCharCode(digitToBasic(tmp35 + (diff1 % diff2), 0)));
                   let tmp44 = floor;
                   tmp45 = floor(diff1 / diff2);
                   let tmp46 = num8;
@@ -427,14 +431,14 @@ obj = {
       } while (tmp7);
     }
     return str + items.join(".");
-  }
+  },
 };
 obj = {
   decode: ucs2decode,
   encode(arg0) {
     const items = [...arg0];
     return String.fromCodePoint.apply(items);
-  }
+  },
 };
 
 export default obj;

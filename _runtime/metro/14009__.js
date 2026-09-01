@@ -1,7 +1,6 @@
 // _runtime/metro/14009__.js
 import all from "../13978_all.js";
 
-
 export default (arg0, arg1, arg2, arg3) => {
   let obj = arg3;
   if (!arg3) {
@@ -40,8 +39,7 @@ export default (arg0, arg1, arg2, arg3) => {
         tmp3(14006).f(arg0, arg1, obj);
         const tmp3Result = tmp3(14006);
       }
-    } catch (err) {
-    }
+    } catch (err) {}
   }
   return arg0;
 };

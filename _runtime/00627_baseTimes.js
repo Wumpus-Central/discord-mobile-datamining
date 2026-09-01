@@ -6,4 +6,4 @@ export default function baseTimes(arg0, arg1) {
     ArrayResult[num] = arg1(num);
   }
   return ArrayResult;
-};
+}

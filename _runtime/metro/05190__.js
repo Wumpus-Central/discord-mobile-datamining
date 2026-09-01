@@ -16,8 +16,7 @@ arg5.default = {
             buffer = Uint8Array.from(buffer);
           }
           value.decode(buffer);
-        } catch (err) {
-        }
+        } catch (err) {}
       }
     }
     const mapped = buffer.map((arg0) => String.fromCharCode(arg0));
@@ -31,5 +30,5 @@ arg5.default = {
       }
     })(mapped.join(""));
   },
-  TAG_HEADER_SIZE: 5
+  TAG_HEADER_SIZE: 5,
 };

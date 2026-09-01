@@ -14,7 +14,7 @@ globalThis.IntlMessageFormat.__addLocaleData({
       str2 = str3;
     }
     return str2;
-  }
+  },
 });
 globalThis.IntlMessageFormat.__addLocaleData({ locale: "nl-AW", parentLocale: "nl" });
 globalThis.IntlMessageFormat.__addLocaleData({ locale: "nl-BE", parentLocale: "nl" });

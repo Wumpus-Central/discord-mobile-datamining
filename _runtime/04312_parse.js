@@ -49,7 +49,16 @@ function parse(str, delimiter) {
         sum1 = num2 + 1;
         tmp9 = num2;
       }
-      let obj = { name: null, prefix: null, delimiter: null, optional: null, repeat: null, partial: null, asterisk: null, pattern: null };
+      let obj = {
+        name: null,
+        prefix: null,
+        delimiter: null,
+        optional: null,
+        repeat: null,
+        partial: null,
+        asterisk: null,
+        pattern: null,
+      };
       obj[0] = tmp9;
       if (!str3) {
         str3 = "";
@@ -200,7 +209,16 @@ function pathToRegexp(source, items, arg2) {
       let num3 = 0;
       if (0 < match.length) {
         do {
-          obj = { name: null, prefix: null, delimiter: null, optional: false, repeat: false, partial: false, asterisk: false, pattern: null };
+          obj = {
+            name: null,
+            prefix: null,
+            delimiter: null,
+            optional: false,
+            repeat: false,
+            partial: false,
+            asterisk: false,
+            pattern: null,
+          };
           obj[0] = num3;
           let arr = items.push(obj);
           num3 = num3 + 1;
@@ -286,11 +304,11 @@ module.exports.compile = function compile(arg0, arg1) {
               }
             } else {
               let _TypeError5 = TypeError;
-              let str17 = "Expected \"";
+              let str17 = 'Expected "';
               let tmp32 = new.target;
-              let str18 = "\" to be defined";
+              let str18 = '" to be defined';
               let tmp33 = new.target;
-              let typeError = new TypeError("Expected \"" + tmp3.name + "\" to be defined");
+              let typeError = new TypeError('Expected "' + tmp3.name + '" to be defined');
               let tmp35 = typeError;
               throw typeError;
             }
@@ -303,11 +321,11 @@ module.exports.compile = function compile(arg0, arg1) {
                   text = str;
                   if (!tmp3.optional) {
                     let _TypeError4 = TypeError;
-                    let str15 = "Expected \"";
+                    let str15 = 'Expected "';
                     let tmp28 = new.target;
-                    let str16 = "\" to not be empty";
+                    let str16 = '" to not be empty';
                     let tmp29 = new.target;
-                    let typeError1 = new TypeError("Expected \"" + tmp3.name + "\" to not be empty");
+                    let typeError1 = new TypeError('Expected "' + tmp3.name + '" to not be empty');
                     let tmp31 = typeError1;
                     throw typeError1;
                   }
@@ -328,29 +346,33 @@ module.exports.compile = function compile(arg0, arg1) {
                       continue;
                     }
                     let _TypeError3 = TypeError;
-                    let str11 = "Expected all \"";
-                    let str12 = "\" to match \"";
+                    let str11 = 'Expected all "';
+                    let str12 = '" to match "';
                     let _JSON2 = JSON;
                     let text1 = `Expected all "${tmp3.name}" to match "${tmp3.pattern}`;
-                    let str13 = "\", but received `";
+                    let str13 = '", but received `';
                     let tmp23 = new.target;
                     let str14 = "`";
                     let tmp24 = new.target;
-                    let typeError2 = new TypeError(text1 + "\", but received `" + JSON.stringify(_encodeURIComponentResult) + "`");
+                    let typeError2 = new TypeError(
+                      text1 + '", but received `' + JSON.stringify(_encodeURIComponentResult) + "`",
+                    );
                     let tmp26 = typeError2;
                     throw typeError2;
                   }
                 }
               } else {
                 let _TypeError2 = TypeError;
-                let str8 = "Expected \"";
+                let str8 = 'Expected "';
                 let _JSON = JSON;
                 let text2 = `Expected "${tmp3.name}`;
-                let str9 = "\" to not repeat, but received `";
+                let str9 = '" to not repeat, but received `';
                 let tmp14 = new.target;
                 let str10 = "`";
                 let tmp15 = new.target;
-                let typeError3 = new TypeError(`Expected "${tmp3.name}` + "\" to not repeat, but received `" + JSON.stringify(arr) + "`");
+                let typeError3 = new TypeError(
+                  `Expected "${tmp3.name}` + '" to not repeat, but received `' + JSON.stringify(arr) + "`",
+                );
                 let tmp17 = typeError3;
                 throw typeError3;
               }
@@ -383,7 +405,9 @@ module.exports.compile = function compile(arg0, arg1) {
         str2 = text;
       }
       const _TypeError = TypeError;
-      const typeError4 = new TypeError("Expected \"" + tmp3.name + "\" to match \"" + tmp3.pattern + "\", but received \"" + replaced + "\"");
+      const typeError4 = new TypeError(
+        'Expected "' + tmp3.name + '" to match "' + tmp3.pattern + '", but received "' + replaced + '"',
+      );
       throw typeError4;
     }
     return str2;
@@ -438,11 +462,11 @@ module.exports.tokensToFunction = function tokensToFunction(arg0) {
               }
             } else {
               let _TypeError5 = TypeError;
-              let str17 = "Expected \"";
+              let str17 = 'Expected "';
               let tmp32 = new.target;
-              let str18 = "\" to be defined";
+              let str18 = '" to be defined';
               let tmp33 = new.target;
-              let typeError = new TypeError("Expected \"" + tmp3.name + "\" to be defined");
+              let typeError = new TypeError('Expected "' + tmp3.name + '" to be defined');
               let tmp35 = typeError;
               throw typeError;
             }
@@ -455,11 +479,11 @@ module.exports.tokensToFunction = function tokensToFunction(arg0) {
                   text = str;
                   if (!tmp3.optional) {
                     let _TypeError4 = TypeError;
-                    let str15 = "Expected \"";
+                    let str15 = 'Expected "';
                     let tmp28 = new.target;
-                    let str16 = "\" to not be empty";
+                    let str16 = '" to not be empty';
                     let tmp29 = new.target;
-                    let typeError1 = new TypeError("Expected \"" + tmp3.name + "\" to not be empty");
+                    let typeError1 = new TypeError('Expected "' + tmp3.name + '" to not be empty');
                     let tmp31 = typeError1;
                     throw typeError1;
                   }
@@ -480,29 +504,33 @@ module.exports.tokensToFunction = function tokensToFunction(arg0) {
                       continue;
                     }
                     let _TypeError3 = TypeError;
-                    let str11 = "Expected all \"";
-                    let str12 = "\" to match \"";
+                    let str11 = 'Expected all "';
+                    let str12 = '" to match "';
                     let _JSON2 = JSON;
                     let text1 = `Expected all "${tmp3.name}" to match "${tmp3.pattern}`;
-                    let str13 = "\", but received `";
+                    let str13 = '", but received `';
                     let tmp23 = new.target;
                     let str14 = "`";
                     let tmp24 = new.target;
-                    let typeError2 = new TypeError(text1 + "\", but received `" + JSON.stringify(_encodeURIComponentResult) + "`");
+                    let typeError2 = new TypeError(
+                      text1 + '", but received `' + JSON.stringify(_encodeURIComponentResult) + "`",
+                    );
                     let tmp26 = typeError2;
                     throw typeError2;
                   }
                 }
               } else {
                 let _TypeError2 = TypeError;
-                let str8 = "Expected \"";
+                let str8 = 'Expected "';
                 let _JSON = JSON;
                 let text2 = `Expected "${tmp3.name}`;
-                let str9 = "\" to not repeat, but received `";
+                let str9 = '" to not repeat, but received `';
                 let tmp14 = new.target;
                 let str10 = "`";
                 let tmp15 = new.target;
-                let typeError3 = new TypeError(`Expected "${tmp3.name}` + "\" to not repeat, but received `" + JSON.stringify(arr) + "`");
+                let typeError3 = new TypeError(
+                  `Expected "${tmp3.name}` + '" to not repeat, but received `' + JSON.stringify(arr) + "`",
+                );
                 let tmp17 = typeError3;
                 throw typeError3;
               }
@@ -535,14 +563,19 @@ module.exports.tokensToFunction = function tokensToFunction(arg0) {
         str2 = text;
       }
       const _TypeError = TypeError;
-      const typeError4 = new TypeError("Expected \"" + tmp3.name + "\" to match \"" + tmp3.pattern + "\", but received \"" + replaced + "\"");
+      const typeError4 = new TypeError(
+        'Expected "' + tmp3.name + '" to match "' + tmp3.pattern + '", but received "' + replaced + '"',
+      );
       throw typeError4;
     }
     return str2;
   };
 };
 module.exports.tokensToRegExp = tokensToRegExp;
-let items = ["(\\\\.)", "([\\/.])?(?:(?:\\:(\\w+)(?:\\(((?:\\\\.|[^\\\\()])+)\\))?|\\(((?:\\\\.|[^\\\\()])+)\\))([+*?])?|(\\*))"];
+let items = [
+  "(\\\\.)",
+  "([\\/.])?(?:(?:\\:(\\w+)(?:\\(((?:\\\\.|[^\\\\()])+)\\))?|\\(((?:\\\\.|[^\\\\()])+)\\))([+*?])?|(\\*))",
+];
 let regExp = new RegExp(items.join("|"), "g");
 
 export default pathToRegexp;

@@ -29,7 +29,15 @@ export const getMetricSummaryJsonForSpan = function getMetricSummaryJsonForSpan(
     return obj;
   }
 };
-export const updateMetricSummaryOnSpan = function updateMetricSummaryOnSpan(activeSpan, arg1, sanitizeMetricKeyResult, diff, sanitizeUnitResult, arg5, bucketKey) {
+export const updateMetricSummaryOnSpan = function updateMetricSummaryOnSpan(
+  activeSpan,
+  arg1,
+  sanitizeMetricKeyResult,
+  diff,
+  sanitizeUnitResult,
+  arg5,
+  bucketKey,
+) {
   let obj = activeSpan[_sentryMetrics];
   if (!obj) {
     const _Map = Map;
@@ -41,7 +49,7 @@ export const updateMetricSummaryOnSpan = function updateMetricSummaryOnSpan(acti
   const value = obj.get(bucketKey);
   if (value) {
     const tmp12 = callback(value, 2)[1];
-    const items = [combined, ];
+    const items = [combined];
     obj = { min: null, max: null, count: null, sum: null, tags: null };
     const _Math = Math;
     obj[0] = Math.min(tmp12.min, diff);
@@ -57,7 +65,7 @@ export const updateMetricSummaryOnSpan = function updateMetricSummaryOnSpan(acti
     items[1] = obj;
     const result = obj.set(bucketKey, items);
   } else {
-    const items1 = [combined, ];
+    const items1 = [combined];
     obj = { min: null, max: null, count: 1, sum: null, tags: null };
     obj[0] = diff;
     obj[1] = diff;

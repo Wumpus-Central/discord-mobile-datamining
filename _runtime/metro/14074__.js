@@ -33,7 +33,7 @@ arg5.default = () => (startTimer) => {
         title.send("benchmark.report", obj);
       }
       return { step, stop, last: stop };
-    }
+    },
   };
   return { features };
 };

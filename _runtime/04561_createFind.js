@@ -27,4 +27,4 @@ export default function createFind(arg0) {
     }
     return tmp8;
   };
-};
+}

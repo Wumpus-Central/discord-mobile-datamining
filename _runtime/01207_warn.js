@@ -7,9 +7,7 @@ import { debug } from "00817_registerSpanErrorInstrumentation.js";
 ({ UIManager, View: closure_1 } = get_ActivityIndicator);
 const RNSentryReplayMask = "RNSentryReplayMask";
 const RNSentryReplayUnmask = "RNSentryReplayUnmask";
-function warn(arg0) {
-
-}
+function warn(arg0) {}
 class MaskFallback {
   constructor(arg0) {
     if (typeof warn !== "function") {
@@ -18,7 +16,13 @@ class MaskFallback {
     }
     Mask = "Mask";
     timerId = setTimeout(() => {
-      console.warn("[SentrySessionReplay] " + Unmask + " component is not supported on the current platform. If " + Unmask + " should be supported, please ensure that the application build is up to date.");
+      console.warn(
+        "[SentrySessionReplay] " +
+          Unmask +
+          " component is not supported on the current platform. If " +
+          Unmask +
+          " should be supported, please ensure that the application build is up to date.",
+      );
     }, 0);
     return Mask.createElement(View, Object.assign({}, global));
   }
@@ -32,7 +36,9 @@ if (!isHermesEnabled.isExpoGo()) {
     }
   }
   if (undefined) {
-    let value = require("setRuntimeConfigProvider").get("RNSentryReplayMask", () => ({ uiViewClassName: RNSentryReplayMask }));
+    let value = require("setRuntimeConfigProvider").get("RNSentryReplayMask", () => ({
+      uiViewClassName: RNSentryReplayMask,
+    }));
     const obj2 = require("setRuntimeConfigProvider");
   }
   class UnmaskFallback {
@@ -43,7 +49,13 @@ if (!isHermesEnabled.isExpoGo()) {
       }
       Unmask = "Unmask";
       timerId = setTimeout(() => {
-        console.warn("[SentrySessionReplay] " + Unmask + " component is not supported on the current platform. If " + Unmask + " should be supported, please ensure that the application build is up to date.");
+        console.warn(
+          "[SentrySessionReplay] " +
+            Unmask +
+            " component is not supported on the current platform. If " +
+            Unmask +
+            " should be supported, please ensure that the application build is up to date.",
+        );
       }, 0);
       return Unmask.createElement(View, Object.assign({}, global));
     }
@@ -53,11 +65,15 @@ if (!isHermesEnabled.isExpoGo()) {
     if (null !== hasViewManagerConfig2) {
       if (undefined !== hasViewManagerConfig2) {
         const call2 = hasViewManagerConfig2.call;
-        typeof call2 === "unknown" ? hasViewManagerConfig2("RNSentryReplayUnmask") : call2(UIManager, "RNSentryReplayUnmask");
+        typeof call2 === "unknown"
+          ? hasViewManagerConfig2("RNSentryReplayUnmask")
+          : call2(UIManager, "RNSentryReplayUnmask");
       }
     }
     if (undefined) {
-      value = require("setRuntimeConfigProvider").get("RNSentryReplayUnmask", () => ({ uiViewClassName: RNSentryReplayUnmask }));
+      value = require("setRuntimeConfigProvider").get("RNSentryReplayUnmask", () => ({
+        uiViewClassName: RNSentryReplayUnmask,
+      }));
       const obj4 = require("setRuntimeConfigProvider");
     }
     class UnmaskFallback {
@@ -68,7 +84,13 @@ if (!isHermesEnabled.isExpoGo()) {
         }
         Unmask = "Unmask";
         timerId = setTimeout(() => {
-          console.warn("[SentrySessionReplay] " + Unmask + " component is not supported on the current platform. If " + Unmask + " should be supported, please ensure that the application build is up to date.");
+          console.warn(
+            "[SentrySessionReplay] " +
+              Unmask +
+              " component is not supported on the current platform. If " +
+              Unmask +
+              " should be supported, please ensure that the application build is up to date.",
+          );
         }, 0);
         return Unmask.createElement(View, Object.assign({}, global));
       }

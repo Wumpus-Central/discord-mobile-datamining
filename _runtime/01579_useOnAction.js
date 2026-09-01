@@ -31,7 +31,20 @@ export const useOnAction = function useOnAction(router) {
   const insertionEffect = setState.useInsertionEffect(() => {
     closure_14.current = routerConfigOptions;
   });
-  const items = [actionListeners, beforeRemoveListeners, emitter, flushUpdates, getState, context1, key, onAction, onDispatchAction, onRouteFocus, router, setState];
+  const items = [
+    actionListeners,
+    beforeRemoveListeners,
+    emitter,
+    flushUpdates,
+    getState,
+    context1,
+    key,
+    onAction,
+    onDispatchAction,
+    onRouteFocus,
+    router,
+    setState,
+  ];
   callback = setState.useCallback((target) => {
     let set = arg1;
     if (arg1 === undefined) {

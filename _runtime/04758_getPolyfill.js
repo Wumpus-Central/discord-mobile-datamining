@@ -2,7 +2,6 @@
 import requirePromise from "04757_requirePromise.js";
 import allSettled2 from "04759_allSettled.js";
 
-
 export default function getPolyfill() {
   requirePromise();
   if (typeof Promise.allSettled === "function") {
@@ -10,4 +9,4 @@ export default function getPolyfill() {
     allSettled = allSettled2;
   }
   return allSettled;
-};
+}

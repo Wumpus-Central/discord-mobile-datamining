@@ -24,8 +24,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class StateSafePureComponent {
   constructor(arg0) {
@@ -65,16 +64,16 @@ let items = [
         }
         const items = [
           (arg0, arg1) => {
-              fn2._inAsyncStateUpdate = true;
-              try {
-                tmp2._inAsyncStateUpdate = false;
-                return self(arg0, arg1);
-              } catch (tmp6) {
-                tmp._inAsyncStateUpdate = false;
-                throw tmp6;
-              }
-            },
-          arg1
+            fn2._inAsyncStateUpdate = true;
+            try {
+              tmp2._inAsyncStateUpdate = false;
+              return self(arg0, arg1);
+            } catch (tmp6) {
+              tmp._inAsyncStateUpdate = false;
+              throw tmp6;
+            }
+          },
+          arg1,
         ];
         fn(items);
       } else {
@@ -85,7 +84,7 @@ let items = [
         const items1 = [fn, arg1];
         fn2(items1);
       }
-    }
+    },
   },
   {
     key: "_installSetStateHooks",
@@ -94,26 +93,26 @@ let items = [
       ({ props: dependencyMap, state: closure_2 } = this);
       let obj = {
         get() {
-          self(closure_1_1[7])(!self._inAsyncStateUpdate, "\"this.props\" should not be accessed during state updates");
+          self(closure_1_1[7])(!self._inAsyncStateUpdate, '"this.props" should not be accessed during state updates');
           return closure_1;
         },
         set(arg0) {
           closure_1 = arg0;
-        }
+        },
       };
       Object.defineProperty(this, "props", obj);
       obj = {
         get() {
-          self(closure_1_1[7])(!self._inAsyncStateUpdate, "\"this.state\" should not be acceessed during state updates");
+          self(closure_1_1[7])(!self._inAsyncStateUpdate, '"this.state" should not be acceessed during state updates');
           return closure_2;
         },
         set(arg0) {
           closure_2 = arg0;
-        }
+        },
       };
       Object.defineProperty(this, "state", obj);
-    }
-  }
+    },
+  },
 ];
 
 export default importDefaultResult(StateSafePureComponent, items);

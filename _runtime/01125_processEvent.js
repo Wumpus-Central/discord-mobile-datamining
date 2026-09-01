@@ -8,7 +8,7 @@ function processEvent(arg0, arg1, arg2) {
   return callback(this, undefined, undefined, () => {
     let options = 0;
     c4 = 0;
-    return (function*() {
+    return (function* () {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -187,8 +187,6 @@ if (!fn) {
 }
 arg5.screenshotIntegration = () => ({
   name: "Screenshot",
-  setupOnce() {
-
-  },
-  processEvent
+  setupOnce() {},
+  processEvent,
 });

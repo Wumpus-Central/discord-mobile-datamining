@@ -4,7 +4,15 @@ import renderElement from "00114_renderElement.js";
 require = arg1;
 const module = arg2;
 const dependencyMap = arg6;
-const items = [["change", "touchExplorationDidChange"], ["reduceMotionChanged", "reduceMotionDidChange"], ["highTextContrastChanged", "highTextContrastDidChange"], ["screenReaderChanged", "touchExplorationDidChange"], ["accessibilityServiceChanged", "accessibilityServiceDidChange"], ["invertColorsChanged", "invertColorDidChange"], ["grayscaleChanged", "grayscaleModeDidChange"]];
+const items = [
+  ["change", "touchExplorationDidChange"],
+  ["reduceMotionChanged", "reduceMotionDidChange"],
+  ["highTextContrastChanged", "highTextContrastDidChange"],
+  ["screenReaderChanged", "touchExplorationDidChange"],
+  ["accessibilityServiceChanged", "accessibilityServiceDidChange"],
+  ["invertColorsChanged", "invertColorDidChange"],
+  ["grayscaleChanged", "grayscaleModeDidChange"],
+];
 const map = new Map(items);
 arg5.default = {
   isBoldTextEnabled() {
@@ -110,9 +118,7 @@ arg5.default = {
     const value = map.get(arg0);
     if (null == value) {
       let obj = { remove: null };
-      obj[0] = function remove() {
-
-      };
+      obj[0] = function remove() {};
       let addListenerResult = obj;
     } else {
       obj = module(92);
@@ -152,5 +158,5 @@ arg5.default = {
         arg0(closure_0);
       }
     });
-  }
+  },
 };

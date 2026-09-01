@@ -17,7 +17,7 @@ KeyboardEvents2.addListener("keyboardWillShow", (arg0) => {
 closure_0 = importDefaultResult((arg0) => {
   closure_0 = arg0;
   c3 = 0;
-  return (function*(arg0) {
+  return (function* (arg0) {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -107,7 +107,7 @@ obj = {
   },
   state() {
     return obj;
-  }
+  },
 };
 
 export const KeyboardController = obj;

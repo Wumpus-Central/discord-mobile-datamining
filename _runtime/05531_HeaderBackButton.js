@@ -11,7 +11,17 @@ require = arg1;
 ({ Animated: c5, Image, Platform, StyleSheet, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let c9 = 24;
-obj = { container: obj, label: { fontSize: 17, letterSpacing: 0.35 }, labelWrapper: null, icon: null, iconWithLabel: null, iconMaskContainer: null, iconMaskFillerRect: null, iconMask: null, flip: null };
+obj = {
+  container: obj,
+  label: { fontSize: 17, letterSpacing: 0.35 },
+  labelWrapper: null,
+  icon: null,
+  iconWithLabel: null,
+  iconMaskContainer: null,
+  iconMaskFillerRect: null,
+  iconMask: null,
+  flip: null,
+};
 obj = { paddingHorizontal: 0, minWidth: StyleSheet.hairlineWidth, marginVertical: 3, marginHorizontal: 11 };
 obj = { flexDirection: "row", alignItems: "flex-start", marginEnd: require("HeaderIcon").ICON_MARGIN };
 obj[2] = obj;
@@ -29,7 +39,16 @@ export const HeaderBackButton = function HeaderBackButton(accessibilityLabel) {
   if (displayMode === undefined) {
     displayMode = "minimal";
   }
-  ({ onPress: require, screenLayout, tintColor, titleLayout, truncatedLabel, onLabelLayout, pressColor, pressOpacity } = accessibilityLabel);
+  ({
+    onPress: require,
+    screenLayout,
+    tintColor,
+    titleLayout,
+    truncatedLabel,
+    onLabelLayout,
+    pressColor,
+    pressOpacity,
+  } = accessibilityLabel);
   if (truncatedLabel === undefined) {
     truncatedLabel = "Back";
   }
@@ -70,7 +89,7 @@ export const HeaderBackButton = function HeaderBackButton(accessibilityLabel) {
     pressColor,
     pressOpacity,
     style: items,
-    children: null
+    children: null,
   };
   items = [container.container, style];
   if (backImage) {
@@ -89,7 +108,7 @@ export const HeaderBackButton = function HeaderBackButton(accessibilityLabel) {
     obj1[2] = items1;
     backImageResult = tmp9(tmp2(5532).HeaderIcon, obj1);
   }
-  const items2 = [backImageResult, ];
+  const items2 = [backImageResult];
   let tmp11Result = null;
   if ("minimal" !== displayMode) {
     let diff = null;
@@ -138,7 +157,7 @@ export const HeaderBackButton = function HeaderBackButton(accessibilityLabel) {
         tmp9Result = tmp9(RN.Text, obj3);
       }
     }
-    const items5 = [tmp9Result, , ];
+    const items5 = [tmp9Result, ,];
     tmp9Result = null;
     if (truncatedLabel) {
       const obj4 = { style: null, numberOfLines: 1, onLayout: null, children: null };
@@ -152,7 +171,14 @@ export const HeaderBackButton = function HeaderBackButton(accessibilityLabel) {
     items5[1] = tmp9Result;
     let tmp9Result1 = null;
     if (tmp20) {
-      const obj5 = { accessible: false, onLayout: null, style: null, numberOfLines: 1, allowFontScaling: null, children: null };
+      const obj5 = {
+        accessible: false,
+        onLayout: null,
+        style: null,
+        numberOfLines: 1,
+        allowFontScaling: null,
+        children: null,
+      };
       obj5[1] = onLabelLayout;
       let tmp29 = null;
       if (tintColor) {

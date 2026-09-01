@@ -1,9 +1,7 @@
 // _runtime/14085_getDevMenu.js
 import closure_0 from "00017_get_ActivityIndicator.js";
 
-function getDevMenu() {
-
-}
+function getDevMenu() {}
 
 export default () => () => ({
   onCommand(type) {
@@ -12,7 +10,14 @@ export default () => () => ({
         if (typeof closure_1 !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        let obj = { reload: null, show: null, getConstants: null, debugRemotely: null, setHotLoadingEnabled: null, setProfilingEnabled: null };
+        let obj = {
+          reload: null,
+          show: null,
+          getConstants: null,
+          debugRemotely: null,
+          setHotLoadingEnabled: null,
+          setProfilingEnabled: null,
+        };
         obj[0] = function reload() {
           console.warn("DevMenu." + "reload" + "() not available in this environment");
         };
@@ -38,7 +43,14 @@ export default () => () => ({
         if (typeof closure_1 !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        obj = { reload: null, show: null, getConstants: null, debugRemotely: null, setHotLoadingEnabled: null, setProfilingEnabled: null };
+        obj = {
+          reload: null,
+          show: null,
+          getConstants: null,
+          debugRemotely: null,
+          setHotLoadingEnabled: null,
+          setProfilingEnabled: null,
+        };
         obj[0] = function reload() {
           console.warn("DevMenu." + "reload" + "() not available in this environment");
         };
@@ -61,5 +73,5 @@ export default () => () => ({
         obj.reload();
       }
     }
-  }
+  },
 });

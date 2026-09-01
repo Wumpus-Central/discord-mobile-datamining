@@ -24,8 +24,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class DecayAnimation {
   constructor(arg0) {
@@ -58,8 +57,15 @@ let items = [
   {
     key: "__getNativeAnimationConfig",
     value: function __getNativeAnimationConfig() {
-      return { type: "decay", deceleration: this._deceleration, velocity: this._velocity, iterations: this.__iterations, platformConfig: this._platformConfig, debugID: this.__getDebugID() };
-    }
+      return {
+        type: "decay",
+        deceleration: this._deceleration,
+        velocity: this._velocity,
+        iterations: this.__iterations,
+        platformConfig: this._platformConfig,
+        debugID: this.__getDebugID(),
+      };
+    },
   },
   {
     key: "start",
@@ -83,7 +89,7 @@ let items = [
         const _requestAnimationFrame = requestAnimationFrame;
         self._animationFrame = requestAnimationFrame(() => self.onUpdate());
       }
-    }
+    },
   },
   {
     key: "onUpdate",
@@ -102,7 +108,7 @@ let items = [
           self._animationFrame = requestAnimationFrame(onUpdate.bind(self));
         }
       }
-    }
+    },
   },
   {
     key: "stop",
@@ -118,8 +124,8 @@ let items = [
         DecayAnimation.cancelAnimationFrame(self._animationFrame);
       }
       self.__notifyAnimationEnd({ finished: false });
-    }
-  }
+    },
+  },
 ];
 
 export default importDefaultResult(DecayAnimation, items);

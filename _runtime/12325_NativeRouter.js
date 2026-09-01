@@ -22,18 +22,24 @@ NativeRouter.defaultProps = {
         text: "Cancel",
         onPress() {
           return callback(false);
-        }
+        },
       },
       {
         text: "OK",
         onPress() {
           return callback(true);
-        }
-      }
+        },
+      },
     ];
     Alert.alert("Confirm", arg0, items);
-  }
+  },
 };
-NativeRouter.propTypes = { initialEntries: emptyFunctionDefault.array, initialIndex: emptyFunctionDefault.number, getUserConfirmation: emptyFunctionDefault.func, keyLength: emptyFunctionDefault.number, children: emptyFunctionDefault.node };
+NativeRouter.propTypes = {
+  initialEntries: emptyFunctionDefault.array,
+  initialIndex: emptyFunctionDefault.number,
+  getUserConfirmation: emptyFunctionDefault.func,
+  keyLength: emptyFunctionDefault.number,
+  children: emptyFunctionDefault.node,
+};
 
 export default NativeRouter;

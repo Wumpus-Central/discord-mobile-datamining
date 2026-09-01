@@ -92,7 +92,12 @@ class MinuteParser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 60, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", {
+            value: 60,
+            enumerable: true,
+            configurable: true,
+            writable: true,
+          });
         } else {
           num3 = 60;
           applyResult.priority = 60;
@@ -215,7 +220,7 @@ obj = {
     } else {
       return _createSuperInternal(3880).parseNDigits(arg1.length, arg0);
     }
-  }
+  },
 };
 let items = [
   obj,
@@ -227,15 +232,15 @@ let items = [
         tmp = arg1 <= 59;
       }
       return tmp;
-    }
+    },
   },
   {
     key: "set",
     value: function set(setUTCMinutes) {
       setUTCMinutes.setUTCMinutes(arg2, 0, 0);
       return setUTCMinutes;
-    }
-  }
+    },
+  },
 ];
 if (0 < items.length) {
   do {

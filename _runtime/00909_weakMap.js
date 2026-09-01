@@ -9,7 +9,7 @@ export const functionToStringIntegration = setupIntegration.defineIntegration(()
   setupOnce() {
     try {
       const _Function = Function;
-      Function.prototype.toString = function() {
+      Function.prototype.toString = function () {
         const items = [...arguments];
         const originalFunction = callback(822).getOriginalFunction(this);
         const obj = callback(822);
@@ -22,10 +22,9 @@ export const functionToStringIntegration = setupIntegration.defineIntegration(()
         }
         return toString.apply(self, items);
       };
-    } catch (err) {
-    }
+    } catch (err) {}
   },
   setup(arg0) {
     const result = closure_3.set(arg0, true);
-  }
+  },
 }));

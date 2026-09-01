@@ -42,7 +42,7 @@ export const logger = getGlobalSingleton.getGlobalSingleton("logger", function m
     },
     isEnabled() {
       return c0;
-    }
+    },
   };
   const forEach = items.forEach;
   if (_require(obj[1]).DEBUG_BUILD) {
@@ -61,9 +61,7 @@ export const logger = getGlobalSingleton.getGlobalSingleton("logger", function m
     });
   } else {
     const item1 = forEach((arg0) => {
-      obj[arg0] = () => {
-
-      };
+      obj[arg0] = () => {};
     });
   }
   return obj;

@@ -24,8 +24,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class AnimatedTransform {
   constructor(arg0, arg1, arg2) {
@@ -65,7 +64,7 @@ let obj = {
     }
     const items = [arg0];
     fn(items);
-  }
+  },
 };
 let items = [
   obj,
@@ -127,7 +126,7 @@ let items = [
         }
         return obj;
       });
-    }
+    },
   },
   {
     key: "__getValueWithStaticTransforms",
@@ -244,7 +243,7 @@ let items = [
         }
         return obj;
       });
-    }
+    },
   },
   {
     key: "__getAnimatedValue",
@@ -304,7 +303,7 @@ let items = [
         }
         return obj;
       });
-    }
+    },
   },
   {
     key: "__attach",
@@ -320,7 +319,7 @@ let items = [
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
-    }
+    },
   },
   {
     key: "__detach",
@@ -336,7 +335,7 @@ let items = [
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
-    }
+    },
   },
   {
     key: "__getNativeConfig",
@@ -373,8 +372,8 @@ let items = [
       }
       obj = { type: "transform", transforms: items, debugID: self.__getDebugID() };
       return obj;
-    }
-  }
+    },
+  },
 ];
 obj = {
   key: "from",
@@ -424,7 +423,7 @@ obj = {
       tmp16Result._transforms = _transforms;
       const tmp16 = closure_3;
     }
-  }
+  },
 };
 let items1 = [obj];
 

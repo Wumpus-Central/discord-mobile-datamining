@@ -2,10 +2,18 @@
 import { cancelAnimation } from "01653_cancelAnimation.js";
 const require = arg1;
 let dependencyMap = arg6;
-let closure_2 = { code: "function pnpm_useGestureHandlerTs1(event){const{state,State,gestureSource,source,onStart}=this.__closure;state.value=State.BEGAN;gestureSource.value=source;onStart(source,event);return;}" };
-let closure_3 = { code: "function pnpm_useGestureHandlerTs2(event){const{gestureSource,source,state,onChange}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;onChange(source,event);}" };
-let closure_4 = { code: "function pnpm_useGestureHandlerTs3(event){const{gestureSource,source,state,GESTURE_SOURCE,onEnd}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;gestureSource.value=GESTURE_SOURCE.UNDETERMINED;onEnd(source,event);}" };
-let closure_5 = { code: "function pnpm_useGestureHandlerTs4(event){const{gestureSource,source,state,GESTURE_SOURCE,onFinalize}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;gestureSource.value=GESTURE_SOURCE.UNDETERMINED;onFinalize(source,event);}" };
+let closure_2 = {
+  code: "function pnpm_useGestureHandlerTs1(event){const{state,State,gestureSource,source,onStart}=this.__closure;state.value=State.BEGAN;gestureSource.value=source;onStart(source,event);return;}",
+};
+let closure_3 = {
+  code: "function pnpm_useGestureHandlerTs2(event){const{gestureSource,source,state,onChange}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;onChange(source,event);}",
+};
+let closure_4 = {
+  code: "function pnpm_useGestureHandlerTs3(event){const{gestureSource,source,state,GESTURE_SOURCE,onEnd}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;gestureSource.value=GESTURE_SOURCE.UNDETERMINED;onEnd(source,event);}",
+};
+let closure_5 = {
+  code: "function pnpm_useGestureHandlerTs4(event){const{gestureSource,source,state,GESTURE_SOURCE,onFinalize}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;gestureSource.value=GESTURE_SOURCE.UNDETERMINED;onFinalize(source,event);}",
+};
 arg5.useGestureHandler = (source, state, gestureSource, onStart, onChange, onEnd, onFinalize) => {
   const _require = source;
   dependencyMap = state;
@@ -85,7 +93,13 @@ arg5.useGestureHandler = (source, state, gestureSource, onStart, onChange, onEnd
       return;
     }
   }
-  obj1 = { gestureSource, source, state, GESTURE_SOURCE: require("05625_GESTURE_SOURCE.js").GESTURE_SOURCE, onFinalize };
+  obj1 = {
+    gestureSource,
+    source,
+    state,
+    GESTURE_SOURCE: require("05625_GESTURE_SOURCE.js").GESTURE_SOURCE,
+    onFinalize,
+  };
   T.__closure = obj1;
   T.__workletHash = 9696716573416;
   T.__initData = closure_5;

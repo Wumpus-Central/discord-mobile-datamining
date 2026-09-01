@@ -41,4 +41,4 @@ export default function isPropertyDescriptor(obj) {
     }
   }
   return false;
-};
+}

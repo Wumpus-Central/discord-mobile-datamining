@@ -5,7 +5,13 @@ import __exportStarResult4 from "13866___exportStarResult4.js";
 
 require = arg1;
 const dependencyMap = arg6;
-arg5.SetNumberFormatDigitOptions = function SetNumberFormatDigitOptions(internalSlots, result1, minimumFractionDigits, arg3, GetOptionResult1) {
+arg5.SetNumberFormatDigitOptions = function SetNumberFormatDigitOptions(
+  internalSlots,
+  result1,
+  minimumFractionDigits,
+  arg3,
+  GetOptionResult1,
+) {
   let tmp = arg3;
   ({ minimumFractionDigits, maximumFractionDigits, minimumSignificantDigits, maximumSignificantDigits } = result1);
   internalSlots.minimumIntegerDigits = __exportStarResult3.GetNumberOption(result1, "minimumIntegerDigits", 1, 21, 1);
@@ -14,14 +20,32 @@ arg5.SetNumberFormatDigitOptions = function SetNumberFormatDigitOptions(internal
   const combined = "Invalid rounding increment value: ".concat(GetNumberOptionResult, ".\nValid values are ");
   getMultiInternalSlots.invariant(hasItem, combined.concat(Array.from(set).join(", "), "."));
   const arr = Array.from(set);
-  GetOptionResult1 = __exportStarResult4.GetOption(result1, "roundingPriority", "string", ["auto", "morePrecision", "lessPrecision"], "auto");
-  const GetOptionResult = __exportStarResult4.GetOption(result1, "roundingMode", "string", ["ceil", "floor", "expand", "trunc", "halfCeil", "halfFloor", "halfExpand", "halfTrunc", "halfEven"], "halfExpand");
+  GetOptionResult1 = __exportStarResult4.GetOption(
+    result1,
+    "roundingPriority",
+    "string",
+    ["auto", "morePrecision", "lessPrecision"],
+    "auto",
+  );
+  const GetOptionResult = __exportStarResult4.GetOption(
+    result1,
+    "roundingMode",
+    "string",
+    ["ceil", "floor", "expand", "trunc", "halfCeil", "halfFloor", "halfExpand", "halfTrunc", "halfEven"],
+    "halfExpand",
+  );
   if (1 !== GetNumberOptionResult) {
     tmp = minimumFractionDigits;
   }
   internalSlots.roundingIncrement = GetNumberOptionResult;
   internalSlots.roundingMode = GetOptionResult;
-  internalSlots.trailingZeroDisplay = __exportStarResult4.GetOption(result1, "trailingZeroDisplay", "string", ["auto", "stripIfInteger"], "auto");
+  internalSlots.trailingZeroDisplay = __exportStarResult4.GetOption(
+    result1,
+    "trailingZeroDisplay",
+    "string",
+    ["auto", "stripIfInteger"],
+    "auto",
+  );
   let flag = true;
   let flag2 = true;
   if ("auto" === GetOptionResult1) {
@@ -43,7 +67,12 @@ arg5.SetNumberFormatDigitOptions = function SetNumberFormatDigitOptions(internal
   if (flag2) {
     if (tmp11) {
       internalSlots.minimumSignificantDigits = tmp2(13865).DefaultNumberOption(minimumSignificantDigits, 1, 21, 1);
-      internalSlots.maximumSignificantDigits = tmp2(13865).DefaultNumberOption(maximumSignificantDigits, internalSlots.minimumSignificantDigits, 21, 21);
+      internalSlots.maximumSignificantDigits = tmp2(13865).DefaultNumberOption(
+        maximumSignificantDigits,
+        internalSlots.minimumSignificantDigits,
+        21,
+        21,
+      );
     } else {
       internalSlots.minimumSignificantDigits = 1;
       internalSlots.maximumSignificantDigits = 21;
@@ -93,7 +122,11 @@ arg5.SetNumberFormatDigitOptions = function SetNumberFormatDigitOptions(internal
       const _TypeError = TypeError;
       tmp2(13861).invariant("fractionDigits" === internalSlots.roundingType, "Invalid roundingType", TypeError);
       const _RangeError = RangeError;
-      tmp2(13861).invariant(internalSlots.maximumFractionDigits === internalSlots.minimumFractionDigits, "With roundingIncrement > 1, maximumFractionDigits and minimumFractionDigits must be equal.", RangeError);
+      tmp2(13861).invariant(
+        internalSlots.maximumFractionDigits === internalSlots.minimumFractionDigits,
+        "With roundingIncrement > 1, maximumFractionDigits and minimumFractionDigits must be equal.",
+        RangeError,
+      );
     }
   }
   if ("morePrecision" === GetOptionResult1) {

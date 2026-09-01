@@ -22,14 +22,13 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class RVMasonryLayoutManagerImpl {
   constructor(arg0, arg1) {
     self = this;
     tmp = RVMasonryLayoutManagerImpl(this, RVMasonryLayoutManagerImpl);
-    items = [, ];
+    items = [,];
     items[0] = global;
     items[1] = arg1;
     tmp2 = closure_2;
@@ -83,7 +82,7 @@ let items = [
           self.requiresRepaint = true;
         }
       }
-    }
+    },
   },
   {
     key: "processLayoutInfo",
@@ -105,7 +104,7 @@ let items = [
         self.fullRelayoutRequired = false;
         return 0;
       }
-    }
+    },
   },
   {
     key: "estimateLayout",
@@ -114,13 +113,13 @@ let items = [
       this.layouts[arg0].height = this.getEstimatedHeight(arg0);
       this.layouts[arg0].isWidthMeasured = true;
       this.layouts[arg0].enforcedWidth = true;
-    }
+    },
   },
   {
     key: "handleSpanChange",
     value: function handleSpanChange(arg0) {
       this.fullRelayoutRequired = true;
-    }
+    },
   },
   {
     key: "getLayoutSize",
@@ -138,7 +137,7 @@ let items = [
         obj[1] = HermesBuiltin.apply(items, Math);
         return obj;
       }
-    }
+    },
   },
   {
     key: "recomputeLayouts",
@@ -169,14 +168,14 @@ let items = [
           sum = sum + 1;
         } while (sum < length);
       }
-    }
+    },
   },
   {
     key: "getWidth",
     value: function getWidth(sum) {
       const result = this.boundedSize / this.maxColumns;
       return result * this.getSpan(sum);
-    }
+    },
   },
   {
     key: "updateAllWidths",
@@ -192,7 +191,7 @@ let items = [
           length = self.layouts.length;
         } while (num < length);
       }
-    }
+    },
   },
   {
     key: "placeItemSequentially",
@@ -218,7 +217,7 @@ let items = [
           tmp3 = bound;
         } while (sum < self.currentColumn + span);
       }
-      layout.x = self.boundedSize / self.maxColumns * self.currentColumn;
+      layout.x = (self.boundedSize / self.maxColumns) * self.currentColumn;
       layout.y = tmp3;
       let currentColumn = self.currentColumn;
       if (currentColumn < self.currentColumn + span) {
@@ -234,7 +233,7 @@ let items = [
       if (self.currentColumn >= self.maxColumns) {
         self.currentColumn = 0;
       }
-    }
+    },
   },
   {
     key: "placeSingleColumnItem",
@@ -259,11 +258,11 @@ let items = [
           num3 = tmp4;
         } while (num2 < self.maxColumns);
       }
-      layout.x = self.boundedSize / self.maxColumns * num3;
+      layout.x = (self.boundedSize / self.maxColumns) * num3;
       layout.y = self.columnHeights[num3];
       const columnHeights = self.columnHeights;
       columnHeights[num3] = columnHeights[num3] + layout.height;
-    }
+    },
   },
   {
     key: "placeOptimizedMultiColumnItem",
@@ -326,7 +325,7 @@ let items = [
       const columnHeights = self.columnHeights;
       const items = [...columnHeights.slice(num3, num3 + span)];
       const applyResult = Math.max.apply(items);
-      layout.x = self.boundedSize / self.maxColumns * num3;
+      layout.x = (self.boundedSize / self.maxColumns) * num3;
       layout.y = applyResult;
       let sum4 = num3;
       if (num3 < num3 + span) {
@@ -336,7 +335,7 @@ let items = [
           sum5 = num3 + span;
         } while (sum4 < sum5);
       }
-    }
+    },
   },
   {
     key: "updateColumnHeightsToIndex",
@@ -370,8 +369,8 @@ let items = [
           num = num + 1;
         } while (num < sum);
       }
-    }
-  }
+    },
+  },
 ];
 
 export const RVMasonryLayoutManagerImpl = importDefaultResult(RVMasonryLayoutManagerImpl, items);

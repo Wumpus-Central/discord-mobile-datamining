@@ -93,7 +93,12 @@ let closure_24 = typedMemo(function ReanimatedScrollBridgeComponent(forwardedRef
   obj = {};
   const merged1 = Object.assign(merged);
   obj.ref = useCombinedRef(animatedRef, forwardedRef.forwardedRef);
-  return <>{element}<ScrollView /></>;
+  return (
+    <>
+      {element}
+      <ScrollView />
+    </>
+  );
 });
 let closure_25 = typedMemo(function StickyOverlayComponent(stickyHeaderConfig) {
   stickyHeaderConfig = stickyHeaderConfig.stickyHeaderConfig;
@@ -114,7 +119,9 @@ let closure_25 = typedMemo(function StickyOverlayComponent(stickyHeaderConfig) {
   }
   return element;
 });
-let closure_26 = { code: "function pnpm_reanimatedJs1(){const{stickyScrollOffset,stickyStart,position,pushLimit,horizontal}=this.__closure;const delta=Math.max(0,stickyScrollOffset.value-stickyStart);const stickyPosition=position+delta;const resolvedPosition=pushLimit!==void 0?Math.min(stickyPosition,pushLimit):stickyPosition;return horizontal?{transform:[{translateX:resolvedPosition}]}:{transform:[{translateY:resolvedPosition}]};}" };
+let closure_26 = {
+  code: "function pnpm_reanimatedJs1(){const{stickyScrollOffset,stickyStart,position,pushLimit,horizontal}=this.__closure;const delta=Math.max(0,stickyScrollOffset.value-stickyStart);const stickyPosition=position+delta;const resolvedPosition=pushLimit!==void 0?Math.min(stickyPosition,pushLimit):stickyPosition;return horizontal?{transform:[{translateX:resolvedPosition}]}:{transform:[{translateY:resolvedPosition}]};}",
+};
 let closure_27 = typedMemo(function ReanimatedPositionViewStickyComponent(ref) {
   const tmp = useStateContext();
   noop = tmp;
@@ -122,7 +129,14 @@ let closure_27 = typedMemo(function ReanimatedPositionViewStickyComponent(ref) {
   const style = ref.style;
   const stickyScrollOffset = ref.stickyScrollOffset;
   ({ stickyHeaderConfig, children } = ref);
-  let items = ["containerPosition" + id, "headerSize", "stylePaddingTop", "containerItemKey" + id, "containerItemIndex" + id, "totalSize"];
+  let items = [
+    "containerPosition" + id,
+    "headerSize",
+    "stylePaddingTop",
+    "containerItemKey" + id,
+    "containerItemIndex" + id,
+    "totalSize",
+  ];
   const tmp3 = style(useArr$(items), 6);
   let first = tmp3[0];
   if (undefined === first) {
@@ -189,16 +203,21 @@ let closure_27 = typedMemo(function ReanimatedPositionViewStickyComponent(ref) {
     style: obj.useMemo(() => {
       const items = [style, { zIndex: closure_6 + 1000 }, animatedStyle];
       return items;
-    }, items3)
+    }, items3),
   };
   const merged = Object.assign(tmp2);
-  return obj.createElement(cancelAnimation.default.View, {
-    ref: ref.refView,
-    style: obj.useMemo(() => {
-      const items = [style, { zIndex: closure_6 + 1000 }, animatedStyle];
-      return items;
-    }, items3)
-  }, <closure_25 stickyHeaderConfig={stickyHeaderConfig} />, children);
+  return obj.createElement(
+    cancelAnimation.default.View,
+    {
+      ref: ref.refView,
+      style: obj.useMemo(() => {
+        const items = [style, { zIndex: closure_6 + 1000 }, animatedStyle];
+        return items;
+      }, items3),
+    },
+    <closure_25 stickyHeaderConfig={stickyHeaderConfig} />,
+    children,
+  );
 });
 let closure_28 = typedMemo(function ReanimatedPositionViewComponent(style) {
   ({ id, horizontal } = style);
@@ -233,7 +252,7 @@ let closure_28 = typedMemo(function ReanimatedPositionViewComponent(style) {
     const items1 = [horizontal, first, style];
     let tmp11;
     const memo = obj.useMemo(() => {
-      const items = [style, ];
+      const items = [style];
       if (horizontal) {
         obj = { left: null };
         obj[0] = first;
@@ -257,277 +276,296 @@ let closure_28 = typedMemo(function ReanimatedPositionViewComponent(style) {
   ref.current = undefined;
   flag = false;
 });
-let closure_29 = tmp7.default.createAnimatedComponent(typedMemo(frozen.forwardRef(function LegendListForwardedRef2(refLegendList, refScrollView) {
-  ({ itemLayoutAnimation, recycleItems } = refLegendList);
-  refLegendList = refLegendList.refLegendList;
-  const renderScrollComponent = refLegendList.renderScrollComponent;
-  const sharedValues = refLegendList.sharedValues;
-  const tmp = sharedValue(refLegendList, closure_6);
-  obj = noop;
-  const items = [refLegendList];
-  const callback = noop.useCallback((arg0) => {
-    refLegendList(arg0);
-  }, items);
-  obj1 = recycleItems(refLegendList[4]);
-  sharedValue = obj1.useSharedValue(0);
-  let scrollOffset;
-  if (null != sharedValues) {
-    scrollOffset = sharedValues.scrollOffset;
-  }
-  if (null != scrollOffset) {
-    sharedValue = scrollOffset;
-  }
-  let scrollOffset1;
-  if (null != sharedValues) {
-    scrollOffset1 = sharedValues.scrollOffset;
-  }
-  if (undefined === scrollOffset1) {
-    const stickyHeaderIndices = tmp.stickyHeaderIndices;
-    let length;
-    if (null != stickyHeaderIndices) {
-      length = stickyHeaderIndices.length;
-    }
-  }
-  sharedValue = tmp9;
-  let obj2 = frozen;
-  const items1 = [renderScrollComponent];
-  const memo = frozen.useMemo(() => {
-    let fn;
-    if (renderScrollComponent) {
-      fn = (arg0) => callback(arg0);
-    }
-    return fn;
-  }, items1);
-  const items2 = [memo, tmp9];
-  const items3 = [sharedValue];
-  const callback1 = obj.useCallback((ref) => {
-    obj = {};
-    const merged = Object.assign(sharedValue(ref, itemLayoutAnimation));
-    obj.forwardedRef = ref.ref;
-    obj.renderScrollComponent = memo;
-    obj.scrollOffset = sharedValue;
-    return <closure_1_24 />;
-  }, items2);
-  const memo1 = frozen.useMemo(() => function StickyPositionComponent(arg0) {
-    obj = {};
-    const merged = Object.assign(arg0);
-    obj.stickyScrollOffset = closure_3;
-    return <closure_1_27 />;
-  }, items3);
-  closure_6 = useLatestRef(itemLayoutAnimation);
-  itemLayoutAnimation = tmp13;
-  const items4 = [itemLayoutAnimation, recycleItems];
-  obj = {};
-  const memo2 = frozen.useMemo(() => itemLayoutAnimation ? (function PositionComponent(arg0) {
-    obj = {};
-    const merged = Object.assign(arg0);
-    obj.layoutTransition = ref.current;
-    obj.recycleItems = closure_0;
-    return <closure_1_28 />;
-  }) : undefined, items4);
-  let merged = Object.assign(tmp);
-  obj.positionComponentInternal = memo2;
-  obj.recycleItems = recycleItems;
-  obj = { renderScrollComponent: callback1 };
-  if (IsNewArchitecture) {
-    obj1 = { stickyPositionComponentInternal: null };
-    obj1[0] = memo1;
-    obj2 = obj1;
-  } else {
-    obj2 = {};
-  }
-  const merged1 = Object.assign(obj2);
-  const merged2 = Object.assign(obj);
-  const merged3 = Object.assign(obj);
-  return obj2.createElement(recycleItems(refLegendList[5]).LegendList, { ref: callback, refScrollView });
-})));
+let closure_29 = tmp7.default.createAnimatedComponent(
+  typedMemo(
+    frozen.forwardRef(function LegendListForwardedRef2(refLegendList, refScrollView) {
+      ({ itemLayoutAnimation, recycleItems } = refLegendList);
+      refLegendList = refLegendList.refLegendList;
+      const renderScrollComponent = refLegendList.renderScrollComponent;
+      const sharedValues = refLegendList.sharedValues;
+      const tmp = sharedValue(refLegendList, closure_6);
+      obj = noop;
+      const items = [refLegendList];
+      const callback = noop.useCallback((arg0) => {
+        refLegendList(arg0);
+      }, items);
+      obj1 = recycleItems(refLegendList[4]);
+      sharedValue = obj1.useSharedValue(0);
+      let scrollOffset;
+      if (null != sharedValues) {
+        scrollOffset = sharedValues.scrollOffset;
+      }
+      if (null != scrollOffset) {
+        sharedValue = scrollOffset;
+      }
+      let scrollOffset1;
+      if (null != sharedValues) {
+        scrollOffset1 = sharedValues.scrollOffset;
+      }
+      if (undefined === scrollOffset1) {
+        const stickyHeaderIndices = tmp.stickyHeaderIndices;
+        let length;
+        if (null != stickyHeaderIndices) {
+          length = stickyHeaderIndices.length;
+        }
+      }
+      sharedValue = tmp9;
+      let obj2 = frozen;
+      const items1 = [renderScrollComponent];
+      const memo = frozen.useMemo(() => {
+        let fn;
+        if (renderScrollComponent) {
+          fn = (arg0) => callback(arg0);
+        }
+        return fn;
+      }, items1);
+      const items2 = [memo, tmp9];
+      const items3 = [sharedValue];
+      const callback1 = obj.useCallback((ref) => {
+        obj = {};
+        const merged = Object.assign(sharedValue(ref, itemLayoutAnimation));
+        obj.forwardedRef = ref.ref;
+        obj.renderScrollComponent = memo;
+        obj.scrollOffset = sharedValue;
+        return <closure_1_24 />;
+      }, items2);
+      const memo1 = frozen.useMemo(
+        () =>
+          function StickyPositionComponent(arg0) {
+            obj = {};
+            const merged = Object.assign(arg0);
+            obj.stickyScrollOffset = closure_3;
+            return <closure_1_27 />;
+          },
+        items3,
+      );
+      closure_6 = useLatestRef(itemLayoutAnimation);
+      itemLayoutAnimation = tmp13;
+      const items4 = [itemLayoutAnimation, recycleItems];
+      obj = {};
+      const memo2 = frozen.useMemo(
+        () =>
+          itemLayoutAnimation
+            ? function PositionComponent(arg0) {
+                obj = {};
+                const merged = Object.assign(arg0);
+                obj.layoutTransition = ref.current;
+                obj.recycleItems = closure_0;
+                return <closure_1_28 />;
+              }
+            : undefined,
+        items4,
+      );
+      let merged = Object.assign(tmp);
+      obj.positionComponentInternal = memo2;
+      obj.recycleItems = recycleItems;
+      obj = { renderScrollComponent: callback1 };
+      if (IsNewArchitecture) {
+        obj1 = { stickyPositionComponentInternal: null };
+        obj1[0] = memo1;
+        obj2 = obj1;
+      } else {
+        obj2 = {};
+      }
+      const merged1 = Object.assign(obj2);
+      const merged2 = Object.assign(obj);
+      const merged3 = Object.assign(obj);
+      return obj2.createElement(recycleItems(refLegendList[5]).LegendList, { ref: callback, refScrollView });
+    }),
+  ),
+);
 
-export const AnimatedLegendList = typedMemo(frozen.forwardRef(function AnimatedLegendList2(sharedValues, forwardedRef) {
-  sharedValues = sharedValues.sharedValues;
-  let tmp = callback2(sharedValues, closure_8);
-  [tmp3, noop] = callback(frozen.useState(null), 2);
-  noop = tmp3;
-  let items = [tmp3, sharedValues];
-  const tmp2 = callback(frozen.useState(null), 2);
-  const effect = frozen.useEffect(() => {
-    if (items) {
-      if (sharedValues) {
-        const state = items.getState();
-        let activeStickyIndex = tmp.activeStickyIndex;
-        const activeStickyIndex2 = state.activeStickyIndex;
-        if (activeStickyIndex) {
-          if (typeof activeStickyIndex.set === "function") {
-            let result = activeStickyIndex.set(activeStickyIndex2);
-          } else {
-            activeStickyIndex.value = activeStickyIndex2;
+export const AnimatedLegendList = typedMemo(
+  frozen.forwardRef(function AnimatedLegendList2(sharedValues, forwardedRef) {
+    sharedValues = sharedValues.sharedValues;
+    let tmp = callback2(sharedValues, closure_8);
+    [tmp3, noop] = callback(frozen.useState(null), 2);
+    noop = tmp3;
+    let items = [tmp3, sharedValues];
+    const tmp2 = callback(frozen.useState(null), 2);
+    const effect = frozen.useEffect(() => {
+      if (items) {
+        if (sharedValues) {
+          const state = items.getState();
+          let activeStickyIndex = tmp.activeStickyIndex;
+          const activeStickyIndex2 = state.activeStickyIndex;
+          if (activeStickyIndex) {
+            if (typeof activeStickyIndex.set === "function") {
+              let result = activeStickyIndex.set(activeStickyIndex2);
+            } else {
+              activeStickyIndex.value = activeStickyIndex2;
+            }
           }
-        }
-        let isAtEnd = tmp.isAtEnd;
-        const isAtEnd2 = state.isAtEnd;
-        if (isAtEnd) {
-          if (typeof isAtEnd.set === "function") {
-            const result1 = isAtEnd.set(isAtEnd2);
-          } else {
-            isAtEnd.value = isAtEnd2;
+          let isAtEnd = tmp.isAtEnd;
+          const isAtEnd2 = state.isAtEnd;
+          if (isAtEnd) {
+            if (typeof isAtEnd.set === "function") {
+              const result1 = isAtEnd.set(isAtEnd2);
+            } else {
+              isAtEnd.value = isAtEnd2;
+            }
           }
-        }
-        let isAtStart = tmp.isAtStart;
-        const isAtStart2 = state.isAtStart;
-        if (isAtStart) {
-          if (typeof isAtStart.set === "function") {
-            const result2 = isAtStart.set(isAtStart2);
-          } else {
-            isAtStart.value = isAtStart2;
+          let isAtStart = tmp.isAtStart;
+          const isAtStart2 = state.isAtStart;
+          if (isAtStart) {
+            if (typeof isAtStart.set === "function") {
+              const result2 = isAtStart.set(isAtStart2);
+            } else {
+              isAtStart.value = isAtStart2;
+            }
           }
-        }
-        let isNearEnd = tmp.isNearEnd;
-        const isNearEnd2 = state.isNearEnd;
-        if (isNearEnd) {
-          if (typeof isNearEnd.set === "function") {
-            const result3 = isNearEnd.set(isNearEnd2);
-          } else {
-            isNearEnd.value = isNearEnd2;
+          let isNearEnd = tmp.isNearEnd;
+          const isNearEnd2 = state.isNearEnd;
+          if (isNearEnd) {
+            if (typeof isNearEnd.set === "function") {
+              const result3 = isNearEnd.set(isNearEnd2);
+            } else {
+              isNearEnd.value = isNearEnd2;
+            }
           }
-        }
-        let isNearStart = tmp.isNearStart;
-        const isNearStart2 = state.isNearStart;
-        if (isNearStart) {
-          if (typeof isNearStart.set === "function") {
-            const result4 = isNearStart.set(isNearStart2);
-          } else {
-            isNearStart.value = isNearStart2;
+          let isNearStart = tmp.isNearStart;
+          const isNearStart2 = state.isNearStart;
+          if (isNearStart) {
+            if (typeof isNearStart.set === "function") {
+              const result4 = isNearStart.set(isNearStart2);
+            } else {
+              isNearStart.value = isNearStart2;
+            }
           }
-        }
-        let isWithinMaintainScrollAtEndThreshold = tmp.isWithinMaintainScrollAtEndThreshold;
-        const isWithinMaintainScrollAtEndThreshold2 = state.isWithinMaintainScrollAtEndThreshold;
-        if (isWithinMaintainScrollAtEndThreshold) {
-          if (typeof isWithinMaintainScrollAtEndThreshold.set === "function") {
-            const result5 = isWithinMaintainScrollAtEndThreshold.set(isWithinMaintainScrollAtEndThreshold2);
-          } else {
-            isWithinMaintainScrollAtEndThreshold.value = isWithinMaintainScrollAtEndThreshold2;
+          let isWithinMaintainScrollAtEndThreshold = tmp.isWithinMaintainScrollAtEndThreshold;
+          const isWithinMaintainScrollAtEndThreshold2 = state.isWithinMaintainScrollAtEndThreshold;
+          if (isWithinMaintainScrollAtEndThreshold) {
+            if (typeof isWithinMaintainScrollAtEndThreshold.set === "function") {
+              const result5 = isWithinMaintainScrollAtEndThreshold.set(isWithinMaintainScrollAtEndThreshold2);
+            } else {
+              isWithinMaintainScrollAtEndThreshold.value = isWithinMaintainScrollAtEndThreshold2;
+            }
           }
-        }
-        const scrollOffset = tmp.scrollOffset;
-        const scroll = state.scroll;
-        if (scrollOffset) {
-          if (typeof scrollOffset.set === "function") {
-            const result6 = scrollOffset.set(scroll);
-          } else {
-            scrollOffset.value = scroll;
+          const scrollOffset = tmp.scrollOffset;
+          const scroll = state.scroll;
+          if (scrollOffset) {
+            if (typeof scrollOffset.set === "function") {
+              const result6 = scrollOffset.set(scroll);
+            } else {
+              scrollOffset.value = scroll;
+            }
           }
-        }
-        let listenResult;
-        if (tmp.activeStickyIndex) {
-          listenResult = state.listen("activeStickyIndex", (value) => {
-            const activeStickyIndex = closure_1.activeStickyIndex;
-            if (activeStickyIndex) {
-              if (typeof activeStickyIndex.set === "function") {
-                const result = activeStickyIndex.set(value);
-              } else {
-                activeStickyIndex.value = value;
+          let listenResult;
+          if (tmp.activeStickyIndex) {
+            listenResult = state.listen("activeStickyIndex", (value) => {
+              const activeStickyIndex = closure_1.activeStickyIndex;
+              if (activeStickyIndex) {
+                if (typeof activeStickyIndex.set === "function") {
+                  const result = activeStickyIndex.set(value);
+                } else {
+                  activeStickyIndex.value = value;
+                }
               }
-            }
-          });
-        }
-        items = [listenResult, , , , , ];
-        let listenResult1;
-        if (tmp.isAtEnd) {
-          listenResult1 = state.listen("isAtEnd", (value) => {
-            const isAtEnd = closure_1.isAtEnd;
-            if (isAtEnd) {
-              if (typeof isAtEnd.set === "function") {
-                const result = isAtEnd.set(value);
-              } else {
-                isAtEnd.value = value;
-              }
-            }
-          });
-        }
-        items[1] = listenResult1;
-        let listenResult2;
-        if (tmp.isAtStart) {
-          listenResult2 = state.listen("isAtStart", (value) => {
-            const isAtStart = closure_1.isAtStart;
-            if (isAtStart) {
-              if (typeof isAtStart.set === "function") {
-                const result = isAtStart.set(value);
-              } else {
-                isAtStart.value = value;
-              }
-            }
-          });
-        }
-        items[2] = listenResult2;
-        let listenResult3;
-        if (tmp.isNearEnd) {
-          listenResult3 = state.listen("isNearEnd", (value) => {
-            const isNearEnd = closure_1.isNearEnd;
-            if (isNearEnd) {
-              if (typeof isNearEnd.set === "function") {
-                const result = isNearEnd.set(value);
-              } else {
-                isNearEnd.value = value;
-              }
-            }
-          });
-        }
-        items[3] = listenResult3;
-        let listenResult4;
-        if (tmp.isNearStart) {
-          listenResult4 = state.listen("isNearStart", (value) => {
-            const isNearStart = closure_1.isNearStart;
-            if (isNearStart) {
-              if (typeof isNearStart.set === "function") {
-                const result = isNearStart.set(value);
-              } else {
-                isNearStart.value = value;
-              }
-            }
-          });
-        }
-        items[4] = listenResult4;
-        let listenResult5;
-        if (tmp.isWithinMaintainScrollAtEndThreshold) {
-          listenResult5 = state.listen("isWithinMaintainScrollAtEndThreshold", (value) => {
-            const isWithinMaintainScrollAtEndThreshold = closure_1.isWithinMaintainScrollAtEndThreshold;
-            if (isWithinMaintainScrollAtEndThreshold) {
-              if (typeof isWithinMaintainScrollAtEndThreshold.set === "function") {
-                const result = isWithinMaintainScrollAtEndThreshold.set(value);
-              } else {
-                isWithinMaintainScrollAtEndThreshold.value = value;
-              }
-            }
-          });
-        }
-        items[5] = listenResult5;
-        return () => {
-          const iter = items[Symbol.iterator]();
-          const nextResult = iter.next();
-          while (iter !== undefined) {
-            if (null != nextResult) {
-              let tmp4 = nextResult;
-              let tmp3Result = tmp3();
-            }
-            continue;
+            });
           }
-        };
+          items = [listenResult, , , , ,];
+          let listenResult1;
+          if (tmp.isAtEnd) {
+            listenResult1 = state.listen("isAtEnd", (value) => {
+              const isAtEnd = closure_1.isAtEnd;
+              if (isAtEnd) {
+                if (typeof isAtEnd.set === "function") {
+                  const result = isAtEnd.set(value);
+                } else {
+                  isAtEnd.value = value;
+                }
+              }
+            });
+          }
+          items[1] = listenResult1;
+          let listenResult2;
+          if (tmp.isAtStart) {
+            listenResult2 = state.listen("isAtStart", (value) => {
+              const isAtStart = closure_1.isAtStart;
+              if (isAtStart) {
+                if (typeof isAtStart.set === "function") {
+                  const result = isAtStart.set(value);
+                } else {
+                  isAtStart.value = value;
+                }
+              }
+            });
+          }
+          items[2] = listenResult2;
+          let listenResult3;
+          if (tmp.isNearEnd) {
+            listenResult3 = state.listen("isNearEnd", (value) => {
+              const isNearEnd = closure_1.isNearEnd;
+              if (isNearEnd) {
+                if (typeof isNearEnd.set === "function") {
+                  const result = isNearEnd.set(value);
+                } else {
+                  isNearEnd.value = value;
+                }
+              }
+            });
+          }
+          items[3] = listenResult3;
+          let listenResult4;
+          if (tmp.isNearStart) {
+            listenResult4 = state.listen("isNearStart", (value) => {
+              const isNearStart = closure_1.isNearStart;
+              if (isNearStart) {
+                if (typeof isNearStart.set === "function") {
+                  const result = isNearStart.set(value);
+                } else {
+                  isNearStart.value = value;
+                }
+              }
+            });
+          }
+          items[4] = listenResult4;
+          let listenResult5;
+          if (tmp.isWithinMaintainScrollAtEndThreshold) {
+            listenResult5 = state.listen("isWithinMaintainScrollAtEndThreshold", (value) => {
+              const isWithinMaintainScrollAtEndThreshold = closure_1.isWithinMaintainScrollAtEndThreshold;
+              if (isWithinMaintainScrollAtEndThreshold) {
+                if (typeof isWithinMaintainScrollAtEndThreshold.set === "function") {
+                  const result = isWithinMaintainScrollAtEndThreshold.set(value);
+                } else {
+                  isWithinMaintainScrollAtEndThreshold.value = value;
+                }
+              }
+            });
+          }
+          items[5] = listenResult5;
+          return () => {
+            const iter = items[Symbol.iterator]();
+            const nextResult = iter.next();
+            while (iter !== undefined) {
+              if (null != nextResult) {
+                let tmp4 = nextResult;
+                let tmp3Result = tmp3();
+              }
+              continue;
+            }
+          };
+        }
       }
-    }
-  }, items);
-  obj = {};
-  const merged = Object.assign(tmp);
-  obj.animatedPropsInternal = sharedValues.animatedProps;
-  obj.refLegendList = useCombinedRef(frozen.useCallback((arg0) => {
-    arg0((arg0) => {
-      let tmp = closure_0;
-      if (arg0 === closure_0) {
-        tmp = arg0;
-      }
-      return tmp;
-    });
-  }, []), forwardedRef);
-  obj = {};
-  const merged1 = Object.assign(obj);
-  obj.ref = sharedValues.refScrollView;
-  return <closure_29 />;
-}));
+    }, items);
+    obj = {};
+    const merged = Object.assign(tmp);
+    obj.animatedPropsInternal = sharedValues.animatedProps;
+    obj.refLegendList = useCombinedRef(
+      frozen.useCallback((arg0) => {
+        arg0((arg0) => {
+          let tmp = closure_0;
+          if (arg0 === closure_0) {
+            tmp = arg0;
+          }
+          return tmp;
+        });
+      }, []),
+      forwardedRef,
+    );
+    obj = {};
+    const merged1 = Object.assign(obj);
+    obj.ref = sharedValues.refScrollView;
+    return <closure_29 />;
+  }),
+);

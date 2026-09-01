@@ -18,6 +18,5 @@ export default function _isNativeReflectConstruct() {
     const _exports = _module.exports;
     _module.exports.default = _exports;
     return _exports();
-  } catch (err) {
-  }
-};
+  } catch (err) {}
+}

@@ -43,8 +43,7 @@ class ResponseBase {
         self.links = obj3.parseLinks(global.link);
       }
       return;
-    } catch (err) {
-    }
+    } catch (err) {}
     return;
   }
   _setStatusProperties(arg0) {

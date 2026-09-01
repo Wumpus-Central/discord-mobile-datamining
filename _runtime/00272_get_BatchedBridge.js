@@ -17,27 +17,72 @@ import { createPublicRootInstance } from "00281_createPublicRootInstance.js";
 import { dispatchNativeEvent } from "00282_dispatchNativeEvent.js";
 const obj = {};
 Object.defineProperty(obj, "BatchedBridge", { get: () => MessageQueue /* MessageQueue */.default, set: undefined });
-Object.defineProperty(obj, "ExceptionsManager", { get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default, set: undefined });
-Object.defineProperty(obj, "Platform", { get: () => require("00273_get_Version.js") /* get Version */ /* get Version */.default, set: undefined });
+Object.defineProperty(obj, "ExceptionsManager", {
+  get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default,
+  set: undefined,
+});
+Object.defineProperty(obj, "Platform", {
+  get: () => require("00273_get_Version.js") /* get Version */ /* get Version */.default,
+  set: undefined,
+});
 Object.defineProperty(obj, "RCTEventEmitter", { get: () => MessageQueue /* MessageQueue */.default, set: undefined });
 Object.defineProperty(obj, "ReactNativeViewConfigRegistry", { get: () => map, set: undefined });
 Object.defineProperty(obj, "TextInputState", { get: () => set /* set */.default, set: undefined });
 Object.defineProperty(obj, "UIManager", { get: () => measure /* measure */.default, set: undefined });
 Object.defineProperty(obj, "deepDiffer", { get: () => deepDiffer /* deepDiffer */.default, set: undefined });
-Object.defineProperty(obj, "deepFreezeAndThrowOnMutationInDev", { get: () => deepFreezeAndThrowOnMutationInDev /* deepFreezeAndThrowOnMutationInDev */.default, set: undefined });
+Object.defineProperty(obj, "deepFreezeAndThrowOnMutationInDev", {
+  get: () => deepFreezeAndThrowOnMutationInDev /* deepFreezeAndThrowOnMutationInDev */.default,
+  set: undefined,
+});
 Object.defineProperty(obj, "flattenStyle", { get: () => flattenStyle /* flattenStyle */.default, set: undefined });
-Object.defineProperty(obj, "ReactFiberErrorDialog", { get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default, set: undefined });
-Object.defineProperty(obj, "legacySendAccessibilityEvent", { get: () => legacySendAccessibilityEvent /* legacySendAccessibilityEvent */.default, set: undefined });
+Object.defineProperty(obj, "ReactFiberErrorDialog", {
+  get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default,
+  set: undefined,
+});
+Object.defineProperty(obj, "legacySendAccessibilityEvent", {
+  get: () => legacySendAccessibilityEvent /* legacySendAccessibilityEvent */.default,
+  set: undefined,
+});
 Object.defineProperty(obj, "RawEventEmitter", { get: () => EventEmitter /* EventEmitter */.default, set: undefined });
-Object.defineProperty(obj, "CustomEvent", { get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default, set: undefined });
-Object.defineProperty(obj, "createAttributePayload", { get: () => restoreDeletedValuesInNestedArray /* restoreDeletedValuesInNestedArray */.create, set: undefined });
-Object.defineProperty(obj, "diffAttributePayloads", { get: () => restoreDeletedValuesInNestedArray /* restoreDeletedValuesInNestedArray */.diff, set: undefined });
-Object.defineProperty(obj, "createPublicRootInstance", { get: () => createPublicRootInstance /* createPublicRootInstance */.createPublicRootInstance, set: undefined });
-Object.defineProperty(obj, "createPublicInstance", { get: () => createPublicRootInstance /* createPublicRootInstance */.createPublicInstance, set: undefined });
-Object.defineProperty(obj, "createPublicTextInstance", { get: () => createPublicRootInstance /* createPublicRootInstance */.createPublicTextInstance, set: undefined });
-Object.defineProperty(obj, "getNativeTagFromPublicInstance", { get: () => createPublicRootInstance /* createPublicRootInstance */.getNativeTagFromPublicInstance, set: undefined });
-Object.defineProperty(obj, "getNodeFromPublicInstance", { get: () => createPublicRootInstance /* createPublicRootInstance */.getNodeFromPublicInstance, set: undefined });
-Object.defineProperty(obj, "getInternalInstanceHandleFromPublicInstance", { get: () => createPublicRootInstance /* createPublicRootInstance */.getInternalInstanceHandleFromPublicInstance, set: undefined });
-Object.defineProperty(obj, "dispatchNativeEvent", { get: () => dispatchNativeEvent /* dispatchNativeEvent */.default, set: undefined });
+Object.defineProperty(obj, "CustomEvent", {
+  get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default,
+  set: undefined,
+});
+Object.defineProperty(obj, "createAttributePayload", {
+  get: () => restoreDeletedValuesInNestedArray /* restoreDeletedValuesInNestedArray */.create,
+  set: undefined,
+});
+Object.defineProperty(obj, "diffAttributePayloads", {
+  get: () => restoreDeletedValuesInNestedArray /* restoreDeletedValuesInNestedArray */.diff,
+  set: undefined,
+});
+Object.defineProperty(obj, "createPublicRootInstance", {
+  get: () => createPublicRootInstance /* createPublicRootInstance */.createPublicRootInstance,
+  set: undefined,
+});
+Object.defineProperty(obj, "createPublicInstance", {
+  get: () => createPublicRootInstance /* createPublicRootInstance */.createPublicInstance,
+  set: undefined,
+});
+Object.defineProperty(obj, "createPublicTextInstance", {
+  get: () => createPublicRootInstance /* createPublicRootInstance */.createPublicTextInstance,
+  set: undefined,
+});
+Object.defineProperty(obj, "getNativeTagFromPublicInstance", {
+  get: () => createPublicRootInstance /* createPublicRootInstance */.getNativeTagFromPublicInstance,
+  set: undefined,
+});
+Object.defineProperty(obj, "getNodeFromPublicInstance", {
+  get: () => createPublicRootInstance /* createPublicRootInstance */.getNodeFromPublicInstance,
+  set: undefined,
+});
+Object.defineProperty(obj, "getInternalInstanceHandleFromPublicInstance", {
+  get: () => createPublicRootInstance /* createPublicRootInstance */.getInternalInstanceHandleFromPublicInstance,
+  set: undefined,
+});
+Object.defineProperty(obj, "dispatchNativeEvent", {
+  get: () => dispatchNativeEvent /* dispatchNativeEvent */.default,
+  set: undefined,
+});
 
 export default obj;

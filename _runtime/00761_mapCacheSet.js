@@ -1,7 +1,6 @@
 // _runtime/00761_mapCacheSet.js
 import getMapData from "00757_getMapData.js";
 
-
 export default function mapCacheSet(arg0, arg1) {
   const self = this;
   const obj = getMapData(this, arg0);
@@ -12,4 +11,4 @@ export default function mapCacheSet(arg0, arg1) {
   }
   self.size = this.size + num;
   return self;
-};
+}

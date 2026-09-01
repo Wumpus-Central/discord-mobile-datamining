@@ -18,7 +18,7 @@ function _flushWithTimeout() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       closure_2 = tmp3;
       c4 = 1;
       const debug3 = callback(closure_1_1[1]).debug;
@@ -58,7 +58,7 @@ function _flushIfServerless() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*() {
+    const iter = (function* () {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();

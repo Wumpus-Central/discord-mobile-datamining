@@ -4,7 +4,9 @@ import _createClass from "metro/00042__createClass.js";
 
 const SentrySpan = require;
 function isFullFinishedSpan(start_timestamp) {
-  return start_timestamp.start_timestamp && start_timestamp.timestamp && start_timestamp.span_id && start_timestamp.trace_id;
+  return (
+    start_timestamp.start_timestamp && start_timestamp.timestamp && start_timestamp.span_id && start_timestamp.trace_id
+  );
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 class SentrySpan {
@@ -76,7 +78,7 @@ let items = [
         self._links = items;
       }
       return self;
-    }
+    },
   },
   {
     key: "addLinks",
@@ -92,13 +94,11 @@ let items = [
         self._links = _links;
       }
       return self;
-    }
+    },
   },
   {
     key: "recordException",
-    value: function recordException(arg0, arg1) {
-
-    }
+    value: function recordException(arg0, arg1) {},
   },
   {
     key: "spanContext",
@@ -107,7 +107,7 @@ let items = [
       const tmp = SentrySpan(819);
       obj[2] = this._sampled ? tmp.TRACE_FLAG_SAMPLED : tmp.TRACE_FLAG_NONE;
       return obj;
-    }
+    },
   },
   {
     key: "setAttribute",
@@ -120,7 +120,7 @@ let items = [
         self._attributes[arg0] = arg1;
       }
       return self;
-    }
+    },
   },
   {
     key: "setAttributes",
@@ -130,20 +130,20 @@ let items = [
       const keys = Object.keys(arg0);
       const item = keys.forEach((arg0) => self.setAttribute(arg0, table[arg0]));
       return this;
-    }
+    },
   },
   {
     key: "updateStartTime",
     value: function updateStartTime(arg0) {
       this._startTime = SentrySpan(819).spanTimeInputToSeconds(arg0);
-    }
+    },
   },
   {
     key: "setStatus",
     value: function setStatus(_status) {
       this._status = _status;
       return this;
-    }
+    },
   },
   {
     key: "updateName",
@@ -151,7 +151,7 @@ let items = [
       this._name = _name;
       const attr = this.setAttribute(SentrySpan(839).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE, "custom");
       return this;
-    }
+    },
   },
   {
     key: "end",
@@ -164,13 +164,30 @@ let items = [
         self._onSpanEnded();
         const obj2 = SentrySpan(861);
       }
-    }
+    },
   },
   {
     key: "getSpanJSON",
     value: function getSpanJSON() {
       const self = this;
-      const obj = { data: this._attributes, description: this._name, op: this._attributes[SentrySpan(undefined, 839).SEMANTIC_ATTRIBUTE_SENTRY_OP], parent_span_id: this._parentSpanId, span_id: this._spanId, start_timestamp: this._startTime, status: SentrySpan(819).getStatusMessage(this._status), timestamp: null, trace_id: null, origin: _attributes[SentrySpan(undefined, 839).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN], profile_id: this._attributes[SentrySpan(undefined, 839).SEMANTIC_ATTRIBUTE_PROFILE_ID], exclusive_time: this._attributes[SentrySpan(undefined, 839).SEMANTIC_ATTRIBUTE_EXCLUSIVE_TIME], measurements: null, is_segment: null, segment_id: null, links: null };
+      const obj = {
+        data: this._attributes,
+        description: this._name,
+        op: this._attributes[SentrySpan(undefined, 839).SEMANTIC_ATTRIBUTE_SENTRY_OP],
+        parent_span_id: this._parentSpanId,
+        span_id: this._spanId,
+        start_timestamp: this._startTime,
+        status: SentrySpan(819).getStatusMessage(this._status),
+        timestamp: null,
+        trace_id: null,
+        origin: _attributes[SentrySpan(undefined, 839).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN],
+        profile_id: this._attributes[SentrySpan(undefined, 839).SEMANTIC_ATTRIBUTE_PROFILE_ID],
+        exclusive_time: this._attributes[SentrySpan(undefined, 839).SEMANTIC_ATTRIBUTE_EXCLUSIVE_TIME],
+        measurements: null,
+        is_segment: null,
+        segment_id: null,
+        links: null,
+      };
       ({ _endTime: obj[7], _traceId: obj[8], _attributes } = this);
       const obj2 = SentrySpan(819);
       obj[12] = SentrySpan(862).timedEventsToMeasurements(this._events);
@@ -190,7 +207,7 @@ let items = [
       const obj3 = SentrySpan(862);
       obj[15] = SentrySpan(819).convertSpanLinksForEnvelope(self._links);
       return obj;
-    }
+    },
   },
   {
     key: "isRecording",
@@ -201,7 +218,7 @@ let items = [
         _sampled = this._sampled;
       }
       return _sampled;
-    }
+    },
   },
   {
     key: "addEvent",
@@ -258,13 +275,13 @@ let items = [
       const _events = this._events;
       _events.push(obj);
       return this;
-    }
+    },
   },
   {
     key: "isStandaloneSpan",
     value: function isStandaloneSpan() {
       return this._isStandaloneSpan;
-    }
+    },
   },
   {
     key: "_onSpanEnded",
@@ -314,7 +331,7 @@ let items = [
       } else {
         const tmpResult3 = tmp(819);
       }
-    }
+    },
   },
   {
     key: "_convertSpanToTransaction",
@@ -361,13 +378,24 @@ let items = [
             const SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME = self(839).SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME;
             delete tmp2[tmp];
           });
-          obj = { contexts: null, spans: null, start_timestamp: null, timestamp: null, transaction: null, type: "transaction", sdkProcessingMetadata: null, request: null };
+          obj = {
+            contexts: null,
+            spans: null,
+            start_timestamp: null,
+            timestamp: null,
+            transaction: null,
+            type: "transaction",
+            sdkProcessingMetadata: null,
+            request: null,
+          };
           obj = { trace: null };
           obj[0] = tmp3(819).spanToTransactionTraceContext(self);
           obj[0] = obj;
           let substr = found1;
           if (found1.length > 1000) {
-            const sorted = found1.sort((start_timestamp, start_timestamp2) => start_timestamp.start_timestamp - start_timestamp2.start_timestamp);
+            const sorted = found1.sort(
+              (start_timestamp, start_timestamp2) => start_timestamp.start_timestamp - start_timestamp2.start_timestamp,
+            );
             substr = sorted.slice(0, 1000);
           }
           obj[1] = substr;
@@ -399,15 +427,18 @@ let items = [
             if (tmp3(823).DEBUG_BUILD) {
               const debug2 = tmp3(824).debug;
               const _JSON = JSON;
-              debug2.log("[Measurements] Adding measurements to transaction event", JSON.stringify(result, undefined, 2));
+              debug2.log(
+                "[Measurements] Adding measurements to transaction event",
+                JSON.stringify(result, undefined, 2),
+              );
             }
             obj.measurements = result;
           }
           return obj;
         }
       }
-    }
-  }
+    },
+  },
 ];
 const _moduleResult = _createClass(SentrySpan, items);
 let c3 = _moduleResult;

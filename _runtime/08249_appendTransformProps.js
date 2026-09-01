@@ -49,7 +49,7 @@ function universal2axis(num) {
   if (!num2) {
     num2 = 0;
   }
-  const items = [num2, ];
+  const items = [num2];
   if (!num) {
     num = arg3;
   }
@@ -76,7 +76,23 @@ function transformsArrayToProps(arr) {
 }
 function props2transform(arr) {
   if (arr) {
-    ({ rotation, translate, translateX, translateY, origin, originX, originY, scale, scaleX, scaleY, skew, skewX, skewY, x, y } = arr);
+    ({
+      rotation,
+      translate,
+      translateX,
+      translateY,
+      origin,
+      originX,
+      originY,
+      scale,
+      scaleX,
+      scaleY,
+      skew,
+      skewX,
+      skewY,
+      x,
+      y,
+    } = arr);
     if (null == rotation) {
       if (null == translate) {
         if (null == translateX) {
@@ -142,7 +158,17 @@ function props2transform(arr) {
       num4 = +rotation || 0;
       const tmp16 = +rotation || 0;
     }
-    const obj = { rotation: null, originX: null, originY: null, scaleX: null, scaleY: null, skewX: null, skewY: null, x: null, y: null };
+    const obj = {
+      rotation: null,
+      originX: null,
+      originY: null,
+      scaleX: null,
+      scaleY: null,
+      skewX: null,
+      skewY: null,
+      x: null,
+      y: null,
+    };
     obj[0] = num4;
     [obj[1], obj[2]] = tmp6Result;
     [obj[3], obj[4]] = tmp6Result1;
@@ -204,7 +230,7 @@ arg5.default = function extractTransform(arr) {
   if (typeof arr === "string") {
     try {
       const parsed = peg$SyntaxError.parse(arr);
-      const items = [, , , , , ];
+      const items = [, , , , ,];
       [arr[0], arr[2], arr[4], arr[1], arr[3], arr[5]] = parsed;
       return items;
     } catch (tmp6) {

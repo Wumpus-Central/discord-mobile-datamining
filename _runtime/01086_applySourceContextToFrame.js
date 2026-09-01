@@ -74,7 +74,7 @@ export const contextLinesIntegration = registerSpanErrorInstrumentation.defineIn
         }
       }
       return exception;
-    }
+    },
   };
   return obj;
 });

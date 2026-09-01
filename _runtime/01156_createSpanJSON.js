@@ -22,7 +22,10 @@ function createSpanJSON(span_id) {
     trace_id = tmpResult.uuid4();
   }
   obj[1] = trace_id;
-  obj = { [tmp(817).SEMANTIC_ATTRIBUTE_SENTRY_OP]: span_id.op, [tmp(817).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: span_id.origin };
+  obj = {
+    [tmp(817).SEMANTIC_ATTRIBUTE_SENTRY_OP]: span_id.op,
+    [tmp(817).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: span_id.origin,
+  };
   obj[2] = registerSpanErrorInstrumentation.dropUndefinedKeys(Object.assign(obj, span_id.data ? span_id.data : {}));
   return obj.dropUndefinedKeys(Object.assign(merged, obj));
 }
@@ -51,11 +54,19 @@ arg5.setSpanDurationAsMeasurement = function setSpanDurationAsMeasurement(time_t
     tmp4 = start_timestamp;
   }
   if (tmp4) {
-    registerSpanErrorInstrumentation.setMeasurement(time_to_full_display, 1000 * (timestamp - start_timestamp), "millisecond");
+    registerSpanErrorInstrumentation.setMeasurement(
+      time_to_full_display,
+      1000 * (timestamp - start_timestamp),
+      "millisecond",
+    );
     const tmpResult = registerSpanErrorInstrumentation;
   }
 };
-arg5.setSpanDurationAsMeasurementOnSpan = function setSpanDurationAsMeasurementOnSpan(time_to_initial_display, arg1, addEvent) {
+arg5.setSpanDurationAsMeasurementOnSpan = function setSpanDurationAsMeasurementOnSpan(
+  time_to_initial_display,
+  arg1,
+  addEvent,
+) {
   let obj = registerSpanErrorInstrumentation;
   ({ timestamp, start_timestamp } = obj.spanToJSON(arg1));
   let tmp4 = timestamp;
@@ -71,7 +82,10 @@ arg5.setSpanDurationAsMeasurementOnSpan = function setSpanDurationAsMeasurementO
   }
 };
 arg5.setSpanMeasurement = function setSpanMeasurement(addEvent, STALL_COUNT, value, unit) {
-  addEvent.addEvent(STALL_COUNT, { [closure_0(closure_1[0]).SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE]: value, [closure_0(closure_1[0]).SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT]: unit });
+  addEvent.addEvent(STALL_COUNT, {
+    [closure_0(closure_1[0]).SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE]: value,
+    [closure_0(closure_1[0]).SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT]: unit,
+  });
 };
 arg5.getLatestChildSpanEndTimestamp = function getLatestChildSpanEndTimestamp(activeSpan) {
   const spanDescendants = registerSpanErrorInstrumentation.getSpanDescendants(activeSpan);

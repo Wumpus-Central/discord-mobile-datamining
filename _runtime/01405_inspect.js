@@ -67,7 +67,10 @@ function formatValue(customInspect, inspect) {
     const _JSON = JSON;
     const str3 = JSON.stringify(inspect);
     const str5 = JSON.stringify(inspect).replace(/^"|"$/g, "");
-    stylizeResult = customInspect.stylize(`'${JSON.stringify(inspect).replace(/^"|"$/g, "").replace(/'/g, "\\'").replace(/\\"/g, "\"")}'`, "string");
+    stylizeResult = customInspect.stylize(
+      `'${JSON.stringify(inspect).replace(/^"|"$/g, "").replace(/'/g, "\\'").replace(/\\"/g, '"')}'`,
+      "string",
+    );
     const str7 = JSON.stringify(inspect).replace(/^"|"$/g, "").replace(/'/g, "\\'");
   } else if (typeof inspect === "number") {
     stylizeResult = customInspect.stylize("" + inspect, "number");
@@ -262,14 +265,18 @@ function formatValue(customInspect, inspect) {
                   let mapped = items1;
                   length = inspect.length;
                 } else {
-                  mapped = ownPropertyNames.map((arg0) => closure_1_9(closure_0, closure_1, closure_2, obj, arg0, items1));
+                  mapped = ownPropertyNames.map((arg0) =>
+                    closure_1_9(closure_0, closure_1, closure_2, obj, arg0, items1),
+                  );
                 }
                 const seen1 = customInspect.seen;
                 seen1.pop();
-                if (mapped.reduce((arg0, arr) => {
-                  arr.indexOf("\n") >= 0;
-                  return arg0 + arr.replace(/\u001b\[\d\d?m/g, "").length + 1;
-                }, 0) > 60) {
+                if (
+                  mapped.reduce((arg0, arr) => {
+                    arr.indexOf("\n") >= 0;
+                    return arg0 + arr.replace(/\u001b\[\d\d?m/g, "").length + 1;
+                  }, 0) > 60
+                ) {
                   if (str17 !== str18) {
                     str17 = `${str18}
    `;
@@ -380,8 +387,14 @@ function formatProperty(stylize, arg1, arg2, arg3, key10009) {
           text = stylize.stylize(str12.slice(1, -1), "name");
         } else {
           const str14 = str12.replace(/'/g, "\\'");
-          text = stylize.stylize(str12.replace(/'/g, "\\'").replace(/\\"/g, "\"").replace(/(^"|"$)/g, "'"), "string");
-          const str16 = str12.replace(/'/g, "\\'").replace(/\\"/g, "\"");
+          text = stylize.stylize(
+            str12
+              .replace(/'/g, "\\'")
+              .replace(/\\"/g, '"')
+              .replace(/(^"|"$)/g, "'"),
+            "string",
+          );
+          const str16 = str12.replace(/'/g, "\\'").replace(/\\"/g, '"');
         }
       }
       return text + ": " + stylizeResult1;
@@ -425,21 +438,23 @@ function callbackifyOnRejected(reason) {
   }
   return arg1(tmp);
 }
-let closure_1 = Object.getOwnPropertyDescriptors || (function getOwnPropertyDescriptors(newQuality) {
-  let length;
-  const keys = Object.keys(newQuality);
-  const obj = {};
-  let num = 0;
-  if (0 < keys.length) {
-    do {
-      let _Object = Object;
-      obj[keys[num]] = Object.getOwnPropertyDescriptor(newQuality, keys[num]);
-      num = num + 1;
-      length = keys.length;
-    } while (num < length);
-  }
-  return obj;
-});
+let closure_1 =
+  Object.getOwnPropertyDescriptors ||
+  function getOwnPropertyDescriptors(newQuality) {
+    let length;
+    const keys = Object.keys(newQuality);
+    const obj = {};
+    let num = 0;
+    if (0 < keys.length) {
+      do {
+        let _Object = Object;
+        obj[keys[num]] = Object.getOwnPropertyDescriptor(newQuality, keys[num]);
+        num = num + 1;
+        length = keys.length;
+      } while (num < length);
+    }
+    return obj;
+  };
 const re2 = /%[sdj%]/g;
 let closure_3 = {};
 let regExp = /^$/;
@@ -449,8 +464,18 @@ if (process.env.NODE_DEBUG) {
   let str3 = process.env.NODE_DEBUG.replace(/[|\\{}()[\]^$+?.]/g, "\\$&");
   let str5 = process.env.NODE_DEBUG.replace(/[|\\{}()[\]^$+?.]/g, "\\$&").replace(/\*/g, ".*");
   let _RegExp = RegExp;
-  regExp = new RegExp("^" + process.env.NODE_DEBUG.replace(/[|\\{}()[\]^$+?.]/g, "\\$&").replace(/\*/g, ".*").replace(/,/g, "$|^").toUpperCase() + "$", "i");
-  let str7 = process.env.NODE_DEBUG.replace(/[|\\{}()[\]^$+?.]/g, "\\$&").replace(/\*/g, ".*").replace(/,/g, "$|^");
+  regExp = new RegExp(
+    "^" +
+      process.env.NODE_DEBUG.replace(/[|\\{}()[\]^$+?.]/g, "\\$&")
+        .replace(/\*/g, ".*")
+        .replace(/,/g, "$|^")
+        .toUpperCase() +
+      "$",
+    "i",
+  );
+  let str7 = process.env.NODE_DEBUG.replace(/[|\\{}()[\]^$+?.]/g, "\\$&")
+    .replace(/\*/g, ".*")
+    .replace(/,/g, "$|^");
 }
 function isRegExp(obj) {
   let tmp = typeof obj === "object";
@@ -499,8 +524,31 @@ function isError(obj) {
   }
   return tmp;
 }
-inspect.colors = { bold: [1, 22], italic: [3, 23], underline: [4, 24], inverse: [7, 27], white: [37, 39], grey: [90, 39], black: [30, 39], blue: [34, 39], cyan: [36, 39], green: [32, 39], magenta: [35, 39], red: [31, 39], yellow: [33, 39] };
-inspect.styles = { special: "cyan", number: "yellow", boolean: "yellow", undefined: "grey", null: "bold", string: "green", date: "magenta", regexp: "red" };
+inspect.colors = {
+  bold: [1, 22],
+  italic: [3, 23],
+  underline: [4, 24],
+  inverse: [7, 27],
+  white: [37, 39],
+  grey: [90, 39],
+  black: [30, 39],
+  blue: [34, 39],
+  cyan: [36, 39],
+  green: [32, 39],
+  magenta: [35, 39],
+  red: [31, 39],
+  yellow: [33, 39],
+};
+inspect.styles = {
+  special: "cyan",
+  number: "yellow",
+  boolean: "yellow",
+  undefined: "grey",
+  null: "bold",
+  string: "green",
+  date: "magenta",
+  regexp: "red",
+};
 function isArray(arg0) {
   return Array.isArray(arg0);
 }
@@ -629,7 +677,7 @@ export const deprecate = (arg0, arg1) => {
     }
   }
   if (typeof process === "undefined") {
-    return function() {
+    return function () {
       const self = this;
       const deprecateResult = closure_0.deprecate(closure_0, closure_1);
       const apply = deprecateResult.apply;
@@ -688,9 +736,7 @@ export const debuglog = (str) => {
         console.error("%s %d: %s", formatted, pid, applyArgumentsResult);
       };
     } else {
-      tmp2[formatted] = () => {
-
-      };
+      tmp2[formatted] = () => {};
     }
   }
   return table[formatted];
@@ -715,7 +761,12 @@ export { isDate };
 export { isError };
 export { isFunction };
 export function isPrimitive(flag) {
-  let tmp = null === flag || typeof flag === "boolean" || typeof flag === "number" || typeof flag === "string" || typeof flag === "symbol";
+  let tmp =
+    null === flag ||
+    typeof flag === "boolean" ||
+    typeof flag === "number" ||
+    typeof flag === "string" ||
+    typeof flag === "symbol";
   if (!tmp) {
     tmp = undefined === flag;
   }
@@ -730,7 +781,7 @@ export const log = () => {
   } else {
     text = str.toString(10);
   }
-  const items = [text, , ];
+  const items = [text, ,];
   const str3 = date.getMinutes();
   if (str3 < 10) {
     let text1 = `0${str3.toString(10)}`;
@@ -785,14 +836,14 @@ export const promisify = function promisify(fn) {
   closure_0 = fn;
   if (typeof fn !== "function") {
     const _TypeError2 = TypeError;
-    const typeError = new TypeError("The \"original\" argument must be of type Function");
+    const typeError = new TypeError('The "original" argument must be of type Function');
     throw typeError;
   } else {
     if (closure_11) {
       if (fn[tmp16]) {
         if (typeof fn[tmp16] !== "function") {
           const _TypeError = TypeError;
-          const typeError1 = new TypeError("The \"util.promisify.custom\" argument must be of type Function");
+          const typeError1 = new TypeError('The "util.promisify.custom" argument must be of type Function');
           throw typeError1;
         } else {
           const _Object5 = Object;
@@ -850,7 +901,7 @@ export const callbackify = function callbackify(fn) {
   closure_0 = fn;
   if (typeof fn !== "function") {
     let _TypeError = TypeError;
-    let typeError = new TypeError("The \"original\" argument must be of type Function");
+    let typeError = new TypeError('The "original" argument must be of type Function');
     throw typeError;
   } else {
     function callbackified() {
@@ -881,11 +932,14 @@ export const callbackify = function callbackify(fn) {
           }
           return applyArgumentsResult;
         }
-        arr.apply(this, items).then((cache) => {
-          process.nextTick(cb.bind(null, null, cache));
-        }, (c165) => {
-          process.nextTick(closure_1_12.bind(null, c165, cb));
-        });
+        arr.apply(this, items).then(
+          (cache) => {
+            process.nextTick(cb.bind(null, null, cache));
+          },
+          (c165) => {
+            process.nextTick(closure_1_12.bind(null, c165, cb));
+          },
+        );
       }
     }
     const _Object = Object;

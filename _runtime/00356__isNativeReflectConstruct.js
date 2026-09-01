@@ -24,8 +24,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class AnimatedValue {
   constructor(arg0, arg1) {
@@ -93,13 +92,13 @@ let items = [
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
-    }
+    },
   },
   {
     key: "__getValue",
     value: function __getValue() {
       return this._value + this._offset;
-    }
+    },
   },
   {
     key: "__makeNative",
@@ -115,7 +114,7 @@ let items = [
       if (self._listenerCount > 0) {
         const result = self.__ensureUpdateSubscriptionExists();
       }
-    }
+    },
   },
   {
     key: "addListener",
@@ -132,7 +131,7 @@ let items = [
         const result = self.__ensureUpdateSubscriptionExists();
       }
       return fn(items);
-    }
+    },
   },
   {
     key: "removeListener",
@@ -156,7 +155,7 @@ let items = [
           _updateSubscription.remove();
         }
       }
-    }
+    },
   },
   {
     key: "removeAllListeners",
@@ -175,7 +174,7 @@ let items = [
           _updateSubscription.remove();
         }
       }
-    }
+    },
   },
   {
     key: "__ensureUpdateSubscriptionExists",
@@ -204,7 +203,7 @@ let items = [
         };
         self._updateSubscription = obj;
       }
-    }
+    },
   },
   {
     key: "setValue",
@@ -226,7 +225,7 @@ let items = [
         const API3 = AnimatedValue(357).API;
         const result1 = API3.unsetWaitingForIdentifier(str);
       }
-    }
+    },
   },
   {
     key: "setOffset",
@@ -237,7 +236,7 @@ let items = [
         const API = AnimatedValue(357).API;
         const result = API.setAnimatedNodeOffset(self.__getNativeTag(), _offset);
       }
-    }
+    },
   },
   {
     key: "flattenOffset",
@@ -249,7 +248,7 @@ let items = [
         const API = AnimatedValue(357).API;
         const result = API.flattenAnimatedNodeOffset(self.__getNativeTag());
       }
-    }
+    },
   },
   {
     key: "extractOffset",
@@ -267,7 +266,7 @@ let items = [
         const API3 = AnimatedValue(357).API;
         const result2 = API3.unsetWaitingForIdentifier(str);
       }
-    }
+    },
   },
   {
     key: "stopAnimation",
@@ -287,7 +286,7 @@ let items = [
           arg0(self.__getValue());
         }
       }
-    }
+    },
   },
   {
     key: "resetAnimation",
@@ -299,7 +298,7 @@ let items = [
         const API = AnimatedValue(357).API;
         API.setAnimatedNodeValue(self.__getNativeTag(), self._startingValue);
       }
-    }
+    },
   },
   {
     key: "__onAnimatedValueUpdateReceived",
@@ -308,13 +307,13 @@ let items = [
       if (null != _offset) {
         this._offset = _offset;
       }
-    }
+    },
   },
   {
     key: "interpolate",
     value: function interpolate(arg0) {
       return new AnimatedValue(363)(this, arg0);
-    }
+    },
   },
   {
     key: "animate",
@@ -327,15 +326,21 @@ let items = [
         _animation.stop();
       }
       self._animation = _animation;
-      _animation.start(self._value, (_value) => {
-        self._updateValue(_value, true);
-      }, (arg0) => {
-        self._animation = null;
-        if (closure_0) {
-          tmp(arg0);
-        }
-      }, this._animation, self);
-    }
+      _animation.start(
+        self._value,
+        (_value) => {
+          self._updateValue(_value, true);
+        },
+        (arg0) => {
+          self._animation = null;
+          if (closure_0) {
+            tmp(arg0);
+          }
+        },
+        this._animation,
+        self,
+      );
+    },
   },
   {
     key: "stopTracking",
@@ -346,7 +351,7 @@ let items = [
         _tracking.__detach();
       }
       self._tracking = null;
-    }
+    },
   },
   {
     key: "track",
@@ -357,7 +362,7 @@ let items = [
         _tracking = this._tracking;
         _tracking.update();
       }
-    }
+    },
   },
   {
     key: "_updateValue",
@@ -391,14 +396,14 @@ let items = [
           const item1 = set.forEach((update) => update.update());
         }
       }
-    }
+    },
   },
   {
     key: "__getNativeConfig",
     value: function __getNativeConfig() {
       return { type: "value", value: this._value, offset: this._offset, debugID: this.__getDebugID() };
-    }
-  }
+    },
+  },
 ];
 
 export default importDefaultResult(AnimatedValue, items);

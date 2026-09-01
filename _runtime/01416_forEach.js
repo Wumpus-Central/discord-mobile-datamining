@@ -1,7 +1,6 @@
 // _runtime/01416_forEach.js
 import apply from "01417_apply.js";
 
-
 export default function forEach(str, call) {
   if (apply(call)) {
     call = toString.call;
@@ -99,4 +98,4 @@ export default function forEach(str, call) {
     const typeError = new TypeError("iterator must be a function");
     throw typeError;
   }
-};
+}

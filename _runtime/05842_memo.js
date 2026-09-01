@@ -9,7 +9,9 @@ import noop from "00019_noop.js";
 noopDefault;
 const jsx = jsxProd.jsx;
 let closure_5 = cancelAnimationDefault.createAnimatedComponent(get_ActivityIndicator.RefreshControl);
-let closure_6 = { code: "function pnpm_BottomSheetRefreshControlAndroidTsx1(){const{animatedScrollableState,SCROLLABLE_STATE}=this.__closure;return{enabled:animatedScrollableState.value===SCROLLABLE_STATE.UNLOCKED};}" };
+let closure_6 = {
+  code: "function pnpm_BottomSheetRefreshControlAndroidTsx1(){const{animatedScrollableState,SCROLLABLE_STATE}=this.__closure;return{enabled:animatedScrollableState.value===SCROLLABLE_STATE.UNLOCKED};}",
+};
 const memoResult = memo(function BottomSheetRefreshControlComponent(arg0) {
   ({ onRefresh, scrollableGesture } = arg0);
   const merged = Object.assign(arg0, Object.create(null));

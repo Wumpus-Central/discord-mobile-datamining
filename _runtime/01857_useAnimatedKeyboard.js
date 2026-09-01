@@ -2,10 +2,14 @@
 const require = arg1;
 const dependencyMap = arg6;
 let obj = { UNKNOWN: 0, OPENING: 1, OPEN: 2, CLOSING: 3, CLOSED: 4 };
-let closure_3 = { code: "function pnpm_compatTs1(e){const{state,KeyboardState}=this.__closure;state.set(e.height>0?KeyboardState.OPENING:KeyboardState.CLOSING);}" };
+let closure_3 = {
+  code: "function pnpm_compatTs1(e){const{state,KeyboardState}=this.__closure;state.set(e.height>0?KeyboardState.OPENING:KeyboardState.CLOSING);}",
+};
 let closure_4 = { code: "function pnpm_compatTs2(e){const{height}=this.__closure;height.set(e.height);}" };
 let closure_5 = { code: "function pnpm_compatTs3(e){const{height}=this.__closure;height.set(e.height);}" };
-let closure_6 = { code: "function pnpm_compatTs4(e){const{state,KeyboardState,height}=this.__closure;state.set(e.height>0?KeyboardState.OPEN:KeyboardState.CLOSED);height.set(e.height);}" };
+let closure_6 = {
+  code: "function pnpm_compatTs4(e){const{state,KeyboardState,height}=this.__closure;state.set(e.height>0?KeyboardState.OPEN:KeyboardState.CLOSED);height.set(e.height);}",
+};
 arg5.KeyboardState = obj;
 arg5.useAnimatedKeyboard = () => {
   obj = height(state[0]);

@@ -52,7 +52,11 @@ function getItemsFromScreens(arg0, arg1) {
     if (null == component) {
       const _Error = Error;
       const _HermesInternal = HermesInternal;
-      error = new Error("Couldn't find a 'screen' property for the screen '" + tmp + "'. This can happen if you passed 'undefined'. You likely forgot to export your component from the file it's defined in, or mixed up default import and named import when importing.");
+      error = new Error(
+        "Couldn't find a 'screen' property for the screen '" +
+          tmp +
+          "'. This can happen if you passed 'undefined'. You likely forgot to export your component from the file it's defined in, or mixed up default import and named import when importing.",
+      );
       throw error;
     } else {
       if (flag) {
@@ -91,7 +95,9 @@ export const createComponentForStaticNavigation = function createComponentForSta
   if (null == screens) {
     if (null == groups) {
       const _Error2 = Error;
-      error = new Error("Couldn't find a 'screens' or 'groups' property. Make sure to define your screens under a 'screens' property in the configuration.");
+      error = new Error(
+        "Couldn't find a 'screens' or 'groups' property. Make sure to define your screens under a 'screens' property in the configuration.",
+      );
       throw error;
     }
   }
@@ -114,66 +120,73 @@ export const createComponentForStaticNavigation = function createComponentForSta
       let items1 = [];
       let tmp3 = items1;
       let num = 0;
-      let arraySpreadResult = HermesBuiltin.arraySpread(entries.map((arg0) => {
-        [tmp, obj] = arg0;
-        let _if;
-        let element;
-        closure_2 = {};
-        if ("screen" in obj) {
-          const screen = obj.screen;
-          _if = obj.if;
-          closure_2 = items(obj, Screen);
-          let flag = false;
-          let component = screen;
-          if (!obj3.isValidElementType(screen)) {
-            flag = false;
-            if ("config" in screen) {
-              component = screen.getComponent();
-              flag = true;
+      let arraySpreadResult = HermesBuiltin.arraySpread(
+        entries.map((arg0) => {
+          [tmp, obj] = arg0;
+          let _if;
+          let element;
+          closure_2 = {};
+          if ("screen" in obj) {
+            const screen = obj.screen;
+            _if = obj.if;
+            closure_2 = items(obj, Screen);
+            let flag = false;
+            let component = screen;
+            if (!obj3.isValidElementType(screen)) {
+              flag = false;
+              if ("config" in screen) {
+                component = screen.getComponent();
+                flag = true;
+              }
             }
-          }
-          obj3 = Screen(closure_1_1[4]);
-        } else {
-          flag = false;
-          component = obj;
-          if (!obj2.isValidElementType(obj)) {
-            flag = false;
-            if ("config" in obj) {
-              component = obj.getComponent();
-              flag = true;
-            }
-          }
-          obj2 = Screen(closure_1_1[4]);
-        }
-        if (null == component) {
-          const _Error = Error;
-          const _HermesInternal = HermesInternal;
-          error = new Error("Couldn't find a 'screen' property for the screen '" + tmp + "'. This can happen if you passed 'undefined'. You likely forgot to export your component from the file it's defined in, or mixed up default import and named import when importing.");
-          throw error;
-        } else {
-          if (flag) {
-            element = <component />;
+            obj3 = Screen(closure_1_1[4]);
           } else {
-            obj = { component: null };
-            obj[0] = component;
-            element = closure_1_6(closure_1_7, obj);
-          }
-          return () => {
-            if (null == _if) {
-              const obj = { name: null };
-              obj[0] = closure_0;
-              const merged = Object.assign(closure_2);
-              obj.children = function children() {
-                return closure_3;
-              };
-              let tmp2 = closure_2_6(closure_1_0, obj, closure_0);
-            } else {
-              tmp2 = null;
+            flag = false;
+            component = obj;
+            if (!obj2.isValidElementType(obj)) {
+              flag = false;
+              if ("config" in obj) {
+                component = obj.getComponent();
+                flag = true;
+              }
             }
-            return tmp2;
-          };
-        }
-      }), 0);
+            obj2 = Screen(closure_1_1[4]);
+          }
+          if (null == component) {
+            const _Error = Error;
+            const _HermesInternal = HermesInternal;
+            error = new Error(
+              "Couldn't find a 'screen' property for the screen '" +
+                tmp +
+                "'. This can happen if you passed 'undefined'. You likely forgot to export your component from the file it's defined in, or mixed up default import and named import when importing.",
+            );
+            throw error;
+          } else {
+            if (flag) {
+              element = <component />;
+            } else {
+              obj = { component: null };
+              obj[0] = component;
+              element = closure_1_6(closure_1_7, obj);
+            }
+            return () => {
+              if (null == _if) {
+                const obj = { name: null };
+                obj[0] = closure_0;
+                const merged = Object.assign(closure_2);
+                obj.children = function children() {
+                  return closure_3;
+                };
+                let tmp2 = closure_2_6(closure_1_0, obj, closure_0);
+              } else {
+                tmp2 = null;
+              }
+              return tmp2;
+            };
+          }
+        }),
+        0,
+      );
       let tmp5 = push;
       let tmp6 = items1;
       let tmp7 = items;
@@ -192,23 +205,26 @@ export const createComponentForStaticNavigation = function createComponentForSta
       let items2 = [];
       let tmp10 = items2;
       let num2 = 0;
-      arraySpreadResult = HermesBuiltin.arraySpread(entries1.map((arg0) => {
-        [Screen, ] = arg0;
-        closure_3 = undefined;
-        closure_3 = closure_1_8(merged, merged.screens);
-        return () => {
-          if (null == _if) {
-            const obj = { navigationKey: null };
-            obj[0] = closure_0;
-            merged = Object.assign(merged);
-            obj.children = tmp;
-            let tmp3 = closure_2_6(_if, obj, closure_0);
-          } else {
-            tmp3 = null;
-          }
-          return tmp3;
-        };
-      }), 0);
+      arraySpreadResult = HermesBuiltin.arraySpread(
+        entries1.map((arg0) => {
+          [Screen] = arg0;
+          closure_3 = undefined;
+          closure_3 = closure_1_8(merged, merged.screens);
+          return () => {
+            if (null == _if) {
+              const obj = { navigationKey: null };
+              obj[0] = closure_0;
+              merged = Object.assign(merged);
+              obj.children = tmp;
+              let tmp3 = closure_2_6(_if, obj, closure_0);
+            } else {
+              tmp3 = null;
+            }
+            return tmp3;
+          };
+        }),
+        0,
+      );
       let tmp12 = push2;
       let tmp13 = items2;
       let tmp14 = items;
@@ -219,7 +235,9 @@ export const createComponentForStaticNavigation = function createComponentForSta
   }
   if (0 === items.length) {
     let _Error = Error;
-    const error1 = new Error("Couldn't find any screens in the 'screens' or 'groups' property. Make sure to define at least one screen in the configuration.");
+    const error1 = new Error(
+      "Couldn't find any screens in the 'screens' or 'groups' property. Make sure to define at least one screen in the configuration.",
+    );
     throw error1;
   } else {
     class NavigatorComponent {
@@ -299,11 +317,17 @@ export const createComponentForStaticNavigation = function createComponentForSta
     return NavigatorComponent;
   }
 };
-export const createComponentForStaticNavigationDeprecated = function createComponentForStaticNavigationDeprecated(getComponent) {
+export const createComponentForStaticNavigationDeprecated = function createComponentForStaticNavigationDeprecated(
+  getComponent,
+) {
   console.warn("`createComponentForStaticNavigation` is deprecated. Use `tree.getComponent()` instead.");
   return getComponent.getComponent();
 };
-export const createPathConfigForStaticNavigation = function createPathConfigForStaticNavigation(config, initialRouteName, arg2) {
+export const createPathConfigForStaticNavigation = function createPathConfigForStaticNavigation(
+  config,
+  initialRouteName,
+  arg2,
+) {
   let tmp = arg2;
   closure_0 = arg2;
   c2 = false;
@@ -377,7 +401,9 @@ export const createPathConfigForStaticNavigation = function createPathConfigForS
         if (obj.exact) {
           if (null == obj.path) {
             const _Error2 = Error;
-            error = new Error("A 'path' needs to be specified when specifying 'exact: true'. If you don't want this screen in the URL, specify it as empty string, e.g. `path: ''`.");
+            error = new Error(
+              "A 'path' needs to be specified when specifying 'exact: true'. If you don't want this screen in the URL, specify it as empty string, e.g. `path: ''`.",
+            );
             throw error;
           }
         }
@@ -415,7 +441,9 @@ export const createPathConfigForStaticNavigation = function createPathConfigForS
             if (!keys.includes(tmp9.initialRouteName)) {
               const _Error = Error;
               const _HermesInternal = HermesInternal;
-              const error1 = new Error("Couldn't find a screen named '" + tmp9.initialRouteName + "' to use as 'initialRouteName'.");
+              const error1 = new Error(
+                "Couldn't find a screen named '" + tmp9.initialRouteName + "' to use as 'initialRouteName'.",
+              );
               throw error1;
             }
           }
@@ -492,8 +520,15 @@ export const createPathConfigForStaticNavigation = function createPathConfigForS
                 }
                 const str9 = str.replace(/([a-z0-9])([A-Z])/g, "$1-$2");
                 const str10 = str.replace(/([a-z0-9])([A-Z])/g, "$1-$2").replace(/([A-Z]+)([A-Z][a-z])/g, "$1-$2");
-                obj.path = str.replace(/([a-z0-9])([A-Z])/g, "$1-$2").replace(/([A-Z]+)([A-Z][a-z])/g, "$1-$2").toLowerCase().replace(/^\/+|\/+$/g, "");
-                const str11 = str.replace(/([a-z0-9])([A-Z])/g, "$1-$2").replace(/([A-Z]+)([A-Z][a-z])/g, "$1-$2").toLowerCase();
+                obj.path = str
+                  .replace(/([a-z0-9])([A-Z])/g, "$1-$2")
+                  .replace(/([A-Z]+)([A-Z][a-z])/g, "$1-$2")
+                  .toLowerCase()
+                  .replace(/^\/+|\/+$/g, "");
+                const str11 = str
+                  .replace(/([a-z0-9])([A-Z])/g, "$1-$2")
+                  .replace(/([A-Z]+)([A-Z][a-z])/g, "$1-$2")
+                  .toLowerCase();
               }
             }
             const items = [str, obj];
@@ -518,10 +553,12 @@ export const createPathConfigForStaticNavigation = function createPathConfigForS
           tmp26 = set(tmp.screen, tmp9, tmp16, tmp19);
         }
       });
-      return Object.fromEntries(mapped.filter((arg0) => {
-        [, tmp] = arg0;
-        return Object.keys(tmp).length > 0;
-      }));
+      return Object.fromEntries(
+        mapped.filter((arg0) => {
+          [, tmp] = arg0;
+          return Object.keys(tmp).length > 0;
+        }),
+      );
     }
     obj = {};
     for (const key10053 in arg0.config) {

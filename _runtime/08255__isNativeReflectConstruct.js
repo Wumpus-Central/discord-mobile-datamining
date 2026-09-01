@@ -27,8 +27,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 noopAll;
 class G {
@@ -98,13 +97,11 @@ let items = [
         return jsx(__INTERNAL_VIEW_CONFIGDefault, { ref: null });
       }
       flag = false;
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(G, items);
 importDefaultResultResult.displayName = "G";
-function hasProps(arg0) {
-
-}
+function hasProps(arg0) {}
 
 export default importDefaultResultResult;

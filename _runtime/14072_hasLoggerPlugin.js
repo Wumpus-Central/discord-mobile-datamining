@@ -39,7 +39,7 @@ arg5.default = () => (arg0) => {
     },
     error(message, stack) {
       return closure_0.send("log", { level: "error", message, stack }, true);
-    }
+    },
   };
   return { features };
 };
@@ -115,7 +115,9 @@ arg5.assertHasLoggerPlugin = (log) => {
   }
   if (!tmp) {
     const _Error = Error;
-    error = new Error("This Reactotron client has not had the logger plugin applied to it. Make sure that you add `use(logger())` before adding this plugin.");
+    error = new Error(
+      "This Reactotron client has not had the logger plugin applied to it. Make sure that you add `use(logger())` before adding this plugin.",
+    );
     throw error;
   }
 };

@@ -58,12 +58,19 @@ export const completeSpanWithResults = function completeSpanWithResults(closure_
       setAttributesResult = self;
       if ("tools/call" !== method) {
         if ("prompts/get" === method) {
-          span.setAttributes(extractPromptResultAttributes.extractPromptResultAttributes(protocolVersion, setAttributesResult.recordOutputs));
+          span.setAttributes(
+            extractPromptResultAttributes.extractPromptResultAttributes(
+              protocolVersion,
+              setAttributesResult.recordOutputs,
+            ),
+          );
           const obj7 = extractPromptResultAttributes;
         }
       }
     }
-    setAttributesResult = span.setAttributes(extractPromptResultAttributes.extractToolResultAttributes(protocolVersion, setAttributesResult.recordOutputs));
+    setAttributesResult = span.setAttributes(
+      extractPromptResultAttributes.extractToolResultAttributes(protocolVersion, setAttributesResult.recordOutputs),
+    );
     const obj3 = extractPromptResultAttributes;
   }
 };

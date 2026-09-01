@@ -2,7 +2,6 @@
 import baseIteratee from "00720_baseIteratee.js";
 import baseUniq from "07358_baseUniq.js";
 
-
 export default function uniqBy(arg0, arg1) {
   if (arg0) {
     if (arg0.length) {
@@ -11,4 +10,4 @@ export default function uniqBy(arg0, arg1) {
     }
     return [];
   }
-};
+}

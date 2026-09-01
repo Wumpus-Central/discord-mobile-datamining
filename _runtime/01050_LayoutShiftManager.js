@@ -30,13 +30,13 @@ let items = [
     key: "__init",
     value: function __init() {
       this._sessionValue = 0;
-    }
+    },
   },
   {
     key: "__init2",
     value: function __init2() {
       this._sessionEntries = [];
-    }
+    },
   },
   {
     key: "_processEntry",
@@ -65,8 +65,8 @@ let items = [
         const items = [hadRecentInput];
         self._sessionEntries = items;
       }
-    }
-  }
+    },
+  },
 ];
 
 export const LayoutShiftManager = _createClass(LayoutShiftManager, items);

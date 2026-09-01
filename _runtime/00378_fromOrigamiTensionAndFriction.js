@@ -3,7 +3,7 @@ arg5.fromOrigamiTensionAndFriction = function fromOrigamiTensionAndFriction(over
   return { stiffness: 3.62 * (overshootClamping - 30) + 194, damping: 3 * (overshootClamping - 8) + 25 };
 };
 arg5.fromBouncinessAndSpeed = function fromBouncinessAndSpeed(overshootClamping, overshootClamping) {
-  const sum = 0.5 + overshootClamping / 1.7 / 20 * 199.5;
+  const sum = 0.5 + (overshootClamping / 1.7 / 20) * 199.5;
   const result = overshootClamping / 1.7;
   if (sum <= 18) {
     const _Math5 = Math;
@@ -24,7 +24,7 @@ arg5.fromBouncinessAndSpeed = function fromBouncinessAndSpeed(overshootClamping,
     const result3 = 0.00000045 * Math.pow(sum, 3);
     sum1 = result3 - 0.000332 * Math.pow(sum, 2) + 0.1078 * sum + 5.84;
   }
-  const result4 = result / 20 * 0.8;
+  const result4 = (result / 20) * 0.8;
   const diff = 2 * result4 - result4 * result4;
   return { stiffness: 3.62 * (sum - 30) + 194, damping: 3 * (diff * 0.01 + (1 - diff) * sum1 - 8) + 25 };
 };

@@ -51,4 +51,4 @@ export default function shallowEqual(obj, obj2, call) {
     call = call.call;
     typeof call === "unknown" ? call(obj, obj2) : call(arg3, obj, obj2);
   }
-};
+}

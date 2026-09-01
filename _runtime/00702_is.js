@@ -74,7 +74,6 @@ export const useSyncExternalStoreWithSelector = (subscribe) => {
         }
         return tmp3;
       },
-
     ];
     let fn;
     if (null !== tmp) {

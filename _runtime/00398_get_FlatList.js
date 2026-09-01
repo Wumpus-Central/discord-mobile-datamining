@@ -13,7 +13,10 @@ if (get_VersionDefault.isDisableAnimations) {
 const obj = {};
 Object.defineProperty(obj, "FlatList", { get: () => require("metro/00400__.js").default, set: undefined });
 Object.defineProperty(obj, "Image", { get: () => require("metro/00401__.js").default, set: undefined });
-Object.defineProperty(obj, "ScrollView", { get: () => AnimatedScrollViewWithInvertedRefreshControl /* AnimatedScrollViewWithInvertedRefreshControl */.default, set: undefined });
+Object.defineProperty(obj, "ScrollView", {
+  get: () => AnimatedScrollViewWithInvertedRefreshControl /* AnimatedScrollViewWithInvertedRefreshControl */.default,
+  set: undefined,
+});
 Object.defineProperty(obj, "SectionList", { get: () => require("metro/00405__.js").default, set: undefined });
 Object.defineProperty(obj, "Text", { get: () => require("metro/00407__.js").default, set: undefined });
 Object.defineProperty(obj, "View", { get: () => require("metro/00408__.js").default, set: undefined });

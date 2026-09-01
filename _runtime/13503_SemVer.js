@@ -1,7 +1,6 @@
 // _runtime/13503_SemVer.js
 import SemVer from "13504_SemVer.js";
 
-
 export default (arg0, arg1) => {
   if (arg0 instanceof SemVer) {
     return arg0;

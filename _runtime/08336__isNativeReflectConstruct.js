@@ -21,8 +21,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class Stop {
   constructor() {
@@ -58,8 +57,8 @@ let items = [
     key: "render",
     value: function render() {
       return null;
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(Stop, items);
 importDefaultResultResult.displayName = "Stop";

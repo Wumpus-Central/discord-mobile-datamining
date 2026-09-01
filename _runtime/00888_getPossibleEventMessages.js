@@ -19,6 +19,5 @@ arg5.getPossibleEventMessages = function getPossibleEventMessages(message) {
       }
     }
     return items;
-  } catch (err) {
-  }
+  } catch (err) {}
 };

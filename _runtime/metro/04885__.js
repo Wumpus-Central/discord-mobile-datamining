@@ -6,7 +6,15 @@ import { View } from "../00017_get_ActivityIndicator.js";
 import { jsx } from "../react/00021_jsxProd.js";
 
 const require = arg1;
-let closure_3 = ["obscureBackground", "hideNavigationBar", "onFocus", "onBlur", "onSearchButtonPress", "onCancelButtonPress", "onChangeText"];
+let closure_3 = [
+  "obscureBackground",
+  "hideNavigationBar",
+  "onFocus",
+  "onBlur",
+  "onSearchButtonPress",
+  "onCancelButtonPress",
+  "onChangeText",
+];
 let c5 = importDefaultResult;
 
 export default importDefaultResult.forwardRef(function SearchBar(autoCapitalize, ref) {
@@ -49,7 +57,7 @@ export default importDefaultResult.forwardRef(function SearchBar(autoCapitalize,
         const Commands = callback(table[4]).Commands;
         return Commands.cancelSearch(arg0);
       });
-    }
+    },
   }));
   const items = [ref];
   importDefault = importDefaultResult.useCallback((arg0) => {
@@ -69,7 +77,8 @@ export default importDefaultResult.forwardRef(function SearchBar(autoCapitalize,
       str2 = "systemDefault";
     }
     obj.autoCapitalize = str2;
-    ({ obscureBackground, hideNavigationBar, onFocus, onBlur, onSearchButtonPress, onCancelButtonPress, onChangeText } = obj);
+    ({ obscureBackground, hideNavigationBar, onFocus, onBlur, onSearchButtonPress, onCancelButtonPress, onChangeText } =
+      obj);
     obj = { ref: null };
     obj[0] = ref;
     const tmp14 = callback(obj, closure_3);

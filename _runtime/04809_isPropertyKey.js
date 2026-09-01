@@ -6,4 +6,4 @@ export default function isPropertyKey(str) {
     tmp = typeof str === "symbol";
   }
   return tmp;
-};
+}

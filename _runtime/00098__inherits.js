@@ -1,7 +1,6 @@
 // _runtime/00098__inherits.js
 import _setPrototypeOf from "00099__setPrototypeOf.js";
 
-
 export default function _inherits(value, fn) {
   if (typeof fn !== "function") {
     if (null !== fn) {
@@ -19,4 +18,4 @@ export default function _inherits(value, fn) {
   if (fn) {
     _setPrototypeOf(value, fn);
   }
-};
+}

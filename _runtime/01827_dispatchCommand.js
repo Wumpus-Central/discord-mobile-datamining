@@ -6,7 +6,6 @@ import scrollToFabric from "01831_scrollToFabric.js";
 import setGestureStateNative from "01832_setGestureStateNative.js";
 import setNativePropsFabric from "01833_setNativePropsFabric.js";
 
-
 export const dispatchCommand = dispatchCommandFabric.dispatchCommand;
 export const getRelativeCoords = getRelativeCoords.getRelativeCoords;
 export const measure = measureFabric.measure;

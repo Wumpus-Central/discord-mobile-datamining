@@ -27,8 +27,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 function reportException(stack) {
   stack = undefined;
@@ -66,7 +65,16 @@ function reportException(stack) {
     obj.stackReturnAddresses = stack.cause.stackReturnAddresses;
     obj.stackElements = stack.cause.stackElements;
   }
-  obj = { message: sum2, originalMessage: null, name: null, componentStack: null, stack: null, id: null, isFatal: null, extraData: null };
+  obj = {
+    message: sum2,
+    originalMessage: null,
+    name: null,
+    componentStack: null,
+    stack: null,
+    id: null,
+    isFatal: null,
+    extraData: null,
+  };
   let tmp11 = null;
   if (sum2 !== str) {
     tmp11 = str;
@@ -218,6 +226,6 @@ export default {
   SyntheticError: importDefaultResultResult,
   unstable_setExceptionDecorator(arg0) {
     closure_7 = arg0;
-  }
+  },
 };
 export const SyntheticError = importDefaultResultResult;

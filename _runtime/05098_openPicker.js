@@ -1,7 +1,6 @@
 // _runtime/05098_openPicker.js
 import RNCImageCropPickerDefault from "05099_RNCImageCropPicker.js";
 
-
 export default RNCImageCropPickerDefault;
 export const openPicker = RNCImageCropPickerDefault.openPicker;
 export const openCamera = RNCImageCropPickerDefault.openCamera;

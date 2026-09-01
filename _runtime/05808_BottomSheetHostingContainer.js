@@ -63,7 +63,7 @@ const memoResult = noop.memo(function BottomSheetHostingContainerComponent(botto
   }
   obj[2] = stableCallback;
   obj[3] = topInset(() => {
-    const items = [style, closure_1_0(closure_1_1[3]).styles.container, ];
+    const items = [style, closure_1_0(closure_1_1[3]).styles.container];
     const obj = { top: topInset, bottom: num, overflow: null };
     let str = "hidden";
     if (detached) {

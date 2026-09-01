@@ -166,10 +166,12 @@ arg5.resourceTimingToSpanAttributes = function resourceTimingToSpanAttributes(ne
     const _Object = Object;
     const _Object2 = Object;
     const entries = Object.entries(obj);
-    let fromEntriesResult = Object.fromEntries(entries.filter((arg0) => {
-      [, tmp] = arg0;
-      return null != tmp;
-    }));
+    let fromEntriesResult = Object.fromEntries(
+      entries.filter((arg0) => {
+        [, tmp] = arg0;
+        return null != tmp;
+      }),
+    );
   } else {
     const browserPerformanceAPI = tmp4(1059).getBrowserPerformanceAPI();
     timeOrigin = undefined;

@@ -7,19 +7,21 @@ import closure_2 from "metro/00032__slicedToArray.js";
 import { extractNetworkProtocol } from "01059_extractNetworkProtocol.js";
 
 function _addMeasureSpans(activeSpan, entryType) {
-  if (!(function isReact19MeasureEntry(entryType) {
-    entryType = undefined;
-    if (entryType != null) {
-      entryType = entryType.entryType;
-    }
-    if ("measure" === entryType) {
-      try {
-        return "Components \u269B" === entryType.detail.devtools.track;
-      } catch (err) {
-        return tmp;
+  if (
+    !(function isReact19MeasureEntry(entryType) {
+      entryType = undefined;
+      if (entryType != null) {
+        entryType = entryType.entryType;
       }
-    }
-  })(entryType)) {
+      if ("measure" === entryType) {
+        try {
+          return "Components \u269B" === entryType.detail.devtools.track;
+        } catch (err) {
+          return tmp;
+        }
+      }
+    })(entryType)
+  ) {
     const items = ["mark", "measure"];
     if (!items.includes(entryType.entryType)) {
       const navigationEntry = getNavigationEntry.getNavigationEntry(false);
@@ -61,8 +63,7 @@ function _addMeasureSpans(activeSpan, entryType) {
                     const _JSON2 = JSON;
                     const combined = "sentry.browser.measure.detail." + tmp17;
                     arg0[combined] = JSON.stringify(tmp19);
-                  } catch (err) {
-                  }
+                  } catch (err) {}
                 }
                 const tmp16 = callback2(tmp13, 2);
               }
@@ -73,14 +74,12 @@ function _addMeasureSpans(activeSpan, entryType) {
                 try {
                   const _JSON = JSON;
                   arg0["sentry.browser.measure.detail"] = JSON.stringify(tmp2);
-                } catch (err) {
-                }
+                } catch (err) {}
               }
               obj2 = callback(817);
             }
           }
-        } catch (err) {
-        }
+        } catch (err) {}
       })(obj, entryType);
       if (sum <= sum2) {
         const tmp4Result = tmp4(1059);
@@ -197,7 +196,14 @@ function _addResourceSpans(activeSpan, initiatorType, arr, arg3, arg4, arg5, arr
           obj["server.address"] = url.host;
         }
         obj["url.same_origin"] = arr.includes(_require(obj[3]).WINDOW.location.origin);
-        const items = [["responseStatus", "http.response.status_code"], ["transferSize", "http.response_transfer_size"], ["encodedBodySize", "http.response_content_length"], ["decodedBodySize", "http.decoded_response_content_length"], ["renderBlockingStatus", "resource.render_blocking_status"], ["deliveryType", "http.response_delivery_type"]];
+        const items = [
+          ["responseStatus", "http.response.status_code"],
+          ["transferSize", "http.response_transfer_size"],
+          ["encodedBodySize", "http.response_content_length"],
+          ["decodedBodySize", "http.decoded_response_content_length"],
+          ["renderBlockingStatus", "resource.render_blocking_status"],
+          ["deliveryType", "http.response_delivery_type"],
+        ];
         _require = initiatorType;
         const item = items.forEach((arg0) => {
           [tmp, tmp2] = arg0;
@@ -295,12 +301,27 @@ export const addPerformanceEntries = function addPerformanceEntries(setAttribute
             if ("paint" !== entryType) {
               if ("measure" !== entryType) {
                 if ("resource" === entryType) {
-                  closure_1_10(setAttribute, startTime, startTime.name, msToSecResult, msToSecResult1, closure_2, closure_1.ignoreResourceSpans);
+                  closure_1_10(
+                    setAttribute,
+                    startTime,
+                    startTime.name,
+                    msToSecResult,
+                    msToSecResult1,
+                    closure_2,
+                    closure_1.ignoreResourceSpans,
+                  );
                 }
               }
             }
           }
-          closure_1_7(setAttribute, startTime, msToSecResult, msToSecResult1, closure_2, closure_1.ignorePerformanceApiSpans);
+          closure_1_7(
+            setAttribute,
+            startTime,
+            msToSecResult,
+            msToSecResult1,
+            closure_2,
+            closure_1.ignorePerformanceApiSpans,
+          );
           const tmp15 = startTime.startTime < setAttribute(closure_1[7]).getVisibilityWatcher().firstHiddenTime;
           if (tmp16) {
             obj = { value: null, unit: "millisecond" };
@@ -469,7 +490,12 @@ export const startTrackingInteractions = function startTrackingInteractions() {
           let tmp15 = tmp20Result;
           let tmp16 = activeSpan;
           let tmp17 = tmp25;
-          let startAndEndSpanResult = tmp20Result.startAndEndSpan(activeSpan, msToSecResult, tmp25 + msToSecResult1, tmp27);
+          let startAndEndSpanResult = tmp20Result.startAndEndSpan(
+            activeSpan,
+            msToSecResult,
+            tmp25 + msToSecResult1,
+            tmp27,
+          );
         }
         continue;
       }
@@ -513,7 +539,13 @@ export const startTrackingLongAnimationFrames = function startTrackingLongAnimat
           obj = {};
           obj[tmp10(817).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ui.browser.metrics";
           let tmp23 = obj;
-          ({ sourceURL, sourceFunctionName, sourceCharPosition, invoker: obj6["browser.script.invoker"], invokerType: obj6["browser.script.invoker_type"] } = tmp8.scripts[0]);
+          ({
+            sourceURL,
+            sourceFunctionName,
+            sourceCharPosition,
+            invoker: obj6["browser.script.invoker"],
+            invokerType: obj6["browser.script.invoker_type"],
+          } = tmp8.scripts[0]);
           if (sourceURL) {
             let tmp25 = obj;
             let tmp26 = sourceURL;
@@ -543,7 +575,12 @@ export const startTrackingLongAnimationFrames = function startTrackingLongAnimat
           let tmp39 = activeSpan;
           let tmp40 = msToSecResult;
           let tmp41 = obj;
-          let startAndEndSpanResult = tmp10Result.startAndEndSpan(activeSpan, msToSecResult, msToSecResult + msToSecResult1, obj);
+          let startAndEndSpanResult = tmp10Result.startAndEndSpan(
+            activeSpan,
+            msToSecResult,
+            msToSecResult + msToSecResult1,
+            obj,
+          );
         }
         continue;
       }
@@ -665,7 +702,5 @@ export const startTrackingWebVitals = function startTrackingWebVitals(client) {
       };
     }
   }
-  return () => {
-
-  };
+  return () => {};
 };

@@ -13,5 +13,5 @@ arg5.default = {
     return true;
   },
   shouldFetchWiFiSSID: false,
-  useNativeReachability: true
+  useNativeReachability: true,
 };

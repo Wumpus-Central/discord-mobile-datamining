@@ -24,8 +24,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class AnimatedTracking {
   constructor(arg0, arg1, arg2, arg3, arg4, arg5) {
@@ -73,14 +72,14 @@ let items = [
       fn(items);
       const _value = this._value;
       _value.__makeNative(arg0);
-    }
+    },
   },
   {
     key: "__getValue",
     value: function __getValue() {
       const _parent = this._parent;
       return _parent.__getValue();
-    }
+    },
   },
   {
     key: "__attach",
@@ -96,7 +95,7 @@ let items = [
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
-    }
+    },
   },
   {
     key: "__detach",
@@ -110,7 +109,7 @@ let items = [
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
-    }
+    },
   },
   {
     key: "update",
@@ -122,7 +121,7 @@ let items = [
       obj.toValue = toValue.__getValue();
       const _animationClass = new this._animationClass(obj);
       _value.animate(_animationClass, this._callback);
-    }
+    },
   },
   {
     key: "__getNativeConfig",
@@ -141,8 +140,8 @@ let items = [
       obj[4] = _value.__getNativeTag();
       obj[5] = this.__getDebugID();
       return obj;
-    }
-  }
+    },
+  },
 ];
 
 export default importDefaultResult(AnimatedTracking, items);

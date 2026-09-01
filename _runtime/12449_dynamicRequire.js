@@ -35,10 +35,8 @@ arg5.loadModule = function loadModule(arg0) {
       try {
         const _HermesInternal = HermesInternal;
         tmp3 = dynamicRequire(tmp, "" + dynamicRequire(tmp, "process").cwd() + "/node_modules/" + arg0);
-      } catch (err) {
-      }
+      } catch (err) {}
     }
     return tmp3;
-  } catch (err) {
-  }
+  } catch (err) {}
 };

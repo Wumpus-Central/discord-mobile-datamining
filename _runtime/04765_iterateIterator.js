@@ -39,4 +39,4 @@ export default function iterateIterator(next) {
     }
   }
   throw new TypeError("iterator must be an object with a `next` method");
-};
+}

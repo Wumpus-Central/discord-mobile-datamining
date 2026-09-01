@@ -42,7 +42,9 @@ function GetOption(obj, arg1, arg2, arr) {
   }
 }
 function memoize(arg0, cache) {
-  return cache.strategy ? cache.strategy : strategyDefault(arg0, { cache: cache.cache || closure_10, serializer: cache.serializer || serializerDefault });
+  return cache.strategy
+    ? cache.strategy
+    : strategyDefault(arg0, { cache: cache.cache || closure_10, serializer: cache.serializer || serializerDefault });
 }
 function monadic(call, get, arg2, g_v) {
   let tmp2 = g_v;
@@ -98,7 +100,9 @@ function validateInstance(arg0, arg1) {
     const _TypeError = TypeError;
     const _String = String;
     const _HermesInternal = HermesInternal;
-    const typeError = new TypeError("Method Intl.ListFormat.prototype." + "format" + " called on incompatible receiver " + String(arg0));
+    const typeError = new TypeError(
+      "Method Intl.ListFormat.prototype." + "format" + " called on incompatible receiver " + String(arg0),
+    );
     throw typeError;
   }
 }
@@ -136,24 +140,27 @@ function createPartsFromList(__INTERNAL_SLOT_MAP__, self) {
     obj1 = { type: "element", value: null };
     obj1[1] = arg2[1];
     obj[1] = obj1;
-    return deconstructPattern((function getMultiInternalSlots(__INTERNAL_SLOT_MAP__, self, locale) {
-      const substr = [...arguments].slice();
-      c0 = undefined;
-      const value = __INTERNAL_SLOT_MAP__.get(self);
-      c0 = value;
-      if (value) {
-        const _Object = Object;
-        return substr.reduce((arg0, arg1) => {
-          arg0[arg1] = _undefined[arg1];
-          return arg0;
-        }, Object.create(null));
-      } else {
-        const _TypeError = TypeError;
-        const _HermesInternal = HermesInternal;
-        const typeError = new TypeError("" + self + " InternalSlot has not been initialized");
-        throw typeError;
-      }
-    })(__INTERNAL_SLOT_MAP__, self, "templatePair").templatePair, obj);
+    return deconstructPattern(
+      (function getMultiInternalSlots(__INTERNAL_SLOT_MAP__, self, locale) {
+        const substr = [...arguments].slice();
+        c0 = undefined;
+        const value = __INTERNAL_SLOT_MAP__.get(self);
+        c0 = value;
+        if (value) {
+          const _Object = Object;
+          return substr.reduce((arg0, arg1) => {
+            arg0[arg1] = _undefined[arg1];
+            return arg0;
+          }, Object.create(null));
+        } else {
+          const _TypeError = TypeError;
+          const _HermesInternal = HermesInternal;
+          const typeError = new TypeError("" + self + " InternalSlot has not been initialized");
+          throw typeError;
+        }
+      })(__INTERNAL_SLOT_MAP__, self, "templatePair").templatePair,
+      obj,
+    );
   } else {
     const obj2 = { type: "element", value: null };
     obj2[1] = arg2[length - 1];
@@ -178,24 +185,27 @@ function createPartsFromList(__INTERNAL_SLOT_MAP__, self) {
         obj3[1] = arg2[diff];
         obj[0] = obj3;
         obj[1] = tmpResult;
-        tmpResult = tmp((function getMultiInternalSlots(__INTERNAL_SLOT_MAP__, self, locale) {
-          const substr = [...arguments].slice();
-          c0 = undefined;
-          const value = __INTERNAL_SLOT_MAP__.get(self);
-          c0 = value;
-          if (value) {
-            const _Object = Object;
-            return substr.reduce((arg0, arg1) => {
-              arg0[arg1] = _undefined[arg1];
-              return arg0;
-            }, Object.create(null));
-          } else {
-            const _TypeError = TypeError;
-            const _HermesInternal = HermesInternal;
-            const typeError = new TypeError("" + self + " InternalSlot has not been initialized");
-            throw typeError;
-          }
-        })(__INTERNAL_SLOT_MAP__, self, str)[str], obj);
+        tmpResult = tmp(
+          (function getMultiInternalSlots(__INTERNAL_SLOT_MAP__, self, locale) {
+            const substr = [...arguments].slice();
+            c0 = undefined;
+            const value = __INTERNAL_SLOT_MAP__.get(self);
+            c0 = value;
+            if (value) {
+              const _Object = Object;
+              return substr.reduce((arg0, arg1) => {
+                arg0[arg1] = _undefined[arg1];
+                return arg0;
+              }, Object.create(null));
+            } else {
+              const _TypeError = TypeError;
+              const _HermesInternal = HermesInternal;
+              const typeError = new TypeError("" + self + " InternalSlot has not been initialized");
+              throw typeError;
+            }
+          })(__INTERNAL_SLOT_MAP__, self, str)[str],
+          obj,
+        );
         diff = diff - 1;
         tmp6 = tmpResult;
       } while (0 <= diff);
@@ -299,21 +309,21 @@ let closure_9 = (() => {
       key: "get",
       value: function get(arg0) {
         return this.cache[arg0];
-      }
+      },
     },
     {
       key: "set",
       value: function set(arg0, arg1) {
         this.cache[arg0] = arg1;
-      }
-    }
+      },
+    },
   ];
   return callback(ObjectWithoutPrototypeCache, items);
 })();
 let closure_10 = {
   create() {
     return new closure_9();
-  }
+  },
 };
 function strategyVariadic(c165, cache) {
   cache = cache.cache;
@@ -381,7 +391,14 @@ let obj = (() => {
         tmp23 = canonicalLocales;
         tmp24 = obj;
         tmp25 = localeData;
-        ResolveLocaleResult = obj.ResolveLocale(tmp.availableLocales, canonicalLocales, obj, tmp.relevantExtensionKeys, localeData, tmp.getDefaultLocale);
+        ResolveLocaleResult = obj.ResolveLocale(
+          tmp.availableLocales,
+          canonicalLocales,
+          obj,
+          tmp.relevantExtensionKeys,
+          localeData,
+          tmp.getDefaultLocale,
+        );
         __INTERNAL_SLOT_MAP__2 = tmp.__INTERNAL_SLOT_MAP__;
         tmp27 = obj1;
         if (!__INTERNAL_SLOT_MAP__2.get(self)) {
@@ -482,7 +499,7 @@ let obj = (() => {
       } else {
         return iter.value;
       }
-    }
+    },
   };
   let items = [
     obj,
@@ -506,7 +523,7 @@ let obj = (() => {
           const items1 = [tmp2];
           return items1;
         }
-      }
+      },
     },
     {
       key: "resolvedOptions",
@@ -573,11 +590,16 @@ let obj = (() => {
           let _TypeError = TypeError;
           const _String = String;
           let _HermesInternal = HermesInternal;
-          let typeError = new TypeError("Method Intl.ListFormat.prototype." + "resolvedOptions" + " called on incompatible receiver " + String(self));
+          let typeError = new TypeError(
+            "Method Intl.ListFormat.prototype." +
+              "resolvedOptions" +
+              " called on incompatible receiver " +
+              String(self),
+          );
           throw typeError;
         }
-      }
-    }
+      },
+    },
   ];
   obj = {
     key: "supportedLocalesOf",
@@ -593,8 +615,11 @@ let obj = (() => {
           tmp2(Object(arg1), "localeMatcher", "string", ["lookup", "best fit"], "best fit");
         }
       }
-      return ListFormat(closure_1_1[2]).LookupSupportedLocales(Array.from(ListFormat.availableLocales), canonicalLocales);
-    }
+      return ListFormat(closure_1_1[2]).LookupSupportedLocales(
+        Array.from(ListFormat.availableLocales),
+        canonicalLocales,
+      );
+    },
   };
   let items1 = [
     obj,
@@ -627,14 +652,14 @@ let obj = (() => {
           }
           continue;
         }
-      }
+      },
     },
     {
       key: "getDefaultLocale",
       value: function getDefaultLocale() {
         return ListFormat.__defaultLocale;
-      }
-    }
+      },
+    },
   ];
   return callback(ListFormat, items, items1);
 })();
@@ -651,12 +676,27 @@ try {
   if (typeof Symbol !== "undefined") {
     let _Object4 = Object;
     const _Symbol2 = Symbol;
-    Object.defineProperty(obj.prototype, Symbol.toStringTag, { value: "Intl.ListFormat", writable: false, enumerable: false, configurable: true });
+    Object.defineProperty(obj.prototype, Symbol.toStringTag, {
+      value: "Intl.ListFormat",
+      writable: false,
+      enumerable: false,
+      configurable: true,
+    });
   }
   let _Object = Object;
-  Object.defineProperty(obj.prototype.constructor, "length", { value: 0, writable: false, enumerable: false, configurable: true });
+  Object.defineProperty(obj.prototype.constructor, "length", {
+    value: 0,
+    writable: false,
+    enumerable: false,
+    configurable: true,
+  });
   let _Object2 = Object;
-  Object.defineProperty(obj.supportedLocalesOf, "length", { value: 1, writable: false, enumerable: false, configurable: true });
+  Object.defineProperty(obj.supportedLocalesOf, "length", {
+    value: 1,
+    writable: false,
+    enumerable: false,
+    configurable: true,
+  });
   let _Object3 = Object;
   let _Intl = Intl;
   obj = { value: null, writable: true, enumerable: false, configurable: true };
@@ -671,5 +711,4 @@ try {
     const _globalThis2 = globalThis;
     delete tmp2[tmp];
   }
-} catch (err) {
-}
+} catch (err) {}

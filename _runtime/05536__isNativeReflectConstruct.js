@@ -25,8 +25,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 const MaskedView = ["maskElement", "children"];
 let c5 = importAllResult;
@@ -75,7 +74,9 @@ let items = [
       } else {
         if (!self._hasWarnedInvalidRenderMask) {
           const _console = console;
-          console.warn("MaskedView: Invalid `maskElement` prop was passed to MaskedView. Expected a React Element. No mask will render.");
+          console.warn(
+            "MaskedView: Invalid `maskElement` prop was passed to MaskedView. Expected a React Element. No mask will render.",
+          );
           self._hasWarnedInvalidRenderMask = true;
         }
         obj = {};
@@ -84,8 +85,8 @@ let items = [
         tmp9 = callback4(closure_6, obj);
       }
       return tmp9;
-    }
-  }
+    },
+  },
 ];
 
 export default importDefaultResult(MaskedView, items);

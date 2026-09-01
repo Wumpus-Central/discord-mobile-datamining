@@ -8,7 +8,9 @@ import { jsx } from "react/00021_jsxProd.js";
 const require = arg1;
 let closure_3 = ["backgroundColor"];
 ({ Animated: error, Platform, StyleSheet } = get_ActivityIndicator);
-const styles = StyleSheet.create({ container: { alignSelf: "flex-end", textAlign: "center", paddingHorizontal: 4, overflow: "hidden" } });
+const styles = StyleSheet.create({
+  container: { alignSelf: "flex-end", textAlign: "center", paddingHorizontal: 4, overflow: "hidden" },
+});
 
 export const Badge = function Badge(visible) {
   let flag = visible.visible;
@@ -24,14 +26,17 @@ export const Badge = function Badge(visible) {
   let first;
   let first1;
   closure_3 = undefined;
-  first = callback2(React.useState(() => {
-    let num = 0;
-    if (flag) {
-      num = 1;
-    }
-    const value = new closure_1_7.Value(num);
-    return value;
-  }), 1)[0];
+  first = callback2(
+    React.useState(() => {
+      let num = 0;
+      if (flag) {
+        num = 1;
+      }
+      const value = new closure_1_7.Value(num);
+      return value;
+    }),
+    1,
+  )[0];
   const tmp2 = callback2(React.useState(flag), 2);
   first1 = tmp2[0];
   closure_3 = tmp4;
@@ -79,9 +84,20 @@ export const Badge = function Badge(visible) {
   }
   const result = num / 2;
   let obj = { numberOfLines: 1, style: null };
-  obj = { transform: null, color: null, lineHeight: null, height: null, minWidth: null, opacity: null, backgroundColor: null, fontSize: null, borderRadius: null, borderCurve: "continuous" };
+  obj = {
+    transform: null,
+    color: null,
+    lineHeight: null,
+    height: null,
+    minWidth: null,
+    opacity: null,
+    backgroundColor: null,
+    fontSize: null,
+    borderRadius: null,
+    borderCurve: "continuous",
+  };
   obj1 = { scale: null };
-  const rounded = Math.floor(3 * num / 4);
+  const rounded = Math.floor((3 * num) / 4);
   obj1[0] = first.interpolate({ inputRange: [0, 1], outputRange: [0.5, 1] });
   const items1 = [obj1];
   obj[0] = items1;
@@ -97,5 +113,18 @@ export const Badge = function Badge(visible) {
   obj[1] = items2;
   const merged1 = Object.assign(merged);
   obj.children = children;
-  return <RN.Text transform={null} color={null} lineHeight={null} height={null} minWidth={null} opacity={null} backgroundColor={null} fontSize={null} borderRadius={null} borderCurve="continuous" />;
+  return (
+    <RN.Text
+      transform={null}
+      color={null}
+      lineHeight={null}
+      height={null}
+      minWidth={null}
+      opacity={null}
+      backgroundColor={null}
+      fontSize={null}
+      borderRadius={null}
+      borderCurve="continuous"
+    />
+  );
 };

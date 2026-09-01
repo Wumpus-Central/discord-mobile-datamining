@@ -25,26 +25,28 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 ({ Animated: c5, Platform, StyleSheet } = get_ActivityIndicator);
 const View = get_ActivityIndicator.View;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let obj = { default: require("SlideFromRightIOS").DefaultTransition, fade: require("SlideFromRightIOS").ModalFadeTransition, fade_from_bottom: require("SlideFromRightIOS").FadeFromBottomAndroid, fade_from_right: require("SlideFromRightIOS").FadeFromRightAndroid, none: require("SlideFromRightIOS").DefaultTransition, reveal_from_bottom: require("SlideFromRightIOS").RevealFromBottomAndroid, scale_from_center: require("SlideFromRightIOS").ScaleFromCenterAndroid, slide_from_left: require("SlideFromRightIOS").SlideFromLeftIOS, slide_from_right: require("SlideFromRightIOS").SlideFromRightIOS, slide_from_bottom: require("SlideFromRightIOS").BottomSheetAndroid };
+let obj = {
+  default: require("SlideFromRightIOS").DefaultTransition,
+  fade: require("SlideFromRightIOS").ModalFadeTransition,
+  fade_from_bottom: require("SlideFromRightIOS").FadeFromBottomAndroid,
+  fade_from_right: require("SlideFromRightIOS").FadeFromRightAndroid,
+  none: require("SlideFromRightIOS").DefaultTransition,
+  reveal_from_bottom: require("SlideFromRightIOS").RevealFromBottomAndroid,
+  scale_from_center: require("SlideFromRightIOS").ScaleFromCenterAndroid,
+  slide_from_left: require("SlideFromRightIOS").SlideFromLeftIOS,
+  slide_from_right: require("SlideFromRightIOS").SlideFromRightIOS,
+  slide_from_bottom: require("SlideFromRightIOS").BottomSheetAndroid,
+};
 let closure_12 = Object.freeze({ options: {} });
-function getInterpolationIndex(arg0, arg1) {
-
-}
-function getIsModalPresentation(arg0) {
-
-}
-function getIsModal(arg0, arg1, arg2) {
-
-}
-function getHeaderHeights(arg0, arg1, arg2, arg3, arg4, arg5) {
-
-}
+function getInterpolationIndex(arg0, arg1) {}
+function getIsModalPresentation(arg0) {}
+function getIsModal(arg0, arg1, arg2) {}
+function getHeaderHeights(arg0, arg1, arg2, arg3, arg4, arg5) {}
 function getDistanceFromOptions(width, gestureDirection) {
   gestureDirection = undefined;
   if (gestureDirection != null) {
@@ -83,9 +85,7 @@ function getDistanceFromOptions(width, gestureDirection) {
     return tmp3(6027).getDistanceForDirection(width, gestureDirection, arg2);
   }
 }
-function getProgressFromGesture(arg0, arg1, arg2, arg3) {
-
-}
+function getProgressFromGesture(arg0, arg1, arg2, arg3) {}
 class CardStack {
   constructor(arg0) {
     self = this;
@@ -231,7 +231,15 @@ class CardStack {
       }
       obj = { route: route.route };
     };
-    obj = { routes: [], scenes: [], gestures: {}, layout: require("Background").SafeAreaProviderCompat.initialMetrics.frame, descriptors: tmp3Result.props.descriptors, activeStates: [], headerHeights: {} };
+    obj = {
+      routes: [],
+      scenes: [],
+      gestures: {},
+      layout: require("Background").SafeAreaProviderCompat.initialMetrics.frame,
+      descriptors: tmp3Result.props.descriptors,
+      activeStates: [],
+      headerHeights: {},
+    };
     tmp3Result.state = obj;
     return tmp3Result;
   }
@@ -245,8 +253,23 @@ obj = {
     const props = this.props;
     ({ insets: dependencyMap, state } = props);
     const routes = props.routes;
-    ({ openingRouteKeys: closure_4, closingRouteKeys: closure_5, onOpenRoute: StyleSheet, onCloseRoute: View, renderHeader } = props);
-    ({ isParentHeaderShown: closure_9, isParentModal: _isNativeReflectConstruct, onTransitionStart: obj, onTransitionEnd: closure_12, onGestureStart: getInterpolationIndex, onGestureEnd: getIsModalPresentation, onGestureCancel: getIsModal, detachInactiveScreens } = props);
+    ({
+      openingRouteKeys: closure_4,
+      closingRouteKeys: closure_5,
+      onOpenRoute: StyleSheet,
+      onCloseRoute: View,
+      renderHeader,
+    } = props);
+    ({
+      isParentHeaderShown: closure_9,
+      isParentModal: _isNativeReflectConstruct,
+      onTransitionStart: obj,
+      onTransitionEnd: closure_12,
+      onGestureStart: getInterpolationIndex,
+      onGestureEnd: getIsModalPresentation,
+      onGestureCancel: getIsModal,
+      detachInactiveScreens,
+    } = props);
     closure_16 = tmp;
     const state2 = self.state;
     let scenes = state2.scenes;
@@ -273,8 +296,17 @@ obj = {
     });
     CardStack = someResult;
     obj = { style: closure_19.container, children: null };
-    obj = { mode: "float", layout, scenes, getPreviousScene: self.getPreviousScene, getFocusedRoute: self.getFocusedRoute, contentHeight: headerHeights[tmp2.key], onContentHeightChange: self.handleHeaderLayout, style: null };
-    let items = [closure_19.floating, ];
+    obj = {
+      mode: "float",
+      layout,
+      scenes,
+      getPreviousScene: self.getPreviousScene,
+      getFocusedRoute: self.getFocusedRoute,
+      contentHeight: headerHeights[tmp2.key],
+      onContentHeightChange: self.handleHeaderLayout,
+      style: null,
+    };
+    let items = [closure_19.floating];
     if (someResult) {
       obj1 = { height: null };
       obj1[0] = headerHeights[tmp2.key];
@@ -283,8 +315,13 @@ obj = {
     }
     items[1] = someResult;
     obj[7] = items;
-    const items2 = [renderHeader(obj), ];
-    const obj2 = { enabled: undefined === detachInactiveScreens || detachInactiveScreens, style: closure_19.container, onLayout: self.handleLayout, children: null };
+    const items2 = [renderHeader(obj)];
+    const obj2 = {
+      enabled: undefined === detachInactiveScreens || detachInactiveScreens,
+      style: closure_19.container,
+      onLayout: self.handleLayout,
+      children: null,
+    };
     const items3 = [];
     HermesBuiltin.arraySpread(state.preloadedRoutes, HermesBuiltin.arraySpread(routes, 0));
     obj2[3] = items3.map((key, index) => {
@@ -368,7 +405,16 @@ obj = {
       if (!hasItem) {
         num4 = table2[index];
       }
-      obj = { style: items, enabled: closure_16, active: num4, freezeOnBlur, shouldFreeze: null, homeIndicatorHidden: null, pointerEvents: "box-none", children: null };
+      obj = {
+        style: items,
+        enabled: closure_16,
+        active: num4,
+        freezeOnBlur,
+        shouldFreeze: null,
+        homeIndicatorHidden: null,
+        pointerEvents: "box-none",
+        children: null,
+      };
       items = [closure_1_6.absoluteFill];
       let tmp27 = 0 === num4;
       if (tmp27) {
@@ -376,7 +422,39 @@ obj = {
       }
       obj[4] = tmp27;
       obj[5] = autoHideHomeIndicator;
-      obj = { index, interpolationIndex: num3, modal: flag, active: index === routes.length - 1, focused: key.key === key.key, opening: closure_4.includes(key.key), closing: closure_5.includes(key.key), layout, gesture: table[key.key], scene: tmp2, safeAreaInsetTop: top, safeAreaInsetRight: right, safeAreaInsetBottom: bottom, safeAreaInsetLeft: left, onGestureStart: closure_13, onGestureCancel: closure_15, onGestureEnd: closure_14, headerHeight: num, isParentHeaderShown: closure_9, onHeaderHeightChange: null, getPreviousScene: null, getFocusedRoute: null, hasAbsoluteFloatHeader: null, renderHeader: null, onOpenRoute: null, onCloseRoute: null, onTransitionStart: null, onTransitionEnd: null, isNextScreenTransparent: null, detachCurrentScreen: null, preloaded: null };
+      obj = {
+        index,
+        interpolationIndex: num3,
+        modal: flag,
+        active: index === routes.length - 1,
+        focused: key.key === key.key,
+        opening: closure_4.includes(key.key),
+        closing: closure_5.includes(key.key),
+        layout,
+        gesture: table[key.key],
+        scene: tmp2,
+        safeAreaInsetTop: top,
+        safeAreaInsetRight: right,
+        safeAreaInsetBottom: bottom,
+        safeAreaInsetLeft: left,
+        onGestureStart: closure_13,
+        onGestureCancel: closure_15,
+        onGestureEnd: closure_14,
+        headerHeight: num,
+        isParentHeaderShown: closure_9,
+        onHeaderHeightChange: null,
+        getPreviousScene: null,
+        getFocusedRoute: null,
+        hasAbsoluteFloatHeader: null,
+        renderHeader: null,
+        onOpenRoute: null,
+        onCloseRoute: null,
+        onTransitionStart: null,
+        onTransitionEnd: null,
+        isNextScreenTransparent: null,
+        detachCurrentScreen: null,
+        preloaded: null,
+      };
       ({ handleHeaderLayout: obj2[19], getPreviousScene: obj2[20], getFocusedRoute: obj2[21] } = self);
       let tmp29 = closure_0;
       if (closure_0) {
@@ -397,7 +475,7 @@ obj = {
     items2[1] = renderHeader(CardStack(6029).MaybeScreenContainer, obj2);
     obj[1] = items2;
     return closure_9(View, obj);
-  }
+  },
 };
 let items = [obj];
 obj = {
@@ -745,22 +823,26 @@ obj = {
               }
               let tmp7 = mapped;
               let tmp8 = insets;
-              let tmp9 = cardStyleInterpolator === mapped(insets[9]).forModalPresentationIOS || "forModalPresentationIOS" === cardStyleInterpolator.name;
+              let tmp9 =
+                cardStyleInterpolator === mapped(insets[9]).forModalPresentationIOS ||
+                "forModalPresentationIOS" === cardStyleInterpolator.name;
               let tmp10 = !tmp9;
               if (tmp9) {
                 let tmp7Result = tmp7(tmp8[15]);
-                tmp10 = diff !== tmp7Result.findLastIndex(mapped, (descriptor) => {
-                  const cardStyleInterpolator = descriptor.descriptor.options.cardStyleInterpolator;
-                  let tmp = cardStyleInterpolator === mapped(insets[9]).forModalPresentationIOS;
-                  if (!tmp) {
-                    let name;
-                    if (cardStyleInterpolator != null) {
-                      name = cardStyleInterpolator.name;
+                tmp10 =
+                  diff !==
+                  tmp7Result.findLastIndex(mapped, (descriptor) => {
+                    const cardStyleInterpolator = descriptor.descriptor.options.cardStyleInterpolator;
+                    let tmp = cardStyleInterpolator === mapped(insets[9]).forModalPresentationIOS;
+                    if (!tmp) {
+                      let name;
+                      if (cardStyleInterpolator != null) {
+                        name = cardStyleInterpolator.name;
+                      }
+                      tmp = "forModalPresentationIOS" === name;
                     }
-                    tmp = "forModalPresentationIOS" === name;
-                  }
-                  return tmp;
-                });
+                    return tmp;
+                  });
               }
               tmp11 = tmp10;
             }
@@ -811,7 +893,14 @@ obj = {
         return num;
       });
     }
-    obj = { routes: routes.routes, scenes: mapped, gestures: reduced, descriptors: routes.descriptors, activeStates, headerHeights: null };
+    obj = {
+      routes: routes.routes,
+      scenes: mapped,
+      gestures: reduced,
+      descriptors: routes.descriptors,
+      activeStates,
+      headerHeights: null,
+    };
     ({ insets, isParentHeaderShown, isParentModal } = routes);
     ({ layout, headerHeights } = routes2);
     if (typeof getHeaderHeights !== "function") {
@@ -892,10 +981,14 @@ obj = {
       height = headerHeights[descriptor.route.key];
     }, {});
     return obj;
-  }
+  },
 };
 let items1 = [obj];
-const styles = StyleSheet.create({ container: { flex: 1 }, absolute: { position: "absolute", top: 0, start: 0, end: 0 }, floating: { zIndex: 1 } });
+const styles = StyleSheet.create({
+  container: { flex: 1 },
+  absolute: { position: "absolute", top: 0, start: 0, end: 0 },
+  floating: { zIndex: 1 },
+});
 
 export const getAnimationEnabled = function getAnimationEnabled(animation) {
   let str = animation;

@@ -21,8 +21,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class TapGesture {
   constructor() {
@@ -52,50 +51,50 @@ const items = [
     value: function minPointers(minPointers) {
       this.config.minPointers = minPointers;
       return this;
-    }
+    },
   },
   {
     key: "numberOfTaps",
     value: function numberOfTaps(numberOfTaps) {
       this.config.numberOfTaps = numberOfTaps;
       return this;
-    }
+    },
   },
   {
     key: "maxDistance",
     value: function maxDistance(maxDist) {
       this.config.maxDist = maxDist;
       return this;
-    }
+    },
   },
   {
     key: "maxDuration",
     value: function maxDuration(maxDurationMs) {
       this.config.maxDurationMs = maxDurationMs;
       return this;
-    }
+    },
   },
   {
     key: "maxDelay",
     value: function maxDelay(maxDelayMs) {
       this.config.maxDelayMs = maxDelayMs;
       return this;
-    }
+    },
   },
   {
     key: "maxDeltaX",
     value: function maxDeltaX(maxDeltaX) {
       this.config.maxDeltaX = maxDeltaX;
       return this;
-    }
+    },
   },
   {
     key: "maxDeltaY",
     value: function maxDeltaY(maxDeltaY) {
       this.config.maxDeltaY = maxDeltaY;
       return this;
-    }
-  }
+    },
+  },
 ];
 
 export const TapGesture = importDefaultResult(TapGesture, items);

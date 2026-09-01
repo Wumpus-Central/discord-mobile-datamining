@@ -11,4 +11,4 @@ export default function ToString(arg0) {
   } else {
     return callback(arg0);
   }
-};
+}

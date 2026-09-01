@@ -55,21 +55,22 @@ function instrumentDOM() {
             if ("keypress" !== _sentryCaptured.type) {
               str6 = _sentryCaptured.type;
             }
-            if (!(function isSimilarToLastCapturedEvent(type) {
-              if (type.type !== closure_3) {
-                return false;
-              } else {
-                try {
-                  if (type.target) {
-                    if (type.target._sentryId === closure_4) {
-                      return true;
-                    }
-                  }
+            if (
+              !(function isSimilarToLastCapturedEvent(type) {
+                if (type.type !== closure_3) {
                   return false;
-                } catch (err) {
+                } else {
+                  try {
+                    if (type.target) {
+                      if (type.target._sentryId === closure_4) {
+                        return true;
+                      }
+                    }
+                    return false;
+                  } catch (err) {}
                 }
-              }
-            })(_sentryCaptured)) {
+              })(_sentryCaptured)
+            ) {
               obj = { event: null, name: null, global: null };
               obj[0] = _sentryCaptured;
               obj[1] = str6;
@@ -114,7 +115,7 @@ function instrumentDOM() {
         let tmpResult = tmp(tmp2[0]);
         tmpResult.fill(prototype, "addEventListener", (arg0) => {
           closure_0 = arg0;
-          return function(arg0, arg1, arg2) {
+          return function (arg0, arg1, arg2) {
             const self = this;
             if ("click" === arg0) {
               try {
@@ -139,8 +140,7 @@ function instrumentDOM() {
                   }
                 }
                 obj.refCount = obj.refCount + 1;
-              } catch (err) {
-              }
+              } catch (err) {}
             }
             const call2 = closure_0.call;
             if (typeof call2 === "unknown") {
@@ -154,7 +154,7 @@ function instrumentDOM() {
         tmpResult = tmp(tmp2[0]);
         tmpResult.fill(prototype, "removeEventListener", (arg0) => {
           closure_0 = arg0;
-          return function(arg0, arg1, arg2) {
+          return function (arg0, arg1, arg2) {
             const self = this;
             if ("click" === arg0) {
               try {
@@ -183,8 +183,7 @@ function instrumentDOM() {
                     delete tmp4[tmp2];
                   }
                 }
-              } catch (err) {
-              }
+              } catch (err) {}
             }
             const call2 = closure_0.call;
             if (typeof call2 === "unknown") {
@@ -251,21 +250,22 @@ function makeDOMEventHandler(arg0) {
           if ("keypress" !== _sentryCaptured.type) {
             str6 = _sentryCaptured.type;
           }
-          if (!(function isSimilarToLastCapturedEvent(type) {
-            if (type.type !== closure_3) {
-              return false;
-            } else {
-              try {
-                if (type.target) {
-                  if (type.target._sentryId === closure_4) {
-                    return true;
-                  }
-                }
+          if (
+            !(function isSimilarToLastCapturedEvent(type) {
+              if (type.type !== closure_3) {
                 return false;
-              } catch (err) {
+              } else {
+                try {
+                  if (type.target) {
+                    if (type.target._sentryId === closure_4) {
+                      return true;
+                    }
+                  }
+                  return false;
+                } catch (err) {}
               }
-            }
-          })(_sentryCaptured)) {
+            })(_sentryCaptured)
+          ) {
             obj = { event: null, name: null, global: null };
             obj[0] = _sentryCaptured;
             obj[1] = str6;

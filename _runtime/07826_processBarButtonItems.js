@@ -10,12 +10,8 @@ let closure_4 = ["label", "icon", "inline", "layout", "items", "multiselectable"
 let closure_5 = ["label", "icon", "description"];
 ({ Platform, StyleSheet: closure_8, View: c9 } = get_ActivityIndicator);
 ({ jsx: c10, Fragment: unpackModuleId, jsxs: closure_12 } = jsxProd);
-function processBarButtonItems(arg0, arg1, arg2) {
-
-}
-function transformIcon(arg0) {
-
-}
+function processBarButtonItems(arg0, arg1, arg2) {}
+function transformIcon(arg0) {}
 function getMenuItem(type) {
   if ("submenu" === type.type) {
     ({ icon, items, multiselectable } = type);
@@ -80,13 +76,44 @@ function getMenuItem(type) {
 }
 
 export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTitle) {
-  ({ headerBackIcon, headerBackImageSource, headerBackTitle, headerBackVisible, headerShadowVisible, headerLargeTitleEnabled } = headerLargeTitle);
-  ({ headerBackButtonDisplayMode, headerBackButtonMenuEnabled, headerBackTitleStyle, headerLargeStyle } = headerLargeTitle);
+  ({
+    headerBackIcon,
+    headerBackImageSource,
+    headerBackTitle,
+    headerBackVisible,
+    headerShadowVisible,
+    headerLargeTitleEnabled,
+  } = headerLargeTitle);
+  ({ headerBackButtonDisplayMode, headerBackButtonMenuEnabled, headerBackTitleStyle, headerLargeStyle } =
+    headerLargeTitle);
   if (headerLargeTitleEnabled === undefined) {
     headerLargeTitleEnabled = headerLargeTitle.headerLargeTitle;
   }
-  ({ headerBackground, headerLeft, headerRight, headerTintColor, headerTitle, headerTitleAlign, headerTransparent, headerSearchBarOptions, headerTopInsetEnabled, headerBack, unstable_headerInsets, unstable_headerLeftItems, unstable_headerRightItems } = headerLargeTitle);
-  ({ headerLargeTitleShadowVisible, headerLargeTitleStyle, headerShown, headerStyle, headerBlurEffect, headerTitleStyle, route, title } = headerLargeTitle);
+  ({
+    headerBackground,
+    headerLeft,
+    headerRight,
+    headerTintColor,
+    headerTitle,
+    headerTitleAlign,
+    headerTransparent,
+    headerSearchBarOptions,
+    headerTopInsetEnabled,
+    headerBack,
+    unstable_headerInsets,
+    unstable_headerLeftItems,
+    unstable_headerRightItems,
+  } = headerLargeTitle);
+  ({
+    headerLargeTitleShadowVisible,
+    headerLargeTitleStyle,
+    headerShown,
+    headerStyle,
+    headerBlurEffect,
+    headerTitleStyle,
+    route,
+    title,
+  } = headerLargeTitle);
   let obj = colors(1500);
   obj1 = colors(1500);
   const theme = obj1.useTheme();
@@ -233,7 +260,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
     }
     let obj6 = { style: null, children: null };
     obj6[0] = obj5;
-    const items5 = [headerLeftResult, ];
+    const items5 = [headerLeftResult];
     if ("center" === headerTitleAlign) {
       items5[1] = null;
       obj6[1] = items5;
@@ -259,7 +286,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
   } else {
     tmp33Result = null;
   }
-  const items6 = [tmp33Result, ];
+  const items6 = [tmp33Result];
   let tmp39Result = null;
   if ("center" === headerTitleAlign) {
     if (typeof headerTitle !== "function") {
@@ -274,7 +301,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
     tmp39Result = tmp39(tmp(4865).ScreenStackHeaderCenterView, obj11);
   }
   items6[1] = tmp39Result;
-  const items7 = [closure_12(closure_11, { children: items6 }), , , ];
+  const items7 = [closure_12(closure_11, { children: items6 }), , ,];
   if (undefined !== headerBackIcon) {
     let source;
     if (headerBackIcon != null) {
@@ -307,7 +334,44 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
     tmp45 = callback3(tmp(4865).ScreenStackHeaderSearchBarView, obj14);
   }
   items7[3] = tmp45;
-  const obj16 = { backButtonInCustomView: tmp24, backgroundColor, backTitle: headerBackTitle, backTitleVisible: "minimal" !== headerBackButtonDisplayMode, backButtonDisplayMode: "find", backTitleFontFamily: true, backTitleFontSize: true, blurEffect: true, color: true, direction: true, disableBackButtonMenu: true, hidden: true, hideBackButton: true, hideShadow: true, largeTitle: true, largeTitleBackgroundColor: true, largeTitleColor: true, largeTitleFontFamily: true, largeTitleFontSize: true, largeTitleFontWeight: true, largeTitleHideShadow: "bolesno", title: "lice", titleColor: "lice s toplomjerom", titleFontFamily: "prehlada", titleFontSize: "toplomjer", titleFontWeight: true, topInsetEnabled: true, disableTopInsetApplication: true, disableLeftInsetApplication: true, disableRightInsetApplication: true, disableBottomInsetApplication: true, translucent: true, children: true, headerLeftBarButtonItems: true, headerRightBarButtonItems: true, experimental_userInterfaceStyle: true };
+  const obj16 = {
+    backButtonInCustomView: tmp24,
+    backgroundColor,
+    backTitle: headerBackTitle,
+    backTitleVisible: "minimal" !== headerBackButtonDisplayMode,
+    backButtonDisplayMode: "find",
+    backTitleFontFamily: true,
+    backTitleFontSize: true,
+    blurEffect: true,
+    color: true,
+    direction: true,
+    disableBackButtonMenu: true,
+    hidden: true,
+    hideBackButton: true,
+    hideShadow: true,
+    largeTitle: true,
+    largeTitleBackgroundColor: true,
+    largeTitleColor: true,
+    largeTitleFontFamily: true,
+    largeTitleFontSize: true,
+    largeTitleFontWeight: true,
+    largeTitleHideShadow: "bolesno",
+    title: "lice",
+    titleColor: "lice s toplomjerom",
+    titleFontFamily: "prehlada",
+    titleFontSize: "toplomjer",
+    titleFontWeight: true,
+    topInsetEnabled: true,
+    disableTopInsetApplication: true,
+    disableLeftInsetApplication: true,
+    disableRightInsetApplication: true,
+    disableBottomInsetApplication: true,
+    translucent: true,
+    children: true,
+    headerLeftBarButtonItems: true,
+    headerRightBarButtonItems: true,
+    experimental_userInterfaceStyle: true,
+  };
   obj16[5] = tmp10;
   obj16[6] = fontSize;
   obj16[7] = headerBlurEffect;
@@ -404,7 +468,11 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
             const _Error = Error;
             const _JSON = JSON;
             const _HermesInternal = HermesInternal;
-            const error1 = new Error("Invalid item type: " + JSON.stringify(type) + ". Valid types are 'button', 'menu', 'custom' and 'spacing'.");
+            const error1 = new Error(
+              "Invalid item type: " +
+                JSON.stringify(type) +
+                ". Valid types are 'button', 'menu', 'custom' and 'spacing'.",
+            );
             throw error1;
           }
         }
@@ -492,7 +560,9 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
           const _Error2 = Error;
           const _JSON2 = JSON;
           const _HermesInternal2 = HermesInternal;
-          const error3 = new Error("Invalid item type: " + JSON.stringify(type) + ". Valid types are 'button' and 'menu'.");
+          const error3 = new Error(
+            "Invalid item type: " + JSON.stringify(type) + ". Valid types are 'button' and 'menu'.",
+          );
           throw error3;
         } else if (false === icon.tinted) {
           const obj5 = { type: "imageSource", imageSource: null };
@@ -533,7 +603,11 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
             const _Error = Error;
             const _JSON = JSON;
             const _HermesInternal = HermesInternal;
-            const error1 = new Error("Invalid item type: " + JSON.stringify(type) + ". Valid types are 'button', 'menu', 'custom' and 'spacing'.");
+            const error1 = new Error(
+              "Invalid item type: " +
+                JSON.stringify(type) +
+                ". Valid types are 'button', 'menu', 'custom' and 'spacing'.",
+            );
             throw error1;
           }
         }
@@ -621,7 +695,9 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
           const _Error2 = Error;
           const _JSON2 = JSON;
           const _HermesInternal2 = HermesInternal;
-          const error3 = new Error("Invalid item type: " + JSON.stringify(type) + ". Valid types are 'button' and 'menu'.");
+          const error3 = new Error(
+            "Invalid item type: " + JSON.stringify(type) + ". Valid types are 'button' and 'menu'.",
+          );
           throw error3;
         } else if (false === icon.tinted) {
           const obj5 = { type: "imageSource", imageSource: null };

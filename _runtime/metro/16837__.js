@@ -21,7 +21,7 @@ let obj = {
       str = str2;
     }
     return str;
-  }
+  },
 };
 globalThis.IntlMessageFormat.__addLocaleData(obj);
 globalThis.IntlMessageFormat.__addLocaleData({ locale: "pt-AO", parentLocale: "pt-PT" });
@@ -41,7 +41,7 @@ obj = {
       str2 = str3;
     }
     return str2;
-  }
+  },
 };
 globalThis.IntlMessageFormat.__addLocaleData(obj);
 globalThis.IntlMessageFormat.__addLocaleData({ locale: "pt-CV", parentLocale: "pt-PT" });

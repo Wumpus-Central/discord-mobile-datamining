@@ -10,7 +10,7 @@ arg5.varint64read = function varint64read() {
   let num = 0;
   let num2 = 0;
   self.pos = +self.pos + 1;
-  const tmp3 = num2 | (127 & self.buf[+self.pos]) << num;
+  const tmp3 = num2 | ((127 & self.buf[+self.pos]) << num);
   while (128 & self.buf[+self.pos]) {
     num = num + 7;
     num2 = tmp3;
@@ -21,7 +21,7 @@ arg5.varint64read = function varint64read() {
       self.pos = tmp5 + 1;
       let tmp6 = self.buf[tmp5];
       let num3 = 15;
-      let tmp7 = tmp3 | (15 & tmp6) << 28;
+      let tmp7 = tmp3 | ((15 & tmp6) << 28);
       let num4 = 112;
       let num5 = 4;
       let tmp8 = (112 & tmp6) >> 4;
@@ -32,7 +32,7 @@ arg5.varint64read = function varint64read() {
         let tmp11 = +self.pos;
         self.pos = tmp11 + 1;
         let tmp12 = self.buf[tmp11];
-        let tmp13 = tmp9 | (127 & tmp12) << num6;
+        let tmp13 = tmp9 | ((127 & tmp12) << num6);
         let tmp14 = num6;
         while (128 & tmp12) {
           num6 = num6 + 7;
@@ -89,7 +89,7 @@ arg5.varint64write = function varint64write(lo, hi, buf) {
       } else {
         let num2 = 4;
         let num3 = 15;
-        let tmp8 = lo >>> 28 & 15 | (7 & hi) << 4;
+        let tmp8 = ((lo >>> 28) & 15) | ((7 & hi) << 4);
         let num4 = 3;
         let tmp9 = hi >> 3;
         let tmp10 = tmp8;
@@ -116,7 +116,7 @@ arg5.varint64write = function varint64write(lo, hi, buf) {
                 continue;
               } else {
                 let num6 = 1;
-                let arr2 = buf.push(hi >>> 31 & 1);
+                let arr2 = buf.push((hi >>> 31) & 1);
               }
             }
           }
@@ -135,7 +135,7 @@ arg5.int64fromString = function int64fromString(trimmed) {
   let num2 = 0;
   let result = NumberResult;
   if (NumberResult >= c0) {
-    num2 = NumberResult / tmp3 | 0;
+    num2 = (NumberResult / tmp3) | 0;
     result = NumberResult % tmp3;
   }
   const result1 = num2 * 1000000;
@@ -143,7 +143,7 @@ arg5.int64fromString = function int64fromString(trimmed) {
   let sum1 = result1;
   let result2 = sum;
   if (sum >= c0) {
-    sum1 = result1 + (sum / tmp3 | 0);
+    sum1 = result1 + ((sum / tmp3) | 0);
     result2 = sum % tmp3;
   }
   const result3 = sum1 * 1000000;
@@ -151,7 +151,7 @@ arg5.int64fromString = function int64fromString(trimmed) {
   let sum3 = result3;
   let result4 = sum2;
   if (sum2 >= c0) {
-    sum3 = result3 + (sum2 / tmp3 | 0);
+    sum3 = result3 + ((sum2 / tmp3) | 0);
     result4 = sum2 % tmp3;
   }
   const result5 = sum3 * 1000000;
@@ -159,7 +159,7 @@ arg5.int64fromString = function int64fromString(trimmed) {
   let sum5 = result5;
   let result6 = sum4;
   if (sum4 >= c0) {
-    sum5 = result5 + (sum4 / tmp3 | 0);
+    sum5 = result5 + ((sum4 / tmp3) | 0);
     result6 = sum4 % tmp3;
   }
   const items = ["-" == trimmed[0], result6, sum5];
@@ -219,7 +219,7 @@ arg5.varint32write = function varint32write(NumberResult, buf) {
     let tmp5 = NumberResult;
     if (NumberResult > 127) {
       do {
-        let arr = buf.push(127 & tmp4 | 128);
+        let arr = buf.push((127 & tmp4) | 128);
         tmp4 = tmp4 >>> 7;
         tmp5 = tmp4;
       } while (127 < tmp4);
@@ -227,7 +227,7 @@ arg5.varint32write = function varint32write(NumberResult, buf) {
     buf.push(tmp5);
   } else {
     do {
-      let arr1 = buf.push(127 & tmp | 128);
+      let arr1 = buf.push((127 & tmp) | 128);
       tmp = tmp >> 7;
       num = num + 1;
     } while (num < 9);
@@ -239,13 +239,13 @@ arg5.varint32read = function varint32read() {
   this.pos = +this.pos + 1;
   if (128 & this.buf[+this.pos]) {
     self.pos = +self.pos + 1;
-    const tmp7 = tmp3 | (127 & self.buf[+self.pos]) << 7;
+    const tmp7 = tmp3 | ((127 & self.buf[+self.pos]) << 7);
     if (128 & self.buf[+self.pos]) {
       self.pos = +self.pos + 1;
-      const tmp11 = tmp7 | (127 & self.buf[+self.pos]) << 14;
+      const tmp11 = tmp7 | ((127 & self.buf[+self.pos]) << 14);
       if (128 & self.buf[+self.pos]) {
         self.pos = +self.pos + 1;
-        const tmp15 = tmp11 | (127 & self.buf[+self.pos]) << 21;
+        const tmp15 = tmp11 | ((127 & self.buf[+self.pos]) << 21);
         if (128 & self.buf[+self.pos]) {
           self.pos = +self.pos + 1;
           let tmp18 = self.buf[tmp17];
@@ -267,7 +267,7 @@ arg5.varint32read = function varint32read() {
             throw error;
           } else {
             self.assertBounds();
-            return (tmp15 | tmp19 << 28) >>> 0;
+            return (tmp15 | (tmp19 << 28)) >>> 0;
           }
           tmp19 = 15 & tmp18;
         } else {

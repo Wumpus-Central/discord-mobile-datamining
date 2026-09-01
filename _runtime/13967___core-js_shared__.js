@@ -1,7 +1,6 @@
 // _runtime/13967___core-js_shared__.js
 import __core_js_shared__ from "13968___core-js_shared__.js";
 
-
 export default (arg0, arg1) => {
   let tmp3 = __core_js_shared__[arg0];
   if (!tmp3) {

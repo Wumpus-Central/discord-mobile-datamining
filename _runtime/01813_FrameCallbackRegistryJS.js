@@ -6,9 +6,15 @@ import closure_3 from "metro/00041__classCallCheck.js";
 
 const FrameCallbackRegistryJS = global;
 require = arg1;
-let closure_4 = { code: "function pnpm_FrameCallbackRegistryJSTs1(){const{callback,callbackId}=this.__closure;global._frameCallbackRegistry.registerFrameCallback(callback,callbackId);}" };
-let closure_5 = { code: "function pnpm_FrameCallbackRegistryJSTs2(){const{callbackId}=this.__closure;global._frameCallbackRegistry.unregisterFrameCallback(callbackId);}" };
-let closure_6 = { code: "function pnpm_FrameCallbackRegistryJSTs3(){const{callbackId,state}=this.__closure;global._frameCallbackRegistry.manageStateFrameCallback(callbackId,state);}" };
+let closure_4 = {
+  code: "function pnpm_FrameCallbackRegistryJSTs1(){const{callback,callbackId}=this.__closure;global._frameCallbackRegistry.registerFrameCallback(callback,callbackId);}",
+};
+let closure_5 = {
+  code: "function pnpm_FrameCallbackRegistryJSTs2(){const{callbackId}=this.__closure;global._frameCallbackRegistry.unregisterFrameCallback(callbackId);}",
+};
+let closure_6 = {
+  code: "function pnpm_FrameCallbackRegistryJSTs3(){const{callbackId,state}=this.__closure;global._frameCallbackRegistry.manageStateFrameCallback(callbackId,state);}",
+};
 class FrameCallbackRegistryJS {
   constructor() {
     tmp = closure_3(this, FrameCallbackRegistryJS);
@@ -42,7 +48,7 @@ const items = [
       } else {
         return -1;
       }
-    }
+    },
   },
   {
     key: "unregisterFrameCallback",
@@ -55,7 +61,7 @@ const items = [
       fn.__workletHash = 9182274559334;
       fn.__initData = closure_5;
       isReanimated3.runOnUI(fn)();
-    }
+    },
   },
   {
     key: "manageStateFrameCallback",
@@ -69,8 +75,8 @@ const items = [
       fn.__workletHash = 5244475777443;
       fn.__initData = closure_6;
       require("01697_isReanimated3.js").runOnUI(fn)();
-    }
-  }
+    },
+  },
 ];
 
 export default _createClassDefault(FrameCallbackRegistryJS, items);

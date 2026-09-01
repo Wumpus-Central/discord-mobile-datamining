@@ -33,5 +33,5 @@ export default {
     }
   },
   isRTL: obj.isRTL,
-  doLeftAndRightSwapInRTL: obj.doLeftAndRightSwapInRTL
+  doLeftAndRightSwapInRTL: obj.doLeftAndRightSwapInRTL,
 };

@@ -2,7 +2,6 @@
 import ToNumber from "04774_ToNumber.js";
 import isFinite from "04791_isFinite.js";
 
-
 export default function ToUint32(arg0) {
   const tmp3 = ToNumber(arg0);
   if (isFinite(tmp3)) {
@@ -16,4 +15,4 @@ export default function ToUint32(arg0) {
     }
   }
   return 0;
-};
+}

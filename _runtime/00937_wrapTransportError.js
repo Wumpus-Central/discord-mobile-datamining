@@ -9,13 +9,12 @@ export const wrapTransportError = function wrapTransportError(closure_0) {
   if (closure_0.onerror) {
     addNonEnumerableProperty.fill(closure_0, "onerror", (arg0) => {
       closure_0 = arg0;
-      return function(error) {
+      return function (error) {
         const self = this;
         (function captureTransportError(error) {
           try {
             callback(table[10]).captureError(error, "transport");
-          } catch (err) {
-          }
+          } catch (err) {}
         })(error);
         const call = closure_0.call;
         return typeof call === "unknown" ? closure_0(error) : call(self, error);
@@ -28,7 +27,7 @@ export const wrapTransportOnClose = function wrapTransportOnClose(closure_0) {
   if (closure_0.onclose) {
     addNonEnumerableProperty.fill(closure_0, "onclose", (arg0) => {
       closure_0 = arg0;
-      return function() {
+      return function () {
         const items = [...arguments];
         const result = callback(closure_1_1[9]).cleanupPendingSpansForTransport(this);
         const obj = callback(closure_1_1[9]);
@@ -45,7 +44,7 @@ export const wrapTransportOnMessage = function wrapTransportOnMessage(closure_0,
   if (closure_0.onmessage) {
     require("00822_addNonEnumerableProperty.js").fill(closure_0, "onmessage", (arg0) => {
       closure_0 = arg0;
-      return function(method, extra) {
+      return function (method, extra) {
         let self = this;
         self = this;
         closure_1 = method;
@@ -59,8 +58,7 @@ export const wrapTransportOnMessage = function wrapTransportOnMessage(closure_0,
               closure_3 = result;
               tmpResult = tmp(tmp2[4]);
               const result1 = tmpResult.storeSessionDataForTransport(self, result);
-            } catch (err) {
-            }
+            } catch (err) {}
           }
           const isolationScope = tmp(tmp2[5]).getIsolationScope();
           const tmpResult1 = tmp(tmp2[5]);
@@ -93,7 +91,9 @@ export const wrapTransportOnMessage = function wrapTransportOnMessage(closure_0,
             const tmp4 = self;
             return callback(closure_3_1[7]).withActiveSpan(startInactiveSpanResult, () => {
               const call = closure_1_0.call;
-              return typeof call === "unknown" ? closure_1_0(closure_1, closure_2) : call(closure_4, closure_1, closure_2);
+              return typeof call === "unknown"
+                ? closure_1_0(closure_1, closure_2)
+                : call(closure_4, closure_1, closure_2);
             });
           });
         } else {
@@ -121,13 +121,13 @@ export const wrapTransportSend = function wrapTransportSend(closure_0, closure_0
   if (closure_0.send) {
     require("00822_addNonEnumerableProperty.js").fill(closure_0, "send", (arg0) => {
       closure_0 = arg0;
-      return closure_1_2(function() {
+      return closure_1_2(function () {
         const self = this;
         closure_1 = [...arguments];
         c6 = 0;
         c7 = 0;
         c5 = 0;
-        const iter = (function*() {
+        const iter = (function* () {
           if (c7 === 2) {
             c7 = 3;
             HermesBuiltin.throwTypeError();
@@ -209,8 +209,7 @@ export const wrapTransportSend = function wrapTransportSend(closure_0, closure_0
                                       }
                                     }
                                   }
-                                } catch (err) {
-                                }
+                                } catch (err) {}
                               })(user.error);
                             }
                             obj1 = _self(closure_2_1[2]);

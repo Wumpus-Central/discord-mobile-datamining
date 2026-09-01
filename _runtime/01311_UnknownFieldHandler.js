@@ -54,9 +54,7 @@ UnknownFieldHandler.list = (arg0, arg1) => {
   }
 };
 UnknownFieldHandler.last = (arg0, arg1) => UnknownFieldHandler.list(arg0, arg1).slice(-1)[0];
-function is(arg0) {
-
-}
+function is(arg0) {}
 UnknownFieldHandler.mergeBinaryOptions = function mergeBinaryOptions(arg0, arg1) {
   return Object.assign(Object.assign({}, arg0), arg1);
 };

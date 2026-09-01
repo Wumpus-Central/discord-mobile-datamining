@@ -22,16 +22,16 @@ let obj = {
       const tmp2 = this.r === arg0.r && self.g === arg0.g && self.b === arg0.b && self.a === arg0.a;
     }
     return tmp;
-  }
+  },
 };
 const items = [
   obj,
   {
     key: "toInt",
     value: function toInt() {
-      return (255 & this.a) << 24 | (255 & this.r) << 16 | (255 & this.g) << 8 | 255 & this.b;
-    }
-  }
+      return ((255 & this.a) << 24) | ((255 & this.r) << 16) | ((255 & this.g) << 8) | (255 & this.b);
+    },
+  },
 ];
 obj = {
   key: "fromHexString",
@@ -69,7 +69,7 @@ obj = {
       obj.a = 255;
       return obj;
     }
-  }
+  },
 };
 const items1 = [
   obj,
@@ -78,13 +78,13 @@ const items1 = [
     value: function fromInt(arg0) {
       const obj = Object.create(RiveColor.prototype);
       RiveColor(obj, RiveColor);
-      obj.r = arg0 >> 16 & 255;
-      obj.g = arg0 >> 8 & 255;
+      obj.r = (arg0 >> 16) & 255;
+      obj.g = (arg0 >> 8) & 255;
       obj.b = 255 & arg0;
-      obj.a = arg0 >> 24 & 255;
+      obj.a = (arg0 >> 24) & 255;
       return obj;
-    }
-  }
+    },
+  },
 ];
 
 export const RiveColor = _createClassDefault(RiveColor, items, items1);

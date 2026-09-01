@@ -15,12 +15,16 @@ export const ScrollAnchor = function ScrollAnchor(horizontal) {
   const tmp = callback(callback4(1000000), 2);
   first = tmp[0];
   callback = tmp[1];
-  callback2(horizontal.scrollAnchorRef, () => ({
-    scrollBy(diff) {
-      closure_0 = diff;
-      callback((arg0) => arg0 + closure_0);
-    }
-  }), []);
+  callback2(
+    horizontal.scrollAnchorRef,
+    () => ({
+      scrollBy(diff) {
+        closure_0 = diff;
+        callback((arg0) => arg0 + closure_0);
+      },
+    }),
+    [],
+  );
   const items = [first, horizontal];
   return callback3(() => {
     let num = 0;

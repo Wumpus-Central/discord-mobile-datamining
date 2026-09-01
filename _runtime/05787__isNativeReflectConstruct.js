@@ -27,8 +27,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 let closure_3 = ["style"];
 noopAll;
@@ -79,7 +78,8 @@ class TouchableOpacity {
         if (!tmp3) {
           store.setOpacityTo(store.getChildStyleOpacityWithDefault(), 150);
         }
-        tmp3 = arg1 !== tmp(tmp2[9]).TOUCHABLE_STATE.UNDETERMINED && arg1 !== tmp(tmp2[9]).TOUCHABLE_STATE.MOVED_OUTSIDE;
+        tmp3 =
+          arg1 !== tmp(tmp2[9]).TOUCHABLE_STATE.UNDETERMINED && arg1 !== tmp(tmp2[9]).TOUCHABLE_STATE.MOVED_OUTSIDE;
       }
     };
     return tmp3Result;
@@ -108,7 +108,7 @@ let obj = {
     }
     obj.children = children;
     return jsx(_isNativeReflectConstructDefault, {});
-  }
+  },
 };
 let items = [obj];
 const importDefaultResultResult = importDefaultResult(TouchableOpacity, items);

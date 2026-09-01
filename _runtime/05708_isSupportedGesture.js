@@ -27,8 +27,12 @@ function isSupportedGesture(gestures) {
 }
 ({ use: c3, useCallback: c4, useEffect: c5, useRef: closure_6, useState: error } = noop);
 let closure_8 = require("hash").SHARED_VALUE_OFFSET + 0.5;
-let closure_10 = { code: "function pnpm_useJSResponderHandlerTs1(sharedValues,id,notify){const{runOnJS}=this.__closure;const listener=runOnJS(notify);for(const sharedValue of sharedValues){sharedValue.addListener(id,listener);}}" };
-let closure_11 = { code: "function pnpm_useJSResponderHandlerTs2(sharedValues,id){for(const sharedValue of sharedValues){sharedValue.removeListener(id);}}" };
+let closure_10 = {
+  code: "function pnpm_useJSResponderHandlerTs1(sharedValues,id,notify){const{runOnJS}=this.__closure;const listener=runOnJS(notify);for(const sharedValue of sharedValues){sharedValue.addListener(id,listener);}}",
+};
+let closure_11 = {
+  code: "function pnpm_useJSResponderHandlerTs2(sharedValues,id){for(const sharedValue of sharedValues){sharedValue.removeListener(id);}}",
+};
 
 export const useJSResponderHandler = function useJSResponderHandler(gesture) {
   const _require = gesture;

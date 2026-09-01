@@ -101,7 +101,5 @@ export const startTrackingElementTiming = function startTrackingElementTiming() 
     }
     return fn;
   }
-  fn = () => {
-
-  };
+  fn = () => {};
 };

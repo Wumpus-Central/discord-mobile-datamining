@@ -4,7 +4,15 @@ import closure_5 from "00019_noop.js";
 import { jsx } from "react/00021_jsxProd.js";
 
 const require = arg1;
-let closure_3 = ["goBackGesture", "screensRefs", "currentScreenId", "transitionAnimation", "screenEdgeGesture", "onFinishTransitioning", "children"];
+let closure_3 = [
+  "goBackGesture",
+  "screensRefs",
+  "currentScreenId",
+  "transitionAnimation",
+  "screenEdgeGesture",
+  "onFinishTransitioning",
+  "children",
+];
 
 export default function ScreenStack(arg0) {
   ({ goBackGesture, screensRefs, currentScreenId, screenEdgeGesture } = arg0);
@@ -21,19 +29,31 @@ export default function ScreenStack(arg0) {
   const ref1 = obj.useRef(null);
   const context = obj.useContext(ref1(4890).GHContext);
   obj = {
-    stackUseEffectCallback(ref1) {
-
-    }
+    stackUseEffectCallback(ref1) {},
   };
   const ref2 = obj.useRef(obj);
   const effect = obj.useEffect(() => {
     const current = ref2.current;
     const result = current.stackUseEffectCallback(ref1);
   });
-  ref2(4874)("GHWrapper" !== context.name && undefined !== goBackGesture, "Cannot detect GestureDetectorProvider in a screen that uses `goBackGesture`. Make sure your navigator is wrapped in GestureDetectorProvider.");
-  ref2(4874)(undefined !== goBackGesture && null === ref && undefined === currentScreenId, "Custom Screen Transition require screensRefs and currentScreenId to be provided.");
+  ref2(4874)(
+    "GHWrapper" !== context.name && undefined !== goBackGesture,
+    "Cannot detect GestureDetectorProvider in a screen that uses `goBackGesture`. Make sure your navigator is wrapped in GestureDetectorProvider.",
+  );
+  ref2(4874)(
+    undefined !== goBackGesture && null === ref && undefined === currentScreenId,
+    "Custom Screen Transition require screensRefs and currentScreenId to be provided.",
+  );
   obj = { value: ref, children: null };
-  obj1 = { gestureDetectorBridge: ref2, goBackGesture, transitionAnimation, screenEdgeGesture: null, screensRefs: null, currentScreenId: null, children: null };
+  obj1 = {
+    gestureDetectorBridge: ref2,
+    goBackGesture,
+    transitionAnimation,
+    screenEdgeGesture: null,
+    screensRefs: null,
+    currentScreenId: null,
+    children: null,
+  };
   if (screenEdgeGesture == null) {
     screenEdgeGesture = false;
   }
@@ -51,6 +71,17 @@ export default function ScreenStack(arg0) {
   obj2.ref = ref1;
   obj2.children = children;
   obj1[6] = jsx(ref2(4891), {});
-  obj[1] = <context gestureDetectorBridge={ref2} goBackGesture={goBackGesture} transitionAnimation={transitionAnimation} screenEdgeGesture={null} screensRefs={null} currentScreenId={null}>{null}</context>;
+  obj[1] = (
+    <context
+      gestureDetectorBridge={ref2}
+      goBackGesture={goBackGesture}
+      transitionAnimation={transitionAnimation}
+      screenEdgeGesture={null}
+      screensRefs={null}
+      currentScreenId={null}
+    >
+      {null}
+    </context>
+  );
   return jsx(tmp4(4890).RNSScreensRefContext.Provider, { value: ref, children: null });
-};
+}

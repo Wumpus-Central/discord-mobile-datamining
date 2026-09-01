@@ -70,7 +70,7 @@ export const SceneView = function SceneView(getState) {
   const effect1 = getState.useEffect(() => clearOptions, []);
   callback4 = getState.useCallback(() => ref2.current, []);
   context = getState.useContext(route(routeState[4]).NavigationFocusedRouteStateContext);
-  let items2 = [context, , , , ];
+  let items2 = [context, , , ,];
   ({ key: arr3[1], name: arr3[2], params: arr3[3], path: arr3[4] } = route);
   const items3 = [routeState, callback2, callback3, callback, callback1, callback4, addOptionsGetter];
   const memo = getState.useMemo(() => {
@@ -125,7 +125,18 @@ export const SceneView = function SceneView(getState) {
     }
     return tmp2;
   }, items2);
-  const memo1 = getState.useMemo(() => ({ state: routeState, getState: callback2, setState: callback3, getKey: callback, setKey: callback1, getIsInitial: callback4, addOptionsGetter }), items3);
+  const memo1 = getState.useMemo(
+    () => ({
+      state: routeState,
+      getState: callback2,
+      setState: callback3,
+      getKey: callback,
+      setKey: callback1,
+      getIsInitial: callback4,
+      addOptionsGetter,
+    }),
+    items3,
+  );
   if (screen.getComponent) {
     let component = screen.getComponent();
   } else {
@@ -156,7 +167,9 @@ export const SceneView = function SceneView(getState) {
     }
   }
   obj2[4] = childrenResult;
-  obj1[1] = setState(route(routeState[6]).EnsureSingleNavigator, { children: setState(route(routeState[7]).StaticContainer, obj2) });
+  obj1[1] = setState(route(routeState[6]).EnsureSingleNavigator, {
+    children: setState(route(routeState[7]).StaticContainer, obj2),
+  });
   obj[1] = setState(route(routeState[4]).NavigationFocusedRouteStateContext.Provider, obj1);
   return setState(route(routeState[5]).NavigationStateContext.Provider, obj);
 };

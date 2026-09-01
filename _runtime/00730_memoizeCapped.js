@@ -9,4 +9,4 @@ export default function memoizeCapped(arg0) {
   });
   cache = tmp.cache;
   return tmp;
-};
+}

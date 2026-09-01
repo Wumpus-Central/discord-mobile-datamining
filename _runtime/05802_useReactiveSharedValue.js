@@ -32,12 +32,15 @@ export const useReactiveSharedValue = (obj) => {
       tmp2.current.value = obj;
     }
   }
-  callback(() => () => {
-    if (ref.current) {
-      closure_1_0(closure_1_1[1]).cancelAnimation(tmp.current);
-      const obj = closure_1_0(closure_1_1[1]);
-    }
-  }, []);
+  callback(
+    () => () => {
+      if (ref.current) {
+        closure_1_0(closure_1_1[1]).cancelAnimation(tmp.current);
+        const obj = closure_1_0(closure_1_1[1]);
+      }
+    },
+    [],
+  );
   let current = tmp2.current;
   if (current == null) {
     current = obj;

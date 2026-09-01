@@ -67,5 +67,5 @@ export default {
       num = num2;
     }
     return num;
-  }
+  },
 };

@@ -8,11 +8,21 @@ import closure_5 from "00019_noop.js";
 const View = get_ActivityIndicator.View;
 const jsx = jsxProd.jsx;
 let closure_8 = { x: 0, y: 0, width: 0, height: 0 };
-let closure_9 = { code: "function pnpm_indexTsx1(){const{initialFrame,defaultLayout}=this.__closure;return initialFrame.value||defaultLayout;}" };
-let closure_10 = { code: "function pnpm_indexTsx2(){const{screenHeight,keyboard,keyboardVerticalOffset,frame}=this.__closure;const keyboardY=screenHeight-keyboard.heightWhenOpened.value-keyboardVerticalOffset;return Math.max(frame.value.y+frame.value.height-keyboardY,0);}" };
-let closure_11 = { code: "function pnpm_indexTsx3(value){const{interpolate,relativeKeyboardHeight}=this.__closure;return interpolate(value,[0,1],[0,relativeKeyboardHeight()]);}" };
-let closure_12 = { code: "function pnpm_indexTsx4(layout){const{keyboard,initialFrame,behavior}=this.__closure;if(keyboard.isClosed.value||initialFrame.value===null||behavior!==\"height\"){initialFrame.value=layout;}}" };
-let closure_13 = { code: "function pnpm_indexTsx5(){const{enabled,interpolateToRelativeKeyboardHeight,keyboard,translate,padding,frame,behavior}=this.__closure;if(!enabled){return{};}const bottom=interpolateToRelativeKeyboardHeight(keyboard.progress.value);const translateY=interpolateToRelativeKeyboardHeight(translate.value);const paddingBottom=interpolateToRelativeKeyboardHeight(padding.value);const height=frame.value.height-bottom;switch(behavior){case\"height\":if(!keyboard.isClosed.value&&height>0){return{height:height,flex:0};}return{};case\"position\":return{bottom:bottom};case\"padding\":return{paddingBottom:bottom};case\"translate-with-padding\":return{paddingTop:paddingBottom,transform:[{translateY:-translateY}]};default:return{};}}" };
+let closure_9 = {
+  code: "function pnpm_indexTsx1(){const{initialFrame,defaultLayout}=this.__closure;return initialFrame.value||defaultLayout;}",
+};
+let closure_10 = {
+  code: "function pnpm_indexTsx2(){const{screenHeight,keyboard,keyboardVerticalOffset,frame}=this.__closure;const keyboardY=screenHeight-keyboard.heightWhenOpened.value-keyboardVerticalOffset;return Math.max(frame.value.y+frame.value.height-keyboardY,0);}",
+};
+let closure_11 = {
+  code: "function pnpm_indexTsx3(value){const{interpolate,relativeKeyboardHeight}=this.__closure;return interpolate(value,[0,1],[0,relativeKeyboardHeight()]);}",
+};
+let closure_12 = {
+  code: 'function pnpm_indexTsx4(layout){const{keyboard,initialFrame,behavior}=this.__closure;if(keyboard.isClosed.value||initialFrame.value===null||behavior!=="height"){initialFrame.value=layout;}}',
+};
+let closure_13 = {
+  code: 'function pnpm_indexTsx5(){const{enabled,interpolateToRelativeKeyboardHeight,keyboard,translate,padding,frame,behavior}=this.__closure;if(!enabled){return{};}const bottom=interpolateToRelativeKeyboardHeight(keyboard.progress.value);const translateY=interpolateToRelativeKeyboardHeight(translate.value);const paddingBottom=interpolateToRelativeKeyboardHeight(padding.value);const height=frame.value.height-bottom;switch(behavior){case"height":if(!keyboard.isClosed.value&&height>0){return{height:height,flex:0};}return{};case"position":return{bottom:bottom};case"padding":return{paddingBottom:bottom};case"translate-with-padding":return{paddingTop:paddingBottom,transform:[{translateY:-translateY}]};default:return{};}}',
+};
 
 export default forwardRef((behavior) => {
   behavior = behavior.behavior;
@@ -66,7 +76,10 @@ export default forwardRef((behavior) => {
   height = behavior(num[5]).useWindowDimensions().height;
   class V {
     constructor() {
-      return Math.max(closure_7.value.y + closure_7.value.height - (height - closure_10.heightWhenOpened.value - c2), 0);
+      return Math.max(
+        closure_7.value.y + closure_7.value.height - (height - closure_10.heightWhenOpened.value - c2),
+        0,
+      );
     }
   }
   V.__closure = { screenHeight: height, keyboard: keyboardAnimation, keyboardVerticalOffset: num, frame: derivedValue };
@@ -127,15 +140,17 @@ export default forwardRef((behavior) => {
       if (null !== findNodeHandleResult) {
         const KeyboardControllerNative = behavior(num[7]).KeyboardControllerNative;
         const viewPositionInWindowResult = KeyboardControllerNative.viewPositionInWindow(findNodeHandleResult);
-        return KeyboardControllerNative.viewPositionInWindow(findNodeHandleResult).then((arg0) => {
-          let obj = behavior(num[3]);
-          obj = {};
-          const merged = Object.assign(layout);
-          ({ x: obj2.x, y: obj2.y } = arg0);
-          obj.runOnUI(closure_1_14)(obj);
-        }).catch(() => {
-          behavior(num[3]).runOnUI(closure_1_14)(layout);
-        });
+        return KeyboardControllerNative.viewPositionInWindow(findNodeHandleResult)
+          .then((arg0) => {
+            let obj = behavior(num[3]);
+            obj = {};
+            const merged = Object.assign(layout);
+            ({ x: obj2.x, y: obj2.y } = arg0);
+            obj.runOnUI(closure_1_14)(obj);
+          })
+          .catch(() => {
+            behavior(num[3]).runOnUI(closure_1_14)(layout);
+          });
       }
       let obj = behavior(num[6]);
     }
@@ -200,7 +215,15 @@ export default forwardRef((behavior) => {
       return;
     }
   }
-  F.__closure = { enabled, interpolateToRelativeKeyboardHeight: tmp9, keyboard: keyboardAnimation, translate, padding, frame: derivedValue, behavior };
+  F.__closure = {
+    enabled,
+    interpolateToRelativeKeyboardHeight: tmp9,
+    keyboard: keyboardAnimation,
+    translate,
+    padding,
+    frame: derivedValue,
+    behavior,
+  };
   F.__workletHash = 6440002265153;
   F.__initData = closure_13;
   const items4 = [behavior, enabled, tmp9];

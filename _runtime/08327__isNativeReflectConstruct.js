@@ -25,8 +25,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 noopAll;
 class Pattern {
@@ -65,7 +64,17 @@ const items = [
         patternTransform = props;
       }
       const tmp3Result = self(8249)(patternTransform);
-      let obj = { x, y, width, height, name: id, matrix: tmp3Result, patternTransform: tmp3Result, patternUnits: null, patternContentUnits: null };
+      let obj = {
+        x,
+        y,
+        width,
+        height,
+        name: id,
+        matrix: tmp3Result,
+        patternTransform: tmp3Result,
+        patternUnits: null,
+        patternContentUnits: null,
+      };
       let num = patternUnits;
       if (patternUnits) {
         num = tmp(8319)[patternUnits];
@@ -82,7 +91,7 @@ const items = [
       obj = {
         ref(arg0) {
           return self.refMethod(arg0);
-        }
+        },
       };
       const tmp3 = self(8249);
       const merged = Object.assign(obj);
@@ -91,10 +100,10 @@ const items = [
       return jsx(self(8328), {
         ref(arg0) {
           return self.refMethod(arg0);
-        }
+        },
       });
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(Pattern, items);
 importDefaultResultResult.displayName = "Pattern";

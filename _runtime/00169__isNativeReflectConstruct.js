@@ -22,8 +22,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class PerformanceMarkTemplate {
   constructor(arg0, arg1) {
@@ -72,7 +71,7 @@ let obj = {
   key: "detail",
   get() {
     return this.__detail;
-  }
+  },
 };
 let items = [obj];
 class PerformanceMark {
@@ -135,7 +134,7 @@ obj = {
   key: "detail",
   get() {
     return this.__detail;
-  }
+  },
 };
 const items1 = [obj];
 class PerformanceMeasure {

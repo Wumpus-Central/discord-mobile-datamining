@@ -1,7 +1,6 @@
 // _runtime/05865_toPropertyKey.js
 import toPrimitive from "05866_toPrimitive.js";
 
-
 export default function toPropertyKey(arg0) {
   const tmp = toPrimitive(arg0, "string");
   let text = tmp;
@@ -9,4 +8,4 @@ export default function toPropertyKey(arg0) {
     text = `${tmp}`;
   }
   return text;
-};
+}

@@ -95,4 +95,4 @@ export default function processTransformOrigin(str) {
     }
   }
   return tmp;
-};
+}

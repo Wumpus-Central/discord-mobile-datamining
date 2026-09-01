@@ -17,8 +17,7 @@ if (!getOwnPropertyDescriptor2) {
     } else {
       try {
         return getOwnPropertyDescriptor(tmp3, tmp4);
-      } catch (err) {
-      }
+      } catch (err) {}
     }
   };
 }

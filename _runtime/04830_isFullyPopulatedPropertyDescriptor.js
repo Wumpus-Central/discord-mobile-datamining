@@ -1,7 +1,6 @@
 // _runtime/04830_isFullyPopulatedPropertyDescriptor.js
 import isPropertyDescriptor from "04813_isPropertyDescriptor.js";
 
-
 export default function isFullyPopulatedPropertyDescriptor(IsAccessorDescriptor) {
   let tmp = isPropertyDescriptor(arg1);
   if (tmp) {
@@ -15,4 +14,4 @@ export default function isFullyPopulatedPropertyDescriptor(IsAccessorDescriptor)
     const tmp3 = IsAccessorDescriptor.IsAccessorDescriptor(arg1) || IsAccessorDescriptor.IsDataDescriptor(arg1);
   }
   return tmp;
-};
+}

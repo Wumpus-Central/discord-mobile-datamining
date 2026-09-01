@@ -30,9 +30,7 @@ export const LegacyText = (arg0) => {
     handler.rngh = true;
     return handler;
   }, items);
-  callback2(() => {
-
-  }, []);
+  callback2(() => {}, []);
   if (!onPress) {
     if (!onLongPress) {
       let obj = { ref: null };
@@ -47,7 +45,7 @@ export const LegacyText = (arg0) => {
       const GestureObjects = ref(table[4]).GestureObjects;
       return GestureObjects.Native().runOnJS(true);
     }, []),
-    children: null
+    children: null,
   };
   obj = { onPress, onLongPress, ref: tmp3 };
   const merged1 = Object.assign(tmp);

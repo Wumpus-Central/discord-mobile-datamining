@@ -27,8 +27,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 ({ StyleSheet, View: error } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
@@ -55,27 +54,27 @@ class CellRenderer {
     tmp3Result.state = { separatorProps: obj };
     tmp3Result._separators = {
       highlight() {
-            ({ props, props: props2 } = closure_0);
-            const items = [, ];
-            ({ cellKey: arr[0], prevCellKey: arr[1] } = props);
-            props2.onUpdateSeparators(items, { highlighted: true });
-          },
+        ({ props, props: props2 } = closure_0);
+        const items = [,];
+        ({ cellKey: arr[0], prevCellKey: arr[1] } = props);
+        props2.onUpdateSeparators(items, { highlighted: true });
+      },
       unhighlight() {
-            ({ props, props: props2 } = closure_0);
-            const items = [, ];
-            ({ cellKey: arr[0], prevCellKey: arr[1] } = props);
-            props2.onUpdateSeparators(items, { highlighted: false });
-          },
+        ({ props, props: props2 } = closure_0);
+        const items = [,];
+        ({ cellKey: arr[0], prevCellKey: arr[1] } = props);
+        props2.onUpdateSeparators(items, { highlighted: false });
+      },
       updateProps(arg0, arg1) {
-            const props = closure_0.props;
-            let prevCellKey = props.cellKey;
-            const props2 = closure_0.props;
-            if ("leading" === arg0) {
-              prevCellKey = props.prevCellKey;
-            }
-            const items = [prevCellKey];
-            props2.onUpdateSeparators(items, arg1);
-          }
+        const props = closure_0.props;
+        let prevCellKey = props.cellKey;
+        const props2 = closure_0.props;
+        if ("leading" === arg0) {
+          prevCellKey = props.prevCellKey;
+        }
+        const items = [prevCellKey];
+        props2.onUpdateSeparators(items, arg1);
+      },
     };
     tmp3Result._onLayout = (arg0) => {
       const props = closure_0.props;
@@ -106,7 +105,7 @@ let obj = {
       obj[0] = obj;
       return obj;
     });
-  }
+  },
 };
 let items = [
   obj,
@@ -115,7 +114,7 @@ let items = [
     value: function componentWillUnmount() {
       const props = this.props;
       props.onUnmount(this.props.cellKey);
-    }
+    },
   },
   {
     key: "_renderElement",
@@ -126,7 +125,9 @@ let items = [
       }
       if (tmp) {
         const _console = console;
-        console.warn("VirtualizedList: Both ListItemComponent and renderItem props are present. ListItemComponent will take precedence over renderItem.");
+        console.warn(
+          "VirtualizedList: Both ListItemComponent and renderItem props are present. ListItemComponent will take precedence over renderItem.",
+        );
       }
       const self = this;
       if (ListItemComponent) {
@@ -142,17 +143,21 @@ let items = [
         obj[2] = self._separators;
         tmp7 = renderItem(obj);
       } else {
-        _modDef38(false, "VirtualizedList: Either ListItemComponent or renderItem props are required but none were found.");
+        _modDef38(
+          false,
+          "VirtualizedList: Either ListItemComponent or renderItem props are required but none were found.",
+        );
       }
       return tmp7;
-    }
+    },
   },
   {
     key: "render",
     value: function render() {
       const self = this;
       const props = this.props;
-      ({ CellRendererComponent, ItemSeparatorComponent, horizontal, item, index, inversionStyle, onCellLayout } = props);
+      ({ CellRendererComponent, ItemSeparatorComponent, horizontal, item, index, inversionStyle, onCellLayout } =
+        props);
       const _renderElementResult = this._renderElement(props.renderItem, props.ListItemComponent, item, index);
       let tmp2 = ItemSeparatorComponent;
       if (!isValidElement(ItemSeparatorComponent)) {
@@ -167,7 +172,7 @@ let items = [
       if (inversionStyle) {
         let items = row;
         if (horizontal) {
-          items = [, ];
+          items = [,];
           items[0] = items.rowReverse;
           items[1] = inversionStyle;
           let items1 = items;
@@ -217,8 +222,8 @@ let items = [
         obj3[1] = tmp10Result;
         return callback3(CellRenderer(322).VirtualizedListCellContextProvider, obj3);
       }
-    }
-  }
+    },
+  },
 ];
 obj = {
   key: "getDerivedStateFromProps",
@@ -233,9 +238,13 @@ obj = {
       tmp = obj;
     }
     return tmp;
-  }
+  },
 };
 let items1 = [obj];
-const styles = StyleSheet.create({ row: { flexDirection: "row" }, rowReverse: { flexDirection: "row-reverse" }, columnReverse: { flexDirection: "column-reverse" } });
+const styles = StyleSheet.create({
+  row: { flexDirection: "row" },
+  rowReverse: { flexDirection: "row-reverse" },
+  columnReverse: { flexDirection: "column-reverse" },
+});
 
 export default importDefaultResult(CellRenderer, items, items1);

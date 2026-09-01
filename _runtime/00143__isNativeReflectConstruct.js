@@ -26,17 +26,14 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
-function noop() {
-
-}
+function noop() {}
 class ReactNativeElement {
   constructor(arg0, arg1, arg2, arg3) {
     self = this;
     tmp = closure_4(this, ReactNativeElement);
-    items = [, ];
+    items = [,];
     items[0] = importDefault;
     items[1] = importAll;
     tmp2 = closure_6;
@@ -61,7 +58,7 @@ let obj = {
   key: "offsetHeight",
   get() {
     return Math.round(ReactNativeElement(141).getBoundingClientRect(this, { includeTransform: false }).height);
-  }
+  },
 };
 let items = [
   obj,
@@ -76,7 +73,7 @@ let items = [
         return 0;
       }
       const obj = ReactNativeElement(136);
-    }
+    },
   },
   {
     key: "offsetParent",
@@ -90,7 +87,7 @@ let items = [
         const obj2 = NativeDOMCxx;
       }
       return null;
-    }
+    },
   },
   {
     key: "offsetTop",
@@ -103,13 +100,13 @@ let items = [
         return 0;
       }
       const obj = ReactNativeElement(136);
-    }
+    },
   },
   {
     key: "offsetWidth",
     get() {
       return Math.round(ReactNativeElement(141).getBoundingClientRect(this, { includeTransform: false }).width);
-    }
+    },
   },
   {
     key: "blur",
@@ -125,7 +122,7 @@ let items = [
         }
         obj2 = javaScriptFlagGetterAll;
       }
-    }
+    },
   },
   {
     key: "focus",
@@ -141,7 +138,7 @@ let items = [
         }
         obj2 = javaScriptFlagGetterAll;
       }
-    }
+    },
   },
   {
     key: "measure",
@@ -151,7 +148,7 @@ let items = [
         require("00139_NativeDOMCxx.js").measure(nativeElementReference, arg0);
         const obj2 = NativeDOMCxx;
       }
-    }
+    },
   },
   {
     key: "measureAsyncOnUI",
@@ -161,7 +158,7 @@ let items = [
         require("00139_NativeDOMCxx.js").measureAsyncOnUI(nativeElementReference, _measureCallback);
         const obj2 = NativeDOMCxx;
       }
-    }
+    },
   },
   {
     key: "measureInWindow",
@@ -171,7 +168,7 @@ let items = [
         require("00139_NativeDOMCxx.js").measureInWindow(nativeElementReference, arg0);
         const obj2 = NativeDOMCxx;
       }
-    }
+    },
   },
   {
     key: "measureLayout",
@@ -196,7 +193,7 @@ let items = [
         const obj2 = ReactNativeElement(136);
         tmp6 = null != nativeElementReference && null != nativeElementReference1;
       }
-    }
+    },
   },
   {
     key: "setNativeProps",
@@ -208,9 +205,8 @@ let items = [
         require("00139_NativeDOMCxx.js").setNativeProps(nativeElementReference, obj);
         const obj3 = NativeDOMCxx;
       }
-    }
+    },
   },
-
 ];
 obj = {
   key: require("SymbolResult2").EVENT_TARGET_GET_DECLARATIVE_LISTENER_KEY,
@@ -233,7 +229,7 @@ obj = {
     }
     const obj = ReactNativeElement(136);
     tmp = ReactNativeElement;
-  }
+  },
 };
 items[12] = obj;
 class ReactNativeElement {

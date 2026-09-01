@@ -11,7 +11,10 @@ _objectWithoutPropertiesDefault;
 let c3 = importAllResult;
 ({ Platform: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-const styles = StyleSheet.create({ container: { flex: 1 }, absoluteWithNoBottom: { position: "absolute", top: 0, start: 0, end: 0 } });
+const styles = StyleSheet.create({
+  container: { flex: 1 },
+  absoluteWithNoBottom: { position: "absolute", top: 0, start: 0, end: 0 },
+});
 
 export default importAllResult.forwardRef(function ScreenStackItem(unstable_sheetFooter, ref) {
   ({ headerConfig, stackPresentation, sheetAllowedDetents, screenId } = unstable_sheetFooter);
@@ -61,7 +64,10 @@ export default importAllResult.forwardRef(function ScreenStackItem(unstable_shee
   closure_4 = obj.useRef(flag4);
   const items = [flag4, stackPresentation];
   const effect = obj.useEffect(() => {
-    ref(table[6])(false, "Dynamically changing header's visibility in modals will result in remounting the screen and losing all local state.");
+    ref(table[6])(
+      false,
+      "Dynamically changing header's visibility in modals will result in remounting the screen and losing all local state.",
+    );
     closure_4.current = flag4;
   }, items);
   let scrollEdgeEffects;
@@ -88,7 +94,10 @@ export default importAllResult.forwardRef(function ScreenStackItem(unstable_shee
   if (flag5) {
     flag5 = false;
   }
-  warnOnceDefault(flag5, "[RNScreens] Using both `blurEffect` and `scrollEdgeEffects` simultaneously may cause overlapping effects.");
+  warnOnceDefault(
+    flag5,
+    "[RNScreens] Using both `blurEffect` and `scrollEdgeEffects` simultaneously may cause overlapping effects.",
+  );
   if ("formSheet" !== stackPresentation) {
     let container = closure_8.container;
   } else if ("fitToContents" === sheetAllowedDetents) {
@@ -96,8 +105,11 @@ export default importAllResult.forwardRef(function ScreenStackItem(unstable_shee
   } else {
     container = closure_8.container;
   }
-  obj = { value: obj1.useEdgeInsetApplication(flag, flag2, flag3).nextContextValue, children: callback(tmp10(4893), { contentStyle, style: container, stackPresentation, children }) };
-  const items1 = [callback(screenId(4881).EdgeInsetApplicationContext.Provider, obj), , ];
+  obj = {
+    value: obj1.useEdgeInsetApplication(flag, flag2, flag3).nextContextValue,
+    children: callback(tmp10(4893), { contentStyle, style: container, stackPresentation, children }),
+  };
+  const items1 = [callback(screenId(4881).EdgeInsetApplicationContext.Provider, obj), ,];
   obj = {};
   const merged1 = Object.assign(headerConfig);
   items1[1] = callback(screenId(4880).ScreenStackHeaderConfig, obj);
@@ -124,7 +136,9 @@ export default importAllResult.forwardRef(function ScreenStackItem(unstable_shee
         }
       } else {
         const _console = console;
-        console.warn("Looks like RNSScreensRefContext is missing. Make sure the ScreenStack component is wrapped in it");
+        console.warn(
+          "Looks like RNSScreensRefContext is missing. Make sure the ScreenStack component is wrapped in it",
+        );
       }
     },
     enabled: true,
@@ -136,7 +150,7 @@ export default importAllResult.forwardRef(function ScreenStackItem(unstable_shee
     hasLargeHeader: null,
     sheetAllowedDetents: null,
     style: null,
-    onHeaderHeightChange: null
+    onHeaderHeightChange: null,
   };
   let flag6;
   const tmp16Result = closure_7(closure_6, { children: items1 });

@@ -25,4 +25,4 @@ export default function fromPropertyDescriptor(__Value__) {
     }
     return obj;
   }
-};
+}

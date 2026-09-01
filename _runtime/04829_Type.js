@@ -1,7 +1,6 @@
 // _runtime/04829_Type.js
 import Type from "04761_Type.js";
 
-
 export default function Type(arg0) {
   let str = "Symbol";
   if (typeof arg0 !== "symbol") {
@@ -12,4 +11,4 @@ export default function Type(arg0) {
     str = str2;
   }
   return str;
-};
+}

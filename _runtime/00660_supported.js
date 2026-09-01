@@ -37,15 +37,18 @@ function unsupported(obj) {
   }
 }
 let tmp = unsupported;
-if ("[object Arguments]" == (() => {
-  const call = toString.call;
-  if (typeof call === "unknown") {
-    let str = toString();
-  } else {
-    str = call(arguments);
-  }
-  return str;
-})()) {
+if (
+  "[object Arguments]" ==
+  (() => {
+    const call = toString.call;
+    if (typeof call === "unknown") {
+      let str = toString();
+    } else {
+      str = call(arguments);
+    }
+    return str;
+  })()
+) {
   tmp = supported;
 }
 tmp.supported = supported;

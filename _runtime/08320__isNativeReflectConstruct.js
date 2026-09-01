@@ -25,8 +25,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 noopAll;
 class Marker {
@@ -56,12 +55,20 @@ const items = [
     value: function render() {
       const self = this;
       const props = this.props;
-      let obj = { name: props.id, refX: props.refX, refY: props.refY, markerUnits: props.markerUnits, orient: String(props.orient), markerWidth, markerHeight };
+      let obj = {
+        name: props.id,
+        refX: props.refX,
+        refY: props.refY,
+        markerUnits: props.markerUnits,
+        orient: String(props.orient),
+        markerWidth,
+        markerHeight,
+      };
       ({ viewBox, preserveAspectRatio, markerWidth, markerHeight, children } = props);
       obj = {
         ref(arg0) {
           return self.refMethod(arg0);
-        }
+        },
       };
       const merged = Object.assign(obj);
       const merged1 = Object.assign(self(8254)({ viewBox, preserveAspectRatio }));
@@ -69,13 +76,20 @@ const items = [
       return jsx(self(8321), {
         ref(arg0) {
           return self.refMethod(arg0);
-        }
+        },
       });
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(Marker, items);
 importDefaultResultResult.displayName = "Marker";
-importDefaultResultResult.defaultProps = { refX: 0, refY: 0, orient: "0", markerWidth: 3, markerHeight: 3, markerUnits: "strokeWidth" };
+importDefaultResultResult.defaultProps = {
+  refX: 0,
+  refY: 0,
+  orient: "0",
+  markerWidth: 3,
+  markerHeight: 3,
+  markerUnits: "strokeWidth",
+};
 
 export default importDefaultResultResult;

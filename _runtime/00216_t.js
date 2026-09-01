@@ -8,17 +8,19 @@ const fn = function t(arg0) {
       closure_0 = arg0;
       this.map = {};
       if (arg0 instanceof Headers) {
-        item = arg0.forEach(function(arg0, arg1) {
+        item = arg0.forEach(function (arg0, arg1) {
           this.append(arg1, arg0);
         }, self);
       } else {
         tmp = globalThis;
         _Array = Array;
         if (Array.isArray(arg0)) {
-          item1 = arg0.forEach(function(arg0) {
+          item1 = arg0.forEach(function (arg0) {
             if (2 != arg0.length) {
               const _TypeError = TypeError;
-              const typeError = new TypeError("Headers constructor: expected name/value pair to be length 2, found" + arg0.length);
+              const typeError = new TypeError(
+                "Headers constructor: expected name/value pair to be length 2, found" + arg0.length,
+              );
               throw typeError;
             } else {
               const self = this;
@@ -28,7 +30,7 @@ const fn = function t(arg0) {
         } else if (arg0) {
           _Object = Object;
           ownPropertyNames = Object.getOwnPropertyNames(arg0);
-          item2 = ownPropertyNames.forEach(function(arg0) {
+          item2 = ownPropertyNames.forEach(function (arg0) {
             this.append(arg0, headers[arg0]);
           }, self);
         }
@@ -65,7 +67,7 @@ const fn = function t(arg0) {
           return;
         }
       }
-      typeError = new TypeError("Invalid character in header field name: \"" + str + "\"");
+      typeError = new TypeError('Invalid character in header field name: "' + str + '"');
       throw typeError;
     }
     delete(arg0) {
@@ -84,7 +86,7 @@ const fn = function t(arg0) {
           return;
         }
       }
-      typeError = new TypeError("Invalid character in header field name: \"" + str + "\"");
+      typeError = new TypeError('Invalid character in header field name: "' + str + '"');
       throw typeError;
     }
     get(arg0) {
@@ -107,7 +109,7 @@ const fn = function t(arg0) {
           return tmp2;
         }
       }
-      typeError = new TypeError("Invalid character in header field name: \"" + str + "\"");
+      typeError = new TypeError('Invalid character in header field name: "' + str + '"');
       throw typeError;
     }
     has(arg0) {
@@ -125,7 +127,7 @@ const fn = function t(arg0) {
           return map.hasOwnProperty(str.toLowerCase());
         }
       }
-      typeError = new TypeError("Invalid character in header field name: \"" + str + "\"");
+      typeError = new TypeError('Invalid character in header field name: "' + str + '"');
       throw typeError;
     }
     set(arg0, arg1) {
@@ -151,7 +153,7 @@ const fn = function t(arg0) {
           return;
         }
       }
-      typeError = new TypeError("Invalid character in header field name: \"" + str + "\"");
+      typeError = new TypeError('Invalid character in header field name: "' + str + '"');
       throw typeError;
     }
     forEach(arg0, arg1) {
@@ -191,9 +193,9 @@ const fn = function t(arg0) {
       closure_0 = items;
       obj = {
         next() {
-              const arr = items.shift();
-              return { done: undefined === arr, value: arr };
-            }
+          const arr = items.shift();
+          return { done: undefined === arr, value: arr };
+        },
       };
       closure_1 = obj;
       if (closure_3) {
@@ -212,9 +214,9 @@ const fn = function t(arg0) {
       closure_0 = items;
       obj = {
         next() {
-              const arr = items.shift();
-              return { done: undefined === arr, value: arr };
-            }
+          const arr = items.shift();
+          return { done: undefined === arr, value: arr };
+        },
       };
       closure_1 = obj;
       if (closure_3) {
@@ -234,9 +236,9 @@ const fn = function t(arg0) {
       closure_0 = items;
       obj = {
         next() {
-              const arr = items.shift();
-              return { done: undefined === arr, value: arr };
-            }
+          const arr = items.shift();
+          return { done: undefined === arr, value: arr };
+        },
       };
       closure_1 = obj;
       if (closure_3) {
@@ -302,7 +304,7 @@ const fn = function t(arg0) {
               obj = Object.create(Headers.prototype);
               obj.map = {};
               if (headers instanceof Headers) {
-                item = headers.forEach(function(arg0, arg1) {
+                item = headers.forEach(function (arg0, arg1) {
                   this.append(arg1, arg0);
                 }, obj);
                 self.headers = obj;
@@ -313,16 +315,18 @@ const fn = function t(arg0) {
                   if (headers) {
                     _Object = Object;
                     ownPropertyNames = Object.getOwnPropertyNames(headers);
-                    item1 = ownPropertyNames.forEach(function(arg0) {
+                    item1 = ownPropertyNames.forEach(function (arg0) {
                       this.append(arg0, headers[arg0]);
                     }, obj);
                   }
                 }
               }
-              item2 = headers.forEach(function(arg0) {
+              item2 = headers.forEach(function (arg0) {
                 if (2 != arg0.length) {
                   const _TypeError = TypeError;
-                  const typeError = new TypeError("Headers constructor: expected name/value pair to be length 2, found" + arg0.length);
+                  const typeError = new TypeError(
+                    "Headers constructor: expected name/value pair to be length 2, found" + arg0.length,
+                  );
                   throw typeError;
                 } else {
                   const self = this;
@@ -431,7 +435,7 @@ const fn = function t(arg0) {
           headers = headers1;
           obj1.map = {};
           if (headers1 instanceof Headers) {
-            item3 = headers1.forEach(function(arg0, arg1) {
+            item3 = headers1.forEach(function (arg0, arg1) {
               this.append(arg1, arg0);
             }, obj1);
             self.headers = obj1;
@@ -442,16 +446,18 @@ const fn = function t(arg0) {
               if (headers1) {
                 _Object2 = Object;
                 ownPropertyNames1 = Object.getOwnPropertyNames(headers1);
-                item4 = ownPropertyNames1.forEach(function(arg0) {
+                item4 = ownPropertyNames1.forEach(function (arg0) {
                   this.append(arg0, headers[arg0]);
                 }, obj1);
               }
             }
           }
-          item5 = headers1.forEach(function(arg0) {
+          item5 = headers1.forEach(function (arg0) {
             if (2 != arg0.length) {
               const _TypeError = TypeError;
-              const typeError = new TypeError("Headers constructor: expected name/value pair to be length 2, found" + arg0.length);
+              const typeError = new TypeError(
+                "Headers constructor: expected name/value pair to be length 2, found" + arg0.length,
+              );
               throw typeError;
             } else {
               const self = this;
@@ -463,9 +469,11 @@ const fn = function t(arg0) {
         tmp2 = globalThis;
         _TypeError = TypeError;
         tmp3 = new.target;
-        str = "Please use the \"new\" operator, this DOM object constructor cannot be called as a function.";
+        str = 'Please use the "new" operator, this DOM object constructor cannot be called as a function.';
         tmp4 = new.target;
-        typeError2 = new TypeError("Please use the \"new\" operator, this DOM object constructor cannot be called as a function.");
+        typeError2 = new TypeError(
+          'Please use the "new" operator, this DOM object constructor cannot be called as a function.',
+        );
         tmp6 = typeError2;
         throw typeError2;
       }
@@ -532,17 +540,19 @@ const fn = function t(arg0) {
             obj = Object.create(Headers.prototype);
             obj.map = {};
             if (headers instanceof Headers) {
-              item = headers.forEach(function(arg0, arg1) {
+              item = headers.forEach(function (arg0, arg1) {
                 this.append(arg1, arg0);
               }, obj);
             } else {
               tmp9 = globalThis;
               _Array = Array;
               if (Array.isArray(headers)) {
-                item1 = headers.forEach(function(arg0) {
+                item1 = headers.forEach(function (arg0) {
                   if (2 != arg0.length) {
                     const _TypeError = TypeError;
-                    const typeError = new TypeError("Headers constructor: expected name/value pair to be length 2, found" + arg0.length);
+                    const typeError = new TypeError(
+                      "Headers constructor: expected name/value pair to be length 2, found" + arg0.length,
+                    );
                     throw typeError;
                   } else {
                     const self = this;
@@ -552,7 +562,7 @@ const fn = function t(arg0) {
               } else if (headers) {
                 _Object = Object;
                 ownPropertyNames = Object.getOwnPropertyNames(headers);
-                item2 = ownPropertyNames.forEach(function(arg0) {
+                item2 = ownPropertyNames.forEach(function (arg0) {
                   this.append(arg0, headers[arg0]);
                 }, obj);
               }
@@ -570,16 +580,20 @@ const fn = function t(arg0) {
         tmp17 = new.target;
         str5 = "Failed to construct 'Response': The status provided (0) is outside the range [200, 599].";
         tmp18 = new.target;
-        rangeError = new RangeError("Failed to construct 'Response': The status provided (0) is outside the range [200, 599].");
+        rangeError = new RangeError(
+          "Failed to construct 'Response': The status provided (0) is outside the range [200, 599].",
+        );
         tmp20 = rangeError;
         throw rangeError;
       } else {
         tmp = globalThis;
         _TypeError = TypeError;
         tmp2 = new.target;
-        str = "Please use the \"new\" operator, this DOM object constructor cannot be called as a function.";
+        str = 'Please use the "new" operator, this DOM object constructor cannot be called as a function.';
         tmp3 = new.target;
-        typeError = new TypeError("Please use the \"new\" operator, this DOM object constructor cannot be called as a function.");
+        typeError = new TypeError(
+          'Please use the "new" operator, this DOM object constructor cannot be called as a function.',
+        );
         tmp5 = typeError;
         throw typeError;
       }
@@ -597,17 +611,19 @@ const fn = function t(arg0) {
         closure_0 = arg0;
         this.map = {};
         if (arg0 instanceof Headers) {
-          item = arg0.forEach(function(arg0, arg1) {
+          item = arg0.forEach(function (arg0, arg1) {
             this.append(arg1, arg0);
           }, self);
         } else {
           tmp = globalThis;
           _Array = Array;
           if (Array.isArray(arg0)) {
-            item1 = arg0.forEach(function(arg0) {
+            item1 = arg0.forEach(function (arg0) {
               if (2 != arg0.length) {
                 const _TypeError = TypeError;
-                const typeError = new TypeError("Headers constructor: expected name/value pair to be length 2, found" + arg0.length);
+                const typeError = new TypeError(
+                  "Headers constructor: expected name/value pair to be length 2, found" + arg0.length,
+                );
                 throw typeError;
               } else {
                 const self = this;
@@ -617,7 +633,7 @@ const fn = function t(arg0) {
           } else if (arg0) {
             _Object = Object;
             ownPropertyNames = Object.getOwnPropertyNames(arg0);
-            item2 = ownPropertyNames.forEach(function(arg0) {
+            item2 = ownPropertyNames.forEach(function (arg0) {
               this.append(arg0, headers[arg0]);
             }, self);
           }
@@ -654,7 +670,7 @@ const fn = function t(arg0) {
             return;
           }
         }
-        typeError = new TypeError("Invalid character in header field name: \"" + str + "\"");
+        typeError = new TypeError('Invalid character in header field name: "' + str + '"');
         throw typeError;
       }
       delete(arg0) {
@@ -673,7 +689,7 @@ const fn = function t(arg0) {
             return;
           }
         }
-        typeError = new TypeError("Invalid character in header field name: \"" + str + "\"");
+        typeError = new TypeError('Invalid character in header field name: "' + str + '"');
         throw typeError;
       }
       get(arg0) {
@@ -696,7 +712,7 @@ const fn = function t(arg0) {
             return tmp2;
           }
         }
-        typeError = new TypeError("Invalid character in header field name: \"" + str + "\"");
+        typeError = new TypeError('Invalid character in header field name: "' + str + '"');
         throw typeError;
       }
       has(arg0) {
@@ -714,7 +730,7 @@ const fn = function t(arg0) {
             return map.hasOwnProperty(str.toLowerCase());
           }
         }
-        typeError = new TypeError("Invalid character in header field name: \"" + str + "\"");
+        typeError = new TypeError('Invalid character in header field name: "' + str + '"');
         throw typeError;
       }
       set(arg0, arg1) {
@@ -740,7 +756,7 @@ const fn = function t(arg0) {
             return;
           }
         }
-        typeError = new TypeError("Invalid character in header field name: \"" + str + "\"");
+        typeError = new TypeError('Invalid character in header field name: "' + str + '"');
         throw typeError;
       }
       forEach(arg0, arg1) {
@@ -780,9 +796,9 @@ const fn = function t(arg0) {
         closure_0 = items;
         obj = {
           next() {
-                  const arr = items.shift();
-                  return { done: undefined === arr, value: arr };
-                }
+            const arr = items.shift();
+            return { done: undefined === arr, value: arr };
+          },
         };
         closure_1 = obj;
         if (closure_3) {
@@ -801,9 +817,9 @@ const fn = function t(arg0) {
         closure_0 = items;
         obj = {
           next() {
-                  const arr = items.shift();
-                  return { done: undefined === arr, value: arr };
-                }
+            const arr = items.shift();
+            return { done: undefined === arr, value: arr };
+          },
         };
         closure_1 = obj;
         if (closure_3) {
@@ -823,9 +839,9 @@ const fn = function t(arg0) {
         closure_0 = items;
         obj = {
           next() {
-                  const arr = items.shift();
-                  return { done: undefined === arr, value: arr };
-                }
+            const arr = items.shift();
+            return { done: undefined === arr, value: arr };
+          },
         };
         closure_1 = obj;
         if (closure_3) {
@@ -855,17 +871,19 @@ const fn = function t(arg0) {
         closure_0 = arg0;
         this.map = {};
         if (arg0 instanceof Headers) {
-          item = arg0.forEach(function(arg0, arg1) {
+          item = arg0.forEach(function (arg0, arg1) {
             this.append(arg1, arg0);
           }, self);
         } else {
           tmp = globalThis;
           _Array = Array;
           if (Array.isArray(arg0)) {
-            item1 = arg0.forEach(function(arg0) {
+            item1 = arg0.forEach(function (arg0) {
               if (2 != arg0.length) {
                 const _TypeError = TypeError;
-                const typeError = new TypeError("Headers constructor: expected name/value pair to be length 2, found" + arg0.length);
+                const typeError = new TypeError(
+                  "Headers constructor: expected name/value pair to be length 2, found" + arg0.length,
+                );
                 throw typeError;
               } else {
                 const self = this;
@@ -875,7 +893,7 @@ const fn = function t(arg0) {
           } else if (arg0) {
             _Object = Object;
             ownPropertyNames = Object.getOwnPropertyNames(arg0);
-            item2 = ownPropertyNames.forEach(function(arg0) {
+            item2 = ownPropertyNames.forEach(function (arg0) {
               this.append(arg0, headers[arg0]);
             }, self);
           }
@@ -912,7 +930,7 @@ const fn = function t(arg0) {
             return;
           }
         }
-        typeError = new TypeError("Invalid character in header field name: \"" + str + "\"");
+        typeError = new TypeError('Invalid character in header field name: "' + str + '"');
         throw typeError;
       }
       delete(arg0) {
@@ -931,7 +949,7 @@ const fn = function t(arg0) {
             return;
           }
         }
-        typeError = new TypeError("Invalid character in header field name: \"" + str + "\"");
+        typeError = new TypeError('Invalid character in header field name: "' + str + '"');
         throw typeError;
       }
       get(arg0) {
@@ -954,7 +972,7 @@ const fn = function t(arg0) {
             return tmp2;
           }
         }
-        typeError = new TypeError("Invalid character in header field name: \"" + str + "\"");
+        typeError = new TypeError('Invalid character in header field name: "' + str + '"');
         throw typeError;
       }
       has(arg0) {
@@ -972,7 +990,7 @@ const fn = function t(arg0) {
             return map.hasOwnProperty(str.toLowerCase());
           }
         }
-        typeError = new TypeError("Invalid character in header field name: \"" + str + "\"");
+        typeError = new TypeError('Invalid character in header field name: "' + str + '"');
         throw typeError;
       }
       set(arg0, arg1) {
@@ -998,7 +1016,7 @@ const fn = function t(arg0) {
             return;
           }
         }
-        typeError = new TypeError("Invalid character in header field name: \"" + str + "\"");
+        typeError = new TypeError('Invalid character in header field name: "' + str + '"');
         throw typeError;
       }
       forEach(arg0, arg1) {
@@ -1038,9 +1056,9 @@ const fn = function t(arg0) {
         closure_0 = items;
         obj = {
           next() {
-                  const arr = items.shift();
-                  return { done: undefined === arr, value: arr };
-                }
+            const arr = items.shift();
+            return { done: undefined === arr, value: arr };
+          },
         };
         closure_1 = obj;
         if (closure_3) {
@@ -1059,9 +1077,9 @@ const fn = function t(arg0) {
         closure_0 = items;
         obj = {
           next() {
-                  const arr = items.shift();
-                  return { done: undefined === arr, value: arr };
-                }
+            const arr = items.shift();
+            return { done: undefined === arr, value: arr };
+          },
         };
         closure_1 = obj;
         if (closure_3) {
@@ -1081,9 +1099,9 @@ const fn = function t(arg0) {
         closure_0 = items;
         obj = {
           next() {
-                  const arr = items.shift();
-                  return { done: undefined === arr, value: arr };
-                }
+            const arr = items.shift();
+            return { done: undefined === arr, value: arr };
+          },
         };
         closure_1 = obj;
         if (closure_3) {
@@ -1114,7 +1132,17 @@ const fn = function t(arg0) {
   closure_5 = "FormData" in _globalThis;
   closure_6 = tmp5;
   if ("ArrayBuffer" in _globalThis) {
-    closure_7 = ["[object Int8Array]", "[object Uint8Array]", "[object Uint8ClampedArray]", "[object Int16Array]", "[object Uint16Array]", "[object Int32Array]", "[object Uint32Array]", "[object Float32Array]", "[object Float64Array]"];
+    closure_7 = [
+      "[object Int8Array]",
+      "[object Uint8Array]",
+      "[object Uint8ClampedArray]",
+      "[object Int16Array]",
+      "[object Uint16Array]",
+      "[object Int32Array]",
+      "[object Uint32Array]",
+      "[object Float32Array]",
+      "[object Float64Array]",
+    ];
     let _ArrayBuffer = ArrayBuffer;
     class Headers {
       constructor(arg0) {
@@ -1122,17 +1150,19 @@ const fn = function t(arg0) {
         closure_0 = arg0;
         this.map = {};
         if (arg0 instanceof Headers) {
-          item = arg0.forEach(function(arg0, arg1) {
+          item = arg0.forEach(function (arg0, arg1) {
             this.append(arg1, arg0);
           }, self);
         } else {
           tmp = globalThis;
           _Array = Array;
           if (Array.isArray(arg0)) {
-            item1 = arg0.forEach(function(arg0) {
+            item1 = arg0.forEach(function (arg0) {
               if (2 != arg0.length) {
                 const _TypeError = TypeError;
-                const typeError = new TypeError("Headers constructor: expected name/value pair to be length 2, found" + arg0.length);
+                const typeError = new TypeError(
+                  "Headers constructor: expected name/value pair to be length 2, found" + arg0.length,
+                );
                 throw typeError;
               } else {
                 const self = this;
@@ -1142,7 +1172,7 @@ const fn = function t(arg0) {
           } else if (arg0) {
             _Object = Object;
             ownPropertyNames = Object.getOwnPropertyNames(arg0);
-            item2 = ownPropertyNames.forEach(function(arg0) {
+            item2 = ownPropertyNames.forEach(function (arg0) {
               this.append(arg0, headers[arg0]);
             }, self);
           }
@@ -1179,7 +1209,7 @@ const fn = function t(arg0) {
             return;
           }
         }
-        typeError = new TypeError("Invalid character in header field name: \"" + str + "\"");
+        typeError = new TypeError('Invalid character in header field name: "' + str + '"');
         throw typeError;
       }
       delete(arg0) {
@@ -1198,7 +1228,7 @@ const fn = function t(arg0) {
             return;
           }
         }
-        typeError = new TypeError("Invalid character in header field name: \"" + str + "\"");
+        typeError = new TypeError('Invalid character in header field name: "' + str + '"');
         throw typeError;
       }
       get(arg0) {
@@ -1221,7 +1251,7 @@ const fn = function t(arg0) {
             return tmp2;
           }
         }
-        typeError = new TypeError("Invalid character in header field name: \"" + str + "\"");
+        typeError = new TypeError('Invalid character in header field name: "' + str + '"');
         throw typeError;
       }
       has(arg0) {
@@ -1239,7 +1269,7 @@ const fn = function t(arg0) {
             return map.hasOwnProperty(str.toLowerCase());
           }
         }
-        typeError = new TypeError("Invalid character in header field name: \"" + str + "\"");
+        typeError = new TypeError('Invalid character in header field name: "' + str + '"');
         throw typeError;
       }
       set(arg0, arg1) {
@@ -1265,7 +1295,7 @@ const fn = function t(arg0) {
             return;
           }
         }
-        typeError = new TypeError("Invalid character in header field name: \"" + str + "\"");
+        typeError = new TypeError('Invalid character in header field name: "' + str + '"');
         throw typeError;
       }
       forEach(arg0, arg1) {
@@ -1305,9 +1335,9 @@ const fn = function t(arg0) {
         closure_0 = items;
         obj = {
           next() {
-                  const arr = items.shift();
-                  return { done: undefined === arr, value: arr };
-                }
+            const arr = items.shift();
+            return { done: undefined === arr, value: arr };
+          },
         };
         closure_1 = obj;
         if (closure_3) {
@@ -1326,9 +1356,9 @@ const fn = function t(arg0) {
         closure_0 = items;
         obj = {
           next() {
-                  const arr = items.shift();
-                  return { done: undefined === arr, value: arr };
-                }
+            const arr = items.shift();
+            return { done: undefined === arr, value: arr };
+          },
         };
         closure_1 = obj;
         if (closure_3) {
@@ -1348,9 +1378,9 @@ const fn = function t(arg0) {
         closure_0 = items;
         obj = {
           next() {
-                  const arr = items.shift();
-                  return { done: undefined === arr, value: arr };
-                }
+            const arr = items.shift();
+            return { done: undefined === arr, value: arr };
+          },
         };
         closure_1 = obj;
         if (closure_3) {
@@ -1371,119 +1401,119 @@ const fn = function t(arg0) {
     constructor() {
       obj = {
         bodyUsed: false,
-        _initBody: function(_bodyInit) {
-              const self = this;
-              this.bodyUsed = this.bodyUsed;
-              this._bodyInit = _bodyInit;
-              if (_bodyInit) {
-                if (typeof _bodyInit === "string") {
-                  self._bodyText = _bodyInit;
-                  let tmp = _bodyInit;
-                } else {
-                  if (closure_4) {
-                    const _Blob = Blob;
-                    if (prototype.isPrototypeOf(_bodyInit)) {
-                      self._bodyBlob = _bodyInit;
-                      tmp = _bodyInit;
-                    }
+        _initBody: function (_bodyInit) {
+          const self = this;
+          this.bodyUsed = this.bodyUsed;
+          this._bodyInit = _bodyInit;
+          if (_bodyInit) {
+            if (typeof _bodyInit === "string") {
+              self._bodyText = _bodyInit;
+              let tmp = _bodyInit;
+            } else {
+              if (closure_4) {
+                const _Blob = Blob;
+                if (prototype.isPrototypeOf(_bodyInit)) {
+                  self._bodyBlob = _bodyInit;
+                  tmp = _bodyInit;
+                }
+              }
+              if (closure_5) {
+                const _FormData = FormData;
+                if (prototype2.isPrototypeOf(_bodyInit)) {
+                  self._bodyFormData = _bodyInit;
+                  tmp = _bodyInit;
+                }
+              }
+              if (closure_2) {
+                const _URLSearchParams = URLSearchParams;
+                if (prototype3.isPrototypeOf(_bodyInit)) {
+                  self._bodyText = _bodyInit.toString();
+                  tmp = _bodyInit;
+                }
+              }
+              if (closure_6) {
+                if (tmp44) {
+                  let isPrototypeOfResult = _bodyInit;
+                  if (_bodyInit) {
+                    const _DataView = DataView;
+                    isPrototypeOfResult = prototype4.isPrototypeOf(_bodyInit);
                   }
-                  if (closure_5) {
-                    const _FormData = FormData;
-                    if (prototype2.isPrototypeOf(_bodyInit)) {
-                      self._bodyFormData = _bodyInit;
-                      tmp = _bodyInit;
-                    }
-                  }
-                  if (closure_2) {
-                    const _URLSearchParams = URLSearchParams;
-                    if (prototype3.isPrototypeOf(_bodyInit)) {
-                      self._bodyText = _bodyInit.toString();
-                      tmp = _bodyInit;
-                    }
-                  }
-                  if (closure_6) {
-                    if (tmp44) {
-                      let isPrototypeOfResult = _bodyInit;
-                      if (_bodyInit) {
-                        const _DataView = DataView;
-                        isPrototypeOfResult = prototype4.isPrototypeOf(_bodyInit);
-                      }
-                      if (isPrototypeOfResult) {
-                        let buffer = _bodyInit.buffer;
-                        if (buffer.slice) {
-                          let buffer2 = buffer.slice(0);
-                        } else {
-                          const _Uint8Array3 = Uint8Array;
-                          const uint8Array = new Uint8Array(buffer.byteLength);
-                          const _Uint8Array4 = Uint8Array;
-                          const uint8Array1 = new Uint8Array(buffer);
-                          const result = uint8Array.set(uint8Array1);
-                          buffer2 = uint8Array.buffer;
-                        }
-                        self._bodyArrayBuffer = buffer2;
-                        const _Blob2 = Blob;
-                        const items = [self._bodyArrayBuffer];
-                        const blob = new Blob(items);
-                        self._bodyInit = blob;
-                        tmp = _bodyInit;
-                      }
-                    }
-                  }
-                  if (tmp7) {
-                    const _ArrayBuffer = ArrayBuffer;
-                    if (_bodyInit.slice) {
-                      buffer = _bodyInit.slice(0);
+                  if (isPrototypeOfResult) {
+                    let buffer = _bodyInit.buffer;
+                    if (buffer.slice) {
+                      let buffer2 = buffer.slice(0);
                     } else {
-                      const _Uint8Array = Uint8Array;
-                      const uint8Array2 = new Uint8Array(_bodyInit.byteLength);
-                      const _Uint8Array2 = Uint8Array;
-                      const uint8Array3 = new Uint8Array(_bodyInit);
-                      const result1 = uint8Array2.set(uint8Array3);
-                      buffer = uint8Array2.buffer;
+                      const _Uint8Array3 = Uint8Array;
+                      const uint8Array = new Uint8Array(buffer.byteLength);
+                      const _Uint8Array4 = Uint8Array;
+                      const uint8Array1 = new Uint8Array(buffer);
+                      const result = uint8Array.set(uint8Array1);
+                      buffer2 = uint8Array.buffer;
                     }
-                    self._bodyArrayBuffer = buffer;
+                    self._bodyArrayBuffer = buffer2;
+                    const _Blob2 = Blob;
+                    const items = [self._bodyArrayBuffer];
+                    const blob = new Blob(items);
+                    self._bodyInit = blob;
                     tmp = _bodyInit;
                   }
-                  const _Object = Object;
-                  const call = toString.call;
-                  const tmp13 = typeof call === "unknown" ? toString() : call(_bodyInit);
-                  self._bodyText = tmp13;
-                  tmp = tmp13;
-                  tmp44 = closure_4;
-                  tmp7 = closure_6;
                 }
-              } else {
-                self._noBody = true;
-                self._bodyText = "";
+              }
+              if (tmp7) {
+                const _ArrayBuffer = ArrayBuffer;
+                if (_bodyInit.slice) {
+                  buffer = _bodyInit.slice(0);
+                } else {
+                  const _Uint8Array = Uint8Array;
+                  const uint8Array2 = new Uint8Array(_bodyInit.byteLength);
+                  const _Uint8Array2 = Uint8Array;
+                  const uint8Array3 = new Uint8Array(_bodyInit);
+                  const result1 = uint8Array2.set(uint8Array3);
+                  buffer = uint8Array2.buffer;
+                }
+                self._bodyArrayBuffer = buffer;
                 tmp = _bodyInit;
               }
-              const headers = self.headers;
-              if (!headers.get("content-type")) {
-                if (typeof tmp === "string") {
-                  const headers4 = self.headers;
-                  const result2 = headers4.set("content-type", "text/plain;charset=UTF-8");
-                } else {
-                  if (self._bodyBlob) {
-                    if (self._bodyBlob.type) {
-                      const headers3 = self.headers;
-                      const result3 = headers3.set("content-type", self._bodyBlob.type);
-                    }
-                  }
-                  let isPrototypeOfResult1 = closure_2;
-                  if (closure_2) {
-                    const _URLSearchParams2 = URLSearchParams;
-                    isPrototypeOfResult1 = prototype6.isPrototypeOf(tmp);
-                  }
-                  if (isPrototypeOfResult1) {
-                    const headers2 = self.headers;
-                    const result4 = headers2.set("content-type", "application/x-www-form-urlencoded;charset=UTF-8");
-                  }
+              const _Object = Object;
+              const call = toString.call;
+              const tmp13 = typeof call === "unknown" ? toString() : call(_bodyInit);
+              self._bodyText = tmp13;
+              tmp = tmp13;
+              tmp44 = closure_4;
+              tmp7 = closure_6;
+            }
+          } else {
+            self._noBody = true;
+            self._bodyText = "";
+            tmp = _bodyInit;
+          }
+          const headers = self.headers;
+          if (!headers.get("content-type")) {
+            if (typeof tmp === "string") {
+              const headers4 = self.headers;
+              const result2 = headers4.set("content-type", "text/plain;charset=UTF-8");
+            } else {
+              if (self._bodyBlob) {
+                if (self._bodyBlob.type) {
+                  const headers3 = self.headers;
+                  const result3 = headers3.set("content-type", self._bodyBlob.type);
                 }
               }
+              let isPrototypeOfResult1 = closure_2;
+              if (closure_2) {
+                const _URLSearchParams2 = URLSearchParams;
+                isPrototypeOfResult1 = prototype6.isPrototypeOf(tmp);
+              }
+              if (isPrototypeOfResult1) {
+                const headers2 = self.headers;
+                const result4 = headers2.set("content-type", "application/x-www-form-urlencoded;charset=UTF-8");
+              }
             }
+          }
+        },
       };
       if (closure_4) {
-        obj.blob = function() {
+        obj.blob = function () {
           const self = this;
           if (this._noBody) {
             if (!undefined) {
@@ -1514,7 +1544,7 @@ const fn = function t(arg0) {
           }
         };
       }
-      obj.arrayBuffer = function() {
+      obj.arrayBuffer = function () {
         let self = this;
         if (this._bodyArrayBuffer) {
           if (self._noBody) {
@@ -1545,7 +1575,7 @@ const fn = function t(arg0) {
           throw error;
         }
       };
-      obj.text = function() {
+      obj.text = function () {
         let length;
         const self = this;
         if (this._noBody) {
@@ -1603,11 +1633,11 @@ const fn = function t(arg0) {
         }
       };
       if (closure_5) {
-        obj.formData = function() {
+        obj.formData = function () {
           return this.text().then(closure_13);
         };
       }
-      obj.json = function() {
+      obj.json = function () {
         return this.text().then(JSON.parse);
       };
       return obj;
@@ -1629,22 +1659,24 @@ const fn = function t(arg0) {
     call2(DOMException);
   }
   Body = Response.prototype;
-  Body.clone = function() {
+  Body.clone = function () {
     let obj = { status: this.status, statusText: this.statusText, headers: null, url: null };
     const headers = this.headers;
     obj = Object.create(Headers.prototype);
     obj.map = {};
     if (headers instanceof Headers) {
-      const item = headers.forEach(function(arg0, arg1) {
+      const item = headers.forEach(function (arg0, arg1) {
         this.append(arg1, arg0);
       }, obj);
     } else {
       const _Array = Array;
       if (Array.isArray(headers)) {
-        const item1 = headers.forEach(function(arg0) {
+        const item1 = headers.forEach(function (arg0) {
           if (2 != arg0.length) {
             const _TypeError = TypeError;
-            const typeError = new TypeError("Headers constructor: expected name/value pair to be length 2, found" + arg0.length);
+            const typeError = new TypeError(
+              "Headers constructor: expected name/value pair to be length 2, found" + arg0.length,
+            );
             throw typeError;
           } else {
             const self = this;
@@ -1654,7 +1686,7 @@ const fn = function t(arg0) {
       } else if (headers) {
         const _Object = Object;
         const ownPropertyNames = Object.getOwnPropertyNames(headers);
-        const item2 = ownPropertyNames.forEach(function(arg0) {
+        const item2 = ownPropertyNames.forEach(function (arg0) {
           this.append(arg0, headers[arg0]);
         }, obj);
       }

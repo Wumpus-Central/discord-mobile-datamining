@@ -11,7 +11,18 @@ export default function deprecatedCreateStrictShapeTypeChecker(arg0) {
       }
       if (typeof arg1[arg2] !== "object") {
         const _HermesInternal3 = HermesInternal;
-        dependencyMap(checkType[0])(false, "Invalid " + str4 + " `" + arg2 + "` of type `" + typeof tmp11 + "` supplied to `" + arg3 + "`, expected `object`.");
+        dependencyMap(checkType[0])(
+          false,
+          "Invalid " +
+            str4 +
+            " `" +
+            arg2 +
+            "` of type `" +
+            typeof tmp11 +
+            "` supplied to `" +
+            arg3 +
+            "`, expected `object`.",
+        );
         const tmp40 = typeof tmp11;
         const tmp43 = dependencyMap(checkType[0]);
       }
@@ -56,8 +67,11 @@ export default function deprecatedCreateStrictShapeTypeChecker(arg0) {
           let tmp37 = dependencyMap(checkType[0]);
           let text = `${tmp34.message}
     Bad object: `;
-          let tmp37Result = tmp37(false, `${tmp34.message}
-    Bad object: ` + JSON.stringify(arg1[arg2], null, "  "));
+          let tmp37Result = tmp37(
+            false,
+            `${tmp34.message}
+    Bad object: ` + JSON.stringify(arg1[arg2], null, "  "),
+          );
           continue;
         }
         continue;
@@ -73,4 +87,4 @@ export default function deprecatedCreateStrictShapeTypeChecker(arg0) {
   }
   chainedCheckType.isRequired = checkType.bind(null, true);
   return chainedCheckType;
-};
+}

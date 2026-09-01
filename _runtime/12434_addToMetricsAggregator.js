@@ -36,5 +36,5 @@ arg5.metricsDefault = {
   getMetricsAggregatorForClient(arg0) {
     const metrics = addToMetricsAggregator.metrics;
     return metrics.getMetricsAggregatorForClient(arg0, MetricsAggregator.MetricsAggregator);
-  }
+  },
 };

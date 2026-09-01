@@ -10,7 +10,7 @@ class MessageQueue {
   constructor() {
     tmp = closure_3(this, MessageQueue);
     this._lazyCallableModules = {};
-    items = [, , , ];
+    items = [, , ,];
     items[0] = [];
     items[1] = [];
     items[2] = [];
@@ -44,7 +44,7 @@ let obj = {
       self.__callFunction(closure_1, closure_2, closure_0);
     });
     return this.flushedQueue();
-  }
+  },
 };
 let items = [
   obj,
@@ -58,7 +58,7 @@ let items = [
         self.__invokeCallback(closure_1, closure_0);
       });
       return this.flushedQueue();
-    }
+    },
   },
   {
     key: "flushedQueue",
@@ -75,20 +75,20 @@ let items = [
         tmp2 = _queue;
       }
       return tmp2;
-    }
+    },
   },
   {
     key: "getEventLoopRunningTime",
     value: function getEventLoopRunningTime() {
       return Date.now() - this._eventLoopStartTime;
-    }
+    },
   },
   {
     key: "registerCallableModule",
     value: function registerCallableModule(ReactFabric, closure_5) {
       closure_0 = closure_5;
       this._lazyCallableModules[ReactFabric] = () => closure_0;
-    }
+    },
   },
   {
     key: "registerLazyCallableModule",
@@ -101,7 +101,7 @@ let items = [
         }
         return closure_0;
       };
-    }
+    },
   },
   {
     key: "getCallableModule",
@@ -111,14 +111,14 @@ let items = [
         tmpResult = tmp();
       }
       return tmpResult;
-    }
+    },
   },
   {
     key: "callNativeSyncHook",
     value: function callNativeSyncHook(closure_0, closure_1, substr, arg3, arg4) {
       this.processCallbacks(closure_0, closure_1, substr, arg3, arg4);
       return MessageQueue.nativeCallSyncHook(closure_0, closure_1, substr);
-    }
+    },
   },
   {
     key: "processCallbacks",
@@ -133,7 +133,7 @@ let items = [
           arr.push(self._callID << 1);
         }
         if (arg4) {
-          arr.push(self._callID << 1 | 1);
+          arr.push((self._callID << 1) | 1);
         }
         const result = self._successCallbacks.set(self._callID, arg4);
         const result1 = self._failureCallbacks.set(self._callID, arg3);
@@ -141,7 +141,7 @@ let items = [
         const _successCallbacks = self._successCallbacks;
       }
       self._callID = self._callID + 1;
-    }
+    },
   },
   {
     key: "enqueueNativeCall",
@@ -171,19 +171,17 @@ let items = [
         obj[3] = closure_02;
         self.__spy(obj);
       }
-    }
+    },
   },
   {
     key: "createDebugLookup",
-    value: function createDebugLookup(arg0, arg1, arg2) {
-
-    }
+    value: function createDebugLookup(arg0, arg1, arg2) {},
   },
   {
     key: "setReactNativeMicrotasksCallback",
     value: function setReactNativeMicrotasksCallback(callReactNativeMicrotasks) {
       this._reactNativeMicrotasksCallback = callReactNativeMicrotasks;
-    }
+    },
   },
   {
     key: "__guard",
@@ -198,7 +196,7 @@ let items = [
           const _default = _mod47.default;
         }
       }
-    }
+    },
   },
   {
     key: "__shouldPauseOnThrow",
@@ -208,7 +206,7 @@ let items = [
         tmp = true === globalThis.DebuggerInternal.shouldPauseOnThrow;
       }
       return tmp;
-    }
+    },
   },
   {
     key: "__callReactNativeMicrotasks",
@@ -224,7 +222,7 @@ let items = [
         tmp3(tmp[2]).endEvent();
         throw tmp10;
       }
-    }
+    },
   },
   {
     key: "__callFunction",
@@ -262,12 +260,32 @@ let items = [
           }
           const _HermesInternal3 = HermesInternal;
           let tmp11Result = tmp11(38);
-          tmp11Result(false, "Failed to call into JavaScript module method " + closure_1 + "." + closure_2 + "(). Module has not been registered as callable. Bridgeless Mode: " + str9 + ". Registered callable JavaScript modules (n = " + keys.length + "): " + joined + ".\n          A frequent cause of the error is that the application entry file path is incorrect. This can also happen when the JS bundle is corrupt or there is an early initialization error when loading React Native.");
+          tmp11Result(
+            false,
+            "Failed to call into JavaScript module method " +
+              closure_1 +
+              "." +
+              closure_2 +
+              "(). Module has not been registered as callable. Bridgeless Mode: " +
+              str9 +
+              ". Registered callable JavaScript modules (n = " +
+              keys.length +
+              "): " +
+              joined +
+              ".\n          A frequent cause of the error is that the application entry file path is incorrect. This can also happen when the JS bundle is corrupt or there is an early initialization error when loading React Native.",
+          );
         }
         if (!callableModule[closure_2]) {
           const _HermesInternal4 = HermesInternal;
           tmp11Result = tmp11(38);
-          tmp11Result(false, "Failed to call into JavaScript module method " + closure_1 + "." + closure_2 + "(). Module exists, but the method is undefined.");
+          tmp11Result(
+            false,
+            "Failed to call into JavaScript module method " +
+              closure_1 +
+              "." +
+              closure_2 +
+              "(). Module exists, but the method is undefined.",
+          );
         }
         callableModule[closure_2].apply(callableModule, closure_0);
         tmp11(46).endEvent();
@@ -275,7 +293,7 @@ let items = [
         tmp2(tmp[2]).endEvent();
         throw tmp35;
       }
-    }
+    },
   },
   {
     key: "__invokeCallback",
@@ -297,8 +315,8 @@ let items = [
         HermesBuiltin.arraySpread(closure_0, 0);
         HermesBuiltin.apply(items, undefined);
       }
-    }
-  }
+    },
+  },
 ];
 obj = {
   key: "spy",
@@ -323,7 +341,7 @@ obj = {
       }
     }
     MessageQueue.prototype.__spy = tmp;
-  }
+  },
 };
 const items1 = [obj];
 

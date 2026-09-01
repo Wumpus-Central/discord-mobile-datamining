@@ -18,7 +18,7 @@ if (0 < parts.length) {
 items[require("../discord_app/index.native.tsx")] = parts.indexOf("+");
 items[require("../discord_app/index.native.tsx")] = parts.indexOf("/");
 arg5.base64decode = function base64decode(actionData) {
-  const result = 3 * actionData.length / 4;
+  const result = (3 * actionData.length) / 4;
   if ("=" == actionData[actionData.length - 2]) {
     let diff = result - 2;
   } else {
@@ -77,12 +77,12 @@ arg5.base64decode = function base64decode(actionData) {
         sum = num5;
       } else if (1 === num4) {
         sum = num5 + 1;
-        uint8Array[num5] = num3 << 2 | (48 & tmp4) >> 4;
+        uint8Array[num5] = (num3 << 2) | ((48 & tmp4) >> 4);
         tmp9 = tmp4;
         num8 = 2;
       } else if (2 === num4) {
         sum = num5 + 1;
-        uint8Array[num5] = (15 & num3) << 4 | (60 & tmp4) >> 2;
+        uint8Array[num5] = ((15 & num3) << 4) | ((60 & tmp4) >> 2);
         tmp9 = tmp4;
         num8 = 3;
       } else {
@@ -91,7 +91,7 @@ arg5.base64decode = function base64decode(actionData) {
         num8 = num4;
         if (3 === num4) {
           sum = num5 + 1;
-          uint8Array[num5] = (3 & num3) << 6 | tmp4;
+          uint8Array[num5] = ((3 & num3) << 6) | tmp4;
           tmp9 = num3;
           num8 = 0;
         }
@@ -135,7 +135,7 @@ arg5.base64encode = function base64encode(NumberResult) {
         num6 = 1;
       } else if (1 === num6) {
         let tmp8 = parts;
-        text = `${parts[num2 | tmp >> 4]}`;
+        text = `${parts[num2 | (tmp >> 4)]}`;
         tmp5 = (15 & tmp) << 2;
         num6 = 2;
       } else {
@@ -143,7 +143,7 @@ arg5.base64encode = function base64encode(NumberResult) {
         text = str;
         if (2 === num6) {
           let tmp7 = parts;
-          text = `` + parts[num2 | tmp >> 6] + parts[63 & tmp];
+          text = `` + parts[num2 | (tmp >> 6)] + parts[63 & tmp];
           tmp5 = num2;
           num6 = 0;
         }

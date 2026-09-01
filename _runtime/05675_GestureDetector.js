@@ -32,8 +32,19 @@ export const GestureDetector = (gesture) => {
     const someResult = obj.some((shouldUseReanimated) => shouldUseReanimated.shouldUseReanimated);
     obj1 = gesture(webEventHandlers[2]);
     webEventHandlers = obj1.useWebEventHandlers();
-    const current = detectorUpdater({ firstRender: true, viewRef: null, previousViewTag: -1, forceRebuildReanimatedEvent: false }).current;
-    obj = { attachedGestures: null, animatedEventHandler: null, animatedHandlers: null, shouldUseReanimated: null, isMounted: false };
+    const current = detectorUpdater({
+      firstRender: true,
+      viewRef: null,
+      previousViewTag: -1,
+      forceRebuildReanimatedEvent: false,
+    }).current;
+    obj = {
+      attachedGestures: null,
+      animatedEventHandler: null,
+      animatedHandlers: null,
+      shouldUseReanimated: null,
+      isMounted: false,
+    };
     obj[0] = [];
     obj[3] = someResult;
     current2 = React.useRef(obj).current;
@@ -52,7 +63,13 @@ export const GestureDetector = (gesture) => {
     const isomorphicLayoutEffect = gesture(webEventHandlers[7]).useIsomorphicLayoutEffect(() => {
       current2.isMounted = true;
       obj = gesture(webEventHandlers[9]);
-      obj = { preparedGesture: current2, gestureConfig: gesture, gesturesToAttach: obj, webEventHandlersRef: webEventHandlers, viewTag: obj(webEventHandlers[8])(current.viewRef) };
+      obj = {
+        preparedGesture: current2,
+        gestureConfig: gesture,
+        gesturesToAttach: obj,
+        webEventHandlersRef: webEventHandlers,
+        viewTag: obj(webEventHandlers[8])(current.viewRef),
+      };
       obj.attachHandlers(obj);
       return () => {
         closure_4.isMounted = false;

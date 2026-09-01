@@ -42,19 +42,20 @@ function refresh() {
     obj = tmp7;
   }
   if (c10) {
-    let cleanupPromise = new Promise((arg0) => {
-
-    });
+    let cleanupPromise = new Promise((arg0) => {});
   } else {
     c10 = true;
     const _fetchCurrentStateResult = obj._fetchCurrentState();
-    cleanupPromise = obj._fetchCurrentState().then((arg0) => {
-      closure_0 = arg0;
-      const item = arr.forEach((arg0) => arg0(closure_0));
-      return arg0;
-    }).finally(() => {
-      c10 = false;
-    });
+    cleanupPromise = obj
+      ._fetchCurrentState()
+      .then((arg0) => {
+        closure_0 = arg0;
+        const item = arr.forEach((arg0) => arg0(closure_0));
+        return arg0;
+      })
+      .finally(() => {
+        c10 = false;
+      });
     const nextPromise = obj._fetchCurrentState().then((arg0) => {
       closure_0 = arg0;
       const item = arr.forEach((arg0) => arg0(closure_0));
@@ -139,7 +140,12 @@ function useNetInfoInstance() {
   let tmp = callback(callback2(), 2);
   first = tmp[0];
   callback = tmp[1];
-  let obj = { type: importAll(first[5]).NetInfoStateType.unknown, isConnected: null, isInternetReachable: null, details: null };
+  let obj = {
+    type: importAll(first[5]).NetInfoStateType.unknown,
+    isConnected: null,
+    isInternetReachable: null,
+    details: null,
+  };
   const tmp3 = callback(callback2(obj), 2);
   callback2 = tmp3[1];
   const items = [flag, arg1];
@@ -168,16 +174,14 @@ function useNetInfoInstance() {
         });
         const _fetchCurrentStateResult = first._fetchCurrentState();
       }
-    }, items1)
+    }, items1),
   };
   items1 = [first];
   return obj;
 }
 ({ useState: c4, useEffect: c5, useCallback: closure_6 } = noop);
 let c8 = null;
-function createState() {
-
-}
+function createState() {}
 let c10 = false;
 let closure_11 = [];
 for (const key10038 in require("metro/01482__.js")) {

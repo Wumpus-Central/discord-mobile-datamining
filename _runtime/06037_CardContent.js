@@ -14,7 +14,7 @@ export const CardContent = function CardContent(layout) {
   let React;
   const tmp2 = layout(React.useState(false), 2);
   React = tmp2[1];
-  let items = [, ];
+  let items = [,];
   ({ height: arr[0], width: arr[1] } = layout);
   const effect = React.useEffect(() => {
     if (typeof document !== "undefined") {
@@ -34,12 +34,18 @@ export const CardContent = function CardContent(layout) {
             }
             element.id = "__react-navigation-stack-mobile-chrome-viewport-fix";
             function updateStyle() {
-              const items = [":root { --vh: " + 0.01 * window.innerHeight + "px; }", "body { height: calc(var(--vh, 1vh) * 100); }"];
+              const items = [
+                ":root { --vh: " + 0.01 * window.innerHeight + "px; }",
+                "body { height: calc(var(--vh, 1vh) * 100); }",
+              ];
               element.textContent = items.join("\n");
             }
             const _window = window;
             const _HermesInternal = HermesInternal;
-            let items = [":root { --vh: " + 0.01 * window.innerHeight + "px; }", "body { height: calc(var(--vh, 1vh) * 100); }"];
+            let items = [
+              ":root { --vh: " + 0.01 * window.innerHeight + "px; }",
+              "body { height: calc(var(--vh, 1vh) * 100); }",
+            ];
             element.textContent = items.join("\n");
             const _document6 = document;
             if (!head.contains(element)) {

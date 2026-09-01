@@ -25,7 +25,7 @@ const items = [
         tmp = "xml" !== self.asset.type;
       }
       return tmp;
-    }
+    },
   },
   {
     key: "isLoadedFromFileSystem",
@@ -40,7 +40,7 @@ const items = [
         tmp = startsWithResult;
       }
       return tmp;
-    }
+    },
   },
   {
     key: "defaultAsset",
@@ -56,7 +56,7 @@ const items = [
         assetServerURLResult = self.resourceIdentifierWithoutScale();
       }
       return assetServerURLResult;
-    }
+    },
   },
   {
     key: "getAssetUsingResolver",
@@ -81,7 +81,7 @@ const items = [
         error = new Error(text1 + "\nPossible resolvers are:" + JSON.stringify(["android", "generic"], null, "\t"));
         throw error;
       }
-    }
+    },
   },
   {
     key: "assetServerURL",
@@ -97,8 +97,13 @@ const items = [
         str = `${"@" + tmp4}x`;
       }
       pickScaleResult = obj.pickScale(asset.scales, AssetSourceResolver(87).default.get());
-      return fromSource(serverUrl + (tmp(102).getBasePath(asset) + "/" + asset.name + str + "." + asset.type) + "?platform=android&hash=" + self.asset.hash);
-    }
+      return fromSource(
+        serverUrl +
+          (tmp(102).getBasePath(asset) + "/" + asset.name + str + "." + asset.type) +
+          "?platform=android&hash=" +
+          self.asset.hash,
+      );
+    },
   },
   {
     key: "scaledAssetPath",
@@ -113,7 +118,7 @@ const items = [
       }
       pickScaleResult = obj.pickScale(asset.scales, AssetSourceResolver(87).default.get());
       return this.fromSource(tmp(102).getBasePath(asset) + "/" + asset.name + str + "." + asset.type);
-    }
+    },
   },
   {
     key: "scaledAssetURLNearBundle",
@@ -133,15 +138,17 @@ const items = [
       }
       tmp(102);
       pickScaleResult = obj.pickScale(asset.scales, AssetSourceResolver(87).default.get());
-      return self.fromSource(str + `${obj2.getBasePath(asset)}/${asset.name}` + str2 + "." + asset.type.replace(/\.\.\//g, "_"));
-    }
+      return self.fromSource(
+        str + `${obj2.getBasePath(asset)}/${asset.name}` + str2 + "." + asset.type.replace(/\.\.\//g, "_"),
+      );
+    },
   },
   {
     key: "resourceIdentifierWithoutScale",
     value: function resourceIdentifierWithoutScale() {
       AssetSourceResolver(38)(true, "resource identifiers work on Android");
       return this.fromSource(AssetSourceResolver(102).getAndroidResourceIdentifier(this.asset));
-    }
+    },
   },
   {
     key: "drawableFolderInBundle",
@@ -157,8 +164,14 @@ const items = [
       const obj2 = AssetSourceResolver(102);
       const text = `${obj2.getAndroidResourceFolderName(asset, tmp)}/`;
       const _default = AssetSourceResolver(87).default;
-      return self.fromSource(str + (`${obj2.getAndroidResourceFolderName(asset, tmp)}/` + AssetSourceResolver(102).getAndroidResourceIdentifier(asset) + "." + asset.type));
-    }
+      return self.fromSource(
+        str +
+          (`${obj2.getAndroidResourceFolderName(asset, tmp)}/` +
+            AssetSourceResolver(102).getAndroidResourceIdentifier(asset) +
+            "." +
+            asset.type),
+      );
+    },
   },
   {
     key: "fromSource",
@@ -167,8 +180,8 @@ const items = [
       const obj2 = AssetSourceResolver(86);
       obj[4] = obj2.pickScale(this.asset.scales, AssetSourceResolver(87).default.get());
       return obj;
-    }
-  }
+    },
+  },
 ];
 const tmp2 = _createClassDefault(AssetSourceResolver, items);
 tmp2.pickScale = require("pickScale").pickScale;

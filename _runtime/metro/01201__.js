@@ -1,23 +1,11 @@
 // _runtime/metro/01201__.js
 arg5.defaultConfiguration = {
-  onFormOpen() {
-
-  },
-  onFormClose() {
-
-  },
-  onAddScreenshot(arg0) {
-
-  },
-  onSubmitSuccess() {
-
-  },
-  onSubmitError() {
-
-  },
-  onFormSubmitted() {
-
-  },
+  onFormOpen() {},
+  onFormClose() {},
+  onAddScreenshot(arg0) {},
+  onSubmitSuccess() {},
+  onSubmitError() {},
+  onFormSubmitted() {},
   showBranding: true,
   isEmailRequired: false,
   shouldValidateEmail: true,
@@ -44,7 +32,7 @@ arg5.defaultConfiguration = {
   addScreenshotButtonLabel: "Add a screenshot",
   removeScreenshotButtonLabel: "Remove screenshot",
   captureScreenshotButtonLabel: "Take a screenshot",
-  genericError: "Unable to send feedback due to an unexpected error."
+  genericError: "Unable to send feedback due to an unexpected error.",
 };
 arg5.defaultButtonConfiguration = { triggerLabel: "Report a Bug", triggerAriaLabel: "" };
 arg5.defaultScreenshotButtonConfiguration = { triggerLabel: "Take Screenshot", triggerAriaLabel: "" };

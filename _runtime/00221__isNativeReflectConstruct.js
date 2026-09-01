@@ -22,14 +22,13 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class CloseEvent {
   constructor(arg0, arg1) {
     self = this;
     tmp = CloseEvent(this, CloseEvent);
-    items = [, ];
+    items = [,];
     items[0] = global;
     items[1] = arg1;
     tmp2 = closure_2;
@@ -73,20 +72,20 @@ let items = [
     key: "wasClean",
     get() {
       return this._wasClean;
-    }
+    },
   },
   {
     key: "code",
     get() {
       return this._code;
-    }
+    },
   },
   {
     key: "reason",
     get() {
       return this._reason;
-    }
-  }
+    },
+  },
 ];
 
 export default importDefaultResult(CloseEvent, items);

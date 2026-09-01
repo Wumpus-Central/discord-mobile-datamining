@@ -36,7 +36,14 @@ arg5.default = {
       tmp12 = obj1;
       const tmp3Result2 = tmp3(5174);
     }
-    const obj2 = { "JFIF Version": tmp12, "Resolution Unit": null, XResolution: null, YResolution: null, "JFIF Thumbnail Width": null, "JFIF Thumbnail Height": null };
+    const obj2 = {
+      "JFIF Version": tmp12,
+      "Resolution Unit": null,
+      XResolution: null,
+      YResolution: null,
+      "JFIF Thumbnail Width": null,
+      "JFIF Thumbnail Height": null,
+    };
     let tmp15;
     if (10 <= shortAt) {
       const byteAt4 = tmp3(5174).getByteAt(buffer, sum + 9);
@@ -112,5 +119,5 @@ arg5.default = {
       }
     }
     return obj2;
-  }
+  },
 };

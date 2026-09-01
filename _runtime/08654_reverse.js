@@ -8,4 +8,4 @@ export default function reverse(arg0) {
     typeof call === "unknown" ? reverse() : call(arg0);
     const tmp = reverse;
   }
-};
+}

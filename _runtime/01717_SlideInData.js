@@ -1,7 +1,12 @@
 // _runtime/01717_SlideInData.js
 import convertAnimationObjectToKeyframes from "01711_convertAnimationObjectToKeyframes.js";
 
-obj = { SlideInRight: { name: "SlideInRight", style: obj, duration: 0.3 }, SlideInLeft: { name: "SlideInLeft", style: obj, duration: 0.3 }, SlideInUp: { name: "SlideInUp", style: obj1, duration: 0.3 }, SlideInDown: { name: "SlideInDown", style: obj2, duration: 0.3 } };
+obj = {
+  SlideInRight: { name: "SlideInRight", style: obj, duration: 0.3 },
+  SlideInLeft: { name: "SlideInLeft", style: obj, duration: 0.3 },
+  SlideInUp: { name: "SlideInUp", style: obj1, duration: 0.3 },
+  SlideInDown: { name: "SlideInDown", style: obj2, duration: 0.3 },
+};
 obj = { 0: { transform: items }, 100: null };
 items = [{ translateX: "100vw" }];
 const items1 = [{ translateX: "0%" }];
@@ -18,7 +23,12 @@ obj2 = { 0: { transform: items6 }, 100: null };
 items6 = [{ translateY: "100vh" }];
 const items7 = [{ translateY: "0%" }];
 obj2[100] = { transform: items7 };
-const obj3 = { SlideOutRight: { name: "SlideOutRight", style: obj4, duration: 0.3 }, SlideOutLeft: { name: "SlideOutLeft", style: obj5, duration: 0.3 }, SlideOutUp: { name: "SlideOutUp", style: obj6, duration: 0.3 }, SlideOutDown: { name: "SlideOutDown", style: obj7, duration: 0.3 } };
+const obj3 = {
+  SlideOutRight: { name: "SlideOutRight", style: obj4, duration: 0.3 },
+  SlideOutLeft: { name: "SlideOutLeft", style: obj5, duration: 0.3 },
+  SlideOutUp: { name: "SlideOutUp", style: obj6, duration: 0.3 },
+  SlideOutDown: { name: "SlideOutDown", style: obj7, duration: 0.3 },
+};
 obj4 = { 0: { transform: items8 }, 100: null };
 items8 = [{ translateX: "0%" }];
 const items9 = [{ translateX: "100vw" }];

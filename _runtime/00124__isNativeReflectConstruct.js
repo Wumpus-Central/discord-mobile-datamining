@@ -23,8 +23,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class DOMRect {
   constructor() {
@@ -54,7 +53,7 @@ let obj = {
   },
   set(arg0) {
     this.__setInternalX(arg0);
-  }
+  },
 };
 const items = [
   obj,
@@ -65,7 +64,7 @@ const items = [
     },
     set(DOMRectReadOnly) {
       this.__setInternalY(DOMRectReadOnly);
-    }
+    },
   },
   {
     key: "width",
@@ -74,7 +73,7 @@ const items = [
     },
     set(width) {
       this.__setInternalWidth(width);
-    }
+    },
   },
   {
     key: "height",
@@ -83,8 +82,8 @@ const items = [
     },
     set(height) {
       this.__setInternalHeight(height);
-    }
-  }
+    },
+  },
 ];
 obj = {
   key: "fromRect",
@@ -97,7 +96,7 @@ obj = {
       tmpResult = tmp();
     }
     return tmpResult;
-  }
+  },
 };
 const items1 = [obj];
 const importDefaultResultResult = importDefaultResult(DOMRect, items, items1);
@@ -105,7 +104,7 @@ let c4 = importDefaultResultResult;
 obj = {
   clone(arg0) {
     return new closure_4(arg0.x, arg0.y, arg0.width, arg0.height);
-  }
+  },
 };
 setPlatformObject.setPlatformObject(importDefaultResultResult, obj);
 

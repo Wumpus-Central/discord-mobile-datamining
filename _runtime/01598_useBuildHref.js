@@ -18,7 +18,7 @@ function useBuildHref() {
   if (options != null) {
     enabled = options.enabled;
   }
-  let items = [enabled, , , , , ];
+  let items = [enabled, , , , ,];
   let config;
   if (options != null) {
     config = options.config;

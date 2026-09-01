@@ -14,7 +14,13 @@ if (null != installedNitro) {
     const _Error2 = Error;
     const version = installedNitro.version;
     const _HermesInternal2 = HermesInternal;
-    const error = new Error("Nitro was installed twice: once with native version " + version + " and once with JS version " + items.version + ". This usually means react-native-nitro-modules exists multiple times in node_modules (e.g. in monorepos or double-linked setups).");
+    const error = new Error(
+      "Nitro was installed twice: once with native version " +
+        version +
+        " and once with JS version " +
+        items.version +
+        ". This usually means react-native-nitro-modules exists multiple times in node_modules (e.g. in monorepos or double-linked setups).",
+    );
     throw error;
   }
 } else {

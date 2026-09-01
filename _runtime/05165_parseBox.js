@@ -22,5 +22,5 @@ arg5.default = {
   },
   findHeicOffsets(byteLength) {
     return parseBox.findOffsets(byteLength);
-  }
+  },
 };

@@ -8,4 +8,4 @@ export default function head(arg0) {
     }
   }
   return first;
-};
+}

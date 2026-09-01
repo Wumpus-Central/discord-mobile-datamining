@@ -14,7 +14,7 @@ const items = [
     key: "get",
     value: function get() {
       return PixelRatio(88).default.get("window").scale;
-    }
+    },
   },
   {
     key: "getFontScale",
@@ -24,27 +24,25 @@ const items = [
         fontScale = PixelRatio.get();
       }
       return fontScale;
-    }
+    },
   },
   {
     key: "getPixelSizeForLayoutSize",
     value: function getPixelSizeForLayoutSize(width) {
       return Math.round(width * PixelRatio.get());
-    }
+    },
   },
   {
     key: "roundToNearestPixel",
     value: function roundToNearestPixel(arg0) {
       const value = PixelRatio.get();
       return Math.round(arg0 * value) / value;
-    }
+    },
   },
   {
     key: "startDetecting",
-    value: function startDetecting() {
-
-    }
-  }
+    value: function startDetecting() {},
+  },
 ];
 
 export default _createClassDefault(PixelRatio, null, items);

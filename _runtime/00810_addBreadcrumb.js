@@ -72,7 +72,8 @@ export const crashedLastRun = init2.crashedLastRun;
 export const TouchEventBoundary = _isNativeReflectConstruct2.TouchEventBoundary;
 export const withTouchEventBoundary = _isNativeReflectConstruct2.withTouchEventBoundary;
 export const reactNativeTracingIntegration = reactNativeTracingIntegration.reactNativeTracingIntegration;
-export const getCurrentReactNativeTracingIntegration = reactNativeTracingIntegration.getCurrentReactNativeTracingIntegration;
+export const getCurrentReactNativeTracingIntegration =
+  reactNativeTracingIntegration.getCurrentReactNativeTracingIntegration;
 export const getReactNativeTracingIntegration = reactNativeTracingIntegration.getReactNativeTracingIntegration;
 export const reactNavigationIntegration = reactNativeTracingIntegration.reactNavigationIntegration;
 export const reactNativeNavigationIntegration = reactNativeTracingIntegration.reactNativeNavigationIntegration;

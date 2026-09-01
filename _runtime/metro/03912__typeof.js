@@ -92,7 +92,12 @@ class ISOTimezoneParser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 10, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", {
+            value: 10,
+            enumerable: true,
+            configurable: true,
+            writable: true,
+          });
         } else {
           num3 = 10;
           applyResult.priority = 10;
@@ -209,17 +214,29 @@ obj = {
   key: "parse",
   value: function parse(arg0, arg1) {
     if ("x" === arg1) {
-      return _createSuperInternal(3880).parseTimezonePattern(_createSuperInternal(3881).timezonePatterns.basicOptionalMinutes, arg0);
+      return _createSuperInternal(3880).parseTimezonePattern(
+        _createSuperInternal(3881).timezonePatterns.basicOptionalMinutes,
+        arg0,
+      );
     } else if ("xx" === arg1) {
       return _createSuperInternal(3880).parseTimezonePattern(_createSuperInternal(3881).timezonePatterns.basic, arg0);
     } else if ("xxxx" === arg1) {
-      return _createSuperInternal(3880).parseTimezonePattern(_createSuperInternal(3881).timezonePatterns.basicOptionalSeconds, arg0);
+      return _createSuperInternal(3880).parseTimezonePattern(
+        _createSuperInternal(3881).timezonePatterns.basicOptionalSeconds,
+        arg0,
+      );
     } else if ("xxxxx" === arg1) {
-      return _createSuperInternal(3880).parseTimezonePattern(_createSuperInternal(3881).timezonePatterns.extendedOptionalSeconds, arg0);
+      return _createSuperInternal(3880).parseTimezonePattern(
+        _createSuperInternal(3881).timezonePatterns.extendedOptionalSeconds,
+        arg0,
+      );
     } else {
-      return _createSuperInternal(3880).parseTimezonePattern(_createSuperInternal(3881).timezonePatterns.extended, arg0);
+      return _createSuperInternal(3880).parseTimezonePattern(
+        _createSuperInternal(3881).timezonePatterns.extended,
+        arg0,
+      );
     }
-  }
+  },
 };
 let items = [
   obj,
@@ -232,8 +249,8 @@ let items = [
         date = new Date(getTime.getTime() - arg2);
       }
       return date;
-    }
-  }
+    },
+  },
 ];
 if (0 < items.length) {
   do {

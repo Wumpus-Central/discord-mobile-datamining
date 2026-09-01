@@ -11,9 +11,7 @@ arg5.isEnabled = function isEnabled() {
   }
   return nativeTraceIsTracingResult;
 };
-arg5.setEnabled = function setEnabled(arg0) {
-
-};
+arg5.setEnabled = function setEnabled(arg0) {};
 arg5.beginEvent = function beginEvent(fn) {
   if (global.nativeTraceIsTracing) {
     let nativeTraceIsTracingResult = obj.nativeTraceIsTracing(c1);

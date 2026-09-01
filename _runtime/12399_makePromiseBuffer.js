@@ -17,21 +17,21 @@ arg5.makePromiseBuffer = function makePromiseBuffer(arg0) {
         if (-1 === items.indexOf(promise)) {
           arr = arr.push(promise);
         }
-        promise.then(() => {
-          let first = closure_1_1.splice(closure_1_1.indexOf(promise), 1)[0];
-          if (!first) {
-            first = Promise.resolve(undefined);
-          }
-          return first;
-        }).then(null, () => {
-          let first = closure_1_1.splice(closure_1_1.indexOf(promise), 1)[0];
-          if (!first) {
-            first = Promise.resolve(undefined);
-          }
-          return first.then(null, () => {
-
+        promise
+          .then(() => {
+            let first = closure_1_1.splice(closure_1_1.indexOf(promise), 1)[0];
+            if (!first) {
+              first = Promise.resolve(undefined);
+            }
+            return first;
+          })
+          .then(null, () => {
+            let first = closure_1_1.splice(closure_1_1.indexOf(promise), 1)[0];
+            if (!first) {
+              first = Promise.resolve(undefined);
+            }
+            return first.then(null, () => {});
           });
-        });
         return promise;
       } else {
         const sentryError = new callback(items[1]).SentryError("Not adding Promise because buffer limit was reached.");
@@ -57,21 +57,23 @@ arg5.makePromiseBuffer = function makePromiseBuffer(arg0) {
           }, closure_0);
           const item = arr.forEach((arg0) => {
             const obj = callback(items[0]);
-            callback(items[0]).resolvedSyncPromise(arg0).then(() => {
-              const diff = closure_2 - 1;
-              closure_2 = diff;
-              if (!diff) {
-                const _clearTimeout = clearTimeout;
-                clearTimeout(closure_3);
-                callback(true);
-              }
-            }, closure_1);
+            callback(items[0])
+              .resolvedSyncPromise(arg0)
+              .then(() => {
+                const diff = closure_2 - 1;
+                closure_2 = diff;
+                if (!diff) {
+                  const _clearTimeout = clearTimeout;
+                  clearTimeout(closure_3);
+                  callback(true);
+                }
+              }, closure_1);
           });
         } else {
           return arg0(true);
         }
         arr = closure_1_1;
       });
-    }
+    },
   };
 };

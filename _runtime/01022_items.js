@@ -74,7 +74,9 @@ arg5.enable = function enable(arg0) {
             const _console = console;
             console.warn(`Promise Rejection Handled (id: ${tmp5[_512].displayId}):`);
             const _console2 = console;
-            console.warn(`  This means you can ignore any previous messages of the form "Possible Unhandled Promise Rejection" with id ${tmp5[_512].displayId}.`);
+            console.warn(
+              `  This means you can ignore any previous messages of the form "Possible Unhandled Promise Rejection" with id ${tmp5[_512].displayId}.`,
+            );
           }
         }
       } else {

@@ -49,7 +49,7 @@ let obj = {
     if ("trace" === profileLifecycle) {
       const result = obj._setupTraceLifecycleListeners(getOptions);
     }
-  }
+  },
 };
 let items = [
   obj,
@@ -78,12 +78,14 @@ let items = [
       } else {
         if (callback(UIProfiler[4]).DEBUG_BUILD) {
           const debug = tmp(tmp2[5]).debug;
-          debug.warn("[Profiling] `profileLifecycle` is set to \"trace\". Calls to `uiProfiler.start()` are ignored in trace mode.");
+          debug.warn(
+            '[Profiling] `profileLifecycle` is set to "trace". Calls to `uiProfiler.start()` are ignored in trace mode.',
+          );
         }
         tmp = callback;
         tmp2 = UIProfiler;
       }
-    }
+    },
   },
   {
     key: "stop",
@@ -103,12 +105,14 @@ let items = [
       } else {
         if (callback(UIProfiler[4]).DEBUG_BUILD) {
           const debug = tmp(tmp2[5]).debug;
-          debug.warn("[Profiling] `profileLifecycle` is set to \"trace\". Calls to `uiProfiler.stop()` are ignored in trace mode.");
+          debug.warn(
+            '[Profiling] `profileLifecycle` is set to "trace". Calls to `uiProfiler.stop()` are ignored in trace mode.',
+          );
         }
         tmp = callback;
         tmp2 = UIProfiler;
       }
-    }
+    },
   },
   {
     key: "notifyRootSpanActive",
@@ -135,7 +139,7 @@ let items = [
           }
         }
       }
-    }
+    },
   },
   {
     key: "_beginProfiling",
@@ -163,7 +167,7 @@ let items = [
         }
         const tmpResult = callback(UIProfiler[5]);
       }
-    }
+    },
   },
   {
     key: "_endProfiling",
@@ -190,7 +194,7 @@ let items = [
         }
         const _collectCurrentChunkResult = self._collectCurrentChunk();
       }
-    }
+    },
   },
   {
     key: "_setupTraceLifecycleListeners",
@@ -210,7 +214,13 @@ let items = [
                     if (self(closure_1_1[4]).DEBUG_BUILD) {
                       const debug3 = self(closure_1_1[5]).debug;
                       const _HermesInternal = HermesInternal;
-                      debug3.log("[Profiling] Root span " + spanId + " started. Profiling active while there are active root spans (count=" + size + ").");
+                      debug3.log(
+                        "[Profiling] Root span " +
+                          spanId +
+                          " started. Profiling active while there are active root spans (count=" +
+                          size +
+                          ").",
+                      );
                     }
                     obj._beginProfiling();
                   }
@@ -239,7 +249,13 @@ let items = [
               if (self(closure_1_1[4]).DEBUG_BUILD) {
                 let debug = tmp3(tmp4[5]).debug;
                 const _HermesInternal = HermesInternal;
-                debug.log("[Profiling] Root span with ID " + spanId + " ended. Will continue profiling for as long as there are active root spans (currently: " + size + ").");
+                debug.log(
+                  "[Profiling] Root span with ID " +
+                    spanId +
+                    " ended. Will continue profiling for as long as there are active root spans (currently: " +
+                    size +
+                    ").",
+                );
               }
               if (0 === size) {
                 obj._collectCurrentChunk().catch((arg0) => {
@@ -257,7 +273,7 @@ let items = [
           }
         }
       });
-    }
+    },
   },
   {
     key: "_resetProfilerInfo",
@@ -265,7 +281,7 @@ let items = [
       this._isRunning = false;
       const globalScope = callback(UIProfiler[5]).getGlobalScope();
       globalScope.setContext("profile", {});
-    }
+    },
   },
   {
     key: "_clearAllRootSpanTimeouts",
@@ -274,7 +290,7 @@ let items = [
       const item = _rootSpanTimeouts.forEach((arg0) => clearTimeout(arg0));
       _rootSpanTimeouts = this._rootSpanTimeouts;
       _rootSpanTimeouts.clear();
-    }
+    },
   },
   {
     key: "_registerTraceRootSpan",
@@ -284,8 +300,11 @@ let items = [
       const _activeRootSpanIds = this._activeRootSpanIds;
       _activeRootSpanIds.add(spanId);
       const _rootSpanTimeouts = this._rootSpanTimeouts;
-      const result = _rootSpanTimeouts.set(spanId, setTimeout(() => self._onRootSpanTimeout(closure_0), 300000));
-    }
+      const result = _rootSpanTimeouts.set(
+        spanId,
+        setTimeout(() => self._onRootSpanTimeout(closure_0), 300000),
+      );
+    },
   },
   {
     key: "_startProfilerInstance",
@@ -305,7 +324,7 @@ let items = [
         }
         const obj = callback(UIProfiler[3]);
       }
-    }
+    },
   },
   {
     key: "_startPeriodicChunking",
@@ -330,7 +349,7 @@ let items = [
           }
         }, 60000);
       }
-    }
+    },
   },
   {
     key: "_onRootSpanTimeout",
@@ -345,7 +364,11 @@ let items = [
           if (callback(UIProfiler[4]).DEBUG_BUILD) {
             const debug = tmp2(tmp3[5]).debug;
             const _HermesInternal = HermesInternal;
-            debug.log("[Profiling] Reached 5-minute timeout for root span " + closure_0 + ". You likely started a manual root span that never called `.end()`.");
+            debug.log(
+              "[Profiling] Reached 5-minute timeout for root span " +
+                closure_0 +
+                ". You likely started a manual root span that never called `.end()`.",
+            );
           }
           const _activeRootSpanIds2 = self._activeRootSpanIds;
           _activeRootSpanIds2.delete(closure_0);
@@ -356,18 +379,17 @@ let items = [
           tmp3 = UIProfiler;
         }
       }
-    }
+    },
   },
-,
-
+  ,
 ];
 obj = { key: "_collectCurrentChunk", value: null };
-closure_0 = asyncGeneratorStep(function() {
+closure_0 = asyncGeneratorStep(function () {
   const self = this;
   c6 = 0;
   c7 = 0;
   c4 = 0;
-  return (function*() {
+  return (function* () {
     if (c7 === 2) {
       c7 = 3;
       HermesBuiltin.throwTypeError();
@@ -445,7 +467,10 @@ closure_0 = asyncGeneratorStep(function() {
           }
           if (self(closure_1_1[4]).DEBUG_BUILD) {
             const debug2 = self(closure_1_1[5]).debug;
-            debug2.log("[Profiling] Discarding invalid profile chunk (this is probably a bug in the SDK):", closure_1_2.reason);
+            debug2.log(
+              "[Profiling] Discarding invalid profile chunk (this is probably a bug in the SDK):",
+              closure_1_2.reason,
+            );
           }
           c4 = 0;
           c7 = 3;
@@ -518,7 +543,7 @@ items[14] = {
         debug.error("Error while sending profile chunk envelope:", arg0);
       }
     });
-  }
+  },
 };
 
 export const UIProfiler = _createClass(UIProfiler, items);

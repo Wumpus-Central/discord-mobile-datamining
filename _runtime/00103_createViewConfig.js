@@ -2,7 +2,13 @@
 const module = arg2;
 const dependencyMap = arg6;
 arg5.createViewConfig = function createViewConfig(closure_2) {
-  let obj = { uiViewClassName: closure_2.uiViewClassName, Commands: {}, bubblingEventTypes: null, directEventTypes: null, validAttributes: null };
+  let obj = {
+    uiViewClassName: closure_2.uiViewClassName,
+    Commands: {},
+    bubblingEventTypes: null,
+    directEventTypes: null,
+    validAttributes: null,
+  };
   let bubblingEventTypes = module(104).bubblingEventTypes;
   bubblingEventTypes = closure_2.bubblingEventTypes;
   if (null != bubblingEventTypes) {

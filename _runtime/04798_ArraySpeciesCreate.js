@@ -36,4 +36,4 @@ export default function ArraySpeciesCreate(arg0, arg1) {
     }
   }
   throw new _mod541("Assertion failed: length must be an integer >= 0");
-};
+}

@@ -19,4 +19,4 @@ export default function Call(arg0, arg1) {
     throw tmp6;
   }
   const tmp2 = require;
-};
+}

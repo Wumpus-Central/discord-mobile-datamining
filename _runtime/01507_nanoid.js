@@ -105,5 +105,5 @@ arg5.BaseRouter = {
       tmp = "NAVIGATE_DEPRECATED" === type.type;
     }
     return tmp;
-  }
+  },
 };

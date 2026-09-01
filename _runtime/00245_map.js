@@ -22,11 +22,24 @@ arg5.registerConfig = function registerConfig(arr) {
     if (run.run) {
       closure_5[run.appKey] = run.run;
     } else {
-      component(table[0])(null != run.component, "AppRegistry.registerConfig(...): Every config is expected to set either `run` or `component`, but `%s` has neither.", run.appKey);
+      component(table[0])(
+        null != run.component,
+        "AppRegistry.registerConfig(...): Every config is expected to set either `run` or `component`, but `%s` has neither.",
+        run.appKey,
+      );
       const appKey = run.appKey;
       component = run.component;
       closure_5[appKey] = (arg0, arg1) => {
-        const obj = { RootComponent: closure_1_9(component, component(closure_1_2[2])), initialProps: null, rootTag: null, WrapperComponent: null, rootViewStyle: null, isLogBox: null, debugName: null, displayMode: null };
+        const obj = {
+          RootComponent: closure_1_9(component, component(closure_1_2[2])),
+          initialProps: null,
+          rootTag: null,
+          WrapperComponent: null,
+          rootViewStyle: null,
+          isLogBox: null,
+          debugName: null,
+          displayMode: null,
+        };
         ({ initialProps: obj[1], rootTag: obj[2] } = arg0);
         let tmp = closure_1_3;
         if (closure_1_3) {
@@ -53,7 +66,16 @@ arg5.registerComponent = function registerComponent(Discord, arg1) {
   closure_0 = Discord;
   closure_1 = arg1;
   closure_5[Discord] = (arg0, arg1) => {
-    const obj = { RootComponent: closure_1_9(component, component(closure_1_2[2])), initialProps: null, rootTag: null, WrapperComponent: null, rootViewStyle: null, isLogBox: null, debugName: null, displayMode: null };
+    const obj = {
+      RootComponent: closure_1_9(component, component(closure_1_2[2])),
+      initialProps: null,
+      rootTag: null,
+      WrapperComponent: null,
+      rootViewStyle: null,
+      isLogBox: null,
+      debugName: null,
+      displayMode: null,
+    };
     ({ initialProps: obj[1], rootTag: obj[2] } = arg0);
     let tmp = closure_1_3;
     if (closure_1_3) {
@@ -83,7 +105,16 @@ arg5.registerSection = function registerSection(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   dependencyMap[arg0] = (arg0, arg1) => {
-    const obj = { RootComponent: closure_1_9(component, component(closure_1_2[2])), initialProps: null, rootTag: null, WrapperComponent: null, rootViewStyle: null, isLogBox: null, debugName: null, displayMode: null };
+    const obj = {
+      RootComponent: closure_1_9(component, component(closure_1_2[2])),
+      initialProps: null,
+      rootTag: null,
+      WrapperComponent: null,
+      rootViewStyle: null,
+      isLogBox: null,
+      debugName: null,
+      displayMode: null,
+    };
     ({ initialProps: obj[1], rootTag: obj[2] } = arg0);
     let tmp = closure_1_3;
     if (closure_1_3) {
@@ -129,9 +160,14 @@ arg5.runApplication = function runApplication(name) {
   if ("LogBox" !== name) {
     const _HermesInternal = HermesInternal;
     const _console = console;
-    console.log("Running \"" + name + "\"");
+    console.log('Running "' + name + '"');
   }
-  module(38)(dependencyMap[name], "\"" + name + "\" has not been registered. This can happen if:\n* Metro (the local dev server) is run from the wrong folder. Check if Metro is running, stop it and restart it in the current project.\n* A module failed to load due to an error and `AppRegistry.registerComponent` wasn't called.");
+  module(38)(
+    dependencyMap[name],
+    '"' +
+      name +
+      "\" has not been registered. This can happen if:\n* Metro (the local dev server) is run from the wrong folder. Check if Metro is running, stop it and restart it in the current project.\n* A module failed to load due to an error and `AppRegistry.registerComponent` wasn't called.",
+  );
   let obj = module(258);
   obj = { name };
   obj.setActiveScene(obj);
@@ -145,7 +181,12 @@ arg5.setSurfaceProps = function setSurfaceProps(arg0, arg1, arg2) {
     const _console = console;
     console.log(`${`Updating props for Surface "${arg0}`}" with ${JSON.stringify(arg1)}`);
   }
-  module(38)(dependencyMap[arg0], "\"" + arg0 + "\" has not been registered. This can happen if:\n* Metro (the local dev server) is run from the wrong folder. Check if Metro is running, stop it and restart it in the current project.\n* A module failed to load due to an error and `AppRegistry.registerComponent` wasn't called.");
+  module(38)(
+    dependencyMap[arg0],
+    '"' +
+      arg0 +
+      "\" has not been registered. This can happen if:\n* Metro (the local dev server) is run from the wrong folder. Check if Metro is running, stop it and restart it in the current project.\n* A module failed to load due to an error and `AppRegistry.registerComponent` wasn't called.",
+  );
   const tmp4 = module(38);
   dependencyMap[arg0](arg1, frozen.coerceDisplayMode(arg2));
 };
@@ -156,11 +197,13 @@ arg5.registerHeadlessTask = function registerHeadlessTask(BackgroundSync, arg1) 
   if (map.has(BackgroundSync)) {
     const _console = console;
     const _HermesInternal = HermesInternal;
-    console.warn("registerHeadlessTask or registerCancellableHeadlessTask called multiple times for same key '" + BackgroundSync + "'");
+    console.warn(
+      "registerHeadlessTask or registerCancellableHeadlessTask called multiple times for same key '" +
+        BackgroundSync +
+        "'",
+    );
   }
-  const fn = () => () => {
-
-  };
+  const fn = () => () => {};
   const result = map.set(BackgroundSync, arg1);
   const result1 = map1.set(BackgroundSync, fn);
 };
@@ -168,7 +211,9 @@ arg5.registerCancellableHeadlessTask = function registerCancellableHeadlessTask(
   if (map.has(arg0)) {
     const _console = console;
     const _HermesInternal = HermesInternal;
-    console.warn("registerHeadlessTask or registerCancellableHeadlessTask called multiple times for same key '" + arg0 + "'");
+    console.warn(
+      "registerHeadlessTask or registerCancellableHeadlessTask called multiple times for same key '" + arg0 + "'",
+    );
   }
   const result = map.set(arg0, arg1);
   const result1 = map1.set(arg0, arg2);
@@ -179,25 +224,27 @@ arg5.startHeadlessTask = function startHeadlessTask(arg0, arg1, arg2) {
   const value = map.get(arg1);
   if (value) {
     const promise = value()(arg2);
-    value()(arg2).then(() => {
-      if (_default) {
-        _default.notifyTaskFinished(closure_0);
-      }
-    }).catch((arg0) => {
-      console.error(arg0);
-      let tmp2 = _default;
-      if (_default) {
-        tmp2 = arg0 instanceof _default(closure_1_2[6]);
-      }
-      if (tmp2) {
-        _default.notifyTaskRetry(closure_0).then((arg0) => {
-          if (!arg0) {
-            closure_1.notifyTaskFinished(closure_0);
-          }
-        });
-        const notifyTaskRetryResult = _default.notifyTaskRetry(closure_0);
-      }
-    });
+    value()(arg2)
+      .then(() => {
+        if (_default) {
+          _default.notifyTaskFinished(closure_0);
+        }
+      })
+      .catch((arg0) => {
+        console.error(arg0);
+        let tmp2 = _default;
+        if (_default) {
+          tmp2 = arg0 instanceof _default(closure_1_2[6]);
+        }
+        if (tmp2) {
+          _default.notifyTaskRetry(closure_0).then((arg0) => {
+            if (!arg0) {
+              closure_1.notifyTaskFinished(closure_0);
+            }
+          });
+          const notifyTaskRetryResult = _default.notifyTaskRetry(closure_0);
+        }
+      });
   } else {
     const _console = console;
     const _HermesInternal = HermesInternal;

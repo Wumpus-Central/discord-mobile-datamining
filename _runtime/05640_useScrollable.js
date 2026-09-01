@@ -12,7 +12,9 @@ export const useScrollable = () => {
   const sharedValue = obj.useSharedValue(require("05625_GESTURE_SOURCE.js").SCROLLABLE_TYPE.UNDETERMINED);
   const sharedValue1 = require("01653_cancelAnimation.js").useSharedValue(0);
   const obj2 = cancelAnimation;
-  const sharedValue2 = require("01653_cancelAnimation.js").useSharedValue(require("05625_GESTURE_SOURCE.js").SCROLLABLE_STATE.UNDETERMINED);
+  const sharedValue2 = require("01653_cancelAnimation.js").useSharedValue(
+    require("05625_GESTURE_SOURCE.js").SCROLLABLE_STATE.UNDETERMINED,
+  );
   const obj3 = cancelAnimation;
   const sharedValue3 = require("01653_cancelAnimation.js").useSharedValue(false);
   const obj4 = cancelAnimation;
@@ -55,7 +57,7 @@ export const useScrollable = () => {
       } catch (err) {
         return tmp;
       }
-    }, [])
+    }, []),
   };
   return obj;
 };

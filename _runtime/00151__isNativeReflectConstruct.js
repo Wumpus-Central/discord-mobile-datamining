@@ -23,8 +23,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class ReadOnlyText {
   constructor() {
@@ -52,14 +51,14 @@ const items = [
     key: "nodeName",
     get() {
       return "#text";
-    }
+    },
   },
   {
     key: "nodeType",
     get() {
       return ReadOnlyText(131).TEXT_NODE;
-    }
-  }
+    },
+  },
 ];
 
 export default importDefaultResult(ReadOnlyText, items);

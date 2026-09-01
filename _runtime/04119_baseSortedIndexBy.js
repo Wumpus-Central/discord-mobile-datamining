@@ -1,7 +1,6 @@
 // _runtime/04119_baseSortedIndexBy.js
 import isSymbol from "00638_isSymbol.js";
 
-
 export default function baseSortedIndexBy(arg0, arg1, arg2, arg3) {
   let num = 0;
   if (null != arg0) {
@@ -97,4 +96,4 @@ export default function baseSortedIndexBy(arg0, arg1, arg2, arg3) {
     }
     return min(tmp23, 4294967294);
   }
-};
+}

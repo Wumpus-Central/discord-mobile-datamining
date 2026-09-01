@@ -14,7 +14,16 @@ class Sensor {
     tmp3 = closure_1;
     if (global === require("isWorkletFunction").SensorType.ROTATION) {
       tmp2Result = require("addCompilerSafeGetAndSet");
-      mutable = tmp2Result.makeMutable({ qw: 0, qx: 0, qy: 0, qz: 0, yaw: 0, pitch: 0, roll: 0, interfaceOrientation: 0 });
+      mutable = tmp2Result.makeMutable({
+        qw: 0,
+        qx: 0,
+        qy: 0,
+        qz: 0,
+        yaw: 0,
+        pitch: 0,
+        roll: 0,
+        interfaceOrientation: 0,
+      });
     } else {
       tmp2Result1 = require("addCompilerSafeGetAndSet");
       mutable = tmp2Result1.makeMutable({ x: 0, y: 0, z: 0, interfaceOrientation: 0 });
@@ -36,7 +45,7 @@ const items = [
       }
       self.sensorId = ReanimatedModule.registerSensor(sensorType, num, config.iosReferenceFrame, arg0);
       return -1 !== self.sensorId;
-    }
+    },
   },
   {
     key: "isRunning",
@@ -46,19 +55,19 @@ const items = [
         tmp = null !== this.sensorId;
       }
       return tmp;
-    }
+    },
   },
   {
     key: "isAvailable",
     value: function isAvailable() {
       return -1 !== this.sensorId;
-    }
+    },
   },
   {
     key: "getSharedValue",
     value: function getSharedValue() {
       return this.data;
-    }
+    },
   },
   {
     key: "unregister",
@@ -73,8 +82,8 @@ const items = [
         ReanimatedModule.unregisterSensor(self.sensorId);
       }
       self.sensorId = null;
-    }
-  }
+    },
+  },
 ];
 
 export default _createClassDefault(Sensor, items);

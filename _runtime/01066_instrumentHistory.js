@@ -19,7 +19,7 @@ function instrumentHistory() {
   if (obj.supportsHistory()) {
     function historyReplacementFunction(arg0) {
       closure_0 = arg0;
-      return function() {
+      return function () {
         const items = [...arguments];
         let tmp;
         if (items.length > 2) {

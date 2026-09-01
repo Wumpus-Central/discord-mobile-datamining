@@ -24,6 +24,13 @@ export const NavigationProvider = function NavigationProvider(route) {
   }
   let obj = { value: route, children: null };
   obj = { value: navigation, children: jsx(tmp(1541).IsFocusedContext.Provider, { value: tmp6, children }) };
-  obj[1] = jsx(NavigationContext.NavigationContext.Provider, { value: navigation, children: jsx(tmp(1541).IsFocusedContext.Provider, { value: tmp6, children }) });
-  return <context.Provider value={navigation}>{jsx(tmp(1541).IsFocusedContext.Provider, { value: tmp6, children })}</context.Provider>;
+  obj[1] = jsx(NavigationContext.NavigationContext.Provider, {
+    value: navigation,
+    children: jsx(tmp(1541).IsFocusedContext.Provider, { value: tmp6, children }),
+  });
+  return (
+    <context.Provider value={navigation}>
+      {jsx(tmp(1541).IsFocusedContext.Provider, { value: tmp6, children })}
+    </context.Provider>
+  );
 };

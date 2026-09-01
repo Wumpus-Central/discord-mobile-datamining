@@ -30,12 +30,19 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 noopDefault;
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-({ NativeModules: error, View: closure_8, Image: c9, Platform, findNodeHandle: c10, UIManager: unpackModuleId, requireNativeComponent } = get_ActivityIndicator);
+({
+  NativeModules: error,
+  View: closure_8,
+  Image: c9,
+  Platform,
+  findNodeHandle: c10,
+  UIManager: unpackModuleId,
+  requireNativeComponent,
+} = get_ActivityIndicator);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const styles = StyleSheet.create({ base: { overflow: "hidden" } });
 class Video {
@@ -78,13 +85,13 @@ class Video {
       closure_0 = arg0;
       c2 = 0;
       c1 = 0;
-      return (function*(arg0) {
+      return (function* (arg0) {
         const VideoManager = closure_2_7.VideoManager;
         yield VideoManager.save(_root, closure_2_10(_root._root));
         return arg1;
       })();
     });
-    tmp3Result.save = function(arg0) {
+    tmp3Result.save = function (arg0) {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -94,7 +101,9 @@ class Video {
       }
       return applyArgumentsResult;
     };
-    tmp3Result.restoreUserInterfaceForPictureInPictureStopCompleted = (restoreUserInterfaceForPIPStopCompletionHandler) => {
+    tmp3Result.restoreUserInterfaceForPictureInPictureStopCompleted = (
+      restoreUserInterfaceForPIPStopCompletionHandler,
+    ) => {
       store.setNativeProps({ restoreUserInterfaceForPIPStopCompletionHandler });
     };
     tmp3Result._assignRoot = (_root) => {
@@ -248,21 +257,25 @@ class Video {
           if (nativeEvent) {
             if (nativeEvent.spcBase64) {
               const drm = tmp.props.drm;
-              const resolved = Promise.resolve(drm.getLicense(nativeEvent.spcBase64, nativeEvent.contentId, nativeEvent.licenseUrl));
-              resolved.then((arg0) => {
-                if (undefined !== arg0) {
-                  const VideoManager2 = closure_1_7.VideoManager;
-                  VideoManager2.setLicenseResult(arg0, closure_1_10(closure_0._root));
-                } else if (closure_1_7.VideoManager.setLicenseError) {
-                  const VideoManager = closure_1_7.VideoManager;
-                  VideoManager.setLicenseError("Empty license result", closure_1_10(closure_0._root));
-                }
-              }).catch((arg0) => {
-                if (closure_1_7.VideoManager.setLicenseError) {
-                  const VideoManager = tmp.VideoManager;
-                  VideoManager.setLicenseError(arg0, closure_1_10(closure_0._root));
-                }
-              });
+              const resolved = Promise.resolve(
+                drm.getLicense(nativeEvent.spcBase64, nativeEvent.contentId, nativeEvent.licenseUrl),
+              );
+              resolved
+                .then((arg0) => {
+                  if (undefined !== arg0) {
+                    const VideoManager2 = closure_1_7.VideoManager;
+                    VideoManager2.setLicenseResult(arg0, closure_1_10(closure_0._root));
+                  } else if (closure_1_7.VideoManager.setLicenseError) {
+                    const VideoManager = closure_1_7.VideoManager;
+                    VideoManager.setLicenseError("Empty license result", closure_1_10(closure_0._root));
+                  }
+                })
+                .catch((arg0) => {
+                  if (closure_1_7.VideoManager.setLicenseError) {
+                    const VideoManager = tmp.VideoManager;
+                    VideoManager.setLicenseError(arg0, closure_1_10(closure_0._root));
+                  }
+                });
               const nextPromise = resolved.then((arg0) => {
                 if (undefined !== arg0) {
                   const VideoManager2 = closure_1_7.VideoManager;
@@ -305,7 +318,7 @@ let obj = {
       }
     }
     console.warn("Video component not ready for setNativeProps call");
-  }
+  },
 };
 let items = [
   obj,
@@ -326,7 +339,7 @@ let items = [
       } else {
         return toISOString.toString();
       }
-    }
+    },
   },
   {
     key: "stringsOnlyObject",
@@ -339,7 +352,7 @@ let items = [
         obj[arg0] = self.toTypeString(headers[arg0]);
       });
       return obj;
-    }
+    },
   },
   {
     key: "render",
@@ -383,9 +396,46 @@ let items = [
         ScaleNone = viewManagerConfig.Constants.ScaleNone;
       }
       const merged = Object.assign({}, self.props);
-      let obj = { style: items, resizeMode: ScaleNone, src: null, onVideoLoadStart: null, onVideoLoad: null, onVideoError: null, onVideoProgress: null, onVideoSeek: null, onVideoEnd: null, onVideoBuffer: null, onVideoBandwidthUpdate: null, onTimedMetadata: null, onVideoAudioBecomingNoisy: null, onVideoExternalPlaybackChange: null, onVideoFullscreenPlayerWillPresent: null, onVideoFullscreenPlayerDidPresent: null, onVideoFullscreenPlayerWillDismiss: null, onVideoFullscreenPlayerDidDismiss: null, onReadyForDisplay: null, onPlaybackStalled: null, onPlaybackResume: null, onPlaybackRateChange: null, onAudioFocusChanged: null, onAudioBecomingNoisy: null, onGetLicense: null, onPictureInPictureStatusChanged: null, onRestoreUserInterfaceForPictureInPictureStop: null };
+      let obj = {
+        style: items,
+        resizeMode: ScaleNone,
+        src: null,
+        onVideoLoadStart: null,
+        onVideoLoad: null,
+        onVideoError: null,
+        onVideoProgress: null,
+        onVideoSeek: null,
+        onVideoEnd: null,
+        onVideoBuffer: null,
+        onVideoBandwidthUpdate: null,
+        onTimedMetadata: null,
+        onVideoAudioBecomingNoisy: null,
+        onVideoExternalPlaybackChange: null,
+        onVideoFullscreenPlayerWillPresent: null,
+        onVideoFullscreenPlayerDidPresent: null,
+        onVideoFullscreenPlayerWillDismiss: null,
+        onVideoFullscreenPlayerDidDismiss: null,
+        onReadyForDisplay: null,
+        onPlaybackStalled: null,
+        onPlaybackResume: null,
+        onPlaybackRateChange: null,
+        onAudioFocusChanged: null,
+        onAudioBecomingNoisy: null,
+        onGetLicense: null,
+        onPictureInPictureStatusChanged: null,
+        onRestoreUserInterfaceForPictureInPictureStop: null,
+      };
       items = [base.base, merged.style];
-      obj = { uri: str2, isNetwork: !tmp9, isAsset: !tmp10, shouldCache: !tmp3.__packager_asset, type: null, mainVer: null, patchVer: null, requestHeaders: null };
+      obj = {
+        uri: str2,
+        isNetwork: !tmp9,
+        isAsset: !tmp10,
+        shouldCache: !tmp3.__packager_asset,
+        type: null,
+        mainVer: null,
+        patchVer: null,
+        requestHeaders: null,
+      };
       let str5 = tmp3.type;
       if (!str5) {
         str5 = "";
@@ -400,7 +450,29 @@ let items = [
       }
       obj[7] = stringsOnlyObjectResult;
       obj[2] = obj;
-      ({ _onLoadStart: obj[3], _onLoad: obj[4], _onError: obj[5], _onProgress: obj[6], _onSeek: obj[7], _onEnd: obj[8], _onBuffer: obj[9], _onBandwidthUpdate: obj[10], _onTimedMetadata: obj[11], _onAudioBecomingNoisy: obj[12], _onExternalPlaybackChange: obj[13], _onFullscreenPlayerWillPresent: obj[14], _onFullscreenPlayerDidPresent: obj[15], _onFullscreenPlayerWillDismiss: obj[16], _onFullscreenPlayerDidDismiss: obj[17], _onReadyForDisplay: obj[18], _onPlaybackStalled: obj[19], _onPlaybackResume: obj[20], _onPlaybackRateChange: obj[21], _onAudioFocusChanged: obj[22], _onAudioBecomingNoisy: obj[23] } = self);
+      ({
+        _onLoadStart: obj[3],
+        _onLoad: obj[4],
+        _onError: obj[5],
+        _onProgress: obj[6],
+        _onSeek: obj[7],
+        _onEnd: obj[8],
+        _onBuffer: obj[9],
+        _onBandwidthUpdate: obj[10],
+        _onTimedMetadata: obj[11],
+        _onAudioBecomingNoisy: obj[12],
+        _onExternalPlaybackChange: obj[13],
+        _onFullscreenPlayerWillPresent: obj[14],
+        _onFullscreenPlayerDidPresent: obj[15],
+        _onFullscreenPlayerWillDismiss: obj[16],
+        _onFullscreenPlayerDidDismiss: obj[17],
+        _onReadyForDisplay: obj[18],
+        _onPlaybackStalled: obj[19],
+        _onPlaybackResume: obj[20],
+        _onPlaybackRateChange: obj[21],
+        _onAudioFocusChanged: obj[22],
+        _onAudioBecomingNoisy: obj[23],
+      } = self);
       obj[24] = merged.drm && merged.drm.getLicense && self._onGetLicense;
       ({ _onPictureInPictureStatusChanged: obj[25], _onRestoreUserInterfaceForPictureInPictureStop: obj[26] } = self);
       const merged1 = Object.assign(merged, obj);
@@ -411,7 +483,7 @@ let items = [
       const obj2 = { ref: self._assignRoot };
       const merged3 = Object.assign(merged);
       obj2.style = StyleSheet.absoluteFill;
-      const items1 = [callback4(closure_16, obj2), ];
+      const items1 = [callback4(closure_16, obj2)];
       let showPoster = self.state.showPoster;
       if (showPoster) {
         const obj3 = { style: null, source: null };
@@ -424,12 +496,111 @@ let items = [
       items1[1] = showPoster;
       obj1[1] = items1;
       return closure_13(closure_8, obj1);
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(Video, items);
-obj = { filter: null, filterEnabled: null, src: null, seek: null, fullscreen: null, onVideoLoadStart: null, onVideoLoad: null, onVideoBuffer: null, onVideoError: null, onVideoProgress: null, onVideoBandwidthUpdate: null, onVideoSeek: null, onVideoEnd: null, onTimedMetadata: null, onVideoAudioBecomingNoisy: null, onVideoExternalPlaybackChange: null, onVideoFullscreenPlayerWillPresent: null, onVideoFullscreenPlayerDidPresent: null, onVideoFullscreenPlayerWillDismiss: null, onVideoFullscreenPlayerDidDismiss: null, source: null, drm: null, minLoadRetryCount: null, maxBitRate: null, resizeMode: null, poster: null, posterResizeMode: null, repeat: null, automaticallyWaitsToMinimizeStalling: null, allowsExternalPlayback: null, selectedAudioTrack: null, selectedVideoTrack: null, selectedTextTrack: null, textTracks: null, paused: null, muted: null, volume: null, bufferConfig: null, stereoPan: null, rate: null, pictureInPicture: null, playInBackground: null, preferredForwardBufferDuration: null, playWhenInactive: null, ignoreSilentSwitch: null, reportBandwidth: null, disableFocus: null, controls: null, audioOnly: null, currentTime: null, fullscreenAutorotate: null, fullscreenOrientation: null, progressUpdateInterval: null, useTextureView: null, hideShutterView: null, onLoadStart: null, onLoad: null, onBuffer: null, onError: null, onProgress: null, onBandwidthUpdate: null, onSeek: null, onEnd: null, onFullscreenPlayerWillPresent: null, onFullscreenPlayerDidPresent: null, onFullscreenPlayerWillDismiss: null, onFullscreenPlayerDidDismiss: null, onReadyForDisplay: null, onPlaybackStalled: null, onPlaybackResume: null, onPlaybackRateChange: null, onAudioFocusChanged: null, onAudioBecomingNoisy: null, onPictureInPictureStatusChanged: null, needsToRestoreUserInterfaceForPictureInPictureStop: null, onExternalPlaybackChange: null, scaleX: null, scaleY: null, translateX: null, translateY: null, rotation: null };
-let items1 = [_modDef8405.NONE, _modDef8405.INVERT, _modDef8405.MONOCHROME, _modDef8405.POSTERIZE, _modDef8405.FALSE, _modDef8405.MAXIMUMCOMPONENT, _modDef8405.MINIMUMCOMPONENT, _modDef8405.CHROME, _modDef8405.FADE, _modDef8405.INSTANT, _modDef8405.MONO, _modDef8405.NOIR, _modDef8405.PROCESS, _modDef8405.TONAL, _modDef8405.TRANSFER, _modDef8405.SEPIA];
+obj = {
+  filter: null,
+  filterEnabled: null,
+  src: null,
+  seek: null,
+  fullscreen: null,
+  onVideoLoadStart: null,
+  onVideoLoad: null,
+  onVideoBuffer: null,
+  onVideoError: null,
+  onVideoProgress: null,
+  onVideoBandwidthUpdate: null,
+  onVideoSeek: null,
+  onVideoEnd: null,
+  onTimedMetadata: null,
+  onVideoAudioBecomingNoisy: null,
+  onVideoExternalPlaybackChange: null,
+  onVideoFullscreenPlayerWillPresent: null,
+  onVideoFullscreenPlayerDidPresent: null,
+  onVideoFullscreenPlayerWillDismiss: null,
+  onVideoFullscreenPlayerDidDismiss: null,
+  source: null,
+  drm: null,
+  minLoadRetryCount: null,
+  maxBitRate: null,
+  resizeMode: null,
+  poster: null,
+  posterResizeMode: null,
+  repeat: null,
+  automaticallyWaitsToMinimizeStalling: null,
+  allowsExternalPlayback: null,
+  selectedAudioTrack: null,
+  selectedVideoTrack: null,
+  selectedTextTrack: null,
+  textTracks: null,
+  paused: null,
+  muted: null,
+  volume: null,
+  bufferConfig: null,
+  stereoPan: null,
+  rate: null,
+  pictureInPicture: null,
+  playInBackground: null,
+  preferredForwardBufferDuration: null,
+  playWhenInactive: null,
+  ignoreSilentSwitch: null,
+  reportBandwidth: null,
+  disableFocus: null,
+  controls: null,
+  audioOnly: null,
+  currentTime: null,
+  fullscreenAutorotate: null,
+  fullscreenOrientation: null,
+  progressUpdateInterval: null,
+  useTextureView: null,
+  hideShutterView: null,
+  onLoadStart: null,
+  onLoad: null,
+  onBuffer: null,
+  onError: null,
+  onProgress: null,
+  onBandwidthUpdate: null,
+  onSeek: null,
+  onEnd: null,
+  onFullscreenPlayerWillPresent: null,
+  onFullscreenPlayerDidPresent: null,
+  onFullscreenPlayerWillDismiss: null,
+  onFullscreenPlayerDidDismiss: null,
+  onReadyForDisplay: null,
+  onPlaybackStalled: null,
+  onPlaybackResume: null,
+  onPlaybackRateChange: null,
+  onAudioFocusChanged: null,
+  onAudioBecomingNoisy: null,
+  onPictureInPictureStatusChanged: null,
+  needsToRestoreUserInterfaceForPictureInPictureStop: null,
+  onExternalPlaybackChange: null,
+  scaleX: null,
+  scaleY: null,
+  translateX: null,
+  translateY: null,
+  rotation: null,
+};
+let items1 = [
+  _modDef8405.NONE,
+  _modDef8405.INVERT,
+  _modDef8405.MONOCHROME,
+  _modDef8405.POSTERIZE,
+  _modDef8405.FALSE,
+  _modDef8405.MAXIMUMCOMPONENT,
+  _modDef8405.MINIMUMCOMPONENT,
+  _modDef8405.CHROME,
+  _modDef8405.FADE,
+  _modDef8405.INSTANT,
+  _modDef8405.MONO,
+  _modDef8405.NOIR,
+  _modDef8405.PROCESS,
+  _modDef8405.TONAL,
+  _modDef8405.TRANSFER,
+  _modDef8405.SEPIA,
+];
 obj[0] = importDefaultResult3.oneOf(items1);
 obj[1] = importDefaultResult3.bool;
 obj[2] = importDefaultResult3.object;
@@ -457,7 +628,14 @@ obj = { uri: importDefaultResult3.string };
 const items3 = [importDefaultResult3.shape(obj), importDefaultResult3.number];
 obj[20] = importDefaultResult5.oneOfType(items3);
 const importDefaultResult6 = importDefaultResult3;
-let obj1 = { type: null, licenseServer: null, headers: null, base64Certificate: null, certificateUrl: null, getLicense: null };
+let obj1 = {
+  type: null,
+  licenseServer: null,
+  headers: null,
+  base64Certificate: null,
+  certificateUrl: null,
+  getLicense: null,
+};
 const importDefaultResult7 = importDefaultResult3;
 const items4 = [_modDef8406.CLEARKEY, _modDef8406.FAIRPLAY, _modDef8406.WIDEVINE, _modDef8406.PLAYREADY];
 obj1[0] = importDefaultResult3.oneOf(items4);
@@ -496,7 +674,12 @@ obj4[1] = importDefaultResult3.oneOfType(items7);
 obj[32] = importDefaultResult14.shape(obj4);
 const importDefaultResult15 = importDefaultResult3;
 const importDefaultResult16 = importDefaultResult3;
-const obj5 = { title: importDefaultResult3.string, uri: importDefaultResult3.string.isRequired, type: null, language: null };
+const obj5 = {
+  title: importDefaultResult3.string,
+  uri: importDefaultResult3.string.isRequired,
+  type: null,
+  language: null,
+};
 const importDefaultResult17 = importDefaultResult3;
 const items8 = [_modDef8425.SRT, _modDef8425.TTML, _modDef8425.VTT];
 obj5[2] = importDefaultResult3.oneOf(items8);
@@ -507,14 +690,24 @@ obj[35] = importDefaultResult3.bool;
 obj[36] = importDefaultResult3.number;
 const importDefaultResult18 = importDefaultResult3;
 const importDefaultResult19 = importDefaultResult3;
-obj[37] = importDefaultResult19.shape({ minBufferMs: importDefaultResult3.number, maxBufferMs: importDefaultResult3.number, bufferForPlaybackMs: importDefaultResult3.number, bufferForPlaybackAfterRebufferMs: importDefaultResult3.number });
+obj[37] = importDefaultResult19.shape({
+  minBufferMs: importDefaultResult3.number,
+  maxBufferMs: importDefaultResult3.number,
+  bufferForPlaybackMs: importDefaultResult3.number,
+  bufferForPlaybackAfterRebufferMs: importDefaultResult3.number,
+});
 obj[38] = importDefaultResult3.number;
 obj[39] = importDefaultResult3.number;
 obj[40] = importDefaultResult3.bool;
 obj[41] = importDefaultResult3.bool;
 obj[42] = importDefaultResult3.number;
 obj[43] = importDefaultResult3.bool;
-const obj6 = { minBufferMs: importDefaultResult3.number, maxBufferMs: importDefaultResult3.number, bufferForPlaybackMs: importDefaultResult3.number, bufferForPlaybackAfterRebufferMs: importDefaultResult3.number };
+const obj6 = {
+  minBufferMs: importDefaultResult3.number,
+  maxBufferMs: importDefaultResult3.number,
+  bufferForPlaybackMs: importDefaultResult3.number,
+  bufferForPlaybackAfterRebufferMs: importDefaultResult3.number,
+};
 obj[44] = importDefaultResult3.oneOf(["ignore", "obey"]);
 obj[45] = importDefaultResult3.bool;
 obj[46] = importDefaultResult3.bool;
@@ -555,7 +748,9 @@ obj[79] = importDefaultResult3.number;
 obj[80] = importDefaultResult3.number;
 let merged = Object.assign(require("get ColorPropType").ViewPropTypes);
 importDefaultResultResult.propTypes = obj;
-let closure_16 = requireNativeComponent("RNVVideo", importDefaultResultResult, { nativeOnly: { src: true, seek: true, fullscreen: true } });
+let closure_16 = requireNativeComponent("RNVVideo", importDefaultResultResult, {
+  nativeOnly: { src: true, seek: true, fullscreen: true },
+});
 
 export default importDefaultResultResult;
 export const TextTrackType = _modDef8425;

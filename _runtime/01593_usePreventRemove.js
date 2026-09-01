@@ -7,7 +7,10 @@ const require = arg1;
 export const usePreventRemove = function usePreventRemove(stateFromStores, arg1) {
   const _require = stateFromStores;
   importDefault = arg1;
-  const first = navigation(key.useState(() => stateFromStores(first[2]).nanoid()), 1)[0];
+  const first = navigation(
+    key.useState(() => stateFromStores(first[2]).nanoid()),
+    1,
+  )[0];
   navigation = _require(first[3]).useNavigation();
   let obj = _require(first[3]);
   key = _require(first[4]).useRoute().key;

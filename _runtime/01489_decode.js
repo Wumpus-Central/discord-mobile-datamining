@@ -168,7 +168,7 @@ function decode(arr) {
           } while (sum4 > 455);
         }
         let result1 = tmp13 / sum3;
-        let tmp52Result = tmp52(num13 + 36 * tmp53 / (tmp53 + 38));
+        let tmp52Result = tmp52(num13 + (36 * tmp53) / (tmp53 + 38));
         let tmp58 = c1;
         if (tmp51(result1) > c1 - num2) {
           let tmp68 = globalThis;
@@ -205,8 +205,8 @@ function decode(arr) {
       if (tmp61 > 65535) {
         let tmp64 = fromCharCode;
         let diff5 = tmp61 - 65536;
-        str = `${fromCharCode(tmp65 >>> 10 & 1023 | 55296)}`;
-        tmp63 = 56320 | 1023 & diff5;
+        str = `${fromCharCode(((tmp65 >>> 10) & 1023) | 55296)}`;
+        tmp63 = 56320 | (1023 & diff5);
       }
       let tmp66 = fromCharCode;
       items1[diff4] = str + fromCharCode(tmp63);
@@ -341,7 +341,7 @@ function encode(str) {
                     let tmp43 = c2;
                     let diff3 = c2 - num9;
                     let tmp45 = fromCharCode;
-                    let sum5 = num9 + diff2 % diff3;
+                    let sum5 = num9 + (diff2 % diff3);
                     let arr4 = items1.push(fromCharCode(sum5 + 22 + 75 * (sum5 < 26)));
                     let tmp48 = floor;
                     tmp49 = floor(diff2 / diff3);
@@ -384,7 +384,7 @@ function encode(str) {
                     tmp58 = sum7;
                   } while (sum7 > 455);
                 }
-                tmp56Result = tmp56(num13 + 36 * tmp58 / (tmp58 + 38));
+                tmp56Result = tmp56(num13 + (36 * tmp58) / (tmp58 + 38));
                 sum8 = tmp62 + 1;
                 num7 = 0;
               }
@@ -452,7 +452,11 @@ let c2 = 36;
 const re3 = /^xn--/;
 const re4 = /[^\x20-\x7E]/;
 const re5 = /[\x2E\u3002\uFF0E\uFF61]/g;
-let closure_6 = { overflow: "Overflow: input needs wider integers to process", "not-basic": "Illegal input >= 0x80 (not a basic code point)", "invalid-input": "Invalid input" };
+let closure_6 = {
+  overflow: "Overflow: input needs wider integers to process",
+  "not-basic": "Illegal input >= 0x80 (not a basic code point)",
+  "invalid-input": "Invalid input",
+};
 obj = {
   version: "1.4.1",
   ucs2: obj,
@@ -516,7 +520,7 @@ obj = {
       } while (tmp7);
     }
     return str + items.join(".");
-  }
+  },
 };
 obj = {
   decode: function ucs2decode(str) {
@@ -564,8 +568,8 @@ obj = {
         if (tmp3 > 65535) {
           let tmp6 = fromCharCode;
           let diff1 = tmp3 - 65536;
-          str = `${fromCharCode(tmp7 >>> 10 & 1023 | 55296)}`;
-          tmp5 = 56320 | 1023 & diff1;
+          str = `${fromCharCode(((tmp7 >>> 10) & 1023) | 55296)}`;
+          tmp5 = 56320 | (1023 & diff1);
         }
         let tmp8 = fromCharCode;
         items[diff] = str + fromCharCode(tmp5);
@@ -574,7 +578,7 @@ obj = {
       } while (tmp9);
     }
     return items.join("");
-  }
+  },
 };
 if (typeof globalThis.define === "function") {
   if (typeof globalThis.define.amd === "object") {

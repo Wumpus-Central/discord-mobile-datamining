@@ -28,7 +28,7 @@ const items = [
         const result1 = _idmap.set(first.id, arg0);
       }
       return self;
-    }
+    },
   },
   {
     key: "clear",
@@ -38,7 +38,7 @@ const items = [
       obj._map = weakMap;
       obj._idmap = new Map();
       return obj;
-    }
+    },
   },
   {
     key: "remove",
@@ -60,7 +60,7 @@ const items = [
       const _map2 = self._map;
       _map2.delete(arg0);
       return self;
-    }
+    },
   },
   {
     key: "get",
@@ -89,15 +89,15 @@ const items = [
         const _map = self._map;
         return _map.get(_zod);
       }
-    }
+    },
   },
   {
     key: "has",
     value: function has(arg0) {
       const _map = this._map;
       return _map.has(arg0);
-    }
-  }
+    },
+  },
 ];
 const _moduleResult = _createClass($ZodRegistry, items);
 if (globalThis.__zod_globalRegistry == null) {

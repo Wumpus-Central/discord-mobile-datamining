@@ -49,7 +49,8 @@ export const MULTIPLEXED_TRANSPORT_EXTRA_KEY = registerSpanErrorInstrumentation.
 export const SDK_VERSION = registerSpanErrorInstrumentation.SDK_VERSION;
 export const SEMANTIC_ATTRIBUTE_SENTRY_OP = registerSpanErrorInstrumentation.SEMANTIC_ATTRIBUTE_SENTRY_OP;
 export const SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN = registerSpanErrorInstrumentation.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN;
-export const SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE = registerSpanErrorInstrumentation.SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE;
+export const SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE =
+  registerSpanErrorInstrumentation.SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE;
 export const SEMANTIC_ATTRIBUTE_SENTRY_SOURCE = registerSpanErrorInstrumentation.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE;
 export const Scope = registerSpanErrorInstrumentation.Scope;
 export const addBreadcrumb = registerSpanErrorInstrumentation.addBreadcrumb;

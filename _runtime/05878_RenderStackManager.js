@@ -118,14 +118,14 @@ let items = [
         continue;
       }
       self.cleanup(arg0, arg1, arr, arg3);
-    }
+    },
   },
   {
     key: "hasOptimizedKey",
     value: function hasOptimizedKey(arg0) {
       const stableIdMap = this.stableIdMap;
       return stableIdMap.has(arg0);
-    }
+    },
   },
   {
     key: "cleanup",
@@ -229,7 +229,7 @@ let items = [
           }
         }
       }
-    }
+    },
   },
   {
     key: "recycleKey",
@@ -243,13 +243,13 @@ let items = [
           recyclePoolForType.add(arg0);
         }
       }
-    }
+    },
   },
   {
     key: "getRenderStack",
     value: function getRenderStack() {
       return this.keyMap;
-    }
+    },
   },
   {
     key: "syncItem",
@@ -280,7 +280,7 @@ let items = [
       const stableIdMap3 = self.stableIdMap;
       const result3 = stableIdMap3.set(stableId, tmp);
       return tmp;
-    }
+    },
   },
   {
     key: "clearRecyclePool",
@@ -291,14 +291,14 @@ let items = [
         let clearResult = item10008.clear();
         continue;
       }
-    }
+    },
   },
   {
     key: "generateKey",
     value: function generateKey() {
       this.keyCounter = +this.keyCounter + 1;
       return +this.keyCounter.toString();
-    }
+    },
   },
   {
     key: "deleteKeyFromRecyclePool",
@@ -308,7 +308,7 @@ let items = [
       if (value != null) {
         value.delete(arg1);
       }
-    }
+    },
   },
   {
     key: "getRecyclePoolForType",
@@ -323,7 +323,7 @@ let items = [
         value = set;
       }
       return value;
-    }
+    },
   },
   {
     key: "getKeyFromRecyclePool",
@@ -334,8 +334,8 @@ let items = [
         recyclePoolForType.delete(value);
         return value;
       }
-    }
-  }
+    },
+  },
 ];
 
 export const RenderStackManager = _createClassDefault(RenderStackManager, items);

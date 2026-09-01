@@ -16,9 +16,12 @@ export const useHandler = function useHandler(memoizedGestureCallbacks, items10)
     obj[1] = [];
     tmp.current = obj;
   }
-  callback(() => () => {
-    closure_0.current = null;
-  }, []);
+  callback(
+    () => () => {
+      closure_0.current = null;
+    },
+    [],
+  );
   ({ context, savedDependencies } = tmp.current);
   for (const key10024 in arg0) {
     let tmp13 = key10024;
@@ -31,7 +34,9 @@ export const useHandler = function useHandler(memoizedGestureCallbacks, items10)
       let tmp5 = new.target;
       let str = "Passed a function that is not a worklet. Please provide a worklet function.";
       let tmp6 = new.target;
-      let reanimatedError = new tmp14(1664).ReanimatedError("Passed a function that is not a worklet. Please provide a worklet function.");
+      let reanimatedError = new tmp14(1664).ReanimatedError(
+        "Passed a function that is not a worklet. Please provide a worklet function.",
+      );
       let tmp8 = reanimatedError;
       throw reanimatedError;
     }
@@ -40,7 +45,11 @@ export const useHandler = function useHandler(memoizedGestureCallbacks, items10)
   const obj3 = isAnimated;
   const tmp9 = _require;
   tmp.current.savedDependencies = dependencies;
-  obj = { context, doDependenciesDiffer: !require("01799_isAnimated.js").areDependenciesEqual(dependencies, savedDependencies), useWeb: null };
+  obj = {
+    context,
+    doDependenciesDiffer: !require("01799_isAnimated.js").areDependenciesEqual(dependencies, savedDependencies),
+    useWeb: null,
+  };
   const obj4 = isAnimated;
   let isWebResult = require("01656_isJest.js").isWeb();
   if (!isWebResult) {

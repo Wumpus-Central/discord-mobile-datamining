@@ -92,7 +92,12 @@ class ExtendedYearParser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 130, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", {
+            value: 130,
+            enumerable: true,
+            configurable: true,
+            writable: true,
+          });
         } else {
           num3 = 130;
           applyResult.priority = 130;
@@ -214,7 +219,7 @@ obj = {
       parseNDigitsSignedResult = _createSuperInternal(3880).parseNDigitsSigned(arg1.length, arg0);
     }
     return parseNDigitsSignedResult;
-  }
+  },
 };
 let items = [
   obj,
@@ -224,8 +229,8 @@ let items = [
       setUTCFullYear.setUTCFullYear(arg2, 0, 1);
       setUTCFullYear.setUTCHours(0, 0, 0, 0);
       return setUTCFullYear;
-    }
-  }
+    },
+  },
 ];
 if (0 < items.length) {
   do {

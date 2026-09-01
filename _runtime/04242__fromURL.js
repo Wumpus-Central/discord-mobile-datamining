@@ -13,7 +13,7 @@ function _fromURL() {
     closure_2 = arg2;
     c5 = 0;
     c6 = 0;
-    const iter = (function*(arg0, arg1) {
+    const iter = (function* (arg0, arg1) {
       closure_4 = tmp5;
       closure_3 = tmp2;
       if (flag === undefined) {
@@ -47,7 +47,7 @@ _fromFileURL = function _fromFileURL(arg0) {
     closure_2 = arg2;
     c5 = 0;
     c6 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       closure_4 = tmp5;
       closure_3 = tmp2;
       if (flag === undefined) {
@@ -81,7 +81,7 @@ _fromResource = function _fromResource() {
     closure_2 = arg2;
     c5 = 0;
     c6 = 0;
-    const iter = (function*(arg0, arg1) {
+    const iter = (function* (arg0, arg1) {
       closure_4 = tmp5;
       closure_3 = tmp2;
       if (flag === undefined) {
@@ -115,7 +115,7 @@ _fromBytes = function _fromBytes() {
     closure_2 = arg2;
     c5 = 0;
     c6 = 0;
-    const iter = (function*(arg0, arg1) {
+    const iter = (function* (arg0, arg1) {
       closure_4 = tmp5;
       closure_3 = tmp2;
       if (flag === undefined) {
@@ -150,7 +150,7 @@ function _fromSource() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    const iter = (function*(arg0, arg1) {
+    const iter = (function* (arg0, arg1) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -238,7 +238,11 @@ function _fromSource() {
               } else {
                 const _Error3 = Error;
                 const _HermesInternal2 = HermesInternal;
-                error = new Error("Invalid source: could not resolve asset " + closure_0 + ". Ensure 'riv' is in metro.config.js assetExts.");
+                error = new Error(
+                  "Invalid source: could not resolve asset " +
+                    closure_0 +
+                    ". Ensure 'riv' is in metro.config.js assetExts.",
+                );
                 throw error;
               }
             }

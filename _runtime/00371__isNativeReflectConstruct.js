@@ -24,8 +24,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class AnimatedModulo {
   constructor(arg0, arg1, arg2) {
@@ -64,20 +63,20 @@ let items = [
       }
       const items = [arg0];
       fn(items);
-    }
+    },
   },
   {
     key: "__getValue",
     value: function __getValue() {
       const _a = this._a;
-      return (_a.__getValue() % this._modulus + this._modulus) % this._modulus;
-    }
+      return ((_a.__getValue() % this._modulus) + this._modulus) % this._modulus;
+    },
   },
   {
     key: "interpolate",
     value: function interpolate(arg0) {
       return new AnimatedModulo(363)(this, arg0);
-    }
+    },
   },
   {
     key: "__attach",
@@ -91,7 +90,7 @@ let items = [
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
-    }
+    },
   },
   {
     key: "__detach",
@@ -105,15 +104,15 @@ let items = [
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
-    }
+    },
   },
   {
     key: "__getNativeConfig",
     value: function __getNativeConfig() {
       const _a = this._a;
       return { type: "modulus", input: _a.__getNativeTag(), modulus: this._modulus, debugID: this.__getDebugID() };
-    }
-  }
+    },
+  },
 ];
 
 export default importDefaultResult(AnimatedModulo, items);

@@ -5,7 +5,28 @@ import _mod8424 from "08424__.js";
 import flattenStyle from "../08413_flattenStyle.js";
 import emptyFunction from "../04307_emptyFunction.js";
 
-const obj = { ellipsizeMode: null, numberOfLines: null, textBreakStrategy: null, onLayout: null, onPress: null, onLongPress: null, pressRetentionOffset: null, selectable: null, selectionColor: null, suppressHighlighting: null, style: null, testID: null, nativeID: null, allowFontScaling: null, maxFontSizeMultiplier: null, accessible: null, adjustsFontSizeToFit: null, minimumFontScale: null, disabled: null, dataDetectorType: null };
+const obj = {
+  ellipsizeMode: null,
+  numberOfLines: null,
+  textBreakStrategy: null,
+  onLayout: null,
+  onPress: null,
+  onLongPress: null,
+  pressRetentionOffset: null,
+  selectable: null,
+  selectionColor: null,
+  suppressHighlighting: null,
+  style: null,
+  testID: null,
+  nativeID: null,
+  allowFontScaling: null,
+  maxFontSizeMultiplier: null,
+  accessible: null,
+  adjustsFontSizeToFit: null,
+  minimumFontScale: null,
+  disabled: null,
+  dataDetectorType: null,
+};
 const module_8424 = flattenStyle(_mod8424);
 obj[0] = emptyFunction.oneOf(["head", "middle", "tail", "clip"]);
 obj[1] = emptyFunction.number;

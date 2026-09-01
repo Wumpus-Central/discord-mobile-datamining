@@ -79,13 +79,13 @@ obj = {
           } else {
             callback2(arg0);
           }
-        }
+        },
       ];
       _handlers.push(items);
       self._executeHandlers();
     });
     return Object.create(arg1.prototype);
-  }
+  },
 };
 let items = [
   obj,
@@ -93,7 +93,7 @@ let items = [
     key: "catch",
     value: function _catch(arg0) {
       return this.then((arg0) => arg0, arg0);
-    }
+    },
   },
   {
     key: "finally",
@@ -102,28 +102,33 @@ let items = [
       arg0((arg0, arg1) => {
         closure_0 = arg0;
         const _self = arg1;
-        return _self.then((arg0) => {
-          c3 = false;
-          closure_2 = arg0;
-          if (closure_0) {
-            tmp();
-          }
-        }, (arg0) => {
-          c3 = true;
-          closure_2 = arg0;
-          if (closure_0) {
-            tmp();
-          }
-        }).then(() => {
-          if (closure_3) {
-            callback2(closure_2);
-          } else {
-            callback(closure_2);
-          }
-        });
+        return _self
+          .then(
+            (arg0) => {
+              c3 = false;
+              closure_2 = arg0;
+              if (closure_0) {
+                tmp();
+              }
+            },
+            (arg0) => {
+              c3 = true;
+              closure_2 = arg0;
+              if (closure_0) {
+                tmp();
+              }
+            },
+          )
+          .then(() => {
+            if (closure_3) {
+              callback2(closure_2);
+            } else {
+              callback(closure_2);
+            }
+          });
       });
       return Object.create(arg0.prototype);
-    }
+    },
   },
   {
     key: "__init",
@@ -132,7 +137,7 @@ let items = [
       this._resolve = (arg0) => {
         self._setResult(closure_1_2.RESOLVED, arg0);
       };
-    }
+    },
   },
   {
     key: "__init2",
@@ -141,7 +146,7 @@ let items = [
       this._reject = (arg0) => {
         self._setResult(closure_1_2.REJECTED, arg0);
       };
-    }
+    },
   },
   {
     key: "__init3",
@@ -159,7 +164,7 @@ let items = [
           obj2 = self(closure_1_1[2]);
         }
       };
-    }
+    },
   },
   {
     key: "__init4",
@@ -184,8 +189,8 @@ let items = [
           });
         }
       };
-    }
-  }
+    },
+  },
 ];
 const _moduleResult = _createClass(SyncPromise, items);
 let c4 = _moduleResult;

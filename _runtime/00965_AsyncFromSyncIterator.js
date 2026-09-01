@@ -85,7 +85,7 @@ function AsyncFromSyncIterator(arg0) {
         }
       }
       return rejectResult;
-    }
+    },
   };
   return new AsyncFromSyncIterator(arg0);
 }
@@ -283,7 +283,7 @@ function _instrumentStream() {
     c21 = 0;
     c22 = 0;
     c19 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c22 === 2) {
         c22 = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -327,7 +327,12 @@ function _instrumentStream() {
                   let tmp78 = closure_2;
                   let tmp79 = closure_2;
                   let tmp80 = obj7;
-                  let result = obj7.setCommonResponseAttributes(store, closure_2.responseId, closure_2.responseModel, closure_2.responseTimestamp);
+                  let result = obj7.setCommonResponseAttributes(
+                    store,
+                    closure_2.responseId,
+                    closure_2.responseModel,
+                    closure_2.responseTimestamp,
+                  );
                   let tmp82 = store;
                   let tmp83 = dependencyMap;
                   let obj8 = store(963);
@@ -336,7 +341,12 @@ function _instrumentStream() {
                   let tmp86 = closure_2;
                   let tmp87 = closure_2;
                   let tmp88 = obj8;
-                  let result1 = obj8.setTokenUsageAttributes(store, closure_2.promptTokens, closure_2.completionTokens, closure_2.totalTokens);
+                  let result1 = obj8.setTokenUsageAttributes(
+                    store,
+                    closure_2.promptTokens,
+                    closure_2.completionTokens,
+                    closure_2.totalTokens,
+                  );
                   let tmp90 = store;
                   obj = {};
                   let tmp91 = store;
@@ -417,9 +427,19 @@ function _instrumentStream() {
               } else {
                 c19 = 0;
                 obj = store(963);
-                const result2 = obj.setCommonResponseAttributes(store, closure_2.responseId, closure_2.responseModel, closure_2.responseTimestamp);
+                const result2 = obj.setCommonResponseAttributes(
+                  store,
+                  closure_2.responseId,
+                  closure_2.responseModel,
+                  closure_2.responseTimestamp,
+                );
                 obj1 = store(963);
-                const result3 = obj1.setTokenUsageAttributes(store, closure_2.promptTokens, closure_2.completionTokens, closure_2.totalTokens);
+                const result3 = obj1.setTokenUsageAttributes(
+                  store,
+                  closure_2.promptTokens,
+                  closure_2.completionTokens,
+                  closure_2.totalTokens,
+                );
                 const obj4 = {};
                 obj4[store(958).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
                 store.setAttributes(obj4);

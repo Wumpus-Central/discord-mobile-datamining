@@ -23,4 +23,4 @@ export default function DelayedFreeze(children) {
     freeze = tmp[0];
   }
   return jsx(freeze(4876).Freeze, { freeze, children: children.children });
-};
+}

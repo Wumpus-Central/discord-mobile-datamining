@@ -16,13 +16,11 @@ const items = [
     key: "setStates",
     value: function setStates(statesConfig) {
       this.states = statesConfig;
-    }
+    },
   },
   {
     key: "reset",
-    value: function reset() {
-
-    }
+    value: function reset() {},
   },
   {
     key: "handleEvent",
@@ -64,8 +62,8 @@ const items = [
           self.handleEvent(arg0, arg1);
         }
       }
-    }
-  }
+    },
+  },
 ];
 
 export const PressableStateMachine = _createClassDefault(PressableStateMachine, items);

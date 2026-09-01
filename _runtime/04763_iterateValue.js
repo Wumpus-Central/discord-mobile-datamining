@@ -1,7 +1,6 @@
 // _runtime/04763_iterateValue.js
 import getIterator from "04764_getIterator.js";
 
-
 export default function iterateValue(arg0) {
   const tmp3 = getIterator(arg0);
   if (tmp3) {
@@ -15,4 +14,4 @@ export default function iterateValue(arg0) {
     const tmp7 = new TypeError("non-iterable value provided");
     throw tmp7;
   }
-};
+}

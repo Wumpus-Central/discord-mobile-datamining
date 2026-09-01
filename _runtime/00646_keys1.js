@@ -15,7 +15,11 @@ function createImpl(arg0) {
     const items = [closure_0, tmp];
     const items1 = [closure_0, tmp];
     const callback = closure_1_2.useCallback(() => callback(store.getState()), items);
-    const syncExternalStore = closure_1_2.useSyncExternalStore(tmp2.subscribe, callback, closure_1_2.useCallback(() => callback(store.getInitialState()), items1));
+    const syncExternalStore = closure_1_2.useSyncExternalStore(
+      tmp2.subscribe,
+      callback,
+      closure_1_2.useCallback(() => callback(store.getInitialState()), items1),
+    );
     const debugValue = closure_1_2.useDebugValue(syncExternalStore);
     return syncExternalStore;
   }
@@ -38,7 +42,11 @@ export const create = (arg0) => {
       const items = [closure_0, tmp];
       const items1 = [closure_0, tmp];
       const callback = closure_1_2.useCallback(() => callback(store.getState()), items);
-      const syncExternalStore = closure_1_2.useSyncExternalStore(tmp2.subscribe, callback, closure_1_2.useCallback(() => callback(store.getInitialState()), items1));
+      const syncExternalStore = closure_1_2.useSyncExternalStore(
+        tmp2.subscribe,
+        callback,
+        closure_1_2.useCallback(() => callback(store.getInitialState()), items1),
+      );
       const debugValue = closure_1_2.useDebugValue(syncExternalStore);
       return syncExternalStore;
     }
@@ -61,7 +69,11 @@ export const useStore = function useStore(subscribe) {
   const items = [subscribe, tmp];
   const items1 = [subscribe, tmp];
   const callback = React.useCallback(() => callback(store.getState()), items);
-  const syncExternalStore = React.useSyncExternalStore(subscribe.subscribe, callback, React.useCallback(() => callback(store.getInitialState()), items1));
+  const syncExternalStore = React.useSyncExternalStore(
+    subscribe.subscribe,
+    callback,
+    React.useCallback(() => callback(store.getInitialState()), items1),
+  );
   const debugValue = React.useDebugValue(syncExternalStore);
   return syncExternalStore;
 };

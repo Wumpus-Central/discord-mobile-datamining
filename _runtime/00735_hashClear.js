@@ -1,7 +1,6 @@
 // _runtime/00735_hashClear.js
 import getNative from "00736_getNative.js";
 
-
 export default function hashClear() {
   let obj = {};
   if (getNative) {
@@ -11,4 +10,4 @@ export default function hashClear() {
   }
   obj.__data__ = obj;
   obj.size = 0;
-};
+}

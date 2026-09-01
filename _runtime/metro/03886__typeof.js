@@ -92,7 +92,12 @@ class StandAloneQuarterParser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 120, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", {
+            value: 120,
+            enumerable: true,
+            configurable: true,
+            writable: true,
+          });
         } else {
           num3 = 120;
           applyResult.priority = 120;
@@ -213,16 +218,23 @@ obj = {
         if ("qo" === arg1) {
           return ordinalNumber.ordinalNumber(arg0, { unit: "quarter" });
         } else if ("qqq" === arg1) {
-          return ordinalNumber.quarter(arg0, { width: "abbreviated", context: "standalone" }) || ordinalNumber.quarter(arg0, { width: "narrow", context: "standalone" });
+          return (
+            ordinalNumber.quarter(arg0, { width: "abbreviated", context: "standalone" }) ||
+            ordinalNumber.quarter(arg0, { width: "narrow", context: "standalone" })
+          );
         } else if ("qqqqq" === arg1) {
           return ordinalNumber.quarter(arg0, { width: "narrow", context: "standalone" });
         } else {
-          return ordinalNumber.quarter(arg0, { width: "wide", context: "standalone" }) || ordinalNumber.quarter(arg0, { width: "abbreviated", context: "standalone" }) || ordinalNumber.quarter(arg0, { width: "narrow", context: "standalone" });
+          return (
+            ordinalNumber.quarter(arg0, { width: "wide", context: "standalone" }) ||
+            ordinalNumber.quarter(arg0, { width: "abbreviated", context: "standalone" }) ||
+            ordinalNumber.quarter(arg0, { width: "narrow", context: "standalone" })
+          );
         }
       }
     }
     return _createSuperInternal(table[0]).parseNDigits(arg1.length, arg0);
-  }
+  },
 };
 let items = [
   obj,
@@ -234,7 +246,7 @@ let items = [
         tmp = arg1 <= 4;
       }
       return tmp;
-    }
+    },
   },
   {
     key: "set",
@@ -242,8 +254,8 @@ let items = [
       setUTCMonth.setUTCMonth(3 * (arg2 - 1), 1);
       setUTCMonth.setUTCHours(0, 0, 0, 0);
       return setUTCMonth;
-    }
-  }
+    },
+  },
 ];
 if (0 < items.length) {
   do {

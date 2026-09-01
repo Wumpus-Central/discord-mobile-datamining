@@ -16,44 +16,47 @@ class AsyncGenerator {
           v = value;
         }
         const resolved = Promise.resolve(v);
-        resolved.then((done) => {
-          let value = done;
-          if (callback) {
-            let str = "next";
-            if ("return" === dependencyMap) {
-              str = "return";
-            }
-            if (_null.k) {
-              if (!done.done) {
-                value = dependencyMap[str](done).value;
+        resolved.then(
+          (done) => {
+            let value = done;
+            if (callback) {
+              let str = "next";
+              if ("return" === dependencyMap) {
+                str = "return";
               }
+              if (_null.k) {
+                if (!done.done) {
+                  value = dependencyMap[str](done).value;
+                }
+              }
+              callback(str, done);
             }
-            callback(str, done);
-          }
-          let str3 = "normal";
-          if (next.done) {
-            str3 = "return";
-          }
-          if ("return" === str3) {
-            let obj = { value: null, done: true };
-            obj[0] = value;
-            next.resolve(obj);
-          } else if ("throw" === str3) {
-            next.reject(value);
-          } else {
-            obj = { value: null, done: false };
-            obj[0] = value;
-            next.resolve(obj);
-          }
-          next = next.next;
-          if (next) {
-            callback(next.key, next.arg);
-          } else {
-            _null = null;
-          }
-        }, (arg0) => {
-          callback("throw", arg0);
-        });
+            let str3 = "normal";
+            if (next.done) {
+              str3 = "return";
+            }
+            if ("return" === str3) {
+              let obj = { value: null, done: true };
+              obj[0] = value;
+              next.resolve(obj);
+            } else if ("throw" === str3) {
+              next.reject(value);
+            } else {
+              obj = { value: null, done: false };
+              obj[0] = value;
+              next.resolve(obj);
+            }
+            next = next.next;
+            if (next) {
+              callback(next.key, next.arg);
+            } else {
+              _null = null;
+            }
+          },
+          (arg0) => {
+            callback("throw", arg0);
+          },
+        );
       } catch (tmp10) {
         settle("throw", tmp10);
       }
@@ -111,13 +114,13 @@ if (typeof Symbol === "function") {
 if (!str) {
   str = "@@asyncIterator";
 }
-AsyncGenerator.prototype[str] = function() {
+AsyncGenerator.prototype[str] = function () {
   return this;
 };
 
 export default function _wrapAsyncGenerator(arg0) {
   closure_0 = arg0;
-  return function() {
+  return function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -143,44 +146,47 @@ export default function _wrapAsyncGenerator(arg0) {
           v = value;
         }
         const resolved = Promise.resolve(v);
-        resolved.then((done) => {
-          let value = done;
-          if (callback) {
-            let str = "next";
-            if ("return" === dependencyMap) {
-              str = "return";
-            }
-            if (_null.k) {
-              if (!done.done) {
-                value = dependencyMap[str](done).value;
+        resolved.then(
+          (done) => {
+            let value = done;
+            if (callback) {
+              let str = "next";
+              if ("return" === dependencyMap) {
+                str = "return";
               }
+              if (_null.k) {
+                if (!done.done) {
+                  value = dependencyMap[str](done).value;
+                }
+              }
+              callback(str, done);
             }
-            callback(str, done);
-          }
-          let str3 = "normal";
-          if (next.done) {
-            str3 = "return";
-          }
-          if ("return" === str3) {
-            let obj = { value: null, done: true };
-            obj[0] = value;
-            next.resolve(obj);
-          } else if ("throw" === str3) {
-            next.reject(value);
-          } else {
-            obj = { value: null, done: false };
-            obj[0] = value;
-            next.resolve(obj);
-          }
-          next = next.next;
-          if (next) {
-            callback(next.key, next.arg);
-          } else {
-            _null = null;
-          }
-        }, (arg0) => {
-          callback("throw", arg0);
-        });
+            let str3 = "normal";
+            if (next.done) {
+              str3 = "return";
+            }
+            if ("return" === str3) {
+              let obj = { value: null, done: true };
+              obj[0] = value;
+              next.resolve(obj);
+            } else if ("throw" === str3) {
+              next.reject(value);
+            } else {
+              obj = { value: null, done: false };
+              obj[0] = value;
+              next.resolve(obj);
+            }
+            next = next.next;
+            if (next) {
+              callback(next.key, next.arg);
+            } else {
+              _null = null;
+            }
+          },
+          (arg0) => {
+            callback("throw", arg0);
+          },
+        );
       } catch (tmp10) {
         settle("throw", tmp10);
       }
@@ -220,4 +226,4 @@ export default function _wrapAsyncGenerator(arg0) {
     }
     return obj;
   };
-};
+}

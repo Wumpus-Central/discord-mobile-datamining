@@ -41,7 +41,7 @@ function addPreviousTraceSpanLink(spanContext, spanContext2, sampleRand) {
         return 0;
       }
     })(),
-    sampleRand: sampleRand.sampleRand
+    sampleRand: sampleRand.sampleRand,
   };
   if (spanContext) {
     spanContext = spanContext.spanContext;
@@ -105,8 +105,7 @@ function getPreviousTraceFromSessionStorage() {
     }
     const _JSON = JSON;
     return JSON.parse(value);
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 addClsInstrumentationHandler;

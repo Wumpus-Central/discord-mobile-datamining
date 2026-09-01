@@ -25,8 +25,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 noopAll;
 class Polyline {
@@ -78,8 +77,8 @@ let items = [
       obj[1] = combined;
       const merged = Object.assign(props);
       return jsx(Polyline(8325), { ref: this.refMethod, d: null });
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(Polyline, items);
 importDefaultResultResult.displayName = "Polyline";

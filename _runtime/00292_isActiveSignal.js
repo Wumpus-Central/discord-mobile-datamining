@@ -7,16 +7,83 @@ import SoundManagerDefault from "00294_SoundManager.js";
 import closure_4 from "metro/00041__classCallCheck.js";
 
 const Pressability = arg1;
-let closure_5 = Object.freeze({ NOT_RESPONDER: { DELAY: "ERROR", RESPONDER_GRANT: "RESPONDER_INACTIVE_PRESS_IN", RESPONDER_RELEASE: "ERROR", RESPONDER_TERMINATED: "ERROR", ENTER_PRESS_RECT: "ERROR", LEAVE_PRESS_RECT: "ERROR", LONG_PRESS_DETECTED: "ERROR" }, RESPONDER_INACTIVE_PRESS_IN: { DELAY: "RESPONDER_ACTIVE_PRESS_IN", RESPONDER_GRANT: "ERROR", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "RESPONDER_INACTIVE_PRESS_IN", LEAVE_PRESS_RECT: "RESPONDER_INACTIVE_PRESS_OUT", LONG_PRESS_DETECTED: "ERROR" }, RESPONDER_INACTIVE_PRESS_OUT: { DELAY: "RESPONDER_ACTIVE_PRESS_OUT", RESPONDER_GRANT: "ERROR", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "RESPONDER_INACTIVE_PRESS_IN", LEAVE_PRESS_RECT: "RESPONDER_INACTIVE_PRESS_OUT", LONG_PRESS_DETECTED: "ERROR" }, RESPONDER_ACTIVE_PRESS_IN: { DELAY: "ERROR", RESPONDER_GRANT: "ERROR", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "RESPONDER_ACTIVE_PRESS_IN", LEAVE_PRESS_RECT: "RESPONDER_ACTIVE_PRESS_OUT", LONG_PRESS_DETECTED: "RESPONDER_ACTIVE_LONG_PRESS_IN" }, RESPONDER_ACTIVE_PRESS_OUT: { DELAY: "ERROR", RESPONDER_GRANT: "ERROR", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "RESPONDER_ACTIVE_PRESS_IN", LEAVE_PRESS_RECT: "RESPONDER_ACTIVE_PRESS_OUT", LONG_PRESS_DETECTED: "ERROR" }, RESPONDER_ACTIVE_LONG_PRESS_IN: { DELAY: "ERROR", RESPONDER_GRANT: "ERROR", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "RESPONDER_ACTIVE_LONG_PRESS_IN", LEAVE_PRESS_RECT: "RESPONDER_ACTIVE_LONG_PRESS_OUT", LONG_PRESS_DETECTED: "RESPONDER_ACTIVE_LONG_PRESS_IN" }, RESPONDER_ACTIVE_LONG_PRESS_OUT: { DELAY: "ERROR", RESPONDER_GRANT: "ERROR", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "RESPONDER_ACTIVE_LONG_PRESS_IN", LEAVE_PRESS_RECT: "RESPONDER_ACTIVE_LONG_PRESS_OUT", LONG_PRESS_DETECTED: "ERROR" }, ERROR: { DELAY: "NOT_RESPONDER", RESPONDER_GRANT: "RESPONDER_INACTIVE_PRESS_IN", RESPONDER_RELEASE: "NOT_RESPONDER", RESPONDER_TERMINATED: "NOT_RESPONDER", ENTER_PRESS_RECT: "NOT_RESPONDER", LEAVE_PRESS_RECT: "NOT_RESPONDER", LONG_PRESS_DETECTED: "NOT_RESPONDER" } });
-function isActiveSignal(arg0) {
-
-}
-function isActivationSignal(arg0) {
-
-}
-function isPressInSignal(arg0) {
-
-}
+let closure_5 = Object.freeze({
+  NOT_RESPONDER: {
+    DELAY: "ERROR",
+    RESPONDER_GRANT: "RESPONDER_INACTIVE_PRESS_IN",
+    RESPONDER_RELEASE: "ERROR",
+    RESPONDER_TERMINATED: "ERROR",
+    ENTER_PRESS_RECT: "ERROR",
+    LEAVE_PRESS_RECT: "ERROR",
+    LONG_PRESS_DETECTED: "ERROR",
+  },
+  RESPONDER_INACTIVE_PRESS_IN: {
+    DELAY: "RESPONDER_ACTIVE_PRESS_IN",
+    RESPONDER_GRANT: "ERROR",
+    RESPONDER_RELEASE: "NOT_RESPONDER",
+    RESPONDER_TERMINATED: "NOT_RESPONDER",
+    ENTER_PRESS_RECT: "RESPONDER_INACTIVE_PRESS_IN",
+    LEAVE_PRESS_RECT: "RESPONDER_INACTIVE_PRESS_OUT",
+    LONG_PRESS_DETECTED: "ERROR",
+  },
+  RESPONDER_INACTIVE_PRESS_OUT: {
+    DELAY: "RESPONDER_ACTIVE_PRESS_OUT",
+    RESPONDER_GRANT: "ERROR",
+    RESPONDER_RELEASE: "NOT_RESPONDER",
+    RESPONDER_TERMINATED: "NOT_RESPONDER",
+    ENTER_PRESS_RECT: "RESPONDER_INACTIVE_PRESS_IN",
+    LEAVE_PRESS_RECT: "RESPONDER_INACTIVE_PRESS_OUT",
+    LONG_PRESS_DETECTED: "ERROR",
+  },
+  RESPONDER_ACTIVE_PRESS_IN: {
+    DELAY: "ERROR",
+    RESPONDER_GRANT: "ERROR",
+    RESPONDER_RELEASE: "NOT_RESPONDER",
+    RESPONDER_TERMINATED: "NOT_RESPONDER",
+    ENTER_PRESS_RECT: "RESPONDER_ACTIVE_PRESS_IN",
+    LEAVE_PRESS_RECT: "RESPONDER_ACTIVE_PRESS_OUT",
+    LONG_PRESS_DETECTED: "RESPONDER_ACTIVE_LONG_PRESS_IN",
+  },
+  RESPONDER_ACTIVE_PRESS_OUT: {
+    DELAY: "ERROR",
+    RESPONDER_GRANT: "ERROR",
+    RESPONDER_RELEASE: "NOT_RESPONDER",
+    RESPONDER_TERMINATED: "NOT_RESPONDER",
+    ENTER_PRESS_RECT: "RESPONDER_ACTIVE_PRESS_IN",
+    LEAVE_PRESS_RECT: "RESPONDER_ACTIVE_PRESS_OUT",
+    LONG_PRESS_DETECTED: "ERROR",
+  },
+  RESPONDER_ACTIVE_LONG_PRESS_IN: {
+    DELAY: "ERROR",
+    RESPONDER_GRANT: "ERROR",
+    RESPONDER_RELEASE: "NOT_RESPONDER",
+    RESPONDER_TERMINATED: "NOT_RESPONDER",
+    ENTER_PRESS_RECT: "RESPONDER_ACTIVE_LONG_PRESS_IN",
+    LEAVE_PRESS_RECT: "RESPONDER_ACTIVE_LONG_PRESS_OUT",
+    LONG_PRESS_DETECTED: "RESPONDER_ACTIVE_LONG_PRESS_IN",
+  },
+  RESPONDER_ACTIVE_LONG_PRESS_OUT: {
+    DELAY: "ERROR",
+    RESPONDER_GRANT: "ERROR",
+    RESPONDER_RELEASE: "NOT_RESPONDER",
+    RESPONDER_TERMINATED: "NOT_RESPONDER",
+    ENTER_PRESS_RECT: "RESPONDER_ACTIVE_LONG_PRESS_IN",
+    LEAVE_PRESS_RECT: "RESPONDER_ACTIVE_LONG_PRESS_OUT",
+    LONG_PRESS_DETECTED: "ERROR",
+  },
+  ERROR: {
+    DELAY: "NOT_RESPONDER",
+    RESPONDER_GRANT: "RESPONDER_INACTIVE_PRESS_IN",
+    RESPONDER_RELEASE: "NOT_RESPONDER",
+    RESPONDER_TERMINATED: "NOT_RESPONDER",
+    ENTER_PRESS_RECT: "NOT_RESPONDER",
+    LEAVE_PRESS_RECT: "NOT_RESPONDER",
+    LONG_PRESS_DETECTED: "NOT_RESPONDER",
+  },
+});
+function isActiveSignal(arg0) {}
+function isActivationSignal(arg0) {}
+function isPressInSignal(arg0) {}
 let c9 = 30;
 let c10 = 20;
 let c11 = 20;
@@ -70,7 +137,7 @@ let obj = {
   key: "configure",
   value: function configure(_config) {
     this._config = _config;
-  }
+  },
 };
 const items = [
   obj,
@@ -83,7 +150,7 @@ const items = [
       const result3 = this._cancelPressDelayTimeout();
       const result4 = this._cancelPressOutDelayTimeout();
       this._config = Object.freeze({});
-    }
+    },
   },
   {
     key: "getEventHandlers",
@@ -93,7 +160,7 @@ const items = [
         self._eventHandlers = self._createEventHandlers();
       }
       return self._eventHandlers;
-    }
+    },
   },
   {
     key: "_createEventHandlers",
@@ -111,7 +178,7 @@ const items = [
           if (null != onFocus) {
             onFocus(arg0);
           }
-        }
+        },
       };
       obj = {
         onStartShouldSetResponder() {
@@ -167,7 +234,12 @@ const items = [
               } else {
                 if (null != obj._touchActivatePosition) {
                   const _Math = Math;
-                  if (Math.hypot(obj._touchActivatePosition.pageX - nativeEvent.pageX, obj._touchActivatePosition.pageY - nativeEvent.pageY) > closure_1_13) {
+                  if (
+                    Math.hypot(
+                      obj._touchActivatePosition.pageX - nativeEvent.pageX,
+                      obj._touchActivatePosition.pageY - nativeEvent.pageY,
+                    ) > closure_1_13
+                  ) {
                     const result1 = obj._cancelLongPressDelayTimeout();
                   }
                 }
@@ -233,7 +305,7 @@ const items = [
               nativeEvent.stopPropagation();
             }
           }
-        }
+        },
       };
       let obj2 = self(27);
       if (obj2.shouldPressibilityUseW3CPointerEventsForHover()) {
@@ -298,7 +370,13 @@ const items = [
                     ({ clientX, clientY } = persist.nativeEvent);
                     const obj = {};
                     const merged = Object.assign(persist);
-                    obj.nativeEvent = { clientX, clientY, pageX: clientX, pageY: clientY, timestamp: persist.timeStamp };
+                    obj.nativeEvent = {
+                      clientX,
+                      clientY,
+                      pageX: clientX,
+                      pageY: clientY,
+                      timestamp: persist.timeStamp,
+                    };
                     persist(obj);
                   }, bound);
                 } else {
@@ -329,7 +407,7 @@ const items = [
         const merged4 = Object.assign(obj);
         return obj2;
       }
-    }
+    },
   },
   {
     key: "_receiveSignal",
@@ -337,7 +415,10 @@ const items = [
       closure_0 = arg0;
       importDefault = nativeEvent;
       if (null != nativeEvent.nativeEvent.timestamp) {
-        PressabilityPerformanceEventEmitterDefault.emitEvent(() => ({ signal: closure_0, nativeTimestamp: nativeEvent.nativeEvent.timestamp }));
+        PressabilityPerformanceEventEmitterDefault.emitEvent(() => ({
+          signal: closure_0,
+          nativeTimestamp: nativeEvent.nativeEvent.timestamp,
+        }));
         const obj = PressabilityPerformanceEventEmitterDefault;
       }
       const self = this;
@@ -362,7 +443,7 @@ const items = [
         }
         const tmp9 = _modDef38;
       }
-    }
+    },
   },
   {
     key: "_performTransitionSideEffects",
@@ -485,7 +566,7 @@ const items = [
       if (tmp20) {
         self._deactivate(nativeEvent);
       }
-    }
+    },
   },
   {
     key: "_activate",
@@ -515,7 +596,7 @@ const items = [
         }
       }
       nativeEvent = nativeEvent.nativeEvent;
-    }
+    },
   },
   {
     key: "_deactivate",
@@ -552,7 +633,7 @@ const items = [
         }
       }
       self._touchActivateTime = null;
-    }
+    },
   },
   {
     key: "_measureResponderRegion",
@@ -567,7 +648,7 @@ const items = [
           _responderID.measureAsyncOnUI(self._measureCallback);
         }
       }
-    }
+    },
   },
   {
     key: "_isTouchWithinResponderRegion",
@@ -645,7 +726,7 @@ const items = [
         tmp17 = nativeEvent.pageY < sum2;
       }
       return tmp17;
-    }
+    },
   },
   {
     key: "_handleLongPress",
@@ -658,7 +739,7 @@ const items = [
       if (!tmp) {
         self._receiveSignal("LONG_PRESS_DETECTED", closure_0);
       }
-    }
+    },
   },
   {
     key: "_cancelHoverInDelayTimeout",
@@ -669,7 +750,7 @@ const items = [
         clearTimeout(self._hoverInDelayTimeout);
         self._hoverInDelayTimeout = null;
       }
-    }
+    },
   },
   {
     key: "_cancelHoverOutDelayTimeout",
@@ -680,7 +761,7 @@ const items = [
         clearTimeout(self._hoverOutDelayTimeout);
         self._hoverOutDelayTimeout = null;
       }
-    }
+    },
   },
   {
     key: "_cancelLongPressDelayTimeout",
@@ -691,7 +772,7 @@ const items = [
         clearTimeout(self._longPressDelayTimeout);
         self._longPressDelayTimeout = null;
       }
-    }
+    },
   },
   {
     key: "_cancelPressDelayTimeout",
@@ -702,7 +783,7 @@ const items = [
         clearTimeout(self._pressDelayTimeout);
         self._pressDelayTimeout = null;
       }
-    }
+    },
   },
   {
     key: "_cancelPressOutDelayTimeout",
@@ -713,18 +794,16 @@ const items = [
         clearTimeout(self._pressOutDelayTimeout);
         self._pressOutDelayTimeout = null;
       }
-    }
-  }
+    },
+  },
 ];
 obj = {
   key: "setLongPressDeactivationDistance",
   value: function setLongPressDeactivationDistance(arg0) {
     closure_13 = arg0;
-  }
+  },
 };
 const items1 = [obj];
-function getTouchFromPressEvent(arg0) {
-
-}
+function getTouchFromPressEvent(arg0) {}
 
 export default _createClassDefault(Pressability, items, items1);

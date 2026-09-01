@@ -13,20 +13,22 @@ export const useIsFocused = function useIsFocused() {
   dependencyMap = tmp3;
   const items = [undefined !== context, navigation];
   if (context == null) {
-    context = importAllResult.useSyncExternalStore(importAllResult.useCallback((arg0) => {
-      if (closure_1) {
-        return () => {
-
-        };
-      } else {
-        navigation = navigation.addListener("focus", arg0);
-        closure_1 = navigation.addListener("blur", arg0);
-        return () => {
-          callback();
-          callback2();
-        };
-      }
-    }, items), navigation.isFocused, navigation.isFocused);
+    context = importAllResult.useSyncExternalStore(
+      importAllResult.useCallback((arg0) => {
+        if (closure_1) {
+          return () => {};
+        } else {
+          navigation = navigation.addListener("focus", arg0);
+          closure_1 = navigation.addListener("blur", arg0);
+          return () => {
+            callback();
+            callback2();
+          };
+        }
+      }, items),
+      navigation.isFocused,
+      navigation.isFocused,
+    );
   }
   return context;
 };

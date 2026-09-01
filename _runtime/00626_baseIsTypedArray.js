@@ -33,4 +33,4 @@ export default function baseIsTypedArray(arg0) {
     tmp3 = obj[tmp(undefined, 607)(undefined, arg0)];
   }
   return tmp3;
-};
+}

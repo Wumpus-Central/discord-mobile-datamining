@@ -36,6 +36,6 @@ const obj = {
   },
   setWarningHandler(arg0) {
     closure_4 = arg0;
-  }
+  },
 };
 arg5.default = obj;

@@ -262,20 +262,28 @@ export default {
                                   let sum = num;
                                 } else if (charCodeAtResult < 2048) {
                                   let tmp13 = items;
-                                  items[items.length] = items[192 | charCodeAtResult >> 6] + items[128 | 63 & charCodeAtResult];
+                                  items[items.length] =
+                                    items[192 | (charCodeAtResult >> 6)] + items[128 | (63 & charCodeAtResult)];
                                   sum = num;
                                 } else {
                                   if (charCodeAtResult >= 55296) {
                                     if (charCodeAtResult < 57344) {
                                       sum = num + 1;
                                       let tmp18 = 1023 & charCodeAtResult;
-                                      let sum1 = 65536 + (tmp18 << 10 | 1023 & substr.charCodeAt(sum));
+                                      let sum1 = 65536 + ((tmp18 << 10) | (1023 & substr.charCodeAt(sum)));
                                       let tmp20 = items;
-                                      items[items.length] = items[240 | sum1 >> 18] + items[128 | sum1 >> 12 & 63] + items[128 | sum1 >> 6 & 63] + items[128 | 63 & sum1];
+                                      items[items.length] =
+                                        items[240 | (sum1 >> 18)] +
+                                        items[128 | ((sum1 >> 12) & 63)] +
+                                        items[128 | ((sum1 >> 6) & 63)] +
+                                        items[128 | (63 & sum1)];
                                     }
                                   }
                                   let tmp11 = items;
-                                  items[items.length] = items[224 | charCodeAtResult >> 12] + items[128 | charCodeAtResult >> 6 & 63] + items[128 | 63 & charCodeAtResult];
+                                  items[items.length] =
+                                    items[224 | (charCodeAtResult >> 12)] +
+                                    items[128 | ((charCodeAtResult >> 6) & 63)] +
+                                    items[128 | (63 & charCodeAtResult)];
                                   sum = num;
                                 }
                                 num = sum + 1;
@@ -341,5 +349,5 @@ export default {
       return arg1(parts1);
     }
   },
-  merge
+  merge,
 };

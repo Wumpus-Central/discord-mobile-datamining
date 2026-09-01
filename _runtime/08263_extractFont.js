@@ -8,9 +8,39 @@ import { jsx } from "react/00021_jsxProd.js";
 require = arg1;
 function extractFont(propsAndStylesResult) {
   ({ fontFamily, fontFeatureSettings, font } = propsAndStylesResult);
-  ({ fontData, fontStyle, fontVariant, fontWeight, fontStretch, fontSize, textAnchor, textDecoration, letterSpacing, wordSpacing, kerning, fontVariantLigatures, fontVariationSettings } = propsAndStylesResult);
+  ({
+    fontData,
+    fontStyle,
+    fontVariant,
+    fontWeight,
+    fontStretch,
+    fontSize,
+    textAnchor,
+    textDecoration,
+    letterSpacing,
+    wordSpacing,
+    kerning,
+    fontVariantLigatures,
+    fontVariationSettings,
+  } = propsAndStylesResult);
   let obj = pickNotNil;
-  obj = { fontData, fontStyle, fontVariant, fontWeight, fontStretch, fontSize, fontFamily: null, textAnchor: null, textDecoration: null, letterSpacing: null, wordSpacing: null, kerning: null, fontFeatureSettings: null, fontVariantLigatures: null, fontVariationSettings: null };
+  obj = {
+    fontData,
+    fontStyle,
+    fontVariant,
+    fontWeight,
+    fontStretch,
+    fontSize,
+    fontFamily: null,
+    textAnchor: null,
+    textDecoration: null,
+    letterSpacing: null,
+    wordSpacing: null,
+    kerning: null,
+    fontFeatureSettings: null,
+    fontVariantLigatures: null,
+    fontVariationSettings: null,
+  };
   let replaced = null;
   if (fontFamily) {
     const str = fontFamily.split(closure_9)[0];
@@ -83,7 +113,8 @@ function getChild(str) {
   return tmp4;
 }
 noopAll;
-const re6 = /^\s*((?:(?:normal|bold|italic)\s+)*)(?:(\d+(?:\.\d+)?(?:%|px|em|pt|pc|mm|cm|in]))*(?:\s*\/.*?)?\s+)?\s*"?([^"]*)/i;
+const re6 =
+  /^\s*((?:(?:normal|bold|italic)\s+)*)(?:(\d+(?:\.\d+)?(?:%|px|em|pt|pc|mm|cm|in]))*(?:\s*\/.*?)?\s+)?\s*"?([^"]*)/i;
 const re7 = /^[\s"']*/;
 const re8 = /[\s"']*$/;
 const re9 = /\s*,\s*/g;
@@ -106,7 +137,20 @@ export default function extractText(children) {
       const _String2 = String;
       StringResult = String(children);
     }
-    let obj = { content: null, children: null, inlineSize: null, baselineShift: null, verticalAlign: null, alignmentBaseline: null, font: null, x: null, y: null, dx: null, dy: null, rotate: null };
+    let obj = {
+      content: null,
+      children: null,
+      inlineSize: null,
+      baselineShift: null,
+      verticalAlign: null,
+      alignmentBaseline: null,
+      font: null,
+      x: null,
+      y: null,
+      dx: null,
+      dy: null,
+      rotate: null,
+    };
     obj[0] = StringResult;
     obj[1] = mapped;
     obj[2] = tmp6;
@@ -129,7 +173,7 @@ export default function extractText(children) {
     tmp13 = <closure_3>{null}</closure_3>;
   }
   mapped = tmp13;
-};
+}
 export { extractFont };
 export function setTSpan(importDefaultResultResult) {
   closure_3 = importDefaultResultResult;

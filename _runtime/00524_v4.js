@@ -21,8 +21,8 @@ arg5.default = function v4(arg0, arg1, arg2) {
     random = obj.rng || tmp(516)();
     const tmp3 = obj.rng || tmp(516);
   }
-  random[6] = 15 & random[6] | 64;
-  random[8] = 63 & random[8] | 128;
+  random[6] = (15 & random[6]) | 64;
+  random[8] = (63 & random[8]) | 128;
   if (arg1) {
     let num = arg2;
     if (!arg2) {

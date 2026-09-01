@@ -20,5 +20,5 @@ export const httpContextIntegration = registerSpanErrorInstrumentation.defineInt
     const merged3 = Object.assign(request.request);
     obj.headers = obj;
     request.request = obj;
-  }
+  },
 }));

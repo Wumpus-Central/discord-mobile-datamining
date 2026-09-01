@@ -43,7 +43,7 @@ arg5.memoBuilder = function memoBuilder() {
           weakSet.splice(num, 1);
         }
       }
-    }
+    },
   ];
   return items;
 };

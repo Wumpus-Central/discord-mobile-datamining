@@ -23,7 +23,7 @@ let obj = {
   get() {
     return c0;
   },
-  set: NOOP
+  set: NOOP,
 };
 c0 = null;
 obj = {
@@ -34,9 +34,18 @@ obj = {
   get() {
     return c0;
   },
-  set: NOOP
+  set: NOOP,
 };
-obj = { enabled: true, animated: null, reanimated: null, layout: null, update: null, setKeyboardHandlers: null, setInputHandlers: null, setEnabled: null };
+obj = {
+  enabled: true,
+  animated: null,
+  reanimated: null,
+  layout: null,
+  update: null,
+  setKeyboardHandlers: null,
+  setInputHandlers: null,
+  setEnabled: null,
+};
 const obj1 = { progress: null, height: null };
 let value = new Animated.Value(0);
 obj1[0] = value;

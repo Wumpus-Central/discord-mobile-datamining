@@ -5,7 +5,9 @@ function tagMessage(arg0) {
 }
 tagMessage.__closure = {};
 tagMessage.__workletHash = 15816194647415;
-tagMessage.__initData = { code: "function tagMessage_Pnpm_utilsTs1(msg){return\"[react-native-gesture-handler] \"+msg;}" };
+tagMessage.__initData = {
+  code: 'function tagMessage_Pnpm_utilsTs1(msg){return"[react-native-gesture-handler] "+msg;}',
+};
 arg5.toArray = function toArray(arg0) {
   let tmp = arg0;
   if (!Array.isArray(arg0)) {
@@ -44,7 +46,7 @@ arg5.isTestEnv = function isTestEnv() {
 };
 arg5.tagMessage = tagMessage;
 arg5.isRemoteDebuggingEnabled = function isRemoteDebuggingEnabled() {
-  return !(global.nativeCallSyncHook && !global.__REMOTEDEV__ || global.RN$Bridgeless);
+  return !((global.nativeCallSyncHook && !global.__REMOTEDEV__) || global.RN$Bridgeless);
 };
 function deepEqual(obj, obj2) {
   if (obj === obj2) {

@@ -120,7 +120,6 @@ import _optionalChain from "12462__optionalChain.js";
 import _optionalChainDelete from "12463__optionalChainDelete.js";
 import { dateTimestampInSeconds } from "12349_dateTimestampInSeconds.js";
 
-
 export const registerSpanErrorInstrumentation = errorCallback.registerSpanErrorInstrumentation;
 export const getCapturedScopesOnSpan = getCapturedScopesOnSpan.getCapturedScopesOnSpan;
 export const setCapturedScopesOnSpan = getCapturedScopesOnSpan.setCapturedScopesOnSpan;
@@ -141,7 +140,8 @@ export const startSpan = createChildOrRootSpan.startSpan;
 export const startSpanManual = createChildOrRootSpan.startSpanManual;
 export const suppressTracing = createChildOrRootSpan.suppressTracing;
 export const withActiveSpan = createChildOrRootSpan.withActiveSpan;
-export const getDynamicSamplingContextFromClient = getDynamicSamplingContextFromSpan.getDynamicSamplingContextFromClient;
+export const getDynamicSamplingContextFromClient =
+  getDynamicSamplingContextFromSpan.getDynamicSamplingContextFromClient;
 export const getDynamicSamplingContextFromScope = getDynamicSamplingContextFromSpan.getDynamicSamplingContextFromScope;
 export const getDynamicSamplingContextFromSpan = getDynamicSamplingContextFromSpan.getDynamicSamplingContextFromSpan;
 export const spanToBaggageHeader = getDynamicSamplingContextFromSpan.spanToBaggageHeader;
@@ -157,7 +157,8 @@ export const SEMANTIC_ATTRIBUTE_EXCLUSIVE_TIME = _mod12350.SEMANTIC_ATTRIBUTE_EX
 export const SEMANTIC_ATTRIBUTE_HTTP_REQUEST_METHOD = _mod12350.SEMANTIC_ATTRIBUTE_HTTP_REQUEST_METHOD;
 export const SEMANTIC_ATTRIBUTE_PROFILE_ID = _mod12350.SEMANTIC_ATTRIBUTE_PROFILE_ID;
 export const SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME = _mod12350.SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME;
-export const SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON = _mod12350.SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON;
+export const SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON =
+  _mod12350.SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON;
 export const SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT = _mod12350.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT;
 export const SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE = _mod12350.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE;
 export const SEMANTIC_ATTRIBUTE_SENTRY_OP = _mod12350.SEMANTIC_ATTRIBUTE_SENTRY_OP;
@@ -205,7 +206,8 @@ export const updateSession = updateSession.updateSession;
 export const SessionFlusher = SessionFlusher.SessionFlusher;
 export const Scope = ScopeClass.Scope;
 export const notifyEventProcessors = notifyEventProcessors.notifyEventProcessors;
-export const getEnvelopeEndpointWithUrlEncodedAuth = getEnvelopeEndpointWithUrlEncodedAuth.getEnvelopeEndpointWithUrlEncodedAuth;
+export const getEnvelopeEndpointWithUrlEncodedAuth =
+  getEnvelopeEndpointWithUrlEncodedAuth.getEnvelopeEndpointWithUrlEncodedAuth;
 export const getReportDialogEndpoint = getEnvelopeEndpointWithUrlEncodedAuth.getReportDialogEndpoint;
 export const BaseClient = isErrorEvent.BaseClient;
 export const ServerRuntimeClient = _isNativeReflectConstruct2.ServerRuntimeClient;
@@ -268,7 +270,8 @@ export const getCurrentHub = getCurrentHubShim.getCurrentHub;
 export const getCurrentHubShim = getCurrentHubShim.getCurrentHubShim;
 export const applyAggregateErrorsToEvent = aggregateExceptionsFromError.applyAggregateErrorsToEvent;
 export const flatten = flatten.flatten;
-export const getBreadcrumbLogLevelFromHttpStatusCode = getBreadcrumbLogLevelFromHttpStatusCode.getBreadcrumbLogLevelFromHttpStatusCode;
+export const getBreadcrumbLogLevelFromHttpStatusCode =
+  getBreadcrumbLogLevelFromHttpStatusCode.getBreadcrumbLogLevelFromHttpStatusCode;
 export const getComponentName = _htmlElementAsString.getComponentName;
 export const getDomElement = _htmlElementAsString.getDomElement;
 export const getLocationHref = _htmlElementAsString.getLocationHref;
@@ -283,7 +286,8 @@ export const addConsoleInstrumentationHandler = instrumentConsole.addConsoleInst
 export const addFetchEndInstrumentationHandler = _resolveResponse.addFetchEndInstrumentationHandler;
 export const addFetchInstrumentationHandler = _resolveResponse.addFetchInstrumentationHandler;
 export const addGlobalErrorInstrumentationHandler = instrumentError.addGlobalErrorInstrumentationHandler;
-export const addGlobalUnhandledRejectionInstrumentationHandler = instrumentUnhandledRejection.addGlobalUnhandledRejectionInstrumentationHandler;
+export const addGlobalUnhandledRejectionInstrumentationHandler =
+  instrumentUnhandledRejection.addGlobalUnhandledRejectionInstrumentationHandler;
 export const addHandler = addHandler.addHandler;
 export const maybeInstrument = addHandler.maybeInstrument;
 export const resetInstrumentationHandlers = addHandler.resetInstrumentationHandlers;
@@ -377,7 +381,8 @@ export const supportsReportingObserver = supportsFetch.supportsReportingObserver
 export const SyncPromise = SyncPromise.SyncPromise;
 export const rejectedSyncPromise = SyncPromise.rejectedSyncPromise;
 export const resolvedSyncPromise = SyncPromise.resolvedSyncPromise;
-export const _browserPerformanceTimeOriginMode = dateTimestampInSeconds /* dateTimestampInSeconds */._browserPerformanceTimeOriginMode;
+export const _browserPerformanceTimeOriginMode =
+  dateTimestampInSeconds /* dateTimestampInSeconds */._browserPerformanceTimeOriginMode;
 export const browserPerformanceTimeOrigin = require("dateTimestampInSeconds").browserPerformanceTimeOrigin;
 export const dateTimestampInSeconds = require("dateTimestampInSeconds").dateTimestampInSeconds;
 export const timestampInSeconds = require("dateTimestampInSeconds").timestampInSeconds;
@@ -408,8 +413,10 @@ export const BAGGAGE_HEADER_NAME = baggageHeaderToDynamicSamplingContext.BAGGAGE
 export const MAX_BAGGAGE_STRING_LENGTH = baggageHeaderToDynamicSamplingContext.MAX_BAGGAGE_STRING_LENGTH;
 export const SENTRY_BAGGAGE_KEY_PREFIX = baggageHeaderToDynamicSamplingContext.SENTRY_BAGGAGE_KEY_PREFIX;
 export const SENTRY_BAGGAGE_KEY_PREFIX_REGEX = baggageHeaderToDynamicSamplingContext.SENTRY_BAGGAGE_KEY_PREFIX_REGEX;
-export const baggageHeaderToDynamicSamplingContext = baggageHeaderToDynamicSamplingContext.baggageHeaderToDynamicSamplingContext;
-export const dynamicSamplingContextToSentryBaggageHeader = baggageHeaderToDynamicSamplingContext.dynamicSamplingContextToSentryBaggageHeader;
+export const baggageHeaderToDynamicSamplingContext =
+  baggageHeaderToDynamicSamplingContext.baggageHeaderToDynamicSamplingContext;
+export const dynamicSamplingContextToSentryBaggageHeader =
+  baggageHeaderToDynamicSamplingContext.dynamicSamplingContextToSentryBaggageHeader;
 export const parseBaggageHeader = baggageHeaderToDynamicSamplingContext.parseBaggageHeader;
 export const getNumberOfUrlSegments = getNumberOfUrlSegments.getNumberOfUrlSegments;
 export const getSanitizedUrlString = getNumberOfUrlSegments.getSanitizedUrlString;

@@ -63,7 +63,10 @@ function onVercelAiSpanStart(setAttribute) {
       let tmp3Result = tmp3(957);
       const messagesFromPrompt = tmp3Result.requestMessagesFromPrompt(setAttribute, data);
       if (tmp17) {
-        const attr6 = setAttribute.setAttribute(tmp3(958).GEN_AI_RESPONSE_MODEL_ATTRIBUTE, data[tmp3(undefined, 956).AI_MODEL_ID_ATTRIBUTE]);
+        const attr6 = setAttribute.setAttribute(
+          tmp3(958).GEN_AI_RESPONSE_MODEL_ATTRIBUTE,
+          data[tmp3(undefined, 956).AI_MODEL_ID_ATTRIBUTE],
+        );
       }
       const attr7 = setAttribute.setAttribute("ai.streaming", description.includes("stream"));
       tmp3Result = tmp3(957);
@@ -93,7 +96,8 @@ function onVercelAiSpanStart(setAttribute) {
           setAttribute.updateName("embed_many " + tmp22);
         }
       }
-      tmp17 = data[tmp3(undefined, 956).AI_MODEL_ID_ATTRIBUTE] && !data[tmp3(undefined, 958).GEN_AI_RESPONSE_MODEL_ATTRIBUTE];
+      tmp17 =
+        data[tmp3(undefined, 956).AI_MODEL_ID_ATTRIBUTE] && !data[tmp3(undefined, 958).GEN_AI_RESPONSE_MODEL_ATTRIBUTE];
     }
   }
 }
@@ -145,16 +149,26 @@ function vercelAiEventProcessor(type) {
 function processEndedVercelAiSpan(item10015) {
   const data = item10015.data;
   if ("auto.vercelai.otel" === item10015.origin) {
-    renameAttributeKey(data, _mod956.AI_USAGE_COMPLETION_TOKENS_ATTRIBUTE, _mod958.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE);
+    renameAttributeKey(
+      data,
+      _mod956.AI_USAGE_COMPLETION_TOKENS_ATTRIBUTE,
+      _mod958.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE,
+    );
     renameAttributeKey(data, _mod956.AI_USAGE_PROMPT_TOKENS_ATTRIBUTE, _mod958.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE);
-    renameAttributeKey(data, _mod956.AI_USAGE_CACHED_INPUT_TOKENS_ATTRIBUTE, _mod958.GEN_AI_USAGE_INPUT_TOKENS_CACHED_ATTRIBUTE);
+    renameAttributeKey(
+      data,
+      _mod956.AI_USAGE_CACHED_INPUT_TOKENS_ATTRIBUTE,
+      _mod958.GEN_AI_USAGE_INPUT_TOKENS_CACHED_ATTRIBUTE,
+    );
     const tmp34 = data[_mod958.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE];
     let tmp35 = typeof tmp34 === "number";
     if (typeof tmp34 === "number") {
       tmp35 = typeof data[tmp29(undefined, 958).GEN_AI_USAGE_INPUT_TOKENS_CACHED_ATTRIBUTE] === "number";
     }
     if (tmp35) {
-      data[tmp29(958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = data[tmp29(undefined, 958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] + data[tmp29(undefined, 958).GEN_AI_USAGE_INPUT_TOKENS_CACHED_ATTRIBUTE];
+      data[tmp29(958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] =
+        data[tmp29(undefined, 958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] +
+        data[tmp29(undefined, 958).GEN_AI_USAGE_INPUT_TOKENS_CACHED_ATTRIBUTE];
     }
     const tmp = data[_mod958.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE];
     let tmp2 = typeof tmp === "number";
@@ -162,7 +176,9 @@ function processEndedVercelAiSpan(item10015) {
       tmp2 = typeof data[tmp29(undefined, 958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] === "number";
     }
     if (tmp2) {
-      data["gen_ai.usage.total_tokens"] = data[tmp29(undefined, 958).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] + data[tmp29(undefined, 958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE];
+      data["gen_ai.usage.total_tokens"] =
+        data[tmp29(undefined, 958).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] +
+        data[tmp29(undefined, 958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE];
     }
     let isArray = data[tmp29(undefined, 956).AI_PROMPT_TOOLS_ATTRIBUTE];
     if (isArray) {
@@ -170,7 +186,9 @@ function processEndedVercelAiSpan(item10015) {
       isArray = Array.isArray(data[tmp29(undefined, 956).AI_PROMPT_TOOLS_ATTRIBUTE]);
     }
     if (isArray) {
-      data[tmp29(956).AI_PROMPT_TOOLS_ATTRIBUTE] = tmp29(957).convertAvailableToolsToJsonString(data[tmp29(undefined, 956).AI_PROMPT_TOOLS_ATTRIBUTE]);
+      data[tmp29(956).AI_PROMPT_TOOLS_ATTRIBUTE] = tmp29(957).convertAvailableToolsToJsonString(
+        data[tmp29(undefined, 956).AI_PROMPT_TOOLS_ATTRIBUTE],
+      );
       const tmp29Result = tmp29(957);
     }
     renameAttributeKey(data, _mod956.OPERATION_NAME_ATTRIBUTE, _mod958.GEN_AI_OPERATION_NAME_ATTRIBUTE);
@@ -227,15 +245,26 @@ function processEndedVercelAiSpan(item10015) {
             usage = bedrock.usage;
           }
           if (usage) {
-            callback2(data, tmp(tmp2[4]).GEN_AI_USAGE_INPUT_TOKENS_CACHED_ATTRIBUTE, tmp6.bedrock.usage.cacheReadInputTokens);
-            callback2(data, tmp(tmp2[4]).GEN_AI_USAGE_INPUT_TOKENS_CACHE_WRITE_ATTRIBUTE, tmp6.bedrock.usage.cacheWriteInputTokens);
+            callback2(
+              data,
+              tmp(tmp2[4]).GEN_AI_USAGE_INPUT_TOKENS_CACHED_ATTRIBUTE,
+              tmp6.bedrock.usage.cacheReadInputTokens,
+            );
+            callback2(
+              data,
+              tmp(tmp2[4]).GEN_AI_USAGE_INPUT_TOKENS_CACHE_WRITE_ATTRIBUTE,
+              tmp6.bedrock.usage.cacheWriteInputTokens,
+            );
           }
           if (parsed.deepseek) {
-            callback2(data, tmp(tmp2[4]).GEN_AI_USAGE_INPUT_TOKENS_CACHED_ATTRIBUTE, parsed.deepseek.promptCacheHitTokens);
+            callback2(
+              data,
+              tmp(tmp2[4]).GEN_AI_USAGE_INPUT_TOKENS_CACHED_ATTRIBUTE,
+              parsed.deepseek.promptCacheHitTokens,
+            );
             callback2(data, "gen_ai.usage.input_tokens.cache_miss", parsed.deepseek.promptCacheMissTokens);
           }
-        } catch (err) {
-        }
+        } catch (err) {}
       }
     })(data);
     const _Object = Object;

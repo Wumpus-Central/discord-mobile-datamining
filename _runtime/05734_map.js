@@ -5,7 +5,11 @@ import useGesture from "05735_useGesture.js";
 
 require = arg1;
 const dependencyMap = arg6;
-const items = [["maxDistance", "maxDist"], ["maxDuration", "maxDurationMs"], ["maxDelay", "maxDelayMs"]];
+const items = [
+  ["maxDistance", "maxDist"],
+  ["maxDuration", "maxDurationMs"],
+  ["maxDelay", "maxDelayMs"],
+];
 const map = new Map(items);
 let closure_3 = {};
 arg5.useTapGesture = function useTapGesture(gestureHandlerProps) {

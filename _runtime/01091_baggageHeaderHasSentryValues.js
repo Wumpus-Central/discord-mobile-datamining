@@ -16,16 +16,14 @@ arg5.createHeadersSafely = function createHeadersSafely(request_headers) {
     const _Headers = Headers;
     const headers = new Headers(request_headers);
     return headers;
-  } catch (err) {
-  }
+  } catch (err) {}
 };
 arg5.getFullURL = function getFullURL(arg0) {
   try {
     const _URL = URL;
     const uRL = new URL(arg0, ignoreNextOnError.WINDOW.location.origin);
     return uRL.href;
-  } catch (err) {
-  }
+  } catch (err) {}
 };
 arg5.isPerformanceResourceTiming = function isPerformanceResourceTiming(entryType) {
   let tmp = "resource" === entryType.entryType;

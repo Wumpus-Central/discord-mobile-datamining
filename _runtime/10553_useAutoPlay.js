@@ -1,7 +1,6 @@
 // _runtime/10553_useAutoPlay.js
 import closure_0 from "00019_noop.js";
 
-
 export const useAutoPlay = function useAutoPlay(autoPlay) {
   autoPlay = autoPlay.autoPlay;
   const React = tmp;

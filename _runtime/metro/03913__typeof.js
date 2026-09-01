@@ -92,7 +92,12 @@ class TimestampSecondsParser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 40, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", {
+            value: 40,
+            enumerable: true,
+            configurable: true,
+            writable: true,
+          });
         } else {
           num3 = 40;
           applyResult.priority = 40;
@@ -109,7 +114,12 @@ class TimestampSecondsParser {
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
-            definePropertyResult1 = Object.defineProperty(applyResult, "incompatibleTokens", { value: "*", enumerable: true, configurable: true, writable: true });
+            definePropertyResult1 = Object.defineProperty(applyResult, "incompatibleTokens", {
+              value: "*",
+              enumerable: true,
+              configurable: true,
+              writable: true,
+            });
           } else {
             str4 = "*";
             applyResult.incompatibleTokens = "*";
@@ -207,7 +217,7 @@ obj = {
   key: "parse",
   value: function parse(arg0) {
     return _createSuperInternal(table[0]).parseAnyDigitsSigned(arg0);
-  }
+  },
 };
 let items = [
   obj,
@@ -216,8 +226,8 @@ let items = [
     value: function set(arg0, arg1, arg2) {
       const items = [new Date(1000 * arg2), { timestampIsSet: true }];
       return items;
-    }
-  }
+    },
+  },
 ];
 if (0 < items.length) {
   do {

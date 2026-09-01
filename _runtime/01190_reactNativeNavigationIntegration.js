@@ -65,7 +65,10 @@ arg5.reactNativeNavigationIntegration = (enableTabsInstrumentation) => {
     const result = flag2(_undefined[0]).startIdleNavigationSpan(beforeStartSpanResult, defaultIdleOptions);
     _undefined2 = result;
     if (null != result) {
-      const attr = _undefined2.setAttribute(flag2(_undefined[2]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, flag2(_undefined[3]).SPAN_ORIGIN_AUTO_NAVIGATION_REACT_NATIVE_NAVIGATION);
+      const attr = _undefined2.setAttribute(
+        flag2(_undefined[2]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
+        flag2(_undefined[3]).SPAN_ORIGIN_AUTO_NAVIGATION_REACT_NATIVE_NAVIGATION,
+      );
     }
     if (flag2) {
       const obj5 = flag2(_undefined[4]);
@@ -76,7 +79,12 @@ arg5.reactNativeNavigationIntegration = (enableTabsInstrumentation) => {
     const obj2 = flag2(_undefined[0]);
     const obj7 = flag2(_undefined[4]);
     const client = flag2(_undefined[2]).getClient();
-    const result2 = obj7.ignoreEmptyRouteChangeTransactions(client, _undefined2, flag2(_undefined[0]).DEFAULT_NAVIGATION_SPAN_NAME, () => c4 === closure_0);
+    const result2 = obj7.ignoreEmptyRouteChangeTransactions(
+      client,
+      _undefined2,
+      flag2(_undefined[0]).DEFAULT_NAVIGATION_SPAN_NAME,
+      () => c4 === closure_0,
+    );
     timeout = setTimeout(discardLatestNavigationSpan.bind(c3), closure_0);
   }
   let result = navigation.events().registerCommandListener(startIdleNavigationSpan);
@@ -123,7 +131,15 @@ arg5.reactNativeNavigationIntegration = (enableTabsInstrumentation) => {
       if (obj.spanToJSON(_undefined2).description === flag2(_undefined[0]).DEFAULT_NAVIGATION_SPAN_NAME) {
         _undefined2.updateName(componentId.componentName);
       }
-      obj = { "route.name": null, "route.component_id": null, "route.component_type": null, "route.has_been_seen": null, "previous_route.name": null, "previous_route.component_id": null, "previous_route.component_type": null };
+      obj = {
+        "route.name": null,
+        "route.component_id": null,
+        "route.component_type": null,
+        "route.has_been_seen": null,
+        "previous_route.name": null,
+        "previous_route.component_id": null,
+        "previous_route.component_type": null,
+      };
       ({ componentName: obj2[0], componentId: obj2[1], componentType: obj2[2] } = componentId);
       obj[3] = hasItem;
       let componentName;
@@ -171,9 +187,7 @@ arg5.reactNativeNavigationIntegration = (enableTabsInstrumentation) => {
       const obj3 = flag2(_undefined[2]);
     }
   });
-  pushRecentComponentId = function pushRecentComponentId(arg0) {
-
-  };
+  pushRecentComponentId = function pushRecentComponentId(arg0) {};
   discardLatestNavigationSpan = function discardLatestNavigationSpan() {
     if (_undefined2) {
       if (obj.isSentrySpan(_undefined2)) {
@@ -192,9 +206,7 @@ arg5.reactNativeNavigationIntegration = (enableTabsInstrumentation) => {
       c3 = undefined;
     }
   };
-  clearStateChangeTimeout = function clearStateChangeTimeout() {
-
-  };
+  clearStateChangeTimeout = function clearStateChangeTimeout() {};
   return {
     name: routeChangeTimeoutMs,
     afterAllSetup(getIntegrationByName) {
@@ -205,6 +217,6 @@ arg5.reactNativeNavigationIntegration = (enableTabsInstrumentation) => {
         obj[0] = reactNativeTracingIntegration.options.finalTimeoutMs;
         obj[1] = reactNativeTracingIntegration.options.idleTimeoutMs;
       }
-    }
+    },
   };
 };

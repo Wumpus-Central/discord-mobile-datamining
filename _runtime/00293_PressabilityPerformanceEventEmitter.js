@@ -15,7 +15,7 @@ const items = [
     value: function addListener(arg0) {
       const _listeners = this._listeners;
       _listeners.push(arg0);
-    }
+    },
   },
   {
     key: "removeListener",
@@ -26,7 +26,7 @@ const items = [
         const _listeners1 = this._listeners;
         _listeners1.splice(index, 1);
       }
-    }
+    },
   },
   {
     key: "emitEvent",
@@ -36,8 +36,8 @@ const items = [
         const _listeners = tmp._listeners;
         const item = _listeners.forEach((arg0) => arg0(closure_0));
       }
-    }
-  }
+    },
+  },
 ];
 
 export default new _createClassDefault(PressabilityPerformanceEventEmitter, items)();

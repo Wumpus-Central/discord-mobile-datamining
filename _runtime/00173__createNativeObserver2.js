@@ -35,35 +35,45 @@ function _validateObserveOptions2(arg0) {
   if (!type) {
     if (!entryTypes) {
       const _TypeError = TypeError;
-      const typeError = new TypeError("Failed to execute 'observe' on 'PerformanceObserver': An observe() call must not include both entryTypes and type arguments.");
+      const typeError = new TypeError(
+        "Failed to execute 'observe' on 'PerformanceObserver': An observe() call must not include both entryTypes and type arguments.",
+      );
       throw typeError;
     }
   }
   if (entryTypes) {
     if (type) {
       const _TypeError3 = TypeError;
-      const typeError1 = new TypeError("Failed to execute 'observe' on 'PerformanceObserver': An observe() call must include either entryTypes or type arguments.");
+      const typeError1 = new TypeError(
+        "Failed to execute 'observe' on 'PerformanceObserver': An observe() call must include either entryTypes or type arguments.",
+      );
       throw typeError1;
     }
   }
   if ("multiple" === callback2(this, closure_10)[closure_10]) {
     if (type) {
       const _Error2 = Error;
-      error = new Error("Failed to execute 'observe' on 'PerformanceObserver': This observer has performed observe({entryTypes:...}, therefore it cannot perform observe({type:...})");
+      error = new Error(
+        "Failed to execute 'observe' on 'PerformanceObserver': This observer has performed observe({entryTypes:...}, therefore it cannot perform observe({type:...})",
+      );
       throw error;
     }
   }
   if ("single" === callback2(this, closure_10)[closure_10]) {
     if (entryTypes) {
       const _Error = Error;
-      const error1 = new Error("Failed to execute 'observe' on 'PerformanceObserver': This PerformanceObserver has performed observe({type:...}, therefore it cannot perform observe({entryTypes:...})");
+      const error1 = new Error(
+        "Failed to execute 'observe' on 'PerformanceObserver': This PerformanceObserver has performed observe({type:...}, therefore it cannot perform observe({entryTypes:...})",
+      );
       throw error1;
     }
   }
   if (entryTypes) {
     if (null != durationThreshold) {
       const _TypeError2 = TypeError;
-      const typeError2 = new TypeError("Failed to execute 'observe' on 'PerformanceObserver': An observe() call must not include both entryTypes and durationThreshold arguments.");
+      const typeError2 = new TypeError(
+        "Failed to execute 'observe' on 'PerformanceObserver': An observe() call must not include both entryTypes and durationThreshold arguments.",
+      );
       throw typeError2;
     }
   }
@@ -84,7 +94,7 @@ let obj = {
   key: "getEntries",
   value: function getEntries() {
     return callback2(this, closure_6)[closure_6];
-  }
+  },
 };
 let items = [
   obj,
@@ -93,7 +103,7 @@ let items = [
     value: function getEntriesByType(arg0) {
       closure_0 = arg0;
       return callback2(this, closure_6)[closure_6].filter((entryType) => entryType.entryType === closure_0);
-    }
+    },
   },
   {
     key: "getEntriesByName",
@@ -115,8 +125,8 @@ let items = [
         const arr = callback2(self, closure_6)[closure_6];
       }
       return found;
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(PerformanceObserverEntryList, items);
 let error = importDefaultResultResult;
@@ -174,7 +184,7 @@ obj = {
       importDefaultResult2Result.observe(tmp9Result, obj);
       const obj2 = PerformanceObserver(170);
     }
-  }
+  },
 };
 const items1 = [
   obj,
@@ -184,7 +194,7 @@ const items1 = [
       if (null != callback2(this, closure_8)[closure_8]) {
         importDefaultResult2Result.disconnect(callback2(this, tmp2)[tmp2]);
       }
-    }
+    },
   },
   {
     key: "takeRecords",
@@ -203,12 +213,14 @@ const items1 = [
         }
       }
       return mapped;
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult1 = importDefaultResult(PerformanceObserver, items1);
 const supportedPerformanceEntryTypes = importDefaultResult2Result.getSupportedPerformanceEntryTypes();
-importDefaultResultResult1.supportedEntryTypes = Object.freeze(supportedPerformanceEntryTypes.map(require("rawToPerformanceEntry").rawToPerformanceEntryType));
+importDefaultResultResult1.supportedEntryTypes = Object.freeze(
+  supportedPerformanceEntryTypes.map(require("rawToPerformanceEntry").rawToPerformanceEntryType),
+);
 
 export const PerformanceEntry = require("PerformanceEntry").PerformanceEntry;
 export const PerformanceObserverEntryList = importDefaultResultResult;

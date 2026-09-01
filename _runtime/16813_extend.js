@@ -36,41 +36,43 @@ if (tmp) {
   };
 }
 arg5.defineProperty = fn;
-arg5.objCreate = Object.create || ((arg0, obj) => {
-  class F {
-    constructor() {
-      return;
-    }
-  }
-  F.prototype = arg0;
-  obj = Object.create(F.prototype);
-  for (const key10008 in arg1) {
-    let tmp5 = key10008;
-    let tmp6 = require;
+arg5.objCreate =
+  Object.create ||
+  ((arg0, obj) => {
     class F {
       constructor() {
         return;
       }
     }
-    let hop = extend.hop;
-    let call = hop.call;
-    if (typeof call === "unknown") {
-      let hopResult = hop(key10008);
-    } else {
-      hopResult = call(arg1, key10008);
-    }
-    if (!hopResult) {
-      continue;
-    } else {
-      let tmp3 = fn;
-      let tmp4 = fn(obj, key10008, arg1[key10008]);
+    F.prototype = arg0;
+    obj = Object.create(F.prototype);
+    for (const key10008 in arg1) {
+      let tmp5 = key10008;
+      let tmp6 = require;
       class F {
         constructor() {
           return;
         }
       }
+      let hop = extend.hop;
+      let call = hop.call;
+      if (typeof call === "unknown") {
+        let hopResult = hop(key10008);
+      } else {
+        hopResult = call(arg1, key10008);
+      }
+      if (!hopResult) {
+        continue;
+      } else {
+        let tmp3 = fn;
+        let tmp4 = fn(obj, key10008, arg1[key10008]);
+        class F {
+          constructor() {
+            return;
+          }
+        }
+      }
+      continue;
     }
-    continue;
-  }
-  return obj;
-});
+    return obj;
+  });

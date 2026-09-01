@@ -22,8 +22,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 function changeEventCalculator(rotation, rotation2) {
   if (undefined === rotation2) {
@@ -40,7 +39,9 @@ function changeEventCalculator(rotation, rotation2) {
 }
 changeEventCalculator.__closure = {};
 changeEventCalculator.__workletHash = 11988645380499;
-changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_rotationGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={rotationChange:current.rotation};}else{changePayload={rotationChange:current.rotation-previous.rotation};}return{...current,...changePayload};}" };
+changeEventCalculator.__initData = {
+  code: "function changeEventCalculator_Pnpm_rotationGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={rotationChange:current.rotation};}else{changePayload={rotationChange:current.rotation-previous.rotation};}return{...current,...changePayload};}",
+};
 class RotationGesture {
   constructor() {
     self = this;
@@ -74,8 +75,8 @@ let items = [
       }
       const items = [arg0];
       return fn(items);
-    }
-  }
+    },
+  },
 ];
 
 export const RotationGesture = importDefaultResult(RotationGesture, items);

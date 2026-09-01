@@ -284,8 +284,7 @@ function deterministicDecirc(obj, arg1, arg2, arr, arg4, sum, depthLimit) {
           }
           return arr;
         }
-      } catch (err) {
-      }
+      } catch (err) {}
     }
   }
 }
@@ -295,7 +294,7 @@ function replaceGetterValues(arg0) {
   if (undefined === arg0) {
     fn = (arg0, arg1) => arg1;
   }
-  return function(arg0, arg1) {
+  return function (arg0, arg1) {
     let arr;
     let tmp2;
     let tmp = arg1;

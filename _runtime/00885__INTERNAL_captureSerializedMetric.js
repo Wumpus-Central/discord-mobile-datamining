@@ -222,7 +222,16 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
       if (_getSpanForScopeResult) {
         spanId = _getSpanForScopeResult.spanContext().spanId;
       }
-      obj1 = { timestamp: null, trace_id: null, span_id: null, name: null, type: null, unit: null, value: null, attributes: null };
+      obj1 = {
+        timestamp: null,
+        trace_id: null,
+        span_id: null,
+        name: null,
+        type: null,
+        unit: null,
+        value: null,
+        attributes: null,
+      };
       obj1[0] = tmp17(838).timestampInSeconds();
       if (str10 == null) {
         str10 = "";
@@ -234,7 +243,9 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
       const tmp17Result1 = tmp17(838);
       const merged2 = Object.assign(tmp17(883).serializeAttributes(attributes));
       const tmp17Result2 = tmp17(883);
-      const merged3 = Object.assign(tmp17(883).serializeAttributes(beforeSendMetricResult.attributes, "skip-undefined"));
+      const merged3 = Object.assign(
+        tmp17(883).serializeAttributes(beforeSendMetricResult.attributes, "skip-undefined"),
+      );
       obj1[7] = obj2;
       if (tmp17(823).DEBUG_BUILD) {
         const debug4 = tmp17(824).debug;

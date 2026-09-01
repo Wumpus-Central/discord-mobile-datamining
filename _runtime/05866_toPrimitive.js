@@ -1,7 +1,6 @@
 // _runtime/05866_toPrimitive.js
 import _typeof from "metro/05867__typeof.js";
 
-
 export default function toPrimitive(arg0, arg1) {
   if ("object" == obj.default(arg0)) {
     if (arg0) {
@@ -27,4 +26,4 @@ export default function toPrimitive(arg0, arg1) {
     }
   }
   return arg0;
-};
+}

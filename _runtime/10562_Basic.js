@@ -25,7 +25,7 @@ export const Basic = (data) => {
         height = dotStyle.height;
       }
       if (typeof height !== "string") {
-        const items = [{ justifyContent: "space-between", alignSelf: "center" }, , ];
+        const items = [{ justifyContent: "space-between", alignSelf: "center" }, ,];
         let obj = { style: null, children: null };
         items[1] = tmp ? { flexDirection: "row" } : { flexDirection: "column" };
         items[2] = tmp2;
@@ -48,7 +48,7 @@ export const Basic = (data) => {
               return tmpResult;
             },
             accessibilityLabel: "Slide " + index + 1 + " of " + data.length + " - " + closure_8,
-            children: null
+            children: null,
           };
           let tmp2Result;
           if (closure_6 != null) {

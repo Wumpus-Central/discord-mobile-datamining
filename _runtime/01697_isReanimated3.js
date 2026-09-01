@@ -15,8 +15,12 @@ let closure_4 = isJest.shouldBeUseWeb();
 function isReanimated3() {
   return true;
 }
-let closure_5 = { code: "function handleAndFlushAnimationFrame_Pnpm_coreTs1(eventTimestamp,event){const{eventHandler}=this.__closure;global.__frameTimestamp=eventTimestamp;eventHandler(event);global.__flushAnimationFrame(eventTimestamp);global.__frameTimestamp=undefined;}" };
-let closure_6 = { code: "function handleAndFlushAnimationFrame_Pnpm_coreTs2(state,height){const{eventHandler}=this.__closure;const now=global._getAnimationTimestamp();global.__frameTimestamp=now;eventHandler(state,height);global.__flushAnimationFrame(now);global.__frameTimestamp=undefined;}" };
+let closure_5 = {
+  code: "function handleAndFlushAnimationFrame_Pnpm_coreTs1(eventTimestamp,event){const{eventHandler}=this.__closure;global.__frameTimestamp=eventTimestamp;eventHandler(event);global.__flushAnimationFrame(eventTimestamp);global.__frameTimestamp=undefined;}",
+};
+let closure_6 = {
+  code: "function handleAndFlushAnimationFrame_Pnpm_coreTs2(state,height){const{eventHandler}=this.__closure;const now=global._getAnimationTimestamp();global.__frameTimestamp=now;eventHandler(state,height);global.__flushAnimationFrame(now);global.__frameTimestamp=undefined;}",
+};
 let closure_7 = { enableLayoutAnimations: false, setByUser: false };
 
 export const startMapper = createMapperRegistry.startMapper;
@@ -37,7 +41,9 @@ export const getViewProp = function getViewProp(arg0, arg1, arg2) {
   dependencyMap = arg2;
   if (obj.isFabric()) {
     if (!arg2) {
-      const reanimatedError = new tmp(1664).ReanimatedError("Function `getViewProp` requires a component to be passed as an argument on Fabric.");
+      const reanimatedError = new tmp(1664).ReanimatedError(
+        "Function `getViewProp` requires a component to be passed as an argument on Fabric.",
+      );
       throw reanimatedError;
     }
   }
@@ -73,13 +79,20 @@ export const registerEventHandler = function registerEventHandler(eventHandler) 
   handleAndFlushAnimationFrame.__workletHash = 6793284645440;
   handleAndFlushAnimationFrame.__initData = closure_5;
   const ReanimatedModule = ReanimatedModule3.ReanimatedModule;
-  return ReanimatedModule.registerEventHandler(freezeObjectInDev.makeShareableCloneRecursive(handleAndFlushAnimationFrame), arg1, num);
+  return ReanimatedModule.registerEventHandler(
+    freezeObjectInDev.makeShareableCloneRecursive(handleAndFlushAnimationFrame),
+    arg1,
+    num,
+  );
 };
 export const unregisterEventHandler = function unregisterEventHandler(arg0) {
   const ReanimatedModule = ReanimatedModule3.ReanimatedModule;
   return ReanimatedModule.unregisterEventHandler(arg0);
 };
-export const subscribeForKeyboardEvents = function subscribeForKeyboardEvents(eventHandler, isStatusBarTranslucentAndroid) {
+export const subscribeForKeyboardEvents = function subscribeForKeyboardEvents(
+  eventHandler,
+  isStatusBarTranslucentAndroid,
+) {
   closure_0 = eventHandler;
   function handleAndFlushAnimationFrame(arg0, arg1) {
     const result = eventHandler._getAnimationTimestamp();

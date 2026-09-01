@@ -76,7 +76,11 @@ export function reactErrorHandler(arg0) {
   closure_0 = arg0;
   return (arg0, arg1) => {
     if (closure_0) {
-      closure_0(arg0, arg1, closure_1_3(arg0, arg1, { mechanism: { handled: tmp2, type: "auto.function.react.error_handler" } }));
+      closure_0(
+        arg0,
+        arg1,
+        closure_1_3(arg0, arg1, { mechanism: { handled: tmp2, type: "auto.function.react.error_handler" } }),
+      );
     }
   };
 }

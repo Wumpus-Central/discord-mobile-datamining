@@ -218,7 +218,10 @@ let tmp2 = (() => {
               tmp20 = Locale;
               tmp21 = closure_1_1;
               str7 = "language tag must be a string";
-              invariantResult = Locale(closure_1_1[2]).invariant(typeof locale === "string", "language tag must be a string");
+              invariantResult = Locale(closure_1_1[2]).invariant(
+                typeof locale === "string",
+                "language tag must be a string",
+              );
               tmp23 = Locale;
               tmp24 = closure_1_1;
               tmp25 = Locale;
@@ -226,7 +229,11 @@ let tmp2 = (() => {
               tmp27 = globalThis;
               _RangeError = RangeError;
               str8 = "malformed language tag";
-              invariantResult1 = Locale(closure_1_1[2]).invariant(Locale(closure_1_1[3]).isStructurallyValidLanguageTag(locale), "malformed language tag", RangeError);
+              invariantResult1 = Locale(closure_1_1[2]).invariant(
+                Locale(closure_1_1[3]).isStructurallyValidLanguageTag(locale),
+                "malformed language tag",
+                RangeError,
+              );
               tmp29 = Locale;
               tmp30 = closure_1_1;
               str9 = "string";
@@ -243,7 +250,11 @@ let tmp2 = (() => {
                 tmp38 = closure_1_1;
                 _RangeError2 = RangeError;
                 str12 = "Malformed unicode_language_subtag";
-                invariantResult2 = Locale(closure_1_1[2]).invariant(Locale(closure_1_1[3]).isUnicodeLanguageSubtag(GetOptionResult), "Malformed unicode_language_subtag", RangeError);
+                invariantResult2 = Locale(closure_1_1[2]).invariant(
+                  Locale(closure_1_1[3]).isUnicodeLanguageSubtag(GetOptionResult),
+                  "Malformed unicode_language_subtag",
+                  RangeError,
+                );
               }
               tmp40 = Locale;
               tmp41 = closure_1_1;
@@ -259,7 +270,11 @@ let tmp2 = (() => {
                 tmp48 = closure_1_1;
                 _RangeError3 = RangeError;
                 str15 = "Malformed unicode_script_subtag";
-                invariantResult3 = Locale(closure_1_1[2]).invariant(Locale(closure_1_1[3]).isUnicodeScriptSubtag(GetOptionResult1), "Malformed unicode_script_subtag", RangeError);
+                invariantResult3 = Locale(closure_1_1[2]).invariant(
+                  Locale(closure_1_1[3]).isUnicodeScriptSubtag(GetOptionResult1),
+                  "Malformed unicode_script_subtag",
+                  RangeError,
+                );
               }
               tmp50 = Locale;
               tmp51 = closure_1_1;
@@ -275,7 +290,11 @@ let tmp2 = (() => {
                 tmp58 = closure_1_1;
                 _RangeError4 = RangeError;
                 str18 = "Malformed unicode_region_subtag";
-                invariantResult4 = Locale(closure_1_1[2]).invariant(Locale(closure_1_1[3]).isUnicodeRegionSubtag(GetOptionResult2), "Malformed unicode_region_subtag", RangeError);
+                invariantResult4 = Locale(closure_1_1[2]).invariant(
+                  Locale(closure_1_1[3]).isUnicodeRegionSubtag(GetOptionResult2),
+                  "Malformed unicode_region_subtag",
+                  RangeError,
+                );
               }
               tmp60 = Locale;
               tmp61 = closure_1_1;
@@ -348,7 +367,13 @@ let tmp2 = (() => {
               str25 = "firstDayOfWeek";
               tmp93 = result;
               str26 = "string";
-              GetOptionResult5 = Locale(closure_1_1[2]).GetOption(result, "firstDayOfWeek", "string", undefined, undefined);
+              GetOptionResult5 = Locale(closure_1_1[2]).GetOption(
+                result,
+                "firstDayOfWeek",
+                "string",
+                undefined,
+                undefined,
+              );
               tmp95 = GetOptionResult5;
               if (undefined !== GetOptionResult5) {
                 tmp96 = closure_1_7;
@@ -370,12 +395,24 @@ let tmp2 = (() => {
               str28 = "hourCycle";
               constructor = result;
               str29 = "string";
-              obj1.hc = Locale(closure_1_1[2]).GetOption(result, "hourCycle", "string", ["h11", "h12", "h23", "h24"], undefined);
+              obj1.hc = Locale(closure_1_1[2]).GetOption(
+                result,
+                "hourCycle",
+                "string",
+                ["h11", "h12", "h23", "h24"],
+                undefined,
+              );
               constructor = Locale;
               constructor = closure_1_1;
               str30 = "caseFirst";
               constructor = result;
-              obj1.kf = Locale(closure_1_1[2]).GetOption(result, "caseFirst", "string", ["upper", "lower", "false"], undefined);
+              obj1.kf = Locale(closure_1_1[2]).GetOption(
+                result,
+                "caseFirst",
+                "string",
+                ["upper", "lower", "false"],
+                undefined,
+              );
               constructor = Locale;
               constructor = closure_1_1;
               str31 = "boolean";
@@ -409,7 +446,13 @@ let tmp2 = (() => {
               items1 = [];
               constructor = Locale;
               constructor = closure_1_1;
-              constructor = Locale(closure_1_1[3]).parseUnicodeLocaleId(Intl.getCanonicalLocales(Locale(closure_1_1[3]).emitUnicodeLocaleId(obj.__assign(obj2.__assign({}, Locale(closure_1_1[3]).parseUnicodeLocaleId(locale)), obj)))[0]);
+              constructor = Locale(closure_1_1[3]).parseUnicodeLocaleId(
+                Intl.getCanonicalLocales(
+                  Locale(closure_1_1[3]).emitUnicodeLocaleId(
+                    obj.__assign(obj2.__assign({}, Locale(closure_1_1[3]).parseUnicodeLocaleId(locale)), obj),
+                  ),
+                )[0],
+              );
               extensions = constructor.extensions;
               num2 = 0;
               num3 = 1;
@@ -460,17 +503,23 @@ let tmp2 = (() => {
                 constructor = closure_1_1;
                 concat = "".concat;
                 constructor = constructor in obj1;
-                constructor = Locale(closure_1_1[2]).invariant(constructor, "".concat(constructor, " must be in options"));
+                constructor = Locale(closure_1_1[2]).invariant(
+                  constructor,
+                  "".concat(constructor, " must be in options"),
+                );
                 constructor = obj1[constructor];
                 if (undefined !== constructor) {
                   constructor = Locale;
                   constructor = closure_1_1;
                   concat2 = "Value for ".concat;
-                  constructor = Locale(closure_1_1[2]).invariant(typeof constructor === "string", "Value for ".concat(constructor, " must be a string"));
+                  constructor = Locale(closure_1_1[2]).invariant(
+                    typeof constructor === "string",
+                    "Value for ".concat(constructor, " must be a string"),
+                  );
                   if (constructor) {
                     constructor[1] = constructor;
                   } else {
-                    items2 = [, ];
+                    items2 = [,];
                     items2[0] = constructor;
                     items2[1] = constructor;
                     constructor = arr5.push(items2);
@@ -491,7 +540,13 @@ let tmp2 = (() => {
               constructor = Locale;
               constructor = closure_1_1;
               constructor.locale = Intl.getCanonicalLocales(Locale(closure_1_1[3]).emitUnicodeLocaleId(constructor))[0];
-              ({ locale: tmp16.locale, ca: tmp16.calendar, co: tmp16.collation, fw: tmp16.firstDayOfWeek, hc: tmp16.hourCycle } = constructor);
+              ({
+                locale: tmp16.locale,
+                ca: tmp16.calendar,
+                co: tmp16.collation,
+                fw: tmp16.firstDayOfWeek,
+                hc: tmp16.hourCycle,
+              } = constructor);
               if (prop.indexOf("kf") > -1) {
                 defaultResult.caseFirst = constructor.kf;
               }
@@ -547,7 +602,9 @@ let tmp2 = (() => {
             obj1 = callback(1281);
             obj = { variants: null };
             obj[0] = [];
-            const result = callback(13919).emitUnicodeLanguageId(obj.__assign(obj1.__assign({}, callback(13919).parseUnicodeLanguageId(tmp2)), obj));
+            const result = callback(13919).emitUnicodeLanguageId(
+              obj.__assign(obj1.__assign({}, callback(13919).parseUnicodeLanguageId(tmp2)), obj),
+            );
             const parseUnicodeLocaleIdResult = callback(13919).parseUnicodeLocaleId(locale);
             ({ lang, script, region, variants } = parseUnicodeLocaleIdResult.lang);
             obj = { lang: null, variants: null };
@@ -567,7 +624,9 @@ let tmp2 = (() => {
               obj2[0] = lang;
               obj2[3] = variants;
               obj1[0] = obj2;
-              let emitUnicodeLocaleIdResult = tmp3(13919).emitUnicodeLocaleId(tmp3Result.__assign(tmp3Result.__assign({}, parseUnicodeLocaleIdResult), obj1));
+              let emitUnicodeLocaleIdResult = tmp3(13919).emitUnicodeLocaleId(
+                tmp3Result.__assign(tmp3Result.__assign({}, parseUnicodeLocaleIdResult), obj1),
+              );
               const __assignResult = tmp3Result.__assign({}, parseUnicodeLocaleIdResult);
             } else {
               if (region) {
@@ -592,7 +651,9 @@ let tmp2 = (() => {
                   obj5[2] = region;
                   obj5[3] = items;
                   obj4[0] = obj5;
-                  emitUnicodeLocaleIdResult = tmp3(13919).emitUnicodeLocaleId(tmp3Result1.__assign(tmp3(1281).__assign({}, parseUnicodeLocaleIdResult), obj4));
+                  emitUnicodeLocaleIdResult = tmp3(13919).emitUnicodeLocaleId(
+                    tmp3Result1.__assign(tmp3(1281).__assign({}, parseUnicodeLocaleIdResult), obj4),
+                  );
                   const __assignResult1 = tmp3(1281).__assign({}, parseUnicodeLocaleIdResult);
                 }
               }
@@ -620,7 +681,9 @@ let tmp2 = (() => {
                   obj8[1] = script;
                   obj8[3] = items1;
                   obj7[0] = obj8;
-                  emitUnicodeLocaleIdResult = tmp3(13919).emitUnicodeLocaleId(tmp3Result3.__assign(tmp3(1281).__assign({}, parseUnicodeLocaleIdResult), obj7));
+                  emitUnicodeLocaleIdResult = tmp3(13919).emitUnicodeLocaleId(
+                    tmp3Result3.__assign(tmp3(1281).__assign({}, parseUnicodeLocaleIdResult), obj7),
+                  );
                   const __assignResult2 = tmp3(1281).__assign({}, parseUnicodeLocaleIdResult);
                 }
               }
@@ -694,7 +757,10 @@ let tmp2 = (() => {
         if ("root" !== locale) {
           region = self.maximize().region;
         }
-        hourCyclesPreferenceDataForLocaleOrRegion = tmp2(tmp3[4]).getHourCyclesPreferenceDataForLocaleOrRegion(locale, region);
+        hourCyclesPreferenceDataForLocaleOrRegion = tmp2(tmp3[4]).getHourCyclesPreferenceDataForLocaleOrRegion(
+          locale,
+          region,
+        );
         if (undefined !== hourCycle) {
           items = [];
           items[0] = hourCycle;
@@ -806,7 +872,7 @@ let tmp2 = (() => {
       return Locale(13919).emitUnicodeLanguageId(Locale(13919).parseUnicodeLanguageId(closure_2.default(this).locale));
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   };
   Object.defineProperty(Locale.prototype, "baseName", obj);
   obj = {
@@ -814,7 +880,7 @@ let tmp2 = (() => {
       return closure_2.default(this).calendar;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   };
   Object.defineProperty(Locale.prototype, "calendar", obj);
   obj = {
@@ -822,7 +888,7 @@ let tmp2 = (() => {
       return closure_2.default(this).collation;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   };
   Object.defineProperty(Locale.prototype, "collation", obj);
   Object.defineProperty(Locale.prototype, "caseFirst", {
@@ -830,42 +896,42 @@ let tmp2 = (() => {
       return closure_2.default(this).caseFirst;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   Object.defineProperty(Locale.prototype, "numeric", {
     get() {
       return closure_2.default(this).numeric;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   Object.defineProperty(Locale.prototype, "numberingSystem", {
     get() {
       return closure_2.default(this).numberingSystem;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   Object.defineProperty(Locale.prototype, "language", {
     get() {
       return Locale(13919).parseUnicodeLanguageId(closure_2.default(this).locale).lang;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   Object.defineProperty(Locale.prototype, "script", {
     get() {
       return Locale(13919).parseUnicodeLanguageId(closure_2.default(this).locale).script;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   Object.defineProperty(Locale.prototype, "region", {
     get() {
       return Locale(13919).parseUnicodeLanguageId(closure_2.default(this).locale).region;
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   Object.defineProperty(Locale.prototype, "firstDayOfWeek", {
     get() {
@@ -879,7 +945,7 @@ let tmp2 = (() => {
       }
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   Object.defineProperty(Locale.prototype, "hourCycle", {
     get() {
@@ -893,7 +959,7 @@ let tmp2 = (() => {
       }
     },
     enumerable: false,
-    configurable: true
+    configurable: true,
   });
   Locale.relevantExtensionKeys = closure_4;
   Locale.polyfilled = true;
@@ -904,12 +970,21 @@ try {
   if (typeof Symbol !== "undefined") {
     let _Object2 = Object;
     const _Symbol2 = Symbol;
-    Object.defineProperty(tmp2.prototype, Symbol.toStringTag, { value: "Intl.Locale", writable: false, enumerable: false, configurable: true });
+    Object.defineProperty(tmp2.prototype, Symbol.toStringTag, {
+      value: "Intl.Locale",
+      writable: false,
+      enumerable: false,
+      configurable: true,
+    });
   }
   let _Object = Object;
-  Object.defineProperty(tmp2.prototype.constructor, "length", { value: 1, writable: false, enumerable: false, configurable: true });
+  Object.defineProperty(tmp2.prototype.constructor, "length", {
+    value: 1,
+    writable: false,
+    enumerable: false,
+    configurable: true,
+  });
   exports.default = tmp2;
-} catch (err) {
-}
+} catch (err) {}
 
 export const Locale = tmp2;

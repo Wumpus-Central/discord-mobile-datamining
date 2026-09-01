@@ -11,4 +11,4 @@ export default function useAnimatedColor(arg0, arg1) {
     tmp.current = color;
   }
   return tmp.current;
-};
+}

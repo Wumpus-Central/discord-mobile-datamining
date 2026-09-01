@@ -17,7 +17,7 @@ arg5.default = () => (arg0) => {
         status = response.status <= 299;
       }
       closure_0.send("api.response", { request, response, duration: tmp5Result }, !status);
-    }
+    },
   };
   return { features };
 };

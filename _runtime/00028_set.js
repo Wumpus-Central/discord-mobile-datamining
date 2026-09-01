@@ -85,6 +85,4 @@ arg5.setOverrides = function setOverrides(arg0) {
     closure_2 = arg0;
   }
 };
-arg5.dangerouslyResetForTesting = function dangerouslyResetForTesting() {
-
-};
+arg5.dangerouslyResetForTesting = function dangerouslyResetForTesting() {};

@@ -11,4 +11,4 @@ export default function _default(arg0) {
   const width = useWindowDimensionsDefault().width;
   console.warn("<InputAccessoryView> is only supported on iOS.");
   return null;
-};
+}

@@ -2,7 +2,6 @@
 import SemVer from "../13503_SemVer.js";
 import SemVer2 from "../13504_SemVer.js";
 
-
 export default (num) => {
   if (num instanceof SemVer2) {
     return num;

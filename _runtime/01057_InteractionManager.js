@@ -32,13 +32,13 @@ let items = [
     key: "__init",
     value: function __init() {
       this._longestInteractionList = [];
-    }
+    },
   },
   {
     key: "__init2",
     value: function __init2() {
       this._longestInteractionMap = new Map();
-    }
+    },
   },
   {
     key: "_resetInteractions",
@@ -47,15 +47,17 @@ let items = [
       this._longestInteractionList.length = 0;
       const _longestInteractionMap = this._longestInteractionMap;
       _longestInteractionMap.clear();
-    }
+    },
   },
   {
     key: "_estimateP98LongestInteraction",
     value: function _estimateP98LongestInteraction() {
       const diff = this._longestInteractionList.length - 1;
       const obj = InteractionManager(1056);
-      return this._longestInteractionList[Math.min(Math, diff, Math.floor(Math, (obj.getInteractionCount(obj) - c3) / 50))];
-    }
+      return this._longestInteractionList[
+        Math.min(Math, diff, Math.floor(Math, (obj.getInteractionCount(obj) - c3) / 50))
+      ];
+    },
   },
   {
     key: "_processEntry",
@@ -112,8 +114,8 @@ let items = [
         }
         const atResult = _longestInteractionList.at(-1);
       }
-    }
-  }
+    },
+  },
 ];
 
 export const InteractionManager = _createClass(InteractionManager, items);

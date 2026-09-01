@@ -193,7 +193,7 @@ noop.race = (arg0) => {
     });
   });
 };
-noop.prototype.catch = function(arg0) {
+noop.prototype.catch = function (arg0) {
   return this.then(null, arg0);
 };
 noop.any = function promiseAny(arg0) {

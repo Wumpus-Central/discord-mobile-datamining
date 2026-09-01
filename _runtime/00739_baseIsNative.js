@@ -4,7 +4,15 @@ import isObject from "00606_isObject.js";
 const re2 = /^\[object .+?Constructor\]$/;
 const call = toString.call;
 const str = typeof call === "unknown" ? toString() : call(hasOwnProperty);
-let closure_3 = RegExp(`^${typeof call === "unknown" ? toString() : call(hasOwnProperty).replace(/[\\^$.*+?()[\]{}|]/g, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?")}$`);
+let closure_3 = RegExp(
+  `^${
+    typeof call === "unknown"
+      ? toString()
+      : call(hasOwnProperty)
+          .replace(/[\\^$.*+?()[\]{}|]/g, "\\$&")
+          .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?")
+  }$`,
+);
 
 export default function baseIsNative(arg0) {
   let tmp2 = dependencyMap;
@@ -20,4 +28,4 @@ export default function baseIsNative(arg0) {
     const isMatch = tmp(605)(arg0) ? closure_3 : closure_2.test(tmp2);
     const obj = tmp(605)(arg0) ? closure_3 : closure_2;
   }
-};
+}

@@ -1,7 +1,6 @@
 // _runtime/14004_all.js
 import all from "13977_all.js";
 
-
 export default (arg0) => {
   if (all(arg0)) {
     return arg0;

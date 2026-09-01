@@ -1,7 +1,6 @@
 // _runtime/12426_generateIteratee.js
 import setupIntegration from "12391_setupIntegration.js";
 
-
 export const generateIteratee = function generateIteratee(arg0) {
   ({ isBrowser: require, root: dependencyMap, prefix: closure_2 } = arg0);
   return (filename) => {
@@ -149,7 +148,7 @@ export const rewriteFramesIntegration = setupIntegration.defineIntegration(() =>
         })(exception);
       }
       return tmp2;
-    }
+    },
   };
   return obj;
 });

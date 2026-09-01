@@ -19,7 +19,10 @@ arg5.onHidden = (arg0) => {
       callback(type);
     }
   }
-  require("01041_addPageListener.js").addPageListener("visibilitychange", onHiddenOrPageHide, { capture: true, once: true });
+  require("01041_addPageListener.js").addPageListener("visibilitychange", onHiddenOrPageHide, {
+    capture: true,
+    once: true,
+  });
   const obj = addPageListener;
   require("01041_addPageListener.js").addPageListener("pagehide", onHiddenOrPageHide, { capture: true, once: true });
 };

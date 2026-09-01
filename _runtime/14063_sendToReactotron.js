@@ -24,7 +24,7 @@ export default (arg0) => {
       c7 = 0;
       c8 = 0;
       c6 = 0;
-      return (function*(arg0, arg1, arg2) {
+      return (function* (arg0, arg1, arg2) {
         if (c8 === 2) {
           c8 = 3;
           HermesBuiltin.throwTypeError();
@@ -97,7 +97,7 @@ export default (arg0) => {
       c6 = 0;
       c7 = 0;
       c5 = 0;
-      return (function*(arg0, arg1) {
+      return (function* (arg0, arg1) {
         if (c7 === 2) {
           c7 = 3;
           HermesBuiltin.throwTypeError();
@@ -169,7 +169,7 @@ export default (arg0) => {
       c7 = 0;
       c8 = 0;
       c6 = 0;
-      return (function*(arg0, arg1, arg2) {
+      return (function* (arg0, arg1, arg2) {
         if (c8 === 2) {
           c8 = 3;
           HermesBuiltin.throwTypeError();
@@ -241,7 +241,7 @@ export default (arg0) => {
       c5 = 0;
       c6 = 0;
       c4 = 0;
-      return (function*(arg0) {
+      return (function* (arg0) {
         if (c6 === 2) {
           c6 = 3;
           HermesBuiltin.throwTypeError();
@@ -307,7 +307,7 @@ export default (arg0) => {
       c6 = 0;
       c7 = 0;
       c5 = 0;
-      return (function*(arg0, arg1) {
+      return (function* (arg0, arg1) {
         if (c7 === 2) {
           c7 = 3;
           HermesBuiltin.throwTypeError();
@@ -391,7 +391,7 @@ export default (arg0) => {
       c6 = 0;
       c7 = 0;
       c5 = 0;
-      return (function*(arg0, arg1) {
+      return (function* (arg0, arg1) {
         if (c7 === 2) {
           c7 = 3;
           HermesBuiltin.throwTypeError();
@@ -466,7 +466,7 @@ export default (arg0) => {
       c6 = 0;
       c7 = 0;
       c5 = 0;
-      return (function*(arg0, arg1) {
+      return (function* (arg0, arg1) {
         if (v0 === 2) {
           v0 = 3;
           HermesBuiltin.throwTypeError();
@@ -594,7 +594,7 @@ export default (arg0) => {
           closure_0.asyncStorageHandler.multiMerge = multiMerge;
           c9 = false;
         }
-      }
+      },
     };
     return { features };
   };

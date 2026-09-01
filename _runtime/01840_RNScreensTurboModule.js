@@ -4,13 +4,17 @@ import addLogBoxLog from "01657_addLogBoxLog.js";
 let c0 = require;
 let RNScreensTurboModule = global.RNScreensTurboModule;
 if (!RNScreensTurboModule) {
-  let obj = { code: "function pnpm_RNScreensTurboModuleTs1(){const{logger,defaultReturnValue}=this.__closure;logger.warn('RNScreensTurboModule has not been found. Check that you have installed `react-native-screens@3.30.0` or newer in your project and rebuilt your app.');return defaultReturnValue;}" };
+  let obj = {
+    code: "function pnpm_RNScreensTurboModuleTs1(){const{logger,defaultReturnValue}=this.__closure;logger.warn('RNScreensTurboModule has not been found. Check that you have installed `react-native-screens@3.30.0` or newer in your project and rebuilt your app.');return defaultReturnValue;}",
+  };
   obj = { startTransition: null, updateTransition: null, finishTransition: null };
   obj = { topScreenId: -1, belowTopScreenId: -1, canStartTransition: false };
   c0 = obj;
   const fn = function t() {
     const logger = _undefined(1657).logger;
-    logger.warn("RNScreensTurboModule has not been found. Check that you have installed `react-native-screens@3.30.0` or newer in your project and rebuilt your app.");
+    logger.warn(
+      "RNScreensTurboModule has not been found. Check that you have installed `react-native-screens@3.30.0` or newer in your project and rebuilt your app.",
+    );
     return _undefined;
   };
   const obj1 = { logger: null, defaultReturnValue: null };
@@ -23,7 +27,9 @@ if (!RNScreensTurboModule) {
   c0 = undefined;
   const fn2 = function t() {
     const logger = _undefined(1657).logger;
-    logger.warn("RNScreensTurboModule has not been found. Check that you have installed `react-native-screens@3.30.0` or newer in your project and rebuilt your app.");
+    logger.warn(
+      "RNScreensTurboModule has not been found. Check that you have installed `react-native-screens@3.30.0` or newer in your project and rebuilt your app.",
+    );
     return _undefined;
   };
   const obj2 = { logger: null, defaultReturnValue: "Array" };
@@ -35,7 +41,9 @@ if (!RNScreensTurboModule) {
   c0 = undefined;
   const fn3 = function t() {
     const logger = _undefined(1657).logger;
-    logger.warn("RNScreensTurboModule has not been found. Check that you have installed `react-native-screens@3.30.0` or newer in your project and rebuilt your app.");
+    logger.warn(
+      "RNScreensTurboModule has not been found. Check that you have installed `react-native-screens@3.30.0` or newer in your project and rebuilt your app.",
+    );
     return _undefined;
   };
   const obj3 = { logger: null, defaultReturnValue: "Array" };

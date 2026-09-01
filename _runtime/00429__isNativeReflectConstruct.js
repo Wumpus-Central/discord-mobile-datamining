@@ -25,8 +25,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 let closure_2 = ["onBlur", "onFocus"];
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
@@ -64,7 +63,22 @@ let items = [
     value: function _createPressabilityConfig() {
       let self = this;
       self = this;
-      const obj = { cancelable: !this.props.rejectResponderTermination, disabled: null, hitSlop: null, delayLongPress: null, delayPressIn: null, delayPressOut: null, minPressDuration: 0, pressRectOffset: null, onBlur: null, onFocus: null, onLongPress: null, onPress: null, onPressIn: null, onPressOut: null };
+      const obj = {
+        cancelable: !this.props.rejectResponderTermination,
+        disabled: null,
+        hitSlop: null,
+        delayLongPress: null,
+        delayPressIn: null,
+        delayPressOut: null,
+        minPressDuration: 0,
+        pressRectOffset: null,
+        onBlur: null,
+        onFocus: null,
+        onLongPress: null,
+        onPress: null,
+        onPressIn: null,
+        onPressOut: null,
+      };
       aria_disabled = this.props.disabled;
       if (aria_disabled == null) {
         aria_disabled = self.props["aria-disabled"];
@@ -122,16 +136,21 @@ let items = [
         }
       };
       return obj;
-    }
+    },
   },
   {
     key: "_setOpacityTo",
     value: function _setOpacityTo(toValue, duration) {
       let obj = TouchableOpacity(397);
-      obj = { toValue, duration, easing: TouchableOpacity(364).inOut(TouchableOpacity(364).quad), useNativeDriver: true };
+      obj = {
+        toValue,
+        duration,
+        easing: TouchableOpacity(364).inOut(TouchableOpacity(364).quad),
+        useNativeDriver: true,
+      };
       const obj3 = TouchableOpacity(364);
       obj.timing(this.state.anim, obj).start();
-    }
+    },
   },
   {
     key: "_opacityActive",
@@ -141,13 +160,13 @@ let items = [
         num = 0.2;
       }
       this._setOpacityTo(num, duration);
-    }
+    },
   },
   {
     key: "_opacityInactive",
     value: function _opacityInactive(duration) {
       this._setOpacityTo(this._getChildStyleOpacityWithDefault(), duration);
-    }
+    },
   },
   {
     key: "_getChildStyleOpacityWithDefault",
@@ -162,7 +181,7 @@ let items = [
         num = opacity;
       }
       return num;
-    }
+    },
   },
   {
     key: "render",
@@ -280,7 +299,34 @@ let items = [
       if (accessibilityLabel == null) {
         accessibilityLabel = self.props.accessibilityLabel;
       }
-      obj1 = { accessible: false !== self.props.accessible, accessibilityLabel, accessibilityHint: self.props.accessibilityHint, accessibilityLanguage: self.props.accessibilityLanguage, accessibilityRole: self.props.accessibilityRole, accessibilityState: tmp8, accessibilityActions: self.props.accessibilityActions, onAccessibilityAction: self.props.onAccessibilityAction, accessibilityValue: obj, importantForAccessibility: null, accessibilityViewIsModal: null, accessibilityLiveRegion: null, accessibilityElementsHidden: null, style: null, nativeID: null, testID: null, onLayout: null, nextFocusDown: null, nextFocusForward: null, nextFocusLeft: null, nextFocusRight: null, nextFocusUp: null, hasTVPreferredFocus: null, hitSlop: null, focusable: null, ref: null };
+      obj1 = {
+        accessible: false !== self.props.accessible,
+        accessibilityLabel,
+        accessibilityHint: self.props.accessibilityHint,
+        accessibilityLanguage: self.props.accessibilityLanguage,
+        accessibilityRole: self.props.accessibilityRole,
+        accessibilityState: tmp8,
+        accessibilityActions: self.props.accessibilityActions,
+        onAccessibilityAction: self.props.onAccessibilityAction,
+        accessibilityValue: obj,
+        importantForAccessibility: null,
+        accessibilityViewIsModal: null,
+        accessibilityLiveRegion: null,
+        accessibilityElementsHidden: null,
+        style: null,
+        nativeID: null,
+        testID: null,
+        onLayout: null,
+        nextFocusDown: null,
+        nextFocusForward: null,
+        nextFocusLeft: null,
+        nextFocusRight: null,
+        nextFocusUp: null,
+        hasTVPreferredFocus: null,
+        hitSlop: null,
+        focusable: null,
+        ref: null,
+      };
       let str2 = "no-hide-descendants";
       if (true !== self.props["aria-hidden"]) {
         str2 = self.props.importantForAccessibility;
@@ -319,7 +365,7 @@ let items = [
       const items1 = [self.props.children, null];
       obj1.children = items1;
       return closure_8(TouchableOpacity(397).View, obj1);
-    }
+    },
   },
   {
     key: "componentDidUpdate",
@@ -345,14 +391,14 @@ let items = [
       if (!tmp2) {
         self._opacityInactive(250);
       }
-    }
+    },
   },
   {
     key: "componentDidMount",
     value: function componentDidMount() {
       const pressability = this.state.pressability;
       pressability.configure(this._createPressabilityConfig());
-    }
+    },
   },
   {
     key: "componentWillUnmount",
@@ -361,8 +407,8 @@ let items = [
       pressability.reset();
       const anim = this.state.anim;
       anim.resetAnimation();
-    }
-  }
+    },
+  },
 ];
 let closure_10 = importDefaultResult(TouchableOpacity, items);
 class Touchable {

@@ -6,7 +6,11 @@ import { findNodeHandle } from "00017_get_ActivityIndicator.js";
 import { jsx } from "react/00021_jsxProd.js";
 import { Reanimated } from "metro/05695__.js";
 
-let closure_2 = ["onGestureHandlerReanimatedStateChange", "onGestureHandlerReanimatedEvent", "onGestureHandlerReanimatedTouchEvent"];
+let closure_2 = [
+  "onGestureHandlerReanimatedStateChange",
+  "onGestureHandlerReanimatedEvent",
+  "onGestureHandlerReanimatedTouchEvent",
+];
 ({ useEffect: c4, useMemo: c5, useRef: closure_6 } = noop);
 let NativeEventsManager;
 if (Reanimated != null) {
@@ -17,8 +21,7 @@ if (!NativeEventsManager) {
   try {
     NativeEventsManager = require("importDefaultResult1").NativeEventsManager;
     tmp4 = NativeEventsManager;
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 if (tmp4) {
   class LeanReanimatedNativeDetector {
@@ -34,11 +37,18 @@ if (tmp4) {
       onGestureHandlerReanimatedTouchEvent = global.onGestureHandlerReanimatedTouchEvent;
       closure_5 = onGestureHandlerReanimatedTouchEvent;
       tmp2 = closure_3(global, closure_2);
-      items = [, , ];
+      items = [, ,];
       items[0] = onGestureHandlerReanimatedEvent;
       items[1] = onGestureHandlerReanimatedStateChange;
       items[2] = onGestureHandlerReanimatedTouchEvent;
-      tmp3 = closure_5(() => ({ onGestureHandlerReanimatedStateChange, onGestureHandlerReanimatedEvent, onGestureHandlerReanimatedTouchEvent }), items);
+      tmp3 = closure_5(
+        () => ({
+          onGestureHandlerReanimatedStateChange,
+          onGestureHandlerReanimatedEvent,
+          onGestureHandlerReanimatedTouchEvent,
+        }),
+        items,
+      );
       closure_6 = tmp3;
       tmp4 = closure_4(() => {
         let num = closure_1_7(ref3.current);
@@ -52,7 +62,7 @@ if (tmp4) {
           _componentViewTag: num,
           getComponentViewTag() {
             return num;
-          }
+          },
         });
         let current = ref2.current;
         current.attachEvents();
@@ -94,11 +104,18 @@ if (tmp4) {
       onGestureHandlerReanimatedTouchEvent = global.onGestureHandlerReanimatedTouchEvent;
       closure_5 = onGestureHandlerReanimatedTouchEvent;
       tmp2 = closure_3(global, closure_2);
-      items = [, , ];
+      items = [, ,];
       items[0] = onGestureHandlerReanimatedEvent;
       items[1] = onGestureHandlerReanimatedStateChange;
       items[2] = onGestureHandlerReanimatedTouchEvent;
-      tmp3 = closure_5(() => ({ onGestureHandlerReanimatedStateChange, onGestureHandlerReanimatedEvent, onGestureHandlerReanimatedTouchEvent }), items);
+      tmp3 = closure_5(
+        () => ({
+          onGestureHandlerReanimatedStateChange,
+          onGestureHandlerReanimatedEvent,
+          onGestureHandlerReanimatedTouchEvent,
+        }),
+        items,
+      );
       closure_6 = tmp3;
       tmp4 = closure_4(() => {
         let num = closure_1_7(ref3.current);
@@ -112,7 +129,7 @@ if (tmp4) {
           _componentViewTag: num,
           getComponentViewTag() {
             return num;
-          }
+          },
         });
         let current = ref2.current;
         current.attachEvents();
@@ -155,11 +172,18 @@ if (tmp4) {
         onGestureHandlerReanimatedTouchEvent = global.onGestureHandlerReanimatedTouchEvent;
         closure_5 = onGestureHandlerReanimatedTouchEvent;
         tmp2 = closure_3(global, closure_2);
-        items = [, , ];
+        items = [, ,];
         items[0] = onGestureHandlerReanimatedEvent;
         items[1] = onGestureHandlerReanimatedStateChange;
         items[2] = onGestureHandlerReanimatedTouchEvent;
-        tmp3 = closure_5(() => ({ onGestureHandlerReanimatedStateChange, onGestureHandlerReanimatedEvent, onGestureHandlerReanimatedTouchEvent }), items);
+        tmp3 = closure_5(
+          () => ({
+            onGestureHandlerReanimatedStateChange,
+            onGestureHandlerReanimatedEvent,
+            onGestureHandlerReanimatedTouchEvent,
+          }),
+          items,
+        );
         closure_6 = tmp3;
         tmp4 = closure_4(() => {
           let num = closure_1_7(ref3.current);
@@ -173,7 +197,7 @@ if (tmp4) {
             _componentViewTag: num,
             getComponentViewTag() {
               return num;
-            }
+            },
           });
           let current = ref2.current;
           current.attachEvents();

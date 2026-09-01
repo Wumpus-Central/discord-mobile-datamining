@@ -26,8 +26,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 function validateOptions(options) {
   options = {};
@@ -124,7 +123,9 @@ function captureRef(obj, options) {
     return tmp(16093).captureRef(tmp15, options);
   } else {
     const _Error = Error;
-    const error2 = new Error("react-native-view-shot: NativeModules.RNViewShot is undefined. Make sure the library is linked on the native side.");
+    const error2 = new Error(
+      "react-native-view-shot: NativeModules.RNViewShot is undefined. Make sure the library is linked on the native side.",
+    );
     throw error2;
   }
   tmp = ViewShot;
@@ -137,25 +138,33 @@ function releaseCapture(str) {
 }
 noopDefault;
 ({ View: c5, Platform, findNodeHandle: closure_6, StyleProp } = get_ActivityIndicator);
-const promise = new Promise(() => {
-
-});
+const promise = new Promise(() => {});
 if (!get_ActivityIndicatorDefault) {
   const _console = console;
-  console.warn("react-native-view-shot: NativeModules.RNViewShot is undefined. Make sure the library is linked on the native side.");
+  console.warn(
+    "react-native-view-shot: NativeModules.RNViewShot is undefined. Make sure the library is linked on the native side.",
+  );
 }
 let items = ["png", "jpg"];
 function ensureModuleIsLoaded() {
   if (!ViewShot(16093)) {
     const _Error = Error;
-    error = new Error("react-native-view-shot: NativeModules.RNViewShot is undefined. Make sure the library is linked on the native side.");
+    error = new Error(
+      "react-native-view-shot: NativeModules.RNViewShot is undefined. Make sure the library is linked on the native side.",
+    );
     throw error;
   }
 }
 let closure_10 = items.concat(["webm", "raw"]);
 let items1 = ["tmpfile", "base64", "data-uri"];
 let closure_11 = items1.concat(["zip-base64"]);
-let closure_12 = { format: "png", quality: 1, result: "tmpfile", snapshotContentContainer: false, handleGLSurfaceViewOnAndroid: false };
+let closure_12 = {
+  format: "png",
+  quality: 1,
+  result: "tmpfile",
+  snapshotContentContainer: false,
+  handleGLSurfaceViewOnAndroid: false,
+};
 class ViewShot {
   constructor() {
     self = this;
@@ -179,21 +188,27 @@ class ViewShot {
       closure_0.resolveFirstLayout = resolveFirstLayout;
     });
     tmp3Result.firstLayoutPromise = promise;
-    tmp3Result.capture = () => closure_0.firstLayoutPromise.then(() => {
-      const root = closure_0.root;
-      if (root) {
-        let tmp2 = closure_1_14(root, tmp.props.options);
-      } else {
-        tmp2 = closure_1_9;
-      }
-      return tmp2;
-    }).then((arg0) => {
-      closure_0.onCapture(arg0);
-      return arg0;
-    }, (arg0) => {
-      closure_0.onCaptureFailure(arg0);
-      throw arg0;
-    });
+    tmp3Result.capture = () =>
+      closure_0.firstLayoutPromise
+        .then(() => {
+          const root = closure_0.root;
+          if (root) {
+            let tmp2 = closure_1_14(root, tmp.props.options);
+          } else {
+            tmp2 = closure_1_9;
+          }
+          return tmp2;
+        })
+        .then(
+          (arg0) => {
+            closure_0.onCapture(arg0);
+            return arg0;
+          },
+          (arg0) => {
+            closure_0.onCaptureFailure(arg0);
+            throw arg0;
+          },
+        );
     tmp3Result.onCapture = (lastCapturedURI) => {
       if (closure_0.root) {
         if (tmp.lastCapturedURI) {
@@ -254,7 +269,7 @@ const items2 = [
       } else {
         self.syncCaptureLoop(self.props.captureMode);
       }
-    }
+    },
   },
   {
     key: "componentDidUpdate",
@@ -270,20 +285,24 @@ const items2 = [
       if ("update" === self.props.captureMode) {
         self.capture();
       }
-    }
+    },
   },
   {
     key: "componentWillUnmount",
     value: function componentWillUnmount() {
       this.syncCaptureLoop(null);
-    }
+    },
   },
   {
     key: "render",
     value: function render() {
-      return <closure_5 ref={this.onRef} collapsable={false} onLayout={this.onLayout} style={this.props.style}>{this.props.children}</closure_5>;
-    }
-  }
+      return (
+        <closure_5 ref={this.onRef} collapsable={false} onLayout={this.onLayout} style={this.props.style}>
+          {this.props.children}
+        </closure_5>
+      );
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(ViewShot, items2);
 importDefaultResultResult.captureRef = captureRef;
@@ -300,7 +319,9 @@ export const captureScreen = function captureScreen(options) {
     return tmp(16093).captureScreen(options);
   } else {
     const _Error = Error;
-    error = new Error("react-native-view-shot: NativeModules.RNViewShot is undefined. Make sure the library is linked on the native side.");
+    error = new Error(
+      "react-native-view-shot: NativeModules.RNViewShot is undefined. Make sure the library is linked on the native side.",
+    );
     throw error;
   }
   tmp = ViewShot;

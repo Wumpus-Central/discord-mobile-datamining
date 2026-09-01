@@ -33,7 +33,11 @@ function mapItemAppearanceToNativeProp(compactInline) {
     if (selected) {
       const tabBarItemTitleFontWeight2 = selected.tabBarItemTitleFontWeight;
       obj = {};
-      ({ tabBarItemTitleFontColor: tabBarItemTitleFontColor2, tabBarItemIconColor: tabBarItemIconColor2, tabBarItemBadgeBackgroundColor: tabBarItemBadgeBackgroundColor2 } = selected);
+      ({
+        tabBarItemTitleFontColor: tabBarItemTitleFontColor2,
+        tabBarItemIconColor: tabBarItemIconColor2,
+        tabBarItemBadgeBackgroundColor: tabBarItemBadgeBackgroundColor2,
+      } = selected);
       const merged2 = Object.assign(selected);
       obj.tabBarItemTitleFontColor = callback(tabBarItemTitleFontColor2);
       obj.tabBarItemIconColor = callback(tabBarItemIconColor2);
@@ -51,7 +55,11 @@ function mapItemAppearanceToNativeProp(compactInline) {
     if (focused) {
       const tabBarItemTitleFontWeight3 = focused.tabBarItemTitleFontWeight;
       obj1 = {};
-      ({ tabBarItemTitleFontColor: tabBarItemTitleFontColor3, tabBarItemIconColor: tabBarItemIconColor3, tabBarItemBadgeBackgroundColor: tabBarItemBadgeBackgroundColor3 } = focused);
+      ({
+        tabBarItemTitleFontColor: tabBarItemTitleFontColor3,
+        tabBarItemIconColor: tabBarItemIconColor3,
+        tabBarItemBadgeBackgroundColor: tabBarItemBadgeBackgroundColor3,
+      } = focused);
       const merged3 = Object.assign(focused);
       obj1.tabBarItemTitleFontColor = callback(tabBarItemTitleFontColor3);
       obj1.tabBarItemIconColor = callback(tabBarItemIconColor3);
@@ -69,7 +77,11 @@ function mapItemAppearanceToNativeProp(compactInline) {
     if (disabled) {
       const tabBarItemTitleFontWeight4 = disabled.tabBarItemTitleFontWeight;
       const obj2 = {};
-      ({ tabBarItemTitleFontColor: tabBarItemTitleFontColor4, tabBarItemIconColor: tabBarItemIconColor4, tabBarItemBadgeBackgroundColor: tabBarItemBadgeBackgroundColor4 } = disabled);
+      ({
+        tabBarItemTitleFontColor: tabBarItemTitleFontColor4,
+        tabBarItemIconColor: tabBarItemIconColor4,
+        tabBarItemBadgeBackgroundColor: tabBarItemBadgeBackgroundColor4,
+      } = disabled);
       const merged4 = Object.assign(disabled);
       obj2.tabBarItemTitleFontColor = callback(tabBarItemTitleFontColor4);
       obj2.tabBarItemIconColor = callback(tabBarItemIconColor4);
@@ -86,7 +98,21 @@ function mapItemAppearanceToNativeProp(compactInline) {
     return obj;
   }
 }
-let closure_3 = ["onWillAppear", "onDidAppear", "onWillDisappear", "onDidDisappear", "isFocused", "freezeContents", "icon", "selectedIcon", "standardAppearance", "scrollEdgeAppearance", "scrollEdgeEffects", "experimental_userInterfaceStyle", "style"];
+let closure_3 = [
+  "onWillAppear",
+  "onDidAppear",
+  "onWillDisappear",
+  "onDidDisappear",
+  "isFocused",
+  "freezeContents",
+  "icon",
+  "selectedIcon",
+  "standardAppearance",
+  "scrollEdgeAppearance",
+  "scrollEdgeEffects",
+  "experimental_userInterfaceStyle",
+  "style",
+];
 ({ Image: error, Platform, StyleSheet, findNodeHandle: closure_8, processColor: c9 } = get_ActivityIndicator);
 const styles = StyleSheet.create({ fillParent: { position: "absolute", flex: 1, width: "100%", height: "100%" } });
 
@@ -166,7 +192,17 @@ export default function TabsScreen(onWillAppear) {
   if (num == null) {
     num = -1;
   }
-  ref(4903).bottomTabsDebugLog("TabsScreen [" + num + "] render; tabKey: " + tmp7.tabKey + " shouldFreeze: " + flag + ", isFocused: " + undefined !== isFocused && isFocused + " nativeViewIsVisible: " + tmp5);
+  ref(4903).bottomTabsDebugLog(
+    "TabsScreen [" +
+      num +
+      "] render; tabKey: " +
+      tmp7.tabKey +
+      " shouldFreeze: " +
+      flag +
+      ", isFocused: " +
+      undefined !==
+      isFocused && isFocused + " nativeViewIsVisible: " + tmp5,
+  );
   let android;
   if (icon != null) {
     android = icon.android;
@@ -195,14 +231,24 @@ export default function TabsScreen(onWillAppear) {
       obj1 = obj;
     } else {
       const _Error = Error;
-      error = new Error("[RNScreens] Incorrect icon format for Android. You must provide `imageSource` or `drawableResource`.");
+      error = new Error(
+        "[RNScreens] Incorrect icon format for Android. You must provide `imageSource` or `drawableResource`.",
+      );
       throw error;
     }
   } else {
     obj1 = {};
   }
   const merged = Object.assign(obj1);
-  const obj3 = { collapsable: false, style: items4, onWillAppear: callback, onDidAppear: callback1, onWillDisappear: callback2, onDidDisappear: callback3, isFocused: undefined !== isFocused && isFocused };
+  const obj3 = {
+    collapsable: false,
+    style: items4,
+    onWillAppear: callback,
+    onDidAppear: callback1,
+    onWillDisappear: callback2,
+    onDidDisappear: callback3,
+    isFocused: undefined !== isFocused && isFocused,
+  };
   items4 = [style, fillParent.fillParent];
   const obj2 = {};
   const tmp8Result = ref(4903);
@@ -223,7 +269,13 @@ export default function TabsScreen(onWillAppear) {
   let tmp36;
   if (scrollEdgeAppearance) {
     const obj5 = {};
-    ({ stacked: stacked2, inline: inline2, compactInline: compactInline2, tabBarBackgroundColor: tabBarBackgroundColor2, tabBarShadowColor: tabBarShadowColor2 } = scrollEdgeAppearance);
+    ({
+      stacked: stacked2,
+      inline: inline2,
+      compactInline: compactInline2,
+      tabBarBackgroundColor: tabBarBackgroundColor2,
+      tabBarShadowColor: tabBarShadowColor2,
+    } = scrollEdgeAppearance);
     const merged3 = Object.assign(scrollEdgeAppearance);
     obj5.stacked = mapItemAppearanceToNativeProp(stacked2);
     obj5.inline = mapItemAppearanceToNativeProp(inline2);
@@ -258,5 +310,13 @@ export default function TabsScreen(onWillAppear) {
   obj3.userInterfaceStyle = experimental_userInterfaceStyle;
   const merged4 = Object.assign(tmp7);
   obj3.children = jsx(ref(4876).Freeze, { freeze: flag, placeholder: tmp7.placeholder, children: tmp7.children });
-  return jsx(ref1(4910), { collapsable: false, style: items4, onWillAppear: callback, onDidAppear: callback1, onWillDisappear: callback2, onDidDisappear: callback3, isFocused: undefined !== isFocused && isFocused });
-};
+  return jsx(ref1(4910), {
+    collapsable: false,
+    style: items4,
+    onWillAppear: callback,
+    onDidAppear: callback1,
+    onWillDisappear: callback2,
+    onDidDisappear: callback3,
+    isFocused: undefined !== isFocused && isFocused,
+  });
+}

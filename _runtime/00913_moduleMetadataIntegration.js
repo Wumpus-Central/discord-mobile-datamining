@@ -29,5 +29,5 @@ export const moduleMetadataIntegration = setupIntegration.defineIntegration(() =
         const obj = options(closure_1_1[2]);
       }
     });
-  }
+  },
 }));

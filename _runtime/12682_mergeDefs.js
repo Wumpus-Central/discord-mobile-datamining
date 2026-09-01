@@ -59,9 +59,7 @@ if ("captureStackTrace" in Error) {
   let _Error = Error;
   let fn = Error.captureStackTrace;
 } else {
-  fn = () => {
-
-  };
+  fn = () => {};
 }
 f54781 = () => {
   if (typeof navigator !== "undefined") {
@@ -85,12 +83,12 @@ f54781 = () => {
 };
 let obj = {};
 Object.defineProperty(obj, "value", {
-  get: function() {
+  get: function () {
     const tmp = callback();
     Object.defineProperty(this, "value", { value: tmp });
     return tmp;
   },
-  set: undefined
+  set: undefined,
 });
 const set = new Set(["string", "number", "symbol"]);
 let items = [Number.MIN_SAFE_INTEGER, Number.MAX_SAFE_INTEGER];
@@ -113,22 +111,18 @@ export function assertEqual(arg0) {
 export function assertNotEqual(arg0) {
   return arg0;
 }
-export function assertIs(arg0) {
-
-}
+export function assertIs(arg0) {}
 export const assertNever = function assertNever(arg0) {
   error = new Error("Unexpected value in exhaustive check");
   throw error;
 };
-export function assert(arg0) {
-
-}
+export function assert(arg0) {}
 export const getEnumValues = function getEnumValues(entries) {
   const values = Object.values(entries);
   closure_0 = values.filter((num) => typeof num === "number");
   entries = Object.entries(entries);
   const found = entries.filter((arg0) => {
-    [tmp, ] = arg0;
+    [tmp] = arg0;
     return -1 === closure_0.indexOf(+tmp);
   });
   return found.map((arg0) => {
@@ -146,7 +140,7 @@ export const joinValues = function joinValues(keys, arg1) {
       let text = `${str.toString()}n`;
     } else if (typeof str === "string") {
       const _HermesInternal = HermesInternal;
-      text = "\"" + str + "\"";
+      text = '"' + str + '"';
     } else {
       const _HermesInternal2 = HermesInternal;
       text = "" + str;
@@ -166,12 +160,12 @@ export const cached = function cached(arg0) {
   closure_0 = arg0;
   const obj = {};
   Object.defineProperty(obj, "value", {
-    get: function() {
+    get: function () {
       const tmp = callback();
       Object.defineProperty(this, "value", { value: tmp });
       return tmp;
     },
-    set: undefined
+    set: undefined,
   });
   return obj;
 };
@@ -219,7 +213,7 @@ export const floatSafeRemainder = function floatSafeRemainder(value, value2) {
   const arr2 = str2.split(".")[1] || "";
   const parsed1 = Number.parseInt(value.toFixed(parsed).replace(".", ""));
   const str3 = value.toFixed(parsed);
-  return parsed1 % Number.parseInt(value2.toFixed(parsed).replace(".", "")) / 10 ** parsed;
+  return (parsed1 % Number.parseInt(value2.toFixed(parsed).replace(".", ""))) / 10 ** parsed;
 };
 export const defineLazy = function defineLazy(_zod, values, arg2) {
   closure_0 = _zod;
@@ -241,7 +235,7 @@ export const defineLazy = function defineLazy(_zod, values, arg2) {
     set(value) {
       Object.defineProperty(closure_0, closure_1, { value });
     },
-    configurable: true
+    configurable: true,
   });
 };
 export const objectClone = function objectClone(newQuality) {
@@ -311,8 +305,16 @@ export const esc = function esc(nextResult) {
 export const slugify = function slugify(str) {
   str = str.toLowerCase();
   const str2 = str.toLowerCase().trim();
-  const str3 = str.toLowerCase().trim().replace(/[^\w\s-]/g, "");
-  return str.toLowerCase().trim().replace(/[^\w\s-]/g, "").replace(/[\s_-]+/g, "-").replace(/^-+|-+$/g, "");
+  const str3 = str
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, "");
+  return str
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, "")
+    .replace(/[\s_-]+/g, "-")
+    .replace(/^-+|-+$/g, "");
 };
 export const isObject = function isObject(obj) {
   let tmp = typeof obj === "object";
@@ -430,50 +432,53 @@ export const normalizeParams = function normalizeParams(enc) {
 };
 export const createTransparentProxy = function createTransparentProxy(arg0) {
   closure_0 = arg0;
-  const proxy = new Proxy({}, {
-    get(arg0, arg1, arg2) {
-      if (closure_1 == null) {
-        closure_1 = callback();
-      }
-      return Reflect.get(closure_1, arg1, arg2);
+  const proxy = new Proxy(
+    {},
+    {
+      get(arg0, arg1, arg2) {
+        if (closure_1 == null) {
+          closure_1 = callback();
+        }
+        return Reflect.get(closure_1, arg1, arg2);
+      },
+      set(arg0, arg1, arg2, arg3) {
+        if (closure_1 == null) {
+          closure_1 = callback();
+        }
+        return Reflect.set(closure_1, arg1, arg2, arg3);
+      },
+      has(arg0, arg1) {
+        if (closure_1 == null) {
+          closure_1 = callback();
+        }
+        return Reflect.has(closure_1, arg1);
+      },
+      deleteProperty(closure_1, first) {
+        if (closure_1 == null) {
+          closure_1 = callback();
+        }
+        return Reflect.deleteProperty(closure_1, first);
+      },
+      ownKeys(arg0) {
+        if (closure_1 == null) {
+          closure_1 = callback();
+        }
+        return Reflect.ownKeys(closure_1);
+      },
+      getOwnPropertyDescriptor(arg0, arg1) {
+        if (closure_1 == null) {
+          closure_1 = callback();
+        }
+        return Reflect.getOwnPropertyDescriptor(closure_1, arg1);
+      },
+      defineProperty(arg0, arg1, arg2) {
+        if (closure_1 == null) {
+          closure_1 = callback();
+        }
+        return Reflect.defineProperty(closure_1, arg1, arg2);
+      },
     },
-    set(arg0, arg1, arg2, arg3) {
-      if (closure_1 == null) {
-        closure_1 = callback();
-      }
-      return Reflect.set(closure_1, arg1, arg2, arg3);
-    },
-    has(arg0, arg1) {
-      if (closure_1 == null) {
-        closure_1 = callback();
-      }
-      return Reflect.has(closure_1, arg1);
-    },
-    deleteProperty(closure_1, first) {
-      if (closure_1 == null) {
-        closure_1 = callback();
-      }
-      return Reflect.deleteProperty(closure_1, first);
-    },
-    ownKeys(arg0) {
-      if (closure_1 == null) {
-        closure_1 = callback();
-      }
-      return Reflect.ownKeys(closure_1);
-    },
-    getOwnPropertyDescriptor(arg0, arg1) {
-      if (closure_1 == null) {
-        closure_1 = callback();
-      }
-      return Reflect.getOwnPropertyDescriptor(closure_1, arg1);
-    },
-    defineProperty(arg0, arg1, arg2) {
-      if (closure_1 == null) {
-        closure_1 = callback();
-      }
-      return Reflect.defineProperty(closure_1, arg1, arg2);
-    }
-  });
+  );
   return proxy;
 };
 export const stringifyPrimitive = function stringifyPrimitive(str) {
@@ -481,7 +486,7 @@ export const stringifyPrimitive = function stringifyPrimitive(str) {
     let text = `${str.toString()}n`;
   } else if (typeof str === "string") {
     const _HermesInternal = HermesInternal;
-    text = "\"" + str + "\"";
+    text = '"' + str + '"';
   } else {
     const _HermesInternal2 = HermesInternal;
     text = "" + str;
@@ -491,7 +496,9 @@ export const stringifyPrimitive = function stringifyPrimitive(str) {
 export const optionalKeys = function optionalKeys(arg0) {
   closure_0 = arg0;
   const keys = Object.keys(arg0);
-  return keys.filter((arg0) => "optional" === dependencyMap[arg0]._zod.optin && "optional" === dependencyMap[arg0]._zod.optout);
+  return keys.filter(
+    (arg0) => "optional" === dependencyMap[arg0]._zod.optin && "optional" === dependencyMap[arg0]._zod.optout,
+  );
 };
 export const pick = function pick(_zod) {
   closure_0 = arg1;
@@ -506,7 +513,7 @@ export const pick = function pick(_zod) {
   }
   let obj = {};
   Object.defineProperty(obj, "shape", {
-    get: function() {
+    get: function () {
       const obj = {};
       for (const key10003 in closure_0) {
         let tmp8 = key10003;
@@ -523,11 +530,11 @@ export const pick = function pick(_zod) {
           let tmp = globalThis;
           let _Error = Error;
           let _HermesInternal = HermesInternal;
-          let str = "\"";
-          let str2 = "Unrecognized key: \"";
+          let str = '"';
+          let str2 = 'Unrecognized key: "';
           let tmp2 = new.target;
           let tmp3 = new.target;
-          error = new Error("Unrecognized key: \"" + key10003 + "\"");
+          error = new Error('Unrecognized key: "' + key10003 + '"');
           let tmp5 = error;
           throw error;
         }
@@ -535,7 +542,7 @@ export const pick = function pick(_zod) {
       Object.defineProperty(this, "shape", { value: obj, writable: true, enumerable: true, configurable: true });
       return obj;
     },
-    set: undefined
+    set: undefined,
   });
   obj.checks = [];
   let flag = mergeDefs(_zod._zod.def, obj);
@@ -566,7 +573,7 @@ export const omit = function omit(importDefaultResult3Result, closure_4, newline
   }
   let obj = {};
   Object.defineProperty(obj, "shape", {
-    get: function() {
+    get: function () {
       const obj = {};
       const merged = Object.assign(importDefaultResult3Result._zod.def.shape);
       for (const key10009 in closure_1) {
@@ -585,11 +592,11 @@ export const omit = function omit(importDefaultResult3Result, closure_4, newline
           let tmp4 = globalThis;
           let _Error = Error;
           let _HermesInternal = HermesInternal;
-          let str = "\"";
-          let str2 = "Unrecognized key: \"";
+          let str = '"';
+          let str2 = 'Unrecognized key: "';
           let tmp5 = new.target;
           let tmp6 = new.target;
-          error = new Error("Unrecognized key: \"" + key10009 + "\"");
+          error = new Error('Unrecognized key: "' + key10009 + '"');
           let tmp8 = error;
           throw error;
         }
@@ -597,7 +604,7 @@ export const omit = function omit(importDefaultResult3Result, closure_4, newline
       Object.defineProperty(this, "shape", { value: obj, writable: true, enumerable: true, configurable: true });
       return obj;
     },
-    set: undefined
+    set: undefined,
   });
   obj.checks = [];
   let flag = def(importDefaultResult3Result._zod.def, obj);
@@ -631,7 +638,9 @@ export const extend = function extend(_zod, obj) {
             let tmp9 = new.target;
             let str2 = "Cannot overwrite keys on object schemas containing refinements. Use `.safeExtend()` instead.";
             let tmp10 = new.target;
-            error = new Error("Cannot overwrite keys on object schemas containing refinements. Use `.safeExtend()` instead.");
+            error = new Error(
+              "Cannot overwrite keys on object schemas containing refinements. Use `.safeExtend()` instead.",
+            );
             let tmp12 = error;
             throw error;
           }
@@ -640,14 +649,14 @@ export const extend = function extend(_zod, obj) {
     }
     obj = {};
     Object.defineProperty(obj, "shape", {
-      get: function() {
-          obj = {};
-          const merged = Object.assign(_zod._zod.def.shape);
-          const merged1 = Object.assign(closure_1);
-          Object.defineProperty(this, "shape", { value: obj, writable: true, enumerable: true, configurable: true });
-          return obj;
-        },
-      set: undefined
+      get: function () {
+        obj = {};
+        const merged = Object.assign(_zod._zod.def.shape);
+        const merged1 = Object.assign(closure_1);
+        Object.defineProperty(this, "shape", { value: obj, writable: true, enumerable: true, configurable: true });
+        return obj;
+      },
+      set: undefined,
     });
     let flag = mergeDefs(_zod._zod.def, obj);
     let def = flag;
@@ -673,14 +682,14 @@ export const safeExtend = function safeExtend(closure_0, arg1) {
   if (isPlainObject(arg1)) {
     let obj = {};
     Object.defineProperty(obj, "shape", {
-      get: function() {
-          const obj = {};
-          const merged = Object.assign(_zod._zod.def.shape);
-          const merged1 = Object.assign(closure_1);
-          Object.defineProperty(this, "shape", { value: obj, writable: true, enumerable: true, configurable: true });
-          return obj;
-        },
-      set: undefined
+      get: function () {
+        const obj = {};
+        const merged = Object.assign(_zod._zod.def.shape);
+        const merged1 = Object.assign(closure_1);
+        Object.defineProperty(this, "shape", { value: obj, writable: true, enumerable: true, configurable: true });
+        return obj;
+      },
+      set: undefined,
     });
     let flag = mergeDefs(closure_0._zod.def, obj);
     let def = flag;
@@ -706,14 +715,14 @@ export const merge = function merge(_zod) {
   closure_1 = arg1;
   let obj = {};
   Object.defineProperty(obj, "shape", {
-    get: function() {
+    get: function () {
       const obj = {};
       const merged = Object.assign(_zod._zod.def.shape);
       const merged1 = Object.assign(closure_1._zod.def.shape);
       Object.defineProperty(this, "shape", { value: obj, writable: true, enumerable: true, configurable: true });
       return obj;
     },
-    set: undefined
+    set: undefined,
   });
   Object.defineProperty(obj, "catchall", { get: () => closure_1._zod.def.catchall, set: undefined });
   obj.checks = [];
@@ -745,7 +754,7 @@ export const partial = function partial(arg0, _zod) {
   }
   let obj = {};
   Object.defineProperty(obj, "shape", {
-    get: function() {
+    get: function () {
       const shape = _zod._zod.def.shape;
       let obj = {};
       const merged = Object.assign(shape);
@@ -776,11 +785,11 @@ export const partial = function partial(arg0, _zod) {
             let tmp9 = globalThis;
             let _Error = Error;
             let _HermesInternal = HermesInternal;
-            let str = "\"";
-            let str2 = "Unrecognized key: \"";
+            let str = '"';
+            let str2 = 'Unrecognized key: "';
             let tmp10 = new.target;
             let tmp11 = new.target;
-            error = new Error("Unrecognized key: \"" + key10020 + "\"");
+            error = new Error('Unrecognized key: "' + key10020 + '"');
             let tmp13 = error;
             throw error;
           }
@@ -806,7 +815,7 @@ export const partial = function partial(arg0, _zod) {
       Object.defineProperty(this, "shape", { value: obj, writable: true, enumerable: true, configurable: true });
       return obj;
     },
-    set: undefined
+    set: undefined,
   });
   obj.checks = [];
   let flag = mergeDefs(_zod._zod.def, obj);
@@ -829,7 +838,7 @@ export const required = function required(arg0, _zod) {
   mergeDefs = arg2;
   let obj = {};
   Object.defineProperty(obj, "shape", {
-    get: function() {
+    get: function () {
       const shape = _zod._zod.def.shape;
       let obj = {};
       const merged = Object.assign(shape);
@@ -857,11 +866,11 @@ export const required = function required(arg0, _zod) {
             let tmp5 = globalThis;
             let _Error = Error;
             let _HermesInternal = HermesInternal;
-            let str = "\"";
-            let str2 = "Unrecognized key: \"";
+            let str = '"';
+            let str2 = 'Unrecognized key: "';
             let tmp6 = new.target;
             let tmp7 = new.target;
-            error = new Error("Unrecognized key: \"" + key10014 + "\"");
+            error = new Error('Unrecognized key: "' + key10014 + '"');
             let tmp9 = error;
             throw error;
           }
@@ -884,7 +893,7 @@ export const required = function required(arg0, _zod) {
       Object.defineProperty(this, "shape", { value: obj, writable: true, enumerable: true, configurable: true });
       return obj;
     },
-    set: undefined
+    set: undefined,
   });
   let flag = mergeDefs(_zod._zod.def, obj);
   let def = flag;
@@ -1120,7 +1129,7 @@ export const issue = function issue(arg0, value, closure_1_1) {
 export const cleanEnum = function cleanEnum(arg0) {
   const entries = Object.entries(arg0);
   const found = entries.filter((arg0) => {
-    [tmp, ] = arg0;
+    [tmp] = arg0;
     return Number.isNaN(Number.parseInt(tmp, 10));
   });
   return found.map((arg0) => arg0[1]);
@@ -1158,7 +1167,7 @@ export const uint8ArrayToBase64 = function uint8ArrayToBase64(arg0) {
 export const base64urlToUint8Array = function base64urlToUint8Array(str) {
   let length;
   const replaced = str.replace(/-/g, "+").replace(/_/g, "/");
-  const atobResult = atob(replaced + "=".repeat((4 - replaced.length % 4) % 4));
+  const atobResult = atob(replaced + "=".repeat((4 - (replaced.length % 4)) % 4));
   const uint8Array = new Uint8Array(atobResult.length);
   let num = 0;
   if (0 < atobResult.length) {
@@ -1298,6 +1307,12 @@ export const getParsedType = (self) => {
 };
 export const propertyKeyTypes = new Set(["string", "number", "symbol"]);
 export const primitiveTypes = new Set(["string", "number", "bigint", "boolean", "symbol", "undefined"]);
-export const NUMBER_FORMAT_RANGES = { safeint: items, int32: [-2147483648, 2147483647], uint32: [0, 4294967295], float32: [-340282346638528860000000000000000000000, 340282346638528860000000000000000000000], float64: items1 };
+export const NUMBER_FORMAT_RANGES = {
+  safeint: items,
+  int32: [-2147483648, 2147483647],
+  uint32: [0, 4294967295],
+  float32: [-340282346638528860000000000000000000000, 340282346638528860000000000000000000000],
+  float64: items1,
+};
 export const BIGINT_FORMAT_RANGES = obj;
 export const Class = _createClass(Class);

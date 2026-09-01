@@ -47,7 +47,14 @@ export const newRangeCount = function newRangeCount(last, last2) {
   const sum1 = 1 + Math.min(last2.last, last.last);
   return sum - Math.max(0, sum1 - Math.max(last2.first, last.first));
 };
-export const computeWindowedRenderLimits = function computeWindowedRenderLimits(getItemCount, result2, tmpResult2, last, _listMetrics, _scrollMetrics) {
+export const computeWindowedRenderLimits = function computeWindowedRenderLimits(
+  getItemCount,
+  result2,
+  tmpResult2,
+  last,
+  _listMetrics,
+  _scrollMetrics,
+) {
   const itemCount = getItemCount.getItemCount(getItemCount.data);
   if (0 === itemCount) {
     return { first: 0, last: -1 };

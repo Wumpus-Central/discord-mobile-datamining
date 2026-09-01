@@ -22,10 +22,11 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
-let closure_5 = { code: "function pnpm_SlideTs1(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{originX:delayFunction(delay,animation(values.targetOriginX,config))},initialValues:{originX:values.targetOriginX+values.windowWidth,...initialValues},callback:callback};}" };
+let closure_5 = {
+  code: "function pnpm_SlideTs1(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{originX:delayFunction(delay,animation(values.targetOriginX,config))},initialValues:{originX:values.targetOriginX+values.windowWidth,...initialValues},callback:callback};}",
+};
 class SlideInRight {
   constructor() {
     self = this;
@@ -77,12 +78,14 @@ let obj = {
   key: "createInstance",
   value: function createInstance() {
     return SlideOutDown();
-  }
+  },
 };
 let items = [obj];
 const importDefaultResultResult = importDefaultResult(SlideInRight, null, items);
 importDefaultResultResult.presetName = "SlideInRight";
-let closure_6 = { code: "function pnpm_SlideTs2(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{originX:delayFunction(delay,animation(values.targetOriginX,config))},initialValues:{originX:values.targetOriginX-values.windowWidth,...initialValues},callback:callback};}" };
+let closure_6 = {
+  code: "function pnpm_SlideTs2(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{originX:delayFunction(delay,animation(values.targetOriginX,config))},initialValues:{originX:values.targetOriginX-values.windowWidth,...initialValues},callback:callback};}",
+};
 class SlideInLeft {
   constructor() {
     self = this;
@@ -134,12 +137,14 @@ obj = {
   key: "createInstance",
   value: function createInstance() {
     return SlideOutDown();
-  }
+  },
 };
 let items1 = [obj];
 const importDefaultResultResult1 = importDefaultResult(SlideInLeft, null, items1);
 importDefaultResultResult1.presetName = "SlideInLeft";
-let closure_7 = { code: "function pnpm_SlideTs3(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{originX:delayFunction(delay,animation(Math.max(values.currentOriginX+values.windowWidth,values.windowWidth),config))},initialValues:{originX:values.currentOriginX,...initialValues},callback:callback};}" };
+let closure_7 = {
+  code: "function pnpm_SlideTs3(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{originX:delayFunction(delay,animation(Math.max(values.currentOriginX+values.windowWidth,values.windowWidth),config))},initialValues:{originX:values.currentOriginX,...initialValues},callback:callback};}",
+};
 class SlideOutRight {
   constructor() {
     self = this;
@@ -169,7 +174,15 @@ class SlideOutRight {
       const initialValues = delayFunction.initialValues;
       const fn = function e(currentOriginX) {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { originX: delayFunction(delay, first(Math.max(currentOriginX.currentOriginX + currentOriginX.windowWidth, currentOriginX.windowWidth), closure_2)) };
+        obj = {
+          originX: delayFunction(
+            delay,
+            first(
+              Math.max(currentOriginX.currentOriginX + currentOriginX.windowWidth, currentOriginX.windowWidth),
+              closure_2,
+            ),
+          ),
+        };
         obj[0] = obj;
         obj = { originX: currentOriginX.currentOriginX };
         const merged = Object.assign(initialValues);
@@ -191,12 +204,14 @@ obj = {
   key: "createInstance",
   value: function createInstance() {
     return SlideOutDown();
-  }
+  },
 };
 const items2 = [obj];
 const importDefaultResultResult2 = importDefaultResult(SlideOutRight, null, items2);
 importDefaultResultResult2.presetName = "SlideOutRight";
-let closure_8 = { code: "function pnpm_SlideTs4(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{originX:delayFunction(delay,animation(Math.min(values.currentOriginX-values.windowWidth,-values.windowWidth),config))},initialValues:{originX:values.currentOriginX,...initialValues},callback:callback};}" };
+let closure_8 = {
+  code: "function pnpm_SlideTs4(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{originX:delayFunction(delay,animation(Math.min(values.currentOriginX-values.windowWidth,-values.windowWidth),config))},initialValues:{originX:values.currentOriginX,...initialValues},callback:callback};}",
+};
 class SlideOutLeft {
   constructor() {
     self = this;
@@ -226,7 +241,15 @@ class SlideOutLeft {
       const initialValues = delayFunction.initialValues;
       const fn = function e(currentOriginX) {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { originX: delayFunction(delay, first(Math.min(currentOriginX.currentOriginX - currentOriginX.windowWidth, -currentOriginX.windowWidth), closure_2)) };
+        obj = {
+          originX: delayFunction(
+            delay,
+            first(
+              Math.min(currentOriginX.currentOriginX - currentOriginX.windowWidth, -currentOriginX.windowWidth),
+              closure_2,
+            ),
+          ),
+        };
         obj[0] = obj;
         obj = { originX: currentOriginX.currentOriginX };
         const merged = Object.assign(initialValues);
@@ -249,12 +272,14 @@ const items3 = [
     key: "createInstance",
     value: function createInstance() {
       return SlideOutDown();
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult3 = importDefaultResult(SlideOutLeft, null, items3);
 importDefaultResultResult3.presetName = "SlideOutLeft";
-let closure_9 = { code: "function pnpm_SlideTs5(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{originY:delayFunction(delay,animation(values.targetOriginY,config))},initialValues:{originY:-values.windowHeight,...initialValues},callback:callback};}" };
+let closure_9 = {
+  code: "function pnpm_SlideTs5(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{originY:delayFunction(delay,animation(values.targetOriginY,config))},initialValues:{originY:-values.windowHeight,...initialValues},callback:callback};}",
+};
 class SlideInUp {
   constructor() {
     self = this;
@@ -307,12 +332,14 @@ const items4 = [
     key: "createInstance",
     value: function createInstance() {
       return SlideOutDown();
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult4 = importDefaultResult(SlideInUp, null, items4);
 importDefaultResultResult4.presetName = "SlideInUp";
-let closure_10 = { code: "function pnpm_SlideTs6(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{originY:delayFunction(delay,animation(values.targetOriginY,config))},initialValues:{originY:values.targetOriginY+values.windowHeight,...initialValues},callback:callback};}" };
+let closure_10 = {
+  code: "function pnpm_SlideTs6(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{originY:delayFunction(delay,animation(values.targetOriginY,config))},initialValues:{originY:values.targetOriginY+values.windowHeight,...initialValues},callback:callback};}",
+};
 class SlideInDown {
   constructor() {
     self = this;
@@ -365,12 +392,14 @@ const items5 = [
     key: "createInstance",
     value: function createInstance() {
       return SlideOutDown();
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult5 = importDefaultResult(SlideInDown, null, items5);
 importDefaultResultResult5.presetName = "SlideInDown";
-let closure_11 = { code: "function pnpm_SlideTs7(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{originY:delayFunction(delay,animation(Math.min(values.currentOriginY-values.windowHeight,-values.windowHeight),config))},initialValues:{originY:values.currentOriginY,...initialValues},callback:callback};}" };
+let closure_11 = {
+  code: "function pnpm_SlideTs7(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{originY:delayFunction(delay,animation(Math.min(values.currentOriginY-values.windowHeight,-values.windowHeight),config))},initialValues:{originY:values.currentOriginY,...initialValues},callback:callback};}",
+};
 class SlideOutUp {
   constructor() {
     self = this;
@@ -400,7 +429,15 @@ class SlideOutUp {
       const initialValues = delayFunction.initialValues;
       const fn = function e(currentOriginY) {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { originY: delayFunction(delay, first(Math.min(currentOriginY.currentOriginY - currentOriginY.windowHeight, -currentOriginY.windowHeight), closure_2)) };
+        obj = {
+          originY: delayFunction(
+            delay,
+            first(
+              Math.min(currentOriginY.currentOriginY - currentOriginY.windowHeight, -currentOriginY.windowHeight),
+              closure_2,
+            ),
+          ),
+        };
         obj[0] = obj;
         obj = { originY: currentOriginY.currentOriginY };
         const merged = Object.assign(initialValues);
@@ -423,12 +460,14 @@ const items6 = [
     key: "createInstance",
     value: function createInstance() {
       return SlideOutDown();
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult6 = importDefaultResult(SlideOutUp, null, items6);
 importDefaultResultResult6.presetName = "SlideOutUp";
-let closure_12 = { code: "function pnpm_SlideTs8(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{originY:delayFunction(delay,animation(Math.max(values.currentOriginY+values.windowHeight,values.windowHeight),config))},initialValues:{originY:values.currentOriginY,...initialValues},callback:callback};}" };
+let closure_12 = {
+  code: "function pnpm_SlideTs8(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{originY:delayFunction(delay,animation(Math.max(values.currentOriginY+values.windowHeight,values.windowHeight),config))},initialValues:{originY:values.currentOriginY,...initialValues},callback:callback};}",
+};
 class SlideOutDown {
   constructor() {
     self = this;
@@ -458,7 +497,15 @@ class SlideOutDown {
       const initialValues = delayFunction.initialValues;
       const fn = function e(currentOriginY) {
         let obj = { animations: null, initialValues: null, callback: null };
-        obj = { originY: delayFunction(delay, first(Math.max(currentOriginY.currentOriginY + currentOriginY.windowHeight, currentOriginY.windowHeight), closure_2)) };
+        obj = {
+          originY: delayFunction(
+            delay,
+            first(
+              Math.max(currentOriginY.currentOriginY + currentOriginY.windowHeight, currentOriginY.windowHeight),
+              closure_2,
+            ),
+          ),
+        };
         obj[0] = obj;
         obj = { originY: currentOriginY.currentOriginY };
         const merged = Object.assign(initialValues);
@@ -480,8 +527,8 @@ const items7 = [
     key: "createInstance",
     value: function createInstance() {
       return SlideOutDown();
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult7 = importDefaultResult(SlideOutDown, null, items7);
 importDefaultResultResult7.presetName = "SlideOutDown";

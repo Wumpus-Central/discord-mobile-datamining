@@ -8,7 +8,7 @@ let closure_4 = {
   readUnknownField: true,
   readerFactory(arg0) {
     return new closure_5(arg0);
-  }
+  },
 };
 class BinaryReader {
   constructor(arg0, arg1) {
@@ -47,7 +47,7 @@ let items = [
       }
       error = new Error("illegal tag: field no " + tmp2 + " wire type " + tmp3);
       throw error;
-    }
+    },
   },
   {
     key: "skip",
@@ -91,7 +91,7 @@ let items = [
       self.assertBounds();
       const buf = self.buf;
       return buf.subarray(this.pos, self.pos);
-    }
+    },
   },
   {
     key: "assertBounds",
@@ -101,47 +101,47 @@ let items = [
         const rangeError = new RangeError("premature EOF");
         throw rangeError;
       }
-    }
+    },
   },
   {
     key: "int32",
     value: function int32() {
       return this.uint32() | 0;
-    }
+    },
   },
   {
     key: "sint32",
     value: function sint32() {
       const uint32Result = this.uint32();
-      return uint32Result >>> 1 ^ -1 & uint32Result;
-    }
+      return (uint32Result >>> 1) ^ (-1 & uint32Result);
+    },
   },
   {
     key: "int64",
     value: function int64() {
       return BinaryReader(1314).PbLong(...this.varint64());
-    }
+    },
   },
   {
     key: "uint64",
     value: function uint64() {
       return BinaryReader(1314).PbULong(...this.varint64());
-    }
+    },
   },
   {
     key: "sint64",
     value: function sint64() {
       [tmp2, tmp3] = callback(this.varint64(), 2);
-      const pbLong = new BinaryReader(1314).PbLong((tmp2 >>> 1 | (1 & tmp3) << 31) ^ tmp4, tmp3 >>> 1 ^ tmp4);
+      const pbLong = new BinaryReader(1314).PbLong(((tmp2 >>> 1) | ((1 & tmp3) << 31)) ^ tmp4, (tmp3 >>> 1) ^ tmp4);
       return pbLong;
-    }
+    },
   },
   {
     key: "bool",
     value: function bool() {
       const tmp = callback(this.varint64(), 2);
       return 0 !== tmp[0] || 0 !== tmp[1];
-    }
+    },
   },
   {
     key: "fixed32",
@@ -150,7 +150,7 @@ let items = [
       const sum = this.pos + 4;
       this.pos = sum;
       return view.getUint32(sum - 4, true);
-    }
+    },
   },
   {
     key: "sfixed32",
@@ -159,21 +159,21 @@ let items = [
       const sum = this.pos + 4;
       this.pos = sum;
       return view.getInt32(sum - 4, true);
-    }
+    },
   },
   {
     key: "fixed64",
     value: function fixed64() {
       const pbULong = new BinaryReader(1314).PbULong(this.sfixed32(), this.sfixed32());
       return pbULong;
-    }
+    },
   },
   {
     key: "sfixed64",
     value: function sfixed64() {
       const pbLong = new BinaryReader(1314).PbLong(this.sfixed32(), this.sfixed32());
       return pbLong;
-    }
+    },
   },
   {
     key: "float",
@@ -182,7 +182,7 @@ let items = [
       const sum = this.pos + 4;
       this.pos = sum;
       return view.getFloat32(sum - 4, true);
-    }
+    },
   },
   {
     key: "double",
@@ -191,7 +191,7 @@ let items = [
       const sum = this.pos + 8;
       this.pos = sum;
       return view.getFloat64(sum - 8, true);
-    }
+    },
   },
   {
     key: "bytes",
@@ -202,15 +202,15 @@ let items = [
       this.assertBounds();
       const buf = this.buf;
       return buf.subarray(pos, pos + uint32Result);
-    }
+    },
   },
   {
     key: "string",
     value: function string() {
       const textDecoder = this.textDecoder;
       return textDecoder.decode(this.bytes());
-    }
-  }
+    },
+  },
 ];
 const _moduleResult = _createClass(BinaryReader, items);
 let c5 = _moduleResult;

@@ -1,7 +1,6 @@
 // _runtime/08661_compareMultiple.js
 import compareAscending from "08662_compareAscending.js";
 
-
 export default function compareMultiple(criteria, index) {
   criteria = criteria.criteria;
   let num = 0;
@@ -21,4 +20,4 @@ export default function compareMultiple(criteria, index) {
     return result;
   }
   return criteria.index - index.index;
-};
+}

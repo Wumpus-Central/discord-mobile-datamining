@@ -1,8 +1,12 @@
 // _runtime/01751_makeViewDescriptorsSet.js
 const require = arg1;
 const dependencyMap = arg6;
-let closure_2 = { code: "function pnpm_ViewDescriptorsSetTs1(descriptors){const{item,updater}=this.__closure;var _updater;const index=descriptors.findIndex(function(descriptor){return descriptor.tag===item.tag;});if(index!==-1){descriptors[index]=item;}else{descriptors.push(item);}(_updater=updater)===null||_updater===void 0||_updater(true);return descriptors;}" };
-let closure_3 = { code: "function pnpm_ViewDescriptorsSetTs2(descriptors){const{viewTag}=this.__closure;const index=descriptors.findIndex(function(descriptor){return descriptor.tag===viewTag;});if(index!==-1){descriptors.splice(index,1);}return descriptors;}" };
+let closure_2 = {
+  code: "function pnpm_ViewDescriptorsSetTs1(descriptors){const{item,updater}=this.__closure;var _updater;const index=descriptors.findIndex(function(descriptor){return descriptor.tag===item.tag;});if(index!==-1){descriptors[index]=item;}else{descriptors.push(item);}(_updater=updater)===null||_updater===void 0||_updater(true);return descriptors;}",
+};
+let closure_3 = {
+  code: "function pnpm_ViewDescriptorsSetTs2(descriptors){const{viewTag}=this.__closure;const index=descriptors.findIndex(function(descriptor){return descriptor.tag===viewTag;});if(index!==-1){descriptors.splice(index,1);}return descriptors;}",
+};
 arg5.makeViewDescriptorsSet = function makeViewDescriptorsSet() {
   let obj = mutable(set[0]);
   mutable = obj.makeMutable([]);
@@ -50,7 +54,7 @@ arg5.makeViewDescriptorsSet = function makeViewDescriptorsSet() {
     },
     has(arg0) {
       return set.has(arg0);
-    }
+    },
   };
   return obj;
 };

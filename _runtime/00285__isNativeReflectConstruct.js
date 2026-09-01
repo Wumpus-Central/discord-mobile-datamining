@@ -22,14 +22,13 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class ResponderEvent {
   constructor(arg0, arg1, arg2, arg3, arg4) {
     self = this;
     tmp = ResponderEvent(this, ResponderEvent);
-    items = [, , , ];
+    items = [, , ,];
     items[0] = global;
     items[1] = arg1;
     items[2] = importDefault;
@@ -55,8 +54,8 @@ let items = [
     key: "touchHistory",
     get() {
       return this._touchHistory;
-    }
-  }
+    },
+  },
 ];
 
 export default importDefaultResult(ResponderEvent, items);

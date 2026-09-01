@@ -28,7 +28,9 @@ let obj = {
     const tmp = callback3(touchHistory, _accountsForMovesUpTo);
     const tmp2 = callback(touchHistory, _accountsForMovesUpTo);
     const sum = _accountsForMovesUpTo.dx + (tmp2 - tmp);
-    const sum1 = _accountsForMovesUpTo.dy + (callback2(touchHistory, _accountsForMovesUpTo) - callback4(touchHistory, _accountsForMovesUpTo));
+    const sum1 =
+      _accountsForMovesUpTo.dy +
+      (callback2(touchHistory, _accountsForMovesUpTo) - callback4(touchHistory, _accountsForMovesUpTo));
     const diff = touchHistory.mostRecentTimeStamp - _accountsForMovesUpTo._accountsForMovesUpTo;
     _accountsForMovesUpTo.vx = (sum - _accountsForMovesUpTo.dx) / diff;
     _accountsForMovesUpTo.vy = (sum1 - _accountsForMovesUpTo.dy) / diff;
@@ -38,12 +40,24 @@ let obj = {
   },
   create(arg0) {
     closure_0 = arg0;
-    obj = { stateID: Math.random(), moveX: 0, moveY: 0, x0: 0, y0: 0, dx: 0, dy: 0, vx: 0, vy: 0, numberActiveTouches: 0, _accountsForMovesUpTo: 0 };
+    obj = {
+      stateID: Math.random(),
+      moveX: 0,
+      moveY: 0,
+      x0: 0,
+      y0: 0,
+      dx: 0,
+      dy: 0,
+      vx: 0,
+      vy: 0,
+      numberActiveTouches: 0,
+      _accountsForMovesUpTo: 0,
+    };
     obj = {
       panHandlers: obj,
       getInteractionHandle() {
         return null;
-      }
+      },
     };
     obj = {
       onStartShouldSetResponder(arg0) {
@@ -65,15 +79,22 @@ let obj = {
           const result = closure_1_6._initializeGestureState(obj);
         }
         obj.numberActiveTouches = nativeEvent.touchHistory.numberActiveTouches;
-        return null != closure_0.onStartShouldSetPanResponderCapture && closure_0.onStartShouldSetPanResponderCapture(nativeEvent, tmp4);
+        return (
+          null != closure_0.onStartShouldSetPanResponderCapture &&
+          closure_0.onStartShouldSetPanResponderCapture(nativeEvent, tmp4)
+        );
       },
       onMoveShouldSetResponderCapture(touchHistory) {
         touchHistory = touchHistory.touchHistory;
         let tmp2 = obj._accountsForMovesUpTo !== touchHistory.mostRecentTimeStamp;
         if (tmp2) {
           const result = closure_1_6._updateGestureStateOnMove(tmp, touchHistory);
-          tmp2 = closure_0.onMoveShouldSetPanResponderCapture && closure_0.onMoveShouldSetPanResponderCapture(touchHistory, tmp);
-          const tmp5 = closure_0.onMoveShouldSetPanResponderCapture && closure_0.onMoveShouldSetPanResponderCapture(touchHistory, tmp);
+          tmp2 =
+            closure_0.onMoveShouldSetPanResponderCapture &&
+            closure_0.onMoveShouldSetPanResponderCapture(touchHistory, tmp);
+          const tmp5 =
+            closure_0.onMoveShouldSetPanResponderCapture &&
+            closure_0.onMoveShouldSetPanResponderCapture(touchHistory, tmp);
         }
         return tmp2;
       },
@@ -85,7 +106,10 @@ let obj = {
         if (closure_0.onPanResponderGrant) {
           obj.onPanResponderGrant(touchHistory, tmp);
         }
-        return null == closure_0.onShouldBlockNativeResponder || closure_0.onShouldBlockNativeResponder(touchHistory, closure_0);
+        return (
+          null == closure_0.onShouldBlockNativeResponder ||
+          closure_0.onShouldBlockNativeResponder(touchHistory, closure_0)
+        );
       },
       onResponderReject(arg0) {
         const onPanResponderReject = closure_0.onPanResponderReject;
@@ -155,10 +179,10 @@ let obj = {
           result = obj.onPanResponderTerminationRequest(arg0, obj);
         }
         return result;
-      }
+      },
     };
     return obj;
-  }
+  },
 };
 
 export default obj;

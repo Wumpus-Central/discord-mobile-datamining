@@ -1,7 +1,6 @@
 // _runtime/04610_baseKeysIn.js
 import isObject from "00606_isObject.js";
 
-
 export default function baseKeysIn(obj) {
   if (isObject(obj)) {
     const tmp3 = tmp(630)(obj);
@@ -35,4 +34,4 @@ export default function baseKeysIn(obj) {
   } else {
     return tmp(4611)(obj);
   }
-};
+}

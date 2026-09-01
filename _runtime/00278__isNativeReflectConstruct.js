@@ -13,12 +13,11 @@ arg5.default = {
         error.isComponentError = true;
         module(189).handleException(error, false);
         return false;
-      } catch (err) {
-      }
+      } catch (err) {}
     } else if (typeof error === "string") {
       let syntheticError = new _isNativeReflectConstruct.SyntheticError(error);
     } else {
       syntheticError = new _isNativeReflectConstruct.SyntheticError("Unspecified error");
     }
-  }
+  },
 };

@@ -1,16 +1,32 @@
 // _runtime/00535_interpretNumericEntities.js
 import items3 from "00536_items.js";
 
-let obj = { allowDots: false, allowEmptyArrays: false, allowPrototypes: false, allowSparse: false, arrayLimit: 20, charset: "utf-8", charsetSentinel: false, comma: false, decodeDotInKeys: false, decoder: items3.decode, delimiter: "&", depth: 5, duplicates: "combine", ignoreQueryPrefix: false, interpretNumericEntities: false, parameterLimit: 1000, parseArrays: true, plainObjects: false, strictDepth: false, strictNullHandling: false, throwOnLimitExceeded: false };
-function interpretNumericEntities(arg0) {
-
-}
-function parseArrayValue(arg0, arg1, arg2) {
-
-}
-function parseQueryStringKeys(arg0, arg1, arg2, arg3) {
-
-}
+let obj = {
+  allowDots: false,
+  allowEmptyArrays: false,
+  allowPrototypes: false,
+  allowSparse: false,
+  arrayLimit: 20,
+  charset: "utf-8",
+  charsetSentinel: false,
+  comma: false,
+  decodeDotInKeys: false,
+  decoder: items3.decode,
+  delimiter: "&",
+  depth: 5,
+  duplicates: "combine",
+  ignoreQueryPrefix: false,
+  interpretNumericEntities: false,
+  parameterLimit: 1000,
+  parseArrays: true,
+  plainObjects: false,
+  strictDepth: false,
+  strictNullHandling: false,
+  throwOnLimitExceeded: false,
+};
+function interpretNumericEntities(arg0) {}
+function parseArrayValue(arg0, arg1, arg2) {}
+function parseQueryStringKeys(arg0, arg1, arg2, arg3) {}
 
 export default (str, allowEmptyArrays) => {
   if (allowEmptyArrays) {
@@ -99,7 +115,29 @@ export default (str, allowEmptyArrays) => {
     } else {
       allowDots = allowEmptyArrays.allowDots;
     }
-    obj = { allowDots: null, allowEmptyArrays: null, allowPrototypes: null, allowSparse: null, arrayLimit: null, charset: null, charsetSentinel: null, comma: null, decodeDotInKeys: null, decoder: null, delimiter: null, depth: null, duplicates: null, ignoreQueryPrefix: null, interpretNumericEntities: null, parameterLimit: null, parseArrays: null, plainObjects: null, strictDepth: null, strictNullHandling: null, throwOnLimitExceeded: null };
+    obj = {
+      allowDots: null,
+      allowEmptyArrays: null,
+      allowPrototypes: null,
+      allowSparse: null,
+      arrayLimit: null,
+      charset: null,
+      charsetSentinel: null,
+      comma: null,
+      decodeDotInKeys: null,
+      decoder: null,
+      delimiter: null,
+      depth: null,
+      duplicates: null,
+      ignoreQueryPrefix: null,
+      interpretNumericEntities: null,
+      parameterLimit: null,
+      parseArrays: null,
+      plainObjects: null,
+      strictDepth: null,
+      strictNullHandling: null,
+      throwOnLimitExceeded: null,
+    };
     obj[0] = allowDots;
     if (typeof allowEmptyArrays.allowEmptyArrays === "boolean") {
       allowEmptyArrays = allowEmptyArrays.allowEmptyArrays;
@@ -330,7 +368,9 @@ export default (str, allowEmptyArrays) => {
                     if (obj.comma) {
                       if (substr.indexOf(",") > -1) {
                         let parts1 = substr.split(",");
-                        maybeMapResult = obj12.maybeMap(parts1, (arg0) => obj.decoder(arg0, closure_1_4.decoder, c1, "value"));
+                        maybeMapResult = obj12.maybeMap(parts1, (arg0) =>
+                          obj.decoder(arg0, closure_1_4.decoder, c1, "value"),
+                        );
                         tmp30 = typeError;
                       }
                     }
@@ -627,7 +667,9 @@ export default (str, allowEmptyArrays) => {
           tmp49 = mergeResult;
         }
         const _RangeError = RangeError;
-        const rangeError3 = new RangeError("Input depth exceeded depth option of " + obj.depth + " and strictDepth is true");
+        const rangeError3 = new RangeError(
+          "Input depth exceeded depth option of " + obj.depth + " and strictDepth is true",
+        );
         throw rangeError3;
       }
       let compactResult = tmp49;

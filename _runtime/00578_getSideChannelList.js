@@ -111,7 +111,7 @@ export default function getSideChannelList() {
         obj[2] = value;
         iter.next = obj;
       }
-    }
+    },
   };
   return obj;
-};
+}

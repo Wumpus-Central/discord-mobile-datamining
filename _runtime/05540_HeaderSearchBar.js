@@ -10,7 +10,25 @@ let c4 = importAllResult;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = { text: "text", number: "numeric", phone: "tel", email: "email" };
 let c11 = true;
-const styles = StyleSheet.create({ container: { flex: 1, flexDirection: "row", alignItems: "stretch" }, inputSearchIcon: { position: "absolute", opacity: 0.5, left: 4, top: 17 }, closeButton: { position: "absolute", opacity: 0.5, right: 8, top: 17 }, clearButton: { position: "absolute", right: 0, top: -7, bottom: 0, justifyContent: "center", padding: 8 }, clearIcon: { height: 16, width: 16, opacity: 0.5 }, cancelButton: { alignSelf: "center", top: -4 }, cancelText: { fontSize: 17, marginHorizontal: 12 }, searchbarContainer: { flex: 1 }, searchbar: { flex: 1, fontSize: 18, paddingHorizontal: 36, marginRight: 8, marginTop: 8, marginBottom: 8, borderBottomWidth: 1 } });
+const styles = StyleSheet.create({
+  container: { flex: 1, flexDirection: "row", alignItems: "stretch" },
+  inputSearchIcon: { position: "absolute", opacity: 0.5, left: 4, top: 17 },
+  closeButton: { position: "absolute", opacity: 0.5, right: 8, top: 17 },
+  clearButton: { position: "absolute", right: 0, top: -7, bottom: 0, justifyContent: "center", padding: 8 },
+  clearIcon: { height: 16, width: 16, opacity: 0.5 },
+  cancelButton: { alignSelf: "center", top: -4 },
+  cancelText: { fontSize: 17, marginHorizontal: 12 },
+  searchbarContainer: { flex: 1 },
+  searchbar: {
+    flex: 1,
+    fontSize: 18,
+    paddingHorizontal: 36,
+    marginRight: 8,
+    marginTop: 8,
+    marginBottom: 8,
+    borderBottomWidth: 1,
+  },
+});
 
 export const HeaderSearchBar = importAllResult.forwardRef(function HeaderSearchBarInternal(visible, ref) {
   visible = visible.visible;
@@ -52,18 +70,24 @@ export const HeaderSearchBar = importAllResult.forwardRef(function HeaderSearchB
   first = tmp6[0];
   RN = tmp8;
   [tmp10, c6] = navigation(first.useState(visible), 2);
-  first1 = navigation(first.useState(() => {
-    let num = 0;
-    if (visible) {
-      num = 1;
-    }
-    const value = new lib.Value(num);
-    return value;
-  }), 1)[0];
-  first2 = navigation(first.useState(() => {
-    const value = new lib.Value(0);
-    return value;
-  }), 1)[0];
+  first1 = navigation(
+    first.useState(() => {
+      let num = 0;
+      if (visible) {
+        num = 1;
+      }
+      const value = new lib.Value(num);
+      return value;
+    }),
+    1,
+  )[0];
+  first2 = navigation(
+    first.useState(() => {
+      const value = new lib.Value(0);
+      return value;
+    }),
+    1,
+  )[0];
   closure_9 = first.useRef(visible);
   closure_10 = first.useRef(false);
   ref = first.useRef(null);
@@ -142,31 +166,35 @@ export const HeaderSearchBar = importAllResult.forwardRef(function HeaderSearchB
     return addListenerResult;
   }, items4);
   const items5 = [callback2, callback];
-  const imperativeHandle = first.useImperativeHandle(ref, () => ({
-    focus() {
-      const current = ref.current;
-      if (current != null) {
-        current.focus();
-      }
-    },
-    blur() {
-      const current = ref.current;
-      if (current != null) {
-        current.blur();
-      }
-    },
-    setText(arg0) {
-      const current = ref.current;
-      if (current != null) {
-        const obj = { text: null };
-        obj[0] = arg0;
-        current.setNativeProps(obj);
-      }
-      callback(arg0);
-    },
-    clearText: callback,
-    cancelSearch: callback2
-  }), items5);
+  const imperativeHandle = first.useImperativeHandle(
+    ref,
+    () => ({
+      focus() {
+        const current = ref.current;
+        if (current != null) {
+          current.focus();
+        }
+      },
+      blur() {
+        const current = ref.current;
+        if (current != null) {
+          current.blur();
+        }
+      },
+      setText(arg0) {
+        const current = ref.current;
+        if (current != null) {
+          const obj = { text: null };
+          obj[0] = arg0;
+          current.setNativeProps(obj);
+        }
+        callback(arg0);
+      },
+      clearText: callback,
+      cancelSearch: callback2,
+    }),
+    items5,
+  );
   if (!visible) {
     if (!tmp10) {
       return null;
@@ -183,7 +211,7 @@ export const HeaderSearchBar = importAllResult.forwardRef(function HeaderSearchB
   items6 = [closure_12.container, { opacity: first1 }, visible.style];
   obj = { style: closure_12.searchbarContainer, children: null };
   obj1 = { source: onChangeText(tmp3[6]), tintColor: text, style: closure_12.inputSearchIcon };
-  const items7 = [first2(visible(onClose[5]).HeaderIcon, obj1), , ];
+  const items7 = [first2(visible(onClose[5]).HeaderIcon, obj1), ,];
   const obj2 = {};
   const merged1 = Object.assign(merged);
   obj2.ref = ref;
@@ -211,7 +239,7 @@ export const HeaderSearchBar = importAllResult.forwardRef(function HeaderSearchB
   const alphaResult = onChangeText(onClose[7])(text).alpha(0.5);
   const obj9 = onChangeText(onClose[7])(colors.primary);
   obj2.selectionColor = onChangeText(onClose[7])(colors.primary).alpha(0.3).string();
-  const items8 = [theme.fonts.regular, closure_12.searchbar, ];
+  const items8 = [theme.fonts.regular, closure_12.searchbar];
   const obj3 = { backgroundColor: "transparent", color: text, borderBottomColor: null };
   const alphaResult1 = onChangeText(onClose[7])(colors.primary).alpha(0.3);
   const obj12 = onChangeText(onClose[7])(text);
@@ -221,7 +249,7 @@ export const HeaderSearchBar = importAllResult.forwardRef(function HeaderSearchB
   items7[1] = first2(tmp27, obj2);
   items7[2] = null;
   obj[1] = items7;
-  const items9 = [closure_9(tmp24, obj), , ];
+  const items9 = [closure_9(tmp24, obj), ,];
   const obj4 = {
     onPress() {
       if (first) {
@@ -231,7 +259,7 @@ export const HeaderSearchBar = importAllResult.forwardRef(function HeaderSearchB
       }
     },
     style: closure_12.closeButton,
-    children: null
+    children: null,
   };
   const alphaResult2 = onChangeText(onClose[7])(text).alpha(0.2);
   obj4[2] = first2(visible(onClose[5]).HeaderIcon, { source: onChangeText(onClose[9]), tintColor: text });

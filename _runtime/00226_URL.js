@@ -22,10 +22,12 @@ class URL {
     tmp = URL(this, URL);
     this._searchParamsInstance = null;
     if (arg1) {
-      obj = /^(?:(?:(?:https?|ftp):)?\/\/)(?:(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z0-9\u00a1-\uffff][a-z0-9\u00a1-\uffff_-]{0,62})?[a-z0-9\u00a1-\uffff]\.)*(?:[a-z\u00a1-\uffff]{2,}\.?))(?::\d{2,5})?(?:[/?#]\S*)?$/;
+      obj =
+        /^(?:(?:(?:https?|ftp):)?\/\/)(?:(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z0-9\u00a1-\uffff][a-z0-9\u00a1-\uffff_-]{0,62})?[a-z0-9\u00a1-\uffff]\.)*(?:[a-z\u00a1-\uffff]{2,}\.?))(?::\d{2,5})?(?:[/?#]\S*)?$/;
       if (!obj.test(global)) {
         if (typeof arg1 === "string") {
-          obj2 = /^(?:(?:(?:https?|ftp):)?\/\/)(?:(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z0-9\u00a1-\uffff][a-z0-9\u00a1-\uffff_-]{0,62})?[a-z0-9\u00a1-\uffff]\.)*(?:[a-z\u00a1-\uffff]{2,}\.?))(?::\d{2,5})?(?:[/?#]\S*)?$/;
+          obj2 =
+            /^(?:(?:(?:https?|ftp):)?\/\/)(?:(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z0-9\u00a1-\uffff][a-z0-9\u00a1-\uffff_-]{0,62})?[a-z0-9\u00a1-\uffff]\.)*(?:[a-z\u00a1-\uffff]{2,}\.?))(?::\d{2,5})?(?:[/?#]\S*)?$/;
           str = arg1;
           if (!obj2.test(arg1)) {
             tmp2 = globalThis;
@@ -112,7 +114,7 @@ let obj = {
       str2 = "#" + match[1];
     }
     return str2;
-  }
+  },
 };
 const items = [
   obj,
@@ -131,7 +133,7 @@ const items = [
         str4 = match[1] + str3;
       }
       return str4;
-    }
+    },
   },
   {
     key: "hostname",
@@ -142,13 +144,13 @@ const items = [
         str2 = match[1];
       }
       return str2;
-    }
+    },
   },
   {
     key: "href",
     get() {
       return this.toString();
-    }
+    },
   },
   {
     key: "origin",
@@ -159,7 +161,7 @@ const items = [
         str2 = match[1];
       }
       return str2;
-    }
+    },
   },
   {
     key: "password",
@@ -170,7 +172,7 @@ const items = [
         str2 = match[1];
       }
       return str2;
-    }
+    },
   },
   {
     key: "pathname",
@@ -184,7 +186,7 @@ const items = [
         str2 = "/";
       }
       return str2;
-    }
+    },
   },
   {
     key: "port",
@@ -195,7 +197,7 @@ const items = [
         str2 = match[1];
       }
       return str2;
-    }
+    },
   },
   {
     key: "protocol",
@@ -206,7 +208,7 @@ const items = [
         str2 = `${tmp[1]}:`;
       }
       return str2;
-    }
+    },
   },
   {
     key: "search",
@@ -234,7 +236,7 @@ const items = [
       }
       self._url = text;
       self._searchParamsInstance = null;
-    }
+    },
   },
   {
     key: "searchParams",
@@ -246,13 +248,13 @@ const items = [
         self._searchParamsInstance = uRLSearchParams;
       }
       return self._searchParamsInstance;
-    }
+    },
   },
   {
     key: "toJSON",
     value: function toJSON() {
       return this.toString();
-    }
+    },
   },
   {
     key: "toString",
@@ -272,7 +274,7 @@ const items = [
         }
         return text;
       }
-    }
+    },
   },
   {
     key: "username",
@@ -283,8 +285,8 @@ const items = [
         str2 = match[1];
       }
       return str2;
-    }
-  }
+    },
+  },
 ];
 obj = {
   key: "createObjectURL",
@@ -297,16 +299,14 @@ obj = {
       const _HermesInternal = HermesInternal;
       return "" + tmp + data.data.blobId + "?offset=" + data.data.offset + "&size=" + data.size;
     }
-  }
+  },
 };
 const items1 = [
   obj,
   {
     key: "revokeObjectURL",
-    value: function revokeObjectURL(arg0) {
-
-    }
-  }
+    value: function revokeObjectURL(arg0) {},
+  },
 ];
 
 export const URLSearchParams = require("URLSearchParams").URLSearchParams;

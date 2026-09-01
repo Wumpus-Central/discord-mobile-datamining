@@ -22,10 +22,11 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
-let closure_6 = { code: "function pnpm_JumpingTransitionTs1(values){const{delayFunction,delay,withTiming,config,withSequence,halfDuration,Easing,callback}=this.__closure;const d=Math.max(Math.abs(values.targetOriginX-values.currentOriginX),Math.abs(values.targetOriginY-values.currentOriginY));return{initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight},animations:{originX:delayFunction(delay,withTiming(values.targetOriginX,config)),originY:delayFunction(delay,withSequence(withTiming(Math.min(values.targetOriginY,values.currentOriginY)-d,{duration:halfDuration,easing:Easing.out(Easing.exp)}),withTiming(values.targetOriginY,{...config,duration:halfDuration,easing:Easing.bounce}))),width:delayFunction(delay,withTiming(values.targetWidth,config)),height:delayFunction(delay,withTiming(values.targetHeight,config))},callback:callback};}" };
+let closure_6 = {
+  code: "function pnpm_JumpingTransitionTs1(values){const{delayFunction,delay,withTiming,config,withSequence,halfDuration,Easing,callback}=this.__closure;const d=Math.max(Math.abs(values.targetOriginX-values.currentOriginX),Math.abs(values.targetOriginY-values.currentOriginY));return{initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight},animations:{originX:delayFunction(delay,withTiming(values.targetOriginX,config)),originY:delayFunction(delay,withSequence(withTiming(Math.min(values.targetOriginY,values.currentOriginY)-d,{duration:halfDuration,easing:Easing.out(Easing.exp)}),withTiming(values.targetOriginY,{...config,duration:halfDuration,easing:Easing.bounce}))),width:delayFunction(delay,withTiming(values.targetWidth,config)),height:delayFunction(delay,withTiming(values.targetHeight,config))},callback:callback};}",
+};
 class JumpingTransition {
   constructor() {
     self = this;
@@ -59,7 +60,12 @@ class JumpingTransition {
       const fn = function n(originX) {
         const absolute = Math.abs(originX.targetOriginX - originX.currentOriginX);
         obj = { initialValues: obj, animations: null, callback: null };
-        obj = { originX: originX.currentOriginX, originY: originX.currentOriginY, width: originX.currentWidth, height: originX.currentHeight };
+        obj = {
+          originX: originX.currentOriginX,
+          originY: originX.currentOriginY,
+          width: originX.currentWidth,
+          height: originX.currentHeight,
+        };
         obj = { originX: null, originY: null, width: null, height: null };
         const bound = Math.max(absolute, Math.abs(originX.targetOriginY - originX.currentOriginY));
         obj[0] = delayFunction(delay, delayFunction(callbackV[5]).withTiming(originX.targetOriginX, obj));
@@ -75,7 +81,10 @@ class JumpingTransition {
         const merged = Object.assign(obj);
         obj2.duration = closure_3;
         obj2.easing = delayFunction(callbackV[6]).Easing.bounce;
-        obj[1] = delayFunction(delay, obj5.withSequence(withTimingResult, delayFunction(callbackV[5]).withTiming(originX.targetOriginY, obj2)));
+        obj[1] = delayFunction(
+          delay,
+          obj5.withSequence(withTimingResult, delayFunction(callbackV[5]).withTiming(originX.targetOriginY, obj2)),
+        );
         const obj8 = delayFunction(callbackV[5]);
         obj[2] = delayFunction(delay, delayFunction(callbackV[5]).withTiming(originX.targetWidth, obj));
         const obj10 = delayFunction(callbackV[5]);
@@ -84,7 +93,16 @@ class JumpingTransition {
         obj[2] = callbackV;
         return obj;
       };
-      obj = { delayFunction, delay, withTiming: callback(closure_1_1[5]).withTiming, config: obj, withSequence: callback(closure_1_1[5]).withSequence, halfDuration: result, Easing: callback(closure_1_1[6]).Easing, callback: callbackV };
+      obj = {
+        delayFunction,
+        delay,
+        withTiming: callback(closure_1_1[5]).withTiming,
+        config: obj,
+        withSequence: callback(closure_1_1[5]).withSequence,
+        halfDuration: result,
+        Easing: callback(closure_1_1[6]).Easing,
+        callback: callbackV,
+      };
       fn.__closure = obj;
       fn.__workletHash = 11549153259849;
       fn.__initData = closure_1_6;
@@ -99,8 +117,8 @@ let items = [
     key: "createInstance",
     value: function createInstance() {
       return JumpingTransition();
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(JumpingTransition, null, items);
 importDefaultResultResult.presetName = "JumpingTransition";

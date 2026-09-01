@@ -22,10 +22,11 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
-let closure_5 = { code: "function pnpm_LinearTransitionTs1(values){const{delayFunction,delay,animation,config,callback}=this.__closure;return{initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight},animations:{originX:delayFunction(delay,animation(values.targetOriginX,config)),originY:delayFunction(delay,animation(values.targetOriginY,config)),width:delayFunction(delay,animation(values.targetWidth,config)),height:delayFunction(delay,animation(values.targetHeight,config))},callback:callback};}" };
+let closure_5 = {
+  code: "function pnpm_LinearTransitionTs1(values){const{delayFunction,delay,animation,config,callback}=this.__closure;return{initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight},animations:{originX:delayFunction(delay,animation(values.targetOriginX,config)),originY:delayFunction(delay,animation(values.targetOriginY,config)),width:delayFunction(delay,animation(values.targetWidth,config)),height:delayFunction(delay,animation(values.targetHeight,config))},callback:callback};}",
+};
 class LinearTransition {
   constructor() {
     self = this;
@@ -54,8 +55,18 @@ class LinearTransition {
       const delay = delayFunction.getDelay();
       const fn = function t(currentOriginX) {
         obj = { initialValues: obj, animations: null, callback: null };
-        obj = { originX: currentOriginX.currentOriginX, originY: currentOriginX.currentOriginY, width: currentOriginX.currentWidth, height: currentOriginX.currentHeight };
-        obj = { originX: delayFunction(delay, first(currentOriginX.targetOriginX, closure_2)), originY: delayFunction(delay, first(currentOriginX.targetOriginY, closure_2)), width: delayFunction(delay, first(currentOriginX.targetWidth, closure_2)), height: delayFunction(delay, first(currentOriginX.targetHeight, closure_2)) };
+        obj = {
+          originX: currentOriginX.currentOriginX,
+          originY: currentOriginX.currentOriginY,
+          width: currentOriginX.currentWidth,
+          height: currentOriginX.currentHeight,
+        };
+        obj = {
+          originX: delayFunction(delay, first(currentOriginX.targetOriginX, closure_2)),
+          originY: delayFunction(delay, first(currentOriginX.targetOriginY, closure_2)),
+          width: delayFunction(delay, first(currentOriginX.targetWidth, closure_2)),
+          height: delayFunction(delay, first(currentOriginX.targetHeight, closure_2)),
+        };
         obj[1] = obj;
         obj[2] = callbackV;
         return obj;
@@ -74,8 +85,8 @@ let items = [
     key: "createInstance",
     value: function createInstance() {
       return LinearTransition();
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(LinearTransition, null, items);
 importDefaultResultResult.presetName = "LinearTransition";

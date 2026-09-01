@@ -87,7 +87,7 @@ if (tmp) {
           }
           const result = obj.set(obj, arg1);
         }
-      }
+      },
     };
     return obj;
   }

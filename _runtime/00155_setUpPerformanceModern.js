@@ -19,7 +19,10 @@ arg5.default = function setUpPerformanceModern() {
     const obj3 = polyfillObjectProperty;
     polyfillObjectProperty.polyfillGlobal("PerformanceEventTiming", () => callback(162).PerformanceEventTiming_public);
     const obj4 = polyfillObjectProperty;
-    polyfillObjectProperty.polyfillGlobal("PerformanceLongTaskTiming", () => callback(171).PerformanceLongTaskTiming_public);
+    polyfillObjectProperty.polyfillGlobal(
+      "PerformanceLongTaskTiming",
+      () => callback(171).PerformanceLongTaskTiming_public,
+    );
     const obj5 = polyfillObjectProperty;
     polyfillObjectProperty.polyfillGlobal("PerformanceMark", () => callback(169).PerformanceMark);
     const obj6 = polyfillObjectProperty;
@@ -27,9 +30,15 @@ arg5.default = function setUpPerformanceModern() {
     const obj7 = polyfillObjectProperty;
     polyfillObjectProperty.polyfillGlobal("PerformanceObserver", () => callback(173).PerformanceObserver);
     const obj8 = polyfillObjectProperty;
-    polyfillObjectProperty.polyfillGlobal("PerformanceObserverEntryList", () => callback(173).PerformanceObserverEntryList_public);
+    polyfillObjectProperty.polyfillGlobal(
+      "PerformanceObserverEntryList",
+      () => callback(173).PerformanceObserverEntryList_public,
+    );
     const obj9 = polyfillObjectProperty;
-    polyfillObjectProperty.polyfillGlobal("PerformanceResourceTiming", () => callback(172).PerformanceResourceTiming_public);
+    polyfillObjectProperty.polyfillGlobal(
+      "PerformanceResourceTiming",
+      () => callback(172).PerformanceResourceTiming_public,
+    );
     const obj10 = polyfillObjectProperty;
     polyfillObjectProperty.polyfillGlobal("TaskAttributionTiming", () => callback(171).TaskAttributionTiming_public);
     const obj11 = polyfillObjectProperty;

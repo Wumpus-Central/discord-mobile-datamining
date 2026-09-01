@@ -157,9 +157,28 @@ export default function _default(children) {
   const obj2 = sharedValue(sharedValue1[2]);
   const tmp9 = callback2(() => ({ dismiss: closure_7, dismissAll: closure_8 }), items);
   obj = { value: tmp9, children: null };
-  obj = { value: callback2(() => ({ hostName: closure_2, containerHeight: sharedValue, containerOffset: sharedValue1, mountSheet: closure_4, unmountSheet: closure_5, willUnmountSheet: closure_6 }), items1), children: null };
-  const items2 = [callback4(sharedValue(sharedValue1[7]).BottomSheetHostingContainer, { containerOffset: sharedValue1, containerHeight: sharedValue }), callback4(sharedValue(sharedValue1[8]).PortalProvider, { rootHostName: tmp3, children: children.children })];
+  obj = {
+    value: callback2(
+      () => ({
+        hostName: closure_2,
+        containerHeight: sharedValue,
+        containerOffset: sharedValue1,
+        mountSheet: closure_4,
+        unmountSheet: closure_5,
+        willUnmountSheet: closure_6,
+      }),
+      items1,
+    ),
+    children: null,
+  };
+  const items2 = [
+    callback4(sharedValue(sharedValue1[7]).BottomSheetHostingContainer, {
+      containerOffset: sharedValue1,
+      containerHeight: sharedValue,
+    }),
+    callback4(sharedValue(sharedValue1[8]).PortalProvider, { rootHostName: tmp3, children: children.children }),
+  ];
   obj[1] = items2;
   obj[1] = callback5(sharedValue(sharedValue1[6]).BottomSheetModalInternalProvider, obj);
   return callback4(sharedValue(sharedValue1[6]).BottomSheetModalProvider, obj);
-};
+}

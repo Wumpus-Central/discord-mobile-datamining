@@ -5,7 +5,28 @@ import getDebugMetadata from "01119_getDebugMetadata.js";
 require = arg1;
 const dependencyMap = arg6;
 function enrichAndroidProfileWithEventContext(profile_id, build_id, contexts) {
-  let obj = { debug_meta: null, build_id: null, device_cpu_frequencies: null, device_is_emulator: null, device_locale: null, device_manufacturer: null, device_model: null, device_os_name: null, device_os_version: null, device_physical_memory_bytes: null, environment: null, profile_id: null, timestamp: null, release: null, dist: null, transaction_id: null, transaction_name: null, trace_id: null, version_name: null, version_code: null };
+  let obj = {
+    debug_meta: null,
+    build_id: null,
+    device_cpu_frequencies: null,
+    device_is_emulator: null,
+    device_locale: null,
+    device_manufacturer: null,
+    device_model: null,
+    device_os_name: null,
+    device_os_version: null,
+    device_physical_memory_bytes: null,
+    environment: null,
+    profile_id: null,
+    timestamp: null,
+    release: null,
+    dist: null,
+    transaction_id: null,
+    transaction_name: null,
+    trace_id: null,
+    version_name: null,
+    version_code: null,
+  };
   obj = { images: null };
   const merged = Object.assign({}, build_id);
   obj[0] = getDebugMetadata.getDebugMetadata();
@@ -211,7 +232,11 @@ arg5.findProfiledTransactionsFromEnvelope = function findProfiledTransactionsFro
   });
   return items;
 };
-arg5.enrichCombinedProfileWithEventContext = function enrichCombinedProfileWithEventContext(profile_id, value, contexts) {
+arg5.enrichCombinedProfileWithEventContext = function enrichCombinedProfileWithEventContext(
+  profile_id,
+  value,
+  contexts,
+) {
   if ("js_profile" in value) {
     return enrichAndroidProfileWithEventContext(profile_id, value, contexts);
   } else {
@@ -234,7 +259,17 @@ arg5.enrichCombinedProfileWithEventContext = function enrichCombinedProfileWithE
           str = "";
         }
         const _Object = Object;
-        let obj = { event_id: null, runtime: null, timestamp: null, release: null, environment: null, os: null, device: null, transaction: null, debug_meta: null };
+        let obj = {
+          event_id: null,
+          runtime: null,
+          timestamp: null,
+          release: null,
+          environment: null,
+          os: null,
+          device: null,
+          transaction: null,
+          debug_meta: null,
+        };
         obj[0] = profile_id;
         obj[1] = { name: "hermes", version: "" };
         let _Date = Date;

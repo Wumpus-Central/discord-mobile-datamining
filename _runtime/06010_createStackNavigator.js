@@ -11,7 +11,6 @@ import CardAnimationContext from "06035_CardAnimationContext.js";
 import useCardAnimation from "06041_useCardAnimation.js";
 import useGestureHandlerRef from "06042_useGestureHandlerRef.js";
 
-
 export const createStackNavigator = StackNavigator.createStackNavigator;
 export const createStackScreen = StackNavigator.createStackScreen;
 export const Header = Header.Header;

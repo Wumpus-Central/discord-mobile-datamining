@@ -1,7 +1,6 @@
 // _runtime/12411_linkedErrorsIntegration.js
 import setupIntegration from "12391_setupIntegration.js";
 
-
 export const linkedErrorsIntegration = setupIntegration.defineIntegration(() => {
   let obj = arg0;
   if (arg0 === undefined) {
@@ -15,8 +14,16 @@ export const linkedErrorsIntegration = setupIntegration.defineIntegration(() => 
     name: "LinkedErrors",
     preprocessEvent(arg0, arg1, getOptions) {
       const options = getOptions.getOptions();
-      const result = callback(12412).applyAggregateErrorsToEvent(callback(12395).exceptionFromError, options.stackParser, options.maxValueLength, dependencyMap, callback, arg0, arg1);
-    }
+      const result = callback(12412).applyAggregateErrorsToEvent(
+        callback(12395).exceptionFromError,
+        options.stackParser,
+        options.maxValueLength,
+        dependencyMap,
+        callback,
+        arg0,
+        arg1,
+      );
+    },
   };
   return obj;
 });

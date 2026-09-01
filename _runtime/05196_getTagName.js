@@ -64,9 +64,9 @@ export default {
           obj["undefined-" + shortAt] = obj;
         }
       }
-      num = sum3 + (longAt + longAt % 2);
+      num = sum3 + (longAt + (longAt % 2));
       const obj5 = _modDef5174;
     }
     return obj;
-  }
+  },
 };

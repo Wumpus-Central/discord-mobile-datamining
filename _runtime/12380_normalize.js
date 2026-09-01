@@ -143,8 +143,7 @@ function visit(arg0, num) {
               if (typeof num.toJSON === "function") {
                 try {
                   return visit("", num.toJSON(), num - 1, num2, tmp8);
-                } catch (err) {
-                }
+                } catch (err) {}
               }
             }
             const _Array = Array;
@@ -216,7 +215,9 @@ export const normalizeUrlToBase = function normalizeUrlToBase(arg0, str) {
     const _RegExp = RegExp;
     const _HermesInternal = HermesInternal;
     const regExp = new RegExp("(file://)?/*" + tmp2 + "/*", "ig");
-    return str.replace(/\\/g, "/").replace(/webpack:\/?/g, "").replace(regExp, "app:///");
-  } catch (err) {
-  }
+    return str
+      .replace(/\\/g, "/")
+      .replace(/webpack:\/?/g, "")
+      .replace(regExp, "app:///");
+  } catch (err) {}
 };

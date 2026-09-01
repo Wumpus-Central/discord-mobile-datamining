@@ -6,7 +6,15 @@ import _symbolicateStackTrace from "00998__symbolicateStackTrace.js";
 import getDevServer from "00999_getDevServer.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
-obj = { Devtools: obj, Promise: _mod175, Utilities: obj, ReactNativeVersion: null, TurboModuleRegistry: null, AppRegistry: null, ReactNative: null };
+obj = {
+  Devtools: obj,
+  Promise: _mod175,
+  Utilities: obj,
+  ReactNativeVersion: null,
+  TurboModuleRegistry: null,
+  AppRegistry: null,
+  ReactNative: null,
+};
 obj = {
   parseErrorStack(arg0) {
     const obj = parseErrorStack;
@@ -37,13 +45,13 @@ obj = {
       return defaultResult;
     }
     defaultResult = obj();
-  }
+  },
 };
 ({ AppRegistry, Platform, TurboModuleRegistry } = get_ActivityIndicator);
 obj = {
   polyfillGlobal(arg0, arg1) {
     polyfillObjectProperty.polyfillGlobal(arg0, arg1);
-  }
+  },
 };
 const constants = Platform.constants;
 let reactNativeVersion;
@@ -58,7 +66,7 @@ obj[5] = AppRegistry;
 obj[6] = {
   requireNativeComponent(APNGStickerView, importDefaultResultResult, arg2) {
     return get_ActivityIndicator.requireNativeComponent(APNGStickerView);
-  }
+  },
 };
 
 export const ReactNativeLibraries = obj;

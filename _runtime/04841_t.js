@@ -20,7 +20,10 @@ let fn = function t(exports, React) {
           let _Object9 = Object;
           let ownPropertySymbols = Object.getOwnPropertySymbols(_ObjectResult);
           let push2 = keys.push;
-          let applyResult = push2.apply(keys, ownPropertySymbols.filter((arg0) => Object.getOwnPropertyDescriptor(closure_0, arg0).enumerable));
+          let applyResult = push2.apply(
+            keys,
+            ownPropertySymbols.filter((arg0) => Object.getOwnPropertyDescriptor(closure_0, arg0).enumerable),
+          );
         }
         let item = keys.forEach((arg0) => {
           if (arg0 in closure_0) {
@@ -220,7 +223,9 @@ let fn = function t(exports, React) {
         return tmp;
       } else {
         const _TypeError = TypeError;
-        const typeError = new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+        const typeError = new TypeError(
+          "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
+        );
         throw typeError;
       }
     } else {
@@ -280,19 +285,17 @@ let fn = function t(exports, React) {
       }
     }
   }
-  emptyFunction = function emptyFunction() {
-
-  };
-  emptyFunctionWithReset = function emptyFunctionWithReset() {
-
-  };
+  emptyFunction = function emptyFunction() {};
+  emptyFunctionWithReset = function emptyFunctionWithReset() {};
   c0 = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";
   emptyFunctionWithReset.resetWarningCache = emptyFunction;
   let tmp = (function o() {
     function shim(arg0, arg1, arg2, arg3, arg4, arg5) {
       if (arg5 !== shim) {
         const _Error = Error;
-        error = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
+        error = new Error(
+          "Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types",
+        );
         error.name = "Invariant Violation";
         throw error;
       }
@@ -301,7 +304,28 @@ let fn = function t(exports, React) {
       return shim;
     }
     shim.isRequired = shim;
-    const obj = { array: shim, bool: shim, func: shim, number: shim, object: shim, string: shim, symbol: shim, any: shim, arrayOf: getShim, element: shim, elementType: shim, instanceOf: getShim, node: shim, objectOf: getShim, oneOf: getShim, oneOfType: getShim, shape: getShim, exact: getShim, checkPropTypes: emptyFunctionWithReset, resetWarningCache: emptyFunction };
+    const obj = {
+      array: shim,
+      bool: shim,
+      func: shim,
+      number: shim,
+      object: shim,
+      string: shim,
+      symbol: shim,
+      any: shim,
+      arrayOf: getShim,
+      element: shim,
+      elementType: shim,
+      instanceOf: getShim,
+      node: shim,
+      objectOf: getShim,
+      oneOf: getShim,
+      oneOfType: getShim,
+      shape: getShim,
+      exact: getShim,
+      checkPropTypes: emptyFunctionWithReset,
+      resetWarningCache: emptyFunction,
+    };
     obj.PropTypes = obj;
     return obj;
   })();
@@ -322,15 +346,9 @@ let fn = function t(exports, React) {
       }
     }
   }
-  function useAttachEvent(arg0, arg1, arg2) {
-
-  }
-  function usePrevious(arg0) {
-
-  }
-  function isUnknownObject(arg0) {
-
-  }
+  function useAttachEvent(arg0, arg1, arg2) {}
+  function usePrevious(arg0) {}
+  function isUnknownObject(arg0) {}
   c9 = "[object Object]";
   function isEqual(arg0, arg1) {
     let length;
@@ -413,10 +431,9 @@ let fn = function t(exports, React) {
     }
     return arg0 === arg1;
   }
-  function extractAllowedOptionsUpdates(arg0, arg1, arg2) {
-
-  }
-  c12 = "Invalid prop `stripe` supplied to `Elements`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.";
+  function extractAllowedOptionsUpdates(arg0, arg1, arg2) {}
+  c12 =
+    "Invalid prop `stripe` supplied to `Elements`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.";
   function validateStripe(elements, arg1) {
     if (arguments.length > 1) {
       if (undefined !== arguments[1]) {
@@ -489,14 +506,10 @@ let fn = function t(exports, React) {
     }
     tmp = c12;
   }
-  function registerWithStripeJs(arg0) {
-
-  }
+  function registerWithStripeJs(arg0) {}
   let context = React.createContext(null);
   context.displayName = "ElementsContext";
-  function parseElementsContext(arg0, arg1) {
-
-  }
+  function parseElementsContext(arg0, arg1) {}
   class Elements {
     constructor(arg0) {
       stripe = exports.stripe;
@@ -508,24 +521,27 @@ let fn = function t(exports, React) {
       items[0] = stripe;
       memo = options.useMemo(() => closure_1_14(options), items);
       closure_2 = memo;
-      tmp2 = closure_4(options.useState(() => {
-        let stripe = null;
-        if ("sync" === memo.tag) {
-          stripe = tmp.stripe;
-        }
-        const obj = { stripe, elements: null };
-        let elementsResult = null;
-        if ("sync" === memo.tag) {
-          stripe = tmp.stripe;
-          elementsResult = stripe.elements(ref1);
-        }
-        obj[1] = elementsResult;
-        return obj;
-      }), 2);
+      tmp2 = closure_4(
+        options.useState(() => {
+          let stripe = null;
+          if ("sync" === memo.tag) {
+            stripe = tmp.stripe;
+          }
+          const obj = { stripe, elements: null };
+          let elementsResult = null;
+          if ("sync" === memo.tag) {
+            stripe = tmp.stripe;
+            elementsResult = stripe.elements(ref1);
+          }
+          obj[1] = elementsResult;
+          return obj;
+        }),
+        2,
+      );
       first = tmp2[0];
       closure_3 = first;
       closure_4 = tmp2[1];
-      items1 = [, , ];
+      items1 = [, ,];
       items1[0] = memo;
       items1[1] = first;
       items1[2] = options;
@@ -590,7 +606,7 @@ let fn = function t(exports, React) {
         ref14.current = options;
       }, items2);
       current = ref.current;
-      items3 = [, ];
+      items3 = [,];
       items3[0] = current;
       items3[1] = stripe;
       effect2 = obj.useEffect(() => {
@@ -616,7 +632,7 @@ let fn = function t(exports, React) {
       }, items4);
       current2 = ref1.current;
       current = current2;
-      items5 = [, , ];
+      items5 = [, ,];
       items5[0] = options;
       items5[1] = current2;
       items5[2] = first.elements;
@@ -706,16 +722,18 @@ let fn = function t(exports, React) {
         }
         if (registerAppInfo) {
           stripe._registerWrapper({ name: "react-stripe-js", version: "3.7.0" });
-          stripe.registerAppInfo({ name: "react-stripe-js", version: "3.7.0", url: "https://stripe.com/docs/stripe-js/react" });
+          stripe.registerAppInfo({
+            name: "react-stripe-js",
+            version: "3.7.0",
+            url: "https://stripe.com/docs/stripe-js/react",
+          });
         }
       }, items6);
       return obj.createElement(closure_16.Provider, { value: first }, exports.children);
     }
   }
   Elements.propTypes = { stripe: _default.any, options: _default.object };
-  function useElementsContextWithUseCase(arg0) {
-
-  }
+  function useElementsContextWithUseCase(arg0) {}
   class ElementsConsumer {
     constructor(arg0) {
       if (typeof useElementsContextWithUseCase !== "function") {
@@ -738,7 +756,12 @@ let fn = function t(exports, React) {
         str3 = "mounts <ElementsConsumer>";
         tmp3 = new.target;
         tmp4 = new.target;
-        error = new Error("Could not find Elements context; You need to wrap the part of your app that ".concat("mounts <ElementsConsumer>", " in an <Elements> provider."));
+        error = new Error(
+          "Could not find Elements context; You need to wrap the part of your app that ".concat(
+            "mounts <ElementsConsumer>",
+            " in an <Elements> provider.",
+          ),
+        );
         tmp6 = error;
         throw error;
       }
@@ -748,9 +771,7 @@ let fn = function t(exports, React) {
   closure_19 = ["on", "session"];
   let context1 = React.createContext(null);
   context1.displayName = "CheckoutSdkContext";
-  function parseCheckoutSdkContext(arg0, arg1) {
-
-  }
+  function parseCheckoutSdkContext(arg0, arg1) {}
   const context2 = React.createContext(null);
   context2.displayName = "CheckoutContext";
   class CheckoutProvider {
@@ -762,28 +783,36 @@ let fn = function t(exports, React) {
       obj = checkoutSdk;
       items = [];
       items[0] = stripe;
-      memo = checkoutSdk.useMemo(() => closure_1_14(checkoutSdk, "Invalid prop `stripe` supplied to `CheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details."), items);
+      memo = checkoutSdk.useMemo(
+        () =>
+          closure_1_14(
+            checkoutSdk,
+            "Invalid prop `stripe` supplied to `CheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.",
+          ),
+        items,
+      );
       closure_2 = memo;
       tmp2 = closure_4(checkoutSdk.useState(null), 2);
       first = tmp2[0];
       closure_3 = first;
       tmp4 = tmp2[1];
       closure_4 = tmp4;
-      tmp5 = closure_4(checkoutSdk.useState(() => {
-        let stripe = null;
-        if ("sync" === memo.tag) {
-          stripe = memo.stripe;
-        }
-        return { stripe, checkoutSdk: null };
-      }), 2);
+      tmp5 = closure_4(
+        checkoutSdk.useState(() => {
+          let stripe = null;
+          if ("sync" === memo.tag) {
+            stripe = memo.stripe;
+          }
+          return { stripe, checkoutSdk: null };
+        }),
+        2,
+      );
       first1 = tmp5[0];
       closure_5 = first1;
       closure_6 = tmp5[1];
-      safeSetContext = function safeSetContext(arg0, arg1) {
-
-      };
+      safeSetContext = function safeSetContext(arg0, arg1) {};
       closure_8 = checkoutSdk.useRef(false);
-      items1 = [, , , ];
+      items1 = [, , ,];
       items1[0] = memo;
       items1[1] = first1;
       items1[2] = options;
@@ -876,7 +905,7 @@ let fn = function t(exports, React) {
         ref14.current = options;
       }, items2);
       current = ref.current;
-      items3 = [, ];
+      items3 = [,];
       items3[0] = current;
       items3[1] = stripe;
       effect2 = obj.useEffect(() => {
@@ -886,7 +915,9 @@ let fn = function t(exports, React) {
         }
         if (tmp2) {
           const _console = console;
-          console.warn("Unsupported prop change on CheckoutProvider: You cannot change the `stripe` prop after setting it.");
+          console.warn(
+            "Unsupported prop change on CheckoutProvider: You cannot change the `stripe` prop after setting it.",
+          );
         }
       }, items3);
       if (typeof tmp8 !== "function") {
@@ -917,7 +948,7 @@ let fn = function t(exports, React) {
       }, items5);
       current3 = ref2.current;
       current = current3;
-      items6 = [, , , ];
+      items6 = [, , ,];
       items6[0] = options;
       items6[1] = current2;
       items6[2] = first1.checkoutSdk;
@@ -977,10 +1008,14 @@ let fn = function t(exports, React) {
         }
         if (registerAppInfo) {
           stripe._registerWrapper({ name: "react-stripe-js", version: "3.7.0" });
-          stripe.registerAppInfo({ name: "react-stripe-js", version: "3.7.0", url: "https://stripe.com/docs/stripe-js/react" });
+          stripe.registerAppInfo({
+            name: "react-stripe-js",
+            version: "3.7.0",
+            url: "https://stripe.com/docs/stripe-js/react",
+          });
         }
       }, items7);
-      items8 = [, ];
+      items8 = [,];
       items8[0] = first1.checkoutSdk;
       items8[1] = first;
       element = null;
@@ -991,7 +1026,11 @@ let fn = function t(exports, React) {
         tmp21 = closure_22;
         obj1 = { value: null };
         obj1[0] = tmp18;
-        element = obj.createElement(closure_20.Provider, obj, obj.createElement(closure_22.Provider, obj1, exports.children));
+        element = obj.createElement(
+          closure_20.Provider,
+          obj,
+          obj.createElement(closure_22.Provider, obj1, exports.children),
+        );
       }
       return element;
     }
@@ -999,784 +1038,823 @@ let fn = function t(exports, React) {
   obj = { stripe: _default.any, options: _default.shape(obj).isRequired };
   obj = { fetchClientSecret: _default.func.isRequired, elementsOptions: _default.object };
   CheckoutProvider.propTypes = obj;
-  function useElementsOrCheckoutSdkContextWithUseCase(arg0) {
-
-  }
+  function useElementsOrCheckoutSdkContextWithUseCase(arg0) {}
   closure_24 = ["mode"];
   const context3 = React.createContext(null);
   context3.displayName = "EmbeddedCheckoutProviderContext";
-  function useEmbeddedCheckoutContext() {
-
-  }
+  function useEmbeddedCheckoutContext() {}
   function createElementComponent(address, arg1) {
     closure_0 = address;
     const formatted = address.charAt(0).toUpperCase();
     let combined = "".concat(formatted + address.slice(1), "Element");
-    const tmp3 = arg1 ? (function ServerElement(id) {
-      combined = "mounts <".concat(combined, ">");
-      if (typeof closure_1_23 !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      let obj = address;
-      context = address.useContext(closure_1_20);
-      context1 = address.useContext(closure_1_16);
-      if (context) {
-        if (context1) {
-          const _Error3 = Error;
-          const concat3 = "You cannot wrap the part of your app that ".concat;
-          error = new Error("You cannot wrap the part of your app that ".concat(combined, " in both <CheckoutProvider> and <Elements> providers."));
-          throw error;
-        }
-      }
-      if (context) {
-        if (typeof closure_1_21 !== "function") {
-          HermesBuiltin.throwTypeError();
-        }
-        if (!context) {
-          const _Error2 = Error;
-          const concat2 = "Could not find CheckoutProvider context; You need to wrap the part of your app that ".concat;
-          const error1 = new Error("Could not find CheckoutProvider context; You need to wrap the part of your app that ".concat(combined, " in an <CheckoutProvider> provider."));
-          throw error1;
-        }
-      } else {
-        if (typeof closure_1_17 !== "function") {
-          HermesBuiltin.throwTypeError();
-        }
-        if (!context1) {
-          const _Error = Error;
-          const concat = "Could not find Elements context; You need to wrap the part of your app that ".concat;
-          const error2 = new Error("Could not find Elements context; You need to wrap the part of your app that ".concat(combined, " in an <Elements> provider."));
-          throw error2;
-        }
-      }
-      obj = { id: id.id, className: id.className };
-      return <div id={arg0.id} className={arg0.className} />;
-    }) : (function ClientElement(options) {
-      options = options.options;
-      ({ id, className } = options);
-      if (undefined === options) {
-        options = {};
-      }
-      ({ onBlur, onFocus, onReady } = options);
-      let ref14 = onReady;
-      ({ onChange, onEscape, onClick, onLoadError, onLoaderStart, onNetworksChange, onConfirm, onCancel, onShippingAddressChange, onShippingRateChange } = options);
-      combined = "mounts <".concat(ref14, ">");
-      if (typeof closure_1_23 !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      context = address.useContext(closure_1_20);
-      context1 = address.useContext(closure_1_16);
-      if (context) {
-        if (context1) {
-          let _Error3 = Error;
-          const concat3 = "You cannot wrap the part of your app that ".concat;
-          error = new Error("You cannot wrap the part of your app that ".concat(combined, " in both <CheckoutProvider> and <Elements> providers."));
-          throw error;
-        }
-      }
-      if (context) {
-        if (typeof closure_1_21 !== "function") {
-          HermesBuiltin.throwTypeError();
-        }
-        context1 = context;
-        if (!context) {
-          let _Error2 = Error;
-          const concat2 = "Could not find CheckoutProvider context; You need to wrap the part of your app that ".concat;
-          let error1 = new Error("Could not find CheckoutProvider context; You need to wrap the part of your app that ".concat(combined, " in an <CheckoutProvider> provider."));
-          throw error1;
-        }
-      } else {
-        if (typeof closure_1_17 !== "function") {
-          HermesBuiltin.throwTypeError();
-        }
-        if (!context1) {
-          let _Error = Error;
-          let concat = "Could not find Elements context; You need to wrap the part of your app that ".concat;
-          let error2 = new Error("Could not find Elements context; You need to wrap the part of your app that ".concat(combined, " in an <Elements> provider."));
-          throw error2;
-        }
-      }
-      let elements = null;
-      if ("elements" in context1) {
-        elements = context1.elements;
-      }
-      onReady = elements;
-      let checkoutSdk = null;
-      if ("checkoutSdk" in context1) {
-        checkoutSdk = context1.checkoutSdk;
-      }
-      onReady = checkoutSdk;
-      const tmp18 = closure_1_4(address.useState(null), 2);
-      const first = tmp18[0];
-      let ref13 = first;
-      closure_5 = tmp18[1];
-      closure_6 = obj2.useRef(null);
-      const ref = obj2.useRef(null);
-      if (typeof closure_1_6 !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      options = first;
-      ref14 = "blur";
-      onReady = onBlur;
-      onReady = tmp22;
-      const ref1 = address.useRef(onBlur);
-      ref13 = ref1;
-      const items = [onBlur];
-      const effect = obj2.useEffect(() => {
-        ref13.current = onReady;
-      }, items);
-      const items1 = [onBlur, "blur", first, ref1];
-      const effect1 = obj2.useEffect(() => {
-        if (onReady) {
-          if (decoratedCb) {
-            decoratedCb = function decoratedCb() {
-              if (ref.current) {
-                current = tmp.current;
-                const apply = current.apply;
-                if (typeof apply === "unknown") {
-                  HermesBuiltin.applyArguments(tmp);
-                } else {
-                  apply(tmp, arguments);
-                }
-              }
-            };
-            obj.on(ref14, decoratedCb);
-            return () => {
-              decoratedCb.off(closure_1_1, decoratedCb);
-            };
+    const tmp3 = arg1
+      ? function ServerElement(id) {
+          combined = "mounts <".concat(combined, ">");
+          if (typeof closure_1_23 !== "function") {
+            HermesBuiltin.throwTypeError();
           }
-          obj = decoratedCb;
-        }
-        return () => {
-
-        };
-      }, items1);
-      if (typeof closure_1_6 !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      options = first;
-      ref14 = "focus";
-      onReady = onFocus;
-      onReady = tmp26;
-      const ref2 = address.useRef(onFocus);
-      ref13 = ref2;
-      const items2 = [onFocus];
-      const effect2 = obj2.useEffect(() => {
-        ref13.current = onReady;
-      }, items2);
-      const items3 = [onFocus, "focus", first, ref2];
-      const effect3 = obj2.useEffect(() => {
-        if (onReady) {
-          if (decoratedCb) {
-            decoratedCb = function decoratedCb() {
-              if (ref.current) {
-                current = tmp.current;
-                const apply = current.apply;
-                if (typeof apply === "unknown") {
-                  HermesBuiltin.applyArguments(tmp);
-                } else {
-                  apply(tmp, arguments);
-                }
-              }
-            };
-            obj.on(ref14, decoratedCb);
-            return () => {
-              decoratedCb.off(closure_1_1, decoratedCb);
-            };
+          let obj = address;
+          context = address.useContext(closure_1_20);
+          context1 = address.useContext(closure_1_16);
+          if (context) {
+            if (context1) {
+              const _Error3 = Error;
+              const concat3 = "You cannot wrap the part of your app that ".concat;
+              error = new Error(
+                "You cannot wrap the part of your app that ".concat(
+                  combined,
+                  " in both <CheckoutProvider> and <Elements> providers.",
+                ),
+              );
+              throw error;
+            }
           }
-          obj = decoratedCb;
-        }
-        return () => {
-
-        };
-      }, items3);
-      if (typeof closure_1_6 !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      options = first;
-      ref14 = "escape";
-      onReady = onEscape;
-      onReady = tmp30;
-      const ref3 = address.useRef(onEscape);
-      ref13 = ref3;
-      const items4 = [onEscape];
-      const effect4 = obj2.useEffect(() => {
-        ref13.current = onReady;
-      }, items4);
-      const items5 = [onEscape, "escape", first, ref3];
-      const effect5 = obj2.useEffect(() => {
-        if (onReady) {
-          if (decoratedCb) {
-            decoratedCb = function decoratedCb() {
-              if (ref.current) {
-                current = tmp.current;
-                const apply = current.apply;
-                if (typeof apply === "unknown") {
-                  HermesBuiltin.applyArguments(tmp);
-                } else {
-                  apply(tmp, arguments);
-                }
-              }
-            };
-            obj.on(ref14, decoratedCb);
-            return () => {
-              decoratedCb.off(closure_1_1, decoratedCb);
-            };
+          if (context) {
+            if (typeof closure_1_21 !== "function") {
+              HermesBuiltin.throwTypeError();
+            }
+            if (!context) {
+              const _Error2 = Error;
+              const concat2 = "Could not find CheckoutProvider context; You need to wrap the part of your app that "
+                .concat;
+              const error1 = new Error(
+                "Could not find CheckoutProvider context; You need to wrap the part of your app that ".concat(
+                  combined,
+                  " in an <CheckoutProvider> provider.",
+                ),
+              );
+              throw error1;
+            }
+          } else {
+            if (typeof closure_1_17 !== "function") {
+              HermesBuiltin.throwTypeError();
+            }
+            if (!context1) {
+              const _Error = Error;
+              const concat = "Could not find Elements context; You need to wrap the part of your app that ".concat;
+              const error2 = new Error(
+                "Could not find Elements context; You need to wrap the part of your app that ".concat(
+                  combined,
+                  " in an <Elements> provider.",
+                ),
+              );
+              throw error2;
+            }
           }
-          obj = decoratedCb;
+          obj = { id: id.id, className: id.className };
+          return <div id={arg0.id} className={arg0.className} />;
         }
-        return () => {
-
-        };
-      }, items5);
-      if (typeof closure_1_6 !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      options = first;
-      ref14 = "click";
-      onReady = onClick;
-      onReady = tmp34;
-      const ref4 = address.useRef(onClick);
-      ref13 = ref4;
-      const items6 = [onClick];
-      const effect6 = obj2.useEffect(() => {
-        ref13.current = onReady;
-      }, items6);
-      const items7 = [onClick, "click", first, ref4];
-      const effect7 = obj2.useEffect(() => {
-        if (onReady) {
-          if (decoratedCb) {
-            decoratedCb = function decoratedCb() {
-              if (ref.current) {
-                current = tmp.current;
-                const apply = current.apply;
-                if (typeof apply === "unknown") {
-                  HermesBuiltin.applyArguments(tmp);
-                } else {
-                  apply(tmp, arguments);
-                }
-              }
-            };
-            obj.on(ref14, decoratedCb);
-            return () => {
-              decoratedCb.off(closure_1_1, decoratedCb);
-            };
+      : function ClientElement(options) {
+          options = options.options;
+          ({ id, className } = options);
+          if (undefined === options) {
+            options = {};
           }
-          obj = decoratedCb;
-        }
-        return () => {
-
-        };
-      }, items7);
-      if (typeof closure_1_6 !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      options = first;
-      ref14 = "loaderror";
-      onReady = onLoadError;
-      onReady = tmp38;
-      const ref5 = address.useRef(onLoadError);
-      ref13 = ref5;
-      const items8 = [onLoadError];
-      const effect8 = obj2.useEffect(() => {
-        ref13.current = onReady;
-      }, items8);
-      const items9 = [onLoadError, "loaderror", first, ref5];
-      const effect9 = obj2.useEffect(() => {
-        if (onReady) {
-          if (decoratedCb) {
-            decoratedCb = function decoratedCb() {
-              if (ref.current) {
-                current = tmp.current;
-                const apply = current.apply;
-                if (typeof apply === "unknown") {
-                  HermesBuiltin.applyArguments(tmp);
-                } else {
-                  apply(tmp, arguments);
-                }
-              }
-            };
-            obj.on(ref14, decoratedCb);
-            return () => {
-              decoratedCb.off(closure_1_1, decoratedCb);
-            };
+          ({ onBlur, onFocus, onReady } = options);
+          let ref14 = onReady;
+          ({
+            onChange,
+            onEscape,
+            onClick,
+            onLoadError,
+            onLoaderStart,
+            onNetworksChange,
+            onConfirm,
+            onCancel,
+            onShippingAddressChange,
+            onShippingRateChange,
+          } = options);
+          combined = "mounts <".concat(ref14, ">");
+          if (typeof closure_1_23 !== "function") {
+            HermesBuiltin.throwTypeError();
           }
-          obj = decoratedCb;
-        }
-        return () => {
-
-        };
-      }, items9);
-      if (typeof closure_1_6 !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      options = first;
-      ref14 = "loaderstart";
-      onReady = onLoaderStart;
-      onReady = tmp42;
-      const ref6 = address.useRef(onLoaderStart);
-      ref13 = ref6;
-      const items10 = [onLoaderStart];
-      const effect10 = obj2.useEffect(() => {
-        ref13.current = onReady;
-      }, items10);
-      const items11 = [onLoaderStart, "loaderstart", first, ref6];
-      const effect11 = obj2.useEffect(() => {
-        if (onReady) {
-          if (decoratedCb) {
-            decoratedCb = function decoratedCb() {
-              if (ref.current) {
-                current = tmp.current;
-                const apply = current.apply;
-                if (typeof apply === "unknown") {
-                  HermesBuiltin.applyArguments(tmp);
-                } else {
-                  apply(tmp, arguments);
-                }
-              }
-            };
-            obj.on(ref14, decoratedCb);
-            return () => {
-              decoratedCb.off(closure_1_1, decoratedCb);
-            };
+          context = address.useContext(closure_1_20);
+          context1 = address.useContext(closure_1_16);
+          if (context) {
+            if (context1) {
+              let _Error3 = Error;
+              const concat3 = "You cannot wrap the part of your app that ".concat;
+              error = new Error(
+                "You cannot wrap the part of your app that ".concat(
+                  combined,
+                  " in both <CheckoutProvider> and <Elements> providers.",
+                ),
+              );
+              throw error;
+            }
           }
-          obj = decoratedCb;
-        }
-        return () => {
-
-        };
-      }, items11);
-      if (typeof closure_1_6 !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      options = first;
-      ref14 = "networkschange";
-      onReady = onNetworksChange;
-      onReady = tmp46;
-      const ref7 = address.useRef(onNetworksChange);
-      ref13 = ref7;
-      const items12 = [onNetworksChange];
-      const effect12 = obj2.useEffect(() => {
-        ref13.current = onReady;
-      }, items12);
-      const items13 = [onNetworksChange, "networkschange", first, ref7];
-      const effect13 = obj2.useEffect(() => {
-        if (onReady) {
-          if (decoratedCb) {
-            decoratedCb = function decoratedCb() {
-              if (ref.current) {
-                current = tmp.current;
-                const apply = current.apply;
-                if (typeof apply === "unknown") {
-                  HermesBuiltin.applyArguments(tmp);
-                } else {
-                  apply(tmp, arguments);
-                }
-              }
-            };
-            obj.on(ref14, decoratedCb);
-            return () => {
-              decoratedCb.off(closure_1_1, decoratedCb);
-            };
+          if (context) {
+            if (typeof closure_1_21 !== "function") {
+              HermesBuiltin.throwTypeError();
+            }
+            context1 = context;
+            if (!context) {
+              let _Error2 = Error;
+              const concat2 = "Could not find CheckoutProvider context; You need to wrap the part of your app that "
+                .concat;
+              let error1 = new Error(
+                "Could not find CheckoutProvider context; You need to wrap the part of your app that ".concat(
+                  combined,
+                  " in an <CheckoutProvider> provider.",
+                ),
+              );
+              throw error1;
+            }
+          } else {
+            if (typeof closure_1_17 !== "function") {
+              HermesBuiltin.throwTypeError();
+            }
+            if (!context1) {
+              let _Error = Error;
+              let concat = "Could not find Elements context; You need to wrap the part of your app that ".concat;
+              let error2 = new Error(
+                "Could not find Elements context; You need to wrap the part of your app that ".concat(
+                  combined,
+                  " in an <Elements> provider.",
+                ),
+              );
+              throw error2;
+            }
           }
-          obj = decoratedCb;
-        }
-        return () => {
-
-        };
-      }, items13);
-      if (typeof closure_1_6 !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      options = first;
-      ref14 = "confirm";
-      onReady = onConfirm;
-      onReady = tmp50;
-      const ref8 = address.useRef(onConfirm);
-      ref13 = ref8;
-      const items14 = [onConfirm];
-      const effect14 = obj2.useEffect(() => {
-        ref13.current = onReady;
-      }, items14);
-      const items15 = [onConfirm, "confirm", first, ref8];
-      const effect15 = obj2.useEffect(() => {
-        if (onReady) {
-          if (decoratedCb) {
-            decoratedCb = function decoratedCb() {
-              if (ref.current) {
-                current = tmp.current;
-                const apply = current.apply;
-                if (typeof apply === "unknown") {
-                  HermesBuiltin.applyArguments(tmp);
-                } else {
-                  apply(tmp, arguments);
-                }
-              }
-            };
-            obj.on(ref14, decoratedCb);
-            return () => {
-              decoratedCb.off(closure_1_1, decoratedCb);
-            };
+          let elements = null;
+          if ("elements" in context1) {
+            elements = context1.elements;
           }
-          obj = decoratedCb;
-        }
-        return () => {
-
-        };
-      }, items15);
-      if (typeof closure_1_6 !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      options = first;
-      ref14 = "cancel";
-      onReady = onCancel;
-      onReady = tmp54;
-      const ref9 = address.useRef(onCancel);
-      ref13 = ref9;
-      const items16 = [onCancel];
-      const effect16 = obj2.useEffect(() => {
-        ref13.current = onReady;
-      }, items16);
-      const items17 = [onCancel, "cancel", first, ref9];
-      const effect17 = obj2.useEffect(() => {
-        if (onReady) {
-          if (decoratedCb) {
-            decoratedCb = function decoratedCb() {
-              if (ref.current) {
-                current = tmp.current;
-                const apply = current.apply;
-                if (typeof apply === "unknown") {
-                  HermesBuiltin.applyArguments(tmp);
-                } else {
-                  apply(tmp, arguments);
-                }
-              }
-            };
-            obj.on(ref14, decoratedCb);
-            return () => {
-              decoratedCb.off(closure_1_1, decoratedCb);
-            };
+          onReady = elements;
+          let checkoutSdk = null;
+          if ("checkoutSdk" in context1) {
+            checkoutSdk = context1.checkoutSdk;
           }
-          obj = decoratedCb;
-        }
-        return () => {
-
-        };
-      }, items17);
-      if (typeof closure_1_6 !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      options = first;
-      ref14 = "shippingaddresschange";
-      onReady = onShippingAddressChange;
-      onReady = tmp58;
-      const ref10 = address.useRef(onShippingAddressChange);
-      ref13 = ref10;
-      const items18 = [onShippingAddressChange];
-      const effect18 = obj2.useEffect(() => {
-        ref13.current = onReady;
-      }, items18);
-      const items19 = [onShippingAddressChange, "shippingaddresschange", first, ref10];
-      const effect19 = obj2.useEffect(() => {
-        if (onReady) {
-          if (decoratedCb) {
-            decoratedCb = function decoratedCb() {
-              if (ref.current) {
-                current = tmp.current;
-                const apply = current.apply;
-                if (typeof apply === "unknown") {
-                  HermesBuiltin.applyArguments(tmp);
-                } else {
-                  apply(tmp, arguments);
-                }
-              }
-            };
-            obj.on(ref14, decoratedCb);
-            return () => {
-              decoratedCb.off(closure_1_1, decoratedCb);
-            };
+          onReady = checkoutSdk;
+          const tmp18 = closure_1_4(address.useState(null), 2);
+          const first = tmp18[0];
+          let ref13 = first;
+          closure_5 = tmp18[1];
+          closure_6 = obj2.useRef(null);
+          const ref = obj2.useRef(null);
+          if (typeof closure_1_6 !== "function") {
+            HermesBuiltin.throwTypeError();
           }
-          obj = decoratedCb;
-        }
-        return () => {
-
-        };
-      }, items19);
-      if (typeof closure_1_6 !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      options = first;
-      ref14 = "shippingratechange";
-      onReady = onShippingRateChange;
-      onReady = tmp62;
-      const ref11 = address.useRef(onShippingRateChange);
-      ref13 = ref11;
-      const items20 = [onShippingRateChange];
-      const effect20 = obj2.useEffect(() => {
-        ref13.current = onReady;
-      }, items20);
-      const items21 = [onShippingRateChange, "shippingratechange", first, ref11];
-      const effect21 = obj2.useEffect(() => {
-        if (onReady) {
-          if (decoratedCb) {
-            decoratedCb = function decoratedCb() {
-              if (ref.current) {
-                current = tmp.current;
-                const apply = current.apply;
-                if (typeof apply === "unknown") {
-                  HermesBuiltin.applyArguments(tmp);
-                } else {
-                  apply(tmp, arguments);
-                }
-              }
-            };
-            obj.on(ref14, decoratedCb);
-            return () => {
-              decoratedCb.off(closure_1_1, decoratedCb);
-            };
-          }
-          obj = decoratedCb;
-        }
-        return () => {
-
-        };
-      }, items21);
-      if (typeof closure_1_6 !== "function") {
-        combined = HermesBuiltin.throwTypeError();
-      }
-      options = first;
-      ref14 = "change";
-      onReady = onChange;
-      onReady = tmp66;
-      const ref12 = address.useRef(onChange);
-      ref13 = ref12;
-      const items22 = [onChange];
-      const effect22 = obj2.useEffect(() => {
-        ref13.current = onReady;
-      }, items22);
-      const items23 = [onChange, "change", first, ref12];
-      const effect23 = obj2.useEffect(() => {
-        if (onReady) {
-          if (decoratedCb) {
-            decoratedCb = function decoratedCb() {
-              if (ref.current) {
-                current = tmp.current;
-                const apply = current.apply;
-                if (typeof apply === "unknown") {
-                  HermesBuiltin.applyArguments(tmp);
-                } else {
-                  apply(tmp, arguments);
-                }
-              }
-            };
-            obj.on(ref14, decoratedCb);
-            return () => {
-              decoratedCb.off(closure_1_1, decoratedCb);
-            };
-          }
-          obj = decoratedCb;
-        }
-        return () => {
-
-        };
-      }, items23);
-      let tmp70;
-      if (onReady) {
-        if ("expressCheckout" !== options) {
-          onReady = function readyCallback() {
-            ref14(ref13);
-          };
-        }
-        tmp70 = onReady;
-      }
-      if (typeof closure_1_6 !== "function") {
-        combined = HermesBuiltin.throwTypeError();
-      }
-      options = first;
-      ref14 = "ready";
-      onReady = tmp70;
-      onReady = tmp72;
-      ref13 = obj2.useRef(tmp70);
-      const items24 = [tmp70];
-      const effect24 = obj2.useEffect(() => {
-        ref13.current = onReady;
-      }, items24);
-      const items25 = [tmp70, "ready", first, ref13];
-      const effect25 = obj2.useEffect(() => {
-        if (onReady) {
-          if (decoratedCb) {
-            decoratedCb = function decoratedCb() {
-              if (ref.current) {
-                current = tmp.current;
-                const apply = current.apply;
-                if (typeof apply === "unknown") {
-                  HermesBuiltin.applyArguments(tmp);
-                } else {
-                  apply(tmp, arguments);
-                }
-              }
-            };
-            obj.on(ref14, decoratedCb);
-            return () => {
-              decoratedCb.off(closure_1_1, decoratedCb);
-            };
-          }
-          obj = decoratedCb;
-        }
-        return () => {
-
-        };
-      }, items25);
-      const items26 = [elements, checkoutSdk, options];
-      const layoutEffect = obj2.useLayoutEffect(() => {
-        if (null === ref.current) {
-          if (null !== ref.current) {
+          options = first;
+          ref14 = "blur";
+          onReady = onBlur;
+          onReady = tmp22;
+          const ref1 = address.useRef(onBlur);
+          ref13 = ref1;
+          const items = [onBlur];
+          const effect = obj2.useEffect(() => {
+            ref13.current = onReady;
+          }, items);
+          const items1 = [onBlur, "blur", first, ref1];
+          const effect1 = obj2.useEffect(() => {
             if (onReady) {
-              if (onReady) {
-                if ("payment" === options) {
-                  let paymentElement = obj.createPaymentElement(options);
-                } else if ("address" === tmp6) {
-                  if ("mode" in options) {
-                    const mode = tmp14.mode;
-                    const tmp22 = closure_2_3(tmp14, closure_2_24);
-                    if ("shipping" === mode) {
-                      paymentElement = obj.createShippingAddressElement(tmp22);
-                    } else if ("billing" !== mode) {
-                      const _Error3 = Error;
-                      error = new Error("Invalid options.mode. mode must be 'billing' or 'shipping'.");
-                      throw error;
+              if (decoratedCb) {
+                decoratedCb = function decoratedCb() {
+                  if (ref.current) {
+                    current = tmp.current;
+                    const apply = current.apply;
+                    if (typeof apply === "unknown") {
+                      HermesBuiltin.applyArguments(tmp);
                     } else {
-                      paymentElement = obj.createBillingAddressElement(tmp22);
+                      apply(tmp, arguments);
+                    }
+                  }
+                };
+                obj.on(ref14, decoratedCb);
+                return () => {
+                  decoratedCb.off(closure_1_1, decoratedCb);
+                };
+              }
+              obj = decoratedCb;
+            }
+            return () => {};
+          }, items1);
+          if (typeof closure_1_6 !== "function") {
+            HermesBuiltin.throwTypeError();
+          }
+          options = first;
+          ref14 = "focus";
+          onReady = onFocus;
+          onReady = tmp26;
+          const ref2 = address.useRef(onFocus);
+          ref13 = ref2;
+          const items2 = [onFocus];
+          const effect2 = obj2.useEffect(() => {
+            ref13.current = onReady;
+          }, items2);
+          const items3 = [onFocus, "focus", first, ref2];
+          const effect3 = obj2.useEffect(() => {
+            if (onReady) {
+              if (decoratedCb) {
+                decoratedCb = function decoratedCb() {
+                  if (ref.current) {
+                    current = tmp.current;
+                    const apply = current.apply;
+                    if (typeof apply === "unknown") {
+                      HermesBuiltin.applyArguments(tmp);
+                    } else {
+                      apply(tmp, arguments);
+                    }
+                  }
+                };
+                obj.on(ref14, decoratedCb);
+                return () => {
+                  decoratedCb.off(closure_1_1, decoratedCb);
+                };
+              }
+              obj = decoratedCb;
+            }
+            return () => {};
+          }, items3);
+          if (typeof closure_1_6 !== "function") {
+            HermesBuiltin.throwTypeError();
+          }
+          options = first;
+          ref14 = "escape";
+          onReady = onEscape;
+          onReady = tmp30;
+          const ref3 = address.useRef(onEscape);
+          ref13 = ref3;
+          const items4 = [onEscape];
+          const effect4 = obj2.useEffect(() => {
+            ref13.current = onReady;
+          }, items4);
+          const items5 = [onEscape, "escape", first, ref3];
+          const effect5 = obj2.useEffect(() => {
+            if (onReady) {
+              if (decoratedCb) {
+                decoratedCb = function decoratedCb() {
+                  if (ref.current) {
+                    current = tmp.current;
+                    const apply = current.apply;
+                    if (typeof apply === "unknown") {
+                      HermesBuiltin.applyArguments(tmp);
+                    } else {
+                      apply(tmp, arguments);
+                    }
+                  }
+                };
+                obj.on(ref14, decoratedCb);
+                return () => {
+                  decoratedCb.off(closure_1_1, decoratedCb);
+                };
+              }
+              obj = decoratedCb;
+            }
+            return () => {};
+          }, items5);
+          if (typeof closure_1_6 !== "function") {
+            HermesBuiltin.throwTypeError();
+          }
+          options = first;
+          ref14 = "click";
+          onReady = onClick;
+          onReady = tmp34;
+          const ref4 = address.useRef(onClick);
+          ref13 = ref4;
+          const items6 = [onClick];
+          const effect6 = obj2.useEffect(() => {
+            ref13.current = onReady;
+          }, items6);
+          const items7 = [onClick, "click", first, ref4];
+          const effect7 = obj2.useEffect(() => {
+            if (onReady) {
+              if (decoratedCb) {
+                decoratedCb = function decoratedCb() {
+                  if (ref.current) {
+                    current = tmp.current;
+                    const apply = current.apply;
+                    if (typeof apply === "unknown") {
+                      HermesBuiltin.applyArguments(tmp);
+                    } else {
+                      apply(tmp, arguments);
+                    }
+                  }
+                };
+                obj.on(ref14, decoratedCb);
+                return () => {
+                  decoratedCb.off(closure_1_1, decoratedCb);
+                };
+              }
+              obj = decoratedCb;
+            }
+            return () => {};
+          }, items7);
+          if (typeof closure_1_6 !== "function") {
+            HermesBuiltin.throwTypeError();
+          }
+          options = first;
+          ref14 = "loaderror";
+          onReady = onLoadError;
+          onReady = tmp38;
+          const ref5 = address.useRef(onLoadError);
+          ref13 = ref5;
+          const items8 = [onLoadError];
+          const effect8 = obj2.useEffect(() => {
+            ref13.current = onReady;
+          }, items8);
+          const items9 = [onLoadError, "loaderror", first, ref5];
+          const effect9 = obj2.useEffect(() => {
+            if (onReady) {
+              if (decoratedCb) {
+                decoratedCb = function decoratedCb() {
+                  if (ref.current) {
+                    current = tmp.current;
+                    const apply = current.apply;
+                    if (typeof apply === "unknown") {
+                      HermesBuiltin.applyArguments(tmp);
+                    } else {
+                      apply(tmp, arguments);
+                    }
+                  }
+                };
+                obj.on(ref14, decoratedCb);
+                return () => {
+                  decoratedCb.off(closure_1_1, decoratedCb);
+                };
+              }
+              obj = decoratedCb;
+            }
+            return () => {};
+          }, items9);
+          if (typeof closure_1_6 !== "function") {
+            HermesBuiltin.throwTypeError();
+          }
+          options = first;
+          ref14 = "loaderstart";
+          onReady = onLoaderStart;
+          onReady = tmp42;
+          const ref6 = address.useRef(onLoaderStart);
+          ref13 = ref6;
+          const items10 = [onLoaderStart];
+          const effect10 = obj2.useEffect(() => {
+            ref13.current = onReady;
+          }, items10);
+          const items11 = [onLoaderStart, "loaderstart", first, ref6];
+          const effect11 = obj2.useEffect(() => {
+            if (onReady) {
+              if (decoratedCb) {
+                decoratedCb = function decoratedCb() {
+                  if (ref.current) {
+                    current = tmp.current;
+                    const apply = current.apply;
+                    if (typeof apply === "unknown") {
+                      HermesBuiltin.applyArguments(tmp);
+                    } else {
+                      apply(tmp, arguments);
+                    }
+                  }
+                };
+                obj.on(ref14, decoratedCb);
+                return () => {
+                  decoratedCb.off(closure_1_1, decoratedCb);
+                };
+              }
+              obj = decoratedCb;
+            }
+            return () => {};
+          }, items11);
+          if (typeof closure_1_6 !== "function") {
+            HermesBuiltin.throwTypeError();
+          }
+          options = first;
+          ref14 = "networkschange";
+          onReady = onNetworksChange;
+          onReady = tmp46;
+          const ref7 = address.useRef(onNetworksChange);
+          ref13 = ref7;
+          const items12 = [onNetworksChange];
+          const effect12 = obj2.useEffect(() => {
+            ref13.current = onReady;
+          }, items12);
+          const items13 = [onNetworksChange, "networkschange", first, ref7];
+          const effect13 = obj2.useEffect(() => {
+            if (onReady) {
+              if (decoratedCb) {
+                decoratedCb = function decoratedCb() {
+                  if (ref.current) {
+                    current = tmp.current;
+                    const apply = current.apply;
+                    if (typeof apply === "unknown") {
+                      HermesBuiltin.applyArguments(tmp);
+                    } else {
+                      apply(tmp, arguments);
+                    }
+                  }
+                };
+                obj.on(ref14, decoratedCb);
+                return () => {
+                  decoratedCb.off(closure_1_1, decoratedCb);
+                };
+              }
+              obj = decoratedCb;
+            }
+            return () => {};
+          }, items13);
+          if (typeof closure_1_6 !== "function") {
+            HermesBuiltin.throwTypeError();
+          }
+          options = first;
+          ref14 = "confirm";
+          onReady = onConfirm;
+          onReady = tmp50;
+          const ref8 = address.useRef(onConfirm);
+          ref13 = ref8;
+          const items14 = [onConfirm];
+          const effect14 = obj2.useEffect(() => {
+            ref13.current = onReady;
+          }, items14);
+          const items15 = [onConfirm, "confirm", first, ref8];
+          const effect15 = obj2.useEffect(() => {
+            if (onReady) {
+              if (decoratedCb) {
+                decoratedCb = function decoratedCb() {
+                  if (ref.current) {
+                    current = tmp.current;
+                    const apply = current.apply;
+                    if (typeof apply === "unknown") {
+                      HermesBuiltin.applyArguments(tmp);
+                    } else {
+                      apply(tmp, arguments);
+                    }
+                  }
+                };
+                obj.on(ref14, decoratedCb);
+                return () => {
+                  decoratedCb.off(closure_1_1, decoratedCb);
+                };
+              }
+              obj = decoratedCb;
+            }
+            return () => {};
+          }, items15);
+          if (typeof closure_1_6 !== "function") {
+            HermesBuiltin.throwTypeError();
+          }
+          options = first;
+          ref14 = "cancel";
+          onReady = onCancel;
+          onReady = tmp54;
+          const ref9 = address.useRef(onCancel);
+          ref13 = ref9;
+          const items16 = [onCancel];
+          const effect16 = obj2.useEffect(() => {
+            ref13.current = onReady;
+          }, items16);
+          const items17 = [onCancel, "cancel", first, ref9];
+          const effect17 = obj2.useEffect(() => {
+            if (onReady) {
+              if (decoratedCb) {
+                decoratedCb = function decoratedCb() {
+                  if (ref.current) {
+                    current = tmp.current;
+                    const apply = current.apply;
+                    if (typeof apply === "unknown") {
+                      HermesBuiltin.applyArguments(tmp);
+                    } else {
+                      apply(tmp, arguments);
+                    }
+                  }
+                };
+                obj.on(ref14, decoratedCb);
+                return () => {
+                  decoratedCb.off(closure_1_1, decoratedCb);
+                };
+              }
+              obj = decoratedCb;
+            }
+            return () => {};
+          }, items17);
+          if (typeof closure_1_6 !== "function") {
+            HermesBuiltin.throwTypeError();
+          }
+          options = first;
+          ref14 = "shippingaddresschange";
+          onReady = onShippingAddressChange;
+          onReady = tmp58;
+          const ref10 = address.useRef(onShippingAddressChange);
+          ref13 = ref10;
+          const items18 = [onShippingAddressChange];
+          const effect18 = obj2.useEffect(() => {
+            ref13.current = onReady;
+          }, items18);
+          const items19 = [onShippingAddressChange, "shippingaddresschange", first, ref10];
+          const effect19 = obj2.useEffect(() => {
+            if (onReady) {
+              if (decoratedCb) {
+                decoratedCb = function decoratedCb() {
+                  if (ref.current) {
+                    current = tmp.current;
+                    const apply = current.apply;
+                    if (typeof apply === "unknown") {
+                      HermesBuiltin.applyArguments(tmp);
+                    } else {
+                      apply(tmp, arguments);
+                    }
+                  }
+                };
+                obj.on(ref14, decoratedCb);
+                return () => {
+                  decoratedCb.off(closure_1_1, decoratedCb);
+                };
+              }
+              obj = decoratedCb;
+            }
+            return () => {};
+          }, items19);
+          if (typeof closure_1_6 !== "function") {
+            HermesBuiltin.throwTypeError();
+          }
+          options = first;
+          ref14 = "shippingratechange";
+          onReady = onShippingRateChange;
+          onReady = tmp62;
+          const ref11 = address.useRef(onShippingRateChange);
+          ref13 = ref11;
+          const items20 = [onShippingRateChange];
+          const effect20 = obj2.useEffect(() => {
+            ref13.current = onReady;
+          }, items20);
+          const items21 = [onShippingRateChange, "shippingratechange", first, ref11];
+          const effect21 = obj2.useEffect(() => {
+            if (onReady) {
+              if (decoratedCb) {
+                decoratedCb = function decoratedCb() {
+                  if (ref.current) {
+                    current = tmp.current;
+                    const apply = current.apply;
+                    if (typeof apply === "unknown") {
+                      HermesBuiltin.applyArguments(tmp);
+                    } else {
+                      apply(tmp, arguments);
+                    }
+                  }
+                };
+                obj.on(ref14, decoratedCb);
+                return () => {
+                  decoratedCb.off(closure_1_1, decoratedCb);
+                };
+              }
+              obj = decoratedCb;
+            }
+            return () => {};
+          }, items21);
+          if (typeof closure_1_6 !== "function") {
+            combined = HermesBuiltin.throwTypeError();
+          }
+          options = first;
+          ref14 = "change";
+          onReady = onChange;
+          onReady = tmp66;
+          const ref12 = address.useRef(onChange);
+          ref13 = ref12;
+          const items22 = [onChange];
+          const effect22 = obj2.useEffect(() => {
+            ref13.current = onReady;
+          }, items22);
+          const items23 = [onChange, "change", first, ref12];
+          const effect23 = obj2.useEffect(() => {
+            if (onReady) {
+              if (decoratedCb) {
+                decoratedCb = function decoratedCb() {
+                  if (ref.current) {
+                    current = tmp.current;
+                    const apply = current.apply;
+                    if (typeof apply === "unknown") {
+                      HermesBuiltin.applyArguments(tmp);
+                    } else {
+                      apply(tmp, arguments);
+                    }
+                  }
+                };
+                obj.on(ref14, decoratedCb);
+                return () => {
+                  decoratedCb.off(closure_1_1, decoratedCb);
+                };
+              }
+              obj = decoratedCb;
+            }
+            return () => {};
+          }, items23);
+          let tmp70;
+          if (onReady) {
+            if ("expressCheckout" !== options) {
+              onReady = function readyCallback() {
+                ref14(ref13);
+              };
+            }
+            tmp70 = onReady;
+          }
+          if (typeof closure_1_6 !== "function") {
+            combined = HermesBuiltin.throwTypeError();
+          }
+          options = first;
+          ref14 = "ready";
+          onReady = tmp70;
+          onReady = tmp72;
+          ref13 = obj2.useRef(tmp70);
+          const items24 = [tmp70];
+          const effect24 = obj2.useEffect(() => {
+            ref13.current = onReady;
+          }, items24);
+          const items25 = [tmp70, "ready", first, ref13];
+          const effect25 = obj2.useEffect(() => {
+            if (onReady) {
+              if (decoratedCb) {
+                decoratedCb = function decoratedCb() {
+                  if (ref.current) {
+                    current = tmp.current;
+                    const apply = current.apply;
+                    if (typeof apply === "unknown") {
+                      HermesBuiltin.applyArguments(tmp);
+                    } else {
+                      apply(tmp, arguments);
+                    }
+                  }
+                };
+                obj.on(ref14, decoratedCb);
+                return () => {
+                  decoratedCb.off(closure_1_1, decoratedCb);
+                };
+              }
+              obj = decoratedCb;
+            }
+            return () => {};
+          }, items25);
+          const items26 = [elements, checkoutSdk, options];
+          const layoutEffect = obj2.useLayoutEffect(() => {
+            if (null === ref.current) {
+              if (null !== ref.current) {
+                if (onReady) {
+                  if (onReady) {
+                    if ("payment" === options) {
+                      let paymentElement = obj.createPaymentElement(options);
+                    } else if ("address" === tmp6) {
+                      if ("mode" in options) {
+                        const mode = tmp14.mode;
+                        const tmp22 = closure_2_3(tmp14, closure_2_24);
+                        if ("shipping" === mode) {
+                          paymentElement = obj.createShippingAddressElement(tmp22);
+                        } else if ("billing" !== mode) {
+                          const _Error3 = Error;
+                          error = new Error("Invalid options.mode. mode must be 'billing' or 'shipping'.");
+                          throw error;
+                        } else {
+                          paymentElement = obj.createBillingAddressElement(tmp22);
+                        }
+                      } else {
+                        const _Error2 = Error;
+                        const error1 = new Error("You must supply options.mode. mode must be 'billing' or 'shipping'.");
+                        throw error1;
+                      }
+                    } else if ("expressCheckout" === tmp6) {
+                      paymentElement = obj.createExpressCheckoutElement(options);
+                    } else if ("currencySelector" === tmp6) {
+                      paymentElement = obj.createCurrencySelectorElement();
+                    } else {
+                      const _Error = Error;
+                      const concat = "Invalid Element type ".concat;
+                      const error2 = new Error(
+                        "Invalid Element type ".concat(
+                          ref14,
+                          ". You must use either the <PaymentElement />, <AddressElement options={{mode: 'shipping'}} />, <AddressElement options={{mode: 'billing'}} />, or <ExpressCheckoutElement />.",
+                        ),
+                      );
+                      throw error2;
                     }
                   } else {
-                    const _Error2 = Error;
-                    const error1 = new Error("You must supply options.mode. mode must be 'billing' or 'shipping'.");
-                    throw error1;
+                    paymentElement = null;
+                    if (obj2) {
+                      paymentElement = obj2.create(options, options);
+                    }
                   }
-                } else if ("expressCheckout" === tmp6) {
-                  paymentElement = obj.createExpressCheckoutElement(options);
-                } else if ("currencySelector" === tmp6) {
-                  paymentElement = obj.createCurrencySelectorElement();
-                } else {
-                  const _Error = Error;
-                  const concat = "Invalid Element type ".concat;
-                  const error2 = new Error("Invalid Element type ".concat(ref14, ". You must use either the <PaymentElement />, <AddressElement options={{mode: 'shipping'}} />, <AddressElement options={{mode: 'billing'}} />, or <ExpressCheckoutElement />."));
-                  throw error2;
+                  tmp.current = paymentElement;
+                  callback(paymentElement);
+                  if (paymentElement) {
+                    paymentElement.mount(tmp33.current);
+                  }
                 }
-              } else {
-                paymentElement = null;
-                if (obj2) {
-                  paymentElement = obj2.create(options, options);
-                }
-              }
-              tmp.current = paymentElement;
-              callback(paymentElement);
-              if (paymentElement) {
-                paymentElement.mount(tmp33.current);
               }
             }
+          }, items26);
+          if (typeof closure_1_7 !== "function") {
+            combined = HermesBuiltin.throwTypeError();
           }
-        }
-      }, items26);
-      if (typeof closure_1_7 !== "function") {
-        combined = HermesBuiltin.throwTypeError();
-      }
-      ref14 = obj2.useRef(options);
-      const items27 = [options];
-      const effect26 = obj2.useEffect(() => {
-        ref14.current = options;
-      }, items27);
-      let current = ref14.current;
-      const items28 = [options, current];
-      const effect27 = obj2.useEffect(() => {
-        if (ref.current) {
-          if (typeof closure_2_11 !== "function") {
-            HermesBuiltin.throwTypeError();
-          }
-          closure_0 = tmp3;
-          closure_1 = current;
-          closure_2 = ["paymentRequest"];
-          if (typeof closure_2_8 !== "function") {
-            HermesBuiltin.throwTypeError();
-          }
-          let tmp7 = null !== tmp3;
-          if (tmp7) {
-            tmp7 = "object" === closure_2_2(tmp3);
-          }
-          let reduced = null;
-          if (tmp7) {
-            let _Object = Object;
-            const keys = Object.keys(tmp3);
-            reduced = keys.reduce((arg0, arg1) => {
-              if (typeof closure_1_8 !== "function") {
+          ref14 = obj2.useRef(options);
+          const items27 = [options];
+          const effect26 = obj2.useEffect(() => {
+            ref14.current = options;
+          }, items27);
+          let current = ref14.current;
+          const items28 = [options, current];
+          const effect27 = obj2.useEffect(() => {
+            if (ref.current) {
+              if (typeof closure_2_11 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
-              let tmp2 = null !== tmp;
-              if (tmp2) {
-                tmp2 = "object" === lib(tmp);
+              closure_0 = tmp3;
+              closure_1 = current;
+              closure_2 = ["paymentRequest"];
+              if (typeof closure_2_8 !== "function") {
+                HermesBuiltin.throwTypeError();
               }
-              let tmp4 = !tmp2;
-              if (tmp2) {
-                tmp4 = !closure_1_10(dependencyMap[arg1], tmp[arg1]);
+              let tmp7 = null !== tmp3;
+              if (tmp7) {
+                tmp7 = "object" === closure_2_2(tmp3);
               }
-              if (lib.includes(arg1)) {
-                let tmp7 = arg0;
-                if (tmp4) {
-                  const _console = console;
-                  const concat = "Unsupported prop change: options.".concat;
-                  console.warn("Unsupported prop change: options.".concat(arg1, " is not a mutable property."));
-                  tmp7 = arg0;
-                }
-              } else {
-                tmp7 = arg0;
-                if (tmp4) {
-                  let obj = arg0;
-                  if (!arg0) {
-                    obj = {};
+              let reduced = null;
+              if (tmp7) {
+                let _Object = Object;
+                const keys = Object.keys(tmp3);
+                reduced = keys.reduce((arg0, arg1) => {
+                  if (typeof closure_1_8 !== "function") {
+                    HermesBuiltin.throwTypeError();
                   }
-                  obj = {};
-                  closure_1(obj, obj);
-                  obj = {};
-                  if (arg1 in obj) {
-                    const _Object = Object;
-                    obj1 = { value: null, enumerable: true, configurable: true, writable: true };
-                    obj1[0] = tmp11;
-                    Object.defineProperty(obj, arg1, obj1);
+                  let tmp2 = null !== tmp;
+                  if (tmp2) {
+                    tmp2 = "object" === lib(tmp);
+                  }
+                  let tmp4 = !tmp2;
+                  if (tmp2) {
+                    tmp4 = !closure_1_10(dependencyMap[arg1], tmp[arg1]);
+                  }
+                  if (lib.includes(arg1)) {
+                    let tmp7 = arg0;
+                    if (tmp4) {
+                      const _console = console;
+                      const concat = "Unsupported prop change: options.".concat;
+                      console.warn("Unsupported prop change: options.".concat(arg1, " is not a mutable property."));
+                      tmp7 = arg0;
+                    }
                   } else {
-                    obj[arg1] = tmp11;
+                    tmp7 = arg0;
+                    if (tmp4) {
+                      let obj = arg0;
+                      if (!arg0) {
+                        obj = {};
+                      }
+                      obj = {};
+                      closure_1(obj, obj);
+                      obj = {};
+                      if (arg1 in obj) {
+                        const _Object = Object;
+                        obj1 = { value: null, enumerable: true, configurable: true, writable: true };
+                        obj1[0] = tmp11;
+                        Object.defineProperty(obj, arg1, obj1);
+                      } else {
+                        obj[arg1] = tmp11;
+                      }
+                      closure_1(obj, {}, obj);
+                    }
                   }
-                  closure_1(obj, {}, obj);
+                  return tmp7;
+                }, null);
+              }
+              let tmp11 = reduced;
+              if (reduced) {
+                tmp11 = "update" in tmp.current;
+              }
+              if (tmp11) {
+                current = tmp.current;
+                current.update(reduced);
+              }
+              let tmp4 = current;
+            }
+          }, items28);
+          const layoutEffect1 = obj2.useLayoutEffect(
+            () => () => {
+              if (ref.current) {
+                if (typeof tmp.current.destroy === "function") {
+                  try {
+                    current = tmp.current;
+                    current.destroy();
+                    tmp.current = null;
+                  } catch (err) {}
                 }
               }
-              return tmp7;
-            }, null);
-          }
-          let tmp11 = reduced;
-          if (reduced) {
-            tmp11 = "update" in tmp.current;
-          }
-          if (tmp11) {
-            current = tmp.current;
-            current.update(reduced);
-          }
-          let tmp4 = current;
-        }
-      }, items28);
-      const layoutEffect1 = obj2.useLayoutEffect(() => () => {
-        if (ref.current) {
-          if (typeof tmp.current.destroy === "function") {
-            try {
-              current = tmp.current;
-              current.destroy();
-              tmp.current = null;
-            } catch (err) {
-            }
-          }
-        }
-      }, []);
-      return <div id={id} className={className} ref={ref} />;
-    });
-    tmp3.propTypes = { id: _default.string, className: _default.string, onChange: _default.func, onBlur: _default.func, onFocus: _default.func, onReady: _default.func, onEscape: _default.func, onClick: _default.func, onLoadError: _default.func, onLoaderStart: _default.func, onNetworksChange: _default.func, onConfirm: _default.func, onCancel: _default.func, onShippingAddressChange: _default.func, onShippingRateChange: _default.func, options: _default.object };
+            },
+            [],
+          );
+          return <div id={id} className={className} ref={ref} />;
+        };
+    tmp3.propTypes = {
+      id: _default.string,
+      className: _default.string,
+      onChange: _default.func,
+      onBlur: _default.func,
+      onFocus: _default.func,
+      onReady: _default.func,
+      onEscape: _default.func,
+      onClick: _default.func,
+      onLoadError: _default.func,
+      onLoaderStart: _default.func,
+      onNetworksChange: _default.func,
+      onConfirm: _default.func,
+      onCancel: _default.func,
+      onShippingAddressChange: _default.func,
+      onShippingRateChange: _default.func,
+      options: _default.object,
+    };
     tmp3.displayName = combined;
     tmp3.__elementType = address;
     return tmp3;
@@ -1802,7 +1880,10 @@ let fn = function t(exports, React) {
   const elementComponent18 = createElementComponent("affirmMessage", tmp9);
   exports.AddressElement = elementComponent15;
   exports.AffirmMessageElement = elementComponent18;
-  exports.AfterpayClearpayMessageElement = createElementComponent("afterpayClearpayMessage", typeof window === "undefined");
+  exports.AfterpayClearpayMessageElement = createElementComponent(
+    "afterpayClearpayMessage",
+    typeof window === "undefined",
+  );
   exports.AuBankAccountElement = elementComponent;
   exports.CardCvcElement = elementComponent4;
   exports.CardElement = elementComponent1;
@@ -1812,78 +1893,87 @@ let fn = function t(exports, React) {
   exports.CurrencySelectorElement = elementComponent12;
   exports.Elements = Elements;
   exports.ElementsConsumer = ElementsConsumer;
-  exports.EmbeddedCheckout = typeof window === "undefined" ? (function EmbeddedCheckoutServerElement(arg0) {
-    ({ id, className } = arg0);
-    if (typeof useEmbeddedCheckoutContext !== "function") {
-      HermesBuiltin.throwTypeError();
-    }
-    let obj = React;
-    if (React.useContext(context3)) {
-      obj = { id: null, className: null };
-      obj[0] = id;
-      obj[1] = className;
-      return <div id={null} className={null} />;
-    } else {
-      const _Error = Error;
-      error = new Error("<EmbeddedCheckout> must be used within <EmbeddedCheckoutProvider>");
-      throw error;
-    }
-  }) : (function EmbeddedCheckoutClientElement(arg0) {
-    ({ id, className } = arg0);
-    if (typeof useEmbeddedCheckoutContext !== "function") {
-      HermesBuiltin.throwTypeError();
-    }
-    let obj = embeddedCheckout;
-    context = embeddedCheckout.useContext(context3);
-    if (context) {
-      embeddedCheckout = context.embeddedCheckout;
-      closure_1 = obj.useRef(false);
-      const ref = obj.useRef(null);
-      const items = [embeddedCheckout];
-      const layoutEffect = obj.useLayoutEffect(() => {
-        const current = ref.current;
-        let tmp2 = !current;
-        if (!current) {
-          tmp2 = embeddedCheckout;
+  exports.EmbeddedCheckout =
+    typeof window === "undefined"
+      ? function EmbeddedCheckoutServerElement(arg0) {
+          ({ id, className } = arg0);
+          if (typeof useEmbeddedCheckoutContext !== "function") {
+            HermesBuiltin.throwTypeError();
+          }
+          let obj = React;
+          if (React.useContext(context3)) {
+            obj = { id: null, className: null };
+            obj[0] = id;
+            obj[1] = className;
+            return <div id={null} className={null} />;
+          } else {
+            const _Error = Error;
+            error = new Error("<EmbeddedCheckout> must be used within <EmbeddedCheckoutProvider>");
+            throw error;
+          }
         }
-        if (tmp2) {
-          tmp2 = null !== ref.current;
-        }
-        if (tmp2) {
-          embeddedCheckout.mount(ref.current);
-          ref.current = true;
-        }
-        return () => {
-          if (ref.current) {
-            if (closure_0) {
-              try {
-                obj.unmount();
-                tmp.current = false;
-              } catch (err) {
+      : function EmbeddedCheckoutClientElement(arg0) {
+          ({ id, className } = arg0);
+          if (typeof useEmbeddedCheckoutContext !== "function") {
+            HermesBuiltin.throwTypeError();
+          }
+          let obj = embeddedCheckout;
+          context = embeddedCheckout.useContext(context3);
+          if (context) {
+            embeddedCheckout = context.embeddedCheckout;
+            closure_1 = obj.useRef(false);
+            const ref = obj.useRef(null);
+            const items = [embeddedCheckout];
+            const layoutEffect = obj.useLayoutEffect(() => {
+              const current = ref.current;
+              let tmp2 = !current;
+              if (!current) {
+                tmp2 = embeddedCheckout;
               }
-            }
-            obj = closure_0;
+              if (tmp2) {
+                tmp2 = null !== ref.current;
+              }
+              if (tmp2) {
+                embeddedCheckout.mount(ref.current);
+                ref.current = true;
+              }
+              return () => {
+                if (ref.current) {
+                  if (closure_0) {
+                    try {
+                      obj.unmount();
+                      tmp.current = false;
+                    } catch (err) {}
+                  }
+                  obj = closure_0;
+                }
+              };
+            }, items);
+            obj = { ref: null, id: null, className: null };
+            obj[0] = ref;
+            obj[1] = id;
+            obj[2] = className;
+            return <div ref={null} id={null} className={null} />;
+          } else {
+            const _Error = Error;
+            error = new Error("<EmbeddedCheckout> must be used within <EmbeddedCheckoutProvider>");
+            throw error;
           }
         };
-      }, items);
-      obj = { ref: null, id: null, className: null };
-      obj[0] = ref;
-      obj[1] = id;
-      obj[2] = className;
-      return <div ref={null} id={null} className={null} />;
-    } else {
-      const _Error = Error;
-      error = new Error("<EmbeddedCheckout> must be used within <EmbeddedCheckoutProvider>");
-      throw error;
-    }
-  });
   exports.EmbeddedCheckoutProvider = function EmbeddedCheckoutProvider(stripe) {
     stripe = stripe.stripe;
     let options = stripe;
     options = stripe.options;
     let ref2 = options;
     const items = [stripe];
-    const memo = options.useMemo(() => closure_1_14(options, "Invalid prop `stripe` supplied to `EmbeddedCheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details."), items);
+    const memo = options.useMemo(
+      () =>
+        closure_1_14(
+          options,
+          "Invalid prop `stripe` supplied to `EmbeddedCheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.",
+        ),
+      items,
+    );
     closure_3 = options.useRef(null);
     const ref = options.useRef(null);
     const tmp3 = ref(options.useState({ embeddedCheckout: null }), 2);
@@ -1893,9 +1983,7 @@ let fn = function t(exports, React) {
     const effect = options.useEffect(() => {
       if (!ref.current) {
         if (!ref.current) {
-          function setStripeAndInitEmbeddedCheckout(arg0) {
-
-          }
+          function setStripeAndInitEmbeddedCheckout(arg0) {}
           if ("async" === memo.tag) {
             if (!tmp.current) {
               tmp3.stripePromise.then((current) => {
@@ -1947,22 +2035,25 @@ let fn = function t(exports, React) {
       }
     }, items1);
     const items2 = [value.embeddedCheckout];
-    const effect1 = options.useEffect(() => () => {
-      if (embeddedCheckout.embeddedCheckout) {
-        tmp2.current = null;
-        embeddedCheckout = tmp.embeddedCheckout;
-        embeddedCheckout.destroy();
-      } else if (tmp2.current) {
-        current = tmp2.current;
-        current.then(() => {
-          closure_3.current = null;
-          if (closure_5.embeddedCheckout) {
-            const embeddedCheckout = closure_5.embeddedCheckout;
-            embeddedCheckout.destroy();
-          }
-        });
-      }
-    }, items2);
+    const effect1 = options.useEffect(
+      () => () => {
+        if (embeddedCheckout.embeddedCheckout) {
+          tmp2.current = null;
+          embeddedCheckout = tmp.embeddedCheckout;
+          embeddedCheckout.destroy();
+        } else if (tmp2.current) {
+          current = tmp2.current;
+          current.then(() => {
+            closure_3.current = null;
+            if (closure_5.embeddedCheckout) {
+              const embeddedCheckout = closure_5.embeddedCheckout;
+              embeddedCheckout.destroy();
+            }
+          });
+        }
+      },
+      items2,
+    );
     const items3 = [ref];
     const effect2 = options.useEffect(() => {
       if (typeof closure_1_15 !== "function") {
@@ -1977,7 +2068,11 @@ let fn = function t(exports, React) {
       }
       if (registerAppInfo) {
         obj._registerWrapper({ name: "react-stripe-js", version: "3.7.0" });
-        obj.registerAppInfo({ name: "react-stripe-js", version: "3.7.0", url: "https://stripe.com/docs/stripe-js/react" });
+        obj.registerAppInfo({
+          name: "react-stripe-js",
+          version: "3.7.0",
+          url: "https://stripe.com/docs/stripe-js/react",
+        });
       }
     }, items3);
     if (typeof current !== "function") {
@@ -1999,7 +2094,9 @@ let fn = function t(exports, React) {
       }
       if (tmp2) {
         const _console = console;
-        console.warn("Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the `stripe` prop after setting it.");
+        console.warn(
+          "Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the `stripe` prop after setting it.",
+        );
       }
     }, items5);
     if (typeof current !== "function") {
@@ -2017,27 +2114,39 @@ let fn = function t(exports, React) {
         if (null != ref2) {
           if (tmp4) {
             const _console2 = console;
-            console.warn("Invalid props passed to EmbeddedCheckoutProvider: You must provide one of either `options.fetchClientSecret` or `options.clientSecret`.");
+            console.warn(
+              "Invalid props passed to EmbeddedCheckoutProvider: You must provide one of either `options.fetchClientSecret` or `options.clientSecret`.",
+            );
           }
           if (tmp7) {
             const _console3 = console;
-            console.warn("Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the client secret after setting it. Unmount and create a new instance of EmbeddedCheckoutProvider instead.");
+            console.warn(
+              "Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the client secret after setting it. Unmount and create a new instance of EmbeddedCheckoutProvider instead.",
+            );
           }
           if (tmp10) {
             const _console4 = console;
-            console.warn("Unsupported prop change on EmbeddedCheckoutProvider: You cannot change fetchClientSecret after setting it. Unmount and create a new instance of EmbeddedCheckoutProvider instead.");
+            console.warn(
+              "Unsupported prop change on EmbeddedCheckoutProvider: You cannot change fetchClientSecret after setting it. Unmount and create a new instance of EmbeddedCheckoutProvider instead.",
+            );
           }
           if (tmp13) {
             const _console5 = console;
-            console.warn("Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onComplete option after setting it.");
+            console.warn(
+              "Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onComplete option after setting it.",
+            );
           }
           if (tmp16) {
             const _console6 = console;
-            console.warn("Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onShippingDetailsChange option after setting it.");
+            console.warn(
+              "Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onShippingDetailsChange option after setting it.",
+            );
           }
           if (tmp19) {
             const _console7 = console;
-            console.warn("Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onLineItemsChange option after setting it.");
+            console.warn(
+              "Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onLineItemsChange option after setting it.",
+            );
           }
           tmp10 = null != tmp.fetchClientSecret && tmp22.fetchClientSecret !== tmp.fetchClientSecret;
           tmp13 = null != tmp.onComplete && tmp22.onComplete !== tmp.onComplete;
@@ -2047,7 +2156,9 @@ let fn = function t(exports, React) {
           tmp7 = null != tmp.clientSecret && tmp22.clientSecret !== tmp.clientSecret;
         } else {
           const _console = console;
-          console.warn("Unsupported prop change on EmbeddedCheckoutProvider: You cannot unset options after setting them.");
+          console.warn(
+            "Unsupported prop change on EmbeddedCheckoutProvider: You cannot unset options after setting them.",
+          );
         }
       }
     }, items7);
@@ -2075,13 +2186,20 @@ let fn = function t(exports, React) {
         return context1;
       } else {
         const _Error2 = Error;
-        error = new Error("Could not find Checkout Context; You need to wrap the part of your app that calls useCheckout() in an <CheckoutProvider> provider.");
+        error = new Error(
+          "Could not find Checkout Context; You need to wrap the part of your app that calls useCheckout() in an <CheckoutProvider> provider.",
+        );
         throw error;
       }
     } else {
       const _Error = Error;
       const concat = "Could not find CheckoutProvider context; You need to wrap the part of your app that ".concat;
-      const error1 = new Error("Could not find CheckoutProvider context; You need to wrap the part of your app that ".concat("calls useCheckout()", " in an <CheckoutProvider> provider."));
+      const error1 = new Error(
+        "Could not find CheckoutProvider context; You need to wrap the part of your app that ".concat(
+          "calls useCheckout()",
+          " in an <CheckoutProvider> provider.",
+        ),
+      );
       throw error1;
     }
     obj = React;
@@ -2099,7 +2217,12 @@ let fn = function t(exports, React) {
     } else {
       const _Error = Error;
       const concat = "Could not find Elements context; You need to wrap the part of your app that ".concat;
-      error = new Error("Could not find Elements context; You need to wrap the part of your app that ".concat("calls useElements()", " in an <Elements> provider."));
+      error = new Error(
+        "Could not find Elements context; You need to wrap the part of your app that ".concat(
+          "calls useElements()",
+          " in an <Elements> provider.",
+        ),
+      );
       throw error;
     }
   };
@@ -2113,7 +2236,12 @@ let fn = function t(exports, React) {
       if (context1) {
         const _Error3 = Error;
         const concat3 = "You cannot wrap the part of your app that ".concat;
-        error = new Error("You cannot wrap the part of your app that ".concat("calls useStripe()", " in both <CheckoutProvider> and <Elements> providers."));
+        error = new Error(
+          "You cannot wrap the part of your app that ".concat(
+            "calls useStripe()",
+            " in both <CheckoutProvider> and <Elements> providers.",
+          ),
+        );
         throw error;
       }
     }
@@ -2125,7 +2253,12 @@ let fn = function t(exports, React) {
       if (!context) {
         const _Error2 = Error;
         const concat2 = "Could not find CheckoutProvider context; You need to wrap the part of your app that ".concat;
-        const error1 = new Error("Could not find CheckoutProvider context; You need to wrap the part of your app that ".concat("calls useStripe()", " in an <CheckoutProvider> provider."));
+        const error1 = new Error(
+          "Could not find CheckoutProvider context; You need to wrap the part of your app that ".concat(
+            "calls useStripe()",
+            " in an <CheckoutProvider> provider.",
+          ),
+        );
         throw error1;
       }
     } else {
@@ -2135,7 +2268,12 @@ let fn = function t(exports, React) {
       if (!context1) {
         const _Error = Error;
         const concat = "Could not find Elements context; You need to wrap the part of your app that ".concat;
-        const error2 = new Error("Could not find Elements context; You need to wrap the part of your app that ".concat("calls useStripe()", " in an <Elements> provider."));
+        const error2 = new Error(
+          "Could not find Elements context; You need to wrap the part of your app that ".concat(
+            "calls useStripe()",
+            " in an <Elements> provider.",
+          ),
+        );
         throw error2;
       }
     }

@@ -63,7 +63,9 @@ export const ignoreEmptyBackNavigation = (on, c4) => {
   };
   const f70702 = () => {
     const debug = c4(f70701[2]).debug;
-    debug.log("Not sampling transaction as route has been seen before. Pass ignoreEmptyBackNavigationTransactions = false to disable this feature.");
+    debug.log(
+      "Not sampling transaction as route has been seen before. Pass ignoreEmptyBackNavigationTransactions = false to disable this feature.",
+    );
   };
   if (on) {
     if (c4) {
@@ -76,18 +78,20 @@ export const ignoreEmptyBackNavigation = (on, c4) => {
               if (f70703(tmp)) {
                 c4 = tmp;
                 const spanDescendants = c4(f70703[2]).getSpanDescendants(tmp);
-                if (spanDescendants.filter((spanContext) => {
-                  let tmp = spanContext.spanContext().spanId !== lib.spanContext().spanId;
-                  if (tmp) {
-                    tmp = "ui.load.initial_display" !== lib(closure_1_1[2]).spanToJSON(spanContext).op;
-                    const obj = lib(closure_1_1[2]);
-                  }
-                  if (tmp) {
-                    tmp = "navigation.processing" !== lib(closure_1_1[2]).spanToJSON(spanContext).op;
-                    const obj2 = lib(closure_1_1[2]);
-                  }
-                  return tmp;
-                }).length <= 0) {
+                if (
+                  spanDescendants.filter((spanContext) => {
+                    let tmp = spanContext.spanContext().spanId !== lib.spanContext().spanId;
+                    if (tmp) {
+                      tmp = "ui.load.initial_display" !== lib(closure_1_1[2]).spanToJSON(spanContext).op;
+                      const obj = lib(closure_1_1[2]);
+                    }
+                    if (tmp) {
+                      tmp = "navigation.processing" !== lib(closure_1_1[2]).spanToJSON(spanContext).op;
+                      const obj2 = lib(closure_1_1[2]);
+                    }
+                    return tmp;
+                  }).length <= 0
+                ) {
                   f70704(tmp);
                   tmp._sampled = false;
                 }
@@ -133,7 +137,7 @@ export const ignoreEmptyRouteChangeTransactions = (on, c4) => {
   };
   f70704 = (arg0) => {
     const debug = c4(f70703[2]).debug;
-    debug.log("Discarding empty \"" + f70703 + "\" transaction that never received route information.");
+    debug.log('Discarding empty "' + f70703 + '" transaction that never received route information.');
     if (null != c4) {
       c4.recordDroppedEvent("sample_rate", "transaction");
     }
@@ -149,18 +153,20 @@ export const ignoreEmptyRouteChangeTransactions = (on, c4) => {
               if (f70703(tmp)) {
                 c4 = tmp;
                 const spanDescendants = c4(f70703[2]).getSpanDescendants(tmp);
-                if (spanDescendants.filter((spanContext) => {
-                  let tmp = spanContext.spanContext().spanId !== lib.spanContext().spanId;
-                  if (tmp) {
-                    tmp = "ui.load.initial_display" !== lib(closure_1_1[2]).spanToJSON(spanContext).op;
-                    const obj = lib(closure_1_1[2]);
-                  }
-                  if (tmp) {
-                    tmp = "navigation.processing" !== lib(closure_1_1[2]).spanToJSON(spanContext).op;
-                    const obj2 = lib(closure_1_1[2]);
-                  }
-                  return tmp;
-                }).length <= 0) {
+                if (
+                  spanDescendants.filter((spanContext) => {
+                    let tmp = spanContext.spanContext().spanId !== lib.spanContext().spanId;
+                    if (tmp) {
+                      tmp = "ui.load.initial_display" !== lib(closure_1_1[2]).spanToJSON(spanContext).op;
+                      const obj = lib(closure_1_1[2]);
+                    }
+                    if (tmp) {
+                      tmp = "navigation.processing" !== lib(closure_1_1[2]).spanToJSON(spanContext).op;
+                      const obj2 = lib(closure_1_1[2]);
+                    }
+                    return tmp;
+                  }).length <= 0
+                ) {
                   f70704(tmp);
                   tmp._sampled = false;
                 }
@@ -209,7 +215,9 @@ export const cancelInBackground = (on) => {
       const debug = lib(listener[2]).debug;
       let obj = lib(listener[2]);
       const _HermesInternal = HermesInternal;
-      debug.log("Setting " + obj.spanToJSON(lib).op + " transaction to cancelled because the app is in the background.");
+      debug.log(
+        "Setting " + obj.spanToJSON(lib).op + " transaction to cancelled because the app is in the background.",
+      );
       obj = { code: null, message: "cancelled" };
       obj[0] = lib(listener[2]).SPAN_STATUS_ERROR;
       lib.setStatus(obj);

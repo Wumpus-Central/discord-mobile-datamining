@@ -9,4 +9,4 @@ export default function baseAggregator(arg0, arg1, arg2, arg3) {
     callback(closure_2, arg0, callback2(arg0), arg2);
   });
   return arg3;
-};
+}

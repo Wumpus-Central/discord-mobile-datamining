@@ -1,7 +1,6 @@
 // _runtime/metro/05882__possibleConstructorReturn.js
 import _assertThisInitialized from "../05883__assertThisInitialized.js";
 
-
 export default function _possibleConstructorReturn(arg0, fn) {
   if (fn) {
     return fn;
@@ -13,4 +12,4 @@ export default function _possibleConstructorReturn(arg0, fn) {
   } else {
     return _assertThisInitialized(arg0);
   }
-};
+}

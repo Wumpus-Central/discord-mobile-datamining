@@ -65,7 +65,8 @@ arg5.default = {
             let tmp7Result = tmp7(5157);
             let tmp12 = c8;
             let tmp13 = XMLcomadobexmp0;
-            tmp11 = tmp7Result.getStringFromDataView(byteLength, length + c8, XMLcomadobexmp0.length) === XMLcomadobexmp0;
+            tmp11 =
+              tmp7Result.getStringFromDataView(byteLength, length + c8, XMLcomadobexmp0.length) === XMLcomadobexmp0;
           }
           if (tmp11) {
             let tmp42 = c8;
@@ -161,7 +162,10 @@ arg5.default = {
                   let sum4 = length + c8;
                   let uint32 = byteLength.getUint32(length + c6);
                   let tmp14Result2 = tmp14(5157);
-                  let nullTerminatedStringFromDataView = tmp14Result2.getNullTerminatedStringFromDataView(byteLength, sum4);
+                  let nullTerminatedStringFromDataView = tmp14Result2.getNullTerminatedStringFromDataView(
+                    byteLength,
+                    sum4,
+                  );
                   let sum5 = sum4 + (nullTerminatedStringFromDataView.length + 1);
                   let uint8 = byteLength.getUint8(sum5);
                   if (!obj.iccChunks) {
@@ -169,7 +173,14 @@ arg5.default = {
                   }
                   let sum6 = sum5 + 1;
                   let iccChunks = obj.iccChunks;
-                  obj1 = { offset: null, length: null, chunkNumber: 1, chunksTotal: 1, profileName: null, compressionMethod: null };
+                  obj1 = {
+                    offset: null,
+                    length: null,
+                    chunkNumber: 1,
+                    chunksTotal: 1,
+                    profileName: null,
+                    compressionMethod: null,
+                  };
                   obj1[0] = sum6;
                   obj1[1] = uint32 - (sum6 - sum4);
                   obj1[4] = nullTerminatedStringFromDataView;
@@ -179,7 +190,7 @@ arg5.default = {
               }
             }
             let tmp25 = pHYs;
-            let items1 = [pHYs, ];
+            let items1 = [pHYs];
             let tmp26 = tIME;
             items1[1] = tIME;
             let tmp14Result3 = tmp14(5157);
@@ -197,7 +208,7 @@ arg5.default = {
       }
     }
     return obj;
-  }
+  },
 };
 arg5.PNG_CHUNK_TYPE_SIZE = 4;
 arg5.PNG_CHUNK_LENGTH_OFFSET = 0;

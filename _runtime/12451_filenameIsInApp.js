@@ -303,7 +303,7 @@ arg5.nodeStackLineParser = function nodeStackLineParser(arg0) {
         obj[0] = str;
         return obj;
       }
-    }
+    },
   ];
   return items;
 };

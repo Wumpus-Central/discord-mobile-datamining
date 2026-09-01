@@ -13,4 +13,4 @@ export default function arrayAggregator(arg0, arg1, arg2, arg3) {
     let tmp5 = arg1(arg3, tmp, arg2(tmp), arg0);
   }
   return arg3;
-};
+}

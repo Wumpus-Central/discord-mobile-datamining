@@ -39,7 +39,10 @@ export default function _default(disabled) {
   let obj = disabled(theme[3]);
   keyboardState = obj.useKeyboardState((appearance) => appearance.appearance);
   let items = [disabled, theme, keyboardState];
-  const tmp2 = keyboardState(() => ({ backgroundColor: disabled ? theme[keyboardState].disabled : theme[keyboardState].primary }), items);
+  const tmp2 = keyboardState(
+    () => ({ backgroundColor: disabled ? theme[keyboardState].disabled : theme[keyboardState].primary }),
+    items,
+  );
   RN = tmp2;
   const items1 = [tmp2];
   const items2 = [tmp2];
@@ -62,10 +65,10 @@ export default function _default(disabled) {
       style: keyboardState(() => {
         const items = [closure_1_7.arrowRightLine, closure_3];
         return items;
-      }, items2)
-    })
+      }, items2),
+    }),
   ];
   obj[1] = items3;
   obj[1] = callback(closure_4, obj);
   return closure_5(closure_4, obj);
-};
+}

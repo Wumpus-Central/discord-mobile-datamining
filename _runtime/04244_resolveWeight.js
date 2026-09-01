@@ -27,7 +27,7 @@ _loadFont = function _loadFont() {
   const tmp = _setFallbackFonts((arg0) => {
     closure_0 = arg0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c1 === 2) {
         c1 = 3;
         HermesBuiltin.throwTypeError();
@@ -73,7 +73,11 @@ _loadFont = function _loadFont() {
               } else {
                 const _Error = Error;
                 const _HermesInternal = HermesInternal;
-                error = new Error("Invalid font asset: could not resolve require() ID " + tmp26 + ". Ensure 'ttf' is in metro.config.js assetExts.");
+                error = new Error(
+                  "Invalid font asset: could not resolve require() ID " +
+                    tmp26 +
+                    ". Ensure 'ttf' is in metro.config.js assetExts.",
+                );
                 throw error;
               }
             } else {
@@ -135,7 +139,7 @@ _setFallbackFonts = function _setFallbackFonts(arg0) {
     c4 = 0;
     c3 = 0;
     c6 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -230,7 +234,7 @@ _setFallbackFonts = function _setFallbackFonts(arg0) {
 };
 _clearFallbackFonts = function _clearFallbackFonts() {
   const self = this;
-  const tmp = _setFallbackFonts(function*() {
+  const tmp = _setFallbackFonts(function* () {
     if (c0 === 2) {
       c0 = 3;
       HermesBuiltin.throwTypeError();
@@ -310,5 +314,5 @@ export const RiveFonts = {
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  }
+  },
 };

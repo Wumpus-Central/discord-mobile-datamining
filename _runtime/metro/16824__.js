@@ -42,7 +42,7 @@ let obj = {
       }
     }
     return str3;
-  }
+  },
 };
 globalThis.IntlMessageFormat.__addLocaleData(obj);
 globalThis.IntlMessageFormat.__addLocaleData({ locale: "en-001", parentLocale: "en" });
@@ -74,7 +74,7 @@ obj = {
   locale: "en-Dsrt",
   pluralRuleFunction(arg0, arg1) {
     return "other";
-  }
+  },
 };
 globalThis.IntlMessageFormat.__addLocaleData(obj);
 globalThis.IntlMessageFormat.__addLocaleData({ locale: "en-ER", parentLocale: "en-001" });
@@ -143,7 +143,7 @@ obj = {
   locale: "en-Shaw",
   pluralRuleFunction(arg0, arg1) {
     return "other";
-  }
+  },
 };
 globalThis.IntlMessageFormat.__addLocaleData(obj);
 globalThis.IntlMessageFormat.__addLocaleData({ locale: "en-TC", parentLocale: "en-001" });

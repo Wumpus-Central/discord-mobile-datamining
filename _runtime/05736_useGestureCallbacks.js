@@ -16,11 +16,25 @@ arg5.useGestureCallbacks = function useGestureCallbacks(handlerTag, disableReani
       handler = Reanimated.useHandler(memoizedGestureCallbacks);
     }
     const tmpResult = tmp(5739);
-    reanimatedEventHandler = tmpResult.useReanimatedEventHandler(handlerTag, memoizedGestureCallbacks, handler, disableReanimated.changeEventCalculator, disableReanimated.fillInDefaultValues);
+    reanimatedEventHandler = tmpResult.useReanimatedEventHandler(
+      handlerTag,
+      memoizedGestureCallbacks,
+      handler,
+      disableReanimated.changeEventCalculator,
+      disableReanimated.fillInDefaultValues,
+    );
   }
   let animatedEventHandler;
   if (disableReanimated.dispatchesAnimatedEvents) {
     animatedEventHandler = disableReanimated.onUpdate;
   }
-  return { jsEventHandler: useGestureEventHandler.useGestureEventHandler(handlerTag, memoizedGestureCallbacks, disableReanimated), reanimatedEventHandler, animatedEventHandler };
+  return {
+    jsEventHandler: useGestureEventHandler.useGestureEventHandler(
+      handlerTag,
+      memoizedGestureCallbacks,
+      disableReanimated,
+    ),
+    reanimatedEventHandler,
+    animatedEventHandler,
+  };
 };

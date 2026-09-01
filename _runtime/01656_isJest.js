@@ -9,7 +9,7 @@ export const isJest = function isJest() {
   return process.env.JEST_WORKER_ID;
 };
 export const isChromeDebugger = function isChromeDebugger() {
-  return !(global.nativeCallSyncHook && !global.__REMOTEDEV__ || global.RN$Bridgeless);
+  return !((global.nativeCallSyncHook && !global.__REMOTEDEV__) || global.RN$Bridgeless);
 };
 export function isWeb() {
   return false;
@@ -26,8 +26,8 @@ export function isMacOS() {
 export const shouldBeUseWeb = function shouldBeUseWeb() {
   let flag = process.env.JEST_WORKER_ID;
   if (!flag) {
-    flag = !(global.nativeCallSyncHook && !global.__REMOTEDEV__ || global.RN$Bridgeless);
-    const tmp2 = global.nativeCallSyncHook && !global.__REMOTEDEV__ || global.RN$Bridgeless;
+    flag = !((global.nativeCallSyncHook && !global.__REMOTEDEV__) || global.RN$Bridgeless);
+    const tmp2 = (global.nativeCallSyncHook && !global.__REMOTEDEV__) || global.RN$Bridgeless;
   }
   if (!flag) {
     flag = false;

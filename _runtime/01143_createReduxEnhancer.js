@@ -13,7 +13,7 @@ let obj = {
       tmp = null;
     }
     return tmp;
-  }
+  },
 };
 arg5.createReduxEnhancer = function createReduxEnhancer(arg0) {
   obj = {};
@@ -45,8 +45,7 @@ arg5.createReduxEnhancer = function createReduxEnhancer(arg0) {
               const arraySpreadResult = HermesBuiltin.arraySpread(attachments, 0);
             }
             return type;
-          } catch (err) {
-          }
+          } catch (err) {}
         });
       }
       lib = arg0;
@@ -80,7 +79,11 @@ arg5.createReduxEnhancer = function createReduxEnhancer(arg0) {
           obj1 = { type: "redux", value: null };
           obj1[1] = stateTransformerResult;
           obj[0] = obj1;
-          const result = tmp2(tmp3[0]).addNonEnumerableProperty(obj, "__sentry_override_normalization_depth__", 3 + num);
+          const result = tmp2(tmp3[0]).addNonEnumerableProperty(
+            obj,
+            "__sentry_override_normalization_depth__",
+            3 + num,
+          );
           currentScope.setContext("state", obj);
           const tmp2Result1 = tmp2(tmp3[0]);
         } else {
@@ -126,7 +129,11 @@ arg5.createReduxEnhancer = function createReduxEnhancer(arg0) {
                 obj1 = { type: "redux", value: null };
                 obj1[1] = stateTransformerResult;
                 obj[0] = obj1;
-                const result = tmp2(tmp3[0]).addNonEnumerableProperty(obj, "__sentry_override_normalization_depth__", 3 + num);
+                const result = tmp2(tmp3[0]).addNonEnumerableProperty(
+                  obj,
+                  "__sentry_override_normalization_depth__",
+                  3 + num,
+                );
                 currentScope.setContext("state", obj);
                 const tmp2Result1 = tmp2(tmp3[0]);
               } else {
@@ -137,10 +144,10 @@ arg5.createReduxEnhancer = function createReduxEnhancer(arg0) {
                 const result1 = configureScopeWithState(currentScope, tmp);
               }
               return tmp;
-            }
+            },
           ];
           apply.apply(arg1, items);
-        }
+        },
       };
       const proxy = new Proxy(tmp4.replaceReducer, obj);
       tmp4.replaceReducer = proxy;

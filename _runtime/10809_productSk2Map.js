@@ -5,11 +5,34 @@ require = arg1;
 const dependencyMap = arg6;
 arg5.productSk2Map = (displayName) => {
   ({ description, price, currency, displayPrice } = displayName);
-  return { title: displayName.displayName, productId: String(displayName.id), description, type: "iap", price: String(price), localizedPrice: displayPrice, currency };
+  return {
+    title: displayName.displayName,
+    productId: String(displayName.id),
+    description,
+    type: "iap",
+    price: String(price),
+    localizedPrice: displayPrice,
+    currency,
+  };
 };
 arg5.subscriptionSk2Map = (subscription) => {
   subscription = subscription.subscription;
-  const obj = { platform: _mod10797.SubscriptionPlatform.ios, title: displayName, productId: String(id), description, type: "subs", price: String(price), localizedPrice: displayPrice, currency, subscriptionPeriodNumberIOS: null, subscriptionPeriodUnitIOS: null, introductoryPriceAsAmountIOS: null, introductoryPricePaymentModeIOS: null, introductoryPriceNumberOfPeriodsIOS: null, introductoryPriceSubscriptionPeriodIOS: null };
+  const obj = {
+    platform: _mod10797.SubscriptionPlatform.ios,
+    title: displayName,
+    productId: String(id),
+    description,
+    type: "subs",
+    price: String(price),
+    localizedPrice: displayPrice,
+    currency,
+    subscriptionPeriodNumberIOS: null,
+    subscriptionPeriodUnitIOS: null,
+    introductoryPriceAsAmountIOS: null,
+    introductoryPricePaymentModeIOS: null,
+    introductoryPriceNumberOfPeriodsIOS: null,
+    introductoryPriceSubscriptionPeriodIOS: null,
+  };
   ({ id, description, displayName, price, currency, displayPrice } = subscription);
   let value;
   if (subscription != null) {
@@ -74,7 +97,19 @@ arg5.transactionSk2ToPurchaseMap = (arg0) => {
   try {
     const _JSON = JSON;
     let str = JSON.parse(tmp7).transactionReason;
-    const obj = { productId: null, transactionId: null, transactionDate: null, transactionReceipt: "", purchaseToken: "", quantityIOS: null, originalTransactionDateIOS: null, originalTransactionIdentifierIOS: null, verificationResultIOS: null, appAccountToken: null, transactionReasonIOS: null };
+    const obj = {
+      productId: null,
+      transactionId: null,
+      transactionDate: null,
+      transactionReceipt: "",
+      purchaseToken: "",
+      quantityIOS: null,
+      originalTransactionDateIOS: null,
+      originalTransactionIdentifierIOS: null,
+      verificationResultIOS: null,
+      appAccountToken: null,
+      transactionReasonIOS: null,
+    };
     obj[0] = tmp3;
     const _String = String;
     obj[1] = String(tmp);

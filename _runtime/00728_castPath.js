@@ -1,7 +1,6 @@
 // _runtime/00728_castPath.js
 import _mod599 from "metro/00599__.js";
 
-
 export default function castPath(arg0, arg1) {
   if (_mod599(arg0)) {
     return arg0;
@@ -12,4 +11,4 @@ export default function castPath(arg0, arg1) {
     tmpResultResult = tmp(729)(tmp(762)(arg0));
     const tmpResult = tmp(729);
   }
-};
+}

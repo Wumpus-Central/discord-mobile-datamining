@@ -51,8 +51,14 @@ function changeIndex(history) {
     if ("fullHistory" !== arg2) {
       const history1 = history.history;
       const items = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(history1.filter((type) => "route" !== type.type), 0);
-      arraySpreadResult = HermesBuiltin.arraySpread(getRouteHistory(history.routes, arg1, arg2, arg3), arraySpreadResult);
+      let arraySpreadResult = HermesBuiltin.arraySpread(
+        history1.filter((type) => "route" !== type.type),
+        0,
+      );
+      arraySpreadResult = HermesBuiltin.arraySpread(
+        getRouteHistory(history.routes, arg1, arg2, arg3),
+        arraySpreadResult,
+      );
       let combined = items;
     }
     let obj = { index: null, history: null };
@@ -80,7 +86,10 @@ function changeIndex(history) {
       found = history;
       if (tmp14) {
         const items1 = [];
-        HermesBuiltin.arraySpread(history.slice(findLastIndexResult + 1), HermesBuiltin.arraySpread(history.slice(0, findLastIndexResult), 0));
+        HermesBuiltin.arraySpread(
+          history.slice(findLastIndexResult + 1),
+          HermesBuiltin.arraySpread(history.slice(0, findLastIndexResult), 0),
+        );
         found = items1;
         const arraySpreadResult1 = HermesBuiltin.arraySpread(history.slice(0, findLastIndexResult), 0);
       }
@@ -115,7 +124,15 @@ arg5.SwitchRouter = function SwitchRouter(merged) {
       const obj = { name, key: "" + name + "-" + closure_1_0(closure_1_1[1]).nanoid(), params: table[name] };
       return obj;
     });
-    let obj = { stale: false, key: closure_1_0(backBehavior[1]).nanoid(), index: num, routeNames, history: closure_1_3(mapped, num, backBehavior, closure_0), routes: mapped, preloadedRouteKeys: [] };
+    let obj = {
+      stale: false,
+      key: closure_1_0(backBehavior[1]).nanoid(),
+      index: num,
+      routeNames,
+      history: closure_1_3(mapped, num, backBehavior, closure_0),
+      routes: mapped,
+      preloadedRouteKeys: [],
+    };
     return obj;
   };
   obj.getRehydratedState = function getRehydratedState(index) {
@@ -183,7 +200,15 @@ arg5.SwitchRouter = function SwitchRouter(merged) {
       }
       continue;
     }
-    let obj = { stale: false, key: closure_1_0(backBehavior[1]).nanoid(), index: bound, routeNames, history: items, routes: mapped, preloadedRouteKeys: null };
+    let obj = {
+      stale: false,
+      key: closure_1_0(backBehavior[1]).nanoid(),
+      index: bound,
+      routeNames,
+      history: items,
+      routes: mapped,
+      preloadedRouteKeys: null,
+    };
     const preloadedRouteKeys = index.preloadedRouteKeys;
     let found;
     if (preloadedRouteKeys != null) {
@@ -243,13 +268,16 @@ arg5.SwitchRouter = function SwitchRouter(merged) {
       if (-1 === index) {
         closure_4 = found.findLast((type) => "route" === type.type);
         const _Math = Math;
-        index = Math.max(0, mapped.findIndex((key) => {
-          key = undefined;
-          if (key != null) {
-            key = key.key;
-          }
-          return key.key === key;
-        }));
+        index = Math.max(
+          0,
+          mapped.findIndex((key) => {
+            key = undefined;
+            if (key != null) {
+              key = key.key;
+            }
+            return key.key === key;
+          }),
+        );
       }
       let obj = {};
       const merged = Object.assign(index);

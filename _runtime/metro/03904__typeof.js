@@ -92,7 +92,12 @@ class Hour1to12Parser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 70, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", {
+            value: 70,
+            enumerable: true,
+            configurable: true,
+            writable: true,
+          });
         } else {
           num3 = 70;
           applyResult.priority = 70;
@@ -215,7 +220,7 @@ obj = {
     } else {
       return _createSuperInternal(3880).parseNDigits(arg1.length, arg0);
     }
-  }
+  },
 };
 let items = [
   obj,
@@ -227,7 +232,7 @@ let items = [
         tmp = arg1 <= 12;
       }
       return tmp;
-    }
+    },
   },
   {
     key: "set",
@@ -245,8 +250,8 @@ let items = [
         }
       }
       getUTCHours.setUTCHours(arg2, 0, 0, 0);
-    }
-  }
+    },
+  },
 ];
 if (0 < items.length) {
   do {

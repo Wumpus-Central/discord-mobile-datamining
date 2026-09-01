@@ -18,7 +18,7 @@ let obj = {
       str = "-" + this.prerelease;
     }
     return "" + major + "." + minor + "." + patch + str;
-  }
+  },
 };
 const items = [obj];
 const tmp2 = _createClassDefault(ReactNativeVersion, null, items);

@@ -7,7 +7,34 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let closure_2 = [];
 const map = new Map();
 const map1 = new Map();
-let closure_5 = { click: "click", pointerdown: "click", pointerup: "click", mousedown: "click", mouseup: "click", touchstart: "click", touchend: "click", mouseover: "hover", mouseout: "hover", mouseenter: "hover", mouseleave: "hover", pointerover: "hover", pointerout: "hover", pointerenter: "hover", pointerleave: "hover", dragstart: "drag", dragend: "drag", drag: "drag", dragenter: "drag", dragleave: "drag", dragover: "drag", drop: "drag", keydown: "press", keyup: "press", keypress: "press", input: "press" };
+let closure_5 = {
+  click: "click",
+  pointerdown: "click",
+  pointerup: "click",
+  mousedown: "click",
+  mouseup: "click",
+  touchstart: "click",
+  touchend: "click",
+  mouseover: "hover",
+  mouseout: "hover",
+  mouseenter: "hover",
+  mouseleave: "hover",
+  pointerover: "hover",
+  pointerout: "hover",
+  pointerenter: "hover",
+  pointerleave: "hover",
+  dragstart: "drag",
+  dragend: "drag",
+  drag: "drag",
+  dragenter: "drag",
+  dragleave: "drag",
+  dragover: "drag",
+  drop: "drag",
+  keydown: "press",
+  keyup: "press",
+  keypress: "press",
+  input: "press",
+};
 function _onInp(metric) {
   const iter = metric.metric;
   if (null != iter.value) {
@@ -178,7 +205,5 @@ arg5.startTrackingINP = function startTrackingINP() {
       };
     }
   }
-  return () => {
-
-  };
+  return () => {};
 };

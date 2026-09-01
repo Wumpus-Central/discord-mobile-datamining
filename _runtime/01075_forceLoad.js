@@ -13,11 +13,9 @@ import checkAndWarnIfIsEmbeddedBrowserExtension from "01082_checkAndWarnIfIsEmbe
 require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.forceLoad = function forceLoad() {
-
-};
+arg5.forceLoad = function forceLoad() {};
 arg5.getDefaultIntegrations = function getDefaultIntegrations(arg0) {
-  const items = [registerSpanErrorInstrumentation.inboundFiltersIntegration(), , , , , , , , ];
+  const items = [registerSpanErrorInstrumentation.inboundFiltersIntegration(), , , , , , , ,];
   const obj = registerSpanErrorInstrumentation;
   items[1] = registerSpanErrorInstrumentation.functionToStringIntegration();
   const obj2 = registerSpanErrorInstrumentation;
@@ -48,7 +46,7 @@ arg5.init = function init() {
     const obj2 = checkAndWarnIfIsEmbeddedBrowserExtension;
   }
   if (null == obj.defaultIntegrations) {
-    const items = [registerSpanErrorInstrumentation.inboundFiltersIntegration(), , , , , , , , ];
+    const items = [registerSpanErrorInstrumentation.inboundFiltersIntegration(), , , , , , , ,];
     const obj3 = registerSpanErrorInstrumentation;
     items[1] = registerSpanErrorInstrumentation.functionToStringIntegration();
     const obj4 = registerSpanErrorInstrumentation;

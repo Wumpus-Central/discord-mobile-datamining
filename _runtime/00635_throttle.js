@@ -2,7 +2,6 @@
 import isObject from "00606_isObject.js";
 import debounce from "00636_debounce.js";
 
-
 export default function throttle(fn, arg1, leading) {
   if (typeof fn !== "function") {
     const _TypeError = TypeError;
@@ -29,4 +28,4 @@ export default function throttle(fn, arg1, leading) {
     obj[2] = flag3;
     return debounce(fn, arg1, obj);
   }
-};
+}

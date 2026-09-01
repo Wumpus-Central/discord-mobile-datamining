@@ -23,8 +23,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const unknown = "unknown";
@@ -90,7 +89,12 @@ let items = [
       dependencyMap = arg0;
       closure_2 = componentStack;
       componentStack = componentStack.componentStack;
-      ({ beforeCapture: closure_4, onError: _isNativeReflectConstruct, showDialog: noop, dialogOptions: ErrorBoundary } = this.props);
+      ({
+        beforeCapture: closure_4,
+        onError: _isNativeReflectConstruct,
+        showDialog: noop,
+        dialogOptions: ErrorBoundary,
+      } = this.props);
       ErrorBoundary(1024).withScope((arg0) => {
         if (closure_4) {
           tmp(arg0, table, componentStack);
@@ -101,7 +105,9 @@ let items = [
         } else {
           handled = obj.props.fallback;
         }
-        const result = closure_1_0(table[7]).captureReactException(table, closure_2, { mechanism: { handled, type: "auto.function.react.error_boundary" } });
+        const result = closure_1_0(table[7]).captureReactException(table, closure_2, {
+          mechanism: { handled, type: "auto.function.react.error_boundary" },
+        });
         if (closure_5) {
           tmp10(tmp8, componentStack, result);
         }
@@ -118,7 +124,7 @@ let items = [
         obj = { error: tmp8, componentStack, eventId: result };
         obj.setState(obj);
       });
-    }
+    },
   },
   {
     key: "componentDidMount",
@@ -127,7 +133,7 @@ let items = [
       if (onMount) {
         onMount();
       }
-    }
+    },
   },
   {
     key: "componentWillUnmount",
@@ -145,7 +151,7 @@ let items = [
         self._cleanupHook();
         self._cleanupHook = undefined;
       }
-    }
+    },
   },
   {
     key: "resetErrorBoundary",
@@ -156,7 +162,7 @@ let items = [
         onReset(tmp, tmp2, tmp3);
       }
       self.setState(closure_8);
-    }
+    },
   },
   {
     key: "render",
@@ -194,8 +200,8 @@ let items = [
         }
         return element;
       }
-    }
-  }
+    },
+  },
 ];
 const _moduleResult = _createClass(ErrorBoundary, items);
 let c9 = _moduleResult;
@@ -210,7 +216,11 @@ export const withErrorBoundary = function withErrorBoundary(displayName) {
     const merged = Object.assign(closure_1);
     obj = {};
     const merged1 = Object.assign(arg0);
-    return <closure_1_9><closure_0 /></closure_1_9>;
+    return (
+      <closure_1_9>
+        <closure_0 />
+      </closure_1_9>
+    );
   });
   memoResult.displayName = "errorBoundary(" + displayName.displayName || displayName.name || unknown + ")";
   ErrorBoundary(1140).hoistNonReactStatics(memoResult, displayName);

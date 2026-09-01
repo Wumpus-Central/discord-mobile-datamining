@@ -1,9 +1,7 @@
 // _runtime/01111_eventOriginIntegration.js
 arg5.eventOriginIntegration = () => ({
   name: "EventOrigin",
-  setupOnce() {
-
-  },
+  setupOnce() {},
   processEvent(tags) {
     tags = tags.tags;
     if (null === tags) {
@@ -13,5 +11,5 @@ arg5.eventOriginIntegration = () => ({
     tags.tags["event.origin"] = "javascript";
     tags.tags["event.environment"] = "javascript";
     return tags;
-  }
+  },
 });

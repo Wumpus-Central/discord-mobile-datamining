@@ -103,21 +103,21 @@ class tinycolor {
                   result2 = tmp58 * (1 - diff * tmp57);
                   result3 = tmp58 * (1 - (1 - diff) * tmp57);
                   result4 = floorResult % 6;
-                  items = [, , , , , ];
+                  items = [, , , , ,];
                   items[0] = tmp58;
                   items[1] = result2;
                   items[2] = result1;
                   items[3] = result1;
                   items[4] = result3;
                   items[5] = tmp58;
-                  items1 = [, , , , , ];
+                  items1 = [, , , , ,];
                   items1[0] = result3;
                   items1[1] = tmp58;
                   items1[2] = tmp58;
                   items1[3] = result2;
                   items1[4] = result1;
                   items1[5] = result1;
-                  items2 = [, , , , , ];
+                  items2 = [, , , , ,];
                   items2[0] = result1;
                   items2[1] = result1;
                   items2[2] = result3;
@@ -565,7 +565,12 @@ class tinycolor {
     obj2 = tinycolor(require);
     toRgbResult1 = obj2.toRgb();
     result = num2 / 100;
-    obj = { r: (toRgbResult1.r - toRgbResult.r) * result + toRgbResult.r, g: (toRgbResult1.g - toRgbResult.g) * result + toRgbResult.g, b: (toRgbResult1.b - toRgbResult.b) * result + toRgbResult.b, a: (toRgbResult1.a - toRgbResult.a) * result + toRgbResult.a };
+    obj = {
+      r: (toRgbResult1.r - toRgbResult.r) * result + toRgbResult.r,
+      g: (toRgbResult1.g - toRgbResult.g) * result + toRgbResult.g,
+      b: (toRgbResult1.b - toRgbResult.b) * result + toRgbResult.b,
+      a: (toRgbResult1.a - toRgbResult.a) * result + toRgbResult.a,
+    };
     return tinycolor(obj);
   }
   static readability(arg0, arg1) {
@@ -710,7 +715,7 @@ function rgbToHex(arg0, arg1, arg2, arg3) {
   } else {
     text = `${arr}`;
   }
-  const items = [text, , ];
+  const items = [text, ,];
   const str3 = round(arg1);
   if (1 == str1.length) {
     let text1 = `0${arr3}`;
@@ -757,7 +762,7 @@ function rgbaToArgbHex(_r, _g, _b, _a) {
   } else {
     text = `${arr}`;
   }
-  const items = [text, , , ];
+  const items = [text, , ,];
   let str3 = round(_r);
   if (1 == str1.length) {
     let text1 = `0${arr3}`;
@@ -838,9 +843,9 @@ function brighten(toHslResult) {
     num2 = num;
   }
   const toRgbResult = tinycolor(toHslResult).toRgb();
-  toRgbResult.r = max(0, min(255, toRgbResult.r - round(-num2 / 100 * 255)));
-  toRgbResult.g = max(0, min(255, toRgbResult.g - round(-num2 / 100 * 255)));
-  toRgbResult.b = max(0, min(255, toRgbResult.b - round(-num2 / 100 * 255)));
+  toRgbResult.r = max(0, min(255, toRgbResult.r - round((-num2 / 100) * 255)));
+  toRgbResult.g = max(0, min(255, toRgbResult.g - round((-num2 / 100) * 255)));
+  toRgbResult.b = max(0, min(255, toRgbResult.b - round((-num2 / 100) * 255)));
   return tinycolor(toRgbResult);
 }
 function darken(toHslResult) {
@@ -876,7 +881,7 @@ function triad(toHslResult) {
   obj = tinycolor(toHslResult);
   toHslResult = obj.toHsl();
   const h = toHslResult.h;
-  const items = [tinycolor(toHslResult), , ];
+  const items = [tinycolor(toHslResult), ,];
   obj = { h: (h + 120) % 360, s: toHslResult.s, l: toHslResult.l };
   items[1] = tinycolor(obj);
   obj = { h: (h + 240) % 360, s: toHslResult.s, l: toHslResult.l };
@@ -887,7 +892,7 @@ function tetrad(toHslResult) {
   obj = tinycolor(toHslResult);
   toHslResult = obj.toHsl();
   const h = toHslResult.h;
-  const items = [tinycolor(toHslResult), , , ];
+  const items = [tinycolor(toHslResult), , ,];
   obj = { h: (h + 90) % 360, s: toHslResult.s, l: toHslResult.l };
   items[1] = tinycolor(obj);
   obj = { h: (h + 180) % 360, s: toHslResult.s, l: toHslResult.l };
@@ -899,7 +904,7 @@ function splitcomplement(toHslResult) {
   obj = tinycolor(toHslResult);
   toHslResult = obj.toHsl();
   const h = toHslResult.h;
-  const items = [tinycolor(toHslResult), , ];
+  const items = [tinycolor(toHslResult), ,];
   obj = { h: (h + 72) % 360, s: toHslResult.s, l: toHslResult.l };
   items[1] = tinycolor(obj);
   obj = { h: (h + 216) % 360, s: toHslResult.s, l: toHslResult.l };
@@ -918,7 +923,7 @@ function analogous(toHslResult) {
   toHslResult = tinycolor(toHslResult).toHsl();
   const result = 360 / num2;
   const items = [tinycolor(toHslResult)];
-  toHslResult.h = (toHslResult.h - (result * num >> 1) + 720) % 360;
+  toHslResult.h = (toHslResult.h - ((result * num) >> 1) + 720) % 360;
   let diff = num - 1;
   while (diff) {
     toHslResult.h = (toHslResult.h + result) % 360;
@@ -1165,7 +1170,7 @@ tinycolor.prototype = {
     } else {
       text = `${arr}`;
     }
-    const items = [text, , , ];
+    const items = [text, , ,];
     let str3 = tmp(_g);
     if (1 == str1.length) {
       let text1 = `0${arr3}`;
@@ -1238,7 +1243,12 @@ tinycolor.prototype = {
     return text2;
   },
   toPercentageRgb() {
-    return { r: `${round(100 * bound01(this._r, 255))}%`, g: `${round(100 * bound01(this._g, 255))}%`, b: `${round(100 * bound01(this._b, 255))}%`, a: this._a };
+    return {
+      r: `${round(100 * bound01(this._r, 255))}%`,
+      g: `${round(100 * bound01(this._g, 255))}%`,
+      b: `${round(100 * bound01(this._b, 255))}%`,
+      a: this._a,
+    };
   },
   toPercentageRgbString() {
     const self = this;
@@ -1277,7 +1287,9 @@ tinycolor.prototype = {
       const tmp5 = tinycolor(toHslResult);
       text1 = `#${tmp(tmp5._r, tmp5._g, tmp5._b, tmp5._a)}`;
     }
-    return "progid:DXImageTransform.Microsoft.gradient(" + str + "startColorstr=" + text + ",endColorstr=" + text1 + ")";
+    return (
+      "progid:DXImageTransform.Microsoft.gradient(" + str + "startColorstr=" + text + ",endColorstr=" + text1 + ")"
+    );
   },
   toString(arg0) {
     const self = this;
@@ -1394,9 +1406,159 @@ tinycolor.prototype = {
   },
   tetrad() {
     return this._applyCombination(tetrad, arguments);
-  }
+  },
 };
-obj = { aliceblue: "f0f8ff", antiquewhite: "faebd7", aqua: "0ff", aquamarine: "7fffd4", azure: "f0ffff", beige: "f5f5dc", bisque: "ffe4c4", black: "000", blanchedalmond: "ffebcd", blue: "00f", blueviolet: "8a2be2", brown: "a52a2a", burlywood: "deb887", burntsienna: "ea7e5d", cadetblue: "5f9ea0", chartreuse: "7fff00", chocolate: "d2691e", coral: "ff7f50", cornflowerblue: "6495ed", cornsilk: "fff8dc", crimson: "dc143c", cyan: "0ff", darkblue: "00008b", darkcyan: "008b8b", darkgoldenrod: "b8860b", darkgray: "a9a9a9", darkgreen: "006400", darkgrey: "a9a9a9", darkkhaki: "bdb76b", darkmagenta: "8b008b", darkolivegreen: "556b2f", darkorange: "ff8c00", darkorchid: "9932cc", darkred: "8b0000", darksalmon: "e9967a", darkseagreen: "8fbc8f", darkslateblue: "483d8b", darkslategray: "2f4f4f", darkslategrey: "2f4f4f", darkturquoise: "00ced1", darkviolet: "9400d3", deeppink: "ff1493", deepskyblue: "00bfff", dimgray: "696969", dimgrey: "696969", dodgerblue: "1e90ff", firebrick: "b22222", floralwhite: "fffaf0", forestgreen: "228b22", fuchsia: "f0f", gainsboro: "dcdcdc", ghostwhite: "f8f8ff", gold: "ffd700", goldenrod: "daa520", gray: "808080", green: "008000", greenyellow: "adff2f", grey: "808080", honeydew: "f0fff0", hotpink: "ff69b4", indianred: "cd5c5c", indigo: "4b0082", ivory: "fffff0", khaki: "f0e68c", lavender: "e6e6fa", lavenderblush: "fff0f5", lawngreen: "7cfc00", lemonchiffon: "fffacd", lightblue: "add8e6", lightcoral: "f08080", lightcyan: "e0ffff", lightgoldenrodyellow: "fafad2", lightgray: "d3d3d3", lightgreen: "90ee90", lightgrey: "d3d3d3", lightpink: "ffb6c1", lightsalmon: "ffa07a", lightseagreen: "20b2aa", lightskyblue: "87cefa", lightslategray: "789", lightslategrey: "789", lightsteelblue: "b0c4de", lightyellow: "ffffe0", lime: "0f0", limegreen: "32cd32", linen: "faf0e6", magenta: "f0f", maroon: "800000", mediumaquamarine: "66cdaa", mediumblue: "0000cd", mediumorchid: "ba55d3", mediumpurple: "9370db", mediumseagreen: "3cb371", mediumslateblue: "7b68ee", mediumspringgreen: "00fa9a", mediumturquoise: "48d1cc", mediumvioletred: "c71585", midnightblue: "191970", mintcream: "f5fffa", mistyrose: "ffe4e1", moccasin: "ffe4b5", navajowhite: "ffdead", navy: "000080", oldlace: "fdf5e6", olive: "808000", olivedrab: "6b8e23", orange: "ffa500", orangered: "ff4500", orchid: "da70d6", palegoldenrod: "eee8aa", palegreen: "98fb98", paleturquoise: "afeeee", palevioletred: "db7093", papayawhip: "ffefd5", peachpuff: "ffdab9", peru: "cd853f", pink: "ffc0cb", plum: "dda0dd", powderblue: "b0e0e6", purple: "800080", rebeccapurple: "663399", red: "f00", rosybrown: "bc8f8f", royalblue: "4169e1", saddlebrown: "8b4513", salmon: "fa8072", sandybrown: "f4a460", seagreen: "2e8b57", seashell: "fff5ee", sienna: "a0522d", silver: "c0c0c0", skyblue: "87ceeb", slateblue: "6a5acd", slategray: "708090", slategrey: "708090", snow: "fffafa", springgreen: "00ff7f", steelblue: "4682b4", tan: "d2b48c", teal: "008080", thistle: "d8bfd8", tomato: "ff6347", turquoise: "40e0d0", violet: "ee82ee", wheat: "f5deb3", white: "fff", whitesmoke: "f5f5f5", yellow: "ff0", yellowgreen: "9acd32" };
+obj = {
+  aliceblue: "f0f8ff",
+  antiquewhite: "faebd7",
+  aqua: "0ff",
+  aquamarine: "7fffd4",
+  azure: "f0ffff",
+  beige: "f5f5dc",
+  bisque: "ffe4c4",
+  black: "000",
+  blanchedalmond: "ffebcd",
+  blue: "00f",
+  blueviolet: "8a2be2",
+  brown: "a52a2a",
+  burlywood: "deb887",
+  burntsienna: "ea7e5d",
+  cadetblue: "5f9ea0",
+  chartreuse: "7fff00",
+  chocolate: "d2691e",
+  coral: "ff7f50",
+  cornflowerblue: "6495ed",
+  cornsilk: "fff8dc",
+  crimson: "dc143c",
+  cyan: "0ff",
+  darkblue: "00008b",
+  darkcyan: "008b8b",
+  darkgoldenrod: "b8860b",
+  darkgray: "a9a9a9",
+  darkgreen: "006400",
+  darkgrey: "a9a9a9",
+  darkkhaki: "bdb76b",
+  darkmagenta: "8b008b",
+  darkolivegreen: "556b2f",
+  darkorange: "ff8c00",
+  darkorchid: "9932cc",
+  darkred: "8b0000",
+  darksalmon: "e9967a",
+  darkseagreen: "8fbc8f",
+  darkslateblue: "483d8b",
+  darkslategray: "2f4f4f",
+  darkslategrey: "2f4f4f",
+  darkturquoise: "00ced1",
+  darkviolet: "9400d3",
+  deeppink: "ff1493",
+  deepskyblue: "00bfff",
+  dimgray: "696969",
+  dimgrey: "696969",
+  dodgerblue: "1e90ff",
+  firebrick: "b22222",
+  floralwhite: "fffaf0",
+  forestgreen: "228b22",
+  fuchsia: "f0f",
+  gainsboro: "dcdcdc",
+  ghostwhite: "f8f8ff",
+  gold: "ffd700",
+  goldenrod: "daa520",
+  gray: "808080",
+  green: "008000",
+  greenyellow: "adff2f",
+  grey: "808080",
+  honeydew: "f0fff0",
+  hotpink: "ff69b4",
+  indianred: "cd5c5c",
+  indigo: "4b0082",
+  ivory: "fffff0",
+  khaki: "f0e68c",
+  lavender: "e6e6fa",
+  lavenderblush: "fff0f5",
+  lawngreen: "7cfc00",
+  lemonchiffon: "fffacd",
+  lightblue: "add8e6",
+  lightcoral: "f08080",
+  lightcyan: "e0ffff",
+  lightgoldenrodyellow: "fafad2",
+  lightgray: "d3d3d3",
+  lightgreen: "90ee90",
+  lightgrey: "d3d3d3",
+  lightpink: "ffb6c1",
+  lightsalmon: "ffa07a",
+  lightseagreen: "20b2aa",
+  lightskyblue: "87cefa",
+  lightslategray: "789",
+  lightslategrey: "789",
+  lightsteelblue: "b0c4de",
+  lightyellow: "ffffe0",
+  lime: "0f0",
+  limegreen: "32cd32",
+  linen: "faf0e6",
+  magenta: "f0f",
+  maroon: "800000",
+  mediumaquamarine: "66cdaa",
+  mediumblue: "0000cd",
+  mediumorchid: "ba55d3",
+  mediumpurple: "9370db",
+  mediumseagreen: "3cb371",
+  mediumslateblue: "7b68ee",
+  mediumspringgreen: "00fa9a",
+  mediumturquoise: "48d1cc",
+  mediumvioletred: "c71585",
+  midnightblue: "191970",
+  mintcream: "f5fffa",
+  mistyrose: "ffe4e1",
+  moccasin: "ffe4b5",
+  navajowhite: "ffdead",
+  navy: "000080",
+  oldlace: "fdf5e6",
+  olive: "808000",
+  olivedrab: "6b8e23",
+  orange: "ffa500",
+  orangered: "ff4500",
+  orchid: "da70d6",
+  palegoldenrod: "eee8aa",
+  palegreen: "98fb98",
+  paleturquoise: "afeeee",
+  palevioletred: "db7093",
+  papayawhip: "ffefd5",
+  peachpuff: "ffdab9",
+  peru: "cd853f",
+  pink: "ffc0cb",
+  plum: "dda0dd",
+  powderblue: "b0e0e6",
+  purple: "800080",
+  rebeccapurple: "663399",
+  red: "f00",
+  rosybrown: "bc8f8f",
+  royalblue: "4169e1",
+  saddlebrown: "8b4513",
+  salmon: "fa8072",
+  sandybrown: "f4a460",
+  seagreen: "2e8b57",
+  seashell: "fff5ee",
+  sienna: "a0522d",
+  silver: "c0c0c0",
+  skyblue: "87ceeb",
+  slateblue: "6a5acd",
+  slategray: "708090",
+  slategrey: "708090",
+  snow: "fffafa",
+  springgreen: "00ff7f",
+  steelblue: "4682b4",
+  tan: "d2b48c",
+  teal: "008080",
+  thistle: "d8bfd8",
+  tomato: "ff6347",
+  turquoise: "40e0d0",
+  violet: "ee82ee",
+  wheat: "f5deb3",
+  white: "fff",
+  whitesmoke: "f5f5f5",
+  yellow: "ff0",
+  yellowgreen: "9acd32",
+};
 tinycolor.names = obj;
 obj = {};
 for (const key10080 in obj) {
@@ -1410,20 +1572,44 @@ for (const key10080 in obj) {
   continue;
 }
 tinycolor.hexNames = obj;
-obj = { CSS_UNIT: null, rgb: null, rgba: null, hsl: null, hsla: null, hsv: null, hsva: null, hex3: null, hex6: null, hex4: null, hex8: null };
+obj = {
+  CSS_UNIT: null,
+  rgb: null,
+  rgba: null,
+  hsl: null,
+  hsla: null,
+  hsv: null,
+  hsva: null,
+  hex3: null,
+  hex6: null,
+  hex4: null,
+  hex8: null,
+};
 const regExp = new RegExp("(?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?)");
 obj[0] = regExp;
-const regExp1 = new RegExp("rgb[\\s|\\(]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))\\s*\\)?");
+const regExp1 = new RegExp(
+  "rgb[\\s|\\(]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))\\s*\\)?",
+);
 obj[1] = regExp1;
-const regExp2 = new RegExp("rgba[\\s|\\(]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))\\s*\\)?");
+const regExp2 = new RegExp(
+  "rgba[\\s|\\(]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))\\s*\\)?",
+);
 obj[2] = regExp2;
-const regExp3 = new RegExp("hsl[\\s|\\(]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))\\s*\\)?");
+const regExp3 = new RegExp(
+  "hsl[\\s|\\(]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))\\s*\\)?",
+);
 obj[3] = regExp3;
-const regExp4 = new RegExp("hsla[\\s|\\(]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))\\s*\\)?");
+const regExp4 = new RegExp(
+  "hsla[\\s|\\(]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))\\s*\\)?",
+);
 obj[4] = regExp4;
-const regExp5 = new RegExp("hsv[\\s|\\(]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))\\s*\\)?");
+const regExp5 = new RegExp(
+  "hsv[\\s|\\(]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))\\s*\\)?",
+);
 obj[5] = regExp5;
-const regExp6 = new RegExp("hsva[\\s|\\(]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))\\s*\\)?");
+const regExp6 = new RegExp(
+  "hsva[\\s|\\(]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))\\s*\\)?",
+);
 obj[6] = regExp6;
 obj[7] = /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/;
 obj[8] = /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/;

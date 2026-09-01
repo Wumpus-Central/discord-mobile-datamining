@@ -65,5 +65,5 @@ arg5.GestureObjects = {
   Exclusive(numberOfTapsResult, onStartResult, enabledResult2) {
     const items = [...arguments];
     return _isNativeReflectConstruct.ExclusiveGesture(...items);
-  }
+  },
 };

@@ -27,17 +27,14 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 let closure_2 = ["state", "descriptors"];
 ({ StyleSheet, View } = get_ActivityIndicator);
 if (GestureHandlerRootView == null) {
   GestureHandlerRootView = View;
 }
-function isArrayEqual(arg0, arg1) {
-
-}
+function isArrayEqual(arg0, arg1) {}
 class StackView {
   constructor() {
     self = this;
@@ -57,7 +54,14 @@ class StackView {
     }
     tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
-    obj = { routes: [], previousState: "y", openingRouteKeys: "has", closingRouteKeys: null, replacingRouteKeys: "\u{1F60E}", descriptors: 6 };
+    obj = {
+      routes: [],
+      previousState: "y",
+      openingRouteKeys: "has",
+      closingRouteKeys: null,
+      replacingRouteKeys: "\u{1F60E}",
+      descriptors: 6,
+    };
     obj[2] = [];
     obj[3] = [];
     obj[4] = [];
@@ -100,7 +104,12 @@ class StackView {
               navigation.dispatch((routes) => {
                 routes = routes.routes;
                 const items = [];
-                items[HermesBuiltin.arraySpread(routes.filter((key) => key.key !== key.key), 0)] = route;
+                items[
+                  HermesBuiltin.arraySpread(
+                    routes.filter((key) => key.key !== key.key),
+                    0,
+                  )
+                ] = route;
                 const CommonActions = route(closure_1_1[11]).CommonActions;
                 const obj = {};
                 const merged = Object.assign(routes);
@@ -116,14 +125,22 @@ class StackView {
         closure_0 = routes;
         routes = routes.routes;
         routes = routes.routes;
-        const substr = routes.slice(0, routes.findIndex((key) => key.key === closure_0.key));
+        const substr = routes.slice(
+          0,
+          routes.findIndex((key) => key.key === closure_0.key),
+        );
         const found = substr.filter((key) => {
           const replacingRouteKeys = closure_0.replacingRouteKeys;
           return replacingRouteKeys.includes(key.key);
         });
         const set = new Set(found.map((key) => key.key));
         ({ routes: routes2, openingRouteKeys, closingRouteKeys, replacingRouteKeys } = routes);
-        return { routes: routes2.filter((key) => !set.has(key.key)), openingRouteKeys: openingRouteKeys.filter((arg0) => arg0 !== closure_0.key), closingRouteKeys: closingRouteKeys.filter((arg0) => arg0 !== closure_0.key), replacingRouteKeys: replacingRouteKeys.filter((arg0) => !set.has(arg0)) };
+        return {
+          routes: routes2.filter((key) => !set.has(key.key)),
+          openingRouteKeys: openingRouteKeys.filter((arg0) => arg0 !== closure_0.key),
+          closingRouteKeys: closingRouteKeys.filter((arg0) => arg0 !== closure_0.key),
+          replacingRouteKeys: replacingRouteKeys.filter((arg0) => !set.has(arg0)),
+        };
       });
     };
     tmp3Result.handleCloseRoute = (route) => {
@@ -141,7 +158,11 @@ class StackView {
       } else {
         obj.setState((arg0) => {
           ({ routes, openingRouteKeys, closingRouteKeys } = arg0);
-          return { routes: routes.filter((key) => key.key !== closure_0.key), openingRouteKeys: openingRouteKeys.filter((arg0) => arg0 !== closure_0.key), closingRouteKeys: closingRouteKeys.filter((arg0) => arg0 !== closure_0.key) };
+          return {
+            routes: routes.filter((key) => key.key !== closure_0.key),
+            openingRouteKeys: openingRouteKeys.filter((arg0) => arg0 !== closure_0.key),
+            closingRouteKeys: closingRouteKeys.filter((arg0) => arg0 !== closure_0.key),
+          };
         });
       }
     };
@@ -180,7 +201,12 @@ let obj = {
     let props = this.props;
     const state = props.state;
     closure_2 = callback(props, closure_2);
-    ({ routes: closure_3, descriptors: closure_4, openingRouteKeys: closure_5, closingRouteKeys: closure_6 } = this.state);
+    ({
+      routes: closure_3,
+      descriptors: closure_4,
+      openingRouteKeys: closure_5,
+      closingRouteKeys: closure_6,
+    } = this.state);
     const preloadedRoutes = state.preloadedRoutes;
     StackView = preloadedRoutes.reduce((arg0, key) => {
       let describeResult = arg0[key.key];
@@ -202,16 +228,35 @@ let obj = {
             return self(callback(state[12]).HeaderShownContext.Consumer, {
               children(isParentHeaderShown) {
                 const merged = Object.assign(closure_2_2);
-                return self(callback(state[15]).CardStack, { insets: callback, isParentHeaderShown, isParentModal: callback, getPreviousRoute: closure_2_7.getPreviousRoute, routes: closure_2_3, openingRouteKeys: closure_2_5, closingRouteKeys: closure_2_6, onOpenRoute: closure_2_7.handleOpenRoute, onCloseRoute: closure_2_7.handleCloseRoute, onTransitionStart: closure_2_7.handleTransitionStart, onTransitionEnd: closure_2_7.handleTransitionEnd, renderHeader: closure_2_7.renderHeader, state: closure_2_1, descriptors: closure_2_4, onGestureStart: closure_2_7.handleGestureStart, onGestureEnd: closure_2_7.handleGestureEnd, onGestureCancel: closure_2_7.handleGestureCancel, preloadedDescriptors: callback });
-              }
+                return self(callback(state[15]).CardStack, {
+                  insets: callback,
+                  isParentHeaderShown,
+                  isParentModal: callback,
+                  getPreviousRoute: closure_2_7.getPreviousRoute,
+                  routes: closure_2_3,
+                  openingRouteKeys: closure_2_5,
+                  closingRouteKeys: closure_2_6,
+                  onOpenRoute: closure_2_7.handleOpenRoute,
+                  onCloseRoute: closure_2_7.handleCloseRoute,
+                  onTransitionStart: closure_2_7.handleTransitionStart,
+                  onTransitionEnd: closure_2_7.handleTransitionEnd,
+                  renderHeader: closure_2_7.renderHeader,
+                  state: closure_2_1,
+                  descriptors: closure_2_4,
+                  onGestureStart: closure_2_7.handleGestureStart,
+                  onGestureEnd: closure_2_7.handleGestureEnd,
+                  onGestureCancel: closure_2_7.handleGestureCancel,
+                  preloadedDescriptors: callback,
+                });
+              },
             });
-          }
+          },
         });
-      }
+      },
     };
     obj[1] = self(StackView(state[12]).SafeAreaProviderCompat, obj);
     return self(GestureHandlerRootView, obj);
-  }
+  },
 };
 let items = [obj];
 obj = {
@@ -222,7 +267,10 @@ obj = {
     const items = [...state.state.preloadedRoutes];
     const items1 = [];
     if (previousState.previousState) {
-      HermesBuiltin.arraySpread(previousState.previousState.preloadedRoutes, HermesBuiltin.arraySpread(previousState.previousState.routes, 0));
+      HermesBuiltin.arraySpread(
+        previousState.previousState.preloadedRoutes,
+        HermesBuiltin.arraySpread(previousState.previousState.routes, 0),
+      );
       arr3 = items1;
     } else {
       arr3 = items1;
@@ -323,9 +371,7 @@ obj = {
     }
     closure_6 = tmp6;
     closure_7 = tmp7;
-    function isAnimationEnabled(arg0) {
-
-    }
+    function isAnimationEnabled(arg0) {}
     if (tmp6) {
       if (tmp6.key !== tmp7.key) {
         if (arr3.some((key) => key.key === closure_7.key)) {
@@ -382,7 +428,8 @@ obj = {
             arr11 = substr1;
             if (!substr1.some((key) => key.key === closure_6.key)) {
               const found8 = items7.filter((arg0) => arg0 !== closure_6.key);
-              let str = state.descriptors[tmp7.key] || previousState.descriptors[tmp7.key].options.animationTypeForReplace;
+              let str =
+                state.descriptors[tmp7.key] || previousState.descriptors[tmp7.key].options.animationTypeForReplace;
               if (str == null) {
                 str = "push";
               }
@@ -437,7 +484,14 @@ obj = {
       if (arr11.length) {
         const items12 = [];
         HermesBuiltin.arraySpread(state.state.preloadedRoutes, HermesBuiltin.arraySpread(arr11, 0));
-        obj = { routes: null, previousState: null, openingRouteKeys: null, closingRouteKeys: null, replacingRouteKeys: null, descriptors: null };
+        obj = {
+          routes: null,
+          previousState: null,
+          openingRouteKeys: null,
+          closingRouteKeys: null,
+          replacingRouteKeys: null,
+          descriptors: null,
+        };
         obj[0] = arr11;
         obj[1] = state.state;
         obj[2] = found4;
@@ -467,35 +521,38 @@ obj = {
       const splice = substr3.splice;
       const items13 = [substr3.length - 1, 0];
       const routes5 = previousState.routes;
-      HermesBuiltin.arraySpread(routes5.filter((key) => {
-        if (typeof isAnimationEnabled !== "function") {
-          HermesBuiltin.throwTypeError();
-        }
-        let tmp = arr3.descriptors[key];
-        if (!tmp) {
-          tmp = previousState.descriptors[key];
-        }
-        let animation;
-        if (tmp != null) {
-          animation = tmp.options.animation;
-        }
-        let animationEnabled = arr3(previousState[15]).getAnimationEnabled(animation);
-        if (animationEnabled) {
-          let hasItem = items10.includes(key);
-          if (!hasItem) {
-            hasItem = found9.includes(key);
+      HermesBuiltin.arraySpread(
+        routes5.filter((key) => {
+          if (typeof isAnimationEnabled !== "function") {
+            HermesBuiltin.throwTypeError();
           }
-          animationEnabled = hasItem;
-        }
-        return animationEnabled;
-      }), 2);
+          let tmp = arr3.descriptors[key];
+          if (!tmp) {
+            tmp = previousState.descriptors[key];
+          }
+          let animation;
+          if (tmp != null) {
+            animation = tmp.options.animation;
+          }
+          let animationEnabled = arr3(previousState[15]).getAnimationEnabled(animation);
+          if (animationEnabled) {
+            let hasItem = items10.includes(key);
+            if (!hasItem) {
+              hasItem = found9.includes(key);
+            }
+            animationEnabled = hasItem;
+          }
+          return animationEnabled;
+        }),
+        2,
+      );
       HermesBuiltin.apply(items13, substr3);
       tmp9 = found3;
       tmp10 = found2;
       found4 = openingRouteKeys;
       arr11 = substr3;
     }
-  }
+  },
 };
 let items1 = [obj];
 const styles = StyleSheet.create({ container: { flex: 1 } });

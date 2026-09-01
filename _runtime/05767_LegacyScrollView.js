@@ -39,7 +39,11 @@ class LegacyScrollView {
   }
 }
 const tmp3 = itemsDefault(RefreshControl, { disallowInterruption: true, shouldCancelWhenOutside: false });
-const tmp4 = itemsDefault(Switch, { shouldCancelWhenOutside: false, shouldActivateOnStart: true, disallowInterruption: true });
+const tmp4 = itemsDefault(Switch, {
+  shouldCancelWhenOutside: false,
+  shouldActivateOnStart: true,
+  disallowInterruption: true,
+});
 
 export const LegacyRefreshControl = tmp3;
 export { LegacyScrollView };

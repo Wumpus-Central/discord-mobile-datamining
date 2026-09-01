@@ -21,8 +21,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class LongPressGesture {
   constructor() {
@@ -52,22 +51,22 @@ const items = [
     value: function minDuration(CONTEXT_MENU_LONG_PRESS_DURATION_MS) {
       this.config.minDurationMs = CONTEXT_MENU_LONG_PRESS_DURATION_MS;
       return this;
-    }
+    },
   },
   {
     key: "maxDistance",
     value: function maxDistance(maxDist) {
       this.config.maxDist = maxDist;
       return this;
-    }
+    },
   },
   {
     key: "numberOfPointers",
     value: function numberOfPointers(numberOfPointers) {
       this.config.numberOfPointers = numberOfPointers;
       return this;
-    }
-  }
+    },
+  },
 ];
 
 export const LongPressGesture = importDefaultResult(LongPressGesture, items);

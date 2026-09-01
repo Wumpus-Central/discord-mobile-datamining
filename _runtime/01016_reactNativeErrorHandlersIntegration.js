@@ -86,9 +86,7 @@ let obj = {
     obj[3] = { handled: true, type: "onunhandledrejection" };
     obj.captureException(originalException, obj);
   },
-  onHandled(displayId, error) {
-
-  }
+  onHandled(displayId, error) {},
 };
 arg5.reactNativeErrorHandlersIntegration = () => {
   obj = arg0;
@@ -180,7 +178,9 @@ arg5.reactNativeErrorHandlersIntegration = () => {
             }
           } catch (err) {
             const debug5 = callback(_undefined[2]).debug;
-            debug5.warn("Failed to set up promise rejection tracking. Unhandled promise rejections will not be caught by Sentry.See https://docs.sentry.io/platforms/react-native/troubleshooting/ for more details.");
+            debug5.warn(
+              "Failed to set up promise rejection tracking. Unhandled promise rejections will not be caught by Sentry.See https://docs.sentry.io/platforms/react-native/troubleshooting/ for more details.",
+            );
           }
         })(merged.patchGlobalPromise);
       }
@@ -198,7 +198,7 @@ arg5.reactNativeErrorHandlersIntegration = () => {
           _ErrorUtils.setGlobalHandler((arg0, arg1) => {
             closure_0 = arg0;
             closure_1 = arg1;
-            return closure_1_2(undefined, undefined, undefined, function*() {
+            return closure_1_2(undefined, undefined, undefined, function* () {
               if (c3 === 2) {
                 c3 = 3;
                 HermesBuiltin.throwTypeError();
@@ -288,12 +288,18 @@ arg5.reactNativeErrorHandlersIntegration = () => {
                     if (!num3) {
                       num3 = 2000;
                     }
-                    client.flush(num3).then(() => {
-                      obj2(client, obj2);
-                    }, (arg0) => {
-                      const debug = client(obj2[2]).debug;
-                      debug.error("[ReactNativeErrorHandlers] Error while flushing the event cache after uncaught error.", arg0);
-                    });
+                    client.flush(num3).then(
+                      () => {
+                        obj2(client, obj2);
+                      },
+                      (arg0) => {
+                        const debug = client(obj2[2]).debug;
+                        debug.error(
+                          "[ReactNativeErrorHandlers] Error while flushing the event cache after uncaught error.",
+                          arg0,
+                        );
+                      },
+                    );
                     c3 = 3;
                     return { value: "HermesInternal", done: null };
                   }
@@ -311,7 +317,7 @@ arg5.reactNativeErrorHandlersIntegration = () => {
         tmp3 = obj;
         tmp4 = closure_1_1;
       }
-    }
+    },
   };
   return obj;
 };

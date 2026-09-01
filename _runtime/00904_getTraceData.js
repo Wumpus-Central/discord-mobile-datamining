@@ -57,7 +57,10 @@ arg5.getTraceData = function getTraceData() {
         } else {
           dynamicSamplingContextFromSpan = tmp3Result5.getDynamicSamplingContextFromScope(client, scope);
         }
-        const result = baggageHeaderToDynamicSamplingContext.dynamicSamplingContextToSentryBaggageHeader(dynamicSamplingContextFromSpan);
+        const result =
+          baggageHeaderToDynamicSamplingContext.dynamicSamplingContextToSentryBaggageHeader(
+            dynamicSamplingContextFromSpan,
+          );
         const TRACEPARENT_REGEXP = regExp.TRACEPARENT_REGEXP;
         if (TRACEPARENT_REGEXP.test(spanToTraceHeaderResult)) {
           obj = { "sentry-trace": null, baggage: null };

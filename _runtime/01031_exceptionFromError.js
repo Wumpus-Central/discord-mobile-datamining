@@ -215,19 +215,25 @@ function eventFromUnknownInput(arg0, error) {
             tmp18Result = tmp18(817);
             if (tmp18Result.isEvent(error)) {
               const _HermesInternal3 = HermesInternal;
-              combined = "Event `" + (function getObjectClassName(error) {
-                try {
-                  const _Object = Object;
-                  const prototypeOf = Object.getPrototypeOf(error);
-                  let name;
-                  if (prototypeOf) {
-                    name = prototypeOf.constructor.name;
+              combined =
+                "Event `" +
+                (function getObjectClassName(error) {
+                  try {
+                    const _Object = Object;
+                    const prototypeOf = Object.getPrototypeOf(error);
+                    let name;
+                    if (prototypeOf) {
+                      name = prototypeOf.constructor.name;
+                    }
+                    return name;
+                  } catch (err) {
+                    return tmp;
                   }
-                  return name;
-                } catch (err) {
-                  return tmp;
-                }
-              })(error) + "` (type=" + error.type + ") captured as " + str3;
+                })(error) +
+                "` (type=" +
+                error.type +
+                ") captured as " +
+                str3;
             } else {
               const _HermesInternal2 = HermesInternal;
               combined = "Object captured as " + str3 + " with keys: " + result3;

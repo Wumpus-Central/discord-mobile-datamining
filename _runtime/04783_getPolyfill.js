@@ -1,7 +1,6 @@
 // _runtime/04783_getPolyfill.js
 import trim6 from "04784_trim.js";
 
-
 export default function getPolyfill() {
   if (String.prototype.trim) {
     const trim = "\u200B".trim;
@@ -20,4 +19,4 @@ export default function getPolyfill() {
     }
   }
   trim5 = trim6;
-};
+}

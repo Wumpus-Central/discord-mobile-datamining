@@ -9,7 +9,9 @@ export const useOnGetState = function useOnGetState(getState) {
   let addKeyedListener;
   let str;
   let callback;
-  addKeyedListener = addKeyedListener.useContext(getState(getStateListeners[1]).NavigationBuilderContext).addKeyedListener;
+  addKeyedListener = addKeyedListener.useContext(
+    getState(getStateListeners[1]).NavigationBuilderContext,
+  ).addKeyedListener;
   const context = addKeyedListener.useContext(getState(getStateListeners[2]).NavigationRouteContext);
   str = "root";
   if (context) {

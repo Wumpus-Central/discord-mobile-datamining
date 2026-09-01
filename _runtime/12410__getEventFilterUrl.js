@@ -43,7 +43,17 @@ function _getEventFilterUrl(arg0) {
     return null;
   }
 }
-let items = [/^Script error\.?$/, /^Javascript error: Script error\.? on line 0$/, /^ResizeObserver loop completed with undelivered notifications.$/, /^Cannot redefine property: googletag$/, "undefined is not an object (evaluating 'a.L')", "can't redefine non-configurable property \"solana\"", "vv().getRestrictions is not a function. (In 'vv().getRestrictions(1,a)', 'vv().getRestrictions' is undefined)", "Can't find variable: _AutofillCallbackHandler", /^Non-Error promise rejection captured with value: Object Not Found Matching Id:\d+, MethodName:simulateEvent, ParamCount:\d+$/];
+let items = [
+  /^Script error\.?$/,
+  /^Javascript error: Script error\.? on line 0$/,
+  /^ResizeObserver loop completed with undelivered notifications.$/,
+  /^Cannot redefine property: googletag$/,
+  "undefined is not an object (evaluating 'a.L')",
+  'can\'t redefine non-configurable property "solana"',
+  "vv().getRestrictions is not a function. (In 'vv().getRestrictions(1,a)', 'vv().getRestrictions' is undefined)",
+  "Can't find variable: _AutofillCallbackHandler",
+  /^Non-Error promise rejection captured with value: Object Not Found Matching Id:\d+, MethodName:simulateEvent, ParamCount:\d+$/,
+];
 
 export const inboundFiltersIntegration = setupIntegration.defineIntegration(() => {
   let obj = arg0;
@@ -61,23 +71,28 @@ export const inboundFiltersIntegration = setupIntegration.defineIntegration(() =
       if (options === undefined) {
         options = {};
       }
-      items = [...obj.allowUrls || [], ...tmp2];
-      const items1 = [...obj.denyUrls || [], ...tmp4];
-      items2 = [...obj.ignoreErrors || [], ...tmp6, ...tmp7];
-      const items3 = [...obj.ignoreTransactions || [], ...tmp9];
+      items = [...(obj.allowUrls || []), ...tmp2];
+      const items1 = [...(obj.denyUrls || []), ...tmp4];
+      items2 = [...(obj.ignoreErrors || []), ...tmp6, ...tmp7];
+      const items3 = [...(obj.ignoreTransactions || []), ...tmp9];
       if (tmp10) {
-        if ((function _isSentryError(type) {
-          try {
-            return "SentryError" === type.exception.values[0].type;
-          } catch (err) {
-            return false;
-          }
-        })(type)) {
+        if (
+          (function _isSentryError(type) {
+            try {
+              return "SentryError" === type.exception.values[0].type;
+            } catch (err) {
+              return false;
+            }
+          })(type)
+        ) {
           let flag6 = true;
           if (obj(closure_1_1[1]).DEBUG_BUILD) {
             const logger6 = obj(closure_1_1[2]).logger;
             const _HermesInternal6 = HermesInternal;
-            logger6.warn("Event dropped due to being internal Sentry Error.\nEvent: " + obj(closure_1_1[3]).getEventDescription(type));
+            logger6.warn(
+              "Event dropped due to being internal Sentry Error.\nEvent: " +
+                obj(closure_1_1[3]).getEventDescription(type),
+            );
             flag6 = true;
             const obj12 = obj(closure_1_1[3]);
           }
@@ -111,8 +126,7 @@ export const inboundFiltersIntegration = setupIntegration.defineIntegration(() =
                 }
               }
               return items;
-            } catch (err) {
-            }
+            } catch (err) {}
           })(type).some((arg0) => items2(closure_1_1[4]).stringMatchesSomePattern(arg0, items2));
           const obj3 = (function _getPossibleEventMessages(message) {
             items = [];
@@ -133,8 +147,7 @@ export const inboundFiltersIntegration = setupIntegration.defineIntegration(() =
                 }
               }
               return items;
-            } catch (err) {
-            }
+            } catch (err) {}
           })(type);
         }
       }
@@ -143,7 +156,10 @@ export const inboundFiltersIntegration = setupIntegration.defineIntegration(() =
         if (obj(closure_1_1[1]).DEBUG_BUILD) {
           const logger5 = obj(closure_1_1[2]).logger;
           const _HermesInternal5 = HermesInternal;
-          logger5.warn("Event dropped due to being matched by `ignoreErrors` option.\nEvent: " + obj(closure_1_1[3]).getEventDescription(type));
+          logger5.warn(
+            "Event dropped due to being matched by `ignoreErrors` option.\nEvent: " +
+              obj(closure_1_1[3]).getEventDescription(type),
+          );
           flag6 = true;
           const obj11 = obj(closure_1_1[3]);
         }
@@ -185,7 +201,10 @@ export const inboundFiltersIntegration = setupIntegration.defineIntegration(() =
           if (obj(closure_1_1[1]).DEBUG_BUILD) {
             const logger4 = obj(closure_1_1[2]).logger;
             const _HermesInternal4 = HermesInternal;
-            logger4.warn("Event dropped due to not having an error message, error type or stacktrace.\nEvent: " + obj(closure_1_1[3]).getEventDescription(type));
+            logger4.warn(
+              "Event dropped due to not having an error message, error type or stacktrace.\nEvent: " +
+                obj(closure_1_1[3]).getEventDescription(type),
+            );
             flag6 = true;
             const obj10 = obj(closure_1_1[3]);
           }
@@ -208,7 +227,10 @@ export const inboundFiltersIntegration = setupIntegration.defineIntegration(() =
             if (obj(closure_1_1[1]).DEBUG_BUILD) {
               const logger3 = obj(closure_1_1[2]).logger;
               const _HermesInternal3 = HermesInternal;
-              logger3.warn("Event dropped due to being matched by `ignoreTransactions` option.\nEvent: " + obj(closure_1_1[3]).getEventDescription(type));
+              logger3.warn(
+                "Event dropped due to being matched by `ignoreTransactions` option.\nEvent: " +
+                  obj(closure_1_1[3]).getEventDescription(type),
+              );
               flag6 = true;
               const obj9 = obj(closure_1_1[3]);
             }
@@ -229,7 +251,12 @@ export const inboundFiltersIntegration = setupIntegration.defineIntegration(() =
                 const logger2 = obj(closure_1_1[2]).logger;
                 const eventDescription = obj(closure_1_1[3]).getEventDescription(type);
                 const _HermesInternal2 = HermesInternal;
-                logger2.warn("Event dropped due to being matched by `denyUrls` option.\nEvent: " + eventDescription + ".\nUrl: " + closure_1_3(type));
+                logger2.warn(
+                  "Event dropped due to being matched by `denyUrls` option.\nEvent: " +
+                    eventDescription +
+                    ".\nUrl: " +
+                    closure_1_3(type),
+                );
                 flag6 = true;
                 const obj8 = obj(closure_1_1[3]);
               }
@@ -251,7 +278,12 @@ export const inboundFiltersIntegration = setupIntegration.defineIntegration(() =
                   const logger = obj(closure_1_1[2]).logger;
                   const eventDescription1 = obj(closure_1_1[3]).getEventDescription(type);
                   let _HermesInternal = HermesInternal;
-                  logger.warn("Event dropped due to not being matched by `allowUrls` option.\nEvent: " + eventDescription1 + ".\nUrl: " + closure_1_3(type));
+                  logger.warn(
+                    "Event dropped due to not being matched by `allowUrls` option.\nEvent: " +
+                      eventDescription1 +
+                      ".\nUrl: " +
+                      closure_1_3(type),
+                  );
                   flag6 = true;
                   const obj7 = obj(closure_1_1[3]);
                 }
@@ -260,7 +292,7 @@ export const inboundFiltersIntegration = setupIntegration.defineIntegration(() =
           }
         }
       }
-    }
+    },
   };
   return obj;
 });

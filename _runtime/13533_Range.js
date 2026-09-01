@@ -124,19 +124,19 @@ let items = [
         }
       }
       return self.formatted;
-    }
+    },
   },
   {
     key: "format",
     value: function format() {
       return this.range;
-    }
+    },
   },
   {
     key: "toString",
     value: function toString() {
       return this.range;
-    }
+    },
   },
   {
     key: "parseRange",
@@ -168,11 +168,20 @@ let items = [
         }
         str = str.replace(tmp9, hyphenReplace(self.options.includePrerelease));
         tmp11(13507)("hyphen replace", str);
-        let str3 = str.replace(tmp11(13508).safeRe[tmp11(undefined, 13508).t.COMPARATORTRIM], tmp11(13508).comparatorTrimReplace);
+        let str3 = str.replace(
+          tmp11(13508).safeRe[tmp11(undefined, 13508).t.COMPARATORTRIM],
+          tmp11(13508).comparatorTrimReplace,
+        );
         tmp11(13507)("comparator trim", str3);
-        let str5 = str3.replace(tmp11(13508).safeRe[tmp11(undefined, 13508).t.TILDETRIM], tmp11(13508).tildeTrimReplace);
+        let str5 = str3.replace(
+          tmp11(13508).safeRe[tmp11(undefined, 13508).t.TILDETRIM],
+          tmp11(13508).tildeTrimReplace,
+        );
         tmp11(13507)("tilde trim", str5);
-        const str7 = str5.replace(tmp11(13508).safeRe[tmp11(undefined, 13508).t.CARETTRIM], tmp11(13508).caretTrimReplace);
+        const str7 = str5.replace(
+          tmp11(13508).safeRe[tmp11(undefined, 13508).t.CARETTRIM],
+          tmp11(13508).caretTrimReplace,
+        );
         tmp11(13507)("caret trim", str7);
         let parts = str7.split(" ");
         let mapped = parts.map((str) => {
@@ -256,10 +265,27 @@ let items = [
                       if ("0" === str) {
                         if ("0" === str2) {
                           const _HermesInternal6 = HermesInternal;
-                          let combined1 = ">=" + str + "." + str2 + "." + str3 + "-" + arg4 + " <" + str + "." + str2 + "." + +str3 + 1 + "-0";
+                          let combined1 =
+                            ">=" +
+                            str +
+                            "." +
+                            str2 +
+                            "." +
+                            str3 +
+                            "-" +
+                            arg4 +
+                            " <" +
+                            str +
+                            "." +
+                            str2 +
+                            "." +
+                            +str3 +
+                            1 +
+                            "-0";
                         } else {
                           const _HermesInternal5 = HermesInternal;
-                          combined1 = ">=" + str + "." + str2 + "." + str3 + "-" + arg4 + " <" + str + "." + +str2 + 1 + ".0-0";
+                          combined1 =
+                            ">=" + str + "." + str2 + "." + str3 + "-" + arg4 + " <" + str + "." + +str2 + 1 + ".0-0";
                         }
                       } else {
                         const _HermesInternal4 = HermesInternal;
@@ -270,10 +296,26 @@ let items = [
                       if ("0" === str) {
                         if ("0" === str2) {
                           const _HermesInternal3 = HermesInternal;
-                          let combined2 = ">=" + str + "." + str2 + "." + str3 + str + " <" + str + "." + str2 + "." + +str3 + 1 + "-0";
+                          let combined2 =
+                            ">=" +
+                            str +
+                            "." +
+                            str2 +
+                            "." +
+                            str3 +
+                            str +
+                            " <" +
+                            str +
+                            "." +
+                            str2 +
+                            "." +
+                            +str3 +
+                            1 +
+                            "-0";
                         } else {
                           const _HermesInternal2 = HermesInternal;
-                          combined2 = ">=" + str + "." + str2 + "." + str3 + str + " <" + str + "." + +str2 + 1 + ".0-0";
+                          combined2 =
+                            ">=" + str + "." + str2 + "." + str3 + str + " <" + str + "." + +str2 + 1 + ".0-0";
                         }
                       } else {
                         const _HermesInternal = HermesInternal;
@@ -549,7 +591,7 @@ let items = [
         const result1 = store.set(text, items1);
         return items1;
       }
-    }
+    },
   },
   {
     key: "intersects",
@@ -616,7 +658,7 @@ let items = [
         const typeError = new TypeError("a Range is required");
         throw typeError;
       }
-    }
+    },
   },
   {
     key: "test",
@@ -642,8 +684,8 @@ let items = [
       } else {
         return false;
       }
-    }
-  }
+    },
+  },
 ];
 let closure_4 = new LRUCache();
 function isNullSet(item10132) {
@@ -652,39 +694,17 @@ function isNullSet(item10132) {
 function isAny(value) {
   return "" === value.value;
 }
-function isSatisfiable(arg0, arg1) {
-
-}
-function parseComparator(arg0, arg1) {
-
-}
-function isX(arg0) {
-
-}
-function replaceTildes(arg0, arg1) {
-
-}
-function replaceTilde(arg0, arg1) {
-
-}
-function replaceCarets(arg0, arg1) {
-
-}
-function replaceCaret(arg0, arg1) {
-
-}
-function replaceXRanges(arg0, arg1) {
-
-}
-function replaceXRange(arg0, arg1) {
-
-}
-function replaceStars(arg0, arg1) {
-
-}
-function replaceGTE0(arg0, arg1) {
-
-}
+function isSatisfiable(arg0, arg1) {}
+function parseComparator(arg0, arg1) {}
+function isX(arg0) {}
+function replaceTildes(arg0, arg1) {}
+function replaceTilde(arg0, arg1) {}
+function replaceCarets(arg0, arg1) {}
+function replaceCaret(arg0, arg1) {}
+function replaceXRanges(arg0, arg1) {}
+function replaceXRange(arg0, arg1) {}
+function replaceStars(arg0, arg1) {}
+function replaceGTE0(arg0, arg1) {}
 function hyphenReplace(includePrerelease) {
   closure_0 = includePrerelease;
   return (arg0, arg1, str, str2, str3, arg5, arg6, arg7, arg8, str4, str5) => {

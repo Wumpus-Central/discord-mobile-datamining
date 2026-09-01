@@ -24,8 +24,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 noopAll;
 class Defs {
@@ -54,8 +53,8 @@ const items = [
     key: "render",
     value: function render() {
       return jsx(Defs(8274), { children: this.props.children });
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(Defs, items);
 importDefaultResultResult.displayName = "Defs";

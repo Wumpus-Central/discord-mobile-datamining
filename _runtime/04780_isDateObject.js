@@ -25,4 +25,4 @@ export default function isDateObject(obj) {
   } else {
     tmp4 = "[object Date]" === callback(obj);
   }
-};
+}

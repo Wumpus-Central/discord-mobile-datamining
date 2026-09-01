@@ -27,7 +27,7 @@ let items = [
     value: function dispose() {
       const _timers = this._timers;
       const item = _timers.forEach(clearTimeout);
-    }
+    },
   },
   {
     key: "computeViewableItems",
@@ -40,9 +40,12 @@ let items = [
       }
       let tmp5 = null != tmp3;
       if (tmp5) {
-        tmp5 = null != itemVisiblePercentThreshold !== (null != viewAreaCoveragePercentThreshold);
+        tmp5 = (null != itemVisiblePercentThreshold) !== (null != viewAreaCoveragePercentThreshold);
       }
-      ViewabilityHelper(38)(tmp5, "Must set exactly one of itemVisiblePercentThreshold or viewAreaCoveragePercentThreshold");
+      ViewabilityHelper(38)(
+        tmp5,
+        "Must set exactly one of itemVisiblePercentThreshold or viewAreaCoveragePercentThreshold",
+      );
       const items = [];
       if (0 === itemCount) {
         return items;
@@ -119,7 +122,7 @@ let items = [
         }
       }
       const tmp4 = ViewabilityHelper(38);
-    }
+    },
   },
   {
     key: "onUpdate",
@@ -157,19 +160,19 @@ let items = [
           }
         }
       }
-    }
+    },
   },
   {
     key: "resetViewableIndices",
     value: function resetViewableIndices() {
       this._viewableIndices = [];
-    }
+    },
   },
   {
     key: "recordInteraction",
     value: function recordInteraction() {
       this._hasInteracted = true;
-    }
+    },
   },
   {
     key: "_onUpdateSync",
@@ -182,11 +185,13 @@ let items = [
         return _viewableIndices.includes(arg0);
       });
       const _viewableItems = this._viewableItems;
-      const map = new Map(found.map((arg0) => {
-        const tmp = callback(arg0, true, closure_1);
-        const items = [tmp.key, tmp];
-        return items;
-      }));
+      const map = new Map(
+        found.map((arg0) => {
+          const tmp = callback(arg0, true, closure_1);
+          const items = [tmp.key, tmp];
+          return items;
+        }),
+      );
       items = [];
       while (tmp !== undefined) {
         let tmp3 = self;
@@ -222,8 +227,8 @@ let items = [
         obj[2] = self._config;
         closure_3(obj);
       }
-    }
-  }
+    },
+  },
 ];
 
 export default _createClassDefault(ViewabilityHelper, items);

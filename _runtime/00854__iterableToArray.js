@@ -5,4 +5,4 @@ export default function _iterableToArray(iterable) {
     const _Symbol = Symbol;
   }
   return Array.from(iterable);
-};
+}

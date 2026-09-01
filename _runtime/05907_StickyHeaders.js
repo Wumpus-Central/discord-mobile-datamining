@@ -5,7 +5,14 @@ import noop from "00019_noop.js";
 import { jsx } from "react/00021_jsxProd.js";
 
 const require = arg1;
-({ useRef: c3, useState: c4, useMemo: c5, useImperativeHandle: closure_6, useCallback: error, useEffect: closure_8 } = noop);
+({
+  useRef: c3,
+  useState: c4,
+  useMemo: c5,
+  useImperativeHandle: closure_6,
+  useCallback: error,
+  useEffect: closure_8,
+} = noop);
 noopDefault;
 
 export const StickyHeaders = (stickyHeaderIndices) => {
@@ -44,7 +51,15 @@ export const StickyHeaders = (stickyHeaderIndices) => {
     tmp4 = recyclerViewManager.getDataLength() <= arr2[arr2.length - 1];
   }
   closure_14 = tmp4;
-  let items1 = [tmp4, recyclerViewManager, arr2, currentStickyIndex, pushStartsAt, onChangeStickyIndex, stickyHeaderOffset];
+  let items1 = [
+    tmp4,
+    recyclerViewManager,
+    arr2,
+    currentStickyIndex,
+    pushStartsAt,
+    onChangeStickyIndex,
+    stickyHeaderOffset,
+  ];
   const tmp5 = onChangeStickyIndex(() => {
     let diff1;
     let sum;
@@ -133,11 +148,15 @@ export const StickyHeaders = (stickyHeaderIndices) => {
     callback();
   }, items2);
   const items3 = [tmp5];
-  extraData(stickyHeaderIndices.stickyHeaderRef, () => ({
-    reportScrollEvent(nativeEvent) {
-      callback();
-    }
-  }), items3);
+  extraData(
+    stickyHeaderIndices.stickyHeaderRef,
+    () => ({
+      reportScrollEvent(nativeEvent) {
+        callback();
+      },
+    }),
+    items3,
+  );
   let obj = { currentStickyIndex: -1, pushStartsAt: Number.MAX_SAFE_INTEGER };
   const tmp = renderItem(scrollY({ currentStickyIndex: -1, pushStartsAt: Number.MAX_SAFE_INTEGER }), 2);
   current = recyclerViewManager(new Map()).current;
@@ -151,7 +170,10 @@ export const StickyHeaders = (stickyHeaderIndices) => {
     if (num == null) {
       num = 0;
     }
-    let obj = { translateY: scrollY.interpolate({ inputRange: items, outputRange: items1, extrapolate: "clamp" }), opacity: null };
+    let obj = {
+      translateY: scrollY.interpolate({ inputRange: items, outputRange: items1, extrapolate: "clamp" }),
+      opacity: null,
+    };
     items = [pushStartsAt, pushStartsAt + num];
     items1 = [0, -num];
     let interpolateResult;
@@ -167,7 +189,18 @@ export const StickyHeaders = (stickyHeaderIndices) => {
   }, items4);
   translateY = tmp3Result.translateY;
   opacity = tmp3Result.opacity;
-  const items5 = [translateY, opacity, currentStickyIndex, data, renderItem, current, extraData, stickyHeaderOffset, num, inverted];
+  const items5 = [
+    translateY,
+    opacity,
+    currentStickyIndex,
+    data,
+    renderItem,
+    current,
+    extraData,
+    stickyHeaderOffset,
+    num,
+    inverted,
+  ];
   tmp3Result = tmp3(() => {
     obj = { style: obj, children: null };
     obj = { position: "absolute", top: stickyHeaderOffset, left: 0, right: 0, zIndex: num, transform: items, opacity };
@@ -177,7 +210,18 @@ export const StickyHeaders = (stickyHeaderIndices) => {
     if (-1 !== currentStickyIndex) {
       tmpResult = null;
       if (tmp4 < data.length) {
-        obj1 = { index: null, item: null, renderItem: null, layout: null, refHolder: null, extraData: null, trailingItem: "accessible", target: true, hidden: true, inverted: true };
+        obj1 = {
+          index: null,
+          item: null,
+          renderItem: null,
+          layout: null,
+          refHolder: null,
+          extraData: null,
+          trailingItem: "accessible",
+          target: true,
+          hidden: true,
+          inverted: true,
+        };
         obj1[0] = tmp4;
         obj1[1] = tmp6[tmp4];
         obj1[2] = renderItem;

@@ -1,7 +1,6 @@
 // _runtime/15151__defineProperty.js
 import toPropertyKey from "00043_toPropertyKey.js";
 
-
 export default function _defineProperty(arg0, arg1, arg2) {
   const tmp = toPropertyKey(arg1);
   if (tmp in arg0) {
@@ -13,4 +12,4 @@ export default function _defineProperty(arg0, arg1, arg2) {
     arg0[tmp] = arg2;
   }
   return arg0;
-};
+}

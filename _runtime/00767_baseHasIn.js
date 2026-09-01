@@ -7,4 +7,4 @@ export default function baseHasIn(arg0, arg1) {
     tmp = arg1 in Object(arg0);
   }
   return tmp;
-};
+}

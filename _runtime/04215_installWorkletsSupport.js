@@ -4,8 +4,12 @@ import getInstalledNitro from "04220_getInstalledNitro.js";
 
 require = arg1;
 const dependencyMap = arg6;
-let closure_2 = { code: "function determine_Pnpm_installWorkletsSupportTs1(value){const{boxedNitroProxy}=this.__closure;const nitroProxy=boxedNitroProxy.unbox();return nitroProxy.isHybridObject(value);}" };
-let closure_3 = { code: "function pack_Pnpm_installWorkletsSupportTs2(value){const{boxedNitroProxy}=this.__closure;const nitroProxy=boxedNitroProxy.unbox();return nitroProxy.box(value);}" };
+let closure_2 = {
+  code: "function determine_Pnpm_installWorkletsSupportTs1(value){const{boxedNitroProxy}=this.__closure;const nitroProxy=boxedNitroProxy.unbox();return nitroProxy.isHybridObject(value);}",
+};
+let closure_3 = {
+  code: "function pack_Pnpm_installWorkletsSupportTs2(value){const{boxedNitroProxy}=this.__closure;const nitroProxy=boxedNitroProxy.unbox();return nitroProxy.box(value);}",
+};
 let closure_4 = { code: "function unpack_Pnpm_installWorkletsSupportTs3(value){return value.unbox();}" };
 arg5.installWorkletsSupport = function installWorkletsSupport() {
   try {
@@ -39,6 +43,5 @@ arg5.installWorkletsSupport = function installWorkletsSupport() {
     fn3.__initData = closure_4;
     obj[3] = fn3;
     const result = _mod4216.registerCustomSerializable(obj);
-  } catch (err) {
-  }
+  } catch (err) {}
 };

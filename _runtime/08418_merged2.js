@@ -1,9 +1,18 @@
 // _runtime/08418_merged2.js
 import emptyFunction from "04307_emptyFunction.js";
 
-let obj = { transform: null, transformMatrix: null, decomposedMatrix: null, scaleX: null, scaleY: null, rotation: null, translateX: null, translateY: null };
+let obj = {
+  transform: null,
+  transformMatrix: null,
+  decomposedMatrix: null,
+  scaleX: null,
+  scaleY: null,
+  rotation: null,
+  translateX: null,
+  translateY: null,
+};
 obj = { perspective: emptyFunction.number };
-const items = [emptyFunction.shape(obj), , , , , , , , , , , ];
+const items = [emptyFunction.shape(obj), , , , , , , , , , ,];
 obj = { rotate: emptyFunction.string };
 items[1] = emptyFunction.shape(obj);
 items[2] = emptyFunction.shape({ rotateX: emptyFunction.string });

@@ -1,7 +1,10 @@
 // _runtime/01719_PinwheelData.js
 import convertAnimationObjectToKeyframes from "01711_convertAnimationObjectToKeyframes.js";
 
-obj = { PinwheelIn: { name: "PinwheelIn", style: obj, duration: 0.3 }, PinwheelOut: { name: "PinwheelOut", style: obj, duration: 0.3 } };
+obj = {
+  PinwheelIn: { name: "PinwheelIn", style: obj, duration: 0.3 },
+  PinwheelOut: { name: "PinwheelOut", style: obj, duration: 0.3 },
+};
 obj = { 0: { transform: items, opacity: 0 }, 100: null };
 items = [{ rotate: "5rad", scale: 0 }];
 const items1 = [{ rotate: "0deg", scale: 1 }];

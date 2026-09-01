@@ -17,7 +17,9 @@ const fn = function r(obj) {
 };
 fn.__closure = {};
 fn.__workletHash = 12151866759552;
-fn.__initData = { code: "function pnpm_colorsTs1(value){return typeof value==='object'&&value!==null&&!Array.isArray(value);}" };
+fn.__initData = {
+  code: "function pnpm_colorsTs1(value){return typeof value==='object'&&value!==null&&!Array.isArray(value);}",
+};
 class PlatformColor {
   constructor() {
     items = [...arguments];
@@ -34,7 +36,9 @@ class PlatformColor {
 let obj = { IS_IOS: require("JEST_WORKER_ID").IS_IOS };
 PlatformColor.__closure = obj;
 PlatformColor.__workletHash = 12890406291275;
-PlatformColor.__initData = { code: "function PlatformColor_Pnpm_colorsTs2(...names){const{IS_IOS}=this.__closure;return IS_IOS?{semantic:names}:{resource_paths:names};}" };
+PlatformColor.__initData = {
+  code: "function PlatformColor_Pnpm_colorsTs2(...names){const{IS_IOS}=this.__closure;return IS_IOS?{semantic:names}:{resource_paths:names};}",
+};
 function isPlatformColorObject(obj) {
   if (typeof fn !== "function") {
     HermesBuiltin.throwTypeError();
@@ -60,16 +64,25 @@ function isPlatformColorObject(obj) {
 }
 isPlatformColorObject.__closure = { isRecord: fn };
 isPlatformColorObject.__workletHash = 9660595997722;
-isPlatformColorObject.__initData = { code: "function isPlatformColorObject_Pnpm_colorsTs3(value){const{isRecord}=this.__closure;return isRecord(value)&&(Array.isArray(value.semantic)||Array.isArray(value.resource_paths));}" };
+isPlatformColorObject.__initData = {
+  code: "function isPlatformColorObject_Pnpm_colorsTs3(value){const{isRecord}=this.__closure;return isRecord(value)&&(Array.isArray(value.semantic)||Array.isArray(value.resource_paths));}",
+};
 class DynamicColorIOS {
   constructor(arg0) {
-    dynamic = { light: arg0.light, dark: arg0.dark, highContrastLight: arg0.highContrastLight, highContrastDark: arg0.highContrastDark };
+    dynamic = {
+      light: arg0.light,
+      dark: arg0.dark,
+      highContrastLight: arg0.highContrastLight,
+      highContrastDark: arg0.highContrastDark,
+    };
     return { dynamic };
   }
 }
 DynamicColorIOS.__closure = {};
 DynamicColorIOS.__workletHash = 593421129931;
-DynamicColorIOS.__initData = { code: "function DynamicColorIOS_Pnpm_colorsTs4(tuple){return{dynamic:{light:tuple.light,dark:tuple.dark,highContrastLight:tuple.highContrastLight,highContrastDark:tuple.highContrastDark}};}" };
+DynamicColorIOS.__initData = {
+  code: "function DynamicColorIOS_Pnpm_colorsTs4(tuple){return{dynamic:{light:tuple.light,dark:tuple.dark,highContrastLight:tuple.highContrastLight,highContrastDark:tuple.highContrastDark}};}",
+};
 function isDynamicColorObjectIOS(arr) {
   if (typeof fn !== "function") {
     HermesBuiltin.throwTypeError();
@@ -107,20 +120,24 @@ function isDynamicColorObjectIOS(arr) {
 }
 isDynamicColorObjectIOS.__closure = { isRecord: fn };
 isDynamicColorObjectIOS.__workletHash = 1181760541767;
-isDynamicColorObjectIOS.__initData = { code: "function isDynamicColorObjectIOS_Pnpm_colorsTs5(value){const{isRecord}=this.__closure;return isRecord(value)&&isRecord(value.dynamic)&&'light'in value.dynamic&&'dark'in value.dynamic;}" };
+isDynamicColorObjectIOS.__initData = {
+  code: "function isDynamicColorObjectIOS_Pnpm_colorsTs5(value){const{isRecord}=this.__closure;return isRecord(value)&&isRecord(value.dynamic)&&'light'in value.dynamic&&'dark'in value.dynamic;}",
+};
 obj = { invalidColor: fn2, invalidProcessedColor: fn3, dynamicNotAvailableOnPlatform: fn4 };
 fn2 = function t(arg0) {
   return "Invalid color value: " + JSON.stringify(arg0);
 };
 fn2.__closure = {};
 fn2.__workletHash = 16453254098770;
-fn2.__initData = { code: "function pnpm_colorsTs6(color){return\"Invalid color value: \"+JSON.stringify(color);}" };
+fn2.__initData = { code: 'function pnpm_colorsTs6(color){return"Invalid color value: "+JSON.stringify(color);}' };
 fn3 = function n(arg0) {
   return "Invalid processed color value: " + JSON.stringify(arg0);
 };
 fn3.__closure = {};
 fn3.__workletHash = 8662920964153;
-fn3.__initData = { code: "function pnpm_colorsTs7(color){return\"Invalid processed color value: \"+JSON.stringify(color);}" };
+fn3.__initData = {
+  code: 'function pnpm_colorsTs7(color){return"Invalid processed color value: "+JSON.stringify(color);}',
+};
 fn4 = function o() {
   return "DynamicColorIOS is not available on this platform.";
 };
@@ -136,16 +153,26 @@ function processColorNumber(arr) {
   }
   return tmp3;
 }
-obj = { processColorInitially: require("call").processColorInitially, IS_ANDROID: require("JEST_WORKER_ID").IS_ANDROID };
+obj = {
+  processColorInitially: require("call").processColorInitially,
+  IS_ANDROID: require("JEST_WORKER_ID").IS_ANDROID,
+};
 processColorNumber.__closure = obj;
 processColorNumber.__workletHash = 11813019963227;
-processColorNumber.__initData = { code: "function processColorNumber_Pnpm_colorsTs9(value){const{processColorInitially,IS_ANDROID}=this.__closure;let normalizedColor=processColorInitially(value);if(IS_ANDROID&&typeof normalizedColor=='number'){normalizedColor=normalizedColor|0x0;}return normalizedColor;}" };
+processColorNumber.__initData = {
+  code: "function processColorNumber_Pnpm_colorsTs9(value){const{processColorInitially,IS_ANDROID}=this.__closure;let normalizedColor=processColorInitially(value);if(IS_ANDROID&&typeof normalizedColor=='number'){normalizedColor=normalizedColor|0x0;}return normalizedColor;}",
+};
 function unprocessColorNumber(arg0) {
-  return "rgba(" + arg0 << 8 >>> 24 + "," + arg0 << 16 >>> 24 + "," + arg0 << 24 >>> 24 + "," + (arg0 >>> 24) / 255 + ")";
+  return (
+    (((((("rgba(" + arg0) << 8) >>> (24 + "," + arg0)) << 16) >>> (24 + "," + arg0)) << 24) >>>
+    (24 + "," + (arg0 >>> 24) / 255 + ")")
+  );
 }
 unprocessColorNumber.__closure = {};
 unprocessColorNumber.__workletHash = 5518391320995;
-unprocessColorNumber.__initData = { code: "function unprocessColorNumber_Pnpm_colorsTs10(value){const a=(value>>>24)/255;const r=value<<8>>>24;const g=value<<16>>>24;const b=value<<24>>>24;return\"rgba(\"+r+\",\"+g+\",\"+b+\",\"+a+\")\";}" };
+unprocessColorNumber.__initData = {
+  code: 'function unprocessColorNumber_Pnpm_colorsTs10(value){const a=(value>>>24)/255;const r=value<<8>>>24;const g=value<<16>>>24;const b=value<<24>>>24;return"rgba("+r+","+g+","+b+","+a+")";}',
+};
 let items = ["light", "dark", "highContrastLight", "highContrastDark"];
 function processDynamicColorObjectIOS(arr) {
   const dynamic = {};
@@ -173,7 +200,9 @@ function processDynamicColorObjectIOS(arr) {
 }
 processDynamicColorObjectIOS.__closure = { DynamicColorIOSProperties: items, processColorNumber };
 processDynamicColorObjectIOS.__workletHash = 12385759836493;
-processDynamicColorObjectIOS.__initData = { code: "function processDynamicColorObjectIOS_Pnpm_colorsTs11(value){const{DynamicColorIOSProperties,processColorNumber}=this.__closure;const result={};for(const property of DynamicColorIOSProperties){if(value.dynamic[property]===undefined){continue;}const processed=processColorNumber(value.dynamic[property]);if(processed===null){return null;}result[property]=processed;}return{dynamic:result};}" };
+processDynamicColorObjectIOS.__initData = {
+  code: "function processDynamicColorObjectIOS_Pnpm_colorsTs11(value){const{DynamicColorIOSProperties,processColorNumber}=this.__closure;const result={};for(const property of DynamicColorIOSProperties){if(value.dynamic[property]===undefined){continue;}const processed=processColorNumber(value.dynamic[property]);if(processed===null){return null;}result[property]=processed;}return{dynamic:result};}",
+};
 function unprocessDynamicColorObjectIOS(arr) {
   const dynamic = {};
   for (const item10008 of items) {
@@ -189,7 +218,9 @@ function unprocessDynamicColorObjectIOS(arr) {
 }
 unprocessDynamicColorObjectIOS.__closure = { DynamicColorIOSProperties: items, unprocessColorNumber };
 unprocessDynamicColorObjectIOS.__workletHash = 3217615757982;
-unprocessDynamicColorObjectIOS.__initData = { code: "function unprocessDynamicColorObjectIOS_Pnpm_colorsTs12(value){const{DynamicColorIOSProperties,unprocessColorNumber}=this.__closure;const result={};for(const property of DynamicColorIOSProperties){if(value.dynamic[property]!==undefined){result[property]=unprocessColorNumber(value.dynamic[property]);}}return{dynamic:result};}" };
+unprocessDynamicColorObjectIOS.__initData = {
+  code: "function unprocessDynamicColorObjectIOS_Pnpm_colorsTs12(value){const{DynamicColorIOSProperties,unprocessColorNumber}=this.__closure;const result={};for(const property of DynamicColorIOSProperties){if(value.dynamic[property]!==undefined){result[property]=unprocessColorNumber(value.dynamic[property]);}}return{dynamic:result};}",
+};
 function processColor(arr, target) {
   if (typeof processColorNumber !== "function") {
     HermesBuiltin.throwTypeError();
@@ -261,16 +292,29 @@ function processColor(arr, target) {
   }
   tmp4 = JEST_WORKER_ID.IS_ANDROID && typeof result === "number";
 }
-processColor.__closure = { processColorNumber, ValueProcessorTarget: require("metro/01765__.js").ValueProcessorTarget, isPlatformColorObject, isDynamicColorObjectIOS, IS_IOS: require("JEST_WORKER_ID").IS_IOS, ERROR_MESSAGES: obj, processDynamicColorObjectIOS };
+processColor.__closure = {
+  processColorNumber,
+  ValueProcessorTarget: require("metro/01765__.js").ValueProcessorTarget,
+  isPlatformColorObject,
+  isDynamicColorObjectIOS,
+  IS_IOS: require("JEST_WORKER_ID").IS_IOS,
+  ERROR_MESSAGES: obj,
+  processDynamicColorObjectIOS,
+};
 processColor.__workletHash = 3532980737440;
-processColor.__initData = { code: "function processColor_Pnpm_colorsTs13(value,context){const{processColorNumber,ValueProcessorTarget,isPlatformColorObject,isDynamicColorObjectIOS,IS_IOS,ERROR_MESSAGES,processDynamicColorObjectIOS}=this.__closure;let result=processColorNumber(value);if(result){return result;}if(result===0){if((context===null||context===void 0?void 0:context.target)===ValueProcessorTarget.CSS&&value==='transparent'){return false;}return result;}if(isPlatformColorObject(value)){return value;}if(isDynamicColorObjectIOS(value)){if(!IS_IOS){throw new ReanimatedError(ERROR_MESSAGES.dynamicNotAvailableOnPlatform());}result=processDynamicColorObjectIOS(value);}if(result===null){throw new ReanimatedError(ERROR_MESSAGES.invalidColor(value));}return result;}" };
+processColor.__initData = {
+  code: "function processColor_Pnpm_colorsTs13(value,context){const{processColorNumber,ValueProcessorTarget,isPlatformColorObject,isDynamicColorObjectIOS,IS_IOS,ERROR_MESSAGES,processDynamicColorObjectIOS}=this.__closure;let result=processColorNumber(value);if(result){return result;}if(result===0){if((context===null||context===void 0?void 0:context.target)===ValueProcessorTarget.CSS&&value==='transparent'){return false;}return result;}if(isPlatformColorObject(value)){return value;}if(isDynamicColorObjectIOS(value)){if(!IS_IOS){throw new ReanimatedError(ERROR_MESSAGES.dynamicNotAvailableOnPlatform());}result=processDynamicColorObjectIOS(value);}if(result===null){throw new ReanimatedError(ERROR_MESSAGES.invalidColor(value));}return result;}",
+};
 function unprocessColor(arr) {
   if (typeof arr === "number") {
     if (typeof unprocessColorNumber !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const _HermesInternal = HermesInternal;
-    return "rgba(" + arr << 8 >>> 24 + "," + arr << 16 >>> 24 + "," + arr << 24 >>> 24 + "," + (arr >>> 24) / 255 + ")";
+    return (
+      (((((("rgba(" + arr) << 8) >>> (24 + "," + arr)) << 16) >>> (24 + "," + arr)) << 24) >>>
+      (24 + "," + (arr >>> 24) / 255 + ")")
+    );
   } else {
     if (typeof isPlatformColorObject !== "function") {
       HermesBuiltin.throwTypeError();
@@ -310,10 +354,27 @@ function unprocessColor(arr) {
     }
   }
 }
-const obj1 = { processColorNumber, ValueProcessorTarget: require("metro/01765__.js").ValueProcessorTarget, isPlatformColorObject, isDynamicColorObjectIOS, IS_IOS: require("JEST_WORKER_ID").IS_IOS, ERROR_MESSAGES: obj, processDynamicColorObjectIOS };
-unprocessColor.__closure = { unprocessColorNumber, isPlatformColorObject, isDynamicColorObjectIOS, IS_IOS: require("JEST_WORKER_ID").IS_IOS, ERROR_MESSAGES: obj, unprocessDynamicColorObjectIOS };
+const obj1 = {
+  processColorNumber,
+  ValueProcessorTarget: require("metro/01765__.js").ValueProcessorTarget,
+  isPlatformColorObject,
+  isDynamicColorObjectIOS,
+  IS_IOS: require("JEST_WORKER_ID").IS_IOS,
+  ERROR_MESSAGES: obj,
+  processDynamicColorObjectIOS,
+};
+unprocessColor.__closure = {
+  unprocessColorNumber,
+  isPlatformColorObject,
+  isDynamicColorObjectIOS,
+  IS_IOS: require("JEST_WORKER_ID").IS_IOS,
+  ERROR_MESSAGES: obj,
+  unprocessDynamicColorObjectIOS,
+};
 unprocessColor.__workletHash = 11221362619601;
-unprocessColor.__initData = { code: "function unprocessColor_Pnpm_colorsTs14(value){const{unprocessColorNumber,isPlatformColorObject,isDynamicColorObjectIOS,IS_IOS,ERROR_MESSAGES,unprocessDynamicColorObjectIOS}=this.__closure;if(typeof value==='number'){return unprocessColorNumber(value);}if(isPlatformColorObject(value)){return value;}if(isDynamicColorObjectIOS(value)){if(!IS_IOS){throw new ReanimatedError(ERROR_MESSAGES.dynamicNotAvailableOnPlatform());}return unprocessDynamicColorObjectIOS(value);}throw new ReanimatedError(ERROR_MESSAGES.invalidProcessedColor(value));}" };
+unprocessColor.__initData = {
+  code: "function unprocessColor_Pnpm_colorsTs14(value){const{unprocessColorNumber,isPlatformColorObject,isDynamicColorObjectIOS,IS_IOS,ERROR_MESSAGES,unprocessDynamicColorObjectIOS}=this.__closure;if(typeof value==='number'){return unprocessColorNumber(value);}if(isPlatformColorObject(value)){return value;}if(isDynamicColorObjectIOS(value)){if(!IS_IOS){throw new ReanimatedError(ERROR_MESSAGES.dynamicNotAvailableOnPlatform());}return unprocessDynamicColorObjectIOS(value);}throw new ReanimatedError(ERROR_MESSAGES.invalidProcessedColor(value));}",
+};
 function processColorsInProps(obj) {
   for (const key10005 in arg0) {
     let tmp3 = key10005;
@@ -337,10 +398,19 @@ function processColorsInProps(obj) {
     continue;
   }
 }
-const obj2 = { unprocessColorNumber, isPlatformColorObject, isDynamicColorObjectIOS, IS_IOS: require("JEST_WORKER_ID").IS_IOS, ERROR_MESSAGES: obj, unprocessDynamicColorObjectIOS };
+const obj2 = {
+  unprocessColorNumber,
+  isPlatformColorObject,
+  isDynamicColorObjectIOS,
+  IS_IOS: require("JEST_WORKER_ID").IS_IOS,
+  ERROR_MESSAGES: obj,
+  unprocessDynamicColorObjectIOS,
+};
 processColorsInProps.__closure = { ColorProperties: require("call").ColorProperties, processColor };
 processColorsInProps.__workletHash = 10982881159897;
-processColorsInProps.__initData = { code: "function processColorsInProps_Pnpm_colorsTs15(props){const{ColorProperties,processColor}=this.__closure;for(const key in props){if(!ColorProperties.includes(key)){continue;}const value=props[key];props[key]=Array.isArray(value)?value.map(function(c){return processColor(c);}):processColor(value);}}" };
+processColorsInProps.__initData = {
+  code: "function processColorsInProps_Pnpm_colorsTs15(props){const{ColorProperties,processColor}=this.__closure;for(const key in props){if(!ColorProperties.includes(key)){continue;}const value=props[key];props[key]=Array.isArray(value)?value.map(function(c){return processColor(c);}):processColor(value);}}",
+};
 function unprocessColorsInProps(styleProps) {
   for (const key10005 in arg0) {
     let tmp3 = key10005;
@@ -367,7 +437,9 @@ function unprocessColorsInProps(styleProps) {
 const obj3 = { ColorProperties: require("call").ColorProperties, processColor };
 unprocessColorsInProps.__closure = { ColorProperties: require("call").ColorProperties, unprocessColor };
 unprocessColorsInProps.__workletHash = 1282697128442;
-unprocessColorsInProps.__initData = { code: "function unprocessColorsInProps_Pnpm_colorsTs16(props){const{ColorProperties,unprocessColor}=this.__closure;for(const key in props){if(!ColorProperties.includes(key)){continue;}const value=props[key];props[key]=Array.isArray(value)?value.map(function(c){return unprocessColor(c);}):unprocessColor(value);}}" };
+unprocessColorsInProps.__initData = {
+  code: "function unprocessColorsInProps_Pnpm_colorsTs16(props){const{ColorProperties,unprocessColor}=this.__closure;for(const key in props){if(!ColorProperties.includes(key)){continue;}const value=props[key];props[key]=Array.isArray(value)?value.map(function(c){return unprocessColor(c);}):unprocessColor(value);}}",
+};
 arg5.PlatformColor = PlatformColor;
 arg5.DynamicColorIOS = DynamicColorIOS;
 arg5.ERROR_MESSAGES = obj;

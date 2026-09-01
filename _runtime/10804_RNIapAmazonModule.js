@@ -7,7 +7,7 @@ closure_0 = importDefaultResult((arg0) => {
   closure_0 = arg0;
   c3 = 0;
   c4 = 0;
-  const iter = (function*(arg0) {
+  const iter = (function* (arg0) {
     c1 = tmp2;
     ({ developerSecret: c0, userId: c1, receiptId: c2, useSandbox } = c0);
     if (useSandbox === undefined) {
@@ -26,7 +26,7 @@ closure_0 = importDefaultResult((arg0) => {
   iter.next();
   return iter;
 });
-closure_0 = importDefaultResult(function*() {
+closure_0 = importDefaultResult(function* () {
   if (c0 === 2) {
     c0 = 3;
     HermesBuiltin.throwTypeError();
@@ -67,7 +67,7 @@ closure_0 = importDefaultResult((arg0) => {
   closure_0 = arg0;
   c3 = 0;
   c4 = 0;
-  const iter = (function*(arg0) {
+  const iter = (function* (arg0) {
     closure_2 = tmp5;
     closure_1 = tmp2;
     isAmazonDevice = isAmazonDevice.isAmazonDevice;

@@ -10,7 +10,11 @@ function valueEqual(state, state2) {
         const _Array2 = Array;
         if (Array.isArray(state)) {
           const _Array = Array;
-          return Array.isArray(state2) && state.length === state2.length && state.every((arg0, arg1) => state(arg0, state2[arg1]));
+          return (
+            Array.isArray(state2) &&
+            state.length === state2.length &&
+            state.every((arg0, arg1) => state(arg0, state2[arg1]))
+          );
         } else {
           if (typeof state !== "object") {
             if (typeof state2 !== "object") {

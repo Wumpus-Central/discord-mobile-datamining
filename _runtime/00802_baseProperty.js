@@ -9,4 +9,4 @@ export default function baseProperty(arg0) {
     }
     return tmp;
   };
-};
+}

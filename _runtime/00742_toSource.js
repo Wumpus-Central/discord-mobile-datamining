@@ -15,8 +15,7 @@ export default function toSource(arg0) {
     } catch (err) {
       try {
         return "" + tmp;
-      } catch (err) {
-      }
+      } catch (err) {}
     }
   }
-};
+}

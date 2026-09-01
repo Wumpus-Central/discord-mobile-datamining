@@ -6,4 +6,4 @@ export default function getValue(arg0, arg1) {
     tmp = arg0[arg1];
   }
   return tmp;
-};
+}

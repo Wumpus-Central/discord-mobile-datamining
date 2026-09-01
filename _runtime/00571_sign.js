@@ -1,7 +1,6 @@
 // _runtime/00571_sign.js
 import isNaN from "00572_isNaN.js";
 
-
 export default function sign(arg0) {
   let tmp = arg0;
   if (!isNaN(arg0)) {
@@ -15,4 +14,4 @@ export default function sign(arg0) {
     }
   }
   return tmp;
-};
+}

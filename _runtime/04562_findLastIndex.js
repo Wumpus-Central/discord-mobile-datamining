@@ -3,7 +3,6 @@ import baseIteratee from "00720_baseIteratee.js";
 import toInteger from "04563_toInteger.js";
 import baseFindIndex from "04565_baseFindIndex.js";
 
-
 export default function findLastIndex(arg0, arg1, arg2) {
   let num = 0;
   if (null != arg0) {
@@ -25,4 +24,4 @@ export default function findLastIndex(arg0, arg1, arg2) {
   } else {
     return -1;
   }
-};
+}

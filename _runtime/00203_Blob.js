@@ -29,7 +29,7 @@ let items = [
     },
     set(_data) {
       this._data = _data;
-    }
+    },
   },
   {
     key: "slice",
@@ -62,28 +62,34 @@ let items = [
         tmp2 = diff;
         tmp3 = sum;
       }
-      return Blob(200).default.createFromOptions({ blobId: self.data.blobId, offset: tmp3, size: tmp2, type: str, __collector: self.data.__collector });
-    }
+      return Blob(200).default.createFromOptions({
+        blobId: self.data.blobId,
+        offset: tmp3,
+        size: tmp2,
+        type: str,
+        __collector: self.data.__collector,
+      });
+    },
   },
   {
     key: "close",
     value: function close() {
       Blob(200).default.release(this.data.blobId);
       this.data = null;
-    }
+    },
   },
   {
     key: "size",
     get() {
       return this.data.size;
-    }
+    },
   },
   {
     key: "type",
     get() {
       return this.data.type || "";
-    }
-  }
+    },
+  },
 ];
 
 export default _createClassDefault(Blob, items);

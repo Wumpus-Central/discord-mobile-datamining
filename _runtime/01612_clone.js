@@ -148,7 +148,7 @@ export const useLinkProps = function useLinkProps(arg0) {
       }
       context1.dispatch(tmp8);
     });
-    const items = [merged.href, tmp2(1613).useDeepStableValue(undefined), , ];
+    const items = [merged.href, tmp2(1613).useDeepStableValue(undefined), ,];
     let getPathFromState;
     if (options != null) {
       getPathFromState = options.getPathFromState;

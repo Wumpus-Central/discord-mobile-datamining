@@ -41,19 +41,37 @@ function spanTimeInputToSeconds(num) {
   return sum;
 }
 function spanToJSON(getSpanJSON) {
-  if ((function spanIsSentrySpan(getSpanJSON) {
-    return typeof getSpanJSON.getSpanJSON === "function";
-  })(getSpanJSON)) {
+  if (
+    (function spanIsSentrySpan(getSpanJSON) {
+      return typeof getSpanJSON.getSpanJSON === "function";
+    })(getSpanJSON)
+  ) {
     return getSpanJSON.getSpanJSON();
   } else {
     try {
       ({ spanId, traceId } = getSpanJSON.spanContext());
-      if ((function spanIsOpenTelemetrySdkTraceBaseSpan(attributes) {
-        return attributes.attributes && attributes.startTime && attributes.name && attributes.endTime && attributes.status;
-      })(getSpanJSON)) {
+      if (
+        (function spanIsOpenTelemetrySdkTraceBaseSpan(attributes) {
+          return (
+            attributes.attributes && attributes.startTime && attributes.name && attributes.endTime && attributes.status
+          );
+        })(getSpanJSON)
+      ) {
         const attributes = getSpanJSON.attributes;
         ({ startTime, name, endTime, parentSpanId, status } = getSpanJSON);
-        let obj = { span_id: null, trace_id: null, data: null, description: null, parent_span_id: null, start_timestamp: null, timestamp: null, status: null, op: null, origin: null, _metrics_summary: null };
+        let obj = {
+          span_id: null,
+          trace_id: null,
+          data: null,
+          description: null,
+          parent_span_id: null,
+          start_timestamp: null,
+          timestamp: null,
+          status: null,
+          op: null,
+          origin: null,
+          _metrics_summary: null,
+        };
         obj[0] = spanId;
         obj[1] = traceId;
         obj[2] = attributes;
@@ -165,7 +183,9 @@ arg5.removeChildSpanFromSpan = function removeChildSpanFromSpan(arg0, arg1) {
 arg5.showSpanDropWarning = function showSpanDropWarning() {
   if (!c2) {
     consoleSandbox.consoleSandbox(() => {
-      console.warn("[Sentry] Deprecation warning: Returning null from `beforeSendSpan` will be disallowed from SDK version 9.0.0 onwards. The callback will only support mutating spans. To drop certain spans, configure the respective integrations directly.");
+      console.warn(
+        "[Sentry] Deprecation warning: Returning null from `beforeSendSpan` will be disallowed from SDK version 9.0.0 onwards. The callback will only support mutating spans. To drop certain spans, configure the respective integrations directly.",
+      );
     });
     c2 = true;
     const obj = consoleSandbox;
@@ -199,7 +219,14 @@ arg5.spanToTransactionTraceContext = function spanToTransactionTraceContext(span
   const tmp2 = spanToJSON(spanContext);
   return addNonEnumerableProperty.dropUndefinedKeys({ parent_span_id, span_id, trace_id, data, op, status, origin });
 };
-arg5.updateMetricSummaryOnActiveSpan = function updateMetricSummaryOnActiveSpan(arg0, sanitizeMetricKeyResult, diff, sanitizeUnitResult, arg4, bucketKey) {
+arg5.updateMetricSummaryOnActiveSpan = function updateMetricSummaryOnActiveSpan(
+  arg0,
+  sanitizeMetricKeyResult,
+  diff,
+  sanitizeUnitResult,
+  arg4,
+  bucketKey,
+) {
   const mainCarrier = getMainCarrier.getMainCarrier();
   const obj = getMainCarrier;
   const asyncContextStrategy = getAsyncContextStrategy.getAsyncContextStrategy(mainCarrier);
@@ -212,10 +239,21 @@ arg5.updateMetricSummaryOnActiveSpan = function updateMetricSummaryOnActiveSpan(
   }
   if (activeSpan) {
     const tmpResult1 = tmp(12351);
-    const result = tmpResult1.updateMetricSummaryOnSpan(activeSpan, arg0, sanitizeMetricKeyResult, diff, sanitizeUnitResult, arg4, bucketKey);
+    const result = tmpResult1.updateMetricSummaryOnSpan(
+      activeSpan,
+      arg0,
+      sanitizeMetricKeyResult,
+      diff,
+      sanitizeUnitResult,
+      arg4,
+      bucketKey,
+    );
   }
 };
 arg5.updateSpanName = function updateSpanName(updateName) {
   updateName.updateName(arg1);
-  updateName.setAttributes({ [closure_0(closure_1[4]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE]: "custom", [closure_0(closure_1[4]).SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME]: arg1 });
+  updateName.setAttributes({
+    [closure_0(closure_1[4]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE]: "custom",
+    [closure_0(closure_1[4]).SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME]: arg1,
+  });
 };

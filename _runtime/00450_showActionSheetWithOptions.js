@@ -85,5 +85,5 @@ export default {
       ActionSheetManagerDefault.dismissActionSheet();
       const tmp3Result = ActionSheetManagerDefault;
     }
-  }
+  },
 };

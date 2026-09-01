@@ -4,8 +4,8 @@ arg5.default = {
     name: "PentaxVersion",
     description(join) {
       return join.join(".");
-    }
+    },
   },
   5: "PentaxModelID",
-  555: "LevelInfo"
+  555: "LevelInfo",
 };

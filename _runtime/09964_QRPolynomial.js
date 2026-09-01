@@ -193,7 +193,7 @@ QRPolynomial.prototype = {
       const obj5 = _mod9965;
     }
     length = this.getLength();
-  }
+  },
 };
 
 export default QRPolynomial;

@@ -24,8 +24,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 let closure_8 = Math.PI / 180;
 class SVGMatrix {
@@ -53,12 +52,19 @@ let obj = {
   value: function multiply(arg0) {
     ({ a, b, c, d } = this);
     ({ a: a2, b: b2, c: c2, d: d2, e, f } = arg0);
-    let obj = { a: a * a2 + c * b2, c: a * c2 + c * d2, e: a * e + c * f + this.e, b: b * a2 + d * b2, d: b * c2 + d * d2, f: b * e + d * f + this.f };
+    let obj = {
+      a: a * a2 + c * b2,
+      c: a * c2 + c * d2,
+      e: a * e + c * f + this.e,
+      b: b * a2 + d * b2,
+      d: b * c2 + d * d2,
+      f: b * e + d * f + this.f,
+    };
     obj = Object.create(Shape.prototype);
     callback2(obj, Shape);
     ({ a: tmp.a, b: tmp.b, c: tmp.c, d: tmp.d, e: tmp.e, f: tmp.f } = obj);
     return obj;
-  }
+  },
 };
 let items = [
   obj,
@@ -67,12 +73,19 @@ let items = [
     value: function inverse() {
       ({ a, b, c, d, e, f } = this);
       const diff = a * d - b * c;
-      let obj = { a: d / diff, b: -b / diff, c: -c / diff, d: a / diff, e: (c * f - d * e) / diff, f: -a * f - b * e / diff };
+      let obj = {
+        a: d / diff,
+        b: -b / diff,
+        c: -c / diff,
+        d: a / diff,
+        e: (c * f - d * e) / diff,
+        f: -a * f - (b * e) / diff,
+      };
       obj = Object.create(Shape.prototype);
       callback2(obj, Shape);
       ({ a: tmp2.a, b: tmp2.b, c: tmp2.c, d: tmp2.d, e: tmp2.e, f: tmp2.f } = obj);
       return obj;
-    }
+    },
   },
   {
     key: "translate",
@@ -83,17 +96,24 @@ let items = [
       callback2(obj, Shape);
       ({ a: tmp.a, b: tmp.b, c: tmp.c, d: tmp.d, e: tmp.e, f: tmp.f } = obj);
       return obj;
-    }
+    },
   },
   {
     key: "scale",
     value: function scale(mapped, dpi) {
-      let obj = { a: this.a * mapped, c: this.c * mapped, e: this.e, b: this.b * mapped, d: this.d * mapped, f: this.f };
+      let obj = {
+        a: this.a * mapped,
+        c: this.c * mapped,
+        e: this.e,
+        b: this.b * mapped,
+        d: this.d * mapped,
+        f: this.f,
+      };
       obj = Object.create(Shape.prototype);
       callback2(obj, Shape);
       ({ a: tmp.a, b: tmp.b, c: tmp.c, d: tmp.d, e: tmp.e, f: tmp.f } = obj);
       return obj;
-    }
+    },
   },
   {
     key: "scaleNonUniform",
@@ -103,7 +123,7 @@ let items = [
       callback2(obj, Shape);
       ({ a: tmp.a, b: tmp.b, c: tmp.c, d: tmp.d, e: tmp.e, f: tmp.f } = obj);
       return obj;
-    }
+    },
   },
   {
     key: "rotate",
@@ -111,12 +131,19 @@ let items = [
       const cosResult = Math.cos(closure_8 * arg0);
       const sinResult = Math.sin(closure_8 * arg0);
       ({ a, b, c, d } = this);
-      let obj = { a: a * cosResult + c * sinResult, c: a * tmp3 + c * cosResult, e: this.e, b: b * cosResult + d * sinResult, d: b * tmp3 + d * cosResult, f: this.f };
+      let obj = {
+        a: a * cosResult + c * sinResult,
+        c: a * tmp3 + c * cosResult,
+        e: this.e,
+        b: b * cosResult + d * sinResult,
+        d: b * tmp3 + d * cosResult,
+        f: this.f,
+      };
       obj = Object.create(Shape.prototype);
       callback2(obj, Shape);
       ({ a: tmp4.a, b: tmp4.b, c: tmp4.c, d: tmp4.d, e: tmp4.e, f: tmp4.f } = obj);
       return obj;
-    }
+    },
   },
   {
     key: "rotateFromVector",
@@ -125,12 +152,19 @@ let items = [
       const cosResult = Math.cos(closure_8 * atan2Result);
       const sinResult = Math.sin(closure_8 * atan2Result);
       ({ a, b, c, d } = this);
-      let obj = { a: a * cosResult + c * sinResult, c: a * tmp4 + c * cosResult, e: this.e, b: b * cosResult + d * sinResult, d: b * tmp4 + d * cosResult, f: this.f };
+      let obj = {
+        a: a * cosResult + c * sinResult,
+        c: a * tmp4 + c * cosResult,
+        e: this.e,
+        b: b * cosResult + d * sinResult,
+        d: b * tmp4 + d * cosResult,
+        f: this.f,
+      };
       obj = Object.create(Shape.prototype);
       callback2(obj, Shape);
       ({ a: tmp5.a, b: tmp5.b, c: tmp5.c, d: tmp5.d, e: tmp5.e, f: tmp5.f } = obj);
       return obj;
-    }
+    },
   },
   {
     key: "flipX",
@@ -140,7 +174,7 @@ let items = [
       callback2(obj, Shape);
       ({ a: tmp.a, b: tmp.b, c: tmp.c, d: tmp.d, e: tmp.e, f: tmp.f } = obj);
       return obj;
-    }
+    },
   },
   {
     key: "flipY",
@@ -150,7 +184,7 @@ let items = [
       callback2(obj, Shape);
       ({ a: tmp.a, b: tmp.b, c: tmp.c, d: tmp.d, e: tmp.e, f: tmp.f } = obj);
       return obj;
-    }
+    },
   },
   {
     key: "skewX",
@@ -162,7 +196,7 @@ let items = [
       callback2(obj, Shape);
       ({ a: tmp2.a, b: tmp2.b, c: tmp2.c, d: tmp2.d, e: tmp2.e, f: tmp2.f } = obj);
       return obj;
-    }
+    },
   },
   {
     key: "skewY",
@@ -174,8 +208,8 @@ let items = [
       callback2(obj, Shape);
       ({ a: tmp2.a, b: tmp2.b, c: tmp2.c, d: tmp2.d, e: tmp2.e, f: tmp2.f } = obj);
       return obj;
-    }
-  }
+    },
+  },
 ];
 const importDefaultResult1Result = importDefaultResult1(SVGMatrix, items);
 let c9 = importDefaultResult1Result;
@@ -203,7 +237,7 @@ obj = {
     callback2(obj, Shape);
     ({ x: tmp.x, y: tmp.y } = obj);
     return obj;
-  }
+  },
 };
 const items1 = [obj];
 const importDefaultResult1Result1 = importDefaultResult1(SVGPoint, items1);
@@ -213,7 +247,7 @@ obj = {
   },
   createSVGMatrix() {
     return new closure_9();
-  }
+  },
 };
 class Shape {
   constructor(arg0) {
@@ -311,8 +345,8 @@ const items2 = [
     key: "getNativeScrollRef",
     value: function getNativeScrollRef() {
       return this.root;
-    }
-  }
+    },
+  },
 ];
 const importDefaultResult1Result2 = importDefaultResult1(Shape, items2);
 importDefaultResult1Result2.prototype.ownerSVGElement = obj;
@@ -321,12 +355,26 @@ export default importDefaultResult1Result2;
 export const multiplyMatrices = function multiplyMatrices(arg0) {
   ({ a, b, c, d } = arg0);
   ({ a: a2, b: b2, c: c2, d: d2, e, f } = arg1);
-  return { a: a * a2 + c * b2, c: a * c2 + c * d2, e: a * e + c * f + arg0.e, b: b * a2 + d * b2, d: b * c2 + d * d2, f: b * e + d * f + arg0.f };
+  return {
+    a: a * a2 + c * b2,
+    c: a * c2 + c * d2,
+    e: a * e + c * f + arg0.e,
+    b: b * a2 + d * b2,
+    d: b * c2 + d * d2,
+    f: b * e + d * f + arg0.f,
+  };
 };
 export const invert = function invert(permissions) {
   ({ a, b, c, d, e, f } = permissions);
   const diff = a * d - b * c;
-  return { a: d / diff, b: -b / diff, c: -c / diff, d: a / diff, e: (c * f - d * e) / diff, f: -a * f - b * e / diff };
+  return {
+    a: d / diff,
+    b: -b / diff,
+    c: -c / diff,
+    d: a / diff,
+    e: (c * f - d * e) / diff,
+    f: -a * f - (b * e) / diff,
+  };
 };
 export const SVGMatrix = importDefaultResult1Result;
 export const matrixTransform = function _matrixTransform(arg0) {

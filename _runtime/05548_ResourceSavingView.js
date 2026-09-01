@@ -5,7 +5,11 @@ import { jsx } from "react/00021_jsxProd.js";
 
 noopAll;
 ({ Platform, StyleSheet, View: c0 } = get_ActivityIndicator);
-const styles = StyleSheet.create({ container: { flex: 1, overflow: "hidden" }, attached: { flex: 1 }, detached: { flex: 1, top: 30000 } });
+const styles = StyleSheet.create({
+  container: { flex: 1, overflow: "hidden" },
+  attached: { flex: 1 },
+  detached: { flex: 1, top: 30000 },
+});
 
 export const ResourceSavingView = function ResourceSavingView(visible) {
   visible = visible.visible;
@@ -22,7 +26,31 @@ export const ResourceSavingView = function ResourceSavingView(visible) {
   if (visible) {
     str = "auto";
   }
-  obj = { collapsable: false, removeClippedSubviews: true, pointerEvents: str, style: visible ? tmp4.attached : tmp4.detached, children };
-  obj[2] = <closure_0 collapsable={false} removeClippedSubviews pointerEvents={str} style={visible ? tmp4.attached : tmp4.detached}>{children}</closure_0>;
-  return <closure_0 collapsable={false} removeClippedSubviews pointerEvents={str} style={visible ? tmp4.attached : tmp4.detached}>{children}</closure_0>;
+  obj = {
+    collapsable: false,
+    removeClippedSubviews: true,
+    pointerEvents: str,
+    style: visible ? tmp4.attached : tmp4.detached,
+    children,
+  };
+  obj[2] = (
+    <closure_0
+      collapsable={false}
+      removeClippedSubviews
+      pointerEvents={str}
+      style={visible ? tmp4.attached : tmp4.detached}
+    >
+      {children}
+    </closure_0>
+  );
+  return (
+    <closure_0
+      collapsable={false}
+      removeClippedSubviews
+      pointerEvents={str}
+      style={visible ? tmp4.attached : tmp4.detached}
+    >
+      {children}
+    </closure_0>
+  );
 };

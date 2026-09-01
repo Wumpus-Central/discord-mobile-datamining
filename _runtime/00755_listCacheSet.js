@@ -1,7 +1,6 @@
 // _runtime/00755_listCacheSet.js
 import assocIndexOf from "00751_assocIndexOf.js";
 
-
 export default function listCacheSet(arg0, arg1) {
   const self = this;
   const __data__ = this.__data__;
@@ -14,4 +13,4 @@ export default function listCacheSet(arg0, arg1) {
     __data__[tmp][1] = arg1;
   }
   return self;
-};
+}

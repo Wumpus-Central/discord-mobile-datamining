@@ -18,7 +18,7 @@ let items = [
     key: "size",
     get() {
       return this._cache.size;
-    }
+    },
   },
   {
     key: "get",
@@ -33,7 +33,7 @@ let items = [
         const result = _cache3.set(arg0, value);
         return value;
       }
-    }
+    },
   },
   {
     key: "set",
@@ -47,7 +47,7 @@ let items = [
       }
       const _cache3 = self._cache;
       const result = _cache3.set(arg0, arg1);
-    }
+    },
   },
   {
     key: "remove",
@@ -59,21 +59,21 @@ let items = [
         _cache2.delete(arg0);
       }
       return value;
-    }
+    },
   },
   {
     key: "clear",
     value: function clear() {
       const _cache = this._cache;
       _cache.clear();
-    }
+    },
   },
   {
     key: "keys",
     value: function keys() {
       const _cache = this._cache;
       return Array.from(_cache.keys());
-    }
+    },
   },
   {
     key: "values",
@@ -82,8 +82,8 @@ let items = [
       const _cache = this._cache;
       const item = _cache.forEach((arg0) => items.push(arg0));
       return items;
-    }
-  }
+    },
+  },
 ];
 
 export const LRUMap = _createClass(LRUMap, items);

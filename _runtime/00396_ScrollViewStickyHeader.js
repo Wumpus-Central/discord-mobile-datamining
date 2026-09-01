@@ -81,15 +81,18 @@ export default function ScrollViewStickyHeader(ref) {
     return diffClampResult;
   }, items);
   closure_17 = tmp18;
-  const tmp19 = hiddenOnScroll(callback3(() => {
-    const interpolateResult = scrollAnimatedValue.interpolate({ inputRange: [-1, 0], outputRange: [0, 0] });
-    let addResult = interpolateResult;
-    if (null != closure_17) {
-      addResult = inverted(scrollViewHeight[5]).add(interpolateResult, tmp2);
-      const obj = inverted(scrollViewHeight[5]);
-    }
-    return addResult;
-  }), 2);
+  const tmp19 = hiddenOnScroll(
+    callback3(() => {
+      const interpolateResult = scrollAnimatedValue.interpolate({ inputRange: [-1, 0], outputRange: [0, 0] });
+      let addResult = interpolateResult;
+      if (null != closure_17) {
+        addResult = inverted(scrollViewHeight[5]).add(interpolateResult, tmp2);
+        const obj = inverted(scrollViewHeight[5]);
+      }
+      return addResult;
+    }),
+    2,
+  );
   closure_18 = tmp19[1];
   closure_19 = first2(true);
   closure_20 = first2(null);
@@ -198,14 +201,17 @@ export default function ScrollViewStickyHeader(ref) {
       tmp24 = obj;
     }
   }
-  const tmp17 = inverted(scrollViewHeight[4])(callback((closure_0) => {
-    if (null != closure_0) {
-      closure_0.setNextHeaderY = closure_14;
-      callback4(merged(scrollViewHeight[3]).isPublicInstance(closure_0));
-      const obj = merged(scrollViewHeight[3]);
-    }
-  }, []), ref.ref);
-  const items4 = [onlyResult.props.style, closure_12.header, ];
+  const tmp17 = inverted(scrollViewHeight[4])(
+    callback((closure_0) => {
+      if (null != closure_0) {
+        closure_0.setNextHeaderY = closure_14;
+        callback4(merged(scrollViewHeight[3]).isPublicInstance(closure_0));
+        const obj = merged(scrollViewHeight[3]);
+      }
+    }, []),
+    ref.ref,
+  );
+  const items4 = [onlyResult.props.style, closure_12.header];
   const items5 = [{ translateY: tmp19[0] }];
   items4[2] = { transform: items5 };
   let obj2 = { onLayout: "Array", style: 0 };
@@ -225,15 +231,18 @@ export default function ScrollViewStickyHeader(ref) {
         props.onLayout(nativeEvent);
       }
     },
-    ref: inverted(scrollViewHeight[4])(callback((closure_0) => {
-      if (null != closure_0) {
-        closure_0.setNextHeaderY = closure_14;
-        callback4(merged(scrollViewHeight[3]).isPublicInstance(closure_0));
-        const obj = merged(scrollViewHeight[3]);
-      }
-    }, []), ref.ref),
+    ref: inverted(scrollViewHeight[4])(
+      callback((closure_0) => {
+        if (null != closure_0) {
+          closure_0.setNextHeaderY = closure_14;
+          callback4(merged(scrollViewHeight[3]).isPublicInstance(closure_0));
+          const obj = merged(scrollViewHeight[3]);
+        }
+      }, []),
+      ref.ref,
+    ),
     style: items4,
     passthroughAnimatedPropExplicitValues: tmp24,
-    children: first(onlyResult, obj2)
+    children: first(onlyResult, obj2),
   });
-};
+}

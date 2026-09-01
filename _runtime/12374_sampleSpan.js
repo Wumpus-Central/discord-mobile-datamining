@@ -10,7 +10,8 @@ arg5.sampleSpan = function sampleSpan(tracesSampler, normalizedRequest) {
     const isolationScope = tmpResult.getIsolationScope();
     obj = {};
     const merged = Object.assign(normalizedRequest);
-    obj.normalizedRequest = normalizedRequest.normalizedRequest || isolationScope.getScopeData().sdkProcessingMetadata.normalizedRequest;
+    obj.normalizedRequest =
+      normalizedRequest.normalizedRequest || isolationScope.getScopeData().sdkProcessingMetadata.normalizedRequest;
     if (typeof tracesSampler.tracesSampler === "function") {
       let num = tracesSampler.tracesSampler(obj);
     } else if (undefined !== obj.parentSampled) {
@@ -40,7 +41,11 @@ arg5.sampleSpan = function sampleSpan(tracesSampler, normalizedRequest) {
           const logger2 = tmp(12335).logger;
           const _Number = Number;
           const _HermesInternal = HermesInternal;
-          logger2.log("[Tracing] Discarding transaction because it's not included in the random sample (sampling rate = " + Number(num) + ")");
+          logger2.log(
+            "[Tracing] Discarding transaction because it's not included in the random sample (sampling rate = " +
+              Number(num) +
+              ")",
+          );
         }
         items2 = [false, parseSampleRateResult];
       }

@@ -22,10 +22,11 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
-let closure_6 = { code: "function pnpm_BounceTs1(){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{scale:delayFunction(delay,withSequence(withTiming(1.2,{duration:duration*0.55}),withTiming(0.9,{duration:duration*0.15}),withTiming(1.1,{duration:duration*0.15}),withTiming(1,{duration:duration*0.15})))}]},initialValues:{transform:[{scale:0}],...initialValues},callback:callback};}" };
+let closure_6 = {
+  code: "function pnpm_BounceTs1(){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{scale:delayFunction(delay,withSequence(withTiming(1.2,{duration:duration*0.55}),withTiming(0.9,{duration:duration*0.15}),withTiming(1.1,{duration:duration*0.15}),withTiming(1,{duration:duration*0.15})))}]},initialValues:{transform:[{scale:0}],...initialValues},callback:callback};}",
+};
 class BounceIn {
   constructor() {
     self = this;
@@ -66,7 +67,15 @@ class BounceIn {
         const obj9 = delayFunction(delay[5]);
         const withTimingResult2 = delayFunction(delay[5]).withTiming(1.1, obj3);
         obj4 = { duration: 0.15 * duration };
-        obj[0] = delayFunction(delay, obj3.withSequence(withTimingResult, withTimingResult1, withTimingResult2, delayFunction(delay[5]).withTiming(1, obj4)));
+        obj[0] = delayFunction(
+          delay,
+          obj3.withSequence(
+            withTimingResult,
+            withTimingResult1,
+            withTimingResult2,
+            delayFunction(delay[5]).withTiming(1, obj4),
+          ),
+        );
         const items = [obj];
         obj[0] = items;
         obj[0] = obj;
@@ -76,7 +85,15 @@ class BounceIn {
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, withSequence: callback(closure_1_1[5]).withSequence, withTiming: callback(closure_1_1[5]).withTiming, duration, initialValues, callback: callbackV };
+      fn.__closure = {
+        delayFunction,
+        delay,
+        withSequence: callback(closure_1_1[5]).withSequence,
+        withTiming: callback(closure_1_1[5]).withTiming,
+        duration,
+        initialValues,
+        callback: callbackV,
+      };
       fn.__workletHash = 6814288411244;
       fn.__initData = closure_1_6;
       return fn;
@@ -94,14 +111,14 @@ let obj = {
       num = 600;
     }
     return num;
-  }
+  },
 };
 let items = [obj];
 obj = {
   key: "createInstance",
   value: function createInstance() {
     return BounceOutRight();
-  }
+  },
 };
 let items1 = [
   obj,
@@ -109,12 +126,14 @@ let items1 = [
     key: "getDuration",
     value: function getDuration() {
       return 600;
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(BounceIn, items, items1);
 importDefaultResultResult.presetName = "BounceIn";
-let closure_7 = { code: "function pnpm_BounceTs2(values){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,withSequence(withTiming(-20,{duration:duration*0.55}),withTiming(10,{duration:duration*0.15}),withTiming(-10,{duration:duration*0.15}),withTiming(0,{duration:duration*0.15})))}]},initialValues:{transform:[{translateY:values.windowHeight}],...initialValues},callback:callback};}" };
+let closure_7 = {
+  code: "function pnpm_BounceTs2(values){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,withSequence(withTiming(-20,{duration:duration*0.55}),withTiming(10,{duration:duration*0.15}),withTiming(-10,{duration:duration*0.15}),withTiming(0,{duration:duration*0.15})))}]},initialValues:{transform:[{translateY:values.windowHeight}],...initialValues},callback:callback};}",
+};
 class BounceInDown {
   constructor() {
     self = this;
@@ -155,7 +174,15 @@ class BounceInDown {
         const obj9 = delayFunction(delay[5]);
         const withTimingResult2 = delayFunction(delay[5]).withTiming(-10, obj3);
         obj4 = { duration: 0.15 * duration };
-        obj[0] = delayFunction(delay, obj3.withSequence(withTimingResult, withTimingResult1, withTimingResult2, delayFunction(delay[5]).withTiming(0, obj4)));
+        obj[0] = delayFunction(
+          delay,
+          obj3.withSequence(
+            withTimingResult,
+            withTimingResult1,
+            withTimingResult2,
+            delayFunction(delay[5]).withTiming(0, obj4),
+          ),
+        );
         const items = [obj];
         obj[0] = items;
         obj[0] = obj;
@@ -166,7 +193,15 @@ class BounceInDown {
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, withSequence: callback(closure_1_1[5]).withSequence, withTiming: callback(closure_1_1[5]).withTiming, duration, initialValues, callback: callbackV };
+      fn.__closure = {
+        delayFunction,
+        delay,
+        withSequence: callback(closure_1_1[5]).withSequence,
+        withTiming: callback(closure_1_1[5]).withTiming,
+        duration,
+        initialValues,
+        callback: callbackV,
+      };
       fn.__workletHash = 4551292686981;
       fn.__initData = closure_1_7;
       return fn;
@@ -184,7 +219,7 @@ obj = {
       num = 600;
     }
     return num;
-  }
+  },
 };
 const items2 = [obj];
 const items3 = [
@@ -192,18 +227,20 @@ const items3 = [
     key: "createInstance",
     value: function createInstance() {
       return BounceOutRight();
-    }
+    },
   },
   {
     key: "getDuration",
     value: function getDuration() {
       return 600;
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult1 = importDefaultResult(BounceInDown, items2, items3);
 importDefaultResultResult1.presetName = "BounceInDown";
-let closure_8 = { code: "function pnpm_BounceTs3(values){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,withSequence(withTiming(20,{duration:duration*0.55}),withTiming(-10,{duration:duration*0.15}),withTiming(10,{duration:duration*0.15}),withTiming(0,{duration:duration*0.15})))}]},initialValues:{transform:[{translateY:-values.windowHeight}],...initialValues},callback:callback};}" };
+let closure_8 = {
+  code: "function pnpm_BounceTs3(values){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,withSequence(withTiming(20,{duration:duration*0.55}),withTiming(-10,{duration:duration*0.15}),withTiming(10,{duration:duration*0.15}),withTiming(0,{duration:duration*0.15})))}]},initialValues:{transform:[{translateY:-values.windowHeight}],...initialValues},callback:callback};}",
+};
 class BounceInUp {
   constructor() {
     self = this;
@@ -244,7 +281,15 @@ class BounceInUp {
         const obj9 = delayFunction(delay[5]);
         const withTimingResult2 = delayFunction(delay[5]).withTiming(10, obj3);
         obj4 = { duration: 0.15 * duration };
-        obj[0] = delayFunction(delay, obj3.withSequence(withTimingResult, withTimingResult1, withTimingResult2, delayFunction(delay[5]).withTiming(0, obj4)));
+        obj[0] = delayFunction(
+          delay,
+          obj3.withSequence(
+            withTimingResult,
+            withTimingResult1,
+            withTimingResult2,
+            delayFunction(delay[5]).withTiming(0, obj4),
+          ),
+        );
         const items = [obj];
         obj[0] = items;
         obj[0] = obj;
@@ -255,7 +300,15 @@ class BounceInUp {
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, withSequence: callback(closure_1_1[5]).withSequence, withTiming: callback(closure_1_1[5]).withTiming, duration, initialValues, callback: callbackV };
+      fn.__closure = {
+        delayFunction,
+        delay,
+        withSequence: callback(closure_1_1[5]).withSequence,
+        withTiming: callback(closure_1_1[5]).withTiming,
+        duration,
+        initialValues,
+        callback: callbackV,
+      };
       fn.__workletHash = 11333943352836;
       fn.__initData = closure_1_8;
       return fn;
@@ -274,26 +327,28 @@ const items4 = [
         num = 600;
       }
       return num;
-    }
-  }
+    },
+  },
 ];
 const items5 = [
   {
     key: "createInstance",
     value: function createInstance() {
       return BounceOutRight();
-    }
+    },
   },
   {
     key: "getDuration",
     value: function getDuration() {
       return 600;
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult2 = importDefaultResult(BounceInUp, items4, items5);
 importDefaultResultResult2.presetName = "BounceInUp";
-let closure_9 = { code: "function pnpm_BounceTs4(values){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,withSequence(withTiming(20,{duration:duration*0.55}),withTiming(-10,{duration:duration*0.15}),withTiming(10,{duration:duration*0.15}),withTiming(0,{duration:duration*0.15})))}]},initialValues:{transform:[{translateX:-values.windowWidth}],...initialValues},callback:callback};}" };
+let closure_9 = {
+  code: "function pnpm_BounceTs4(values){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,withSequence(withTiming(20,{duration:duration*0.55}),withTiming(-10,{duration:duration*0.15}),withTiming(10,{duration:duration*0.15}),withTiming(0,{duration:duration*0.15})))}]},initialValues:{transform:[{translateX:-values.windowWidth}],...initialValues},callback:callback};}",
+};
 class BounceInLeft {
   constructor() {
     self = this;
@@ -334,7 +389,15 @@ class BounceInLeft {
         const obj9 = delayFunction(delay[5]);
         const withTimingResult2 = delayFunction(delay[5]).withTiming(10, obj3);
         obj4 = { duration: 0.15 * duration };
-        obj[0] = delayFunction(delay, obj3.withSequence(withTimingResult, withTimingResult1, withTimingResult2, delayFunction(delay[5]).withTiming(0, obj4)));
+        obj[0] = delayFunction(
+          delay,
+          obj3.withSequence(
+            withTimingResult,
+            withTimingResult1,
+            withTimingResult2,
+            delayFunction(delay[5]).withTiming(0, obj4),
+          ),
+        );
         const items = [obj];
         obj[0] = items;
         obj[0] = obj;
@@ -345,7 +408,15 @@ class BounceInLeft {
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, withSequence: callback(closure_1_1[5]).withSequence, withTiming: callback(closure_1_1[5]).withTiming, duration, initialValues, callback: callbackV };
+      fn.__closure = {
+        delayFunction,
+        delay,
+        withSequence: callback(closure_1_1[5]).withSequence,
+        withTiming: callback(closure_1_1[5]).withTiming,
+        duration,
+        initialValues,
+        callback: callbackV,
+      };
       fn.__workletHash = 10162410157050;
       fn.__initData = closure_1_9;
       return fn;
@@ -364,26 +435,28 @@ const items6 = [
         num = 600;
       }
       return num;
-    }
-  }
+    },
+  },
 ];
 const items7 = [
   {
     key: "createInstance",
     value: function createInstance() {
       return BounceOutRight();
-    }
+    },
   },
   {
     key: "getDuration",
     value: function getDuration() {
       return 600;
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult3 = importDefaultResult(BounceInLeft, items6, items7);
 importDefaultResultResult3.presetName = "BounceInLeft";
-let closure_10 = { code: "function pnpm_BounceTs5(values){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,withSequence(withTiming(-20,{duration:duration*0.55}),withTiming(10,{duration:duration*0.15}),withTiming(-10,{duration:duration*0.15}),withTiming(0,{duration:duration*0.15})))}]},initialValues:{transform:[{translateX:values.windowWidth}],...initialValues},callback:callback};}" };
+let closure_10 = {
+  code: "function pnpm_BounceTs5(values){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,withSequence(withTiming(-20,{duration:duration*0.55}),withTiming(10,{duration:duration*0.15}),withTiming(-10,{duration:duration*0.15}),withTiming(0,{duration:duration*0.15})))}]},initialValues:{transform:[{translateX:values.windowWidth}],...initialValues},callback:callback};}",
+};
 class BounceInRight {
   constructor() {
     self = this;
@@ -424,7 +497,15 @@ class BounceInRight {
         const obj9 = delayFunction(delay[5]);
         const withTimingResult2 = delayFunction(delay[5]).withTiming(-10, obj3);
         obj4 = { duration: 0.15 * duration };
-        obj[0] = delayFunction(delay, obj3.withSequence(withTimingResult, withTimingResult1, withTimingResult2, delayFunction(delay[5]).withTiming(0, obj4)));
+        obj[0] = delayFunction(
+          delay,
+          obj3.withSequence(
+            withTimingResult,
+            withTimingResult1,
+            withTimingResult2,
+            delayFunction(delay[5]).withTiming(0, obj4),
+          ),
+        );
         const items = [obj];
         obj[0] = items;
         obj[0] = obj;
@@ -435,7 +516,15 @@ class BounceInRight {
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, withSequence: callback(closure_1_1[5]).withSequence, withTiming: callback(closure_1_1[5]).withTiming, duration, initialValues, callback: callbackV };
+      fn.__closure = {
+        delayFunction,
+        delay,
+        withSequence: callback(closure_1_1[5]).withSequence,
+        withTiming: callback(closure_1_1[5]).withTiming,
+        duration,
+        initialValues,
+        callback: callbackV,
+      };
       fn.__workletHash = 4134237895259;
       fn.__initData = closure_1_10;
       return fn;
@@ -454,26 +543,28 @@ const items8 = [
         num = 600;
       }
       return num;
-    }
-  }
+    },
+  },
 ];
 const items9 = [
   {
     key: "createInstance",
     value: function createInstance() {
       return BounceOutRight();
-    }
+    },
   },
   {
     key: "getDuration",
     value: function getDuration() {
       return 600;
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult4 = importDefaultResult(BounceInRight, items8, items9);
 importDefaultResultResult4.presetName = "BounceInRight";
-let closure_11 = { code: "function pnpm_BounceTs6(){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{scale:delayFunction(delay,withSequence(withTiming(1.1,{duration:duration*0.15}),withTiming(0.9,{duration:duration*0.15}),withTiming(1.2,{duration:duration*0.15}),withTiming(0,{duration:duration*0.55})))}]},initialValues:{transform:[{scale:1}],...initialValues},callback:callback};}" };
+let closure_11 = {
+  code: "function pnpm_BounceTs6(){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{scale:delayFunction(delay,withSequence(withTiming(1.1,{duration:duration*0.15}),withTiming(0.9,{duration:duration*0.15}),withTiming(1.2,{duration:duration*0.15}),withTiming(0,{duration:duration*0.55})))}]},initialValues:{transform:[{scale:1}],...initialValues},callback:callback};}",
+};
 class BounceOut {
   constructor() {
     self = this;
@@ -514,7 +605,15 @@ class BounceOut {
         const obj9 = delayFunction(delay[5]);
         const withTimingResult2 = delayFunction(delay[5]).withTiming(1.2, obj3);
         obj4 = { duration: 0.55 * duration };
-        obj[0] = delayFunction(delay, obj3.withSequence(withTimingResult, withTimingResult1, withTimingResult2, delayFunction(delay[5]).withTiming(0, obj4)));
+        obj[0] = delayFunction(
+          delay,
+          obj3.withSequence(
+            withTimingResult,
+            withTimingResult1,
+            withTimingResult2,
+            delayFunction(delay[5]).withTiming(0, obj4),
+          ),
+        );
         const items = [obj];
         obj[0] = items;
         obj[0] = obj;
@@ -524,7 +623,15 @@ class BounceOut {
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, withSequence: callback(closure_1_1[5]).withSequence, withTiming: callback(closure_1_1[5]).withTiming, duration, initialValues, callback: callbackV };
+      fn.__closure = {
+        delayFunction,
+        delay,
+        withSequence: callback(closure_1_1[5]).withSequence,
+        withTiming: callback(closure_1_1[5]).withTiming,
+        duration,
+        initialValues,
+        callback: callbackV,
+      };
       fn.__workletHash = 15864962046507;
       fn.__initData = closure_1_11;
       return fn;
@@ -543,26 +650,28 @@ const items10 = [
         num = 600;
       }
       return num;
-    }
-  }
+    },
+  },
 ];
 const items11 = [
   {
     key: "createInstance",
     value: function createInstance() {
       return BounceOutRight();
-    }
+    },
   },
   {
     key: "getDuration",
     value: function getDuration() {
       return 600;
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult5 = importDefaultResult(BounceOut, items10, items11);
 importDefaultResultResult5.presetName = "BounceOut";
-let closure_12 = { code: "function pnpm_BounceTs7(values){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,withSequence(withTiming(-10,{duration:duration*0.15}),withTiming(10,{duration:duration*0.15}),withTiming(-20,{duration:duration*0.15}),withTiming(values.windowHeight,{duration:duration*0.55})))}]},initialValues:{transform:[{translateY:0}],...initialValues},callback:callback};}" };
+let closure_12 = {
+  code: "function pnpm_BounceTs7(values){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,withSequence(withTiming(-10,{duration:duration*0.15}),withTiming(10,{duration:duration*0.15}),withTiming(-20,{duration:duration*0.15}),withTiming(values.windowHeight,{duration:duration*0.55})))}]},initialValues:{transform:[{translateY:0}],...initialValues},callback:callback};}",
+};
 class BounceOutDown {
   constructor() {
     self = this;
@@ -603,7 +712,15 @@ class BounceOutDown {
         const obj9 = delayFunction(delay[5]);
         const withTimingResult2 = delayFunction(delay[5]).withTiming(-20, obj3);
         obj4 = { duration: 0.55 * duration };
-        obj[0] = delayFunction(delay, obj3.withSequence(withTimingResult, withTimingResult1, withTimingResult2, delayFunction(delay[5]).withTiming(windowHeight.windowHeight, obj4)));
+        obj[0] = delayFunction(
+          delay,
+          obj3.withSequence(
+            withTimingResult,
+            withTimingResult1,
+            withTimingResult2,
+            delayFunction(delay[5]).withTiming(windowHeight.windowHeight, obj4),
+          ),
+        );
         const items = [obj];
         obj[0] = items;
         obj[0] = obj;
@@ -613,7 +730,15 @@ class BounceOutDown {
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, withSequence: callback(closure_1_1[5]).withSequence, withTiming: callback(closure_1_1[5]).withTiming, duration, initialValues, callback: callbackV };
+      fn.__closure = {
+        delayFunction,
+        delay,
+        withSequence: callback(closure_1_1[5]).withSequence,
+        withTiming: callback(closure_1_1[5]).withTiming,
+        duration,
+        initialValues,
+        callback: callbackV,
+      };
       fn.__workletHash = 4170057933312;
       fn.__initData = closure_1_12;
       return fn;
@@ -632,26 +757,28 @@ const items12 = [
         num = 600;
       }
       return num;
-    }
-  }
+    },
+  },
 ];
 const items13 = [
   {
     key: "createInstance",
     value: function createInstance() {
       return BounceOutRight();
-    }
+    },
   },
   {
     key: "getDuration",
     value: function getDuration() {
       return 600;
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult6 = importDefaultResult(BounceOutDown, items12, items13);
 importDefaultResultResult6.presetName = "BounceOutDown";
-let closure_13 = { code: "function pnpm_BounceTs8(values){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,withSequence(withTiming(10,{duration:duration*0.15}),withTiming(-10,{duration:duration*0.15}),withTiming(20,{duration:duration*0.15}),withTiming(-values.windowHeight,{duration:duration*0.55})))}]},initialValues:{transform:[{translateY:0}],...initialValues},callback:callback};}" };
+let closure_13 = {
+  code: "function pnpm_BounceTs8(values){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,withSequence(withTiming(10,{duration:duration*0.15}),withTiming(-10,{duration:duration*0.15}),withTiming(20,{duration:duration*0.15}),withTiming(-values.windowHeight,{duration:duration*0.55})))}]},initialValues:{transform:[{translateY:0}],...initialValues},callback:callback};}",
+};
 class BounceOutUp {
   constructor() {
     self = this;
@@ -692,7 +819,15 @@ class BounceOutUp {
         const obj9 = delayFunction(delay[5]);
         const withTimingResult2 = delayFunction(delay[5]).withTiming(20, obj3);
         obj4 = { duration: 0.55 * duration };
-        obj[0] = delayFunction(delay, obj3.withSequence(withTimingResult, withTimingResult1, withTimingResult2, delayFunction(delay[5]).withTiming(-windowHeight.windowHeight, obj4)));
+        obj[0] = delayFunction(
+          delay,
+          obj3.withSequence(
+            withTimingResult,
+            withTimingResult1,
+            withTimingResult2,
+            delayFunction(delay[5]).withTiming(-windowHeight.windowHeight, obj4),
+          ),
+        );
         const items = [obj];
         obj[0] = items;
         obj[0] = obj;
@@ -702,7 +837,15 @@ class BounceOutUp {
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, withSequence: callback(closure_1_1[5]).withSequence, withTiming: callback(closure_1_1[5]).withTiming, duration, initialValues, callback: callbackV };
+      fn.__closure = {
+        delayFunction,
+        delay,
+        withSequence: callback(closure_1_1[5]).withSequence,
+        withTiming: callback(closure_1_1[5]).withTiming,
+        duration,
+        initialValues,
+        callback: callbackV,
+      };
       fn.__workletHash = 8059944917039;
       fn.__initData = closure_1_13;
       return fn;
@@ -721,26 +864,28 @@ const items14 = [
         num = 600;
       }
       return num;
-    }
-  }
+    },
+  },
 ];
 const items15 = [
   {
     key: "createInstance",
     value: function createInstance() {
       return BounceOutRight();
-    }
+    },
   },
   {
     key: "getDuration",
     value: function getDuration() {
       return 600;
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult7 = importDefaultResult(BounceOutUp, items14, items15);
 importDefaultResultResult7.presetName = "BounceOutUp";
-let closure_14 = { code: "function pnpm_BounceTs9(values){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,withSequence(withTiming(10,{duration:duration*0.15}),withTiming(-10,{duration:duration*0.15}),withTiming(20,{duration:duration*0.15}),withTiming(-values.windowWidth,{duration:duration*0.55})))}]},initialValues:{transform:[{translateX:0}],...initialValues},callback:callback};}" };
+let closure_14 = {
+  code: "function pnpm_BounceTs9(values){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,withSequence(withTiming(10,{duration:duration*0.15}),withTiming(-10,{duration:duration*0.15}),withTiming(20,{duration:duration*0.15}),withTiming(-values.windowWidth,{duration:duration*0.55})))}]},initialValues:{transform:[{translateX:0}],...initialValues},callback:callback};}",
+};
 class BounceOutLeft {
   constructor() {
     self = this;
@@ -781,7 +926,15 @@ class BounceOutLeft {
         const obj9 = delayFunction(delay[5]);
         const withTimingResult2 = delayFunction(delay[5]).withTiming(20, obj3);
         obj4 = { duration: 0.55 * duration };
-        obj[0] = delayFunction(delay, obj3.withSequence(withTimingResult, withTimingResult1, withTimingResult2, delayFunction(delay[5]).withTiming(-windowWidth.windowWidth, obj4)));
+        obj[0] = delayFunction(
+          delay,
+          obj3.withSequence(
+            withTimingResult,
+            withTimingResult1,
+            withTimingResult2,
+            delayFunction(delay[5]).withTiming(-windowWidth.windowWidth, obj4),
+          ),
+        );
         const items = [obj];
         obj[0] = items;
         obj[0] = obj;
@@ -791,7 +944,15 @@ class BounceOutLeft {
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, withSequence: callback(closure_1_1[5]).withSequence, withTiming: callback(closure_1_1[5]).withTiming, duration, initialValues, callback: callbackV };
+      fn.__closure = {
+        delayFunction,
+        delay,
+        withSequence: callback(closure_1_1[5]).withSequence,
+        withTiming: callback(closure_1_1[5]).withTiming,
+        duration,
+        initialValues,
+        callback: callbackV,
+      };
       fn.__workletHash = 6930767645815;
       fn.__initData = closure_1_14;
       return fn;
@@ -810,26 +971,28 @@ const items16 = [
         num = 600;
       }
       return num;
-    }
-  }
+    },
+  },
 ];
 const items17 = [
   {
     key: "createInstance",
     value: function createInstance() {
       return BounceOutRight();
-    }
+    },
   },
   {
     key: "getDuration",
     value: function getDuration() {
       return 600;
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult8 = importDefaultResult(BounceOutLeft, items16, items17);
 importDefaultResultResult8.presetName = "BounceOutLeft";
-let closure_15 = { code: "function pnpm_BounceTs10(values){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,withSequence(withTiming(-10,{duration:duration*0.15}),withTiming(10,{duration:duration*0.15}),withTiming(-20,{duration:duration*0.15}),withTiming(values.windowWidth,{duration:duration*0.55})))}]},initialValues:{transform:[{translateX:0}],...initialValues},callback:callback};}" };
+let closure_15 = {
+  code: "function pnpm_BounceTs10(values){const{delayFunction,delay,withSequence,withTiming,duration,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,withSequence(withTiming(-10,{duration:duration*0.15}),withTiming(10,{duration:duration*0.15}),withTiming(-20,{duration:duration*0.15}),withTiming(values.windowWidth,{duration:duration*0.55})))}]},initialValues:{transform:[{translateX:0}],...initialValues},callback:callback};}",
+};
 class BounceOutRight {
   constructor() {
     self = this;
@@ -870,7 +1033,15 @@ class BounceOutRight {
         const obj9 = delayFunction(delay[5]);
         const withTimingResult2 = delayFunction(delay[5]).withTiming(-20, obj3);
         obj4 = { duration: 0.55 * duration };
-        obj[0] = delayFunction(delay, obj3.withSequence(withTimingResult, withTimingResult1, withTimingResult2, delayFunction(delay[5]).withTiming(windowWidth.windowWidth, obj4)));
+        obj[0] = delayFunction(
+          delay,
+          obj3.withSequence(
+            withTimingResult,
+            withTimingResult1,
+            withTimingResult2,
+            delayFunction(delay[5]).withTiming(windowWidth.windowWidth, obj4),
+          ),
+        );
         const items = [obj];
         obj[0] = items;
         obj[0] = obj;
@@ -880,7 +1051,15 @@ class BounceOutRight {
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, withSequence: callback(closure_1_1[5]).withSequence, withTiming: callback(closure_1_1[5]).withTiming, duration, initialValues, callback: callbackV };
+      fn.__closure = {
+        delayFunction,
+        delay,
+        withSequence: callback(closure_1_1[5]).withSequence,
+        withTiming: callback(closure_1_1[5]).withTiming,
+        duration,
+        initialValues,
+        callback: callbackV,
+      };
       fn.__workletHash = 11465945086863;
       fn.__initData = closure_1_15;
       return fn;
@@ -898,22 +1077,22 @@ const items18 = [
         num = 600;
       }
       return num;
-    }
-  }
+    },
+  },
 ];
 const items19 = [
   {
     key: "createInstance",
     value: function createInstance() {
       return BounceOutRight();
-    }
+    },
   },
   {
     key: "getDuration",
     value: function getDuration() {
       return 600;
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult9 = importDefaultResult(BounceOutRight, items18, items19);
 importDefaultResultResult9.presetName = "BounceOutRight";

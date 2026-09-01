@@ -30,7 +30,20 @@ function addGestureBreadcrumb(message, event) {
 let gesture = "gesture";
 const user = "user";
 gesture = "gesture";
-let closure_6 = { NUMBER_OF_POINTERS: "numberOfPointers", NUMBER_OF_TOUCHES: "numberOfTouches", FORCE: "force", FORCE_CHANGE: "forceChange", ROTATION: "rotation", ROTATION_CHANGE: "rotationChange", SCALE: "scale", SCALE_CHANGE: "scaleChange", DURATION: "duration", VELOCITY: "velocity", VELOCITY_X: "velocityX", VELOCITY_Y: "velocityY" };
+let closure_6 = {
+  NUMBER_OF_POINTERS: "numberOfPointers",
+  NUMBER_OF_TOUCHES: "numberOfTouches",
+  FORCE: "force",
+  FORCE_CHANGE: "forceChange",
+  ROTATION: "rotation",
+  ROTATION_CHANGE: "rotationChange",
+  SCALE: "scale",
+  SCALE_CHANGE: "scaleChange",
+  DURATION: "duration",
+  VELOCITY: "velocity",
+  VELOCITY_X: "velocityX",
+  VELOCITY_Y: "velocityY",
+};
 arg5.DEFAULT_BREADCRUMB_CATEGORY = "gesture";
 arg5.DEFAULT_BREADCRUMB_TYPE = "user";
 arg5.GESTURE_POSTFIX_LENGTH = 14;
@@ -53,7 +66,10 @@ arg5.sentryTraceGesture = function sentryTraceGesture(arg0, handlers) {
           obj = { elementId: callback, op: "" + callback(formatted[2]).UI_ACTION + "." + formatted };
           const result = obj.startUserInteractionSpan(obj);
           if (result) {
-            const attr = result.setAttribute(tmp(tmp2[0]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, tmp(tmp2[3]).SPAN_ORIGIN_AUTO_INTERACTION);
+            const attr = result.setAttribute(
+              tmp(tmp2[0]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
+              tmp(tmp2[3]).SPAN_ORIGIN_AUTO_INTERACTION,
+            );
           }
           obj = { event, name: formatted };
           closure_1_5("Gesture " + callback + " begin.", obj);
@@ -76,7 +92,9 @@ arg5.sentryTraceGesture = function sentryTraceGesture(arg0, handlers) {
       }
     } else {
       const debug2 = _require(formatted[0]).debug;
-      debug2.warn("[GestureTracing] Can not wrap gesture without handlers. If you want to wrap a gesture composition wrap individual gestures.");
+      debug2.warn(
+        "[GestureTracing] Can not wrap gesture without handlers. If you want to wrap a gesture composition wrap individual gestures.",
+      );
       return handlers;
     }
   } else {

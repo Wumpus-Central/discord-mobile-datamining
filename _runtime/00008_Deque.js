@@ -12,14 +12,14 @@ class Deque {
       num3 = 0;
       num4 = 1;
       diff = (Math.min(require("../discord_app/utils/checkEnv.tsx"), 1073741824) >>> 0) - 1;
-      tmp3 = diff | diff >> 1;
+      tmp3 = diff | (diff >> 1);
       num5 = 2;
-      tmp4 = tmp3 | tmp3 >> 2;
+      tmp4 = tmp3 | (tmp3 >> 2);
       num6 = 4;
-      tmp5 = tmp4 | tmp4 >> 4;
+      tmp5 = tmp4 | (tmp4 >> 4);
       num7 = 8;
-      tmp6 = tmp5 | tmp5 >> 8;
-      num8 = 1 + (tmp6 | tmp6 >> 16);
+      tmp6 = tmp5 | (tmp5 >> 8);
+      num8 = 1 + (tmp6 | (tmp6 >> 16));
     } else {
       tmp8 = isArray;
       num8 = 16;
@@ -45,7 +45,7 @@ class Deque {
     _length = this._length;
     array = new Array(_length);
     for (let num = 0; num < _length; num = num + 1) {
-      array[num] = this[this._front + num & tmp2 - 1];
+      array[num] = this[(this._front + num) & (tmp2 - 1)];
     }
     return array;
   }
@@ -62,7 +62,7 @@ class Deque {
         if (0 < length) {
           do {
             _checkCapacityResult = self._checkCapacity(tmp4 + 1);
-            self[self._front + tmp4 & self._capacity - 1] = arguments[num3];
+            self[(self._front + tmp4) & (self._capacity - 1)] = arguments[num3];
             sum = tmp4 + 1;
             self._length = sum;
             num3 = num3 + 1;
@@ -74,7 +74,7 @@ class Deque {
       } else {
         _front = self._front;
         for (let num2 = 0; num2 < length; num2 = num2 + 1) {
-          self[_front + _length & _capacity - 1] = arguments[num2];
+          self[(_front + _length) & (_capacity - 1)] = arguments[num2];
           _front = _front + 1;
         }
         self._length = _length + length;
@@ -86,7 +86,7 @@ class Deque {
       if (0 !== length) {
         tmp2 = global;
         _checkCapacityResult1 = self._checkCapacity(_length + 1);
-        self[self._front + _length & self._capacity - 1] = global;
+        self[(self._front + _length) & (self._capacity - 1)] = global;
         self._length = _length + 1;
         sum1 = _length + 1;
       }
@@ -98,7 +98,7 @@ class Deque {
     _length = this._length;
     if (0 !== _length) {
       num = 1;
-      tmp = self._front + _length - 1 & self._capacity - 1;
+      tmp = (self._front + _length - 1) & (self._capacity - 1);
       self[tmp] = undefined;
       self._length = _length - 1;
       return self[tmp];
@@ -113,7 +113,7 @@ class Deque {
       _front = self._front;
       self[_front] = undefined;
       num = 1;
-      self._front = _front + 1 & self._capacity - 1;
+      self._front = (_front + 1) & (self._capacity - 1);
       self._length = _length - 1;
       return self[_front];
     } else {
@@ -135,7 +135,7 @@ class Deque {
           do {
             _checkCapacityResult = self._checkCapacity(tmp8 + 1);
             _capacity3 = self._capacity;
-            diff1 = (self._front - 1 & _capacity3 - 1 ^ _capacity3) - _capacity3;
+            diff1 = (((self._front - 1) & (_capacity3 - 1)) ^ _capacity3) - _capacity3;
             self[diff1] = arguments[diff];
             sum = tmp8 + 1;
             self._length = sum;
@@ -153,7 +153,7 @@ class Deque {
         tmp5 = _front;
         if (0 <= diff2) {
           do {
-            diff3 = (_front - 1 & _capacity2 - 1 ^ _capacity2) - _capacity2;
+            diff3 = (((_front - 1) & (_capacity2 - 1)) ^ _capacity2) - _capacity2;
             self[diff3] = arguments[diff2];
             diff2 = diff2 - 1;
             _front = diff3;
@@ -172,7 +172,7 @@ class Deque {
         tmp = global;
         _checkCapacityResult1 = self._checkCapacity(_length + 1);
         _capacity = self._capacity;
-        diff4 = (self._front - 1 & _capacity - 1 ^ _capacity) - _capacity;
+        diff4 = (((self._front - 1) & (_capacity - 1)) ^ _capacity) - _capacity;
         self[diff4] = global;
         self._length = _length + 1;
         self._front = diff4;
@@ -185,7 +185,7 @@ class Deque {
     _length = this._length;
     if (0 !== _length) {
       num = 1;
-      return self[self._front + _length - 1 & self._capacity - 1];
+      return self[(self._front + _length - 1) & (self._capacity - 1)];
     } else {
       return;
     }
@@ -206,7 +206,7 @@ class Deque {
       if (sum >= 0) {
         if (sum < _length) {
           num2 = 1;
-          return self[self._front + sum & self._capacity - 1];
+          return self[(self._front + sum) & (self._capacity - 1)];
         }
       }
     }
@@ -246,14 +246,14 @@ class Deque {
         num2 = 0;
         num3 = 1;
         diff = (Math.min(require("../discord_app/utils/checkEnv.tsx"), 1073741824) >>> 0) - 1;
-        tmp3 = diff | diff >> 1;
+        tmp3 = diff | (diff >> 1);
         num4 = 2;
-        tmp4 = tmp3 | tmp3 >> 2;
+        tmp4 = tmp3 | (tmp3 >> 2);
         num5 = 4;
-        tmp5 = tmp4 | tmp4 >> 4;
+        tmp5 = tmp4 | (tmp4 >> 4);
         num6 = 8;
-        tmp6 = tmp5 | tmp5 >> 8;
-        num7 = 1 + (tmp6 | tmp6 >> 16);
+        tmp6 = tmp5 | (tmp5 >> 8);
+        num7 = 1 + (tmp6 | (tmp6 >> 16));
       } else {
         tmp8 = isArray;
         num7 = 16;
@@ -282,7 +282,7 @@ class Deque {
         self[num4] = array[num4 + _front];
       }
     } else {
-      diff = _length - (_front + _length & _capacity - 1);
+      diff = _length - ((_front + _length) & (_capacity - 1));
       num2 = 0;
       if (0 < diff) {
         do {
@@ -317,7 +317,7 @@ Object.defineProperty(Deque.prototype, "length", {
   set() {
     const rangeError = new RangeError("");
     throw rangeError;
-  }
+  },
 });
 
 export default Deque;

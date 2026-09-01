@@ -4,7 +4,6 @@ import { SemVer } from "../13504_SemVer.js";
 import { Range } from "../13533_Range.js";
 import { Range } from "../13535_Range.js";
 
-
 export default (arg0, arg1, arg2, arg3) => {
   let obj;
   let _require = arg3;
@@ -28,7 +27,7 @@ export default (arg0, arg1, arg2, arg3) => {
       str3 = "<=";
     } else {
       const _TypeError = TypeError;
-      const typeError = new TypeError("Must provide a hilo val of \"<\" or \">\"");
+      const typeError = new TypeError('Must provide a hilo val of "<" or ">"');
       throw typeError;
     }
   }

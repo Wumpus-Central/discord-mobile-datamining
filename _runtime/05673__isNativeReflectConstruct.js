@@ -22,10 +22,21 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
-let obj = { UNDEFINED: 0, BEGAN: 1, START: 2, UPDATE: 3, CHANGE: 4, END: 5, FINALIZE: 6, TOUCHES_DOWN: 7, TOUCHES_MOVE: 8, TOUCHES_UP: 9, TOUCHES_CANCEL: 10 };
+let obj = {
+  UNDEFINED: 0,
+  BEGAN: 1,
+  START: 2,
+  UPDATE: 3,
+  CHANGE: 4,
+  END: 5,
+  FINALIZE: 6,
+  TOUCHES_DOWN: 7,
+  TOUCHES_MOVE: 8,
+  TOUCHES_UP: 9,
+  TOUCHES_CANCEL: 10,
+};
 class Gesture {
   constructor() {
     tmp = closure_4(this, Gesture);
@@ -74,7 +85,7 @@ obj = {
       combined = [arg1];
     }
     this.config[arg0] = combined;
-  }
+  },
 };
 let items = [
   obj,
@@ -83,13 +94,13 @@ let items = [
     value: function withRef(ref) {
       this.config.ref = ref;
       return this;
-    }
+    },
   },
   {
     key: "isWorklet",
     value: function isWorklet(__workletHash) {
       return undefined !== __workletHash.__workletHash;
-    }
+    },
   },
   {
     key: "onBegin",
@@ -97,7 +108,7 @@ let items = [
       this.handlers.onBegin = onBegin;
       this.handlers.isWorklet[obj.BEGAN] = this.isWorklet(onBegin);
       return this;
-    }
+    },
   },
   {
     key: "onStart",
@@ -105,7 +116,7 @@ let items = [
       this.handlers.onStart = onStart;
       this.handlers.isWorklet[obj.START] = this.isWorklet(onStart);
       return this;
-    }
+    },
   },
   {
     key: "onEnd",
@@ -113,7 +124,7 @@ let items = [
       this.handlers.onEnd = onEnd;
       this.handlers.isWorklet[obj.END] = this.isWorklet(onEnd);
       return this;
-    }
+    },
   },
   {
     key: "onFinalize",
@@ -121,7 +132,7 @@ let items = [
       this.handlers.onFinalize = onFinalize;
       this.handlers.isWorklet[obj.FINALIZE] = this.isWorklet(onFinalize);
       return this;
-    }
+    },
   },
   {
     key: "onTouchesDown",
@@ -130,7 +141,7 @@ let items = [
       this.handlers.onTouchesDown = onTouchesDown;
       this.handlers.isWorklet[obj.TOUCHES_DOWN] = this.isWorklet(onTouchesDown);
       return this;
-    }
+    },
   },
   {
     key: "onTouchesMove",
@@ -139,7 +150,7 @@ let items = [
       this.handlers.onTouchesMove = fn2;
       this.handlers.isWorklet[obj.TOUCHES_MOVE] = this.isWorklet(fn2);
       return this;
-    }
+    },
   },
   {
     key: "onTouchesUp",
@@ -148,7 +159,7 @@ let items = [
       this.handlers.onTouchesUp = onTouchesUp;
       this.handlers.isWorklet[obj.TOUCHES_UP] = this.isWorklet(onTouchesUp);
       return this;
-    }
+    },
   },
   {
     key: "onTouchesCancelled",
@@ -157,49 +168,49 @@ let items = [
       this.handlers.onTouchesCancelled = fn5;
       this.handlers.isWorklet[obj.TOUCHES_CANCEL] = this.isWorklet(fn5);
       return this;
-    }
+    },
   },
   {
     key: "enabled",
     value: function enabled(enabled) {
       this.config.enabled = enabled;
       return this;
-    }
+    },
   },
   {
     key: "shouldCancelWhenOutside",
     value: function shouldCancelWhenOutside(shouldCancelWhenOutside) {
       this.config.shouldCancelWhenOutside = shouldCancelWhenOutside;
       return this;
-    }
+    },
   },
   {
     key: "hitSlop",
     value: function hitSlop(closure_22) {
       this.config.hitSlop = closure_22;
       return this;
-    }
+    },
   },
   {
     key: "activeCursor",
     value: function activeCursor(activeCursor) {
       this.config.activeCursor = activeCursor;
       return this;
-    }
+    },
   },
   {
     key: "mouseButton",
     value: function mouseButton(mouseButton) {
       this.config.mouseButton = mouseButton;
       return this;
-    }
+    },
   },
   {
     key: "runOnJS",
     value: function runOnJS(runOnJS) {
       this.config.runOnJS = runOnJS;
       return this;
-    }
+    },
   },
   {
     key: "simultaneousWithExternalGesture",
@@ -216,7 +227,7 @@ let items = [
         continue;
       }
       return self;
-    }
+    },
   },
   {
     key: "requireExternalGestureToFail",
@@ -233,7 +244,7 @@ let items = [
         continue;
       }
       return self;
-    }
+    },
   },
   {
     key: "blocksExternalGesture",
@@ -250,21 +261,21 @@ let items = [
         continue;
       }
       return self;
-    }
+    },
   },
   {
     key: "withTestId",
     value: function withTestId(testId) {
       this.config.testId = testId;
       return this;
-    }
+    },
   },
   {
     key: "cancelsTouchesInView",
     value: function cancelsTouchesInView(cancelsTouchesInView) {
       this.config.cancelsTouchesInView = cancelsTouchesInView;
       return this;
-    }
+    },
   },
   {
     key: "initialize",
@@ -279,20 +290,18 @@ let items = [
       if (this.config.ref) {
         self.config.ref.current = self;
       }
-    }
+    },
   },
   {
     key: "toGestureArray",
     value: function toGestureArray() {
       const items = [this];
       return items;
-    }
+    },
   },
   {
     key: "prepare",
-    value: function prepare() {
-
-    }
+    value: function prepare() {},
   },
   {
     key: "shouldUseReanimated",
@@ -307,8 +316,8 @@ let items = [
         obj = ContinousBaseGesture(5657);
       }
       return tmp;
-    }
-  }
+    },
+  },
 ];
 const importDefaultResult1Result1 = importDefaultResult1(BaseGesture, items);
 class ContinousBaseGesture {
@@ -338,7 +347,7 @@ obj = {
     this.handlers.onUpdate = onUpdate;
     this.handlers.isWorklet[obj.UPDATE] = this.isWorklet(onUpdate);
     return this;
-  }
+  },
 };
 const items1 = [
   obj,
@@ -348,15 +357,15 @@ const items1 = [
       this.handlers.onChange = onChange;
       this.handlers.isWorklet[obj.CHANGE] = this.isWorklet(onChange);
       return this;
-    }
+    },
   },
   {
     key: "manualActivation",
     value: function manualActivation(tmp4Result) {
       this.config.manualActivation = tmp4Result;
       return this;
-    }
-  }
+    },
+  },
 ];
 
 export const CALLBACK_TYPE = obj;

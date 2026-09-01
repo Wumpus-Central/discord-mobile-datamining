@@ -14,4 +14,4 @@ export default function _default(arg0) {
   const items = [style, contentStyle];
   const merged1 = Object.assign(merged);
   return jsx(ScreenContentWrapperDefault, { style: items });
-};
+}

@@ -25,9 +25,14 @@ arg5.default = function defineLazyObjectProperty(arg0, arg1, get) {
     set: function setValue(value) {
       closure_2 = value;
       c6 = true;
-      Object.defineProperty(closure_0, closure_1, { value, configurable: true, enumerable: closure_4, writable: closure_5 });
+      Object.defineProperty(closure_0, closure_1, {
+        value,
+        configurable: true,
+        enumerable: closure_4,
+        writable: closure_5,
+      });
     },
     configurable: true,
-    enumerable: false !== get.enumerable
+    enumerable: false !== get.enumerable,
   });
 };

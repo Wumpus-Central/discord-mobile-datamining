@@ -41,6 +41,6 @@ globalThis.IntlMessageFormat.__addLocaleData({
       }
     }
     return str2;
-  }
+  },
 });
 globalThis.IntlMessageFormat.__addLocaleData({ locale: "hr-BA", parentLocale: "hr" });

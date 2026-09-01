@@ -53,7 +53,7 @@ const items = [
     value: function getUint8(sum) {
       const buffer = this.buffer;
       return buffer.readUInt8(sum);
-    }
+    },
   },
   {
     key: "getUint16",
@@ -65,7 +65,7 @@ const items = [
         uInt16LE = buffer.readUInt16BE(sum);
       }
       return uInt16LE;
-    }
+    },
   },
   {
     key: "getUint32",
@@ -77,7 +77,7 @@ const items = [
         uInt32LE = buffer.readUInt32BE(sum);
       }
       return uInt32LE;
-    }
+    },
   },
   {
     key: "getInt32",
@@ -89,8 +89,8 @@ const items = [
         int32LE = buffer.readInt32BE(sum);
       }
       return int32LE;
-    }
-  }
+    },
+  },
 ];
 
 export default _createClassDefault(DataView, items);

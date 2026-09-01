@@ -4,4 +4,6 @@ import codegenNativeCommandsDefault from "00113_codegenNativeCommands.js";
 
 noopAll;
 
-export default codegenNativeCommandsDefault({ supportedCommands: ["flashScrollIndicators", "scrollTo", "scrollToEnd", "zoomToRect"] });
+export default codegenNativeCommandsDefault({
+  supportedCommands: ["flashScrollIndicators", "scrollTo", "scrollToEnd", "zoomToRect"],
+});

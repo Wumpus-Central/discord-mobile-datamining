@@ -20,18 +20,21 @@ function getDefaultSidecarUrl() {
       const url = obj.url;
       if (url) {
         const _HermesInternal = HermesInternal;
-        let combined = "http://" + (function getHostnameFromString(str) {
-          const match = str.match(/^(?:\w+:)?\/\/([^/:]+)(:\d+)?(.*)$/);
-          let tmp2;
-          if (null != match) {
-            tmp2 = match[1];
-          }
-          let tmp3 = null;
-          if (tmp2) {
-            tmp3 = match[1];
-          }
-          return tmp3;
-        })(tmp9) + ":8969/stream";
+        let combined =
+          "http://" +
+          (function getHostnameFromString(str) {
+            const match = str.match(/^(?:\w+:)?\/\/([^/:]+)(:\d+)?(.*)$/);
+            let tmp2;
+            if (null != match) {
+              tmp2 = match[1];
+            }
+            let tmp3 = null;
+            if (tmp2) {
+              tmp3 = match[1];
+            }
+            return tmp3;
+          })(tmp9) +
+          ":8969/stream";
       } else {
         combined = c2;
       }
@@ -56,9 +59,7 @@ arg5.spotlightIntegration = function spotlightIntegration(arg0) {
   debug.log("[Spotlight] Using Sidecar URL", sidecarUrl);
   obj = {
     name: "Spotlight",
-    setupOnce() {
-
-    },
+    setupOnce() {},
     setup(on) {
       if (on.on) {
         on.on("beforeEnvelope", (arg0) => {
@@ -92,7 +93,10 @@ arg5.spotlightIntegration = function spotlightIntegration(arg0) {
                   const debug = stealthXhr(closure_1_1[0]).debug;
                   const _Error = Error;
                   error = new Error(tmp.statusText);
-                  debug.error("[Spotlight] Sentry SDK can't connect to Spotlight is it running? See https://spotlightjs.com to download it.", error);
+                  debug.error(
+                    "[Spotlight] Sentry SDK can't connect to Spotlight is it running? See https://spotlightjs.com to download it.",
+                    error,
+                  );
                 }
               }
             };
@@ -104,7 +108,7 @@ arg5.spotlightIntegration = function spotlightIntegration(arg0) {
           }
         });
       }
-    }
+    },
   };
   return obj;
 };

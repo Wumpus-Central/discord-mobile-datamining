@@ -7,7 +7,7 @@ let closure_3 = {
   writeUnknownFields: true,
   writerFactory() {
     return new closure_4();
-  }
+  },
 };
 class BinaryWriter {
   constructor(arg0) {
@@ -62,7 +62,7 @@ const items = [
       }
       self.chunks = [];
       return uint8Array1;
-    }
+    },
   },
   {
     key: "fork",
@@ -72,7 +72,7 @@ const items = [
       this.chunks = [];
       this.buf = [];
       return this;
-    }
+    },
   },
   {
     key: "join",
@@ -90,13 +90,13 @@ const items = [
         error = new Error("invalid state, fork stack empty");
         throw error;
       }
-    }
+    },
   },
   {
     key: "tag",
     value: function tag(arg0, arg1) {
-      return this.uint32((arg0 << 3 | arg1) >>> 0);
-    }
+      return this.uint32(((arg0 << 3) | arg1) >>> 0);
+    },
   },
   {
     key: "raw",
@@ -112,7 +112,7 @@ const items = [
       const chunks1 = self.chunks;
       chunks1.push(arg0);
       return self;
-    }
+    },
   },
   {
     key: "uint32",
@@ -124,7 +124,7 @@ const items = [
       if (NumberResult > 127) {
         do {
           let buf = self.buf;
-          let arr = buf.push(127 & tmp2 | 128);
+          let arr = buf.push((127 & tmp2) | 128);
           tmp2 = tmp2 >>> 7;
           tmp3 = tmp2;
         } while (127 < tmp2);
@@ -132,7 +132,7 @@ const items = [
       const buf1 = self.buf;
       buf1.push(tmp3);
       return self;
-    }
+    },
   },
   {
     key: "int32",
@@ -141,7 +141,7 @@ const items = [
       const obj = BinaryWriter(1316);
       BinaryWriter(1313).varint32write(NumberResult, this.buf);
       return this;
-    }
+    },
   },
   {
     key: "bool",
@@ -153,14 +153,14 @@ const items = [
       }
       buf.push(num);
       return this;
-    }
+    },
   },
   {
     key: "bytes",
     value: function bytes(byteLength) {
       this.uint32(byteLength.byteLength);
       return this.raw(byteLength);
-    }
+    },
   },
   {
     key: "string",
@@ -169,7 +169,7 @@ const items = [
       const encodeResult = textEncoder.encode(arg0);
       this.uint32(encodeResult.byteLength);
       return this.raw(encodeResult);
-    }
+    },
   },
   {
     key: "float",
@@ -179,7 +179,7 @@ const items = [
       const dataView = new DataView(uint8Array.buffer);
       dataView.setFloat32(0, NumberResult, true);
       return this.raw(uint8Array);
-    }
+    },
   },
   {
     key: "double",
@@ -188,7 +188,7 @@ const items = [
       const dataView = new DataView(uint8Array.buffer);
       dataView.setFloat64(0, arg0, true);
       return this.raw(uint8Array);
-    }
+    },
   },
   {
     key: "fixed32",
@@ -198,7 +198,7 @@ const items = [
       const dataView = new DataView(uint8Array.buffer);
       dataView.setUint32(0, NumberResult, true);
       return this.raw(uint8Array);
-    }
+    },
   },
   {
     key: "sfixed32",
@@ -208,7 +208,7 @@ const items = [
       const dataView = new DataView(uint8Array.buffer);
       dataView.setInt32(0, NumberResult, true);
       return this.raw(uint8Array);
-    }
+    },
   },
   {
     key: "sint32",
@@ -219,7 +219,7 @@ const items = [
       const tmp3 = NumberResult >> 31;
       BinaryWriter(1313).varint32write((tmp2 ^ tmp3) >>> 0, this.buf);
       return this;
-    }
+    },
   },
   {
     key: "sfixed64",
@@ -231,7 +231,7 @@ const items = [
       dataView.setInt32(0, fromResult.lo, true);
       dataView.setInt32(4, fromResult.hi, true);
       return this.raw(uint8Array);
-    }
+    },
   },
   {
     key: "fixed64",
@@ -243,7 +243,7 @@ const items = [
       dataView.setInt32(0, fromResult.lo, true);
       dataView.setInt32(4, fromResult.hi, true);
       return this.raw(uint8Array);
-    }
+    },
   },
   {
     key: "int64",
@@ -252,16 +252,20 @@ const items = [
       const fromResult = PbLong.from(arg0);
       BinaryWriter(1313).varint64write(fromResult.lo, fromResult.hi, this.buf);
       return this;
-    }
+    },
   },
   {
     key: "sint64",
     value: function sint64(arg0) {
       const PbLong = BinaryWriter(1314).PbLong;
       const fromResult = PbLong.from(arg0);
-      BinaryWriter(1313).varint64write(fromResult.lo << 1 ^ fromResult.hi >> 31, (fromResult.hi << 1 | fromResult.lo >>> 31) ^ fromResult.hi >> 31, this.buf);
+      BinaryWriter(1313).varint64write(
+        (fromResult.lo << 1) ^ (fromResult.hi >> 31),
+        ((fromResult.hi << 1) | (fromResult.lo >>> 31)) ^ (fromResult.hi >> 31),
+        this.buf,
+      );
       return this;
-    }
+    },
   },
   {
     key: "uint64",
@@ -270,8 +274,8 @@ const items = [
       const fromResult = PbULong.from(arg0);
       BinaryWriter(1313).varint64write(fromResult.lo, fromResult.hi, this.buf);
       return this;
-    }
-  }
+    },
+  },
 ];
 const _moduleResult = _createClass(BinaryWriter, items);
 let c4 = _moduleResult;

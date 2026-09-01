@@ -29,8 +29,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 noopAll;
 class Text {
@@ -65,7 +64,10 @@ class Text {
       }
       const propsAndStylesResult = lib(closure_1_2[9]).propsAndStyles(matrix);
       const obj = lib(closure_1_2[9]);
-      const merged = Object.assign(propsAndStylesResult, lib(closure_1_2[10]).pickNotNil(closure_1_1(closure_1_2[11])(propsAndStylesResult, true)));
+      const merged = Object.assign(
+        propsAndStylesResult,
+        lib(closure_1_2[10]).pickNotNil(closure_1_1(closure_1_2[11])(propsAndStylesResult, true)),
+      );
       if (lib.root) {
         const root = lib.root;
         root.setNativeProps(propsAndStylesResult);
@@ -92,8 +94,8 @@ let items = [
       const tmp2 = extractPropsDefault;
       const merged2 = Object.assign(tmp2Result);
       return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(Text, items);
 importDefaultResultResult.displayName = "Text";

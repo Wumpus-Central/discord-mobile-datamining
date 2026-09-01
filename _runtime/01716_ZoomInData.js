@@ -1,7 +1,16 @@
 // _runtime/01716_ZoomInData.js
 import convertAnimationObjectToKeyframes from "01711_convertAnimationObjectToKeyframes.js";
 
-obj = { ZoomIn: { name: "ZoomIn", style: obj, duration: 0.3 }, ZoomInRotate: { name: "ZoomInRotate", style: obj, duration: 0.3 }, ZoomInRight: { name: "ZoomInRight", style: obj1, duration: 0.3 }, ZoomInLeft: { name: "ZoomInLeft", style: obj2, duration: 0.3 }, ZoomInUp: { name: "ZoomInUp", style: obj3, duration: 0.3 }, ZoomInDown: { name: "ZoomInDown", style: obj4, duration: 0.3 }, ZoomInEasyUp: { name: "ZoomInEasyUp", style: obj5, duration: 0.3 }, ZoomInEasyDown: { name: "ZoomInEasyDown", style: obj6, duration: 0.3 } };
+obj = {
+  ZoomIn: { name: "ZoomIn", style: obj, duration: 0.3 },
+  ZoomInRotate: { name: "ZoomInRotate", style: obj, duration: 0.3 },
+  ZoomInRight: { name: "ZoomInRight", style: obj1, duration: 0.3 },
+  ZoomInLeft: { name: "ZoomInLeft", style: obj2, duration: 0.3 },
+  ZoomInUp: { name: "ZoomInUp", style: obj3, duration: 0.3 },
+  ZoomInDown: { name: "ZoomInDown", style: obj4, duration: 0.3 },
+  ZoomInEasyUp: { name: "ZoomInEasyUp", style: obj5, duration: 0.3 },
+  ZoomInEasyDown: { name: "ZoomInEasyDown", style: obj6, duration: 0.3 },
+};
 obj = { 0: { transform: items }, 100: null };
 items = [{ scale: 0 }];
 const items1 = [{ scale: 1 }];
@@ -34,7 +43,16 @@ obj6 = { 0: { transform: items14 }, 100: null };
 items14 = [{ translateY: "100%", scale: 0 }];
 const items15 = [{ translateY: "0%", scale: 1 }];
 obj6[100] = { transform: items15 };
-const obj7 = { ZoomOut: { name: "ZoomOut", style: obj8, duration: 0.3 }, ZoomOutRotate: { name: "ZoomOutRotate", style: obj9, duration: 0.3 }, ZoomOutRight: { name: "ZoomOutRight", style: obj10, duration: 0.3 }, ZoomOutLeft: { name: "ZoomOutLeft", style: obj11, duration: 0.3 }, ZoomOutUp: { name: "ZoomOutUp", style: obj12, duration: 0.3 }, ZoomOutDown: { name: "ZoomOutDown", style: obj13, duration: 0.3 }, ZoomOutEasyUp: { name: "ZoomOutEasyUp", style: obj14, duration: 0.3 }, ZoomOutEasyDown: { name: "ZoomOutEasyDown", style: obj15, duration: 0.3 } };
+const obj7 = {
+  ZoomOut: { name: "ZoomOut", style: obj8, duration: 0.3 },
+  ZoomOutRotate: { name: "ZoomOutRotate", style: obj9, duration: 0.3 },
+  ZoomOutRight: { name: "ZoomOutRight", style: obj10, duration: 0.3 },
+  ZoomOutLeft: { name: "ZoomOutLeft", style: obj11, duration: 0.3 },
+  ZoomOutUp: { name: "ZoomOutUp", style: obj12, duration: 0.3 },
+  ZoomOutDown: { name: "ZoomOutDown", style: obj13, duration: 0.3 },
+  ZoomOutEasyUp: { name: "ZoomOutEasyUp", style: obj14, duration: 0.3 },
+  ZoomOutEasyDown: { name: "ZoomOutEasyDown", style: obj15, duration: 0.3 },
+};
 obj8 = { 0: { transform: items16 }, 100: null };
 items16 = [{ scale: 1 }];
 const items17 = [{ scale: 0 }];
@@ -67,7 +85,16 @@ obj15 = { 0: { transform: items30 }, 100: null };
 items30 = [{ translateY: "0%", scale: 1 }];
 const items31 = [{ translateY: "100%", scale: 0 }];
 obj15[100] = { transform: items31 };
-const obj16 = { ZoomIn: null, ZoomInRotate: null, ZoomInRight: null, ZoomInLeft: null, ZoomInUp: null, ZoomInDown: null, ZoomInEasyUp: null, ZoomInEasyDown: null };
+const obj16 = {
+  ZoomIn: null,
+  ZoomInRotate: null,
+  ZoomInRight: null,
+  ZoomInLeft: null,
+  ZoomInUp: null,
+  ZoomInDown: null,
+  ZoomInEasyUp: null,
+  ZoomInEasyDown: null,
+};
 const obj17 = { style: null, duration: null };
 obj17[0] = convertAnimationObjectToKeyframes.convertAnimationObjectToKeyframes(obj.ZoomIn);
 obj17[1] = obj.ZoomIn.duration;
@@ -100,7 +127,16 @@ const obj24 = { style: null, duration: null };
 obj24[0] = convertAnimationObjectToKeyframes.convertAnimationObjectToKeyframes(obj.ZoomInEasyDown);
 obj24[1] = obj.ZoomInEasyDown.duration;
 obj16[7] = obj24;
-const obj25 = { ZoomOut: null, ZoomOutRotate: null, ZoomOutRight: null, ZoomOutLeft: null, ZoomOutUp: null, ZoomOutDown: null, ZoomOutEasyUp: null, ZoomOutEasyDown: null };
+const obj25 = {
+  ZoomOut: null,
+  ZoomOutRotate: null,
+  ZoomOutRight: null,
+  ZoomOutLeft: null,
+  ZoomOutUp: null,
+  ZoomOutDown: null,
+  ZoomOutEasyUp: null,
+  ZoomOutEasyDown: null,
+};
 const obj26 = { style: null, duration: null };
 obj26[0] = convertAnimationObjectToKeyframes.convertAnimationObjectToKeyframes(obj7.ZoomOut);
 obj26[1] = obj7.ZoomOut.duration;

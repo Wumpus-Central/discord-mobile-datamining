@@ -14,5 +14,4 @@ try {
     const InteractionManager = get_ActivityIndicator.InteractionManager;
   }
   exports.InteractionManager = InteractionManager;
-} catch (err) {
-}
+} catch (err) {}

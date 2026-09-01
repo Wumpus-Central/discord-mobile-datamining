@@ -50,4 +50,4 @@ export default function toNumber(num) {
       const tmp7 = parseInt;
     }
   }
-};
+}

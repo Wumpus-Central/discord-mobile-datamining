@@ -3,8 +3,19 @@ import _mod940 from "metro/00940__.js";
 import closure_2 from "metro/00032__slicedToArray.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
-let obj = { "tools/call": null, "resources/read": null, "resources/subscribe": null, "resources/unsubscribe": null, "prompts/get": null };
-obj = { targetField: "name", targetAttribute: _mod940.MCP_TOOL_NAME_ATTRIBUTE, captureArguments: true, argumentsField: "arguments" };
+let obj = {
+  "tools/call": null,
+  "resources/read": null,
+  "resources/subscribe": null,
+  "resources/unsubscribe": null,
+  "prompts/get": null,
+};
+obj = {
+  targetField: "name",
+  targetAttribute: _mod940.MCP_TOOL_NAME_ATTRIBUTE,
+  captureArguments: true,
+  argumentsField: "arguments",
+};
 obj[0] = obj;
 obj = { targetField: "uri", targetAttribute: _mod940.MCP_RESOURCE_URI_ATTRIBUTE, captureUri: true };
 obj[1] = obj;
@@ -12,7 +23,13 @@ obj[2] = { targetField: "uri", targetAttribute: _mod940.MCP_RESOURCE_URI_ATTRIBU
 let obj1 = { targetField: "uri", targetAttribute: _mod940.MCP_RESOURCE_URI_ATTRIBUTE };
 obj[3] = { targetField: "uri", targetAttribute: _mod940.MCP_RESOURCE_URI_ATTRIBUTE };
 const obj2 = { targetField: "uri", targetAttribute: _mod940.MCP_RESOURCE_URI_ATTRIBUTE };
-obj[4] = { targetField: "name", targetAttribute: _mod940.MCP_PROMPT_NAME_ATTRIBUTE, captureName: true, captureArguments: true, argumentsField: "arguments" };
+obj[4] = {
+  targetField: "name",
+  targetAttribute: _mod940.MCP_PROMPT_NAME_ATTRIBUTE,
+  captureName: true,
+  captureArguments: true,
+  argumentsField: "arguments",
+};
 
 export const extractTargetInfo = function extractTargetInfo(method, params) {
   if (obj[method]) {

@@ -1,7 +1,6 @@
 // _runtime/04637_basePickBy.js
 import baseGet from "00727_baseGet.js";
 
-
 export default function basePickBy(arg0, arg1, arg2) {
   const obj = {};
   for (let num = 0; num < length; num = num + 1) {
@@ -16,4 +15,4 @@ export default function basePickBy(arg0, arg1, arg2) {
     }
   }
   return obj;
-};
+}

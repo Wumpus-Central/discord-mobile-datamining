@@ -48,7 +48,7 @@ function _runScrollBenchmark() {
     closure_2 = arg2;
     c5 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -175,7 +175,7 @@ export const useBenchmark = function useBenchmark(arg0, arg1) {
   callback2 = isBenchmarkRunning;
   callback3 = tmp[1];
   callback4 = callback5(null);
-  const items = [arg1, arg0, isBenchmarkRunning, , ];
+  const items = [arg1, arg0, isBenchmarkRunning, ,];
   ({ repeatCount: arr[3], speedMultiplier: arr[4] } = obj);
   startBenchmark = startBenchmark(() => {
     if (!closure_3) {
@@ -197,7 +197,7 @@ export const useBenchmark = function useBenchmark(arg0, arg1) {
       }
       callback(true);
       ref = undefined;
-      ref = obj(function*() {
+      ref = obj(function* () {
         if (c3 === 2) {
           c3 = 3;
           HermesBuiltin.throwTypeError();
@@ -240,7 +240,9 @@ export const useBenchmark = function useBenchmark(arg0, arg1) {
                 if (tmp55 >= num8) {
                   averageFPS = jSFPSMonitor.stopAndGetData();
                   if (averageFPS.averageFPS < 35) {
-                    closure_1_1.push("Your average JS FPS is low. This can indicate that your components are doing too much work. Try to optimize your components and reduce re-renders if any");
+                    closure_1_1.push(
+                      "Your average JS FPS is low. This can indicate that your components are doing too much work. Try to optimize your components and reduce re-renders if any",
+                    );
                   }
                   (function computeSuggestions(closure_0, closure_1_1) {
                     let current = closure_0.current;
@@ -248,7 +250,9 @@ export const useBenchmark = function useBenchmark(arg0, arg1) {
                       current = closure_0.current.props.data.length < 200;
                     }
                     if (current) {
-                      closure_1_1.push("Data count is low. Try to increase it to a large number (e.g 200) using the 'useDataMultiplier' hook.");
+                      closure_1_1.push(
+                        "Data count is low. Try to increase it to a large number (e.g 200) using the 'useDataMultiplier' hook.",
+                      );
                     }
                   })(callback, closure_1_1);
                   closure_3 = (function generateResult(js, closure_1_1, closure_1_0) {

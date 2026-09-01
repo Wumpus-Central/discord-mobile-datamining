@@ -7,7 +7,23 @@ import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import jsxProd from "react/00021_jsxProd.js";
 
 const require = arg1;
-let closure_3 = ["children", "content", "theme", "doneText", "button", "icon", "showArrows", "onNextCallback", "onPrevCallback", "onDoneCallback", "blur", "opacity", "offset", "enabled", "insets"];
+let closure_3 = [
+  "children",
+  "content",
+  "theme",
+  "doneText",
+  "button",
+  "icon",
+  "showArrows",
+  "onNextCallback",
+  "onPrevCallback",
+  "onDoneCallback",
+  "blur",
+  "opacity",
+  "offset",
+  "enabled",
+  "insets",
+];
 ({ useEffect: closure_6, useMemo: error, useState: closure_8 } = noop);
 ({ StyleSheet, View: c10 } = get_ActivityIndicator);
 ({ jsxs: unpackModuleId, jsx: closure_12 } = jsxProd);
@@ -84,7 +100,7 @@ class KeyboardToolbar {
         callback(arg0);
       }).remove;
     }, []);
-    items = [, , , ];
+    items = [, , ,];
     items[0] = keyboardState;
     items[1] = DEFAULT_OPACITY;
     items[2] = theme;
@@ -93,7 +109,7 @@ class KeyboardToolbar {
     items1 = [];
     items1[0] = insets;
     tmp20 = closure_7(() => {
-      const items = [_null2.toolbar, , , ];
+      const items = [_null2.toolbar, , ,];
       let obj = { backgroundColor: "" + theme[keyboardState].background + DEFAULT_OPACITY };
       items[1] = obj;
       let tmp4 = null;
@@ -120,11 +136,11 @@ class KeyboardToolbar {
       items[3] = floating;
       return items;
     }, items);
-    items2 = [, ];
+    items2 = [,];
     items2[0] = num;
     items2[1] = num2;
     tmp21 = closure_7(() => {
-      const items = [_null2.sticky, ];
+      const items = [_null2.sticky];
       let tmp = null;
       if (theme(num[6]).KEYBOARD_HAS_ROUNDED_CORNERS) {
         const rect = insets;
@@ -150,7 +166,10 @@ class KeyboardToolbar {
       items[1] = tmp;
       return items;
     }, items1);
-    tmp22 = closure_7(() => ({ closed: num + theme(num[6]).KEYBOARD_TOOLBAR_HEIGHT, opened: num2 + theme(num[6]).OPENED_OFFSET }), items2);
+    tmp22 = closure_7(
+      () => ({ closed: num + theme(num[6]).KEYBOARD_TOOLBAR_HEIGHT, opened: num2 + theme(num[6]).OPENED_OFFSET }),
+      items2,
+    );
     if (children) {
       c9 = null;
       c10 = null;
@@ -185,7 +204,7 @@ class KeyboardToolbar {
         tmp41 = c13;
         obj[0] = c13.arrows;
         tmp42 = c9;
-        items3 = [, ];
+        items3 = [,];
         items3[0] = c9;
         tmp43 = c10;
         items3[1] = c10;
@@ -220,7 +239,7 @@ class KeyboardToolbar {
         obj3[0] = button;
         obj3[1] = icon;
         obj3[2] = onPrevCallback;
-        items4 = [, ];
+        items4 = [,];
         items4[0] = c12(require("Background").Prev, obj3);
         obj4 = { button: null, icon: null, onPress: null };
         obj4[0] = button;
@@ -244,7 +263,7 @@ class KeyboardToolbar {
       }
       tmp31 = tmp29;
     }
-    items5 = [, , ];
+    items5 = [, ,];
     items5[0] = theme;
     items5[1] = tmp14;
     items5[2] = tmp15;
@@ -256,7 +275,7 @@ class KeyboardToolbar {
     merged = Object.assign(tmp8);
     obj9.style = tmp20;
     obj9.testID = require("TEST_ID_KEYBOARD_TOOLBAR").TEST_ID_KEYBOARD_TOOLBAR;
-    items6 = [, , , ];
+    items6 = [, , ,];
     items6[0] = tmp4;
     items6[1] = tmp23;
     items6[2] = tmp31;
@@ -268,9 +287,22 @@ class KeyboardToolbar {
   }
 }
 let obj = { sticky: null, toolbar: null, arrows: null, floating: null };
-obj = { position: "absolute", left: 0, right: 0, bottom: 0, height: require("TEST_ID_KEYBOARD_TOOLBAR").KEYBOARD_TOOLBAR_HEIGHT };
+obj = {
+  position: "absolute",
+  left: 0,
+  right: 0,
+  bottom: 0,
+  height: require("TEST_ID_KEYBOARD_TOOLBAR").KEYBOARD_TOOLBAR_HEIGHT,
+};
 obj[0] = obj;
-obj = { position: "absolute", bottom: 0, alignItems: "center", width: "100%", flexDirection: "row", height: require("TEST_ID_KEYBOARD_TOOLBAR").KEYBOARD_TOOLBAR_HEIGHT };
+obj = {
+  position: "absolute",
+  bottom: 0,
+  alignItems: "center",
+  width: "100%",
+  flexDirection: "row",
+  height: require("TEST_ID_KEYBOARD_TOOLBAR").KEYBOARD_TOOLBAR_HEIGHT,
+};
 obj[1] = obj;
 obj[2] = { flexDirection: "row", paddingLeft: 8 };
 obj[3] = { alignSelf: "center", borderRadius: 20, overflow: "hidden" };

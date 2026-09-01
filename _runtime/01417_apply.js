@@ -21,9 +21,13 @@ if (typeof apply === "function") {
       const definePropertyResult = Object.defineProperty({}, "length", obj);
       let c0 = definePropertyResult;
       obj = {};
-      apply(() => {
-        throw 42;
-      }, null, definePropertyResult);
+      apply(
+        () => {
+          throw 42;
+        },
+        null,
+        definePropertyResult,
+      );
       let tmp3 = apply;
     } catch (tmp8) {
       tmp3 = tmp2;
@@ -112,73 +116,74 @@ if (typeof apply === "function") {
               tmp4 = null == obj("");
             }
             return tmp4;
-          } catch (err) {
-          }
+          } catch (err) {}
         }
         return false;
       };
     }
     tmp11 = typeof call2 === "unknown" ? toString() : call2(all2);
   }
-  module.exports = tmp3 ? (function isCallable(fn) {
-    if (isDocumentDotAll(fn)) {
-      return true;
-    } else if (fn) {
-      if (typeof fn !== "function") {
-        if (typeof fn !== "object") {
+  module.exports = tmp3
+    ? function isCallable(fn) {
+        if (isDocumentDotAll(fn)) {
+          return true;
+        } else if (fn) {
+          if (typeof fn !== "function") {
+            if (typeof fn !== "object") {
+              return false;
+            }
+          }
+          try {
+            _null(fn, null, closure_0);
+            const tmp8 = isES6ClassFunction(fn);
+            let tmp9 = !tmp8;
+            if (!tmp8) {
+              tmp9 = tryFunctionToStr(fn);
+            }
+            return tmp9;
+          } catch (tmp5) {
+            if (tmp5 !== obj) {
+              return false;
+            }
+          }
+        } else {
           return false;
         }
       }
-      try {
-        _null(fn, null, closure_0);
-        const tmp8 = isES6ClassFunction(fn);
-        let tmp9 = !tmp8;
-        if (!tmp8) {
-          tmp9 = tryFunctionToStr(fn);
-        }
-        return tmp9;
-      } catch (tmp5) {
-        if (tmp5 !== obj) {
+    : function isCallable(fn) {
+        if (isDocumentDotAll(fn)) {
+          return true;
+        } else if (fn) {
+          if (typeof fn !== "function") {
+            if (typeof fn !== "object") {
+              return false;
+            }
+          }
+          if (toStringTag) {
+            return tryFunctionToStr(fn);
+          } else if (isES6ClassFunction(fn)) {
+            return false;
+          } else {
+            const call = toString.call;
+            const tmp4 = typeof call === "unknown" ? toString() : call(fn);
+            let tmp5 = "[object Function]" !== tmp4;
+            if (tmp5) {
+              tmp5 = "[object GeneratorFunction]" !== tmp4;
+            }
+            if (tmp5) {
+              tmp5 = !/^\[object HTML/.test(tmp4);
+              obj = /^\[object HTML/;
+            }
+            let tmp6 = !tmp5;
+            if (!tmp5) {
+              tmp6 = tryFunctionToStr(fn);
+            }
+            return tmp6;
+          }
+        } else {
           return false;
         }
-      }
-    } else {
-      return false;
-    }
-  }) : (function isCallable(fn) {
-    if (isDocumentDotAll(fn)) {
-      return true;
-    } else if (fn) {
-      if (typeof fn !== "function") {
-        if (typeof fn !== "object") {
-          return false;
-        }
-      }
-      if (toStringTag) {
-        return tryFunctionToStr(fn);
-      } else if (isES6ClassFunction(fn)) {
-        return false;
-      } else {
-        const call = toString.call;
-        const tmp4 = typeof call === "unknown" ? toString() : call(fn);
-        let tmp5 = "[object Function]" !== tmp4;
-        if (tmp5) {
-          tmp5 = "[object GeneratorFunction]" !== tmp4;
-        }
-        if (tmp5) {
-          tmp5 = !/^\[object HTML/.test(tmp4);
-          obj = /^\[object HTML/;
-        }
-        let tmp6 = !tmp5;
-        if (!tmp5) {
-          tmp6 = tryFunctionToStr(fn);
-        }
-        return tmp6;
-      }
-    } else {
-      return false;
-    }
-  });
+      };
 }
 tmp3 = null;
 c3 = null;

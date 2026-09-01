@@ -67,7 +67,7 @@ export const getProducts = (skus) => {
     length = skus.length;
   }
   if (length) {
-    closure_1 = callback(function*() {
+    closure_1 = callback(function* () {
       closure_1 = tmp5;
       closure_0 = tmp2;
       const obj3 = closure_1_0(10798);
@@ -88,7 +88,7 @@ export const getProducts = (skus) => {
       return applyArgumentsResult;
     })();
   } else {
-    rejectResult = Promise.reject("\"skus\" is required");
+    rejectResult = Promise.reject('"skus" is required');
   }
   return rejectResult;
 };
@@ -100,7 +100,7 @@ export const getSubscriptions = (skus) => {
     length = skus.length;
   }
   if (length) {
-    closure_1 = callback(function*() {
+    closure_1 = callback(function* () {
       let androidModuleType = tmp2;
       androidModuleType = closure_1_0(10798).getAndroidModuleType();
       const obj10 = closure_1_0(10798);
@@ -112,7 +112,9 @@ export const getSubscriptions = (skus) => {
       if ("amazon" !== tmp35) {
         const _Error = Error;
         const _HermesInternal = HermesInternal;
-        error = new Error("getSubscriptions received unknown platform " + closure_1_0 + ". Verify the logic in getAndroidModuleType");
+        error = new Error(
+          "getSubscriptions received unknown platform " + closure_1_0 + ". Verify the logic in getAndroidModuleType",
+        );
         throw error;
       }
       const obj2 = closure_1_0(10798);
@@ -130,7 +132,7 @@ export const getSubscriptions = (skus) => {
       return applyArgumentsResult;
     })();
   } else {
-    rejectResult = Promise.reject("\"skus\" is required");
+    rejectResult = Promise.reject('"skus" is required');
   }
   return rejectResult;
 };
@@ -141,7 +143,7 @@ export const getPurchaseHistory = () => {
   }
   ({ alsoPublishToEventListener, automaticallyFinishRestoredTransactions, onlyIncludeActiveItems } = obj);
   closure_0 = undefined;
-  closure_0 = callback(function*() {
+  closure_0 = callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -258,7 +260,7 @@ export const getAvailablePurchases = () => {
   }
   ({ alsoPublishToEventListener, automaticallyFinishRestoredTransactions, onlyIncludeActiveItems } = obj);
   closure_0 = undefined;
-  closure_0 = callback(function*() {
+  closure_0 = callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -370,7 +372,7 @@ export const getAvailablePurchases = () => {
 };
 export const requestPurchase = (arg0) => {
   closure_0 = arg0;
-  closure_1 = callback(function*() {
+  closure_1 = callback(function* () {
     if (c1 === 2) {
       c1 = 3;
       HermesBuiltin.throwTypeError();
@@ -416,7 +418,16 @@ export const requestPurchase = (arg0) => {
               }
               c1 = 3;
               obj = { value: null, done: true };
-              obj[0] = closure_1_4.buyItemByType(closure_1_7, skus, undefined, -1, obfuscatedAccountIdAndroid, obfuscatedProfileIdAndroid, [], c0);
+              obj[0] = closure_1_4.buyItemByType(
+                closure_1_7,
+                skus,
+                undefined,
+                -1,
+                obfuscatedAccountIdAndroid,
+                obfuscatedProfileIdAndroid,
+                [],
+                c0,
+              );
               return obj;
             }
           }
@@ -443,7 +454,7 @@ export const requestPurchase = (arg0) => {
 };
 export const requestSubscription = (arg0) => {
   closure_0 = arg0;
-  closure_1 = callback(function*() {
+  closure_1 = callback(function* () {
     if (c1 === 2) {
       c1 = 3;
       HermesBuiltin.throwTypeError();
@@ -509,7 +520,16 @@ export const requestSubscription = (arg0) => {
               }
               c1 = 3;
               obj = { value: null, done: true };
-              obj[0] = closure_1_4.buyItemByType(closure_1_6, mapped, purchaseTokenAndroid, replacementModeAndroid, obfuscatedAccountIdAndroid, obfuscatedProfileIdAndroid, mapped1, c0);
+              obj[0] = closure_1_4.buyItemByType(
+                closure_1_6,
+                mapped,
+                purchaseTokenAndroid,
+                replacementModeAndroid,
+                obfuscatedAccountIdAndroid,
+                obfuscatedProfileIdAndroid,
+                mapped1,
+                c0,
+              );
               return obj;
             }
           }
@@ -537,7 +557,7 @@ export const requestSubscription = (arg0) => {
 export const finishTransaction = (arg0) => {
   ({ purchase: require, isConsumable: importAll, developerPayloadAndroid: dependencyMap } = arg0);
   let callback;
-  callback = callback(function*() {
+  callback = callback(function* () {
     if (v0 === 2) {
       v0 = 3;
       HermesBuiltin.throwTypeError();
@@ -612,7 +632,7 @@ export const deepLinkToSubscriptions = (arg0) => {
     isAmazonDevice = true;
   }
   closure_2 = undefined;
-  closure_2 = callback(function*() {
+  closure_2 = callback(function* () {
     if (v0 === 2) {
       v0 = 3;
       HermesBuiltin.throwTypeError();
@@ -677,7 +697,7 @@ export const deepLinkToSubscriptions = (arg0) => {
   })();
 };
 export const getStorefront = () => {
-  closure_0 = callback(function*() {
+  closure_0 = callback(function* () {
     closure_0 = {};
     closure_0.countryCode = yield closure_1_4.getStorefront();
     closure_0.currency = null;

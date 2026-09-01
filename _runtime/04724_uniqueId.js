@@ -7,4 +7,4 @@ export default function uniqueId(arg0) {
   const sum = c2 + 1;
   c2 = sum;
   return toString(arg0) + sum;
-};
+}

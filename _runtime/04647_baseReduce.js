@@ -14,4 +14,4 @@ export default function baseReduce(arg0, arg1, arg2, arg3, arg4) {
     closure_1 = tmp6;
   });
   return closure_1;
-};
+}

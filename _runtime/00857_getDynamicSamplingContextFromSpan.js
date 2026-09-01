@@ -125,13 +125,22 @@ arg5.getDynamicSamplingContextFromClient = function getDynamicSamplingContextFro
   if (!DEFAULT_ENVIRONMENT) {
     DEFAULT_ENVIRONMENT = _mod858.DEFAULT_ENVIRONMENT;
   }
-  const obj = { environment: DEFAULT_ENVIRONMENT, release: options.release, public_key: getOptions.getDsn() || {}.publicKey, trace_id, org_id: null };
+  const obj = {
+    environment: DEFAULT_ENVIRONMENT,
+    release: options.release,
+    public_key: getOptions.getDsn() || {}.publicKey,
+    trace_id,
+    org_id: null,
+  };
   const tmp2 = getOptions.getDsn() || {};
   obj[4] = dsnFromString.extractOrgIdFromClient(getOptions);
   getOptions.emit("createDsc", obj);
   return obj;
 };
-arg5.getDynamicSamplingContextFromScope = function getDynamicSamplingContextFromScope(getOptions, getPropagationContext) {
+arg5.getDynamicSamplingContextFromScope = function getDynamicSamplingContextFromScope(
+  getOptions,
+  getPropagationContext,
+) {
   const propagationContext = getPropagationContext.getPropagationContext();
   let dsc = propagationContext.dsc;
   if (!dsc) {

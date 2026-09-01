@@ -101,13 +101,16 @@ let items = [
       try {
         const promise = arg0(tmp);
         if (obj2.isThenable(promise)) {
-          let nextPromise = promise.then((arg0) => {
-            self._popScope();
-            return arg0;
-          }, (arg0) => {
-            self._popScope();
-            throw arg0;
-          });
+          let nextPromise = promise.then(
+            (arg0) => {
+              self._popScope();
+              return arg0;
+            },
+            (arg0) => {
+              self._popScope();
+              throw arg0;
+            },
+          );
         } else {
           self._popScope();
           nextPromise = promise;
@@ -117,31 +120,31 @@ let items = [
         obj._popScope();
         throw tmp9;
       }
-    }
+    },
   },
   {
     key: "getClient",
     value: function getClient() {
       return this.getStackTop().client;
-    }
+    },
   },
   {
     key: "getScope",
     value: function getScope() {
       return this.getStackTop().scope;
-    }
+    },
   },
   {
     key: "getIsolationScope",
     value: function getIsolationScope() {
       return this._isolationScope;
-    }
+    },
   },
   {
     key: "getStackTop",
     value: function getStackTop() {
       return this._stack[this._stack.length - 1];
-    }
+    },
   },
   {
     key: "_pushScope",
@@ -151,7 +154,7 @@ let items = [
       const _stack = this._stack;
       _stack.push({ client: this.getClient(), scope: cloneResult });
       return cloneResult;
-    }
+    },
   },
   {
     key: "_popScope",
@@ -162,8 +165,8 @@ let items = [
         arr = _stack.pop();
       }
       return arr;
-    }
-  }
+    },
+  },
 ];
 const _moduleResult = _createClass(AsyncContextStack, items);
 let c3 = _moduleResult;
@@ -230,6 +233,6 @@ export function getStackAsyncContextStrategy() {
       }
       sentryCarrier.stack = stack;
       return stack.getIsolationScope();
-    }
+    },
   };
 }

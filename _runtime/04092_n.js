@@ -11,7 +11,7 @@ const fn = function n(moment) {
         tmp13 = arg0 % 10 > 1;
       }
       if (tmp13) {
-        tmp13 = ~~arg0 / 10 % 10 !== 1;
+        tmp13 = (~~arg0 / 10) % 10 !== 1;
       }
       let str9 = "sekund";
       if (tmp13) {
@@ -31,7 +31,7 @@ const fn = function n(moment) {
         tmp11 = arg0 % 10 > 1;
       }
       if (tmp11) {
-        tmp11 = ~~arg0 / 10 % 10 !== 1;
+        tmp11 = (~~arg0 / 10) % 10 !== 1;
       }
       let str7 = "minut";
       if (tmp11) {
@@ -51,7 +51,7 @@ const fn = function n(moment) {
         tmp9 = arg0 % 10 > 1;
       }
       if (tmp9) {
-        tmp9 = ~~arg0 / 10 % 10 !== 1;
+        tmp9 = (~~arg0 / 10) % 10 !== 1;
       }
       let str5 = "godzin";
       if (tmp9) {
@@ -65,7 +65,7 @@ const fn = function n(moment) {
         tmp7 = arg0 % 10 > 1;
       }
       if (tmp7) {
-        tmp7 = ~~arg0 / 10 % 10 !== 1;
+        tmp7 = (~~arg0 / 10) % 10 !== 1;
       }
       let str4 = "tygodni";
       if (tmp7) {
@@ -79,7 +79,7 @@ const fn = function n(moment) {
         tmp5 = arg0 % 10 > 1;
       }
       if (tmp5) {
-        tmp5 = ~~arg0 / 10 % 10 !== 1;
+        tmp5 = (~~arg0 / 10) % 10 !== 1;
       }
       let str3 = "miesi\u0119cy";
       if (tmp5) {
@@ -93,7 +93,7 @@ const fn = function n(moment) {
         tmp3 = arg0 % 10 > 1;
       }
       if (tmp3) {
-        tmp3 = ~~arg0 / 10 % 10 !== 1;
+        tmp3 = (~~arg0 / 10) % 10 !== 1;
       }
       let str2 = "lat";
       if (tmp3) {
@@ -102,9 +102,28 @@ const fn = function n(moment) {
       return text + str2;
     }
   }
-  closure_0 = "stycze\u0144_luty_marzec_kwiecie\u0144_maj_czerwiec_lipiec_sierpie\u0144_wrzesie\u0144_pa\u017Adziernik_listopad_grudzie\u0144".split("_");
-  closure_1 = "stycznia_lutego_marca_kwietnia_maja_czerwca_lipca_sierpnia_wrze\u015Bnia_pa\u017Adziernika_listopada_grudnia".split("_");
-  const items = [/^sty/i, /^lut/i, /^mar/i, /^kwi/i, /^maj/i, /^cze/i, /^lip/i, /^sie/i, /^wrz/i, /^paź/i, /^lis/i, /^gru/i];
+  closure_0 =
+    "stycze\u0144_luty_marzec_kwiecie\u0144_maj_czerwiec_lipiec_sierpie\u0144_wrzesie\u0144_pa\u017Adziernik_listopad_grudzie\u0144".split(
+      "_",
+    );
+  closure_1 =
+    "stycznia_lutego_marca_kwietnia_maja_czerwca_lipca_sierpnia_wrze\u015Bnia_pa\u017Adziernika_listopada_grudnia".split(
+      "_",
+    );
+  const items = [
+    /^sty/i,
+    /^lut/i,
+    /^mar/i,
+    /^kwi/i,
+    /^maj/i,
+    /^cze/i,
+    /^lip/i,
+    /^sie/i,
+    /^wrz/i,
+    /^paź/i,
+    /^lis/i,
+    /^gru/i,
+  ];
   obj = {
     months(arg0, arg1) {
       if (arg0) {
@@ -125,12 +144,36 @@ const fn = function n(moment) {
     weekdays: "niedziela_poniedzia\u0142ek_wtorek_\u015Broda_czwartek_pi\u0105tek_sobota".split("_"),
     weekdaysShort: "ndz_pon_wt_\u015Br_czw_pt_sob".split("_"),
     weekdaysMin: "Nd_Pn_Wt_\u015Ar_Cz_Pt_So".split("_"),
-    longDateFormat: { LT: "HH:mm", LTS: "HH:mm:ss", L: "DD.MM.YYYY", LL: "D MMMM YYYY", LLL: "D MMMM YYYY HH:mm", LLLL: "dddd, D MMMM YYYY HH:mm" },
+    longDateFormat: {
+      LT: "HH:mm",
+      LTS: "HH:mm:ss",
+      L: "DD.MM.YYYY",
+      LL: "D MMMM YYYY",
+      LLL: "D MMMM YYYY HH:mm",
+      LLLL: "dddd, D MMMM YYYY HH:mm",
+    },
     calendar: obj,
-    relativeTime: { future: "za %s", past: "%s temu", s: "kilka sekund", ss: translate, m: translate, mm: translate, h: translate, hh: translate, d: "1 dzie\u0144", dd: "%d dni", w: "tydzie\u0144", ww: translate, M: "miesi\u0105c", MM: translate, y: "rok", yy: translate },
+    relativeTime: {
+      future: "za %s",
+      past: "%s temu",
+      s: "kilka sekund",
+      ss: translate,
+      m: translate,
+      mm: translate,
+      h: translate,
+      hh: translate,
+      d: "1 dzie\u0144",
+      dd: "%d dni",
+      w: "tydzie\u0144",
+      ww: translate,
+      M: "miesi\u0105c",
+      MM: translate,
+      y: "rok",
+      yy: translate,
+    },
     dayOfMonthOrdinalParse: /\d{1,2}\./,
     ordinal: "%d.",
-    week: { dow: 1, doy: 4 }
+    week: { dow: 1, doy: 4 },
   };
   obj = {
     sameDay: "[Dzi\u015B o] LT",
@@ -162,7 +205,7 @@ const fn = function n(moment) {
         return "[W zesz\u0142y] dddd [o] LT";
       }
     },
-    sameElse: "L"
+    sameElse: "L",
   };
   return moment.defineLocale("pl", obj);
 };

@@ -17,7 +17,9 @@ const fn = function r() {
 };
 fn.__closure = {};
 fn.__workletHash = 9046778946531;
-fn.__initData = { code: "function pnpm_lrgbTs1(c=0){const abs=Math.abs(c);if(abs>0.0031308){return(Math.sign(c)||1)*(1.055*Math.pow(abs,1/2.4)-0.055);}return c*12.92;}" };
+fn.__initData = {
+  code: "function pnpm_lrgbTs1(c=0){const abs=Math.abs(c);if(abs>0.0031308){return(Math.sign(c)||1)*(1.055*Math.pow(abs,1/2.4)-0.055);}return c*12.92;}",
+};
 const fn2 = function n(alpha) {
   ({ r, g, b } = alpha);
   if (typeof fn !== "function") {
@@ -73,7 +75,9 @@ const fn2 = function n(alpha) {
 };
 fn2.__closure = { channelFromLrgb: fn };
 fn2.__workletHash = 2514333579516;
-fn2.__initData = { code: "function pnpm_lrgbTs2({r:r,g:g,b:b,alpha:alpha}){const{channelFromLrgb}=this.__closure;return{r:channelFromLrgb(r),g:channelFromLrgb(g),b:channelFromLrgb(b),alpha:alpha};}" };
+fn2.__initData = {
+  code: "function pnpm_lrgbTs2({r:r,g:g,b:b,alpha:alpha}){const{channelFromLrgb}=this.__closure;return{r:channelFromLrgb(r),g:channelFromLrgb(g),b:channelFromLrgb(b),alpha:alpha};}",
+};
 const fn3 = function t() {
   let num = arg0;
   if (arg0 === undefined) {
@@ -92,7 +96,9 @@ const fn3 = function t() {
 };
 fn3.__closure = {};
 fn3.__workletHash = 7878321042954;
-fn3.__initData = { code: "function pnpm_lrgbTs3(c=0){const abs=Math.abs(c);if(abs<=0.04045){return c/12.92;}return(Math.sign(c)||1)*Math.pow((abs+0.055)/1.055,2.4);}" };
+fn3.__initData = {
+  code: "function pnpm_lrgbTs3(c=0){const abs=Math.abs(c);if(abs<=0.04045){return c/12.92;}return(Math.sign(c)||1)*Math.pow((abs+0.055)/1.055,2.4);}",
+};
 const fn4 = function o(alpha) {
   ({ r, g, b } = alpha);
   if (typeof fn3 !== "function") {
@@ -148,5 +154,7 @@ const fn4 = function o(alpha) {
 };
 fn4.__closure = { channelToLrgb: fn3 };
 fn4.__workletHash = 7438857771706;
-fn4.__initData = { code: "function pnpm_lrgbTs4({r:r,g:g,b:b,alpha:alpha}){const{channelToLrgb}=this.__closure;return{r:channelToLrgb(r),g:channelToLrgb(g),b:channelToLrgb(b),alpha:alpha};}" };
+fn4.__initData = {
+  code: "function pnpm_lrgbTs4({r:r,g:g,b:b,alpha:alpha}){const{channelToLrgb}=this.__closure;return{r:channelToLrgb(r),g:channelToLrgb(g),b:channelToLrgb(b),alpha:alpha};}",
+};
 arg5.default = { convert: { fromRgb: fn4, toRgb: fn2 } };

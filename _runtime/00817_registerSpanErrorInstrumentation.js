@@ -154,7 +154,8 @@ export const startSpan = createChildOrRootSpan.startSpan;
 export const startSpanManual = createChildOrRootSpan.startSpanManual;
 export const suppressTracing = createChildOrRootSpan.suppressTracing;
 export const withActiveSpan = createChildOrRootSpan.withActiveSpan;
-export const getDynamicSamplingContextFromClient = getDynamicSamplingContextFromSpan.getDynamicSamplingContextFromClient;
+export const getDynamicSamplingContextFromClient =
+  getDynamicSamplingContextFromSpan.getDynamicSamplingContextFromClient;
 export const getDynamicSamplingContextFromScope = getDynamicSamplingContextFromSpan.getDynamicSamplingContextFromScope;
 export const getDynamicSamplingContextFromSpan = getDynamicSamplingContextFromSpan.getDynamicSamplingContextFromSpan;
 export const spanToBaggageHeader = getDynamicSamplingContextFromSpan.spanToBaggageHeader;
@@ -170,12 +171,14 @@ export const SEMANTIC_ATTRIBUTE_EXCLUSIVE_TIME = _mod839.SEMANTIC_ATTRIBUTE_EXCL
 export const SEMANTIC_ATTRIBUTE_HTTP_REQUEST_METHOD = _mod839.SEMANTIC_ATTRIBUTE_HTTP_REQUEST_METHOD;
 export const SEMANTIC_ATTRIBUTE_PROFILE_ID = _mod839.SEMANTIC_ATTRIBUTE_PROFILE_ID;
 export const SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME = _mod839.SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME;
-export const SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON = _mod839.SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON;
+export const SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON =
+  _mod839.SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON;
 export const SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT = _mod839.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT;
 export const SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE = _mod839.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE;
 export const SEMANTIC_ATTRIBUTE_SENTRY_OP = _mod839.SEMANTIC_ATTRIBUTE_SENTRY_OP;
 export const SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN = _mod839.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN;
-export const SEMANTIC_ATTRIBUTE_SENTRY_PREVIOUS_TRACE_SAMPLE_RATE = _mod839.SEMANTIC_ATTRIBUTE_SENTRY_PREVIOUS_TRACE_SAMPLE_RATE;
+export const SEMANTIC_ATTRIBUTE_SENTRY_PREVIOUS_TRACE_SAMPLE_RATE =
+  _mod839.SEMANTIC_ATTRIBUTE_SENTRY_PREVIOUS_TRACE_SAMPLE_RATE;
 export const SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE = _mod839.SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE;
 export const SEMANTIC_ATTRIBUTE_SENTRY_SOURCE = _mod839.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE;
 export const SEMANTIC_ATTRIBUTE_URL_FULL = _mod839.SEMANTIC_ATTRIBUTE_URL_FULL;
@@ -220,7 +223,8 @@ export const makeSession = updateSession.makeSession;
 export const updateSession = updateSession.updateSession;
 export const Scope = Scope.Scope;
 export const notifyEventProcessors = _notifyEventProcessors.notifyEventProcessors;
-export const getEnvelopeEndpointWithUrlEncodedAuth = getEnvelopeEndpointWithUrlEncodedAuth.getEnvelopeEndpointWithUrlEncodedAuth;
+export const getEnvelopeEndpointWithUrlEncodedAuth =
+  getEnvelopeEndpointWithUrlEncodedAuth.getEnvelopeEndpointWithUrlEncodedAuth;
 export const getReportDialogEndpoint = getEnvelopeEndpointWithUrlEncodedAuth.getReportDialogEndpoint;
 export const Client = isErrorEvent.Client;
 export const ServerRuntimeClient = _isNativeReflectConstruct.ServerRuntimeClient;
@@ -324,11 +328,14 @@ export const instrumentStateGraphCompile = instrumentLangGraph.instrumentStateGr
 export const LANGGRAPH_INTEGRATION_NAME = _mod981.LANGGRAPH_INTEGRATION_NAME;
 export const _INTERNAL_FLAG_BUFFER_SIZE = _INTERNAL_addFeatureFlagToActiveSpan._INTERNAL_FLAG_BUFFER_SIZE;
 export const _INTERNAL_MAX_FLAGS_PER_SPAN = _INTERNAL_addFeatureFlagToActiveSpan._INTERNAL_MAX_FLAGS_PER_SPAN;
-export const _INTERNAL_addFeatureFlagToActiveSpan = _INTERNAL_addFeatureFlagToActiveSpan._INTERNAL_addFeatureFlagToActiveSpan;
-export const _INTERNAL_copyFlagsFromScopeToEvent = _INTERNAL_addFeatureFlagToActiveSpan._INTERNAL_copyFlagsFromScopeToEvent;
+export const _INTERNAL_addFeatureFlagToActiveSpan =
+  _INTERNAL_addFeatureFlagToActiveSpan._INTERNAL_addFeatureFlagToActiveSpan;
+export const _INTERNAL_copyFlagsFromScopeToEvent =
+  _INTERNAL_addFeatureFlagToActiveSpan._INTERNAL_copyFlagsFromScopeToEvent;
 export const _INTERNAL_insertFlagToScope = _INTERNAL_addFeatureFlagToActiveSpan._INTERNAL_insertFlagToScope;
 export const applyAggregateErrorsToEvent = aggregateExceptionsFromError.applyAggregateErrorsToEvent;
-export const getBreadcrumbLogLevelFromHttpStatusCode = getBreadcrumbLogLevelFromHttpStatusCode.getBreadcrumbLogLevelFromHttpStatusCode;
+export const getBreadcrumbLogLevelFromHttpStatusCode =
+  getBreadcrumbLogLevelFromHttpStatusCode.getBreadcrumbLogLevelFromHttpStatusCode;
 export const getComponentName = _htmlElementAsString.getComponentName;
 export const getLocationHref = _htmlElementAsString.getLocationHref;
 export const htmlTreeAsString = _htmlElementAsString.htmlTreeAsString;
@@ -341,7 +348,8 @@ export const addConsoleInstrumentationHandler = instrumentConsole.addConsoleInst
 export const addFetchEndInstrumentationHandler = _resolveResponse.addFetchEndInstrumentationHandler;
 export const addFetchInstrumentationHandler = _resolveResponse.addFetchInstrumentationHandler;
 export const addGlobalErrorInstrumentationHandler = instrumentError.addGlobalErrorInstrumentationHandler;
-export const addGlobalUnhandledRejectionInstrumentationHandler = instrumentUnhandledRejection.addGlobalUnhandledRejectionInstrumentationHandler;
+export const addGlobalUnhandledRejectionInstrumentationHandler =
+  instrumentUnhandledRejection.addGlobalUnhandledRejectionInstrumentationHandler;
 export const addHandler = addHandler.addHandler;
 export const maybeInstrument = addHandler.maybeInstrument;
 export const resetInstrumentationHandlers = addHandler.resetInstrumentationHandlers;
@@ -454,8 +462,10 @@ export const updateRateLimits = parseRetryAfterHeader.updateRateLimits;
 export const MAX_BAGGAGE_STRING_LENGTH = baggageHeaderToDynamicSamplingContext.MAX_BAGGAGE_STRING_LENGTH;
 export const SENTRY_BAGGAGE_KEY_PREFIX = baggageHeaderToDynamicSamplingContext.SENTRY_BAGGAGE_KEY_PREFIX;
 export const SENTRY_BAGGAGE_KEY_PREFIX_REGEX = baggageHeaderToDynamicSamplingContext.SENTRY_BAGGAGE_KEY_PREFIX_REGEX;
-export const baggageHeaderToDynamicSamplingContext = baggageHeaderToDynamicSamplingContext.baggageHeaderToDynamicSamplingContext;
-export const dynamicSamplingContextToSentryBaggageHeader = baggageHeaderToDynamicSamplingContext.dynamicSamplingContextToSentryBaggageHeader;
+export const baggageHeaderToDynamicSamplingContext =
+  baggageHeaderToDynamicSamplingContext.baggageHeaderToDynamicSamplingContext;
+export const dynamicSamplingContextToSentryBaggageHeader =
+  baggageHeaderToDynamicSamplingContext.dynamicSamplingContextToSentryBaggageHeader;
 export const objectToBaggageHeader = baggageHeaderToDynamicSamplingContext.objectToBaggageHeader;
 export const parseBaggageHeader = baggageHeaderToDynamicSamplingContext.parseBaggageHeader;
 export const getHttpSpanDetailsFromUrlObject = getHttpSpanDetailsFromUrlObject.getHttpSpanDetailsFromUrlObject;

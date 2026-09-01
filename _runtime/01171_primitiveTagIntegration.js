@@ -22,5 +22,5 @@ arg5.primitiveTagIntegration = () => ({
       const NATIVE = callback(table[1]).NATIVE;
       const result = NATIVE._setPrimitiveProcessor((arg0) => callback(table[0]).PrimitiveToString(arg0));
     }
-  }
+  },
 });

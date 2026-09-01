@@ -13,4 +13,4 @@ export default function TabsAccessory(style) {
   const items = [style.style, StyleSheet.absoluteFill];
   obj.style = items;
   return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
-};
+}

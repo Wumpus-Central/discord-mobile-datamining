@@ -1,7 +1,17 @@
 // _runtime/00229_Event.js
 class Event {
   constructor(arg0, arg1) {
-    obj = { eventTarget: global, event: require, eventPhase: 2, currentTarget: global, canceled: false, stopped: false, immediateStopped: false, passiveListener: null, timeStamp: null };
+    obj = {
+      eventTarget: global,
+      event: require,
+      eventPhase: 2,
+      currentTarget: global,
+      canceled: false,
+      stopped: false,
+      immediateStopped: false,
+      passiveListener: null,
+      timeStamp: null,
+    };
     timeStamp = require.timeStamp;
     tmp = closure_0;
     if (!timeStamp) {
@@ -493,28 +503,28 @@ let weakMap = new WeakMap();
 const weakMap1 = new WeakMap();
 let obj = {};
 Object.defineProperty(obj, "type", {
-  get: function() {
+  get: function () {
     const value = weakMap.get(this);
     console.assert(null != value, "'this' is expected an Event object, but got", this);
     return value.event.type;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj, "target", {
-  get: function() {
+  get: function () {
     const value = weakMap.get(this);
     console.assert(null != value, "'this' is expected an Event object, but got", this);
     return value.eventTarget;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj, "currentTarget", {
-  get: function() {
+  get: function () {
     const value = weakMap.get(this);
     console.assert(null != value, "'this' is expected an Event object, but got", this);
     return value.currentTarget;
   },
-  set: undefined
+  set: undefined,
 });
 obj.composedPath = function composedPath() {
   const value = weakMap.get(this);
@@ -532,12 +542,12 @@ Object.defineProperty(obj, "CAPTURING_PHASE", { get: () => 1, set: undefined });
 Object.defineProperty(obj, "AT_TARGET", { get: () => 2, set: undefined });
 Object.defineProperty(obj, "BUBBLING_PHASE", { get: () => 3, set: undefined });
 Object.defineProperty(obj, "eventPhase", {
-  get: function() {
+  get: function () {
     const value = weakMap.get(this);
     console.assert(null != value, "'this' is expected an Event object, but got", this);
     return value.eventPhase;
   },
-  set: undefined
+  set: undefined,
 });
 obj.stopPropagation = function stopPropagation() {
   const value = weakMap.get(this);
@@ -559,20 +569,20 @@ obj.stopImmediatePropagation = function stopImmediatePropagation() {
   }
 };
 Object.defineProperty(obj, "bubbles", {
-  get: function() {
+  get: function () {
     const value = weakMap.get(this);
     console.assert(null != value, "'this' is expected an Event object, but got", this);
     return Boolean(value.event.bubbles);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj, "cancelable", {
-  get: function() {
+  get: function () {
     const value = weakMap.get(this);
     console.assert(null != value, "'this' is expected an Event object, but got", this);
     return Boolean(value.event.cancelable);
   },
-  set: undefined
+  set: undefined,
 });
 obj.preventDefault = function preventDefault() {
   const value = weakMap.get(this);
@@ -599,44 +609,44 @@ obj.preventDefault = function preventDefault() {
   }
 };
 Object.defineProperty(obj, "defaultPrevented", {
-  get: function() {
+  get: function () {
     const value = weakMap.get(this);
     console.assert(null != value, "'this' is expected an Event object, but got", this);
     return value.canceled;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj, "composed", {
-  get: function() {
+  get: function () {
     const value = weakMap.get(this);
     console.assert(null != value, "'this' is expected an Event object, but got", this);
     return Boolean(value.event.composed);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj, "timeStamp", {
-  get: function() {
+  get: function () {
     const value = weakMap.get(this);
     console.assert(null != value, "'this' is expected an Event object, but got", this);
     return value.timeStamp;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj, "srcElement", {
-  get: function() {
+  get: function () {
     const value = weakMap.get(this);
     console.assert(null != value, "'this' is expected an Event object, but got", this);
     return value.eventTarget;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj, "cancelBubble", {
-  get: function() {
+  get: function () {
     const value = weakMap.get(this);
     console.assert(null != value, "'this' is expected an Event object, but got", this);
     return value.stopped;
   },
-  set: function(arg0) {
+  set: function (arg0) {
     if (arg0) {
       const self = this;
       const value = weakMap.get(this);
@@ -647,15 +657,15 @@ Object.defineProperty(obj, "cancelBubble", {
         value.event.cancelBubble = true;
       }
     }
-  }
+  },
 });
 Object.defineProperty(obj, "returnValue", {
-  get: function() {
+  get: function () {
     const value = weakMap.get(this);
     console.assert(null != value, "'this' is expected an Event object, but got", this);
     return !value.canceled;
   },
-  set: function(arg0) {
+  set: function (arg0) {
     if (!arg0) {
       const self = this;
       const value = weakMap.get(this);
@@ -682,11 +692,9 @@ Object.defineProperty(obj, "returnValue", {
         }
       }
     }
-  }
+  },
 });
-obj.initEvent = function initEvent() {
-
-};
+obj.initEvent = function initEvent() {};
 Event.prototype = obj;
 obj = { value: Event, configurable: true, writable: true };
 Object.defineProperty(Event.prototype, "constructor", obj);
@@ -694,7 +702,17 @@ if (typeof window !== "undefined") {
   const _window2 = window;
   class Event {
     constructor(arg0, arg1) {
-      obj = { eventTarget: global, event: require, eventPhase: 2, currentTarget: global, canceled: false, stopped: false, immediateStopped: false, passiveListener: null, timeStamp: null };
+      obj = {
+        eventTarget: global,
+        event: require,
+        eventPhase: 2,
+        currentTarget: global,
+        canceled: false,
+        stopped: false,
+        immediateStopped: false,
+        passiveListener: null,
+        timeStamp: null,
+      };
       timeStamp = require.timeStamp;
       tmp = closure_0;
       if (!timeStamp) {
@@ -735,7 +753,17 @@ if (tmp4) {
   let _Object = Object;
   class Event {
     constructor(arg0, arg1) {
-      obj = { eventTarget: global, event: require, eventPhase: 2, currentTarget: global, canceled: false, stopped: false, immediateStopped: false, passiveListener: null, timeStamp: null };
+      obj = {
+        eventTarget: global,
+        event: require,
+        eventPhase: 2,
+        currentTarget: global,
+        canceled: false,
+        stopped: false,
+        immediateStopped: false,
+        passiveListener: null,
+        timeStamp: null,
+      };
       timeStamp = require.timeStamp;
       tmp = closure_0;
       if (!timeStamp) {
@@ -970,16 +998,26 @@ EventTarget.prototype = {
         }
       }
     }
-    const typeError = new TypeError("\"event.type\" should be a string.");
+    const typeError = new TypeError('"event.type" should be a string.');
     throw typeError;
-  }
+  },
 };
 Object.defineProperty(EventTarget.prototype, "constructor", { value: EventTarget, configurable: true, writable: true });
 if (typeof window !== "undefined") {
   const _window3 = window;
   class Event {
     constructor(arg0, arg1) {
-      obj = { eventTarget: global, event: require, eventPhase: 2, currentTarget: global, canceled: false, stopped: false, immediateStopped: false, passiveListener: null, timeStamp: null };
+      obj = {
+        eventTarget: global,
+        event: require,
+        eventPhase: 2,
+        currentTarget: global,
+        canceled: false,
+        stopped: false,
+        immediateStopped: false,
+        passiveListener: null,
+        timeStamp: null,
+      };
       timeStamp = require.timeStamp;
       tmp = closure_0;
       if (!timeStamp) {
@@ -1020,7 +1058,17 @@ if (tmp9) {
   let _Object2 = Object;
   class Event {
     constructor(arg0, arg1) {
-      obj = { eventTarget: global, event: require, eventPhase: 2, currentTarget: global, canceled: false, stopped: false, immediateStopped: false, passiveListener: null, timeStamp: null };
+      obj = {
+        eventTarget: global,
+        event: require,
+        eventPhase: 2,
+        currentTarget: global,
+        canceled: false,
+        stopped: false,
+        immediateStopped: false,
+        passiveListener: null,
+        timeStamp: null,
+      };
       timeStamp = require.timeStamp;
       tmp = closure_0;
       if (!timeStamp) {
@@ -1134,7 +1182,7 @@ function defineEventAttribute(prototype, abort) {
       }
     },
     configurable: true,
-    enumerable: true
+    enumerable: true,
   });
 }
 module.exports.default = EventTarget;

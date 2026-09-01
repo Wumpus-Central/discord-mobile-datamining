@@ -12,7 +12,9 @@ function createProfilePayload(arg0, arg1, resources, type) {
   } else if (null == resources) {
     const _TypeError = TypeError;
     const _HermesInternal2 = HermesInternal;
-    const typeError1 = new TypeError("Cannot construct profiling event envelope without a valid profile. Got " + resources + " instead.");
+    const typeError1 = new TypeError(
+      "Cannot construct profiling event envelope without a valid profile. Got " + resources + " instead.",
+    );
     throw typeError1;
   } else {
     const contexts = type.contexts;
@@ -50,7 +52,20 @@ function createProfilePayload(arg0, arg1, resources, type) {
         result = 1000 * registerSpanErrorInstrumentation.timestampInSeconds();
         const obj14 = registerSpanErrorInstrumentation;
       }
-      let obj = { event_id: null, timestamp: null, platform: "javascript", version: "1", release: null, environment: null, runtime: null, os: null, device: null, debug_meta: null, profile: null, transactions: null };
+      let obj = {
+        event_id: null,
+        timestamp: null,
+        platform: "javascript",
+        version: "1",
+        release: null,
+        environment: null,
+        runtime: null,
+        os: null,
+        device: null,
+        debug_meta: null,
+        profile: null,
+        transactions: null,
+      };
       obj[0] = arg0;
       const _Date = Date;
       const date = new Date(arg1);
@@ -94,7 +109,14 @@ function createProfilePayload(arg0, arg1, resources, type) {
       obj2[0] = debugImagesForResources;
       obj[9] = obj2;
       obj[10] = tmp8;
-      const obj3 = { name: null, id: null, trace_id: null, active_thread_id: null, relative_start_ns: "0", relative_end_ns: null };
+      const obj3 = {
+        name: null,
+        id: null,
+        trace_id: null,
+        active_thread_id: null,
+        relative_start_ns: "0",
+        relative_end_ns: null,
+      };
       obj3[0] = type.transaction || "";
       let event_id = type.event_id;
       if (!event_id) {
@@ -239,7 +261,13 @@ function isValidSampleRate(concat) {
     const json = JSON.stringify(concat);
     const _JSON2 = JSON;
     const _HermesInternal2 = HermesInternal;
-    debug2.warn("[Profiling] Invalid sample rate. Sample rate must be a boolean or a number between 0 and 1. Got " + json + " of type " + JSON.stringify(typeof concat) + ".");
+    debug2.warn(
+      "[Profiling] Invalid sample rate. Sample rate must be a boolean or a number between 0 and 1. Got " +
+        json +
+        " of type " +
+        JSON.stringify(typeof concat) +
+        ".",
+    );
     flag2 = false;
   }
 }
@@ -298,24 +326,30 @@ if (tmp6) {
   tmp6 = "getHighEntropyValues" in userAgentData;
 }
 if (tmp6) {
-  const highEntropyValues = userAgentData.getHighEntropyValues(["architecture", "model", "platform", "platformVersion", "fullVersionList"]);
-  highEntropyValues.then((platform) => {
-    closure_5 = platform.platform || "";
-    closure_7 = platform.architecture || "";
-    closure_9 = platform.model || "";
-    closure_6 = platform.platformVersion || "";
-    const fullVersionList = platform.fullVersionList;
-    let length;
-    if (fullVersionList != null) {
-      length = fullVersionList.length;
-    }
-    if (length) {
-      const _HermesInternal = HermesInternal;
-      closure_8 = "" + tmp2.brand + " " + tmp2.version;
-    }
-  }).catch((arg0) => {
-
-  });
+  const highEntropyValues = userAgentData.getHighEntropyValues([
+    "architecture",
+    "model",
+    "platform",
+    "platformVersion",
+    "fullVersionList",
+  ]);
+  highEntropyValues
+    .then((platform) => {
+      closure_5 = platform.platform || "";
+      closure_7 = platform.architecture || "";
+      closure_9 = platform.model || "";
+      closure_6 = platform.platformVersion || "";
+      const fullVersionList = platform.fullVersionList;
+      let length;
+      if (fullVersionList != null) {
+        length = fullVersionList.length;
+      }
+      if (length) {
+        const _HermesInternal = HermesInternal;
+        closure_8 = "" + tmp2.brand + " " + tmp2.version;
+      }
+    })
+    .catch((arg0) => {});
   const nextPromise = highEntropyValues.then((platform) => {
     closure_5 = platform.platform || "";
     closure_7 = platform.architecture || "";
@@ -444,7 +478,9 @@ export const createProfileChunkPayload = function createProfileChunkPayload(clos
   if (null == closure_0) {
     const _TypeError = TypeError;
     const _HermesInternal = HermesInternal;
-    const typeError = new TypeError("Cannot construct profiling event envelope without a valid profile. Got " + closure_0 + " instead.");
+    const typeError = new TypeError(
+      "Cannot construct profiling event envelope without a valid profile. Got " + closure_0 + " instead.",
+    );
     throw typeError;
   } else {
     const items = [];
@@ -534,7 +570,17 @@ export const createProfileChunkPayload = function createProfileChunkPayload(clos
         sdk = sdkMetadata.sdk;
       }
     }
-    const obj3 = { chunk_id: null, client_sdk: null, profiler_id: null, platform: "javascript", version: "2", release: null, environment: null, debug_meta: null, profile: null };
+    const obj3 = {
+      chunk_id: null,
+      client_sdk: null,
+      profiler_id: null,
+      platform: "javascript",
+      version: "2",
+      release: null,
+      environment: null,
+      debug_meta: null,
+      profile: null,
+    };
     obj3[0] = registerSpanErrorInstrumentation.uuid4();
     str = undefined;
     if (sdk != null) {
@@ -662,7 +708,9 @@ export const shouldProfileSession = function shouldProfileSession(options) {
   if (c14) {
     if (__SENTRY_DEBUG__.DEBUG_BUILD) {
       const debug4 = registerSpanErrorInstrumentation.debug;
-      debug4.log("[Profiling] Profiling has been disabled for the duration of the current user session as the JS Profiler could not be started.");
+      debug4.log(
+        "[Profiling] Profiling has been disabled for the duration of the current user session as the JS Profiler could not be started.",
+      );
     }
     return false;
   } else {
@@ -743,7 +791,9 @@ export const shouldProfileSpanLegacy = function shouldProfileSpanLegacy(rootSpan
             flag4 = false;
             if (log(1072).DEBUG_BUILD) {
               const debug4 = log(817).debug;
-              debug4.log("[Profiling] Discarding profile because a negative sampling decision was inherited or profileSampleRate is set to 0");
+              debug4.log(
+                "[Profiling] Discarding profile because a negative sampling decision was inherited or profileSampleRate is set to 0",
+              );
               flag4 = false;
             }
           }
@@ -775,9 +825,11 @@ export const shouldProfileSpanLegacy = function shouldProfileSpanLegacy(rootSpan
 };
 export const startJSSelfProfile = function startJSSelfProfile() {
   const Profiler = ignoreNextOnError.WINDOW.Profiler;
-  if ((function isJSProfilerSupported(Profiler) {
-    return typeof Profiler === "function";
-  })(Profiler)) {
+  if (
+    (function isJSProfilerSupported(Profiler) {
+      return typeof Profiler === "function";
+    })(Profiler)
+  ) {
     const _Math = Math;
     try {
       const obj = { sampleInterval: 10, maxBufferSize: null };
@@ -787,7 +839,9 @@ export const startJSSelfProfile = function startJSSelfProfile() {
     } catch (err) {
       if (tmp3(tmp2[2]).DEBUG_BUILD) {
         const debug2 = tmp3(tmp2[0]).debug;
-        debug2.log("[Profiling] Failed to initialize the Profiling constructor, this is likely due to a missing 'Document-Policy': 'js-profiling' header.");
+        debug2.log(
+          "[Profiling] Failed to initialize the Profiling constructor, this is likely due to a missing 'Document-Policy': 'js-profiling' header.",
+        );
         const debug3 = tmp3(tmp2[0]).debug;
         debug3.log("[Profiling] Disabling profiling for current user session.");
       }

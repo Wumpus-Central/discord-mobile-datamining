@@ -18,7 +18,7 @@ export const useFrameCallback = function useFrameCallback(fn, arg1) {
       closure_1.current.isActive = isActive;
     },
     isActive: flag,
-    callbackId: -1
+    callbackId: -1,
   });
   callback2 = tmp;
   const items = [fn, flag];

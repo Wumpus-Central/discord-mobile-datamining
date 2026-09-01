@@ -20,8 +20,7 @@ function isSupportedCurrency(arr3, locale) {
       }
     }
     return false;
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 arg5.getSupportedCurrencies = function getSupportedCurrencies(locale) {
   const items = [];

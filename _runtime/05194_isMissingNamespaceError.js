@@ -1,7 +1,21 @@
 // _runtime/05194_isMissingNamespaceError.js
-let closure_0 = { xmp: "http://ns.adobe.com/xap/1.0/", tiff: "http://ns.adobe.com/tiff/1.0/", exif: "http://ns.adobe.com/exif/1.0/", dc: "http://purl.org/dc/elements/1.1/", xmpMM: "http://ns.adobe.com/xap/1.0/mm/", stEvt: "http://ns.adobe.com/xap/1.0/sType/ResourceEvent#", stRef: "http://ns.adobe.com/xap/1.0/sType/ResourceRef#", photoshop: "http://ns.adobe.com/photoshop/1.0/" };
+let closure_0 = {
+  xmp: "http://ns.adobe.com/xap/1.0/",
+  tiff: "http://ns.adobe.com/tiff/1.0/",
+  exif: "http://ns.adobe.com/exif/1.0/",
+  dc: "http://purl.org/dc/elements/1.1/",
+  xmpMM: "http://ns.adobe.com/xap/1.0/mm/",
+  stEvt: "http://ns.adobe.com/xap/1.0/sType/ResourceEvent#",
+  stRef: "http://ns.adobe.com/xap/1.0/sType/ResourceRef#",
+  photoshop: "http://ns.adobe.com/photoshop/1.0/",
+};
 arg5.isMissingNamespaceError = function isMissingNamespaceError(message) {
-  const items = ["prefix is non-null and namespace is null", "prefix not bound to a namespace", "prefix inte bundet till en namnrymd", /Namespace prefix .+ is not defined/];
+  const items = [
+    "prefix is non-null and namespace is null",
+    "prefix not bound to a namespace",
+    "prefix inte bundet till en namnrymd",
+    /Namespace prefix .+ is not defined/,
+  ];
   let num = 0;
   if (0 < items.length) {
     const _RegExp = RegExp;

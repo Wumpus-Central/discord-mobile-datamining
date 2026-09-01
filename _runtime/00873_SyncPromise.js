@@ -50,19 +50,19 @@ let items = [
             } else {
               callback2(arg0);
             }
-          }
+          },
         ];
         _handlers.push(items);
         self._executeHandlers();
       });
       return obj;
-    }
+    },
   },
   {
     key: "catch",
     value: function _catch(arg0) {
       return this.then((arg0) => arg0, arg0);
-    }
+    },
   },
   {
     key: "finally",
@@ -75,28 +75,33 @@ let items = [
       obj._runExecutor((arg0, arg1) => {
         closure_0 = arg0;
         const _self = arg1;
-        return _self.then((arg0) => {
-          c3 = false;
-          closure_2 = arg0;
-          if (closure_0) {
-            tmp();
-          }
-        }, (arg0) => {
-          c3 = true;
-          closure_2 = arg0;
-          if (closure_0) {
-            tmp();
-          }
-        }).then(() => {
-          if (closure_3) {
-            callback2(closure_2);
-          } else {
-            callback(closure_2);
-          }
-        });
+        return _self
+          .then(
+            (arg0) => {
+              c3 = false;
+              closure_2 = arg0;
+              if (closure_0) {
+                tmp();
+              }
+            },
+            (arg0) => {
+              c3 = true;
+              closure_2 = arg0;
+              if (closure_0) {
+                tmp();
+              }
+            },
+          )
+          .then(() => {
+            if (closure_3) {
+              callback2(closure_2);
+            } else {
+              callback(closure_2);
+            }
+          });
       });
       return obj;
-    }
+    },
   },
   {
     key: "_executeHandlers",
@@ -119,7 +124,7 @@ let items = [
           }
         });
       }
-    }
+    },
   },
   {
     key: "_runExecutor",
@@ -154,8 +159,8 @@ let items = [
       } catch (tmp4) {
         tmp(tmp4);
       }
-    }
-  }
+    },
+  },
 ];
 const _moduleResult = _createClass(SyncPromise, items);
 let c3 = _moduleResult;

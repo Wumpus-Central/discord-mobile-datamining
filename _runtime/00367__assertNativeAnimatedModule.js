@@ -29,9 +29,7 @@ class AnimatedNode {
 const items = [
   {
     key: "__attach",
-    value: function __attach() {
-
-    }
+    value: function __attach() {},
   },
   {
     key: "__detach",
@@ -47,44 +45,38 @@ const items = [
         API.dropAnimatedNode(self.__nativeTag);
         self.__nativeTag = undefined;
       }
-    }
+    },
   },
   {
     key: "__getValue",
-    value: function __getValue() {
-
-    }
+    value: function __getValue() {},
   },
   {
     key: "__getAnimatedValue",
     value: function __getAnimatedValue() {
       return this.__getValue();
-    }
+    },
   },
   {
     key: "__addChild",
-    value: function __addChild(arg0) {
-
-    }
+    value: function __addChild(arg0) {},
   },
   {
     key: "__removeChild",
-    value: function __removeChild(arg0) {
-
-    }
+    value: function __removeChild(arg0) {},
   },
   {
     key: "__getChildren",
     value: function __getChildren() {
       return [];
-    }
+    },
   },
   {
     key: "__makeNative",
     value: function __makeNative(_platformConfig) {
-      AnimatedNode(38)(this.__isNative, "This node cannot be made a \"native\" animated node");
+      AnimatedNode(38)(this.__isNative, 'This node cannot be made a "native" animated node');
       this._platformConfig = _platformConfig;
-    }
+    },
   },
   {
     key: "addListener",
@@ -94,33 +86,33 @@ const items = [
       const _listeners = this._listeners;
       const result = _listeners.set(StringResult, arg0);
       return StringResult;
-    }
+    },
   },
   {
     key: "removeListener",
     value: function removeListener(arg0) {
       const _listeners = this._listeners;
       _listeners.delete(arg0);
-    }
+    },
   },
   {
     key: "removeAllListeners",
     value: function removeAllListeners() {
       const _listeners = this._listeners;
       _listeners.clear();
-    }
+    },
   },
   {
     key: "hasListeners",
     value: function hasListeners(progress) {
       return this._listeners.size > 0;
-    }
+    },
   },
   {
     key: "__onAnimatedValueUpdateReceived",
     value: function __onAnimatedValueUpdateReceived(arg0, arg1) {
       this.__callListeners(arg0 + arg1);
-    }
+    },
   },
   {
     key: "__callListeners",
@@ -130,7 +122,7 @@ const items = [
       const item = _listeners.forEach((arg0) => {
         arg0(obj);
       });
-    }
+    },
   },
   {
     key: "__getNativeTag",
@@ -146,7 +138,7 @@ const items = [
           c4 = null;
           const obj = AnimatedNode(357);
         }
-        AnimatedNode(38)(self.__isNative, "Attempt to get native tag from node not marked as \"native\"");
+        AnimatedNode(38)(self.__isNative, 'Attempt to get native tag from node not marked as "native"');
         const newNodeTag = AnimatedNode(357).generateNewNodeTag();
         self.__nativeTag = newNodeTag;
         const __getNativeConfigResult = self.__getNativeConfig();
@@ -163,39 +155,37 @@ const items = [
         const tmp4 = AnimatedNode;
       }
       return __nativeTag;
-    }
+    },
   },
   {
     key: "__getNativeConfig",
     value: function __getNativeConfig() {
       error = new Error("This JS animated node type cannot be used as native animated node");
       throw error;
-    }
+    },
   },
   {
     key: "__getPlatformConfig",
     value: function __getPlatformConfig() {
       return this._platformConfig;
-    }
+    },
   },
   {
     key: "__setPlatformConfig",
     value: function __setPlatformConfig(_platformConfig) {
       this._platformConfig = _platformConfig;
-    }
+    },
   },
   {
     key: "toJSON",
     value: function toJSON() {
       return this.__getValue();
-    }
+    },
   },
   {
     key: "__getDebugID",
-    value: function __getDebugID() {
-
-    }
-  }
+    value: function __getDebugID() {},
+  },
 ];
 
 export default _createClassDefault(AnimatedNode, items);

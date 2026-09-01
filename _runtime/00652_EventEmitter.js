@@ -15,7 +15,7 @@ class EventEmitter {
 function _addListener(_events, type, fn, arg3) {
   if (typeof fn !== "function") {
     const _TypeError = TypeError;
-    const typeError = new TypeError("The \"listener\" argument must be of type Function. Received type " + typeof fn);
+    const typeError = new TypeError('The "listener" argument must be of type Function. Received type ' + typeof fn);
     throw typeError;
   } else {
     _events = _events._events;
@@ -40,7 +40,7 @@ function _addListener(_events, type, fn, arg3) {
       _events[type] = fn;
       _events._eventsCount = _events._eventsCount + 1;
     } else if (typeof arr === "function") {
-      const items = [, ];
+      const items = [,];
       if (arg3) {
         items[0] = fn;
         items[1] = arr;
@@ -71,7 +71,12 @@ function _addListener(_events, type, fn, arg3) {
             const _Error = Error;
             const _String = String;
             const text = `Possible EventEmitter memory leak detected. ${arr2.length}`;
-            error = new Error(`Possible EventEmitter memory leak detected. ${arr2.length}` + " " + String(type) + " listeners added. Use emitter.setMaxListeners() to increase limit");
+            error = new Error(
+              `Possible EventEmitter memory leak detected. ${arr2.length}` +
+                " " +
+                String(type) +
+                " listeners added. Use emitter.setMaxListeners() to increase limit",
+            );
             error.name = "MaxListenersExceededWarning";
             error.emitter = _events;
             error.type = type;
@@ -243,7 +248,9 @@ if (null) {
             }
           }
         }
-        rangeError = new RangeError("The value of \"n\" is out of range. It must be a non-negative number. Received " + global + ".");
+        rangeError = new RangeError(
+          'The value of "n" is out of range. It must be a non-negative number. Received ' + global + ".",
+        );
         throw rangeError;
       }
       getMaxListeners() {
@@ -351,9 +358,11 @@ if (null) {
           tmp = globalThis;
           _TypeError = TypeError;
           tmp2 = new.target;
-          str = "The \"listener\" argument must be of type Function. Received type ";
+          str = 'The "listener" argument must be of type Function. Received type ';
           tmp3 = new.target;
-          typeError = new TypeError("The \"listener\" argument must be of type Function. Received type " + typeof require);
+          typeError = new TypeError(
+            'The "listener" argument must be of type Function. Received type ' + typeof require,
+          );
           tmp5 = typeError;
           throw typeError;
         } else {
@@ -376,9 +385,11 @@ if (null) {
           tmp = globalThis;
           _TypeError = TypeError;
           tmp2 = new.target;
-          str = "The \"listener\" argument must be of type Function. Received type ";
+          str = 'The "listener" argument must be of type Function. Received type ';
           tmp3 = new.target;
-          typeError = new TypeError("The \"listener\" argument must be of type Function. Received type " + typeof require);
+          typeError = new TypeError(
+            'The "listener" argument must be of type Function. Received type ' + typeof require,
+          );
           tmp5 = typeError;
           throw typeError;
         } else {
@@ -401,9 +412,11 @@ if (null) {
           tmp14 = globalThis;
           _TypeError = TypeError;
           tmp15 = new.target;
-          str3 = "The \"listener\" argument must be of type Function. Received type ";
+          str3 = 'The "listener" argument must be of type Function. Received type ';
           tmp16 = new.target;
-          typeError = new TypeError("The \"listener\" argument must be of type Function. Received type " + typeof require);
+          typeError = new TypeError(
+            'The "listener" argument must be of type Function. Received type ' + typeof require,
+          );
           tmp18 = typeError;
           throw typeError;
         } else {
@@ -605,9 +618,11 @@ if (null) {
     }
     const ownKeys = tmp2;
     const _Number = Number;
-    let closure_2 = Number.isNaN || (function NumberIsNaN(arg0) {
-      return arg0 != arg0;
-    });
+    let closure_2 =
+      Number.isNaN ||
+      function NumberIsNaN(arg0) {
+        return arg0 != arg0;
+      };
     module.exports = EventEmitter;
     module.exports.once = function once(arg0, arg1) {
       closure_0 = arg0;
@@ -643,7 +658,9 @@ if (null) {
           }
         } else if (typeof obj.addEventListener !== "function") {
           const _TypeError = TypeError;
-          const typeError = new TypeError("The \"emitter\" argument must be of type EventEmitter. Received type " + typeof obj);
+          const typeError = new TypeError(
+            'The "emitter" argument must be of type EventEmitter. Received type ' + typeof obj,
+          );
           throw typeError;
         } else {
           function wrapListener(arg0) {
@@ -667,7 +684,9 @@ if (null) {
               }
             } else if (typeof obj.addEventListener !== "function") {
               const _TypeError2 = TypeError;
-              const typeError1 = new TypeError("The \"emitter\" argument must be of type EventEmitter. Received type " + typeof obj);
+              const typeError1 = new TypeError(
+                'The "emitter" argument must be of type EventEmitter. Received type ' + typeof obj,
+              );
               throw typeError1;
             } else {
               wrapListener2 = function wrapListener(arg0) {
@@ -707,7 +726,9 @@ if (null) {
           }
         }
       }
-      const rangeError = new RangeError("The value of \"defaultMaxListeners\" is out of range. It must be a non-negative number. Received " + num + ".");
+      const rangeError = new RangeError(
+        'The value of "defaultMaxListeners" is out of range. It must be a non-negative number. Received ' + num + ".",
+      );
       throw rangeError;
     };
     Object.defineProperty(EventEmitter, "defaultMaxListeners", obj);
@@ -716,12 +737,14 @@ if (null) {
     EventEmitter.prototype.listenerCount = listenerCount;
   }
   let _Object = Object;
-  tmp2 = Object.getOwnPropertySymbols ? (function ReflectOwnKeys(headers) {
-    const ownPropertyNames = Object.getOwnPropertyNames(headers);
-    return ownPropertyNames.concat(Object.getOwnPropertySymbols(headers));
-  }) : (function ReflectOwnKeys(headers) {
-    return Object.getOwnPropertyNames(headers);
-  });
+  tmp2 = Object.getOwnPropertySymbols
+    ? function ReflectOwnKeys(headers) {
+        const ownPropertyNames = Object.getOwnPropertyNames(headers);
+        return ownPropertyNames.concat(Object.getOwnPropertySymbols(headers));
+      }
+    : function ReflectOwnKeys(headers) {
+        return Object.getOwnPropertyNames(headers);
+      };
 }
 class ReflectApply {
   constructor(arg0, arg1, arg2) {

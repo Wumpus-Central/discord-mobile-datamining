@@ -51,7 +51,10 @@ arg5.updateHandlers = function updateHandlers(attachedGestures, closure_3, arg2)
             let obj2 = attachedGestures(attachedGestures[3]);
             let tmp11 = attachedGestures;
             let tmp12 = attachedGestures;
-            let result = obj.setGestureHandlerConfig(tmp3.handlerTag, obj2.filterConfig(tmp3.config, attachedGestures(attachedGestures[0]).ALLOWED_PROPS));
+            let result = obj.setGestureHandlerConfig(
+              tmp3.handlerTag,
+              obj2.filterConfig(tmp3.config, attachedGestures(attachedGestures[0]).ALLOWED_PROPS),
+            );
             let tmp14 = attachedGestures;
             let obj3 = lib(attachedGestures[2]);
             let tmp15 = attachedGestures;

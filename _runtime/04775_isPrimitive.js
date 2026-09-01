@@ -10,4 +10,4 @@ export default function isPrimitive(fn) {
     tmp = tmp2;
   }
   return tmp;
-};
+}

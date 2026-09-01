@@ -1,7 +1,6 @@
 // _runtime/00751_assocIndexOf.js
 import eq from "00752_eq.js";
 
-
 export default function assocIndexOf(arg0, arg1) {
   let diff = tmp - 1;
   if (+arg0.length) {
@@ -12,4 +11,4 @@ export default function assocIndexOf(arg0, arg1) {
     return diff;
   }
   return -1;
-};
+}

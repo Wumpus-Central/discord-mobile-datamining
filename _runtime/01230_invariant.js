@@ -6,4 +6,4 @@ export default function invariant(arg0, arg1) {
     error = new Error("Invariant failed");
     throw error;
   }
-};
+}

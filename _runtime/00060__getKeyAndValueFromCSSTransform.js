@@ -1,7 +1,5 @@
 // _runtime/00060__getKeyAndValueFromCSSTransform.js
-function _getKeyAndValueFromCSSTransform(arg0, arg1) {
-
-}
+function _getKeyAndValueFromCSSTransform(arg0, arg1) {}
 arg5.default = function processTransform(str) {
   let tmp = str;
   if (typeof str === "string") {

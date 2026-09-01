@@ -24,8 +24,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class ReadOnlyCharacterData {
   constructor() {
@@ -53,13 +52,13 @@ const items = [
     key: "nextElementSibling",
     get() {
       return ReadOnlyCharacterData(142).getElementSibling(this, "next");
-    }
+    },
   },
   {
     key: "previousElementSibling",
     get() {
       return ReadOnlyCharacterData(142).getElementSibling(this, "previous");
-    }
+    },
   },
   {
     key: "data",
@@ -71,25 +70,25 @@ const items = [
         const obj2 = NativeDOMCxx;
       }
       return str;
-    }
+    },
   },
   {
     key: "length",
     get() {
       return this.data.length;
-    }
+    },
   },
   {
     key: "textContent",
     get() {
       return this.data;
-    }
+    },
   },
   {
     key: "nodeValue",
     get() {
       return this.data;
-    }
+    },
   },
   {
     key: "substringData",
@@ -98,12 +97,20 @@ const items = [
       if (arg0 < 0) {
         const _TypeError2 = TypeError;
         const _HermesInternal2 = HermesInternal;
-        const typeError = new TypeError("Failed to execute 'substringData' on 'CharacterData': The offset " + arg0 + " is negative.");
+        const typeError = new TypeError(
+          "Failed to execute 'substringData' on 'CharacterData': The offset " + arg0 + " is negative.",
+        );
         throw typeError;
       } else if (arg0 > data.length) {
         const _TypeError = TypeError;
         const _HermesInternal = HermesInternal;
-        const typeError1 = new TypeError("Failed to execute 'substringData' on 'CharacterData': The offset " + arg0 + " is greater than the node's length (" + data.length + ").");
+        const typeError1 = new TypeError(
+          "Failed to execute 'substringData' on 'CharacterData': The offset " +
+            arg0 +
+            " is greater than the node's length (" +
+            data.length +
+            ").",
+        );
         throw typeError1;
       } else {
         let length = arg1;
@@ -112,8 +119,8 @@ const items = [
         }
         return data.slice(arg0, arg0 + length);
       }
-    }
-  }
+    },
+  },
 ];
 
 export default importDefaultResult(ReadOnlyCharacterData, items);

@@ -15,4 +15,4 @@ export default function escapeRegExp(arg0) {
     }
   }
   return replaced;
-};
+}

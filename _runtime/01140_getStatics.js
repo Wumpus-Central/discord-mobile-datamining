@@ -22,12 +22,30 @@ function getStatics(obj) {
   }
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-let closure_0 = { childContextTypes: true, contextType: true, contextTypes: true, defaultProps: true, displayName: true, getDefaultProps: true, getDerivedStateFromError: true, getDerivedStateFromProps: true, mixins: true, propTypes: true, type: true };
+let closure_0 = {
+  childContextTypes: true,
+  contextType: true,
+  contextTypes: true,
+  defaultProps: true,
+  displayName: true,
+  getDefaultProps: true,
+  getDerivedStateFromError: true,
+  getDerivedStateFromProps: true,
+  mixins: true,
+  propTypes: true,
+  type: true,
+};
 let closure_1 = { name: true, length: true, prototype: true, caller: true, callee: true, arguments: true, arity: true };
 let obj = { $$typeof: true, compare: true, defaultProps: true, displayName: true, propTypes: true, type: true };
 const forResult1 = Symbol.for("react.memo");
 obj = {};
-obj[Symbol.for("react.forward_ref")] = { $$typeof: true, render: true, defaultProps: true, displayName: true, propTypes: true };
+obj[Symbol.for("react.forward_ref")] = {
+  $$typeof: true,
+  render: true,
+  defaultProps: true,
+  displayName: true,
+  propTypes: true,
+};
 obj[forResult1] = obj;
 let closure_6 = defineProperty.bind(Object);
 let closure_7 = getOwnPropertyNames.bind(Object);
@@ -79,8 +97,7 @@ function hoistNonReactStatics(arg0, str) {
               if (tmp26Result) {
                 try {
                   callback(arg0, tmp18, tmp30);
-                } catch (err) {
-                }
+                } catch (err) {}
               }
             }
             tmp26 = callback3;

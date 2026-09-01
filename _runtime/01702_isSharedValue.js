@@ -8,5 +8,7 @@ function isSharedValue(iter) {
 }
 isSharedValue.__closure = {};
 isSharedValue.__workletHash = 8230330706259;
-isSharedValue.__initData = { code: "function isSharedValue_Pnpm_isSharedValueTs1(value){return(value===null||value===void 0?void 0:value._isReanimatedSharedValue)===true;}" };
+isSharedValue.__initData = {
+  code: "function isSharedValue_Pnpm_isSharedValueTs1(value){return(value===null||value===void 0?void 0:value._isReanimatedSharedValue)===true;}",
+};
 arg5.isSharedValue = isSharedValue;

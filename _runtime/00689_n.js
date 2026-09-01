@@ -15,9 +15,7 @@ let fn = function n() {
       length = items.length;
     } while (num < length);
   }
-  function type$p(arg0) {
-
-  }
+  function type$p(arg0) {}
   function clip_rgb(applyResult1) {
     applyResult1._clipped = false;
     applyResult1._unclipped = applyResult1.slice(0);
@@ -83,9 +81,7 @@ let fn = function n() {
       tmp4 = closure_0[typeof call === "unknown" ? toString(first) : call(toString, first)] || "object";
     }
   }
-  function last(arg0) {
-
-  }
+  function last(arg0) {}
   let result = 2 * PI;
   obj = { format: {}, autodetect: [] };
   class Color {
@@ -236,7 +232,7 @@ let fn = function n() {
     }
     gl() {
       _rgb = this._rgb;
-      items = [, , , ];
+      items = [, , ,];
       items[0] = _rgb[0] / 255;
       items[1] = _rgb[1] / 255;
       items[2] = _rgb[2] / 255;
@@ -359,7 +355,7 @@ let fn = function n() {
             tmp7 = self;
           } else {
             tmp5 = Color;
-            items = [, , , ];
+            items = [, , ,];
             items[0] = self._rgb[0];
             items[1] = self._rgb[1];
             items[2] = self._rgb[2];
@@ -512,7 +508,8 @@ let fn = function n() {
                         closure_1 = tmp28 - 1;
                         tmp3 = interpolateResult1;
                         if (tmp28) {
-                          tmp29 = str3 > arg0 ? test(obj2, interpolateResult1) : test(interpolateResult1, interpolateResult);
+                          tmp29 =
+                            str3 > arg0 ? test(obj2, interpolateResult1) : test(interpolateResult1, interpolateResult);
                         }
                       }
                       tmp23 = tmp3;
@@ -527,7 +524,10 @@ let fn = function n() {
                         closure_1 = tmp25 - 1;
                         tmp23 = interpolateResult2;
                         if (tmp25) {
-                          tmp26 = luminanceResult1 > arg0 ? test(interpolateResult, interpolateResult2) : test(interpolateResult2, self);
+                          tmp26 =
+                            luminanceResult1 > arg0
+                              ? test(interpolateResult, interpolateResult2)
+                              : test(interpolateResult2, self);
                         }
                       }
                     }
@@ -580,7 +580,10 @@ let fn = function n() {
                         closure_1 = tmp8 - 1;
                         tmp6 = interpolateResult4;
                         if (tmp8) {
-                          tmp9 = luminanceResult4 > arg0 ? test(interpolateResult3, interpolateResult4) : test(interpolateResult4, tmp46);
+                          tmp9 =
+                            luminanceResult4 > arg0
+                              ? test(interpolateResult3, interpolateResult4)
+                              : test(interpolateResult4, tmp46);
                         }
                       }
                     }
@@ -613,7 +616,7 @@ let fn = function n() {
       _rgb = this._rgb;
       tmp = _rgb[3];
       if (flag) {
-        items = [, , , ];
+        items = [, , ,];
         items[0] = _rgb[0] * tmp;
         items[1] = _rgb[1] * tmp;
         items[2] = _rgb[2] * tmp;
@@ -622,7 +625,7 @@ let fn = function n() {
         tmp4 = self;
       } else {
         tmp2 = Color;
-        items1 = [, , , ];
+        items1 = [, , ,];
         items1[0] = _rgb[0] * tmp;
         items1[1] = _rgb[1] * tmp;
         items1[2] = _rgb[2] * tmp;
@@ -840,7 +843,7 @@ let fn = function n() {
       if (tmp4 < 1) {
         num2 = 255 * (1 - tmp4) * (1 - tmp7);
       }
-      items2 = [num2, , , ];
+      items2 = [num2, , ,];
       let num4 = 0;
       if (tmp5 < 1) {
         num4 = 255 * (1 - tmp5) * (1 - tmp7);
@@ -880,18 +883,14 @@ let fn = function n() {
           return "cmyk";
         }
       }
-    }
+    },
   };
-  function limit$2(arg0, arg1, arg2) {
-
-  }
+  function limit$2(arg0, arg1, arg2) {}
   let result1 = PI / 3;
   let result2 = PI / 180;
   let result3 = 180 / PI;
   autodetect.push(obj);
-  function rnd(arg0) {
-
-  }
+  function rnd(arg0) {}
   function rgb2hsl_1(_rgb) {
     let tmp3;
     const items = [];
@@ -1026,7 +1025,7 @@ let fn = function n() {
           let items1 = [tmp11, tmp10, result, arr2[3]];
           let items2 = items1;
         } else {
-          items2 = [tmp11, tmp10, result, ];
+          items2 = [tmp11, tmp10, result];
           let num12 = 1;
           items2[3] = 1;
         }
@@ -1129,8 +1128,7 @@ let fn = function n() {
       try {
         const format = tmp.format;
         return format.named(str2);
-      } catch (err) {
-      }
+      } catch (err) {}
     }
   }
   css2rgb$1.test = (arg0) => {
@@ -1263,7 +1261,7 @@ let fn = function n() {
         const tmp6 = f105032;
         tmp8 = f105032[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
       }
-    }
+    },
   });
   obj.format.gl = () => {
     let tmp3;
@@ -1408,7 +1406,7 @@ let fn = function n() {
         }
       }
     }
-    const items7 = [result, result, result, ];
+    const items7 = [result, result, result];
     let num6 = 1;
     if (arr2.length > 3) {
       num6 = arr2[3];
@@ -1441,7 +1439,7 @@ let fn = function n() {
           return "hcg";
         }
       }
-    }
+    },
   });
   round = Math.round;
   function rgb2hex_1(_rgb, rgb) {
@@ -1493,7 +1491,7 @@ let fn = function n() {
       str = str4;
     }
     const tmp15 = round(tmp5) << 16;
-    const str5 = tmp15 | round(tmp6) << 8 | round(tmp7);
+    const str5 = tmp15 | (round(tmp6) << 8) | round(tmp7);
     const text = `000000${str5.toString(16)}`;
     const substr = `000000${str5.toString(16)}`.substr(`000000${str5.toString(16)}`.length - 6);
     const str6 = round(255 * num);
@@ -1528,7 +1526,7 @@ let fn = function n() {
       }
       const _parseInt2 = parseInt;
       const parsed = parseInt(sum, 16);
-      const items = [parsed >> 16, parsed >> 8 & 255, 255 & parsed, 1];
+      const items = [parsed >> 16, (parsed >> 8) & 255, 255 & parsed, 1];
       return items;
     } else if (str.match(closure_52)) {
       let tmp7 = 5 !== str.length;
@@ -1546,9 +1544,9 @@ let fn = function n() {
       }
       const _parseInt = parseInt;
       const parsed1 = parseInt(sum1, 16);
-      const items1 = [parsed1 >> 24 & 255, parsed1 >> 16 & 255, parsed1 >> 8 & 255, ];
+      const items1 = [(parsed1 >> 24) & 255, (parsed1 >> 16) & 255, (parsed1 >> 8) & 255];
       const _Math = Math;
-      items1[3] = Math.round((255 & parsed1) / 255 * 100) / 100;
+      items1[3] = Math.round(((255 & parsed1) / 255) * 100) / 100;
       return items1;
     } else {
       const _Error = Error;
@@ -1602,7 +1600,7 @@ let fn = function n() {
         const tmp6 = f105032;
         tmp8 = f105032[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
       }
-    }
+    },
   });
   function rgb2hsi_1(_rgb) {
     let tmp3;
@@ -1712,7 +1710,7 @@ let fn = function n() {
       }
       num10 = num9;
     }
-    const items1 = [255 * num10, , , ];
+    const items1 = [255 * num10, , ,];
     const result12 = tmp4 * diff2;
     if (typeof limit$2 !== "function") {
       HermesBuiltin.throwTypeError();
@@ -1771,7 +1769,7 @@ let fn = function n() {
           return "hsi";
         }
       }
-    }
+    },
   });
   chroma$k.hsl = () => {
     let tmp3;
@@ -1814,7 +1812,7 @@ let fn = function n() {
           return "hsl";
         }
       }
-    }
+    },
   });
   min = Math.min;
   max = Math.max;
@@ -1930,7 +1928,7 @@ let fn = function n() {
         }
       }
     }
-    const items7 = [result, result, result, ];
+    const items7 = [result, result, result];
     let num6 = 1;
     if (arr2.length > 3) {
       num6 = arr2[3];
@@ -1963,18 +1961,21 @@ let fn = function n() {
           return "hsv";
         }
       }
-    }
+    },
   });
-  const obj7 = { Kn: 18, Xn: 0.95047, Yn: 1, Zn: 1.08883, t0: 0.137931034, t1: 0.206896552, t2: 0.12841855, t3: 0.008856452 };
-  function rgb_xyz(arg0) {
-
-  }
-  function xyz_lab(arg0) {
-
-  }
-  function rgb2xyz(arg0, arg1, arg2) {
-
-  }
+  const obj7 = {
+    Kn: 18,
+    Xn: 0.95047,
+    Yn: 1,
+    Zn: 1.08883,
+    t0: 0.137931034,
+    t1: 0.206896552,
+    t2: 0.12841855,
+    t3: 0.008856452,
+  };
+  function rgb_xyz(arg0) {}
+  function xyz_lab(arg0) {}
+  function rgb2xyz(arg0, arg1, arg2) {}
   function rgb2lab_1(_rgb, arg1, arg2) {
     let tmp3;
     const items = [];
@@ -2027,7 +2028,7 @@ let fn = function n() {
     } else {
       sum = result6 / tmp19.t2 + tmp19.t0;
     }
-    const items1 = [sum, , ];
+    const items1 = [sum, ,];
     const result7 = (0.2126729 * result1 + 0.7151522 * result3 + 0.072175 * result5) / tmp19.Yn;
     if (typeof xyz_lab !== "function") {
       HermesBuiltin.throwTypeError();
@@ -2057,12 +2058,8 @@ let fn = function n() {
     return items2;
   }
   pow = Math.pow;
-  function xyz_rgb(arg0) {
-
-  }
-  function lab_xyz(arg0) {
-
-  }
+  function xyz_rgb(arg0) {}
+  function lab_xyz(arg0) {}
   function lab2rgb_1(arg0, arg1, arg2) {
     let tmp3;
     const items = [];
@@ -2121,7 +2118,7 @@ let fn = function n() {
     } else {
       result7 = 1.055 * pow(diff2, 0.4166666666666667) - 0.055;
     }
-    const items1 = [255 * result7, , , ];
+    const items1 = [255 * result7, , ,];
     if (typeof xyz_rgb !== "function") {
       HermesBuiltin.throwTypeError();
     }
@@ -2190,7 +2187,7 @@ let fn = function n() {
           return "lab";
         }
       }
-    }
+    },
   });
   sqrt = Math.sqrt;
   round = Math.round;
@@ -2234,7 +2231,7 @@ let fn = function n() {
     if (isNaN(num)) {
       num = 0;
     }
-    const items1 = [tmp4[0], , ];
+    const items1 = [tmp4[0], ,];
     result = num * result2;
     items1[1] = cos(result) * tmp4[1];
     items1[2] = sin(result) * tmp4[1];
@@ -2254,7 +2251,7 @@ let fn = function n() {
     }
     const arr2 = unpack(items, "lch");
     const tmp4 = lch2lab_1(arr2[0], arr2[1], arr2[2]);
-    const items1 = [, , , ];
+    const items1 = [, , ,];
     [arr3[0], arr3[1], arr3[2]] = lab2rgb_1(tmp4[0], tmp4[1], tmp4[2]);
     let num = 1;
     if (arr2.length > 3) {
@@ -2352,11 +2349,167 @@ let fn = function n() {
             return closure_0;
           }
         }
-      }
+      },
     };
     return autodetect.push(obj);
   });
-  const obj9 = { aliceblue: "#f0f8ff", antiquewhite: "#faebd7", aqua: "#00ffff", aquamarine: "#7fffd4", azure: "#f0ffff", beige: "#f5f5dc", bisque: "#ffe4c4", black: "#000000", blanchedalmond: "#ffebcd", blue: "#0000ff", blueviolet: "#8a2be2", brown: "#a52a2a", burlywood: "#deb887", cadetblue: "#5f9ea0", chartreuse: "#7fff00", chocolate: "#d2691e", coral: "#ff7f50", cornflower: "#6495ed", cornflowerblue: "#6495ed", cornsilk: "#fff8dc", crimson: "#dc143c", cyan: "#00ffff", darkblue: "#00008b", darkcyan: "#008b8b", darkgoldenrod: "#b8860b", darkgray: "#a9a9a9", darkgreen: "#006400", darkgrey: "#a9a9a9", darkkhaki: "#bdb76b", darkmagenta: "#8b008b", darkolivegreen: "#556b2f", darkorange: "#ff8c00", darkorchid: "#9932cc", darkred: "#8b0000", darksalmon: "#e9967a", darkseagreen: "#8fbc8f", darkslateblue: "#483d8b", darkslategray: "#2f4f4f", darkslategrey: "#2f4f4f", darkturquoise: "#00ced1", darkviolet: "#9400d3", deeppink: "#ff1493", deepskyblue: "#00bfff", dimgray: "#696969", dimgrey: "#696969", dodgerblue: "#1e90ff", firebrick: "#b22222", floralwhite: "#fffaf0", forestgreen: "#228b22", fuchsia: "#ff00ff", gainsboro: "#dcdcdc", ghostwhite: "#f8f8ff", gold: "#ffd700", goldenrod: "#daa520", gray: "#808080", green: "#008000", greenyellow: "#adff2f", grey: "#808080", honeydew: "#f0fff0", hotpink: "#ff69b4", indianred: "#cd5c5c", indigo: "#4b0082", ivory: "#fffff0", khaki: "#f0e68c", laserlemon: "#ffff54", lavender: "#e6e6fa", lavenderblush: "#fff0f5", lawngreen: "#7cfc00", lemonchiffon: "#fffacd", lightblue: "#add8e6", lightcoral: "#f08080", lightcyan: "#e0ffff", lightgoldenrod: "#fafad2", lightgoldenrodyellow: "#fafad2", lightgray: "#d3d3d3", lightgreen: "#90ee90", lightgrey: "#d3d3d3", lightpink: "#ffb6c1", lightsalmon: "#ffa07a", lightseagreen: "#20b2aa", lightskyblue: "#87cefa", lightslategray: "#778899", lightslategrey: "#778899", lightsteelblue: "#b0c4de", lightyellow: "#ffffe0", lime: "#00ff00", limegreen: "#32cd32", linen: "#faf0e6", magenta: "#ff00ff", maroon: "#800000", maroon2: "#7f0000", maroon3: "#b03060", mediumaquamarine: "#66cdaa", mediumblue: "#0000cd", mediumorchid: "#ba55d3", mediumpurple: "#9370db", mediumseagreen: "#3cb371", mediumslateblue: "#7b68ee", mediumspringgreen: "#00fa9a", mediumturquoise: "#48d1cc", mediumvioletred: "#c71585", midnightblue: "#191970", mintcream: "#f5fffa", mistyrose: "#ffe4e1", moccasin: "#ffe4b5", navajowhite: "#ffdead", navy: "#000080", oldlace: "#fdf5e6", olive: "#808000", olivedrab: "#6b8e23", orange: "#ffa500", orangered: "#ff4500", orchid: "#da70d6", palegoldenrod: "#eee8aa", palegreen: "#98fb98", paleturquoise: "#afeeee", palevioletred: "#db7093", papayawhip: "#ffefd5", peachpuff: "#ffdab9", peru: "#cd853f", pink: "#ffc0cb", plum: "#dda0dd", powderblue: "#b0e0e6", purple: "#800080", purple2: "#7f007f", purple3: "#a020f0", rebeccapurple: "#663399", red: "#ff0000", rosybrown: "#bc8f8f", royalblue: "#4169e1", saddlebrown: "#8b4513", salmon: "#fa8072", sandybrown: "#f4a460", seagreen: "#2e8b57", seashell: "#fff5ee", sienna: "#a0522d", silver: "#c0c0c0", skyblue: "#87ceeb", slateblue: "#6a5acd", slategray: "#708090", slategrey: "#708090", snow: "#fffafa", springgreen: "#00ff7f", steelblue: "#4682b4", tan: "#d2b48c", teal: "#008080", thistle: "#d8bfd8", tomato: "#ff6347", turquoise: "#40e0d0", violet: "#ee82ee", wheat: "#f5deb3", white: "#ffffff", whitesmoke: "#f5f5f5", yellow: "#ffff00", yellowgreen: "#9acd32" };
+  const obj9 = {
+    aliceblue: "#f0f8ff",
+    antiquewhite: "#faebd7",
+    aqua: "#00ffff",
+    aquamarine: "#7fffd4",
+    azure: "#f0ffff",
+    beige: "#f5f5dc",
+    bisque: "#ffe4c4",
+    black: "#000000",
+    blanchedalmond: "#ffebcd",
+    blue: "#0000ff",
+    blueviolet: "#8a2be2",
+    brown: "#a52a2a",
+    burlywood: "#deb887",
+    cadetblue: "#5f9ea0",
+    chartreuse: "#7fff00",
+    chocolate: "#d2691e",
+    coral: "#ff7f50",
+    cornflower: "#6495ed",
+    cornflowerblue: "#6495ed",
+    cornsilk: "#fff8dc",
+    crimson: "#dc143c",
+    cyan: "#00ffff",
+    darkblue: "#00008b",
+    darkcyan: "#008b8b",
+    darkgoldenrod: "#b8860b",
+    darkgray: "#a9a9a9",
+    darkgreen: "#006400",
+    darkgrey: "#a9a9a9",
+    darkkhaki: "#bdb76b",
+    darkmagenta: "#8b008b",
+    darkolivegreen: "#556b2f",
+    darkorange: "#ff8c00",
+    darkorchid: "#9932cc",
+    darkred: "#8b0000",
+    darksalmon: "#e9967a",
+    darkseagreen: "#8fbc8f",
+    darkslateblue: "#483d8b",
+    darkslategray: "#2f4f4f",
+    darkslategrey: "#2f4f4f",
+    darkturquoise: "#00ced1",
+    darkviolet: "#9400d3",
+    deeppink: "#ff1493",
+    deepskyblue: "#00bfff",
+    dimgray: "#696969",
+    dimgrey: "#696969",
+    dodgerblue: "#1e90ff",
+    firebrick: "#b22222",
+    floralwhite: "#fffaf0",
+    forestgreen: "#228b22",
+    fuchsia: "#ff00ff",
+    gainsboro: "#dcdcdc",
+    ghostwhite: "#f8f8ff",
+    gold: "#ffd700",
+    goldenrod: "#daa520",
+    gray: "#808080",
+    green: "#008000",
+    greenyellow: "#adff2f",
+    grey: "#808080",
+    honeydew: "#f0fff0",
+    hotpink: "#ff69b4",
+    indianred: "#cd5c5c",
+    indigo: "#4b0082",
+    ivory: "#fffff0",
+    khaki: "#f0e68c",
+    laserlemon: "#ffff54",
+    lavender: "#e6e6fa",
+    lavenderblush: "#fff0f5",
+    lawngreen: "#7cfc00",
+    lemonchiffon: "#fffacd",
+    lightblue: "#add8e6",
+    lightcoral: "#f08080",
+    lightcyan: "#e0ffff",
+    lightgoldenrod: "#fafad2",
+    lightgoldenrodyellow: "#fafad2",
+    lightgray: "#d3d3d3",
+    lightgreen: "#90ee90",
+    lightgrey: "#d3d3d3",
+    lightpink: "#ffb6c1",
+    lightsalmon: "#ffa07a",
+    lightseagreen: "#20b2aa",
+    lightskyblue: "#87cefa",
+    lightslategray: "#778899",
+    lightslategrey: "#778899",
+    lightsteelblue: "#b0c4de",
+    lightyellow: "#ffffe0",
+    lime: "#00ff00",
+    limegreen: "#32cd32",
+    linen: "#faf0e6",
+    magenta: "#ff00ff",
+    maroon: "#800000",
+    maroon2: "#7f0000",
+    maroon3: "#b03060",
+    mediumaquamarine: "#66cdaa",
+    mediumblue: "#0000cd",
+    mediumorchid: "#ba55d3",
+    mediumpurple: "#9370db",
+    mediumseagreen: "#3cb371",
+    mediumslateblue: "#7b68ee",
+    mediumspringgreen: "#00fa9a",
+    mediumturquoise: "#48d1cc",
+    mediumvioletred: "#c71585",
+    midnightblue: "#191970",
+    mintcream: "#f5fffa",
+    mistyrose: "#ffe4e1",
+    moccasin: "#ffe4b5",
+    navajowhite: "#ffdead",
+    navy: "#000080",
+    oldlace: "#fdf5e6",
+    olive: "#808000",
+    olivedrab: "#6b8e23",
+    orange: "#ffa500",
+    orangered: "#ff4500",
+    orchid: "#da70d6",
+    palegoldenrod: "#eee8aa",
+    palegreen: "#98fb98",
+    paleturquoise: "#afeeee",
+    palevioletred: "#db7093",
+    papayawhip: "#ffefd5",
+    peachpuff: "#ffdab9",
+    peru: "#cd853f",
+    pink: "#ffc0cb",
+    plum: "#dda0dd",
+    powderblue: "#b0e0e6",
+    purple: "#800080",
+    purple2: "#7f007f",
+    purple3: "#a020f0",
+    rebeccapurple: "#663399",
+    red: "#ff0000",
+    rosybrown: "#bc8f8f",
+    royalblue: "#4169e1",
+    saddlebrown: "#8b4513",
+    salmon: "#fa8072",
+    sandybrown: "#f4a460",
+    seagreen: "#2e8b57",
+    seashell: "#fff5ee",
+    sienna: "#a0522d",
+    silver: "#c0c0c0",
+    skyblue: "#87ceeb",
+    slateblue: "#6a5acd",
+    slategray: "#708090",
+    slategrey: "#708090",
+    snow: "#fffafa",
+    springgreen: "#00ff7f",
+    steelblue: "#4682b4",
+    tan: "#d2b48c",
+    teal: "#008080",
+    thistle: "#d8bfd8",
+    tomato: "#ff6347",
+    turquoise: "#40e0d0",
+    violet: "#ee82ee",
+    wheat: "#f5deb3",
+    white: "#ffffff",
+    whitesmoke: "#f5f5f5",
+    yellow: "#ffff00",
+    yellowgreen: "#9acd32",
+  };
   obj.format.named = (str) => {
     const formatted = str.toLowerCase();
     if (obj9[formatted]) {
@@ -2396,7 +2549,7 @@ let fn = function n() {
         const tmp6 = f105032;
         tmp8 = f105032[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
       }
-    }
+    },
   });
   function rgb2num_1(_rgb) {
     let tmp3;
@@ -2436,7 +2589,7 @@ let fn = function n() {
     if ("number" == tmp2) {
       if (arg0 >= 0) {
         if (arg0 <= 16777215) {
-          const items = [arg0 >> 16, arg0 >> 8 & 255, 255 & arg0, 1];
+          const items = [arg0 >> 16, (arg0 >> 8) & 255, 255 & arg0, 1];
           return items;
         }
       }
@@ -2476,7 +2629,7 @@ let fn = function n() {
         const tmp6 = f105032;
         tmp8 = f105032[typeof call === "unknown" ? toString(first) : call(toString, first)] || "object";
       }
-    }
+    },
   });
   round = Math.round;
   chroma$k.rgb = () => {
@@ -2545,7 +2698,7 @@ let fn = function n() {
         }
         return "rgb";
       }
-    }
+    },
   });
   function temperature2rgb_1(arg0) {
     result = arg0 / 100;
@@ -2636,7 +2789,7 @@ let fn = function n() {
     } while (0.4 < tmp8 - tmp20);
     return round(result);
   }
-  let fn = function() {
+  let fn = function () {
     return rgb2temperature_1(this._rgb);
   };
   Color.prototype.temperature = fn;
@@ -2685,7 +2838,7 @@ let fn = function n() {
       result1 = (sign(result) || 1) * pow((absolute + 0.055) / 1.055, 2.4);
       const tmp8 = sign(result) || 1;
     }
-    const items1 = [result1, , ];
+    const items1 = [result1, ,];
     result2 = tmp4[1] / 255;
     const absolute1 = Math.abs(result2);
     if (absolute1 < 0.04045) {
@@ -2708,7 +2861,11 @@ let fn = function n() {
     const tmp26 = cbrt(0.4122214708 * tmp23 + 0.5363325363 * tmp24 + 0.0514459929 * tmp25);
     const tmp27 = cbrt(0.2119034982 * tmp23 + 0.6806995451 * tmp24 + 0.1073969566 * tmp25);
     const tmp28 = cbrt(0.0883024619 * tmp23 + 0.2817188376 * tmp24 + 0.6299787005 * tmp25);
-    const items2 = [0.2104542553 * tmp26 + 0.793617785 * tmp27 - 0.0040720468 * tmp28, 1.9779984951 * tmp26 - 2.428592205 * tmp27 + 0.4505937099 * tmp28, 0.0259040371 * tmp26 + 0.7827717662 * tmp27 - 0.808675766 * tmp28];
+    const items2 = [
+      0.2104542553 * tmp26 + 0.793617785 * tmp27 - 0.0040720468 * tmp28,
+      1.9779984951 * tmp26 - 2.428592205 * tmp27 + 0.4505937099 * tmp28,
+      0.0259040371 * tmp26 + 0.7827717662 * tmp27 - 0.808675766 * tmp28,
+    ];
     return items2;
   }
   pow = Math.pow;
@@ -2738,7 +2895,7 @@ let fn = function n() {
     } else {
       result = 12.92 * sum;
     }
-    const items1 = [255 * result, , , ];
+    const items1 = [255 * result, , ,];
     const diff1 = -1.2684380046 * tmp8 + 2.6097574011 * tmp9 - 0.3413193965 * tmp10;
     const absolute1 = Math.abs(diff1);
     if (absolute1 > 0.0031308) {
@@ -2805,7 +2962,7 @@ let fn = function n() {
           return "oklab";
         }
       }
-    }
+    },
   });
   function rgb2oklch_1(_rgb) {
     let tmp3;
@@ -2852,7 +3009,7 @@ let fn = function n() {
     }
     const arr2 = unpack(items, "lch");
     const tmp4 = lch2lab_1(arr2[0], arr2[1], arr2[2]);
-    const items1 = [, , , ];
+    const items1 = [, , ,];
     [arr3[0], arr3[1], arr3[2]] = oklab2rgb_1(tmp4[0], tmp4[1], tmp4[2]);
     let num = 1;
     if (arr2.length > 3) {
@@ -2886,7 +3043,7 @@ let fn = function n() {
           return "oklch";
         }
       }
-    }
+    },
   });
   Color.prototype.darker = Color.prototype.darken;
   Color.prototype.brighter = Color.prototype.brighten;
@@ -2923,9 +3080,7 @@ let fn = function n() {
     }
     return result2 + result5 + 0.0722 * result7;
   }
-  function luminance_x(arg0) {
-
-  }
+  function luminance_x(arg0) {}
   const obj15 = {};
   function mix$1(arg0, arg1, arg2) {
     let tmp3;
@@ -2980,7 +3135,7 @@ let fn = function n() {
     }
     tmp6 = obj15[first] || items.length;
   }
-  const fn3 = function(arg0, arg1) {
+  const fn3 = function (arg0, arg1) {
     let tmp3;
     let num = arg1;
     if (undefined === arg1) {
@@ -3004,7 +3159,12 @@ let fn = function n() {
   obj15.rgb = (_rgb, _rgb2) => {
     _rgb = _rgb._rgb;
     _rgb2 = _rgb2._rgb;
-    return Color(_rgb[0] + arg2 * (_rgb2[0] - _rgb[0]), _rgb[1] + arg2 * (_rgb2[1] - _rgb[1]), _rgb[2] + arg2 * (_rgb2[2] - _rgb[2]), "rgb");
+    return Color(
+      _rgb[0] + arg2 * (_rgb2[0] - _rgb[0]),
+      _rgb[1] + arg2 * (_rgb2[1] - _rgb[1]),
+      _rgb[2] + arg2 * (_rgb2[2] - _rgb[2]),
+      "rgb",
+    );
   };
   sqrt = Math.sqrt;
   pow = Math.pow;
@@ -3021,7 +3181,12 @@ let fn = function n() {
   obj15.lab = (lab, lab2) => {
     const labResult = lab.lab();
     const labResult1 = lab2.lab();
-    return Color(labResult[0] + arg2 * (labResult1[0] - labResult[0]), labResult[1] + arg2 * (labResult1[1] - labResult[1]), labResult[2] + arg2 * (labResult1[2] - labResult[2]), "lab");
+    return Color(
+      labResult[0] + arg2 * (labResult1[0] - labResult[0]),
+      labResult[1] + arg2 * (labResult1[1] - labResult[1]),
+      labResult[2] + arg2 * (labResult1[2] - labResult[2]),
+      "lab",
+    );
   };
   function _hsx(hsl, hsl2, arg2, hcg) {
     if ("hsl" === hcg) {
@@ -3138,7 +3303,12 @@ let fn = function n() {
   obj15.oklab = (oklab, oklab2) => {
     const oklabResult = oklab.oklab();
     const oklabResult1 = oklab2.oklab();
-    return Color(oklabResult[0] + arg2 * (oklabResult1[0] - oklabResult[0]), oklabResult[1] + arg2 * (oklabResult1[1] - oklabResult[1]), oklabResult[2] + arg2 * (oklabResult1[2] - oklabResult[2]), "oklab");
+    return Color(
+      oklabResult[0] + arg2 * (oklabResult1[0] - oklabResult[0]),
+      oklabResult[1] + arg2 * (oklabResult1[1] - oklabResult[1]),
+      oklabResult[2] + arg2 * (oklabResult1[2] - oklabResult[2]),
+      "oklab",
+    );
   };
   obj15.oklch = (hsl, hsl2) => _hsx(hsl, hsl2, arg2, "oklch");
   pow = Math.pow;
@@ -3147,9 +3317,7 @@ let fn = function n() {
   cos = Math.cos;
   sin = Math.sin;
   atan2 = Math.atan2;
-  function _average_lrgb(arg0, arg1) {
-
-  }
+  function _average_lrgb(arg0, arg1) {}
   pow = Math.pow;
   function scale$2(items) {
     closure_0 = items;
@@ -3182,7 +3350,8 @@ let fn = function n() {
         }
         const _Object = Object;
         const call = toString.call;
-        brewer = "string" === (closure_0[typeof call === "unknown" ? toString(items) : call(toString, items)] || "object");
+        brewer =
+          "string" === (closure_0[typeof call === "unknown" ? toString(items) : call(toString, items)] || "object");
         const tmp2 = closure_0;
         const tmp4 = closure_0[typeof call === "unknown" ? toString(items) : call(toString, items)] || "object";
       }
@@ -3296,7 +3465,10 @@ let fn = function n() {
           }
           const _Math = Math;
           const _Math2 = Math;
-          const bound = Math.min(1, Math.max(0, dependencyMap2[0] + tmp17 * (1 - dependencyMap2[0] - dependencyMap2[1])));
+          const bound = Math.min(
+            1,
+            Math.max(0, dependencyMap2[0] + tmp17 * (1 - dependencyMap2[0] - dependencyMap2[1])),
+          );
           const _Math3 = Math;
           const rounded = Math.floor(10000 * bound);
           if (c14) {
@@ -3331,7 +3503,12 @@ let fn = function n() {
                     let tmp45 = arr2;
                     let tmp46 = rgb;
                     let tmp47 = closure_1_201;
-                    interpolateResult = closure_1_201.interpolate(arr2[num11], arr2[sum1], (bound - tmp35) / (arr[sum1] - tmp35), rgb);
+                    interpolateResult = closure_1_201.interpolate(
+                      arr2[num11],
+                      arr2[sum1],
+                      (bound - tmp35) / (arr[sum1] - tmp35),
+                      rgb,
+                    );
                   }
                 }
                 let sum2 = num11 + 1;
@@ -3362,9 +3539,7 @@ let fn = function n() {
       }
       return closure_2;
     }
-    function resetCache() {
-
-    }
+    function resetCache() {}
     setColors(closure_0);
     let fn = function f(arg0) {
       const tmp = closure_1_201(getColor(arg0));
@@ -3390,7 +3565,7 @@ let fn = function n() {
         } else {
           const analyzeResult = closure_1_201.analyze(items);
           if (0 === arg0) {
-            const items1 = [, ];
+            const items1 = [,];
             ({ min: arr[0], max: arr[1] } = analyzeResult);
             let limitsResult = items1;
           } else {
@@ -3457,7 +3632,10 @@ let fn = function n() {
                     } while (arg0 >= tmp4);
                   }
                   const sum1 = num3 + 1;
-                  return dependencyMap[num3] + (arg0 - tmp[num3]) / (tmp[sum1] - tmp[num3]) * (dependencyMap[sum1] - dependencyMap[num3]);
+                  return (
+                    dependencyMap[num3] +
+                    ((arg0 - tmp[num3]) / (tmp[sum1] - tmp[num3])) * (dependencyMap[sum1] - dependencyMap[num3])
+                  );
                 }
               }
               return arg0;
@@ -3629,7 +3807,7 @@ let fn = function n() {
           } while (tmp11 ? tmp14 < arg0 : tmp14 > arg0);
         }
         substr = items1.map((arg0) => {
-          const sum = first + arg0 / (closure_0 - 1) * closure_3;
+          const sum = first + (arg0 / (closure_0 - 1)) * closure_3;
           if (typeof closure_1_21 !== "function") {
             HermesBuiltin.throwTypeError();
           }
@@ -3855,7 +4033,7 @@ let fn = function n() {
         obj.count = obj.count + 1;
       }
     });
-    const items = [, ];
+    const items = [,];
     ({ min: arr2[0], max: arr2[1] } = obj);
     obj.domain = items;
     obj.limits = (arg0, arg1) => closure_1_224(obj, arg0, arg1);
@@ -3893,7 +4071,7 @@ let fn = function n() {
       if ("e" === str.substr(0, 1)) {
         items1.push(min);
         for (let num20 = 1; num20 < num; num20 = num20 + 1) {
-          let arr2 = items1.push(min + num20 / num * (max - min));
+          let arr2 = items1.push(min + (num20 / num) * (max - min));
         }
         items1.push(max);
       } else if ("l" === str.substr(0, 1)) {
@@ -3909,14 +4087,14 @@ let fn = function n() {
           items1.push(min);
           for (let num19 = 1; num19 < num; num19 = num19 + 1) {
             let tmp47 = pow;
-            let arr5 = items1.push(pow(10, result + num19 / num * (result1 - result)));
+            let arr5 = items1.push(pow(10, result + (num19 / num) * (result1 - result)));
           }
           items1.push(max);
         }
       } else if ("q" === str.substr(0, 1)) {
         items1.push(min);
         for (let num18 = 1; num18 < num; num18 = num18 + 1) {
-          result2 = (sorted.length - 1) * num18 / num;
+          result2 = ((sorted.length - 1) * num18) / num;
           let tmp40 = floor;
           let tmp41 = floor(result2);
           let tmp42 = num18;
@@ -3936,7 +4114,7 @@ let fn = function n() {
         let items2 = [];
         items2.push(min);
         for (let num2 = 1; num2 < num; num2 = num2 + 1) {
-          let arr12 = items2.push(min + num2 / num * (max - min));
+          let arr12 = items2.push(min + (num2 / num) * (max - min));
         }
         items2.push(max);
         let num4 = 0;
@@ -4053,7 +4231,178 @@ let fn = function n() {
   cos = Math.cos;
   sin = Math.sin;
   PI = Math.PI;
-  const obj17 = { OrRd: ["#fff7ec", "#fee8c8", "#fdd49e", "#fdbb84", "#fc8d59", "#ef6548", "#d7301f", "#b30000", "#7f0000"], PuBu: ["#fff7fb", "#ece7f2", "#d0d1e6", "#a6bddb", "#74a9cf", "#3690c0", "#0570b0", "#045a8d", "#023858"], BuPu: ["#f7fcfd", "#e0ecf4", "#bfd3e6", "#9ebcda", "#8c96c6", "#8c6bb1", "#88419d", "#810f7c", "#4d004b"], Oranges: ["#fff5eb", "#fee6ce", "#fdd0a2", "#fdae6b", "#fd8d3c", "#f16913", "#d94801", "#a63603", "#7f2704"], BuGn: ["#f7fcfd", "#e5f5f9", "#ccece6", "#99d8c9", "#66c2a4", "#41ae76", "#238b45", "#006d2c", "#00441b"], YlOrBr: ["#ffffe5", "#fff7bc", "#fee391", "#fec44f", "#fe9929", "#ec7014", "#cc4c02", "#993404", "#662506"], YlGn: ["#ffffe5", "#f7fcb9", "#d9f0a3", "#addd8e", "#78c679", "#41ab5d", "#238443", "#006837", "#004529"], Reds: ["#fff5f0", "#fee0d2", "#fcbba1", "#fc9272", "#fb6a4a", "#ef3b2c", "#cb181d", "#a50f15", "#67000d"], RdPu: ["#fff7f3", "#fde0dd", "#fcc5c0", "#fa9fb5", "#f768a1", "#dd3497", "#ae017e", "#7a0177", "#49006a"], Greens: ["#f7fcf5", "#e5f5e0", "#c7e9c0", "#a1d99b", "#74c476", "#41ab5d", "#238b45", "#006d2c", "#00441b"], YlGnBu: ["#ffffd9", "#edf8b1", "#c7e9b4", "#7fcdbb", "#41b6c4", "#1d91c0", "#225ea8", "#253494", "#081d58"], Purples: ["#fcfbfd", "#efedf5", "#dadaeb", "#bcbddc", "#9e9ac8", "#807dba", "#6a51a3", "#54278f", "#3f007d"], GnBu: ["#f7fcf0", "#e0f3db", "#ccebc5", "#a8ddb5", "#7bccc4", "#4eb3d3", "#2b8cbe", "#0868ac", "#084081"], Greys: ["#ffffff", "#f0f0f0", "#d9d9d9", "#bdbdbd", "#969696", "#737373", "#525252", "#252525", "#000000"], YlOrRd: ["#ffffcc", "#ffeda0", "#fed976", "#feb24c", "#fd8d3c", "#fc4e2a", "#e31a1c", "#bd0026", "#800026"], PuRd: ["#f7f4f9", "#e7e1ef", "#d4b9da", "#c994c7", "#df65b0", "#e7298a", "#ce1256", "#980043", "#67001f"], Blues: ["#f7fbff", "#deebf7", "#c6dbef", "#9ecae1", "#6baed6", "#4292c6", "#2171b5", "#08519c", "#08306b"], PuBuGn: ["#fff7fb", "#ece2f0", "#d0d1e6", "#a6bddb", "#67a9cf", "#3690c0", "#02818a", "#016c59", "#014636"], Viridis: ["#440154", "#482777", "#3f4a8a", "#31678e", "#26838f", "#1f9d8a", "#6cce5a", "#b6de2b", "#fee825"], Spectral: ["#9e0142", "#d53e4f", "#f46d43", "#fdae61", "#fee08b", "#ffffbf", "#e6f598", "#abdda4", "#66c2a5", "#3288bd", "#5e4fa2"], RdYlGn: ["#a50026", "#d73027", "#f46d43", "#fdae61", "#fee08b", "#ffffbf", "#d9ef8b", "#a6d96a", "#66bd63", "#1a9850", "#006837"], RdBu: ["#67001f", "#b2182b", "#d6604d", "#f4a582", "#fddbc7", "#f7f7f7", "#d1e5f0", "#92c5de", "#4393c3", "#2166ac", "#053061"], PiYG: ["#8e0152", "#c51b7d", "#de77ae", "#f1b6da", "#fde0ef", "#f7f7f7", "#e6f5d0", "#b8e186", "#7fbc41", "#4d9221", "#276419"], PRGn: ["#40004b", "#762a83", "#9970ab", "#c2a5cf", "#e7d4e8", "#f7f7f7", "#d9f0d3", "#a6dba0", "#5aae61", "#1b7837", "#00441b"], RdYlBu: ["#a50026", "#d73027", "#f46d43", "#fdae61", "#fee090", "#ffffbf", "#e0f3f8", "#abd9e9", "#74add1", "#4575b4", "#313695"], BrBG: ["#543005", "#8c510a", "#bf812d", "#dfc27d", "#f6e8c3", "#f5f5f5", "#c7eae5", "#80cdc1", "#35978f", "#01665e", "#003c30"], RdGy: ["#67001f", "#b2182b", "#d6604d", "#f4a582", "#fddbc7", "#ffffff", "#e0e0e0", "#bababa", "#878787", "#4d4d4d", "#1a1a1a"], PuOr: ["#7f3b08", "#b35806", "#e08214", "#fdb863", "#fee0b6", "#f7f7f7", "#d8daeb", "#b2abd2", "#8073ac", "#542788", "#2d004b"], Set2: ["#66c2a5", "#fc8d62", "#8da0cb", "#e78ac3", "#a6d854", "#ffd92f", "#e5c494", "#b3b3b3"], Accent: ["#7fc97f", "#beaed4", "#fdc086", "#ffff99", "#386cb0", "#f0027f", "#bf5b17", "#666666"], Set1: ["#e41a1c", "#377eb8", "#4daf4a", "#984ea3", "#ff7f00", "#ffff33", "#a65628", "#f781bf", "#999999"], Set3: ["#8dd3c7", "#ffffb3", "#bebada", "#fb8072", "#80b1d3", "#fdb462", "#b3de69", "#fccde5", "#d9d9d9", "#bc80bd", "#ccebc5", "#ffed6f"], Dark2: ["#1b9e77", "#d95f02", "#7570b3", "#e7298a", "#66a61e", "#e6ab02", "#a6761d", "#666666"], Paired: ["#a6cee3", "#1f78b4", "#b2df8a", "#33a02c", "#fb9a99", "#e31a1c", "#fdbf6f", "#ff7f00", "#cab2d6", "#6a3d9a", "#ffff99", "#b15928"], Pastel2: ["#b3e2cd", "#fdcdac", "#cbd5e8", "#f4cae4", "#e6f5c9", "#fff2ae", "#f1e2cc", "#cccccc"], Pastel1: ["#fbb4ae", "#b3cde3", "#ccebc5", "#decbe4", "#fed9a6", "#ffffcc", "#e5d8bd", "#fddaec", "#f2f2f2"] };
+  const obj17 = {
+    OrRd: ["#fff7ec", "#fee8c8", "#fdd49e", "#fdbb84", "#fc8d59", "#ef6548", "#d7301f", "#b30000", "#7f0000"],
+    PuBu: ["#fff7fb", "#ece7f2", "#d0d1e6", "#a6bddb", "#74a9cf", "#3690c0", "#0570b0", "#045a8d", "#023858"],
+    BuPu: ["#f7fcfd", "#e0ecf4", "#bfd3e6", "#9ebcda", "#8c96c6", "#8c6bb1", "#88419d", "#810f7c", "#4d004b"],
+    Oranges: ["#fff5eb", "#fee6ce", "#fdd0a2", "#fdae6b", "#fd8d3c", "#f16913", "#d94801", "#a63603", "#7f2704"],
+    BuGn: ["#f7fcfd", "#e5f5f9", "#ccece6", "#99d8c9", "#66c2a4", "#41ae76", "#238b45", "#006d2c", "#00441b"],
+    YlOrBr: ["#ffffe5", "#fff7bc", "#fee391", "#fec44f", "#fe9929", "#ec7014", "#cc4c02", "#993404", "#662506"],
+    YlGn: ["#ffffe5", "#f7fcb9", "#d9f0a3", "#addd8e", "#78c679", "#41ab5d", "#238443", "#006837", "#004529"],
+    Reds: ["#fff5f0", "#fee0d2", "#fcbba1", "#fc9272", "#fb6a4a", "#ef3b2c", "#cb181d", "#a50f15", "#67000d"],
+    RdPu: ["#fff7f3", "#fde0dd", "#fcc5c0", "#fa9fb5", "#f768a1", "#dd3497", "#ae017e", "#7a0177", "#49006a"],
+    Greens: ["#f7fcf5", "#e5f5e0", "#c7e9c0", "#a1d99b", "#74c476", "#41ab5d", "#238b45", "#006d2c", "#00441b"],
+    YlGnBu: ["#ffffd9", "#edf8b1", "#c7e9b4", "#7fcdbb", "#41b6c4", "#1d91c0", "#225ea8", "#253494", "#081d58"],
+    Purples: ["#fcfbfd", "#efedf5", "#dadaeb", "#bcbddc", "#9e9ac8", "#807dba", "#6a51a3", "#54278f", "#3f007d"],
+    GnBu: ["#f7fcf0", "#e0f3db", "#ccebc5", "#a8ddb5", "#7bccc4", "#4eb3d3", "#2b8cbe", "#0868ac", "#084081"],
+    Greys: ["#ffffff", "#f0f0f0", "#d9d9d9", "#bdbdbd", "#969696", "#737373", "#525252", "#252525", "#000000"],
+    YlOrRd: ["#ffffcc", "#ffeda0", "#fed976", "#feb24c", "#fd8d3c", "#fc4e2a", "#e31a1c", "#bd0026", "#800026"],
+    PuRd: ["#f7f4f9", "#e7e1ef", "#d4b9da", "#c994c7", "#df65b0", "#e7298a", "#ce1256", "#980043", "#67001f"],
+    Blues: ["#f7fbff", "#deebf7", "#c6dbef", "#9ecae1", "#6baed6", "#4292c6", "#2171b5", "#08519c", "#08306b"],
+    PuBuGn: ["#fff7fb", "#ece2f0", "#d0d1e6", "#a6bddb", "#67a9cf", "#3690c0", "#02818a", "#016c59", "#014636"],
+    Viridis: ["#440154", "#482777", "#3f4a8a", "#31678e", "#26838f", "#1f9d8a", "#6cce5a", "#b6de2b", "#fee825"],
+    Spectral: [
+      "#9e0142",
+      "#d53e4f",
+      "#f46d43",
+      "#fdae61",
+      "#fee08b",
+      "#ffffbf",
+      "#e6f598",
+      "#abdda4",
+      "#66c2a5",
+      "#3288bd",
+      "#5e4fa2",
+    ],
+    RdYlGn: [
+      "#a50026",
+      "#d73027",
+      "#f46d43",
+      "#fdae61",
+      "#fee08b",
+      "#ffffbf",
+      "#d9ef8b",
+      "#a6d96a",
+      "#66bd63",
+      "#1a9850",
+      "#006837",
+    ],
+    RdBu: [
+      "#67001f",
+      "#b2182b",
+      "#d6604d",
+      "#f4a582",
+      "#fddbc7",
+      "#f7f7f7",
+      "#d1e5f0",
+      "#92c5de",
+      "#4393c3",
+      "#2166ac",
+      "#053061",
+    ],
+    PiYG: [
+      "#8e0152",
+      "#c51b7d",
+      "#de77ae",
+      "#f1b6da",
+      "#fde0ef",
+      "#f7f7f7",
+      "#e6f5d0",
+      "#b8e186",
+      "#7fbc41",
+      "#4d9221",
+      "#276419",
+    ],
+    PRGn: [
+      "#40004b",
+      "#762a83",
+      "#9970ab",
+      "#c2a5cf",
+      "#e7d4e8",
+      "#f7f7f7",
+      "#d9f0d3",
+      "#a6dba0",
+      "#5aae61",
+      "#1b7837",
+      "#00441b",
+    ],
+    RdYlBu: [
+      "#a50026",
+      "#d73027",
+      "#f46d43",
+      "#fdae61",
+      "#fee090",
+      "#ffffbf",
+      "#e0f3f8",
+      "#abd9e9",
+      "#74add1",
+      "#4575b4",
+      "#313695",
+    ],
+    BrBG: [
+      "#543005",
+      "#8c510a",
+      "#bf812d",
+      "#dfc27d",
+      "#f6e8c3",
+      "#f5f5f5",
+      "#c7eae5",
+      "#80cdc1",
+      "#35978f",
+      "#01665e",
+      "#003c30",
+    ],
+    RdGy: [
+      "#67001f",
+      "#b2182b",
+      "#d6604d",
+      "#f4a582",
+      "#fddbc7",
+      "#ffffff",
+      "#e0e0e0",
+      "#bababa",
+      "#878787",
+      "#4d4d4d",
+      "#1a1a1a",
+    ],
+    PuOr: [
+      "#7f3b08",
+      "#b35806",
+      "#e08214",
+      "#fdb863",
+      "#fee0b6",
+      "#f7f7f7",
+      "#d8daeb",
+      "#b2abd2",
+      "#8073ac",
+      "#542788",
+      "#2d004b",
+    ],
+    Set2: ["#66c2a5", "#fc8d62", "#8da0cb", "#e78ac3", "#a6d854", "#ffd92f", "#e5c494", "#b3b3b3"],
+    Accent: ["#7fc97f", "#beaed4", "#fdc086", "#ffff99", "#386cb0", "#f0027f", "#bf5b17", "#666666"],
+    Set1: ["#e41a1c", "#377eb8", "#4daf4a", "#984ea3", "#ff7f00", "#ffff33", "#a65628", "#f781bf", "#999999"],
+    Set3: [
+      "#8dd3c7",
+      "#ffffb3",
+      "#bebada",
+      "#fb8072",
+      "#80b1d3",
+      "#fdb462",
+      "#b3de69",
+      "#fccde5",
+      "#d9d9d9",
+      "#bc80bd",
+      "#ccebc5",
+      "#ffed6f",
+    ],
+    Dark2: ["#1b9e77", "#d95f02", "#7570b3", "#e7298a", "#66a61e", "#e6ab02", "#a6761d", "#666666"],
+    Paired: [
+      "#a6cee3",
+      "#1f78b4",
+      "#b2df8a",
+      "#33a02c",
+      "#fb9a99",
+      "#e31a1c",
+      "#fdbf6f",
+      "#ff7f00",
+      "#cab2d6",
+      "#6a3d9a",
+      "#ffff99",
+      "#b15928",
+    ],
+    Pastel2: ["#b3e2cd", "#fdcdac", "#cbd5e8", "#f4cae4", "#e6f5c9", "#fff2ae", "#f1e2cc", "#cccccc"],
+    Pastel1: ["#fbb4ae", "#b3cde3", "#ccebc5", "#decbe4", "#fed9a6", "#ffffcc", "#e5d8bd", "#fddaec", "#f2f2f2"],
+  };
   let keys = Object.keys(obj17);
   let num2 = 0;
   if (0 < keys.length) {
@@ -4144,7 +4493,7 @@ let fn = function n() {
           let _isNaN2 = isNaN;
           if (!isNaN(value[num3])) {
             let tmp13 = PI;
-            result1 = value[num3] / 180 * PI;
+            result1 = (value[num3] / 180) * PI;
             let tmp15 = closure_5;
             let tmp16 = cos;
             closure_5 = closure_5 + cos(result1) * tmp[0];
@@ -4170,7 +4519,7 @@ let fn = function n() {
               let tmp5 = lrgb;
               if ("h" === lrgb.charAt(num)) {
                 let tmp7 = closure_1_196;
-                result = value[num] / 180 * closure_1_196;
+                result = (value[num] / 180) * closure_1_196;
                 let tmp9 = closure_5;
                 let tmp10 = closure_1_197;
                 closure_5 = closure_5 + closure_1_197(result) * tmp4[arg1 + 1];
@@ -4194,7 +4543,7 @@ let fn = function n() {
           let tmp22 = closure_6;
           let tmp23 = closure_5;
           let tmp24 = PI;
-          result2 = atan2(closure_6 / items1[num5], closure_5 / items1[num5]) / PI * 180;
+          result2 = (atan2(closure_6 / items1[num5], closure_5 / items1[num5]) / PI) * 180;
           let tmp26 = result2;
           if (result2 < 0) {
             do {
@@ -4231,7 +4580,10 @@ let fn = function n() {
       fn = function a(arg0) {
         closure_0 = arg0;
         const items = [0, 1, 2];
-        return closure_1_204(items.map((arg0) => dependencyMap[arg0] + dependencyMap * (closure_1_1[arg0] - dependencyMap[arg0])), "lab");
+        return closure_1_204(
+          items.map((arg0) => dependencyMap[arg0] + dependencyMap * (closure_1_1[arg0] - dependencyMap[arg0])),
+          "lab",
+        );
       };
     } else if (3 === mapped.length) {
       const mapped2 = mapped.map((lab) => lab.lab());
@@ -4239,7 +4591,15 @@ let fn = function n() {
       fn = function a(arg0) {
         closure_0 = arg0;
         const items = [0, 1, 2];
-        return closure_1_204(items.map((arg0) => (1 - table) * (1 - table) * table[arg0] + 2 * (1 - table) * table * closure_1_1[arg0] + table * table * closure_1_2[arg0]), "lab");
+        return closure_1_204(
+          items.map(
+            (arg0) =>
+              (1 - table) * (1 - table) * table[arg0] +
+              2 * (1 - table) * table * closure_1_1[arg0] +
+              table * table * closure_1_2[arg0],
+          ),
+          "lab",
+        );
       };
     } else if (4 === mapped.length) {
       const mapped3 = mapped.map((lab) => lab.lab());
@@ -4247,7 +4607,16 @@ let fn = function n() {
       fn = function a(arg0) {
         closure_0 = arg0;
         const items = [0, 1, 2];
-        return closure_1_204(items.map((arg0) => (1 - table) * (1 - table) * (1 - table) * table[arg0] + 3 * (1 - table) * (1 - table) * table * closure_1_1[arg0] + 3 * (1 - table) * table * table * closure_1_2[arg0] + table * table * table * closure_1_3[arg0]), "lab");
+        return closure_1_204(
+          items.map(
+            (arg0) =>
+              (1 - table) * (1 - table) * (1 - table) * table[arg0] +
+              3 * (1 - table) * (1 - table) * table * closure_1_1[arg0] +
+              3 * (1 - table) * table * table * closure_1_2[arg0] +
+              table * table * table * closure_1_3[arg0],
+          ),
+          "lab",
+        );
       };
     } else if (mapped.length >= 5) {
       closure_4 = mapped.map((lab) => lab.lab());
@@ -4278,13 +4647,16 @@ let fn = function n() {
         closure_0 = arg0;
         closure_1 = 1 - arg0;
         const items = [0, 1, 2];
-        return closure_1_204(items.map((arg0) => {
-          closure_0 = arg0;
-          return closure_1_4.reduce((arg0, arg1, exponent) => {
-            result = closure_2_5[exponent] * Math.pow(closure_1_1, closure_2_6 - exponent);
-            return arg0 + result * Math.pow(closure_0, exponent) * arg1[closure_0];
-          }, 0);
-        }), "lab");
+        return closure_1_204(
+          items.map((arg0) => {
+            closure_0 = arg0;
+            return closure_1_4.reduce((arg0, arg1, exponent) => {
+              result = closure_2_5[exponent] * Math.pow(closure_1_1, closure_2_6 - exponent);
+              return arg0 + result * Math.pow(closure_0, exponent) * arg1[closure_0];
+            }, 0);
+          }),
+          "lab",
+        );
       };
     } else {
       const _RangeError = RangeError;
@@ -4328,7 +4700,7 @@ let fn = function n() {
       c5 = items1[1] - items1[0];
     } else {
       c5 = 0;
-      items1 = [, ];
+      items1 = [,];
       items1[0] = items1;
       items1[1] = items1;
     }
@@ -4341,10 +4713,15 @@ let fn = function n() {
         sum1 = dependencyMap;
       }
       result = closure_1_210 * sum;
-      result1 = sum1 * tmp3 * (1 - tmp3) / 2;
+      result1 = (sum1 * tmp3 * (1 - tmp3)) / 2;
       const tmp9 = closure_1_213(result);
       const tmp10 = closure_1_212(result);
-      const items = [255 * (tmp3 + result1 * (-0.14861 * tmp9 + 1.78277 * tmp10)), 255 * (tmp3 + result1 * (-0.29227 * tmp9 - 0.90649 * tmp10)), 255 * (tmp3 + result1 * (1.97294 * tmp9)), 1];
+      const items = [
+        255 * (tmp3 + result1 * (-0.14861 * tmp9 + 1.78277 * tmp10)),
+        255 * (tmp3 + result1 * (-0.29227 * tmp9 - 0.90649 * tmp10)),
+        255 * (tmp3 + result1 * (1.97294 * tmp9)),
+        1,
+      ];
       closure_1_209(items);
       return closure_1_214(items);
     };
@@ -4487,7 +4864,7 @@ let fn = function n() {
     const tmp21 = pow(result2, 2);
     const tmp24 = sqrt(pow(result3, 2) + pow(tmp8, 2));
     const result4 = (tmp22 + tmp24) / 2;
-    const result5 = 360 * atan2(tmp4, result2) / (2 * PI);
+    const result5 = (360 * atan2(tmp4, result2)) / (2 * PI);
     let sum1 = result5;
     const result6 = 360 * atan2(tmp8, result3);
     const result7 = 2 * PI;
@@ -4504,15 +4881,15 @@ let fn = function n() {
     } else {
       result9 = (sum1 + sum2) / 2;
     }
-    const result10 = 0.17 * cos(2 * tmp26 * (result9 - 30) / 360);
-    const result11 = 0.24 * cos(2 * tmp26 * (2 * result9) / 360);
-    const result12 = 0.32 * cos(2 * tmp26 * (3 * result9 + 6) / 360);
+    const result10 = 0.17 * cos((2 * tmp26 * (result9 - 30)) / 360);
+    const result11 = 0.24 * cos((2 * tmp26 * (2 * result9)) / 360);
+    const result12 = 0.32 * cos((2 * tmp26 * (3 * result9 + 6)) / 360);
     const diff = sum2 - sum1;
-    const result13 = 0.2 * cos(2 * tmp26 * (4 * result9 - 63) / 360);
+    const result13 = 0.2 * cos((2 * tmp26 * (4 * result9 - 63)) / 360);
     if (abs(diff) <= 180) {
       const diff1 = 1 - result10 + result11 + result12 - result13;
       const result14 = 2 * tmp10(tmp22 * tmp24);
-      const result15 = result14 * sin(2 * tmp26 * diff / 360 / 2);
+      const result15 = result14 * sin((2 * tmp26 * diff) / 360 / 2);
       const diff2 = tmp24 - tmp22;
       const diff3 = result - 50;
       const diff4 = tmp6 - tmp2;
@@ -4524,9 +4901,17 @@ let fn = function n() {
       let tmp11Result = tmp11(result4, 7);
       tmp11Result = tmp11(result4, 7);
       const result19 = -2 * tmp10(tmp11Result / (tmp11Result + tmp11(25, 7)));
-      const result20 = result19 * sin(2 * (2 * tmp26 * result18 / 360));
+      const result20 = result19 * sin(2 * ((2 * tmp26 * result18) / 360));
       const sum5 = tmp11(diff4 / (num * (1 + result17)), 2) + tmp11(diff2 / (num2 * sum3), 2);
-      return max(0, min(100, tmp10(sum5 + tmp11(result15 / (num3 * sum4), 2) + result20 * (diff2 / (num2 * sum3)) * (result15 / (num3 * sum4)))));
+      return max(
+        0,
+        min(
+          100,
+          tmp10(
+            sum5 + tmp11(result15 / (num3 * sum4), 2) + result20 * (diff2 / (num2 * sum3)) * (result15 / (num3 * sum4)),
+          ),
+        ),
+      );
     }
   };
   chroma$k.distance = (arg0, arg1, arg2) => {
@@ -4582,7 +4967,7 @@ let fn = function n() {
     },
     hot() {
       return scale$2(["#000", "#f00", "#ff0", "#fff"]).mode("rgb");
-    }
+    },
   };
   chroma$k.colors = obj9;
   chroma$k.brewer = obj17;

@@ -22,8 +22,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class ComposedGesture {
   constructor() {
@@ -88,7 +87,7 @@ let obj = {
       item10006.requireGesturesToFail = requireGesturesToFail;
       item10006.prepare();
     }
-  }
+  },
 };
 let items = [
   obj,
@@ -97,10 +96,14 @@ let items = [
     value: function prepare() {
       const self = this;
       for (const item10006 of tmp) {
-        let prepareSingleGestureResult = self.prepareSingleGesture(item10006, self.simultaneousGestures, self.requireGesturesToFail);
+        let prepareSingleGestureResult = self.prepareSingleGesture(
+          item10006,
+          self.simultaneousGestures,
+          self.requireGesturesToFail,
+        );
         continue;
       }
-    }
+    },
   },
   {
     key: "initialize",
@@ -109,15 +112,15 @@ let items = [
         let initializeResult = item10006.initialize();
         continue;
       }
-    }
+    },
   },
   {
     key: "toGestureArray",
     value: function toGestureArray() {
       const gestures = this.gestures;
       return gestures.flatMap((toGestureArray) => toGestureArray.toGestureArray());
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(ComposedGesture, items);
 class SimultaneousGesture {
@@ -151,12 +154,16 @@ obj = {
     let num = 0;
     if (0 < this.gestures.length) {
       do {
-        let prepareSingleGestureResult = self.prepareSingleGesture(self.gestures[num], tmp[num], self.requireGesturesToFail);
+        let prepareSingleGestureResult = self.prepareSingleGesture(
+          self.gestures[num],
+          tmp[num],
+          self.requireGesturesToFail,
+        );
         num = num + 1;
         length = self.gestures.length;
       } while (num < length);
     }
-  }
+  },
 };
 let items1 = [obj];
 class ExclusiveGesture {
@@ -190,13 +197,17 @@ obj = {
     if (0 < this.gestures.length) {
       do {
         let requireGesturesToFail = self.requireGesturesToFail;
-        let prepareSingleGestureResult = self.prepareSingleGesture(self.gestures[num], self.simultaneousGestures, requireGesturesToFail.concat(items));
+        let prepareSingleGestureResult = self.prepareSingleGesture(
+          self.gestures[num],
+          self.simultaneousGestures,
+          requireGesturesToFail.concat(items),
+        );
         items = items.concat(tmp[num]);
         num = num + 1;
         length = self.gestures.length;
       } while (num < length);
     }
-  }
+  },
 };
 let items2 = [obj];
 

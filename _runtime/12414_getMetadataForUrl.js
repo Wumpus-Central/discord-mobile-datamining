@@ -69,8 +69,7 @@ arg5.addMetadataToStackFrames = function addMetadataToStackFrames(arg0, exceptio
         }
       }
     });
-  } catch (err) {
-  }
+  } catch (err) {}
 };
 arg5.getMetadataForUrl = getMetadataForUrl;
 arg5.stripMetadataFromStackFrames = function stripMetadataFromStackFrames(exception) {
@@ -87,6 +86,5 @@ arg5.stripMetadataFromStackFrames = function stripMetadataFromStackFrames(except
         }
       }
     });
-  } catch (err) {
-  }
+  } catch (err) {}
 };

@@ -3,7 +3,7 @@ import closure_2 from "00005_asyncGeneratorStep.js";
 
 function _diagnoseSdkConnectivity() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (v0 === 2) {
       v0 = 3;
       HermesBuiltin.throwTypeError();
@@ -35,14 +35,17 @@ function _diagnoseSdkConnectivity() {
               if (client.getDsn()) {
                 let str = client.getOptions().tunnel;
                 if (!str) {
-                  str = "https://o447951.ingest.sentry.io/api/4509632503087104/envelope/?sentry_version=7&sentry_key=c1dfb07d783ad5325c245c1fd3725390&sentry_client=sentry.javascript.browser%2F1.33.7";
+                  str =
+                    "https://o447951.ingest.sentry.io/api/4509632503087104/envelope/?sentry_version=7&sentry_key=c1dfb07d783ad5325c245c1fd3725390&sentry_client=sentry.javascript.browser%2F1.33.7";
                 }
                 v0 = str;
                 c2 = 1;
                 table = 2;
                 v0 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = tmp14(tmp15[1]).suppressTracing(() => fetch(c0, { body: "{}", method: "POST", mode: "cors", credentials: "omit" }));
+                obj1[0] = tmp14(tmp15[1]).suppressTracing(() =>
+                  fetch(c0, { body: "{}", method: "POST", mode: "cors", credentials: "omit" }),
+                );
                 return obj1;
               } else {
                 v0 = 3;

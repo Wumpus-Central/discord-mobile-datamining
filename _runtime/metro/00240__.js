@@ -1,18 +1,12 @@
 // _runtime/metro/00240__.js
 arg5.default = {
-  setup() {
-
-  },
+  setup() {},
   enable() {
-    console.error("Fast Refresh is disabled in JavaScript bundles built in production mode. Did you forget to run Metro?");
+    console.error(
+      "Fast Refresh is disabled in JavaScript bundles built in production mode. Did you forget to run Metro?",
+    );
   },
-  disable() {
-
-  },
-  registerBundle() {
-
-  },
-  log() {
-
-  }
+  disable() {},
+  registerBundle() {},
+  log() {},
 };

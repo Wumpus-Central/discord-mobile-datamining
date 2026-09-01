@@ -10,4 +10,4 @@ function subscribe(onChange) {
 
 export default function useColorScheme() {
   return useSyncExternalStore(subscribe, getColorScheme.getColorScheme);
-};
+}

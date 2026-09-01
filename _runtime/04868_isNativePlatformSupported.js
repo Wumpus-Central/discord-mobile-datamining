@@ -16,7 +16,9 @@ export const enableScreens = function enableScreens() {
   }
   if (flag) {
     const _console = console;
-    console.error("Screen native module hasn't been linked. Please check the react-native-screens README for more details");
+    console.error(
+      "Screen native module hasn't been linked. Please check the react-native-screens README for more details",
+    );
   }
 };
 export function enableFreeze() {

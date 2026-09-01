@@ -143,4 +143,4 @@ export default function resolvePathname(str) {
   } else {
     return "/";
   }
-};
+}

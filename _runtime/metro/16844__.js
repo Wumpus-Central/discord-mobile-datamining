@@ -10,5 +10,5 @@ globalThis.IntlMessageFormat.__addLocaleData({
       }
     }
     return str;
-  }
+  },
 });

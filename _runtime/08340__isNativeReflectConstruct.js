@@ -29,8 +29,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 noopAll;
 class TSpan {
@@ -63,7 +62,10 @@ class TSpan {
       }
       const propsAndStylesResult = lib(closure_1_2[8]).propsAndStyles(matrix);
       const obj = lib(closure_1_2[8]);
-      const merged = Object.assign(propsAndStylesResult, lib(closure_1_2[9]).pickNotNil(closure_1_1(closure_1_2[10])(propsAndStylesResult, false)));
+      const merged = Object.assign(
+        propsAndStylesResult,
+        lib(closure_1_2[9]).pickNotNil(closure_1_1(closure_1_2[10])(propsAndStylesResult, false)),
+      );
       if (lib.root) {
         const root = lib.root;
         root.setNativeProps(propsAndStylesResult);
@@ -90,8 +92,8 @@ let items = [
       const tmp2 = extractPropsDefault;
       const merged2 = Object.assign(tmp2Result);
       return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(TSpan, items);
 importDefaultResultResult.displayName = "TSpan";

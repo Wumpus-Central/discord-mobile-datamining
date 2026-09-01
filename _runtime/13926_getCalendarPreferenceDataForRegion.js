@@ -15,19 +15,25 @@ arg5.getCalendarPreferenceDataForRegion = function getCalendarPreferenceDataForR
   if (!str) {
     str = "";
   }
-  return _mod13927.calendars[str] || _mod13927.calendars["001"].map((arg0) => {
-    let str = "gregory";
-    if ("gregorian" !== arg0) {
-      let str2 = "islamicc";
-      if ("islamic-civil" !== arg0) {
-        str2 = arg0;
+  return (
+    _mod13927.calendars[str] ||
+    _mod13927.calendars["001"].map((arg0) => {
+      let str = "gregory";
+      if ("gregorian" !== arg0) {
+        let str2 = "islamicc";
+        if ("islamic-civil" !== arg0) {
+          str2 = arg0;
+        }
+        str = str2;
       }
-      str = str2;
-    }
-    return str;
-  });
+      return str;
+    })
+  );
 };
-arg5.getHourCyclesPreferenceDataForLocaleOrRegion = function getHourCyclesPreferenceDataForLocaleOrRegion(locale, region) {
+arg5.getHourCyclesPreferenceDataForLocaleOrRegion = function getHourCyclesPreferenceDataForLocaleOrRegion(
+  locale,
+  region,
+) {
   const formatted = locale.toLowerCase();
   let str = "";
   if (region) {

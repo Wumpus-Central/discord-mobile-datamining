@@ -20,20 +20,26 @@ function maybeExtractNativeEvent(nativeEvent) {
 }
 maybeExtractNativeEvent.__closure = { isNativeEvent };
 maybeExtractNativeEvent.__workletHash = 9418753326359;
-maybeExtractNativeEvent.__initData = { code: "function maybeExtractNativeEvent_Pnpm_eventUtilsTs2(event){const{isNativeEvent}=this.__closure;return isNativeEvent(event)?event.nativeEvent:event;}" };
+maybeExtractNativeEvent.__initData = {
+  code: "function maybeExtractNativeEvent_Pnpm_eventUtilsTs2(event){const{isNativeEvent}=this.__closure;return isNativeEvent(event)?event.nativeEvent:event;}",
+};
 function flattenAndFilterEvent(handlerTag) {
   const merged = Object.assign(handlerTag.handlerData);
   return { handlerTag: handlerTag.handlerTag };
 }
 flattenAndFilterEvent.__closure = {};
 flattenAndFilterEvent.__workletHash = 12741778497058;
-flattenAndFilterEvent.__initData = { code: "function flattenAndFilterEvent_Pnpm_eventUtilsTs3(event){return{handlerTag:event.handlerTag,...event.handlerData};}" };
+flattenAndFilterEvent.__initData = {
+  code: "function flattenAndFilterEvent_Pnpm_eventUtilsTs3(event){return{handlerTag:event.handlerTag,...event.handlerData};}",
+};
 function isEventForHandlerWithTag(arg0, result) {
   return result.handlerTag === arg0;
 }
 isEventForHandlerWithTag.__closure = {};
 isEventForHandlerWithTag.__workletHash = 11134871115176;
-isEventForHandlerWithTag.__initData = { code: "function isEventForHandlerWithTag_Pnpm_eventUtilsTs4(handlerTag,event){return event.handlerTag===handlerTag;}" };
+isEventForHandlerWithTag.__initData = {
+  code: "function isEventForHandlerWithTag_Pnpm_eventUtilsTs4(handlerTag,event){return event.handlerTag===handlerTag;}",
+};
 function isNativeAnimatedEvent(onUpdate) {
   let tmp = onUpdate;
   if (tmp) {
@@ -43,8 +49,12 @@ function isNativeAnimatedEvent(onUpdate) {
 }
 isNativeAnimatedEvent.__closure = {};
 isNativeAnimatedEvent.__workletHash = 3439774750008;
-isNativeAnimatedEvent.__initData = { code: "function isNativeAnimatedEvent_Pnpm_eventUtilsTs5(callback){return!!callback&&'_argMapping'in callback;}" };
-let closure_3 = { code: "function pnpm_eventUtilsTs7(current,previous){const{diffCalculator}=this.__closure;const currentEventData=current.handlerData;const previousEventData=previous?previous.handlerData:null;const changePayload=diffCalculator(currentEventData,previousEventData);current.handlerData={...currentEventData,...changePayload};return current;}" };
+isNativeAnimatedEvent.__initData = {
+  code: "function isNativeAnimatedEvent_Pnpm_eventUtilsTs5(callback){return!!callback&&'_argMapping'in callback;}",
+};
+let closure_3 = {
+  code: "function pnpm_eventUtilsTs7(current,previous){const{diffCalculator}=this.__closure;const currentEventData=current.handlerData;const previousEventData=previous?previous.handlerData:null;const changePayload=diffCalculator(currentEventData,previousEventData);current.handlerData={...currentEventData,...changePayload};return current;}",
+};
 function getChangeEventCalculator(diffCalculator) {
   closure_0 = diffCalculator;
   const fn = function t(handlerData, handlerData2) {
@@ -65,7 +75,9 @@ function getChangeEventCalculator(diffCalculator) {
 }
 getChangeEventCalculator.__closure = {};
 getChangeEventCalculator.__workletHash = 1165584403675;
-getChangeEventCalculator.__initData = { code: "function getChangeEventCalculator_Pnpm_eventUtilsTs6(diffCalculator){return function(current,previous){'worklet';const currentEventData=current.handlerData;const previousEventData=previous?previous.handlerData:null;const changePayload=diffCalculator(currentEventData,previousEventData);current.handlerData={...currentEventData,...changePayload};return current;};}" };
+getChangeEventCalculator.__initData = {
+  code: "function getChangeEventCalculator_Pnpm_eventUtilsTs6(diffCalculator){return function(current,previous){'worklet';const currentEventData=current.handlerData;const previousEventData=previous?previous.handlerData:null;const changePayload=diffCalculator(currentEventData,previousEventData);current.handlerData={...currentEventData,...changePayload};return current;};}",
+};
 function isTouchEvent(arg0) {
   return "allTouches" in arg0;
 }
@@ -81,7 +93,9 @@ function isStateChangeEvent(oldState) {
 }
 isStateChangeEvent.__closure = {};
 isStateChangeEvent.__workletHash = 7295971713196;
-isStateChangeEvent.__initData = { code: "function isStateChangeEvent_Pnpm_eventUtilsTs9(event){return'oldState'in event&&event.oldState!==undefined;}" };
+isStateChangeEvent.__initData = {
+  code: "function isStateChangeEvent_Pnpm_eventUtilsTs9(event){return'oldState'in event&&event.oldState!==undefined;}",
+};
 arg5.maybeExtractNativeEvent = maybeExtractNativeEvent;
 arg5.flattenAndFilterEvent = flattenAndFilterEvent;
 arg5.isEventForHandlerWithTag = isEventForHandlerWithTag;
@@ -126,7 +140,12 @@ arg5.checkMappingForChangeProperties = function checkMappingForChangeProperties(
   }
 };
 arg5.shouldHandleTouchEvents = function shouldHandleTouchEvents(onTouchesDown) {
-  return onTouchesDown.onTouchesDown || onTouchesDown.onTouchesMove || onTouchesDown.onTouchesUp || onTouchesDown.onTouchesCancel;
+  return (
+    onTouchesDown.onTouchesDown ||
+    onTouchesDown.onTouchesMove ||
+    onTouchesDown.onTouchesUp ||
+    onTouchesDown.onTouchesCancel
+  );
 };
 arg5.getChangeEventCalculator = getChangeEventCalculator;
 arg5.isTouchEvent = isTouchEvent;

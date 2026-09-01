@@ -24,8 +24,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 let c5 = importAllResult;
 ({ Appearance: closure_6, Image: error, Text: closure_8, TouchableOpacity: c9 } = get_ActivityIndicator);
@@ -60,7 +59,7 @@ let items = [
       this._themeListener = closure_6.addChangeListener(() => {
         self.forceUpdate();
       });
-    }
+    },
   },
   {
     key: "componentWillUnmount",
@@ -69,7 +68,7 @@ let items = [
         const _themeListener = this._themeListener;
         _themeListener.remove();
       }
-    }
+    },
   },
   {
     key: "render",
@@ -116,9 +115,16 @@ let items = [
       obj[0] = obj1;
       obj[1] = merged6;
       const element = <closure_7 source={null} style={null} />;
-      return <closure_9 source={null} style={null}>{element}<closure_8 style={style} testID="sentry-feedback-button">{merged.triggerLabel}</closure_8></closure_9>;
-    }
-  }
+      return (
+        <closure_9 source={null} style={null}>
+          {element}
+          <closure_8 style={style} testID="sentry-feedback-button">
+            {merged.triggerLabel}
+          </closure_8>
+        </closure_9>
+      );
+    },
+  },
 ];
 
 export const FeedbackButton = importDefaultResult(FeedbackButton, items);

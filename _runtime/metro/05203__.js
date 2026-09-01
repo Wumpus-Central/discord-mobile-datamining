@@ -13,7 +13,15 @@ arg5.default = {
       obj[1] = "" + longAt + "px";
       tmp = obj;
     }
-    obj = { "Image Width": tmp, "Image Height": null, "Bit Depth": null, "Color Type": null, Compression: null, Filter: null, Interlace: null };
+    obj = {
+      "Image Width": tmp,
+      "Image Height": null,
+      "Bit Depth": null,
+      "Color Type": null,
+      Compression: null,
+      Filter: null,
+      Interlace: null,
+    };
     let tmp6;
     if (sum + 4 + 4 <= byteLength.byteLength) {
       let obj3 = module(5174);
@@ -41,7 +49,9 @@ arg5.default = {
       const byteAt1 = module(5174).getByteAt(byteLength, sum + 9);
       obj3 = { value: null, description: null };
       obj3[0] = byteAt1;
-      obj3[1] = { 0: "Grayscale", 2: "RGB", 3: "Palette", 4: "Grayscale with Alpha", 6: "RGB with Alpha" }[byteAt1] || "Unknown";
+      obj3[1] =
+        { 0: "Grayscale", 2: "RGB", 3: "Palette", 4: "Grayscale with Alpha", 6: "RGB with Alpha" }[byteAt1] ||
+        "Unknown";
       tmp16 = obj3;
       const obj8 = module(5174);
     }
@@ -85,5 +95,5 @@ arg5.default = {
     }
     obj[6] = tmp28;
     return obj;
-  }
+  },
 };

@@ -30,10 +30,10 @@ import logEnricherIntegration from "01173_logEnricherIntegration.js";
 import graphqlIntegration from "01174_graphqlIntegration.js";
 import supabaseIntegration from "01175_supabaseIntegration.js";
 
-
 export const debugSymbolicatorIntegration = processEvent.debugSymbolicatorIntegration;
 export const deviceContextIntegration = processEvent2.deviceContextIntegration;
-export const reactNativeErrorHandlersIntegration = reactNativeErrorHandlersIntegration.reactNativeErrorHandlersIntegration;
+export const reactNativeErrorHandlersIntegration =
+  reactNativeErrorHandlersIntegration.reactNativeErrorHandlersIntegration;
 export const nativeLinkedErrorsIntegration = walkErrorTree.nativeLinkedErrorsIntegration;
 export const nativeReleaseIntegration = processEvent3.nativeReleaseIntegration;
 export const eventOriginIntegration = eventOriginIntegration.eventOriginIntegration;

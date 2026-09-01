@@ -4,7 +4,6 @@ import importDefaultResult1 from "05751_importDefaultResult1.js";
 import hitSlopDefault from "05752_hitSlop.js";
 import Touchable from "05763_Touchable.js";
 
-
 export const BaseButton = Animated.BaseButton;
 export const BorderlessButton = Animated.BorderlessButton;
 export const PureNativeButton = Animated.PureNativeButton;

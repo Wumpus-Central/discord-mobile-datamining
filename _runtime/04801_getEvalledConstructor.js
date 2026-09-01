@@ -10,6 +10,7 @@ if (!isArray) {
 }
 let closure_0 = tmp2;
 
-export default tmp.isArray || (function IsArray(arg0) {
-  return "[object Array]" === callback(arg0);
-});
+export default tmp.isArray ||
+  function IsArray(arg0) {
+    return "[object Array]" === callback(arg0);
+  };

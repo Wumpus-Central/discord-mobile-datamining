@@ -39,5 +39,9 @@ export const Freeze = function Freeze(placeholder) {
   if (placeholder === undefined) {
     placeholder = null;
   }
-  return <closure_0 fallback={placeholder}><Suspender freeze={freeze}>{children}</Suspender></closure_0>;
+  return (
+    <closure_0 fallback={placeholder}>
+      <Suspender freeze={freeze}>{children}</Suspender>
+    </closure_0>
+  );
 };

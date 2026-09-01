@@ -34,7 +34,7 @@ export default function OverlayCreator() {
           closure_0.emit("overlay", type.payload);
         }
       },
-      features: obj
+      features: obj,
     };
     obj = {
       overlay(arg0) {
@@ -51,8 +51,8 @@ export default function OverlayCreator() {
           obj[1] = items;
           return <RN.View />;
         };
-      }
+      },
     };
     return obj;
   };
-};
+}

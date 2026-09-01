@@ -98,7 +98,10 @@ function transformPanProps(activeOffsetY) {
     activeOffsetY["" + "activeOffsetY" + "Start"] = str;
   }
 }
-const items = [["minDistance", "minDist"], ["averageTouches", "avgTouches"]];
+const items = [
+  ["minDistance", "minDist"],
+  ["averageTouches", "avgTouches"],
+];
 const map = new Map(items);
 function diffCalculator(translationX, translationX2) {
   translationX = translationX.translationX;
@@ -119,14 +122,18 @@ function diffCalculator(translationX, translationX2) {
 }
 diffCalculator.__closure = {};
 diffCalculator.__workletHash = 4211053881938;
-diffCalculator.__initData = { code: "function diffCalculator_Pnpm_usePanGestureTs1(current,previous){return{changeX:previous?current.translationX-previous.translationX:current.translationX,changeY:previous?current.translationY-previous.translationY:current.translationY};}" };
+diffCalculator.__initData = {
+  code: "function diffCalculator_Pnpm_usePanGestureTs1(current,previous){return{changeX:previous?current.translationX-previous.translationX:current.translationX,changeY:previous?current.translationY-previous.translationY:current.translationY};}",
+};
 function fillInDefaultValues(arg0) {
   arg0.changeX = 0;
   arg0.changeY = 0;
 }
 fillInDefaultValues.__closure = {};
 fillInDefaultValues.__workletHash = 12221662243929;
-fillInDefaultValues.__initData = { code: "function fillInDefaultValues_Pnpm_usePanGestureTs2(event){event.changeX=0;event.changeY=0;}" };
+fillInDefaultValues.__initData = {
+  code: "function fillInDefaultValues_Pnpm_usePanGestureTs2(event){event.changeX=0;event.changeY=0;}",
+};
 let closure_6 = {};
 arg5.usePanGesture = function usePanGesture(gestureHandlerProps) {
   let tmp = gestureHandlerProps;

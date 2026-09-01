@@ -59,6 +59,7 @@ export const BottomSheetFooterContainer = BottomSheetFooter.BottomSheetFooterCon
 export const TouchableHighlight = TouchableOpacityDefault.TouchableHighlight;
 export const TouchableOpacity = TouchableOpacityDefault.TouchableOpacity;
 export const TouchableWithoutFeedback = TouchableOpacityDefault.TouchableWithoutFeedback;
-export const createBottomSheetScrollableComponent = createBottomSheetScrollableComponent.createBottomSheetScrollableComponent;
+export const createBottomSheetScrollableComponent =
+  createBottomSheetScrollableComponent.createBottomSheetScrollableComponent;
 export const getKeyboardAnimationConfigs = normalizeSnapPoint.getKeyboardAnimationConfigs;
 export const enableLogging = print.enableLogging;

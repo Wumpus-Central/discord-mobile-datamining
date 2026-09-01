@@ -36,7 +36,7 @@ let obj = {
     }
     payload[2] = tmp;
     return { type: "POP_TO", payload };
-  }
+  },
 };
 arg5.StackActions = obj;
 arg5.StackRouter = function StackRouter(arg0) {
@@ -126,7 +126,15 @@ arg5.StackRouter = function StackRouter(arg0) {
         mapped1 = [];
       }
       if (0 !== mapped.length) {
-        obj = { stale: false, type: "stack", key: null, index: null, routeNames: null, routes: null, preloadedRoutes: null };
+        obj = {
+          stale: false,
+          type: "stack",
+          key: null,
+          index: null,
+          routeNames: null,
+          routes: null,
+          preloadedRoutes: null,
+        };
         const _HermesInternal2 = HermesInternal;
         obj[2] = "stack-" + lib(obj[1]).nanoid();
         obj[3] = mapped.length - 1;
@@ -301,20 +309,22 @@ arg5.StackRouter = function StackRouter(arg0) {
               }
               closure_11 = tmp62Result;
               const preloadedRoutes2 = key.preloadedRoutes;
-              if (preloadedRoutes2.find((name) => {
-                let tmp = name.name === type.payload.name;
-                if (tmp) {
-                  let tmp3Result;
-                  if (closure_10 != null) {
-                    obj = { params: null };
-                    obj[0] = name.params;
-                    tmp3Result = tmp3(obj);
+              if (
+                preloadedRoutes2.find((name) => {
+                  let tmp = name.name === type.payload.name;
+                  if (tmp) {
+                    let tmp3Result;
+                    if (closure_10 != null) {
+                      obj = { params: null };
+                      obj[0] = name.params;
+                      tmp3Result = tmp3(obj);
+                    }
+                    tmp = closure_11 === tmp3Result;
+                    const tmp2 = closure_11;
                   }
-                  tmp = closure_11 === tmp3Result;
-                  const tmp2 = closure_11;
-                }
-                return tmp;
-              })) {
+                  return tmp;
+                })
+              ) {
                 return null;
               } else {
                 if (undefined !== tmp62Result) {

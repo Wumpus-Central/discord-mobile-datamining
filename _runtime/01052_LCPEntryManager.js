@@ -17,8 +17,8 @@ const items = [
       if (_onBeforeProcessingEntry != null) {
         const result = _onBeforeProcessingEntry(arg0);
       }
-    }
-  }
+    },
+  },
 ];
 
 export const LCPEntryManager = _createClass(LCPEntryManager, items);

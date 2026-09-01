@@ -25,8 +25,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 noopAll;
 let obj = { UNDETERMINED: 0, BEGAN: 1, MOVED_OUTSIDE: 2 };
@@ -123,11 +122,14 @@ obj = {
     }
     if (self.props.onLongPress) {
       const _setTimeout2 = setTimeout;
-      self.longPressTimeout = setTimeout(self.onLongPressDetected, (self.props.delayPressIn || 0) + (self.props.delayLongPress || 0));
+      self.longPressTimeout = setTimeout(
+        self.onLongPressDetected,
+        (self.props.delayPressIn || 0) + (self.props.delayLongPress || 0),
+      );
       const tmp4 = self.props.delayPressIn || 0;
       const tmp5 = self.props.delayLongPress || 0;
     }
-  }
+  },
 };
 let items = [
   obj,
@@ -149,7 +151,7 @@ let items = [
       } else {
         self.moveToState(obj.MOVED_OUTSIDE);
       }
-    }
+    },
   },
   {
     key: "handleGoToUndetermined",
@@ -172,13 +174,13 @@ let items = [
         }
         self.moveToState(obj.UNDETERMINED);
       }
-    }
+    },
   },
   {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.reset();
-    }
+    },
   },
   {
     key: "reset",
@@ -190,7 +192,7 @@ let items = [
       obj.pressOutTimeout = undefined;
       obj.longPressTimeout = undefined;
       obj.pressInTimeout = undefined;
-    }
+    },
   },
   {
     key: "moveToState",
@@ -226,13 +228,13 @@ let items = [
         }
         self.STATE = BEGAN;
       }
-    }
+    },
   },
   {
     key: "componentWillUnmount",
     value: function componentWillUnmount() {
       this.reset();
-    }
+    },
   },
   {
     key: "onMoveIn",
@@ -241,7 +243,7 @@ let items = [
       if (this.STATE === obj.MOVED_OUTSIDE) {
         self.moveToState(tmp.BEGAN);
       }
-    }
+    },
   },
   {
     key: "onMoveOut",
@@ -252,7 +254,7 @@ let items = [
       if (this.STATE === obj.BEGAN) {
         self.handleMoveOutside();
       }
-    }
+    },
   },
   {
     key: "render",
@@ -268,8 +270,29 @@ let items = [
       } else {
         hitSlop = self.props.hitSlop;
       }
-      obj = { accessible: false !== self.props.accessible, accessibilityLabel: self.props.accessibilityLabel, accessibilityHint: self.props.accessibilityHint, accessibilityRole: self.props.accessibilityRole, accessibilityState: self.props.accessibilityState, accessibilityActions: self.props.accessibilityActions, onAccessibilityAction: self.props.onAccessibilityAction, nativeID: self.props.nativeID, onLayout: self.props.onLayout };
-      obj = { style: self.props.containerStyle, onHandlerStateChange: null, onGestureEvent: null, hitSlop: null, userSelect: null, shouldActivateOnStart: null, disallowInterruption: null, testID: null, touchSoundDisabled: null, enabled: null };
+      obj = {
+        accessible: false !== self.props.accessible,
+        accessibilityLabel: self.props.accessibilityLabel,
+        accessibilityHint: self.props.accessibilityHint,
+        accessibilityRole: self.props.accessibilityRole,
+        accessibilityState: self.props.accessibilityState,
+        accessibilityActions: self.props.accessibilityActions,
+        onAccessibilityAction: self.props.onAccessibilityAction,
+        nativeID: self.props.nativeID,
+        onLayout: self.props.onLayout,
+      };
+      obj = {
+        style: self.props.containerStyle,
+        onHandlerStateChange: null,
+        onGestureEvent: null,
+        hitSlop: null,
+        userSelect: null,
+        shouldActivateOnStart: null,
+        disallowInterruption: null,
+        testID: null,
+        touchSoundDisabled: null,
+        enabled: null,
+      };
       let onHandlerStateChange;
       if (!self.props.disabled) {
         onHandlerStateChange = self.onHandlerStateChange;
@@ -293,12 +316,26 @@ let items = [
       obj1.style = self.props.style;
       obj1.children = self.props.children;
       obj.children = <Animated.View />;
-      return jsx(GenericTouchable(5765).LegacyBaseButton, { style: self.props.containerStyle, onHandlerStateChange: null, onGestureEvent: null, hitSlop: null, userSelect: null, shouldActivateOnStart: null, disallowInterruption: null, testID: null, touchSoundDisabled: null, enabled: null });
-    }
-  }
+      return jsx(GenericTouchable(5765).LegacyBaseButton, {
+        style: self.props.containerStyle,
+        onHandlerStateChange: null,
+        onGestureEvent: null,
+        hitSlop: null,
+        userSelect: null,
+        shouldActivateOnStart: null,
+        disallowInterruption: null,
+        testID: null,
+        touchSoundDisabled: null,
+        enabled: null,
+      });
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(GenericTouchable, items);
-importDefaultResultResult.defaultProps = { delayLongPress: 600, extraButtonProps: { rippleColor: "transparent", exclusive: true } };
+importDefaultResultResult.defaultProps = {
+  delayLongPress: 600,
+  extraButtonProps: { rippleColor: "transparent", exclusive: true },
+};
 
 export default importDefaultResultResult;
 export const TOUCHABLE_STATE = obj;

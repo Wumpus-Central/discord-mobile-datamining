@@ -42,7 +42,9 @@ export const useOnPreventRemove = function useOnPreventRemove(getState) {
     if (key) {
       let tmp2Result;
       if (addKeyedListener != null) {
-        tmp2Result = tmp2("beforeRemove", tmp, (arg0) => closure_1_4(closure_1, closure_2, callback().routes, [], arg0));
+        tmp2Result = tmp2("beforeRemove", tmp, (arg0) =>
+          closure_1_4(closure_1, closure_2, callback().routes, [], arg0),
+        );
       }
       return tmp2Result;
     }

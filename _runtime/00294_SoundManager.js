@@ -7,5 +7,5 @@ arg5.default = {
       module(295).playTouchSound();
       const tmpResult = module(295);
     }
-  }
+  },
 };

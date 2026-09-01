@@ -25,7 +25,14 @@ export default function useAndroidRippleForView(arg0, arg1) {
         }
       }
     }
-    let obj = { type: "RippleAndroid", color: color(borderless[1])(color), borderless: true === borderless, rippleRadius: radius, rippleCornerRadius: closure_4, alpha: null };
+    let obj = {
+      type: "RippleAndroid",
+      color: color(borderless[1])(color),
+      borderless: true === borderless,
+      rippleRadius: radius,
+      rippleCornerRadius: closure_4,
+      alpha: null,
+    };
     let tmp4 = alpha;
     if (alpha == null) {
       tmp4 = null;
@@ -80,7 +87,7 @@ export default function useAndroidRippleForView(arg0, arg1) {
           const Commands = closure_1_0(closure_1_2[2]).Commands;
           Commands.setPressed(current, false);
         }
-      }
+      },
     };
   }, items);
-};
+}

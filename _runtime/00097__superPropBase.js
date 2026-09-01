@@ -1,7 +1,6 @@
 // _runtime/00097__superPropBase.js
 import _getPrototypeOf from "00095__getPrototypeOf.js";
 
-
 export default function _superPropBase(arg0, key10009) {
   const hasOwnProperty = {}.hasOwnProperty;
   const call = hasOwnProperty.call;
@@ -30,4 +29,4 @@ export default function _superPropBase(arg0, key10009) {
     }
   }
   return tmp;
-};
+}

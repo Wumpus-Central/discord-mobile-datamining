@@ -6,7 +6,9 @@ import noop from "00019_noop.js";
 ({ useMemo: c3, forwardRef } = noop);
 noopDefault;
 const jsx = jsxProd.jsx;
-let closure_5 = { code: "function pnpm_indexTsx1(){const{interpolate,progress,closed,opened,enabled,height}=this.__closure;const offset=interpolate(progress.value,[0,1],[closed,opened]);return{transform:[{translateY:enabled?height.value+offset:closed}]};}" };
+let closure_5 = {
+  code: "function pnpm_indexTsx1(){const{interpolate,progress,closed,opened,enabled,height}=this.__closure;const offset=interpolate(progress.value,[0,1],[closed,opened]);return{transform:[{translateY:enabled?height.value+offset:closed}]};}",
+};
 
 export default forwardRef((offset, ref) => {
   offset = offset.offset;
@@ -57,7 +59,7 @@ export default forwardRef((offset, ref) => {
     style: flag(() => {
       const items = [style, animatedStyle];
       return items;
-    }, items1)
+    }, items1),
   };
   const merged1 = Object.assign(merged);
   obj.children = offset.children;

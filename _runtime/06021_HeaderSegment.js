@@ -6,7 +6,31 @@ import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import { jsx } from "react/00021_jsxProd.js";
 
 const require = arg1;
-let closure_2 = ["progress", "layout", "modal", "onGoBack", "backHref", "headerTitle", "headerLeft", "headerRight", "headerBackImage", "headerBackTitle", "headerBackButtonDisplayMode", "headerBackTruncatedTitle", "headerBackAccessibilityLabel", "headerBackTestID", "headerBackAllowFontScaling", "headerBackTitleStyle", "headerTitleContainerStyle", "headerLeftContainerStyle", "headerRightContainerStyle", "headerBackgroundContainerStyle", "headerStyle", "headerStatusBarHeight", "styleInterpolator"];
+let closure_2 = [
+  "progress",
+  "layout",
+  "modal",
+  "onGoBack",
+  "backHref",
+  "headerTitle",
+  "headerLeft",
+  "headerRight",
+  "headerBackImage",
+  "headerBackTitle",
+  "headerBackButtonDisplayMode",
+  "headerBackTruncatedTitle",
+  "headerBackAccessibilityLabel",
+  "headerBackTestID",
+  "headerBackAllowFontScaling",
+  "headerBackTitleStyle",
+  "headerTitleContainerStyle",
+  "headerLeftContainerStyle",
+  "headerRightContainerStyle",
+  "headerBackgroundContainerStyle",
+  "headerStyle",
+  "headerStatusBarHeight",
+  "styleInterpolator",
+];
 ({ Platform, StyleSheet: closure_6 } = get_ActivityIndicator);
 
 export const HeaderSegment = function HeaderSegment(progress) {
@@ -66,8 +90,18 @@ export const HeaderSegment = function HeaderSegment(progress) {
   if (undefined !== headerBackButtonDisplayMode) {
     str = headerBackButtonDisplayMode;
   }
-  ({ headerBackTruncatedTitle: closure_16, headerBackAccessibilityLabel: closure_17, headerBackTestID: closure_18, headerBackAllowFontScaling: closure_19, headerBackTitleStyle: closure_20, headerStyle, headerStatusBarHeight, styleInterpolator } = progress);
-  ({ headerTitleContainerStyle, headerLeftContainerStyle, headerRightContainerStyle, headerBackgroundContainerStyle } = progress);
+  ({
+    headerBackTruncatedTitle: closure_16,
+    headerBackAccessibilityLabel: closure_17,
+    headerBackTestID: closure_18,
+    headerBackAllowFontScaling: closure_19,
+    headerBackTitleStyle: closure_20,
+    headerStyle,
+    headerStatusBarHeight,
+    styleInterpolator,
+  } = progress);
+  ({ headerTitleContainerStyle, headerLeftContainerStyle, headerRightContainerStyle, headerBackgroundContainerStyle } =
+    progress);
   const obj2 = handleTitleLayout;
   const tmp7 = first1(progress, closure_2);
   const defaultHeaderHeight = direction(first[6]).getDefaultHeaderHeight(layout, modal, headerStatusBarHeight);
@@ -135,17 +169,20 @@ export const HeaderSegment = function HeaderSegment(progress) {
   obj = {
     modal,
     layout,
-    headerTitle: typeof headerTitle !== "function" ? ((arg0) => {
-      const obj = {};
-      const merged = Object.assign(arg0);
-      obj.onLayout = handleTitleLayout;
-      return progress(direction(first[6]).HeaderTitle, obj);
-    }) : ((arg0) => {
-      const obj = {};
-      const merged = Object.assign(arg0);
-      obj.onLayout = handleTitleLayout;
-      return headerTitle(obj);
-    }),
+    headerTitle:
+      typeof headerTitle !== "function"
+        ? (arg0) => {
+            const obj = {};
+            const merged = Object.assign(arg0);
+            obj.onLayout = handleTitleLayout;
+            return progress(direction(first[6]).HeaderTitle, obj);
+          }
+        : (arg0) => {
+            const obj = {};
+            const merged = Object.assign(arg0);
+            obj.onLayout = handleTitleLayout;
+            return headerTitle(obj);
+          },
     headerLeft: fn2,
     headerRight: fn3,
     headerTitleContainerStyle: items1,
@@ -154,7 +191,7 @@ export const HeaderSegment = function HeaderSegment(progress) {
     headerBackButtonDisplayMode: str,
     headerBackgroundContainerStyle: items4,
     headerStyle,
-    headerStatusBarHeight
+    headerStatusBarHeight,
   };
   items1 = [titleStyle, headerTitleContainerStyle];
   items2 = [leftButtonStyle, headerLeftContainerStyle];

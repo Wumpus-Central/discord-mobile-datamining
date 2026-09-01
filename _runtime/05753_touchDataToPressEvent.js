@@ -1,7 +1,5 @@
 // _runtime/05753_touchDataToPressEvent.js
-function touchDataToPressEvent(arg0, arg1, arg2) {
-
-}
+function touchDataToPressEvent(arg0, arg1, arg2) {}
 arg5.addInsets = (left, left2) => {
   let num = left.left;
   if (num == null) {
@@ -43,8 +41,29 @@ arg5.addInsets = (left, left2) => {
 };
 arg5.gestureToPressableEvent = (handlerTag) => {
   const timestamp = Date.now();
-  let nativeEvent = { identifier: handlerTag.handlerTag, locationX: handlerTag.x, locationY: handlerTag.y, pageX: handlerTag.absoluteX, pageY: handlerTag.absoluteY, target: 0, timestamp, touches: [], changedTouches: [] };
-  nativeEvent = { touches: items, changedTouches: items1, identifier: nativeEvent.identifier, locationX: handlerTag.x, locationY: handlerTag.y, pageX: handlerTag.absoluteX, pageY: handlerTag.absoluteY, target: 0, timestamp, force: "HermesInternal" };
+  let nativeEvent = {
+    identifier: handlerTag.handlerTag,
+    locationX: handlerTag.x,
+    locationY: handlerTag.y,
+    pageX: handlerTag.absoluteX,
+    pageY: handlerTag.absoluteY,
+    target: 0,
+    timestamp,
+    touches: [],
+    changedTouches: [],
+  };
+  nativeEvent = {
+    touches: items,
+    changedTouches: items1,
+    identifier: nativeEvent.identifier,
+    locationX: handlerTag.x,
+    locationY: handlerTag.y,
+    pageX: handlerTag.absoluteX,
+    pageY: handlerTag.absoluteY,
+    target: 0,
+    timestamp,
+    force: "HermesInternal",
+  };
   items = [nativeEvent];
   items1 = [nativeEvent];
   return { nativeEvent };
@@ -56,13 +75,33 @@ arg5.gestureTouchToPressableEvent = (handlerTag) => {
       if (typeof timestamp !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      return { identifier: id.id, locationX: id.x, locationY: id.y, pageX: id.absoluteX, pageY: id.absoluteY, target: 0, timestamp, touches: [], changedTouches: [] };
+      return {
+        identifier: id.id,
+        locationX: id.x,
+        locationY: id.y,
+        pageX: id.absoluteX,
+        pageY: id.absoluteY,
+        target: 0,
+        timestamp,
+        touches: [],
+        changedTouches: [],
+      };
     }),
     changedTouches: changedTouches.map((id) => {
       if (typeof timestamp !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      return { identifier: id.id, locationX: id.x, locationY: id.y, pageX: id.absoluteX, pageY: id.absoluteY, target: 0, timestamp, touches: [], changedTouches: [] };
+      return {
+        identifier: id.id,
+        locationX: id.x,
+        locationY: id.y,
+        pageX: id.absoluteX,
+        pageY: id.absoluteY,
+        target: 0,
+        timestamp,
+        touches: [],
+        changedTouches: [],
+      };
     }),
     identifier: handlerTag.handlerTag,
     locationX: null,
@@ -71,7 +110,7 @@ arg5.gestureTouchToPressableEvent = (handlerTag) => {
     pageY: null,
     target: 0,
     timestamp: null,
-    force: "HermesInternal"
+    force: "HermesInternal",
   };
   ({ allTouches, changedTouches, allTouches: allTouches2 } = handlerTag);
   const atResult = allTouches2.at(0);
@@ -178,8 +217,31 @@ arg5.viewCenterToPressableEvent = (width) => {
   const timestamp = Date.now();
   const locationX = width.width / 2;
   const locationY = width.height / 2;
-  const obj = { identifier: 0, locationX, locationY, pageX: -1, pageY: -1, target: 0, timestamp, touches: [], changedTouches: [] };
+  const obj = {
+    identifier: 0,
+    locationX,
+    locationY,
+    pageX: -1,
+    pageY: -1,
+    target: 0,
+    timestamp,
+    touches: [],
+    changedTouches: [],
+  };
   const touches = [obj];
   const changedTouches = [obj];
-  return { nativeEvent: { touches, changedTouches, identifier: 0, locationX, locationY, pageX: -1, pageY: -1, target: 0, timestamp, force: "Array" } };
+  return {
+    nativeEvent: {
+      touches,
+      changedTouches,
+      identifier: 0,
+      locationX,
+      locationY,
+      pageX: -1,
+      pageY: -1,
+      target: 0,
+      timestamp,
+      force: "Array",
+    },
+  };
 };

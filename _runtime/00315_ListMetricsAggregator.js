@@ -24,7 +24,12 @@ const items = [
       const self = this;
       ({ cellIndex, cellKey, layout } = orientation);
       const result = this._invalidateIfOrientationChanged(orientation.orientation);
-      const obj = { index: cellIndex, length: this._selectLength(layout), isMounted: true, offset: this.flowRelativeOffset(layout) };
+      const obj = {
+        index: cellIndex,
+        length: this._selectLength(layout),
+        isMounted: true,
+        offset: this.flowRelativeOffset(layout),
+      };
       const _cellMetrics = this._cellMetrics;
       const value = _cellMetrics.get(cellKey);
       if (value) {
@@ -46,7 +51,7 @@ const items = [
       const result1 = _cellMetrics2.set(cellKey, obj);
       self._highestMeasuredCellIndex = Math.max(self._highestMeasuredCellIndex, cellIndex);
       return true;
-    }
+    },
   },
   {
     key: "notifyCellUnmounted",
@@ -56,26 +61,26 @@ const items = [
       if (value) {
         value.isMounted = false;
       }
-    }
+    },
   },
   {
     key: "notifyListContentLayout",
     value: function notifyListContentLayout(orientation) {
       const result = this._invalidateIfOrientationChanged(orientation.orientation);
       this._contentLength = this._selectLength(orientation.layout);
-    }
+    },
   },
   {
     key: "getAverageCellLength",
     value: function getAverageCellLength() {
       return this._averageCellLength;
-    }
+    },
   },
   {
     key: "getHighestMeasuredCellIndex",
     value: function getHighestMeasuredCellIndex() {
       return this._highestMeasuredCellIndex;
-    }
+    },
   },
   {
     key: "getCellMetricsApprox",
@@ -92,7 +97,10 @@ const items = [
       if (highestMeasuredCellIndex < first) {
         const cellMetrics1 = self.getCellMetrics(highestMeasuredCellIndex, props);
         if (cellMetrics1) {
-          sum = cellMetrics1.offset + cellMetrics1.length + self._averageCellLength * (first - highestMeasuredCellIndex - 1);
+          sum =
+            cellMetrics1.offset +
+            cellMetrics1.length +
+            self._averageCellLength * (first - highestMeasuredCellIndex - 1);
         }
       }
       if (null == sum) {
@@ -105,7 +113,7 @@ const items = [
       }
       _modDef38(tmp5, `Tried to get frame for out of range index ${first}`);
       return { length: self._averageCellLength, offset: sum, index: first, isMounted: false };
-    }
+    },
   },
   {
     key: "getCellMetrics",
@@ -138,7 +146,7 @@ const items = [
         return null;
       }
       const tmp2 = _modDef38;
-    }
+    },
   },
   {
     key: "getCellOffsetApprox",
@@ -153,7 +161,7 @@ const items = [
         const _Math2 = Math;
         return cellMetricsApprox.offset + (index - Math.floor(index)) * cellMetricsApprox.length;
       }
-    }
+    },
   },
   {
     key: "getContentLength",
@@ -163,13 +171,13 @@ const items = [
         num = 0;
       }
       return num;
-    }
+    },
   },
   {
     key: "hasContentLength",
     value: function hasContentLength() {
       return null != this._contentLength;
-    }
+    },
   },
   {
     key: "flowRelativeOffset",
@@ -182,12 +190,15 @@ const items = [
           if (arg1 == null) {
             _contentLength = self._contentLength;
           }
-          _modDef38(null != _contentLength, "ListMetricsAggregator must be notified of list content layout before resolving offsets");
+          _modDef38(
+            null != _contentLength,
+            "ListMetricsAggregator must be notified of list content layout before resolving offsets",
+          );
           return _contentLength - (self._selectOffset(layout) + self._selectLength(layout));
         }
       }
       return self._selectOffset(layout);
-    }
+    },
   },
   {
     key: "cartesianOffset",
@@ -197,12 +208,15 @@ const items = [
       if (this._orientation.horizontal) {
         diff = arg0;
         if (tmp) {
-          _modDef38(null != self._contentLength, "ListMetricsAggregator must be notified of list content layout before resolving offsets");
+          _modDef38(
+            null != self._contentLength,
+            "ListMetricsAggregator must be notified of list content layout before resolving offsets",
+          );
           diff = self._contentLength - arg0;
         }
       }
       return diff;
-    }
+    },
   },
   {
     key: "_invalidateIfOrientationChanged",
@@ -219,7 +233,7 @@ const items = [
         self._measuredCellsCount = 0;
       }
       self._orientation = orientation;
-    }
+    },
   },
   {
     key: "_selectLength",
@@ -229,7 +243,7 @@ const items = [
         width = height.width;
       }
       return width;
-    }
+    },
   },
   {
     key: "_selectOffset",
@@ -239,8 +253,8 @@ const items = [
         x = arg0.x;
       }
       return x;
-    }
-  }
+    },
+  },
 ];
 
 export default _createClassDefault(ListMetricsAggregator, items);

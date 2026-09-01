@@ -26,8 +26,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 function processColor(arg0) {
   if (null == arg0) {
@@ -247,7 +246,7 @@ let items = [
         const obj = AnimatedColor(self[8]);
       }
       self.__callListeners(self.__getValue());
-    }
+    },
   },
   {
     key: "setOffset",
@@ -260,7 +259,7 @@ let items = [
       b.setOffset(arg0.b);
       const a = this.a;
       a.setOffset(arg0.a);
-    }
+    },
   },
   {
     key: "flattenOffset",
@@ -273,7 +272,7 @@ let items = [
       b.flattenOffset();
       const a = this.a;
       a.flattenOffset();
-    }
+    },
   },
   {
     key: "extractOffset",
@@ -286,7 +285,7 @@ let items = [
       b.extractOffset();
       const a = this.a;
       a.extractOffset();
-    }
+    },
   },
   {
     key: "stopAnimation",
@@ -303,7 +302,7 @@ let items = [
       if (arg0) {
         arg0(self.__getValue());
       }
-    }
+    },
   },
   {
     key: "resetAnimation",
@@ -320,7 +319,7 @@ let items = [
       if (arg0) {
         arg0(self.__getValue());
       }
-    }
+    },
   },
   {
     key: "__getValue",
@@ -335,11 +334,12 @@ let items = [
         const a = self.a;
         const __getValueResult1 = g.__getValue();
         const _HermesInternal = HermesInternal;
-        nativeColor = "rgba(" + __getValueResult + ", " + __getValueResult1 + ", " + b.__getValue() + ", " + a.__getValue() + ")";
+        nativeColor =
+          "rgba(" + __getValueResult + ", " + __getValueResult1 + ", " + b.__getValue() + ", " + a.__getValue() + ")";
         const __getValueResult2 = b.__getValue();
       }
       return nativeColor;
-    }
+    },
   },
   {
     key: "__attach",
@@ -359,7 +359,7 @@ let items = [
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
-    }
+    },
   },
   {
     key: "__detach",
@@ -379,7 +379,7 @@ let items = [
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
-    }
+    },
   },
   {
     key: "_withSuspendedCallbacks",
@@ -387,7 +387,7 @@ let items = [
       this._suspendCallbacks = this._suspendCallbacks + 1;
       arg0();
       this._suspendCallbacks = this._suspendCallbacks - 1;
-    }
+    },
   },
   {
     key: "__callListeners",
@@ -401,7 +401,7 @@ let items = [
         const items = [arg0];
         fn(items);
       }
-    }
+    },
   },
   {
     key: "__makeNative",
@@ -422,15 +422,23 @@ let items = [
       }
       const items = [arg0];
       fn(items);
-    }
+    },
   },
   {
     key: "__getNativeConfig",
     value: function __getNativeConfig() {
       ({ r, g, b, a } = this);
-      return { type: "color", r: r.__getNativeTag(), g: g.__getNativeTag(), b: b.__getNativeTag(), a: a.__getNativeTag(), nativeColor: this.nativeColor, debugID: this.__getDebugID() };
-    }
-  }
+      return {
+        type: "color",
+        r: r.__getNativeTag(),
+        g: g.__getNativeTag(),
+        b: b.__getNativeTag(),
+        a: a.__getNativeTag(),
+        nativeColor: this.nativeColor,
+        debugID: this.__getDebugID(),
+      };
+    },
+  },
 ];
 
 export default importDefaultResult(AnimatedColor, items);

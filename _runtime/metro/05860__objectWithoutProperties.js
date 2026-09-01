@@ -1,7 +1,6 @@
 // _runtime/metro/05860__objectWithoutProperties.js
 import _objectWithoutPropertiesLoose from "../05861__objectWithoutPropertiesLoose.js";
 
-
 export default function _objectWithoutProperties(arg0, arr) {
   if (null == arg0) {
     return {};
@@ -27,4 +26,4 @@ export default function _objectWithoutProperties(arg0, arr) {
     }
     return tmp8;
   }
-};
+}

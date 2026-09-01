@@ -27,7 +27,15 @@ arg5.startUserInteractionSpan = (arg0) => {
               if (tmp18) {
                 const debug7 = tmp(817).debug;
                 const _HermesInternal8 = HermesInternal;
-                debug7.warn("[" + UserInteraction + "] Did not create " + op + " transaction because active transaction " + tmp(817).spanToJSON(activeSpan).description + " exists on the scope.");
+                debug7.warn(
+                  "[" +
+                    UserInteraction +
+                    "] Did not create " +
+                    op +
+                    " transaction because active transaction " +
+                    tmp(817).spanToJSON(activeSpan).description +
+                    " exists on the scope.",
+                );
                 const tmpResult2 = tmp(817);
               }
             }
@@ -38,7 +46,15 @@ arg5.startUserInteractionSpan = (arg0) => {
                 if (tmpResult4.spanToJSON(activeSpan).op === op) {
                   const debug5 = tmp(817).debug;
                   const _HermesInternal6 = HermesInternal;
-                  debug5.warn("[" + UserInteraction + "] Did not create " + op + " transaction because it the same transaction " + tmp(817).spanToJSON(activeSpan).description + " already exists on the scope.");
+                  debug5.warn(
+                    "[" +
+                      UserInteraction +
+                      "] Did not create " +
+                      op +
+                      " transaction because it the same transaction " +
+                      tmp(817).spanToJSON(activeSpan).description +
+                      " already exists on the scope.",
+                  );
                   const tmpResult5 = tmp(817);
                 }
                 tmpResult4 = tmp(817);
@@ -57,22 +73,31 @@ arg5.startUserInteractionSpan = (arg0) => {
             obj[0] = currentReactNativeTracingIntegration.options.idleTimeoutMs;
             obj[1] = currentReactNativeTracingIntegration.options.finalTimeoutMs;
             const startIdleSpanResult = tmp(1160).startIdleSpan(obj, obj);
-            const attr = startIdleSpanResult.setAttribute(tmp(817).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, tmp(1158).SPAN_ORIGIN_MANUAL_INTERACTION);
+            const attr = startIdleSpanResult.setAttribute(
+              tmp(817).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
+              tmp(1158).SPAN_ORIGIN_MANUAL_INTERACTION,
+            );
             const tmpResult8 = tmp(1160);
             const result1 = tmp(1161).onlySampleIfChildSpans(client, startIdleSpanResult);
             const debug6 = tmp(817).debug;
             const _HermesInternal7 = HermesInternal;
-            debug6.log("[" + UserInteraction + "] User Interaction Tracing Created " + op + " transaction " + combined + ".");
+            debug6.log(
+              "[" + UserInteraction + "] User Interaction Tracing Created " + op + " transaction " + combined + ".",
+            );
             return startIdleSpanResult;
           } else {
             const debug4 = tmpResult.debug;
             const _HermesInternal4 = HermesInternal;
-            debug4.log("[" + UserInteraction + "] User Interaction Tracing can not create transaction without a current route.");
+            debug4.log(
+              "[" + UserInteraction + "] User Interaction Tracing can not create transaction without a current route.",
+            );
           }
         } else {
           const debug3 = tmp(817).debug;
           const _HermesInternal3 = HermesInternal;
-          debug3.log("[" + UserInteraction + "] User Interaction Tracing can not create transaction with undefined elementId.");
+          debug3.log(
+            "[" + UserInteraction + "] User Interaction Tracing can not create transaction with undefined elementId.",
+          );
         }
       } else {
         const debug2 = tmp(817).debug;

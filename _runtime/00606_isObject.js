@@ -10,4 +10,4 @@ export default function isObject(obj) {
     tmp = tmp2;
   }
   return tmp;
-};
+}

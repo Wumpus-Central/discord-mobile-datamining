@@ -5,8 +5,23 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.convertSpanJsonToTransactionEvent = function convertSpanJsonToTransactionEvent(beforeSendSpanResult) {
-  let obj = { type: "transaction", timestamp: beforeSendSpanResult.timestamp, start_timestamp: beforeSendSpanResult.start_timestamp, transaction: beforeSendSpanResult.description, contexts: null, measurements: null };
-  obj = { trace_id: beforeSendSpanResult.trace_id, span_id: beforeSendSpanResult.span_id, parent_span_id: beforeSendSpanResult.parent_span_id, op: beforeSendSpanResult.op, status: beforeSendSpanResult.status, origin: beforeSendSpanResult.origin, data: null };
+  let obj = {
+    type: "transaction",
+    timestamp: beforeSendSpanResult.timestamp,
+    start_timestamp: beforeSendSpanResult.start_timestamp,
+    transaction: beforeSendSpanResult.description,
+    contexts: null,
+    measurements: null,
+  };
+  obj = {
+    trace_id: beforeSendSpanResult.trace_id,
+    span_id: beforeSendSpanResult.span_id,
+    parent_span_id: beforeSendSpanResult.parent_span_id,
+    op: beforeSendSpanResult.op,
+    status: beforeSendSpanResult.status,
+    origin: beforeSendSpanResult.origin,
+    data: null,
+  };
   obj = {};
   const merged = Object.assign(beforeSendSpanResult.data);
   let profile_id = beforeSendSpanResult.profile_id;
@@ -45,7 +60,22 @@ arg5.convertTransactionEventToSpanJson = function convertTransactionEventToSpanJ
   if (data == null) {
     obj = {};
   }
-  obj = { data: obj, description: contexts.transaction, op, parent_span_id, span_id: null, start_timestamp: null, status: null, timestamp: null, trace_id: null, origin: null, profile_id: null, exclusive_time: null, measurements: null, is_segment: true };
+  obj = {
+    data: obj,
+    description: contexts.transaction,
+    op,
+    parent_span_id,
+    span_id: null,
+    start_timestamp: null,
+    status: null,
+    timestamp: null,
+    trace_id: null,
+    origin: null,
+    profile_id: null,
+    exclusive_time: null,
+    measurements: null,
+    is_segment: true,
+  };
   if (span_id == null) {
     span_id = "";
   }

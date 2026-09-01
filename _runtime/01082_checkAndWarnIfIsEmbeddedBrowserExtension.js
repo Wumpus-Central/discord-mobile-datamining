@@ -34,7 +34,9 @@ arg5.checkAndWarnIfIsEmbeddedBrowserExtension = function checkAndWarnIfIsEmbedde
     if (tmp(1072).DEBUG_BUILD) {
       tmpResult = tmp(817);
       tmpResult.consoleSandbox(() => {
-        console.error("[Sentry] You cannot use Sentry.init() in a browser extension, see: https://docs.sentry.io/platforms/javascript/best-practices/browser-extensions/");
+        console.error(
+          "[Sentry] You cannot use Sentry.init() in a browser extension, see: https://docs.sentry.io/platforms/javascript/best-practices/browser-extensions/",
+        );
       });
       flag2 = true;
     }

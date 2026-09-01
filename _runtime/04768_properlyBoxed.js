@@ -18,7 +18,7 @@ export default function properlyBoxed(fn) {
       }
       const call2 = fn.call;
       const items = [null];
-      const fn2 = function() {
+      const fn2 = function () {
         closure_1 = typeof this === "string";
       };
       if (typeof call2 === "unknown") {
@@ -41,4 +41,4 @@ export default function properlyBoxed(fn) {
   } else {
     return false;
   }
-};
+}

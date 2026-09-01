@@ -13,4 +13,4 @@ export default function baseDelay(fn) {
       callback.apply(undefined, closure_1);
     }, arg1);
   }
-};
+}

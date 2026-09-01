@@ -46,33 +46,37 @@ let items = [
     value: function getEstimatedWidth(arg0) {
       const widthAverageWindow = this.widthAverageWindow;
       return widthAverageWindow.getCurrentValue(this.getItemType(arg0));
-    }
+    },
   },
   {
     key: "getEstimatedHeight",
     value: function getEstimatedHeight(arg0) {
       const heightAverageWindow = this.heightAverageWindow;
       return heightAverageWindow.getCurrentValue(this.getItemType(arg0));
-    }
+    },
   },
   {
     key: "isHorizontal",
     value: function isHorizontal() {
       return this.horizontal;
-    }
+    },
   },
   {
     key: "getWindowsSize",
     value: function getWindowsSize() {
       return this.windowSize;
-    }
+    },
   },
   {
     key: "getVisibleLayouts",
     value: function getVisibleLayouts(bound1, arg1) {
       const result = RVLayoutManager(5890).findFirstVisibleIndex(this.layouts, bound1, this.horizontal);
       const obj = RVLayoutManager(5890);
-      const findLastVisibleIndexResult = RVLayoutManager(5890).findLastVisibleIndex(this.layouts, arg1, this.horizontal);
+      const findLastVisibleIndexResult = RVLayoutManager(5890).findLastVisibleIndex(
+        this.layouts,
+        arg1,
+        this.horizontal,
+      );
       if (-1 !== result) {
         if (-1 !== findLastVisibleIndexResult) {
           let EMPTY = new tmp(5877).ConsecutiveNumbers(result, findLastVisibleIndexResult);
@@ -80,7 +84,7 @@ let items = [
         return EMPTY;
       }
       EMPTY = tmp(5877).ConsecutiveNumbers.EMPTY;
-    }
+    },
   },
   {
     key: "deleteLayout",
@@ -96,7 +100,7 @@ let items = [
       const applyResult = Math.min.apply(items);
       const minRecomputeIndex = self.getMinRecomputeIndex(applyResult);
       self._recomputeLayouts(minRecomputeIndex, self.getMaxRecomputeIndex(applyResult));
-    }
+    },
   },
   {
     key: "modifyLayout",
@@ -132,14 +136,20 @@ let items = [
       if (processLayoutInfoResult == null) {
         processLayoutInfoResult = bound;
       }
-      const bound1 = Math.min(bound, self.lastSkippedLayoutIndex, minIndexWithChangedSpan, processLayoutInfoResult, self.computeEstimatesAndMinMaxChangedLayout(found));
+      const bound1 = Math.min(
+        bound,
+        self.lastSkippedLayoutIndex,
+        minIndexWithChangedSpan,
+        processLayoutInfoResult,
+        self.computeEstimatesAndMinMaxChangedLayout(found),
+      );
       if (bound1 >= 0) {
         if (bound1 < arg1) {
           self._recomputeLayouts(bound1, self.getMaxRecomputeIndex(bound1));
         }
       }
       self.currentMaxIndexWithChangedLayout = -1;
-    }
+    },
   },
   {
     key: "getLayout",
@@ -161,7 +171,7 @@ let items = [
         }
         return tmp;
       }
-    }
+    },
   },
   {
     key: "updateLayoutParams",
@@ -182,19 +192,19 @@ let items = [
         optimizeItemArrangement = self.optimizeItemArrangement;
       }
       self.optimizeItemArrangement = optimizeItemArrangement;
-    }
+    },
   },
   {
     key: "getLayoutCount",
     value: function getLayoutCount() {
       return this.layouts.length;
-    }
+    },
   },
   {
     key: "isInLastRow",
     value: function isInLastRow(arg0) {
       return false;
-    }
+    },
   },
   {
     key: "getSpan",
@@ -215,25 +225,26 @@ let items = [
         self.spanTracker[sum] = bound;
       }
       return bound;
-    }
+    },
   },
   {
     key: "handleSpanChange",
-    value: function handleSpanChange(arg0) {
-
-    }
+    value: function handleSpanChange(arg0) {},
   },
   {
     key: "getMaxRecomputeIndex",
     value: function getMaxRecomputeIndex(applyResult) {
-      return Math.min(Math.max(applyResult, this.currentMaxIndexWithChangedLayout) + this.maxItemsToProcess, this.layouts.length - 1);
-    }
+      return Math.min(
+        Math.max(applyResult, this.currentMaxIndexWithChangedLayout) + this.maxItemsToProcess,
+        this.layouts.length - 1,
+      );
+    },
   },
   {
     key: "getMinRecomputeIndex",
     value: function getMinRecomputeIndex(applyResult) {
       return applyResult;
-    }
+    },
   },
   {
     key: "_recomputeLayouts",
@@ -254,7 +265,7 @@ let items = [
           self.lastSkippedLayoutIndex = Number.MAX_VALUE;
         }
       }
-    }
+    },
   },
   {
     key: "computeEstimatesAndMinMaxChangedLayout",
@@ -313,7 +324,7 @@ let items = [
         continue;
       }
       return MAX_VALUE;
-    }
+    },
   },
   {
     key: "computeMinIndexWithChangedSpan",
@@ -336,8 +347,8 @@ let items = [
         continue;
       }
       return MAX_VALUE;
-    }
-  }
+    },
+  },
 ];
 
 export const RVLayoutManager = _createClassDefault(RVLayoutManager, items);

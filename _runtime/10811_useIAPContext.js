@@ -52,14 +52,34 @@ export function withIAPContext(arg0) {
     const tmp26 = closure_1_3(closure_1_7(), 2);
     const first9 = tmp26[0];
     closure_19 = tmp26[1];
-    let items = [first, first1, first3, first2, first4, first5, first6, first7, first8, first9, tmp[1], tmp4[1], tmp9[1], tmp12[1], tmp15[1], tmp18[1], tmp23[1]];
+    let items = [
+      first,
+      first1,
+      first3,
+      first2,
+      first4,
+      first5,
+      first6,
+      first7,
+      first8,
+      first9,
+      tmp[1],
+      tmp4[1],
+      tmp9[1],
+      tmp12[1],
+      tmp15[1],
+      tmp18[1],
+      tmp23[1],
+    ];
     closure_1_5(() => {
       const connection = first(10796).initConnection();
       const obj = first(10796);
-      connection.then((arg0) => {
-        callback2(undefined);
-        callback(arg0);
-      }).catch(closure_19);
+      connection
+        .then((arg0) => {
+          callback2(undefined);
+          callback(arg0);
+        })
+        .catch(closure_19);
     }, []);
     let items1 = [first];
     closure_1_5(() => {
@@ -68,7 +88,7 @@ export function withIAPContext(arg0) {
         closure_0 = first1((arg0) => {
           closure_0 = arg0;
           c1 = 0;
-          return (function*(arg0) {
+          return (function* (arg0) {
             if (c1 === 2) {
               c1 = 3;
               HermesBuiltin.throwTypeError();
@@ -106,7 +126,7 @@ export function withIAPContext(arg0) {
             }
           })();
         });
-        closure_0 = first(10808).purchaseUpdatedListener(function(arg0) {
+        closure_0 = first(10808).purchaseUpdatedListener(function (arg0) {
           const self = this;
           const apply = closure_0.apply;
           if (typeof apply === "unknown") {
@@ -121,7 +141,7 @@ export function withIAPContext(arg0) {
         closure_0 = first1((arg0) => {
           closure_0 = arg0;
           c1 = 0;
-          return (function*(arg0) {
+          return (function* (arg0) {
             if (c1 === 2) {
               c1 = 3;
               HermesBuiltin.throwTypeError();
@@ -167,7 +187,7 @@ export function withIAPContext(arg0) {
             }
           })();
         });
-        dependencyMap = first(10808).transactionListener(function(arg0) {
+        dependencyMap = first(10808).transactionListener(function (arg0) {
           const self = this;
           const apply = closure_0.apply;
           if (typeof apply === "unknown") {
@@ -183,25 +203,45 @@ export function withIAPContext(arg0) {
           callback2(arg0);
         });
         const obj3 = first(10808);
-        closure_3 = first(10808).promotedProductListener(first1(function*() {
-          if (c3 === 2) {
-            c3 = 3;
-            HermesBuiltin.throwTypeError();
-          } else if (tmp4 === 3) {
-            if (arg0 === 1) {
-              throw arg1;
-            } else if (arg0 === 2) {
-              let obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+        closure_3 = first(10808).promotedProductListener(
+          first1(function* () {
+            if (c3 === 2) {
+              c3 = 3;
+              HermesBuiltin.throwTypeError();
+            } else if (tmp4 === 3) {
+              if (arg0 === 1) {
+                throw arg1;
+              } else if (arg0 === 2) {
+                let obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                return { value: "HermesInternal", done: null };
+              }
             } else {
-              return { value: "HermesInternal", done: null };
-            }
-          } else {
-            try {
-              c3 = 2;
-              if (0 === c2) {
-                if (arg0 === 1) {
+              try {
+                c3 = 2;
+                if (0 === c2) {
+                  if (arg0 === 1) {
+                    c3 = 3;
+                    throw arg1;
+                  } else if (arg0 === 2) {
+                    c3 = 3;
+                    obj = { value: null, done: true };
+                    obj[0] = arg1;
+                    return obj;
+                  } else {
+                    const table = tmp5;
+                    let callback = tmp2;
+                    callback = undefined;
+                    const IapIos = callback(table[4]).IapIos;
+                    c2 = 1;
+                    c3 = 1;
+                    obj1 = { value: null, done: false };
+                    obj1[0] = IapIos.getPromotedProductIOS();
+                    return obj1;
+                  }
+                } else if (arg0 === 1) {
                   c3 = 3;
                   throw arg1;
                 } else if (arg0 === 2) {
@@ -210,46 +250,28 @@ export function withIAPContext(arg0) {
                   obj[0] = arg1;
                   return obj;
                 } else {
-                  const table = tmp5;
-                  let callback = tmp2;
-                  callback = undefined;
-                  const IapIos = callback(table[4]).IapIos;
-                  c2 = 1;
-                  c3 = 1;
-                  obj1 = { value: null, done: false };
-                  obj1[0] = IapIos.getPromotedProductIOS();
-                  return obj1;
+                  callback = arg1;
+                  closure_1_5((arg0) => {
+                    const items = [...arg0];
+                    if (closure_0) {
+                      const items1 = [tmp2];
+                      let items2 = items1;
+                    } else {
+                      items2 = [];
+                    }
+                    HermesBuiltin.arraySpread(items2, tmp);
+                    return items;
+                  });
+                  c3 = 3;
+                  return { value: "HermesInternal", done: null };
                 }
-              } else if (arg0 === 1) {
-                c3 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c3 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                callback = arg1;
-                closure_1_5((arg0) => {
-                  const items = [...arg0];
-                  if (closure_0) {
-                    const items1 = [tmp2];
-                    let items2 = items1;
-                  } else {
-                    items2 = [];
-                  }
-                  HermesBuiltin.arraySpread(items2, tmp);
-                  return items;
-                });
-                c3 = 3;
-                return { value: "HermesInternal", done: null };
+              } catch (tmp12) {
+                c3 = tmp;
+                throw tmp12;
               }
-            } catch (tmp12) {
-              c3 = tmp;
-              throw tmp12;
             }
-          }
-        }));
+          }),
+        );
         return () => {
           closure_0.remove();
           closure_2.remove();
@@ -262,7 +284,31 @@ export function withIAPContext(arg0) {
         };
       }
     }, items1);
-    let obj = { value: closure_1_6(() => ({ connected: first, products: first1, subscriptions: first3, promotedProductsIOS: first2, purchaseHistory: first4, availablePurchases: first5, currentPurchase: first6, currentTransaction: first7, currentPurchaseError: first8, initConnectionError: first9, setConnected: closure_1, setProducts: closure_3, setSubscriptions: closure_7, setPurchaseHistory: closure_9, setAvailablePurchases: closure_11, setCurrentPurchase: closure_13, setCurrentPurchaseError: closure_17 }), items), children: null };
+    let obj = {
+      value: closure_1_6(
+        () => ({
+          connected: first,
+          products: first1,
+          subscriptions: first3,
+          promotedProductsIOS: first2,
+          purchaseHistory: first4,
+          availablePurchases: first5,
+          currentPurchase: first6,
+          currentTransaction: first7,
+          currentPurchaseError: first8,
+          initConnectionError: first9,
+          setConnected: closure_1,
+          setProducts: closure_3,
+          setSubscriptions: closure_7,
+          setPurchaseHistory: closure_9,
+          setAvailablePurchases: closure_11,
+          setCurrentPurchase: closure_13,
+          setCurrentPurchaseError: closure_17,
+        }),
+        items,
+      ),
+      children: null,
+    };
     obj = {};
     const merged = Object.assign(arg0);
     obj[1] = closure_1_8(first, obj);

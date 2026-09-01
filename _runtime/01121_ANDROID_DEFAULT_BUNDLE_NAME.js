@@ -17,7 +17,10 @@ export const createReactNativeRewriteFrames = function createReactNativeRewriteF
             delete tmp[tmp2];
             const str2 = platform.filename;
             const str4 = platform.filename.replace(/^file:\/\//, "");
-            platform.filename = platform.filename.replace(/^file:\/\//, "").replace(/^address at /, "").replace(/^.*\/[^.]+(\.app|CodePush|.*(?=\/))/, "");
+            platform.filename = platform.filename
+              .replace(/^file:\/\//, "")
+              .replace(/^address at /, "")
+              .replace(/^.*\/[^.]+(\.app|CodePush|.*(?=\/))/, "");
             if ("[native code]" !== platform.filename) {
               if ("native" !== platform.filename) {
                 let isHermesEnabledResult = callback(table[2]).isHermesEnabled();
@@ -61,7 +64,7 @@ export const createReactNativeRewriteFrames = function createReactNativeRewriteF
         }
       }
       return platform;
-    }
+    },
   };
   return obj.rewriteFramesIntegration(obj);
 };

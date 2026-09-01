@@ -1,7 +1,6 @@
 // _runtime/00791_equalObjects.js
 import getAllKeys from "00792_getAllKeys.js";
 
-
 export default function equalObjects(arg0, arg1, arg2, arg3, arg4, get) {
   const arr = getAllKeys(arg0);
   if (arr.length != getAllKeys(arg1).length) {
@@ -109,4 +108,4 @@ export default function equalObjects(arg0, arg1, arg2, arg3, arg4, get) {
   get.delete(arg0);
   get.delete(arg1);
   return flag4;
-};
+}

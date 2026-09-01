@@ -19,7 +19,7 @@ arg5.parse = function parse(str) {
         const str = arr.substr(0, index);
         const trimmed1 = arr.substr(index + 1, arr.length).trim();
         let substr = trimmed1;
-        if ("\"" == trimmed1[0]) {
+        if ('"' == trimmed1[0]) {
           substr = trimmed1.slice(1, -1);
         }
         if (null == obj[trimmed]) {

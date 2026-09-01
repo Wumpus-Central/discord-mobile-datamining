@@ -63,7 +63,7 @@ let items = [
         continue;
       }
       return obj;
-    }
+    },
   },
   {
     key: "field",
@@ -256,7 +256,14 @@ let items = [
         if ("scalar" === kind) {
           scalarResult = self.scalar(kind.T, obj, kind.name, kind.opt, enumAsInteger.emitDefaultValues);
         } else if ("enum" === kind) {
-          scalarResult = self.enum(kind.T(), obj, kind.name, kind.opt, enumAsInteger.emitDefaultValues, enumAsInteger.enumAsInteger);
+          scalarResult = self.enum(
+            kind.T(),
+            obj,
+            kind.name,
+            kind.opt,
+            enumAsInteger.emitDefaultValues,
+            enumAsInteger.enumAsInteger,
+          );
         } else if ("message" === kind) {
           scalarResult = self;
           scalarResult = obj;
@@ -265,7 +272,7 @@ let items = [
         }
       }
       return scalarResult;
-    }
+    },
   },
   {
     key: "enum",
@@ -296,7 +303,7 @@ let items = [
         ReflectionJsonWriter(1316).assert(arg3);
         const obj = ReflectionJsonWriter(1316);
       }
-    }
+    },
   },
   {
     key: "message",
@@ -311,7 +318,7 @@ let items = [
         internalJsonWriteResult = internalJsonWrite.internalJsonWrite(arg1, emitDefaultValues);
       }
       return internalJsonWriteResult;
-    }
+    },
   },
   {
     key: "scalar",
@@ -458,8 +465,8 @@ let items = [
         ReflectionJsonWriter(1316).assert(arg3);
         const obj = ReflectionJsonWriter(1316);
       }
-    }
-  }
+    },
+  },
 ];
 
 export const ReflectionJsonWriter = _createClass(ReflectionJsonWriter, items);

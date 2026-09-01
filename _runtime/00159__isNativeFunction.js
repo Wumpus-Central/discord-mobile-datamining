@@ -15,4 +15,4 @@ export default function _isNativeFunction(arg0) {
   } catch (err) {
     return typeof tmp === "function";
   }
-};
+}

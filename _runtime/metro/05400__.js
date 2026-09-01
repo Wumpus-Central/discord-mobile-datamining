@@ -1,51 +1,53 @@
 // _runtime/metro/05400__.js
-if ((function shouldUseNative() {
-  let sum;
-  try {
-    const _Object = Object;
-    if (Object.assign) {
-      const _String = String;
-      const string = new String("abc");
-      string[5] = "de";
-      const _Object2 = Object;
-      if ("5" === Object.getOwnPropertyNames(string)[0]) {
-        return false;
-      } else {
-        let obj = {};
-        let num2 = 0;
-        do {
-          let tmp6 = obj;
-          let _String2 = String;
-          let tmp7 = num2;
-          tmp10["_" + String.fromCharCode(num2)] = num2;
-          sum = num2 + 1;
-          num2 = sum;
-        } while (sum < 10);
-        const _Object3 = Object;
-        const ownPropertyNames = Object.getOwnPropertyNames(obj);
-        const mapped = ownPropertyNames.map((arg0) => obj[arg0]);
-        if ("0123456789" !== mapped.join("")) {
+if (
+  (function shouldUseNative() {
+    let sum;
+    try {
+      const _Object = Object;
+      if (Object.assign) {
+        const _String = String;
+        const string = new String("abc");
+        string[5] = "de";
+        const _Object2 = Object;
+        if ("5" === Object.getOwnPropertyNames(string)[0]) {
           return false;
         } else {
-          obj = {};
-          const split = "abcdefghijklmnopqrst".split;
-          const parts = "abcdefghijklmnopqrst".split("");
-          const item = parts.forEach((arg0) => {
-            obj[arg0] = arg0;
-          });
-          const _Object4 = Object;
-          const _Object5 = Object;
-          const keys = Object.keys(Object.assign({}, obj));
-          return "abcdefghijklmnopqrst" === keys.join("");
+          let obj = {};
+          let num2 = 0;
+          do {
+            let tmp6 = obj;
+            let _String2 = String;
+            let tmp7 = num2;
+            tmp10["_" + String.fromCharCode(num2)] = num2;
+            sum = num2 + 1;
+            num2 = sum;
+          } while (sum < 10);
+          const _Object3 = Object;
+          const ownPropertyNames = Object.getOwnPropertyNames(obj);
+          const mapped = ownPropertyNames.map((arg0) => obj[arg0]);
+          if ("0123456789" !== mapped.join("")) {
+            return false;
+          } else {
+            obj = {};
+            const split = "abcdefghijklmnopqrst".split;
+            const parts = "abcdefghijklmnopqrst".split("");
+            const item = parts.forEach((arg0) => {
+              obj[arg0] = arg0;
+            });
+            const _Object4 = Object;
+            const _Object5 = Object;
+            const keys = Object.keys(Object.assign({}, obj));
+            return "abcdefghijklmnopqrst" === keys.join("");
+          }
         }
+      } else {
+        return false;
       }
-    } else {
+    } catch (err) {
       return false;
     }
-  } catch (err) {
-    return false;
-  }
-})()) {
+  })()
+) {
   let _Object = Object;
   let fn = Object.assign;
 } else {

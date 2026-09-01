@@ -28,8 +28,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 let closure_4 = ["numColumns", "columnWrapperStyle", "removeClippedSubviews", "strictMode"];
 let c9 = importAllResult;
@@ -105,7 +104,11 @@ class FlatList {
       }
       if (num > 1) {
         const _Array = Array;
-        lib(closure_1_3[10])(Array.isArray(arr), "FlatList: Encountered internal consistency error, expected each item to consist of an array with 1-%s columns; instead, received a single item.", num);
+        lib(closure_1_3[10])(
+          Array.isArray(arr),
+          "FlatList: Encountered internal consistency error, expected each item to consist of an array with 1-%s columns; instead, received a single item.",
+          num,
+        );
         const mapped = arr.map((arg0, arg1) => keyExtractor(arg0, closure_0 * num + arg1));
         let joined = mapped.join(":");
         const tmp7 = lib(closure_1_3[10]);
@@ -122,9 +125,7 @@ class FlatList {
       if (arg3 == null) {
         num = 1;
       }
-      function render(arg0) {
-
-      }
+      function render(arg0) {}
       function renderProp(arg0) {
         const callback = arg0;
         if (num > 1) {
@@ -190,14 +191,20 @@ class FlatList {
     props = tmp3Result.props;
     if (tmp3Result.props.viewabilityConfigCallbackPairs) {
       prop = props.viewabilityConfigCallbackPairs;
-      tmp3Result._virtualizedListPairs = prop.map((viewabilityConfig) => ({ viewabilityConfig: viewabilityConfig.viewabilityConfig, onViewableItemsChanged: lib._createOnViewableItemsChanged(viewabilityConfig.onViewableItemsChanged) }));
+      tmp3Result._virtualizedListPairs = prop.map((viewabilityConfig) => ({
+        viewabilityConfig: viewabilityConfig.viewabilityConfig,
+        onViewableItemsChanged: lib._createOnViewableItemsChanged(viewabilityConfig.onViewableItemsChanged),
+      }));
     } else if (props.onViewableItemsChanged) {
       prop1 = tmp3Result._virtualizedListPairs;
       obj = { viewabilityConfig: null, onViewableItemsChanged: null };
       obj[0] = tmp3Result.props.viewabilityConfig;
       obj[1] = tmp3Result._createOnViewableItemsChanged(() => {
         const items = [...arguments];
-        lib(closure_1_3[10])(lib.props.onViewableItemsChanged, "Changing the nullability of onViewableItemsChanged is not supported. Once a function or null is supplied that cannot be changed.");
+        lib(closure_1_3[10])(
+          lib.props.onViewableItemsChanged,
+          "Changing the nullability of onViewableItemsChanged is not supported. Once a function or null is supplied that cannot be changed.",
+        );
         const props = lib.props;
         const items1 = [...items];
         return props.onViewableItemsChanged.apply(items1);
@@ -216,7 +223,7 @@ let items = [
         const _listRef = tmp._listRef;
         _listRef.scrollToEnd(arg0);
       }
-    }
+    },
   },
   {
     key: "scrollToIndex",
@@ -225,7 +232,7 @@ let items = [
         const _listRef = tmp._listRef;
         _listRef.scrollToIndex(arg0);
       }
-    }
+    },
   },
   {
     key: "scrollToItem",
@@ -234,7 +241,7 @@ let items = [
         const _listRef = tmp._listRef;
         _listRef.scrollToItem(arg0);
       }
-    }
+    },
   },
   {
     key: "scrollToOffset",
@@ -243,7 +250,7 @@ let items = [
         const _listRef = tmp._listRef;
         _listRef.scrollToOffset(arg0);
       }
-    }
+    },
   },
   {
     key: "recordInteraction",
@@ -252,7 +259,7 @@ let items = [
         const _listRef = this._listRef;
         _listRef.recordInteraction();
       }
-    }
+    },
   },
   {
     key: "flashScrollIndicators",
@@ -261,7 +268,7 @@ let items = [
         const _listRef = this._listRef;
         const result = _listRef.flashScrollIndicators();
       }
-    }
+    },
   },
   {
     key: "getScrollResponder",
@@ -270,7 +277,7 @@ let items = [
         const _listRef = this._listRef;
         return _listRef.getScrollResponder();
       }
-    }
+    },
   },
   {
     key: "getNativeScrollRef",
@@ -279,7 +286,7 @@ let items = [
         const _listRef = this._listRef;
         return _listRef.getScrollRef();
       }
-    }
+    },
   },
   {
     key: "getScrollableNode",
@@ -288,7 +295,7 @@ let items = [
         const _listRef = this._listRef;
         return _listRef.getScrollableNode();
       }
-    }
+    },
   },
   {
     key: "setNativeProps",
@@ -297,18 +304,30 @@ let items = [
         const _listRef = tmp._listRef;
         _listRef.setNativeProps(arg0);
       }
-    }
+    },
   },
   {
     key: "componentDidUpdate",
     value: function componentDidUpdate(numColumns) {
-      FlatList(38)(numColumns.numColumns === this.props.numColumns, "Changing numColumns on the fly is not supported. Change the key prop on FlatList when changing the number of columns to force a fresh render of the component.");
-      FlatList(38)(null == numColumns.onViewableItemsChanged === (null == this.props.onViewableItemsChanged), "Changing onViewableItemsChanged nullability on the fly is not supported");
+      FlatList(38)(
+        numColumns.numColumns === this.props.numColumns,
+        "Changing numColumns on the fly is not supported. Change the key prop on FlatList when changing the number of columns to force a fresh render of the component.",
+      );
+      FlatList(38)(
+        (null == numColumns.onViewableItemsChanged) === (null == this.props.onViewableItemsChanged),
+        "Changing onViewableItemsChanged nullability on the fly is not supported",
+      );
       const tmp3 = FlatList(38);
-      tmp3(!FlatList(147).default(numColumns.viewabilityConfig, this.props.viewabilityConfig), "Changing viewabilityConfig on the fly is not supported");
-      FlatList(38)(numColumns.viewabilityConfigCallbackPairs === this.props.viewabilityConfigCallbackPairs, "Changing viewabilityConfigCallbackPairs on the fly is not supported");
+      tmp3(
+        !FlatList(147).default(numColumns.viewabilityConfig, this.props.viewabilityConfig),
+        "Changing viewabilityConfig on the fly is not supported",
+      );
+      FlatList(38)(
+        numColumns.viewabilityConfigCallbackPairs === this.props.viewabilityConfigCallbackPairs,
+        "Changing viewabilityConfigCallbackPairs on the fly is not supported",
+      );
       this._checkProps(this.props);
-    }
+    },
   },
   {
     key: "_checkProps",
@@ -333,8 +352,11 @@ let items = [
       if (onViewableItemsChanged) {
         onViewableItemsChanged = viewabilityConfigCallbackPairs;
       }
-      FlatList(38)(!onViewableItemsChanged, "FlatList does not support setting both onViewableItemsChanged and viewabilityConfigCallbackPairs.");
-    }
+      FlatList(38)(
+        !onViewableItemsChanged,
+        "FlatList does not support setting both onViewableItemsChanged and viewabilityConfigCallbackPairs.",
+      );
+    },
   },
   {
     key: "_pushMultiColumnViewable",
@@ -360,7 +382,7 @@ let items = [
         obj.index = sum;
         items.push(obj);
       });
-    }
+    },
   },
   {
     key: "_createOnViewableItemsChanged",
@@ -389,7 +411,7 @@ let items = [
           }
         }
       };
-    }
+    },
   },
   {
     key: "render",
@@ -399,7 +421,13 @@ let items = [
       ({ numColumns, columnWrapperStyle, removeClippedSubviews, strictMode } = props);
       const obj = {};
       const merged = Object.assign(callback(props, closure_4));
-      ({ _getItem: obj.getItem, _getItemCount: obj.getItemCount, _keyExtractor: obj.keyExtractor, _captureRef: obj.ref, _virtualizedListPairs: obj.viewabilityConfigCallbackPairs } = self);
+      ({
+        _getItem: obj.getItem,
+        _getItemCount: obj.getItemCount,
+        _keyExtractor: obj.keyExtractor,
+        _captureRef: obj.ref,
+        _virtualizedListPairs: obj.viewabilityConfigCallbackPairs,
+      } = self);
       const tmp = undefined !== strictMode && strictMode;
       const tmp2 = callback(props, closure_4);
       const tmp3 = undefined !== strictMode && strictMode ? self._memoizedRenderer : self._renderer;
@@ -409,10 +437,12 @@ let items = [
         removeClippedSubviews = true;
       }
       obj.removeClippedSubviews = removeClippedSubviews;
-      const merged1 = Object.assign(tmp3(self.props.ListItemComponent, self.props.renderItem, columnWrapperStyle, numColumns, self.props.extraData));
+      const merged1 = Object.assign(
+        tmp3(self.props.ListItemComponent, self.props.renderItem, columnWrapperStyle, numColumns, self.props.extraData),
+      );
       return tmp4(get_VirtualizedListDefault.VirtualizedList, obj);
-    }
-  }
+    },
+  },
 ];
 let obj = {
   key: "scrollToEnd",
@@ -421,7 +451,7 @@ let obj = {
       const _listRef = tmp._listRef;
       _listRef.scrollToEnd(arg0);
     }
-  }
+  },
 };
 const importDefaultResultResult = importDefaultResult(FlatList, items);
 let closure_12 = require("get hairlineWidth").default.create({ row: { flexDirection: "row" } });

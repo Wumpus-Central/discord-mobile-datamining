@@ -10,7 +10,7 @@ function hash(str) {
   let num3 = 5381;
   if (0 < str.length) {
     do {
-      num = 33 * num ^ str.charCodeAt(num2);
+      num = (33 * num) ^ str.charCodeAt(num2);
       num2 = num2 + 1;
       num3 = num;
     } while (num2 < length);
@@ -19,11 +19,17 @@ function hash(str) {
 }
 hash.__closure = {};
 hash.__workletHash = 9993568053208;
-hash.__initData = { code: "function hash_Pnpm_reanimatedUtilsTs1(str){const len=str.length;let h=5381;for(let i=0;i<len;i++){h=h*33^str.charCodeAt(i);}return h>>>0;}" };
+hash.__initData = {
+  code: "function hash_Pnpm_reanimatedUtilsTs1(str){const len=str.length;let h=5381;for(let i=0;i<len;i++){h=h*33^str.charCodeAt(i);}return h>>>0;}",
+};
 let c4 = 1.618;
 let closure_5 = require("n").NativeProxy.updateGestureHandlerConfig;
-let closure_6 = { code: "function pnpm_reanimatedUtilsTs2(sharedValue,configKey){const{hash,baseListenerId,updateGestureHandlerConfig,handlerTag,shouldUseReanimatedDetector}=this.__closure;const keyHash=hash(configKey);const listenerId=baseListenerId+keyHash;sharedValue.addListener(listenerId,function(value){updateGestureHandlerConfig(handlerTag,configKey==='runOnJS'?{dispatchesReanimatedEvents:shouldUseReanimatedDetector&&!value}:{[configKey]:value});});}" };
-let closure_7 = { code: "function pnpm_reanimatedUtilsTs3(){const{maybeSharedValue,listenerId}=this.__closure;maybeSharedValue.removeListener(listenerId);}" };
+let closure_6 = {
+  code: "function pnpm_reanimatedUtilsTs2(sharedValue,configKey){const{hash,baseListenerId,updateGestureHandlerConfig,handlerTag,shouldUseReanimatedDetector}=this.__closure;const keyHash=hash(configKey);const listenerId=baseListenerId+keyHash;sharedValue.addListener(listenerId,function(value){updateGestureHandlerConfig(handlerTag,configKey==='runOnJS'?{dispatchesReanimatedEvents:shouldUseReanimatedDetector&&!value}:{[configKey]:value});});}",
+};
+let closure_7 = {
+  code: "function pnpm_reanimatedUtilsTs3(){const{maybeSharedValue,listenerId}=this.__closure;maybeSharedValue.removeListener(listenerId);}",
+};
 function maybeUnpackValue(enabled) {
   const Reanimated = _mod5695.Reanimated;
   let isSharedValueResult;
@@ -38,7 +44,9 @@ function maybeUnpackValue(enabled) {
 }
 maybeUnpackValue.__closure = { Reanimated: require("metro/05695__.js").Reanimated };
 maybeUnpackValue.__workletHash = 6251032010993;
-maybeUnpackValue.__initData = { code: "function maybeUnpackValue_Pnpm_reanimatedUtilsTs4(v){const{Reanimated}=this.__closure;var _Reanimated;return(_Reanimated=Reanimated)!==null&&_Reanimated!==void 0&&_Reanimated.isSharedValue(v)?v.value:v;}" };
+maybeUnpackValue.__initData = {
+  code: "function maybeUnpackValue_Pnpm_reanimatedUtilsTs4(v){const{Reanimated}=this.__closure;var _Reanimated;return(_Reanimated=Reanimated)!==null&&_Reanimated!==void 0&&_Reanimated.isSharedValue(v)?v.value:v;}",
+};
 function getEnabledSharedValues(Reanimated) {
   if (undefined === _mod5695.Reanimated) {
     return [];
@@ -78,7 +86,7 @@ export const bindSharedValues = function bindSharedValues(closure_1, closure_2) 
       let num3 = 5381;
       if (0 < str.length) {
         do {
-          num = 33 * num ^ str.charCodeAt(num2);
+          num = (33 * num) ^ str.charCodeAt(num2);
           num2 = num2 + 1;
           num3 = num;
         } while (num2 < length);
@@ -98,7 +106,13 @@ export const bindSharedValues = function bindSharedValues(closure_1, closure_2) 
         closure_2_5(closure_0, obj);
       });
     };
-    let obj = { hash: null, baseListenerId: null, updateGestureHandlerConfig: null, handlerTag: null, shouldUseReanimatedDetector: null };
+    let obj = {
+      hash: null,
+      baseListenerId: null,
+      updateGestureHandlerConfig: null,
+      handlerTag: null,
+      shouldUseReanimatedDetector: null,
+    };
     obj[0] = hash;
     obj[1] = sum;
     obj[2] = closure_5;
@@ -148,7 +162,7 @@ export const unbindSharedValues = function unbindSharedValues(closure_1, closure
         let num7 = 5381;
         if (0 < dependencyMap.length) {
           do {
-            num3 = 33 * num3 ^ arr.charCodeAt(num6);
+            num3 = (33 * num3) ^ arr.charCodeAt(num6);
             num6 = num6 + 1;
             num7 = num3;
           } while (num6 < length);

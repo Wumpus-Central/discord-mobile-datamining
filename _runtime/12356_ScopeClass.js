@@ -67,7 +67,13 @@ let items = [
         obj3[0] = items1;
         obj._contexts.flags = obj3;
       }
-      ({ _user: tmp._user, _level: tmp._level, _session: tmp._session, _transactionName: tmp._transactionName, _fingerprint: tmp._fingerprint } = self);
+      ({
+        _user: tmp._user,
+        _level: tmp._level,
+        _session: tmp._session,
+        _transactionName: tmp._transactionName,
+        _fingerprint: tmp._fingerprint,
+      } = self);
       const items2 = [...self._eventProcessors];
       obj._eventProcessors = items2;
       obj._requestSession = self._requestSession;
@@ -81,38 +87,38 @@ let items = [
       tmp3Result = tmp3(12357);
       tmp3Result._setSpanForScope(obj, tmp3Result._getSpanForScope(self));
       return obj;
-    }
+    },
   },
   {
     key: "setClient",
     value: function setClient(_client) {
       this._client = _client;
-    }
+    },
   },
   {
     key: "setLastEventId",
     value: function setLastEventId(_lastEventId) {
       this._lastEventId = _lastEventId;
-    }
+    },
   },
   {
     key: "getClient",
     value: function getClient() {
       return this._client;
-    }
+    },
   },
   {
     key: "lastEventId",
     value: function lastEventId() {
       return this._lastEventId;
-    }
+    },
   },
   {
     key: "addScopeListener",
     value: function addScopeListener(arg0) {
       const _scopeListeners = this._scopeListeners;
       _scopeListeners.push(arg0);
-    }
+    },
   },
   {
     key: "addEventProcessor",
@@ -120,7 +126,7 @@ let items = [
       const _eventProcessors = this._eventProcessors;
       _eventProcessors.push(arg0);
       return this;
-    }
+    },
   },
   {
     key: "setUser",
@@ -139,26 +145,26 @@ let items = [
       }
       const result = self._notifyScopeListeners();
       return self;
-    }
+    },
   },
   {
     key: "getUser",
     value: function getUser() {
       return this._user;
-    }
+    },
   },
   {
     key: "getRequestSession",
     value: function getRequestSession() {
       return this._requestSession;
-    }
+    },
   },
   {
     key: "setRequestSession",
     value: function setRequestSession(_requestSession) {
       this._requestSession = _requestSession;
       return this;
-    }
+    },
   },
   {
     key: "setTags",
@@ -168,7 +174,7 @@ let items = [
       this._tags = {};
       const result = this._notifyScopeListeners();
       return this;
-    }
+    },
   },
   {
     key: "setTag",
@@ -179,7 +185,7 @@ let items = [
       this._tags = obj;
       const result = this._notifyScopeListeners();
       return this;
-    }
+    },
   },
   {
     key: "setExtras",
@@ -189,7 +195,7 @@ let items = [
       this._extra = {};
       const result = this._notifyScopeListeners();
       return this;
-    }
+    },
   },
   {
     key: "setExtra",
@@ -200,7 +206,7 @@ let items = [
       this._extra = obj;
       const result = this._notifyScopeListeners();
       return this;
-    }
+    },
   },
   {
     key: "setFingerprint",
@@ -208,7 +214,7 @@ let items = [
       this._fingerprint = _fingerprint;
       const result = this._notifyScopeListeners();
       return this;
-    }
+    },
   },
   {
     key: "setLevel",
@@ -216,7 +222,7 @@ let items = [
       this._level = _level;
       const result = this._notifyScopeListeners();
       return this;
-    }
+    },
   },
   {
     key: "setTransactionName",
@@ -224,7 +230,7 @@ let items = [
       this._transactionName = _transactionName;
       const result = this._notifyScopeListeners();
       return this;
-    }
+    },
   },
   {
     key: "setContext",
@@ -238,7 +244,7 @@ let items = [
       }
       const result = self._notifyScopeListeners();
       return self;
-    }
+    },
   },
   {
     key: "setSession",
@@ -251,13 +257,13 @@ let items = [
       }
       const result = self._notifyScopeListeners();
       return self;
-    }
+    },
   },
   {
     key: "getSession",
     value: function getSession() {
       return this._session;
-    }
+    },
   },
   {
     key: "update",
@@ -325,12 +331,23 @@ let items = [
       } else {
         return self;
       }
-    }
+    },
   },
   {
     key: "clear",
     value: function clear() {
-      let obj = { _breadcrumbs: [], _tags: {}, _extra: {}, _user: {}, _contexts: {}, _level: undefined, _transactionName: undefined, _fingerprint: undefined, _requestSession: undefined, _session: undefined };
+      let obj = {
+        _breadcrumbs: [],
+        _tags: {},
+        _extra: {},
+        _user: {},
+        _contexts: {},
+        _level: undefined,
+        _transactionName: undefined,
+        _fingerprint: undefined,
+        _requestSession: undefined,
+        _session: undefined,
+      };
       ScopeClass(12357)._setSpanForScope(obj, undefined);
       obj._attachments = [];
       obj = { traceId: null };
@@ -339,7 +356,7 @@ let items = [
       const result = obj.setPropagationContext(obj);
       const result1 = obj._notifyScopeListeners();
       return obj;
-    }
+    },
   },
   {
     key: "addBreadcrumb",
@@ -365,13 +382,13 @@ let items = [
         const result = self._notifyScopeListeners();
         return self;
       }
-    }
+    },
   },
   {
     key: "getLastBreadcrumb",
     value: function getLastBreadcrumb() {
       return this._breadcrumbs[this._breadcrumbs.length - 1];
-    }
+    },
   },
   {
     key: "clearBreadcrumbs",
@@ -379,7 +396,7 @@ let items = [
       this._breadcrumbs = [];
       const result = this._notifyScopeListeners();
       return this;
-    }
+    },
   },
   {
     key: "addAttachment",
@@ -387,29 +404,43 @@ let items = [
       const _attachments = this._attachments;
       _attachments.push(arg0);
       return this;
-    }
+    },
   },
   {
     key: "clearAttachments",
     value: function clearAttachments() {
       this._attachments = [];
       return this;
-    }
+    },
   },
   {
     key: "getScopeData",
     value: function getScopeData() {
       const self = this;
-      const obj = { breadcrumbs: this._breadcrumbs, attachments: this._attachments, contexts: this._contexts, tags: this._tags, extra: this._extra, user: this._user, level: this._level, fingerprint: tmp, eventProcessors: self._eventProcessors, propagationContext: self._propagationContext, sdkProcessingMetadata: self._sdkProcessingMetadata, transactionName: self._transactionName, span: ScopeClass(12357)._getSpanForScope(self) };
+      const obj = {
+        breadcrumbs: this._breadcrumbs,
+        attachments: this._attachments,
+        contexts: this._contexts,
+        tags: this._tags,
+        extra: this._extra,
+        user: this._user,
+        level: this._level,
+        fingerprint: tmp,
+        eventProcessors: self._eventProcessors,
+        propagationContext: self._propagationContext,
+        sdkProcessingMetadata: self._sdkProcessingMetadata,
+        transactionName: self._transactionName,
+        span: ScopeClass(12357)._getSpanForScope(self),
+      };
       return obj;
-    }
+    },
   },
   {
     key: "setSDKProcessingMetadata",
     value: function setSDKProcessingMetadata(arg0) {
       this._sdkProcessingMetadata = ScopeClass(12360).merge(this._sdkProcessingMetadata, arg0, 2);
       return this;
-    }
+    },
   },
   {
     key: "setPropagationContext",
@@ -418,13 +449,13 @@ let items = [
       const merged = Object.assign(arg0);
       this._propagationContext = obj;
       return this;
-    }
+    },
   },
   {
     key: "getPropagationContext",
     value: function getPropagationContext() {
       return this._propagationContext;
-    }
+    },
   },
   {
     key: "captureException",
@@ -453,7 +484,7 @@ let items = [
       }
       obj = ScopeClass(12346);
       event_id = obj.uuid4();
-    }
+    },
   },
   {
     key: "captureMessage",
@@ -482,7 +513,7 @@ let items = [
       }
       obj = ScopeClass(12346);
       event_id = obj.uuid4();
-    }
+    },
   },
   {
     key: "captureEvent",
@@ -506,7 +537,7 @@ let items = [
       }
       obj = ScopeClass(12346);
       event_id = obj.uuid4();
-    }
+    },
   },
   {
     key: "_notifyScopeListeners",
@@ -521,8 +552,8 @@ let items = [
         });
         self._notifyingListeners = false;
       }
-    }
-  }
+    },
+  },
 ];
 const _moduleResult = _createClass(ScopeClass, items);
 let c4 = _moduleResult;

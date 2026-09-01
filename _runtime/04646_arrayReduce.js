@@ -29,4 +29,4 @@ export default function arrayReduce(arg0, arg1, arg2, arg3) {
     } while (sum < num);
   }
   return tmp5;
-};
+}

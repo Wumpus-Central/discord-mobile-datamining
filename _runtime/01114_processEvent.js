@@ -16,7 +16,12 @@ function processEvent(tags, originalException) {
     }
     tmp2 = originalException1;
   }
-  const obj = { turbo_module: isHermesEnabled.isTurboModuleEnabled(), fabric: null, react_native_version: null, expo: null };
+  const obj = {
+    turbo_module: isHermesEnabled.isTurboModuleEnabled(),
+    fabric: null,
+    react_native_version: null,
+    expo: null,
+  };
   const obj2 = isHermesEnabled;
   obj[1] = isHermesEnabled.isFabricEnabled();
   const obj3 = isHermesEnabled;
@@ -122,8 +127,6 @@ function processEvent(tags, originalException) {
 }
 arg5.reactNativeInfoIntegration = () => ({
   name: "ReactNativeInfo",
-  setupOnce() {
-
-  },
-  processEvent
+  setupOnce() {},
+  processEvent,
 });

@@ -8,7 +8,9 @@ import noop from "00019_noop.js";
 noopDefault;
 const Platform = get_ActivityIndicator.Platform;
 const jsx = jsxProd.jsx;
-let closure_6 = { code: "function pnpm_BottomSheetBodyTsx1(){const{Platform,animatedIndex,animatedPosition}=this.__closure;return{opacity:Platform.OS==='android'&&animatedIndex.get()===-1?0:1,transform:[{translateY:animatedPosition.get()}]};}" };
+let closure_6 = {
+  code: "function pnpm_BottomSheetBodyTsx1(){const{Platform,animatedIndex,animatedPosition}=this.__closure;return{opacity:Platform.OS==='android'&&animatedIndex.get()===-1?0:1,transform:[{translateY:animatedPosition.get()}]};}",
+};
 const memoResult = memo(function BottomSheetBodyComponent(children) {
   const style = children.style;
   let View = children.BodyComponent;
@@ -46,12 +48,19 @@ const memoResult = memo(function BottomSheetBodyComponent(children) {
       return items;
     }, items1),
     collapsable: true,
-    children: children.children
+    children: children.children,
   };
-  return <View style={animatedStyle(() => {
-    const items = [style, style(animatedPosition[5]).styles.container, animatedStyle];
-    return items;
-  }, items1)} collapsable>{arg0.children}</View>;
+  return (
+    <View
+      style={animatedStyle(() => {
+        const items = [style, style(animatedPosition[5]).styles.container, animatedStyle];
+        return items;
+      }, items1)}
+      collapsable
+    >
+      {arg0.children}
+    </View>
+  );
 });
 memoResult.displayName = "BottomSheetBody";
 

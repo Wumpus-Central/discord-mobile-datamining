@@ -42,7 +42,7 @@ class IntlManager {
     self.defaultLocale = DEFAULT_LOCALE2;
     self.formatConfig = DEFAULT_FORMAT_CONFIG;
     self._forceLookupMatcher = flag;
-    items = [, ];
+    items = [,];
     ({ currentLocale: arr[0], defaultLocale: arr[1] } = self);
     self.data = require("makeDataFormatters").makeDataFormatters(items, self.formatConfig, self._forceLookupMatcher);
     set = new Set();
@@ -63,7 +63,7 @@ let items = [
         continue;
       }
       return self;
-    }
+    },
   },
   {
     key: "makeFormatFunction",
@@ -78,17 +78,17 @@ let items = [
         }
         return tmp;
       };
-    }
+    },
   },
   {
     key: "setLocale",
     value: function setLocale(currentLocale) {
       this.currentLocale = currentLocale;
-      const items = [, ];
+      const items = [,];
       ({ currentLocale: arr[0], defaultLocale: arr[1] } = this);
       this.data = IntlManager(1275).makeDataFormatters(items, this.formatConfig, this._forceLookupMatcher);
       this.emitLocaleChange(currentLocale);
-    }
+    },
   },
   {
     key: "emitLocaleChange",
@@ -97,7 +97,7 @@ let items = [
         let item10007Result = item10007(arg0);
         continue;
       }
-    }
+    },
   },
   {
     key: "string",
@@ -109,7 +109,7 @@ let items = [
         const obj = arg0(this.currentLocale);
       }
       return str;
-    }
+    },
   },
   {
     key: "reserialize",
@@ -125,16 +125,24 @@ let items = [
         }
         return reserializeResult;
       }
-    }
+    },
   },
   {
     key: "bindFormatValues",
     value: function bindFormatValues(Builder, ast, values) {
-      const items = [, ];
+      const items = [,];
       ({ currentLocale: arr[0], defaultLocale: arr[1] } = this);
-      return IntlManager(1278).bindFormatValues({ Builder, nodes: ast.ast, locales: items, dataFormatters: this.data, formatConfig: this.formatConfig, values, keyPrefix: "" });
-    }
-  }
+      return IntlManager(1278).bindFormatValues({
+        Builder,
+        nodes: ast.ast,
+        locales: items,
+        dataFormatters: this.data,
+        formatConfig: this.formatConfig,
+        values,
+        keyPrefix: "",
+      });
+    },
+  },
 ];
 
 export const DEFAULT_LOCALE = "en-US";

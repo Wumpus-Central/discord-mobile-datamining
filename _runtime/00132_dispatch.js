@@ -206,14 +206,20 @@ let obj = {
     if (arguments.length < 2) {
       const _TypeError3 = TypeError;
       const _HermesInternal2 = HermesInternal;
-      const typeError = new TypeError("Failed to execute 'addEventListener' on 'EventTarget': 2 arguments required, but only " + arguments.length + " present.");
+      const typeError = new TypeError(
+        "Failed to execute 'addEventListener' on 'EventTarget': 2 arguments required, but only " +
+          arguments.length +
+          " present.",
+      );
       throw typeError;
     } else if (null != fn) {
       if (typeof fn !== "function") {
         if (typeof fn !== "object") {
           const _TypeError2 = TypeError;
           const _HermesInternal = HermesInternal;
-          const typeError1 = new TypeError("Failed to execute '" + "addEventListener" + "' on 'EventTarget': parameter 2 is not of type 'Object'.");
+          const typeError1 = new TypeError(
+            "Failed to execute '" + "addEventListener" + "' on 'EventTarget': parameter 2 is not of type 'Object'.",
+          );
           throw typeError1;
         }
       }
@@ -261,12 +267,16 @@ let obj = {
               const result1 = value.set(fn, obj);
               c2 = value;
               if (null != tmp7) {
-                const listener = tmp7.addEventListener("abort", () => {
-                  obj.removed = true;
-                  if (_undefined.get(closure_0) === _undefined) {
-                    obj.delete(closure_0);
-                  }
-                }, { once: true });
+                const listener = tmp7.addEventListener(
+                  "abort",
+                  () => {
+                    obj.removed = true;
+                    if (_undefined.get(closure_0) === _undefined) {
+                      obj.delete(closure_0);
+                    }
+                  },
+                  { once: true },
+                );
               }
             }
           }
@@ -293,7 +303,9 @@ let obj = {
           BooleanResult3 = BooleanResult;
           if (!(signal instanceof AbortSignal)) {
             const _TypeError = TypeError;
-            const typeError2 = new TypeError("Failed to execute 'addEventListener' on 'EventTarget': Failed to read the 'signal' property from 'AddEventListenerOptions': Failed to convert value to 'AbortSignal'.");
+            const typeError2 = new TypeError(
+              "Failed to execute 'addEventListener' on 'EventTarget': Failed to read the 'signal' property from 'AddEventListenerOptions': Failed to convert value to 'AbortSignal'.",
+            );
             throw typeError2;
           }
         }
@@ -304,7 +316,7 @@ let obj = {
       tmp7 = null;
       flag2 = false;
     }
-  }
+  },
 };
 let items = [
   obj,
@@ -318,14 +330,22 @@ let items = [
       if (arguments.length < 2) {
         const _TypeError2 = TypeError;
         const _HermesInternal2 = HermesInternal;
-        const typeError = new TypeError("Failed to execute 'removeEventListener' on 'EventTarget': 2 arguments required, but only " + arguments.length + " present.");
+        const typeError = new TypeError(
+          "Failed to execute 'removeEventListener' on 'EventTarget': 2 arguments required, but only " +
+            arguments.length +
+            " present.",
+        );
         throw typeError;
       } else if (null != fn) {
         if (typeof fn !== "function") {
           if (typeof fn !== "object") {
             const _TypeError = TypeError;
             const _HermesInternal = HermesInternal;
-            const typeError1 = new TypeError("Failed to execute '" + "removeEventListener" + "' on 'EventTarget': parameter 2 is not of type 'Object'.");
+            const typeError1 = new TypeError(
+              "Failed to execute '" +
+                "removeEventListener" +
+                "' on 'EventTarget': parameter 2 is not of type 'Object'.",
+            );
             throw typeError1;
           }
         }
@@ -354,7 +374,7 @@ let items = [
         }
         StringResult = String(arg0);
       }
-    }
+    },
   },
   {
     key: "dispatchEvent",
@@ -362,7 +382,9 @@ let items = [
       if (defaultPrevented instanceof EventDefault) {
         if (defaultPrevented[closure_11]) {
           const _Error = Error;
-          error = new Error("Failed to execute 'dispatchEvent' on 'EventTarget': The event is already being dispatched.");
+          error = new Error(
+            "Failed to execute 'dispatchEvent' on 'EventTarget': The event is already being dispatched.",
+          );
           throw error;
         } else {
           const self = this;
@@ -372,34 +394,35 @@ let items = [
         }
       } else {
         const _TypeError = TypeError;
-        const typeError = new TypeError("Failed to execute 'dispatchEvent' on 'EventTarget': parameter 1 is not of type 'Event'.");
+        const typeError = new TypeError(
+          "Failed to execute 'dispatchEvent' on 'EventTarget': parameter 1 is not of type 'Event'.",
+        );
         throw typeError;
       }
-    }
+    },
   },
-,
-,
-
+  ,
+  ,
 ];
 obj = {
   key: require("SymbolResult2").EVENT_TARGET_GET_DECLARATIVE_LISTENER_KEY,
   value(arg0, arg1) {
     return null;
-  }
+  },
 };
 items[3] = obj;
 obj = {
   key: require("SymbolResult2").EVENT_TARGET_GET_THE_PARENT_KEY,
   value() {
     return null;
-  }
+  },
 };
 items[4] = obj;
 items[5] = {
   key: require("SymbolResult2").INTERNAL_DISPATCH_METHOD_KEY,
   value(arg0) {
     dispatch(this, arg0);
-  }
+  },
 };
 const importDefaultResultResult = importDefaultResult(EventTarget, items);
 setPlatformObject.setPlatformObject(importDefaultResultResult);

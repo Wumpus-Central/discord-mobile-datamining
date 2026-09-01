@@ -25,17 +25,19 @@ arg5.baggageHeaderToDynamicSamplingContext = function baggageHeaderToDynamicSamp
           const parts = str.split("=");
           return parts.map((str) => decodeURIComponent(str.trim()));
         });
-        const entries = Object.entries(mapped.reduce((arg0, arg1) => {
-          [tmp, tmp2] = arg1;
-          let tmp3 = tmp;
-          if (tmp) {
-            tmp3 = tmp2;
-          }
-          if (tmp3) {
-            arg0[tmp] = tmp2;
-          }
-          return arg0;
-        }, {}));
+        const entries = Object.entries(
+          mapped.reduce((arg0, arg1) => {
+            [tmp, tmp2] = arg1;
+            let tmp3 = tmp;
+            if (tmp) {
+              tmp3 = tmp2;
+            }
+            if (tmp3) {
+              arg0[tmp] = tmp2;
+            }
+            return arg0;
+          }, {}),
+        );
         const item = entries.forEach((arg0) => {
           [tmp, tmp2] = arg0;
           closure_0[tmp] = tmp2;
@@ -110,7 +112,13 @@ arg5.dynamicSamplingContextToSentryBaggageHeader = function dynamicSamplingConte
           if (callback(table[1]).DEBUG_BUILD) {
             const logger = tmp5(tmp6[2]).logger;
             const _HermesInternal2 = HermesInternal;
-            logger.warn("Not adding key: " + tmp + " with val: " + tmp2 + " to baggage header due to exceeding baggage size limits.");
+            logger.warn(
+              "Not adding key: " +
+                tmp +
+                " with val: " +
+                tmp2 +
+                " to baggage header due to exceeding baggage size limits.",
+            );
             combined1 = arg0;
           }
           tmp5 = callback;
@@ -136,17 +144,19 @@ arg5.parseBaggageHeader = function parseBaggageHeader(arr) {
           const parts = str.split("=");
           return parts.map((str) => decodeURIComponent(str.trim()));
         });
-        const entries = Object.entries(mapped.reduce((arg0, arg1) => {
-          [tmp, tmp2] = arg1;
-          let tmp3 = tmp;
-          if (tmp) {
-            tmp3 = tmp2;
-          }
-          if (tmp3) {
-            arg0[tmp] = tmp2;
-          }
-          return arg0;
-        }, {}));
+        const entries = Object.entries(
+          mapped.reduce((arg0, arg1) => {
+            [tmp, tmp2] = arg1;
+            let tmp3 = tmp;
+            if (tmp) {
+              tmp3 = tmp2;
+            }
+            if (tmp3) {
+              arg0[tmp] = tmp2;
+            }
+            return arg0;
+          }, {}),
+        );
         const item = entries.forEach((arg0) => {
           [tmp, tmp2] = arg0;
           closure_0[tmp] = tmp2;

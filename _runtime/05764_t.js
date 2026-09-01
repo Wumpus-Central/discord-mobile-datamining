@@ -20,7 +20,9 @@ const fn = function t(arg0, arg1) {
 let obj = { tagMessage: require("tagMessage").tagMessage };
 fn.__closure = obj;
 fn.__workletHash = 727405139747;
-fn.__initData = { code: "function pnpm_gestureStateManagerTs1(handlerTag,state){const{tagMessage}=this.__closure;if(globalThis._setGestureStateSync){globalThis._setGestureStateSync(handlerTag,state);}else if(globalThis._setGestureStateAsync){globalThis._setGestureStateAsync(handlerTag,state);}else{throw new Error(tagMessage('Failed to set gesture state'));}}" };
+fn.__initData = {
+  code: "function pnpm_gestureStateManagerTs1(handlerTag,state){const{tagMessage}=this.__closure;if(globalThis._setGestureStateSync){globalThis._setGestureStateSync(handlerTag,state);}else if(globalThis._setGestureStateAsync){globalThis._setGestureStateAsync(handlerTag,state);}else{throw new Error(tagMessage('Failed to set gesture state'));}}",
+};
 obj = { activate: null, fail: null, deactivate: null };
 const fn2 = function _(arg0) {
   const ACTIVE = _mod5658.State.ACTIVE;
@@ -42,7 +44,9 @@ const fn2 = function _(arg0) {
 obj = { setGestureState: fn, State: require("metro/05658__.js").State };
 fn2.__closure = obj;
 fn2.__workletHash = 14928129771754;
-fn2.__initData = { code: "function activate_Pnpm_gestureStateManagerTs2(handlerTag){const{setGestureState,State}=this.__closure;setGestureState(handlerTag,State.ACTIVE);}" };
+fn2.__initData = {
+  code: "function activate_Pnpm_gestureStateManagerTs2(handlerTag){const{setGestureState,State}=this.__closure;setGestureState(handlerTag,State.ACTIVE);}",
+};
 obj[0] = fn2;
 const fn3 = function n(arg0) {
   const FAILED = _mod5658.State.FAILED;
@@ -63,7 +67,9 @@ const fn3 = function n(arg0) {
 };
 fn3.__closure = { setGestureState: fn, State: require("metro/05658__.js").State };
 fn3.__workletHash = 1703030189599;
-fn3.__initData = { code: "function fail_Pnpm_gestureStateManagerTs3(handlerTag){const{setGestureState,State}=this.__closure;setGestureState(handlerTag,State.FAILED);}" };
+fn3.__initData = {
+  code: "function fail_Pnpm_gestureStateManagerTs3(handlerTag){const{setGestureState,State}=this.__closure;setGestureState(handlerTag,State.FAILED);}",
+};
 obj[1] = fn3;
 const fn4 = function s(arg0) {
   const END = _mod5658.State.END;
@@ -85,6 +91,8 @@ const fn4 = function s(arg0) {
 const obj1 = { setGestureState: fn, State: require("metro/05658__.js").State };
 fn4.__closure = { setGestureState: fn, State: require("metro/05658__.js").State };
 fn4.__workletHash = 5511283927342;
-fn4.__initData = { code: "function deactivate_Pnpm_gestureStateManagerTs4(handlerTag){const{setGestureState,State}=this.__closure;setGestureState(handlerTag,State.END);}" };
+fn4.__initData = {
+  code: "function deactivate_Pnpm_gestureStateManagerTs4(handlerTag){const{setGestureState,State}=this.__closure;setGestureState(handlerTag,State.END);}",
+};
 obj[2] = fn4;
 arg5.GestureStateManager = obj;

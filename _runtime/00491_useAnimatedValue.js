@@ -11,4 +11,4 @@ export default function useAnimatedValue(arg0, arg1) {
     tmp.current = value;
   }
   return tmp.current;
-};
+}

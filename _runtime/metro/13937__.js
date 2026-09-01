@@ -1,2 +1,22 @@
 // _runtime/metro/13937__.js
-arg5.collations = ["big5han", "compat", "dict", "direct", "ducet", "emoji", "eor", "gb2312", "phonebk", "phonetic", "pinyin", "reformed", "search", "searchjl", "standard", "stroke", "trad", "unihan", "zhuyin"];
+arg5.collations = [
+  "big5han",
+  "compat",
+  "dict",
+  "direct",
+  "ducet",
+  "emoji",
+  "eor",
+  "gb2312",
+  "phonebk",
+  "phonetic",
+  "pinyin",
+  "reformed",
+  "search",
+  "searchjl",
+  "standard",
+  "stroke",
+  "trad",
+  "unihan",
+  "zhuyin",
+];

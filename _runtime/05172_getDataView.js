@@ -18,5 +18,5 @@ arg5.default = {
     const xmpChunks = [];
     xmpChunks.push({ dataOffset: c2, length: byteLength.byteLength });
     return { xmpChunks };
-  }
+  },
 };

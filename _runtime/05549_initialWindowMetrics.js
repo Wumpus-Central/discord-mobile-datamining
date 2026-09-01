@@ -37,25 +37,25 @@ class SafeAreaProviderCompat {
     obj = {
       initialFrame: initialWindowMetrics.frame,
       render(onLayout) {
-            onLayout = onLayout.onLayout;
-            if (closure_2) {
-              let obj = { ref: null, onLayout: null, style: null, children: null };
-              obj[0] = tmp;
-              obj[1] = onLayout;
-              const items = [closure_1_6.container, closure_1];
-              obj[2] = items;
-              obj[3] = closure_0;
-              let tmp2Result = tmp2(closure_1_3, obj);
-            } else {
-              obj = { initialMetrics: null, style: null, onLayout: null, children: null };
-              obj[0] = closure_1_5;
-              obj[1] = closure_1;
-              obj[2] = onLayout;
-              obj[3] = closure_0;
-              tmp2Result = tmp2(closure_1_0(closure_1_1[3]).SafeAreaProvider, obj);
-            }
-            return tmp2Result;
-          }
+        onLayout = onLayout.onLayout;
+        if (closure_2) {
+          let obj = { ref: null, onLayout: null, style: null, children: null };
+          obj[0] = tmp;
+          obj[1] = onLayout;
+          const items = [closure_1_6.container, closure_1];
+          obj[2] = items;
+          obj[3] = closure_0;
+          let tmp2Result = tmp2(closure_1_3, obj);
+        } else {
+          obj = { initialMetrics: null, style: null, onLayout: null, children: null };
+          obj[0] = closure_1_5;
+          obj[1] = closure_1;
+          obj[2] = onLayout;
+          obj[3] = closure_0;
+          tmp2Result = tmp2(closure_1_0(closure_1_1[3]).SafeAreaProvider, obj);
+        }
+        return tmp2Result;
+      },
     };
     return jsx(require("useFrameSize").FrameSizeProvider, obj);
   }

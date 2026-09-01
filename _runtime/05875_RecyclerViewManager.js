@@ -51,19 +51,19 @@ const items = [
     set(_animationOptimizationsEnabled) {
       this._animationOptimizationsEnabled = _animationOptimizationsEnabled;
       this.renderStackManager.disableRecycling = _animationOptimizationsEnabled;
-    }
+    },
   },
   {
     key: "isOffsetProjectionEnabled",
     get() {
       return this.engagedIndicesTracker.enableOffsetProjection;
-    }
+    },
   },
   {
     key: "isDisposed",
     get() {
       return this._isDisposed;
-    }
+    },
   },
   {
     key: "numColumns",
@@ -73,19 +73,19 @@ const items = [
         num = 1;
       }
       return num;
-    }
+    },
   },
   {
     key: "props",
     get() {
       return this.propsRef;
-    }
+    },
   },
   {
     key: "setOffsetProjectionEnabled",
     value: function setOffsetProjectionEnabled(enableOffsetProjection) {
       this.engagedIndicesTracker.enableOffsetProjection = enableOffsetProjection;
-    }
+    },
   },
   {
     key: "updateProps",
@@ -106,7 +106,7 @@ const items = [
         initialDrawBatchSize = self.initialDrawBatchSize;
       }
       self.initialDrawBatchSize = initialDrawBatchSize;
-    }
+    },
   },
   {
     key: "updateScrollOffset",
@@ -115,26 +115,30 @@ const items = [
       if (this.layoutManager) {
         if (!self._isDisposed) {
           const engagedIndicesTracker = self.engagedIndicesTracker;
-          const updateScrollOffsetResult = engagedIndicesTracker.updateScrollOffset(arg0 - self.firstItemOffset, arg1, self.layoutManager);
+          const updateScrollOffsetResult = engagedIndicesTracker.updateScrollOffset(
+            arg0 - self.firstItemOffset,
+            arg1,
+            self.layoutManager,
+          );
           if (updateScrollOffsetResult) {
             self.updateRenderStack(updateScrollOffsetResult);
             return updateScrollOffsetResult;
           }
         }
       }
-    }
+    },
   },
   {
     key: "updateAverageRenderTime",
     value: function updateAverageRenderTime(averageRenderTime) {
       this.engagedIndicesTracker.averageRenderTime = averageRenderTime;
-    }
+    },
   },
   {
     key: "getIsFirstLayoutComplete",
     value: function getIsFirstLayoutComplete() {
       return this.isFirstLayoutComplete;
-    }
+    },
   },
   {
     key: "getLayout",
@@ -147,7 +151,7 @@ const items = [
         error = new Error(RecyclerViewManager(5851).ErrorMessages.layoutManagerNotInitializedLayoutInfo);
         throw error;
       }
-    }
+    },
   },
   {
     key: "tryGetLayout",
@@ -162,7 +166,7 @@ const items = [
           }
         }
       }
-    }
+    },
   },
   {
     key: "isInLastRow",
@@ -176,7 +180,7 @@ const items = [
         flag = false;
       }
       return flag;
-    }
+    },
   },
   {
     key: "getChildContainerDimensions",
@@ -189,14 +193,14 @@ const items = [
         error = new Error(RecyclerViewManager(5851).ErrorMessages.layoutManagerNotInitializedChildContainer);
         throw error;
       }
-    }
+    },
   },
   {
     key: "getRenderStack",
     value: function getRenderStack() {
       const renderStackManager = this.renderStackManager;
       return renderStackManager.getRenderStack();
-    }
+    },
   },
   {
     key: "getWindowSize",
@@ -209,13 +213,13 @@ const items = [
         error = new Error(RecyclerViewManager(5851).ErrorMessages.layoutManagerNotInitializedWindowSize);
         throw error;
       }
-    }
+    },
   },
   {
     key: "getLastScrollOffset",
     value: function getLastScrollOffset() {
       return this.engagedIndicesTracker.scrollOffset;
-    }
+    },
   },
   {
     key: "getMaxScrollOffset",
@@ -223,28 +227,33 @@ const items = [
       const self = this;
       const size = this.getChildContainerDimensions();
       const size2 = self.getWindowSize();
-      return Math.max(0, (this.propsRef.horizontal ? size.width : size.height) - (self.propsRef.horizontal ? size2.width : size2.height) + self.firstItemOffset);
-    }
+      return Math.max(
+        0,
+        (this.propsRef.horizontal ? size.width : size.height) -
+          (self.propsRef.horizontal ? size2.width : size2.height) +
+          self.firstItemOffset,
+      );
+    },
   },
   {
     key: "getAbsoluteLastScrollOffset",
     value: function getAbsoluteLastScrollOffset() {
       return this.engagedIndicesTracker.scrollOffset + this.firstItemOffset;
-    }
+    },
   },
   {
     key: "setScrollDirection",
     value: function setScrollDirection(arg0) {
       const engagedIndicesTracker = this.engagedIndicesTracker;
       engagedIndicesTracker.setScrollDirection(arg0);
-    }
+    },
   },
   {
     key: "resetVelocityCompute",
     value: function resetVelocityCompute() {
       const engagedIndicesTracker = this.engagedIndicesTracker;
       engagedIndicesTracker.resetVelocityHistory();
-    }
+    },
   },
   {
     key: "updateLayoutParams",
@@ -270,7 +279,14 @@ const items = [
         self.layoutManager = undefined;
         self._isLayoutManagerDirty = false;
       }
-      const obj = { windowSize, maxColumns: self.numColumns, horizontal: Boolean(self.propsRef.horizontal), optimizeItemArrangement: null, overrideItemLayout: null, getItemType: null };
+      const obj = {
+        windowSize,
+        maxColumns: self.numColumns,
+        horizontal: Boolean(self.propsRef.horizontal),
+        optimizeItemArrangement: null,
+        overrideItemLayout: null,
+        getItemType: null,
+      };
       let flag2 = self.propsRef.optimizeItemArrangement;
       if (flag2 == null) {
         flag2 = true;
@@ -283,13 +299,13 @@ const items = [
         layoutManagerClass = new layoutManagerClass(obj, layoutManager2);
         self.layoutManager = layoutManagerClass;
       }
-    }
+    },
   },
   {
     key: "hasLayout",
     value: function hasLayout() {
       return undefined !== this.layoutManager;
-    }
+    },
   },
   {
     key: "computeVisibleIndices",
@@ -303,14 +319,14 @@ const items = [
         error = new Error(RecyclerViewManager(5851).ErrorMessages.layoutManagerNotInitializedVisibleIndices);
         throw error;
       }
-    }
+    },
   },
   {
     key: "getEngagedIndices",
     value: function getEngagedIndices() {
       const engagedIndicesTracker = this.engagedIndicesTracker;
       return engagedIndicesTracker.getEngagedIndices();
-    }
+    },
   },
   {
     key: "modifyChildrenLayout",
@@ -340,7 +356,7 @@ const items = [
           flag = !self.hasRenderedProgressively;
         }
       }
-    }
+    },
   },
   {
     key: "computeItemViewability",
@@ -359,14 +375,14 @@ const items = [
         }
         itemViewabilityManager.updateViewableItems(selfResult);
       }
-    }
+    },
   },
   {
     key: "recordInteraction",
     value: function recordInteraction() {
       const itemViewabilityManager = this.itemViewabilityManager;
       itemViewabilityManager.recordInteraction();
-    }
+    },
   },
   {
     key: "recomputeViewableItems",
@@ -374,7 +390,7 @@ const items = [
       const itemViewabilityManager = this.itemViewabilityManager;
       const result = itemViewabilityManager.clearLastReportedViewableIndices();
       const itemViewability = this.computeItemViewability();
-    }
+    },
   },
   {
     key: "processDataUpdate",
@@ -396,13 +412,13 @@ const items = [
         }
         tmp3 = self.hasRenderedProgressively && !self.recomputeEngagedIndices();
       }
-    }
+    },
   },
   {
     key: "recomputeEngagedIndices",
     value: function recomputeEngagedIndices() {
       return this.updateScrollOffset(this.getAbsoluteLastScrollOffset());
-    }
+    },
   },
   {
     key: "restoreIfNeeded",
@@ -410,7 +426,7 @@ const items = [
       if (this._isDisposed) {
         tmp._isDisposed = false;
       }
-    }
+    },
   },
   {
     key: "dispose",
@@ -418,13 +434,13 @@ const items = [
       this._isDisposed = true;
       const itemViewabilityManager = this.itemViewabilityManager;
       itemViewabilityManager.dispose();
-    }
+    },
   },
   {
     key: "markLayoutManagerDirty",
     value: function markLayoutManagerDirty() {
       this._isLayoutManagerDirty = true;
-    }
+    },
   },
   {
     key: "getInitialScrollIndex",
@@ -444,7 +460,7 @@ const items = [
         initialScrollIndex = diff;
       }
       return initialScrollIndex;
-    }
+    },
   },
   {
     key: "shouldMaintainVisibleContentPosition",
@@ -455,7 +471,7 @@ const items = [
         disabled = maintainVisibleContentPosition.disabled;
       }
       return !disabled;
-    }
+    },
   },
   {
     key: "getDataLength",
@@ -469,13 +485,13 @@ const items = [
         num = 0;
       }
       return num;
-    }
+    },
   },
   {
     key: "hasStableDataKeys",
     value: function hasStableDataKeys() {
       return Boolean(this.propsRef.keyExtractor);
-    }
+    },
   },
   {
     key: "getDataKey",
@@ -490,7 +506,7 @@ const items = [
         keyExtractorResult = bound.toString();
       }
       return keyExtractorResult;
-    }
+    },
   },
   {
     key: "getLayoutManagerClass",
@@ -521,7 +537,7 @@ const items = [
         RVLinearLayoutManagerImpl = RecyclerViewManager(5893).RVLinearLayoutManagerImpl;
       }
       return RVLinearLayoutManagerImpl;
-    }
+    },
   },
   {
     key: "applyInitialScrollAdjustment",
@@ -541,11 +557,12 @@ const items = [
           } else {
             const layoutManager = self.layoutManager;
             const point = layoutManager.getLayout(0);
-            self.engagedIndicesTracker.scrollOffset = (self.propsRef.horizontal ? point.x : point.y) - self.firstItemOffset;
+            self.engagedIndicesTracker.scrollOffset =
+              (self.propsRef.horizontal ? point.x : point.y) - self.firstItemOffset;
           }
         }
       }
-    }
+    },
   },
   {
     key: "renderProgressively",
@@ -556,7 +573,9 @@ const items = [
       if (layoutManager) {
         const result = self.applyInitialScrollAdjustment();
         const visibleIndices = self.computeVisibleIndices();
-        self.hasRenderedProgressively = visibleIndices.every((arg0) => layoutManager.getLayout(arg0).isHeightMeasured && layoutManager.getLayout(arg0).isWidthMeasured);
+        self.hasRenderedProgressively = visibleIndices.every(
+          (arg0) => layoutManager.getLayout(arg0).isHeightMeasured && layoutManager.getLayout(arg0).isWidthMeasured,
+        );
         if (self.hasRenderedProgressively) {
           self.isFirstLayoutComplete = true;
         }
@@ -566,10 +585,12 @@ const items = [
         const hasRenderedProgressively = self.hasRenderedProgressively;
         if (!hasRenderedProgressively) {
           const _Math2 = Math;
-          self.updateRenderStack(visibleIndices.slice(0, Math.min(visibleIndices.length, self.getRenderStack().size + tmp3)));
+          self.updateRenderStack(
+            visibleIndices.slice(0, Math.min(visibleIndices.length, self.getRenderStack().size + tmp3)),
+          );
         }
       }
-    }
+    },
   },
   {
     key: "getItemType",
@@ -584,7 +605,7 @@ const items = [
         str = "default";
       }
       return str.toString();
-    }
+    },
   },
   {
     key: "overrideItemLayout",
@@ -597,7 +618,7 @@ const items = [
           overrideItemLayout(spanSizeInfo, self.propsRef.data[sum], sum, self.numColumns, self.propsRef.extraData);
         }
       }
-    }
+    },
   },
   {
     key: "checkPropsAndWarn",
@@ -606,8 +627,8 @@ const items = [
         const _console = console;
         console.warn(RecyclerViewManager(5894).WarningMessages.keyExtractorNotDefinedForMVCP);
       }
-    }
-  }
+    },
+  },
 ];
 
 export const RecyclerViewManager = _createClassDefault(RecyclerViewManager, items);

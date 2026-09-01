@@ -56,10 +56,15 @@ export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegrati
         } else {
           str2 = "every";
         }
-        if (mapped[str2]((arr) => !arr.some((arg0) => {
-          filterKeys = filterKeys.filterKeys;
-          return filterKeys.includes(arg0);
-        }))) {
+        if (
+          mapped[str2](
+            (arr) =>
+              !arr.some((arg0) => {
+                filterKeys = filterKeys.filterKeys;
+                return filterKeys.includes(arg0);
+              }),
+          )
+        ) {
           if ("drop-error-if-contains-third-party-frames" !== tmp2.behaviour) {
             if ("drop-error-if-exclusively-contains-third-party-frames" !== tmp2.behaviour) {
               obj = {};
@@ -72,6 +77,6 @@ export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegrati
         }
       }
       return tags;
-    }
+    },
   };
 });

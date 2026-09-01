@@ -18,4 +18,4 @@ export default function baseMap(arg0, arg1) {
     closure_2[sum] = callback(arg0, arg1, arg2);
   });
   return ArrayResult;
-};
+}

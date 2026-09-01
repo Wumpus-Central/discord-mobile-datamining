@@ -27,8 +27,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 let closure_8 = nullthrowsDefault(NativePerformanceCxxDefault);
 let closure_9 = importDefaultResult2("processingStart");
@@ -85,7 +84,7 @@ let obj = {
   key: "processingStart",
   get() {
     return callback4(this, closure_9)[closure_9];
-  }
+  },
 };
 let items = [
   obj,
@@ -93,13 +92,13 @@ let items = [
     key: "processingEnd",
     get() {
       return callback4(this, closure_10)[closure_10];
-    }
+    },
   },
   {
     key: "interactionId",
     get() {
       return callback4(this, closure_11)[closure_11];
-    }
+    },
   },
   {
     key: "toJSON",
@@ -118,8 +117,8 @@ let items = [
       obj.processingEnd = callback4(self, closure_10)[closure_10];
       obj.interactionId = callback4(self, closure_11)[closure_11];
       return obj;
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(PerformanceEventTiming, items);
 class PerformanceEventTiming {
@@ -151,7 +150,7 @@ obj = {
       tmp = map;
     }
     return tmp.size;
-  }
+  },
 };
 const items1 = [
   obj,
@@ -171,7 +170,7 @@ const items1 = [
         obj = map;
       }
       return obj.entries();
-    }
+    },
   },
   {
     key: "forEach",
@@ -189,7 +188,7 @@ const items1 = [
         arr = map;
       }
       return arr.forEach(arg0);
-    }
+    },
   },
   {
     key: "get",
@@ -207,7 +206,7 @@ const items1 = [
         obj = map;
       }
       return obj.get(arg0);
-    }
+    },
   },
   {
     key: "has",
@@ -225,7 +224,7 @@ const items1 = [
         obj = map;
       }
       return obj.has(arg0);
-    }
+    },
   },
   {
     key: "keys",
@@ -243,7 +242,7 @@ const items1 = [
         obj = map;
       }
       return obj.keys();
-    }
+    },
   },
   {
     key: "values",
@@ -261,8 +260,8 @@ const items1 = [
         obj = map;
       }
       return obj.values();
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult1 = importDefaultResult(EventCounts, items1);
 class EventCounts {

@@ -9,4 +9,4 @@ export default function setToArray(size) {
     closure_1[sum] = arg0;
   });
   return ArrayResult;
-};
+}

@@ -5,11 +5,15 @@ import getOwnPropertyDescriptor from "../13955_getOwnPropertyDescriptor.js";
 
 let tmp2 = !getOwnPropertyDescriptor;
 if (!getOwnPropertyDescriptor) {
-  tmp2 = !_mod13956(() => 7 !== Object.defineProperty(element("div"), "a", {
-    get() {
-      return 7;
-    }
-  }).a);
+  tmp2 = !_mod13956(
+    () =>
+      7 !==
+      Object.defineProperty(element("div"), "a", {
+        get() {
+          return 7;
+        },
+      }).a,
+  );
 }
 
 export default tmp2;

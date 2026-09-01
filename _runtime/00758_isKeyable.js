@@ -12,4 +12,4 @@ export default function isKeyable(str) {
     }
   }
   tmp = "__proto__" !== str;
-};
+}

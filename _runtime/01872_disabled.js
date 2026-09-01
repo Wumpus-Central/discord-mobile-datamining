@@ -21,6 +21,29 @@ export default function _default(disabled) {
   keyboardState = obj.useKeyboardState((appearance) => appearance.appearance);
   const items = [disabled];
   const items1 = [keyboardState, num, theme];
-  obj = { accessibilityHint, accessibilityLabel, accessibilityRole: "button", accessibilityState: theme(() => ({ disabled }), items), background: theme(() => keyboardState.Ripple(theme[keyboardState].ripple, true, num), items1), style, testID, onPress, children: <closure_4 style={style}>{children}</closure_4> };
-  return <keyboardState accessibilityHint={accessibilityHint} accessibilityLabel={accessibilityLabel} accessibilityRole="button" accessibilityState={theme(() => ({ disabled }), items)} background={theme(() => keyboardState.Ripple(theme[keyboardState].ripple, true, num), items1)} style={style} testID={testID} onPress={onPress}><closure_4 style={style}>{children}</closure_4></keyboardState>;
-};
+  obj = {
+    accessibilityHint,
+    accessibilityLabel,
+    accessibilityRole: "button",
+    accessibilityState: theme(() => ({ disabled }), items),
+    background: theme(() => keyboardState.Ripple(theme[keyboardState].ripple, true, num), items1),
+    style,
+    testID,
+    onPress,
+    children: <closure_4 style={style}>{children}</closure_4>,
+  };
+  return (
+    <keyboardState
+      accessibilityHint={accessibilityHint}
+      accessibilityLabel={accessibilityLabel}
+      accessibilityRole="button"
+      accessibilityState={theme(() => ({ disabled }), items)}
+      background={theme(() => keyboardState.Ripple(theme[keyboardState].ripple, true, num), items1)}
+      style={style}
+      testID={testID}
+      onPress={onPress}
+    >
+      <closure_4 style={style}>{children}</closure_4>
+    </keyboardState>
+  );
+}

@@ -25,8 +25,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 function readTags(_raw, dataView, arg2) {
   try {
@@ -41,7 +40,10 @@ function readTags(_raw, dataView, arg2) {
           const obj3 = callback(tmp[7]);
         }
         obj = { doc: null, raw: null };
-        obj[0] = callback3(value, str2.replace(/^.+(<\?xpacket begin)/, "$1").replace(/(<\?xpacket end=".*"\?>).+$/, "$1"));
+        obj[0] = callback3(
+          value,
+          str2.replace(/^.+(<\?xpacket begin)/, "$1").replace(/(<\?xpacket end=".*"\?>).+$/, "$1"),
+        );
         obj[1] = str2;
         return obj;
       } else {
@@ -67,7 +69,10 @@ function readTags(_raw, dataView, arg2) {
           const obj3 = callback(tmp[7]);
         }
         obj = { doc: null, raw: null };
-        obj[0] = callback3(value, str2.replace(/^.+(<\?xpacket begin)/, "$1").replace(/(<\?xpacket end=".*"\?>).+$/, "$1"));
+        obj[0] = callback3(
+          value,
+          str2.replace(/^.+(<\?xpacket begin)/, "$1").replace(/(<\?xpacket end=".*"\?>).+$/, "$1"),
+        );
         obj[1] = str2;
         return obj;
       } else {
@@ -377,16 +382,24 @@ function parseNodeAsTag(attributes, key10005) {
         tmp2 = undefined !== attributes.value["rdf:value"];
       }
       if (!tmp2) {
-        tmp2 = undefined !== attributes.value["rdf:Description"] && undefined !== attributes.value["rdf:Description"].value["rdf:value"];
-        let tmp3 = undefined !== attributes.value["rdf:Description"] && undefined !== attributes.value["rdf:Description"].value["rdf:value"];
+        tmp2 =
+          undefined !== attributes.value["rdf:Description"] &&
+          undefined !== attributes.value["rdf:Description"].value["rdf:value"];
+        let tmp3 =
+          undefined !== attributes.value["rdf:Description"] &&
+          undefined !== attributes.value["rdf:Description"].value["rdf:value"];
       }
       if (tmp2) {
         tmp9 = parseNodeAsSimpleRdfDescription(attributes, key10005);
       } else {
         let tmp4 = "Resource" === attributes.attributes["rdf:parseType"];
         if (!tmp4) {
-          tmp4 = undefined !== attributes.value["rdf:Description"] && undefined === attributes.value["rdf:Description"].value["rdf:value"];
-          let tmp5 = undefined !== attributes.value["rdf:Description"] && undefined === attributes.value["rdf:Description"].value["rdf:value"];
+          tmp4 =
+            undefined !== attributes.value["rdf:Description"] &&
+            undefined === attributes.value["rdf:Description"].value["rdf:value"];
+          let tmp5 =
+            undefined !== attributes.value["rdf:Description"] &&
+            undefined === attributes.value["rdf:Description"].value["rdf:value"];
         }
         if (tmp4) {
           tmp9 = parseNodeAsStructureRdfDescription(attributes, key10005);
@@ -451,16 +464,24 @@ function parseNodeAsTag(attributes, key10005) {
                   tmp2 = undefined !== attributes.value["rdf:value"];
                 }
                 if (!tmp2) {
-                  tmp2 = undefined !== attributes.value["rdf:Description"] && undefined !== attributes.value["rdf:Description"].value["rdf:value"];
-                  const tmp3 = undefined !== attributes.value["rdf:Description"] && undefined !== attributes.value["rdf:Description"].value["rdf:value"];
+                  tmp2 =
+                    undefined !== attributes.value["rdf:Description"] &&
+                    undefined !== attributes.value["rdf:Description"].value["rdf:value"];
+                  const tmp3 =
+                    undefined !== attributes.value["rdf:Description"] &&
+                    undefined !== attributes.value["rdf:Description"].value["rdf:value"];
                 }
                 if (tmp2) {
                   let value = closure_1_21(attributes);
                 } else {
                   let tmp4 = "Resource" === attributes.attributes["rdf:parseType"];
                   if (!tmp4) {
-                    tmp4 = undefined !== attributes.value["rdf:Description"] && undefined === attributes.value["rdf:Description"].value["rdf:value"];
-                    const tmp5 = undefined !== attributes.value["rdf:Description"] && undefined === attributes.value["rdf:Description"].value["rdf:value"];
+                    tmp4 =
+                      undefined !== attributes.value["rdf:Description"] &&
+                      undefined === attributes.value["rdf:Description"].value["rdf:value"];
+                    const tmp5 =
+                      undefined !== attributes.value["rdf:Description"] &&
+                      undefined === attributes.value["rdf:Description"].value["rdf:value"];
                   }
                   if (tmp4) {
                     value = closure_1_22(attributes).value;
@@ -774,7 +795,7 @@ let obj = {
       }
       return obj;
     }
-  }
+  },
 };
 class ParseError {
   constructor(arg0) {

@@ -86,12 +86,91 @@ function getEncodingName(value) {
   }
   return str;
 }
-let obj = { 256: null, 261: null, 276: null, 278: null, 286: "Service Identifier", 296: "Envelope Number", 306: "Product ID", 316: "Envelope Priority", 326: null, 336: null, 346: null, 356: "UNO", 376: null, 378: null, 512: null, 515: "Object Type Reference", 516: "Object Attribute Reference", 517: "Object Name", 519: "Edit Status", 520: null, 522: "Urgency", 524: null, 527: "Category", 532: null, 534: "Fixture Identifier", 537: null, 538: null, 539: null, 542: "Release Date", 547: "Release Time", 549: "Expiration Date", 550: "Expiration Time", 552: "Special Instructions", 554: null, 557: null, 559: null, 562: null, 567: null, 572: null, 574: null, 575: null, 577: "Originating Program", 582: "Program Version", 587: null, 592: null, 597: null, 602: "City", 604: "Sub-location", 607: "Province/State", 612: "Country/Primary Location Code", 613: "Country/Primary Location Name", 615: "Original Transmission Reference", 617: "Headline", 622: "Credit", 627: "Source", 628: "Copyright Notice", 630: null, 632: "Caption/Abstract", 634: null, 637: null, 642: "Image Type", 643: null, 647: "Language Identifier", 662: null, 663: null, 664: null, 665: null, 666: "Audio Outcue", 698: "Short Document ID", 699: "Unique Document ID", 700: "Owner ID", 712: null, 713: null, 714: "ObjectData Preview Data", 1802: null, 1812: null, 1882: null, 1887: null };
+let obj = {
+  256: null,
+  261: null,
+  276: null,
+  278: null,
+  286: "Service Identifier",
+  296: "Envelope Number",
+  306: "Product ID",
+  316: "Envelope Priority",
+  326: null,
+  336: null,
+  346: null,
+  356: "UNO",
+  376: null,
+  378: null,
+  512: null,
+  515: "Object Type Reference",
+  516: "Object Attribute Reference",
+  517: "Object Name",
+  519: "Edit Status",
+  520: null,
+  522: "Urgency",
+  524: null,
+  527: "Category",
+  532: null,
+  534: "Fixture Identifier",
+  537: null,
+  538: null,
+  539: null,
+  542: "Release Date",
+  547: "Release Time",
+  549: "Expiration Date",
+  550: "Expiration Time",
+  552: "Special Instructions",
+  554: null,
+  557: null,
+  559: null,
+  562: null,
+  567: null,
+  572: null,
+  574: null,
+  575: null,
+  577: "Originating Program",
+  582: "Program Version",
+  587: null,
+  592: null,
+  597: null,
+  602: "City",
+  604: "Sub-location",
+  607: "Province/State",
+  612: "Country/Primary Location Code",
+  613: "Country/Primary Location Name",
+  615: "Original Transmission Reference",
+  617: "Headline",
+  622: "Credit",
+  627: "Source",
+  628: "Copyright Notice",
+  630: null,
+  632: "Caption/Abstract",
+  634: null,
+  637: null,
+  642: "Image Type",
+  643: null,
+  647: "Language Identifier",
+  662: null,
+  663: null,
+  664: null,
+  665: null,
+  666: "Audio Outcue",
+  698: "Short Document ID",
+  699: "Unique Document ID",
+  700: "Owner ID",
+  712: null,
+  713: null,
+  714: "ObjectData Preview Data",
+  1802: null,
+  1812: null,
+  1882: null,
+  1887: null,
+};
 obj = {
   name: "Model Version",
   description(arg0) {
     return (arg0[0] << 8) + arg0[1].toString();
-  }
+  },
 };
 obj[256] = obj;
 obj[261] = { name: "Destination", repeatable: true };
@@ -99,13 +178,13 @@ obj[276] = {
   name: "File Format",
   description(arg0) {
     return (arg0[0] << 8) + arg0[1].toString();
-  }
+  },
 };
 obj[278] = {
   name: "File Format Version",
   description(arg0) {
     return (arg0[0] << 8) + arg0[1].toString();
-  }
+  },
 };
 obj[326] = { name: "Date Sent", description: getCreationDate };
 obj[336] = { name: "Time Sent", description: getCreationTime };
@@ -114,19 +193,19 @@ obj[376] = {
   name: "ARM Identifier",
   description(arg0) {
     return (arg0[0] << 8) + arg0[1].toString();
-  }
+  },
 };
 obj[378] = {
   name: "ARM Version",
   description(arg0) {
     return (arg0[0] << 8) + arg0[1].toString();
-  }
+  },
 };
 obj[512] = {
   name: "Record Version",
   description(arg0) {
     return (arg0[0] << 8) + arg0[1].toString();
-  }
+  },
 };
 obj[520] = {
   name: "Editorial Update",
@@ -136,7 +215,7 @@ obj[520] = {
       str = "Additional Language";
     }
     return str;
-  }
+  },
 };
 obj[524] = {
   name: "Subject Reference",
@@ -154,7 +233,7 @@ obj[524] = {
       str2 = `/${tmp[4]}`;
     }
     return sum + str2;
-  }
+  },
 };
 obj[532] = { name: "Supplemental Category", repeatable: true };
 obj[537] = { name: "Keywords", repeatable: true };
@@ -181,7 +260,7 @@ obj[554] = {
       str = str2;
     }
     return str;
-  }
+  },
 };
 obj[557] = { name: "Reference Service", repeatable: true };
 obj[559] = { name: "Reference Date", repeatable: true };
@@ -207,7 +286,7 @@ obj[587] = {
       str = str2;
     }
     return str;
-  }
+  },
 };
 obj[592] = { name: "By-line", repeatable: true };
 obj[597] = { name: "By-line Title", repeatable: true };
@@ -217,7 +296,7 @@ obj[637] = {
   name: "Rasterized Caption",
   description(arg0) {
     return arg0;
-  }
+  },
 };
 obj[643] = {
   name: "Image Orientation",
@@ -236,7 +315,7 @@ obj[643] = {
       str = str2;
     }
     return str;
-  }
+  },
 };
 obj[662] = {
   name: "Audio Type",
@@ -275,13 +354,13 @@ obj[662] = {
       str = text;
     }
     return str;
-  }
+  },
 };
 obj[663] = {
   name: "Audio Sampling Rate",
   description(value) {
     return parseInt(getStringValue.getStringValue(value), 10) + " Hz";
-  }
+  },
 };
 obj[664] = {
   name: "Audio Sampling Resolution",
@@ -292,7 +371,7 @@ obj[664] = {
       str = " bit";
     }
     return parsed + str;
-  }
+  },
 };
 obj[665] = {
   name: "Audio Duration",
@@ -305,7 +384,7 @@ obj[665] = {
       text2 = `${`${arr.substr(0, 2)}:${arr.substr(2, 2)}`}:${arr.substr(4, 2)}`;
     }
     return text2;
-  }
+  },
 };
 obj[712] = {
   name(arg0) {
@@ -360,7 +439,7 @@ obj[712] = {
                                             if (19 !== sum) {
                                               let str12 = "Freehand (Macromedia/Aldus)";
                                               if (20 !== sum) {
-                                                let str11 = "Hypertext Markup Language \"HTML\" (The Internet Society)";
+                                                let str11 = 'Hypertext Markup Language "HTML" (The Internet Society)';
                                                 if (21 !== sum) {
                                                   let str10 = "MPEG 2 Audio Layer 2 (Musicom), ISO/IEC";
                                                   if (22 !== sum) {
@@ -372,7 +451,8 @@ obj[712] = {
                                                         if (25 !== sum) {
                                                           let str4 = "Tape Archive (*.TAR)";
                                                           if (26 !== sum) {
-                                                            let str5 = "Tidningarnas Telegrambyr\u00E5 NITF version (TTNITF DTD)";
+                                                            let str5 =
+                                                              "Tidningarnas Telegrambyr\u00E5 NITF version (TTNITF DTD)";
                                                             if (27 !== sum) {
                                                               let str6 = "Ritzaus Bureau NITF version (RBNITF DTD)";
                                                               if (28 !== sum) {
@@ -443,18 +523,31 @@ obj[712] = {
     } else {
       return getStringValue.getStringValue(value);
     }
-  }
+  },
 };
 obj[713] = {
   name: "ObjectData Preview File Format Version",
   description(value, ObjectData_Preview_File_Format) {
-    const obj = { "00": { "00": "1" }, "01": { "01": "1", "02": "2", "03": "3", "04": "4" }, "02": { "04": "4" }, "03": { "01": "5.0", "02": "6.0" }, "04": { "01": "1.40" }, "05": { "01": "2" }, "06": { "01": "1" }, 11: null, 20: null, 21: null };
+    const obj = {
+      "00": { "00": "1" },
+      "01": { "01": "1", "02": "2", "03": "3", "04": "4" },
+      "02": { "04": "4" },
+      "03": { "01": "5.0", "02": "6.0" },
+      "04": { "01": "1.40" },
+      "05": { "01": "2" },
+      "06": { "01": "1" },
+      11: null,
+      20: null,
+      21: null,
+    };
     obj[11] = { "01": "1.02" };
     obj[20] = { "01": "3.1", "02": "4.0", "03": "5.0", "04": "5.5" };
     obj[21] = { "02": "2.0" };
     const stringValue = getStringValue.getStringValue(value);
     if (ObjectData_Preview_File_Format["ObjectData Preview File Format"]) {
-      const stringValue1 = getStringValue.getStringValue(ObjectData_Preview_File_Format["ObjectData Preview File Format"].value);
+      const stringValue1 = getStringValue.getStringValue(
+        ObjectData_Preview_File_Format["ObjectData Preview File Format"].value,
+      );
       if (obj[stringValue1]) {
         if (obj[stringValue1][stringValue]) {
           return obj[stringValue1][stringValue];
@@ -463,13 +556,13 @@ obj[713] = {
       const tmpResult = getStringValue;
     }
     return stringValue;
-  }
+  },
 };
 obj[1802] = {
   name: "Size Mode",
   description(arg0) {
     return arg0[0].toString();
-  }
+  },
 };
 obj[1812] = {
   name: "Max Subfile Size",
@@ -487,7 +580,7 @@ obj[1812] = {
       } while (num < length);
     }
     return num3.toString();
-  }
+  },
 };
 obj[1882] = {
   name: "ObjectData Size Announced",
@@ -505,7 +598,7 @@ obj[1882] = {
       } while (num < length);
     }
     return num3.toString();
-  }
+  },
 };
 obj[1887] = {
   name: "Maximum ObjectData Size",
@@ -523,6 +616,6 @@ obj[1887] = {
       } while (num < length);
     }
     return num3.toString();
-  }
+  },
 };
 arg5.default = { iptc: obj };

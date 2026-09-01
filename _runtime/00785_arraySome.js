@@ -13,4 +13,4 @@ export default function arraySome(arg0, arg1) {
     return true;
   }
   return false;
-};
+}

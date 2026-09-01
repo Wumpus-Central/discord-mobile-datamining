@@ -54,16 +54,18 @@ if (self2) {
   exports.validateFileType = function validateFileType(fileChunk, arr, chunkSize) {
     let items = [];
     const items1 = [
-      ...new Set(arr.map((str) => {
-        const parts = str.split(".");
-        const formatted = parts.join("").toUpperCase();
-        let combined = formatted;
-        if ("7Z" === formatted) {
-          const _HermesInternal = HermesInternal;
-          combined = "_" + formatted;
-        }
-        return combined;
-      }))
+      ...new Set(
+        arr.map((str) => {
+          const parts = str.split(".");
+          const formatted = parts.join("").toUpperCase();
+          let combined = formatted;
+          if ("7Z" === formatted) {
+            const _HermesInternal = HermesInternal;
+            combined = "_" + formatted;
+          }
+          return combined;
+        }),
+      ),
     ];
     for (const item10023 of items1) {
       let str = item10023;
@@ -91,7 +93,11 @@ if (self2) {
         let str3 = "Type `";
         let tmp8 = new.target;
         let tmp9 = new.target;
-        let typeError = new TypeError("Type `" + str.toLowerCase() + "` is not supported. Please make sure that `types` list conatins only supported files");
+        let typeError = new TypeError(
+          "Type `" +
+            str.toLowerCase() +
+            "` is not supported. Please make sure that `types` list conatins only supported files",
+        );
         let tmp11 = typeError;
         throw typeError;
       }
@@ -192,16 +198,18 @@ if (self2) {
     } else {
       return false;
     }
-    const set = new Set(arr.map((str) => {
-      const parts = str.split(".");
-      const formatted = parts.join("").toUpperCase();
-      let combined = formatted;
-      if ("7Z" === formatted) {
-        const _HermesInternal = HermesInternal;
-        combined = "_" + formatted;
-      }
-      return combined;
-    }));
+    const set = new Set(
+      arr.map((str) => {
+        const parts = str.split(".");
+        const formatted = parts.join("").toUpperCase();
+        let combined = formatted;
+        if ("7Z" === formatted) {
+          const _HermesInternal = HermesInternal;
+          combined = "_" + formatted;
+        }
+        return combined;
+      }),
+    );
     const tmp29 = require;
     const tmp30 = require;
   };

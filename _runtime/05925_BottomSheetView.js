@@ -31,7 +31,10 @@ const memoResult = noop.memo(function BottomSheetViewComponent(focusHook) {
   animatedScrollableType = bottomSheetInternal.animatedScrollableType;
   enableDynamicSizing = bottomSheetInternal.enableDynamicSizing;
   animatedContentHeight = bottomSheetInternal.animatedContentHeight;
-  bottomSheetContentContainerStyle = onLayout(animatedScrollableContentOffsetY[3]).useBottomSheetContentContainerStyle(flag, style);
+  bottomSheetContentContainerStyle = onLayout(animatedScrollableContentOffsetY[3]).useBottomSheetContentContainerStyle(
+    flag,
+    style,
+  );
   let items = [bottomSheetContentContainerStyle];
   const items1 = [animatedScrollableContentOffsetY, animatedScrollableType];
   const obj2 = onLayout(animatedScrollableContentOffsetY[3]);

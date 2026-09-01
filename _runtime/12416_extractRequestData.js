@@ -189,7 +189,12 @@ let closure_2 = { ip: false, request: true, user: true };
 let closure_3 = ["cookies", "data", "headers", "method", "query_string", "url"];
 let items = ["id", "username", "email"];
 arg5.DEFAULT_USER_INCLUDES = items;
-arg5.addNormalizedRequestDataToEvent = function addNormalizedRequestDataToEvent(request, normalizedRequest, user, include) {
+arg5.addNormalizedRequestDataToEvent = function addNormalizedRequestDataToEvent(
+  request,
+  normalizedRequest,
+  user,
+  include,
+) {
   let obj = {};
   const merged = Object.assign(closure_2);
   if (include) {
@@ -441,7 +446,7 @@ arg5.extractPathForTransaction = function extractPathForTransaction(method) {
   let customRoute = obj.customRoute;
   if (!customRoute) {
     const _HermesInternal = HermesInternal;
-    customRoute = "" + method.baseUrl || "" + method.route && method.route.path;
+    customRoute = "" + method.baseUrl || ("" + method.route && method.route.path);
     const tmp4 = method.baseUrl || "";
     const tmp5 = method.route && method.route.path;
   }
@@ -466,11 +471,23 @@ arg5.httpRequestToRequestData = function httpRequestToRequestData(headers) {
     const _HermesInternal = HermesInternal;
     combined = "" + str + "://" + tmp2 + tmp3;
   }
-  obj = { url: combined, method: headers.method, query_string: extractQueryParamsFromUrl(obj), headers: headersToDict(tmp), cookies: headers.cookies, data: headers.body || undefined };
+  obj = {
+    url: combined,
+    method: headers.method,
+    query_string: extractQueryParamsFromUrl(obj),
+    headers: headersToDict(tmp),
+    cookies: headers.cookies,
+    data: headers.body || undefined,
+  };
   return addNonEnumerableProperty.dropUndefinedKeys(obj);
 };
 arg5.winterCGHeadersToDict = winterCGHeadersToDict;
 arg5.winterCGRequestToRequestData = function winterCGRequestToRequestData(method) {
-  const obj = { method: method.method, url: method.url, query_string: extractQueryParamsFromUrl(method.url), headers: winterCGHeadersToDict(method.headers) };
+  const obj = {
+    method: method.method,
+    url: method.url,
+    query_string: extractQueryParamsFromUrl(method.url),
+    headers: winterCGHeadersToDict(method.headers),
+  };
   return obj;
 };

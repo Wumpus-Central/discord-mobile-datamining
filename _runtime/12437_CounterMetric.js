@@ -16,7 +16,7 @@ let obj = {
   key: "weight",
   get() {
     return 1;
-  }
+  },
 };
 let items = [
   obj,
@@ -24,14 +24,14 @@ let items = [
     key: "add",
     value: function add(arg0) {
       this._value = this._value + arg0;
-    }
+    },
   },
   {
     key: "toString",
     value: function toString() {
       return "" + this._value;
-    }
-  }
+    },
+  },
 ];
 const _moduleResult = _createClass(CounterMetric, items);
 class GaugeMetric {
@@ -50,7 +50,7 @@ obj = {
   key: "weight",
   get() {
     return 5;
-  }
+  },
 };
 const items1 = [
   obj,
@@ -67,14 +67,14 @@ const items1 = [
       }
       self._sum = self._sum + _last;
       self._count = self._count + 1;
-    }
+    },
   },
   {
     key: "toString",
     value: function toString() {
       return "" + this._last + ":" + this._min + ":" + this._max + ":" + this._sum + ":" + this._count;
-    }
-  }
+    },
+  },
 ];
 const _moduleResult1 = _createClass(GaugeMetric, items1);
 class DistributionMetric {
@@ -91,7 +91,7 @@ obj = {
   key: "weight",
   get() {
     return this._value.length;
-  }
+  },
 };
 const items2 = [
   obj,
@@ -100,15 +100,15 @@ const items2 = [
     value: function add(arg0) {
       const _value = this._value;
       _value.push(arg0);
-    }
+    },
   },
   {
     key: "toString",
     value: function toString() {
       const _value = this._value;
       return _value.join(":");
-    }
-  }
+    },
+  },
 ];
 const _moduleResult2 = _createClass(DistributionMetric, items2);
 class SetMetric {
@@ -127,14 +127,14 @@ const items3 = [
     key: "weight",
     get() {
       return this._value.size;
-    }
+    },
   },
   {
     key: "add",
     value: function add(arg0) {
       const _value = this._value;
       _value.add(arg0);
-    }
+    },
   },
   {
     key: "toString",
@@ -148,13 +148,18 @@ const items3 = [
         return simpleHashResult;
       });
       return mapped.join(":");
-    }
-  }
+    },
+  },
 ];
 const _moduleResult3 = _createClass(SetMetric, items3);
 
 export const CounterMetric = _moduleResult;
 export const DistributionMetric = _moduleResult2;
 export const GaugeMetric = _moduleResult1;
-export const METRIC_MAP = { [_mod12432.COUNTER_METRIC_TYPE]: _moduleResult, [_mod12432.GAUGE_METRIC_TYPE]: _moduleResult1, [_mod12432.DISTRIBUTION_METRIC_TYPE]: _moduleResult2, [_mod12432.SET_METRIC_TYPE]: _moduleResult3 };
+export const METRIC_MAP = {
+  [_mod12432.COUNTER_METRIC_TYPE]: _moduleResult,
+  [_mod12432.GAUGE_METRIC_TYPE]: _moduleResult1,
+  [_mod12432.DISTRIBUTION_METRIC_TYPE]: _moduleResult2,
+  [_mod12432.SET_METRIC_TYPE]: _moduleResult3,
+};
 export const SetMetric = _moduleResult3;

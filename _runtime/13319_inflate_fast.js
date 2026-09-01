@@ -26,7 +26,7 @@ export default function inflate_fast(avail_in) {
     let tmp19 = tmp18 >>> 24;
     let tmp20 = sum4 >>> tmp19;
     let diff = sum5 - tmp19;
-    let tmp22 = tmp18 >>> 16 & 255;
+    let tmp22 = (tmp18 >>> 16) & 255;
     let tmp23 = tmp18;
     while (0 !== tmp22) {
       if (16 & tmp22) {
@@ -46,7 +46,7 @@ export default function inflate_fast(avail_in) {
             sum7 = tmp20 + (input[tmp37] << diff);
             sum8 = diff + 8;
           }
-          sum9 = tmp28 + (sum7 & (1 << tmp29) - 1);
+          sum9 = tmp28 + (sum7 & ((1 << tmp29) - 1));
           tmp32 = sum7 >>> tmp29;
           diff1 = sum8 - tmp29;
           tmp33 = sum6;
@@ -66,7 +66,7 @@ export default function inflate_fast(avail_in) {
         let tmp45 = tmp44 >>> 24;
         let tmp46 = sum12 >>> tmp45;
         let diff2 = sum13 - tmp45;
-        let tmp48 = tmp44 >>> 16 & 255;
+        let tmp48 = (tmp44 >>> 16) & 255;
         let tmp49 = tmp44;
         while (!(16 & tmp48)) {
           if (64 & tmp48) {
@@ -100,7 +100,7 @@ export default function inflate_fast(avail_in) {
           }
           sum = tmp24 - (sum << 3);
           avail_in.avail_out = sum;
-          state.hold = tmp25 & (1 << sum) - 1;
+          state.hold = tmp25 & ((1 << sum) - 1);
           state.bits = sum;
         }
         let tmp51 = tmp48 & 15;
@@ -126,7 +126,7 @@ export default function inflate_fast(avail_in) {
           tmp53 = sum18;
           tmp54 = sum17;
         }
-        let sum20 = tmp50 + (tmp53 & (1 << tmp51) - 1);
+        let sum20 = tmp50 + (tmp53 & ((1 << tmp51) - 1));
         if (sum20 > tmp4) {
           let str4 = "invalid distance too far back";
           avail_in.msg = "invalid distance too far back";
@@ -366,4 +366,4 @@ export default function inflate_fast(avail_in) {
     tmp76 = tmp20;
     tmp78 = sum3;
   }
-};
+}

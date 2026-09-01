@@ -1,25 +1,15 @@
 // _runtime/00399_mockCompositeAnimation.js
 let c0 = false;
 let obj = {
-  start() {
-
-  },
-  stop() {
-
-  },
-  reset() {
-
-  },
-  _startNativeLoop() {
-
-  },
+  start() {},
+  stop() {},
+  reset() {},
+  _startNativeLoop() {},
   _isUsingNativeDriver() {
     return false;
-  }
+  },
 };
-function mockCompositeAnimation(arg0) {
-
-}
+function mockCompositeAnimation(arg0) {}
 obj = {
   Value: require("_isNativeReflectConstruct"),
   ValueXY: require("_isNativeReflectConstruct"),
@@ -246,6 +236,6 @@ obj = {
   attachNativeEvent: require("AnimatedEvent").attachNativeEventImpl,
   forkEvent: require("_combineCallbacks").forkEvent,
   unforkEvent: require("_combineCallbacks").unforkEvent,
-  Event: require("AnimatedEvent").AnimatedEvent
+  Event: require("AnimatedEvent").AnimatedEvent,
 };
 arg5.default = obj;

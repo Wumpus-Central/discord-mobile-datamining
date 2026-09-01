@@ -10,5 +10,5 @@ export default {
       constants2 = constants.getConstants();
     }
     return constants2;
-  }
+  },
 };

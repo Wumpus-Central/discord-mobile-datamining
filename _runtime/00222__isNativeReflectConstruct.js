@@ -23,8 +23,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class File {
   constructor(arg0, arg1, arg2) {
@@ -37,7 +36,7 @@ class File {
       tmp4 = null != arg1;
     }
     tmp3Result = tmp3(tmp4, "Failed to construct `File`: Must pass both `parts` and `name` arguments.");
-    items = [, ];
+    items = [,];
     items[0] = global;
     items[1] = importDefault;
     tmp6 = closure_4;
@@ -62,14 +61,14 @@ let items = [
     get() {
       File(38)(null != this.data.name, "Files must have a name set.");
       return this.data.name;
-    }
+    },
   },
   {
     key: "lastModified",
     get() {
       return this.data.lastModified || 0;
-    }
-  }
+    },
+  },
 ];
 
 export default importDefaultResult(File, items);

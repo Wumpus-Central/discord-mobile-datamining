@@ -125,7 +125,9 @@ function _createForOfIteratorHelper(iterable) {
       }
       if (!arr) {
         const _TypeError = TypeError;
-        const typeError = new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+        const typeError = new TypeError(
+          "Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
+        );
         class F {
           constructor() {
             return;
@@ -161,9 +163,7 @@ function _createForOfIteratorHelper(iterable) {
     return obj;
   }
 }
-function noop() {
-
-}
+function noop() {}
 function pushEncodedKeyValuePair(items, key10006, value) {
   let done;
   if (undefined !== value) {
@@ -414,8 +414,7 @@ class Request {
           } else {
             obj.callback(null, tmp8);
           }
-        } catch (error) {
-        }
+        } catch (error) {}
       } catch (tmp29) {
         const _Error = Error;
         const error1 = new Error("Parser is unable to parse the response");
@@ -488,16 +487,18 @@ class Request {
       obj[0] = str3;
       tmp2 = obj;
     }
-    tmp4 = tmp2.encoder || ((arg0) => {
-      if (typeof btoa === "function") {
-        const _btoa = btoa;
-        return btoa(arg0);
-      } else {
-        const _Error = Error;
-        error = new Error("Cannot use basic auth, btoa is not a function");
-        throw error;
-      }
-    });
+    tmp4 =
+      tmp2.encoder ||
+      ((arg0) => {
+        if (typeof btoa === "function") {
+          const _btoa = btoa;
+          return btoa(arg0);
+        } else {
+          const _Error = Error;
+          error = new Error("Cannot use basic auth, btoa is not a function");
+          throw error;
+        }
+      });
     return this._auth(global, str2, tmp2, tmp4);
   }
   query(arg0) {
@@ -592,7 +593,9 @@ class Request {
     }
   }
   crossDomainError() {
-    error = new Error("Request has been terminated\nPossible causes: the network is offline, Origin is not allowed by Access-Control-Allow-Origin, the page is being unloaded, etc.");
+    error = new Error(
+      "Request has been terminated\nPossible causes: the network is offline, Origin is not allowed by Access-Control-Allow-Origin, the page is being unloaded, etc.",
+    );
     error.crossDomain = true;
     ({ status: tmp.status, method: tmp.method, url: tmp.url } = this);
     callbackResult = this.callback(error);
@@ -697,8 +700,7 @@ class Request {
                 return obj.crossDomainError();
               }
             }
-          } catch (err) {
-          }
+          } catch (err) {}
         }
       });
       num = "progress";
@@ -706,7 +708,7 @@ class Request {
         try {
           handleProgress = function handleProgress(direction, total) {
             if (total.total > 0) {
-              total.percent = total.loaded / total.total * 100;
+              total.percent = (total.loaded / total.total) * 100;
               if (100 === total.percent) {
                 const _clearTimeout = clearTimeout;
                 clearTimeout(self._uploadTimeoutTimer);
@@ -724,8 +726,7 @@ class Request {
             str3 = "upload";
             listener2 = upload.addEventListener(`progress`, handleProgress.bind(null, "upload"));
           }
-        } catch (err) {
-        }
+        } catch (err) {}
       }
       if (xhr.upload) {
         _setUploadTimeoutResult = self._setUploadTimeout();
@@ -848,9 +849,7 @@ _exports.getXHR = () => {
     throw error;
   }
 };
-function trim(arg0) {
-
-}
+function trim(arg0) {}
 _exports.serializeObject = function serialize(obj) {
   if (obj.isObject(obj)) {
     const items = [];
@@ -875,7 +874,14 @@ _exports.serializeObject = function serialize(obj) {
   obj = str2(532);
 };
 _exports.parseString = parseString;
-_exports.types = { html: "text/html", json: "application/json", xml: "text/xml", urlencoded: "application/x-www-form-urlencoded", form: "application/x-www-form-urlencoded", "form-data": "application/x-www-form-urlencoded" };
+_exports.types = {
+  html: "text/html",
+  json: "application/json",
+  xml: "text/xml",
+  urlencoded: "application/x-www-form-urlencoded",
+  form: "application/x-www-form-urlencoded",
+  "form-data": "application/x-www-form-urlencoded",
+};
 let obj = { "application/x-www-form-urlencoded": _mod533.stringify, "application/json": defaultOptions };
 _exports.serialize = obj;
 obj = { "application/x-www-form-urlencoded": parseString, "application/json": JSON.parse };
@@ -894,7 +900,7 @@ let num2 = 0;
 if (0 < items.length) {
   do {
     str2 = items[num2];
-    _createForOfIteratorHelper2.prototype[str2.toLowerCase()] = function(arg0, arg1) {
+    _createForOfIteratorHelper2.prototype[str2.toLowerCase()] = function (arg0, arg1) {
       const request = new _exports.Request(str2, arg0);
       this._setDefaults(request);
       if (arg1) {

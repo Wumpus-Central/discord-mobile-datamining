@@ -159,8 +159,8 @@ const items = [
         serializeAst(self.ast, obj);
         return obj.value;
       }
-    }
-  }
+    },
+  },
 ];
 
 export const InternalIntlMessage = _createClass(InternalIntlMessage, items);

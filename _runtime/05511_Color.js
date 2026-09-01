@@ -103,11 +103,11 @@ class Color {
           str5 = "rgb";
           self.model = "rgb";
           num4 = 16;
-          items1 = [, , ];
+          items1 = [, ,];
           num5 = 255;
-          items1[0] = global >> 16 & 255;
+          items1[0] = (global >> 16) & 255;
           num6 = 8;
-          items1[1] = global >> 8 & 255;
+          items1[1] = (global >> 8) & 255;
           items1[2] = 255 & global;
           self.color = items1;
           num7 = 1;
@@ -315,11 +315,11 @@ while (iter !== undefined) {
             str5 = "rgb";
             self.model = "rgb";
             num4 = 16;
-            items1 = [, , ];
+            items1 = [, ,];
             num5 = 255;
-            items1[0] = global >> 16 & 255;
+            items1[0] = (global >> 16) & 255;
             num6 = 8;
-            items1[1] = global >> 8 & 255;
+            items1[1] = (global >> 8) & 255;
             items1[2] = 255 & global;
             self.color = items1;
             num7 = 1;
@@ -442,7 +442,7 @@ function getset(cmyk, arg1, arg2) {
     continue;
   }
   closure_0 = tmp[0];
-  return function(arg0) {
+  return function (arg0) {
     const self = this;
     if (undefined !== arg0) {
       let tmp5 = arg0;
@@ -556,7 +556,16 @@ obj = {
     const color = this.color;
     closure_0 = Math.max(num, 0);
     const items = [];
-    ({ valpha: arr2[HermesBuiltin.arraySpread(arr2, arr.map(arr, (toFixed) => Number(toFixed.toFixed(closure_0))), 0)], model } = this);
+    ({
+      valpha: arr2[
+        HermesBuiltin.arraySpread(
+          arr2,
+          arr.map(arr, (toFixed) => Number(toFixed.toFixed(closure_0))),
+          0,
+        )
+      ],
+      model,
+    } = this);
     return Color(items, model);
   },
   alpha(alphaResult, arg1) {
@@ -576,7 +585,7 @@ obj = {
   red: getset("rgb", 0, require("00255_get_hairlineWidth.js")),
   green: getset("rgb", 1, require("00255_get_hairlineWidth.js")),
   blue: getset("rgb", 2, require("00255_get_hairlineWidth.js")),
-  hue: getset(["hsl", "hsv", "hsl", "hwb", "hcg"], 0, (arg0) => (arg0 % 360 + 360) % 360),
+  hue: getset(["hsl", "hsv", "hsl", "hwb", "hcg"], 0, (arg0) => ((arg0 % 360) + 360) % 360),
   saturationl: getset("hsl", 1, require("00100_getConstants.js")),
   lightness: getset("hsl", 2, require("00100_getConstants.js")),
   saturationv: getset("hsv", 1, require("00100_getConstants.js")),
@@ -625,7 +634,9 @@ obj = {
       const _Math = Math;
       const rgbResult = this.rgb();
       const str2 = Math.round(255 * this.valpha);
-      const formatted = Math.round(255 * this.valpha).toString(16).toUpperCase();
+      const formatted = Math.round(255 * this.valpha)
+        .toString(16)
+        .toUpperCase();
       let text = formatted;
       if (1 === formatted.length) {
         text = `0${arr}`;
@@ -636,7 +647,7 @@ obj = {
   },
   rgbNumber() {
     const color = this.rgb().color;
-    return (255 & color[0]) << 16 | (255 & color[1]) << 8 | 255 & color[2];
+    return ((255 & color[0]) << 16) | ((255 & color[1]) << 8) | (255 & color[2]);
   },
   luminosity() {
     const color = this.rgb().color;
@@ -780,12 +791,19 @@ obj = {
         const result6 = result1 * rgbResult.blue();
         const result7 = diff2 * rgbResult1.blue();
         const result8 = rgbResult.alpha() * num;
-        return Color.rgb(result2 + result3, result4 + result5, result6 + result7, result8 + rgbResult1.alpha() * (1 - num));
+        return Color.rgb(
+          result2 + result3,
+          result4 + result5,
+          result6 + result7,
+          result8 + rgbResult1.alpha() * (1 - num),
+        );
       }
     }
-    error = new Error("Argument to \"mix\" was not a Color instance, but rather an instance of " + typeof gradientSecondaryBackground);
+    error = new Error(
+      'Argument to "mix" was not a Color instance, but rather an instance of ' + typeof gradientSecondaryBackground,
+    );
     throw error;
-  }
+  },
 };
 Color.prototype = obj;
 function _loop(item10136) {
@@ -794,7 +812,7 @@ function _loop(item10136) {
     return 1;
   } else {
     channels = _require(channels[1])[item10136].channels;
-    Color.prototype[item10136] = function() {
+    Color.prototype[item10136] = function () {
       const self = this;
       const items = [...arguments];
       if (this.model === item10136) {

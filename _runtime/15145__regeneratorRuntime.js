@@ -58,20 +58,26 @@ export default function _regeneratorRuntime() {
                 callResult = call(value, "__await");
               }
               if (callResult) {
-                let nextPromise = _Promise.resolve(value.__await).then((arg0) => {
-                  iter("next", arg0, closure_0, closure_1);
-                }, (arg0) => {
-                  iter("throw", arg0, closure_0, closure_1);
-                });
+                let nextPromise = _Promise.resolve(value.__await).then(
+                  (arg0) => {
+                    iter("next", arg0, closure_0, closure_1);
+                  },
+                  (arg0) => {
+                    iter("throw", arg0, closure_0, closure_1);
+                  },
+                );
                 const resolveResult = _Promise.resolve(value.__await);
               }
               return nextPromise;
             }
           }
-          nextPromise = _Promise.resolve(value).then((value) => {
-            iter.value = value;
-            callback(iter);
-          }, (arg0) => iter("throw", arg0, closure_0, closure_1));
+          nextPromise = _Promise.resolve(value).then(
+            (value) => {
+              iter.value = value;
+              callback(iter);
+            },
+            (arg0) => iter("throw", arg0, closure_0, closure_1),
+          );
           const resolveResult1 = _Promise.resolve(value);
         } else {
           arg3(tmp.arg);
@@ -79,22 +85,22 @@ export default function _regeneratorRuntime() {
       };
       obj = {
         value(arg0, arg1) {
-              closure_0 = arg0;
-              closure_1 = arg1;
-              if (nextPromise) {
-                function callInvokeWithMethodAndArg() {
-                  return new closure_1((arg0, arg1) => {
-                    closure_1_2(closure_0, closure_1, arg0, arg1);
-                  });
-                }
-                nextPromise = nextPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg);
-              } else {
-                nextPromise = new closure_1((arg0, arg1) => {
-                  closure_1_2(closure_0, closure_1, arg0, arg1);
-                });
-              }
-              return nextPromise;
+          closure_0 = arg0;
+          closure_1 = arg1;
+          if (nextPromise) {
+            function callInvokeWithMethodAndArg() {
+              return new closure_1((arg0, arg1) => {
+                closure_1_2(closure_0, closure_1, arg0, arg1);
+              });
             }
+            nextPromise = nextPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg);
+          } else {
+            nextPromise = new closure_1((arg0, arg1) => {
+              closure_1_2(closure_0, closure_1, arg0, arg1);
+            });
+          }
+          return nextPromise;
+        },
       };
       tmp = invoke(this, "_invoke", obj);
       return;
@@ -186,9 +192,11 @@ export default function _regeneratorRuntime() {
   };
   let obj = {};
   hasOwnProperty = prototype.hasOwnProperty;
-  let tmp = Object.defineProperty || ((arg0, arg1, value) => {
-    arg0[arg1] = value.value;
-  });
+  let tmp =
+    Object.defineProperty ||
+    ((arg0, arg1, value) => {
+      arg0[arg1] = value.value;
+    });
   closure_2 = tmp;
   let tmp2 = typeof Symbol === "function" ? Symbol : {};
   closure_3 = tmp3;
@@ -277,20 +285,26 @@ export default function _regeneratorRuntime() {
                   callResult = call(value, "__await");
                 }
                 if (callResult) {
-                  let nextPromise = _Promise.resolve(value.__await).then((arg0) => {
-                    iter("next", arg0, closure_0, closure_1);
-                  }, (arg0) => {
-                    iter("throw", arg0, closure_0, closure_1);
-                  });
+                  let nextPromise = _Promise.resolve(value.__await).then(
+                    (arg0) => {
+                      iter("next", arg0, closure_0, closure_1);
+                    },
+                    (arg0) => {
+                      iter("throw", arg0, closure_0, closure_1);
+                    },
+                  );
                   const resolveResult = _Promise.resolve(value.__await);
                 }
                 return nextPromise;
               }
             }
-            nextPromise = _Promise.resolve(value).then((value) => {
-              iter.value = value;
-              callback(iter);
-            }, (arg0) => iter("throw", arg0, closure_0, closure_1));
+            nextPromise = _Promise.resolve(value).then(
+              (value) => {
+                iter.value = value;
+                callback(iter);
+              },
+              (arg0) => iter("throw", arg0, closure_0, closure_1),
+            );
             const resolveResult1 = _Promise.resolve(value);
           } else {
             arg3(tmp.arg);
@@ -298,22 +312,22 @@ export default function _regeneratorRuntime() {
         };
         obj = {
           value(arg0, arg1) {
-                  closure_0 = arg0;
-                  closure_1 = arg1;
-                  if (nextPromise) {
-                    function callInvokeWithMethodAndArg() {
-                      return new closure_1((arg0, arg1) => {
-                        closure_1_2(closure_0, closure_1, arg0, arg1);
-                      });
-                    }
-                    nextPromise = nextPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg);
-                  } else {
-                    nextPromise = new closure_1((arg0, arg1) => {
-                      closure_1_2(closure_0, closure_1, arg0, arg1);
-                    });
-                  }
-                  return nextPromise;
-                }
+            closure_0 = arg0;
+            closure_1 = arg1;
+            if (nextPromise) {
+              function callInvokeWithMethodAndArg() {
+                return new closure_1((arg0, arg1) => {
+                  closure_1_2(closure_0, closure_1, arg0, arg1);
+                });
+              }
+              nextPromise = nextPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg);
+            } else {
+              nextPromise = new closure_1((arg0, arg1) => {
+                closure_1_2(closure_0, closure_1, arg0, arg1);
+              });
+            }
+            return nextPromise;
+          },
         };
         tmp = invoke(this, "_invoke", obj);
         return;
@@ -350,7 +364,7 @@ export default function _regeneratorRuntime() {
         const items = ["next", "throw", "return"];
         const item = items.forEach((arg0) => {
           closure_0 = arg0;
-          closure_1_5(closure_0, arg0, function(arg0) {
+          closure_1_5(closure_0, arg0, function (arg0) {
             return this._invoke(closure_0, arg0);
           });
         });
@@ -395,20 +409,26 @@ export default function _regeneratorRuntime() {
                     callResult = call(value, "__await");
                   }
                   if (callResult) {
-                    let nextPromise = _Promise.resolve(value.__await).then((arg0) => {
-                      iter("next", arg0, closure_0, closure_1);
-                    }, (arg0) => {
-                      iter("throw", arg0, closure_0, closure_1);
-                    });
+                    let nextPromise = _Promise.resolve(value.__await).then(
+                      (arg0) => {
+                        iter("next", arg0, closure_0, closure_1);
+                      },
+                      (arg0) => {
+                        iter("throw", arg0, closure_0, closure_1);
+                      },
+                    );
                     const resolveResult = _Promise.resolve(value.__await);
                   }
                   return nextPromise;
                 }
               }
-              nextPromise = _Promise.resolve(value).then((value) => {
-                iter.value = value;
-                callback(iter);
-              }, (arg0) => iter("throw", arg0, closure_0, closure_1));
+              nextPromise = _Promise.resolve(value).then(
+                (value) => {
+                  iter.value = value;
+                  callback(iter);
+                },
+                (arg0) => iter("throw", arg0, closure_0, closure_1),
+              );
               const resolveResult1 = _Promise.resolve(value);
             } else {
               arg3(tmp.arg);
@@ -416,22 +436,22 @@ export default function _regeneratorRuntime() {
           };
           obj = {
             value(arg0, arg1) {
-                      closure_0 = arg0;
-                      closure_1 = arg1;
-                      if (nextPromise) {
-                        function callInvokeWithMethodAndArg() {
-                          return new closure_1((arg0, arg1) => {
-                            closure_1_2(closure_0, closure_1, arg0, arg1);
-                          });
-                        }
-                        nextPromise = nextPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg);
-                      } else {
-                        nextPromise = new closure_1((arg0, arg1) => {
-                          closure_1_2(closure_0, closure_1, arg0, arg1);
-                        });
-                      }
-                      return nextPromise;
-                    }
+              closure_0 = arg0;
+              closure_1 = arg1;
+              if (nextPromise) {
+                function callInvokeWithMethodAndArg() {
+                  return new closure_1((arg0, arg1) => {
+                    closure_1_2(closure_0, closure_1, arg0, arg1);
+                  });
+                }
+                nextPromise = nextPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg);
+              } else {
+                nextPromise = new closure_1((arg0, arg1) => {
+                  closure_1_2(closure_0, closure_1, arg0, arg1);
+                });
+              }
+              return nextPromise;
+            },
           };
           tmp = invoke(this, "_invoke", obj);
           return;
@@ -481,7 +501,7 @@ export default function _regeneratorRuntime() {
       };
       obj.awrap = (__await) => ({ __await });
       const result = defineIteratorMethods(AsyncIterator.prototype);
-      tmp7(AsyncIterator.prototype, tmp4, function() {
+      tmp7(AsyncIterator.prototype, tmp4, function () {
         return this;
       });
       obj.AsyncIterator = AsyncIterator;
@@ -583,7 +603,7 @@ export default function _regeneratorRuntime() {
               closure_3 = closure_1_10;
               throw iter.arg;
             }
-          }
+          },
         };
         _Promise = arg2;
         let invoke = obj;
@@ -608,20 +628,26 @@ export default function _regeneratorRuntime() {
                   callResult = call(value, "__await");
                 }
                 if (callResult) {
-                  let nextPromise = _Promise.resolve(value.__await).then((arg0) => {
-                    iter("next", arg0, closure_0, closure_1);
-                  }, (arg0) => {
-                    iter("throw", arg0, closure_0, closure_1);
-                  });
+                  let nextPromise = _Promise.resolve(value.__await).then(
+                    (arg0) => {
+                      iter("next", arg0, closure_0, closure_1);
+                    },
+                    (arg0) => {
+                      iter("throw", arg0, closure_0, closure_1);
+                    },
+                  );
                   const resolveResult = _Promise.resolve(value.__await);
                 }
                 return nextPromise;
               }
             }
-            nextPromise = _Promise.resolve(value).then((value) => {
-              iter.value = value;
-              callback(iter);
-            }, (arg0) => iter("throw", arg0, closure_0, closure_1));
+            nextPromise = _Promise.resolve(value).then(
+              (value) => {
+                iter.value = value;
+                callback(iter);
+              },
+              (arg0) => iter("throw", arg0, closure_0, closure_1),
+            );
             const resolveResult1 = _Promise.resolve(value);
           } else {
             arg3(tmp.arg);
@@ -644,7 +670,7 @@ export default function _regeneratorRuntime() {
               });
             }
             return nextPromise;
-          }
+          },
         });
         let nextPromise = iter;
         if (!iter.isGeneratorFunction(fn)) {
@@ -662,7 +688,7 @@ export default function _regeneratorRuntime() {
       };
       const result1 = defineIteratorMethods(obj);
       tmp7(obj, tmp5, "Generator");
-      tmp7(obj, tmp3, function() {
+      tmp7(obj, tmp3, function () {
         return this;
       });
       tmp7(obj, "toString", () => "[object Generator]");
@@ -689,10 +715,29 @@ export default function _regeneratorRuntime() {
         return next;
       };
       obj.values = values;
-      const obj2 = { constructor: null, reset: null, stop: null, dispatchException: null, abrupt: null, complete: null, finish: null, catch: null, delegateYield: null };
+      const obj2 = {
+        constructor: null,
+        reset: null,
+        stop: null,
+        dispatchException: null,
+        abrupt: null,
+        complete: null,
+        finish: null,
+        catch: null,
+        delegateYield: null,
+      };
       obj2[0] = Context;
       obj2[1] = function reset(arg0) {
-        obj = { prev: 0, next: 0, _sent: undefined, sent: undefined, done: false, delegate: null, method: "next", arg: undefined };
+        obj = {
+          prev: 0,
+          next: 0,
+          _sent: undefined,
+          sent: undefined,
+          done: false,
+          delegate: null,
+          method: "next",
+          arg: undefined,
+        };
         const tryEntries = obj.tryEntries;
         const item = tryEntries.forEach(resetTryEntry);
         if (!arg0) {
@@ -996,4 +1041,4 @@ export default function _regeneratorRuntime() {
     };
     tmp7 = define2;
   }
-};
+}

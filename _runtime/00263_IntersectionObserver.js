@@ -43,9 +43,12 @@ class IntersectionObserver {
         if (!(root1 instanceof require("_isNativeReflectConstruct"))) {
           _TypeError = TypeError;
           tmp7 = new.target;
-          str = "Failed to construct 'IntersectionObserver': Failed to read the 'root' property from 'IntersectionObserverInit': The provided value is not of type '(null or ReactNativeElement)";
+          str =
+            "Failed to construct 'IntersectionObserver': Failed to read the 'root' property from 'IntersectionObserverInit': The provided value is not of type '(null or ReactNativeElement)";
           tmp8 = new.target;
-          typeError2 = new TypeError("Failed to construct 'IntersectionObserver': Failed to read the 'root' property from 'IntersectionObserverInit': The provided value is not of type '(null or ReactNativeElement)");
+          typeError2 = new TypeError(
+            "Failed to construct 'IntersectionObserver': Failed to read the 'root' property from 'IntersectionObserverInit': The provided value is not of type '(null or ReactNativeElement)",
+          );
           tmp10 = typeError2;
           throw typeError2;
         }
@@ -81,7 +84,9 @@ class IntersectionObserver {
           tmp41 = new.target;
           str13 = "Failed to construct 'IntersectionObserver': The 'trackVisibility' option is not supported.";
           tmp42 = new.target;
-          error2 = new Error("Failed to construct 'IntersectionObserver': The 'trackVisibility' option is not supported.");
+          error2 = new Error(
+            "Failed to construct 'IntersectionObserver': The 'trackVisibility' option is not supported.",
+          );
           tmp44 = error2;
           throw error2;
         }
@@ -105,12 +110,18 @@ class IntersectionObserver {
                 tmp = NumberResult;
               }
               const _RangeError = RangeError;
-              const rangeError = new RangeError("Failed to construct 'IntersectionObserver': Threshold values must be numbers between 0 and 1");
+              const rangeError = new RangeError(
+                "Failed to construct 'IntersectionObserver': Threshold values must be numbers between 0 and 1",
+              );
               throw rangeError;
             } else {
               const _TypeError = TypeError;
               const _HermesInternal = HermesInternal;
-              const typeError = new TypeError("Failed to read the '" + "rnRootThreshold" + "' property from 'IntersectionObserverInit': The provided double value is non-finite.");
+              const typeError = new TypeError(
+                "Failed to read the '" +
+                  "rnRootThreshold" +
+                  "' property from 'IntersectionObserverInit': The provided double value is non-finite.",
+              );
               throw typeError;
             }
           }
@@ -140,7 +151,9 @@ class IntersectionObserver {
             tmp19 = new.target;
             str8 = "Failed to construct 'IntersectionObserver': Threshold values must be numbers between 0 and 1";
             tmp20 = new.target;
-            rangeError = new RangeError("Failed to construct 'IntersectionObserver': Threshold values must be numbers between 0 and 1");
+            rangeError = new RangeError(
+              "Failed to construct 'IntersectionObserver': Threshold values must be numbers between 0 and 1",
+            );
             tmp22 = rangeError;
             throw rangeError;
           } else {
@@ -151,7 +164,11 @@ class IntersectionObserver {
             str7 = "Failed to read the '";
             tmp15 = new.target;
             tmp16 = new.target;
-            typeError3 = new TypeError("Failed to read the '" + "rnRootThreshold" + "' property from 'IntersectionObserverInit': The provided double value is non-finite.");
+            typeError3 = new TypeError(
+              "Failed to read the '" +
+                "rnRootThreshold" +
+                "' property from 'IntersectionObserverInit': The provided double value is non-finite.",
+            );
             tmp18 = typeError3;
             throw typeError3;
           }
@@ -185,12 +202,18 @@ class IntersectionObserver {
                   tmp = NumberResult;
                 }
                 const _RangeError = RangeError;
-                const rangeError = new RangeError("Failed to construct 'IntersectionObserver': Threshold values must be numbers between 0 and 1");
+                const rangeError = new RangeError(
+                  "Failed to construct 'IntersectionObserver': Threshold values must be numbers between 0 and 1",
+                );
                 throw rangeError;
               } else {
                 const _TypeError = TypeError;
                 const _HermesInternal = HermesInternal;
-                const typeError = new TypeError("Failed to read the '" + "threshold" + "' property from 'IntersectionObserverInit': The provided double value is non-finite.");
+                const typeError = new TypeError(
+                  "Failed to read the '" +
+                    "threshold" +
+                    "' property from 'IntersectionObserverInit': The provided double value is non-finite.",
+                );
                 throw typeError;
               }
             }
@@ -224,7 +247,9 @@ class IntersectionObserver {
             tmp33 = new.target;
             str12 = "Failed to construct 'IntersectionObserver': Threshold values must be numbers between 0 and 1";
             tmp34 = new.target;
-            rangeError1 = new RangeError("Failed to construct 'IntersectionObserver': Threshold values must be numbers between 0 and 1");
+            rangeError1 = new RangeError(
+              "Failed to construct 'IntersectionObserver': Threshold values must be numbers between 0 and 1",
+            );
             tmp36 = rangeError1;
             throw rangeError1;
           } else {
@@ -235,7 +260,11 @@ class IntersectionObserver {
             str11 = "Failed to read the '";
             tmp29 = new.target;
             tmp30 = new.target;
-            typeError4 = new TypeError("Failed to read the '" + "threshold" + "' property from 'IntersectionObserverInit': The provided double value is non-finite.");
+            typeError4 = new TypeError(
+              "Failed to read the '" +
+                "threshold" +
+                "' property from 'IntersectionObserverInit': The provided double value is non-finite.",
+            );
             tmp32 = typeError4;
             throw typeError4;
           }
@@ -265,7 +294,9 @@ class IntersectionObserver {
             if ("" !== rootMargin) {
               if (typeof rootMargin !== "string") {
                 const _TypeError = TypeError;
-                const typeError = new TypeError("Failed to construct 'IntersectionObserver': Failed to read the 'rootMargin' property from 'IntersectionObserverInit': The provided value is not of type 'string'.");
+                const typeError = new TypeError(
+                  "Failed to construct 'IntersectionObserver': Failed to read the 'rootMargin' property from 'IntersectionObserverInit': The provided value is not of type 'string'.",
+                );
                 throw typeError;
               } else {
                 const str8 = rootMargin.trim();
@@ -275,7 +306,9 @@ class IntersectionObserver {
                   const parts = str8.split(/\s+/);
                   if (parts.length > 4) {
                     const _SyntaxError2 = SyntaxError;
-                    const syntaxError = new SyntaxError("Failed to construct 'IntersectionObserver': Failed to parse rootMargin: Too many values (expected 1-4).");
+                    const syntaxError = new SyntaxError(
+                      "Failed to construct 'IntersectionObserver': Failed to parse rootMargin: Too many values (expected 1-4).",
+                    );
                     throw syntaxError;
                   } else {
                     for (const item10005 of parts) {
@@ -291,7 +324,11 @@ class IntersectionObserver {
                         let str2 = "Failed to construct 'IntersectionObserver': Failed to parse rootMargin: '";
                         let tmp5 = new.target;
                         let tmp6 = new.target;
-                        let syntaxError1 = new SyntaxError("Failed to construct 'IntersectionObserver': Failed to parse rootMargin: '" + tmp2 + "' is not a valid length. Only 'px' and '%' units are allowed.");
+                        let syntaxError1 = new SyntaxError(
+                          "Failed to construct 'IntersectionObserver': Failed to parse rootMargin: '" +
+                            tmp2 +
+                            "' is not a valid length. Only 'px' and '%' units are allowed.",
+                        );
                         let tmp8 = syntaxError1;
                         throw syntaxError1;
                       }
@@ -300,7 +337,7 @@ class IntersectionObserver {
                       const items = [parts[0], parts[0], parts[0], parts[0]];
                       let obj = items;
                     } else if (2 === length) {
-                      const items1 = [parts[0], parts[1], , ];
+                      const items1 = [parts[0], parts[1], ,];
                       [arr2[2], arr2[3]] = parts;
                       obj = items1;
                     } else if (3 === length) {
@@ -310,7 +347,9 @@ class IntersectionObserver {
                       obj = parts;
                       if (4 !== length) {
                         const _SyntaxError3 = SyntaxError;
-                        const syntaxError2 = new SyntaxError("Failed to construct 'IntersectionObserver': Failed to parse rootMargin.");
+                        const syntaxError2 = new SyntaxError(
+                          "Failed to construct 'IntersectionObserver': Failed to parse rootMargin.",
+                        );
                         throw syntaxError2;
                       }
                     }
@@ -333,53 +372,61 @@ let items = [
     key: "root",
     get() {
       return this._root;
-    }
+    },
   },
   {
     key: "rootMargin",
     get() {
       return this._rootMargin;
-    }
+    },
   },
   {
     key: "thresholds",
     get() {
       return this._thresholds;
-    }
+    },
   },
   {
     key: "rnRootThresholds",
     get() {
       return this._rootThresholds;
-    }
+    },
   },
   {
     key: "delay",
     get() {
-      error = new Error("Failed to read the 'delay' property from 'IntersectionObserver': This property is not supported.");
+      error = new Error(
+        "Failed to read the 'delay' property from 'IntersectionObserver': This property is not supported.",
+      );
       throw error;
-    }
+    },
   },
   {
     key: "scrollMargin",
     get() {
-      error = new Error("Failed to read the 'scrollMargin' property from 'IntersectionObserver': This property is not supported.");
+      error = new Error(
+        "Failed to read the 'scrollMargin' property from 'IntersectionObserver': This property is not supported.",
+      );
       throw error;
-    }
+    },
   },
   {
     key: "trackVisibility",
     get() {
-      error = new Error("Failed to read the 'trackVisibility' property from 'IntersectionObserver': This property is not supported.");
+      error = new Error(
+        "Failed to read the 'trackVisibility' property from 'IntersectionObserver': This property is not supported.",
+      );
       throw error;
-    }
+    },
   },
   {
     key: "observe",
     value: function observe(arg0) {
       if (null == arg0) {
         const _TypeError2 = TypeError;
-        const typeError = new TypeError("Failed to execute 'observe' on 'IntersectionObserver': parameter 1 is null or undefined.");
+        const typeError = new TypeError(
+          "Failed to execute 'observe' on 'IntersectionObserver': parameter 1 is null or undefined.",
+        );
         throw typeError;
       } else if (arg0 instanceof IntersectionObserver(143)) {
         const self = this;
@@ -397,10 +444,12 @@ let items = [
         }
       } else {
         const _TypeError = TypeError;
-        const typeError1 = new TypeError("Failed to execute 'observe' on 'IntersectionObserver': parameter 1 is not of type 'ReactNativeElement'.");
+        const typeError1 = new TypeError(
+          "Failed to execute 'observe' on 'IntersectionObserver': parameter 1 is not of type 'ReactNativeElement'.",
+        );
         throw typeError1;
       }
-    }
+    },
   },
   {
     key: "unobserve",
@@ -423,15 +472,19 @@ let items = [
             tmp10 = importAll;
           } else {
             const _console = console;
-            console.error("Unexpected state in 'IntersectionObserver': could not find observer ID to unobserve target.");
+            console.error(
+              "Unexpected state in 'IntersectionObserver': could not find observer ID to unobserve target.",
+            );
           }
         }
       } else {
         const _TypeError = TypeError;
-        const typeError = new TypeError("Failed to execute 'unobserve' on 'IntersectionObserver': parameter 1 is not of type 'ReactNativeElement'.");
+        const typeError = new TypeError(
+          "Failed to execute 'unobserve' on 'IntersectionObserver': parameter 1 is not of type 'ReactNativeElement'.",
+        );
         throw typeError;
       }
-    }
+    },
   },
   {
     key: "disconnect",
@@ -443,7 +496,7 @@ let items = [
         let unobserveResult = self.unobserve(item10008);
         continue;
       }
-    }
+    },
   },
   {
     key: "_getOrCreateIntersectionObserverId",
@@ -457,14 +510,14 @@ let items = [
         const obj = getTargetFromInstanceHandleAll;
       }
       return _intersectionObserverId;
-    }
+    },
   },
   {
     key: "__getObserverID",
     value: function __getObserverID() {
       return this._intersectionObserverId;
-    }
-  }
+    },
+  },
 ];
 let tmp2 = _createClassDefault(IntersectionObserver, items);
 setPlatformObject.setPlatformObject(tmp2);

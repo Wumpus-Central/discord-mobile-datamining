@@ -22,8 +22,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 function changeEventCalculator(force, force2) {
   if (undefined === force2) {
@@ -40,7 +39,9 @@ function changeEventCalculator(force, force2) {
 }
 changeEventCalculator.__closure = {};
 changeEventCalculator.__workletHash = 11365193947542;
-changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_forceTouchGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={forceChange:current.force};}else{changePayload={forceChange:current.force-previous.force};}return{...current,...changePayload};}" };
+changeEventCalculator.__initData = {
+  code: "function changeEventCalculator_Pnpm_forceTouchGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={forceChange:current.force};}else{changePayload={forceChange:current.force-previous.force};}return{...current,...changePayload};}",
+};
 class ForceTouchGesture {
   constructor() {
     self = this;
@@ -68,21 +69,21 @@ let items = [
     value: function minForce(minForce) {
       this.config.minForce = minForce;
       return this;
-    }
+    },
   },
   {
     key: "maxForce",
     value: function maxForce(maxForce) {
       this.config.maxForce = maxForce;
       return this;
-    }
+    },
   },
   {
     key: "feedbackOnActivation",
     value: function feedbackOnActivation(feedbackOnActivation) {
       this.config.feedbackOnActivation = feedbackOnActivation;
       return this;
-    }
+    },
   },
   {
     key: "onChange",
@@ -96,8 +97,8 @@ let items = [
       }
       const items = [arg0];
       return fn(items);
-    }
-  }
+    },
+  },
 ];
 
 export const ForceTouchGesture = importDefaultResult(ForceTouchGesture, items);

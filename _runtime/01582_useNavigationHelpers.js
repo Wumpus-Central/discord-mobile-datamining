@@ -57,7 +57,7 @@ export const useNavigationHelpers = function useNavigationHelpers(id) {
       }
     };
     obj.emit = emitter.emit;
-    obj.isFocused = context ? context.isFocused : (() => true);
+    obj.isFocused = context ? context.isFocused : () => true;
     obj.canGoBack = function canGoBack() {
       const tmp = callback2();
       const CommonActions = obj(obj[3]).CommonActions;

@@ -22,5 +22,5 @@ export default {
   },
   setHidden(arg0) {
     store.setHidden(arg0);
-  }
+  },
 };

@@ -104,12 +104,26 @@ arg5.default = {
           let str4 = " ";
           let str5 = ":";
           let str6 = ":";
-          obj2[1] = "" + combined + "-" + combined1 + "-" + combined2 + " " + combined3 + ":" + combined4 + ":" + "" + "0".repeat(2 - "" + byteAt5.length) + byteAt5;
+          obj2[1] =
+            "" +
+            combined +
+            "-" +
+            combined1 +
+            "-" +
+            combined2 +
+            " " +
+            combined3 +
+            ":" +
+            combined4 +
+            ":" +
+            "" +
+            "0".repeat(2 - "" + byteAt5.length) +
+            byteAt5;
           tmp9 = obj2;
         }
         obj["Modify Date"] = tmp9;
       }
     }
     return obj;
-  }
+  },
 };

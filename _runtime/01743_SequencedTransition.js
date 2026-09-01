@@ -4,7 +4,9 @@ arg5.SequencedTransition = function SequencedTransition(name) {
   let obj = { name, style: null, duration: 300 };
   obj = { 0: null, 50: null, 100: null };
   obj = { transform: null };
-  const items = [{ translateX: "" + translateX + "px", translateY: "" + translateY + "px", scale: "" + scaleX + "," + scaleY }];
+  const items = [
+    { translateX: "" + translateX + "px", translateY: "" + translateY + "px", scale: "" + scaleX + "," + scaleY },
+  ];
   obj[0] = items;
   obj[0] = obj;
   let str = "0px";

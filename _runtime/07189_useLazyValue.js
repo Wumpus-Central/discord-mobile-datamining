@@ -10,4 +10,4 @@ export default function useLazyValue(arg0) {
     tmp.current = arg0();
   }
   return tmp.current;
-};
+}

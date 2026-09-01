@@ -14,7 +14,9 @@ function startScreenTransition(sharedEvent) {
 let obj = { applyStyle: createViewDescriptorPaper.applyStyle };
 startScreenTransition.__closure = obj;
 startScreenTransition.__workletHash = 9428952089760;
-startScreenTransition.__initData = { code: "function startScreenTransition_Pnpm_animationManagerTs1(screenTransitionConfig){const{applyStyle}=this.__closure;const{stackTag:stackTag,sharedEvent:sharedEvent}=screenTransitionConfig;sharedEvent.addListener(stackTag,function(){applyStyle(screenTransitionConfig,sharedEvent.value);});}" };
+startScreenTransition.__initData = {
+  code: "function startScreenTransition_Pnpm_animationManagerTs1(screenTransitionConfig){const{applyStyle}=this.__closure;const{stackTag:stackTag,sharedEvent:sharedEvent}=screenTransitionConfig;sharedEvent.addListener(stackTag,function(){applyStyle(screenTransitionConfig,sharedEvent.value);});}",
+};
 function getLockAxis(arg0) {
   const items = ["swipeRight", "swipeLeft", "horizontalSwipe"];
   let str = "x";
@@ -30,7 +32,9 @@ function getLockAxis(arg0) {
 }
 getLockAxis.__closure = {};
 getLockAxis.__workletHash = 16916946798878;
-getLockAxis.__initData = { code: "function getLockAxis_Pnpm_animationManagerTs2(goBackGesture){if(['swipeRight','swipeLeft','horizontalSwipe'].includes(goBackGesture)){return'x';}else if(['swipeUp','swipeDown','verticalSwipe'].includes(goBackGesture)){return'y';}return undefined;}" };
+getLockAxis.__initData = {
+  code: "function getLockAxis_Pnpm_animationManagerTs2(goBackGesture){if(['swipeRight','swipeLeft','horizontalSwipe'].includes(goBackGesture)){return'x';}else if(['swipeUp','swipeDown','verticalSwipe'].includes(goBackGesture)){return'y';}return undefined;}",
+};
 function finishScreenTransition(stackTag) {
   ({ sharedEvent, goBackGesture } = stackTag);
   sharedEvent.removeListener(stackTag.stackTag);
@@ -52,7 +56,9 @@ function finishScreenTransition(stackTag) {
 obj = { getLockAxis, getSwipeSimulator: computeEasingProgress.getSwipeSimulator };
 finishScreenTransition.__closure = obj;
 finishScreenTransition.__workletHash = 6937010294861;
-finishScreenTransition.__initData = { code: "function finishScreenTransition_Pnpm_animationManagerTs3(screenTransitionConfig){const{getLockAxis,getSwipeSimulator}=this.__closure;const{stackTag:stackTag,sharedEvent:sharedEvent,goBackGesture:goBackGesture}=screenTransitionConfig;sharedEvent.removeListener(stackTag);const lockAxis=getLockAxis(goBackGesture);const step=getSwipeSimulator(sharedEvent.value,screenTransitionConfig,lockAxis);step();}" };
+finishScreenTransition.__initData = {
+  code: "function finishScreenTransition_Pnpm_animationManagerTs3(screenTransitionConfig){const{getLockAxis,getSwipeSimulator}=this.__closure;const{stackTag:stackTag,sharedEvent:sharedEvent,goBackGesture:goBackGesture}=screenTransitionConfig;sharedEvent.removeListener(stackTag);const lockAxis=getLockAxis(goBackGesture);const step=getSwipeSimulator(sharedEvent.value,screenTransitionConfig,lockAxis);step();}",
+};
 
 export { startScreenTransition };
 export { finishScreenTransition };

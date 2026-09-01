@@ -5,7 +5,10 @@ import noop from "00019_noop.js";
 ({ useEffect: c3, useState: c4 } = noop);
 
 export default function useWindowDimensions() {
-  const tmp = callback(callback3(() => first(88).get("window")), 2);
+  const tmp = callback(
+    callback3(() => first(88).get("window")),
+    2,
+  );
   const first = tmp[0];
   closure_1 = tmp[1];
   const items = [first];
@@ -26,4 +29,4 @@ export default function useWindowDimensions() {
     };
   }, items);
   return first;
-};
+}

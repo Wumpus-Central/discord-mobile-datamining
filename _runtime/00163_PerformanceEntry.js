@@ -16,32 +16,32 @@ const items = [
     key: "name",
     get() {
       return this.__name;
-    }
+    },
   },
   {
     key: "entryType",
     get() {
       return this.__entryType;
-    }
+    },
   },
   {
     key: "startTime",
     get() {
       return this.__startTime;
-    }
+    },
   },
   {
     key: "duration",
     get() {
       return this.__duration;
-    }
+    },
   },
   {
     key: "toJSON",
     value: function toJSON() {
       return { name: this.__name, entryType: this.__entryType, startTime: this.__startTime, duration: this.__duration };
-    }
-  }
+    },
+  },
 ];
 const tmp2 = _createClassDefault(PerformanceEntry, items);
 class PerformanceEntry {

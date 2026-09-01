@@ -44,6 +44,6 @@ export default (arg0) => {
           arg0(closure_0, closure_1);
         });
       }
-    }
+    },
   };
 };

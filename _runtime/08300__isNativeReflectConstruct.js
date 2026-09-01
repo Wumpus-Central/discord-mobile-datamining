@@ -23,8 +23,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class FeComponentTransferFunction {
   constructor() {
@@ -55,11 +54,19 @@ let items = [
     value: function render() {
       const result = FeFuncA(8257).warnUnimplementedFilter();
       return null;
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(FeComponentTransferFunction, items);
-importDefaultResultResult.defaultProps = { type: "identity", tableValues: [], slope: 1, intercept: 0, amplitude: 1, exponent: 1, offset: 0 };
+importDefaultResultResult.defaultProps = {
+  type: "identity",
+  tableValues: [],
+  slope: 1,
+  intercept: 0,
+  amplitude: 1,
+  exponent: 1,
+  offset: 0,
+};
 class FeFuncR {
   constructor() {
     self = this;

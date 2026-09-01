@@ -4,9 +4,7 @@ import AnimatedEvent from "00384_AnimatedEvent.js";
 require = arg1;
 const module = arg2;
 let dependencyMap = arg6;
-function _combineCallbacks(arg0, arg1) {
-
-}
+function _combineCallbacks(arg0, arg1) {}
 function maybeVectorAnim(arg0, obj, decayImpl) {
   if (arg0 instanceof _module(373)) {
     obj = {};
@@ -486,7 +484,7 @@ function sequenceImpl(arg0) {
     },
     _isUsingNativeDriver() {
       return false;
-    }
+    },
   };
 }
 function parallelImpl(arg0, stopTogether) {
@@ -572,7 +570,7 @@ function parallelImpl(arg0, stopTogether) {
     },
     _isUsingNativeDriver() {
       return false;
-    }
+    },
   };
   return obj;
 }
@@ -812,7 +810,7 @@ arg5.default = {
         },
         _isUsingNativeDriver() {
           return false;
-        }
+        },
       };
       return obj;
     });
@@ -896,7 +894,7 @@ arg5.default = {
       },
       _isUsingNativeDriver() {
         return false;
-      }
+      },
     };
     return obj;
   },
@@ -982,7 +980,7 @@ arg5.default = {
       },
       _isUsingNativeDriver() {
         return navigation._isUsingNativeDriver();
-      }
+      },
     };
     return obj;
   },
@@ -1025,5 +1023,5 @@ arg5.default = {
       __removeListener.__removeListener(arg1);
     }
   },
-  Event: require("AnimatedEvent").AnimatedEvent
+  Event: require("AnimatedEvent").AnimatedEvent,
 };

@@ -22,14 +22,13 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class CustomEvent {
   constructor(arg0, arg1) {
     self = this;
     tmp = CustomEvent(this, CustomEvent);
-    items = [, ];
+    items = [,];
     items[0] = global;
     items[1] = arg1;
     tmp2 = closure_2;
@@ -57,8 +56,8 @@ let items = [
     key: "detail",
     get() {
       return this._detail;
-    }
-  }
+    },
+  },
 ];
 
 export default importDefaultResult(CustomEvent, items);

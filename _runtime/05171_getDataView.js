@@ -16,5 +16,5 @@ arg5.default = {
   },
   findOffsets() {
     return { gifHeaderOffset: 0 };
-  }
+  },
 };

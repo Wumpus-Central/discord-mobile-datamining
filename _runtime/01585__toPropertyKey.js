@@ -73,16 +73,43 @@ export const useDescriptors = function useDescriptors(state) {
   flushUpdates = context.flushUpdates;
   stackRef = context.stackRef;
   getIsStateEmitted = context.getIsStateEmitted;
-  let items = [navigation, onAction, addListener, addKeyedListener, onRouteFocus, onDispatchAction, onEmitEvent, onOptionsChange, getIsStateEmitted, scheduleUpdate, flushUpdates, stackRef];
-  closure_21 = React.useMemo(() => ({ navigation, onAction, addListener, addKeyedListener, onRouteFocus, onDispatchAction, onEmitEvent, onOptionsChange, getIsStateEmitted, scheduleUpdate, flushUpdates, stackRef }), items);
+  let items = [
+    navigation,
+    onAction,
+    addListener,
+    addKeyedListener,
+    onRouteFocus,
+    onDispatchAction,
+    onEmitEvent,
+    onOptionsChange,
+    getIsStateEmitted,
+    scheduleUpdate,
+    flushUpdates,
+    stackRef,
+  ];
+  closure_21 = React.useMemo(
+    () => ({
+      navigation,
+      onAction,
+      addListener,
+      addKeyedListener,
+      onRouteFocus,
+      onDispatchAction,
+      onEmitEvent,
+      onOptionsChange,
+      getIsStateEmitted,
+      scheduleUpdate,
+      flushUpdates,
+      stackRef,
+    }),
+    items,
+  );
   let obj = state(1586);
   const navigationCache = obj.useNavigationCache({ state, getState, navigation, setOptions: tmp2, router, emitter });
   ({ base: c22, navigations: c23 } = navigationCache);
   let tmp = callback(React.useState({}), 2);
   const routeCache = state(1551).useRouteCache(state.routes);
-  getOptions = function getOptions(arg0, arg1, arg2) {
-
-  };
+  getOptions = function getOptions(arg0, arg1, arg2) {};
   render = function render(route, navigation, options, routeState) {
     closure_0 = route;
     const props = tmp.props;
@@ -110,7 +137,7 @@ export const useDescriptors = function useDescriptors(state) {
             return arg0;
           }
         });
-      }
+      },
     };
     const tmp5 = onAction(state(closure_1_1[8]).SceneView, obj);
     let layoutResult = tmp5;
@@ -132,7 +159,7 @@ export const useDescriptors = function useDescriptors(state) {
     }
     state = key;
     dependencyMap = tmp;
-    const items = [closure_3, , ];
+    const items = [closure_3, ,];
     if (dependencyMap[key.name].options) {
       const options = tmp2.options;
       const _Boolean = Boolean;
@@ -161,7 +188,7 @@ export const useDescriptors = function useDescriptors(state) {
       render() {
         return closure_0;
       },
-      options: reduced
+      options: reduced,
     };
     return arg0;
   }, {});
@@ -173,7 +200,7 @@ export const useDescriptors = function useDescriptors(state) {
         }
         closure_0 = key;
         dependencyMap = tmp7;
-        const items = [closure_3, , ];
+        const items = [closure_3, ,];
         if (dependencyMap[key.name].options) {
           const options = tmp10.options;
           const _Boolean = Boolean;
@@ -214,7 +241,7 @@ export const useDescriptors = function useDescriptors(state) {
         throw error;
       }
     },
-    descriptors: reduced
+    descriptors: reduced,
   };
   return obj;
 };

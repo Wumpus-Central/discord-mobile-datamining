@@ -1,7 +1,6 @@
 // _runtime/00725_toKey.js
 import isSymbol from "00638_isSymbol.js";
 
-
 export default function toKey(str) {
   if (typeof str !== "string") {
     if (!isSymbol(str)) {
@@ -15,4 +14,4 @@ export default function toKey(str) {
     }
   }
   return str;
-};
+}

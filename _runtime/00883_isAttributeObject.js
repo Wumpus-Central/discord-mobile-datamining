@@ -76,8 +76,7 @@ function attributeValueToTypedAttributeValue(arg0, flag) {
         obj1[0] = str4;
         const merged2 = Object.assign(obj2);
         return obj1;
-      } catch (err) {
-      }
+      } catch (err) {}
     }
   }
   obj2 = {};

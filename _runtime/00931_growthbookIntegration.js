@@ -3,7 +3,7 @@ import setupIntegration from "00887_setupIntegration.js";
 
 function _wrapAndCaptureBooleanResult(arg0) {
   closure_0 = arg0;
-  return function() {
+  return function () {
     const items = [...arguments];
     const first = items[0];
     const applyResult = callback.apply(this, items);
@@ -39,6 +39,6 @@ export const growthbookIntegration = setupIntegration.defineIntegration((growthb
     },
     processEvent(contexts) {
       return growthbookClass(table[2])._INTERNAL_copyFlagsFromScopeToEvent(contexts);
-    }
+    },
   };
 });

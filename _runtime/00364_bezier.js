@@ -41,7 +41,7 @@ const obj = {
     return (sum) => Math.pow(sum, closure_0);
   },
   sin(arg0) {
-    return 1 - Math.cos(arg0 * Math.PI / 2);
+    return 1 - Math.cos((arg0 * Math.PI) / 2);
   },
   circle(arg0) {
     return 1 - Math.sqrt(1 - arg0 * arg0);
@@ -56,7 +56,7 @@ const obj = {
     }
     closure_0 = undefined;
     closure_0 = num * Math.PI;
-    return (arg0) => 1 - Math.pow(Math.cos(arg0 * Math.PI / 2), 3) * Math.cos(arg0 * closure_0);
+    return (arg0) => 1 - Math.pow(Math.cos((arg0 * Math.PI) / 2), 3) * Math.cos(arg0 * closure_0);
   },
   back() {
     let num = arg0;
@@ -99,6 +99,6 @@ const obj = {
       }
       return result;
     };
-  }
+  },
 };
 arg5.default = obj;

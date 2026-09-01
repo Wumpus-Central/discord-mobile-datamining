@@ -517,7 +517,20 @@ class Url {
       return tmp2Result.format();
     }
     obj = Object.create(Url.prototype);
-    obj = { protocol: null, slashes: null, auth: null, host: null, port: null, hostname: null, hash: null, search: null, query: null, pathname: null, path: null, href: null };
+    obj = {
+      protocol: null,
+      slashes: null,
+      auth: null,
+      host: null,
+      port: null,
+      hostname: null,
+      hash: null,
+      search: null,
+      query: null,
+      pathname: null,
+      path: null,
+      href: null,
+    };
     parsed = obj.parse(arg0, false, true);
     tmp5 = obj;
     return;
@@ -547,7 +560,20 @@ class Url {
       url = obj;
     }
     obj1 = Object.create(Url.prototype);
-    url2 = { protocol: null, slashes: null, auth: null, host: null, port: null, hostname: null, hash: null, search: null, query: null, pathname: null, path: null, href: null };
+    url2 = {
+      protocol: null,
+      slashes: null,
+      auth: null,
+      host: null,
+      port: null,
+      hostname: null,
+      hash: null,
+      search: null,
+      query: null,
+      pathname: null,
+      path: null,
+      href: null,
+    };
     keys = Object.keys(this);
     num = 0;
     if (0 < keys.length) {
@@ -990,7 +1016,7 @@ const re4 = /:[0-9]*$/;
 const re5 = /^(\/\/?(?!\/)[^?\s]*)(\?[^\s]*)?$/;
 let items = ["{", "}", "|", "\\", "^", "`"];
 const items1 = ["'"];
-let combined = items1.concat(items.concat(["<", ">", "\"", "`", " ", "\r", "\n", "\t"]));
+let combined = items1.concat(items.concat(["<", ">", '"', "`", " ", "\r", "\n", "\t"]));
 const items2 = ["%", "/", "?", ";", "#"];
 let closure_7 = items2.concat(combined);
 let closure_8 = ["/", "?", "#"];
@@ -998,7 +1024,18 @@ const re9 = /^[+a-z0-9A-Z_-]{0,63}$/;
 const re10 = /^([+a-z0-9A-Z_-]{0,63})(.*)$/;
 let closure_11 = { javascript: true, "javascript:": true };
 let closure_12 = { javascript: true, "javascript:": true };
-let closure_13 = { http: true, https: true, ftp: true, gopher: true, file: true, "http:": true, "https:": true, "ftp:": true, "gopher:": true, "file:": true };
+let closure_13 = {
+  http: true,
+  https: true,
+  ftp: true,
+  gopher: true,
+  file: true,
+  "http:": true,
+  "https:": true,
+  "ftp:": true,
+  "gopher:": true,
+  "file:": true,
+};
 arg5.parse = function urlParse(obj) {
   if (obj) {
     if (typeof obj === "object") {
@@ -1008,7 +1045,20 @@ arg5.parse = function urlParse(obj) {
     }
   }
   obj = Object.create(Url.prototype);
-  obj = { protocol: null, slashes: null, auth: null, host: null, port: null, hostname: null, hash: null, search: null, query: null, pathname: null, path: null, href: null };
+  obj = {
+    protocol: null,
+    slashes: null,
+    auth: null,
+    host: null,
+    port: null,
+    hostname: null,
+    hash: null,
+    search: null,
+    query: null,
+    pathname: null,
+    path: null,
+    href: null,
+  };
   const parsed = obj.parse(obj, arg1, arg2);
   return obj;
 };
@@ -1020,7 +1070,20 @@ arg5.resolve = function urlResolve(obj) {
     return obj2.resolve(arg1);
   }
   obj = Object.create(Url.prototype);
-  obj = { protocol: null, slashes: null, auth: null, host: null, port: null, hostname: null, hash: null, search: null, query: null, pathname: null, path: null, href: null };
+  obj = {
+    protocol: null,
+    slashes: null,
+    auth: null,
+    host: null,
+    port: null,
+    hostname: null,
+    hash: null,
+    search: null,
+    query: null,
+    pathname: null,
+    path: null,
+    href: null,
+  };
   const parsed = obj.parse(obj, false, true);
   obj2 = obj;
 };
@@ -1034,7 +1097,20 @@ arg5.resolveObject = function urlResolveObject(obj) {
       object = obj2.resolveObject(arg1);
     }
     obj = Object.create(Url.prototype);
-    obj = { protocol: null, slashes: null, auth: null, host: null, port: null, hostname: null, hash: null, search: null, query: null, pathname: null, path: null, href: null };
+    obj = {
+      protocol: null,
+      slashes: null,
+      auth: null,
+      host: null,
+      port: null,
+      hostname: null,
+      hash: null,
+      search: null,
+      query: null,
+      pathname: null,
+      path: null,
+      href: null,
+    };
     const parsed = obj.parse(obj, false, true);
     obj2 = obj;
   }
@@ -1050,7 +1126,20 @@ arg5.format = function urlFormat(str) {
       obj = tmp5;
     }
     obj = Object.create(Url.prototype);
-    obj = { protocol: null, slashes: null, auth: null, host: null, port: null, hostname: null, hash: null, search: null, query: null, pathname: null, path: null, href: null };
+    obj = {
+      protocol: null,
+      slashes: null,
+      auth: null,
+      host: null,
+      port: null,
+      hostname: null,
+      hash: null,
+      search: null,
+      query: null,
+      pathname: null,
+      path: null,
+      href: null,
+    };
     const parsed = obj.parse(str, undefined, undefined);
     tmp5 = obj;
   }

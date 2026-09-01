@@ -36,7 +36,7 @@ export const useRecyclingState = function useRecyclingState(arg0, arg1, arg2) {
         tmp2.current = tmp;
         arg1((arg0) => arg0 + 1, arg1);
       }
-    }, items)
+    }, items),
   ];
   return items1;
 };

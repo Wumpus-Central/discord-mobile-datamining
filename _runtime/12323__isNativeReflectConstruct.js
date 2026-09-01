@@ -27,8 +27,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 const re8 = /.*?:\/\//g;
 closure_1 = undefined;
@@ -51,9 +50,7 @@ class DeepLinking {
     }
     tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
-    tmp3Result.handleChange = (url) => {
-
-    };
+    tmp3Result.handleChange = (url) => {};
     return tmp3Result;
   }
 }
@@ -63,15 +60,15 @@ let obj = {
   value: function push(str) {
     const history = this.history;
     history.push(str.replace(closure_8, ""));
-  }
+  },
 };
-let items = [obj, , , ];
+let items = [obj, , ,];
 obj = { key: "componentDidMount", value: null };
-closure_1 = importDefaultResult(function() {
+closure_1 = importDefaultResult(function () {
   const self = this;
   c4 = 0;
   c5 = 0;
-  return (function*() {
+  return (function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -147,7 +144,7 @@ items[2] = {
   key: "componentWillUnmount",
   value: function componentWillUnmount() {
     const removed = Linking.removeEventListener("url", this.handleChange);
-  }
+  },
 };
 items[3] = {
   key: "render",
@@ -157,9 +154,9 @@ items[3] = {
       children(history) {
         self.history = history;
         return self.props.children || null;
-      }
+      },
     });
-  }
+  },
 };
 
 export default importDefaultResult1(DeepLinking, items);

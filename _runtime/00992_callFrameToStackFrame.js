@@ -63,6 +63,6 @@ arg5.watchdogTimer = function watchdogTimer(arg0, arg1, arg2, arg3) {
     },
     enabled(arg0) {
       closure_5 = arg0;
-    }
+    },
   };
 };

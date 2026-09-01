@@ -2,7 +2,11 @@
 import weakSet from "../00106_weakSet.js";
 import setRuntimeConfigProvider from "../00065_setRuntimeConfigProvider.js";
 
-let obj = { uiViewClassName: "VirtualView", directEventTypes: { topModeChange: { registrationName: "onModeChange" } }, validAttributes: null };
+let obj = {
+  uiViewClassName: "VirtualView",
+  directEventTypes: { topModeChange: { registrationName: "onModeChange" } },
+  validAttributes: null,
+};
 obj = { initialHidden: true, removeClippedSubviews: true, renderState: true };
 const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onModeChange: true }));
 obj[2] = obj;

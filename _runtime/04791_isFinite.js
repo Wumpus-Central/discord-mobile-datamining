@@ -1,7 +1,6 @@
 // _runtime/04791_isFinite.js
 import isNaN from "00572_isNaN.js";
 
-
 export default function isFinite(num) {
   let tmp = typeof num === "number";
   if (typeof num !== "number") {
@@ -17,4 +16,4 @@ export default function isFinite(num) {
     tmp = num !== -Infinity;
   }
   return tmp;
-};
+}

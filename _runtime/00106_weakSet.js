@@ -4,9 +4,7 @@ arg5.DynamicallyInjectedByGestureHandler = function DynamicallyInjectedByGesture
   weakSet.add(arg0);
   return arg0;
 };
-arg5.ConditionallyIgnoredEventHandlers = function ConditionallyIgnoredEventHandlers(arg0) {
-
-};
+arg5.ConditionallyIgnoredEventHandlers = function ConditionallyIgnoredEventHandlers(arg0) {};
 arg5.isIgnored = function isIgnored(obj) {
   let hasItem = typeof obj === "object";
   if (typeof obj === "object") {

@@ -114,7 +114,7 @@ function compressFormatJsToAst(value) {
     if (obj.Literal === type) {
       return value.value;
     } else if (tmp.Argument === type) {
-      const items = [, ];
+      const items = [,];
       ({ type: arr6[0], value: arr6[1] } = value);
       return items;
     } else {
@@ -133,7 +133,7 @@ function compressFormatJsToAst(value) {
                 obj[tmp19[0]] = compressFormatJsToAst(tmp19[1].value);
                 continue;
               }
-              const items1 = [, , ];
+              const items1 = [, ,];
               ({ type: arr4[0], value: arr4[1] } = value);
               items1[2] = obj;
               return items1;
@@ -149,7 +149,7 @@ function compressFormatJsToAst(value) {
                 obj[tmp10[0]] = compressFormatJsToAst(tmp10[1].value);
                 continue;
               }
-              const items2 = [, , , , ];
+              const items2 = [, , , ,];
               ({ type: arr3[0], value: arr3[1] } = value);
               items2[2] = obj;
               ({ offset: arr3[3], pluralType: arr3[4] } = value);
@@ -158,7 +158,7 @@ function compressFormatJsToAst(value) {
               const items3 = [value.type];
               return items3;
             } else if (tmp.Tag === type) {
-              const items4 = [, , , ];
+              const items4 = [, , ,];
               ({ type: arr[0], value: arr[1] } = value);
               items4[2] = compressFormatJsToAst(value.children);
               items4[3] = compressFormatJsToAst(value.control);
@@ -167,7 +167,7 @@ function compressFormatJsToAst(value) {
           }
         }
       }
-      const items5 = [, , ];
+      const items5 = [, ,];
       ({ type: arr5[0], value: arr5[1], style: arr5[2] } = value);
       return items5;
     }

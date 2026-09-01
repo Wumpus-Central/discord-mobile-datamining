@@ -3,7 +3,6 @@ import _mod541 from "metro/00541__.js";
 import _mod542 from "metro/00542__.js";
 import flag from "00564_flag.js";
 
-
 export default function defineDataProperty(obj, str) {
   if (obj) {
     if (typeof str !== "string") {
@@ -79,7 +78,9 @@ export default function defineDataProperty(obj, str) {
       configurable = !tmp5;
     } else {
       if (!tmp6) {
-        const tmp13 = new tmp7(562)("This environment does not support defining a property as non-configurable, non-writable, or non-enumerable.");
+        const tmp13 = new tmp7(562)(
+          "This environment does not support defining a property as non-configurable, non-writable, or non-enumerable.",
+        );
         throw tmp13;
       }
       obj[str] = arg2;
@@ -87,4 +88,4 @@ export default function defineDataProperty(obj, str) {
     tmp6 = arguments.length > 6 && arguments[6];
   }
   throw new _mod541("`obj` must be an object or a function`");
-};
+}

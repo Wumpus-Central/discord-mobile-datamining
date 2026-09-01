@@ -36,5 +36,4 @@ try {
     }
     return tmp8;
   };
-} catch (err) {
-}
+} catch (err) {}

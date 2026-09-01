@@ -21,5 +21,5 @@ arg5.default = {
   },
   findAvifOffsets(byteLength) {
     return parseBox.findOffsets(byteLength);
-  }
+  },
 };

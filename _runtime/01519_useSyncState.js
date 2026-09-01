@@ -48,7 +48,7 @@ export const useSyncState = function useSyncState(arg0) {
           closure_1_2.splice(index, 1);
         }
       };
-    }
+    },
   };
   current = React.useRef(obj).current;
   const syncExternalStore = React.useSyncExternalStore(current.subscribe, current.getState, current.getState);
@@ -74,7 +74,7 @@ export const useSyncState = function useSyncState(arg0) {
           }
         });
       }
-    })
+    }),
   };
   return obj;
 };

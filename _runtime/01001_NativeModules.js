@@ -121,7 +121,9 @@ if (!fn2) {
           }
           const _Object = Object;
           const call = propertyIsEnumerable.call;
-          typeof call === "unknown" ? propertyIsEnumerable(ownPropertySymbols[num]) : call(obj, ownPropertySymbols[num]);
+          typeof call === "unknown"
+            ? propertyIsEnumerable(ownPropertySymbols[num])
+            : call(obj, ownPropertySymbols[num]);
         }
       }
     }
@@ -158,11 +160,11 @@ function getRNSentryModule() {
 let closure_7 = encodeUTF8.encodeUTF8("\n");
 isHermesEnabled = {
   fetchModules() {
-    return fn(this, undefined, undefined, function() {
+    return fn(this, undefined, undefined, function () {
       const self = this;
       c2 = 0;
       c3 = 0;
-      return (function*() {
+      return (function* () {
         if (c3 === 2) {
           c3 = 3;
           HermesBuiltin.throwTypeError();
@@ -237,12 +239,12 @@ isHermesEnabled = {
   },
   sendEnvelope(arg0) {
     closure_0 = arg0;
-    return fn(this, undefined, undefined, function() {
+    return fn(this, undefined, undefined, function () {
       const self = this;
       c4 = 0;
       c3 = 0;
       c6 = 0;
-      return (function*() {
+      return (function* () {
         if (c3 === 2) {
           c3 = 3;
           HermesBuiltin.throwTypeError();
@@ -357,13 +359,25 @@ isHermesEnabled = {
                       let tmp39 = closure_1_7;
                       let tmp40 = new.target;
                       let tmp41 = new.target;
-                      let uint8Array1 = new Uint8Array(arr2.length + encodeUTF8Result2.length + closure_1_7.length + encodeUTF8Result1.length + closure_1_7.length);
+                      let uint8Array1 = new Uint8Array(
+                        arr2.length +
+                          encodeUTF8Result2.length +
+                          closure_1_7.length +
+                          encodeUTF8Result1.length +
+                          closure_1_7.length,
+                      );
                       let tmp42 = uint8Array1;
                       let result2 = uint8Array1.set(arr2);
                       let result3 = uint8Array1.set(encodeUTF8Result2, arr2.length);
                       let result4 = uint8Array1.set(closure_1_7, arr2.length + encodeUTF8Result2.length);
-                      let result5 = uint8Array1.set(encodeUTF8Result1, arr2.length + encodeUTF8Result2.length + closure_1_7.length);
-                      let result6 = uint8Array1.set(closure_1_7, arr2.length + encodeUTF8Result2.length + closure_1_7.length + encodeUTF8Result1.length);
+                      let result5 = uint8Array1.set(
+                        encodeUTF8Result1,
+                        arr2.length + encodeUTF8Result2.length + closure_1_7.length,
+                      );
+                      let result6 = uint8Array1.set(
+                        closure_1_7,
+                        arr2.length + encodeUTF8Result2.length + closure_1_7.length + encodeUTF8Result1.length,
+                      );
                       c6 = 0;
                       flag = isHardCrashResult;
                       arr2 = uint8Array1;
@@ -419,11 +433,11 @@ isHermesEnabled = {
   },
   initNativeSdk(arg0) {
     closure_0 = arg0;
-    return fn(this, undefined, undefined, function() {
+    return fn(this, undefined, undefined, function () {
       const self = this;
       c3 = 0;
       c4 = 0;
-      return (function*() {
+      return (function* () {
         closure_2 = closure_0;
         closure_1 = tmp2;
         const _Object3 = Object;
@@ -451,14 +465,18 @@ isHermesEnabled = {
         if (!merged1.autoInitializeNativeSdk) {
           if (merged1.enableNativeNagger) {
             const debug2 = self(closure_1_1[5]).debug;
-            debug2.warn("Note: Native Sentry SDK was not initialized automatically, you will need to initialize it manually. If you wish to disable the native SDK and get rid of this warning, pass enableNative: false");
+            debug2.warn(
+              "Note: Native Sentry SDK was not initialized automatically, you will need to initialize it manually. If you wish to disable the native SDK and get rid of this warning, pass enableNative: false",
+            );
           }
           obj10.enableNative = true;
           return false;
         }
         if (!merged1.dsn) {
           const debug3 = self(closure_1_1[5]).debug;
-          debug3.warn("Warning: No DSN was provided. The Sentry SDK will be disabled. Native SDK will also not be initalized.");
+          debug3.warn(
+            "Warning: No DSN was provided. The Sentry SDK will be disabled. Native SDK will also not be initalized.",
+          );
           obj10.enableNative = false;
           return false;
         }
@@ -493,8 +511,26 @@ isHermesEnabled = {
         if (tmp23) {
           merged1.ignoreErrorsRegex = mapped;
         }
-        ({ beforeSend, beforeBreadcrumb, beforeSendTransaction, beforeSendMetric, integrations, ignoreErrors, logsOrigin, androidProfilingOptions } = merged1);
-        const tmp25 = closure_1_5(merged1, ["beforeSend", "beforeBreadcrumb", "beforeSendTransaction", "beforeSendMetric", "integrations", "ignoreErrors", "logsOrigin", "androidProfilingOptions"]);
+        ({
+          beforeSend,
+          beforeBreadcrumb,
+          beforeSendTransaction,
+          beforeSendMetric,
+          integrations,
+          ignoreErrors,
+          logsOrigin,
+          androidProfilingOptions,
+        } = merged1);
+        const tmp25 = closure_1_5(merged1, [
+          "beforeSend",
+          "beforeBreadcrumb",
+          "beforeSendTransaction",
+          "beforeSendMetric",
+          "integrations",
+          "ignoreErrors",
+          "logsOrigin",
+          "androidProfilingOptions",
+        ]);
         if (androidProfilingOptions) {
           const _Object = Object;
           const _Object2 = Object;
@@ -510,10 +546,10 @@ isHermesEnabled = {
     });
   },
   fetchNativeLogAttributes() {
-    return fn(this, undefined, undefined, function() {
+    return fn(this, undefined, undefined, function () {
       const self = this;
       c1 = 0;
-      return (function*() {
+      return (function* () {
         if (c1 === 2) {
           c1 = 3;
           HermesBuiltin.throwTypeError();
@@ -563,10 +599,10 @@ isHermesEnabled = {
     });
   },
   fetchNativeRelease() {
-    return fn(this, undefined, undefined, function() {
+    return fn(this, undefined, undefined, function () {
       const self = this;
       c1 = 0;
-      return (function*() {
+      return (function* () {
         if (c1 === 2) {
           c1 = 3;
           HermesBuiltin.throwTypeError();
@@ -616,10 +652,10 @@ isHermesEnabled = {
     });
   },
   fetchNativeSdkInfo() {
-    return fn(this, undefined, undefined, function() {
+    return fn(this, undefined, undefined, function () {
       const self = this;
       c1 = 0;
-      return (function*() {
+      return (function* () {
         if (c1 === 2) {
           c1 = 3;
           HermesBuiltin.throwTypeError();
@@ -669,10 +705,10 @@ isHermesEnabled = {
     });
   },
   fetchNativeDeviceContexts() {
-    return fn(this, undefined, undefined, function() {
+    return fn(this, undefined, undefined, function () {
       const self = this;
       c1 = 0;
-      return (function*() {
+      return (function* () {
         if (c1 === 2) {
           c1 = 3;
           HermesBuiltin.throwTypeError();
@@ -722,10 +758,10 @@ isHermesEnabled = {
     });
   },
   fetchNativeAppStart() {
-    return fn(this, undefined, undefined, function() {
+    return fn(this, undefined, undefined, function () {
       const self = this;
       c1 = 0;
-      return (function*() {
+      return (function* () {
         if (dependencyMap === 2) {
           dependencyMap = 3;
           HermesBuiltin.throwTypeError();
@@ -774,10 +810,10 @@ isHermesEnabled = {
     });
   },
   fetchNativeFrames() {
-    return fn(this, undefined, undefined, function() {
+    return fn(this, undefined, undefined, function () {
       const self = this;
       c1 = 0;
-      return (function*() {
+      return (function* () {
         if (c1 === 2) {
           c1 = 3;
           HermesBuiltin.throwTypeError();
@@ -898,7 +934,10 @@ isHermesEnabled = {
             return setExtraResult;
           } catch (tmp8) {
             const debug = registerSpanErrorInstrumentation.debug;
-            debug.error("Extra for key ${key} not passed to native SDK, because it contains non-stringifiable values", tmp8);
+            debug.error(
+              "Extra for key ${key} not passed to native SDK, because it contains non-stringifiable values",
+              tmp8,
+            );
           }
         }
       } else {
@@ -954,7 +993,10 @@ isHermesEnabled = {
             const obj2 = convertToNormalizedObject;
           } catch (tmp8) {
             const debug = registerSpanErrorInstrumentation.debug;
-            debug.error("Context for key ${key} not passed to native SDK, because it contains non-serializable values", tmp8);
+            debug.error(
+              "Context for key ${key} not passed to native SDK, because it contains non-serializable values",
+              tmp8,
+            );
           }
         }
       } else {
@@ -963,10 +1005,10 @@ isHermesEnabled = {
     }
   },
   closeNativeSdk() {
-    return fn(this, undefined, undefined, function() {
+    return fn(this, undefined, undefined, function () {
       const self = this;
       c1 = 0;
-      return (function*() {
+      return (function* () {
         if (c1 === 2) {
           c1 = 3;
           HermesBuiltin.throwTypeError();
@@ -1039,12 +1081,12 @@ isHermesEnabled = {
     return this._isModuleLoaded(RNSentry);
   },
   captureScreenshot() {
-    return fn(this, undefined, undefined, function() {
+    return fn(this, undefined, undefined, function () {
       const self = this;
       c5 = 0;
       c6 = 0;
       c4 = 0;
-      return (function*() {
+      return (function* () {
         closure_2 = tmp3;
         let table = tmp5;
         if (!_self.enableNative) {
@@ -1092,11 +1134,11 @@ isHermesEnabled = {
     });
   },
   fetchViewHierarchy() {
-    return fn(this, undefined, undefined, function() {
+    return fn(this, undefined, undefined, function () {
       const self = this;
       c2 = 0;
       c3 = 0;
-      return (function*() {
+      return (function* () {
         if (c3 === 2) {
           c3 = 3;
           HermesBuiltin.throwTypeError();
@@ -1255,10 +1297,10 @@ isHermesEnabled = {
     return enableNative;
   },
   initNativeReactNavigationNewFrameTracking() {
-    return fn(this, undefined, undefined, function() {
+    return fn(this, undefined, undefined, function () {
       const self = this;
       c1 = 0;
-      return (function*() {
+      return (function* () {
         if (c1 === 2) {
           c1 = 3;
           HermesBuiltin.throwTypeError();
@@ -1307,11 +1349,11 @@ isHermesEnabled = {
   },
   captureReplay(isHardCrashResult) {
     closure_0 = isHardCrashResult;
-    return fn(this, undefined, undefined, function() {
+    return fn(this, undefined, undefined, function () {
       const self = this;
       c2 = 0;
       c1 = 0;
-      return (function*() {
+      return (function* () {
         if (dependencyMap === 2) {
           dependencyMap = 3;
           HermesBuiltin.throwTypeError();
@@ -1355,7 +1397,9 @@ isHermesEnabled = {
                 } else {
                   const debug2 = self(817).debug;
                   const _HermesInternal2 = HermesInternal;
-                  debug2.warn("[NATIVE] `" + obj6.captureReplay.name + "` is not available when native is not available.");
+                  debug2.warn(
+                    "[NATIVE] `" + obj6.captureReplay.name + "` is not available when native is not available.",
+                  );
                   let resolved1 = Promise.resolve(null);
                 }
               }
@@ -1401,11 +1445,11 @@ isHermesEnabled = {
     }
   },
   crashedLastRun() {
-    return fn(this, undefined, undefined, function() {
+    return fn(this, undefined, undefined, function () {
       const self = this;
       c2 = 0;
       c3 = 0;
-      return (function*() {
+      return (function* () {
         if (c3 === 2) {
           c3 = 3;
           HermesBuiltin.throwTypeError();
@@ -1491,12 +1535,12 @@ isHermesEnabled = {
   },
   getDataFromUri(arg0) {
     closure_0 = arg0;
-    return fn(this, undefined, undefined, function() {
+    return fn(this, undefined, undefined, function () {
       const self = this;
       c5 = 0;
       c6 = 0;
       c4 = 0;
-      return (function*() {
+      return (function* () {
         if (c6 === 2) {
           c6 = 3;
           HermesBuiltin.throwTypeError();
@@ -1612,12 +1656,12 @@ isHermesEnabled = {
   },
   encodeToBase64(data) {
     closure_0 = data;
-    return fn(this, undefined, undefined, function() {
+    return fn(this, undefined, undefined, function () {
       const self = this;
       c5 = 0;
       c6 = 0;
       c4 = 0;
-      return (function*() {
+      return (function* () {
         if (c6 === 2) {
           c6 = 3;
           HermesBuiltin.throwTypeError();
@@ -1786,18 +1830,20 @@ isHermesEnabled = {
   _NativeClientError: null,
   enableNative: true,
   nativeIsReady: false,
-  platform: "android"
+  platform: "android",
 };
 const sentryError = new require("registerSpanErrorInstrumentation").SentryError("Native is disabled");
 isHermesEnabled[42] = sentryError;
-const sentryError1 = new require("registerSpanErrorInstrumentation").SentryError("Native Client is not available, can't start on native.");
+const sentryError1 = new require("registerSpanErrorInstrumentation").SentryError(
+  "Native Client is not available, can't start on native.",
+);
 isHermesEnabled[43] = sentryError1;
 
 export { getRNSentryModule };
 export const NATIVE = isHermesEnabled;
 export const getDataFromUri = function getDataFromUri(arg0) {
   closure_0 = arg0;
-  return fn(this, undefined, undefined, function*() {
+  return fn(this, undefined, undefined, function* () {
     if (c0 === 2) {
       c0 = 3;
       HermesBuiltin.throwTypeError();

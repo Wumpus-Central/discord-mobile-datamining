@@ -54,9 +54,9 @@ let obj = {
         if (-1 !== index) {
           closure_1_3.splice(index, 1);
         }
-      }
+      },
     };
-  }
+  },
 };
 
 export default obj;

@@ -23,7 +23,14 @@ arg5.runtimeHashMessageKey = function runtimeHashMessageKey(code) {
   if (!closure_3) {
     reversed = uint8Array.reverse();
   }
-  const items1 = [dependencyMap[reversed[0] >> 2], dependencyMap[(3 & reversed[0]) << 4 | reversed[1] >> 4], dependencyMap[(15 & reversed[1]) << 2 | reversed[2] >> 6], dependencyMap[63 & reversed[2]], dependencyMap[reversed[3] >> 2], dependencyMap[(3 & reversed[3]) << 4 | reversed[4] >> 4]];
+  const items1 = [
+    dependencyMap[reversed[0] >> 2],
+    dependencyMap[((3 & reversed[0]) << 4) | (reversed[1] >> 4)],
+    dependencyMap[((15 & reversed[1]) << 2) | (reversed[2] >> 6)],
+    dependencyMap[63 & reversed[2]],
+    dependencyMap[reversed[3] >> 2],
+    dependencyMap[((3 & reversed[3]) << 4) | (reversed[4] >> 4)],
+  ];
   return items1.join("");
 };
 let closure_2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".split("");

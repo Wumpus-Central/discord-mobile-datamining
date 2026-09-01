@@ -63,7 +63,7 @@ function getCurrentHubShim() {
           client.captureSession(session);
         }
       }
-    }
+    },
   };
 }
 arg5.getCurrentHub = getCurrentHubShim;

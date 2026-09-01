@@ -7,10 +7,16 @@ const require = arg1;
 
 export const useSharedValue = function useSharedValue(UNDETERMINED) {
   closure_0 = UNDETERMINED;
-  const first = callback(callback3(() => UNDETERMINED(first[2]).makeMutable(UNDETERMINED)), 1)[0];
+  const first = callback(
+    callback3(() => UNDETERMINED(first[2]).makeMutable(UNDETERMINED)),
+    1,
+  )[0];
   const items = [first];
-  callback2(() => () => {
-    closure_1_0(closure_1_1[3]).cancelAnimation(closure_1);
-  }, items);
+  callback2(
+    () => () => {
+      closure_1_0(closure_1_1[3]).cancelAnimation(closure_1);
+    },
+    items,
+  );
   return first;
 };

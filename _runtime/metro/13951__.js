@@ -3,7 +3,6 @@ import _mod13952 from "13952__.js";
 import getOwnPropertyDescriptor from "../13954_getOwnPropertyDescriptor.js";
 import isForced from "../13991_isForced.js";
 
-
 export default (dontCallGetSet, obj) => {
   ({ target, global: _global, stat } = dontCallGetSet);
   const tmp3 = _mod13952;

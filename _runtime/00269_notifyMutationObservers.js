@@ -118,7 +118,11 @@ export const observe = function observe(mutationObserverId) {
     } else {
       const _console = console;
       const _HermesInternal = HermesInternal;
-      console.error("MutationObserverManager: could not start observing target because MutationObserver with ID " + mutationObserverId + " was not registered.");
+      console.error(
+        "MutationObserverManager: could not start observing target because MutationObserver with ID " +
+          mutationObserverId +
+          " was not registered.",
+      );
     }
   } else {
     tmp(165)("missing-native-mutation-observer", "Missing native implementation of MutationObserver");
@@ -132,7 +136,11 @@ export const unobserveAll = function unobserveAll(_mutationObserverId) {
     } else {
       const _console = console;
       const _HermesInternal = HermesInternal;
-      console.error("MutationObserverManager: could not disconnect MutationObserver with ID " + _mutationObserverId + " because it was not registered.");
+      console.error(
+        "MutationObserverManager: could not disconnect MutationObserver with ID " +
+          _mutationObserverId +
+          " because it was not registered.",
+      );
     }
   } else {
     tmp(165)("missing-native-mutation-observer", "Missing native implementation of MutationObserver");

@@ -1,7 +1,9 @@
 // _runtime/05822_BottomSheetFooterContainer.js
 import noop from "00019_noop.js";
 
-let closure_2 = { code: "function pnpm_BottomSheetFooterContainerTsx1(){const{animatedHandleHeight,INITIAL_HANDLE_HEIGHT,animatedKeyboardHeightInContainer,animatedContainerHeight,animatedPosition,animatedKeyboardState,animatedFooterHeight,KEYBOARD_STATE}=this.__closure;const handleHeight=animatedHandleHeight.get();if(handleHeight===INITIAL_HANDLE_HEIGHT){return 0;}const keyboardHeight=animatedKeyboardHeightInContainer.get();const containerHeight=animatedContainerHeight.get();const position=animatedPosition.get();const keyboardState=animatedKeyboardState.get();const footerHeight=animatedFooterHeight.get();let footerTranslateY=Math.max(0,containerHeight-position);if(keyboardState===KEYBOARD_STATE.SHOWN){footerTranslateY=footerTranslateY-keyboardHeight;}footerTranslateY=footerTranslateY-footerHeight-handleHeight;return footerTranslateY;}" };
+let closure_2 = {
+  code: "function pnpm_BottomSheetFooterContainerTsx1(){const{animatedHandleHeight,INITIAL_HANDLE_HEIGHT,animatedKeyboardHeightInContainer,animatedContainerHeight,animatedPosition,animatedKeyboardState,animatedFooterHeight,KEYBOARD_STATE}=this.__closure;const handleHeight=animatedHandleHeight.get();if(handleHeight===INITIAL_HANDLE_HEIGHT){return 0;}const keyboardHeight=animatedKeyboardHeightInContainer.get();const containerHeight=animatedContainerHeight.get();const position=animatedPosition.get();const keyboardState=animatedKeyboardState.get();const footerHeight=animatedFooterHeight.get();let footerTranslateY=Math.max(0,containerHeight-position);if(keyboardState===KEYBOARD_STATE.SHOWN){footerTranslateY=footerTranslateY-keyboardHeight;}footerTranslateY=footerTranslateY-footerHeight-handleHeight;return footerTranslateY;}",
+};
 const memoResult = noop.memo((renderFooter) => {
   let animatedContainerHeight;
   let animatedHandleHeight;
@@ -39,11 +41,27 @@ const memoResult = noop.memo((renderFooter) => {
     tmp2 = animatedContainerHeight;
     tmp3 = animatedHandleHeight;
   };
-  obj = { animatedHandleHeight, INITIAL_HANDLE_HEIGHT: animatedContainerHeight(animatedHandleHeight[3]).INITIAL_HANDLE_HEIGHT, animatedKeyboardHeightInContainer, animatedContainerHeight, animatedPosition, animatedKeyboardState, animatedFooterHeight, KEYBOARD_STATE: animatedContainerHeight(animatedHandleHeight[4]).KEYBOARD_STATE };
+  obj = {
+    animatedHandleHeight,
+    INITIAL_HANDLE_HEIGHT: animatedContainerHeight(animatedHandleHeight[3]).INITIAL_HANDLE_HEIGHT,
+    animatedKeyboardHeightInContainer,
+    animatedContainerHeight,
+    animatedPosition,
+    animatedKeyboardState,
+    animatedFooterHeight,
+    KEYBOARD_STATE: animatedContainerHeight(animatedHandleHeight[4]).KEYBOARD_STATE,
+  };
   fn.__closure = obj;
   fn.__workletHash = 8297656659240;
   fn.__initData = animatedFooterHeight;
-  const items = [animatedKeyboardHeightInContainer, animatedContainerHeight, animatedPosition, animatedKeyboardState, animatedFooterHeight, animatedHandleHeight];
+  const items = [
+    animatedKeyboardHeightInContainer,
+    animatedContainerHeight,
+    animatedPosition,
+    animatedKeyboardState,
+    animatedFooterHeight,
+    animatedHandleHeight,
+  ];
   obj[0] = animatedContainerHeight(animatedHandleHeight[2]).useDerivedValue(fn, items);
   return renderFooter.renderFooter(obj);
 });

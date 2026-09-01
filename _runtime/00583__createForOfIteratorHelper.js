@@ -115,7 +115,9 @@ let closure_0 = function _createForOfIteratorHelper(iterable) {
       }
       if (!arr) {
         const _TypeError = TypeError;
-        const typeError = new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+        const typeError = new TypeError(
+          "Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
+        );
         class F {
           constructor() {
             return;
@@ -190,14 +192,37 @@ class Agent {
     return;
   }
 }
-let items = ["use", "on", "once", "set", "query", "type", "accept", "auth", "withCredentials", "sortQuery", "retry", "ok", "redirects", "timeout", "buffer", "serialize", "parse", "ca", "key", "pfx", "cert", "disableTLSCerts"];
+let items = [
+  "use",
+  "on",
+  "once",
+  "set",
+  "query",
+  "type",
+  "accept",
+  "auth",
+  "withCredentials",
+  "sortQuery",
+  "retry",
+  "ok",
+  "redirects",
+  "timeout",
+  "buffer",
+  "serialize",
+  "parse",
+  "ca",
+  "key",
+  "pfx",
+  "cert",
+  "disableTLSCerts",
+];
 let num = 0;
 let num2 = 0;
 if (0 < items.length) {
   do {
     let tmp = items[num2];
     closure_0 = tmp;
-    Agent.prototype[tmp] = function() {
+    Agent.prototype[tmp] = function () {
       const length = arguments.length;
       const array = new Array(length);
       for (let num = 0; num < length; num = num + 1) {

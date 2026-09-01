@@ -8,8 +8,7 @@ function winterCGHeadersToDict(arr) {
       }
     });
     return obj;
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 function headersToDict(arg0) {
   const obj = Object.create(null);
@@ -23,8 +22,7 @@ function headersToDict(arg0) {
       }
     });
     return obj;
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 function addSpanAttribute(arg0, str, str2, arr) {
   const replaced = str.replace(/-/g, "_");
@@ -86,7 +84,25 @@ function extractQueryParamsFromUrl(arg0) {
   }
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-let closure_2 = ["auth", "token", "secret", "session", "password", "passwd", "pwd", "key", "jwt", "bearer", "sso", "saml", "csrf", "xsrf", "credentials", "set-cookie", "cookie"];
+let closure_2 = [
+  "auth",
+  "token",
+  "secret",
+  "session",
+  "password",
+  "passwd",
+  "pwd",
+  "key",
+  "jwt",
+  "bearer",
+  "sso",
+  "saml",
+  "csrf",
+  "xsrf",
+  "credentials",
+  "set-cookie",
+  "cookie",
+];
 let closure_3 = ["x-forwarded-", "-user"];
 arg5.extractQueryParamsFromUrl = extractQueryParamsFromUrl;
 arg5.headersToDict = headersToDict;
@@ -129,8 +145,7 @@ arg5.httpHeadersToSpanAttributes = function httpHeadersToSpanAttributes(arg0) {
       }
     });
     return obj;
-  } catch (err) {
-  }
+  } catch (err) {}
 };
 arg5.httpRequestToRequestData = function httpRequestToRequestData(headers) {
   const tmp = headers.headers || {};
@@ -178,11 +193,23 @@ arg5.httpRequestToRequestData = function httpRequestToRequestData(headers) {
       }
     }
   }
-  obj = { url: combined, method: headers.method, query_string: extractQueryParamsFromUrl(obj), headers: headersToDict(tmp), cookies: headers.cookies, data: headers.body || undefined };
+  obj = {
+    url: combined,
+    method: headers.method,
+    query_string: extractQueryParamsFromUrl(obj),
+    headers: headersToDict(tmp),
+    cookies: headers.cookies,
+    data: headers.body || undefined,
+  };
   return obj;
 };
 arg5.winterCGHeadersToDict = winterCGHeadersToDict;
 arg5.winterCGRequestToRequestData = function winterCGRequestToRequestData(method) {
-  const obj = { method: method.method, url: method.url, query_string: extractQueryParamsFromUrl(method.url), headers: winterCGHeadersToDict(method.headers) };
+  const obj = {
+    method: method.method,
+    url: method.url,
+    query_string: extractQueryParamsFromUrl(method.url),
+    headers: winterCGHeadersToDict(method.headers),
+  };
   return obj;
 };

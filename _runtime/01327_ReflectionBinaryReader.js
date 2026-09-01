@@ -22,13 +22,15 @@ let items = [
           fields = [];
         }
         const _Map = Map;
-        const map = new Map(fields.map((no) => {
-          const items = [no.no, no];
-          return items;
-        }));
+        const map = new Map(
+          fields.map((no) => {
+            const items = [no.no, no];
+            return items;
+          }),
+        );
         self.fieldNoToField = map;
       }
-    }
+    },
   },
   {
     key: "read",
@@ -74,7 +76,12 @@ let items = [
                     let tmp23 = TResult1;
                     let tmp24 = len;
                     let tmp25 = readUnknownField;
-                    tmp21[localName] = TResult1.internalBinaryRead(len, len.uint32(), readUnknownField, tmp21[localName]);
+                    tmp21[localName] = TResult1.internalBinaryRead(
+                      len,
+                      len.uint32(),
+                      readUnknownField,
+                      tmp21[localName],
+                    );
                   }
                 } else if ("map" === kind) {
                   let tmp2Result = tmp2(self.mapEntry(value, len, readUnknownField), 2);
@@ -139,7 +146,7 @@ let items = [
         error = new Error("Unknown field " + tmp4 + " (wire type " + tmp5 + ") for " + self.info.typeName);
         throw error;
       }
-    }
+    },
   },
   {
     key: "mapEntry",
@@ -185,7 +192,16 @@ let items = [
             let tmp14 = tmp9;
             let tmp15 = new.target;
             let tmp16 = new.target;
-            error = new Error("Unknown field " + tmp8 + " (wire type " + tmp9 + ") in map entry for " + self.info.typeName + "#" + V.name);
+            error = new Error(
+              "Unknown field " +
+                tmp8 +
+                " (wire type " +
+                tmp9 +
+                ") in map entry for " +
+                self.info.typeName +
+                "#" +
+                V.name,
+            );
             let tmp18 = error;
             throw error;
           }
@@ -227,7 +243,7 @@ let items = [
       }
       const items = [tmp5, num];
       return items;
-    }
+    },
   },
   {
     key: "scalar",
@@ -265,8 +281,8 @@ let items = [
       } else if (tmp(1320).ScalarType.SINT64 === arg1) {
         return tmp(1325).reflectionLongConvert(int32.sint64(), STRING);
       }
-    }
-  }
+    },
+  },
 ];
 
 export const ReflectionBinaryReader = _createClass(ReflectionBinaryReader, items);

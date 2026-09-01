@@ -67,27 +67,29 @@ let isArguments2 = function isArguments(obj) {
   return tmp5;
 };
 isArguments.isLegacyArguments = isArguments2;
-if ((() => {
-  if (typeof isArguments !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  let tmp = closure_0;
-  if (closure_0) {
-    tmp = arguments;
-  }
-  if (tmp) {
-    tmp = typeof arguments === "object";
-  }
-  if (tmp) {
-    const _Symbol = Symbol;
-    tmp = Symbol.toStringTag in arguments;
-  }
-  let tmp9 = !tmp;
-  if (!tmp) {
-    tmp9 = "[object Arguments]" === callback(arguments);
-  }
-  return tmp9;
-})()) {
+if (
+  (() => {
+    if (typeof isArguments !== "function") {
+      HermesBuiltin.throwTypeError();
+    }
+    let tmp = closure_0;
+    if (closure_0) {
+      tmp = arguments;
+    }
+    if (tmp) {
+      tmp = typeof arguments === "object";
+    }
+    if (tmp) {
+      const _Symbol = Symbol;
+      tmp = Symbol.toStringTag in arguments;
+    }
+    let tmp9 = !tmp;
+    if (!tmp) {
+      tmp9 = "[object Arguments]" === callback(arguments);
+    }
+    return tmp9;
+  })()
+) {
   isArguments2 = isArguments;
 }
 

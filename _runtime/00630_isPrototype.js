@@ -14,4 +14,4 @@ export default function isPrototype(arg0) {
     prototype = closure_0;
   }
   return arg0 === prototype;
-};
+}

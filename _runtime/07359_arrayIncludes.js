@@ -1,7 +1,6 @@
 // _runtime/07359_arrayIncludes.js
 import baseIndexOf from "07360_baseIndexOf.js";
 
-
 export default function arrayIncludes(arg0, arg1) {
   let num = 0;
   if (null != arg0) {
@@ -12,4 +11,4 @@ export default function arrayIncludes(arg0, arg1) {
     tmp = baseIndexOf(arg0, arg1, 0) > -1;
   }
   return tmp;
-};
+}

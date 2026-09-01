@@ -18,11 +18,30 @@ function forEachEnvelopeItem(arg0, arg1) {
   return false;
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
-let closure_4 = { session: "session", sessions: "session", attachment: "attachment", transaction: "transaction", event: "error", client_report: "internal", user_report: "default", profile: "profile", profile_chunk: "profile", replay_event: "replay", replay_recording: "replay", check_in: "monitor", feedback: "feedback", span: "span", raw_security: "security", log: "log_item", metric: "metric", trace_metric: "metric" };
+let closure_4 = {
+  session: "session",
+  sessions: "session",
+  attachment: "attachment",
+  transaction: "transaction",
+  event: "error",
+  client_report: "internal",
+  user_report: "default",
+  profile: "profile",
+  profile_chunk: "profile",
+  replay_event: "replay",
+  replay_recording: "replay",
+  check_in: "monitor",
+  feedback: "feedback",
+  span: "span",
+  raw_security: "security",
+  log: "log_item",
+  metric: "metric",
+  trace_metric: "metric",
+};
 
 export const addItemToEnvelope = function addItemToEnvelope(arg0, arg1) {
   const tmp = callback(arg0, 2);
-  const items = [tmp[0], ];
+  const items = [tmp[0]];
   const items1 = [];
   items1[HermesBuiltin.arraySpread(tmp[1], 0)] = arg1;
   items[1] = items1;
@@ -139,7 +158,7 @@ export const parseEnvelope = function parseEnvelope(arr) {
       if (typeof json1.length === "number") {
         length = json1.length;
       }
-      let items1 = [json1, ];
+      let items1 = [json1];
       if (length) {
         let tmp11 = _require;
         let subarrayResult = _require.subarray(0, length);

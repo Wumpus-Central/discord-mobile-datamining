@@ -1,7 +1,13 @@
 // _runtime/01713_BounceInData.js
 import convertAnimationObjectToKeyframes from "01711_convertAnimationObjectToKeyframes.js";
 
-obj = { BounceIn: { name: "BounceIn", style: obj, duration: 0.6 }, BounceInRight: { name: "BounceInRight", style: obj, duration: 0.6 }, BounceInLeft: { name: "BounceInLeft", style: obj1, duration: 0.6 }, BounceInUp: { name: "BounceInUp", style: obj2, duration: 0.6 }, BounceInDown: { name: "BounceInDown", style: obj3, duration: 0.6 } };
+obj = {
+  BounceIn: { name: "BounceIn", style: obj, duration: 0.6 },
+  BounceInRight: { name: "BounceInRight", style: obj, duration: 0.6 },
+  BounceInLeft: { name: "BounceInLeft", style: obj1, duration: 0.6 },
+  BounceInUp: { name: "BounceInUp", style: obj2, duration: 0.6 },
+  BounceInDown: { name: "BounceInDown", style: obj3, duration: 0.6 },
+};
 obj = { 0: { transform: items }, 55: null, 70: null, 85: null, 100: null };
 items = [{ scale: 0 }];
 const items1 = [{ scale: 1.2 }];
@@ -52,7 +58,13 @@ const items23 = [{ translateY: "-10px" }];
 obj3[85] = { transform: items23 };
 const items24 = [{ translateY: "0px" }];
 obj3[100] = { transform: items24 };
-const obj4 = { BounceOut: { name: "BounceOut", style: obj5, duration: 0.6 }, BounceOutRight: { name: "BounceOutRight", style: obj6, duration: 0.6 }, BounceOutLeft: { name: "BounceOutLeft", style: obj7, duration: 0.6 }, BounceOutUp: { name: "BounceOutUp", style: obj8, duration: 0.6 }, BounceOutDown: { name: "BounceOutDown", style: obj9, duration: 0.6 } };
+const obj4 = {
+  BounceOut: { name: "BounceOut", style: obj5, duration: 0.6 },
+  BounceOutRight: { name: "BounceOutRight", style: obj6, duration: 0.6 },
+  BounceOutLeft: { name: "BounceOutLeft", style: obj7, duration: 0.6 },
+  BounceOutUp: { name: "BounceOutUp", style: obj8, duration: 0.6 },
+  BounceOutDown: { name: "BounceOutDown", style: obj9, duration: 0.6 },
+};
 obj5 = { 0: { transform: items25 }, 15: null, 30: null, 45: null, 100: null };
 items25 = [{ scale: 1 }];
 const items26 = [{ scale: 1.1 }];

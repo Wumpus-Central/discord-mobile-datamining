@@ -38,15 +38,18 @@ class URLSearchParamsImpl {
         if (2 !== nextResult.length) {
           _TypeError = TypeError;
           tmp15 = new.target;
-          str2 = "Failed to construct 'URLSearchParams': parameter 1 sequence's element does not contain exactly two elements.";
+          str2 =
+            "Failed to construct 'URLSearchParams': parameter 1 sequence's element does not contain exactly two elements.";
           tmp16 = new.target;
-          typeError = new TypeError("Failed to construct 'URLSearchParams': parameter 1 sequence's element does not contain exactly two elements.");
+          typeError = new TypeError(
+            "Failed to construct 'URLSearchParams': parameter 1 sequence's element does not contain exactly two elements.",
+          );
           tmp18 = typeError;
           throw typeError;
         } else {
           _list = self._list;
           tmp13 = nextResult;
-          items = [, ];
+          items = [,];
           [arr6[0], arr6[1]] = tmp12;
           arr = _list.push(items);
           continue;
@@ -62,7 +65,7 @@ class URLSearchParamsImpl {
           tmp7 = keys;
           for (const item10033 of keys) {
             _list1 = self._list;
-            items1 = [, ];
+            items1 = [,];
             items1[0] = item10033;
             items1[1] = substr[item10033];
             arr1 = _list1.push(items1);
@@ -90,7 +93,7 @@ let obj = {
       self._url._url.query = serializeUrlencodedResult;
       const obj = URLSearchParamsImpl(14032);
     }
-  }
+  },
 };
 let items = [
   obj,
@@ -101,7 +104,7 @@ let items = [
       const items = [arg0, arg1];
       _list.push(items);
       this._updateSteps();
-    }
+    },
   },
   {
     key: "delete",
@@ -123,7 +126,7 @@ let items = [
         } while (sum < self._list.length);
       }
       self._updateSteps();
-    }
+    },
   },
   {
     key: "get",
@@ -137,7 +140,7 @@ let items = [
         }
       }
       return null;
-    }
+    },
   },
   {
     key: "getAll",
@@ -151,7 +154,7 @@ let items = [
         continue;
       }
       return items;
-    }
+    },
   },
   {
     key: "has",
@@ -165,7 +168,7 @@ let items = [
         }
       }
       return false;
-    }
+    },
   },
   {
     key: "set",
@@ -205,7 +208,7 @@ let items = [
         _list1.push(items);
       }
       self._updateSteps();
-    }
+    },
   },
   {
     key: "sort",
@@ -215,24 +218,23 @@ let items = [
       const sorted = mapped.sort((index, index2) => index.item[0] > index2.item[0] || index.index - index2.index);
       this._list = sorted.map((item) => item.item);
       this._updateSteps();
-    }
+    },
   },
-,
-
+  ,
 ];
 obj = {
   key: Symbol.iterator,
   value() {
     const _list = this._list;
     return _list[Symbol.iterator]();
-  }
+  },
 };
 items[8] = obj;
 items[9] = {
   key: "toString",
   value: function toString() {
     return URLSearchParamsImpl(14032).serializeUrlencoded(this._list);
-  }
+  },
 };
 
 export const implementation = _createClass(URLSearchParamsImpl, items);

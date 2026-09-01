@@ -1,7 +1,6 @@
 // _runtime/00331_getImageSourcesFromImageProps.js
 import closure_2 from "metro/00032__slicedToArray.js";
 
-
 export const getImageSourcesFromImageProps = function getImageSourcesFromImageProps(source) {
   let tmp = width(height[1])(source.source);
   ({ referrerPolicy, src, srcSet, width } = source);

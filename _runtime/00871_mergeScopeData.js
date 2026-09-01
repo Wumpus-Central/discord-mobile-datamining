@@ -56,7 +56,8 @@ function mergeScopeData(extra) {
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.applyScopeDataToEvent = function applyScopeDataToEvent(extra) {
-  ({ fingerprint, span, breadcrumbs, sdkProcessingMetadata, extra, tags, user, contexts, level, transactionName } = arg1);
+  ({ fingerprint, span, breadcrumbs, sdkProcessingMetadata, extra, tags, user, contexts, level, transactionName } =
+    arg1);
   if (Object.keys(extra).length) {
     let obj = {};
     const merged = Object.assign(extra);

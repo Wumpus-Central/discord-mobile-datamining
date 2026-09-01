@@ -115,7 +115,9 @@ function _createForOfIteratorHelper(iterable) {
       }
       if (!arr) {
         const _TypeError = TypeError;
-        const typeError = new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+        const typeError = new TypeError(
+          "Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
+        );
         class F {
           constructor() {
             return;
@@ -237,19 +239,21 @@ arg5.cleanHeader = (arg0, arg1) => {
   return arg0;
 };
 arg5.isObject = (obj) => null !== obj && typeof obj === "object";
-arg5.hasOwn = Object.hasOwn || ((arg0, key10009) => {
-  if (null == arg0) {
-    const _TypeError = TypeError;
-    const typeError = new TypeError("Cannot convert undefined or null to object");
-    throw typeError;
-  } else {
-    const _Object = Object;
-    const call = hasOwnProperty.call;
-    const _Object2 = Object;
-    const object = new Object(arg0);
-    return typeof call === "unknown" ? hasOwnProperty(key10009) : call(object, key10009);
-  }
-});
+arg5.hasOwn =
+  Object.hasOwn ||
+  ((arg0, key10009) => {
+    if (null == arg0) {
+      const _TypeError = TypeError;
+      const typeError = new TypeError("Cannot convert undefined or null to object");
+      throw typeError;
+    } else {
+      const _Object = Object;
+      const call = hasOwnProperty.call;
+      const _Object2 = Object;
+      const object = new Object(arg0);
+      return typeof call === "unknown" ? hasOwnProperty(key10009) : call(object, key10009);
+    }
+  });
 arg5.mixin = (arg0, obj) => {
   for (const key10004 in arg1) {
     let tmp = key10004;

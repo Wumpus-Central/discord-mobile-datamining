@@ -9,14 +9,18 @@ function _saveDocuments() {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0, arr) {
+    return (function* (arg0, arr) {
       closure_1 = tmp2;
-      yield v0(function*() {
+      yield v0(function* () {
         closure_0 = tmp2;
         if (closure_1_0.sourceUris.length > 1) {
           const _console = console;
           const _HermesInternal = HermesInternal;
-          console.warn("DocumentPicker.saveDocuments: Android only allows to save one file at a time.\n\n      You provided an array with " + length + " entries.");
+          console.warn(
+            "DocumentPicker.saveDocuments: Android only allows to save one file at a time.\n\n      You provided an array with " +
+              length +
+              " entries.",
+          );
         }
         const NativeDocumentPicker2 = closure_1_0(closure_1_1[2]).NativeDocumentPicker;
         closure_0 = yield NativeDocumentPicker2.saveDocument(closure_1_0);

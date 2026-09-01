@@ -26,8 +26,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 let closure_2 = ["component", "to", "replace"];
 class Link {
@@ -83,14 +82,22 @@ let obj = {
           return closure_1_2.handlePress(arg0, closure_0);
         };
         return closure_1_7(closure_1, obj);
-      }
+      },
     });
-  }
+  },
 };
 let items = [obj];
 const importDefaultResultResult = importDefaultResult(Link, items);
-importDefaultResultResult.defaultProps = { component: require("get ActivityIndicator").TouchableHighlight, replace: false };
-obj = { onPress: emptyFunctionDefault.func, component: emptyFunctionDefault.elementType, replace: emptyFunctionDefault.bool, to: null };
+importDefaultResultResult.defaultProps = {
+  component: require("get ActivityIndicator").TouchableHighlight,
+  replace: false,
+};
+obj = {
+  onPress: emptyFunctionDefault.func,
+  component: emptyFunctionDefault.elementType,
+  replace: emptyFunctionDefault.bool,
+  to: null,
+};
 let items1 = [emptyFunctionDefault.string, emptyFunctionDefault.object];
 obj[3] = emptyFunctionDefault.oneOfType(items1);
 importDefaultResultResult.propTypes = obj;

@@ -6,7 +6,16 @@ import setRuntimeConfigProvider from "../00065_setRuntimeConfigProvider.js";
 if ("default" in pointsDiffer) {
   pointsDiffer = pointsDiffer.default;
 }
-let obj = { startPoint: { diff: pointsDiffer }, endPoint: null, colors: null, locations: true, useAngle: true, angleCenter: null, angle: true, borderRadii: true };
+let obj = {
+  startPoint: { diff: pointsDiffer },
+  endPoint: null,
+  colors: null,
+  locations: true,
+  useAngle: true,
+  angleCenter: null,
+  angle: true,
+  borderRadii: true,
+};
 if ("default" in pointsDiffer) {
   pointsDiffer = pointsDiffer.default;
 }

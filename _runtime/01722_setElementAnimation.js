@@ -45,13 +45,9 @@ function setElementAnimation(dummy, dummyAnimationConfig, arg2) {
     dummy.style.animationDelay = "" + delay + "s";
     dummy.style.animationTimingFunction = easing;
   }
-  maybeRemoveElement = function maybeRemoveElement() {
-
-  };
+  maybeRemoveElement = function maybeRemoveElement() {};
   c9 = false;
-  function maybeCallCallback(arg0) {
-
-  }
+  function maybeCallCallback(arg0) {}
   dummy.onanimationend = () => {
     if (flag) {
       const boundingClientRect = dummy.getBoundingClientRect();
@@ -196,7 +192,15 @@ arg5.getReducedMotionFromConfig = function getReducedMotionFromConfig(entering) 
   }
 };
 arg5.getProcessedConfig = function getProcessedConfig(animationWithInitialValues, animationType, entering) {
-  const obj = { animationName: animationWithInitialValues, animationType, duration: null, delay: null, easing: null, callback: null, reversed: null };
+  const obj = {
+    animationName: animationWithInitialValues,
+    animationType,
+    duration: null,
+    delay: null,
+    easing: null,
+    callback: null,
+    reversed: null,
+  };
   let num = 0.3;
   if (animationWithInitialValues in TransitionType.Animations) {
     num = tmp(1709).Animations[animationWithInitialValues].duration;
@@ -320,10 +324,16 @@ arg5.handleLayoutTransition = function handleLayoutTransition(_componentDOMRef, 
     tmp4 = require;
   }
   let tmp4Result = tmp4(1741);
-  ({ dummyTransitionKeyframeName, transitionKeyframeName: processedConfig.animationName } = tmp4Result.TransitionGenerator(ENTRY_EXIT, easingY));
+  ({ dummyTransitionKeyframeName, transitionKeyframeName: processedConfig.animationName } =
+    tmp4Result.TransitionGenerator(ENTRY_EXIT, easingY));
   if (ENTRY_EXIT === tmp4(1709).TransitionType.CURVED) {
     tmp4Result = tmp4(1746);
-    const result = tmp4Result.prepareCurvedTransition(_componentDOMRef, processedConfig, easingY, dummyTransitionKeyframeName);
+    const result = tmp4Result.prepareCurvedTransition(
+      _componentDOMRef,
+      processedConfig,
+      easingY,
+      dummyTransitionKeyframeName,
+    );
     setElementAnimation(result.dummy, result.dummyAnimationConfig);
   }
   setElementAnimation(_componentDOMRef, processedConfig);

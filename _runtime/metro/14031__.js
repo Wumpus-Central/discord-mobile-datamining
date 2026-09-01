@@ -63,5 +63,5 @@ export default {
       tmp = tmp3;
     }
     return tmp;
-  }
+  },
 };

@@ -1,7 +1,6 @@
 // _runtime/01600_useMemoArray.js
 import closure_0 from "00019_noop.js";
 
-
 export const useMemoArray = function useMemoArray(arr) {
   const ref = current.useRef(undefined);
   current = ref.current;

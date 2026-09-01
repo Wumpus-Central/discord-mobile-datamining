@@ -5,7 +5,9 @@ import { jsx } from "react/00021_jsxProd.js";
 const require = arg1;
 noopDefault;
 let closure_4 = { code: "function pnpm_ItemLayoutTsx1(){const{x,size}=this.__closure;return x.value/size;}" };
-let closure_5 = { code: "function pnpm_ItemLayoutTsx2(){const{animationStyle,x,size,index}=this.__closure;return animationStyle(x.value/size,index);}" };
+let closure_5 = {
+  code: "function pnpm_ItemLayoutTsx2(){const{animationStyle,x,size,index}=this.__closure;return animationStyle(x.value/size,index);}",
+};
 
 export const ItemLayout = (animationStyle) => {
   ({ handlerOffset, index } = animationStyle);
@@ -68,5 +70,9 @@ export const ItemLayout = (animationStyle) => {
   const tmpResult1 = index(height[4]);
   obj1[1] = height;
   const items2 = [obj1, animatedStyle];
-  return tmp9(animationStyle(height[4]).View, { style: items2, testID: "__CAROUSEL_ITEM_" + index + "__", children: children({ animationValue: derivedValue }) });
+  return tmp9(animationStyle(height[4]).View, {
+    style: items2,
+    testID: "__CAROUSEL_ITEM_" + index + "__",
+    children: children({ animationValue: derivedValue }),
+  });
 };

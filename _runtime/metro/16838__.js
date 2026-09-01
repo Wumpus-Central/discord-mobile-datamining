@@ -32,6 +32,6 @@ globalThis.IntlMessageFormat.__addLocaleData({
       str2 = "one";
     }
     return str2;
-  }
+  },
 });
 globalThis.IntlMessageFormat.__addLocaleData({ locale: "ro-MD", parentLocale: "ro" });

@@ -43,7 +43,14 @@ arg5.default = {
                                   let value4 = exif.exif.FocalLengthIn35mmFilm.value;
                                 }
                                 if (!value4) {
-                                  value4 = (function getFocalLengthIn35mmFilmValue(value, value2, value1, value2, value3, value3) {
+                                  value4 = (function getFocalLengthIn35mmFilmValue(
+                                    value,
+                                    value2,
+                                    value1,
+                                    value2,
+                                    value3,
+                                    value3,
+                                  ) {
                                     let _Math = value;
                                     if (value) {
                                       let result2 = value2;
@@ -58,8 +65,8 @@ arg5.default = {
                                                 try {
                                                   if (constants.INCHES === value1) {
                                                     let tmp7 = closure_3;
-                                                    const result = sqrtResult / (result2[0] / result2[1] * tmp7);
-                                                    const result1 = tmp3 / (_Math[0] / _Math[1] * tmp7);
+                                                    const result = sqrtResult / ((result2[0] / result2[1]) * tmp7);
+                                                    const result1 = tmp3 / ((_Math[0] / _Math[1]) * tmp7);
                                                     _Math = Math;
                                                     tmp3 = result1 ** 2;
                                                     sqrtResult = Math.sqrt(tmp3 + result ** 2);
@@ -71,8 +78,7 @@ arg5.default = {
                                                     }
                                                   }
                                                   tmp7 = closure_4;
-                                                } catch (err) {
-                                                }
+                                                } catch (err) {}
                                               }
                                             }
                                           }
@@ -100,8 +106,7 @@ arg5.default = {
                                         obj[0] = result;
                                         obj[1] = result.toFixed(1);
                                         return obj;
-                                      } catch (err) {
-                                      }
+                                      } catch (err) {}
                                     }
                                   }
                                 })(value, value4);
@@ -119,8 +124,7 @@ arg5.default = {
                                       obj[0] = result;
                                       obj[1] = result.toFixed(1) + " deg";
                                       return obj;
-                                    } catch (err) {
-                                    }
+                                    } catch (err) {}
                                   }
                                 })(value4);
                                 if (tmp10) {
@@ -177,6 +181,6 @@ arg5.default = {
         value = exif.FocalLength.value;
       }
     }
-  }
+  },
 };
 arg5.FOCAL_PLANE_RESOLUTION_UNIT = obj;

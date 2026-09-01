@@ -24,7 +24,8 @@ arg5.default = function bezier(arg0, arg1, arg2, arg3) {
               let result = num4 * closure_0;
               let num5 = 3;
               let num6 = 6;
-              float32Array[num4] = (((1 - 3 * arg2 + 3 * arg0) * result + (3 * arg2 - 6 * arg0)) * result + 3 * arg0) * result;
+              float32Array[num4] =
+                (((1 - 3 * arg2 + 3 * arg0) * result + (3 * arg2 - 6 * arg0)) * result + 3 * arg0) * result;
               num4 = num4 + 1;
               let num7 = 11;
             } while (num4 < 11);
@@ -59,17 +60,30 @@ arg5.default = function bezier(arg0, arg1, arg2, arg3) {
                     }
                   }
                   const diff = num3 - 1;
-                  let sum2 = num4 + (arg0 - float32Array[diff]) / (float32Array[diff + 1] - float32Array[diff]) * closure_0;
+                  let sum2 =
+                    num4 + ((arg0 - float32Array[diff]) / (float32Array[diff + 1] - float32Array[diff])) * closure_0;
                   let num7 = 3;
                   let num8 = 6;
-                  const sum3 = 3 * (1 - 3 * closure_2 + 3 * closure_0) * sum2 * sum2 + 2 * (3 * closure_2 - 6 * closure_0) * sum2 + 3 * closure_0;
+                  const sum3 =
+                    3 * (1 - 3 * closure_2 + 3 * closure_0) * sum2 * sum2 +
+                    2 * (3 * closure_2 - 6 * closure_0) * sum2 +
+                    3 * closure_0;
                   let num12 = 0;
                   let diff1 = sum2;
                   if (0.001 <= sum3) {
-                    const sum4 = num7 * (1 - num7 * tmp14 + num7 * tmp13) * diff1 * diff1 + 2 * (num7 * tmp14 - num8 * tmp13) * diff1 + num7 * tmp13;
+                    const sum4 =
+                      num7 * (1 - num7 * tmp14 + num7 * tmp13) * diff1 * diff1 +
+                      2 * (num7 * tmp14 - num8 * tmp13) * diff1 +
+                      num7 * tmp13;
                     let tmp27 = diff1;
                     while (0 !== sum4) {
-                      diff1 = diff1 - ((((1 - num7 * tmp14 + num7 * tmp13) * diff1 + (num7 * tmp14 - num8 * tmp13)) * diff1 + num7 * tmp13) * diff1 - arg0) / sum4;
+                      diff1 =
+                        diff1 -
+                        ((((1 - num7 * tmp14 + num7 * tmp13) * diff1 + (num7 * tmp14 - num8 * tmp13)) * diff1 +
+                          num7 * tmp13) *
+                          diff1 -
+                          arg0) /
+                          sum4;
                       num12 = num12 + 1;
                       tmp27 = diff1;
                       if (num12 >= 4) {
@@ -82,7 +96,11 @@ arg5.default = function bezier(arg0, arg1, arg2, arg3) {
                     let num13 = 0;
                     while (true) {
                       let sum6 = num4 + (sum5 - num4) / 2;
-                      let diff2 = (((1 - num7 * tmp14 + num7 * tmp13) * sum6 + (num7 * tmp14 - num8 * tmp13)) * sum6 + num7 * tmp13) * sum6 - arg0;
+                      let diff2 =
+                        (((1 - num7 * tmp14 + num7 * tmp13) * sum6 + (num7 * tmp14 - num8 * tmp13)) * sum6 +
+                          num7 * tmp13) *
+                          sum6 -
+                        arg0;
                       let tmp19 = sum5;
                       let tmp20 = num4;
                       let tmp21 = num13;

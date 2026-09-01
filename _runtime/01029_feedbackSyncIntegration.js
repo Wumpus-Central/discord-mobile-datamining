@@ -9,5 +9,5 @@ export const feedbackSyncIntegration = mergeOptions.buildFeedbackIntegration({
   },
   getScreenshotIntegration() {
     return mergeOptions.feedbackScreenshotIntegration;
-  }
+  },
 });

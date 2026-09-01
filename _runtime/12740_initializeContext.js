@@ -22,7 +22,19 @@ function initializeContext(target) {
   if (processors == null) {
     processors = {};
   }
-  const obj = { processors, metadataRegistry: null, target: null, unrepresentable: null, override: null, io: null, counter: 0, seen: null, cycles: null, reused: null, external: null };
+  const obj = {
+    processors,
+    metadataRegistry: null,
+    target: null,
+    unrepresentable: null,
+    override: null,
+    io: null,
+    counter: 0,
+    seen: null,
+    cycles: null,
+    reused: null,
+    external: null,
+  };
   let metadata;
   if (target != null) {
     metadata = target.metadata;
@@ -45,9 +57,7 @@ function initializeContext(target) {
     fn = target.override;
   }
   if (fn == null) {
-    fn = () => {
-
-    };
+    fn = () => {};
   }
   obj[4] = fn;
   let str3;
@@ -204,11 +214,16 @@ function extractDefs(initializeContextResult, _idmap) {
             let _Error2 = Error;
             let tmp27 = id;
             let _HermesInternal = HermesInternal;
-            let str2 = "\" detected during JSON Schema conversion. Two different schemas cannot share the same id when converted together.";
-            let str3 = "Duplicate schema id \"";
+            let str2 =
+              '" detected during JSON Schema conversion. Two different schemas cannot share the same id when converted together.';
+            let str3 = 'Duplicate schema id "';
             let tmp28 = new.target;
             let tmp29 = new.target;
-            error = new Error("Duplicate schema id \"" + tmp18 + "\" detected during JSON Schema conversion. Two different schemas cannot share the same id when converted together.");
+            error = new Error(
+              'Duplicate schema id "' +
+                tmp18 +
+                '" detected during JSON Schema conversion. Two different schemas cannot share the same id when converted together.',
+            );
             let tmp31 = error;
             throw error;
           }
@@ -298,11 +313,15 @@ function extractDefs(initializeContextResult, _idmap) {
             joined = cycle.join("/");
           }
           let _HermesInternal2 = HermesInternal;
-          let str6 = "/<root>\n\nSet the `cycles` parameter to `\"ref\"` to resolve cyclical schemas with defs.";
+          let str6 = '/<root>\n\nSet the `cycles` parameter to `"ref"` to resolve cyclical schemas with defs.';
           let str7 = "Cycle detected: #/";
           let tmp36 = new.target;
           let tmp37 = new.target;
-          let error1 = new Error("Cycle detected: #/" + joined + "/<root>\n\nSet the `cycles` parameter to `\"ref\"` to resolve cyclical schemas with defs.");
+          let error1 = new Error(
+            "Cycle detected: #/" +
+              joined +
+              '/<root>\n\nSet the `cycles` parameter to `"ref"` to resolve cyclical schemas with defs.',
+          );
           let tmp39 = error1;
           throw error1;
         }
@@ -587,7 +606,11 @@ function finalize(seen, _standard) {
       let merged1 = Object.assign(_standard["~standard"]);
       obj1 = { input: null, output: null };
       obj1[0] = flattenRef.createStandardJSONSchemaMethod(_standard, "input", standardJSONSchemaMethod.processors);
-      standardJSONSchemaMethod = flattenRef.createStandardJSONSchemaMethod(_standard, "output", standardJSONSchemaMethod.processors);
+      standardJSONSchemaMethod = flattenRef.createStandardJSONSchemaMethod(
+        _standard,
+        "output",
+        standardJSONSchemaMethod.processors,
+      );
       obj1[1] = standardJSONSchemaMethod;
       obj.jsonSchema = obj1;
       obj[0] = obj;

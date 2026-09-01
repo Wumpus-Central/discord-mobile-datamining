@@ -53,6 +53,5 @@ export default (() => {
       types = binding;
     }
     return types;
-  } catch (err) {
-  }
+  } catch (err) {}
 })();

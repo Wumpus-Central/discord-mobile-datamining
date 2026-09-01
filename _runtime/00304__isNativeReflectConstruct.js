@@ -24,8 +24,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class StatusBar {
   constructor() {
@@ -53,7 +52,7 @@ let obj = {
   key: "componentDidMount",
   value: function componentDidMount() {
     this._stackEntry = StatusBar.pushStackEntry(this.props);
-  }
+  },
 };
 let items = [
   obj,
@@ -63,7 +62,7 @@ let items = [
       if (null != this._stackEntry) {
         StatusBar.popStackEntry(tmp._stackEntry);
       }
-    }
+    },
   },
   {
     key: "componentDidUpdate",
@@ -72,21 +71,21 @@ let items = [
       if (null != this._stackEntry) {
         self._stackEntry = StatusBar.replaceStackEntry(self._stackEntry, self.props);
       }
-    }
+    },
   },
   {
     key: "render",
     value: function render() {
       return null;
-    }
-  }
+    },
+  },
 ];
 obj = {
   key: "setHidden",
   value: function setHidden(value) {
     StatusBar._defaultProps.hidden.value = value;
     StatusBar(305).setHidden(value);
-  }
+  },
 };
 let items1 = [
   obj,
@@ -95,13 +94,13 @@ let items1 = [
     value: function setBarStyle(barStyle) {
       StatusBar._defaultProps.barStyle.value = barStyle;
       StatusBar(305).setStyle(barStyle);
-    }
+    },
   },
   {
     key: "setNetworkActivityIndicatorVisible",
     value: function setNetworkActivityIndicatorVisible(arg0) {
       console.warn("`setNetworkActivityIndicatorVisible` is only available on iOS");
-    }
+    },
   },
   {
     key: "setBackgroundColor",
@@ -122,14 +121,14 @@ let items1 = [
         const _HermesInternal = HermesInternal;
         console.warn("`StatusBar.setBackgroundColor`: Color " + String(value) + " parsed to null or undefined");
       }
-    }
+    },
   },
   {
     key: "setTranslucent",
     value: function setTranslucent(translucent) {
       StatusBar._defaultProps.translucent = translucent;
       StatusBar(305).setTranslucent(translucent);
-    }
+    },
   },
   {
     key: "pushStackEntry",
@@ -149,7 +148,13 @@ let items1 = [
         obj[1] = flag;
         tmp = obj;
       }
-      obj = { backgroundColor: tmp, barStyle: null, translucent: null, hidden: null, networkActivityIndicatorVisible: null };
+      obj = {
+        backgroundColor: tmp,
+        barStyle: null,
+        translucent: null,
+        hidden: null,
+        networkActivityIndicatorVisible: null,
+      };
       let tmp2 = null;
       if (null != animated.barStyle) {
         obj = { value: null, animated: null };
@@ -173,7 +178,7 @@ let items1 = [
       _propsStack.push(obj);
       StatusBar._updatePropsStack();
       return obj;
-    }
+    },
   },
   {
     key: "popStackEntry",
@@ -185,7 +190,7 @@ let items1 = [
         _propsStack1.splice(index, 1);
       }
       StatusBar._updatePropsStack();
-    }
+    },
   },
   {
     key: "replaceStackEntry",
@@ -205,7 +210,13 @@ let items1 = [
         obj[1] = flag;
         tmp = obj;
       }
-      obj = { backgroundColor: tmp, barStyle: null, translucent: null, hidden: null, networkActivityIndicatorVisible: null };
+      obj = {
+        backgroundColor: tmp,
+        barStyle: null,
+        translucent: null,
+        hidden: null,
+        networkActivityIndicatorVisible: null,
+      };
       let tmp2 = null;
       if (null != animated.barStyle) {
         obj = { value: null, animated: null };
@@ -232,8 +243,8 @@ let items1 = [
       }
       StatusBar._updatePropsStack();
       return obj;
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(StatusBar, items, items1);
 let obj1 = importDefaultResultResult;
@@ -242,7 +253,13 @@ let str = importDefaultResult2.getConstants().DEFAULT_BACKGROUND_COLOR;
 if (str == null) {
   str = "black";
 }
-obj = { backgroundColor: str, barStyle: "default", translucent: false, hidden: false, networkActivityIndicatorVisible: false };
+obj = {
+  backgroundColor: str,
+  barStyle: "default",
+  translucent: false,
+  hidden: false,
+  networkActivityIndicatorVisible: false,
+};
 let flag = obj.animated;
 if (flag == null) {
   flag = false;
@@ -258,7 +275,13 @@ if (null != obj.backgroundColor) {
   obj1[1] = flag;
   tmp6 = obj1;
 }
-const obj2 = { backgroundColor: tmp6, barStyle: null, translucent: null, hidden: null, networkActivityIndicatorVisible: null };
+const obj2 = {
+  backgroundColor: tmp6,
+  barStyle: null,
+  translucent: null,
+  hidden: null,
+  networkActivityIndicatorVisible: null,
+};
 let tmp7 = null;
 if (null != obj.barStyle) {
   const obj3 = { value: null, animated: null };
@@ -305,7 +328,9 @@ importDefaultResultResult._updatePropsStack = () => {
     if (null == tmp7) {
       const _console = console;
       const _HermesInternal = HermesInternal;
-      console.warn("`StatusBar._updatePropsStack`: Color " + reduced.backgroundColor.value + " parsed to null or undefined");
+      console.warn(
+        "`StatusBar._updatePropsStack`: Color " + reduced.backgroundColor.value + " parsed to null or undefined",
+      );
     } else {
       tmp4(38)(typeof tmp7 === "number", "Unexpected color given in StatusBar._updatePropsStack");
       let tmp4Result = tmp4(305);

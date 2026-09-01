@@ -1,7 +1,6 @@
 // _runtime/01524_useKeyedChildListeners.js
 import closure_0 from "00019_noop.js";
 
-
 export const useKeyedChildListeners = function useKeyedChildListeners() {
   current = current.useRef(Object.assign(Object.create(null), { getState: {}, beforeRemove: {} })).current;
   const items = [current];
@@ -17,6 +16,6 @@ export const useKeyedChildListeners = function useKeyedChildListeners() {
           dependencyMap[dependencyMap][tmp] = undefined;
         }
       };
-    }, items)
+    }, items),
   };
 };

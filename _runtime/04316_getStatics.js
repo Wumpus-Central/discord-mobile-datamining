@@ -10,7 +10,19 @@ function getStatics(arg0) {
   }
   return tmp2;
 }
-let closure_2 = { childContextTypes: true, contextType: true, contextTypes: true, defaultProps: true, displayName: true, getDefaultProps: true, getDerivedStateFromError: true, getDerivedStateFromProps: true, mixins: true, propTypes: true, type: true };
+let closure_2 = {
+  childContextTypes: true,
+  contextType: true,
+  contextTypes: true,
+  defaultProps: true,
+  displayName: true,
+  getDefaultProps: true,
+  getDerivedStateFromError: true,
+  getDerivedStateFromProps: true,
+  mixins: true,
+  propTypes: true,
+  type: true,
+};
 let closure_3 = { name: true, length: true, prototype: true, caller: true, callee: true, arguments: true, arity: true };
 let obj = { $$typeof: true, compare: true, defaultProps: true, displayName: true, propTypes: true, type: true };
 obj = {};
@@ -44,8 +56,7 @@ function hoistNonReactStatics(arg0, headers) {
             if (!tmp9) {
               try {
                 defineProperty(arg0, tmp11, tmp15);
-              } catch (err) {
-              }
+              } catch (err) {}
             }
           }
         }

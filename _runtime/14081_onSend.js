@@ -134,7 +134,7 @@ export default () => {
         XHRInterceptor2.setResponseCallback(onResponse);
         const XHRInterceptor3 = lib(merged[1]).XHRInterceptor;
         XHRInterceptor3.enableInterception();
-      }
+      },
     };
   };
 };

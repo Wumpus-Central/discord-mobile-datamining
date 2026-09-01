@@ -5,31 +5,33 @@ import warning from "../01229_warning.js";
 import invariant from "../01230_invariant.js";
 
 function _extends() {
-  let tmp = Object.assign || ((arg0) => {
-    for (let num = 1; num < arguments.length; num = num + 1) {
-      let tmp = arguments[num];
-      let tmp2 = tmp;
-      let tmp3 = num;
-      for (const key10012 in tmp) {
-        let tmp5 = key10012;
-        let _Object = Object;
-        let call = hasOwnProperty.call;
-        if (typeof call === "unknown") {
-          let hasOwnPropertyResult = hasOwnProperty(key10012);
-        } else {
-          hasOwnPropertyResult = call(tmp, key10012);
-        }
-        if (!hasOwnPropertyResult) {
+  let tmp =
+    Object.assign ||
+    ((arg0) => {
+      for (let num = 1; num < arguments.length; num = num + 1) {
+        let tmp = arguments[num];
+        let tmp2 = tmp;
+        let tmp3 = num;
+        for (const key10012 in tmp) {
+          let tmp5 = key10012;
+          let _Object = Object;
+          let call = hasOwnProperty.call;
+          if (typeof call === "unknown") {
+            let hasOwnPropertyResult = hasOwnProperty(key10012);
+          } else {
+            hasOwnPropertyResult = call(tmp, key10012);
+          }
+          if (!hasOwnPropertyResult) {
+            continue;
+          } else {
+            arg0[key10012] = tmp[key10012];
+            continue;
+          }
           continue;
-        } else {
-          arg0[key10012] = tmp[key10012];
-          continue;
         }
-        continue;
       }
-    }
-    return arg0;
-  });
+      return arg0;
+    });
   const self = this;
   closure_3 = tmp;
   const apply = tmp.apply;
@@ -144,7 +146,9 @@ function createLocation(tmp4Result, arg1, arg2, _location) {
     const _URIError = URIError;
     if (uRIError instanceof URIError) {
       const _URIError2 = URIError;
-      uRIError = new URIError("Pathname \"" + tmp.pathname + "\" could not be decoded. This is likely caused by an invalid percent-encoding.");
+      uRIError = new URIError(
+        'Pathname "' + tmp.pathname + '" could not be decoded. This is likely caused by an invalid percent-encoding.',
+      );
     }
     throw uRIError;
   }
@@ -222,7 +226,7 @@ let obj = {
       substr = str.substr(1);
     }
     return substr;
-  }
+  },
 };
 obj = {
   encodePath: function stripLeadingSlash(str) {
@@ -232,7 +236,7 @@ obj = {
     }
     return substr;
   },
-  decodePath: addLeadingSlash
+  decodePath: addLeadingSlash,
 };
 let closure_13 = { hashbang: obj, noslash: obj, slash: { encodePath: addLeadingSlash, decodePath: addLeadingSlash } };
 
@@ -457,7 +461,7 @@ export const createBrowserHistory = function createBrowserHistory(props) {
         array[num] = arguments[num];
       }
       const item = arr.forEach((apply) => apply.apply(undefined, array));
-    }
+    },
   };
   c10 = false;
   let _location = window.location;
@@ -728,7 +732,7 @@ export const createBrowserHistory = function createBrowserHistory(props) {
         }
         callback();
       };
-    }
+    },
   };
   return obj;
 };
@@ -778,7 +782,8 @@ export const createHashHistory = function createHashHistory(props) {
       const tmp25 = fn();
       const _location = obj.location;
       if (!c7) {
-        const tmp3 = _location.pathname === tmp25.pathname && _location.search === tmp25.search && _location.hash === tmp25.hash;
+        const tmp3 =
+          _location.pathname === tmp25.pathname && _location.search === tmp25.search && _location.hash === tmp25.hash;
       }
       ({ pathname, search, hash } = tmp25);
       if (!pathname) {
@@ -991,7 +996,7 @@ export const createHashHistory = function createHashHistory(props) {
         array[num] = arguments[num];
       }
       const item = arr.forEach((apply) => apply.apply(undefined, array));
-    }
+    },
   };
   c7 = false;
   c8 = null;
@@ -1330,7 +1335,7 @@ export const createHashHistory = function createHashHistory(props) {
         }
         callback();
       };
-    }
+    },
   };
   return obj;
 };
@@ -1411,7 +1416,7 @@ export const createMemoryHistory = function createMemoryHistory(props) {
         array[num] = arguments[num];
       }
       const item = arr.forEach((apply) => apply.apply(undefined, array));
-    }
+    },
   };
   let fn = function p(arg0) {
     const diff = obj.entries.length - 1;
@@ -1552,13 +1557,17 @@ export const createMemoryHistory = function createMemoryHistory(props) {
     },
     listen(arg0) {
       return closure_2.appendListener(arg0);
-    }
+    },
   };
   return obj;
 };
 export { createLocation };
 export const locationsAreEqual = function locationsAreEqual(_location, pathname2) {
-  let tmp = _location.pathname === pathname2.pathname && _location.search === pathname2.search && _location.hash === pathname2.hash && _location.key === pathname2.key;
+  let tmp =
+    _location.pathname === pathname2.pathname &&
+    _location.search === pathname2.search &&
+    _location.hash === pathname2.hash &&
+    _location.key === pathname2.key;
   if (tmp) {
     tmp = valueEqual(_location.state, pathname2.state);
   }

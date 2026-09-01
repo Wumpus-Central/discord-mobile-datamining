@@ -38,9 +38,24 @@ if (!isJest.isJest()) {
                       [tmp7, tmp6] = items;
                     }
                     const tmp = closure_2_2(closure_0.quaternion, 4);
-                    const tmp8 = -Math.atan2(2 * (tmp4 * tmp5 + tmp2 * tmp3), tmp2 * tmp2 - tmp3 * tmp3 - tmp4 * tmp4 + tmp5 * tmp5);
+                    const tmp8 = -Math.atan2(
+                      2 * (tmp4 * tmp5 + tmp2 * tmp3),
+                      tmp2 * tmp2 - tmp3 * tmp3 - tmp4 * tmp4 + tmp5 * tmp5,
+                    );
                     const sinResult = Math.sin(-2 * (tmp3 * tmp5 - tmp2 * tmp4));
-                    callback({ qw: tmp2, qx: tmp3, qy: tmp4, qz: tmp5, yaw: tmp8, pitch: Math.sin(-2 * (tmp3 * tmp5 - tmp2 * tmp4)), roll: -Math.atan2(2 * (tmp3 * tmp4 + tmp2 * tmp5), tmp2 * tmp2 + tmp3 * tmp3 - tmp4 * tmp4 - tmp5 * tmp5), interfaceOrientation: 0 });
+                    callback({
+                      qw: tmp2,
+                      qx: tmp3,
+                      qy: tmp4,
+                      qz: tmp5,
+                      yaw: tmp8,
+                      pitch: Math.sin(-2 * (tmp3 * tmp5 - tmp2 * tmp4)),
+                      roll: -Math.atan2(
+                        2 * (tmp3 * tmp4 + tmp2 * tmp5),
+                        tmp2 * tmp2 + tmp3 * tmp3 - tmp4 * tmp4 - tmp5 * tmp5,
+                      ),
+                      interfaceOrientation: 0,
+                    });
                   };
                 }
               }
@@ -66,28 +81,36 @@ if (!isJest.isJest()) {
   isJest[1] = function scheduleOnUI(arg0) {
     mockedRequestAnimationFrame(arg0);
   };
-  let items = [isJest, , , , , , , , , , , , , , , , , , , , ];
+  let items = [isJest, , , , , , , , , , , , , , , , , , , ,];
   isJest = { key: "createWorkletRuntime", value: null };
   isJest[1] = function createWorkletRuntime(arg0, arg1) {
-    const reanimatedError = new JSReanimated(1664).ReanimatedError("createWorkletRuntime is not available in JSReanimated.");
+    const reanimatedError = new JSReanimated(1664).ReanimatedError(
+      "createWorkletRuntime is not available in JSReanimated.",
+    );
     throw reanimatedError;
   };
   items[1] = isJest;
   const obj1 = { key: "scheduleOnRuntime", value: null };
   obj1[1] = function scheduleOnRuntime() {
-    const reanimatedError = new JSReanimated(1664).ReanimatedError("scheduleOnRuntime is not available in JSReanimated.");
+    const reanimatedError = new JSReanimated(1664).ReanimatedError(
+      "scheduleOnRuntime is not available in JSReanimated.",
+    );
     throw reanimatedError;
   };
   items[2] = obj1;
   let obj2 = { key: "registerEventHandler", value: null };
   obj2[1] = function registerEventHandler(arg0, arg1, arg2) {
-    const reanimatedError = new JSReanimated(1664).ReanimatedError("registerEventHandler is not available in JSReanimated.");
+    const reanimatedError = new JSReanimated(1664).ReanimatedError(
+      "registerEventHandler is not available in JSReanimated.",
+    );
     throw reanimatedError;
   };
   items[3] = obj2;
   const obj3 = { key: "unregisterEventHandler", value: null };
   obj3[1] = function unregisterEventHandler(arg0) {
-    const reanimatedError = new JSReanimated(1664).ReanimatedError("unregisterEventHandler is not available in JSReanimated.");
+    const reanimatedError = new JSReanimated(1664).ReanimatedError(
+      "unregisterEventHandler is not available in JSReanimated.",
+    );
     throw reanimatedError;
   };
   items[4] = obj3;
@@ -116,14 +139,10 @@ if (!isJest.isJest()) {
   };
   items[5] = obj4;
   const obj5 = { key: "configureLayoutAnimationBatch", value: null };
-  obj5[1] = function configureLayoutAnimationBatch() {
-
-  };
+  obj5[1] = function configureLayoutAnimationBatch() {};
   items[6] = obj5;
   const obj6 = { key: "setShouldAnimateExitingForTag", value: null };
-  obj6[1] = function setShouldAnimateExitingForTag() {
-
-  };
+  obj6[1] = function setShouldAnimateExitingForTag() {};
   items[7] = obj6;
   const obj7 = { key: "registerSensor", value: null };
   obj7[1] = function registerSensor(arg0, arg1, arg2, arg3) {
@@ -138,7 +157,10 @@ if (!isJest.isJest()) {
           self.detectPlatform();
         }
         const initializeSensorResult = self.initializeSensor(arg0, arg1);
-        const listener = initializeSensorResult.addEventListener("reading", self.getSensorCallback(initializeSensorResult, arg0, arg3));
+        const listener = initializeSensorResult.addEventListener(
+          "reading",
+          self.getSensorCallback(initializeSensorResult, arg0, arg3),
+        );
         initializeSensorResult.start();
         const sensors = self.sensors;
         const result = sensors.set(self.nextSensorId, initializeSensorResult);
@@ -156,7 +178,8 @@ if (!isJest.isJest()) {
           }
         }
         if (self.platform === obj20.WEB_IOS) {
-          str = " For iOS web, you will also have to also grant permission in the browser: https://dev.to/li/how-to-requestpermission-for-devicemotion-and-deviceorientation-events-in-ios-13-46g2.";
+          str =
+            " For iOS web, you will also have to also grant permission in the browser: https://dev.to/li/how-to-requestpermission-for-devicemotion-and-deviceorientation-events-in-ios-13-46g2.";
         }
         const _HermesInternal = HermesInternal;
         logger.warn("Sensor is not available." + str2 + str);
@@ -205,9 +228,7 @@ if (!isJest.isJest()) {
   };
   items[10] = obj9;
   const obj10 = { key: "unsubscribeFromKeyboardEvents", value: null };
-  obj10[1] = function unsubscribeFromKeyboardEvents(arg0) {
-
-  };
+  obj10[1] = function unsubscribeFromKeyboardEvents(arg0) {};
   items[11] = obj10;
   const obj11 = { key: "initializeSensor", value: null };
   obj11[1] = function initializeSensor(arg0, arg1) {
@@ -257,7 +278,9 @@ if (!isJest.isJest()) {
   items[13] = obj12;
   const obj13 = { key: "getSettledUpdates", value: null };
   obj13[1] = function getSettledUpdates() {
-    const reanimatedError = new JSReanimated(1664).ReanimatedError("`getSettledUpdates` is not available in JSReanimated.");
+    const reanimatedError = new JSReanimated(1664).ReanimatedError(
+      "`getSettledUpdates` is not available in JSReanimated.",
+    );
     throw reanimatedError;
   };
   items[14] = obj13;
@@ -304,19 +327,25 @@ if (!isJest.isJest()) {
   items[17] = obj16;
   const obj17 = { key: "executeOnUIRuntimeSync", value: null };
   obj17[1] = function executeOnUIRuntimeSync(arg0) {
-    const reanimatedError = new JSReanimated(1664).ReanimatedError("`executeOnUIRuntimeSync` is not available in JSReanimated.");
+    const reanimatedError = new JSReanimated(1664).ReanimatedError(
+      "`executeOnUIRuntimeSync` is not available in JSReanimated.",
+    );
     throw reanimatedError;
   };
   items[18] = obj17;
   const obj18 = { key: "markNodeAsRemovable", value: null };
   obj18[1] = function markNodeAsRemovable(arg0) {
-    const reanimatedError = new JSReanimated(1664).ReanimatedError("markNodeAsRemovable is not available in JSReanimated.");
+    const reanimatedError = new JSReanimated(1664).ReanimatedError(
+      "markNodeAsRemovable is not available in JSReanimated.",
+    );
     throw reanimatedError;
   };
   items[19] = obj18;
   const obj19 = { key: "unmarkNodeAsRemovable", value: null };
   obj19[1] = function unmarkNodeAsRemovable(arg0) {
-    const reanimatedError = new JSReanimated(1664).ReanimatedError("unmarkNodeAsRemovable is not available in JSReanimated.");
+    const reanimatedError = new JSReanimated(1664).ReanimatedError(
+      "unmarkNodeAsRemovable is not available in JSReanimated.",
+    );
     throw reanimatedError;
   };
   items[20] = obj19;

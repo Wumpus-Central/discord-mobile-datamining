@@ -7,7 +7,7 @@ Object.defineProperty(obj, "options", {
     error = new Error("Couldn't find a LinkingContext context.");
     throw error;
   },
-  set: undefined
+  set: undefined,
 });
 const context = noopAll.createContext(obj);
 context.displayName = "LinkingContext";

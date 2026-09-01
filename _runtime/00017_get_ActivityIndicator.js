@@ -83,121 +83,279 @@ import { subscribe } from "00494_subscribe.js";
 import { deepFreezeAndThrowOnMutationInDev } from "00495_deepFreezeAndThrowOnMutationInDev.js";
 import { Vibration } from "00496_Vibration.js";
 const obj = {};
-Object.defineProperty(obj, "ActivityIndicator", { get: () => ActivityIndicator /* ActivityIndicator */.default, set: undefined });
+Object.defineProperty(obj, "ActivityIndicator", {
+  get: () => ActivityIndicator /* ActivityIndicator */.default,
+  set: undefined,
+});
 Object.defineProperty(obj, "Button", { get: () => Button /* Button */.default, set: undefined });
-Object.defineProperty(obj, "DrawerLayoutAndroid", { get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default, set: undefined });
+Object.defineProperty(obj, "DrawerLayoutAndroid", {
+  get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default,
+  set: undefined,
+});
 Object.defineProperty(obj, "EventEmitter", { get: () => EventEmitter /* EventEmitter */.default, set: undefined });
-Object.defineProperty(obj, "FlatList", { get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default, set: undefined });
+Object.defineProperty(obj, "FlatList", {
+  get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default,
+  set: undefined,
+});
 Object.defineProperty(obj, "Image", { get: () => _queryCache /* _queryCache */.default, set: undefined });
-Object.defineProperty(obj, "ImageBackground", { get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default, set: undefined });
+Object.defineProperty(obj, "ImageBackground", {
+  get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default,
+  set: undefined,
+});
 Object.defineProperty(obj, "InputAccessoryView", { get: () => require("metro/00339__.js").default, set: undefined });
-Object.defineProperty(obj, "KeyboardAvoidingView", { get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default, set: undefined });
-Object.defineProperty(obj, "experimental_LayoutConformance", { get: () => LayoutConformance /* LayoutConformance */.default, set: undefined });
-Object.defineProperty(obj, "Modal", { get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default, set: undefined });
-Object.defineProperty(obj, "unstable_NativeText", { get: () => NativeText /* NativeText */.NativeText, set: undefined });
+Object.defineProperty(obj, "KeyboardAvoidingView", {
+  get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default,
+  set: undefined,
+});
+Object.defineProperty(obj, "experimental_LayoutConformance", {
+  get: () => LayoutConformance /* LayoutConformance */.default,
+  set: undefined,
+});
+Object.defineProperty(obj, "Modal", {
+  get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default,
+  set: undefined,
+});
+Object.defineProperty(obj, "unstable_NativeText", {
+  get: () => NativeText /* NativeText */.NativeText,
+  set: undefined,
+});
 Object.defineProperty(obj, "unstable_NativeView", { get: () => Commands /* Commands */.default, set: undefined });
 Object.defineProperty(obj, "Pressable", { get: () => memo /* memo */.default, set: undefined });
 Object.defineProperty(obj, "ProgressBarAndroid", {
   get: () => {
-    warnOnce /* warnOnce */.default("progress-bar-android-moved", "ProgressBarAndroid has been extracted from react-native core and will be removed in a future release. It can now be installed and imported from '@react-native-community/progress-bar-android' instead of 'react-native'. See https://github.com/react-native-progress-view/progress-bar-android");
+    warnOnce /* warnOnce */
+      .default(
+        "progress-bar-android-moved",
+        "ProgressBarAndroid has been extracted from react-native core and will be removed in a future release. It can now be installed and imported from '@react-native-community/progress-bar-android' instead of 'react-native'. See https://github.com/react-native-progress-view/progress-bar-android",
+      );
     return ProgressBarAndroid /* ProgressBarAndroid */.default;
   },
-  set: undefined
+  set: undefined,
 });
-Object.defineProperty(obj, "RefreshControl", { get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default, set: undefined });
+Object.defineProperty(obj, "RefreshControl", {
+  get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default,
+  set: undefined,
+});
 Object.defineProperty(obj, "SafeAreaView", {
   get: () => {
-    warnOnce /* warnOnce */.default("safe-area-view-deprecated", "SafeAreaView has been deprecated and will be removed in a future release. Please use 'react-native-safe-area-context' instead. See https://github.com/AppAndFlow/react-native-safe-area-context");
+    warnOnce /* warnOnce */
+      .default(
+        "safe-area-view-deprecated",
+        "SafeAreaView has been deprecated and will be removed in a future release. Please use 'react-native-safe-area-context' instead. See https://github.com/AppAndFlow/react-native-safe-area-context",
+      );
     return noop /* noop */.default;
   },
-  set: undefined
+  set: undefined,
 });
-Object.defineProperty(obj, "ScrollView", { get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default, set: undefined });
-Object.defineProperty(obj, "SectionList", { get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default, set: undefined });
-Object.defineProperty(obj, "StatusBar", { get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default, set: undefined });
+Object.defineProperty(obj, "ScrollView", {
+  get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default,
+  set: undefined,
+});
+Object.defineProperty(obj, "SectionList", {
+  get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default,
+  set: undefined,
+});
+Object.defineProperty(obj, "StatusBar", {
+  get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default,
+  set: undefined,
+});
 Object.defineProperty(obj, "Switch", { get: () => returnsFalse /* returnsFalse */.default, set: undefined });
-Object.defineProperty(obj, "Text", { get: () => useTextPressability /* useTextPressability */.default, set: undefined });
+Object.defineProperty(obj, "Text", {
+  get: () => useTextPressability /* useTextPressability */.default,
+  set: undefined,
+});
 Object.defineProperty(obj, "unstable_TextAncestorContext", { get: () => noop /* noop */.default, set: undefined });
-Object.defineProperty(obj, "TextInput", { get: () => InternalTextInput /* InternalTextInput */.default, set: undefined });
+Object.defineProperty(obj, "TextInput", {
+  get: () => InternalTextInput /* InternalTextInput */.default,
+  set: undefined,
+});
 Object.defineProperty(obj, "Touchable", { get: () => Mixin /* Mixin */.default, set: undefined });
-Object.defineProperty(obj, "TouchableHighlight", { get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default, set: undefined });
-Object.defineProperty(obj, "TouchableNativeFeedback", { get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default, set: undefined });
-Object.defineProperty(obj, "TouchableOpacity", { get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default, set: undefined });
-Object.defineProperty(obj, "TouchableWithoutFeedback", { get: () => TouchableWithoutFeedback /* TouchableWithoutFeedback */.default, set: undefined });
+Object.defineProperty(obj, "TouchableHighlight", {
+  get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default,
+  set: undefined,
+});
+Object.defineProperty(obj, "TouchableNativeFeedback", {
+  get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default,
+  set: undefined,
+});
+Object.defineProperty(obj, "TouchableOpacity", {
+  get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default,
+  set: undefined,
+});
+Object.defineProperty(obj, "TouchableWithoutFeedback", {
+  get: () => TouchableWithoutFeedback /* TouchableWithoutFeedback */.default,
+  set: undefined,
+});
 Object.defineProperty(obj, "View", { get: () => View /* View */.default, set: undefined });
-Object.defineProperty(obj, "VirtualizedList", { get: () => require("00431_get_VirtualizedList.js") /* get VirtualizedList */ /* get VirtualizedList */.default, set: undefined });
-Object.defineProperty(obj, "VirtualizedSectionList", { get: () => require("00432_get_VirtualizedList.js") /* get VirtualizedList */ /* get VirtualizedList */.default, set: undefined });
-Object.defineProperty(obj, "unstable_VirtualView", { get: () => defaultHiddenStyle /* defaultHiddenStyle */.default, set: undefined });
-Object.defineProperty(obj, "unstable_VirtualArray", { get: () => VirtualArray /* VirtualArray */.VirtualArray, set: undefined });
-Object.defineProperty(obj, "unstable_createVirtualCollectionView", { get: () => defaultItemToKey /* defaultItemToKey */.createVirtualCollectionView, set: undefined });
-Object.defineProperty(obj, "unstable_VirtualColumn", { get: () => require("metro/00440__.js").default, set: undefined });
-Object.defineProperty(obj, "unstable_VirtualColumnGenerator", { get: () => require("metro/00441__.js").default, set: undefined });
+Object.defineProperty(obj, "VirtualizedList", {
+  get: () => require("00431_get_VirtualizedList.js") /* get VirtualizedList */ /* get VirtualizedList */.default,
+  set: undefined,
+});
+Object.defineProperty(obj, "VirtualizedSectionList", {
+  get: () => require("00432_get_VirtualizedList.js") /* get VirtualizedList */ /* get VirtualizedList */.default,
+  set: undefined,
+});
+Object.defineProperty(obj, "unstable_VirtualView", {
+  get: () => defaultHiddenStyle /* defaultHiddenStyle */.default,
+  set: undefined,
+});
+Object.defineProperty(obj, "unstable_VirtualArray", {
+  get: () => VirtualArray /* VirtualArray */.VirtualArray,
+  set: undefined,
+});
+Object.defineProperty(obj, "unstable_createVirtualCollectionView", {
+  get: () => defaultItemToKey /* defaultItemToKey */.createVirtualCollectionView,
+  set: undefined,
+});
+Object.defineProperty(obj, "unstable_VirtualColumn", {
+  get: () => require("metro/00440__.js").default,
+  set: undefined,
+});
+Object.defineProperty(obj, "unstable_VirtualColumnGenerator", {
+  get: () => require("metro/00441__.js").default,
+  set: undefined,
+});
 Object.defineProperty(obj, "unstable_VirtualRow", { get: () => require("metro/00443__.js").default, set: undefined });
-Object.defineProperty(obj, "unstable_getScrollParent", { get: () => getScrollParent /* getScrollParent */.default, set: undefined });
-Object.defineProperty(obj, "unstable_DEFAULT_INITIAL_NUM_TO_RENDER", { get: () => DEFAULT_INITIAL_NUM_TO_RENDER /* DEFAULT_INITIAL_NUM_TO_RENDER */.DEFAULT_INITIAL_NUM_TO_RENDER, set: undefined });
+Object.defineProperty(obj, "unstable_getScrollParent", {
+  get: () => getScrollParent /* getScrollParent */.default,
+  set: undefined,
+});
+Object.defineProperty(obj, "unstable_DEFAULT_INITIAL_NUM_TO_RENDER", {
+  get: () => DEFAULT_INITIAL_NUM_TO_RENDER /* DEFAULT_INITIAL_NUM_TO_RENDER */.DEFAULT_INITIAL_NUM_TO_RENDER,
+  set: undefined,
+});
 Object.defineProperty(obj, "AccessibilityInfo", { get: () => map /* map */.default, set: undefined });
-Object.defineProperty(obj, "ActionSheetIOS", { get: () => showActionSheetWithOptions /* showActionSheetWithOptions */.default, set: undefined });
+Object.defineProperty(obj, "ActionSheetIOS", {
+  get: () => showActionSheetWithOptions /* showActionSheetWithOptions */.default,
+  set: undefined,
+});
 Object.defineProperty(obj, "Alert", { get: () => Alert /* Alert */.default, set: undefined });
-Object.defineProperty(obj, "Animated", { get: () => require("00397_get_FlatList.js") /* get FlatList */ /* get FlatList */.default, set: undefined });
+Object.defineProperty(obj, "Animated", {
+  get: () => require("00397_get_FlatList.js") /* get FlatList */ /* get FlatList */.default,
+  set: undefined,
+});
 Object.defineProperty(obj, "Appearance", { get: () => getColorScheme, set: undefined });
 Object.defineProperty(obj, "AppRegistry", { get: () => AppRegistry /* AppRegistry */.AppRegistry, set: undefined });
 Object.defineProperty(obj, "AppState", { get: () => AppStateImpl /* AppStateImpl */.default, set: undefined });
 Object.defineProperty(obj, "BackHandler", { get: () => require("metro/00247__.js").default, set: undefined });
 Object.defineProperty(obj, "Clipboard", {
   get: () => {
-    warnOnce /* warnOnce */.default("clipboard-moved", "Clipboard has been extracted from react-native core and will be removed in a future release. It can now be installed and imported from '@react-native-clipboard/clipboard' instead of 'react-native'. See https://github.com/react-native-clipboard/clipboard");
+    warnOnce /* warnOnce */
+      .default(
+        "clipboard-moved",
+        "Clipboard has been extracted from react-native core and will be removed in a future release. It can now be installed and imported from '@react-native-clipboard/clipboard' instead of 'react-native'. See https://github.com/react-native-clipboard/clipboard",
+      );
     return Clipboard /* Clipboard */.default;
   },
-  set: undefined
+  set: undefined,
 });
-Object.defineProperty(obj, "codegenNativeCommands", { get: () => codegenNativeCommands /* codegenNativeCommands */.default, set: undefined });
-Object.defineProperty(obj, "codegenNativeComponent", { get: () => codegenNativeComponent /* codegenNativeComponent */.default, set: undefined });
-Object.defineProperty(obj, "DeviceEventEmitter", { get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default, set: undefined });
+Object.defineProperty(obj, "codegenNativeCommands", {
+  get: () => codegenNativeCommands /* codegenNativeCommands */.default,
+  set: undefined,
+});
+Object.defineProperty(obj, "codegenNativeComponent", {
+  get: () => codegenNativeComponent /* codegenNativeComponent */.default,
+  set: undefined,
+});
+Object.defineProperty(obj, "DeviceEventEmitter", {
+  get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default,
+  set: undefined,
+});
 Object.defineProperty(obj, "DeviceInfo", { get: () => getConstants /* getConstants */.default, set: undefined });
 Object.defineProperty(obj, "DevMenu", { get: () => require("metro/00466__.js").default, set: undefined });
 Object.defineProperty(obj, "DevSettings", { get: () => require("metro/00467__.js").default, set: undefined });
 Object.defineProperty(obj, "Dimensions", { get: () => Dimensions /* Dimensions */.default, set: undefined });
-Object.defineProperty(obj, "DynamicColorIOS", { get: () => DynamicColorIOS /* DynamicColorIOS */.DynamicColorIOS, set: undefined });
+Object.defineProperty(obj, "DynamicColorIOS", {
+  get: () => DynamicColorIOS /* DynamicColorIOS */.DynamicColorIOS,
+  set: undefined,
+});
 Object.defineProperty(obj, "Easing", { get: () => bezier /* bezier */.default, set: undefined });
-Object.defineProperty(obj, "findNodeHandle", { get: () => renderElement /* renderElement */.findNodeHandle, set: undefined });
+Object.defineProperty(obj, "findNodeHandle", {
+  get: () => renderElement /* renderElement */.findNodeHandle,
+  set: undefined,
+});
 Object.defineProperty(obj, "I18nManager", { get: () => getConstants /* getConstants */.default, set: undefined });
 Object.defineProperty(obj, "InteractionManager", {
   get: () => {
-    warnOnce /* warnOnce */.default("interaction-manager-deprecated", "InteractionManager has been deprecated and will be removed in a future release. Please refactor long tasks into smaller ones, and  use 'requestIdleCallback' instead.");
+    warnOnce /* warnOnce */
+      .default(
+        "interaction-manager-deprecated",
+        "InteractionManager has been deprecated and will be removed in a future release. Please refactor long tasks into smaller ones, and  use 'requestIdleCallback' instead.",
+      );
     return reject /* reject */.default;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj, "Keyboard", { get: () => KeyboardImpl /* KeyboardImpl */.default, set: undefined });
 Object.defineProperty(obj, "LayoutAnimation", { get: () => configureNext /* configureNext */.default, set: undefined });
-Object.defineProperty(obj, "Linking", { get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default, set: undefined });
+Object.defineProperty(obj, "Linking", {
+  get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default,
+  set: undefined,
+});
 Object.defineProperty(obj, "LogBox", { get: () => install /* install */.default, set: undefined });
-Object.defineProperty(obj, "NativeAppEventEmitter", { get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default, set: undefined });
+Object.defineProperty(obj, "NativeAppEventEmitter", {
+  get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default,
+  set: undefined,
+});
 Object.defineProperty(obj, "NativeComponentRegistry", { get: () => setRuntimeConfigProvider, set: undefined });
-Object.defineProperty(obj, "NativeDialogManagerAndroid", { get: () => DialogManagerAndroid /* DialogManagerAndroid */.default, set: undefined });
-Object.defineProperty(obj, "NativeEventEmitter", { get: () => NativeEventEmitter /* NativeEventEmitter */.default, set: undefined });
+Object.defineProperty(obj, "NativeDialogManagerAndroid", {
+  get: () => DialogManagerAndroid /* DialogManagerAndroid */.default,
+  set: undefined,
+});
+Object.defineProperty(obj, "NativeEventEmitter", {
+  get: () => NativeEventEmitter /* NativeEventEmitter */.default,
+  set: undefined,
+});
 Object.defineProperty(obj, "NativeModules", { get: () => genModule /* genModule */.default, set: undefined });
 Object.defineProperty(obj, "Networking", { get: () => addListener /* addListener */.default, set: undefined });
 Object.defineProperty(obj, "PanResponder", { get: () => require("metro/00474__.js").default, set: undefined });
-Object.defineProperty(obj, "PermissionsAndroid", { get: () => PermissionsAndroidImpl /* PermissionsAndroidImpl */.default, set: undefined });
+Object.defineProperty(obj, "PermissionsAndroid", {
+  get: () => PermissionsAndroidImpl /* PermissionsAndroidImpl */.default,
+  set: undefined,
+});
 Object.defineProperty(obj, "PixelRatio", { get: () => PixelRatio /* PixelRatio */.default, set: undefined });
-Object.defineProperty(obj, "Platform", { get: () => require("00273_get_Version.js") /* get Version */ /* get Version */.default, set: undefined });
-Object.defineProperty(obj, "PlatformColor", { get: () => PlatformColor /* PlatformColor */.PlatformColor, set: undefined });
+Object.defineProperty(obj, "Platform", {
+  get: () => require("00273_get_Version.js") /* get Version */ /* get Version */.default,
+  set: undefined,
+});
+Object.defineProperty(obj, "PlatformColor", {
+  get: () => PlatformColor /* PlatformColor */.PlatformColor,
+  set: undefined,
+});
 Object.defineProperty(obj, "PushNotificationIOS", {
   get: () => {
-    warnOnce /* warnOnce */.default("pushNotificationIOS-moved", "PushNotificationIOS has been extracted from react-native core and will be removed in a future release. It can now be installed and imported from '@react-native-community/push-notification-ios' instead of 'react-native'. See https://github.com/react-native-push-notification/ios");
+    warnOnce /* warnOnce */
+      .default(
+        "pushNotificationIOS-moved",
+        "PushNotificationIOS has been extracted from react-native core and will be removed in a future release. It can now be installed and imported from '@react-native-community/push-notification-ios' instead of 'react-native'. See https://github.com/react-native-push-notification/ios",
+      );
     return map /* map */.default;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj, "processColor", { get: () => processColor /* processColor */.default, set: undefined });
-Object.defineProperty(obj, "registerCallableModule", { get: () => MessageQueue /* MessageQueue */.default, set: undefined });
-Object.defineProperty(obj, "requireNativeComponent", { get: () => require("00464_get_BatchedBridge.js") /* get BatchedBridge */ /* get BatchedBridge */.default, set: undefined });
-Object.defineProperty(obj, "ReactNativeVersion", { get: () => ReactNativeVersion /* ReactNativeVersion */.default, set: undefined });
-Object.defineProperty(obj, "RootTagContext", { get: () => RootTagContext /* RootTagContext */.RootTagContext, set: undefined });
+Object.defineProperty(obj, "registerCallableModule", {
+  get: () => MessageQueue /* MessageQueue */.default,
+  set: undefined,
+});
+Object.defineProperty(obj, "requireNativeComponent", {
+  get: () => require("00464_get_BatchedBridge.js") /* get BatchedBridge */ /* get BatchedBridge */.default,
+  set: undefined,
+});
+Object.defineProperty(obj, "ReactNativeVersion", {
+  get: () => ReactNativeVersion /* ReactNativeVersion */.default,
+  set: undefined,
+});
+Object.defineProperty(obj, "RootTagContext", {
+  get: () => RootTagContext /* RootTagContext */.RootTagContext,
+  set: undefined,
+});
 Object.defineProperty(obj, "Settings", { get: () => require("metro/00483__.js").default, set: undefined });
 Object.defineProperty(obj, "Share", { get: () => Share /* Share */.default, set: undefined });
-Object.defineProperty(obj, "StyleSheet", { get: () => require("00254_get_hairlineWidth.js") /* get hairlineWidth */ /* get hairlineWidth */.default, set: undefined });
+Object.defineProperty(obj, "StyleSheet", {
+  get: () => require("00254_get_hairlineWidth.js") /* get hairlineWidth */ /* get hairlineWidth */.default,
+  set: undefined,
+});
 Object.defineProperty(obj, "Systrace", { get: () => isEnabled, set: undefined });
 Object.defineProperty(obj, "ToastAndroid", { get: () => SHORT /* SHORT */.default, set: undefined });
 Object.defineProperty(obj, "TurboModuleRegistry", { get: () => get, set: undefined });
@@ -205,14 +363,35 @@ Object.defineProperty(obj, "UIManager", { get: () => measure /* measure */.defau
 obj.unstable_batchedUpdates = function unstable_batchedUpdates(arg0) {
   arg0(arg1);
 };
-Object.defineProperty(obj, "useAnimatedValue", { get: () => useAnimatedValue /* useAnimatedValue */.default, set: undefined });
-Object.defineProperty(obj, "useAnimatedValueXY", { get: () => useAnimatedValueXY /* useAnimatedValueXY */.default, set: undefined });
-Object.defineProperty(obj, "useAnimatedColor", { get: () => useAnimatedColor /* useAnimatedColor */.default, set: undefined });
+Object.defineProperty(obj, "useAnimatedValue", {
+  get: () => useAnimatedValue /* useAnimatedValue */.default,
+  set: undefined,
+});
+Object.defineProperty(obj, "useAnimatedValueXY", {
+  get: () => useAnimatedValueXY /* useAnimatedValueXY */.default,
+  set: undefined,
+});
+Object.defineProperty(obj, "useAnimatedColor", {
+  get: () => useAnimatedColor /* useAnimatedColor */.default,
+  set: undefined,
+});
 Object.defineProperty(obj, "useColorScheme", { get: () => subscribe /* subscribe */.default, set: undefined });
-Object.defineProperty(obj, "usePressability", { get: () => usePressability /* usePressability */.default, set: undefined });
-Object.defineProperty(obj, "useWindowDimensions", { get: () => useWindowDimensions /* useWindowDimensions */.default, set: undefined });
-Object.defineProperty(obj, "UTFSequence", { get: () => deepFreezeAndThrowOnMutationInDev /* deepFreezeAndThrowOnMutationInDev */.default, set: undefined });
+Object.defineProperty(obj, "usePressability", {
+  get: () => usePressability /* usePressability */.default,
+  set: undefined,
+});
+Object.defineProperty(obj, "useWindowDimensions", {
+  get: () => useWindowDimensions /* useWindowDimensions */.default,
+  set: undefined,
+});
+Object.defineProperty(obj, "UTFSequence", {
+  get: () => deepFreezeAndThrowOnMutationInDev /* deepFreezeAndThrowOnMutationInDev */.default,
+  set: undefined,
+});
 Object.defineProperty(obj, "Vibration", { get: () => Vibration /* Vibration */.default, set: undefined });
-Object.defineProperty(obj, "VirtualViewMode", { get: () => defaultHiddenStyle /* defaultHiddenStyle */.VirtualViewMode, set: undefined });
+Object.defineProperty(obj, "VirtualViewMode", {
+  get: () => defaultHiddenStyle /* defaultHiddenStyle */.VirtualViewMode,
+  set: undefined,
+});
 
 export default obj;

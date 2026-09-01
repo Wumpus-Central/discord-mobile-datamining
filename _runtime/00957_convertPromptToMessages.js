@@ -27,8 +27,7 @@ function convertPromptToMessages(data) {
       }
     }
     return [];
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5._INTERNAL_cleanupToolCallSpan = function _INTERNAL_cleanupToolCallSpan(arg0) {
@@ -76,18 +75,20 @@ arg5.applyAccumulatedTokens = function applyAccumulatedTokens(trace, map) {
   }
 };
 arg5.convertAvailableToolsToJsonString = function convertAvailableToolsToJsonString(arr) {
-  return JSON.stringify(arr.map((str) => {
-    if (typeof str === "string") {
-      try {
-        const _JSON = JSON;
-        return JSON.parse(str);
-      } catch (err) {
-        return tmp;
+  return JSON.stringify(
+    arr.map((str) => {
+      if (typeof str === "string") {
+        try {
+          const _JSON = JSON;
+          return JSON.parse(str);
+        } catch (err) {
+          return tmp;
+        }
+      } else {
+        return str;
       }
-    } else {
-      return str;
-    }
-  }));
+    }),
+  );
 };
 arg5.convertPromptToMessages = convertPromptToMessages;
 arg5.getSpanOpFromName = function getSpanOpFromName(description) {
@@ -96,7 +97,10 @@ arg5.getSpanOpFromName = function getSpanOpFromName(description) {
 arg5.requestMessagesFromPrompt = function requestMessagesFromPrompt(setAttribute, data) {
   if (data[_mod956.AI_PROMPT_ATTRIBUTE]) {
     let tmpResult = tmp(960);
-    const attr = setAttribute.setAttribute("gen_ai.prompt", tmpResult.getTruncatedJsonString(data[tmp(undefined, 956).AI_PROMPT_ATTRIBUTE]));
+    const attr = setAttribute.setAttribute(
+      "gen_ai.prompt",
+      tmpResult.getTruncatedJsonString(data[tmp(undefined, 956).AI_PROMPT_ATTRIBUTE]),
+    );
   }
   const tmp4 = data[_mod956.AI_PROMPT_ATTRIBUTE];
   if (typeof tmp4 === "string") {
@@ -126,7 +130,6 @@ arg5.requestMessagesFromPrompt = function requestMessagesFromPrompt(setAttribute
         setAttribute.setAttributes(obj);
         const tmpResult1 = tmp(960);
       }
-    } catch (err) {
-    }
+    } catch (err) {}
   }
 };

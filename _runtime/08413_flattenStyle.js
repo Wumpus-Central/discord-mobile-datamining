@@ -95,4 +95,4 @@ export default function DeprecatedStyleSheetPropType(arg0) {
     }
     return callback(arg1, arg2, arg3, ...substr);
   };
-};
+}

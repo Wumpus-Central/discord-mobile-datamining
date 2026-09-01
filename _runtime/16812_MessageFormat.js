@@ -30,7 +30,12 @@ class MessageFormat {
         tmp11 = __parseResult;
         tmp12 = require;
         tmp13 = _mergeFormatsResult;
-        closure_0 = this._compilePattern(__parseResult, require, _mergeFormatsResult, this._findPluralRuleFunction(this._locale));
+        closure_0 = this._compilePattern(
+          __parseResult,
+          require,
+          _mergeFormatsResult,
+          this._findPluralRuleFunction(this._locale),
+        );
         self = this;
         this.format = (arg0) => self._format(closure_0, arg0);
         return;
@@ -189,11 +194,33 @@ class MessageFormat {
       }
     }
     arr1 = combined.pop();
-    error = new Error("No locale data has been added to IntlMessageFormat for: " + combined.join(", ") + ", or the default locale: " + arr1);
+    error = new Error(
+      "No locale data has been added to IntlMessageFormat for: " +
+        combined.join(", ") +
+        ", or the default locale: " +
+        arr1,
+    );
     throw error;
   }
 }
-extend.defineProperty(MessageFormat, "formats", { enumerable: true, value: { number: { currency: { style: "currency" }, percent: { style: "percent" } }, date: { short: { month: "numeric", day: "numeric", year: "2-digit" }, medium: { month: "short", day: "numeric", year: "numeric" }, long: { month: "long", day: "numeric", year: "numeric" }, full: { weekday: "long", month: "long", day: "numeric", year: "numeric" } }, time: { short: { hour: "numeric", minute: "numeric" }, medium: { hour: "numeric", minute: "numeric", second: "numeric" }, long: { hour: "numeric", minute: "numeric", second: "numeric", timeZoneName: "short" }, full: { hour: "numeric", minute: "numeric", second: "numeric", timeZoneName: "short" } } } });
+extend.defineProperty(MessageFormat, "formats", {
+  enumerable: true,
+  value: {
+    number: { currency: { style: "currency" }, percent: { style: "percent" } },
+    date: {
+      short: { month: "numeric", day: "numeric", year: "2-digit" },
+      medium: { month: "short", day: "numeric", year: "numeric" },
+      long: { month: "long", day: "numeric", year: "numeric" },
+      full: { weekday: "long", month: "long", day: "numeric", year: "numeric" },
+    },
+    time: {
+      short: { hour: "numeric", minute: "numeric" },
+      medium: { hour: "numeric", minute: "numeric", second: "numeric" },
+      long: { hour: "numeric", minute: "numeric", second: "numeric", timeZoneName: "short" },
+      full: { hour: "numeric", minute: "numeric", second: "numeric", timeZoneName: "short" },
+    },
+  },
+});
 let obj = { value: null };
 obj[0] = extend.objCreate(null);
 extend.defineProperty(MessageFormat, "__localeData__", obj);
@@ -206,7 +233,7 @@ obj = {
     }
     error = new Error("Locale data provided to IntlMessageFormat is missing a `locale` property");
     throw error;
-  }
+  },
 };
 extend.defineProperty(MessageFormat, "__addLocaleData", obj);
 extend.defineProperty(MessageFormat, "__parse", { value: SyntaxError.default.parse });

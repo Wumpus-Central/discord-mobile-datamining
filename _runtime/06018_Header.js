@@ -17,16 +17,19 @@ export const Header = importAllResult.memo(function Header(navigation) {
   }
   let tmpResult = tmp(tmp2[3]);
   const items = [navigation, route.key];
-  const callback = importAllResult.useCallback(tmpResult.throttle(() => {
-    let obj = navigation;
-    if (tmp) {
-      obj = {};
-      const StackActions = route(navigation[4]).StackActions;
-      const merged = Object.assign(StackActions.pop());
-      obj.source = route.key;
-      obj.dispatch(obj);
-    }
-  }, 50), items);
+  const callback = importAllResult.useCallback(
+    tmpResult.throttle(() => {
+      let obj = navigation;
+      if (tmp) {
+        obj = {};
+        const StackActions = route(navigation[4]).StackActions;
+        const merged = Object.assign(StackActions.pop());
+        obj.source = route.key;
+        obj.dispatch(obj);
+      }
+    }, 50),
+    items,
+  );
   const context = importAllResult.useContext(tmp(tmp2[5]).ModalPresentationContext);
   if (undefined !== options.headerStatusBarHeight) {
     let num = options.headerStatusBarHeight;

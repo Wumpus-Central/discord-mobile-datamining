@@ -28,7 +28,7 @@ let obj = {
   key: "length",
   get() {
     return this._length;
-  }
+  },
 };
 const items = [
   obj,
@@ -41,13 +41,13 @@ const items = [
         }
       }
       return null;
-    }
+    },
   },
   {
     key: "entries",
     value: function entries() {
       return NodeList(128).createEntriesIterator(this);
-    }
+    },
   },
   {
     key: "forEach",
@@ -75,27 +75,26 @@ const items = [
           num = num + 1;
         } while (num < self._length);
       }
-    }
+    },
   },
   {
     key: "keys",
     value: function keys() {
       return NodeList(128).createKeyIterator(this);
-    }
+    },
   },
   {
     key: "values",
     value: function values() {
       return NodeList(128).createValueIterator(this);
-    }
+    },
   },
-
 ];
 obj = {
   key: Symbol.iterator,
   value() {
     return NodeList(128).createValueIterator(this);
-  }
+  },
 };
 items[6] = obj;
 let tmp2 = _createClassDefault(NodeList, items);

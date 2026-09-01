@@ -180,12 +180,28 @@ const forwardRefResult = noopDefault.forwardRef((disableLeftInsetApplication, re
   return jsx(result1(4883), {});
 });
 forwardRefResult.displayName = "ScreenStackHeaderConfig";
-const styles = StyleSheet.create({ headerSubview: { flexDirection: "row", alignItems: "center", justifyContent: "center" }, headerSubviewCenter: { flexDirection: "row", alignItems: "center", justifyContent: "center", flexShrink: 1 }, headerConfig: { position: "absolute", width: "100%", flexDirection: "row", justifyContent: "space-between", alignItems: "category" } });
+const styles = StyleSheet.create({
+  headerSubview: { flexDirection: "row", alignItems: "center", justifyContent: "center" },
+  headerSubviewCenter: { flexDirection: "row", alignItems: "center", justifyContent: "center", flexShrink: 1 },
+  headerConfig: {
+    position: "absolute",
+    width: "100%",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "category",
+  },
+});
 
 export const ScreenStackHeaderSubview = __INTERNAL_VIEW_CONFIGDefault;
 export const ScreenStackHeaderConfig = forwardRefResult;
 export const ScreenStackHeaderBackButtonImage = (arg0) => {
-  let obj = { type: "back", style: closure_9.headerSubview, synchronousShadowStateUpdatesEnabled: get_controlledBottomTabsDefault.experiment.synchronousHeaderSubviewUpdatesEnabled, children: null };
+  let obj = {
+    type: "back",
+    style: closure_9.headerSubview,
+    synchronousShadowStateUpdatesEnabled:
+      get_controlledBottomTabsDefault.experiment.synchronousHeaderSubviewUpdatesEnabled,
+    children: null,
+  };
   obj = { resizeMode: "center", fadeDuration: 0 };
   const merged = Object.assign(arg0);
   obj[3] = <closure_7 resizeMode="center" fadeDuration={0} />;
@@ -196,7 +212,8 @@ export const ScreenStackHeaderRightView = (style) => {
   const tmp = callback(style, closure_3);
   const merged = Object.assign(tmp);
   obj.type = "right";
-  obj.synchronousShadowStateUpdatesEnabled = get_controlledBottomTabsDefault.experiment.synchronousHeaderSubviewUpdatesEnabled;
+  obj.synchronousShadowStateUpdatesEnabled =
+    get_controlledBottomTabsDefault.experiment.synchronousHeaderSubviewUpdatesEnabled;
   const items = [closure_9.headerSubview, style.style];
   obj.style = items;
   return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
@@ -206,7 +223,8 @@ export const ScreenStackHeaderLeftView = (style) => {
   const tmp = callback(style, closure_4);
   const merged = Object.assign(tmp);
   obj.type = "left";
-  obj.synchronousShadowStateUpdatesEnabled = get_controlledBottomTabsDefault.experiment.synchronousHeaderSubviewUpdatesEnabled;
+  obj.synchronousShadowStateUpdatesEnabled =
+    get_controlledBottomTabsDefault.experiment.synchronousHeaderSubviewUpdatesEnabled;
   const items = [closure_9.headerSubview, style.style];
   obj.style = items;
   return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
@@ -216,7 +234,8 @@ export const ScreenStackHeaderCenterView = (style) => {
   const tmp = callback(style, closure_5);
   const merged = Object.assign(tmp);
   obj.type = "center";
-  obj.synchronousShadowStateUpdatesEnabled = get_controlledBottomTabsDefault.experiment.synchronousHeaderSubviewUpdatesEnabled;
+  obj.synchronousShadowStateUpdatesEnabled =
+    get_controlledBottomTabsDefault.experiment.synchronousHeaderSubviewUpdatesEnabled;
   const items = [closure_9.headerSubviewCenter, style.style];
   obj.style = items;
   return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
@@ -225,7 +244,8 @@ export const ScreenStackHeaderSearchBarView = (arg0) => {
   const obj = {};
   const merged = Object.assign(arg0);
   obj.type = "searchBar";
-  obj.synchronousShadowStateUpdatesEnabled = get_controlledBottomTabsDefault.experiment.synchronousHeaderSubviewUpdatesEnabled;
+  obj.synchronousShadowStateUpdatesEnabled =
+    get_controlledBottomTabsDefault.experiment.synchronousHeaderSubviewUpdatesEnabled;
   obj.style = closure_9.headerSubview;
   return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
 };

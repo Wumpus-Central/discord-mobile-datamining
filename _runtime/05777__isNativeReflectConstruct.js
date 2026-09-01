@@ -21,8 +21,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class FlingGesture {
   constructor() {
@@ -51,15 +50,15 @@ const items = [
     value: function numberOfPointers(numberOfPointers) {
       this.config.numberOfPointers = numberOfPointers;
       return this;
-    }
+    },
   },
   {
     key: "direction",
     value: function direction(DOWN) {
       this.config.direction = DOWN;
       return this;
-    }
-  }
+    },
+  },
 ];
 
 export const FlingGesture = importDefaultResult(FlingGesture, items);

@@ -7,7 +7,7 @@ const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.createClientReportEnvelope = function createClientReportEnvelope(discarded_events) {
   let result = arg2;
-  const items = [{ type: "client_report" }, ];
+  const items = [{ type: "client_report" }];
   if (!arg2) {
     let obj = dateTimestampInSeconds;
     result = obj.dateTimestampInSeconds();

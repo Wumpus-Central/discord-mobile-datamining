@@ -29,7 +29,7 @@ let items = [
           continue;
         }
       }
-    }
+    },
   },
   {
     key: "assert",
@@ -51,7 +51,7 @@ let items = [
         error = new Error("Cannot parse JSON " + str + " for " + this.info.typeName + "#" + arg1);
         throw error;
       }
-    }
+    },
   },
   {
     key: "read",
@@ -75,11 +75,17 @@ let items = [
               let _Error2 = Error;
               let _HermesInternal2 = HermesInternal;
               let str4 = " are present in JSON.";
-              let str5 = "\" of ";
-              let str6 = "Multiple members of the oneof group \"";
+              let str5 = '" of ';
+              let str6 = 'Multiple members of the oneof group "';
               let tmp99 = new.target;
               prepareResult = new.target;
-              prepareResult = new Error("Multiple members of the oneof group \"" + tmp10.oneof + "\" of " + self.info.typeName + " are present in JSON.");
+              prepareResult = new Error(
+                'Multiple members of the oneof group "' +
+                  tmp10.oneof +
+                  '" of ' +
+                  self.info.typeName +
+                  " are present in JSON.",
+              );
               throw prepareResult;
             } else {
               let tmp19 = tmp10;
@@ -279,13 +285,15 @@ let items = [
           let str2 = "Found unknown field while reading ";
           let tmp12 = new.target;
           let tmp13 = new.target;
-          error = new Error("Found unknown field while reading " + self.info.typeName + " from JSON format. JSON key: " + tmp8);
+          error = new Error(
+            "Found unknown field while reading " + self.info.typeName + " from JSON format. JSON key: " + tmp8,
+          );
           let tmp15 = error;
           throw error;
         }
         continue;
       }
-    }
+    },
   },
   {
     key: "enum",
@@ -293,7 +301,10 @@ let items = [
       const self = this;
       if ("google.protobuf.NullValue" == arg0[0]) {
         const _HermesInternal = HermesInternal;
-        ReflectionJsonReader(1316).assert(null === str, "Unable to parse field " + self.info.typeName + "#" + arg2 + ", enum " + arg0[0] + " only accepts null.");
+        ReflectionJsonReader(1316).assert(
+          null === str,
+          "Unable to parse field " + self.info.typeName + "#" + arg2 + ", enum " + arg0[0] + " only accepts null.",
+        );
         const obj = ReflectionJsonReader(1316);
       }
       if (null === str) {
@@ -302,7 +313,16 @@ let items = [
         const _Number = Number;
         const _HermesInternal4 = HermesInternal;
         const obj4 = ReflectionJsonReader(1316);
-        obj4.assert(Number.isInteger(str), "Unable to parse field " + self.info.typeName + "#" + arg2 + ", enum can only be integral number, got " + str + ".");
+        obj4.assert(
+          Number.isInteger(str),
+          "Unable to parse field " +
+            self.info.typeName +
+            "#" +
+            arg2 +
+            ", enum can only be integral number, got " +
+            str +
+            ".",
+        );
         return str;
       } else if ("string" === tmp31) {
         let tmp13 = arg0[2];
@@ -319,16 +339,30 @@ let items = [
         }
         if (tmp16) {
           const _HermesInternal3 = HermesInternal;
-          ReflectionJsonReader(1316).assert(typeof tmp15 === "number", "Unable to parse field " + self.info.typeName + "#" + arg2 + ", enum " + arg0[0] + " has no value for \"" + str + "\".");
+          ReflectionJsonReader(1316).assert(
+            typeof tmp15 === "number",
+            "Unable to parse field " +
+              self.info.typeName +
+              "#" +
+              arg2 +
+              ", enum " +
+              arg0[0] +
+              ' has no value for "' +
+              str +
+              '".',
+          );
           tmp16 = tmp15;
           const obj3 = ReflectionJsonReader(1316);
         }
         return tmp16;
       } else {
         const _HermesInternal2 = HermesInternal;
-        ReflectionJsonReader(1316).assert(false, "Unable to parse field " + self.info.typeName + "#" + arg2 + ", cannot parse enum value from " + tmp31 + "\".");
+        ReflectionJsonReader(1316).assert(
+          false,
+          "Unable to parse field " + self.info.typeName + "#" + arg2 + ", cannot parse enum value from " + tmp31 + '".',
+        );
       }
-    }
+    },
   },
   {
     key: "scalar",
@@ -362,8 +396,7 @@ let items = [
                                       const _encodeURIComponent = encodeURIComponent;
                                       encodeURIComponent(flag);
                                       return flag;
-                                    } catch (err) {
-                                    }
+                                    } catch (err) {}
                                   }
                                 } else if (tmp3(1320).ScalarType.BYTES === arg1) {
                                   if (null !== flag) {
@@ -477,8 +510,8 @@ let items = [
       } catch (tmp33) {
         str = tmp33.message;
       }
-    }
-  }
+    },
+  },
 ];
 
 export const ReflectionJsonReader = _createClass(ReflectionJsonReader, items);

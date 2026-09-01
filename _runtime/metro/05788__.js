@@ -17,4 +17,4 @@ export default function _default(delayLongPress) {
   const merged = Object.assign(delayLongPress, Object.create(null));
   const merged1 = Object.assign(merged);
   return jsx(_isNativeReflectConstructDefault, { delayLongPress: num, extraButtonProps });
-};
+}

@@ -41,7 +41,11 @@ export const get = function get(arg0, arg1) {
       }
       const obj2 = callback(closure_1_4[3]);
     }
-    closure_1_2(tmp6[4])(null != viewConfig1, "NativeComponentRegistry.get: both static and native view config are missing for native component \"%s\".", RNBridgeless);
+    closure_1_2(tmp6[4])(
+      null != viewConfig1,
+      'NativeComponentRegistry.get: both static and native view config are missing for native component "%s".',
+      RNBridgeless,
+    );
     if (verify) {
       let tmp20 = viewConfig1;
       if (!native) {
@@ -107,7 +111,11 @@ export const getWithFallback_DEPRECATED = function getWithFallback_DEPRECATED(ar
           }
           const obj2 = callback(closure_1_4[3]);
         }
-        closure_1_2(tmp6[4])(null != viewConfig1, "NativeComponentRegistry.get: both static and native view config are missing for native component \"%s\".", RNBridgeless);
+        closure_1_2(tmp6[4])(
+          null != viewConfig1,
+          'NativeComponentRegistry.get: both static and native view config are missing for native component "%s".',
+          RNBridgeless,
+        );
         if (verify) {
           let tmp20 = viewConfig1;
           if (!native) {
@@ -165,7 +173,11 @@ export const getWithFallback_DEPRECATED = function getWithFallback_DEPRECATED(ar
         }
         const obj2 = callback(closure_1_4[3]);
       }
-      closure_1_2(tmp6[4])(null != viewConfig1, "NativeComponentRegistry.get: both static and native view config are missing for native component \"%s\".", RNBridgeless);
+      closure_1_2(tmp6[4])(
+        null != viewConfig1,
+        'NativeComponentRegistry.get: both static and native view config are missing for native component "%s".',
+        RNBridgeless,
+      );
       if (verify) {
         let tmp20 = viewConfig1;
         if (!native) {

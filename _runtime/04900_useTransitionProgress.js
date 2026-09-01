@@ -2,7 +2,6 @@
 import noopDefault from "04879_noop.js";
 import closure_2 from "00019_noop.js";
 
-
 export default function useTransitionProgress() {
   const context = React.useContext(noopDefault);
   if (undefined === context) {
@@ -12,4 +11,4 @@ export default function useTransitionProgress() {
   } else {
     return context;
   }
-};
+}

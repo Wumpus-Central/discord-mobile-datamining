@@ -58,7 +58,23 @@ if (self2) {
     exports.Clipboard = undefined;
     let closure_2 = get_ActivityIndicator;
     let closure_3 = fn(addListener);
-    let obj = { getString: null, getStrings: null, getImagePNG: null, getImageJPG: null, setImage: null, getImage: null, setString: null, setStrings: null, hasString: null, hasImage: null, hasURL: null, hasNumber: null, hasWebURL: null, addListener: null, removeAllListeners: null };
+    let obj = {
+      getString: null,
+      getStrings: null,
+      getImagePNG: null,
+      getImageJPG: null,
+      setImage: null,
+      getImage: null,
+      setString: null,
+      setStrings: null,
+      hasString: null,
+      hasImage: null,
+      hasURL: null,
+      hasNumber: null,
+      hasWebURL: null,
+      addListener: null,
+      removeAllListeners: null,
+    };
     obj[0] = function getString() {
       return closure_3.default.getString();
     };

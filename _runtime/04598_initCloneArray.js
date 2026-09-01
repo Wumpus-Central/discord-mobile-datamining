@@ -20,4 +20,4 @@ export default function initCloneArray(arg0) {
     }
     tmp2 = hasOwnProperty;
   }
-};
+}

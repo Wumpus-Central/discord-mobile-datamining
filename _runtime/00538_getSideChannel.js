@@ -43,7 +43,7 @@ export default function getSideChannel() {
         obj = tmp2;
       }
       const result = obj.set(arg0, arg1);
-    }
+    },
   };
   return obj;
-};
+}

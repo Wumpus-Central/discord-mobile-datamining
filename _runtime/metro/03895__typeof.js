@@ -99,7 +99,12 @@ class DayParser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 90, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", {
+            value: 90,
+            enumerable: true,
+            configurable: true,
+            writable: true,
+          });
         } else {
           num3 = 90;
           applyResult.priority = 90;
@@ -221,15 +226,27 @@ obj = {
           if ("EEEEE" === arg1) {
             return day.day(arg0, { width: "narrow", context: "formatting" });
           } else if ("EEEEEE" === arg1) {
-            return day.day(arg0, { width: "short", context: "formatting" }) || day.day(arg0, { width: "narrow", context: "formatting" });
+            return (
+              day.day(arg0, { width: "short", context: "formatting" }) ||
+              day.day(arg0, { width: "narrow", context: "formatting" })
+            );
           } else {
-            return day.day(arg0, { width: "wide", context: "formatting" }) || day.day(arg0, { width: "abbreviated", context: "formatting" }) || day.day(arg0, { width: "short", context: "formatting" }) || day.day(arg0, { width: "narrow", context: "formatting" });
+            return (
+              day.day(arg0, { width: "wide", context: "formatting" }) ||
+              day.day(arg0, { width: "abbreviated", context: "formatting" }) ||
+              day.day(arg0, { width: "short", context: "formatting" }) ||
+              day.day(arg0, { width: "narrow", context: "formatting" })
+            );
           }
         }
       }
     }
-    return day.day(arg0, { width: "abbreviated", context: "formatting" }) || day.day(arg0, { width: "short", context: "formatting" }) || day.day(arg0, { width: "narrow", context: "formatting" });
-  }
+    return (
+      day.day(arg0, { width: "abbreviated", context: "formatting" }) ||
+      day.day(arg0, { width: "short", context: "formatting" }) ||
+      day.day(arg0, { width: "narrow", context: "formatting" })
+    );
+  },
 };
 let items = [
   obj,
@@ -241,7 +258,7 @@ let items = [
         tmp = arg1 <= 6;
       }
       return tmp;
-    }
+    },
   },
   {
     key: "set",
@@ -249,8 +266,8 @@ let items = [
       const defaultResult = closure_1.default(arg0, arg2, arg3);
       defaultResult.setUTCHours(0, 0, 0, 0);
       return defaultResult;
-    }
-  }
+    },
+  },
 ];
 if (0 < items.length) {
   do {

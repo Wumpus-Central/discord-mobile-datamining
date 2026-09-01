@@ -88,5 +88,5 @@ arg5.default = {
     }
     error = new Error("Invalid image format");
     throw error;
-  }
+  },
 };

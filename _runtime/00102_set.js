@@ -1,5 +1,5 @@
 // _runtime/00102_set.js
-let closure_0 = { "0.75": "ldpi", 1: "mdpi", "1.5": "hdpi", 2: "xhdpi", 3: "xxhdpi", 4: "xxxhdpi" };
+let closure_0 = { 0.75: "ldpi", 1: "mdpi", 1.5: "hdpi", 2: "xhdpi", 3: "xxhdpi", 4: "xxxhdpi" };
 const set = new Set(["gif", "heic", "heif", "jpeg", "jpg", "ktx", "png", "webp", "xml"]);
 
 export default {
@@ -44,7 +44,11 @@ export default {
     const str = `${tmp}/${asset.name}`;
     const str2 = `${tmp}/${asset.name}`.toLowerCase();
     const str3 = `${tmp}/${asset.name}`.toLowerCase().replace(/\//g, "_");
-    return `${tmp}/${asset.name}`.toLowerCase().replace(/\//g, "_").replace(/([^a-z0-9_])/g, "").replace(/^(?:assets|assetsunstable_path)_/, "");
+    return `${tmp}/${asset.name}`
+      .toLowerCase()
+      .replace(/\//g, "_")
+      .replace(/([^a-z0-9_])/g, "")
+      .replace(/^(?:assets|assetsunstable_path)_/, "");
   },
   getBasePath(asset) {
     const httpServerLocation = asset.httpServerLocation;
@@ -53,5 +57,5 @@ export default {
       substr = httpServerLocation.slice(1);
     }
     return substr;
-  }
+  },
 };

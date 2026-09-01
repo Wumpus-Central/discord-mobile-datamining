@@ -7,10 +7,16 @@ import { jsx } from "../react/00021_jsxProd.js";
 const require = arg1;
 noopDefault;
 let closure_4 = cancelAnimationDefault.createAnimatedComponent(require("nativeEventEmitter").ClippingScrollView);
-let closure_5 = { code: "function pnpm_indexTsx1(){const{inverted,bottomPadding,contentInset}=this.__closure;var _contentInset,_contentInset2,_contentInset3,_contentInset4;const dynamicTop=inverted?bottomPadding.value:0;const dynamicBottom=!inverted?bottomPadding.value:0;return{dynamic:{top:dynamicTop,bottom:dynamicBottom},effective:{top:dynamicTop+(((_contentInset=contentInset)===null||_contentInset===void 0?void 0:_contentInset.top)||0),bottom:dynamicBottom+(((_contentInset2=contentInset)===null||_contentInset2===void 0?void 0:_contentInset2.bottom)||0),left:((_contentInset3=contentInset)===null||_contentInset3===void 0?void 0:_contentInset3.left)||0,right:((_contentInset4=contentInset)===null||_contentInset4===void 0?void 0:_contentInset4.right)||0}};}" };
+let closure_5 = {
+  code: "function pnpm_indexTsx1(){const{inverted,bottomPadding,contentInset}=this.__closure;var _contentInset,_contentInset2,_contentInset3,_contentInset4;const dynamicTop=inverted?bottomPadding.value:0;const dynamicBottom=!inverted?bottomPadding.value:0;return{dynamic:{top:dynamicTop,bottom:dynamicBottom},effective:{top:dynamicTop+(((_contentInset=contentInset)===null||_contentInset===void 0?void 0:_contentInset.top)||0),bottom:dynamicBottom+(((_contentInset2=contentInset)===null||_contentInset2===void 0?void 0:_contentInset2.bottom)||0),left:((_contentInset3=contentInset)===null||_contentInset3===void 0?void 0:_contentInset3.left)||0,right:((_contentInset4=contentInset)===null||_contentInset4===void 0?void 0:_contentInset4.right)||0}};}",
+};
 let closure_6 = { code: "function pnpm_indexTsx2(){const{insets}=this.__closure;return insets.value.effective;}" };
-let closure_7 = { code: "function pnpm_indexTsx3(current,previous){const{onContentInsetChange,runOnJS}=this.__closure;if(!onContentInsetChange){return;}if(previous&&current.top===previous.top&&current.bottom===previous.bottom&&current.left===previous.left&&current.right===previous.right){return;}runOnJS(onContentInsetChange)(current);}" };
-let closure_8 = { code: "function pnpm_indexTsx4(){const{insets,scrollIndicatorPadding,bottomPadding,inverted,scrollIndicatorInsets,contentOffsetY,prevContentOffsetY}=this.__closure;var _scrollIndicatorPaddi,_scrollIndicatorInset,_scrollIndicatorInset2,_scrollIndicatorInset3,_scrollIndicatorInset4;const{dynamic:dynamic,effective:effective}=insets.value;const indicatorPadding=(_scrollIndicatorPaddi=scrollIndicatorPadding)!==null&&_scrollIndicatorPaddi!==void 0?_scrollIndicatorPaddi:bottomPadding;const indicatorTop=(inverted?indicatorPadding.value:0)+(((_scrollIndicatorInset=scrollIndicatorInsets)===null||_scrollIndicatorInset===void 0?void 0:_scrollIndicatorInset.top)||0);const indicatorBottom=(!inverted?indicatorPadding.value:0)+(((_scrollIndicatorInset2=scrollIndicatorInsets)===null||_scrollIndicatorInset2===void 0?void 0:_scrollIndicatorInset2.bottom)||0);const result={contentInset:effective,scrollIndicatorInsets:{bottom:indicatorBottom,top:indicatorTop,right:(_scrollIndicatorInset3=scrollIndicatorInsets)===null||_scrollIndicatorInset3===void 0?void 0:_scrollIndicatorInset3.right,left:(_scrollIndicatorInset4=scrollIndicatorInsets)===null||_scrollIndicatorInset4===void 0?void 0:_scrollIndicatorInset4.left},contentInsetBottom:dynamic.bottom,contentInsetTop:dynamic.top};if(contentOffsetY){const curr=contentOffsetY.value;if(curr!==prevContentOffsetY.value){prevContentOffsetY.value=curr;result.contentOffset={x:0,y:curr};}}return result;}" };
+let closure_7 = {
+  code: "function pnpm_indexTsx3(current,previous){const{onContentInsetChange,runOnJS}=this.__closure;if(!onContentInsetChange){return;}if(previous&&current.top===previous.top&&current.bottom===previous.bottom&&current.left===previous.left&&current.right===previous.right){return;}runOnJS(onContentInsetChange)(current);}",
+};
+let closure_8 = {
+  code: "function pnpm_indexTsx4(){const{insets,scrollIndicatorPadding,bottomPadding,inverted,scrollIndicatorInsets,contentOffsetY,prevContentOffsetY}=this.__closure;var _scrollIndicatorPaddi,_scrollIndicatorInset,_scrollIndicatorInset2,_scrollIndicatorInset3,_scrollIndicatorInset4;const{dynamic:dynamic,effective:effective}=insets.value;const indicatorPadding=(_scrollIndicatorPaddi=scrollIndicatorPadding)!==null&&_scrollIndicatorPaddi!==void 0?_scrollIndicatorPaddi:bottomPadding;const indicatorTop=(inverted?indicatorPadding.value:0)+(((_scrollIndicatorInset=scrollIndicatorInsets)===null||_scrollIndicatorInset===void 0?void 0:_scrollIndicatorInset.top)||0);const indicatorBottom=(!inverted?indicatorPadding.value:0)+(((_scrollIndicatorInset2=scrollIndicatorInsets)===null||_scrollIndicatorInset2===void 0?void 0:_scrollIndicatorInset2.bottom)||0);const result={contentInset:effective,scrollIndicatorInsets:{bottom:indicatorBottom,top:indicatorTop,right:(_scrollIndicatorInset3=scrollIndicatorInsets)===null||_scrollIndicatorInset3===void 0?void 0:_scrollIndicatorInset3.right,left:(_scrollIndicatorInset4=scrollIndicatorInsets)===null||_scrollIndicatorInset4===void 0?void 0:_scrollIndicatorInset4.left},contentInsetBottom:dynamic.bottom,contentInsetTop:dynamic.top};if(contentOffsetY){const curr=contentOffsetY.value;if(curr!==prevContentOffsetY.value){prevContentOffsetY.value=curr;result.contentOffset={x:0,y:curr};}}return result;}",
+};
 
 export default require("noop").forwardRef((bottomPadding, ref) => {
   bottomPadding = bottomPadding.bottomPadding;
@@ -81,7 +87,7 @@ export default require("noop").forwardRef((bottomPadding, ref) => {
   T.__closure = { inverted, bottomPadding, contentInset };
   T.__workletHash = 788035152099;
   T.__initData = contentOffsetY;
-  const items = [inverted, , , , ];
+  const items = [inverted, , , ,];
   let top;
   if (contentInset != null) {
     top = contentInset.top;
@@ -158,7 +164,12 @@ export default require("noop").forwardRef((bottomPadding, ref) => {
     if (!num2) {
       num2 = 0;
     }
-    let obj = { contentInset: value.effective, scrollIndicatorInsets: null, contentInsetBottom: null, contentInsetTop: null };
+    let obj = {
+      contentInset: value.effective,
+      scrollIndicatorInsets: null,
+      contentInsetBottom: null,
+      contentInsetTop: null,
+    };
     let num3 = 0;
     const sum = num + num2;
     if (!inverted) {
@@ -195,14 +206,22 @@ export default require("noop").forwardRef((bottomPadding, ref) => {
     }
     return obj;
   };
-  fn2.__closure = { insets: derivedValue, scrollIndicatorPadding, bottomPadding, inverted, scrollIndicatorInsets, contentOffsetY, prevContentOffsetY: sharedValue };
+  fn2.__closure = {
+    insets: derivedValue,
+    scrollIndicatorPadding,
+    bottomPadding,
+    inverted,
+    scrollIndicatorInsets,
+    contentOffsetY,
+    prevContentOffsetY: sharedValue,
+  };
   fn2.__workletHash = 909305568735;
   fn2.__initData = derivedValue;
   let bottom1;
   if (scrollIndicatorInsets != null) {
     bottom1 = scrollIndicatorInsets.bottom;
   }
-  const items2 = [bottom1, , , , , ];
+  const items2 = [bottom1, , , , ,];
   let top1;
   if (scrollIndicatorInsets != null) {
     top1 = scrollIndicatorInsets.top;
@@ -221,7 +240,12 @@ export default require("noop").forwardRef((bottomPadding, ref) => {
   items2[4] = inverted;
   items2[5] = contentOffsetY;
   const animatedProps = tmp2Result.useAnimatedProps(fn2, items2);
-  obj = { animatedProps, applyWorkaroundForContentInsetHitTestBug, style: scrollIndicatorPadding(tmp3[5]).container, children: null };
+  obj = {
+    animatedProps,
+    applyWorkaroundForContentInsetHitTestBug,
+    style: scrollIndicatorPadding(tmp3[5]).container,
+    children: null,
+  };
   obj1 = { ref, animatedProps };
   const merged1 = Object.assign(merged);
   obj1.children = children;

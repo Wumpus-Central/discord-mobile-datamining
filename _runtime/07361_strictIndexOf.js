@@ -9,4 +9,4 @@ export default function strictIndexOf(arg0, arg1, arg2) {
     return sum;
   }
   return -1;
-};
+}

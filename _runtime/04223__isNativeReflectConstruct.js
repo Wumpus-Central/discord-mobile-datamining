@@ -23,8 +23,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 ({ NativeModules: c3, Platform } = get_ActivityIndicator);
 class ModuleNotFoundError {
@@ -49,7 +48,9 @@ class ModuleNotFoundError {
       str = str2;
     }
     if ("expo-go" === str) {
-      items = ["NitroModules are not supported in Expo Go! Use EAS (`expo prebuild`) or eject to a bare workflow instead."];
+      items = [
+        "NitroModules are not supported in Expo Go! Use EAS (`expo prebuild`) or eject to a bare workflow instead.",
+      ];
       tmp12 = closure_2;
       obj3 = closure_2(tmp);
       tmp13 = closure_1;
@@ -64,10 +65,16 @@ class ModuleNotFoundError {
       return tmp13(tmp13(self, constructResult));
     } else {
       items1 = [];
-      str7 = "Make sure react-native-nitro-modules/NitroModules is correctly autolinked (run `npx react-native config` to verify)";
-      arr = items1.push("Make sure react-native-nitro-modules/NitroModules is correctly autolinked (run `npx react-native config` to verify)");
-      str8 = "Make sure you enabled the new architecture (TurboModules) and CodeGen properly generated the \"NativeNitroModules\"/NitroModules specs. See https://github.com/reactwg/react-native-new-architecture/blob/main/docs/enable-apps.md";
-      arr1 = items1.push("Make sure you enabled the new architecture (TurboModules) and CodeGen properly generated the \"NativeNitroModules\"/NitroModules specs. See https://github.com/reactwg/react-native-new-architecture/blob/main/docs/enable-apps.md");
+      str7 =
+        "Make sure react-native-nitro-modules/NitroModules is correctly autolinked (run `npx react-native config` to verify)";
+      arr = items1.push(
+        "Make sure react-native-nitro-modules/NitroModules is correctly autolinked (run `npx react-native config` to verify)",
+      );
+      str8 =
+        'Make sure you enabled the new architecture (TurboModules) and CodeGen properly generated the "NativeNitroModules"/NitroModules specs. See https://github.com/reactwg/react-native-new-architecture/blob/main/docs/enable-apps.md';
+      arr1 = items1.push(
+        'Make sure you enabled the new architecture (TurboModules) and CodeGen properly generated the "NativeNitroModules"/NitroModules specs. See https://github.com/reactwg/react-native-new-architecture/blob/main/docs/enable-apps.md',
+      );
       str9 = "Make sure you are using react-native 0.75.0 or higher.";
       arr2 = items1.push("Make sure you are using react-native 0.75.0 or higher.");
       str10 = "Make sure you rebuilt the app.";
@@ -81,8 +88,8 @@ class ModuleNotFoundError {
       str4 = "Make sure gradle is synced.";
       arr5 = items1.push("Make sure gradle is synced.");
       str5 = "\n* ";
-      str6 = "Failed to get NitroModules: The native \"NitroModules\" Turbo/Native-Module could not be found.\n* ";
-      items2 = [, ];
+      str6 = 'Failed to get NitroModules: The native "NitroModules" Turbo/Native-Module could not be found.\n* ';
+      items2 = [,];
       items2[0] = `Failed to get NitroModules: The native "NitroModules" Turbo/Native-Module could not be found.
 * ${arr3.join("\n* ")}`;
       obj = { cause: null };

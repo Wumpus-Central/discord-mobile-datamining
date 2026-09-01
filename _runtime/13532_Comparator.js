@@ -71,7 +71,7 @@ let obj = {
       const typeError = new TypeError("Invalid comparator: " + str);
       throw typeError;
     }
-  }
+  },
 };
 const items = [
   obj,
@@ -79,7 +79,7 @@ const items = [
     key: "toString",
     value: function toString() {
       return this.value;
-    }
+    },
   },
   {
     key: "test",
@@ -100,7 +100,7 @@ const items = [
         }
       }
       return true;
-    }
+    },
   },
   {
     key: "intersects",
@@ -211,14 +211,14 @@ const items = [
         const typeError = new TypeError("a Comparator is required");
         throw typeError;
       }
-    }
-  }
+    },
+  },
 ];
 obj = {
   key: "ANY",
   get() {
     return closure_3;
-  }
+  },
 };
 const items1 = [obj];
 

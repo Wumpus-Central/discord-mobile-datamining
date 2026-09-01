@@ -44,7 +44,6 @@ arg5.getBodySize = function getBodySize(json) {
           }
         }
       }
-    } catch (err) {
-    }
+    } catch (err) {}
   }
 };

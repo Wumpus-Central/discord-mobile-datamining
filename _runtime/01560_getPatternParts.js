@@ -1,7 +1,6 @@
 // _runtime/01560_getPatternParts.js
 import closure_0 from "metro/00032__slicedToArray.js";
 
-
 export const getPatternParts = function getPatternParts(path) {
   const items = [];
   let obj = { segment: "" };

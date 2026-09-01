@@ -193,7 +193,7 @@ arg5.CanonicalizeUnicodeLocaleId = function CanonicalizeUnicodeLocaleId(lang) {
             if (tmp9[1]) {
               if ("true" !== tmp9[1]) {
                 let str9 = tmp9[0];
-                let items1 = [str9.toLowerCase(), ];
+                let items1 = [str9.toLowerCase()];
                 let str10 = tmp9[1];
                 items1[1] = str10.toLowerCase();
                 let arr = items.push(items1);
@@ -209,10 +209,12 @@ arg5.CanonicalizeUnicodeLocaleId = function CanonicalizeUnicodeLocaleId(lang) {
         if (iter.attributes) {
           let attributes = iter.attributes;
           let _Object = Object;
-          let keys = Object.keys(attributes.reduce((arg0, str) => {
-            arg0[str.toLowerCase()] = 1;
-            return arg0;
-          }, {}));
+          let keys = Object.keys(
+            attributes.reduce((arg0, str) => {
+              arg0[str.toLowerCase()] = 1;
+              return arg0;
+            }, {}),
+          );
           iter.attributes = keys.sort();
         }
       } else if ("t" === type) {
@@ -231,7 +233,7 @@ arg5.CanonicalizeUnicodeLocaleId = function CanonicalizeUnicodeLocaleId(lang) {
             if (tmp4[1]) {
               if ("true" !== tmp4[1]) {
                 let str6 = tmp4[0];
-                let items4 = [str6.toLowerCase(), ];
+                let items4 = [str6.toLowerCase()];
                 let str7 = tmp4[1];
                 items4[1] = str7.toLowerCase();
                 let arr1 = items3.push(items4);

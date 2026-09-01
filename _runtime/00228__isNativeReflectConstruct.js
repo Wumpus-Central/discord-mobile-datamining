@@ -23,8 +23,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class AbortSignal {
   constructor() {
@@ -62,7 +61,7 @@ let obj = {
     } else {
       return value;
     }
-  }
+  },
 };
 const items = [obj];
 const _moduleResult = _createClass(AbortSignal, items);
@@ -111,7 +110,7 @@ obj = {
     } else {
       return value;
     }
-  }
+  },
 };
 const items1 = [
   obj,
@@ -131,8 +130,8 @@ const items1 = [
         const result = weakMap.set(value, true);
         value.dispatchEvent({ type: "abort" });
       }
-    }
-  }
+    },
+  },
 ];
 const _moduleResult1 = _createClass(AbortController, items1);
 const weakMap1 = new WeakMap();

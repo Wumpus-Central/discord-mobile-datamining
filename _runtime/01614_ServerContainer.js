@@ -22,6 +22,12 @@ export const ServerContainer = importAllResult.forwardRef(function ServerContain
       fn.current = obj;
     }
   }
-  obj = { value: { location: _location }, children: jsx(obj(1502).CurrentRenderContext.Provider, { value: obj, children }) };
-  return jsx(obj(1615).ServerContext.Provider, { value: { location: _location }, children: jsx(obj(1502).CurrentRenderContext.Provider, { value: obj, children }) });
+  obj = {
+    value: { location: _location },
+    children: jsx(obj(1502).CurrentRenderContext.Provider, { value: obj, children }),
+  };
+  return jsx(obj(1615).ServerContext.Provider, {
+    value: { location: _location },
+    children: jsx(obj(1502).CurrentRenderContext.Provider, { value: obj, children }),
+  });
 });

@@ -4,9 +4,18 @@ import { StyleSheet } from "00017_get_ActivityIndicator.js";
 import { jsx } from "react/00021_jsxProd.js";
 
 const require = arg1;
-let closure_4 = { code: "function pnpm_CarouselLayoutTsx1(){const{size,dataLength,handlerOffset,loop}=this.__closure;const totalSize=size*dataLength;const x=handlerOffset.value%totalSize;if(!loop)return handlerOffset.value;return Number.isNaN(x)?0:x;}" };
-let closure_5 = { code: "function pnpm_CarouselLayoutTsx2(){const{width,height}=this.__closure;return{width:width||\"100%\",height:height||\"100%\"};}" };
-const styles = StyleSheet.create({ layoutContainer: { display: "flex" }, contentContainer: { overflow: "hidden" }, itemsHorizontal: { flexDirection: "row" }, itemsVertical: { flexDirection: "column" } });
+let closure_4 = {
+  code: "function pnpm_CarouselLayoutTsx1(){const{size,dataLength,handlerOffset,loop}=this.__closure;const totalSize=size*dataLength;const x=handlerOffset.value%totalSize;if(!loop)return handlerOffset.value;return Number.isNaN(x)?0:x;}",
+};
+let closure_5 = {
+  code: 'function pnpm_CarouselLayoutTsx2(){const{width,height}=this.__closure;return{width:width||"100%",height:height||"100%"};}',
+};
+const styles = StyleSheet.create({
+  layoutContainer: { display: "flex" },
+  contentContainer: { overflow: "hidden" },
+  itemsHorizontal: { flexDirection: "row" },
+  itemsVertical: { flexDirection: "column" },
+});
 
 export const CarouselLayout = importDefaultResult.forwardRef((arg0, ref) => {
   let obj = loop(autoFillData[3]);
@@ -21,7 +30,25 @@ export const CarouselLayout = importDefaultResult.forwardRef((arg0, ref) => {
   const onScrollEnd = props.onScrollEnd;
   const onSnapToItem = props.onSnapToItem;
   const onScrollStart = props.onScrollStart;
-  ({ testID, data, mode, style, containerStyle, vertical, autoPlay, windowSize, autoPlayReverse, autoPlayInterval, scrollAnimationDuration, withAnimation, fixedDirection, renderItem, onProgressChange, customAnimation, defaultIndex } = props);
+  ({
+    testID,
+    data,
+    mode,
+    style,
+    containerStyle,
+    vertical,
+    autoPlay,
+    windowSize,
+    autoPlayReverse,
+    autoPlayInterval,
+    scrollAnimationDuration,
+    withAnimation,
+    fixedDirection,
+    renderItem,
+    onProgressChange,
+    customAnimation,
+    defaultIndex,
+  } = props);
   obj1 = loop(autoFillData[4]);
   const commonVariables = obj1.useCommonVariables(props);
   const size = commonVariables.size;
@@ -53,7 +80,14 @@ export const CarouselLayout = importDefaultResult.forwardRef((arg0, ref) => {
   const obj5 = loop(autoFillData[6]);
   const tmp = loop;
   let tmp2 = autoFillData;
-  onProgressChange = loop(autoFillData[7]).useOnProgressChange({ autoFillData, loop, size, offsetX: derivedValue, rawDataLength, onProgressChange });
+  onProgressChange = loop(autoFillData[7]).useOnProgressChange({
+    autoFillData,
+    loop,
+    size,
+    offsetX: derivedValue,
+    rawDataLength,
+    onProgressChange,
+  });
   const obj6 = loop(autoFillData[7]);
   obj = {
     ref,
@@ -76,7 +110,7 @@ export const CarouselLayout = importDefaultResult.forwardRef((arg0, ref) => {
         const obj = loop(autoFillData[6]);
       }
       return tmp2;
-    }
+    },
   };
   const carouselController = loop(autoFillData[8]).useCarouselController(obj);
   const getSharedIndex = carouselController.getSharedIndex;
@@ -136,8 +170,36 @@ export const CarouselLayout = importDefaultResult.forwardRef((arg0, ref) => {
   const animatedStyle = loop(autoFillData[6]).useAnimatedStyle(Q, items6);
   obj1 = { style: items7, children: null };
   items7 = [onScrollEnd.layoutContainer, containerStyle];
-  obj2 = { size, translation: handlerOffset, style: items8, testID, onScrollStart: callback1, onScrollEnd: callback2, onTouchBegin: callback3, onTouchEnd: callback4, children: tmp17(tmp(tmp2[13]).ItemRenderer, { data, dataLength, rawDataLength, loop, size, windowSize, autoFillData, offsetX: derivedValue, handlerOffset, layoutConfig, renderItem, customAnimation }) };
-  items8 = [onScrollEnd.contentContainer, animatedStyle, style, vertical ? onScrollEnd.itemsVertical : onScrollEnd.itemsHorizontal];
+  obj2 = {
+    size,
+    translation: handlerOffset,
+    style: items8,
+    testID,
+    onScrollStart: callback1,
+    onScrollEnd: callback2,
+    onTouchBegin: callback3,
+    onTouchEnd: callback4,
+    children: tmp17(tmp(tmp2[13]).ItemRenderer, {
+      data,
+      dataLength,
+      rawDataLength,
+      loop,
+      size,
+      windowSize,
+      autoFillData,
+      offsetX: derivedValue,
+      handlerOffset,
+      layoutConfig,
+      renderItem,
+      customAnimation,
+    }),
+  };
+  items8 = [
+    onScrollEnd.contentContainer,
+    animatedStyle,
+    style,
+    vertical ? onScrollEnd.itemsVertical : onScrollEnd.itemsHorizontal,
+  ];
   obj1[1] = rawDataLength(loop(autoFillData[12]).ScrollViewGesture, obj2, mode);
   return rawDataLength(loop(autoFillData[11]).GestureHandlerRootView, obj1);
 });

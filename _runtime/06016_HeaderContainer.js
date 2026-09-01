@@ -10,7 +10,14 @@ require = arg1;
 const styles = StyleSheet.create({ absolute: { position: "absolute", top: 0, start: 0, end: 0 } });
 
 export const HeaderContainer = function HeaderContainer(getFocusedRoute) {
-  ({ mode: require, scenes, layout: dependencyMap, getPreviousScene: closure_2, contentHeight: closure_3, onContentHeightChange: jsx } = getFocusedRoute);
+  ({
+    mode: require,
+    scenes,
+    layout: dependencyMap,
+    getPreviousScene: closure_2,
+    contentHeight: closure_3,
+    onContentHeightChange: jsx,
+  } = getFocusedRoute);
   let focusedRoute;
   closure_6 = undefined;
   let buildHref;
@@ -88,7 +95,15 @@ export const HeaderContainer = function HeaderContainer(getFocusedRoute) {
               options1 = {};
             }
             const gestureDirection = options1.gestureDirection;
-            obj = { layout: null, back: null, progress: null, options: null, route: null, navigation: null, styleInterpolator: null };
+            obj = {
+              layout: null,
+              back: null,
+              progress: null,
+              options: null,
+              route: null,
+              navigation: null,
+              styleInterpolator: null,
+            };
             obj[0] = closure_1;
             obj[1] = tmp10;
             obj[2] = descriptor.progress;
@@ -147,7 +162,7 @@ export const HeaderContainer = function HeaderContainer(getFocusedRoute) {
               obj1[2] = tmp35(tmp38, obj2);
               return tmp35(closure_1_0(closure_1_1[4]).NavigationProvider, obj1, descriptor.descriptor.route.key);
             }
-            const items = [closure_5.absolute, ];
+            const items = [closure_5.absolute];
             let tmp41 = null;
             if (tmp2) {
               const obj5 = { minHeight: null };
@@ -157,7 +172,10 @@ export const HeaderContainer = function HeaderContainer(getFocusedRoute) {
             items[1] = tmp41;
             tmp39 = items;
             const tmp20 = undefined === headerShown2 || headerShown2;
-            tmp22 = (false === (undefined === headerShown2 || headerShown2) || "screen" === options.headerMode) && !descriptor1 || found;
+            tmp22 =
+              ((false === (undefined === headerShown2 || headerShown2) || "screen" === options.headerMode) &&
+                !descriptor1) ||
+              found;
           }
         }
         return null;
@@ -165,5 +183,9 @@ export const HeaderContainer = function HeaderContainer(getFocusedRoute) {
     }
     return null;
   });
-  return <closure_3 pointerEvents="box-none" style={arg0.style}>{null}</closure_3>;
+  return (
+    <closure_3 pointerEvents="box-none" style={arg0.style}>
+      {null}
+    </closure_3>
+  );
 };

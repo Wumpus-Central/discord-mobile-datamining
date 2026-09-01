@@ -22,12 +22,18 @@ export default function usePressability(arg0) {
     }
   }, items);
   const items1 = [current];
-  callback(() => null != current ? (() => {
-    navigation.reset();
-  }) : undefined, items1);
+  callback(
+    () =>
+      null != current
+        ? () => {
+            navigation.reset();
+          }
+        : undefined,
+    items1,
+  );
   let eventHandlers = null;
   if (null != current) {
     eventHandlers = current.getEventHandlers();
   }
   return eventHandlers;
-};
+}

@@ -46,7 +46,8 @@ export const useEdgeInsetApplication = context.useEdgeInsetApplication;
 export const FullWindowOverlay = FullWindowOverlayDefault;
 export const ScreenFooter = ScreenFooterDefault;
 export const ScreenContentWrapper = ScreenContentWrapperDefault;
-export const isSearchBarAvailableForCurrentPlatform = isSearchBarAvailableForCurrentPlatform.isSearchBarAvailableForCurrentPlatform;
+export const isSearchBarAvailableForCurrentPlatform =
+  isSearchBarAvailableForCurrentPlatform.isSearchBarAvailableForCurrentPlatform;
 export const executeNativeBackPress = isSearchBarAvailableForCurrentPlatform.executeNativeBackPress;
 export const compatibilityFlags = get_controlledBottomTabs.compatibilityFlags;
 export const featureFlags = get_controlledBottomTabs.featureFlags;

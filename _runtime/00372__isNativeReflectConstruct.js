@@ -24,8 +24,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class AnimatedDiffClamp {
   constructor(arg0, arg1, arg2, arg3) {
@@ -69,13 +68,13 @@ let items = [
       }
       const items = [arg0];
       fn(items);
-    }
+    },
   },
   {
     key: "interpolate",
     value: function interpolate(arg0) {
       return new AnimatedDiffClamp(363)(this, arg0);
-    }
+    },
   },
   {
     key: "__getValue",
@@ -85,7 +84,7 @@ let items = [
       this._lastValue = __getValueResult;
       this._value = Math.min(Math.max(this._value + (__getValueResult - this._lastValue), this._min), this._max);
       return this._value;
-    }
+    },
   },
   {
     key: "__attach",
@@ -99,7 +98,7 @@ let items = [
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
-    }
+    },
   },
   {
     key: "__detach",
@@ -113,15 +112,21 @@ let items = [
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
-    }
+    },
   },
   {
     key: "__getNativeConfig",
     value: function __getNativeConfig() {
       const _a = this._a;
-      return { type: "diffclamp", input: _a.__getNativeTag(), min: this._min, max: this._max, debugID: this.__getDebugID() };
-    }
-  }
+      return {
+        type: "diffclamp",
+        input: _a.__getNativeTag(),
+        min: this._min,
+        max: this._max,
+        debugID: this.__getDebugID(),
+      };
+    },
+  },
 ];
 
 export default importDefaultResult(AnimatedDiffClamp, items);

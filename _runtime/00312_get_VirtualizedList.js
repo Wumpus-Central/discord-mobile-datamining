@@ -7,9 +7,21 @@ import { _isNativeReflectConstruct } from "00326__isNativeReflectConstruct.js";
 const require = arg1;
 const dependencyMap = arg6;
 const obj = { keyExtractor: require("elementsThatOverlapOffsets").keyExtractor };
-Object.defineProperty(obj, "VirtualizedList", { get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default, set: undefined });
-Object.defineProperty(obj, "VirtualizedSectionList", { get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default, set: undefined });
-Object.defineProperty(obj, "VirtualizedListContextResetter", { get: () => createContext /* createContext */.VirtualizedListContextResetter, set: undefined });
-Object.defineProperty(obj, "ViewabilityHelper", { get: () => ViewabilityHelper /* ViewabilityHelper */.default, set: undefined });
+Object.defineProperty(obj, "VirtualizedList", {
+  get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default,
+  set: undefined,
+});
+Object.defineProperty(obj, "VirtualizedSectionList", {
+  get: () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default,
+  set: undefined,
+});
+Object.defineProperty(obj, "VirtualizedListContextResetter", {
+  get: () => createContext /* createContext */.VirtualizedListContextResetter,
+  set: undefined,
+});
+Object.defineProperty(obj, "ViewabilityHelper", {
+  get: () => ViewabilityHelper /* ViewabilityHelper */.default,
+  set: undefined,
+});
 Object.defineProperty(obj, "FillRateHelper", { get: () => Info /* Info */.default, set: undefined });
 arg5.default = obj;

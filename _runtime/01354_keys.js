@@ -36,7 +36,7 @@ function createStoreImpl(arg0) {
       closure_0 = arg0;
       set.add(arg0);
       return () => closure_1_1.delete(closure_0);
-    }
+    },
   };
   const tmp2 = arg0(setState, getState, obj);
   closure_0 = tmp2;

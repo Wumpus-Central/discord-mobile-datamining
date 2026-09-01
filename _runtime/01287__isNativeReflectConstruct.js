@@ -22,8 +22,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 function formatToMarkdownString(_1Ww0Hi, arg1) {
   let tmp = arg2;
@@ -56,7 +55,7 @@ let closure_4 = {
   },
   $p(join) {
     return join.join("") + "\n\n";
-  }
+  },
 };
 class MarkdownBuilder {
   constructor() {
@@ -86,8 +85,8 @@ const items = [
     key: "pushRichTextTag",
     value: function pushRichTextTag(arg0, arg1, arg2) {
       this.result = this.result + dependencyMap[arg0](arg1, "", arg2);
-    }
-  }
+    },
+  },
 ];
 const _moduleResult = _createClass(MarkdownBuilder, items);
 let c5 = _moduleResult;

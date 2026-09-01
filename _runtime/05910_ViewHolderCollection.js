@@ -9,8 +9,26 @@ const require = arg1;
 
 export const ViewHolderCollection = (data) => {
   data = data.data;
-  ({ renderStack, getLayout: dependencyMap, refHolder: closure_2, onSizeChanged: closure_3, renderItem: closure_4, extraData: closure_5, onCommitLayoutEffect: closure_6, CellRendererComponent: jsx, ItemSeparatorComponent: closure_8, onCommitEffect: closure_9, horizontal } = data);
-  ({ getAdjustmentMargin, currentStickyIndex: closure_11, hideStickyHeaderRelatedCell: closure_12, isInLastRow: closure_13, inverted: closure_14 } = data);
+  ({
+    renderStack,
+    getLayout: dependencyMap,
+    refHolder: closure_2,
+    onSizeChanged: closure_3,
+    renderItem: closure_4,
+    extraData: closure_5,
+    onCommitLayoutEffect: closure_6,
+    CellRendererComponent: jsx,
+    ItemSeparatorComponent: closure_8,
+    onCommitEffect: closure_9,
+    horizontal,
+  } = data);
+  ({
+    getAdjustmentMargin,
+    currentStickyIndex: closure_11,
+    hideStickyHeaderRelatedCell: closure_12,
+    isInLastRow: closure_13,
+    inverted: closure_14,
+  } = data);
   ({ viewHolderCollectionRef, getChildContainerLayout } = data);
   const tmp = callback(React.useState(0), 2);
   const first = tmp[0];
@@ -53,11 +71,15 @@ export const ViewHolderCollection = (data) => {
     }
   }, items2);
   const items3 = [tmp[1]];
-  callback3(viewHolderCollectionRef, () => ({
-    commitLayout() {
-      callback((arg0) => arg0 + 1);
-    }
-  }), items3);
+  callback3(
+    viewHolderCollectionRef,
+    () => ({
+      commitLayout() {
+        callback((arg0) => arg0 + 1);
+      },
+    }),
+    items3,
+  );
   let tmp12 = data;
   if (data) {
     tmp12 = data.length > 0;
@@ -102,14 +124,29 @@ export const ViewHolderCollection = (data) => {
   if (size) {
     const _Array = Array;
     size = Array.from(renderStack.entries(), (arg0) => {
-      [tmp, ] = arg0;
+      [tmp] = arg0;
       let tmp5;
       if (closure_8) {
         if (!callback2(tmp2)) {
           tmp5 = tmp3[tmp2 + 1];
         }
       }
-      let obj = { index: tmp2, item: data[tmp2], trailingItem: tmp5, layout: null, refHolder: null, onSizeChanged: null, target: "Cell", renderItem: null, extraData: null, CellRendererComponent: null, ItemSeparatorComponent: null, horizontal: null, hidden: null, inverted: null };
+      let obj = {
+        index: tmp2,
+        item: data[tmp2],
+        trailingItem: tmp5,
+        layout: null,
+        refHolder: null,
+        onSizeChanged: null,
+        target: "Cell",
+        renderItem: null,
+        extraData: null,
+        CellRendererComponent: null,
+        ItemSeparatorComponent: null,
+        horizontal: null,
+        hidden: null,
+        inverted: null,
+      };
       obj = {};
       const merged = Object.assign(callback(tmp2));
       obj[3] = obj;

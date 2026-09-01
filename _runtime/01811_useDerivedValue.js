@@ -2,7 +2,9 @@
 import noop from "00019_noop.js";
 
 ({ useEffect: obj1, useRef: c3 } = noop);
-let closure_4 = { code: "function pnpm_useDerivedValueTs1(){const{sharedValue,updater}=this.__closure;sharedValue.value=updater();}" };
+let closure_4 = {
+  code: "function pnpm_useDerivedValueTs1(){const{sharedValue,updater}=this.__closure;sharedValue.value=updater();}",
+};
 
 export const useDerivedValue = function useDerivedValue(fn, items) {
   const _require = fn;

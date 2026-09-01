@@ -22,14 +22,13 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class RVLinearLayoutManagerImpl {
   constructor(arg0, arg1) {
     self = this;
     tmp = RVLinearLayoutManagerImpl(this, RVLinearLayoutManagerImpl);
-    items = [, ];
+    items = [,];
     items[0] = global;
     items[1] = arg1;
     tmp2 = closure_2;
@@ -73,7 +72,7 @@ let items = [
           self.requiresRepaint = true;
         }
       }
-    }
+    },
   },
   {
     key: "processLayoutInfo",
@@ -102,7 +101,7 @@ let items = [
       if (tmp7) {
         const result = self.normalizeLayoutHeights(arg0);
       }
-    }
+    },
   },
   {
     key: "estimateLayout",
@@ -117,7 +116,7 @@ let items = [
       this.layouts[arg0].height = self.getEstimatedHeight(arg0);
       this.layouts[arg0].isWidthMeasured = !self.horizontal;
       this.layouts[arg0].enforcedWidth = !self.horizontal;
-    }
+    },
   },
   {
     key: "getLayoutSize",
@@ -150,7 +149,7 @@ let items = [
         obj[1] = sum;
         return obj;
       }
-    }
+    },
   },
   {
     key: "normalizeLayoutHeights",
@@ -207,7 +206,7 @@ let items = [
           self.tallestItemHeight = tmp.height;
         }
       }
-    }
+    },
   },
   {
     key: "recomputeLayouts",
@@ -244,8 +243,8 @@ let items = [
           sum = sum + 1;
         } while (sum <= arg1);
       }
-    }
-  }
+    },
+  },
 ];
 
 export const RVLinearLayoutManagerImpl = importDefaultResult(RVLinearLayoutManagerImpl, items);

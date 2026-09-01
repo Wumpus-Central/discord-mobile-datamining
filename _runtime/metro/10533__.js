@@ -20,5 +20,8 @@ export default noopDefault.forwardRef((defaultIndex, ref) => {
   const propsErrorBoundary = usePropsErrorBoundary.usePropsErrorBoundary(obj);
   obj = { value: { props: initProps, common: commonVariables }, children: jsx(CarouselLayout.CarouselLayout, obj1) };
   obj1 = { ref };
-  return jsx(context.GlobalStateProvider, { value: { props: initProps, common: commonVariables }, children: jsx(CarouselLayout.CarouselLayout, { ref }) });
+  return jsx(context.GlobalStateProvider, {
+    value: { props: initProps, common: commonVariables },
+    children: jsx(CarouselLayout.CarouselLayout, { ref }),
+  });
 });

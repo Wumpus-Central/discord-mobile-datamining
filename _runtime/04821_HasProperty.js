@@ -1,7 +1,6 @@
 // _runtime/04821_HasProperty.js
 import isObject from "04762_isObject.js";
 
-
 export default function HasProperty(arg0, arg1) {
   if (isObject(arg0)) {
     if (tmp(4809)(arg1)) {
@@ -14,4 +13,4 @@ export default function HasProperty(arg0, arg1) {
     const tmp5 = new tmp(541)("Assertion failed: `O` must be an Object");
     throw tmp5;
   }
-};
+}

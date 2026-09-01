@@ -92,7 +92,9 @@ export const prepareConfigForNativeSide = function prepareConfigForNativeSide(cl
           let str2 = " is not a valid property for ";
           let tmp29 = closure_0;
           let str3 = " and will be ignored.";
-          let warnResult = console.warn(tmp19Result.tagMessage("" + tmp17 + " is not a valid property for " + closure_0 + " and will be ignored."));
+          let warnResult = console.warn(
+            tmp19Result.tagMessage("" + tmp17 + " is not a valid property for " + closure_0 + " and will be ignored."),
+          );
           continue;
         }
         continue;
@@ -112,7 +114,11 @@ export const prepareConfigForNativeSide = function prepareConfigForNativeSide(cl
   }
   return obj;
 };
-export const useClonedAndRemappedConfig = function useClonedAndRemappedConfig(gestureHandlerProps, map, transformHoverProps) {
+export const useClonedAndRemappedConfig = function useClonedAndRemappedConfig(
+  gestureHandlerProps,
+  map,
+  transformHoverProps,
+) {
   closure_0 = gestureHandlerProps;
   let tmp = map;
   if (map === undefined) {

@@ -46,5 +46,5 @@ arg5.default = {
     const sum5 = sum4 + 65536 * module(5174).getByteAt(getUint8, sum3 + 2) + 1;
     obj.ImageHeight = { value: sum5, description: `${tmp13}px` };
     return obj;
-  }
+  },
 };

@@ -21,8 +21,12 @@ export const ComputeExponentForMagnitude = function ComputeExponentForMagnitude(
     if ("currency" === style.style) {
       let str = "name";
       if ("name" !== tmp11) {
-        let short = dataLocaleData.numbers.currency[numberingSystem] || dataLocaleData.numbers.currency[dataLocaleData.numbers.nu[0]].short;
-        const tmp2 = dataLocaleData.numbers.currency[numberingSystem] || dataLocaleData.numbers.currency[dataLocaleData.numbers.nu[0]];
+        let short =
+          dataLocaleData.numbers.currency[numberingSystem] ||
+          dataLocaleData.numbers.currency[dataLocaleData.numbers.nu[0]].short;
+        const tmp2 =
+          dataLocaleData.numbers.currency[numberingSystem] ||
+          dataLocaleData.numbers.currency[dataLocaleData.numbers.nu[0]];
       }
       if (short) {
         str = digitsToString.default.pow(10, floorResult).toString();
@@ -51,7 +55,8 @@ export const ComputeExponentForMagnitude = function ComputeExponentForMagnitude(
         return 0;
       }
     }
-    const tmp = dataLocaleData.numbers.decimal[numberingSystem] || dataLocaleData.numbers.decimal[dataLocaleData.numbers.nu[0]];
+    const tmp =
+      dataLocaleData.numbers.decimal[numberingSystem] || dataLocaleData.numbers.decimal[dataLocaleData.numbers.nu[0]];
     short = "long" === style.compactDisplay ? tmp.long : tmp.short;
   }
 };

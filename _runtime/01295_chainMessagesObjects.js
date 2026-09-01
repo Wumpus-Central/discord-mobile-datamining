@@ -60,7 +60,7 @@ arg5.makeMessagesProxy = function makeMessagesProxy(loader) {
         str = str2;
       }
       return str;
-    }
+    },
   };
   const proxy = new Proxy(obj, obj);
   Object.defineProperty(proxy, "$$baseObject", { value: obj, enumerable: false, configurable: false, writable: false });

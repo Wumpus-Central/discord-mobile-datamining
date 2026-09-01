@@ -29,4 +29,4 @@ export default function isString(str) {
     }
   }
   return tmp;
-};
+}

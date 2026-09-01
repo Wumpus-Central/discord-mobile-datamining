@@ -23,4 +23,4 @@ export default function ToNumber(arg0) {
     }
     return tmp5;
   }
-};
+}

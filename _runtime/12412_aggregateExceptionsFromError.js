@@ -75,7 +75,15 @@ function aggregateExceptionsFromError(arg0, arg1, arg2, errors, source, arg5, me
     return length;
   }
 }
-arg5.applyAggregateErrorsToEvent = function applyAggregateErrorsToEvent(arg0, arg1, arg2, arg3, arg4, exception, originalException) {
+arg5.applyAggregateErrorsToEvent = function applyAggregateErrorsToEvent(
+  arg0,
+  arg1,
+  arg2,
+  arg3,
+  arg4,
+  exception,
+  originalException,
+) {
   let num = arg2;
   if (arg2 === undefined) {
     num = 250;
@@ -90,14 +98,32 @@ arg5.applyAggregateErrorsToEvent = function applyAggregateErrorsToEvent(arg0, ar
             tmp5 = exception.exception.values[exception.exception.values.length - 1];
           }
           if (tmp5) {
-            exception.exception.values = aggregateExceptionsFromError(arg0, arg1, arg4, originalException.originalException, arg3, exception.exception.values, tmp5, 0).map((value) => {
+            exception.exception.values = aggregateExceptionsFromError(
+              arg0,
+              arg1,
+              arg4,
+              originalException.originalException,
+              arg3,
+              exception.exception.values,
+              tmp5,
+              0,
+            ).map((value) => {
               if (value.value) {
                 value.value = num(closure_1_1[1]).truncate(value.value, num);
                 const obj = num(closure_1_1[1]);
               }
               return value;
             });
-            const arr = aggregateExceptionsFromError(arg0, arg1, arg4, originalException.originalException, arg3, exception.exception.values, tmp5, 0);
+            const arr = aggregateExceptionsFromError(
+              arg0,
+              arg1,
+              arg4,
+              originalException.originalException,
+              arg3,
+              exception.exception.values,
+              tmp5,
+              0,
+            );
           }
         }
         obj = num(12342);

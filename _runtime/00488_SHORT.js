@@ -17,5 +17,5 @@ export default {
   },
   showWithGravityAndOffset(arg0, arg1, arg2, arg3, arg4) {
     const result = ToastAndroidDefault.showWithGravityAndOffset(arg0, arg1, arg2, arg3, arg4);
-  }
+  },
 };

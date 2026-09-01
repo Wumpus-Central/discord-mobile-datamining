@@ -18,4 +18,4 @@ export default function arrayEach(arg0, arg1) {
     }
   }
   return arg0;
-};
+}

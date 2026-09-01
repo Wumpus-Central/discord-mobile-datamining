@@ -17,4 +17,4 @@ export default function cloneSymbol(arg0) {
   } else {
     return {};
   }
-};
+}

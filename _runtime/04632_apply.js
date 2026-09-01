@@ -24,4 +24,4 @@ export default function apply(call) {
   } else {
     return call.apply(arg1, arg2);
   }
-};
+}

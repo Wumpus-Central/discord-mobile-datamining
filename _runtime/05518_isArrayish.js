@@ -33,4 +33,4 @@ export default function isArrayish(str) {
     tmp2 = isArray;
   }
   return tmp2;
-};
+}

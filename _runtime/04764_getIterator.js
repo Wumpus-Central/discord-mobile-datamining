@@ -6,4 +6,4 @@ export default function getIterator(arg0) {
       return arg0[iterator]();
     }
   }
-};
+}

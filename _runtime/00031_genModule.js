@@ -55,50 +55,62 @@ function genModule(arg0, arg1) {
           str = str2;
         }
         tmp4 = arg1;
-        tmp4 = "promise" === str ? (function promiseMethodWrapper() {
-          closure_0 = [...arguments];
-          error = undefined;
-          error = new Error();
-          return new Promise((closure_0) => {
-            error = arg1;
-            error(str[2]).default.enqueueNativeCall(closure_0, error, closure_0, (arg0) => callback(arg0), (arg0) => {
-              obj = arg0;
-              if (!arg0) {
-                obj = {};
+        tmp4 =
+          "promise" === str
+            ? function promiseMethodWrapper() {
+                closure_0 = [...arguments];
+                error = undefined;
+                error = new Error();
+                return new Promise((closure_0) => {
+                  error = arg1;
+                  error(str[2]).default.enqueueNativeCall(
+                    closure_0,
+                    error,
+                    closure_0,
+                    (arg0) => callback(arg0),
+                    (arg0) => {
+                      obj = arg0;
+                      if (!arg0) {
+                        obj = {};
+                      }
+                      return closure_1(Object.assign(closure_1, obj));
+                    },
+                  );
+                });
               }
-              return closure_1(Object.assign(closure_1, obj));
-            });
-          });
-        }) : (function nonPromiseMethodWrapper() {
-          const items = [...arguments];
-          let tmp = null;
-          if (items.length > 0) {
-            tmp = items[items.length - 1];
-          }
-          let tmp2 = null;
-          if (items.length > 1) {
-            tmp2 = items[items.length - 2];
-          }
-          if (typeof tmp2 === "function") {
-            callback("Cannot have a non-function arg after a function arg."[1])(tmp3, "Cannot have a non-function arg after a function arg.");
-          }
-          let tmp4 = null;
-          if (typeof tmp === "function") {
-            tmp4 = tmp;
-          }
-          let tmp5 = null;
-          if (typeof tmp2 === "function") {
-            tmp5 = tmp2;
-          }
-          const substr = items.slice(0, items.length - (tmp3 + (typeof tmp2 === "function")));
-          if ("sync" === str) {
-            const _default2 = callback(str[2]).default;
-            return _default2.callNativeSyncHook(closure_0, callback, substr, tmp5, tmp4);
-          } else {
-            const _default = callback(str[2]).default;
-            _default.enqueueNativeCall(closure_0, callback, substr, tmp5, tmp4);
-          }
-        });
+            : function nonPromiseMethodWrapper() {
+                const items = [...arguments];
+                let tmp = null;
+                if (items.length > 0) {
+                  tmp = items[items.length - 1];
+                }
+                let tmp2 = null;
+                if (items.length > 1) {
+                  tmp2 = items[items.length - 2];
+                }
+                if (typeof tmp2 === "function") {
+                  callback("Cannot have a non-function arg after a function arg."[1])(
+                    tmp3,
+                    "Cannot have a non-function arg after a function arg.",
+                  );
+                }
+                let tmp4 = null;
+                if (typeof tmp === "function") {
+                  tmp4 = tmp;
+                }
+                let tmp5 = null;
+                if (typeof tmp2 === "function") {
+                  tmp5 = tmp2;
+                }
+                const substr = items.slice(0, items.length - (tmp3 + (typeof tmp2 === "function")));
+                if ("sync" === str) {
+                  const _default2 = callback(str[2]).default;
+                  return _default2.callNativeSyncHook(closure_0, callback, substr, tmp5, tmp4);
+                } else {
+                  const _default = callback(str[2]).default;
+                  _default.enqueueNativeCall(closure_0, callback, substr, tmp5, tmp4);
+                }
+              };
         tmp4.type = str;
         obj[arg0] = tmp4;
       });
@@ -117,7 +129,13 @@ function genModule(arg0, arg1) {
     } else {
       const _console = console;
       const _HermesInternal = HermesInternal;
-      console.warn("Unable to define method 'getConstants()' on NativeModule '" + obj + "'. NativeModule '" + obj + "' already has a constant or method called 'getConstants'. Please remove it.");
+      console.warn(
+        "Unable to define method 'getConstants()' on NativeModule '" +
+          obj +
+          "'. NativeModule '" +
+          obj +
+          "' already has a constant or method called 'getConstants'. Please remove it.",
+      );
     }
     obj1 = { name: null, module: null };
     obj1[0] = obj;
@@ -135,30 +153,38 @@ if (global.nativeModuleProxy) {
   obj = nativeModuleProxy;
 } else {
   const __fbBatchedBridgeConfig = global.__fbBatchedBridgeConfig;
-  require("metro/00038__.js")(__fbBatchedBridgeConfig, "__fbBatchedBridgeConfig is not set, cannot invoke native modules");
+  require("metro/00038__.js")(
+    __fbBatchedBridgeConfig,
+    "__fbBatchedBridgeConfig is not set, cannot invoke native modules",
+  );
   let closure_6 = require("defineLazyObjectProperty").default;
-  let item = __fbBatchedBridgeConfig.remoteModuleConfig || [].forEach((arg0, arg1) => {
-    closure_0 = arg1;
-    const tmp = genModule(arg0, arg1);
-    closure_1 = tmp;
-    if (tmp) {
-      if (tmp.module) {
-        nativeModuleProxy[tmp.name] = tmp.module;
-      } else {
-        const obj = { get: null };
-        obj[0] = function get() {
-          lib(closure_1_2[1])(closure_0.nativeRequireModuleConfig, "Can't lazily create module without nativeRequireModuleConfig");
-          const tmp2 = closure_1_4(closure_0.nativeRequireModuleConfig(lib.name), closure_0);
-          let _module = tmp2;
-          if (tmp2) {
-            _module = tmp2.module;
-          }
-          return _module;
-        };
-        callback2(nativeModuleProxy, tmp.name, obj);
+  let item =
+    __fbBatchedBridgeConfig.remoteModuleConfig ||
+    [].forEach((arg0, arg1) => {
+      closure_0 = arg1;
+      const tmp = genModule(arg0, arg1);
+      closure_1 = tmp;
+      if (tmp) {
+        if (tmp.module) {
+          nativeModuleProxy[tmp.name] = tmp.module;
+        } else {
+          const obj = { get: null };
+          obj[0] = function get() {
+            lib(closure_1_2[1])(
+              closure_0.nativeRequireModuleConfig,
+              "Can't lazily create module without nativeRequireModuleConfig",
+            );
+            const tmp2 = closure_1_4(closure_0.nativeRequireModuleConfig(lib.name), closure_0);
+            let _module = tmp2;
+            if (tmp2) {
+              _module = tmp2.module;
+            }
+            return _module;
+          };
+          callback2(nativeModuleProxy, tmp.name, obj);
+        }
       }
-    }
-  });
+    });
   const arr = __fbBatchedBridgeConfig.remoteModuleConfig || [];
 }
 

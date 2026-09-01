@@ -27,8 +27,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 function getChildNodes(parentNode, arg1) {
   const nativeNodeReference = ReadOnlyNode(136).getNativeNodeReference(parentNode);
@@ -97,14 +96,14 @@ let items = [
     key: require("SymbolResult2").EVENT_TARGET_GET_THE_PARENT_KEY,
     value() {
       return this.parentNode;
-    }
+    },
   },
   {
     key: "childNodes",
     get() {
       const tmp = getChildNodes(this);
       return ReadOnlyNode(130).createNodeList(tmp);
-    }
+    },
   },
   {
     key: "firstChild",
@@ -115,7 +114,7 @@ let items = [
         first = arr[0];
       }
       return first;
-    }
+    },
   },
   {
     key: "isConnected",
@@ -127,7 +126,7 @@ let items = [
         const obj2 = NativeDOMCxx;
       }
       return isConnectedResult;
-    }
+    },
   },
   {
     key: "lastChild",
@@ -138,7 +137,7 @@ let items = [
         tmp = arr[arr.length - 1];
       }
       return tmp;
-    }
+    },
   },
   {
     key: "nextSibling",
@@ -166,34 +165,36 @@ let items = [
         tmp10 = arr5[tmp9 + 1];
       }
       return tmp10;
-    }
+    },
   },
   {
     key: "nodeName",
     get() {
       const typeError = new TypeError("`nodeName` is abstract and must be implemented in a subclass of `ReadOnlyNode`");
       throw typeError;
-    }
+    },
   },
   {
     key: "nodeType",
     get() {
       const typeError = new TypeError("`nodeType` is abstract and must be implemented in a subclass of `ReadOnlyNode`");
       throw typeError;
-    }
+    },
   },
   {
     key: "nodeValue",
     get() {
-      const typeError = new TypeError("`nodeValue` is abstract and must be implemented in a subclass of `ReadOnlyNode`");
+      const typeError = new TypeError(
+        "`nodeValue` is abstract and must be implemented in a subclass of `ReadOnlyNode`",
+      );
       throw typeError;
-    }
+    },
   },
   {
     key: "ownerDocument",
     get() {
       return ReadOnlyNode(136).getOwnerDocument(this);
-    }
+    },
   },
   {
     key: "parentElement",
@@ -207,7 +208,7 @@ let items = [
         }
       }
       return tmp;
-    }
+    },
   },
   {
     key: "parentNode",
@@ -230,7 +231,7 @@ let items = [
       }
       const obj = ReadOnlyNode(136);
       tmp = ReadOnlyNode;
-    }
+    },
   },
   {
     key: "previousSibling",
@@ -258,14 +259,16 @@ let items = [
         tmp11 = tmp9[tmp10 - 1];
       }
       return tmp11;
-    }
+    },
   },
   {
     key: "textContent",
     get() {
-      const typeError = new TypeError("`textContent` is abstract and must be implemented in a subclass of `ReadOnlyNode`");
+      const typeError = new TypeError(
+        "`textContent` is abstract and must be implemented in a subclass of `ReadOnlyNode`",
+      );
       throw typeError;
-    }
+    },
   },
   {
     key: "compareDocumentPosition",
@@ -278,7 +281,10 @@ let items = [
         nativeNodeReference1 = ReadOnlyNode(136).getNativeNodeReference(nativeNodeReference);
         if (null != nativeNodeReference) {
           if (null != nativeNodeReference1) {
-            let DOCUMENT_POSITION_DISCONNECTED = require("00139_NativeDOMCxx.js").compareDocumentPosition(nativeNodeReference, nativeNodeReference1);
+            let DOCUMENT_POSITION_DISCONNECTED = require("00139_NativeDOMCxx.js").compareDocumentPosition(
+              nativeNodeReference,
+              nativeNodeReference1,
+            );
             const obj3 = NativeDOMCxx;
           }
           return DOCUMENT_POSITION_DISCONNECTED;
@@ -286,7 +292,7 @@ let items = [
         DOCUMENT_POSITION_DISCONNECTED = ReadOnlyNode.DOCUMENT_POSITION_DISCONNECTED;
         const obj2 = ReadOnlyNode(136);
       }
-    }
+    },
   },
   {
     key: "contains",
@@ -297,7 +303,7 @@ let items = [
         tmp = self.compareDocumentPosition(nativeNodeReference) & ReadOnlyNode.DOCUMENT_POSITION_CONTAINED_BY;
       }
       return tmp;
-    }
+    },
   },
   {
     key: "getRootNode",
@@ -312,14 +318,14 @@ let items = [
         self2 = ownerDocument;
       }
       return self2;
-    }
+    },
   },
   {
     key: "hasChildNodes",
     value: function hasChildNodes() {
       return getChildNodes(this).length > 0;
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(ReadOnlyNode, items);
 importDefaultResultResult.ELEMENT_NODE = 1;

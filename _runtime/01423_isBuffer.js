@@ -15,4 +15,4 @@ export default function isBuffer(obj) {
     tmp = typeof obj.readUInt8 === "function";
   }
   return tmp;
-};
+}

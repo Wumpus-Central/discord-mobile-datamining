@@ -22,10 +22,11 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
-let closure_5 = { code: "function pnpm_ZoomTs1(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{scale:delayFunction(delay,animation(1,config))}]},initialValues:{transform:[{scale:0}],...initialValues},callback:callback};}" };
+let closure_5 = {
+  code: "function pnpm_ZoomTs1(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{scale:delayFunction(delay,animation(1,config))}]},initialValues:{transform:[{scale:0}],...initialValues},callback:callback};}",
+};
 class ZoomIn {
   constructor() {
     self = this;
@@ -80,12 +81,14 @@ let obj = {
   key: "createInstance",
   value: function createInstance() {
     return ZoomOutEasyDown();
-  }
+  },
 };
 let items = [obj];
 const importDefaultResultResult = importDefaultResult(ZoomIn, null, items);
 importDefaultResultResult.presetName = "ZoomIn";
-let closure_6 = { code: "function pnpm_ZoomTs2(){const{delayFunction,delay,animation,config,rotate,initialValues,callback}=this.__closure;return{animations:{transform:[{scale:delayFunction(delay,animation(1,config))},{rotate:delayFunction(delay,animation(0,config))}]},initialValues:{transform:[{scale:0},{rotate:rotate+\"rad\"}],...initialValues},callback:callback};}" };
+let closure_6 = {
+  code: 'function pnpm_ZoomTs2(){const{delayFunction,delay,animation,config,rotate,initialValues,callback}=this.__closure;return{animations:{transform:[{scale:delayFunction(delay,animation(1,config))},{rotate:delayFunction(delay,animation(0,config))}]},initialValues:{transform:[{scale:0},{rotate:rotate+"rad"}],...initialValues},callback:callback};}',
+};
 class ZoomInRotate {
   constructor() {
     self = this;
@@ -125,7 +128,7 @@ class ZoomInRotate {
         obj[0] = items;
         obj[0] = obj;
         const obj2 = { transform: null };
-        const items1 = [{ scale: 0 }, ];
+        const items1 = [{ scale: 0 }];
         obj1 = { rotate: delayFunction(delay, first(0, closure_2)) };
         items1[1] = { rotate: "" + str + "rad" };
         obj2[0] = items1;
@@ -134,7 +137,15 @@ class ZoomInRotate {
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, animation: first, config: tmp3[1], rotate: str, initialValues, callback: callbackV };
+      fn.__closure = {
+        delayFunction,
+        delay,
+        animation: first,
+        config: tmp3[1],
+        rotate: str,
+        initialValues,
+        callback: callbackV,
+      };
       fn.__workletHash = 15519876599894;
       fn.__initData = closure_1_6;
       return fn;
@@ -148,12 +159,14 @@ obj = {
   key: "createInstance",
   value: function createInstance() {
     return ZoomOutEasyDown();
-  }
+  },
 };
 let items1 = [obj];
 const importDefaultResultResult1 = importDefaultResult(ZoomInRotate, null, items1);
 importDefaultResultResult1.presetName = "ZoomInRotate";
-let closure_7 = { code: "function pnpm_ZoomTs3(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,animation(0,config))},{scale:delayFunction(delay,animation(1,config))}]},initialValues:{transform:[{translateX:-values.windowWidth},{scale:0}],...initialValues},callback:callback};}" };
+let closure_7 = {
+  code: "function pnpm_ZoomTs3(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,animation(0,config))},{scale:delayFunction(delay,animation(1,config))}]},initialValues:{transform:[{translateX:-values.windowWidth},{scale:0}],...initialValues},callback:callback};}",
+};
 class ZoomInLeft {
   constructor() {
     self = this;
@@ -208,12 +221,14 @@ obj = {
   key: "createInstance",
   value: function createInstance() {
     return ZoomOutEasyDown();
-  }
+  },
 };
 const items2 = [obj];
 const importDefaultResultResult2 = importDefaultResult(ZoomInLeft, null, items2);
 importDefaultResultResult2.presetName = "ZoomInLeft";
-let closure_8 = { code: "function pnpm_ZoomTs4(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,animation(0,config))},{scale:delayFunction(delay,animation(1,config))}]},initialValues:{transform:[{translateX:values.windowWidth},{scale:0}],...initialValues},callback:callback};}" };
+let closure_8 = {
+  code: "function pnpm_ZoomTs4(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,animation(0,config))},{scale:delayFunction(delay,animation(1,config))}]},initialValues:{transform:[{translateX:values.windowWidth},{scale:0}],...initialValues},callback:callback};}",
+};
 class ZoomInRight {
   constructor() {
     self = this;
@@ -269,12 +284,14 @@ const items3 = [
     key: "createInstance",
     value: function createInstance() {
       return ZoomOutEasyDown();
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult3 = importDefaultResult(ZoomInRight, null, items3);
 importDefaultResultResult3.presetName = "ZoomInRight";
-let closure_9 = { code: "function pnpm_ZoomTs5(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,animation(0,config))},{scale:delayFunction(delay,animation(1,config))}]},initialValues:{transform:[{translateY:-values.windowHeight},{scale:0}],...initialValues},callback:callback};}" };
+let closure_9 = {
+  code: "function pnpm_ZoomTs5(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,animation(0,config))},{scale:delayFunction(delay,animation(1,config))}]},initialValues:{transform:[{translateY:-values.windowHeight},{scale:0}],...initialValues},callback:callback};}",
+};
 class ZoomInUp {
   constructor() {
     self = this;
@@ -330,12 +347,14 @@ const items4 = [
     key: "createInstance",
     value: function createInstance() {
       return ZoomOutEasyDown();
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult4 = importDefaultResult(ZoomInUp, null, items4);
 importDefaultResultResult4.presetName = "ZoomInUp";
-let closure_10 = { code: "function pnpm_ZoomTs6(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,animation(0,config))},{scale:delayFunction(delay,animation(1,config))}]},initialValues:{transform:[{translateY:values.windowHeight},{scale:0}],...initialValues},callback:callback};}" };
+let closure_10 = {
+  code: "function pnpm_ZoomTs6(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,animation(0,config))},{scale:delayFunction(delay,animation(1,config))}]},initialValues:{transform:[{translateY:values.windowHeight},{scale:0}],...initialValues},callback:callback};}",
+};
 class ZoomInDown {
   constructor() {
     self = this;
@@ -391,12 +410,14 @@ const items5 = [
     key: "createInstance",
     value: function createInstance() {
       return ZoomOutEasyDown();
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult5 = importDefaultResult(ZoomInDown, null, items5);
 importDefaultResultResult5.presetName = "ZoomInDown";
-let closure_11 = { code: "function pnpm_ZoomTs7(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,animation(0,config))},{scale:delayFunction(delay,animation(1,config))}]},initialValues:{transform:[{translateY:-values.targetHeight},{scale:0}],...initialValues},callback:callback};}" };
+let closure_11 = {
+  code: "function pnpm_ZoomTs7(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,animation(0,config))},{scale:delayFunction(delay,animation(1,config))}]},initialValues:{transform:[{translateY:-values.targetHeight},{scale:0}],...initialValues},callback:callback};}",
+};
 class ZoomInEasyUp {
   constructor() {
     self = this;
@@ -452,12 +473,14 @@ const items6 = [
     key: "createInstance",
     value: function createInstance() {
       return ZoomOutEasyDown();
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult6 = importDefaultResult(ZoomInEasyUp, null, items6);
 importDefaultResultResult6.presetName = "ZoomInEasyUp";
-let closure_12 = { code: "function pnpm_ZoomTs8(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,animation(0,config))},{scale:delayFunction(delay,animation(1,config))}]},initialValues:{transform:[{translateY:values.targetHeight},{scale:0}],...initialValues},callback:callback};}" };
+let closure_12 = {
+  code: "function pnpm_ZoomTs8(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,animation(0,config))},{scale:delayFunction(delay,animation(1,config))}]},initialValues:{transform:[{translateY:values.targetHeight},{scale:0}],...initialValues},callback:callback};}",
+};
 class ZoomInEasyDown {
   constructor() {
     self = this;
@@ -513,12 +536,14 @@ const items7 = [
     key: "createInstance",
     value: function createInstance() {
       return ZoomOutEasyDown();
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult7 = importDefaultResult(ZoomInEasyDown, null, items7);
 importDefaultResultResult7.presetName = "ZoomInEasyDown";
-let closure_13 = { code: "function pnpm_ZoomTs9(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{scale:delayFunction(delay,animation(0,config))}]},initialValues:{transform:[{scale:1}],...initialValues},callback:callback};}" };
+let closure_13 = {
+  code: "function pnpm_ZoomTs9(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{scale:delayFunction(delay,animation(0,config))}]},initialValues:{transform:[{scale:1}],...initialValues},callback:callback};}",
+};
 class ZoomOut {
   constructor() {
     self = this;
@@ -574,12 +599,14 @@ const items8 = [
     key: "createInstance",
     value: function createInstance() {
       return ZoomOutEasyDown();
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult8 = importDefaultResult(ZoomOut, null, items8);
 importDefaultResultResult8.presetName = "ZoomOut";
-let closure_14 = { code: "function pnpm_ZoomTs10(){const{delayFunction,delay,animation,config,rotate,initialValues,callback}=this.__closure;return{animations:{transform:[{scale:delayFunction(delay,animation(0,config))},{rotate:delayFunction(delay,animation(rotate,config))}]},initialValues:{transform:[{scale:1},{rotate:'0rad'}],...initialValues},callback:callback};}" };
+let closure_14 = {
+  code: "function pnpm_ZoomTs10(){const{delayFunction,delay,animation,config,rotate,initialValues,callback}=this.__closure;return{animations:{transform:[{scale:delayFunction(delay,animation(0,config))},{rotate:delayFunction(delay,animation(rotate,config))}]},initialValues:{transform:[{scale:1},{rotate:'0rad'}],...initialValues},callback:callback};}",
+};
 class ZoomOutRotate {
   constructor() {
     self = this;
@@ -624,7 +651,15 @@ class ZoomOutRotate {
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, animation: first, config: tmp3[1], rotate: str, initialValues, callback: callbackV };
+      fn.__closure = {
+        delayFunction,
+        delay,
+        animation: first,
+        config: tmp3[1],
+        rotate: str,
+        initialValues,
+        callback: callbackV,
+      };
       fn.__workletHash = 14218456220590;
       fn.__initData = closure_1_14;
       return fn;
@@ -639,12 +674,14 @@ const items9 = [
     key: "createInstance",
     value: function createInstance() {
       return ZoomOutEasyDown();
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult9 = importDefaultResult(ZoomOutRotate, null, items9);
 importDefaultResultResult9.presetName = "ZoomOutRotate";
-let closure_15 = { code: "function pnpm_ZoomTs11(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,animation(-values.windowWidth,config))},{scale:delayFunction(delay,animation(0,config))}]},initialValues:{transform:[{translateX:0},{scale:1}],...initialValues},callback:callback};}" };
+let closure_15 = {
+  code: "function pnpm_ZoomTs11(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,animation(-values.windowWidth,config))},{scale:delayFunction(delay,animation(0,config))}]},initialValues:{transform:[{translateX:0},{scale:1}],...initialValues},callback:callback};}",
+};
 class ZoomOutLeft {
   constructor() {
     self = this;
@@ -700,12 +737,14 @@ const items10 = [
     key: "createInstance",
     value: function createInstance() {
       return ZoomOutEasyDown();
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult10 = importDefaultResult(ZoomOutLeft, null, items10);
 importDefaultResultResult10.presetName = "ZoomOutLeft";
-let closure_16 = { code: "function pnpm_ZoomTs12(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,animation(values.windowWidth,config))},{scale:delayFunction(delay,animation(0,config))}]},initialValues:{transform:[{translateX:0},{scale:1}],...initialValues},callback:callback};}" };
+let closure_16 = {
+  code: "function pnpm_ZoomTs12(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,animation(values.windowWidth,config))},{scale:delayFunction(delay,animation(0,config))}]},initialValues:{transform:[{translateX:0},{scale:1}],...initialValues},callback:callback};}",
+};
 class ZoomOutRight {
   constructor() {
     self = this;
@@ -761,12 +800,14 @@ const items11 = [
     key: "createInstance",
     value: function createInstance() {
       return ZoomOutEasyDown();
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult11 = importDefaultResult(ZoomOutRight, null, items11);
 importDefaultResultResult11.presetName = "ZoomOutRight";
-let closure_17 = { code: "function pnpm_ZoomTs13(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,animation(-values.windowHeight,config))},{scale:delayFunction(delay,animation(0,config))}]},initialValues:{transform:[{translateY:0},{scale:1}],...initialValues},callback:callback};}" };
+let closure_17 = {
+  code: "function pnpm_ZoomTs13(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,animation(-values.windowHeight,config))},{scale:delayFunction(delay,animation(0,config))}]},initialValues:{transform:[{translateY:0},{scale:1}],...initialValues},callback:callback};}",
+};
 class ZoomOutUp {
   constructor() {
     self = this;
@@ -822,12 +863,14 @@ const items12 = [
     key: "createInstance",
     value: function createInstance() {
       return ZoomOutEasyDown();
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult12 = importDefaultResult(ZoomOutUp, null, items12);
 importDefaultResultResult12.presetName = "ZoomOutUp";
-let closure_18 = { code: "function pnpm_ZoomTs14(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,animation(values.windowHeight,config))},{scale:delayFunction(delay,animation(0,config))}]},initialValues:{transform:[{translateY:0},{scale:1}],...initialValues},callback:callback};}" };
+let closure_18 = {
+  code: "function pnpm_ZoomTs14(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,animation(values.windowHeight,config))},{scale:delayFunction(delay,animation(0,config))}]},initialValues:{transform:[{translateY:0},{scale:1}],...initialValues},callback:callback};}",
+};
 class ZoomOutDown {
   constructor() {
     self = this;
@@ -883,12 +926,14 @@ const items13 = [
     key: "createInstance",
     value: function createInstance() {
       return ZoomOutEasyDown();
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult13 = importDefaultResult(ZoomOutDown, null, items13);
 importDefaultResultResult13.presetName = "ZoomOutDown";
-let closure_19 = { code: "function pnpm_ZoomTs15(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,animation(-values.currentHeight,config))},{scale:delayFunction(delay,animation(0,config))}]},initialValues:{transform:[{translateY:0},{scale:1}],...initialValues},callback:callback};}" };
+let closure_19 = {
+  code: "function pnpm_ZoomTs15(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,animation(-values.currentHeight,config))},{scale:delayFunction(delay,animation(0,config))}]},initialValues:{transform:[{translateY:0},{scale:1}],...initialValues},callback:callback};}",
+};
 class ZoomOutEasyUp {
   constructor() {
     self = this;
@@ -944,12 +989,14 @@ const items14 = [
     key: "createInstance",
     value: function createInstance() {
       return ZoomOutEasyDown();
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult14 = importDefaultResult(ZoomOutEasyUp, null, items14);
 importDefaultResultResult14.presetName = "ZoomOutEasyUp";
-let closure_20 = { code: "function pnpm_ZoomTs16(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,animation(values.currentHeight,config))},{scale:delayFunction(delay,animation(0,config))}]},initialValues:{transform:[{translateY:0},{scale:1}],...initialValues},callback:callback};}" };
+let closure_20 = {
+  code: "function pnpm_ZoomTs16(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,animation(values.currentHeight,config))},{scale:delayFunction(delay,animation(0,config))}]},initialValues:{transform:[{translateY:0},{scale:1}],...initialValues},callback:callback};}",
+};
 class ZoomOutEasyDown {
   constructor() {
     self = this;
@@ -1004,8 +1051,8 @@ const items15 = [
     key: "createInstance",
     value: function createInstance() {
       return ZoomOutEasyDown();
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult15 = importDefaultResult(ZoomOutEasyDown, null, items15);
 importDefaultResultResult15.presetName = "ZoomOutEasyDown";

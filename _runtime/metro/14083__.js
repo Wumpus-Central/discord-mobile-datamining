@@ -32,7 +32,7 @@ export default () => () => {
         closure_0.emit("storybook", type.payload);
       }
     },
-    features: obj
+    features: obj,
   };
   obj = {
     storybookSwitcher(arg0) {
@@ -47,7 +47,7 @@ export default () => () => {
           return <closure_3_1.default />;
         };
       };
-    }
+    },
   };
   return obj;
 };

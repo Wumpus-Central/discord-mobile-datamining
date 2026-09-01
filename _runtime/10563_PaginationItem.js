@@ -6,7 +6,9 @@ import { jsx } from "react/00021_jsxProd.js";
 const require = arg1;
 noopDefault;
 ({ Pressable: c3, View: c4 } = get_ActivityIndicator);
-let closure_6 = { code: "function pnpm_PaginationItemTsx1(){const{horizontal,height,width,index,animValue,count,interpolate,Extrapolation}=this.__closure;var _animValue,_animValue2;const size=horizontal?height:width;let inputRange=[index-1,index,index+1];let outputRange=[-size,0,size];if(index===0&&((_animValue=animValue)===null||_animValue===void 0?void 0:_animValue.value)>count-1){inputRange=[count-1,count,count+1];outputRange=[-size,0,size];}return{transform:[{translateX:interpolate((_animValue2=animValue)===null||_animValue2===void 0?void 0:_animValue2.value,inputRange,outputRange,Extrapolation.CLAMP)}]};}" };
+let closure_6 = {
+  code: "function pnpm_PaginationItemTsx1(){const{horizontal,height,width,index,animValue,count,interpolate,Extrapolation}=this.__closure;var _animValue,_animValue2;const size=horizontal?height:width;let inputRange=[index-1,index,index+1];let outputRange=[-size,0,size];if(index===0&&((_animValue=animValue)===null||_animValue===void 0?void 0:_animValue.value)>count-1){inputRange=[count-1,count,count+1];outputRange=[-size,0,size];}return{transform:[{translateX:interpolate((_animValue2=animValue)===null||_animValue2===void 0?void 0:_animValue2.value,inputRange,outputRange,Extrapolation.CLAMP)}]};}",
+};
 
 export const PaginationItem = (animValue) => {
   const iter = animValue.animValue;
@@ -66,12 +68,28 @@ export const PaginationItem = (animValue) => {
     obj[0] = items4;
     return obj;
   };
-  obj = { horizontal, height: size, width: num, index, animValue: iter, count, interpolate: iter(count[3]).interpolate, Extrapolation: iter(count[3]).Extrapolation };
+  obj = {
+    horizontal,
+    height: size,
+    width: num,
+    index,
+    animValue: iter,
+    count,
+    interpolate: iter(count[3]).interpolate,
+    Extrapolation: iter(count[3]).Extrapolation,
+  };
   fn.__closure = obj;
   fn.__workletHash = 1536479533103;
   fn.__initData = closure_6;
   let items = [iter, index, count, horizontal];
-  obj = { onPress, accessibilityLabel, accessibilityRole: "button", accessibilityHint: null, accessibilityState: null, children: null };
+  obj = {
+    onPress,
+    accessibilityLabel,
+    accessibilityRole: "button",
+    accessibilityHint: null,
+    accessibilityState: null,
+    children: null,
+  };
   let str = "";
   const animatedStyle = obj.useAnimatedStyle(fn, items);
   if (iter.value !== index) {

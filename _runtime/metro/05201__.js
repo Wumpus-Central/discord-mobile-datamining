@@ -78,5 +78,5 @@ arg5.default = {
   },
   PENTAX_IFD_OFFSET: 10,
   MODEL_ID: obj,
-  LIK3III: obj
+  LIK3III: obj,
 };

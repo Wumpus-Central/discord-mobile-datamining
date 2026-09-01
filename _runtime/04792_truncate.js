@@ -2,7 +2,6 @@
 import _mod541 from "metro/00541__.js";
 import floor from "04793_floor.js";
 
-
 export default function truncate(num) {
   if (typeof num !== "number") {
     if (typeof num !== "bigint") {
@@ -20,4 +19,4 @@ export default function truncate(num) {
     num = tmp3;
   }
   return num;
-};
+}

@@ -5,7 +5,13 @@ import registerAssetDefault3 from "05505_registerAsset.js";
 import registerAssetDefault4 from "05506_registerAsset.js";
 import registerAssetDefault5 from "05507_registerAsset.js";
 
-const items = [registerAssetDefault, registerAssetDefault2, registerAssetDefault3, registerAssetDefault4, registerAssetDefault5];
+const items = [
+  registerAssetDefault,
+  registerAssetDefault2,
+  registerAssetDefault3,
+  registerAssetDefault4,
+  registerAssetDefault5,
+];
 for (const key10025 in require("metro/05508__.js")) {
   let tmp2 = key10025;
   arg5[key10025] = require("metro/05508__.js")[key10025];

@@ -27,8 +27,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 let closure_2 = ["style"];
 noopAll;
@@ -70,7 +69,7 @@ let obj = {
       rippleRadius = rippleRadius.rippleRadius;
       obj.rippleRadius = rippleRadius;
     }
-  }
+  },
 };
 const items = [
   obj,
@@ -89,8 +88,8 @@ const items = [
       obj.style = style;
       obj.extraButtonProps = self.getExtraButtonProps();
       return jsx(TouchableNativeFeedback(5785), {});
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(TouchableNativeFeedback, items);
 obj = {};
@@ -98,9 +97,22 @@ let merged = Object.assign(_isNativeReflectConstructDefault.defaultProps);
 obj.useForeground = true;
 obj.extraButtonProps = { rippleColor: null };
 importDefaultResultResult.defaultProps = obj;
-importDefaultResultResult.SelectableBackground = (rippleRadius) => ({ type: "ThemeAttrAndroid", attribute: "selectableItemBackground", rippleRadius });
-importDefaultResultResult.SelectableBackgroundBorderless = (rippleRadius) => ({ type: "ThemeAttrAndroid", attribute: "selectableItemBackgroundBorderless", rippleRadius });
-importDefaultResultResult.Ripple = (color, borderless, rippleRadius) => ({ type: "RippleAndroid", color, borderless, rippleRadius });
+importDefaultResultResult.SelectableBackground = (rippleRadius) => ({
+  type: "ThemeAttrAndroid",
+  attribute: "selectableItemBackground",
+  rippleRadius,
+});
+importDefaultResultResult.SelectableBackgroundBorderless = (rippleRadius) => ({
+  type: "ThemeAttrAndroid",
+  attribute: "selectableItemBackgroundBorderless",
+  rippleRadius,
+});
+importDefaultResultResult.Ripple = (color, borderless, rippleRadius) => ({
+  type: "RippleAndroid",
+  color,
+  borderless,
+  rippleRadius,
+});
 importDefaultResultResult.canUseNativeForeground = () => Platform.Version >= 23;
 
 export default importDefaultResultResult;

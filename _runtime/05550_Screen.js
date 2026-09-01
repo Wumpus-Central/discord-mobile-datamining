@@ -7,7 +7,12 @@ import jsxProd from "react/00021_jsxProd.js";
 const require = arg1;
 ({ StyleSheet, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-const styles = StyleSheet.create({ container: { flex: 1 }, content: { flex: 1 }, header: { zIndex: 1 }, absolute: { position: "absolute", top: 0, start: 0, end: 0 } });
+const styles = StyleSheet.create({
+  container: { flex: 1 },
+  content: { flex: 1 },
+  header: { zIndex: 1 },
+  absolute: { position: "absolute", top: 0, start: 0, end: 0 },
+});
 
 export const Screen = function Screen(aria_hidden) {
   let obj = modal(headerStatusBarHeight[4]);
@@ -35,7 +40,9 @@ export const Screen = function Screen(aria_hidden) {
     headerStatusBarHeight = num2;
   }
   ({ route, navigation, children, style } = aria_hidden);
-  const frameSize = modal(headerStatusBarHeight[7]).useFrameSize((layout) => modal(headerStatusBarHeight[8]).getDefaultHeaderHeight(layout, modal, headerStatusBarHeight));
+  const frameSize = modal(headerStatusBarHeight[7]).useFrameSize((layout) =>
+    modal(headerStatusBarHeight[8]).getDefaultHeaderHeight(layout, modal, headerStatusBarHeight),
+  );
   const ref = obj1.useRef(null);
   const tmpResult = modal(headerStatusBarHeight[7]);
   [tmp10, closure_3] = ref(obj1.useState(frameSize), 2);
@@ -55,10 +62,10 @@ export const Screen = function Screen(aria_hidden) {
     obj = { route: null, navigation: null, children: null };
     obj[0] = route;
     obj[1] = navigation;
-    const items2 = [tmp13.header, ];
+    const items2 = [tmp13.header];
     let tmp17 = null;
     if (headerTransparent) {
-      const items3 = [tmp13.absolute, ];
+      const items3 = [tmp13.absolute];
       obj1 = { minHeight: null };
       obj1[0] = tmp10;
       items3[1] = obj1;
@@ -77,7 +84,7 @@ export const Screen = function Screen(aria_hidden) {
     obj[2] = closure_5(closure_4, obj2);
     tmp15Result = tmp15(tmp(tmp2[10]).NavigationProvider, obj);
   }
-  const items4 = [tmp15Result, ];
+  const items4 = [tmp15Result];
   const obj4 = { style: container.content, children: null };
   let tmp20 = context;
   if (!context) {

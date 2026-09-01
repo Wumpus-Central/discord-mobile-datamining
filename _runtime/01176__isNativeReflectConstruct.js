@@ -24,8 +24,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class ReactNativeClient {
   constructor(arg0) {
@@ -76,7 +75,8 @@ class ReactNativeClient {
     obj1 = { settings: Object.assign({ infer_ip: str }, settings) };
     obj[0] = Object.assign(merged1, obj1);
     global._metadata = Object.assign(merged, obj);
-    global.parentSpanIsAlwaysRootSpan = undefined === global.parentSpanIsAlwaysRootSpan || global.parentSpanIsAlwaysRootSpan;
+    global.parentSpanIsAlwaysRootSpan =
+      undefined === global.parentSpanIsAlwaysRootSpan || global.parentSpanIsAlwaysRootSpan;
     ({ enableLogs: enableLogs2, enableLogs } = global);
     if (enableLogs2) {
       str2 = "native";
@@ -105,7 +105,10 @@ class ReactNativeClient {
     tmp14Result._outcomesBuffer = [];
     if (true === global.sendDefaultPii) {
       str4 = "beforeSendSession";
-      onResult = tmp14Result.on("beforeSendSession", require("registerSpanErrorInstrumentation").addAutoIpAddressToSession);
+      onResult = tmp14Result.on(
+        "beforeSendSession",
+        require("registerSpanErrorInstrumentation").addAutoIpAddressToSession,
+      );
     }
     if (global.enableLogs) {
       str5 = "flush";
@@ -136,21 +139,32 @@ let items = [
       if (arg1 === undefined) {
         obj = {};
       }
-      return ReactNativeClient(1024).eventFromException(this._options.stackParser, arg0, obj, this._options.attachStacktrace);
-    }
+      return ReactNativeClient(1024).eventFromException(
+        this._options.stackParser,
+        arg0,
+        obj,
+        this._options.attachStacktrace,
+      );
+    },
   },
   {
     key: "eventFromMessage",
     value: function eventFromMessage(arg0, arg1, arg2) {
-      return ReactNativeClient(1024).eventFromMessage(this._options.stackParser, arg0, arg1, arg2, this._options.attachStacktrace);
-    }
+      return ReactNativeClient(1024).eventFromMessage(
+        this._options.stackParser,
+        arg0,
+        arg1,
+        arg2,
+        this._options.attachStacktrace,
+      );
+    },
   },
   {
     key: "nativeCrash",
     value: function nativeCrash() {
       const NATIVE = ReactNativeClient(1001).NATIVE;
       NATIVE.nativeCrash();
-    }
+    },
   },
   {
     key: "close",
@@ -165,7 +179,7 @@ let items = [
         const NATIVE = _self(fn[12]).NATIVE;
         return NATIVE.closeNativeSdk().then(() => closure_0);
       });
-    }
+    },
   },
   {
     key: "captureUserFeedback",
@@ -173,7 +187,7 @@ let items = [
       let obj = ReactNativeClient(1178);
       obj = { metadata: this._options._metadata, dsn: this.getDsn(), tunnel: "r" };
       this.sendEnvelope(obj.createUserFeedbackEnvelope(arg0, obj));
-    }
+    },
   },
   {
     key: "sendEnvelope",
@@ -211,7 +225,7 @@ let items = [
       }
       let debug = tmp2(817).debug;
       debug.error("Transport disabled");
-    }
+    },
   },
   {
     key: "init",
@@ -224,7 +238,7 @@ let items = [
       }
       fn([]);
       self._initNativeSdk();
-    }
+    },
   },
   {
     key: "on",
@@ -236,7 +250,7 @@ let items = [
       }
       const items = [arg0, arg1];
       return fn(items);
-    }
+    },
   },
   {
     key: "emit",
@@ -250,7 +264,7 @@ let items = [
       }
       const items = [arg0, ...substr];
       fn(items);
-    }
+    },
   },
   {
     key: "_initNativeSdk",
@@ -258,7 +272,12 @@ let items = [
       let self = this;
       self = this;
       const NATIVE = self(1001).NATIVE;
-      let obj = { defaultSidecarUrl: null, devServerUrl: null, mobileReplayOptions: null, androidProfilingOptions: null };
+      let obj = {
+        defaultSidecarUrl: null,
+        devServerUrl: null,
+        mobileReplayOptions: null,
+        androidProfilingOptions: null,
+      };
       const merged = Object.assign({}, this._options);
       obj[0] = self(1128).getDefaultSidecarUrl();
       const obj2 = self(1128);
@@ -290,49 +309,56 @@ let items = [
       obj[3] = prop;
       const nativeSdk = NATIVE.initNativeSdk(Object.assign(merged, obj));
       const obj3 = self(814);
-      const nextPromise = nativeSdk.then((arg0) => arg0, () => {
-        const result = self._showCannotConnectDialog();
-        return false;
-      });
-      nativeSdk.then((arg0) => arg0, () => {
-        const result = self._showCannotConnectDialog();
-        return false;
-      }).then((arg0) => {
-        let obj = self;
-        const _options = self._options;
-        const onReady = _options.onReady;
-        let tmp = null === onReady;
-        if (!tmp) {
-          tmp = undefined === onReady;
-        }
-        if (!tmp) {
-          const call = onReady.call;
-          obj = { didCallNativeInit: null };
-          obj[0] = arg0;
-          if (typeof call === "unknown") {
-            onReady(obj);
-          } else {
-            call(_options, obj);
+      const nextPromise = nativeSdk.then(
+        (arg0) => arg0,
+        () => {
+          const result = self._showCannotConnectDialog();
+          return false;
+        },
+      );
+      nativeSdk
+        .then(
+          (arg0) => arg0,
+          () => {
+            const result = self._showCannotConnectDialog();
+            return false;
+          },
+        )
+        .then((arg0) => {
+          let obj = self;
+          const _options = self._options;
+          const onReady = _options.onReady;
+          let tmp = null === onReady;
+          if (!tmp) {
+            tmp = undefined === onReady;
           }
-        }
-        obj.emit("afterInit");
-      }).then(undefined, (arg0) => {
-        const debug = self(table[10]).debug;
-        debug.error("The OnReady callback threw an error: ", arg0);
-      });
-    }
+          if (!tmp) {
+            const call = onReady.call;
+            obj = { didCallNativeInit: null };
+            obj[0] = arg0;
+            if (typeof call === "unknown") {
+              onReady(obj);
+            } else {
+              call(_options, obj);
+            }
+          }
+          obj.emit("afterInit");
+        })
+        .then(undefined, (arg0) => {
+          const debug = self(table[10]).debug;
+          debug.error("The OnReady callback threw an error: ", arg0);
+        });
+    },
   },
   {
     key: "_showCannotConnectDialog",
-    value: function _showCannotConnectDialog() {
-
-    }
+    value: function _showCannotConnectDialog() {},
   },
   {
     key: "_attachClientReportTo",
     value: function _attachClientReportTo(_outcomesBuffer, arg1) {
       if (_outcomesBuffer.length > 0) {
-        const items = [{ type: "client_report" }, ];
+        const items = [{ type: "client_report" }];
         const obj = { timestamp: null, discarded_events: null };
         obj[0] = ReactNativeClient(817).dateTimestampInSeconds();
         obj[1] = _outcomesBuffer;
@@ -341,8 +367,8 @@ let items = [
         arg1[ReactNativeClient(undefined, 1178).items].push(items);
         const arr2 = arg1[ReactNativeClient(undefined, 1178).items];
       }
-    }
-  }
+    },
+  },
 ];
 
 export const ReactNativeClient = importDefaultResult(ReactNativeClient, items);

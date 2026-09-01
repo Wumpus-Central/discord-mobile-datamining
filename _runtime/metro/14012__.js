@@ -9,9 +9,7 @@ if (getOwnPropertyDescriptor) {
 const tmp = call(prototype, "name");
 let tmp2 = tmp;
 if (tmp) {
-  tmp2 = "something" === function something() {
-
-  }.name;
+  tmp2 = "something" === function something() {}.name;
 }
 let tmp3 = tmp;
 if (tmp) {

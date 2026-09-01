@@ -12,7 +12,9 @@ arg5.getDebugMetadata = function getDebugMetadata() {
       if (keys.length) {
         if (keys.length > 1) {
           const debug = tmp(817).debug;
-          debug.warn("[Profiling] Multiple debug images found, but only one one bundle is supported. Using the first one...");
+          debug.warn(
+            "[Profiling] Multiple debug images found, but only one one bundle is supported. Using the first one...",
+          );
           return [];
         } else if (keys[0]) {
           if (_sentryDebugIds[keys[0]]) {

@@ -37,13 +37,13 @@ export const wrapMcpServerWithSentry = function wrapMcpServerWithSentry(arg0, re
       tmpResult = tmp(822);
       tmpResult.fill(arg0, "connect", (arg0) => {
         closure_0 = arg0;
-        closure_0 = closure_1_2(function(arg0) {
+        closure_0 = closure_1_2(function (arg0) {
           const self = this;
           closure_1 = arg0;
           closure_2 = [...arguments].slice();
           c6 = 0;
           c7 = 0;
-          const iter = (function*(arg0) {
+          const iter = (function* (arg0) {
             closure_5 = closure_0;
             closure_4 = closure_0;
             closure_3 = tmp2;
@@ -66,7 +66,7 @@ export const wrapMcpServerWithSentry = function wrapMcpServerWithSentry(arg0, re
           iter.next();
           return iter;
         });
-        return function(arg0) {
+        return function (arg0) {
           const self = this;
           const apply = closure_0.apply;
           if (typeof apply === "unknown") {

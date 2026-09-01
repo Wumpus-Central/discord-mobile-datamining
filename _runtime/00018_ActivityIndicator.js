@@ -59,6 +59,10 @@ class ActivityIndicator {
   }
 }
 ActivityIndicator.displayName = "ActivityIndicator";
-let closure_4 = get_hairlineWidthDefault.create({ container: { alignItems: "center", justifyContent: "center" }, sizeSmall: { width: 20, height: 20 }, sizeLarge: { width: 36, height: 36 } });
+let closure_4 = get_hairlineWidthDefault.create({
+  container: { alignItems: "center", justifyContent: "center" },
+  sizeSmall: { width: 20, height: 20 },
+  sizeLarge: { width: 36, height: 36 },
+});
 
 export default ActivityIndicator;

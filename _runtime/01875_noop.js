@@ -7,4 +7,4 @@ noopDefault;
 
 export default function _default(children) {
   return callback(closure_0, { children: children.children });
-};
+}

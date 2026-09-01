@@ -43,7 +43,9 @@ const items = [
         }
         if (true !== Boolean(childList)) {
           const _TypeError2 = TypeError;
-          const typeError = new TypeError("Failed to execute 'observe' on 'MutationObserver': The options object must set 'childList' to true.");
+          const typeError = new TypeError(
+            "Failed to execute 'observe' on 'MutationObserver': The options object must set 'childList' to true.",
+          );
           throw typeError;
         } else {
           let attributes;
@@ -61,7 +63,9 @@ const items = [
             }
             if (null != attributeFilter) {
               const _Error4 = Error;
-              const error1 = new Error("Failed to execute 'observe' on 'MutationObserver': attributeFilter is not supported");
+              const error1 = new Error(
+                "Failed to execute 'observe' on 'MutationObserver': attributeFilter is not supported",
+              );
               throw error1;
             } else {
               let attributeOldValue;
@@ -70,7 +74,9 @@ const items = [
               }
               if (null != attributeOldValue) {
                 const _Error3 = Error;
-                const error2 = new Error("Failed to execute 'observe' on 'MutationObserver': attributeOldValue is not supported");
+                const error2 = new Error(
+                  "Failed to execute 'observe' on 'MutationObserver': attributeOldValue is not supported",
+                );
                 throw error2;
               } else {
                 let characterData;
@@ -79,7 +85,9 @@ const items = [
                 }
                 if (null != characterData) {
                   const _Error2 = Error;
-                  const error3 = new Error("Failed to execute 'observe' on 'MutationObserver': characterData is not supported");
+                  const error3 = new Error(
+                    "Failed to execute 'observe' on 'MutationObserver': characterData is not supported",
+                  );
                   throw error3;
                 } else {
                   let prop;
@@ -88,7 +96,9 @@ const items = [
                   }
                   if (null != prop) {
                     const _Error = Error;
-                    const error4 = new Error("Failed to execute 'observe' on 'MutationObserver': characterDataOldValue is not supported");
+                    const error4 = new Error(
+                      "Failed to execute 'observe' on 'MutationObserver': characterDataOldValue is not supported",
+                    );
                     throw error4;
                   } else {
                     const self = this;
@@ -111,10 +121,12 @@ const items = [
         }
       } else {
         const _TypeError = TypeError;
-        const typeError1 = new TypeError("Failed to execute 'observe' on 'MutationObserver': parameter 1 is not of type 'ReactNativeElement'.");
+        const typeError1 = new TypeError(
+          "Failed to execute 'observe' on 'MutationObserver': parameter 1 is not of type 'ReactNativeElement'.",
+        );
         throw typeError1;
       }
-    }
+    },
   },
   {
     key: "disconnect",
@@ -127,7 +139,7 @@ const items = [
         tmp._mutationObserverId = null;
         const obj2 = notifyMutationObserversAll;
       }
-    }
+    },
   },
   {
     key: "_getOrCreateMutationObserverId",
@@ -141,14 +153,14 @@ const items = [
         const obj = notifyMutationObserversAll;
       }
       return _mutationObserverId;
-    }
+    },
   },
   {
     key: "__getObserverID",
     value: function __getObserverID() {
       return this._mutationObserverId;
-    }
-  }
+    },
+  },
 ];
 const tmp2 = _createClassDefault(MutationObserver, items);
 setPlatformObject.setPlatformObject(tmp2);

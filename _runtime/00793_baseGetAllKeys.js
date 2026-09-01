@@ -2,7 +2,6 @@
 import _mod599 from "metro/00599__.js";
 import arrayPush from "00794_arrayPush.js";
 
-
 export default function baseGetAllKeys(arg0, arg1, arg2) {
   const tmp = arg1(arg0);
   let tmp2ResultResult = tmp;
@@ -11,4 +10,4 @@ export default function baseGetAllKeys(arg0, arg1, arg2) {
     const tmp2Result = arrayPush;
   }
   return tmp2ResultResult;
-};
+}

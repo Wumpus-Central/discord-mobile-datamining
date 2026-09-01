@@ -24,8 +24,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 function mapStringToNumericComponents(str) {
   const tmp = AnimatedInterpolation(51)(str);
@@ -149,7 +148,10 @@ let items = [
                 extrapolate = obj.extrapolate;
               }
               return (num) => {
-                _undefined(_undefined2[7])(typeof num === "number", "Cannot interpolate an input which is not a number");
+                _undefined(_undefined2[7])(
+                  typeof num === "number",
+                  "Cannot interpolate an input which is not a number",
+                );
                 num = 1;
                 if (1 < _undefined2.length - 1) {
                   let num2 = 1;
@@ -220,35 +222,37 @@ let items = [
                 return tmp13;
               };
             });
-            self._interpolation = isColor ? ((arg0) => {
-              closure_0 = arg0;
-              const mapped = extrapolate.map((arg0, arg1) => {
-                const tmp = arg0(closure_0);
-                if (arg1 < 3) {
-                  const _Math2 = Math;
-                  let rounded = Math.round(tmp);
-                } else {
-                  const _Math = Math;
-                  rounded = Math.round(1000 * tmp) / 1000;
+            self._interpolation = isColor
+              ? (arg0) => {
+                  closure_0 = arg0;
+                  const mapped = extrapolate.map((arg0, arg1) => {
+                    const tmp = arg0(closure_0);
+                    if (arg1 < 3) {
+                      const _Math2 = Math;
+                      let rounded = Math.round(tmp);
+                    } else {
+                      const _Math = Math;
+                      rounded = Math.round(1000 * tmp) / 1000;
+                    }
+                    return rounded;
+                  });
+                  return "rgba(" + mapped[0] + ", " + mapped[1] + ", " + mapped[2] + ", " + mapped[3] + ")";
                 }
-                return rounded;
-              });
-              return "rgba(" + mapped[0] + ", " + mapped[1] + ", " + mapped[2] + ", " + mapped[3] + ")";
-            }) : ((arg0) => {
-              closure_0 = arg0;
-              const table = extrapolate.map((arg0) => arg0(closure_0));
-              c2 = 0;
-              const components = table[0].components;
-              const mapped = components.map((num) => {
-                let tmp = num;
-                if (typeof num === "number") {
-                  closure_2 = tmp4 + 1;
-                  tmp = table[tmp4];
-                }
-                return tmp;
-              });
-              return mapped.join("");
-            });
+              : (arg0) => {
+                  closure_0 = arg0;
+                  const table = extrapolate.map((arg0) => arg0(closure_0));
+                  c2 = 0;
+                  const components = table[0].components;
+                  const mapped = components.map((num) => {
+                    let tmp = num;
+                    if (typeof num === "number") {
+                      closure_2 = tmp4 + 1;
+                      tmp = table[tmp4];
+                    }
+                    return tmp;
+                  });
+                  return mapped.join("");
+                };
           }
         }
         if (typeof _config.outputRange[0] === "object") {
@@ -454,7 +458,7 @@ let items = [
         }
       }
       return self._interpolation;
-    }
+    },
   },
   {
     key: "__makeNative",
@@ -469,16 +473,19 @@ let items = [
       }
       const items = [arg0];
       fn(items);
-    }
+    },
   },
   {
     key: "__getValue",
     value: function __getValue() {
       const _parent = this._parent;
       const __getValueResult = _parent.__getValue();
-      AnimatedInterpolation(38)(typeof __getValueResult === "number", "Cannot interpolate an input which is not a number.");
+      AnimatedInterpolation(38)(
+        typeof __getValueResult === "number",
+        "Cannot interpolate an input which is not a number.",
+      );
       return this._getInterpolation()(__getValueResult);
-    }
+    },
   },
   {
     key: "interpolate",
@@ -497,7 +504,7 @@ let items = [
       tmp4Result._parent = this;
       tmp4Result._config = _config;
       return tmp4Result;
-    }
+    },
   },
   {
     key: "__attach",
@@ -511,7 +518,7 @@ let items = [
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
-    }
+    },
   },
   {
     key: "__detach",
@@ -525,7 +532,7 @@ let items = [
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
-    }
+    },
   },
   {
     key: "__getNativeConfig",
@@ -552,9 +559,17 @@ let items = [
           mapped = outputRange;
         }
       }
-      return { inputRange: self._config.inputRange, outputRange: mapped, outputType: platform_color, extrapolateLeft: tmp2, extrapolateRight: tmp3, type: "interpolation", debugID: self.__getDebugID() };
-    }
-  }
+      return {
+        inputRange: self._config.inputRange,
+        outputRange: mapped,
+        outputType: platform_color,
+        extrapolateLeft: tmp2,
+        extrapolateRight: tmp3,
+        type: "interpolation",
+        debugID: self.__getDebugID(),
+      };
+    },
+  },
 ];
 
 export default importDefaultResult(AnimatedInterpolation, items);

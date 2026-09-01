@@ -12,7 +12,11 @@ function createImpl(arg0) {
       tmp = closure_1_3;
     }
     closure_1 = tmp;
-    const syncExternalStore = closure_1_2.useSyncExternalStore(closure_0.subscribe, () => callback(store.getState()), () => callback(store.getInitialState()));
+    const syncExternalStore = closure_1_2.useSyncExternalStore(
+      closure_0.subscribe,
+      () => callback(store.getState()),
+      () => callback(store.getInitialState()),
+    );
     const debugValue = closure_1_2.useDebugValue(syncExternalStore);
     return syncExternalStore;
   }
@@ -32,7 +36,11 @@ export const create = (arg0) => {
         tmp = closure_1_3;
       }
       closure_1 = tmp;
-      const syncExternalStore = closure_1_2.useSyncExternalStore(closure_0.subscribe, () => callback(store.getState()), () => callback(store.getInitialState()));
+      const syncExternalStore = closure_1_2.useSyncExternalStore(
+        closure_0.subscribe,
+        () => callback(store.getState()),
+        () => callback(store.getInitialState()),
+      );
       const debugValue = closure_1_2.useDebugValue(syncExternalStore);
       return syncExternalStore;
     }
@@ -52,7 +60,11 @@ export const useStore = function useStore(subscribe) {
     tmp = identity;
   }
   closure_1 = tmp;
-  const syncExternalStore = closure_2.useSyncExternalStore(subscribe.subscribe, () => callback(store.getState()), () => callback(store.getInitialState()));
+  const syncExternalStore = closure_2.useSyncExternalStore(
+    subscribe.subscribe,
+    () => callback(store.getState()),
+    () => callback(store.getInitialState()),
+  );
   const debugValue = closure_2.useDebugValue(syncExternalStore);
   return syncExternalStore;
 };

@@ -54,7 +54,7 @@ arg5.addIntegration = function addIntegration(name) {
   } else if (tmp(823).DEBUG_BUILD) {
     const debug = tmp(824).debug;
     const _HermesInternal = HermesInternal;
-    debug.warn("Cannot add integration \"" + name.name + "\" because no SDK Client is available.");
+    debug.warn('Cannot add integration "' + name.name + '" because no SDK Client is available.');
   }
 };
 arg5.afterSetupIntegrations = function afterSetupIntegrations(arg0, arg1) {

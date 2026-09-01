@@ -25,8 +25,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 let closure_2 = ["stickySectionHeadersEnabled"];
 class SectionList {
@@ -63,7 +62,7 @@ let items = [
         const _wrapperListRef = tmp._wrapperListRef;
         _wrapperListRef.scrollToLocation(arg0);
       }
-    }
+    },
   },
   {
     key: "recordInteraction",
@@ -76,7 +75,7 @@ let items = [
       if (_wrapperListRef) {
         _wrapperListRef.recordInteraction();
       }
-    }
+    },
   },
   {
     key: "flashScrollIndicators",
@@ -89,7 +88,7 @@ let items = [
       if (_wrapperListRef) {
         const result = _wrapperListRef.flashScrollIndicators();
       }
-    }
+    },
   },
   {
     key: "getScrollResponder",
@@ -100,7 +99,7 @@ let items = [
         _wrapperListRef = _wrapperListRef2.getListRef();
       }
       return _wrapperListRef ? _wrapperListRef.getScrollResponder() : undefined;
-    }
+    },
   },
   {
     key: "getScrollableNode",
@@ -111,7 +110,7 @@ let items = [
         _wrapperListRef = _wrapperListRef2.getListRef();
       }
       return _wrapperListRef ? _wrapperListRef.getScrollableNode() : undefined;
-    }
+    },
   },
   {
     key: "setNativeProps",
@@ -124,7 +123,7 @@ let items = [
       if (_wrapperListRef) {
         _wrapperListRef.setNativeProps(arg0);
       }
-    }
+    },
   },
   {
     key: "render",
@@ -145,8 +144,8 @@ let items = [
         return arg0[arg1];
       };
       return jsx(SectionList(312).VirtualizedSectionList, {});
-    }
-  }
+    },
+  },
 ];
 
 export default importDefaultResult(SectionList, items);

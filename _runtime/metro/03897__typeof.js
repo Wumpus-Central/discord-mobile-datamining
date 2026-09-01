@@ -101,7 +101,12 @@ class LocalDayParser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 90, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", {
+            value: 90,
+            enumerable: true,
+            configurable: true,
+            writable: true,
+          });
         } else {
           num3 = 90;
           applyResult.priority = 90;
@@ -219,25 +224,40 @@ obj = {
   value: function parse(arg0, arg1, ordinalNumber) {
     _createSuperInternal = arg3;
     function valueCallback(arg0) {
-      return (arg0 + weekStartsOn.weekStartsOn + 6) % 7 + 7 * Math.floor((arg0 - 1) / 7);
+      return ((arg0 + weekStartsOn.weekStartsOn + 6) % 7) + 7 * Math.floor((arg0 - 1) / 7);
     }
     if ("e" !== arg1) {
       if ("ee" !== arg1) {
         if ("eo" === arg1) {
           return _createSuperInternal(3880).mapValue(ordinalNumber.ordinalNumber(arg0, { unit: "day" }), valueCallback);
         } else if ("eee" === arg1) {
-          return ordinalNumber.day(arg0, { width: "abbreviated", context: "formatting" }) || ordinalNumber.day(arg0, { width: "short", context: "formatting" }) || ordinalNumber.day(arg0, { width: "narrow", context: "formatting" });
+          return (
+            ordinalNumber.day(arg0, { width: "abbreviated", context: "formatting" }) ||
+            ordinalNumber.day(arg0, { width: "short", context: "formatting" }) ||
+            ordinalNumber.day(arg0, { width: "narrow", context: "formatting" })
+          );
         } else if ("eeeee" === arg1) {
           return ordinalNumber.day(arg0, { width: "narrow", context: "formatting" });
         } else if ("eeeeee" === arg1) {
-          return ordinalNumber.day(arg0, { width: "short", context: "formatting" }) || ordinalNumber.day(arg0, { width: "narrow", context: "formatting" });
+          return (
+            ordinalNumber.day(arg0, { width: "short", context: "formatting" }) ||
+            ordinalNumber.day(arg0, { width: "narrow", context: "formatting" })
+          );
         } else {
-          return ordinalNumber.day(arg0, { width: "wide", context: "formatting" }) || ordinalNumber.day(arg0, { width: "abbreviated", context: "formatting" }) || ordinalNumber.day(arg0, { width: "short", context: "formatting" }) || ordinalNumber.day(arg0, { width: "narrow", context: "formatting" });
+          return (
+            ordinalNumber.day(arg0, { width: "wide", context: "formatting" }) ||
+            ordinalNumber.day(arg0, { width: "abbreviated", context: "formatting" }) ||
+            ordinalNumber.day(arg0, { width: "short", context: "formatting" }) ||
+            ordinalNumber.day(arg0, { width: "narrow", context: "formatting" })
+          );
         }
       }
     }
-    return _createSuperInternal(3880).mapValue(_createSuperInternal(3880).parseNDigits(arg1.length, arg0), valueCallback);
-  }
+    return _createSuperInternal(3880).mapValue(
+      _createSuperInternal(3880).parseNDigits(arg1.length, arg0),
+      valueCallback,
+    );
+  },
 };
 let items = [
   obj,
@@ -249,7 +269,7 @@ let items = [
         tmp = arg1 <= 6;
       }
       return tmp;
-    }
+    },
   },
   {
     key: "set",
@@ -257,8 +277,8 @@ let items = [
       const defaultResult = setUTCDay.default(arg0, arg2, arg3);
       defaultResult.setUTCHours(0, 0, 0, 0);
       return defaultResult;
-    }
-  }
+    },
+  },
 ];
 if (0 < items.length) {
   do {

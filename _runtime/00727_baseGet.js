@@ -2,7 +2,6 @@
 import toKey from "00725_toKey.js";
 import castPath from "00728_castPath.js";
 
-
 export default function baseGet(arg0, arg1) {
   const arr = castPath(arg1, arg0);
   let num = 0;
@@ -35,4 +34,4 @@ export default function baseGet(arg0, arg1) {
     }
   }
   return tmp7;
-};
+}

@@ -4,7 +4,6 @@ import isInstanceOf from "12342_isInstanceOf.js";
 import addContextToFrame from "12346_addContextToFrame.js";
 import closure_2 from "metro/00032__slicedToArray.js";
 
-
 export const eventFromMessage = function eventFromMessage(arg0, message, arg2, event_id) {
   let str = arg2;
   if (arg2 === undefined) {

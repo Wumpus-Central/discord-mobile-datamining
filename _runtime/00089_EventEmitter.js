@@ -40,7 +40,7 @@ const items = [
         obj.add(obj);
         return obj;
       }
-    }
+    },
   },
   {
     key: "emit",
@@ -56,7 +56,7 @@ const items = [
           continue;
         }
       }
-    }
+    },
   },
   {
     key: "removeAllListeners",
@@ -68,7 +68,7 @@ const items = [
         callback(self, closure_2)[closure_2];
         delete tmp[tmp2];
       }
-    }
+    },
   },
   {
     key: "listenerCount",
@@ -79,8 +79,8 @@ const items = [
         num = tmp.size;
       }
       return num;
-    }
-  }
+    },
+  },
 ];
 
 export default _createClassDefault(EventEmitter, items);

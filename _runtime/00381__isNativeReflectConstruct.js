@@ -26,8 +26,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class AnimatedStyle {
   constructor(arg0, arg1, arg2, arg3, arg4) {
@@ -72,7 +71,7 @@ let obj = {
       }
     }
     return self.__getValueForStyle(obj);
-  }
+  },
 };
 let items = [
   obj,
@@ -80,7 +79,7 @@ let items = [
     key: "__getValueForStyle",
     value: function __getValueForStyle(arg0) {
       return arg0;
-    }
+    },
   },
   {
     key: "__replaceAnimatedNodeWithValues",
@@ -113,7 +112,7 @@ let items = [
         const _Array = Array;
         arg0[tmp] = obj.__getValueWithStaticTransforms(Array.isArray(arg0[tmp]) ? arg0[tmp] : []);
       }
-    }
+    },
   },
   {
     key: "__getAnimatedValue",
@@ -125,7 +124,7 @@ let items = [
         obj[this._nodeKeys[num]] = obj2.__getAnimatedValue();
       }
       return obj;
-    }
+    },
   },
   {
     key: "__attach",
@@ -141,7 +140,7 @@ let items = [
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
-    }
+    },
   },
   {
     key: "__detach",
@@ -157,7 +156,7 @@ let items = [
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
-    }
+    },
   },
   {
     key: "__makeNative",
@@ -174,7 +173,7 @@ let items = [
       }
       const items = [arg0];
       fn(items);
-    }
+    },
   },
   {
     key: "__getNativeConfig",
@@ -189,8 +188,8 @@ let items = [
       }
       obj = { type: "style", style: obj, debugID: self.__getDebugID() };
       return obj;
-    }
-  }
+    },
+  },
 ];
 obj = {
   key: "from",
@@ -278,7 +277,7 @@ obj = {
       }
       const tmp18 = callback(items2, 3);
     }
-  }
+  },
 };
 let items1 = [obj];
 let fn = Object.hasOwn;

@@ -2,7 +2,6 @@
 import toNumber from "00637_toNumber.js";
 import baseClamp from "04649_baseClamp.js";
 
-
 export default function clamp(arg0, arg1, arg2) {
   let tmp = arg2;
   if (undefined === arg2) {
@@ -27,4 +26,4 @@ export default function clamp(arg0, arg1, arg2) {
     tmp7 = num2;
   }
   return baseClamp(toNumber(arg0), tmp7, tmp3);
-};
+}

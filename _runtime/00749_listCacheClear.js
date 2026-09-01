@@ -1,5 +1,3 @@
 // _runtime/00749_listCacheClear.js
 
-export default function listCacheClear() {
-
-};
+export default function listCacheClear() {}

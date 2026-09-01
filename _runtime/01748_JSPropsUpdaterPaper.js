@@ -33,7 +33,7 @@ isJest = {
         }
       });
     }
-  }
+  },
 };
 const items = [
   isJest,
@@ -47,13 +47,15 @@ const items = [
         const _reanimatedEventEmitter = this._reanimatedEventEmitter;
         _reanimatedEventEmitter.removeAllListeners("onReanimatedPropsChange");
       }
-    }
-  }
+    },
+  },
 ];
 isJest = isJest.shouldBeUseWeb();
 let importDefaultResultResult = importDefaultResult(JSPropsUpdaterPaper, items);
 importDefaultResultResult._tagToComponentMapping = new Map();
-let closure_5 = { code: "function pnpm_JSPropsUpdaterTs1(){const{runOnJS,updater}=this.__closure;global.updateJSProps=function(viewTag,props){runOnJS(updater)(viewTag,props);};}" };
+let closure_5 = {
+  code: "function pnpm_JSPropsUpdaterTs1(){const{runOnJS,updater}=this.__closure;global.updateJSProps=function(viewTag,props){runOnJS(updater)(viewTag,props);};}",
+};
 class JSPropsUpdaterFabric {
   constructor() {
     tmp = updater;
@@ -97,7 +99,7 @@ isJest = {
       const _tagToComponentMapping = tmp._tagToComponentMapping;
       const result = _tagToComponentMapping.set(getComponentViewTag.getComponentViewTag(), getComponentViewTag);
     }
-  }
+  },
 };
 const items1 = [
   isJest,
@@ -108,8 +110,8 @@ const items1 = [
         const _tagToComponentMapping = tmp._tagToComponentMapping;
         _tagToComponentMapping.delete(getComponentViewTag.getComponentViewTag());
       }
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult1 = importDefaultResult(JSPropsUpdaterFabric, items1);
 const map = new Map();
@@ -123,14 +125,10 @@ if (isJest) {
     }
   }
   const obj1 = { key: "addOnJSPropsChangeListener", value: null };
-  obj1[1] = function addOnJSPropsChangeListener(arg0) {
-
-  };
-  const items2 = [obj1, ];
+  obj1[1] = function addOnJSPropsChangeListener(arg0) {};
+  const items2 = [obj1];
   const obj2 = { key: "removeOnJSPropsChangeListener", value: null };
-  obj2[1] = function removeOnJSPropsChangeListener(arg0) {
-
-  };
+  obj2[1] = function removeOnJSPropsChangeListener(arg0) {};
   items2[1] = obj2;
   importDefaultResultResult = importDefaultResult(JSPropsUpdaterWeb, items2);
 } else {

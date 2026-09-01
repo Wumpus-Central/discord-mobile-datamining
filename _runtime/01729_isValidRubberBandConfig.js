@@ -18,7 +18,9 @@ function isValidRubberBandConfig(rubberBandEffect) {
 }
 isValidRubberBandConfig.__closure = {};
 isValidRubberBandConfig.__workletHash = 5674674993606;
-isValidRubberBandConfig.__initData = { code: "function isValidRubberBandConfig_Pnpm_utilsTs1(config){return!!config.rubberBandEffect&&Array.isArray(config.clamp)&&config.clamp.length===2;}" };
+isValidRubberBandConfig.__initData = {
+  code: "function isValidRubberBandConfig_Pnpm_utilsTs1(config){return!!config.rubberBandEffect&&Array.isArray(config.clamp)&&config.clamp.length===2;}",
+};
 
 export const VELOCITY_EPS = num;
 export const SLOPE_FACTOR = 0.1;

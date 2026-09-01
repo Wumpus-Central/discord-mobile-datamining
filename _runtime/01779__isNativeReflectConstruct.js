@@ -22,10 +22,11 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
-let closure_5 = { code: "function pnpm_StretchTs1(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{scaleX:delayFunction(delay,animation(1,config))}]},initialValues:{transform:[{scaleX:0}],...initialValues},callback:callback};}" };
+let closure_5 = {
+  code: "function pnpm_StretchTs1(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{scaleX:delayFunction(delay,animation(1,config))}]},initialValues:{transform:[{scaleX:0}],...initialValues},callback:callback};}",
+};
 class StretchInX {
   constructor() {
     self = this;
@@ -80,12 +81,14 @@ let obj = {
   key: "createInstance",
   value: function createInstance() {
     return StretchOutY();
-  }
+  },
 };
 let items = [obj];
 const importDefaultResultResult = importDefaultResult(StretchInX, null, items);
 importDefaultResultResult.presetName = "StretchInX";
-let closure_6 = { code: "function pnpm_StretchTs2(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{scaleY:delayFunction(delay,animation(1,config))}]},initialValues:{transform:[{scaleY:0}],...initialValues},callback:callback};}" };
+let closure_6 = {
+  code: "function pnpm_StretchTs2(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{scaleY:delayFunction(delay,animation(1,config))}]},initialValues:{transform:[{scaleY:0}],...initialValues},callback:callback};}",
+};
 class StretchInY {
   constructor() {
     self = this;
@@ -140,12 +143,14 @@ obj = {
   key: "createInstance",
   value: function createInstance() {
     return StretchOutY();
-  }
+  },
 };
 let items1 = [obj];
 const importDefaultResultResult1 = importDefaultResult(StretchInY, null, items1);
 importDefaultResultResult1.presetName = "StretchInY";
-let closure_7 = { code: "function pnpm_StretchTs3(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{scaleX:delayFunction(delay,animation(0,config))}]},initialValues:{transform:[{scaleX:1}],...initialValues},callback:callback};}" };
+let closure_7 = {
+  code: "function pnpm_StretchTs3(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{scaleX:delayFunction(delay,animation(0,config))}]},initialValues:{transform:[{scaleX:1}],...initialValues},callback:callback};}",
+};
 class StretchOutX {
   constructor() {
     self = this;
@@ -200,12 +205,14 @@ obj = {
   key: "createInstance",
   value: function createInstance() {
     return StretchOutY();
-  }
+  },
 };
 const items2 = [obj];
 const importDefaultResultResult2 = importDefaultResult(StretchOutX, null, items2);
 importDefaultResultResult2.presetName = "StretchOutX";
-let closure_8 = { code: "function pnpm_StretchTs4(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{scaleY:delayFunction(delay,animation(0,config))}]},initialValues:{transform:[{scaleY:1}],...initialValues},callback:callback};}" };
+let closure_8 = {
+  code: "function pnpm_StretchTs4(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{scaleY:delayFunction(delay,animation(0,config))}]},initialValues:{transform:[{scaleY:1}],...initialValues},callback:callback};}",
+};
 class StretchOutY {
   constructor() {
     self = this;
@@ -260,8 +267,8 @@ const items3 = [
     key: "createInstance",
     value: function createInstance() {
       return StretchOutY();
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult3 = importDefaultResult(StretchOutY, null, items3);
 importDefaultResultResult3.presetName = "StretchOutY";

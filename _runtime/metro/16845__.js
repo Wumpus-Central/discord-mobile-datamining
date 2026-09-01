@@ -3,7 +3,7 @@ let obj = {
   locale: "zh",
   pluralRuleFunction(arg0, arg1) {
     return "other";
-  }
+  },
 };
 globalThis.IntlMessageFormat.__addLocaleData(obj);
 globalThis.IntlMessageFormat.__addLocaleData({ locale: "zh-Hans", parentLocale: "zh" });
@@ -14,7 +14,7 @@ obj = {
   locale: "zh-Hant",
   pluralRuleFunction(arg0, arg1) {
     return "other";
-  }
+  },
 };
 globalThis.IntlMessageFormat.__addLocaleData(obj);
 globalThis.IntlMessageFormat.__addLocaleData({ locale: "zh-Hant-HK", parentLocale: "zh-Hant" });

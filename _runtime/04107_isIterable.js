@@ -1,12 +1,8 @@
 // _runtime/04107_isIterable.js
 import closure_0 from "metro/00032__slicedToArray.js";
 
-function isIterable(arg0) {
-
-}
-function hasIterableEntries(arg0) {
-
-}
+function isIterable(arg0) {}
+function hasIterableEntries(arg0) {}
 function compareEntries(arr, arr2) {
   let map = arr;
   if (!(arr instanceof Map)) {

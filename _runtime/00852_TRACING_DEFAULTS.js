@@ -49,7 +49,7 @@ export const startIdleSpan = function startIdleSpan(arg0) {
       }
       let debug = tmp3(tmp4[11]).debug;
       const _HermesInternal = HermesInternal;
-      debug.log("[Tracing] Idle span \"" + spanToJSONResult.op + "\" finished");
+      debug.log('[Tracing] Idle span "' + spanToJSONResult.op + '" finished');
       const spanDescendants = tmp3(tmp4[5]).getSpanDescendants(obj3);
       const found = spanDescendants.filter((arg0) => arg0 !== closure_14);
       const item1 = found.forEach((isRecording) => {
@@ -213,60 +213,94 @@ export const startIdleSpan = function startIdleSpan(arg0) {
       };
       const proxy = new Proxy(startInactiveSpanResult.end, obj);
       startInactiveSpanResult.end = proxy;
-      items.push(client.on("spanStart", (isStandaloneSpan) => {
-        let timestamp = c2;
-        if (!c2) {
-          timestamp = isStandaloneSpan === c14;
-        }
-        if (!timestamp) {
-          timestamp = callback(map[5]).spanToJSON(isStandaloneSpan).timestamp;
-          obj = callback(map[5]);
-        }
-        if (!timestamp) {
-          timestamp = isStandaloneSpan instanceof callback(map[13]).SentrySpan && isStandaloneSpan.isStandaloneSpan();
-          const tmp6 = isStandaloneSpan instanceof callback(map[13]).SentrySpan && isStandaloneSpan.isStandaloneSpan();
-        }
-        if (!timestamp) {
-          const spanDescendants = callback(map[5]).getSpanDescendants(c14);
-          if (spanDescendants.includes(isStandaloneSpan)) {
-            if (callback) {
-              const _clearTimeout = clearTimeout;
-              clearTimeout(callback);
-              callback = undefined;
-            }
-            const result = map.set(isStandaloneSpan.spanContext().spanId, true);
-            callback = callback(map[6]).timestampInSeconds() + childSpanTimeout / 1000;
-            const _setTimeout = setTimeout;
-            callback = setTimeout(() => {
-              let tmp = !closure_1_2;
-              if (!closure_1_2) {
-                tmp = c4;
-              }
-              if (tmp) {
-                heartbeatFailed = "heartbeatFailed";
-                closure_1_14.end(closure_0);
-              }
-            }, childSpanTimeout);
-            const obj4 = callback(map[6]);
+      items.push(
+        client.on("spanStart", (isStandaloneSpan) => {
+          let timestamp = c2;
+          if (!c2) {
+            timestamp = isStandaloneSpan === c14;
           }
-          const obj2 = callback(map[5]);
-        }
-      }));
-      items.push(client.on("spanEnd", (spanContext) => {
-        if (!c2) {
-          const spanId = spanContext.spanContext().spanId;
-          if (map.has(spanId)) {
-            obj.delete(spanId);
+          if (!timestamp) {
+            timestamp = callback(map[5]).spanToJSON(isStandaloneSpan).timestamp;
+            obj = callback(map[5]);
           }
-          if (0 === map.size) {
-            callback = callback(map[6]).timestampInSeconds() + idleTimeout / 1000;
-            if (callback) {
+          if (!timestamp) {
+            timestamp = isStandaloneSpan instanceof callback(map[13]).SentrySpan && isStandaloneSpan.isStandaloneSpan();
+            const tmp6 =
+              isStandaloneSpan instanceof callback(map[13]).SentrySpan && isStandaloneSpan.isStandaloneSpan();
+          }
+          if (!timestamp) {
+            const spanDescendants = callback(map[5]).getSpanDescendants(c14);
+            if (spanDescendants.includes(isStandaloneSpan)) {
+              if (callback) {
+                const _clearTimeout = clearTimeout;
+                clearTimeout(callback);
+                callback = undefined;
+              }
+              const result = map.set(isStandaloneSpan.spanContext().spanId, true);
+              callback = callback(map[6]).timestampInSeconds() + childSpanTimeout / 1000;
+              const _setTimeout = setTimeout;
+              callback = setTimeout(() => {
+                let tmp = !closure_1_2;
+                if (!closure_1_2) {
+                  tmp = c4;
+                }
+                if (tmp) {
+                  heartbeatFailed = "heartbeatFailed";
+                  closure_1_14.end(closure_0);
+                }
+              }, childSpanTimeout);
+              const obj4 = callback(map[6]);
+            }
+            const obj2 = callback(map[5]);
+          }
+        }),
+      );
+      items.push(
+        client.on("spanEnd", (spanContext) => {
+          if (!c2) {
+            const spanId = spanContext.spanContext().spanId;
+            if (map.has(spanId)) {
+              obj.delete(spanId);
+            }
+            if (0 === map.size) {
+              callback = callback(map[6]).timestampInSeconds() + idleTimeout / 1000;
+              if (callback) {
+                const _clearTimeout = clearTimeout;
+                clearTimeout(callback);
+                callback = undefined;
+              }
+              const _setTimeout = setTimeout;
+              callback = setTimeout(() => {
+                let tmp = !closure_1_2;
+                if (!closure_1_2) {
+                  tmp = 0 === closure_1_1.size;
+                }
+                if (tmp) {
+                  tmp = c4;
+                }
+                if (tmp) {
+                  heartbeatFailed = "idleTimeout";
+                  closure_1_14.end(closure_0);
+                }
+              }, idleTimeout);
+              const obj2 = callback(map[6]);
+              const tmp5 = idleTimeout;
+            }
+          }
+        }),
+      );
+      items.push(
+        client.on("idleSpanEnableAutoFinish", (arg0) => {
+          if (arg0 === c14) {
+            c4 = true;
+            let timeout;
+            if (timeout) {
               const _clearTimeout = clearTimeout;
-              clearTimeout(callback);
-              callback = undefined;
+              clearTimeout(timeout);
+              timeout = undefined;
             }
             const _setTimeout = setTimeout;
-            callback = setTimeout(() => {
+            timeout = setTimeout(() => {
               let tmp = !closure_1_2;
               if (!closure_1_2) {
                 tmp = 0 === closure_1_1.size;
@@ -279,49 +313,22 @@ export const startIdleSpan = function startIdleSpan(arg0) {
                 closure_1_14.end(closure_0);
               }
             }, idleTimeout);
-            const obj2 = callback(map[6]);
-            const tmp5 = idleTimeout;
-          }
-        }
-      }));
-      items.push(client.on("idleSpanEnableAutoFinish", (arg0) => {
-        if (arg0 === c14) {
-          c4 = true;
-          let timeout;
-          if (timeout) {
-            const _clearTimeout = clearTimeout;
-            clearTimeout(timeout);
-            timeout = undefined;
-          }
-          const _setTimeout = setTimeout;
-          timeout = setTimeout(() => {
-            let tmp = !closure_1_2;
-            if (!closure_1_2) {
-              tmp = 0 === closure_1_1.size;
+            if (map.size) {
+              const _setTimeout2 = setTimeout;
+              timeout = setTimeout(() => {
+                let tmp = !closure_1_2;
+                if (!closure_1_2) {
+                  tmp = c4;
+                }
+                if (tmp) {
+                  heartbeatFailed = "heartbeatFailed";
+                  closure_1_14.end(closure_0);
+                }
+              }, childSpanTimeout);
             }
-            if (tmp) {
-              tmp = c4;
-            }
-            if (tmp) {
-              heartbeatFailed = "idleTimeout";
-              closure_1_14.end(closure_0);
-            }
-          }, idleTimeout);
-          if (map.size) {
-            const _setTimeout2 = setTimeout;
-            timeout = setTimeout(() => {
-              let tmp = !closure_1_2;
-              if (!closure_1_2) {
-                tmp = c4;
-              }
-              if (tmp) {
-                heartbeatFailed = "heartbeatFailed";
-                closure_1_14.end(closure_0);
-              }
-            }, childSpanTimeout);
           }
-        }
-      }));
+        }),
+      );
       if (!obj.disableAutoFinish) {
         if (_require) {
           let _clearTimeout = clearTimeout;

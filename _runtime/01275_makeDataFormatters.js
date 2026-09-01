@@ -34,7 +34,10 @@ arg5.makeDataFormatters = function makeDataFormatters(items, formatConfig, _forc
       return durationFormatter.format(arg0);
     },
     formatNumber(result2, parseNumberSkeletonResult) {
-      const formatConfigOptions = items(closure_1[0]).resolveFormatConfigOptions(closure_1.number, parseNumberSkeletonResult);
+      const formatConfigOptions = items(closure_1[0]).resolveFormatConfigOptions(
+        closure_1.number,
+        parseNumberSkeletonResult,
+      );
       const dataFormatterCache = items(closure_1[1]).dataFormatterCache;
       let merged = formatConfigOptions;
       if (flag) {
@@ -115,6 +118,6 @@ arg5.makeDataFormatters = function makeDataFormatters(items, formatConfig, _forc
         merged = Object.assign(Object.assign({}, arg0), { localeMatcher: "lookup" });
       }
       return dataFormatterCache.getPluralRules(items, merged);
-    }
+    },
   };
 };

@@ -8,7 +8,17 @@ import { jsx } from "react/00021_jsxProd.js";
 
 const require = arg1;
 let closure_3 = ["enabled", "freezeOnBlur", "shouldFreeze"];
-let closure_4 = ["active", "activityState", "children", "isNativeStack", "fullScreenSwipeEnabled", "gestureResponseDistance", "scrollEdgeEffects", "onGestureCancel", "style"];
+let closure_4 = [
+  "active",
+  "activityState",
+  "children",
+  "isNativeStack",
+  "fullScreenSwipeEnabled",
+  "gestureResponseDistance",
+  "scrollEdgeEffects",
+  "onGestureCancel",
+  "style",
+];
 let closure_5 = ["active", "activityState", "style", "onComponentRef"];
 let error = importDefaultResult;
 const Animated = get_ActivityIndicator.Animated;
@@ -77,22 +87,38 @@ const forwardRefResult = importDefaultResult.forwardRef(function InnerScreen(act
     if (tmp2(tmp3[7]).isNativePlatformSupported) {
       const sheetAllowedDetents1 = tmp2(tmp3[8]).resolveSheetAllowedDetents(sheetAllowedDetents);
       const tmp2Result1 = tmp2(tmp3[8]);
-      const sheetLargestUndimmedDetent = tmp2(tmp3[8]).resolveSheetLargestUndimmedDetent(SHEET_DIMMED_ALWAYS, sheetAllowedDetents1.length - 1);
+      const sheetLargestUndimmedDetent = tmp2(tmp3[8]).resolveSheetLargestUndimmedDetent(
+        SHEET_DIMMED_ALWAYS,
+        sheetAllowedDetents1.length - 1,
+      );
       const tmp2Result2 = tmp2(tmp3[8]);
-      ({ active: active2, activityState: activityState2, children, isNativeStack, gestureResponseDistance, scrollEdgeEffects, onGestureCancel } = tmp9);
+      ({
+        active: active2,
+        activityState: activityState2,
+        children,
+        isNativeStack,
+        gestureResponseDistance,
+        scrollEdgeEffects,
+        onGestureCancel,
+      } = tmp9);
       sheetInitialDetentIndex = tmp2(tmp3[8]).resolveSheetInitialDetentIndex(num3, sheetAllowedDetents1.length - 1);
       ({ fullScreenSwipeEnabled, style } = tmp9);
       let tmp8Result = tmp8(tmp9, closure_4);
       if (tmp28) {
         const _console = console;
-        console.warn("It appears that you are using old version of react-navigation library. Please update @react-navigation/bottom-tabs, @react-navigation/stack and @react-navigation/drawer to version 5.10.0 or above to take full advantage of new functionality added to react-native-screens");
+        console.warn(
+          "It appears that you are using old version of react-navigation library. Please update @react-navigation/bottom-tabs, @react-navigation/stack and @react-navigation/drawer to version 5.10.0 or above to take full advantage of new functionality added to react-native-screens",
+        );
         let num6 = 0;
         if (0 !== active2) {
           num6 = 2;
         }
         activityState2 = num6;
       }
-      importDefault(tmp3[9])(false, "[RNScreens] Using featureFlags `ios26AllowInteractionsDuringTransition` with `iosPreventReattachmentOfDismissedScreens` disabled is discouraged and will result in visual bugs on screen transitions. See flags description for details.");
+      importDefault(tmp3[9])(
+        false,
+        "[RNScreens] Using featureFlags `ios26AllowInteractionsDuringTransition` with `iosPreventReattachmentOfDismissedScreens` disabled is discouraged and will result in visual bugs on screen transitions. See flags description for details.",
+      );
       if (isNativeStack) {
         if (undefined !== previous) {
           if (undefined !== activityState2) {
@@ -122,9 +148,7 @@ const forwardRefResult = importDefaultResult.forwardRef(function InnerScreen(act
       obj.onWillAppear = tmp17;
       obj.onWillDisappear = tmp18;
       if (onGestureCancel == null) {
-        onGestureCancel = () => {
-
-        };
+        onGestureCancel = () => {};
       }
       obj.onGestureCancel = onGestureCancel;
       const items = [style, { zIndex: "r" }];
@@ -269,8 +293,12 @@ const forwardRefResult = importDefaultResult.forwardRef(function InnerScreen(act
       }
       obj.topScrollEdgeEffect = top;
       obj.synchronousShadowStateUpdatesEnabled = importDefault(tmp3[12]).experiment.synchronousScreenUpdatesEnabled;
-      obj.androidResetScreenShadowStateOnOrientationChangeEnabled = importDefault(tmp3[12]).experiment.androidResetScreenShadowStateOnOrientationChangeEnabled;
-      obj.ios26AllowInteractionsDuringTransition = importDefault(tmp3[12]).experiment.ios26AllowInteractionsDuringTransition;
+      obj.androidResetScreenShadowStateOnOrientationChangeEnabled = importDefault(
+        tmp3[12],
+      ).experiment.androidResetScreenShadowStateOnOrientationChangeEnabled;
+      obj.ios26AllowInteractionsDuringTransition = importDefault(
+        tmp3[12],
+      ).experiment.ios26AllowInteractionsDuringTransition;
       let tmp33Result = children;
       if (isNativeStack) {
         const obj4 = { value: null, children: null };
@@ -296,7 +324,7 @@ const forwardRefResult = importDefaultResult.forwardRef(function InnerScreen(act
     }
     activityState = num4;
   }
-  const items2 = [tmp9.style, ];
+  const items2 = [tmp9.style];
   let str = "none";
   if (0 !== activityState) {
     str = "flex";

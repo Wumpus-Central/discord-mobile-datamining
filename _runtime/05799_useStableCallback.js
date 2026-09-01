@@ -9,9 +9,12 @@ export const useStableCallback = function useStableCallback(arg0) {
   callback3(() => {
     closure_1.current = closure_0;
   });
-  callback2(() => () => {
-    closure_1.current = undefined;
-  }, []);
+  callback2(
+    () => () => {
+      closure_1.current = undefined;
+    },
+    [],
+  );
   return callback(() => {
     const items = [...arguments];
     const current = ref.current;

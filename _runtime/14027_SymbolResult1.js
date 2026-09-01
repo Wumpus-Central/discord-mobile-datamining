@@ -120,5 +120,5 @@ export default {
   namedGet: SymbolResult10,
   namedSetNew: SymbolResult11,
   namedSetExisting: Symbol("named property set existing"),
-  namedDelete: Symbol("named property delete")
+  namedDelete: Symbol("named property delete"),
 };

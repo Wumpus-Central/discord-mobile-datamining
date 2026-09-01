@@ -92,8 +92,10 @@ export const getMultiInternalSlots = getMultiInternalSlots /* getMultiInternalSl
 export const isLiteralPart = getMultiInternalSlots /* getMultiInternalSlots */.isLiteralPart;
 export const setInternalSlot = getMultiInternalSlots /* getMultiInternalSlots */.setInternalSlot;
 export const setMultiInternalSlots = getMultiInternalSlots /* getMultiInternalSlots */.setMultiInternalSlots;
-export const isMissingLocaleDataError = isMissingLocaleDataError /* isMissingLocaleDataError */.isMissingLocaleDataError;
-export const createMemoizedDateTimeFormat = getMultiInternalSlots /* getMultiInternalSlots */.createMemoizedDateTimeFormat;
+export const isMissingLocaleDataError =
+  isMissingLocaleDataError /* isMissingLocaleDataError */.isMissingLocaleDataError;
+export const createMemoizedDateTimeFormat =
+  getMultiInternalSlots /* getMultiInternalSlots */.createMemoizedDateTimeFormat;
 export const createMemoizedListFormat = getMultiInternalSlots /* getMultiInternalSlots */.createMemoizedListFormat;
 export const createMemoizedLocale = getMultiInternalSlots /* getMultiInternalSlots */.createMemoizedLocale;
 export const createMemoizedNumberFormat = getMultiInternalSlots /* getMultiInternalSlots */.createMemoizedNumberFormat;

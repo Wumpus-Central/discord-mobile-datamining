@@ -1,6 +1,17 @@
 // _runtime/08254_reduced.js
 let obj = { meet: 0, slice: 1, none: 2 };
-const items = ["xMinYMin", "xMidYMin", "xMaxYMin", "xMinYMid", "xMidYMid", "xMaxYMid", "xMinYMax", "xMidYMax", "xMaxYMax", "none"];
+const items = [
+  "xMinYMin",
+  "xMidYMin",
+  "xMaxYMin",
+  "xMinYMid",
+  "xMidYMid",
+  "xMaxYMid",
+  "xMinYMax",
+  "xMidYMax",
+  "xMaxYMax",
+  "none",
+];
 const reduced = items.reduce((arg0, arg1) => {
   arg0[arg1] = arg1;
   return arg0;

@@ -23,8 +23,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class FeDiffuseLighting {
   constructor() {
@@ -52,7 +51,7 @@ let obj = {
   value: function render() {
     const result = FeDiffuseLighting(8257).warnUnimplementedFilter();
     return null;
-  }
+  },
 };
 const items = [obj];
 const importDefaultResultResult = importDefaultResult(FeDiffuseLighting, items);

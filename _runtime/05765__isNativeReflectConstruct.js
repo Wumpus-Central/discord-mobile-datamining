@@ -28,8 +28,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 let closure_3 = ["rippleColor", "style"];
 let closure_4 = ["children", "style", "activeOpacity"];
@@ -170,7 +169,7 @@ let obj = {
     const merged = Object.assign(callback(props, closure_3));
     ({ onGestureEvent: obj.onGestureEvent, onHandlerStateChange: obj.onHandlerStateChange } = this);
     return callback4(LegacyRawButton, obj);
-  }
+  },
 };
 let items = [obj];
 const importDefaultResultResult = importDefaultResult(InnerBaseButton, items);
@@ -235,11 +234,22 @@ obj = {
     obj.ref = self.props.innerRef;
     obj.style = flattenResult;
     obj.onActiveStateChange = self.onActiveStateChange;
-    const items = [underlay.underlay, { opacity: self.opacity, backgroundColor: self.props.underlayColor, borderRadius: flattenResult.borderRadius, borderTopLeftRadius: flattenResult.borderTopLeftRadius, borderTopRightRadius: flattenResult.borderTopRightRadius, borderBottomLeftRadius: flattenResult.borderBottomLeftRadius, borderBottomRightRadius: flattenResult.borderBottomRightRadius }];
+    const items = [
+      underlay.underlay,
+      {
+        opacity: self.opacity,
+        backgroundColor: self.props.underlayColor,
+        borderRadius: flattenResult.borderRadius,
+        borderTopLeftRadius: flattenResult.borderTopLeftRadius,
+        borderTopRightRadius: flattenResult.borderTopRightRadius,
+        borderBottomLeftRadius: flattenResult.borderBottomLeftRadius,
+        borderBottomRightRadius: flattenResult.borderBottomRightRadius,
+      },
+    ];
     const items1 = [callback4(Animated.View, { style: items }), children];
     obj.children = items1;
     return callback5(LegacyBaseButton, obj);
-  }
+  },
 };
 let items1 = [obj];
 const importDefaultResultResult1 = importDefaultResult(InnerRectButton, items1);
@@ -288,7 +298,7 @@ obj = {
     obj.style = items;
     obj.children = children;
     return callback4(AnimatedBaseButton, obj);
-  }
+  },
 };
 const items2 = [obj];
 const importDefaultResultResult2 = importDefaultResult(InnerBorderlessButton, items2);

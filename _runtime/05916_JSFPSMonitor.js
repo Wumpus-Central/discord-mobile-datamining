@@ -45,7 +45,7 @@ const items = [
     key: "measureLoop",
     value: function measureLoop() {
       this.clearAnimationNumber = requestAnimationFrame(this.updateLoopCompute);
-    }
+    },
   },
   {
     key: "startTracking",
@@ -62,7 +62,7 @@ const items = [
         self.timeWindow.startTime = Date.now();
         self.measureLoop();
       }
-    }
+    },
   },
   {
     key: "stopAndGetData",
@@ -78,8 +78,8 @@ const items = [
       const obj3 = JSFPSMonitor(5917);
       obj[2] = JSFPSMonitor(5917).roundToDecimalPlaces(self.averageFPS, 1);
       return obj;
-    }
-  }
+    },
+  },
 ];
 
 export const JSFPSMonitor = _createClassDefault(JSFPSMonitor, items);

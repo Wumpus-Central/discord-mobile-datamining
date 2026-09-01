@@ -6,18 +6,38 @@ import createStandardNavigationFactories from "01500_createStandardNavigationFac
 
 require = arg1;
 function NativeStackNavigator(arg0) {
-  ({ id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router } = arg0);
+  ({
+    id,
+    initialRouteName,
+    UNSTABLE_routeNamesChangeBehavior,
+    children,
+    layout,
+    screenListeners,
+    screenOptions,
+    screenLayout,
+    UNSTABLE_router,
+  } = arg0);
   let merged = Object.assign(arg0, Object.create(null));
   let state;
   let navigation;
   let context;
   let obj = state(navigation[2]);
-  const navigationBuilder = obj.useNavigationBuilder(state(navigation[2]).StackRouter, { id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router });
+  const navigationBuilder = obj.useNavigationBuilder(state(navigation[2]).StackRouter, {
+    id,
+    initialRouteName,
+    UNSTABLE_routeNamesChangeBehavior,
+    children,
+    layout,
+    screenListeners,
+    screenOptions,
+    screenLayout,
+    UNSTABLE_router,
+  });
   state = navigationBuilder.state;
   navigation = navigationBuilder.navigation;
   ({ describe, descriptors, NavigationContent } = navigationBuilder);
   context = context.useContext(state(navigation[2]).NavigationMetaContext);
-  const items = [context, navigation, , ];
+  const items = [context, navigation, ,];
   ({ index: arr[2], key: arr[3] } = state);
   const effect = context.useEffect(() => {
     let addListenerResult;

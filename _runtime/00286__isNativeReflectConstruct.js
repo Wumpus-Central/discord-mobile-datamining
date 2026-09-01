@@ -23,14 +23,13 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class LegacySyntheticEvent {
   constructor(arg0, arg1, arg2, arg3) {
     self = this;
     tmp = LegacySyntheticEvent(this, LegacySyntheticEvent);
-    items = [, ];
+    items = [,];
     items[0] = global;
     items[1] = arg1;
     tmp2 = closure_2;
@@ -60,13 +59,13 @@ let items = [
     key: "nativeEvent",
     get() {
       return this._nativeEvent;
-    }
+    },
   },
   {
     key: "dispatchConfig",
     get() {
       return this._dispatchConfig;
-    }
+    },
   },
   {
     key: "stopPropagation",
@@ -78,7 +77,7 @@ let items = [
       }
       fn([]);
       this._propagationStopped = true;
-    }
+    },
   },
   {
     key: "stopImmediatePropagation",
@@ -90,26 +89,24 @@ let items = [
       }
       fn([]);
       this._propagationStopped = true;
-    }
+    },
   },
   {
     key: "persist",
-    value: function persist() {
-
-    }
+    value: function persist() {},
   },
   {
     key: "isDefaultPrevented",
     value: function isDefaultPrevented() {
       return this.defaultPrevented;
-    }
+    },
   },
   {
     key: "isPropagationStopped",
     value: function isPropagationStopped() {
       return this._propagationStopped;
-    }
-  }
+    },
+  },
 ];
 
 export default importDefaultResult(LegacySyntheticEvent, items);

@@ -44,8 +44,8 @@ arg5.default = function v35(name) {
       const result = uint8Array.set(arr2);
       const result1 = uint8Array.set(arr, arr2.length);
       const tmp17 = callback2(uint8Array);
-      tmp17[6] = 15 & tmp17[6] | callback;
-      tmp17[8] = 63 & tmp17[8] | 128;
+      tmp17[6] = (15 & tmp17[6]) | callback;
+      tmp17[8] = (63 & tmp17[8]) | 128;
       if (arg2) {
         let num2 = arg3;
         if (!arg3) {
@@ -67,8 +67,7 @@ arg5.default = function v35(name) {
     generateUUID.DNS = c3;
     generateUUID.URL = c4;
     return generateUUID;
-  } catch (err) {
-  }
+  } catch (err) {}
 };
 arg5.DNS = "6ba7b810-9dad-11d1-80b4-00c04fd430c8";
 arg5.URL = "6ba7b811-9dad-11d1-80b4-00c04fd430c8";

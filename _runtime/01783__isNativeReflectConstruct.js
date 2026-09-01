@@ -22,10 +22,11 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
-let closure_6 = { code: "function pnpm_EntryExitTransitionTs1(values){const{enteringAnimation,exitingAnimation,delayFunction,delay,withSequence,withTiming,exitingDuration,logger,callback}=this.__closure;const enteringValues=enteringAnimation(values);const exitingValues=exitingAnimation(values);const animations={transform:[]};for(const prop of Object.keys(exitingValues.animations)){if(prop==='transform'){if(!Array.isArray(exitingValues.animations.transform)){continue;}exitingValues.animations.transform.forEach(function(value,index){for(const transformProp of Object.keys(value)){animations.transform.push({[transformProp]:delayFunction(delay,withSequence(value[transformProp],withTiming(exitingValues.initialValues.transform?exitingValues.initialValues.transform[index][transformProp]:0,{duration:0})))});}});}else{const sequence=enteringValues.animations[prop]!==undefined?[exitingValues.animations[prop],withTiming(enteringValues.initialValues[prop],{duration:0}),enteringValues.animations[prop]]:[exitingValues.animations[prop],withTiming(Object.keys(values).includes(prop)?values[prop]:exitingValues.initialValues[prop],{duration:0})];animations[prop]=delayFunction(delay,withSequence(...sequence));}}for(const prop of Object.keys(enteringValues.animations)){if(prop==='transform'){if(!Array.isArray(enteringValues.animations.transform)){continue;}enteringValues.animations.transform.forEach(function(value,index){for(const transformProp of Object.keys(value)){animations.transform.push({[transformProp]:delayFunction(delay+exitingDuration,withSequence(withTiming(enteringValues.initialValues.transform?enteringValues.initialValues.transform[index][transformProp]:0,{duration:exitingDuration}),value[transformProp]))});}});}else if(animations[prop]!==undefined){continue;}else{animations[prop]=delayFunction(delay,withSequence(withTiming(enteringValues.initialValues[prop],{duration:0}),enteringValues.animations[prop]));}}const mergedTransform=(Array.isArray(exitingValues.initialValues.transform)?exitingValues.initialValues.transform:[]).concat((Array.isArray(enteringValues.animations.transform)?enteringValues.animations.transform:[]).map(function(value){const objectKeys=Object.keys(value);if((objectKeys===null||objectKeys===void 0?void 0:objectKeys.length)<1){logger.error(\"${value} is not a valid Transform object\");return value;}const transformProp=objectKeys[0];const current=value[transformProp].current;if(typeof current==='string'){if(current.includes('deg')){return{[transformProp]:'0deg'};}else{return{[transformProp]:'0'};}}else if(transformProp.includes('translate')){return{[transformProp]:0};}else{return{[transformProp]:1};}}));return{initialValues:{...exitingValues.initialValues,originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight,transform:mergedTransform},animations:{originX:delayFunction(delay+exitingDuration,withTiming(values.targetOriginX,{duration:exitingDuration})),originY:delayFunction(delay+exitingDuration,withTiming(values.targetOriginY,{duration:exitingDuration})),width:delayFunction(delay+exitingDuration,withTiming(values.targetWidth,{duration:exitingDuration})),height:delayFunction(delay+exitingDuration,withTiming(values.targetHeight,{duration:exitingDuration})),...animations},callback:callback};}" };
+let closure_6 = {
+  code: "function pnpm_EntryExitTransitionTs1(values){const{enteringAnimation,exitingAnimation,delayFunction,delay,withSequence,withTiming,exitingDuration,logger,callback}=this.__closure;const enteringValues=enteringAnimation(values);const exitingValues=exitingAnimation(values);const animations={transform:[]};for(const prop of Object.keys(exitingValues.animations)){if(prop==='transform'){if(!Array.isArray(exitingValues.animations.transform)){continue;}exitingValues.animations.transform.forEach(function(value,index){for(const transformProp of Object.keys(value)){animations.transform.push({[transformProp]:delayFunction(delay,withSequence(value[transformProp],withTiming(exitingValues.initialValues.transform?exitingValues.initialValues.transform[index][transformProp]:0,{duration:0})))});}});}else{const sequence=enteringValues.animations[prop]!==undefined?[exitingValues.animations[prop],withTiming(enteringValues.initialValues[prop],{duration:0}),enteringValues.animations[prop]]:[exitingValues.animations[prop],withTiming(Object.keys(values).includes(prop)?values[prop]:exitingValues.initialValues[prop],{duration:0})];animations[prop]=delayFunction(delay,withSequence(...sequence));}}for(const prop of Object.keys(enteringValues.animations)){if(prop==='transform'){if(!Array.isArray(enteringValues.animations.transform)){continue;}enteringValues.animations.transform.forEach(function(value,index){for(const transformProp of Object.keys(value)){animations.transform.push({[transformProp]:delayFunction(delay+exitingDuration,withSequence(withTiming(enteringValues.initialValues.transform?enteringValues.initialValues.transform[index][transformProp]:0,{duration:exitingDuration}),value[transformProp]))});}});}else if(animations[prop]!==undefined){continue;}else{animations[prop]=delayFunction(delay,withSequence(withTiming(enteringValues.initialValues[prop],{duration:0}),enteringValues.animations[prop]));}}const mergedTransform=(Array.isArray(exitingValues.initialValues.transform)?exitingValues.initialValues.transform:[]).concat((Array.isArray(enteringValues.animations.transform)?enteringValues.animations.transform:[]).map(function(value){const objectKeys=Object.keys(value);if((objectKeys===null||objectKeys===void 0?void 0:objectKeys.length)<1){logger.error(\"${value} is not a valid Transform object\");return value;}const transformProp=objectKeys[0];const current=value[transformProp].current;if(typeof current==='string'){if(current.includes('deg')){return{[transformProp]:'0deg'};}else{return{[transformProp]:'0'};}}else if(transformProp.includes('translate')){return{[transformProp]:0};}else{return{[transformProp]:1};}}));return{initialValues:{...exitingValues.initialValues,originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight,transform:mergedTransform},animations:{originX:delayFunction(delay+exitingDuration,withTiming(values.targetOriginX,{duration:exitingDuration})),originY:delayFunction(delay+exitingDuration,withTiming(values.targetOriginY,{duration:exitingDuration})),width:delayFunction(delay+exitingDuration,withTiming(values.targetWidth,{duration:exitingDuration})),height:delayFunction(delay+exitingDuration,withTiming(values.targetHeight,{duration:exitingDuration})),...animations},callback:callback};}",
+};
 class EntryExitTransition {
   constructor() {
     self = this;
@@ -102,7 +103,7 @@ class EntryExitTransition {
             let tmp45 = nextResult;
             if (undefined !== tmp.animations[tmp5]) {
               let tmp12 = nextResult;
-              let items = [tmp2.animations[tmp5], , ];
+              let items = [tmp2.animations[tmp5], ,];
               let tmp13 = delayFunction;
               let tmp14 = callbackV;
               let obj3 = delayFunction(callbackV[6]);
@@ -111,7 +112,7 @@ class EntryExitTransition {
               let items1 = items;
             } else {
               let tmp6 = nextResult;
-              items1 = [tmp2.animations[tmp5], ];
+              items1 = [tmp2.animations[tmp5]];
               let tmp7 = delayFunction;
               let tmp8 = callbackV;
               obj1 = delayFunction(callbackV[6]);
@@ -197,7 +198,10 @@ class EntryExitTransition {
               let tmp35 = delayFunction;
               let tmp36 = callbackV;
               let obj5 = delayFunction(callbackV[6]);
-              obj[tmp29] = delayFunction(obj, obj4.withSequence(obj5.withTiming(tmp.initialValues[tmp29], { duration: 0 }), tmp.animations[tmp29]));
+              obj[tmp29] = delayFunction(
+                obj,
+                obj4.withSequence(obj5.withTiming(tmp.initialValues[tmp29], { duration: 0 }), tmp.animations[tmp29]),
+              );
             }
           }
           continue;
@@ -214,46 +218,61 @@ class EntryExitTransition {
         }
         obj = { initialValues: null, animations: null, callback: null };
         obj = {};
-        const combined = transform2.concat(transform3.map((arg0) => {
-          const keys = Object.keys(arg0);
-          let length;
-          if (keys != null) {
-            length = keys.length;
-          }
-          if (length < 1) {
-            const logger = lib(closure_1[7]).logger;
-            logger.error("${value} is not a valid Transform object");
-            return arg0;
-          } else {
-            const first = keys[0];
-            const current = arg0[first].current;
-            if (typeof current === "string") {
-              obj = {};
-              if (current.includes("deg")) {
-                obj[first] = "0deg";
-                let tmp3 = obj;
-              } else {
-                obj[first] = "0";
-                tmp3 = obj;
-              }
-            } else {
-              obj = {};
-              if (first.includes("translate")) {
-                obj[first] = 0;
-                let tmp2 = obj;
-              } else {
-                obj[first] = 1;
-                tmp2 = obj;
-              }
-              return tmp2;
+        const combined = transform2.concat(
+          transform3.map((arg0) => {
+            const keys = Object.keys(arg0);
+            let length;
+            if (keys != null) {
+              length = keys.length;
             }
-          }
-        }));
+            if (length < 1) {
+              const logger = lib(closure_1[7]).logger;
+              logger.error("${value} is not a valid Transform object");
+              return arg0;
+            } else {
+              const first = keys[0];
+              const current = arg0[first].current;
+              if (typeof current === "string") {
+                obj = {};
+                if (current.includes("deg")) {
+                  obj[first] = "0deg";
+                  let tmp3 = obj;
+                } else {
+                  obj[first] = "0";
+                  tmp3 = obj;
+                }
+              } else {
+                obj = {};
+                if (first.includes("translate")) {
+                  obj[first] = 0;
+                  let tmp2 = obj;
+                } else {
+                  obj[first] = 1;
+                  tmp2 = obj;
+                }
+                return tmp2;
+              }
+            }
+          }),
+        );
         const merged = Object.assign(tmp2.initialValues);
-        ({ currentOriginX: obj8.originX, currentOriginY: obj8.originY, currentWidth: obj8.width, currentHeight: obj8.height } = targetOriginX);
+        ({
+          currentOriginX: obj8.originX,
+          currentOriginY: obj8.originY,
+          currentWidth: obj8.width,
+          currentHeight: obj8.height,
+        } = targetOriginX);
         obj.transform = combined;
         obj[0] = obj;
-        obj1 = { originX: delayFunction(sum, delayFunction(callbackV[6]).withTiming(targetOriginX.targetOriginX, { duration })), originY: null, width: null, height: null };
+        obj1 = {
+          originX: delayFunction(
+            sum,
+            delayFunction(callbackV[6]).withTiming(targetOriginX.targetOriginX, { duration }),
+          ),
+          originY: null,
+          width: null,
+          height: null,
+        };
         sum = obj + duration;
         const sum1 = obj + duration;
         const obj10 = delayFunction(callbackV[6]);
@@ -273,7 +292,17 @@ class EntryExitTransition {
         obj[2] = closure_1;
         return obj;
       };
-      fn.__closure = { enteringAnimation: buildResult, exitingAnimation: buildResult1, delayFunction, delay, withSequence: callback(closure_1_1[6]).withSequence, withTiming: callback(closure_1_1[6]).withTiming, exitingDuration: duration, logger: callback(closure_1_1[7]).logger, callback: callbackV };
+      fn.__closure = {
+        enteringAnimation: buildResult,
+        exitingAnimation: buildResult1,
+        delayFunction,
+        delay,
+        withSequence: callback(closure_1_1[6]).withSequence,
+        withTiming: callback(closure_1_1[6]).withTiming,
+        exitingDuration: duration,
+        logger: callback(closure_1_1[7]).logger,
+        callback: callbackV,
+      };
       fn.__workletHash = 15677837188414;
       fn.__initData = closure_1_6;
       return fn;
@@ -287,7 +316,7 @@ let obj = {
   value: function entering(enteringV) {
     this.enteringV = enteringV;
     return this;
-  }
+  },
 };
 let items = [
   obj,
@@ -296,14 +325,14 @@ let items = [
     value: function exiting(exitingV) {
       this.exitingV = exitingV;
       return this;
-    }
-  }
+    },
+  },
 ];
 obj = {
   key: "createInstance",
   value: function createInstance() {
     return EntryExitTransition();
-  }
+  },
 };
 let items1 = [
   obj,
@@ -312,15 +341,15 @@ let items1 = [
     value: function entering(arg0) {
       const instance = this.createInstance();
       return instance.entering(arg0);
-    }
+    },
   },
   {
     key: "exiting",
     value: function exiting(arg0) {
       const instance = this.createInstance();
       return instance.exiting(arg0);
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(EntryExitTransition, items, items1);
 const error = importDefaultResultResult;

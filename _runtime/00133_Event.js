@@ -81,68 +81,68 @@ const items = [
     key: "bubbles",
     get() {
       return this._bubbles;
-    }
+    },
   },
   {
     key: "cancelable",
     get() {
       return this._cancelable;
-    }
+    },
   },
   {
     key: "composed",
     get() {
       return this._composed;
-    }
+    },
   },
   {
     key: "currentTarget",
     get() {
       return Event(134).getCurrentTarget(this);
-    }
+    },
   },
   {
     key: "defaultPrevented",
     get() {
       return this._defaultPrevented;
-    }
+    },
   },
   {
     key: "eventPhase",
     get() {
       return Event(134).getEventPhase(this);
-    }
+    },
   },
   {
     key: "isTrusted",
     get() {
       return Event(134).getIsTrusted(this);
-    }
+    },
   },
   {
     key: "target",
     get() {
       return Event(134).getTarget(this);
-    }
+    },
   },
   {
     key: "timeStamp",
     get() {
       return this._timeStamp;
-    }
+    },
   },
   {
     key: "type",
     get() {
       return this._type;
-    }
+    },
   },
   {
     key: "composedPath",
     value: function composedPath() {
       const composedPath = Event(134).getComposedPath(this);
       return composedPath.slice();
-    }
+    },
   },
   {
     key: "preventDefault",
@@ -159,7 +159,7 @@ const items = [
         }
         obj = Event(134);
       }
-    }
+    },
   },
   {
     key: "stopImmediatePropagation",
@@ -167,14 +167,14 @@ const items = [
       const result = Event(134).setStopPropagationFlag(this, true);
       const obj = Event(134);
       const result1 = Event(134).setStopImmediatePropagationFlag(this, true);
-    }
+    },
   },
   {
     key: "stopPropagation",
     value: function stopPropagation() {
       const result = Event(134).setStopPropagationFlag(this, true);
-    }
-  }
+    },
+  },
 ];
 let tmp2 = _createClassDefault(Event, items);
 Object.defineProperty(tmp2, "NONE", { enumerable: true, value: 0 });

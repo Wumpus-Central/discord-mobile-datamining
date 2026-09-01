@@ -5,7 +5,7 @@ import define from "../00197_define.js";
 
 try {
   const _module = isNativeFunction;
-  let flag = _module.hasNativeConstructor(function*() {
+  let flag = _module.hasNativeConstructor(function* () {
     if (c0 === 2) {
       c0 = 3;
       HermesBuiltin.throwTypeError();

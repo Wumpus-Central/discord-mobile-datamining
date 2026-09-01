@@ -15,8 +15,8 @@ export default {
     },
     RFC3986(arg0) {
       return String(arg0);
-    }
+    },
   },
   RFC1738: "RFC1738",
-  RFC3986: "RFC3986"
+  RFC3986: "RFC3986",
 };

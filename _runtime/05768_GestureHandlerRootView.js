@@ -21,4 +21,4 @@ export default function GestureHandlerRootView(style) {
   obj.moduleId = globalThis._RNGH_MODULE_ID;
   obj[1] = jsx(__INTERNAL_VIEW_CONFIGDefault, { style: container });
   return <tmp3 style={container} />;
-};
+}

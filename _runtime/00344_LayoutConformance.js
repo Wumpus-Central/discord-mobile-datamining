@@ -12,4 +12,4 @@ export default function LayoutConformance(arg0) {
   const merged = Object.assign(arg0);
   obj.style = container.container;
   return jsx(LayoutConformanceDefault, {});
-};
+}

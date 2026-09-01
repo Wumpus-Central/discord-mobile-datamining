@@ -28,15 +28,9 @@ export const DrawerRouter = function DrawerRouter(defaultStatus) {
   obj = str(1511);
   const SwitchRouterResult = obj.SwitchRouter(merged);
   dependencyMap = SwitchRouterResult;
-  isDrawerInHistory = function isDrawerInHistory(arg0) {
-
-  };
-  addDrawerToHistory = function addDrawerToHistory(arg0) {
-
-  };
-  removeDrawerFromHistory = function removeDrawerFromHistory(arg0) {
-
-  };
+  isDrawerInHistory = function isDrawerInHistory(arg0) {};
+  addDrawerToHistory = function addDrawerToHistory(arg0) {};
+  removeDrawerFromHistory = function removeDrawerFromHistory(arg0) {};
   closeDrawer = function closeDrawer(history) {
     str = "open";
     if ("open" === str) {
@@ -95,7 +89,11 @@ export const DrawerRouter = function DrawerRouter(defaultStatus) {
   obj.type = "drawer";
   obj.getInitialState = function getInitialState(routeNames) {
     obj = {};
-    obj = { routeNames: routeNames.routeNames, routeParamList: routeNames.routeParamList, routeGetIdList: routeNames.routeGetIdList };
+    obj = {
+      routeNames: routeNames.routeNames,
+      routeParamList: routeNames.routeParamList,
+      routeGetIdList: routeNames.routeGetIdList,
+    };
     const merged = Object.assign(_undefined.getInitialState(obj));
     obj.default = str;
     obj.stale = false;

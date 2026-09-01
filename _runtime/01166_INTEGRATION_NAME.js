@@ -66,7 +66,12 @@ export const reactNativeTracingIntegration = () => {
       const obj2 = obj(merged1[1]);
       const tmp = obj;
       const tmp2 = merged1;
-      obj = { traceFetch: merged1.traceFetch, traceXHR: merged1.traceXHR, shouldCreateSpanForRequest: merged1.shouldCreateSpanForRequest, tracePropagationTargets: null };
+      obj = {
+        traceFetch: merged1.traceFetch,
+        traceXHR: merged1.traceXHR,
+        shouldCreateSpanForRequest: merged1.shouldCreateSpanForRequest,
+        tracePropagationTargets: null,
+      };
       let tracePropagationTargets = getOptions.getOptions().tracePropagationTargets;
       if (!tracePropagationTargets) {
         let tmp5;
@@ -98,7 +103,7 @@ export const reactNativeTracingIntegration = () => {
     state: obj,
     setCurrentRoute(componentName) {
       obj.currentRoute = componentName;
-    }
+    },
   };
 };
 export const getCurrentReactNativeTracingIntegration = function getCurrentReactNativeTracingIntegration() {

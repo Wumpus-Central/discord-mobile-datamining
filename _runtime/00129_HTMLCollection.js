@@ -28,7 +28,7 @@ let obj = {
   key: "length",
   get() {
     return this._length;
-  }
+  },
 };
 const items = [
   obj,
@@ -41,21 +41,20 @@ const items = [
         }
       }
       return null;
-    }
+    },
   },
   {
     key: "namedItem",
     value: function namedItem(arg0) {
       return null;
-    }
+    },
   },
-
 ];
 obj = {
   key: Symbol.iterator,
   value() {
     return HTMLCollection(128).createValueIterator(this);
-  }
+  },
 };
 items[3] = obj;
 let tmp2 = _createClassDefault(HTMLCollection, items);

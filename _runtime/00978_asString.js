@@ -146,10 +146,14 @@ function setIfDefined(arg0, arg1, arg2) {
     arg0[arg1] = arg2;
   }
 }
-function setNumberIfDefined(arg0, arg1, arg2) {
-
-}
-arg5.extractChatModelRequestAttributes = function extractChatModelRequestAttributes(id, arr, closure_0, invocationParams, ls_provider) {
+function setNumberIfDefined(arg0, arg1, arg2) {}
+arg5.extractChatModelRequestAttributes = function extractChatModelRequestAttributes(
+  id,
+  arr,
+  closure_0,
+  invocationParams,
+  ls_provider,
+) {
   ls_provider = undefined;
   if (ls_provider != null) {
     ls_provider = ls_provider.ls_provider;
@@ -339,7 +343,13 @@ arg5.extractChatModelRequestAttributes = function extractChatModelRequestAttribu
   }
   return tmpResult;
 };
-arg5.extractLLMRequestAttributes = function extractLLMRequestAttributes(arg0, arr, closure_0, invocationParams, ls_provider) {
+arg5.extractLLMRequestAttributes = function extractLLMRequestAttributes(
+  arg0,
+  arr,
+  closure_0,
+  invocationParams,
+  ls_provider,
+) {
   ls_provider = undefined;
   if (ls_provider != null) {
     ls_provider = ls_provider.ls_provider;

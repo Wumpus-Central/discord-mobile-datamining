@@ -2,7 +2,6 @@
 import keys from "00616_keys.js";
 import copyObject from "04605_copyObject.js";
 
-
 export default function baseAssign(arg0, arg1) {
   let tmp = arg0;
   if (arg0) {
@@ -10,4 +9,4 @@ export default function baseAssign(arg0, arg1) {
     const tmp5 = copyObject;
   }
   return tmp;
-};
+}

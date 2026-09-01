@@ -16,7 +16,7 @@ function addNonEnumerableProperty(arg0, arg1, arg2) {
     if (__SENTRY_DEBUG__.DEBUG_BUILD) {
       const logger = tmp6(12335).logger;
       const _HermesInternal = HermesInternal;
-      logger.log("Failed to add non-enumerable property \"" + tmp2 + "\" to object", tmp);
+      logger.log('Failed to add non-enumerable property "' + tmp2 + '" to object', tmp);
     }
     tmp6 = require;
   }
@@ -30,8 +30,7 @@ function markFunctionWrapped(arg0, arg1) {
     arg1.prototype = prototype;
     arg0.prototype = prototype;
     addNonEnumerableProperty(arg0, "__sentry_original__", arg1);
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 function convertToPlainObject(obj) {
   obj = isInstanceOf;
@@ -129,23 +128,25 @@ function serializeEventTarget(arg0) {
 }
 function _dropUndefinedKeys(arr, map) {
   closure_0 = map;
-  if ((function isPojo(arr) {
-    if (obj.isPlainObject(arr)) {
-      try {
-        const _Object = Object;
-        const name = Object.getPrototypeOf(arr).constructor.name;
-        let tmp3 = !name;
-        if (name) {
-          tmp3 = "Object" === tmp2;
+  if (
+    (function isPojo(arr) {
+      if (obj.isPlainObject(arr)) {
+        try {
+          const _Object = Object;
+          const name = Object.getPrototypeOf(arr).constructor.name;
+          let tmp3 = !name;
+          if (name) {
+            tmp3 = "Object" === tmp2;
+          }
+          return tmp3;
+        } catch (err) {
+          return true;
         }
-        return tmp3;
-      } catch (err) {
-        return true;
+      } else {
+        return false;
       }
-    } else {
-      return false;
-    }
-  })(arr)) {
+    })(arr)
+  ) {
     let value = map.get(arr);
     if (undefined !== value) {
       return value;
@@ -233,7 +234,7 @@ arg5.fill = function fill(arg0, arg1, arg2) {
       if (__SENTRY_DEBUG__.DEBUG_BUILD) {
         const logger = tmp7(12335).logger;
         const _HermesInternal = HermesInternal;
-        logger.log("Failed to replace method \"" + tmp3 + "\" in object", tmp2);
+        logger.log('Failed to replace method "' + tmp3 + '" in object', tmp2);
       }
       tmp7 = require;
     }
@@ -244,7 +245,7 @@ arg5.getOriginalFunction = function getOriginalFunction(__sentry_original__) {
 };
 arg5.markFunctionWrapped = markFunctionWrapped;
 arg5.objectify = function objectify(arg0) {
-  if (null == arg0 === true) {
+  if ((null == arg0) === true) {
     const _String = String;
     let string = new String(arg0);
   } else {

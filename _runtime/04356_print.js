@@ -1,9 +1,7 @@
 // _runtime/04356_print.js
 let c0 = false;
 const BooleanResult = Boolean(false);
-function print() {
-
-}
+function print() {}
 if (BooleanResult) {
   print = function print(arg0) {
     ({ component, method, params } = arg0);

@@ -28,4 +28,4 @@ export default function isArguments(obj) {
     }
   }
   return tmp3;
-};
+}

@@ -26,8 +26,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 function SkipEntering(children) {
   const tmp = callback4(children.shouldSkip);
@@ -74,12 +73,16 @@ isJest = {
     self = this;
     if (closure_1_5.count(this.props.children) > 1) {
       if (self.props.skipExiting) {
-        let children = closure_1_5.map(self.props.children, (children) => <self itemKey={self.props.itemKey} skipExiting>{arg0}</self>);
+        let children = closure_1_5.map(self.props.children, (children) => (
+          <self itemKey={self.props.itemKey} skipExiting>
+            {arg0}
+          </self>
+        ));
       }
       return children;
     }
     children = self.props.children;
-  }
+  },
 };
 let items = [
   isJest,
@@ -96,7 +99,7 @@ let items = [
         const obj = LayoutAnimationConfig(1761);
         tmp = LayoutAnimationConfig;
       }
-    }
+    },
   },
   {
     key: "componentWillUnmount",
@@ -105,7 +108,7 @@ let items = [
       if (undefined !== this.props.skipExiting) {
         const result = self.setShouldAnimateExiting();
       }
-    }
+    },
   },
   {
     key: "render",
@@ -118,11 +121,15 @@ let items = [
         obj[0] = self.props.itemKey;
         obj[1] = self.props.skipEntering;
         obj[2] = maybeWrappedChildren;
-        tmp2 = <SkipEntering itemKey={null} shouldSkip={null}>{null}</SkipEntering>;
+        tmp2 = (
+          <SkipEntering itemKey={null} shouldSkip={null}>
+            {null}
+          </SkipEntering>
+        );
       }
       return tmp2;
-    }
-  }
+    },
+  },
 ];
 
 export const SkipEnteringContext = context;

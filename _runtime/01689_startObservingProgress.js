@@ -17,7 +17,9 @@ function startObservingProgress(arg0, addListener) {
 let obj = { LayoutAnimationType: isWorkletFunction.LayoutAnimationType, TAG_OFFSET: 1000000000 };
 startObservingProgress.__closure = obj;
 startObservingProgress.__workletHash = 15816248532180;
-startObservingProgress.__initData = { code: "function startObservingProgress_Pnpm_animationsManagerTs1(tag,sharedValue,animationType){const{LayoutAnimationType,TAG_OFFSET}=this.__closure;const isSharedTransition=animationType===LayoutAnimationType.SHARED_ELEMENT_TRANSITION;sharedValue.addListener(tag+TAG_OFFSET,function(){global._notifyAboutProgress(tag,sharedValue.value,isSharedTransition);});}" };
+startObservingProgress.__initData = {
+  code: "function startObservingProgress_Pnpm_animationsManagerTs1(tag,sharedValue,animationType){const{LayoutAnimationType,TAG_OFFSET}=this.__closure;const isSharedTransition=animationType===LayoutAnimationType.SHARED_ELEMENT_TRANSITION;sharedValue.addListener(tag+TAG_OFFSET,function(){global._notifyAboutProgress(tag,sharedValue.value,isSharedTransition);});}",
+};
 function stopObservingProgress(arg0, removeListener) {
   let flag = arg2;
   if (arg2 === undefined) {
@@ -28,7 +30,9 @@ function stopObservingProgress(arg0, removeListener) {
 }
 stopObservingProgress.__closure = { TAG_OFFSET: 1000000000 };
 stopObservingProgress.__workletHash = 8517596296348;
-stopObservingProgress.__initData = { code: "function stopObservingProgress_Pnpm_animationsManagerTs2(tag,sharedValue,removeView=false){const{TAG_OFFSET}=this.__closure;sharedValue.removeListener(tag+TAG_OFFSET);global._notifyAboutEnd(tag,removeView);}" };
+stopObservingProgress.__initData = {
+  code: "function stopObservingProgress_Pnpm_animationsManagerTs2(tag,sharedValue,removeView=false){const{TAG_OFFSET}=this.__closure;sharedValue.removeListener(tag+TAG_OFFSET);global._notifyAboutEnd(tag,removeView);}",
+};
 function createLayoutAnimationManager() {
   let map = new Map();
   map1 = new Map();
@@ -124,13 +128,22 @@ function createLayoutAnimationManager() {
         value.removeListener(arg0 + 1000000000);
         map._notifyAboutEnd(arg0, false);
       }
-    }
+    },
   };
 }
-obj = { LayoutAnimationType: isWorkletFunction.LayoutAnimationType, makeMutableUI: addCompilerSafeGetAndSet.makeMutableUI, stopObservingProgress, withStyleAnimation: resolvePath.withStyleAnimation, startObservingProgress, IS_ANDROID: isJest };
+obj = {
+  LayoutAnimationType: isWorkletFunction.LayoutAnimationType,
+  makeMutableUI: addCompilerSafeGetAndSet.makeMutableUI,
+  stopObservingProgress,
+  withStyleAnimation: resolvePath.withStyleAnimation,
+  startObservingProgress,
+  IS_ANDROID: isJest,
+};
 createLayoutAnimationManager.__closure = obj;
 createLayoutAnimationManager.__workletHash = 8526874600063;
-createLayoutAnimationManager.__initData = { code: "function createLayoutAnimationManager_Pnpm_animationsManagerTs3(){const{LayoutAnimationType,makeMutableUI,stopObservingProgress,withStyleAnimation,startObservingProgress,IS_ANDROID}=this.__closure;const currentAnimationForTag=new Map();const mutableValuesForTag=new Map();const startActually=function(tag,type,yogaValues,config){if(type===LayoutAnimationType.SHARED_ELEMENT_TRANSITION_PROGRESS){global.ProgressTransitionRegister.onTransitionStart(tag,yogaValues);return;}const style=config(yogaValues);let currentAnimation=style.animations;const previousAnimation=currentAnimationForTag.get(tag);if(previousAnimation){currentAnimation={...previousAnimation,...style.animations};}currentAnimationForTag.set(tag,currentAnimation);let value=mutableValuesForTag.get(tag);if(value===undefined){value=makeMutableUI(style.initialValues);mutableValuesForTag.set(tag,value);}else{stopObservingProgress(tag,value);value._value=style.initialValues;}const animation=withStyleAnimation(currentAnimation);animation.callback=function(finished){if(finished){currentAnimationForTag.delete(tag);mutableValuesForTag.delete(tag);const shouldRemoveView=type===LayoutAnimationType.EXITING;stopObservingProgress(tag,value,shouldRemoveView);}style.callback&&style.callback(finished===undefined?false:finished);};startObservingProgress(tag,value,type);value.value=animation;};let start;if(IS_ANDROID){start=function(tag,type,yogaValues,config){return requestAnimationFrame(function(){startActually(tag,type,yogaValues,config);});};}else{start=startActually;}return{start:start,stop:function(tag){const value=mutableValuesForTag.get(tag);if(!value){return;}stopObservingProgress(tag,value);}};}" };
+createLayoutAnimationManager.__initData = {
+  code: "function createLayoutAnimationManager_Pnpm_animationsManagerTs3(){const{LayoutAnimationType,makeMutableUI,stopObservingProgress,withStyleAnimation,startObservingProgress,IS_ANDROID}=this.__closure;const currentAnimationForTag=new Map();const mutableValuesForTag=new Map();const startActually=function(tag,type,yogaValues,config){if(type===LayoutAnimationType.SHARED_ELEMENT_TRANSITION_PROGRESS){global.ProgressTransitionRegister.onTransitionStart(tag,yogaValues);return;}const style=config(yogaValues);let currentAnimation=style.animations;const previousAnimation=currentAnimationForTag.get(tag);if(previousAnimation){currentAnimation={...previousAnimation,...style.animations};}currentAnimationForTag.set(tag,currentAnimation);let value=mutableValuesForTag.get(tag);if(value===undefined){value=makeMutableUI(style.initialValues);mutableValuesForTag.set(tag,value);}else{stopObservingProgress(tag,value);value._value=style.initialValues;}const animation=withStyleAnimation(currentAnimation);animation.callback=function(finished){if(finished){currentAnimationForTag.delete(tag);mutableValuesForTag.delete(tag);const shouldRemoveView=type===LayoutAnimationType.EXITING;stopObservingProgress(tag,value,shouldRemoveView);}style.callback&&style.callback(finished===undefined?false:finished);};startObservingProgress(tag,value,type);value.value=animation;};let start;if(IS_ANDROID){start=function(tag,type,yogaValues,config){return requestAnimationFrame(function(){startActually(tag,type,yogaValues,config);});};}else{start=startActually;}return{start:start,stop:function(tag){const value=mutableValuesForTag.get(tag);if(!value){return;}stopObservingProgress(tag,value);}};}",
+};
 const fn = function t() {
   if (typeof createLayoutAnimationManager !== "function") {
     HermesBuiltin.throwTypeError();
@@ -229,10 +242,12 @@ const fn = function t() {
         value.removeListener(arg0 + 1000000000);
         map._notifyAboutEnd(arg0, false);
       }
-    }
+    },
   };
 };
 fn.__closure = { createLayoutAnimationManager };
 fn.__workletHash = 11408639565737;
-fn.__initData = { code: "function pnpm_animationsManagerTs4(){const{createLayoutAnimationManager}=this.__closure;global.LayoutAnimationsManager=createLayoutAnimationManager();}" };
+fn.__initData = {
+  code: "function pnpm_animationsManagerTs4(){const{createLayoutAnimationManager}=this.__closure;global.LayoutAnimationsManager=createLayoutAnimationManager();}",
+};
 runWorkletOnJS.runOnUIImmediately(fn)();

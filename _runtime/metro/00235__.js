@@ -12,6 +12,9 @@ if (true !== global.RN$Bridgeless) {
 }
 MessageQueueDefault("RCTLog", () => require("00237__.js").default);
 MessageQueueDefault("RCTDeviceEventEmitter", () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default);
-MessageQueueDefault("RCTNativeAppEventEmitter", () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default);
+MessageQueueDefault(
+  "RCTNativeAppEventEmitter",
+  () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default,
+);
 MessageQueueDefault("GlobalPerformanceLogger", () => require("00239__.js").default);
 MessageQueueDefault("HMRClient", () => require("00240__.js").default);

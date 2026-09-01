@@ -26,8 +26,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 noopAll;
 class ForeignObject {
@@ -61,17 +60,21 @@ const items = [
       obj = {
         ref(arg0) {
           return self.refMethod(arg0);
-        }
+        },
       };
       const tmp = __INTERNAL_VIEW_CONFIGDefault;
       const merged = Object.assign(self(8256).withoutXY(this, props));
       const merged1 = Object.assign(obj);
       obj.children = props.children;
-      return <tmp ref={function ref(arg0) {
-        return self.refMethod(arg0);
-      }} />;
-    }
-  }
+      return (
+        <tmp
+          ref={function ref(arg0) {
+            return self.refMethod(arg0);
+          }}
+        />
+      );
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(ForeignObject, items);
 importDefaultResultResult.displayName = "ForeignObject";

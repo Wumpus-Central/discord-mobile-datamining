@@ -8,9 +8,15 @@ export const useGesture = function useGesture(Fling, clonedAndRemappedConfig) {
   dependencyMap = clonedAndRemappedConfig;
   const tmp2 = jsEventHandler(() => Fling(clonedAndRemappedConfig[1]).getNextHandlerTag(), []);
   const callback = tmp2;
-  if (clonedAndRemappedConfig.disableReanimated !== jsEventHandler(() => clonedAndRemappedConfig.disableReanimated, [])) {
+  if (
+    clonedAndRemappedConfig.disableReanimated !== jsEventHandler(() => clonedAndRemappedConfig.disableReanimated, [])
+  ) {
     const _Error2 = Error;
-    error = new Error(require("05657_tagMessage.js").tagMessage("The \"disableReanimated\" property must not be changed after the handler is created."));
+    error = new Error(
+      require("05657_tagMessage.js").tagMessage(
+        'The "disableReanimated" property must not be changed after the handler is created.',
+      ),
+    );
     throw error;
   } else {
     const gestureCallbacks = require("05736_useGestureCallbacks.js").useGestureCallbacks(tmp2, clonedAndRemappedConfig);
@@ -20,21 +26,41 @@ export const useGesture = function useGesture(Fling, clonedAndRemappedConfig) {
     if (clonedAndRemappedConfig.shouldUseReanimatedDetector) {
       if (!reanimatedEventHandler) {
         const _Error = Error;
-        const error1 = new Error(require("05657_tagMessage.js").tagMessage("Failed to create reanimated event handlers."));
+        const error1 = new Error(
+          require("05657_tagMessage.js").tagMessage("Failed to create reanimated event handlers."),
+        );
         throw error1;
       }
     }
-    const items = [tmp2, , , ];
+    const items = [tmp2, , ,];
     ({ simultaneousWith: arr[1], requireToFail: arr[2], block: arr[3] } = clonedAndRemappedConfig);
     let tmpResult = tmp(() => {
       let obj = Fling(clonedAndRemappedConfig[4]);
-      obj = { simultaneousWith: clonedAndRemappedConfig.simultaneousWith, requireToFail: clonedAndRemappedConfig.requireToFail, block: clonedAndRemappedConfig.block };
+      obj = {
+        simultaneousWith: clonedAndRemappedConfig.simultaneousWith,
+        requireToFail: clonedAndRemappedConfig.requireToFail,
+        block: clonedAndRemappedConfig.block,
+      };
       return obj.prepareRelations(obj, closure_2);
     }, items);
     closure_6 = tmpResult;
-    const items1 = [tmp2, Fling, clonedAndRemappedConfig, jsEventHandler, reanimatedEventHandler, animatedEventHandler, tmpResult];
+    const items1 = [
+      tmp2,
+      Fling,
+      clonedAndRemappedConfig,
+      jsEventHandler,
+      reanimatedEventHandler,
+      animatedEventHandler,
+      tmpResult,
+    ];
     tmpResult = tmp(() => {
-      obj = { handlerTag: closure_2, type: closure_0, config: closure_1, detectorCallbacks: obj, gestureRelations: closure_6 };
+      obj = {
+        handlerTag: closure_2,
+        type: closure_0,
+        config: closure_1,
+        detectorCallbacks: obj,
+        gestureRelations: closure_6,
+      };
       obj = { jsEventHandler, animatedEventHandler, reanimatedEventHandler };
       return obj;
     }, items1);

@@ -15,12 +15,8 @@ global._scheduleOnRuntime = () => {
   const reanimatedError = new t.ReanimatedError("`_scheduleOnRuntime` should never be called from React runtime.");
   throw reanimatedError;
 };
-function setNativeProps(arg0, arg1, arg2) {
-
-}
-function updatePropsDOM(arg0, arg1, arg2) {
-
-}
+function setNativeProps(arg0, arg1, arg2) {}
+function updatePropsDOM(arg0, arg1, arg2) {}
 
 export const createJSReanimatedModule = require("metro/01667__.js").createJSReanimatedModule;
 export const _updatePropsJS = (arg0, getAnimatableRef) => {
@@ -33,14 +29,17 @@ export const _updatePropsJS = (arg0, getAnimatableRef) => {
     const _Object = Object;
     const keys = Object.keys(arg0);
     const items = [{}, {}];
-    first = first(keys.reduce((arg0, arg1) => {
-      let num = 0;
-      if (typeof table[arg1] === "function") {
-        num = 1;
-      }
-      arg0[num][arg1] = table[arg1];
-      return arg0;
-    }, items), 1)[0];
+    first = first(
+      keys.reduce((arg0, arg1) => {
+        let num = 0;
+        if (typeof table[arg1] === "function") {
+          num = 1;
+        }
+        arg0[num][arg1] = table[arg1];
+        return arg0;
+      }, items),
+      1,
+    )[0];
     if (typeof animatableRef.setNativeProps === "function") {
       if (typeof setNativeProps !== "function") {
         HermesBuiltin.throwTypeError();
@@ -96,11 +95,16 @@ export const _updatePropsJS = (arg0, getAnimatableRef) => {
           let tmp19 = undefined !== tmp36(tmp37[2]).createTextShadowValue;
           if (tmp19) {
             tmp19 = reactDOMStyle.textShadowColor || reactDOMStyle.textShadowRadius || reactDOMStyle.textShadowOffset;
-            const tmp20 = reactDOMStyle.textShadowColor || reactDOMStyle.textShadowRadius || reactDOMStyle.textShadowOffset;
+            const tmp20 =
+              reactDOMStyle.textShadowColor || reactDOMStyle.textShadowRadius || reactDOMStyle.textShadowOffset;
           }
           if (tmp19) {
             ({ textShadowColor: obj6[0], textShadowOffset: obj6[1], textShadowRadius: obj6[2] } = reactDOMStyle);
-            reactDOMStyle.textShadow = tmp36(tmp37[2]).createTextShadowValue({ textShadowColor: null, textShadowOffset: null, textShadowRadius: null });
+            reactDOMStyle.textShadow = tmp36(tmp37[2]).createTextShadowValue({
+              textShadowColor: null,
+              textShadowOffset: null,
+              textShadowRadius: null,
+            });
             const obj3 = { textShadowColor: null, textShadowOffset: null, textShadowRadius: null };
             const tmp36Result1 = tmp36(tmp37[2]);
           }
@@ -131,7 +135,10 @@ export const _updatePropsJS = (arg0, getAnimatableRef) => {
         const item = keys1.forEach((str) => {
           if (first[str]) {
             const _touchableNode = animatableRef._touchableNode;
-            const attr = _touchableNode.setAttribute(str.replace(/[A-Z]/g, (str) => "-" + str.toLowerCase()), tmp[str]);
+            const attr = _touchableNode.setAttribute(
+              str.replace(/[A-Z]/g, (str) => "-" + str.toLowerCase()),
+              tmp[str],
+            );
           }
         });
       } else {

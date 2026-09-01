@@ -22,7 +22,8 @@ const items = [
     value: function startTracking() {
       const self = this;
       this.rendersWithoutCommit = this.rendersWithoutCommit + 1;
-      let trackAverageRenderTimeForOffsetProjection = RenderTimeTracker(5869).PlatformConfig.trackAverageRenderTimeForOffsetProjection;
+      let trackAverageRenderTimeForOffsetProjection =
+        RenderTimeTracker(5869).PlatformConfig.trackAverageRenderTimeForOffsetProjection;
       if (trackAverageRenderTimeForOffsetProjection) {
         trackAverageRenderTimeForOffsetProjection = -1 === self.lastTimerStartedAt;
       }
@@ -30,14 +31,15 @@ const items = [
         const _Date = Date;
         self.lastTimerStartedAt = Date.now();
       }
-    }
+    },
   },
   {
     key: "markRenderComplete",
     value: function markRenderComplete() {
       const self = this;
       this.rendersWithoutCommit = 0;
-      let trackAverageRenderTimeForOffsetProjection = RenderTimeTracker(5869).PlatformConfig.trackAverageRenderTimeForOffsetProjection;
+      let trackAverageRenderTimeForOffsetProjection =
+        RenderTimeTracker(5869).PlatformConfig.trackAverageRenderTimeForOffsetProjection;
       if (trackAverageRenderTimeForOffsetProjection) {
         trackAverageRenderTimeForOffsetProjection = -1 !== self.lastTimerStartedAt;
       }
@@ -47,19 +49,19 @@ const items = [
         renderTimeAvgWindow.addValue(Date.now() - self.lastTimerStartedAt);
         self.lastTimerStartedAt = -1;
       }
-    }
+    },
   },
   {
     key: "hasExceededMaxRendersWithoutCommit",
     value: function hasExceededMaxRendersWithoutCommit() {
       return this.rendersWithoutCommit >= this.maxRendersWithoutCommit;
-    }
+    },
   },
   {
     key: "getRawValue",
     value: function getRawValue() {
       return this.renderTimeAvgWindow.currentValue;
-    }
+    },
   },
   {
     key: "getAverageRenderTime",
@@ -69,13 +71,16 @@ const items = [
         const _Math = Math;
         const _Math2 = Math;
         const _Math3 = Math;
-        let defaultRenderTime = Math.min(self.maxRenderTime, Math.max(Math.round(self.renderTimeAvgWindow.currentValue), 16));
+        let defaultRenderTime = Math.min(
+          self.maxRenderTime,
+          Math.max(Math.round(self.renderTimeAvgWindow.currentValue), 16),
+        );
       } else {
         defaultRenderTime = self.defaultRenderTime;
       }
       return defaultRenderTime;
-    }
-  }
+    },
+  },
 ];
 
 export const RenderTimeTracker = _createClassDefault(RenderTimeTracker, items);

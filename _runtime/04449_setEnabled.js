@@ -4,7 +4,14 @@ import RNHapticFeedbackDefault from "04451_RNHapticFeedback.js";
 import closure_3 from "00005_asyncGeneratorStep.js";
 
 require = arg1;
-let closure_4 = { [arg1(4450).HapticFeedbackTypes.impactLight]: 0.3, [arg1(4450).HapticFeedbackTypes.impactMedium]: 0.6, [arg1(4450).HapticFeedbackTypes.impactHeavy]: 0.8, [arg1(4450).HapticFeedbackTypes.rigid]: 1, [arg1(4450).HapticFeedbackTypes.soft]: 0.1, [arg1(4450).HapticFeedbackTypes.selection]: 0.3 };
+let closure_4 = {
+  [arg1(4450).HapticFeedbackTypes.impactLight]: 0.3,
+  [arg1(4450).HapticFeedbackTypes.impactMedium]: 0.6,
+  [arg1(4450).HapticFeedbackTypes.impactHeavy]: 0.8,
+  [arg1(4450).HapticFeedbackTypes.rigid]: 1,
+  [arg1(4450).HapticFeedbackTypes.soft]: 0.1,
+  [arg1(4450).HapticFeedbackTypes.selection]: 0.3,
+};
 let closure_5 = { enableVibrateFallback: false, ignoreAndroidSystemSettings: false };
 let c6 = true;
 
@@ -117,7 +124,7 @@ export default {
     }
   },
   getSystemHapticStatus() {
-    return callback(function*() {
+    return callback(function* () {
       if (c0 === 2) {
         c0 = 3;
         HermesBuiltin.throwTypeError();
@@ -184,5 +191,5 @@ export default {
         }
       }
     })();
-  }
+  },
 };

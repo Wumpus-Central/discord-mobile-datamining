@@ -30,7 +30,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     str = "none";
   }
   obj[1] = str;
-  const items = [absoluteFill.absoluteFill, ];
+  const items = [absoluteFill.absoluteFill];
   obj = { overflow: str2, display: null, visibility: null };
   let str3 = "flex";
   if (tmp4) {

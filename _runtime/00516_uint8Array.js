@@ -17,7 +17,9 @@ arg5.default = function rng() {
     tmp = getRandomValues;
     if (!getRandomValues) {
       const _Error = Error;
-      error = new Error("crypto.getRandomValues() not supported. See https://github.com/uuidjs/uuid#getrandomvalues-not-supported");
+      error = new Error(
+        "crypto.getRandomValues() not supported. See https://github.com/uuidjs/uuid#getrandomvalues-not-supported",
+      );
       throw error;
     }
   }

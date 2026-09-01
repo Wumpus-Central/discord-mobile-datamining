@@ -6,9 +6,15 @@ const useEffect = noop.useEffect;
 ({ Keyboard: c3, Platform } = get_ActivityIndicator);
 const keyboardDidShow = "keyboardDidShow";
 const keyboardDidHide = "keyboardDidHide";
-let closure_6 = { code: "function pnpm_useKeyboardTs1(state,height,duration,easing,bottomOffset){const{KEYBOARD_STATE,shouldHandleKeyboardEvents,temporaryCachedKeyboardEvent,keyboardHeight,includeBottomOffset,keyboardAnimationDuration,keyboardAnimationEasing,keyboardState}=this.__closure;if(state===KEYBOARD_STATE.SHOWN&&!shouldHandleKeyboardEvents.value){temporaryCachedKeyboardEvent.value=[state,height,duration,easing];return;}keyboardHeight.value=state===KEYBOARD_STATE.SHOWN?height:keyboardHeight.value;if(bottomOffset&&includeBottomOffset){keyboardHeight.value=keyboardHeight.value+bottomOffset;}keyboardAnimationDuration.value=duration;keyboardAnimationEasing.value=easing;keyboardState.value=state;temporaryCachedKeyboardEvent.value=[];}" };
-let closure_7 = { code: "function pnpm_useKeyboardTs2(){const{shouldHandleKeyboardEvents}=this.__closure;return shouldHandleKeyboardEvents.value;}" };
-let closure_8 = { code: "function pnpm_useKeyboardTs3(result){const{temporaryCachedKeyboardEvent,handleKeyboardEvent}=this.__closure;const params=temporaryCachedKeyboardEvent.value;if(result&&params.length>0){handleKeyboardEvent(params[0],params[1],params[2],params[3]);}}" };
+let closure_6 = {
+  code: "function pnpm_useKeyboardTs1(state,height,duration,easing,bottomOffset){const{KEYBOARD_STATE,shouldHandleKeyboardEvents,temporaryCachedKeyboardEvent,keyboardHeight,includeBottomOffset,keyboardAnimationDuration,keyboardAnimationEasing,keyboardState}=this.__closure;if(state===KEYBOARD_STATE.SHOWN&&!shouldHandleKeyboardEvents.value){temporaryCachedKeyboardEvent.value=[state,height,duration,easing];return;}keyboardHeight.value=state===KEYBOARD_STATE.SHOWN?height:keyboardHeight.value;if(bottomOffset&&includeBottomOffset){keyboardHeight.value=keyboardHeight.value+bottomOffset;}keyboardAnimationDuration.value=duration;keyboardAnimationEasing.value=easing;keyboardState.value=state;temporaryCachedKeyboardEvent.value=[];}",
+};
+let closure_7 = {
+  code: "function pnpm_useKeyboardTs2(){const{shouldHandleKeyboardEvents}=this.__closure;return shouldHandleKeyboardEvents.value;}",
+};
+let closure_8 = {
+  code: "function pnpm_useKeyboardTs3(result){const{temporaryCachedKeyboardEvent,handleKeyboardEvent}=this.__closure;const params=temporaryCachedKeyboardEvent.value;if(result&&params.length>0){handleKeyboardEvent(params[0],params[1],params[2],params[3]);}}",
+};
 
 export const useKeyboard = (includeBottomOffset) => {
   includeBottomOffset = includeBottomOffset.includeBottomOffset;
@@ -21,7 +27,9 @@ export const useKeyboard = (includeBottomOffset) => {
   let workletCallback;
   let obj = includeBottomOffset(shouldHandleKeyboardEvents[2]);
   shouldHandleKeyboardEvents = obj.useSharedValue(false);
-  state = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE.UNDETERMINED);
+  state = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(
+    includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE.UNDETERMINED,
+  );
   const obj2 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
   height = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(0);
   const obj3 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
@@ -55,7 +63,16 @@ export const useKeyboard = (includeBottomOffset) => {
     state.value = value;
     sharedValue5.value = [];
   };
-  obj = { KEYBOARD_STATE: includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE, shouldHandleKeyboardEvents, temporaryCachedKeyboardEvent: sharedValue5, keyboardHeight: height, includeBottomOffset, keyboardAnimationDuration: animationDuration, keyboardAnimationEasing: animationEasing, keyboardState: state };
+  obj = {
+    KEYBOARD_STATE: includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE,
+    shouldHandleKeyboardEvents,
+    temporaryCachedKeyboardEvent: sharedValue5,
+    keyboardHeight: height,
+    includeBottomOffset,
+    keyboardAnimationDuration: animationDuration,
+    keyboardAnimationEasing: animationEasing,
+    keyboardState: state,
+  };
   fn.__closure = obj;
   fn.__workletHash = 7905199978020;
   fn.__initData = sharedValue5;
@@ -65,11 +82,22 @@ export const useKeyboard = (includeBottomOffset) => {
     closure_0 = height.addListener(animationEasing, (endCoordinates) => {
       const obj = lib(closure_1[2]);
       ({ duration, easing } = endCoordinates);
-      lib(closure_1[2]).runOnUI(closure_7)(lib(closure_1[3]).KEYBOARD_STATE.SHOWN, endCoordinates.endCoordinates.height, duration, easing, lib(closure_1[3]).SCREEN_HEIGHT - endCoordinates.endCoordinates.height - endCoordinates.endCoordinates.screenY);
+      lib(closure_1[2]).runOnUI(closure_7)(
+        lib(closure_1[3]).KEYBOARD_STATE.SHOWN,
+        endCoordinates.endCoordinates.height,
+        duration,
+        easing,
+        lib(closure_1[3]).SCREEN_HEIGHT - endCoordinates.endCoordinates.height - endCoordinates.endCoordinates.screenY,
+      );
     });
     closure_1 = height.addListener(animationDuration, (endCoordinates) => {
       const obj = lib(closure_1[2]);
-      lib(closure_1[2]).runOnUI(closure_7)(lib(closure_1[3]).KEYBOARD_STATE.HIDDEN, endCoordinates.endCoordinates.height, endCoordinates.duration, endCoordinates.easing);
+      lib(closure_1[2]).runOnUI(closure_7)(
+        lib(closure_1[3]).KEYBOARD_STATE.HIDDEN,
+        endCoordinates.endCoordinates.height,
+        endCoordinates.duration,
+        endCoordinates.easing,
+      );
     });
     return () => {
       lib.remove();

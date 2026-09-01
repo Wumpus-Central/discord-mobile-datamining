@@ -29,4 +29,23 @@ if (!prop) {
   prop = [];
 }
 globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
-prop.push({ data: { conjunction: { long: { end: "{0}, \u0914\u0930 {1}", middle: "{0}, {1}", pair: "{0} \u0914\u0930 {1}", start: "{0}, {1}" }, narrow: { end: "{0} \u0914\u0930 {1}", middle: "{0}, {1}", pair: "{0} \u0914\u0930 {1}", start: "{0}, {1}" }, short: { end: "{0} \u0914\u0930 {1}", middle: "{0}, {1}", pair: "{0} \u0914\u0930 {1}", start: "{0}, {1}" } }, disjunction: { long: { end: "{0} \u092F\u093E {1}", middle: "{0}, {1}", pair: "{0} \u092F\u093E {1}", start: "{0}, {1}" }, narrow: { end: "{0} \u092F\u093E {1}", middle: "{0}, {1}", pair: "{0} \u092F\u093E {1}", start: "{0}, {1}" }, short: { end: "{0} \u092F\u093E {1}", middle: "{0}, {1}", pair: "{0} \u092F\u093E {1}", start: "{0}, {1}" } }, unit: { long: { end: "{0}, \u0914\u0930 {1}", middle: "{0}, {1}", pair: "{0} \u0914\u0930 {1}", start: "{0}, {1}" }, narrow: { end: "{0} {1}", middle: "{0}, {1}", pair: "{0} {1}", start: "{0}, {1}" }, short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" } } }, locale: "hi" });
+prop.push({
+  data: {
+    conjunction: {
+      long: { end: "{0}, \u0914\u0930 {1}", middle: "{0}, {1}", pair: "{0} \u0914\u0930 {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} \u0914\u0930 {1}", middle: "{0}, {1}", pair: "{0} \u0914\u0930 {1}", start: "{0}, {1}" },
+      short: { end: "{0} \u0914\u0930 {1}", middle: "{0}, {1}", pair: "{0} \u0914\u0930 {1}", start: "{0}, {1}" },
+    },
+    disjunction: {
+      long: { end: "{0} \u092F\u093E {1}", middle: "{0}, {1}", pair: "{0} \u092F\u093E {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} \u092F\u093E {1}", middle: "{0}, {1}", pair: "{0} \u092F\u093E {1}", start: "{0}, {1}" },
+      short: { end: "{0} \u092F\u093E {1}", middle: "{0}, {1}", pair: "{0} \u092F\u093E {1}", start: "{0}, {1}" },
+    },
+    unit: {
+      long: { end: "{0}, \u0914\u0930 {1}", middle: "{0}, {1}", pair: "{0} \u0914\u0930 {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} {1}", middle: "{0}, {1}", pair: "{0} {1}", start: "{0}, {1}" },
+      short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
+    },
+  },
+  locale: "hi",
+});

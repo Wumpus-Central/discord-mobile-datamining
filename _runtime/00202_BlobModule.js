@@ -6,7 +6,15 @@ let c0 = value;
 let tmp3 = null;
 let c1 = null;
 if (null != value) {
-  const obj = { getConstants: null, addNetworkingHandler: null, addWebSocketHandler: null, removeWebSocketHandler: null, sendOverSocket: null, createFromParts: null, release: null };
+  const obj = {
+    getConstants: null,
+    addNetworkingHandler: null,
+    addWebSocketHandler: null,
+    removeWebSocketHandler: null,
+    sendOverSocket: null,
+    createFromParts: null,
+    release: null,
+  };
   obj[0] = function getConstants() {
     if (null == constants) {
       constants = value.getConstants();

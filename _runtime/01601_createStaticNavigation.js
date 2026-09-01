@@ -16,7 +16,7 @@ export const createStaticNavigation = function createStaticNavigation(getCompone
     if (linking != null) {
       enabled = linking.enabled;
     }
-    const items = [enabled, , ];
+    const items = [enabled, ,];
     let path;
     if (linking != null) {
       let config = linking.config;
@@ -46,7 +46,11 @@ export const createStaticNavigation = function createStaticNavigation(getCompone
       if (linking != null) {
         enabled = tmp2.enabled;
       }
-      const pathConfigForStaticNavigation = obj.createPathConfigForStaticNavigation(linking, { initialRouteName }, "auto" === enabled);
+      const pathConfigForStaticNavigation = obj.createPathConfigForStaticNavigation(
+        linking,
+        { initialRouteName },
+        "auto" === enabled,
+      );
       if (pathConfigForStaticNavigation) {
         let path;
         if (tmp2 != null) {
@@ -100,7 +104,9 @@ export const createStaticNavigation = function createStaticNavigation(getCompone
       }
       if (null == screens) {
         const _Error = Error;
-        error = new Error("Linking is enabled but no linking configuration was found for the screens.\n\nTo solve this:\n- Specify a 'linking' property for the screens you want to link to.\n- Or set 'linking.enabled' to 'auto' to generate paths automatically.\n\nSee usage guide: https://reactnavigation.org/docs/static-configuration#linking");
+        error = new Error(
+          "Linking is enabled but no linking configuration was found for the screens.\n\nTo solve this:\n- Specify a 'linking' property for the screens you want to link to.\n- Or set 'linking.enabled' to 'auto' to generate paths automatically.\n\nSee usage guide: https://reactnavigation.org/docs/static-configuration#linking",
+        );
         throw error;
       }
     }

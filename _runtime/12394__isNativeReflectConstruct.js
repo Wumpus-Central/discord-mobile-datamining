@@ -27,8 +27,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class ServerRuntimeClient {
   constructor(arg0) {
@@ -60,7 +59,7 @@ let items = [
       result.level = "error";
       const obj = ServerRuntimeClient(12395);
       return ServerRuntimeClient(12359).resolvedSyncPromise(result);
-    }
+    },
   },
   {
     key: "eventFromMessage",
@@ -70,8 +69,16 @@ let items = [
         str = "info";
       }
       const obj = ServerRuntimeClient(12359);
-      return obj.resolvedSyncPromise(ServerRuntimeClient(12395).eventFromMessage(this._options.stackParser, arg0, str, arg2, this._options.attachStacktrace));
-    }
+      return obj.resolvedSyncPromise(
+        ServerRuntimeClient(12395).eventFromMessage(
+          this._options.stackParser,
+          arg0,
+          str,
+          arg2,
+          this._options.attachStacktrace,
+        ),
+      );
+    },
   },
   {
     key: "captureException",
@@ -97,7 +104,7 @@ let items = [
       }
       const items = [arg0, arg1, arg2];
       return fn(items);
-    }
+    },
   },
   {
     key: "captureEvent",
@@ -132,7 +139,7 @@ let items = [
       }
       const items = [type, arg1, arg2];
       return fn(items);
-    }
+    },
   },
   {
     key: "close",
@@ -148,7 +155,7 @@ let items = [
       }
       const items = [arg0];
       return fn(items);
-    }
+    },
   },
   {
     key: "initSessionFlusher",
@@ -165,7 +172,7 @@ let items = [
         const logger = tmp2(12335).logger;
         logger.warn("Cannot initialize an instance of SessionFlusher if no release is provided!");
       }
-    }
+    },
   },
   {
     key: "captureCheckIn",
@@ -186,8 +193,22 @@ let items = [
             obj.duration = checkInId.duration;
           }
           if (arg1) {
-            obj = { schedule: null, checkin_margin: null, max_runtime: null, timezone: null, failure_issue_threshold: null, recovery_threshold: null };
-            ({ schedule: obj3[0], checkinMargin: obj3[1], maxRuntime: obj3[2], timezone: obj3[3], failureIssueThreshold: obj3[4], recoveryThreshold: obj3[5] } = arg1);
+            obj = {
+              schedule: null,
+              checkin_margin: null,
+              max_runtime: null,
+              timezone: null,
+              failure_issue_threshold: null,
+              recovery_threshold: null,
+            };
+            ({
+              schedule: obj3[0],
+              checkinMargin: obj3[1],
+              maxRuntime: obj3[2],
+              timezone: obj3[3],
+              failureIssueThreshold: obj3[4],
+              recoveryThreshold: obj3[5],
+            } = arg1);
             obj.monitor_config = obj;
           }
           [tmp9, tmp10] = callback(self._getTraceInfoFromScope(arg2), 2);
@@ -215,7 +236,7 @@ let items = [
       }
       obj = ServerRuntimeClient(12346);
       checkInId = obj.uuid4();
-    }
+    },
   },
   {
     key: "_captureRequestSession",
@@ -230,7 +251,7 @@ let items = [
         }
         tmp = ServerRuntimeClient;
       }
-    }
+    },
   },
   {
     key: "_prepareEvent",
@@ -255,7 +276,7 @@ let items = [
       }
       const items = [platform, arg1, arg2, arg3];
       return fn(items);
-    }
+    },
   },
   {
     key: "_getTraceInfoFromScope",
@@ -282,8 +303,8 @@ let items = [
         const items1 = [undefined, undefined];
         return items1;
       }
-    }
-  }
+    },
+  },
 ];
 
 export const ServerRuntimeClient = _createClass(ServerRuntimeClient, items);

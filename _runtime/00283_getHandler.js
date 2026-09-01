@@ -16,7 +16,13 @@ function dispatchResponderEvent(nativeElementReference3, responderEnd, responder
   if (null != registrationName) {
     const tmp4 = getHandler(nativeElementReference3, registrationName);
     if (null != tmp4) {
-      const tmp14 = new _isNativeReflectConstructDefault2(responderEnd, { bubbles: false, cancelable: true }, responderIgnoreScroll, tmp, closure_3.touchHistory);
+      const tmp14 = new _isNativeReflectConstructDefault2(
+        responderEnd,
+        { bubbles: false, cancelable: true },
+        responderIgnoreScroll,
+        tmp,
+        closure_3.touchHistory,
+      );
       let tmp16 = null;
       if (null != self) {
         tmp16 = self;
@@ -43,7 +49,35 @@ let c6 = 0;
 let items = ["topTouchStart"];
 const items1 = ["topTouchMove"];
 const items2 = ["topTouchCancel", "topTouchEnd"];
-let closure_7 = { startShouldSetResponder: { phasedRegistrationNames: { bubbled: "onStartShouldSetResponder", captured: "onStartShouldSetResponderCapture" }, dependencies: items }, scrollShouldSetResponder: { phasedRegistrationNames: { bubbled: "onScrollShouldSetResponder", captured: "onScrollShouldSetResponderCapture" }, dependencies: ["topScroll"] }, selectionChangeShouldSetResponder: { phasedRegistrationNames: { bubbled: "onSelectionChangeShouldSetResponder", captured: "onSelectionChangeShouldSetResponderCapture" }, dependencies: ["topSelectionChange"] }, moveShouldSetResponder: { phasedRegistrationNames: { bubbled: "onMoveShouldSetResponder", captured: "onMoveShouldSetResponderCapture" }, dependencies: items1 }, responderStart: { registrationName: "onResponderStart", dependencies: items }, responderMove: { registrationName: "onResponderMove", dependencies: items1 }, responderEnd: { registrationName: "onResponderEnd", dependencies: items2 }, responderRelease: { registrationName: "onResponderRelease", dependencies: items2 }, responderTerminationRequest: { registrationName: "onResponderTerminationRequest", dependencies: [] }, responderGrant: { registrationName: "onResponderGrant", dependencies: [] }, responderReject: { registrationName: "onResponderReject", dependencies: [] }, responderTerminate: { registrationName: "onResponderTerminate", dependencies: [] } };
+let closure_7 = {
+  startShouldSetResponder: {
+    phasedRegistrationNames: { bubbled: "onStartShouldSetResponder", captured: "onStartShouldSetResponderCapture" },
+    dependencies: items,
+  },
+  scrollShouldSetResponder: {
+    phasedRegistrationNames: { bubbled: "onScrollShouldSetResponder", captured: "onScrollShouldSetResponderCapture" },
+    dependencies: ["topScroll"],
+  },
+  selectionChangeShouldSetResponder: {
+    phasedRegistrationNames: {
+      bubbled: "onSelectionChangeShouldSetResponder",
+      captured: "onSelectionChangeShouldSetResponderCapture",
+    },
+    dependencies: ["topSelectionChange"],
+  },
+  moveShouldSetResponder: {
+    phasedRegistrationNames: { bubbled: "onMoveShouldSetResponder", captured: "onMoveShouldSetResponderCapture" },
+    dependencies: items1,
+  },
+  responderStart: { registrationName: "onResponderStart", dependencies: items },
+  responderMove: { registrationName: "onResponderMove", dependencies: items1 },
+  responderEnd: { registrationName: "onResponderEnd", dependencies: items2 },
+  responderRelease: { registrationName: "onResponderRelease", dependencies: items2 },
+  responderTerminationRequest: { registrationName: "onResponderTerminationRequest", dependencies: [] },
+  responderGrant: { registrationName: "onResponderGrant", dependencies: [] },
+  responderReject: { registrationName: "onResponderReject", dependencies: [] },
+  responderTerminate: { registrationName: "onResponderTerminate", dependencies: [] },
+};
 let c8 = null;
 let c9 = false;
 
@@ -135,7 +169,13 @@ export const processResponderEvent = function processResponderEvent(arg0, self, 
                 parentElement3 = parentElement3.parentElement;
               } while (null != parentElement3);
             }
-            const tmp34 = new _isNativeReflectConstructDefault2(str13, { bubbles: true, cancelable: true }, responderIgnoreScroll, dependencyMap[str13], closure_3.touchHistory);
+            const tmp34 = new _isNativeReflectConstructDefault2(
+              str13,
+              { bubbles: true, cancelable: true },
+              responderIgnoreScroll,
+              dependencyMap[str13],
+              closure_3.touchHistory,
+            );
             SymbolResult1.setTarget(tmp34, tmp11);
             const phasedRegistrationNames = tmp25.phasedRegistrationNames;
             tmp21 = null;
@@ -241,10 +281,13 @@ export const processResponderEvent = function processResponderEvent(arg0, self, 
             nativeElementReference3 = tmp21;
             nativeElementReference3 = responderIgnoreScroll;
             nativeElementReference3 = tmp11;
-            nativeElementReference3 = true === dispatchResponderEvent(tmp21, "responderGrant", responderIgnoreScroll, tmp11);
+            nativeElementReference3 =
+              true === dispatchResponderEvent(tmp21, "responderGrant", responderIgnoreScroll, tmp11);
             nativeElementReference3 = _null;
             if (null != _null) {
-              if (false !== nativeElementReference3(_null, "responderTerminationRequest", responderIgnoreScroll, tmp11)) {
+              if (
+                false !== nativeElementReference3(_null, "responderTerminationRequest", responderIgnoreScroll, tmp11)
+              ) {
                 const result = nativeElementReference3(tmp61, "responderTerminate", responderIgnoreScroll, tmp11);
                 _null = tmp21;
                 const fabricUIManager = getFabricUIManager.getFabricUIManager();
@@ -291,7 +334,11 @@ export const processResponderEvent = function processResponderEvent(arg0, self, 
                 nativeElementReference3 = result3.getNativeElementReference(tmp21);
                 if (null != nativeElementReference3) {
                   if (fabricUIManager1 != null) {
-                    nativeElementReference3 = fabricUIManager1.setIsJSResponder(nativeElementReference3, true, nativeElementReference3);
+                    nativeElementReference3 = fabricUIManager1.setIsJSResponder(
+                      nativeElementReference3,
+                      true,
+                      nativeElementReference3,
+                    );
                   }
                 }
               }
@@ -307,12 +354,22 @@ export const processResponderEvent = function processResponderEvent(arg0, self, 
         nativeElementReference3 = dispatchResponderEvent;
         nativeElementReference3 = responderIgnoreScroll;
         nativeElementReference3 = tmp11;
-        nativeElementReference3 = dispatchResponderEvent(nativeElementReference3, "responderStart", responderIgnoreScroll, tmp11);
+        nativeElementReference3 = dispatchResponderEvent(
+          nativeElementReference3,
+          "responderStart",
+          responderIgnoreScroll,
+          tmp11,
+        );
       } else if ("topTouchMove" === arg0) {
         nativeElementReference3 = dispatchResponderEvent;
         nativeElementReference3 = responderIgnoreScroll;
         nativeElementReference3 = tmp11;
-        nativeElementReference3 = dispatchResponderEvent(nativeElementReference3, "responderMove", responderIgnoreScroll, tmp11);
+        nativeElementReference3 = dispatchResponderEvent(
+          nativeElementReference3,
+          "responderMove",
+          responderIgnoreScroll,
+          tmp11,
+        );
       } else {
         let tmp81 = "topTouchEnd" === arg0;
         if (!tmp81) {

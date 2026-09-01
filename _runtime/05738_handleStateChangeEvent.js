@@ -44,10 +44,17 @@ function handleStateChangeEvent(result, arg1, lastUpdateEvent, arg3) {
     const tmpResult2 = tmp(5720);
   }
 }
-let obj = { flattenAndFilterEvent: require("isGestureEnabled").flattenAndFilterEvent, State: require("metro/05658__.js").State, runCallback: require("isGestureEnabled").runCallback, CALLBACK_TYPE: require("_isNativeReflectConstruct").CALLBACK_TYPE };
+let obj = {
+  flattenAndFilterEvent: require("isGestureEnabled").flattenAndFilterEvent,
+  State: require("metro/05658__.js").State,
+  runCallback: require("isGestureEnabled").runCallback,
+  CALLBACK_TYPE: require("_isNativeReflectConstruct").CALLBACK_TYPE,
+};
 handleStateChangeEvent.__closure = obj;
 handleStateChangeEvent.__workletHash = 2533223590466;
-handleStateChangeEvent.__initData = { code: "function handleStateChangeEvent_Pnpm_eventHandlerTs1(eventWithData,callbacks,context,fillInDefaultValues){const{flattenAndFilterEvent,State,runCallback,CALLBACK_TYPE}=this.__closure;const{oldState:oldState,state:state}=eventWithData;const event=flattenAndFilterEvent(eventWithData);if(oldState===State.UNDETERMINED&&state===State.BEGAN){runCallback(CALLBACK_TYPE.BEGAN,callbacks,event);}else if((oldState===State.BEGAN||oldState===State.UNDETERMINED)&&state===State.ACTIVE){fillInDefaultValues===null||fillInDefaultValues===void 0||fillInDefaultValues(event);runCallback(CALLBACK_TYPE.START,callbacks,event);}else if(oldState!==state&&(state===State.END||state===State.FAILED||state===State.CANCELLED)){const canceled=state===State.FAILED||state===State.CANCELLED;const endEvent={...event,canceled:canceled};if(oldState===State.ACTIVE){fillInDefaultValues===null||fillInDefaultValues===void 0||fillInDefaultValues(endEvent);runCallback(CALLBACK_TYPE.END,callbacks,endEvent);}runCallback(CALLBACK_TYPE.FINALIZE,callbacks,endEvent);if(context){context.lastUpdateEvent=undefined;}}}" };
+handleStateChangeEvent.__initData = {
+  code: "function handleStateChangeEvent_Pnpm_eventHandlerTs1(eventWithData,callbacks,context,fillInDefaultValues){const{flattenAndFilterEvent,State,runCallback,CALLBACK_TYPE}=this.__closure;const{oldState:oldState,state:state}=eventWithData;const event=flattenAndFilterEvent(eventWithData);if(oldState===State.UNDETERMINED&&state===State.BEGAN){runCallback(CALLBACK_TYPE.BEGAN,callbacks,event);}else if((oldState===State.BEGAN||oldState===State.UNDETERMINED)&&state===State.ACTIVE){fillInDefaultValues===null||fillInDefaultValues===void 0||fillInDefaultValues(event);runCallback(CALLBACK_TYPE.START,callbacks,event);}else if(oldState!==state&&(state===State.END||state===State.FAILED||state===State.CANCELLED)){const canceled=state===State.FAILED||state===State.CANCELLED;const endEvent={...event,canceled:canceled};if(oldState===State.ACTIVE){fillInDefaultValues===null||fillInDefaultValues===void 0||fillInDefaultValues(endEvent);runCallback(CALLBACK_TYPE.END,callbacks,endEvent);}runCallback(CALLBACK_TYPE.FINALIZE,callbacks,endEvent);if(context){context.lastUpdateEvent=undefined;}}}",
+};
 function handleUpdateEvent(lastUpdateEvent, arg1, arg2, lastUpdateEvent2) {
   let tmp = lastUpdateEvent;
   if (arg2) {
@@ -64,10 +71,16 @@ function handleUpdateEvent(lastUpdateEvent, arg1, arg2, lastUpdateEvent2) {
     lastUpdateEvent2.lastUpdateEvent = lastUpdateEvent;
   }
 }
-obj = { flattenAndFilterEvent: require("isGestureEnabled").flattenAndFilterEvent, runCallback: require("isGestureEnabled").runCallback, CALLBACK_TYPE: require("_isNativeReflectConstruct").CALLBACK_TYPE };
+obj = {
+  flattenAndFilterEvent: require("isGestureEnabled").flattenAndFilterEvent,
+  runCallback: require("isGestureEnabled").runCallback,
+  CALLBACK_TYPE: require("_isNativeReflectConstruct").CALLBACK_TYPE,
+};
 handleUpdateEvent.__closure = obj;
 handleUpdateEvent.__workletHash = 13503118278355;
-handleUpdateEvent.__initData = { code: "function handleUpdateEvent_Pnpm_eventHandlerTs2(eventWithData,handlers,changeEventCalculator,context){const{flattenAndFilterEvent,runCallback,CALLBACK_TYPE}=this.__closure;const eventWithChanges=changeEventCalculator?changeEventCalculator(eventWithData,context?context.lastUpdateEvent:undefined):eventWithData;const event=flattenAndFilterEvent(eventWithChanges);runCallback(CALLBACK_TYPE.UPDATE,handlers,event);if(context){context.lastUpdateEvent=eventWithData;}}" };
+handleUpdateEvent.__initData = {
+  code: "function handleUpdateEvent_Pnpm_eventHandlerTs2(eventWithData,handlers,changeEventCalculator,context){const{flattenAndFilterEvent,runCallback,CALLBACK_TYPE}=this.__closure;const eventWithChanges=changeEventCalculator?changeEventCalculator(eventWithData,context?context.lastUpdateEvent:undefined):eventWithData;const event=flattenAndFilterEvent(eventWithChanges);runCallback(CALLBACK_TYPE.UPDATE,handlers,event);if(context){context.lastUpdateEvent=eventWithData;}}",
+};
 function handleTouchEvent(eventType) {
   if (eventType.eventType !== _mod5660.TouchEventType.UNDETERMINED) {
     let tmpResult = tmp(5720);
@@ -75,10 +88,16 @@ function handleTouchEvent(eventType) {
     tmpResult.runCallback(tmpResult.touchEventTypeToCallbackType(eventType.eventType), arg1, eventType);
   }
 }
-obj = { TouchEventType: require("metro/05660__.js").TouchEventType, runCallback: require("isGestureEnabled").runCallback, touchEventTypeToCallbackType: require("isGestureEnabled").touchEventTypeToCallbackType };
+obj = {
+  TouchEventType: require("metro/05660__.js").TouchEventType,
+  runCallback: require("isGestureEnabled").runCallback,
+  touchEventTypeToCallbackType: require("isGestureEnabled").touchEventTypeToCallbackType,
+};
 handleTouchEvent.__closure = obj;
 handleTouchEvent.__workletHash = 15920153828060;
-handleTouchEvent.__initData = { code: "function handleTouchEvent_Pnpm_eventHandlerTs3(event,handlers){const{TouchEventType,runCallback,touchEventTypeToCallbackType}=this.__closure;if(event.eventType!==TouchEventType.UNDETERMINED){runCallback(touchEventTypeToCallbackType(event.eventType),handlers,event);}}" };
+handleTouchEvent.__initData = {
+  code: "function handleTouchEvent_Pnpm_eventHandlerTs3(event,handlers){const{TouchEventType,runCallback,touchEventTypeToCallbackType}=this.__closure;if(event.eventType!==TouchEventType.UNDETERMINED){runCallback(touchEventTypeToCallbackType(event.eventType),handlers,event);}}",
+};
 function eventHandler(arg0, nativeEvent, arg2, arg3, lastUpdateEvent) {
   const result = isGestureEnabled.maybeExtractNativeEvent(nativeEvent);
   const obj = isGestureEnabled;
@@ -120,9 +139,19 @@ function eventHandler(arg0, nativeEvent, arg2, arg3, lastUpdateEvent) {
     }
   }
 }
-eventHandler.__closure = { maybeExtractNativeEvent: require("isGestureEnabled").maybeExtractNativeEvent, isEventForHandlerWithTag: require("isGestureEnabled").isEventForHandlerWithTag, isStateChangeEvent: require("isNativeEvent").isStateChangeEvent, handleStateChangeEvent, isTouchEvent: require("isNativeEvent").isTouchEvent, handleTouchEvent, handleUpdateEvent };
+eventHandler.__closure = {
+  maybeExtractNativeEvent: require("isGestureEnabled").maybeExtractNativeEvent,
+  isEventForHandlerWithTag: require("isGestureEnabled").isEventForHandlerWithTag,
+  isStateChangeEvent: require("isNativeEvent").isStateChangeEvent,
+  handleStateChangeEvent,
+  isTouchEvent: require("isNativeEvent").isTouchEvent,
+  handleTouchEvent,
+  handleUpdateEvent,
+};
 eventHandler.__workletHash = 218531583134;
-eventHandler.__initData = { code: "function eventHandler_Pnpm_eventHandlerTs4(handlerTag,sourceEvent,handlers,changeEventCalculator,jsContext,dispatchesAnimatedEvents,fillInDefaultValues){const{maybeExtractNativeEvent,isEventForHandlerWithTag,isStateChangeEvent,handleStateChangeEvent,isTouchEvent,handleTouchEvent,handleUpdateEvent}=this.__closure;const eventWithData=maybeExtractNativeEvent(sourceEvent);if(!isEventForHandlerWithTag(handlerTag,eventWithData)){return;}if(isStateChangeEvent(eventWithData)){handleStateChangeEvent(eventWithData,handlers,jsContext,fillInDefaultValues);return;}if(isTouchEvent(eventWithData)){handleTouchEvent(eventWithData,handlers);return;}if(!dispatchesAnimatedEvents){handleUpdateEvent(eventWithData,handlers,changeEventCalculator,jsContext);}}" };
+eventHandler.__initData = {
+  code: "function eventHandler_Pnpm_eventHandlerTs4(handlerTag,sourceEvent,handlers,changeEventCalculator,jsContext,dispatchesAnimatedEvents,fillInDefaultValues){const{maybeExtractNativeEvent,isEventForHandlerWithTag,isStateChangeEvent,handleStateChangeEvent,isTouchEvent,handleTouchEvent,handleUpdateEvent}=this.__closure;const eventWithData=maybeExtractNativeEvent(sourceEvent);if(!isEventForHandlerWithTag(handlerTag,eventWithData)){return;}if(isStateChangeEvent(eventWithData)){handleStateChangeEvent(eventWithData,handlers,jsContext,fillInDefaultValues);return;}if(isTouchEvent(eventWithData)){handleTouchEvent(eventWithData,handlers);return;}if(!dispatchesAnimatedEvents){handleUpdateEvent(eventWithData,handlers,changeEventCalculator,jsContext);}}",
+};
 arg5.handleUpdateEvent = handleUpdateEvent;
 arg5.handleTouchEvent = handleTouchEvent;
 arg5.eventHandler = eventHandler;

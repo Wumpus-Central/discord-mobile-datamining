@@ -13,7 +13,7 @@ export const useBottomSheetContentSizeSetter = function useBottomSheetContentSiz
       if (enableDynamicSizing) {
         const result = animatedContentHeight.set(arg0);
       }
-    }, items)
+    }, items),
   };
   items = [enableDynamicSizing, animatedContentHeight];
   return obj;

@@ -101,7 +101,7 @@ function advanceTimers(arg0) {
         arr = arr2;
         if (0 < length) {
           while (true) {
-            let tmp3 = length - 1 >>> 1;
+            let tmp3 = (length - 1) >>> 1;
             let tmp4 = tmp14[tmp3];
             let diff = tmp4.sortIndex - first.sortIndex;
             let tmp6 = length;
@@ -395,7 +395,7 @@ if (typeof performance === "object") {
         arr = arr2.push(obj);
         if (0 < length2) {
           while (true) {
-            let tmp15 = length2 - 1 >>> 1;
+            let tmp15 = (length2 - 1) >>> 1;
             let tmp16 = arr[tmp15];
             let diff = tmp16.sortIndex - obj.sortIndex;
             let tmp18 = length2;
@@ -446,7 +446,7 @@ if (typeof performance === "object") {
         arr = arr.push(obj);
         if (0 < length) {
           while (true) {
-            let tmp6 = length - 1 >>> 1;
+            let tmp6 = (length - 1) >>> 1;
             let tmp7 = tmp30[tmp6];
             let diff2 = tmp7.sortIndex - obj.sortIndex;
             let tmp9 = length;

@@ -22,4 +22,4 @@ export default function availableTypedArrays() {
     } while (num < tmp2(1415).length);
   }
   return items;
-};
+}

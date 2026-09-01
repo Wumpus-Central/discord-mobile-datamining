@@ -22,8 +22,14 @@ function getOperationName(closure_1_1) {
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.addChatCompletionAttributes = function addChatCompletionAttributes(setAttributes, created, recordOutputs) {
   ({ id, model } = created);
-  setAttributes.setAttributes({ [closure_0(closure_1[0]).OPENAI_RESPONSE_ID_ATTRIBUTE]: id, [closure_0(closure_1[0]).GEN_AI_RESPONSE_ID_ATTRIBUTE]: id });
-  setAttributes.setAttributes({ [closure_0(closure_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: model, [closure_0(closure_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: model });
+  setAttributes.setAttributes({
+    [closure_0(closure_1[0]).OPENAI_RESPONSE_ID_ATTRIBUTE]: id,
+    [closure_0(closure_1[0]).GEN_AI_RESPONSE_ID_ATTRIBUTE]: id,
+  });
+  setAttributes.setAttributes({
+    [closure_0(closure_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: model,
+    [closure_0(closure_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: model,
+  });
   let obj = {};
   obj[_mod958.OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE] = new Date(1000 * created.created).toISOString();
   setAttributes.setAttributes(obj);
@@ -88,7 +94,11 @@ arg5.addChatCompletionAttributes = function addChatCompletionAttributes(setAttri
 };
 arg5.addConversationAttributes = function addConversationAttributes(setAttributes, closure_1) {
   ({ id, created_at } = closure_1);
-  setAttributes.setAttributes({ [closure_0(closure_1[0]).OPENAI_RESPONSE_ID_ATTRIBUTE]: id, [closure_0(closure_1[0]).GEN_AI_RESPONSE_ID_ATTRIBUTE]: id, [closure_0(closure_1[0]).GEN_AI_CONVERSATION_ID_ATTRIBUTE]: id });
+  setAttributes.setAttributes({
+    [closure_0(closure_1[0]).OPENAI_RESPONSE_ID_ATTRIBUTE]: id,
+    [closure_0(closure_1[0]).GEN_AI_RESPONSE_ID_ATTRIBUTE]: id,
+    [closure_0(closure_1[0]).GEN_AI_CONVERSATION_ID_ATTRIBUTE]: id,
+  });
   if (created_at) {
     const obj = {};
     const _Date = Date;
@@ -98,7 +108,10 @@ arg5.addConversationAttributes = function addConversationAttributes(setAttribute
   }
 };
 arg5.addEmbeddingsAttributes = function addEmbeddingsAttributes(setAttributes, model) {
-  let obj = { [closure_0(closure_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: model.model, [closure_0(closure_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: model.model };
+  let obj = {
+    [closure_0(closure_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: model.model,
+    [closure_0(closure_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: model.model,
+  };
   setAttributes.setAttributes(obj);
   if (model.usage) {
     const prompt_tokens = model.usage.prompt_tokens;
@@ -118,8 +131,14 @@ arg5.addEmbeddingsAttributes = function addEmbeddingsAttributes(setAttributes, m
 };
 arg5.addResponsesApiAttributes = function addResponsesApiAttributes(setAttributes, created_at, recordOutputs) {
   ({ id, model } = created_at);
-  setAttributes.setAttributes({ [closure_0(closure_1[0]).OPENAI_RESPONSE_ID_ATTRIBUTE]: id, [closure_0(closure_1[0]).GEN_AI_RESPONSE_ID_ATTRIBUTE]: id });
-  setAttributes.setAttributes({ [closure_0(closure_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: model, [closure_0(closure_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: model });
+  setAttributes.setAttributes({
+    [closure_0(closure_1[0]).OPENAI_RESPONSE_ID_ATTRIBUTE]: id,
+    [closure_0(closure_1[0]).GEN_AI_RESPONSE_ID_ATTRIBUTE]: id,
+  });
+  setAttributes.setAttributes({
+    [closure_0(closure_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: model,
+    [closure_0(closure_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: model,
+  });
   let obj = {};
   obj[_mod958.OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE] = new Date(1000 * created_at.created_at).toISOString();
   setAttributes.setAttributes(obj);
@@ -302,10 +321,21 @@ arg5.isResponsesApiStreamEvent = function isResponsesApiStreamEvent(obj) {
   }
   return startsWithResult;
 };
-arg5.setCommonResponseAttributes = function setCommonResponseAttributes(closure_0, responseId, responseModel, responseTimestamp) {
-  let obj = { [closure_0(closure_1[0]).OPENAI_RESPONSE_ID_ATTRIBUTE]: responseId, [closure_0(closure_1[0]).GEN_AI_RESPONSE_ID_ATTRIBUTE]: responseId };
+arg5.setCommonResponseAttributes = function setCommonResponseAttributes(
+  closure_0,
+  responseId,
+  responseModel,
+  responseTimestamp,
+) {
+  let obj = {
+    [closure_0(closure_1[0]).OPENAI_RESPONSE_ID_ATTRIBUTE]: responseId,
+    [closure_0(closure_1[0]).GEN_AI_RESPONSE_ID_ATTRIBUTE]: responseId,
+  };
   closure_0.setAttributes(obj);
-  obj = { [closure_0(closure_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: responseModel, [closure_0(closure_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: responseModel };
+  obj = {
+    [closure_0(closure_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: responseModel,
+    [closure_0(closure_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: responseModel,
+  };
   closure_0.setAttributes(obj);
   obj = {};
   obj[_mod958.OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE] = new Date(1000 * responseTimestamp).toISOString();

@@ -23,7 +23,7 @@ arg5.XHRInterceptor = {
   enableInterception() {
     if (!c8) {
       const _XMLHttpRequest = XMLHttpRequest;
-      XMLHttpRequest.prototype.open = function(arg0, arg1) {
+      XMLHttpRequest.prototype.open = function (arg0, arg1) {
         const self = this;
         if (closure_0) {
           tmp(arg0, arg1, self);
@@ -36,7 +36,7 @@ arg5.XHRInterceptor = {
         }
       };
       const _XMLHttpRequest2 = XMLHttpRequest;
-      XMLHttpRequest.prototype.setRequestHeader = function(arg0, arg1) {
+      XMLHttpRequest.prototype.setRequestHeader = function (arg0, arg1) {
         const self = this;
         if (closure_2) {
           tmp(arg0, arg1, self);
@@ -49,35 +49,39 @@ arg5.XHRInterceptor = {
         }
       };
       const _XMLHttpRequest3 = XMLHttpRequest;
-      XMLHttpRequest.prototype.send = function(arg0) {
+      XMLHttpRequest.prototype.send = function (arg0) {
         let self = this;
         self = this;
         if (closure_1) {
           tmp(arg0, self);
         }
         if (self.addEventListener) {
-          const listener = self.addEventListener("readystatechange", () => {
-            if (closure_1_8) {
-              if (self.readyState === self.HEADERS_RECEIVED) {
-                const str2 = obj.getResponseHeader("Content-Type");
-                const responseHeader = obj.getResponseHeader("Content-Length");
-                if (str2) {
-                  const first = str2.split(";")[0];
+          const listener = self.addEventListener(
+            "readystatechange",
+            () => {
+              if (closure_1_8) {
+                if (self.readyState === self.HEADERS_RECEIVED) {
+                  const str2 = obj.getResponseHeader("Content-Type");
+                  const responseHeader = obj.getResponseHeader("Content-Length");
+                  if (str2) {
+                    const first = str2.split(";")[0];
+                  }
+                  if (responseHeader) {
+                    const _parseInt = parseInt;
+                    const parsed = parseInt(responseHeader, 10);
+                  }
+                  if (closure_1_3) {
+                    tmp5(first, parsed, obj.getAllResponseHeaders(), obj);
+                  }
                 }
-                if (responseHeader) {
-                  const _parseInt = parseInt;
-                  const parsed = parseInt(responseHeader, 10);
+                if (tmp10) {
+                  closure_1_4(obj.status, obj.timeout, obj.response, obj.responseURL, obj.responseType, obj);
                 }
-                if (closure_1_3) {
-                  tmp5(first, parsed, obj.getAllResponseHeaders(), obj);
-                }
+                tmp10 = self.readyState === self.DONE && closure_1_4;
               }
-              if (tmp10) {
-                closure_1_4(obj.status, obj.timeout, obj.response, obj.responseURL, obj.responseType, obj);
-              }
-              tmp10 = self.readyState === self.DONE && closure_1_4;
-            }
-          }, false);
+            },
+            false,
+          );
         }
         const apply = closure_6.apply;
         if (typeof apply === "unknown") {
@@ -104,5 +108,5 @@ arg5.XHRInterceptor = {
       c3 = null;
       c2 = null;
     }
-  }
+  },
 };

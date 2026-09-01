@@ -24,8 +24,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class Wrap {
   constructor() {
@@ -59,11 +58,15 @@ const items = [
         return importDefaultResult2.cloneElement(onlyResult, { collapsable: false }, onlyResult.props.children);
       } catch (err) {
         const _Error = Error;
-        error = new Error(Wrap(5657).tagMessage("GestureDetector got more than one view as a child. If you want the gesture to work on multiple views, wrap them with a common parent and attach the gesture to that view."));
+        error = new Error(
+          Wrap(5657).tagMessage(
+            "GestureDetector got more than one view as a child. If you want the gesture to work on multiple views, wrap them with a common parent and attach the gesture to that view.",
+          ),
+        );
         throw error;
       }
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(Wrap, items);
 let animatedComponent;

@@ -8,7 +8,7 @@ function _playHaptic() {
     closure_0 = arg1;
     closure_1 = arg2;
     c2 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c2 === 2) {
         c2 = 3;
         HermesBuiltin.throwTypeError();

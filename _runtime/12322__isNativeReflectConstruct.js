@@ -24,8 +24,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 require("get ActivityIndicator").BackHandler;
 class BackButton {
@@ -65,13 +64,13 @@ let items = [
     key: "componentDidMount",
     value: function componentDidMount() {
       const listener = BackHandler.addEventListener("hardwareBackPress", this.handleBack);
-    }
+    },
   },
   {
     key: "componentWillUnmount",
     value: function componentWillUnmount() {
       const removed = BackHandler.removeEventListener("hardwareBackPress", this.handleBack);
-    }
+    },
   },
   {
     key: "render",
@@ -81,10 +80,10 @@ let items = [
         children(history) {
           self.history = history;
           return self.props.children || null;
-        }
+        },
       });
-    }
-  }
+    },
+  },
 ];
 
 export default importDefaultResult(BackButton, items);

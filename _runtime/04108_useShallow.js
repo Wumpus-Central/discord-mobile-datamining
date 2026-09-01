@@ -1,7 +1,6 @@
 // _runtime/04108_useShallow.js
 import closure_2 from "00019_noop.js";
 
-
 export const useShallow = function useShallow(arg0) {
   closure_0 = arg0;
   closure_1 = React.useRef(undefined);

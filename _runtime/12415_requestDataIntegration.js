@@ -4,7 +4,18 @@ import closure_3 from "metro/00109__objectWithoutProperties.js";
 import setupIntegration from "12391_setupIntegration.js";
 
 let closure_4 = ["ip", "user"];
-let closure_5 = { include: { cookies: true, data: true, headers: true, ip: false, query_string: true, url: true, user: { id: true, username: true, email: true } }, transactionNamingScheme: "methodPath" };
+let closure_5 = {
+  include: {
+    cookies: true,
+    data: true,
+    headers: true,
+    ip: false,
+    query_string: true,
+    url: true,
+    user: { id: true, username: true, email: true },
+  },
+  transactionNamingScheme: "methodPath",
+};
 
 export const requestDataIntegration = setupIntegration.defineIntegration(() => {
   let obj = arg0;

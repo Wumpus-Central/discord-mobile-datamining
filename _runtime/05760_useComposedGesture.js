@@ -25,21 +25,34 @@ arg5.useComposedGesture = function useComposedGesture(arg0) {
       if (obj.dispatchesAnimatedEvents) {
         const _Error = Error;
         tmp2Result = tmp2(5657);
-        const error1 = new Error(tmp2Result.tagMessage("Composed gestures cannot use both Reanimated and Animated events at the same time."));
+        const error1 = new Error(
+          tmp2Result.tagMessage("Composed gestures cannot use both Reanimated and Animated events at the same time."),
+        );
         throw error1;
       }
     }
     const Reanimated = tmp2(5695).Reanimated;
     let composedEventHandler;
     if (Reanimated != null) {
-      composedEventHandler = Reanimated.useComposedEventHandler(substr.map((detectorCallbacks) => detectorCallbacks.detectorCallbacks.reanimatedEventHandler || null));
+      composedEventHandler = Reanimated.useComposedEventHandler(
+        substr.map((detectorCallbacks) => detectorCallbacks.detectorCallbacks.reanimatedEventHandler || null),
+      );
     }
-    const found = substr.filter((detectorCallbacks) => undefined !== detectorCallbacks.detectorCallbacks.animatedEventHandler);
+    const found = substr.filter(
+      (detectorCallbacks) => undefined !== detectorCallbacks.detectorCallbacks.animatedEventHandler,
+    );
     let animatedEventHandler;
     if (found.length > 0) {
       animatedEventHandler = found[0].detectorCallbacks.animatedEventHandler;
     }
-    obj = { handlerTags: null, type: null, config: null, detectorCallbacks: null, externalSimultaneousHandlers: null, gestures: null };
+    obj = {
+      handlerTags: null,
+      type: null,
+      config: null,
+      detectorCallbacks: null,
+      externalSimultaneousHandlers: null,
+      gestures: null,
+    };
     obj[0] = flatMapResult;
     obj[1] = arg0;
     obj[2] = obj;

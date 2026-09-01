@@ -34,7 +34,10 @@ arg5.reactRouterV3BrowserTracingIntegration = function reactRouterV3BrowserTraci
         }
         let obj = result(closure_2_1[0]);
         obj = { name, attributes: obj };
-        obj = { [closure_2_0(closure_2_1[1]).SEMANTIC_ATTRIBUTE_SENTRY_OP]: "pageload", [closure_2_0(closure_2_1[1]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.pageload.react.reactrouter_v3" };
+        obj = {
+          [closure_2_0(closure_2_1[1]).SEMANTIC_ATTRIBUTE_SENTRY_OP]: "pageload",
+          [closure_2_0(closure_2_1[1]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.pageload.react.reactrouter_v3",
+        };
         obj[result(closure_2_1[1]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = str;
         result = obj.startBrowserTracingPageLoadSpan(f105591, obj);
       };
@@ -120,7 +123,10 @@ arg5.reactRouterV3BrowserTracingIntegration = function reactRouterV3BrowserTraci
             }
             let obj = f105591(pathname[0]);
             obj = { name, attributes: obj };
-            obj = { [closure_2_0(closure_2_1[1]).SEMANTIC_ATTRIBUTE_SENTRY_OP]: "navigation", [closure_2_0(closure_2_1[1]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.navigation.react.reactrouter_v3" };
+            obj = {
+              [closure_2_0(closure_2_1[1]).SEMANTIC_ATTRIBUTE_SENTRY_OP]: "navigation",
+              [closure_2_0(closure_2_1[1]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.navigation.react.reactrouter_v3",
+            };
             obj[f105591(pathname[1]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = str;
             result = obj.startBrowserTracingNavigationSpan(f117732, obj);
           };

@@ -190,7 +190,10 @@ function rebuildRoutePathFromAllRoutes(arg0, _location) {
                 }
                 obj = { pathname: null };
                 obj[0] = arr2;
-                const tmp11 = closure_1_15(closure_0.filter((arg0) => arg0 !== item10012.route), obj);
+                const tmp11 = closure_1_15(
+                  closure_0.filter((arg0) => arg0 !== item10012.route),
+                  obj,
+                );
                 let combined = tmp11;
                 if ("/" !== tmp11[0]) {
                   const _HermesInternal2 = HermesInternal;
@@ -338,7 +341,7 @@ function getNormalizedName(arg0, pathname, items, basename) {
                             str6 = str;
                           }
                           let tmp29 = combined;
-                          items = [str6 + tmp19, ];
+                          items = [str6 + tmp19];
                           let str7 = "route";
                           items[1] = "route";
                         }
@@ -359,7 +362,7 @@ function getNormalizedName(arg0, pathname, items, basename) {
                         str8 = str;
                       }
                       let tmp34 = str4;
-                      let items1 = [str8 + str4, ];
+                      let items1 = [str8 + str4];
                       let str9 = "route";
                       items1[1] = "route";
                       items = items1;

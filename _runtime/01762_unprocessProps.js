@@ -71,6 +71,6 @@ let obj = {
       clearInterval(self.intervalId);
       self.intervalId = null;
     }
-  }
+  },
 };
 arg5.PropsRegistryGarbageCollector = obj;

@@ -2,7 +2,6 @@
 import isPrototype from "00630_isPrototype.js";
 import overArg from "00631_overArg.js";
 
-
 export default function baseKeys(arg0) {
   if (isPrototype(arg0)) {
     const items = [];
@@ -32,4 +31,4 @@ export default function baseKeys(arg0) {
     return overArg(arg0);
   }
   const tmp = require;
-};
+}

@@ -33,10 +33,14 @@ function startWebLayoutAnimation(props, _componentDOMRef, ENTERING, easingY) {
       tmpResult = tmp(1741);
       animationWithInitialValues = tmpResult.createAnimationWithInitialValues(presetName, entering.initialValues);
     }
-    let flag = !(animationWithInitialValues in tmp(1709).Animations) && !(ENTERING === tmp(1678).LayoutAnimationType.LAYOUT || tmp5 || undefined !== entering.initialValues);
+    let flag =
+      !(animationWithInitialValues in tmp(1709).Animations) &&
+      !(ENTERING === tmp(1678).LayoutAnimationType.LAYOUT || tmp5 || undefined !== entering.initialValues);
     if (flag) {
       let logger = tmp(1657).logger;
-      logger.warn("Couldn't load entering/exiting animation. Current version supports only predefined animations with modifiers: duration, delay, easing, randomizeDelay, withCallback, reducedMotion.");
+      logger.warn(
+        "Couldn't load entering/exiting animation. Current version supports only predefined animations with modifiers: duration, delay, easing, randomizeDelay, withCallback, reducedMotion.",
+      );
       flag = true;
     }
     processedConfig = null;
@@ -50,7 +54,9 @@ function startWebLayoutAnimation(props, _componentDOMRef, ENTERING, easingY) {
         }
         if (!hasItem) {
           const logger2 = tmp(1657).logger;
-          logger2.warn("Neither '100' nor 'to' was specified in Keyframe definition. This may result in wrong final position of your component. One possible solution is to duplicate last timestamp in definition as '100' (or 'to')");
+          logger2.warn(
+            "Neither '100' nor 'to' was specified in Keyframe definition. This may result in wrong final position of your component. One possible solution is to duplicate last timestamp in definition as '100' (or 'to')",
+          );
         }
       }
       processedConfig = tmp(1722).getProcessedConfig(animationWithInitialValues, ENTERING, entering);
@@ -83,7 +89,13 @@ function startWebLayoutAnimation(props, _componentDOMRef, ENTERING, easingY) {
           str = "Property";
         }
         const _HermesInternal = HermesInternal;
-        logger.warn("" + str + " [" + found.join(", ") + "] may be overwritten by a layout animation. Please wrap your component with an animated view and apply the layout animation on the wrapper.");
+        logger.warn(
+          "" +
+            str +
+            " [" +
+            found.join(", ") +
+            "] may be overwritten by a layout animation. Please wrap your component with an animated view and apply the layout animation on the wrapper.",
+        );
       }
     })(tmp(1709).Animations[animationName1].style, _componentDOMRef.style);
   }
@@ -120,7 +132,17 @@ arg5.tryActivateLayoutTransition = function tryActivateLayoutTransition(props, _
       if (exitingV != null) {
         presetName1 = exitingV.presetName;
       }
-      obj = { translateX: null, translateY: null, scaleX: null, scaleY: null, reversed: false, easingX: null, easingY: null, entering: null, exiting: null };
+      obj = {
+        translateX: null,
+        translateY: null,
+        scaleX: null,
+        scaleY: null,
+        reversed: false,
+        easingX: null,
+        easingY: null,
+        entering: null,
+        exiting: null,
+      };
       obj[0] = arg2.x - size.x + (arg2.width - size.width) / 2;
       obj[1] = arg2.y - size.y + (arg2.height - size.height) / 2;
       obj[2] = arg2.width / size.width;

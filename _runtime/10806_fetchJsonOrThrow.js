@@ -5,7 +5,7 @@ import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 let closure_0 = arg1;
 const Linking = get_ActivityIndicator.Linking;
 const RNIapIos = get_ActivityIndicator.NativeModules.RNIapIos;
-closure_0 = importDefaultResult(function*() {
+closure_0 = importDefaultResult(function* () {
   if (v0 === 2) {
     v0 = 3;
     HermesBuiltin.throwTypeError();
@@ -48,7 +48,7 @@ closure_0 = importDefaultResult((arg0) => {
   closure_0 = arg0;
   c4 = 0;
   c5 = 0;
-  const iter = (function*(arg0) {
+  const iter = (function* (arg0) {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -113,7 +113,7 @@ closure_0 = importDefaultResult((arg0) => {
   iter.next();
   return iter;
 });
-closure_0 = importDefaultResult(function*() {
+closure_0 = importDefaultResult(function* () {
   if (v0 === 2) {
     v0 = 3;
     HermesBuiltin.throwTypeError();
@@ -157,7 +157,7 @@ closure_0 = importDefaultResult((arg0, arg1) => {
   closure_1 = arg1;
   c3 = 0;
   c4 = 0;
-  return (function*(arg0, arg1) {
+  return (function* (arg0, arg1) {
     if (c4 === 2) {
       c4 = 3;
       HermesBuiltin.throwTypeError();
@@ -242,7 +242,7 @@ closure_0 = importDefaultResult((arg0) => {
   closure_0 = arg0;
   c3 = 0;
   c4 = 0;
-  return (function*(arg0) {
+  return (function* (arg0) {
     let status = tmp2;
     yield v0("https://buy.itunes.apple.com/verifyReceipt", closure_0);
     if (1 === tmp5) {
@@ -296,7 +296,7 @@ closure_0 = importDefaultResult((arg0) => {
   closure_0 = arg0;
   c3 = 0;
   c4 = 0;
-  const iter = (function*(arg0) {
+  const iter = (function* (arg0) {
     if (v0 === 2) {
       v0 = 3;
       HermesBuiltin.throwTypeError();

@@ -29,7 +29,7 @@ let obj = {
   key: "currentValue",
   get() {
     return this.currentAverage;
-  }
+  },
 };
 const items = [
   obj,
@@ -51,15 +51,15 @@ const items = [
       }
       self.currentAverage = Math.max(0, result + (arg0 - num) / currentCount);
       self.currentCount = currentCount;
-    }
+    },
   },
   {
     key: "getNextIndex",
     value: function getNextIndex() {
       this.nextIndex = (this.nextIndex + 1) % this.inputValues.length;
       return this.nextIndex;
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(AverageWindow, items);
 class MultiTypeAverageWindow {
@@ -85,7 +85,7 @@ obj = {
       value = tmp4;
     }
     value.addValue(arg0);
-  }
+  },
 };
 const items1 = [
   obj,
@@ -105,15 +105,15 @@ const items1 = [
         num = 0;
       }
       return num;
-    }
+    },
   },
   {
     key: "reset",
     value: function reset() {
       const averageWindows = this.averageWindows;
       averageWindows.clear();
-    }
-  }
+    },
+  },
 ];
 
 export const AverageWindow = importDefaultResultResult;

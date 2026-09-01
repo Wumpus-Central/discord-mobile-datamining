@@ -35,7 +35,7 @@ function _htmlElementAsString(tagName, arr) {
       if (mapped) {
         if (mapped.length) {
           const item = mapped.forEach((arg0) => {
-            items.push("[" + arg0[0] + "=\"" + arg0[1] + "\"]");
+            items.push("[" + arg0[0] + '="' + arg0[1] + '"]');
           });
         }
         const items1 = ["aria-label", "type", "name", "title", "alt"];
@@ -49,9 +49,9 @@ function _htmlElementAsString(tagName, arr) {
             let tmp26 = attr;
             let _HermesInternal3 = HermesInternal;
             let str8 = "[";
-            let str9 = "=\"";
-            let str10 = "\"]";
-            arr = items.push("[" + tmp22 + "=\"" + tmp24 + "\"]");
+            let str9 = '="';
+            let str10 = '"]';
+            arr = items.push("[" + tmp22 + '="' + tmp24 + '"]');
           }
           continue;
         }

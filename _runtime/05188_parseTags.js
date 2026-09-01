@@ -114,22 +114,26 @@ function parseTags(byteLength, size, sum) {
   return obj;
 }
 function getTagDescription(description, items, arg2, encoding) {
-  if (!(function hasDescriptionProperty(description) {
-    let tmp = description;
-    if (description) {
-      tmp = undefined !== description.description;
-    }
-    return tmp;
-  })(description)) {
-    let decodeResult = items;
-    if ((function tagValueIsText(description, items) {
+  if (
+    !(function hasDescriptionProperty(description) {
       let tmp = description;
       if (description) {
-        const _Array = Array;
-        tmp = items instanceof Array;
+        tmp = undefined !== description.description;
       }
       return tmp;
-    })(description, items)) {
+    })(description)
+  ) {
+    let decodeResult = items;
+    if (
+      (function tagValueIsText(description, items) {
+        let tmp = description;
+        if (description) {
+          const _Array = Array;
+          tmp = items instanceof Array;
+        }
+        return tmp;
+      })(description, items)
+    ) {
       decodeResult = module(5190).decode(encoding, items);
       const obj = module(5190);
     }
@@ -137,8 +141,7 @@ function getTagDescription(description, items, arg2, encoding) {
   } else {
     try {
       return description.description(items, arg2);
-    } catch (err) {
-    }
+    } catch (err) {}
   }
 }
 arg5.default = {
@@ -194,5 +197,5 @@ arg5.default = {
     } catch (err) {
       return {};
     }
-  }
+  },
 };

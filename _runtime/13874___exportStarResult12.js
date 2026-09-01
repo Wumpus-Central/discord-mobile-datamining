@@ -1,7 +1,9 @@
 // _runtime/13874___exportStarResult12.js
 arg5.CollapseNumberRange = function CollapseNumberRange(arg0, items, getInternalSlots) {
   const internalSlots = getInternalSlots.getInternalSlots(arg0);
-  const regExp = new RegExp("s?[".concat(internalSlots.dataLocaleData.numbers.symbols[internalSlots.numberingSystem].rangeSign, "]s?"));
+  const regExp = new RegExp(
+    "s?[".concat(internalSlots.dataLocaleData.numbers.symbols[internalSlots.numberingSystem].rangeSign, "]s?"),
+  );
   const findIndexResult = items.findIndex((type) => {
     let isMatch = "literal" === type.type;
     if (isMatch) {
@@ -58,4 +60,15 @@ arg5.CollapseNumberRange = function CollapseNumberRange(arg0, items, getInternal
     }
   }
 };
-const set = new Set(["unit", "exponentMinusSign", "minusSign", "plusSign", "percentSign", "exponentSeparator", "percent", "percentSign", "currency", "literal"]);
+const set = new Set([
+  "unit",
+  "exponentMinusSign",
+  "minusSign",
+  "plusSign",
+  "percentSign",
+  "exponentSeparator",
+  "percent",
+  "percentSign",
+  "currency",
+  "literal",
+]);

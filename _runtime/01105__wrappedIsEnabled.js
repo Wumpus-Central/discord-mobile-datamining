@@ -3,7 +3,7 @@ import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumenta
 
 function _wrappedIsEnabled(arg0) {
   closure_0 = arg0;
-  return function() {
+  return function () {
     const items = [...arguments];
     const first = items[0];
     const applyResult = callback.apply(this, items);
@@ -19,7 +19,17 @@ function _wrappedIsEnabled(arg0) {
     if (callback(closure_1_1[1]).DEBUG_BUILD) {
       const debug = callback(closure_1_1[0]).debug;
       const _HermesInternal = HermesInternal;
-      debug.error("[Feature Flags] UnleashClient.isEnabled does not match expected signature. arg0: " + first + " (" + typeof first + "), result: " + applyResult + " (" + typeof applyResult + ")");
+      debug.error(
+        "[Feature Flags] UnleashClient.isEnabled does not match expected signature. arg0: " +
+          first +
+          " (" +
+          typeof first +
+          "), result: " +
+          applyResult +
+          " (" +
+          typeof applyResult +
+          ")",
+      );
     }
   };
 }
@@ -34,6 +44,6 @@ export const unleashIntegration = registerSpanErrorInstrumentation.defineIntegra
     },
     processEvent(contexts) {
       return featureFlagClientClass(table[0])._INTERNAL_copyFlagsFromScopeToEvent(contexts);
-    }
+    },
   };
 });

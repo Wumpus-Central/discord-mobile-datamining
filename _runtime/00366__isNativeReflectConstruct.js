@@ -24,8 +24,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 const connectAnimatedNodes = setDefault.API.connectAnimatedNodes;
 const disconnectAnimatedNodes = setDefault.API.disconnectAnimatedNodes;
@@ -75,7 +74,7 @@ let items = [
       }
       const items = [arg0];
       fn(items);
-    }
+    },
   },
   {
     key: "__addChild",
@@ -91,7 +90,7 @@ let items = [
         connectAnimatedNodes(self.__getNativeTag(), __makeNative.__getNativeTag());
         const __getNativeTagResult = self.__getNativeTag();
       }
-    }
+    },
   },
   {
     key: "__removeChild",
@@ -114,13 +113,13 @@ let items = [
         const _console = console;
         console.warn("Trying to remove a child that doesn't exist");
       }
-    }
+    },
   },
   {
     key: "__getChildren",
     value: function __getChildren() {
       return this._children;
-    }
+    },
   },
   {
     key: "__callListeners",
@@ -147,8 +146,8 @@ let items = [
           } while (num < length);
         }
       }
-    }
-  }
+    },
+  },
 ];
 
 export default importDefaultResult(AnimatedWithChildren, items);

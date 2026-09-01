@@ -30,10 +30,15 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
-let closure_3 = ["drawerBackgroundColor", "onDrawerStateChanged", "renderNavigationView", "onDrawerOpen", "onDrawerClose"];
+let closure_3 = [
+  "drawerBackgroundColor",
+  "onDrawerStateChanged",
+  "renderNavigationView",
+  "onDrawerOpen",
+  "onDrawerClose",
+];
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_12 = ["Idle", "Dragging", "Settling"];
 class DrawerLayoutAndroid {
@@ -110,7 +115,7 @@ let obj = {
       str2 = "auto";
     }
     obj[1] = str2;
-    const items1 = [props.renderNavigationView(), ];
+    const items1 = [props.renderNavigationView()];
     let tmp8 = tmp2;
     if (tmp2) {
       obj = { style: null };
@@ -128,10 +133,10 @@ let obj = {
       obj1[1] = self.props.statusBarBackgroundColor;
       tmp12 = callback4(tmp4(304), obj1);
     }
-    const items2 = [tmp12, , ];
+    const items2 = [tmp12, ,];
     if (tmp2) {
       const obj2 = { style: null };
-      const items3 = [tmp7.statusBar, ];
+      const items3 = [tmp7.statusBar];
       const obj3 = { backgroundColor: null };
       obj3[0] = self.props.statusBarBackgroundColor;
       items3[1] = obj3;
@@ -152,11 +157,16 @@ let obj = {
     obj4.drawerLockMode = self.props.drawerLockMode;
     const items4 = [drawerSubview.base, self.props.style];
     obj4.style = items4;
-    ({ _onDrawerSlide: obj7.onDrawerSlide, _onDrawerOpen: obj7.onDrawerOpen, _onDrawerClose: obj7.onDrawerClose, _onDrawerStateChanged: obj7.onDrawerStateChanged } = self);
+    ({
+      _onDrawerSlide: obj7.onDrawerSlide,
+      _onDrawerOpen: obj7.onDrawerOpen,
+      _onDrawerClose: obj7.onDrawerClose,
+      _onDrawerStateChanged: obj7.onDrawerStateChanged,
+    } = self);
     const items5 = [tmp3Result, tmp3Result];
     obj4.children = items5;
     return closure_10(tmp4Result, obj4);
-  }
+  },
 };
 let items = [
   obj,
@@ -165,65 +175,80 @@ let items = [
     value: function openDrawer() {
       const Commands = DrawerLayoutAndroid(309).Commands;
       Commands.openDrawer(nullthrowsDefault(this._nativeRef.current));
-    }
+    },
   },
   {
     key: "closeDrawer",
     value: function closeDrawer() {
       const Commands = DrawerLayoutAndroid(309).Commands;
       Commands.closeDrawer(nullthrowsDefault(this._nativeRef.current));
-    }
+    },
   },
   {
     key: "blur",
     value: function blur() {
       nullthrowsDefault(this._nativeRef.current).blur();
-    }
+    },
   },
   {
     key: "focus",
     value: function focus() {
       nullthrowsDefault(this._nativeRef.current).focus();
-    }
+    },
   },
   {
     key: "measure",
     value: function measure(arg0) {
       nullthrowsDefault(this._nativeRef.current).measure(arg0);
-    }
+    },
   },
   {
     key: "measureInWindow",
     value: function measureInWindow(arg0) {
       nullthrowsDefault(this._nativeRef.current).measureInWindow(arg0);
-    }
+    },
   },
   {
     key: "measureLayout",
     value: function measureLayout(arg0, arg1, arg2) {
       nullthrowsDefault(this._nativeRef.current).measureLayout(arg0, arg1, arg2);
-    }
+    },
   },
   {
     key: "setNativeProps",
     value: function setNativeProps(arg0) {
       nullthrowsDefault(this._nativeRef.current).setNativeProps(arg0);
-    }
-  }
+    },
+  },
 ];
 obj = {
   key: "positions",
   get() {
-    console.warn("Setting DrawerLayoutAndroid drawerPosition using `DrawerLayoutAndroid.positions` is deprecated. Instead pass the string value \"left\" or \"right\"");
+    console.warn(
+      'Setting DrawerLayoutAndroid drawerPosition using `DrawerLayoutAndroid.positions` is deprecated. Instead pass the string value "left" or "right"',
+    );
     return { Left: "left", Right: "right" };
-  }
+  },
 };
 let items1 = [obj];
 const importDefaultResultResult = importDefaultResult(DrawerLayoutAndroid, items, items1);
-obj = { base: { flex: 1, elevation: 16 }, mainSubview: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 }, drawerSubview: { position: "absolute", top: 0, bottom: 0 }, statusBar: null, drawerStatusBar: null };
+obj = {
+  base: { flex: 1, elevation: 16 },
+  mainSubview: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 },
+  drawerSubview: { position: "absolute", top: 0, bottom: 0 },
+  statusBar: null,
+  drawerStatusBar: null,
+};
 obj[3] = { height: _isNativeReflectConstructDefault.currentHeight };
 let obj1 = { height: _isNativeReflectConstructDefault.currentHeight };
-obj[4] = { position: "absolute", top: 0, left: 0, right: 0, height: _isNativeReflectConstructDefault.currentHeight, backgroundColor: "rgba(0, 0, 0, 0.251)" };
+obj[4] = {
+  position: "absolute",
+  top: 0,
+  left: 0,
+  right: 0,
+  height: _isNativeReflectConstructDefault.currentHeight,
+  backgroundColor: "rgba(0, 0, 0, 0.251)",
+};
 let closure_13 = importDefaultResult2.create(obj);
 
 export default importDefaultResultResult;

@@ -58,9 +58,38 @@ function managePanProps(activeOffsetX) {
   }
   return obj;
 }
-const items = ["activeOffsetY", "activeOffsetX", "failOffsetY", "failOffsetX", "minDist", "minVelocity", "minVelocityX", "minVelocityY", "minPointers", "maxPointers", "avgTouches", "enableTrackpadTwoFingerGesture", "activateAfterLongPress"];
-const items1 = ["activeOffsetYStart", "activeOffsetYEnd", "activeOffsetXStart", "activeOffsetXEnd", "failOffsetYStart", "failOffsetYEnd", "failOffsetXStart", "failOffsetXEnd"];
-let obj = { name: "PanGestureHandler", allowedProps: items2, config: {}, transformProps: managePanProps, customNativeProps: items1 };
+const items = [
+  "activeOffsetY",
+  "activeOffsetX",
+  "failOffsetY",
+  "failOffsetX",
+  "minDist",
+  "minVelocity",
+  "minVelocityX",
+  "minVelocityY",
+  "minPointers",
+  "maxPointers",
+  "avgTouches",
+  "enableTrackpadTwoFingerGesture",
+  "activateAfterLongPress",
+];
+const items1 = [
+  "activeOffsetYStart",
+  "activeOffsetYEnd",
+  "activeOffsetXStart",
+  "activeOffsetXEnd",
+  "failOffsetYStart",
+  "failOffsetYEnd",
+  "failOffsetXStart",
+  "failOffsetXEnd",
+];
+let obj = {
+  name: "PanGestureHandler",
+  allowedProps: items2,
+  config: {},
+  transformProps: managePanProps,
+  customNativeProps: items1,
+};
 items2 = [...items];
 
 export const panGestureHandlerProps = items;

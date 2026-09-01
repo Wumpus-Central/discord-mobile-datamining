@@ -32,13 +32,15 @@ let items = [
       if (!this._useNativeDriver) {
         if (true === __isNative.__isNative) {
           const _Error = Error;
-          error = new Error("Attempting to run JS driven animation on animated node that has been moved to \"native\" earlier by starting an animation with `useNativeDriver: true`");
+          error = new Error(
+            'Attempting to run JS driven animation on animated node that has been moved to "native" earlier by starting an animation with `useNativeDriver: true`',
+          );
           throw error;
         }
       }
       self._onEnd = _onEnd;
       self.__active = true;
-    }
+    },
   },
   {
     key: "stop",
@@ -65,14 +67,14 @@ let items = [
         }
       }
       self.__active = false;
-    }
+    },
   },
   {
     key: "__getNativeAnimationConfig",
     value: function __getNativeAnimationConfig() {
       error = new Error("This animation type cannot be offloaded to native");
       throw error;
-    }
+    },
   },
   {
     key: "__findAnimatedPropsNodes",
@@ -98,7 +100,7 @@ let items = [
         }
         return items;
       }
-    }
+    },
   },
   {
     key: "__startAnimationIfNative",
@@ -139,7 +141,7 @@ let items = [
       } else {
         return false;
       }
-    }
+    },
   },
   {
     key: "__notifyAnimationEnd",
@@ -149,14 +151,12 @@ let items = [
         tmp._onEnd = null;
         _onEnd(value);
       }
-    }
+    },
   },
   {
     key: "__getDebugID",
-    value: function __getDebugID() {
-
-    }
-  }
+    value: function __getDebugID() {},
+  },
 ];
 
 export default _createClassDefault(Animation, items);

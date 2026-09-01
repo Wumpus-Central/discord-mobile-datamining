@@ -1,5 +1,38 @@
 // _runtime/metro/05183__.js
-obj = { 0: obj, 1: obj, 2: null, 3: null, 4: null, 5: null, 6: null, 7: null, 8: "GPSSatellites", 9: null, 10: null, 11: "GPSDOP", 12: null, 13: "GPSSpeed", 14: null, 15: "GPSTrack", 16: null, 17: "GPSImgDirection", 18: "GPSMapDatum", 19: null, 20: null, 21: null, 22: null, 23: null, 24: "GPSDestBearing", 25: null, 26: "GPSDestDistance", 27: null, 28: null, 29: "GPSDateStamp", 30: null, 31: "GPSHPositioningError" };
+obj = {
+  0: obj,
+  1: obj,
+  2: null,
+  3: null,
+  4: null,
+  5: null,
+  6: null,
+  7: null,
+  8: "GPSSatellites",
+  9: null,
+  10: null,
+  11: "GPSDOP",
+  12: null,
+  13: "GPSSpeed",
+  14: null,
+  15: "GPSTrack",
+  16: null,
+  17: "GPSImgDirection",
+  18: "GPSMapDatum",
+  19: null,
+  20: null,
+  21: null,
+  22: null,
+  23: null,
+  24: "GPSDestBearing",
+  25: null,
+  26: "GPSDestDistance",
+  27: null,
+  28: null,
+  29: "GPSDateStamp",
+  30: null,
+  31: "GPSHPositioningError",
+};
 obj = {
   name: "GPSVersionID",
   description(arg0) {
@@ -17,7 +50,7 @@ obj = {
       }
     }
     return str;
-  }
+  },
 };
 obj = {
   name: "GPSLatitudeRef",
@@ -32,7 +65,7 @@ obj = {
       str = str2;
     }
     return str;
-  }
+  },
 };
 obj[2] = { name: "GPSLatitude", description: require("getStringValue").getCalculatedGpsValue };
 obj[3] = {
@@ -48,7 +81,7 @@ obj[3] = {
       str = str2;
     }
     return str;
-  }
+  },
 };
 const obj1 = { name: "GPSLatitude", description: require("getStringValue").getCalculatedGpsValue };
 obj[4] = { name: "GPSLongitude", description: require("getStringValue").getCalculatedGpsValue };
@@ -64,13 +97,13 @@ obj[5] = {
       str = str2;
     }
     return str;
-  }
+  },
 };
 obj[6] = {
   name: "GPSAltitude",
   description(arg0) {
     return arg0[0] / arg0[1] + " m";
-  }
+  },
 };
 obj[7] = {
   name: "GPSTimeStamp",
@@ -86,7 +119,7 @@ obj[7] = {
       return combined;
     });
     return mapped.join(":");
-  }
+  },
 };
 obj[9] = {
   name: "GPSStatus",
@@ -101,7 +134,7 @@ obj[9] = {
       str = str2;
     }
     return str;
-  }
+  },
 };
 obj[10] = {
   name: "GPSMeasureMode",
@@ -116,7 +149,7 @@ obj[10] = {
       str = str2;
     }
     return str;
-  }
+  },
 };
 obj[12] = {
   name: "GPSSpeedRef",
@@ -135,7 +168,7 @@ obj[12] = {
       str = str2;
     }
     return str;
-  }
+  },
 };
 obj[14] = {
   name: "GPSTrackRef",
@@ -150,7 +183,7 @@ obj[14] = {
       str = str2;
     }
     return str;
-  }
+  },
 };
 obj[16] = {
   name: "GPSImgDirectionRef",
@@ -165,7 +198,7 @@ obj[16] = {
       str = str2;
     }
     return str;
-  }
+  },
 };
 obj[19] = {
   name: "GPSDestLatitudeRef",
@@ -180,13 +213,13 @@ obj[19] = {
       str = str2;
     }
     return str;
-  }
+  },
 };
 obj[20] = {
   name: "GPSDestLatitude",
   description(arg0) {
     return arg0[0][0] / arg0[0][1] + arg0[1][0] / arg0[1][1] / 60 + arg0[2][0] / arg0[2][1] / 3600;
-  }
+  },
 };
 obj[21] = {
   name: "GPSDestLongitudeRef",
@@ -201,13 +234,13 @@ obj[21] = {
       str = str2;
     }
     return str;
-  }
+  },
 };
 obj[22] = {
   name: "GPSDestLongitude",
   description(arg0) {
     return arg0[0][0] / arg0[0][1] + arg0[1][0] / arg0[1][1] / 60 + arg0[2][0] / arg0[2][1] / 3600;
-  }
+  },
 };
 obj[23] = {
   name: "GPSDestBearingRef",
@@ -222,7 +255,7 @@ obj[23] = {
       str = str2;
     }
     return str;
-  }
+  },
 };
 obj[25] = {
   name: "GPSDestDistanceRef",
@@ -241,7 +274,7 @@ obj[25] = {
       str = str2;
     }
     return str;
-  }
+  },
 };
 const obj2 = { name: "GPSLongitude", description: require("getStringValue").getCalculatedGpsValue };
 obj[27] = { name: "GPSProcessingMethod", description: require("getStringValue").getEncodedString };
@@ -259,6 +292,6 @@ obj[30] = {
       str = str2;
     }
     return str;
-  }
+  },
 };
 arg5.default = obj;

@@ -82,40 +82,39 @@ export const sdkInfoIntegration = () => {
     if (!tmpResult.isExpoGo()) {
       fn = false;
       dependencyMap = null;
-      fn = () => closure_1_2(undefined, undefined, undefined, function*() {
-        closure_1 = tmp3;
-        if (closure_1_0) {
-          return closure_1_1;
-        }
-        c3 = 1;
-        const NATIVE = closure_1_0(closure_1_1[2]).NATIVE;
-        yield NATIVE.fetchNativeSdkInfo();
-        if (1 === tmp7) {
+      fn = () =>
+        closure_1_2(undefined, undefined, undefined, function* () {
+          closure_1 = tmp3;
+          if (closure_1_0) {
+            return closure_1_1;
+          }
+          c3 = 1;
+          const NATIVE = closure_1_0(closure_1_1[2]).NATIVE;
+          yield NATIVE.fetchNativeSdkInfo();
+          if (1 === tmp7) {
+            c3 = 0;
+            c0 = closure_2;
+            const debug = closure_1_0(closure_1_1[3]).debug;
+            debug.warn("Could not fetch native sdk info.", c0);
+            c5 = 3;
+          } else if (arg0 === 1) {
+            c5 = 3;
+            throw arg1;
+          } else if (arg0 !== 2) {
+            closure_1 = arg1;
+            c0 = true;
+            c3 = 0;
+          }
           c3 = 0;
-          c0 = closure_2;
-          const debug = closure_1_0(closure_1_1[3]).debug;
-          debug.warn("Could not fetch native sdk info.", c0);
-          c5 = 3;
-        } else if (arg0 === 1) {
-          c5 = 3;
-          throw arg1;
-        } else if (arg0 !== 2) {
-          closure_1 = arg1;
-          c0 = true;
-          c3 = 0;
-        }
-        c3 = 0;
-        return arg1;
-      });
+          return arg1;
+        });
     }
     obj = { name: "SdkInfo", setupOnce: null, processEvent: null };
-    obj[1] = function setupOnce() {
-
-    };
+    obj[1] = function setupOnce() {};
     obj[2] = function processEvent(arg0) {
       closure_0 = arg0;
       closure_1 = closure_0;
-      return closure_1_2(undefined, undefined, undefined, function*() {
+      return closure_1_2(undefined, undefined, undefined, function* () {
         c2 = 0;
         closure_1 = tmp2;
         closure_0 = yield closure_1_1();

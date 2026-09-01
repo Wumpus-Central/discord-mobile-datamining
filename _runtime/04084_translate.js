@@ -83,12 +83,36 @@ if (typeof exports === "object") {
           return text + str3;
         }
       };
-      let obj = { months: null, monthsShort: null, monthsParseExact: true, weekdays: null, weekdaysShort: null, weekdaysMin: null, weekdaysParseExact: true, longDateFormat: null, calendar: null, relativeTime: null, dayOfMonthOrdinalParse: null, ordinal: "%d.", week: null };
+      let obj = {
+        months: null,
+        monthsShort: null,
+        monthsParseExact: true,
+        weekdays: null,
+        weekdaysShort: null,
+        weekdaysMin: null,
+        weekdaysParseExact: true,
+        longDateFormat: null,
+        calendar: null,
+        relativeTime: null,
+        dayOfMonthOrdinalParse: null,
+        ordinal: "%d.",
+        week: null,
+      };
       obj = { format: null, standalone: null };
-      const split = "sije\u010Dnja_velja\u010De_o\u017Eujka_travnja_svibnja_lipnja_srpnja_kolovoza_rujna_listopada_studenoga_prosinca".split;
-      obj[0] = "sije\u010Dnja_velja\u010De_o\u017Eujka_travnja_svibnja_lipnja_srpnja_kolovoza_rujna_listopada_studenoga_prosinca".split("_");
-      const split2 = "sije\u010Danj_velja\u010Da_o\u017Eujak_travanj_svibanj_lipanj_srpanj_kolovoz_rujan_listopad_studeni_prosinac".split;
-      obj[1] = "sije\u010Danj_velja\u010Da_o\u017Eujak_travanj_svibanj_lipanj_srpanj_kolovoz_rujan_listopad_studeni_prosinac".split("_");
+      const split =
+        "sije\u010Dnja_velja\u010De_o\u017Eujka_travnja_svibnja_lipnja_srpnja_kolovoza_rujna_listopada_studenoga_prosinca"
+          .split;
+      obj[0] =
+        "sije\u010Dnja_velja\u010De_o\u017Eujka_travnja_svibnja_lipnja_srpnja_kolovoza_rujna_listopada_studenoga_prosinca".split(
+          "_",
+        );
+      const split2 =
+        "sije\u010Danj_velja\u010Da_o\u017Eujak_travanj_svibanj_lipanj_srpanj_kolovoz_rujan_listopad_studeni_prosinac"
+          .split;
+      obj[1] =
+        "sije\u010Danj_velja\u010Da_o\u017Eujak_travanj_svibanj_lipanj_srpanj_kolovoz_rujan_listopad_studeni_prosinac".split(
+          "_",
+        );
       obj[0] = obj;
       const split3 = "sij._velj._o\u017Eu._tra._svi._lip._srp._kol._ruj._lis._stu._pro.".split;
       obj[1] = "sij._velj._o\u017Eu._tra._svi._lip._srp._kol._ruj._lis._stu._pro.".split("_");
@@ -98,8 +122,22 @@ if (typeof exports === "object") {
       obj[4] = "ned._pon._uto._sri._\u010Det._pet._sub.".split("_");
       const split6 = "ne_po_ut_sr_\u010De_pe_su".split;
       obj[5] = "ne_po_ut_sr_\u010De_pe_su".split("_");
-      obj[7] = { LT: "H:mm", LTS: "H:mm:ss", L: "DD.MM.YYYY", LL: "Do MMMM YYYY", LLL: "Do MMMM YYYY H:mm", LLLL: "dddd, Do MMMM YYYY H:mm" };
-      const obj1 = { sameDay: "[danas u] LT", nextDay: "[sutra u] LT", nextWeek: null, lastDay: "[ju\u010Der u] LT", lastWeek: null, sameElse: "L" };
+      obj[7] = {
+        LT: "H:mm",
+        LTS: "H:mm:ss",
+        L: "DD.MM.YYYY",
+        LL: "Do MMMM YYYY",
+        LLL: "Do MMMM YYYY H:mm",
+        LLLL: "dddd, Do MMMM YYYY H:mm",
+      };
+      const obj1 = {
+        sameDay: "[danas u] LT",
+        nextDay: "[sutra u] LT",
+        nextWeek: null,
+        lastDay: "[ju\u010Der u] LT",
+        lastWeek: null,
+        sameElse: "L",
+      };
       obj1[2] = function nextWeek() {
         const dayResult = this.day();
         if (0 === dayResult) {
@@ -125,7 +163,22 @@ if (typeof exports === "object") {
         }
       };
       obj[8] = obj1;
-      const obj2 = { future: "za %s", past: "prije %s", s: "par sekundi", ss: null, m: null, mm: null, h: null, hh: null, d: "dan", dd: null, M: "mjesec", MM: null, y: "godinu", yy: null };
+      const obj2 = {
+        future: "za %s",
+        past: "prije %s",
+        s: "par sekundi",
+        ss: null,
+        m: null,
+        mm: null,
+        h: null,
+        hh: null,
+        d: "dan",
+        dd: null,
+        M: "mjesec",
+        MM: null,
+        y: "godinu",
+        yy: null,
+      };
       obj2[3] = translate2;
       obj2[4] = translate2;
       obj2[5] = translate2;
@@ -222,14 +275,44 @@ if (typeof globalThis.define === "function") {
           return text + str3;
         }
       }
-      let obj = { months: null, monthsShort: null, monthsParseExact: true, weekdays: null, weekdaysShort: null, weekdaysMin: null, weekdaysParseExact: true, longDateFormat: null, calendar: null, relativeTime: null, dayOfMonthOrdinalParse: null, ordinal: "%d.", week: null };
-      obj = { format: "sije\u010Dnja_velja\u010De_o\u017Eujka_travnja_svibnja_lipnja_srpnja_kolovoza_rujna_listopada_studenoga_prosinca".split("_"), standalone: "sije\u010Danj_velja\u010Da_o\u017Eujak_travanj_svibanj_lipanj_srpanj_kolovoz_rujan_listopad_studeni_prosinac".split("_") };
+      let obj = {
+        months: null,
+        monthsShort: null,
+        monthsParseExact: true,
+        weekdays: null,
+        weekdaysShort: null,
+        weekdaysMin: null,
+        weekdaysParseExact: true,
+        longDateFormat: null,
+        calendar: null,
+        relativeTime: null,
+        dayOfMonthOrdinalParse: null,
+        ordinal: "%d.",
+        week: null,
+      };
+      obj = {
+        format:
+          "sije\u010Dnja_velja\u010De_o\u017Eujka_travnja_svibnja_lipnja_srpnja_kolovoza_rujna_listopada_studenoga_prosinca".split(
+            "_",
+          ),
+        standalone:
+          "sije\u010Danj_velja\u010Da_o\u017Eujak_travanj_svibanj_lipanj_srpanj_kolovoz_rujan_listopad_studeni_prosinac".split(
+            "_",
+          ),
+      };
       obj[0] = obj;
       obj[1] = "sij._velj._o\u017Eu._tra._svi._lip._srp._kol._ruj._lis._stu._pro.".split("_");
       obj[3] = "nedjelja_ponedjeljak_utorak_srijeda_\u010Detvrtak_petak_subota".split("_");
       obj[4] = "ned._pon._uto._sri._\u010Det._pet._sub.".split("_");
       obj[5] = "ne_po_ut_sr_\u010De_pe_su".split("_");
-      obj[7] = { LT: "H:mm", LTS: "H:mm:ss", L: "DD.MM.YYYY", LL: "Do MMMM YYYY", LLL: "Do MMMM YYYY H:mm", LLLL: "dddd, Do MMMM YYYY H:mm" };
+      obj[7] = {
+        LT: "H:mm",
+        LTS: "H:mm:ss",
+        L: "DD.MM.YYYY",
+        LL: "Do MMMM YYYY",
+        LLL: "Do MMMM YYYY H:mm",
+        LLLL: "dddd, Do MMMM YYYY H:mm",
+      };
       obj[8] = {
         sameDay: "[danas u] LT",
         nextDay: "[sutra u] LT",
@@ -258,9 +341,24 @@ if (typeof globalThis.define === "function") {
             return "[pro\u0161li] dddd [u] LT";
           }
         },
-        sameElse: "L"
+        sameElse: "L",
       };
-      obj[9] = { future: "za %s", past: "prije %s", s: "par sekundi", ss: translate, m: translate, mm: translate, h: translate, hh: translate, d: "dan", dd: translate, M: "mjesec", MM: translate, y: "godinu", yy: translate };
+      obj[9] = {
+        future: "za %s",
+        past: "prije %s",
+        s: "par sekundi",
+        ss: translate,
+        m: translate,
+        mm: translate,
+        h: translate,
+        hh: translate,
+        d: "dan",
+        dd: translate,
+        M: "mjesec",
+        MM: translate,
+        y: "godinu",
+        yy: translate,
+      };
       obj[10] = /\d{1,2}\./;
       obj[12] = { dow: 1, doy: 7 };
       return defineLocale.defineLocale("hr", obj);
@@ -347,14 +445,30 @@ function translate(arg0, arg1, arg2) {
   }
 }
 obj = {
-  months: { format: "sije\u010Dnja_velja\u010De_o\u017Eujka_travnja_svibnja_lipnja_srpnja_kolovoza_rujna_listopada_studenoga_prosinca".split("_"), standalone: "sije\u010Danj_velja\u010Da_o\u017Eujak_travanj_svibanj_lipanj_srpanj_kolovoz_rujan_listopad_studeni_prosinac".split("_") },
+  months: {
+    format:
+      "sije\u010Dnja_velja\u010De_o\u017Eujka_travnja_svibnja_lipnja_srpnja_kolovoza_rujna_listopada_studenoga_prosinca".split(
+        "_",
+      ),
+    standalone:
+      "sije\u010Danj_velja\u010Da_o\u017Eujak_travanj_svibanj_lipanj_srpanj_kolovoz_rujan_listopad_studeni_prosinac".split(
+        "_",
+      ),
+  },
   monthsShort: "sij._velj._o\u017Eu._tra._svi._lip._srp._kol._ruj._lis._stu._pro.".split("_"),
   monthsParseExact: true,
   weekdays: "nedjelja_ponedjeljak_utorak_srijeda_\u010Detvrtak_petak_subota".split("_"),
   weekdaysShort: "ned._pon._uto._sri._\u010Det._pet._sub.".split("_"),
   weekdaysMin: "ne_po_ut_sr_\u010De_pe_su".split("_"),
   weekdaysParseExact: true,
-  longDateFormat: { LT: "H:mm", LTS: "H:mm:ss", L: "DD.MM.YYYY", LL: "Do MMMM YYYY", LLL: "Do MMMM YYYY H:mm", LLLL: "dddd, Do MMMM YYYY H:mm" },
+  longDateFormat: {
+    LT: "H:mm",
+    LTS: "H:mm:ss",
+    L: "DD.MM.YYYY",
+    LL: "Do MMMM YYYY",
+    LLL: "Do MMMM YYYY H:mm",
+    LLLL: "dddd, Do MMMM YYYY H:mm",
+  },
   calendar: {
     sameDay: "[danas u] LT",
     nextDay: "[sutra u] LT",
@@ -383,11 +497,26 @@ obj = {
         return "[pro\u0161li] dddd [u] LT";
       }
     },
-    sameElse: "L"
+    sameElse: "L",
   },
-  relativeTime: { future: "za %s", past: "prije %s", s: "par sekundi", ss: translate, m: translate, mm: translate, h: translate, hh: translate, d: "dan", dd: translate, M: "mjesec", MM: translate, y: "godinu", yy: translate },
+  relativeTime: {
+    future: "za %s",
+    past: "prije %s",
+    s: "par sekundi",
+    ss: translate,
+    m: translate,
+    mm: translate,
+    h: translate,
+    hh: translate,
+    d: "dan",
+    dd: translate,
+    M: "mjesec",
+    MM: translate,
+    y: "godinu",
+    yy: translate,
+  },
   dayOfMonthOrdinalParse: /\d{1,2}\./,
   ordinal: "%d.",
-  week: { dow: 1, doy: 7 }
+  week: { dow: 1, doy: 7 },
 };
 moment.defineLocale("hr", obj);

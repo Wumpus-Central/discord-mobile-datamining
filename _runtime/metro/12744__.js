@@ -154,10 +154,12 @@ if (self2) {
       let fromEntriesResult = arr;
       if (Array.isArray(arr)) {
         const _Object = Object;
-        fromEntriesResult = Object.fromEntries(arr.map((arg0) => {
-          const items = [arg0, arg0];
-          return items;
-        }));
+        fromEntriesResult = Object.fromEntries(
+          arr.map((arg0) => {
+            const items = [arg0, arg0];
+            return items;
+          }),
+        );
       }
       const util = _mod12678.util;
       const merged = Object.assign(util.normalizeParams(enc));
@@ -193,7 +195,7 @@ if (self2) {
           }
           return shallowCloneResult;
         },
-        set: undefined
+        set: undefined,
       });
       const zodDefault = new exports.ZodDefault(obj);
       return zodDefault;
@@ -211,7 +213,7 @@ if (self2) {
           }
           return shallowCloneResult;
         },
-        set: undefined
+        set: undefined,
       });
       const zodPrefault = new exports.ZodPrefault(obj);
       return zodPrefault;
@@ -480,10 +482,12 @@ if (self2) {
       let fromEntriesResult = keys;
       if (Array.isArray(keys)) {
         const _Object = Object;
-        fromEntriesResult = Object.fromEntries(keys.map((arg0) => {
-          const items = [arg0, arg0];
-          return items;
-        }));
+        fromEntriesResult = Object.fromEntries(
+          keys.map((arg0) => {
+            const items = [arg0, arg0];
+            return items;
+          }),
+        );
       }
       const util = _mod12678.util;
       const merged = Object.assign(util.normalizeParams(undefined));
@@ -504,13 +508,21 @@ if (self2) {
     exports.strictObject = function strictObject(shape, enc) {
       const util = _mod12678.util;
       const merged = Object.assign(util.normalizeParams(enc));
-      const zodObject = new exports.ZodObject({ type: "object", shape, catchall: closure_6._never(exports.ZodNever, undefined) });
+      const zodObject = new exports.ZodObject({
+        type: "object",
+        shape,
+        catchall: closure_6._never(exports.ZodNever, undefined),
+      });
       return zodObject;
     };
     exports.looseObject = function looseObject(shape, enc) {
       const util = _mod12678.util;
       const merged = Object.assign(util.normalizeParams(enc));
-      const zodObject = new exports.ZodObject({ type: "object", shape, catchall: closure_6._unknown(exports.ZodUnknown) });
+      const zodObject = new exports.ZodObject({
+        type: "object",
+        shape,
+        catchall: closure_6._unknown(exports.ZodUnknown),
+      });
       return zodObject;
     };
     exports.union = union;
@@ -540,7 +552,12 @@ if (self2) {
     exports.looseRecord = function looseRecord(stringResult1, anyResult, enc) {
       const util = _mod12678.util;
       const merged = Object.assign(util.normalizeParams(enc));
-      const zodRecord = new exports.ZodRecord({ type: "record", keyType: stringResult1, valueType: anyResult, mode: "loose" });
+      const zodRecord = new exports.ZodRecord({
+        type: "record",
+        keyType: stringResult1,
+        valueType: anyResult,
+        mode: "loose",
+      });
       return zodRecord;
     };
     exports.map = function map(keyType, valueType, enc) {
@@ -600,7 +617,13 @@ if (self2) {
     };
     exports.pipe = pipe;
     exports.codec = function codec(arg0, out, decode) {
-      const zodCodec = new exports.ZodCodec({ type: "pipe", in: arg0, out, transform: decode.decode, reverseTransform: decode.encode });
+      const zodCodec = new exports.ZodCodec({
+        type: "pipe",
+        in: arg0,
+        out,
+        transform: decode.decode,
+        reverseTransform: decode.encode,
+      });
       return zodCodec;
     };
     exports.readonly = readonly;
@@ -645,7 +668,7 @@ if (self2) {
         fn(D, __getInternalProperties, arg2, arg3) {
           return D instanceof closure_0;
         },
-        abort: true
+        abort: true,
       };
       const util = require("12678__.js").util;
       const merged = Object.assign(util.normalizeParams(obj));
@@ -675,7 +698,13 @@ if (self2) {
       zodLazy = new zodLazy.ZodLazy({
         type: "lazy",
         getter: () => {
-          const items = [closure_1_6._string(zodLazy.ZodString, callback), closure_1_6._number(zodLazy.ZodNumber, undefined), closure_1_6._boolean(zodLazy.ZodBoolean, undefined), closure_1_6._null(zodLazy.ZodNull, undefined), closure_1_6._array(zodLazy.ZodArray, zodLazy, undefined), ];
+          const items = [
+            closure_1_6._string(zodLazy.ZodString, callback),
+            closure_1_6._number(zodLazy.ZodNumber, undefined),
+            closure_1_6._boolean(zodLazy.ZodBoolean, undefined),
+            closure_1_6._null(zodLazy.ZodNull, undefined),
+            closure_1_6._array(zodLazy.ZodArray, zodLazy, undefined),
+          ];
           let obj = { type: "record", keyType: closure_1_6._string(zodLazy.ZodString, undefined), valueType: zodLazy };
           const util = callback(closure_1_2[1]).util;
           const merged = Object.assign(util.normalizeParams(undefined));
@@ -686,7 +715,7 @@ if (self2) {
           const merged1 = Object.assign(util2.normalizeParams(undefined));
           const zodUnion = new zodLazy.ZodUnion(obj);
           return zodUnion;
-        }
+        },
       });
       return zodLazy;
     };
@@ -708,7 +737,10 @@ if (self2) {
       const $ZodType = closure_6.$ZodType;
       $ZodType.init(_standard, def);
       let obj = { jsonSchema: null };
-      obj = { input: require("../12740_initializeContext.js").createStandardJSONSchemaMethod(_standard, "input"), output: require("../12740_initializeContext.js").createStandardJSONSchemaMethod(_standard, "output") };
+      obj = {
+        input: require("../12740_initializeContext.js").createStandardJSONSchemaMethod(_standard, "input"),
+        output: require("../12740_initializeContext.js").createStandardJSONSchemaMethod(_standard, "output"),
+      };
       obj[0] = obj;
       let merged = Object.assign(_standard["~standard"], obj);
       _standard.toJSONSchema = require("../12740_initializeContext.js").createToJSONSchemaMethod(_standard, {});
@@ -737,7 +769,7 @@ if (self2) {
               tmp = obj;
             }
             return tmp;
-          })
+          }),
         ];
         return lib.clone(util.mergeDefs(def, { checks: items1 }), { parent: true });
       };
@@ -755,7 +787,7 @@ if (self2) {
         closure_0 = arg0;
         closure_1 = arg1;
         c2 = 0;
-        return (function*(arg0, arg1) {
+        return (function* (arg0, arg1) {
           if (c2 === 2) {
             c2 = 3;
             HermesBuiltin.throwTypeError();
@@ -795,7 +827,7 @@ if (self2) {
           }
         })();
       });
-      _standard.parseAsync = function(arg0, arg1) {
+      _standard.parseAsync = function (arg0, arg1) {
         const self = this;
         const apply = closure_0.apply;
         if (typeof apply === "unknown") {
@@ -809,7 +841,7 @@ if (self2) {
         closure_0 = arg0;
         closure_1 = arg1;
         c2 = 0;
-        return (function*(arg0, arg1) {
+        return (function* (arg0, arg1) {
           if (c2 === 2) {
             c2 = 3;
             HermesBuiltin.throwTypeError();
@@ -847,7 +879,7 @@ if (self2) {
           }
         })();
       });
-      _standard.safeParseAsync = function(arg0, arg1) {
+      _standard.safeParseAsync = function (arg0, arg1) {
         const self = this;
         const apply = closure_0.apply;
         if (typeof apply === "unknown") {
@@ -864,7 +896,7 @@ if (self2) {
         closure_0 = arg0;
         closure_1 = arg1;
         c2 = 0;
-        return (function*(arg0, arg1) {
+        return (function* (arg0, arg1) {
           if (c2 === 2) {
             c2 = 3;
             HermesBuiltin.throwTypeError();
@@ -902,7 +934,7 @@ if (self2) {
           }
         })();
       });
-      _standard.encodeAsync = function(arg0, arg1) {
+      _standard.encodeAsync = function (arg0, arg1) {
         const self = this;
         const apply = closure_0.apply;
         if (typeof apply === "unknown") {
@@ -916,7 +948,7 @@ if (self2) {
         closure_0 = arg0;
         closure_1 = arg1;
         c2 = 0;
-        return (function*(arg0, arg1) {
+        return (function* (arg0, arg1) {
           if (c2 === 2) {
             c2 = 3;
             HermesBuiltin.throwTypeError();
@@ -954,7 +986,7 @@ if (self2) {
           }
         })();
       });
-      _standard.decodeAsync = function(arg0, arg1) {
+      _standard.decodeAsync = function (arg0, arg1) {
         const self = this;
         const apply = closure_0.apply;
         if (typeof apply === "unknown") {
@@ -970,7 +1002,7 @@ if (self2) {
         closure_0 = arg0;
         closure_1 = arg1;
         c2 = 0;
-        return (function*(arg0, arg1) {
+        return (function* (arg0, arg1) {
           if (c2 === 2) {
             c2 = 3;
             HermesBuiltin.throwTypeError();
@@ -1008,7 +1040,7 @@ if (self2) {
           }
         })();
       });
-      _standard.safeEncodeAsync = function(arg0, arg1) {
+      _standard.safeEncodeAsync = function (arg0, arg1) {
         const self = this;
         const apply = closure_0.apply;
         if (typeof apply === "unknown") {
@@ -1022,7 +1054,7 @@ if (self2) {
         closure_0 = arg0;
         closure_1 = arg1;
         c2 = 0;
-        return (function*(arg0, arg1) {
+        return (function* (arg0, arg1) {
           if (c2 === 2) {
             c2 = 3;
             HermesBuiltin.throwTypeError();
@@ -1060,7 +1092,7 @@ if (self2) {
           }
         })();
       });
-      _standard.safeDecodeAsync = function(arg0, arg1) {
+      _standard.safeDecodeAsync = function (arg0, arg1) {
         const self = this;
         const apply = closure_0.apply;
         if (typeof apply === "unknown") {
@@ -1136,7 +1168,7 @@ if (self2) {
             }
             return shallowCloneResult;
           },
-          set: undefined
+          set: undefined,
         });
         const zodDefault = new def.ZodDefault(obj);
         return zodDefault;
@@ -1154,7 +1186,7 @@ if (self2) {
             }
             return shallowCloneResult;
           },
-          set: undefined
+          set: undefined,
         });
         const zodPrefault = new def.ZodPrefault(obj);
         return zodPrefault;
@@ -1193,7 +1225,7 @@ if (self2) {
           }
           return description;
         },
-        configurable: true
+        configurable: true,
       });
       _standard.meta = () => {
         const items = [...arguments];
@@ -1683,10 +1715,12 @@ if (self2) {
         let fromEntriesResult = keys;
         if (Array.isArray(keys)) {
           const _Object = Object;
-          fromEntriesResult = Object.fromEntries(keys.map((arg0) => {
-            const items = [arg0, arg0];
-            return items;
-          }));
+          fromEntriesResult = Object.fromEntries(
+            keys.map((arg0) => {
+              const items = [arg0, arg0];
+              return items;
+            }),
+          );
         }
         const util = _zod(closure_1_2[1]).util;
         const merged = Object.assign(util.normalizeParams(undefined));
@@ -1784,7 +1818,8 @@ if (self2) {
       $ZodIntersection.init(_zod, arg1);
       const ZodType = exports.ZodType;
       ZodType.init(_zod, arg1);
-      _zod._zod.processJSONSchema = (arg0, arg1, arg2) => closure_1_7.intersectionProcessor(closure_0, arg0, arg1, arg2);
+      _zod._zod.processJSONSchema = (arg0, arg1, arg2) =>
+        closure_1_7.intersectionProcessor(closure_0, arg0, arg1, arg2);
     });
     exports.ZodTuple = fnResult.$constructor("ZodTuple", (_zod) => {
       closure_0 = _zod;
@@ -1952,7 +1987,7 @@ if (self2) {
           } else {
             return tmp.values[0];
           }
-        }
+        },
       });
     });
     exports.ZodFile = fnResult.$constructor("ZodFile", (_zod) => {
@@ -2136,7 +2171,8 @@ if (self2) {
       $ZodTemplateLiteral.init(_zod, arg1);
       const ZodType = exports.ZodType;
       ZodType.init(_zod, arg1);
-      _zod._zod.processJSONSchema = (arg0, arg1, arg2) => closure_1_7.templateLiteralProcessor(closure_0, arg0, arg1, arg2);
+      _zod._zod.processJSONSchema = (arg0, arg1, arg2) =>
+        closure_1_7.templateLiteralProcessor(closure_0, arg0, arg1, arg2);
     });
     exports.ZodLazy = fnResult.$constructor("ZodLazy", (_zod) => {
       closure_0 = _zod;
@@ -2176,7 +2212,10 @@ if (self2) {
     });
     ({ describe: exports.describe, meta: exports.meta } = fnResult);
     exports.stringbool = () => {
-      const items = [{ Codec: exports.ZodCodec, Boolean: exports.ZodBoolean, String: exports.ZodString }, ...HermesBuiltin.copyRestArgs()];
+      const items = [
+        { Codec: exports.ZodCodec, Boolean: exports.ZodBoolean, String: exports.ZodString },
+        ...HermesBuiltin.copyRestArgs(),
+      ];
       return closure_6._stringbool.apply(items);
     };
   } else {

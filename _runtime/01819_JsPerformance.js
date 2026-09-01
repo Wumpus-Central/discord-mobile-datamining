@@ -189,7 +189,13 @@ function UiPerformance(smoothingFrames) {
     const result1 = 1000 / result;
     sharedValue.value = result1.toFixed(0);
   };
-  obj = { circularBuffer: sharedValue1, createCircularDoublesBuffer, smoothingFrames, completeBufferRoutine, uiFps: sharedValue };
+  obj = {
+    circularBuffer: sharedValue1,
+    createCircularDoublesBuffer,
+    smoothingFrames,
+    completeBufferRoutine,
+    uiFps: sharedValue,
+  };
   fn.__closure = obj;
   fn.__workletHash = 10137562113926;
   fn.__initData = closure_13;
@@ -207,7 +213,11 @@ function UiPerformance(smoothingFrames) {
   fn2.__workletHash = 1865752198941;
   fn2.__initData = closure_14;
   obj = { style: closure_16.container, children: null };
-  obj1 = { style: closure_16.text, animatedProps: smoothingFrames(sharedValue[5]).useAnimatedProps(fn2), editable: false };
+  obj1 = {
+    style: closure_16.text,
+    animatedProps: smoothingFrames(sharedValue[5]).useAnimatedProps(fn2),
+    editable: false,
+  };
   obj[1] = callback2(closure_8, obj1);
   return callback2(closure_4, obj);
 }
@@ -254,7 +264,9 @@ function createCircularDoublesBuffer(arg0) {
 }
 createCircularDoublesBuffer.__closure = {};
 createCircularDoublesBuffer.__workletHash = 7814494919003;
-createCircularDoublesBuffer.__initData = { code: "function createCircularDoublesBuffer_Pnpm_PerformanceMonitorTsx1(size){return{next:0,buffer:new Float32Array(size),size:size,count:0,push:function(value){const oldValue=this.buffer[this.next];const oldCount=this.count;this.buffer[this.next]=value;this.next=(this.next+1)%this.size;this.count=Math.min(this.size,this.count+1);return oldCount===this.size?oldValue:null;},front:function(){const notEmpty=this.count>0;if(notEmpty){const current=this.next-1;const index=current<0?this.size-1:current;return this.buffer[index];}return null;},back:function(){const notEmpty=this.count>0;return notEmpty?this.buffer[this.next]:null;}};}" };
+createCircularDoublesBuffer.__initData = {
+  code: "function createCircularDoublesBuffer_Pnpm_PerformanceMonitorTsx1(size){return{next:0,buffer:new Float32Array(size),size:size,count:0,push:function(value){const oldValue=this.buffer[this.next];const oldCount=this.count;this.buffer[this.next]=value;this.next=(this.next+1)%this.size;this.count=Math.min(this.size,this.count+1);return oldCount===this.size?oldValue:null;},front:function(){const notEmpty=this.count>0;if(notEmpty){const current=this.next-1;const index=current<0?this.size-1:current;return this.buffer[index];}return null;},back:function(){const notEmpty=this.count>0;return notEmpty?this.buffer[this.next]:null;}};}",
+};
 let result = configureProps.addWhitelistedNativeProps({ text: true });
 let closure_8 = createAnimatedComponent.createAnimatedComponent(TextInput);
 function getFps(arg0) {
@@ -262,7 +274,9 @@ function getFps(arg0) {
 }
 getFps.__closure = {};
 getFps.__workletHash = 14651351045012;
-getFps.__initData = { code: "function getFps_Pnpm_PerformanceMonitorTsx2(renderTimeInMs){return 1000/renderTimeInMs;}" };
+getFps.__initData = {
+  code: "function getFps_Pnpm_PerformanceMonitorTsx2(renderTimeInMs){return 1000/renderTimeInMs;}",
+};
 function completeBufferRoutine(arr) {
   const rounded = Math.round(arg1);
   arr = arr.push(rounded);
@@ -277,11 +291,24 @@ function completeBufferRoutine(arr) {
 }
 completeBufferRoutine.__closure = { getFps };
 completeBufferRoutine.__workletHash = 5653450315763;
-completeBufferRoutine.__initData = { code: "function completeBufferRoutine_Pnpm_PerformanceMonitorTsx3(buffer,timestamp){const{getFps}=this.__closure;var _buffer$push;timestamp=Math.round(timestamp);const droppedTimestamp=(_buffer$push=buffer.push(timestamp))!==null&&_buffer$push!==void 0?_buffer$push:timestamp;const measuredRangeDuration=timestamp-droppedTimestamp;return getFps(measuredRangeDuration/buffer.count);}" };
-let closure_11 = { code: "function pnpm_PerformanceMonitorTsx4(){const{jsFps}=this.__closure;var _jsFps$value;const text='JS: '+((_jsFps$value=jsFps.value)!==null&&_jsFps$value!==void 0?_jsFps$value:'N/A')+' ';return{text:text,defaultValue:text};}" };
-let closure_13 = { code: "function pnpm_PerformanceMonitorTsx5({timestamp:timestamp}){const{circularBuffer,createCircularDoublesBuffer,smoothingFrames,completeBufferRoutine,uiFps}=this.__closure;if(circularBuffer.value===null){circularBuffer.value=createCircularDoublesBuffer(smoothingFrames);}timestamp=Math.round(timestamp);const currentFps=completeBufferRoutine(circularBuffer.value,timestamp);uiFps.value=currentFps.toFixed(0);}" };
-let closure_14 = { code: "function pnpm_PerformanceMonitorTsx6(){const{uiFps}=this.__closure;var _uiFps$value;const text='UI: '+((_uiFps$value=uiFps.value)!==null&&_uiFps$value!==void 0?_uiFps$value:'N/A')+' ';return{text:text,defaultValue:text};}" };
-const styles = StyleSheet.create({ monitor: { flexDirection: "row", position: "absolute", backgroundColor: "#0006", zIndex: 1000 }, header: { fontSize: 14, color: "#ffff", paddingHorizontal: 5 }, text: { fontSize: 13, fontVariant: ["tabular-nums"], color: "#ffff", fontFamily: "monospace", paddingHorizontal: 3 }, container: { alignItems: "center", justifyContent: "center", flexDirection: "row", flexWrap: "wrap" } });
+completeBufferRoutine.__initData = {
+  code: "function completeBufferRoutine_Pnpm_PerformanceMonitorTsx3(buffer,timestamp){const{getFps}=this.__closure;var _buffer$push;timestamp=Math.round(timestamp);const droppedTimestamp=(_buffer$push=buffer.push(timestamp))!==null&&_buffer$push!==void 0?_buffer$push:timestamp;const measuredRangeDuration=timestamp-droppedTimestamp;return getFps(measuredRangeDuration/buffer.count);}",
+};
+let closure_11 = {
+  code: "function pnpm_PerformanceMonitorTsx4(){const{jsFps}=this.__closure;var _jsFps$value;const text='JS: '+((_jsFps$value=jsFps.value)!==null&&_jsFps$value!==void 0?_jsFps$value:'N/A')+' ';return{text:text,defaultValue:text};}",
+};
+let closure_13 = {
+  code: "function pnpm_PerformanceMonitorTsx5({timestamp:timestamp}){const{circularBuffer,createCircularDoublesBuffer,smoothingFrames,completeBufferRoutine,uiFps}=this.__closure;if(circularBuffer.value===null){circularBuffer.value=createCircularDoublesBuffer(smoothingFrames);}timestamp=Math.round(timestamp);const currentFps=completeBufferRoutine(circularBuffer.value,timestamp);uiFps.value=currentFps.toFixed(0);}",
+};
+let closure_14 = {
+  code: "function pnpm_PerformanceMonitorTsx6(){const{uiFps}=this.__closure;var _uiFps$value;const text='UI: '+((_uiFps$value=uiFps.value)!==null&&_uiFps$value!==void 0?_uiFps$value:'N/A')+' ';return{text:text,defaultValue:text};}",
+};
+const styles = StyleSheet.create({
+  monitor: { flexDirection: "row", position: "absolute", backgroundColor: "#0006", zIndex: 1000 },
+  header: { fontSize: 14, color: "#ffff", paddingHorizontal: 5 },
+  text: { fontSize: 13, fontVariant: ["tabular-nums"], color: "#ffff", fontFamily: "monospace", paddingHorizontal: 3 },
+  container: { alignItems: "center", justifyContent: "center", flexDirection: "row", flexWrap: "wrap" },
+});
 
 export const PerformanceMonitor = function PerformanceMonitor(smoothingFrames) {
   let num = smoothingFrames.smoothingFrames;
@@ -289,7 +316,10 @@ export const PerformanceMonitor = function PerformanceMonitor(smoothingFrames) {
     num = 20;
   }
   const obj = { style: closure_16.monitor, children: null };
-  const items = [callback2(JsPerformance, { smoothingFrames: num }), callback2(UiPerformance, { smoothingFrames: num })];
+  const items = [
+    callback2(JsPerformance, { smoothingFrames: num }),
+    callback2(UiPerformance, { smoothingFrames: num }),
+  ];
   obj[1] = items;
   return callback3(closure_4, obj);
 };

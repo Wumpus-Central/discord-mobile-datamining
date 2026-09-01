@@ -27,8 +27,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 noopDefault;
 class FeFlood {
@@ -59,15 +58,19 @@ let obj = {
     const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
-      }
+      },
     };
     const tmp = __INTERNAL_VIEW_CONFIGDefault;
     const merged = Object.assign(self(8279).extractFilter(this.props));
     const merged1 = Object.assign(extractFeFloodDefault(this.props));
-    return <tmp ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
-  }
+    return (
+      <tmp
+        ref={function ref(arg0) {
+          return self.refMethod(arg0);
+        }}
+      />
+    );
+  },
 };
 const items = [obj];
 const importDefaultResultResult = importDefaultResult(FeFlood, items);

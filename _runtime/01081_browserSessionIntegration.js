@@ -25,5 +25,5 @@ export const browserSessionIntegration = registerSpanErrorInstrumentation.define
       const debug = tmp(tmp2[0]).debug;
       debug.warn("Using the `browserSessionIntegration` in non-browser environments is not supported.");
     }
-  }
+  },
 }));

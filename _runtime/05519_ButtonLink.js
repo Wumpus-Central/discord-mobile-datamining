@@ -68,7 +68,10 @@ function ButtonBase(variant) {
 }
 noopAll;
 ({ Platform, StyleSheet } = get_ActivityIndicator);
-const styles = StyleSheet.create({ button: { paddingHorizontal: 24, paddingVertical: 10, borderRadius: 40, borderCurve: "continuous" }, text: { fontSize: 14, lineHeight: 20, letterSpacing: 0.1, textAlign: "center" } });
+const styles = StyleSheet.create({
+  button: { paddingHorizontal: 24, paddingVertical: 10, borderRadius: 40, borderCurve: "continuous" },
+  text: { fontSize: 14, lineHeight: 20, letterSpacing: 0.1, textAlign: "center" },
+});
 
 export const Button = function Button(arg0) {
   if (!("screen" in arg0)) {

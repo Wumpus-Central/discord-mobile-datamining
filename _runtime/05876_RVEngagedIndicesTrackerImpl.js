@@ -66,14 +66,14 @@ let items = [
       } else {
         const result1 = self.updateVelocityHistory(isHorizontalResult ? arg1.x : arg1.y);
       }
-    }
+    },
   },
   {
     key: "updateVelocityHistory",
     value: function updateVelocityHistory(arg0) {
       this.velocityHistory[this.velocityIndex] = arg0;
       this.velocityIndex = (this.velocityIndex + 1) % this.velocityHistory.length;
-    }
+    },
   },
   {
     key: "isScrollingBackward",
@@ -108,7 +108,7 @@ let items = [
         } while (num < self.velocityHistory.length);
       }
       return num5 < num4;
-    }
+    },
   },
   {
     key: "getMedianVelocity",
@@ -122,27 +122,30 @@ let items = [
         const result = length / 2;
         return (sorted[result - 1] + sorted[result]) / 2;
       }
-    }
+    },
   },
   {
     key: "getProjectedScrollOffset",
     value: function getProjectedScrollOffset(scrollOffset, averageRenderTime) {
       return scrollOffset + this.getMedianVelocity() * averageRenderTime;
-    }
+    },
   },
   {
     key: "computeVisibleIndices",
     value: function computeVisibleIndices(getWindowsSize) {
       const size = getWindowsSize.getWindowsSize();
       const scrollOffset = this.scrollOffset;
-      return getWindowsSize.getVisibleLayouts(scrollOffset, scrollOffset + (getWindowsSize.isHorizontal() ? size.width : size.height));
-    }
+      return getWindowsSize.getVisibleLayouts(
+        scrollOffset,
+        scrollOffset + (getWindowsSize.isHorizontal() ? size.width : size.height),
+      );
+    },
   },
   {
     key: "getEngagedIndices",
     value: function getEngagedIndices() {
       return this.engagedIndices;
-    }
+    },
   },
   {
     key: "setScrollDirection",
@@ -155,7 +158,7 @@ let items = [
         self.velocityHistory = [0, 0, 0, -0.1, -0.1];
         self.velocityIndex = 0;
       }
-    }
+    },
   },
   {
     key: "resetVelocityHistory",
@@ -167,8 +170,8 @@ let items = [
       } else {
         setScrollDirection("forward");
       }
-    }
-  }
+    },
+  },
 ];
 
 export const RVEngagedIndicesTrackerImpl = _createClassDefault(RVEngagedIndicesTrackerImpl, items);

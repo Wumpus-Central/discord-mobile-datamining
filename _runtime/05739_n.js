@@ -3,10 +3,12 @@ import _mod5695 from "metro/05695__.js";
 import noop from "00019_noop.js";
 
 ({ useEffect: obj1, useMemo: c3, useRef: c4 } = noop);
-let closure_5 = ["onGestureHandlerReanimatedEvent", "onGestureHandlerReanimatedStateChange", "onGestureHandlerReanimatedTouchEvent"];
-let fn = function n() {
-
-};
+let closure_5 = [
+  "onGestureHandlerReanimatedEvent",
+  "onGestureHandlerReanimatedStateChange",
+  "onGestureHandlerReanimatedTouchEvent",
+];
+let fn = function n() {};
 fn.__closure = {};
 fn.__workletHash = 763644533783;
 fn.__initData = { code: "function pnpm_useReanimatedEventHandlerTs1(){}" };
@@ -20,10 +22,20 @@ function deleteHandlerEventEntry(arg0) {
 }
 deleteHandlerEventEntry.__closure = { lastUpdateEventMap: mutable };
 deleteHandlerEventEntry.__workletHash = 8348834805583;
-deleteHandlerEventEntry.__initData = { code: "function deleteHandlerEventEntry_Pnpm_useReanimatedEventHandlerTs2(handlerTag){const{lastUpdateEventMap}=this.__closure;delete lastUpdateEventMap.value[handlerTag];}" };
-let closure_9 = { code: "function pnpm_useReanimatedEventHandlerTs3(event){const{lastUpdateEventMap,eventHandler,handlerTag,workletizedHandlers,changeEventCalculator,fillInDefaultValues}=this.__closure;let context=lastUpdateEventMap.value[event.handlerTag];if(context===undefined){context={lastUpdateEvent:undefined};lastUpdateEventMap.value[event.handlerTag]=context;}eventHandler(handlerTag,event,workletizedHandlers,changeEventCalculator,context,false,fillInDefaultValues);}" };
+deleteHandlerEventEntry.__initData = {
+  code: "function deleteHandlerEventEntry_Pnpm_useReanimatedEventHandlerTs2(handlerTag){const{lastUpdateEventMap}=this.__closure;delete lastUpdateEventMap.value[handlerTag];}",
+};
+let closure_9 = {
+  code: "function pnpm_useReanimatedEventHandlerTs3(event){const{lastUpdateEventMap,eventHandler,handlerTag,workletizedHandlers,changeEventCalculator,fillInDefaultValues}=this.__closure;let context=lastUpdateEventMap.value[event.handlerTag];if(context===undefined){context={lastUpdateEvent:undefined};lastUpdateEventMap.value[event.handlerTag]=context;}eventHandler(handlerTag,event,workletizedHandlers,changeEventCalculator,context,false,fillInDefaultValues);}",
+};
 
-export const useReanimatedEventHandler = function useReanimatedEventHandler(handlerTag, memoizedGestureCallbacks, handler, changeEventCalculator, fillInDefaultValues) {
+export const useReanimatedEventHandler = function useReanimatedEventHandler(
+  handlerTag,
+  memoizedGestureCallbacks,
+  handler,
+  changeEventCalculator,
+  fillInDefaultValues,
+) {
   const _require = handlerTag;
   dependencyMap = memoizedGestureCallbacks;
   const callback = changeEventCalculator;
@@ -52,9 +64,24 @@ export const useReanimatedEventHandler = function useReanimatedEventHandler(hand
       iter.value[handlerTag.handlerTag] = obj;
       tmp = obj;
     }
-    handlerTag(memoizedGestureCallbacks[2]).eventHandler(handlerTag, handlerTag, closure_4, closure_2, tmp, false, closure_3);
+    handlerTag(memoizedGestureCallbacks[2]).eventHandler(
+      handlerTag,
+      handlerTag,
+      closure_4,
+      closure_2,
+      tmp,
+      false,
+      closure_3,
+    );
   };
-  fn.__closure = { lastUpdateEventMap: mutable, eventHandler: require("05738_handleStateChangeEvent.js").eventHandler, handlerTag, workletizedHandlers: tmp, changeEventCalculator, fillInDefaultValues };
+  fn.__closure = {
+    lastUpdateEventMap: mutable,
+    eventHandler: require("05738_handleStateChangeEvent.js").eventHandler,
+    handlerTag,
+    workletizedHandlers: tmp,
+    changeEventCalculator,
+    fillInDefaultValues,
+  };
   fn.__workletHash = 3272953373395;
   fn.__initData = closure_9;
   const tmp2 = callback3(handlerTag);

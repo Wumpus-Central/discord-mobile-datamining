@@ -142,35 +142,41 @@ export const createMemoizedPluralRules = monadic.memoize(() => {
   const obj = e;
   return new bind.apply(PluralRules, e.__spreadArray(items1, items, false))();
 }, obj);
-export const createMemoizedLocale = monadic.memoize(() => {
-  let length;
-  const items = [];
-  let num = 0;
-  if (0 < arguments.length) {
-    do {
-      items[num] = arguments[num];
-      num = num + 1;
-      length = arguments.length;
-    } while (num < length);
-  }
-  const bind = Locale.bind;
-  const items1 = [undefined];
-  const obj = e;
-  return new bind.apply(Locale, e.__spreadArray(items1, items, false))();
-}, { strategy: monadic.strategies.variadic });
-export const createMemoizedListFormat = monadic.memoize(() => {
-  let length;
-  const items = [];
-  let num = 0;
-  if (0 < arguments.length) {
-    do {
-      items[num] = arguments[num];
-      num = num + 1;
-      length = arguments.length;
-    } while (num < length);
-  }
-  const bind = ListFormat.bind;
-  const items1 = [undefined];
-  const obj = e;
-  return new bind.apply(ListFormat, e.__spreadArray(items1, items, false))();
-}, { strategy: monadic.strategies.variadic });
+export const createMemoizedLocale = monadic.memoize(
+  () => {
+    let length;
+    const items = [];
+    let num = 0;
+    if (0 < arguments.length) {
+      do {
+        items[num] = arguments[num];
+        num = num + 1;
+        length = arguments.length;
+      } while (num < length);
+    }
+    const bind = Locale.bind;
+    const items1 = [undefined];
+    const obj = e;
+    return new bind.apply(Locale, e.__spreadArray(items1, items, false))();
+  },
+  { strategy: monadic.strategies.variadic },
+);
+export const createMemoizedListFormat = monadic.memoize(
+  () => {
+    let length;
+    const items = [];
+    let num = 0;
+    if (0 < arguments.length) {
+      do {
+        items[num] = arguments[num];
+        num = num + 1;
+        length = arguments.length;
+      } while (num < length);
+    }
+    const bind = ListFormat.bind;
+    const items1 = [undefined];
+    const obj = e;
+    return new bind.apply(ListFormat, e.__spreadArray(items1, items, false))();
+  },
+  { strategy: monadic.strategies.variadic },
+);

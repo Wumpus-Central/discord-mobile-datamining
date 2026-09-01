@@ -24,7 +24,7 @@ const memoResult = memo((rootHostName) => {
   [tmp4, tmp5] = callback(callback2(registerHost.reducer, _mod4351.INITIAL_STATE), 2);
   let obj = { value: tmp5, children: null };
   obj = { value: tmp4, children: null };
-  const items = [rootHostName.children, ];
+  const items = [rootHostName.children];
   if (flag) {
     obj = { name: null };
     obj[0] = str;

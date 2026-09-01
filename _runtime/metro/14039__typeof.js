@@ -121,7 +121,9 @@ function canonicalizeLocaleList(arg0) {
             let _RangeError = RangeError;
             let tmp7 = new.target;
             let tmp8 = new.target;
-            let rangeError = new RangeError("The locale ".concat(JSON.stringify(str3), " is not a structurally valid BCP 47 language tag."));
+            let rangeError = new RangeError(
+              "The locale ".concat(JSON.stringify(str3), " is not a structurally valid BCP 47 language tag."),
+            );
             let tmp10 = rangeError;
             throw rangeError;
           }
@@ -392,7 +394,9 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                                           str17 = "Not a valid plural type: ";
                                           tmp78 = new.target;
                                           tmp79 = new.target;
-                                          rangeError = new RangeError("Not a valid plural type: " + JSON.stringify(type));
+                                          rangeError = new RangeError(
+                                            "Not a valid plural type: " + JSON.stringify(type),
+                                          );
                                           tmp81 = rangeError;
                                           throw rangeError;
                                         }
@@ -554,7 +558,8 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
           const value = iter.value;
           const resolvedOptionsResult = value.resolvedOptions();
           ({ minimumSignificantDigits, roundingPriority } = resolvedOptionsResult);
-          ({ minimumIntegerDigits, minimumFractionDigits, maximumFractionDigits, maximumSignificantDigits } = resolvedOptionsResult);
+          ({ minimumIntegerDigits, minimumFractionDigits, maximumFractionDigits, maximumSignificantDigits } =
+            resolvedOptionsResult);
           if (weakMap.has(self)) {
             const iter2 = obj2.get(self);
             if (iter2.get) {
@@ -562,7 +567,13 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
               const call2 = get2.call;
               typeof call2 === "unknown" ? get2() : call2(self);
             } else {
-              obj = { locale: null, type: null, minimumIntegerDigits: null, minimumFractionDigits: null, maximumFractionDigits: null };
+              obj = {
+                locale: null,
+                type: null,
+                minimumIntegerDigits: null,
+                minimumFractionDigits: null,
+                maximumFractionDigits: null,
+              };
               obj[0] = iter2.value;
               if (weakMap3.has(self)) {
                 const iter3 = obj4.get(self);
@@ -628,7 +639,7 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
         const typeError4 = new TypeError("attempted to get private field on non-instance");
         throw typeError4;
       }
-    }
+    },
   };
   const items = [
     obj,
@@ -670,7 +681,9 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                         const call4 = get3.call;
                         typeof call4 === "unknown" ? get3() : call4(self);
                       } else {
-                        return typeof call3 === "unknown" ? value(formatResult, "ordinal" === iter3.value) : call3(self, formatResult, "ordinal" === iter3.value);
+                        return typeof call3 === "unknown"
+                          ? value(formatResult, "ordinal" === iter3.value)
+                          : call3(self, formatResult, "ordinal" === iter3.value);
                       }
                     } else {
                       const _TypeError4 = TypeError;
@@ -701,7 +714,7 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
           const typeError3 = new TypeError("select() called on incompatible ".concat(self));
           throw typeError3;
         }
-      }
+      },
     },
     {
       key: "selectRange",
@@ -756,7 +769,9 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                     const call2 = value.call;
                     const selectResult = self.select(NumberResult);
                     const selectResult1 = self.select(NumberResult1);
-                    return typeof call2 === "unknown" ? value(selectResult, selectResult1) : call2(self, selectResult, selectResult1);
+                    return typeof call2 === "unknown"
+                      ? value(selectResult, selectResult1)
+                      : call2(self, selectResult, selectResult1);
                   }
                 } else {
                   const _TypeError4 = TypeError;
@@ -781,14 +796,14 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
           const typeError5 = new TypeError("selectRange() called on incompatible ".concat(self));
           throw typeError5;
         }
-      }
-    }
+      },
+    },
   ];
   obj = {
     key: "supportedLocalesOf",
     value: function supportedLocalesOf(arg0) {
       return callback2(arg0).filter(findLocale);
-    }
+    },
   };
   const items1 = [obj];
   _defineProperties(PluralRules.prototype, items);
@@ -802,8 +817,12 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
   if (toStringTag) {
     let _Object = Object;
     const _Symbol = Symbol;
-    Object.defineProperty(PluralRules.prototype, Symbol.toStringTag, { value: "Intl.PluralRules", writable: false, configurable: true });
+    Object.defineProperty(PluralRules.prototype, Symbol.toStringTag, {
+      value: "Intl.PluralRules",
+      writable: false,
+      configurable: true,
+    });
   }
   Object.defineProperty(PluralRules, "prototype", { writable: false });
   return PluralRules;
-};
+}

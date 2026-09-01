@@ -30,23 +30,24 @@ arg5.baggageHeaderToDynamicSamplingContext = function baggageHeaderToDynamicSamp
               try {
                 const _decodeURIComponent = decodeURIComponent;
                 return decodeURIComponent(str.trim());
-              } catch (err) {
-              }
+              } catch (err) {}
             });
           }
           return items;
         });
-        const entries = Object.entries(mapped.reduce((arg0, arg1) => {
-          [tmp, tmp2] = arg1;
-          let tmp3 = tmp;
-          if (tmp) {
-            tmp3 = tmp2;
-          }
-          if (tmp3) {
-            arg0[tmp] = tmp2;
-          }
-          return arg0;
-        }, {}));
+        const entries = Object.entries(
+          mapped.reduce((arg0, arg1) => {
+            [tmp, tmp2] = arg1;
+            let tmp3 = tmp;
+            if (tmp) {
+              tmp3 = tmp2;
+            }
+            if (tmp3) {
+              arg0[tmp] = tmp2;
+            }
+            return arg0;
+          }, {}),
+        );
         const item = entries.forEach((arg0) => {
           [tmp, tmp2] = arg0;
           closure_0[tmp] = tmp2;
@@ -65,8 +66,7 @@ arg5.baggageHeaderToDynamicSamplingContext = function baggageHeaderToDynamicSamp
             try {
               const _decodeURIComponent = decodeURIComponent;
               return decodeURIComponent(str.trim());
-            } catch (err) {
-            }
+            } catch (err) {}
           });
         }
         return items;
@@ -133,7 +133,13 @@ arg5.dynamicSamplingContextToSentryBaggageHeader = function dynamicSamplingConte
           if (callback(table[1]).DEBUG_BUILD) {
             const debug = tmp5(tmp6[2]).debug;
             const _HermesInternal2 = HermesInternal;
-            debug.warn("Not adding key: " + tmp + " with val: " + tmp2 + " to baggage header due to exceeding baggage size limits.");
+            debug.warn(
+              "Not adding key: " +
+                tmp +
+                " with val: " +
+                tmp2 +
+                " to baggage header due to exceeding baggage size limits.",
+            );
             combined1 = arg0;
           }
           tmp5 = callback;
@@ -162,7 +168,13 @@ arg5.objectToBaggageHeader = function objectToBaggageHeader(arg0) {
         if (callback(table[1]).DEBUG_BUILD) {
           const debug = tmp5(tmp6[2]).debug;
           const _HermesInternal2 = HermesInternal;
-          debug.warn("Not adding key: " + tmp + " with val: " + tmp2 + " to baggage header due to exceeding baggage size limits.");
+          debug.warn(
+            "Not adding key: " +
+              tmp +
+              " with val: " +
+              tmp2 +
+              " to baggage header due to exceeding baggage size limits.",
+          );
           combined1 = arg0;
         }
         tmp5 = callback;
@@ -192,23 +204,24 @@ arg5.parseBaggageHeader = function parseBaggageHeader(arr) {
               try {
                 const _decodeURIComponent = decodeURIComponent;
                 return decodeURIComponent(str.trim());
-              } catch (err) {
-              }
+              } catch (err) {}
             });
           }
           return items;
         });
-        const entries = Object.entries(mapped.reduce((arg0, arg1) => {
-          [tmp, tmp2] = arg1;
-          let tmp3 = tmp;
-          if (tmp) {
-            tmp3 = tmp2;
-          }
-          if (tmp3) {
-            arg0[tmp] = tmp2;
-          }
-          return arg0;
-        }, {}));
+        const entries = Object.entries(
+          mapped.reduce((arg0, arg1) => {
+            [tmp, tmp2] = arg1;
+            let tmp3 = tmp;
+            if (tmp) {
+              tmp3 = tmp2;
+            }
+            if (tmp3) {
+              arg0[tmp] = tmp2;
+            }
+            return arg0;
+          }, {}),
+        );
         const item = entries.forEach((arg0) => {
           [tmp, tmp2] = arg0;
           closure_0[tmp] = tmp2;
@@ -227,8 +240,7 @@ arg5.parseBaggageHeader = function parseBaggageHeader(arr) {
             try {
               const _decodeURIComponent = decodeURIComponent;
               return decodeURIComponent(str.trim());
-            } catch (err) {
-            }
+            } catch (err) {}
           });
         }
         return items;

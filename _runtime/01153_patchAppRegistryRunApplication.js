@@ -53,7 +53,7 @@ arg5.appRegistryIntegration = () => {
       } else {
         arr = arr.push(onRunApplicationHook);
       }
-    }
+    },
   };
 };
 arg5.patchAppRegistryRunApplication = patchAppRegistryRunApplication;

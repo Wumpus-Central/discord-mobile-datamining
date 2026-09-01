@@ -23,7 +23,13 @@ export const useDetectorUpdater = function useDetectorUpdater(current, current2,
     }
     current(table[4]).dropHandlers(current2);
     const obj3 = current(table[4]);
-    obj = { preparedGesture: current2, gestureConfig: closure_3, gesturesToAttach: table, webEventHandlersRef: closure_4, viewTag: tmp3 };
+    obj = {
+      preparedGesture: current2,
+      gestureConfig: closure_3,
+      gesturesToAttach: table,
+      webEventHandlersRef: closure_4,
+      viewTag: tmp3,
+    };
     current(table[5]).attachHandlers(obj);
     if (tmp3 !== current.previousViewTag) {
       tmp2.previousViewTag = tmp3;

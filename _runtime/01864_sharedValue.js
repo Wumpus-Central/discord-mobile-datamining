@@ -3,7 +3,9 @@ import noop from "00019_noop.js";
 
 ({ useCallback: obj1, useEffect: c3 } = noop);
 let closure_4 = ["onScroll", "onScrollBeginDrag", "onScrollEndDrag", "onMomentumScrollBegin", "onMomentumScrollEnd"];
-let closure_5 = { code: "function pnpm_useScrollStateTs1(event){const{offset,layout,size}=this.__closure;offset.value=event.contentOffset.y;layout.value=event.layoutMeasurement;size.value=event.contentSize;}" };
+let closure_5 = {
+  code: "function pnpm_useScrollStateTs1(event){const{offset,layout,size}=this.__closure;offset.value=event.contentOffset.y;layout.value=event.layoutMeasurement;size.value=event.contentSize;}",
+};
 
 export default function _default(arg0) {
   let obj = sharedValue(sharedValue1[1]);
@@ -37,11 +39,14 @@ export default function _default(arg0) {
     layout: sharedValue1,
     size: sharedValue2,
     onLayout: sharedValue2((nativeEvent) => {
-      sharedValue1.value = { width: nativeEvent.nativeEvent.layout.width, height: nativeEvent.nativeEvent.layout.height };
+      sharedValue1.value = {
+        width: nativeEvent.nativeEvent.layout.width,
+        height: nativeEvent.nativeEvent.layout.height,
+      };
     }, items),
     onContentSizeChange: sharedValue2((width, height) => {
       sharedValue2.value = { width, height };
-    }, items1)
+    }, items1),
   };
   return obj;
-};
+}

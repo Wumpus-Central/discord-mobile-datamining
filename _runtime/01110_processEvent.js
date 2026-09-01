@@ -4,7 +4,7 @@ const dependencyMap = arg6;
 function processEvent(arg0, arg1, arg2) {
   closure_0 = arg0;
   closure_1 = arg2;
-  return fn(this, undefined, undefined, function*() {
+  return fn(this, undefined, undefined, function* () {
     closure_1 = tmp3;
     const options = closure_1_1.getOptions();
     const extra2 = closure_1_0.extra;
@@ -148,8 +148,6 @@ if (!fn) {
 }
 arg5.nativeReleaseIntegration = () => ({
   name: "Release",
-  setupOnce() {
-
-  },
-  processEvent
+  setupOnce() {},
+  processEvent,
 });

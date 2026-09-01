@@ -43,36 +43,41 @@ export const useRive = function useRive() {
             closure_1_1(null);
           }
         });
-        Promise.race(items).then((arg0) => {
-          if (true === arg0) {
-            closure_1_1(closure_0);
-          } else {
-            const _console = console;
-            console.warn("Rive view ready check returned false");
-            closure_1_1(null);
-          }
-        }).catch((arg0) => {
-          console.warn("Failed to initialize Rive view:", arg0);
-          callback(null);
-        }).finally(() => {
-          if (ref.current) {
-            const _clearTimeout = clearTimeout;
-            clearTimeout(tmp.current);
-            tmp.current = null;
-          }
-        });
-        const catchPromise = Promise.race(items).then((arg0) => {
-          if (true === arg0) {
-            closure_1_1(closure_0);
-          } else {
-            const _console = console;
-            console.warn("Rive view ready check returned false");
-            closure_1_1(null);
-          }
-        }).catch((arg0) => {
-          console.warn("Failed to initialize Rive view:", arg0);
-          callback(null);
-        });
+        Promise.race(items)
+          .then((arg0) => {
+            if (true === arg0) {
+              closure_1_1(closure_0);
+            } else {
+              const _console = console;
+              console.warn("Rive view ready check returned false");
+              closure_1_1(null);
+            }
+          })
+          .catch((arg0) => {
+            console.warn("Failed to initialize Rive view:", arg0);
+            callback(null);
+          })
+          .finally(() => {
+            if (ref.current) {
+              const _clearTimeout = clearTimeout;
+              clearTimeout(tmp.current);
+              tmp.current = null;
+            }
+          });
+        const catchPromise = Promise.race(items)
+          .then((arg0) => {
+            if (true === arg0) {
+              closure_1_1(closure_0);
+            } else {
+              const _console = console;
+              console.warn("Rive view ready check returned false");
+              closure_1_1(null);
+            }
+          })
+          .catch((arg0) => {
+            console.warn("Failed to initialize Rive view:", arg0);
+            callback(null);
+          });
       }
     };
     cResult[0] = fn;

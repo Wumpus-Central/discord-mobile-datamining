@@ -1,7 +1,5 @@
 // _runtime/00555_concatty.js
-function concatty(arg0, arg1) {
-
-}
+function concatty(arg0, arg1) {}
 
 export default function bind(self, c165, cache, serializer, bindResult, closure_2, error) {
   let length;
@@ -42,7 +40,10 @@ export default function bind(self, c165, cache, serializer, bindResult, closure_
         } while (sum < items1.length);
       }
       const _HermesInternal = HermesInternal;
-      const tmp7 = Function("binder", "return function (" + str4 + "){ return binder.apply(this,arguments); }")(function() {
+      const tmp7 = Function(
+        "binder",
+        "return function (" + str4 + "){ return binder.apply(this,arguments); }",
+      )(function () {
         let length;
         let length2;
         let length3;
@@ -116,4 +117,4 @@ export default function bind(self, c165, cache, serializer, bindResult, closure_
   }
   const typeError = new TypeError("Function.prototype.bind called on incompatible " + self);
   throw typeError;
-};
+}

@@ -87,7 +87,11 @@ export const startIdleNavigationSpan = (arg0) => {
       if (flag) {
         const debug3 = tmp5(817).debug;
         const _HermesInternal2 = HermesInternal;
-        debug3.log("[startIdleNavigationSpan] Not canceling " + tmp5(817).spanToJSON(activeSpan).op + " transaction because navigation is from app restart - preserving error context.");
+        debug3.log(
+          "[startIdleNavigationSpan] Not canceling " +
+            tmp5(817).spanToJSON(activeSpan).op +
+            " transaction because navigation is from app restart - preserving error context.",
+        );
         const tmp5Result2 = tmp5(817);
       }
       const _Object = Object;
@@ -106,16 +110,23 @@ export const startIdleNavigationSpan = (arg0) => {
         str6 = "unknown op";
       }
       const _HermesInternal3 = HermesInternal;
-      debug4.log("[startIdleNavigationSpan] Starting " + str6 + " transaction \"" + merged.name + "\" on scope");
+      debug4.log("[startIdleNavigationSpan] Starting " + str6 + ' transaction "' + merged.name + '" on scope');
       const tmp5Result3 = tmp5(817);
       const result = tmp5(1161).adjustTransactionDuration(client, obj14, finalTimeout);
-      const attr = obj14.setAttribute(tmp5(817).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, tmp5(1158).SPAN_ORIGIN_AUTO_NAVIGATION_CUSTOM);
+      const attr = obj14.setAttribute(
+        tmp5(817).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
+        tmp5(1158).SPAN_ORIGIN_AUTO_NAVIGATION_CUSTOM,
+      );
       return obj14;
     }
     if (isRootSpanResult) {
       const debug2 = tmp5(817).debug;
       const _HermesInternal = HermesInternal;
-      debug2.log("[startIdleNavigationSpan] Canceling " + tmp5(817).spanToJSON(activeSpan).op + " transaction because of a new navigation root span.");
+      debug2.log(
+        "[startIdleNavigationSpan] Canceling " +
+          tmp5(817).spanToJSON(activeSpan).op +
+          " transaction because of a new navigation root span.",
+      );
       obj1 = { code: null, message: "cancelled" };
       obj1[0] = tmp5(817).SPAN_STATUS_ERROR;
       activeSpan.setStatus(obj1);
@@ -130,7 +141,12 @@ export const startIdleNavigationSpan = (arg0) => {
 };
 export { startIdleSpan };
 export const getDefaultIdleNavigationSpanOptions = function getDefaultIdleNavigationSpanOptions() {
-  obj = { name: c3, op: "navigation", forceTransaction: true, scope: registerSpanErrorInstrumentation.getCurrentScope() };
+  obj = {
+    name: c3,
+    op: "navigation",
+    forceTransaction: true,
+    scope: registerSpanErrorInstrumentation.getCurrentScope(),
+  };
   return obj;
 };
 export const isSentryInteractionSpan = function isSentryInteractionSpan(activeSpan) {

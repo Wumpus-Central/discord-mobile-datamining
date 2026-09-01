@@ -92,17 +92,16 @@ arg5.default = function stringifySafe(fn) {
         let combined = json;
         if (undefined === json) {
           const _HermesInternal = HermesInternal;
-          combined = "[\"" + typeof fn + "\" failed to stringify]";
+          combined = '["' + typeof fn + '" failed to stringify]';
         }
         return combined;
       } catch (err) {
         if (typeof str.toString !== "function") {
-          return "[\"" + typeof str + "\" failed to stringify]";
+          return '["' + typeof str + '" failed to stringify]';
         } else {
           try {
             return str.toString();
-          } catch (err) {
-          }
+          } catch (err) {}
         }
       }
     }
@@ -216,17 +215,16 @@ arg5.createStringifySafeWithLimits = function createStringifySafeWithLimits(maxD
           let combined = json;
           if (undefined === json) {
             const _HermesInternal = HermesInternal;
-            combined = "[\"" + typeof fn + "\" failed to stringify]";
+            combined = '["' + typeof fn + '" failed to stringify]';
           }
           return combined;
         } catch (err) {
           if (typeof str.toString !== "function") {
-            return "[\"" + typeof str + "\" failed to stringify]";
+            return '["' + typeof str + '" failed to stringify]';
           } else {
             try {
               return str.toString();
-            } catch (err) {
-            }
+            } catch (err) {}
           }
         }
       }

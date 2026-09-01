@@ -73,7 +73,7 @@ export default function ToPrimitive(arg0) {
             throw typeError1;
           }
           const _TypeError3 = TypeError;
-          const typeError2 = new TypeError("hint must be \"string\" or \"number\"");
+          const typeError2 = new TypeError('hint must be "string" or "number"');
           throw typeError2;
         }
       }
@@ -88,7 +88,9 @@ export default function ToPrimitive(arg0) {
             const _TypeError = TypeError;
             const _String2 = String;
             const text = `${tmp6} returned for property `;
-            const typeError3 = new TypeError(`${tmp6} returned for property ` + String(toPrimitive) + " of object " + arg0 + " is not a function");
+            const typeError3 = new TypeError(
+              `${tmp6} returned for property ` + String(toPrimitive) + " of object " + arg0 + " is not a function",
+            );
             throw typeError3;
           }
         }
@@ -99,4 +101,4 @@ export default function ToPrimitive(arg0) {
       }
     }
   }
-};
+}

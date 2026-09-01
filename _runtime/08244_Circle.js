@@ -46,7 +46,6 @@ import _isNativeReflectConstructDefault44 from "08340__isNativeReflectConstruct.
 import _isNativeReflectConstructDefault45 from "08343__isNativeReflectConstruct.js";
 import _isNativeReflectConstructDefault46 from "08345__isNativeReflectConstruct.js";
 
-
 export default _isNativeReflectConstructDefault;
 export const Circle = _isNativeReflectConstructDefault3;
 export const ClipPath = _isNativeReflectConstructDefault4;

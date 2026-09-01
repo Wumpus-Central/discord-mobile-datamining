@@ -20,7 +20,7 @@ obj = {
     return dataView.getUint32(sum, byteOrder === module(5162).LITTLE_ENDIAN);
   },
   getRationalAt(getUint32, sum) {
-    const items = [getUint32.getUint32(sum, arg2 === module(5162).LITTLE_ENDIAN), ];
+    const items = [getUint32.getUint32(sum, arg2 === module(5162).LITTLE_ENDIAN)];
     sum = sum + 4;
     items[1] = getUint32.getUint32(sum, arg2 === module(5162).LITTLE_ENDIAN);
     return items;
@@ -32,7 +32,7 @@ obj = {
     return getInt32.getInt32(sum, arg2 === module(5162).LITTLE_ENDIAN);
   },
   getSrationalAt(getInt32, sum) {
-    const items = [getInt32.getInt32(sum, arg2 === module(5162).LITTLE_ENDIAN), ];
+    const items = [getInt32.getInt32(sum, arg2 === module(5162).LITTLE_ENDIAN)];
     sum = sum + 4;
     items[1] = getInt32.getInt32(sum, arg2 === module(5162).LITTLE_ENDIAN);
     return items;
@@ -50,6 +50,6 @@ obj = {
     } else {
       return obj[tmp[LONG]];
     }
-  }
+  },
 };
 arg5.default = obj;

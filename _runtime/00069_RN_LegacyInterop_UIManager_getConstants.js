@@ -6,32 +6,53 @@ let c1 = importDefault;
 const RN$LegacyInterop_UIManager_getConstants = global.RN$LegacyInterop_UIManager_getConstants;
 let c3 = false;
 let closure_4 = {};
-const f17932 = () => {
-
-};
-({ RN$LegacyInterop_UIManager_getConstantsForViewManager: error, RN$LegacyInterop_UIManager_getDefaultEventTypes: closure_8 } = global);
+const f17932 = () => {};
+({
+  RN$LegacyInterop_UIManager_getConstantsForViewManager: error,
+  RN$LegacyInterop_UIManager_getDefaultEventTypes: closure_8,
+} = global);
 c0 = false;
 c1 = null;
-const f67616 = () => {
-
-};
+const f67616 = () => {};
 let obj = {};
 obj = {
   measure(arg0, arg1) {
-    console.error("" + "[ReactNative Architecture][JS] '" + "measure" + "' is not available in the new React Native architecture.");
+    console.error(
+      "" + "[ReactNative Architecture][JS] '" + "measure" + "' is not available in the new React Native architecture.",
+    );
   },
   measureInWindow(arg0, arg1) {
-    console.error("" + "[ReactNative Architecture][JS] '" + "measureInWindow" + "' is not available in the new React Native architecture.");
+    console.error(
+      "" +
+        "[ReactNative Architecture][JS] '" +
+        "measureInWindow" +
+        "' is not available in the new React Native architecture.",
+    );
   },
   measureLayout(arg0, arg1, arg2, arg3) {
-    console.error("" + "[ReactNative Architecture][JS] '" + "measureLayout" + "' is not available in the new React Native architecture.");
+    console.error(
+      "" +
+        "[ReactNative Architecture][JS] '" +
+        "measureLayout" +
+        "' is not available in the new React Native architecture.",
+    );
   },
   measureLayoutRelativeToParent(arg0, arg1, arg2) {
-    console.error("" + "[ReactNative Architecture][JS] '" + "measureLayoutRelativeToParent" + "' is not available in the new React Native architecture.");
+    console.error(
+      "" +
+        "[ReactNative Architecture][JS] '" +
+        "measureLayoutRelativeToParent" +
+        "' is not available in the new React Native architecture.",
+    );
   },
   dispatchViewManagerCommand(arg0, arg1, arg2) {
-    console.error("" + "[ReactNative Architecture][JS] '" + "dispatchViewManagerCommand" + "' is not available in the new React Native architecture.");
-  }
+    console.error(
+      "" +
+        "[ReactNative Architecture][JS] '" +
+        "dispatchViewManagerCommand" +
+        "' is not available in the new React Native architecture.",
+    );
+  },
 };
 const merged = Object.assign(obj);
 obj = {
@@ -41,7 +62,12 @@ obj = {
     } else {
       const _console = console;
       const _HermesInternal = HermesInternal;
-      console.error("" + "[ReactNative Architecture][JS] '" + "getConstantsForViewManager" + "' is not available in the new React Native architecture.");
+      console.error(
+        "" +
+          "[ReactNative Architecture][JS] '" +
+          "getConstantsForViewManager" +
+          "' is not available in the new React Native architecture.",
+      );
       obj = {};
     }
     return obj;
@@ -59,14 +85,17 @@ obj = {
     } else {
       const _console = console;
       const _HermesInternal = HermesInternal;
-      console.error("" + "[ReactNative Architecture][JS] '" + "getDefaultEventTypes" + "' is not available in the new React Native architecture.");
+      console.error(
+        "" +
+          "[ReactNative Architecture][JS] '" +
+          "getDefaultEventTypes" +
+          "' is not available in the new React Native architecture.",
+      );
       items = [];
     }
     return items;
   },
-  setLayoutAnimationEnabledExperimental(arg0) {
-
-  },
+  setLayoutAnimationEnabledExperimental(arg0) {},
   sendAccessibilityEvent(arg0, arg1) {
     let str = "focus";
     if (arg1 !== 8) {
@@ -93,28 +122,58 @@ obj = {
       const _HermesInternal2 = HermesInternal;
       console.error("sendAccessibilityEvent() dropping event: Cannot find view with tag #" + arg0);
     }
-  }
+  },
 };
 const merged1 = Object.assign(obj);
 const merged2 = Object.assign({
   createView(arg0, arg1, arg2, arg3) {
-    console.error("" + "[ReactNative Architecture][JS] '" + "createView" + "' is not available in the new React Native architecture.");
+    console.error(
+      "" +
+        "[ReactNative Architecture][JS] '" +
+        "createView" +
+        "' is not available in the new React Native architecture.",
+    );
   },
   updateView(arg0, arg1, arg2) {
-    console.error("" + "[ReactNative Architecture][JS] '" + "updateView" + "' is not available in the new React Native architecture.");
+    console.error(
+      "" +
+        "[ReactNative Architecture][JS] '" +
+        "updateView" +
+        "' is not available in the new React Native architecture.",
+    );
   },
   setChildren(arg0, arg1) {
-    console.error("" + "[ReactNative Architecture][JS] '" + "setChildren" + "' is not available in the new React Native architecture.");
+    console.error(
+      "" +
+        "[ReactNative Architecture][JS] '" +
+        "setChildren" +
+        "' is not available in the new React Native architecture.",
+    );
   },
   manageChildren(arg0, arg1, arg2, arg3, arg4, arg5) {
-    console.error("" + "[ReactNative Architecture][JS] '" + "manageChildren" + "' is not available in the new React Native architecture.");
+    console.error(
+      "" +
+        "[ReactNative Architecture][JS] '" +
+        "manageChildren" +
+        "' is not available in the new React Native architecture.",
+    );
   },
   setJSResponder(arg0, arg1) {
-    console.error("" + "[ReactNative Architecture][JS] '" + "setJSResponder" + "' is not available in the new React Native architecture.");
+    console.error(
+      "" +
+        "[ReactNative Architecture][JS] '" +
+        "setJSResponder" +
+        "' is not available in the new React Native architecture.",
+    );
   },
   clearJSResponder() {
-    console.error("" + "[ReactNative Architecture][JS] '" + "clearJSResponder" + "' is not available in the new React Native architecture.");
-  }
+    console.error(
+      "" +
+        "[ReactNative Architecture][JS] '" +
+        "clearJSResponder" +
+        "' is not available in the new React Native architecture.",
+    );
+  },
 });
 obj.getViewManagerConfig = function getViewManagerConfig(arg0) {
   if (RN$LegacyInterop_UIManager_getConstants) {
@@ -137,10 +196,16 @@ obj.getViewManagerConfig = function getViewManagerConfig(arg0) {
     const _HermesInternal = HermesInternal;
     const _HermesInternal2 = HermesInternal;
     const combined = "getViewManagerConfig('" + arg0 + "')";
-    const combined1 = "If '" + arg0 + "' has a ViewManager and you want to retrieve its native ViewConfig, please turn on the native ViewConfig interop layer. If you want to see if this component is registered with React Native, please call hasViewManagerConfig('" + arg0 + "') instead.";
+    const combined1 =
+      "If '" +
+      arg0 +
+      "' has a ViewManager and you want to retrieve its native ViewConfig, please turn on the native ViewConfig interop layer. If you want to see if this component is registered with React Native, please call hasViewManagerConfig('" +
+      arg0 +
+      "') instead.";
     const _HermesInternal3 = HermesInternal;
     let str8 = "";
-    const combined2 = "[ReactNative Architecture][JS] '" + combined + "' is not available in the new React Native architecture.";
+    const combined2 =
+      "[ReactNative Architecture][JS] '" + combined + "' is not available in the new React Native architecture.";
     if (combined1) {
       const _HermesInternal4 = HermesInternal;
       str8 = " " + combined1;
@@ -165,7 +230,12 @@ obj.getConstants = function getConstants() {
   } else {
     const _console = console;
     const _HermesInternal = HermesInternal;
-    console.error("" + "[ReactNative Architecture][JS] '" + "getConstants" + "' is not available in the new React Native architecture.");
+    console.error(
+      "" +
+        "[ReactNative Architecture][JS] '" +
+        "getConstants" +
+        "' is not available in the new React Native architecture.",
+    );
     tmp4 = null;
   }
   return tmp4;
@@ -248,7 +318,7 @@ if (RN$LegacyInterop_UIManager_getConstants) {
       obj = {
         get() {
           return closure_1_1(closure_1_2[0])(closure_1_10.getConstantsForViewManager)(closure_0);
-        }
+        },
       };
       _null(49)(obj, arg0, obj);
     });

@@ -1,7 +1,5 @@
 // _runtime/10870_nativeTypeMatches.js
-function nativeTypeMatches(arg0, arg1) {
-
-}
+function nativeTypeMatches(arg0, arg1) {}
 arg5.safeValidate = (arr, nativeType) => {
   nativeType = nativeType.nativeType;
   return arr.some((str) => {

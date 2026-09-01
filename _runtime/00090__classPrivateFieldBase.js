@@ -10,4 +10,4 @@ export default function _classPrivateFieldBase(arg0, key10009) {
     const typeError = new TypeError("attempted to use private field on non-instance");
     throw typeError;
   }
-};
+}

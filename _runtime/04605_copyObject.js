@@ -27,4 +27,4 @@ export default function copyObject(arg0, arg1, arg2, arg3) {
     }
   }
   return obj;
-};
+}

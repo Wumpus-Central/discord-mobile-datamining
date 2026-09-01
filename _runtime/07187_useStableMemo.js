@@ -16,4 +16,4 @@ export default function useStableMemo(arg0, items) {
     tmp2.current = items;
   }
   return tmp.current;
-};
+}

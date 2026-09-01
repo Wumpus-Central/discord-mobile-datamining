@@ -13,10 +13,12 @@ const items = [
   {
     key: "makeShareableClone",
     value: function makeShareableClone() {
-      const reanimatedError = new JSWorklets(1664).ReanimatedError("makeShareableClone should never be called in JSWorklets.");
+      const reanimatedError = new JSWorklets(1664).ReanimatedError(
+        "makeShareableClone should never be called in JSWorklets.",
+      );
       throw reanimatedError;
-    }
-  }
+    },
+  },
 ];
 let closure_3 = _createClassDefault(JSWorklets, items);
 

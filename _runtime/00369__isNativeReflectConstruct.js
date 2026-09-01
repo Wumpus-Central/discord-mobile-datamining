@@ -24,8 +24,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class AnimatedDivision {
   constructor(arg0, arg1, arg2) {
@@ -98,7 +97,7 @@ let items = [
       }
       const items = [arg0];
       fn(items);
-    }
+    },
   },
   {
     key: "__getValue",
@@ -119,13 +118,13 @@ let items = [
         num = __getValueResult / __getValueResult1;
       }
       return num;
-    }
+    },
   },
   {
     key: "interpolate",
     value: function interpolate(arg0) {
       return new AnimatedDivision(363)(this, arg0);
-    }
+    },
   },
   {
     key: "__attach",
@@ -141,7 +140,7 @@ let items = [
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
-    }
+    },
   },
   {
     key: "__detach",
@@ -157,21 +156,21 @@ let items = [
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
-    }
+    },
   },
   {
     key: "__getNativeConfig",
     value: function __getNativeConfig() {
       const obj = { type: "division", input: null, debugID: null };
       const _a = this._a;
-      const items = [_a.__getNativeTag(), ];
+      const items = [_a.__getNativeTag()];
       const _b = this._b;
       items[1] = _b.__getNativeTag();
       obj[1] = items;
       obj[2] = this.__getDebugID();
       return obj;
-    }
-  }
+    },
+  },
 ];
 
 export default importDefaultResult(AnimatedDivision, items);

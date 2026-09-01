@@ -31,7 +31,7 @@ globalThis.IntlMessageFormat.__addLocaleData({
       }
     }
     return str3;
-  }
+  },
 });
 globalThis.IntlMessageFormat.__addLocaleData({ locale: "sv-AX", parentLocale: "sv" });
 globalThis.IntlMessageFormat.__addLocaleData({ locale: "sv-FI", parentLocale: "sv" });

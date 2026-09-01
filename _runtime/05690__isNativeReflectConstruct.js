@@ -25,8 +25,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class ForceTouchFallback {
   constructor() {
@@ -52,8 +51,12 @@ importDefaultResult1(ForceTouchFallback, noopDefault.Component);
 let obj = {
   key: "componentDidMount",
   value: function componentDidMount() {
-    console.warn(ForceTouchFallback(5657).tagMessage("ForceTouchGestureHandler is not available on this platform. Please use ForceTouchGestureHandler.forceTouchAvailable to conditionally render other components that would provide a fallback behavior specific to your usecase"));
-  }
+    console.warn(
+      ForceTouchFallback(5657).tagMessage(
+        "ForceTouchGestureHandler is not available on this platform. Please use ForceTouchGestureHandler.forceTouchAvailable to conditionally render other components that would provide a fallback behavior specific to your usecase",
+      ),
+    );
+  },
 };
 const items = [
   obj,
@@ -61,8 +64,8 @@ const items = [
     key: "render",
     value: function render() {
       return this.props.children;
-    }
-  }
+    },
+  },
 ];
 let importDefaultResultResult = importDefaultResult(ForceTouchFallback, items);
 importDefaultResultResult.forceTouchAvailable = false;

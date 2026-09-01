@@ -16,4 +16,4 @@ export default function useRefEffect(arg0) {
       obj.current = callback(arg0);
     }
   }, items);
-};
+}

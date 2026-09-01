@@ -35,7 +35,12 @@ export const usePropsValidator = (index) => {
       if (!tmp4) {
         tmp4 = parsed === callback(table[2]).INITIAL_SNAP_POINT;
       }
-      callback2(table[1])(tmp4, "Snap point '" + num + "' is invalid. if you want to allow user to close the sheet, Please use 'enablePanDownToClose' prop.");
+      callback2(table[1])(
+        tmp4,
+        "Snap point '" +
+          num +
+          "' is invalid. if you want to allow user to close the sheet, Please use 'enablePanDownToClose' prop.",
+      );
     });
     let tmp9 = "value" in items;
     let tmp2Result = tmp2(tmp3[1]);
@@ -64,18 +69,27 @@ export const usePropsValidator = (index) => {
       }
       tmp16 = tmp17;
     }
-    snapPoints(enableDynamicSizing[1])(tmp16, `'index' was provided but out of the provided snap points range! expected value to be between -1, ${arr.length - 1}`);
+    snapPoints(enableDynamicSizing[1])(
+      tmp16,
+      `'index' was provided but out of the provided snap points range! expected value to be between -1, ${arr.length - 1}`,
+    );
     let tmp20 = typeof topInset === "number";
     const tmp2Result1 = snapPoints(enableDynamicSizing[1]);
     if (typeof topInset !== "number") {
       tmp20 = undefined === topInset;
     }
-    snapPoints(enableDynamicSizing[1])(tmp20, "'topInset' was provided but with wrong type ! expected type is a number.");
+    snapPoints(enableDynamicSizing[1])(
+      tmp20,
+      "'topInset' was provided but with wrong type ! expected type is a number.",
+    );
     let tmp23 = typeof bottomInset === "number";
     const tmp2Result2 = snapPoints(enableDynamicSizing[1]);
     if (typeof bottomInset !== "number") {
       tmp23 = undefined === bottomInset;
     }
-    snapPoints(enableDynamicSizing[1])(tmp23, "'bottomInset' was provided but with wrong type ! expected type is a number.");
+    snapPoints(enableDynamicSizing[1])(
+      tmp23,
+      "'bottomInset' was provided but with wrong type ! expected type is a number.",
+    );
   }, items);
 };

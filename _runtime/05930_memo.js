@@ -7,10 +7,18 @@ import { jsx } from "react/00021_jsxProd.js";
 const require = arg1;
 ({ useCallback: c4, useEffect: c5, useMemo: closure_6, useRef: error, useState: closure_8, memo } = noop);
 noopDefault;
-let closure_10 = { code: "function pnpm_BottomSheetBackdropTsx1(){const{runOnJS,handleOnPress}=this.__closure;runOnJS(handleOnPress)();}" };
-let closure_11 = { code: "function pnpm_BottomSheetBackdropTsx2(){const{interpolate,animatedIndex,disappearsOnIndex,appearsOnIndex,opacity,Extrapolation}=this.__closure;return{opacity:interpolate(animatedIndex.value,[-1,disappearsOnIndex,appearsOnIndex],[0,0,opacity],Extrapolation.CLAMP)};}" };
-let closure_12 = { code: "function pnpm_BottomSheetBackdropTsx3(){const{animatedIndex,disappearsOnIndex}=this.__closure;return Math.round(animatedIndex.value)<=disappearsOnIndex;}" };
-let closure_13 = { code: "function pnpm_BottomSheetBackdropTsx4(shouldDisableTouchability,previous){const{runOnJS,handleContainerTouchability}=this.__closure;if(shouldDisableTouchability===previous){return;}runOnJS(handleContainerTouchability)(shouldDisableTouchability);}" };
+let closure_10 = {
+  code: "function pnpm_BottomSheetBackdropTsx1(){const{runOnJS,handleOnPress}=this.__closure;runOnJS(handleOnPress)();}",
+};
+let closure_11 = {
+  code: "function pnpm_BottomSheetBackdropTsx2(){const{interpolate,animatedIndex,disappearsOnIndex,appearsOnIndex,opacity,Extrapolation}=this.__closure;return{opacity:interpolate(animatedIndex.value,[-1,disappearsOnIndex,appearsOnIndex],[0,0,opacity],Extrapolation.CLAMP)};}",
+};
+let closure_12 = {
+  code: "function pnpm_BottomSheetBackdropTsx3(){const{animatedIndex,disappearsOnIndex}=this.__closure;return Math.round(animatedIndex.value)<=disappearsOnIndex;}",
+};
+let closure_13 = {
+  code: "function pnpm_BottomSheetBackdropTsx4(shouldDisableTouchability,previous){const{runOnJS,handleContainerTouchability}=this.__closure;if(shouldDisableTouchability===previous){return;}runOnJS(handleContainerTouchability)(shouldDisableTouchability);}",
+};
 const memoResult = memo((animatedIndex) => {
   animatedIndex = animatedIndex.animatedIndex;
   ({ opacity, appearsOnIndex, disappearsOnIndex, enableTouchThrough, pressBehavior } = animatedIndex);
@@ -112,7 +120,14 @@ const memoResult = memo((animatedIndex) => {
       return obj;
     }
   }
-  obj = { interpolate: tmp13(tmp14[4]).interpolate, animatedIndex, disappearsOnIndex, appearsOnIndex, opacity, Extrapolation: tmp13(tmp14[4]).Extrapolation };
+  obj = {
+    interpolate: tmp13(tmp14[4]).interpolate,
+    animatedIndex,
+    disappearsOnIndex,
+    appearsOnIndex,
+    opacity,
+    Extrapolation: tmp13(tmp14[4]).Extrapolation,
+  };
   P.__closure = obj;
   P.__workletHash = 7085425846204;
   P.__initData = closure_11;
@@ -168,7 +183,7 @@ const memoResult = memo((animatedIndex) => {
     accessibilityRole: DEFAULT_ACCESSIBILITY_ROLE,
     accessibilityLabel: DEFAULT_ACCESSIBILITY_LABEL,
     accessibilityHint: null,
-    children: null
+    children: null,
   };
   if (!DEFAULT_ACCESSIBILITY_HINT) {
     let str2 = "move";

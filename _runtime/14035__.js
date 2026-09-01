@@ -176,9 +176,7 @@ function isArrayBuffer(arg0) {
   }
 }
 unsigned_long_long.any = (arg0) => arg0;
-unsigned_long_long.void = () => {
-
-};
+unsigned_long_long.void = () => {};
 unsigned_long_long.boolean = (arg0) => arg0;
 unsigned_long_long.byte = require("00008_Deque.js");
 unsigned_long_long.octet = require("00008_Deque.js");
@@ -225,7 +223,9 @@ unsigned_long_long.float = (arg0, context) => {
           }
         }
         const _HermesInternal2 = HermesInternal;
-        const typeError = new TypeError("" + str8 + " " + "is outside the range of a single-precision floating-point value" + ".");
+        const typeError = new TypeError(
+          "" + str8 + " " + "is outside the range of a single-precision floating-point value" + ".",
+        );
         throw typeError;
       }
     }
@@ -330,7 +330,9 @@ unsigned_long_long.USVString = (arg0, arg1) => {
             if (56320 <= charCodeAtResult1) {
               if (charCodeAtResult1 <= 57343) {
                 let _String2 = String;
-                let arr1 = items.push(String.fromCodePoint(65536 + 1024 * (1023 & charCodeAtResult) + (1023 & charCodeAtResult1)));
+                let arr1 = items.push(
+                  String.fromCodePoint(65536 + 1024 * (1023 & charCodeAtResult) + (1023 & charCodeAtResult1)),
+                );
                 tmp6 = sum;
               }
             }
@@ -417,7 +419,17 @@ unsigned_long_long.DataView = (arg0, arg1) => {
     throw typeError;
   }
 };
-let items = [Int8Array, Int16Array, Int32Array, Uint8Array, Uint16Array, Uint32Array, Uint8ClampedArray, Float32Array, Float64Array];
+let items = [
+  Int8Array,
+  Int16Array,
+  Int32Array,
+  Uint8Array,
+  Uint16Array,
+  Uint32Array,
+  Uint8ClampedArray,
+  Float32Array,
+  Float64Array,
+];
 const item = items.forEach((name) => {
   name = name.name;
   let str = "a";

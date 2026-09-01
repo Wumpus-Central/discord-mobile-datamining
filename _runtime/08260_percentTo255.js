@@ -1,9 +1,8 @@
 // _runtime/08260_percentTo255.js
-const tmp2 = /^rgba?\(\s*(100%|\d{1,2}(\.\d+)?%)\s*,\s*(100%|\d{1,2}(\.\d+)?%)\s*,\s*(100%|\d{1,2}(\.\d+)?%)\s*(?:,\s*(1|0(\.\d+)?|100%|\d{1,2}(\.\d+)?%)\s*)?\)$/;
+const tmp2 =
+  /^rgba?\(\s*(100%|\d{1,2}(\.\d+)?%)\s*,\s*(100%|\d{1,2}(\.\d+)?%)\s*,\s*(100%|\d{1,2}(\.\d+)?%)\s*(?:,\s*(1|0(\.\d+)?|100%|\d{1,2}(\.\d+)?%)\s*)?\)$/;
 const re0 = tmp2;
-function percentTo255(arg0) {
-
-}
+function percentTo255(arg0) {}
 arg5.RGB_RGBA_PATTERN = tmp2;
 arg5.convertPercentageColor = (str) => {
   if (typeof str !== "string") {
@@ -17,7 +16,7 @@ arg5.convertPercentageColor = (str) => {
       if (!match) {
         const _console = console;
         const _HermesInternal = HermesInternal;
-        console.warn("\"" + replaced + "\" is not a valid percentage rgb/rgba color");
+        console.warn('"' + replaced + '" is not a valid percentage rgb/rgba color');
       }
       if (typeof percentTo255 !== "function") {
         HermesBuiltin.throwTypeError();

@@ -24,7 +24,11 @@ export const attachHandlers = function attachHandlers(preparedGesture) {
     let obj3 = gestureConfig(gesturesToAttach[3]);
     ({ handlerName, handlerTag } = item10022);
     let obj4 = preparedGesture(gesturesToAttach[4]);
-    let gestureHandler = obj3.createGestureHandler(handlerName, handlerTag, obj4.filterConfig(item10022.config, preparedGesture(gesturesToAttach[2]).ALLOWED_PROPS));
+    let gestureHandler = obj3.createGestureHandler(
+      handlerName,
+      handlerTag,
+      obj4.filterConfig(item10022.config, preparedGesture(gesturesToAttach[2]).ALLOWED_PROPS),
+    );
     let obj5 = preparedGesture(gesturesToAttach[5]);
     let registerHandlerResult = obj5.registerHandler(item10022.handlerTag, item10022, item10022.config.testId);
     continue;
@@ -41,13 +45,19 @@ export const attachHandlers = function attachHandlers(preparedGesture) {
         let obj2 = preparedGesture(gesturesToAttach[4]);
         let tmp7 = preparedGesture;
         let tmp8 = gesturesToAttach;
-        let result = obj.setGestureHandlerConfig(item10007.handlerTag, obj2.filterConfig(item10007.config, preparedGesture(gesturesToAttach[2]).ALLOWED_PROPS));
+        let result = obj.setGestureHandlerConfig(
+          item10007.handlerTag,
+          obj2.filterConfig(item10007.config, preparedGesture(gesturesToAttach[2]).ALLOWED_PROPS),
+        );
         let tmp10 = gesturesToAttach;
         let obj3 = gestureConfig(gesturesToAttach[3]);
         let tmp11 = preparedGesture;
         let tmp12 = gesturesToAttach;
         let obj4 = preparedGesture(gesturesToAttach[2]);
-        let configureRelationsResult = obj3.configureRelations(item10007.handlerTag, obj4.extractGestureRelations(item10007));
+        let configureRelationsResult = obj3.configureRelations(
+          item10007.handlerTag,
+          obj4.extractGestureRelations(item10007),
+        );
         continue;
       }
       const result1 = preparedGesture(gesturesToAttach[4]).scheduleFlushOperations();

@@ -17,7 +17,10 @@ class Deflate {
       if (!arg0) {
         obj = {};
       }
-      self.options = obj.assign({ level: -1, method: 8, chunkSize: 16384, windowBits: 15, memLevel: 8, strategy: 0, to: "" }, obj);
+      self.options = obj.assign(
+        { level: -1, method: 8, chunkSize: 16384, windowBits: 15, memLevel: 8, strategy: 0, to: "" },
+        obj,
+      );
       options = self.options;
       if (options.raw) {
         num = 0;
@@ -39,7 +42,14 @@ class Deflate {
         self.strm.avail_out = 0;
         tmp4Result = require("flush_block_only");
         tmp10 = tmp4Result;
-        deflateInit2Result = tmp4Result.deflateInit2(self.strm, options.level, options.method, options.windowBits, options.memLevel, options.strategy);
+        deflateInit2Result = tmp4Result.deflateInit2(
+          self.strm,
+          options.level,
+          options.method,
+          options.windowBits,
+          options.memLevel,
+          options.strategy,
+        );
         if (0 !== deflateInit2Result) {
           tmp22 = globalThis;
           _Error2 = Error;

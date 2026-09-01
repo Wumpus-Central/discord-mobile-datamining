@@ -11,17 +11,23 @@ function validateTransformOrigin(arg0) {
     [obj, obj2, tmp30] = callback(arg0, 3);
     if (typeof obj !== "number") {
       const _HermesInternal = HermesInternal;
-      const reanimatedError1 = new t.ReanimatedError("Transform origin x-position must be a number or a percentage string. Passed value: " + obj + ".");
+      const reanimatedError1 = new t.ReanimatedError(
+        "Transform origin x-position must be a number or a percentage string. Passed value: " + obj + ".",
+      );
       throw reanimatedError1;
     }
     if (typeof obj2 !== "number") {
       const _HermesInternal2 = HermesInternal;
-      const reanimatedError2 = new t.ReanimatedError("Transform origin y-position must be a number or a percentage string. Passed value: " + obj2 + ".");
+      const reanimatedError2 = new t.ReanimatedError(
+        "Transform origin y-position must be a number or a percentage string. Passed value: " + obj2 + ".",
+      );
       throw reanimatedError2;
     }
     if (typeof tmp30 !== "number") {
       const _HermesInternal3 = HermesInternal;
-      const reanimatedError3 = new t.ReanimatedError("Transform origin z-position must be a number. Passed value: " + tmp30 + ".");
+      const reanimatedError3 = new t.ReanimatedError(
+        "Transform origin z-position must be a number. Passed value: " + tmp30 + ".",
+      );
       throw reanimatedError3;
     }
     const tmp29 = callback(arg0, 3);
@@ -29,7 +35,9 @@ function validateTransformOrigin(arg0) {
 }
 validateTransformOrigin.__closure = {};
 validateTransformOrigin.__workletHash = 6034608374885;
-validateTransformOrigin.__initData = { code: "function validateTransformOrigin_Pnpm_processTransformOriginTs1(transformOrigin){if(transformOrigin.length!==3){throw new ReanimatedError('Transform origin must have exactly 3 values.');}const[x,y,z]=transformOrigin;if(!(typeof x==='number'||typeof x==='string'&&x.endsWith('%'))){throw new ReanimatedError(\"Transform origin x-position must be a number or a percentage string. Passed value: \"+x+\".\");}if(!(typeof y==='number'||typeof y==='string'&&y.endsWith('%'))){throw new ReanimatedError(\"Transform origin y-position must be a number or a percentage string. Passed value: \"+y+\".\");}if(typeof z!=='number'){throw new ReanimatedError(\"Transform origin z-position must be a number. Passed value: \"+z+\".\");}}" };
+validateTransformOrigin.__initData = {
+  code: "function validateTransformOrigin_Pnpm_processTransformOriginTs1(transformOrigin){if(transformOrigin.length!==3){throw new ReanimatedError('Transform origin must have exactly 3 values.');}const[x,y,z]=transformOrigin;if(!(typeof x==='number'||typeof x==='string'&&x.endsWith('%'))){throw new ReanimatedError(\"Transform origin x-position must be a number or a percentage string. Passed value: \"+x+\".\");}if(!(typeof y==='number'||typeof y==='string'&&y.endsWith('%'))){throw new ReanimatedError(\"Transform origin y-position must be a number or a percentage string. Passed value: \"+y+\".\");}if(typeof z!=='number'){throw new ReanimatedError(\"Transform origin z-position must be a number. Passed value: \"+z+\".\");}}",
+};
 function processTransformOrigin(str) {
   let items = str;
   if (!Array.isArray(str)) {
@@ -60,7 +68,9 @@ function processTransformOrigin(str) {
                     let str4 = "Transform-origin value ";
                     let tmp13 = new.target;
                     let tmp14 = new.target;
-                    let reanimatedError = new t.ReanimatedError("Transform-origin value " + str + " cannot be used for z-position");
+                    let reanimatedError = new t.ReanimatedError(
+                      "Transform-origin value " + str + " cannot be used for z-position",
+                    );
                     let tmp16 = reanimatedError;
                     throw reanimatedError;
                   } else {
@@ -91,7 +101,9 @@ function processTransformOrigin(str) {
               let str8 = "Transform-origin ";
               let tmp26 = new.target;
               let tmp27 = new.target;
-              let reanimatedError1 = new t.ReanimatedError("Transform-origin " + str + " can only be used for y-position");
+              let reanimatedError1 = new t.ReanimatedError(
+                "Transform-origin " + str + " can only be used for y-position",
+              );
               let tmp29 = reanimatedError1;
               throw reanimatedError1;
             } else {
@@ -174,6 +186,8 @@ function processTransformOrigin(str) {
 }
 processTransformOrigin.__closure = { INDEX_X: 0, INDEX_Z: 2, INDEX_Y: 1, __DEV__: false, validateTransformOrigin };
 processTransformOrigin.__workletHash = 11541675557002;
-processTransformOrigin.__initData = { code: "function processTransformOrigin_Pnpm_processTransformOriginTs2(transformOriginIn){const{INDEX_X,INDEX_Z,INDEX_Y,__DEV__,validateTransformOrigin}=this.__closure;let transformOrigin=Array.isArray(transformOriginIn)?transformOriginIn:['50%','50%',0];if(typeof transformOriginIn==='string'){const transformOriginString=transformOriginIn;const regex=/(top|bottom|left|right|center|\\d+(?:%|px)|0)/gi;const transformOriginArray=['50%','50%',0];let index=INDEX_X;let matches;while(matches=regex.exec(transformOriginString)){let nextIndex=index+1;const value=matches[0];const valueLower=value.toLowerCase();switch(valueLower){case'left':case'right':{if(index!==INDEX_X){throw new ReanimatedError(\"Transform-origin \"+value+\" can only be used for x-position\");}transformOriginArray[INDEX_X]=valueLower==='left'?0:'100%';break;}case'top':case'bottom':{if(index===INDEX_Z){throw new ReanimatedError(\"Transform-origin \"+value+\" can only be used for y-position\");}transformOriginArray[INDEX_Y]=valueLower==='top'?0:'100%';if(index===INDEX_X){const horizontal=regex.exec(transformOriginString);if(horizontal==null){break;}switch(horizontal===null||horizontal===void 0?void 0:horizontal[0].toLowerCase()){case'left':transformOriginArray[INDEX_X]=0;break;case'right':transformOriginArray[INDEX_X]='100%';break;case'center':transformOriginArray[INDEX_X]='50%';break;default:throw new ReanimatedError(\"Could not parse transform-origin: \"+transformOriginString);}nextIndex=INDEX_Z;}break;}case'center':{if(index===INDEX_Z){throw new ReanimatedError(\"Transform-origin value \"+value+\" cannot be used for z-position\");}transformOriginArray[index]='50%';break;}default:{if(value.endsWith('%')){transformOriginArray[index]=value;}else{const numericValue=parseFloat(value);if(isNaN(numericValue)){throw new ReanimatedError(\"Invalid numeric value in transform-origin: \"+value);}transformOriginArray[index]=numericValue;}break;}}index=nextIndex;}transformOrigin=transformOriginArray;}if(typeof transformOriginIn!=='string'&&!Array.isArray(transformOriginIn)){throw new ReanimatedError(\"Invalid transformOrigin type: \"+typeof transformOriginIn);}if(__DEV__){validateTransformOrigin(transformOrigin);}return transformOrigin;}" };
+processTransformOrigin.__initData = {
+  code: "function processTransformOrigin_Pnpm_processTransformOriginTs2(transformOriginIn){const{INDEX_X,INDEX_Z,INDEX_Y,__DEV__,validateTransformOrigin}=this.__closure;let transformOrigin=Array.isArray(transformOriginIn)?transformOriginIn:['50%','50%',0];if(typeof transformOriginIn==='string'){const transformOriginString=transformOriginIn;const regex=/(top|bottom|left|right|center|\\d+(?:%|px)|0)/gi;const transformOriginArray=['50%','50%',0];let index=INDEX_X;let matches;while(matches=regex.exec(transformOriginString)){let nextIndex=index+1;const value=matches[0];const valueLower=value.toLowerCase();switch(valueLower){case'left':case'right':{if(index!==INDEX_X){throw new ReanimatedError(\"Transform-origin \"+value+\" can only be used for x-position\");}transformOriginArray[INDEX_X]=valueLower==='left'?0:'100%';break;}case'top':case'bottom':{if(index===INDEX_Z){throw new ReanimatedError(\"Transform-origin \"+value+\" can only be used for y-position\");}transformOriginArray[INDEX_Y]=valueLower==='top'?0:'100%';if(index===INDEX_X){const horizontal=regex.exec(transformOriginString);if(horizontal==null){break;}switch(horizontal===null||horizontal===void 0?void 0:horizontal[0].toLowerCase()){case'left':transformOriginArray[INDEX_X]=0;break;case'right':transformOriginArray[INDEX_X]='100%';break;case'center':transformOriginArray[INDEX_X]='50%';break;default:throw new ReanimatedError(\"Could not parse transform-origin: \"+transformOriginString);}nextIndex=INDEX_Z;}break;}case'center':{if(index===INDEX_Z){throw new ReanimatedError(\"Transform-origin value \"+value+\" cannot be used for z-position\");}transformOriginArray[index]='50%';break;}default:{if(value.endsWith('%')){transformOriginArray[index]=value;}else{const numericValue=parseFloat(value);if(isNaN(numericValue)){throw new ReanimatedError(\"Invalid numeric value in transform-origin: \"+value);}transformOriginArray[index]=numericValue;}break;}}index=nextIndex;}transformOrigin=transformOriginArray;}if(typeof transformOriginIn!=='string'&&!Array.isArray(transformOriginIn)){throw new ReanimatedError(\"Invalid transformOrigin type: \"+typeof transformOriginIn);}if(__DEV__){validateTransformOrigin(transformOrigin);}return transformOrigin;}",
+};
 
 export { processTransformOrigin };

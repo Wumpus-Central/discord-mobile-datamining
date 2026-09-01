@@ -4,9 +4,7 @@ import isJest from "01656_isJest.js";
 let closure_0 = require;
 let closure_1 = dependencyMap;
 if (isJest.shouldBeUseWeb()) {
-  let fn = function t() {
-
-  };
+  let fn = function t() {};
 } else {
   closure_0 = [];
   closure_1 = [];

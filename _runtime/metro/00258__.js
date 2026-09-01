@@ -15,7 +15,7 @@ arg5.default = {
     return {
       remove() {
         closure_0 = closure_0.filter((arg0) => closure_0 !== arg0);
-      }
+      },
     };
-  }
+  },
 };

@@ -93,23 +93,29 @@ export const spotlightBrowserIntegration = registerSpanErrorInstrumentation.defi
           obj[1] = callback(817).serializeEnvelope(arg0);
           obj[2] = { "Content-Type": "application/x-sentry-envelope" };
           const obj2 = callback(817);
-          dependencyMap(callback, obj).then((status) => {
-            let tmp = status.status >= 200;
-            if (tmp) {
-              tmp = status.status < 400;
-            }
-            if (tmp) {
-              c2 = 0;
-            }
-          }, (arg0) => {
-            closure_2 = closure_2 + 1;
-            const debug = closure_1_0(closure_1_1[1]).debug;
-            debug.error("Sentry SDK can't connect to Sidecar is it running? See: https://spotlightjs.com/sidecar/npx/", arg0);
-          });
+          dependencyMap(callback, obj).then(
+            (status) => {
+              let tmp = status.status >= 200;
+              if (tmp) {
+                tmp = status.status < 400;
+              }
+              if (tmp) {
+                c2 = 0;
+              }
+            },
+            (arg0) => {
+              closure_2 = closure_2 + 1;
+              const debug = closure_1_0(closure_1_1[1]).debug;
+              debug.error(
+                "Sentry SDK can't connect to Sidecar is it running? See: https://spotlightjs.com/sidecar/npx/",
+                arg0,
+              );
+            },
+          );
           const promise = dependencyMap(callback, obj);
         }
       });
-    }
+    },
   };
   return obj;
 });

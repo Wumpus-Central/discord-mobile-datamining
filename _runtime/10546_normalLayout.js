@@ -1,7 +1,9 @@
 // _runtime/10546_normalLayout.js
 const require = arg1;
 const dependencyMap = arg6;
-let closure_2 = { code: "function pnpm_normalTs1(value){const{interpolate,size,vertical}=this.__closure;const translate=interpolate(value,[-1,0,1],[-size,0,size]);return{transform:[vertical?{translateY:translate}:{translateX:translate}]};}" };
+let closure_2 = {
+  code: "function pnpm_normalTs1(value){const{interpolate,size,vertical}=this.__closure;const translate=interpolate(value,[-1,0,1],[-size,0,size]);return{transform:[vertical?{translateY:translate}:{translateX:translate}]};}",
+};
 arg5.normalLayout = function normalLayout(size) {
   size = size.size;
   const vertical = size.vertical;

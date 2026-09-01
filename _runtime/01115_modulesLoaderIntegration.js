@@ -74,12 +74,10 @@ arg5.modulesLoaderIntegration = () => {
   c1 = null;
   return {
     name: "ModulesLoader",
-    setupOnce() {
-
-    },
+    setupOnce() {},
     processEvent: (arg0) => {
       closure_0 = arg0;
-      return closure_1_2(undefined, undefined, undefined, function*() {
+      return closure_1_2(undefined, undefined, undefined, function* () {
         if (c5 === 2) {
           c5 = 3;
           HermesBuiltin.throwTypeError();
@@ -160,6 +158,6 @@ arg5.modulesLoaderIntegration = () => {
           }
         }
       });
-    }
+    },
   };
 };

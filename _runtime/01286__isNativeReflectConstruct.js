@@ -22,8 +22,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 function formatToAst(str) {
   if (typeof str === "string") {
@@ -66,7 +65,7 @@ let closure_5 = {
   },
   $p(content) {
     return { type: AstBuilder.Paragraph, content };
-  }
+  },
 };
 class AstBuilder {
   constructor() {
@@ -112,7 +111,7 @@ obj = {
       throw "" + formatting + " is not a known rich text formatting tag";
     }
     tmp = closure_5;
-  }
+  },
 };
 let items = [
   obj,
@@ -126,21 +125,21 @@ let items = [
       }
       const result = this.result;
       result.push({ type: AstBuilder.Text, content });
-    }
+    },
   },
   {
     key: "pushObject",
     value: function pushObject(arg0) {
       const result = this.result;
       result.push(arg0);
-    }
+    },
   },
   {
     key: "finish",
     value: function finish() {
       return this.result;
-    }
-  }
+    },
+  },
 ];
 const _moduleResult = _createClass(AstBuilder, items);
 

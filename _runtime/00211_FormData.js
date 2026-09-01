@@ -16,7 +16,7 @@ let items = [
       const _parts = this._parts;
       const items = [arg0, arg1];
       _parts.push(items);
-    }
+    },
   },
   {
     key: "getAll",
@@ -31,7 +31,7 @@ let items = [
         [, tmp] = arg0;
         return tmp;
       });
-    }
+    },
   },
   {
     key: "getParts",
@@ -47,7 +47,8 @@ let items = [
               if (typeof tmp2.name === "string") {
                 const _encodeURIComponent = encodeURIComponent;
                 const _HermesInternal = HermesInternal;
-                obj["content-disposition"] = obj["content-disposition"] + "; filename=\"" + encodeURIComponent(tmp2.name.replace(/\//g, "_")) + "\"";
+                obj["content-disposition"] =
+                  obj["content-disposition"] + '; filename="' + encodeURIComponent(tmp2.name.replace(/\//g, "_")) + '"';
                 const str = tmp2.name;
               }
               if (typeof tmp2.type === "string") {
@@ -63,8 +64,8 @@ let items = [
         }
         obj = { string: String(tmp2), headers: obj, fieldName: tmp };
       });
-    }
-  }
+    },
+  },
 ];
 
 export default _createClassDefault(FormData, items);

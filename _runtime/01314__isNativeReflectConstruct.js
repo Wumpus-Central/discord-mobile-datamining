@@ -23,8 +23,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 const arrayBuffer = new ArrayBuffer(8);
 const dataView = new DataView(arrayBuffer);
@@ -68,7 +67,7 @@ obj = {
   key: "isZero",
   value: function isZero() {
     return 0 == this.lo && 0 == this.hi;
-  }
+  },
 };
 const items = [
   obj,
@@ -83,8 +82,8 @@ const items = [
         error = new Error("cannot convert to safe number");
         throw error;
       }
-    }
-  }
+    },
+  },
 ];
 const _module1Result = _createClass(SharedPbLong, items);
 class PbULong {
@@ -121,7 +120,7 @@ obj = {
       str = obj.int64toString(self.lo, self.hi);
     }
     return str;
-  }
+  },
 };
 const items1 = [
   obj,
@@ -138,11 +137,13 @@ const items1 = [
         return V3.getBigUint64(0, true);
       } else {
         const _Error = Error;
-        error = new Error("BigInt unavailable, see https://github.com/timostamm/protobuf-ts/blob/v1.0.8/MANUAL.md#bigint-support");
+        error = new Error(
+          "BigInt unavailable, see https://github.com/timostamm/protobuf-ts/blob/v1.0.8/MANUAL.md#bigint-support",
+        );
         throw error;
       }
-    }
-  }
+    },
+  },
 ];
 const items2 = [
   {
@@ -238,8 +239,8 @@ const items2 = [
       }
       const error7 = new Error("unknown value " + tmp);
       throw error7;
-    }
-  }
+    },
+  },
 ];
 const _module1Result1 = _createClass(PbULong, items1, items2);
 _module1Result1.ZERO = new _module1Result1(0, 0);
@@ -269,7 +270,7 @@ const items3 = [
     key: "isNegative",
     value: function isNegative() {
       return 2147483648 & this.hi;
-    }
+    },
   },
   {
     key: "negate",
@@ -283,7 +284,7 @@ const items3 = [
         sum = lo;
       }
       return PbLong(sum, sum1);
-    }
+    },
   },
   {
     key: "toString",
@@ -298,7 +299,7 @@ const items3 = [
         obj = PbLong(1313);
         return obj.int64toString(self.lo, self.hi);
       }
-    }
+    },
   },
   {
     key: "toBigInt",
@@ -313,11 +314,13 @@ const items3 = [
         return V3.getBigInt64(0, true);
       } else {
         const _Error = Error;
-        error = new Error("BigInt unavailable, see https://github.com/timostamm/protobuf-ts/blob/v1.0.8/MANUAL.md#bigint-support");
+        error = new Error(
+          "BigInt unavailable, see https://github.com/timostamm/protobuf-ts/blob/v1.0.8/MANUAL.md#bigint-support",
+        );
         throw error;
       }
-    }
-  }
+    },
+  },
 ];
 const items4 = [
   {
@@ -412,8 +415,8 @@ const items4 = [
       }
       const error5 = new Error("unknown value " + tmp);
       throw error5;
-    }
-  }
+    },
+  },
 ];
 const _module1Result2 = _createClass(PbLong, items3, items4);
 const obj1 = {
@@ -509,13 +512,13 @@ const obj1 = {
     }
     const error7 = new Error("unknown value " + tmp);
     throw error7;
-  }
+  },
 };
 let obj2 = {
   key: "isNegative",
   value: function isNegative() {
     return 2147483648 & this.hi;
-  }
+  },
 };
 let obj3 = {
   key: "from",
@@ -609,7 +612,7 @@ let obj3 = {
     }
     const error5 = new Error("unknown value " + tmp);
     throw error5;
-  }
+  },
 };
 const tmp2Result1 = new _module1Result1(0, 0);
 _module1Result2.ZERO = new _module1Result2(0, 0);

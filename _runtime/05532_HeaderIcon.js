@@ -12,7 +12,7 @@ export const HeaderIcon = function HeaderIcon(arg0) {
   const merged = Object.assign(arg0, Object.create(null));
   let obj = createStandardNavigationFactories;
   obj = { source, resizeMode: "contain", fadeDuration: 0, tintColor: obj.useTheme().colors.text, style: null };
-  const items = [closure_4.icon, , ];
+  const items = [closure_4.icon, ,];
   let flip = "rtl" === createStandardNavigationFactories.useLocale().direction;
   if (flip) {
     flip = closure_4.flip;
@@ -21,7 +21,15 @@ export const HeaderIcon = function HeaderIcon(arg0) {
   items[2] = style;
   obj[4] = items;
   const merged1 = Object.assign(merged);
-  return <closure_2 source={source} resizeMode="contain" fadeDuration={0} tintColor={obj.useTheme().colors.text} style={null} />;
+  return (
+    <closure_2
+      source={source}
+      resizeMode="contain"
+      fadeDuration={0}
+      tintColor={obj.useTheme().colors.text}
+      style={null}
+    />
+  );
 };
 export const ICON_SIZE = 24;
 export const ICON_MARGIN = 3;

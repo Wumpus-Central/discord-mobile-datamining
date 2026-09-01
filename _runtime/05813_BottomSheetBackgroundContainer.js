@@ -19,7 +19,14 @@ const memoResult = noop.memo((arg0) => {
   if (backgroundComponent == null) {
     backgroundComponent = backgroundStyle(5815).BottomSheetBackground;
   }
-  return <backgroundComponent pointerEvents="none" animatedIndex={animatedIndex} animatedPosition={animatedPosition} style={style} />;
+  return (
+    <backgroundComponent
+      pointerEvents="none"
+      animatedIndex={animatedIndex}
+      animatedPosition={animatedPosition}
+      style={style}
+    />
+  );
 });
 memoResult.displayName = "BottomSheetBackgroundContainer";
 

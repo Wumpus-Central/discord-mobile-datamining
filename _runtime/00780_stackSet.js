@@ -1,7 +1,6 @@
 // _runtime/00780_stackSet.js
 import ListCache from "00748_ListCache.js";
 
-
 export default function stackSet(arg0, arg1) {
   const self = this;
   let __data__ = this.__data__;
@@ -25,4 +24,4 @@ export default function stackSet(arg0, arg1) {
   const result = obj.set(arg0, arg1);
   self.size = obj.size;
   return self;
-};
+}

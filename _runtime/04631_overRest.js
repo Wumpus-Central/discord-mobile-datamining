@@ -9,7 +9,7 @@ export default function overRest(arg0, arg1, arg2) {
     diff = arg0.length - 1;
   }
   closure_1 = closure_2(diff, 0);
-  return function() {
+  return function () {
     let tmp = table;
     const tmp2 = callback2(arguments.length - table, 0);
     const ArrayResult = Array(tmp2);
@@ -34,4 +34,4 @@ export default function overRest(arg0, arg1, arg2) {
     ArrayResult1[tmp] = callback2(ArrayResult);
     return callback(table[0])(callback, this, ArrayResult1);
   };
-};
+}

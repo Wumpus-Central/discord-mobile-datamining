@@ -16,4 +16,4 @@ export default function callBoundIntrinsic(arg0) {
     }
   }
   return tmp4;
-};
+}

@@ -19,7 +19,10 @@ arg5.getSanitizedUrlString = function getSanitizedUrlString(path) {
   let str3 = host;
   if (host) {
     const str5 = host.replace(/^.*@/, "[filtered]:[filtered]@");
-    str3 = host.replace(/^.*@/, "[filtered]:[filtered]@").replace(/(:80)$/, "").replace(/(:443)$/, "");
+    str3 = host
+      .replace(/^.*@/, "[filtered]:[filtered]@")
+      .replace(/(:80)$/, "")
+      .replace(/(:443)$/, "");
     const str6 = host.replace(/^.*@/, "[filtered]:[filtered]@").replace(/(:80)$/, "");
   }
   if (!str3) {

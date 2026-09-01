@@ -15,9 +15,15 @@ export const NavigationIndependentTree = function NavigationIndependentTree(chil
   obj = { value: "Array", children: 0 };
   obj = { value: "Array", children: 0 };
   obj1 = { value: "Array", children: 0 };
-  obj1[1] = jsx(NavigationIndependentTreeContext.NavigationIndependentTreeContext.Provider, { value: true, children: children.children });
+  obj1[1] = jsx(NavigationIndependentTreeContext.NavigationIndependentTreeContext.Provider, {
+    value: true,
+    children: children.children,
+  });
   obj[1] = jsx(context1.IsFocusedContext.Provider, { value: "Array", children: 0 });
-  obj[1] = jsx(NavigationFocusedRouteStateContext.NavigationFocusedRouteStateContext.Provider, { value: "Array", children: 0 });
+  obj[1] = jsx(NavigationFocusedRouteStateContext.NavigationFocusedRouteStateContext.Provider, {
+    value: "Array",
+    children: 0,
+  });
   obj[1] = jsx(NavigationContext.NavigationContext.Provider, { value: "Array", children: 0 });
   return jsx(context.NavigationRouteContext.Provider, { value: "Array", children: 0 });
 };

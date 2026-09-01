@@ -43,8 +43,8 @@ function parseUnicodeLanguageId(locale) {
             }
           }
           const _RangeError3 = RangeError;
-          const concat = "Duplicate variant \"".concat;
-          const rangeError = new RangeError("Duplicate variant \"".concat(arr2, "\""));
+          const concat = 'Duplicate variant "'.concat;
+          const rangeError = new RangeError('Duplicate variant "'.concat(arr2, '"'));
           throw rangeError;
         }
       }
@@ -90,7 +90,7 @@ function parseTransformedExtension(parts) {
           if (!items1.length) {
             break;
           } else {
-            let items2 = [arr, ];
+            let items2 = [arr];
             let tmp13 = exports;
             items2[1] = items1.join(exports.SEPARATOR);
             let arr1 = items.push(items2);
@@ -100,8 +100,8 @@ function parseTransformedExtension(parts) {
           }
         }
         const _RangeError = RangeError;
-        const concat = "Missing tvalue for tkey \"".concat;
-        const rangeError = new RangeError("Missing tvalue for tkey \"".concat(arr, "\""));
+        const concat = 'Missing tvalue for tkey "'.concat;
+        const rangeError = new RangeError('Missing tvalue for tkey "'.concat(arr, '"'));
         throw rangeError;
       }
     }
@@ -116,8 +116,7 @@ function parseTransformedExtension(parts) {
       throw rangeError1;
     }
     tmp2 = parseUnicodeLanguageId(parts);
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 arg5.SEPARATOR = undefined;
 arg5.isUnicodeLanguageSubtag = function isUnicodeLanguageSubtag(GetOptionResult) {

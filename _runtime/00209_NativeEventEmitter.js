@@ -20,14 +20,20 @@ class NativeEventEmitter {
       if (!tmp2) {
         tmp4 = globalThis;
         _console = console;
-        str = "`new NativeEventEmitter()` was called with a non-null argument without the required `addListener` method.";
-        warnResult = console.warn("`new NativeEventEmitter()` was called with a non-null argument without the required `addListener` method.");
+        str =
+          "`new NativeEventEmitter()` was called with a non-null argument without the required `addListener` method.";
+        warnResult = console.warn(
+          "`new NativeEventEmitter()` was called with a non-null argument without the required `addListener` method.",
+        );
       }
       if (!tmp3) {
         tmp6 = globalThis;
         _console2 = console;
-        str2 = "`new NativeEventEmitter()` was called with a non-null argument without the required `removeListeners` method.";
-        warnResult1 = console.warn("`new NativeEventEmitter()` was called with a non-null argument without the required `removeListeners` method.");
+        str2 =
+          "`new NativeEventEmitter()` was called with a non-null argument without the required `removeListeners` method.";
+        warnResult1 = console.warn(
+          "`new NativeEventEmitter()` was called with a non-null argument without the required `removeListeners` method.",
+        );
       }
     }
     return;
@@ -54,10 +60,10 @@ let items = [
             c0.remove();
             c0 = null;
           }
-        }
+        },
       };
       return obj;
-    }
+    },
   },
   {
     key: "emit",
@@ -65,7 +71,7 @@ let items = [
       const substr = [...arguments].slice();
       const items = [arg0, ...substr];
       NativeEventEmitter(92).emit.apply(items);
-    }
+    },
   },
   {
     key: "removeAllListeners",
@@ -77,14 +83,14 @@ let items = [
         _nativeModule.removeListeners(self.listenerCount(arg0));
       }
       NativeEventEmitter(92).removeAllListeners(arg0);
-    }
+    },
   },
   {
     key: "listenerCount",
     value: function listenerCount(arg0) {
       return NativeEventEmitter(92).listenerCount(arg0);
-    }
-  }
+    },
+  },
 ];
 
 export default _createClassDefault(NativeEventEmitter, items);

@@ -7,7 +7,7 @@ let obj = {
   jumpTo(name, params) {
     const payload = { name, params };
     return { type: "JUMP_TO", payload };
-  }
+  },
 };
 arg5.TabActions = obj;
 arg5.TabRouter = function TabRouter(merged) {

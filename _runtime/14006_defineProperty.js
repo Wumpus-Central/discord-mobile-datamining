@@ -64,8 +64,7 @@ if (getOwnPropertyDescriptor2) {
     } else {
       try {
         return defineProperty(arg0, tmp2, value);
-      } catch (err) {
-      }
+      } catch (err) {}
     }
   };
 }

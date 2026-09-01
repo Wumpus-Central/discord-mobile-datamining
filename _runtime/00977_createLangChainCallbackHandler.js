@@ -21,17 +21,53 @@ arg5.createLangChainCallbackHandler = function createLangChainCallbackHandler() 
     flag2 = false;
   }
   map = new Map();
-  exitSpan = function exitSpan(arg0) {
-
+  exitSpan = function exitSpan(arg0) {};
+  obj = {
+    lc_serializable: false,
+    lc_namespace: ["langchain_core", "callbacks", "sentry"],
+    lc_secrets: "r",
+    lc_attributes: "accessible",
+    lc_aliases: "__closure",
+    lc_serializable_keys: "lc",
+    lc_id: ["langchain_core", "callbacks", "sentry"],
+    lc_kwargs: false,
+    name: false,
+    ignoreLLM: false,
+    ignoreChain: false,
+    ignoreAgent: false,
+    ignoreRetriever: false,
+    ignoreCustomEvent: true,
+    raiseError: null,
+    awaitHandlers: null,
+    handleLLMStart: null,
+    handleChatModelStart: null,
+    handleLLMEnd: null,
+    handleLLMError: null,
+    handleChainStart: null,
+    handleChainEnd: null,
+    handleChainError: null,
+    handleToolStart: null,
+    handleToolEnd: null,
+    handleToolError: null,
+    copy: null,
+    toJSON: "KeyboardBackgroundView",
+    toJSONNotImplemented: null,
   };
-  obj = { lc_serializable: false, lc_namespace: ["langchain_core", "callbacks", "sentry"], lc_secrets: "r", lc_attributes: "accessible", lc_aliases: "__closure", lc_serializable_keys: "lc", lc_id: ["langchain_core", "callbacks", "sentry"], lc_kwargs: false, name: false, ignoreLLM: false, ignoreChain: false, ignoreAgent: false, ignoreRetriever: false, ignoreCustomEvent: true, raiseError: null, awaitHandlers: null, handleLLMStart: null, handleChatModelStart: null, handleLLMEnd: null, handleLLMError: null, handleChainStart: null, handleChainEnd: null, handleChainError: null, handleToolStart: null, handleToolEnd: null, handleToolError: null, copy: null, toJSON: "KeyboardBackgroundView", toJSONNotImplemented: null };
   obj[7] = {};
   obj[16] = function handleLLMStart(arg0, arr, closure_0, arg3, arg4, invocation_params, ls_provider) {
     obj = flag(flag2[0]);
     const invocationParams = obj.getInvocationParams(invocation_params);
     let result = flag(flag2[0]).extractLLMRequestAttributes(arg0, arr, closure_0, invocationParams, ls_provider);
     const obj2 = flag(flag2[0]);
-    obj = { name: "" + result[flag(undefined, flag2[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] + " " + result[flag(undefined, flag2[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE], op: "gen_ai.pipeline", attributes: null };
+    obj = {
+      name:
+        "" +
+        result[flag(undefined, flag2[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] +
+        " " +
+        result[flag(undefined, flag2[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE],
+      op: "gen_ai.pipeline",
+      attributes: null,
+    };
     obj = {};
     const merged = Object.assign(result);
     obj[flag(flag2[3]).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "gen_ai.pipeline";
@@ -46,7 +82,15 @@ arg5.createLangChainCallbackHandler = function createLangChainCallbackHandler() 
     const invocationParams = obj.getInvocationParams(invocation_params);
     let result = flag(flag2[0]).extractChatModelRequestAttributes(id, arr, closure_0, invocationParams, ls_provider);
     const obj2 = flag(flag2[0]);
-    obj = { name: "" + result[flag(undefined, flag2[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] + " " + result[flag(undefined, flag2[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE], op: "gen_ai.chat", attributes: null };
+    obj = {
+      name:
+        "" +
+        result[flag(undefined, flag2[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] +
+        " " +
+        result[flag(undefined, flag2[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE],
+      op: "gen_ai.chat",
+      attributes: null,
+    };
     obj = {};
     const merged = Object.assign(result);
     obj[flag(flag2[3]).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "gen_ai.chat";
@@ -113,7 +157,10 @@ arg5.createLangChainCallbackHandler = function createLangChainCallbackHandler() 
   };
   obj[20] = function handleChainStart(name) {
     closure_0 = arg2;
-    obj = { [closure_1_0(closure_1_1[3]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.ai.langchain", "langchain.chain.name": tmp };
+    obj = {
+      [closure_1_0(closure_1_1[3]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.ai.langchain",
+      "langchain.chain.name": tmp,
+    };
     if (closure_0) {
       const _JSON = JSON;
       obj["langchain.chain.inputs"] = JSON.stringify(arg1);

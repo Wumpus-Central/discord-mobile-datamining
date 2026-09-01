@@ -5,9 +5,7 @@ const useEffect = noop.useEffect;
 
 export const ReducedMotionConfig = function ReducedMotionConfig(mode) {
   mode = mode.mode;
-  useEffect(() => {
-
-  }, []);
+  useEffect(() => {}, []);
   const items = [mode];
   useEffect(() => {
     const jsValue = mode(closure_1_1[2]).ReducedMotionManager.jsValue;

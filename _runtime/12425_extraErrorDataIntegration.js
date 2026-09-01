@@ -1,7 +1,6 @@
 // _runtime/12425_extraErrorDataIntegration.js
 import setupIntegration from "12391_setupIntegration.js";
 
-
 export const extraErrorDataIntegration = setupIntegration.defineIntegration(() => {
   let obj = arg0;
   if (arg0 === undefined) {
@@ -34,7 +33,17 @@ export const extraErrorDataIntegration = setupIntegration.defineIntegration(() =
         if (obj2.isError(obj.originalException)) {
           const tmp7 = (function _extractErrorData(originalException, arg1, arg2) {
             try {
-              const items = ["name", "message", "stack", "line", "column", "fileName", "lineNumber", "columnNumber", "toJSON"];
+              const items = [
+                "name",
+                "message",
+                "stack",
+                "line",
+                "column",
+                "fileName",
+                "lineNumber",
+                "columnNumber",
+                "toJSON",
+              ];
               const obj = {};
               const _Object = Object;
               const keys = Object.keys(originalException);
@@ -127,7 +136,11 @@ export const extraErrorDataIntegration = setupIntegration.defineIntegration(() =
             const normalizeResult = tmp4Result.normalize(tmp7, num);
             tmp4Result = tmp4(tmp5[1]);
             if (tmp4Result.isPlainObject(normalizeResult)) {
-              const result = tmp4(tmp5[3]).addNonEnumerableProperty(normalizeResult, "__sentry_skip_normalization__", true);
+              const result = tmp4(tmp5[3]).addNonEnumerableProperty(
+                normalizeResult,
+                "__sentry_skip_normalization__",
+                true,
+              );
               obj[tmp6] = normalizeResult;
               const tmp4Result1 = tmp4(tmp5[3]);
             }
@@ -141,7 +154,7 @@ export const extraErrorDataIntegration = setupIntegration.defineIntegration(() =
         obj2 = num(table[1]);
       }
       return tmp3;
-    }
+    },
   };
   return obj;
 });

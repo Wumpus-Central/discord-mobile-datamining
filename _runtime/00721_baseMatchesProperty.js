@@ -21,4 +21,4 @@ export default function baseMatchesProperty(arg0, arg1) {
     }
     tmp6 = tmp(tmp2[6])(table, tmp4, 3);
   };
-};
+}

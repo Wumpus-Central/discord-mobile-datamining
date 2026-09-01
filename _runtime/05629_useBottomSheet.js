@@ -17,7 +17,6 @@ import useReactiveSharedValue from "05802_useReactiveSharedValue.js";
 import useBoundingClientRect from "05803_useBoundingClientRect.js";
 import useBottomSheetContentContainerStyle from "05804_useBottomSheetContentContainerStyle.js";
 
-
 export const useBottomSheet = useBottomSheet.useBottomSheet;
 export const useBottomSheetInternal = useBottomSheetInternal.useBottomSheetInternal;
 export const useBottomSheetModal = useBottomSheetModal.useBottomSheetModal;
@@ -34,4 +33,5 @@ export const usePropsValidator = usePropsValidator.usePropsValidator;
 export const useAnimatedSnapPoints = useAnimatedSnapPoints.useAnimatedSnapPoints;
 export const useReactiveSharedValue = useReactiveSharedValue.useReactiveSharedValue;
 export const useBoundingClientRect = useBoundingClientRect.useBoundingClientRect;
-export const useBottomSheetContentContainerStyle = useBottomSheetContentContainerStyle.useBottomSheetContentContainerStyle;
+export const useBottomSheetContentContainerStyle =
+  useBottomSheetContentContainerStyle.useBottomSheetContentContainerStyle;

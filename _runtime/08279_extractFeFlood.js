@@ -18,8 +18,14 @@ export default function extractFeFlood(arg0) {
     obj.floodOpacity = extractOpacityDefault(floodOpacity);
   }
   return obj;
-};
-export const extractFilter = (arg0) => ({ x: arg0.x, y: arg0.y, width: arg0.width, height: arg0.height, result: arg0.result });
+}
+export const extractFilter = (arg0) => ({
+  x: arg0.x,
+  y: arg0.y,
+  width: arg0.width,
+  height: arg0.height,
+  result: arg0.result,
+});
 export const extractIn = (arg0) => {
   if (arg0.in) {
     obj = { in1: null };

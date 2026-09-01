@@ -26,8 +26,14 @@ export const PreventRemoveProvider = function PreventRemoveProvider(children) {
   closure_8 = undefined;
   closure_9 = undefined;
   closure_10 = undefined;
-  first = callback(React.useState(() => first(1508).nanoid()), 1)[0];
-  const tmp2 = callback(React.useState(() => new Map()), 2);
+  first = callback(
+    React.useState(() => first(1508).nanoid()),
+    1,
+  )[0];
+  const tmp2 = callback(
+    React.useState(() => new Map()),
+    2,
+  );
   first1 = tmp2[0];
   dependencyMap = tmp2[1];
   callback = React.useRef(new Map());
@@ -93,7 +99,7 @@ export const PreventRemoveProvider = function PreventRemoveProvider(children) {
     };
   });
   closure_10 = tmp14;
-  let items = [first, first1.size > 0, , ];
+  let items = [first, first1.size > 0, ,];
   let key;
   if (context != null) {
     key = context.key;
@@ -115,6 +121,9 @@ export const PreventRemoveProvider = function PreventRemoveProvider(children) {
     }
   }, items);
   const items1 = [tmp11, tmp12, first1];
-  const value = obj.useMemo(() => ({ setPreventRemove: closure_8, notifyPreventRemove: closure_9, preventedRoutes: setPreventRemove(first1) }), items1);
+  const value = obj.useMemo(
+    () => ({ setPreventRemove: closure_8, notifyPreventRemove: closure_9, preventedRoutes: setPreventRemove(first1) }),
+    items1,
+  );
   return context(first(1569).PreventRemoveContext.Provider, { value, children: children.children });
 };

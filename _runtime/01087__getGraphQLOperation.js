@@ -227,8 +227,14 @@ export const graphqlClientIntegration = registerSpanErrorInstrumentation.defineI
                       tmp20 = typeof tmp14.extensions.persistedQuery.version === "number";
                     }
                     if (tmp20) {
-                      const attr1 = updateName.setAttribute("graphql.persisted_query.hash.sha256", tmp14.extensions.persistedQuery.sha256Hash);
-                      const attr2 = updateName.setAttribute("graphql.persisted_query.version", tmp14.extensions.persistedQuery.version);
+                      const attr1 = updateName.setAttribute(
+                        "graphql.persisted_query.hash.sha256",
+                        tmp14.extensions.persistedQuery.sha256Hash,
+                      );
+                      const attr2 = updateName.setAttribute(
+                        "graphql.persisted_query.version",
+                        tmp14.extensions.persistedQuery.version,
+                      );
                     }
                   }
                 }
@@ -320,7 +326,7 @@ export const graphqlClientIntegration = registerSpanErrorInstrumentation.defineI
           }
         }
       });
-    }
+    },
   };
 });
 export const parseGraphQLQuery = function parseGraphQLQuery(str) {

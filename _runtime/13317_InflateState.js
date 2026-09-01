@@ -7,7 +7,36 @@ import inflate_fast from "13319_inflate_fast.js";
 require = arg1;
 const dependencyMap = arg6;
 function InflateState() {
-  const obj = { mode: 0, last: false, wrap: 0, havedict: false, flags: 0, dmax: 0, check: 0, total: 0, head: null, wbits: 0, wsize: 0, whave: 0, wnext: 0, window: null, hold: 0, bits: 0, length: 0, offset: 0, extra: 0, lencode: null, distcode: null, lenbits: 0, distbits: 0, ncode: 0, nlen: 0, ndist: 0, have: 0, next: null };
+  const obj = {
+    mode: 0,
+    last: false,
+    wrap: 0,
+    havedict: false,
+    flags: 0,
+    dmax: 0,
+    check: 0,
+    total: 0,
+    head: null,
+    wbits: 0,
+    wsize: 0,
+    whave: 0,
+    wnext: 0,
+    window: null,
+    hold: 0,
+    bits: 0,
+    length: 0,
+    offset: 0,
+    extra: 0,
+    lencode: null,
+    distcode: null,
+    lenbits: 0,
+    distbits: 0,
+    ncode: 0,
+    nlen: 0,
+    ndist: 0,
+    have: 0,
+    next: null,
+  };
   const buf16 = new assign.Buf16(320);
   obj.lens = buf16;
   const buf161 = new assign.Buf16(288);
@@ -276,7 +305,7 @@ arg5.inflate = function inflate(state) {
                   if (35615 === buf8) {
                     state.check = 0;
                     buf8[0] = 255 & buf8;
-                    buf8[1] = buf8 >>> 8 & 255;
+                    buf8[1] = (buf8 >>> 8) & 255;
                     buf8 = require;
                     buf8 = dependencyMap;
                     let check10 = state.check;
@@ -395,11 +424,11 @@ arg5.inflate = function inflate(state) {
                   continue;
                 } else {
                   if (state.head) {
-                    state.head.text = buf8 >> 8 & 1;
+                    state.head.text = (buf8 >> 8) & 1;
                   }
                   if (512 & state.flags) {
                     buf8[0] = 255 & buf8;
-                    buf8[1] = buf8 >>> 8 & 255;
+                    buf8[1] = (buf8 >>> 8) & 255;
                     buf8 = require;
                     buf8 = dependencyMap;
                     let check3 = state.check;
@@ -631,7 +660,7 @@ arg5.inflate = function inflate(state) {
                               }
                             }
                             if (state.head) {
-                              state.head.hcrc = state.flags >> 9 & 1;
+                              state.head.hcrc = (state.flags >> 9) & 1;
                               state.head.done = true;
                             }
                             state.check = 0;
@@ -652,7 +681,11 @@ arg5.inflate = function inflate(state) {
                               buf8 = diff8;
                               buf8 = next_in;
                               if (bits >= 32) {
-                                buf8 = (buf8 >>> 24 & 255) + (buf8 >>> 8 & 65280) + ((65280 & buf8) << 8) + ((255 & buf8) << 24);
+                                buf8 =
+                                  ((buf8 >>> 24) & 255) +
+                                  ((buf8 >>> 8) & 65280) +
+                                  ((65280 & buf8) << 8) +
+                                  ((255 & buf8) << 24);
                                 state.check = buf8;
                                 state.adler = buf8;
                                 state.mode = 11;
@@ -699,7 +732,7 @@ arg5.inflate = function inflate(state) {
                                       buf8 = next_in;
                                       if (buf8 >= 32) {
                                         buf8 = 65535 & buf8;
-                                        if (buf8 !== (buf8 >>> 16 ^ 65535)) {
+                                        if (buf8 !== ((buf8 >>> 16) ^ 65535)) {
                                           state.msg = "invalid stored block lengths";
                                           state.mode = 30;
                                           bits = buf8;
@@ -897,7 +930,11 @@ arg5.inflate = function inflate(state) {
                                                                     if (!diff3) {
                                                                       let sum3 = tmp30;
                                                                       if (!state.flags) {
-                                                                        sum3 = (tmp30 >>> 24 & 255) + (tmp30 >>> 8 & 65280) + ((65280 & tmp30) << 8) + ((255 & tmp30) << 24);
+                                                                        sum3 =
+                                                                          ((tmp30 >>> 24) & 255) +
+                                                                          ((tmp30 >>> 8) & 65280) +
+                                                                          ((65280 & tmp30) << 8) +
+                                                                          ((255 & tmp30) << 24);
                                                                       }
                                                                       tmp22 = diff2;
                                                                       num59 = 0;
@@ -923,13 +960,23 @@ arg5.inflate = function inflate(state) {
                                                                         let tmp47 = check2;
                                                                         let tmp48 = output;
                                                                         let tmp49 = diff3;
-                                                                        let tmp46 = tmp41(tmp42)(check2, tmp15, diff3, next_out - diff3);
+                                                                        let tmp46 = tmp41(tmp42)(
+                                                                          check2,
+                                                                          tmp15,
+                                                                          diff3,
+                                                                          next_out - diff3,
+                                                                        );
                                                                       } else {
                                                                         let check = state.check;
                                                                         let tmp43 = check;
                                                                         let tmp44 = output;
                                                                         let tmp45 = diff3;
-                                                                        tmp46 = tmp41(13313)(check, tmp15, diff3, next_out - diff3);
+                                                                        tmp46 = tmp41(13313)(
+                                                                          check,
+                                                                          tmp15,
+                                                                          diff3,
+                                                                          next_out - diff3,
+                                                                        );
                                                                       }
                                                                       state.check = tmp46;
                                                                       state.adler = tmp46;
@@ -949,7 +996,7 @@ arg5.inflate = function inflate(state) {
                                                                       diff4 = diff4 - 1;
                                                                       buf8 = +sum4;
                                                                       sum4 = buf8 + 1;
-                                                                      tmp26 = tmp26 | input[buf8] << sum5;
+                                                                      tmp26 = tmp26 | (input[buf8] << sum5);
                                                                       sum5 = sum5 + 8;
                                                                       tmp30 = tmp26;
                                                                       tmp31 = diff4;
@@ -1127,7 +1174,8 @@ arg5.inflate = function inflate(state) {
                                                       if (state.extra) {
                                                         let extra2 = state.extra;
                                                         if (buf8 >= extra2) {
-                                                          state.offset = state.offset + (buf8 & (1 << state.extra) - 1);
+                                                          state.offset =
+                                                            state.offset + (buf8 & ((1 << state.extra) - 1));
                                                           buf8 = buf8 >>> state.extra;
                                                           buf8 = buf8 - state.extra;
                                                           state.back = state.back + state.extra;
@@ -1161,15 +1209,15 @@ arg5.inflate = function inflate(state) {
                                                         state.mode = 25;
                                                       }
                                                     }
-                                                    buf8 = state.distcode[buf8 & (1 << state.distbits) - 1];
-                                                    buf8 = buf8 >>> 16 & 255;
+                                                    buf8 = state.distcode[buf8 & ((1 << state.distbits) - 1)];
+                                                    buf8 = (buf8 >>> 16) & 255;
                                                     buf8 = 65535 & buf8;
                                                     buf8 = buf8 >>> 24;
                                                     if (buf8 <= buf8) {
                                                       if (!(240 & buf8)) {
-                                                        buf8 = (1 << buf8 + buf8) - 1;
+                                                        buf8 = (1 << (buf8 + buf8)) - 1;
                                                         buf8 = state.distcode[buf8 + ((buf8 & buf8) >> buf8)];
-                                                        buf8 = buf8 >>> 16 & 255;
+                                                        buf8 = (buf8 >>> 16) & 255;
                                                         buf8 = 65535 & buf8;
                                                         buf8 = buf8 >>> 24;
                                                         if (buf8 + buf8 <= buf8) {
@@ -1190,7 +1238,7 @@ arg5.inflate = function inflate(state) {
                                                             buf8 = buf8 + (input[buf8] << buf8);
                                                             buf8 = buf8 + 8;
                                                             buf8 = state.distcode[buf8 + ((buf8 & buf8) >> buf8)];
-                                                            buf8 = buf8 >>> 16 & 255;
+                                                            buf8 = (buf8 >>> 16) & 255;
                                                             buf8 = 65535 & buf8;
                                                             buf8 = buf8 >>> 24;
                                                             break;
@@ -1227,8 +1275,8 @@ arg5.inflate = function inflate(state) {
                                                         buf8 = buf8 + 1;
                                                         buf8 = buf8 + (input[buf8] << buf8);
                                                         buf8 = buf8 + 8;
-                                                        buf8 = state.distcode[buf8 & (1 << state.distbits) - 1];
-                                                        buf8 = buf8 >>> 16 & 255;
+                                                        buf8 = state.distcode[buf8 & ((1 << state.distbits) - 1)];
+                                                        buf8 = (buf8 >>> 16) & 255;
                                                         buf8 = 65535 & buf8;
                                                         buf8 = buf8 >>> 24;
                                                         break;
@@ -1238,7 +1286,7 @@ arg5.inflate = function inflate(state) {
                                                   if (state.extra) {
                                                     let extra = state.extra;
                                                     if (buf8 >= extra) {
-                                                      state.length = state.length + (buf8 & (1 << state.extra) - 1);
+                                                      state.length = state.length + (buf8 & ((1 << state.extra) - 1));
                                                       buf8 = buf8 >>> state.extra;
                                                       buf8 = buf8 - state.extra;
                                                       state.back = state.back + state.extra;
@@ -1273,7 +1321,14 @@ arg5.inflate = function inflate(state) {
                                                     buf8 = require;
                                                     buf8 = dependencyMap;
                                                     buf8 = inflate_fast(state, avail_out);
-                                                    ({ next_out: next_out2, output: output2, avail_out: avail_out2, next_in: next_in2, input: input2, avail_in: avail_in2 } = state);
+                                                    ({
+                                                      next_out: next_out2,
+                                                      output: output2,
+                                                      avail_out: avail_out2,
+                                                      next_in: next_in2,
+                                                      input: input2,
+                                                      avail_in: avail_in2,
+                                                    } = state);
                                                     ({ hold: hold2, bits: bits2 } = state);
                                                     num56 = buf8;
                                                     bits = bits2;
@@ -1304,16 +1359,16 @@ arg5.inflate = function inflate(state) {
                                                   }
                                                 }
                                                 state.back = 0;
-                                                buf8 = state.lencode[buf8 & (1 << state.lenbits) - 1];
-                                                buf8 = buf8 >>> 16 & 255;
+                                                buf8 = state.lencode[buf8 & ((1 << state.lenbits) - 1)];
+                                                buf8 = (buf8 >>> 16) & 255;
                                                 buf8 = 65535 & buf8;
                                                 buf8 = buf8 >>> 24;
                                                 if (buf8 <= buf8) {
                                                   if (buf8) {
                                                     if (!(240 & buf8)) {
-                                                      buf8 = (1 << buf8 + buf8) - 1;
+                                                      buf8 = (1 << (buf8 + buf8)) - 1;
                                                       buf8 = state.lencode[buf8 + ((buf8 & buf8) >> buf8)];
-                                                      buf8 = buf8 >>> 16 & 255;
+                                                      buf8 = (buf8 >>> 16) & 255;
                                                       buf8 = 65535 & buf8;
                                                       buf8 = buf8 >>> 24;
                                                       if (buf8 + buf8 <= buf8) {
@@ -1334,7 +1389,7 @@ arg5.inflate = function inflate(state) {
                                                           buf8 = buf8 + (input[buf8] << buf8);
                                                           buf8 = buf8 + 8;
                                                           buf8 = state.lencode[buf8 + ((buf8 & buf8) >> buf8)];
-                                                          buf8 = buf8 >>> 16 & 255;
+                                                          buf8 = (buf8 >>> 16) & 255;
                                                           buf8 = 65535 & buf8;
                                                           buf8 = buf8 >>> 24;
                                                           break;
@@ -1393,8 +1448,8 @@ arg5.inflate = function inflate(state) {
                                                     buf8 = buf8 + 1;
                                                     buf8 = buf8 + (input[buf8] << buf8);
                                                     buf8 = buf8 + 8;
-                                                    buf8 = state.lencode[buf8 & (1 << state.lenbits) - 1];
-                                                    buf8 = buf8 >>> 16 & 255;
+                                                    buf8 = state.lencode[buf8 & ((1 << state.lenbits) - 1)];
+                                                    buf8 = (buf8 >>> 16) & 255;
                                                     buf8 = 65535 & buf8;
                                                     buf8 = buf8 >>> 24;
                                                     break;
@@ -1438,7 +1493,16 @@ arg5.inflate = function inflate(state) {
                                                   num = 0;
                                                   num = 0;
                                                   buf8 = obj;
-                                                  buf8 = inflate_table(1, lens5, 0, state.nlen, state.lencode, 0, state.work, obj);
+                                                  buf8 = inflate_table(
+                                                    1,
+                                                    lens5,
+                                                    0,
+                                                    state.nlen,
+                                                    state.lencode,
+                                                    0,
+                                                    state.work,
+                                                    obj,
+                                                  );
                                                   state.lenbits = obj.bits;
                                                   if (buf8) {
                                                     state.msg = "invalid literal/lengths set";
@@ -1463,7 +1527,16 @@ arg5.inflate = function inflate(state) {
                                                     let num73 = 2;
                                                     let num74 = 0;
                                                     buf8 = obj;
-                                                    buf8 = buf8(13318)(2, lens2, state.nlen, state.ndist, state.distcode, 0, state.work, obj);
+                                                    buf8 = buf8(13318)(
+                                                      2,
+                                                      lens2,
+                                                      state.nlen,
+                                                      state.ndist,
+                                                      state.distcode,
+                                                      0,
+                                                      state.work,
+                                                      obj,
+                                                    );
                                                     state.distbits = obj.bits;
                                                     if (buf8) {
                                                       state.msg = "invalid distances set";
@@ -1496,7 +1569,7 @@ arg5.inflate = function inflate(state) {
                                               continue;
                                             } else {
                                               while (true) {
-                                                buf8 = state.lencode[buf8 & (1 << state.lenbits) - 1];
+                                                buf8 = state.lencode[buf8 & ((1 << state.lenbits) - 1)];
                                                 buf8 = buf8 >>> 16;
                                                 buf8 = 65535 & buf8;
                                                 buf8 = buf8 >>> 24;
@@ -1617,7 +1690,7 @@ arg5.inflate = function inflate(state) {
                                                     buf8 = buf8 + 1;
                                                     buf8 = buf8 + (input[buf8] << buf8);
                                                     buf8 = buf8 + 8;
-                                                    buf8 = state.lencode[buf8 & (1 << state.lenbits) - 1];
+                                                    buf8 = state.lencode[buf8 & ((1 << state.lenbits) - 1)];
                                                     buf8 = buf8 >>> 16;
                                                     buf8 = 65535 & buf8;
                                                     buf8 = buf8 >>> 24;
@@ -2016,7 +2089,7 @@ arg5.inflate = function inflate(state) {
                   num = 0;
                   if (512 & state.flags) {
                     buf8[0] = 255 & num;
-                    buf8[1] = num >>> 8 & 255;
+                    buf8[1] = (num >>> 8) & 255;
                     buf8 = require;
                     buf8 = dependencyMap;
                     let check6 = state.check;
@@ -2048,7 +2121,7 @@ arg5.inflate = function inflate(state) {
                 }
                 if (512 & state.flags) {
                   buf8[0] = 255 & buf8;
-                  buf8[1] = buf8 >>> 8 & 255;
+                  buf8[1] = (buf8 >>> 8) & 255;
                   buf8 = require;
                   buf8 = dependencyMap;
                   let check5 = state.check;
@@ -2086,9 +2159,9 @@ arg5.inflate = function inflate(state) {
               }
               if (512 & state.flags) {
                 buf8[0] = 255 & buf8;
-                buf8[1] = buf8 >>> 8 & 255;
-                buf8[2] = buf8 >>> 16 & 255;
-                buf8[3] = buf8 >>> 24 & 255;
+                buf8[1] = (buf8 >>> 8) & 255;
+                buf8[2] = (buf8 >>> 16) & 255;
+                buf8[3] = (buf8 >>> 24) & 255;
                 buf8 = require;
                 buf8 = dependencyMap;
                 let check4 = state.check;
@@ -2155,7 +2228,7 @@ arg5.inflate = function inflate(state) {
               num = 0;
             }
             state.data_type = buf8 + num + num;
-            buf8 = (0 === buf8 && 0 === buf8 || 4 === arg1) && 0 === num61;
+            buf8 = ((0 === buf8 && 0 === buf8) || 4 === arg1) && 0 === num61;
             if (buf8) {
               num61 = -5;
             }

@@ -27,8 +27,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 const AnimatedCircularProgress = ["fill", "prefill"];
 const Animated = get_ActivityIndicator.Animated;
@@ -68,7 +67,7 @@ let obj = {
   key: "componentDidMount",
   value: function componentDidMount() {
     this.animate();
-  }
+  },
 };
 let items = [
   obj,
@@ -79,7 +78,7 @@ let items = [
       if (arg0.fill !== this.props.fill) {
         self.animate();
       }
-    }
+    },
   },
   {
     key: "reAnimate",
@@ -92,7 +91,7 @@ let items = [
       const value = new Animated.Value(arg0);
       obj[0] = value;
       this.setState(obj, () => self.animate(closure_1, closure_2, closure_0));
-    }
+    },
   },
   {
     key: "animate",
@@ -110,10 +109,16 @@ let items = [
       if (!arg2) {
         easing = self.props.easing;
       }
-      const timingResult = Animated.timing(self.state.fillAnimation, { useNativeDriver: self.props.useNativeDriver, toValue: fill, easing, duration, delay: self.props.delay });
+      const timingResult = Animated.timing(self.state.fillAnimation, {
+        useNativeDriver: self.props.useNativeDriver,
+        toValue: fill,
+        easing,
+        duration,
+        delay: self.props.delay,
+      });
       timingResult.start(self.props.onAnimationComplete);
       return timingResult;
-    }
+    },
   },
   {
     key: "animateColor",
@@ -130,7 +135,7 @@ let items = [
         tintColor = self.props.tintColor;
       }
       return tintColor;
-    }
+    },
   },
   {
     key: "render",
@@ -142,8 +147,8 @@ let items = [
       obj.fill = this.state.fillAnimation;
       obj.tintColor = this.animateColor();
       return <closure_8 />;
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(AnimatedCircularProgress, items);
 obj = {};

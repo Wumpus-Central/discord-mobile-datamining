@@ -8,7 +8,6 @@ import _pick from "10869__pick.js";
 import _saveDocuments from "10871__saveDocuments.js";
 import releaseLongTermAccess from "10872_releaseLongTermAccess.js";
 
-
 export const isKnownType = isKnownType.isKnownType;
 export const keepLocalCopy = keepLocalCopy.keepLocalCopy;
 export const types = frozen.types;

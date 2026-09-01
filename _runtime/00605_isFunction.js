@@ -2,7 +2,6 @@
 import isObject from "00606_isObject.js";
 import toStringTag from "00607_toStringTag.js";
 
-
 export default function isFunction(arg0) {
   if (isObject(arg0)) {
     const tmp3 = toStringTag(arg0);
@@ -21,4 +20,4 @@ export default function isFunction(arg0) {
     return false;
   }
   const tmp = require;
-};
+}

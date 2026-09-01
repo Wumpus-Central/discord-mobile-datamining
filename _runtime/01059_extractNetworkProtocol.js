@@ -157,7 +157,16 @@ export const startStandaloneWebVitalSpan = function startStandaloneWebVitalSpan(
     }
     try {
       const profile_id = currentScope.getScopeData().contexts.profile.profile_id;
-      obj = { release: null, environment: null, user: null, profile_id: null, replay_id: null, transaction: null, "user_agent.original": null, "client.address": null };
+      obj = {
+        release: null,
+        environment: null,
+        user: null,
+        profile_id: null,
+        replay_id: null,
+        transaction: null,
+        "user_agent.original": null,
+        "client.address": null,
+      };
       obj[0] = release;
       obj[1] = environment;
       obj[2] = tmp8;
@@ -183,8 +192,7 @@ export const startStandaloneWebVitalSpan = function startStandaloneWebVitalSpan(
       obj[2] = startTime;
       obj[3] = { standalone: true };
       return tmpResult.startInactiveSpan(obj);
-    } catch (err) {
-    }
+    } catch (err) {}
   }
 };
 export const supportsWebVital = function supportsWebVital(arg0) {

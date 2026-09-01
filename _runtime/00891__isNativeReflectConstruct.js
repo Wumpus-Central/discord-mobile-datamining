@@ -25,8 +25,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 class ServerRuntimeClient {
@@ -63,7 +62,7 @@ let items = [
       result.level = "error";
       const obj = ServerRuntimeClient(893);
       return ServerRuntimeClient(873).resolvedSyncPromise(result);
-    }
+    },
   },
   {
     key: "eventFromMessage",
@@ -73,8 +72,16 @@ let items = [
         str = "info";
       }
       const obj = ServerRuntimeClient(873);
-      return obj.resolvedSyncPromise(ServerRuntimeClient(893).eventFromMessage(this._options.stackParser, arg0, str, arg2, this._options.attachStacktrace));
-    }
+      return obj.resolvedSyncPromise(
+        ServerRuntimeClient(893).eventFromMessage(
+          this._options.stackParser,
+          arg0,
+          str,
+          arg2,
+          this._options.attachStacktrace,
+        ),
+      );
+    },
   },
   {
     key: "captureException",
@@ -108,7 +115,7 @@ let items = [
       }
       const items = [arg0, mechanism, arg2];
       return fn(items);
-    }
+    },
   },
   {
     key: "captureEvent",
@@ -158,7 +165,7 @@ let items = [
       }
       const items = [type, mechanism, arg2];
       return fn(items);
-    }
+    },
   },
   {
     key: "captureCheckIn",
@@ -179,8 +186,22 @@ let items = [
             obj.duration = checkInId.duration;
           }
           if (arg1) {
-            obj = { schedule: null, checkin_margin: null, max_runtime: null, timezone: null, failure_issue_threshold: null, recovery_threshold: null };
-            ({ schedule: obj3[0], checkinMargin: obj3[1], maxRuntime: obj3[2], timezone: obj3[3], failureIssueThreshold: obj3[4], recoveryThreshold: obj3[5] } = arg1);
+            obj = {
+              schedule: null,
+              checkin_margin: null,
+              max_runtime: null,
+              timezone: null,
+              failure_issue_threshold: null,
+              recovery_threshold: null,
+            };
+            ({
+              schedule: obj3[0],
+              checkinMargin: obj3[1],
+              maxRuntime: obj3[2],
+              timezone: obj3[3],
+              failureIssueThreshold: obj3[4],
+              recoveryThreshold: obj3[5],
+            } = arg1);
             obj.monitor_config = obj;
           }
           const obj4 = ServerRuntimeClient(881);
@@ -209,7 +230,7 @@ let items = [
       }
       obj = ServerRuntimeClient(830);
       checkInId = obj.uuid4();
-    }
+    },
   },
   {
     key: "_prepareEvent",
@@ -241,7 +262,7 @@ let items = [
       }
       const items = [platform, arg1, arg2, arg3];
       return fn(items);
-    }
+    },
   },
   {
     key: "_setUpMetricsProcessing",
@@ -255,8 +276,8 @@ let items = [
           attributes.attributes = obj;
         }
       });
-    }
-  }
+    },
+  },
 ];
 
 export const ServerRuntimeClient = _createClass(ServerRuntimeClient, items);

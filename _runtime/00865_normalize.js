@@ -44,7 +44,7 @@ function visit(arg0, __v_isVNode) {
         },
         function unmemoize(arg0) {
           weakSet.delete(arg0);
-        }
+        },
       ];
       return items;
     })();
@@ -161,8 +161,7 @@ function visit(arg0, __v_isVNode) {
               if (typeof __v_isVNode.toJSON === "function") {
                 try {
                   return visit("", __v_isVNode.toJSON(), num - 1, num2, tmp6);
-                } catch (err) {
-                }
+                } catch (err) {}
               }
             }
             const _Array = Array;
@@ -235,7 +234,9 @@ export const normalizeUrlToBase = function normalizeUrlToBase(arg0, str) {
     const _RegExp = RegExp;
     const _HermesInternal = HermesInternal;
     const regExp = new RegExp("(file://)?/*" + tmp2 + "/*", "ig");
-    return str.replace(/\\/g, "/").replace(/webpack:\/?/g, "").replace(regExp, "app:///");
-  } catch (err) {
-  }
+    return str
+      .replace(/\\/g, "/")
+      .replace(/webpack:\/?/g, "")
+      .replace(regExp, "app:///");
+  } catch (err) {}
 };

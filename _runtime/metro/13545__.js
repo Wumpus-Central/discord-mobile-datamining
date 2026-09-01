@@ -2,7 +2,6 @@
 import closure_2 from "00032__slicedToArray.js";
 import { Range } from "../13535_Range.js";
 
-
 export default (arr) => {
   let tmp = arg1;
   const _require = arg2;
@@ -24,7 +23,7 @@ export default (arr) => {
       let tmp8 = tmp3;
       if (tmp3) {
         let tmp9 = tmp2;
-        let items1 = [tmp2, ];
+        let items1 = [tmp2];
         let tmp10 = tmp3;
         items1[1] = tmp3;
         arr = items.push(items1);

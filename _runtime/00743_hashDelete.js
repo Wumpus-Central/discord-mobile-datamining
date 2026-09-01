@@ -13,4 +13,4 @@ export default function hashDelete(arg0) {
   }
   self.size = self.size - num;
   return hasItem;
-};
+}

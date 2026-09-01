@@ -1,10 +1,18 @@
 // _runtime/10537_useCommonVariables.js
 const require = arg1;
 const dependencyMap = arg6;
-let closure_2 = { code: "function pnpm_useCommonVariablesTs1(){const{prevDataLength,dataLength,loop}=this.__closure;const previousLength=prevDataLength.value;const currentLength=dataLength;const isLengthChanged=previousLength!==currentLength;const shouldComputed=isLengthChanged&&loop;if(shouldComputed)prevDataLength.value=dataLength;return{shouldComputed:shouldComputed,previousLength:previousLength,currentLength:currentLength};}" };
-let closure_3 = { code: "function pnpm_useCommonVariablesTs2({shouldComputed:shouldComputed,previousLength:previousLength,currentLength:currentLength}){const{handlerOffsetDirection,handlerOffset,computeOffsetIfDataChanged,size}=this.__closure;if(shouldComputed){const direction=handlerOffsetDirection(handlerOffset);handlerOffset.value=computeOffsetIfDataChanged({direction:direction,previousLength:previousLength,currentLength:currentLength,size:size,handlerOffset:handlerOffset.value});}}" };
-let closure_4 = { code: "function pnpm_useCommonVariablesTs3(){const{prevSize,size}=this.__closure;const previousSize=prevSize.value;const isSizeChanged=previousSize!==size;const shouldComputed=isSizeChanged;if(shouldComputed)prevSize.value=size;return{shouldComputed:shouldComputed,previousSize:previousSize,size:size};}" };
-let closure_5 = { code: "function pnpm_useCommonVariablesTs4({shouldComputed:shouldComputed,previousSize:previousSize,size:size}){const{handlerOffset,computeOffsetIfSizeChanged}=this.__closure;if(shouldComputed){handlerOffset.value=computeOffsetIfSizeChanged({handlerOffset:handlerOffset.value,prevSize:previousSize,size:size});}}" };
+let closure_2 = {
+  code: "function pnpm_useCommonVariablesTs1(){const{prevDataLength,dataLength,loop}=this.__closure;const previousLength=prevDataLength.value;const currentLength=dataLength;const isLengthChanged=previousLength!==currentLength;const shouldComputed=isLengthChanged&&loop;if(shouldComputed)prevDataLength.value=dataLength;return{shouldComputed:shouldComputed,previousLength:previousLength,currentLength:currentLength};}",
+};
+let closure_3 = {
+  code: "function pnpm_useCommonVariablesTs2({shouldComputed:shouldComputed,previousLength:previousLength,currentLength:currentLength}){const{handlerOffsetDirection,handlerOffset,computeOffsetIfDataChanged,size}=this.__closure;if(shouldComputed){const direction=handlerOffsetDirection(handlerOffset);handlerOffset.value=computeOffsetIfDataChanged({direction:direction,previousLength:previousLength,currentLength:currentLength,size:size,handlerOffset:handlerOffset.value});}}",
+};
+let closure_4 = {
+  code: "function pnpm_useCommonVariablesTs3(){const{prevSize,size}=this.__closure;const previousSize=prevSize.value;const isSizeChanged=previousSize!==size;const shouldComputed=isSizeChanged;if(shouldComputed)prevSize.value=size;return{shouldComputed:shouldComputed,previousSize:previousSize,size:size};}",
+};
+let closure_5 = {
+  code: "function pnpm_useCommonVariablesTs4({shouldComputed:shouldComputed,previousSize:previousSize,size:size}){const{handlerOffset,computeOffsetIfSizeChanged}=this.__closure;if(shouldComputed){handlerOffset.value=computeOffsetIfSizeChanged({handlerOffset:handlerOffset.value,prevSize:previousSize,size:size});}}",
+};
 arg5.useCommonVariables = function useCommonVariables(initProps) {
   ({ width, dataLength } = initProps);
   ({ defaultScrollOffsetValue, loop } = initProps);
@@ -49,7 +57,12 @@ arg5.useCommonVariables = function useCommonVariables(initProps) {
       const obj2 = dataLength(loop[2]);
     }
   };
-  obj = { handlerOffsetDirection: tmp2(tmp3[1]).handlerOffsetDirection, handlerOffset: defaultScrollOffsetValue, computeOffsetIfDataChanged: tmp2(tmp3[2]).computeOffsetIfDataChanged, size: width };
+  obj = {
+    handlerOffsetDirection: tmp2(tmp3[1]).handlerOffsetDirection,
+    handlerOffset: defaultScrollOffsetValue,
+    computeOffsetIfDataChanged: tmp2(tmp3[2]).computeOffsetIfDataChanged,
+    size: width,
+  };
   fn2.__closure = obj;
   fn2.__workletHash = 6990374823872;
   fn2.__initData = defaultScrollOffsetValue;
@@ -78,7 +91,10 @@ arg5.useCommonVariables = function useCommonVariables(initProps) {
       defaultScrollOffsetValue.value = obj.computeOffsetIfSizeChanged(obj);
     }
   };
-  obj = { handlerOffset: defaultScrollOffsetValue, computeOffsetIfSizeChanged: tmp2(tmp3[3]).computeOffsetIfSizeChanged };
+  obj = {
+    handlerOffset: defaultScrollOffsetValue,
+    computeOffsetIfSizeChanged: tmp2(tmp3[3]).computeOffsetIfSizeChanged,
+  };
   fn4.__closure = obj;
   fn4.__workletHash = 12618693189041;
   fn4.__initData = sharedValue1;

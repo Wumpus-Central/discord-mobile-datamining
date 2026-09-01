@@ -25,7 +25,10 @@ export const useNavigationState = function useNavigationState(fn) {
     } else {
       const getState = store.getState;
       const subscribe = store.subscribe;
-      callback = callback(obj.useReducer((arg0) => arg0 + 1, 0), 2)[1];
+      callback = callback(
+        obj.useReducer((arg0) => arg0 + 1, 0),
+        2,
+      )[1];
       const tmp14 = fn(getState());
       obj = { select: null, selected: null };
       obj[0] = fn;
@@ -77,5 +80,9 @@ export const NavigationStateListenerProvider = function NavigationStateListenerP
   }, items);
   const items1 = [getState, tmp];
   obj = { value: importAllResult.useMemo(() => ({ getState, subscribe: closure_2 }), items1), children };
-  return <redux.Provider value={importAllResult.useMemo(() => ({ getState, subscribe: closure_2 }), items1)}>{children}</redux.Provider>;
+  return (
+    <redux.Provider value={importAllResult.useMemo(() => ({ getState, subscribe: closure_2 }), items1)}>
+      {children}
+    </redux.Provider>
+  );
 };

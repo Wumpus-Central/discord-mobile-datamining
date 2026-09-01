@@ -19,13 +19,13 @@ let items = [
     key: "getInfoByName",
     value: function getInfoByName(key10027) {
       return FileTypes(5129).fetchFromObject(FileTypes, key10027.toUpperCase());
-    }
+    },
   },
   {
     key: "getSignaturesByName",
     value: function getSignaturesByName(item10079) {
       return FileTypes(5129).fetchFromObject(FileTypes, item10079.toUpperCase()).signatures;
-    }
+    },
   },
   {
     key: "detectSignature",
@@ -69,16 +69,18 @@ let items = [
           return nextResult;
         }
       }
-    }
+    },
   },
   {
     key: "detectTypeByAdditionalCheck",
     value: function detectTypeByAdditionalCheck(fileChunk, found) {
       const mapped = found.map((extension) => extension.extension);
-      if (mapped.some((arg0) => {
-        const items = ["m4v", "flv", "mp4", "heic"];
-        return items.includes(arg0);
-      })) {
+      if (
+        mapped.some((arg0) => {
+          const items = ["m4v", "flv", "mp4", "heic"];
+          return items.includes(arg0);
+        })
+      ) {
         let str5 = "heic";
         if (!mapped.includes("heic")) {
           let str6 = "flv";
@@ -95,10 +97,12 @@ let items = [
           str5 = str6;
         }
         return str5;
-      } else if (mapped.some((arg0) => {
-        const items = ["mkv", "webm"];
-        return items.includes(arg0);
-      })) {
+      } else if (
+        mapped.some((arg0) => {
+          const items = ["mkv", "webm"];
+          return items.includes(arg0);
+        })
+      ) {
         const result = FileTypes(5129).findMatroskaDocTypeElements(fileChunk);
         let str2 = "mkv";
         if ("mkv" !== result) {
@@ -113,17 +117,19 @@ let items = [
         return str2;
       } else {
         let str;
-        if (mapped.some((arg0) => {
-          const items = ["avif"];
-          return items.includes(arg0);
-        })) {
+        if (
+          mapped.some((arg0) => {
+            const items = ["avif"];
+            return items.includes(arg0);
+          })
+        ) {
           if (FileTypes(5129).isAvifStringIncluded(fileChunk)) {
             str = "avif";
           }
         }
         return str;
       }
-    }
+    },
   },
   {
     key: "detectbBySignatures",
@@ -180,7 +186,7 @@ let items = [
           return nextResult;
         }
       }
-    }
+    },
   },
   {
     key: "checkByFileType",
@@ -193,8 +199,8 @@ let items = [
         }
       }
       return false;
-    }
-  }
+    },
+  },
 ];
 const _moduleResult = _createClass(FileTypes, null, items);
 _moduleResult.AAC = AudioTypes.AudioTypes.AAC;

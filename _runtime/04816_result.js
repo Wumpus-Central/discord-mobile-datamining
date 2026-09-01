@@ -45,4 +45,4 @@ export default function DefineOwnProperty(arg0, arg1, arg2, arg3, arg4, __Value_
   } else {
     return false;
   }
-};
+}

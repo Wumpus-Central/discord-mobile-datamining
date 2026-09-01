@@ -123,7 +123,11 @@ export const observe = function observe(arg0) {
     if (null == value) {
       const _console3 = console;
       const _HermesInternal = HermesInternal;
-      console.error("IntersectionObserverManager: could not start observing target because IntersectionObserver with ID " + intersectionObserverId + " was not registered.");
+      console.error(
+        "IntersectionObserverManager: could not start observing target because IntersectionObserver with ID " +
+          intersectionObserverId +
+          " was not registered.",
+      );
       return false;
     } else {
       const nativeNodeReference = getInstanceHandle.getNativeNodeReference(target);
@@ -156,7 +160,14 @@ export const observe = function observe(arg0) {
             c6 = true;
           }
           tmpResult = tmp(70);
-          const obj = { intersectionObserverId: null, rootShadowNode: null, targetShadowNode: null, thresholds: null, rootThresholds: null, rootMargin: null };
+          const obj = {
+            intersectionObserverId: null,
+            rootShadowNode: null,
+            targetShadowNode: null,
+            thresholds: null,
+            rootThresholds: null,
+            rootMargin: null,
+          };
           obj[0] = intersectionObserverId;
           obj[1] = nativeNodeReference1;
           obj[2] = nativeNodeReference;
@@ -185,7 +196,11 @@ export const unobserve = function unobserve(arg0, arg1) {
     } else {
       const _console = console;
       const _HermesInternal = HermesInternal;
-      console.error("IntersectionObserverManager: could not stop observing target because IntersectionObserver with ID " + arg0 + " was not registered.");
+      console.error(
+        "IntersectionObserverManager: could not stop observing target because IntersectionObserver with ID " +
+          arg0 +
+          " was not registered.",
+      );
     }
   } else {
     const _Error = Error;

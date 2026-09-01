@@ -5,7 +5,19 @@ if (typeof exports === "object") {
   if (undefined !== module) {
     if (typeof require === "function") {
       const _module = hooks;
-      let obj = { months: null, monthsShort: null, weekdays: null, weekdaysShort: null, weekdaysMin: null, longDateFormat: null, calendar: null, relativeTime: null, dayOfMonthOrdinalParse: null, ordinal: null, week: null };
+      let obj = {
+        months: null,
+        monthsShort: null,
+        weekdays: null,
+        weekdaysShort: null,
+        weekdaysMin: null,
+        longDateFormat: null,
+        calendar: null,
+        relativeTime: null,
+        dayOfMonthOrdinalParse: null,
+        ordinal: null,
+        week: null,
+      };
       const split = "januari_februari_mars_april_maj_juni_juli_augusti_september_oktober_november_december".split;
       obj[0] = "januari_februari_mars_april_maj_juni_juli_augusti_september_oktober_november_december".split("_");
       const split2 = "jan_feb_mar_apr_maj_jun_jul_aug_sep_okt_nov_dec".split;
@@ -16,15 +28,46 @@ if (typeof exports === "object") {
       obj[3] = "s\u00F6n_m\u00E5n_tis_ons_tor_fre_l\u00F6r".split("_");
       const split5 = "s\u00F6_m\u00E5_ti_on_to_fr_l\u00F6".split;
       obj[4] = "s\u00F6_m\u00E5_ti_on_to_fr_l\u00F6".split("_");
-      obj[5] = { LT: "HH:mm", LTS: "HH:mm:ss", L: "YYYY-MM-DD", LL: "D MMMM YYYY", LLL: "D MMMM YYYY [kl.] HH:mm", LLLL: "dddd D MMMM YYYY [kl.] HH:mm", lll: "D MMM YYYY HH:mm", llll: "ddd D MMM YYYY HH:mm" };
-      obj[6] = { sameDay: "[Idag] LT", nextDay: "[Imorgon] LT", lastDay: "[Ig\u00E5r] LT", nextWeek: "[P\u00E5] dddd LT", lastWeek: "[I] dddd[s] LT", sameElse: "L" };
-      obj[7] = { future: "om %s", past: "f\u00F6r %s sedan", s: "n\u00E5gra sekunder", ss: "%d sekunder", m: "en minut", mm: "%d minuter", h: "en timme", hh: "%d timmar", d: "en dag", dd: "%d dagar", M: "en m\u00E5nad", MM: "%d m\u00E5nader", y: "ett \u00E5r", yy: "%d \u00E5r" };
+      obj[5] = {
+        LT: "HH:mm",
+        LTS: "HH:mm:ss",
+        L: "YYYY-MM-DD",
+        LL: "D MMMM YYYY",
+        LLL: "D MMMM YYYY [kl.] HH:mm",
+        LLLL: "dddd D MMMM YYYY [kl.] HH:mm",
+        lll: "D MMM YYYY HH:mm",
+        llll: "ddd D MMM YYYY HH:mm",
+      };
+      obj[6] = {
+        sameDay: "[Idag] LT",
+        nextDay: "[Imorgon] LT",
+        lastDay: "[Ig\u00E5r] LT",
+        nextWeek: "[P\u00E5] dddd LT",
+        lastWeek: "[I] dddd[s] LT",
+        sameElse: "L",
+      };
+      obj[7] = {
+        future: "om %s",
+        past: "f\u00F6r %s sedan",
+        s: "n\u00E5gra sekunder",
+        ss: "%d sekunder",
+        m: "en minut",
+        mm: "%d minuter",
+        h: "en timme",
+        hh: "%d timmar",
+        d: "en dag",
+        dd: "%d dagar",
+        M: "en m\u00E5nad",
+        MM: "%d m\u00E5nader",
+        y: "ett \u00E5r",
+        yy: "%d \u00E5r",
+      };
       obj[8] = /\d{1,2}(\:e|\:a)/;
       obj[9] = function ordinal(arg0) {
         const result = arg0 % 10;
         let str = ":e";
         let str2 = ":e";
-        if (1 !== ~~arg0 % 100 / 10) {
+        if (1 !== (~~arg0 % 100) / 10) {
           if (1 === result) {
             str = ":a";
           }
@@ -46,15 +89,46 @@ if (typeof globalThis.define === "function") {
         weekdays: "s\u00F6ndag_m\u00E5ndag_tisdag_onsdag_torsdag_fredag_l\u00F6rdag".split("_"),
         weekdaysShort: "s\u00F6n_m\u00E5n_tis_ons_tor_fre_l\u00F6r".split("_"),
         weekdaysMin: "s\u00F6_m\u00E5_ti_on_to_fr_l\u00F6".split("_"),
-        longDateFormat: { LT: "HH:mm", LTS: "HH:mm:ss", L: "YYYY-MM-DD", LL: "D MMMM YYYY", LLL: "D MMMM YYYY [kl.] HH:mm", LLLL: "dddd D MMMM YYYY [kl.] HH:mm", lll: "D MMM YYYY HH:mm", llll: "ddd D MMM YYYY HH:mm" },
-        calendar: { sameDay: "[Idag] LT", nextDay: "[Imorgon] LT", lastDay: "[Ig\u00E5r] LT", nextWeek: "[P\u00E5] dddd LT", lastWeek: "[I] dddd[s] LT", sameElse: "L" },
-        relativeTime: { future: "om %s", past: "f\u00F6r %s sedan", s: "n\u00E5gra sekunder", ss: "%d sekunder", m: "en minut", mm: "%d minuter", h: "en timme", hh: "%d timmar", d: "en dag", dd: "%d dagar", M: "en m\u00E5nad", MM: "%d m\u00E5nader", y: "ett \u00E5r", yy: "%d \u00E5r" },
+        longDateFormat: {
+          LT: "HH:mm",
+          LTS: "HH:mm:ss",
+          L: "YYYY-MM-DD",
+          LL: "D MMMM YYYY",
+          LLL: "D MMMM YYYY [kl.] HH:mm",
+          LLLL: "dddd D MMMM YYYY [kl.] HH:mm",
+          lll: "D MMM YYYY HH:mm",
+          llll: "ddd D MMM YYYY HH:mm",
+        },
+        calendar: {
+          sameDay: "[Idag] LT",
+          nextDay: "[Imorgon] LT",
+          lastDay: "[Ig\u00E5r] LT",
+          nextWeek: "[P\u00E5] dddd LT",
+          lastWeek: "[I] dddd[s] LT",
+          sameElse: "L",
+        },
+        relativeTime: {
+          future: "om %s",
+          past: "f\u00F6r %s sedan",
+          s: "n\u00E5gra sekunder",
+          ss: "%d sekunder",
+          m: "en minut",
+          mm: "%d minuter",
+          h: "en timme",
+          hh: "%d timmar",
+          d: "en dag",
+          dd: "%d dagar",
+          M: "en m\u00E5nad",
+          MM: "%d m\u00E5nader",
+          y: "ett \u00E5r",
+          yy: "%d \u00E5r",
+        },
         dayOfMonthOrdinalParse: /\d{1,2}(\:e|\:a)/,
         ordinal(arg0) {
           const result = arg0 % 10;
           let str = ":e";
           let str2 = ":e";
-          if (1 !== ~~arg0 % 100 / 10) {
+          if (1 !== (~~arg0 % 100) / 10) {
             if (1 === result) {
               str = ":a";
             }
@@ -62,7 +136,7 @@ if (typeof globalThis.define === "function") {
           }
           return arg0 + str2;
         },
-        week: { dow: 1, doy: 4 }
+        week: { dow: 1, doy: 4 },
       });
     });
   }
@@ -74,15 +148,46 @@ obj = {
   weekdays: "s\u00F6ndag_m\u00E5ndag_tisdag_onsdag_torsdag_fredag_l\u00F6rdag".split("_"),
   weekdaysShort: "s\u00F6n_m\u00E5n_tis_ons_tor_fre_l\u00F6r".split("_"),
   weekdaysMin: "s\u00F6_m\u00E5_ti_on_to_fr_l\u00F6".split("_"),
-  longDateFormat: { LT: "HH:mm", LTS: "HH:mm:ss", L: "YYYY-MM-DD", LL: "D MMMM YYYY", LLL: "D MMMM YYYY [kl.] HH:mm", LLLL: "dddd D MMMM YYYY [kl.] HH:mm", lll: "D MMM YYYY HH:mm", llll: "ddd D MMM YYYY HH:mm" },
-  calendar: { sameDay: "[Idag] LT", nextDay: "[Imorgon] LT", lastDay: "[Ig\u00E5r] LT", nextWeek: "[P\u00E5] dddd LT", lastWeek: "[I] dddd[s] LT", sameElse: "L" },
-  relativeTime: { future: "om %s", past: "f\u00F6r %s sedan", s: "n\u00E5gra sekunder", ss: "%d sekunder", m: "en minut", mm: "%d minuter", h: "en timme", hh: "%d timmar", d: "en dag", dd: "%d dagar", M: "en m\u00E5nad", MM: "%d m\u00E5nader", y: "ett \u00E5r", yy: "%d \u00E5r" },
+  longDateFormat: {
+    LT: "HH:mm",
+    LTS: "HH:mm:ss",
+    L: "YYYY-MM-DD",
+    LL: "D MMMM YYYY",
+    LLL: "D MMMM YYYY [kl.] HH:mm",
+    LLLL: "dddd D MMMM YYYY [kl.] HH:mm",
+    lll: "D MMM YYYY HH:mm",
+    llll: "ddd D MMM YYYY HH:mm",
+  },
+  calendar: {
+    sameDay: "[Idag] LT",
+    nextDay: "[Imorgon] LT",
+    lastDay: "[Ig\u00E5r] LT",
+    nextWeek: "[P\u00E5] dddd LT",
+    lastWeek: "[I] dddd[s] LT",
+    sameElse: "L",
+  },
+  relativeTime: {
+    future: "om %s",
+    past: "f\u00F6r %s sedan",
+    s: "n\u00E5gra sekunder",
+    ss: "%d sekunder",
+    m: "en minut",
+    mm: "%d minuter",
+    h: "en timme",
+    hh: "%d timmar",
+    d: "en dag",
+    dd: "%d dagar",
+    M: "en m\u00E5nad",
+    MM: "%d m\u00E5nader",
+    y: "ett \u00E5r",
+    yy: "%d \u00E5r",
+  },
   dayOfMonthOrdinalParse: /\d{1,2}(\:e|\:a)/,
   ordinal(arg0) {
     const result = arg0 % 10;
     let str = ":e";
     let str2 = ":e";
-    if (1 !== ~~arg0 % 100 / 10) {
+    if (1 !== (~~arg0 % 100) / 10) {
       if (1 === result) {
         str = ":a";
       }
@@ -90,6 +195,6 @@ obj = {
     }
     return arg0 + str2;
   },
-  week: { dow: 1, doy: 4 }
+  week: { dow: 1, doy: 4 },
 };
 moment.defineLocale("sv", obj);

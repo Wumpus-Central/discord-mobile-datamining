@@ -28,4 +28,4 @@ export default function hasNativeSymbols() {
     tmp2 = tmp4;
   }
   return tmp2;
-};
+}

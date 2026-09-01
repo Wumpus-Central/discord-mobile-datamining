@@ -22,6 +22,5 @@ arg5.observe = (arg0, arg1) => {
       performanceObserver.observe(obj);
       return performanceObserver;
     }
-  } catch (err) {
-  }
+  } catch (err) {}
 };

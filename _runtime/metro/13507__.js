@@ -16,6 +16,4 @@ if (typeof process === "object") {
     }
   }
 }
-fn = () => {
-
-};
+fn = () => {};

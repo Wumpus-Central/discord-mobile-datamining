@@ -15,7 +15,9 @@ if (KeyboardController.default) {
   const _Proxy = Proxy;
   let obj = { get: null };
   obj[0] = function get() {
-    error = new Error("The package 'react-native-keyboard-controller' doesn't seem to be linked. Make sure: \n\n- You rebuilt the app after installing the package\n- You are not using Expo Go\n");
+    error = new Error(
+      "The package 'react-native-keyboard-controller' doesn't seem to be linked. Make sure: \n\n- You rebuilt the app after installing the package\n- You are not using Expo Go\n",
+    );
     throw error;
   };
   _default = new Proxy({}, obj);
@@ -25,12 +27,12 @@ const nativeEventEmitter = new NativeEventEmitter(_default);
 obj = {
   addListener(arg0, arg1) {
     return nativeEventEmitter.addListener(c0 + arg0, arg1);
-  }
+  },
 };
 obj = {
   addListener(arg0, arg1) {
     return nativeEventEmitter.addListener(c0 + arg0, arg1);
-  }
+  },
 };
 if (Platform.Version >= 30) {
   let fn = __INTERNAL_VIEW_CONFIG.default;
@@ -44,7 +46,7 @@ export const FocusedInputEvents = obj;
 export const WindowDimensionsEvents = {
   addListener(arg0, arg1) {
     return nativeEventEmitter.addListener(c0 + arg0, arg1);
-  }
+  },
 };
 export const KeyboardControllerView = __INTERNAL_VIEW_CONFIG2.default;
 export const KeyboardControllerViewCommands = __INTERNAL_VIEW_CONFIG2.Commands;

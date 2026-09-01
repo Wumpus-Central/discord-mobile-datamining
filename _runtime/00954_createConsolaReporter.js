@@ -4,7 +4,24 @@ import closure_2 from "metro/00109__objectWithoutProperties.js";
 let closure_3 = ["type", "level", "message", "args", "tag", "date"];
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let closure_4 = ["trace", "debug", "info", "warn", "error", "fatal"];
-let closure_5 = { silent: "trace", fatal: "fatal", error: "error", warn: "warn", log: "info", info: "info", success: "info", fail: "error", ready: "info", start: "info", box: "info", debug: "debug", trace: "trace", verbose: "debug", critical: "fatal", notice: "info" };
+let closure_5 = {
+  silent: "trace",
+  fatal: "fatal",
+  error: "error",
+  warn: "warn",
+  log: "info",
+  info: "info",
+  success: "info",
+  fail: "error",
+  ready: "info",
+  start: "info",
+  box: "info",
+  debug: "debug",
+  trace: "trace",
+  verbose: "debug",
+  critical: "fatal",
+  notice: "info",
+};
 let closure_6 = { 0: "fatal", 1: "warn", 2: "info", 3: "info", 4: "debug", 5: "trace" };
 
 export const createConsolaReporter = function createConsolaReporter() {
@@ -88,7 +105,7 @@ export const createConsolaReporter = function createConsolaReporter() {
           tmp14 = null != level && typeof level === "number";
         }
       }
-    }
+    },
   };
   return obj;
 };

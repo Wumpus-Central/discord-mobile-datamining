@@ -15,4 +15,4 @@ export default function regexTester(arg0) {
     throw tmp5;
   }
   tmp = _require;
-};
+}

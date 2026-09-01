@@ -9,13 +9,13 @@ arg5.byteLength = function byteLength(arr) {
     if (-1 === index) {
       index = length;
     }
-    const items = [index, ];
+    const items = [index];
     let num2 = 0;
     if (index !== length) {
-      num2 = 4 - index % 4;
+      num2 = 4 - (index % 4);
     }
     items[1] = num2;
-    return 3 * (items[0] + items[1]) / 4 - items[1];
+    return (3 * (items[0] + items[1])) / 4 - items[1];
   }
 };
 arg5.toByteArray = function toByteArray(arr) {
@@ -28,14 +28,14 @@ arg5.toByteArray = function toByteArray(arr) {
     if (-1 === index) {
       index = length;
     }
-    const items = [index, ];
+    const items = [index];
     let num = 0;
     if (index !== length) {
-      num = 4 - index % 4;
+      num = 4 - (index % 4);
     }
     items[1] = num;
     [tmp2, tmp3] = items;
-    const tmp7 = new closure_2(3 * (tmp2 + tmp3) / 4 - tmp3);
+    const tmp7 = new closure_2((3 * (tmp2 + tmp3)) / 4 - tmp3);
     let diff = tmp2;
     if (tmp3 > 0) {
       diff = tmp2 - 4;
@@ -52,9 +52,9 @@ arg5.toByteArray = function toByteArray(arr) {
         let tmp13 = dependencyMap2[arr.charCodeAt(arr, num12 + 2)] << 6;
         let tmp14 = tmp11 | tmp12 | tmp13 | dependencyMap2[arr.charCodeAt(arr, num12 + 3)];
         let sum = num11 + 1;
-        tmp7[num11] = tmp14 >> 16 & 255;
+        tmp7[num11] = (tmp14 >> 16) & 255;
         let sum1 = sum + 1;
-        tmp7[sum] = tmp14 >> 8 & 255;
+        tmp7[sum] = (tmp14 >> 8) & 255;
         num11 = sum1 + 1;
         tmp7[sum1] = 255 & tmp14;
         num12 = num12 + 4;
@@ -65,13 +65,18 @@ arg5.toByteArray = function toByteArray(arr) {
     let sum2 = num13;
     if (2 === tmp3) {
       sum2 = num13 + 1;
-      tmp7[num13] = 255 & (dependencyMap2[arr.charCodeAt(arr, num14)] << 2 | dependencyMap2[arr.charCodeAt(arr, num14 + 1)] >> 4);
+      tmp7[num13] =
+        255 &
+        ((dependencyMap2[arr.charCodeAt(arr, num14)] << 2) | (dependencyMap2[arr.charCodeAt(arr, num14 + 1)] >> 4));
       const tmp19 = dependencyMap2[arr.charCodeAt(arr, num14)] << 2;
     }
     if (1 === tmp3) {
       const tmp21 = dependencyMap2[arr.charCodeAt(arr, num14)] << 10;
-      const tmp23 = tmp21 | dependencyMap2[arr.charCodeAt(arr, num14 + 1)] << 4 | dependencyMap2[arr.charCodeAt(arr, num14 + 2)] >> 2;
-      tmp7[sum2] = tmp23 >> 8 & 255;
+      const tmp23 =
+        tmp21 |
+        (dependencyMap2[arr.charCodeAt(arr, num14 + 1)] << 4) |
+        (dependencyMap2[arr.charCodeAt(arr, num14 + 2)] >> 2);
+      tmp7[sum2] = (tmp23 >> 8) & 255;
       tmp7[sum2 + 1] = 255 & tmp23;
       const tmp22 = dependencyMap2[arr.charCodeAt(arr, num14 + 1)] << 4;
     }
@@ -95,9 +100,14 @@ arg5.fromByteArray = function fromByteArray(arg0) {
       let items1 = [];
       if (sum2 < tmp5) {
         do {
-          let sum1 = (arg0[sum2] << 16 & 16711680) + (arg0[sum2 + 1] << 8 & 65280) + (255 & arg0[sum2 + 2]);
+          let sum1 = ((arg0[sum2] << 16) & 16711680) + ((arg0[sum2 + 1] << 8) & 65280) + (255 & arg0[sum2 + 2]);
           let tmp7 = dependencyMap;
-          let arr = items1.push(dependencyMap[sum1 >> 18 & 63] + dependencyMap[sum1 >> 12 & 63] + dependencyMap[sum1 >> 6 & 63] + dependencyMap[63 & sum1]);
+          let arr = items1.push(
+            dependencyMap[(sum1 >> 18) & 63] +
+              dependencyMap[(sum1 >> 12) & 63] +
+              dependencyMap[(sum1 >> 6) & 63] +
+              dependencyMap[63 & sum1],
+          );
           sum2 = sum2 + 3;
         } while (sum2 < tmp5);
       }
@@ -106,10 +116,10 @@ arg5.fromByteArray = function fromByteArray(arg0) {
     } while (sum < diff);
   }
   if (1 === result) {
-    items.push(`${closure_0[arg0[length - 1] >> 2]}${closure_0[arg0[length - 1] << 4 & 63]}==`);
+    items.push(`${closure_0[arg0[length - 1] >> 2]}${closure_0[(arg0[length - 1] << 4) & 63]}==`);
   } else if (2 === result) {
     const sum3 = (arg0[length - 2] << 8) + arg0[length - 1];
-    items.push(`${closure_0[tmp13 >> 10]}${closure_0[tmp13 >> 4 & 63]}${closure_0[tmp13 << 2 & 63]}=`);
+    items.push(`${closure_0[tmp13 >> 10]}${closure_0[(tmp13 >> 4) & 63]}${closure_0[(tmp13 << 2) & 63]}=`);
   }
   return items.join("");
 };

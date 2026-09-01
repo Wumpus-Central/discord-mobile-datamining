@@ -6,7 +6,9 @@ import noop from "00019_noop.js";
 ({ useCallback: c3, useMemo: c4, useRef: c5, memo } = noop);
 noopDefault;
 const jsx = jsxProd.jsx;
-let closure_7 = { code: "function pnpm_BottomSheetFooterTsx1(){const{animatedFooterPosition,animatedKeyboardState,KEYBOARD_STATE,bottomInset}=this.__closure;let footerTranslateY=animatedFooterPosition.get();if(animatedKeyboardState.get()!==KEYBOARD_STATE.SHOWN){footerTranslateY=footerTranslateY-bottomInset;}return{transform:[{translateY:Math.max(0,footerTranslateY)}]};}" };
+let closure_7 = {
+  code: "function pnpm_BottomSheetFooterTsx1(){const{animatedFooterPosition,animatedKeyboardState,KEYBOARD_STATE,bottomInset}=this.__closure;let footerTranslateY=animatedFooterPosition.get();if(animatedKeyboardState.get()!==KEYBOARD_STATE.SHOWN){footerTranslateY=footerTranslateY-bottomInset;}return{transform:[{translateY:Math.max(0,footerTranslateY)}]};}",
+};
 const memoResult = memo(function BottomSheetFooterComponent(animatedFooterPosition) {
   animatedFooterPosition = animatedFooterPosition.animatedFooterPosition;
   let num = animatedFooterPosition.bottomInset;
@@ -36,7 +38,12 @@ const memoResult = memo(function BottomSheetFooterComponent(animatedFooterPositi
     obj[0] = items;
     return obj;
   };
-  obj = { animatedFooterPosition, animatedKeyboardState, KEYBOARD_STATE: animatedFooterPosition(style[4]).KEYBOARD_STATE, bottomInset: num };
+  obj = {
+    animatedFooterPosition,
+    animatedKeyboardState,
+    KEYBOARD_STATE: animatedFooterPosition(style[4]).KEYBOARD_STATE,
+    bottomInset: num,
+  };
   fn.__closure = obj;
   fn.__workletHash = 5322275157644;
   fn.__initData = closure_7;

@@ -27,8 +27,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 let closure_3 = ["style"];
 ({ StyleSheet: c9, View: c10 } = get_ActivityIndicator);
@@ -68,7 +67,8 @@ class TouchableHighlight {
         }
       }
     };
-    tmp3Result.hasPressHandler = () => lib.props.onPress || lib.props.onPressIn || lib.props.onPressOut || lib.props.onLongPress;
+    tmp3Result.hasPressHandler = () =>
+      lib.props.onPress || lib.props.onPressIn || lib.props.onPressOut || lib.props.onLongPress;
     tmp3Result.hideUnderlay = () => {
       lib.setState({ extraChildStyle: null, extraUnderlayStyle: null });
       const props = lib.props;
@@ -84,7 +84,8 @@ class TouchableHighlight {
         if (!tmp3) {
           lib.hideUnderlay();
         }
-        tmp3 = arg1 !== tmp(tmp2[9]).TOUCHABLE_STATE.UNDETERMINED && arg1 !== tmp(tmp2[9]).TOUCHABLE_STATE.MOVED_OUTSIDE;
+        tmp3 =
+          arg1 !== tmp(tmp2[9]).TOUCHABLE_STATE.UNDETERMINED && arg1 !== tmp(tmp2[9]).TOUCHABLE_STATE.MOVED_OUTSIDE;
       }
     };
     tmp3Result.state = { extraChildStyle: null, extraUnderlayStyle: null };
@@ -105,7 +106,7 @@ let obj = {
     } else {
       return <closure_10 />;
     }
-  }
+  },
 };
 let items = [
   obj,
@@ -126,8 +127,8 @@ let items = [
       obj.onStateChange = self.onStateChange;
       obj.children = self.renderChildren();
       return jsx(_isNativeReflectConstructDefault, {});
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = importDefaultResult(TouchableHighlight, items);
 obj = {};

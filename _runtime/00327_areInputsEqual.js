@@ -65,4 +65,4 @@ export default function memoizeOne(arg0, arg1) {
     }
     return closure_3;
   };
-};
+}

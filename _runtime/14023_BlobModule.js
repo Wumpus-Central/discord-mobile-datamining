@@ -25,8 +25,6 @@ parseURL.URL.createObjectURL = function createObjectURL(data) {
     return "" + tmp + data.data.blobId + "?offset=" + data.data.offset + "&size=" + data.size;
   }
 };
-parseURL.URL.revokeObjectURL = function revokeObjectURL(arg0) {
-
-};
+parseURL.URL.revokeObjectURL = function revokeObjectURL(arg0) {};
 
 export const URL = parseURL.URL;

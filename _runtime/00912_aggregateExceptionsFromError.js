@@ -71,7 +71,14 @@ function aggregateExceptionsFromError(arg0, arg1, arg2, errors, source, arg5, me
   }
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.applyAggregateErrorsToEvent = function applyAggregateErrorsToEvent(arg0, arg1, arg2, arg3, exception, originalException) {
+arg5.applyAggregateErrorsToEvent = function applyAggregateErrorsToEvent(
+  arg0,
+  arg1,
+  arg2,
+  arg3,
+  exception,
+  originalException,
+) {
   exception = exception.exception;
   let values;
   if (exception != null) {
@@ -86,7 +93,16 @@ arg5.applyAggregateErrorsToEvent = function applyAggregateErrorsToEvent(arg0, ar
           tmp6 = exception.exception.values[exception.exception.values.length - 1];
         }
         if (tmp6) {
-          exception.exception.values = aggregateExceptionsFromError(arg0, arg1, arg3, originalException.originalException, arg2, exception.exception.values, tmp6, 0);
+          exception.exception.values = aggregateExceptionsFromError(
+            arg0,
+            arg1,
+            arg3,
+            originalException.originalException,
+            arg2,
+            exception.exception.values,
+            tmp6,
+            0,
+          );
         }
       }
       obj = isInstanceOf;

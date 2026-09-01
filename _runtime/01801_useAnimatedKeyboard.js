@@ -2,8 +2,12 @@
 import noop from "00019_noop.js";
 
 ({ useEffect: obj1, useRef: c3 } = noop);
-let closure_4 = { code: "function pnpm_useAnimatedKeyboardTs1(state,height){const{keyboardEventData}=this.__closure;keyboardEventData.state.value=state;keyboardEventData.height.value=height;}" };
-let closure_5 = { code: "function pnpm_useAnimatedKeyboardTs2(state,height){const{_keyboardEventData}=this.__closure;_keyboardEventData.state.value=state;_keyboardEventData.height.value=height;}" };
+let closure_4 = {
+  code: "function pnpm_useAnimatedKeyboardTs1(state,height){const{keyboardEventData}=this.__closure;keyboardEventData.state.value=state;keyboardEventData.height.value=height;}",
+};
+let closure_5 = {
+  code: "function pnpm_useAnimatedKeyboardTs2(state,height){const{_keyboardEventData}=this.__closure;_keyboardEventData.state.value=state;_keyboardEventData.height.value=height;}",
+};
 
 export const useAnimatedKeyboard = function useAnimatedKeyboard() {
   let obj = arg0;

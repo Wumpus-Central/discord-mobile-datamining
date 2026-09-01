@@ -24,8 +24,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 if (typeof WeakMap === "function") {
   const _WeakMap = WeakMap;
@@ -123,7 +122,7 @@ obj = {
     }
     obj[1] = children;
     return <RN.View style={{ flex: 1 }}>{null}</RN.View>;
-  }
+  },
 };
 let items = [obj];
 

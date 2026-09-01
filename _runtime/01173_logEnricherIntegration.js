@@ -75,7 +75,7 @@ arg5.logEnricherIntegration = () => ({
   setup(on) {
     closure_0 = on;
     on.on("afterInit", () => {
-      closure_1_2(undefined, undefined, undefined, function*() {
+      closure_1_2(undefined, undefined, undefined, function* () {
         if (c5 === 2) {
           c5 = 3;
           HermesBuiltin.throwTypeError();
@@ -222,87 +222,90 @@ arg5.logEnricherIntegration = () => ({
             }
           }
         }
-      }).then(() => {
-        lib.on("beforeCaptureLog", (attributes) => {
-          if (undefined !== closure_1_3) {
-            attributes = attributes.attributes;
-            if (null === attributes) {
-              attributes = {};
+      }).then(
+        () => {
+          lib.on("beforeCaptureLog", (attributes) => {
+            if (undefined !== closure_1_3) {
+              attributes = attributes.attributes;
+              if (null === attributes) {
+                attributes = {};
+              }
+              const brand = closure_1_3.brand;
+              let tmp2 = !brand;
+              if (brand) {
+                tmp2 = attributes["device.brand"] && false;
+                const tmp3 = attributes["device.brand"] && false;
+              }
+              if (!tmp2) {
+                attributes["device.brand"] = brand;
+              }
+              const model = closure_1_3.model;
+              let tmp5 = !model;
+              if (model) {
+                tmp5 = attributes["device.model"] && false;
+                const tmp6 = attributes["device.model"] && false;
+              }
+              if (!tmp5) {
+                attributes["device.model"] = model;
+              }
+              const family = closure_1_3.family;
+              let tmp8 = !family;
+              if (family) {
+                tmp8 = attributes["device.family"] && false;
+                const tmp9 = attributes["device.family"] && false;
+              }
+              if (!tmp8) {
+                attributes["device.family"] = family;
+              }
+              const os = closure_1_3.os;
+              let tmp11 = !os;
+              if (os) {
+                tmp11 = attributes["os.name"] && false;
+                const tmp12 = attributes["os.name"] && false;
+              }
+              if (!tmp11) {
+                attributes["os.name"] = os;
+              }
+              const version = closure_1_3.version;
+              let tmp14 = !version;
+              if (version) {
+                tmp14 = attributes["os.version"] && false;
+                const tmp15 = attributes["os.version"] && false;
+              }
+              if (!tmp14) {
+                attributes["os.version"] = version;
+              }
+              const release = closure_1_3.release;
+              let tmp17 = !release;
+              if (release) {
+                tmp17 = attributes["sentry.release"] && false;
+                const tmp18 = attributes["sentry.release"] && false;
+              }
+              if (!tmp17) {
+                attributes["sentry.release"] = release;
+              }
+              const integrationByName = closure_0.getIntegrationByName("MobileReplay");
+              let replayId;
+              if (null != integrationByName) {
+                replayId = integrationByName.getReplayId();
+              }
+              let tmp20 = !replayId;
+              if (replayId) {
+                tmp20 = attributes["sentry.replay_id"] && false;
+                const tmp21 = attributes["sentry.replay_id"] && false;
+              }
+              if (!tmp20) {
+                attributes["sentry.replay_id"] = replayId;
+              }
+              attributes.attributes = attributes;
             }
-            const brand = closure_1_3.brand;
-            let tmp2 = !brand;
-            if (brand) {
-              tmp2 = attributes["device.brand"] && false;
-              const tmp3 = attributes["device.brand"] && false;
-            }
-            if (!tmp2) {
-              attributes["device.brand"] = brand;
-            }
-            const model = closure_1_3.model;
-            let tmp5 = !model;
-            if (model) {
-              tmp5 = attributes["device.model"] && false;
-              const tmp6 = attributes["device.model"] && false;
-            }
-            if (!tmp5) {
-              attributes["device.model"] = model;
-            }
-            const family = closure_1_3.family;
-            let tmp8 = !family;
-            if (family) {
-              tmp8 = attributes["device.family"] && false;
-              const tmp9 = attributes["device.family"] && false;
-            }
-            if (!tmp8) {
-              attributes["device.family"] = family;
-            }
-            const os = closure_1_3.os;
-            let tmp11 = !os;
-            if (os) {
-              tmp11 = attributes["os.name"] && false;
-              const tmp12 = attributes["os.name"] && false;
-            }
-            if (!tmp11) {
-              attributes["os.name"] = os;
-            }
-            const version = closure_1_3.version;
-            let tmp14 = !version;
-            if (version) {
-              tmp14 = attributes["os.version"] && false;
-              const tmp15 = attributes["os.version"] && false;
-            }
-            if (!tmp14) {
-              attributes["os.version"] = version;
-            }
-            const release = closure_1_3.release;
-            let tmp17 = !release;
-            if (release) {
-              tmp17 = attributes["sentry.release"] && false;
-              const tmp18 = attributes["sentry.release"] && false;
-            }
-            if (!tmp17) {
-              attributes["sentry.release"] = release;
-            }
-            const integrationByName = closure_0.getIntegrationByName("MobileReplay");
-            let replayId;
-            if (null != integrationByName) {
-              replayId = integrationByName.getReplayId();
-            }
-            let tmp20 = !replayId;
-            if (replayId) {
-              tmp20 = attributes["sentry.replay_id"] && false;
-              const tmp21 = attributes["sentry.replay_id"] && false;
-            }
-            if (!tmp20) {
-              attributes["sentry.replay_id"] = replayId;
-            }
-            attributes.attributes = attributes;
-          }
-        });
-      }, (arg0) => {
-        const debug = lib(table[0]).debug;
-        debug.log(arg0);
-      });
+          });
+        },
+        (arg0) => {
+          const debug = lib(table[0]).debug;
+          debug.log(arg0);
+        },
+      );
     });
-  }
+  },
 });

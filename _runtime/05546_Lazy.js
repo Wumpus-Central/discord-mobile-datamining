@@ -2,7 +2,6 @@
 import closure_0 from "metro/00032__slicedToArray.js";
 import closure_1 from "00019_noop.js";
 
-
 export const Lazy = function Lazy(arg0) {
   ({ enabled, visible, children } = arg0);
   let callback;

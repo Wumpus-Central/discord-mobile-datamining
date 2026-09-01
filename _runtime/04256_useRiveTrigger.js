@@ -21,18 +21,23 @@ export const useRiveTrigger = function useRiveTrigger(startAnimation, instance, 
   const callback3 = tmp3;
   tmp3.current = onTrigger;
   const items = [instance, startAnimation];
-  disposableMemo = require("04251_useDisposableMemo.js").useDisposableMemo(() => {
-    if (closure_1) {
-      return obj.triggerProperty(closure_0);
-    }
-    obj = closure_1;
-  }, (dispose) => {
-    let disposeResult;
-    if (dispose != null) {
-      disposeResult = dispose.dispose();
-    }
-    return disposeResult;
-  }, items, tmp);
+  disposableMemo = require("04251_useDisposableMemo.js").useDisposableMemo(
+    () => {
+      if (closure_1) {
+        return obj.triggerProperty(closure_0);
+      }
+      obj = closure_1;
+    },
+    (dispose) => {
+      let disposeResult;
+      if (dispose != null) {
+        disposeResult = dispose.dispose();
+      }
+      return disposeResult;
+    },
+    items,
+    tmp,
+  );
   if (tmp.current) {
     tmp2.current = true;
   }
@@ -51,7 +56,7 @@ export const useRiveTrigger = function useRiveTrigger(startAnimation, instance, 
     if (tmp) {
       const _Error = Error;
       const _HermesInternal = HermesInternal;
-      error = new Error("Property \"" + closure_0 + "\" not found in the ViewModel instance");
+      error = new Error('Property "' + closure_0 + '" not found in the ViewModel instance');
       callback(error);
     }
   }, items2);
@@ -67,8 +72,7 @@ export const useRiveTrigger = function useRiveTrigger(startAnimation, instance, 
       return () => {
         try {
           callback();
-        } catch (err) {
-        }
+        } catch (err) {}
       };
     }
     obj = disposableMemo;
@@ -82,13 +86,23 @@ export const useRiveTrigger = function useRiveTrigger(startAnimation, instance, 
         const _console = console;
         const _HermesInternal = HermesInternal;
         if (ref2.current) {
-          warn(concat(tmp3, "') called after dispose. The property has been cleaned up \u2014 this is likely a stale closure from an async callback that fired after unmount."));
+          warn(
+            concat(
+              tmp3,
+              "') called after dispose. The property has been cleaned up \u2014 this is likely a stale closure from an async callback that fired after unmount.",
+            ),
+          );
         } else {
-          warn(concat(tmp3, "') called but the property is not available yet. The viewModelInstance may still be loading."));
+          warn(
+            concat(
+              tmp3,
+              "') called but the property is not available yet. The viewModelInstance may still be loading.",
+            ),
+          );
         }
       }
     }, items4),
-    error: tmp5[0]
+    error: tmp5[0],
   };
   items4 = [startAnimation];
   return obj;

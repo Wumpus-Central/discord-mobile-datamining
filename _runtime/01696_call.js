@@ -18,12 +18,29 @@ function commaSeparatedCall(arg0, arg1, arg2, arg3) {
 const obj = { rgb: null, rgba: null, hsl: null, hsla: null, hwb: null, hex3: null, hex4: null, hex6: null, hex8: null };
 const regExp = new RegExp("rgb" + call("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+"));
 obj[0] = regExp;
-const regExp1 = new RegExp("rgba(" + commaSeparatedCall("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+") + "|" + callWithSlashSeparator("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+") + ")");
+const regExp1 = new RegExp(
+  "rgba(" +
+    commaSeparatedCall("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+") +
+    "|" +
+    callWithSlashSeparator("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+") +
+    ")",
+);
 obj[1] = regExp1;
 const regExp2 = new RegExp("hsl" + call("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+%"));
 obj[2] = regExp2;
-const commaSeparatedCallResult = commaSeparatedCall("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+");
-const regExp3 = new RegExp("hsla(" + commaSeparatedCall("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+") + "|" + callWithSlashSeparator("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+") + ")");
+const commaSeparatedCallResult = commaSeparatedCall(
+  "[-+]?\\d*\\.?\\d+",
+  "[-+]?\\d*\\.?\\d+",
+  "[-+]?\\d*\\.?\\d+",
+  "[-+]?\\d*\\.?\\d+",
+);
+const regExp3 = new RegExp(
+  "hsla(" +
+    commaSeparatedCall("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+") +
+    "|" +
+    callWithSlashSeparator("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+") +
+    ")",
+);
 obj[3] = regExp3;
 const regExp4 = new RegExp("hwb" + call("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+%"));
 obj[4] = regExp4;
@@ -56,7 +73,9 @@ function hue2rgb(arg0, arg1, arg2) {
 }
 hue2rgb.__closure = {};
 hue2rgb.__workletHash = 13577481829661;
-hue2rgb.__initData = { code: "function hue2rgb_Pnpm_ColorsTs1(p,q,t){if(t<0){t+=1;}if(t>1){t-=1;}if(t<1/6){return p+(q-p)*6*t;}if(t<1/2){return q;}if(t<2/3){return p+(q-p)*(2/3-t)*6;}return p;}" };
+hue2rgb.__initData = {
+  code: "function hue2rgb_Pnpm_ColorsTs1(p,q,t){if(t<0){t+=1;}if(t>1){t-=1;}if(t<1/6){return p+(q-p)*6*t;}if(t<1/2){return q;}if(t<2/3){return p+(q-p)*(2/3-t)*6;}return p;}",
+};
 function hslToRgb(arg0, arg1, arg2) {
   if (arg2 < 0.5) {
     let result = arg2 * (1 + arg1);
@@ -136,16 +155,18 @@ function hslToRgb(arg0, arg1, arg2) {
     }
   }
   const tmp18 = Math.round(255 * sum2) << 24;
-  return tmp18 | Math.round(255 * sum5) << 16 | Math.round(255 * sum8) << 8;
+  return tmp18 | (Math.round(255 * sum5) << 16) | (Math.round(255 * sum8) << 8);
 }
 hslToRgb.__closure = { hue2rgb };
 hslToRgb.__workletHash = 1406907784351;
-hslToRgb.__initData = { code: "function hslToRgb_Pnpm_ColorsTs2(h,s,l){const{hue2rgb}=this.__closure;const q=l<0.5?l*(1+s):l+s-l*s;const p=2*l-q;const r=hue2rgb(p,q,h+1/3);const g=hue2rgb(p,q,h);const b=hue2rgb(p,q,h-1/3);return Math.round(r*255)<<24|Math.round(g*255)<<16|Math.round(b*255)<<8;}" };
+hslToRgb.__initData = {
+  code: "function hslToRgb_Pnpm_ColorsTs2(h,s,l){const{hue2rgb}=this.__closure;const q=l<0.5?l*(1+s):l+s-l*s;const p=2*l-q;const r=hue2rgb(p,q,h+1/3);const g=hue2rgb(p,q,h);const b=hue2rgb(p,q,h-1/3);return Math.round(r*255)<<24|Math.round(g*255)<<16|Math.round(b*255)<<8;}",
+};
 function hwbToRgb(arg0, arg1, arg2) {
   if (arg1 + arg2 >= 1) {
     const _Math4 = Math;
-    const rounded = Math.round(255 * arg1 / (arg1 + arg2));
-    return rounded << 24 | rounded << 16 | rounded << 8;
+    const rounded = Math.round((255 * arg1) / (arg1 + arg2));
+    return (rounded << 24) | (rounded << 16) | (rounded << 8);
   } else {
     const sum = arg0 + 0.3333333333333333;
     if (typeof hue2rgb !== "function") {
@@ -225,12 +246,14 @@ function hwbToRgb(arg0, arg1, arg2) {
     const _Math2 = Math;
     const _Math3 = Math;
     const tmp12 = Math.round(255 * sum2) << 24;
-    return tmp12 | Math.round(255 * sum4) << 16 | Math.round(255 * sum6) << 8;
+    return tmp12 | (Math.round(255 * sum4) << 16) | (Math.round(255 * sum6) << 8);
   }
 }
 hwbToRgb.__closure = { hue2rgb };
 hwbToRgb.__workletHash = 16684751503669;
-hwbToRgb.__initData = { code: "function hwbToRgb_Pnpm_ColorsTs3(h,w,b){const{hue2rgb}=this.__closure;if(w+b>=1){const gray=Math.round(w*255/(w+b));return gray<<24|gray<<16|gray<<8;}const red=hue2rgb(0,1,h+1/3)*(1-w-b)+w;const green=hue2rgb(0,1,h)*(1-w-b)+w;const blue=hue2rgb(0,1,h-1/3)*(1-w-b)+w;return Math.round(red*255)<<24|Math.round(green*255)<<16|Math.round(blue*255)<<8;}" };
+hwbToRgb.__initData = {
+  code: "function hwbToRgb_Pnpm_ColorsTs3(h,w,b){const{hue2rgb}=this.__closure;if(w+b>=1){const gray=Math.round(w*255/(w+b));return gray<<24|gray<<16|gray<<8;}const red=hue2rgb(0,1,h+1/3)*(1-w-b)+w;const green=hue2rgb(0,1,h)*(1-w-b)+w;const blue=hue2rgb(0,1,h-1/3)*(1-w-b)+w;return Math.round(red*255)<<24|Math.round(green*255)<<16|Math.round(blue*255)<<8;}",
+};
 function parse255(joined) {
   const parsed = Number.parseInt(joined, 10);
   let num = 0;
@@ -245,13 +268,17 @@ function parse255(joined) {
 }
 parse255.__closure = {};
 parse255.__workletHash = 1908258547020;
-parse255.__initData = { code: "function parse255_Pnpm_ColorsTs4(str){const int=Number.parseInt(str,10);if(int<0){return 0;}if(int>255){return 255;}return int;}" };
+parse255.__initData = {
+  code: "function parse255_Pnpm_ColorsTs4(str){const int=Number.parseInt(str,10);if(int<0){return 0;}if(int>255){return 255;}return int;}",
+};
 function parse360(arg0) {
-  return (Number.parseFloat(arg0) % 360 + 360) % 360 / 360;
+  return (((Number.parseFloat(arg0) % 360) + 360) % 360) / 360;
 }
 parse360.__closure = {};
 parse360.__workletHash = 15674458953827;
-parse360.__initData = { code: "function parse360_Pnpm_ColorsTs5(str){const int=Number.parseFloat(str);return(int%360+360)%360/360;}" };
+parse360.__initData = {
+  code: "function parse360_Pnpm_ColorsTs5(str){const int=Number.parseFloat(str);return(int%360+360)%360/360;}",
+};
 function parse1(arg0) {
   const parsed = Number.parseFloat(arg0);
   let num = 0;
@@ -267,7 +294,9 @@ function parse1(arg0) {
 }
 parse1.__closure = {};
 parse1.__workletHash = 1305446443589;
-parse1.__initData = { code: "function parse1_Pnpm_ColorsTs6(str){const num=Number.parseFloat(str);if(num<0){return 0;}if(num>1){return 255;}return Math.round(num*255);}" };
+parse1.__initData = {
+  code: "function parse1_Pnpm_ColorsTs6(str){const num=Number.parseFloat(str);if(num<0){return 0;}if(num>1){return 255;}return Math.round(num*255);}",
+};
 function parsePercentage(arg0) {
   const parsed = Number.parseFloat(arg0);
   let num = 0;
@@ -282,7 +311,9 @@ function parsePercentage(arg0) {
 }
 parsePercentage.__closure = {};
 parsePercentage.__workletHash = 3056354218613;
-parsePercentage.__initData = { code: "function parsePercentage_Pnpm_ColorsTs7(str){const int=Number.parseFloat(str);if(int<0){return 0;}if(int>100){return 1;}return int/100;}" };
+parsePercentage.__initData = {
+  code: "function parsePercentage_Pnpm_ColorsTs7(str){const int=Number.parseFloat(str);if(int<0){return 0;}if(int>100){return 1;}return int/100;}",
+};
 function clampRGBA(items) {
   let num = 0;
   do {
@@ -294,9 +325,186 @@ function clampRGBA(items) {
 }
 clampRGBA.__closure = {};
 clampRGBA.__workletHash = 13575809516663;
-clampRGBA.__initData = { code: "function clampRGBA_Pnpm_ColorsTs8(RGBA){for(let i=0;i<4;i++){RGBA[i]=Math.max(0,Math.min(RGBA[i],1));}}" };
-const shareable = isReanimated3.makeShareable({ transparent: 0, aliceblue: 4042850303, antiquewhite: 4209760255, aqua: 16777215, aquamarine: 2147472639, azure: 4043309055, beige: 4126530815, bisque: 4293182719, black: 255, blanchedalmond: 4293643775, blue: 65535, blueviolet: 2318131967, brown: 2771004159, burlywood: 3736635391, burntsienna: 3934150143, cadetblue: 1604231423, chartreuse: 2147418367, chocolate: 3530104575, coral: 4286533887, cornflowerblue: 1687547391, cornsilk: 4294499583, crimson: 3692313855, cyan: 16777215, darkblue: 35839, darkcyan: 9145343, darkgoldenrod: 3095792639, darkgray: 2846468607, darkgreen: 6553855, darkgrey: 2846468607, darkkhaki: 3182914559, darkmagenta: 2332068863, darkolivegreen: 1433087999, darkorange: 4287365375, darkorchid: 2570243327, darkred: 2332033279, darksalmon: 3918953215, darkseagreen: 2411499519, darkslateblue: 1211993087, darkslategray: 793726975, darkslategrey: 793726975, darkturquoise: 13554175, darkviolet: 2483082239, deeppink: 4279538687, deepskyblue: 12582911, dimgray: 1768516095, dimgrey: 1768516095, dodgerblue: 512819199, firebrick: 2988581631, floralwhite: 4294635775, forestgreen: 579543807, fuchsia: 4278255615, gainsboro: 3705462015, ghostwhite: 4177068031, gold: 4292280575, goldenrod: 3668254975, gray: 2155905279, green: 8388863, greenyellow: 2919182335, grey: 2155905279, honeydew: 4043305215, hotpink: 4285117695, indianred: 3445382399, indigo: 1258324735, ivory: 4294963455, khaki: 4041641215, lavender: 3873897215, lavenderblush: 4293981695, lawngreen: 2096890111, lemonchiffon: 4294626815, lightblue: 2916673279, lightcoral: 4034953471, lightcyan: 3774873599, lightgoldenrodyellow: 4210742015, lightgray: 3553874943, lightgreen: 2431553791, lightgrey: 3553874943, lightpink: 4290167295, lightsalmon: 4288707327, lightseagreen: 548580095, lightskyblue: 2278488831, lightslategray: 2005441023, lightslategrey: 2005441023, lightsteelblue: 2965692159, lightyellow: 4294959359, lime: 16711935, limegreen: 852308735, linen: 4210091775, magenta: 4278255615, maroon: 2147483903, mediumaquamarine: 1724754687, mediumblue: 52735, mediumorchid: 3126187007, mediumpurple: 2473647103, mediumseagreen: 1018393087, mediumslateblue: 2070474495, mediumspringgreen: 16423679, mediumturquoise: 1221709055, mediumvioletred: 3340076543, midnightblue: 421097727, mintcream: 4127193855, mistyrose: 4293190143, moccasin: 4293178879, navajowhite: 4292783615, navy: 33023, oldlace: 4260751103, olive: 2155872511, olivedrab: 1804477439, orange: 4289003775, orangered: 4282712319, orchid: 3664828159, palegoldenrod: 4008225535, palegreen: 2566625535, paleturquoise: 2951671551, palevioletred: 3681588223, papayawhip: 4293907967, peachpuff: 4292524543, peru: 3448061951, pink: 4290825215, plum: 3718307327, powderblue: 2967529215, purple: 2147516671, rebeccapurple: 1714657791, red: 4278190335, rosybrown: 3163525119, royalblue: 1097458175, saddlebrown: 2336560127, salmon: 4202722047, sandybrown: 4104413439, seagreen: 780883967, seashell: 4294307583, sienna: 2689740287, silver: 3233857791, skyblue: 2278484991, slateblue: 1784335871, slategray: 1887473919, slategrey: 1887473919, snow: 4294638335, springgreen: 16744447, steelblue: 1182971135, tan: 3535047935, teal: 8421631, thistle: 3636451583, tomato: 4284696575, turquoise: 1088475391, violet: 4001558271, wheat: 4125012991, white: 4294967295, whitesmoke: 4126537215, yellow: 4294902015, yellowgreen: 2597139199 });
-const shareable1 = isReanimated3.makeShareable(["backgroundColor", "borderBottomColor", "borderColor", "borderLeftColor", "borderRightColor", "borderTopColor", "borderStartColor", "borderEndColor", "borderBlockColor", "borderBlockEndColor", "borderBlockStartColor", "color", "outlineColor", "shadowColor", "textDecorationColor", "tintColor", "textShadowColor", "overlayColor", "fill", "floodColor", "lightingColor", "stopColor", "stroke"]);
+clampRGBA.__initData = {
+  code: "function clampRGBA_Pnpm_ColorsTs8(RGBA){for(let i=0;i<4;i++){RGBA[i]=Math.max(0,Math.min(RGBA[i],1));}}",
+};
+const shareable = isReanimated3.makeShareable({
+  transparent: 0,
+  aliceblue: 4042850303,
+  antiquewhite: 4209760255,
+  aqua: 16777215,
+  aquamarine: 2147472639,
+  azure: 4043309055,
+  beige: 4126530815,
+  bisque: 4293182719,
+  black: 255,
+  blanchedalmond: 4293643775,
+  blue: 65535,
+  blueviolet: 2318131967,
+  brown: 2771004159,
+  burlywood: 3736635391,
+  burntsienna: 3934150143,
+  cadetblue: 1604231423,
+  chartreuse: 2147418367,
+  chocolate: 3530104575,
+  coral: 4286533887,
+  cornflowerblue: 1687547391,
+  cornsilk: 4294499583,
+  crimson: 3692313855,
+  cyan: 16777215,
+  darkblue: 35839,
+  darkcyan: 9145343,
+  darkgoldenrod: 3095792639,
+  darkgray: 2846468607,
+  darkgreen: 6553855,
+  darkgrey: 2846468607,
+  darkkhaki: 3182914559,
+  darkmagenta: 2332068863,
+  darkolivegreen: 1433087999,
+  darkorange: 4287365375,
+  darkorchid: 2570243327,
+  darkred: 2332033279,
+  darksalmon: 3918953215,
+  darkseagreen: 2411499519,
+  darkslateblue: 1211993087,
+  darkslategray: 793726975,
+  darkslategrey: 793726975,
+  darkturquoise: 13554175,
+  darkviolet: 2483082239,
+  deeppink: 4279538687,
+  deepskyblue: 12582911,
+  dimgray: 1768516095,
+  dimgrey: 1768516095,
+  dodgerblue: 512819199,
+  firebrick: 2988581631,
+  floralwhite: 4294635775,
+  forestgreen: 579543807,
+  fuchsia: 4278255615,
+  gainsboro: 3705462015,
+  ghostwhite: 4177068031,
+  gold: 4292280575,
+  goldenrod: 3668254975,
+  gray: 2155905279,
+  green: 8388863,
+  greenyellow: 2919182335,
+  grey: 2155905279,
+  honeydew: 4043305215,
+  hotpink: 4285117695,
+  indianred: 3445382399,
+  indigo: 1258324735,
+  ivory: 4294963455,
+  khaki: 4041641215,
+  lavender: 3873897215,
+  lavenderblush: 4293981695,
+  lawngreen: 2096890111,
+  lemonchiffon: 4294626815,
+  lightblue: 2916673279,
+  lightcoral: 4034953471,
+  lightcyan: 3774873599,
+  lightgoldenrodyellow: 4210742015,
+  lightgray: 3553874943,
+  lightgreen: 2431553791,
+  lightgrey: 3553874943,
+  lightpink: 4290167295,
+  lightsalmon: 4288707327,
+  lightseagreen: 548580095,
+  lightskyblue: 2278488831,
+  lightslategray: 2005441023,
+  lightslategrey: 2005441023,
+  lightsteelblue: 2965692159,
+  lightyellow: 4294959359,
+  lime: 16711935,
+  limegreen: 852308735,
+  linen: 4210091775,
+  magenta: 4278255615,
+  maroon: 2147483903,
+  mediumaquamarine: 1724754687,
+  mediumblue: 52735,
+  mediumorchid: 3126187007,
+  mediumpurple: 2473647103,
+  mediumseagreen: 1018393087,
+  mediumslateblue: 2070474495,
+  mediumspringgreen: 16423679,
+  mediumturquoise: 1221709055,
+  mediumvioletred: 3340076543,
+  midnightblue: 421097727,
+  mintcream: 4127193855,
+  mistyrose: 4293190143,
+  moccasin: 4293178879,
+  navajowhite: 4292783615,
+  navy: 33023,
+  oldlace: 4260751103,
+  olive: 2155872511,
+  olivedrab: 1804477439,
+  orange: 4289003775,
+  orangered: 4282712319,
+  orchid: 3664828159,
+  palegoldenrod: 4008225535,
+  palegreen: 2566625535,
+  paleturquoise: 2951671551,
+  palevioletred: 3681588223,
+  papayawhip: 4293907967,
+  peachpuff: 4292524543,
+  peru: 3448061951,
+  pink: 4290825215,
+  plum: 3718307327,
+  powderblue: 2967529215,
+  purple: 2147516671,
+  rebeccapurple: 1714657791,
+  red: 4278190335,
+  rosybrown: 3163525119,
+  royalblue: 1097458175,
+  saddlebrown: 2336560127,
+  salmon: 4202722047,
+  sandybrown: 4104413439,
+  seagreen: 780883967,
+  seashell: 4294307583,
+  sienna: 2689740287,
+  silver: 3233857791,
+  skyblue: 2278484991,
+  slateblue: 1784335871,
+  slategray: 1887473919,
+  slategrey: 1887473919,
+  snow: 4294638335,
+  springgreen: 16744447,
+  steelblue: 1182971135,
+  tan: 3535047935,
+  teal: 8421631,
+  thistle: 3636451583,
+  tomato: 4284696575,
+  turquoise: 1088475391,
+  violet: 4001558271,
+  wheat: 4125012991,
+  white: 4294967295,
+  whitesmoke: 4126537215,
+  yellow: 4294902015,
+  yellowgreen: 2597139199,
+});
+const shareable1 = isReanimated3.makeShareable([
+  "backgroundColor",
+  "borderBottomColor",
+  "borderColor",
+  "borderLeftColor",
+  "borderRightColor",
+  "borderTopColor",
+  "borderStartColor",
+  "borderEndColor",
+  "borderBlockColor",
+  "borderBlockEndColor",
+  "borderBlockStartColor",
+  "color",
+  "outlineColor",
+  "shadowColor",
+  "textDecorationColor",
+  "tintColor",
+  "textShadowColor",
+  "overlayColor",
+  "fill",
+  "floodColor",
+  "lightingColor",
+  "stopColor",
+  "stroke",
+]);
 const shareable2 = isReanimated3.makeShareable({ boxShadow: "color" });
 function normalizeColor(num) {
   if (typeof num === "number") {
@@ -365,7 +573,7 @@ function normalizeColor(num) {
             }
             num87 = num88;
           }
-          tmp6 = (num81 << 24 | num84 << 16 | num87 << 8 | 255) >>> 0;
+          tmp6 = ((num81 << 24) | (num84 << 16) | (num87 << 8) | 255) >>> 0;
           const tmp68 = num81 << 24;
           const tmp70 = num84 << 16;
         } else {
@@ -426,7 +634,7 @@ function normalizeColor(num) {
                 }
                 num76 = num;
               }
-              let tmp53 = (num67 << 24 | num70 << 16 | num73 << 8 | num76) >>> 0;
+              let tmp53 = ((num67 << 24) | (num70 << 16) | (num73 << 8) | num76) >>> 0;
               const tmp57 = num67 << 24;
               const tmp59 = num70 << 16;
               const tmp61 = num73 << 8;
@@ -484,7 +692,7 @@ function normalizeColor(num) {
                 }
                 num61 = num64;
               }
-              tmp53 = (num52 << 24 | num55 << 16 | num58 << 8 | num61) >>> 0;
+              tmp53 = ((num52 << 24) | (num55 << 16) | (num58 << 8) | num61) >>> 0;
               const tmp46 = num52 << 24;
               const tmp48 = num55 << 16;
               const tmp50 = num58 << 8;
@@ -506,7 +714,11 @@ function normalizeColor(num) {
                 const match3 = hex4.exec(num);
                 if (match3) {
                   const _Number14 = Number;
-                  tmp6 = Number.parseInt(match3[1] + match3[1] + match3[2] + match3[2] + match3[3] + match3[3] + match3[4] + match3[4], 16) >>> 0;
+                  tmp6 =
+                    Number.parseInt(
+                      match3[1] + match3[1] + match3[2] + match3[2] + match3[3] + match3[3] + match3[4] + match3[4],
+                      16,
+                    ) >>> 0;
                 } else {
                   const hsl = tmp77.hsl;
                   const match4 = hsl.exec(num);
@@ -542,7 +754,7 @@ function normalizeColor(num) {
                       }
                       num40 = num42;
                     }
-                    tmp6 = (255 | hslToRgb((result + 360) % 360 / 360, num37, num40)) >>> 0;
+                    tmp6 = (255 | hslToRgb(((result + 360) % 360) / 360, num37, num40)) >>> 0;
                     const tmp34 = hslToRgb;
                     tmp38 = parsePercentage;
                   } else {
@@ -595,9 +807,9 @@ function normalizeColor(num) {
                           }
                           num32 = num2;
                         }
-                        let tmp22 = (hslToRgb((result1 + 360) % 360 / 360, num26, num29) | num32) >>> 0;
+                        let tmp22 = (hslToRgb(((result1 + 360) % 360) / 360, num26, num29) | num32) >>> 0;
                         const tmp23 = hslToRgb;
-                        const tmp23Result = hslToRgb((result1 + 360) % 360 / 360, num26, num29);
+                        const tmp23Result = hslToRgb(((result1 + 360) % 360) / 360, num26, num29);
                         tmp27 = parsePercentage;
                       } else {
                         if (typeof parse360 !== "function") {
@@ -645,10 +857,10 @@ function normalizeColor(num) {
                           }
                           num20 = num23;
                         }
-                        tmp22 = (hslToRgb((result2 + 360) % 360 / 360, num14, num17) | num20) >>> 0;
+                        tmp22 = (hslToRgb(((result2 + 360) % 360) / 360, num14, num17) | num20) >>> 0;
                         tmp16 = parsePercentage;
                         const tmp82 = hslToRgb;
-                        const tmp82Result = hslToRgb((result2 + 360) % 360 / 360, num14, num17);
+                        const tmp82Result = hslToRgb(((result2 + 360) % 360) / 360, num14, num17);
                       }
                     } else {
                       const hwb = tmp77.hwb;
@@ -686,7 +898,7 @@ function normalizeColor(num) {
                           }
                           num8 = num10;
                         }
-                        tmp6 = (255 | hwbToRgb((result3 + 360) % 360 / 360, num5, num8)) >>> 0;
+                        tmp6 = (255 | hwbToRgb(((result3 + 360) % 360) / 360, num5, num8)) >>> 0;
                         tmp11 = parsePercentage;
                         const tmp7 = hwbToRgb;
                       }
@@ -702,23 +914,34 @@ function normalizeColor(num) {
   }
   return tmp76;
 }
-normalizeColor.__closure = { MATCHERS: obj, names: shareable, parse255, parse1, hslToRgb, parse360, parsePercentage, hwbToRgb };
+normalizeColor.__closure = {
+  MATCHERS: obj,
+  names: shareable,
+  parse255,
+  parse1,
+  hslToRgb,
+  parse360,
+  parsePercentage,
+  hwbToRgb,
+};
 normalizeColor.__workletHash = 13656798455904;
-normalizeColor.__initData = { code: "function normalizeColor_Pnpm_ColorsTs9(color){const{MATCHERS,names,parse255,parse1,hslToRgb,parse360,parsePercentage,hwbToRgb}=this.__closure;if(typeof color==='number'){if(color>>>0===color&&color>=0&&color<=0xffffffff){return color;}return null;}if(typeof color!=='string'){return null;}let match;if(match=MATCHERS.hex6.exec(color)){return Number.parseInt(match[1]+'ff',16)>>>0;}if(names[color]!==undefined){return names[color];}if(match=MATCHERS.rgb.exec(color)){return((parse255(match[1])<<24|parse255(match[2])<<16|parse255(match[3])<<8|0x000000ff)>>>0);}if(match=MATCHERS.rgba.exec(color)){if(match[6]!==undefined){return(parse255(match[6])<<24|parse255(match[7])<<16|parse255(match[8])<<8|parse1(match[9]))>>>0;}return(parse255(match[2])<<24|parse255(match[3])<<16|parse255(match[4])<<8|parse1(match[5]))>>>0;}if(match=MATCHERS.hex3.exec(color)){return Number.parseInt(match[1]+match[1]+match[2]+match[2]+match[3]+match[3]+'ff',16)>>>0;}if(match=MATCHERS.hex8.exec(color)){return Number.parseInt(match[1],16)>>>0;}if(match=MATCHERS.hex4.exec(color)){return Number.parseInt(match[1]+match[1]+match[2]+match[2]+match[3]+match[3]+match[4]+match[4],16)>>>0;}if(match=MATCHERS.hsl.exec(color)){return(hslToRgb(parse360(match[1]),parsePercentage(match[2]),parsePercentage(match[3]))|0x000000ff)>>>0;}if(match=MATCHERS.hsla.exec(color)){if(match[6]!==undefined){return(hslToRgb(parse360(match[6]),parsePercentage(match[7]),parsePercentage(match[8]))|parse1(match[9]))>>>0;}return(hslToRgb(parse360(match[2]),parsePercentage(match[3]),parsePercentage(match[4]))|parse1(match[5]))>>>0;}if(match=MATCHERS.hwb.exec(color)){return(hwbToRgb(parse360(match[1]),parsePercentage(match[2]),parsePercentage(match[3]))|0x000000ff)>>>0;}return null;}" };
+normalizeColor.__initData = {
+  code: "function normalizeColor_Pnpm_ColorsTs9(color){const{MATCHERS,names,parse255,parse1,hslToRgb,parse360,parsePercentage,hwbToRgb}=this.__closure;if(typeof color==='number'){if(color>>>0===color&&color>=0&&color<=0xffffffff){return color;}return null;}if(typeof color!=='string'){return null;}let match;if(match=MATCHERS.hex6.exec(color)){return Number.parseInt(match[1]+'ff',16)>>>0;}if(names[color]!==undefined){return names[color];}if(match=MATCHERS.rgb.exec(color)){return((parse255(match[1])<<24|parse255(match[2])<<16|parse255(match[3])<<8|0x000000ff)>>>0);}if(match=MATCHERS.rgba.exec(color)){if(match[6]!==undefined){return(parse255(match[6])<<24|parse255(match[7])<<16|parse255(match[8])<<8|parse1(match[9]))>>>0;}return(parse255(match[2])<<24|parse255(match[3])<<16|parse255(match[4])<<8|parse1(match[5]))>>>0;}if(match=MATCHERS.hex3.exec(color)){return Number.parseInt(match[1]+match[1]+match[2]+match[2]+match[3]+match[3]+'ff',16)>>>0;}if(match=MATCHERS.hex8.exec(color)){return Number.parseInt(match[1],16)>>>0;}if(match=MATCHERS.hex4.exec(color)){return Number.parseInt(match[1]+match[1]+match[2]+match[2]+match[3]+match[3]+match[4]+match[4],16)>>>0;}if(match=MATCHERS.hsl.exec(color)){return(hslToRgb(parse360(match[1]),parsePercentage(match[2]),parsePercentage(match[3]))|0x000000ff)>>>0;}if(match=MATCHERS.hsla.exec(color)){if(match[6]!==undefined){return(hslToRgb(parse360(match[6]),parsePercentage(match[7]),parsePercentage(match[8]))|parse1(match[9]))>>>0;}return(hslToRgb(parse360(match[2]),parsePercentage(match[3]),parsePercentage(match[4]))|parse1(match[5]))>>>0;}if(match=MATCHERS.hwb.exec(color)){return(hwbToRgb(parse360(match[1]),parsePercentage(match[2]),parsePercentage(match[3]))|0x000000ff)>>>0;}return null;}",
+};
 const fn = function t(arg0) {
-  return (arg0 >> 24 & 255) / 255;
+  return ((arg0 >> 24) & 255) / 255;
 };
 fn.__closure = {};
 fn.__workletHash = 5651263271273;
 fn.__initData = { code: "function pnpm_ColorsTs10(c){return(c>>24&255)/255;}" };
 const fn2 = function n(arg0) {
-  return arg0 >> 16 & 255;
+  return (arg0 >> 16) & 255;
 };
 fn2.__closure = {};
 fn2.__workletHash = 10831766115157;
 fn2.__initData = { code: "function pnpm_ColorsTs11(c){return c>>16&255;}" };
 const fn3 = function a(arg0) {
-  return arg0 >> 8 & 255;
+  return (arg0 >> 8) & 255;
 };
 fn3.__closure = {};
 fn3.__workletHash = 3551227549865;
@@ -742,7 +965,9 @@ const fn5 = function s(arg0, arg1, arg2) {
 };
 fn5.__closure = {};
 fn5.__workletHash = 14577013878569;
-fn5.__initData = { code: "function pnpm_ColorsTs14(r,g,b,alpha=1){const safeAlpha=alpha<0.001?0:alpha;return\"rgba(\"+r+\", \"+g+\", \"+b+\", \"+safeAlpha+\")\";}" };
+fn5.__initData = {
+  code: 'function pnpm_ColorsTs14(r,g,b,alpha=1){const safeAlpha=alpha<0.001?0:alpha;return"rgba("+r+", "+g+", "+b+", "+safeAlpha+")";}',
+};
 class RGBtoHSV {
   constructor(arg0, arg1, arg2) {
     bound = Math.max(global, require, importDefault);
@@ -781,7 +1006,9 @@ class RGBtoHSV {
 }
 RGBtoHSV.__closure = {};
 RGBtoHSV.__workletHash = 13961093508129;
-RGBtoHSV.__initData = { code: "function RGBtoHSV_Pnpm_ColorsTs15(r,g,b){const max=Math.max(r,g,b);const min=Math.min(r,g,b);const d=max-min;const s=max===0?0:d/max;const v=max/255;let h=0;switch(max){case min:break;case r:h=g-b+d*(g<b?6:0);h/=6*d;break;case g:h=b-r+d*2;h/=6*d;break;case b:h=r-g+d*4;h/=6*d;break;}return{h:h,s:s,v:v};}" };
+RGBtoHSV.__initData = {
+  code: "function RGBtoHSV_Pnpm_ColorsTs15(r,g,b){const max=Math.max(r,g,b);const min=Math.min(r,g,b);const d=max-min;const s=max===0?0:d/max;const v=max/255;let h=0;switch(max){case min:break;case r:h=g-b+d*(g<b?6:0);h/=6*d;break;case g:h=b-r+d*2;h/=6*d;break;case b:h=r-g+d*4;h/=6*d;break;}return{h:h,s:s,v:v};}",
+};
 class HSVtoRGB {
   constructor(arg0, arg1, arg2) {
     rounded = Math.floor(6 * global);
@@ -833,7 +1060,9 @@ class HSVtoRGB {
 }
 HSVtoRGB.__closure = {};
 HSVtoRGB.__workletHash = 5232397720804;
-HSVtoRGB.__initData = { code: "function HSVtoRGB_Pnpm_ColorsTs16(h,s,v){let r,g,b;const i=Math.floor(h*6);const f=h*6-i;const p=v*(1-s);const q=v*(1-f*s);const t=v*(1-(1-f)*s);switch(i%6){case 0:[r,g,b]=[v,t,p];break;case 1:[r,g,b]=[q,v,p];break;case 2:[r,g,b]=[p,v,t];break;case 3:[r,g,b]=[p,q,v];break;case 4:[r,g,b]=[t,p,v];break;case 5:[r,g,b]=[v,p,q];break;}return{r:Math.round(r*255),g:Math.round(g*255),b:Math.round(b*255)};}" };
+HSVtoRGB.__initData = {
+  code: "function HSVtoRGB_Pnpm_ColorsTs16(h,s,v){let r,g,b;const i=Math.floor(h*6);const f=h*6-i;const p=v*(1-s);const q=v*(1-f*s);const t=v*(1-(1-f)*s);switch(i%6){case 0:[r,g,b]=[v,t,p];break;case 1:[r,g,b]=[q,v,p];break;case 2:[r,g,b]=[p,v,t];break;case 3:[r,g,b]=[p,q,v];break;case 4:[r,g,b]=[t,p,v];break;case 5:[r,g,b]=[v,p,q];break;}return{r:Math.round(r*255),g:Math.round(g*255),b:Math.round(b*255)};}",
+};
 const fn6 = function c(arg0, arg1, arg2, arg3) {
   if (typeof HSVtoRGB !== "function") {
     HermesBuiltin.throwTypeError();
@@ -887,7 +1116,9 @@ const fn6 = function c(arg0, arg1, arg2, arg3) {
 };
 fn6.__closure = { HSVtoRGB, rgbaColor: fn5 };
 fn6.__workletHash = 16564231422584;
-fn6.__initData = { code: "function pnpm_ColorsTs17(h,s,v,a){const{HSVtoRGB,rgbaColor}=this.__closure;const{r:r,g:g,b:b}=HSVtoRGB(h,s,v);return rgbaColor(r,g,b,a);}" };
+fn6.__initData = {
+  code: "function pnpm_ColorsTs17(h,s,v,a){const{HSVtoRGB,rgbaColor}=this.__closure;const{r:r,g:g,b:b}=HSVtoRGB(h,s,v);return rgbaColor(r,g,b,a);}",
+};
 function processColorInitially(arr) {
   if (null == arr) {
     return arr;
@@ -902,12 +1133,14 @@ function processColorInitially(arr) {
         }
       }
     }
-    return (tmp << 24 | tmp >>> 8) >>> 0;
+    return ((tmp << 24) | (tmp >>> 8)) >>> 0;
   }
 }
 processColorInitially.__closure = { normalizeColor };
 processColorInitially.__workletHash = 7970244905356;
-processColorInitially.__initData = { code: "function processColorInitially_Pnpm_ColorsTs18(color){const{normalizeColor}=this.__closure;if(color===null||color===undefined){return color;}let colorNumber;if(typeof color==='number'){colorNumber=color;}else{const normalizedColor=normalizeColor(color);if(normalizedColor===null||normalizedColor===undefined){return undefined;}if(typeof normalizedColor!=='number'){return null;}colorNumber=normalizedColor;}return(colorNumber<<24|colorNumber>>>8)>>>0;}" };
+processColorInitially.__initData = {
+  code: "function processColorInitially_Pnpm_ColorsTs18(color){const{normalizeColor}=this.__closure;if(color===null||color===undefined){return color;}let colorNumber;if(typeof color==='number'){colorNumber=color;}else{const normalizedColor=normalizeColor(color);if(normalizedColor===null||normalizedColor===undefined){return undefined;}if(typeof normalizedColor!=='number'){return null;}colorNumber=normalizedColor;}return(colorNumber<<24|colorNumber>>>8)>>>0;}",
+};
 function isColor(current) {
   let tmp = typeof current === "string";
   if (typeof current === "string") {
@@ -918,7 +1151,7 @@ function isColor(current) {
     if (null != current) {
       let tmp4 = current;
       if (typeof current === "number") {
-        tmp3 = (tmp4 << 24 | tmp4 >>> 8) >>> 0;
+        tmp3 = ((tmp4 << 24) | (tmp4 >>> 8)) >>> 0;
       } else {
         const tmp8 = normalizeColor(current);
         if (null != tmp8) {
@@ -933,7 +1166,9 @@ function isColor(current) {
 }
 isColor.__closure = { processColorInitially };
 isColor.__workletHash = 13504829084422;
-isColor.__initData = { code: "function isColor_Pnpm_ColorsTs19(value){const{processColorInitially}=this.__closure;if(typeof value!=='string'){return false;}return processColorInitially(value)!=null;}" };
+isColor.__initData = {
+  code: "function isColor_Pnpm_ColorsTs19(value){const{processColorInitially}=this.__closure;if(typeof value!=='string'){return false;}return processColorInitially(value)!=null;}",
+};
 isJest = isJest.isAndroid();
 function processColor(num) {
   if (typeof processColorInitially !== "function") {
@@ -943,7 +1178,7 @@ function processColor(num) {
   if (null != num) {
     let tmp2 = num;
     if (typeof num === "number") {
-      tmp = (tmp2 << 24 | tmp2 >>> 8) >>> 0;
+      tmp = ((tmp2 << 24) | (tmp2 >>> 8)) >>> 0;
     } else {
       const tmp7 = normalizeColor(num);
       if (null != tmp7) {
@@ -966,7 +1201,9 @@ function processColor(num) {
 }
 processColor.__closure = { processColorInitially, IS_ANDROID: isJest };
 processColor.__workletHash = 850613387330;
-processColor.__initData = { code: "function processColor_Pnpm_ColorsTs20(color){const{processColorInitially,IS_ANDROID}=this.__closure;let normalizedColor=processColorInitially(color);if(normalizedColor===null||normalizedColor===undefined){return undefined;}if(typeof normalizedColor!=='number'){return null;}if(IS_ANDROID){normalizedColor=normalizedColor|0x0;}return normalizedColor;}" };
+processColor.__initData = {
+  code: "function processColor_Pnpm_ColorsTs20(color){const{processColorInitially,IS_ANDROID}=this.__closure;let normalizedColor=processColorInitially(color);if(normalizedColor===null||normalizedColor===undefined){return undefined;}if(typeof normalizedColor!=='number'){return null;}if(IS_ANDROID){normalizedColor=normalizedColor|0x0;}return normalizedColor;}",
+};
 function processColorsInProps(obj) {
   for (const key10007 in arg0) {
     let tmp13 = key10007;
@@ -986,7 +1223,7 @@ function processColorsInProps(obj) {
           if (null != num) {
             let tmp2 = num;
             if (typeof num === "number") {
-              tmp = (tmp2 << 24 | tmp2 >>> 8) >>> 0;
+              tmp = ((tmp2 << 24) | (tmp2 >>> 8)) >>> 0;
             } else {
               const tmp9 = callback(num);
               if (null != tmp9) {
@@ -1045,7 +1282,9 @@ function processColorsInProps(obj) {
 }
 processColorsInProps.__closure = { ColorProperties: shareable1, processColor, NestedColorProperties: shareable2 };
 processColorsInProps.__workletHash = 978448002474;
-processColorsInProps.__initData = { code: "function processColorsInProps_Pnpm_ColorsTs21(props){const{ColorProperties,processColor,NestedColorProperties}=this.__closure;for(const key in props){if(ColorProperties.includes(key)){if(Array.isArray(props[key])){props[key]=props[key].map(function(color){return processColor(color);});}else{props[key]=processColor(props[key]);}}else if(NestedColorProperties[key]){const propGroupList=props[key];for(const propGroup of propGroupList){const nestedPropertyName=NestedColorProperties[key];if(propGroup[nestedPropertyName]!==undefined){propGroup[nestedPropertyName]=processColor(propGroup[nestedPropertyName]);}}}}}" };
+processColorsInProps.__initData = {
+  code: "function processColorsInProps_Pnpm_ColorsTs21(props){const{ColorProperties,processColor,NestedColorProperties}=this.__closure;for(const key in props){if(ColorProperties.includes(key)){if(Array.isArray(props[key])){props[key]=props[key].map(function(color){return processColor(color);});}else{props[key]=processColor(props[key]);}}else if(NestedColorProperties[key]){const propGroupList=props[key];for(const propGroup of propGroupList){const nestedPropertyName=NestedColorProperties[key];if(propGroup[nestedPropertyName]!==undefined){propGroup[nestedPropertyName]=processColor(propGroup[nestedPropertyName]);}}}}}",
+};
 function convertToRGBA(current) {
   if (typeof processColorInitially !== "function") {
     HermesBuiltin.throwTypeError();
@@ -1054,7 +1293,7 @@ function convertToRGBA(current) {
   if (null != current) {
     let tmp2 = current;
     if (typeof current === "number") {
-      tmp = (tmp2 << 24 | tmp2 >>> 8) >>> 0;
+      tmp = ((tmp2 << 24) | (tmp2 >>> 8)) >>> 0;
     } else {
       const tmp5 = normalizeColor(current);
       if (null != tmp5) {
@@ -1063,12 +1302,14 @@ function convertToRGBA(current) {
       }
     }
   }
-  const items = [(tmp << 8 >>> 24) / 255, (tmp << 16 >>> 24) / 255, (tmp << 24 >>> 24) / 255, (tmp >>> 24) / 255];
+  const items = [((tmp << 8) >>> 24) / 255, ((tmp << 16) >>> 24) / 255, ((tmp << 24) >>> 24) / 255, (tmp >>> 24) / 255];
   return items;
 }
 convertToRGBA.__closure = { processColorInitially };
 convertToRGBA.__workletHash = 15503083969849;
-convertToRGBA.__initData = { code: "function convertToRGBA_Pnpm_ColorsTs22(color){const{processColorInitially}=this.__closure;const processedColor=processColorInitially(color);const a=(processedColor>>>24)/255;const r=(processedColor<<8>>>24)/255;const g=(processedColor<<16>>>24)/255;const b=(processedColor<<24>>>24)/255;return[r,g,b,a];}" };
+convertToRGBA.__initData = {
+  code: "function convertToRGBA_Pnpm_ColorsTs22(color){const{processColorInitially}=this.__closure;const processedColor=processColorInitially(color);const a=(processedColor>>>24)/255;const r=(processedColor<<8>>>24)/255;const g=(processedColor<<16>>>24)/255;const b=(processedColor<<24>>>24)/255;return[r,g,b,a];}",
+};
 function rgbaArrayToRGBAColor(tmp3Result8) {
   let num = 0;
   if (tmp3Result8[3] >= 0.001) {
@@ -1080,7 +1321,9 @@ function rgbaArrayToRGBAColor(tmp3Result8) {
 }
 rgbaArrayToRGBAColor.__closure = {};
 rgbaArrayToRGBAColor.__workletHash = 9717764015913;
-rgbaArrayToRGBAColor.__initData = { code: "function rgbaArrayToRGBAColor_Pnpm_ColorsTs23(RGBA){const alpha=RGBA[3]<0.001?0:RGBA[3];return\"rgba(\"+Math.round(RGBA[0]*255)+\", \"+Math.round(RGBA[1]*255)+\", \"+Math.round(RGBA[2]*255)+\", \"+alpha+\")\";}" };
+rgbaArrayToRGBAColor.__initData = {
+  code: 'function rgbaArrayToRGBAColor_Pnpm_ColorsTs23(RGBA){const alpha=RGBA[3]<0.001?0:RGBA[3];return"rgba("+Math.round(RGBA[0]*255)+", "+Math.round(RGBA[1]*255)+", "+Math.round(RGBA[2]*255)+", "+alpha+")";}',
+};
 function toLinearSpace(tmp3Result1, exponent) {
   let num = exponent;
   if (exponent === undefined) {
@@ -1098,7 +1341,9 @@ function toLinearSpace(tmp3Result1, exponent) {
 }
 toLinearSpace.__closure = {};
 toLinearSpace.__workletHash = 2672100143834;
-toLinearSpace.__initData = { code: "function toLinearSpace_Pnpm_ColorsTs24(RGBA,gamma=2.2){const res=[];for(let i=0;i<3;++i){res.push(Math.pow(RGBA[i],gamma));}res.push(RGBA[3]);return res;}" };
+toLinearSpace.__initData = {
+  code: "function toLinearSpace_Pnpm_ColorsTs24(RGBA,gamma=2.2){const res=[];for(let i=0;i<3;++i){res.push(Math.pow(RGBA[i],gamma));}res.push(RGBA[3]);return res;}",
+};
 function toGammaSpace(items) {
   let num = arg1;
   if (arg1 === undefined) {
@@ -1116,7 +1361,9 @@ function toGammaSpace(items) {
 }
 toGammaSpace.__closure = {};
 toGammaSpace.__workletHash = 1726439203743;
-toGammaSpace.__initData = { code: "function toGammaSpace_Pnpm_ColorsTs25(RGBA,gamma=2.2){const res=[];for(let i=0;i<3;++i){res.push(Math.pow(RGBA[i],1/gamma));}res.push(RGBA[3]);return res;}" };
+toGammaSpace.__initData = {
+  code: "function toGammaSpace_Pnpm_ColorsTs25(RGBA,gamma=2.2){const res=[];for(let i=0;i<3;++i){res.push(Math.pow(RGBA[i],1/gamma));}res.push(RGBA[3]);return res;}",
+};
 
 export { clampRGBA };
 export const ColorProperties = shareable1;

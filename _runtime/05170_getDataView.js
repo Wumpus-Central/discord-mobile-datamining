@@ -113,5 +113,5 @@ arg5.default = {
       }
     }
     return { hasAppMarkers, tiffHeaderOffset, xmpChunks, iccChunks, vp8xChunkOffset };
-  }
+  },
 };

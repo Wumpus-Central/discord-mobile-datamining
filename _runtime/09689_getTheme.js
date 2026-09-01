@@ -7,21 +7,11 @@ import { DatePickerAndroid } from "09690_getStyle.js";
 
 require = arg1;
 ({ Appearance: obj1, Platform, Text } = get_ActivityIndicator);
-function getTheme(arg0) {
-
-}
-function getDividerColor(arg0) {
-
-}
-function getTextColor(arg0) {
-
-}
-function getButtonColor(arg0) {
-
-}
-function getTitle(arg0) {
-
-}
+function getTheme(arg0) {}
+function getDividerColor(arg0) {}
+function getTextColor(arg0) {}
+function getButtonColor(arg0) {}
+function getTitle(arg0) {}
 
 export default noopDefault.memo((theme) => {
   const obj = {};

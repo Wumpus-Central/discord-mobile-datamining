@@ -23,8 +23,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 class LinkingImpl {
   constructor() {
@@ -51,7 +50,7 @@ let items = [
     key: "addEventListener",
     value: function addEventListener(arg0, arg1) {
       return this.addListener(arg0, arg1);
-    }
+    },
   },
   {
     key: "openURL",
@@ -59,7 +58,7 @@ let items = [
       this._validateURL(closure_0);
       const tmp2 = LinkingImpl(70);
       return LinkingImpl(70)(LinkingImpl(471)).openURL(closure_0);
-    }
+    },
   },
   {
     key: "canOpenURL",
@@ -67,42 +66,42 @@ let items = [
       this._validateURL(closure_0);
       const tmp2 = LinkingImpl(70);
       return LinkingImpl(70)(LinkingImpl(471)).canOpenURL(closure_0);
-    }
+    },
   },
   {
     key: "openSettings",
     value: function openSettings() {
       const tmp = LinkingImpl(70);
       return LinkingImpl(70)(LinkingImpl(471)).openSettings();
-    }
+    },
   },
   {
     key: "getInitialURL",
     value: function getInitialURL() {
       const tmp = LinkingImpl(70);
       return LinkingImpl(70)(LinkingImpl(471)).getInitialURL();
-    }
+    },
   },
   {
     key: "sendIntent",
     value: function sendIntent(arg0, arg1) {
       const tmp = LinkingImpl(70);
       return LinkingImpl(70)(LinkingImpl(471)).sendIntent(arg0, arg1);
-    }
+    },
   },
   {
     key: "_validateURL",
     value: function _validateURL(closure_0) {
       LinkingImpl(38)(typeof closure_0 === "string", `Invalid URL: should be a string. Was: ${closure_0}`);
       LinkingImpl(38)(closure_0, "Invalid URL: cannot be empty");
-    }
-  }
+    },
+  },
 ];
 let obj = {
   key: "addEventListener",
   value: function addEventListener(arg0, arg1) {
     return this.addListener(arg0, arg1);
-  }
+  },
 };
 
 export default new importDefaultResult(LinkingImpl, items)();

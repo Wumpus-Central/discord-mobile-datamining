@@ -1,10 +1,25 @@
 // _runtime/01525_createNavigationContainerRef.js
 const require = arg1;
 let dependencyMap = arg6;
-let c2 = "The 'navigation' object hasn't been initialized yet. This might happen if you don't have a navigator mounted, or if the navigator hasn't finished mounting. See https://reactnavigation.org/docs/navigating-without-navigation-prop#handling-initialization for more details.";
-arg5.NOT_INITIALIZED_ERROR = "The 'navigation' object hasn't been initialized yet. This might happen if you don't have a navigator mounted, or if the navigator hasn't finished mounting. See https://reactnavigation.org/docs/navigating-without-navigation-prop#handling-initialization for more details.";
+let c2 =
+  "The 'navigation' object hasn't been initialized yet. This might happen if you don't have a navigator mounted, or if the navigator hasn't finished mounting. See https://reactnavigation.org/docs/navigating-without-navigation-prop#handling-initialization for more details.";
+arg5.NOT_INITIALIZED_ERROR =
+  "The 'navigation' object hasn't been initialized yet. This might happen if you don't have a navigator mounted, or if the navigator hasn't finished mounting. See https://reactnavigation.org/docs/navigating-without-navigation-prop#handling-initialization for more details.";
 arg5.createNavigationContainerRef = function createNavigationContainerRef() {
-  let items = [...Object.keys(closure_0(c1[0]).CommonActions), "addListener", "removeListener", "resetRoot", "dispatch", "isFocused", "canGoBack", "getRootState", "getState", "getParent", "getCurrentRoute", "getCurrentOptions"];
+  let items = [
+    ...Object.keys(closure_0(c1[0]).CommonActions),
+    "addListener",
+    "removeListener",
+    "resetRoot",
+    "dispatch",
+    "isFocused",
+    "canGoBack",
+    "getRootState",
+    "getState",
+    "getParent",
+    "getCurrentRoute",
+    "getCurrentOptions",
+  ];
   const sum = tmp + 1;
   const sum1 = sum + 1;
   const sum2 = sum1 + 1;
@@ -15,9 +30,7 @@ arg5.createNavigationContainerRef = function createNavigationContainerRef() {
   const sum7 = sum6 + 1;
   const _require = {};
   dependencyMap = null;
-  function removeListener(arg0, arg1) {
-
-  }
+  function removeListener(arg0, arg1) {}
   let obj = {};
   Object.defineProperty(obj, "current", {
     get: () => c1,
@@ -34,7 +47,7 @@ arg5.createNavigationContainerRef = function createNavigationContainerRef() {
           });
         });
       }
-    }
+    },
   });
   obj.isReady = function isReady() {
     let isReadyResult = null != _null;
@@ -43,54 +56,56 @@ arg5.createNavigationContainerRef = function createNavigationContainerRef() {
     }
     return isReadyResult;
   };
-  const merged = Object.assign(items.reduce((arg0, arg1) => {
-    closure_0 = arg1;
-    arg0[arg1] = () => {
-      const items = [...arguments];
-      let first;
-      closure_1 = undefined;
-      if ("removeListener" === first) {
-        [tmp17, tmp18] = items;
-        if (typeof closure_1_2 !== "function") {
-          HermesBuiltin.throwTypeError();
-        }
-        first = tmp18;
-        if (dependencyMap[tmp17]) {
-          tmp20[tmp17] = tmp20[tmp17].filter((arg0) => arg0 !== closure_0);
-          const arr4 = tmp20[tmp17];
-        }
-        if (closure_1_1 != null) {
-          obj.removeListener(tmp17, tmp18);
-        }
-        obj = closure_1_1;
-      } else if (null != closure_1_1) {
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        return HermesBuiltin.apply(items1, closure_1_1);
-      } else if ("addListener" === tmp) {
-        first = items[0];
-        closure_1 = tmp6;
-        dependencyMap[first] = dependencyMap[first] || [];
-        dependencyMap[first].push(items[1]);
-        return () => {
+  const merged = Object.assign(
+    items.reduce((arg0, arg1) => {
+      closure_0 = arg1;
+      arg0[arg1] = () => {
+        const items = [...arguments];
+        let first;
+        closure_1 = undefined;
+        if ("removeListener" === first) {
+          [tmp17, tmp18] = items;
           if (typeof closure_1_2 !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          closure_0 = tmp2;
-          if (first[closure_0]) {
-            tmp3[tmp] = tmp3[tmp].filter((arg0) => arg0 !== closure_0);
-            const arr = tmp3[tmp];
+          first = tmp18;
+          if (dependencyMap[tmp17]) {
+            tmp20[tmp17] = tmp20[tmp17].filter((arg0) => arg0 !== closure_0);
+            const arr4 = tmp20[tmp17];
           }
-          if (closure_1 != null) {
-            closure_1.removeListener(tmp, tmp2);
+          if (closure_1_1 != null) {
+            obj.removeListener(tmp17, tmp18);
           }
-        };
-      } else {
-        const _console = console;
-        console.error(removeListener);
-      }
-    };
-    return arg0;
-  }, {}));
+          obj = closure_1_1;
+        } else if (null != closure_1_1) {
+          const items1 = [];
+          HermesBuiltin.arraySpread(items, 0);
+          return HermesBuiltin.apply(items1, closure_1_1);
+        } else if ("addListener" === tmp) {
+          first = items[0];
+          closure_1 = tmp6;
+          dependencyMap[first] = dependencyMap[first] || [];
+          dependencyMap[first].push(items[1]);
+          return () => {
+            if (typeof closure_1_2 !== "function") {
+              HermesBuiltin.throwTypeError();
+            }
+            closure_0 = tmp2;
+            if (first[closure_0]) {
+              tmp3[tmp] = tmp3[tmp].filter((arg0) => arg0 !== closure_0);
+              const arr = tmp3[tmp];
+            }
+            if (closure_1 != null) {
+              closure_1.removeListener(tmp, tmp2);
+            }
+          };
+        } else {
+          const _console = console;
+          console.error(removeListener);
+        }
+      };
+      return arg0;
+    }, {}),
+  );
   return obj;
 };

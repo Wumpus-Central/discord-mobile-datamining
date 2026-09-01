@@ -25,4 +25,4 @@ export default function baseGetTag(arg0) {
     tmp5 = objectToString(arg0);
   }
   return tmp5;
-};
+}

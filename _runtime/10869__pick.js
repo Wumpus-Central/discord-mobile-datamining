@@ -10,7 +10,7 @@ function _pick() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -98,7 +98,11 @@ function _pick() {
                   let _HermesInternal = HermesInternal;
                   let tmp26 = new.target;
                   let tmp27 = new.target;
-                  let typeError1 = new TypeError("Unexpected type option in " + obj1.type + ", did you try using a DocumentPicker.types.* that does not exist?");
+                  let typeError1 = new TypeError(
+                    "Unexpected type option in " +
+                      obj1.type +
+                      ", did you try using a DocumentPicker.types.* that does not exist?",
+                  );
                   let tmp29 = typeError1;
                   throw typeError1;
                 }

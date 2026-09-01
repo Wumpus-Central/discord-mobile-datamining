@@ -14,7 +14,7 @@ let obj = {
   key: "length",
   get() {
     return Math.max(0, this.endIndex - this.startIndex + 1);
-  }
+  },
 };
 const items = [
   obj,
@@ -22,13 +22,13 @@ const items = [
     key: "at",
     value: function at(arg0) {
       return this.startIndex + arg0;
-    }
+    },
   },
   {
     key: "equals",
     value: function equals(startIndex) {
       return this.startIndex === startIndex.startIndex && this.endIndex === startIndex.endIndex;
-    }
+    },
   },
   {
     key: "toArray",
@@ -50,13 +50,13 @@ const items = [
         }
         return array;
       }
-    }
+    },
   },
   {
     key: "includes",
     value: function includes(arg0) {
       return arg0 >= this.startIndex && arg0 <= this.endIndex;
-    }
+    },
   },
   {
     key: "indexOf",
@@ -66,7 +66,7 @@ const items = [
         num = arg0 - this.startIndex;
       }
       return num;
-    }
+    },
   },
   {
     key: "findValue",
@@ -80,7 +80,7 @@ const items = [
         }
         return sum;
       }
-    }
+    },
   },
   {
     key: "every",
@@ -94,7 +94,7 @@ const items = [
         return false;
       }
       return true;
-    }
+    },
   },
   {
     key: "slice",
@@ -115,9 +115,8 @@ const items = [
       obj.startIndex = sum;
       obj.endIndex = bound;
       return obj;
-    }
+    },
   },
-
 ];
 obj = {
   key: Symbol.iterator,
@@ -182,7 +181,7 @@ obj = {
         }
       }
     })();
-  }
+  },
 };
 items[9] = obj;
 let tmp2 = _createClassDefault(ConsecutiveNumbers, items);

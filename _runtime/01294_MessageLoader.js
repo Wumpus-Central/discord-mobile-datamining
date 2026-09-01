@@ -91,29 +91,46 @@ class MessageLoader {
       _loop = function _loop(arg0) {
         closure_0 = arg0;
         hot = hot.hot;
-        hot.accept(hot, () => closure_2_5(closure_0, undefined, undefined, function() {
-          self = this;
-          c2 = 0;
-          c3 = 0;
-          return (function*() {
-            if (c3 === 2) {
-              c3 = 3;
-              HermesBuiltin.throwTypeError();
-            } else if (tmp3 === 3) {
-              if (arg0 === 1) {
-                throw arg1;
-              } else if (arg0 === 2) {
-                let obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
+        hot.accept(hot, () =>
+          closure_2_5(closure_0, undefined, undefined, function () {
+            self = this;
+            c2 = 0;
+            c3 = 0;
+            return (function* () {
+              if (c3 === 2) {
+                c3 = 3;
+                HermesBuiltin.throwTypeError();
+              } else if (tmp3 === 3) {
+                if (arg0 === 1) {
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  let obj = { value: null, done: true };
+                  obj[0] = arg1;
+                  return obj;
+                } else {
+                  return { value: "HermesInternal", done: null };
+                }
               } else {
-                return { value: "HermesInternal", done: null };
-              }
-            } else {
-              try {
-                c3 = 2;
-                if (0 === c2) {
-                  if (arg0 === 1) {
+                try {
+                  c3 = 2;
+                  if (0 === c2) {
+                    if (arg0 === 1) {
+                      c3 = 3;
+                      throw arg1;
+                    } else if (arg0 === 2) {
+                      c3 = 3;
+                      obj = { value: null, done: true };
+                      obj[0] = arg1;
+                      return obj;
+                    } else {
+                      closure_1 = self;
+                      c2 = 1;
+                      c3 = 1;
+                      obj1 = { value: null, done: false };
+                      obj1[0] = self._loadLocale(self);
+                      return obj1;
+                    }
+                  } else if (arg0 === 1) {
                     c3 = 3;
                     throw arg1;
                   } else if (arg0 === 2) {
@@ -122,33 +139,18 @@ class MessageLoader {
                     obj[0] = arg1;
                     return obj;
                   } else {
-                    closure_1 = self;
-                    c2 = 1;
-                    c3 = 1;
-                    obj1 = { value: null, done: false };
-                    obj1[0] = self._loadLocale(self);
-                    return obj1;
+                    closure_1._parseCache = {};
+                    c3 = 3;
+                    return { value: "HermesInternal", done: null };
                   }
-                } else if (arg0 === 1) {
-                  c3 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c3 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
-                } else {
-                  closure_1._parseCache = {};
-                  c3 = 3;
-                  return { value: "HermesInternal", done: null };
+                } catch (tmp8) {
+                  c3 = tmp;
+                  throw tmp8;
                 }
-              } catch (tmp8) {
-                c3 = tmp;
-                throw tmp8;
               }
-            }
-          })();
-        }));
+            })();
+          }),
+        );
       };
       entries = Object.entries(global);
       tmp5 = entries;
@@ -171,9 +173,7 @@ class MessageLoader {
 let items = [
   {
     key: "withDebugValues",
-    value: function withDebugValues(arg0, arg1) {
-
-    }
+    value: function withDebugValues(arg0, arg1) {},
   },
   {
     key: "fallbackWith",
@@ -191,7 +191,7 @@ let items = [
       }
       self.fallbackLoader = $$loader;
       $$loader._parentLoader = self;
-    }
+    },
   },
   {
     key: "get",
@@ -223,7 +223,7 @@ let items = [
             let combined = arg0;
             if (null != self._debugKeyMap) {
               const _HermesInternal = HermesInternal;
-              combined = "\"" + self._debugKeyMap[arg0] + "\" (" + arg0 + ")";
+              combined = '"' + self._debugKeyMap[arg0] + '" (' + arg0 + ")";
             }
             let combined1 = defaultLocale;
             if (null != self._localeFileMap) {
@@ -238,12 +238,19 @@ let items = [
             }
             const _console = console;
             const _HermesInternal4 = HermesInternal;
-            console.warn("Requested message " + combined + " does not have a value in the requested locale " + combined1 + " nor the default locale " + defaultLocale);
+            console.warn(
+              "Requested message " +
+                combined +
+                " does not have a value in the requested locale " +
+                combined1 +
+                " nor the default locale " +
+                defaultLocale,
+            );
             return self.fallbackMessage;
           }
         }
       }
-    }
+    },
   },
   {
     key: "getMessageValue",
@@ -276,17 +283,17 @@ let items = [
           self._loadLocale(defaultLocale);
         }
       }
-    }
+    },
   },
   {
     key: "_loadLocale",
     value: function _loadLocale(c0) {
       closure_0 = c0;
-      return fn(this, undefined, undefined, function() {
+      return fn(this, undefined, undefined, function () {
         const self = this;
         c5 = 0;
         c6 = 0;
-        return (function*() {
+        return (function* () {
           if (c6 === 2) {
             c6 = 3;
             HermesBuiltin.throwTypeError();
@@ -355,7 +362,11 @@ let items = [
                         if (supportedLocales.includes(self)) {
                           const _Error = Error;
                           const _HermesInternal = HermesInternal;
-                          error = new Error("Requested to load locale " + self + ", which should be supported, but no source for translation data was provided.");
+                          error = new Error(
+                            "Requested to load locale " +
+                              self +
+                              ", which should be supported, but no source for translation data was provided.",
+                          );
                           throw error;
                         }
                       }
@@ -404,7 +415,7 @@ let items = [
           }
         })();
       });
-    }
+    },
   },
   {
     key: "emitChange",
@@ -415,7 +426,7 @@ let items = [
         let item10008Result = item10008();
         continue;
       }
-    }
+    },
   },
   {
     key: "onChange",
@@ -428,7 +439,7 @@ let items = [
         const _subscribers = self._subscribers;
         return _subscribers.delete(closure_0);
       };
-    }
+    },
   },
   {
     key: "isLocaleLoading",
@@ -440,7 +451,7 @@ let items = [
         }
       }
       return null != current;
-    }
+    },
   },
   {
     key: "isLocaleLoaded",
@@ -461,18 +472,18 @@ let items = [
         tmp2 = tmp3;
       }
       return tmp2;
-    }
+    },
   },
   {
     key: "waitForLocaleLoaded",
     value: function waitForLocaleLoaded(defaultLocale, flag) {
-      return fn(this, arguments, undefined, function(arg0) {
+      return fn(this, arguments, undefined, function (arg0) {
         const self = this;
         closure_1 = arg0;
         closure_2 = arg1;
         c5 = 0;
         c6 = 0;
-        const iter = (function*(arg0) {
+        const iter = (function* (arg0) {
           if (c6 === 2) {
             c6 = 3;
             HermesBuiltin.throwTypeError();
@@ -564,17 +575,17 @@ let items = [
         iter.next();
         return iter;
       });
-    }
+    },
   },
   {
     key: "waitForDefaultLocale",
     value: function waitForDefaultLocale() {
-      return fn(this, arguments, undefined, function() {
+      return fn(this, arguments, undefined, function () {
         const self = this;
         closure_1 = arg0;
         c4 = 0;
         c5 = 0;
-        const iter = (function*() {
+        const iter = (function* () {
           closure_3 = flag;
           closure_2 = tmp2;
           flag = closure_1;
@@ -587,14 +598,14 @@ let items = [
         iter.next();
         return iter;
       });
-    }
-  }
+    },
+  },
 ];
 const _moduleResult = _createClass(MessageLoader, items);
 let closure_7 = [];
 
 export const loadAllMessagesInLocale = function loadAllMessagesInLocale(closure_0) {
-  return fn(this, undefined, undefined, function*() {
+  return fn(this, undefined, undefined, function* () {
     if (c0 === 2) {
       c0 = 3;
       HermesBuiltin.throwTypeError();
@@ -647,7 +658,7 @@ export const loadAllMessagesInLocale = function loadAllMessagesInLocale(closure_
   });
 };
 export const waitForAllDefaultIntlMessagesLoaded = function waitForAllDefaultIntlMessagesLoaded() {
-  return fn(this, undefined, undefined, function*() {
+  return fn(this, undefined, undefined, function* () {
     if (c0 === 2) {
       c0 = 3;
       HermesBuiltin.throwTypeError();
@@ -677,7 +688,9 @@ export const waitForAllDefaultIntlMessagesLoaded = function waitForAllDefaultInt
             c1 = 1;
             c0 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = Promise.all(closure_1_7.map((waitForDefaultLocale) => waitForDefaultLocale.waitForDefaultLocale()));
+            obj1[0] = Promise.all(
+              closure_1_7.map((waitForDefaultLocale) => waitForDefaultLocale.waitForDefaultLocale()),
+            );
             return obj1;
           }
         } else if (arg0 === 1) {

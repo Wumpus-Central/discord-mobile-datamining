@@ -121,103 +121,259 @@ class peg$SyntaxError {
   static buildMessage(arg0, arg1) {
     obj = {
       literal(text) {
-            let str = text.text;
-            const str2 = text.text.replace(/\\/g, "\\\\");
-            const str3 = text.text.replace(/\\/g, "\\\\").replace(/"/g, "\\\"");
-            const str4 = text.text.replace(/\\/g, "\\\\").replace(/"/g, "\\\"").replace(/\0/g, "\\0");
-            const str5 = text.text.replace(/\\/g, "\\\\").replace(/"/g, "\\\"").replace(/\0/g, "\\0").replace(/\t/g, "\\t");
-            const str6 = text.text.replace(/\\/g, "\\\\").replace(/"/g, "\\\"").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n");
-            const str7 = text.text.replace(/\\/g, "\\\\").replace(/"/g, "\\\"").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r");
-            return "\"" + text.text.replace(/\\/g, "\\\\").replace(/"/g, "\\\"").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/[\x00-\x0F]/g, (str) => {
+        let str = text.text;
+        const str2 = text.text.replace(/\\/g, "\\\\");
+        const str3 = text.text.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
+        const str4 = text.text.replace(/\\/g, "\\\\").replace(/"/g, '\\"').replace(/\0/g, "\\0");
+        const str5 = text.text.replace(/\\/g, "\\\\").replace(/"/g, '\\"').replace(/\0/g, "\\0").replace(/\t/g, "\\t");
+        const str6 = text.text
+          .replace(/\\/g, "\\\\")
+          .replace(/"/g, '\\"')
+          .replace(/\0/g, "\\0")
+          .replace(/\t/g, "\\t")
+          .replace(/\n/g, "\\n");
+        const str7 = text.text
+          .replace(/\\/g, "\\\\")
+          .replace(/"/g, '\\"')
+          .replace(/\0/g, "\\0")
+          .replace(/\t/g, "\\t")
+          .replace(/\n/g, "\\n")
+          .replace(/\r/g, "\\r");
+        return (
+          '"' +
+          text.text
+            .replace(/\\/g, "\\\\")
+            .replace(/"/g, '\\"')
+            .replace(/\0/g, "\\0")
+            .replace(/\t/g, "\\t")
+            .replace(/\n/g, "\\n")
+            .replace(/\r/g, "\\r")
+            .replace(/[\x00-\x0F]/g, (str) => {
               str = str.charCodeAt(0);
               return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
-            }).replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
+            })
+            .replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
               str = str.charCodeAt(0);
               return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
-            }) + "\"";
-          },
+            }) +
+          '"'
+        );
+      },
       class(parts) {
-            parts = parts.parts;
-            const mapped = parts.map((str) => {
-              if (Array.isArray(str)) {
-                const str18 = str[0];
-                const str20 = str[0].replace(/\\/g, "\\\\");
-                const str22 = str[0].replace(/\\/g, "\\\\").replace(/\]/g, "\\]");
-                const str24 = str[0].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^");
-                const str26 = str[0].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-");
-                const str28 = str[0].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0");
-                const str30 = str[0].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t");
-                const str32 = str[0].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n");
-                const str35 = str[0].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/[\x00-\x0F]/g, (str) => {
-                  str = str.charCodeAt(0);
-                  return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
-                });
-                const text = `${str35.replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
-                  str = str.charCodeAt(0);
-                  return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
-                })}-`;
-                const str34 = str[0].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r");
-                const str37 = str[1];
-                const str38 = str[1].replace(/\\/g, "\\\\");
-                const str39 = str[1].replace(/\\/g, "\\\\").replace(/\]/g, "\\]");
-                const str40 = str[1].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^");
-                const str41 = str[1].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-");
-                const str42 = str[1].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0");
-                const str43 = str[1].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t");
-                const str44 = str[1].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n");
-                const str45 = str[1].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r");
-                let text1 = `${str35.replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
-                  str = str.charCodeAt(0);
-                  return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
-                })}-${str[1].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/[\x00-\x0F]/g, (str) => {
-                  str = str.charCodeAt(0);
-                  return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
-                }).replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
-                  str = str.charCodeAt(0);
-                  return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
-                })}`;
-                const str46 = str[1].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/[\x00-\x0F]/g, (str) => {
-                  str = str.charCodeAt(0);
-                  return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
-                });
-              } else {
-                const str2 = str.replace(/\\/g, "\\\\");
-                const str4 = str.replace(/\\/g, "\\\\").replace(/\]/g, "\\]");
-                const str6 = str.replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^");
-                const str8 = str.replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-");
-                const str10 = str.replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0");
-                const str12 = str.replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t");
-                const str14 = str.replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n");
-                const str16 = str.replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r");
-                text1 = str.replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/[\x00-\x0F]/g, (str) => {
-                  str = str.charCodeAt(0);
-                  return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
-                }).replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
-                  str = str.charCodeAt(0);
-                  return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
-                });
-                const str17 = str.replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/[\x00-\x0F]/g, (str) => {
-                  str = str.charCodeAt(0);
-                  return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
-                });
-              }
-              return text1;
-            });
-            let str = "";
-            if (parts.inverted) {
-              str = "^";
-            }
-            return "[" + str + mapped.join("") + "]";
-          },
-      any() {
-            return "any character";
-          },
-      end() {
-            return "end of input";
-          },
-      other(description) {
-            return description.description;
+        parts = parts.parts;
+        const mapped = parts.map((str) => {
+          if (Array.isArray(str)) {
+            const str18 = str[0];
+            const str20 = str[0].replace(/\\/g, "\\\\");
+            const str22 = str[0].replace(/\\/g, "\\\\").replace(/\]/g, "\\]");
+            const str24 = str[0].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^");
+            const str26 = str[0]
+              .replace(/\\/g, "\\\\")
+              .replace(/\]/g, "\\]")
+              .replace(/\^/g, "\\^")
+              .replace(/-/g, "\\-");
+            const str28 = str[0]
+              .replace(/\\/g, "\\\\")
+              .replace(/\]/g, "\\]")
+              .replace(/\^/g, "\\^")
+              .replace(/-/g, "\\-")
+              .replace(/\0/g, "\\0");
+            const str30 = str[0]
+              .replace(/\\/g, "\\\\")
+              .replace(/\]/g, "\\]")
+              .replace(/\^/g, "\\^")
+              .replace(/-/g, "\\-")
+              .replace(/\0/g, "\\0")
+              .replace(/\t/g, "\\t");
+            const str32 = str[0]
+              .replace(/\\/g, "\\\\")
+              .replace(/\]/g, "\\]")
+              .replace(/\^/g, "\\^")
+              .replace(/-/g, "\\-")
+              .replace(/\0/g, "\\0")
+              .replace(/\t/g, "\\t")
+              .replace(/\n/g, "\\n");
+            const str35 = str[0]
+              .replace(/\\/g, "\\\\")
+              .replace(/\]/g, "\\]")
+              .replace(/\^/g, "\\^")
+              .replace(/-/g, "\\-")
+              .replace(/\0/g, "\\0")
+              .replace(/\t/g, "\\t")
+              .replace(/\n/g, "\\n")
+              .replace(/\r/g, "\\r")
+              .replace(/[\x00-\x0F]/g, (str) => {
+                str = str.charCodeAt(0);
+                return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+              });
+            const text = `${str35.replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
+              str = str.charCodeAt(0);
+              return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
+            })}-`;
+            const str34 = str[0]
+              .replace(/\\/g, "\\\\")
+              .replace(/\]/g, "\\]")
+              .replace(/\^/g, "\\^")
+              .replace(/-/g, "\\-")
+              .replace(/\0/g, "\\0")
+              .replace(/\t/g, "\\t")
+              .replace(/\n/g, "\\n")
+              .replace(/\r/g, "\\r");
+            const str37 = str[1];
+            const str38 = str[1].replace(/\\/g, "\\\\");
+            const str39 = str[1].replace(/\\/g, "\\\\").replace(/\]/g, "\\]");
+            const str40 = str[1].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^");
+            const str41 = str[1]
+              .replace(/\\/g, "\\\\")
+              .replace(/\]/g, "\\]")
+              .replace(/\^/g, "\\^")
+              .replace(/-/g, "\\-");
+            const str42 = str[1]
+              .replace(/\\/g, "\\\\")
+              .replace(/\]/g, "\\]")
+              .replace(/\^/g, "\\^")
+              .replace(/-/g, "\\-")
+              .replace(/\0/g, "\\0");
+            const str43 = str[1]
+              .replace(/\\/g, "\\\\")
+              .replace(/\]/g, "\\]")
+              .replace(/\^/g, "\\^")
+              .replace(/-/g, "\\-")
+              .replace(/\0/g, "\\0")
+              .replace(/\t/g, "\\t");
+            const str44 = str[1]
+              .replace(/\\/g, "\\\\")
+              .replace(/\]/g, "\\]")
+              .replace(/\^/g, "\\^")
+              .replace(/-/g, "\\-")
+              .replace(/\0/g, "\\0")
+              .replace(/\t/g, "\\t")
+              .replace(/\n/g, "\\n");
+            const str45 = str[1]
+              .replace(/\\/g, "\\\\")
+              .replace(/\]/g, "\\]")
+              .replace(/\^/g, "\\^")
+              .replace(/-/g, "\\-")
+              .replace(/\0/g, "\\0")
+              .replace(/\t/g, "\\t")
+              .replace(/\n/g, "\\n")
+              .replace(/\r/g, "\\r");
+            let text1 = `${str35.replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
+              str = str.charCodeAt(0);
+              return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
+            })}-${str[1]
+              .replace(/\\/g, "\\\\")
+              .replace(/\]/g, "\\]")
+              .replace(/\^/g, "\\^")
+              .replace(/-/g, "\\-")
+              .replace(/\0/g, "\\0")
+              .replace(/\t/g, "\\t")
+              .replace(/\n/g, "\\n")
+              .replace(/\r/g, "\\r")
+              .replace(/[\x00-\x0F]/g, (str) => {
+                str = str.charCodeAt(0);
+                return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+              })
+              .replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
+                str = str.charCodeAt(0);
+                return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
+              })}`;
+            const str46 = str[1]
+              .replace(/\\/g, "\\\\")
+              .replace(/\]/g, "\\]")
+              .replace(/\^/g, "\\^")
+              .replace(/-/g, "\\-")
+              .replace(/\0/g, "\\0")
+              .replace(/\t/g, "\\t")
+              .replace(/\n/g, "\\n")
+              .replace(/\r/g, "\\r")
+              .replace(/[\x00-\x0F]/g, (str) => {
+                str = str.charCodeAt(0);
+                return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+              });
+          } else {
+            const str2 = str.replace(/\\/g, "\\\\");
+            const str4 = str.replace(/\\/g, "\\\\").replace(/\]/g, "\\]");
+            const str6 = str.replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^");
+            const str8 = str.replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-");
+            const str10 = str
+              .replace(/\\/g, "\\\\")
+              .replace(/\]/g, "\\]")
+              .replace(/\^/g, "\\^")
+              .replace(/-/g, "\\-")
+              .replace(/\0/g, "\\0");
+            const str12 = str
+              .replace(/\\/g, "\\\\")
+              .replace(/\]/g, "\\]")
+              .replace(/\^/g, "\\^")
+              .replace(/-/g, "\\-")
+              .replace(/\0/g, "\\0")
+              .replace(/\t/g, "\\t");
+            const str14 = str
+              .replace(/\\/g, "\\\\")
+              .replace(/\]/g, "\\]")
+              .replace(/\^/g, "\\^")
+              .replace(/-/g, "\\-")
+              .replace(/\0/g, "\\0")
+              .replace(/\t/g, "\\t")
+              .replace(/\n/g, "\\n");
+            const str16 = str
+              .replace(/\\/g, "\\\\")
+              .replace(/\]/g, "\\]")
+              .replace(/\^/g, "\\^")
+              .replace(/-/g, "\\-")
+              .replace(/\0/g, "\\0")
+              .replace(/\t/g, "\\t")
+              .replace(/\n/g, "\\n")
+              .replace(/\r/g, "\\r");
+            text1 = str
+              .replace(/\\/g, "\\\\")
+              .replace(/\]/g, "\\]")
+              .replace(/\^/g, "\\^")
+              .replace(/-/g, "\\-")
+              .replace(/\0/g, "\\0")
+              .replace(/\t/g, "\\t")
+              .replace(/\n/g, "\\n")
+              .replace(/\r/g, "\\r")
+              .replace(/[\x00-\x0F]/g, (str) => {
+                str = str.charCodeAt(0);
+                return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+              })
+              .replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
+                str = str.charCodeAt(0);
+                return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
+              });
+            const str17 = str
+              .replace(/\\/g, "\\\\")
+              .replace(/\]/g, "\\]")
+              .replace(/\^/g, "\\^")
+              .replace(/-/g, "\\-")
+              .replace(/\0/g, "\\0")
+              .replace(/\t/g, "\\t")
+              .replace(/\n/g, "\\n")
+              .replace(/\r/g, "\\r")
+              .replace(/[\x00-\x0F]/g, (str) => {
+                str = str.charCodeAt(0);
+                return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+              });
           }
+          return text1;
+        });
+        let str = "";
+        if (parts.inverted) {
+          str = "^";
+        }
+        return "[" + str + mapped.join("") + "]";
+      },
+      any() {
+        return "any character";
+      },
+      end() {
+        return "end of input";
+      },
+      other(description) {
+        return description.description;
+      },
     };
     closure_0 = obj;
     mapped = global.map(function describeExpectation(arg0) {
@@ -266,8 +422,8 @@ class peg$SyntaxError {
     if (require) {
       str5 = "\\\\";
       str6 = require.replace(/\\/g, "\\\\");
-      str7 = "\\\"";
-      str8 = str6.replace(/"/g, "\\\"");
+      str7 = '\\"';
+      str8 = str6.replace(/"/g, '\\"');
       str9 = "\\0";
       str10 = str8.replace(/\0/g, "\\0");
       str11 = "\\t";
@@ -280,11 +436,14 @@ class peg$SyntaxError {
         str = str.charCodeAt(0);
         return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
       });
-      str18 = "\"";
-      str4 = `${"\"" + str17.replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
-        str = str.charCodeAt(0);
-        return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
-      })}"`;
+      str18 = '"';
+      str4 = `${
+        '"' +
+        str17.replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
+          str = str.charCodeAt(0);
+          return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
+        })
+      }"`;
     }
     return text + " but " + str4 + " found.";
   }
@@ -378,7 +537,17 @@ obj = {
                               throwTypeErrorResult = HermesBuiltin.throwTypeError();
                             }
                             obj = { matrix: null };
-                            const items = [tmp17, tmp16Result, tmp16Result, tmp16Result1, tmp16Result2, tmp16Result3, tmp16Result4, tmp16Result5, tmp16Result6];
+                            const items = [
+                              tmp17,
+                              tmp16Result,
+                              tmp16Result,
+                              tmp16Result1,
+                              tmp16Result2,
+                              tmp16Result3,
+                              tmp16Result4,
+                              tmp16Result5,
+                              tmp16Result6,
+                            ];
                             obj[0] = items;
                             let tmp14 = obj;
                           } else {
@@ -589,7 +758,7 @@ obj = {
               } else {
                 const obj2 = { scaleX: null };
                 obj2[0] = throwTypeErrorResult;
-                items2 = [obj2, ];
+                items2 = [obj2];
                 const obj3 = { scaleY: null };
                 obj3[0] = throwTypeErrorResult;
                 items2[1] = obj3;
@@ -1585,33 +1754,15 @@ obj = {
     closure_38 = { type: "class", parts: items, inverted: false, ignoreCase: false };
     closure_39 = { type: "literal", text: ".", ignoreCase: false };
     closure_40 = { type: "literal", text: "e", ignoreCase: false };
-    function peg$f0(arg0, arg1) {
-
-    }
-    function peg$f1(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) {
-
-    }
-    function peg$f2(arg0, arg1) {
-
-    }
-    function peg$f3(arg0, arg1) {
-
-    }
-    function peg$f4(arg0, arg1) {
-
-    }
-    function peg$f5(arg0, arg1) {
-
-    }
-    function peg$f6(arg0) {
-
-    }
-    function peg$f7(arg0) {
-
-    }
-    function peg$f8() {
-
-    }
+    function peg$f0(arg0, arg1) {}
+    function peg$f1(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) {}
+    function peg$f2(arg0, arg1) {}
+    function peg$f3(arg0, arg1) {}
+    function peg$f4(arg0, arg1) {}
+    function peg$f5(arg0, arg1) {}
+    function peg$f6(arg0) {}
+    function peg$f7(arg0) {}
+    function peg$f8() {}
     closure_50 = tmp;
     closure_51 = tmp;
     let items1 = [{ line: 1, column: 1 }];
@@ -1623,7 +1774,7 @@ obj = {
         peg$parsestart = obj[obj.startRule];
       } else {
         const _Error = Error;
-        error = new Error("Can't start parsing from rule \"" + obj.startRule + "\".");
+        error = new Error("Can't start parsing from rule \"" + obj.startRule + '".');
         throw error;
       }
     }
@@ -1755,7 +1906,7 @@ obj = {
       tmp26.name = "SyntaxError";
       throw tmp26;
     }
-  }
+  },
 };
 
 export default obj;

@@ -25,8 +25,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 class FeDropShadow {
@@ -62,7 +61,12 @@ let obj = {
     }
     let obj = { children: null };
     ({ dx, dy, result } = props);
-    const items = [callback3(FeDropShadow(8291), { in: str, stdDeviation: props.stdDeviation }), callback3(FeDropShadow(8293), { dx, dy, result: "offsetblur" }), , , ];
+    const items = [
+      callback3(FeDropShadow(8291), { in: str, stdDeviation: props.stdDeviation }),
+      callback3(FeDropShadow(8293), { dx, dy, result: "offsetblur" }),
+      ,
+      ,
+    ];
     obj = { floodColor: self.props.floodColor, floodOpacity: self.props.floodOpacity };
     items[2] = callback3(FeDropShadow(8295), obj);
     items[3] = callback3(FeDropShadow(8284), { in2: "offsetblur", operator: "in" });
@@ -72,7 +76,7 @@ let obj = {
     items[4] = callback4(FeDropShadow(8297), obj);
     obj[0] = items;
     return callback4(React.Fragment, obj);
-  }
+  },
 };
 let items = [obj];
 const importDefaultResultResult = importDefaultResult(FeDropShadow, items);

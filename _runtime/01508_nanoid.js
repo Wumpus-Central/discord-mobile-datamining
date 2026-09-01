@@ -11,7 +11,7 @@ arg5.nanoid = () => {
   if (num | 0) {
     do {
       let _Math = Math;
-      str = `${"useandom-26T198340PX75pxJACKVERYMINDBUSHWOLF_GQZbfghjklqvwyzrict"[64 * Math.random(Math) | 0]}`;
+      str = `${"useandom-26T198340PX75pxJACKVERYMINDBUSHWOLF_GQZbfghjklqvwyzrict"[(64 * Math.random(Math)) | 0]}`;
       tmp3 = diff;
       diff = diff - 1;
       str2 = str;
@@ -38,7 +38,7 @@ arg5.customAlphabet = (arg0) => {
       do {
         let tmp4 = length;
         let _Math = Math;
-        str = `${closure_0[Math.random(Math) * closure_0.length | 0]}`;
+        str = `${closure_0[(Math.random(Math) * closure_0.length) | 0]}`;
         tmp5 = diff;
         diff = diff - 1;
         str2 = str;

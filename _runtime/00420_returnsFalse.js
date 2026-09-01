@@ -8,7 +8,16 @@ import noop from "00019_noop.js";
 import { jsx } from "react/00021_jsxProd.js";
 
 const require = arg1;
-let closure_3 = ["disabled", "ios_backgroundColor", "onChange", "onValueChange", "style", "thumbColor", "trackColor", "value"];
+let closure_3 = [
+  "disabled",
+  "ios_backgroundColor",
+  "onChange",
+  "onValueChange",
+  "style",
+  "thumbColor",
+  "trackColor",
+  "value",
+];
 let closure_4 = ["onTintColor", "tintColor"];
 noopAll;
 ({ useLayoutEffect: error, useRef: closure_8, useState: c9 } = noop);
@@ -80,7 +89,16 @@ export default function Switch(ref) {
     obj.disabled = disabled;
     tmp16 = obj;
   }
-  obj = { accessibilityState: tmp16, enabled: true !== disabled, on: tmp20, style, thumbTintColor: thumbColor, trackColorForFalse: _false, trackColorForTrue: _true, trackTintColor: null };
+  obj = {
+    accessibilityState: tmp16,
+    enabled: true !== disabled,
+    on: tmp20,
+    style,
+    thumbTintColor: thumbColor,
+    trackColorForFalse: _false,
+    trackColorForTrue: _true,
+    trackTintColor: null,
+  };
   if (true === value) {
     _false = _true;
   }
@@ -110,4 +128,4 @@ export default function Switch(ref) {
   obj.onStartShouldSetResponder = returnsTrue;
   obj.ref = tmp9;
   return tmp21(__INTERNAL_VIEW_CONFIGDefault, obj);
-};
+}

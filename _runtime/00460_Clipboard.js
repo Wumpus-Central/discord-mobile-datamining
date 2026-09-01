@@ -7,5 +7,5 @@ arg5.default = {
   },
   setString(arg0) {
     module(461).setString(arg0);
-  }
+  },
 };

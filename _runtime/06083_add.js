@@ -66,7 +66,7 @@ function add(s, s2) {
           let sum1 = arr5[diff2] + tmp19[diff2] + num7;
           arr5[diff2] = sum1;
           let tmp22 = c9;
-          num7 = sum1 / c9 | 0;
+          num7 = (sum1 / c9) | 0;
           arr5[diff2] = arr5[diff2] % c9;
           num8 = num7;
           length3 = diff2;
@@ -232,7 +232,7 @@ function exp(constructor) {
     }
     const _Math = Math;
     const _Math2 = Math;
-    const sum = tmp11 + (Math.log(pow(2, num6)) / Math.LN10 * 2 + 5 | 0);
+    const sum = tmp11 + (((Math.log(pow(2, num6)) / Math.LN10) * 2 + 5) | 0);
     const constructor1 = new constructor(Decimal);
     let obj5 = constructor1;
     constructor.precision = sum;
@@ -591,7 +591,7 @@ function round(d) {
           let num15 = 0;
           if (sum1 > 0) {
             const result1 = first1 / tmp20(10, num5 - sum1);
-            num15 = (result1 % tmp20(10, sum1) | 0) * num14;
+            num15 = ((result1 % tmp20(10, sum1)) | 0) * num14;
           }
           d[num6] = num15;
           diff1 = num6;
@@ -653,7 +653,7 @@ function round(d) {
       }
       d.length = 1;
       const diff4 = arg1 - tmp42 - 1;
-      d[0] = pow(10, (7 - diff4 % 7) % 7);
+      d[0] = pow(10, (7 - (diff4 % 7)) % 7);
       d.e = floor(-diff4 / 7) || 0;
       const tmp46 = floor(-diff4 / 7) || 0;
     } else {
@@ -666,7 +666,7 @@ function round(d) {
   } else {
     let tmp14 = pow;
     const tmp47 = pow(10, num5 - sum1 - 1);
-    let tmp17 = first1 / tmp47 % 10 | 0;
+    let tmp17 = ((first1 / tmp47) % 10) | 0;
     const tmp9 = arg1 < 0 || undefined !== d[num6 + 1] || first1 % tmp47;
     if (arg2 < 4) {
       if (!tmp17) {
@@ -1089,7 +1089,13 @@ function config(obj) {
   }
   throw Error("[DecimalError] Object expected");
 }
-let obj = { precision: 20, rounding: 4, toExpNeg: -7, toExpPos: 21, LN10: "2.302585092994045684017991454684364207601101488628772976033327900967572609677352480235997205089598298341967784042286" };
+let obj = {
+  precision: 20,
+  rounding: 4,
+  toExpNeg: -7,
+  toExpPos: 21,
+  LN10: "2.302585092994045684017991454684364207601101488628772976033327900967572609677352480235997205089598298341967784042286",
+};
 let Decimal = obj;
 let c2 = true;
 let c3 = "[DecimalError] ";
@@ -1099,7 +1105,7 @@ const re8 = /^(\d+(\.\d*)?|\.\d+)(e[+-]?\d+)?$/i;
 let c9 = 10000000;
 let closure_10 = floor(1286742750677284.5);
 obj = {};
-const fn = function() {
+const fn = function () {
   const constructor = new this.constructor(this);
   if (constructor.s) {
     constructor.s = 1;
@@ -1108,14 +1114,14 @@ const fn = function() {
 };
 obj.abs = fn;
 obj.absoluteValue = fn;
-const fn2 = function(arg0) {
+const fn2 = function (arg0) {
   const self = this;
   const constructor = new this.constructor(arg0);
   if (this.s !== constructor.s) {
     return self.s || -constructor.s;
   } else if (self.e !== constructor.e) {
     let num8 = -1;
-    if (self.e > constructor.e ^ self.s < 0) {
+    if ((self.e > constructor.e) ^ (self.s < 0)) {
       num8 = 1;
     }
     return num8;
@@ -1130,7 +1136,7 @@ const fn2 = function(arg0) {
         num3 = num3 + 1;
       }
       let num6 = -1;
-      if (self.d[num3] > constructor.d[num3] ^ self.s < 0) {
+      if ((self.d[num3] > constructor.d[num3]) ^ (self.s < 0)) {
         num6 = 1;
       }
       return num6;
@@ -1138,7 +1144,7 @@ const fn2 = function(arg0) {
     let num4 = 0;
     if (self.d.length !== constructor.d.length) {
       let num5 = -1;
-      if (length > length2 ^ self.s < 0) {
+      if ((length > length2) ^ (self.s < 0)) {
         num5 = 1;
       }
       num4 = num5;
@@ -1148,7 +1154,7 @@ const fn2 = function(arg0) {
 };
 obj.cmp = fn2;
 obj.comparedTo = fn2;
-const fn3 = function() {
+const fn3 = function () {
   let result2;
   const diff = this.d.length - 1;
   const result = 7 * (diff - this.e);
@@ -1175,13 +1181,13 @@ const fn3 = function() {
 };
 obj.dp = fn3;
 obj.decimalPlaces = fn3;
-const fn4 = function(arg0) {
+const fn4 = function (arg0) {
   const constructor = new this.constructor(arg0);
   return f108401(this, constructor);
 };
 obj.div = fn4;
 obj.dividedBy = fn4;
-const fn5 = function(arg0) {
+const fn5 = function (arg0) {
   let constructor = this.constructor;
   constructor = new constructor(arg0);
   const tmp2 = f108401(this, constructor, 0, 1);
@@ -1190,12 +1196,12 @@ const fn5 = function(arg0) {
 };
 obj.idiv = fn5;
 obj.dividedToIntegerBy = fn5;
-const fn6 = function(arg0) {
+const fn6 = function (arg0) {
   return !this.cmp(arg0);
 };
 obj.eq = fn6;
 obj.equals = fn6;
-obj.exponent = function() {
+obj.exponent = function () {
   let result = 7 * this.e;
   let first = this.d[0];
   let tmp3 = result;
@@ -1208,45 +1214,45 @@ obj.exponent = function() {
   }
   return tmp3;
 };
-const fn7 = function(arg0) {
+const fn7 = function (arg0) {
   return this.cmp(arg0) > 0;
 };
 obj.gt = fn7;
 obj.greaterThan = fn7;
-const fn8 = function(arg0) {
+const fn8 = function (arg0) {
   return this.cmp(arg0) >= 0;
 };
 obj.gte = fn8;
 obj.greaterThanOrEqualTo = fn8;
-const fn9 = function() {
+const fn9 = function () {
   return this.e > this.d.length - 2;
 };
 obj.isint = fn9;
 obj.isInteger = fn9;
-const fn10 = function() {
+const fn10 = function () {
   return this.s < 0;
 };
 obj.isneg = fn10;
 obj.isNegative = fn10;
-const fn11 = function() {
+const fn11 = function () {
   return this.s > 0;
 };
 obj.ispos = fn11;
 obj.isPositive = fn11;
-obj.isZero = function() {
+obj.isZero = function () {
   return 0 === this.s;
 };
-const fn12 = function(arg0) {
+const fn12 = function (arg0) {
   return this.cmp(arg0) < 0;
 };
 obj.lt = fn12;
 obj.lessThan = fn12;
-const fn13 = function(arg0) {
+const fn13 = function (arg0) {
   return this.cmp(arg0) < 1;
 };
 obj.lte = fn13;
 obj.lessThanOrEqualTo = fn13;
-const fn14 = function(arg0) {
+const fn14 = function (arg0) {
   const self = this;
   let constructor = this.constructor;
   const precision = constructor.precision;
@@ -1282,7 +1288,7 @@ const fn14 = function(arg0) {
 };
 obj.log = fn14;
 obj.logarithm = fn14;
-const fn15 = function(arg0) {
+const fn15 = function (arg0) {
   const self = this;
   const constructor = new this.constructor(arg0);
   if (this.s == constructor.s) {
@@ -1295,7 +1301,7 @@ const fn15 = function(arg0) {
 };
 obj.sub = fn15;
 obj.minus = fn15;
-const fn16 = function(arg0) {
+const fn16 = function (arg0) {
   const self = this;
   let constructor = this.constructor;
   constructor = new constructor(arg0);
@@ -1318,24 +1324,24 @@ const fn16 = function(arg0) {
 };
 obj.mod = fn16;
 obj.modulo = fn16;
-const fn17 = function() {
+const fn17 = function () {
   return exp(this);
 };
 obj.exp = fn17;
 obj.naturalExponential = fn17;
-const fn18 = function() {
+const fn18 = function () {
   return ln(this);
 };
 obj.ln = fn18;
 obj.naturalLogarithm = fn18;
-const fn19 = function() {
+const fn19 = function () {
   const constructor = new this.constructor(this);
   constructor.s = -constructor.s || 0;
   return constructor;
 };
 obj.neg = fn19;
 obj.negated = fn19;
-const fn20 = function(arg0) {
+const fn20 = function (arg0) {
   const self = this;
   const constructor = new this.constructor(arg0);
   if (this.s == constructor.s) {
@@ -1348,7 +1354,7 @@ const fn20 = function(arg0) {
 };
 obj.add = fn20;
 obj.plus = fn20;
-const fn21 = function(arg0) {
+const fn21 = function (arg0) {
   let result2;
   if (undefined !== arg0) {
     if (arg0 !== arg0) {
@@ -1410,7 +1416,7 @@ const fn21 = function(arg0) {
 };
 obj.sd = fn21;
 obj.precision = fn21;
-const fn22 = function() {
+const fn22 = function () {
   const self = this;
   let constructor = this.constructor;
   if (this.s < 1) {
@@ -1466,7 +1472,7 @@ const fn22 = function() {
 };
 obj.sqrt = fn22;
 obj.squareRoot = fn22;
-const fn23 = function(arg0) {
+const fn23 = function (arg0) {
   let tmp12;
   let tmp25;
   const self = this;
@@ -1512,14 +1518,14 @@ const fn23 = function(arg0) {
               let tmp19 = +sum2;
               sum2 = tmp19 - 1;
               let tmp20 = c9;
-              items[tmp19] = sum3 % c9 | 0;
-              num3 = sum3 / c9 | 0;
+              items[tmp19] = (sum3 % c9) | 0;
+              num3 = (sum3 / c9) | 0;
               num4 = num3;
               tmp17 = sum2;
             } while (sum2 > diff1);
           }
           let tmp21 = c9;
-          items[tmp17] = (items[tmp17] + num4) % c9 | 0;
+          items[tmp17] = ((items[tmp17] + num4) % c9) | 0;
           diff1 = diff1 - 1;
           tmp14 = num4;
         } while (diff1 >= 0);
@@ -1552,7 +1558,7 @@ const fn23 = function(arg0) {
 };
 obj.mul = fn23;
 obj.times = fn23;
-const fn24 = function(arg0, arg1) {
+const fn24 = function (arg0, arg1) {
   let constructor = this.constructor;
   constructor = new constructor(this);
   if (undefined !== arg0) {
@@ -1592,7 +1598,7 @@ const fn24 = function(arg0, arg1) {
 };
 obj.todp = fn24;
 obj.toDecimalPlaces = fn24;
-obj.toExponential = function(arg0, arg1) {
+obj.toExponential = function (arg0, arg1) {
   const self = this;
   let constructor = this.constructor;
   if (undefined === arg0) {
@@ -1623,7 +1629,7 @@ obj.toExponential = function(arg0, arg1) {
   }
   return tmp12;
 };
-obj.toFixed = function(arg0, arg1) {
+obj.toFixed = function (arg0, arg1) {
   const self = this;
   let constructor = this.constructor;
   if (undefined === arg0) {
@@ -1684,7 +1690,7 @@ obj.toFixed = function(arg0, arg1) {
   }
   return text;
 };
-const fn25 = function() {
+const fn25 = function () {
   let constructor = this.constructor;
   constructor = new constructor(this);
   let result = 7 * this.e;
@@ -1702,10 +1708,10 @@ const fn25 = function() {
 };
 obj.toint = fn25;
 obj.toInteger = fn25;
-obj.toNumber = function() {
+obj.toNumber = function () {
   return +this;
 };
-const fn26 = function(arg0) {
+const fn26 = function (arg0) {
   const self = this;
   let constructor = this.constructor;
   constructor = new constructor(arg0);
@@ -1817,7 +1823,7 @@ const fn26 = function(arg0) {
 };
 obj.pow = fn26;
 obj.toPower = fn26;
-obj.toPrecision = function(arg0, arg1) {
+obj.toPrecision = function (arg0, arg1) {
   const self = this;
   let constructor = this.constructor;
   if (undefined === arg0) {
@@ -1872,7 +1878,7 @@ obj.toPrecision = function(arg0, arg1) {
   }
   return tmp3Result;
 };
-const fn27 = function(arg0, arg1) {
+const fn27 = function (arg0, arg1) {
   const self = this;
   let constructor = this.constructor;
   if (undefined === arg0) {
@@ -1906,7 +1912,7 @@ const fn27 = function(arg0, arg1) {
 };
 obj.tosd = fn27;
 obj.toSignificantDigits = fn27;
-const fn28 = function() {
+const fn28 = function () {
   const self = this;
   let result = 7 * this.e;
   let first = this.d[0];
@@ -2007,7 +2013,7 @@ const f108401 = (s, s2) => {
         constructor1 = new constructor(0);
         return constructor1;
       } else {
-        constructor1 = precision / 7 + 2 | 0;
+        constructor1 = (precision / 7 + 2) | 0;
         if (1 == length) {
           constructor1 = d1[0];
           if (0 < length2) {
@@ -2025,8 +2031,8 @@ const f108401 = (s, s2) => {
                   num41 = 0;
                 }
                 constructor1 = num39 * constructor1 + num41;
-                items[num40] = constructor1 / constructor1 | 0;
-                constructor1 = constructor1 % constructor1 | 0;
+                items[num40] = (constructor1 / constructor1) | 0;
+                constructor1 = (constructor1 % constructor1) | 0;
                 constructor1 = num40 + 1;
                 if (constructor1 < length2) {
                   constructor1 = constructor1 - 1;
@@ -2044,7 +2050,7 @@ const f108401 = (s, s2) => {
           }
         } else {
           constructor1 = c9;
-          constructor1 = c9 / (d1[0] + 1) | 0;
+          constructor1 = (c9 / (d1[0] + 1)) | 0;
           let arr4 = d1;
           let arr5 = d;
           let length3 = length2;
@@ -2058,8 +2064,8 @@ const f108401 = (s, s2) => {
               do {
                 let sum1 = substr[diff2] * constructor1 + num11;
                 let tmp25 = c9;
-                substr[diff2] = sum1 % c9 | 0;
-                num11 = sum1 / c9 | 0;
+                substr[diff2] = (sum1 % c9) | 0;
+                num11 = (sum1 / c9) | 0;
                 tmp26 = +diff2;
                 diff2 = tmp26 - 1;
                 num12 = num11;
@@ -2076,8 +2082,8 @@ const f108401 = (s, s2) => {
               do {
                 let sum2 = substr1[diff3] * constructor1 + num13;
                 let tmp32 = c9;
-                substr1[diff3] = sum2 % c9 | 0;
-                num13 = sum2 / c9 | 0;
+                substr1[diff3] = (sum2 % c9) | 0;
+                num13 = (sum2 / c9) | 0;
                 tmp33 = +diff3;
                 diff3 = tmp33 - 1;
                 num14 = num13;
@@ -2161,7 +2167,7 @@ const f108401 = (s, s2) => {
                 }
                 sum6 = result2 + num23;
               }
-              let num24 = sum6 / sum4 | 0;
+              let num24 = (sum6 / sum4) | 0;
               if (1 < num24) {
                 let tmp59 = c9;
                 if (num24 >= c9) {
@@ -2176,8 +2182,8 @@ const f108401 = (s, s2) => {
                   do {
                     let sum7 = substr4[diff4] * num24 + num26;
                     let tmp63 = c9;
-                    substr4[diff4] = sum7 % c9 | 0;
-                    num26 = sum7 / c9 | 0;
+                    substr4[diff4] = (sum7 % c9) | 0;
+                    num26 = (sum7 / c9) | 0;
                     tmp64 = +diff4;
                     diff4 = tmp64 - 1;
                     num27 = num26;

@@ -58,44 +58,44 @@ export const NavigationContainer = importAllResult.forwardRef(function Navigatio
       let obj = {};
       Object.defineProperty(obj, "linking", {
         get: () => {
-            const obj = {};
-            const merged = Object.assign(closure_0);
-            obj.enabled = closure_1;
-            let prefixes;
-            if (closure_0 != null) {
-              prefixes = tmp.prefixes;
-            }
-            if (prefixes == null) {
-              prefixes = [];
-            }
-            obj.prefixes = prefixes;
-            let getStateFromPath;
-            if (closure_0 != null) {
-              getStateFromPath = tmp.getStateFromPath;
-            }
-            if (getStateFromPath == null) {
-              getStateFromPath = closure_1_0(closure_1_1[5]).getStateFromPath;
-            }
-            obj.getStateFromPath = getStateFromPath;
-            let getPathFromState;
-            if (closure_0 != null) {
-              getPathFromState = tmp.getPathFromState;
-            }
-            if (getPathFromState == null) {
-              getPathFromState = closure_1_0(closure_1_1[5]).getPathFromState;
-            }
-            obj.getPathFromState = getPathFromState;
-            let getActionFromState;
-            if (closure_0 != null) {
-              getActionFromState = tmp.getActionFromState;
-            }
-            if (getActionFromState == null) {
-              getActionFromState = closure_1_0(closure_1_1[5]).getActionFromState;
-            }
-            obj.getActionFromState = getActionFromState;
-            return obj;
-          },
-        set: undefined
+          const obj = {};
+          const merged = Object.assign(closure_0);
+          obj.enabled = closure_1;
+          let prefixes;
+          if (closure_0 != null) {
+            prefixes = tmp.prefixes;
+          }
+          if (prefixes == null) {
+            prefixes = [];
+          }
+          obj.prefixes = prefixes;
+          let getStateFromPath;
+          if (closure_0 != null) {
+            getStateFromPath = tmp.getStateFromPath;
+          }
+          if (getStateFromPath == null) {
+            getStateFromPath = closure_1_0(closure_1_1[5]).getStateFromPath;
+          }
+          obj.getStateFromPath = getStateFromPath;
+          let getPathFromState;
+          if (closure_0 != null) {
+            getPathFromState = tmp.getPathFromState;
+          }
+          if (getPathFromState == null) {
+            getPathFromState = closure_1_0(closure_1_1[5]).getPathFromState;
+          }
+          obj.getPathFromState = getPathFromState;
+          let getActionFromState;
+          if (closure_0 != null) {
+            getActionFromState = tmp.getActionFromState;
+          }
+          if (getActionFromState == null) {
+            getActionFromState = closure_1_0(closure_1_1[5]).getActionFromState;
+          }
+          obj.getActionFromState = getActionFromState;
+          return obj;
+        },
+        set: undefined,
       });
       const result = globalThis.REACT_NAVIGATION_DEVTOOLS.set(tmp.current, obj);
     }

@@ -16,6 +16,6 @@ export const statsigIntegration = registerSpanErrorInstrumentation.defineIntegra
     },
     processEvent(contexts) {
       return featureFlagClient(table[0])._INTERNAL_copyFlagsFromScopeToEvent(contexts);
-    }
+    },
   };
 });

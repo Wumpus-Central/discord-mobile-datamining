@@ -9,5 +9,5 @@ arg5.ComponentRegistry = {
   },
   getComponent(arg0) {
     return map.get(arg0);
-  }
+  },
 };

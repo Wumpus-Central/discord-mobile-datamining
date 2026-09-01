@@ -64,7 +64,17 @@ function parseValue(str, parseNumbers) {
 }
 function parse(str) {
   let obj = globalThis;
-  const merged = Object.assign({ decode: true, sort: true, arrayFormat: "none", arrayFormatSeparator: ",", parseNumbers: false, parseBooleans: false }, arg1);
+  const merged = Object.assign(
+    {
+      decode: true,
+      sort: true,
+      arrayFormat: "none",
+      arrayFormatSeparator: ",",
+      parseNumbers: false,
+      parseBooleans: false,
+    },
+    arg1,
+  );
   validateArrayFormatSeparator(merged.arrayFormatSeparator);
   obj = Object.create(null);
   if (typeof str !== "string") {
@@ -173,7 +183,9 @@ function parse(str) {
                       sorted1 = keys;
                       if (typeof keys === "object") {
                         const _Object2 = Object;
-                        const sorted2 = closure_1_7(Object.keys(keys)).sort((arg0, arg1) => Number(arg0) - Number(arg1));
+                        const sorted2 = closure_1_7(Object.keys(keys)).sort(
+                          (arg0, arg1) => Number(arg0) - Number(arg1),
+                        );
                         sorted1 = sorted2.map((arg0) => keys[arg0]);
                         const obj3 = closure_1_7(Object.keys(keys));
                       }
@@ -266,7 +278,7 @@ export const stringify = (arg0, merged) => {
                 } else {
                   items2 = [];
                   if (!items1.encode) {
-                    const items3 = [tmp35, "[", , , ];
+                    const items3 = [tmp35, "[", , ,];
                     if (!items1.encode) {
                       items3[2] = length;
                       items3[3] = "]=";
@@ -325,7 +337,7 @@ export const stringify = (arg0, merged) => {
                 } else {
                   items2 = [];
                   if (!tmp25.encode) {
-                    const items3 = [tmp30, "[]=", ];
+                    const items3 = [tmp30, "[]="];
                     if (!tmp25.encode) {
                       items3[2] = arg1;
                       items2[tmp29] = items3.join("");
@@ -375,7 +387,7 @@ export const stringify = (arg0, merged) => {
                 } else {
                   items2 = [];
                   if (!tmp25.encode) {
-                    const items3 = [tmp30, ":list=", ];
+                    const items3 = [tmp30, ":list="];
                     if (!tmp25.encode) {
                       items3[2] = arg1;
                       items2[tmp29] = items3.join("");
@@ -429,7 +441,7 @@ export const stringify = (arg0, merged) => {
                       } else {
                         items1 = [];
                         if (!tmp26.encode) {
-                          const items2 = [tmp30, "=", ];
+                          const items2 = [tmp30, "="];
                           if (!tmp26.encode) {
                             items2[2] = arg1;
                             items1[tmp29] = items2.join("");
@@ -475,7 +487,7 @@ export const stringify = (arg0, merged) => {
                 }
                 if (0 === arg0.length) {
                   if (!tmp25.encode) {
-                    const items = [tmp10, closure_1_1, ];
+                    const items = [tmp10, closure_1_1];
                     if (!tmp25.encode) {
                       items[2] = str3;
                       const items1 = [items.join("")];
@@ -493,7 +505,7 @@ export const stringify = (arg0, merged) => {
                     encodeURIComponentResult1 = encodeURIComponent(tmp10);
                   }
                 } else {
-                  const items2 = [arg0, ];
+                  const items2 = [arg0];
                   if (!tmp25.encode) {
                     items2[1] = str3;
                     items3 = [items2.join(tmp25.arrayFormatSeparator)];
@@ -619,7 +631,10 @@ export const stringifyUrl = (url) => {
   if (-1 !== index) {
     str = url.slice(0, index);
   }
-  const json = exports.stringify(Object.assign(exports.parse(exports.extract(url.url), { sort: false }), url.query), merged);
+  const json = exports.stringify(
+    Object.assign(exports.parse(exports.extract(url.url), { sort: false }), url.query),
+    merged,
+  );
   let combined = json;
   if (json) {
     const _HermesInternal = HermesInternal;
@@ -663,5 +678,9 @@ export const pick = (arg0, arg1, arg2) => {
 };
 export const exclude = (arg0, arg1, arg2) => {
   closure_0 = arg1;
-  return exports.pick(arg0, Array.isArray(arg1) ? ((arg0) => !lib.includes(arg0)) : ((arg0, arg1) => !lib(arg0, arg1)), arg2);
+  return exports.pick(
+    arg0,
+    Array.isArray(arg1) ? (arg0) => !lib.includes(arg0) : (arg0, arg1) => !lib(arg0, arg1),
+    arg2,
+  );
 };

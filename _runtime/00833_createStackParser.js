@@ -125,8 +125,7 @@ arg5.getFramesFromEvent = function getFramesFromEvent(exception) {
         }
       });
       return items;
-    } catch (err) {
-    }
+    } catch (err) {}
   }
 };
 arg5.getFunctionName = function getFunctionName(fn) {

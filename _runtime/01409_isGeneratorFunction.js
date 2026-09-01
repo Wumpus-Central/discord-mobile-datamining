@@ -22,8 +22,7 @@ export default function isGeneratorFunction(fn) {
             try {
               const _Function = Function;
               return Function("return function*() {}")();
-            } catch (err) {
-            }
+            } catch (err) {}
           } else {
             return false;
           }
@@ -38,4 +37,4 @@ export default function isGeneratorFunction(fn) {
   } else {
     return "[object GeneratorFunction]" === callback2(fn);
   }
-};
+}

@@ -24,8 +24,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 function formatReact(str) {
   let bindFormatValuesResult = str;
@@ -60,7 +59,7 @@ obj = {
     const result = this.result;
     this._nodeKey = +this._nodeKey + 1;
     result.push(_class[arg0](arg1, "" + this.context.keyPrefix + ".tag-" + +this._nodeKey, arg2));
-  }
+  },
 };
 let items = [
   obj,
@@ -76,21 +75,21 @@ let items = [
         result = self.result;
         result.push(arg0);
       }
-    }
+    },
   },
   {
     key: "pushObject",
     value: function pushObject(arg0) {
       const result = this.result;
       result.push(arg0);
-    }
+    },
   },
   {
     key: "finish",
     value: function finish() {
       return this.result;
-    }
-  }
+    },
+  },
 ];
 obj[1] = _createClass(_class, items);
 
@@ -120,7 +119,7 @@ export const makeReactFormatter = function makeReactFormatter(arg0) {
       const result = this.result;
       this._nodeKey = +this._nodeKey + 1;
       result.push(_class[arg0](arg1, "" + this.context.keyPrefix + ".tag-" + +this._nodeKey, arg2));
-    }
+    },
   };
   const items = [
     obj,
@@ -136,21 +135,21 @@ export const makeReactFormatter = function makeReactFormatter(arg0) {
           result = self.result;
           result.push(arg0);
         }
-      }
+      },
     },
     {
       key: "pushObject",
       value: function pushObject(arg0) {
         const result = this.result;
         result.push(arg0);
-      }
+      },
     },
     {
       key: "finish",
       value: function finish() {
         return this.result;
-      }
-    }
+      },
+    },
   ];
   obj[1] = _createClass(_class, items);
   return obj;
@@ -170,10 +169,14 @@ export const DEFAULT_REACT_RICH_TEXT_ELEMENTS = {
   },
   $link(arg0, key) {
     [tmp] = arg2;
-    return <a href={tmp} key={arg1}>{arg0}</a>;
+    return (
+      <a href={tmp} key={arg1}>
+        {arg0}
+      </a>
+    );
   },
   $p(arg0, key) {
     return <p key={arg1}>{arg0}</p>;
-  }
+  },
 };
 export const reactFormatter = obj;

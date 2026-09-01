@@ -153,10 +153,13 @@ arg5.getDefaultIntegrations = function getDefaultIntegrations(patchGlobalPromise
   if (typeof replaysOnErrorSampleRate !== "number") {
     notWebResult1 = typeof patchGlobalPromise.replaysSessionSampleRate === "number";
   }
-  let tmp40 = patchGlobalPromise._experiments && typeof patchGlobalPromise._experiments.replaysOnErrorSampleRate === "number";
+  let tmp40 =
+    patchGlobalPromise._experiments && typeof patchGlobalPromise._experiments.replaysOnErrorSampleRate === "number";
   if (!tmp40) {
-    tmp40 = patchGlobalPromise._experiments && typeof patchGlobalPromise._experiments.replaysSessionSampleRate === "number";
-    const tmp41 = patchGlobalPromise._experiments && typeof patchGlobalPromise._experiments.replaysSessionSampleRate === "number";
+    tmp40 =
+      patchGlobalPromise._experiments && typeof patchGlobalPromise._experiments.replaysSessionSampleRate === "number";
+    const tmp41 =
+      patchGlobalPromise._experiments && typeof patchGlobalPromise._experiments.replaysSessionSampleRate === "number";
   }
   let tmp42 = !notWebResult1;
   if (!notWebResult1) {

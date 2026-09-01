@@ -87,8 +87,8 @@ const items = [
           }
         });
       }
-    }
-  }
+    },
+  },
 ];
 
 export default new _createClassDefault(AppStateImpl, items)();

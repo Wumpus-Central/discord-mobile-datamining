@@ -13,7 +13,14 @@ let closure_8 = Animated.createAnimatedComponent(Pressable);
 let closure_9 = Platform.Version >= 21;
 const forwardRefResult = importAllResult.forwardRef(function PlatformPressableInternal(disabled) {
   disabled = disabled.disabled;
-  ({ onPress: dependencyMap, onPressIn: closure_2, onPressOut: closure_3, android_ripple, pressColor, pressOpacity } = disabled);
+  ({
+    onPress: dependencyMap,
+    onPressIn: closure_2,
+    onPressOut: closure_3,
+    android_ripple,
+    pressColor,
+    pressOpacity,
+  } = disabled);
   if (pressOpacity === undefined) {
     pressOpacity = 0.3;
   }
@@ -25,13 +32,14 @@ const forwardRefResult = importAllResult.forwardRef(function PlatformPressableIn
   let animateTo;
   closure_9 = undefined;
   let obj = disabled(1500);
-  first = callback(importAllResult.useState(() => {
-    const value = new pressOpacity.Value(1);
-    return value;
-  }), 1)[0];
-  animateTo = function animateTo(arg0, arg1) {
-
-  };
+  first = callback(
+    importAllResult.useState(() => {
+      const value = new pressOpacity.Value(1);
+      return value;
+    }),
+    1,
+  )[0];
+  animateTo = function animateTo(arg0, arg1) {};
   closure_9 = importAllResult.useRef(null);
   const items = [arg1];
   const items1 = [disabled, merged.href];
@@ -62,7 +70,16 @@ const forwardRefResult = importAllResult.forwardRef(function PlatformPressableIn
       }
     }
   }, items1);
-  obj = { ref: callback, accessible: true, role: "button", onPress: null, onPressIn: null, onPressOut: null, android_ripple: null, style: null };
+  obj = {
+    ref: callback,
+    accessible: true,
+    role: "button",
+    onPress: null,
+    onPressIn: null,
+    onPressOut: null,
+    android_ripple: null,
+    style: null,
+  };
   let fn;
   if (!disabled) {
     fn = (arg0) => {
@@ -147,7 +164,22 @@ const forwardRefResult = importAllResult.forwardRef(function PlatformPressableIn
   return first(animateTo, obj);
 });
 forwardRefResult.displayName = "PlatformPressable";
-String.raw(HermesBuiltin.getTemplateObject(true, "\n  .", " {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    border-radius: inherit;\n    background-color: var(--overlay-color);\n    opacity: 0;\n    transition: opacity 0.15s;\n    pointer-events: none;\n  }\n\n  a:hover > .", ", button:hover > .", " {\n    opacity: var(--overlay-hover-opacity);\n  }\n\n  a:active > .", ", button:active > .", " {\n    opacity: var(--overlay-active-opacity);\n  }\n"), "__react-navigation_elements_Pressable_hover", "__react-navigation_elements_Pressable_hover", "__react-navigation_elements_Pressable_hover", "__react-navigation_elements_Pressable_hover", "__react-navigation_elements_Pressable_hover");
+String.raw(
+  HermesBuiltin.getTemplateObject(
+    true,
+    "\n  .",
+    " {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    border-radius: inherit;\n    background-color: var(--overlay-color);\n    opacity: 0;\n    transition: opacity 0.15s;\n    pointer-events: none;\n  }\n\n  a:hover > .",
+    ", button:hover > .",
+    " {\n    opacity: var(--overlay-hover-opacity);\n  }\n\n  a:active > .",
+    ", button:active > .",
+    " {\n    opacity: var(--overlay-active-opacity);\n  }\n",
+  ),
+  "__react-navigation_elements_Pressable_hover",
+  "__react-navigation_elements_Pressable_hover",
+  "__react-navigation_elements_Pressable_hover",
+  "__react-navigation_elements_Pressable_hover",
+  "__react-navigation_elements_Pressable_hover",
+);
 const f36211 = (arg0) => {
   ({ color, hoverOpacity, activeOpacity } = arg0);
   return null;

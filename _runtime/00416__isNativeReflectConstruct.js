@@ -26,8 +26,7 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 let closure_3 = ["tintColor", "titleColor", "title"];
 class RefreshControl {
@@ -70,7 +69,7 @@ let items = [
     key: "componentDidMount",
     value: function componentDidMount() {
       this._lastNativeRefreshing = this.props.refreshing;
-    }
+    },
   },
   {
     key: "componentDidUpdate",
@@ -86,7 +85,7 @@ let items = [
         }
         tmp = self.props.refreshing !== self._lastNativeRefreshing && self._nativeRef;
       }
-    }
+    },
   },
   {
     key: "render",
@@ -98,8 +97,8 @@ let items = [
       const merged = Object.assign(tmp);
       ({ _setNativeRef: obj.ref, _onRefresh: obj.onRefresh } = this);
       return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
-    }
-  }
+    },
+  },
 ];
 
 export default importDefaultResult(RefreshControl, items);

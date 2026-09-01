@@ -52,46 +52,48 @@ const items = [
         if (arr) {
           obj.buttonPositive = arr.text || "OK";
         }
-        _default.showAlert(obj, (arg0) => console.warn(arg0), (arg0, arg1) => {
-          if (arg0 === buttonClicked.buttonClicked) {
-            if (arg1 === tmp.buttonNeutral) {
-              if (arr1.onPress) {
-                obj2.onPress();
+        _default.showAlert(
+          obj,
+          (arg0) => console.warn(arg0),
+          (arg0, arg1) => {
+            if (arg0 === buttonClicked.buttonClicked) {
+              if (arg1 === tmp.buttonNeutral) {
+                if (arr1.onPress) {
+                  obj2.onPress();
+                }
+                obj2 = arr1;
+              } else if (arg1 === tmp.buttonNegative) {
+                if (arr.onPress) {
+                  obj.onPress();
+                }
+                obj = arr;
+              } else {
+                let onPress = arg1 === tmp.buttonPositive;
+                if (onPress) {
+                  onPress = arr.onPress;
+                }
+                if (onPress) {
+                  arr.onPress();
+                }
               }
-              obj2 = arr1;
-            } else if (arg1 === tmp.buttonNegative) {
-              if (arr.onPress) {
-                obj.onPress();
-              }
-              obj = arr;
             } else {
-              let onPress = arg1 === tmp.buttonPositive;
-              if (onPress) {
-                onPress = arr.onPress;
+              let onDismiss = arg0 === tmp.dismissed && closure_0;
+              if (onDismiss) {
+                onDismiss = closure_0.onDismiss;
               }
-              if (onPress) {
-                arr.onPress();
+              if (onDismiss) {
+                closure_0.onDismiss();
               }
             }
-          } else {
-            let onDismiss = arg0 === tmp.dismissed && closure_0;
-            if (onDismiss) {
-              onDismiss = closure_0.onDismiss;
-            }
-            if (onDismiss) {
-              closure_0.onDismiss();
-            }
-          }
-        });
+          },
+        );
       }
-    }
+    },
   },
   {
     key: "prompt",
-    value: function prompt(arg0) {
-
-    }
-  }
+    value: function prompt(arg0) {},
+  },
 ];
 
 export default _createClassDefault(Alert, null, items);

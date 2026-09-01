@@ -69,8 +69,7 @@ function applyDebugIds(exception) {
         }
       });
     });
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 function applyDebugMeta(exception) {
   const obj = {};
@@ -109,8 +108,7 @@ function applyDebugMeta(exception) {
         images.push({ type: "sourcemap", code_file: tmp, debug_id: tmp2 });
       });
     }
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 let closure_5 = ["user", "level", "extra", "contexts", "tags", "fingerprint", "requestSession", "propagationContext"];
 arg5.applyClientOptions = applyClientOptions;

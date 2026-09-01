@@ -12,7 +12,7 @@ export const Label = function Label(tintColor) {
   const merged = Object.assign(tintColor, Object.create(null));
   let obj = { numberOfLines: 1 };
   const merged1 = Object.assign(merged);
-  const items = [label.label, , ];
+  const items = [label.label, ,];
   let tmp4 = null != tintColor;
   if (tmp4) {
     obj = { color: null };

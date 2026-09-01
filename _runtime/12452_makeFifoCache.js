@@ -48,6 +48,6 @@ arg5.makeFifoCache = function makeFifoCache(arg0) {
       } else {
         return false;
       }
-    }
+    },
   };
 };

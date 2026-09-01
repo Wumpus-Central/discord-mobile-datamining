@@ -21,7 +21,10 @@ function structuredCloneInternal(style) {
               const _HermesInternal2 = HermesInternal;
               tmp = new.target;
               tmp = new.target;
-              tmp = new tmp("Failed to execute 'structuredClone' on 'Window': " + String(style) + " could not be cloned.", "DataCloneError");
+              tmp = new tmp(
+                "Failed to execute 'structuredClone' on 'Window': " + String(style) + " could not be cloned.",
+                "DataCloneError",
+              );
               throw tmp;
             } else {
               tmp = map;
@@ -139,9 +142,11 @@ function structuredCloneInternal(style) {
                               _Error.stack = style.stack;
                               return _Error;
                             } else {
-                              if (!(function isNonSerializableObject(style) {
-                                return closure_9 in style;
-                              })(style)) {
+                              if (
+                                !(function isNonSerializableObject(style) {
+                                  return closure_9 in style;
+                                })(style)
+                              ) {
                                 if (!tmp14Result.isPlatformObject(style)) {
                                   obj1 = {};
                                   const result9 = map.set(style, obj1);
@@ -159,7 +164,12 @@ function structuredCloneInternal(style) {
                               const _String = String;
                               let tmp25 = _isNativeReflectConstructDefault;
                               const _HermesInternal = HermesInternal;
-                              tmp25 = new tmp25("Failed to execute 'structuredClone' on 'Window': " + String(style) + " could not be cloned.", "DataCloneError");
+                              tmp25 = new tmp25(
+                                "Failed to execute 'structuredClone' on 'Window': " +
+                                  String(style) +
+                                  " could not be cloned.",
+                                "DataCloneError",
+                              );
                               throw tmp25;
                             }
                           }
@@ -196,4 +206,4 @@ export default function structuredClone(style) {
     map.clear();
     throw tmp6;
   }
-};
+}

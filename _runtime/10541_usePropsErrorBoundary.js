@@ -1,7 +1,6 @@
 // _runtime/10541_usePropsErrorBoundary.js
 import closure_0 from "00019_noop.js";
 
-
 export const usePropsErrorBoundary = function usePropsErrorBoundary(arg0) {
   const React = arg0;
   const items = [arg0];

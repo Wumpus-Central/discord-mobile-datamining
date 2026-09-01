@@ -35,7 +35,7 @@ const items = [
         const _client = self._client;
         _client.sendSession(sessionAggregates);
       }
-    }
+    },
   },
   {
     key: "getSessionAggregates",
@@ -43,7 +43,7 @@ const items = [
       const _pendingAggregates = this._pendingAggregates;
       const obj = { attrs: this._sessionAttrs, aggregates: Array.from(_pendingAggregates.values()) };
       return SessionFlusher(12341).dropUndefinedKeys(obj);
-    }
+    },
   },
   {
     key: "close",
@@ -51,7 +51,7 @@ const items = [
       clearInterval(this._intervalId);
       this._isEnabled = false;
       this.flush();
-    }
+    },
   },
   {
     key: "incrementSessionStatusCount",
@@ -72,7 +72,7 @@ const items = [
         }
         const obj = SessionFlusher(12362);
       }
-    }
+    },
   },
   {
     key: "_incrementSessionStatusCount",
@@ -100,8 +100,8 @@ const items = [
         return value.crashed;
       }
       date = new Date(date);
-    }
-  }
+    },
+  },
 ];
 
 export const SessionFlusher = _createClass(SessionFlusher, items);

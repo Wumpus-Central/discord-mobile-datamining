@@ -19,11 +19,13 @@ arg5.pattern = function pattern(arg0) {
       let tmp6 = num;
       let _HermesInternal = HermesInternal;
       let str = ". Allowed characters are: o O . - =";
-      let str2 = "\" at position ";
-      let str3 = "pattern(): invalid character \"";
+      let str2 = '" at position ';
+      let str3 = 'pattern(): invalid character "';
       let tmp7 = new.target;
       let tmp8 = new.target;
-      let typeError = new TypeError("pattern(): invalid character \"" + tmp2 + "\" at position " + num + ". Allowed characters are: o O . - =");
+      let typeError = new TypeError(
+        'pattern(): invalid character "' + tmp2 + '" at position ' + num + ". Allowed characters are: o O . - =",
+      );
       let tmp10 = typeError;
       throw typeError;
     }

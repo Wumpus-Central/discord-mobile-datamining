@@ -92,7 +92,12 @@ class AMPMParser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 80, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", {
+            value: 80,
+            enumerable: true,
+            configurable: true,
+            writable: true,
+          });
         } else {
           num3 = 80;
           applyResult.priority = 80;
@@ -214,13 +219,20 @@ obj = {
           if ("aaaaa" === arg1) {
             return dayPeriod.dayPeriod(arg0, { width: "narrow", context: "formatting" });
           } else {
-            return dayPeriod.dayPeriod(arg0, { width: "wide", context: "formatting" }) || dayPeriod.dayPeriod(arg0, { width: "abbreviated", context: "formatting" }) || dayPeriod.dayPeriod(arg0, { width: "narrow", context: "formatting" });
+            return (
+              dayPeriod.dayPeriod(arg0, { width: "wide", context: "formatting" }) ||
+              dayPeriod.dayPeriod(arg0, { width: "abbreviated", context: "formatting" }) ||
+              dayPeriod.dayPeriod(arg0, { width: "narrow", context: "formatting" })
+            );
           }
         }
       }
     }
-    return dayPeriod.dayPeriod(arg0, { width: "abbreviated", context: "formatting" }) || dayPeriod.dayPeriod(arg0, { width: "narrow", context: "formatting" });
-  }
+    return (
+      dayPeriod.dayPeriod(arg0, { width: "abbreviated", context: "formatting" }) ||
+      dayPeriod.dayPeriod(arg0, { width: "narrow", context: "formatting" })
+    );
+  },
 };
 let items = [
   obj,
@@ -229,8 +241,8 @@ let items = [
     value: function set(setUTCHours) {
       setUTCHours.setUTCHours(_createSuperInternal(table[0]).dayPeriodEnumToHours(arg2), 0, 0, 0);
       return setUTCHours;
-    }
-  }
+    },
+  },
 ];
 if (0 < items.length) {
   do {

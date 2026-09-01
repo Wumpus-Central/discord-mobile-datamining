@@ -1,7 +1,6 @@
 // _runtime/05905_isComponentClass.js
 import closure_0 from "00019_noop.js";
 
-
 export const isComponentClass = (fn) => {
   let BooleanResult = typeof fn === "function";
   if (typeof fn === "function") {

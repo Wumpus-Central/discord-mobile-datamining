@@ -40,7 +40,7 @@ const fn = function q(arg0) {
       if (192 === (224 & tmp9)) {
         num2 = sum + 1;
         num = num4 + 1;
-        uint16Array[num4] = (31 & tmp9) << 6 | 63 & subarrayResult[sum];
+        uint16Array[num4] = ((31 & tmp9) << 6) | (63 & subarrayResult[sum]);
         arr = subarrayResult;
         continue;
       } else {
@@ -48,7 +48,7 @@ const fn = function q(arg0) {
           let sum1 = sum + 1;
           num2 = sum1 + 1;
           num = num4 + 1;
-          uint16Array[num4] = (31 & tmp9) << 12 | (63 & subarrayResult[sum]) << 6 | 63 & subarrayResult[sum1];
+          uint16Array[num4] = ((31 & tmp9) << 12) | ((63 & subarrayResult[sum]) << 6) | (63 & subarrayResult[sum1]);
           arr = subarrayResult;
           continue;
         } else {
@@ -60,14 +60,18 @@ const fn = function q(arg0) {
           } else {
             let sum2 = sum + 1;
             let sum3 = sum2 + 1;
-            let tmp16 = (7 & tmp9) << 18 | (63 & subarrayResult[sum]) << 12 | (63 & subarrayResult[sum2]) << 6 | 63 & subarrayResult[sum3];
+            let tmp16 =
+              ((7 & tmp9) << 18) |
+              ((63 & subarrayResult[sum]) << 12) |
+              ((63 & subarrayResult[sum2]) << 6) |
+              (63 & subarrayResult[sum3]);
             let sum4 = num4;
             let tmp12 = tmp16;
             if (65535 < tmp16) {
               let diff = tmp16 - 65536;
               sum4 = num4 + 1;
-              uint16Array[num4] = diff >>> 10 & 1023 | 55296;
-              tmp12 = 56320 | 1023 & diff;
+              uint16Array[num4] = ((diff >>> 10) & 1023) | 55296;
+              tmp12 = 56320 | (1023 & diff);
             }
             num2 = sum3 + 1;
             num = sum4 + 1;
@@ -116,7 +120,7 @@ class m {
       num4 = 3;
       tmp3 = new.target;
       tmp4 = new.target;
-      uint8Array = new Uint8Array(bound >>> 3 << 3);
+      uint8Array = new Uint8Array((bound >>> 3) << 3);
       arr = uint8Array;
       num5 = 0;
       num6 = 63;
@@ -195,7 +199,7 @@ class m {
           tmp20 = arr;
           tmp21 = bound;
           if (sum4 + 4 > arr.length) {
-            tmp22 = (bound + 8) * (1 + tmp11 / arg0.length * 2) >>> 3 << 3;
+            tmp22 = (((bound + 8) * (1 + (tmp11 / arg0.length) * 2)) >>> 3) << 3;
             _Uint8Array2 = Uint8Array;
             tmp23 = new.target;
             tmp24 = new.target;
@@ -215,24 +219,24 @@ class m {
                 tmp19 = tmp11;
                 if (!(4292870144 & tmp12)) {
                   sum3 = sum4 + 1;
-                  tmp20[sum4] = tmp12 >>> 18 & 7 | 240;
+                  tmp20[sum4] = ((tmp12 >>> 18) & 7) | 240;
                   sum4 = sum3 + 1;
-                  tmp20[sum3] = tmp12 >>> 12 & 63 | 128;
+                  tmp20[sum3] = ((tmp12 >>> 12) & 63) | 128;
                   sum5 = sum4 + 1;
-                  tmp20[sum4] = tmp12 >>> 6 & 63 | 128;
+                  tmp20[sum4] = ((tmp12 >>> 6) & 63) | 128;
                 }
               } else {
                 sum6 = sum4 + 1;
-                tmp20[sum4] = tmp12 >>> 12 & 15 | 224;
+                tmp20[sum4] = ((tmp12 >>> 12) & 15) | 224;
                 sum5 = sum6 + 1;
-                tmp20[sum6] = tmp12 >>> 6 & 63 | 128;
+                tmp20[sum6] = ((tmp12 >>> 6) & 63) | 128;
               }
             } else {
               sum5 = sum4 + 1;
-              tmp20[sum4] = tmp12 >>> 6 & 31 | 192;
+              tmp20[sum4] = ((tmp12 >>> 6) & 31) | 192;
             }
             sum7 = sum5 + 1;
-            tmp20[sum5] = 63 & tmp12 | 128;
+            tmp20[sum5] = (63 & tmp12) | 128;
             tmp32 = tmp20;
             tmp33 = tmp21;
             tmp34 = tmp11;
@@ -265,7 +269,9 @@ const fn2 = function k(arg0, arg1) {
   }
   if (-1 === closure_1.indexOf(str.toLowerCase())) {
     const _RangeError = RangeError;
-    const rangeError = new RangeError("Failed to construct 'TextDecoder': The encoding label provided ('" + str + "') is invalid.");
+    const rangeError = new RangeError(
+      "Failed to construct 'TextDecoder': The encoding label provided ('" + str + "') is invalid.",
+    );
     throw rangeError;
   } else if (obj.fatal) {
     const _Error = Error;
@@ -372,7 +378,7 @@ if (typeof Buffer !== "function") {
         num4 = 3;
         tmp3 = new.target;
         tmp4 = new.target;
-        uint8Array = new Uint8Array(bound >>> 3 << 3);
+        uint8Array = new Uint8Array((bound >>> 3) << 3);
         arr = uint8Array;
         num5 = 0;
         num6 = 63;
@@ -451,7 +457,7 @@ if (typeof Buffer !== "function") {
             tmp20 = arr;
             tmp21 = bound;
             if (sum4 + 4 > arr.length) {
-              tmp22 = (bound + 8) * (1 + tmp11 / arg0.length * 2) >>> 3 << 3;
+              tmp22 = (((bound + 8) * (1 + (tmp11 / arg0.length) * 2)) >>> 3) << 3;
               _Uint8Array2 = Uint8Array;
               tmp23 = new.target;
               tmp24 = new.target;
@@ -471,24 +477,24 @@ if (typeof Buffer !== "function") {
                   tmp19 = tmp11;
                   if (!(4292870144 & tmp12)) {
                     sum3 = sum4 + 1;
-                    tmp20[sum4] = tmp12 >>> 18 & 7 | 240;
+                    tmp20[sum4] = ((tmp12 >>> 18) & 7) | 240;
                     sum4 = sum3 + 1;
-                    tmp20[sum3] = tmp12 >>> 12 & 63 | 128;
+                    tmp20[sum3] = ((tmp12 >>> 12) & 63) | 128;
                     sum5 = sum4 + 1;
-                    tmp20[sum4] = tmp12 >>> 6 & 63 | 128;
+                    tmp20[sum4] = ((tmp12 >>> 6) & 63) | 128;
                   }
                 } else {
                   sum6 = sum4 + 1;
-                  tmp20[sum4] = tmp12 >>> 12 & 15 | 224;
+                  tmp20[sum4] = ((tmp12 >>> 12) & 15) | 224;
                   sum5 = sum6 + 1;
-                  tmp20[sum6] = tmp12 >>> 6 & 63 | 128;
+                  tmp20[sum6] = ((tmp12 >>> 6) & 63) | 128;
                 }
               } else {
                 sum5 = sum4 + 1;
-                tmp20[sum4] = tmp12 >>> 6 & 31 | 192;
+                tmp20[sum4] = ((tmp12 >>> 6) & 31) | 192;
               }
               sum7 = sum5 + 1;
-              tmp20[sum5] = 63 & tmp12 | 128;
+              tmp20[sum5] = (63 & tmp12) | 128;
               tmp32 = tmp20;
               tmp33 = tmp21;
               tmp34 = tmp11;

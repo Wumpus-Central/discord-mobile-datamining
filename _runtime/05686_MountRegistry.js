@@ -20,7 +20,7 @@ const items = [
         const mountListeners = self.mountListeners;
         mountListeners.delete(closure_0);
       };
-    }
+    },
   },
   {
     key: "addUnmountListener",
@@ -33,14 +33,14 @@ const items = [
         const unmountListeners = self.unmountListeners;
         unmountListeners.delete(closure_0);
       };
-    }
+    },
   },
   {
     key: "gestureHandlerWillMount",
     value: function gestureHandlerWillMount(closure_0) {
       const mountListeners = this.mountListeners;
       const item = mountListeners.forEach((arg0) => arg0(closure_0));
-    }
+    },
   },
   {
     key: "gestureHandlerWillUnmount",
@@ -48,7 +48,7 @@ const items = [
       closure_0 = self;
       const unmountListeners = this.unmountListeners;
       const item = unmountListeners.forEach((arg0) => arg0(closure_0));
-    }
+    },
   },
   {
     key: "gestureWillMount",
@@ -56,7 +56,7 @@ const items = [
       closure_0 = arg0;
       const mountListeners = this.mountListeners;
       const item = mountListeners.forEach((arg0) => arg0(closure_0));
-    }
+    },
   },
   {
     key: "gestureWillUnmount",
@@ -64,8 +64,8 @@ const items = [
       closure_0 = item10006;
       const unmountListeners = this.unmountListeners;
       const item = unmountListeners.forEach((arg0) => arg0(closure_0));
-    }
-  }
+    },
+  },
 ];
 const tmp2 = _createClassDefault(MountRegistry, null, items);
 tmp2.mountListeners = new Set();
@@ -80,7 +80,7 @@ const obj = {
       const mountListeners = self.mountListeners;
       mountListeners.delete(closure_0);
     };
-  }
+  },
 };
 const set = new Set();
 tmp2.unmountListeners = new Set();

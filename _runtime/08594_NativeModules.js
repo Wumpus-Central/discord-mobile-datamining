@@ -52,14 +52,30 @@ if (!fn) {
           }
           const _Object = Object;
           const call = propertyIsEnumerable.call;
-          typeof call === "unknown" ? propertyIsEnumerable(ownPropertySymbols[num]) : call(obj, ownPropertySymbols[num]);
+          typeof call === "unknown"
+            ? propertyIsEnumerable(ownPropertySymbols[num])
+            : call(obj, ownPropertySymbols[num]);
         }
       }
     }
     return obj;
   };
 }
-let closure_13 = codegenNativeCommandsDefault({ supportedCommands: ["goBack", "goForward", "reload", "stopLoading", "injectJavaScript", "requestFocus", "postMessage", "clearFormData", "clearCache", "clearHistory", "loadUrl"] });
+let closure_13 = codegenNativeCommandsDefault({
+  supportedCommands: [
+    "goBack",
+    "goForward",
+    "reload",
+    "stopLoading",
+    "injectJavaScript",
+    "requestFocus",
+    "postMessage",
+    "clearFormData",
+    "clearCache",
+    "clearHistory",
+    "loadUrl",
+  ],
+});
 const resolveAssetSource = get_ActivityIndicator.Image.resolveAssetSource;
 let c15 = 0;
 let RNCWebView = NativeModules.RNCWebView;
@@ -91,7 +107,20 @@ const forwardRefResult = forwardRef((overScrollMode) => {
   const setDisplayZoomControls = overScrollMode.setDisplayZoomControls;
   const nestedScrollEnabled = overScrollMode.nestedScrollEnabled;
   ({ messagingWithWebViewKeyEnabled, onMessage, renderLoading, renderError, source, nativeConfig } = overScrollMode);
-  ({ startInLoadingState, onNavigationStateChange, onLoadStart, onError, onLoad, onLoadEnd, onLoadProgress, onHttpError, onRenderProcessGone, style, containerStyle, onShouldStartLoadWithRequest } = overScrollMode);
+  ({
+    startInLoadingState,
+    onNavigationStateChange,
+    onLoadStart,
+    onError,
+    onLoad,
+    onLoadEnd,
+    onLoadProgress,
+    onHttpError,
+    onRenderProcessGone,
+    style,
+    containerStyle,
+    onShouldStartLoadWithRequest,
+  } = overScrollMode);
   const sum = c15 + 1;
   c15 = sum;
   current = callback3("WebViewMessageHandler".concat(sum)).current;
@@ -102,7 +131,41 @@ const forwardRefResult = forwardRef((overScrollMode) => {
   const tmp12 = undefined === setBuiltInZoomControls || setBuiltInZoomControls;
   const tmp13 = undefined !== setDisplayZoomControls && setDisplayZoomControls;
   const tmp14 = undefined !== nestedScrollEnabled && nestedScrollEnabled;
-  const tmp15 = fn(overScrollMode, ["overScrollMode", "javaScriptEnabled", "thirdPartyCookiesEnabled", "scalesPageToFit", "allowsFullscreenVideo", "allowFileAccess", "saveFormDataDisabled", "cacheEnabled", "androidHardwareAccelerationDisabled", "androidLayerType", "originWhitelist", "setSupportMultipleWindows", "setBuiltInZoomControls", "setDisplayZoomControls", "nestedScrollEnabled", "startInLoadingState", "messagingWithWebViewKeyEnabled", "onNavigationStateChange", "onLoadStart", "onError", "onLoad", "onLoadEnd", "onLoadProgress", "onHttpError", "onRenderProcessGone", "onMessage", "renderLoading", "renderError", "style", "containerStyle", "source", "nativeConfig", "onShouldStartLoadWithRequest"]);
+  const tmp15 = fn(overScrollMode, [
+    "overScrollMode",
+    "javaScriptEnabled",
+    "thirdPartyCookiesEnabled",
+    "scalesPageToFit",
+    "allowsFullscreenVideo",
+    "allowFileAccess",
+    "saveFormDataDisabled",
+    "cacheEnabled",
+    "androidHardwareAccelerationDisabled",
+    "androidLayerType",
+    "originWhitelist",
+    "setSupportMultipleWindows",
+    "setBuiltInZoomControls",
+    "setDisplayZoomControls",
+    "nestedScrollEnabled",
+    "startInLoadingState",
+    "messagingWithWebViewKeyEnabled",
+    "onNavigationStateChange",
+    "onLoadStart",
+    "onError",
+    "onLoad",
+    "onLoadEnd",
+    "onLoadProgress",
+    "onHttpError",
+    "onRenderProcessGone",
+    "onMessage",
+    "renderLoading",
+    "renderError",
+    "style",
+    "containerStyle",
+    "source",
+    "nativeConfig",
+    "onShouldStartLoadWithRequest",
+  ]);
   const tmp2 = undefined === thirdPartyCookiesEnabled || thirdPartyCookiesEnabled;
   const tmp3 = undefined === scalesPageToFit || scalesPageToFit;
   const tmp4 = undefined !== allowsFullscreenVideo && allowsFullscreenVideo;
@@ -131,49 +194,63 @@ const forwardRefResult = forwardRef((overScrollMode) => {
       } else if (arg0) {
         const url = closure_1_13.loadUrl(ref.current, arg1);
       }
-    }, [])
+    }, []),
   });
   onShouldStartLoadWithRequest2 = webWiewLogic.onShouldStartLoadWithRequest;
   onMessage2 = webWiewLogic.onMessage;
   ({ viewState, setViewState } = webWiewLogic);
   const lastErrorEvent = webWiewLogic.lastErrorEvent;
   const items = [setViewState, tmp17];
-  ({ onLoadingStart, onHttpError: onHttpError2, onLoadingError, onLoadingFinish, onLoadingProgress, onRenderProcessGone: onRenderProcessGone2 } = webWiewLogic);
-  callback(arg1, () => ({
-    goForward() {
-      return closure_1_13.goForward(closure_1.current);
-    },
-    goBack() {
-      return closure_1_13.goBack(closure_1.current);
-    },
-    reload() {
-      callback("LOADING");
-      closure_1_13.reload(closure_1.current);
-    },
-    stopLoading(current) {
-      return closure_1_13.stopLoading(closure_1.current);
-    },
-    postMessage(arg0) {
-      return closure_1_13.postMessage(closure_1.current, arg0);
-    },
-    injectJavaScript(PLAYER_FUNCTIONS, PLAYER_FUNCTIONS) {
-      return closure_1_13.injectJavaScript(closure_1.current, PLAYER_FUNCTIONS);
-    },
-    requestFocus(current) {
-      return closure_1_13.requestFocus(closure_1.current);
-    },
-    clearFormData(current) {
-      return closure_1_13.clearFormData(closure_1.current);
-    },
-    clearCache(arg0) {
-      return closure_1_13.clearCache(closure_1.current, arg0);
-    },
-    clearHistory(current) {
-      return closure_1_13.clearHistory(closure_1.current);
-    }
-  }), items);
+  ({
+    onLoadingStart,
+    onHttpError: onHttpError2,
+    onLoadingError,
+    onLoadingFinish,
+    onLoadingProgress,
+    onRenderProcessGone: onRenderProcessGone2,
+  } = webWiewLogic);
+  callback(
+    arg1,
+    () => ({
+      goForward() {
+        return closure_1_13.goForward(closure_1.current);
+      },
+      goBack() {
+        return closure_1_13.goBack(closure_1.current);
+      },
+      reload() {
+        callback("LOADING");
+        closure_1_13.reload(closure_1.current);
+      },
+      stopLoading(current) {
+        return closure_1_13.stopLoading(closure_1.current);
+      },
+      postMessage(arg0) {
+        return closure_1_13.postMessage(closure_1.current, arg0);
+      },
+      injectJavaScript(PLAYER_FUNCTIONS, PLAYER_FUNCTIONS) {
+        return closure_1_13.injectJavaScript(closure_1.current, PLAYER_FUNCTIONS);
+      },
+      requestFocus(current) {
+        return closure_1_13.requestFocus(closure_1.current);
+      },
+      clearFormData(current) {
+        return closure_1_13.clearFormData(closure_1.current);
+      },
+      clearCache(arg0) {
+        return closure_1_13.clearCache(closure_1.current, arg0);
+      },
+      clearHistory(current) {
+        return closure_1_13.clearHistory(closure_1.current);
+      },
+    }),
+    items,
+  );
   const items1 = [onMessage2, onShouldStartLoadWithRequest2];
-  const tmp23 = callback2(() => ({ onShouldStartLoadWithRequest: onShouldStartLoadWithRequest2, onMessage: onMessage2 }), items1);
+  const tmp23 = callback2(
+    () => ({ onShouldStartLoadWithRequest: onShouldStartLoadWithRequest2, onMessage: onMessage2 }),
+    items1,
+  );
   callback = tmp23;
   const items2 = [current, tmp23];
   setViewState(() => {
@@ -199,7 +276,11 @@ const forwardRefResult = forwardRef((overScrollMode) => {
       renderLoadingResult = null;
     }
   }
-  const items3 = [importDefault(onShouldStartLoadWithRequest2[7]).container, importDefault(onShouldStartLoadWithRequest2[7]).webView, style];
+  const items3 = [
+    importDefault(onShouldStartLoadWithRequest2[7]).container,
+    importDefault(onShouldStartLoadWithRequest2[7]).webView,
+    style,
+  ];
   const items4 = [importDefault(onShouldStartLoadWithRequest2[7]).container, containerStyle];
   let tmp29 = typeof source !== "number";
   if (typeof source !== "number") {

@@ -1,7 +1,6 @@
 // _runtime/metro/05864__createClass.js
 import toPropertyKey from "../05865_toPropertyKey.js";
 
-
 export default function _createClass(arg0, arg1, arg2) {
   if (arg1) {
     for (let num = 0; num < arg1.length; num = num + 1) {
@@ -43,4 +42,4 @@ export default function _createClass(arg0, arg1, arg2) {
   }
   Object.defineProperty(arg0, "prototype", { writable: false });
   return arg0;
-};
+}

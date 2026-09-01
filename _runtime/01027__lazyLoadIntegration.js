@@ -9,7 +9,7 @@ function _lazyLoadIntegration() {
     c3 = 0;
     c5 = 0;
     c4 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -184,7 +184,29 @@ function _lazyLoadIntegration() {
   return applyArgumentsResult;
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
-let closure_3 = { replayIntegration: "replay", replayCanvasIntegration: "replay-canvas", feedbackIntegration: "feedback", feedbackModalIntegration: "feedback-modal", feedbackScreenshotIntegration: "feedback-screenshot", captureConsoleIntegration: "captureconsole", contextLinesIntegration: "contextlines", linkedErrorsIntegration: "linkederrors", dedupeIntegration: "dedupe", extraErrorDataIntegration: "extraerrordata", graphqlClientIntegration: "graphqlclient", httpClientIntegration: "httpclient", reportingObserverIntegration: "reportingobserver", rewriteFramesIntegration: "rewriteframes", browserProfilingIntegration: "browserprofiling", moduleMetadataIntegration: "modulemetadata", instrumentAnthropicAiClient: "instrumentanthropicaiclient", instrumentOpenAiClient: "instrumentopenaiclient", instrumentGoogleGenAIClient: "instrumentgooglegenaiclient", instrumentLangGraph: "instrumentlanggraph", createLangChainCallbackHandler: "createlangchaincallbackhandler" };
+let closure_3 = {
+  replayIntegration: "replay",
+  replayCanvasIntegration: "replay-canvas",
+  feedbackIntegration: "feedback",
+  feedbackModalIntegration: "feedback-modal",
+  feedbackScreenshotIntegration: "feedback-screenshot",
+  captureConsoleIntegration: "captureconsole",
+  contextLinesIntegration: "contextlines",
+  linkedErrorsIntegration: "linkederrors",
+  dedupeIntegration: "dedupe",
+  extraErrorDataIntegration: "extraerrordata",
+  graphqlClientIntegration: "graphqlclient",
+  httpClientIntegration: "httpclient",
+  reportingObserverIntegration: "reportingobserver",
+  rewriteFramesIntegration: "rewriteframes",
+  browserProfilingIntegration: "browserprofiling",
+  moduleMetadataIntegration: "modulemetadata",
+  instrumentAnthropicAiClient: "instrumentanthropicaiclient",
+  instrumentOpenAiClient: "instrumentopenaiclient",
+  instrumentGoogleGenAIClient: "instrumentgooglegenaiclient",
+  instrumentLangGraph: "instrumentlanggraph",
+  createLangChainCallbackHandler: "createlangchaincallbackhandler",
+};
 
 export const lazyLoadIntegration = function lazyLoadIntegration(arg0, arg1) {
   const self = this;

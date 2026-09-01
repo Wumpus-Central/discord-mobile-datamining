@@ -53,7 +53,7 @@ let obj = {
   key: "get",
   value: function get(arg0) {
     return this.cache[arg0];
-  }
+  },
 };
 const items = [
   obj,
@@ -61,14 +61,14 @@ const items = [
     key: "set",
     value: function set(arg0, arg1) {
       this.cache[arg0] = arg1;
-    }
-  }
+    },
+  },
 ];
 let closure_5 = _createClassDefault(ObjectWithoutPrototypeCache, items);
 let closure_6 = {
   create() {
     return new closure_5();
-  }
+  },
 };
 obj = {
   variadic: function strategyVariadic(c165, cache) {
@@ -78,7 +78,7 @@ obj = {
   monadic: function strategyMonadic(c165, cache) {
     cache = cache.cache;
     return monadic.bind(this, c165, cache.create(), cache.serializer);
-  }
+  },
 };
 
 export const memoize = function memoize(arg0, cache) {

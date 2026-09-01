@@ -23,14 +23,13 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 let closure_7 = {
   appStartReported: false,
   onRunApplicationHook() {
     closure_7.appStartReported = false;
-  }
+  },
 };
 class ReactNativeProfiler {
   constructor(arg0) {
@@ -72,7 +71,7 @@ let items = [
         self._reportAppStart();
         tmp2.appStartReported = true;
       }
-    }
+    },
   },
   {
     key: "_reportAppStart",
@@ -104,8 +103,8 @@ let items = [
         const _captureAppStartResult1 = _captureAppStart(1153);
         tmp4 = null === addIntegration || undefined === addIntegration;
       }
-    }
-  }
+    },
+  },
 ];
 
 export const ReactNativeProfiler = importDefaultResult(ReactNativeProfiler, items);

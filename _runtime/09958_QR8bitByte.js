@@ -23,7 +23,7 @@ QR8bitByte.prototype = {
         length = self.data.length;
       } while (num < length);
     }
-  }
+  },
 };
 
 export default QR8bitByte;

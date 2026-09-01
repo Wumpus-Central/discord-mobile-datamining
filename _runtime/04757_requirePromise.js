@@ -6,4 +6,4 @@ export default function requirePromise() {
     const typeError = new TypeError("`Promise.allSettled` requires a global `Promise` be available.");
     throw typeError;
   }
-};
+}

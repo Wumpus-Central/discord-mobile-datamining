@@ -9,7 +9,10 @@ arg5.default = function getScrollParent(arg0) {
       if (!(parentElement instanceof tmp2(143))) {
         if (null != parentElement) {
           let _console = console;
-          let errorResult = console.error("Expected `element.parentElement` to be `?ReactNativeElement`, got: %s", parentElement);
+          let errorResult = console.error(
+            "Expected `element.parentElement` to be `?ReactNativeElement`, got: %s",
+            parentElement,
+          );
         }
       }
       let tmp6 = null;

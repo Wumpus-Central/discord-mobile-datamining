@@ -6,7 +6,7 @@ RNIapAmazonModule = asyncGeneratorStepDefault((arg0) => {
   closure_0 = arg0;
   c3 = 0;
   c4 = 0;
-  return (function*(arg0) {
+  return (function* (arg0) {
     if (c4 === 2) {
       c4 = 3;
       HermesBuiltin.throwTypeError();
