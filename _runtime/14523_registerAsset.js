@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 32, height: 32, scales: [2, 3], hash: "025ed70341d831a8d87cf223149523d3", name: "ic_monitor", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/parent_tools/images", width: 244, height: 82, scales: [1, 2, 3], hash: "245663cd177e246da48f58dd5c39e32f", name: "family_center_empty", type: "png" });

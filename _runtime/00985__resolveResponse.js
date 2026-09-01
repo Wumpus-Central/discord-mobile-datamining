@@ -25,7 +25,7 @@ function _resolveResponse() {
           obj[0] = done;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -54,7 +54,7 @@ function _resolveResponse() {
               }
               if (!body) {
                 done = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               } else {
                 body = tmp50.body;
                 reader = body.getReader();
@@ -290,7 +290,7 @@ export const addFetchEndInstrumentationHandler = function addFetchEndInstrumenta
           callback = closure_2_3((arg0) => {
             closure_0 = arg0;
             c1 = 0;
-            return (/* F122585 */ function*() { ... })();
+            return (/* F122763 */ function*() { ... })();
           });
           return callback.apply(closure_2_0(closure_2_1[5]).GLOBAL_OBJ, items).then(function(arg0) {
             const self = this;
@@ -390,7 +390,7 @@ export const addFetchInstrumentationHandler = function addFetchInstrumentationHa
           callback = closure_2_3((arg0) => {
             closure_0 = arg0;
             c1 = 0;
-            return (/* F122585 */ function*() { ... })();
+            return (/* F122763 */ function*() { ... })();
           });
           return callback.apply(closure_2_0(closure_2_1[5]).GLOBAL_OBJ, items).then(function(arg0) {
             const self = this;

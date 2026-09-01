@@ -70,7 +70,7 @@ function _flushIfServerless() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -95,7 +95,7 @@ function _flushIfServerless() {
               num4 = undefined;
               v0 = 1;
               c4 = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else {
             if (1 === tmp5) {

@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons/voice_calls", width: 24, height: 24, scales: [2, 3], hash: "087f40a4e6d31afa070d07d1130d4217", name: "screenshare", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/stage_channels/native/images", width: 89, height: 80, scales: [1, 2], hash: "0ee8111d166277419681845b13003ed7", name: "img_empty_audience", type: "png" });

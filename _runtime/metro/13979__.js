@@ -1,27 +1,16 @@
 // _runtime/metro/13979__.js
-import call from "../13942_call.js";
-import getOwnPropertyDescriptor from "../13922_getOwnPropertyDescriptor.js";
+import prop from "../13970_prop.js";
+import all from "../13978_all.js";
+import all2 from "../13980_all.js";
+import call from "../13981_call.js";
 
-if (getOwnPropertyDescriptor) {
-  const _Object = Object;
-  getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
-}
-const tmp = call(prototype, "name");
-let tmp2 = tmp;
-if (tmp) {
-  tmp2 = "something" === function something() {
 
-  }.name;
-}
-let tmp3 = tmp;
-if (tmp) {
-  const _module = getOwnPropertyDescriptor;
-  let tmp5 = !_module;
-  if (_module) {
-    tmp5 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
-    const tmp6 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
+export default prop ? ((arg0) => typeof arg0 === "symbol") : ((arg0) => {
+  const tmp3 = all2("Symbol");
+  let tmpResultResult = all(tmp3);
+  if (tmpResultResult) {
+    tmpResultResult = call(tmp3.prototype, Object(arg0));
+    const tmpResult = call;
   }
-  tmp3 = tmp5;
-}
-
-export default { EXISTS: tmp, PROPER: tmp2, CONFIGURABLE: tmp3 };
+  return tmpResultResult;
+});

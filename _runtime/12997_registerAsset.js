@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium_marketing/native/images", width: 364, height: 180, scales: [2, 3], hash: "d7e552e30321c5576e018b6c00e2147c", name: "img_stickers", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 180, height: 108, scales: [2, 3], hash: "2ef493c972c2da0faa0f370d1feb763b", name: "img_what_you_lose_profile_tier1_dark", type: "png" });

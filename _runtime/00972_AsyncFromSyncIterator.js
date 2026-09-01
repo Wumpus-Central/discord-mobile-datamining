@@ -250,7 +250,7 @@ function _instrumentAsyncIterableStream() {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -364,7 +364,7 @@ function _instrumentAsyncIterableStream() {
                   throwTypeErrorResult = store.end();
                   let num3 = 3;
                   c12 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               }
             } else {
@@ -476,14 +476,12 @@ export const instrumentAsyncIterableStream = function instrumentAsyncIterableStr
 export const instrumentMessageStream = function instrumentMessageStream(applyResult, arg1, flag) {
   closure_0 = arg1;
   closure_1 = flag;
-  let obj = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "x", cacheCreationInputTokens: "has", cacheReadInputTokens: "intl", toolCalls: "icon", activeToolBlocks: "flags" };
-  obj[8] = [];
-  obj[9] = {};
+  closure_2 = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "disabled", cacheCreationInputTokens: "resizeMode", cacheReadInputTokens: "isArray", toolCalls: [], activeToolBlocks: {} };
   applyResult.on("streamEvent", (arg0) => {
-    closure_1_5(arg0, obj, closure_1, closure_0);
+    closure_1_5(arg0, closure_2, closure_1, closure_0);
   });
   applyResult.on("message", () => {
-    obj = lib;
+    let obj = lib;
     let tmp2 = dependencyMap;
     if (lib.isRecording()) {
       if (tmp.responseId) {
@@ -530,7 +528,7 @@ export const instrumentMessageStream = function instrumentMessageStream(applyRes
     }
   });
   applyResult.on("error", (arg0) => {
-    obj = lib(869);
+    let obj = lib(869);
     obj.captureException(arg0, { mechanism: { handled: false, type: "auto.ai.anthropic.stream_error" } });
     if (lib.isRecording()) {
       obj = { code: null, message: "stream_error" };

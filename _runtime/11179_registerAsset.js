@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/stream_feedback", width: 72, height: 72, scales: [1, 2, 3], hash: "4c77a93db477bc03f2ffe1ca6854a9fa", name: "feedback-modal-sad", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 18, height: 18, scales: [2, 3], hash: "8ff35f733b0827b805a729f75828334f", name: "ic_flower_star_18px", type: "png" });

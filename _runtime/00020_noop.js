@@ -393,17 +393,17 @@ arg5.Children = {
       const items = [];
       c2 = 0;
       mapIntoArray(element, items, "", "", (arg0) => {
-        const call = f67444.call;
+        const call = f67570.call;
         closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f67444(arg0, +closure_2) : call(closure_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f67570(arg0, +closure_2) : call(closure_1, arg0, +closure_2);
       });
       return items;
     }
   },
   forEach(element) {
-    const f67442 = function() {
+    const f67568 = function() {
       const self = this;
-      const apply = f67442.apply;
+      const apply = f67568.apply;
       if (typeof apply === "unknown") {
         HermesBuiltin.applyArguments(self);
       } else {
@@ -414,36 +414,36 @@ arg5.Children = {
     if (null != element) {
       c2 = 0;
       mapIntoArray(element, [], "", "", (arg0) => {
-        const call = f67444.call;
+        const call = f67570.call;
         closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f67444(arg0, +closure_2) : call(closure_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f67570(arg0, +closure_2) : call(closure_1, arg0, +closure_2);
       });
     }
   },
   count(element) {
-    const f67443 = () => {
+    const f67569 = () => {
       closure_0 = closure_0 + 1;
     };
     if (null != element) {
       c2 = 0;
       mapIntoArray(element, [], "", "", (arg0) => {
-        const call = f67444.call;
+        const call = f67570.call;
         closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f67444(arg0, +closure_2) : call(closure_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f67570(arg0, +closure_2) : call(closure_1, arg0, +closure_2);
       });
     }
-    return f67443;
+    return f67569;
   },
   toArray(element) {
-    const f67444 = (arg0) => arg0;
+    const f67570 = (arg0) => arg0;
     let items1 = element;
     if (null != element) {
       const items = [];
       c2 = 0;
       mapIntoArray(element, items, "", "", (arg0) => {
-        const call = f67444.call;
+        const call = f67570.call;
         closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f67444(arg0, +closure_2) : call(closure_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f67570(arg0, +closure_2) : call(closure_1, arg0, +closure_2);
       });
       items1 = items;
     }

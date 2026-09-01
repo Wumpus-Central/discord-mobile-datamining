@@ -1,35 +1,14 @@
 // _runtime/metro/13953__.js
-import all from "../13945_all.js";
+import _mod13952 from "13952__.js";
 
 
 export default (arg0, arg1) => {
-  if ("string" === arg1) {
-    const toString = arg0.toString;
-    if (all(toString)) {
-      const tmp4 = tmp(13952)(toString, arg0);
-      if (!tmpResult(tmp4)) {
-        return tmp4;
-      }
-      tmpResult = tmp(13944);
-    }
+  try {
+    const obj = { value: null, configurable: true, writable: true };
+    obj[0] = arg1;
+    defineProperty(_mod13952, arg0, obj);
+    return arg1;
+  } catch (err) {
+    _mod13952[tmp2] = tmp;
   }
-  const valueOf = arg0.valueOf;
-  if (all(valueOf)) {
-    let tmp5Result = tmp5(13944);
-    const tmp8 = tmp5(13952)(valueOf, arg0);
-    if (!tmp5Result(tmp8)) {
-      return tmp8;
-    }
-  }
-  if ("string" !== arg1) {
-    const toString2 = arg0.toString;
-    if (tmp5(13945)(toString2)) {
-      tmp5Result = tmp5(13944);
-      const tmp10 = tmp5(13952)(toString2, arg0);
-      if (!tmp5Result(tmp10)) {
-        return tmp10;
-      }
-    }
-  }
-  throw new TypeError("Can't convert object to primitive value");
 };

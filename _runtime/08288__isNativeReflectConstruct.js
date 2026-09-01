@@ -1,14 +1,12 @@
 // _runtime/08288__isNativeReflectConstruct.js
-import noopAll from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
-import _isNativeReflectConstructDefault from "08233__isNativeReflectConstruct.js";
+import _isNativeReflectConstructDefault from "08280__isNativeReflectConstruct.js";
 import closure_2 from "metro/00041__classCallCheck.js";
 import closure_3 from "metro/00093__possibleConstructorReturn.js";
 import closure_4 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
-import { jsx } from "react/00021_jsxProd.js";
 
-const Marker = importDefault;
+const FeDisplacementMap = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,13 +26,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-noopAll;
-class Marker {
+class FeDisplacementMap {
   constructor() {
     self = this;
-    tmp = closure_2(this, Marker);
+    tmp = closure_2(this, FeDisplacementMap);
     tmp2 = closure_4;
-    obj = closure_4(Marker);
+    obj = closure_4(FeDisplacementMap);
     tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -49,33 +46,19 @@ class Marker {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(Marker, _isNativeReflectConstructDefault);
-const items = [
-  {
-    key: "render",
-    value: function render() {
-      const self = this;
-      const props = this.props;
-      let obj = { name: props.id, refX: props.refX, refY: props.refY, markerUnits: props.markerUnits, orient: String(props.orient), markerWidth, markerHeight };
-      ({ viewBox, preserveAspectRatio, markerWidth, markerHeight, children } = props);
-      obj = {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      };
-      const merged = Object.assign(obj);
-      const merged1 = Object.assign(self(8222)({ viewBox, preserveAspectRatio }));
-      obj.children = children;
-      return jsx(self(8289), {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      });
-    }
+_inheritsDefault(FeDisplacementMap, _isNativeReflectConstructDefault);
+let obj = {
+  key: "render",
+  value: function render() {
+    const result = FeDisplacementMap(8257).warnUnimplementedFilter();
+    return null;
   }
-];
-const importDefaultResultResult = importDefaultResult(Marker, items);
-importDefaultResultResult.displayName = "Marker";
-importDefaultResultResult.defaultProps = { refX: 0, refY: 0, orient: "0", markerWidth: 3, markerHeight: 3, markerUnits: "strokeWidth" };
+};
+const items = [obj];
+const importDefaultResultResult = importDefaultResult(FeDisplacementMap, items);
+importDefaultResultResult.displayName = "FeDisplacementMap";
+obj = {};
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

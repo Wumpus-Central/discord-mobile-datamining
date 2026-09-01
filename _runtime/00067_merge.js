@@ -8,6 +8,7 @@ import getPositionFromCSSValue from "00058_getPositionFromCSSValue.js";
 import isBackgroundRepeatKeyword from "00059_isBackgroundRepeatKeyword.js";
 import sizesDiffer from "00064_sizesDiffer.js";
 import measure from "00068_measure.js";
+import nullthrows from "00070_nullthrows.js";
 import matricesDiffer from "00077_matricesDiffer.js";
 import pointsDiffer from "00078_pointsDiffer.js";
 import insetsDiffer from "00079_insetsDiffer.js";
@@ -53,61 +54,65 @@ function merge(arg0, obj) {
   }
 }
 arg5.default = function getNativeComponentAttributes(arg0) {
+  let bubblingEventTypes = arg0;
   let _default = measure.default;
   const viewManagerConfig = _default.getViewManagerConfig(arg0);
   if (null == viewManagerConfig) {
     return null;
   } else {
-    ({ baseModuleName, bubblingEventTypes, directEventTypes, NativeProps } = viewManagerConfig);
-    if (bubblingEventTypes == null) {
-      bubblingEventTypes = {};
+    ({ baseModuleName, bubblingEventTypes: bubblingEventTypes2, directEventTypes, NativeProps } = viewManagerConfig);
+    if (bubblingEventTypes2 == null) {
+      bubblingEventTypes2 = {};
     }
     if (directEventTypes == null) {
       directEventTypes = {};
     }
     let str = directEventTypes;
     let str2 = NativeProps;
-    let str3 = bubblingEventTypes;
+    let str3 = bubblingEventTypes2;
     let tmp3 = NativeProps;
     let tmp4 = directEventTypes;
-    let tmp5 = bubblingEventTypes;
+    let keys3 = bubblingEventTypes2;
     if (!baseModuleName) {
-      let obj = {};
+      let prop = {};
+      let str4 = "EdgeInsets";
       baseModuleName = "UIEdgeInsets";
       str2 = "Point";
       str = "CGPoint";
       str3 = "CATransform3D";
-      for (const key10059 in tmp3) {
-        let keys4 = key10059;
-        keys4 = tmp3[key10059];
-        if (`CATransform3D` === keys4) {
-          let tmp39 = require;
-          let tmp40 = dependencyMap;
-          _default = matricesDiffer.default;
+      for (const key10058 in tmp3) {
+        let obj10 = key10058;
+        let tmp99 = tmp3[key10058];
+        if (`CATransform3D` === tmp99) {
+          let tmp37 = require;
+          let tmp38 = dependencyMap;
+          obj1 = matricesDiffer;
+          _default = obj1.default;
         } else {
-          if (`CGPoint` !== keys4) {
-            if (`Point` !== keys4) {
-              if ("CGSize" === keys4) {
-                let tmp35 = require;
-                let tmp36 = dependencyMap;
-                _default = sizesDiffer.default;
-              } else if (`UIEdgeInsets` === keys4) {
+          if (`CGPoint` !== tmp99) {
+            if (`Point` !== tmp99) {
+              if ("CGSize" === tmp99) {
                 let tmp33 = require;
                 let tmp34 = dependencyMap;
-                _default = insetsDiffer.default;
+                obj1 = sizesDiffer;
+                _default = obj1.default;
+              } else if (`UIEdgeInsets` === tmp99) {
+                let tmp31 = require;
+                let tmp32 = dependencyMap;
+                obj1 = insetsDiffer;
+                _default = obj1.default;
               } else {
                 _default = null;
               }
             }
           }
-          let tmp37 = require;
-          let tmp38 = dependencyMap;
-          _default = pointsDiffer.default;
+          let tmp35 = require;
+          let tmp36 = dependencyMap;
+          obj1 = pointsDiffer;
+          _default = obj1.default;
         }
         let _default1 = null;
-        switch (keys4) {
-          case "icon":
-          break;
+        switch (tmp99) {
           case "Icon":
           break;
           case "IconComponent":
@@ -115,8 +120,6 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           case "c":
           break;
           case "p":
-          break;
-          case "LIGHT":
           break;
           case "LengthDelimited":
           break;
@@ -236,6 +239,8 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "call":
           break;
+          case "category":
+          break;
           case "channel":
           break;
           case "channelId":
@@ -253,6 +258,28 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           case "unicodeVersion":
           break;
           case "code":
+            obj1 = require;
+            let tmp40 = dependencyMap;
+            let tmp41 = getValidLengthPercentageSizeOrNull;
+            _default1 = tmp41.default;
+            if (null == _default) {
+              obj1 = null == _default1;
+              if (!obj1) {
+                let obj = { process: null };
+                obj[0] = _default1;
+                obj1 = obj;
+              }
+              let obj2 = obj1;
+              prop[obj10] = obj2;
+              continue;
+            } else if (null == _default1) {
+              obj1 = { diff: null };
+              obj1[0] = _default;
+              obj2 = obj1;
+            }
+            obj2 = { diff: null, process: null };
+            obj2[0] = _default;
+            obj2[1] = _default1;
           break;
           case "color":
           break;
@@ -319,7 +346,145 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           case "end":
           break;
           case "enumerable":
-          break;
+            if (tmp61) {
+              let tmp62 = obj10;
+              if (obj1) {
+                tmp62 = obj1;
+                if (obj10) {
+                  let tmp63 = obj1;
+                  tmp62 = obj10;
+                  let keys = Object.keys();
+                  if (keys !== undefined) {
+                    tmp62 = obj10;
+                    let tmp65 = keys[tmp];
+                    while (tmp65 !== undefined) {
+                      let tmp = tmp65;
+                      if (!obj1.hasOwnProperty(tmp65)) {
+                        continue;
+                      } else {
+                        let tmp66 = obj1[tmp65];
+                        let tmp67 = tmp66;
+                        if (obj10.hasOwnProperty(tmp65)) {
+                          let tmp68 = obj10[tmp65];
+                          let tmp69 = typeof tmp66 === "object";
+                          if (typeof tmp66 === "object") {
+                            tmp69 = typeof tmp68 === "object";
+                          }
+                          tmp67 = tmp66;
+                          if (tmp69) {
+                            let tmp70 = merge;
+                            tmp67 = merge(tmp68, tmp66);
+                          }
+                        }
+                        obj10[tmp65] = tmp67;
+                        continue;
+                      }
+                      continue;
+                    }
+                  }
+                }
+              }
+              str4 = tmp62;
+            }
+            bubblingEventTypes[key10058] = str4;
+            let tmp58 = bubblingEventTypes;
+            let tmp60 = keys3[tmp2];
+            while (tmp60 !== undefined) {
+              let key10058 = tmp60;
+              if (!prop.hasOwnProperty(tmp60)) {
+                continue;
+              } else {
+                obj1 = prop[key10058];
+                str4 = obj1;
+                if (bubblingEventTypes.hasOwnProperty(key10058)) {
+                  let tmp61 = typeof obj1 === "object";
+                  if (typeof obj1 === "object") {
+                    tmp61 = typeof bubblingEventTypes[key10058] === "object";
+                  }
+                  str4 = obj1;
+                }
+              }
+              continue;
+            }
+            viewManagerConfig.bubblingEventTypes = tmp58;
+            let directEventTypes2 = viewManagerConfig.directEventTypes;
+            let genericDirectEventTypes = str.genericDirectEventTypes;
+            let tmp71 = directEventTypes2;
+            if (genericDirectEventTypes) {
+              tmp71 = genericDirectEventTypes;
+              if (directEventTypes2) {
+                let tmp72 = genericDirectEventTypes;
+                let num2 = 0;
+                tmp71 = directEventTypes2;
+                let keys1 = Object.keys();
+                if (keys1 !== undefined) {
+                  tmp71 = directEventTypes2;
+                  let tmp74 = keys1[tmp2];
+                  while (tmp74 !== undefined) {
+                    tmp = tmp74;
+                    if (!genericDirectEventTypes.hasOwnProperty(tmp74)) {
+                      continue;
+                    } else {
+                      let obj11 = genericDirectEventTypes[tmp74];
+                      let tmp75 = obj11;
+                      if (directEventTypes2.hasOwnProperty(tmp74)) {
+                        let obj12 = directEventTypes2[tmp74];
+                        let tmp76 = typeof obj11 === "object";
+                        if (typeof obj11 === "object") {
+                          tmp76 = typeof obj12 === "object";
+                        }
+                        tmp75 = obj11;
+                        if (tmp76) {
+                          let tmp77 = obj12;
+                          if (obj11) {
+                            tmp77 = obj11;
+                            if (obj12) {
+                              let tmp78 = obj11;
+                              tmp77 = obj12;
+                              let keys2 = Object.keys();
+                              if (keys2 !== undefined) {
+                                tmp77 = obj12;
+                                let tmp80 = keys2[tmp];
+                                while (tmp80 !== undefined) {
+                                  tmp = tmp80;
+                                  if (!obj11.hasOwnProperty(tmp80)) {
+                                    continue;
+                                  } else {
+                                    let tmp81 = obj11[tmp80];
+                                    let tmp82 = tmp81;
+                                    if (obj12.hasOwnProperty(tmp80)) {
+                                      let tmp83 = obj12[tmp80];
+                                      let tmp84 = typeof tmp81 === "object";
+                                      if (typeof tmp81 === "object") {
+                                        tmp84 = typeof tmp83 === "object";
+                                      }
+                                      tmp82 = tmp81;
+                                      if (tmp84) {
+                                        let tmp85 = merge;
+                                        tmp82 = merge(tmp83, tmp81);
+                                      }
+                                    }
+                                    obj12[tmp80] = tmp82;
+                                    continue;
+                                  }
+                                  continue;
+                                }
+                              }
+                            }
+                          }
+                          tmp75 = tmp77;
+                        }
+                      }
+                      directEventTypes2[tmp74] = tmp75;
+                      continue;
+                    }
+                    continue;
+                  }
+                }
+              }
+            }
+            viewManagerConfig.directEventTypes = tmp71;
+            return viewManagerConfig;
           case "error":
           break;
           case "exports":
@@ -365,6 +530,8 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           case "height":
           break;
           case "httpServerLocation":
+          break;
+          case "icon":
           break;
           case "includes":
           break;
@@ -471,11 +638,6 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           case "type":
           break;
           case "push":
-            obj = { diff: null, process: null };
-            obj[0] = _default;
-            obj[1] = _default1;
-            obj[key10059] = obj;
-            continue;
           break;
           case "radii":
           break;
@@ -593,11 +755,7 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "ay":
           break;
-          case "guildMemberCount":
-          break;
-          case "guildMemberCountRange":
-          break;
-          case "angel_tone5":
+          case "guildIconContainer":
           break;
           case "dragOffsetFromRight":
           break;
@@ -639,10 +797,6 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "serializeEnd":
           break;
-          case "_voiceDuration":
-          break;
-          case "connection_type":
-          break;
           case "MarkupParserNodeTypeError":
           break;
           case "E":
@@ -677,6 +831,8 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "INVITE_EMBED_ACTIONED":
           break;
+          case "waitForSession":
+          break;
           case "rm":
           break;
           case "m":
@@ -699,21 +855,11 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "perGuildMaxCount":
           break;
-          case "PREMIUM_GUILD_SUBSCRIBE_CONFIRMATION_MODAL":
+          case "wkst":
           break;
-          case "NonConvert":
+          case "FeDistantLight":
           break;
-          case "Convert":
-          break;
-          case "ConvertEmoticons":
-          break;
-          case "mot":
-          break;
-          case "icons":
-          break;
-          case "responseTimestamp":
-          break;
-          case "parseOptionValuesForSend":
+          case "LightSource":
           break;
           case "getChannelIcon":
           break;
@@ -741,250 +887,189 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "en":
           break;
-          case "LITTLE_ENDIAN":
-            tmp3 = str2;
-            tmp4 = str;
-            tmp5 = str3;
-          break;
-          case "ANDROID_NOTIFICATION_LIGHTS":
-          break;
-          case "L":
-          break;
-          case "LI":
-            let tmp62 = require;
-            let tmp63 = dependencyMap;
-            let tmp64 = processColor;
-            _default1 = tmp64.default;
-            if (null == _default) {
-              let tmp65 = null == _default1;
-              if (!tmp65) {
-                obj1 = { process: null };
-                obj1[0] = _default1;
-                tmp65 = obj1;
-              }
-              obj = tmp65;
-            } else if (null == _default1) {
-              let obj2 = { diff: null };
-              obj2[0] = _default;
-              obj = obj2;
-            }
-          break;
-          case "SAFETY_HUB_GET_SUSPENDED_AGE_VERIFICATION_METHODS":
-          break;
-          case "MESSAGE_REACTIONS":
-            tmp62 = require;
-            tmp63 = dependencyMap;
-            tmp64 = processColor;
-            _default1 = tmp64.default;
-            if (null == _default) {
-              tmp65 = null == _default1;
-              if (!tmp65) {
-                obj1 = { process: null };
-                obj1[0] = _default1;
-                tmp65 = obj1;
-              }
-              obj = tmp65;
-            } else if (null == _default1) {
-              obj2 = { diff: null };
-              obj2[0] = _default;
-              obj = obj2;
-            }
-          break;
-          case "quest_bar_hero":
-          break;
-          case "quest_bar_hero_video":
-            tmp62 = require;
-            tmp63 = dependencyMap;
-            tmp64 = processColor;
-            _default1 = tmp64.default;
-            if (null == _default) {
-              tmp65 = null == _default1;
-              if (!tmp65) {
-                obj1 = { process: null };
-                obj1[0] = _default1;
-                tmp65 = obj1;
-              }
-              obj = tmp65;
-            } else if (null == _default1) {
-              obj2 = { diff: null };
-              obj2[0] = _default;
-              obj = obj2;
-            }
-          break;
-          case "hero_video":
-          break;
-          case "_videoDecoderFallbackSuppressed":
-            let tmp59 = require;
-            let tmp60 = dependencyMap;
-            let tmp61 = processColorElement;
-            _default1 = tmp61.default;
-          break;
-          case "video":
-          break;
-          case "videoDecoder":
-            tmp59 = require;
-            tmp60 = dependencyMap;
-            tmp61 = processColorElement;
-            _default1 = tmp61.default;
-          break;
           case "$ZodCheckMaxLength":
           break;
           case "kMaxLength":
-            tmp59 = require;
-            tmp60 = dependencyMap;
-            tmp61 = processColorElement;
-            _default1 = tmp61.default;
+          break;
+          case "L":
           break;
           case "eng":
           break;
           case "ng":
-            let tmp56 = require;
-            let tmp57 = dependencyMap;
-            let tmp58 = resolveAssetSource;
-            _default1 = tmp58.default;
           break;
           case "el":
           break;
           case "li":
-            tmp56 = require;
-            tmp57 = dependencyMap;
-            tmp58 = resolveAssetSource;
-            _default1 = tmp58.default;
           break;
           case "lim":
           break;
           case "limited":
-            tmp56 = require;
-            tmp57 = dependencyMap;
-            tmp58 = resolveAssetSource;
-            _default1 = tmp58.default;
           break;
           case "limitedBadgeRow":
           break;
           case "mi":
-            tmp56 = require;
-            tmp57 = dependencyMap;
-            tmp58 = resolveAssetSource;
-            _default1 = tmp58.default;
+            tmp3 = str2;
+            tmp4 = str;
+            keys3 = str3;
           break;
           case "mit":
           break;
-          case "with_application":
-            let tmp54 = module;
-            let tmp55 = dependencyMap;
-            _default1 = module(55);
+          case "with_bundled_skus":
           break;
-          case "_applicationResults":
-          break;
-          case "applicationResults":
-            tmp54 = module;
-            tmp55 = dependencyMap;
-            _default1 = module(55);
-          break;
-          case "getGiftable":
-          break;
-          case "tableRow":
-            let tmp51 = require;
+          case "purchaseUpdatedListener":
+            obj1 = require;
             let tmp52 = dependencyMap;
-            let tmp53 = _getFilterAmount;
+            let tmp53 = processColor;
             _default1 = tmp53.default;
-          break;
-          case "tableRowGroupContainer":
           break;
           case "$ZodMap":
-            tmp51 = require;
-            tmp52 = dependencyMap;
-            tmp53 = _getFilterAmount;
-            _default1 = tmp53.default;
           break;
           case "ZodMap":
+            obj1 = require;
+            tmp52 = dependencyMap;
+            tmp53 = processColor;
+            _default1 = tmp53.default;
           break;
           case "M":
-            let tmp49 = require;
-            let tmp50 = dependencyMap;
-            _default1 = processColorStops.default;
           break;
           case "ap":
+            obj1 = require;
+            tmp52 = dependencyMap;
+            tmp53 = processColor;
+            _default1 = tmp53.default;
           break;
           case "$ZodCheckGreaterThan":
-            let tmp47 = require;
-            let tmp48 = dependencyMap;
-            _default1 = getPositionFromCSSValue.default;
-          break;
-          case "couch":
-          break;
-          case "couch_and_lamp":
-            let tmp45 = require;
-            let tmp46 = dependencyMap;
-            _default1 = isBackgroundRepeatKeyword.default;
           break;
           case "ToIntlMathematicalValue":
+            obj1 = require;
+            let tmp50 = dependencyMap;
+            let tmp51 = processColorElement;
+            _default1 = tmp51.default;
           break;
           case "th":
-            let tmp42 = require;
-            let tmp43 = dependencyMap;
-            let tmp44 = getValidLengthPercentageSizeOrNull;
-            _default1 = tmp44.default;
           break;
           case "ValueSetter":
+            obj1 = require;
+            tmp50 = dependencyMap;
+            tmp51 = processColorElement;
+            _default1 = tmp51.default;
           break;
           case "$ZodCheckNumberFormat":
           break;
           case "N":
+            obj1 = require;
+            tmp50 = dependencyMap;
+            tmp51 = processColorElement;
+            _default1 = tmp51.default;
           break;
           case "NumberFormat":
           break;
           case "um":
+            obj1 = require;
+            let tmp48 = dependencyMap;
+            let tmp49 = resolveAssetSource;
+            _default1 = tmp49.default;
           break;
           case "b":
           break;
           case "be":
+            obj1 = require;
+            tmp48 = dependencyMap;
+            tmp49 = resolveAssetSource;
+            _default1 = tmp49.default;
           break;
           case "role_connections_verification_url":
           break;
           case "baseType":
+            obj1 = require;
+            tmp48 = dependencyMap;
+            tmp49 = resolveAssetSource;
+            _default1 = tmp49.default;
           break;
           case "$ZodObject":
           break;
           case "$ZodObjectJIT":
+            obj1 = require;
+            tmp48 = dependencyMap;
+            tmp49 = resolveAssetSource;
+            _default1 = tmp49.default;
           break;
           case "ZodObject":
           break;
           case "O":
+            obj1 = module;
+            let tmp47 = dependencyMap;
+            _default1 = module(55);
           break;
           case "j":
           break;
           case "je":
+            obj1 = module;
+            tmp47 = dependencyMap;
+            _default1 = module(55);
           break;
           case "IT":
           break;
           case "MEDIA_PICKER_SEND_BUTTON_SPRING":
+            obj1 = require;
+            let tmp45 = dependencyMap;
+            let tmp46 = _getFilterAmount;
+            _default1 = tmp46.default;
           break;
           case "marginHorizontal":
           break;
           case "Direction":
+            obj1 = require;
+            tmp45 = dependencyMap;
+            tmp46 = _getFilterAmount;
+            _default1 = tmp46.default;
           break;
           case "rect":
           break;
-          case "midnightblue":
-          break;
-          case "SafeAreaView":
-          break;
-          case "contextState":
-          break;
-          case "USER_DISMISS":
+          case "GAME_EVENT":
+            obj1 = require;
+            let tmp44 = dependencyMap;
+            _default1 = processColorStops.default;
           break;
           case "PX_80":
           break;
           case "_":
+            obj1 = require;
+            let tmp43 = dependencyMap;
+            _default1 = getPositionFromCSSValue.default;
           break;
-          case "transaction_id":
+          case "tabContainer":
           break;
-          case "syncedThemesEnabled":
+          case "tabContainerSelected":
+            obj1 = require;
+            let tmp42 = dependencyMap;
+            _default1 = isBackgroundRepeatKeyword.default;
           break;
           case "AUTO_MODERATION_REMOVE_REGEX_PATTERNS":
           break;
           case "RNSVGClipPath":
+            obj1 = require;
+            tmp40 = dependencyMap;
+            tmp41 = getValidLengthPercentageSizeOrNull;
+            _default1 = tmp41.default;
+            if (null == _default) {
+              obj1 = null == _default1;
+              if (!obj1) {
+                obj = { process: null };
+                obj[0] = _default1;
+                obj1 = obj;
+              }
+              obj2 = obj1;
+              prop[obj10] = obj2;
+              continue;
+            } else if (null == _default1) {
+              obj1 = { diff: null };
+              obj1[0] = _default;
+              obj2 = obj1;
+            }
+            obj2 = { diff: null, process: null };
+            obj2[0] = _default;
+            obj2[1] = _default1;
           break;
           case "ClipPath":
           break;
@@ -1002,7 +1087,9 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "perUserFpsWindow":
           break;
-          case "woman_and_man_holding_hands_tone1_tone5":
+          case "woman_and_man_holding_hands_tone2":
+          break;
+          case "woman_and_man_holding_hands_tone2_tone1":
           break;
           case "PREMIUM_PLANS":
           break;
@@ -1045,6 +1132,14 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           case "S":
           break;
           case "et":
+          break;
+          case "sok":
+          break;
+          case "commandType":
+          break;
+          case "commandTypes":
+          break;
+          case "splatter":
           break;
           case "postformat":
           break;
@@ -1090,7 +1185,17 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "RTC_CONNECTION_FLAGS":
           break;
-          case "getAdTrafficMetadataSealed":
+          case "useExistingPin":
+          break;
+          case "PinPMove":
+          break;
+          case "MoveToAudienceButton":
+          break;
+          case "onAutocompleterResultsChange":
+          break;
+          case "getApplicationIdFromDetectableId":
+          break;
+          case "tableId":
           break;
           case "ActionSheetHeaderPressableText":
           break;
@@ -1100,7 +1205,7 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "ext":
           break;
-          case "isReported":
+          case "isSearchLocked":
           break;
           case "AccessibilityFocusView":
           break;
@@ -1284,6 +1389,20 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "ce":
           break;
+          case "ACTIVITY_SESSION_JOIN_FAILED":
+          break;
+          case "FAIL":
+          break;
+          case "FAILED":
+          break;
+          case "FAILED_ACTIVITY_LAUNCH_CHECKS":
+          break;
+          case "CHECKS_REQUIRED":
+          break;
+          case "REQUIRED_OPTIONS_FOR_START_PAYMENT":
+          break;
+          case "PAYMENT_FLOW_SUCCEEDED":
+          break;
           case "access":
           break;
           case "accessibilityLabelCalendarFormat":
@@ -1304,27 +1423,23 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "bel":
           break;
-          case "discardOnboardingPromise":
+          case "isWishlistableCollectiblesProduct":
           break;
-          case "searchType":
+          case "INVALID_TYPE":
           break;
-          case "getSelectedChannelIds":
+          case "PREMIUM_TIER_2_PURPLE":
           break;
-          case "destructiveButtonIndex":
+          case "PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS":
           break;
-          case "expecting_woman_tone4":
-          break;
-          case "isEligible":
-          break;
-          case "isEligibleForContentInventoryV1":
-          break;
-          case "PREMIUM_YEAR_TIER_2":
+          case "PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS_2":
           break;
           case "Role":
           break;
           case "RoleFlags":
           break;
           case "scrollToQuestId":
+          break;
+          case "AgeAssuranceMethod":
           break;
           case "accessibleDismiss":
           break;
@@ -1356,7 +1471,11 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "paddingVertical":
           break;
-          case "PLUM_4":
+          case "UNKNOWN_PAYMENT_SOURCE":
+          break;
+          case "PAYMENT_SOURCE_REQUIRED":
+          break;
+          case "RED_NEW_34":
           break;
           case "ali":
           break;
@@ -1378,19 +1497,7 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "Dao":
           break;
-          case "DM_SETTINGS_UPSELL_ACTION":
-          break;
-          case "ACTION_TO_TEXT":
-          break;
-          case "TEXTAREA_BLUR":
-          break;
-          case "BLURPLE_26":
-          break;
-          case "26C4oi":
-          break;
-          case "oil_drum":
-          break;
-          case "renderQuickActions":
+          case "renderOptions":
           break;
           case "app":
           break;
@@ -1448,9 +1555,11 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "person_walking_facing_right_tone5":
           break;
-          case "event.origin":
+          case "AvatarLockeExample":
           break;
-          case "originChannelId":
+          case "otherUser":
+          break;
+          case "otherUserId":
           break;
           case "_bodyArrayBuffer":
           break;
@@ -1470,7 +1579,7 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "iu":
           break;
-          case "buttonPill":
+          case "canUseMoreQuestOrbs":
           break;
           case "overflow_bottom":
           break;
@@ -1495,6 +1604,16 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           case "all":
           break;
           case "ll":
+          break;
+          case "discord_protos.discord_experimentation.v1.filter_category":
+          break;
+          case "_category":
+          break;
+          case "categoryContainer":
+          break;
+          case "go":
+          break;
+          case "ry":
           break;
           case "_channelId":
           break;
@@ -1544,11 +1663,11 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "ix8XIj":
           break;
-          case "customAnimationOnSwipe":
+          case "remoteClipId":
           break;
-          case "SwipeForMemberListContext":
+          case "GuildActivityStatusRestrictionDefault":
           break;
-          case "textInputStyle":
+          case "GuildActivityStatusRestrictionDefaultV2":
           break;
           case "uni":
           break;
@@ -1570,15 +1689,9 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "concatSettings":
           break;
-          case "subtitleTrailing":
+          case "substreams":
           break;
-          case "getLength":
-          break;
-          case "getLengthInBits":
-          break;
-          case "Touchable":
-          break;
-          case "TouchableHaptic":
+          case "streams":
           break;
           case "$constructor":
           break;
@@ -1610,7 +1723,7 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "toy":
           break;
-          case "getDefaultGoliveQuality":
+          case "getDebugState":
           break;
           case "creative_content":
           break;
@@ -1636,15 +1749,15 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "Badge":
           break;
-          case "fetchWebAuthnPasswordlessChallenge":
-          break;
-          case "getCheck":
-          break;
-          case "getCheckoutContextRecord":
+          case "getConnectedActivityChannelId":
           break;
           case "cr":
           break;
           case "les":
+          break;
+          case "_buildKeyCodeMapFromKeyMap":
+          break;
+          case "build":
           break;
           case "message_type":
           break;
@@ -1660,19 +1773,23 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "expandEventProperties":
           break;
-          case "isEmbeddingsResponse":
+          case "addRelationship":
           break;
-          case "seekingTracker":
+          case "TRAIN_SIMULATOR":
+          break;
+          case "getCurrentGuildSettings":
+          break;
+          case "GuildSettingsSubsections":
+          break;
+          case "sections":
+          break;
+          case "sectionsContainer":
           break;
           case "_$esjava$cursor":
           break;
           case "cursorColor":
           break;
           case "so":
-          break;
-          case "mur":
-          break;
-          case "murmur":
           break;
           case "_clientSdkMetadata":
           break;
@@ -1728,9 +1845,7 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "formTitle":
           break;
-          case "awaitingRemote":
-          break;
-          case "RemoteAuthStep":
+          case "connectOrLurkStage":
           break;
           case "avatar_description":
           break;
@@ -1754,13 +1869,15 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "pt":
           break;
+          case "updateOwnerId":
+          break;
           case "isArrayEqual":
           break;
           case "aria-disabled":
           break;
           case "disable":
           break;
-          case "disabledContainerStyle":
+          case "disabledAccessibilityHint":
           break;
           case "isa":
           break;
@@ -1768,9 +1885,19 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "led":
           break;
-          case "onFullscreenPlayerWillDismiss":
+          case "internalBinaryRead":
           break;
-          case "performanceAnalyticsEnabled":
+          case "blond_haired_woman_tone4":
+          break;
+          case "woman_tone4":
+          break;
+          case "woman_tone4_beard":
+          break;
+          case "man_tone4_beard":
+          break;
+          case "bearded_person_tone4":
+          break;
+          case "person_tone4_bald":
           break;
           case "_dispatch":
           break;
@@ -1786,15 +1913,9 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "tc":
           break;
-          case "_debouncedFlush":
+          case "unsubscribeMembers":
           break;
-          case "debounce":
-          break;
-          case "PortalSpotIllustration":
-          break;
-          case "createCollectiblesItemsFromServerResponse":
-          break;
-          case "searchThreads":
+          case "subscribeMembers":
           break;
           case "renderActivityInstanceEmbed":
           break;
@@ -1814,9 +1935,7 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "am":
           break;
-          case "interestedIcon":
-          break;
-          case "contentSelectPlan":
+          case "internalBinaryWrite":
           break;
           case "GREEN_NEW_58":
           break;
@@ -1834,7 +1953,9 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "renderCommunicationDisabled":
           break;
-          case "contactNames":
+          case "InboxSettings":
+          break;
+          case "jpg":
           break;
           case "LhlgY9":
           break;
@@ -1902,14 +2023,6 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "referrerPolicy":
           break;
-          case "lastSyncTimestamp":
-          break;
-          case "parseGameServerShareCode":
-          break;
-          case "detector":
-          break;
-          case "detectorCallbacks":
-          break;
           case "beforeAddRecordingEvent":
           break;
           case "../../../lib/braintree-error":
@@ -1966,13 +2079,39 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "dz":
           break;
+          case "useApplicationsInContext":
+          break;
           case "EntitlementTenantFulfillmentStatus":
           break;
           case "ill":
           break;
           case "__findAnimatedPropsNodes":
           break;
-          case "MIN_READABLE_CHANNELS":
+          case "inputRow":
+          break;
+          case "withSentryReactRouterV6Routing":
+          break;
+          case "getMaxScrollOffset":
+          break;
+          case "setAudioInputDevice":
+          break;
+          case "availableSounds":
+          break;
+          case "showListsAndHeaders":
+          break;
+          case "useHEVC":
+          break;
+          case "VC_TILE_ACTIVITY_SUGGESTION":
+          break;
+          case "GUILD_ROOM_DISCONNECT":
+          break;
+          case "DISCONNECTING":
+          break;
+          case "CONNECTING":
+          break;
+          case "GIFT_INFO_OPTIONS_MISSING":
+          break;
+          case "MISSING_PERMISSIONS":
           break;
           case "system_channel_flags":
           break;
@@ -1994,23 +2133,27 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "oldestUnreadMessageIdStale":
           break;
-          case "USER_NON_CHANNEL_ACK":
+          case "USER_LOGIN":
           break;
-          case "CHANNEL_ACK":
+          case "USER_LOGIN_FLOW":
           break;
-          case "ACK_MEDIA_VIEWED":
+          case "/AXYnE":
           break;
-          case "MEDIA":
-          break;
-          case "EDIT_LAST_MESSAGE":
-          break;
-          case "MESSAGE_BULK_DELETE":
+          case "nEOg1N":
           break;
           case "fo":
           break;
           case "for":
           break;
           case "forEachChannel":
+          break;
+          case "flag_pe":
+          break;
+          case "_pendingRequests":
+          break;
+          case "pendingRequests":
+          break;
+          case "quests3PDataOptedOut":
           break;
           case "nei":
           break;
@@ -2024,27 +2167,21 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "phone":
           break;
-          case "pendingProfileEffect":
+          case "LoginRequiredActions":
+          break;
+          case "getCardProductName":
+          break;
+          case "q9n0Ta":
+          break;
+          case "coerceChannelRoute":
           break;
           case "getChannelA11yHint":
           break;
           case "Channel":
           break;
-          case "interpolationIndex":
+          case "interrobang":
           break;
-          case "exploding_head":
-          break;
-          case "headMetaAuthorship":
-          break;
-          case "shippingAddress":
-          break;
-          case "shippingAddressOverride":
-          break;
-          case "scopes":
-          break;
-          case "scopesContainer":
-          break;
-          case "rgbToHex":
+          case "bangbang":
           break;
           case "getCurrent":
           break;
@@ -2074,11 +2211,13 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "current_guild_id":
           break;
-          case "getContrast":
+          case "getContacts":
           break;
-          case "getContrastingColor":
+          case "woman_farmer_tone2":
           break;
-          case "eligibleReportSubtypes":
+          case "man_farmer_tone2":
+          break;
+          case "farmer_tone2":
           break;
           case "FAMILY_CENTER_CONNECTION":
           break;
@@ -2095,50 +2234,50 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           case "DefaultGuildsRestricted":
           break;
           case "DefaultGuildsRestrictedV2":
-            tmp42 = require;
-            tmp43 = dependencyMap;
-            tmp44 = getValidLengthPercentageSizeOrNull;
-            _default1 = tmp44.default;
-          break;
-          case "mobile-visual-refresh":
-          break;
-          case "mobile-visual-refresh-floating":
-          break;
-          case "floatingButtonContainer":
           break;
           case "avatar_hash":
           break;
           case "_hash":
           break;
           case "hashKey":
+            obj1 = require;
+            tmp40 = dependencyMap;
+            tmp41 = getValidLengthPercentageSizeOrNull;
+            _default1 = tmp41.default;
+            if (null == _default) {
+              obj1 = null == _default1;
+              if (!obj1) {
+                obj = { process: null };
+                obj[0] = _default1;
+                obj1 = obj;
+              }
+              obj2 = obj1;
+              prop[obj10] = obj2;
+              continue;
+            } else if (null == _default1) {
+              obj1 = { diff: null };
+              obj1[0] = _default;
+              obj2 = obj1;
+            }
+            obj2 = { diff: null, process: null };
+            obj2[0] = _default;
+            obj2[1] = _default1;
           break;
-          case "APP_LAUNCHER_EXPANDED":
+          case "backup":
           break;
-          case "EXPAND":
+          case "backup_codes":
           break;
-          case "EXPANDED":
-          break;
-          case "EXPANDED_HEADER_HEIGHT":
-          break;
-          case "TIERLESS_BOOSTING_SYSTEM_MESSAGE":
-          break;
-          case "MESSAGE_LINK_COPIED":
-          break;
-          case "PRIMARY_330":
-          break;
-          case "PRIMARY_460":
+          case "codes":
           break;
           case "bhd":
           break;
-          case "IN_APP_GUILD_TEMPLATES_MODAL_KEY":
+          case "IN_APP_MESSAGE_SOUNDS":
           break;
-          case "GUILD_TEMPLATE":
+          case "SOUNDS_PER_ROW":
           break;
-          case "GUILD_TEMPLATES":
+          case "woman_gesturing_ok_tone3":
           break;
-          case "HOCKEY":
-          break;
-          case "invalid_type":
+          case "man_gesturing_ok_tone3":
           break;
           case "isPrivate":
           break;
@@ -2180,13 +2319,7 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "Model":
           break;
-          case "KzCF/6":
-          break;
-          case "VIDEO_INPUT_TOGGLED":
-          break;
-          case "hand_splayed_tone2":
-          break;
-          case "order_id":
+          case "originalEnabled":
           break;
           case "player_height":
           break;
@@ -2198,9 +2331,9 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "ht":
           break;
-          case "withMutualFriends":
+          case "withMutualGuilds":
           break;
-          case "withMutualFriendsCount":
+          case "errorTracker":
           break;
           case "FadeOutRight":
           break;
@@ -2209,6 +2342,16 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           case "oc":
           break;
           case "oca":
+          break;
+          case "NonConvert":
+          break;
+          case "Convert":
+          break;
+          case "ConvertEmoticons":
+          break;
+          case "mot":
+          break;
+          case "icons":
           break;
           case "_include":
           break;
@@ -2226,7 +2369,7 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "origin_pane":
           break;
-          case "registerUserExperiment":
+          case "registerWebWorker":
           break;
           case "__internalInstanceHandle":
           break;
@@ -2254,15 +2397,7 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "KeyboardAwareScrollView":
           break;
-          case "isPerformanceEventTiming":
-          break;
-          case "PerformanceEventTiming":
-          break;
-          case "PerformanceEventTiming_public":
-          break;
-          case "publicKey":
-          break;
-          case "publicKeyFingerprint":
+          case "noTint":
           break;
           case "int":
           break;
@@ -2270,7 +2405,17 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "tl":
           break;
-          case "getAppHardwareAccelerationEnabled":
+          case "getApexExperiments":
+          break;
+          case "ApexExperimentsMessage":
+          break;
+          case "MessageAttachmentFlags":
+          break;
+          case "attemptToShowTooltip":
+          break;
+          case "TooltipArrowDirections":
+          break;
+          case "shouldNotifyLoadEvents":
           break;
           case "activity_items":
           break;
@@ -2292,29 +2437,13 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "jo":
           break;
-          case "moc":
-          break;
-          case "moccasin":
-          break;
-          case "no_bicycles":
-          break;
-          case "bicycle":
-          break;
-          case "cycles":
+          case "MoreHorizontalIcon":
           break;
           case "js":
           break;
           case "xs":
           break;
-          case "PREMIUM_TENURE_6_MONTH":
-          break;
-          case "HAS_UNREAD_URGENT_MESSAGES":
-          break;
-          case "URGENT":
-          break;
-          case "ADD_FRIENDS_WIDGET":
-          break;
-          case "WIDGET":
+          case "PREMIUM_TIER_0_PURPLE_FOR_GRADIENTS":
           break;
           case "isRendered":
           break;
@@ -2340,6 +2469,8 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "ke":
           break;
+          case "parent_span_id":
+          break;
           case "isFileContaineJfiforExifHeader":
           break;
           case "toSearchListUserItem":
@@ -2350,7 +2481,7 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "kin":
           break;
-          case "hasViewingRoles":
+          case "hasUnreadOrMentions":
           break;
           case "Backspace":
           break;
@@ -2374,11 +2505,11 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "lcq":
           break;
+          case "rvManager":
+          break;
           case "arrow_left":
           break;
           case "leftActions":
-          break;
-          case "ORDER_DISCARD":
           break;
           case "_$esjava$I_length":
           break;
@@ -2391,14 +2522,6 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           case "len":
           break;
           case "lengthComputable":
-          break;
-          case "_tryToStartAnother":
-          break;
-          case "other":
-          break;
-          case "sessionData":
-          break;
-          case "FamilyCenterSubPageAnalyticsIds":
           break;
           case "analyticsId":
           break;
@@ -2450,9 +2573,9 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "shouldShowRoleOnName":
           break;
-          case "woman_in_motorized_wheelchair_medium_skin_tone":
+          case "woman_in_motorized_wheelchair_tone4":
           break;
-          case "man_in_motorized_wheelchair_medium_skin_tone":
+          case "man_in_motorized_wheelchair_tone4":
           break;
           case "__memo":
           break;
@@ -2478,6 +2601,8 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "objectAssign":
           break;
+          case "role_style":
+          break;
           case "ActionStatusSubLabel":
           break;
           case "onStatus":
@@ -2492,18 +2617,6 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "ml-Mlym":
           break;
-          case "handleMuteSettingPress":
-          break;
-          case "embedMediaToMediaItem":
-          break;
-          case "NOTIFY_FRIENDS_ON_COME_ONLINE":
-          break;
-          case "ONLINE_MULTIPLAYER":
-          break;
-          case "PLAYER_FUNCTIONS":
-          break;
-          case "EpAXPC":
-          break;
           case "Omnibutton":
           break;
           case "OmnibuttonCoachmarkRive":
@@ -2513,6 +2626,28 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           case "nib":
           break;
           case "button":
+          break;
+          case "IGNORE_MESSAGE_REQUEST":
+          break;
+          case "MESSAGE_REQUEST_ACTION":
+          break;
+          case "NO_OUT_OF_PROCESS_SUPPORT":
+          break;
+          case "OUT_OF_PROCESS":
+          break;
+          case "SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN":
+          break;
+          case "JOIN_VOICE_CHANNEL":
+          break;
+          case "VOICE_CHANNEL_EFFECT_SEND":
+          break;
+          case "SEND_ANNOUNCEMENT":
+          break;
+          case "ANNOUNCEMENT_MESSAGE_VIEWED":
+          break;
+          case "DARK_PRIMARY_700_LIGHT_PRIMARY_230":
+          break;
+          case "PRIMARY_700":
           break;
           case "Ambient":
           break;
@@ -2536,15 +2671,21 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "BaseButton":
           break;
-          case "getEmbeddedActivityParticipantId":
+          case "getEmbedScrollGradientBackground":
           break;
-          case "getGradientThemeFromFlags":
+          case "roundingMethod":
           break;
-          case "__sensorContainer":
+          case "handleEmbeddedActivityStateChange":
           break;
-          case "sensor":
+          case "authorizing_integration_owners":
           break;
-          case "guildContent":
+          case "_owner":
+          break;
+          case "owner":
+          break;
+          case "owners":
+          break;
+          case "gravityScrollEvent":
           break;
           case "track_next":
           break;
@@ -2570,9 +2711,25 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "Alignment":
           break;
-          case "useConsoleQuestUIStore":
+          case "banner_text_color":
           break;
-          case "recordDroppedEvent":
+          case "text_color":
+          break;
+          case "colorBanner":
+          break;
+          case "queued":
+          break;
+          case "queuedFullDrawDistancePrewarm":
+          break;
+          case "warmLanes":
+          break;
+          case "navigationBarHidden":
+          break;
+          case "getPresentableUpsellGuilds":
+          break;
+          case "expectedChargeTime":
+          break;
+          case "BadgePacksAbstractUI":
           break;
           case "$ZodUnknown":
           break;
@@ -2608,13 +2765,7 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "res":
           break;
-          case "rejectRequest":
-          break;
-          case "questReward":
-          break;
-          case "questRewards":
-          break;
-          case "questRewardsConfigV2FromServer":
+          case "rejectResponderTermination":
           break;
           case "_opacityActive":
           break;
@@ -2646,7 +2797,15 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "diffClamp":
           break;
-          case "upcoming_server_event_notifications":
+          case "badgeColorSecondary":
+          break;
+          case "getParser":
+          break;
+          case "getParserWithoutLinks":
+          break;
+          case "INCOMING_FRIEND_REQUESTS":
+          break;
+          case "INCOMING_FRIEND_REQUESTS_ACCEPTED":
           break;
           case "preview_asset_paths":
           break;
@@ -2682,9 +2841,7 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "outerRow":
           break;
-          case "woman_and_man_holding_hands_tone1":
-          break;
-          case "woman_and_man_holding_hands_tone1_tone2":
+          case "woman_and_man_holding_hands_tone1_tone3":
           break;
           case "webpBlob":
           break;
@@ -2698,7 +2855,15 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "prototypeInitialized":
           break;
-          case "maybeTrackQueryEntered":
+          case "ApplicationDisclosure":
+          break;
+          case "ApplicationDisclosureType":
+          break;
+          case "collectibles_sku_ids":
+          break;
+          case "sku_ids":
+          break;
+          case "speechEventCount":
           break;
           case "getDynamicSamplingContextFromScope":
           break;
@@ -2718,25 +2883,7 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "awe":
           break;
-          case "getDefaultHeaderHeight":
-          break;
-          case "Y2K":
-          break;
-          case "topLoadStart":
-          break;
-          case "precision":
-          break;
-          case "optionCell":
-          break;
-          case "optionCellText":
-          break;
-          case "_onboardingStepIndex":
-          break;
-          case "onboardingStepIndex":
-          break;
-          case "excludedQuests":
-          break;
-          case "handleMessageBlur":
+          case "getDecorationSizeForAvatarSize":
           break;
           case "$ZodPrefault":
           break;
@@ -2762,223 +2909,114 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "ace":
           break;
-          case "useActualStageSpeakerCount":
+          case "videoDecoderFallbackSent":
           break;
           case "isCamera":
           break;
           case "kiss_person_person_medium_dark_skin_tone_light_skin_tone":
           break;
+          case "_resolve":
+          break;
+          case "_resolveEmpty":
+          break;
+          case "sol":
+          break;
+          case "AppsFlyer":
+          break;
+          case "_$esjava$result":
+          break;
+          case "resultCount":
+          break;
+          case "sul":
+          break;
+          case "previewType":
+          break;
+          case "flag_ag":
+          break;
+          case "pollBadge":
+          break;
+          case "getAuthenticationErrorsFromV6OrEarlierAPIError":
+          break;
+          case "V6OrEarlierAPIError":
+          break;
+          case "getBrightness":
+          break;
+          case "BrightnessDown":
+          break;
         }
       }
-      obj.style = result.default;
+      prop.style = result.default;
       const _Object = Object;
       const obj3 = { uiViewClassName: null, validAttributes: null, bubblingEventTypes: null, directEventTypes: null };
-      obj3[0] = arg0;
-      obj3[1] = obj;
-      obj3[2] = tmp5;
+      obj3[0] = bubblingEventTypes;
+      obj3[1] = prop;
+      obj3[2] = keys3;
       obj3[3] = tmp4;
       const merged = Object.assign(viewManagerConfig, obj3);
-      const constants = measure.default.getConstants();
-      if (!constants.ViewManagerNames) {
-        if (!constants.LazyViewManagersEnabled) {
-          const bubblingEventTypes2 = viewManagerConfig.bubblingEventTypes;
-          const genericBubblingEventTypes = constants.genericBubblingEventTypes;
-          let tmp71 = bubblingEventTypes2;
-          if (genericBubblingEventTypes) {
-            tmp71 = genericBubblingEventTypes;
-            if (bubblingEventTypes2) {
-              tmp71 = bubblingEventTypes2;
-              const keys = Object.keys();
-              if (keys !== undefined) {
-                tmp71 = bubblingEventTypes2;
-                while (keys[tmp2] !== undefined) {
-                  keys4 = tmp74;
-                  if (!genericBubblingEventTypes.hasOwnProperty(tmp74)) {
-                    continue;
-                  } else {
-                    let obj10 = genericBubblingEventTypes[tmp74];
-                    let tmp75 = obj10;
-                    if (bubblingEventTypes2.hasOwnProperty(tmp74)) {
-                      let obj11 = bubblingEventTypes2[tmp74];
-                      let tmp76 = typeof obj10 === "object";
-                      if (typeof obj10 === "object") {
-                        tmp76 = typeof obj11 === "object";
-                      }
-                      tmp75 = obj10;
-                      if (tmp76) {
-                        let tmp77 = obj11;
-                        if (obj10) {
-                          tmp77 = obj10;
-                          if (obj11) {
-                            let tmp78 = obj10;
-                            tmp77 = obj11;
-                            let keys1 = Object.keys();
-                            if (keys1 !== undefined) {
-                              tmp77 = obj11;
-                              let tmp80 = keys1[keys4];
-                              while (tmp80 !== undefined) {
-                                keys4 = tmp80;
-                                if (!obj10.hasOwnProperty(tmp80)) {
-                                  continue;
-                                } else {
-                                  let tmp81 = obj10[tmp80];
-                                  let tmp82 = tmp81;
-                                  if (obj11.hasOwnProperty(tmp80)) {
-                                    let tmp83 = obj11[tmp80];
-                                    let tmp84 = typeof tmp81 === "object";
-                                    if (typeof tmp81 === "object") {
-                                      tmp84 = typeof tmp83 === "object";
-                                    }
-                                    tmp82 = tmp81;
-                                    if (tmp84) {
-                                      let tmp85 = merge;
-                                      tmp82 = merge(tmp83, tmp81);
-                                    }
-                                  }
-                                  obj11[tmp80] = tmp82;
-                                  continue;
-                                }
-                                continue;
-                              }
-                            }
-                          }
-                        }
-                        tmp75 = tmp77;
-                      }
-                    }
-                    bubblingEventTypes2[tmp74] = tmp75;
-                    continue;
-                  }
-                  continue;
-                }
-              }
+      str = measure.default.getConstants();
+      if (!str.ViewManagerNames) {
+        if (!str.LazyViewManagersEnabled) {
+          bubblingEventTypes = viewManagerConfig.bubblingEventTypes;
+          prop = str.genericBubblingEventTypes;
+          tmp58 = bubblingEventTypes;
+          if (prop) {
+            tmp58 = prop;
+            if (bubblingEventTypes) {
+              tmp58 = bubblingEventTypes;
+              keys3 = Object.keys();
             }
           }
-          viewManagerConfig.bubblingEventTypes = tmp71;
-          const directEventTypes2 = viewManagerConfig.directEventTypes;
-          const genericDirectEventTypes = constants.genericDirectEventTypes;
-          let tmp86 = directEventTypes2;
-          if (genericDirectEventTypes) {
-            tmp86 = genericDirectEventTypes;
-            if (directEventTypes2) {
-              tmp86 = directEventTypes2;
-              const keys2 = Object.keys();
-              if (keys2 !== undefined) {
-                tmp86 = directEventTypes2;
-                while (keys2[tmp2] !== undefined) {
-                  keys4 = tmp89;
-                  if (!genericDirectEventTypes.hasOwnProperty(tmp89)) {
-                    continue;
-                  } else {
-                    let obj12 = genericDirectEventTypes[tmp89];
-                    let tmp90 = obj12;
-                    if (directEventTypes2.hasOwnProperty(tmp89)) {
-                      let obj13 = directEventTypes2[tmp89];
-                      let tmp91 = typeof obj12 === "object";
-                      if (typeof obj12 === "object") {
-                        tmp91 = typeof obj13 === "object";
-                      }
-                      tmp90 = obj12;
-                      if (tmp91) {
-                        let tmp92 = obj13;
-                        if (obj12) {
-                          tmp92 = obj12;
-                          if (obj13) {
-                            let tmp93 = obj12;
-                            tmp92 = obj13;
-                            let keys3 = Object.keys();
-                            if (keys3 !== undefined) {
-                              tmp92 = obj13;
-                              let tmp95 = keys3[keys4];
-                              while (tmp95 !== undefined) {
-                                keys4 = tmp95;
-                                if (!obj12.hasOwnProperty(tmp95)) {
-                                  continue;
-                                } else {
-                                  let tmp96 = obj12[tmp95];
-                                  let tmp97 = tmp96;
-                                  if (obj13.hasOwnProperty(tmp95)) {
-                                    let tmp98 = obj13[tmp95];
-                                    let tmp99 = typeof tmp96 === "object";
-                                    if (typeof tmp96 === "object") {
-                                      tmp99 = typeof tmp98 === "object";
-                                    }
-                                    tmp97 = tmp96;
-                                    if (tmp99) {
-                                      keys4 = merge;
-                                      tmp97 = merge(tmp98, tmp96);
-                                    }
-                                  }
-                                  obj13[tmp95] = tmp97;
-                                  continue;
-                                }
-                                continue;
-                              }
-                            }
-                          }
-                        }
-                        tmp90 = tmp92;
-                      }
-                    }
-                    directEventTypes2[tmp89] = tmp90;
-                    continue;
-                  }
-                  continue;
-                }
-              }
-            }
-          }
-          viewManagerConfig.directEventTypes = tmp86;
         }
-        return viewManagerConfig;
       }
-      keys4 = tmp66(70);
-      const obj14 = keys4(measure.default.getDefaultEventTypes)();
-      if (obj14) {
+      const _default3 = measure.default;
+      const obj13 = nullthrows(measure.default.getDefaultEventTypes)();
+      if (obj13) {
         if (viewManagerConfig) {
-          keys4 = obj14;
-          for (const key10193 in obj14) {
-            keys4 = key10193;
-            if (!obj14.hasOwnProperty(key10193)) {
+          for (const key10171 in obj13) {
+            tmp = key10171;
+            if (!obj13.hasOwnProperty(key10171)) {
               continue;
             } else {
-              let obj15 = obj14[key10193];
-              keys4 = obj15;
-              if (viewManagerConfig.hasOwnProperty(key10193)) {
-                let obj16 = viewManagerConfig[key10193];
-                keys4 = typeof obj15 === "object";
-                if (typeof obj15 === "object") {
-                  keys4 = typeof obj16 === "object";
+              let obj14 = obj13[key10171];
+              let tmp88 = obj14;
+              if (viewManagerConfig.hasOwnProperty(key10171)) {
+                let obj15 = viewManagerConfig[key10171];
+                let tmp89 = typeof obj14 === "object";
+                if (typeof obj14 === "object") {
+                  tmp89 = typeof obj15 === "object";
                 }
-                keys4 = obj15;
-                if (keys4) {
-                  keys4 = obj16;
-                  if (obj15) {
-                    keys4 = obj15;
-                    if (obj16) {
-                      keys4 = obj15;
-                      keys4 = obj16;
-                      keys4 = Object.keys();
+                tmp88 = obj14;
+                if (tmp89) {
+                  let tmp90 = obj15;
+                  if (obj14) {
+                    tmp90 = obj14;
+                    if (obj15) {
+                      let tmp91 = obj14;
+                      tmp90 = obj15;
+                      let keys4 = Object.keys();
                       if (keys4 !== undefined) {
-                        keys4 = obj16;
-                        keys4 = keys4[keys4];
-                        while (keys4 !== undefined) {
-                          if (!obj15.hasOwnProperty(keys4)) {
+                        tmp90 = obj15;
+                        let tmp93 = keys4[tmp];
+                        while (tmp93 !== undefined) {
+                          tmp = tmp93;
+                          if (!obj14.hasOwnProperty(tmp93)) {
                             continue;
                           } else {
-                            keys4 = obj15[keys4];
-                            if (obj16.hasOwnProperty(keys4)) {
-                              keys4 = obj16[keys4];
-                              keys4 = typeof keys4 === "object";
-                              if (typeof keys4 === "object") {
-                                keys4 = typeof keys4 === "object";
+                            let tmp94 = obj14[tmp93];
+                            let tmp95 = tmp94;
+                            if (obj15.hasOwnProperty(tmp93)) {
+                              let tmp96 = obj15[tmp93];
+                              let tmp97 = typeof tmp94 === "object";
+                              if (typeof tmp94 === "object") {
+                                tmp97 = typeof tmp96 === "object";
                               }
-                              if (keys4) {
-                                keys4 = merge;
-                                keys4 = merge(keys4, keys4);
+                              tmp95 = tmp94;
+                              if (tmp97) {
+                                let tmp98 = merge;
+                                tmp95 = merge(tmp96, tmp94);
                               }
                             }
-                            obj16[keys4] = keys4;
+                            obj15[tmp93] = tmp95;
                             continue;
                           }
                           continue;
@@ -2986,40 +3024,42 @@ arg5.default = function getNativeComponentAttributes(arg0) {
                       }
                     }
                   }
+                  tmp88 = tmp90;
                 }
               }
-              viewManagerConfig[key10193] = keys4;
+              viewManagerConfig[key10171] = tmp88;
               continue;
             }
             continue;
           }
         }
       }
-      const _default3 = measure.default;
+      const tmp54Result = nullthrows;
     }
     const viewManagerConfig1 = measure.default.getViewManagerConfig(baseModuleName);
-    let tmp12 = str2;
-    let tmp13 = str;
-    let tmp14 = str3;
+    obj1 = str2;
+    let tmp11 = str2;
+    let tmp12 = str;
+    let tmp13 = str3;
     baseModuleName = null;
     if (viewManagerConfig1) {
       const obj4 = {};
       const merged1 = Object.assign(viewManagerConfig1.bubblingEventTypes);
-      const merged2 = Object.assign(tmp11);
+      const merged2 = Object.assign(tmp10);
       const obj5 = {};
       const merged3 = Object.assign(viewManagerConfig1.directEventTypes);
-      const merged4 = Object.assign(tmp10);
+      const merged4 = Object.assign(tmp9);
       const obj6 = {};
       const merged5 = Object.assign(viewManagerConfig1.NativeProps);
-      const merged6 = Object.assign(tmp9);
+      obj1 = Object.assign(obj1);
       baseModuleName = viewManagerConfig1.baseModuleName;
-      tmp12 = obj6;
-      tmp13 = obj5;
-      tmp14 = obj4;
+      tmp11 = obj6;
+      tmp12 = obj5;
+      tmp13 = obj4;
     }
-    str2 = tmp12;
-    str = tmp13;
-    str3 = tmp14;
+    str2 = tmp11;
+    str = tmp12;
+    str3 = tmp13;
     const _default2 = measure.default;
   }
 };

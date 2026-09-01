@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "5bfdb70bf70b33af737927fefb52cdba", name: "ServerIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/user_settings/connections/native/two_way_link/images", width: 59, height: 85.5, scales: [2, 3], hash: "07edfc27bc58db41fd8c1993a9ed69f0", name: "xbox_app_phone", type: "png" });

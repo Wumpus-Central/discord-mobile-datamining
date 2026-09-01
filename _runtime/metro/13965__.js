@@ -1,103 +1,34 @@
 // _runtime/metro/13965__.js
-let c0 = require;
-c0 = true;
-c0 = false;
+import withoutSetter from "../13966_withoutSetter.js";
+import all from "../13977_all.js";
 
-export default {
-  includes: (arg0, arg1, arg2) => {
-    const tmp3 = callback(13924)(arg0);
-    const tmp4 = callback(13966)(tmp3);
-    if (0 === tmp4) {
-      let num3 = !callback;
-      if (!callback) {
-        num3 = -1;
-      }
-      return num3;
-    } else {
-      let sum = callback(13970)(arg2, tmp4);
-      if (callback) {
-        if (arg1 != arg1) {
-          if (tmp4 > sum) {
-            while (tmp3[+sum] == tmp3[+sum]) {
-              sum = tmp7 + 1;
-            }
-            return true;
+let closure_3 = withoutSetter("toPrimitive");
+
+export default (arg0, arg1) => {
+  if (all(arg0)) {
+    if (!tmp(13979)(arg0)) {
+      let str = arg1;
+      const tmp4 = tmp(13982)(arg0, closure_3);
+      if (tmp4) {
+        if (undefined === str) {
+          str = "default";
+        }
+        const tmp5 = tmp(13985)(tmp4, arg0, str);
+        if (tmp(13977)(tmp5)) {
+          if (!tmp(13979)(tmp5)) {
+            const tmp9 = new TypeError("Can't convert object to primitive value");
+            throw tmp9;
           }
         }
-        let num2 = !callback;
-        if (!callback) {
-          num2 = -1;
+        return tmp5;
+      } else {
+        let str2 = str;
+        if (undefined === str) {
+          str2 = "number";
         }
-        return num2;
-      }
-      let sum1 = sum;
-      if (tmp4 > sum) {
-        while (true) {
-          let num = callback;
-          let tmp6 = sum1;
-          if (callback) {
-            if (tmp3[sum1] === arg1) {
-              break;
-            }
-          }
-          sum1 = sum1 + 1;
-        }
-        if (!num) {
-          num = sum1;
-        }
-        if (!num) {
-          num = 0;
-        }
-        return num;
-      }
-    }
-  },
-  indexOf: (arg0, arg1, arg2) => {
-    const tmp3 = callback(13924)(arg0);
-    const tmp4 = callback(13966)(tmp3);
-    if (0 === tmp4) {
-      let num3 = !callback;
-      if (!callback) {
-        num3 = -1;
-      }
-      return num3;
-    } else {
-      let sum = callback(13970)(arg2, tmp4);
-      if (callback) {
-        if (arg1 != arg1) {
-          if (tmp4 > sum) {
-            while (tmp3[+sum] == tmp3[+sum]) {
-              sum = tmp7 + 1;
-            }
-            return true;
-          }
-        }
-        let num2 = !callback;
-        if (!callback) {
-          num2 = -1;
-        }
-        return num2;
-      }
-      let sum1 = sum;
-      if (tmp4 > sum) {
-        while (true) {
-          let num = callback;
-          let tmp6 = sum1;
-          if (callback) {
-            if (tmp3[sum1] === arg1) {
-              break;
-            }
-          }
-          sum1 = sum1 + 1;
-        }
-        if (!num) {
-          num = sum1;
-        }
-        if (!num) {
-          num = 0;
-        }
-        return num;
+        return tmp(13986)(arg0, str2);
       }
     }
   }
+  return arg0;
 };

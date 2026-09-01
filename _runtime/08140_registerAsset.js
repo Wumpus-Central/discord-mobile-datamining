@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/upsell", width: 120, height: 80, scales: [2, 3], hash: "0e96bcd2b2f1118c31b249938bd6d191", name: "img_nitro_animated_avatar", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 25, height: 24, scales: [1, 2, 3], hash: "495d1e3b5fc10bbfc9830f32405f0c83", name: "ic_feedback_dark", type: "png" });

@@ -70,7 +70,7 @@ export function makeMultiplexedTransport(arg0, arg1) {
                     obj[0] = arg1;
                     return obj;
                   } else {
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } else {
                   try {
@@ -170,7 +170,7 @@ export function makeMultiplexedTransport(arg0, arg1) {
           items[arraySpreadResult] = closure_1_1;
           closure_1 = closure_1 + 1;
           yield Promise.all(items.map(() => { ... }));
-          return arr.every(/* F122575 */ function() { ... });
+          return arr.every(/* F122753 */ function() { ... });
         })();
       });
       closure_6 = tmp;

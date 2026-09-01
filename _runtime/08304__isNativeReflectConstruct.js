@@ -1,10 +1,12 @@
 // _runtime/08304__isNativeReflectConstruct.js
 import _inheritsDefault from "00098__inherits.js";
-import Stop from "metro/00041__classCallCheck.js";
-import closure_1 from "metro/00093__possibleConstructorReturn.js";
-import closure_2 from "00095__getPrototypeOf.js";
+import _isNativeReflectConstructDefault from "08280__isNativeReflectConstruct.js";
+import closure_2 from "metro/00041__classCallCheck.js";
+import closure_3 from "metro/00093__possibleConstructorReturn.js";
+import closure_4 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 
+const FeSpecularLighting = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,44 +26,39 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class Stop {
+class FeSpecularLighting {
   constructor() {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = Stop(this, closure_0);
-    items1 = [...items];
-    tmp2 = closure_2;
-    obj = closure_2(closure_0);
-    tmp3 = closure_1;
+    tmp = closure_2(this, FeSpecularLighting);
+    tmp2 = closure_4;
+    obj = closure_4(FeSpecularLighting);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = () => {
-      const parent = props.props.parent;
-      if (parent) {
-        parent.forceUpdate();
-      }
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(Stop, require("noop").Component);
-let items = [
-  {
-    key: "render",
-    value: function render() {
-      return null;
-    }
+_inheritsDefault(FeSpecularLighting, _isNativeReflectConstructDefault);
+let obj = {
+  key: "render",
+  value: function render() {
+    const result = FeSpecularLighting(8257).warnUnimplementedFilter();
+    return null;
   }
-];
-const importDefaultResultResult = importDefaultResult(Stop, items);
-importDefaultResultResult.displayName = "Stop";
+};
+const items = [obj];
+const importDefaultResultResult = importDefaultResult(FeSpecularLighting, items);
+importDefaultResultResult.displayName = "FeSpecularLighting";
+obj = {};
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

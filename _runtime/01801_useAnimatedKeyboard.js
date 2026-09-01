@@ -8,7 +8,7 @@ let closure_5 = { code: "function pnpm_useAnimatedKeyboardTs2(state,height){cons
 export const useAnimatedKeyboard = function useAnimatedKeyboard() {
   let obj = arg0;
   if (arg0 === undefined) {
-    obj = { isStatusBarTranslucentAndroid: "cix", isNavigationBarTranslucentAndroid: "id" };
+    obj = { isStatusBarTranslucentAndroid: "children", isNavigationBarTranslucentAndroid: "c" };
   }
   dependencyMap = undefined;
   let callback;

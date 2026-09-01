@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/ControllerIcon", width: 60, height: 60, scales: [2, 3], hash: "6f32787e0c52eb22e7f564f5312dfb32", name: "ControllerIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/upsell", width: 120, height: 80, scales: [2, 3], hash: "8c6e7658ce5157dd6c415ee437c71c87", name: "img_nitro_animated_emoji", type: "png" });

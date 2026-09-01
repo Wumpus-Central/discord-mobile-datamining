@@ -1,12 +1,6 @@
 // _runtime/metro/13949__.js
-import _mod13930 from "13930__.js";
-import all from "../13950_all.js";
+import _mod14018 from "14018__.js";
+import 13950__ from "13950__.js";
 
 
-export default (arg0, arg1) => {
-  let tmp4;
-  if (!_mod13930(arg0[arg1])) {
-    tmp4 = all(tmp);
-  }
-  return tmp4;
-};
+export default _mod14018.Object.assign;
