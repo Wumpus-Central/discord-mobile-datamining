@@ -1,20 +1,14 @@
 // === Module 8307: _isNativeReflectConstruct ===
 
 // Module 8307 (_isNativeReflectConstruct)
-import noopAll from "noop" /* 19 */;
 import _inheritsDefault from "_inherits" /* 98 */;
-import extractPropsDefault from "extractProps" /* 8224 */;
-import extractFontDefault from "extractFont" /* 8231 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8233 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8310 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import closure_4 from "_possibleConstructorReturn" /* 93 */;
-import closure_5 from "_getPrototypeOf" /* 95 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8280 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 8308 */;
-import { jsx } from "jsxProd" /* 21 */;
 
-const Text = arg1;
+const FeTurbulence = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -34,70 +28,39 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-noopAll;
-class Text {
+class FeTurbulence {
   constructor() {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_3(this, closure_0);
-    items1 = [...items];
-    tmp2 = closure_5;
-    obj = closure_5(closure_0);
-    tmp3 = closure_4;
+    tmp = closure_2(this, FeTurbulence);
+    tmp2 = closure_4;
+    obj = closure_4(FeTurbulence);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = (matrix) => {
-      let tmp = matrix;
-      if (matrix) {
-        tmp = !matrix.matrix;
-      }
-      if (tmp) {
-        tmp = closure_1_1(closure_1_2[8])(matrix);
-      }
-      if (tmp) {
-        matrix.matrix = tmp;
-      }
-      const propsAndStylesResult = lib(closure_1_2[9]).propsAndStyles(matrix);
-      const obj = lib(closure_1_2[9]);
-      const merged = Object.assign(propsAndStylesResult, lib(closure_1_2[10]).pickNotNil(closure_1_1(closure_1_2[11])(propsAndStylesResult, true)));
-      if (lib.root) {
-        const root = lib.root;
-        root.setNativeProps(propsAndStylesResult);
-      }
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(Text, _isNativeReflectConstructDefault);
-let items = [
-  {
-    key: "render",
-    value: function render() {
-      let obj = Text(8224);
-      const propsAndStylesResult = obj.propsAndStyles(this.props);
-      obj = {};
-      const merged = Object.assign(propsAndStylesResult);
-      obj.x = null;
-      obj.y = null;
-      const tmp2Result = extractPropsDefault(obj, this);
-      const merged1 = Object.assign(tmp2Result, extractFontDefault(propsAndStylesResult, true));
-      tmp2Result.ref = this.refMethod;
-      obj = {};
-      const tmp2 = extractPropsDefault;
-      const merged2 = Object.assign(tmp2Result);
-      return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
-    }
+_inheritsDefault(FeTurbulence, _isNativeReflectConstructDefault);
+let obj = {
+  key: "render",
+  value: function render() {
+    const result = FeTurbulence(8257).warnUnimplementedFilter();
+    return null;
   }
-];
-const importDefaultResultResult = importDefaultResult(Text, items);
-importDefaultResultResult.displayName = "Text";
+};
+const items = [obj];
+const importDefaultResultResult = importDefaultResult(FeTurbulence, items);
+importDefaultResultResult.displayName = "FeTurbulence";
+obj = {};
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

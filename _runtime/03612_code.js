@@ -1,18 +1,18 @@
 // === Module 3612: code ===
 
 // Module 3612 (code)
-import formatDistance from "formatDistance" /* 3613 */;
+import futureSeconds from "futureSeconds" /* 3613 */;
 import buildFormatLongFn from "buildFormatLongFn" /* 3614 */;
 import formatRelative from "formatRelative" /* 3615 */;
 import buildLocalizeFn from "buildLocalizeFn" /* 3616 */;
 import module_3617 from "module_3617" /* 3617 */;
 
-if (!formatDistance) {
+if (!futureSeconds) {
   let obj = { default: null };
-  obj[0] = formatDistance;
+  obj[0] = futureSeconds;
   let tmp3 = obj;
 } else {
-  tmp3 = formatDistance;
+  tmp3 = futureSeconds;
 }
 if (!buildFormatLongFn) {
   obj = { default: null };
@@ -43,5 +43,5 @@ if (!module_3617) {
   tmp11 = module_3617;
 }
 
-export default { code: "ja", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 0, firstWeekContainsDate: 1 } };
+export default { code: "fi", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
 export default exports.default;

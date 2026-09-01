@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset" /* 1241 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 120, height: 96, scales: [2, 3], hash: "f9c127df442a3e2592e404fc380b1a52", name: "img_search_empty_darker", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/wumpus", width: 84, height: 66, scales: [1], hash: "540091c70b333c8b8937ba1627138192", name: "wumpus-pikachu", type: "png" });

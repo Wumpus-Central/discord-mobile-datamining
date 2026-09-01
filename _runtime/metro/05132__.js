@@ -1,214 +1,212 @@
 // === Module 5132: ? ===
 
 // Module 5132
-import getDataView from "getDataView" /* 5125 */;
+import getFileChunk from "getFileChunk" /* 5129 */;
+import _mod5130 from "module_5130" /* 5130 */;
+import isAAC from "isAAC" /* 5133 */;
+import is7Z from "is7Z" /* 5134 */;
+import isAVIF from "isAVIF" /* 5135 */;
+import isBLEND from "isBLEND" /* 5136 */;
+import isAVI from "isAVI" /* 5137 */;
 
-require = arg1;
-const module = arg2;
-const dependencyMap = arg6;
-let c3 = "\u0089PNG\r\n\u001A\n";
-let c4 = 4;
-let c5 = 4;
-let c6 = 0;
-let c7 = 4;
-let c8 = 8;
-let c9 = "XML:com.adobe.xmp\0";
-const tEXt = "tEXt";
-const iTXt = "iTXt";
-const zTXt = "zTXt";
-const pHYs = "pHYs";
-const tIME = "tIME";
-const eXIf = "eXIf";
-const iCCP = "iCCP";
-arg5.default = {
-  isPngFile(dataView) {
-    let tmp = dataView;
-    if (tmp) {
-      tmp = getDataView.getStringFromDataView(dataView, 0, u0089PNGrnu001An.length) === u0089PNGrnu001An;
-      const obj = getDataView;
-    }
-    return tmp;
-  },
-  findPngOffsets(byteLength, flag2) {
-    let obj = { hasAppMarkers: false };
-    let length = u0089PNGrnu001An.length;
-    if (length + c4 + c5 <= byteLength.byteLength) {
-      while (true) {
-        let tmp = module;
-        let tmp2 = dependencyMap;
-        let tmp3 = length;
-        if (module(5128).USE_PNG_FILE) {
-          let tmp4 = require;
-          obj1 = getDataView;
-          let tmp5 = c7;
-          let tmp6 = c5;
-          if ("IHDR" === obj1.getStringFromDataView(byteLength, length + c7, c5)) {
-            obj.hasAppMarkers = true;
-            let tmp53 = c8;
-            obj.pngHeaderOffset = length + c8;
-            let tmp54 = c6;
-            let tmp55 = c4;
-            let tmp56 = c5;
-            let sum = length + (byteLength.getUint32(length + c6) + c4 + c5 + 4);
-            length = sum;
-            if (sum + c4 + c5 > byteLength.byteLength) {
-              break;
-            }
-          }
-        }
-        if (tmp(5128).USE_XMP) {
-          let tmp7 = require;
-          let obj3 = getDataView;
-          let tmp8 = c7;
-          let tmp9 = c5;
-          let tmp10 = iTXt;
-          let tmp11 = obj3.getStringFromDataView(byteLength, length + c7, c5) === iTXt;
-          if (tmp11) {
-            let tmp7Result = tmp7(5125);
-            let tmp12 = c8;
-            let tmp13 = XMLcomadobexmp0;
-            tmp11 = tmp7Result.getStringFromDataView(byteLength, length + c8, XMLcomadobexmp0.length) === XMLcomadobexmp0;
-          }
-          if (tmp11) {
-            let tmp42 = c8;
-            let tmp43 = XMLcomadobexmp0;
-            let sum1 = length + (c8 + XMLcomadobexmp0.length + 1 + 1);
-            let num = 0;
-            let tmp45 = sum1;
-            let num2 = 0;
-            let tmp46 = sum1;
-            if (sum1 < byteLength.byteLength) {
-              while (true) {
-                let tmp47 = num;
-                let tmp48 = tmp45;
-                let sum2 = num;
-                if (0 === byteLength.getUint8(tmp45)) {
-                  sum2 = num + 1;
-                }
-                let sum3 = tmp45 + 1;
-                num2 = sum2;
-                tmp46 = sum3;
-                if (sum2 >= 2) {
-                  break;
-                } else {
-                  num = sum2;
-                  tmp45 = sum3;
-                  num2 = sum2;
-                  tmp46 = sum3;
-                  if (sum3 >= byteLength.byteLength) {
-                    break;
-                  }
-                }
-              }
-            }
-            if (undefined !== tmp46) {
-              obj.hasAppMarkers = true;
-              obj = { dataOffset: null, length: null };
-              obj[0] = tmp46;
-              let tmp51 = c6;
-              let tmp52 = c8;
-              obj[1] = byteLength.getUint32(length + c6) - (tmp46 - (length + c8));
-              let items = [obj];
-              obj.xmpChunks = items;
-            }
-          }
-        }
-        let tmp14 = require;
-        let obj5 = getDataView;
-        let tmp15 = c7;
-        let tmp16 = c5;
-        let stringFromDataView = obj5.getStringFromDataView(byteLength, length + c7, c5);
-        let tmp18 = tEXt;
-        let tmp19 = stringFromDataView === tEXt;
-        if (!tmp19) {
-          let tmp20 = iTXt;
-          tmp19 = stringFromDataView === iTXt;
-        }
-        if (!tmp19) {
-          let tmp21 = zTXt;
-          let tmp22 = stringFromDataView === zTXt && flag2;
-          tmp19 = tmp22;
-        }
-        if (tmp19) {
-          obj.hasAppMarkers = true;
-          let tmp14Result = tmp14(5125);
-          let stringFromDataView1 = tmp14Result.getStringFromDataView(byteLength, length + tmp15, tmp16);
-          if (!obj.pngTextChunks) {
-            obj.pngTextChunks = [];
-          }
-          let pngTextChunks = obj.pngTextChunks;
-          obj = { length: null, type: null, offset: null };
-          let tmp39 = c6;
-          obj[0] = byteLength.getUint32(length + c6);
-          obj[1] = stringFromDataView1;
-          let tmp40 = c8;
-          obj[2] = length + c8;
-          let arr = pngTextChunks.push(obj);
-        } else {
-          tmp14Result = tmp14(5125);
-          let tmp23 = eXIf;
-          if (tmp14Result.getStringFromDataView(byteLength, length + tmp15, tmp16) === eXIf) {
-            obj.hasAppMarkers = true;
-            let tmp37 = c8;
-            obj.tiffHeaderOffset = length + c8;
+const self = this;
+let self2 = this;
+if (this) {
+  self2 = self.__createBinding;
+}
+if (self2) {
+  let fn = self;
+  if (self) {
+    fn = self.__exportStar;
+  }
+  if (!fn) {
+    fn = (obj, exports) => {
+      for (const key10007 in arg0) {
+        let tmp5 = key10007;
+        let tmp6 = "default" === key10007;
+        if (tmp6) {
+          if (tmp6) {
+            continue;
           } else {
-            if (tmp(5128).USE_ICC) {
-              if (flag2) {
-                let tmp14Result1 = tmp14(5125);
-                let tmp24 = iCCP;
-                if (tmp14Result1.getStringFromDataView(byteLength, length + tmp15, tmp16) === iCCP) {
-                  obj.hasAppMarkers = true;
-                  let tmp29 = c6;
-                  let tmp31 = c8;
-                  let sum4 = length + c8;
-                  let uint32 = byteLength.getUint32(length + c6);
-                  let tmp14Result2 = tmp14(5125);
-                  let nullTerminatedStringFromDataView = tmp14Result2.getNullTerminatedStringFromDataView(byteLength, sum4);
-                  let sum5 = sum4 + (nullTerminatedStringFromDataView.length + 1);
-                  let uint8 = byteLength.getUint8(sum5);
-                  if (!obj.iccChunks) {
-                    obj.iccChunks = [];
-                  }
-                  let sum6 = sum5 + 1;
-                  let iccChunks = obj.iccChunks;
-                  obj1 = { offset: null, length: null, chunkNumber: 1, chunksTotal: 1, profileName: null, compressionMethod: null };
-                  obj1[0] = sum6;
-                  obj1[1] = uint32 - (sum6 - sum4);
-                  obj1[4] = nullTerminatedStringFromDataView;
-                  obj1[5] = uint8;
-                  arr = iccChunks.push(obj1);
-                }
-              }
-            }
-            let tmp25 = pHYs;
-            let items1 = [pHYs, ];
-            let tmp26 = tIME;
-            items1[1] = tIME;
-            let tmp14Result3 = tmp14(5125);
-            if (items1.includes(tmp14Result3.getStringFromDataView(byteLength, length + tmp15, tmp16))) {
-              obj.hasAppMarkers = true;
-              if (!obj.pngChunkOffsets) {
-                obj.pngChunkOffsets = [];
-              }
-              let pngChunkOffsets = obj.pngChunkOffsets;
-              let tmp27 = c6;
-              let arr1 = pngChunkOffsets.push(length + c6);
-            }
+            let tmp3 = self2;
+            let tmp4 = self2(arg1, arg0, key10007);
+            continue;
           }
+          continue;
+        } else {
+          let _Object = Object;
+          let call = hasOwnProperty.call;
+          if (typeof call === "unknown") {
+            let hasOwnPropertyResult = hasOwnProperty(key10007);
+          } else {
+            hasOwnPropertyResult = call(arg1, key10007);
+          }
+          let tmp2 = hasOwnPropertyResult;
+        }
+      }
+    };
+  }
+  let _Object2 = Object;
+  exports.validateFileType = undefined;
+  fn(isAAC, exports);
+  fn(is7Z, exports);
+  fn(isAVIF, exports);
+  fn(isBLEND, exports);
+  fn(isAVI, exports);
+  exports.validateFileType = function validateFileType(fileChunk, arr, chunkSize) {
+    let items = [];
+    const items1 = [
+      ...new Set(arr.map((str) => {
+        const parts = str.split(".");
+        const formatted = parts.join("").toUpperCase();
+        let combined = formatted;
+        if ("7Z" === formatted) {
+          const _HermesInternal = HermesInternal;
+          combined = "_" + formatted;
+        }
+        return combined;
+      }))
+    ];
+    for (const item10023 of items1) {
+      let str = item10023;
+      let _Object = Object;
+      let call = hasOwnProperty.call;
+      let tmp2 = require;
+      let tmp3 = require;
+      let tmp4 = dependencyMap;
+      let tmp5 = dependencyMap;
+      let FileTypes = _mod5130.FileTypes;
+      if (typeof call === "unknown") {
+        let hasOwnPropertyResult = hasOwnProperty(item10023);
+      } else {
+        hasOwnPropertyResult = call(FileTypes, item10023);
+      }
+      if (hasOwnPropertyResult) {
+        let tmp12 = item10023;
+        arr = items.push(str);
+        continue;
+      } else {
+        let _TypeError = TypeError;
+        let tmp7 = item10023;
+        let _HermesInternal = HermesInternal;
+        let str2 = "` is not supported. Please make sure that `types` list conatins only supported files";
+        let str3 = "Type `";
+        let tmp8 = new.target;
+        let tmp9 = new.target;
+        let typeError = new TypeError("Type `" + str.toLowerCase() + "` is not supported. Please make sure that `types` list conatins only supported files");
+        let tmp11 = typeError;
+        throw typeError;
+      }
+    }
+    if (chunkSize) {
+      const _Object2 = Object;
+      const call2 = hasOwnProperty2.call;
+      if (typeof call2 === "unknown") {
+        let hasOwnProperty2Result = hasOwnProperty2("chunkSize");
+      } else {
+        hasOwnProperty2Result = call2(chunkSize, "chunkSize");
+      }
+      if (hasOwnProperty2Result) {
+        chunkSize = undefined;
+        if (null != chunkSize) {
+          chunkSize = chunkSize.chunkSize;
+        }
+        let num = 0;
+        if (null !== chunkSize) {
+          num = 0;
+          if (undefined !== chunkSize) {
+            num = chunkSize;
+          }
+        }
+        if (num <= 0) {
+          const _RangeError = RangeError;
+          const rangeError = new RangeError("chunkSize must be bigger than zero");
+          throw rangeError;
         }
       }
     }
-    return obj;
-  }
-};
-arg5.PNG_CHUNK_TYPE_SIZE = 4;
-arg5.PNG_CHUNK_LENGTH_OFFSET = 0;
-arg5.PNG_CHUNK_TYPE_OFFSET = 4;
-arg5.PNG_CHUNK_DATA_OFFSET = 8;
-arg5.TYPE_TEXT = "tEXt";
-arg5.TYPE_ITXT = "iTXt";
-arg5.TYPE_ZTXT = "zTXt";
-arg5.TYPE_PHYS = "pHYs";
-arg5.TYPE_TIME = "tIME";
-arg5.TYPE_EXIF = "eXIf";
-arg5.TYPE_ICCP = "iCCP";
+    if (!chunkSize) {
+      const arr3 = (function addSimilarTypes(items) {
+        if (items.some((arg0) => "MP4" === arg0)) {
+          items = ["M4V"];
+        } else {
+          items = items.some((arg0) => "AAC" === arg0) ? ["M4A"] : [];
+        }
+        return items;
+      })(items);
+      let combined = items;
+      if (arr3.length > 0) {
+        combined = items.concat(arr3);
+      }
+    } else {
+      let excludeSimilarTypes;
+      if (null != chunkSize) {
+        excludeSimilarTypes = chunkSize.excludeSimilarTypes;
+      }
+      combined = items;
+    }
+    let items2 = [];
+    const items3 = [];
+    for (const item10079 of combined) {
+      let tmp19 = item10079;
+      let tmp20 = require;
+      let tmp21 = require;
+      let tmp22 = dependencyMap;
+      let tmp23 = dependencyMap;
+      let FileTypes2 = _mod5130.FileTypes;
+      let tmp24 = items2;
+      items2 = items2.concat(FileTypes2.getSignaturesByName(item10079));
+      let FILE_TYPES_REQUIRED_ADDITIONAL_CHECK = _mod5130.FILE_TYPES_REQUIRED_ADDITIONAL_CHECK;
+      if (FILE_TYPES_REQUIRED_ADDITIONAL_CHECK.includes(item10079.toLowerCase())) {
+        let tmp25 = tmp20;
+        let tmp26 = tmp22;
+        let FileTypes3 = tmp21(5130).FileTypes;
+        let tmp27 = item10079;
+        arr = items3.push(FileTypes3.getInfoByName(tmp19));
+      }
+      continue;
+    }
+    let num2;
+    if (null != chunkSize) {
+      num2 = chunkSize.chunkSize;
+    }
+    if (!num2) {
+      num2 = 64;
+    }
+    fileChunk = getFileChunk.getFileChunk(fileChunk, num2);
+    const FileTypes4 = _mod5130.FileTypes;
+    const detectSignatureResult = FileTypes4.detectSignature(fileChunk, items2);
+    require = detectSignatureResult;
+    if (detectSignatureResult) {
+      if (items3.length > 0) {
+        const found = items3.filter((signatures) => {
+          signatures = signatures.signatures;
+          return signatures.includes(closure_0);
+        });
+        if (found.length > 0) {
+          const FileTypes5 = _mod5130.FileTypes;
+          const result = FileTypes5.detectTypeByAdditionalCheck(fileChunk, found);
+          dependencyMap = result;
+          return result && combined.some((str) => str.toLowerCase() === closure_1);
+        }
+      }
+      return true;
+    } else {
+      return false;
+    }
+    const set = new Set(arr.map((str) => {
+      const parts = str.split(".");
+      const formatted = parts.join("").toUpperCase();
+      let combined = formatted;
+      if ("7Z" === formatted) {
+        const _HermesInternal = HermesInternal;
+        combined = "_" + formatted;
+      }
+      return combined;
+    }));
+    const tmp29 = require;
+    const tmp30 = require;
+  };
+} else {
+  let _Object = Object;
+}

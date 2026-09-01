@@ -361,7 +361,7 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = { fired: false, wrapFn: "a", target: -7881303896031234, type: 0.00000000000000000000000000000000000007052980861263414, listener: 57380714359466420000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 };
+          obj = { fired: false, wrapFn: "a", target: "channel", type: "a", listener: "isArray" };
           obj[2] = this;
           obj[3] = global;
           obj[4] = require;
@@ -386,7 +386,7 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = { fired: false, wrapFn: "a", target: -7881303896031234, type: 0.00000000000000000000000000000000000007052980861263414, listener: 57380714359466420000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 };
+          obj = { fired: false, wrapFn: "a", target: "channel", type: "a", listener: "isArray" };
           obj[2] = this;
           obj[3] = global;
           obj[4] = require;

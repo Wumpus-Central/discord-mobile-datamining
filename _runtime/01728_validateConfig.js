@@ -76,9 +76,9 @@ let fn = function n(userConfig, callback) {
       callback: table,
       velocity: null,
       initialVelocity: 0,
-      current: "disabled",
+      current: "sa",
       lastTimestamp: null,
-      startTimestamp: null,
+      startTimestamp: "RTC_LATENCY_TEST_COMPLETE",
       reduceMotion: null
     };
     let num = obj.velocity;

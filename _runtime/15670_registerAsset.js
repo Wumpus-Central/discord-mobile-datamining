@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset" /* 1241 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 18, height: 18, scales: [1, 2], hash: "424c540aff53032ef3cdcb5f4766723e", name: "ic_rulebook_16px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "1b172806bdf2366bf9d2dd1881f3c7ff", name: "SpotifyNeutralIcon", type: "png" });

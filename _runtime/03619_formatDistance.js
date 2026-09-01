@@ -1,25 +1,26 @@
 // === Module 3619: formatDistance ===
 
 // Module 3619 (formatDistance)
-let closure_0 = { lessThanXSeconds: { one: "1\uCD08 \uBBF8\uB9CC", other: "{{count}}\uCD08 \uBBF8\uB9CC" }, xSeconds: { one: "1\uCD08", other: "{{count}}\uCD08" }, halfAMinute: "30\uCD08", lessThanXMinutes: { one: "1\uBD84 \uBBF8\uB9CC", other: "{{count}}\uBD84 \uBBF8\uB9CC" }, xMinutes: { one: "1\uBD84", other: "{{count}}\uBD84" }, aboutXHours: { one: "\uC57D 1\uC2DC\uAC04", other: "\uC57D {{count}}\uC2DC\uAC04" }, xHours: { one: "1\uC2DC\uAC04", other: "{{count}}\uC2DC\uAC04" }, xDays: { one: "1\uC77C", other: "{{count}}\uC77C" }, aboutXWeeks: { one: "\uC57D 1\uC8FC", other: "\uC57D {{count}}\uC8FC" }, xWeeks: { one: "1\uC8FC", other: "{{count}}\uC8FC" }, aboutXMonths: { one: "\uC57D 1\uAC1C\uC6D4", other: "\uC57D {{count}}\uAC1C\uC6D4" }, xMonths: { one: "1\uAC1C\uC6D4", other: "{{count}}\uAC1C\uC6D4" }, aboutXYears: { one: "\uC57D 1\uB144", other: "\uC57D {{count}}\uB144" }, xYears: { one: "1\uB144", other: "{{count}}\uB144" }, overXYears: { one: "1\uB144 \uC774\uC0C1", other: "{{count}}\uB144 \uC774\uC0C1" }, almostXYears: { one: "\uAC70\uC758 1\uB144", other: "\uAC70\uC758 {{count}}\uB144" } };
+let closure_0 = { lessThanXSeconds: { one: "moins d\u2019une seconde", other: "moins de {{count}} secondes" }, xSeconds: { one: "1 seconde", other: "{{count}} secondes" }, halfAMinute: "30 secondes", lessThanXMinutes: { one: "moins d\u2019une minute", other: "moins de {{count}} minutes" }, xMinutes: { one: "1 minute", other: "{{count}} minutes" }, aboutXHours: { one: "environ 1 heure", other: "environ {{count}} heures" }, xHours: { one: "1 heure", other: "{{count}} heures" }, xDays: { one: "1 jour", other: "{{count}} jours" }, aboutXWeeks: { one: "environ 1 semaine", other: "environ {{count}} semaines" }, xWeeks: { one: "1 semaine", other: "{{count}} semaines" }, aboutXMonths: { one: "environ 1 mois", other: "environ {{count}} mois" }, xMonths: { one: "1 mois", other: "{{count}} mois" }, aboutXYears: { one: "environ 1 an", other: "environ {{count}} ans" }, xYears: { one: "1 an", other: "{{count}} ans" }, overXYears: { one: "plus d\u2019un an", other: "plus de {{count}} ans" }, almostXYears: { one: "presqu\u2019un an", other: "presque {{count}} ans" } };
 
 export default function formatDistance(arg0, arg1, addSuffix) {
   if (typeof table[arg0] === "string") {
-    let tmp5 = tmp;
+    let tmp6 = tmp;
     if (null != addSuffix) {
-      tmp5 = tmp;
+      tmp6 = tmp;
       if (addSuffix.addSuffix) {
         if (!addSuffix.comparison) {
-          let text = `${tmp} 전`;
+          let text = `il y a ${tmp}`;
         }
-        text = `${tmp} 후`;
+        text = `dans ${tmp}`;
       }
     }
-    return tmp5;
+    return tmp6;
   } else if (1 === arg1) {
     let one = tmp.one;
   } else {
-    one = tmp.other.replace("{{count}}", arg1.toString());
+    const _String = String;
+    one = tmp.other.replace("{{count}}", String(arg1));
     const str = tmp.other;
   }
 };

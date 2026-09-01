@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset" /* 1241 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/call_of_duty_3pp", scales: [1], hash: "11d34bfaf58dae63618b0f9e7cb2f98a", name: "CallOfDuty3PP.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL2NhbGxfb2ZfZHV0eV8zcHA=", scales: [1], hash: "e85a20ae727db1c0f38f570242ee252b", name: "bg.messages.e85a20ae727db1c0f38f570242ee252b.compiled.messages", type: "jsona" });

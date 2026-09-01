@@ -1,69 +1,105 @@
 // === Module 13998: ? ===
 
 // Module 13998
+let c0 = require;
+c0 = true;
+c0 = false;
 
 export default {
-  isASCIIDigit(arg0) {
-    let tmp = arg0 >= 48;
-    if (tmp) {
-      tmp = arg0 <= 57;
+  includes: (arg0, arg1, arg2) => {
+    const tmp3 = callback(13957)(arg0);
+    const tmp4 = callback(13999)(tmp3);
+    if (0 === tmp4) {
+      let num3 = !callback;
+      if (!callback) {
+        num3 = -1;
+      }
+      return num3;
+    } else {
+      let sum = callback(14003)(arg2, tmp4);
+      if (callback) {
+        if (arg1 != arg1) {
+          if (tmp4 > sum) {
+            while (tmp3[+sum] == tmp3[+sum]) {
+              sum = tmp7 + 1;
+            }
+            return true;
+          }
+        }
+        let num2 = !callback;
+        if (!callback) {
+          num2 = -1;
+        }
+        return num2;
+      }
+      let sum1 = sum;
+      if (tmp4 > sum) {
+        while (true) {
+          let num = callback;
+          let tmp6 = sum1;
+          if (callback) {
+            if (tmp3[sum1] === arg1) {
+              break;
+            }
+          }
+          sum1 = sum1 + 1;
+        }
+        if (!num) {
+          num = sum1;
+        }
+        if (!num) {
+          num = 0;
+        }
+        return num;
+      }
     }
-    return tmp;
   },
-  isASCIIAlpha(buffer) {
-    let tmp = buffer >= 65;
-    if (tmp) {
-      tmp = buffer <= 90;
-    }
-    if (!tmp) {
-      let tmp2 = buffer >= 97;
-      if (tmp2) {
-        tmp2 = buffer <= 122;
+  indexOf: (arg0, arg1, arg2) => {
+    const tmp3 = callback(13957)(arg0);
+    const tmp4 = callback(13999)(tmp3);
+    if (0 === tmp4) {
+      let num3 = !callback;
+      if (!callback) {
+        num3 = -1;
       }
-      tmp = tmp2;
-    }
-    return tmp;
-  },
-  isASCIIAlphanumeric(arg0) {
-    let tmp = arg0 >= 65;
-    if (tmp) {
-      tmp = arg0 <= 90;
-    }
-    if (!tmp) {
-      let tmp2 = arg0 >= 97;
-      if (tmp2) {
-        tmp2 = arg0 <= 122;
+      return num3;
+    } else {
+      let sum = callback(14003)(arg2, tmp4);
+      if (callback) {
+        if (arg1 != arg1) {
+          if (tmp4 > sum) {
+            while (tmp3[+sum] == tmp3[+sum]) {
+              sum = tmp7 + 1;
+            }
+            return true;
+          }
+        }
+        let num2 = !callback;
+        if (!callback) {
+          num2 = -1;
+        }
+        return num2;
       }
-      tmp = tmp2;
-    }
-    if (!tmp) {
-      let tmp3 = arg0 >= 48;
-      if (tmp3) {
-        tmp3 = arg0 <= 57;
+      let sum1 = sum;
+      if (tmp4 > sum) {
+        while (true) {
+          let num = callback;
+          let tmp6 = sum1;
+          if (callback) {
+            if (tmp3[sum1] === arg1) {
+              break;
+            }
+          }
+          sum1 = sum1 + 1;
+        }
+        if (!num) {
+          num = sum1;
+        }
+        if (!num) {
+          num = 0;
+        }
+        return num;
       }
-      tmp = tmp3;
     }
-    return tmp;
-  },
-  isASCIIHex(arg0) {
-    let tmp = arg0 >= 48;
-    if (tmp) {
-      tmp = arg0 <= 57;
-    }
-    if (!tmp) {
-      let tmp2 = arg0 >= 65;
-      if (tmp2) {
-        tmp2 = arg0 <= 70;
-      }
-      tmp = tmp2;
-    }
-    if (!tmp) {
-      let tmp3 = arg0 >= 97;
-      if (tmp3) {
-        tmp3 = arg0 <= 102;
-      }
-      tmp = tmp3;
-    }
-    return tmp;
   }
 };

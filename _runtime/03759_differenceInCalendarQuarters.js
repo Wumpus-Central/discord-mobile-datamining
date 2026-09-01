@@ -1,0 +1,41 @@
+// === Module 3759: differenceInCalendarQuarters ===
+
+// Module 3759 (differenceInCalendarQuarters)
+import getQuarter from "getQuarter" /* 3760 */;
+import _typeof from "_typeof" /* 3572 */;
+import requiredArgs from "requiredArgs" /* 3573 */;
+
+if (!getQuarter) {
+  let obj = { default: null };
+  obj[0] = getQuarter;
+  let tmp3 = obj;
+} else {
+  tmp3 = getQuarter;
+}
+getQuarter = tmp3;
+if (!_typeof) {
+  obj = { default: null };
+  obj[0] = _typeof;
+  let tmp5 = obj;
+} else {
+  tmp5 = _typeof;
+}
+_typeof = tmp5;
+if (!requiredArgs) {
+  obj = { default: null };
+  obj[0] = requiredArgs;
+  let tmp7 = obj;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
+
+export default function differenceInCalendarQuarters(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const defaultResult2 = _typeof.default(arg1);
+  const fullYear = defaultResult1.getFullYear();
+  const diff = fullYear - defaultResult2.getFullYear();
+  return 4 * diff + (getQuarter.default(defaultResult1) - getQuarter.default(defaultResult2));
+};
+export default exports.default;

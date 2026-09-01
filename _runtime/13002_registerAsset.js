@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset" /* 1241 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium_marketing/native/images", width: 366.5, height: 180, scales: [2, 3], hash: "36372d934592de3c10481ad82af6bc9f", name: "img_longer_messages", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 180, height: 101.5, scales: [2, 3], hash: "e7c47aa4983bcda8af147e4a2811c93e", name: "img_what_you_lose_boost", type: "png" });

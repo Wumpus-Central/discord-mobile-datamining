@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset" /* 1241 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 314, height: 195, scales: [2, 3], hash: "f774e43fd38da2d8b6e5bdabed98e8b8", name: "img_tier_0_marketing_emojis", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 155.5, height: 16, scales: [2, 3], hash: "cda787d6a3bd0c9bbee693bc4f7f0975", name: "img_logo_nitro_classic_horizontal", type: "png" });

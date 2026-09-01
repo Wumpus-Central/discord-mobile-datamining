@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset" /* 1241 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/plan_selection", width: 200, height: 90, scales: [1], hash: "d354a91b7a8b3b1cf9e4de447250911f", name: "yearly_upsell_wumpus", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/backgrounds", width: 375, height: 301, scales: [2, 3], hash: "c7a19747ab5ad0f69954f725ac48a489", name: "img_top_pattern_dark", type: "png" });

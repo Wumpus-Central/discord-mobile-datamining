@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset" /* 1241 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/backgrounds", width: 195, height: 95, scales: [2, 3], hash: "6767aee50457385555e7e15b59dff5c6", name: "img_nitro_ticket_bg", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/public_guilds", width: 240, height: 240, scales: [1], hash: "409ea8be644aaa2b6a1519af84a7b604", name: "system-user-avatar", type: "png" });

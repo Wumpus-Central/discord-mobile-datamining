@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset" /* 1241 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/tiered_tenure_badging/native/images", width: 61, height: 61, scales: [3], hash: "a162bb51b9ed292f4f10e545ed35e2e3", name: "asset_platinum_badge_small", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 160, height: 160, scales: [2, 3], hash: "abf5b4249ea38c96687799aa130b2321", name: "img_no_results_darker", type: "png" });

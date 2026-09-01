@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset" /* 1241 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "3ef4b3974aa9916e2392a41f76914807", name: "ImagePlusIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/guild_settings/welcome/images", width: 71, height: 54, scales: [2, 3], hash: "9e37ee2a11d88922a3b56da1b883c062", name: "asset_role_subscription_megaphone", type: "png" });

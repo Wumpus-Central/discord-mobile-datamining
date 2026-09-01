@@ -4,8 +4,8 @@
 import formatDistance from "formatDistance" /* 3569 */;
 import buildFormatLongFn from "buildFormatLongFn" /* 3570 */;
 import formatRelative from "formatRelative" /* 3571 */;
-import buildLocalizeFn from "buildLocalizeFn" /* 3572 */;
-import module_3573 from "module_3573" /* 3573 */;
+import buildLocalizeFn from "buildLocalizeFn" /* 3578 */;
+import module_3579 from "module_3579" /* 3579 */;
 
 if (!formatDistance) {
   let obj = { default: null };
@@ -35,13 +35,13 @@ if (!buildLocalizeFn) {
 } else {
   tmp9 = buildLocalizeFn;
 }
-if (!module_3573) {
+if (!module_3579) {
   const obj2 = { default: null };
-  obj2[0] = module_3573;
+  obj2[0] = module_3579;
   let tmp11 = obj2;
 } else {
-  tmp11 = module_3573;
+  tmp11 = module_3579;
 }
 
-export default { code: "el", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
+export default { code: "bg", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
 export default exports.default;

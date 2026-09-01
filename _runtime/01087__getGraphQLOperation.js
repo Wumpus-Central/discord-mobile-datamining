@@ -58,7 +58,7 @@ function _getGraphQLOperation(obj) {
           obj = { operationType: null, operationName: "Array" };
           obj[0] = match1[1];
         } else {
-          obj = { operationType: "cix", operationName: "id" };
+          obj = { operationType: "children", operationName: "c" };
         }
       }
       let operationName2 = obj.operationName;
@@ -338,7 +338,7 @@ export const parseGraphQLQuery = function parseGraphQLQuery(str) {
       obj = { operationType: null, operationName: "Array" };
       obj[0] = match1[1];
     } else {
-      obj = { operationType: "cix", operationName: "id" };
+      obj = { operationType: "children", operationName: "c" };
     }
     return obj;
   }

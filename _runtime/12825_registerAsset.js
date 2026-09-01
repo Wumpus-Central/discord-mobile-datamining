@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset" /* 1241 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/gifting", width: 132, height: 145, scales: [1, 2, 3], hash: "79c6466cf28ca8f6510b4a84fb435a2a", name: "wumpus_snowglobe_premium120", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/media_viewer/native/images", width: 24, height: 24, scales: [2, 3], hash: "05e33949de588de2bb105d38c549ac02", name: "ic_eye_hidden", type: "png" });

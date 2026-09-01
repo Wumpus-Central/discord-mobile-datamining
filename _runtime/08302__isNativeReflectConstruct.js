@@ -1,17 +1,14 @@
 // === Module 8302: _isNativeReflectConstruct ===
 
 // Module 8302 (_isNativeReflectConstruct)
-import noopAll from "noop" /* 19 */;
 import _inheritsDefault from "_inherits" /* 98 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8233 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8303 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import closure_4 from "_possibleConstructorReturn" /* 93 */;
-import closure_5 from "_getPrototypeOf" /* 95 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8280 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
-import { jsx } from "jsxProd" /* 21 */;
 
-const Rect = arg1;
+const FeMorphology = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -31,14 +28,13 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-noopAll;
-class Rect {
+class FeMorphology {
   constructor() {
     self = this;
-    tmp = closure_3(this, Rect);
-    tmp2 = closure_5;
-    obj = closure_5(Rect);
-    tmp3 = closure_4;
+    tmp = closure_2(this, FeMorphology);
+    tmp2 = closure_4;
+    obj = closure_4(FeMorphology);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -52,30 +48,19 @@ class Rect {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(Rect, _isNativeReflectConstructDefault);
-const items = [
-  {
-    key: "render",
-    value: function render() {
-      const self = this;
-      const props = this.props;
-      let obj = { x: props.x, y: props.y, width: props.width, height: props.height, rx: props.rx, ry: props.ry };
-      obj = {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      };
-      const tmp = __INTERNAL_VIEW_CONFIGDefault;
-      const merged = Object.assign(self(8224).withoutXY(this, props));
-      const merged1 = Object.assign(obj);
-      return <tmp ref={function ref(arg0) {
-        return self.refMethod(arg0);
-      }} />;
-    }
+_inheritsDefault(FeMorphology, _isNativeReflectConstructDefault);
+let obj = {
+  key: "render",
+  value: function render() {
+    const result = FeMorphology(8257).warnUnimplementedFilter();
+    return null;
   }
-];
-const importDefaultResultResult = importDefaultResult(Rect, items);
-importDefaultResultResult.displayName = "Rect";
-importDefaultResultResult.defaultProps = { x: 0, y: 0, width: 0, height: 0 };
+};
+const items = [obj];
+const importDefaultResultResult = importDefaultResult(FeMorphology, items);
+importDefaultResultResult.displayName = "FeMorphology";
+obj = {};
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

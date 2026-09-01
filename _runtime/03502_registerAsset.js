@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset" /* 1241 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jdXN0b21fdHlwaW5nX2luZGljYXRvci9pbnRs", scales: [1], hash: "f0c08d533ebab1cd4ce2f75f701af920", name: "zh-CN.messages.f0c08d533ebab1cd4ce2f75f701af920.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/vibegrations/intl", scales: [1], hash: "57edfac00af7c48cf1b081b95153e497", name: "VibegrationsUntranslated.compiled.messages", type: "jsona" });

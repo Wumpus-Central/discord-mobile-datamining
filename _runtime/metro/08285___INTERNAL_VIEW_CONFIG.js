@@ -3,7 +3,7 @@
 // Module 8285 (__INTERNAL_VIEW_CONFIG)
 import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
 
-const obj = { uiViewClassName: "RNSVGLinearGradient", validAttributes: { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, x1: true, y1: true, x2: true, y2: true, gradient: true, gradientUnits: true, gradientTransform: true } };
+const obj = { uiViewClassName: "RNSVGFeComposite", validAttributes: { x: true, y: true, width: true, height: true, result: true, in1: true, in2: true, operator1: true, k1: true, k2: true, k3: true, k4: true } };
 
-export default setRuntimeConfigProvider.get("RNSVGLinearGradient", () => obj);
+export default setRuntimeConfigProvider.get("RNSVGFeComposite", () => obj);
 export const __INTERNAL_VIEW_CONFIG = obj;

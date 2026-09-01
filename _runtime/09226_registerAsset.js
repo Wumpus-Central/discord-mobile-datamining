@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset" /* 1241 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 240, height: 130, scales: [2, 3], hash: "2f876cc58ec4f702ded646dd5a7d0ecf", name: "no_mutual_friends_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "fe0742351cd038dd9567f8c1afd0c1cd", name: "CirclePlusIcon-primary", type: "png" });

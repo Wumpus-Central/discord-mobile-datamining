@@ -239,7 +239,7 @@ const items = [
       };
       let obj2 = self(27);
       if (obj2.shouldPressibilityUseW3CPointerEventsForHover()) {
-        obj = { onPointerEnter: "cix", onPointerLeave: "id" };
+        obj = { onPointerEnter: "children", onPointerLeave: "c" };
         const _config = this._config;
         const onHoverIn = _config.onHoverIn;
         const onHoverOut = _config.onHoverOut;

@@ -66,7 +66,7 @@ export const KeyboardProvider = (enabled) => {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -106,7 +106,7 @@ export const KeyboardProvider = (enabled) => {
           return obj;
         } else {
           v0 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp14) {
         v0 = tmp;
@@ -252,7 +252,7 @@ export const KeyboardProvider = (enabled) => {
     }
   }, items1);
   obj2 = { value: tmp9, children: null };
-  obj3 = { ref: tmp3, enabled: first, navigationBarTranslucent: null, statusBarTranslucent: null, preserveEdgeToEdge: null, style: null, onKeyboardMoveReanimated: null, onKeyboardMoveStart: "Boolean", onKeyboardMove: "a.m.", onKeyboardMoveInteractive: "p.m.", onKeyboardMoveEnd: "midnat", onFocusedInputLayoutChangedReanimated: "middag", children: "morgen" };
+  obj3 = { ref: tmp3, enabled: first, navigationBarTranslucent: null, statusBarTranslucent: null, preserveEdgeToEdge: null, style: null, onKeyboardMoveReanimated: null, onKeyboardMoveStart: "Boolean", onKeyboardMove: "EMBEDDED_ACTIVITY_LAUNCH_FAIL", onKeyboardMoveInteractive: null, onKeyboardMoveEnd: null, onFocusedInputLayoutChangedReanimated: null, children: null };
   let tmp18 = fn;
   let tmp19 = fn;
   if (!fn) {

@@ -1,18 +1,18 @@
 // === Module 3654: code ===
 
 // Module 3654 (code)
-import formatDistance from "formatDistance" /* 3655 */;
+import translateSeconds from "translateSeconds" /* 3655 */;
 import buildFormatLongFn from "buildFormatLongFn" /* 3656 */;
 import formatRelative from "formatRelative" /* 3657 */;
 import buildLocalizeFn from "buildLocalizeFn" /* 3658 */;
 import module_3659 from "module_3659" /* 3659 */;
 
-if (!formatDistance) {
+if (!translateSeconds) {
   let obj = { default: null };
-  obj[0] = formatDistance;
+  obj[0] = translateSeconds;
   let tmp3 = obj;
 } else {
-  tmp3 = formatDistance;
+  tmp3 = translateSeconds;
 }
 if (!buildFormatLongFn) {
   obj = { default: null };
@@ -43,5 +43,5 @@ if (!module_3659) {
   tmp11 = module_3659;
 }
 
-export default { code: "ro", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
+export default { code: "lt", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
 export default exports.default;

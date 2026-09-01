@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset" /* 1241 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/app_icons/images", width: 259, height: 93, scales: [2, 3], hash: "b6b1b6176f7b7fe50aec94892b5609a1", name: "app_icon_marketing", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 414.5, height: 200, scales: [2, 3], hash: "ad997b689c0c3a8b01184b1daa84d93c", name: "pending_light", type: "png" });

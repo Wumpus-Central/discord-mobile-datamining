@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset" /* 1241 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/upsell", width: 247.5, height: 194, scales: [2, 3], hash: "ea30e86096b674f657e18d24dc0df08d", name: "img_profile_upsell", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/upsell", width: 49, height: 48.5, scales: [2, 3], hash: "6922badb2f007833b3becc6f00bcb5a4", name: "img_custom_app_icons", type: "png" });

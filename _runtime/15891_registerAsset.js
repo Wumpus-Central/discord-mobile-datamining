@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset" /* 1241 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 12, height: 12, scales: [2, 3], hash: "1ec5eedfae937386cd0649a58d830a41", name: "ic_video", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/community", width: 16, height: 16, scales: [1, 2, 3], hash: "afad90ca336c33493e9ad9e6d7ce6ec1", name: "ic-application-submitted", type: "png" });

@@ -171,36 +171,36 @@ function commaSeparatedCall() {
 
 export default function normalizeColor(num) {
   if (typeof num === "number") {
-    let tmp26 = null;
+    let tmp22 = null;
     if (num >>> 0 === num) {
-      tmp26 = null;
+      tmp22 = null;
       if (num >= 0) {
-        tmp26 = null;
+        tmp22 = null;
         if (num <= 4294967295) {
-          tmp26 = num;
+          tmp22 = num;
         }
       }
     }
-    return tmp26;
+    return tmp22;
   } else if (typeof num !== "string") {
     return null;
   } else {
-    let tmp23 = match;
+    let tmp19 = match;
     if (undefined !== match) {
-      let hex6 = tmp23.hex6;
+      let hex6 = tmp19.hex6;
       match = hex6.exec(num);
       if (match) {
         const _parseInt = parseInt;
         return parseInt(match[1] + "ff", 16) >>> 0;
       }
     } else {
-      let tmp15 = call;
-      const tmp27 = call("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+");
+      let tmp13 = call;
+      const tmp23 = call("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+");
       let _RegExp = commaSeparatedCall;
-      const tmp28 = commaSeparatedCall("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+");
+      const tmp24 = commaSeparatedCall("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+");
       hex6 = globalThis;
       const _HermesInternal = HermesInternal;
-      const combined = tmp27 + "|" + tmp28 + "|" + callWithSlashSeparator("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+");
+      const combined = tmp23 + "|" + tmp24 + "|" + callWithSlashSeparator("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+");
       match = { rgb: null, rgba: null, hsl: null, hsla: null, hwb: null, hex3: null, hex4: null, hex6: null, hex8: null };
       const _RegExp2 = RegExp;
       const _HermesInternal2 = HermesInternal;
@@ -211,20 +211,24 @@ export default function normalizeColor(num) {
       let regExp1 = new RegExp("rgba(" + combined + ")");
     }
     match[1] = regExp1;
-    const regExp2 = new hex6.RegExp("hsl" + tmp15(str13, "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+%"));
+    const regExp2 = new hex6.RegExp("hsl" + tmp13("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+%"));
     match[2] = regExp2;
-    const _RegExpResult = _RegExp(str13, "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+%", str13);
-    const regExp3 = new hex6.RegExp("hsla(" + _RegExpResult + "|" + tmp29(str13, "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+%", str13) + ")");
+    const _RegExpResult = _RegExp("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+");
+    const regExp3 = new hex6.RegExp("hsla(" + _RegExpResult + "|" + tmp25("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+") + ")");
     match[3] = regExp3;
     _RegExp = hex6.RegExp;
-    tmp15 = callModern(str13, "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+%");
+    tmp13 = callModern("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+%");
+    let str10 = "[-+]?\\d*\\.?\\d+";
+    let str12 = "[-+]?\\d*\\.?\\d+%";
+    str12 = tmp25(`[-+]?\\d*\\.?\\d+`, `[-+]?\\d*\\.?\\d+%`, `[-+]?\\d*\\.?\\d+%`, "[-+]?\\d*\\.?\\d+");
+    str10 = "hwb(" + tmp13 + "|" + str12 + ")";
     regExp1 = new.target;
-    _RegExp = new _RegExp("hwb(" + tmp15 + "|" + tmp29(str13, "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+%", str13) + ")");
+    _RegExp = new _RegExp(str10);
     match[4] = _RegExp;
     match[5] = /^#([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/;
     match[6] = /^#([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/;
     match[7] = /^#([0-9a-fA-F]{6})$/;
     match[8] = /^#([0-9a-fA-F]{8})$/;
-    tmp23 = match;
+    tmp19 = match;
   }
 };
