@@ -1,32 +1,32 @@
-// === Module 14410: mapColorToHighlightColor ===
+// === Module 14443: mapColorToHighlightColor ===
 
-// Module 14410 (mapColorToHighlightColor)
+// Module 14443 (mapColorToHighlightColor)
 import set from "set" /* 2 */;
 import unsafe_getRawColor from "unsafe_getRawColor" /* 711 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import create from "create" /* 1306 */;
-import items2 from "items" /* 4138 */;
+import items2 from "items" /* 4168 */;
 import ME from "ME" /* 676 */;
 
 function mapColorToHighlightColor(arg0) {
   if (obj.unsafe_getRawColor("PRIMARY_400") === arg0) {
-    return tmp(14411).HighlightColors.ACCENT;
+    return tmp(14444).HighlightColors.ACCENT;
   } else {
     let tmpResult = tmp(711);
     if (tmpResult.unsafe_getRawColor("GREEN_360") === arg0) {
-      return tmp(14411).HighlightColors.GREEN;
+      return tmp(14444).HighlightColors.GREEN;
     } else {
       tmpResult = tmp(711);
       if (tmpResult.unsafe_getRawColor("YELLOW_360") === arg0) {
-        return tmp(14411).HighlightColors.YELLOW;
+        return tmp(14444).HighlightColors.YELLOW;
       } else {
         if (tmpResult1.unsafe_getRawColor("ORANGE_345") === arg0) {
-          return tmp(14411).HighlightColors.ORANGE;
+          return tmp(14444).HighlightColors.ORANGE;
         } else {
           if (tmpResult2.unsafe_getRawColor("RED_400") === arg0) {
-            return tmp(14411).HighlightColors.RED;
+            return tmp(14444).HighlightColors.RED;
           } else {
-            return tmp(14411).HighlightColors.NONE;
+            return tmp(14444).HighlightColors.NONE;
           }
           tmpResult2 = tmp(711);
         }

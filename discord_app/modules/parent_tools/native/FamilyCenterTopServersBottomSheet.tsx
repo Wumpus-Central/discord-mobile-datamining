@@ -1,16 +1,16 @@
-// === Module 14471: GuildRow ===
+// === Module 14504: GuildRow ===
 
-// Module 14471 (GuildRow)
+// Module 14504 (GuildRow)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import messagesProxyDefault from "messagesProxy" /* 2369 */;
-import Text from "Text" /* 4444 */;
-import ActionSheet from "ActionSheet" /* 5957 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5960 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 5972 */;
-import closure_3 from "freshTeenActivityWithMap" /* 7250 */;
+import Text from "Text" /* 4474 */;
+import ActionSheet from "ActionSheet" /* 5989 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 5992 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 6004 */;
+import closure_3 from "freshTeenActivityWithMap" /* 7282 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function GuildRow(guildActivity) {
@@ -21,7 +21,7 @@ function GuildRow(guildActivity) {
   if (null == stateFromStores) {
     return null;
   } else {
-    const topUserOrGuildDescription = tmp2(7306).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
+    const topUserOrGuildDescription = tmp2(7338).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
     obj = { label: null, subLabel: null, icon: null };
     obj[0] = stateFromStores.name;
     obj[1] = topUserOrGuildDescription;
@@ -29,7 +29,7 @@ function GuildRow(guildActivity) {
     obj[0] = stateFromStores;
     obj[1] = tmp.guildIcon;
     obj[2] = callback(GuildIconSizesDefault, obj);
-    return callback(tmp2(5567).TableRow, obj);
+    return callback(tmp2(5599).TableRow, obj);
   }
   tmp = callback3();
 }

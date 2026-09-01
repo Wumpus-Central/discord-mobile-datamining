@@ -1,13 +1,13 @@
-// === Module 11815: StyleSheet ===
+// === Module 11848: StyleSheet ===
 
-// Module 11815 (StyleSheet)
-import useThemeDefault from "useTheme" /* 4383 */;
-import animatedComponentDefault from "animatedComponent" /* 4885 */;
-import setDefault from "set" /* 5974 */;
-import setDefault2 from "set" /* 7764 */;
+// Module 11848 (StyleSheet)
+import useThemeDefault from "useTheme" /* 4413 */;
+import animatedComponentDefault from "animatedComponent" /* 4917 */;
+import setDefault from "set" /* 6006 */;
+import setDefault2 from "set" /* 7796 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 import set from "set" /* 500 */;
 import importAllResult from "noop" /* 19 */;
 
@@ -27,7 +27,7 @@ export default importAllResult.memo(function HeaderGlassBlur(shown) {
   shown = shown.shown;
   ({ blurStyle, style } = shown);
   const tmp = callback();
-  let obj = shown(4187);
+  let obj = shown(4217);
   const fn = function k() {
     let opacity = 0;
     if (shown.get()) {
@@ -44,7 +44,7 @@ export default importAllResult.memo(function HeaderGlassBlur(shown) {
   fn.__workletHash = 3451055086565;
   fn.__initData = closure_8;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  let obj2 = shown(4187);
+  let obj2 = shown(4217);
   const fn2 = function p() {
     let obj = shown(closure_1_2[6]);
     let num = 0;
@@ -54,7 +54,7 @@ export default importAllResult.memo(function HeaderGlassBlur(shown) {
     obj = { blurAmount: obj.withSpring(num) };
     return obj;
   };
-  obj = { withSpring: shown(4895).withSpring, shown };
+  obj = { withSpring: shown(4927).withSpring, shown };
   fn2.__closure = obj;
   fn2.__workletHash = 5642055202507;
   fn2.__initData = closure_9;
@@ -72,9 +72,9 @@ export default importAllResult.memo(function HeaderGlassBlur(shown) {
   const items1 = [StyleSheet.absoluteFillObject, blurStyle];
   const items2 = [closure_4(tmp11, { blurStyle: "ultra-thin", blurTheme: str, style: items1, animatedProps }), ];
   obj2 = { style: tmp.strokeContainer, children: null };
-  let tmp6Result = tmp6(5974);
+  let tmp6Result = tmp6(6006);
   const items3 = [closure_4(setDefault, { style: tmp.stroke }), ];
-  tmp6Result = tmp6(5974);
+  tmp6Result = tmp6(6006);
   const obj3 = { style: tmp.stroke };
   obj6 = shown(1363);
   const tmp2Result = tmp2(1363);

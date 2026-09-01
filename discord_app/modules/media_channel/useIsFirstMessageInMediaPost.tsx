@@ -1,6 +1,6 @@
-// === Module 7820: useIsFirstMessageInMediaPost ===
+// === Module 7852: useIsFirstMessageInMediaPost ===
 
-// Module 7820 (useIsFirstMessageInMediaPost)
+// Module 7852 (useIsFirstMessageInMediaPost)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import closure_3 from "ensureGuildLoaded" /* 1387 */;
 

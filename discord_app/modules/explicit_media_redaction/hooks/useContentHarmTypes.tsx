@@ -1,19 +1,19 @@
-// === Module 10221: useEnabledHarmTypesBitmaskForChannelAndAuthorId ===
+// === Module 10260: useEnabledHarmTypesBitmaskForChannelAndAuthorId ===
 
-// Module 10221 (useEnabledHarmTypesBitmaskForChannelAndAuthorId)
-import getEligibleHarmTypesConfigsForContext from "getEligibleHarmTypesConfigsForContext" /* 6106 */;
+// Module 10260 (useEnabledHarmTypesBitmaskForChannelAndAuthorId)
+import getEligibleHarmTypesConfigsForContext from "getEligibleHarmTypesConfigsForContext" /* 6138 */;
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
 import closure_4 from "ensureGuildLoaded" /* 1387 */;
-import closure_5 from "markAllUserIdListsStale" /* 4100 */;
+import closure_5 from "markAllUserIdListsStale" /* 4130 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
 
 require = arg1;
 function useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, authorId) {
   const _require = channelId;
   dependencyMap = authorId;
-  const eligibleHarmTypesConfigsForContext = _require(6106).getEligibleHarmTypesConfigsForContext();
-  let obj = _require(6106);
+  const eligibleHarmTypesConfigsForContext = _require(6138).getEligibleHarmTypesConfigsForContext();
+  let obj = _require(6138);
   let items = [closure_6];
   const stateFromStores = _require(589).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj2 = _require(589);
@@ -30,7 +30,7 @@ function useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, authorId) {
     const merged = Object.assign(arg0);
     obj[harmType.harmType] = harmType.getProtoUserSettings(settings.settings);
     return obj;
-  }, {}), items3, _require(6113).areSettingsEqual);
+  }, {}), items3, _require(6145).areSettingsEqual);
   const items4 = [stateFromStores1, eligibleHarmTypesConfigsForContext, stateFromStores2, authorId, stateFromStores];
   const memo = eligibleHarmTypesConfigsForContext.useMemo(() => {
     if (null != stateFromStores1) {
@@ -59,10 +59,10 @@ function useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, authorId) {
     }
   }, items4);
   if (0 === memo.length) {
-    let NONE = tmp(6109).ContentHarmTypeBitMask.NONE;
+    let NONE = tmp(6141).ContentHarmTypeBitMask.NONE;
   } else {
-    NONE = tmp(6106).contentHarmTypesToFlags(memo);
-    const tmpResult = tmp(6106);
+    NONE = tmp(6138).contentHarmTypesToFlags(memo);
+    const tmpResult = tmp(6138);
   }
   return NONE;
 }

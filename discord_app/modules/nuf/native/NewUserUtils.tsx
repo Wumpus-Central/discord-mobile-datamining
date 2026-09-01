@@ -1,18 +1,18 @@
-// === Module 16989: _shouldSkipContactSyncStep ===
+// === Module 17025: _shouldSkipContactSyncStep ===
 
-// Module 16989 (_shouldSkipContactSyncStep)
+// Module 17025 (_shouldSkipContactSyncStep)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import _modDef4691 from "module_4691" /* 4691 */;
-import trackNUFStep from "trackNUFStep" /* 12188 */;
-import NEW_USER_MODAL_KEY from "NEW_USER_MODAL_KEY" /* 16990 */;
+import _modDef4723 from "module_4723" /* 4723 */;
+import trackNUFStep from "trackNUFStep" /* 12221 */;
+import NEW_USER_MODAL_KEY from "NEW_USER_MODAL_KEY" /* 17026 */;
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "initialize" /* 15514 */;
-import closure_6 from "set" /* 5193 */;
+import closure_5 from "initialize" /* 15549 */;
+import closure_6 from "set" /* 5225 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
-import { ContactPermissions } from "ContactSyncLandingPage" /* 12183 */;
-import { NotificationAuthorizationStatus as closure_11 } from "NativePermissionStatus" /* 4698 */;
+import { ContactPermissions } from "ContactSyncLandingPage" /* 12216 */;
+import { NotificationAuthorizationStatus as closure_11 } from "NativePermissionStatus" /* 4730 */;
 
 require = arg1;
 function _shouldSkipContactSyncStep() {
@@ -29,7 +29,7 @@ function _shouldSkipContactSyncStep() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -45,13 +45,13 @@ function _shouldSkipContactSyncStep() {
             return obj;
           } else {
             const callback = tmp4;
-            let obj2 = closure_1_0(12185);
+            let obj2 = closure_1_0(12218);
             const result = obj2.isContactSyncAvailable();
             if (result) {
               c1 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(12185).checkContactPermissions();
+              obj1[0] = closure_1_0(12218).checkContactPermissions();
               return obj1;
             } else {
               dependencyMap = 3;
@@ -89,12 +89,12 @@ function lastStepComplete(STEP_GUILD_TEMPLATE) {
   trackNUFStep.trackNUFStep(STEP_GUILD_TEMPLATE, "NUF Complete");
   const obj = trackNUFStep;
   if (obj2.isModalOpen(NEW_USER_MODAL_KEY.NEW_USER_MODAL_KEY)) {
-    _modDef4691.popWithKey(tmp(16990).NEW_USER_MODAL_KEY);
-    const obj3 = _modDef4691;
+    _modDef4723.popWithKey(tmp(17026).NEW_USER_MODAL_KEY);
+    const obj3 = _modDef4723;
   }
   let tmpResult = tmp(1222);
   tmpResult.transitionTo(constants.ME, { navigationReplace: true });
-  tmpResult = tmp(12251);
+  tmpResult = tmp(12284);
   const result = tmpResult.setNewUserFlowCompleted();
 }
 function getNextOnboardingStep(flag, first1, first) {
@@ -127,7 +127,7 @@ function _getNextOnboardingStep() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -157,7 +157,7 @@ function _getNextOnboardingStep() {
               transitionStep2 = undefined;
               v0 = 1;
               transitionStep2 = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -211,7 +211,7 @@ function _getNextOnboardingStep() {
               return obj5;
             } else if (arg1) {
               callback = dependencyMap;
-              obj3 = flag(12188);
+              obj3 = flag(12221);
               const obj6 = { skip: null };
               obj6[0] = flag;
               obj3.trackNUFStep(closure_3, key, obj6);
@@ -298,7 +298,7 @@ let closure_13 = importDefaultResult(function*() {
       obj[0] = arg1;
       return obj;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -363,7 +363,7 @@ let closure_14 = importDefaultResult(function*() {
       obj[0] = arg1;
       return obj;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

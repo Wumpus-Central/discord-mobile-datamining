@@ -1,8 +1,8 @@
-// === Module 8857: useWishlistNUXActionSheet ===
+// === Module 8894: useWishlistNUXActionSheet ===
 
-// Module 8857 (useWishlistNUXActionSheet)
+// Module 8894 (useWishlistNUXActionSheet)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "createUserWidgetFromServer" /* 7334 */;
+import closure_4 from "createUserWidgetFromServer" /* 7366 */;
 import closure_5 from "fetchFingerprint" /* 1218 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1384 */;
 

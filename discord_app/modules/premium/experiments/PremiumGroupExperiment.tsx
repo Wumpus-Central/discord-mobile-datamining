@@ -1,6 +1,6 @@
-// === Module 12595: usePremiumGroupExperiment ===
+// === Module 12628: usePremiumGroupExperiment ===
 
-// Module 12595 (usePremiumGroupExperiment)
+// Module 12628 (usePremiumGroupExperiment)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1468 */;
 

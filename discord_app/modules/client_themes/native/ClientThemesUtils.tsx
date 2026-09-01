@@ -1,19 +1,19 @@
-// === Module 4266: getGradientColorByPercentage ===
+// === Module 4296: getGradientColorByPercentage ===
 
-// Module 4266 (getGradientColorByPercentage)
+// Module 4296 (getGradientColorByPercentage)
 import nDefault from "n" /* 689 */;
 import ThemesDefault from "Themes" /* 712 */;
 import ClientThemeType from "ClientThemeType" /* 1349 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import hexToRgba from "hexToRgba" /* 4296 */;
-import hslToRgbDefault from "hslToRgb" /* 4297 */;
-import getGuildThemeNameDefault from "getGuildThemeName" /* 4298 */;
-import getCustomThemesName from "getCustomThemesName" /* 4380 */;
-import useThemeDefault from "useTheme" /* 4383 */;
+import hexToRgba from "hexToRgba" /* 4326 */;
+import hslToRgbDefault from "hslToRgb" /* 4327 */;
+import getGuildThemeNameDefault from "getGuildThemeName" /* 4328 */;
+import getCustomThemesName from "getCustomThemesName" /* 4410 */;
+import useThemeDefault from "useTheme" /* 4413 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "handleThemeChange" /* 1302 */;
-import closure_6 from "reset" /* 4267 */;
+import closure_6 from "reset" /* 4297 */;
 import closure_7 from "reset" /* 1346 */;
 
 require = arg1;
@@ -31,7 +31,7 @@ function getGradientColorByPercentage(type, END) {
   } else {
     colors = type.customThemeSettings.colors;
     if (1 === colors.length) {
-      return tmp(4296).hexToRgb(colors[0]);
+      return tmp(4326).hexToRgb(colors[0]);
     } else {
       const mapped2 = colors.map((arg0, arg1) => arg1 / (colors.length - 1) * 100);
       obj = nDefault;
@@ -148,8 +148,8 @@ function calculateGradientValueWithOpacity(customBackgroundGradient, END, theme)
     const tmp30 = getGradientColorByPercentage(customBackgroundGradient, tmp10);
     const tmp35 = new hslToRgbDefault(tmp30.r, tmp30.g, tmp30.b, tmp11);
     const tmp38 = new hslToRgbDefault(hexToRgbResult.r, hexToRgbResult.g, hexToRgbResult.b, 1 - tmp11);
-    const mixColorsResult = tmp(4296).mixColors(tmp35, tmp38);
-    const tmpResult1 = tmp(4296);
+    const mixColorsResult = tmp(4326).mixColors(tmp35, tmp38);
+    const tmpResult1 = tmp(4326);
     const obj5 = nDefault;
     return nDefault.rgb(mixColorsResult.red, mixColorsResult.green, mixColorsResult.blue).hex("rgb");
   }

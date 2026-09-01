@@ -1,17 +1,17 @@
-// === Module 7163: emitChanges ===
+// === Module 7195: emitChanges ===
 
-// Module 7163 (emitChanges)
+// Module 7195 (emitChanges)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4109 */;
-import apexExperiment from "apexExperiment" /* 12925 */;
-import closure_2 from "createFromServer" /* 7164 */;
-import closure_3 from "emitChanges" /* 7165 */;
-import closure_4 from "createFromServer" /* 7940 */;
-import closure_5 from "createFromServer" /* 7167 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4139 */;
+import apexExperiment from "apexExperiment" /* 12958 */;
+import closure_2 from "createFromServer" /* 7196 */;
+import closure_3 from "emitChanges" /* 7197 */;
+import closure_4 from "createFromServer" /* 7972 */;
+import closure_5 from "createFromServer" /* 7199 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import closure_7 from "addEntitlement" /* 7110 */;
-import closure_8 from "reset" /* 4115 */;
+import closure_7 from "addEntitlement" /* 7142 */;
+import closure_8 from "reset" /* 4145 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import { OfferTriggerTypes } from "sum" /* 505 */;
 
@@ -86,7 +86,7 @@ function handleReferralTrialStoreUpdate() {
 }
 ({ ANNUAL_DISCOUNT_IDS: c9, DISCOUNT_OFFERS_REQUIRES_REMINDER_ROLLOUT: c10, PREMIUM_TIER_2_CHURN_1_MONTH_DISCOUNT_ID: unpackModuleId, PREMIUM_TIER_2_CHURN_3_MONTH_DISCOUNT_ID: closure_12, SubscriptionPlanInfo: map1, SubscriptionTrials: closure_14, TRIAL_OFFERS_REQUIRES_REMINDER_ROLLOUT: closure_15 } = GuildFeatures);
 let closure_17 = performance.now();
-let obj = { userOffersLastFetchedAtDate: "r", userTrialOffers: "PX_16", userDiscountOffers: null, userDiscounts: "\u{1F468}\u{1F3FB}\u200D\u{1F9B1}", isFetching: true, lastFetchSuccessful: null, shouldTriggerOffer: 11, cooldownExpirationTimestamps: "played_sound_frecency" };
+let obj = { userOffersLastFetchedAtDate: "r", userTrialOffers: "flexDirection", userDiscountOffers: null, userDiscounts: "\u{1F443}\u{1F3FC}", isFetching: true, lastFetchSuccessful: null, shouldTriggerOffer: 8, cooldownExpirationTimestamps: "TRANSPARENT" };
 obj[1] = {};
 obj[2] = {};
 obj[7] = { [OfferTriggerTypes.CHANNEL_OPENED]: 0, [OfferTriggerTypes.JOIN_VOICE_CHANNEL]: 0, [OfferTriggerTypes.PREMIUM_UPSELL_VIEWED]: 0, [OfferTriggerTypes.USER_PROFILE_ACTION]: 0, [OfferTriggerTypes.VIDEO_STREAM_ENDED]: 0 };
@@ -228,7 +228,7 @@ prototype["getAlmostExpiringTrialOffersForReminder"] = function getAlmostExpirin
   let values = Object.values(closure_14);
   const _require = values.map((id) => id.id);
   const currentUser = authStore.getCurrentUser();
-  obj = _require(4109);
+  obj = _require(4139);
   if (obj.isPremium(currentUser)) {
     if (!self.canFractionalPremiumUserUseOffer()) {
       items = [];
@@ -306,7 +306,7 @@ prototype["getAlmostExpiringDiscountOffersForReminder"] = function getAlmostExpi
 prototype["getAcknowledgedOffers"] = function getAcknowledgedOffers(arg0) {
   const _require = arg0;
   const currentUser = authStore.getCurrentUser();
-  obj = _require(4109);
+  obj = _require(4139);
   if (obj.isPremium(currentUser)) {
     const self = this;
     if (!this.canFractionalPremiumUserUseOffer()) {
@@ -350,7 +350,7 @@ prototype["getUnacknowledgedDiscountOffers"] = function getUnacknowledgedDiscoun
 prototype["getUnacknowledgedOffers"] = function getUnacknowledgedOffers(arg0) {
   const _require = arg0;
   const currentUser = authStore.getCurrentUser();
-  obj = _require(4109);
+  obj = _require(4139);
   if (obj.isPremium(currentUser)) {
     const self = this;
     if (!this.canFractionalPremiumUserUseOffer()) {

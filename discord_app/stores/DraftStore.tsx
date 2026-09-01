@@ -1,15 +1,15 @@
-// === Module 4822: handleChanged ===
+// === Module 4854: handleChanged ===
 
-// Module 4822 (handleChanged)
+// Module 4854 (handleChanged)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import isDraftCommandValidForText from "isDraftCommandValidForText" /* 4824 */;
+import isDraftCommandValidForText from "isDraftCommandValidForText" /* 4856 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
 import closure_5 from "ensureGuildLoaded" /* 1387 */;
-import closure_6 from "handleConnectionOpen" /* 4823 */;
+import closure_6 from "handleConnectionOpen" /* 4855 */;
 
 require = arg1;
 function handleChanged(type) {

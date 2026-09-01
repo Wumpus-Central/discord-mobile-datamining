@@ -1,10 +1,10 @@
-// === Module 8115: handleUserSettingsProtoStoreChange ===
+// === Module 8147: handleUserSettingsProtoStoreChange ===
 
-// Module 8115 (handleUserSettingsProtoStoreChange)
+// Module 8147 (handleUserSettingsProtoStoreChange)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import DEFAULT_FRECENCYDefault from "DEFAULT_FRECENCY" /* 4534 */;
+import DEFAULT_FRECENCYDefault from "DEFAULT_FRECENCY" /* 4566 */;
 import closure_2 from "participantFromServer" /* 1386 */;
 import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
 import { UserSettingsTypes } from "MAX_FAVORITES" /* 685 */;

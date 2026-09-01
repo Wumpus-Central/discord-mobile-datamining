@@ -1,6 +1,6 @@
-// === Module 8485: useAPNGPlayerControls ===
+// === Module 8517: useAPNGPlayerControls ===
 
-// Module 8485 (useAPNGPlayerControls)
+// Module 8517 (useAPNGPlayerControls)
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -46,7 +46,7 @@ const forwardRefResult = importAllResult.forwardRef((onLoad, ref) => {
     }
   }));
   const merged1 = Object.assign(merged);
-  return jsx(ref(8070), { ref, onLoad: callback });
+  return jsx(ref(8102), { ref, onLoad: callback });
 });
 const result = require("set").fileFinishedImporting("modules/image/native/APNGPlayer.android.tsx");
 

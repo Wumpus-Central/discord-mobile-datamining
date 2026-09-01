@@ -1,10 +1,10 @@
-// === Module 14265: UserProfilePremiumUpsellCard ===
+// === Module 14298: UserProfilePremiumUpsellCard ===
 
-// Module 14265 (UserProfilePremiumUpsellCard)
+// Module 14298 (UserProfilePremiumUpsellCard)
 import closure_3 from "noop" /* 19 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 const require = arg1;
 ({ AnalyticsObjects: c4, AnalyticsPages: c5, AnalyticsSections: closure_6, UserSettingsSections: error } = ME);
@@ -22,11 +22,11 @@ export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCar
   navigation = obj.useNavigation();
   const tmp = analyticsLocations;
   const tmp3 = callback(analyticsLocations(1628)().bottom);
-  let nitroTrialCtaOverride = navigation(7159).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
-  const obj2 = navigation(7159);
-  const tmp8 = analyticsLocations(5941);
+  let nitroTrialCtaOverride = navigation(7191).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
+  const obj2 = navigation(7191);
+  const tmp8 = analyticsLocations(5973);
   const items = [isTryItOut ? tmp8.USER_SETTINGS_TRY_OUT_PREMIUM : tmp8.USER_SETTINGS_USER_PROFILE];
-  analyticsLocations = analyticsLocations(5921)(items).analyticsLocations;
+  analyticsLocations = analyticsLocations(5953)(items).analyticsLocations;
   const items1 = [navigation];
   callback = React.useCallback(() => {
     analyticsLocations(closure_1_2[9]).setSection(closure_1_7.PROFILE_CUSTOMIZATION_TRY_IT_OUT);
@@ -40,7 +40,7 @@ export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCar
     analyticsLocations(closure_1_2[10])(obj);
   }, items2);
   obj = { style: tmp3.container, ctaText: null, showLinearGradient: true, onPress: null, children: null };
-  const tmp7 = analyticsLocations(5921);
+  const tmp7 = analyticsLocations(5953);
   if (isTryItOut) {
     if (nitroTrialCtaOverride == null) {
       const intl2 = tmp4(1236).intl;
@@ -64,6 +64,6 @@ export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCar
   } else {
     stringResult1 = string(t.Tii53U);
   }
-  obj[4] = jsx(navigation(4444).Text, { variant: "text-sm/normal", maxFontSizeMultiplier: 2.5, children: stringResult1 });
-  return jsx(tmp(14243), { style: tmp3.container, ctaText: null, showLinearGradient: true, onPress: null, children: null });
+  obj[4] = jsx(navigation(4474).Text, { variant: "text-sm/normal", maxFontSizeMultiplier: 2.5, children: stringResult1 });
+  return jsx(tmp(14276), { style: tmp3.container, ctaText: null, showLinearGradient: true, onPress: null, children: null });
 };

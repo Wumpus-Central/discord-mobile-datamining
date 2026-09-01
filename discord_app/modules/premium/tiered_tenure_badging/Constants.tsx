@@ -1,6 +1,6 @@
-// === Module 8885: DEFAULT_PREMIUM_BADGE_ID ===
+// === Module 8922: DEFAULT_PREMIUM_BADGE_ID ===
 
-// Module 8885 (DEFAULT_PREMIUM_BADGE_ID)
+// Module 8922 (DEFAULT_PREMIUM_BADGE_ID)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/premium/tiered_tenure_badging/Constants.tsx");

@@ -1,6 +1,6 @@
-// === Module 11756: ScheduledMessageEditContentModal ===
+// === Module 11789: ScheduledMessageEditContentModal ===
 
-// Module 11756 (ScheduledMessageEditContentModal)
+// Module 11789 (ScheduledMessageEditContentModal)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
@@ -8,7 +8,7 @@ import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_7 from "ensureGuildLoaded" /* 1387 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 const require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
@@ -54,7 +54,7 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -70,14 +70,14 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
             return obj;
           } else {
             closure_0 = tmp4;
-            const obj5 = v0(7395);
+            const obj5 = v0(7427);
             obj1 = { content: null, flags: null };
             obj1[0] = obj5.parse(dependencyMap, closure_1_3).content;
             obj1[1] = closure_1_0.createArgs.flags;
             v0 = 1;
             dependencyMap = 1;
             const obj2 = { value: null, done: false };
-            obj2[0] = closure_1_0(11745).editScheduledMessage(closure_1_0.scheduledMessageId, obj1);
+            obj2[0] = closure_1_0(11778).editScheduledMessage(closure_1_0.scheduledMessageId, obj1);
             return obj2;
           }
         } else if (arg0 === 1) {
@@ -90,11 +90,11 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
           return obj;
         } else {
           if (arg1) {
-            let arr = v0(4691);
+            let arr = v0(4723);
             arr = arr.pop();
           }
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp9) {
         dependencyMap = tmp;

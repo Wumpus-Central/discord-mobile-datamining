@@ -1,6 +1,6 @@
-// === Module 9360: shouldShowActivityTimeBar ===
+// === Module 9399: shouldShowActivityTimeBar ===
 
-// Module 9360 (shouldShowActivityTimeBar)
+// Module 9399 (shouldShowActivityTimeBar)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 

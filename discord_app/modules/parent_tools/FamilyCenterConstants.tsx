@@ -1,6 +1,6 @@
-// === Module 7251: items ===
+// === Module 7283: items ===
 
-// Module 7251 (items)
+// Module 7283 (items)
 import setDefault from "set" /* 687 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import messagesProxyDefault from "messagesProxy" /* 2369 */;

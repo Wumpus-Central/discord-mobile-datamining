@@ -1,17 +1,17 @@
-// === Module 14074: processColor ===
+// === Module 14107: processColor ===
 
-// Module 14074 (processColor)
+// Module 14107 (processColor)
 import ThemesDefault from "Themes" /* 712 */;
-import initializeDefault from "initialize" /* 4630 */;
+import initializeDefault from "initialize" /* 4662 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import { processColor } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "participantFromServer" /* 1386 */;
-import closure_5 from "addApplication" /* 4489 */;
-import closure_6 from "reset" /* 4470 */;
+import closure_5 from "addApplication" /* 4519 */;
+import closure_6 from "reset" /* 4500 */;
 import closure_7 from "ensureGuildLoaded" /* 1387 */;
-import closure_8 from "_detectH265HardwareDecode" /* 4499 */;
-import closure_9 from "createRTCConnection" /* 4522 */;
-import closure_10 from "markAllUserIdListsStale" /* 4100 */;
+import closure_8 from "_detectH265HardwareDecode" /* 4529 */;
+import closure_9 from "createRTCConnection" /* 4554 */;
+import closure_10 from "markAllUserIdListsStale" /* 4130 */;
 import closure_11 from "mergeGuildAvatar" /* 1922 */;
 import { InputModes } from "ME" /* 676 */;
 import set from "set" /* 2 */;
@@ -24,7 +24,7 @@ class VoiceNotificationManager {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     obj.voiceServiceHandlerId = 9000;
-    obj.state = { channelId: "PX_16", connectionState: "content", selfMute: false, deafened: null, isPushToTalk: "PAYPAL_NOT_ENABLED", embeddedActivity: "PayPal is not enabled for this merchant.", isStreaming: 2132 };
+    obj.state = { channelId: "flexDirection", connectionState: "context", selfMute: false, deafened: "SensitivityType", isPushToTalk: null, embeddedActivity: "\u{1F1E6}\u{1F1E9}", isStreaming: 6 };
     obj.handleVoiceStateChange = function handleVoiceStateChange() {
       const channelId = closure_1_9.getChannelId();
       const state = closure_1_9.getState();
@@ -219,7 +219,7 @@ prototype["terminate"] = function terminate() {
 };
 set = Object.create(VoiceNotificationManager.prototype);
 set.voiceServiceHandlerId = 9000;
-set.state = { channelId: "PX_16", connectionState: "content", selfMute: false, deafened: null, isPushToTalk: "PAYPAL_NOT_ENABLED", embeddedActivity: "PayPal is not enabled for this merchant.", isStreaming: 2132 };
+set.state = { channelId: "flexDirection", connectionState: "context", selfMute: false, deafened: "SensitivityType", isPushToTalk: null, embeddedActivity: "\u{1F1E6}\u{1F1E9}", isStreaming: 6 };
 set.handleVoiceStateChange = function handleVoiceStateChange() {
   const channelId = closure_1_9.getChannelId();
   const state = closure_1_9.getState();

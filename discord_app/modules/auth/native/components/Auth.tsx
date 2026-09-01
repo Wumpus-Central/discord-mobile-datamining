@@ -1,23 +1,23 @@
-// === Module 15499: getInitialAuthRouteStack ===
+// === Module 15534: getInitialAuthRouteStack ===
 
-// Module 15499 (getInitialAuthRouteStack)
+// Module 15534 (getInitialAuthRouteStack)
 import ThemesDefault from "Themes" /* 712 */;
 import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1642 */;
-import createStackNavigator from "createStackNavigator" /* 5978 */;
-import useWideAuthViewDefault from "useWideAuthView" /* 7685 */;
-import BackgroundImageDefault from "BackgroundImage" /* 7716 */;
-import setRegistrationHandoff from "setRegistrationHandoff" /* 15500 */;
-import useIsHCaptchaModalOpenTracking from "useIsHCaptchaModalOpenTracking" /* 15551 */;
-import registerAsset from "registerAsset" /* 15552 */;
-import usePortraitOrientationOnlyDefault from "usePortraitOrientationOnly" /* 15557 */;
+import createStackNavigator from "createStackNavigator" /* 6010 */;
+import useWideAuthViewDefault from "useWideAuthView" /* 7717 */;
+import BackgroundImageDefault from "BackgroundImage" /* 7748 */;
+import setRegistrationHandoff from "setRegistrationHandoff" /* 15535 */;
+import useIsHCaptchaModalOpenTracking from "useIsHCaptchaModalOpenTracking" /* 15586 */;
+import registerAsset from "registerAsset" /* 15587 */;
+import usePortraitOrientationOnlyDefault from "usePortraitOrientationOnly" /* 15592 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "initialize" /* 11949 */;
+import closure_7 from "initialize" /* 11982 */;
 import { AuthStates } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import headerTitle from "headerTitle" /* 15501 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import headerTitle from "headerTitle" /* 15536 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function getInitialAuthRouteStack() {
@@ -124,10 +124,10 @@ function NavigatorWithCaptchaHook() {
     obj7[1] = tmp4(712).space.PX_24;
     obj7[2] = tmp4(712).space.PX_16;
     obj6[10] = obj7;
-    obj5[1] = tmp17(tmp(5976).Navigator, obj6);
+    obj5[1] = tmp17(tmp(6008).Navigator, obj6);
     obj2[1] = tmp17(closure_6, obj5);
     obj[1] = tmp17(closure_6, obj2);
-    let tmp17Result = tmp17(tmp(7714).WideAuthScrollContext.Provider, obj);
+    let tmp17Result = tmp17(tmp(7746).WideAuthScrollContext.Provider, obj);
     tmpResult = tmp(501);
   } else {
     const obj8 = { screens: null, viewStyle: null, containerStyle: null, headerBackTitle: null, initialRouteStack: null, onWillFocus: null, headerStyle: null };
@@ -138,7 +138,7 @@ function NavigatorWithCaptchaHook() {
     obj8[4] = first;
     obj8[5] = closure_5.dismiss;
     obj8[6] = { borderBottomWidth: 0 };
-    tmp17Result = tmp17(tmp(5976).Navigator, obj8);
+    tmp17Result = tmp17(tmp(6008).Navigator, obj8);
   }
   children[1] = tmp17Result;
   return tmp15(tmp16, { children });
@@ -218,10 +218,10 @@ const context = importAllResult.createContext(() => {
 let obj2 = { borderBottomWidth: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 const memoResult = importAllResult.memo(function Auth() {
   const effect = importAllResult.useEffect(() => {
-    callback2(15553).initialize();
+    callback2(15588).initialize();
     return () => callback(table[23]).terminate();
   }, []);
-  const layoutEffect = importAllResult.useLayoutEffect(() => callback(7188).trackAppUIViewed(), []);
+  const layoutEffect = importAllResult.useLayoutEffect(() => callback(7220).trackAppUIViewed(), []);
   usePortraitOrientationOnlyDefault();
   closure_0 = importAllResult.useRef(undefined);
   return callback2(context.Provider, { value: importAllResult.useCallback(() => callback(closure_1_2[9]).getTrackRegTransition(callback), [])(), children: callback2(NavigatorWithCaptchaHook, {}) });

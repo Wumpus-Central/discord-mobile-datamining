@@ -1,16 +1,16 @@
-// === Module 17330: TierTemplatesRenderer ===
+// === Module 17366: TierTemplatesRenderer ===
 
-// Module 17330 (TierTemplatesRenderer)
+// Module 17366 (TierTemplatesRenderer)
 import ThemesDefault from "Themes" /* 712 */;
-import useGroupListingsFetchContext from "useGroupListingsFetchContext" /* 14776 */;
+import useGroupListingsFetchContext from "useGroupListingsFetchContext" /* 14809 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_10 from "initialize" /* 14797 */;
-import { usePriceTiers } from "usePriceTiers" /* 17277 */;
+import closure_10 from "initialize" /* 14830 */;
+import { usePriceTiers } from "usePriceTiers" /* 17313 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function TierTemplatesRenderer(groupListingId) {
@@ -26,7 +26,7 @@ function TierTemplatesRenderer(groupListingId) {
     obj = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
     const items = ["Error: ", error.message];
     obj[2] = items;
-    tmp3 = callback2(guildId(4444).Text, obj);
+    tmp3 = callback2(guildId(4474).Text, obj);
   } else {
     tmp3 = null;
     if (null != templates) {
@@ -45,7 +45,7 @@ function TierTemplatesRenderer(groupListingId) {
           const style = { height: "100%", width: closure_16 };
           return callback(closure_8, { style });
         };
-        obj[6] = guildId(17331).CARD_WIDTH + c16;
+        obj[6] = guildId(17367).CARD_WIDTH + c16;
         obj[7] = function renderItem(item) {
           return closure_1_14(groupListingId(closure_1_3[10]), { template: item.item, priceTiers: tiers, guildId, groupListingId, editGroupId: guildId });
         };

@@ -1,6 +1,6 @@
-// === Module 17004: _requestAgeSignalChallenge ===
+// === Module 17040: _requestAgeSignalChallenge ===
 
-// Module 17004 (_requestAgeSignalChallenge)
+// Module 17040 (_requestAgeSignalChallenge)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
@@ -54,7 +54,7 @@ function _submitAgeSignal() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -93,7 +93,7 @@ function _submitAgeSignal() {
             return obj;
           } else {
             constants = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp5) {
           constants = tmp;

@@ -1,10 +1,10 @@
-// === Module 16671: useCanConnect ===
+// === Module 16707: useCanConnect ===
 
-// Module 16671 (useCanConnect)
+// Module 16707 (useCanConnect)
 import closure_2 from "ensureGuildLoaded" /* 1387 */;
 import closure_3 from "createGuildRecordFromRust" /* 1909 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4091 */;
-import closure_5 from "updateVoiceState" /* 4467 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4121 */;
+import closure_5 from "updateVoiceState" /* 4497 */;
 import { Permissions } from "sum" /* 505 */;
 
 const require = arg1;

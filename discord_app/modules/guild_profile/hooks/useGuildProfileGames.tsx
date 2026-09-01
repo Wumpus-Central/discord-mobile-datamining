@@ -1,9 +1,9 @@
-// === Module 8987: useGuildProfileGames ===
+// === Module 9024: useGuildProfileGames ===
 
-// Module 8987 (useGuildProfileGames)
+// Module 9024 (useGuildProfileGames)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "getOfficialApplicationId" /* 4473 */;
-import closure_4 from "handleLoadMessages" /* 4472 */;
+import closure_3 from "getOfficialApplicationId" /* 4503 */;
+import closure_4 from "handleLoadMessages" /* 4502 */;
 import closure_5 from "fetchFingerprint" /* 1218 */;
 
 const require = arg1;
@@ -99,7 +99,7 @@ export const useAllGuildProfileGames = function useAllGuildProfileGames(profile)
   games = profile.games;
   const items = [closure_5];
   const stateFromStores = games(589).useStateFromStores(items, () => authenticated.isAuthenticated());
-  games(6122);
+  games(6154);
   if (null != games) {
     if (!stateFromStores) {
       let items1 = [];

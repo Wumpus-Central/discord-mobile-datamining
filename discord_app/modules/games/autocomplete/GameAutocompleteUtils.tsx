@@ -1,8 +1,8 @@
-// === Module 5023: GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH ===
+// === Module 5054: GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH ===
 
-// Module 5023 (GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH)
+// Module 5054 (GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH)
 import set from "set" /* 2 */;
-import GAME_WIDGET_LIMITS_BY_TYPE from "GAME_WIDGET_LIMITS_BY_TYPE" /* 5024 */;
+import GAME_WIDGET_LIMITS_BY_TYPE from "GAME_WIDGET_LIMITS_BY_TYPE" /* 5055 */;
 
 const result = set.fileFinishedImporting("modules/games/autocomplete/GameAutocompleteUtils.tsx");
 

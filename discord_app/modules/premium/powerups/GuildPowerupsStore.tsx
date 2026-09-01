@@ -1,11 +1,11 @@
-// === Module 4334: calculateAppliedBoosts ===
+// === Module 4364: calculateAppliedBoosts ===
 
-// Module 4334 (calculateAppliedBoosts)
+// Module 4364 (calculateAppliedBoosts)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_0 from "_slicedToArray" /* 32 */;
 import closure_1 from "createGuildRecordFromRust" /* 1909 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4335 */;
+import BoostedGuildTiers from "BoostedGuildTiers" /* 4365 */;
 import ME from "ME" /* 676 */;
 
 function calculateAppliedBoosts(guildId) {

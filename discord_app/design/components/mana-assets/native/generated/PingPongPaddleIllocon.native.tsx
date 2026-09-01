@@ -1,10 +1,10 @@
-// === Module 6867: PingPongPaddleIllocon ===
+// === Module 6899: PingPongPaddleIllocon ===
 
-// Module 6867 (PingPongPaddleIllocon)
+// Module 6899 (PingPongPaddleIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5461 */;
-import metadataDefault from "metadata" /* 6868 */;
+import preloadDefault from "preload" /* 5493 */;
+import metadataDefault from "metadata" /* 6900 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/PingPongPaddleIllocon.native.tsx");

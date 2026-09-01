@@ -1,21 +1,21 @@
-// === Module 6094: getMemberListId ===
+// === Module 6126: getMemberListId ===
 
-// Module 6094 (getMemberListId)
+// Module 6126 (getMemberListId)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import MurmurHashV3Default from "MurmurHashV3" /* 1217 */;
-import applyOverwritesAll from "applyOverwrites" /* 4096 */;
-import closure_4 from "getHash" /* 4361 */;
-import closure_5 from "reset" /* 4470 */;
+import applyOverwritesAll from "applyOverwrites" /* 4126 */;
+import closure_4 from "getHash" /* 4391 */;
+import closure_5 from "reset" /* 4500 */;
 import closure_6 from "fetchFingerprint" /* 1218 */;
 import closure_7 from "ensureGuildLoaded" /* 1387 */;
-import closure_8 from "handleInviteData" /* 4368 */;
+import closure_8 from "handleInviteData" /* 4398 */;
 import closure_9 from "trackCommunicationDisabled" /* 1992 */;
 import closure_10 from "createGuildRoleRecordFromRust" /* 1985 */;
 import closure_11 from "createGuildRecordFromRust" /* 1909 */;
-import closure_12 from "sortActivity" /* 4537 */;
-import closure_13 from "filterPlayingActivities" /* 5191 */;
+import closure_12 from "sortActivity" /* 4569 */;
+import closure_13 from "filterPlayingActivities" /* 5223 */;
 import closure_14 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 
@@ -197,7 +197,7 @@ prototype["insert"] = function insert(arg0, arg1) {
           if (null != guild) {
             role = store3.getRole(guild.id, id);
           }
-          obj = { type: null, key: null, id: null, title: null, count: null, index: "accessibilityLabel" };
+          obj = { type: null, key: null, id: null, title: null, count: null, index: "accessible" };
           obj[0] = obj.GROUP;
           obj[1] = id;
           obj[2] = id;
@@ -297,7 +297,7 @@ prototype["update"] = function update(arg0, arg1) {
           if (null != guild) {
             role = store3.getRole(guild.id, id2);
           }
-          obj = { type: null, key: null, id: null, title: null, count: null, index: "accessibilityLabel" };
+          obj = { type: null, key: null, id: null, title: null, count: null, index: "accessible" };
           obj[0] = obj.GROUP;
           obj[1] = id2;
           obj[2] = id2;

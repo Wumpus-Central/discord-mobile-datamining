@@ -1,20 +1,20 @@
-// === Module 16397: shouldComponentUpdate ===
+// === Module 16433: shouldComponentUpdate ===
 
-// Module 16397 (shouldComponentUpdate)
+// Module 16433 (shouldComponentUpdate)
 import _modDef38 from "module_38" /* 38 */;
 import ThemesDefault from "Themes" /* 712 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5960 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 5992 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "_toArray" /* 853 */;
 import closure_6 from "ensureGuildLoaded" /* 1387 */;
-import closure_7 from "setIndex" /* 5447 */;
+import closure_7 from "setIndex" /* 5479 */;
 import closure_8 from "createGuildRecordFromRust" /* 1909 */;
-import closure_9 from "getUncachedChannelPermissions" /* 4091 */;
-import closure_10 from "markAllUserIdListsStale" /* 4100 */;
+import closure_9 from "getUncachedChannelPermissions" /* 4121 */;
+import closure_10 from "markAllUserIdListsStale" /* 4130 */;
 import closure_11 from "mergeGuildAvatar" /* 1922 */;
 import { Permissions } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 import importAllResult from "noop" /* 19 */;
 
 require = arg1;
@@ -203,7 +203,7 @@ prototype["handleSetCategory"] = function handleSetCategory(id) {
 prototype["renderCategory"] = function renderCategory(label) {
   const self = this;
   const _require = label;
-  return callback3(_require(5567).TableRow, {
+  return callback3(_require(5599).TableRow, {
     label: label.name,
     onPress() {
       return self.handleSetCategory(label.id);
@@ -250,7 +250,7 @@ prototype["render"] = function render() {
     name = intl2.string(tmp4(1236).t.GSfOoo);
   }
   obj = { variant: "text-md/medium", color: "text-muted", children: intl.formatToPlainString(first(1236).t.OqccVl, { categoryName: name }) };
-  const items = [closure_13(first(4444).Text, obj), , ];
+  const items = [closure_13(first(4474).Text, obj), , ];
   let tmp3Result = null;
   if (null != first) {
     tmp3Result = null;
@@ -263,16 +263,16 @@ prototype["render"] = function render() {
         obj2[1] = function onPress() {
           return self.handleSetCategory(first.id);
         };
-        obj1[1] = tmp3(tmp4(5567).TableRow, obj2, first.id);
-        tmp3Result = tmp3(tmp4(5960).TableRowGroup, obj1);
+        obj1[1] = tmp3(tmp4(5599).TableRow, obj2, first.id);
+        tmp3Result = tmp3(tmp4(5992).TableRowGroup, obj1);
       }
     }
   }
   items[1] = tmp3Result;
   items[2] = self.renderCategories();
   obj[2] = items;
-  obj[1] = closure_14(first(4894).Stack, obj);
-  return closure_13(first(8331).Form, obj);
+  obj[1] = closure_14(first(4926).Stack, obj);
+  return closure_13(first(8363).Form, obj);
 };
 ChannelSettingsChangeCategory.contextType = require("ManaContext").ThemeContext;
 let obj1 = { paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };

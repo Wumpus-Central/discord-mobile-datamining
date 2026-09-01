@@ -1,8 +1,8 @@
-// === Module 14179: getChannelDetailsFromRoute ===
+// === Module 14212: getChannelDetailsFromRoute ===
 
-// Module 14179 (getChannelDetailsFromRoute)
+// Module 14212 (getChannelDetailsFromRoute)
 import set from "set" /* 2 */;
-import coerceMainRoute from "coerceMainRoute" /* 4302 */;
+import coerceMainRoute from "coerceMainRoute" /* 4332 */;
 
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/getChannelDetailsFromRoute.tsx");
 

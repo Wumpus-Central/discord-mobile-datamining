@@ -1,13 +1,13 @@
-// === Module 11407: ForumOriginalPoster ===
+// === Module 11445: ForumOriginalPoster ===
 
-// Module 11407 (ForumOriginalPoster)
+// Module 11445 (ForumOriginalPoster)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4444 */;
+import Text from "Text" /* 4474 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 class ForumOriginalPoster {

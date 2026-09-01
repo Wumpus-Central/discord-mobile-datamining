@@ -1,8 +1,8 @@
-// === Module 16942: _openInteractionIframeModal ===
+// === Module 16978: _openInteractionIframeModal ===
 
-// Module 16942 (_openInteractionIframeModal)
+// Module 16978 (_openInteractionIframeModal)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { INTERACTION_IFRAME_MODAL_KEY as closure_4 } from "INTERACTION_IFRAME_MODAL_KEY" /* 16943 */;
+import { INTERACTION_IFRAME_MODAL_KEY as closure_4 } from "INTERACTION_IFRAME_MODAL_KEY" /* 16979 */;
 
 const require = arg1;
 function _openInteractionIframeModal() {
@@ -22,7 +22,7 @@ function _openInteractionIframeModal() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -39,7 +39,7 @@ function _openInteractionIframeModal() {
             obj = v0(closure_1_2[2]);
             obj.pushLazy(callback(closure_1_2[4])(closure_1_2[3], closure_1_2.paths), callback, closure_1_4);
             v0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp10) {
           v0 = tmp;

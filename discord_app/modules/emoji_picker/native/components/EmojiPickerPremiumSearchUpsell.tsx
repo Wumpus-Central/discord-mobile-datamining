@@ -1,6 +1,6 @@
-// === Module 9112: EMOJI_PICKER_PREMIUM_UPSELL_HEIGHT ===
+// === Module 9150: EMOJI_PICKER_PREMIUM_UPSELL_HEIGHT ===
 
-// Module 9112 (EMOJI_PICKER_PREMIUM_UPSELL_HEIGHT)
+// Module 9150 (EMOJI_PICKER_PREMIUM_UPSELL_HEIGHT)
 import ThemesDefault from "Themes" /* 712 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -8,7 +8,7 @@ import closure_5 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 const require = arg1;
 let c3 = importAllResult;
@@ -24,7 +24,7 @@ obj[2] = { flex: 0.8, flexDirection: "row" };
 obj[3] = { marginRight: 8, alignSelf: "center" };
 let closure_14 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((analyticsLocations) => {
-  const tmp = callback2();
+  const tmp = callback();
   let guildId;
   let analyticsLocations2;
   analyticsLocations = analyticsLocations.analyticsLocations;
@@ -32,14 +32,7 @@ const memoResult = importAllResult.memo((analyticsLocations) => {
   const useTier0UpsellContent = analyticsLocations.useTier0UpsellContent;
   analyticsLocations2 = useTier0UpsellContent;
   const items = [analyticsLocations, useTier0UpsellContent];
-  guildId = undefined;
-  analyticsLocations2 = undefined;
-  let useTier0UpsellContent2;
-  guildId = analyticsLocations.guildId;
-  analyticsLocations2 = analyticsLocations.analyticsLocations;
-  useTier0UpsellContent2 = analyticsLocations.useTier0UpsellContent;
-  let ref;
-  const callback = ref.useCallback(() => {
+  callback = ref.useCallback(() => {
     const currentUser = closure_1_5.getCurrentUser();
     let result = null == currentUser;
     if (!result) {
@@ -57,6 +50,15 @@ const memoResult = importAllResult.memo((analyticsLocations) => {
       const tmp8 = analyticsLocations2(useTier0UpsellContent2[11]);
     }
   }, items);
+  let obj = guildId(useTier0UpsellContent2[13]);
+  guildId = undefined;
+  analyticsLocations2 = undefined;
+  useTier0UpsellContent2 = undefined;
+  guildId = analyticsLocations.guildId;
+  analyticsLocations2 = analyticsLocations.analyticsLocations;
+  useTier0UpsellContent2 = analyticsLocations.useTier0UpsellContent;
+  ref = undefined;
+  const mobileEmojiPickerUpsellRestyleEnabled = obj.useMobileEmojiPickerUpsellRestyleEnabled("native.EmojiPickerPremiumSearchUpsell");
   ref = ref.useRef(false);
   const items1 = [analyticsLocations2, guildId, useTier0UpsellContent2, ref];
   const effect = ref.useEffect(() => {
@@ -79,34 +81,47 @@ const memoResult = importAllResult.memo((analyticsLocations) => {
       trackResult = trackResult.track(closure_1_6.PREMIUM_UPSELL_VIEWED, trackResult);
     }
   }, items1);
-  let obj = { style: tmp.premiumSearchUpsellContent, children: null };
-  obj = { style: tmp.nitroIcon, source: analyticsLocations2(useTier0UpsellContent2[14]), disableColor: true, size: guildId(useTier0UpsellContent2[13]).Icon.Sizes.MEDIUM };
-  const items2 = [callback(guildId(useTier0UpsellContent2[13]).Icon, obj), ];
-  const intl = guildId(useTier0UpsellContent2[16]).intl;
-  if (analyticsLocations.useTier0UpsellContent) {
-    obj = { planName: null };
-    obj[0] = tmp8(tmp9[9]).getTierDisplayNameByPlanId(PREMIUM_MONTH_TIER_0.PREMIUM_MONTH_TIER_0);
-    let formatToPlainStringResult = intl.formatToPlainString(tmp8(tmp9[16]).t.kWBwlJ, obj);
-    let tmp8Result = tmp8(tmp9[9]);
+  obj = { style: tmp.premiumSearchUpsellContent, children: null };
+  if (mobileEmojiPickerUpsellRestyleEnabled) {
+    obj = { size: "sm", color: null, style: null };
+    obj[1] = analyticsLocations2(tmp4[7]).colors.INTERACTIVE_TEXT_ACTIVE;
+    obj[2] = tmp.nitroIcon;
+    let tmp10Result = tmp10(tmp3(tmp4[14]).NitroWheelIcon, obj);
+    let tmp13 = tmp10;
   } else {
-    formatToPlainStringResult = intl.string(tmp8(tmp9[16]).t["5t3lw+"]);
+    obj1 = { style: null, source: null, disableColor: true, size: null };
+    obj1[0] = tmp.nitroIcon;
+    obj1[1] = analyticsLocations2(tmp4[16]);
+    obj1[3] = tmp3(tmp4[15]).Icon.Sizes.MEDIUM;
+    tmp10Result = tmp10(tmp3(tmp4[15]).Icon, obj1);
+    tmp13 = tmp10;
   }
-  items2[1] = callback(guildId(useTier0UpsellContent2[15]).Text, { lineClamp: 2, variant: "text-sm/medium", color: "interactive-text-active", children: formatToPlainStringResult });
+  const items2 = [tmp10Result, ];
+  const intl = tmp3(tmp4[18]).intl;
+  if (analyticsLocations.useTier0UpsellContent) {
+    let obj2 = { planName: null };
+    obj2[0] = tmp3(tmp4[9]).getTierDisplayNameByPlanId(PREMIUM_MONTH_TIER_0.PREMIUM_MONTH_TIER_0);
+    let formatToPlainStringResult = intl.formatToPlainString(tmp3(tmp4[18]).t.kWBwlJ, obj2);
+    const tmp3Result = tmp3(tmp4[9]);
+  } else {
+    formatToPlainStringResult = intl.string(tmp3(tmp4[18]).t["5t3lw+"]);
+  }
+  items2[1] = tmp13(guildId(useTier0UpsellContent2[17]).Text, { lineClamp: 2, variant: "text-sm/medium", color: "interactive-text-active", children: formatToPlainStringResult });
   obj[1] = items2;
-  obj1 = { style: tmp.premiumSearchUpsell, accessibilityRole: "button", onPress: callback, children: null };
+  const obj3 = { style: tmp.premiumSearchUpsell, accessibilityRole: "button", onPress: callback, children: null };
   const items3 = [closure_13(View, obj), ];
-  const intl2 = tmp8(tmp9[16]).intl;
+  const intl2 = tmp3(tmp4[18]).intl;
   const string = intl2.string;
-  const t = tmp8(tmp9[16]).t;
+  const t = tmp3(tmp4[18]).t;
   if (analyticsLocations.useTier0UpsellContent) {
     let stringResult = string(t["9CM5v9"]);
   } else {
     stringResult = string(t.pj0XBN);
   }
-  items3[1] = callback(guildId(useTier0UpsellContent2[15]).Text, { variant: "text-sm/medium", color: "text-link", children: stringResult });
-  obj1[3] = items3;
-  const tmp5Result = closure_13(View, obj);
-  return callback(View, { style: tmp.container, collapsable: false, children: closure_13(guildId(useTier0UpsellContent2[17]).PressableOpacity, obj1) });
+  items3[1] = tmp13(guildId(useTier0UpsellContent2[17]).Text, { variant: "text-sm/medium", color: "text-link", children: stringResult });
+  obj3[3] = items3;
+  let tmp8Result = closure_13(View, obj);
+  return tmp13(View, { style: tmp.container, collapsable: false, children: closure_13(guildId(useTier0UpsellContent2[19]).PressableOpacity, obj3) });
 });
 let result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerPremiumSearchUpsell.tsx");
 

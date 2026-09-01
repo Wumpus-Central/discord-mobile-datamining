@@ -1,6 +1,6 @@
-// === Module 14652: metadata ===
+// === Module 14685: metadata ===
 
-// Module 14652 (metadata)
+// Module 14685 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/quests/bounties/bounty_banner.mp4.js");

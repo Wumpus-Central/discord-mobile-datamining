@@ -13,9 +13,9 @@ import closure_13 from "fetchFingerprint" /* 1218 */;
 import closure_14 from "ensureGuildLoaded" /* 1387 */;
 import closure_15 from "comparator" /* 1982 */;
 import closure_16 from "createGuildRecordFromRust" /* 1909 */;
-import closure_17 from "_detectH265HardwareDecode" /* 4499 */;
-import closure_18 from "getUncachedChannelPermissions" /* 4091 */;
-import closure_19 from "handleConnectionOpen" /* 4269 */;
+import closure_17 from "_detectH265HardwareDecode" /* 4529 */;
+import closure_18 from "getUncachedChannelPermissions" /* 4121 */;
+import closure_19 from "handleConnectionOpen" /* 4299 */;
 import ME from "ME" /* 676 */;
 import set from "set" /* 2 */;
 

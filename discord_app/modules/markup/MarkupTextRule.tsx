@@ -1,8 +1,8 @@
-// === Module 4926: textRegexp ===
+// === Module 4958: textRegexp ===
 
-// Module 4926 (textRegexp)
-import tDefault from "t" /* 4162 */;
-import t from "t" /* 4162 */;
+// Module 4958 (textRegexp)
+import tDefault from "t" /* 4192 */;
+import t from "t" /* 4192 */;
 
 const tmp2 = /^[\s\S]+?(?=[^0-9A-Za-z\s\u00c0-\uffff]|\n\n| {2,}\n|\w+:\S|[0-9]+\.|$)/;
 const obj = {};

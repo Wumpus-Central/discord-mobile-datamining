@@ -1,13 +1,13 @@
-// === Module 8133: handleUploadMessageAttachmentsErrors ===
+// === Module 8165: handleUploadMessageAttachmentsErrors ===
 
-// Module 8133 (handleUploadMessageAttachmentsErrors)
+// Module 8165 (handleUploadMessageAttachmentsErrors)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import setDefault from "set" /* 4825 */;
-import getUploadFileSizeSum from "getUploadFileSizeSum" /* 5046 */;
-import KESTREL_GA_UPLOAD_LIMIT_MB from "KESTREL_GA_UPLOAD_LIMIT_MB" /* 5091 */;
-import showUploadFileSizeErrorDefault from "showUploadFileSizeError" /* 8134 */;
-import getAttachmentUploadAbortAlertContent from "getAttachmentUploadAbortAlertContent" /* 8362 */;
+import setDefault from "set" /* 4857 */;
+import getUploadFileSizeSum from "getUploadFileSizeSum" /* 5078 */;
+import KESTREL_GA_UPLOAD_LIMIT_MB from "KESTREL_GA_UPLOAD_LIMIT_MB" /* 5123 */;
+import showUploadFileSizeErrorDefault from "showUploadFileSizeError" /* 8166 */;
+import getAttachmentUploadAbortAlertContent from "getAttachmentUploadAbortAlertContent" /* 8394 */;
 import ME from "ME" /* 676 */;
 
 ({ AbortCodes: c3, MAX_UPLOAD_COUNT: c4 } = ME);

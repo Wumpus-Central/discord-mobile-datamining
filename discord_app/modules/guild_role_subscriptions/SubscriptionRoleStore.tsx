@@ -1,11 +1,11 @@
-// === Module 5370: computeRolesForGuild ===
+// === Module 5402: computeRolesForGuild ===
 
-// Module 5370 (computeRolesForGuild)
+// Module 5402 (computeRolesForGuild)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1430 */;
 import GuildRoleRecordTypeTag from "GuildRoleRecordTypeTag" /* 1986 */;
-import isSubscriptionRole from "isSubscriptionRole" /* 4082 */;
+import isSubscriptionRole from "isSubscriptionRole" /* 4112 */;
 import closure_4 from "trackCommunicationDisabled" /* 1992 */;
 import closure_5 from "createGuildRoleRecordFromRust" /* 1985 */;
 import closure_6 from "createGuildRecordFromRust" /* 1909 */;
@@ -47,7 +47,7 @@ function computeRolesForGuild(guildId) {
           if (obj2.isSubscriptionRole(nextResult)) {
             let tmp18 = nextResult;
             let addResult = set.add(tmp15.id);
-            let tmp16Result = tmp16(4082);
+            let tmp16Result = tmp16(4112);
             if (tmp16Result.isSubscriptionRoleAvailableForPurchase(tmp15)) {
               let tmp20 = nextResult;
               let addResult1 = set1.add(tmp15.id);

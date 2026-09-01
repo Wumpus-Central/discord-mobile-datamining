@@ -1,6 +1,6 @@
-// === Module 8068: flattenColorOverOpaqueBackground ===
+// === Module 8100: flattenColorOverOpaqueBackground ===
 
-// Module 8068 (flattenColorOverOpaqueBackground)
+// Module 8100 (flattenColorOverOpaqueBackground)
 import set from "set" /* 2 */;
 import nDefault from "n" /* 689 */;
 

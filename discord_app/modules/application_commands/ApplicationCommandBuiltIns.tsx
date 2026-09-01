@@ -1,18 +1,18 @@
-// === Module 8124: getOptionValue ===
+// === Module 8156: getOptionValue ===
 
-// Module 8124 (getOptionValue)
-import explicitContentFromProto from "explicitContentFromProto" /* 4136 */;
-import useCanUnarchiveThread from "useCanUnarchiveThread" /* 6084 */;
-import _modDef8127 from "module_8127" /* 8127 */;
+// Module 8156 (getOptionValue)
+import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
+import useCanUnarchiveThread from "useCanUnarchiveThread" /* 6116 */;
+import _modDef8159 from "module_8159" /* 8159 */;
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "ensureGuildLoaded" /* 1387 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4121 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 4920 */;
+import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 4952 */;
 import ME from "ME" /* 676 */;
-import ROLL_DURATION_MS from "ROLL_DURATION_MS" /* 8125 */;
+import ROLL_DURATION_MS from "ROLL_DURATION_MS" /* 8157 */;
 import { getDisableCommunicationDurationOptions as closure_11 } from "getFriendlyDurationString" /* 1994 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4441 */;
+import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4471 */;
 
 require = arg1;
 function getOptionValue(arr) {
@@ -399,7 +399,7 @@ obj13.execute = function execute(arr) {
       if (str == null) {
         str = "";
       }
-      const obj = _modDef8127;
+      const obj = _modDef8159;
       const id = guild.id;
       const id2 = channel.id;
       if (!str) {
@@ -459,7 +459,7 @@ Object.defineProperty(obj17, "displayDescription", {
   },
   set: undefined
 });
-Object.defineProperty(obj17, "maxLength", { get: () => require(8128) /* useMessageMaxLength */.getMaxMessageLength(), set: undefined });
+Object.defineProperty(obj17, "maxLength", { get: () => require(8160) /* useMessageMaxLength */.getMaxMessageLength(), set: undefined });
 obj17.required = true;
 items8[1] = obj17;
 obj15.options = items8;
@@ -489,7 +489,7 @@ let closure_14 = importDefaultResult((arg0, arg1) => {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -513,7 +513,7 @@ let closure_14 = importDefaultResult((arg0, arg1) => {
             id = undefined;
             c6 = 1;
             c7 = 1;
-            return { value: "Object", done: true };
+            return { value: "PX_16", done: null };
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
@@ -535,8 +535,8 @@ let closure_14 = importDefaultResult((arg0, arg1) => {
             if (tmp11 == null) {
               closure_3 = "";
             }
-            obj1 = callback(8129);
-            let obj2 = callback(8130);
+            obj1 = callback(8161);
+            let obj2 = callback(8162);
             c6 = 2;
             c7 = 1;
             obj2 = { value: null, done: false };
@@ -553,13 +553,13 @@ let closure_14 = importDefaultResult((arg0, arg1) => {
           return obj;
         } else {
           id = arg1;
-          const obj8 = channel(7169);
+          const obj8 = channel(7201);
           id = id.id;
           const obj3 = { location: null };
           obj3[0] = constants.THREAD_CREATION;
-          obj8.sendMessage(id, channel(7395).parse(id, closure_3), true, obj3);
+          obj8.sendMessage(id, channel(7427).parse(id, closure_3), true, obj3);
           c7 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp27) {
         c7 = tmp;
@@ -654,7 +654,7 @@ obj18.execute = function execute(arr, guild) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -916,7 +916,7 @@ obj21.execute = function execute(arr, guild) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1141,7 +1141,7 @@ obj25.execute = function execute(arr, guild) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1323,7 +1323,7 @@ Object.defineProperty(obj31, "displayDescription", {
   set: undefined
 });
 obj31.required = true;
-Object.defineProperty(obj31, "maxLength", { get: () => require(8128) /* useMessageMaxLength */.getMaxMessageLength(), set: undefined });
+Object.defineProperty(obj31, "maxLength", { get: () => require(8160) /* useMessageMaxLength */.getMaxMessageLength(), set: undefined });
 items12[1] = obj31;
 obj29.options = items12;
 obj29.execute = function execute(arr, channel) {
@@ -1345,7 +1345,7 @@ obj29.execute = function execute(arr, channel) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1385,7 +1385,7 @@ obj29.execute = function execute(arr, channel) {
             return obj;
           } else {
             c0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp8) {
           c0 = tmp;
@@ -1519,8 +1519,8 @@ obj32.execute = function execute(arr, channel) {
     }
     const NumberResult = Number(num);
     const NumberResult1 = Number(num2);
-    size(6060).startDiceRoll(channel.id, NumberResult, NumberResult1);
-    const obj = size(6060);
+    size(6092).startDiceRoll(channel.id, NumberResult, NumberResult1);
+    const obj = size(6092);
   }
 };
 items[sum10 + 1] = obj32;

@@ -1,6 +1,6 @@
-// === Module 7319: addGlobalTag ===
+// === Module 7351: addGlobalTag ===
 
-// Module 7319 (addGlobalTag)
+// Module 7351 (addGlobalTag)
 import set from "set" /* 2 */;
 import DesignIds from "DesignIds" /* 673 */;
 

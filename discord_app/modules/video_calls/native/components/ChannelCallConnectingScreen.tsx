@@ -1,24 +1,24 @@
-// === Module 10022: VoiceSettingsActionSheet ===
+// === Module 10061: VoiceSettingsActionSheet ===
 
-// Module 10022 (VoiceSettingsActionSheet)
+// Module 10061 (VoiceSettingsActionSheet)
 import isMetaQuest from "isMetaQuest" /* 1624 */;
-import useThemeDefault from "useTheme" /* 4383 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4415 */;
-import Background from "Background" /* 5590 */;
-import BottomSheetModal from "BottomSheetModal" /* 5592 */;
-import UserSettingsVoiceDefault from "UserSettingsVoice" /* 10023 */;
-import ChannelCallMicButton from "ChannelCallMicButton" /* 10046 */;
+import useThemeDefault from "useTheme" /* 4413 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4445 */;
+import Background from "Background" /* 5622 */;
+import BottomSheetModal from "BottomSheetModal" /* 5624 */;
+import UserSettingsVoiceDefault from "UserSettingsVoice" /* 10062 */;
+import ChannelCallMicButton from "ChannelCallMicButton" /* 10085 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "set" /* 4465 */;
-import closure_6 from "_detectH265HardwareDecode" /* 4499 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4091 */;
-import closure_8 from "handleUpdate" /* 4466 */;
-import { resetFocus } from "VoiceChatDrawerState" /* 9481 */;
+import closure_5 from "set" /* 4495 */;
+import closure_6 from "_detectH265HardwareDecode" /* 4529 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4121 */;
+import closure_8 from "handleUpdate" /* 4496 */;
+import { resetFocus } from "VoiceChatDrawerState" /* 9520 */;
 import { InstantInviteSources } from "ME" /* 676 */;
 import { Permissions } from "sum" /* 505 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function VoiceSettingsActionSheet() {
@@ -140,7 +140,7 @@ export const showVoiceSettingsActionSheet = function showVoiceSettingsActionShee
 export const ChannelCallConnectingHeader = function ChannelCallConnectingHeader(channel) {
   channel = channel.channel;
   const tmp = callback3();
-  let obj = channel(9989);
+  let obj = channel(10028);
   const isVoiceChannelLocked = obj.useIsVoiceChannelLocked(channel);
   let fn = null;
   if (closure_7.can(Permissions.CREATE_INSTANT_INVITE, channel)) {
@@ -157,14 +157,14 @@ export const ChannelCallConnectingHeader = function ChannelCallConnectingHeader(
   let tmp9Result = null;
   if (null != fn) {
     obj = { source: null, onPress: null, accessibilityLabel: null };
-    obj[0] = tmp2(10045);
+    obj[0] = tmp2(10084);
     obj[1] = fn;
     const intl = tmp5(1236).intl;
     obj = { channelName: null };
     obj[0] = tmp4;
     obj[2] = intl.formatToPlainString(tmp5(1236).t["dHHb/2"], obj);
-    tmp9Result = tmp9(tmp2(10044), obj);
-    const tmp2Result = tmp2(10044);
+    tmp9Result = tmp9(tmp2(10083), obj);
+    const tmp2Result = tmp2(10083);
   }
   obj1 = { children: null };
   items[1] = tmp9Result;

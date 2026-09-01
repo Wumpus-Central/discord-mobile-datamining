@@ -1,6 +1,6 @@
-// === Module 17478: promise ===
+// === Module 17514: promise ===
 
-// Module 17478 (promise)
+// Module 17514 (promise)
 import set from "set" /* 2 */;
 import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
 

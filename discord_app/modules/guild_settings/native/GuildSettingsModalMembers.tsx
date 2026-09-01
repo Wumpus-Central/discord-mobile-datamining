@@ -1,21 +1,21 @@
-// === Module 16124: items ===
+// === Module 16159: items ===
 
-// Module 16124 (items)
+// Module 16159 (items)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "handleInviteData" /* 4368 */;
+import closure_7 from "handleInviteData" /* 4398 */;
 import closure_8 from "trackCommunicationDisabled" /* 1992 */;
 import closure_9 from "createGuildRoleRecordFromRust" /* 1985 */;
 import closure_10 from "createGuildRecordFromRust" /* 1909 */;
-import closure_11 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_11 from "getUncachedChannelPermissions" /* 4121 */;
 import closure_12 from "mergeGuildAvatar" /* 1922 */;
-import closure_13 from "handleFormInit" /* 9690 */;
+import closure_13 from "handleFormInit" /* 9729 */;
 import { GuildSettingsSections } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 const require = arg1;
 let c4 = importAllResult;
@@ -51,11 +51,11 @@ let closure_20 = importAllResult.memo((guild) => {
     let formatToPlainStringResult;
     if (found.length > 0) {
       user = user.getUser(guildMember.userId);
-      obj1 = guildMember(4641);
+      obj1 = guildMember(4673);
       let str = obj1.getNickname(guild.id, undefined, user);
       if (str == null) {
-        str = tmp9(4292).getGlobalName(user);
-        const tmp9Result = tmp9(4292);
+        str = tmp9(4322).getGlobalName(user);
+        const tmp9Result = tmp9(4322);
       }
       if (str == null) {
         let username;
@@ -94,7 +94,7 @@ let closure_20 = importAllResult.memo((guild) => {
     };
     obj[7] = start;
     obj[8] = end;
-    return closure_15(guildMember(10641), obj);
+    return closure_15(guildMember(10679), obj);
   }
   tmp = callback();
 });
@@ -284,12 +284,12 @@ const memoResult = importAllResult.memo(function GuildSettingsModalMembers(guild
           items: membersManagementActions,
           children(ref) {
             const merged = Object.assign(ref, Object.create(null));
-            const obj = { source: callback2(9729), accessibilityLabel: null, ref: null };
+            const obj = { source: callback2(9768), accessibilityLabel: null, ref: null };
             const intl = callback(1236).intl;
             obj[1] = intl.string(callback(1236).t.ogxXGq);
             obj[2] = ref.ref;
             const merged1 = Object.assign(merged);
-            return callback3(callback(6205).HeaderActionButton, obj);
+            return callback3(callback(6237).HeaderActionButton, obj);
           }
         };
         return closure_1_15(closure_1_0(closure_1_2[26]).ContextMenu, obj);

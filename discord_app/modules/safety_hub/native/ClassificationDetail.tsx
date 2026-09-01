@@ -1,20 +1,20 @@
-// === Module 11415: ClassificationHeader ===
+// === Module 11453: ClassificationHeader ===
 
-// Module 11415 (ClassificationHeader)
+// Module 11453 (ClassificationHeader)
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4444 */;
-import Button from "Button" /* 4896 */;
-import renderDefault from "render" /* 9029 */;
+import Text from "Text" /* 4474 */;
+import Button from "Button" /* 4928 */;
+import renderDefault from "render" /* 9067 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "_getSystemLocale" /* 1996 */;
-import closure_8 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11416 */;
-import SafetyHubView from "SafetyHubView" /* 8658 */;
+import closure_8 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8701 */;
+import SafetyHubView from "SafetyHubView" /* 8690 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function ClassificationHeader(classificationTypeText) {
@@ -67,7 +67,7 @@ function ClassificationHeader(classificationTypeText) {
     }
   }, items);
   obj = { variant: "text-lg/normal", style: tmp.headerText, color: "mobile-text-heading-primary", children: memo };
-  obj[1] = callback(classificationTypeText(4444).Text, obj);
+  obj[1] = callback(classificationTypeText(4474).Text, obj);
   return callback(closure_4, obj);
 }
 function ClassificationActionsTaken(arg0) {
@@ -83,7 +83,7 @@ function ClassificationActionsTaken(arg0) {
     obj = { variant: "eyebrow", color: "text-muted", children: null };
     const intl = tmp(1236).intl;
     obj[2] = intl.string(tmp(1236).t["O2nYk+"]);
-    const items1 = [callback(tmp(4444).Text, obj), ];
+    const items1 = [callback(tmp(4474).Text, obj), ];
     obj1 = { style: null, children: null };
     const items2 = [tmp4.actionsTaken];
     obj1[0] = items2;
@@ -94,13 +94,13 @@ function ClassificationActionsTaken(arg0) {
       obj2[0] = tmp4.classificationActionDescription;
       const obj3 = { variant: "text-xs/normal", children: null };
       obj3[1] = [" ", "\u2022"];
-      const items4 = [tmp6(tmp(4444).Text, obj3), ];
+      const items4 = [tmp6(tmp(4474).Text, obj3), ];
       const obj4 = { variant: "text-xs/normal", children: null };
       const intl2 = tmp(1236).intl;
       const obj5 = { expirationDate: null };
       obj5[0] = classificationExpiration.toLocaleDateString(stateFromStores, { dateStyle: "medium" });
       obj4[1] = intl2.format(tmp(1236).t.TByIjT, obj5);
-      items4[1] = tmp8(tmp(4444).Text, obj4);
+      items4[1] = tmp8(tmp(4474).Text, obj4);
       obj2[1] = items4;
       tmp6Result = tmp6(tmp7, obj2, "expiration");
     }
@@ -159,13 +159,13 @@ function ClassificationPolicyCard(classificationDescription) {
   items = [tmp.classificationPolicyCard];
   obj = { style: tmp.classificationPolicyCardIcon, children: null };
   const tmp2 = renderDefault;
-  obj[1] = callback(policyExplainerLink(8395).ShieldIcon, { size: "sm", color: ThemesDefault.colors.TEXT_LINK });
+  obj[1] = callback(policyExplainerLink(8427).ShieldIcon, { size: "sm", color: ThemesDefault.colors.TEXT_LINK });
   const items1 = [callback(closure_4, obj), ];
   const obj2 = { style: tmp.classificationPolicyCardContent, children: null };
   const obj3 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = policyExplainerLink(1236).intl;
   obj3[2] = intl.format(policyExplainerLink(1236).t.zxUdpj, { classificationDescription: classificationDescription.classificationTypeText });
-  obj2[1] = callback(policyExplainerLink(4444).Text, obj3);
+  obj2[1] = callback(policyExplainerLink(4474).Text, obj3);
   items1[1] = callback(closure_4, obj2);
   obj[2] = items1;
   obj[0] = callback2(tmp2, obj);
@@ -187,7 +187,7 @@ function LetUsKnow(arg0) {
     }
   };
   obj[2] = intl.format(_require(1236).t.IFxUaT, obj);
-  return callback(_require(4444).Text, obj);
+  return callback(_require(4474).Text, obj);
 }
 function AppealFooter(hasBeenAppealed) {
   let obj = { style: callback3().letUsKnowContainer, children: null };

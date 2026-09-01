@@ -1,13 +1,13 @@
-// === Module 4525: DeviceTypes ===
+// === Module 4557: DeviceTypes ===
 
-// Module 4525 (DeviceTypes)
+// Module 4557 (DeviceTypes)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import DEFAULT_FRECENCYDefault from "DEFAULT_FRECENCY" /* 4534 */;
-import closure_2 from "_detectH265HardwareDecode" /* 4499 */;
+import DEFAULT_FRECENCYDefault from "DEFAULT_FRECENCY" /* 4566 */;
+import closure_2 from "_detectH265HardwareDecode" /* 4529 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import DesktopSources from "DesktopSources" /* 4512 */;
+import DesktopSources from "DesktopSources" /* 4542 */;
 
 const DeviceTypes = DesktopSources.DeviceTypes;
 ({ MediaEngineContextTypes: c5, SpeakingFlags: closure_6 } = DesktopSources);

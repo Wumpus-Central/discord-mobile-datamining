@@ -1,6 +1,6 @@
-// === Module 7272: items ===
+// === Module 7304: items ===
 
-// Module 7272 (items)
+// Module 7304 (items)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import set from "set" /* 2 */;

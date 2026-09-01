@@ -1,6 +1,6 @@
-// === Module 9349: isOnPlayStation ===
+// === Module 9388: isOnPlayStation ===
 
-// Module 9349 (isOnPlayStation)
+// Module 9388 (isOnPlayStation)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 

@@ -1,6 +1,6 @@
-// === Module 4541: getHookError ===
+// === Module 4573: getHookError ===
 
-// Module 4541 (getHookError)
+// Module 4573 (getHookError)
 import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import ME from "ME" /* 676 */;

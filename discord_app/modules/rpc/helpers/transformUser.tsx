@@ -1,6 +1,6 @@
-// === Module 9470: transformUser ===
+// === Module 9509: transformUser ===
 
-// Module 9470 (transformUser)
+// Module 9509 (transformUser)
 import set from "set" /* 2 */;
 import parseAvatarDecorationData from "parseAvatarDecorationData" /* 1898 */;
 

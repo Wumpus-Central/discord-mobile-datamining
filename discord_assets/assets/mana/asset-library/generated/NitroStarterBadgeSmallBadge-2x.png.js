@@ -1,6 +1,6 @@
-// === Module 6822: vanityUrl ===
+// === Module 6854: vanityUrl ===
 
-// Module 6822 (vanityUrl)
+// Module 6854 (vanityUrl)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroStarterBadgeSmallBadge-2x.png.js");

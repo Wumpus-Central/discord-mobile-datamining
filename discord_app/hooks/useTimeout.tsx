@@ -1,6 +1,6 @@
-// === Module 10491: useTimeout ===
+// === Module 10529: useTimeout ===
 
-// Module 10491 (useTimeout)
+// Module 10529 (useTimeout)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
 

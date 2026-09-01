@@ -1,12 +1,12 @@
-// === Module 13520: getCodeToKeyLanguageCorrection ===
+// === Module 13553: getCodeToKeyLanguageCorrection ===
 
-// Module 13520 (getCodeToKeyLanguageCorrection)
+// Module 13553 (getCodeToKeyLanguageCorrection)
 import set2 from "set" /* 500 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1471 */;
-import keyCodeDefault from "keyCode" /* 13521 */;
-import normalizeKey from "normalizeKey" /* 13522 */;
+import keyCodeDefault from "keyCode" /* 13554 */;
+import normalizeKey from "normalizeKey" /* 13555 */;
 import closure_4 from "_slicedToArray" /* 32 */;
-import items from "items" /* 7217 */;
+import items from "items" /* 7249 */;
 import set from "set" /* 500 */;
 import importDefaultResult from "apply" /* 12 */;
 
@@ -19,7 +19,7 @@ function getCodeToKeyLanguageCorrection(keyCode, key, arg2) {
   }
   const BACKTICK_CODES = normalizeKey.BACKTICK_CODES;
   if (BACKTICK_CODES.has(keyCode)) {
-    let tmp2Result = tmp2(13522);
+    let tmp2Result = tmp2(13555);
     const layoutMap = tmp2Result.getLayoutMap();
     let value = layoutMap.get("Backquote");
     if (key === value) {
@@ -29,7 +29,7 @@ function getCodeToKeyLanguageCorrection(keyCode, key, arg2) {
       }
       return str7;
     } else {
-      tmp2Result = tmp2(13522);
+      tmp2Result = tmp2(13555);
       const obj = { key: null, code: "Backquote", keyCode: null };
       obj[0] = value;
       obj[2] = keyCode;
@@ -282,6 +282,87 @@ function codeToKey(items1) {
     return tmp8;
   }
 }
+function toKeyNames(arr) {
+  const mapped = arr.map((arg0) => {
+    [tmp, tmp2, tmp3] = arg0;
+    if (typeof tmp3 === "number") {
+      if (constants.KEYBOARD_KEY !== tmp) {
+        if (tmp8.KEYBOARD_MODIFIER_KEY !== tmp) {
+          if (tmp8.MOUSE_BUTTON === tmp) {
+            const _HermesInternal3 = HermesInternal;
+            return "mouse" + tmp2;
+          } else if (tmp8.GAMEPAD_BUTTON === tmp) {
+            const _HermesInternal2 = HermesInternal;
+            return "gamepad" + tmp2;
+          } else {
+            const _HermesInternal = HermesInternal;
+            return "dev" + tmp + "," + tmp2;
+          }
+        }
+      }
+      if (null != tmp3) {
+        items = [tmp, tmp2, tmp3];
+        let items1 = items;
+      } else {
+        items1 = [tmp, tmp2];
+      }
+      const tmp14 = callback2(items1, 3);
+      const tmp17 = (function _codeToKey(items1) {
+        [, tmp, tmp2] = items1;
+        if (constants.LINUX === tmp2) {
+          let tmp5 = table2["" + tmp];
+        } else if (tmp3.MACOS === tmp2) {
+          tmp5 = table3["" + tmp];
+        } else if (tmp3.WINDOWS === tmp2) {
+          tmp5 = table4["" + tmp];
+        } else if (tmp3.BROWSER === tmp2) {
+          const tmp8 = callback(table[4])(tmp);
+          if (null == tmp8) {
+            return null;
+          } else {
+            tmp5 = callback2(tmp8);
+          }
+        } else {
+          tmp5 = table5["" + tmp];
+        }
+        let tmp14 = null;
+        if (null != tmp5) {
+          tmp14 = tmp5;
+        }
+        return tmp14;
+      })(items1);
+      if (null != tmp17) {
+        let combined = callback3(tmp15, tmp17, tmp16);
+      } else {
+        const keyboardEventShapeFromKeycode = callback(13555).getKeyboardEventShapeFromKeycode(tmp15);
+        combined = null;
+        if (null != keyboardEventShapeFromKeycode) {
+          combined = callback3(keyboardEventShapeFromKeycode.keyCode, keyboardEventShapeFromKeycode.key, tmp16);
+        }
+        const obj3 = callback(13555);
+      }
+      if (combined == null) {
+        const _HermesInternal4 = HermesInternal;
+        combined = "UNK" + tmp2;
+      }
+      return combined;
+    } else {
+      if (obj4.isLinux()) {
+        let MACOS = constants2.LINUX;
+      } else {
+        let tmp25Result = tmp25(500);
+        if (tmp25Result.isMac()) {
+          MACOS = constants2.MACOS;
+        } else {
+          tmp25Result = tmp25(500);
+          MACOS = tmp25Result.isWindows() ? tmp4.WINDOWS : tmp4.BROWSER;
+        }
+      }
+      obj4 = callback(500);
+    }
+  });
+  return mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
+}
 set = Object.freeze(set);
 items = [["META", "\u2318"], ["CMD", "\u2318"], ["RIGHT META", "RIGHT \u2318"], ["RIGHT CMD", "RIGHT \u2318"], ["SHIFT", "\u21E7"], ["RIGHT SHIFT", "RIGHT \u21E7"], ["ALT", "\u2325"], ["RIGHT ALT", "RIGHT \u2325"], ["CTRL", "\u2303"], ["RIGHT CTRL", "RIGHT \u2303"], ["ENTER", "\u21B5"], ["BACKSPACE", "\u232B"], ["DEL", "\u2326"], ["ESC", "\u238B"], ["PAGEUP", "\u21DE"], ["PAGEDOWN", "\u21DF"], ["UP", "\u2191"], ["DOWN", "\u2193"], ["LEFT", "\u2190"], ["RIGHT", "\u2192"], ["HOME", "\u2196"], ["END", "\u2198"], ["TAB", "\u21E5"], ["SPACE", "\u2423"]];
 const re20 = /shift|meta|ctrl|alt$/;
@@ -406,7 +487,7 @@ export const toCombo = function toCombo(shortcut) {
     }
     const str2 = shortcut.replace(/numpad plus/i, "");
     const str4 = shortcut.replace(/numpad plus/i, "").replace(/NUMPAD \+/i, "numpad plus");
-    const parts = shortcut.replace(/numpad plus/i, "").replace(/NUMPAD \+/i, "numpad plus").replace(/mod/i, KEYBOARD_KEY(13523).modKey).split("+");
+    const parts = shortcut.replace(/numpad plus/i, "").replace(/NUMPAD \+/i, "numpad plus").replace(/mod/i, KEYBOARD_KEY(13556).modKey).split("+");
     const mapped = parts.map((str) => str.trim().replace("plus", "+"));
     return mapped.reduce((arr) => {
       let tmp3 = closure_1_16((function toUglyKey(str) {
@@ -446,6 +527,7 @@ export const toCombo = function toCombo(shortcut) {
     obj = KEYBOARD_KEY(500);
   }
 };
+export { toKeyNames };
 export const toString = function toString(arr) {
   let flag = arg1;
   if (arg1 === undefined) {
@@ -474,7 +556,7 @@ export const toString = function toString(arr) {
       } else {
         items1 = [tmp, tmp2];
       }
-      let tmp14 = callback2(items1, 3);
+      const tmp14 = callback2(items1, 3);
       const tmp17 = (function _codeToKey(items1) {
         [, tmp, tmp2] = items1;
         if (constants.LINUX === tmp2) {
@@ -502,12 +584,12 @@ export const toString = function toString(arr) {
       if (null != tmp17) {
         let combined = callback3(tmp15, tmp17, tmp16);
       } else {
-        const keyboardEventShapeFromKeycode = callback(13522).getKeyboardEventShapeFromKeycode(tmp15);
+        const keyboardEventShapeFromKeycode = callback(13555).getKeyboardEventShapeFromKeycode(tmp15);
         combined = null;
         if (null != keyboardEventShapeFromKeycode) {
           combined = callback3(keyboardEventShapeFromKeycode.keyCode, keyboardEventShapeFromKeycode.key, tmp16);
         }
-        const obj3 = callback(13522);
+        const obj3 = callback(13555);
       }
       if (combined == null) {
         const _HermesInternal4 = HermesInternal;

@@ -1,15 +1,14 @@
-// === Module 14749: QuestBarPreview ===
+// === Module 14782: QuestBarPreview ===
 
-// Module 14749 (QuestBarPreview)
+// Module 14782 (QuestBarPreview)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import QuestDockMode from "QuestDockMode" /* 14667 */;
-import getQuestDockMenuAdCreative from "getQuestDockMenuAdCreative" /* 14670 */;
-import contextDefault from "context" /* 14750 */;
-import QuestDockWithGestureAnimation from "QuestDockWithGestureAnimation" /* 14751 */;
+import QuestDockMode from "QuestDockMode" /* 14700 */;
+import contextDefault from "context" /* 14783 */;
+import QuestDockWithGestureAnimation from "QuestDockWithGestureAnimation" /* 14784 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 noopAll;
@@ -34,10 +33,9 @@ export const QuestBarPreview = function QuestBarPreview(quest) {
       obj = { children: null };
       obj1 = { value: null, children: null };
       obj1[0] = closure_5;
-      const obj2 = { quest: null, children: null };
+      const obj2 = { quest: null };
       obj2[0] = quest;
-      obj2[1] = jsx(QuestDockWithGestureAnimation.QuestDockWithEntranceAnimation, {});
-      obj1[1] = jsx(getQuestDockMenuAdCreative.QuestDockQuestProvider, { quest: null, children: null });
+      obj1[1] = jsx(QuestDockWithGestureAnimation.QuestDockQuestContent, { quest: null });
       obj[0] = jsx(contextDefault.Provider, { value: null, children: null });
       obj[1] = jsx(QuestDockMode.QuestDockExternalCoordinationContextProvider, { children: null });
       obj[1] = <View>{null}</View>;

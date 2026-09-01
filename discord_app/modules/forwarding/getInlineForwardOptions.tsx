@@ -1,6 +1,6 @@
-// === Module 11472: getInlineForwardOptions ===
+// === Module 11505: getInlineForwardOptions ===
 
-// Module 11472 (getInlineForwardOptions)
+// Module 11505 (getInlineForwardOptions)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 

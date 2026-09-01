@@ -1,8 +1,8 @@
-// === Module 16818: link ===
+// === Module 16854: link ===
 
-// Module 16818 (link)
+// Module 16854 (link)
 import set from "set" /* 2 */;
-import t from "t" /* 4162 */;
+import t from "t" /* 4192 */;
 
 const link = t.defaultRules.link;
 const text = t.defaultRules.text;

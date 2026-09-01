@@ -1,12 +1,12 @@
-// === Module 8724: InAppReportModal ===
+// === Module 8761: InAppReportModal ===
 
-// Module 8724 (InAppReportModal)
+// Module 8761 (InAppReportModal)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import NavigationStack from "NavigationStack" /* 5976 */;
+import NavigationStack from "NavigationStack" /* 6008 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import { IN_APP_REPORTS_NODE } from "IN_APP_REPORTS_NODE" /* 8725 */;
+import { IN_APP_REPORTS_NODE } from "IN_APP_REPORTS_NODE" /* 8762 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -58,7 +58,7 @@ export default function InAppReportModal(arg0) {
   [c12, c13] = callback(React.useState([]), 2);
   let tmp4 = callback(React.useState([]), 2);
   [c14, c15] = callback(React.useState([]), 2);
-  menu(4913)(() => {
+  menu(4945)(() => {
     const orFetchLinkedUsers = callback(table[10]).getOrFetchLinkedUsers();
   });
   let items = [closeModal, first];
@@ -81,7 +81,7 @@ export default function InAppReportModal(arg0) {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -134,7 +134,7 @@ export default function InAppReportModal(arg0) {
                   closure_1_2();
                 }
                 table = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } catch (tmp28) {
               table = tmp;
@@ -202,10 +202,10 @@ export default function InAppReportModal(arg0) {
       const obj2 = {};
       const obj3 = { headerRight: null, headerTitle: null, fullscreen: true, render: null };
       obj3[0] = function headerRight() {
-        const obj = { source: callback(7732), onPress: closure_6, accessibilityLabel: null };
+        const obj = { source: callback(7764), onPress: closure_6, accessibilityLabel: null };
         const intl = _onSubmit(1236).intl;
         obj[2] = intl.string(_onSubmit(1236).t.cpT0Cq);
-        return callback2(_onSubmit(6205).HeaderActionButton, obj);
+        return callback2(_onSubmit(6237).HeaderActionButton, obj);
       };
       obj3[1] = function headerTitle() {
         return null;
@@ -228,7 +228,7 @@ export default function InAppReportModal(arg0) {
         obj.addOnCloseCallback = callback2;
         obj.reportId = closure_5;
         obj.onNavigate = onNavigate;
-        return callback2(callback(8726), obj);
+        return callback2(callback(8763), obj);
       };
       obj2[c6] = obj3;
       obj[1] = obj2;

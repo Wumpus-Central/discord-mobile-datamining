@@ -1,10 +1,10 @@
-// === Module 10919: ThemeDarkIcon ===
+// === Module 10957: ThemeDarkIcon ===
 
-// Module 10919 (ThemeDarkIcon)
+// Module 10957 (ThemeDarkIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4166 */;
-import registerAsset from "registerAsset" /* 10920 */;
+import BaseIconImage from "BaseIconImage" /* 4196 */;
+import registerAsset from "registerAsset" /* 10958 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

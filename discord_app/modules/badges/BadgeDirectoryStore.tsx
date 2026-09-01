@@ -1,12 +1,12 @@
-// === Module 8528: initialize ===
+// === Module 8560: initialize ===
 
-// Module 8528 (initialize)
+// Module 8560 (initialize)
 import failsDefault from "fails" /* 584 */;
 import initializeDefault from "initialize" /* 589 */;
 import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import privDefault from "priv" /* 1401 */;
-import urlUserId from "urlUserId" /* 8531 */;
+import urlUserId from "urlUserId" /* 8563 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 
 require = arg1;

@@ -1,6 +1,6 @@
-// === Module 4937: perceptualToAmplitude ===
+// === Module 4969: perceptualToAmplitude ===
 
-// Module 4937 (perceptualToAmplitude)
+// Module 4969 (perceptualToAmplitude)
 import set from "set" /* 2 */;
 
 let result = set.fileFinishedImporting("modules/perceptual_volume/PerceptualVolumeUtils.tsx");

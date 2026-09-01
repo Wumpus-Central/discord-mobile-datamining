@@ -1,9 +1,9 @@
-// === Module 15709: GuildHeaderCoachmarks ===
+// === Module 15745: GuildHeaderCoachmarks ===
 
-// Module 15709 (GuildHeaderCoachmarks)
+// Module 15745 (GuildHeaderCoachmarks)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4121 */;
 import { Permissions } from "ME" /* 676 */;
 import { DismissibleContentGroupName as closure_7 } from "ContentDismissActionType" /* 1384 */;
 import { jsx } from "jsxProd" /* 21 */;

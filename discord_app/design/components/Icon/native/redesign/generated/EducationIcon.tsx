@@ -1,10 +1,10 @@
-// === Module 11004: EducationIcon ===
+// === Module 11041: EducationIcon ===
 
-// Module 11004 (EducationIcon)
+// Module 11041 (EducationIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4166 */;
-import registerAsset from "registerAsset" /* 11003 */;
+import BaseIconImage from "BaseIconImage" /* 4196 */;
+import registerAsset from "registerAsset" /* 11040 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

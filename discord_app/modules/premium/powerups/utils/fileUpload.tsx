@@ -1,9 +1,9 @@
-// === Module 12029: useShouldShowFileUploadRollback ===
+// === Module 12062: useShouldShowFileUploadRollback ===
 
-// Module 12029 (useShouldShowFileUploadRollback)
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12030 */;
-import closure_3 from "calculateAppliedBoosts" /* 4334 */;
-import { PowerupActiveStatusType } from "BoostedGuildTiers" /* 4335 */;
+// Module 12062 (useShouldShowFileUploadRollback)
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12063 */;
+import closure_3 from "calculateAppliedBoosts" /* 4364 */;
+import { PowerupActiveStatusType } from "BoostedGuildTiers" /* 4365 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/utils/fileUpload.tsx");
@@ -14,11 +14,11 @@ export const useShouldShowFileUploadRollback = function useShouldShowFileUploadR
   const stateFromStores = _require(589).useStateFromStores(items, () => closure_1_3.getStateForGuild(closure_0));
   let tmp4;
   if (stateFromStores != null) {
-    tmp4 = stateFromStores.allPowerups[tmp(undefined, 4338).GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID];
+    tmp4 = stateFromStores.allPowerups[tmp(undefined, 4368).GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID];
   }
   const obj = _require(589);
   const tmp5 = usePowerupActiveStatusDefault(guildId, tmp4);
-  let tmp6 = _require(4375).useFileUpload250MbPowerupRollbackEnabled(guildId, location) && null != tmp4 && null != tmp4.storeRemovalDate;
+  let tmp6 = _require(4405).useFileUpload250MbPowerupRollbackEnabled(guildId, location) && null != tmp4 && null != tmp4.storeRemovalDate;
   if (tmp6) {
     tmp6 = tmp5.type === PowerupActiveStatusType.POWERUP_ACTIVATED;
   }

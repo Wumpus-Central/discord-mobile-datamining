@@ -1,8 +1,8 @@
-// === Module 9752: getLastUsedVideoBackgroundOption ===
+// === Module 9791: getLastUsedVideoBackgroundOption ===
 
-// Module 9752 (getLastUsedVideoBackgroundOption)
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4109 */;
-import isAnimatedBackgroundOption from "isAnimatedBackgroundOption" /* 9749 */;
+// Module 9791 (getLastUsedVideoBackgroundOption)
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4139 */;
+import isAnimatedBackgroundOption from "isAnimatedBackgroundOption" /* 9788 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "handleConnectionClosedOrResumed" /* 1340 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;

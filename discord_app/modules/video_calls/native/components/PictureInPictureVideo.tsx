@@ -1,26 +1,26 @@
-// === Module 9517: areParticipantsEqual ===
+// === Module 9556: areParticipantsEqual ===
 
-// Module 9517 (areParticipantsEqual)
+// Module 9556 (areParticipantsEqual)
 import set from "set" /* 500 */;
 import ThemesDefault from "Themes" /* 712 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
-import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 9499 */;
-import usePipDimensionsDefault from "usePipDimensions" /* 9502 */;
-import useIsViewingActivity from "useIsViewingActivity" /* 9503 */;
+import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 9538 */;
+import usePipDimensionsDefault from "usePipDimensions" /* 9541 */;
+import useIsViewingActivity from "useIsViewingActivity" /* 9542 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "participantFromServer" /* 1386 */;
-import closure_7 from "getParticipants" /* 4464 */;
+import closure_7 from "getParticipants" /* 4494 */;
 import closure_8 from "fetchFingerprint" /* 1218 */;
-import closure_9 from "_detectH265HardwareDecode" /* 4499 */;
+import closure_9 from "_detectH265HardwareDecode" /* 4529 */;
 import closure_10 from "handleConnectionOpen" /* 1981 */;
-import closure_11 from "anyoneHasFlagInContext" /* 5331 */;
-import closure_12 from "initialize" /* 9496 */;
-import VoiceChatDrawerState from "VoiceChatDrawerState" /* 9481 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4469 */;
+import closure_11 from "anyoneHasFlagInContext" /* 5363 */;
+import closure_12 from "initialize" /* 9535 */;
+import VoiceChatDrawerState from "VoiceChatDrawerState" /* 9520 */;
+import { ParticipantTypes } from "ParticipantTypes" /* 4499 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 import Button from "Button" /* 1297 */;
 
 require = arg1;

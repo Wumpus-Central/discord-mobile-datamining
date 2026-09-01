@@ -1,18 +1,18 @@
-// === Module 11590: handleApplicationSelected ===
+// === Module 11623: handleApplicationSelected ===
 
-// Module 11590 (handleApplicationSelected)
+// Module 11623 (handleApplicationSelected)
 import getAvatarURLDefault from "getAvatarURL" /* 1431 */;
 import registerAssetDefault from "registerAsset" /* 1901 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4668 */;
-import setActiveCommandAll from "setActiveCommand" /* 7490 */;
-import getShelfBadgeTypeIfActive from "getShelfBadgeTypeIfActive" /* 8113 */;
-import Placeholder from "Placeholder" /* 11591 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4700 */;
+import setActiveCommandAll from "setActiveCommand" /* 7522 */;
+import getShelfBadgeTypeIfActive from "getShelfBadgeTypeIfActive" /* 8145 */;
+import Placeholder from "Placeholder" /* 11624 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "ensureGuildLoaded" /* 1387 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1498 */;
 import { AnalyticEvents } from "ME" /* 676 */;
-import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 4920 */;
+import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 4952 */;
 
 require = arg1;
 ({ APP_LAUNCHER_BUILT_IN_SECTION_ICON: error, AppLauncherRouteName: closure_8 } = APP_LAUNCHER_BUILT_IN_SECTION_ICON);
@@ -28,9 +28,9 @@ export const handleApplicationSelected = function handleApplicationSelected(entr
   let obj = collectGuildAnalyticsMetadata;
   obj = { location: _location, section: null, application_id: null, section_name: null, query: null, search_results_position: null, source: null };
   if (application.id === BuiltInSectionId.BUILT_IN) {
-    let APP = tmp(7236).ApplicationCommandTriggerSections.BUILT_IN;
+    let APP = tmp(7268).ApplicationCommandTriggerSections.BUILT_IN;
   } else {
-    APP = tmp(7236).ApplicationCommandTriggerSections.APP;
+    APP = tmp(7268).ApplicationCommandTriggerSections.APP;
   }
   obj[1] = APP;
   let id = application.id;
@@ -65,8 +65,8 @@ export const handleApplicationCommandSelected = function handleApplicationComman
   ({ location: _location, context, command } = arg0);
   ({ section, sectionDescriptors, query, navigation, installOnDemand, sectionName, entrypoint } = arg0);
   ({ searchResultsPosition, onCommandExecuted } = arg0);
-  let obj = command(7234);
-  obj = { command, location: _location, triggerSection: command(7234).getCommandTriggerSection(section), queryLength: query.length, sectionName, query, searchResultsPosition, source: entrypoint };
+  let obj = command(7266);
+  obj = { command, location: _location, triggerSection: command(7266).getCommandTriggerSection(section), queryLength: query.length, sectionName, query, searchResultsPosition, source: entrypoint };
   obj.trackCommandSelected(obj);
   if (command.type === command(1955).ApplicationCommandType.PRIMARY_ENTRY_POINT) {
     obj = { application: null, context: null, installOnDemand: null, sectionName: null, entrypoint: null };
@@ -238,7 +238,7 @@ export const getAppLauncherIconSource = function getAppLauncherIconSource(applic
 };
 export const useLogAppLauncherEmptyStateView = function useLogAppLauncherEmptyStateView(COMMAND_NOT_FOUND, query) {
   const _require = COMMAND_NOT_FOUND;
-  const entrypoint = _require(9012).useAppLauncherContext().entrypoint;
+  const entrypoint = _require(9049).useAppLauncherContext().entrypoint;
   const items = [COMMAND_NOT_FOUND, query, entrypoint];
   const effect = React.useEffect(() => {
     if (null != COMMAND_NOT_FOUND) {

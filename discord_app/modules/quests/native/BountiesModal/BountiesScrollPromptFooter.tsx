@@ -1,21 +1,21 @@
-// === Module 14578: BountiesScrollPromptFooterContent ===
+// === Module 14611: BountiesScrollPromptFooterContent ===
 
-// Module 14578 (BountiesScrollPromptFooterContent)
+// Module 14611 (BountiesScrollPromptFooterContent)
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import _modDef4187 from "module_4187" /* 4187 */;
-import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING" /* 4449 */;
-import timingNone from "timingNone" /* 4452 */;
-import AnimatedRenderItemDefault from "AnimatedRenderItem" /* 8942 */;
-import apexExperiment from "apexExperiment" /* 14579 */;
-import useVisibilityTransition from "useVisibilityTransition" /* 14580 */;
+import _modDef4217 from "module_4217" /* 4217 */;
+import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING" /* 4479 */;
+import timingNone from "timingNone" /* 4482 */;
+import AnimatedRenderItemDefault from "AnimatedRenderItem" /* 8979 */;
+import apexExperiment from "apexExperiment" /* 14612 */;
+import useVisibilityTransition from "useVisibilityTransition" /* 14613 */;
 import closure_3 from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4440 */;
-import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 5355 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
+import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 5387 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function BountiesScrollPromptFooterContent(zIndex) {
@@ -49,12 +49,12 @@ function BountiesScrollPromptFooterContent(zIndex) {
   if (stateFromStores) {
     str = "halt";
   }
-  obj[1] = closure_7(zIndex(4174).BountiesScrollGradientRive, { stateMachine: "State Machine 1", fit: "fill", alignment: "bottom-center", withReducedMotion: str });
-  const items5 = [closure_7(_modDef4187.View, obj), ];
+  obj[1] = closure_7(zIndex(4204).BountiesScrollGradientRive, { stateMachine: "State Machine 1", fit: "fill", alignment: "bottom-center", withReducedMotion: str });
+  const items5 = [closure_7(_modDef4217.View, obj), ];
   const items6 = [tmp.content, memo1, opacityStyle];
-  items5[1] = closure_7(_modDef4187.View, { style: items6, onLayout: onContentLayout, children });
+  items5[1] = closure_7(_modDef4217.View, { style: items6, onLayout: onContentLayout, children });
   obj[2] = items5;
-  return closure_8(_modDef4187.View, obj);
+  return closure_8(_modDef4217.View, obj);
 }
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles(() => {

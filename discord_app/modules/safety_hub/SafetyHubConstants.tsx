@@ -1,6 +1,6 @@
-// === Module 8658: SafetyHubView ===
+// === Module 8690: SafetyHubView ===
 
-// Module 8658 (SafetyHubView)
+// Module 8690 (SafetyHubView)
 import set from "set" /* 2 */;
 import encodeProperties from "encodeProperties" /* 503 */;
 import ME from "ME" /* 676 */;

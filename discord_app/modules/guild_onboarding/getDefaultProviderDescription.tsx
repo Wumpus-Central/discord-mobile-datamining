@@ -1,6 +1,6 @@
-// === Module 5938: getDefaultProviderDescription ===
+// === Module 5970: getDefaultProviderDescription ===
 
-// Module 5938 (getDefaultProviderDescription)
+// Module 5970 (getDefaultProviderDescription)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;

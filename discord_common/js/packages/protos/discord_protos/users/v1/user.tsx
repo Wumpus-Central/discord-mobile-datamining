@@ -1,10 +1,10 @@
-// === Module 1938: create ===
+// === Module 1930: create ===
 
-// Module 1938 (create)
+// Module 1930 (create)
 import _mod1307 from "module_1307" /* 1307 */;
 import now from "now" /* 1336 */;
 import defineProperty from "defineProperty" /* 1337 */;
-import create2 from "create" /* 1939 */;
+import create2 from "create" /* 1931 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import { MessageType, MessageType as MessageType2, MessageType as MessageType3, MessageType as MessageType4, MessageType as MessageType5, MessageType as MessageType6, MessageType as MessageType7, MessageType as MessageType8, MessageType as MessageType9, MessageType as MessageType10, MessageType as MessageType11, MessageType as MessageType12, MessageType as MessageType13, MessageType as MessageType14, MessageType as MessageType15, MessageType as MessageType16, MessageType as MessageType17, MessageType as MessageType18, MessageType as MessageType19, MessageType as MessageType20, MessageType as MessageType21, MessageType as MessageType22, MessageType as MessageType23, MessageType as MessageType24, MessageType as MessageType25, MessageType as MessageType26, MessageType as MessageType27, MessageType as MessageType28, MessageType as MessageType29, MessageType as MessageType30, MessageType as MessageType31, MessageType as MessageType32, MessageType as MessageType33 } from "module_1307" /* 1307 */;
 
@@ -354,7 +354,7 @@ let items1 = [
     name: "safety_state",
     kind: "message",
     T() {
-      return callback(1939).SafetyState;
+      return callback(1931).SafetyState;
     }
   },
   {
@@ -1280,7 +1280,7 @@ class TypingIndicatorEmoji$Type extends MessageType8 {
 }
 const prototype8 = TypingIndicatorEmoji$Type.prototype;
 prototype8["create"] = function create(arr) {
-  obj = { emoji: { oneofKind: "Array" }, animated: false };
+  obj = { emoji: { oneofKind: "r" }, animated: false };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -2405,7 +2405,7 @@ class Badge$Type extends MessageType16 {
 }
 const prototype16 = Badge$Type.prototype;
 prototype16["create"] = function create(arr) {
-  obj = { badge: { oneofKind: "Array" } };
+  obj = { badge: { oneofKind: "r" } };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -2766,7 +2766,7 @@ class UserData$Type extends MessageType19 {
             return closure_35;
           }
     };
-    items = [, , , , , , , , , , , , , , , , , , ];
+    items = [, , , , , , , , , , , , , , , , , , , ];
     items[0] = { no: 1, name: "linked_users", kind: "map", K: 6, V: obj };
     obj = {
       kind: "message",
@@ -2906,6 +2906,7 @@ class UserData$Type extends MessageType19 {
             return closure_22;
           }
     };
+    items[19] = { no: 20, name: "disable_staff_discount", kind: "scalar", T: 8 };
     tmp = new tmp("discord_protos.users.v1.UserData", items, T);
     // ThrowIfThisInitialized (0x7c)
     return tmp;
@@ -2913,7 +2914,7 @@ class UserData$Type extends MessageType19 {
 }
 const prototype19 = UserData$Type.prototype;
 prototype19["create"] = function create(arr) {
-  obj = { linkedUsers: {}, safetyFeatureLimits: {}, safetyFlags: {}, isPendingRequiredAction: false };
+  obj = { linkedUsers: {}, safetyFeatureLimits: {}, safetyFlags: {}, isPendingRequiredAction: false, disableStaffDiscount: false };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -2929,9 +2930,9 @@ prototype19["internalBinaryRead"] = function internalBinaryRead(pos) {
   if (arg3 == null) {
     obj = self.create();
   }
-  if (pos.pos < pos.pos + arg1) {
-    [r10019, r10020] = callback(pos.tag(), 2);
-    const tmp3 = callback(pos.tag(), 2);
+  const sum = pos.pos + arg1;
+  if (pos.pos < sum) {
+    obj.disableStaffDiscount = pos.bool();
   }
   return obj;
 };
@@ -3180,6 +3181,10 @@ prototype19["internalBinaryWrite"] = function internalBinaryWrite(linkedUsers, t
     const tagResult24 = tag.tag(19, _mod1307.WireType.LengthDelimited);
     const joined20 = mediumUserType3.internalBinaryWrite(linkedUsers.typingIndicatorStyle, tag.tag(19, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult17 = mediumUserType3.internalBinaryWrite(linkedUsers.typingIndicatorStyle, tag.tag(19, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+  }
+  if (false !== linkedUsers.disableStaffDiscount) {
+    tag.tag(20, _mod1307.WireType.Varint).bool(linkedUsers.disableStaffDiscount);
+    const tagResult25 = tag.tag(20, _mod1307.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
@@ -4603,7 +4608,7 @@ class PerkConfig$Type extends MessageType29 {
 }
 const prototype29 = PerkConfig$Type.prototype;
 prototype29["create"] = function create(arr) {
-  obj = { source: [], kind: { oneofKind: "Array" } };
+  obj = { source: [], kind: { oneofKind: "r" } };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);

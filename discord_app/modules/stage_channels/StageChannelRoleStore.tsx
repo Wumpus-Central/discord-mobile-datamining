@@ -1,18 +1,18 @@
-// === Module 5333: buildStageChannelUserRoles ===
+// === Module 5365: buildStageChannelUserRoles ===
 
-// Module 5333 (buildStageChannelUserRoles)
+// Module 5365 (buildStageChannelUserRoles)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import applyOverwritesAll from "applyOverwrites" /* 4096 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4636 */;
-import useIsStageSpeakingDisabledForCurrentUser from "useIsStageSpeakingDisabledForCurrentUser" /* 5334 */;
+import applyOverwritesAll from "applyOverwrites" /* 4126 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4668 */;
+import useIsStageSpeakingDisabledForCurrentUser from "useIsStageSpeakingDisabledForCurrentUser" /* 5366 */;
 import closure_4 from "ensureGuildLoaded" /* 1387 */;
 import closure_5 from "trackCommunicationDisabled" /* 1992 */;
 import closure_6 from "createGuildRoleRecordFromRust" /* 1985 */;
 import closure_7 from "createGuildRecordFromRust" /* 1909 */;
 import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import closure_9 from "updateVoiceState" /* 4467 */;
+import closure_9 from "updateVoiceState" /* 4497 */;
 
 require = arg1;
 function buildStageChannelUserRoles(id, closure_0, flag) {

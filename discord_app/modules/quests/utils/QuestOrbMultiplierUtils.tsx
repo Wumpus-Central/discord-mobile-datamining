@@ -1,9 +1,9 @@
-// === Module 10892: items ===
+// === Module 10930: items ===
 
-// Module 10892 (items)
+// Module 10930 (items)
 import set from "set" /* 2 */;
-import parseServerPerkConfigKind from "parseServerPerkConfigKind" /* 1942 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4109 */;
+import parseServerPerkConfigKind from "parseServerPerkConfigKind" /* 1928 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4139 */;
 
 let obj = { UPSELL: "UPSELL", NITRO: "NITRO", CREPE: "CREPE", INELIGIBLE: "INELIGIBLE" };
 obj = { NITRO: "nitro", CREPE: "crepe" };
@@ -26,10 +26,10 @@ export const getQuestOrbMultiplierSource = function getQuestOrbMultiplierSource(
       if (perks != null) {
         perks = perks.perks;
       }
-      const perkSource = parseServerPerkConfigKind.getPerkSource(perks, tmp4(1938).Perk.MORE_QUEST_ORBS);
+      const perkSource = parseServerPerkConfigKind.getPerkSource(perks, tmp4(1930).Perk.MORE_QUEST_ORBS);
       let hasItem;
       if (perkSource != null) {
-        hasItem = perkSource.includes(tmp4(1938).PerkSource.SOURCE_NITRO);
+        hasItem = perkSource.includes(tmp4(1930).PerkSource.SOURCE_NITRO);
       }
       if (hasItem) {
         let NITRO = obj.NITRO;
@@ -38,14 +38,14 @@ export const getQuestOrbMultiplierSource = function getQuestOrbMultiplierSource(
         if (tmp4Result.getIsXboxGamePassPerksEnabled("getQuestOrbMultiplierSource")) {
           let hasItem1;
           if (perkSource != null) {
-            hasItem1 = perkSource.includes(tmp4(1938).PerkSource.SOURCE_THIRDPARTY_CROISSANT);
+            hasItem1 = perkSource.includes(tmp4(1930).PerkSource.SOURCE_THIRDPARTY_CROISSANT);
           }
           NITRO = null;
           if (hasItem1) {
             NITRO = obj.CREPE;
           }
         }
-        tmp4Result = tmp4(7269);
+        tmp4Result = tmp4(7301);
       }
       return NITRO;
     }

@@ -1,14 +1,14 @@
-// === Module 7831: getForwardInfo ===
+// === Module 7863: getForwardInfo ===
 
-// Module 7831 (getForwardInfo)
+// Module 7863 (getForwardInfo)
 import getAvatarURLDefault from "getAvatarURL" /* 1431 */;
-import resetCache from "resetCache" /* 4133 */;
-import isForwardMessageDefault from "isForwardMessage" /* 6115 */;
-import closure_3 from "getGuild" /* 7832 */;
+import resetCache from "resetCache" /* 4163 */;
+import isForwardMessageDefault from "isForwardMessage" /* 6147 */;
+import closure_3 from "getGuild" /* 7864 */;
 import closure_4 from "ensureGuildLoaded" /* 1387 */;
 import closure_5 from "createGuildRecordFromRust" /* 1909 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4091 */;
-import closure_7 from "markAllUserIdListsStale" /* 4100 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4121 */;
+import closure_7 from "markAllUserIdListsStale" /* 4130 */;
 import closure_8 from "mergeGuildAvatar" /* 1922 */;
 
 require = arg1;
@@ -90,7 +90,7 @@ MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0, closu
         if (obj1.can(channel1.accessPermissions, channel1)) {
           obj4 = { snapshotIndex: null, footerInfo: null };
           obj4[0] = snapshotIndex;
-          const tmp3Result = tmp3(4642);
+          const tmp3Result = tmp3(4674);
           const channelName = tmp3Result.computeChannelName(channel1, tmp, tmp2, true);
           const obj5 = { originLabel: null, timestampLabel: null, accessibilityLabel: null };
           obj5[0] = channelName;

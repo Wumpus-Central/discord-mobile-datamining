@@ -1,10 +1,10 @@
-// === Module 5564: LayoutAnimation ===
+// === Module 5596: LayoutAnimation ===
 
-// Module 5564 (LayoutAnimation)
+// Module 5596 (LayoutAnimation)
 import set from "set" /* 2 */;
 import set2 from "set" /* 500 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4440 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import obj from "module_150" /* 150 */;
 
 ({ Keyboard: obj1, LayoutAnimation } = get_ActivityIndicator);

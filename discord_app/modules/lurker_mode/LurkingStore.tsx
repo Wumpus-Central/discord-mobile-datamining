@@ -1,6 +1,6 @@
-// === Module 4092: initialize ===
+// === Module 4122: initialize ===
 
-// Module 4092 (initialize)
+// Module 4122 (initialize)
 import set2 from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;

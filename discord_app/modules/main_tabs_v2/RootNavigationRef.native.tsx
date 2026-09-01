@@ -1,6 +1,6 @@
-// === Module 4303: getRootNavigationRef ===
+// === Module 4333: getRootNavigationRef ===
 
-// Module 4303 (getRootNavigationRef)
+// Module 4333 (getRootNavigationRef)
 import set from "set" /* 2 */;
 import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1500 */;
 

@@ -1,6 +1,6 @@
-// === Module 4920: TRUE_OPTION_NAME ===
+// === Module 4952: TRUE_OPTION_NAME ===
 
-// Module 4920 (TRUE_OPTION_NAME)
+// Module 4952 (TRUE_OPTION_NAME)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;

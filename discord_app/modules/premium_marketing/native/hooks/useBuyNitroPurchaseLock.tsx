@@ -1,7 +1,7 @@
-// === Module 12984: useIsBuyNitroPurchaseBlocked ===
+// === Module 13017: useIsBuyNitroPurchaseBlocked ===
 
-// Module 12984 (useIsBuyNitroPurchaseBlocked)
-import closure_2 from "updateProduct" /* 6052 */;
+// Module 13017 (useIsBuyNitroPurchaseBlocked)
+import closure_2 from "updateProduct" /* 6084 */;
 import keys from "keys" /* 644 */;
 
 const require = arg1;

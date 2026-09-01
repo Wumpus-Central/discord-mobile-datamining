@@ -1,6 +1,6 @@
-// === Module 11352: getGiftIntentCustomMessagePlaceholder ===
+// === Module 11390: getGiftIntentCustomMessagePlaceholder ===
 
-// Module 11352 (getGiftIntentCustomMessagePlaceholder)
+// Module 11390 (getGiftIntentCustomMessagePlaceholder)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 

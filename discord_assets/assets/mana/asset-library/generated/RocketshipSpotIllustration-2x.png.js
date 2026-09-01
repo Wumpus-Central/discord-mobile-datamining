@@ -1,6 +1,6 @@
-// === Module 6910: metadata ===
+// === Module 6942: metadata ===
 
-// Module 6910 (metadata)
+// Module 6942 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/RocketshipSpotIllustration-2x.png.js");

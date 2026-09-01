@@ -1,10 +1,10 @@
-// === Module 6333: BotIllocon ===
+// === Module 6365: BotIllocon ===
 
-// Module 6333 (BotIllocon)
+// Module 6365 (BotIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5461 */;
-import metadataDefault from "metadata" /* 6334 */;
+import preloadDefault from "preload" /* 5493 */;
+import metadataDefault from "metadata" /* 6366 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/BotIllocon.native.tsx");

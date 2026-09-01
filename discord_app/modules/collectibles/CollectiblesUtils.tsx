@@ -1,19 +1,19 @@
-// === Module 7267: getItemRecordsFromPurchases ===
+// === Module 7299: getItemRecordsFromPurchases ===
 
-// Module 7267 (getItemRecordsFromPurchases)
+// Module 7299 (getItemRecordsFromPurchases)
 import set from "set" /* 2 */;
 import apply from "apply" /* 12 */;
 import set2 from "set" /* 500 */;
 import sum from "sum" /* 505 */;
-import parseServerPerkConfigKind from "parseServerPerkConfigKind" /* 1942 */;
+import parseServerPerkConfigKind from "parseServerPerkConfigKind" /* 1928 */;
 import fromServer from "fromServer" /* 1948 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1950 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4109 */;
-import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 6049 */;
-import fromServer2 from "fromServer" /* 7260 */;
-import fromServer3 from "fromServer" /* 7261 */;
-import fromServer4 from "fromServer" /* 7262 */;
-import fromServer5 from "fromServer" /* 7268 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4139 */;
+import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 6081 */;
+import fromServer2 from "fromServer" /* 7292 */;
+import fromServer3 from "fromServer" /* 7293 */;
+import fromServer4 from "fromServer" /* 7294 */;
+import fromServer5 from "fromServer" /* 7300 */;
 import items from "items" /* 678 */;
 import ME from "ME" /* 676 */;
 
@@ -134,10 +134,10 @@ export const getShopDiscountSource = function getShopDiscountSource(currentUser)
       if (currentUser != null) {
         perks = currentUser.perks;
       }
-      const perkSource = parseServerPerkConfigKind.getPerkSource(perks, tmp4(1938).Perk.SHOP_DISCOUNTS);
+      const perkSource = parseServerPerkConfigKind.getPerkSource(perks, tmp4(1930).Perk.SHOP_DISCOUNTS);
       let hasItem;
       if (perkSource != null) {
-        hasItem = perkSource.includes(tmp4(1938).PerkSource.SOURCE_NITRO);
+        hasItem = perkSource.includes(tmp4(1930).PerkSource.SOURCE_NITRO);
       }
       if (hasItem) {
         let NITRO = obj.NITRO;
@@ -146,14 +146,14 @@ export const getShopDiscountSource = function getShopDiscountSource(currentUser)
         if (tmp4Result.getIsXboxGamePassPerksEnabled("getShopDiscountSource")) {
           let hasItem1;
           if (perkSource != null) {
-            hasItem1 = perkSource.includes(tmp4(1938).PerkSource.SOURCE_THIRDPARTY_CROISSANT);
+            hasItem1 = perkSource.includes(tmp4(1930).PerkSource.SOURCE_THIRDPARTY_CROISSANT);
           }
           NITRO = null;
           if (hasItem1) {
             NITRO = obj.THIRDPARTY;
           }
         }
-        tmp4Result = tmp4(7269);
+        tmp4Result = tmp4(7301);
       }
       return NITRO;
     }

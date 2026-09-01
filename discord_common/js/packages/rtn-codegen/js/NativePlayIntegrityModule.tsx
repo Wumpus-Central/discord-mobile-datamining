@@ -1,6 +1,6 @@
-// === Module 17003: NativePlayIntegrityModule ===
+// === Module 17039: NativePlayIntegrityModule ===
 
-// Module 17003 (NativePlayIntegrityModule)
+// Module 17039 (NativePlayIntegrityModule)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 

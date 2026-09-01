@@ -1,9 +1,9 @@
-// === Module 12864: getApplicationFromMessage ===
+// === Module 12897: getApplicationFromMessage ===
 
-// Module 12864 (getApplicationFromMessage)
-import closure_0 from "createExecutable" /* 4474 */;
-import { SpotifyApplication } from "getIconURL" /* 12861 */;
-import { isSpotifyParty } from "SPOTIFY_APP_PROTOCOL" /* 8579 */;
+// Module 12897 (getApplicationFromMessage)
+import closure_0 from "createExecutable" /* 4504 */;
+import { SpotifyApplication } from "getIconURL" /* 12894 */;
+import { isSpotifyParty } from "SPOTIFY_APP_PROTOCOL" /* 8611 */;
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/getApplicationFromMessage.tsx");
 

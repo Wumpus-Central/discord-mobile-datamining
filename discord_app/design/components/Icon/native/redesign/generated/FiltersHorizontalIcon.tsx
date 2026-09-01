@@ -1,10 +1,10 @@
-// === Module 14572: FiltersHorizontalIcon ===
+// === Module 14605: FiltersHorizontalIcon ===
 
-// Module 14572 (FiltersHorizontalIcon)
+// Module 14605 (FiltersHorizontalIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4166 */;
-import registerAsset from "registerAsset" /* 14573 */;
+import BaseIconImage from "BaseIconImage" /* 4196 */;
+import registerAsset from "registerAsset" /* 14606 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

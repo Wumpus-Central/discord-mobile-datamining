@@ -1,8 +1,8 @@
-// === Module 13440: _initStats ===
+// === Module 13473: _initStats ===
 
-// Module 13440 (_initStats)
-import sleep from "sleep" /* 4526 */;
-import closure_2 from "handleConnectionInfoChange" /* 4542 */;
+// Module 13473 (_initStats)
+import sleep from "sleep" /* 4558 */;
+import closure_2 from "handleConnectionInfoChange" /* 4574 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;

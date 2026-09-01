@@ -1,6 +1,6 @@
-// === Module 14180: timestamp ===
+// === Module 14213: timestamp ===
 
-// Module 14180 (timestamp)
+// Module 14213 (timestamp)
 import timestampDefault from "timestamp" /* 3 */;
 
 const tmp2 = new timestampDefault("MainNavigationLogger");

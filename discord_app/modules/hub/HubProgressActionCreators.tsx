@@ -1,8 +1,8 @@
-// === Module 9880: setHubProgressActionComplete ===
+// === Module 9919: setHubProgressActionComplete ===
 
-// Module 9880 (setHubProgressActionComplete)
+// Module 9919 (setHubProgressActionComplete)
 import closure_2 from "createGuildRecordFromRust" /* 1909 */;
-import { HUB_PROGRESS_STEP_ORDER } from "items" /* 9881 */;
+import { HUB_PROGRESS_STEP_ORDER } from "items" /* 9920 */;
 import { GuildFeatures } from "ME" /* 676 */;
 
 const require = arg1;

@@ -1,26 +1,26 @@
-// === Module 13125: GuildBoostSlotCooldown ===
+// === Module 13158: GuildBoostSlotCooldown ===
 
-// Module 13125 (GuildBoostSlotCooldown)
+// Module 13158 (GuildBoostSlotCooldown)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4444 */;
-import GuildIconSizes from "GuildIconSizes" /* 5972 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 5972 */;
-import useCountdownDefault from "useCountdown" /* 7152 */;
-import registerAssetDefault from "registerAsset" /* 13126 */;
-import getSubscriptionPlaceholderPatternSource from "getSubscriptionPlaceholderPatternSource" /* 13127 */;
+import Text from "Text" /* 4474 */;
+import GuildIconSizes from "GuildIconSizes" /* 6004 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 6004 */;
+import useCountdownDefault from "useCountdown" /* 7184 */;
+import registerAssetDefault from "registerAsset" /* 13159 */;
+import getSubscriptionPlaceholderPatternSource from "getSubscriptionPlaceholderPatternSource" /* 13160 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "handleThemeChange" /* 1302 */;
 import closure_8 from "createGuildRecordFromRust" /* 1909 */;
-import closure_9 from "handleGuildBoostsUpdate" /* 4340 */;
-import closure_10 from "reset" /* 4115 */;
+import closure_9 from "handleGuildBoostsUpdate" /* 4370 */;
+import closure_10 from "reset" /* 4145 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
-import importDefaultResult from "createTextStyle" /* 5429 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
+import importDefaultResult from "createTextStyle" /* 5461 */;
 
 require = arg1;
 function GuildBoostSlotCooldown(cooldownEndsAt) {
@@ -40,7 +40,7 @@ function GuildBoostSlotCooldown(cooldownEndsAt) {
     obj[1] = hours;
     obj[2] = minutes;
     obj[3] = intl.format(cooldownEndsAt(1236).t.NffSH8, obj);
-    tmp5 = callback(cooldownEndsAt(4444).Text, obj);
+    tmp5 = callback(cooldownEndsAt(4474).Text, obj);
   }
   return tmp5;
 }
@@ -107,8 +107,8 @@ function GuildBoostSlot(guildBoostSlot) {
       const obj3 = { variant: "text-md/medium", color: "control-brand-foreground", children: null };
       const intl2 = guildBoostSlot(1236).intl;
       obj3[2] = intl2.string(guildBoostSlot(1236).t.jqqLb6);
-      obj2[2] = tmp6(guildBoostSlot(4444).Text, obj3);
-      tmp6Result = tmp6(guildBoostSlot(5036).PressableOpacity, obj2);
+      obj2[2] = tmp6(guildBoostSlot(4474).Text, obj3);
+      tmp6Result = tmp6(guildBoostSlot(5068).PressableOpacity, obj2);
     }
     obj[2] = tmp6Result;
     obj[3] = tmp;
@@ -157,8 +157,8 @@ function UnusedGuildBoostSlots(unusedSlots) {
     const obj2 = { variant: "text-md/medium", color: "text-link", children: null };
     const intl2 = found(1236).intl;
     obj2[2] = intl2.string(found(1236).t["7KyPor"]);
-    obj1[2] = callback(found(4444).Text, obj2);
-    obj[1] = callback(found(5036).PressableOpacity, obj1);
+    obj1[2] = callback(found(4474).Text, obj2);
+    obj[1] = callback(found(5068).PressableOpacity, obj1);
     obj[2] = 0 === found.length;
     tmp4 = callback(GuildBoostSlotsInventoryRow, obj);
   }
@@ -265,7 +265,7 @@ function BoostedGuild(arg0) {
     tmp11Result = tmp11(tmp10, obj3);
   }
   items3[1] = tmp11Result;
-  items3[2] = closure_11(guildBoostSlots(13131), { guild: stateFromStores, theme: stateFromStores1 });
+  items3[2] = closure_11(guildBoostSlots(13164), { guild: stateFromStores, theme: stateFromStores1 });
   obj1[1] = items3;
   const items4 = [closure_12(closure_5, obj1), closure_11(BoostedGuildInfo, { guild: stateFromStores, numGuildBoostSlots: guildBoostSlots.length })];
   obj[1] = items4;
@@ -315,9 +315,9 @@ const result = require("set").fileFinishedImporting("modules/premium/native/Guil
 export default function GuildBoostSlotsInventory() {
   const tmp = callback3();
   const effect = React.useEffect(() => {
-    const subscriptions = callback(4805).fetchSubscriptions();
-    const obj = callback(4805);
-    const guildBoostSlots = valueResult(4343).fetchGuildBoostSlots();
+    const subscriptions = callback(4837).fetchSubscriptions();
+    const obj = callback(4837);
+    const guildBoostSlots = valueResult(4373).fetchGuildBoostSlots();
   }, []);
   let obj = initialize;
   const items = [closure_10];
@@ -360,7 +360,7 @@ export default function GuildBoostSlotsInventory() {
         obj2[0] = tmp.header;
         const intl = tmp3(1236).intl;
         obj2[3] = intl.string(tmp3(1236).t.gB9oQ7);
-        const items3 = [callback(tmp3(4444).Text, obj2), found.map((guildId) => closure_1_11(closure_1_20, { guildId, guildBoostSlots: valueResult[guildId] }, guildId))];
+        const items3 = [callback(tmp3(4474).Text, obj2), found.map((guildId) => closure_1_11(closure_1_20, { guildId, guildBoostSlots: valueResult[guildId] }, guildId))];
         obj1[0] = items3;
         tmp10Result = tmp10(closure_13, obj1);
       }

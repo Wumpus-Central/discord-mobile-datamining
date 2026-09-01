@@ -1,6 +1,6 @@
-// === Module 6067: computeHasRoleSubscriptionsInGuild ===
+// === Module 6099: computeHasRoleSubscriptionsInGuild ===
 
-// Module 6067 (computeHasRoleSubscriptionsInGuild)
+// Module 6099 (computeHasRoleSubscriptionsInGuild)
 import closure_2 from "fetchFingerprint" /* 1218 */;
 import closure_3 from "trackCommunicationDisabled" /* 1992 */;
 import closure_4 from "createGuildRoleRecordFromRust" /* 1985 */;

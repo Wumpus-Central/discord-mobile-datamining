@@ -1,9 +1,9 @@
-// === Module 11585: completeAppLauncherOnboarding ===
+// === Module 11618: completeAppLauncherOnboarding ===
 
-// Module 11585 (completeAppLauncherOnboarding)
+// Module 11618 (completeAppLauncherOnboarding)
 import set from "set" /* 2 */;
 import DismissibleContent from "DismissibleContent" /* 1373 */;
-import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4268 */;
+import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4298 */;
 
 let result = set.fileFinishedImporting("modules/app_launcher/native/onboarding/utils/completeAppLauncherOnboarding.tsx");
 

@@ -1,9 +1,9 @@
-// === Module 12027: useGuildPowerupRollbackEnabled ===
+// === Module 12060: useGuildPowerupRollbackEnabled ===
 
-// Module 12027 (useGuildPowerupRollbackEnabled)
+// Module 12060 (useGuildPowerupRollbackEnabled)
 import set from "set" /* 2 */;
-import VANITY_URL_POWERUP_SKU_ID from "VANITY_URL_POWERUP_SKU_ID" /* 4338 */;
-import experiment from "experiment" /* 4375 */;
+import VANITY_URL_POWERUP_SKU_ID from "VANITY_URL_POWERUP_SKU_ID" /* 4368 */;
+import experiment from "experiment" /* 4405 */;
 
 const result = set.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupRollbackEnabled.tsx");
 

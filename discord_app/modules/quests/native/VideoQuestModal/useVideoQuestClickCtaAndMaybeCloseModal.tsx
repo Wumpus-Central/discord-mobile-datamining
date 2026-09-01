@@ -1,6 +1,6 @@
-// === Module 14723: useVideoQuestClickCtaAndMaybeCloseModal ===
+// === Module 14756: useVideoQuestClickCtaAndMaybeCloseModal ===
 
-// Module 14723 (useVideoQuestClickCtaAndMaybeCloseModal)
+// Module 14756 (useVideoQuestClickCtaAndMaybeCloseModal)
 import closure_3 from "noop" /* 19 */;
 
 const require = arg1;
@@ -13,14 +13,14 @@ export const useVideoQuestClickCtaAndMaybeCloseModal = function useVideoQuestCli
   let getQuestImpressionId;
   getQuestImpressionId = quest(sourceQuestContent[1]).useGetQuestImpressionId();
   const items = [quest, getQuestImpressionId, sourceQuestContent, onClose];
-  return getQuestImpressionId.useCallback(() => {
+  return getQuestImpressionId.useCallback((content) => {
     let obj = onClose(sourceQuestContent[2]);
     if (obj.isDiscordUrl(obj2.getCtaLink(quest.config), true)) {
       onClose();
     }
     obj2 = quest(sourceQuestContent[3]);
     const tmp3 = quest;
-    obj = { content: tmp2(tmp[5]).QuestContent.VIDEO_MODAL_MOBILE, ctaContent: tmp2(tmp[6]).QuestContentCTA.OPEN_GAME_LINK, impressionId: getQuestImpressionId(), sourceQuestContent };
+    obj = { content, ctaContent: tmp2(tmp[5]).QuestContentCTA.OPEN_GAME_LINK, impressionId: getQuestImpressionId(), sourceQuestContent };
     quest(sourceQuestContent[4]).openGameLinkDirectly(tmp3, obj);
   }, items);
 };

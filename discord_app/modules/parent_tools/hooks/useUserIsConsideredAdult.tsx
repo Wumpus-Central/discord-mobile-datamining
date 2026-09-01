@@ -1,6 +1,6 @@
-// === Module 11412: useUserIsConsideredAdult ===
+// === Module 11450: useUserIsConsideredAdult ===
 
-// Module 11412 (useUserIsConsideredAdult)
+// Module 11450 (useUserIsConsideredAdult)
 import initialize from "initialize" /* 589 */;
 import closure_2 from "mergeGuildAvatar" /* 1922 */;
 

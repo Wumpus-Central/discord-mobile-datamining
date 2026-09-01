@@ -1,11 +1,11 @@
-// === Module 9388: AvatarPile ===
+// === Module 9427: AvatarPile ===
 
-// Module 9388 (AvatarPile)
-import SolidCutout from "SolidCutout" /* 8066 */;
-import Pile from "Pile" /* 9232 */;
-import map from "map" /* 9233 */;
-import getListSummaryLabel from "getListSummaryLabel" /* 9234 */;
-import StaticNativeCutoutAvatarImage from "StaticNativeCutoutAvatarImage" /* 9389 */;
+// Module 9427 (AvatarPile)
+import SolidCutout from "SolidCutout" /* 8098 */;
+import Pile from "Pile" /* 9271 */;
+import map from "map" /* 9272 */;
+import getListSummaryLabel from "getListSummaryLabel" /* 9273 */;
+import StaticNativeCutoutAvatarImage from "StaticNativeCutoutAvatarImage" /* 9428 */;
 import closure_2 from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 

@@ -1,6 +1,6 @@
-// === Module 8556: MediaViewerDimensionsProvider ===
+// === Module 8588: MediaViewerDimensionsProvider ===
 
-// Module 8556 (MediaViewerDimensionsProvider)
+// Module 8588 (MediaViewerDimensionsProvider)
 import _modDef38 from "module_38" /* 38 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import importAllResult from "noop" /* 19 */;

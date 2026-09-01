@@ -1,6 +1,6 @@
-// === Module 13333: GAME_COMMUNITY_ADD_SERVER_ENTRY_EXPERIMENT ===
+// === Module 13366: GAME_COMMUNITY_ADD_SERVER_ENTRY_EXPERIMENT ===
 
-// Module 13333 (GAME_COMMUNITY_ADD_SERVER_ENTRY_EXPERIMENT)
+// Module 13366 (GAME_COMMUNITY_ADD_SERVER_ENTRY_EXPERIMENT)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1468 */;
 

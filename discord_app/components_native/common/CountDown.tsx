@@ -1,9 +1,9 @@
-// === Module 10629: componentDidMount ===
+// === Module 10667: componentDidMount ===
 
-// Module 10629 (componentDidMount)
+// Module 10667 (componentDidMount)
 import setDefault from "set" /* 687 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4444 */;
+import Text from "Text" /* 4474 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 

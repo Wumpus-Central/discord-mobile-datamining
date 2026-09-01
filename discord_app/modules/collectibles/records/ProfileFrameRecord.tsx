@@ -1,6 +1,6 @@
-// === Module 7262: fromServer ===
+// === Module 7294: fromServer ===
 
-// Module 7262 (fromServer)
+// Module 7294 (fromServer)
 import fromServerDefault from "fromServer" /* 1949 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1950 */;
 

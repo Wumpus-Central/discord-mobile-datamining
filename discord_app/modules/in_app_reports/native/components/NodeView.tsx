@@ -1,23 +1,23 @@
-// === Module 8726: HeaderView ===
+// === Module 8763: HeaderView ===
 
-// Module 8726 (HeaderView)
+// Module 8763 (HeaderView)
 import ThemesDefault from "Themes" /* 712 */;
-import hexToRgba from "hexToRgba" /* 4296 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4403 */;
-import Text from "Text" /* 4444 */;
-import ArrowDefault from "Arrow" /* 8728 */;
+import hexToRgba from "hexToRgba" /* 4326 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4433 */;
+import Text from "Text" /* 4474 */;
+import ArrowDefault from "Arrow" /* 8765 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "getUserAgnosticState" /* 4447 */;
+import closure_8 from "getUserAgnosticState" /* 4477 */;
 import closure_9 from "ensureGuildLoaded" /* 1387 */;
-import closure_10 from "getUncachedChannelPermissions" /* 4091 */;
-import { REMEDIATION_ELEMENT_TYPES } from "REMEDIATION_ELEMENT_TYPES" /* 8727 */;
-import { IN_APP_REPORTS_NODE } from "IN_APP_REPORTS_NODE" /* 8725 */;
+import closure_10 from "getUncachedChannelPermissions" /* 4121 */;
+import { REMEDIATION_ELEMENT_TYPES } from "REMEDIATION_ELEMENT_TYPES" /* 8764 */;
+import { IN_APP_REPORTS_NODE } from "IN_APP_REPORTS_NODE" /* 8762 */;
 import ME from "ME" /* 676 */;
 import { Permissions } from "sum" /* 505 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function HeaderView(node) {
@@ -101,7 +101,7 @@ function ChildItem(child) {
   obj = { style: tmp.childButton, accessibilityRole: "button", onPress: callback(React.useState(() => () => closure_1.onPress(closure_0)), 1)[0], children: null };
   obj = { style: tmp.childContainer, children: null };
   obj1 = { style: tmp.childContent, children: null };
-  const items1 = [callback2(child(4444).Text, { style: tmp.childButtonText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: tmp3 }), ];
+  const items1 = [callback2(child(4474).Text, { style: tmp.childButtonText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: tmp3 }), ];
   if (stateFromStores) {
     stateFromStores = null != report_type;
   }
@@ -109,14 +109,14 @@ function ChildItem(child) {
     const obj3 = { style: null, variant: "text-xs/normal", color: "text-muted", children: null };
     obj3[0] = tmp.debugText;
     obj3[3] = report_type;
-    stateFromStores = tmp9(tmp5(4444).Text, obj3);
+    stateFromStores = tmp9(tmp5(4474).Text, obj3);
   }
   items1[1] = stateFromStores;
   obj1[1] = items1;
   const items2 = [closure_17(closure_6, obj1), callback2(ArrowDefault, {})];
   obj[1] = items2;
   obj[3] = closure_17(closure_6, obj);
-  return callback2(child(5036).PressableHighlight, obj);
+  return callback2(child(5068).PressableHighlight, obj);
 }
 function ChildrenView(node) {
   const children = node.node.children;

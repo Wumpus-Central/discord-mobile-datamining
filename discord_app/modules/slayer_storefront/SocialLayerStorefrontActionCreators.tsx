@@ -1,12 +1,12 @@
-// === Module 8463: _fetchSocialLayerStorefront ===
+// === Module 8495: _fetchSocialLayerStorefront ===
 
-// Module 8463 (_fetchSocialLayerStorefront)
+// Module 8495 (_fetchSocialLayerStorefront)
 import failsDefault from "fails" /* 584 */;
 import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "getPromotionIdOverride" /* 8464 */;
-import closure_5 from "handleUserSettingsStoreUpdate" /* 6043 */;
+import closure_4 from "getPromotionIdOverride" /* 8496 */;
+import closure_5 from "handleUserSettingsStoreUpdate" /* 6075 */;
 import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
@@ -47,7 +47,7 @@ function _fetchSocialLayerStorefront2() {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -87,7 +87,7 @@ function _fetchSocialLayerStorefront2() {
                 closure_17 = undefined;
                 c8 = 1;
                 c9 = 1;
-                return { value: "Object", done: true };
+                return { value: "PX_16", done: null };
               }
             } else {
               if (1 === tmp7) {
@@ -362,7 +362,7 @@ function _fetchSocialLayerStorefrontSkuWithUrl2() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -394,7 +394,7 @@ function _fetchSocialLayerStorefrontSkuWithUrl2() {
               let storefront_metadata;
               c7 = 1;
               promotionIdOverride2 = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -545,7 +545,7 @@ function _fetchSocialLayerStorefrontEntries() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -671,7 +671,7 @@ function _fetchSocialLayerStorefrontById() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -908,7 +908,7 @@ function _fetchSocialLayerStorefrontConfig() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

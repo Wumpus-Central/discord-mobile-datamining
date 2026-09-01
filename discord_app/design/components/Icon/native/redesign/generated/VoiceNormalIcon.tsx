@@ -1,10 +1,10 @@
-// === Module 5018: VoiceNormalIcon ===
+// === Module 5050: VoiceNormalIcon ===
 
-// Module 5018 (VoiceNormalIcon)
+// Module 5050 (VoiceNormalIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4166 */;
-import registerAsset from "registerAsset" /* 4958 */;
+import BaseIconImage from "BaseIconImage" /* 4196 */;
+import registerAsset from "registerAsset" /* 4990 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

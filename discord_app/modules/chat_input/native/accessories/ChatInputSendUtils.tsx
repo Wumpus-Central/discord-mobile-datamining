@@ -1,23 +1,23 @@
-// === Module 11536: recoverDraft ===
+// === Module 11569: recoverDraft ===
 
-// Module 11536 (recoverDraft)
+// Module 11569 (recoverDraft)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4109 */;
-import KESTREL_GA_UPLOAD_LIMIT_MB from "KESTREL_GA_UPLOAD_LIMIT_MB" /* 5091 */;
-import rebuildDefault from "rebuild" /* 7395 */;
-import dispatcherDefault from "dispatcher" /* 7489 */;
-import isMediaAttachment from "isMediaAttachment" /* 7607 */;
-import useMessageMaxLength from "useMessageMaxLength" /* 8128 */;
-import _modDef8131 from "module_8131" /* 8131 */;
-import items2 from "items" /* 10295 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4139 */;
+import KESTREL_GA_UPLOAD_LIMIT_MB from "KESTREL_GA_UPLOAD_LIMIT_MB" /* 5123 */;
+import rebuildDefault from "rebuild" /* 7427 */;
+import dispatcherDefault from "dispatcher" /* 7521 */;
+import isMediaAttachment from "isMediaAttachment" /* 7639 */;
+import useMessageMaxLength from "useMessageMaxLength" /* 8160 */;
+import _modDef8163 from "module_8163" /* 8163 */;
+import items2 from "items" /* 10334 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleChanged" /* 4822 */;
-import { DraftType } from "handleChanged" /* 4822 */;
-import closure_6 from "setCooldown" /* 7399 */;
-import closure_7 from "map" /* 4821 */;
+import closure_4 from "handleChanged" /* 4854 */;
+import { DraftType } from "handleChanged" /* 4854 */;
+import closure_6 from "setCooldown" /* 7431 */;
+import closure_7 from "map" /* 4853 */;
 import closure_8 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4441 */;
+import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4471 */;
 import { PremiumUpsellTypes } from "GuildFeatures" /* 1924 */;
 
 require = arg1;
@@ -28,7 +28,7 @@ function recoverDraft(chatInputRef) {
     tmp = 0 === store.getUploadCount(channel.id, DraftType.ChannelMessage);
   }
   if (tmp) {
-    let obj = _modDef8131;
+    let obj = _modDef8163;
     obj = { channelId: null, uploads: null, draftType: null, resetState: true };
     obj[0] = channel.id;
     obj[1] = attachmentsToUpload;
@@ -67,7 +67,7 @@ function chatInputSendMessage(params) {
     obj[0] = "Empty text from " + tmp;
     obj.addBreadcrumb(obj);
   }
-  let obj2 = chatInputRef(7489);
+  let obj2 = chatInputRef(7521);
   obj2.saveDraft(channel.id, "", scheduledTimestamp.ChannelMessage);
   const current = chatInputRef.current;
   if (current != null) {
@@ -77,7 +77,7 @@ function chatInputSendMessage(params) {
   if (current2 != null) {
     current2.showSideActions();
   }
-  let obj3 = channel(11535);
+  let obj3 = channel(11568);
   const handleLegacyCommandsResult = obj3.handleLegacyCommands(text, { channel, isEdit: false });
   let tmp14 = tts;
   parsed = parsedMessage;
@@ -101,12 +101,12 @@ function chatInputSendMessage(params) {
     }
   }
   if (parsed == null) {
-    let tmp6Result = tmp6(7395);
+    let tmp6Result = tmp6(7427);
     parsed = tmp6Result.parse(channel, tmp16, undefined, mentionGames);
   }
   parsed.tts = tmp14;
   obj = {};
-  tmp6Result = tmp6(7169);
+  tmp6Result = tmp6(7201);
   const merged = Object.assign(tmp6Result.getSendMessageOptionsForReply(params.pendingReply));
   obj.location = MessageSendLocation.CHAT_INPUT;
   const id = channel.id;
@@ -115,8 +115,8 @@ function chatInputSendMessage(params) {
     if (null == uploads) {
       uploads = [];
     } else {
-      tmp6(8131).clearAll(id, tmp8.ChannelMessage);
-      const tmp6Result1 = tmp6(8131);
+      tmp6(8163).clearAll(id, tmp8.ChannelMessage);
+      const tmp6Result1 = tmp6(8163);
     }
   } else {
     items = [];
@@ -136,8 +136,8 @@ function chatInputSendMessage(params) {
     if (scheduledMessage != null) {
       scheduledTimestamp = scheduledMessage.scheduledTimestamp;
     }
-    channel(11215).deletePendingReply(channel.id);
-    const tmp6Result3 = tmp6(7169);
+    channel(11252).deletePendingReply(channel.id);
+    const tmp6Result3 = tmp6(7201);
     const id2 = channel.id;
     obj3 = {};
     const merged1 = Object.assign(obj);
@@ -155,7 +155,7 @@ function chatInputSendMessage(params) {
         closure_1_14(obj);
       }
     };
-    const tmp12Result = channel(11215);
+    const tmp12Result = channel(11252);
     tmp6Result3.sendMessage(id2, parsed, undefined, obj3).catch((arg0) => {
       if (null != scheduledTimestamp) {
         const obj = { channel: null, chatInputRef: null, content: null, attachmentsToUpload: null };
@@ -185,19 +185,19 @@ function chatInputValidateContentLength(arg0) {
   if (parsed.content.length <= obj2.getMaxMessageLength()) {
     return parsed;
   } else {
-    let tmp2Result = tmp2(4109);
+    let tmp2Result = tmp2(4139);
     if (tmp2Result.canUseIncreasedMessageLength(authStore.getCurrentUser())) {
-      tmp2Result = tmp2(4825);
+      tmp2Result = tmp2(4857);
       let obj = { title: null, body: null };
       const intl = tmp5(1236).intl;
       obj[0] = intl.string(tmp5(1236).t.l8rYLt);
       const intl2 = tmp5(1236).intl;
       obj = { currentLength: null, maxLength: null };
       obj[0] = length;
-      obj[1] = tmp5(8128).getMaxMessageLength();
+      obj[1] = tmp5(8160).getMaxMessageLength();
       obj[1] = intl2.formatToPlainString(tmp5(1236).t.FfjF15, obj);
       tmp2Result.show(obj);
-      const tmp5Result = tmp5(8128);
+      const tmp5Result = tmp5(8160);
       obj1 = { type: "Message Too Long Alert iOS", message_content_length: null };
       obj1[1] = length;
       tmp2(698).track(constants.OPEN_MODAL, obj1);
@@ -210,8 +210,8 @@ function chatInputValidateContentLength(arg0) {
       const obj3 = { type: null };
       obj3[0] = PremiumUpsellTypes.MESSAGE_LENGTH_UPSELL;
       obj2[3] = obj3;
-      const result = tmp2(8137).handleShowUpsellAlert(obj2);
-      const tmp2Result2 = tmp2(8137);
+      const result = tmp2(8169).handleShowUpsellAlert(obj2);
+      const tmp2Result2 = tmp2(8169);
     }
   }
 }
@@ -222,7 +222,7 @@ function showFileSizeExceededAlert(c8, closure_1_2) {
   if (obj.canUploadLargeFiles(currentUser)) {
     let obj6 = require;
     const kestrelConfig = KESTREL_GA_UPLOAD_LIMIT_MB.getKestrelConfig({ location: "native.showFileSizeExceededAlert" });
-    let tmp2Result = tmp2(4825);
+    let tmp2Result = tmp2(4857);
     if (kestrelConfig.enabled) {
       if (!kestrelConfig.isGA) {
         const intl = obj6(1236).intl;
@@ -232,7 +232,7 @@ function showFileSizeExceededAlert(c8, closure_1_2) {
       obj[0] = stringResult;
       const intl3 = obj6(1236).intl;
       obj = { maxSize: null };
-      obj6 = obj6(5046);
+      obj6 = obj6(5078);
       sizeStringResult = obj6.sizeString(c8);
       obj[0] = sizeStringResult;
       obj[1] = intl3.formatToPlainString(obj6(1236).t.fxEKdS, obj);
@@ -242,13 +242,13 @@ function showFileSizeExceededAlert(c8, closure_1_2) {
     stringResult = intl2.string(obj6(1236).t["/tGlcj"]);
     const obj7 = KESTREL_GA_UPLOAD_LIMIT_MB;
   } else {
-    tmp2Result = tmp2(8137);
+    tmp2Result = tmp2(8169);
     obj1 = { initialUpsellKey: null, analyticsLocation: null, analyticsLocations: null, analyticsProperties: null, largestFileSize: null };
     obj1[0] = constants3.UPLOAD;
     const obj2 = { section: null };
     obj2[0] = constants2.FILE_UPLOAD_POPOUT;
     obj1[1] = obj2;
-    const items = [tmp2(5941).FILE_UPLOAD_POPOUT];
+    const items = [tmp2(5973).FILE_UPLOAD_POPOUT];
     obj1[2] = items;
     const obj3 = { type: null };
     obj3[0] = PremiumUpsellTypes.UPLOAD_ERROR_UPSELL;
@@ -275,7 +275,7 @@ function _chatInputSendApplicationCommand() {
           obj[0] = isAuthorized;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -302,7 +302,7 @@ function _chatInputSendApplicationCommand() {
               closure_5 = undefined;
               channel = 1;
               ref = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -348,7 +348,7 @@ function _chatInputSendApplicationCommand() {
                   tmp20 = null != closure_5;
                 }
                 if (tmp20) {
-                  const obj5 = { text: null, parsedMessage: "Array", tts: "handleSendApplicationCommand", source: null, params: "M15 2h-1v1h1V2Z" };
+                  const obj5 = { text: null, parsedMessage: "Array", tts: "handleSendApplicationCommand", source: null, params: "M3 13H2v1h1v-1ZM2 14H1v1h1v-1Z" };
                   obj5[0] = closure_5.content;
                   obj5[2] = closure_5.tts;
                   obj5[4] = params;
@@ -379,7 +379,7 @@ function _chatInputSendApplicationCommand() {
               return obj8;
             }
             ref = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp37) {
           ref = tmp;
@@ -426,7 +426,7 @@ export const chatInputHandleSendText = function chatInputHandleSendText(text) {
             let tmp8 = params;
             let tmp9 = dependencyMap;
             let tmp10 = dependencyMap;
-            obj1 = params(4825);
+            obj1 = params(4857);
             obj = { title: null, body: null, confirmText: null, onConfirm: null, cancelText: null };
             let tmp11 = require;
             let tmp12 = require;
@@ -436,7 +436,7 @@ export const chatInputHandleSendText = function chatInputHandleSendText(text) {
             let intl2 = getSystemLocale.intl;
             obj[2] = intl2.string(getSystemLocale.t.KJnHq3);
             obj[3] = function onConfirm() {
-              const obj = { text: closure_0, parsedMessage: closure_2, tts: "accessibilityLabel", source: "Array", params: "getFrameIntentForSurface" };
+              const obj = { text: closure_0, parsedMessage: closure_2, tts: "accessible", source: "Array", params: "isArray" };
               obj[4] = params;
               closure_1_15(obj);
             };
@@ -454,19 +454,19 @@ export const chatInputHandleSendText = function chatInputHandleSendText(text) {
             obj[0] = channel.id;
             obj[1] = uploads;
             obj[2] = function sendMessage() {
-              const obj = { text: closure_0, parsedMessage: closure_2, tts: "accessibilityLabel", source: false, params: false };
+              const obj = { text: closure_0, parsedMessage: closure_2, tts: "accessible", source: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000237859291021253, params: -0.00000000000000000000000000000000000000000000000030209180897870185 };
               obj[4] = params;
               closure_1_15(obj);
             };
-            params(4415).openLazy(tmp19(2009)(11537, tmp20.paths), "add-media-to-original-forum-post", obj);
-            const obj6 = params(4415);
+            params(4445).openLazy(tmp19(2009)(11570, tmp20.paths), "add-media-to-original-forum-post", obj);
+            const obj6 = params(4445);
           }
           obj4 = isMediaAttachment;
           const tmp18 = require;
           tmp19 = require;
           tmp20 = dependencyMap;
         }
-        obj1 = { text: null, parsedMessage: null, tts: "accessibilityLabel", source: 1864.3528518825772, params: -0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001853182783152201 };
+        obj1 = { text: null, parsedMessage: null, tts: "accessible", source: "Array", params: "red_circle" };
         obj1[0] = text;
         obj1[1] = tmp2;
         obj1[4] = params;
@@ -485,7 +485,7 @@ export const chatInputCreateThread = function chatInputCreateThread(text) {
       obj = { type: null };
       obj[0] = PremiumUpsellTypes.MESSAGE_LENGTH_UPSELL;
       obj[1] = obj;
-      const result = tmp2(8137).handleShowUpsellAlert(obj);
+      const result = tmp2(8169).handleShowUpsellAlert(obj);
     }
     obj2 = getPremiumPlanItemDefault;
     tmp2 = importDefault;

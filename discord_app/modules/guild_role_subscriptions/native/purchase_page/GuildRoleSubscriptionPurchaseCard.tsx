@@ -1,21 +1,21 @@
-// === Module 16099: GuildRoleSubscriptionPurchaseCard ===
+// === Module 16134: GuildRoleSubscriptionPurchaseCard ===
 
-// Module 16099 (GuildRoleSubscriptionPurchaseCard)
+// Module 16134 (GuildRoleSubscriptionPurchaseCard)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4444 */;
-import Background from "Background" /* 5590 */;
-import BottomSheetModal from "BottomSheetModal" /* 5592 */;
-import getRoleEmojisAll from "getRoleEmojis" /* 14790 */;
-import SectionTitle from "SectionTitle" /* 14800 */;
-import TruncatedText from "TruncatedText" /* 16094 */;
-import emphasisHookDefault from "emphasisHook" /* 16100 */;
+import Text from "Text" /* 4474 */;
+import Background from "Background" /* 5622 */;
+import BottomSheetModal from "BottomSheetModal" /* 5624 */;
+import getRoleEmojisAll from "getRoleEmojis" /* 14823 */;
+import SectionTitle from "SectionTitle" /* 14833 */;
+import TruncatedText from "TruncatedText" /* 16129 */;
+import emphasisHookDefault from "emphasisHook" /* 16135 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 noopAll;

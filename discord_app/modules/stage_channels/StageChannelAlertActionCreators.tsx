@@ -1,8 +1,8 @@
-// === Module 12760: openStageChannelAudienceNoticeModal ===
+// === Module 12793: openStageChannelAudienceNoticeModal ===
 
-// Module 12760 (openStageChannelAudienceNoticeModal)
+// Module 12793 (openStageChannelAudienceNoticeModal)
 import set from "set" /* 2 */;
-import openStageChannelSettingsAll from "openStageChannelSettings" /* 8633 */;
+import openStageChannelSettingsAll from "openStageChannelSettings" /* 8665 */;
 
 let result = set.fileFinishedImporting("modules/stage_channels/StageChannelAlertActionCreators.tsx");
 

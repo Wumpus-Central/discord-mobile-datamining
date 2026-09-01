@@ -1,9 +1,9 @@
-// === Module 8494: ProfileEffectUserPreview ===
+// === Module 8526: ProfileEffectUserPreview ===
 
-// Module 8494 (ProfileEffectUserPreview)
+// Module 8526 (ProfileEffectUserPreview)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import filterLayerDefault from "filterLayer" /* 8495 */;
+import filterLayerDefault from "filterLayer" /* 8527 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

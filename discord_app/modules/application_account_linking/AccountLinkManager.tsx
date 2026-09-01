@@ -1,12 +1,12 @@
-// === Module 16485: _claimIncentivizedAccountLinkingReward ===
+// === Module 16521: _claimIncentivizedAccountLinkingReward ===
 
-// Module 16485 (_claimIncentivizedAccountLinkingReward)
+// Module 16521 (_claimIncentivizedAccountLinkingReward)
 import setDefault from "set" /* 687 */;
-import initializeDefault from "initialize" /* 5454 */;
+import initializeDefault from "initialize" /* 5486 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "recomputeFromAppTokens" /* 5443 */;
-import closure_5 from "map" /* 16486 */;
+import closure_4 from "recomputeFromAppTokens" /* 5475 */;
+import closure_5 from "map" /* 16522 */;
 import ME from "ME" /* 676 */;
 
 let require = arg1;
@@ -18,97 +18,35 @@ function _claimIncentivizedAccountLinkingReward() {
     c6 = 0;
     c4 = 0;
     const iter = (function*(arg0) {
-      if (c6 === 2) {
+      c2 = tmp3;
+      dependencyMap = tmp5;
+      ({ applicationId: c0, onSuccess: c1, onError: c2 } = callback);
+      yield "PX_16";
+      c4 = 1;
+      const HTTP = callback(530).HTTP;
+      const obj2 = { url: null, body: null, rejectWithError: true };
+      obj2[0] = obj.OAUTH2_ACCOUNT_LINKING_ACHIEVEMENT;
+      const obj3 = { application_id: null };
+      obj3[0] = callback;
+      obj2[1] = obj3;
+      yield HTTP.post(obj2);
+      if (2 === tmp8) {
+        c4 = 0;
+        if (c2 != null) {
+          tmp14(closure_3);
+        }
         c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        if (dependencyMap != null) {
+          dependencyMap();
         }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              c2 = tmp3;
-              dependencyMap = tmp5;
-              let callback;
-              dependencyMap = undefined;
-              c2 = undefined;
-              ({ applicationId: c0, onSuccess: c1, onError: c2 } = callback);
-              c5 = 1;
-              c6 = 1;
-              return { value: "Object", done: true };
-            }
-          } else if (1 === tmp8) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              c4 = 1;
-              const HTTP = callback(530).HTTP;
-              const obj2 = { url: null, body: null, rejectWithError: true };
-              obj2[0] = obj.OAUTH2_ACCOUNT_LINKING_ACHIEVEMENT;
-              const obj3 = { application_id: null };
-              obj3[0] = callback;
-              obj2[1] = obj3;
-              c5 = 3;
-              c6 = 1;
-              const obj4 = { value: null, done: false };
-              obj4[0] = HTTP.post(obj2);
-              return obj4;
-            }
-          } else {
-            if (2 === tmp8) {
-              c4 = 0;
-              if (c2 != null) {
-                tmp14(closure_3);
-              }
-              c6 = 3;
-            } else if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              if (dependencyMap != null) {
-                dependencyMap();
-              }
-              c4 = 0;
-            }
-            c4 = 0;
-            c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp25) {
-          closure_3 = tmp25;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp25;
-          } else {
-            c5 = tmp;
-          }
-        }
+        c4 = 0;
       }
+      c4 = 0;
+      return arg1;
     })();
     iter.next();
     return iter;

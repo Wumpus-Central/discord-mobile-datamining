@@ -1,9 +1,9 @@
-// === Module 9667: ? ===
+// === Module 9706: ? ===
 
-// Module 9667
+// Module 9706
 import set from "set" /* 2 */;
 import createChannelRecord from "createChannelRecord" /* 1391 */;
-import _modDef4691 from "module_4691" /* 4691 */;
+import _modDef4723 from "module_4723" /* 4723 */;
 import closure_4 from "ensureGuildLoaded" /* 1387 */;
 
 let closure_3 = createChannelRecord.CREATEABLE_NON_VOCAL_CHANNEL_NAME_TYPES;
@@ -15,7 +15,7 @@ export default {
   open(arg0, arg1, arg2, arg3) {
     const self = this;
     if (null != arg1) {
-      const obj2 = _modDef4691;
+      const obj2 = _modDef4723;
       const tmp = arg0;
       let obj = { channelType: null, guildId: null, categoryId: null, cloneChannelId: null, onChannelCreated: null };
       obj[0] = tmp;
@@ -34,13 +34,13 @@ export default {
           const obj = self(closure_1_2[2]);
         }
       };
-      obj2.pushLazy(self(2009)(9663, dependencyMap.paths), obj, CREATE_CHANNEL_MODAL_KEY);
+      obj2.pushLazy(self(2009)(9702, dependencyMap.paths), obj, CREATE_CHANNEL_MODAL_KEY);
       const tmp2 = arg2;
       const tmp3 = arg3;
-      const tmp9 = self(2009)(9663, dependencyMap.paths);
+      const tmp9 = self(2009)(9702, dependencyMap.paths);
     }
   },
   close() {
-    _modDef4691.popWithKey(CREATE_CHANNEL_MODAL_KEY);
+    _modDef4723.popWithKey(CREATE_CHANNEL_MODAL_KEY);
   }
 };

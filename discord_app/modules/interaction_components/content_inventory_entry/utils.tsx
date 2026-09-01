@@ -1,6 +1,6 @@
-// === Module 7986: isContentInventoryFallbackEmbed ===
+// === Module 8018: isContentInventoryFallbackEmbed ===
 
-// Module 7986 (isContentInventoryFallbackEmbed)
+// Module 8018 (isContentInventoryFallbackEmbed)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import hasFlag from "hasFlag" /* 1399 */;

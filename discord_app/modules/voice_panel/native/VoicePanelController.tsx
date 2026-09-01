@@ -1,27 +1,27 @@
-// === Module 16594: VoicePanelController ===
+// === Module 16630: VoicePanelController ===
 
-// Module 16594 (VoicePanelController)
+// Module 16630 (VoicePanelController)
 import setDefault from "set" /* 687 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { AppState } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4440 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import closure_7 from "participantFromServer" /* 1386 */;
-import closure_8 from "getParticipants" /* 4464 */;
-import closure_9 from "module_8553" /* 8553 */;
-import closure_10 from "module_9588" /* 9588 */;
-import closure_11 from "initialize" /* 9496 */;
+import closure_8 from "getParticipants" /* 4494 */;
+import closure_9 from "module_8585" /* 8585 */;
+import closure_10 from "module_9627" /* 9627 */;
+import closure_11 from "initialize" /* 9535 */;
 import closure_12 from "ensureGuildLoaded" /* 1387 */;
-import closure_13 from "_detectH265HardwareDecode" /* 4499 */;
-import closure_14 from "createRTCConnection" /* 4522 */;
-import closure_15 from "withEqualityFn" /* 4696 */;
-import VoicePanelModes from "VoicePanelModes" /* 11807 */;
-import VoicePanelControlsModes from "VoicePanelControlsModes" /* 11805 */;
+import closure_13 from "_detectH265HardwareDecode" /* 4529 */;
+import closure_14 from "createRTCConnection" /* 4554 */;
+import closure_15 from "withEqualityFn" /* 4728 */;
+import VoicePanelModes from "VoicePanelModes" /* 11840 */;
+import VoicePanelControlsModes from "VoicePanelControlsModes" /* 11838 */;
 import ME from "ME" /* 676 */;
-import { OrientationLockState } from "items3" /* 4476 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 9427 */;
-import { isActivityParticipant } from "ParticipantTypes" /* 4469 */;
-import { MorphablePanelModes } from "MIN_PAN_GESTURE_MOVE" /* 11808 */;
+import { OrientationLockState } from "items3" /* 4506 */;
+import { ActivityPanelModes } from "ActivityPanelModes" /* 9466 */;
+import { isActivityParticipant } from "ParticipantTypes" /* 4499 */;
+import { MorphablePanelModes } from "MIN_PAN_GESTURE_MOVE" /* 11841 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

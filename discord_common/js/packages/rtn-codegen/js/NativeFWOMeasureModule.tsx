@@ -1,6 +1,6 @@
-// === Module 8760: NativeFWOMeasureModule ===
+// === Module 8797: NativeFWOMeasureModule ===
 
-// Module 8760 (NativeFWOMeasureModule)
+// Module 8797 (NativeFWOMeasureModule)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 

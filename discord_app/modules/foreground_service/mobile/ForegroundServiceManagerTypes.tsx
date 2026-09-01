@@ -1,6 +1,6 @@
-// === Module 7470: ServiceNotificationPriority ===
+// === Module 7502: ServiceNotificationPriority ===
 
-// Module 7470 (ServiceNotificationPriority)
+// Module 7502 (ServiceNotificationPriority)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/foreground_service/mobile/ForegroundServiceManagerTypes.tsx");

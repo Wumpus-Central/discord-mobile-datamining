@@ -1,10 +1,10 @@
-// === Module 16612: maybeFetchTopSoundboardSoundsByGuild ===
+// === Module 16648: maybeFetchTopSoundboardSoundsByGuild ===
 
-// Module 16612 (maybeFetchTopSoundboardSoundsByGuild)
+// Module 16648 (maybeFetchTopSoundboardSoundsByGuild)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import closure_4 from "handleSoundCreateOrUpdate" /* 4933 */;
-import closure_5 from "initialize" /* 4934 */;
+import closure_4 from "handleSoundCreateOrUpdate" /* 4965 */;
+import closure_5 from "initialize" /* 4966 */;
 import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
@@ -13,7 +13,7 @@ const result = require("set").fileFinishedImporting("modules/soundboard/top_soun
 export const maybeFetchTopSoundboardSoundsByGuild = function maybeFetchTopSoundboardSoundsByGuild(id) {
   if (null != id) {
     if (null != currentUser.getCurrentUser()) {
-      const TopSoundboardSoundsMobileExperiment = _require(16611).TopSoundboardSoundsMobileExperiment;
+      const TopSoundboardSoundsMobileExperiment = _require(16647).TopSoundboardSoundsMobileExperiment;
       if (TopSoundboardSoundsMobileExperiment.getConfig({ location: "maybeFetchTopSoundboardSoundsByGuild" }).enabled) {
         topSoundboardSoundsMetadata = topSoundboardSoundsMetadata.getTopSoundboardSoundsMetadata(id);
         if (null != topSoundboardSoundsMetadata) {
@@ -46,7 +46,7 @@ export const maybeFetchTopSoundboardSoundsByGuild = function maybeFetchTopSoundb
             });
             const obj2 = dispatcherDefault;
           }
-          tmp9Result = tmp9(4287);
+          tmp9Result = tmp9(4317);
         }
       }
     }
@@ -54,7 +54,7 @@ export const maybeFetchTopSoundboardSoundsByGuild = function maybeFetchTopSoundb
 };
 export const fetchTopSoundboardSounds = function fetchTopSoundboardSounds(id) {
   const _require = id;
-  let obj = _require(4287);
+  let obj = _require(4317);
   if (!obj.isPseudoGuildId(id)) {
     obj = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH", guildId: null };
     obj[1] = id;

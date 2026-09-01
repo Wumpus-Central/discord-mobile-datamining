@@ -1,11 +1,11 @@
-// === Module 7733: UserSettingsConfirmPasswordWrapped ===
+// === Module 7765: UserSettingsConfirmPasswordWrapped ===
 
-// Module 7733 (UserSettingsConfirmPasswordWrapped)
+// Module 7765 (UserSettingsConfirmPasswordWrapped)
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7127 */;
-import _modDef7672 from "module_7672" /* 7672 */;
-import handleOpenEmailVerificationDefault from "handleOpenEmailVerification" /* 7734 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7159 */;
+import _modDef7704 from "module_7704" /* 7704 */;
+import handleOpenEmailVerificationDefault from "handleOpenEmailVerification" /* 7766 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
@@ -13,7 +13,7 @@ import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_8 from "mergeGuildAvatar" /* 1922 */;
 import { UserSettingsSections } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 let c5 = importAllResult;
@@ -56,7 +56,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -207,12 +207,12 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     obj1[0] = tmp.title;
     let intl = tmp3(1236).intl;
     obj1[4] = intl.string(tmp3(1236).t["x+d9t3"]);
-    const items3 = [callback(tmp3(4444).Text, obj1), , , , ];
+    const items3 = [callback(tmp3(4474).Text, obj1), , , , ];
     obj2 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
     obj2[0] = tmp.prompt;
     const intl2 = tmp3(1236).intl;
     obj2[3] = intl2.string(tmp3(1236).t.vaZmAx);
-    items3[1] = callback(tmp3(4444).Text, obj2);
+    items3[1] = callback(tmp3(4474).Text, obj2);
     let obj3 = { style: null, textStyle: null, label: null, textContentType: "password", keyboardType: "default", secureTextEntry: true, value: null, onChangeText: null, onSubmitEditing: null, error: null, returnKeyType: "done", autoCapitalize: "none", autoFocus: true };
     ({ input: obj7[0], redesignInput: obj7[1] } = tmp);
     const intl3 = tmp3(1236).intl;
@@ -225,7 +225,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
       fieldMessage = obj1.getFieldMessage("password");
     }
     obj3[9] = fieldMessage;
-    items3[2] = callback(_modDef7672, obj3);
+    items3[2] = callback(_modDef7704, obj3);
     let tmp19Result = null;
     if (null != obj1) {
       tmp19Result = null;
@@ -233,7 +233,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
         const obj4 = { style: null, children: null };
         obj4[0] = tmp.hint;
         obj4[1] = obj1.message;
-        tmp19Result = tmp19(tmp20(7682), obj4);
+        tmp19Result = tmp19(tmp20(7714), obj4);
       }
     }
     items3[3] = tmp19Result;
@@ -244,7 +244,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     obj6[2] = intl4.string(tmp3(1236).t.i4jeWR);
     obj6[3] = handleSubmit;
     obj6[4] = tmp7;
-    obj5[1] = callback(tmp3(4896).Button, obj6);
+    obj5[1] = callback(tmp3(4928).Button, obj6);
     items3[4] = callback(_handleSubmit, obj5);
     obj[1] = items3;
     items2[1] = closure_11(_handleSubmit, obj);
@@ -252,7 +252,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     tmp13Result = tmp13(closure_7, obj);
     const tmp14 = closure_7;
     tmp20 = importDefault;
-    const tmp21 = _modDef7672;
+    const tmp21 = _modDef7704;
   }
   return tmp13Result;
 });

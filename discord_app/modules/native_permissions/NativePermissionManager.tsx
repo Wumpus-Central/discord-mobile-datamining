@@ -1,13 +1,13 @@
-// === Module 5052: isEnabled ===
+// === Module 5084: isEnabled ===
 
-// Module 5052 (isEnabled)
+// Module 5084 (isEnabled)
 import set from "set" /* 2 */;
 import set2 from "set" /* 500 */;
 import ME from "ME" /* 676 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 4630 */;
-import NativePermissionStatus from "NativePermissionStatus" /* 4698 */;
-import NativePermissionsRequestOptions from "NativePermissionsRequestOptions" /* 5051 */;
+import initializeDefault from "initialize" /* 4662 */;
+import NativePermissionStatus from "NativePermissionStatus" /* 4730 */;
+import NativePermissionsRequestOptions from "NativePermissionsRequestOptions" /* 5083 */;
 
 const NativePermissionTypes = NativePermissionStatus.NativePermissionTypes;
 const InputModes = ME.InputModes;
@@ -22,7 +22,7 @@ prototype["isEnabled"] = function isEnabled() {
     const tmpResult = tmp(500);
   }
   if (isDesktopResult) {
-    const ProcessArgs = tmp(5053).ProcessArgs;
+    const ProcessArgs = tmp(5085).ProcessArgs;
     isDesktopResult = !ProcessArgs.isDiscordTestSet();
   }
   return isDesktopResult;

@@ -1,22 +1,22 @@
-// === Module 7473: getSampleOfVoterUsernamesForAnswer ===
+// === Module 7505: getSampleOfVoterUsernamesForAnswer ===
 
-// Module 7473 (getSampleOfVoterUsernamesForAnswer)
+// Module 7505 (getSampleOfVoterUsernamesForAnswer)
 import v1 from "v1" /* 514 */;
 import setDefault from "set" /* 687 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4714 */;
+import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4746 */;
 import closure_3 from "ensureGuildLoaded" /* 1387 */;
-import closure_4 from "reactionKey" /* 7474 */;
-import closure_5 from "reinjectEphemerals" /* 4703 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4091 */;
-import closure_7 from "markAllUserIdListsStale" /* 4100 */;
-import POLL_ATTACHMENT_FOLDER from "POLL_ATTACHMENT_FOLDER" /* 7541 */;
+import closure_4 from "reactionKey" /* 7506 */;
+import closure_5 from "reinjectEphemerals" /* 4735 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4121 */;
+import closure_7 from "markAllUserIdListsStale" /* 4130 */;
+import POLL_ATTACHMENT_FOLDER from "POLL_ATTACHMENT_FOLDER" /* 7573 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
 function getSampleOfVoterUsernamesForAnswer(message, id) {
   const channelId = message.getChannelId();
-  reactions = reactions.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(7475).ReactionTypes.VOTE);
+  reactions = reactions.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(7507).ReactionTypes.VOTE);
   channel = channel.getChannel(channelId);
   let guildId = null;
   if (null != channel) {
@@ -98,7 +98,7 @@ function formatVoterTooltipText(arr, arg1) {
 const result = require("set").fileFinishedImporting("modules/polls/PollsUtils.tsx");
 
 export const generateEmptyPollAnswer = function generateEmptyPollAnswer() {
-  const obj = { text: "Array", image: "Object", localCreationAnswerId: v1.v4() };
+  const obj = { text: "Array", image: "PX_16", localCreationAnswerId: v1.v4() };
   return obj;
 };
 export const generateLocalCreationAnswerId = function generateLocalCreationAnswerId() {

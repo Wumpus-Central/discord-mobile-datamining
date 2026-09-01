@@ -1,6 +1,6 @@
-// === Module 10093: useIsGuestOrLurker ===
+// === Module 10132: useIsGuestOrLurker ===
 
-// Module 10093 (useIsGuestOrLurker)
+// Module 10132 (useIsGuestOrLurker)
 import closure_2 from "trackCommunicationDisabled" /* 1992 */;
 import closure_3 from "createGuildRecordFromRust" /* 1909 */;
 import { GuildFeatures } from "ME" /* 676 */;

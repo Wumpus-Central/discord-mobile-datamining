@@ -1,21 +1,21 @@
-// === Module 9458: postMessageToWebView ===
+// === Module 9497: postMessageToWebView ===
 
-// Module 9458 (postMessageToWebView)
+// Module 9497 (postMessageToWebView)
 import v1 from "v1" /* 514 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import ComponentDispatcher from "ComponentDispatcher" /* 1231 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1471 */;
-import _modDef4826 from "module_4826" /* 4826 */;
-import enforcingDefault from "enforcing" /* 9415 */;
-import leaveFrameDefault from "leaveFrame" /* 9459 */;
+import _modDef4858 from "module_4858" /* 4858 */;
+import enforcingDefault from "enforcing" /* 9454 */;
+import leaveFrameDefault from "leaveFrame" /* 9498 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "map" /* 9425 */;
-import { isLaunched } from "FrameLayoutModes" /* 9426 */;
+import closure_4 from "map" /* 9464 */;
+import { isLaunched } from "FrameLayoutModes" /* 9465 */;
 import { ComponentActions } from "ME" /* 676 */;
-import { DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY as closure_7 } from "items3" /* 4476 */;
-import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4350 */;
-import WebView from "WebView" /* 8561 */;
+import { DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY as closure_7 } from "items3" /* 4506 */;
+import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4380 */;
+import WebView from "WebView" /* 8593 */;
 import PlatformTypes from "PlatformTypes" /* 501 */;
 
 require = arg1;
@@ -171,7 +171,7 @@ class FramesNativeManager extends tmp5 {
 const prototype = FramesNativeManager.prototype;
 prototype["showRPCDisconnectErrorUI"] = function showRPCDisconnectErrorUI(reason) {
   ({ code, message } = reason);
-  let obj = _modDef4826;
+  let obj = _modDef4858;
   obj = { title: null, body: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.formatToPlainString(getSystemLocale.t.hbiAO6, { code });

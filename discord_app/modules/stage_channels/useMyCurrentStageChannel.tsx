@@ -1,6 +1,6 @@
-// === Module 9613: useMyCurrentStageChannel ===
+// === Module 9652: useMyCurrentStageChannel ===
 
-// Module 9613 (useMyCurrentStageChannel)
+// Module 9652 (useMyCurrentStageChannel)
 import initialize from "initialize" /* 589 */;
 import closure_2 from "ensureGuildLoaded" /* 1387 */;
 import closure_3 from "handleConnectionOpen" /* 1981 */;

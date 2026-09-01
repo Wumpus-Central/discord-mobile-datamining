@@ -1,13 +1,13 @@
-// === Module 14631: BountiesModalEndCard ===
+// === Module 14664: BountiesModalEndCard ===
 
-// Module 14631 (BountiesModalEndCard)
+// Module 14664 (BountiesModalEndCard)
 import set from "set" /* 2 */;
-import _modDef4187 from "module_4187" /* 4187 */;
-import LinearGradientDefault from "LinearGradient" /* 4908 */;
-import BountiesEndCardPressableCtaDefault from "BountiesEndCardPressableCta" /* 14613 */;
+import _modDef4217 from "module_4217" /* 4217 */;
+import LinearGradientDefault from "LinearGradient" /* 4940 */;
+import BountiesEndCardPressableCtaDefault from "BountiesEndCardPressableCta" /* 14646 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 ({ StyleSheet: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
@@ -29,7 +29,7 @@ export default function BountiesModalEndCard(visible) {
   visible = visible.visible;
   ({ bounty, sourceQuestContent } = visible);
   const tmp = callback3();
-  visible(4187);
+  visible(4217);
   const fn = function y() {
     let obj = visible(closure_1_2[4]);
     let num = 0;
@@ -39,7 +39,7 @@ export default function BountiesModalEndCard(visible) {
     obj = { opacity: obj.withTiming(num, visible(closure_1_2[5]).timingStandard) };
     return obj;
   };
-  let obj = { withTiming: visible(4449).withTiming, visible, timingStandard: visible(4452).timingStandard };
+  let obj = { withTiming: visible(4479).withTiming, visible, timingStandard: visible(4482).timingStandard };
   fn.__closure = obj;
   fn.__workletHash = 15062259404736;
   fn.__initData = closure_8;
@@ -60,7 +60,7 @@ export default function BountiesModalEndCard(visible) {
     obj2[1] = sourceQuestContent;
     items1[2] = callback(BountiesEndCardPressableCtaDefault, obj2);
     obj[2] = items1;
-    visible = callback2(_modDef4187.View, obj);
+    visible = callback2(_modDef4217.View, obj);
   }
   return visible;
 };

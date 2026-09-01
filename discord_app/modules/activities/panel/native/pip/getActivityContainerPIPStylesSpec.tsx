@@ -1,10 +1,10 @@
-// === Module 16565: OrientationLockState ===
+// === Module 16601: OrientationLockState ===
 
-// Module 16565 (OrientationLockState)
+// Module 16601 (OrientationLockState)
 import set from "set" /* 2 */;
-import items3 from "items3" /* 4476 */;
-import ActivityPanelModes from "ActivityPanelModes" /* 9427 */;
-import tDefault from "t" /* 10692 */;
+import items3 from "items3" /* 4506 */;
+import ActivityPanelModes from "ActivityPanelModes" /* 9466 */;
+import tDefault from "t" /* 10730 */;
 
 const OrientationLockState = items3.OrientationLockState;
 const LANDSCAPE_ACTIVITY_ASPECT_RATIO = ActivityPanelModes.LANDSCAPE_ACTIVITY_ASPECT_RATIO;

@@ -1,6 +1,6 @@
-// === Module 5076: useMobileLosslessImageUploadV2Experiment ===
+// === Module 5108: useMobileLosslessImageUploadV2Experiment ===
 
-// Module 5076 (useMobileLosslessImageUploadV2Experiment)
+// Module 5108 (useMobileLosslessImageUploadV2Experiment)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1468 */;
 

@@ -1,18 +1,18 @@
-// === Module 15611: renderCard ===
+// === Module 15647: renderCard ===
 
-// Module 15611 (renderCard)
+// Module 15647 (renderCard)
 import ThemesDefault from "Themes" /* 712 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5620 */;
-import HappeningNowCardPlaceholder from "HappeningNowCardPlaceholder" /* 15622 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5652 */;
+import HappeningNowCardPlaceholder from "HappeningNowCardPlaceholder" /* 15658 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14857 */;
+import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14890 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createFakeSharedValue from "createFakeSharedValue" /* 7765 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
-import { Gesture } from "LegacyBaseButton" /* 5620 */;
+import createFakeSharedValue from "createFakeSharedValue" /* 7797 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
+import { Gesture } from "LegacyBaseButton" /* 5652 */;
 
 require = arg1;
 function renderCard(kind, fullWidth) {
@@ -67,7 +67,7 @@ const memoResult = importAllResult.memo((listRef) => {
   obj = obj(isFocused[14]);
   isFocused = obj.useIsFocused();
   ref = isFocused;
-  obj = { withoutUserCards: "HermesInternal", guildId: "Array", showMultipleActivitiesPerChannel: "AM", isFocused: "PM" };
+  obj = { withoutUserCards: "HermesInternal", guildId: "Array", showMultipleActivitiesPerChannel: "a", isFocused: "USER_QUARANTINED" };
   obj[3] = isFocused;
   const tmp7 = callback(ref(isFocused[15])(listRef.cards, obj), 2);
   let first = tmp7[0];

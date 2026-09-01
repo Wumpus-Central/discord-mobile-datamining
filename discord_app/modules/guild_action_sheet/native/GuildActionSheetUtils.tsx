@@ -1,7 +1,7 @@
-// === Module 13667: useGuildActionSheetPermissions ===
+// === Module 13700: useGuildActionSheetPermissions ===
 
-// Module 13667 (useGuildActionSheetPermissions)
-import closure_2 from "getUncachedChannelPermissions" /* 4091 */;
+// Module 13700 (useGuildActionSheetPermissions)
+import closure_2 from "getUncachedChannelPermissions" /* 4121 */;
 import { Permissions } from "ME" /* 676 */;
 
 const require = arg1;

@@ -1,6 +1,6 @@
-// === Module 14711: getVideoQoEMetricsConfig ===
+// === Module 14744: getVideoQoEMetricsConfig ===
 
-// Module 14711 (getVideoQoEMetricsConfig)
+// Module 14744 (getVideoQoEMetricsConfig)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1468 */;
 

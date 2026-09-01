@@ -1,11 +1,11 @@
-// === Module 17314: GuildPremiumRoleSubscribeButton ===
+// === Module 17350: GuildPremiumRoleSubscribeButton ===
 
-// Module 17314 (GuildPremiumRoleSubscribeButton)
+// Module 17350 (GuildPremiumRoleSubscribeButton)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import CreatorRevenueButton from "CreatorRevenueButton" /* 9099 */;
+import CreatorRevenueButton from "CreatorRevenueButton" /* 9137 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 noopAll;

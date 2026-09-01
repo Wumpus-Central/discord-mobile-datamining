@@ -1,6 +1,6 @@
-// === Module 11909: useIsHubForGuild ===
+// === Module 11942: useIsHubForGuild ===
 
-// Module 11909 (useIsHubForGuild)
+// Module 11942 (useIsHubForGuild)
 import closure_2 from "createGuildRecordFromRust" /* 1909 */;
 import { GuildFeatures } from "ME" /* 676 */;
 

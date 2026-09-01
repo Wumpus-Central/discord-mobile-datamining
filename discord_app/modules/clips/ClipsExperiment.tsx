@@ -1,10 +1,10 @@
-// === Module 4510: apexExperiment ===
+// === Module 4540: apexExperiment ===
 
-// Module 4510 (apexExperiment)
+// Module 4540 (apexExperiment)
 import initialize from "initialize" /* 589 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4109 */;
-import isClientClipsCapableDefault from "isClientClipsCapable" /* 4511 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4499 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4139 */;
+import isClientClipsCapableDefault from "isClientClipsCapable" /* 4541 */;
+import closure_3 from "_detectH265HardwareDecode" /* 4529 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 import ApexExperiment from "ApexExperiment" /* 1468 */;

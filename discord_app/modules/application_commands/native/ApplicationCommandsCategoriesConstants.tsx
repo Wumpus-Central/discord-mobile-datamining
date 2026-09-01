@@ -1,6 +1,6 @@
-// === Module 11931: ICON_SIZE ===
+// === Module 11964: ICON_SIZE ===
 
-// Module 11931 (ICON_SIZE)
+// Module 11964 (ICON_SIZE)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/application_commands/native/ApplicationCommandsCategoriesConstants.tsx");

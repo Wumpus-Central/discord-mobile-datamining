@@ -1,15 +1,15 @@
-// === Module 12086: Tier3OverrideNotice ===
+// === Module 12119: Tier3OverrideNotice ===
 
-// Module 12086 (Tier3OverrideNotice)
+// Module 12119 (Tier3OverrideNotice)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4444 */;
-import apexExperiment from "apexExperiment" /* 7972 */;
-import useGuildPowerupTier3OverrideConfigDefault from "useGuildPowerupTier3OverrideConfig" /* 12087 */;
-import useGuildPowerupExpiringNotificationsConfigDefault from "useGuildPowerupExpiringNotificationsConfig" /* 12088 */;
+import Text from "Text" /* 4474 */;
+import apexExperiment from "apexExperiment" /* 8004 */;
+import useGuildPowerupTier3OverrideConfigDefault from "useGuildPowerupTier3OverrideConfig" /* 12120 */;
+import useGuildPowerupExpiringNotificationsConfigDefault from "useGuildPowerupExpiringNotificationsConfig" /* 12121 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 function Tier3OverrideNotice(children) {
   let obj = apexExperiment;
@@ -54,7 +54,7 @@ export default function GuildPowerupsNotificationContainer(guildId) {
     obj[1] = str2;
     const intl = tmp6(1236).intl;
     obj[2] = intl.string(tmp2(2401)["3FRirU"]);
-    const items = [closure_4(tmp6(4444).Text, obj), , ];
+    const items = [closure_4(tmp6(4474).Text, obj), , ];
     let shouldShow = tmp4.shouldShow;
     if (shouldShow) {
       obj1 = { text: null };
@@ -67,7 +67,7 @@ export default function GuildPowerupsNotificationContainer(guildId) {
       const obj2 = { guildId: null, powerupNames: null, warnings: null };
       obj2[0] = guildId;
       ({ expiringPowerupNames: obj5[1], warnings: obj5[2] } = tmp5);
-      shouldShow2 = tmp11(tmp2(12091), obj2);
+      shouldShow2 = tmp11(tmp2(12124), obj2);
     }
     items[2] = shouldShow2;
     obj[1] = items;

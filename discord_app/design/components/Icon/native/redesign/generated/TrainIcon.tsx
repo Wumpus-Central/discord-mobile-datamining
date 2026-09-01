@@ -1,10 +1,10 @@
-// === Module 15163: TrainIcon ===
+// === Module 15196: TrainIcon ===
 
-// Module 15163 (TrainIcon)
+// Module 15196 (TrainIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4166 */;
-import registerAsset from "registerAsset" /* 15164 */;
+import BaseIconImage from "BaseIconImage" /* 4196 */;
+import registerAsset from "registerAsset" /* 15197 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

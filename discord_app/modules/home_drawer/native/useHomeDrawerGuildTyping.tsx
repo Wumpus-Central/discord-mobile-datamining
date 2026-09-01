@@ -1,11 +1,11 @@
-// === Module 15876: areHomeDrawerGuildTypingStatesEqual ===
+// === Module 15911: areHomeDrawerGuildTypingStatesEqual ===
 
-// Module 15876 (areHomeDrawerGuildTypingStatesEqual)
+// Module 15911 (areHomeDrawerGuildTypingStatesEqual)
 import shallowEqual from "shallowEqual" /* 643 */;
-import closure_3 from "storeThread" /* 4093 */;
+import closure_3 from "storeThread" /* 4123 */;
 import { isThread } from "createChannelRecord" /* 1391 */;
 import closure_5 from "ensureGuildLoaded" /* 1387 */;
-import closure_6 from "handleTypingStart" /* 11504 */;
+import closure_6 from "handleTypingStart" /* 11537 */;
 
 require = arg1;
 function areHomeDrawerGuildTypingStatesEqual(typingChannelId, typingChannelId2) {
@@ -16,7 +16,7 @@ function areHomeDrawerGuildTypingStatesEqual(typingChannelId, typingChannelId2) 
   }
   return result;
 }
-let closure_7 = { typingChannelId: "Array", typingChannelName: "Object", typingUserIds: [] };
+let closure_7 = { typingChannelId: "Array", typingChannelName: "PX_16", typingUserIds: [] };
 let result = require("set").fileFinishedImporting("modules/home_drawer/native/useHomeDrawerGuildTyping.tsx");
 
 export const useHomeDrawerGuildTyping = function useHomeDrawerGuildTyping(id) {

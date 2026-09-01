@@ -1,15 +1,15 @@
-// === Module 6130: showSimpleLoadingModal ===
+// === Module 6162: showSimpleLoadingModal ===
 
-// Module 6130 (showSimpleLoadingModal)
+// Module 6162 (showSimpleLoadingModal)
 import set from "set" /* 2 */;
-import _modDef4691 from "module_4691" /* 4691 */;
+import _modDef4723 from "module_4723" /* 4723 */;
 
 const result = set.fileFinishedImporting("modules/mobile_web_handoff/native/SimpleLoadingModal.tsx");
 
 export const showSimpleLoadingModal = function showSimpleLoadingModal(c3, arg1) {
   const _require = c3;
   importDefault = arg1;
-  let obj = _modDef4691;
+  let obj = _modDef4723;
   obj = {};
   const merged = Object.assign(arg1);
   obj.onDismissed = function onDismissed() {
@@ -19,5 +19,5 @@ export const showSimpleLoadingModal = function showSimpleLoadingModal(c3, arg1) 
       onDismissed();
     }
   };
-  obj.pushLazy(_require(2009)(6131, dependencyMap.paths), obj, c3, { animation: "none" });
+  obj.pushLazy(_require(2009)(6163, dependencyMap.paths), obj, c3, { animation: "none" });
 };

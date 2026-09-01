@@ -1,12 +1,12 @@
-// === Module 16729: AnimatedButtonWrapper ===
+// === Module 16765: AnimatedButtonWrapper ===
 
-// Module 16729 (AnimatedButtonWrapper)
+// Module 16765 (AnimatedButtonWrapper)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
-import { MODE_CHANGE_PHYSICS } from "VoicePanelModes" /* 11807 */;
+import { MODE_CHANGE_PHYSICS } from "VoicePanelModes" /* 11840 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
-import importDefaultResult from "module_4187" /* 4187 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
+import importDefaultResult from "module_4217" /* 4217 */;
 
 const require = arg1;
 createCacheKey = { pressableWrapper: null };
@@ -29,7 +29,7 @@ export default function AnimatedButtonWrapper(onPressOut) {
   let width;
   let height;
   let sharedValue;
-  ({ onPress, onLongPress, accessibilityLabel, children, disabled } = onPressOut);
+  ({ onPress, onLongPress, accessibilityLabel, accessibilityHint, children, disabled } = onPressOut);
   let obj = onPressIn(style[6]);
   if (pressed == null) {
     pressed = obj.useSharedValue(false);
@@ -132,6 +132,7 @@ export default function AnimatedButtonWrapper(onPressOut) {
   const merged = Object.assign(memo);
   obj.accessibilityRole = "button";
   obj.accessibilityLabel = accessibilityLabel;
+  obj.accessibilityHint = accessibilityHint;
   obj.style = memo3;
   obj.children = children;
   return <height entering={memo1} exiting={memo2} onPress={onPress} onLongPress={onLongPress} disabled={disabled} />;

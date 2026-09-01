@@ -1,9 +1,9 @@
-// === Module 11841: useCanManageGuildDirectoryEntry ===
+// === Module 11874: useCanManageGuildDirectoryEntry ===
 
-// Module 11841 (useCanManageGuildDirectoryEntry)
+// Module 11874 (useCanManageGuildDirectoryEntry)
 import closure_2 from "ensureGuildLoaded" /* 1387 */;
 import closure_3 from "createGuildRecordFromRust" /* 1909 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4121 */;
 import { Permissions } from "ME" /* 676 */;
 
 const require = arg1;

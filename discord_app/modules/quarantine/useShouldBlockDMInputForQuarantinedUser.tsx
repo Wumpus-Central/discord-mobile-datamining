@@ -1,7 +1,7 @@
-// === Module 11965: useShouldBlockDMInputForQuarantinedUser ===
+// === Module 11998: useShouldBlockDMInputForQuarantinedUser ===
 
-// Module 11965 (useShouldBlockDMInputForQuarantinedUser)
-import closure_2 from "reinjectEphemerals" /* 4703 */;
+// Module 11998 (useShouldBlockDMInputForQuarantinedUser)
+import closure_2 from "reinjectEphemerals" /* 4735 */;
 import { UserFlags } from "ME" /* 676 */;
 
 const require = arg1;
@@ -9,7 +9,7 @@ const result = require("set").fileFinishedImporting("modules/quarantine/useShoul
 
 export default function useShouldBlockDMInputForQuarantinedUser(hasFlag, channel) {
   const _require = channel;
-  const showConvoStarterInDM = _require(11800).useShowConvoStarterInDM(channel);
+  const showConvoStarterInDM = _require(11833).useShowConvoStarterInDM(channel);
   _require(589);
   [][0] = channel;
   let tmp4 = null != hasFlag;

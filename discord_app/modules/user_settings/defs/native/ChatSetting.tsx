@@ -1,11 +1,11 @@
-// === Module 15021: route ===
+// === Module 15054: route ===
 
-// Module 15021 (route)
+// Module 15054 (route)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ImageTextIcon from "ImageTextIcon" /* 15022 */;
-import createToggle from "createToggle" /* 11031 */;
+import ImageTextIcon from "ImageTextIcon" /* 15055 */;
+import createToggle from "createToggle" /* 11068 */;
 
 obj = {
   useTitle() {
@@ -19,7 +19,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.TEXT,
   getComponent() {
-    return require(15024) /* VideoUploadQualityNitroUpsell */.default;
+    return require(15057) /* VideoUploadQualityNitroUpsell */.default;
   }
 };
 const route = createToggle.createRoute(obj);

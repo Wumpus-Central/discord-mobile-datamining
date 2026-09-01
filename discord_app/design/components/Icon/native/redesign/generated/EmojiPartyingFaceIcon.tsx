@@ -1,10 +1,10 @@
-// === Module 14948: EmojiPartyingFaceIcon ===
+// === Module 14981: EmojiPartyingFaceIcon ===
 
-// Module 14948 (EmojiPartyingFaceIcon)
+// Module 14981 (EmojiPartyingFaceIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4166 */;
-import registerAsset from "registerAsset" /* 14949 */;
+import BaseIconImage from "BaseIconImage" /* 4196 */;
+import registerAsset from "registerAsset" /* 14982 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

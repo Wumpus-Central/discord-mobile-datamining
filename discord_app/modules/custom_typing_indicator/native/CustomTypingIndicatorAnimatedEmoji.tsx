@@ -1,12 +1,12 @@
-// === Module 11521: CustomTypingIndicatorAnimatedEmoji ===
+// === Module 11554: CustomTypingIndicatorAnimatedEmoji ===
 
-// Module 11521 (CustomTypingIndicatorAnimatedEmoji)
+// Module 11554 (CustomTypingIndicatorAnimatedEmoji)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "getState" /* 7125 */;
+import closure_5 from "getState" /* 7157 */;
 import { AppStates } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 const require = arg1;
 let c8 = 320;

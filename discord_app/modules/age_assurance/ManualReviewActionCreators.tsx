@@ -1,10 +1,10 @@
-// === Module 11469: _requestManualReview ===
+// === Module 11502: _requestManualReview ===
 
-// Module 11469 (_requestManualReview)
+// Module 11502 (_requestManualReview)
 import setDefault from "set" /* 687 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
-import { SafetyToastType } from "SafetyToastType" /* 8638 */;
+import { SafetyToastType } from "SafetyToastType" /* 8670 */;
 
 const require = arg1;
 function _requestManualReview() {
@@ -39,7 +39,7 @@ function _handleManualReviewCta() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -84,12 +84,12 @@ function _handleManualReviewCta() {
                 })();
                 return obj1;
               } else if (closure_0.status !== constants2.DECIDED_TEEN) {
-                let obj2 = callback(8650);
+                let obj2 = callback(8682);
                 const result = obj2.showManualReviewWebview(closure_0.verification_webview_url);
                 c3 = 1;
               }
             }
-            const result1 = callback(8650).showManualReviewDecidedTeenModal();
+            const result1 = callback(8682).showManualReviewDecidedTeenModal();
             c3 = 0;
             c9 = false;
             constants = 3;
@@ -103,7 +103,7 @@ function _handleManualReviewCta() {
           throw dependencyMap;
         } else if (2 === tmp8) {
           c3 = 1;
-          obj1 = callback(8643);
+          obj1 = callback(8675);
           obj1.showFailedToast(constants.TIGGER_PAWTECT_ERROR);
         } else if (arg0 === 1) {
           constants = 3;

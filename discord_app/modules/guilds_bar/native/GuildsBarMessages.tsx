@@ -1,16 +1,16 @@
-// === Module 15863: ? ===
+// === Module 15898: ? ===
 
-// Module 15863
+// Module 15898
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ChatIcon from "ChatIcon" /* 4988 */;
-import UnreadIndicator from "UnreadIndicator" /* 15850 */;
-import UnreadIndicatorDefault from "UnreadIndicator" /* 15850 */;
-import useGuildsBarBottomRightBadgeDefault from "useGuildsBarBottomRightBadge" /* 15852 */;
-import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 15864 */;
-import HomeDrawerDMsRowDefault from "HomeDrawerDMsRow" /* 15865 */;
-import closure_3 from "handleConnectionOpen" /* 4269 */;
+import ChatIcon from "ChatIcon" /* 5020 */;
+import UnreadIndicator from "UnreadIndicator" /* 15885 */;
+import UnreadIndicatorDefault from "UnreadIndicator" /* 15885 */;
+import useGuildsBarBottomRightBadgeDefault from "useGuildsBarBottomRightBadge" /* 15887 */;
+import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 15899 */;
+import HomeDrawerDMsRowDefault from "HomeDrawerDMsRow" /* 15900 */;
+import closure_3 from "handleConnectionOpen" /* 4299 */;
 import { ME } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
@@ -36,7 +36,7 @@ const memoResult = importAllResult.memo(function GuildsBarMessages() {
   const obj2 = initialize;
   ({ badge, cutouts } = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 }));
   const colors = ThemesDefault.colors;
-  obj = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, cutouts, config: closure_6, overState: "y", label: true, externalChildren: "sm", expandedChildren: "secondary", children: null };
+  obj = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, cutouts, config: closure_6, overState: "y", label: -58, externalChildren: 122, expandedChildren: 90, children: 18 };
   const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
   const tmp7 = stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
   const intl = tmp(1236).intl;
@@ -44,7 +44,7 @@ const memoResult = importAllResult.memo(function GuildsBarMessages() {
   obj[8] = badge;
   obj[9] = jsx(HomeDrawerDMsRowDefault, {});
   obj[10] = jsx(ChatIcon.ChatIcon, { color: tmp7 });
-  return jsx(UnreadIndicatorDefault, { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, cutouts, config: closure_6, overState: "y", label: true, externalChildren: "sm", expandedChildren: "secondary", children: null });
+  return jsx(UnreadIndicatorDefault, { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, cutouts, config: closure_6, overState: "y", label: -58, externalChildren: 122, expandedChildren: 90, children: 18 });
 });
 const result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarMessages.tsx");
 

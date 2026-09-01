@@ -1,14 +1,14 @@
-// === Module 16840: scheduleUpcomingWarning ===
+// === Module 16876: scheduleUpcomingWarning ===
 
-// Module 16840 (scheduleUpcomingWarning)
+// Module 16876 (scheduleUpcomingWarning)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import messagesProxyDefault from "messagesProxy" /* 2369 */;
-import initializeDefault from "initialize" /* 5454 */;
-import apexExperiment from "apexExperiment" /* 7307 */;
-import closeRestrictedHoursModal from "closeRestrictedHoursModal" /* 16835 */;
-import closure_3 from "DesktopNotificationTypes" /* 10125 */;
+import initializeDefault from "initialize" /* 5486 */;
+import apexExperiment from "apexExperiment" /* 7339 */;
+import closeRestrictedHoursModal from "closeRestrictedHoursModal" /* 16871 */;
+import closure_3 from "DesktopNotificationTypes" /* 10164 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "freshTeenActivityWithMap" /* 7250 */;
+import closure_5 from "freshTeenActivityWithMap" /* 7282 */;
 
 require = arg1;
 function scheduleUpcomingWarning() {
@@ -55,10 +55,10 @@ function scheduleUpcomingWarning() {
         const intl = tmp5(1236).intl;
         const _Date2 = Date;
         const date2 = new Date(startAtMs);
-        let tmp5Result = tmp5(10127);
+        let tmp5Result = tmp5(10166);
         const items = [tmp5(1944).JS_DAY_TO_DAY_OF_WEEK[date2.getDay(date2)]];
         const stringResult = intl.string(messagesProxyDefault["0JlDg0"]);
-        tmp5Result = tmp5(10127);
+        tmp5Result = tmp5(10166);
         const _HermesInternal2 = HermesInternal;
         const formatDaysResult = tmp5Result.formatDays(items);
         const trimmed = "" + tmp5Result.formatDays(items) + " " + tmp5Result.getScheduleRuleDateRange(rule).trim();

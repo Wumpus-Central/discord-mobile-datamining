@@ -1,10 +1,10 @@
-// === Module 6519: FireIllocon ===
+// === Module 6551: FireIllocon ===
 
-// Module 6519 (FireIllocon)
+// Module 6551 (FireIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5461 */;
-import metadataDefault from "metadata" /* 6520 */;
+import preloadDefault from "preload" /* 5493 */;
+import metadataDefault from "metadata" /* 6552 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/FireIllocon.native.tsx");

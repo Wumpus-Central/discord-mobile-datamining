@@ -1,6 +1,6 @@
-// === Module 11047: getIsEligibleForQuests ===
+// === Module 11084: getIsEligibleForQuests ===
 
-// Module 11047 (getIsEligibleForQuests)
+// Module 11084 (getIsEligibleForQuests)
 import set from "set" /* 2 */;
 import isMetaQuest from "isMetaQuest" /* 1624 */;
 

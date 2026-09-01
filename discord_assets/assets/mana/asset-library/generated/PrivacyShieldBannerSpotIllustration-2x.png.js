@@ -1,6 +1,6 @@
-// === Module 6882: metadata ===
+// === Module 6914: metadata ===
 
-// Module 6882 (metadata)
+// Module 6914 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PrivacyShieldBannerSpotIllustration-2x.png.js");

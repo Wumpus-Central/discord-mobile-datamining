@@ -1,16 +1,16 @@
-// === Module 7909: nativeStyleProperties ===
+// === Module 7941: nativeStyleProperties ===
 
-// Module 7909 (nativeStyleProperties)
+// Module 7941 (nativeStyleProperties)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import ensureAvatarSource from "ensureAvatarSource" /* 1434 */;
-import resultDefault from "result" /* 7830 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7837 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7839 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7841 */;
-import getTagPropertiesDefault from "getTagProperties" /* 7910 */;
+import resultDefault from "result" /* 7862 */;
+import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7869 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7871 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7873 */;
+import getTagPropertiesDefault from "getTagProperties" /* 7942 */;
 import closure_3 from "ensureGuildLoaded" /* 1387 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 createCacheKey = { automodUsernameColor: ThemesDefault.colors.TEXT_BRAND };
@@ -34,7 +34,7 @@ export const createGuildAlertModeEnabledSystemMessage = function createGuildAler
   obj[2] = str;
   const tmp3 = resultDefault(theme);
   obj = {};
-  const merged = Object.assign(tmp(7841)(roleStyle));
+  const merged = Object.assign(tmp(7873)(roleStyle));
   const intl = tmp5(1236).intl;
   obj.content = intl.formatToParts(getSystemLocale.t.ig55n6, obj);
   const intl2 = tmp5(1236).intl;
@@ -56,7 +56,7 @@ export const createGuildAlertModeDisabledSystemMessage = function createGuildAle
   let obj = getMessageAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
   obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
-  obj = { message, channel: "HermesInternal", isSystemDM: null, colors: "md" };
+  obj = { message, channel: "HermesInternal", isSystemDM: null, colors: -1 };
   obj[3] = resultDefault(theme);
   const tmp2 = resultDefault(theme);
   obj1 = {};

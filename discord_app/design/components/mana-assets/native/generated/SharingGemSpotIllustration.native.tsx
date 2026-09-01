@@ -1,10 +1,10 @@
-// === Module 6971: SharingGemSpotIllustration ===
+// === Module 7003: SharingGemSpotIllustration ===
 
-// Module 6971 (SharingGemSpotIllustration)
+// Module 7003 (SharingGemSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5461 */;
-import metadataDefault from "metadata" /* 6972 */;
+import preloadDefault from "preload" /* 5493 */;
+import metadataDefault from "metadata" /* 7004 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/SharingGemSpotIllustration.native.tsx");

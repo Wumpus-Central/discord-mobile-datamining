@@ -1,12 +1,12 @@
-// === Module 9040: openAcceptFriendRequestConfirmModal ===
+// === Module 9078: openAcceptFriendRequestConfirmModal ===
 
-// Module 9040 (openAcceptFriendRequestConfirmModal)
+// Module 9078 (openAcceptFriendRequestConfirmModal)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import _modDef4826 from "module_4826" /* 4826 */;
-import RELATIONSHIP_COUNT_ANIMATION_THRESHOLD from "RELATIONSHIP_COUNT_ANIMATION_THRESHOLD" /* 9041 */;
+import _modDef4858 from "module_4858" /* 4858 */;
+import RELATIONSHIP_COUNT_ANIMATION_THRESHOLD from "RELATIONSHIP_COUNT_ANIMATION_THRESHOLD" /* 9079 */;
 
 let closure_3 = RELATIONSHIP_COUNT_ANIMATION_THRESHOLD.ACCEPT_FRIEND_REQUEST_CONFIRMATION_MODAL_ID;
 const AnalyticEvents = ME.AnalyticEvents;
@@ -38,5 +38,5 @@ export const openAcceptFriendRequestConfirmModal = function openAcceptFriendRequ
       });
     }
   };
-  _modDef4826.openLazy(obj);
+  _modDef4858.openLazy(obj);
 };

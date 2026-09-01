@@ -1,10 +1,10 @@
-// === Module 7469: initialize ===
+// === Module 7501: initialize ===
 
-// Module 7469 (initialize)
+// Module 7501 (initialize)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import setRequestedByAll from "setRequestedBy" /* 675 */;
-import initializeDefault from "initialize" /* 4630 */;
+import initializeDefault from "initialize" /* 4662 */;
 
 let obj = importDefault;
 const NativeModules = get_ActivityIndicator.NativeModules;

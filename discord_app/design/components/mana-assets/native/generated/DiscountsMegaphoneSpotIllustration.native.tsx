@@ -1,10 +1,10 @@
-// === Module 6443: DiscountsMegaphoneSpotIllustration ===
+// === Module 6475: DiscountsMegaphoneSpotIllustration ===
 
-// Module 6443 (DiscountsMegaphoneSpotIllustration)
+// Module 6475 (DiscountsMegaphoneSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5461 */;
-import metadataDefault from "metadata" /* 6444 */;
+import preloadDefault from "preload" /* 5493 */;
+import metadataDefault from "metadata" /* 6476 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/DiscountsMegaphoneSpotIllustration.native.tsx");

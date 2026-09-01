@@ -1,16 +1,16 @@
-// === Module 12822: GiftCodeRedeemError ===
+// === Module 12855: GiftCodeRedeemError ===
 
-// Module 12822 (GiftCodeRedeemError)
+// Module 12855 (GiftCodeRedeemError)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1500 */;
-import Text from "Text" /* 4444 */;
-import Button from "Button" /* 4896 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5521 */;
+import Text from "Text" /* 4474 */;
+import Button from "Button" /* 4928 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5553 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 noopAll;
@@ -33,9 +33,9 @@ export default function GiftCodeRedeemError(children) {
   obj = { bottom: true, style: tmp.container, children: null };
   obj = { contentContainerStyle: tmp.body, alwaysBounceVertical: false, children: null };
   if (theme.dark) {
-    let tmp9Result = tmp9(11330);
+    let tmp9Result = tmp9(11368);
   } else {
-    tmp9Result = tmp9(11332);
+    tmp9Result = tmp9(11370);
   }
   const items = [closure_6(closure_3, { source: tmp9Result }), , ];
   obj1 = { variant: "heading-xl/bold", style: tmp.header, children: null };

@@ -1,6 +1,6 @@
-// === Module 7782: apexExperiment ===
+// === Module 7814: apexExperiment ===
 
-// Module 7782 (apexExperiment)
+// Module 7814 (apexExperiment)
 import closure_2 from "createGuildRecordFromRust" /* 1909 */;
 import { GuildFeatures } from "ME" /* 676 */;
 import ApexExperiment from "ApexExperiment" /* 1468 */;

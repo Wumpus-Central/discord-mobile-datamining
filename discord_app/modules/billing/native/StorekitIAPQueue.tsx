@@ -1,9 +1,9 @@
-// === Module 10776: productSK2ToIAPProduct ===
+// === Module 10814: productSK2ToIAPProduct ===
 
-// Module 10776 (productSK2ToIAPProduct)
-import CurrencyCodes from "CurrencyCodes" /* 6050 */;
+// Module 10814 (productSK2ToIAPProduct)
+import CurrencyCodes from "CurrencyCodes" /* 6082 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
-import { convertToAlpha2 } from "DEFAULT_COUNTRY_CODE_NAME" /* 4144 */;
+import { convertToAlpha2 } from "DEFAULT_COUNTRY_CODE_NAME" /* 4174 */;
 import set from "set" /* 2 */;
 
 require = arg1;
@@ -117,7 +117,7 @@ prototype["fetchProducts"] = function fetchProducts(arg0) {
     _queue.push(closure_1_2(function*() {
       dependencyMap = tmp3;
       c3 = 1;
-      obj1 = callback(10757);
+      obj1 = callback(10795);
       obj1 = { skus: null };
       obj1[0] = closure_1_0;
       const products = obj1.getProducts(obj1);
@@ -156,7 +156,7 @@ prototype["processQueue"] = function processQueue() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

@@ -1,10 +1,10 @@
-// === Module 4395: CopyIcon ===
+// === Module 4425: CopyIcon ===
 
-// Module 4395 (CopyIcon)
+// Module 4425 (CopyIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4166 */;
-import registerAsset from "registerAsset" /* 4396 */;
+import BaseIconImage from "BaseIconImage" /* 4196 */;
+import registerAsset from "registerAsset" /* 4426 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,8 +1,8 @@
-// === Module 9486: isOrientationLockSupported ===
+// === Module 9525: isOrientationLockSupported ===
 
-// Module 9486 (isOrientationLockSupported)
+// Module 9525 (isOrientationLockSupported)
 import set from "set" /* 2 */;
-import DCDDeviceManager from "DCDDeviceManager" /* 4427 */;
+import DCDDeviceManager from "DCDDeviceManager" /* 4457 */;
 
 let result = set.fileFinishedImporting("modules/device/native/isOrientationLockSupported.tsx");
 
@@ -14,7 +14,7 @@ export default function isOrientationLockSupported() {
     result = !tmpResult.isMetaQuest();
   }
   if (result) {
-    tmpResult = tmp(4427);
+    tmpResult = tmp(4457);
     result = tmpResult.isOrientationLockSupported();
   }
   return result;

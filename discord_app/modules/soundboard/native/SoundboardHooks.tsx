@@ -1,13 +1,13 @@
-// === Module 16615: useSoundButtonStyleConfig ===
+// === Module 16651: useSoundButtonStyleConfig ===
 
-// Module 16615 (useSoundButtonStyleConfig)
+// Module 16651 (useSoundButtonStyleConfig)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4440 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import closure_6 from "handleThemeChange" /* 1302 */;
-import SOUND_BUTTON_HEIGHT from "SOUND_BUTTON_HEIGHT" /* 16607 */;
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5591 */;
+import SOUND_BUTTON_HEIGHT from "SOUND_BUTTON_HEIGHT" /* 16643 */;
+import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5623 */;
 
 const require = arg1;
 ({ SOUNDS_PER_ROW: error, SOUND_ROW_PADDING: closure_8 } = SOUND_BUTTON_HEIGHT);
@@ -38,7 +38,7 @@ export const useMaybeFetchSoundboardSounds = function useMaybeFetchSoundboardSou
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -72,7 +72,7 @@ export const useMaybeFetchSoundboardSounds = function useMaybeFetchSoundboardSou
               return obj;
             }
             c0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           } catch (tmp9) {
             c0 = tmp;
             throw tmp9;

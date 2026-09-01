@@ -1,12 +1,12 @@
-// === Module 11826: renderChannelBadge ===
+// === Module 11859: renderChannelBadge ===
 
-// Module 11826 (renderChannelBadge)
+// Module 11859 (renderChannelBadge)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
 import shortenAndLocalizeNumber from "shortenAndLocalizeNumber" /* 1897 */;
-import Text from "Text" /* 4444 */;
-import renderChannelBadge from "renderChannelBadge" /* 11825 */;
+import Text from "Text" /* 4474 */;
+import renderChannelBadge from "renderChannelBadge" /* 11858 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,6 +1,6 @@
-// === Module 10667: InappropriateConversationExperiment ===
+// === Module 10705: InappropriateConversationExperiment ===
 
-// Module 10667 (InappropriateConversationExperiment)
+// Module 10705 (InappropriateConversationExperiment)
 import getUnitIdDefault from "getUnitId" /* 1469 */;
 
 const tmp2 = getUnitIdDefault({ name: "2026-04-inappropriate-conversations-prescan", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

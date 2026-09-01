@@ -1,10 +1,10 @@
-// === Module 4155: sanitizeURLPart ===
+// === Module 4185: sanitizeURLPart ===
 
-// Module 4155 (sanitizeURLPart)
+// Module 4185 (sanitizeURLPart)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Linking } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "setContent" /* 4156 */;
+import closure_5 from "setContent" /* 4186 */;
 import { WebBrowserType } from "ME" /* 676 */;
 
 const require = arg1;
@@ -36,7 +36,7 @@ function _handleURL() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -133,7 +133,7 @@ function _handleURL() {
               };
               c7 = 1;
               v0 = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else {
             if (1 === tmp8) {
@@ -186,7 +186,7 @@ function _handleURL() {
             } else if (2 === tmp8) {
               payload = 0;
               v0 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else {
               if (3 === tmp8) {
                 if (arg0 === 1) {

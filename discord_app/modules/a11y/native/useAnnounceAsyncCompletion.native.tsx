@@ -1,6 +1,6 @@
-// === Module 10626: useAnnounceAsyncCompletion ===
+// === Module 10664: useAnnounceAsyncCompletion ===
 
-// Module 10626 (useAnnounceAsyncCompletion)
+// Module 10664 (useAnnounceAsyncCompletion)
 import closure_2 from "noop" /* 19 */;
 import { AccessibilityInfo } from "get ActivityIndicator" /* 17 */;
 

@@ -1,22 +1,22 @@
-// === Module 5523: PromptHeader ===
+// === Module 5555: PromptHeader ===
 
-// Module 5523 (PromptHeader)
+// Module 5555 (PromptHeader)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1431 */;
-import Text2 from "Text" /* 4444 */;
-import EmojiDefault from "Emoji" /* 5553 */;
+import Text2 from "Text" /* 4474 */;
+import EmojiDefault from "Emoji" /* 5585 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "getEmojiToGroupId" /* 5369 */;
-import closure_10 from "get" /* 5458 */;
+import closure_9 from "getEmojiToGroupId" /* 5401 */;
+import closure_10 from "get" /* 5490 */;
 import closure_11 from "createGuildRecordFromRust" /* 1909 */;
-import closure_12 from "handleUpdate" /* 5435 */;
-import { GuildOnboardingModalStates as closure_13 } from "GUILD_ONBOARDING_MODAL_KEY" /* 5432 */;
+import closure_12 from "handleUpdate" /* 5467 */;
+import { GuildOnboardingModalStates as closure_13 } from "GUILD_ONBOARDING_MODAL_KEY" /* 5464 */;
 import { EMOJI_URL_BASE_SIZE } from "set" /* 1925 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function PromptHeader(currentPrompt) {
@@ -42,7 +42,7 @@ function PromptHeader(currentPrompt) {
     const obj3 = { variant: "text-sm/medium", color: "text-brand", children: null };
     const intl2 = tmp6(1236).intl;
     obj3[2] = intl2.string(tmp6(1236).t.Ur8Vrt);
-    items1[1] = tmp5(tmp6(4444).Text, obj3);
+    items1[1] = tmp5(tmp6(4474).Text, obj3);
     obj1[0] = items1;
     tmp2Result = tmp2(tmp3, obj1);
   }
@@ -215,7 +215,7 @@ function DropdownOption(option) {
   }
   obj1[3] = str;
   obj[1] = closure_15(EmojiDefault, obj1);
-  const items1 = [closure_15(closure_6, obj), closure_15(option(4444).Text, { variant: "text-md/semibold", children: option.title })];
+  const items1 = [closure_15(closure_6, obj), closure_15(option(4474).Text, { variant: "text-md/semibold", children: option.title })];
   obj[1] = items1;
   return closure_16(closure_6, obj);
 }

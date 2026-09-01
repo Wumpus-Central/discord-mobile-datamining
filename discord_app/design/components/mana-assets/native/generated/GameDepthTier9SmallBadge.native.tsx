@@ -1,10 +1,10 @@
-// === Module 6569: GameDepthTier9SmallBadge ===
+// === Module 6601: GameDepthTier9SmallBadge ===
 
-// Module 6569 (GameDepthTier9SmallBadge)
+// Module 6601 (GameDepthTier9SmallBadge)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5461 */;
-import vanityUrlDefault from "vanityUrl" /* 6570 */;
+import preloadDefault from "preload" /* 5493 */;
+import vanityUrlDefault from "vanityUrl" /* 6602 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/GameDepthTier9SmallBadge.native.tsx");

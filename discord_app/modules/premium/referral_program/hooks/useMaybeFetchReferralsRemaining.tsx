@@ -1,9 +1,9 @@
-// === Module 7934: useMaybeFetchReferralsRemaining ===
+// === Module 7966: useMaybeFetchReferralsRemaining ===
 
-// Module 7934 (useMaybeFetchReferralsRemaining)
+// Module 7966 (useMaybeFetchReferralsRemaining)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "emitChanges" /* 7165 */;
+import closure_5 from "emitChanges" /* 7197 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
 const require = arg1;
@@ -19,10 +19,10 @@ export const useMaybeFetchReferralsRemaining = function useMaybeFetchReferralsRe
   const stateFromStores = flag(589).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = flag(589);
   let tmp = flag;
-  const hasDiscountApplied = flag(7935).useHasDiscountApplied();
-  const obj2 = flag(7935);
-  const hasActiveTrial = flag(7936).useHasActiveTrial();
-  const tmp6 = fetched(7109)();
+  const hasDiscountApplied = flag(7967).useHasDiscountApplied();
+  const obj2 = flag(7967);
+  const hasActiveTrial = flag(7968).useHasActiveTrial();
+  const tmp6 = fetched(7141)();
   let verified;
   if (stateFromStores != null) {
     verified = stateFromStores.verified;

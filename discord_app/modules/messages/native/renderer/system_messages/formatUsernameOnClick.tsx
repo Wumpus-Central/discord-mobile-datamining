@@ -1,8 +1,8 @@
-// === Module 7839: formatUsernameOnClick ===
+// === Module 7871: formatUsernameOnClick ===
 
-// Module 7839 (formatUsernameOnClick)
-import processColorStrings from "processColorStrings" /* 7838 */;
-import createDisplayNameStylesMobile from "createDisplayNameStylesMobile" /* 7840 */;
+// Module 7871 (formatUsernameOnClick)
+import processColorStrings from "processColorStrings" /* 7870 */;
+import createDisplayNameStylesMobile from "createDisplayNameStylesMobile" /* 7872 */;
 import closure_2 from "mergeGuildAvatar" /* 1922 */;
 
 require = arg1;

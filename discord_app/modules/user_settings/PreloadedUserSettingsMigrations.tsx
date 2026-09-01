@@ -1,16 +1,16 @@
-// === Module 14076: migrateHotspotLocation ===
+// === Module 14109: migrateHotspotLocation ===
 
-// Module 14076 (migrateHotspotLocation)
+// Module 14109 (migrateHotspotLocation)
 import initializeDefault from "initialize" /* 589 */;
 import Storage4 from "Storage" /* 595 */;
 import create from "create" /* 1306 */;
 import defineProperty from "defineProperty" /* 1337 */;
 import b64ToProto from "b64ToProto" /* 1342 */;
 import DismissibleContent from "DismissibleContent" /* 1373 */;
-import HotspotStore2 from "HotspotStore" /* 6028 */;
+import HotspotStore2 from "HotspotStore" /* 6060 */;
 import closure_3 from "ensureGuildLoaded" /* 1387 */;
 import { ChannelNoticeTypes } from "ME" /* 676 */;
-import { MULTIACCOUNT_TOOLTIP_SEEN_KEY as closure_5 } from "MAX_ACCOUNTS" /* 11950 */;
+import { MULTIACCOUNT_TOOLTIP_SEEN_KEY as closure_5 } from "MAX_ACCOUNTS" /* 11983 */;
 
 require = arg1;
 function migrateHotspotLocation(userContent, ACTIVITY_BEB_TUTORIAL, ACCOUNT_MULTIACCOUNT_TOOLTIP) {
@@ -163,8 +163,8 @@ let items = [
       const Storage = Storage4.Storage;
       let hasHiddenHotspotResult = true === Storage.get("HAS_SEEN_HUB_UPSELL");
       if (!hasHiddenHotspotResult) {
-        const HotspotStore = tmp(6028).HotspotStore;
-        hasHiddenHotspotResult = HotspotStore.hasHiddenHotspot(tmp(6028).HotspotLocations.HUB_SECOND_EMAIL_CONNECTION_UPSELL);
+        const HotspotStore = tmp(6060).HotspotStore;
+        hasHiddenHotspotResult = HotspotStore.hasHiddenHotspot(tmp(6060).HotspotLocations.HUB_SECOND_EMAIL_CONNECTION_UPSELL);
       }
       let flag = false;
       if (hasHiddenHotspotResult) {
@@ -821,7 +821,7 @@ let items = [
           Storage2.remove("lastChangeLogId");
           return false;
         }
-        tmpResult = tmp(7234);
+        tmpResult = tmp(7266);
       }
     },
     cleanup() {

@@ -1,9 +1,9 @@
-// === Module 10490: PremiumFeaturesPromotionalLogo ===
+// === Module 10528: PremiumFeaturesPromotionalLogo ===
 
-// Module 10490 (PremiumFeaturesPromotionalLogo)
+// Module 10528 (PremiumFeaturesPromotionalLogo)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4440 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

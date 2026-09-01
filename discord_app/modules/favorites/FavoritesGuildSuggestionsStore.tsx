@@ -1,6 +1,6 @@
-// === Module 15755: items ===
+// === Module 15791: items ===
 
-// Module 15755 (items)
+// Module 15791 (items)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "withContent" /* 1379 */;
@@ -27,7 +27,7 @@ export const setFavoritesGuildSuggestions = function setFavoritesGuildSuggestion
   state.setState({ suggestions });
 };
 export const useFavoritesGuildSuggestionsVisibility = function useFavoritesGuildSuggestionsVisibility() {
-  let obj = _require(10268);
+  let obj = _require(10307);
   const favoritesAccess = obj.useFavoritesAccess();
   let isFreemium = favoritesAccess.hasAccess;
   if (isFreemium) {
@@ -43,7 +43,7 @@ export const useFavoritesGuildSuggestionsVisibility = function useFavoritesGuild
   } else {
     items1 = [];
   }
-  const tmp5 = callback(_require(6219).useSelectedDismissibleContent(items1), 2);
+  const tmp5 = callback(_require(6251).useSelectedDismissibleContent(items1), 2);
   _require = tmp6;
   const items2 = [tmp5[1]];
   const layoutEffect = React.useLayoutEffect(() => {

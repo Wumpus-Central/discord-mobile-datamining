@@ -1,18 +1,18 @@
-// === Module 10975: MoreTipsModalScreen ===
+// === Module 11012: MoreTipsModalScreen ===
 
-// Module 10975 (MoreTipsModalScreen)
+// Module 11012 (MoreTipsModalScreen)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import Text from "Text" /* 4444 */;
-import SafetyTipsContainerDefault from "SafetyTipsContainer" /* 10976 */;
-import WasThisHelpfulSectionDefault from "WasThisHelpfulSection" /* 10977 */;
+import Text from "Text" /* 4474 */;
+import SafetyTipsContainerDefault from "SafetyTipsContainer" /* 11013 */;
+import WasThisHelpfulSectionDefault from "WasThisHelpfulSection" /* 11014 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleConnectionOpen" /* 10615 */;
+import closure_6 from "handleConnectionOpen" /* 10653 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function MoreTipsModalScreen(learnMore) {
@@ -118,5 +118,5 @@ export default function MoreTipsModal(channelId) {
       return closure_1_8(closure_1_11, { channelId: c1, warningId: c2, senderId: c3, description: c4, safetyTips: c5, actionItems: c6, learnMore: c7 });
     }
   };
-  return callback(_require(5976).Navigator, { screens: { MORE_TIPS }, initialRouteName: "MORE_TIPS", headerStatusBarHeight: useSafeAreaInsetsDefault().top });
+  return callback(_require(6008).Navigator, { screens: { MORE_TIPS }, initialRouteName: "MORE_TIPS", headerStatusBarHeight: useSafeAreaInsetsDefault().top });
 };

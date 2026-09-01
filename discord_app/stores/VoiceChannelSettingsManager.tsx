@@ -1,13 +1,13 @@
-// === Module 17051: updateVoiceSettings ===
+// === Module 17087: updateVoiceSettings ===
 
-// Module 17051 (updateVoiceSettings)
+// Module 17087 (updateVoiceSettings)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 5454 */;
+import initializeDefault from "initialize" /* 5486 */;
 import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "bitrate" /* 4520 */;
+import closure_3 from "bitrate" /* 4552 */;
 import closure_4 from "ensureGuildLoaded" /* 1387 */;
 import closure_5 from "handleConnectionOpen" /* 1981 */;
-import closure_6 from "mode" /* 13451 */;
+import closure_6 from "mode" /* 13484 */;
 import { VideoQualityMode } from "ME" /* 676 */;
 
 function updateVoiceSettings() {

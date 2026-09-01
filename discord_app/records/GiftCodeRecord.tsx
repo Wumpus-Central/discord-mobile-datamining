@@ -1,11 +1,11 @@
-// === Module 8416: frozen ===
+// === Module 8448: frozen ===
 
-// Module 8416 (frozen)
-import toJSDefault from "toJS" /* 1931 */;
-import hooksDefault from "hooks" /* 4045 */;
-import closure_3 from "createFromServer" /* 7168 */;
-import closure_4 from "createFromServer" /* 8417 */;
-import closure_5 from "createFromServer" /* 4110 */;
+// Module 8448 (frozen)
+import toJSDefault from "toJS" /* 1936 */;
+import hooksDefault from "hooks" /* 4075 */;
+import closure_3 from "createFromServer" /* 7200 */;
+import closure_4 from "createFromServer" /* 8449 */;
+import closure_5 from "createFromServer" /* 4140 */;
 import { PremiumSubscriptionSKUToPremiumType as closure_6 } from "GuildFeatures" /* 1924 */;
 
 const require = arg1;

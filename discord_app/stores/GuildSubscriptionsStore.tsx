@@ -1,25 +1,25 @@
-// === Module 6093: handleConnectionOpenOrResumed ===
+// === Module 6125: handleConnectionOpenOrResumed ===
 
-// Module 6093 (handleConnectionOpenOrResumed)
+// Module 6125 (handleConnectionOpenOrResumed)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1912 */;
-import _enqueueDefault from "_enqueue" /* 6098 */;
+import _enqueueDefault from "_enqueue" /* 6130 */;
 import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "getHash" /* 4361 */;
-import closure_6 from "initialize" /* 4092 */;
-import closure_7 from "upsertAccount" /* 5192 */;
+import closure_5 from "getHash" /* 4391 */;
+import closure_6 from "initialize" /* 4122 */;
+import closure_7 from "upsertAccount" /* 5224 */;
 import closure_8 from "fetchFingerprint" /* 1218 */;
-import { EVERYONE_CHANNEL_ID } from "getMemberListId" /* 6094 */;
-import closure_10 from "handlePermissionsChange" /* 6095 */;
+import { EVERYONE_CHANNEL_ID } from "getMemberListId" /* 6126 */;
+import closure_10 from "handlePermissionsChange" /* 6127 */;
 import closure_11 from "ensureGuildLoaded" /* 1387 */;
-import closure_12 from "handleConnectionOpen" /* 4823 */;
+import closure_12 from "handleConnectionOpen" /* 4855 */;
 import closure_13 from "trackCommunicationDisabled" /* 1992 */;
 import closure_14 from "createGuildRecordFromRust" /* 1909 */;
-import closure_15 from "createRTCConnection" /* 4522 */;
-import closure_16 from "markAllUserIdListsStale" /* 4100 */;
+import closure_15 from "createRTCConnection" /* 4554 */;
+import closure_16 from "markAllUserIdListsStale" /* 4130 */;
 import closure_17 from "handleConnectionOpen" /* 1981 */;
-import closure_18 from "handleConnectionOpen" /* 4269 */;
+import closure_18 from "handleConnectionOpen" /* 4299 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;

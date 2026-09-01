@@ -1,9 +1,9 @@
-// === Module 17195: getInviteEmptySource ===
+// === Module 17231: getInviteEmptySource ===
 
-// Module 17195 (getInviteEmptySource)
+// Module 17231 (getInviteEmptySource)
 import noopAll from "noop" /* 19 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import getIllustrationSource from "getIllustrationSource" /* 8874 */;
+import getIllustrationSource from "getIllustrationSource" /* 8911 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -15,13 +15,13 @@ export const getInviteEmptySource = function getInviteEmptySource(theme) {
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(10649);
+      return callback(10687);
     },
     darker() {
-      return callback(17196);
+      return callback(17232);
     },
     light() {
-      return callback(10648);
+      return callback(10686);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -30,13 +30,13 @@ export const useInviteEmptySource = function useInviteEmptySource() {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(10649);
+      return callback(10687);
     },
     darker() {
-      return callback(17196);
+      return callback(17232);
     },
     light() {
-      return callback(10648);
+      return callback(10686);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -45,13 +45,13 @@ export const InviteEmpty = function InviteEmpty(arg0) {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(10649);
+      return callback(10687);
     },
     darker() {
-      return callback(17196);
+      return callback(17232);
     },
     light() {
-      return callback(10648);
+      return callback(10686);
     }
   };
   obj = {};

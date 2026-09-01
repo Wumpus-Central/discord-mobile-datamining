@@ -1,12 +1,12 @@
-// === Module 15473: toggle ===
+// === Module 15507: toggle ===
 
-// Module 15473 (toggle)
+// Module 15507 (toggle)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4136 */;
-import MobileUserSettings from "MobileUserSettings" /* 7852 */;
-import useHideFriendRequestNotes from "useHideFriendRequestNotes" /* 12576 */;
-import createToggle from "createToggle" /* 11031 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
+import MobileUserSettings from "MobileUserSettings" /* 7884 */;
+import useHideFriendRequestNotes from "useHideFriendRequestNotes" /* 12609 */;
+import createToggle from "createToggle" /* 11068 */;
 
 const toggle = createToggle.createToggle({
   useTitle() {

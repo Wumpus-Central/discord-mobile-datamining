@@ -1,9 +1,9 @@
-// === Module 4174: ManaContext ===
+// === Module 4204: ManaContext ===
 
-// Module 4174 (ManaContext)
+// Module 4204 (ManaContext)
 import set from "set" /* 2 */;
-import context from "context" /* 4232 */;
-import isImage from "isImage" /* 4265 */;
+import context from "context" /* 4262 */;
+import isImage from "isImage" /* 4295 */;
 import LOW_SATURATION_THRESHOLD from "LOW_SATURATION_THRESHOLD" /* 1357 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/design/native.tsx");
@@ -72,9 +72,9 @@ for (const key10067 in require("ThemeContextFlags")) {
   arg5[key10067] = require("ThemeContextFlags")[key10067];
   continue;
 }
-for (const key10071 in require("module_4179")) {
+for (const key10071 in require("module_4209")) {
   let tmp17 = key10071;
-  arg5[key10071] = require("module_4179")[key10071];
+  arg5[key10071] = require("module_4209")[key10071];
   continue;
 }
 for (const key10075 in require("WCAGContrastRatios")) {

@@ -1,6 +1,6 @@
-// === Module 8090: didReplyMention ===
+// === Module 8122: didReplyMention ===
 
-// Module 8090 (didReplyMention)
+// Module 8122 (didReplyMention)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/replies/didReplyMention.tsx");

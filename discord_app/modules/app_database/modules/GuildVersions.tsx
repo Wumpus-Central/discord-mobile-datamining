@@ -1,6 +1,6 @@
-// === Module 7366: getCommittedVersions ===
+// === Module 7398: getCommittedVersions ===
 
-// Module 7366 (getCommittedVersions)
+// Module 7398 (getCommittedVersions)
 import timestampDefault from "timestamp" /* 3 */;
 import itemsDefault from "items" /* 1956 */;
 import closure_3 from "_slicedToArray" /* 32 */;
@@ -76,7 +76,7 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

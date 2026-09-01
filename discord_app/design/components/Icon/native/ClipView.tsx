@@ -1,12 +1,12 @@
-// === Module 8066: SolidCutout ===
+// === Module 8098: SolidCutout ===
 
-// Module 8066 (SolidCutout)
+// Module 8098 (SolidCutout)
 import noopAll from "noop" /* 19 */;
-import useCutoutBackgroundColor from "useCutoutBackgroundColor" /* 8067 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8069 */;
+import useCutoutBackgroundColor from "useCutoutBackgroundColor" /* 8099 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8101 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import importDefaultResult from "module_4187" /* 4187 */;
+import importDefaultResult from "module_4217" /* 4217 */;
 
 require = arg1;
 function SolidCutout(arg0) {

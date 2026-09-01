@@ -1,11 +1,11 @@
-// === Module 13612: _checkForNewerBuild ===
+// === Module 13645: _checkForNewerBuild ===
 
-// Module 13612 (_checkForNewerBuild)
+// Module 13645 (_checkForNewerBuild)
 import timestampDefault from "timestamp" /* 3 */;
 import keys from "keys" /* 691 */;
-import _mod4160 from "module_4160" /* 4160 */;
+import _mod4190 from "module_4190" /* 4190 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
-import { UPDATE_CONFIG } from "UPDATE_CHECK_INTERVAL" /* 4429 */;
+import { UPDATE_CONFIG } from "UPDATE_CHECK_INTERVAL" /* 4459 */;
 
 require = arg1;
 function _checkForNewerBuild() {
@@ -22,7 +22,7 @@ function _checkForNewerBuild() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -110,7 +110,7 @@ function openBuildInstallerUrl(install) {
       const _HermesInternal = HermesInternal;
       logger.error("Attempted to follow invalid install URL " + str);
     } else {
-      const openURLExternally = _mod4160.default.openURLExternally;
+      const openURLExternally = _mod4190.default.openURLExternally;
       if (obj.isIOS()) {
         openURLExternally(str.toString(), keys.WebBrowserType.SAFARI);
       } else {

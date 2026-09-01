@@ -1,12 +1,12 @@
-// === Module 1933: set ===
+// === Module 1938: set ===
 
-// Module 1933 (set)
+// Module 1938 (set)
 import int2hslRaw from "int2hslRaw" /* 688 */;
 import nDefault from "n" /* 689 */;
-import DisplayNameEffect from "DisplayNameEffect" /* 1935 */;
-import DisplayNameFont from "DisplayNameFont" /* 1936 */;
+import DisplayNameEffect from "DisplayNameEffect" /* 1940 */;
+import DisplayNameFont from "DisplayNameFont" /* 1941 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import items3 from "items3" /* 1934 */;
+import items3 from "items3" /* 1939 */;
 import set from "set" /* 2 */;
 
 require = arg1;
@@ -19,9 +19,9 @@ let result = set.fileFinishedImporting("modules/display_name_styles/DisplayNameS
 export const getEffectColorCount = function getEffectColorCount(effectId) {
   if (DisplayNameEffect.DisplayNameEffect.GRADIENT === effectId) {
     return 2;
-  } else if (tmp(1935).DisplayNameEffect.GUMMY === effectId) {
+  } else if (tmp(1940).DisplayNameEffect.GUMMY === effectId) {
     return 4;
-  } else if (tmp(1935).DisplayNameEffect.PRISM === effectId) {
+  } else if (tmp(1940).DisplayNameEffect.PRISM === effectId) {
     return 5;
   } else {
     return 1;

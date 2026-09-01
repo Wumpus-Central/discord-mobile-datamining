@@ -1,8 +1,8 @@
-// === Module 4097: GuildMemberFlags ===
+// === Module 4127: GuildMemberFlags ===
 
-// Module 4097 (GuildMemberFlags)
+// Module 4127 (GuildMemberFlags)
 import closure_2 from "trackCommunicationDisabled" /* 1992 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4079 */;
+import { GuildMemberFlags } from "GuildMemberFlags" /* 4109 */;
 
 const require = arg1;
 let items = [, , ];

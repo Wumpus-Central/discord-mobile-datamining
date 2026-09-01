@@ -1,6 +1,6 @@
-// === Module 8026: metadata ===
+// === Module 8058: metadata ===
 
-// Module 8026 (metadata)
+// Module 8058 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/checkpoint/card-origami.png.js");

@@ -1,6 +1,6 @@
-// === Module 5182: removePunctuation ===
+// === Module 5214: removePunctuation ===
 
-// Module 5182 (removePunctuation)
+// Module 5214 (removePunctuation)
 import set from "set" /* 2 */;
 
 const re0 = /(!|\.|;|,|-|—|–|\?|"|')/g;

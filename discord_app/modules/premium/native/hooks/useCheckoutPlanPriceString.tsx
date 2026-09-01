@@ -1,8 +1,8 @@
-// === Module 12927: useCheckoutPlanPriceString ===
+// === Module 12960: useCheckoutPlanPriceString ===
 
-// Module 12927 (useCheckoutPlanPriceString)
+// Module 12960 (useCheckoutPlanPriceString)
 import closure_2 from "noop" /* 19 */;
-import { useNativeCheckoutStore } from "context" /* 7137 */;
+import { useNativeCheckoutStore } from "context" /* 7169 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/native/hooks/useCheckoutPlanPriceString.tsx");

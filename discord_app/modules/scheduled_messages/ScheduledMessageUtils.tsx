@@ -1,25 +1,27 @@
-// === Module 7557: ScheduledMessagesConfig ===
+// === Module 7589: ScheduledMessagesConfig ===
 
-// Module 7557 (ScheduledMessagesConfig)
+// Module 7589 (ScheduledMessagesConfig)
 import timestampDefault from "timestamp" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import hasFlag from "hasFlag" /* 1399 */;
 import isPremiumAtLeast from "isPremiumAtLeast" /* 1946 */;
-import hooksDefault from "hooks" /* 4045 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4705 */;
-import regExp from "regExp" /* 7396 */;
-import regExpDefault from "regExp" /* 7396 */;
-import ScheduledMessageSendState from "ScheduledMessageSendState" /* 7559 */;
+import hooksDefault from "hooks" /* 4075 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4737 */;
+import regExp from "regExp" /* 7428 */;
+import regExpDefault from "regExp" /* 7428 */;
+import ScheduledMessageSendState from "ScheduledMessageSendState" /* 7591 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import { MessageFlags } from "ME" /* 676 */;
+import ME from "ME" /* 676 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
-import MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS from "MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS" /* 7558 */;
+import MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS from "MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS" /* 7590 */;
 import ApexExperiment from "ApexExperiment" /* 1468 */;
 
 require = arg1;
-({ MAX_SCHEDULE_TIME_AFTER_CREATION_SECONDS: error, MAX_SCHEDULE_TIME_INTO_FUTURE_SECONDS: closure_8, MAX_SCHEDULED_MESSAGES_PER_USER: c9, MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS: c10 } = MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS);
+({ AnalyticEvents: c5, MessageFlags: closure_6 } = ME);
+({ MAX_SCHEDULE_TIME_AFTER_CREATION_SECONDS: closure_8, MAX_SCHEDULE_TIME_INTO_FUTURE_SECONDS: c9, MAX_SCHEDULED_MESSAGES_PER_USER: c10, MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS: unpackModuleId } = MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS);
 class ScheduledMessagesConfig {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
@@ -61,11 +63,11 @@ obj1[2] = (arg0) => {
   return obj;
 };
 ApexExperiment[3] = obj1;
-let closure_12 = ApexExperiment.createApexExperiment(ApexExperiment);
-const tmp3 = new timestampDefault("Scheduled Messages");
+let closure_13 = ApexExperiment.createApexExperiment(ApexExperiment);
+let tmp4 = new timestampDefault("Scheduled Messages");
 const result = require("set").fileFinishedImporting("modules/scheduled_messages/ScheduledMessageUtils.tsx");
 
-export const scheduledMessageLogger = tmp3;
+export const scheduledMessageLogger = tmp4;
 export const parseContentAndFlagsForSilentMessage = function parseContentAndFlagsForSilentMessage(arg0) {
   ({ content, flags } = arg0);
   const tmp2 = callback(regExpDefault(content), 2);
@@ -75,7 +77,7 @@ export const parseContentAndFlagsForSilentMessage = function parseContentAndFlag
     if (flags == null) {
       flags = 0;
     }
-    items[1] = hasFlag.addFlag(flags, MessageFlags.SUPPRESS_NOTIFICATIONS);
+    items[1] = hasFlag.addFlag(flags, constants2.SUPPRESS_NOTIFICATIONS);
     let tmp4 = items;
     const obj = hasFlag;
   } else {
@@ -95,11 +97,15 @@ export const unparseContentAndFlagsForSilentMessage = function unparseContentAnd
     flags = 0;
   }
   let combined = content;
-  if (obj.hasFlag(flags, MessageFlags.SUPPRESS_NOTIFICATIONS)) {
+  if (obj.hasFlag(flags, constants2.SUPPRESS_NOTIFICATIONS)) {
     const _HermesInternal = HermesInternal;
     combined = "" + regExp.SILENT_SENTINEL + " " + content;
   }
   return combined;
+};
+export const trackScheduledMessageTimePickerOpened = function trackScheduledMessageTimePickerOpened(arg0) {
+  ({ entryPoint, isEditing, channelId } = arg0);
+  expandEventPropertiesDefault.track(constants.SCHEDULED_MESSAGE_TIME_PICKER_OPENED, { entry_point: entryPoint, is_editing: isEditing, channel_id: channelId });
 };
 export const useCanUseScheduledMessages = function useCanUseScheduledMessages() {
   return store.useConfig({ location: "useCanUseScheduledMessages" }).enabled;
@@ -112,46 +118,46 @@ export const getDefaultScheduledTime = function getDefaultScheduledTime() {
   const addResult = hooksDefault().startOf("hour").add(1, "hour");
   const startOfResult = hooksDefault().startOf("hour");
   let addResult1 = addResult;
-  if (addResult.isBefore(obj4.add(closure_10, "seconds"))) {
+  if (addResult.isBefore(obj4.add(closure_11, "seconds"))) {
     addResult1 = addResult.add(1, "hour");
   }
   return addResult1;
 };
 export const getScheduledTimeError = function getScheduledTimeError(isBefore, closure_2) {
-  if (isBefore.isBefore(obj.add(closure_10, "seconds"))) {
+  if (isBefore.isBefore(obj.add(closure_11, "seconds"))) {
     const intl2 = getSystemLocale.intl;
     let stringResult = intl2.string(getSystemLocale.t["w/fgvh"]);
   } else {
-    const addResult = tmp(4045)().add(closure_8, "seconds");
+    const addResult = tmp(4075)().add(closure_9, "seconds");
     let minResult = addResult;
     if (null != closure_2) {
-      let tmpResult = tmp(4045);
+      let tmpResult = tmp(4075);
       tmpResult = tmp(11);
       const tmpResultResult = tmpResult(tmpResult.extractTimestamp(closure_2));
-      minResult = tmp(4045).min(addResult, tmpResultResult.add(closure_7, "seconds"));
-      const tmpResult1 = tmp(4045);
+      minResult = tmp(4075).min(addResult, tmpResultResult.add(closure_8, "seconds"));
+      const tmpResult1 = tmp(4075);
     }
     stringResult = null;
     if (isBefore.isAfter(minResult)) {
       const intl = getSystemLocale.intl;
       stringResult = intl.string(getSystemLocale.t.Nt0tz7);
     }
-    const obj2 = tmp(4045)();
+    const obj2 = tmp(4075)();
   }
   return stringResult;
 };
 export const getEarliestScheduledTime = function getEarliestScheduledTime() {
-  return hooksDefault().add(closure_10, "seconds");
+  return hooksDefault().add(closure_11, "seconds");
 };
 export const getLatestScheduledTime = function getLatestScheduledTime(closure_2) {
-  const addResult = hooksDefault().add(closure_8, "seconds");
+  const addResult = hooksDefault().add(closure_9, "seconds");
   if (null == closure_2) {
     return addResult;
   } else {
-    let tmpResult = tmp(4045);
+    let tmpResult = tmp(4075);
     tmpResult = tmp(11);
     const tmpResultResult = tmpResult(tmpResult.extractTimestamp(closure_2));
-    return tmp(4045).min(addResult, tmpResultResult.add(closure_7, "seconds"));
+    return tmp(4075).min(addResult, tmpResultResult.add(closure_8, "seconds"));
   }
   const obj = hooksDefault();
 };
@@ -162,7 +168,7 @@ export const getScheduledMessagesLimit = function getScheduledMessagesLimit(Sche
   if (config.enabled) {
     if (isPremiumResult) {
       obj = { limit: null, isUpgradable: false };
-      obj[0] = closure_9;
+      obj[0] = closure_10;
       obj1 = obj;
     } else {
       obj1 = { limit: null, isUpgradable: true };
@@ -177,9 +183,9 @@ export const useScheduledMessagesLimit = function useScheduledMessagesLimit(Sche
   const config = store.useConfig(obj);
   const items = [closure_4];
   if (config.enabled) {
-    if (obj2.useStateFromStores(items, () => callback(table[13]).isPremium(currentUser.getCurrentUser(), TIER_2.TIER_2))) {
+    if (obj2.useStateFromStores(items, () => callback(table[14]).isPremium(currentUser.getCurrentUser(), TIER_2.TIER_2))) {
       obj = { limit: null, isUpgradable: false };
-      obj[0] = closure_9;
+      obj[0] = closure_10;
     } else {
       obj = { limit: null, isUpgradable: true };
       obj[0] = config.limit;
@@ -209,27 +215,27 @@ export const getMessageForState = function getMessageForState(state) {
     const intl6 = tmp(1236).intl;
     obj[1] = intl6.string(tmp(1236).t.Fn6Odn);
     return obj;
-  } else if (tmp(7559).ScheduledMessageSendState.ERROR_CHANNEL_NOT_FOUND === state) {
+  } else if (tmp(7591).ScheduledMessageSendState.ERROR_CHANNEL_NOT_FOUND === state) {
     obj = { isError: true, stateMessage: null };
     const intl5 = tmp(1236).intl;
     obj[1] = intl5.string(tmp(1236).t.v5O2dK);
     return obj;
-  } else if (tmp(7559).ScheduledMessageSendState.ERROR_USER_NOT_FOUND === state) {
+  } else if (tmp(7591).ScheduledMessageSendState.ERROR_USER_NOT_FOUND === state) {
     obj1 = { isError: true, stateMessage: null };
     const intl4 = tmp(1236).intl;
     obj1[1] = intl4.string(tmp(1236).t.j8uIfG);
     return obj1;
-  } else if (tmp(7559).ScheduledMessageSendState.ERROR_USER_CANNOT_USE_SCHEDULED_MESSAGES === state) {
+  } else if (tmp(7591).ScheduledMessageSendState.ERROR_USER_CANNOT_USE_SCHEDULED_MESSAGES === state) {
     const obj2 = { isError: true, stateMessage: null };
     const intl3 = tmp(1236).intl;
     obj2[1] = intl3.string(tmp(1236).t["w6zHX/"]);
     return obj2;
-  } else if (tmp(7559).ScheduledMessageSendState.ERROR_SEND_FAILED === state) {
+  } else if (tmp(7591).ScheduledMessageSendState.ERROR_SEND_FAILED === state) {
     const obj3 = { isError: true, stateMessage: null };
     const intl2 = tmp(1236).intl;
     obj3[1] = intl2.string(tmp(1236).t.pflV7z);
     return obj3;
-  } else if (tmp(7559).ScheduledMessageSendState.ERROR_SCHEDULED_MESSAGES_DISABLED === state) {
+  } else if (tmp(7591).ScheduledMessageSendState.ERROR_SCHEDULED_MESSAGES_DISABLED === state) {
     const obj4 = { isError: true, stateMessage: null };
     const intl = tmp(1236).intl;
     obj4[1] = intl.string(tmp(1236).t.j8uIfG);

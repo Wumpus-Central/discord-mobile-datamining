@@ -1,11 +1,11 @@
-// === Module 8189: notSupported ===
+// === Module 8221: notSupported ===
 
-// Module 8189 (notSupported)
+// Module 8221 (notSupported)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import closure_6 from "updateProduct" /* 6052 */;
+import closure_6 from "updateProduct" /* 6084 */;
 
 const require = arg1;
 function notSupported() {
@@ -43,7 +43,7 @@ function useGoogleSkuIds(arg0, arg1) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {

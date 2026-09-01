@@ -1,9 +1,9 @@
-// === Module 11166: openPinnedMessages ===
+// === Module 11203: openPinnedMessages ===
 
-// Module 11166 (openPinnedMessages)
+// Module 11203 (openPinnedMessages)
 import set from "set" /* 2 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4303 */;
-import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 10616 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4333 */;
+import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 10654 */;
 
 let closure_2 = ChannelDetailsNavigatorScreens.ChannelDetailsNavigatorScreens;
 const result = set.fileFinishedImporting("modules/messages/native/openPinnedMessages.tsx");

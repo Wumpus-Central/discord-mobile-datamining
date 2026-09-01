@@ -1,8 +1,8 @@
-// === Module 6196: InputAttachmentContainer ===
+// === Module 6228: InputAttachmentContainer ===
 
-// Module 6196 (InputAttachmentContainer)
-import Text from "Text" /* 4444 */;
-import ICON_SIZE from "ICON_SIZE" /* 5970 */;
+// Module 6228 (InputAttachmentContainer)
+import Text from "Text" /* 4474 */;
+import ICON_SIZE from "ICON_SIZE" /* 6002 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

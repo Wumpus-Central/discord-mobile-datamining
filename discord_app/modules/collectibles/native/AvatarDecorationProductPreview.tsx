@@ -1,12 +1,12 @@
-// === Module 12512: AvatarDecorationProductPreview ===
+// === Module 12545: AvatarDecorationProductPreview ===
 
-// Module 12512 (AvatarDecorationProductPreview)
+// Module 12545 (AvatarDecorationProductPreview)
 import noopAll from "noop" /* 19 */;
-import firstAvatarDecoration2 from "firstAvatarDecoration" /* 8461 */;
-import useCurrentUser from "useCurrentUser" /* 8854 */;
+import firstAvatarDecoration2 from "firstAvatarDecoration" /* 8493 */;
+import useCurrentUser from "useCurrentUser" /* 8891 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 noopAll;

@@ -1,6 +1,6 @@
-// === Module 9765: VOICE_PANEL_SETTINGS_KEY ===
+// === Module 9804: VOICE_PANEL_SETTINGS_KEY ===
 
-// Module 9765 (VOICE_PANEL_SETTINGS_KEY)
+// Module 9804 (VOICE_PANEL_SETTINGS_KEY)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/voice_panel/native/header/VoicePanelHeaderConstants.tsx");

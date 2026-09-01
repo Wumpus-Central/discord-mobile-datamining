@@ -1,10 +1,10 @@
-// === Module 4998: ImageWarningIcon ===
+// === Module 5030: ImageWarningIcon ===
 
-// Module 4998 (ImageWarningIcon)
+// Module 5030 (ImageWarningIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4166 */;
-import registerAsset from "registerAsset" /* 4973 */;
+import BaseIconImage from "BaseIconImage" /* 4196 */;
+import registerAsset from "registerAsset" /* 5005 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

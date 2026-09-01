@@ -1,16 +1,16 @@
-// === Module 16650: useVoicePanelHeaderUserStateIcons ===
+// === Module 16686: useVoicePanelHeaderUserStateIcons ===
 
-// Module 16650 (useVoicePanelHeaderUserStateIcons)
+// Module 16686 (useVoicePanelHeaderUserStateIcons)
 import ThemesDefault from "Themes" /* 712 */;
-import setDefault from "set" /* 5974 */;
-import areStableParticipantsEqual from "areStableParticipantsEqual" /* 16649 */;
-import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 16651 */;
-import useVoicePanelCardUserStateIconsDefault from "useVoicePanelCardUserStateIcons" /* 16651 */;
+import setDefault from "set" /* 6006 */;
+import areStableParticipantsEqual from "areStableParticipantsEqual" /* 16685 */;
+import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 16687 */;
+import useVoicePanelCardUserStateIconsDefault from "useVoicePanelCardUserStateIcons" /* 16687 */;
 import importAllResult from "noop" /* 19 */;
-import closure_4 from "getParticipants" /* 4464 */;
+import closure_4 from "getParticipants" /* 4494 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
-import importDefaultResult from "module_4187" /* 4187 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
+import importDefaultResult from "module_4217" /* 4217 */;
 
 require = arg1;
 function useVoicePanelHeaderUserStateIcons(participant, guildId, userIcons) {
@@ -45,13 +45,13 @@ function useVoicePanelHeaderUserStateIcons(participant, guildId, userIcons) {
       obj[0] = tmp.floatingIcon;
       let tmp33 = nextResult;
       obj[1] = tmp9.videoIconState;
-      obj[2] = jsx(tmp11(9769).VideoIcon, { style: null, state: null });
-      let arr = items.push(jsx(tmp11(8947).BackgroundBlurView, { style: null, state: null }, "video"));
+      obj[2] = jsx(tmp11(9808).VideoIcon, { style: null, state: null });
+      let arr = items.push(jsx(tmp11(8984).BackgroundBlurView, { style: null, state: null }, "video"));
     }
     let tmp14 = nextResult;
     let tmp15 = tmp10;
     let tmp16 = tmp12;
-    if (tmp9.type === tmp11(16651).VoicePanelCardUserStateIconType.MUTE_DEAFEN_ICON) {
+    if (tmp9.type === tmp11(16687).VoicePanelCardUserStateIconType.MUTE_DEAFEN_ICON) {
       let tmp35 = jsx;
       let tmp37 = tmp10;
       let tmp38 = tmp12;
@@ -72,8 +72,8 @@ function useVoicePanelHeaderUserStateIcons(participant, guildId, userIcons) {
       obj2[0] = tmp.floatingIcon;
       let tmp21 = nextResult;
       obj2[1] = tmp9.muteDeafenIconState;
-      obj1[2] = tmp36(tmp11(9769).MuteDeafenIcon, obj2);
-      arr = items.push(tmp35(tmp11(8947).BackgroundBlurView, obj1, "mute-deafen"));
+      obj1[2] = tmp36(tmp11(9808).MuteDeafenIcon, obj2);
+      arr = items.push(tmp35(tmp11(8984).BackgroundBlurView, obj1, "mute-deafen"));
     }
     continue;
   }
@@ -103,7 +103,7 @@ let obj1 = { width: 20, height: 20, borderRadius: ThemesDefault.radii.round, ali
 const memoResult = importAllResult.memo(function VoicePanelHeaderUserState(isHeaderHidden) {
   isHeaderHidden = isHeaderHidden.isHeaderHidden;
   let channelId;
-  const context = importAllResult.useContext(channelId(11806));
+  const context = importAllResult.useContext(channelId(11839));
   channelId = context.channelId;
   const guildId = context.guildId;
   let obj = isHeaderHidden(589);
@@ -116,8 +116,8 @@ const memoResult = importAllResult.memo(function VoicePanelHeaderUserState(isHea
     }
     return id;
   });
-  const tmp4 = useVoicePanelHeaderUserStateIcons(channelId(16649)(stateFromStores, channelId, guildId), guildId);
-  isHeaderHidden(4187);
+  const tmp4 = useVoicePanelHeaderUserStateIcons(channelId(16685)(stateFromStores, channelId, guildId), guildId);
+  isHeaderHidden(4217);
   const fn = function h() {
     let obj = isHeaderHidden(closure_1_2[13]);
     let num = 0;
@@ -127,7 +127,7 @@ const memoResult = importAllResult.memo(function VoicePanelHeaderUserState(isHea
     obj = { opacity: obj.withTiming(num, closure_1_7) };
     return obj;
   };
-  obj = { withTiming: isHeaderHidden(4449).withTiming, isHeaderHidden, OPACITY_TIMING: closure_7 };
+  obj = { withTiming: isHeaderHidden(4479).withTiming, isHeaderHidden, OPACITY_TIMING: closure_7 };
   fn.__closure = obj;
   fn.__workletHash = 7032221979181;
   fn.__initData = closure_10;

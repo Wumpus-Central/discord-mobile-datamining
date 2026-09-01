@@ -1,8 +1,8 @@
-// === Module 11975: useRequireConfirmationOnAccept ===
+// === Module 12008: useRequireConfirmationOnAccept ===
 
-// Module 11975 (useRequireConfirmationOnAccept)
+// Module 12008 (useRequireConfirmationOnAccept)
 import set from "set" /* 2 */;
-import setDefault from "set" /* 11976 */;
+import setDefault from "set" /* 12009 */;
 
 const result = set.fileFinishedImporting("modules/message_request/hooks/useRequireConfirmationOnAccept.tsx");
 

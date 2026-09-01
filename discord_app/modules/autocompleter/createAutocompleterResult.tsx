@@ -1,8 +1,8 @@
-// === Module 9894: HeaderRecord ===
+// === Module 9933: HeaderRecord ===
 
-// Module 9894 (HeaderRecord)
+// Module 9933 (HeaderRecord)
 import set from "set" /* 2 */;
-import HeaderRecord from "HeaderRecord" /* 5420 */;
+import HeaderRecord from "HeaderRecord" /* 5452 */;
 
 ({ HeaderRecord: c0, AutocompleterResultTypes: closure_1 } = HeaderRecord);
 const result = set.fileFinishedImporting("modules/autocompleter/createAutocompleterResult.tsx");

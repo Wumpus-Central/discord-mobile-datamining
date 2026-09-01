@@ -1,12 +1,12 @@
-// === Module 15056: useAndroidMessageNotificationsSettingValue ===
+// === Module 15089: useAndroidMessageNotificationsSettingValue ===
 
-// Module 15056 (useAndroidMessageNotificationsSettingValue)
+// Module 15089 (useAndroidMessageNotificationsSettingValue)
 import set from "set" /* 2 */;
 import set2 from "set" /* 500 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import MobileUserSettings from "MobileUserSettings" /* 7852 */;
-import _initializeAndroidNotificationSettingsStore from "_initializeAndroidNotificationSettingsStore" /* 15045 */;
-import createToggle from "createToggle" /* 11031 */;
+import MobileUserSettings from "MobileUserSettings" /* 7884 */;
+import _initializeAndroidNotificationSettingsStore from "_initializeAndroidNotificationSettingsStore" /* 15078 */;
+import createToggle from "createToggle" /* 11068 */;
 
 function useAndroidMessageNotificationsSettingValue() {
   let flag = callback();

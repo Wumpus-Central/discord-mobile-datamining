@@ -1,17 +1,17 @@
-// === Module 6118: maybeRebuildState ===
+// === Module 6150: maybeRebuildState ===
 
-// Module 6118 (maybeRebuildState)
+// Module 6150 (maybeRebuildState)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import set3 from "set" /* 1396 */;
 import set4 from "set" /* 1398 */;
 import areSetsEqual from "areSetsEqual" /* 1429 */;
-import getCreationDefaultFormatter from "getCreationDefaultFormatter" /* 6120 */;
-import closure_4 from "handleThreadCreateOrUpdate" /* 5417 */;
-import closure_5 from "updateState" /* 6119 */;
+import getCreationDefaultFormatter from "getCreationDefaultFormatter" /* 6152 */;
+import closure_4 from "handleThreadCreateOrUpdate" /* 5449 */;
+import closure_5 from "updateState" /* 6151 */;
 import closure_6 from "fetchFingerprint" /* 1218 */;
 import closure_7 from "ensureGuildLoaded" /* 1387 */;
-import closure_8 from "generateOldThreadCutoff" /* 4463 */;
+import closure_8 from "generateOldThreadCutoff" /* 4493 */;
 import closure_9 from "handleConnectionOpen" /* 1981 */;
 import importDefaultResult from "apply" /* 12 */;
 import set from "set" /* 2 */;

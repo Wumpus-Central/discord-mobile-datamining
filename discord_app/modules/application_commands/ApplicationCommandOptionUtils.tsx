@@ -1,11 +1,11 @@
-// === Module 8407: getString ===
+// === Module 8439: getString ===
 
-// Module 8407 (getString)
+// Module 8439 (getString)
 import set from "set" /* 2 */;
 import _modDef38 from "module_38" /* 38 */;
-import setDefault from "set" /* 4435 */;
-import TRUE_OPTION_NAME2 from "TRUE_OPTION_NAME" /* 4920 */;
-import numberParts from "numberParts" /* 8408 */;
+import setDefault from "set" /* 4465 */;
+import TRUE_OPTION_NAME2 from "TRUE_OPTION_NAME" /* 4952 */;
+import numberParts from "numberParts" /* 8440 */;
 
 function getString(arg0, arg1) {
   let str = "";
@@ -342,7 +342,7 @@ export const normalizeNumericString = function normalizeNumericString(locale, tr
     closure_5 = locale;
     en_US = numberParts.numberParts[locale];
     if (en_US == null) {
-      en_US = tmp11(8408).numberParts["en-US"];
+      en_US = tmp11(8440).numberParts["en-US"];
     }
     const _RegExp = RegExp;
     ({ group, decimal } = en_US);

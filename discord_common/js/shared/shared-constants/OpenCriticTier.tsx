@@ -1,6 +1,6 @@
-// === Module 8815: OpenCriticTier ===
+// === Module 8852: OpenCriticTier ===
 
-// Module 8815 (OpenCriticTier)
+// Module 8852 (OpenCriticTier)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/OpenCriticTier.tsx");

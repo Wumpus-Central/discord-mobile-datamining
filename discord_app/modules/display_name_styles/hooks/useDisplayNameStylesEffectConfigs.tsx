@@ -1,8 +1,8 @@
-// === Module 8891: DISPLAY_NAME_STYLES_EFFECT_NAMES ===
+// === Module 8928: DISPLAY_NAME_STYLES_EFFECT_NAMES ===
 
-// Module 8891 (DISPLAY_NAME_STYLES_EFFECT_NAMES)
-import messagesProxyDefault from "messagesProxy" /* 2729 */;
-import useDisplayNameStylesEffectDefaultColorsDefault from "useDisplayNameStylesEffectDefaultColors" /* 8892 */;
+// Module 8928 (DISPLAY_NAME_STYLES_EFFECT_NAMES)
+import messagesProxyDefault from "messagesProxy" /* 2759 */;
+import useDisplayNameStylesEffectDefaultColorsDefault from "useDisplayNameStylesEffectDefaultColors" /* 8929 */;
 import closure_3 from "noop" /* 19 */;
 
 const require = arg1;
@@ -14,7 +14,7 @@ obj[require("DisplayNameEffect").DisplayNameEffect.TOON] = messagesProxyDefault.
 obj[require("DisplayNameEffect").DisplayNameEffect.POP] = messagesProxyDefault.cjQOKb;
 obj[require("DisplayNameEffect").DisplayNameEffect.GUMMY] = messagesProxyDefault.x9Gtie;
 obj[require("DisplayNameEffect").DisplayNameEffect.PRISM] = messagesProxyDefault["/M7psm"];
-let closure_5 = { [arg1(1935).DisplayNameEffect.SOLID]: 3, [arg1(1935).DisplayNameEffect.GRADIENT]: 2.5, [arg1(1935).DisplayNameEffect.GLOW]: 2.5, [arg1(1935).DisplayNameEffect.PRISM]: 2.5, [arg1(1935).DisplayNameEffect.NEON]: 3, [arg1(1935).DisplayNameEffect.TOON]: 3, [arg1(1935).DisplayNameEffect.POP]: 3, [arg1(1935).DisplayNameEffect.GUMMY]: 3 };
+let closure_5 = { [arg1(1940).DisplayNameEffect.SOLID]: 3, [arg1(1940).DisplayNameEffect.GRADIENT]: 2.5, [arg1(1940).DisplayNameEffect.GLOW]: 2.5, [arg1(1940).DisplayNameEffect.PRISM]: 2.5, [arg1(1940).DisplayNameEffect.NEON]: 3, [arg1(1940).DisplayNameEffect.TOON]: 3, [arg1(1940).DisplayNameEffect.POP]: 3, [arg1(1940).DisplayNameEffect.GUMMY]: 3 };
 const result = require("set").fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesEffectConfigs.tsx");
 
 export const DISPLAY_NAME_STYLES_EFFECT_NAMES = obj;

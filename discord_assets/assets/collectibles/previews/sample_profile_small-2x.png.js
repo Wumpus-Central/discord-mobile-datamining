@@ -1,6 +1,6 @@
-// === Module 10712: metadata ===
+// === Module 10750: metadata ===
 
-// Module 10712 (metadata)
+// Module 10750 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js");

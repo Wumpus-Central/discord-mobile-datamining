@@ -1,20 +1,20 @@
-// === Module 9329: ApplicationDetailsEntry ===
+// === Module 9368: ApplicationDetailsEntry ===
 
-// Module 9329 (ApplicationDetailsEntry)
+// Module 9368 (ApplicationDetailsEntry)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ClockIcon from "ClockIcon" /* 4411 */;
-import Text from "Text" /* 4444 */;
-import LockIcon from "LockIcon" /* 5012 */;
-import ShieldIcon from "ShieldIcon" /* 8395 */;
-import set from "set" /* 8578 */;
-import items2 from "items" /* 9249 */;
-import getApplicationDetailsText from "getApplicationDetailsText" /* 9253 */;
+import ClockIcon from "ClockIcon" /* 4441 */;
+import Text from "Text" /* 4474 */;
+import LockIcon from "LockIcon" /* 5044 */;
+import ShieldIcon from "ShieldIcon" /* 8427 */;
+import set from "set" /* 8610 */;
+import items2 from "items" /* 9288 */;
+import getApplicationDetailsText from "getApplicationDetailsText" /* 9292 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function ApplicationDetailsEntry(children) {
@@ -67,7 +67,7 @@ export default function ApplicationDetails(arg0) {
   let tmp15 = null;
   if (null != joined) {
     obj = { iconComponent: null, text: null };
-    obj[0] = tmp5(4391).LinkIcon;
+    obj[0] = tmp5(4421).LinkIcon;
     const intl = tmp5(1236).intl;
     obj1 = { origin: null };
     obj1[0] = joined;
@@ -84,7 +84,7 @@ export default function ApplicationDetails(arg0) {
   let tmp18Result = null;
   if (null != connectedAccount) {
     const obj3 = { iconComponent: null, text: null };
-    obj3[0] = tmp5(9334).HammerIcon;
+    obj3[0] = tmp5(9373).HammerIcon;
     const intl2 = tmp5(1236).intl;
     obj3[1] = intl2.string(tmp5(1236).t["8qui3M"]);
     tmp18Result = tmp18(tmp19, obj3);
@@ -99,7 +99,7 @@ export default function ApplicationDetails(arg0) {
     tmp18Result = null;
     if (null != approximateGuildCount) {
       const obj5 = { iconComponent: null, text: null };
-      obj5[0] = tmp5(9336).RobotIcon;
+      obj5[0] = tmp5(9375).RobotIcon;
       const intl4 = tmp5(1236).intl;
       const obj6 = { guildCount: null };
       obj6[0] = approximateGuildCount;
@@ -113,17 +113,17 @@ export default function ApplicationDetails(arg0) {
   let mapped = null;
   if (null != disclosures) {
     mapped = disclosures.map((toFixed) => {
-      let obj = callback(9251);
+      let obj = callback(9290);
       const textForDisclosure = obj.getTextForDisclosure(toFixed);
-      if (callback(9251).ApplicationDisclosure.IP_LOCATION === toFixed) {
+      if (callback(9290).ApplicationDisclosure.IP_LOCATION === toFixed) {
         obj = { iconComponent: null };
-        obj[0] = tmp(9330).GlobeEarthIcon;
+        obj[0] = tmp(9369).GlobeEarthIcon;
         let tmp4 = obj;
       } else {
         tmp4 = null;
-        if (tmp(9251).ApplicationDisclosure.DISPLAYS_ADVERTISEMENTS === toFixed) {
+        if (tmp(9290).ApplicationDisclosure.DISPLAYS_ADVERTISEMENTS === toFixed) {
           obj = { iconComponent: null };
-          obj[0] = tmp(9332).EmbedIcon;
+          obj[0] = tmp(9371).EmbedIcon;
           tmp4 = obj;
         }
       }

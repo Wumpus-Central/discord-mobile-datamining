@@ -1,6 +1,6 @@
-// === Module 9039: useIsFriendRequestAlertsV2Enabled ===
+// === Module 9077: useIsFriendRequestAlertsV2Enabled ===
 
-// Module 9039 (useIsFriendRequestAlertsV2Enabled)
+// Module 9077 (useIsFriendRequestAlertsV2Enabled)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1468 */;
 

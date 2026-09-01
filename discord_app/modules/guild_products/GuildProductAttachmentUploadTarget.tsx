@@ -1,9 +1,9 @@
-// === Module 5087: getCreateAttachmentURL ===
+// === Module 5119: getCreateAttachmentURL ===
 
-// Module 5087 (getCreateAttachmentURL)
+// Module 5119 (getCreateAttachmentURL)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import GUILD_PRODUCT_EDIT_MODAL_KEY from "GUILD_PRODUCT_EDIT_MODAL_KEY" /* 5088 */;
+import GUILD_PRODUCT_EDIT_MODAL_KEY from "GUILD_PRODUCT_EDIT_MODAL_KEY" /* 5120 */;
 
 ({ MAX_ATTACHMENT_UPLOAD_COUNT: c0, MAX_ATTACHMENT_UPLOAD_FILESIZE_BYTES: closure_1, MAX_ATTACHMENT_UPLOAD_TOTAL_FILESIZE_BYTES: obj1 } = GUILD_PRODUCT_EDIT_MODAL_KEY);
 const Endpoints = ME.Endpoints;

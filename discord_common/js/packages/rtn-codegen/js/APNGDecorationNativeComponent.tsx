@@ -1,6 +1,6 @@
-// === Module 8070: __INTERNAL_VIEW_CONFIG ===
+// === Module 8102: __INTERNAL_VIEW_CONFIG ===
 
-// Module 8070 (__INTERNAL_VIEW_CONFIG)
+// Module 8102 (__INTERNAL_VIEW_CONFIG)
 import set from "set" /* 2 */;
 import renderElement from "renderElement" /* 114 */;
 import weakSet from "weakSet" /* 106 */;

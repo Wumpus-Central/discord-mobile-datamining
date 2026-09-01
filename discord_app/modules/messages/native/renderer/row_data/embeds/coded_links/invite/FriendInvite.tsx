@@ -1,12 +1,12 @@
-// === Module 12845: createFriendInvite ===
+// === Module 12878: createFriendInvite ===
 
-// Module 12845 (createFriendInvite)
+// Module 12878 (createFriendInvite)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import InviteSendStates from "InviteSendStates" /* 7449 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7822 */;
-import closure_4 from "markAllUserIdListsStale" /* 4100 */;
+import InviteSendStates from "InviteSendStates" /* 7481 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7854 */;
+import closure_4 from "markAllUserIdListsStale" /* 4130 */;
 
 const Image = get_ActivityIndicator.Image;
 const InviteTypes = InviteSendStates.InviteTypes;
@@ -30,7 +30,7 @@ export const createFriendInvite = function createFriendInvite(inviter) {
   }
   let str3 = "";
   if (null != inviter.inviter) {
-    let tmpResult = tmp(4292);
+    let tmpResult = tmp(4322);
     str3 = tmpResult.getUserTag(inviter.inviter);
   }
   let isFriendResult = null != inviter.inviter;

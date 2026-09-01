@@ -1,6 +1,6 @@
-// === Module 17354: shouldClearChannelNotificationsOnAppForeground ===
+// === Module 17390: shouldClearChannelNotificationsOnAppForeground ===
 
-// Module 17354 (shouldClearChannelNotificationsOnAppForeground)
+// Module 17390 (shouldClearChannelNotificationsOnAppForeground)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1468 */;
 

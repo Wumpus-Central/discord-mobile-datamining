@@ -1,11 +1,11 @@
-// === Module 4093: storeThread ===
+// === Module 4123: storeThread ===
 
-// Module 4093 (storeThread)
+// Module 4123 (storeThread)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import createChannelRecord from "createChannelRecord" /* 1391 */;
-import resetDefault from "reset" /* 4094 */;
+import resetDefault from "reset" /* 4124 */;
 import closure_3 from "fetchFingerprint" /* 1218 */;
 import set from "set" /* 2 */;
 
@@ -273,7 +273,7 @@ const joinedThreadsStoreClass = new JoinedThreadsStoreClass(dispatcherDefault, {
         const obj = { threadId: null, guildId: null, flags: 0, muted: true, muteConfig: null, joinTimestamp: null };
         obj[0] = id;
         obj[1] = guildId;
-        obj[4] = { end_time: "Array" };
+        obj[4] = { end_time: "r" };
         const _Date = Date;
         const date = new Date();
         guildId = date;

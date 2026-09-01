@@ -1,11 +1,11 @@
-// === Module 10134: useFocusModeEnabled ===
+// === Module 10173: useFocusModeEnabled ===
 
-// Module 10134 (useFocusModeEnabled)
+// Module 10173 (useFocusModeEnabled)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4136 */;
-import setDefault from "set" /* 4825 */;
-import closure_3 from "filterPlayingActivities" /* 5191 */;
-import { NotificationSettingsUpdateType as closure_4 } from "AccountNotificationFlags" /* 4103 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
+import setDefault from "set" /* 4857 */;
+import closure_3 from "filterPlayingActivities" /* 5223 */;
+import { NotificationSettingsUpdateType as closure_4 } from "AccountNotificationFlags" /* 4133 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -54,7 +54,7 @@ export const getFocusModeEnabled = function getFocusModeEnabled() {
 export const setFocusMode = function setFocusMode(quiet_mode_enabled, arg1) {
   const _require = quiet_mode_enabled;
   importDefault = arg1;
-  const FocusMode = _require(4136).FocusMode;
+  const FocusMode = _require(4166).FocusMode;
   const setting = FocusMode.getSetting();
   const PreloadedUserSettingsActionCreators = _require(1370).PreloadedUserSettingsActionCreators;
   PreloadedUserSettingsActionCreators.updateAsync("notifications", (arg0) => {

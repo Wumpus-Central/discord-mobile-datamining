@@ -1,8 +1,8 @@
-// === Module 11628: useClickOnHomeActivityOpensAppDetails ===
+// === Module 11661: useClickOnHomeActivityOpensAppDetails ===
 
-// Module 11628 (useClickOnHomeActivityOpensAppDetails)
+// Module 11661 (useClickOnHomeActivityOpensAppDetails)
 import set from "set" /* 2 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4136 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
 
 const result = set.fileFinishedImporting("modules/app_launcher/hooks/useClickOnHomeActivityOpensAppDetails.tsx");
 

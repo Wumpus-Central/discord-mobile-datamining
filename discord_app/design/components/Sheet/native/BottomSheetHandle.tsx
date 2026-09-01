@@ -1,6 +1,6 @@
-// === Module 5904: useBottomSheetImperativeHandle ===
+// === Module 5936: useBottomSheetImperativeHandle ===
 
-// Module 5904 (useBottomSheetImperativeHandle)
+// Module 5936 (useBottomSheetImperativeHandle)
 import closure_0 from "noop" /* 19 */;
 
 const result = require("set").fileFinishedImporting("design/components/Sheet/native/BottomSheetHandle.tsx");

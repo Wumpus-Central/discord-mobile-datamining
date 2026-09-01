@@ -1,6 +1,6 @@
-// === Module 8511: DefaultProfileFrameDimensions ===
+// === Module 8543: DefaultProfileFrameDimensions ===
 
-// Module 8511 (DefaultProfileFrameDimensions)
+// Module 8543 (DefaultProfileFrameDimensions)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/DefaultProfileFrameDimensions.tsx");

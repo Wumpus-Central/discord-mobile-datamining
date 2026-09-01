@@ -1,6 +1,6 @@
-// === Module 11107: getAlert ===
+// === Module 11144: getAlert ===
 
-// Module 11107 (getAlert)
+// Module 11144 (getAlert)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

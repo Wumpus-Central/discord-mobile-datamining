@@ -1,10 +1,10 @@
-// === Module 12200: useBackHandlerSkipPhoneScreens ===
+// === Module 12233: useBackHandlerSkipPhoneScreens ===
 
-// Module 12200 (useBackHandlerSkipPhoneScreens)
+// Module 12233 (useBackHandlerSkipPhoneScreens)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 5469 */;
-import ContactSyncLandingPage from "ContactSyncLandingPage" /* 12183 */;
+import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 5501 */;
+import ContactSyncLandingPage from "ContactSyncLandingPage" /* 12216 */;
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 const ContactSyncScenes = ContactSyncLandingPage.ContactSyncScenes;
@@ -13,7 +13,7 @@ const result = set.fileFinishedImporting("modules/contact_sync/native/components
 export default function useBackHandlerSkipPhoneScreens(arg0, arg1) {
   const _require = arg0;
   dependencyMap = arg1;
-  _require(5469).useNavigatorBackPressHandler(() => {
+  _require(5501).useNavigatorBackPressHandler(() => {
     if (null != closure_1) {
       tmp();
     } else {

@@ -1,6 +1,6 @@
-// === Module 4170: getNodeText ===
+// === Module 4200: getNodeText ===
 
-// Module 4170 (getNodeText)
+// Module 4200 (getNodeText)
 import closure_0 from "noop" /* 19 */;
 
 const result = require("set").fileFinishedImporting("design/utils/shared/getNodeText.tsx");

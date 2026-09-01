@@ -1,20 +1,20 @@
-// === Module 14531: ADD_CONNECTIONS_SHEET_SENTINEL ===
+// === Module 14564: ADD_CONNECTIONS_SHEET_SENTINEL ===
 
-// Module 14531 (ADD_CONNECTIONS_SHEET_SENTINEL)
+// Module 14564 (ADD_CONNECTIONS_SHEET_SENTINEL)
 import ThemesDefault from "Themes" /* 712 */;
-import useThemeDefault from "useTheme" /* 4383 */;
-import useConnectionFilteredAppIdentitiesDefault from "useConnectionFilteredAppIdentities" /* 12482 */;
-import EmptyStateCardDefault from "EmptyStateCard" /* 14532 */;
+import useThemeDefault from "useTheme" /* 4413 */;
+import useConnectionFilteredAppIdentitiesDefault from "useConnectionFilteredAppIdentities" /* 12515 */;
+import EmptyStateCardDefault from "EmptyStateCard" /* 14565 */;
 import closure_3 from "noop" /* 19 */;
 import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "recomputeFromAppTokens" /* 5443 */;
-import { FetchState } from "recomputeFromAppTokens" /* 5443 */;
+import closure_5 from "recomputeFromAppTokens" /* 5475 */;
+import { FetchState } from "recomputeFromAppTokens" /* 5475 */;
 import closure_7 from "fetchFingerprint" /* 1218 */;
-import closure_8 from "set" /* 5193 */;
+import closure_8 from "set" /* 5225 */;
 import closure_9 from "_getSystemLocale" /* 1996 */;
 import { AnalyticsLocations } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 const require = arg1;
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
@@ -91,8 +91,8 @@ export const UserSettingsConnections = function UserSettingsConnections(selected
         accounts.map((account) => closure_1_11(callback(paths[23]), { theme: callback, locale: paths, account }, account.id))
       ];
       obj[1] = items5;
-      obj[1] = callback2(tmp4(4894).Stack, obj);
-      tmp14 = callback(tmp4(8331).Form, obj);
+      obj[1] = callback2(tmp4(4926).Stack, obj);
+      tmp14 = callback(tmp4(8363).Form, obj);
     }
     return tmp14;
   }

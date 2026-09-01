@@ -1,29 +1,29 @@
-// === Module 11690: AppLauncherCommandViewFooter ===
+// === Module 11723: AppLauncherCommandViewFooter ===
 
-// Module 11690 (AppLauncherCommandViewFooter)
+// Module 11723 (AppLauncherCommandViewFooter)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4444 */;
-import CollapsingText from "CollapsingText" /* 4897 */;
-import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 8403 */;
-import handleApplicationSelected from "handleApplicationSelected" /* 11590 */;
-import registerAssetDefault from "registerAsset" /* 11653 */;
-import registerAssetDefault2 from "registerAsset" /* 11654 */;
-import registerAssetDefault3 from "registerAsset" /* 11727 */;
-import registerAssetDefault4 from "registerAsset" /* 11728 */;
+import Text from "Text" /* 4474 */;
+import CollapsingText from "CollapsingText" /* 4929 */;
+import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 8435 */;
+import handleApplicationSelected from "handleApplicationSelected" /* 11623 */;
+import registerAssetDefault from "registerAsset" /* 11686 */;
+import registerAssetDefault2 from "registerAsset" /* 11687 */;
+import registerAssetDefault3 from "registerAsset" /* 11760 */;
+import registerAssetDefault4 from "registerAsset" /* 11761 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_10 from "maybeApplyNoTextColorForLightCustomTheme" /* 4440 */;
-import getIndexKey from "getIndexKey" /* 8114 */;
+import closure_10 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
+import getIndexKey from "getIndexKey" /* 8146 */;
 import closure_13 from "createGuildRoleRecordFromRust" /* 1985 */;
 import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1498 */;
 import ME from "ME" /* 676 */;
 import { MediaKeyboardTarget } from "DRAG_HANDLE" /* 1623 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function AppLauncherCommandViewFooter(arg0) {
@@ -51,8 +51,8 @@ function AppLauncherCommandViewFooter(arg0) {
       obj1 = { translateX: null };
       const obj9 = closure_1_0(stateFromStores[16]);
       const fn = function e() {
-        const obj = callback(4187);
-        return callback(4187).runOnJS(callback(4416).triggerHapticFeedback)(callback(4416).HapticFeedbackTypes.IMPACT_LIGHT);
+        const obj = callback(4217);
+        return callback(4217).runOnJS(callback(4446).triggerHapticFeedback)(callback(4446).HapticFeedbackTypes.IMPACT_LIGHT);
       };
       const obj2 = { runOnJS: null, triggerHapticFeedback: null, HapticFeedbackTypes: null };
       obj2[0] = closure_1_0(stateFromStores[15]).runOnJS;
@@ -564,7 +564,7 @@ function AppLauncherCommandViewInner(command) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -583,7 +583,7 @@ function AppLauncherCommandViewInner(command) {
             if (c2) {
               if (null == closure_1_0) {
                 c2 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               } else {
                 obj1 = { applicationId: null, channel: null, commandIntegrationTypes: null, appLauncherContext: null };
                 obj1[0] = tmp9.applicationId;
@@ -612,11 +612,11 @@ function AppLauncherCommandViewInner(command) {
           return obj;
         } else if (!arg1.isAuthorized) {
           c2 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
         callback();
         c2 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp11) {
         c2 = tmp;
         throw tmp11;

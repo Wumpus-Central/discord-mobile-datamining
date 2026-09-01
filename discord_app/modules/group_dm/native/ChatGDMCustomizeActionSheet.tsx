@@ -1,9 +1,9 @@
-// === Module 10620: ChatGDMCustomizeActionSheet ===
+// === Module 10658: ChatGDMCustomizeActionSheet ===
 
-// Module 10620 (ChatGDMCustomizeActionSheet)
+// Module 10658 (ChatGDMCustomizeActionSheet)
 import noopAll from "noop" /* 19 */;
-import useNavigatorConfirmChangesOnBackDefault from "useNavigatorConfirmChangesOnBack" /* 10621 */;
-import _modDef10623 from "module_10623" /* 10623 */;
+import useNavigatorConfirmChangesOnBackDefault from "useNavigatorConfirmChangesOnBack" /* 10659 */;
+import _modDef10661 from "module_10661" /* 10661 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -22,5 +22,5 @@ export default function ChatGDMCustomizeActionSheet(channelId) {
   obj[2] = function render() {
     return closure_1_3(_undefined(_undefined2[5]), { ref: _undefined2, onFinish: _undefined, channelId });
   };
-  return jsx(_modDef10623, { screenKey: "kick", title: null, render: null });
+  return jsx(_modDef10661, { screenKey: "kick", title: null, render: null });
 };

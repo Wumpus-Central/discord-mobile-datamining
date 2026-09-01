@@ -1,6 +1,6 @@
-// === Module 7852: MobileUserSettings ===
+// === Module 7884: MobileUserSettings ===
 
-// Module 7852 (MobileUserSettings)
+// Module 7884 (MobileUserSettings)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/user_settings/core/native/SettingsConstants.tsx");

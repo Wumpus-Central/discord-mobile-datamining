@@ -1,6 +1,6 @@
-// === Module 13468: getLowLatencyRateControlExperimentConfig ===
+// === Module 13501: getLowLatencyRateControlExperimentConfig ===
 
-// Module 13468 (getLowLatencyRateControlExperimentConfig)
+// Module 13501 (getLowLatencyRateControlExperimentConfig)
 import getUnitIdDefault from "getUnitId" /* 1469 */;
 
 let obj = { 1: null };

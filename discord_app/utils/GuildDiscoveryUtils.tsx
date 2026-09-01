@@ -1,10 +1,10 @@
-// === Module 6153: _startLurking ===
+// === Module 6185: _startLurking ===
 
-// Module 6153 (_startLurking)
+// Module 6185 (_startLurking)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 4092 */;
-import closure_5 from "handleInviteData" /* 4368 */;
+import closure_4 from "initialize" /* 4122 */;
+import closure_5 from "handleInviteData" /* 4398 */;
 import closure_6 from "createGuildRecordFromRust" /* 1909 */;
 import ME from "ME" /* 676 */;
 
@@ -34,7 +34,7 @@ function _startLurking() {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -71,7 +71,7 @@ function _startLurking() {
                 closure_13 = undefined;
                 loadId = 1;
                 shouldNavigate = 1;
-                return { value: "Object", done: true };
+                return { value: "PX_16", done: null };
               }
             } else {
               if (1 === tmp5) {
@@ -220,7 +220,7 @@ function _startLurking() {
                 throwTypeErrorResult = throwTypeErrorResult();
               }
               shouldNavigate = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (throwTypeErrorResult) {
             shouldNavigate = throwTypeErrorResult;
@@ -265,7 +265,7 @@ function _getDiscoverableGuild() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -366,7 +366,7 @@ function _fetchPublicDiscoveryGuild() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

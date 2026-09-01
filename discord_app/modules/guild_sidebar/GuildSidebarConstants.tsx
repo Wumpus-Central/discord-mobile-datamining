@@ -1,6 +1,6 @@
-// === Module 7247: ChannelListGuildActionRow ===
+// === Module 7279: ChannelListGuildActionRow ===
 
-// Module 7247 (ChannelListGuildActionRow)
+// Module 7279 (ChannelListGuildActionRow)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/guild_sidebar/GuildSidebarConstants.tsx");

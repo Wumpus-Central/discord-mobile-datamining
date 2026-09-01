@@ -1,9 +1,9 @@
-// === Module 8093: transformMessageAttachments ===
+// === Module 8125: transformMessageAttachments ===
 
-// Module 8093 (transformMessageAttachments)
+// Module 8125 (transformMessageAttachments)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import Changeset from "Changeset" /* 7810 */;
+import Changeset from "Changeset" /* 7842 */;
 
 const AttachmentType = Changeset.AttachmentType;
 const MessageAttachmentFlags = ME.MessageAttachmentFlags;

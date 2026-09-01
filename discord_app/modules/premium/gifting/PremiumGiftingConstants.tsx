@@ -1,6 +1,6 @@
-// === Module 10723: GIFT_STYLE_DESCRIPTIONS ===
+// === Module 10761: GIFT_STYLE_DESCRIPTIONS ===
 
-// Module 10723 (GIFT_STYLE_DESCRIPTIONS)
+// Module 10761 (GIFT_STYLE_DESCRIPTIONS)
 import set from "set" /* 2 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import messagesProxyDefault from "messagesProxy" /* 2433 */;

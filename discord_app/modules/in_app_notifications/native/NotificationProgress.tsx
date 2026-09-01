@@ -1,12 +1,12 @@
-// === Module 10219: NotificationProgress ===
+// === Module 10258: NotificationProgress ===
 
-// Module 10219 (NotificationProgress)
+// Module 10258 (NotificationProgress)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 const require = arg1;
 createCacheKey = { progress: null, progressContainerBottom: null };
@@ -26,7 +26,7 @@ export default function NotificationProgress(percent) {
   first = tmp2[0];
   dependencyMap = tmp2[1];
   callback = React.useCallback((nativeEvent) => callback(nativeEvent.nativeEvent.layout.width), []);
-  let obj = percent(4187);
+  let obj = percent(4217);
   const fn = function s() {
     let obj = percent;
     let value = percent;
@@ -43,6 +43,6 @@ export default function NotificationProgress(percent) {
   obj = { onLayout: callback, style: tmp.progressContainerBottom, children: null };
   const animatedStyle = obj.useAnimatedStyle(fn);
   const items = [tmp.progress, animatedStyle];
-  obj[2] = jsx(first(4187).View, { style: items });
+  obj[2] = jsx(first(4217).View, { style: items });
   return <View onLayout={callback} style={tmp.progressContainerBottom}>{null}</View>;
 };

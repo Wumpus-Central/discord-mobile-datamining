@@ -1,10 +1,10 @@
-// === Module 14944: EmojiMoneyMouthFaceIcon ===
+// === Module 14977: EmojiMoneyMouthFaceIcon ===
 
-// Module 14944 (EmojiMoneyMouthFaceIcon)
+// Module 14977 (EmojiMoneyMouthFaceIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4166 */;
-import registerAsset from "registerAsset" /* 14945 */;
+import BaseIconImage from "BaseIconImage" /* 4196 */;
+import registerAsset from "registerAsset" /* 14978 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,7 +1,7 @@
-// === Module 6078: useGuildShopPreviewVisible ===
+// === Module 6110: useGuildShopPreviewVisible ===
 
-// Module 6078 (useGuildShopPreviewVisible)
-import closure_2 from "getUncachedChannelPermissions" /* 4091 */;
+// Module 6110 (useGuildShopPreviewVisible)
+import closure_2 from "getUncachedChannelPermissions" /* 4121 */;
 import ME from "ME" /* 676 */;
 
 const require = arg1;
@@ -10,8 +10,8 @@ let result = require("set").fileFinishedImporting("modules/creator_monetization/
 
 export const useGuildShopPreviewVisible = function useGuildShopPreviewVisible(features) {
   const _require = features;
-  const result = _require(4268).useIsDismissibleContentDismissed_UNSAFE(_require(1373).DismissibleContent.SERVER_SHOP_PHANTOM_PREVIEW);
-  const obj = _require(4268);
+  const result = _require(4298).useIsDismissibleContentDismissed_UNSAFE(_require(1373).DismissibleContent.SERVER_SHOP_PHANTOM_PREVIEW);
+  const obj = _require(4298);
   const tmp = _require;
   const items = [closure_2];
   let flag;
@@ -36,9 +36,9 @@ export const useGuildShopPreviewVisible = function useGuildShopPreviewVisible(fe
   }
   const items1 = [, , ];
   ({ CREATOR_MONETIZABLE: arr2[0], CREATOR_MONETIZABLE_PROVISIONAL: arr2[1], ROLE_SUBSCRIPTIONS_ENABLED: arr2[2] } = constants);
-  const guildEligibleForGuildProducts = tmp(6073).useGuildEligibleForGuildProducts(id);
+  const guildEligibleForGuildProducts = tmp(6105).useGuildEligibleForGuildProducts(id);
   let tmp9 = null != features;
-  const tmpResult = tmp(6073);
+  const tmpResult = tmp(6105);
   if (tmp9) {
     tmp9 = stateFromStores;
   }

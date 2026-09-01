@@ -1,6 +1,6 @@
-// === Module 4653: metadata ===
+// === Module 4685: metadata ===
 
-// Module 4653 (metadata)
+// Module 4685 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/guild-room/lr-bg-tv.webp.js");

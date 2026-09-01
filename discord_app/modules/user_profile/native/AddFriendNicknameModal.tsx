@@ -1,19 +1,19 @@
-// === Module 12570: AddFriendNicknameModal ===
+// === Module 12603: AddFriendNicknameModal ===
 
-// Module 12570 (AddFriendNicknameModal)
+// Module 12603 (AddFriendNicknameModal)
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4444 */;
-import TextField from "TextField" /* 6190 */;
+import Text from "Text" /* 4474 */;
+import TextField from "TextField" /* 6222 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "markAllUserIdListsStale" /* 4100 */;
+import closure_7 from "markAllUserIdListsStale" /* 4130 */;
 import closure_8 from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
@@ -30,6 +30,7 @@ export default function AddFriendNicknameModal(arg0) {
   dependencyMap = undefined;
   c3 = undefined;
   let callback;
+  let React;
   let callback1;
   function _handleSubmit() {
     const self = this;
@@ -45,12 +46,12 @@ export default function AddFriendNicknameModal(arg0) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
           v0 = 2;
-          if (0 === table) {
+          if (0 === ref) {
             if (arg0 === 1) {
               v0 = 3;
               throw arg1;
@@ -60,55 +61,83 @@ export default function AddFriendNicknameModal(arg0) {
               obj[0] = arg1;
               return obj;
             } else {
-              closure_1 = tmp3;
-              if (table) {
+              closure_2 = tmp3;
+              closure_1 = tmp7;
+              let length;
+              if (closure_1_2) {
                 v0 = 3;
               } else {
-                closure_1_3(true);
-                let ref = 1;
-                obj1 = closure_1_1(table[12]);
                 const current = ref.current;
-                c0 = current;
+                length = current;
                 if (current == null) {
-                  c0 = "";
+                  length = "";
                 }
-                table = 2;
+                closure_1_3(true);
+                c4 = 1;
+                let obj3 = closure_1_1(closure_1_2[13]);
+                ref = 2;
                 v0 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = obj1.updateRelationship(closure_1_0, c0);
+                obj1[0] = obj3.updateRelationship(closure_1_0, length);
                 return obj1;
               }
             }
           } else if (1 === tmp7) {
-            ref = 0;
+            c4 = 0;
             callback(false);
             throw callback;
+          } else if (2 === tmp7) {
+            if (arg0 === 1) {
+              v0 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 0;
+              closure_1_3(false);
+              v0 = 3;
+              const obj2 = { value: null, done: true };
+              obj2[0] = arg1;
+              return obj2;
+            } else {
+              let tmp30 = c4;
+              if (0 === length.length) {
+                const intl2 = closure_1_0(closure_1_2[11]).intl;
+                let stringResult = intl2.string(closure_1_0(closure_1_2[11]).t.O1Uqo3);
+              } else {
+                const intl = closure_1_0(closure_1_2[11]).intl;
+                obj3 = { nickname: null };
+                obj3[0] = length;
+                stringResult = intl.formatToPlainString(closure_1_0(closure_1_2[11]).t.l4ZOaw, obj3);
+              }
+              tmp30 = tmp30(stringResult);
+              ref = 3;
+              v0 = 1;
+            }
           } else if (arg0 === 1) {
             v0 = 3;
             throw arg1;
           } else if (arg0 !== 2) {
             v0();
-            ref = 0;
+            c4 = 0;
             callback(false);
           }
-          ref = 0;
+          c4 = 0;
           callback(false);
           v0 = 3;
           obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
-        } catch (tmp29) {
-          callback = tmp29;
-          if (tmp4 === ref) {
+        } catch (tmp46) {
+          callback = tmp46;
+          if (tmp4 === c4) {
             v0 = tmp2;
-            throw tmp29;
+            throw tmp46;
           } else {
-            table = tmp;
+            ref = tmp;
           }
         }
       }
     });
-    closure_6 = tmp;
+    closure_7 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -118,32 +147,33 @@ export default function AddFriendNicknameModal(arg0) {
     return applyArgumentsResult;
   }
   let tmp = callback4();
-  let obj = callback1;
-  [c2, c3] = callback(callback1.useState(false), 2);
+  let obj = React;
+  [c2, c3] = callback(React.useState(false), 2);
+  callback = showUserProfile(10664)();
   obj1 = initialize;
-  const items = [closure_7];
-  const stateFromStores = obj1.useStateFromStores(items, () => closure_1_7.getNickname(closure_0));
-  let tmp6 = stateFromStores;
+  const items = [_handleSubmit];
+  const stateFromStores = obj1.useStateFromStores(items, () => _handleSubmit.getNickname(closure_0));
+  let tmp7 = stateFromStores;
   if (stateFromStores == null) {
-    tmp6 = null;
+    tmp7 = null;
   }
-  callback = callback1.useRef(tmp6);
+  React = React.useRef(tmp7);
   callback = obj.useCallback((current) => {
-    closure_4.current = current;
+    closure_5.current = current;
   }, []);
-  const tmp2 = callback(callback1.useState(false), 2);
+  const tmp2 = callback(React.useState(false), 2);
   const items1 = [closure_8];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => closure_1_8.getUser(closure_0));
   if (null == stateFromStores) {
-    const intl2 = tmp3(1236).intl;
-    let stringResult = intl2.string(tmp3(1236).t.BGYkaH);
+    let intl2 = tmp5(1236).intl;
+    let stringResult = intl2.string(tmp5(1236).t.BGYkaH);
   } else {
-    const intl = tmp3(1236).intl;
-    stringResult = intl.string(tmp3(1236).t["8pOYUE"]);
+    let intl = tmp5(1236).intl;
+    stringResult = intl.string(tmp5(1236).t["8pOYUE"]);
   }
   const items2 = [showUserProfile];
   callback1 = obj.useCallback(() => {
-    let arr = showUserProfile(_undefined[11]);
+    let arr = showUserProfile(_undefined[12]);
     arr = arr.pop();
     if (showUserProfile != null) {
       showUserProfile();
@@ -151,10 +181,10 @@ export default function AddFriendNicknameModal(arg0) {
   }, items2);
   obj = { style: tmp.container, children: null };
   obj = { children: null };
-  const tmp3Result = initialize;
+  let tmp3Result = tmp3(6049);
   obj1 = { confirmText: null, onConfirm: null, cancelText: null, onCancel: null, children: null };
-  const tmp11 = showUserProfile(6017);
-  const intl3 = tmp3(1236).intl;
+  tmp3Result = tmp3(4947);
+  const intl3 = tmp5(1236).intl;
   obj1[0] = intl3.string(getSystemLocale.t["R3BPH+"]);
   obj1[1] = function handleSubmit() {
     const self = this;
@@ -166,24 +196,24 @@ export default function AddFriendNicknameModal(arg0) {
     }
     return applyArgumentsResult;
   };
-  const intl4 = tmp3(1236).intl;
+  const intl4 = tmp5(1236).intl;
   obj1[2] = intl4.string(getSystemLocale.t["ETE/oC"]);
   obj1[3] = callback1;
   const items3 = [callback2(Text.Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: stringResult }), , ];
-  const obj3 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl5 = tmp3(1236).intl;
+  let obj3 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  const intl5 = tmp5(1236).intl;
   obj3[3] = intl5.string(getSystemLocale.t["NdQ+lP"]);
   items3[1] = callback2(Text.Text, obj3);
   const obj4 = { onChange: callback, autoFocus: true, accessibilityLabel: null, placeholder: null, defaultValue: null, maxLength: 32, isClearable: true };
-  const intl6 = tmp3(1236).intl;
+  const intl6 = tmp5(1236).intl;
   obj4[2] = intl6.string(getSystemLocale.t.pqG6GS);
-  const obj2 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: stringResult };
-  const tmp12 = showUserProfile(4915);
-  obj4[3] = showUserProfile(4292).getName(stateFromStores1);
+  let obj2 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: stringResult };
+  const tmp5Result = initialize;
+  obj4[3] = showUserProfile(4322).getName(stateFromStores1);
   obj4[4] = stateFromStores;
   items3[2] = callback2(TextField.TextField, obj4);
   obj1[4] = items3;
-  obj[0] = callback3(tmp12, obj1);
-  obj[1] = callback2(tmp11, obj);
-  return callback2(_handleSubmit, obj);
+  obj[0] = callback3(tmp3Result, obj1);
+  obj[1] = callback2(tmp3Result, obj);
+  return callback2(callback1, obj);
 };

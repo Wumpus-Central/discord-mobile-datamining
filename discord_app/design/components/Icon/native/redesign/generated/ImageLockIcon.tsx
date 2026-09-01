@@ -1,10 +1,10 @@
-// === Module 5002: ImageLockIcon ===
+// === Module 5034: ImageLockIcon ===
 
-// Module 5002 (ImageLockIcon)
+// Module 5034 (ImageLockIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4166 */;
-import registerAsset from "registerAsset" /* 4983 */;
+import BaseIconImage from "BaseIconImage" /* 4196 */;
+import registerAsset from "registerAsset" /* 5015 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,14 +1,14 @@
-// === Module 7789: HeaderWithBorder ===
+// === Module 7821: HeaderWithBorder ===
 
-// Module 7789 (HeaderWithBorder)
+// Module 7821 (HeaderWithBorder)
 import noopAll from "noop" /* 19 */;
 import set from "set" /* 500 */;
 import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4167 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4303 */;
-import GenericHeaderTitle from "GenericHeaderTitle" /* 7575 */;
+import map from "map" /* 4197 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4333 */;
+import GenericHeaderTitle from "GenericHeaderTitle" /* 7607 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 7790 */;
+import createNativeStackNavigator from "createNativeStackNavigator" /* 7822 */;
 
 require = arg1;
 function HeaderWithBorder(arg0) {
@@ -29,11 +29,11 @@ const result = require("set").fileFinishedImporting("modules/conversations/compo
 export default function ConversationNavigator(route) {
   const params = route.route.params;
   const channelId = params.channelId;
-  let obj = channelId(5976);
+  let obj = channelId(6008);
   obj = { id: "conversation-navigator", screenOptions: obj.useAccessibilityNativeStackOptions(), children: null };
   obj = {
     initialParams: { channelId, guildId: params.guildId },
-    name: channelId(7800).ConversationNavigatorScreens.LIST,
+    name: channelId(7832).ConversationNavigatorScreens.LIST,
     options(navigation) {
       let obj = {
         header(arg0) {
@@ -51,14 +51,14 @@ export default function ConversationNavigator(route) {
       return obj;
     },
     getComponent() {
-      return channelId(7802).default;
+      return channelId(7834).default;
     }
   };
   ({ Navigator, Screen } = Screen);
   const items = [
     callback(Screen, obj),
     callback(Screen.Screen, {
-      name: channelId(7800).ConversationNavigatorScreens.FOCUS,
+      name: channelId(7832).ConversationNavigatorScreens.FOCUS,
       options(route) {
         route = route.route;
         const obj = {
@@ -66,7 +66,7 @@ export default function ConversationNavigator(route) {
             const merged = Object.assign(arg0);
             return callback(closure_5, {});
           },
-          headerLeft: route(7575).getRenderBackImage(route.navigation),
+          headerLeft: route(7607).getRenderBackImage(route.navigation),
           headerTitle() {
             return closure_1_3(closure_1_1(closure_1_2[9]), { channelId: route.params.channelId, title: route.params.title, hasRightAction: true });
           },
@@ -77,7 +77,7 @@ export default function ConversationNavigator(route) {
         return obj;
       },
       getComponent() {
-        return channelId(12884).default;
+        return channelId(12917).default;
       }
     })
   ];

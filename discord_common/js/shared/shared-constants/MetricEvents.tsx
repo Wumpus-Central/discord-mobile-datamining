@@ -1,6 +1,6 @@
-// === Module 7320: set ===
+// === Module 7352: set ===
 
-// Module 7320 (set)
+// Module 7352 (set)
 import set from "set" /* 2 */;
 
 const obj = { ALL: null, DEPRECATED: null };

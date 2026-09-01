@@ -1,6 +1,6 @@
-// === Module 6034: processChannel ===
+// === Module 6066: processChannel ===
 
-// Module 6034 (processChannel)
+// Module 6066 (processChannel)
 import clearAllDefault from "clearAll" /* 1220 */;
 import prototype from "ensureGuildLoaded" /* 1387 */;
 import set from "set" /* 2 */;

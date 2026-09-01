@@ -1,10 +1,10 @@
-// === Module 5001: ExperimentalLfgLockIcon ===
+// === Module 5033: ExperimentalLfgLockIcon ===
 
-// Module 5001 (ExperimentalLfgLockIcon)
+// Module 5033 (ExperimentalLfgLockIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4166 */;
-import registerAsset from "registerAsset" /* 4982 */;
+import BaseIconImage from "BaseIconImage" /* 4196 */;
+import registerAsset from "registerAsset" /* 5014 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

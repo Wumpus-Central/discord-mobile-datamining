@@ -1,6 +1,6 @@
-// === Module 9574: useIframeLifecycle ===
+// === Module 9613: useIframeLifecycle ===
 
-// Module 9574 (useIframeLifecycle)
+// Module 9613 (useIframeLifecycle)
 import closure_2 from "noop" /* 19 */;
 import { ComponentActions } from "ME" /* 676 */;
 

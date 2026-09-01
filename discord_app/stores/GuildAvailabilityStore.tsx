@@ -1,6 +1,6 @@
-// === Module 4823: handleConnectionOpen ===
+// === Module 4855: handleConnectionOpen ===
 
-// Module 4823 (handleConnectionOpen)
+// Module 4855 (handleConnectionOpen)
 import timestampDefault from "timestamp" /* 3 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;

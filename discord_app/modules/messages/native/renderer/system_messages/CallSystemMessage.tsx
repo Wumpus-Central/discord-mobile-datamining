@@ -1,14 +1,14 @@
-// === Module 7856: createCallSystemMessage ===
+// === Module 7888: createCallSystemMessage ===
 
-// Module 7856 (createCallSystemMessage)
-import createCommonMessageDefault from "createCommonMessage" /* 7841 */;
-import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 7857 */;
-import useIsCallActive from "useIsCallActive" /* 7858 */;
-import closure_3 from "getParticipants" /* 4464 */;
+// Module 7888 (createCallSystemMessage)
+import createCommonMessageDefault from "createCommonMessage" /* 7873 */;
+import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 7889 */;
+import useIsCallActive from "useIsCallActive" /* 7890 */;
+import closure_3 from "getParticipants" /* 4494 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "updateVoiceState" /* 4467 */;
+import closure_5 from "updateVoiceState" /* 4497 */;
 import { ME } from "ME" /* 676 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4469 */;
+import { ParticipantTypes } from "ParticipantTypes" /* 4499 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/CallSystemMessage.tsx");
@@ -62,11 +62,11 @@ export const createCallSystemMessage = function createCallSystemMessage(message)
       const intl2 = tmp7(1236).intl;
       obj = { duration: null, timestamp: null };
       obj[0] = tmp6;
-      let tmp7Result = tmp7(4133);
+      let tmp7Result = tmp7(4163);
       obj[1] = tmp7Result.calendarFormat(message.timestamp);
       formatToPlainStringResult = intl2.formatToPlainString(tmp7(1236).t.SBDnp1, obj);
     } else {
-      tmp7Result = tmp7(4133);
+      tmp7Result = tmp7(4163);
       formatToPlainStringResult = tmp7Result.calendarFormat(message.timestamp);
     }
     const author = message.author;

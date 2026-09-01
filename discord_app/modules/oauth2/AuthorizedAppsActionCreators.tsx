@@ -1,10 +1,10 @@
-// === Module 5929: tokensToAppTokensMap ===
+// === Module 5961: tokensToAppTokensMap ===
 
-// Module 5929 (tokensToAppTokensMap)
+// Module 5961 (tokensToAppTokensMap)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "recomputeFromAppTokens" /* 5443 */;
-import { FetchState } from "recomputeFromAppTokens" /* 5443 */;
+import closure_4 from "recomputeFromAppTokens" /* 5475 */;
+import { FetchState } from "recomputeFromAppTokens" /* 5475 */;
 import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
@@ -56,7 +56,7 @@ function _fetchAuthorizedApps() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -107,7 +107,7 @@ function _fetchAuthorizedApps() {
             return obj;
           } else {
             c1 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp5) {
           c1 = tmp;

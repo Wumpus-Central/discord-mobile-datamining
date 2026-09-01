@@ -1,11 +1,11 @@
-// === Module 8441: create ===
+// === Module 8473: create ===
 
-// Module 8441 (create)
+// Module 8473 (create)
 import _mod1307 from "module_1307" /* 1307 */;
-import create from "create" /* 8421 */;
-import create2 from "create" /* 8422 */;
-import create3 from "create" /* 8423 */;
-import create4 from "create" /* 8431 */;
+import create from "create" /* 8453 */;
+import create2 from "create" /* 8454 */;
+import create3 from "create" /* 8455 */;
+import create4 from "create" /* 8463 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import { MessageType } from "module_1307" /* 1307 */;
 
@@ -20,7 +20,7 @@ class BillingSettingsBanner$Type extends MessageType {
       name: "asset",
       kind: "message",
       T() {
-            return callback(8431).ThemeAwareAsset;
+            return callback(8463).ThemeAwareAsset;
           }
     };
     items[3] = {
@@ -28,7 +28,7 @@ class BillingSettingsBanner$Type extends MessageType {
       name: "button",
       kind: "message",
       T() {
-            return callback(8423).CTAButton;
+            return callback(8455).CTAButton;
           }
     };
     items[4] = {
@@ -36,7 +36,7 @@ class BillingSettingsBanner$Type extends MessageType {
       name: "header_localized",
       kind: "message",
       T() {
-            return callback(8421).LocalizedString;
+            return callback(8453).LocalizedString;
           }
     };
     obj = { no: 6, name: "body_localized", kind: "message", T: null };
@@ -52,7 +52,7 @@ class BillingSettingsBanner$Type extends MessageType {
       name: "help_article",
       kind: "message",
       T() {
-            return callback(8422).HelpArticle;
+            return callback(8454).HelpArticle;
           }
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.BillingSettingsBanner", items, T);
@@ -221,7 +221,7 @@ let items = [
     name: "asset",
     kind: "message",
     T() {
-      return callback(8431).ThemeAwareAsset;
+      return callback(8463).ThemeAwareAsset;
     }
   },
   {
@@ -229,7 +229,7 @@ let items = [
     name: "button",
     kind: "message",
     T() {
-      return callback(8423).CTAButton;
+      return callback(8455).CTAButton;
     }
   },
   {
@@ -237,7 +237,7 @@ let items = [
     name: "header_localized",
     kind: "message",
     T() {
-      return callback(8421).LocalizedString;
+      return callback(8453).LocalizedString;
     }
   },
 ,
@@ -256,7 +256,7 @@ items[6] = {
   name: "help_article",
   kind: "message",
   T() {
-    return callback(8422).HelpArticle;
+    return callback(8454).HelpArticle;
   }
 };
 prototype = new prototype("discord_protos.premium_marketing.v1.BillingSettingsBanner", items, tmp, T, BillingSettingsBanner$Type, prototype, items);

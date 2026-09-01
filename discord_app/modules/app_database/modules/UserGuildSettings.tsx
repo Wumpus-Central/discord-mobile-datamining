@@ -1,9 +1,9 @@
-// === Module 7204: getAll ===
+// === Module 7236: getAll ===
 
-// Module 7204 (getAll)
+// Module 7236 (getAll)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal" /* 4669 */;
+import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal" /* 4701 */;
 import set from "set" /* 2 */;
 
 let set = importDefault;

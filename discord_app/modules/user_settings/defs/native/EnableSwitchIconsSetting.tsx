@@ -1,10 +1,10 @@
-// === Module 14976: useEnableSwitchIconsSettingValue ===
+// === Module 15009: useEnableSwitchIconsSettingValue ===
 
-// Module 14976 (useEnableSwitchIconsSettingValue)
+// Module 15009 (useEnableSwitchIconsSettingValue)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4440 */;
-import createToggle from "createToggle" /* 11031 */;
+import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
+import createToggle from "createToggle" /* 11068 */;
 
 require = arg1;
 function useEnableSwitchIconsSettingValue() {

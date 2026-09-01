@@ -1,6 +1,6 @@
-// === Module 14714: prototype ===
+// === Module 14747: prototype ===
 
-// Module 14714 (prototype)
+// Module 14747 (prototype)
 import set from "set" /* 2 */;
 
 const prototype = function VttParserError(arg0, error) {

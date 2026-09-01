@@ -1,8 +1,8 @@
-// === Module 13536: openGuildLimitedAccessInfoModal ===
+// === Module 13569: openGuildLimitedAccessInfoModal ===
 
-// Module 13536 (openGuildLimitedAccessInfoModal)
+// Module 13569 (openGuildLimitedAccessInfoModal)
 import noopAll from "noop" /* 19 */;
-import _modDef4826 from "module_4826" /* 4826 */;
+import _modDef4858 from "module_4858" /* 4858 */;
 import { Keyboard } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -13,7 +13,7 @@ const result = require("set").fileFinishedImporting("modules/guild_limited_acces
 export default function openGuildLimitedAccessInfoModal(arg0) {
   const _require = arg0;
   Keyboard.dismiss();
-  let obj = _require(4310);
+  let obj = _require(4340);
   const bestActiveInput = obj.getBestActiveInput();
   if (bestActiveInput != null) {
     bestActiveInput.blur();
@@ -31,5 +31,5 @@ export default function openGuildLimitedAccessInfoModal(arg0) {
       });
     }
   };
-  _modDef4826.openLazy(obj);
+  _modDef4858.openLazy(obj);
 };

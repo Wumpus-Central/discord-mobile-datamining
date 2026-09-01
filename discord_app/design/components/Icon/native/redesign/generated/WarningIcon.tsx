@@ -1,10 +1,10 @@
-// === Module 8699: WarningIcon ===
+// === Module 8736: WarningIcon ===
 
-// Module 8699 (WarningIcon)
+// Module 8736 (WarningIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4166 */;
-import registerAsset from "registerAsset" /* 8700 */;
+import BaseIconImage from "BaseIconImage" /* 4196 */;
+import registerAsset from "registerAsset" /* 8737 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,10 +1,10 @@
-// === Module 11768: ? ===
+// === Module 11801: ? ===
 
-// Module 11768
-import closure_3 from "handleInit" /* 7492 */;
-import { DraftType } from "handleChanged" /* 4822 */;
-import closure_5 from "map" /* 4821 */;
-import { useChatShowingAutoComplete as closure_6 } from "updateChatInputContainerHeight" /* 9495 */;
+// Module 11801
+import closure_3 from "handleInit" /* 7524 */;
+import { DraftType } from "handleChanged" /* 4854 */;
+import closure_5 from "map" /* 4853 */;
+import { useChatShowingAutoComplete as closure_6 } from "updateChatInputContainerHeight" /* 9534 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
@@ -38,7 +38,7 @@ const memoResult = importAllResult.memo(function ChatInputImageCarousel(canUploa
     obj = { attachments: null, channelId: null };
     obj[0] = stateFromStores;
     obj[1] = channelId;
-    tmp4 = jsx(channelId(10385), { attachments: null, channelId: null });
+    tmp4 = jsx(channelId(10424), { attachments: null, channelId: null });
   }
   return tmp4;
 });

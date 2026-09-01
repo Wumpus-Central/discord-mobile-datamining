@@ -1,14 +1,14 @@
-// === Module 16253: ? ===
+// === Module 16288: ? ===
 
-// Module 16253
+// Module 16288
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4444 */;
-import registerAssetDefault from "registerAsset" /* 11772 */;
+import Text from "Text" /* 4474 */;
+import registerAssetDefault from "registerAsset" /* 11805 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 import importAllResult from "noop" /* 19 */;
 
 require = arg1;
@@ -41,7 +41,7 @@ const memoResult = importAllResult.memo((onCreateThreadPress) => {
     obj3[0] = onCreateThreadPress;
     const intl3 = tmp5(1236).intl;
     obj3[1] = intl3.string(tmp5(1236).t.rBIGBL);
-    tmp4Result = callback(tmp5(4896).Button, obj3);
+    tmp4Result = callback(tmp5(4928).Button, obj3);
   }
   items[3] = tmp4Result;
   obj[1] = items;

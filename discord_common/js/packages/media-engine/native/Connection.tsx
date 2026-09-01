@@ -1,14 +1,14 @@
-// === Module 4558: create ===
+// === Module 4590: create ===
 
-// Module 4558 (create)
-import inject from "inject" /* 4501 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4547 */;
-import destroyDefault from "destroy" /* 4559 */;
-import WantsVideoQuality from "WantsVideoQuality" /* 4560 */;
-import VADAggressiveness2 from "VADAggressiveness" /* 4612 */;
+// Module 4590 (create)
+import inject from "inject" /* 4531 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4579 */;
+import destroyDefault from "destroy" /* 4591 */;
+import WantsVideoQuality from "WantsVideoQuality" /* 4592 */;
+import VADAggressiveness2 from "VADAggressiveness" /* 4644 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import DesktopSources from "DesktopSources" /* 4512 */;
-import AudioSubsystems from "AudioSubsystems" /* 4549 */;
+import DesktopSources from "DesktopSources" /* 4542 */;
+import AudioSubsystems from "AudioSubsystems" /* 4581 */;
 
 require = arg1;
 ({ StatsFilter: c4, ExperimentFlags: c5, DESKTOP_BITRATE_ENHANCED: closure_6, DESKTOP_BITRATE: error, MEDIA_SINK_WANTS_PROPERTIES: closure_8, MediaTypes: c9, SIMULCAST_HQ_QUALITY: c10 } = DesktopSources);
@@ -515,7 +515,7 @@ prototype["initialize"] = function initialize(address) {
   let items = [{ type: constants2.AUDIO, ssrc: this.audioSSRC, rid: "", maxBitrate: 64000, soundshare: this.context === constants5.STREAM }, ...this.videoStreamParameters];
   address.streamParameters = items;
   address.context = this.context;
-  const voiceEngine = createVoiceConnection(4501).getVoiceEngine();
+  const voiceEngine = createVoiceConnection(4531).getVoiceEngine();
   if (null != voiceEngine.createOwnStreamConnectionWithOptions) {
     if (self.context !== tmp3.STREAM) {
       const createVoiceConnectionWithOptions = voiceEngine.createVoiceConnectionWithOptions;
@@ -791,13 +791,13 @@ prototype["getStats"] = function getStats() {
         const obj = self(closure_1_2[4]);
       }
     });
-    let obj = self(4608);
-    resolved = self(4608).timeout(promise, self(4557).STATS_INTERVAL).catch((arg0) => {
+    let obj = self(4640);
+    resolved = self(4640).timeout(promise, self(4589).STATS_INTERVAL).catch((arg0) => {
       if (!(arg0 instanceof self(table[8]).TimeoutError)) {
         throw arg0;
       }
     });
-    const timeoutResult = self(4608).timeout(promise, self(4557).STATS_INTERVAL);
+    const timeoutResult = self(4640).timeout(promise, self(4589).STATS_INTERVAL);
   }
   return resolved;
 };
@@ -1362,7 +1362,7 @@ prototype["setAudioVideoOverridesTransport"] = function setAudioVideoOverridesTr
         const _performance = performance;
         self.overrideCodecResetAt = performance.now();
       }
-      self.emit(set(4547).BaseConnectionEvent.VideoEncoderFallback, self.codecs);
+      self.emit(set(4579).BaseConnectionEvent.VideoEncoderFallback, self.codecs);
     }
   }
 };
@@ -1545,7 +1545,7 @@ prototype["setDesktopEncodingOptions"] = function setDesktopEncodingOptions(resu
         obj1[2] = calcMaxBitrateFuncResult;
         videoQualityManager2.setGoliveQuality(obj1);
         if (self.videoStreamParameters.length <= num5) {
-          const Video = tmp9(4547).BaseConnectionEvent.Video;
+          const Video = tmp9(4579).BaseConnectionEvent.Video;
           ({ userId, audioSSRC } = self);
           const ssrc = self.videoStreamParameters[num5].ssrc;
           const ssrc2 = self.videoStreamParameters[num5].ssrc;
@@ -1713,7 +1713,7 @@ prototype["setStreamParameters"] = function setStreamParameters(arg0) {
         const _Error = Error;
         error = new Error("Invalid rid");
         lib(error);
-        return { v: "Array" };
+        return { v: "r" };
       } else {
         const items = [];
         if (!callback(self[11])(lib.videoStreamParameters[findIndexResult], tmp[findIndexResult])) {
@@ -1897,7 +1897,7 @@ prototype["getCodecOptions"] = function getCodecOptions(name, H264, closure_0) {
       let obj = { name: null, type: null, rtxType: null, params: null };
       let tmp25 = _require;
       let tmp26 = dependencyMap;
-      let obj5 = _require(4607);
+      let obj5 = _require(4639);
       let tmp27 = nextResult;
       obj[0] = obj5.codecNameToPayloadName(tmp4.name);
       let num3;
@@ -1946,7 +1946,7 @@ prototype["getCodecOptions"] = function getCodecOptions(name, H264, closure_0) {
       tmp7.params["hardware-h264"] = "1";
       let experimentFlags5 = self.experimentFlags;
       if (experimentFlags5.has(tmp8.USE_LIBOPENH264_DECODER)) {
-        let tmp25Result = tmp25(4501);
+        let tmp25Result = tmp25(4531);
         let openH264LibraryPath = tmp25Result.getOpenH264LibraryPath();
         if (null != openH264LibraryPath) {
           let tmp16 = obj;

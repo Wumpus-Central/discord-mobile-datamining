@@ -1,6 +1,6 @@
-// === Module 10633: useShowUnlinkChannelAlert ===
+// === Module 10671: useShowUnlinkChannelAlert ===
 
-// Module 10633 (useShowUnlinkChannelAlert)
+// Module 10671 (useShowUnlinkChannelAlert)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 
@@ -40,7 +40,7 @@ export default function useShowUnlinkChannelAlert(arg0, arg1, arg2) {
   }), items);
   const items1 = [arg1, callback];
   return React.useCallback(() => {
-    let obj = callback2(4826);
+    let obj = callback2(4858);
     obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, confirmColor: null };
     const intl = callback(1236).intl;
     obj[0] = intl.string(callback(1236).t.JmUENg);
@@ -52,7 +52,7 @@ export default function useShowUnlinkChannelAlert(arg0, arg1, arg2) {
     const intl4 = callback(1236).intl;
     obj[3] = intl4.string(callback(1236).t["cY+Oob"]);
     obj[4] = callback;
-    obj[5] = callback2(4915).Colors.RED;
+    obj[5] = callback2(4947).Colors.RED;
     obj.show(obj);
   }, items1);
 };

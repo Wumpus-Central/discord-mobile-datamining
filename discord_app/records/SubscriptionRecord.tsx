@@ -1,11 +1,11 @@
-// === Module 4116: createSubscriptionItemFromServer ===
+// === Module 4146: createSubscriptionItemFromServer ===
 
-// Module 4116 (createSubscriptionItemFromServer)
-import toJSDefault from "toJS" /* 1931 */;
-import closure_3 from "createFromServer" /* 4117 */;
-import closure_4 from "createFromServer" /* 4118 */;
+// Module 4146 (createSubscriptionItemFromServer)
+import toJSDefault from "toJS" /* 1936 */;
+import closure_3 from "createFromServer" /* 4147 */;
+import closure_4 from "createFromServer" /* 4148 */;
 import ME from "ME" /* 676 */;
-import set from "set" /* 4120 */;
+import set from "set" /* 4150 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
 const require = arg1;
@@ -229,8 +229,8 @@ Object.defineProperty(prototype, "isOnPlatformMatchingExternalPaymentGateway", {
     if (!isPurchasedViaApple) {
       let isPurchasedViaGoogle = this.isPurchasedViaGoogle;
       if (isPurchasedViaGoogle) {
-        isPurchasedViaGoogle = require(4122) /* isPremiumGiftingSupported */.isGooglePlayBillingSupported();
-        const obj2 = require(4122) /* isPremiumGiftingSupported */;
+        isPurchasedViaGoogle = require(4152) /* isPremiumGiftingSupported */.isGooglePlayBillingSupported();
+        const obj2 = require(4152) /* isPremiumGiftingSupported */;
       }
       isPurchasedViaApple = isPurchasedViaGoogle;
     }

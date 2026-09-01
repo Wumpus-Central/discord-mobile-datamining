@@ -1,6 +1,6 @@
-// === Module 17468: libDiscoreSmokeTest ===
+// === Module 17504: libDiscoreSmokeTest ===
 
-// Module 17468 (libDiscoreSmokeTest)
+// Module 17504 (libDiscoreSmokeTest)
 import timestampDefault from "timestamp" /* 3 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
@@ -31,7 +31,7 @@ function _libDiscoreSmokeTest() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

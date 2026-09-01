@@ -1,6 +1,6 @@
-// === Module 4677: guildHasOnboardingHome ===
+// === Module 4709: guildHasOnboardingHome ===
 
-// Module 4677 (guildHasOnboardingHome)
+// Module 4709 (guildHasOnboardingHome)
 import set from "set" /* 2 */;
 import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1912 */;
 import ME from "ME" /* 676 */;

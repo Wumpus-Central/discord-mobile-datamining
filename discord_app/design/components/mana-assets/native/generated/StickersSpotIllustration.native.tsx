@@ -1,10 +1,10 @@
-// === Module 7005: StickersSpotIllustration ===
+// === Module 7037: StickersSpotIllustration ===
 
-// Module 7005 (StickersSpotIllustration)
+// Module 7037 (StickersSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5461 */;
-import metadataDefault from "metadata" /* 7006 */;
+import preloadDefault from "preload" /* 5493 */;
+import metadataDefault from "metadata" /* 7038 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/StickersSpotIllustration.native.tsx");

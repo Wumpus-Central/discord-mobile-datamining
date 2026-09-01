@@ -1,6 +1,6 @@
-// === Module 14121: transformStoreAssetFromServer ===
+// === Module 14154: transformStoreAssetFromServer ===
 
-// Module 14121 (transformStoreAssetFromServer)
+// Module 14154 (transformStoreAssetFromServer)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/game_store/GameStoreAsset.tsx");

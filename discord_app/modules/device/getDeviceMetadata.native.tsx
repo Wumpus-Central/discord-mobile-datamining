@@ -1,8 +1,8 @@
-// === Module 7390: getDeviceMetadata ===
+// === Module 7422: getDeviceMetadata ===
 
-// Module 7390 (getDeviceMetadata)
+// Module 7422 (getDeviceMetadata)
 import set from "set" /* 2 */;
-import getDeviceMetadata from "getDeviceMetadata" /* 7188 */;
+import getDeviceMetadata from "getDeviceMetadata" /* 7220 */;
 
 const result = set.fileFinishedImporting("modules/device/getDeviceMetadata.native.tsx");
 

@@ -1,9 +1,9 @@
-// === Module 13370: getIconURL ===
+// === Module 13403: getIconURL ===
 
-// Module 13370 (getIconURL)
+// Module 13403 (getIconURL)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import createExecutableDefault from "createExecutable" /* 4474 */;
-import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5195 */;
+import createExecutableDefault from "createExecutable" /* 4504 */;
+import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5227 */;
 
 require = arg1;
 createExecutableDefault;

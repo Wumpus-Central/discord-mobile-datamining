@@ -1,8 +1,8 @@
-// === Module 8182: getUserMaxFileSize ===
+// === Module 8214: getUserMaxFileSize ===
 
-// Module 8182 (getUserMaxFileSize)
+// Module 8214 (getUserMaxFileSize)
 import isPremiumAtLeast from "isPremiumAtLeast" /* 1946 */;
-import closure_2 from "setPremiumTypeActual" /* 1923 */;
+import closure_2 from "setActualFromUser" /* 1923 */;
 import ME from "ME" /* 676 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 

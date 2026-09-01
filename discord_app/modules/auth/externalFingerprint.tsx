@@ -1,8 +1,8 @@
-// === Module 17441: externalFingerprint ===
+// === Module 17477: externalFingerprint ===
 
-// Module 17441 (externalFingerprint)
+// Module 17477 (externalFingerprint)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import keysSorter from "keysSorter" /* 5366 */;
+import keysSorter from "keysSorter" /* 5398 */;
 import closure_3 from "fetchFingerprint" /* 1218 */;
 
 require = arg1;

@@ -1,6 +1,6 @@
-// === Module 14971: SettingsBadgeType ===
+// === Module 15004: SettingsBadgeType ===
 
-// Module 14971 (SettingsBadgeType)
+// Module 15004 (SettingsBadgeType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/settings/native/renderer/SettingRendererTypes.tsx");

@@ -1,6 +1,6 @@
-// === Module 7360: handleBackgroundSync ===
+// === Module 7392: handleBackgroundSync ===
 
-// Module 7360 (handleBackgroundSync)
+// Module 7392 (handleBackgroundSync)
 import set from "set" /* 2 */;
 import createChannelRecord from "createChannelRecord" /* 1391 */;
 import closure_3 from "fetchFingerprint" /* 1218 */;

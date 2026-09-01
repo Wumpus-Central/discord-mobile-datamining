@@ -1,14 +1,14 @@
-// === Module 16159: VibegrationsSecretsSheet ===
+// === Module 16194: VibegrationsSecretsSheet ===
 
-// Module 16159 (VibegrationsSecretsSheet)
+// Module 16194 (VibegrationsSecretsSheet)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import rejectPendingPublish from "rejectPendingPublish" /* 16142 */;
+import rejectPendingPublish from "rejectPendingPublish" /* 16177 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 const require = arg1;
 ({ sendUserMessage: error, submitProjectSecrets: closure_8 } = rejectPendingPublish);
@@ -91,7 +91,7 @@ export default function VibegrationsSecretsSheet(projectId) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

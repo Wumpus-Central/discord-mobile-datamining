@@ -1,10 +1,10 @@
-// === Module 4416: HapticFeedbackTypes ===
+// === Module 4446: HapticFeedbackTypes ===
 
-// Module 4416 (HapticFeedbackTypes)
+// Module 4446 (HapticFeedbackTypes)
 import set from "set" /* 2 */;
 import set2 from "set" /* 500 */;
-import IMPACT_LIGHTDefault from "IMPACT_LIGHT" /* 4417 */;
-import useHaptics from "useHaptics" /* 4418 */;
+import IMPACT_LIGHTDefault from "IMPACT_LIGHT" /* 4447 */;
+import useHaptics from "useHaptics" /* 4448 */;
 
 const result = set.fileFinishedImporting("modules/haptics/HapticUtils.native.tsx");
 
@@ -21,11 +21,11 @@ export const triggerHapticFeedback = function triggerHapticFeedback(IMPACT_LIGHT
         str37 = "impactLight";
       }
       str36 = str37;
-      tmp69Result = tmp69(4427);
+      tmp69Result = tmp69(4457);
     }
     obj41.trigger(str36);
     obj42 = set2;
-  } else if (tmp(4417).IMPACT_MEDIUM === IMPACT_LIGHT) {
+  } else if (tmp(4447).IMPACT_MEDIUM === IMPACT_LIGHT) {
     const obj38 = useHaptics;
     const tmp66 = require;
     let str34 = "impactMedium";
@@ -36,17 +36,17 @@ export const triggerHapticFeedback = function triggerHapticFeedback(IMPACT_LIGHT
         str35 = "impactLight";
       }
       str34 = str35;
-      tmp66Result = tmp66(4427);
+      tmp66Result = tmp66(4457);
     }
     obj38.trigger(str34);
     obj39 = set2;
-  } else if (tmp(4417).IMPACT_HEAVY === IMPACT_LIGHT) {
+  } else if (tmp(4447).IMPACT_HEAVY === IMPACT_LIGHT) {
     useHaptics.trigger("impactHeavy");
     const obj37 = useHaptics;
-  } else if (tmp(4417).NOTIFICATION_ERROR === IMPACT_LIGHT) {
+  } else if (tmp(4447).NOTIFICATION_ERROR === IMPACT_LIGHT) {
     useHaptics.trigger("notificationError");
     const obj36 = useHaptics;
-  } else if (tmp(4417).DRAG_AND_DROP_START === IMPACT_LIGHT) {
+  } else if (tmp(4447).DRAG_AND_DROP_START === IMPACT_LIGHT) {
     const obj34 = useHaptics;
     let str31 = "impactHeavy";
     if (obj35.isAndroid()) {
@@ -54,7 +54,7 @@ export const triggerHapticFeedback = function triggerHapticFeedback(IMPACT_LIGHT
     }
     obj34.trigger(str31);
     obj35 = set2;
-  } else if (tmp(4417).DRAG_AND_DROP_END === IMPACT_LIGHT) {
+  } else if (tmp(4447).DRAG_AND_DROP_END === IMPACT_LIGHT) {
     const obj31 = useHaptics;
     const tmp57 = require;
     let str29 = "notificationSuccess";
@@ -65,11 +65,11 @@ export const triggerHapticFeedback = function triggerHapticFeedback(IMPACT_LIGHT
         str30 = "impactLight";
       }
       str29 = str30;
-      tmp57Result = tmp57(4427);
+      tmp57Result = tmp57(4457);
     }
     obj31.trigger(str29);
     obj32 = set2;
-  } else if (tmp(4417).DRAG_AND_DROP_MOVE === IMPACT_LIGHT) {
+  } else if (tmp(4447).DRAG_AND_DROP_MOVE === IMPACT_LIGHT) {
     const obj28 = useHaptics;
     const tmp54 = require;
     let str27 = "impactMedium";
@@ -80,14 +80,14 @@ export const triggerHapticFeedback = function triggerHapticFeedback(IMPACT_LIGHT
         str28 = "impactLight";
       }
       str27 = str28;
-      tmp54Result = tmp54(4427);
+      tmp54Result = tmp54(4457);
     }
     obj28.trigger(str27);
     obj29 = set2;
-  } else if (tmp(4417).SOFT === IMPACT_LIGHT) {
+  } else if (tmp(4447).SOFT === IMPACT_LIGHT) {
     useHaptics.trigger("soft");
     const obj27 = useHaptics;
-  } else if (tmp(4417).SELECTION === IMPACT_LIGHT) {
+  } else if (tmp(4447).SELECTION === IMPACT_LIGHT) {
     const obj24 = useHaptics;
     const tmp49 = require;
     let str24 = "selection";
@@ -98,80 +98,80 @@ export const triggerHapticFeedback = function triggerHapticFeedback(IMPACT_LIGHT
         str25 = "impactLight";
       }
       str24 = str25;
-      tmp49Result = tmp49(4427);
+      tmp49Result = tmp49(4457);
     }
     obj24.trigger(str24);
     obj25 = set2;
-  } else if (tmp(4417).RIGID === IMPACT_LIGHT) {
+  } else if (tmp(4447).RIGID === IMPACT_LIGHT) {
     useHaptics.trigger("rigid");
     const obj23 = useHaptics;
-  } else if (tmp(4417).NOTIFICATION_SUCCESS === IMPACT_LIGHT) {
+  } else if (tmp(4447).NOTIFICATION_SUCCESS === IMPACT_LIGHT) {
     useHaptics.trigger("notificationSuccess");
     const obj22 = useHaptics;
-  } else if (tmp(4417).NOTIFICATION_WARNING === IMPACT_LIGHT) {
+  } else if (tmp(4447).NOTIFICATION_WARNING === IMPACT_LIGHT) {
     useHaptics.trigger("notificationWarning");
     const obj21 = useHaptics;
-  } else if (tmp(4417).CONFIRM === IMPACT_LIGHT) {
+  } else if (tmp(4447).CONFIRM === IMPACT_LIGHT) {
     useHaptics.trigger("confirm");
     const obj20 = useHaptics;
-  } else if (tmp(4417).REJECT === IMPACT_LIGHT) {
+  } else if (tmp(4447).REJECT === IMPACT_LIGHT) {
     useHaptics.trigger("reject");
     const obj19 = useHaptics;
-  } else if (tmp(4417).GESTURE_START === IMPACT_LIGHT) {
+  } else if (tmp(4447).GESTURE_START === IMPACT_LIGHT) {
     useHaptics.trigger("gestureStart");
     const obj18 = useHaptics;
-  } else if (tmp(4417).GESTURE_END === IMPACT_LIGHT) {
+  } else if (tmp(4447).GESTURE_END === IMPACT_LIGHT) {
     useHaptics.trigger("gestureEnd");
     const obj17 = useHaptics;
-  } else if (tmp(4417).SEGMENT_TICK === IMPACT_LIGHT) {
+  } else if (tmp(4447).SEGMENT_TICK === IMPACT_LIGHT) {
     useHaptics.trigger("segmentTick");
     const obj16 = useHaptics;
-  } else if (tmp(4417).SEGMENT_FREQUENT_TICK === IMPACT_LIGHT) {
+  } else if (tmp(4447).SEGMENT_FREQUENT_TICK === IMPACT_LIGHT) {
     useHaptics.trigger("segmentFrequentTick");
     const obj15 = useHaptics;
-  } else if (tmp(4417).TOGGLE_ON === IMPACT_LIGHT) {
+  } else if (tmp(4447).TOGGLE_ON === IMPACT_LIGHT) {
     useHaptics.trigger("toggleOn");
     const obj14 = useHaptics;
-  } else if (tmp(4417).TOGGLE_OFF === IMPACT_LIGHT) {
+  } else if (tmp(4447).TOGGLE_OFF === IMPACT_LIGHT) {
     useHaptics.trigger("toggleOff");
     const obj13 = useHaptics;
-  } else if (tmp(4417).CLOCK_TICK === IMPACT_LIGHT) {
+  } else if (tmp(4447).CLOCK_TICK === IMPACT_LIGHT) {
     useHaptics.trigger("clockTick");
     const obj12 = useHaptics;
-  } else if (tmp(4417).CONTEXT_CLICK === IMPACT_LIGHT) {
+  } else if (tmp(4447).CONTEXT_CLICK === IMPACT_LIGHT) {
     useHaptics.trigger("contextClick");
     const obj11 = useHaptics;
-  } else if (tmp(4417).KEYBOARD_PRESS === IMPACT_LIGHT) {
+  } else if (tmp(4447).KEYBOARD_PRESS === IMPACT_LIGHT) {
     useHaptics.trigger("keyboardPress");
     const obj10 = useHaptics;
-  } else if (tmp(4417).KEYBOARD_RELEASE === IMPACT_LIGHT) {
+  } else if (tmp(4447).KEYBOARD_RELEASE === IMPACT_LIGHT) {
     useHaptics.trigger("keyboardRelease");
     const obj9 = useHaptics;
-  } else if (tmp(4417).KEYBOARD_TAP === IMPACT_LIGHT) {
+  } else if (tmp(4447).KEYBOARD_TAP === IMPACT_LIGHT) {
     useHaptics.trigger("keyboardTap");
     const obj8 = useHaptics;
-  } else if (tmp(4417).LONG_PRESS === IMPACT_LIGHT) {
+  } else if (tmp(4447).LONG_PRESS === IMPACT_LIGHT) {
     useHaptics.trigger("longPress");
     const obj7 = useHaptics;
-  } else if (tmp(4417).TEXT_HANDLE_MOVE === IMPACT_LIGHT) {
+  } else if (tmp(4447).TEXT_HANDLE_MOVE === IMPACT_LIGHT) {
     useHaptics.trigger("textHandleMove");
     const obj6 = useHaptics;
-  } else if (tmp(4417).VIRTUAL_KEY === IMPACT_LIGHT) {
+  } else if (tmp(4447).VIRTUAL_KEY === IMPACT_LIGHT) {
     useHaptics.trigger("virtualKey");
     const obj5 = useHaptics;
-  } else if (tmp(4417).VIRTUAL_KEY_RELEASE === IMPACT_LIGHT) {
+  } else if (tmp(4447).VIRTUAL_KEY_RELEASE === IMPACT_LIGHT) {
     useHaptics.trigger("virtualKeyRelease");
     const obj4 = useHaptics;
-  } else if (tmp(4417).EFFECT_CLICK === IMPACT_LIGHT) {
+  } else if (tmp(4447).EFFECT_CLICK === IMPACT_LIGHT) {
     useHaptics.trigger("effectClick");
     const obj3 = useHaptics;
-  } else if (tmp(4417).EFFECT_DOUBLE_CLICK === IMPACT_LIGHT) {
+  } else if (tmp(4447).EFFECT_DOUBLE_CLICK === IMPACT_LIGHT) {
     useHaptics.trigger("effectDoubleClick");
     const obj2 = useHaptics;
-  } else if (tmp(4417).EFFECT_HEAVY_CLICK === IMPACT_LIGHT) {
+  } else if (tmp(4447).EFFECT_HEAVY_CLICK === IMPACT_LIGHT) {
     useHaptics.trigger("effectHeavyClick");
     const obj = useHaptics;
-  } else if (tmp(4417).EFFECT_TICK === IMPACT_LIGHT) {
+  } else if (tmp(4447).EFFECT_TICK === IMPACT_LIGHT) {
     useHaptics.trigger("effectTick");
     const obj44 = useHaptics;
   }

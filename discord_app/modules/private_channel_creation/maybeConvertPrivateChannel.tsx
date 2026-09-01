@@ -1,8 +1,8 @@
-// === Module 7467: maybeConvertPrivateChannel ===
+// === Module 7499: maybeConvertPrivateChannel ===
 
-// Module 7467 (maybeConvertPrivateChannel)
-import _modDef4461 from "module_4461" /* 4461 */;
-import FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID from "FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID" /* 6036 */;
+// Module 7499 (maybeConvertPrivateChannel)
+import _modDef4491 from "module_4491" /* 4491 */;
+import FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID from "FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID" /* 6068 */;
 import closure_3 from "ensureGuildLoaded" /* 1387 */;
 
 require = arg1;
@@ -15,8 +15,8 @@ export default function maybeConvertPrivateChannel(arg0) {
     channel = channel.getChannel(arg0);
     let ensurePrivateChannelResult = null;
     if (null != channel) {
-      ensurePrivateChannelResult = _modDef4461.ensurePrivateChannel(channel.recipients);
-      const obj = _modDef4461;
+      ensurePrivateChannelResult = _modDef4491.ensurePrivateChannel(channel.recipients);
+      const obj = _modDef4491;
     }
     return ensurePrivateChannelResult;
   }

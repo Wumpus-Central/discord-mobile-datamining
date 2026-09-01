@@ -1,11 +1,11 @@
-// === Module 8052: useFetchPurchases ===
+// === Module 8084: useFetchPurchases ===
 
-// Module 8052 (useFetchPurchases)
-import setDefault from "set" /* 8053 */;
+// Module 8084 (useFetchPurchases)
+import setDefault from "set" /* 8085 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
-import closure_6 from "getHash" /* 4361 */;
-import closure_7 from "map" /* 7271 */;
+import closure_6 from "getHash" /* 4391 */;
+import closure_7 from "map" /* 7303 */;
 
 const require = arg1;
 function useFetchPurchases(flag) {

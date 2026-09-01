@@ -1,12 +1,12 @@
-// === Module 7370: getAll ===
+// === Module 7402: getAll ===
 
-// Module 7370 (getAll)
+// Module 7402 (getAll)
 import timestampDefault from "timestamp" /* 3 */;
 import itemsDefault from "items" /* 1956 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "recountRelationshipTypes" /* 7371 */;
-import closure_5 from "recomputeAffinities" /* 7372 */;
-import closure_6 from "markAllUserIdListsStale" /* 4100 */;
+import closure_4 from "recountRelationshipTypes" /* 7403 */;
+import closure_5 from "recomputeAffinities" /* 7404 */;
+import closure_6 from "markAllUserIdListsStale" /* 4130 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import { RelationshipTypes } from "ME" /* 676 */;
 import set from "set" /* 2 */;
@@ -41,7 +41,7 @@ prototype["getAll"] = function getAll() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -129,7 +129,7 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database) {
     if (null != user) {
       let tmp14 = set;
       let tmp15 = dependencyMap;
-      let obj5 = set(7374);
+      let obj5 = set(7406);
       let tmp16 = user;
       let names = obj5.getNames(tmp6);
       let tmp18 = nextResult;
@@ -164,7 +164,7 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database) {
     if (null != user1) {
       let tmp22 = set;
       let tmp23 = dependencyMap;
-      let obj7 = set(7374);
+      let obj7 = set(7406);
       let tmp24 = user1;
       let names1 = obj7.getNames(tmp11);
       let tmp26 = item10033;

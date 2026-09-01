@@ -1,6 +1,6 @@
-// === Module 10170: inlineChannelMentionReact ===
+// === Module 10209: inlineChannelMentionReact ===
 
-// Module 10170 (inlineChannelMentionReact)
+// Module 10209 (inlineChannelMentionReact)
 import noopAll from "noop" /* 19 */;
 import { jsxs } from "jsxProd" /* 21 */;
 
@@ -11,14 +11,14 @@ const result = require("set").fileFinishedImporting("modules/markup/native/Marku
 
 export const inlineChannelMentionReact = function inlineChannelMentionReact(inContent, output, key) {
   if (null == inContent.inContent) {
-    let smartOutputResult = u1F4AC(7973).smartOutput(inContent, output, key);
-    const obj3 = u1F4AC(7973);
+    let smartOutputResult = u1F4AC(8005).smartOutput(inContent, output, key);
+    const obj3 = u1F4AC(8005);
   } else {
     const obj = { children: null };
-    const items = [output(inContent.inContent, key), " \u203A ", u1F4AC(7973).smartOutput(inContent, output, key)];
+    const items = [output(inContent.inContent, key), " \u203A ", u1F4AC(8005).smartOutput(inContent, output, key)];
     obj[0] = items;
     smartOutputResult = jsxs(u1F4AC(1297).LegacyText, { children: null }, key.key);
-    const obj2 = u1F4AC(7973);
+    const obj2 = u1F4AC(8005);
   }
   return smartOutputResult;
 };

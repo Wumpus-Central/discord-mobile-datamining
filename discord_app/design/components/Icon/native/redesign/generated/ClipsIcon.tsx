@@ -1,10 +1,10 @@
-// === Module 14545: ClipsIcon ===
+// === Module 14578: ClipsIcon ===
 
-// Module 14545 (ClipsIcon)
+// Module 14578 (ClipsIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4166 */;
-import registerAsset from "registerAsset" /* 14546 */;
+import BaseIconImage from "BaseIconImage" /* 4196 */;
+import registerAsset from "registerAsset" /* 14579 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

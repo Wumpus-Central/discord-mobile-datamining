@@ -1,6 +1,6 @@
-// === Module 17475: promise ===
+// === Module 17511: promise ===
 
-// Module 17475 (promise)
+// Module 17511 (promise)
 import closure_3 from "ensureGuildLoaded" /* 1387 */;
 
 const require = arg1;

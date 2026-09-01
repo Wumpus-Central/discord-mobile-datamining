@@ -1,9 +1,9 @@
-// === Module 9255: getLocationContextServer ===
+// === Module 9294: getLocationContextServer ===
 
-// Module 9255 (getLocationContextServer)
+// Module 9294 (getLocationContextServer)
 import getAuthenticationPath from "getAuthenticationPath" /* 507 */;
 import sendRequest from "sendRequest" /* 530 */;
-import handleLogoutDefault from "handleLogout" /* 6020 */;
+import handleLogoutDefault from "handleLogout" /* 6052 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "ensureGuildLoaded" /* 1387 */;
 import closure_5 from "handleConnectionOpen" /* 1981 */;
@@ -45,125 +45,46 @@ function _authorize() {
     c3 = 0;
     c4 = 0;
     const iter = (function*(arg0, body) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              c2 = tmp5;
-              c1 = tmp2;
-              let callback;
-              c1 = undefined;
-              c2 = undefined;
-              c3 = undefined;
-              c4 = undefined;
-              c5 = undefined;
-              c6 = undefined;
-              let OAUTH2_AUTHORIZE;
-              let callback2;
-              c9 = undefined;
-              c10 = undefined;
-              c11 = undefined;
-              c12 = undefined;
-              c13 = undefined;
-              ({ authorize: c0, clientId: c1, scopes: c2, responseType: c3, redirectUri: c4, codeChallenge: c5, codeChallengeMethod: c6, state: c7, permissions: c8, guildId: c9, channelId: c10, integrationType: c11, connectedAccountProvider: c12, nonce: c13 } = callback);
-              c3 = 1;
-              c4 = 1;
-              return { value: "Object", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = body;
-              return obj1;
-            } else {
-              const HTTP = callback(c2[4]).HTTP;
-              let obj2 = { url: null, query: null, body: null, oldFormErrors: true, rejectWithError: null };
-              obj2[0] = OAUTH2_AUTHORIZE.OAUTH2_AUTHORIZE;
-              const obj3 = { client_id: null, response_type: null, redirect_uri: null, code_challenge: null, code_challenge_method: null, scope: null, state: null, nonce: null };
-              obj3[0] = c1;
-              obj3[1] = c3;
-              obj3[2] = c4;
-              obj3[3] = c5;
-              obj3[4] = c6;
-              obj3[5] = c2.join(" ");
-              obj3[6] = OAUTH2_AUTHORIZE;
-              obj3[7] = c13;
-              obj2[1] = obj3;
-              const obj4 = { guild_id: null, webhook_channel_id: null, channel_id: null, permissions: null, authorize: null, integration_type: null, connected_account_provider: null, location_context: null };
-              obj4[0] = c9;
-              let tmp8;
-              if (null != c9) {
-                if (null != c10) {
-                  tmp8 = c10;
-                }
-              }
-              obj4[1] = tmp8;
-              let tmp12;
-              if (null == c9) {
-                if (null != c10) {
-                  tmp12 = c10;
-                }
-              }
-              obj4[2] = tmp12;
-              obj4[3] = callback2;
-              obj4[4] = callback;
-              obj4[5] = c11;
-              obj4[6] = c12;
-              obj4[7] = callback2();
-              obj2[2] = obj4;
-              obj2 = callback(c2[4]);
-              obj2[4] = obj2.rejectWithMigratedError();
-              c3 = 2;
-              c4 = 1;
-              const obj5 = { value: null, done: false };
-              obj5[0] = HTTP.post(obj2);
-              return obj5;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw body;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = body;
-            return obj6;
-          } else {
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = body.body;
-            return obj;
-          }
-        } catch (tmp25) {
-          c4 = tmp;
-          throw tmp25;
+      c1 = tmp2;
+      ({ authorize: c0, clientId: c1, scopes: c2, responseType: c3, redirectUri: c4, codeChallenge: c5, codeChallengeMethod: c6, state: c7, permissions: c8, guildId: c9, channelId: c10, integrationType: c11, connectedAccountProvider: c12, nonce: c13 } = callback);
+      yield "PX_16";
+      const HTTP = callback(c2[4]).HTTP;
+      let obj2 = { url: null, query: null, body: null, oldFormErrors: true, rejectWithError: null };
+      obj2[0] = OAUTH2_AUTHORIZE.OAUTH2_AUTHORIZE;
+      const obj3 = { client_id: null, response_type: null, redirect_uri: null, code_challenge: null, code_challenge_method: null, scope: null, state: null, nonce: null };
+      obj3[0] = c1;
+      obj3[1] = c3;
+      obj3[2] = c4;
+      obj3[3] = c5;
+      obj3[4] = c6;
+      obj3[5] = c2.join(" ");
+      obj3[6] = OAUTH2_AUTHORIZE;
+      obj3[7] = c13;
+      obj2[1] = obj3;
+      const obj4 = { guild_id: null, webhook_channel_id: null, channel_id: null, permissions: null, authorize: null, integration_type: null, connected_account_provider: null, location_context: null };
+      obj4[0] = c9;
+      if (null != c9) {
+        if (null != c10) {
+          const tmp8 = c10;
         }
       }
+      obj4[1] = tmp8;
+      if (null == c9) {
+        if (null != c10) {
+          const tmp12 = c10;
+        }
+      }
+      obj4[2] = tmp12;
+      obj4[3] = callback2;
+      obj4[4] = callback;
+      obj4[5] = c11;
+      obj4[6] = c12;
+      obj4[7] = callback2();
+      obj2[2] = obj4;
+      obj2 = callback(c2[4]);
+      obj2[4] = obj2.rejectWithMigratedError();
+      yield HTTP.post(obj2);
+      return body.body;
     })();
     iter.next();
     return iter;
@@ -184,102 +105,28 @@ function _fetchAuthorization() {
     c3 = 0;
     c4 = 0;
     const iter = (function*(arg0, body) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              dependencyMap = tmp5;
-              c1 = tmp2;
-              let callback;
-              c1 = undefined;
-              dependencyMap = undefined;
-              c3 = undefined;
-              c4 = undefined;
-              c5 = undefined;
-              c6 = undefined;
-              let OAUTH2_AUTHORIZE;
-              c8 = undefined;
-              c9 = undefined;
-              c10 = undefined;
-              ({ clientId: c0, scopes: c1, responseType: c2, redirectUri: c3, codeChallenge: c4, codeChallengeMethod: c5, state: c6, integrationType: c7, connectedAccountProvider: c8, nonce: c9, signal: c10 } = callback);
-              c3 = 1;
-              c4 = 1;
-              return { value: "Object", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = body;
-              return obj1;
-            } else {
-              const HTTP = callback(530).HTTP;
-              const obj2 = { url: null, query: null, signal: null, retries: 3, oldFormErrors: true, rejectWithError: null };
-              obj2[0] = OAUTH2_AUTHORIZE.OAUTH2_AUTHORIZE;
-              const obj3 = { client_id: null, response_type: null, redirect_uri: null, code_challenge: null, code_challenge_method: null, scope: null, state: null, integration_type: null, connected_account_provider: null, nonce: null };
-              obj3[0] = callback;
-              obj3[1] = dependencyMap;
-              obj3[2] = c3;
-              obj3[3] = c4;
-              obj3[4] = c5;
-              obj3[5] = c1.join(" ");
-              obj3[6] = c6;
-              obj3[7] = OAUTH2_AUTHORIZE;
-              obj3[8] = c8;
-              obj3[9] = c9;
-              obj2[1] = obj3;
-              obj2[2] = c10;
-              obj2[5] = callback(530).rejectWithMigratedError();
-              c3 = 2;
-              c4 = 1;
-              const obj4 = { value: null, done: false };
-              obj4[0] = HTTP.get(obj2);
-              return obj4;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw body;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = body;
-            return obj5;
-          } else {
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = body.body;
-            return obj;
-          }
-        } catch (tmp6) {
-          c4 = tmp;
-          throw tmp6;
-        }
-      }
+      c1 = tmp2;
+      ({ clientId: c0, scopes: c1, responseType: c2, redirectUri: c3, codeChallenge: c4, codeChallengeMethod: c5, state: c6, integrationType: c7, connectedAccountProvider: c8, nonce: c9, signal: c10 } = callback);
+      yield "PX_16";
+      const HTTP = callback(530).HTTP;
+      const obj2 = { url: null, query: null, signal: null, retries: 3, oldFormErrors: true, rejectWithError: null };
+      obj2[0] = OAUTH2_AUTHORIZE.OAUTH2_AUTHORIZE;
+      const obj3 = { client_id: null, response_type: null, redirect_uri: null, code_challenge: null, code_challenge_method: null, scope: null, state: null, integration_type: null, connected_account_provider: null, nonce: null };
+      obj3[0] = callback;
+      obj3[1] = dependencyMap;
+      obj3[2] = c3;
+      obj3[3] = c4;
+      obj3[4] = c5;
+      obj3[5] = c1.join(" ");
+      obj3[6] = c6;
+      obj3[7] = OAUTH2_AUTHORIZE;
+      obj3[8] = c8;
+      obj3[9] = c9;
+      obj2[1] = obj3;
+      obj2[2] = c10;
+      obj2[5] = callback(530).rejectWithMigratedError();
+      yield HTTP.get(obj2);
+      return body.body;
     })();
     iter.next();
     return iter;
@@ -315,7 +162,7 @@ function _startSamsungAuthorization() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -357,7 +204,7 @@ function _startSamsungAuthorization() {
             return obj;
           } else {
             c5 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp5) {
           c5 = tmp;

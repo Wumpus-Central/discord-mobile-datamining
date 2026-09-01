@@ -1,6 +1,6 @@
-// === Module 8848: _navigateToGameAnnouncement ===
+// === Module 8885: _navigateToGameAnnouncement ===
 
-// Module 8848 (_navigateToGameAnnouncement)
+// Module 8885 (_navigateToGameAnnouncement)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "createGuildRecordFromRust" /* 1909 */;
 import ME from "ME" /* 676 */;
@@ -24,7 +24,7 @@ function _navigateToGameAnnouncement() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -52,7 +52,7 @@ function _navigateToGameAnnouncement() {
               let guild3;
               c3 = 1;
               guild = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else {
             if (1 === tmp5) {
@@ -91,7 +91,7 @@ function _navigateToGameAnnouncement() {
                     if (null != set) {
                       if (!set.has(constants.PREVIEW_ENABLED)) {
                         if (null != lib) {
-                          let obj5 = id(8617);
+                          let obj5 = id(8649);
                           const obj2 = { inviteKey: null, context: null, skipOnboarding: true };
                           obj2[0] = lib.code;
                           let obj3 = { location: null };
@@ -105,7 +105,7 @@ function _navigateToGameAnnouncement() {
                         }
                       }
                     }
-                    let obj9 = lib(6153);
+                    let obj9 = lib(6185);
                     obj5 = { shouldNavigate: true, channelId: null, messageId: null, joinSource: null };
                     obj5[1] = dependencyMap;
                     obj5[2] = c3;
@@ -118,7 +118,7 @@ function _navigateToGameAnnouncement() {
                   }
                 }
                 guild = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } else if (2 === tmp5) {
               if (arg0 === 1) {

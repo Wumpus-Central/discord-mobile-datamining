@@ -1,6 +1,6 @@
-// === Module 14791: AllChannelAccessOptions ===
+// === Module 14824: AllChannelAccessOptions ===
 
-// Module 14791 (AllChannelAccessOptions)
+// Module 14824 (AllChannelAccessOptions)
 import set from "set" /* 2 */;
 import keys from "keys" /* 644 */;
 

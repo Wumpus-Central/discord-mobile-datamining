@@ -1,24 +1,24 @@
-// === Module 15998: ForYouShowAllRow ===
+// === Module 16033: ForYouShowAllRow ===
 
-// Module 15998 (ForYouShowAllRow)
+// Module 16033 (ForYouShowAllRow)
 import set from "set" /* 500 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4444 */;
-import getFontScale from "getFontScale" /* 4903 */;
-import PressableBase from "PressableBase" /* 5036 */;
-import registerAssetDefault from "registerAsset" /* 5582 */;
-import getLayoutStyles from "getLayoutStyles" /* 10163 */;
-import AvatarDuoPile from "AvatarDuoPile" /* 13787 */;
-import renderChannelPressableWrapper from "renderChannelPressableWrapper" /* 15993 */;
-import renderChannelWrapper from "renderChannelWrapper" /* 15994 */;
+import Text from "Text" /* 4474 */;
+import getFontScale from "getFontScale" /* 4935 */;
+import PressableBase from "PressableBase" /* 5068 */;
+import registerAssetDefault from "registerAsset" /* 5614 */;
+import getLayoutStyles from "getLayoutStyles" /* 10202 */;
+import AvatarDuoPile from "AvatarDuoPile" /* 13820 */;
+import renderChannelPressableWrapper from "renderChannelPressableWrapper" /* 16028 */;
+import renderChannelWrapper from "renderChannelWrapper" /* 16029 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { AnalyticEvents } from "ME" /* 676 */;
-import { Sections } from "SuggestedFriendSource" /* 12204 */;
+import { Sections } from "SuggestedFriendSource" /* 12237 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function ForYouShowAllRow(panelVariant) {
@@ -111,7 +111,7 @@ export const ForYouSuggestedFriendShowAllRow = function ForYouSuggestedFriendSho
     children: React.useMemo(() => {
       const substr = suggestedFriends.slice(2, 4);
       return substr.map((user) => {
-        const obj = { user: user.user, guildId: "Array", size: -64684031 };
+        const obj = { user: user.user, guildId: "Array", size: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000055359227687093 };
         const obj2 = closure_1_0(closure_1_2[6]);
         const tmp = closure_1_7;
         const AvatarSizes = closure_1_0(closure_1_2[11]).AvatarSizes;

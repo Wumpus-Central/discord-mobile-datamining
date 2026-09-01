@@ -1,8 +1,8 @@
-// === Module 10940: Changeset ===
+// === Module 10978: Changeset ===
 
-// Module 10940 (Changeset)
+// Module 10978 (Changeset)
 import set from "set" /* 2 */;
-import Changeset from "Changeset" /* 7810 */;
+import Changeset from "Changeset" /* 7842 */;
 
 const RowType = Changeset.RowType;
 const result = set.fileFinishedImporting("modules/messages/native/VisibleMessagesWindowHandler.tsx");

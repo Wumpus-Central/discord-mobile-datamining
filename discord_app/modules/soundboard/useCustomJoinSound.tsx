@@ -1,8 +1,8 @@
-// === Module 6186: CustomSoundType ===
+// === Module 6218: CustomSoundType ===
 
-// Module 6186 (CustomSoundType)
+// Module 6218 (CustomSoundType)
 import closure_2 from "handleConnectionClosedOrResumed" /* 1340 */;
-import { CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID as closure_3 } from "MAX_LENGTH_SOUND_NAME" /* 4935 */;
+import { CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID as closure_3 } from "MAX_LENGTH_SOUND_NAME" /* 4967 */;
 
 const require = arg1;
 let obj = { GLOBAL: 0, [0]: "GLOBAL", GUILD: 1, [1]: "GUILD" };

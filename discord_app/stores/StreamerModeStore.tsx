@@ -1,10 +1,10 @@
-// === Module 4293: initialize ===
+// === Module 4323: initialize ===
 
-// Module 4293 (initialize)
+// Module 4323 (initialize)
 import initializeDefault from "initialize" /* 589 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import apexExperiment from "apexExperiment" /* 4294 */;
+import apexExperiment from "apexExperiment" /* 4324 */;
 import closure_3 from "fetchFingerprint" /* 1218 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 

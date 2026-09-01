@@ -1,12 +1,12 @@
-// === Module 6210: getSanitizedRestrictedGuilds ===
+// === Module 6242: getSanitizedRestrictedGuilds ===
 
-// Module 6210 (getSanitizedRestrictedGuilds)
+// Module 6242 (getSanitizedRestrictedGuilds)
 import ComponentDispatcher from "ComponentDispatcher" /* 1231 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4136 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4668 */;
-import getSearchSessionIdDefault from "getSearchSessionId" /* 6211 */;
-import closure_3 from "handleConnectionOpen" /* 4823 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
+import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4700 */;
+import getSearchSessionIdDefault from "getSearchSessionId" /* 6243 */;
+import closure_3 from "handleConnectionOpen" /* 4855 */;
 import closure_4 from "createGuildRecordFromRust" /* 1909 */;
 import ME from "ME" /* 676 */;
 

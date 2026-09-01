@@ -1,10 +1,10 @@
-// === Module 16668: useConsoleConnectedAccountForVoiceUpsell ===
+// === Module 16704: useConsoleConnectedAccountForVoiceUpsell ===
 
-// Module 16668 (useConsoleConnectedAccountForVoiceUpsell)
-import closure_3 from "set" /* 5193 */;
-import closure_4 from "filterPlayingActivities" /* 5191 */;
-import closure_5 from "set" /* 4465 */;
-import { CONSOLE_VOICE_PLATFORMS } from "XBOX_URL_BASE" /* 9274 */;
+// Module 16704 (useConsoleConnectedAccountForVoiceUpsell)
+import closure_3 from "set" /* 5225 */;
+import closure_4 from "filterPlayingActivities" /* 5223 */;
+import closure_5 from "set" /* 4495 */;
+import { CONSOLE_VOICE_PLATFORMS } from "XBOX_URL_BASE" /* 9313 */;
 import { ActivityTypes } from "ME" /* 676 */;
 
 const require = arg1;

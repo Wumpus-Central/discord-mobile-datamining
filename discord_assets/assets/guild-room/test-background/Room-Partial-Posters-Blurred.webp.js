@@ -1,6 +1,6 @@
-// === Module 4654: metadata ===
+// === Module 4686: metadata ===
 
-// Module 4654 (metadata)
+// Module 4686 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/guild-room/test-background/Room-Partial-Posters-Blurred.webp.js");

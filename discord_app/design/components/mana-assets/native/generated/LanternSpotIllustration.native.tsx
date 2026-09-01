@@ -1,10 +1,10 @@
-// === Module 6737: LanternSpotIllustration ===
+// === Module 6769: LanternSpotIllustration ===
 
-// Module 6737 (LanternSpotIllustration)
+// Module 6769 (LanternSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5461 */;
-import metadataDefault from "metadata" /* 6738 */;
+import preloadDefault from "preload" /* 5493 */;
+import metadataDefault from "metadata" /* 6770 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/LanternSpotIllustration.native.tsx");

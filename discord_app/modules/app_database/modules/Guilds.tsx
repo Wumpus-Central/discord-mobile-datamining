@@ -1,6 +1,6 @@
-// === Module 7363: getAsync ===
+// === Module 7395: getAsync ===
 
-// Module 7363 (getAsync)
+// Module 7395 (getAsync)
 import timestampDefault from "timestamp" /* 3 */;
 import fromGuildPropertiesWithAdditionalFieldsAll from "fromGuildPropertiesWithAdditionalFields" /* 1426 */;
 import fromServerArrayAll from "fromServerArray" /* 1987 */;

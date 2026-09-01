@@ -1,10 +1,10 @@
-// === Module 12603: ScreenIcon ===
+// === Module 12636: ScreenIcon ===
 
-// Module 12603 (ScreenIcon)
+// Module 12636 (ScreenIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4166 */;
-import registerAsset from "registerAsset" /* 12604 */;
+import BaseIconImage from "BaseIconImage" /* 4196 */;
+import registerAsset from "registerAsset" /* 12637 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

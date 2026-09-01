@@ -1,6 +1,6 @@
-// === Module 4903: getFontScale ===
+// === Module 4935: getFontScale ===
 
-// Module 4903 (getFontScale)
+// Module 4935 (getFontScale)
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "getDimensionsStoreStateForEntry" /* 1494 */;
 

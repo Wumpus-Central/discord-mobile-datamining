@@ -1,6 +1,6 @@
-// === Module 13079: metadata ===
+// === Module 13112: metadata ===
 
-// Module 13079 (metadata)
+// Module 13112 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/premium/referral_trial/referral_program_sad_cactus.png.js");

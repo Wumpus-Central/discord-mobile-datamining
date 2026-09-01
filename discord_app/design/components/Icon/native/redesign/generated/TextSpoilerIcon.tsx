@@ -1,10 +1,10 @@
-// === Module 4994: TextSpoilerIcon ===
+// === Module 5026: TextSpoilerIcon ===
 
-// Module 4994 (TextSpoilerIcon)
+// Module 5026 (TextSpoilerIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4166 */;
-import registerAsset from "registerAsset" /* 4965 */;
+import BaseIconImage from "BaseIconImage" /* 4196 */;
+import registerAsset from "registerAsset" /* 4997 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

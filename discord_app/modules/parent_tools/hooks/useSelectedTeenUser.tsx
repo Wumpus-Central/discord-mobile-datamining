@@ -1,10 +1,10 @@
-// === Module 14466: useSelectedTeenUser ===
+// === Module 14499: useSelectedTeenUser ===
 
-// Module 14466 (useSelectedTeenUser)
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8736 */;
+// Module 14499 (useSelectedTeenUser)
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8773 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import closure_4 from "getSettings" /* 7253 */;
-import closure_5 from "freshTeenActivityWithMap" /* 7250 */;
+import closure_4 from "getSettings" /* 7285 */;
+import closure_5 from "freshTeenActivityWithMap" /* 7282 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useSelectedTeenUser.tsx");

@@ -1,8 +1,8 @@
-// === Module 14970: FloatingApplyButton ===
+// === Module 15003: FloatingApplyButton ===
 
-// Module 14970 (FloatingApplyButton)
+// Module 15003 (FloatingApplyButton)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4440 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import { MEDIA_PICKER_SEND_BUTTON_SPRING as closure_5 } from "DRAG_HANDLE" /* 1623 */;
 import { jsx } from "jsxProd" /* 21 */;
 

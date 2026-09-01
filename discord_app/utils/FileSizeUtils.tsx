@@ -1,6 +1,6 @@
-// === Module 4342: formatSize ===
+// === Module 4372: formatSize ===
 
-// Module 4342 (formatSize)
+// Module 4372 (formatSize)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 

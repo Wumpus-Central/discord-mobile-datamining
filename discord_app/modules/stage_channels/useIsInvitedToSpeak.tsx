@@ -1,9 +1,9 @@
-// === Module 9608: useIsInvitedToSpeak ===
+// === Module 9647: useIsInvitedToSpeak ===
 
-// Module 9608 (useIsInvitedToSpeak)
+// Module 9647 (useIsInvitedToSpeak)
 import initialize from "initialize" /* 589 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4636 */;
-import useAudienceRequestToSpeakStateDefault from "useAudienceRequestToSpeakState" /* 4636 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4668 */;
+import useAudienceRequestToSpeakStateDefault from "useAudienceRequestToSpeakState" /* 4668 */;
 import closure_3 from "fetchFingerprint" /* 1218 */;
 import closure_4 from "handleConnectionOpen" /* 1981 */;
 

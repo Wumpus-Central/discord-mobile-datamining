@@ -1,10 +1,10 @@
-// === Module 4992: BookCheckIcon ===
+// === Module 5024: BookCheckIcon ===
 
-// Module 4992 (BookCheckIcon)
+// Module 5024 (BookCheckIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4166 */;
-import registerAsset from "registerAsset" /* 4979 */;
+import BaseIconImage from "BaseIconImage" /* 4196 */;
+import registerAsset from "registerAsset" /* 5011 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

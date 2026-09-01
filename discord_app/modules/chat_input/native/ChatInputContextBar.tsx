@@ -1,22 +1,22 @@
-// === Module 11957: ChatInputReplyBarNoAuthor ===
+// === Module 11990: ChatInputReplyBarNoAuthor ===
 
-// Module 11957 (ChatInputReplyBarNoAuthor)
+// Module 11990 (ChatInputReplyBarNoAuthor)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import map from "map" /* 4167 */;
-import Text from "Text" /* 4444 */;
-import PressableBase from "PressableBase" /* 5036 */;
-import registerAssetDefault from "registerAsset" /* 7681 */;
+import map from "map" /* 4197 */;
+import Text from "Text" /* 4474 */;
+import PressableBase from "PressableBase" /* 5068 */;
+import registerAssetDefault from "registerAsset" /* 7713 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4440 */;
-import closure_7 from "handleChanged" /* 4822 */;
-import { DraftType } from "handleChanged" /* 4822 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
+import closure_7 from "handleChanged" /* 4854 */;
+import { DraftType } from "handleChanged" /* 4854 */;
 import closure_9 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function ChatInputReplyBarNoAuthor(onCancelReplying) {
@@ -590,7 +590,7 @@ const memoResult = importAllResult.memo(function ChatInputContextBar(channel) {
       return chatInputRef(pendingReply[30]).clearDraft(channel.id, closure_1_8.ScheduledMessage);
     };
     obj7[2] = function onEditSchedule() {
-      return channel(pendingReply[31]).openScheduleMessageActionSheet(channel.id, stateFromStores.scheduledTimestamp);
+      return channel(pendingReply[31]).openScheduleMessageActionSheet(channel.id, channel(pendingReply[32]).ScheduledMessageEntryPoint.COMPOSER_BAR, stateFromStores.scheduledTimestamp);
     };
     obj6[0] = callback(ChatInputScheduledMessageBar, obj7);
     tmp20 = callback(closure_24, obj6);

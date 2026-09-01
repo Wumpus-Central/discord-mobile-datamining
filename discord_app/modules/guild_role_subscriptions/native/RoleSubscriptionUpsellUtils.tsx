@@ -1,8 +1,8 @@
-// === Module 9097: ? ===
+// === Module 9135: ? ===
 
-// Module 9097
+// Module 9135
 import noopAll from "noop" /* 19 */;
-import _modDef4826 from "module_4826" /* 4826 */;
+import _modDef4858 from "module_4858" /* 4858 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -12,7 +12,7 @@ const result = require("set").fileFinishedImporting("modules/guild_role_subscrip
 export default {
   handleShowEmojiUpsellAlert(guildId) {
     guildId = guildId.guildId;
-    let obj = _modDef4826;
+    let obj = _modDef4858;
     obj = {
       importer() {
         return guildId(closure_1_2[4])(closure_1_2[3], closure_1_2.paths).then((arg0) => {

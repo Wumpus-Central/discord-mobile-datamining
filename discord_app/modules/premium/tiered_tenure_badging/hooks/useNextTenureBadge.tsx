@@ -1,8 +1,8 @@
-// === Module 13069: useNextTenureBadge ===
+// === Module 13102: useNextTenureBadge ===
 
-// Module 13069 (useNextTenureBadge)
+// Module 13102 (useNextTenureBadge)
 import set from "set" /* 2 */;
-import usePremiumSince from "usePremiumSince" /* 8929 */;
+import usePremiumSince from "usePremiumSince" /* 8966 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
 ({ TIERED_TENURE_BADGE_ORDER: obj1, TENURE_BADGES: c3 } = GuildFeatures);

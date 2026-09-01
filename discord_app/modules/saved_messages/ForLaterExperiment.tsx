@@ -1,11 +1,11 @@
-// === Module 7567: ForLaterFreemiumConfig ===
+// === Module 7599: ForLaterFreemiumConfig ===
 
-// Module 7567 (ForLaterFreemiumConfig)
+// Module 7599 (ForLaterFreemiumConfig)
 import set from "set" /* 2 */;
 import _modDef38 from "module_38" /* 38 */;
-import hasForLaterPremiumType2 from "hasForLaterPremiumType" /* 7568 */;
-import hasForLaterPremiumTypeDefault from "hasForLaterPremiumType" /* 7568 */;
-import SAVED_BOOKMARKS_MAX from "SAVED_BOOKMARKS_MAX" /* 7564 */;
+import hasForLaterPremiumType2 from "hasForLaterPremiumType" /* 7600 */;
+import hasForLaterPremiumTypeDefault from "hasForLaterPremiumType" /* 7600 */;
+import SAVED_BOOKMARKS_MAX from "SAVED_BOOKMARKS_MAX" /* 7596 */;
 import ApexExperiment from "ApexExperiment" /* 1468 */;
 
 ({ SAVED_BOOKMARKS_MAX: c3, SAVED_REMINDERS_MAX: c4 } = SAVED_BOOKMARKS_MAX);

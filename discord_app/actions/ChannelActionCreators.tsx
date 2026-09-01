@@ -1,19 +1,19 @@
-// === Module 4461: ? ===
+// === Module 4491: ? ===
 
-// Module 4461
+// Module 4491
 import sendRequest from "sendRequest" /* 530 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import transitionTo from "transitionTo" /* 1222 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4303 */;
-import transitionToChannel from "transitionToChannel" /* 4459 */;
-import _modDef5323 from "module_5323" /* 5323 */;
-import isChangelogChannelDefault from "isChangelogChannel" /* 8613 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4333 */;
+import transitionToChannel from "transitionToChannel" /* 4489 */;
+import _modDef5355 from "module_5355" /* 5355 */;
+import isChangelogChannelDefault from "isChangelogChannel" /* 8645 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "handleUserSettingsProtoStoreChange" /* 4462 */;
+import closure_5 from "handleUserSettingsProtoStoreChange" /* 4492 */;
 import { createChannelRecordFromServer as closure_6 } from "createChannelRecord" /* 1391 */;
 import closure_7 from "ensureGuildLoaded" /* 1387 */;
-import closure_8 from "generateOldThreadCutoff" /* 4463 */;
+import closure_8 from "generateOldThreadCutoff" /* 4493 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -47,7 +47,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -176,7 +176,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -278,13 +278,13 @@ export default {
           c4();
         }
         if (null != obj2.getRootNavigationRef()) {
-          tmp6(4459).transitionToChannel(channel.id, { navigationReplace: true });
+          tmp6(4489).transitionToChannel(channel.id, { navigationReplace: true });
           tmp3 = channel;
-          const tmp6Result = tmp6(4459);
+          const tmp6Result = tmp6(4489);
         } else {
-          const privateChannel = _modDef5323.selectPrivateChannel(channel.id);
+          const privateChannel = _modDef5355.selectPrivateChannel(channel.id);
           tmp3 = channel;
-          const obj3 = _modDef5323;
+          const obj3 = _modDef5355;
         }
         obj2 = getRootNavigationRef;
         tmp6 = require;
@@ -329,7 +329,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -417,8 +417,8 @@ export default {
       transitionToChannel.transitionToChannel(tmp.id, { navigationReplace: true });
       const tmp5Result = transitionToChannel;
     } else {
-      const privateChannel = _modDef5323.selectPrivateChannel(tmp.id);
-      const tmp2Result = _modDef5323;
+      const privateChannel = _modDef5355.selectPrivateChannel(tmp.id);
+      const tmp2Result = _modDef5355;
     }
     return tmp;
   },
@@ -439,7 +439,7 @@ export default {
       tmpResult.track(constants.CHANGE_LOG_DM_REMOVED, obj);
     }
     tmpResult = tmp(709);
-    obj = { id, guild_id: "Array", parent_id: "accessibilityLabel" };
+    obj = { id, guild_id: "Array", parent_id: "accessible" };
     tmpResult.dispatch({ type: "CHANNEL_DELETE", channel: obj, silent: flag2 });
     if (flag) {
       transitionTo.transitionTo(constants2.FRIENDS);
@@ -578,7 +578,7 @@ export default {
         tmp10 = isThreadResult;
       }
       if (!tmp10) {
-        obj1 = closure_1_1(6136);
+        obj1 = closure_1_1(6168);
         const result = obj1.checkGuildTemplateDirty(guildId);
       }
       return closure_1;
@@ -600,7 +600,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -746,7 +746,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -905,7 +905,7 @@ export default {
     } else {
       result = closure_11.CHANNEL_STORE_LISTING(arg0);
     }
-    const result1 = _require(4723).httpGetWithCountryCodeQuery(result);
+    const result1 = _require(4755).httpGetWithCountryCodeQuery(result);
     return result1.then((body) => {
       let obj = closure_1_1(closure_1_2[13]);
       obj = { type: "STORE_LISTING_FETCH_SUCCESS", channelId: closure_0, storeListing: body.body };
@@ -937,7 +937,7 @@ export default {
       const obj4 = closure_1_0(530);
       obj2[3] = obj4.rejectWithMigratedError();
       closure_0 = yield HTTP.post(obj2);
-      const obj = closure_1_1(6136);
+      const obj = closure_1_1(6168);
       const result = obj.checkGuildTemplateDirty(closure_0);
       return closure_0;
     })();

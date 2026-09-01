@@ -1,6 +1,6 @@
-// === Module 7828: getAccessibilityLabelOrCheapFallbackUnsafe ===
+// === Module 7860: getAccessibilityLabelOrCheapFallbackUnsafe ===
 
-// Module 7828 (getAccessibilityLabelOrCheapFallbackUnsafe)
+// Module 7860 (getAccessibilityLabelOrCheapFallbackUnsafe)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/a11y/native/getAccessibilityLabelOrCheapFallbackUnsafe.tsx");

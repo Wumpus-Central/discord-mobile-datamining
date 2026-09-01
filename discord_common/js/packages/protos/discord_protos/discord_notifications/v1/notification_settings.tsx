@@ -1,10 +1,10 @@
-// === Module 13300: create ===
+// === Module 13333: create ===
 
-// Module 13300 (create)
+// Module 13333 (create)
 import _mod1307 from "module_1307" /* 1307 */;
 import create2 from "create" /* 1335 */;
 import defineProperty from "defineProperty" /* 1337 */;
-import create3 from "create" /* 13301 */;
+import create3 from "create" /* 13334 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import { MessageType, MessageType as MessageType2, MessageType as MessageType3, MessageType as MessageType4, MessageType as MessageType5, MessageType as MessageType6, MessageType as MessageType7 } from "module_1307" /* 1307 */;
 
@@ -910,9 +910,9 @@ prototype6["internalBinaryRead"] = function internalBinaryRead(pos) {
   if (arg3 == null) {
     obj = self.create();
   }
-  const sum = pos.pos + arg1;
-  if (pos.pos < sum) {
-    obj.notifyHighlights = pos.uint32();
+  if (pos.pos < pos.pos + arg1) {
+    [r10019, r10020] = callback(pos.tag(), 2);
+    const tmp3 = callback(pos.tag(), 2);
   }
   return obj;
 };

@@ -1,12 +1,12 @@
-// === Module 7306: getEmptyActivityFormatter ===
+// === Module 7338: getEmptyActivityFormatter ===
 
-// Module 7306 (getEmptyActivityFormatter)
+// Module 7338 (getEmptyActivityFormatter)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import messagesProxyDefault from "messagesProxy" /* 2369 */;
-import hooksDefault from "hooks" /* 4045 */;
-import maybeFetchCollectiblesForInvoicesDefault from "maybeFetchCollectiblesForInvoices" /* 7252 */;
-import closure_3 from "freshTeenActivityWithMap" /* 7250 */;
-import items from "items" /* 7251 */;
+import hooksDefault from "hooks" /* 4075 */;
+import maybeFetchCollectiblesForInvoicesDefault from "maybeFetchCollectiblesForInvoices" /* 7284 */;
+import closure_3 from "freshTeenActivityWithMap" /* 7282 */;
+import items from "items" /* 7283 */;
 
 require = arg1;
 ({ ACTION_TO_TEXT: c4, FAMILY_CENTER_ERROR_CODE_TO_FAILURE: c5, FamilyCenterFailureCode: closure_6, TeenActionDisplayType: error, UserLinkStatus: closure_8, UserLinkType: c9 } = items);

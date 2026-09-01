@@ -1,7 +1,7 @@
-// === Module 9420: NativeModules ===
+// === Module 9459: NativeModules ===
 
-// Module 9420 (NativeModules)
-import enforcingDefault from "enforcing" /* 9421 */;
+// Module 9459 (NativeModules)
+import enforcingDefault from "enforcing" /* 9460 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import set from "set" /* 500 */;
 import keys from "keys" /* 644 */;
@@ -24,7 +24,7 @@ let closure_5 = keys.create((arg0) => {
     } else {
       resolved = Promise.resolve(undefined);
     }
-    tmpResult = _require(4427);
+    tmpResult = _require(4457);
   } else {
     const DCDDeviceThermalStateManager = NativeModules.DCDDeviceThermalStateManager;
     const thermalState1 = DCDDeviceThermalStateManager.getThermalState();
@@ -52,7 +52,7 @@ let closure_5 = keys.create((arg0) => {
         return tmp;
       }));
     });
-    return { rawThermalState: "Array" };
+    return { rawThermalState: "r" };
   }
 });
 const result = set.fileFinishedImporting("modules/device/ThermalUtils.native.tsx");

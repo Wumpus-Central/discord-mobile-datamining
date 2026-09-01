@@ -1,9 +1,9 @@
-// === Module 13811: snapshotForBreadcrumbs ===
+// === Module 13844: snapshotForBreadcrumbs ===
 
-// Module 13811 (snapshotForBreadcrumbs)
-import appendDefault from "append" /* 13807 */;
-import TelemetryChannel from "TelemetryChannel" /* 13808 */;
-import importDefaultResult1 from "TelemetryChannel" /* 13808 */;
+// Module 13844 (snapshotForBreadcrumbs)
+import appendDefault from "append" /* 13840 */;
+import TelemetryChannel from "TelemetryChannel" /* 13841 */;
+import importDefaultResult1 from "TelemetryChannel" /* 13841 */;
 
 require = arg1;
 let closure_3 = { type: "BYTES", limit: 1048576 };

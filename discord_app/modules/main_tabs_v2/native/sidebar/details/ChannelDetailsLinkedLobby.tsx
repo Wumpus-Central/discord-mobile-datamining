@@ -1,16 +1,16 @@
-// === Module 16277: ChannelDetailsLinkedLobby ===
+// === Module 16312: ChannelDetailsLinkedLobby ===
 
-// Module 16277 (ChannelDetailsLinkedLobby)
+// Module 16312 (ChannelDetailsLinkedLobby)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import combinedDefault from "combined" /* 1995 */;
-import Text2 from "Text" /* 4444 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 5927 */;
+import Text2 from "Text" /* 4474 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 5959 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 noopAll;

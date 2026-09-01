@@ -1,6 +1,6 @@
-// === Module 7239: scheduledEventSort ===
+// === Module 7271: scheduledEventSort ===
 
-// Module 7239 (scheduledEventSort)
+// Module 7271 (scheduledEventSort)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;

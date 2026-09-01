@@ -1,11 +1,11 @@
-// === Module 17372: fetchForwardReferencedGuilds ===
+// === Module 17408: fetchForwardReferencedGuilds ===
 
-// Module 17372 (fetchForwardReferencedGuilds)
+// Module 17408 (fetchForwardReferencedGuilds)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import initializeDefault from "initialize" /* 5454 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 16965 */;
-import _fetchBasicGuild from "_fetchBasicGuild" /* 17373 */;
+import initializeDefault from "initialize" /* 5486 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 17001 */;
+import _fetchBasicGuild from "_fetchBasicGuild" /* 17409 */;
 
 function fetchForwardReferencedGuilds(message_reference) {
   message_reference = message_reference.message_reference;

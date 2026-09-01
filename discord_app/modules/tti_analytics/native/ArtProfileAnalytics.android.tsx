@@ -1,6 +1,6 @@
-// === Module 7389: _trackAndroidArtProfileSnapshotAsync ===
+// === Module 7421: _trackAndroidArtProfileSnapshotAsync ===
 
-// Module 7389 (_trackAndroidArtProfileSnapshotAsync)
+// Module 7421 (_trackAndroidArtProfileSnapshotAsync)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import { AnalyticEvents } from "ME" /* 676 */;
@@ -25,7 +25,7 @@ function _trackAndroidArtProfileSnapshotAsync() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -89,7 +89,7 @@ function _trackAndroidArtProfileSnapshotAsync() {
             obj2.current_profile_last_modified_ms = c5.currentProfileLastModifiedMs;
             callback2(table[5]).track(c5.ANDROID_ART_PROFILE_SNAPSHOT, obj2, { logEventProperties: true });
             c5 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp6) {
           c5 = tmp;

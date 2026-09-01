@@ -1,8 +1,8 @@
-// === Module 5051: NativePermissionsRequestOptions ===
+// === Module 5083: NativePermissionsRequestOptions ===
 
-// Module 5051 (NativePermissionsRequestOptions)
-import { ProcessArgs } from "get" /* 5053 */;
-import importDefaultResult from "isEnabled" /* 5052 */;
+// Module 5083 (NativePermissionsRequestOptions)
+import { ProcessArgs } from "get" /* 5085 */;
+import importDefaultResult from "isEnabled" /* 5084 */;
 
 importDefaultResult.initialize();
 if (ProcessArgs.isDiscordTestSet()) {

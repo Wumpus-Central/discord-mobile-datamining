@@ -1,12 +1,12 @@
-// === Module 15405: onRenderFirstOrbsItem ===
+// === Module 15439: onRenderFirstOrbsItem ===
 
-// Module 15405 (onRenderFirstOrbsItem)
+// Module 15439 (onRenderFirstOrbsItem)
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "updateCategoriesAndProducts" /* 7255 */;
+import closure_5 from "updateCategoriesAndProducts" /* 7287 */;
 import { CollectiblesMobileShopScreen as closure_6 } from "items" /* 678 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 const require = arg1;
 let closure_8 = createCacheKey.createStyles({ container: { display: "flex", flex: 1 } });

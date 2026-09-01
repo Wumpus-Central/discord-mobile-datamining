@@ -1,12 +1,12 @@
-// === Module 7974: IconButton ===
+// === Module 8006: IconButton ===
 
-// Module 7974 (IconButton)
+// Module 8006 (IconButton)
 import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4444 */;
-import BaseButton from "BaseButton" /* 4904 */;
-import BaseIconButton from "BaseIconButton" /* 7975 */;
+import Text from "Text" /* 4474 */;
+import BaseButton from "BaseButton" /* 4936 */;
+import BaseIconButton from "BaseIconButton" /* 8007 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 import importAllResult from "noop" /* 19 */;
 
 require = arg1;

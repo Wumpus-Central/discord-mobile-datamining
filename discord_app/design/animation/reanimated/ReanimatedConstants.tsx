@@ -1,10 +1,10 @@
-// === Module 4450: CONFIG_NEVER_ANIMATE ===
+// === Module 4480: CONFIG_NEVER_ANIMATE ===
 
-// Module 4450 (CONFIG_NEVER_ANIMATE)
+// Module 4480 (CONFIG_NEVER_ANIMATE)
 import set from "set" /* 2 */;
-import _mod4187 from "module_4187" /* 4187 */;
+import _mod4217 from "module_4217" /* 4217 */;
 
-let obj = { duration: 1, reduceMotion: _mod4187.ReduceMotion.Always };
+let obj = { duration: 1, reduceMotion: _mod4217.ReduceMotion.Always };
 obj = {};
 const merged = Object.assign(obj);
 obj.reduceMotion = undefined;

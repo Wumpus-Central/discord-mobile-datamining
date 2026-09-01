@@ -1,13 +1,13 @@
-// === Module 14342: route ===
+// === Module 14375: route ===
 
-// Module 14342 (route)
+// Module 14375 (route)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2889 */;
-import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4701 */;
-import MobileUserSettings from "MobileUserSettings" /* 7852 */;
-import createToggle from "createToggle" /* 11031 */;
+import messagesProxyDefault from "messagesProxy" /* 2919 */;
+import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4733 */;
+import MobileUserSettings from "MobileUserSettings" /* 7884 */;
+import createToggle from "createToggle" /* 11068 */;
 
 obj = {
   useTitle() {
@@ -26,7 +26,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.AGE_GROUP,
   getComponent() {
-    return require(14343) /* SettingsAgeGroupHeader */.default;
+    return require(14376) /* SettingsAgeGroupHeader */.default;
   }
 };
 const route = createToggle.createRoute(obj);

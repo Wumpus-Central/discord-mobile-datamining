@@ -1,11 +1,11 @@
-// === Module 17381: AVErrorNoAudioInputDetectedDefinition ===
+// === Module 17417: AVErrorNoAudioInputDetectedDefinition ===
 
-// Module 17381 (AVErrorNoAudioInputDetectedDefinition)
-import mapped from "mapped" /* 9526 */;
-import getVoiceChannelErrorContext from "getVoiceChannelErrorContext" /* 17382 */;
+// Module 17417 (AVErrorNoAudioInputDetectedDefinition)
+import mapped from "mapped" /* 9565 */;
+import getVoiceChannelErrorContext from "getVoiceChannelErrorContext" /* 17418 */;
 import closure_2 from "ensureGuildLoaded" /* 1387 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4499 */;
-import closure_4 from "createRTCConnection" /* 4522 */;
+import closure_3 from "_detectH265HardwareDecode" /* 4529 */;
+import closure_4 from "createRTCConnection" /* 4554 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;

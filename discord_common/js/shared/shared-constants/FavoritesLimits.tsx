@@ -1,6 +1,6 @@
-// === Module 10269: FREE_FAVORITE_LIMIT ===
+// === Module 10308: FREE_FAVORITE_LIMIT ===
 
-// Module 10269 (FREE_FAVORITE_LIMIT)
+// Module 10308 (FREE_FAVORITE_LIMIT)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/FavoritesLimits.tsx");

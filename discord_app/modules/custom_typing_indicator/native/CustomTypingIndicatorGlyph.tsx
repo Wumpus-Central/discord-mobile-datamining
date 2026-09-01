@@ -1,10 +1,10 @@
-// === Module 11520: CustomTypingIndicatorGlyph ===
+// === Module 11553: CustomTypingIndicatorGlyph ===
 
-// Module 11520 (CustomTypingIndicatorGlyph)
+// Module 11553 (CustomTypingIndicatorGlyph)
 import noopAll from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 const require = arg1;
 noopAll;
@@ -18,8 +18,8 @@ export default function CustomTypingIndicatorGlyph(config) {
   let obj = dependencyMap;
   const tmp = callback();
   const tmp2 = map;
-  dependencyMap = map(1937).getEffectiveCustomTypingIndicatorAnimation(map);
-  const obj2 = map(1937);
+  dependencyMap = map(1942).getEffectiveCustomTypingIndicatorAnimation(map);
+  const obj2 = map(1942);
   if (obj3.hasCustomTypingIndicatorEmojis(map.emojis)) {
     let items = [tmp.emojiRow, ];
     if (null == size) {

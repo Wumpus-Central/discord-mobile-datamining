@@ -1,10 +1,10 @@
-// === Module 8787: RobloxNeutralIcon ===
+// === Module 8824: RobloxNeutralIcon ===
 
-// Module 8787 (RobloxNeutralIcon)
+// Module 8824 (RobloxNeutralIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4166 */;
-import registerAsset from "registerAsset" /* 8788 */;
+import BaseIconImage from "BaseIconImage" /* 4196 */;
+import registerAsset from "registerAsset" /* 8825 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

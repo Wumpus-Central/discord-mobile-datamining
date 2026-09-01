@@ -1,14 +1,14 @@
-// === Module 9634: ? ===
+// === Module 9673: ? ===
 
-// Module 9634
+// Module 9673
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import sendRequest from "sendRequest" /* 530 */;
 import transitionTo from "transitionTo" /* 1222 */;
-import _modDef5323 from "module_5323" /* 5323 */;
-import EditGuildEventScreens from "EditGuildEventScreens" /* 9635 */;
+import _modDef5355 from "module_5355" /* 5355 */;
+import EditGuildEventScreens from "EditGuildEventScreens" /* 9674 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "scheduledEventSort" /* 7239 */;
+import closure_5 from "scheduledEventSort" /* 7271 */;
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1393 */;
 import ME from "ME" /* 676 */;
 
@@ -33,8 +33,8 @@ export default {
     return HTTP.patch(obj);
   },
   joinVoiceEvent(arg0, id) {
-    const voiceChannel = _modDef5323.selectVoiceChannel(id);
-    const obj = _modDef5323;
+    const voiceChannel = _modDef5355.selectVoiceChannel(id);
+    const obj = _modDef5355;
     transitionTo.transitionTo(closure_11.CHANNEL(arg0, id));
   },
   saveEvent(arg0, entityType) {
@@ -74,7 +74,7 @@ export default {
       let body = tmp5;
       obj1 = { url: null, rejectWithError: null };
       obj1[0] = closure_1_10.GUILD_EVENT(closure_1_0, closure_1_1);
-      const obj8 = closure_1_0(4723);
+      const obj8 = closure_1_0(4755);
       obj1[1] = closure_1_0(530).rejectWithMigratedError();
       yield obj8.httpGetWithCountryCodeQuery(obj1);
       body = arg1.body;
@@ -94,7 +94,7 @@ export default {
       obj1[0] = closure_1_10.GUILD_EVENTS_FOR_GUILD(closure_1_0);
       obj1[1] = closure_1_0(530).rejectWithMigratedError();
       const obj9 = closure_1_0(530);
-      yield closure_1_0(4723).httpGetWithCountryCodeQuery(obj1);
+      yield closure_1_0(4755).httpGetWithCountryCodeQuery(obj1);
       body = arg1.body;
       const obj = closure_1_1(709);
       const obj4 = { type: "FETCH_GUILD_EVENTS_FOR_GUILD", guildId: null, guildScheduledEvents: null };
@@ -158,7 +158,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -206,7 +206,7 @@ export default {
             obj5[2] = body;
             obj.dispatch(obj5);
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp13) {
           c3 = tmp;
@@ -232,7 +232,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -329,7 +329,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -371,7 +371,7 @@ export default {
                 return obj3;
               } else {
                 rsvp = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             }
           } else if (1 === tmp7) {
@@ -432,7 +432,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -548,7 +548,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

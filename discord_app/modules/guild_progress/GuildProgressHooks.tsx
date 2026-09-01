@@ -1,16 +1,16 @@
-// === Module 12003: usePermissions ===
+// === Module 12036: usePermissions ===
 
-// Module 12003 (usePermissions)
+// Module 12036 (usePermissions)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
 import closure_5 from "ensureGuildLoaded" /* 1387 */;
 import comparator from "comparator" /* 1982 */;
 import closure_8 from "comparator" /* 1982 */;
-import closure_9 from "handleInviteData" /* 4368 */;
+import closure_9 from "handleInviteData" /* 4398 */;
 import closure_10 from "createGuildRecordFromRust" /* 1909 */;
-import closure_11 from "handlePopAllLayers" /* 12004 */;
-import closure_12 from "reinjectEphemerals" /* 4703 */;
-import closure_13 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_11 from "handlePopAllLayers" /* 12037 */;
+import closure_12 from "reinjectEphemerals" /* 4735 */;
+import closure_13 from "getUncachedChannelPermissions" /* 4121 */;
 import ME from "ME" /* 676 */;
 
 const require = arg1;

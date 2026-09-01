@@ -1,11 +1,11 @@
-// === Module 9090: trackOnEmojiPickerOpened ===
+// === Module 9128: trackOnEmojiPickerOpened ===
 
-// Module 9090 (trackOnEmojiPickerOpened)
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4668 */;
-import useTopAndNewlyAddedEmojis from "useTopAndNewlyAddedEmojis" /* 9068 */;
-import useEmojiHotrail from "useEmojiHotrail" /* 9069 */;
+// Module 9128 (trackOnEmojiPickerOpened)
+import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4700 */;
+import useTopAndNewlyAddedEmojis from "useTopAndNewlyAddedEmojis" /* 9106 */;
+import useEmojiHotrail from "useEmojiHotrail" /* 9107 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "getEmojiToGroupId" /* 5369 */;
+import closure_4 from "getEmojiToGroupId" /* 5401 */;
 import closure_5 from "ensureGuildLoaded" /* 1387 */;
 import closure_6 from "handleConnectionOpen" /* 1981 */;
 import { AnalyticEvents } from "ME" /* 676 */;
@@ -80,7 +80,7 @@ function trackOnEmojiPickerOpened(arg0) {
       }
       return animated;
     }).length,
-    num_custom_expressions_favorites: prop.filter(tmp11(4108).isCustomEmoji).length,
+    num_custom_expressions_favorites: prop.filter(tmp11(4138).isCustomEmoji).length,
     num_standard_expressions_favorites: prop.filter((id) => null == id.id).length,
     num_expressions_frecent: substr1.length,
     num_animated_expressions_frecent: substr1.filter((animated) => {
@@ -90,7 +90,7 @@ function trackOnEmojiPickerOpened(arg0) {
       }
       return animated;
     }).length,
-    num_custom_expressions_frecent: substr1.filter(tmp11(4108).isCustomEmoji).length,
+    num_custom_expressions_frecent: substr1.filter(tmp11(4138).isCustomEmoji).length,
     num_standard_expressions_frecent: substr1.filter((id) => null == id.id).length,
     num_current_guild_expressions: guildEmoji.length,
     num_custom_expressions_total: customEmoji.size,

@@ -1,12 +1,12 @@
-// === Module 15425: route ===
+// === Module 15459: route ===
 
-// Module 15425 (route)
+// Module 15459 (route)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import messagesProxyDefault from "messagesProxy" /* 2043 */;
-import MobileUserSettings from "MobileUserSettings" /* 7852 */;
-import createToggle from "createToggle" /* 11031 */;
+import MobileUserSettings from "MobileUserSettings" /* 7884 */;
+import createToggle from "createToggle" /* 11068 */;
 
 obj = {
   useTitle() {
@@ -19,7 +19,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.MANAGE_SPONSORED_CONTENT,
   getComponent() {
-    return require(15426) /* AdTopicRow */.default;
+    return require(15460) /* AdTopicRow */.default;
   }
 };
 const route = createToggle.createRoute(obj);

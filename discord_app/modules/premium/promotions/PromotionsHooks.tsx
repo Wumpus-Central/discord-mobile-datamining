@@ -1,10 +1,10 @@
-// === Module 13092: useEligibleActiveOutboundPromotions ===
+// === Module 13125: useEligibleActiveOutboundPromotions ===
 
-// Module 13092 (useEligibleActiveOutboundPromotions)
+// Module 13125 (useEligibleActiveOutboundPromotions)
 import initialize from "initialize" /* 589 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "createEmptyPromotionsByType" /* 10436 */;
+import closure_5 from "createEmptyPromotionsByType" /* 10475 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 
 require = arg1;

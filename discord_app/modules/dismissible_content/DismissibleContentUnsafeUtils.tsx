@@ -1,13 +1,13 @@
-// === Module 4268: UNSAFE_isDismissibleContentDismissed ===
+// === Module 4298: UNSAFE_isDismissibleContentDismissed ===
 
-// Module 4268 (UNSAFE_isDismissibleContentDismissed)
+// Module 4298 (UNSAFE_isDismissibleContentDismissed)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import setDefault from "set" /* 687 */;
 import isSingleUseDismissibleContent from "isSingleUseDismissibleContent" /* 1374 */;
-import useNewUserDismissibleContent from "useNewUserDismissibleContent" /* 4290 */;
+import useNewUserDismissibleContent from "useNewUserDismissibleContent" /* 4320 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_5 from "handleConnectionOpen" /* 4269 */;
+import closure_5 from "handleConnectionOpen" /* 4299 */;
 
 require = arg1;
 class UNSAFE_isDismissibleContentDismissed {
@@ -127,81 +127,40 @@ function _UNSAFE_markDismissibleContentAsDismissed() {
     c4 = 0;
     c5 = 0;
     const iter = (function*(arg0) {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+      dependencyMap = tmp2;
+      if (obj1 === undefined) {
+        obj1 = {};
+      }
+      yield "PX_16";
+      if (1 === tmp5) {
         if (arg0 === 1) {
+          c5 = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          c5 = 3;
+          let obj2 = { value: null, done: true };
+          obj2[0] = arg1;
+          return obj2;
+        } else if (callback2(callback, { bypassNewUserCheck: true })) {
+          c5 = 3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          obj2 = callback(1375);
+          const result = obj2.markDismissibleContentAsDismissedPreProcessing(callback, obj1);
+          let obj3 = callback(1370);
+          c4 = 2;
+          c5 = 1;
+          obj3 = { value: null, done: false };
+          obj3[0] = obj3.addDismissedContent(callback);
+          return obj3;
         }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_3 = tmp5;
-              dependencyMap = tmp2;
-              obj1 = undefined;
-              if (obj1 === undefined) {
-                obj1 = {};
-              }
-              c4 = 1;
-              c5 = 1;
-              return { value: "Object", done: true };
-            }
-          } else {
-            if (1 === tmp5) {
-              if (arg0 === 1) {
-                c5 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c5 = 3;
-                let obj2 = { value: null, done: true };
-                obj2[0] = arg1;
-                return obj2;
-              } else if (callback2(callback, { bypassNewUserCheck: true })) {
-                c5 = 3;
-              } else {
-                obj2 = callback(1375);
-                const result = obj2.markDismissibleContentAsDismissedPreProcessing(callback, obj1);
-                let obj3 = callback(1370);
-                c4 = 2;
-                c5 = 1;
-                obj3 = { value: null, done: false };
-                obj3[0] = obj3.addDismissedContent(callback);
-                return obj3;
-              }
-            } else if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              obj = callback(1375);
-              const result1 = obj.markDismissibleContentAsDismissedPostProcessing(callback, obj1);
-            }
-            c5 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          }
-        } catch (tmp24) {
-          c5 = tmp;
-          throw tmp24;
-        }
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        const obj = callback(1375);
+        const result1 = obj.markDismissibleContentAsDismissedPostProcessing(callback, obj1);
       }
+      return arg1;
     })();
     iter.next();
     return iter;
@@ -235,7 +194,7 @@ function _UNSAFE_markSingleUseGuildDismissibleContentAsDismissed() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -258,7 +217,7 @@ function _UNSAFE_markSingleUseGuildDismissibleContentAsDismissed() {
               }
               c5 = 1;
               c6 = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -291,7 +250,7 @@ function _UNSAFE_markSingleUseGuildDismissibleContentAsDismissed() {
             obj = callback(obj1[6]);
             const result1 = obj.markDismissibleContentAsDismissedPostProcessing(callback, obj1);
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp26) {
           c6 = tmp;
@@ -331,7 +290,7 @@ function _UNSAFE_markTimeRecurringGuildDismissibleContentAsDismissed() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -371,7 +330,7 @@ function _UNSAFE_markTimeRecurringGuildDismissibleContentAsDismissed() {
             obj = callback(1375);
             const result1 = obj.markDismissibleContentAsDismissedPostProcessing(callback, closure_1);
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp13) {
           c6 = tmp;
@@ -410,7 +369,7 @@ function _UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -453,7 +412,7 @@ function _UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed() {
             obj = callback(1375);
             const result1 = obj.markDismissibleContentAsDismissedPostProcessing(callback, closure_1);
             c7 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp13) {
           c7 = tmp;

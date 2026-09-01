@@ -1,9 +1,9 @@
-// === Module 11579: useActivityShelfData ===
+// === Module 11612: useActivityShelfData ===
 
-// Module 11579 (useActivityShelfData)
+// Module 11612 (useActivityShelfData)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "reset" /* 8467 */;
+import closure_5 from "reset" /* 8499 */;
 import closure_6 from "participantFromServer" /* 1386 */;
 
 const require = arg1;
@@ -75,7 +75,7 @@ export const useActivityShelfData = function useActivityShelfData(guildId) {
       if (supported_platforms == null) {
         supported_platforms = [];
       }
-      const tmp = lib(8405);
+      const tmp = lib(8437);
       return supported_platforms.includes(tmp(callback(500).getOS()));
     });
     const found1 = found.filter((activity) => {

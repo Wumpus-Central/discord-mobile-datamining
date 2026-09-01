@@ -1,6 +1,6 @@
-// === Module 7127: useSettingNavigationRoute ===
+// === Module 7159: useSettingNavigationRoute ===
 
-// Module 7127 (useSettingNavigationRoute)
+// Module 7159 (useSettingNavigationRoute)
 import set from "set" /* 2 */;
 import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1500 */;
 

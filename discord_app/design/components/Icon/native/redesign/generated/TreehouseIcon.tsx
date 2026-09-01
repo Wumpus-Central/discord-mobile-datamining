@@ -1,10 +1,10 @@
-// === Module 15157: TreehouseIcon ===
+// === Module 15190: TreehouseIcon ===
 
-// Module 15157 (TreehouseIcon)
+// Module 15190 (TreehouseIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4166 */;
-import registerAsset from "registerAsset" /* 15158 */;
+import BaseIconImage from "BaseIconImage" /* 4196 */;
+import registerAsset from "registerAsset" /* 15191 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

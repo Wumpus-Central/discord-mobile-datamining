@@ -1,23 +1,23 @@
-// === Module 11249: FailedGroupDMRow ===
+// === Module 11286: FailedGroupDMRow ===
 
-// Module 11249 (FailedGroupDMRow)
+// Module 11286 (FailedGroupDMRow)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
-import nameFromUserDefault from "nameFromUser" /* 4292 */;
-import Text from "Text" /* 4444 */;
-import computeChannelNameDefault from "computeChannelName" /* 4642 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4831 */;
-import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 10610 */;
+import nameFromUserDefault from "nameFromUser" /* 4322 */;
+import Text from "Text" /* 4474 */;
+import computeChannelNameDefault from "computeChannelName" /* 4674 */;
+import getAlertModalItemKey from "getAlertModalItemKey" /* 4863 */;
+import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 10648 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "ensureGuildLoaded" /* 1387 */;
 import closure_5 from "createGuildRecordFromRust" /* 1909 */;
-import closure_6 from "sortActivity" /* 4537 */;
-import closure_7 from "markAllUserIdListsStale" /* 4100 */;
+import closure_6 from "sortActivity" /* 4569 */;
+import closure_7 from "markAllUserIdListsStale" /* 4130 */;
 import closure_8 from "mergeGuildAvatar" /* 1922 */;
 import { StatusTypes } from "sum" /* 505 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function FailedGroupDMRow(channel) {
@@ -67,7 +67,7 @@ function FailedUserRow(user) {
       const obj6 = nameFromUserDefault;
     }
     obj1[4] = stateFromStores;
-    items2[1] = closure_10(tmp2(4444).Text, obj1);
+    items2[1] = closure_10(tmp2(4474).Text, obj1);
     obj[1] = items2;
     tmp9Result = closure_11(View, obj);
     const tmp10 = View;
@@ -88,10 +88,10 @@ function FailedChannelRow(channel) {
     return closure_1_5.getGuild(guild_id);
   });
   obj = { style: tmp.row, children: null };
-  obj = { "aria-label": "", guild: stateFromStores, channel, size: channel(10698).GuildIconWithChannelTypeSizes.SMALL_32 };
-  const items1 = [callback(channel(10698).GuildIconWithChannelType, obj), ];
+  obj = { "aria-label": "", guild: stateFromStores, channel, size: channel(10736).GuildIconWithChannelTypeSizes.SMALL_32 };
+  const items1 = [callback(channel(10736).GuildIconWithChannelType, obj), ];
   const tmp3 = computeChannelNameDefault(channel);
-  items1[1] = callback(channel(4444).Text, { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: computeChannelNameDefault(channel) });
+  items1[1] = callback(channel(4474).Text, { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: computeChannelNameDefault(channel) });
   obj[1] = items1;
   return callback2(View, obj);
 }
@@ -158,18 +158,18 @@ export default function DestinationFailedAlertModal(arg0) {
     obj1[1] = onRetry;
     const intl2 = tmp3(1236).intl;
     obj1[2] = intl2.string(tmp3(1236).t["5911Lb"]);
-    const items = [tmp2(tmp3(4831).AlertActionButton, obj1, "confirm"), ];
+    const items = [tmp2(tmp3(4863).AlertActionButton, obj1, "confirm"), ];
     const obj2 = { variant: "secondary", text: null };
     const intl3 = tmp3(1236).intl;
     obj2[1] = intl3.string(tmp3(1236).t.WAI6xu);
-    items[1] = tmp2(tmp3(4831).AlertActionButton, obj2, "cancel");
+    items[1] = tmp2(tmp3(4863).AlertActionButton, obj2, "cancel");
     obj[0] = items;
     let tmp2Result = callback2(closure_12, obj);
   } else {
     const obj3 = { variant: "primary", text: null };
     const intl = tmp3(1236).intl;
     obj3[1] = intl.string(tmp3(1236).t.BddRzS);
-    tmp2Result = tmp2(tmp3(4831).AlertActionButton, obj3, "confirm");
+    tmp2Result = tmp2(tmp3(4863).AlertActionButton, obj3, "confirm");
   }
   obj[3] = callback(getAlertModalItemKey.AlertActions, { children: tmp2Result });
   return callback(getAlertModalItemKey.AlertModal, obj);

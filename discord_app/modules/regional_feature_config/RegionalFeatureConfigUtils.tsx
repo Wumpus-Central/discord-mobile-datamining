@@ -1,8 +1,8 @@
-// === Module 4142: isFeatureAgeGated ===
+// === Module 4172: isFeatureAgeGated ===
 
-// Module 4142 (isFeatureAgeGated)
+// Module 4172 (isFeatureAgeGated)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "getRegionalFeatureConfig" /* 4143 */;
+import closure_2 from "getRegionalFeatureConfig" /* 4173 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/regional_feature_config/RegionalFeatureConfigUtils.tsx");

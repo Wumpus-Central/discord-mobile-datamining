@@ -1,6 +1,6 @@
-// === Module 7606: useIsUserProfileEmbedRenderingEnabled ===
+// === Module 7638: useIsUserProfileEmbedRenderingEnabled ===
 
-// Module 7606 (useIsUserProfileEmbedRenderingEnabled)
+// Module 7638 (useIsUserProfileEmbedRenderingEnabled)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1468 */;
 

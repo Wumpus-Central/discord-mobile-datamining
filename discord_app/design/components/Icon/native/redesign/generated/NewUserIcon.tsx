@@ -1,10 +1,10 @@
-// === Module 9364: NewUserIcon ===
+// === Module 9403: NewUserIcon ===
 
-// Module 9364 (NewUserIcon)
+// Module 9403 (NewUserIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4166 */;
-import registerAsset from "registerAsset" /* 9365 */;
+import BaseIconImage from "BaseIconImage" /* 4196 */;
+import registerAsset from "registerAsset" /* 9404 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

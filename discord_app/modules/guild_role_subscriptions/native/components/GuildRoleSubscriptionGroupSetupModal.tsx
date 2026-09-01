@@ -1,12 +1,12 @@
-// === Module 17320: _createGroupFromStore ===
+// === Module 17356: _createGroupFromStore ===
 
-// Module 17320 (_createGroupFromStore)
-import getRoleEmojisAll from "getRoleEmojis" /* 14790 */;
+// Module 17356 (_createGroupFromStore)
+import getRoleEmojisAll from "getRoleEmojis" /* 14823 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
 import closure_6 from "noop" /* 19 */;
-import { useRoleTierEditStore } from "usePriceTiers" /* 17277 */;
-import MAX_SUBSCRIPTION_TIERS from "MAX_SUBSCRIPTION_TIERS" /* 14768 */;
+import { useRoleTierEditStore } from "usePriceTiers" /* 17313 */;
+import MAX_SUBSCRIPTION_TIERS from "MAX_SUBSCRIPTION_TIERS" /* 14801 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -32,7 +32,7 @@ function _createGroupFromStore() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -106,7 +106,7 @@ function _createGroupFromStore() {
             return obj;
           }
           c6 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp13) {
           c6 = tmp;
           throw tmp13;
@@ -151,7 +151,7 @@ class GuildRoleSubscriptionGroupSetupModal {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {

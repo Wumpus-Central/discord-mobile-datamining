@@ -1,9 +1,9 @@
-// === Module 6134: stopLurkingAll ===
+// === Module 6166: stopLurkingAll ===
 
-// Module 6134 (stopLurkingAll)
+// Module 6166 (stopLurkingAll)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createRTCConnection" /* 4522 */;
-import closure_5 from "initialize" /* 4092 */;
+import closure_4 from "createRTCConnection" /* 4554 */;
+import closure_5 from "initialize" /* 4122 */;
 import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
@@ -35,7 +35,7 @@ function _stopLurkingAll() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -71,7 +71,7 @@ function _stopLurkingAll() {
                     c6 = 0;
                     c7 = 0;
                     c5 = 0;
-                    return (/* F122694 */ function*() { ... })();
+                    return (/* F122872 */ function*() { ... })();
                   });
                   return function() {
                     const self = this;
@@ -99,7 +99,7 @@ function _stopLurkingAll() {
             return obj;
           }
           v0 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp13) {
           v0 = tmp;
           throw tmp13;
@@ -134,7 +134,7 @@ function _stopLurking() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -161,7 +161,7 @@ function _stopLurking() {
               table = undefined;
               c3 = 1;
               guildId = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else {
             if (1 === tmp4) {
@@ -195,7 +195,7 @@ function _stopLurking() {
               return obj;
             }
             guildId = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp20) {
           guildId = tmp;

@@ -1,12 +1,12 @@
-// === Module 15371: CollectiblesShopScreen ===
+// === Module 15405: CollectiblesShopScreen ===
 
-// Module 15371 (CollectiblesShopScreen)
+// Module 15405 (CollectiblesShopScreen)
 import noopAll from "noop" /* 19 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5941 */;
-import useGiftCardMobileConsumptionHalfsheet from "useGiftCardMobileConsumptionHalfsheet" /* 6216 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7127 */;
-import useShopOrientationLock from "useShopOrientationLock" /* 15372 */;
-import CollectiblesShopInternal from "CollectiblesShopInternal" /* 15373 */;
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5973 */;
+import useGiftCardMobileConsumptionHalfsheet from "useGiftCardMobileConsumptionHalfsheet" /* 6248 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7159 */;
+import useShopOrientationLock from "useShopOrientationLock" /* 15406 */;
+import CollectiblesShopInternal from "CollectiblesShopInternal" /* 15407 */;
 import { CollectiblesMobileShopScreen as closure_3 } from "items" /* 678 */;
 import { jsx } from "jsxProd" /* 21 */;
 

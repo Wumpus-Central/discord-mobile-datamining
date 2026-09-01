@@ -1,6 +1,6 @@
-// === Module 11362: ChannelSelectComponentActionSheet ===
+// === Module 11400: ChannelSelectComponentActionSheet ===
 
-// Module 11362 (ChannelSelectComponentActionSheet)
+// Module 11400 (ChannelSelectComponentActionSheet)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1387 */;
 import closure_5 from "createGuildRecordFromRust" /* 1909 */;

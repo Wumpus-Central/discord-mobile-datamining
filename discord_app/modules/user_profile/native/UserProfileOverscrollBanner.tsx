@@ -1,18 +1,18 @@
-// === Module 8882: UserProfileOverscrollBanner ===
+// === Module 8919: UserProfileOverscrollBanner ===
 
-// Module 8882 (UserProfileOverscrollBanner)
+// Module 8919 (UserProfileOverscrollBanner)
 import noopAll from "noop" /* 19 */;
 import set from "set" /* 500 */;
-import UserProfileBannerDefault from "UserProfileBanner" /* 8520 */;
-import _modDef8883 from "module_8883" /* 8883 */;
+import UserProfileBannerDefault from "UserProfileBanner" /* 8552 */;
+import _modDef8920 from "module_8920" /* 8920 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import importDefaultResult from "module_4187" /* 4187 */;
+import importDefaultResult from "module_4217" /* 4217 */;
 
 require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = importDefaultResult.createAnimatedComponent(_modDef8883);
+let closure_6 = importDefaultResult.createAnimatedComponent(_modDef8920);
 const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileOverscrollBanner.tsx");
 
 export default function UserProfileOverscrollBanner(arg0) {

@@ -1,11 +1,11 @@
-// === Module 12761: shouldShowVoiceChannelChangeConfirmation ===
+// === Module 12794: shouldShowVoiceChannelChangeConfirmation ===
 
-// Module 12761 (shouldShowVoiceChannelChangeConfirmation)
-import closure_0 from "set" /* 4465 */;
+// Module 12794 (shouldShowVoiceChannelChangeConfirmation)
+import closure_0 from "set" /* 4495 */;
 import closure_1 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
 import closure_2 from "fetchFingerprint" /* 1218 */;
 import closure_3 from "createGuildRecordFromRust" /* 1909 */;
-import closure_4 from "updateVoiceState" /* 4467 */;
+import closure_4 from "updateVoiceState" /* 4497 */;
 
 const result = require("set").fileFinishedImporting("modules/channel/shouldShowVoiceChannelChangeConfirmation.tsx");
 

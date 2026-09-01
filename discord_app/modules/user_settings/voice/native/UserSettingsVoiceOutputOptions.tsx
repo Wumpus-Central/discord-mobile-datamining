@@ -1,15 +1,15 @@
-// === Module 10029: UserSettingsVoiceOutputOptions ===
+// === Module 10068: UserSettingsVoiceOutputOptions ===
 
-// Module 10029 (UserSettingsVoiceOutputOptions)
-import VolumeSliderDefault from "VolumeSlider" /* 10030 */;
+// Module 10068 (UserSettingsVoiceOutputOptions)
+import VolumeSliderDefault from "VolumeSlider" /* 10069 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "reset" /* 4470 */;
+import closure_5 from "reset" /* 4500 */;
 import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "_detectH265HardwareDecode" /* 4499 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4512 */;
+import closure_7 from "_detectH265HardwareDecode" /* 4529 */;
+import { MediaEngineContextTypes } from "DesktopSources" /* 4542 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 const require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
@@ -67,7 +67,7 @@ export default function UserSettingsVoiceOutputOptions() {
   obj2[3] = intl3.string(stateFromStores1(1236).t.xPHVBs);
   obj1[1] = callback(VolumeSliderDefault, obj2);
   obj[1] = callback(View, obj1);
-  const items4 = [callback(stateFromStores1(5567).TableRow, obj), ];
+  const items4 = [callback(stateFromStores1(5599).TableRow, obj), ];
   let tmp9Result = null != stateFromStores1;
   if (tmp9Result) {
     const obj3 = { label: null, subLabel: null };
@@ -82,10 +82,10 @@ export default function UserSettingsVoiceOutputOptions() {
     obj5[2] = intl5.string(tmp2(1236).t.pEAl4b);
     obj4[1] = tmp9(VolumeSliderDefault, obj5);
     obj3[1] = tmp9(View, obj4);
-    tmp9Result = tmp9(tmp2(5567).TableRow, obj3);
+    tmp9Result = tmp9(tmp2(5599).TableRow, obj3);
     const tmp11Result = VolumeSliderDefault;
   }
   items4[1] = tmp9Result;
   obj[2] = items4;
-  return closure_10(stateFromStores1(10023).UserSettingsTableRowGroup, obj);
+  return closure_10(stateFromStores1(10062).UserSettingsTableRowGroup, obj);
 };

@@ -1,8 +1,8 @@
-// === Module 5072: _initialize ===
+// === Module 5104: _initialize ===
 
-// Module 5072 (_initialize)
+// Module 5104 (_initialize)
 import timestampDefault from "timestamp" /* 3 */;
-import initializeDefault from "initialize" /* 4630 */;
+import initializeDefault from "initialize" /* 4662 */;
 import closure_0 from "_slicedToArray" /* 32 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
 

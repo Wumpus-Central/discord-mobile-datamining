@@ -1,9 +1,9 @@
-// === Module 11489: handleSharedClientThemeViewed ===
+// === Module 11522: handleSharedClientThemeViewed ===
 
-// Module 11489 (handleSharedClientThemeViewed)
+// Module 11522 (handleSharedClientThemeViewed)
 import set from "set" /* 2 */;
 import encodeProperties from "encodeProperties" /* 503 */;
-import trackImpression from "trackImpression" /* 8855 */;
+import trackImpression from "trackImpression" /* 8892 */;
 
 const result = set.fileFinishedImporting("modules/client_themes/native/chat/sharedClientThemeViewed.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 14227: _updateBadgeSettings ===
+// === Module 14260: _updateBadgeSettings ===
 
-// Module 14227 (_updateBadgeSettings)
+// Module 14260 (_updateBadgeSettings)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
@@ -24,7 +24,7 @@ function _updateBadgeSettings() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -48,7 +48,7 @@ function _updateBadgeSettings() {
               let body;
               c5 = 1;
               c6 = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {

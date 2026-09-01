@@ -1,6 +1,6 @@
-// === Module 16147: isVibegrationsLocalDev ===
+// === Module 16182: isVibegrationsLocalDev ===
 
-// Module 16147 (isVibegrationsLocalDev)
+// Module 16182 (isVibegrationsLocalDev)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/vibegrations/lib/vibegrationsLocalDev.tsx");

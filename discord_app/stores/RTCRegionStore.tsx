@@ -1,6 +1,6 @@
-// === Module 4543: initialize ===
+// === Module 4575: initialize ===
 
-// Module 4543 (initialize)
+// Module 4575 (initialize)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import setDefault from "set" /* 687 */;

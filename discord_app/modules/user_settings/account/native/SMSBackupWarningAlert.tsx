@@ -1,10 +1,10 @@
-// === Module 7768: SMSBackupWarningAlert ===
+// === Module 7800: SMSBackupWarningAlert ===
 
-// Module 7768 (SMSBackupWarningAlert)
+// Module 7800 (SMSBackupWarningAlert)
 import noopAll from "noop" /* 19 */;
-import componentDidMountDefault from "componentDidMount" /* 4915 */;
+import componentDidMountDefault from "componentDidMount" /* 4947 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 const require = arg1;
 noopAll;
@@ -30,11 +30,11 @@ export default function SMSBackupWarningAlert(onConfirm) {
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl3 = onConfirm(1236).intl;
   obj[4] = intl3.string(onConfirm(1236).t.Ed4XQB);
-  const items = [callback(onConfirm(4444).Text, obj), ];
+  const items = [callback(onConfirm(4474).Text, obj), ];
   obj = { style: tmp.body, variant: "text-sm/medium", color: "text-default", children: null };
   const intl4 = onConfirm(1236).intl;
   obj[3] = intl4.string(onConfirm(1236).t.EDU2Eg);
-  items[1] = callback(onConfirm(4444).Text, obj);
+  items[1] = callback(onConfirm(4474).Text, obj);
   obj[4] = items;
   return callback2(componentDidMountDefault, obj);
 };

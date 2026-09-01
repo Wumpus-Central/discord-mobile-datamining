@@ -1,10 +1,10 @@
-// === Module 7850: XSmallBoldIcon ===
+// === Module 7882: XSmallBoldIcon ===
 
-// Module 7850 (XSmallBoldIcon)
+// Module 7882 (XSmallBoldIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4166 */;
-import registerAsset from "registerAsset" /* 5964 */;
+import BaseIconImage from "BaseIconImage" /* 4196 */;
+import registerAsset from "registerAsset" /* 5996 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

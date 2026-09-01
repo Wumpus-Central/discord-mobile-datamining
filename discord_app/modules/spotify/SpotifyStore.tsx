@@ -1,6 +1,6 @@
-// === Module 5192: upsertAccount ===
+// === Module 5224: upsertAccount ===
 
-// Module 5192 (upsertAccount)
+// Module 5224 (upsertAccount)
 import timestampDefault from "timestamp" /* 3 */;
 import applyDefault from "apply" /* 12 */;
 import failsDefault from "fails" /* 584 */;
@@ -8,20 +8,20 @@ import initializeDefault from "initialize" /* 589 */;
 import setDefault from "set" /* 687 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import start2 from "start" /* 4332 */;
-import updateAssets from "updateAssets" /* 8017 */;
-import apiRequest from "apiRequest" /* 9353 */;
-import useIsSpeaking from "useIsSpeaking" /* 9453 */;
-import closure_6 from "initialize" /* 4471 */;
+import start2 from "start" /* 4362 */;
+import updateAssets from "updateAssets" /* 8049 */;
+import apiRequest from "apiRequest" /* 9392 */;
+import useIsSpeaking from "useIsSpeaking" /* 9492 */;
+import closure_6 from "initialize" /* 4501 */;
 import closure_7 from "fetchFingerprint" /* 1218 */;
-import closure_8 from "set" /* 5193 */;
-import closure_9 from "checkIdleAFK" /* 5322 */;
-import closure_10 from "sortActivity" /* 4537 */;
-import closure_11 from "anyoneHasFlagInContext" /* 5331 */;
-import closure_12 from "updateVoiceState" /* 4467 */;
-import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 8579 */;
+import closure_8 from "set" /* 5225 */;
+import closure_9 from "checkIdleAFK" /* 5354 */;
+import closure_10 from "sortActivity" /* 4569 */;
+import closure_11 from "anyoneHasFlagInContext" /* 5363 */;
+import closure_12 from "updateVoiceState" /* 4497 */;
+import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 8611 */;
 import ME from "ME" /* 676 */;
-import importDefaultResult from "getPlatformUserUrl" /* 5195 */;
+import importDefaultResult from "getPlatformUserUrl" /* 5227 */;
 import set from "set" /* 2 */;
 
 require = arg1;
@@ -66,7 +66,7 @@ function upsertAccount(accountId, accessToken) {
     }, closure_29);
     obj.accountId = accountId;
     obj.accessToken = accessToken;
-    const interval = new obj(4332).Interval();
+    const interval = new obj(4362).Interval();
     obj.pingInterval = interval;
     const tmp15 = new failsDefault(undefined, MINUTE);
     obj.backoff = tmp15;
@@ -452,7 +452,7 @@ function updatePlayerState(arg0, arg1, device) {
         if (context.type === tmp12.ALBUM) {
           resolved = Promise.resolve(context);
         } else {
-          const SpotifyAPI = _require(9353).SpotifyAPI;
+          const SpotifyAPI = _require(9392).SpotifyAPI;
           const obj2 = { url: null };
           obj2[0] = context.href;
           const value = SpotifyAPI.get(arg0, arg1, obj2);
@@ -633,7 +633,7 @@ prototype["connect"] = function connect() {
     self._requestedDisconnect = false;
     self._requestedConnect = true;
     ({ accountId, accessToken } = self);
-    const SpotifyAPI = accountId(9353).SpotifyAPI;
+    const SpotifyAPI = accountId(9392).SpotifyAPI;
     let obj = { url: null, query: null, onlyRetryOnAuthorizationErrors: true };
     obj[0] = constants.PLAYER;
     obj = { additional_types: null };
@@ -765,9 +765,9 @@ prototype["handleOpen"] = function handleOpen() {
   backoff.succeed();
   const pingInterval = this.pingInterval;
   pingInterval.start(closure_23, () => self.ping());
-  const profile = self(9353).getProfile(this.accountId, this.accessToken);
-  const obj = self(9353);
-  const devices = self(9353).getDevices(this.accountId, this.accessToken);
+  const profile = self(9392).getProfile(this.accountId, this.accessToken);
+  const obj = self(9392);
+  const devices = self(9392).getDevices(this.accountId, this.accessToken);
 };
 prototype["handleMessage"] = function handleMessage(data) {
   data = data.data;
@@ -1286,7 +1286,7 @@ const spotifyStore = new SpotifyStore(dispatcherDefault, {
           }
         }
         timeout1.start(100, () => closure_35.stop(), false);
-        obj9 = device(9453);
+        obj9 = device(9492);
       }
       if (null != tmp10) {
         if (!tmp22) {

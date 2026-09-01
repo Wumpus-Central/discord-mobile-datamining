@@ -1,7 +1,7 @@
-// === Module 4468: isVoiceMuted ===
+// === Module 4498: isVoiceMuted ===
 
-// Module 4468 (isVoiceMuted)
-import toJSDefault from "toJS" /* 1931 */;
+// Module 4498 (isVoiceMuted)
+import toJSDefault from "toJS" /* 1936 */;
 
 toJSDefault;
 const result = require("set").fileFinishedImporting("records/VoiceStateRecord.tsx");

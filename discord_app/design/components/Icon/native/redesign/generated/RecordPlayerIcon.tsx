@@ -1,10 +1,10 @@
-// === Module 15175: RecordPlayerIcon ===
+// === Module 15208: RecordPlayerIcon ===
 
-// Module 15175 (RecordPlayerIcon)
+// Module 15208 (RecordPlayerIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4166 */;
-import registerAsset from "registerAsset" /* 15176 */;
+import BaseIconImage from "BaseIconImage" /* 4196 */;
+import registerAsset from "registerAsset" /* 15209 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

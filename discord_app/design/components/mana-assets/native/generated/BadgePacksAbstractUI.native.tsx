@@ -1,10 +1,10 @@
-// === Module 6315: BadgePacksAbstractUI ===
+// === Module 6347: BadgePacksAbstractUI ===
 
-// Module 6315 (BadgePacksAbstractUI)
+// Module 6347 (BadgePacksAbstractUI)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5461 */;
-import metadataDefault from "metadata" /* 6316 */;
+import preloadDefault from "preload" /* 5493 */;
+import metadataDefault from "metadata" /* 6348 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/BadgePacksAbstractUI.native.tsx");

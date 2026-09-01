@@ -1,8 +1,8 @@
-// === Module 11069: map ===
+// === Module 11106: map ===
 
-// Module 11069 (map)
+// Module 11106 (map)
 import getAvatarURL from "getAvatarURL" /* 1431 */;
-import getSizedImageProxyURL from "getSizedImageProxyURL" /* 4482 */;
+import getSizedImageProxyURL from "getSizedImageProxyURL" /* 4512 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import { Image } from "get ActivityIndicator" /* 17 */;

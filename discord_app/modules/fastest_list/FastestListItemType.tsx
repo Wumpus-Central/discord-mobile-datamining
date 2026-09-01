@@ -1,6 +1,6 @@
-// === Module 7755: ITEM ===
+// === Module 7787: ITEM ===
 
-// Module 7755 (ITEM)
+// Module 7787 (ITEM)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/fastest_list/FastestListItemType.tsx");

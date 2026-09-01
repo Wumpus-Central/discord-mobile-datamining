@@ -1,6 +1,6 @@
-// === Module 17153: MAX_SUBCATEGORIES ===
+// === Module 17189: MAX_SUBCATEGORIES ===
 
-// Module 17153 (MAX_SUBCATEGORIES)
+// Module 17189 (MAX_SUBCATEGORIES)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 

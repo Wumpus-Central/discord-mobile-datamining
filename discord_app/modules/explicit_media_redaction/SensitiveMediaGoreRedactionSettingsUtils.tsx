@@ -1,9 +1,9 @@
-// === Module 6114: resolveGoreSettingWithDefaults ===
+// === Module 6146: resolveGoreSettingWithDefaults ===
 
-// Module 6114 (resolveGoreSettingWithDefaults)
+// Module 6146 (resolveGoreSettingWithDefaults)
 import create from "create" /* 1306 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4136 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 4149 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 4179 */;
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 import { HelpdeskArticles } from "ME" /* 676 */;

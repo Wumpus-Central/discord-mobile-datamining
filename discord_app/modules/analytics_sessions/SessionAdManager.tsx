@@ -1,10 +1,10 @@
-// === Module 14168: _initialize ===
+// === Module 14201: _initialize ===
 
-// Module 14168 (_initialize)
+// Module 14201 (_initialize)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import start from "start" /* 4332 */;
-import initializeDefault from "initialize" /* 4630 */;
-import isForegrounded from "isForegrounded" /* 7176 */;
+import start from "start" /* 4362 */;
+import initializeDefault from "initialize" /* 4662 */;
+import isForegrounded from "isForegrounded" /* 7208 */;
 import importDefaultResult from "fetchFingerprint" /* 1218 */;
 import ME from "ME" /* 676 */;
 

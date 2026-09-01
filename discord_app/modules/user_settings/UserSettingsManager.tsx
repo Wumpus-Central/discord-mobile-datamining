@@ -1,7 +1,7 @@
-// === Module 17048: setVerifyTimezone ===
+// === Module 17084: setVerifyTimezone ===
 
-// Module 17048 (setVerifyTimezone)
-import initializeDefault from "initialize" /* 5454 */;
+// Module 17084 (setVerifyTimezone)
+import initializeDefault from "initialize" /* 5486 */;
 
 let require = arg1;
 let c2 = false;
@@ -30,7 +30,7 @@ prototype["ensureTimezoneUpdated"] = function ensureTimezoneUpdated() {
     const _Date = Date;
     const date = new Date();
     const timezoneOffset = date.getTimezoneOffset();
-    let TimezoneOffset = timezoneOffset(4136).TimezoneOffset;
+    let TimezoneOffset = timezoneOffset(4166).TimezoneOffset;
     if (TimezoneOffset.getSetting() !== timezoneOffset) {
       const _setImmediate = setImmediate;
       setImmediate(() => {

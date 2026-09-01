@@ -1,6 +1,6 @@
-// === Module 12042: useShowGuildPowerupRollbackSheet ===
+// === Module 12075: useShowGuildPowerupRollbackSheet ===
 
-// Module 12042 (useShowGuildPowerupRollbackSheet)
+// Module 12075 (useShowGuildPowerupRollbackSheet)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1384 */;
@@ -17,7 +17,7 @@ export default function useShowGuildPowerupRollbackSheet(arg0, arg1) {
   let first;
   dependencyMap = undefined;
   let callback;
-  ({ shouldShow, modalConfig } = first(12043)(arg0, arg1));
+  ({ shouldShow, modalConfig } = first(12076)(arg0, arg1));
   if (shouldShow) {
     shouldShow = null != modalConfig;
   }
@@ -28,8 +28,8 @@ export default function useShowGuildPowerupRollbackSheet(arg0, arg1) {
   if (shouldShow) {
     items.push(modalConfig.dismissibleContent);
   }
-  const tmp2 = first(12043)(arg0, arg1);
-  const tmp5 = callback(modalConfig(6219).useSelectedDismissibleContent(items), 2);
+  const tmp2 = first(12076)(arg0, arg1);
+  const tmp5 = callback(modalConfig(6251).useSelectedDismissibleContent(items), 2);
   first = tmp5[0];
   dependencyMap = tmp7;
   callback = React.useRef(false);

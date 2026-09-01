@@ -1,10 +1,10 @@
-// === Module 15525: usePasswordRegistrationStep ===
+// === Module 15560: usePasswordRegistrationStep ===
 
-// Module 15525 (usePasswordRegistrationStep)
+// Module 15560 (usePasswordRegistrationStep)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import { useRegistrationUIStore } from "useRegistrationUIStore" /* 15502 */;
+import { useRegistrationUIStore } from "useRegistrationUIStore" /* 15537 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/auth/native/components/utils/usePasswordRegistrationStep.tsx");
@@ -59,7 +59,7 @@ export const usePasswordRegistrationStep = function usePasswordRegistrationStep(
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

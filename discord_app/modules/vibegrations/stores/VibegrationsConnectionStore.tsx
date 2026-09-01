@@ -1,20 +1,20 @@
-// === Module 16142: rejectPendingPublish ===
+// === Module 16177: rejectPendingPublish ===
 
-// Module 16142 (rejectPendingPublish)
+// Module 16177 (rejectPendingPublish)
 import failsDefault from "fails" /* 584 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import snowflakeSequence from "snowflakeSequence" /* 7466 */;
-import _modDef16141 from "module_16141" /* 16141 */;
-import vibegrationLocation from "vibegrationLocation" /* 16143 */;
-import map10 from "map" /* 16144 */;
-import open2 from "open" /* 16146 */;
+import snowflakeSequence from "snowflakeSequence" /* 7498 */;
+import _modDef16176 from "module_16176" /* 16176 */;
+import vibegrationLocation from "vibegrationLocation" /* 16178 */;
+import map10 from "map" /* 16179 */;
+import open2 from "open" /* 16181 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import closure_6 from "newMessage" /* 16139 */;
-import { getOlderHistoryCursor } from "newMessage" /* 16139 */;
-import closure_8 from "isProjectOwner" /* 16140 */;
+import closure_6 from "newMessage" /* 16174 */;
+import { getOlderHistoryCursor } from "newMessage" /* 16174 */;
+import closure_8 from "isProjectOwner" /* 16175 */;
 import { Endpoints } from "ME" /* 676 */;
 import set from "set" /* 2 */;
 
@@ -121,21 +121,26 @@ function flushPendingSends(projectId, pendingSends) {
       appendLocalUserMessage(projectId, nextResult);
       try {
         const ws = pendingSends.ws;
-        const attachments = tmp8.attachments;
+        ({ content, nonce, attachments } = tmp8);
         let mapped;
-        ({ content, nonce } = tmp8);
         if (attachments != null) {
           mapped = attachments.map((id) => id.id);
         }
-        ws.sendUserMessage(content, nonce, mapped);
-      } catch (tmp14) {
+        const project = store.getProject(projectId);
+        let name;
+        if (project != null) {
+          name = project.name;
+        }
+        ws.sendUserMessage(content, nonce, mapped, name);
+      } catch (tmp22) {
         let message = tmp;
-        if (tmp14 instanceof tmp2.Error) {
-          message = tmp14.message;
+        if (tmp22 instanceof tmp2.Error) {
+          message = tmp22.message;
         }
         sendFailedStep(tmp4, message);
-        const tmp15 = sendFailedStep;
+        const tmp23 = sendFailedStep;
       }
+      tmp8 = nextResult;
     }
   }
 }
@@ -295,7 +300,7 @@ function handleEvent(projectId, pendingEvents, type) {
       deleteResult = loadOlderHistory;
       deleteResult = loadOlderHistory(projectId);
     }
-    const obj57 = map7;
+    const obj67 = map7;
   } else if ("hello" === type.type) {
     pendingEvents.helloSeen = true;
     const backoff = pendingEvents.backoff;
@@ -343,9 +348,9 @@ function handleEvent(projectId, pendingEvents, type) {
     deleteResult = setConnState(projectId, "open");
     deleteResult = pendingEvents;
     deleteResult = pendingEvents;
-    for (const item10467 of pendingEvents) {
+    for (const item10531 of pendingEvents) {
       deleteResult = handleEvent;
-      deleteResult = handleEvent(arg0, arg1, item10467);
+      deleteResult = handleEvent(arg0, arg1, item10531);
       continue;
     }
     const pendingModelSettings = pendingEvents.pendingModelSettings;
@@ -359,7 +364,7 @@ function handleEvent(projectId, pendingEvents, type) {
     }
     deleteResult = flushPendingSends;
     deleteResult = flushPendingSends(projectId, pendingEvents);
-    const obj55 = attachment_id(709);
+    const obj65 = attachment_id(709);
   } else if ("chat_state" === type.type) {
     deleteResult = attachment_id;
     deleteResult = dependencyMap;
@@ -376,7 +381,7 @@ function handleEvent(projectId, pendingEvents, type) {
       deleteResult = flushPendingSends;
       deleteResult = flushPendingSends(projectId, pendingEvents);
     }
-    const obj53 = attachment_id(709);
+    const obj63 = attachment_id(709);
   } else if ("user_message" === type.type) {
     deleteResult = (function appendAcceptedUserMessage(projectId, content) {
       let hasItem = null != content.nonce;
@@ -422,54 +427,28 @@ function handleEvent(projectId, pendingEvents, type) {
       deleteResult = dependencyMap;
       let obj2 = { type: "VIBEGRATIONS_CHAT_MESSAGE_DISPOSITION", projectId: null, id: null, activeTurnId: null, disposition: null };
       obj2[1] = projectId;
-      ({ id: obj52[2], active_turn_id: obj52[3], disposition: obj52[4] } = type);
+      ({ id: obj62[2], active_turn_id: obj62[3], disposition: obj62[4] } = type);
       deleteResult = attachment_id(709).dispatch(obj2);
-      const obj51 = attachment_id(709);
+      const obj61 = attachment_id(709);
     }
   } else if ("side_reply" === type.type) {
     deleteResult = attachment_id;
     deleteResult = dependencyMap;
     const obj3 = { type: "VIBEGRATIONS_CHAT_SIDE_REPLY", projectId: null, id: null, inReplyTo: null, content: null, timestamp: null };
     obj3[1] = projectId;
-    ({ id: obj50[2], in_reply_to: obj50[3], content: obj50[4], ts: obj50[5] } = type);
+    ({ id: obj60[2], in_reply_to: obj60[3], content: obj60[4], ts: obj60[5] } = type);
     deleteResult = attachment_id(709).dispatch(obj3);
-    const obj49 = attachment_id(709);
+    const obj59 = attachment_id(709);
   } else if ("provisional_todo" === type.type) {
     deleteResult = attachment_id;
     deleteResult = dependencyMap;
     obj4 = { type: "VIBEGRATIONS_CHAT_PROVISIONAL_TODO", projectId: null, turnId: null, text: null };
     obj4[1] = projectId;
-    ({ turn_id: obj48[2], text: obj48[3] } = type);
+    ({ turn_id: obj58[2], text: obj58[3] } = type);
     deleteResult = attachment_id(709).dispatch(obj4);
-    const obj47 = attachment_id(709);
+    const obj57 = attachment_id(709);
   } else if ("step" === type.type) {
     if ("reply" === type.kind) {
-      let str23 = type.message;
-      deleteResult = null;
-      if (str23 == null) {
-        str23 = "";
-      }
-      if ("" !== str23) {
-        deleteResult = attachment_id;
-        deleteResult = dependencyMap;
-        let obj5 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
-        obj5[1] = projectId;
-        obj5[2] = type.turn_id;
-        const obj6 = { content: null, kind: "message" };
-        obj6[0] = str23;
-        obj5[3] = obj6;
-        deleteResult = attachment_id(709).dispatch(obj5);
-        const obj44 = attachment_id(709);
-      } else {
-        deleteResult = sendFailedStep;
-        deleteResult = _require;
-        deleteResult = dependencyMap;
-        const intl2 = _require(1236).intl;
-        deleteResult = attachment_id;
-        deleteResult = obj;
-        deleteResult = sendFailedStep(projectId, intl2.string(attachment_id(3471).Z8Eo8I), obj);
-      }
-    } else if ("announcement" === type.kind) {
       let str21 = type.message;
       deleteResult = null;
       if (str21 == null) {
@@ -478,29 +457,57 @@ function handleEvent(projectId, pendingEvents, type) {
       if ("" !== str21) {
         deleteResult = attachment_id;
         deleteResult = dependencyMap;
+        const obj5 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
+        obj5[1] = projectId;
+        obj5[2] = type.turn_id;
+        const obj6 = { content: null, kind: "message" };
+        obj6[0] = str21;
+        obj5[3] = obj6;
+        deleteResult = attachment_id(709).dispatch(obj5);
+        const obj54 = attachment_id(709);
+      } else {
+        deleteResult = sendFailedStep;
+        deleteResult = _require;
+        deleteResult = dependencyMap;
+        const intl2 = _require(1236).intl;
+        deleteResult = attachment_id;
+        deleteResult = obj;
+        deleteResult = sendFailedStep(projectId, intl2.string(attachment_id(3501).Z8Eo8I), obj);
+      }
+    } else if ("announcement" === type.kind) {
+      let str19 = type.message;
+      deleteResult = null;
+      if (str19 == null) {
+        str19 = "";
+      }
+      if ("" !== str19) {
+        deleteResult = attachment_id;
+        deleteResult = dependencyMap;
         let obj7 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
         obj7[1] = projectId;
         obj7[2] = type.turn_id;
-        let obj8 = { announcement: null };
-        obj8[0] = str21;
+        const obj8 = { announcement: null };
+        obj8[0] = str19;
         obj7[3] = obj8;
         deleteResult = attachment_id(709).dispatch(obj7);
-        const obj74 = attachment_id(709);
+        const obj84 = attachment_id(709);
         let obj9 = { type: "VIBEGRATIONS_CHAT_STEP_APPEND", projectId: null, turnId: null, step: null };
         obj9[1] = projectId;
         obj9[2] = type.turn_id;
         obj9[3] = type;
         deleteResult = attachment_id(709).dispatch(obj9);
-        const obj77 = attachment_id(709);
+        const obj87 = attachment_id(709);
       }
     } else if ("thinking_lifecycle" === type.kind) {
       ({ phase, session, seq, ticks, elapsed_ms, text } = type);
-      if (tmp99) {
+      deleteResult = null;
+      deleteResult = null != phase && null != seq && null != session;
+      if (deleteResult) {
         deleteResult = attachment_id;
         deleteResult = dependencyMap;
-        let obj10 = { type: "VIBEGRATIONS_CHAT_THINKING_SET", projectId: null, activity: null };
+        const obj10 = { type: "VIBEGRATIONS_CHAT_THINKING_SET", projectId: null, activity: null };
         obj10[1] = projectId;
-        const obj11 = { phase: null, session: null, seq: null, ticks: null, elapsedMs: null, text: null };
+        let obj11 = { phase: null, session: null, seq: null, ticks: null, elapsedMs: null, text: null };
         obj11[0] = phase;
         obj11[1] = session;
         obj11[2] = seq;
@@ -518,21 +525,80 @@ function handleEvent(projectId, pendingEvents, type) {
         obj11[5] = text;
         obj10[2] = obj11;
         deleteResult = attachment_id(709).dispatch(obj10);
-        const obj41 = attachment_id(709);
+        const obj51 = attachment_id(709);
       }
-      tmp99 = null != phase && null != seq && null != session;
     } else if ("compaction" === type.kind) {
-      let tmp94 = "start" !== type.phase;
-      if (tmp94) {
-        tmp94 = "end" !== type.phase;
+      deleteResult = "start" !== type.phase;
+      if (deleteResult) {
+        deleteResult = "end" !== type.phase;
       }
-      if (!tmp94) {
-        let obj38 = attachment_id(709);
+      if (!deleteResult) {
+        deleteResult = attachment_id;
+        deleteResult = dependencyMap;
         let obj12 = { type: "VIBEGRATIONS_CHAT_COMPACTING_SET", projectId: null, compacting: null };
         obj12[1] = projectId;
         obj12[2] = "start" === type.phase;
-        obj38.dispatch(obj12);
+        deleteResult = attachment_id(709).dispatch(obj12);
+        const obj49 = attachment_id(709);
       }
+    } else if ("debug_compaction_declined" === type.kind) {
+      deleteResult = null;
+      deleteResult = null != type.projected && null != type.threshold;
+      if (deleteResult) {
+        deleteResult = attachment_id;
+        deleteResult = dependencyMap;
+        let obj13 = { type: "VIBEGRATIONS_DEBUG_COMPACTION_DECLINED", projectId: null, promptCeiling: null, threshold: null, projected: null, headroom: null, retainedMessages: null, observedAt: null };
+        obj13[1] = projectId;
+        let num10 = type.prompt_ceiling;
+        if (num10 == null) {
+          num10 = 0;
+        }
+        obj13[2] = num10;
+        ({ threshold: obj47[3], projected: obj47[4], headroom } = type);
+        if (headroom == null) {
+          headroom = type.threshold - type.projected;
+        }
+        obj13[5] = headroom;
+        let num11 = type.retained_messages;
+        if (num11 == null) {
+          num11 = 0;
+        }
+        obj13[6] = num11;
+        deleteResult = globalThis;
+        const _Date2 = Date;
+        deleteResult = new.target;
+        deleteResult = new.target;
+        const date = new Date();
+        deleteResult = date;
+        obj13[7] = date.toISOString();
+        deleteResult = attachment_id(709).dispatch(obj13);
+        const obj46 = attachment_id(709);
+      }
+    } else if ("debug_compaction_report" === type.kind) {
+      if (tmp97) {
+        let obj42 = attachment_id(709);
+        let obj14 = { type: "VIBEGRATIONS_DEBUG_COMPACTION_REPORT", projectId: null, tokensBefore: null, tokensAfter: null, retainedMessages: null, promptCeiling: null, observedAt: null };
+        obj14[1] = projectId;
+        ({ tokens_before: obj44[2], tokens_after: obj44[3], retained_messages } = type);
+        if (retained_messages == null) {
+          retained_messages = 0;
+        }
+        obj14[4] = retained_messages;
+        let num9 = type.prompt_ceiling;
+        if (num9 == null) {
+          num9 = 0;
+        }
+        obj14[5] = num9;
+        deleteResult = globalThis;
+        const _Date = Date;
+        deleteResult = new.target;
+        deleteResult = new.target;
+        const date1 = new Date();
+        deleteResult = date1;
+        obj14[6] = date1.toISOString();
+        deleteResult = obj42.dispatch(obj14);
+      }
+      tmp97 = null != type.tokens_before && null != type.tokens_after;
     } else if ("todos" === type.kind) {
       let items = type.items;
       if (items == null) {
@@ -541,53 +607,53 @@ function handleEvent(projectId, pendingEvents, type) {
       if (items.length > 0) {
         deleteResult = attachment_id;
         deleteResult = dependencyMap;
-        let obj13 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
-        obj13[1] = projectId;
-        obj13[2] = type.turn_id;
-        const obj14 = { todos: null };
-        obj14[0] = items;
-        obj13[3] = obj14;
-        deleteResult = attachment_id(709).dispatch(obj13);
-        const obj69 = attachment_id(709);
-        let obj15 = { type: "VIBEGRATIONS_CHAT_STEP_APPEND", projectId: null, turnId: null, step: null };
+        const obj15 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
         obj15[1] = projectId;
         obj15[2] = type.turn_id;
-        obj15[3] = type;
+        let obj16 = { todos: null };
+        obj16[0] = items;
+        obj15[3] = obj16;
         deleteResult = attachment_id(709).dispatch(obj15);
-        const obj72 = attachment_id(709);
+        const obj79 = attachment_id(709);
+        let obj17 = { type: "VIBEGRATIONS_CHAT_STEP_APPEND", projectId: null, turnId: null, step: null };
+        obj17[1] = projectId;
+        obj17[2] = type.turn_id;
+        obj17[3] = type;
+        deleteResult = attachment_id(709).dispatch(obj17);
+        const obj82 = attachment_id(709);
       }
     } else if ("plan_proposed" === type.kind) {
       if (null != type.proposal) {
-        let obj35 = attachment_id(709);
-        const obj16 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
-        obj16[1] = projectId;
-        obj16[2] = type.turn_id;
-        const obj17 = { proposal: null, kind: "proposal" };
-        obj17[0] = type.proposal;
-        obj16[3] = obj17;
-        obj35.dispatch(obj16);
-      } else {
-        const intl = _require(1236).intl;
-        sendFailedStep(projectId, intl.string(attachment_id(3471).IHCafX), obj);
-      }
-    } else if ("ideas" === type.kind) {
-      let tmp79 = null != type.ideas;
-      if (tmp79) {
-        tmp79 = type.ideas.length > 0;
-      }
-      if (tmp79) {
-        let obj32 = attachment_id(709);
+        let obj39 = attachment_id(709);
         const obj18 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
         obj18[1] = projectId;
         obj18[2] = type.turn_id;
-        let obj19 = { ideas: null };
-        obj19[0] = type.ideas;
+        let obj19 = { proposal: null, kind: "proposal" };
+        obj19[0] = type.proposal;
         obj18[3] = obj19;
-        obj32.dispatch(obj18);
+        obj39.dispatch(obj18);
+      } else {
+        const intl = _require(1236).intl;
+        sendFailedStep(projectId, intl.string(attachment_id(3501).IHCafX), obj);
+      }
+    } else if ("ideas" === type.kind) {
+      let tmp81 = null != type.ideas;
+      if (tmp81) {
+        tmp81 = type.ideas.length > 0;
+      }
+      if (tmp81) {
+        let obj36 = attachment_id(709);
+        const obj20 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
+        obj20[1] = projectId;
+        obj20[2] = type.turn_id;
+        const obj21 = { ideas: null };
+        obj21[0] = type.ideas;
+        obj20[3] = obj21;
+        obj36.dispatch(obj20);
       }
     } else if ("clarification" === type.kind) {
-      let tmp74 = null != type.clarification;
-      if (tmp74) {
+      let tmp76 = null != type.clarification;
+      if (tmp76) {
         const questions = type.clarification.questions;
         let num4;
         if (questions != null) {
@@ -596,32 +662,32 @@ function handleEvent(projectId, pendingEvents, type) {
         if (num4 == null) {
           num4 = 0;
         }
-        tmp74 = num4 > 0;
+        tmp76 = num4 > 0;
       }
-      if (tmp74) {
-        let obj29 = attachment_id(709);
-        let obj20 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
-        obj20[1] = projectId;
-        obj20[2] = type.turn_id;
-        const obj21 = { clarification: null };
-        obj21[0] = type.clarification;
-        obj20[3] = obj21;
-        obj29.dispatch(obj20);
-      }
-    } else if ("attachment" === type.kind) {
-      let tmp69 = null != type.attachments;
-      if (tmp69) {
-        tmp69 = type.attachments.length > 0;
-      }
-      if (tmp69) {
-        let obj26 = attachment_id(709);
-        let obj22 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
+      if (tmp76) {
+        let obj33 = attachment_id(709);
+        const obj22 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
         obj22[1] = projectId;
         obj22[2] = type.turn_id;
-        const obj23 = { attachments: null };
-        obj23[0] = type.attachments;
+        let obj23 = { clarification: null };
+        obj23[0] = type.clarification;
         obj22[3] = obj23;
-        obj26.dispatch(obj22);
+        obj33.dispatch(obj22);
+      }
+    } else if ("attachment" === type.kind) {
+      let tmp71 = null != type.attachments;
+      if (tmp71) {
+        tmp71 = type.attachments.length > 0;
+      }
+      if (tmp71) {
+        let obj30 = attachment_id(709);
+        let obj24 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
+        obj24[1] = projectId;
+        obj24[2] = type.turn_id;
+        const obj25 = { attachments: null };
+        obj25[0] = type.attachments;
+        obj24[3] = obj25;
+        obj30.dispatch(obj24);
       }
     } else if ("collect_secrets" === type.kind) {
       let fields = type.fields;
@@ -631,66 +697,50 @@ function handleEvent(projectId, pendingEvents, type) {
       if (fields.length > 0) {
         deleteResult = attachment_id;
         deleteResult = dependencyMap;
-        const obj24 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
-        obj24[1] = projectId;
-        obj24[2] = type.turn_id;
-        const obj25 = { secretRequest: null };
-        obj26 = { fields: null, note: null, copy_values: null };
-        obj26[0] = fields;
-        ({ note: obj68[1], copy_values: obj68[2] } = type);
-        obj25[0] = obj26;
-        obj24[3] = obj25;
-        deleteResult = attachment_id(709).dispatch(obj24);
-        const obj65 = attachment_id(709);
+        let obj26 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
+        obj26[1] = projectId;
+        obj26[2] = type.turn_id;
+        const obj27 = { secretRequest: null };
+        const obj28 = { fields: null, note: null, copy_values: null };
+        obj28[0] = fields;
+        ({ note: obj78[1], copy_values: obj78[2] } = type);
+        obj27[0] = obj28;
+        obj26[3] = obj27;
+        deleteResult = attachment_id(709).dispatch(obj26);
+        const obj75 = attachment_id(709);
       }
     } else if ("collect_settings" === type.kind) {
-      obj22 = attachment_id(709);
-      const obj27 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
-      obj27[1] = projectId;
-      obj27[2] = type.turn_id;
-      const obj28 = { settingsRequest: null };
-      obj29 = { keys: null, note: null };
-      ({ keys: obj26[0], note: obj26[1] } = type);
-      obj28[0] = obj29;
-      obj27[3] = obj28;
-      obj22.dispatch(obj27);
+      obj26 = attachment_id(709);
+      const obj29 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
+      obj29[1] = projectId;
+      obj29[2] = type.turn_id;
+      obj30 = { settingsRequest: null };
+      ({ keys: obj30[0], note: obj30[1] } = type);
+      obj30[0] = { keys: null, note: null };
+      obj29[3] = obj30;
+      obj26.dispatch(obj29);
+      const obj31 = { keys: null, note: null };
     } else if ("usage" === type.kind) {
-      if (tmp60) {
-        obj20 = attachment_id(709);
-        const obj30 = { type: "VIBEGRATIONS_CHAT_USAGE_SET", projectId: null, turn: null, project: null };
-        obj30[1] = projectId;
-        ({ turn: obj22[2], project: obj22[3] } = type);
-        obj20.dispatch(obj30);
+      if (tmp62) {
+        obj24 = attachment_id(709);
+        const obj32 = { type: "VIBEGRATIONS_CHAT_USAGE_SET", projectId: null, turn: null, project: null };
+        obj32[1] = projectId;
+        ({ turn: obj26[2], project: obj26[3] } = type);
+        obj24.dispatch(obj32);
       }
-      tmp60 = null != type.turn && null != type.project;
+      tmp62 = null != type.turn && null != type.project;
     } else if ("project_named" === type.kind) {
       const name = type.name;
-      const project = store.getProject(projectId);
-      if (project != null) {
-        if (project.name != null) {
-          const trimmed = str16.trim();
-        }
+      let tmp57 = null != name;
+      if (tmp57) {
+        tmp57 = "" !== name;
       }
-      let tmp52 = null == name;
-      if (!tmp52) {
-        tmp52 = "" === name;
-      }
-      if (!tmp52) {
-        let tmp53 = null != trimmed;
-        if (tmp53) {
-          tmp53 = "" !== trimmed;
-        }
-        if (tmp53) {
-          tmp53 = trimmed !== _require(6063).UNNAMED_PROJECT_NAME;
-        }
-        tmp52 = tmp53;
-      }
-      if (!tmp52) {
-        obj19 = _require(16145);
-        obj19.renameProject(projectId, name).catch(() => {
+      if (tmp57) {
+        obj23 = _require(16180);
+        obj23.renameProject(projectId, name).catch(() => {
 
         });
-        const renameProjectResult = obj19.renameProject(projectId, name);
+        const renameProjectResult = obj23.renameProject(projectId, name);
       }
     } else if ("publish_result" === type.kind) {
       const pendingPublish = pendingEvents.pendingPublish;
@@ -707,8 +757,8 @@ function handleEvent(projectId, pendingEvents, type) {
         if (str15 == null) {
           str15 = "publish_result not ok";
         }
-        _require(16145).trackPublishFailed(projectId, str15, false);
-        const obj64 = _require(16145);
+        _require(16180).trackPublishFailed(projectId, str15, false);
+        const obj74 = _require(16180);
       }
     } else if ("app_icon_set" === type.kind) {
       const icon = type.icon;
@@ -717,9 +767,9 @@ function handleEvent(projectId, pendingEvents, type) {
           attachment_id = type.attachment_id;
           deleteResult = _require;
           deleteResult = dependencyMap;
-          const obj63 = _require(16145);
-          const setProjectIconResult = _require(16145).setProjectIcon(projectId, icon);
-          deleteResult = _require(16145).setProjectIcon(projectId, icon).then((ok) => {
+          const obj73 = _require(16180);
+          const setProjectIconResult = _require(16180).setProjectIcon(projectId, icon);
+          deleteResult = _require(16180).setProjectIcon(projectId, icon).then((ok) => {
             let str = "failed";
             if (ok.ok) {
               str = "applied";
@@ -742,7 +792,7 @@ function handleEvent(projectId, pendingEvents, type) {
               ws.sendAppIconAck(tmp, "failed");
             }
           });
-          const nextPromise = _require(16145).setProjectIcon(projectId, icon).then((ok) => {
+          const nextPromise = _require(16180).setProjectIcon(projectId, icon).then((ok) => {
             let str = "failed";
             if (ok.ok) {
               str = "applied";
@@ -759,68 +809,68 @@ function handleEvent(projectId, pendingEvents, type) {
         }
       }
     } else if ("turn_result" === type.kind) {
-      obj12 = _require(16143);
-      let result = obj12.trackVibegrationTurnResulted(projectId, type);
+      obj16 = _require(16178);
+      let result = obj16.trackVibegrationTurnResulted(projectId, type);
       if ("deployed" === type.result) {
-        obj13 = attachment_id(709);
-        const obj31 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
-        obj31[1] = projectId;
-        obj31[2] = type.turn_id;
-        obj31[3] = { kind: "plan_implemented" };
-        obj13.dispatch(obj31);
+        obj17 = attachment_id(709);
+        obj33 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
+        obj33[1] = projectId;
+        obj33[2] = type.turn_id;
+        obj33[3] = { kind: "plan_implemented" };
+        obj17.dispatch(obj33);
       }
-      obj15 = attachment_id(709);
-      obj32 = { type: "VIBEGRATIONS_CHAT_TURN_FINISHED", projectId: null, turnId: null, summary: null };
-      obj32[1] = projectId;
-      ({ turn_id: obj17[2], summary: obj17[3] } = type);
-      obj15.dispatch(obj32);
+      obj19 = attachment_id(709);
+      const obj34 = { type: "VIBEGRATIONS_CHAT_TURN_FINISHED", projectId: null, turnId: null, summary: null };
+      obj34[1] = projectId;
+      ({ turn_id: obj21[2], summary: obj21[3] } = type);
+      obj19.dispatch(obj34);
       deleteResult = set.delete(projectId);
       if (deleteResult) {
         deleteResult = "cancelled" === type.result;
       }
       if (deleteResult) {
-        const obj33 = { type: "VIBEGRATIONS_CHAT_INTERRUPTED", projectId: null };
-        obj33[1] = projectId;
-        tmp37(709).dispatch(obj33);
-        const tmp37Result = tmp37(709);
+        const obj35 = { type: "VIBEGRATIONS_CHAT_INTERRUPTED", projectId: null };
+        obj35[1] = projectId;
+        tmp45(709).dispatch(obj35);
+        const tmp45Result = tmp45(709);
       }
-      tmp37 = attachment_id;
+      tmp45 = attachment_id;
     } else {
       deleteResult = attachment_id;
       deleteResult = dependencyMap;
-      const obj34 = { type: "VIBEGRATIONS_CHAT_STEP_APPEND", projectId: null, turnId: null, step: null };
-      obj34[1] = projectId;
-      obj34[2] = type.turn_id;
-      obj34[3] = type;
-      deleteResult = attachment_id(709).dispatch(obj34);
-      let tmp25 = "build_error" !== type.kind;
-      if (tmp25) {
-        tmp25 = "healthcheck_failed" !== type.kind;
+      obj36 = { type: "VIBEGRATIONS_CHAT_STEP_APPEND", projectId: null, turnId: null, step: null };
+      obj36[1] = projectId;
+      obj36[2] = type.turn_id;
+      obj36[3] = type;
+      deleteResult = attachment_id(709).dispatch(obj36);
+      let tmp33 = "build_error" !== type.kind;
+      if (tmp33) {
+        tmp33 = "healthcheck_failed" !== type.kind;
       }
-      if (tmp25) {
-        tmp25 = "error" !== type.kind;
+      if (tmp33) {
+        tmp33 = "error" !== type.kind;
       }
-      if (!tmp25) {
-        obj10 = _require(16143);
-        obj35 = {};
+      if (!tmp33) {
+        obj14 = _require(16178);
+        const obj37 = {};
         let merged = Object.assign(obj[type.kind]);
-        obj35.message = type.message;
+        obj37.message = type.message;
         let stderr_tail;
         if ("build_error" === type.kind) {
           stderr_tail = type.stderr_tail;
         }
-        obj35.details = stderr_tail;
-        let result1 = obj10.trackVibegrationErrored(projectId, obj35);
+        obj37.details = stderr_tail;
+        let result1 = obj14.trackVibegrationErrored(projectId, obj37);
       }
       if ("preview_ready" === type.kind) {
         deleteResult = _require;
-        const result2 = _require(16145).refreshPublishedProject(projectId, { isPreview: true });
+        const result2 = _require(16180).refreshPublishedProject(projectId, { isPreview: true });
         deleteResult = result2.catch(() => {
 
         });
-        const obj62 = _require(16145);
+        const obj72 = _require(16180);
       }
-      const obj60 = attachment_id(709);
+      const obj70 = attachment_id(709);
     }
   } else if ("capture_preview" === type.type) {
     (function relayCaptureRequest(projectId, pendingEvents, type) {
@@ -873,63 +923,83 @@ function handleEvent(projectId, pendingEvents, type) {
       if ("capture_claim" !== type.type) {
         if ("preview_operation" === type.type) {
           if ("begin" === type.phase) {
-            obj8 = attachment_id(16141);
-            const result3 = obj8.beginPreviewOperation(projectId);
+            obj12 = attachment_id(16176);
+            const result3 = obj12.beginPreviewOperation(projectId);
           } else {
-            obj7 = attachment_id(16141);
-            obj7.endPreviewOperation(projectId);
+            obj11 = attachment_id(16176);
+            obj11.endPreviewOperation(projectId);
           }
         } else if ("model_settings" === type.type) {
-          obj5 = attachment_id(709);
-          const obj36 = { type: "VIBEGRATIONS_MODEL_SETTINGS_SET", projectId: null, settings: null, choices: null };
-          obj36[1] = projectId;
-          ({ settings: obj7[2], choices: obj7[3] } = type);
-          obj5.dispatch(obj36);
+          obj9 = attachment_id(709);
+          const obj38 = { type: "VIBEGRATIONS_MODEL_SETTINGS_SET", projectId: null, settings: null, choices: null };
+          obj38[1] = projectId;
+          ({ settings: obj11[2], choices: obj11[3] } = type);
+          obj9.dispatch(obj38);
+        } else if ("debug_status" === type.type) {
+          obj7 = attachment_id(709);
+          obj39 = { type: "VIBEGRATIONS_DEBUG_STATUS_SET", projectId: null, status: null, failed: null };
+          obj39[1] = projectId;
+          let status = type.status;
+          if (status == null) {
+            status = null;
+          }
+          obj39[2] = status;
+          obj39[3] = true === type.failed || null == type.status;
+          obj7.dispatch(obj39);
         } else if ("settings" === type.type) {
+          obj4 = attachment_id(709);
+          const obj40 = { type: "VIBEGRATIONS_SETTINGS_SET", projectId: null, settings: null };
+          obj40[1] = projectId;
+          ({ schema: obj7[0], values: obj7[1], secrets: obj7[2], connections: obj7[3] } = type);
+          obj40[2] = { schema: null, values: null, secrets: null, connections: null };
+          obj4.dispatch(obj40);
+          const obj41 = { schema: null, values: null, secrets: null, connections: null };
+        } else if ("debug_history_state" === type.type) {
           obj2 = attachment_id(709);
-          const obj37 = { type: "VIBEGRATIONS_SETTINGS_SET", projectId: null, settings: null };
-          obj37[1] = projectId;
-          obj38 = { schema: null, values: null, secrets: null, connections: null };
-          ({ schema: obj5[0], values: obj5[1], secrets: obj5[2], connections: obj5[3] } = type);
-          obj37[2] = obj38;
-          obj2.dispatch(obj37);
+          obj42 = { type: "VIBEGRATIONS_HISTORY_LOAD_SETTLE", projectId: null, scope: null, status: null, count: null, truncated: null };
+          obj42[1] = projectId;
+          ({ scope: obj4[2], status: obj4[3], count: obj4[4] } = type);
+          obj42[5] = true === type.truncated;
+          obj2.dispatch(obj42);
         } else {
           obj = attachment_id(709);
-          const obj39 = { type: "VIBEGRATIONS_LOG_APPEND", projectId: null, log: null };
-          obj39[1] = projectId;
-          obj39[2] = type;
-          obj.dispatch(obj39);
-          (function reportRuntimeError(project_id, level) {
-            if ("error" === level.level) {
-              let tmp2;
-              if (null != level.source) {
-                tmp2 = table[level.source];
-              }
-              if (null != tmp2) {
-                let value = closure_29.get(project_id);
-                if (null == value) {
-                  const _Set = Set;
-                  set = new Set();
-                  const result = obj4.set(project_id, set);
-                  value = set;
+          const obj43 = { type: "VIBEGRATIONS_LOG_APPEND", projectId: null, log: null };
+          obj43[1] = projectId;
+          obj43[2] = type;
+          obj.dispatch(obj43);
+          (function reportRuntimeError(project_id, historical) {
+            if (true !== historical.historical) {
+              if ("error" === historical.level) {
+                let tmp2;
+                if (null != historical.source) {
+                  tmp2 = table[historical.source];
                 }
-                const replaced = level.message.replace(/\d+/g, "#");
-                const _HermesInternal = HermesInternal;
-                const combined = "" + level.source + ":" + replaced.slice(0, 200);
-                let hasItem = value.has(combined);
-                if (!hasItem) {
-                  hasItem = value.size >= 10;
+                if (null != tmp2) {
+                  let value = closure_29.get(project_id);
+                  if (null == value) {
+                    const _Set = Set;
+                    set = new Set();
+                    const result = obj4.set(project_id, set);
+                    value = set;
+                  }
+                  const replaced = historical.message.replace(/\d+/g, "#");
+                  const _HermesInternal = HermesInternal;
+                  const combined = "" + historical.source + ":" + replaced.slice(0, 200);
+                  let hasItem = value.has(combined);
+                  if (!hasItem) {
+                    hasItem = value.size >= 10;
+                  }
+                  if (!hasItem) {
+                    value.add(combined);
+                    ({ location: obj3[0], code: obj3[1] } = tmp2);
+                    ({ message: obj3[2], source: obj3[3] } = historical);
+                    const result1 = pendingEvents(16178).trackVibegrationErrored(project_id, { location: null, code: null, message: null, details: null });
+                    obj = { location: null, code: null, message: null, details: null };
+                    const obj2 = pendingEvents(16178);
+                  }
+                  obj4 = closure_29;
+                  const str = historical.message;
                 }
-                if (!hasItem) {
-                  value.add(combined);
-                  ({ location: obj3[0], code: obj3[1] } = tmp2);
-                  ({ message: obj3[2], source: obj3[3] } = level);
-                  const result1 = pendingEvents(16143).trackVibegrationErrored(project_id, { location: null, code: null, message: null, details: null });
-                  obj = { location: null, code: null, message: null, details: null };
-                  const obj2 = pendingEvents(16143);
-                }
-                obj4 = closure_29;
-                const str = level.message;
               }
             }
           })(projectId, type);
@@ -937,11 +1007,11 @@ function handleEvent(projectId, pendingEvents, type) {
       }
     }
     let upload_token;
-    obj9 = _require(16144);
+    obj13 = _require(16179);
     if ("capture_claim" === type.type) {
       upload_token = type.upload_token;
     }
-    const vibegrationsPreviewClaim = obj9.resolveVibegrationsPreviewClaim(type.id, upload_token);
+    const vibegrationsPreviewClaim = obj13.resolveVibegrationsPreviewClaim(type.id, upload_token);
   }
 }
 function _openWithFreshTicket() {
@@ -964,7 +1034,7 @@ function _openWithFreshTicket() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -999,7 +1069,7 @@ function _openWithFreshTicket() {
               c5 = baseUrl;
               if (closure_1.disposed) {
                 c7 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               } else {
                 callback3(callback, "failed");
                 let _Error = Error;
@@ -1075,9 +1145,9 @@ function _openWithFreshTicket() {
                       let value = closure_1_11.get(closure_0);
                       if (null == value) {
                         obj = { ws: null, backoff: null, helloSeen: false, disposed: false, reconnectPending: false, pendingSends: null, pendingEvents: null, pendingModelSettings: null, pendingPublish: null };
-                        const vibegrationsWebSocket = new closure_1_0(closure_1_2[14]).VibegrationsWebSocket();
+                        const vibegrationsWebSocket = new closure_1_0(closure_1_2[13]).VibegrationsWebSocket();
                         obj[0] = vibegrationsWebSocket;
-                        const tmp14 = new closure_1_1(closure_1_2[15])(1000, 30000);
+                        const tmp14 = new closure_1_1(closure_1_2[14])(1000, 30000);
                         obj[1] = tmp14;
                         obj[5] = [];
                         obj[6] = [];
@@ -1110,7 +1180,7 @@ function _openWithFreshTicket() {
             }
             c5 = 0;
             c7 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp47) {
           baseUrl = tmp47;
@@ -1154,8 +1224,8 @@ function teardown(closure_0) {
     ws.close();
     obj.delete(closure_0);
     map7.delete(closure_0);
-    const result = _modDef16141.releasePreviewControl(closure_0);
-    const obj2 = _modDef16141;
+    const result = _modDef16176.releasePreviewControl(closure_0);
+    const obj2 = _modDef16176;
     const result1 = map10.clearVibegrationsPreviewClaims(closure_0);
     const obj3 = map10;
     obj = { type: "VIBEGRATIONS_CHAT_CONN_STATE", projectId: null, connState: "closed" };
@@ -1206,14 +1276,14 @@ function _fetchWsTicket() {
     return (function*(arg0, body) {
       closure_3 = tmp2;
       const table = tmp5;
-      const HTTP = callback(closure_1_2[17]).HTTP;
+      const HTTP = callback(closure_1_2[16]).HTTP;
       obj1 = { url: null, rejectWithError: true };
       obj1[0] = closure_1_9.VIBEGRATIONS_PROJECT_WS_TICKET(body);
       yield HTTP.post(obj1);
       body = body.body;
       obj4 = { ticket: null, baseUrl: null };
       obj4[0] = body.ticket;
-      const vibegrationsTunnelWorkerOrigin = body(table[18]).getVibegrationsTunnelWorkerOrigin();
+      const vibegrationsTunnelWorkerOrigin = body(table[17]).getVibegrationsTunnelWorkerOrigin();
       let url = vibegrationsTunnelWorkerOrigin;
       if (vibegrationsTunnelWorkerOrigin == null) {
         url = body.url;
@@ -1298,7 +1368,7 @@ function _fetchSourceHistory() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1429,7 +1499,7 @@ function _restoreSourceHistoryEntry() {
           obj[0] = str;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1547,7 +1617,7 @@ function _restoreSourceHistoryEntry() {
               const error1 = new Error("version restore returned no commit");
               throw error1;
             } else {
-              obj = callback(closure_2[13]);
+              obj = callback(closure_2[12]);
               const result = obj.refreshPublishedProject(callback, { isPreview: true });
               result.catch(() => {
 
@@ -1593,14 +1663,14 @@ function _fetchRemixTicket() {
     return (function*(arg0, body) {
       closure_3 = tmp2;
       const table = tmp5;
-      const HTTP = callback(closure_1_2[17]).HTTP;
+      const HTTP = callback(closure_1_2[16]).HTTP;
       obj1 = { url: null, rejectWithError: true };
       obj1[0] = closure_1_9.VIBEGRATIONS_PROJECT_REMIX_TICKET(body);
       yield HTTP.post(obj1);
       body = body.body;
       obj4 = { ticket: null, baseUrl: null };
       obj4[0] = body.ticket;
-      const vibegrationsTunnelWorkerOrigin = body(table[18]).getVibegrationsTunnelWorkerOrigin();
+      const vibegrationsTunnelWorkerOrigin = body(table[17]).getVibegrationsTunnelWorkerOrigin();
       let url = vibegrationsTunnelWorkerOrigin;
       if (vibegrationsTunnelWorkerOrigin == null) {
         url = body.url;
@@ -1748,7 +1818,7 @@ function _remixProjectWorkspace() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1824,7 +1894,7 @@ function _remixProjectWorkspace() {
             c5 = arg1;
             if (c5.ok) {
               c5 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else {
               throw new closure_51(c5.status);
             }
@@ -1864,7 +1934,7 @@ function _submitProjectSecrets() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1935,7 +2005,7 @@ function _submitProjectSecrets() {
             closure_5 = arg1;
             if (closure_5.ok) {
               c4 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else {
               const _Error = Error;
               const _HermesInternal = HermesInternal;
@@ -2015,146 +2085,40 @@ function _fetchProjectMcpConnection() {
     c4 = 0;
     c5 = 0;
     const iter = (function*(arg0) {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === baseUrl) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let ticket = tmp5;
-              closure_2 = tmp2;
-              let flag;
-              obj1 = flag;
-              if (flag === undefined) {
-                obj1 = {};
-              }
-              flag = obj1.regenerate;
-              if (flag === undefined) {
-                flag = false;
-              }
-              closure_2 = undefined;
-              ticket = undefined;
-              baseUrl = undefined;
-              c5 = undefined;
-              closure_6 = undefined;
-              closure_7 = undefined;
-              baseUrl = 1;
-              c5 = 1;
-              return { value: "Object", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              baseUrl = 2;
-              c5 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = callback(closure_0);
-              return obj3;
-            }
-          } else if (2 === tmp5) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj4 = { value: null, done: true };
-              obj4[0] = arg1;
-              return obj4;
-            } else {
-              closure_2 = arg1;
-              ticket = closure_2.ticket;
-              baseUrl = closure_2.baseUrl;
-              const _URLSearchParams = URLSearchParams;
-              const obj5 = { ticket: null };
-              obj5[0] = ticket;
-              const uRLSearchParams = new URLSearchParams(obj5);
-              c5 = uRLSearchParams;
-              if (flag) {
-                const result = c5.set("regenerate", "1");
-              }
-              const _fetch = fetch;
-              const _HermesInternal2 = HermesInternal;
-              baseUrl = 3;
-              c5 = 1;
-              const obj6 = { value: null, done: false };
-              obj6[0] = fetch("" + baseUrl + "/agent/mcp-token?" + c5, { method: "POST" });
-              return obj6;
-            }
-          } else if (3 === tmp5) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              const obj7 = { value: null, done: true };
-              obj7[0] = arg1;
-              return obj7;
-            } else {
-              closure_6 = arg1;
-              if (closure_6.ok) {
-                baseUrl = 4;
-                c5 = 1;
-                const obj8 = { value: null, done: false };
-                obj8[0] = closure_6.json();
-                return obj8;
-              } else {
-                const _Error = Error;
-                const _HermesInternal = HermesInternal;
-                error = new Error("mcp token failed (" + closure_6.status + ")");
-                throw error;
-              }
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj9 = { value: null, done: true };
-            obj9[0] = arg1;
-            return obj9;
-          } else {
-            closure_7 = arg1;
-            obj = { url: null, token: null, expiresAt: null };
-            obj[0] = closure_7.url;
-            obj[1] = closure_7.token;
-            obj[2] = closure_7.expires_at;
-            c5 = 3;
-            const obj10 = { value: null, done: true };
-            obj10[0] = obj;
-            return obj10;
-          }
-        } catch (tmp28) {
-          c5 = tmp;
-          throw tmp28;
-        }
+      closure_2 = tmp2;
+      obj1 = flag;
+      if (flag === undefined) {
+        obj1 = {};
       }
+      flag = obj1.regenerate;
+      if (flag === undefined) {
+        flag = false;
+      }
+      yield "PX_16";
+      closure_2 = yield callback(closure_0);
+      const ticket = closure_2.ticket;
+      const _URLSearchParams = URLSearchParams;
+      const obj5 = { ticket: null };
+      obj5[0] = ticket;
+      const uRLSearchParams = new URLSearchParams(obj5);
+      if (flag) {
+        const result = c5.set("regenerate", "1");
+      }
+      const _fetch = fetch;
+      const _HermesInternal2 = HermesInternal;
+      closure_6 = yield fetch("" + baseUrl + "/agent/mcp-token?" + c5, { method: "POST" });
+      if (!closure_6.ok) {
+        const _Error = Error;
+        const _HermesInternal = HermesInternal;
+        error = new Error("mcp token failed (" + closure_6.status + ")");
+        throw error;
+      }
+      closure_7 = yield closure_6.json();
+      obj = { url: null, token: null, expiresAt: null };
+      obj[0] = closure_7.url;
+      obj[1] = closure_7.token;
+      obj[2] = closure_7.expires_at;
+      return obj;
     })();
     iter.next();
     return iter;
@@ -2188,7 +2152,7 @@ function _requestExternalAuthorizeUrl() {
           obj[0] = error;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -2278,7 +2242,7 @@ function _requestExternalAuthorizeUrl() {
               } else {
                 c6 = null;
                 c6 = 2;
-                const tmp30 = callback(url[19]);
+                const tmp30 = callback(url[18]);
                 closure_3 = tmp30;
                 url = tmp30.externalAuthErrorCode;
                 c7 = 6;
@@ -2291,7 +2255,7 @@ function _requestExternalAuthorizeUrl() {
           } else {
             if (4 === tmp10) {
               c6 = 0;
-              obj6 = callback(url[19]);
+              obj6 = callback(url[18]);
               { type: "error", error: null }[1] = obj6.externalAuthErrorFor(closure_1.status, c6);
               c8 = 3;
               const obj10 = { type: "error", error: null };
@@ -2384,7 +2348,7 @@ function _deleteStagedAttachment() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -2451,7 +2415,7 @@ function _deleteStagedAttachment() {
             c5 = arg1;
             if (c5.ok) {
               c5 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else {
               const _Error = Error;
               const _HermesInternal = HermesInternal;
@@ -2524,98 +2488,27 @@ function _getAttachmentUrl() {
     c5 = 0;
     c6 = 0;
     const iter = (function*(arg0, arg1) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === baseUrl) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let ticket = tmp5;
-              closure_3 = tmp2;
-              let flag;
-              obj1 = flag;
-              if (flag === undefined) {
-                obj1 = {};
-              }
-              flag = obj1.download;
-              if (flag === undefined) {
-                flag = false;
-              }
-              closure_3 = undefined;
-              ticket = undefined;
-              baseUrl = undefined;
-              c6 = undefined;
-              baseUrl = 1;
-              c6 = 1;
-              return { value: "Object", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              baseUrl = 2;
-              c6 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = callback(closure_0);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            closure_3 = arg1;
-            ticket = closure_3.ticket;
-            baseUrl = closure_3.baseUrl;
-            const _URLSearchParams = URLSearchParams;
-            const obj5 = { ticket: null };
-            obj5[0] = ticket;
-            const uRLSearchParams = new URLSearchParams(obj5);
-            c6 = uRLSearchParams;
-            if (flag) {
-              const result = c6.set("download", "1");
-            }
-            const _HermesInternal = HermesInternal;
-            c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = "" + callback2(baseUrl, closure_1) + "?" + c6;
-            return obj;
-          }
-        } catch (tmp21) {
-          c6 = tmp;
-          throw tmp21;
-        }
+      closure_3 = tmp2;
+      obj1 = flag;
+      if (flag === undefined) {
+        obj1 = {};
       }
+      flag = obj1.download;
+      if (flag === undefined) {
+        flag = false;
+      }
+      yield "PX_16";
+      closure_3 = yield callback(closure_0);
+      const ticket = closure_3.ticket;
+      const _URLSearchParams = URLSearchParams;
+      const obj5 = { ticket: null };
+      obj5[0] = ticket;
+      const uRLSearchParams = new URLSearchParams(obj5);
+      if (flag) {
+        const result = c6.set("download", "1");
+      }
+      const _HermesInternal = HermesInternal;
+      return "" + callback2(baseUrl, closure_1) + "?" + c6;
     })();
     iter.next();
     return iter;
@@ -2648,7 +2541,7 @@ function _isAttachmentAvailable() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -3023,22 +2916,26 @@ export const sendUserMessage = function sendUserMessage(projectId, str) {
           throw error;
         } else {
           const ws = value.ws;
-          const attachments = obj.attachments;
+          ({ content, nonce, attachments } = obj);
           let mapped;
-          ({ content, nonce } = obj);
           if (attachments != null) {
             mapped = attachments.map((id) => id.id);
           }
-          ws.sendUserMessage(content, nonce, mapped);
+          const project = store.getProject(projectId);
+          let name;
+          if (project != null) {
+            name = project.name;
+          }
+          ws.sendUserMessage(content, nonce, mapped, name);
         }
-      } catch (tmp21) {
+      } catch (tmp29) {
         const _Error2 = Error;
         let str3 = "send failed";
-        if (tmp21 instanceof Error) {
-          str3 = tmp21.message;
+        if (tmp29 instanceof Error) {
+          str3 = tmp29.message;
         }
         sendFailedStep(tmp2, str3);
-        const tmp22 = sendFailedStep;
+        const tmp30 = sendFailedStep;
       }
     } else {
       const pendingSends = value.pendingSends;
@@ -3113,7 +3010,7 @@ export const publishProject = function publishProject(arg0) {
     if (message instanceof Error) {
       str = message.message;
     }
-    callback(closure_1_2[13]).trackPublishFailed(callback, str, false);
+    callback(closure_1_2[12]).trackPublishFailed(callback, str, false);
     throw message;
   });
 };
@@ -3121,6 +3018,27 @@ export const stageModelSettings = function stageModelSettings(arg0, pendingModel
   const value = map.get(arg0);
   if (null != value) {
     value.pendingModelSettings = pendingModelSettings;
+  }
+};
+export const requestDebugStatus = function requestDebugStatus(projectId) {
+  obj = dispatcherDefault;
+  obj = { type: "VIBEGRATIONS_DEBUG_STATUS_REQUESTED", projectId };
+  obj.dispatch(obj);
+  const value = map.get(projectId);
+  try {
+    if (null == value) {
+      const _Error = Error;
+      error = new Error("Not connected");
+      throw error;
+    } else {
+      const ws = value.ws;
+      const result = ws.sendDebugStatusRequest();
+    }
+  } catch (err) {
+    obj = { type: "VIBEGRATIONS_DEBUG_STATUS_SET", projectId: null, status: null, failed: true };
+    obj[1] = tmp4;
+    tmp3(tmp2[6]).dispatch(obj);
+    const tmp3Result = tmp3(tmp2[6]);
   }
 };
 export const sendModelSettings = function sendModelSettings(arg0, arg1) {
@@ -3223,7 +3141,7 @@ export const requestProjectRebuild = function requestProjectRebuild(arg0) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -3285,7 +3203,7 @@ export const requestProjectRebuild = function requestProjectRebuild(arg0) {
           } else {
             const ok = arg1.ok;
             baseUrl = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp8) {
           baseUrl = tmp;

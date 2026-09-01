@@ -1,10 +1,10 @@
-// === Module 13529: apexExperiment ===
+// === Module 13562: apexExperiment ===
 
-// Module 13529 (apexExperiment)
+// Module 13562 (apexExperiment)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1468 */;
 
-let obj = { resetSilenceWarningOnDeviceChange: false, resetSilenceWarningAfterNMinutes: "Object", enableHardwareSilenceWarning: true };
+let obj = { resetSilenceWarningOnDeviceChange: false, resetSilenceWarningAfterNMinutes: "PX_16", enableHardwareSilenceWarning: true };
 obj = { name: "2026-02-silence-warning-aggression", kind: "user", defaultConfig: obj, variations: null };
 obj = { 1: null, 2: null, 3: null };
 const obj1 = {};

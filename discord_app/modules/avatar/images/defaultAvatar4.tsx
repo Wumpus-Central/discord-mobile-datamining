@@ -1,6 +1,6 @@
-// === Module 16982: set ===
+// === Module 17018: set ===
 
-// Module 16982 (set)
+// Module 17018 (set)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/avatar/images/defaultAvatar4.tsx");

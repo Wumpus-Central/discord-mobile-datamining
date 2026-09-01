@@ -1,14 +1,14 @@
-// === Module 8337: Divider ===
+// === Module 8369: Divider ===
 
-// Module 8337 (Divider)
+// Module 8369 (Divider)
 import ThemesDefault from "Themes" /* 712 */;
-import ManaContext from "ManaContext" /* 4174 */;
-import context from "context" /* 5566 */;
-import useProfileThemeValues from "useProfileThemeValues" /* 5943 */;
+import ManaContext from "ManaContext" /* 4204 */;
+import context from "context" /* 5598 */;
+import useProfileThemeValues from "useProfileThemeValues" /* 5975 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 ({ View: c4, StyleSheet: c5, Platform } = get_ActivityIndicator);
@@ -40,9 +40,9 @@ export default function Divider(outer) {
   let tmp7 = null;
   if (tmp6) {
     obj = { backgroundColor: null };
-    obj[0] = tmp2(4296).hexOpacityToRgba(createCacheKey[theme], profileThemeValues.dividerOpacity);
+    obj[0] = tmp2(4326).hexOpacityToRgba(createCacheKey[theme], profileThemeValues.dividerOpacity);
     tmp7 = obj;
-    const tmp2Result = tmp2(4296);
+    const tmp2Result = tmp2(4326);
   }
   let tmp10Result = null;
   if (!React.useContext(context.RedesignCompatContext)) {

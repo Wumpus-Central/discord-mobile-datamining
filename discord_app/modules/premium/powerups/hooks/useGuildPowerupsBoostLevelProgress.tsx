@@ -1,8 +1,8 @@
-// === Module 4373: useGuildPowerupBoostLevelProgress ===
+// === Module 4403: useGuildPowerupBoostLevelProgress ===
 
-// Module 4373 (useGuildPowerupBoostLevelProgress)
-import useGuildAppliedBoostCount from "useGuildAppliedBoostCount" /* 4354 */;
-import useGuildAppliedBoostCountDefault from "useGuildAppliedBoostCount" /* 4354 */;
+// Module 4403 (useGuildPowerupBoostLevelProgress)
+import useGuildAppliedBoostCount from "useGuildAppliedBoostCount" /* 4384 */;
+import useGuildAppliedBoostCountDefault from "useGuildAppliedBoostCount" /* 4384 */;
 import closure_3 from "createGuildRecordFromRust" /* 1909 */;
 import ME from "ME" /* 676 */;
 

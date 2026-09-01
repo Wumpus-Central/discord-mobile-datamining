@@ -1,9 +1,9 @@
-// === Module 11022: getCurrentBuildOverride ===
+// === Module 11059: getCurrentBuildOverride ===
 
-// Module 11022 (getCurrentBuildOverride)
+// Module 11059 (getCurrentBuildOverride)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import Version from "Version" /* 4363 */;
+import Version from "Version" /* 4393 */;
 
 require = arg1;
 let obj = { NotResolved: 0, [0]: "NotResolved", Resolving: 1, [1]: "Resolving", Resolved: 2, [2]: "Resolved", Invalid: 3, [3]: "Invalid" };
@@ -31,7 +31,7 @@ prototype["getCurrentBuildOverride"] = function getCurrentBuildOverride() {
 prototype["getBuildOverride"] = function getBuildOverride(target) {
   const _require = target;
   if (!(target in obj1)) {
-    obj = _require(4363);
+    obj = _require(4393);
     const validateURLResult = obj.validateURL(target);
     if (null != validateURLResult) {
       obj = {};
@@ -44,13 +44,13 @@ prototype["getBuildOverride"] = function getBuildOverride(target) {
       obj[3] = obj.Resolving;
       obj[target] = obj;
       obj1 = obj;
-      const buildOverrideMeta = tmp(4363).getBuildOverrideMeta(validateURLResult.url);
+      const buildOverrideMeta = tmp(4393).getBuildOverrideMeta(validateURLResult.url);
       buildOverrideMeta.then((override) => {
         obj = closure_1_1(closure_1_2[1]);
         obj = { type: "BUILD_OVERRIDE_RESOLVED", url: closure_0, override };
         obj.dispatch(obj);
       });
-      const tmpResult = tmp(4363);
+      const tmpResult = tmp(4393);
     } else {
       obj1 = {};
       const merged1 = Object.assign(obj1);

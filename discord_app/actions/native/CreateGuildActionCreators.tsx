@@ -1,6 +1,6 @@
-// === Module 12249: showInstantInviteModal ===
+// === Module 12282: showInstantInviteModal ===
 
-// Module 12249 (showInstantInviteModal)
+// Module 12282 (showInstantInviteModal)
 import closure_2 from "comparator" /* 1982 */;
 import { InstantInviteSources } from "ME" /* 676 */;
 

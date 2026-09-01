@@ -1,6 +1,6 @@
-// === Module 6031: hideHotspot ===
+// === Module 6063: hideHotspot ===
 
-// Module 6031 (hideHotspot)
+// Module 6063 (hideHotspot)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;

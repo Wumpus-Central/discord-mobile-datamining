@@ -1,10 +1,10 @@
-// === Module 15493: StopIcon ===
+// === Module 15528: StopIcon ===
 
-// Module 15493 (StopIcon)
+// Module 15528 (StopIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4166 */;
-import registerAsset from "registerAsset" /* 15494 */;
+import BaseIconImage from "BaseIconImage" /* 4196 */;
+import registerAsset from "registerAsset" /* 15529 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

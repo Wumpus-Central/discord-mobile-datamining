@@ -1,16 +1,16 @@
-// === Module 11755: NitroLimitUpsellBar ===
+// === Module 11788: NitroLimitUpsellBar ===
 
-// Module 11755 (NitroLimitUpsellBar)
+// Module 11788 (NitroLimitUpsellBar)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4444 */;
-import WarningIcon from "WarningIcon" /* 8699 */;
-import _modDef8933 from "module_8933" /* 8933 */;
-import registerAssetDefault from "registerAsset" /* 9129 */;
+import Text from "Text" /* 4474 */;
+import WarningIcon from "WarningIcon" /* 8736 */;
+import _modDef8970 from "module_8970" /* 8970 */;
+import registerAssetDefault from "registerAsset" /* 9168 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
@@ -48,9 +48,9 @@ export default function NitroLimitUpsellBar(isAtLimit) {
   obj1[3] = items1;
   items[1] = closure_6(Text.Text, obj1);
   if (isAtLimit) {
-    let Button = _modDef8933;
+    let Button = _modDef8970;
   } else {
-    Button = tmp12(4896).Button;
+    Button = tmp12(4928).Button;
   }
   const obj3 = { size: "sm", text: null, onPress: null, loading: null };
   const intl2 = tmp12(1236).intl;

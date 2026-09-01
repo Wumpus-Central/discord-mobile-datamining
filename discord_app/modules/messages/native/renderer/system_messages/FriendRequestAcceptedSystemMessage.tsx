@@ -1,9 +1,9 @@
-// === Module 7951: createFriendRequestAcceptedSystemMessage ===
+// === Module 7983: createFriendRequestAcceptedSystemMessage ===
 
-// Module 7951 (createFriendRequestAcceptedSystemMessage)
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7837 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7839 */;
-import registerAssetDefault from "registerAsset" /* 7952 */;
+// Module 7983 (createFriendRequestAcceptedSystemMessage)
+import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7869 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7871 */;
+import registerAssetDefault from "registerAsset" /* 7984 */;
 import closure_3 from "ensureGuildLoaded" /* 1387 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
 
@@ -32,7 +32,7 @@ export const createFriendRequestAcceptedSystemMessage = function createFriendReq
           let content = message.content;
           if (null != content) {
             if ("" !== content) {
-              let tmp15Result = tmp15(4448);
+              let tmp15Result = tmp15(4478);
               obj1 = { baseTextColor: null };
               obj1[0] = tmp17(712).colors.TEXT_SUBTLE;
               const intl2 = tmp15(1236).intl;
@@ -69,10 +69,10 @@ export const createFriendRequestAcceptedSystemMessage = function createFriendReq
           }
           const obj4 = { content: null, iconUrl: null, textColor: null };
           obj4[0] = formatToPartsResult;
-          tmp15Result = tmp15(7823);
+          tmp15Result = tmp15(7855);
           obj4[1] = tmp15Result.getAssetUriForEmbed(registerAssetDefault);
           obj4[2] = undefined;
-          const merged1 = Object.assign(tmp17(7841)(message));
+          const merged1 = Object.assign(tmp17(7873)(message));
           return obj4;
         }
       }

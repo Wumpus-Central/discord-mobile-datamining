@@ -1,6 +1,6 @@
-// === Module 11122: _bulkClearRecents ===
+// === Module 11159: _bulkClearRecents ===
 
-// Module 11122 (_bulkClearRecents)
+// Module 11159 (_bulkClearRecents)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
@@ -24,7 +24,7 @@ function _bulkClearRecents() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -67,7 +67,7 @@ function _bulkClearRecents() {
             const obj5 = callback2(709);
             callback2(698).track(constants.CHANNEL_LIST_UPDATED, { action_type: "recents_dismissed" });
             c5 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp6) {
           c5 = tmp;

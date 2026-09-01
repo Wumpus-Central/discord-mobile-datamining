@@ -1,18 +1,18 @@
-// === Module 10756: serializePurchaseResponse ===
+// === Module 10794: serializePurchaseResponse ===
 
-// Module 10756 (serializePurchaseResponse)
+// Module 10794 (serializePurchaseResponse)
 import timestampDefault from "timestamp" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import set2 from "set" /* 500 */;
 import v1 from "v1" /* 514 */;
 import getConstantsAll from "getConstants" /* 1625 */;
-import DCDDeviceManager from "DCDDeviceManager" /* 4427 */;
-import productSK2ToIAPProductDefault from "productSK2ToIAPProduct" /* 10776 */;
-import GeneratedPaymentCurrencies from "GeneratedPaymentCurrencies" /* 10777 */;
+import DCDDeviceManager from "DCDDeviceManager" /* 4457 */;
+import productSK2ToIAPProductDefault from "productSK2ToIAPProduct" /* 10814 */;
+import GeneratedPaymentCurrencies from "GeneratedPaymentCurrencies" /* 10815 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import { convertToAlpha2 } from "DEFAULT_COUNTRY_CODE_NAME" /* 4144 */;
+import { convertToAlpha2 } from "DEFAULT_COUNTRY_CODE_NAME" /* 4174 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import closure_7 from "updateProduct" /* 6052 */;
+import closure_7 from "updateProduct" /* 6084 */;
 import ME from "ME" /* 676 */;
 import { NAMESPACE_SNOWFLAKE_UUID } from "GuildFeatures" /* 1924 */;
 import set from "set" /* 500 */;
@@ -53,7 +53,7 @@ function _restorePurchases() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -77,7 +77,7 @@ function _restorePurchases() {
               closure_3 = undefined;
               c7 = 1;
               c8 = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -276,7 +276,7 @@ function _fetchStoreFront() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -299,7 +299,7 @@ function _fetchStoreFront() {
               c4 = 2;
               c5 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(10757).getStorefront();
+              obj1[0] = closure_1_0(10795).getStorefront();
               return obj1;
             } else {
               c5 = 3;
@@ -309,7 +309,7 @@ function _fetchStoreFront() {
         } else if (1 === tmp7) {
           dependencyMap = 0;
           closure_1 = closure_2;
-          obj1 = callback(4124);
+          obj1 = callback(4154);
           const result = obj1.captureBillingException(closure_1);
           c5 = 3;
           return { value: null, done: true };
@@ -352,17 +352,17 @@ function _fetchStoreFront() {
 }
 ({ CurrencyCodes: closure_8, IOS_BUNDLE_ID } = ME);
 ({ InAppUtils: unpackModuleId, RNIapIosSk2: closure_12 } = require("get ActivityIndicator").NativeModules);
-let items = [require("module_10757").ErrorCode.E_USER_CANCELLED, ME.StoreKitErrors.PAYMENT_CANCELED];
+let items = [require("module_10795").ErrorCode.E_USER_CANCELLED, ME.StoreKitErrors.PAYMENT_CANCELED];
 let set = new Set(items);
 new timestampDefault("IAPUtils.tsx");
 let _default = {
   loadProducts() {
     if (obj.isIOS()) {
       const _Object = Object;
-      let items = [productSK2ToIAPProductDefault.fetchSubscriptions(Object.values(tmp(6055).ProductIds)), ];
+      let items = [productSK2ToIAPProductDefault.fetchSubscriptions(Object.values(tmp(6087).ProductIds)), ];
       const obj2 = productSK2ToIAPProductDefault;
       const _Object2 = Object;
-      items[1] = productSK2ToIAPProductDefault.fetchProducts(Object.values(tmp(6055).ProductIds));
+      items[1] = productSK2ToIAPProductDefault.fetchProducts(Object.values(tmp(6087).ProductIds));
       const obj3 = productSK2ToIAPProductDefault;
       let nextPromise = _Promise.all(items).then((arg0) => {
         [r10007, tmp] = arg0;
@@ -408,7 +408,7 @@ let _default = {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -612,7 +612,7 @@ export const makeIAPRequest = function makeIAPRequest(c1, arg1, closure_3) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

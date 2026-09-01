@@ -1,6 +1,6 @@
-// === Module 4262: metadata ===
+// === Module 4292: metadata ===
 
-// Module 4262 (metadata)
+// Module 4292 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/rive/native/TeenScreenTime.riv.js");

@@ -1,6 +1,6 @@
-// === Module 4083: hasViewChannelPermission ===
+// === Module 4113: hasViewChannelPermission ===
 
-// Module 4083 (hasViewChannelPermission)
+// Module 4113 (hasViewChannelPermission)
 import set from "set" /* 2 */;
 import fromStringAll from "fromString" /* 506 */;
 import ME from "ME" /* 676 */;

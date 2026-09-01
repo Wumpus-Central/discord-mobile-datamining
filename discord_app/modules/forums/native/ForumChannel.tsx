@@ -1,25 +1,25 @@
-// === Module 12265: forumKeyExtractor ===
+// === Module 12298: forumKeyExtractor ===
 
-// Module 12265 (forumKeyExtractor)
+// Module 12298 (forumKeyExtractor)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import dispatcherDefault from "dispatcher" /* 4164 */;
-import Text from "Text" /* 4444 */;
-import useGradientBottom from "useGradientBottom" /* 7584 */;
-import registerAssetDefault from "registerAsset" /* 12274 */;
+import dispatcherDefault from "dispatcher" /* 4194 */;
+import Text from "Text" /* 4474 */;
+import useGradientBottom from "useGradientBottom" /* 7616 */;
+import registerAssetDefault from "registerAsset" /* 12307 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "initialize" /* 4092 */;
-import closure_6 from "handleThreadCreateOrUpdate" /* 5417 */;
+import closure_5 from "initialize" /* 4122 */;
+import closure_6 from "handleThreadCreateOrUpdate" /* 5449 */;
 import closure_7 from "ensureGuildLoaded" /* 1387 */;
-import closure_8 from "handleChanged" /* 4822 */;
-import closure_9 from "recomputeGuild" /* 5325 */;
-import { useForumChannelStore } from "set" /* 11540 */;
+import closure_8 from "handleChanged" /* 4854 */;
+import closure_9 from "recomputeGuild" /* 5357 */;
+import { useForumChannelStore } from "set" /* 11573 */;
 import ME from "ME" /* 676 */;
 import { Fonts } from "sum" /* 505 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
-import importDefaultResult from "createTextStyle" /* 5429 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
+import importDefaultResult from "createTextStyle" /* 5461 */;
 import set from "set" /* 2 */;
 
 require = arg1;
@@ -153,7 +153,7 @@ function SortAndViewOptions(channel) {
   }
   isMediaChannelResult = channel.isMediaChannel();
   const tmp4 = id;
-  return closure_14(id(4896).Button, { variant: "secondary", text: stringResult, onPress: callback, size: "sm", icon: closure_14(id(11688).ArrowsUpDownIcon, { size: "xxs" }) });
+  return closure_14(id(4928).Button, { variant: "secondary", text: stringResult, onPress: callback, size: "sm", icon: closure_14(id(11721).ArrowsUpDownIcon, { size: "xxs" }) });
 }
 function TagFilter(channel) {
   channel = channel.channel;
@@ -165,8 +165,8 @@ function TagFilter(channel) {
     obj = { channel };
     obj.openLazy(channel(closure_1_2[30])(closure_1_2[33], closure_1_2.paths), "ForumTagFilterActionSheet", obj);
   };
-  obj[4] = callback(channel(10381).TagIcon, { size: "xxs" });
-  return callback(channel(4896).Button, obj);
+  obj[4] = callback(channel(10420).TagIcon, { size: "xxs" });
+  return callback(channel(4928).Button, obj);
 }
 function getForumItemType(arg0) {
   let str = "thread";

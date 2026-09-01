@@ -1,6 +1,6 @@
-// === Module 5531: set ===
+// === Module 5563: set ===
 
-// Module 5531 (set)
+// Module 5563 (set)
 import set from "set" /* 2 */;
 
 const obj = { VISIBLE: null };

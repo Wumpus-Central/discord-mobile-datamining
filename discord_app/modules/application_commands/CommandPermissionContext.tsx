@@ -1,9 +1,9 @@
-// === Module 8119: computePermissions ===
+// === Module 8151: computePermissions ===
 
-// Module 8119 (computePermissions)
+// Module 8151 (computePermissions)
 import fromStringAll from "fromString" /* 506 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
-import resolveNsfwTogglesWithDefaults from "resolveNsfwTogglesWithDefaults" /* 8120 */;
+import resolveNsfwTogglesWithDefaults from "resolveNsfwTogglesWithDefaults" /* 8152 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "initialize" /* 1984 */;
 import { ChannelRecordBase } from "createChannelRecord" /* 1391 */;
@@ -12,7 +12,7 @@ import closure_7 from "fetchFingerprint" /* 1218 */;
 import closure_8 from "ensureGuildLoaded" /* 1387 */;
 import closure_9 from "trackCommunicationDisabled" /* 1992 */;
 import closure_10 from "createGuildRecordFromRust" /* 1909 */;
-import closure_11 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_11 from "getUncachedChannelPermissions" /* 4121 */;
 import closure_12 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 

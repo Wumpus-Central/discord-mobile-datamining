@@ -1,11 +1,11 @@
-// === Module 8443: create ===
+// === Module 8475: create ===
 
-// Module 8443 (create)
+// Module 8475 (create)
 import _mod1307 from "module_1307" /* 1307 */;
-import create from "create" /* 8421 */;
-import create2 from "create" /* 8422 */;
-import create3 from "create" /* 8423 */;
-import create4 from "create" /* 8431 */;
+import create from "create" /* 8453 */;
+import create2 from "create" /* 8454 */;
+import create3 from "create" /* 8455 */;
+import create4 from "create" /* 8463 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import { MessageType } from "module_1307" /* 1307 */;
 
@@ -19,7 +19,7 @@ class AdminEditorTestComponent$Type extends MessageType {
       name: "localized_text_field",
       kind: "message",
       T() {
-            return callback(8421).LocalizedString;
+            return callback(8453).LocalizedString;
           }
     };
     items[2] = { no: 3, name: "plain_text_field", kind: "scalar", T: 9 };
@@ -28,7 +28,7 @@ class AdminEditorTestComponent$Type extends MessageType {
       name: "textarea_field",
       kind: "message",
       T() {
-            return callback(8421).LocalizedString;
+            return callback(8453).LocalizedString;
           }
     };
     items[4] = { no: 5, name: "checkbox_field", kind: "scalar", T: 8 };
@@ -38,7 +38,7 @@ class AdminEditorTestComponent$Type extends MessageType {
       name: "themed_asset_field",
       kind: "message",
       T() {
-            return callback(8431).ThemeAwareAsset;
+            return callback(8463).ThemeAwareAsset;
           }
     };
     obj = { no: 8, name: "help_article_field", kind: "message", T: null };
@@ -54,7 +54,7 @@ class AdminEditorTestComponent$Type extends MessageType {
       name: "cta_field",
       kind: "message",
       T() {
-            return callback(8423).CTAButton;
+            return callback(8455).CTAButton;
           }
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.AdminEditorTestComponent", items, T);
@@ -234,7 +234,7 @@ let items = [
     name: "localized_text_field",
     kind: "message",
     T() {
-      return callback(8421).LocalizedString;
+      return callback(8453).LocalizedString;
     }
   },
   { no: 3, name: "plain_text_field", kind: "scalar", T: 9 },
@@ -243,7 +243,7 @@ let items = [
     name: "textarea_field",
     kind: "message",
     T() {
-      return callback(8421).LocalizedString;
+      return callback(8453).LocalizedString;
     }
   },
   { no: 5, name: "checkbox_field", kind: "scalar", T: 8 },
@@ -253,7 +253,7 @@ let items = [
     name: "themed_asset_field",
     kind: "message",
     T() {
-      return callback(8431).ThemeAwareAsset;
+      return callback(8463).ThemeAwareAsset;
     }
   },
 ,
@@ -272,7 +272,7 @@ items[8] = {
   name: "cta_field",
   kind: "message",
   T() {
-    return callback(8423).CTAButton;
+    return callback(8455).CTAButton;
   }
 };
 prototype = new prototype("discord_protos.premium_marketing.v1.AdminEditorTestComponent", items, tmp, T, AdminEditorTestComponent$Type, prototype, items);

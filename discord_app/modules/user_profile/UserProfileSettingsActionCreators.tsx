@@ -1,12 +1,12 @@
-// === Module 8042: setPendingChanges ===
+// === Module 8074: setPendingChanges ===
 
-// Module 8042 (setPendingChanges)
+// Module 8074 (setPendingChanges)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import isEqualDefault from "isEqual" /* 4611 */;
-import guildHasTag from "guildHasTag" /* 8043 */;
+import isEqualDefault from "isEqual" /* 4643 */;
+import guildHasTag from "guildHasTag" /* 8075 */;
 import closure_3 from "trackCommunicationDisabled" /* 1992 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "createUserWidgetFromServer" /* 7334 */;
+import closure_5 from "createUserWidgetFromServer" /* 7366 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_profile/UserProfileSettingsActionCreators.tsx");

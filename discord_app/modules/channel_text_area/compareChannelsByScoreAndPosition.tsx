@@ -1,6 +1,6 @@
-// === Module 6148: compareChannelsByScoreAndPosition ===
+// === Module 6180: compareChannelsByScoreAndPosition ===
 
-// Module 6148 (compareChannelsByScoreAndPosition)
+// Module 6180 (compareChannelsByScoreAndPosition)
 import closure_0 from "ensureGuildLoaded" /* 1387 */;
 import { ChannelTypes } from "ME" /* 676 */;
 

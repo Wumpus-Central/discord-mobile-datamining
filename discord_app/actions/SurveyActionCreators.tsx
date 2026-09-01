@@ -1,13 +1,13 @@
-// === Module 4680: overrideSurvey ===
+// === Module 4712: overrideSurvey ===
 
-// Module 4680 (overrideSurvey)
+// Module 4712 (overrideSurvey)
 import encodeProperties from "encodeProperties" /* 503 */;
 import sendRequest from "sendRequest" /* 530 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import _modDef4681 from "module_4681" /* 4681 */;
-import closure_3 from "fetchSurveyIfNeeded" /* 4679 */;
-import { SURVEY_REFETCH_INTERVAL } from "fetchSurveyIfNeeded" /* 4679 */;
+import _modDef4713 from "module_4713" /* 4713 */;
+import closure_3 from "fetchSurveyIfNeeded" /* 4711 */;
+import { SURVEY_REFETCH_INTERVAL } from "fetchSurveyIfNeeded" /* 4711 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -16,7 +16,7 @@ const result = require("set").fileFinishedImporting("actions/SurveyActionCreator
 
 export const overrideSurvey = function overrideSurvey(id) {
   let obj = dispatcherDefault;
-  obj = { type: "SURVEY_OVERRIDE", id };
+  obj = { type: "SURVEY_OVERRIDE", id, isActionTriggered: arg1 };
   obj.dispatch(obj);
 };
 export const surveyHide = function surveyHide(key, arg1) {
@@ -63,7 +63,7 @@ export const surveyFetch = function surveyFetch(surveyOverride, disable_auto_see
     }
   };
   obj[2] = obj;
-  const obj2 = _modDef4681;
+  const obj2 = _modDef4713;
   obj[3] = sendRequest.rejectWithMigratedError();
   const value = obj2.get(obj);
   return value.then((body) => {
@@ -99,7 +99,7 @@ export const surveySeen = function surveySeen(key) {
   obj = { type: "SURVEY_SEEN", key };
   obj.dispatch(obj);
   obj = { url: closure_7.USER_SURVEY_SEEN(key), trackedActionData: null, rejectWithError: null };
-  const obj3 = _modDef4681;
+  const obj3 = _modDef4713;
   obj[1] = {
     event: _require(503).NetworkActionNames.USER_SURVEY_SEEN,
     properties() {

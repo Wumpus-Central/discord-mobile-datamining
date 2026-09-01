@@ -1,6 +1,6 @@
-// === Module 8025: metadata ===
+// === Module 8057: metadata ===
 
-// Module 8025 (metadata)
+// Module 8057 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/checkpoint/card-disco.png.js");

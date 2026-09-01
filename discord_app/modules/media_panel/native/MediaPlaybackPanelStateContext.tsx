@@ -1,7 +1,7 @@
-// === Module 16765: setMode ===
+// === Module 16801: setMode ===
 
-// Module 16765 (setMode)
-import createFakeSharedValue from "createFakeSharedValue" /* 7765 */;
+// Module 16801 (setMode)
+import createFakeSharedValue from "createFakeSharedValue" /* 7797 */;
 import importAllResult from "noop" /* 19 */;
 
 const obj = { mode: null, setMode: null, morphablePanelMode: null, wrapperDimensions: null, useReducedMotion: null, pipState: null, pipAvoidanceSpecs: null, dismissToPipGestureRef: null, dismissPanel: null, scrollPosition: null, canShowPIP: null, lockScrolling: null, wrapperOffset: null };
@@ -15,7 +15,7 @@ obj[3] = createFakeSharedValue.createFakeSharedValue({ width: 0, height: 0 });
 obj[4] = createFakeSharedValue.createFakeSharedValue(false);
 obj[5] = createFakeSharedValue.createFakeSharedValue({ x: -1, y: -1 });
 obj[6] = createFakeSharedValue.createFakeSharedValue({ top: 0, bottom: 0 });
-obj[7] = { current: "Array" };
+obj[7] = { current: "r" };
 obj[8] = function dismissPanel() {
   error = new Error("VoicePanelContextType.Provider.dismissDrawer: not called within a context provider");
   throw error;

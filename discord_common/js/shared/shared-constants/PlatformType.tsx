@@ -1,6 +1,6 @@
-// === Module 8581: PlatformType ===
+// === Module 8613: PlatformType ===
 
-// Module 8581 (PlatformType)
+// Module 8613 (PlatformType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/PlatformType.tsx");

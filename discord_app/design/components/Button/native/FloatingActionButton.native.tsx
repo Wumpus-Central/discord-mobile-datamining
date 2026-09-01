@@ -1,11 +1,11 @@
-// === Module 8954: styles ===
+// === Module 8991: styles ===
 
-// Module 8954 (styles)
+// Module 8991 (styles)
 import ThemesDefault from "Themes" /* 712 */;
-import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4901 */;
+import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4933 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 const styles = createCacheKey.createStyles(() => {
@@ -27,7 +27,7 @@ export const FloatingActionButton = function FloatingActionButton(positionRight)
   ({ icon, positionBottom } = positionRight);
   positionRight = positionRight.positionRight;
   const merged = Object.assign(positionRight, Object.create(null));
-  let obj = positionBottom(4187);
+  let obj = positionBottom(4217);
   class F {
     constructor() {
       tmp = positionBottom;
@@ -48,7 +48,7 @@ export const FloatingActionButton = function FloatingActionButton(positionRight)
       return obj;
     }
   }
-  obj = { withSpring: positionBottom(4895).withSpring, positionBottom, DEFAULT_POSITION_OFFSET: 16, SPRING_CONFIG: closure_6, positionRight };
+  obj = { withSpring: positionBottom(4927).withSpring, positionBottom, DEFAULT_POSITION_OFFSET: 16, SPRING_CONFIG: closure_6, positionRight };
   F.__closure = obj;
   F.__workletHash = 10762818944671;
   F.__initData = closure_7;
@@ -67,6 +67,6 @@ export const FloatingActionButton = function FloatingActionButton(positionRight)
   }
   obj1.icon = cloneElementResult;
   ({ button: obj4.style, iconButtonPill: obj4.pillStyle } = styles());
-  obj[1] = jsx(positionBottom(7975).BaseIconButton, {});
-  return jsx(positionRight(4187).View, { style: animatedStyle, children: null });
+  obj[1] = jsx(positionBottom(8007).BaseIconButton, {});
+  return jsx(positionRight(4217).View, { style: animatedStyle, children: null });
 };

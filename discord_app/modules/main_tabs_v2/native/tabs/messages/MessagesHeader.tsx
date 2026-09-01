@@ -1,15 +1,15 @@
-// === Module 15577: PX_16 ===
+// === Module 15612: PX_16 ===
 
-// Module 15577 (PX_16)
+// Module 15612 (PX_16)
 import ThemesDefault from "Themes" /* 712 */;
-import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4901 */;
-import map from "map" /* 9050 */;
-import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 10958 */;
+import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4933 */;
+import map from "map" /* 9088 */;
+import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 15613 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { SearchTypes } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 let c3 = importAllResult;
@@ -43,7 +43,7 @@ const memoResult = importAllResult.memo(function MessagesHeader(height) {
     const items = [headerPanel.headerPanel, { height }];
     return items;
   }, items);
-  let obj = height(4187);
+  let obj = height(4217);
   const fn = function c() {
     let obj = height(headerPanel[10]);
     let num = 0;
@@ -53,12 +53,12 @@ const memoResult = importAllResult.memo(function MessagesHeader(height) {
     obj = { opacity: obj.withSpring(num) };
     return obj;
   };
-  obj = { withSpring: height(4895).withSpring, scrollPosition };
+  obj = { withSpring: height(4927).withSpring, scrollPosition };
   fn.__closure = obj;
   fn.__workletHash = 17233409273245;
   fn.__initData = closure_11;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  let obj2 = height(15578);
+  let obj2 = height(15614);
   const isHomeDrawerEnabled = obj2.useIsHomeDrawerEnabled();
   const callback = importAllResult.useCallback(() => {
     const rootNavigationRef = height(headerPanel[12]).getRootNavigationRef();
@@ -98,8 +98,8 @@ const memoResult = importAllResult.memo(function MessagesHeader(height) {
     }
   }, []);
   obj = { variant: "primary", icon: null, size: "sm", accessibilityLabel: null, onPress: null };
-  const tmp12 = scrollPosition(5464)("bespoke");
-  obj[1] = callback(height(10650).PlusLargeIcon, { size: "sm", color: scrollPosition(712).colors.WHITE });
+  const tmp12 = scrollPosition(5496)("bespoke");
+  obj[1] = callback(height(10688).PlusLargeIcon, { size: "sm", color: scrollPosition(712).colors.WHITE });
   const intl = height(1236).intl;
   obj[3] = intl.string(height(1236).t.jD1qzM);
   obj[4] = callback3;
@@ -114,22 +114,22 @@ const memoResult = importAllResult.memo(function MessagesHeader(height) {
   } else {
     stringResult = string(t.OIgYlQ);
   }
-  obj3[1] = callback(height(4444).Text, { color: "mobile-text-heading-primary", variant: "heading-lg/semibold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: stringResult });
+  obj3[1] = callback(height(4474).Text, { color: "mobile-text-heading-primary", variant: "heading-lg/semibold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: stringResult });
   const items1 = [callback(closure_4, obj3), , , ];
   const obj4 = { style: tmp.headerPanelButtons, children: null };
-  const obj5 = { onPress: callback2, variant: "secondary", size: "sm", icon: scrollPosition(6204), accessibilityLabel: null };
+  const obj5 = { onPress: callback2, variant: "secondary", size: "sm", icon: scrollPosition(6236), accessibilityLabel: null };
   const intl3 = tmp3(1236).intl;
   obj5[4] = intl3.string(height(1236).t["5h0QOP"]);
-  const items2 = [callback(height(7974).IconButton, obj5), callback(scrollPosition(15583), { noMargin: true, onPress: callback, alternateVariant: true }), , ];
-  const obj6 = { variant: "secondary", grow: true, shrink: true, size: "sm", icon: scrollPosition(4386), onPress: callback1, maxFontSizeMultiplier: 1, text: null };
+  const items2 = [callback(height(8006).IconButton, obj5), callback(scrollPosition(15619), { noMargin: true, onPress: callback, alternateVariant: true }), , ];
+  const obj6 = { variant: "secondary", grow: true, shrink: true, size: "sm", icon: scrollPosition(4416), onPress: callback1, maxFontSizeMultiplier: 1, text: null };
   const intl4 = tmp3(1236).intl;
   obj6[7] = intl4.string(height(1236).t.zIJnA6);
-  items2[2] = callback(height(4896).Button, obj6);
-  items2[3] = callback(height(7974).IconButton, obj);
+  items2[2] = callback(height(4928).Button, obj6);
+  items2[3] = callback(height(8006).IconButton, obj);
   obj4[1] = items2;
   items1[1] = closure_7(closure_4, obj4);
   const items3 = [tmp.headerBorder, animatedStyle];
-  items1[2] = callback(scrollPosition(4187).View, { style: items3 });
+  items1[2] = callback(scrollPosition(4217).View, { style: items3 });
   items1[3] = tmp12;
   obj2[1] = items1;
   return closure_7(closure_4, obj2);

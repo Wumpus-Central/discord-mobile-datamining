@@ -1,10 +1,10 @@
-// === Module 6475: EmojiGGsExample ===
+// === Module 6507: EmojiGGsExample ===
 
-// Module 6475 (EmojiGGsExample)
+// Module 6507 (EmojiGGsExample)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5461 */;
-import metadataDefault from "metadata" /* 6476 */;
+import preloadDefault from "preload" /* 5493 */;
+import metadataDefault from "metadata" /* 6508 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/EmojiGGsExample.native.tsx");

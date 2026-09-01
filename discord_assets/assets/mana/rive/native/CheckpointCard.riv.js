@@ -1,6 +1,6 @@
-// === Module 4244: metadata ===
+// === Module 4274: metadata ===
 
-// Module 4244 (metadata)
+// Module 4274 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/rive/native/CheckpointCard.riv.js");

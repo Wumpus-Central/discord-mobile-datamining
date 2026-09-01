@@ -1,6 +1,6 @@
-// === Module 12871: getCoverImageURL ===
+// === Module 12904: getCoverImageURL ===
 
-// Module 12871 (getCoverImageURL)
+// Module 12904 (getCoverImageURL)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import privDefault from "priv" /* 1401 */;

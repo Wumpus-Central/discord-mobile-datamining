@@ -1,10 +1,10 @@
-// === Module 4366: isInRange ===
+// === Module 4396: isInRange ===
 
-// Module 4366 (isInRange)
+// Module 4396 (isInRange)
 import IntegerDefault from "Integer" /* 14 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "getGuild" /* 4367 */;
-import closure_4 from "handleInviteData" /* 4368 */;
+import closure_3 from "getGuild" /* 4397 */;
+import closure_4 from "handleInviteData" /* 4398 */;
 import closure_5 from "createGuildRecordFromRust" /* 1909 */;
 import importDefaultResult from "MurmurHashV3" /* 1217 */;
 

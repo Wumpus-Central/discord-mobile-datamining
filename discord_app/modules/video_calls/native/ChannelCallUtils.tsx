@@ -1,14 +1,14 @@
-// === Module 16756: voiceSettings ===
+// === Module 16792: voiceSettings ===
 
-// Module 16756 (voiceSettings)
+// Module 16792 (voiceSettings)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import _modDef4826 from "module_4826" /* 4826 */;
-import registerAssetDefault from "registerAsset" /* 8717 */;
-import registerAssetDefault2 from "registerAsset" /* 10045 */;
-import registerAssetDefault3 from "registerAsset" /* 16757 */;
-import registerAssetDefault4 from "registerAsset" /* 16758 */;
-import closure_3 from "initialize" /* 4536 */;
+import _modDef4858 from "module_4858" /* 4858 */;
+import registerAssetDefault from "registerAsset" /* 8754 */;
+import registerAssetDefault2 from "registerAsset" /* 10084 */;
+import registerAssetDefault3 from "registerAsset" /* 16793 */;
+import registerAssetDefault4 from "registerAsset" /* 16794 */;
+import closure_3 from "initialize" /* 4568 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -23,10 +23,10 @@ export const voiceSettings = function voiceSettings() {
   obj[0] = intl.string(getSystemLocale.t.NiTd0e);
   obj[1] = registerAssetDefault3;
   obj[2] = function onPress() {
-    let obj = callback(6213);
+    let obj = callback(6245);
     obj = { screen: constants.VOICE };
     obj.openUserSettings(obj);
-    callback2(4415).hideActionSheet();
+    callback2(4445).hideActionSheet();
   };
   return obj;
 };
@@ -45,7 +45,7 @@ export const videoParticipantsHidden = function videoParticipantsHidden(arg0, ar
 export const openHideSelfStreamAndVideoConfirmDialog = function openHideSelfStreamAndVideoConfirmDialog(arg0, arg1) {
   closure_0 = arg0;
   importDefault = arg1;
-  let obj = _modDef4826;
+  let obj = _modDef4858;
   obj = {
     importer() {
       return callback(closure_1_2[11])(closure_1_2[10], closure_1_2.paths).then((arg0) => {
@@ -100,19 +100,19 @@ export const invite = function invite(isPrivate) {
   dependencyMap = arg2;
   if (null != arg1) {
     function onPress() {
-      let obj = isPrivate(9870);
+      let obj = isPrivate(9909);
       obj = { source: closure_1_6.STREAM, stream: closure_1 };
       return obj.showInstantInviteActionSheet(isPrivate, obj);
     }
   } else {
     onPress = function onPress() {
-      let obj = isPrivate(9870);
+      let obj = isPrivate(9909);
       obj = { source: closure_1_6.VOICE_CHANNEL };
       return obj.showInstantInviteActionSheet(isPrivate, obj);
     };
     if (null != arg2) {
       onPress = function onPress() {
-        let obj = isPrivate(9870);
+        let obj = isPrivate(9909);
         obj = { source: closure_1_6.ACTIVITY_INVITE, targetApplicationId: dependencyMap };
         return obj.showInstantInviteActionSheet(isPrivate, obj);
       };
@@ -120,7 +120,7 @@ export const invite = function invite(isPrivate) {
   }
   if (isPrivate.isPrivate()) {
     onPress = function onPress() {
-      return isPrivate(4302).navigateToNewGroupDM(isPrivate.id, closure_1_5.CHANNEL_CALL);
+      return isPrivate(4332).navigateToNewGroupDM(isPrivate.id, closure_1_5.CHANNEL_CALL);
     };
   }
   let obj = { label: null, icon: null, onPress: null };

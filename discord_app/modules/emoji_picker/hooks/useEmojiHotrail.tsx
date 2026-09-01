@@ -1,8 +1,8 @@
-// === Module 9069: useEmojiHotrail ===
+// === Module 9107: useEmojiHotrail ===
 
-// Module 9069 (useEmojiHotrail)
+// Module 9107 (useEmojiHotrail)
 import closure_0 from "noop" /* 19 */;
-import { EMOJI_ROW_SIZE } from "EmojiCategoryTypes" /* 5373 */;
+import { EMOJI_ROW_SIZE } from "EmojiCategoryTypes" /* 5405 */;
 
 const result = require("set").fileFinishedImporting("modules/emoji_picker/hooks/useEmojiHotrail.tsx");
 

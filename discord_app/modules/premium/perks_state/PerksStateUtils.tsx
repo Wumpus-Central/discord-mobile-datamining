@@ -1,9 +1,9 @@
-// === Module 1942: parseServerPerkConfigKind ===
+// === Module 1928: parseServerPerkConfigKind ===
 
-// Module 1942 (parseServerPerkConfigKind)
+// Module 1928 (parseServerPerkConfigKind)
 import fromStringAll from "fromString" /* 506 */;
-import create from "create" /* 1938 */;
-import PerkConfigType from "PerkConfigType" /* 1943 */;
+import PerkConfigType from "PerkConfigType" /* 1929 */;
+import create from "create" /* 1930 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 
 require = arg1;
@@ -12,12 +12,12 @@ function parseServerPerkConfigKind(kind) {
     const type = kind.kind.type;
     if (PerkConfigType.PerkConfigType.INCREASED_FILE_UPLOAD_SIZE === type) {
       let obj = { type: null, maxSize: null };
-      obj[0] = tmp(1943).PerkConfigType.INCREASED_FILE_UPLOAD_SIZE;
+      obj[0] = tmp(1929).PerkConfigType.INCREASED_FILE_UPLOAD_SIZE;
       obj[1] = kind.kind.max_size;
       return obj;
-    } else if (tmp(1943).PerkConfigType.INCREASED_GUILD_LIMIT === type) {
+    } else if (tmp(1929).PerkConfigType.INCREASED_GUILD_LIMIT === type) {
       obj = { type: null, maxGuilds: null };
-      obj[0] = tmp(1943).PerkConfigType.INCREASED_GUILD_LIMIT;
+      obj[0] = tmp(1929).PerkConfigType.INCREASED_GUILD_LIMIT;
       obj[1] = kind.kind.max_guilds;
       return obj;
     }

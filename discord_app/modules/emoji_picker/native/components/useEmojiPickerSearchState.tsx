@@ -1,9 +1,9 @@
-// === Module 9071: useEmojiPickerSearchState ===
+// === Module 9109: useEmojiPickerSearchState ===
 
-// Module 9071 (useEmojiPickerSearchState)
+// Module 9109 (useEmojiPickerSearchState)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "getEmojiToGroupId" /* 5369 */;
+import closure_4 from "getEmojiToGroupId" /* 5401 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/useEmojiPickerSearchState.tsx");

@@ -1,10 +1,10 @@
-// === Module 6383: ClydeHeadsetSpotIllustration ===
+// === Module 6415: ClydeHeadsetSpotIllustration ===
 
-// Module 6383 (ClydeHeadsetSpotIllustration)
+// Module 6415 (ClydeHeadsetSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5461 */;
-import metadataDefault from "metadata" /* 6384 */;
+import preloadDefault from "preload" /* 5493 */;
+import metadataDefault from "metadata" /* 6416 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ClydeHeadsetSpotIllustration.native.tsx");

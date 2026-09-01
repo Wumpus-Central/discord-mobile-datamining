@@ -1,12 +1,12 @@
-// === Module 13444: calculateFps ===
+// === Module 13477: calculateFps ===
 
-// Module 13444 (calculateFps)
+// Module 13477 (calculateFps)
 import set2 from "set" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
 import ME from "ME" /* 676 */;
-import sleep from "sleep" /* 4526 */;
-import isTablet from "isTablet" /* 4722 */;
-import dispatchAutoDisableVideoDefault from "dispatchAutoDisableVideo" /* 13445 */;
+import sleep from "sleep" /* 4558 */;
+import isTablet from "isTablet" /* 4754 */;
+import dispatchAutoDisableVideoDefault from "dispatchAutoDisableVideo" /* 13478 */;
 
 const VideoToggleState = ME.VideoToggleState;
 class VideoHealthManager {
@@ -114,7 +114,7 @@ prototype["startReenableBackoffTimer"] = function startReenableBackoffTimer(arg0
     if (null !== lastBackoffTime) {
       num2 = 1;
       if (expBackoffFactor <= 16) {
-        let obj = _require(4526);
+        let obj = _require(4558);
         num2 = 1;
         if (self.elapsedSeconds(obj.now(), lastBackoffTime) <= 600) {
           num2 = expBackoffFactor * 2;
@@ -122,7 +122,7 @@ prototype["startReenableBackoffTimer"] = function startReenableBackoffTimer(arg0
       }
     }
     obj = { lastBackoffTime: null, expBackoffFactor: null };
-    obj[0] = _require(4526).now();
+    obj[0] = _require(4558).now();
     obj[1] = num2;
     self.retryBackoffCache[arg0] = obj;
     const result = num2 * self.backoffTimeSec;
@@ -134,7 +134,7 @@ prototype["startReenableBackoffTimer"] = function startReenableBackoffTimer(arg0
     self.timeoutIdCache[arg0] = setTimeout(() => {
       self.queueReenable(closure_0);
     }, result1);
-    const obj3 = _require(4526);
+    const obj3 = _require(4558);
   }
 };
 prototype["queueReenable"] = function queueReenable(closure_0) {

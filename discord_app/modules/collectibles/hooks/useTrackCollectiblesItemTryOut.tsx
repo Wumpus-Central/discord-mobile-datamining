@@ -1,11 +1,11 @@
-// === Module 8041: useTrackCollectiblesItemTryOut ===
+// === Module 8073: useTrackCollectiblesItemTryOut ===
 
-// Module 8041 (useTrackCollectiblesItemTryOut)
+// Module 8073 (useTrackCollectiblesItemTryOut)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
 import ME from "ME" /* 676 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1950 */;
-import closure_4 from "updateCategoriesAndProducts" /* 7255 */;
+import closure_4 from "updateCategoriesAndProducts" /* 7287 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
 noop.useCallback;

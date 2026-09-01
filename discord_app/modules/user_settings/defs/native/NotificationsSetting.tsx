@@ -1,11 +1,11 @@
-// === Module 15043: route ===
+// === Module 15076: route ===
 
-// Module 15043 (route)
+// Module 15076 (route)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import BellIcon from "BellIcon" /* 9707 */;
-import createToggle from "createToggle" /* 11031 */;
+import BellIcon from "BellIcon" /* 9746 */;
+import createToggle from "createToggle" /* 11068 */;
 
 obj = {
   useTitle() {
@@ -19,7 +19,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.NOTIFICATIONS,
   getComponent() {
-    return require(15044) /* SystemNotificationsSubLabel */.default;
+    return require(15077) /* SystemNotificationsSubLabel */.default;
   }
 };
 const route = createToggle.createRoute(obj);

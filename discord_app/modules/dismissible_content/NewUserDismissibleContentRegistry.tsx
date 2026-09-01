@@ -1,8 +1,8 @@
-// === Module 4290: useNewUserDismissibleContent ===
+// === Module 4320: useNewUserDismissibleContent ===
 
-// Module 4290 (useNewUserDismissibleContent)
+// Module 4320 (useNewUserDismissibleContent)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import useDcfNewUserCooldown from "useDcfNewUserCooldown" /* 4291 */;
+import useDcfNewUserCooldown from "useDcfNewUserCooldown" /* 4321 */;
 import closure_3 from "fetchFingerprint" /* 1218 */;
 import closure_4 from "set" /* 1377 */;
 
@@ -11,8 +11,8 @@ let closure_5 = { [arg1(1373).DismissibleContent.MJ_NEW_USER_CHAT_BAR]: 0, [arg1
 const result = require("set").fileFinishedImporting("modules/dismissible_content/NewUserDismissibleContentRegistry.tsx");
 
 export const useNewUserDismissibleContent = function useNewUserDismissibleContent(arr) {
-  _require = _require(4291).useDcfNewUserCooldown();
-  let obj = _require(4291);
+  _require = _require(4321).useDcfNewUserCooldown();
+  let obj = _require(4321);
   const items = [closure_3, closure_4];
   const stateFromStoresObject = _require(647).useStateFromStoresObject(items, () => {
     obj = { userId: id.getId(), newUserMinAgeRequiredOverridden: obj.newUserMinAgeRequiredOverridden };

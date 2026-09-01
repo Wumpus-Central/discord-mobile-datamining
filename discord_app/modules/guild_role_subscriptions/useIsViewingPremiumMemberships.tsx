@@ -1,11 +1,11 @@
-// === Module 12281: useIsViewingPremiumMemberships ===
+// === Module 12314: useIsViewingPremiumMemberships ===
 
-// Module 12281 (useIsViewingPremiumMemberships)
+// Module 12314 (useIsViewingPremiumMemberships)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import set2 from "set" /* 1394 */;
-import _extends from "_extends" /* 4280 */;
-import RouteParam2 from "RouteParam" /* 4287 */;
+import _extends from "_extends" /* 4310 */;
+import RouteParam2 from "RouteParam" /* 4317 */;
 
 const Routes = ME.Routes;
 const StaticChannelRoute = set2.StaticChannelRoute;

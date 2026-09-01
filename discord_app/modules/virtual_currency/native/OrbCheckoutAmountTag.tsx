@@ -1,13 +1,13 @@
-// === Module 10715: OrbCheckoutAmountTag ===
+// === Module 10753: OrbCheckoutAmountTag ===
 
-// Module 10715 (OrbCheckoutAmountTag)
+// Module 10753 (OrbCheckoutAmountTag)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4444 */;
-import OrbsIcon from "OrbsIcon" /* 10716 */;
+import Text from "Text" /* 4474 */;
+import OrbsIcon from "OrbsIcon" /* 10754 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 const View = get_ActivityIndicator.View;
 ({ jsx: c3, jsxs: c4 } = jsxProd);

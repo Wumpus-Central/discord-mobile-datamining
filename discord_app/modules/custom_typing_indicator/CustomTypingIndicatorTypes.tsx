@@ -1,8 +1,8 @@
-// === Module 1937: CUSTOM_TYPING_INDICATOR_EMOJI_COUNT ===
+// === Module 1942: CUSTOM_TYPING_INDICATOR_EMOJI_COUNT ===
 
-// Module 1937 (CUSTOM_TYPING_INDICATOR_EMOJI_COUNT)
+// Module 1942 (CUSTOM_TYPING_INDICATOR_EMOJI_COUNT)
 import set from "set" /* 2 */;
-import create from "create" /* 1938 */;
+import create from "create" /* 1930 */;
 
 let obj = { emojis: [], typingSuggestion: create.TypingSuggestion.UNSPECIFIED, animation: create.TypingIndicatorAnimation.UNSPECIFIED };
 const result = set.fileFinishedImporting("modules/custom_typing_indicator/CustomTypingIndicatorTypes.tsx");

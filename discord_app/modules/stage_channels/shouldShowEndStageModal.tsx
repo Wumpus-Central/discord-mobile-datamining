@@ -1,9 +1,9 @@
-// === Module 9966: shouldShowEndStageModal ===
+// === Module 10005: shouldShowEndStageModal ===
 
-// Module 9966 (shouldShowEndStageModal)
+// Module 10005 (shouldShowEndStageModal)
 import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "getActiveStageChannelIds" /* 5330 */;
-import closure_4 from "buildStageChannelUserRoles" /* 5333 */;
+import closure_3 from "getActiveStageChannelIds" /* 5362 */;
+import closure_4 from "buildStageChannelUserRoles" /* 5365 */;
 import closure_5 from "handleStageInstanceCreateOrUpdate" /* 1392 */;
 
 const require = arg1;

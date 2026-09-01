@@ -1,6 +1,6 @@
-// === Module 4079: GuildMemberFlags ===
+// === Module 4109: GuildMemberFlags ===
 
-// Module 4079 (GuildMemberFlags)
+// Module 4109 (GuildMemberFlags)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/guild_member/GuildMemberConstants.tsx");

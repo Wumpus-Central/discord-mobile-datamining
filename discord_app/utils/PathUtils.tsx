@@ -1,11 +1,11 @@
-// === Module 4508: pathJoin ===
+// === Module 4538: pathJoin ===
 
-// Module 4508 (pathJoin)
+// Module 4538 (pathJoin)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("utils/PathUtils.tsx");
 
-export const pathJoin = function pathJoin(closure_1, closure_15) {
+export const pathJoin = function pathJoin(closure_1, closure_17) {
   const items = [...arguments];
   let str = "/";
   if (obj.isWindows()) {

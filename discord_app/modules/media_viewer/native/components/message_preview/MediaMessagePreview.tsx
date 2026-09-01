@@ -1,19 +1,19 @@
-// === Module 12803: MeasureMessage ===
+// === Module 12836: MeasureMessage ===
 
-// Module 12803 (MeasureMessage)
+// Module 12836 (MeasureMessage)
 import ThemesDefault from "Themes" /* 712 */;
-import setOptionsDefault from "setOptions" /* 7809 */;
+import setOptionsDefault from "setOptions" /* 7841 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "handleLoadThreadsSuccess" /* 6092 */;
-import closure_8 from "handleReaction" /* 6096 */;
+import closure_7 from "handleLoadThreadsSuccess" /* 6124 */;
+import closure_8 from "handleReaction" /* 6128 */;
 import closure_9 from "ensureGuildLoaded" /* 1387 */;
-import closure_10 from "reinjectEphemerals" /* 4703 */;
-import closure_11 from "messages" /* 8599 */;
+import closure_10 from "reinjectEphemerals" /* 4735 */;
+import closure_11 from "messages" /* 8631 */;
 import { ThemeTypes } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 const require = arg1;
 function MeasureMessage(message) {
@@ -304,7 +304,7 @@ export default function MediaMessagePreview(channelId) {
           }
         }
         obj = channelId(onClose[27]);
-        obj = { allowWithinModal: true, chatInputRef: "Boolean", handleTransitionToThread: "artiste", message: "palette", messageChannel: "artiste", selectedChannelId: "homme", tapLinkData: "m\u00E9tier" };
+        obj = { allowWithinModal: true, chatInputRef: "Boolean", handleTransitionToThread: "BuyNitroPurchaseFlow", message: "absolute", messageChannel: null, selectedChannelId: "category", tapLinkData: "Error" };
         obj[2] = function handleTransitionToThread(arg0, arg1, arg2) {
           channel = channel.getChannel(arg1);
           if (null != channel) {

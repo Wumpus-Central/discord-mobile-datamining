@@ -1,6 +1,6 @@
-// === Module 7832: getGuild ===
+// === Module 7864: getGuild ===
 
-// Module 7832 (getGuild)
+// Module 7864 (getGuild)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

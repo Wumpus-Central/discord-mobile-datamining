@@ -1,12 +1,12 @@
-// === Module 12913: validateJumpWithAlert ===
+// === Module 12946: validateJumpWithAlert ===
 
-// Module 12913 (validateJumpWithAlert)
+// Module 12946 (validateJumpWithAlert)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import setDefault from "set" /* 4825 */;
-import isSpamSupported from "isSpamSupported" /* 7220 */;
+import setDefault from "set" /* 4857 */;
+import isSpamSupported from "isSpamSupported" /* 7252 */;
 import closure_3 from "ensureGuildLoaded" /* 1387 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4091 */;
-import closure_5 from "markAllUserIdListsStale" /* 4100 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4121 */;
+import closure_5 from "markAllUserIdListsStale" /* 4130 */;
 import { Permissions } from "ME" /* 676 */;
 
 require = arg1;

@@ -1,8 +1,8 @@
-// === Module 12891: useCanSearchForumPostsByChannelId ===
+// === Module 12924: useCanSearchForumPostsByChannelId ===
 
-// Module 12891 (useCanSearchForumPostsByChannelId)
+// Module 12924 (useCanSearchForumPostsByChannelId)
 import closure_2 from "ensureGuildLoaded" /* 1387 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4121 */;
 import { Permissions } from "ME" /* 676 */;
 
 const require = arg1;

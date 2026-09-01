@@ -1,6 +1,6 @@
-// === Module 9063: IMAGE_SIZE ===
+// === Module 9101: IMAGE_SIZE ===
 
-// Module 9063 (IMAGE_SIZE)
+// Module 9101 (IMAGE_SIZE)
 import set from "set" /* 2 */;
 import ExpressionPickerViewType from "ExpressionPickerViewType" /* 1338 */;
 

@@ -1,10 +1,10 @@
-// === Module 6861: PaintPaletteSpotIllustration ===
+// === Module 6893: PaintPaletteSpotIllustration ===
 
-// Module 6861 (PaintPaletteSpotIllustration)
+// Module 6893 (PaintPaletteSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5461 */;
-import metadataDefault from "metadata" /* 6862 */;
+import preloadDefault from "preload" /* 5493 */;
+import metadataDefault from "metadata" /* 6894 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/PaintPaletteSpotIllustration.native.tsx");

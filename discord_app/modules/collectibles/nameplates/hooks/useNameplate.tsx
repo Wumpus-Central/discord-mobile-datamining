@@ -1,6 +1,6 @@
-// === Module 8868: useNameplate ===
+// === Module 8905: useNameplate ===
 
-// Module 8868 (useNameplate)
+// Module 8905 (useNameplate)
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "trackCommunicationDisabled" /* 1992 */;
 

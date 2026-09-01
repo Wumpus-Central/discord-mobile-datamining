@@ -1,6 +1,6 @@
-// === Module 15806: items ===
+// === Module 15842: items ===
 
-// Module 15806 (items)
+// Module 15842 (items)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1430 */;
@@ -45,9 +45,9 @@ export const canSeeCreatorMonetizationOnboardingV2Upsell = function canSeeCreato
     if (null == currentUser) {
       return false;
     } else {
-      const guildRoleSubscriptionSettingsVisibility = guild(6075).getGuildRoleSubscriptionSettingsVisibility(guild);
-      let tmp5 = guildRoleSubscriptionSettingsVisibility === guild(6075).GuildRoleSubscriptionSettingsVisibility.VISIBLE;
-      const obj = guild(6075);
+      const guildRoleSubscriptionSettingsVisibility = guild(6107).getGuildRoleSubscriptionSettingsVisibility(guild);
+      let tmp5 = guildRoleSubscriptionSettingsVisibility === guild(6107).GuildRoleSubscriptionSettingsVisibility.VISIBLE;
+      const obj = guild(6107);
       const tmp7 = isGuildOwner(guild, currentUser);
       if (tmp5) {
         tmp5 = tmp7;

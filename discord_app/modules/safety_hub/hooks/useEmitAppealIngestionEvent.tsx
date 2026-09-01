@@ -1,9 +1,9 @@
-// === Module 11438: useEmitAppealIngestionEvent ===
+// === Module 11471: useEmitAppealIngestionEvent ===
 
-// Module 11438 (useEmitAppealIngestionEvent)
+// Module 11471 (useEmitAppealIngestionEvent)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11416 */;
-import { SafetyHubAnalyticsActionSource as closure_5 } from "SafetyHubView" /* 8658 */;
+import closure_4 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8701 */;
+import { SafetyHubAnalyticsActionSource as closure_5 } from "SafetyHubView" /* 8690 */;
 import ME from "ME" /* 676 */;
 
 const require = arg1;

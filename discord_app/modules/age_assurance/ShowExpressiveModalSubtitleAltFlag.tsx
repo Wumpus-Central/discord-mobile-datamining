@@ -1,6 +1,6 @@
-// === Module 8676: useShouldShowExpressiveModalSubtitleAlt ===
+// === Module 8713: useShouldShowExpressiveModalSubtitleAlt ===
 
-// Module 8676 (useShouldShowExpressiveModalSubtitleAlt)
+// Module 8713 (useShouldShowExpressiveModalSubtitleAlt)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1468 */;
 

@@ -1,11 +1,11 @@
-// === Module 14129: RPC_EMBEDDED_APP_SCOPE ===
+// === Module 14162: RPC_EMBEDDED_APP_SCOPE ===
 
-// Module 14129 (RPC_EMBEDDED_APP_SCOPE)
+// Module 14162 (RPC_EMBEDDED_APP_SCOPE)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import getCapabilitiesForSocketDefault from "getCapabilitiesForSocket" /* 14080 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4350 */;
-import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 14097 */;
+import getCapabilitiesForSocketDefault from "getCapabilitiesForSocket" /* 14113 */;
+import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4380 */;
+import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 14130 */;
 
 ({ RPC_AUTHENTICATED_SCOPE, RPC_EMBEDDED_APP_SCOPE, RPC_SCOPE_CONFIG } = RPC_SCOPE_CONFIG);
 const RPCCommands = ME.RPCCommands;

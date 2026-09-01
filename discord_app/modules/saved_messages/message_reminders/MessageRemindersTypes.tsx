@@ -1,9 +1,9 @@
-// === Module 11258: items ===
+// === Module 11295: items ===
 
-// Module 11258 (items)
+// Module 11295 (items)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import hooksDefault from "hooks" /* 4045 */;
+import hooksDefault from "hooks" /* 4075 */;
 
 const items = [
   {
@@ -68,10 +68,10 @@ const items = [
       } else {
         num3 = 8;
         if (1 === dayResult) {
-          const obj2 = tmp(4045)();
-          const startOfResult = tmp(4045)().startOf("day");
+          const obj2 = tmp(4075)();
+          const startOfResult = tmp(4075)().startOf("day");
           num3 = 8;
-          const addResult = tmp(4045)().startOf("day").add(9, "hours");
+          const addResult = tmp(4075)().startOf("day").add(9, "hours");
         }
       }
       const obj = hooksDefault();

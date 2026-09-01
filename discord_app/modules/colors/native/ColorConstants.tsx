@@ -1,6 +1,6 @@
-// === Module 7145: items ===
+// === Module 7177: items ===
 
-// Module 7145 (items)
+// Module 7177 (items)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 712 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;

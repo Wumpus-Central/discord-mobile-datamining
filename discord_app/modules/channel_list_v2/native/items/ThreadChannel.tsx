@@ -1,25 +1,25 @@
-// === Module 15666: ThreadChannel ===
+// === Module 15702: ThreadChannel ===
 
-// Module 15666 (ThreadChannel)
+// Module 15702 (ThreadChannel)
 import ThemesDefault from "Themes" /* 712 */;
-import inlineStyles from "inlineStyles" /* 8209 */;
-import inlineStylesDefault from "inlineStyles" /* 8209 */;
+import inlineStyles from "inlineStyles" /* 8241 */;
+import inlineStylesDefault from "inlineStyles" /* 8241 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "storeThread" /* 4093 */;
+import closure_5 from "storeThread" /* 4123 */;
 import closure_6 from "ensureGuildLoaded" /* 1387 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4091 */;
-import closure_8 from "generateOldThreadCutoff" /* 4463 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4121 */;
+import closure_8 from "generateOldThreadCutoff" /* 4493 */;
 import closure_9 from "handleConnectionOpen" /* 1981 */;
 import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import closure_11 from "updateVoiceState" /* 4467 */;
-import closure_12 from "getVoiceStatesForGuild" /* 4523 */;
-import hairlineWidth from "hairlineWidth" /* 10162 */;
+import closure_11 from "updateVoiceState" /* 4497 */;
+import closure_12 from "getVoiceStatesForGuild" /* 4555 */;
+import hairlineWidth from "hairlineWidth" /* 10201 */;
 import { Permissions } from "ME" /* 676 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4670 */;
+import { UnreadSetting } from "ReadStateTypes" /* 4702 */;
 import { OpenThreadAnalyticsLocations as closure_16 } from "AbortCodes" /* 1235 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function ThreadChannel(channel) {

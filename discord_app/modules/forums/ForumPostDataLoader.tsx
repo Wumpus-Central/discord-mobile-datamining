@@ -1,13 +1,13 @@
-// === Module 6117: loadForumPostData ===
+// === Module 6149: loadForumPostData ===
 
-// Module 6117 (loadForumPostData)
+// Module 6149 (loadForumPostData)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "ensureGuildLoaded" /* 1387 */;
-import { computeThreadIdsSnapshot } from "maybeRebuildState" /* 6118 */;
-import closure_6 from "handleLoadThreadsSuccess" /* 6092 */;
-import closure_7 from "handleLoadThreadsSuccess" /* 6121 */;
+import { computeThreadIdsSnapshot } from "maybeRebuildState" /* 6150 */;
+import closure_6 from "handleLoadThreadsSuccess" /* 6124 */;
+import closure_7 from "handleLoadThreadsSuccess" /* 6153 */;
 import { Endpoints } from "ME" /* 676 */;
 import set from "set" /* 2 */;
 
@@ -36,7 +36,7 @@ function _loadForumPostData() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -128,7 +128,7 @@ function _loadForumPostDataForChannelId() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -154,7 +154,7 @@ function _loadForumPostDataForChannelId() {
                 channel = 0;
                 closure_1_10.finishRequesting(tmp55, nextBatch);
                 c6 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               } else {
                 channel = channel.getChannel(tmp55);
                 guild_id = undefined;
@@ -165,7 +165,7 @@ function _loadForumPostDataForChannelId() {
                   channel = 0;
                   closure_1_10.finishRequesting(tmp55, nextBatch);
                   c6 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 } else {
                   const HTTP = callback(closure_1_2[9]).HTTP;
                   obj1 = { url: null, body: null, rejectWithError: true };

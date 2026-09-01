@@ -1,8 +1,8 @@
-// === Module 16318: ContactSuggestionRow ===
+// === Module 16354: ContactSuggestionRow ===
 
-// Module 16318 (ContactSuggestionRow)
+// Module 16354 (ContactSuggestionRow)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4440 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 

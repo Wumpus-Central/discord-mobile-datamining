@@ -1,6 +1,6 @@
-// === Module 4824: isDraftCommandValidForText ===
+// === Module 4856: isDraftCommandValidForText ===
 
-// Module 4824 (isDraftCommandValidForText)
+// Module 4856 (isDraftCommandValidForText)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/application_commands/DraftCommand.tsx");

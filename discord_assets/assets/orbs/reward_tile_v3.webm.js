@@ -1,6 +1,6 @@
-// === Module 10897: metadata ===
+// === Module 10935: metadata ===
 
-// Module 10897 (metadata)
+// Module 10935 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/orbs/reward_tile_v3.webm.js");

@@ -1,11 +1,11 @@
-// === Module 4716: useDisplayNameStylesEnabled ===
+// === Module 4748: useDisplayNameStylesEnabled ===
 
-// Module 4716 (useDisplayNameStylesEnabled)
+// Module 4748 (useDisplayNameStylesEnabled)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
 import initialize from "initialize" /* 589 */;
-import context from "context" /* 4717 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4440 */;
+import context from "context" /* 4749 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 
 const useContext = noop.useContext;
 const result = set.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesEnabled.tsx");

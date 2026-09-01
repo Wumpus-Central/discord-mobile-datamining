@@ -1,6 +1,6 @@
-// === Module 8610: isBlockedDomain ===
+// === Module 8642: isBlockedDomain ===
 
-// Module 8610 (isBlockedDomain)
+// Module 8642 (isBlockedDomain)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;

@@ -1,6 +1,6 @@
-// === Module 10902: questHomeHeroCtaFromServer ===
+// === Module 10940: questHomeHeroCtaFromServer ===
 
-// Module 10902 (questHomeHeroCtaFromServer)
+// Module 10940 (questHomeHeroCtaFromServer)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/quests/QuestHomeHeroCta.tsx");

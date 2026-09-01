@@ -1,19 +1,19 @@
-// === Module 12096: GuildLevelPowerupHeader ===
+// === Module 12129: GuildLevelPowerupHeader ===
 
-// Module 12096 (GuildLevelPowerupHeader)
+// Module 12129 (GuildLevelPowerupHeader)
 import ThemesDefault from "Themes" /* 712 */;
-import LinearGradientDefault from "LinearGradient" /* 4908 */;
-import BoostGemIcon from "BoostGemIcon" /* 8202 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12030 */;
-import useGuildPowerupOnShowMoreDefault from "useGuildPowerupOnShowMore" /* 12098 */;
-import importDefaultResult1Default from "importDefaultResult1" /* 12099 */;
+import LinearGradientDefault from "LinearGradient" /* 4940 */;
+import BoostGemIcon from "BoostGemIcon" /* 8234 */;
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12063 */;
+import useGuildPowerupOnShowMoreDefault from "useGuildPowerupOnShowMore" /* 12131 */;
+import importDefaultResult1Default from "importDefaultResult1" /* 12132 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4335 */;
+import BoostedGuildTiers from "BoostedGuildTiers" /* 4365 */;
 import ME from "ME" /* 676 */;
-import { TIER_CARDS } from "BoostedGuildTiers" /* 12097 */;
+import { TIER_CARDS } from "BoostedGuildTiers" /* 12130 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function GuildLevelPowerupHeader(arg0) {
@@ -180,10 +180,10 @@ export default function GuildPowerupsLevelCard(arg0) {
   ({ guildId, powerup, nextPowerup, index, isScrollingRef } = arg0);
   importDefault = undefined;
   const tmp = callback();
-  let obj = isScrollingRef(7972);
+  let obj = isScrollingRef(8004);
   const manaTypeConsolidationExperiment = obj.useManaTypeConsolidationExperiment("GuildPowerupsLevelCard");
   const tmp6 = usePowerupActiveStatusDefault(guildId, powerup);
-  obj1 = isScrollingRef(12050);
+  obj1 = isScrollingRef(12083);
   const calculatePowerupCardStatus = obj1.useCalculatePowerupCardStatus(powerup, tmp6, false);
   const tmp9 = useGuildPowerupOnShowMoreDefault(guildId, powerup);
   importDefault = tmp9;
@@ -222,10 +222,10 @@ export default function GuildPowerupsLevelCard(arg0) {
   }
   obj2[1] = str2;
   obj2[2] = powerup.title;
-  const items2 = [closure_10(isScrollingRef(4444).Text, obj2), closure_10(GuildPowerupLevelBody, { isActive: tmp6.type !== constants2.INACTIVE, index }), ];
+  const items2 = [closure_10(isScrollingRef(4474).Text, obj2), closure_10(GuildPowerupLevelBody, { isActive: tmp6.type !== constants2.INACTIVE, index }), ];
   const tmp19 = GuildLevelPowerupHeader;
   const tmp5Result = importDefaultResult1Default;
-  items2[2] = closure_10(View, { style: tmp.footerContainer, children: closure_10(isScrollingRef(12055).GuildPowerupsCardFooter, obj4) });
+  items2[2] = closure_10(View, { style: tmp.footerContainer, children: closure_10(isScrollingRef(12088).GuildPowerupsCardFooter, obj4) });
   obj1[1] = items2;
   items1[1] = closure_11(View, obj1);
   obj[4] = items1;

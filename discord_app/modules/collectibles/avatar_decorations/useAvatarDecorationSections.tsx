@@ -1,10 +1,10 @@
-// === Module 8056: useAvatarDecorationSections ===
+// === Module 8088: useAvatarDecorationSections ===
 
-// Module 8056 (useAvatarDecorationSections)
+// Module 8088 (useAvatarDecorationSections)
 import closure_2 from "_slicedToArray" /* 32 */;
 import { useMemo } from "noop" /* 19 */;
-import closure_4 from "updateCategoriesAndProducts" /* 7255 */;
-import closure_5 from "map" /* 7271 */;
+import closure_4 from "updateCategoriesAndProducts" /* 7287 */;
+import closure_5 from "map" /* 7303 */;
 
 const require = arg1;
 let obj = { PURCHASE: "purchase", PREMIUM_PURCHASE: "premium_purchase", PREVIEW: "preview" };

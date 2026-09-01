@@ -1,17 +1,17 @@
-// === Module 13178: GiftingSectionTitle ===
+// === Module 13211: GiftingSectionTitle ===
 
-// Module 13178 (GiftingSectionTitle)
+// Module 13211 (GiftingSectionTitle)
 import ThemesDefault from "Themes" /* 712 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5960 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 5992 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "initialize" /* 8528 */;
-import closure_9 from "addEntitlement" /* 7110 */;
+import closure_8 from "initialize" /* 8560 */;
+import closure_9 from "addEntitlement" /* 7142 */;
 import ME from "ME" /* 676 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function GiftingSectionTitle(title) {

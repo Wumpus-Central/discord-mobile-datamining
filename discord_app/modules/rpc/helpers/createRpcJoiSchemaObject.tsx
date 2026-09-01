@@ -1,6 +1,6 @@
-// === Module 9467: createRpcJoiSchemaObject ===
+// === Module 9506: createRpcJoiSchemaObject ===
 
-// Module 9467 (createRpcJoiSchemaObject)
+// Module 9506 (createRpcJoiSchemaObject)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/rpc/helpers/createRpcJoiSchemaObject.tsx");

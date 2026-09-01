@@ -1,9 +1,9 @@
-// === Module 7670: ConfirmEmailChangeCode ===
+// === Module 7702: ConfirmEmailChangeCode ===
 
-// Module 7670 (ConfirmEmailChangeCode)
+// Module 7702 (ConfirmEmailChangeCode)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
-import { setEmailToken } from "ChangeEmailFields" /* 7657 */;
+import { setEmailToken } from "ChangeEmailFields" /* 7689 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -65,7 +65,7 @@ export default function ConfirmEmailChangeCode(isChangeEmail) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -97,7 +97,7 @@ export default function ConfirmEmailChangeCode(isChangeEmail) {
           return obj;
         } else {
           v0 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp7) {
         v0 = tmp;
@@ -109,5 +109,5 @@ export default function ConfirmEmailChangeCode(isChangeEmail) {
   obj[3] = intl.string(_require(1236).t["2x/2Uo"]);
   const intl2 = _require(1236).intl;
   obj[4] = intl2.string(_require(1236).t.PDTjLN);
-  return jsx(navigation(7671), { onFormSubmit: null, onSuccess: null, onResend: null, headerText: null, confirmButtonText: null });
+  return jsx(navigation(7703), { onFormSubmit: null, onSuccess: null, onResend: null, headerText: null, confirmButtonText: null });
 };

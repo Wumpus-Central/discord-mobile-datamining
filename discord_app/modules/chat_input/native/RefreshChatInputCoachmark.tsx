@@ -1,7 +1,7 @@
-// === Module 11524: RefreshChatInputCoachmark ===
+// === Module 11557: RefreshChatInputCoachmark ===
 
-// Module 11524 (RefreshChatInputCoachmark)
-import useCoachmark from "useCoachmark" /* 8936 */;
+// Module 11557 (RefreshChatInputCoachmark)
+import useCoachmark from "useCoachmark" /* 8973 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1384 */;
@@ -22,7 +22,7 @@ export const useRefreshChatInputCoachmark = function useRefreshChatInputCoachmar
   } else {
     items = [tmp(1373).DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK];
   }
-  const tmp3 = callback(_require(6219).useSelectedDismissibleContent(items), 2);
+  const tmp3 = callback(_require(6251).useSelectedDismissibleContent(items), 2);
   _require = tmp4;
   const tmp5 = tmp3[0] === _require(1373).DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK;
   dependencyMap = tmp5;
@@ -39,7 +39,7 @@ export const useRefreshChatInputCoachmark = function useRefreshChatInputCoachmar
       obj[5] = function onDismiss() {
         callback(closure_1_4.USER_DISMISS);
       };
-      obj = { type: "rive", rive: callback(4174).OmnibuttonCoachmarkRive, aspectRatio: "16/9" };
+      obj = { type: "rive", rive: callback(4204).OmnibuttonCoachmarkRive, aspectRatio: "16/9" };
       obj[6] = obj;
       return obj;
     }, items1);

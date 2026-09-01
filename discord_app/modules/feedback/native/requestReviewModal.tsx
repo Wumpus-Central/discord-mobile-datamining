@@ -1,6 +1,6 @@
-// === Module 13316: _showAndroidRatingRequest ===
+// === Module 13349: _showAndroidRatingRequest ===
 
-// Module 13316 (_showAndroidRatingRequest)
+// Module 13349 (_showAndroidRatingRequest)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
@@ -20,7 +20,7 @@ function _showAndroidRatingRequest() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

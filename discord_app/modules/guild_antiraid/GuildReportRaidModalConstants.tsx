@@ -1,6 +1,6 @@
-// === Module 13671: getReportRaidHelpArticleURL ===
+// === Module 13704: getReportRaidHelpArticleURL ===
 
-// Module 13671 (getReportRaidHelpArticleURL)
+// Module 13704 (getReportRaidHelpArticleURL)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;

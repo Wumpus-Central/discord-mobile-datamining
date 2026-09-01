@@ -1,9 +1,9 @@
-// === Module 12492: useTrackUserProfileWishlistView ===
+// === Module 12525: useTrackUserProfileWishlistView ===
 
-// Module 12492 (useTrackUserProfileWishlistView)
+// Module 12525 (useTrackUserProfileWishlistView)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import closure_4 from "get" /* 10419 */;
+import closure_4 from "get" /* 10458 */;
 
 ({ useEffect: obj1, useRef: c3 } = noop);
 const result = set.fileFinishedImporting("modules/user_profile/hooks/native/useTrackUserProfileWishlistView.tsx");

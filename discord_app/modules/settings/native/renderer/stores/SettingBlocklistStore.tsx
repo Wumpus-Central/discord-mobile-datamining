@@ -1,8 +1,8 @@
-// === Module 14204: zustandStore ===
+// === Module 14237: zustandStore ===
 
-// Module 14204 (zustandStore)
+// Module 14237 (zustandStore)
 import set from "set" /* 2 */;
-import defaultStatesAreEqual from "defaultStatesAreEqual" /* 4314 */;
+import defaultStatesAreEqual from "defaultStatesAreEqual" /* 4344 */;
 
 const zustandStore = defaultStatesAreEqual.createZustandStore(() => {
   const obj = { blocklist: new Set() };

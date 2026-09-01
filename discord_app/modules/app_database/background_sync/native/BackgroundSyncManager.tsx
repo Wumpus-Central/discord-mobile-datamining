@@ -1,8 +1,8 @@
-// === Module 16862: handleMessageCreate ===
+// === Module 16898: handleMessageCreate ===
 
-// Module 16862 (handleMessageCreate)
-import initializeDefault from "initialize" /* 5454 */;
-import _backgroundSync from "_backgroundSync" /* 16863 */;
+// Module 16898 (handleMessageCreate)
+import initializeDefault from "initialize" /* 5486 */;
+import _backgroundSync from "_backgroundSync" /* 16899 */;
 import closure_2 from "fetchFingerprint" /* 1218 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 

@@ -1,6 +1,6 @@
-// === Module 5967: sortRolesByVerification ===
+// === Module 5999: sortRolesByVerification ===
 
-// Module 5967 (sortRolesByVerification)
+// Module 5999 (sortRolesByVerification)
 import set from "set" /* 2 */;
 import compareGuildRoles from "compareGuildRoles" /* 1989 */;
 

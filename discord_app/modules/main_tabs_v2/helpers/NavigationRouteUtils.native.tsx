@@ -1,11 +1,11 @@
-// === Module 4302: coerceMainRoute ===
+// === Module 4332: coerceMainRoute ===
 
-// Module 4302 (coerceMainRoute)
+// Module 4332 (coerceMainRoute)
 import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1500 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4303 */;
-import enforcingDefault from "enforcing" /* 4309 */;
-import getBestActiveInput from "getBestActiveInput" /* 4310 */;
-import CREATE_THREAD_SCREEN_KEY from "CREATE_THREAD_SCREEN_KEY" /* 4327 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4333 */;
+import enforcingDefault from "enforcing" /* 4339 */;
+import getBestActiveInput from "getBestActiveInput" /* 4340 */;
+import CREATE_THREAD_SCREEN_KEY from "CREATE_THREAD_SCREEN_KEY" /* 4357 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 import set from "set" /* 2 */;
@@ -84,7 +84,7 @@ const result = set.fileFinishedImporting("modules/main_tabs_v2/helpers/Navigatio
 function popModal(c3, onExited) {
   const _require = c3;
   closure_1 = onExited;
-  let obj = _require(4303);
+  let obj = _require(4333);
   const rootNavigationRef = obj.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
@@ -296,7 +296,7 @@ export const navigateToMemberVerification = function navigateToMemberVerificatio
   return flag;
 };
 export const navigateToRootTab = function navigateToRootTab(drawerOpen) {
-  let obj = icymiScreen(4303);
+  let obj = icymiScreen(4333);
   const rootNavigationRef = obj.getRootNavigationRef();
   ({ screen, forceNavigate } = drawerOpen);
   if (null != rootNavigationRef) {
@@ -320,7 +320,7 @@ export const navigateToRootTab = function navigateToRootTab(drawerOpen) {
             obj[1] = channelId;
             obj[2] = drawerOpen.drawerOpen;
             obj[1] = obj;
-            let tmpResult = tmp(4303);
+            let tmpResult = tmp(4333);
             const rootNavigationRef1 = tmpResult.getRootNavigationRef();
             if (null != rootNavigationRef1) {
               if (rootNavigationRef1.isReady()) {
@@ -328,7 +328,7 @@ export const navigateToRootTab = function navigateToRootTab(drawerOpen) {
                   const rootState = rootNavigationRef1.getRootState();
                   const routes = rootState.routes;
                   const found = routes.filter((name) => "modal" === name.name);
-                  tmpResult = tmp(4304);
+                  tmpResult = tmp(4334);
                   obj1 = { name: "tabs", key: null, params: null };
                   const _HermesInternal = HermesInternal;
                   obj1[1] = "tabs-" + tmp(514).v4();
@@ -389,7 +389,7 @@ export const resetToAuthRoute = function resetToAuthRoute() {
   if (!tmp) {
     rootNavigationRef.dispatch(() => {
       const CommonActions = callback(1500).CommonActions;
-      return CommonActions.reset(callback(4304).getInitialAuthState());
+      return CommonActions.reset(callback(4334).getInitialAuthState());
     });
     flag = true;
   }
@@ -680,7 +680,7 @@ export const navigateToContextMenuCommands = function navigateToContextMenuComma
 };
 export const popScreens = function popScreens(arg0) {
   const _require = arg0;
-  const rootNavigationRef = _require(4303).getRootNavigationRef();
+  const rootNavigationRef = _require(4333).getRootNavigationRef();
   let flag = null != rootNavigationRef;
   if (flag) {
     rootNavigationRef.dispatch(() => {

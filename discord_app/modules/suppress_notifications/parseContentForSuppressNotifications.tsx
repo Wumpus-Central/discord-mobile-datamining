@@ -1,6 +1,6 @@
-// === Module 7396: regExp ===
+// === Module 7428: regExp ===
 
-// Module 7396 (regExp)
+// Module 7428 (regExp)
 import set from "set" /* 2 */;
 
 const regExp = new RegExp("^" + "@silent" + "(\\s|$)");

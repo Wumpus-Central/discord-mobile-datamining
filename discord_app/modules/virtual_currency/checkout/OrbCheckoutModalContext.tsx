@@ -1,11 +1,11 @@
-// === Module 12529: useOrbCheckoutModalContextProvider ===
+// === Module 12562: useOrbCheckoutModalContextProvider ===
 
-// Module 12529 (useOrbCheckoutModalContextProvider)
+// Module 12562 (useOrbCheckoutModalContextProvider)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
 import noop from "noop" /* 19 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import closure_7 from "addSku" /* 4497 */;
+import closure_7 from "addSku" /* 4527 */;
 import v1 from "v1" /* 514 */;
 
 function useOrbCheckoutModalContextProvider(value) {
@@ -105,7 +105,7 @@ function useOrbCheckoutModalContextProvider(value) {
 }
 ({ useContext: c3, useCallback: c4, useMemo: c5, createContext } = noop);
 const jsx = jsxProd.jsx;
-let obj = { skuId: "123", skuProductLine: null, skuApplicationId: "r", loadId: "Object", analyticsLocations: null, analyticsSourceLocation: null, isRedeeming: null, orbRedemptionError: "lg", orbProductContext: null, onRedeemVirtualCurrency: true };
+let obj = { skuId: "123", skuProductLine: null, skuApplicationId: "r", loadId: "PX_16", analyticsLocations: null, analyticsSourceLocation: null, isRedeeming: null, orbRedemptionError: "lg", orbProductContext: null, onRedeemVirtualCurrency: true };
 obj[3] = v1.v4();
 obj[4] = [];
 obj[9] = function onRedeemVirtualCurrency() {

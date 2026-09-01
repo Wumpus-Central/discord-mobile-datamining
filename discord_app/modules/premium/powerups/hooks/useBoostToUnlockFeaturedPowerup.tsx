@@ -1,11 +1,11 @@
-// === Module 12035: items ===
+// === Module 12068: items ===
 
-// Module 12035 (items)
+// Module 12068 (items)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "createGuildRecordFromRust" /* 1909 */;
-import closure_6 from "calculateAppliedBoosts" /* 4334 */;
-import { GUILD_POWERUP_TIER_3_OVERRIDDEN_SKUS as closure_7 } from "BoostedGuildTiers" /* 4335 */;
+import closure_6 from "calculateAppliedBoosts" /* 4364 */;
+import { GUILD_POWERUP_TIER_3_OVERRIDDEN_SKUS as closure_7 } from "BoostedGuildTiers" /* 4365 */;
 import { GuildFeatures } from "ME" /* 676 */;
 
 const require = arg1;

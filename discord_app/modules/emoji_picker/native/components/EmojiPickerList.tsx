@@ -1,8 +1,8 @@
-// === Module 9087: ? ===
+// === Module 9125: ? ===
 
-// Module 9087
+// Module 9125
 import importAllResult from "noop" /* 19 */;
-import { IMAGE_SIZE } from "IMAGE_SIZE" /* 9063 */;
+import { IMAGE_SIZE } from "IMAGE_SIZE" /* 9101 */;
 import ME from "ME" /* 676 */;
 import set from "set" /* 1925 */;
 import { MIN_MARGIN } from "ExpressionPickerViewType" /* 1338 */;
@@ -19,7 +19,7 @@ let result = set.fileFinishedImporting("modules/emoji_picker/native/components/E
 export default importAllResult.memo(function EmojiPickerList(analyticsObject) {
   ({ bottomSheetIndex, emojiPickerListRef } = analyticsObject);
   ({ emojis, channel } = analyticsObject);
-  const guildId = analyticsObject.guildId;
+  let guildId = analyticsObject.guildId;
   const onPressEmoji = analyticsObject.onPressEmoji;
   const onLongPressEmoji = analyticsObject.onLongPressEmoji;
   const emojiPickerIntention = analyticsObject.emojiPickerIntention;
@@ -209,7 +209,7 @@ export default importAllResult.memo(function EmojiPickerList(analyticsObject) {
       tmp(arg0);
     }
   }, items2);
-  const tmp3 = channel(guildId[7]);
+  let tmp16 = channel(guildId[26])({ emojiSections: tmp12Result, rowSize: rounded, isNativeEmojiPickerEnabled: tmp8 });
   const AnimateEmoji = tmp9(tmp2[27]).AnimateEmoji;
   setting = AnimateEmoji.useSetting();
   const items3 = [analyticsLocations, callback, callback1, channel, rounded, tmp4, setting, emojiPickerListRef, useTier0UpsellContent];
@@ -289,22 +289,25 @@ export default importAllResult.memo(function EmojiPickerList(analyticsObject) {
     obj1[2] = num;
     return useTier0UpsellContent(tmp(tmp2[34]), obj1);
   } else {
+    let hasSearchUpsell = tmp16.hasSearchUpsell;
+    if (hasSearchUpsell) {
+      hasSearchUpsell = tmp9(tmp2[37]).getMobileEmojiPickerUpsellRestyleEnabledForFeature(tmp9(tmp2[17]).EntitlementFeatureNames.EMOJIS_EVERYWHERE, "native.EmojiPickerList");
+      const tmp9Result1 = tmp9(tmp2[37]);
+    }
     let obj2 = { analyticsLocations: null, animateEmoji: null, bottomSheetIndex: null, categoryIndexActive: null, data: null, guildId: null, inPortalKeyboard: null, onPressEmoji: null, onLongPressEmoji: null, onShowNitroUpsell: null, paddingBottom: null, paddingTop: null, ref: null, renderItem: null, useTier0UpsellContent: null };
     obj2[0] = analyticsLocations;
     obj2[1] = setting;
     obj2[2] = bottomSheetIndex;
     obj2[3] = categoryIndexActive;
     obj2[4] = tmp16;
-    let tmp26 = guildId;
     if (guildId == null) {
       let guild_id;
       if (channel != null) {
         guild_id = channel.guild_id;
       }
-      tmp26 = guild_id;
+      guildId = guild_id;
     }
-    let obj3 = { children: null };
-    obj2[5] = tmp26;
+    obj2[5] = guildId;
     obj2[6] = flag;
     obj2[7] = callback;
     obj2[8] = callback1;
@@ -315,13 +318,18 @@ export default importAllResult.memo(function EmojiPickerList(analyticsObject) {
     obj2[13] = callback2;
     obj2[14] = useTier0UpsellContent;
     const items4 = [useTier0UpsellContent(tmp(tmp8 ? tmp2[35] : tmp2[36]), obj2), ];
-    let obj4 = { bottomSheetIndex: null, inPortalKeyboard: null, shouldShow: null };
-    obj4[0] = bottomSheetIndex;
-    obj4[1] = flag;
-    obj4[2] = tmp20;
-    items4[1] = useTier0UpsellContent(tmp(tmp2[37]), obj4);
-    obj3[0] = items4;
-    return callback1(callback, obj3);
+    let tmp25Result = !hasSearchUpsell;
+    if (!hasSearchUpsell) {
+      let obj3 = { bottomSheetIndex: null, inPortalKeyboard: null, shouldShow: null };
+      obj3[0] = bottomSheetIndex;
+      obj3[1] = flag;
+      obj3[2] = tmp20;
+      tmp25Result = tmp25(tmp(tmp2[38]), obj3);
+    }
+    let obj4 = { children: null };
+    items4[1] = tmp25Result;
+    obj4[0] = items4;
+    return callback1(callback, obj4);
   }
-  tmp16 = channel(guildId[26])({ emojiSections: tmp12Result, rowSize: rounded, isNativeEmojiPickerEnabled: tmp8 });
+  const tmp3 = channel(guildId[7]);
 });

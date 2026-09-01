@@ -1,9 +1,9 @@
-// === Module 5337: handleConnectionReset ===
+// === Module 5369: handleConnectionReset ===
 
-// Module 5337 (handleConnectionReset)
+// Module 5369 (handleConnectionReset)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import acknowledgeDefault from "acknowledge" /* 5338 */;
+import acknowledgeDefault from "acknowledge" /* 5370 */;
 import closure_2 from "ensureGuildLoaded" /* 1387 */;
 import importDefaultResult from "trackCommunicationDisabled" /* 1992 */;
 

@@ -1,6 +1,6 @@
-// === Module 16640: useControlsLock ===
+// === Module 16676: useControlsLock ===
 
-// Module 16640 (useControlsLock)
+// Module 16676 (useControlsLock)
 import closure_2 from "noop" /* 19 */;
 
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/useControlsLock.tsx");

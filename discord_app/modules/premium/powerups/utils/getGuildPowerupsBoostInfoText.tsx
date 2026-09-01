@@ -1,10 +1,10 @@
-// === Module 12085: getGuildPowerupsBoostInfoText ===
+// === Module 12118: getGuildPowerupsBoostInfoText ===
 
-// Module 12085 (getGuildPowerupsBoostInfoText)
+// Module 12118 (getGuildPowerupsBoostInfoText)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import messagesProxyDefault from "messagesProxy" /* 2401 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4335 */;
+import BoostedGuildTiers from "BoostedGuildTiers" /* 4365 */;
 
 const BoostInfoType = BoostedGuildTiers.BoostInfoType;
 const result = set.fileFinishedImporting("modules/premium/powerups/utils/getGuildPowerupsBoostInfoText.tsx");

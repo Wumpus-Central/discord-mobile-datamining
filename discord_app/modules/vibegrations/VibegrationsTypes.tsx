@@ -1,6 +1,6 @@
-// === Module 6063: frozen ===
+// === Module 6095: frozen ===
 
-// Module 6063 (frozen)
+// Module 6095 (frozen)
 import set from "set" /* 2 */;
 
 const frozen = Object.freeze({ PUBLIC: 1, SHAREABLE: 2 });

@@ -1,12 +1,12 @@
-// === Module 4363: Version ===
+// === Module 4393: Version ===
 
-// Module 4363 (Version)
+// Module 4393 (Version)
 import sendRequest from "sendRequest" /* 530 */;
 import ME from "ME" /* 676 */;
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1486 */;
 import UrlAll from "Url" /* 1488 */;
-import BUILD_OVERRIDE_TARGET_NAMES from "BUILD_OVERRIDE_TARGET_NAMES" /* 4364 */;
-import parseDefault from "parse" /* 4365 */;
+import BUILD_OVERRIDE_TARGET_NAMES from "BUILD_OVERRIDE_TARGET_NAMES" /* 4394 */;
+import parseDefault from "parse" /* 4395 */;
 import getConstants from "getConstants" /* 1625 */;
 import set from "set" /* 500 */;
 

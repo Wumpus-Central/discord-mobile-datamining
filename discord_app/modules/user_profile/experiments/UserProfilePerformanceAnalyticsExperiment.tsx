@@ -1,6 +1,6 @@
-// === Module 8532: isUserProfilePerformanceAnalyticsEnabled ===
+// === Module 8564: isUserProfilePerformanceAnalyticsEnabled ===
 
-// Module 8532 (isUserProfilePerformanceAnalyticsEnabled)
+// Module 8564 (isUserProfilePerformanceAnalyticsEnabled)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1468 */;
 

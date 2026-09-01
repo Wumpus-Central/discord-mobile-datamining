@@ -1,9 +1,9 @@
-// === Module 10369: useStickerPickerListData ===
+// === Module 10408: useStickerPickerListData ===
 
-// Module 10369 (useStickerPickerListData)
+// Module 10408 (useStickerPickerListData)
 import closure_3 from "noop" /* 19 */;
-import { useStickerPickerStore } from "useStickerPickerStore" /* 10343 */;
-import PADDING_HORIZONTAL from "PADDING_HORIZONTAL" /* 10311 */;
+import { useStickerPickerStore } from "useStickerPickerStore" /* 10382 */;
+import PADDING_HORIZONTAL from "PADDING_HORIZONTAL" /* 10350 */;
 
 const require = arg1;
 ({ MIN_MARGIN: c5, ROW_HEIGHT: closure_6, STICKER_SIZE: error, LABEL_HEIGHT } = PADDING_HORIZONTAL);

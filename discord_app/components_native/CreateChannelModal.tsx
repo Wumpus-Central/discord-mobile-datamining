@@ -1,8 +1,8 @@
-// === Module 9663: ChannelTypeRow ===
+// === Module 9702: ChannelTypeRow ===
 
-// Module 9663 (ChannelTypeRow)
+// Module 9702 (ChannelTypeRow)
 import ThemesDefault from "Themes" /* 712 */;
-import useInitialValueDefault from "useInitialValue" /* 5909 */;
+import useInitialValueDefault from "useInitialValue" /* 5941 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -10,13 +10,13 @@ import createChannelRecord from "createChannelRecord" /* 1391 */;
 import { isGuildOwner } from "GuildNSFWContentLevel" /* 1430 */;
 import closure_10 from "ensureGuildLoaded" /* 1387 */;
 import closure_11 from "createGuildRecordFromRust" /* 1909 */;
-import closure_12 from "getUncachedChannelPermissions" /* 4091 */;
-import closure_13 from "markAllUserIdListsStale" /* 4100 */;
+import closure_12 from "getUncachedChannelPermissions" /* 4121 */;
+import closure_13 from "markAllUserIdListsStale" /* 4130 */;
 import closure_14 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
-import { RowType } from "RowType" /* 8640 */;
+import { RowType } from "RowType" /* 8672 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 const require = arg1;
 function ChannelTypeRow(selected) {
@@ -735,6 +735,6 @@ export default function CreateChannelModal(arg0) {
     obj[1] = items;
     return obj;
   }));
-  return callback(_require(5976).Navigator, { screens, initialRouteStack });
+  return callback(_require(6008).Navigator, { screens, initialRouteStack });
 };
 export { CreateChannel };

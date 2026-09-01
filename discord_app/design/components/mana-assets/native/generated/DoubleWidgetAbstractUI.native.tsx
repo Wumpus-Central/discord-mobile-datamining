@@ -1,10 +1,10 @@
-// === Module 6459: DoubleWidgetAbstractUI ===
+// === Module 6491: DoubleWidgetAbstractUI ===
 
-// Module 6459 (DoubleWidgetAbstractUI)
+// Module 6491 (DoubleWidgetAbstractUI)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5461 */;
-import metadataDefault from "metadata" /* 6460 */;
+import preloadDefault from "preload" /* 5493 */;
+import metadataDefault from "metadata" /* 6492 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/DoubleWidgetAbstractUI.native.tsx");

@@ -1,9 +1,9 @@
-// === Module 11318: applyOrientationLock ===
+// === Module 11356: applyOrientationLock ===
 
-// Module 11318 (applyOrientationLock)
+// Module 11356 (applyOrientationLock)
 import set from "set" /* 2 */;
-import handleOrientationChange from "handleOrientationChange" /* 8571 */;
-import isOrientationLockSupportedDefault from "isOrientationLockSupported" /* 9486 */;
+import handleOrientationChange from "handleOrientationChange" /* 8603 */;
+import isOrientationLockSupportedDefault from "isOrientationLockSupported" /* 9525 */;
 
 let result = set.fileFinishedImporting("modules/device/native/applyOrientationLock.tsx");
 

@@ -1,8 +1,8 @@
-// === Module 15593: usePrivateChannelWaveEligible ===
+// === Module 15629: usePrivateChannelWaveEligible ===
 
-// Module 15593 (usePrivateChannelWaveEligible)
-import closure_3 from "reinjectEphemerals" /* 4703 */;
-import closure_4 from "markAllUserIdListsStale" /* 4100 */;
+// Module 15629 (usePrivateChannelWaveEligible)
+import closure_3 from "reinjectEphemerals" /* 4735 */;
+import closure_4 from "markAllUserIdListsStale" /* 4130 */;
 import { ChannelFlags } from "set" /* 1394 */;
 import { MessageTypes } from "ME" /* 676 */;
 
@@ -59,10 +59,10 @@ export const usePrivateChannelWaveEligible = function usePrivateChannelWaveEligi
   const obj4 = _require(589);
   const obj5 = recipientId(11);
   const extractTimestampResult = recipientId(11).extractTimestamp(isDM.id);
-  const obj6 = _require(4133);
-  const tmp9 = recipientId(4045)();
-  const isWithinIntervalResult = obj6.isWithinInterval(recipientId(4045)(), recipientId(4045)(extractTimestampResult), 1814400000);
-  const strangerDangerWarning = _require(10964).useStrangerDangerWarning(isDM.id);
+  const obj6 = _require(4163);
+  const tmp9 = recipientId(4075)();
+  const isWithinIntervalResult = obj6.isWithinInterval(recipientId(4075)(), recipientId(4075)(extractTimestampResult), 1814400000);
+  const strangerDangerWarning = _require(11001).useStrangerDangerWarning(isDM.id);
   if (tmp) {
     tmp = stateFromStores;
   }

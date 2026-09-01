@@ -1,11 +1,11 @@
-// === Module 9384: UserProfileActivityVoiceChannel ===
+// === Module 9423: UserProfileActivityVoiceChannel ===
 
-// Module 9384 (UserProfileActivityVoiceChannel)
+// Module 9423 (UserProfileActivityVoiceChannel)
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import sum from "sum" /* 505 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4121 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 import set from "set" /* 500 */;
 
 const View = get_ActivityIndicator.View;

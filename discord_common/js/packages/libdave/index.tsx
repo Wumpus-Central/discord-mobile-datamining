@@ -1,6 +1,6 @@
-// === Module 9785: set ===
+// === Module 9824: set ===
 
-// Module 9785 (set)
+// Module 9824 (set)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/libdave/index.tsx");

@@ -1,8 +1,8 @@
-// === Module 9059: removeCustomStatus ===
+// === Module 9097: removeCustomStatus ===
 
-// Module 9059 (removeCustomStatus)
+// Module 9097 (removeCustomStatus)
 import set from "set" /* 2 */;
-import setCustomStatusDefault from "setCustomStatus" /* 9057 */;
+import setCustomStatusDefault from "setCustomStatus" /* 9095 */;
 
 const result = set.fileFinishedImporting("modules/custom_status/utils/removeCustomStatus.tsx");
 

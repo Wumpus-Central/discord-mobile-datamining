@@ -1,21 +1,21 @@
-// === Module 14764: EnrolledBodyWatchTask ===
+// === Module 14797: EnrolledBodyWatchTask ===
 
-// Module 14764 (EnrolledBodyWatchTask)
+// Module 14797 (EnrolledBodyWatchTask)
 import ThemesDefault from "Themes" /* 712 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 5358 */;
-import QuestBottomSheet from "QuestBottomSheet" /* 14688 */;
-import QuestBottomSheetHeaderDefault from "QuestBottomSheetHeader" /* 14689 */;
-import useQuestRewardClaimHandlerDefault from "useQuestRewardClaimHandler" /* 14690 */;
+import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 5390 */;
+import QuestBottomSheet from "QuestBottomSheet" /* 14721 */;
+import QuestBottomSheetHeaderDefault from "QuestBottomSheetHeader" /* 14722 */;
+import useQuestRewardClaimHandlerDefault from "useQuestRewardClaimHandler" /* 14723 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initializeState" /* 7416 */;
-import closure_7 from "QuestDockMode" /* 14661 */;
-import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5355 */;
-import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 14663 */;
+import closure_6 from "initializeState" /* 7448 */;
+import closure_7 from "QuestDockMode" /* 14694 */;
+import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5387 */;
+import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 14696 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function EnrolledBodyWatchTask(quest) {
@@ -50,7 +50,7 @@ function EnrolledBodyWatchTask(quest) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -197,9 +197,9 @@ let closure_15 = createCacheKey.createStyles(obj);
 let obj2 = { marginTop: ThemesDefault.space.PX_16 };
 let obj3 = { marginLeft: -1 * QUEST_DOCK_EXPANDED_PADDING_HORIZONTAL, marginRight: -1 * QUEST_DOCK_EXPANDED_PADDING_HORIZONTAL };
 const memoResult = importAllResult.memo(function QuestDockEnrolledBody() {
-  let obj = minExpandedContentHeight(14670);
+  let obj = minExpandedContentHeight(14703);
   const questCreative = obj.useQuestCreative();
-  minExpandedContentHeight = importAllResult.useContext(minExpandedContentHeight(14664).QuestDockGestureContext).minExpandedContentHeight;
+  minExpandedContentHeight = importAllResult.useContext(minExpandedContentHeight(14697).QuestDockGestureContext).minExpandedContentHeight;
   const items = [minExpandedContentHeight];
   const items1 = [minExpandedContentHeight];
   const callback = importAllResult.useCallback((nativeEvent) => {

@@ -1,8 +1,8 @@
-// === Module 15839: withEqualityFn ===
+// === Module 15875: withEqualityFn ===
 
-// Module 15839 (withEqualityFn)
+// Module 15875 (withEqualityFn)
 import set from "set" /* 2 */;
-import insertUnsortedGuilds from "insertUnsortedGuilds" /* 5349 */;
+import insertUnsortedGuilds from "insertUnsortedGuilds" /* 5381 */;
 import identity from "identity" /* 700 */;
 
 const GuildsNodeType = insertUnsortedGuilds.GuildsNodeType;
@@ -11,15 +11,15 @@ let c5 = -1;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   const _require = arg0;
   closure_1 = arg1;
-  obj = { dragSpecs: "Boolean", overSpecs: "ip", dropSpecs: "isArray", dragRegion: _require(4187).makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: "smirk", scrollPosition: "smirking_face", windowSize: "unamused", setStateShallow: "unamused_face", dropStart: "head_shaking_horizontally", dropComplete: "dup" };
-  const obj2 = _require(4187);
-  obj[4] = _require(4187).makeMutable(obj);
-  const obj3 = _require(4187);
-  obj[5] = _require(4187).makeMutable(false);
-  let obj4 = _require(4187);
-  obj[6] = _require(4187).makeMutable({ start: 0, end: 0 });
-  const obj5 = _require(4187);
-  obj[7] = _require(4187).makeMutable(0);
+  obj = { dragSpecs: "Boolean", overSpecs: "disabled", dropSpecs: "isArray", dragRegion: _require(4217).makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: "sans-serif-medium", scrollPosition: "normal", windowSize: "a", setStateShallow: "isArray", dropStart: "no", dropComplete: "channelId" };
+  const obj2 = _require(4217);
+  obj[4] = _require(4217).makeMutable(obj);
+  const obj3 = _require(4217);
+  obj[5] = _require(4217).makeMutable(false);
+  let obj4 = _require(4217);
+  obj[6] = _require(4217).makeMutable({ start: 0, end: 0 });
+  const obj5 = _require(4217);
+  obj[7] = _require(4217).makeMutable(0);
   obj[9] = function setStateShallow(obj) {
     const callback = obj;
     const tmp = callback2();
@@ -54,7 +54,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       error = new Error("GuildsBarDnDStore.dropStart: you cannot start a drop while an existing drop is in progress");
       throw error;
     } else {
-      callback(tmp2[3]).batchUpdates(() => newDropSpec({ dropSpecs: newDropSpec, dragSpecs: "Array", overSpecs: "accessibilityLabel" }));
+      callback(tmp2[3]).batchUpdates(() => newDropSpec({ dropSpecs: newDropSpec, dragSpecs: "Array", overSpecs: "accessible" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
@@ -80,7 +80,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     obj[2] = obj;
     obj.addBreadcrumb(obj);
     if (null != dropSpecs) {
-      callback(closure_1_2[3]).batchUpdates(() => callback({ dropSpecs: "Array" }));
+      callback(closure_1_2[3]).batchUpdates(() => callback({ dropSpecs: "r" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(closure_5);
       if (null == dragSpecs) {
@@ -109,7 +109,7 @@ export const useItemDragState = function useItemDragState(arg0, arg1) {
     ({ dragSpecs, overSpecs, dropSpecs, dragDropInProgress } = arg0);
     if (null == dragSpecs) {
       if (null == dropSpecs) {
-        obj = { isDragTarget: false, dragState: "ip", overState: "isArray", itemSize: null, dragDropInProgress: 1 };
+        obj = { isDragTarget: false, dragState: "disabled", overState: "isArray", itemSize: null, dragDropInProgress: 1 };
         obj[4] = dragDropInProgress;
         return obj;
       }
@@ -200,7 +200,7 @@ export const useItemDragState = function useItemDragState(arg0, arg1) {
     obj[3] = num;
     obj[4] = dragDropInProgress;
     return obj;
-  }, _require(4076).shallow);
+  }, _require(4106).shallow);
 };
 export const useFolderBGHeightOffset = function useFolderBGHeightOffset(arg0) {
   closure_0 = arg0;

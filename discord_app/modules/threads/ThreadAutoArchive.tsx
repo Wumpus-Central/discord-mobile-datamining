@@ -1,12 +1,12 @@
-// === Module 8130: getAutoArchiveOptions ===
+// === Module 8162: getAutoArchiveOptions ===
 
-// Module 8130 (getAutoArchiveOptions)
+// Module 8162 (getAutoArchiveOptions)
 import set from "set" /* 2 */;
 import setDefault from "set" /* 687 */;
 import memoizeDefault from "memoize" /* 731 */;
 import AbortCodes from "AbortCodes" /* 1235 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import hooksDefault from "hooks" /* 4045 */;
+import hooksDefault from "hooks" /* 4075 */;
 
 function getAutoArchiveOptions() {
   let obj = { id: "1hour", label: null, value: null };

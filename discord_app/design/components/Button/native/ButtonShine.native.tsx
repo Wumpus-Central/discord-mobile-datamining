@@ -1,7 +1,7 @@
-// === Module 4907: useShineEffectStyles ===
+// === Module 4939: useShineEffectStyles ===
 
-// Module 4907 (useShineEffectStyles)
-import _modDef4187 from "module_4187" /* 4187 */;
+// Module 4939 (useShineEffectStyles)
+import _modDef4217 from "module_4217" /* 4217 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -9,7 +9,7 @@ import { jsx } from "jsxProd" /* 21 */;
 const require = arg1;
 function useShineEffectStyles(width, variant) {
   const _require = width;
-  let obj = _require(4902);
+  let obj = _require(4934);
   const buttonTextColorStyles = obj.useButtonTextColorStyles(variant);
   const obj2 = enabled(689)(buttonTextColorStyles.color);
   const hexResult = enabled(689)(buttonTextColorStyles.color).alpha(0.1).hex();
@@ -44,15 +44,15 @@ function useShineEffectStyles(width, variant) {
     }
     return tmp5;
   };
-  obj = { width, SHINE_OFFSCREEN_OFFSET: 120, useReducedMotion: enabled, SHINE_WIDTH: 56, withRepeat: _require(4187).withRepeat, withSequence: _require(4187).withSequence, withTiming: _require(4449).withTiming, withDelay: _require(4187).withDelay, SHINE_INITIAL_ANIMATION_DELAY: 750, SHINE_ANIMATION_DURATION: 2000 };
+  obj = { width, SHINE_OFFSCREEN_OFFSET: 120, useReducedMotion: enabled, SHINE_WIDTH: 56, withRepeat: _require(4217).withRepeat, withSequence: _require(4217).withSequence, withTiming: _require(4479).withTiming, withDelay: _require(4217).withDelay, SHINE_INITIAL_ANIMATION_DELAY: 750, SHINE_ANIMATION_DURATION: 2000 };
   fn.__closure = obj;
   fn.__workletHash = 15814138938406;
   fn.__initData = closure_6;
   obj = { shineStyles: null, shineAnimatedStyle: null };
-  const animatedStyle = _require(4187).useAnimatedStyle(fn);
-  let obj4 = _require(4187);
+  const animatedStyle = _require(4217).useAnimatedStyle(fn);
+  let obj4 = _require(4217);
   let items = [{ rotate: "30deg" }];
-  obj[0] = _require(4448).createStyles({ shineContainer: { width: "100%", height: "200%", position: "absolute", overflow: "hidden" }, shine: { width: 56, height: "500%", transform: items, backgroundColor: hexResult, top: "-100%", alignItems: "center" }, shineInner: { width: 16, height: "100%", backgroundColor: hexResult } })();
+  obj[0] = _require(4478).createStyles({ shineContainer: { width: "100%", height: "200%", position: "absolute", overflow: "hidden" }, shine: { width: 56, height: "500%", transform: items, backgroundColor: hexResult, top: "-100%", alignItems: "center" }, shineInner: { width: 16, height: "100%", backgroundColor: hexResult } })();
   obj[1] = animatedStyle;
   return obj;
 }
@@ -76,7 +76,7 @@ export const ButtonShine = function ButtonShine(variant) {
   items = [shineStyles.shineContainer, tmp2.shineAnimatedStyle];
   obj = {
     style: shineStyles.shine,
-    children: jsx(_modDef4187.View, {
+    children: jsx(_modDef4217.View, {
       onLayout(nativeEvent) {
         return callback(nativeEvent.nativeEvent.layout.width);
       },
@@ -85,6 +85,6 @@ export const ButtonShine = function ButtonShine(variant) {
     })
   };
   obj = { style: shineStyles.shineInner };
-  obj[2] = jsx(_modDef4187.View, { style: shineStyles.shineInner });
-  return jsx(_modDef4187.View, { style: shineStyles.shineInner });
+  obj[2] = jsx(_modDef4217.View, { style: shineStyles.shineInner });
+  return jsx(_modDef4217.View, { style: shineStyles.shineInner });
 };

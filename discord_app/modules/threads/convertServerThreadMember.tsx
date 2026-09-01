@@ -1,6 +1,6 @@
-// === Module 7494: convertServerThreadMember ===
+// === Module 7526: convertServerThreadMember ===
 
-// Module 7494 (convertServerThreadMember)
+// Module 7526 (convertServerThreadMember)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/threads/convertServerThreadMember.tsx");

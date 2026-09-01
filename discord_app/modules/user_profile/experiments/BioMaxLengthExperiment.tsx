@@ -1,6 +1,6 @@
-// === Module 8040: useBioMaxLength ===
+// === Module 8072: useBioMaxLength ===
 
-// Module 8040 (useBioMaxLength)
+// Module 8072 (useBioMaxLength)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import ApexExperiment from "ApexExperiment" /* 1468 */;

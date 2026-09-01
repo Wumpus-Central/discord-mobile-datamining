@@ -1,6 +1,6 @@
-// === Module 4347: prototype ===
+// === Module 4377: prototype ===
 
-// Module 4347 (prototype)
+// Module 4377 (prototype)
 import set from "set" /* 2 */;
 import sendRequest from "sendRequest" /* 530 */;
 import ME from "ME" /* 676 */;

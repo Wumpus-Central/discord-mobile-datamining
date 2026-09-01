@@ -1,7 +1,7 @@
-// === Module 8080: prototype ===
+// === Module 8112: prototype ===
 
-// Module 8080 (prototype)
-import initializeDefault from "initialize" /* 5454 */;
+// Module 8112 (prototype)
+import initializeDefault from "initialize" /* 5486 */;
 import closure_0 from "handleConnectionOpen" /* 1981 */;
 
 initializeDefault;

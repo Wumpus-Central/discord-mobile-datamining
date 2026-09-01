@@ -1,19 +1,19 @@
-// === Module 7683: LinkButton ===
+// === Module 7715: LinkButton ===
 
-// Module 7683 (LinkButton)
+// Module 7715 (LinkButton)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4444 */;
-import _modDef4826 from "module_4826" /* 4826 */;
-import PressableBase from "PressableBase" /* 5036 */;
+import Text from "Text" /* 4474 */;
+import _modDef4858 from "module_4858" /* 4858 */;
+import PressableBase from "PressableBase" /* 5068 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "handleSetLocationMetadata" /* 7684 */;
+import closure_7 from "handleSetLocationMetadata" /* 7716 */;
 import closure_8 from "fetchFingerprint" /* 1218 */;
 import { AuthStates } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 class LinkButton {
@@ -34,7 +34,7 @@ class LinkButton {
   }
 }
 function handlePressPasswordManagerHint() {
-  let obj = _modDef4826;
+  let obj = _modDef4858;
   obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.lzsy7t);
@@ -138,7 +138,7 @@ export default function Login(isMultiAccount) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -160,7 +160,7 @@ export default function Login(isMultiAccount) {
             v0(true);
             v02({});
             c3 = 2;
-            let obj3 = callback(6020);
+            let obj3 = callback(6052);
             v0 = 3;
             v02 = 1;
             obj1 = { value: null, done: false };
@@ -174,7 +174,7 @@ export default function Login(isMultiAccount) {
         } else {
           if (2 === tmp8) {
             c3 = 1;
-            let obj2 = closure_1_0(7689);
+            let obj2 = closure_1_0(7721);
             callback = obj2.getAuthenticationErrorsFromV6OrEarlierAPIError(dependencyMap);
             callback2(callback);
             c3 = 0;
@@ -193,9 +193,9 @@ export default function Login(isMultiAccount) {
           } else {
             closure_0 = arg1;
             if (false !== closure_0) {
-              if (closure_0 === closure_1_0(7687).PasswordResetMethods.ONE_TIME_LOGIN) {
-                obj = closure_1_0(4827);
-                obj.openAlert("one-time-login-forgot-password-confirm", closure_1_10(callback(7688), {}));
+              if (closure_0 === closure_1_0(7719).PasswordResetMethods.ONE_TIME_LOGIN) {
+                obj = closure_1_0(4859);
+                obj.openAlert("one-time-login-forgot-password-confirm", closure_1_10(callback(7720), {}));
               } else {
                 obj3 = { title: null, body: null };
                 const intl = closure_1_0(1236).intl;
@@ -204,8 +204,8 @@ export default function Login(isMultiAccount) {
                 const obj4 = { email: null };
                 obj4[0] = closure_6;
                 obj3[1] = intl2.format(closure_1_0(1236).t["6u5hQ9"], obj4);
-                callback(4826).show(obj3);
-                const obj8 = callback(4826);
+                callback(4858).show(obj3);
+                const obj8 = callback(4858);
               }
               c3 = 1;
             }
@@ -213,7 +213,7 @@ export default function Login(isMultiAccount) {
           c3 = 0;
           v0(false);
           v02 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp47) {
         dependencyMap = tmp47;
@@ -237,98 +237,36 @@ export default function Login(isMultiAccount) {
     c8 = 0;
     c6 = 0;
     const iter = (function*(arg0, arg1) {
-      if (c8 === 2) {
-        c8 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
-        }
-      } else {
-        try {
-          c8 = 2;
-          if (0 === c7) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_4 = tmp3;
-              let authenticationErrorsFromV6OrEarlierAPIError = tmp7;
-              let flag;
-              if (flag === undefined) {
-                flag = false;
-              }
-              authenticationErrorsFromV6OrEarlierAPIError = undefined;
-              c7 = 1;
-              c8 = 1;
-              return { value: "Object", done: true };
-            }
-          } else if (1 === tmp7) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              closure_1_4(true);
-              closure_1_5({});
-              c6 = 1;
-              const obj2 = { login: null, password: null, undelete: null, isMultiAccount: null };
-              obj2[0] = callback;
-              obj2[1] = closure_1;
-              obj2[2] = flag;
-              obj2[3] = callback;
-              c7 = 3;
-              c8 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = navigation(ref[19]).login(obj2);
-              return obj3;
-            }
-          } else {
-            if (2 === tmp7) {
-              c6 = 0;
-              closure_4 = closure_5;
-              closure_1_4(false);
-              obj1 = callback(ref[23]);
-              authenticationErrorsFromV6OrEarlierAPIError = obj1.getAuthenticationErrorsFromV6OrEarlierAPIError(closure_4);
-              closure_1_12(authenticationErrorsFromV6OrEarlierAPIError);
-              c8 = 3;
-            } else if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              c6 = 0;
-            }
-            c6 = 0;
-            c8 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp22) {
-          closure_5 = tmp22;
-          if (tmp4 === c6) {
-            c8 = tmp2;
-            throw tmp22;
-          } else {
-            c7 = tmp;
-          }
-        }
+      closure_4 = tmp3;
+      if (flag === undefined) {
+        flag = false;
       }
+      yield "PX_16";
+      closure_1_4(true);
+      closure_1_5({});
+      c6 = 1;
+      const obj2 = { login: null, password: null, undelete: null, isMultiAccount: null };
+      obj2[0] = callback;
+      obj2[1] = closure_1;
+      obj2[2] = flag;
+      obj2[3] = callback;
+      yield navigation(ref[19]).login(obj2);
+      if (2 === tmp7) {
+        c6 = 0;
+        closure_4 = closure_5;
+        closure_1_4(false);
+        obj1 = callback(ref[23]);
+        const authenticationErrorsFromV6OrEarlierAPIError = obj1.getAuthenticationErrorsFromV6OrEarlierAPIError(closure_4);
+        closure_1_12(authenticationErrorsFromV6OrEarlierAPIError);
+        c8 = 3;
+      } else if (arg0 === 1) {
+        c8 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        c6 = 0;
+      }
+      c6 = 0;
+      return arg1;
     })();
     iter.next();
     return iter;
@@ -357,7 +295,7 @@ export default function Login(isMultiAccount) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

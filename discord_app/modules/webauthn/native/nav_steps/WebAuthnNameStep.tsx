@@ -1,18 +1,18 @@
-// === Module 14299: WebAuthnNameStep ===
+// === Module 14332: WebAuthnNameStep ===
 
-// Module 14299 (WebAuthnNameStep)
+// Module 14332 (WebAuthnNameStep)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
 import useNavigation from "useNavigation" /* 1499 */;
-import Button2 from "Button" /* 4896 */;
-import Form from "Form" /* 8331 */;
+import Button2 from "Button" /* 4928 */;
+import Form from "Form" /* 8363 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { WebAuthnScreens } from "WebAuthnScreens" /* 14278 */;
+import { WebAuthnScreens } from "WebAuthnScreens" /* 14311 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
@@ -39,7 +39,7 @@ export default function WebAuthnNameStep(arg0) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -98,7 +98,7 @@ export default function WebAuthnNameStep(arg0) {
             v0(closure_1_2[9]).open(obj3);
             arr = arr.push(closure_1_7.SUCCESS, {});
             v03 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp32) {
           arr = tmp32;

@@ -1,17 +1,17 @@
-// === Module 10719: CollectiblesShopGiftPurchaseSection ===
+// === Module 10757: CollectiblesShopGiftPurchaseSection ===
 
-// Module 10719 (CollectiblesShopGiftPurchaseSection)
+// Module 10757 (CollectiblesShopGiftPurchaseSection)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "initialize" /* 8528 */;
-import { useNativeCheckoutStore } from "context" /* 7137 */;
+import closure_7 from "initialize" /* 8560 */;
+import { useNativeCheckoutStore } from "context" /* 7169 */;
 import ME from "ME" /* 676 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 let require = arg1;
 ({ AnalyticEvents: c9, MarketingURLs: c10 } = ME);
@@ -171,7 +171,7 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

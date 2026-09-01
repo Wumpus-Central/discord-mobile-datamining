@@ -1,6 +1,6 @@
-// === Module 1935: DisplayNameEffect ===
+// === Module 1940: DisplayNameEffect ===
 
-// Module 1935 (DisplayNameEffect)
+// Module 1940 (DisplayNameEffect)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx");

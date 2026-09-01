@@ -1,8 +1,8 @@
-// === Module 11470: jumpToReferencedMessage ===
+// === Module 11503: jumpToReferencedMessage ===
 
-// Module 11470 (jumpToReferencedMessage)
+// Module 11503 (jumpToReferencedMessage)
 import set from "set" /* 2 */;
-import trackInviteDefault from "trackInvite" /* 7169 */;
+import trackInviteDefault from "trackInvite" /* 7201 */;
 
 const result = set.fileFinishedImporting("modules/messages/native/jumpToReferencedMessage.tsx");
 

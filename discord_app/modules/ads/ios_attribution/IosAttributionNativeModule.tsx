@@ -1,6 +1,6 @@
-// === Module 11054: getActiveIosAttributionFramework ===
+// === Module 11091: getActiveIosAttributionFramework ===
 
-// Module 11054 (getActiveIosAttributionFramework)
+// Module 11091 (getActiveIosAttributionFramework)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/ads/ios_attribution/IosAttributionNativeModule.tsx");

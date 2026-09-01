@@ -1,9 +1,9 @@
-// === Module 4157: ? ===
+// === Module 4187: ? ===
 
-// Module 4157
+// Module 4187
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import enforcingDefault from "enforcing" /* 4158 */;
+import enforcingDefault from "enforcing" /* 4188 */;
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 let result = set.fileFinishedImporting("modules/links/native/LinkingModule.tsx");

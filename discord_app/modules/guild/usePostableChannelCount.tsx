@@ -1,9 +1,9 @@
-// === Module 16285: useSendMessageChannelCount ===
+// === Module 16321: useSendMessageChannelCount ===
 
-// Module 16285 (useSendMessageChannelCount)
+// Module 16321 (useSendMessageChannelCount)
 import closure_3 from "comparator" /* 1982 */;
 import { GUILD_SELECTABLE_CHANNELS_KEY as closure_4 } from "comparator" /* 1982 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4121 */;
 import { Permissions } from "ME" /* 676 */;
 
 const require = arg1;

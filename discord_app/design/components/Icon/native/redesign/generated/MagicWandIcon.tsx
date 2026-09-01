@@ -1,10 +1,10 @@
-// === Module 10197: MagicWandIcon ===
+// === Module 10236: MagicWandIcon ===
 
-// Module 10197 (MagicWandIcon)
+// Module 10236 (MagicWandIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4166 */;
-import registerAsset from "registerAsset" /* 10198 */;
+import BaseIconImage from "BaseIconImage" /* 4196 */;
+import registerAsset from "registerAsset" /* 10237 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

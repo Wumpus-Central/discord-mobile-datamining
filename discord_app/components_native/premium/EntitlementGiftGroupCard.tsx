@@ -1,36 +1,36 @@
-// === Module 13186: importDefaultResult1 ===
+// === Module 13219: importDefaultResult1 ===
 
-// Module 13186 (importDefaultResult1)
+// Module 13219 (importDefaultResult1)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4444 */;
-import Button from "Button" /* 4896 */;
-import GameIconDefault from "GameIcon" /* 5931 */;
-import getPrice from "getPrice" /* 6041 */;
-import getSubscriptionPlans from "getSubscriptionPlans" /* 8456 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8471 */;
-import metadataDefault from "metadata" /* 10728 */;
-import registerAssetDefault from "registerAsset" /* 12826 */;
-import registerAssetDefault2 from "registerAsset" /* 12827 */;
-import registerAssetDefault3 from "registerAsset" /* 12828 */;
-import registerAssetDefault4 from "registerAsset" /* 12829 */;
-import registerAssetDefault5 from "registerAsset" /* 12830 */;
-import registerAssetDefault6 from "registerAsset" /* 12831 */;
-import registerAssetDefault7 from "registerAsset" /* 12832 */;
-import registerAssetDefault8 from "registerAsset" /* 12833 */;
-import registerAssetDefault9 from "registerAsset" /* 12834 */;
-import registerAssetDefault10 from "registerAsset" /* 12837 */;
-import registerAssetDefault11 from "registerAsset" /* 12838 */;
+import Text from "Text" /* 4474 */;
+import Button from "Button" /* 4928 */;
+import GameIconDefault from "GameIcon" /* 5963 */;
+import getPrice from "getPrice" /* 6073 */;
+import getSubscriptionPlans from "getSubscriptionPlans" /* 8488 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8503 */;
+import metadataDefault from "metadata" /* 10766 */;
+import registerAssetDefault from "registerAsset" /* 12859 */;
+import registerAssetDefault2 from "registerAsset" /* 12860 */;
+import registerAssetDefault3 from "registerAsset" /* 12861 */;
+import registerAssetDefault4 from "registerAsset" /* 12862 */;
+import registerAssetDefault5 from "registerAsset" /* 12863 */;
+import registerAssetDefault6 from "registerAsset" /* 12864 */;
+import registerAssetDefault7 from "registerAsset" /* 12865 */;
+import registerAssetDefault8 from "registerAsset" /* 12866 */;
+import registerAssetDefault9 from "registerAsset" /* 12867 */;
+import registerAssetDefault10 from "registerAsset" /* 12870 */;
+import registerAssetDefault11 from "registerAsset" /* 12871 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import importDefaultResult from "addApplication" /* 4489 */;
+import importDefaultResult from "addApplication" /* 4519 */;
 import importDefaultResult1 from "fetchFingerprint" /* 1218 */;
-import importDefaultResult2 from "updateGiftCode" /* 8415 */;
-import importDefaultResult4 from "addSku" /* 4497 */;
+import importDefaultResult2 from "updateGiftCode" /* 8447 */;
+import importDefaultResult4 from "addSku" /* 4527 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
-import importDefaultResult3 from "addSubscriptionPlan" /* 4114 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
+import importDefaultResult3 from "addSubscriptionPlan" /* 4144 */;
 import importDefaultResult5 from "initialize" /* 589 */;
 
 require = arg1;
@@ -129,7 +129,7 @@ prototype["renderHeader"] = function renderHeader(arg0, children) {
   if (isGameItemSKUResult) {
     isGameItemSKUResult = null != application;
   }
-  obj = { accessibilityRole: "button", onPress: this.handleToggleOpen, children: null };
+  obj = { accessibilityRole: "button", accessibilityState: { expanded: isOpen }, onPress: this.handleToggleOpen, children: null };
   const items = [tmp.groupCardHeader, ];
   let prop = null;
   if (isOpen) {
@@ -195,13 +195,13 @@ prototype["renderHeader"] = function renderHeader(arg0, children) {
   obj3[1] = items2;
   items1[1] = closure_15(closure_4, obj3);
   if (isOpen) {
-    let ChevronSmallRightIcon = tmp2(8898).ChevronSmallDownIcon;
+    let ChevronSmallRightIcon = tmp2(8935).ChevronSmallDownIcon;
   } else {
-    ChevronSmallRightIcon = tmp2(5971).ChevronSmallRightIcon;
+    ChevronSmallRightIcon = tmp2(6003).ChevronSmallRightIcon;
   }
   items1[2] = closure_14(ChevronSmallRightIcon, {});
   obj[1] = items1;
-  obj[2] = closure_15(closure_4, obj);
+  obj[3] = closure_15(closure_4, obj);
   return closure_14(closure_6, obj);
 };
 prototype["getCardHeaderThumbnail"] = function getCardHeaderThumbnail(id, giftStyle) {

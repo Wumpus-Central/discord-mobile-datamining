@@ -1,10 +1,10 @@
-// === Module 6625: GemLeftForward3dIllustration ===
+// === Module 6657: GemLeftForward3dIllustration ===
 
-// Module 6625 (GemLeftForward3dIllustration)
+// Module 6657 (GemLeftForward3dIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5461 */;
-import metadataDefault from "metadata" /* 6626 */;
+import preloadDefault from "preload" /* 5493 */;
+import metadataDefault from "metadata" /* 6658 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/GemLeftForward3dIllustration.native.tsx");

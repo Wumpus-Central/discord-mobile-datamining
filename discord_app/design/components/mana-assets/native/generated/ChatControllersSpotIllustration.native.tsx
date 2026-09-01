@@ -1,10 +1,10 @@
-// === Module 6365: ChatControllersSpotIllustration ===
+// === Module 6397: ChatControllersSpotIllustration ===
 
-// Module 6365 (ChatControllersSpotIllustration)
+// Module 6397 (ChatControllersSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5461 */;
-import metadataDefault from "metadata" /* 6366 */;
+import preloadDefault from "preload" /* 5493 */;
+import metadataDefault from "metadata" /* 6398 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ChatControllersSpotIllustration.native.tsx");

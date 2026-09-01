@@ -1,15 +1,15 @@
-// === Module 10939: ? ===
+// === Module 10977: ? ===
 
-// Module 10939
+// Module 10977
 import ThemesDefault from "Themes" /* 712 */;
 import importAllResult from "noop" /* 19 */;
-import closure_4 from "_handleConnectionOpen" /* 5189 */;
+import closure_4 from "_handleConnectionOpen" /* 5221 */;
 import { createChannelRecord } from "createChannelRecord" /* 1391 */;
 import closure_6 from "ensureGuildLoaded" /* 1387 */;
-import closure_7 from "reinjectEphemerals" /* 4703 */;
+import closure_7 from "reinjectEphemerals" /* 4735 */;
 import { ChannelTypes } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 const require = arg1;
 let c3 = importAllResult;

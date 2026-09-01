@@ -1,6 +1,6 @@
-// === Module 9694: fetchVanityUrl ===
+// === Module 9733: fetchVanityUrl ===
 
-// Module 9694 (fetchVanityUrl)
+// Module 9733 (fetchVanityUrl)
 import set from "set" /* 2 */;
 import sendRequest from "sendRequest" /* 530 */;
 import ME from "ME" /* 676 */;

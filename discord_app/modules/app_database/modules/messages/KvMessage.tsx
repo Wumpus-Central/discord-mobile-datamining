@@ -1,6 +1,6 @@
-// === Module 7200: fromMessage ===
+// === Module 7232: fromMessage ===
 
-// Module 7200 (fromMessage)
+// Module 7232 (fromMessage)
 import closure_0 from "_slicedToArray" /* 32 */;
 import closure_1 from "trackCommunicationDisabled" /* 1992 */;
 import closure_2 from "mergeGuildAvatar" /* 1922 */;

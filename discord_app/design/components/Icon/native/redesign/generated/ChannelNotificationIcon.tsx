@@ -1,10 +1,10 @@
-// === Module 10660: ChannelNotificationIcon ===
+// === Module 10698: ChannelNotificationIcon ===
 
-// Module 10660 (ChannelNotificationIcon)
+// Module 10698 (ChannelNotificationIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4166 */;
-import registerAsset from "registerAsset" /* 10661 */;
+import BaseIconImage from "BaseIconImage" /* 4196 */;
+import registerAsset from "registerAsset" /* 10699 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

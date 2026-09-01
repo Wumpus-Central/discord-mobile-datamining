@@ -1,15 +1,15 @@
-// === Module 4650: serverGuildRoomObjectToClient ===
+// === Module 4682: serverGuildRoomObjectToClient ===
 
-// Module 4650 (serverGuildRoomObjectToClient)
-import GuildRoomObjectTypes from "GuildRoomObjectTypes" /* 4648 */;
-import closure_2 from "resolveCreatingNotes" /* 4647 */;
-import { GUILD_ROOM_BACKGROUND_CONFIG as closure_3 } from "items" /* 4651 */;
+// Module 4682 (serverGuildRoomObjectToClient)
+import GuildRoomObjectTypes from "GuildRoomObjectTypes" /* 4680 */;
+import closure_2 from "resolveCreatingNotes" /* 4679 */;
+import { GUILD_ROOM_BACKGROUND_CONFIG as closure_3 } from "items" /* 4683 */;
 
 require = arg1;
 function serverGuildRoomObjectToClient(object_type) {
   if (object_type.object_type === GuildRoomObjectTypes.GuildRoomObjectTypes.PLANT) {
     let obj = { objectType: null };
-    obj[0] = tmp(4648).GuildRoomObjectTypes.PLANT;
+    obj[0] = tmp(4680).GuildRoomObjectTypes.PLANT;
     obj = { objectId: null, createdBy: null, updatedAt: null, updatedBy: null };
     ({ object_id: obj2[0], created_by: obj2[1] } = object_type);
     let date;
@@ -22,7 +22,7 @@ function serverGuildRoomObjectToClient(object_type) {
     const merged = Object.assign(obj);
   } else {
     obj = { objectType: null };
-    obj[0] = tmp(4648).GuildRoomObjectTypes.NOTE;
+    obj[0] = tmp(4680).GuildRoomObjectTypes.NOTE;
     obj1 = { objectId: null, createdBy: null, updatedAt: null, updatedBy: null };
     ({ object_id: obj4[0], created_by: obj4[1] } = object_type);
     let date1;
@@ -47,11 +47,11 @@ export const findSeat = function findSeat(items2, channelId, channelId2) {
     background = room.background;
   }
   if (background == null) {
-    background = _require(4652).GuildRoomBackgrounds.DEFAULT;
+    background = _require(4684).GuildRoomBackgrounds.DEFAULT;
   }
   const seats = table[background].seats;
   if (null != items2) {
-    if (items2 !== _require(4649).GuildRoomSeats.UNSET) {
+    if (items2 !== _require(4681).GuildRoomSeats.UNSET) {
       let found = seats[items2];
     }
     return found;

@@ -1,23 +1,23 @@
-// === Module 10389: handleLimitedPickerDialog ===
+// === Module 10428: handleLimitedPickerDialog ===
 
-// Module 10389 (handleLimitedPickerDialog)
+// Module 10428 (handleLimitedPickerDialog)
 import applyDefault from "apply" /* 12 */;
 import set from "set" /* 500 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import cancel from "cancel" /* 5041 */;
-import openImagePickerUnhandled from "openImagePickerUnhandled" /* 5050 */;
-import NativePermissionsRequestOptionsDefault from "NativePermissionsRequestOptions" /* 5051 */;
-import _modDef8131 from "module_8131" /* 8131 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 10822 */;
+import cancel from "cancel" /* 5073 */;
+import openImagePickerUnhandled from "openImagePickerUnhandled" /* 5082 */;
+import NativePermissionsRequestOptionsDefault from "NativePermissionsRequestOptions" /* 5083 */;
+import _modDef8163 from "module_8163" /* 8163 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 10860 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
 import closure_5 from "ensureGuildLoaded" /* 1387 */;
-import { DraftType } from "handleChanged" /* 4822 */;
+import { DraftType } from "handleChanged" /* 4854 */;
 import closure_7 from "handleConnectionOpen" /* 1981 */;
-import closure_8 from "map" /* 4821 */;
+import closure_8 from "map" /* 4853 */;
 import DRAG_HANDLE from "DRAG_HANDLE" /* 1623 */;
 import ME from "ME" /* 676 */;
-import { NativePermissionTypes } from "NativePermissionStatus" /* 4698 */;
+import { NativePermissionTypes } from "NativePermissionStatus" /* 4730 */;
 
 require = arg1;
 function handleLimitedPickerDialog(arg0) {
@@ -48,7 +48,7 @@ function _handleLimitedPickerDialog() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -70,7 +70,7 @@ function _handleLimitedPickerDialog() {
               ({ onDismissKeyboard: c0, onRestoreKeyboard: c1 } = callback);
               c3 = 1;
               c4 = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -101,7 +101,7 @@ function _handleLimitedPickerDialog() {
           } else {
             callback2();
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp16) {
           c4 = tmp;
@@ -138,132 +138,69 @@ function _handleAttachFile() {
     c3 = 0;
     c4 = 0;
     const iter = (function*(arg0) {
-      if (v02 === 2) {
-        v02 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+      const callback = tmp2;
+      ({ channel: c0, uploadLimit: c1, extensions: c2, onDismissKeyboard: c3, onRestoreKeyboard: c4, onSelectFiles: c5 } = lib);
+      yield "PX_16";
+      v0();
+      const obj2 = { type: null, channel_id: null, guild_id: null };
+      obj2[0] = constants2.ATTACH_FILE;
+      obj2[1] = lib.id;
+      obj2[2] = lib.guild_id;
+      callback(698).track(constants.CHAT_INPUT_COMPONENT_VIEWED, obj2);
+      const obj8 = callback(698);
+      let obj3 = { pickMultiple: null, extensions: null };
+      obj3[0] = callback > 1;
+      obj3[1] = dependencyMap;
+      yield lib(10861).handleDocumentSelection(obj3);
+      if (2 === tmp5) {
         if (arg0 === 1) {
+          let v02 = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          v02 = 3;
+          const obj5 = { value: null, done: true };
+          obj5[0] = arg1;
+          return obj5;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
-        }
-      } else {
-        try {
-          v02 = 2;
-          if (0 === v0) {
-            if (arg0 === 1) {
-              v02 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              v02 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              dependencyMap = tmp5;
-              let callback = tmp2;
-              let lib;
-              callback = undefined;
-              dependencyMap = undefined;
-              v0 = undefined;
-              v02 = undefined;
-              let callback2;
-              ({ channel: c0, uploadLimit: c1, extensions: c2, onDismissKeyboard: c3, onRestoreKeyboard: c4, onSelectFiles: c5 } = lib);
-              let length;
-              closure_7 = undefined;
-              v0 = 1;
+          const length = arg1;
+          v02();
+          if (null != length) {
+            if (length.length >= 1) {
+              const _Array = Array;
+              v0 = 3;
               v02 = 1;
-              return { value: "Object", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              v02 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              v02 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              v0();
-              const obj2 = { type: null, channel_id: null, guild_id: null };
-              obj2[0] = constants2.ATTACH_FILE;
-              obj2[1] = lib.id;
-              obj2[2] = lib.guild_id;
-              callback(698).track(constants.CHAT_INPUT_COMPONENT_VIEWED, obj2);
-              const obj8 = callback(698);
-              let obj3 = { pickMultiple: null, extensions: null };
-              obj3[0] = callback > 1;
-              obj3[1] = dependencyMap;
-              v0 = 2;
-              v02 = 1;
-              const obj4 = { value: null, done: false };
-              obj4[0] = lib(10823).handleDocumentSelection(obj3);
-              return obj4;
-            }
-          } else {
-            if (2 === tmp5) {
-              if (arg0 === 1) {
-                v02 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                v02 = 3;
-                const obj5 = { value: null, done: true };
-                obj5[0] = arg1;
-                return obj5;
-              } else {
-                length = arg1;
-                v02();
-                if (null != length) {
-                  if (length.length >= 1) {
-                    const _Array = Array;
-                    v0 = 3;
-                    v02 = 1;
-                    const obj6 = { value: null, done: false };
-                    obj6[0] = Promise.all(Array.from(length).map((() => {
-                      closure_0 = v3((arg0) => {
-                        closure_0 = arg0;
-                        c6 = 0;
-                        c7 = 0;
-                        return (/* F122795 */ function*() { ... })();
-                      });
-                      return function() {
-                        const self = this;
-                        const apply = closure_0.apply;
-                        if (typeof apply === "unknown") {
-                          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                        } else {
-                          applyArgumentsResult = apply(self, arguments);
-                        }
-                        return applyArgumentsResult;
-                      };
-                    })()));
-                    return obj6;
+              const obj6 = { value: null, done: false };
+              obj6[0] = Promise.all(Array.from(length).map((() => {
+                closure_0 = v3((arg0) => {
+                  closure_0 = arg0;
+                  c6 = 0;
+                  c7 = 0;
+                  return (/* F122973 */ function*() { ... })();
+                });
+                return function() {
+                  const self = this;
+                  const apply = closure_0.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
                   }
-                }
-                v02 = 3;
-              }
-            } else if (arg0 === 1) {
-              v02 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              closure_7 = arg1;
-              callback2(closure_7);
+                  return applyArgumentsResult;
+                };
+              })()));
+              return obj6;
             }
-            v02 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
           }
-        } catch (tmp15) {
-          v02 = tmp;
-          throw tmp15;
+          v02 = 3;
         }
+      } else if (arg0 === 1) {
+        v02 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        closure_7 = arg1;
+        callback2(closure_7);
       }
+      return arg1;
     })();
     iter.next();
     return iter;
@@ -282,12 +219,12 @@ function handleSelectKeyboardItem(channelId, item, isIncluded, arg3) {
   if (isIncluded) {
     const findUploadResult = closure_8.findUpload(channelId, DraftType.ChannelMessage, (closure_0) => image(closure_1_2[11]).doesImageMatchUpload(image, closure_0));
     if (null != findUploadResult) {
-      _modDef8131.remove(channelId, findUploadResult.id, tmp13.ChannelMessage);
-      const obj5 = _modDef8131;
+      _modDef8163.remove(channelId, findUploadResult.id, tmp13.ChannelMessage);
+      const obj5 = _modDef8163;
     }
     tmp13 = DraftType;
   } else {
-    let obj = _modDef8131;
+    let obj = _modDef8163;
     obj = { channelId: null, file: null, draftType: null };
     obj[0] = channelId;
     image = item.node.image;
@@ -297,9 +234,9 @@ function handleSelectKeyboardItem(channelId, item, isIncluded, arg3) {
     }
     obj = { id: null, origin: null, uri: null, originalUri: null, mimeType: null, width: null, height: null, filename: null, playableDuration: null, platform: null };
     obj[0] = uri;
-    obj[1] = image(5041).UploadOrigin.IMAGE_PICKER;
+    obj[1] = image(5073).UploadOrigin.IMAGE_PICKER;
     ({ uri: obj3[2], uri: obj3[3], mimeType: obj3[4], width: obj3[5], height: obj3[6], filename: obj3[7], playableDuration: obj3[8] } = image);
-    obj[9] = image(5041).UploadPlatform.REACT_NATIVE;
+    obj[9] = image(5073).UploadPlatform.REACT_NATIVE;
     let tmp6 = null != arg3;
     if (tmp6) {
       obj1 = { createdUsingInAppCamera: null };
@@ -338,7 +275,7 @@ function showSimpleMediaKeyboard(channel) {
   } else if (tmp.INTERACTION_MODAL === CHAT) {
     InteractionModal = DraftType.InteractionModal;
   }
-  let obj = _require(10390);
+  let obj = _require(10429);
   obj = {
     channel,
     draftType: InteractionModal,
@@ -664,7 +601,7 @@ function showSimpleMediaKeyboard(channel) {
                           ({ id: obj[0], uri: obj[1], uri: obj[2], mimeType: obj[3], width: obj[4], height: obj[5], fileName: obj[6], duration: obj[7] } = tmp6);
                           let tmp10 = lib;
                           let tmp11 = dependencyMap;
-                          obj[8] = lib(5041).UploadPlatform.REACT_NATIVE;
+                          obj[8] = lib(5073).UploadPlatform.REACT_NATIVE;
                           let arr = items.push(obj);
                         }
                         continue;
@@ -680,7 +617,7 @@ function showSimpleMediaKeyboard(channel) {
               const tmpResult = tmp(tmp2[15]);
             } else {
               if (obj3.isIOS()) {
-                let length = arr2.filter((origin) => origin.origin !== found(5041).UploadOrigin.IMAGE_PICKER).length;
+                let length = arr2.filter((origin) => origin.origin !== found(5073).UploadOrigin.IMAGE_PICKER).length;
               } else {
                 length = arr2.length;
               }
@@ -703,8 +640,8 @@ function showSimpleMediaKeyboard(channel) {
         }
       });
     },
-    onClose: _require(10390).hideMediaKeyboardActionSheet,
-    onBack: _require(10390).hideMediaKeyboardActionSheet
+    onClose: _require(10429).hideMediaKeyboardActionSheet,
+    onBack: _require(10429).hideMediaKeyboardActionSheet
   };
   let result = obj.showMediaKeyboardActionSheet(obj);
 }
@@ -712,7 +649,7 @@ function showSimpleMediaKeyboard(channel) {
 export const addImagesFromPicker = function addImagesFromPicker(id, items, IMAGE_PICKER) {
   const _require = id;
   importDefault = IMAGE_PICKER;
-  if (IMAGE_PICKER !== _require(5041).UploadOrigin.FILE_ATTACHMENT) {
+  if (IMAGE_PICKER !== _require(5073).UploadOrigin.FILE_ATTACHMENT) {
     const found = items.filter((uri) => {
       closure_0 = uri;
       let tmp2 = null != closure_0;
@@ -737,10 +674,10 @@ export const addImagesFromPicker = function addImagesFromPicker(id, items, IMAGE
     obj[0] = mapped;
     obj[1] = id;
     obj[2] = DraftType.ChannelMessage;
-    _modDef8131.addFiles(obj);
-    const obj3 = _modDef8131;
+    _modDef8163.addFiles(obj);
+    const obj3 = _modDef8163;
   } else {
-    obj = _modDef8131;
+    obj = _modDef8163;
     obj = { files: null, channelId: null, draftType: null };
     obj[0] = items;
     obj[1] = id;
@@ -771,8 +708,8 @@ export const addAttachmentForCommand = function addAttachmentForCommand(channelI
   } else if (tmp2.INTERACTION_MODAL === target) {
     InteractionModal = DraftType.InteractionModal;
   }
-  _modDef8131.remove(channelId, closure_1_1.option.name, InteractionModal);
-  const obj4 = _modDef8131;
+  _modDef8163.remove(channelId, closure_1_1.option.name, InteractionModal);
+  const obj4 = _modDef8163;
   obj = { channelId, file: null, draftType: null, allowOptimization: false };
   obj1 = {};
   const merged = Object.assign(result1);
@@ -781,7 +718,7 @@ export const addAttachmentForCommand = function addAttachmentForCommand(channelI
   obj1.filename = filename;
   obj[1] = obj1;
   obj[2] = InteractionModal;
-  _modDef8131.addFile(obj);
+  _modDef8163.addFile(obj);
 };
 export const handleCameraDialog = function handleCameraDialog(arg0) {
   ({ channel: require, previewType: importDefault, onDismissKeyboard: dependencyMap, onRestoreKeyboard: closure_3, onSelectFiles: closure_4 } = arg0);
@@ -925,7 +862,7 @@ export const handleViewAllDialog = function handleViewAllDialog(arg0) {
                       ({ id: obj[0], uri: obj[1], uri: obj[2], mimeType: obj[3], width: obj[4], height: obj[5], fileName: obj[6], duration: obj[7] } = tmp6);
                       let tmp10 = lib;
                       let tmp11 = dependencyMap;
-                      obj[8] = lib(5041).UploadPlatform.REACT_NATIVE;
+                      obj[8] = lib(5073).UploadPlatform.REACT_NATIVE;
                       let arr = items.push(obj);
                     }
                     continue;
@@ -941,7 +878,7 @@ export const handleViewAllDialog = function handleViewAllDialog(arg0) {
           const tmpResult = tmp(tmp2[15]);
         } else {
           if (obj3.isIOS()) {
-            let length = arr2.filter((origin) => origin.origin !== found(5041).UploadOrigin.IMAGE_PICKER).length;
+            let length = arr2.filter((origin) => origin.origin !== found(5073).UploadOrigin.IMAGE_PICKER).length;
           } else {
             length = arr2.length;
           }
@@ -1010,7 +947,7 @@ export const handleSelectGift = function handleSelectGift(analyticsLocations, ch
     };
   }
   obj1[4] = fn;
-  _require(10415).openGiftModal(obj1);
+  _require(10454).openGiftModal(obj1);
 };
 export const handleSelectThread = function handleSelectThread(channel, chatInput) {
   let obj = expandEventPropertiesDefault;

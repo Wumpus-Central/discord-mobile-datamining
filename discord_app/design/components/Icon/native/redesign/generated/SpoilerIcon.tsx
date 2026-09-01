@@ -1,10 +1,10 @@
-// === Module 10841: SpoilerIcon ===
+// === Module 10879: SpoilerIcon ===
 
-// Module 10841 (SpoilerIcon)
+// Module 10879 (SpoilerIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4166 */;
-import registerAsset from "registerAsset" /* 10842 */;
+import BaseIconImage from "BaseIconImage" /* 4196 */;
+import registerAsset from "registerAsset" /* 10880 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

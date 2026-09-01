@@ -1,9 +1,9 @@
-// === Module 13068: computeDaysUntilNextBadgeDate ===
+// === Module 13101: computeDaysUntilNextBadgeDate ===
 
-// Module 13068 (computeDaysUntilNextBadgeDate)
+// Module 13101 (computeDaysUntilNextBadgeDate)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import hooksDefault from "hooks" /* 4045 */;
+import hooksDefault from "hooks" /* 4075 */;
 
 const useMemo = noop.useMemo;
 const result = set.fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useTimeUntilNextBadge.tsx");
@@ -14,9 +14,9 @@ export const computeDaysUntilNextBadgeDate = function computeDaysUntilNextBadgeD
   return Math.max(0, hooksDefault(arg0).add(arg1, "months").add(1, "day").diff(hooksDefault(), "days"));
 };
 export const useTimeUntilNextBadge = function useTimeUntilNextBadge() {
-  nextTenureBadge = nextTenureBadge(13069).useNextTenureBadge();
-  let obj = nextTenureBadge(13069);
-  const premiumSince = nextTenureBadge(8929).usePremiumSince();
+  nextTenureBadge = nextTenureBadge(13102).useNextTenureBadge();
+  let obj = nextTenureBadge(13102);
+  const premiumSince = nextTenureBadge(8966).usePremiumSince();
   const items = [nextTenureBadge, premiumSince];
   return useMemo(() => {
     if (null != nextTenureBadge) {

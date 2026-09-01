@@ -1,6 +1,6 @@
-// === Module 11393: BanConfirmModal ===
+// === Module 11431: BanConfirmModal ===
 
-// Module 11393 (BanConfirmModal)
+// Module 11431 (BanConfirmModal)
 import noopAll from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 

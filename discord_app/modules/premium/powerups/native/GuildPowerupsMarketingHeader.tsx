@@ -1,16 +1,16 @@
-// === Module 13200: PerkText ===
+// === Module 13233: PerkText ===
 
-// Module 13200 (PerkText)
+// Module 13233 (PerkText)
 import nDefault from "n" /* 689 */;
 import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4444 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12044 */;
-import setDefault from "set" /* 13201 */;
+import Text from "Text" /* 4474 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12077 */;
+import setDefault from "set" /* 13234 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "calculateAppliedBoosts" /* 4334 */;
+import closure_5 from "calculateAppliedBoosts" /* 4364 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function PerkText(children) {
@@ -59,7 +59,7 @@ export default function GuildPowerupsMarketingHeader(guild) {
       if (null != arr) {
         str2 = "";
         if (0 !== arr.length) {
-          let first = tmp2(13202)(arr);
+          let first = tmp2(13235)(arr);
           if (1 === first.length) {
             obj = { powerup: null };
             first = first[0];
@@ -81,7 +81,7 @@ export default function GuildPowerupsMarketingHeader(guild) {
       const obj4 = { perks: null };
       obj4[0] = str2;
       obj[2] = intl.format(tmp2(2401)["7lwpzR"], obj4);
-      obj[1] = jsx(guild(4444).Text, { style: null, variant: "text-sm/semibold", children: null });
+      obj[1] = jsx(guild(4474).Text, { style: null, variant: "text-sm/semibold", children: null });
       return <View style={null} variant="text-sm/semibold">{null}</View>;
     }
   }

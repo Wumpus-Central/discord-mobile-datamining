@@ -1,6 +1,6 @@
-// === Module 12569: ShopThisLookMenuAction ===
+// === Module 12602: ShopThisLookMenuAction ===
 
-// Module 12569 (ShopThisLookMenuAction)
+// Module 12602 (ShopThisLookMenuAction)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;

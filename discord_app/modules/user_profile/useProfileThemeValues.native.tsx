@@ -1,9 +1,9 @@
-// === Module 5943: useProfileThemeValues ===
+// === Module 5975: useProfileThemeValues ===
 
-// Module 5943 (useProfileThemeValues)
+// Module 5975 (useProfileThemeValues)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4440 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 
 const useMemo = noop.useMemo;
 const result = set.fileFinishedImporting("modules/user_profile/useProfileThemeValues.native.tsx");

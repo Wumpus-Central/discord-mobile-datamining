@@ -1,6 +1,6 @@
-// === Module 8121: useNSFWAllowed ===
+// === Module 8153: useNSFWAllowed ===
 
-// Module 8121 (useNSFWAllowed)
+// Module 8153 (useNSFWAllowed)
 import initialize from "initialize" /* 589 */;
 import closure_2 from "mergeGuildAvatar" /* 1922 */;
 

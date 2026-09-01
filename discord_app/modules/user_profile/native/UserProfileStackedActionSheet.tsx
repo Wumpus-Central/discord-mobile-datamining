@@ -1,13 +1,13 @@
-// === Module 9179: UserProfileStackedActionSheet ===
+// === Module 9218: UserProfileStackedActionSheet ===
 
-// Module 9179 (UserProfileStackedActionSheet)
+// Module 9218 (UserProfileStackedActionSheet)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4444 */;
-import Background from "Background" /* 5590 */;
+import Text from "Text" /* 4474 */;
+import Background from "Background" /* 5622 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 noopAll;
@@ -44,8 +44,8 @@ export default function UserProfileStackedActionSheet(onBack) {
     const intl = tmp5(1236).intl;
     obj[1] = intl.string(tmp5(1236).t["13/7kX"]);
     obj[2] = onBack;
-    obj[3] = tmp4(tmp5(5467).ArrowLargeLeftIcon, { size: "md" });
-    tmp4Result = tmp4(tmp5(5036).PressableOpacity, obj);
+    obj[3] = tmp4(tmp5(5499).ArrowLargeLeftIcon, { size: "md" });
+    tmp4Result = tmp4(tmp5(5068).PressableOpacity, obj);
   }
   const items1 = [tmp4Result, closure_4(Text.Text, { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: title }), ];
   if (tmp4Result) {
@@ -85,7 +85,7 @@ export const UserProfileStackedActionSheetList = function UserProfileStackedActi
     index = index.index;
     return renderItem({ item: index.item, index, start: 0 === index, end: index === data.length - 1 });
   };
-  return closure_4(data(5592).BottomSheetFlatList, obj);
+  return closure_4(data(5624).BottomSheetFlatList, obj);
 };
 export const UserProfileStackedActionSheetSectionList = function UserProfileStackedActionSheetSectionList(renderItem) {
   renderItem = renderItem.renderItem;
@@ -102,5 +102,5 @@ export const UserProfileStackedActionSheetSectionList = function UserProfileStac
   obj.ItemSeparatorComponent = function ItemSeparatorComponent() {
     return closure_1_4(renderItem(closure_1_2[7]).FormDivider, { style: divider.divider });
   };
-  return callback(renderItem(5592).BottomSheetSectionList, obj);
+  return callback(renderItem(5624).BottomSheetSectionList, obj);
 };

@@ -1,6 +1,6 @@
-// === Module 13455: HdrCaptureMode ===
+// === Module 13488: HdrCaptureMode ===
 
-// Module 13455 (HdrCaptureMode)
+// Module 13488 (HdrCaptureMode)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1468 */;
 

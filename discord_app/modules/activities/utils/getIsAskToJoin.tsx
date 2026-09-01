@@ -1,6 +1,6 @@
-// === Module 11290: getIsAskToJoin ===
+// === Module 11327: getIsAskToJoin ===
 
-// Module 11290 (getIsAskToJoin)
+// Module 11327 (getIsAskToJoin)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 

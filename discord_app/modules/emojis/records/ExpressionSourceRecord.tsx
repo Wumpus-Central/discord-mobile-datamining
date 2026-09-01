@@ -1,10 +1,10 @@
-// === Module 5973: getEmojiSourceData ===
+// === Module 6005: getEmojiSourceData ===
 
-// Module 5973 (getEmojiSourceData)
+// Module 6005 (getEmojiSourceData)
 import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1426 */;
 import areSetsEqual from "areSetsEqual" /* 1429 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1431 */;
-import toJSDefault from "toJS" /* 1931 */;
+import toJSDefault from "toJS" /* 1936 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import ME from "ME" /* 676 */;
 

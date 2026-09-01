@@ -1,10 +1,10 @@
-// === Module 12980: usePromotionMarketingComponent ===
+// === Module 13013: usePromotionMarketingComponent ===
 
-// Module 12980 (usePromotionMarketingComponent)
+// Module 13013 (usePromotionMarketingComponent)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "emitChanges" /* 7163 */;
-import closure_5 from "createEmptyPromotionsByType" /* 10436 */;
+import closure_4 from "emitChanges" /* 7195 */;
+import closure_5 from "createEmptyPromotionsByType" /* 10475 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/premium/hooks/usePromotionMarketingComponent.tsx");

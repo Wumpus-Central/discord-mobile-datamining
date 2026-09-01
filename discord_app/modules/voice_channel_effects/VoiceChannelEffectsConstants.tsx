@@ -1,6 +1,6 @@
-// === Module 6160: VoiceChannelEffectAnimationType ===
+// === Module 6192: VoiceChannelEffectAnimationType ===
 
-// Module 6160 (VoiceChannelEffectAnimationType)
+// Module 6192 (VoiceChannelEffectAnimationType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsConstants.tsx");

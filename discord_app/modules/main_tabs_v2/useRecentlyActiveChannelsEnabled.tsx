@@ -1,8 +1,8 @@
-// === Module 7249: isRecentlyActiveChannelsEnabled ===
+// === Module 7281: isRecentlyActiveChannelsEnabled ===
 
-// Module 7249 (isRecentlyActiveChannelsEnabled)
-import useDesignToggleDefault from "useDesignToggle" /* 5465 */;
-import closure_2 from "getUserAgnosticState" /* 5466 */;
+// Module 7281 (isRecentlyActiveChannelsEnabled)
+import useDesignToggleDefault from "useDesignToggle" /* 5497 */;
+import closure_2 from "getUserAgnosticState" /* 5498 */;
 
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/useRecentlyActiveChannelsEnabled.tsx");
 

@@ -1,11 +1,11 @@
-// === Module 15084: UserSettingsCommunityNotifications ===
+// === Module 15117: UserSettingsCommunityNotifications ===
 
-// Module 15084 (UserSettingsCommunityNotifications)
+// Module 15117 (UserSettingsCommunityNotifications)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import noopAll from "noop" /* 19 */;
-import closure_3 from "computeAlertSettings" /* 10124 */;
+import closure_3 from "computeAlertSettings" /* 10163 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 const require = arg1;
 noopAll;
@@ -50,8 +50,8 @@ export default function UserSettingsCommunityNotifications() {
       obj[2] = items;
       return closure_1_5(stateFromStores(closure_1_2[8]).TableRowGroup, obj, arg0);
     });
-    obj[0] = callback(tmp2(4894).Stack, obj);
-    tmp5 = callback(tmp2(8331).Form, obj);
+    obj[0] = callback(tmp2(4926).Stack, obj);
+    tmp5 = callback(tmp2(8363).Form, obj);
   }
   return tmp5;
 };

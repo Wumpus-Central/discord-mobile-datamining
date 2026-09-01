@@ -1,9 +1,9 @@
-// === Module 15455: UserSettingsSensitiveContentFilters ===
+// === Module 15489: UserSettingsSensitiveContentFilters ===
 
-// Module 15455 (UserSettingsSensitiveContentFilters)
-import _modDef14307 from "module_14307" /* 14307 */;
+// Module 15489 (UserSettingsSensitiveContentFilters)
+import _modDef14340 from "module_14340" /* 14340 */;
 import closure_3 from "noop" /* 19 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 7852 */;
+import { MobileUserSettings } from "MobileUserSettings" /* 7884 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -11,7 +11,7 @@ const result = require("set").fileFinishedImporting("modules/user_settings/famil
 
 export default function UserSettingsSensitiveContentFilters() {
   const node = React.useMemo(() => {
-    let obj = callback(11031);
+    let obj = callback(11068);
     obj = { sections: null };
     obj = { label: null, settings: null, subLabel: null };
     const intl = callback(1236).intl;
@@ -34,5 +34,5 @@ export default function UserSettingsSensitiveContentFilters() {
     obj[0] = items1;
     return obj.createList(obj);
   }, []);
-  return jsx(_modDef14307, { node });
+  return jsx(_modDef14340, { node });
 };

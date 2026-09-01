@@ -1,10 +1,10 @@
-// === Module 11317: useOrderSigning ===
+// === Module 11355: useOrderSigning ===
 
-// Module 11317 (useOrderSigning)
+// Module 11355 (useOrderSigning)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
-import { OrderStatus } from "CustomCheckoutFlow" /* 4430 */;
+import { OrderStatus } from "CustomCheckoutFlow" /* 4460 */;
 
 const require = arg1;
 ({ useCallback: c5, useState: closure_6 } = noop);
@@ -73,7 +73,7 @@ export const useOrderSigning = function useOrderSigning(order) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -100,7 +100,7 @@ export const useOrderSigning = function useOrderSigning(order) {
                 status = undefined;
                 v02 = 1;
                 v03 = 1;
-                return { value: "Object", done: true };
+                return { value: "PX_16", done: null };
               }
             } else if (1 === tmp7) {
               if (arg0 === 1) {

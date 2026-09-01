@@ -1,11 +1,11 @@
-// === Module 4712: messageAttachmentToUnfurledMediaItem ===
+// === Module 4744: messageAttachmentToUnfurledMediaItem ===
 
-// Module 4712 (messageAttachmentToUnfurledMediaItem)
+// Module 4744 (messageAttachmentToUnfurledMediaItem)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import hasFlag from "hasFlag" /* 1399 */;
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1486 */;
-import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4639 */;
+import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4671 */;
 
 function messageAttachmentToUnfurledMediaItem(flags) {
   obj = hasFlag;

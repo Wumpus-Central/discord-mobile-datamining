@@ -1,13 +1,13 @@
-// === Module 10932: items ===
+// === Module 10970: items ===
 
-// Module 10932 (items)
+// Module 10970 (items)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useThemeDefault from "useTheme" /* 4383 */;
-import componentDidMountDefault from "componentDidMount" /* 4915 */;
+import useThemeDefault from "useTheme" /* 4413 */;
+import componentDidMountDefault from "componentDidMount" /* 4947 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 noopAll;
@@ -64,10 +64,10 @@ export default function ChannelFollowSuccessAlert(arg0) {
   let obj = _require(1363);
   const tmp6 = obj.isThemeDark(useThemeDefault()) ? items1 : items;
   _require = tmp6;
-  let tmp5Result = tmp5(7153);
+  let tmp5Result = tmp5(7185);
   items = [tmp6];
   const stableMemo = tmp5Result.useStableMemo(() => closure_1_1(closure_1_2[14]).sample(closure_0), items);
-  tmp5Result = tmp5(7153);
+  tmp5Result = tmp5(7185);
   const stableMemo1 = tmp5Result.useStableMemo(() => callback(table[14]).sample(closure_8), []);
   obj = {};
   const tmp2 = importDefault;
@@ -78,11 +78,11 @@ export default function ChannelFollowSuccessAlert(arg0) {
   obj = { source: stableMemo, style: tmp.image };
   items1 = [callback(Image, obj), , ];
   const tmp2Result = componentDidMountDefault;
-  items1[1] = callback(_require(4444).Text, { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: stableMemo1() });
+  items1[1] = callback(_require(4474).Text, { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: stableMemo1() });
   const obj2 = { style: tmp.text, variant: "text-md/medium", color: "text-muted", children: null };
   const intl2 = tmp5(1236).intl;
   obj2[3] = intl2.string(_require(1236).t["2QbSea"]);
-  items1[2] = callback(_require(4444).Text, obj2);
+  items1[2] = callback(_require(4474).Text, obj2);
   obj.children = items1;
   return callback2(tmp2Result, obj);
 };

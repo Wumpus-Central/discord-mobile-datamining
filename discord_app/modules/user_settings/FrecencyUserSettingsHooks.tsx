@@ -1,6 +1,6 @@
-// === Module 10324: useFrecencySettings ===
+// === Module 10363: useFrecencySettings ===
 
-// Module 10324 (useFrecencySettings)
+// Module 10363 (useFrecencySettings)
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
 

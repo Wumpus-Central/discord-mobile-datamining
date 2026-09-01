@@ -1,8 +1,8 @@
-// === Module 16647: useCanInviteMembers ===
+// === Module 16683: useCanInviteMembers ===
 
-// Module 16647 (useCanInviteMembers)
+// Module 16683 (useCanInviteMembers)
 import closure_2 from "ensureGuildLoaded" /* 1387 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4121 */;
 import { Permissions } from "sum" /* 505 */;
 
 const require = arg1;

@@ -1,8 +1,8 @@
-// === Module 11348: matchesDeep ===
+// === Module 11386: matchesDeep ===
 
-// Module 11348 (matchesDeep)
+// Module 11386 (matchesDeep)
 import set from "set" /* 2 */;
-import flattenDefault from "flatten" /* 4601 */;
+import flattenDefault from "flatten" /* 4633 */;
 
 function matchesDeep(item10014, item10021) {
   if (Array.isArray(item10014)) {

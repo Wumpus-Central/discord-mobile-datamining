@@ -1,6 +1,6 @@
-// === Module 10996: SafetyToolsActionSheetWrapper ===
+// === Module 11033: SafetyToolsActionSheetWrapper ===
 
-// Module 10996 (SafetyToolsActionSheetWrapper)
+// Module 11033 (SafetyToolsActionSheetWrapper)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1387 */;
 import { jsx } from "jsxProd" /* 21 */;

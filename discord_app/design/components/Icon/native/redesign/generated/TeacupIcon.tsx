@@ -1,10 +1,10 @@
-// === Module 15165: TeacupIcon ===
+// === Module 15198: TeacupIcon ===
 
-// Module 15165 (TeacupIcon)
+// Module 15198 (TeacupIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4166 */;
-import registerAsset from "registerAsset" /* 15166 */;
+import BaseIconImage from "BaseIconImage" /* 4196 */;
+import registerAsset from "registerAsset" /* 15199 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

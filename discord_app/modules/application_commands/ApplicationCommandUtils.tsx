@@ -1,17 +1,17 @@
-// === Module 7234: buildCommand ===
+// === Module 7266: buildCommand ===
 
-// Module 7234 (buildCommand)
+// Module 7266 (buildCommand)
 import set from "set" /* 2 */;
 import applyDefault from "apply" /* 12 */;
 import IntegerDefault from "Integer" /* 14 */;
 import sum2 from "sum" /* 505 */;
 import createChannelRecord from "createChannelRecord" /* 1391 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4668 */;
-import handleChanged from "handleChanged" /* 4822 */;
-import commandPermissions from "commandPermissions" /* 7235 */;
-import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 7236 */;
-import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 4920 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4700 */;
+import handleChanged from "handleChanged" /* 4854 */;
+import commandPermissions from "commandPermissions" /* 7267 */;
+import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 7268 */;
+import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 4952 */;
 import ME from "ME" /* 676 */;
 import deserializeResult from "module_0" /* 0 */;
 import importAllResult from "fromString" /* 506 */;
@@ -50,7 +50,7 @@ function buildCommand(arg0) {
       CHAT = obj(1955).ApplicationCommandType.CHAT;
     }
     obj[6] = CHAT;
-    obj[7] = obj(7236).ApplicationCommandInputType.BOT;
+    obj[7] = obj(7268).ApplicationCommandInputType.BOT;
     ({ description: obj3[8], options } = command);
     let mapped2;
     if (options != null) {
@@ -325,10 +325,10 @@ function buildCommand(arg0) {
     ({ nsfw: obj3[17], contexts: obj3[18], integration_types: obj3[19], global_popularity_rank: obj3[20], handler: obj3[21] } = rootCommand);
     return obj;
   } else if (useKeyedPermissions) {
-    const keyPermissionsResult = obj(7235).keyPermissions(rootCommand.permissions);
+    const keyPermissionsResult = obj(7267).keyPermissions(rootCommand.permissions);
     obj = keyPermissionsResult;
     obj = keyPermissionsResult;
-    const obj2 = obj(7235);
+    const obj2 = obj(7267);
   } else {
     obj = {};
     const permissions = rootCommand.permissions;
@@ -493,7 +493,9 @@ export const buildApplicationCommands = function buildApplicationCommands(applic
   closure_0 = arg1;
   return applyDefault.flatMap(application_commands, (id) => {
     closure_1_1(closure_1_3[10])(null != id.id, "Missing command id");
-    return closure_1_12({ rootCommand: id, command: id, applicationId: id.application_id, subCommandPath: "Array", useKeyedPermissions: closure_0 });
+    const obj = { rootCommand: id, command: id, applicationId: id.application_id, subCommandPath: "Array", useKeyedPermissions: 284111.8291016036 };
+    obj[4] = closure_0;
+    return closure_1_12(obj);
   });
 };
 export const applicationPermissionsList = function applicationPermissionsList(arr) {

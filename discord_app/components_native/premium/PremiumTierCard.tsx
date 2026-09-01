@@ -1,17 +1,17 @@
-// === Module 13188: textLogoTier2 ===
+// === Module 13221: textLogoTier2 ===
 
-// Module 13188 (textLogoTier2)
+// Module 13221 (textLogoTier2)
 import noopAll from "noop" /* 19 */;
 import keys from "keys" /* 691 */;
 import ThemesDefault from "Themes" /* 712 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4109 */;
-import LinearGradientDefault from "LinearGradient" /* 4908 */;
-import PressableCard from "PressableCard" /* 5569 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4139 */;
+import LinearGradientDefault from "LinearGradient" /* 4940 */;
+import PressableCard from "PressableCard" /* 5601 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { getPremiumGradientColor } from "items" /* 7145 */;
+import { getPremiumGradientColor } from "items" /* 7177 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 noopAll;
@@ -40,11 +40,11 @@ export default function _default(premiumType) {
   }
   obj[3] = textLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    let tmp5Result = tmp5(13189);
+    let tmp5Result = tmp5(13222);
   } else if (tmp10.TIER_1 === premiumType) {
-    tmp5Result = tmp5(13190);
+    tmp5Result = tmp5(13223);
   } else if (tmp10.TIER_2 === premiumType) {
-    tmp5Result = tmp5(7945);
+    tmp5Result = tmp5(7977);
   }
   obj[4] = tmp5Result;
   obj[4] = closure_7(closure_4, obj);
@@ -60,11 +60,11 @@ export default function _default(premiumType) {
   obj = { accessible: false, importantForAccessibility: "no", style: items1, source: null };
   items1[1] = wumpusLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    tmp5Result = tmp5(8324);
+    tmp5Result = tmp5(8356);
   } else if (tmp10.TIER_1 === premiumType) {
-    tmp5Result = tmp5(10454);
+    tmp5Result = tmp5(10492);
   } else if (tmp10.TIER_2 === premiumType) {
-    tmp5Result = tmp5(10455);
+    tmp5Result = tmp5(10493);
   }
   obj1 = { children: null };
   obj[3] = tmp5Result;

@@ -1,6 +1,6 @@
-// === Module 17230: CreatorMonetizationApplicationState ===
+// === Module 17266: CreatorMonetizationApplicationState ===
 
-// Module 17230 (CreatorMonetizationApplicationState)
+// Module 17266 (CreatorMonetizationApplicationState)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/creator_monetization_eligibility/CreatorMonetizationEligibilityConstants.tsx");

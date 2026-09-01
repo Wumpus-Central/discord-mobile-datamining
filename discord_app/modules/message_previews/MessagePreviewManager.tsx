@@ -1,17 +1,17 @@
-// === Module 14882: addWant ===
+// === Module 14915: addWant ===
 
-// Module 14882 (addWant)
+// Module 14915 (addWant)
 import timestampDefault from "timestamp" /* 3 */;
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 5454 */;
-import FetchStatus from "FetchStatus" /* 14883 */;
+import initializeDefault from "initialize" /* 5486 */;
+import FetchStatus from "FetchStatus" /* 14916 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_handleConnectionOpen" /* 5189 */;
+import closure_5 from "_handleConnectionOpen" /* 5221 */;
 import { isThread } from "createChannelRecord" /* 1391 */;
 import closure_7 from "fetchFingerprint" /* 1218 */;
 import closure_8 from "ensureGuildLoaded" /* 1387 */;
-import closure_9 from "initialize" /* 13337 */;
+import closure_9 from "initialize" /* 13370 */;
 import { Endpoints } from "ME" /* 676 */;
 
 require = arg1;
@@ -81,7 +81,7 @@ class MessagePreviewManager extends tmp3 {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           while (true) {
@@ -113,7 +113,7 @@ class MessagePreviewManager extends tmp3 {
                 c7 = 1;
                 let num9 = 1;
                 c8 = 1;
-                return { value: "Object", done: true };
+                return { value: "PX_16", done: null };
               }
             } else {
               if (1 === tmp4) {
@@ -284,7 +284,7 @@ prototype["fetchLocal"] = function fetchLocal(guild_id) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -418,7 +418,7 @@ prototype["fetchDms"] = function fetchDms(closure_4) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -465,7 +465,7 @@ prototype["fetchDms"] = function fetchDms(closure_4) {
             obj5[2] = body;
             obj.dispatch(obj5);
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp12) {
           c3 = tmp;

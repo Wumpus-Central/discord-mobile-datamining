@@ -1,9 +1,9 @@
-// === Module 8554: useMediaViewerSyncer ===
+// === Module 8586: useMediaViewerSyncer ===
 
-// Module 8554 (useMediaViewerSyncer)
+// Module 8586 (useMediaViewerSyncer)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import THUMBNAIL_MARGIN from "THUMBNAIL_MARGIN" /* 8555 */;
+import THUMBNAIL_MARGIN from "THUMBNAIL_MARGIN" /* 8587 */;
 import set from "set" /* 500 */;
 
 const require = arg1;

@@ -1,6 +1,6 @@
-// === Module 6047: resetStoreState ===
+// === Module 6079: resetStoreState ===
 
-// Module 6047 (resetStoreState)
+// Module 6079 (resetStoreState)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1471 */;

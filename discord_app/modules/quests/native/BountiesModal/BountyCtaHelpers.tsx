@@ -1,6 +1,6 @@
-// === Module 14610: getBountyCtaInfo ===
+// === Module 14643: getBountyCtaInfo ===
 
-// Module 14610 (getBountyCtaInfo)
+// Module 14643 (getBountyCtaInfo)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 

@@ -1,10 +1,10 @@
-// === Module 15324: route ===
+// === Module 15358: route ===
 
-// Module 15324 (route)
+// Module 15358 (route)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import MobileUserSettings from "MobileUserSettings" /* 7852 */;
-import createToggle from "createToggle" /* 11031 */;
+import MobileUserSettings from "MobileUserSettings" /* 7884 */;
+import createToggle from "createToggle" /* 11068 */;
 
 obj = {
   useTitle() {
@@ -16,7 +16,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.DESIGN_SYSTEM_LEGACY_BUTTON,
   getComponent() {
-    return require(15325) /* ComparisonRow */.default;
+    return require(15359) /* ComparisonRow */.default;
   }
 };
 const route = createToggle.createRoute(obj);

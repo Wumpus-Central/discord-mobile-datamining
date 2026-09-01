@@ -1,11 +1,11 @@
-// === Module 15062: onGoLiveNotificationSettingsChanged ===
+// === Module 15095: onGoLiveNotificationSettingsChanged ===
 
-// Module 15062 (onGoLiveNotificationSettingsChanged)
+// Module 15095 (onGoLiveNotificationSettingsChanged)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import AccountNotificationFlags from "AccountNotificationFlags" /* 4103 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4136 */;
+import AccountNotificationFlags from "AccountNotificationFlags" /* 4133 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
 let closure_4 = AccountNotificationFlags.NotificationSettingsUpdateType;

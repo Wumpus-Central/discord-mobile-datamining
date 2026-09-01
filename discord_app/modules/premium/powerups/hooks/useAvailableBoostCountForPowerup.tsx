@@ -1,10 +1,10 @@
-// === Module 12068: useAvailableBoostCountForPowerup ===
+// === Module 12101: useAvailableBoostCountForPowerup ===
 
-// Module 12068 (useAvailableBoostCountForPowerup)
+// Module 12101 (useAvailableBoostCountForPowerup)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "createGuildRecordFromRust" /* 1909 */;
-import closure_5 from "calculateAppliedBoosts" /* 4334 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4335 */;
+import closure_5 from "calculateAppliedBoosts" /* 4364 */;
+import BoostedGuildTiers from "BoostedGuildTiers" /* 4365 */;
 
 const require = arg1;
 ({ GuildPowerupType: closure_6, POWERUPS_INCLUDED_IN_LEVEL: error, LEVEL_SKU_ID_TO_BOOSTING_TIER: closure_8 } = BoostedGuildTiers);

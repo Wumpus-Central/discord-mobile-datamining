@@ -1,6 +1,6 @@
-// === Module 11058: _fetchIosAttributionSignedPayloads ===
+// === Module 11095: _fetchIosAttributionSignedPayloads ===
 
-// Module 11058 (_fetchIosAttributionSignedPayloads)
+// Module 11095 (_fetchIosAttributionSignedPayloads)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
@@ -24,7 +24,7 @@ function _fetchIosAttributionSignedPayloads() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -48,7 +48,7 @@ function _fetchIosAttributionSignedPayloads() {
               ({ metadataSealed: c0, impressionId: c1, specs: c2, signal: c3 } = callback);
               c6 = 1;
               c7 = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else if (1 === tmp8) {
             if (arg0 === 1) {

@@ -1,9 +1,9 @@
-// === Module 8730: SettingsUpsellsConfigRegistry ===
+// === Module 8767: SettingsUpsellsConfigRegistry ===
 
-// Module 8730 (SettingsUpsellsConfigRegistry)
-import itemsDefault from "items" /* 8731 */;
-import itemsDefault2 from "items" /* 8732 */;
-import itemsDefault3 from "items" /* 8733 */;
+// Module 8767 (SettingsUpsellsConfigRegistry)
+import itemsDefault from "items" /* 8768 */;
+import itemsDefault2 from "items" /* 8769 */;
+import itemsDefault3 from "items" /* 8770 */;
 import closure_2 from "noop" /* 19 */;
 
 const require = arg1;

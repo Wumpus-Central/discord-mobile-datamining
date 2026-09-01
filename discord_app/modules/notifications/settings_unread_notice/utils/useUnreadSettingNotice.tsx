@@ -1,6 +1,6 @@
-// === Module 11008: useUnreadSettingNotice ===
+// === Module 11045: useUnreadSettingNotice ===
 
-// Module 11008 (useUnreadSettingNotice)
+// Module 11045 (useUnreadSettingNotice)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING as closure_5 } from "createChannelRecord" /* 1391 */;

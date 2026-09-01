@@ -1,21 +1,21 @@
-// === Module 9847: TransferFooter ===
+// === Module 9886: TransferFooter ===
 
-// Module 9847 (TransferFooter)
+// Module 9886 (TransferFooter)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4444 */;
-import Button from "Button" /* 4896 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5521 */;
-import registerAssetDefault from "registerAsset" /* 9848 */;
-import registerAssetDefault2 from "registerAsset" /* 9849 */;
+import Text from "Text" /* 4474 */;
+import Button from "Button" /* 4928 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5553 */;
+import registerAssetDefault from "registerAsset" /* 9887 */;
+import registerAssetDefault2 from "registerAsset" /* 9888 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_10 from "set" /* 4465 */;
+import closure_10 from "set" /* 4495 */;
 import { ComponentActions } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function TransferFooter(arg0) {
@@ -98,7 +98,7 @@ export default function GameConsoleListActionSheet(arg0) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -119,7 +119,7 @@ export default function GameConsoleListActionSheet(arg0) {
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(9846).transferToPlaystationWithAlert(closure_1_0, dependencyMap[closure_1_4], v0);
+              obj1[0] = closure_1_0(9885).transferToPlaystationWithAlert(closure_1_0, dependencyMap[closure_1_4], v0);
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -131,12 +131,12 @@ export default function GameConsoleListActionSheet(arg0) {
             obj2[0] = arg1;
             return obj2;
           } else {
-            obj = v0(4415);
+            obj = v0(4445);
             obj.hideActionSheet();
             const ComponentDispatch = closure_1_0(1231).ComponentDispatch;
             ComponentDispatch.dispatch(closure_1_11.TOGGLE_CALL_CONTROL_DRAWER);
             dependencyMap = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp13) {
           dependencyMap = tmp;

@@ -1,6 +1,6 @@
-// === Module 8509: ProfileFrameLayerAnchor ===
+// === Module 8541: ProfileFrameLayerAnchor ===
 
-// Module 8509 (ProfileFrameLayerAnchor)
+// Module 8541 (ProfileFrameLayerAnchor)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ProfileFrameLayerAnchor.tsx");

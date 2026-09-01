@@ -1,6 +1,6 @@
-// === Module 15503: RegistrationTransitionActionTypes ===
+// === Module 15538: RegistrationTransitionActionTypes ===
 
-// Module 15503 (RegistrationTransitionActionTypes)
+// Module 15538 (RegistrationTransitionActionTypes)
 import set from "set" /* 2 */;
 import keys from "keys" /* 691 */;
 

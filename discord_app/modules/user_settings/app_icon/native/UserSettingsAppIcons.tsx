@@ -1,16 +1,16 @@
-// === Module 15090: ? ===
+// === Module 15123: ? ===
 
-// Module 15090
-import contextDefault from "context" /* 5921 */;
-import _modDef8933 from "module_8933" /* 8933 */;
-import BackwardsCompatibleAppIconRowsDefault from "BackwardsCompatibleAppIconRows" /* 15091 */;
+// Module 15123
+import contextDefault from "context" /* 5953 */;
+import _modDef8970 from "module_8970" /* 8970 */;
+import BackwardsCompatibleAppIconRowsDefault from "BackwardsCompatibleAppIconRows" /* 15124 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
-import { getIconById } from "items" /* 8146 */;
+import { getIconById } from "items" /* 8178 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 import importAllResult from "noop" /* 19 */;
 
 const require = arg1;
@@ -36,7 +36,7 @@ const memoResult = importAllResult.memo(() => {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -58,7 +58,7 @@ const memoResult = importAllResult.memo(() => {
                     if (v0 !== id) {
                       if (tmp27) {
                         if (!dependencyMap) {
-                          let obj4 = v0(8137);
+                          let obj4 = v0(8169);
                           obj1 = { initialUpsellKey: null, imageSource: null };
                           obj1[0] = closure_1_6.APP_ICONS;
                           obj1[1] = tmp28;
@@ -72,11 +72,11 @@ const memoResult = importAllResult.memo(() => {
                       dependencyMap = 1;
                       v0 = 1;
                       let obj2 = { value: null, done: false };
-                      obj2[0] = lib(12991).setAppIcon(id, premiumType);
+                      obj2[0] = lib(13024).setAppIcon(id, premiumType);
                       return obj2;
                     }
                   } else {
-                    obj2 = lib(12991);
+                    obj2 = lib(13024);
                     let premiumType1;
                     if (lib != null) {
                       premiumType1 = lib.premiumType;
@@ -84,7 +84,7 @@ const memoResult = importAllResult.memo(() => {
                     dependencyMap = 2;
                     v0 = 1;
                     const obj3 = { value: null, done: false };
-                    obj3[0] = obj2.setAppIcon(lib(8147).FreemiumAppIconIds.DEFAULT, premiumType1);
+                    obj3[0] = obj2.setAppIcon(lib(8179).FreemiumAppIconIds.DEFAULT, premiumType1);
                     return obj3;
                   }
                 }
@@ -110,7 +110,7 @@ const memoResult = importAllResult.memo(() => {
               return obj;
             }
             v0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           } catch (tmp17) {
             v0 = tmp;
             throw tmp17;
@@ -130,7 +130,7 @@ const memoResult = importAllResult.memo(() => {
   let obj = stateFromStores(589);
   const items = [_onSelect];
   stateFromStores = obj.useStateFromStores(items, () => _onSelect.getCurrentUser());
-  obj1 = stateFromStores(12991);
+  obj1 = stateFromStores(13024);
   importDefault = obj1.useCurrentAppIcon();
   let obj2 = stateFromStores(1946);
   const isPremiumResult = obj2.isPremium(stateFromStores);
@@ -152,7 +152,7 @@ const memoResult = importAllResult.memo(() => {
     }
   };
   obj[0] = callback(obj, obj1);
-  const children = [callback(stateFromStores(8331).Form, obj), ];
+  const children = [callback(stateFromStores(8363).Form, obj), ];
   let tmp9Result = !isPremiumResult;
   if (!isPremiumResult) {
     let obj3 = { style: null, children: null };
@@ -164,9 +164,9 @@ const memoResult = importAllResult.memo(() => {
     };
     const intl = tmp2(1236).intl;
     obj4[1] = intl.string(tmp2(1236).t.M0rDSO);
-    obj3[1] = tmp9(_modDef8933, obj4);
+    obj3[1] = tmp9(_modDef8970, obj4);
     tmp9Result = tmp9(obj, obj3);
-    const tmp6Result = _modDef8933;
+    const tmp6Result = _modDef8970;
   }
   children[1] = tmp9Result;
   return closure_11(closure_10, { children });

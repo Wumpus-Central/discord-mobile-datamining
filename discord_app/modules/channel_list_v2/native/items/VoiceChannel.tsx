@@ -1,18 +1,18 @@
-// === Module 15787: _handleVoiceChannelPress ===
+// === Module 15823: _handleVoiceChannelPress ===
 
-// Module 15787 (_handleVoiceChannelPress)
+// Module 15823 (_handleVoiceChannelPress)
 import ThemesDefault from "Themes" /* 712 */;
-import useEmbeddedAppsDefault from "useEmbeddedApps" /* 11598 */;
+import useEmbeddedAppsDefault from "useEmbeddedApps" /* 11631 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleConnectionOpen" /* 7240 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4091 */;
-import closure_8 from "generateOldThreadCutoff" /* 4463 */;
-import closure_9 from "updateUserGuildSettingsInternal" /* 4669 */;
-import closure_10 from "getVoiceStatesForGuild" /* 4523 */;
-import { NO_VOICE_STATES } from "getVoiceStatesForGuild" /* 4523 */;
-import hairlineWidth from "hairlineWidth" /* 10162 */;
+import closure_6 from "handleConnectionOpen" /* 7272 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4121 */;
+import closure_8 from "generateOldThreadCutoff" /* 4493 */;
+import closure_9 from "updateUserGuildSettingsInternal" /* 4701 */;
+import closure_10 from "getVoiceStatesForGuild" /* 4555 */;
+import { NO_VOICE_STATES } from "getVoiceStatesForGuild" /* 4555 */;
+import hairlineWidth from "hairlineWidth" /* 10201 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -35,7 +35,7 @@ function _handleVoiceChannelPress() {
           obj[0] = openMemberVerificationModal;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -96,7 +96,7 @@ function _handleVoiceChannelPress() {
           } else {
             openMemberVerificationModal.openGuildVoiceModal(guildId, "Channel List");
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp14) {
           c3 = tmp;

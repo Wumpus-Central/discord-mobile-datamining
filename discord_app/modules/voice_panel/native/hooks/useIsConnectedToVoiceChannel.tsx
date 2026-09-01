@@ -1,9 +1,9 @@
-// === Module 16582: useIsConnectedToVoiceChannel ===
+// === Module 16618: useIsConnectedToVoiceChannel ===
 
-// Module 16582 (useIsConnectedToVoiceChannel)
+// Module 16618 (useIsConnectedToVoiceChannel)
 import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "createRTCConnection" /* 4522 */;
-import closure_4 from "updateVoiceState" /* 4467 */;
+import closure_3 from "createRTCConnection" /* 4554 */;
+import closure_4 from "updateVoiceState" /* 4497 */;
 import { RTCConnectionStates } from "ME" /* 676 */;
 
 const require = arg1;

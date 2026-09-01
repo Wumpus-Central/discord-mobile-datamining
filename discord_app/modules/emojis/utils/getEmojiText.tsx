@@ -1,6 +1,6 @@
-// === Module 16311: getEmojiText ===
+// === Module 16347: getEmojiText ===
 
-// Module 16311 (getEmojiText)
+// Module 16347 (getEmojiText)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/emojis/utils/getEmojiText.tsx");

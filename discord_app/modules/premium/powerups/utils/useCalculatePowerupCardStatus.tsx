@@ -1,8 +1,8 @@
-// === Module 12050: useCalculatePowerupCardStatus ===
+// === Module 12083: useCalculatePowerupCardStatus ===
 
-// Module 12050 (useCalculatePowerupCardStatus)
+// Module 12083 (useCalculatePowerupCardStatus)
 import closure_3 from "noop" /* 19 */;
-import { PowerupActiveStatusType } from "BoostedGuildTiers" /* 4335 */;
+import { PowerupActiveStatusType } from "BoostedGuildTiers" /* 4365 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/utils/useCalculatePowerupCardStatus.tsx");

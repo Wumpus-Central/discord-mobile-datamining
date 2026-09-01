@@ -1,6 +1,6 @@
-// === Module 7464: ThermalState ===
+// === Module 7496: ThermalState ===
 
-// Module 7464 (ThermalState)
+// Module 7496 (ThermalState)
 import set from "set" /* 2 */;
 
 let obj = { NOMINAL: "NOMINAL", FAIR: "FAIR", SERIOUS: "SERIOUS", CRITICAL: "CRITICAL", UNKNOWN: "UNKNOWN" };

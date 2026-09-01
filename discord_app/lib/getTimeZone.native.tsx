@@ -1,8 +1,8 @@
-// === Module 16824: getTimeZone ===
+// === Module 16860: getTimeZone ===
 
-// Module 16824 (getTimeZone)
+// Module 16860 (getTimeZone)
 import set from "set" /* 2 */;
-import DCDDeviceManager from "DCDDeviceManager" /* 4427 */;
+import DCDDeviceManager from "DCDDeviceManager" /* 4457 */;
 
 const result = set.fileFinishedImporting("lib/getTimeZone.native.tsx");
 

@@ -1,33 +1,33 @@
-// === Module 4109: getPremiumPlanItem ===
+// === Module 4139: getPremiumPlanItem ===
 
-// Module 4109 (getPremiumPlanItem)
+// Module 4139 (getPremiumPlanItem)
 import timestampDefault from "timestamp" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import initialize from "initialize" /* 589 */;
 import setDefault from "set" /* 687 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import isPremiumAtLeast from "isPremiumAtLeast" /* 1946 */;
-import messagesProxyDefault from "messagesProxy" /* 2987 */;
-import hooksDefault from "hooks" /* 4045 */;
-import getNonePlanIdForIntervalType from "getNonePlanIdForIntervalType" /* 4121 */;
-import _createGatewayCheckoutContext from "_createGatewayCheckoutContext" /* 4124 */;
-import resetCache from "resetCache" /* 4133 */;
-import formatSize from "formatSize" /* 4342 */;
-import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 6049 */;
-import apexExperiment from "apexExperiment" /* 7269 */;
-import roundFPCountdownUnits from "roundFPCountdownUnits" /* 13085 */;
-import ProductCatalogFeature from "ProductCatalogFeature" /* 13686 */;
+import messagesProxyDefault from "messagesProxy" /* 3017 */;
+import hooksDefault from "hooks" /* 4075 */;
+import getNonePlanIdForIntervalType from "getNonePlanIdForIntervalType" /* 4151 */;
+import _createGatewayCheckoutContext from "_createGatewayCheckoutContext" /* 4154 */;
+import resetCache from "resetCache" /* 4163 */;
+import formatSize from "formatSize" /* 4372 */;
+import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 6081 */;
+import apexExperiment from "apexExperiment" /* 7301 */;
+import roundFPCountdownUnits from "roundFPCountdownUnits" /* 13118 */;
+import ProductCatalogFeature from "ProductCatalogFeature" /* 13719 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import { isNoneSubscription } from "createFromServer" /* 4110 */;
+import { isNoneSubscription } from "createFromServer" /* 4140 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import closure_7 from "handlePaymentSourceCreateEnd" /* 4111 */;
-import closure_8 from "handlePaymentSourceUpdate" /* 4112 */;
-import closure_9 from "addSubscriptionPlan" /* 4114 */;
-import closure_10 from "reset" /* 4115 */;
+import closure_7 from "handlePaymentSourceCreateEnd" /* 4141 */;
+import closure_8 from "handlePaymentSourceUpdate" /* 4142 */;
+import closure_9 from "addSubscriptionPlan" /* 4144 */;
+import closure_10 from "reset" /* 4145 */;
 import ME from "ME" /* 676 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
-import { getPremiumGroupProductName as closure_47 } from "SubscriptionStatusTypes" /* 4123 */;
+import { getPremiumGroupProductName as closure_47 } from "SubscriptionStatusTypes" /* 4153 */;
 import sum from "sum" /* 505 */;
 import set from "set" /* 2 */;
 
@@ -136,8 +136,8 @@ function getPrice(id) {
         }
         obj5[2] = currency;
         obj3[1] = obj5;
-        const result = currency2(4124).captureBillingException(error, obj3);
-        const obj10 = currency2(4124);
+        const result = currency2(4154).captureBillingException(error, obj3);
+        const obj10 = currency2(4154);
       }
       throw error;
     } else {
@@ -148,7 +148,7 @@ function getPrice(id) {
     const _Error2 = Error;
     const error1 = new Error("Plan not found");
     if (flag3) {
-      obj2 = currency2(4124);
+      obj2 = currency2(4154);
       const obj6 = { planId: null, currency: null };
       obj6[0] = id;
       let str = currency;
@@ -611,7 +611,7 @@ function getPlanDescription(arg0) {
   const tmp4 = getPrice(dependencyMap3[planId].id, false, false, obj, true);
   const interval = tmp.interval;
   const tmp5 = planIdsForSkus;
-  obj1 = planIdsForSkus(6049);
+  obj1 = planIdsForSkus(6081);
   if (constants7.MONTH === interval) {
     const intl2 = tmp5(1236).intl;
     let stringResult = intl2.string(tmp5(1236).t.FPybU7);
@@ -849,10 +849,10 @@ function getPlanDescription(arg0) {
                 } else if (tmp17.PAST_DUE === CANCELED) {
                   const intl7 = tmp5(1236).intl;
                   const obj12 = { endDate: null, onClick: null };
-                  let tmp5Result = tmp5(4133);
+                  let tmp5Result = tmp5(4163);
                   obj12[0] = tmp5Result.dateFormat(getBillingGracePeriodDaysAndExpiresDate(subscription).expiresDate, "LL");
                   obj12[1] = function onClick() {
-                    callback(4154)("https://support.discord.com/hc/articles/23082866222871");
+                    callback(4184)("https://support.discord.com/hc/articles/23082866222871");
                   };
                   return intl7.format(tmp5(1236).t["d+0vwo"], obj12);
                 } else if (!hasDiscountApplied) {
@@ -987,10 +987,10 @@ function getPlanDescription(arg0) {
             } else if (tmp17.PAST_DUE === CANCELED) {
               const intl15 = tmp5(1236).intl;
               const obj20 = { endDate: null, onClick: null };
-              tmp5Result = tmp5(4133);
+              tmp5Result = tmp5(4163);
               obj20[0] = tmp5Result.dateFormat(getBillingGracePeriodDaysAndExpiresDate(subscription).expiresDate, "LL");
               obj20[1] = function onClick() {
-                callback(4154)("https://support.discord.com/hc/articles/23082866222871");
+                callback(4184)("https://support.discord.com/hc/articles/23082866222871");
               };
               return intl15.format(tmp5(1236).t["d+0vwo"], obj20);
             } else {
@@ -1065,9 +1065,9 @@ function getPlanDescription(arg0) {
         } else if (tmp17.PAST_DUE === CANCELED) {
           const intl22 = tmp5(1236).intl;
           const obj26 = { endDate: null, onClick: null };
-          obj26[0] = tmp5(4133).dateFormat(getBillingGracePeriodDaysAndExpiresDate(subscription).expiresDate, "LL");
+          obj26[0] = tmp5(4163).dateFormat(getBillingGracePeriodDaysAndExpiresDate(subscription).expiresDate, "LL");
           obj26[1] = function onClick() {
-            callback(4154)("https://support.discord.com/hc/articles/23082866222871");
+            callback(4184)("https://support.discord.com/hc/articles/23082866222871");
           };
           return intl22.format(tmp5(1236).t["d+0vwo"], obj26);
         } else {
@@ -1186,7 +1186,7 @@ function getBillingGracePeriodDaysAndExpiresDate(subscription) {
       const tmp11 = importDefault;
       const tmp13 = hooksDefault;
       obj2[0] = hooksDefault(prop4).diff(subscription.currentPeriodStart, "days");
-      obj2[1] = tmp11(4045)(subscription.metadata.grace_period_expires_date);
+      obj2[1] = tmp11(4075)(subscription.metadata.grace_period_expires_date);
       return obj2;
     } else {
       const tmp8 = null == subscription.paymentSourceId ? closure_19 : closure_30;
@@ -1995,7 +1995,7 @@ function getItemsWithUpsertedPlanIdForGroup(renewalMutations, basePlanId, arg2, 
     obj[0] = basePlanId;
     obj[1] = closure_31;
     obj[1] = obj;
-    const checkoutError = new _require(8457).CheckoutError(obj);
+    const checkoutError = new _require(8489).CheckoutError(obj);
     throw checkoutError;
   }
 }
@@ -2529,40 +2529,40 @@ obj = {
       if (stateFromStores != null) {
         perks = stateFromStores.perks;
       }
-      hasPerkResult = tmp(1942).hasPerk(perks, tmp(1938).Perk.MONTHLY_ORBS);
-      const tmpResult = tmp(1942);
+      hasPerkResult = tmp(1928).hasPerk(perks, tmp(1930).Perk.MONTHLY_ORBS);
+      const tmpResult = tmp(1928);
     }
     return hasPerkResult;
   },
   canUseShopDiscounts(currentUser) {
     let isXboxGamePassPerksEnabled = apexExperiment.getIsXboxGamePassPerksEnabled("canUseShopDiscounts");
     if (isXboxGamePassPerksEnabled) {
-      let tmpResult = tmp(1942);
+      let tmpResult = tmp(1928);
       let perks;
       if (currentUser != null) {
         perks = currentUser.perks;
       }
-      isXboxGamePassPerksEnabled = tmpResult.hasPerk(perks, tmp(1938).Perk.SHOP_DISCOUNTS);
+      isXboxGamePassPerksEnabled = tmpResult.hasPerk(perks, tmp(1930).Perk.SHOP_DISCOUNTS);
     }
     if (!isXboxGamePassPerksEnabled) {
-      tmpResult = tmp(13686);
-      isXboxGamePassPerksEnabled = tmpResult.canUserUse(tmp(13686).COLLECTIBLES, currentUser);
+      tmpResult = tmp(13719);
+      isXboxGamePassPerksEnabled = tmpResult.canUserUse(tmp(13719).COLLECTIBLES, currentUser);
     }
     return isXboxGamePassPerksEnabled;
   },
   canUseMoreQuestOrbs(perks) {
     let isXboxGamePassPerksEnabled = apexExperiment.getIsXboxGamePassPerksEnabled("canUseMoreQuestOrbs");
     if (isXboxGamePassPerksEnabled) {
-      let tmpResult = tmp(1942);
+      let tmpResult = tmp(1928);
       perks = undefined;
       if (perks != null) {
         perks = perks.perks;
       }
-      isXboxGamePassPerksEnabled = tmpResult.hasPerk(perks, tmp(1938).Perk.MORE_QUEST_ORBS);
+      isXboxGamePassPerksEnabled = tmpResult.hasPerk(perks, tmp(1930).Perk.MORE_QUEST_ORBS);
     }
     if (!isXboxGamePassPerksEnabled) {
-      tmpResult = tmp(13686);
-      isXboxGamePassPerksEnabled = tmpResult.canUserUse(tmp(13686).QUEST_ORB_MULTIPLIER, perks);
+      tmpResult = tmp(13719);
+      isXboxGamePassPerksEnabled = tmpResult.canUserUse(tmp(13719).QUEST_ORB_MULTIPLIER, perks);
     }
     return isXboxGamePassPerksEnabled;
   },

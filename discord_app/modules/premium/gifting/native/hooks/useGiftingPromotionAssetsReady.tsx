@@ -1,9 +1,9 @@
-// === Module 16495: useGiftingPromotionAssetsReady ===
+// === Module 16531: useGiftingPromotionAssetsReady ===
 
-// Module 16495 (useGiftingPromotionAssetsReady)
+// Module 16531 (useGiftingPromotionAssetsReady)
 import set from "set" /* 2 */;
-import useThemeAndReducedMotionAwareAssetUrl from "useThemeAndReducedMotionAwareAssetUrl" /* 10486 */;
-import usePreloadedAssetDefault from "usePreloadedAsset" /* 16496 */;
+import useThemeAndReducedMotionAwareAssetUrl from "useThemeAndReducedMotionAwareAssetUrl" /* 10524 */;
+import usePreloadedAssetDefault from "usePreloadedAsset" /* 16532 */;
 
 const result = set.fileFinishedImporting("modules/premium/gifting/native/hooks/useGiftingPromotionAssetsReady.tsx");
 

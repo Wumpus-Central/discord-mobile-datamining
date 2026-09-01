@@ -1,9 +1,9 @@
-// === Module 11322: setBuildOverrideForBranch ===
+// === Module 11360: setBuildOverrideForBranch ===
 
-// Module 11322 (setBuildOverrideForBranch)
-import BundleUpdaterManagerDefault from "BundleUpdaterManager" /* 11324 */;
+// Module 11360 (setBuildOverrideForBranch)
+import BundleUpdaterManagerDefault from "BundleUpdaterManager" /* 11362 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "getCurrentBuildOverride" /* 11022 */;
+import closure_4 from "getCurrentBuildOverride" /* 11059 */;
 import set from "set" /* 500 */;
 
 const require = arg1;
@@ -38,7 +38,7 @@ function _setBuildOverride() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -76,10 +76,10 @@ function _setBuildOverride() {
           } else {
             lib = arg1;
             if (400 !== lib.status) {
-              obj2 = callback(11324);
+              obj2 = callback(11362);
               const result = obj2.checkForUpdateAndReload();
             } else {
-              obj = callback(4826);
+              obj = callback(4858);
               obj4 = { title: "Override Error", body: null, isDismissable: true };
               obj4[1] = lib.body[closure_5];
               obj.show(obj4);
@@ -126,7 +126,7 @@ function _clearBuildOverride() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -147,7 +147,7 @@ function _clearBuildOverride() {
             dependencyMap = 1;
             c3 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = closure_1_0(11323).clearBuildOverride();
+            obj1[0] = closure_1_0(11361).clearBuildOverride();
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -161,10 +161,10 @@ function _clearBuildOverride() {
         } else {
           closure_0 = arg1;
           if (400 !== closure_0.status) {
-            obj2 = callback(11324);
+            obj2 = callback(11362);
             const result = obj2.checkForUpdateAndReload();
           } else {
-            obj = callback(4826);
+            obj = callback(4858);
             const obj3 = { title: "Clear Override Error", body: null, isDismissable: true };
             obj3[1] = closure_0.body;
             obj.show(obj3);
@@ -204,7 +204,7 @@ function _toggleOverride() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -247,7 +247,7 @@ function _toggleOverride() {
                   if (null != id1) {
                     closure_1_6(id1);
                     currentBuildOverride = 3;
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 }
                 obj10 = lib(closure_1_2[6]);
@@ -272,13 +272,13 @@ function _toggleOverride() {
           } else {
             lib = arg1;
             if (400 === lib.status) {
-              obj = callback(4826);
+              obj = callback(4858);
               const obj3 = { title: "Override Error", body: null, isDismissable: true };
               obj3[1] = lib.body[closure_5];
               obj.show(obj3);
             }
           }
-          obj2 = callback(11324);
+          obj2 = callback(11362);
           const result = obj2.checkForUpdateAndReload();
         } catch (tmp29) {
           currentBuildOverride = tmp;
@@ -314,7 +314,7 @@ function _setBuildOverrideFromLink() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -374,13 +374,13 @@ function _setBuildOverrideFromLink() {
           } else {
             lib = arg1;
             if (400 === lib.status) {
-              obj = callback(4826);
+              obj = callback(4858);
               const obj3 = { title: "Override Error", body: null, isDismissable: true };
               obj3[1] = lib.body[closure_5];
               obj.show(obj3);
             }
           }
-          obj2 = callback(11324);
+          obj2 = callback(11362);
           const result = obj2.checkForUpdateAndReload();
         } catch (tmp26) {
           currentBuildOverride = tmp;

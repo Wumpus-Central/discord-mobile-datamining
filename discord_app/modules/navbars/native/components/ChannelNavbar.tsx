@@ -1,29 +1,29 @@
-// === Module 12279: ChannelTitleContent ===
+// === Module 12312: ChannelTitleContent ===
 
-// Module 12279 (ChannelTitleContent)
+// Module 12312 (ChannelTitleContent)
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4444 */;
-import computeChannelName from "computeChannelName" /* 4642 */;
-import PressableBase from "PressableBase" /* 5036 */;
-import ActivityStatusDefault from "ActivityStatus" /* 9200 */;
+import Text from "Text" /* 4474 */;
+import computeChannelName from "computeChannelName" /* 4674 */;
+import PressableBase from "PressableBase" /* 5068 */;
+import ActivityStatusDefault from "ActivityStatus" /* 9239 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "_handleConnectionOpen" /* 5189 */;
+import closure_5 from "_handleConnectionOpen" /* 5221 */;
 import { THREAD_CHANNEL_TYPES } from "createChannelRecord" /* 1391 */;
 import closure_7 from "ensureGuildLoaded" /* 1387 */;
 import closure_8 from "createGuildRecordFromRust" /* 1909 */;
-import closure_9 from "sortActivity" /* 4537 */;
-import closure_10 from "markAllUserIdListsStale" /* 4100 */;
+import closure_9 from "sortActivity" /* 4569 */;
+import closure_10 from "markAllUserIdListsStale" /* 4130 */;
 import closure_11 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import { StaticChannelRoute } from "set" /* 1394 */;
 import ContentDismissActionType from "ContentDismissActionType" /* 1384 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
-import importDefaultResult from "createTextStyle" /* 5429 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
+import importDefaultResult from "createTextStyle" /* 5461 */;
 
 require = arg1;
 function ChannelTitleContent(arg0) {
@@ -416,12 +416,12 @@ export const ChannelTitleWithoutRoute = function ChannelTitleWithoutRoute(arg0) 
   }
   let channelIcon = null;
   if (null != stateFromStores) {
-    let tmp2Result = tmp2(4949);
+    let tmp2Result = tmp2(4981);
     channelIcon = tmp2Result.getChannelIcon(stateFromStores);
   }
   let channelName = null;
   if (null != stateFromStores) {
-    tmp2Result = tmp2(4642);
+    tmp2Result = tmp2(4674);
     channelName = tmp2Result.computeChannelName(stateFromStores, closure_11, closure_10);
   }
   let isDMResult;

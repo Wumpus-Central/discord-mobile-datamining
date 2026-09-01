@@ -1,6 +1,6 @@
-// === Module 4941: SoundButtonOverlay ===
+// === Module 4973: SoundButtonOverlay ===
 
-// Module 4941 (SoundButtonOverlay)
+// Module 4973 (SoundButtonOverlay)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/soundboard/SoundboardTypes.tsx");

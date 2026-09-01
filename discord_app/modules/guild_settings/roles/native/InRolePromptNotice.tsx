@@ -1,14 +1,14 @@
-// === Module 17178: InRolePromptNotice ===
+// === Module 17214: InRolePromptNotice ===
 
-// Module 17178 (InRolePromptNotice)
+// Module 17214 (InRolePromptNotice)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import hasFlag from "hasFlag" /* 1399 */;
-import registerAssetDefault from "registerAsset" /* 9555 */;
+import registerAssetDefault from "registerAsset" /* 9594 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { RoleFlags } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 noopAll;
@@ -32,7 +32,7 @@ export default function InRolePromptNotice(role) {
   } else {
     obj = { style: null, children: null };
     obj[0] = string.promptRow;
-    const tmpResult = tmp(17179);
+    const tmpResult = tmp(17215);
     let Icon = tmp(1297).Icon;
     if (isRolePowerfulResult) {
       obj = { style: null, source: null, color: null };
@@ -46,7 +46,7 @@ export default function InRolePromptNotice(role) {
       string = intl2.string;
       stringResult = string(tmp(1236).t.YRbgXz);
       obj1[2] = stringResult;
-      Icon = tmp6(tmp(4444).Text, obj1);
+      Icon = tmp6(tmp(4474).Text, obj1);
       items[1] = Icon;
       obj[1] = items;
       let tmp4Result = tmp4(tmp5, obj);
@@ -59,10 +59,10 @@ export default function InRolePromptNotice(role) {
       obj3[0] = string.promptText;
       const intl = tmp(1236).intl;
       obj3[2] = intl.string(tmp(1236).t.mqeO2v);
-      items1[1] = tmp6(tmp(4444).Text, obj3);
+      items1[1] = tmp6(tmp(4474).Text, obj3);
       obj[1] = items1;
       tmp4Result = tmp4(tmp5, obj);
     }
-    isRolePowerfulResult = tmp(17179).isRolePowerful(role);
+    isRolePowerfulResult = tmp(17215).isRolePowerful(role);
   }
 };

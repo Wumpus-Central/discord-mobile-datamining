@@ -1,12 +1,12 @@
-// === Module 8445: resolveGiftCode ===
+// === Module 8477: resolveGiftCode ===
 
-// Module 8445 (resolveGiftCode)
-import prototypeDefault from "prototype" /* 4132 */;
-import _modDef8446 from "module_8446" /* 8446 */;
+// Module 8477 (resolveGiftCode)
+import prototypeDefault from "prototype" /* 4162 */;
+import _modDef8478 from "module_8478" /* 8478 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "addApplication" /* 4489 */;
-import closure_5 from "updateCategoriesAndProducts" /* 7255 */;
-import { isUnknownCollectiblesItemRecord as closure_6 } from "fromServer" /* 7263 */;
+import closure_4 from "addApplication" /* 4519 */;
+import closure_5 from "updateCategoriesAndProducts" /* 7287 */;
+import { isUnknownCollectiblesItemRecord as closure_6 } from "fromServer" /* 7295 */;
 import ME from "ME" /* 676 */;
 import { PREMIUM_SUBSCRIPTION_APPLICATION as closure_10 } from "GuildFeatures" /* 1924 */;
 
@@ -42,7 +42,7 @@ function _resolveGiftCode() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -71,7 +71,7 @@ function _resolveGiftCode() {
               application = undefined;
               c7 = 1;
               c8 = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else if (1 === tmp9) {
             if (arg0 === 1) {
@@ -366,7 +366,7 @@ export default {
     })();
   },
   openNativeGiftCodeModal(arg0) {
-    _modDef8446.openNativeAppModal(arg0, constants.GIFT_CODE_BROWSER);
+    _modDef8478.openNativeAppModal(arg0, constants.GIFT_CODE_BROWSER);
   }
 };
 export { resolveGiftCode };

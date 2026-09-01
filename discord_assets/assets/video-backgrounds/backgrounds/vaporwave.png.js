@@ -1,6 +1,6 @@
-// === Module 9757: metadata ===
+// === Module 9796: metadata ===
 
-// Module 9757 (metadata)
+// Module 9796 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/video-backgrounds/backgrounds/vaporwave.png.js");

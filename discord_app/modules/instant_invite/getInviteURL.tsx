@@ -1,6 +1,6 @@
-// === Module 7471: getInviteURL ===
+// === Module 7503: getInviteURL ===
 
-// Module 7471 (getInviteURL)
+// Module 7503 (getInviteURL)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/instant_invite/getInviteURL.tsx");

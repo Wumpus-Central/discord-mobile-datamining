@@ -1,10 +1,10 @@
-// === Module 4995: TextLockIcon ===
+// === Module 5027: TextLockIcon ===
 
-// Module 4995 (TextLockIcon)
+// Module 5027 (TextLockIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4166 */;
-import registerAsset from "registerAsset" /* 4974 */;
+import BaseIconImage from "BaseIconImage" /* 4196 */;
+import registerAsset from "registerAsset" /* 5006 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

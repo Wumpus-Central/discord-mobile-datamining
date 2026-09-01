@@ -1,18 +1,18 @@
-// === Module 7416: initializeState ===
+// === Module 7448: initializeState ===
 
-// Module 7416 (initializeState)
+// Module 7448 (initializeState)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import _modDef1208 from "module_1208" /* 1208 */;
-import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement" /* 7411 */;
-import result6 from "result" /* 7413 */;
-import QuestRewardTypes from "QuestRewardTypes" /* 7421 */;
-import getQuestLogger from "getQuestLogger" /* 7422 */;
-import progressFromServer from "progressFromServer" /* 7423 */;
+import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement" /* 7443 */;
+import result6 from "result" /* 7445 */;
+import QuestRewardTypes from "QuestRewardTypes" /* 7453 */;
+import getQuestLogger from "getQuestLogger" /* 7454 */;
+import progressFromServer from "progressFromServer" /* 7455 */;
 import closure_28 from "_slicedToArray" /* 32 */;
-import closure_29 from "useConsoleQuestUIStore" /* 7417 */;
-import closure_30 from "_toPropertyKey" /* 7418 */;
-import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 5355 */;
+import closure_29 from "useConsoleQuestUIStore" /* 7449 */;
+import closure_30 from "_toPropertyKey" /* 7450 */;
+import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 5387 */;
 
 require = arg1;
 function initializeState() {
@@ -139,7 +139,7 @@ function _runExpirationCheck() {
   if (_require) {
     questStore.emitChange();
   }
-  let result = _require(7411).findNextUpcomingExpirationEpochMs(Array.from(store.values()));
+  let result = _require(7443).findNextUpcomingExpirationEpochMs(Array.from(store.values()));
   if (null != result) {
     const _Math = Math;
     const _Date = Date;
@@ -372,13 +372,13 @@ const questStore = new QuestStore(dispatcherDefault, {
       let tmp13 = mapped;
       let tmp14 = dependencyMap;
       let tmp15 = dependencyMap;
-      let obj5 = mapped(7411);
+      let obj5 = mapped(7443);
       let result1 = map1.set(nextResult.id, obj5.isQuestExpired(nextResult));
       let targetedContent = nextResult.targetedContent;
-      if (targetedContent.includes(mapped(5358).QuestContent.QUEST_BAR)) {
+      if (targetedContent.includes(mapped(5390).QuestContent.QUEST_BAR)) {
         let tmp17 = tmp12;
         let tmp18 = tmp14;
-        let tmp13Result = tmp13(7422);
+        let tmp13Result = tmp13(7454);
         obj1 = { location: null };
         let tmp19 = QuestsExperimentLocations;
         obj1[0] = QuestsExperimentLocations.QUESTS_STORE;
@@ -412,7 +412,7 @@ const questStore = new QuestStore(dispatcherDefault, {
         let tmp32 = mapped;
         let tmp33 = dependencyMap;
         let tmp34 = dependencyMap;
-        let obj10 = mapped(7411);
+        let obj10 = mapped(7443);
         let result4 = map1.set(tmp26.id, obj10.isQuestExpired(tmp26));
       }
       continue;
@@ -541,7 +541,7 @@ const questStore = new QuestStore(dispatcherDefault, {
           let tmp24 = map3;
           let tmp25 = tmp36;
           let tmp26 = tmp38;
-          let tmp37Result = tmp37(7411);
+          let tmp37Result = tmp37(7443);
           let result4 = map3.set(tmp10, tmp37Result.isQuestExpired(result2));
         }
       }

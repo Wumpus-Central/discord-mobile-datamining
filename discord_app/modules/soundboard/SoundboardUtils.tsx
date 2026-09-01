@@ -1,22 +1,22 @@
-// === Module 6156: hasPermissionToPlaySound ===
+// === Module 6188: hasPermissionToPlaySound ===
 
-// Module 6156 (hasPermissionToPlaySound)
+// Module 6188 (hasPermissionToPlaySound)
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4109 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4136 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4668 */;
-import _fetchDefaultSoundsFromApi2 from "_fetchDefaultSoundsFromApi2" /* 6150 */;
-import getMuteStates from "getMuteStates" /* 6157 */;
-import VoiceChannelEffectSentLocation from "VoiceChannelEffectSentLocation" /* 6158 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4139 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
+import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4700 */;
+import _fetchDefaultSoundsFromApi2 from "_fetchDefaultSoundsFromApi2" /* 6182 */;
+import getMuteStates from "getMuteStates" /* 6189 */;
+import VoiceChannelEffectSentLocation from "VoiceChannelEffectSentLocation" /* 6190 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "handleConnectionClosedOrResumed" /* 1340 */;
 import { SILENT_JOIN_LEAVE_CHANNEL_TYPES as closure_5 } from "createChannelRecord" /* 1391 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4121 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import closure_8 from "handleSoundCreateOrUpdate" /* 4933 */;
-import MAX_LENGTH_SOUND_NAME from "MAX_LENGTH_SOUND_NAME" /* 4935 */;
+import closure_8 from "handleSoundCreateOrUpdate" /* 4965 */;
+import MAX_LENGTH_SOUND_NAME from "MAX_LENGTH_SOUND_NAME" /* 4967 */;
 import ME from "ME" /* 676 */;
 import { ExpressionPickerViewType } from "ExpressionPickerViewType" /* 1338 */;
 
@@ -117,7 +117,7 @@ function _maybePlayCustomJoinSound() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -201,7 +201,7 @@ function _maybePlayCustomJoinSound() {
             }
           }
           sound2 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp33) {
           sound2 = tmp;
           throw tmp33;
@@ -287,8 +287,8 @@ export const useSoundBoardDismissContentTypes = function useSoundBoardDismissCon
     const _Object = Object;
     const values = Object.values(guilds);
     if (!values.some((joinSound) => null != joinSound.joinSound)) {
-      const result = tmp(4292).ageEligibleForPremiumUpsell(stateFromStores);
-      const tmpResult = tmp(4292);
+      const result = tmp(4322).ageEligibleForPremiumUpsell(stateFromStores);
+      const tmpResult = tmp(4322);
       const obj5 = getPremiumPlanItemDefault;
       if (tmp9) {
         items1.push(tmp(1373).DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL);

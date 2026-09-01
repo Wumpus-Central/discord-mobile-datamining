@@ -1,10 +1,10 @@
-// === Module 16461: render ===
+// === Module 16497: render ===
 
-// Module 16461 (render)
+// Module 16497 (render)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import registerAssetDefault from "registerAsset" /* 16463 */;
-import registerAssetDefault2 from "registerAsset" /* 16464 */;
-import closure_3 from "initialize" /* 13372 */;
+import registerAssetDefault from "registerAsset" /* 16499 */;
+import registerAssetDefault2 from "registerAsset" /* 16500 */;
+import closure_3 from "initialize" /* 13405 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
@@ -36,7 +36,7 @@ Suppressed.prototype["render"] = function render() {
     tmp6 = importDefault;
     tmp7 = registerAssetDefault2;
   }
-  return jsx(tmp6(4915), { title: stringResult, body: stringResult1, iconSource: tmp7, onConfirm: this.close });
+  return jsx(tmp6(4947), { title: stringResult, body: stringResult1, iconSource: tmp7, onConfirm: this.close });
 };
 const result = require("set").fileFinishedImporting("components_native/warnings/Suppressed.tsx");
 

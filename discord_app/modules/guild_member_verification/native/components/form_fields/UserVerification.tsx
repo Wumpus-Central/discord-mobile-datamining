@@ -1,12 +1,12 @@
-// === Module 7653: UserVerification ===
+// === Module 7685: UserVerification ===
 
-// Module 7653 (UserVerification)
+// Module 7685 (UserVerification)
 import noopAll from "noop" /* 19 */;
-import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4272 */;
-import Text from "Text" /* 4444 */;
-import BaseIdentityVerificationFieldDefault from "BaseIdentityVerificationField" /* 7654 */;
+import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4302 */;
+import Text from "Text" /* 4474 */;
+import BaseIdentityVerificationFieldDefault from "BaseIdentityVerificationField" /* 7686 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 noopAll;
@@ -23,8 +23,8 @@ export default function UserVerification(arg0) {
     let tmp5 = platform === MAX_RESULTS_PER_PAGE.UserVerificationFieldPlatforms.PHONE;
     if (tmp5) {
       let obj = { passesVerification: null, platform: null };
-      obj[0] = verification[tmp12(undefined, 4272).UserVerificationFieldPlatforms.PHONE];
-      obj[1] = tmp12(4272).UserVerificationFieldPlatforms.PHONE;
+      obj[0] = verification[tmp12(undefined, 4302).UserVerificationFieldPlatforms.PHONE];
+      obj[1] = tmp12(4302).UserVerificationFieldPlatforms.PHONE;
       tmp5 = callback(BaseIdentityVerificationFieldDefault, obj);
       const tmp4 = BaseIdentityVerificationFieldDefault;
     }

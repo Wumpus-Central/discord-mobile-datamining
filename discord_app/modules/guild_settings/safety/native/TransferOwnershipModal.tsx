@@ -1,15 +1,15 @@
-// === Module 11380: closeModal ===
+// === Module 11418: closeModal ===
 
-// Module 11380 (closeModal)
-import _modDef11379 from "module_11379" /* 11379 */;
+// Module 11418 (closeModal)
+import _modDef11417 from "module_11417" /* 11417 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
-import TransferOwnershipModalScenes from "TransferOwnershipModalScenes" /* 11381 */;
+import TransferOwnershipModalScenes from "TransferOwnershipModalScenes" /* 11419 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 function closeModal() {
-  _modDef11379.close();
+  _modDef11417.close();
 }
 ({ TransferOwnershipModalScenes: c5, TransferOwnershipVerificationTypes: closure_6 } = TransferOwnershipModalScenes);
 let result = require("set").fileFinishedImporting("modules/guild_settings/safety/native/TransferOwnershipModal.tsx");
@@ -62,11 +62,11 @@ export default function TransferOwnershipModal(guild) {
         return applyArgumentsResult;
       };
       obj[1] = function onSuccess() {
-        callback2(11379).close();
-        const obj = callback2(11379);
-        callback2(9689).close();
-        const obj2 = callback2(9689);
-        const result = callback(4163).showTransferOwnershipSuccess();
+        callback2(11417).close();
+        const obj = callback2(11417);
+        callback2(9728).close();
+        const obj2 = callback2(9728);
+        const result = callback(4193).showTransferOwnershipSuccess();
       };
       obj[2] = closure_1_3(function*() {
         if (id === 2) {
@@ -80,7 +80,7 @@ export default function TransferOwnershipModal(guild) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -112,7 +112,7 @@ export default function TransferOwnershipModal(guild) {
               return obj;
             } else {
               id = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp8) {
             id = tmp;
@@ -132,5 +132,5 @@ export default function TransferOwnershipModal(guild) {
   let obj = { screens: memo, initialRouteName: constants.TRANFSER_OWNERSHIP, headerBackTitle: null };
   let intl = guild(1236).intl;
   obj[2] = intl.string(guild(1236).t["13/7kX"]);
-  return jsx(guild(5976).Navigator, { screens: memo, initialRouteName: constants.TRANFSER_OWNERSHIP, headerBackTitle: null });
+  return jsx(guild(6008).Navigator, { screens: memo, initialRouteName: constants.TRANFSER_OWNERSHIP, headerBackTitle: null });
 };

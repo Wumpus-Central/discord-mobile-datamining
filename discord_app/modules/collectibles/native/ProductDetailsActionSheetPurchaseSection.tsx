@@ -1,19 +1,19 @@
-// === Module 12527: GiftButton ===
+// === Module 12560: GiftButton ===
 
-// Module 12527 (GiftButton)
+// Module 12560 (GiftButton)
 import ThemesDefault from "Themes" /* 712 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1950 */;
-import Text from "Text" /* 4444 */;
+import Text from "Text" /* 4474 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "map" /* 7271 */;
+import closure_6 from "map" /* 7303 */;
 import items from "items" /* 678 */;
 import ME from "ME" /* 676 */;
-import { RootNavigatorScreen } from "MODE_CHANGE_PHYSICS" /* 10793 */;
+import { RootNavigatorScreen } from "MODE_CHANGE_PHYSICS" /* 10831 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function GiftButton(onTrackPress) {

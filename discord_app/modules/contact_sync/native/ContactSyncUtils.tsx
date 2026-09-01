@@ -1,22 +1,22 @@
-// === Module 12185: _uploadContacts ===
+// === Module 12218: _uploadContacts ===
 
-// Module 12185 (_uploadContacts)
+// Module 12218 (_uploadContacts)
 import PlatformTypes from "PlatformTypes" /* 501 */;
 import encodeProperties from "encodeProperties" /* 503 */;
 import initialize from "initialize" /* 589 */;
 import _modDef1208 from "module_1208" /* 1208 */;
 import hasFlag from "hasFlag" /* 1399 */;
 import combinedDefault from "combined" /* 1995 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4136 */;
-import _modDef4160 from "module_4160" /* 4160 */;
-import _modDef4681 from "module_4681" /* 4681 */;
-import _modDef4691 from "module_4691" /* 4691 */;
-import _requestAndSyncContacts from "_requestAndSyncContacts" /* 12186 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
+import _modDef4190 from "module_4190" /* 4190 */;
+import _modDef4713 from "module_4713" /* 4713 */;
+import _modDef4723 from "module_4723" /* 4723 */;
+import _requestAndSyncContacts from "_requestAndSyncContacts" /* 12219 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "set" /* 5193 */;
-import setStoredContacts from "setStoredContacts" /* 12184 */;
-import ContactSyncLandingPage from "ContactSyncLandingPage" /* 12183 */;
+import closure_5 from "set" /* 5225 */;
+import setStoredContacts from "setStoredContacts" /* 12217 */;
+import ContactSyncLandingPage from "ContactSyncLandingPage" /* 12216 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -28,99 +28,33 @@ function _uploadContacts() {
     c4 = 0;
     c5 = 0;
     const iter = (function*(arg0, body) {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              body = tmp5;
-              dependencyMap = tmp2;
-              let flag;
-              if (flag === undefined) {
-                flag = false;
-              }
-              dependencyMap = undefined;
-              body = undefined;
-              c4 = 1;
-              c5 = 1;
-              return { value: "Object", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = body;
-              return obj1;
-            } else {
-              const _JSON = JSON;
-              dependencyMap = JSON.parse(callback);
-              let obj7 = flag(4681);
-              const obj2 = { url: null, body: null, trackedActionData: null, rejectWithError: false };
-              obj2[0] = constants2.CONNECTION_SYNC_CONTACTS;
-              const obj3 = { friend_list_entries: null, background: null, allowed_in_suggestions: null, include_mutual_friends_count: false };
-              obj3[0] = dependencyMap;
-              obj3[1] = flag;
-              obj3[2] = constants.ANYONE_WITH_CONTACT_INFO;
-              obj2[1] = obj3;
-              const obj4 = { event: null };
-              obj4[0] = callback(503).NetworkActionNames.USER_CONTACTS_SYNC;
-              obj2[2] = obj4;
-              c4 = 2;
-              c5 = 1;
-              const obj5 = { value: null, done: false };
-              obj5[0] = obj7.put(obj2);
-              return obj5;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw body;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = body;
-            return obj6;
-          } else {
-            body = body.body;
-            obj = flag(709);
-            obj.wait(() => {
-              let obj = flag(table[9]);
-              obj = { type: "LOAD_FRIEND_SUGGESTIONS_SUCCESS", suggestions: body.friend_suggestions };
-              return obj.dispatch(obj);
-            });
-            c5 = 3;
-            obj7 = { value: null, done: true };
-            obj7[0] = body;
-            return obj7;
-          }
-        } catch (tmp12) {
-          c5 = tmp;
-          throw tmp12;
-        }
+      dependencyMap = tmp2;
+      if (flag === undefined) {
+        flag = false;
       }
+      yield "PX_16";
+      const _JSON = JSON;
+      dependencyMap = JSON.parse(callback);
+      const obj7 = flag(4713);
+      const obj2 = { url: null, body: null, trackedActionData: null, rejectWithError: false };
+      obj2[0] = constants2.CONNECTION_SYNC_CONTACTS;
+      const obj3 = { friend_list_entries: null, background: null, allowed_in_suggestions: null, include_mutual_friends_count: false };
+      obj3[0] = dependencyMap;
+      obj3[1] = flag;
+      obj3[2] = constants.ANYONE_WITH_CONTACT_INFO;
+      obj2[1] = obj3;
+      const obj4 = { event: null };
+      obj4[0] = callback(503).NetworkActionNames.USER_CONTACTS_SYNC;
+      obj2[2] = obj4;
+      yield obj7.put(obj2);
+      body = body.body;
+      let obj = flag(709);
+      obj.wait(() => {
+        let obj = flag(table[9]);
+        obj = { type: "LOAD_FRIEND_SUGGESTIONS_SUCCESS", suggestions: body.friend_suggestions };
+        return obj.dispatch(obj);
+      });
+      return body;
     })();
     iter.next();
     return iter;
@@ -192,7 +126,7 @@ export const uploadContacts = function uploadContacts(c3, arg1) {
   return applyArgumentsResult;
 };
 export const bulkAddFriends = function bulkAddFriends(user_ids, bulkAddToken) {
-  let obj = _modDef4681;
+  let obj = _modDef4713;
   obj = { url: closure_12.USER_BULK_RELATIONSHIPS, body: obj, trackedActionData: null, rejectWithError: false };
   obj = { user_ids, token: bulkAddToken };
   obj[2] = { event: encodeProperties.NetworkActionNames.USER_BULK_RELATIONSHIPS_UPDATE };
@@ -209,7 +143,7 @@ export const adminDeleteContactSync = function adminDeleteContactSync() {
   obj = { url: closure_12.CONNECTION(constants2.CONTACTS, "@me"), oldFormErrors: true, trackedActionData: null, rejectWithError: false };
   obj = { event: encodeProperties.NetworkActionNames.USER_CONNECTIONS_UPDATE };
   obj[2] = obj;
-  return _modDef4681.delete(obj);
+  return _modDef4713.delete(obj);
 };
 export const getImageForContactId = function getImageForContactId(closure_0, arg1) {
   let DCDContactSyncManager = NativeModules.DCDContactSyncManager;
@@ -307,9 +241,9 @@ export const getOpenLearnMoreUrl = function getOpenLearnMoreUrl() {
   return combinedDefault.getArticleURL(constants4.CONTACT_SYNC);
 };
 export const handleOpenLearnMoreLink = function handleOpenLearnMoreLink() {
-  const obj = _modDef4160;
+  const obj = _modDef4190;
   obj.openURL(combinedDefault.getArticleURL(constants4.CONTACT_SYNC));
 };
 export const transitionToAddFriendsLandingPage = function transitionToAddFriendsLandingPage() {
-  _modDef4691.popWithKey(closure_9);
+  _modDef4723.popWithKey(closure_9);
 };

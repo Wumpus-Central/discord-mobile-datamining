@@ -1,10 +1,10 @@
-// === Module 9807: _computeBoundPairwiseFingerprint ===
+// === Module 9846: _computeBoundPairwiseFingerprint ===
 
-// Module 9807 (_computeBoundPairwiseFingerprint)
+// Module 9846 (_computeBoundPairwiseFingerprint)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "createRTCConnection" /* 4522 */;
-import { SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION as closure_6 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9802 */;
+import closure_5 from "createRTCConnection" /* 4554 */;
+import { SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION as closure_6 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9841 */;
 
 const require = arg1;
 function _computeBoundPairwiseFingerprint() {
@@ -25,7 +25,7 @@ function _computeBoundPairwiseFingerprint() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -64,7 +64,7 @@ function _computeBoundPairwiseFingerprint() {
                     if (null != value) {
                       return value;
                     } else {
-                      const obj4 = joined(9785);
+                      const obj4 = joined(9824);
                       const _Uint8Array = Uint8Array;
                       const uint8Array2 = new Uint8Array(secureFramesRosterMapEntry1);
                       const _Uint8Array2 = Uint8Array;

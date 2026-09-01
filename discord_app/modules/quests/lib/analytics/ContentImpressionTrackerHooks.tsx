@@ -1,9 +1,9 @@
-// === Module 11049: useAdContentImpressionTrackerProps ===
+// === Module 11086: useAdContentImpressionTrackerProps ===
 
-// Module 11049 (useAdContentImpressionTrackerProps)
-import set from "set" /* 11050 */;
+// Module 11086 (useAdContentImpressionTrackerProps)
+import set from "set" /* 11087 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "initializeState" /* 7416 */;
+import closure_4 from "initializeState" /* 7448 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/quests/lib/analytics/ContentImpressionTrackerHooks.tsx");
@@ -99,7 +99,7 @@ export const useQuestImpressionId = function useQuestImpressionId() {
   return id;
 };
 export const useGetQuestImpressionId = function useGetQuestImpressionId() {
-  context = React.useContext(context(11050).QuestImpressionContext);
+  context = React.useContext(context(11087).QuestImpressionContext);
   const items = [context];
   return React.useCallback(() => {
     let id;

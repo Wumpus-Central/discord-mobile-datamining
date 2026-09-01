@@ -1,6 +1,6 @@
-// === Module 11837: getSearchState ===
+// === Module 11870: getSearchState ===
 
-// Module 11837 (getSearchState)
+// Module 11870 (getSearchState)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 
@@ -63,7 +63,7 @@ const guildDirectorySearchStore = new GuildDirectorySearchStore(dispatcherDefaul
     });
     obj = {};
     const merged1 = Object.assign(dependencyMap2[channelId]);
-    obj = { results: items(11838).orderByTotalMemberCount(items), lastSearchedAt: Date.now() };
+    obj = { results: items(11871).orderByTotalMemberCount(items), lastSearchedAt: Date.now() };
     obj[query.query] = obj;
     dependencyMap2[channelId] = obj;
   },

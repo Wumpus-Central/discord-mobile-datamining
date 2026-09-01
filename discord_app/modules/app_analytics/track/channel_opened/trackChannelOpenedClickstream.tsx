@@ -1,7 +1,7 @@
-// === Module 7487: trackChannelOpenedClickstream ===
+// === Module 7519: trackChannelOpenedClickstream ===
 
-// Module 7487 (trackChannelOpenedClickstream)
-import isClickstreamEnabled from "isClickstreamEnabled" /* 7179 */;
+// Module 7519 (trackChannelOpenedClickstream)
+import isClickstreamEnabled from "isClickstreamEnabled" /* 7211 */;
 import closure_2 from "ensureGuildLoaded" /* 1387 */;
 import ME from "ME" /* 676 */;
 import { StaticChannelRoute } from "set" /* 1394 */;

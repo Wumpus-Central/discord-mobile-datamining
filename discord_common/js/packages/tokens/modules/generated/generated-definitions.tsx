@@ -504,22 +504,8 @@ set = {
   }
 };
 set = {
-  resolve(enabledExperiments) {
-    enabledExperiments = enabledExperiments.enabledExperiments;
-    if (0 === enabledExperiments.length) {
-      return "icon-default";
-    } else {
-      const iter = enabledExperiments[Symbol.iterator]();
-      while (iter !== undefined) {
-        if ("mobile-visual-refresh" === iter.next()) {
-          let tmp4 = iter;
-          iter.return();
-          let str2 = "icon-default";
-          return "icon-default";
-        }
-      }
-      return "icon-default";
-    }
+  resolve() {
+    return "icon-default";
   }
 };
 set = {
@@ -542,22 +528,8 @@ set = {
   }
 };
 set = {
-  resolve(enabledExperiments) {
-    enabledExperiments = enabledExperiments.enabledExperiments;
-    if (0 === enabledExperiments.length) {
-      return "text-default";
-    } else {
-      const iter = enabledExperiments[Symbol.iterator]();
-      while (iter !== undefined) {
-        if ("mobile-visual-refresh" === iter.next()) {
-          let tmp4 = iter;
-          iter.return();
-          let str2 = "text-default";
-          return "text-default";
-        }
-      }
-      return "text-default";
-    }
+  resolve() {
+    return "text-default";
   }
 };
 set = {
@@ -1027,22 +999,8 @@ set = {
   }
 };
 set = {
-  resolve(enabledExperiments) {
-    enabledExperiments = enabledExperiments.enabledExperiments;
-    if (0 === enabledExperiments.length) {
-      return "mobile-text-heading-primary";
-    } else {
-      const iter = enabledExperiments[Symbol.iterator]();
-      while (iter !== undefined) {
-        if ("mobile-visual-refresh" === iter.next()) {
-          let tmp4 = iter;
-          iter.return();
-          let str2 = "text-strong";
-          return "text-strong";
-        }
-      }
-      return "mobile-text-heading-primary";
-    }
+  resolve() {
+    return "text-strong";
   }
 };
 set = {
@@ -2041,22 +1999,8 @@ export const _private = {
         }
       },
       CHANNEL_SAFE_AREA_BOTTOM_BACKGROUND: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return "background-base-low";
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                let tmp4 = iter;
-                iter.return();
-                let str2 = "background-base-lower";
-                return "background-base-lower";
-              }
-            }
-            return "background-base-low";
-          }
+        resolve() {
+          return "background-base-lower";
         }
       },
       CHAT_INPUT_ACTION_BUTTON_GAP: {
@@ -2125,22 +2069,8 @@ export const _private = {
         }
       },
       CHAT_INPUT_ACTION_ICON_ACTIVE_TINT: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return "text-brand";
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                let tmp4 = iter;
-                iter.return();
-                let str2 = "icon-strong";
-                return "icon-strong";
-              }
-            }
-            return "text-brand";
-          }
+        resolve() {
+          return "icon-strong";
         }
       },
       CHAT_INPUT_ACTION_ICON_PIXEL_SIZE: {
@@ -2602,22 +2532,8 @@ export const _private = {
         }
       },
       CHAT_INPUT_ICON_DEFAULT_TINT: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return "interactive-text-default";
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                let tmp4 = iter;
-                iter.return();
-                let str2 = "interactive-icon-default";
-                return "interactive-icon-default";
-              }
-            }
-            return "interactive-text-default";
-          }
+        resolve() {
+          return "interactive-icon-default";
         }
       },
       CHAT_INPUT_ICON_SIZE: {

@@ -1,18 +1,18 @@
-// === Module 8799: GameProfileStoreLinksActionSheet ===
+// === Module 8836: GameProfileStoreLinksActionSheet ===
 
-// Module 8799 (GameProfileStoreLinksActionSheet)
+// Module 8836 (GameProfileStoreLinksActionSheet)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import _modDef4160 from "module_4160" /* 4160 */;
-import Text from "Text" /* 4444 */;
-import BottomSheetModal from "BottomSheetModal" /* 5592 */;
-import ActionSheet from "ActionSheet" /* 5957 */;
-import _getDeepLinkUrlDefault from "_getDeepLinkUrl" /* 8772 */;
+import _modDef4190 from "module_4190" /* 4190 */;
+import Text from "Text" /* 4474 */;
+import BottomSheetModal from "BottomSheetModal" /* 5624 */;
+import ActionSheet from "ActionSheet" /* 5989 */;
+import _getDeepLinkUrlDefault from "_getDeepLinkUrl" /* 8809 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 noopAll;
@@ -30,7 +30,7 @@ export default function GameProfileStoreLinksActionSheet(gameName) {
   ({ websiteButtons, trackAction: require } = gameName);
   importDefault = undefined;
   const tmp = callback3();
-  importDefault = _getDeepLinkUrlDefault(_modDef4160.openURL);
+  importDefault = _getDeepLinkUrlDefault(_modDef4190.openURL);
   let obj = { children: null };
   obj = { contentContainerStyle: null, children: null };
   obj = { paddingBottom: useSafeAreaInsetsDefault().bottom + ThemesDefault.space.PX_16 };

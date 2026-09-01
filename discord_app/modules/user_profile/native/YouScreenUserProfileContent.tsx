@@ -1,28 +1,28 @@
-// === Module 16347: YouAvatar ===
+// === Module 16383: YouAvatar ===
 
-// Module 16347 (YouAvatar)
+// Module 16383 (YouAvatar)
 import set from "set" /* 500 */;
-import useSharedStylesDefault from "useSharedStyles" /* 8498 */;
-import OpenableUserProfileAvatarDefault from "OpenableUserProfileAvatar" /* 8523 */;
-import WidgetRendererDefault from "WidgetRenderer" /* 8763 */;
-import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 12462 */;
+import useSharedStylesDefault from "useSharedStyles" /* 8530 */;
+import OpenableUserProfileAvatarDefault from "OpenableUserProfileAvatar" /* 8555 */;
+import WidgetRendererDefault from "WidgetRenderer" /* 8800 */;
+import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 12495 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { useIsContentShown } from "withContent" /* 1379 */;
-import closure_8 from "filterPlayingActivities" /* 5191 */;
-import closure_9 from "createUserWidgetFromServer" /* 7334 */;
-import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY" /* 8524 */;
-import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET" /* 5969 */;
+import closure_8 from "filterPlayingActivities" /* 5223 */;
+import closure_9 from "createUserWidgetFromServer" /* 7366 */;
+import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY" /* 8556 */;
+import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET" /* 6001 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1384 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;
 function YouAvatar(arg0) {
   const callback = React.useCallback(() => {
-    const result = callback(16340).trackYouTabAvatarPress();
-    const obj = callback(16340);
-    const result1 = callback(15925).showYouAccountActionSheet();
+    const result = callback(16376).trackYouTabAvatarPress();
+    const obj = callback(16376);
+    const result1 = callback(15960).showYouAccountActionSheet();
   }, []);
   let obj = set;
   const isAndroidResult = obj.isAndroid();
@@ -396,7 +396,7 @@ export default function YouScreenUserProfileContent(user) {
       const timeout = setTimeout(() => {
         closure_1_24(closure_1_4 === constants.WISHLIST ? constants.WISHLIST : constants.MAIN);
         closure_1_31.current(num, false, true);
-        closure_1_6.setParams({ initialTab: "Array" });
+        closure_1_6.setParams({ initialTab: "r" });
       }, 80);
     }
     return () => {

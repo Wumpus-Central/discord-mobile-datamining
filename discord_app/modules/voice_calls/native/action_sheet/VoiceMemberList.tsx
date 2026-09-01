@@ -1,26 +1,26 @@
-// === Module 13405: ItemSeparator ===
+// === Module 13438: ItemSeparator ===
 
-// Module 13405 (ItemSeparator)
-import Text from "Text" /* 4444 */;
-import Form from "Form" /* 8331 */;
-import registerAssetDefault from "registerAsset" /* 10075 */;
-import _modDef13401 from "module_13401" /* 13401 */;
+// Module 13438 (ItemSeparator)
+import Text from "Text" /* 4474 */;
+import Form from "Form" /* 8363 */;
+import registerAssetDefault from "registerAsset" /* 10114 */;
+import _modDef13434 from "module_13434" /* 13434 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_9 from "participantFromServer" /* 1386 */;
-import closure_10 from "createdAt" /* 1930 */;
-import closure_11 from "reset" /* 4470 */;
-import closure_12 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_10 from "createdAt" /* 1935 */;
+import closure_11 from "reset" /* 4500 */;
+import closure_12 from "getUncachedChannelPermissions" /* 4121 */;
 import closure_13 from "mergeGuildAvatar" /* 1922 */;
-import closure_14 from "getVoiceStatesForGuild" /* 4523 */;
+import closure_14 from "getVoiceStatesForGuild" /* 4555 */;
 import ME from "ME" /* 676 */;
 import { FORM_ROW_VERTICAL_PADDING } from "semanticColor" /* 1301 */;
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5591 */;
+import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5623 */;
 import { ThemeTypes } from "sum" /* 505 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function ItemSeparator() {
@@ -86,7 +86,7 @@ function VoiceSectionRow(arg0) {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -186,7 +186,7 @@ function VoiceSectionRow(arg0) {
 ({ AnalyticsPages: closure_15, InstantInviteSources: closure_16, Permissions: closure_17 } = ME);
 ({ jsx: closure_21, jsxs: closure_22, Fragment: closure_23 } = jsxProd);
 let closure_24 = createCacheKey.createStyles({ container: { flex: 1, flexShrink: 1 }, sectionContainer: { paddingTop: 16, paddingHorizontal: 16 }, sectionTitle: { lineHeight: 16 }, voiceChannelContainer: { overflow: "hidden", flexGrow: 1, flexShrink: 1, minHeight: 1 }, headerFormDivider: { marginLeft: 0 }, rowFormDivider: { marginHorizontal: 16 } });
-let closure_25 = importAllResult.memo((channel) => callback2(_modDef13401, { channel: channel.channel }));
+let closure_25 = importAllResult.memo((channel) => callback2(_modDef13434, { channel: channel.channel }));
 let closure_26 = importAllResult.memo((channel) => {
   channel = channel.channel;
   channel(589);
@@ -202,8 +202,8 @@ let closure_26 = importAllResult.memo((channel) => {
       const intl = tmp4(1236).intl;
       obj[0] = intl.string(tmp4(1236).t["6Qgrev"]);
       obj[2] = registerAssetDefault;
-      obj[3] = tmp4(13090).CircularIconButton.Sizes.MEDIUM_32;
-      obj[0] = callback2(tmp4(13090).CircularIconButton, obj);
+      obj[3] = tmp4(13123).CircularIconButton.Sizes.MEDIUM_32;
+      obj[0] = callback2(tmp4(13123).CircularIconButton, obj);
       const intl2 = tmp4(1236).intl;
       obj[1] = intl2.string(tmp4(1236).t["6Qgrev"]);
       obj[2] = function onPress() {
@@ -217,7 +217,7 @@ let closure_26 = importAllResult.memo((channel) => {
           const result = tmp2Result.showInstantInviteActionSheet(tmp, obj);
         }
       };
-      items[1] = callback2(tmp4(8331).FormRow, obj);
+      items[1] = callback2(tmp4(8363).FormRow, obj);
       obj[0] = items;
       tmp7 = callback3(importAllResult.Fragment, obj);
     }

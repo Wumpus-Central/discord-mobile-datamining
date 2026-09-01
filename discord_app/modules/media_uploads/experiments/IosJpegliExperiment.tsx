@@ -1,6 +1,6 @@
-// === Module 5078: getIosJpegliConfig ===
+// === Module 5110: getIosJpegliConfig ===
 
-// Module 5078 (getIosJpegliConfig)
+// Module 5110 (getIosJpegliConfig)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1468 */;
 

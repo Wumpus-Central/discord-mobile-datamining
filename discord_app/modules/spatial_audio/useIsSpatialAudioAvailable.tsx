@@ -1,9 +1,9 @@
-// === Module 13448: useIsSpatialAudioAvailable ===
+// === Module 13481: useIsSpatialAudioAvailable ===
 
-// Module 13448 (useIsSpatialAudioAvailable)
-import apexExperimentDefault from "apexExperiment" /* 13449 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4499 */;
-import { Features } from "DesktopSources" /* 4512 */;
+// Module 13481 (useIsSpatialAudioAvailable)
+import apexExperimentDefault from "apexExperiment" /* 13482 */;
+import closure_3 from "_detectH265HardwareDecode" /* 4529 */;
+import { Features } from "DesktopSources" /* 4542 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/spatial_audio/useIsSpatialAudioAvailable.tsx");

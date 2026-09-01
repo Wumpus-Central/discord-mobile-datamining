@@ -1,12 +1,12 @@
-// === Module 9601: canManageResource ===
+// === Module 9640: canManageResource ===
 
-// Module 9601 (canManageResource)
+// Module 9640 (canManageResource)
 import fromStringAll from "fromString" /* 506 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4121 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import VIEW_CHANNEL from "VIEW_CHANNEL" /* 9602 */;
+import VIEW_CHANNEL from "VIEW_CHANNEL" /* 9641 */;
 import { Permissions } from "sum" /* 505 */;
 
 const require = arg1;

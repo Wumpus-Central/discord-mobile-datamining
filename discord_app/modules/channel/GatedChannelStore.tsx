@@ -3,8 +3,8 @@
 // Module 1983 (isSubscriptionGated)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import isSubscriptionRole from "isSubscriptionRole" /* 4082 */;
-import hasViewChannelPermission from "hasViewChannelPermission" /* 4083 */;
+import isSubscriptionRole from "isSubscriptionRole" /* 4112 */;
+import hasViewChannelPermission from "hasViewChannelPermission" /* 4113 */;
 import closure_2 from "initialize" /* 1984 */;
 import { THREAD_CHANNEL_TYPES } from "createChannelRecord" /* 1391 */;
 import { hasPermission } from "GuildRoleRecordTypeTag" /* 1986 */;

@@ -1,10 +1,10 @@
-// === Module 10008: getGoLiveAutoQualityExperimentConfig ===
+// === Module 10047: getGoLiveAutoQualityExperimentConfig ===
 
-// Module 10008 (getGoLiveAutoQualityExperimentConfig)
+// Module 10047 (getGoLiveAutoQualityExperimentConfig)
 import Storage3 from "Storage" /* 595 */;
 import closure_2 from "initialize" /* 1212 */;
-import closure_3 from "ApplicationStreamPresets" /* 4540 */;
-import { ApplicationStreamPresets } from "RESOLUTION_720" /* 4507 */;
+import closure_3 from "ApplicationStreamPresets" /* 4572 */;
+import { ApplicationStreamPresets } from "RESOLUTION_720" /* 4537 */;
 import importDefaultResult from "getUnitId" /* 1469 */;
 
 require = arg1;
@@ -47,10 +47,10 @@ export const maybeMigrateToAutoQuality = function maybeMigrateToAutoQuality() {
         const obj = { preset: null, resolution: null, frameRate: null, soundshareEnabled: null, noTrack: true };
         obj[0] = tmp9.PRESET_AUTO;
         ({ resolution: obj2[1], fps: obj2[2], soundshareEnabled: obj2[3] } = state);
-        tmp(4631).updateStreamSettings(obj);
+        tmp(4663).updateStreamSettings(obj);
         const Storage2 = tmp(595).Storage;
         const result = Storage2.set(GoLiveAutoQualityMigrationVersion, 1);
-        const tmpResult = tmp(4631);
+        const tmpResult = tmp(4663);
       }
     }
   }

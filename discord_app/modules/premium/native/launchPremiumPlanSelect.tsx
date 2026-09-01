@@ -1,11 +1,11 @@
-// === Module 7122: launchPremiumPlanSelect ===
+// === Module 7154: launchPremiumPlanSelect ===
 
-// Module 7122 (launchPremiumPlanSelect)
+// Module 7154 (launchPremiumPlanSelect)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2009 */;
-import getSanitizedRestrictedGuilds from "getSanitizedRestrictedGuilds" /* 6210 */;
-import PremiumModal from "PremiumModal" /* 7123 */;
+import getSanitizedRestrictedGuilds from "getSanitizedRestrictedGuilds" /* 6242 */;
+import PremiumModal from "PremiumModal" /* 7155 */;
 
 const UserSettingsSections = ME.UserSettingsSections;
 let result = set.fileFinishedImporting("modules/premium/native/launchPremiumPlanSelect.tsx");
@@ -67,9 +67,9 @@ export const launchPremiumPlanSelect = function launchPremiumPlanSelect(isBoostP
     obj[9] = tmp;
     obj[10] = onPaymentSuccess;
     obj[11] = onPaymentDismiss;
-    const obj3 = flag2(4691);
-    obj3.pushLazy(asyncRequireImpl(7123, dependencyMap.paths), obj, PremiumModal.PREMIUM_KEY);
-    const tmp7 = asyncRequireImpl(7123, dependencyMap.paths);
+    const obj3 = flag2(4723);
+    obj3.pushLazy(asyncRequireImpl(7155, dependencyMap.paths), obj, PremiumModal.PREMIUM_KEY);
+    const tmp7 = asyncRequireImpl(7155, dependencyMap.paths);
   }
   let result = getSanitizedRestrictedGuilds.trackUserSettingsPaneViewed({ destinationPane: PREMIUM_PLAN_SELECT });
 };

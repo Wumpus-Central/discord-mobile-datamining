@@ -1,11 +1,11 @@
-// === Module 10913: useReactionPermissions ===
+// === Module 10951: useReactionPermissions ===
 
-// Module 10913 (useReactionPermissions)
+// Module 10951 (useReactionPermissions)
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "initialize" /* 4092 */;
+import closure_4 from "initialize" /* 4122 */;
 import closure_5 from "trackCommunicationDisabled" /* 1992 */;
-import closure_6 from "recomputeGuild" /* 5325 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_6 from "recomputeGuild" /* 5357 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4121 */;
 import { Permissions } from "ME" /* 676 */;
 
 const require = arg1;

@@ -1,9 +1,9 @@
-// === Module 6076: set ===
+// === Module 6108: set ===
 
-// Module 6076 (set)
+// Module 6108 (set)
 import initialize from "initialize" /* 589 */;
 import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import closure_3 from "handlePaymentSourceCreateEnd" /* 4111 */;
+import closure_3 from "handlePaymentSourceCreateEnd" /* 4141 */;
 import { GuildFeatures } from "ME" /* 676 */;
 import set from "set" /* 2 */;
 

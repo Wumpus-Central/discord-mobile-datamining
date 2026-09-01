@@ -1,8 +1,8 @@
-// === Module 15815: useDefaultAuthorizationNotifiers ===
+// === Module 15851: useDefaultAuthorizationNotifiers ===
 
-// Module 15815 (useDefaultAuthorizationNotifiers)
+// Module 15851 (useDefaultAuthorizationNotifiers)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "getState" /* 7125 */;
+import closure_4 from "getState" /* 7157 */;
 import { AppStates } from "ME" /* 676 */;
 
 const require = arg1;

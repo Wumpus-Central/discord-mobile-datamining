@@ -1,6 +1,6 @@
-// === Module 14640: CollectibleSearchCurrencyFilter ===
+// === Module 14673: CollectibleSearchCurrencyFilter ===
 
-// Module 14640 (CollectibleSearchCurrencyFilter)
+// Module 14673 (CollectibleSearchCurrencyFilter)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/CollectibleSearchCurrencyFilter.tsx");

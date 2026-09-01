@@ -1,10 +1,10 @@
-// === Module 12442: SoundboardSlashIcon ===
+// === Module 12475: SoundboardSlashIcon ===
 
-// Module 12442 (SoundboardSlashIcon)
+// Module 12475 (SoundboardSlashIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4166 */;
-import registerAsset from "registerAsset" /* 12443 */;
+import BaseIconImage from "BaseIconImage" /* 4196 */;
+import registerAsset from "registerAsset" /* 12476 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

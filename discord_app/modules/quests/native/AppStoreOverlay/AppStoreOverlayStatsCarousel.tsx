@@ -1,16 +1,16 @@
-// === Module 11065: AppStoreOverlayStatCardItem ===
+// === Module 11102: AppStoreOverlayStatCardItem ===
 
-// Module 11065 (AppStoreOverlayStatCardItem)
+// Module 11102 (AppStoreOverlayStatCardItem)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4444 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5620 */;
-import formatAppStoreRatingValue from "formatAppStoreRatingValue" /* 11066 */;
-import FractionalStarDefault from "FractionalStar" /* 11067 */;
+import Text from "Text" /* 4474 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5652 */;
+import formatAppStoreRatingValue from "formatAppStoreRatingValue" /* 11103 */;
+import FractionalStarDefault from "FractionalStar" /* 11104 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function AppStoreOverlayStatCardItem(onRatingPress) {
@@ -30,10 +30,10 @@ function AppStoreOverlayStatCardItem(onRatingPress) {
     const result = obj2.formatAppStoreRatingValue(stat.rating, getSystemLocale.intl.currentLocale);
     let result1;
     if (null != stat.ratingCount) {
-      let tmp9Result = tmp9(11066);
+      let tmp9Result = tmp9(11103);
       result1 = tmp9Result.formatAppStoreRatingCount(stat.ratingCount, tmp9(1236).intl.currentLocale);
     }
-    tmp9Result = tmp9(11066);
+    tmp9Result = tmp9(11103);
     const appStoreStarFillAmounts = tmp9Result.getAppStoreStarFillAmounts(stat.rating, num);
     const intl = tmp9(1236).intl;
     let obj = { label: null, rating: null, maxRating: null, ratingCount: null };
@@ -100,7 +100,7 @@ function AppStoreOverlayStatCardItem(onRatingPress) {
     if (null == secondaryContent) {
       const obj4 = { variant: "text-xs/medium", color: "text-subtle", lineClamp: 1, children: null };
       obj4[3] = secondaryText;
-      secondaryContent = tmp23(tmp20(4444).Text, obj4);
+      secondaryContent = tmp23(tmp20(4474).Text, obj4);
     }
     obj3[1] = secondaryContent;
     tmp23Result = tmp23(closure_5, obj3);

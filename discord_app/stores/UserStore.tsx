@@ -4,11 +4,11 @@
 import clearAllDefault from "clearAll" /* 1220 */;
 import hasFlagAll from "hasFlag" /* 1399 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1471 */;
-import validatePremiumType from "validatePremiumType" /* 1928 */;
-import isUserPrimaryGuildEqual from "isUserPrimaryGuildEqual" /* 1932 */;
+import validatePremiumType from "validatePremiumType" /* 1933 */;
+import isUserPrimaryGuildEqual from "isUserPrimaryGuildEqual" /* 1937 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
-import closure_4 from "setPremiumTypeActual" /* 1923 */;
-import closure_5 from "createdAt" /* 1930 */;
+import closure_4 from "setActualFromUser" /* 1923 */;
+import closure_5 from "createdAt" /* 1935 */;
 import closure_6 from "fetchFingerprint" /* 1218 */;
 import ME from "ME" /* 676 */;
 import { UNSELECTED_PREMIUM_TYPE_OVERRIDE as closure_10 } from "GuildFeatures" /* 1924 */;
@@ -39,11 +39,11 @@ function mergeUserPrimaryGuild(id, primary_guild) {
     if (!result) {
       let flag = null == tmp2.primaryGuild || null != primary_guild.primary_guild;
       if (flag) {
-        tmp2.primaryGuild = tmp5(1932).ensureUserPrimaryGuild(primary_guild.primary_guild);
+        tmp2.primaryGuild = tmp5(1937).ensureUserPrimaryGuild(primary_guild.primary_guild);
         tmp[tmp2.id] = tmp2;
         closure_12 = closure_12 + 1;
         flag = true;
-        const tmp5Result = tmp5(1932);
+        const tmp5Result = tmp5(1937);
       }
       tmp8 = flag;
     }
@@ -110,26 +110,26 @@ function transformUser(mfa_enabled) {
   }
   const primary_guild = mfa_enabled.primary_guild;
   if (undefined !== primary_guild) {
-    mfa_enabled.primary_guild = tmp4(1932).ensureUserPrimaryGuild(primary_guild);
-    const tmp4Result1 = tmp4(1932);
+    mfa_enabled.primary_guild = tmp4(1937).ensureUserPrimaryGuild(primary_guild);
+    const tmp4Result1 = tmp4(1937);
   }
   const display_name_styles = mfa_enabled.display_name_styles;
   if (undefined !== display_name_styles) {
-    mfa_enabled.displayNameStyles = tmp4(1933).parseServerDisplayNameStyles(display_name_styles);
+    mfa_enabled.displayNameStyles = tmp4(1938).parseServerDisplayNameStyles(display_name_styles);
     delete tmp[tmp3];
-    const tmp4Result2 = tmp4(1933);
+    const tmp4Result2 = tmp4(1938);
   }
   const typing_indicator_style = mfa_enabled.typing_indicator_style;
   if (undefined !== typing_indicator_style) {
-    mfa_enabled.typingIndicatorStyle = tmp4(1937).parseServerTypingIndicatorStyle(typing_indicator_style);
+    mfa_enabled.typingIndicatorStyle = tmp4(1942).parseServerTypingIndicatorStyle(typing_indicator_style);
     delete tmp[tmp3];
-    const tmp4Result3 = tmp4(1937);
+    const tmp4Result3 = tmp4(1942);
   }
   const premium_state = mfa_enabled.premium_state;
   if (undefined !== premium_state) {
-    mfa_enabled.premiumState = tmp4(1941).parseServerPremiumState(premium_state);
+    mfa_enabled.premiumState = tmp4(1943).parseServerPremiumState(premium_state);
     delete tmp[tmp3];
-    const tmp4Result4 = tmp4(1941);
+    const tmp4Result4 = tmp4(1943);
   }
   const restricted_schedule = mfa_enabled.restricted_schedule;
   if (undefined !== restricted_schedule) {
@@ -159,25 +159,39 @@ function mergeUser(user, arg1) {
   }
   if (null == obj[user.id]) {
     transformUser(user);
-    const tmp26 = new closure_5(user);
-    const premiumType3 = tmp26.premiumType;
-    let mergeResult = tmp26;
-    let tmp19 = premiumType3;
-    if (tmp28) {
-      let premiumType4 = tmp26.premiumType;
-      if (obj6.isStaffEnv(tmp26)) {
-        let premiumTypeOverride = store.getPremiumTypeOverride();
-        if (premiumTypeOverride === closure_10) {
-          premiumTypeOverride = store.getPremiumTypeActual();
+    const tmp28 = new closure_5(user);
+    const premiumType3 = tmp28.premiumType;
+    let mergeResult = tmp28;
+    let tmp21 = premiumType3;
+    if (undefined !== premiumType3) {
+      mergeResult = tmp28;
+      tmp21 = premiumType3;
+      if (tmp2) {
+        const isStaffEnvResult = validatePremiumType.isStaffEnv(tmp28);
+        let premiumType4 = tmp28.premiumType;
+        if (isStaffEnvResult) {
+          let premiumTypeOverride = store.getPremiumTypeOverride();
+          if (premiumTypeOverride === closure_10) {
+            premiumTypeOverride = store.getPremiumTypeActual();
+          }
+          premiumType4 = premiumTypeOverride;
         }
-        premiumType4 = premiumTypeOverride;
+        tmp28.premiumType = premiumType4;
+        let perks2 = tmp28.perks;
+        if (isStaffEnvResult) {
+          let perksActual = null;
+          if (null !== store.getPremiumTypeOverride()) {
+            perksActual = obj8.getPerksActual();
+          }
+          perks2 = perksActual;
+          obj8 = store;
+        }
+        tmp28.perks = perks2;
+        mergeResult = tmp28;
+        tmp21 = premiumType3;
+        const obj7 = validatePremiumType;
       }
-      tmp26.premiumType = premiumType4;
-      mergeResult = tmp26;
-      tmp19 = premiumType3;
-      obj6 = validatePremiumType;
     }
-    tmp28 = undefined !== premiumType3 && tmp2;
   } else {
     mergeResult = obj;
     if (flag) {
@@ -192,11 +206,12 @@ function mergeUser(user, arg1) {
         const obj2 = validatePremiumType;
       }
       if (isStaffEnvRawDataResult) {
+        const isStaffEnvRawDataResult1 = validatePremiumType.isStaffEnvRawData(user);
         let premiumType2 = user.premium_type;
         if (premiumType2 == null) {
           premiumType2 = user.premiumType;
         }
-        if (obj3.isStaffEnvRawData(user)) {
+        if (isStaffEnvRawDataResult1) {
           let premiumTypeOverride1 = store.getPremiumTypeOverride();
           if (premiumTypeOverride1 === closure_10) {
             premiumTypeOverride1 = store.getPremiumTypeActual();
@@ -208,27 +223,37 @@ function mergeUser(user, arg1) {
         } else if (undefined !== user.premium_type) {
           user.premium_type = premiumType2;
         }
-        obj3 = validatePremiumType;
-      }
-      if (tmp14 !== true) {
-        if (tmp15 !== true) {
-          if (obj4.isUserPrimaryGuildEqual(obj.primaryGuild, user.primary_guild) !== true) {
-            user.primary_guild = tmp16(1932).ensureUserPrimaryGuild(user.primary_guild);
-            const tmp16Result = tmp16(1932);
+        let perks = user.perks;
+        if (isStaffEnvRawDataResult1) {
+          let perksActual1 = null;
+          if (null !== store.getPremiumTypeOverride()) {
+            perksActual1 = obj4.getPerksActual();
           }
-          obj4 = isUserPrimaryGuildEqual;
-          tmp16 = require;
+          perks = perksActual1;
+          obj4 = store;
+        }
+        user.perks = perks;
+        const obj3 = validatePremiumType;
+      }
+      if (tmp16 !== true) {
+        if (tmp17 !== true) {
+          if (obj5.isUserPrimaryGuildEqual(obj.primaryGuild, user.primary_guild) !== true) {
+            user.primary_guild = tmp18(1937).ensureUserPrimaryGuild(user.primary_guild);
+            const tmp18Result = tmp18(1937);
+          }
+          obj5 = isUserPrimaryGuildEqual;
+          tmp18 = require;
         }
         user.primary_guild = obj.primaryGuild;
-        tmp15 = null != obj.primaryGuild && null == user.primary_guild;
+        tmp17 = null != obj.primaryGuild && null == user.primary_guild;
       }
       mergeResult = obj.merge(user);
-      tmp19 = premiumType;
-      tmp14 = null == obj.primaryGuild && null == user.primary_guild;
+      tmp21 = premiumType;
+      tmp16 = null == obj.primaryGuild && null == user.primary_guild;
     }
   }
-  const obj7 = validatePremiumType;
-  obj7.validatePremiumType(validatePremiumType.isStaffEnv(mergeResult), tmp19, mergeResult.premiumType);
+  const obj9 = validatePremiumType;
+  obj9.validatePremiumType(validatePremiumType.isStaffEnv(mergeResult), tmp21, mergeResult.premiumType);
   obj[user.id] = mergeResult;
   if (obj[user.id] !== mergeResult) {
     closure_12 = closure_12 + 1;

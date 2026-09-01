@@ -1,17 +1,17 @@
-// === Module 15024: VideoUploadQualityNitroUpsell ===
+// === Module 15057: VideoUploadQualityNitroUpsell ===
 
-// Module 15024 (VideoUploadQualityNitroUpsell)
+// Module 15057 (VideoUploadQualityNitroUpsell)
 import ThemesDefault from "Themes" /* 712 */;
-import registerAssetDefault from "registerAsset" /* 10351 */;
-import _modDef14307 from "module_14307" /* 14307 */;
+import registerAssetDefault from "registerAsset" /* 10390 */;
+import _modDef14340 from "module_14340" /* 14340 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import closure_6 from "reset" /* 4115 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 7852 */;
+import closure_6 from "reset" /* 4145 */;
+import { MobileUserSettings } from "MobileUserSettings" /* 7884 */;
 import { UserSettingsSections } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 const require = arg1;
 function VideoUploadQualityNitroUpsell() {
@@ -28,7 +28,7 @@ function VideoUploadQualityNitroUpsell() {
   obj = { variant: "text-xs/normal", color: "text-muted", children: null };
   const intl = _require(1236).intl;
   obj[2] = intl.format(_require(1236).t["Up+hSO"], { supportURL: "https://support.discord.com/hc/articles/9665451164951" });
-  const children = [callback(_require(4444).Text, obj), ];
+  const children = [callback(_require(4474).Text, obj), ];
   let tmp7Result = !stateFromStores;
   if (!stateFromStores) {
     obj = { style: null, children: null };
@@ -50,10 +50,10 @@ function VideoUploadQualityNitroUpsell() {
       const obj = closure_1_1(closure_1_2[17]);
     };
     obj4[2] = intl2.format(tmp(1236).t.uW1zul, obj5);
-    items2[1] = tmp7(tmp(4444).Text, obj4);
+    items2[1] = tmp7(tmp(4474).Text, obj4);
     obj2[1] = items2;
     obj1[2] = tmp5(tmp6, obj2);
-    obj[1] = tmp7(tmp(5569).Card, obj1);
+    obj[1] = tmp7(tmp(5601).Card, obj1);
     tmp7Result = tmp7(tmp6, obj);
   }
   children[1] = tmp7Result;
@@ -161,5 +161,5 @@ export default function SettingsChatScreen(route) {
     obj[1] = initialSetting;
     return obj.createList(obj);
   }, items);
-  return callback(_modDef14307, { node });
+  return callback(_modDef14340, { node });
 };

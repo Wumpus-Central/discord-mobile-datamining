@@ -1,10 +1,10 @@
-// === Module 12258: PlusMediumIcon ===
+// === Module 12291: PlusMediumIcon ===
 
-// Module 12258 (PlusMediumIcon)
+// Module 12291 (PlusMediumIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4166 */;
-import registerAsset from "registerAsset" /* 11733 */;
+import BaseIconImage from "BaseIconImage" /* 4196 */;
+import registerAsset from "registerAsset" /* 11766 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

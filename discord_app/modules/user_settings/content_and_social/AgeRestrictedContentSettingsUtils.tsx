@@ -1,11 +1,11 @@
-// === Module 8120: resolveNsfwTogglesWithDefaults ===
+// === Module 8152: resolveNsfwTogglesWithDefaults ===
 
-// Module 8120 (resolveNsfwTogglesWithDefaults)
-import explicitContentFromProto from "explicitContentFromProto" /* 4136 */;
-import isFeatureAgeGated from "isFeatureAgeGated" /* 4142 */;
-import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4701 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 5335 */;
-import useNSFWAllowed from "useNSFWAllowed" /* 8121 */;
+// Module 8152 (resolveNsfwTogglesWithDefaults)
+import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
+import isFeatureAgeGated from "isFeatureAgeGated" /* 4172 */;
+import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4733 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 5367 */;
+import useNSFWAllowed from "useNSFWAllowed" /* 8153 */;
 import closure_2 from "mergeGuildAvatar" /* 1922 */;
 
 require = arg1;

@@ -1,6 +1,6 @@
-// === Module 9270: metadata ===
+// === Module 9309: metadata ===
 
-// Module 9270 (metadata)
+// Module 9309 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/connections/xbox_discord_link.png.js");

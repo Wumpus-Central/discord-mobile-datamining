@@ -1,23 +1,23 @@
-// === Module 7587: JoinCallIcon ===
+// === Module 7619: JoinCallIcon ===
 
-// Module 7587 (JoinCallIcon)
+// Module 7619 (JoinCallIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 5018 */;
-import PhoneCallIcon from "PhoneCallIcon" /* 7591 */;
-import PhoneHangUpIcon from "PhoneHangUpIcon" /* 7593 */;
-import _modDef12892 from "module_12892" /* 12892 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 5050 */;
+import PhoneCallIcon from "PhoneCallIcon" /* 7623 */;
+import PhoneHangUpIcon from "PhoneHangUpIcon" /* 7625 */;
+import _modDef12925 from "module_12925" /* 12925 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "handleThreadCreateOrUpdate" /* 5417 */;
+import closure_4 from "handleThreadCreateOrUpdate" /* 5449 */;
 import { THREADED_CHANNEL_TYPES } from "createChannelRecord" /* 1391 */;
 import closure_6 from "ensureGuildLoaded" /* 1387 */;
-import closure_7 from "updateVoiceState" /* 4467 */;
-import { setIsChannelDetailsSearchActive as closure_8 } from "useChannelDetailsStore" /* 7588 */;
+import closure_7 from "updateVoiceState" /* 4497 */;
+import { setIsChannelDetailsSearchActive as closure_8 } from "useChannelDetailsStore" /* 7620 */;
 import ME from "ME" /* 676 */;
-import { SearchEntrypointAnalyticsLocations as closure_12 } from "SearchEntrypointAnalyticsLocations" /* 7589 */;
+import { SearchEntrypointAnalyticsLocations as closure_12 } from "SearchEntrypointAnalyticsLocations" /* 7621 */;
 import { jsx } from "jsxProd" /* 21 */;
 import { createElement } from "noop" /* 19 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function JoinCallIcon() {
@@ -279,7 +279,7 @@ function WrappedChannelNavButtons(channelId) {
   let obj = channelId(589);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getChannel(channelId));
-  channelId(4699);
+  channelId(4731);
   let tmp4 = null;
   if (null != stateFromStores) {
     tmp4 = null;
@@ -329,12 +329,12 @@ export default function ChannelActions(channelId) {
     return obj;
   });
   ({ isMultiUserDM, isDM } = stateFromStoresObject);
-  obj1 = channelId(7596);
+  obj1 = channelId(7628);
   obj = { style: containerStyle, children: null };
   if (obj1.useHasForumSearchQuery(channelId)) {
     obj = { channelId: null };
     obj[0] = channelId;
-    let tmp4Result = tmp4(channelId(12890).ForumChannelCloseSearchButton, obj);
+    let tmp4Result = tmp4(channelId(12923).ForumChannelCloseSearchButton, obj);
   } else {
     if (!isDM) {
       if (!isMultiUserDM) {
@@ -348,7 +348,7 @@ export default function ChannelActions(channelId) {
     const obj2 = { channelId: null, screenIndex: null };
     obj2[0] = channelId;
     obj2[1] = screenIndex;
-    tmp4Result = tmp4(_modDef12892, obj2);
+    tmp4Result = tmp4(_modDef12925, obj2);
   }
   obj[1] = tmp4Result;
   return <View style={containerStyle}>{null}</View>;

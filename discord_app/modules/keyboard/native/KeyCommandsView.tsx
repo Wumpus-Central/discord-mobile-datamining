@@ -1,10 +1,10 @@
-// === Module 14196: KeyCommandsView ===
+// === Module 14229: KeyCommandsView ===
 
-// Module 14196 (KeyCommandsView)
+// Module 14229 (KeyCommandsView)
 import closure_2 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 let c3 = importAllResult;
 let closure_5 = createCacheKey.createStyles({ viewDefaults: { flex: 1 } });
@@ -55,7 +55,7 @@ export default function KeyCommandsView(style) {
       found.onKeyCommand(nativeEvent);
     }
   };
-  obj[1] = jsx(first(14197), {});
+  obj[1] = jsx(first(14230), {});
   return <redux.Provider />;
 };
 export const useKeyCommands = function useKeyCommands(memo) {

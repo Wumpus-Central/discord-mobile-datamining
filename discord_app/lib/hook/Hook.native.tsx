@@ -1,6 +1,6 @@
-// === Module 13458: isHookModuleTooOld ===
+// === Module 13491: isHookModuleTooOld ===
 
-// Module 13458 (isHookModuleTooOld)
+// Module 13491 (isHookModuleTooOld)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("lib/hook/Hook.native.tsx");

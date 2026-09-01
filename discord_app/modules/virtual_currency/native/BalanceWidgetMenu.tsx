@@ -1,22 +1,22 @@
-// === Module 15261: BalanceWidget ===
+// === Module 15295: BalanceWidget ===
 
-// Module 15261 (BalanceWidget)
+// Module 15295 (BalanceWidget)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4268 */;
-import Text from "Text" /* 4444 */;
-import PressableBase from "PressableBase" /* 5036 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10379 */;
-import BalanceWidgetPillButtonDefault from "BalanceWidgetPillButton" /* 10811 */;
-import _mod11314 from "module_11314" /* 11314 */;
+import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4298 */;
+import Text from "Text" /* 4474 */;
+import PressableBase from "PressableBase" /* 5068 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10418 */;
+import BalanceWidgetPillButtonDefault from "BalanceWidgetPillButton" /* 10849 */;
+import _mod11352 from "module_11352" /* 11352 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { CollectiblesMobileShopScreen as closure_6 } from "items" /* 678 */;
 import ContentDismissActionType from "ContentDismissActionType" /* 1384 */;
-import { RewardFilterTypes } from "QuestsExperimentLocations" /* 5355 */;
+import { RewardFilterTypes } from "QuestsExperimentLocations" /* 5387 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function BalanceWidget(arg0) {
@@ -70,7 +70,7 @@ class OrbsOnboardingMenuDismissibleContent {
 }
 function BalanceWidgetMenu(style) {
   let str;
-  let obj = str(11314);
+  let obj = str(11352);
   str = obj.useFetchVirtualCurrencyBalance().balance;
   let items = [str];
   const callback = React.useCallback(() => {
@@ -138,7 +138,7 @@ let closure_15 = createCacheKey.createStyles(() => {
 let result = require("set").fileFinishedImporting("modules/virtual_currency/native/BalanceWidgetMenu.tsx");
 
 export default function BalanceWidgetMenuWrapper(style) {
-  let obj = _mod11314;
+  let obj = _mod11352;
   const balance = obj.useFetchVirtualCurrencyBalance().balance;
   UNSAFE_isDismissibleContentDismissed;
   if (null == balance) {
@@ -152,7 +152,7 @@ export default function BalanceWidgetMenuWrapper(style) {
     obj[3] = { busy: true };
     obj = { style: null, children: null };
     obj[0] = tmp.loadingContainer;
-    obj[1] = callback(tmp2(4912).Ellipsis, { variant: "primary", size: "sm" });
+    obj[1] = callback(tmp2(4944).Ellipsis, { variant: "primary", size: "sm" });
     obj[4] = callback(View, obj);
     let tmp6Result = callback(BalanceWidget, obj);
   } else {

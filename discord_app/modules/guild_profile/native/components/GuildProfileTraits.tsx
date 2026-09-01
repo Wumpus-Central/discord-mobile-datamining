@@ -1,14 +1,14 @@
-// === Module 8989: TraitEmoji ===
+// === Module 9026: TraitEmoji ===
 
-// Module 8989 (TraitEmoji)
+// Module 9026 (TraitEmoji)
 import ThemesDefault from "Themes" /* 712 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1431 */;
-import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4108 */;
-import Text from "Text" /* 4444 */;
+import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4138 */;
+import Text from "Text" /* 4474 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function TraitEmoji(emoji) {
@@ -29,7 +29,7 @@ function TraitEmoji(emoji) {
     obj[0] = emojiURL;
     obj[1] = getEmojiUnavailableReasonDefault.isCustomEmoji(emoji) ? emoji.name : emoji.surrogates;
     obj[2] = tmp.emojiImage;
-    return callback(tmp5(5553), obj);
+    return callback(tmp5(5585), obj);
   }
 }
 function GuildProfileTraitView(trait) {

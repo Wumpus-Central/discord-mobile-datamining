@@ -1,7 +1,7 @@
-// === Module 9484: useSelectedParticipant ===
+// === Module 9523: useSelectedParticipant ===
 
-// Module 9484 (useSelectedParticipant)
-import closure_2 from "getParticipants" /* 4464 */;
+// Module 9523 (useSelectedParticipant)
+import closure_2 from "getParticipants" /* 4494 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/video_calls/useSelectedParticipant.tsx");

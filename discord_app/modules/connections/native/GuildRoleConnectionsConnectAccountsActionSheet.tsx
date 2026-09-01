@@ -1,34 +1,34 @@
-// === Module 11124: PlatformIcon ===
+// === Module 11161: PlatformIcon ===
 
-// Module 11124 (PlatformIcon)
+// Module 11161 (PlatformIcon)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
 import getAvatarURL from "getAvatarURL" /* 1431 */;
-import useThemeDefault from "useTheme" /* 4383 */;
-import Text from "Text" /* 4444 */;
-import computeChannelNameDefault from "computeChannelName" /* 4642 */;
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4913 */;
-import getChannelIcon from "getChannelIcon" /* 4949 */;
-import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5195 */;
-import officialApplicationIds2 from "officialApplicationIds" /* 5319 */;
+import useThemeDefault from "useTheme" /* 4413 */;
+import Text from "Text" /* 4474 */;
+import computeChannelNameDefault from "computeChannelName" /* 4674 */;
+import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4945 */;
+import getChannelIcon from "getChannelIcon" /* 4981 */;
+import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5227 */;
+import officialApplicationIds2 from "officialApplicationIds" /* 5351 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "recomputeFromAppTokens" /* 5443 */;
+import closure_9 from "recomputeFromAppTokens" /* 5475 */;
 import closure_10 from "_getSystemLocale" /* 1996 */;
-import closure_11 from "createdAt" /* 1930 */;
+import closure_11 from "createdAt" /* 1935 */;
 import closure_12 from "fetchFingerprint" /* 1218 */;
 import closure_13 from "ensureGuildLoaded" /* 1387 */;
-import closure_14 from "set" /* 5193 */;
+import closure_14 from "set" /* 5225 */;
 import closure_15 from "trackCommunicationDisabled" /* 1992 */;
-import closure_16 from "getUncachedChannelPermissions" /* 4091 */;
-import OperatorTypes from "OperatorTypes" /* 5320 */;
+import closure_16 from "getUncachedChannelPermissions" /* 4121 */;
+import OperatorTypes from "OperatorTypes" /* 5352 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function PlatformIcon(platformType) {
@@ -287,7 +287,7 @@ function IdentityConnectionsCheckGroup(eligibilityState) {
     obj3[3] = callback;
     let tmp15Result = null;
     if (null != memo) {
-      const obj4 = { style: null, user: null, size: null, guildId: "Array" };
+      const obj4 = { style: null, user: null, size: null, guildId: "a" };
       obj4[0] = tmp.appIcon;
       obj4[1] = memo;
       obj4[2] = tmp2(tmp3[21]).AvatarSizes.XSMALL;
@@ -409,7 +409,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
     }
   }, items3);
   let tmp3 = callback(React.useState(0), 2);
-  closure_16 = eligibilityStatesGroups(4167).useToken(ThemesDefault.unsafe_rawColors.GREEN_330);
+  closure_16 = eligibilityStatesGroups(4197).useToken(ThemesDefault.unsafe_rawColors.GREEN_330);
   obj = { children: null };
   const keys = Object.keys(memo1);
   const sorted = keys.sort((arg0, arg1) => {
@@ -604,7 +604,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
     items1[1] = tmp24Result1;
     let tmp24Result2 = null;
     if (null != tmp11) {
-      const obj10 = { style: null, user: null, size: null, guildId: "Array" };
+      const obj10 = { style: null, user: null, size: null, guildId: "a" };
       obj10[0] = tmp38.appIcon;
       obj10[1] = tmp11;
       obj10[2] = tmp15(tmp6[21]).AvatarSizes.XSMALL;
@@ -697,7 +697,7 @@ function ConnectedUserAccountOptions(account) {
       _undefined(closure_0);
       closure_1_1(closure_1_2[40]).setFriendSync(account.type, account.id, closure_0);
     };
-    tmp12 = callback2(account(8331).FormSwitchRow, obj);
+    tmp12 = callback2(account(8363).FormSwitchRow, obj);
   }
   let tmp15;
   if (set2.has(account.type)) {
@@ -711,7 +711,7 @@ function ConnectedUserAccountOptions(account) {
       callback3(closure_0);
       closure_1_1(closure_1_2[40]).setShowActivity(account.type, account.id, closure_0);
     };
-    tmp15 = callback2(account(8331).FormSwitchRow, obj);
+    tmp15 = callback2(account(8363).FormSwitchRow, obj);
   }
   let tmp18;
   if (true === value.hasMetadata) {
@@ -730,7 +730,7 @@ function ConnectedUserAccountOptions(account) {
       }
       const result = closure_1_1(closure_1_2[40]).setMetadataVisibility(type, id, num);
     };
-    tmp18 = callback2(account(8331).FormSwitchRow, obj2);
+    tmp18 = callback2(account(8363).FormSwitchRow, obj2);
   }
   const obj3 = { style: tmp.accountConnectedPrivacyOptionsContainer, children: null };
   const obj4 = { label: null, value: null, onValueChange: null };
@@ -747,7 +747,7 @@ function ConnectedUserAccountOptions(account) {
     }
     closure_1_1(closure_1_2[40]).setVisibility(type, id, num);
   };
-  const items = [callback2(account(8331).FormSwitchRow, obj4), tmp18, tmp15, tmp12];
+  const items = [callback2(account(8363).FormSwitchRow, obj4), tmp18, tmp15, tmp12];
   obj3[1] = items;
   return callback3(closure_8, obj3);
 }
@@ -837,7 +837,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -870,7 +870,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
               return obj;
             } else {
               c0 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp11) {
             c0 = tmp;

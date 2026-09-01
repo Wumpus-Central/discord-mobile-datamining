@@ -1,6 +1,6 @@
-// === Module 8039: ANALYTICS_NAME ===
+// === Module 8071: ANALYTICS_NAME ===
 
-// Module 8039 (ANALYTICS_NAME)
+// Module 8071 (ANALYTICS_NAME)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import setDefault from "set" /* 687 */;
@@ -37,7 +37,7 @@ export const getNotificationsInboxGuild = function getNotificationsInboxGuild(ar
     const intl = getSystemLocale.intl;
     stringResult = intl.string(getSystemLocale.t.HcoRu0);
   }
-  obj = { id: NOTIFICATIONS_INBOX, name: stringResult, description: "", icon: "Array", features: "100" };
+  obj = { id: NOTIFICATIONS_INBOX, name: stringResult, description: "", icon: "Array", features: "platinum" };
   obj[4] = [];
   return tmp2(1426).fromGuildBasic(obj);
 };

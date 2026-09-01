@@ -1,12 +1,12 @@
-// === Module 6120: getCreationDefaultFormatter ===
+// === Module 6152: getCreationDefaultFormatter ===
 
-// Module 6120 (getCreationDefaultFormatter)
+// Module 6152 (getCreationDefaultFormatter)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import set from "set" /* 1396 */;
 import closure_2 from "ensureGuildLoaded" /* 1387 */;
 import closure_3 from "createGuildRecordFromRust" /* 1909 */;
-import closure_4 from "generateOldThreadCutoff" /* 4463 */;
-import { ForumTimestampFormats } from "FORUM_GUIDELINES_ACTION_SHEET" /* 6088 */;
+import closure_4 from "generateOldThreadCutoff" /* 4493 */;
+import { ForumTimestampFormats } from "FORUM_GUIDELINES_ACTION_SHEET" /* 6120 */;
 import { ChannelFlags } from "set" /* 1394 */;
 
 require = arg1;

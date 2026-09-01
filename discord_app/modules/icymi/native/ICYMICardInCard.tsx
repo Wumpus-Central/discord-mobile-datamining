@@ -1,12 +1,12 @@
-// === Module 16046: CutoutGuildIconWithUserCustom ===
+// === Module 16081: CutoutGuildIconWithUserCustom ===
 
-// Module 16046 (CutoutGuildIconWithUserCustom)
+// Module 16081 (CutoutGuildIconWithUserCustom)
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
-import GuildIconSizes from "GuildIconSizes" /* 5972 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 5972 */;
-import SolidCutout from "SolidCutout" /* 8066 */;
-import SolidCutoutDefault from "SolidCutout" /* 8066 */;
+import GuildIconSizes from "GuildIconSizes" /* 6004 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 6004 */;
+import SolidCutout from "SolidCutout" /* 8098 */;
+import SolidCutoutDefault from "SolidCutout" /* 8098 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "ensureGuildLoaded" /* 1387 */;
@@ -14,7 +14,7 @@ import closure_6 from "trackCommunicationDisabled" /* 1992 */;
 import closure_7 from "createGuildRecordFromRust" /* 1909 */;
 import { DEFAULT_ROLE_COLOR_HEX } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createICYMIStyles from "createICYMIStyles" /* 16005 */;
+import createICYMIStyles from "createICYMIStyles" /* 16040 */;
 
 require = arg1;
 function CutoutGuildIconWithUserCustom(guild) {

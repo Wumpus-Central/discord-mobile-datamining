@@ -1,6 +1,6 @@
-// === Module 5328: canJoinVoiceChannel ===
+// === Module 5360: canJoinVoiceChannel ===
 
-// Module 5328 (canJoinVoiceChannel)
+// Module 5360 (canJoinVoiceChannel)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import createChannelRecord from "createChannelRecord" /* 1391 */;

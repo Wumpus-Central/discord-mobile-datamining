@@ -1,10 +1,10 @@
-// === Module 13345: updateTtl ===
+// === Module 13378: updateTtl ===
 
-// Module 13345 (updateTtl)
+// Module 13378 (updateTtl)
 import initializeDefault from "initialize" /* 589 */;
 import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import canFetchNitroProgramReward from "canFetchNitroProgramReward" /* 13347 */;
+import canFetchNitroProgramReward from "canFetchNitroProgramReward" /* 13380 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
 

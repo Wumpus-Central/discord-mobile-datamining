@@ -1,9 +1,9 @@
-// === Module 10279: useCanShowFavoritesGuildOnboarding ===
+// === Module 10318: useCanShowFavoritesGuildOnboarding ===
 
-// Module 10279 (useCanShowFavoritesGuildOnboarding)
+// Module 10318 (useCanShowFavoritesGuildOnboarding)
 import initialize from "initialize" /* 589 */;
-import coerceMainRoute from "coerceMainRoute" /* 4302 */;
-import closure_2 from "setContent" /* 4156 */;
+import coerceMainRoute from "coerceMainRoute" /* 4332 */;
+import closure_2 from "setContent" /* 4186 */;
 import closure_3 from "handleConnectionOpen" /* 1981 */;
 
 require = arg1;

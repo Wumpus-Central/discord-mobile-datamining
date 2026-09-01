@@ -1,6 +1,6 @@
-// === Module 10040: getWindowsAudioEffectsExperimentConfig ===
+// === Module 10079: getWindowsAudioEffectsExperimentConfig ===
 
-// Module 10040 (getWindowsAudioEffectsExperimentConfig)
+// Module 10079 (getWindowsAudioEffectsExperimentConfig)
 import closure_2 from "initialize" /* 1212 */;
 import ApexExperiment from "ApexExperiment" /* 1468 */;
 

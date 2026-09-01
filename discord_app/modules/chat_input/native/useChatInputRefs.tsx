@@ -1,18 +1,18 @@
-// === Module 11526: useChatInputRefs ===
+// === Module 11559: useChatInputRefs ===
 
-// Module 11526 (useChatInputRefs)
+// Module 11559 (useChatInputRefs)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleInit" /* 7492 */;
-import closure_5 from "loadSavedGuildStickers" /* 5412 */;
-import closure_6 from "handleChanged" /* 4822 */;
-import { DraftType } from "handleChanged" /* 4822 */;
-import closure_8 from "initialize" /* 7394 */;
-import closure_9 from "setCooldown" /* 7399 */;
+import closure_4 from "handleInit" /* 7524 */;
+import closure_5 from "loadSavedGuildStickers" /* 5444 */;
+import closure_6 from "handleChanged" /* 4854 */;
+import { DraftType } from "handleChanged" /* 4854 */;
+import closure_8 from "initialize" /* 7426 */;
+import closure_9 from "setCooldown" /* 7431 */;
 import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import { updateChatInputContainerHeight as closure_11 } from "updateChatInputContainerHeight" /* 9495 */;
+import { updateChatInputContainerHeight as closure_11 } from "updateChatInputContainerHeight" /* 9534 */;
 import { AnalyticEvents } from "ME" /* 676 */;
-import { COMMAND_SENTINEL } from "regExp" /* 4921 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4441 */;
+import { COMMAND_SENTINEL } from "regExp" /* 4953 */;
+import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4471 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/chat_input/native/useChatInputRefs.tsx");
@@ -44,7 +44,7 @@ export default function useChatInputRefs(chatInputProps) {
   closure_8 = React.useRef(null);
   closure_9 = React.useRef(null);
   closure_10 = React.useRef(new Map());
-  const tmp2 = chatInputTextFieldHeight(5909)(() => chatInputProps(4310).createInputRefTracker(chatInputProps.channel.id, chatInputProps.screenIndex));
+  const tmp2 = chatInputTextFieldHeight(5941)(() => chatInputProps(4340).createInputRefTracker(chatInputProps.channel.id, chatInputProps.screenIndex));
   closure_11 = tmp2;
   closure_12 = React.useRef(chatInputProps);
   closure_13 = React.useRef(chatInputProps);
@@ -70,7 +70,7 @@ export default function useChatInputRefs(chatInputProps) {
       closure_11.handleRef(null, channel.channel.id);
     };
   }, items2);
-  closure_14 = React.useRef(chatInputTextFieldHeight(5909)(() => ({ editId: null, focused: false, selectionStart: 0, selectionEnd: 0, text: chatInputProps.defaultValue, textPrev: chatInputProps.defaultValue, textFieldContentSize: 0, textFieldHeight: chatInputTextFieldHeight })));
+  closure_14 = React.useRef(chatInputTextFieldHeight(5941)(() => ({ editId: null, focused: false, selectionStart: 0, selectionEnd: 0, text: chatInputProps.defaultValue, textPrev: chatInputProps.defaultValue, textFieldContentSize: 0, textFieldHeight: chatInputTextFieldHeight })));
   closure_15 = React.useRef({ handledHereMention: false, sending: false });
   const items3 = [tmp2];
   const memo = React.useMemo(() => {
@@ -311,7 +311,7 @@ export default function useChatInputRefs(chatInputProps) {
           threadCreationCallback = closure_1_13.current.threadCreationCallback;
           if (null != threadCreationCallback) {
             const text = chatInputTextFieldHeight(ref[14]).getText(closure_1_8.current, closure_1_10.current, (text) => {
-              obj = chatInputProps(11536);
+              obj = chatInputProps(11569);
               obj = { text, params: null };
               obj = {};
               const merged = Object.assign(closure_2_13.current);
@@ -322,8 +322,8 @@ export default function useChatInputRefs(chatInputProps) {
                 obj1 = { text: null, threadCreationCallback: null };
                 obj1[0] = result.content;
                 obj1[1] = threadCreationCallback;
-                const result1 = chatInputProps(11536).chatInputCreateThread(obj1);
-                const tmpResult = chatInputProps(11536);
+                const result1 = chatInputProps(11569).chatInputCreateThread(obj1);
+                const tmpResult = chatInputProps(11569);
               }
             });
             tmp.current.sending = false;
@@ -355,7 +355,7 @@ export default function useChatInputRefs(chatInputProps) {
                   }
                 } else {
                   closure_1.cancel();
-                  obj = threadCreationCallback(11536);
+                  obj = threadCreationCallback(11569);
                   obj = { text: null, params: null };
                   obj[0] = arg0;
                   obj = {};
@@ -365,7 +365,7 @@ export default function useChatInputRefs(chatInputProps) {
                   obj[1] = obj;
                   const result = obj.chatInputHandleSendText(obj);
                 }
-                const keyboardType = threadCreationCallback(4312).getKeyboardType();
+                const keyboardType = threadCreationCallback(4342).getKeyboardType();
                 if (keyboardType === threadCreationCallback(1626).KeyboardTypes.SYSTEM) {
                   const current2 = tmp8.current;
                   current2.focus();
@@ -488,7 +488,7 @@ export default function useChatInputRefs(chatInputProps) {
       handleTextChanged(text) {
         lib(text);
       },
-      insertText(c22, tokenStart, flag, arg3, arg4) {
+      insertText(c22, tokenStart, arg2, arg3, arg4) {
         let selectionStart = tokenStart;
         if (null == tokenStart) {
           selectionStart = closure_14.current.selectionStart;
@@ -500,7 +500,7 @@ export default function useChatInputRefs(chatInputProps) {
         const current = closure_16.current;
         obj = { location: selectionStart, length: Math.max(0, selectionEnd - selectionStart), text: null, nodes: null, editId: null };
         let text = c22;
-        if (flag) {
+        if (arg2) {
           text = `${c22} `;
         }
         obj[2] = text;

@@ -1,10 +1,10 @@
-// === Module 4642: computeChannelName ===
+// === Module 4674: computeChannelName ===
 
-// Module 4642 (computeChannelName)
-import nameFromUserDefault from "nameFromUser" /* 4292 */;
+// Module 4674 (computeChannelName)
+import nameFromUserDefault from "nameFromUser" /* 4322 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "getHash" /* 4361 */;
-import closure_5 from "markAllUserIdListsStale" /* 4100 */;
+import closure_4 from "getHash" /* 4391 */;
+import closure_5 from "markAllUserIdListsStale" /* 4130 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 

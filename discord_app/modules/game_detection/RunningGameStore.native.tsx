@@ -1,12 +1,12 @@
-// === Module 4471: initialize ===
+// === Module 4501: initialize ===
 
-// Module 4471 (initialize)
+// Module 4501 (initialize)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import DevToolsFocusedPidsTrackMode from "DevToolsFocusedPidsTrackMode" /* 4498 */;
-import closure_2 from "handleLoadMessages" /* 4472 */;
-import closure_3 from "gameFromServer" /* 4484 */;
-import closure_4 from "setLibraryApplications" /* 4487 */;
+import DevToolsFocusedPidsTrackMode from "DevToolsFocusedPidsTrackMode" /* 4528 */;
+import closure_2 from "handleLoadMessages" /* 4502 */;
+import closure_3 from "gameFromServer" /* 4514 */;
+import closure_4 from "setLibraryApplications" /* 4517 */;
 
 require = arg1;
 const Store = initializeDefault.Store;

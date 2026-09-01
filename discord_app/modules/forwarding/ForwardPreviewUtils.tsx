@@ -1,7 +1,7 @@
-// === Module 11241: useForwardPreviewContent ===
+// === Module 11278: useForwardPreviewContent ===
 
-// Module 11241 (useForwardPreviewContent)
-import closure_2 from "getUncachedChannelPermissions" /* 4091 */;
+// Module 11278 (useForwardPreviewContent)
+import closure_2 from "getUncachedChannelPermissions" /* 4121 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/forwarding/ForwardPreviewUtils.tsx");

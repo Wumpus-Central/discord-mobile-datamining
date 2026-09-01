@@ -1,9 +1,9 @@
-// === Module 8112: isActivityInTextSupportedForChannel ===
+// === Module 8144: isActivityInTextSupportedForChannel ===
 
-// Module 8112 (isActivityInTextSupportedForChannel)
+// Module 8144 (isActivityInTextSupportedForChannel)
 import set from "set" /* 692 */;
 import closure_2 from "ensureGuildLoaded" /* 1387 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4121 */;
 import { Permissions } from "sum" /* 505 */;
 
 require = arg1;

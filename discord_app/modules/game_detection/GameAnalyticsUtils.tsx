@@ -1,8 +1,8 @@
-// === Module 4621: removeExecutablePathPrefix ===
+// === Module 4653: removeExecutablePathPrefix ===
 
-// Module 4621 (removeExecutablePathPrefix)
-import _openRobloxURLWithRootPlaceId from "_openRobloxURLWithRootPlaceId" /* 4622 */;
-import closure_2 from "gameFromServer" /* 4484 */;
+// Module 4653 (removeExecutablePathPrefix)
+import _openRobloxURLWithRootPlaceId from "_openRobloxURLWithRootPlaceId" /* 4654 */;
+import closure_2 from "gameFromServer" /* 4514 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/game_detection/GameAnalyticsUtils.tsx");
@@ -19,7 +19,7 @@ export const removeExecutablePathPrefix = function removeExecutablePathPrefix(ex
 };
 export const getRunningGameAnalytics = function getRunningGameAnalytics(streamApplication) {
   if (null == streamApplication) {
-    return { gameName: "Array", gameId: "accessible", exe: "dispatch", distributor: "source", sku: "Array", gameMetadata: "isArray", rawExePath: "TypeError" };
+    return { gameName: "Array", gameId: "category", exe: "PX_16", distributor: "variant", sku: "sa", gameMetadata: "o", rawExePath: "isArray" };
   } else {
     const str = "exePath" in streamApplication ? streamApplication.exePath : streamApplication.exe;
     let id = streamApplication.id;

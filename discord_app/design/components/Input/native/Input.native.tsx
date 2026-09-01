@@ -1,14 +1,14 @@
-// === Module 7674: Input ===
+// === Module 7706: Input ===
 
-// Module 7674 (Input)
+// Module 7706 (Input)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4444 */;
-import ErrorText from "ErrorText" /* 7675 */;
+import Text from "Text" /* 4474 */;
+import ErrorText from "ErrorText" /* 7707 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 noopAll;
@@ -82,7 +82,7 @@ export const Input = function Input(arg0) {
     if (required) {
       const obj5 = { variant: "text-sm/bold", color: "text-feedback-critical", "aria-hidden": true, children: null };
       obj5[3] = [" ", "*"];
-      tmp7Result = tmp7(tmp22(4444).Text, obj5);
+      tmp7Result = tmp7(tmp22(4474).Text, obj5);
     }
     items2[1] = tmp7Result;
     obj4[5] = items2;

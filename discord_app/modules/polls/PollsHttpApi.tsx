@@ -1,6 +1,6 @@
-// === Module 11266: _submitPollVote ===
+// === Module 11303: _submitPollVote ===
 
-// Module 11266 (_submitPollVote)
+// Module 11303 (_submitPollVote)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
@@ -24,7 +24,7 @@ function _submitPollVote() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -47,7 +47,7 @@ function _submitPollVote() {
               ({ channelId: c0, messageId: c1, answerIds: c2 } = callback);
               c5 = 1;
               c6 = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else if (1 === tmp8) {
             if (arg0 === 1) {
@@ -74,7 +74,7 @@ function _submitPollVote() {
             }
           } else if (2 === tmp8) {
             c4 = 0;
-            const aPIError = new callback(4346).APIError(closure_3);
+            const aPIError = new callback(4376).APIError(closure_3);
             throw aPIError;
           } else if (arg0 === 1) {
             c6 = 3;
@@ -88,7 +88,7 @@ function _submitPollVote() {
           } else {
             c4 = 0;
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp21) {
           closure_3 = tmp21;
@@ -132,7 +132,7 @@ function _endPollEarly() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -154,7 +154,7 @@ function _endPollEarly() {
               ({ channelId: c0, messageId: c1 } = callback);
               c5 = 1;
               c6 = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else if (1 === tmp8) {
             if (arg0 === 1) {
@@ -179,7 +179,7 @@ function _endPollEarly() {
           } else if (2 === tmp8) {
             c4 = 0;
             closure_2 = closure_3;
-            const aPIError = new callback(4346).APIError(closure_2);
+            const aPIError = new callback(4376).APIError(closure_2);
             throw aPIError;
           } else if (arg0 === 1) {
             c6 = 3;
@@ -193,7 +193,7 @@ function _endPollEarly() {
           } else {
             c4 = 0;
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp28) {
           closure_3 = tmp28;

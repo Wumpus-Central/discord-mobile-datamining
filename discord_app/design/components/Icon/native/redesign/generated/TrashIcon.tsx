@@ -1,10 +1,10 @@
-// === Module 4406: TrashIcon ===
+// === Module 4436: TrashIcon ===
 
-// Module 4406 (TrashIcon)
+// Module 4436 (TrashIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4166 */;
-import registerAsset from "registerAsset" /* 4407 */;
+import BaseIconImage from "BaseIconImage" /* 4196 */;
+import registerAsset from "registerAsset" /* 4437 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

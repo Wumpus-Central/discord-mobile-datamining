@@ -1,8 +1,8 @@
-// === Module 9135: useTrackOpenPopout ===
+// === Module 9174: useTrackOpenPopout ===
 
-// Module 9135 (useTrackOpenPopout)
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4668 */;
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4913 */;
+// Module 9174 (useTrackOpenPopout)
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4700 */;
+import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4945 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1387 */;
 import closure_5 from "handleConnectionOpen" /* 1981 */;

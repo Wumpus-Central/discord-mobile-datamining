@@ -1,6 +1,6 @@
-// === Module 4546: RTCConnectionEvent ===
+// === Module 4578: RTCConnectionEvent ===
 
-// Module 4546 (RTCConnectionEvent)
+// Module 4578 (RTCConnectionEvent)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("lib/RTCConnectionEvent.tsx");

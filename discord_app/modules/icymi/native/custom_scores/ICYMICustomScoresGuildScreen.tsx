@@ -1,17 +1,17 @@
-// === Module 16010: ICYMICustomScoreChannelRow ===
+// === Module 16045: ICYMICustomScoreChannelRow ===
 
-// Module 16010 (ICYMICustomScoreChannelRow)
+// Module 16045 (ICYMICustomScoreChannelRow)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleReset" /* 7238 */;
+import closure_6 from "handleReset" /* 7270 */;
 import closure_7 from "ensureGuildLoaded" /* 1387 */;
 import closure_8 from "createGuildRecordFromRust" /* 1909 */;
-import closure_9 from "updateUserGuildSettingsInternal" /* 4669 */;
-import closure_10 from "filterStaffGuild" /* 8574 */;
+import closure_9 from "updateUserGuildSettingsInternal" /* 4701 */;
+import closure_10 from "filterStaffGuild" /* 8606 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 const require = arg1;
 function ICYMICustomScoreChannelRow(channelId) {
@@ -161,7 +161,7 @@ export default function ICYMICustomScoresGuildScreen(navigation) {
   let tmp2Result = tmp2(589);
   const items2 = [closure_10];
   const stateFromStores1 = tmp2Result.useStateFromStores(items2, () => closure_1_10.getCustomGuildScore(guildId));
-  tmp2Result = tmp2(8589);
+  tmp2Result = tmp2(8621);
   const numberToCustomScoreResult = tmp2Result.numberToCustomScore(stateFromStores1);
   React = numberToCustomScoreResult;
   const items3 = [closure_6];
@@ -314,6 +314,6 @@ export default function ICYMICustomScoresGuildScreen(navigation) {
   obj[2] = callback;
   obj[3] = memo;
   obj[4] = keyExtractor;
-  obj[1] = callback(navigation(8073).AnimatedFlashList, obj);
+  obj[1] = callback(navigation(8105).AnimatedFlashList, obj);
   return callback(guildChannels, obj);
 };

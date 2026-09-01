@@ -1,6 +1,6 @@
-// === Module 8543: nativeEventEmitter ===
+// === Module 8575: nativeEventEmitter ===
 
-// Module 8543 (nativeEventEmitter)
+// Module 8575 (nativeEventEmitter)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import keys from "keys" /* 644 */;

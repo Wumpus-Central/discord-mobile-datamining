@@ -1,6 +1,6 @@
-// === Module 6088: FORUM_GUIDELINES_ACTION_SHEET ===
+// === Module 6120: FORUM_GUIDELINES_ACTION_SHEET ===
 
-// Module 6088 (FORUM_GUIDELINES_ACTION_SHEET)
+// Module 6120 (FORUM_GUIDELINES_ACTION_SHEET)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/forums/ForumConstants.tsx");

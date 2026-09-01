@@ -1,8 +1,8 @@
-// === Module 9635: EditGuildEventScreens ===
+// === Module 9674: EditGuildEventScreens ===
 
-// Module 9635 (EditGuildEventScreens)
-import getRRule from "getRRule" /* 9595 */;
-import getChannelFromEvent from "getChannelFromEvent" /* 9636 */;
+// Module 9674 (EditGuildEventScreens)
+import getRRule from "getRRule" /* 9634 */;
+import getChannelFromEvent from "getChannelFromEvent" /* 9675 */;
 import closure_2 from "fetchFingerprint" /* 1218 */;
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1393 */;
 

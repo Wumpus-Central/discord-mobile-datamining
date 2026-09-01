@@ -1,15 +1,15 @@
-// === Module 10540: NativeCheckoutStoreProvider ===
+// === Module 10578: NativeCheckoutStoreProvider ===
 
-// Module 10540 (NativeCheckoutStoreProvider)
+// Module 10578 (NativeCheckoutStoreProvider)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import context from "context" /* 7137 */;
+import context from "context" /* 7169 */;
 import { AnalyticEvents } from "ME" /* 676 */;
-import { ItemPurchaseType } from "CustomCheckoutFlow" /* 4430 */;
+import { ItemPurchaseType } from "CustomCheckoutFlow" /* 4460 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 const require = arg1;
 function NativeCheckoutStoreProvider(children) {
@@ -19,7 +19,7 @@ function NativeCheckoutStoreProvider(children) {
   let redux;
   let first;
   closure_11 = undefined;
-  closure_8 = order(5909)(() => {
+  closure_8 = order(5941)(() => {
     let id;
     if (order != null) {
       id = order.id;
@@ -33,7 +33,7 @@ function NativeCheckoutStoreProvider(children) {
     obj = { loadId: id, startTime: Date.now() };
     return obj;
   });
-  redux = order(5909)(() => {
+  redux = order(5941)(() => {
     const obj = {};
     const merged = Object.assign(closure_6);
     obj.load_id = loadId.loadId;
@@ -41,7 +41,7 @@ function NativeCheckoutStoreProvider(children) {
     return obj;
   });
   first = callback(React.useState(() => closure_1_7({ order, checkoutInitParameters: closure_0, contextMetadata: closure_8, analyticsFields: closure_9, paymentGateway: closure_2, orderRequired: closure_3, onOrderRetryCancellation: closure_4, initialSubscriptionFacet: closure_5 })), 1)[0];
-  order(4913)(() => {
+  order(4945)(() => {
     if (null != closure_6) {
       let obj = closure_1_0(closure_1_2[17]);
       const result = obj.trackPaymentFlowStartedAnalyticsAndCTP(closure_9);
@@ -161,7 +161,7 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -184,7 +184,7 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
               closure_2 = undefined;
               v0 = 1;
               c4 = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -229,7 +229,7 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
             }
             closure_1_10(false);
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp23) {
           c4 = tmp;

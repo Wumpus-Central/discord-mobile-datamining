@@ -1,6 +1,6 @@
-// === Module 5063: isActionPickSupported ===
+// === Module 5095: isActionPickSupported ===
 
-// Module 5063 (isActionPickSupported)
+// Module 5095 (isActionPickSupported)
 import set from "set" /* 2 */;
 import isMetaQuest from "isMetaQuest" /* 1624 */;
 

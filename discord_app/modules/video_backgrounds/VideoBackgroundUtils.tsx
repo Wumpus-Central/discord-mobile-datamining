@@ -1,12 +1,12 @@
-// === Module 9749: isAnimatedBackgroundOption ===
+// === Module 9788: isAnimatedBackgroundOption ===
 
-// Module 9749 (isAnimatedBackgroundOption)
+// Module 9788 (isAnimatedBackgroundOption)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import getAvatarURL from "getAvatarURL" /* 1431 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4668 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4700 */;
 import closure_3 from "ensureGuildLoaded" /* 1387 */;
-import closure_4 from "createRTCConnection" /* 4522 */;
-import VideoFilterType from "VideoFilterType" /* 7727 */;
+import closure_4 from "createRTCConnection" /* 4554 */;
+import VideoFilterType from "VideoFilterType" /* 7759 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 require = arg1;
@@ -170,7 +170,7 @@ export const trackBackgroundOptionDeleted = function trackBackgroundOptionDelete
 };
 export const getVideoBackgroundProtoFromOption = function getVideoBackgroundProtoFromOption(closure_0) {
   if (null == closure_0) {
-    let obj = { oneofKind: "Array" };
+    let obj = { oneofKind: "r" };
   } else {
     let tmp = null != closure_0 && typeof closure_0 === "object";
     if (tmp) {

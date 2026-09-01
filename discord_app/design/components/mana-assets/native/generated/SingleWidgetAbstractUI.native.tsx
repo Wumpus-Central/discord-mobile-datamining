@@ -1,10 +1,10 @@
-// === Module 6979: SingleWidgetAbstractUI ===
+// === Module 7011: SingleWidgetAbstractUI ===
 
-// Module 6979 (SingleWidgetAbstractUI)
+// Module 7011 (SingleWidgetAbstractUI)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5461 */;
-import metadataDefault from "metadata" /* 6980 */;
+import preloadDefault from "preload" /* 5493 */;
+import metadataDefault from "metadata" /* 7012 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/SingleWidgetAbstractUI.native.tsx");

@@ -1,8 +1,8 @@
-// === Module 7840: createDisplayNameStylesMobile ===
+// === Module 7872: createDisplayNameStylesMobile ===
 
-// Module 7840 (createDisplayNameStylesMobile)
-import DisplayNameFont from "DisplayNameFont" /* 1936 */;
-import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4440 */;
+// Module 7872 (createDisplayNameStylesMobile)
+import DisplayNameFont from "DisplayNameFont" /* 1941 */;
+import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import closure_3 from "trackCommunicationDisabled" /* 1992 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
 

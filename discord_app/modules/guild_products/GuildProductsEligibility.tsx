@@ -1,6 +1,6 @@
-// === Module 6073: useGuildEligibleForGuildProducts ===
+// === Module 6105: useGuildEligibleForGuildProducts ===
 
-// Module 6073 (useGuildEligibleForGuildProducts)
+// Module 6105 (useGuildEligibleForGuildProducts)
 import closure_2 from "createGuildRecordFromRust" /* 1909 */;
 import { GuildFeatures } from "ME" /* 676 */;
 

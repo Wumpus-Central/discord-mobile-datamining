@@ -1,17 +1,17 @@
-// === Module 10304: ForumComposerHeader ===
+// === Module 10343: ForumComposerHeader ===
 
-// Module 10304 (ForumComposerHeader)
+// Module 10343 (ForumComposerHeader)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4444 */;
-import computeChannelNameDefault from "computeChannelName" /* 4642 */;
-import ForumIcon from "ForumIcon" /* 5005 */;
-import PressableBase from "PressableBase" /* 5036 */;
-import XSmallIcon from "XSmallIcon" /* 5519 */;
+import Text from "Text" /* 4474 */;
+import computeChannelNameDefault from "computeChannelName" /* 4674 */;
+import ForumIcon from "ForumIcon" /* 5037 */;
+import PressableBase from "PressableBase" /* 5068 */;
+import XSmallIcon from "XSmallIcon" /* 5551 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 noopAll;
@@ -70,8 +70,8 @@ export default function ForumComposerHeader(height) {
     obj2[1] = intl3.string(tmp7(1236).t.yR6HwZ);
     obj2[2] = tmp.button;
     obj2[3] = onGuidelinesPress;
-    obj2[4] = tmp6(tmp7(4992).BookCheckIcon, {});
-    tmp6Result = tmp6(tmp7(5036).PressableOpacity, obj2);
+    obj2[4] = tmp6(tmp7(5024).BookCheckIcon, {});
+    tmp6Result = tmp6(tmp7(5068).PressableOpacity, obj2);
   }
   items[2] = tmp6Result;
   items[3] = callback(closure_4, { style: tmp.headerBarSeparator });

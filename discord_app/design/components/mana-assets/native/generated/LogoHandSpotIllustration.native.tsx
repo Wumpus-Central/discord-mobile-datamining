@@ -1,10 +1,10 @@
-// === Module 6747: LogoHandSpotIllustration ===
+// === Module 6779: LogoHandSpotIllustration ===
 
-// Module 6747 (LogoHandSpotIllustration)
+// Module 6779 (LogoHandSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5461 */;
-import metadataDefault from "metadata" /* 6748 */;
+import preloadDefault from "preload" /* 5493 */;
+import metadataDefault from "metadata" /* 6780 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/LogoHandSpotIllustration.native.tsx");

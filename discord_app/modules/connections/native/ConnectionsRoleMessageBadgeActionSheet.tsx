@@ -1,26 +1,26 @@
-// === Module 11354: PopoutCheck ===
+// === Module 11392: PopoutCheck ===
 
-// Module 11354 (PopoutCheck)
+// Module 11392 (PopoutCheck)
 import applyDefault from "apply" /* 12 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useThemeDefault from "useTheme" /* 4383 */;
-import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4399 */;
-import Text from "Text" /* 4444 */;
-import officialApplicationIds2 from "officialApplicationIds" /* 5319 */;
+import useThemeDefault from "useTheme" /* 4413 */;
+import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4429 */;
+import Text from "Text" /* 4474 */;
+import officialApplicationIds2 from "officialApplicationIds" /* 5351 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "createdAt" /* 1930 */;
+import closure_7 from "createdAt" /* 1935 */;
 import closure_8 from "fetchFingerprint" /* 1218 */;
 import closure_9 from "trackCommunicationDisabled" /* 1992 */;
 import closure_10 from "createGuildRoleRecordFromRust" /* 1985 */;
 import closure_11 from "createGuildRecordFromRust" /* 1909 */;
-import closure_12 from "map" /* 11355 */;
-import { OperatorTypes } from "OperatorTypes" /* 5320 */;
+import closure_12 from "map" /* 11393 */;
+import { OperatorTypes } from "OperatorTypes" /* 5352 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function PopoutCheck(arg0) {
@@ -145,7 +145,7 @@ class PopoutChecks {
               const items1 = [null, , , ];
               let tmp26 = null;
               if (null != tmp7) {
-                const obj3 = { style: null, user: null, size: null, guildId: "Array" };
+                const obj3 = { style: null, user: null, size: null, guildId: "a" };
                 obj3[0] = tmp21.popoutCheckGroupPlatformIcon;
                 obj3[1] = tmp7;
                 obj3[2] = tmp11(tmp3[24]).AvatarSizes.XSMALL;

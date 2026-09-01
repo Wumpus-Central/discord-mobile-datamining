@@ -7,7 +7,7 @@ const result = set.fileFinishedImporting("flow/Server.tsx");
 
 export const PermissionOverwriteType = { ROLE: 0, [0]: "ROLE", MEMBER: 1, [1]: "MEMBER" };
 export const GuildBoostUpsellType = { FIRST_BOOSTER: 0, [0]: "FIRST_BOOSTER" };
-export const AgeVerificationStatusUkAndAusOnly = { UNVERIFIED: 1, [1]: "UNVERIFIED", VERIFIED_TEEN: 2, [2]: "VERIFIED_TEEN", VERIFIED_ADULT: 3, [3]: "VERIFIED_ADULT", INFERRED_ADULT: 4, [4]: "INFERRED_ADULT", CLIENT_ONLY_PENDING: 99999, [99999]: "CLIENT_ONLY_PENDING" };
+export const AgeVerificationStatusUkAndAusOnly = { UNVERIFIED: 1, [1]: "UNVERIFIED", VERIFIED_TEEN: 2, [2]: "VERIFIED_TEEN", VERIFIED_ADULT: 3, [3]: "VERIFIED_ADULT", INFERRED_ADULT: 4, [4]: "INFERRED_ADULT", INFERRED_TEEN: 5, [5]: "INFERRED_TEEN", CLIENT_ONLY_PENDING: 99999, [99999]: "CLIENT_ONLY_PENDING" };
 export const GameCompanyRole = { UNKNOWN: 0, [0]: "UNKNOWN", PUBLISHER: 1, [1]: "PUBLISHER", DEVELOPER: 2, [2]: "DEVELOPER" };
 export const EmbeddedActivitySupportedPlatforms = { IOS: "ios", ANDROID: "android", WEB: "web" };
 export const EmbeddedActivityLabelTypes = { NONE: 0, [0]: "NONE", NEW: 1, [1]: "NEW", UPDATED: 2, [2]: "UPDATED" };

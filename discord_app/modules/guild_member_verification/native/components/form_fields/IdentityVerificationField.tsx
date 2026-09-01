@@ -1,13 +1,13 @@
-// === Module 7654: BaseIdentityVerificationField ===
+// === Module 7686: BaseIdentityVerificationField ===
 
-// Module 7654 (BaseIdentityVerificationField)
+// Module 7686 (BaseIdentityVerificationField)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4272 */;
-import Text from "Text" /* 4444 */;
+import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4302 */;
+import Text from "Text" /* 4474 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function BaseIdentityVerificationField(icon) {
@@ -29,7 +29,7 @@ function BaseIdentityVerificationField(icon) {
     obj[0] = tmp.verifiedContainer;
     const intl2 = tmp7(1236).intl;
     obj[2] = intl2.string(tmp7(1236).t.g62IJl);
-    obj[3] = tmp6(tmp7(4399).CheckmarkLargeIcon, { color: "status-positive" });
+    obj[3] = tmp6(tmp7(4429).CheckmarkLargeIcon, { color: "status-positive" });
     obj1 = obj;
   } else {
     obj1 = { style: null, children: null };
@@ -38,7 +38,7 @@ function BaseIdentityVerificationField(icon) {
     const intl = tmp7(1236).intl;
     obj2[3] = intl.string(tmp7(1236).t["13ofGu"]);
     obj2[4] = onPress;
-    obj1[1] = tmp6(tmp7(4896).Button, obj2);
+    obj1[1] = tmp6(tmp7(4928).Button, obj2);
   }
   items[2] = callback(View, obj1);
   obj[1] = items;
@@ -69,7 +69,7 @@ export default function IdentityVerificationField(arg0) {
       string2Result = string2(INsLgA.c6EUJI);
     }
   } else {
-    if (tmp(4272).UserVerificationFieldPlatforms.PHONE === platform) {
+    if (tmp(4302).UserVerificationFieldPlatforms.PHONE === platform) {
       const intl2 = tmp(1236).intl;
       const string = intl2.string;
       const t = tmp(1236).t;
@@ -83,19 +83,19 @@ export default function IdentityVerificationField(arg0) {
       const intl = tmp(1236).intl;
       stringResult1 = intl.string(tmp(1236).t.mhv8BM);
     }
-    if (tmp(4272).UserVerificationFieldPlatforms.EMAIL === platform) {
-      let EnvelopeIcon = tmp(7772).EnvelopeIcon;
-    } else if (tmp(4272).UserVerificationFieldPlatforms.PHONE === platform) {
-      EnvelopeIcon = tmp(7701).MobilePhoneIcon;
+    if (tmp(4302).UserVerificationFieldPlatforms.EMAIL === platform) {
+      let EnvelopeIcon = tmp(7804).EnvelopeIcon;
+    } else if (tmp(4302).UserVerificationFieldPlatforms.PHONE === platform) {
+      EnvelopeIcon = tmp(7733).MobilePhoneIcon;
     } else {
-      EnvelopeIcon = tmp(7772).EnvelopeIcon;
+      EnvelopeIcon = tmp(7804).EnvelopeIcon;
     }
-    if (tmp(4272).UserVerificationFieldPlatforms.EMAIL === platform) {
+    if (tmp(4302).UserVerificationFieldPlatforms.EMAIL === platform) {
       let fn = () => {
         callback2(paths[10]).open();
       };
     } else {
-      fn = tmp(4272).UserVerificationFieldPlatforms.PHONE === platform ? (() => {
+      fn = tmp(4302).UserVerificationFieldPlatforms.PHONE === platform ? (() => {
         let obj = callback2(paths[11]);
         obj = { reason: callback(paths[14]).ChangePhoneReason.GUILD_PHONE_REQUIRED };
         obj.pushLazy(callback(paths[13])(paths[12], paths.paths), obj);

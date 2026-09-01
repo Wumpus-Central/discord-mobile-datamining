@@ -1,7 +1,7 @@
-// === Module 16949: prototype ===
+// === Module 16985: prototype ===
 
-// Module 16949 (prototype)
-import initializeDefault from "initialize" /* 5454 */;
+// Module 16985 (prototype)
+import initializeDefault from "initialize" /* 5486 */;
 
 let require = arg1;
 initializeDefault;
@@ -14,7 +14,7 @@ let prototype = function InstantInviteManager() {
     }
   };
   applyArgumentsResult.shareInviteFailed = function shareInviteFailed() {
-    let obj = callback(4164);
+    let obj = callback(4194);
     obj = { key: "GROUP_DM_ADD_ERROR", content: null };
     const intl = applyArgumentsResult(1236).intl;
     obj[1] = intl.string(applyArgumentsResult(1236).t["N/9OFy"]);

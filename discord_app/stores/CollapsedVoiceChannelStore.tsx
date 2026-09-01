@@ -1,6 +1,6 @@
-// === Module 7240: handleConnectionOpen ===
+// === Module 7272: handleConnectionOpen ===
 
-// Module 7240 (handleConnectionOpen)
+// Module 7272 (handleConnectionOpen)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;

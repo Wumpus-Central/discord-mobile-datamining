@@ -1,36 +1,36 @@
-// === Module 7241: computeSubtitle ===
+// === Module 7273: computeSubtitle ===
 
-// Module 7241 (computeSubtitle)
+// Module 7273 (computeSubtitle)
 import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1471 */;
-import hasStream from "hasStream" /* 4635 */;
-import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 6081 */;
-import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 6104 */;
+import hasStream from "hasStream" /* 4667 */;
+import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 6113 */;
+import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 6136 */;
 import closure_3 from "participantFromServer" /* 1386 */;
-import closure_4 from "addApplication" /* 4489 */;
-import closure_5 from "handleConnectionReset" /* 7242 */;
+import closure_4 from "addApplication" /* 4519 */;
+import closure_5 from "handleConnectionReset" /* 7274 */;
 import closure_6 from "isSubscriptionGated" /* 1983 */;
-import closure_7 from "scheduledEventSort" /* 7239 */;
+import closure_7 from "scheduledEventSort" /* 7271 */;
 import closure_8 from "initialize" /* 1984 */;
-import closure_9 from "handleChange" /* 7243 */;
-import closure_10 from "set" /* 7244 */;
-import closure_11 from "guildHasCommunity" /* 7245 */;
-import closure_12 from "rebuild" /* 5416 */;
-import closure_13 from "storeThread" /* 4093 */;
+import closure_9 from "handleChange" /* 7275 */;
+import closure_10 from "set" /* 7276 */;
+import closure_11 from "guildHasCommunity" /* 7277 */;
+import closure_12 from "rebuild" /* 5448 */;
+import closure_13 from "storeThread" /* 4123 */;
 import createChannelRecord from "createChannelRecord" /* 1391 */;
-import closure_18 from "incrementVersion" /* 5453 */;
+import closure_18 from "incrementVersion" /* 5485 */;
 import closure_19 from "ensureGuildLoaded" /* 1387 */;
-import closure_20 from "handleConnectionOpen" /* 7240 */;
+import closure_20 from "handleConnectionOpen" /* 7272 */;
 import closure_21 from "createGuildRecordFromRust" /* 1909 */;
-import closure_22 from "getUncachedChannelPermissions" /* 4091 */;
-import closure_23 from "generateOldThreadCutoff" /* 4463 */;
+import closure_22 from "getUncachedChannelPermissions" /* 4121 */;
+import closure_23 from "generateOldThreadCutoff" /* 4493 */;
 import closure_24 from "handleConnectionOpen" /* 1981 */;
-import closure_25 from "updateUserGuildSettingsInternal" /* 4669 */;
-import closure_26 from "updateVoiceState" /* 4467 */;
-import closure_27 from "getVoiceStatesForGuild" /* 4523 */;
-import closure_28 from "handleChange" /* 7246 */;
-import { ChannelListGuildActionRow } from "ChannelListGuildActionRow" /* 7247 */;
+import closure_25 from "updateUserGuildSettingsInternal" /* 4701 */;
+import closure_26 from "updateVoiceState" /* 4497 */;
+import closure_27 from "getVoiceStatesForGuild" /* 4555 */;
+import closure_28 from "handleChange" /* 7278 */;
+import { ChannelListGuildActionRow } from "ChannelListGuildActionRow" /* 7279 */;
 import ME from "ME" /* 676 */;
 import { ChannelFlags } from "set" /* 1394 */;
 import { Permissions } from "sum" /* 505 */;

@@ -1,18 +1,18 @@
-// === Module 10349: ? ===
+// === Module 10388: ? ===
 
-// Module 10349
+// Module 10388
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4444 */;
-import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4820 */;
-import registerAssetDefault from "registerAsset" /* 10350 */;
-import registerAssetDefault2 from "registerAsset" /* 10351 */;
-import StickerPackBannerDefault from "StickerPackBanner" /* 10352 */;
+import Text from "Text" /* 4474 */;
+import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4852 */;
+import registerAssetDefault from "registerAsset" /* 10389 */;
+import registerAssetDefault2 from "registerAsset" /* 10390 */;
+import StickerPackBannerDefault from "StickerPackBanner" /* 10391 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import PADDING_HORIZONTAL from "PADDING_HORIZONTAL" /* 10311 */;
+import PADDING_HORIZONTAL from "PADDING_HORIZONTAL" /* 10350 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 import importAllResult from "noop" /* 19 */;
 
 require = arg1;
@@ -73,7 +73,7 @@ const memoResult = importAllResult.memo((withDescription) => {
   if (flag) {
     const obj5 = { variant: "text-sm/medium", children: null };
     obj5[1] = stickerPack.description;
-    flag = tmp4(tmp6(4444).Text, obj5);
+    flag = tmp4(tmp6(4474).Text, obj5);
   }
   const obj6 = { children: null };
   items1[1] = flag;
@@ -96,7 +96,7 @@ const memoResult = importAllResult.memo((withDescription) => {
     obj10[0] = items3;
     obj10[1] = onPress;
     obj10[3] = tmp2Result;
-    let tmp4Result = tmp4(tmp6(5036).PressableOpacity, obj10);
+    let tmp4Result = tmp4(tmp6(5068).PressableOpacity, obj10);
   } else {
     const obj11 = { style: null, children: null };
     const items4 = [tmp.section, style];

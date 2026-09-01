@@ -1,6 +1,6 @@
-// === Module 16708: areVoicePanelPreJoinContentPropsEqual ===
+// === Module 16744: areVoicePanelPreJoinContentPropsEqual ===
 
-// Module 16708 (areVoicePanelPreJoinContentPropsEqual)
+// Module 16744 (areVoicePanelPreJoinContentPropsEqual)
 import set from "set" /* 2 */;
 import shallowEqualDefault from "shallowEqual" /* 643 */;
 

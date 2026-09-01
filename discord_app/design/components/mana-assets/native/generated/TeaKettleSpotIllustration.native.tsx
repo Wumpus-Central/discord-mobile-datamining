@@ -1,10 +1,10 @@
-// === Module 7059: TeaKettleSpotIllustration ===
+// === Module 7091: TeaKettleSpotIllustration ===
 
-// Module 7059 (TeaKettleSpotIllustration)
+// Module 7091 (TeaKettleSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5461 */;
-import metadataDefault from "metadata" /* 7060 */;
+import preloadDefault from "preload" /* 5493 */;
+import metadataDefault from "metadata" /* 7092 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/TeaKettleSpotIllustration.native.tsx");

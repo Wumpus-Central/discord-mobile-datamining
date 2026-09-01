@@ -1,9 +1,9 @@
-// === Module 9643: useChannelsUserCanStartStageIn ===
+// === Module 9682: useChannelsUserCanStartStageIn ===
 
-// Module 9643 (useChannelsUserCanStartStageIn)
+// Module 9682 (useChannelsUserCanStartStageIn)
 import closure_2 from "comparator" /* 1982 */;
 import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1982 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4121 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useGuildsUserCanStartStageIn.tsx");

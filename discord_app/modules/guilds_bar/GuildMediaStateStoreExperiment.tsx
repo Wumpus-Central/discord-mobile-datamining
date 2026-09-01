@@ -1,6 +1,6 @@
-// === Module 15888: GuildMediaStateSource ===
+// === Module 15923: GuildMediaStateSource ===
 
-// Module 15888 (GuildMediaStateSource)
+// Module 15923 (GuildMediaStateSource)
 import getUnitIdDefault from "getUnitId" /* 1469 */;
 
 let obj = { HOOK: "hook", STORE: "store", SHADOW: "shadow" };

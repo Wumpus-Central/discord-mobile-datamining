@@ -1,6 +1,6 @@
-// === Module 6100: reset ===
+// === Module 6132: reset ===
 
-// Module 6100 (reset)
+// Module 6132 (reset)
 import set from "set" /* 2 */;
 import privDefault from "priv" /* 1401 */;
 

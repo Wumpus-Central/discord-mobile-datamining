@@ -1,10 +1,10 @@
-// === Module 7968: useChangelog ===
+// === Module 8000: useChangelog ===
 
-// Module 7968 (useChangelog)
+// Module 8000 (useChangelog)
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "_getSystemLocale" /* 1996 */;
-import closure_5 from "handleUserSettingsProtoStoreChange" /* 4462 */;
+import closure_5 from "handleUserSettingsProtoStoreChange" /* 4492 */;
 import { ChangelogLoadState } from "CHANGELOG_MODAL_KEY" /* 1980 */;
 
 require = arg1;

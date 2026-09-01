@@ -1,6 +1,6 @@
-// === Module 6406: metadata ===
+// === Module 6438: metadata ===
 
-// Module 6406 (metadata)
+// Module 6438 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/CrosshairIllocon-2x.png.js");

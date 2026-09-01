@@ -1,11 +1,11 @@
-// === Module 5062: ? ===
+// === Module 5094: ? ===
 
-// Module 5062
+// Module 5094
 import set from "set" /* 500 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import launchCamera from "launchCamera" /* 5064 */;
-import openPickerDefault from "openPicker" /* 5066 */;
+import launchCamera from "launchCamera" /* 5096 */;
+import openPickerDefault from "openPicker" /* 5098 */;
 import closure_3 from "handleThemeChange" /* 1302 */;
 import { ThemeTypes } from "sum" /* 505 */;
 
@@ -28,10 +28,10 @@ export default {
     if (obj2.isIOS()) {
       str2 = "pageSheet";
     }
-    let tmp4Result = tmp4(5063);
+    let tmp4Result = tmp4(5095);
     obj2 = set;
     const tmp3 = !mediaType.disableNewIOSPicker;
-    tmp4Result = tmp4(5064);
+    tmp4Result = tmp4(5096);
     obj = {};
     const merged = Object.assign(mediaType);
     obj.mediaType = str;

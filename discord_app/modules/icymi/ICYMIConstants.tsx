@@ -1,6 +1,6 @@
-// === Module 16004: NUM_GUILDS_EXTENDED_ONBOARDING ===
+// === Module 16039: NUM_GUILDS_EXTENDED_ONBOARDING ===
 
-// Module 16004 (NUM_GUILDS_EXTENDED_ONBOARDING)
+// Module 16039 (NUM_GUILDS_EXTENDED_ONBOARDING)
 import setDefault from "set" /* 687 */;
 
 const result = 15 * setDefault.Millis.MINUTE;

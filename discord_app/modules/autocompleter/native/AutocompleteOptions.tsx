@@ -1,18 +1,18 @@
-// === Module 10376: getAutocompleteOptions ===
+// === Module 10415: getAutocompleteOptions ===
 
-// Module 10376 (getAutocompleteOptions)
+// Module 10415 (getAutocompleteOptions)
 import applyDefault from "apply" /* 12 */;
-import _executeCommandDefault from "_executeCommand" /* 8406 */;
-import closure_3 from "handleInit" /* 7491 */;
-import closure_4 from "handleInit" /* 7492 */;
-import closure_5 from "set" /* 5022 */;
-import closure_6 from "loadSavedGuildStickers" /* 5412 */;
+import _executeCommandDefault from "_executeCommand" /* 8438 */;
+import closure_3 from "handleInit" /* 7523 */;
+import closure_4 from "handleInit" /* 7524 */;
+import closure_5 from "set" /* 5053 */;
+import closure_6 from "loadSavedGuildStickers" /* 5444 */;
 import closure_7 from "ensureGuildLoaded" /* 1387 */;
 import closure_8 from "trackCommunicationDisabled" /* 1992 */;
 import closure_9 from "createGuildRecordFromRust" /* 1909 */;
 import ME from "ME" /* 676 */;
-import regExp from "regExp" /* 4921 */;
-import { AutocompleteTypes } from "AutocompleteTypes" /* 10377 */;
+import regExp from "regExp" /* 4953 */;
+import { AutocompleteTypes } from "AutocompleteTypes" /* 10416 */;
 import set from "set" /* 1925 */;
 
 const require = arg1;
@@ -191,7 +191,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
                 const obj4 = _private(tmp3[17]);
               }
               const items2 = [query];
-              const items3 = [_private, (arg0, arg1) => arg1 === callback(6149).StickerSendability.SENDABLE];
+              const items3 = [_private, (arg0, arg1) => arg1 === callback(6181).StickerSendability.SENDABLE];
               items1 = flag(tmp3[14]).queryStickers(items2, true, items3);
               const tmp2Result = flag(tmp3[14]);
             }

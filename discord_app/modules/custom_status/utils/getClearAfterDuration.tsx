@@ -1,10 +1,10 @@
-// === Module 9058: getClearAfterDuration ===
+// === Module 9096: getClearAfterDuration ===
 
-// Module 9058 (getClearAfterDuration)
+// Module 9096 (getClearAfterDuration)
 import set from "set" /* 2 */;
 import _modDef38 from "module_38" /* 38 */;
 import setDefault from "set" /* 687 */;
-import StatusTypes from "StatusTypes" /* 9054 */;
+import StatusTypes from "StatusTypes" /* 9092 */;
 
 const ClearAfterValues = StatusTypes.ClearAfterValues;
 const result = set.fileFinishedImporting("modules/custom_status/utils/getClearAfterDuration.tsx");

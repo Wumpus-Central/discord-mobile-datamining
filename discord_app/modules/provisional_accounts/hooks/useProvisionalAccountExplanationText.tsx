@@ -1,7 +1,7 @@
-// === Module 12134: useProvisionalAccountExplanationText ===
+// === Module 12167: useProvisionalAccountExplanationText ===
 
-// Module 12134 (useProvisionalAccountExplanationText)
-import useProvisionalAccountApplicationDefault from "useProvisionalAccountApplication" /* 12135 */;
+// Module 12167 (useProvisionalAccountExplanationText)
+import useProvisionalAccountApplicationDefault from "useProvisionalAccountApplication" /* 12168 */;
 import closure_3 from "noop" /* 19 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
 

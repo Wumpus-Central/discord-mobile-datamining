@@ -1,7 +1,7 @@
-// === Module 8930: useTieredTenureBadgeForUser ===
+// === Module 8967: useTieredTenureBadgeForUser ===
 
-// Module 8930 (useTieredTenureBadgeForUser)
-import closure_2 from "createUserWidgetFromServer" /* 7334 */;
+// Module 8967 (useTieredTenureBadgeForUser)
+import closure_2 from "createUserWidgetFromServer" /* 7366 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useTieredTenureBadgeForUser.tsx");

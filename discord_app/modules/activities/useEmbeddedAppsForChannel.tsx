@@ -1,9 +1,9 @@
-// === Module 11598: useEmbeddedApps ===
+// === Module 11631: useEmbeddedApps ===
 
-// Module 11598 (useEmbeddedApps)
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 5927 */;
+// Module 11631 (useEmbeddedApps)
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 5959 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "sortActivity" /* 4537 */;
+import closure_4 from "sortActivity" /* 4569 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
 import closure_6 from "participantFromServer" /* 1386 */;
 import { NO_ACTIVITIES } from "participantFromServer" /* 1386 */;

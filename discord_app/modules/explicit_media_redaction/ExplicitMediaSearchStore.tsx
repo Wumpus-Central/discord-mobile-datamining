@@ -1,10 +1,10 @@
-// === Module 7322: handleSearchMessagesSuccess ===
+// === Module 7354: handleSearchMessagesSuccess ===
 
-// Module 7322 (handleSearchMessagesSuccess)
+// Module 7354 (handleSearchMessagesSuccess)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4705 */;
-import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 7313 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4737 */;
+import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 7345 */;
 
 require = arg1;
 function handleSearchMessagesSuccess(data) {

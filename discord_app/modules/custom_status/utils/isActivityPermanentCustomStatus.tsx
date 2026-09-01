@@ -1,6 +1,6 @@
-// === Module 15617: isActivityPermanentCustomStatus ===
+// === Module 15653: isActivityPermanentCustomStatus ===
 
-// Module 15617 (isActivityPermanentCustomStatus)
+// Module 15653 (isActivityPermanentCustomStatus)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 

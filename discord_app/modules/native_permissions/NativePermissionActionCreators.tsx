@@ -1,6 +1,6 @@
-// === Module 5057: setPermission ===
+// === Module 5089: setPermission ===
 
-// Module 5057 (setPermission)
+// Module 5089 (setPermission)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

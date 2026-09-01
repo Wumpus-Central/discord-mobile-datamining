@@ -1,17 +1,17 @@
-// === Module 12983: claimedOutboundPromotionCodeFromServer ===
+// === Module 13016: claimedOutboundPromotionCodeFromServer ===
 
-// Module 12983 (claimedOutboundPromotionCodeFromServer)
+// Module 13016 (claimedOutboundPromotionCodeFromServer)
 import set2 from "set" /* 500 */;
 import DismissibleContent from "DismissibleContent" /* 1373 */;
 import addVersionedDismissedContent from "addVersionedDismissedContent" /* 1375 */;
-import CountryListMode from "CountryListMode" /* 8444 */;
+import CountryListMode from "CountryListMode" /* 8476 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_5 from "createFromServer" /* 8417 */;
-import closure_6 from "createEmptyPromotionsByType" /* 10436 */;
+import closure_5 from "createFromServer" /* 8449 */;
+import closure_6 from "createEmptyPromotionsByType" /* 10475 */;
 import { PromotionFlags } from "GuildFeatures" /* 1924 */;
 import ME from "ME" /* 676 */;
-import { ActivityPlatform } from "items3" /* 4476 */;
+import { ActivityPlatform } from "items3" /* 4506 */;
 
 require = arg1;
 function claimedOutboundPromotionCodeFromServer(code) {
@@ -24,108 +24,35 @@ function _claimOutboundPromotion() {
     c5 = 0;
     c6 = 0;
     const iter = (function*(arg0) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
-        }
+      c3 = tmp2;
+      ({ promotionId: c0, promotionTitle: c1, partnerId: c2, analyticsLocations: c3 } = callback);
+      yield "PX_16";
+      const HTTP = callback(530).HTTP;
+      const obj2 = { url: null, rejectWithError: null };
+      obj2[0] = closure_9.CLAIM_OUTBOUND_PROMOTION_CODE(callback);
+      obj2[1] = callback(530).rejectWithMigratedError();
+      closure_4 = yield HTTP.post(obj2);
+      if (obj9.isIOS()) {
+        let ANDROID = tmp39.IOS;
       } else {
-        try {
-          c6 = 2;
-          if (0 === body) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_4 = tmp5;
-              c3 = tmp2;
-              let callback;
-              let callback2;
-              dependencyMap = undefined;
-              c3 = undefined;
-              ({ promotionId: c0, promotionTitle: c1, partnerId: c2, analyticsLocations: c3 } = callback);
-              closure_4 = undefined;
-              body = undefined;
-              c6 = undefined;
-              body = 1;
-              c6 = 1;
-              return { value: "Object", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              const HTTP = callback(530).HTTP;
-              const obj2 = { url: null, rejectWithError: null };
-              obj2[0] = closure_9.CLAIM_OUTBOUND_PROMOTION_CODE(callback);
-              obj2[1] = callback(530).rejectWithMigratedError();
-              body = 2;
-              c6 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.post(obj2);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            closure_4 = arg1;
-            body = closure_4.body;
-            if (obj9.isIOS()) {
-              let ANDROID = tmp39.IOS;
-            } else {
-              ANDROID = tmp39.ANDROID;
-            }
-            c6 = ANDROID;
-            obj = callback2(698);
-            const obj5 = { platform: null, status: null, location_stack: null, promotion_id: null, name: null, partner: null };
-            obj5[0] = c6;
-            obj5[1] = closure_4.status;
-            obj5[2] = c3;
-            obj5[3] = callback;
-            if (callback2 == null) {
-              callback2 = null;
-            }
-            obj5[4] = callback2;
-            if (dependencyMap == null) {
-              dependencyMap = null;
-            }
-            obj5[5] = dependencyMap;
-            obj.track(constants.OUTBOUND_PROMOTION_CLAIMED, obj5);
-            c6 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = callback3(body);
-            return obj6;
-          }
-        } catch (tmp27) {
-          c6 = tmp;
-          throw tmp27;
-        }
+        ANDROID = tmp39.ANDROID;
       }
+      const obj = callback2(698);
+      const obj5 = { platform: null, status: null, location_stack: null, promotion_id: null, name: null, partner: null };
+      obj5[0] = c6;
+      obj5[1] = closure_4.status;
+      obj5[2] = c3;
+      obj5[3] = callback;
+      if (callback2 == null) {
+        callback2 = null;
+      }
+      obj5[4] = callback2;
+      if (dependencyMap == null) {
+        dependencyMap = null;
+      }
+      obj5[5] = dependencyMap;
+      obj.track(constants.OUTBOUND_PROMOTION_CLAIMED, obj5);
+      return callback3(body);
     })();
     iter.next();
     return iter;

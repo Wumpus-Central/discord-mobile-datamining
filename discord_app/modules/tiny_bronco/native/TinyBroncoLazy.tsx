@@ -1,6 +1,6 @@
-// === Module 15920: useIsTinyBroncoEligible ===
+// === Module 15955: useIsTinyBroncoEligible ===
 
-// Module 15920 (useIsTinyBroncoEligible)
+// Module 15955 (useIsTinyBroncoEligible)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/tiny_bronco/native/TinyBroncoLazy.tsx");

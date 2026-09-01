@@ -1,21 +1,21 @@
-// === Module 14171: _getKeyForFileId ===
+// === Module 14204: _getKeyForFileId ===
 
-// Module 14171 (_getKeyForFileId)
+// Module 14204 (_getKeyForFileId)
 import timestampDefault from "timestamp" /* 3 */;
 import Storage3 from "Storage" /* 595 */;
 import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import hooksDefault from "hooks" /* 4045 */;
-import resetCache from "resetCache" /* 4133 */;
-import initializeDefault from "initialize" /* 4630 */;
+import hooksDefault from "hooks" /* 4075 */;
+import resetCache from "resetCache" /* 4163 */;
+import initializeDefault from "initialize" /* 4662 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "hasFlag" /* 4101 */;
+import closure_5 from "hasFlag" /* 4131 */;
 import closure_6 from "fetchFingerprint" /* 1218 */;
 import closure_7 from "ensureGuildLoaded" /* 1387 */;
-import closure_8 from "reinjectEphemerals" /* 4703 */;
+import closure_8 from "reinjectEphemerals" /* 4735 */;
 import { MessageStates } from "ME" /* 676 */;
-import createLock from "createLock" /* 14172 */;
+import createLock from "createLock" /* 14205 */;
 
 require = arg1;
 function _getKeyForFileId(arg0) {
@@ -56,11 +56,11 @@ function createFailedMessage(channel_id) {
   channel_id = channel_id.channel_id;
   ({ content, tts, state } = channel_id);
   let obj = { channelId: channel_id, content, tts, state: MessageStates.SEND_FAILED };
-  const tmp3 = file(7465)(obj);
+  const tmp3 = file(7497)(obj);
   closure_0 = tmp3;
   ({ timestamp: tmp3.timestamp, file } = channel_id);
   obj = { isHydratingExpiredPendingMessage: state === MessageStates.SENDING };
-  file(7169).receiveMessage(channel_id, tmp3, true, obj);
+  file(7201).receiveMessage(channel_id, tmp3, true, obj);
   if (null != file) {
     file(709).wait(() => file(closure_1_2[16]).restoreFailedUpload(id.id, file));
     const tmpResult = file(709);
@@ -133,7 +133,7 @@ function _rehydrateFailedMessages() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -404,7 +404,7 @@ class LocalMessageCacheManager extends tmp3 {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -458,7 +458,7 @@ class LocalMessageCacheManager extends tmp3 {
                           obj[0] = arg1;
                           return obj;
                         } else {
-                          return { value: "HermesInternal", done: "HermesInternal" };
+                          return { value: "HermesInternal", done: null };
                         }
                       } else {
                         try {
@@ -481,7 +481,7 @@ class LocalMessageCacheManager extends tmp3 {
                               }, 0);
                             }
                             c1 = 3;
-                            return { value: "HermesInternal", done: "HermesInternal" };
+                            return { value: "HermesInternal", done: null };
                           }
                         } catch (tmp9) {
                           c1 = tmp;
@@ -495,7 +495,7 @@ class LocalMessageCacheManager extends tmp3 {
                   closure_0 = values[Symbol.iterator]();
                   if (closure_0 === undefined) {
                     c10 = 3;
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   } else {
                     c7 = 1;
                     closure_2 = tmp35;
@@ -751,7 +751,7 @@ class LocalMessageCacheManager extends tmp3 {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -796,7 +796,7 @@ class LocalMessageCacheManager extends tmp3 {
                 return obj;
               }
               set = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } catch (tmp8) {
               set = tmp;
               throw tmp8;
@@ -1036,7 +1036,7 @@ prototype["_initialize"] = function _initialize() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       while (true) {
@@ -1113,7 +1113,7 @@ prototype["_initialize"] = function _initialize() {
                 let subscription1 = obj3.subscribe("CACHE_LOADED", closure_0.handleCacheLoaded);
                 let num4 = 3;
                 c8 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               } else {
                 let tmp53 = closure_3;
                 let tmp54 = ready;

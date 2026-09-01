@@ -1,8 +1,8 @@
-// === Module 10166: CHANNEL_LIST_STYLES_COMPACT ===
+// === Module 10205: CHANNEL_LIST_STYLES_COMPACT ===
 
-// Module 10166 (CHANNEL_LIST_STYLES_COMPACT)
+// Module 10205 (CHANNEL_LIST_STYLES_COMPACT)
 import ThemesDefault from "Themes" /* 712 */;
-import mergeDefault from "merge" /* 10165 */;
+import mergeDefault from "merge" /* 10204 */;
 
 let obj = { layout: { margin: { marginLeft: 4, marginRight: 4, marginVertical: 0 }, marginPanels: { marginLeft: 8, marginRight: 8, marginVertical: 0 }, marginThread: { marginLeft: 56, marginRight: 4, marginVertical: 0 } }, container: null, voiceUsers: null, voiceOrStageSummaryRow: null, channelName: null, messagePreview: null, timestamp: null, inviteRow: null, icon: null, unreadBadge: null, mentionBadge: null, category: null, typing: null, activeThreadCount: null, joinVoiceButton: null, threadSpine: null, happeningNow: null, separator: null, searchButton: null };
 obj = { borderRadius: ThemesDefault.radii.md, padding: { paddingVertical: 4, paddingLeft: 20, paddingRight: 12 }, paddingPanels: { paddingVertical: 4, paddingLeft: 8, paddingRight: 8 }, paddingThread: { paddingVertical: 4, paddingLeft: 8, paddingRight: 12 } };

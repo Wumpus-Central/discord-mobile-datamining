@@ -1,13 +1,13 @@
-// === Module 7173: receiveNetworkInfoformation ===
+// === Module 7205: receiveNetworkInfoformation ===
 
-// Module 7173 (receiveNetworkInfoformation)
+// Module 7205 (receiveNetworkInfoformation)
 import timestampDefault from "timestamp" /* 3 */;
 import setDefault from "set" /* 687 */;
 import configure from "configure" /* 1475 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "_handleConnectionOpen" /* 5189 */;
-import closure_6 from "result" /* 7174 */;
+import closure_5 from "_handleConnectionOpen" /* 5221 */;
+import closure_6 from "result" /* 7206 */;
 import closure_7 from "createGuildRecordFromRust" /* 1909 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import importDefaultResult from "notifyListeners" /* 1474 */;
@@ -155,7 +155,7 @@ prototype["writeExistingEventStorage"] = function writeExistingEventStorage() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -227,7 +227,7 @@ prototype["track"] = function track() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -299,19 +299,19 @@ prototype["getQueuedEvent"] = function getQueuedEvent() {
     closure_1_19();
     const obj7 = closure_1_1(closure_1_2[13]);
     let callback = yield obj7.getAppFirstVisibleTimestamp();
-    const obj4 = callback(7175);
+    const obj4 = callback(7207);
     let lib = yield obj4.getSession();
     const obj5 = { type: null, properties: null };
     obj5[0] = constants.APP_NETWORK_USAGE;
     const obj6 = {};
-    const merged = Object.assign(callback(7188).getDeviceMetadata());
+    const merged = Object.assign(callback(7220).getDeviceMetadata());
     const _Date = Date;
     obj6.client_track_timestamp = Date.now();
     if (lib != null) {
       const uuid = lib.uuid;
     }
     obj6.client_heartbeat_session_id = uuid;
-    obj = callback(7188);
+    obj = callback(7220);
     obj6.load_id = obj.currentLoadId();
     obj6.num_guilds = guildCount.getGuildCount();
     obj6.was_authenticated = lib(9).wasAuthenticated;
@@ -368,7 +368,7 @@ prototype["getQueuedEvent"] = function getQueuedEvent() {
     obj6.download_bytes_received = closure_10.downloadBytesReceived;
     obj6.download_num_requests = closure_10.downloadNumRequests;
     obj6.media_player_bytes_received = closure_10.mediaPlayerBytesReceived;
-    obj1 = callback(7187);
+    obj1 = callback(7219);
     obj6.rtc_bytes = obj1.getRTCTotalBytes();
     obj6.num_message_sends = closure_15;
     if (0 !== closure_15) {

@@ -1,12 +1,12 @@
-// === Module 4294: apexExperiment ===
+// === Module 4324: apexExperiment ===
 
-// Module 4294 (apexExperiment)
+// Module 4324 (apexExperiment)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1468 */;
 
 let obj = { 1: null, 2: { keybindOverride: "ctrl+tab" }, 3: { keybindOverride: "alt+x" } };
 obj[3] = { keybindOverride: "ctrl+l" };
-const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-03-overlay-default-keybind", kind: "user", defaultConfig: { keybindOverride: "Array" }, variations: obj });
+const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-03-overlay-default-keybind", kind: "user", defaultConfig: { keybindOverride: "r" }, variations: obj });
 obj = { 1: null, 2: { hasChat: true, hasFriendList: false, showNowPlayingForDifferentGames: false }, 3: { hasChat: true, hasFriendList: true, showNowPlayingForDifferentGames: false } };
 obj[3] = { hasChat: true, hasFriendList: true, showNowPlayingForDifferentGames: true };
 const apexExperiment1 = ApexExperiment.createApexExperiment({ name: "2025-11-overlay-chat", kind: "user", defaultConfig: { hasChat: false, hasFriendList: false, showNowPlayingForDifferentGames: false }, variations: obj });

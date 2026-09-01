@@ -1,8 +1,8 @@
-// === Module 7726: UploadTypes ===
+// === Module 7758: UploadTypes ===
 
-// Module 7726 (UploadTypes)
+// Module 7758 (UploadTypes)
 import set from "set" /* 2 */;
-import VideoFilterType from "VideoFilterType" /* 7727 */;
+import VideoFilterType from "VideoFilterType" /* 7759 */;
 
 const BACKGROUND_REPLACEMENT_SIZE = VideoFilterType.BACKGROUND_REPLACEMENT_SIZE;
 const result = BACKGROUND_REPLACEMENT_SIZE.width / BACKGROUND_REPLACEMENT_SIZE.height;

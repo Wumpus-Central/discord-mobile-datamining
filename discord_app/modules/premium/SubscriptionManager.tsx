@@ -1,12 +1,12 @@
-// === Module 17039: prototype ===
+// === Module 17075: prototype ===
 
-// Module 17039 (prototype)
-import initializeDefault from "initialize" /* 5454 */;
+// Module 17075 (prototype)
+import initializeDefault from "initialize" /* 5486 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import closure_4 from "handlePaymentSourceCreateEnd" /* 4111 */;
-import closure_5 from "reset" /* 4115 */;
-import closure_6 from "addEntitlement" /* 7110 */;
+import closure_4 from "handlePaymentSourceCreateEnd" /* 4141 */;
+import closure_5 from "reset" /* 4145 */;
+import closure_6 from "addEntitlement" /* 7142 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
 let require = arg1;
@@ -34,7 +34,7 @@ let prototype = function SubscriptionManager() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -68,7 +68,7 @@ let prototype = function SubscriptionManager() {
               }
             }
             currentUser = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
@@ -153,7 +153,7 @@ let prototype = function SubscriptionManager() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -192,7 +192,7 @@ let prototype = function SubscriptionManager() {
           return obj;
         }
         v0 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp8) {
         v0 = tmp;
         throw tmp8;
@@ -211,7 +211,7 @@ let prototype = function SubscriptionManager() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -230,7 +230,7 @@ let prototype = function SubscriptionManager() {
             dependencyMap = 1;
             c2 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = closure_1_0(4805).fetchIpCountryCode();
+            obj1[0] = closure_1_0(4837).fetchIpCountryCode();
             return obj1;
           }
         } else {
@@ -244,7 +244,7 @@ let prototype = function SubscriptionManager() {
               obj2[0] = arg1;
               return obj2;
             } else if (null != closure_1_4.ipCountryCode) {
-              obj1 = closure_1_0(4805);
+              obj1 = closure_1_0(4837);
               dependencyMap = 2;
               c2 = 1;
               const obj3 = { value: null, done: false };
@@ -261,7 +261,7 @@ let prototype = function SubscriptionManager() {
             return obj;
           }
           c2 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp13) {
         c2 = tmp;

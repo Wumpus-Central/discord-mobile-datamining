@@ -1,18 +1,18 @@
-// === Module 11545: GIFIcon ===
+// === Module 11578: GIFIcon ===
 
-// Module 11545 (GIFIcon)
+// Module 11578 (GIFIcon)
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1471 */;
-import Text from "Text" /* 4444 */;
-import registerAssetDefault from "registerAsset" /* 10845 */;
-import registerAssetDefault2 from "registerAsset" /* 11546 */;
-import registerAssetDefault3 from "registerAsset" /* 11547 */;
+import Text from "Text" /* 4474 */;
+import registerAssetDefault from "registerAsset" /* 10883 */;
+import registerAssetDefault2 from "registerAsset" /* 11579 */;
+import registerAssetDefault3 from "registerAsset" /* 11580 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function GIFIcon() {

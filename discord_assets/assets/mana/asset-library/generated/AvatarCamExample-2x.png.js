@@ -1,6 +1,6 @@
-// === Module 6282: metadata ===
+// === Module 6314: metadata ===
 
-// Module 6282 (metadata)
+// Module 6314 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AvatarCamExample-2x.png.js");

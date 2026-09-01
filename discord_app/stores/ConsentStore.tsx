@@ -1,6 +1,6 @@
-// === Module 6022: hasConsented ===
+// === Module 6054: hasConsented ===
 
-// Module 6022 (hasConsented)
+// Module 6054 (hasConsented)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

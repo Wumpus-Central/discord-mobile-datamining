@@ -1,16 +1,16 @@
-// === Module 16663: ? ===
+// === Module 16699: ? ===
 
-// Module 16663
-import useSpeakerTooltipsDefault from "useSpeakerTooltips" /* 16667 */;
+// Module 16699
+import useSpeakerTooltipsDefault from "useSpeakerTooltips" /* 16703 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import importAllResult from "noop" /* 19 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import { setVoiceUpsellDismissed } from "useConsoleVoiceUpsellStore" /* 16664 */;
-import closure_8 from "set" /* 4465 */;
-import closure_9 from "handleAudioRouteChanged" /* 16665 */;
-import closure_10 from "handleAudioRouteChanged" /* 9736 */;
+import { setVoiceUpsellDismissed } from "useConsoleVoiceUpsellStore" /* 16700 */;
+import closure_8 from "set" /* 4495 */;
+import closure_9 from "handleAudioRouteChanged" /* 16701 */;
+import closure_10 from "handleAudioRouteChanged" /* 9775 */;
 import closure_11 from "ensureGuildLoaded" /* 1387 */;
-import closure_12 from "handleUpdate" /* 4466 */;
+import closure_12 from "handleUpdate" /* 4496 */;
 import { PlatformTypes } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 

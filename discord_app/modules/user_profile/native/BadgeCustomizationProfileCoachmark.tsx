@@ -1,6 +1,6 @@
-// === Module 16349: BadgeCustomizationProfileCoachmark ===
+// === Module 16385: BadgeCustomizationProfileCoachmark ===
 
-// Module 16349 (BadgeCustomizationProfileCoachmark)
+// Module 16385 (BadgeCustomizationProfileCoachmark)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1384 */;

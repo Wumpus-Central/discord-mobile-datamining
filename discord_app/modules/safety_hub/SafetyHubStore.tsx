@@ -1,20 +1,20 @@
-// === Module 11416: handleSafetyHubRequestAgeVerificationResetModalAction ===
+// === Module 8701: handleSafetyHubRequestAgeVerificationResetModalAction ===
 
-// Module 11416 (handleSafetyHubRequestAgeVerificationResetModalAction)
+// Module 8701 (handleSafetyHubRequestAgeVerificationResetModalAction)
 import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import ContentIdType from "ContentIdType" /* 8659 */;
-import createAggregatorDefault from "createAggregator" /* 11417 */;
-import SafetyHubView from "SafetyHubView" /* 8658 */;
+import ContentIdType from "ContentIdType" /* 8691 */;
+import createAggregatorDefault from "createAggregator" /* 8702 */;
+import SafetyHubView from "SafetyHubView" /* 8690 */;
 
 function handleSafetyHubRequestAgeVerificationResetModalAction(arg0) {
   if (arg0 == null) {
     HermesBuiltin.throwTypeError();
   } else {
-    c21 = "";
-    c23 = null;
-    c24 = false;
+    c22 = "";
+    c24 = null;
+    c25 = false;
   }
 }
 const AgeCheckStatus = SafetyHubView.AgeCheckStatus;
@@ -31,16 +31,17 @@ let c13 = false;
 let c14 = false;
 let closure_15 = [];
 let c16 = false;
-let c17 = null;
+let c17 = false;
+let c18 = null;
 let DIDNT_VIOLATE_POLICY = AppealIngestionSignal.DIDNT_VIOLATE_POLICY;
-let c19 = "";
 let c20 = "";
 let c21 = "";
-let c22 = 0;
-let c23 = null;
-let c24 = false;
+let c22 = "";
+let c23 = 0;
+let c24 = null;
+let c25 = false;
 const NONE = AgeCheckStatus.NONE;
-let c26 = null;
+let c27 = null;
 const Store = initializeDefault.Store;
 class SafetyHubStore extends Store {
 }
@@ -78,38 +79,41 @@ prototype["getIsAppealEligible"] = function getIsAppealEligible() {
 prototype["getAppealEligibility"] = function getAppealEligibility() {
   return closure_15;
 };
+prototype["getIsExpressiveModalV2Enabled"] = function getIsExpressiveModalV2Enabled() {
+  return c16;
+};
 prototype["getAppealSignal"] = function getAppealSignal() {
   return DIDNT_VIOLATE_POLICY;
 };
 prototype["getFreeTextAppealReason"] = function getFreeTextAppealReason() {
-  return c19;
-};
-prototype["getIsSubmitting"] = function getIsSubmitting() {
-  return c16;
-};
-prototype["getSubmitError"] = function getSubmitError() {
-  return c17;
-};
-prototype["getUsername"] = function getUsername() {
   return c20;
 };
-prototype["getAgeVerificationWebviewUrl"] = function getAgeVerificationWebviewUrl() {
+prototype["getIsSubmitting"] = function getIsSubmitting() {
+  return c17;
+};
+prototype["getSubmitError"] = function getSubmitError() {
+  return c18;
+};
+prototype["getUsername"] = function getUsername() {
   return c21;
 };
+prototype["getAgeVerificationWebviewUrl"] = function getAgeVerificationWebviewUrl() {
+  return c22;
+};
 prototype["getAgeVerificationError"] = function getAgeVerificationError() {
-  return c23;
+  return c24;
 };
 prototype["getIsLoadingAgeVerification"] = function getIsLoadingAgeVerification() {
-  return c24;
+  return c25;
 };
 prototype["getAgeCheckStatus"] = function getAgeCheckStatus() {
   return NONE;
 };
 prototype["getAgeCheckError"] = function getAgeCheckError() {
-  return c26;
+  return c27;
 };
 prototype["getAgeCheckAttempts"] = function getAgeCheckAttempts() {
-  return c22;
+  return c23;
 };
 SafetyHubStore.displayName = "SafetyHubStore";
 obj = {
@@ -117,7 +121,7 @@ obj = {
     c9 = true;
   },
   SAFETY_HUB_FETCH_SUCCESS: function handleFetchSuccess(arg0) {
-    ({ classifications, accountStanding, isDsaEligible, isAppealEligible, username, appealEligibility } = arg0);
+    ({ classifications, accountStanding, isDsaEligible, isAppealEligible, username, appealEligibility, expressiveModalV2Enabled } = arg0);
     closure_6 = createAggregatorDefault(classifications, "id");
     c9 = false;
     c10 = true;
@@ -153,7 +157,7 @@ obj = {
   SAFETY_HUB_APPEAL_CLOSE: function handleAppealClose() {
     c12 = null;
     DIDNT_VIOLATE_POLICY = AppealIngestionSignal.DIDNT_VIOLATE_POLICY;
-    c19 = "";
+    c20 = "";
   },
   SAFETY_HUB_APPEAL_SIGNAL_SELECT: function handleAppealSignalSelect(signal) {
     signal = signal.signal;
@@ -165,37 +169,37 @@ obj = {
     if (arg0 == null) {
       HermesBuiltin.throwTypeError();
     } else {
-      c16 = true;
-      c17 = null;
+      c17 = true;
+      c18 = null;
     }
   },
   SAFETY_HUB_REQUEST_REVIEW_SUCCESS: function handleSafetyHubRequestReviewSuccess(arg0) {
-    c16 = false;
-    c17 = null;
+    c17 = false;
+    c18 = null;
     dependencyMap[arg0.classificationId].appeal_status = { status: ContentIdType.AppealStatusType.REVIEW_PENDING };
   },
   SAFETY_HUB_REQUEST_REVIEW_FAILURE: function handleSafetyHubRequestReviewFailure(error) {
-    c16 = false;
+    c17 = false;
     error = error.error;
   },
   SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_START: function handleSafetyHubRequestAgeVerificationStart(arg0) {
     if (arg0 == null) {
       HermesBuiltin.throwTypeError();
     } else {
-      c21 = "";
-      c23 = null;
-      c24 = true;
+      c22 = "";
+      c24 = null;
+      c25 = true;
     }
   },
   SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_SUCCESS: function handleSafetyHubRequestAgeVerificationSuccess(verificationWebviewUrl) {
     verificationWebviewUrl = verificationWebviewUrl.verificationWebviewUrl;
-    c23 = null;
-    c24 = false;
+    c24 = null;
+    c25 = false;
   },
   SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_FAILURE: function handleSafetyHubRequestAgeVerificationFailure(error) {
-    c21 = "";
+    c22 = "";
     error = error.error;
-    c24 = false;
+    c25 = false;
   },
   SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN: handleSafetyHubRequestAgeVerificationResetModalAction,
   SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_CLOSE: handleSafetyHubRequestAgeVerificationResetModalAction,
@@ -204,22 +208,29 @@ obj = {
       HermesBuiltin.throwTypeError();
     } else {
       const LOADING = AgeCheckStatus.LOADING;
-      for (const key10007 in closure_6) {
-        let tmp7 = key10007;
+      for (const key10002 in closure_6) {
+        let tmp7 = key10002;
         let tmp8 = dependencyMap;
-        if (!dependencyMap[key10007].is_coppa) {
+        if (!dependencyMap[key10002].is_coppa) {
           continue;
         } else {
-          let tmp3 = dependencyMap;
+          let tmp = dependencyMap;
           obj = { status: null };
-          let tmp4 = require;
-          let tmp5 = dependencyMap;
+          let tmp2 = require;
+          let tmp3 = dependencyMap;
           obj[0] = ContentIdType.AppealStatusType.REVIEW_PENDING;
-          dependencyMap[key10007].appeal_status = obj;
+          dependencyMap[key10002].appeal_status = obj;
           continue;
         }
         continue;
       }
+    }
+  },
+  SAFETY_HUB_EXPRESSIVE_MODAL_V2_VERIFICATION_SUBMITTED: function handleSafetyHubExpressiveModalV2VerificationSubmittedAction(arg0) {
+    if (arg0 == null) {
+      HermesBuiltin.throwTypeError();
+    } else {
+      const LOADING = AgeCheckStatus.LOADING;
     }
   },
   SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL: function handleSafetyHubAgeVerificationStartPoll(arg0) {
@@ -227,7 +238,7 @@ obj = {
       HermesBuiltin.throwTypeError();
     } else {
       const LOADING = AgeCheckStatus.LOADING;
-      c26 = null;
+      c27 = null;
     }
   },
   SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_START: function handleSafetyHubCheckAgeVerificationStart(arg0) {
@@ -235,19 +246,19 @@ obj = {
       HermesBuiltin.throwTypeError();
     } else {
       const LOADING = AgeCheckStatus.LOADING;
-      c26 = null;
-      closure_22 = closure_22 + 1;
+      c27 = null;
+      closure_23 = closure_23 + 1;
     }
   },
   SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_SUCCESS: function handleSafetyHubCheckAgeVerificationCheckSuccess(success) {
     if (success.success) {
       let FAILURE = AgeCheckStatus.SUCCESS;
-    } else if (c22 < closure_5) {
+    } else if (c23 < closure_5) {
       FAILURE = AgeCheckStatus.LOADING;
     } else {
       FAILURE = AgeCheckStatus.FAILURE;
     }
-    c26 = null;
+    c27 = null;
   },
   SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_FAILURE: function handleSafetyHubCheckAgeVerificationFailure(error) {
     const ERROR = AgeCheckStatus.ERROR;
@@ -259,7 +270,7 @@ obj = {
     obj = { state: ContentIdType.AccountStandingState.ALL_GOOD };
     c12 = null;
     DIDNT_VIOLATE_POLICY = AppealIngestionSignal.DIDNT_VIOLATE_POLICY;
-    c19 = "";
+    c20 = "";
     closure_15 = [];
   }
 };

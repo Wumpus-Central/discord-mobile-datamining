@@ -1,6 +1,6 @@
-// === Module 11269: shouldShowEmojiRow ===
+// === Module 11306: shouldShowEmojiRow ===
 
-// Module 11269 (shouldShowEmojiRow)
+// Module 11306 (shouldShowEmojiRow)
 import set from "set" /* 2 */;
 import hasFlag from "hasFlag" /* 1399 */;
 import ME from "ME" /* 676 */;

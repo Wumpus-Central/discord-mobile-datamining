@@ -1,6 +1,6 @@
-// === Module 9482: BOX_MODE_ACTIONSHEET_WIDTH ===
+// === Module 9521: BOX_MODE_ACTIONSHEET_WIDTH ===
 
-// Module 9482 (BOX_MODE_ACTIONSHEET_WIDTH)
+// Module 9521 (BOX_MODE_ACTIONSHEET_WIDTH)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 

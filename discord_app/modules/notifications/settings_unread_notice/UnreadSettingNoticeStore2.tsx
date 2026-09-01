@@ -1,19 +1,19 @@
-// === Module 11009: startInterval ===
+// === Module 11046: startInterval ===
 
-// Module 11009 (startInterval)
+// Module 11046 (startInterval)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 589 */;
 import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import hasFlag from "hasFlag" /* 1399 */;
-import useChannelPresetSettings from "useChannelPresetSettings" /* 10193 */;
+import useChannelPresetSettings from "useChannelPresetSettings" /* 10232 */;
 import closure_3 from "fetchFingerprint" /* 1218 */;
 import closure_4 from "ensureGuildLoaded" /* 1387 */;
 import closure_5 from "createGuildRecordFromRust" /* 1909 */;
 import closure_6 from "handleConnectionOpen" /* 1981 */;
-import closure_7 from "updateUserGuildSettingsInternal" /* 4669 */;
+import closure_7 from "updateUserGuildSettingsInternal" /* 4701 */;
 import { UserNotificationSettings } from "ME" /* 676 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4670 */;
+import { UnreadSetting } from "ReadStateTypes" /* 4702 */;
 import { ChannelNotificationSettingsFlags as closure_10 } from "MAX_FAVORITES" /* 685 */;
 import set from "set" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 9250: get ActivityIndicator ===
+// === Module 9289: get ActivityIndicator ===
 
-// Module 9250 (get ActivityIndicator)
+// Module 9289 (get ActivityIndicator)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 

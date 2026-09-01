@@ -1,17 +1,17 @@
-// === Module 7935: useHasDiscountApplied ===
+// === Module 7967: useHasDiscountApplied ===
 
-// Module 7935 (useHasDiscountApplied)
+// Module 7967 (useHasDiscountApplied)
 import initialize from "initialize" /* 589 */;
-import hooksDefault from "hooks" /* 4045 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7160 */;
-import useHasActiveTrial from "useHasActiveTrial" /* 7936 */;
-import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 7937 */;
-import useDiscountOfferDefault from "useDiscountOffer" /* 7938 */;
-import getPaymentGateway from "getPaymentGateway" /* 7939 */;
-import useIsInReverseTrial from "useIsInReverseTrial" /* 7942 */;
+import hooksDefault from "hooks" /* 4075 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7192 */;
+import useHasActiveTrial from "useHasActiveTrial" /* 7968 */;
+import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 7969 */;
+import useDiscountOfferDefault from "useDiscountOffer" /* 7970 */;
+import getPaymentGateway from "getPaymentGateway" /* 7971 */;
+import useIsInReverseTrial from "useIsInReverseTrial" /* 7974 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "reset" /* 4115 */;
+import closure_5 from "reset" /* 4145 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
 require = arg1;

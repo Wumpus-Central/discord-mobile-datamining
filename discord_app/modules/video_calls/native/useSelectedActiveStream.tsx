@@ -1,8 +1,8 @@
-// === Module 13414: useSelectedActiveStream ===
+// === Module 13447: useSelectedActiveStream ===
 
-// Module 13414 (useSelectedActiveStream)
-import closure_2 from "getParticipants" /* 4464 */;
-import closure_3 from "reset" /* 4470 */;
+// Module 13447 (useSelectedActiveStream)
+import closure_2 from "getParticipants" /* 4494 */;
+import closure_3 from "reset" /* 4500 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/video_calls/native/useSelectedActiveStream.tsx");

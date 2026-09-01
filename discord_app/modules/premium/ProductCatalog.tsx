@@ -1,15 +1,15 @@
-// === Module 13686: ProductCatalogFeature ===
+// === Module 13719: ProductCatalogFeature ===
 
-// Module 13686 (ProductCatalogFeature)
+// Module 13719 (ProductCatalogFeature)
 import set from "set" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
-import create from "create" /* 1938 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7565 */;
-import getUserMaxFileSize from "getUserMaxFileSize" /* 8182 */;
-import setDefault from "set" /* 13688 */;
-import apexExperimentDefault from "apexExperiment" /* 13689 */;
+import create from "create" /* 1930 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7597 */;
+import getUserMaxFileSize from "getUserMaxFileSize" /* 8214 */;
+import setDefault from "set" /* 13721 */;
+import apexExperimentDefault from "apexExperiment" /* 13722 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
-import importDefaultResult1 from "set" /* 13687 */;
+import importDefaultResult1 from "set" /* 13720 */;
 
 let closure_0 = require;
 ({ PremiumSubscriptionSKUs, PremiumTypeToActivePremiumSubscriptionSKU: c3 } = GuildFeatures);
@@ -1163,14 +1163,14 @@ export const canUserUse = function canUserUse(COLLECTIBLES, isPremiumWithFractio
     }
     if (null != perks) {
       const config = apexExperimentDefault.getConfig({ location: "product_catalog_can_user_use" });
-      if (config !== callback(13689).DenormalizedPerksReadConfig.CONTROL) {
+      if (config !== callback(13722).DenormalizedPerksReadConfig.CONTROL) {
         let featureValue = COLLECTIBLES.getFeatureValue(isPremiumWithFractionalPremiumOnly);
         let perks1;
         if (isPremiumWithFractionalPremiumOnly != null) {
           perks1 = isPremiumWithFractionalPremiumOnly.perks;
         }
-        const tmp9Result = tmp9(1942);
-        if (config === tmp9(13689).DenormalizedPerksReadConfig.DUAL_READ_RETURN_NEW) {
+        const tmp9Result = tmp9(1928);
+        if (config === tmp9(13722).DenormalizedPerksReadConfig.DUAL_READ_RETURN_NEW) {
           featureValue = hasPerkResult;
         }
         return featureValue;

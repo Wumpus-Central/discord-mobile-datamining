@@ -1,6 +1,6 @@
-// === Module 9569: WakeLock ===
+// === Module 9608: WakeLock ===
 
-// Module 9569 (WakeLock)
+// Module 9608 (WakeLock)
 import closure_3 from "noop" /* 19 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
 

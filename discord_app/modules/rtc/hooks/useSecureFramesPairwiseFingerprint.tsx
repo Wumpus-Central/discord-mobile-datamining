@@ -1,14 +1,14 @@
-// === Module 9806: _computeNativeDisplayPair ===
+// === Module 9845: _computeNativeDisplayPair ===
 
-// Module 9806 (_computeNativeDisplayPair)
+// Module 9845 (_computeNativeDisplayPair)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
 import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "_detectH265HardwareDecode" /* 4499 */;
-import closure_8 from "createRTCConnection" /* 4522 */;
-import { SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION as closure_9 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9802 */;
-import { Features } from "DesktopSources" /* 4512 */;
+import closure_7 from "_detectH265HardwareDecode" /* 4529 */;
+import closure_8 from "createRTCConnection" /* 4554 */;
+import { SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION as closure_9 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9841 */;
+import { Features } from "DesktopSources" /* 4542 */;
 
 const require = arg1;
 function _computeNativeDisplayPair() {
@@ -29,7 +29,7 @@ function _computeNativeDisplayPair() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -154,7 +154,7 @@ export const useSecureFramesPairwiseFingerprint = function useSecureFramesPairwi
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

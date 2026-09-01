@@ -1,7 +1,7 @@
-// === Module 15687: useStickyServerHeaderSubtitle ===
+// === Module 15723: useStickyServerHeaderSubtitle ===
 
-// Module 15687 (useStickyServerHeaderSubtitle)
-import closure_2 from "handleInviteData" /* 4368 */;
+// Module 15723 (useStickyServerHeaderSubtitle)
+import closure_2 from "handleInviteData" /* 4398 */;
 import { GuildFeatures } from "ME" /* 676 */;
 
 const require = arg1;

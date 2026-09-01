@@ -1,17 +1,17 @@
-// === Module 6084: useCanUnarchiveThread ===
+// === Module 6116: useCanUnarchiveThread ===
 
-// Module 6084 (useCanUnarchiveThread)
+// Module 6116 (useCanUnarchiveThread)
 import fromStringAll from "fromString" /* 506 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6085 */;
-import useIsRemoteDefault from "useIsRemote" /* 6086 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6117 */;
+import useIsRemoteDefault from "useIsRemote" /* 6118 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import { THREADED_CHANNEL_TYPES } from "createChannelRecord" /* 1391 */;
 import closure_6 from "fetchFingerprint" /* 1218 */;
 import closure_7 from "ensureGuildLoaded" /* 1387 */;
-import closure_8 from "getUncachedChannelPermissions" /* 4091 */;
-import closure_9 from "rebuild" /* 5416 */;
+import closure_8 from "getUncachedChannelPermissions" /* 4121 */;
+import closure_9 from "rebuild" /* 5448 */;
 import ME from "ME" /* 676 */;
-import importDefaultResult from "createExperiment" /* 4360 */;
+import importDefaultResult from "createExperiment" /* 4390 */;
 
 const require = arg1;
 function useCanUnarchiveThread(channel) {
@@ -520,13 +520,13 @@ export const useCanJoinThreadVoice = function useCanJoinThreadVoice(channel) {
   }
   obj = { guildId: channel.guild_id, location: "e791ea_1" };
   let enabled = importDefaultResultResult.useExperiment(obj, { autoTrackExposure: false }).enabled;
-  let tmp3Result = tmp3(6087);
+  let tmp3Result = tmp3(6119);
   const isGameInvitesPost = tmp3Result.useIsGameInvitesPost(channel);
-  tmp3Result = tmp3(4699);
+  tmp3Result = tmp3(4731);
   let shouldAgeVerifyForAgeGate = tmp3Result.useShouldAgeVerifyForAgeGate();
   if (shouldAgeVerifyForAgeGate) {
-    shouldAgeVerifyForAgeGate = tmp3(4699).shouldShowAgeGateForChannelId(channel.id);
-    const tmp3Result1 = tmp3(4699);
+    shouldAgeVerifyForAgeGate = tmp3(4731).shouldShowAgeGateForChannelId(channel.id);
+    const tmp3Result1 = tmp3(4731);
   }
   let isVocalThreadResult = !tmp2;
   if (!tmp2) {

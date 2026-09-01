@@ -1,15 +1,15 @@
-// === Module 10184: ConnectedInAppNotificationSettingsScreen ===
+// === Module 10223: ConnectedInAppNotificationSettingsScreen ===
 
-// Module 10184 (ConnectedInAppNotificationSettingsScreen)
+// Module 10223 (ConnectedInAppNotificationSettingsScreen)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import computeChannelName from "computeChannelName" /* 4642 */;
-import Form from "Form" /* 8331 */;
-import ChannelSettingsNotificationsGuardDefault from "ChannelSettingsNotificationsGuard" /* 10185 */;
+import computeChannelName from "computeChannelName" /* 4674 */;
+import Form from "Form" /* 8363 */;
+import ChannelSettingsNotificationsGuardDefault from "ChannelSettingsNotificationsGuard" /* 10224 */;
 import importAllResult from "noop" /* 19 */;
 import { isMultiUserDM } from "createChannelRecord" /* 1391 */;
 import closure_5 from "ensureGuildLoaded" /* 1387 */;
-import closure_6 from "markAllUserIdListsStale" /* 4100 */;
-import closure_7 from "updateUserGuildSettingsInternal" /* 4669 */;
+import closure_6 from "markAllUserIdListsStale" /* 4130 */;
+import closure_7 from "updateUserGuildSettingsInternal" /* 4701 */;
 import closure_8 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -157,7 +157,7 @@ const memoResult = importAllResult.memo((channelId) => {
     obj[0] = obj;
     return obj;
   }, items);
-  return callback(channelId(5976).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
+  return callback(channelId(6008).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
 });
 let result = require("set").fileFinishedImporting("components_native/InAppNotificationSettingsModal.tsx");
 

@@ -1,7 +1,7 @@
 // === Module 1949: fromServer ===
 
 // Module 1949 (fromServer)
-import toJSDefault from "toJS" /* 1931 */;
+import toJSDefault from "toJS" /* 1936 */;
 
 toJSDefault;
 let prototype;

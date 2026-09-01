@@ -1,12 +1,12 @@
-// === Module 7375: initialize ===
+// === Module 7407: initialize ===
 
-// Module 7375 (initialize)
+// Module 7407 (initialize)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import _modDef7376 from "module_7376" /* 7376 */;
-import maybeDispatchDevOnlyDummyFriendSuggestionsDefault from "maybeDispatchDevOnlyDummyFriendSuggestions" /* 7377 */;
-import closure_2 from "createdAt" /* 1930 */;
+import _modDef7408 from "module_7408" /* 7408 */;
+import maybeDispatchDevOnlyDummyFriendSuggestionsDefault from "maybeDispatchDevOnlyDummyFriendSuggestions" /* 7409 */;
+import closure_2 from "createdAt" /* 1935 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 
 let closure_4 = {};
@@ -47,8 +47,8 @@ const friendSuggestionStore = new FriendSuggestionStore(dispatcherDefault, {
       if (flag2) {
         c6 = true;
         c7 = false;
-        const response = _modDef7376.fetch();
-        const obj = _modDef7376;
+        const response = _modDef7408.fetch();
+        const obj = _modDef7408;
       }
     } else {
       maybeDispatchDevOnlyDummyFriendSuggestionsDefault();

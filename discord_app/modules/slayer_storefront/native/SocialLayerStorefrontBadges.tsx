@@ -1,14 +1,14 @@
-// === Module 10553: ExclusiveBadge ===
+// === Module 10591: ExclusiveBadge ===
 
-// Module 10553 (ExclusiveBadge)
+// Module 10591 (ExclusiveBadge)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4444 */;
-import ClydeIcon from "ClydeIcon" /* 9002 */;
+import Text from "Text" /* 4474 */;
+import ClydeIcon from "ClydeIcon" /* 9039 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
 import set from "set" /* 500 */;
 
 require = arg1;

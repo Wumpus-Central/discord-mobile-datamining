@@ -1,14 +1,14 @@
-// === Module 15281: TextDisplayComponent ===
+// === Module 15315: TextDisplayComponent ===
 
-// Module 15281 (TextDisplayComponent)
+// Module 15315 (TextDisplayComponent)
 import noopAll from "noop" /* 19 */;
 import _modDef38 from "module_38" /* 38 */;
-import get_defaultRulesDefault from "get defaultRules" /* 4438 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 15282 */;
+import get_defaultRulesDefault from "get defaultRules" /* 4468 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 15316 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4440 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import closure_5 from "handleConnectionOpen" /* 1981 */;
-import { TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS as closure_6 } from "TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS" /* 7988 */;
+import { TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS as closure_6 } from "TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS" /* 8020 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -16,12 +16,12 @@ noopAll;
 let result = require("set").fileFinishedImporting("modules/interaction_components/native/display/TextDisplayComponent.tsx");
 
 export default function TextDisplayComponent(content) {
-  let obj = channelId(7989);
+  let obj = channelId(8021);
   const componentContainerId = obj.useComponentContainerId();
   channelId = channelId.getChannelId();
   _modDef38(null != channelId, "channelId not available in TextDisplayComponent");
   obj1 = get_defaultRulesDefault;
-  let obj2 = channelId(7599);
+  let obj2 = channelId(7631);
   obj = { channelId, renderOptions: closure_6 };
   const parseToASTResult = obj1.parseToAST(content.content, true, obj2.getInitialParserState(obj));
   let items = [closure_4];
@@ -31,7 +31,7 @@ export default function TextDisplayComponent(content) {
     ({ roleStyle: arr[0], alwaysShowLinkDecorations: arr[1] } = closure_4);
     return items;
   }), 2);
-  const AnimateEmoji = channelId(4136).AnimateEmoji;
+  const AnimateEmoji = channelId(4166).AnimateEmoji;
   const setting = AnimateEmoji.useSetting();
   obj = { model: null, markdownTextRenderOptions: null, onTapLink: null, onLongPressLink: null, onTapAttachmentLink: null, onLongPressAttachmentLink: null, onTapMention: null, onTapTimestamp: null, onTapInlineCode: null, onTapEmoji: null, style: null };
   obj1 = {};
@@ -48,13 +48,13 @@ export default function TextDisplayComponent(content) {
   obj[2] = function onTapLink(nativeEvent) {
     const result = channelId(closure_1_2[13]).handleMessagesTapURLLink(nativeEvent.nativeEvent.data, channelId);
   };
-  obj[3] = channelId(11148).contentHandlers.onLongPressLink;
-  obj[4] = channelId(11148).contentHandlers.onTapAttachmentLink;
-  obj[5] = channelId(11148).contentHandlers.onLongPressAttachmentLink;
-  obj[6] = channelId(11148).contentHandlers.onTapMention;
-  obj[7] = channelId(11148).contentHandlers.onTapTimestamp;
-  obj[8] = channelId(11148).contentHandlers.onTapInlineCode;
-  obj[9] = channelId(11148).contentHandlers.onTapEmoji;
+  obj[3] = channelId(11185).contentHandlers.onLongPressLink;
+  obj[4] = channelId(11185).contentHandlers.onTapAttachmentLink;
+  obj[5] = channelId(11185).contentHandlers.onLongPressAttachmentLink;
+  obj[6] = channelId(11185).contentHandlers.onTapMention;
+  obj[7] = channelId(11185).contentHandlers.onTapTimestamp;
+  obj[8] = channelId(11185).contentHandlers.onTapInlineCode;
+  obj[9] = channelId(11185).contentHandlers.onTapEmoji;
   obj[10] = { width: "100%" };
   return jsx(__INTERNAL_VIEW_CONFIGDefault, { model: null, markdownTextRenderOptions: null, onTapLink: null, onLongPressLink: null, onTapAttachmentLink: null, onLongPressAttachmentLink: null, onTapMention: null, onTapTimestamp: null, onTapInlineCode: null, onTapEmoji: null, style: null });
 };

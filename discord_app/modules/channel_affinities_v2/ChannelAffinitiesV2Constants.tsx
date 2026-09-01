@@ -1,6 +1,6 @@
-// === Module 15831: result ===
+// === Module 15867: result ===
 
-// Module 15831 (result)
+// Module 15867 (result)
 import setDefault from "set" /* 687 */;
 
 const result = 12 * setDefault.Millis.HOUR;

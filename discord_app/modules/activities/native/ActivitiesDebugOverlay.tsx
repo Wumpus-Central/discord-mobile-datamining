@@ -1,16 +1,16 @@
-// === Module 16690: ActivitiesDebugOverlay ===
+// === Module 16726: ActivitiesDebugOverlay ===
 
-// Module 16690 (ActivitiesDebugOverlay)
+// Module 16726 (ActivitiesDebugOverlay)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import Text from "Text" /* 4444 */;
-import useThermalState from "useThermalState" /* 9478 */;
-import useThermalStateDefault from "useThermalState" /* 9478 */;
+import Text from "Text" /* 4474 */;
+import useThermalState from "useThermalState" /* 9517 */;
+import useThermalStateDefault from "useThermalState" /* 9517 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4448 */;
-import hexToRgba from "hexToRgba" /* 4296 */;
+import createCacheKey from "createCacheKey" /* 4478 */;
+import hexToRgba from "hexToRgba" /* 4326 */;
 
 require = arg1;
 noopAll;
@@ -31,14 +31,14 @@ export default function ActivitiesDebugOverlay() {
   if (useThermalState.ThermalStates.UNHANDLED !== tmp4) {
     str = "text-feedback-positive";
     str2 = "nominal";
-    if (tmp5(9478).ThermalStates.NOMINAL !== tmp4) {
+    if (tmp5(9517).ThermalStates.NOMINAL !== tmp4) {
       str = "text-feedback-warning";
       str2 = "fair";
-      if (tmp5(9478).ThermalStates.FAIR !== tmp4) {
+      if (tmp5(9517).ThermalStates.FAIR !== tmp4) {
         str2 = "serious";
         str = "text-feedback-critical";
-        if (tmp5(9478).ThermalStates.SERIOUS !== tmp4) {
-          if (tmp5(9478).ThermalStates.CRITICAL === tmp4) {
+        if (tmp5(9517).ThermalStates.SERIOUS !== tmp4) {
+          if (tmp5(9517).ThermalStates.CRITICAL === tmp4) {
             str2 = "critical";
             str = "text-feedback-critical";
           }

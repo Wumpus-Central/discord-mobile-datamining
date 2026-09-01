@@ -1,6 +1,6 @@
-// === Module 4649: GuildRoomSeats ===
+// === Module 4681: GuildRoomSeats ===
 
-// Module 4649 (GuildRoomSeats)
+// Module 4681 (GuildRoomSeats)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/GuildRoomSeats.tsx");

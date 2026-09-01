@@ -1,9 +1,9 @@
-// === Module 17072: getChannelsAllowedToUnlink ===
+// === Module 17108: getChannelsAllowedToUnlink ===
 
-// Module 17072 (getChannelsAllowedToUnlink)
+// Module 17108 (getChannelsAllowedToUnlink)
 import closure_2 from "comparator" /* 1982 */;
 import { GUILD_SELECTABLE_CHANNELS_KEY as closure_3 } from "comparator" /* 1982 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4121 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/lobbies/hooks/useChannelsAllowedToUnlink.tsx");

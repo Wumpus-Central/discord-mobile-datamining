@@ -1,9 +1,9 @@
-// === Module 7933: useIsEligibleSenderForReferralProgram ===
+// === Module 7965: useIsEligibleSenderForReferralProgram ===
 
-// Module 7933 (useIsEligibleSenderForReferralProgram)
+// Module 7965 (useIsEligibleSenderForReferralProgram)
 import initialize from "initialize" /* 589 */;
-import useMaybeFetchReferralsRemaining from "useMaybeFetchReferralsRemaining" /* 7934 */;
-import closure_2 from "emitChanges" /* 7165 */;
+import useMaybeFetchReferralsRemaining from "useMaybeFetchReferralsRemaining" /* 7966 */;
+import closure_2 from "emitChanges" /* 7197 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/referral_program/hooks/useIsEligibleSenderForReferralProgram.tsx");

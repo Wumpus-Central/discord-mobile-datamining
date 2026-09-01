@@ -1,6 +1,6 @@
-// === Module 7177: isActiveUserRoute ===
+// === Module 7209: isActiveUserRoute ===
 
-// Module 7177 (isActiveUserRoute)
+// Module 7209 (isActiveUserRoute)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/analytics_sessions/SessionRouteUtils.native.tsx");

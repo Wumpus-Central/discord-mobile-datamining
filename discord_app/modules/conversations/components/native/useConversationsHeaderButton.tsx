@@ -1,10 +1,10 @@
-// === Module 7781: useConversationsHeaderButton ===
+// === Module 7813: useConversationsHeaderButton ===
 
-// Module 7781 (useConversationsHeaderButton)
+// Module 7813 (useConversationsHeaderButton)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "removePendingListFetch" /* 7309 */;
-import CONVERSATION_COLORS from "CONVERSATION_COLORS" /* 7311 */;
+import closure_4 from "removePendingListFetch" /* 7341 */;
+import CONVERSATION_COLORS from "CONVERSATION_COLORS" /* 7343 */;
 
 const require = arg1;
 ({ CONVERSATION_HAS_MORE_EXPIRATION_MS: c5, MOBILE_FETCH_LIMIT: closure_6, MOBILE_PREVIEW_MESSAGE_COUNT: error } = CONVERSATION_COLORS);
@@ -43,7 +43,7 @@ export const useConversationsHeaderButton = function useConversationsHeaderButto
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

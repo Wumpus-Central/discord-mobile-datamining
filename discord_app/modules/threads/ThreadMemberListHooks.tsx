@@ -1,9 +1,9 @@
-// === Module 16236: useThreadMemberListSections ===
+// === Module 16271: useThreadMemberListSections ===
 
-// Module 16236 (useThreadMemberListSections)
+// Module 16271 (useThreadMemberListSections)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "createGuildRoleRecordFromRust" /* 1985 */;
-import closure_5 from "handleUserUpdate" /* 9887 */;
+import closure_5 from "handleUserUpdate" /* 9926 */;
 import { StatusTypes } from "sum" /* 505 */;
 
 const require = arg1;

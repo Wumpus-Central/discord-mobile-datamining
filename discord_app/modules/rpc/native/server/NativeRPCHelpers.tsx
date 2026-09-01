@@ -1,7 +1,7 @@
-// === Module 9468: validateSocketClient ===
+// === Module 9507: validateSocketClient ===
 
-// Module 9468 (validateSocketClient)
-import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4350 */;
+// Module 9507 (validateSocketClient)
+import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4380 */;
 import { RPCCloseCodes } from "ME" /* 676 */;
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
 
@@ -24,7 +24,7 @@ closure_0 = importDefaultResult((arg0, arg1, arg2) => {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -41,24 +41,24 @@ closure_0 = importDefaultResult((arg0, arg1, arg2) => {
           } else {
             c4 = 0;
             closure_3 = tmp2;
-            const result = callback(9469).validateOriginAndUpdateSocket(callback, callback2);
+            const result = callback(9508).validateOriginAndUpdateSocket(callback, callback2);
             if (null == dependencyMap) {
               obj1 = { closeCode: null };
               obj1[0] = closure_1_4.INVALID_CLIENTID;
-              const tmp23 = new callback2(9464)(obj1, "No Client ID Specified");
+              const tmp23 = new callback2(9503)(obj1, "No Client ID Specified");
               c6 = 3;
               const obj2 = { value: null, done: true };
               obj2[0] = Promise.reject(tmp23);
               return obj2;
             } else {
-              let obj3 = callback(9469);
+              let obj3 = callback(9508);
               c5 = 1;
               c6 = 1;
               obj3 = { value: null, done: false };
               obj3[0] = obj3.processSocketThrottlers(tmp33, tmp31.transport !== closure_1_3.POST_MESSAGE, tmp31.abortController.signal);
               return obj3;
             }
-            const obj10 = callback(9469);
+            const obj10 = callback(9508);
             tmp33 = dependencyMap;
           }
         } else if (arg0 === 1) {
@@ -70,7 +70,7 @@ closure_0 = importDefaultResult((arg0, arg1, arg2) => {
           obj4[0] = arg1;
           return obj4;
         } else {
-          obj = callback(9469);
+          obj = callback(9508);
           c6 = 3;
           const obj5 = { value: null, done: true };
           obj5[0] = obj.validateSocketApplication(callback, dependencyMap, callback2);
@@ -95,5 +95,5 @@ export const validateSocketClient = function() {
   }
   return applyArgumentsResult;
 };
-export const getDeprecatedVoiceSettings = () => callback(9469).getDeprecatedVoiceSettingsWithShortcut(() => []);
-export const getVoiceSettings = (arg0) => callback(9469).getVoiceSettingsWithShortcut(arg0, () => "");
+export const getDeprecatedVoiceSettings = () => callback(9508).getDeprecatedVoiceSettingsWithShortcut(() => []);
+export const getVoiceSettings = (arg0) => callback(9508).getVoiceSettingsWithShortcut(arg0, () => "");

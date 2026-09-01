@@ -1,6 +1,6 @@
-// === Module 16820: I18nLink ===
+// === Module 16856: I18nLink ===
 
-// Module 16820 (I18nLink)
+// Module 16856 (I18nLink)
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 

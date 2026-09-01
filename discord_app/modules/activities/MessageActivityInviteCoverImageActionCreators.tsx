@@ -1,6 +1,6 @@
-// === Module 12872: setCoverImageURL ===
+// === Module 12905: setCoverImageURL ===
 
-// Module 12872 (setCoverImageURL)
+// Module 12905 (setCoverImageURL)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

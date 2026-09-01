@@ -1,6 +1,6 @@
-// === Module 13696: Checkbox ===
+// === Module 13729: Checkbox ===
 
-// Module 13696 (Checkbox)
+// Module 13729 (Checkbox)
 import noopAll from "noop" /* 19 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -11,10 +11,10 @@ const result = require("set").fileFinishedImporting("design/void/Checkbox/native
 export default function Checkbox(style) {
   const obj = { style: style.style, source: null };
   if (style.selected) {
-    obj[1] = tmp3(13697);
+    obj[1] = tmp3(13730);
     let tmp5 = obj;
   } else {
-    obj[1] = tmp3(13698);
+    obj[1] = tmp3(13731);
     tmp5 = obj;
   }
   return <Image {...tmp5} />;

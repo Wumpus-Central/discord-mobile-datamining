@@ -1,6 +1,6 @@
-// === Module 5417: handleThreadCreateOrUpdate ===
+// === Module 5449: handleThreadCreateOrUpdate ===
 
-// Module 5417 (handleThreadCreateOrUpdate)
+// Module 5449 (handleThreadCreateOrUpdate)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;

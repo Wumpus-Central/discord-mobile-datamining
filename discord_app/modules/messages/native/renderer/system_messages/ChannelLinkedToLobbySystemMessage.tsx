@@ -1,10 +1,10 @@
-// === Module 7920: createChannelLinkedToLobbySystemMessage ===
+// === Module 7952: createChannelLinkedToLobbySystemMessage ===
 
-// Module 7920 (createChannelLinkedToLobbySystemMessage)
+// Module 7952 (createChannelLinkedToLobbySystemMessage)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import resultDefault from "result" /* 7830 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7837 */;
-import closure_3 from "addApplication" /* 4489 */;
+import resultDefault from "result" /* 7862 */;
+import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7869 */;
+import closure_3 from "addApplication" /* 4519 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
 
 require = arg1;
@@ -30,7 +30,7 @@ export const createChannelLinkedToLobbySystemMessage = function createChannelLin
     obj[0] = message;
     obj[1] = messageAuthorWithProcessedColor;
     obj[2] = roleStyle;
-    obj[1] = tmp(7839)(obj);
+    obj[1] = tmp(7871)(obj);
     obj[2] = application.name;
     obj1 = { linkColor: null, medium: true };
     obj1[0] = tmp3.defaultUsernameColor;
@@ -42,7 +42,7 @@ export const createChannelLinkedToLobbySystemMessage = function createChannelLin
     const obj3 = { content: null };
     const intl = getSystemLocale.intl;
     obj3[0] = intl.formatToParts(getSystemLocale.t.gZfhOw, obj);
-    const merged = Object.assign(tmp(7841)(message));
+    const merged = Object.assign(tmp(7873)(message));
     return obj3;
   }
 };
