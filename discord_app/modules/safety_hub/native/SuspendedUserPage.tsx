@@ -4,7 +4,7 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import getSystemLocale from "../../../intl/index.native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import SafeAreaPaddingView from "../../../components_native/common/SafeAreaView.tsx";
-import registerAssetDefault from "../../../../_runtime/07732_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/07764_registerAsset.js";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
 import AutomatedUnderageAppealStatusDefault from "SafetyHubPage.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -35,14 +35,14 @@ export default function SuspendedUserSafetyHubPage() {
   const intl = getSystemLocale.intl;
   obj1[1] = intl.string(getSystemLocale.t.cpT0Cq);
   obj1[2] = function onPress() {
-    callback(6020).closeSuspendedUser();
+    callback(6052).closeSuspendedUser();
   };
   obj1[3] = registerAssetDefault;
   const items = [callback(IconButton.IconButton, obj1), ];
   const obj2 = {
     style: tmp.text,
     onPress() {
-      callback(4160).openURL(constants.WARNING_SYSTEM_HELPCENTER_LINK);
+      callback(4190).openURL(constants.WARNING_SYSTEM_HELPCENTER_LINK);
     },
     variant: "text-xs/medium",
     color: "control-critical-primary-text-default",

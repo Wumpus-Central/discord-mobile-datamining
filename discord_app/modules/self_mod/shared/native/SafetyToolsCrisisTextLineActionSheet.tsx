@@ -32,7 +32,7 @@ export default function SafetyToolsCrisisTextLineActionSheet(trackAnalyticsEvent
   obj = { variant: "text-md/medium", color: "text-default", style: tmp.description, children: null };
   const intl2 = trackAnalyticsEvent(1236).intl;
   obj[3] = intl2.string(trackAnalyticsEvent(1236).t.uicS5l);
-  const items = [callback(trackAnalyticsEvent(4444).Text, obj), , ];
+  const items = [callback(trackAnalyticsEvent(4474).Text, obj), , ];
   obj1 = { variant: "secondary", size: "lg", text: null, grow: true, onPress: null };
   const intl3 = trackAnalyticsEvent(1236).intl;
   obj1[2] = intl3.string(trackAnalyticsEvent(1236).t.lkUb4S);
@@ -40,7 +40,7 @@ export default function SafetyToolsCrisisTextLineActionSheet(trackAnalyticsEvent
     closure_1_1(closure_1_2[10]).openURL(closure_1_4);
     trackAnalyticsEvent(trackAnalyticsEvent(closure_1_2[11]).CtaEventTypes.USER_SAFETY_TOOLS_CTL_SMS);
   };
-  items[1] = callback(trackAnalyticsEvent(4896).Button, obj1);
+  items[1] = callback(trackAnalyticsEvent(4928).Button, obj1);
   const obj2 = { variant: "secondary", size: "lg", text: null, grow: true, onPress: null };
   const intl4 = trackAnalyticsEvent(1236).intl;
   obj2[2] = intl4.string(trackAnalyticsEvent(1236).t.ogLlvy);
@@ -48,7 +48,7 @@ export default function SafetyToolsCrisisTextLineActionSheet(trackAnalyticsEvent
     closure_1_1(closure_1_2[10]).openURL(closure_1_5);
     trackAnalyticsEvent(trackAnalyticsEvent(closure_1_2[11]).CtaEventTypes.USER_SAFETY_TOOLS_CTL_WEB);
   };
-  items[2] = callback(trackAnalyticsEvent(4896).Button, obj2);
+  items[2] = callback(trackAnalyticsEvent(4928).Button, obj2);
   obj[1] = items;
   obj[7] = callback2(View, obj);
   return callback(SafetyToolsActionSheetWrapperDefault, obj);

@@ -1,6 +1,6 @@
 // discord_app/modules/instant_invite/native/components/InstantInviteActionSheet.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef9879 from "../../../main_tabs_v2/native/shared_components/user_list/UserPlaceholderRow.tsx";
+import _modDef9918 from "../../../main_tabs_v2/native/shared_components/user_list/UserPlaceholderRow.tsx";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -25,7 +25,7 @@ function Loading() {
     let tmp4 = dependencyMap;
     let obj = { row: null };
     obj[0] = num;
-    let arr = items.push(callback2(_modDef9879, obj, num));
+    let arr = items.push(callback2(_modDef9918, obj, num));
     num = num + 1;
   } while (num < 10);
   obj = { children: null };

@@ -39,7 +39,7 @@ function _validatePurchase() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -65,7 +65,7 @@ function _validatePurchase() {
               ({ productId: c0, premiumSubscription: c1, offerId: c2, currency: c3, price: c4, isGift: c5 } = callback);
               c5 = 1;
               c6 = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else if (1 === tmp8) {
             if (arg0 === 1) {
@@ -102,7 +102,7 @@ function _validatePurchase() {
           } else if (2 === tmp8) {
             c4 = 0;
             c6 = c3;
-            const tmp18 = new lib(10443)(c6);
+            const tmp18 = new lib(10481)(c6);
             throw tmp18;
           } else if (arg0 === 1) {
             c6 = 3;
@@ -116,7 +116,7 @@ function _validatePurchase() {
           } else {
             c4 = 0;
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp25) {
           c3 = tmp25;
@@ -191,7 +191,7 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -248,7 +248,7 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
                 c21 = undefined;
                 c6 = 1;
                 c7 = 1;
-                return { value: "Object", done: true };
+                return { value: "PX_16", done: null };
               }
             } else {
               if (1 === tmp10) {
@@ -601,7 +601,7 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
                 return obj;
               }
               c7 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (throwTypeErrorResult) {
             c4 = throwTypeErrorResult;

@@ -137,7 +137,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
             }
             ({ items, item } = obj);
             first = closure_1_3(tenantMetadata.selectedOptions, 1)[0];
-            obj = { baseVariantName: null, baseVariantSkuId: null, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "bottom", items: 555427409, categorySkuId: 33518086, isCategoryReward: 47513600, prices: -713949184, previewAssets: 1459617794, googleSkuIds: 1912602627, eligibleOffers: 855, variants: 977, bundledProducts: 250226, isFirstParty: 283648 };
+            obj = { baseVariantName: null, baseVariantSkuId: null, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "accessible", items: null, categorySkuId: null, isCategoryReward: null, prices: null, previewAssets: null, googleSkuIds: null, eligibleOffers: null, variants: null, bundledProducts: "<string:4148428801>", isFirstParty: "<string:1224737288>" };
             obj[0] = skus.name;
             obj[1] = first.id;
             let str;

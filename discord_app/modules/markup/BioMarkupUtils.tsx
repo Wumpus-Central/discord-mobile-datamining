@@ -1,6 +1,6 @@
 // discord_app/modules/markup/BioMarkupUtils.tsx
 import privDefault from "../../../_runtime/01401_priv.js";
-import tDefault from "../../../_runtime/04162_t.js";
+import tDefault from "../../../_runtime/04192_t.js";
 import MarkupTextDefault from "MarkupReactRules.native.tsx";
 import parseLinkDefault from "MarkupRules.tsx";
 import MarkupText from "MarkupReactRules.native.tsx";

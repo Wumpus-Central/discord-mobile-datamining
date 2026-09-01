@@ -153,7 +153,7 @@ const memoResult = importAllResult.memo(() => {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -188,7 +188,7 @@ const memoResult = importAllResult.memo(() => {
                   callback(true);
                 }
                 c2 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } catch (tmp9) {
               c2 = tmp;

@@ -36,15 +36,15 @@ export const useStickerCategories = function useStickerCategories(channel) {
       return tmp2;
     });
     return found1.map((type) => {
-      if (type.type !== callback(5180).StickerCategoryTypes.FAVORITE) {
-        if (type.type !== tmp(5180).StickerCategoryTypes.RECENT) {
+      if (type.type !== callback(5212).StickerCategoryTypes.FAVORITE) {
+        if (type.type !== tmp(5212).StickerCategoryTypes.RECENT) {
           return type;
         }
       }
-      if (type.type === callback(5180).StickerCategoryTypes.FAVORITE) {
-        let tmp4 = lib(10344);
+      if (type.type === callback(5212).StickerCategoryTypes.FAVORITE) {
+        let tmp4 = lib(10383);
       } else {
-        tmp4 = lib(10345);
+        tmp4 = lib(10384);
       }
       const obj = {};
       const merged = Object.assign(type);

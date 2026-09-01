@@ -179,8 +179,8 @@ export const isSafeToTransitionToReportForCurrentUser = function isSafeToTransit
           tmp9 = null == firstMessage;
         }
         if (!tmp9) {
-          tmp9 = !tmp10(6106).messageHasObscurableMediaForBitmask(firstMessage, tmp10(6109).ContentHarmTypeBitMask.EXPLICIT);
-          const tmp10Result = tmp10(6106);
+          tmp9 = !tmp10(6138).messageHasObscurableMediaForBitmask(firstMessage, tmp10(6141).ContentHarmTypeBitMask.EXPLICIT);
+          const tmp10Result = tmp10(6138);
         }
         return tmp9;
       } else {

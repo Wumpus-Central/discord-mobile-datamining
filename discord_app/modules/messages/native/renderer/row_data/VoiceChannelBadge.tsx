@@ -23,18 +23,18 @@ export const createVoiceChannelBadge = function createVoiceChannelBadge(id, guil
         }
         channel = channel.getChannel(channelId);
         if (null != channel) {
-          let tmpResult = tmp(4949);
+          let tmpResult = tmp(4981);
           const assetSource = Image.resolveAssetSource(tmpResult.getChannelIcon(channel));
           let uri;
           if (assetSource != null) {
             uri = assetSource.uri;
           }
           if (null != uri) {
-            tmpResult = tmp(4699);
+            tmpResult = tmp(4731);
             let result = tmpResult.shouldAgeVerifyForAgeGate();
             if (result) {
-              result = tmp(4699).shouldShowAgeGateForChannelId(channel.id);
-              const tmpResult1 = tmp(4699);
+              result = tmp(4731).shouldShowAgeGateForChannelId(channel.id);
+              const tmpResult1 = tmp(4731);
             }
             let isPrivateResult = channel.isPrivate();
             if (!isPrivateResult) {

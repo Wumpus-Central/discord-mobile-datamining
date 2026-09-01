@@ -66,7 +66,7 @@ prototype["ping"] = function ping() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -131,7 +131,7 @@ prototype["ping"] = function ping() {
                 obj3[0] = undefined;
                 return obj3;
               } else {
-                obj3 = checkForStallReportResult(16955);
+                obj3 = checkForStallReportResult(16991);
                 let pingResult;
                 if (obj3 != null) {
                   const _Date = Date;
@@ -149,7 +149,7 @@ prototype["ping"] = function ping() {
             throw arg1;
           } else if (arg0 !== 2) {
             if (arg1) {
-              obj = checkForStallReportResult(16955);
+              obj = checkForStallReportResult(16991);
               checkForStallReportResult = undefined;
               if (obj != null) {
                 checkForStallReportResult = obj.checkForStallReport();
@@ -165,7 +165,7 @@ prototype["ping"] = function ping() {
                 }
                 if (0 === checkForStallReportResult._analyticsReportsRemaining) {
                   checkForStallReportResult.stopWatchdog();
-                  obj1 = checkForStallReportResult(16955);
+                  obj1 = checkForStallReportResult(16991);
                   if (obj1 != null) {
                     obj1.disable();
                   }
@@ -213,7 +213,7 @@ prototype["startWatchdog"] = function startWatchdog() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -233,7 +233,7 @@ prototype["startWatchdog"] = function startWatchdog() {
             closure_0 = undefined;
             c1 = undefined;
             if (null == closure_1_0._timeoutId) {
-              if (null != checkForStallReportResult(16955)) {
+              if (null != checkForStallReportResult(16991)) {
                 dependencyMap = 1;
                 c3 = 1;
                 obj1 = { value: null, done: false };
@@ -254,7 +254,7 @@ prototype["startWatchdog"] = function startWatchdog() {
               closure_0._enabled = true;
               if (closure_0._pingCompleted) {
                 checkForStallReportResult = undefined;
-                obj = checkForStallReportResult(16955);
+                obj = checkForStallReportResult(16991);
                 if (obj != null) {
                   checkForStallReportResult = obj.checkForStallReport();
                 }
@@ -313,7 +313,7 @@ prototype["getCurrentSessionId"] = function getCurrentSessionId() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -332,7 +332,7 @@ prototype["getCurrentSessionId"] = function getCurrentSessionId() {
             closure_0 = tmp2;
             closure_0 = undefined;
             if (null != closure_1_0._cachedSession) {
-              obj1 = closure_1_0(7185);
+              obj1 = closure_1_0(7217);
               if (!obj1.isSessionExpired(closure_1_0._cachedSession)) {
                 const uuid = closure_1_0._cachedSession.uuid;
                 c3 = 3;
@@ -341,7 +341,7 @@ prototype["getCurrentSessionId"] = function getCurrentSessionId() {
             dependencyMap = 1;
             c3 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = closure_1_0(7175).getSession();
+            obj1[0] = closure_1_0(7207).getSession();
             return obj1;
           }
         } else if (arg0 === 1) {

@@ -32,8 +32,8 @@ function ChannelSubtitle(arg0) {
       str = "text-muted";
     }
     obj[5] = str;
-    obj.children = tmp(10160).renderMessagePreviewMarkup(obj);
-    return jsx(tmp(4444).Text, { content: null, muted: null, channelId: null, guildId: null, disableAnimatedEmoji: null, color: null });
+    obj.children = tmp(10199).renderMessagePreviewMarkup(obj);
+    return jsx(tmp(4474).Text, { content: null, muted: null, channelId: null, guildId: null, disableAnimatedEmoji: null, color: null });
   }
 }
 noopAll;

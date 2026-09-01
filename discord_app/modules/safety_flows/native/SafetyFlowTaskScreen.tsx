@@ -41,7 +41,7 @@ export default function SafetyFlowTaskScreen(action) {
     obj[1] = subtitleColor;
     obj[2] = tmp2.header;
     obj[3] = subtitle;
-    tmp7Result = tmp7(tmp4(4444).Text, obj);
+    tmp7Result = tmp7(tmp4(4474).Text, obj);
   }
   obj = { children: null };
   items[2] = tmp7Result;
@@ -59,12 +59,12 @@ export default function SafetyFlowTaskScreen(action) {
       obj1[1] = action;
       obj1[2] = onAction;
       obj1[3] = submitting;
-      tmp7Result = tmp7(tmp4(10695).ModalActionButton, obj1);
+      tmp7Result = tmp7(tmp4(10733).ModalActionButton, obj1);
     }
     const obj2 = { children: null };
     items3[1] = tmp7Result;
     obj2[0] = items3;
-    footer = tmp3(tmp4(11466).ModalFooter, obj2);
+    footer = tmp3(tmp4(11499).ModalFooter, obj2);
   }
   children[1] = footer;
   return closure_4(ModalScreen.ModalScreen, { children });

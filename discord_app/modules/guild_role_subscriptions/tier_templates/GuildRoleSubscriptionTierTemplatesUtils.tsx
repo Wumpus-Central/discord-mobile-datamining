@@ -9,7 +9,7 @@ import { useEditStateStore } from "../edit_state/GuildRoleSubscriptionEditStore.
 import closure_9 from "GuildRoleSubscriptionTierTemplatesStore.tsx";
 import { GuildFeatures } from "../../../Constants.tsx";
 import { ChannelFlags } from "../../channel/ChannelConstants.tsx";
-import importDefaultResult from "../../../../_runtime/04724_allSettled.js";
+import importDefaultResult from "../../../../_runtime/04756_allSettled.js";
 import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 require = arg1;
@@ -64,7 +64,7 @@ function _createChannelsFromTemplateTierBenefits() {
           obj[0] = arr;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

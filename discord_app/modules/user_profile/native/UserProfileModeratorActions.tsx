@@ -346,7 +346,7 @@ export default function UserProfileModeratorActions(user) {
               dependencyMap();
             },
             onRemove() {
-              let arr = callback(4691);
+              let arr = callback(4723);
               arr = arr.pop();
             }
           };

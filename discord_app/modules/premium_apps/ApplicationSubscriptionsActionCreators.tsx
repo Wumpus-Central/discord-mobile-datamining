@@ -158,7 +158,7 @@ function _fetchSubscriptionListingForPlan() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -183,7 +183,7 @@ function _fetchSubscriptionListingForPlan() {
               closure_3 = undefined;
               c7 = 1;
               v0 = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -280,7 +280,7 @@ function _fetchSubscriptionListingForPlan() {
               return obj;
             }
             v0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp33) {
           closure_5 = tmp33;

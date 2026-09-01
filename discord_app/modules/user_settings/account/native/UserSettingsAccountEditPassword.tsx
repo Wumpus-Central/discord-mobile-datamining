@@ -7,7 +7,7 @@ import Button from "../../../../design/components/Button/native/Button.native.ts
 import TextInput from "../../../../design/components/TextInput/native/TextInput.native.tsx";
 import saveProfileAndAccountRequestAll from "../../../../actions/UserSettingsAccountActionCreators.tsx";
 import handleOpenEmailVerificationDefault from "UserSettingsAccountUnverifiedHeader.tsx";
-import registerAssetDefault from "../../../../../_runtime/14351_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/14384_registerAsset.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_7 from "../../../auth/LoginRequiredActionStore.tsx";
 import closure_8 from "../../../../stores/UserSettingsAccountStore.tsx";
@@ -21,7 +21,7 @@ require = arg1;
 ({ Image: c4, View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ AnalyticEvents: c10, LoginRequiredActions: unpackModuleId } = ME);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let closure_14 = { newPassword: "bottom", password: 17073473 };
+let closure_14 = { newPassword: "category", password: 17069889 };
 createCacheKey = { onePass: { width: 20, height: 20 }, unverifiedWrapper: null, container: null, header: null, requiredActionsSubtitle: null, requiredActionsTitle: null, image: null };
 createCacheKey = { overflow: "hidden", borderRadius: ThemesDefault.radii.xs, marginVertical: 16 };
 createCacheKey[1] = createCacheKey;
@@ -224,7 +224,7 @@ EditPassword.contextType = require("ManaContext").ThemeContext;
 let result = require("set").fileFinishedImporting("modules/user_settings/account/native/UserSettingsAccountEditPassword.tsx");
 
 export default function EditPasswordWrapper() {
-  let obj = flag(7127);
+  let obj = flag(7159);
   const params = obj.useSettingNavigationRoute().params;
   flag = undefined;
   if (params != null) {

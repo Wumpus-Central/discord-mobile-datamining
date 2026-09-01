@@ -2,16 +2,16 @@
 import set from "../../../../../_runtime/00002_set.js";
 import dispatcherDefault from "../../../../Dispatcher.tsx";
 import asyncRequireImpl from "../../../../../_runtime/02009_asyncRequireImpl.js";
-import _modDef4691 from "../../../../actions/ModalActionCreators.tsx";
+import _modDef4723 from "../../../../actions/ModalActionCreators.tsx";
 
 const TRANSFER_OWNERSHIP_MODAL_KEY = "TRANSFER_OWNERSHIP_MODAL_KEY";
 const result = set.fileFinishedImporting("modules/guild_settings/safety/native/TransferOwnershipModalActionCreators.tsx");
 
 export default {
   open(guild, toUser) {
-    let obj = _modDef4691;
+    let obj = _modDef4723;
     obj = { guild, toUser };
-    obj.pushLazy(asyncRequireImpl(11380, dependencyMap.paths), obj, TRANSFER_OWNERSHIP_MODAL_KEY);
+    obj.pushLazy(asyncRequireImpl(11418, dependencyMap.paths), obj, TRANSFER_OWNERSHIP_MODAL_KEY);
   },
   close() {
     dispatcherDefault.wait(() => {

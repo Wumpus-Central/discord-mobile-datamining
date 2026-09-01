@@ -23,7 +23,7 @@ function _computeBoundPairwiseFingerprint() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -62,7 +62,7 @@ function _computeBoundPairwiseFingerprint() {
                     if (null != value) {
                       return value;
                     } else {
-                      const obj4 = joined(9785);
+                      const obj4 = joined(9824);
                       const _Uint8Array = Uint8Array;
                       const uint8Array2 = new Uint8Array(secureFramesRosterMapEntry1);
                       const _Uint8Array2 = Uint8Array;

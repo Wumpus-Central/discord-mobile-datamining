@@ -33,7 +33,7 @@ export default function VideoEmptyState(style) {
     if (!removeSplashImage) {
       obj = { style: null };
       obj[0] = tmp2.placeholderImage;
-      tmp16 = callback(stream(9528).StreamEnded, obj);
+      tmp16 = callback(stream(9567).StreamEnded, obj);
     }
     obj = { children: null };
     const items = [tmp16, ];
@@ -51,7 +51,7 @@ export default function VideoEmptyState(style) {
     if (!removeSplashImage) {
       obj = { style: null };
       obj[0] = tmp2.placeholderImage;
-      tmp7 = callback(stream(9531).StreamFailed, obj);
+      tmp7 = callback(stream(9570).StreamFailed, obj);
     }
     let obj2 = { children: null };
     const items1 = [tmp7, ];
@@ -68,13 +68,13 @@ export default function VideoEmptyState(style) {
     tmp5Result = null;
   }
   if (null != avError) {
-    let obj7 = stream(9526);
+    let obj7 = stream(9565);
     let errorCode = obj7.getErrorInfo(avError).errorCode;
   } else {
     errorCode = null;
     if (type === tmp3.STREAM_FAILED) {
-      let obj6 = stream(9526);
-      errorCode = obj6.getErrorInfo(stream(9526).AVError.STREAM_FAILED_TO_START).errorCode;
+      let obj6 = stream(9565);
+      errorCode = obj6.getErrorInfo(stream(9565).AVError.STREAM_FAILED_TO_START).errorCode;
     }
   }
   let obj8 = stream(589);
@@ -104,7 +104,7 @@ export default function VideoEmptyState(style) {
     obj6 = { errorCode: null };
     obj6[0] = errorCode;
     obj5[3] = intl3.formatToPlainString(tmp28(1236).t.ejOT95, obj6);
-    tmp34 = callback(tmp28(4444).Text, obj5);
+    tmp34 = callback(tmp28(4474).Text, obj5);
   }
   items5[1] = tmp34;
   let tmp36 = !removeCloseButton;
@@ -119,7 +119,7 @@ export default function VideoEmptyState(style) {
       obj = stream(closure_1_2[14]);
       obj.stopStream(stream(closure_1_2[15]).encodeStreamKey(stream));
     };
-    obj7[1] = callback(tmp28(4897).BaseTextButton, obj8);
+    obj7[1] = callback(tmp28(4929).BaseTextButton, obj8);
     tmp36 = callback(tmp32, obj7);
   }
   items5[2] = tmp36;

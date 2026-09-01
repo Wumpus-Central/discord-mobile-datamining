@@ -1,5 +1,5 @@
 // discord_app/modules/parent_tools/native/FamilyCenterParentalControlsDataAndPrivacy.tsx
-import _modDef14307 from "../../settings/native/renderer/SettingLayout.tsx";
+import _modDef14340 from "../../settings/native/renderer/SettingLayout.tsx";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import { HelpdeskArticles } from "../../../Constants.tsx";
 import { MobileUserSettings } from "../../user_settings/core/native/SettingsConstants.tsx";
@@ -48,5 +48,5 @@ export default function FamilyCenterParentalControlsDataAndPrivacy() {
     obj = { sections: memo };
     return obj.createList(obj);
   }, items);
-  return jsx(_modDef14307, { node });
+  return jsx(_modDef14340, { node });
 };

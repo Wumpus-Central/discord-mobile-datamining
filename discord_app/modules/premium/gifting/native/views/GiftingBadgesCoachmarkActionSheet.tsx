@@ -49,14 +49,14 @@ function HasBadgeCoachmark(markAsDismissed) {
     str = "";
   }
   obj3[3] = intl.format(messagesProxyDefault["a+jfuy"], { tierName: str });
-  const items3 = [closure_8(markAsDismissed(4444).Text, obj3), ];
+  const items3 = [closure_8(markAsDismissed(4474).Text, obj3), ];
   const obj4 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = tmp5(1236).intl;
   if (giftCount == null) {
     giftCount = 0;
   }
   obj4[3] = intl2.formatToPlainString(messagesProxyDefault.QxRA6w, { giftCount });
-  items3[1] = closure_8(markAsDismissed(4444).Text, obj4);
+  items3[1] = closure_8(markAsDismissed(4474).Text, obj4);
   obj2[1] = items3;
   items2[1] = closure_9(closure_5, obj2);
   const obj5 = { style: tmp.footer, children: null };
@@ -64,11 +64,11 @@ function HasBadgeCoachmark(markAsDismissed) {
   const intl3 = tmp5(1236).intl;
   obj6[1] = intl3.string(markAsDismissed(1236).t.RzWDqY);
   obj6[2] = callback;
-  obj5[1] = closure_8(markAsDismissed(4896).Button, obj6);
+  obj5[1] = closure_8(markAsDismissed(4928).Button, obj6);
   items2[2] = closure_8(closure_5, obj5);
   obj[1] = items2;
   obj[2] = closure_9(closure_5, obj);
-  return closure_8(markAsDismissed(5590).BottomSheet, obj);
+  return closure_8(markAsDismissed(5622).BottomSheet, obj);
 }
 function NewBadgeCoachmark(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
@@ -97,11 +97,11 @@ function NewBadgeCoachmark(markAsDismissed) {
   const obj4 = { style: tmp.text, variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
   const intl = markAsDismissed(1236).intl;
   obj4[3] = intl.string(messagesProxyDefault.Q2RQka);
-  const items3 = [callback(markAsDismissed(4444).Text, obj4), ];
+  const items3 = [callback(markAsDismissed(4474).Text, obj4), ];
   const obj5 = { style: tmp.text, variant: "text-sm/medium", color: "text-muted", children: null };
   const intl2 = markAsDismissed(1236).intl;
   obj5[3] = intl2.string(messagesProxyDefault["3EQnkg"]);
-  items3[1] = callback(markAsDismissed(4444).Text, obj5);
+  items3[1] = callback(markAsDismissed(4474).Text, obj5);
   obj3[1] = items3;
   items2[1] = callback2(closure_5, obj3);
   const obj6 = { style: tmp.footer, children: null };
@@ -109,13 +109,13 @@ function NewBadgeCoachmark(markAsDismissed) {
   const intl3 = markAsDismissed(1236).intl;
   obj7[1] = intl3.string(messagesProxyDefault.DZnomS);
   const obj2 = { uri: metadataDefault };
-  obj7[2] = callback(markAsDismissed(10736).GiftIcon, { size: "sm", color: ThemesDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
+  obj7[2] = callback(markAsDismissed(10774).GiftIcon, { size: "sm", color: ThemesDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
   obj7[3] = callback;
-  obj6[1] = callback(markAsDismissed(4896).Button, obj7);
+  obj6[1] = callback(markAsDismissed(4928).Button, obj7);
   items2[2] = callback(closure_5, obj6);
   obj[1] = items2;
   obj[2] = callback2(closure_5, obj);
-  return callback(markAsDismissed(5590).BottomSheet, obj);
+  return callback(markAsDismissed(5622).BottomSheet, obj);
 }
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
@@ -137,9 +137,9 @@ export default function GiftingBadgesCoachmarkActionSheet(markAsDismissed) {
   let obj = initialize;
   const items = [closure_6];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    const obj = { currentTier: getCurrentTier(callback(8525).BadgeId.GIFTING), giftCount: null };
+    const obj = { currentTier: getCurrentTier(callback(8557).BadgeId.GIFTING), giftCount: null };
     ({ getCurrentTier, getSingleRequirementProgress } = closure_6);
-    const singleRequirementProgress = getSingleRequirementProgress(callback(8525).BadgeId.GIFTING);
+    const singleRequirementProgress = getSingleRequirementProgress(callback(8557).BadgeId.GIFTING);
     let current;
     if (singleRequirementProgress != null) {
       current = singleRequirementProgress.current;

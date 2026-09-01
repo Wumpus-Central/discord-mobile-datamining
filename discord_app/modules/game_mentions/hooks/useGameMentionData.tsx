@@ -8,10 +8,10 @@ import closure_5 from "../../../stores/UserStore.tsx";
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/game_mentions/hooks/useGameMentionData.tsx");
 
-export const getGameMentionData = function getGameMentionData(closure_0) {
+export const getGameMentionData = function getGameMentionData(gameId) {
   currentUser = currentUser.getCurrentUser();
-  game = game.getGame(closure_0);
-  gameById = gameById.getGameById(closure_0);
+  game = game.getGame(gameId);
+  gameById = gameById.getGameById(gameId);
   if (null != game) {
     let nsfwAllowed;
     if (currentUser != null) {
@@ -19,7 +19,7 @@ export const getGameMentionData = function getGameMentionData(closure_0) {
     }
     if (!obj2.isGameProfileObscured(game, nsfwAllowed)) {
       let obj = { gameId: null, gameName: null, gameIcon: null };
-      obj[0] = closure_0;
+      obj[0] = gameId;
       ({ name: obj3[1], media } = game);
       let icon;
       if (media != null) {
@@ -31,7 +31,7 @@ export const getGameMentionData = function getGameMentionData(closure_0) {
     obj2 = useGameProfileObscured;
   } else if (null != gameById) {
     obj = { gameId: null, gameName: null, gameIcon: null };
-    obj[0] = closure_0;
+    obj[0] = gameId;
     ({ name: obj[1], icon: obj[2] } = gameById);
     tmp4 = obj;
   }

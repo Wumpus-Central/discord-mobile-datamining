@@ -1,6 +1,6 @@
 // discord_app/modules/share/native/ShareAttachments.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/04908_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/04940_LinearGradient.js";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";

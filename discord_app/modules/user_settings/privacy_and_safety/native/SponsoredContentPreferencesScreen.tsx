@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/privacy_and_safety/native/SponsoredContentPreferencesScreen.tsx
 import combinedDefault from "../../../../utils/HelpdeskUtils.tsx";
-import _modDef14307 from "../../../settings/native/renderer/SettingLayout.tsx";
+import _modDef14340 from "../../../settings/native/renderer/SettingLayout.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { MobileUserSettings } from "../../core/native/SettingsConstants.tsx";
 import { HelpdeskArticles } from "../../../../Constants.tsx";
@@ -32,5 +32,5 @@ export default function SponsoredContentPreferencesScreen() {
     obj = { sections: items1 };
     return obj.createList(obj);
   }, items4);
-  return jsx(_modDef14307, { node });
+  return jsx(_modDef14340, { node });
 };

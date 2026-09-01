@@ -60,7 +60,7 @@ export default function FamilyCenterTopActivity() {
         user = user.getUser(user_id.user_id);
         let tmp2 = null;
         if (null != user) {
-          const obj = { user: null, size: null, guildId: "Array" };
+          const obj = { user: null, size: null, guildId: "r" };
           obj[0] = user;
           obj[1] = callback(stateFromStores1[16]).AvatarSizes.SMALL;
           tmp2 = callback2(callback(stateFromStores1[16]).Avatar, obj, user.id);

@@ -17,52 +17,55 @@ function PremiumFeatureUpsellPill(featureName) {
   }
   let useTier0UpsellContent;
   dependencyMap = undefined;
+  let mobileEmojiPickerUpsellRestyleEnabledForFeature;
   let loading;
-  let obj = featureName(8137);
-  obj1 = featureName(9096);
+  let obj = featureName(8169);
+  obj1 = featureName(9134);
   const premiumUpsellConfig = obj.usePremiumUpsellConfig(obj1.getUpsellType(featureName));
   useTier0UpsellContent = premiumUpsellConfig.useTier0UpsellContent;
-  const tmp4 = callback(useTier0UpsellContent);
+  const tmp4 = callback2(useTier0UpsellContent);
   dependencyMap = tmp4;
-  const tmp6 = useTier0UpsellContent ? closure_7.TIER_0 : closure_7.TIER_2;
-  const fn = () => useTier0UpsellContent(closure_2[13])(featureName);
-  let tmpResult = tmp(4109);
-  const premiumTypeDisplayName = tmpResult.getPremiumTypeDisplayName(tmp6);
-  if (featureName(7565).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE === featureName) {
+  let obj2 = featureName(9151);
+  mobileEmojiPickerUpsellRestyleEnabledForFeature = obj2.getMobileEmojiPickerUpsellRestyleEnabledForFeature(featureName, "native.PremiumFeatureUpsell");
+  const tmp7 = useTier0UpsellContent ? closure_7.TIER_0 : closure_7.TIER_2;
+  const fn = () => useTier0UpsellContent(closure_2[14])(featureName);
+  let tmpResult = tmp(4139);
+  const premiumTypeDisplayName = tmpResult.getPremiumTypeDisplayName(tmp7);
+  if (featureName(7597).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE === featureName) {
     const intl4 = tmp(1236).intl;
     obj = { nitroTierName: null, onClick: null };
     obj[0] = premiumTypeDisplayName;
     obj[1] = fn;
     let formatResult = intl4.format(tmp(1236).t["tw/SSq"], obj);
-  } else if (tmp(7565).EntitlementFeatureNames.EMOJIS_EVERYWHERE === featureName) {
+  } else if (tmp(7597).EntitlementFeatureNames.EMOJIS_EVERYWHERE === featureName) {
     const intl3 = tmp(1236).intl;
     obj = { nitroTierName: null, onClick: null };
     obj[0] = premiumTypeDisplayName;
     obj[1] = fn;
     formatResult = intl3.format(tmp(1236).t.gMVjeS, obj);
-  } else if (tmp(7565).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE === featureName) {
+  } else if (tmp(7597).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE === featureName) {
     const intl2 = tmp(1236).intl;
     obj1 = { maxFileSize: null, nitroTierName: null, onClick: null };
-    tmpResult = tmp(4109);
-    obj1[0] = tmpResult.getMaxFileSizeForPremiumType(tmp6);
+    tmpResult = tmp(4139);
+    obj1[0] = tmpResult.getMaxFileSizeForPremiumType(tmp7);
     obj1[1] = premiumTypeDisplayName;
     obj1[2] = fn;
     formatResult = intl2.format(tmp(1236).t.zzyLEK, obj1);
-  } else if (tmp(7565).EntitlementFeatureNames.STREAM_HIGH_QUALITY === featureName) {
+  } else if (tmp(7597).EntitlementFeatureNames.STREAM_HIGH_QUALITY === featureName) {
     const intl = tmp(1236).intl;
-    const obj2 = { nitroTierName: null, onClick: null };
+    obj2 = { nitroTierName: null, onClick: null };
     obj2[0] = premiumTypeDisplayName;
     obj2[1] = fn;
     formatResult = intl.format(tmp(1236).t.lyxfbj, obj2);
-  } else if (tmp(7565).EntitlementFeatureNames.APP_ICONS === featureName) {
+  } else if (tmp(7597).EntitlementFeatureNames.APP_ICONS === featureName) {
     const intl6 = tmp(1236).intl;
     const obj3 = { onClick: null };
     obj3[0] = fn;
     formatResult = intl6.format(tmp(1236).t.x2dQxN, obj3);
   }
-  const tmp10 = useTier0UpsellContent(8932)(useTier0UpsellContent, premiumUpsellConfig.onViewAllPerks, constants.PREMIUM_UPSELL_FILE_UPLOAD);
-  loading = tmp10.loading;
-  const items = [tmp4.container, , ];
+  const tmp11 = useTier0UpsellContent(8969)(useTier0UpsellContent, premiumUpsellConfig.onViewAllPerks, constants.PREMIUM_UPSELL_FILE_UPLOAD);
+  loading = tmp11.loading;
+  let items = [tmp4.container, , ];
   if (flag) {
     flag = tmp4.containerShadow;
   }
@@ -70,43 +73,75 @@ function PremiumFeatureUpsellPill(featureName) {
   items[1] = flag;
   items[2] = featureName.style;
   const obj5 = { style: tmp4.labelContainer, children: null };
-  const items1 = [closure_12(featureName(1297).Icon, { source: useTier0UpsellContent(useTier0UpsellContent ? 9128 : 9129), style: tmp4.nitroWheel, disableColor: true }), closure_12(featureName(4444).Text, { style: tmp4.text, variant: "text-sm/medium", children: formatResult })];
-  obj5[1] = items1;
-  const items2 = [closure_13(closure_5, obj5), ];
-  const obj8 = { disabled: loading, shrink: true, style: tmp4.button, size: featureName(1297).ButtonSizes.XSMALL, onPress: tmp10.onPress, text: null, color: null, renderIcon: null, renderLinearGradient: null };
-  const intl5 = tmp(1236).intl;
-  const string = intl5.string;
-  const t = tmp(1236).t;
-  if (useTier0UpsellContent) {
-    let stringResult = string(t.cM8bbx);
-  } else {
-    stringResult = string(t["8x0jKT"]);
-  }
-  obj8[5] = stringResult;
-  obj8[6] = featureName(1297).ButtonColors.GREEN;
-  obj8[7] = function renderIcon() {
-    const style = [closure_2.nitroWheelButton, ];
-    let nitroWheelDisabled = loading;
-    if (loading) {
-      nitroWheelDisabled = closure_2.nitroWheelDisabled;
+  if (mobileEmojiPickerUpsellRestyleEnabledForFeature) {
+    let items1 = [tmp14, ];
+    const obj6 = { style: null, variant: "text-sm/medium", children: null };
+    obj6[0] = tmp4.text;
+    obj6[2] = formatResult;
+    items1[1] = callback(tmp(4474).Text, obj6);
+    obj5[1] = items1;
+    const items2 = [tmp12(tmp13, obj5), ];
+    const obj7 = { disabled: null, shrink: true, style: null, size: null, onPress: null, text: null, color: null, renderIcon: null, renderLinearGradient: null };
+    obj7[0] = loading;
+    obj7[2] = tmp4.button;
+    obj7[3] = tmp(1297).ButtonSizes.XSMALL;
+    obj7[4] = tmp11.onPress;
+    const intl5 = tmp(1236).intl;
+    const string = intl5.string;
+    const t = tmp(1236).t;
+    if (useTier0UpsellContent) {
+      let stringResult = string(t.cM8bbx);
+    } else {
+      stringResult = string(t["8x0jKT"]);
     }
-    style[1] = nitroWheelDisabled;
-    return closure_1_12(featureName(closure_2[15]).NitroWheel, { style });
-  };
-  obj8[8] = function renderLinearGradient() {
-    const obj = { style: closure_2.gradient, start: featureName(closure_2[20]).HorizontalGradient.START, end: featureName(closure_2[20]).HorizontalGradient.END, colors: useTier0UpsellContent ? closure_1_11.PREMIUM_TIER_0 : closure_1_11.PREMIUM_TIER_2_TRI_COLOR };
-    return closure_1_12(useTier0UpsellContent(closure_2[19]), obj);
-  };
-  items2[1] = closure_12(featureName(1297).ShinyButton, obj8);
-  obj4[1] = items2;
-  return closure_13(closure_5, obj4);
+    obj7[5] = stringResult;
+    obj7[6] = tmp(1297).ButtonColors.GREEN;
+    obj7[7] = function renderIcon() {
+      if (mobileEmojiPickerUpsellRestyleEnabledForFeature) {
+        let obj = { size: "xxs", color: null, style: null };
+        obj[1] = useTier0UpsellContent(closure_2[10]).colors.WHITE;
+        const items = [closure_2.nitroWheelIcon, ];
+        let nitroWheelDisabled2 = loading;
+        if (loading) {
+          nitroWheelDisabled2 = closure_2.nitroWheelDisabled;
+        }
+        items[1] = nitroWheelDisabled2;
+        obj[2] = items;
+        let tmpResult = tmp(tmp2(tmp3[20]).NitroWheelIcon, obj);
+      } else {
+        const items1 = [closure_2.nitroWheelButton, ];
+        let nitroWheelDisabled = loading;
+        if (loading) {
+          nitroWheelDisabled = closure_2.nitroWheelDisabled;
+        }
+        obj = { style: null };
+        items1[1] = nitroWheelDisabled;
+        obj[0] = items1;
+        tmpResult = tmp(tmp2(tmp3[16]).NitroWheel, obj);
+      }
+      return tmpResult;
+    };
+    obj7[8] = function renderLinearGradient() {
+      const obj = { style: closure_2.gradient, start: featureName(closure_2[22]).HorizontalGradient.START, end: featureName(closure_2[22]).HorizontalGradient.END, colors: useTier0UpsellContent ? closure_1_11.PREMIUM_TIER_0 : closure_1_11.PREMIUM_TIER_2_TRI_COLOR };
+      return closure_1_12(useTier0UpsellContent(closure_2[21]), obj);
+    };
+    items2[1] = callback(tmp(1297).ShinyButton, obj7);
+    obj4[1] = items2;
+    return tmp12(tmp13, obj4);
+  } else {
+    const obj8 = { source: null, style: null, disableColor: true };
+    obj8[0] = useTier0UpsellContent(useTier0UpsellContent ? 9167 : 9168);
+    obj8[1] = tmp4.nitroWheel;
+    callback(tmp(1297).Icon, obj8);
+    const tmp15 = callback;
+  }
 }
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);
 ({ PremiumSubscriptionSKUs: closure_6, PremiumTypes: error, PremiumUpsellTypes: closure_8 } = GuildFeatures);
 ({ AnalyticEvents: c9, AnalyticsPages: c10 } = ME);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let closure_14 = createCacheKey.createStyles((arg0) => {
-  let obj = { container: null, containerShadow: null, nitroWheel: null, labelContainer: null, text: null, nitroWheelButton: null, nitroWheelDisabled: null, button: null, gradient: null };
+  let obj = { container: null, containerShadow: null, nitroWheel: null, labelContainer: null, text: null, nitroWheelButton: null, nitroWheelIcon: null, nitroWheelDisabled: null, button: null, gradient: null };
   obj = { flexDirection: "row", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.round, padding: ThemesDefault.space.PX_12, justifyContent: "space-between" };
   obj[0] = obj;
   obj = {};
@@ -120,11 +155,12 @@ let closure_14 = createCacheKey.createStyles((arg0) => {
   obj[3] = { flexDirection: "row", flexShrink: 1, alignItems: "center", marginEnd: ThemesDefault.space.PX_4 };
   obj[4] = { flexShrink: 1, flexWrap: "wrap" };
   obj[5] = { marginStart: -2, width: 20, height: 20 };
-  obj[6] = { opacity: 0.6 };
+  obj[6] = { marginEnd: 4 };
+  obj[7] = { opacity: 0.6 };
   const obj2 = { flexDirection: "row", flexShrink: 1, alignItems: "center", marginEnd: ThemesDefault.space.PX_4 };
-  obj[7] = { alignSelf: "center", borderRadius: ThemesDefault.radii.round };
+  obj[8] = { alignSelf: "center", borderRadius: ThemesDefault.radii.round };
   const merged1 = Object.assign(absoluteFillObject.absoluteFillObject);
-  obj[8] = {};
+  obj[9] = {};
   return obj;
 });
 let closure_16 = { code: "function PremiumFeatureUpsellTsx2(finished){const{cleanUp}=this.__closure;var _cleanUp;(_cleanUp=cleanUp)===null||_cleanUp===void 0||_cleanUp(finished);}" };
@@ -154,10 +190,10 @@ export default function PremiumFeatureUpsell(shouldShow) {
   let _location;
   closure_4 = undefined;
   ref = _location.useRef(false);
-  analyticsLocations = ref(analyticsLocations[23])().analyticsLocations;
-  let obj = merged(analyticsLocations[24]);
+  analyticsLocations = ref(analyticsLocations[25])().analyticsLocations;
+  let obj = merged(analyticsLocations[26]);
   _location = obj.useAnalyticsContext().location;
-  const tmp3 = ref(analyticsLocations[25])(shouldShow.shouldShow);
+  const tmp3 = ref(analyticsLocations[27])(shouldShow.shouldShow);
   closure_4 = tmp3;
   const items = [ref, _location, analyticsLocations, tmp3, merged.featureName];
   const callback = _location.useCallback((arg0, style) => {
@@ -165,7 +201,7 @@ export default function PremiumFeatureUpsell(shouldShow) {
     obj = {};
     merged = Object.assign(arg0);
     obj[1] = callback(closure_15, obj);
-    return callback(ref(analyticsLocations[26]).View, obj);
+    return callback(ref(analyticsLocations[28]).View, obj);
   }, []);
   const effect = _location.useEffect(() => {
     const current = ref.current;
@@ -175,7 +211,7 @@ export default function PremiumFeatureUpsell(shouldShow) {
     }
     if (tmp2) {
       let castPremiumSubscriptionAsSkuId = analyticsLocations;
-      let obj = ref(analyticsLocations[27]);
+      let obj = ref(analyticsLocations[29]);
       const featureName = merged.featureName;
       let tmp6 = merged;
       if (merged(analyticsLocations[6]).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE === featureName) {
@@ -208,5 +244,5 @@ export default function PremiumFeatureUpsell(shouldShow) {
     tmp8 = merged;
   }
   obj = { useReducedMotion: false, item: tmp8, entering: animationEnterExit, exiting: animationEnterExit, renderItem: callback };
-  return closure_12(ref(analyticsLocations[28]), obj);
+  return closure_12(ref(analyticsLocations[30]), obj);
 };

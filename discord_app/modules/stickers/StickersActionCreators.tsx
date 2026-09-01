@@ -51,102 +51,61 @@ function _fetchStickerPacks() {
     c3 = 0;
     c4 = 0;
     const iter = (function*(arg0, body) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp5 === 3) {
+      dependencyMap = tmp3;
+      let sticker_packs = tmp2;
+      obj1 = locale;
+      if (locale === undefined) {
+        obj1 = {};
+      }
+      locale = obj1.locale;
+      if (locale === undefined) {
+        locale = closure_1_5.locale;
+      }
+      yield "PX_16";
+      if (1 === tmp6) {
         if (arg0 === 1) {
+          c4 = 3;
           throw body;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
+          c4 = 3;
+          const obj2 = { value: null, done: true };
+          obj2[0] = body;
+          return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              dependencyMap = tmp3;
-              let sticker_packs = tmp2;
-              let locale;
-              obj1 = locale;
-              if (locale === undefined) {
-                obj1 = {};
-              }
-              locale = obj1.locale;
-              if (locale === undefined) {
-                locale = closure_1_5.locale;
-              }
-              sticker_packs = undefined;
-              c3 = 1;
+          if (!closure_8.isFetchingStickerPacks) {
+            if (!closure_8.hasLoadedStickerPacks) {
+              let obj3 = sticker_packs(709);
+              obj3.wait(() => {
+                sticker_packs(tmp3[10]).dispatch({ type: "STICKER_PACKS_FETCH_START" });
+              });
+              const HTTP = locale(530).HTTP;
+              obj3 = { url: null, query: null, rejectWithError: null };
+              obj3[0] = constants.STICKER_PACKS;
+              const obj4 = { locale: null };
+              obj4[0] = locale;
+              obj3[1] = obj4;
+              let obj6 = locale(530);
+              obj3[2] = obj6.rejectWithMigratedError();
+              c3 = 2;
               c4 = 1;
-              return { value: "Object", done: true };
+              const obj5 = { value: null, done: false };
+              obj5[0] = HTTP.get(obj3);
+              return obj5;
             }
-          } else {
-            if (1 === tmp6) {
-              if (arg0 === 1) {
-                c4 = 3;
-                throw body;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                const obj2 = { value: null, done: true };
-                obj2[0] = body;
-                return obj2;
-              } else {
-                if (!closure_8.isFetchingStickerPacks) {
-                  if (!closure_8.hasLoadedStickerPacks) {
-                    let obj3 = sticker_packs(709);
-                    obj3.wait(() => {
-                      sticker_packs(tmp3[10]).dispatch({ type: "STICKER_PACKS_FETCH_START" });
-                    });
-                    const HTTP = locale(530).HTTP;
-                    obj3 = { url: null, query: null, rejectWithError: null };
-                    obj3[0] = constants.STICKER_PACKS;
-                    const obj4 = { locale: null };
-                    obj4[0] = locale;
-                    obj3[1] = obj4;
-                    let obj6 = locale(530);
-                    obj3[2] = obj6.rejectWithMigratedError();
-                    c3 = 2;
-                    c4 = 1;
-                    const obj5 = { value: null, done: false };
-                    obj5[0] = HTTP.get(obj3);
-                    return obj5;
-                  }
-                }
-                c4 = 3;
-              }
-            } else if (arg0 === 1) {
-              c4 = 3;
-              throw body;
-            } else if (arg0 !== 2) {
-              sticker_packs = body.body.sticker_packs;
-              obj = sticker_packs(709);
-              obj6 = { type: "STICKER_PACKS_FETCH_SUCCESS", packs: null };
-              obj6[1] = sticker_packs;
-              obj.dispatch(obj6);
-            }
-            c4 = 3;
-            const obj7 = { value: null, done: true };
-            obj7[0] = body;
-            return obj7;
           }
-        } catch (tmp26) {
-          c4 = tmp;
-          throw tmp26;
+          c4 = 3;
         }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw body;
+      } else if (arg0 !== 2) {
+        sticker_packs = body.body.sticker_packs;
+        const obj = sticker_packs(709);
+        obj6 = { type: "STICKER_PACKS_FETCH_SUCCESS", packs: null };
+        obj6[1] = sticker_packs;
+        obj.dispatch(obj6);
       }
+      return body;
     })();
     iter.next();
     return iter;
@@ -178,7 +137,7 @@ function _fetchSticker() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -222,7 +181,7 @@ function _fetchSticker() {
               obj4[1] = body;
               obj3.dispatch(obj4);
             } else {
-              obj = body(4820);
+              obj = body(4852);
               if (obj.isStandardSticker(body)) {
                 obj1 = callback2(709);
                 const obj5 = { type: "PACK_STICKER_FETCH_SUCCESS", sticker: null };
@@ -235,7 +194,7 @@ function _fetchSticker() {
               }
             }
             c4 = 3;
-            obj10 = body(4820);
+            obj10 = body(4852);
           }
         } catch (tmp24) {
           c4 = tmp;
@@ -272,7 +231,7 @@ function _fetchGuildStickersWithCreator() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -327,7 +286,7 @@ function _fetchGuildStickersWithCreator() {
             });
             obj.dispatch(obj4);
             c5 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp13) {
           c5 = tmp;
@@ -363,7 +322,7 @@ function _deleteGuildSticker() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -398,7 +357,7 @@ function _deleteGuildSticker() {
             return obj;
           } else {
             c1 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp5) {
           c1 = tmp;

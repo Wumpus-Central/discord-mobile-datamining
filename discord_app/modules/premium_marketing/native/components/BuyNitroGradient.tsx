@@ -1,6 +1,6 @@
 // discord_app/modules/premium_marketing/native/components/BuyNitroGradient.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
-import LinearGradientDefault from "../../../../../_runtime/04908_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/04940_LinearGradient.js";
 import { PremiumTypes } from "../../../premium/PremiumConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import importDefaultResult from "../../../reanimated/ReanimatedRexport.tsx";
@@ -16,7 +16,7 @@ export default function BuyNitroGradient(selectedTier) {
   selectedTier = selectedTier.selectedTier;
   ({ start, end, style } = selectedTier);
   ({ nitroColors, basicColors } = selectedTier);
-  let obj = selectedTier(4187);
+  let obj = selectedTier(4217);
   const fn = function f() {
     let obj = selectedTier(closure_1_2[5]);
     let num = 0;
@@ -26,7 +26,7 @@ export default function BuyNitroGradient(selectedTier) {
     obj = { opacity: obj.withTiming(num, selectedTier(closure_1_2[6]).timingStandard) };
     return obj;
   };
-  obj = { withTiming: selectedTier(4449).withTiming, selectedTier, PremiumTypes, timingStandard: selectedTier(4452).timingStandard };
+  obj = { withTiming: selectedTier(4479).withTiming, selectedTier, PremiumTypes, timingStandard: selectedTier(4482).timingStandard };
   fn.__closure = obj;
   fn.__workletHash = 14014615431537;
   fn.__initData = closure_8;

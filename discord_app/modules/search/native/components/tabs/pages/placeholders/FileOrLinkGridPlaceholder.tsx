@@ -1,5 +1,5 @@
 // discord_app/modules/search/native/components/tabs/pages/placeholders/FileOrLinkGridPlaceholder.tsx
-import _modDef4187 from "../../../../../../reanimated/ReanimatedRexport.tsx";
+import _modDef4217 from "../../../../../../reanimated/ReanimatedRexport.tsx";
 import closure_3 from "../../../../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../../../../_runtime/react/00021_jsxProd.js";
 
@@ -10,14 +10,14 @@ export default function FileOrLinkGridPlaceholderItem(imageStyle) {
   imageStyle = imageStyle.imageStyle;
   let width;
   importDefault = undefined;
-  let obj = width(16195);
+  let obj = width(16230);
   const placeholderAnimatedStyle = obj.usePlaceholderAnimatedStyle(true);
   width = imageStyle.width;
-  const sum = imageStyle.height + 108 * width(4903).useFontScale();
+  const sum = imageStyle.height + 108 * width(4935).useFontScale();
   importDefault = sum;
   const items = [width, sum];
   const memo = React.useMemo(() => ({ width, height: c1 }), items);
-  obj = { style: items1, pointerEvents: "none", children: jsx(width(16216).SearchListCardContainer, { containerStyle: memo }) };
+  obj = { style: items1, pointerEvents: "none", children: jsx(width(16251).SearchListCardContainer, { containerStyle: memo }) };
   items1 = [imageStyle.containerStyle, placeholderAnimatedStyle];
-  return jsx(_modDef4187.View, { style: items1, pointerEvents: "none", children: jsx(width(16216).SearchListCardContainer, { containerStyle: memo }) });
+  return jsx(_modDef4217.View, { style: items1, pointerEvents: "none", children: jsx(width(16251).SearchListCardContainer, { containerStyle: memo }) });
 };

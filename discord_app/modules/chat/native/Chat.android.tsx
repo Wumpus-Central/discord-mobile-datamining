@@ -1,6 +1,6 @@
 // discord_app/modules/chat/native/Chat.android.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import LegacyBaseButton from "../../../../_runtime/05620_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/05652_LegacyBaseButton.js";
 import __INTERNAL_VIEW_CONFIGDefault from "../../../../discord_common/js/packages/rtn-codegen/js/ChatNativeComponent.tsx";
 import __INTERNAL_VIEW_CONFIGDefault2 from "../../../../discord_common/js/packages/rtn-codegen/js/ChatListNativeComponent.tsx";
 import TTIFirstContentfulPaint from "../../tti_analytics/native/TTIFirstContentfulPaint.tsx";

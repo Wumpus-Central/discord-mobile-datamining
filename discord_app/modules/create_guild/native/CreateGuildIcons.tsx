@@ -1,13 +1,13 @@
 // discord_app/modules/create_guild/native/CreateGuildIcons.tsx
 import set from "../../../../_runtime/00002_set.js";
 import AccountAgeTier10LargeBadge from "../../../design/assets/native.tsx";
-import registerAssetDefault from "../../../../_runtime/11860_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/11861_registerAsset.js";
-import registerAssetDefault3 from "../../../../_runtime/11862_registerAsset.js";
-import registerAssetDefault4 from "../../../../_runtime/11863_registerAsset.js";
-import registerAssetDefault5 from "../../../../_runtime/11864_registerAsset.js";
-import registerAssetDefault6 from "../../../../_runtime/11865_registerAsset.js";
-import registerAssetDefault7 from "../../../../_runtime/11866_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/11893_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/11894_registerAsset.js";
+import registerAssetDefault3 from "../../../../_runtime/11895_registerAsset.js";
+import registerAssetDefault4 from "../../../../_runtime/11896_registerAsset.js";
+import registerAssetDefault5 from "../../../../_runtime/11897_registerAsset.js";
+import registerAssetDefault6 from "../../../../_runtime/11898_registerAsset.js";
+import registerAssetDefault7 from "../../../../_runtime/11899_registerAsset.js";
 
 let obj = { CREATE: registerAssetDefault, GAMING: registerAssetDefault5, FRIENDS: registerAssetDefault3, STUDY: registerAssetDefault4, CLUBS: registerAssetDefault6, CREATORS: registerAssetDefault7, LOCAL_COMMUNITY: registerAssetDefault2, SCHOOL_CLUB: registerAssetDefault6 };
 obj = { CREATE: AccountAgeTier10LargeBadge.PencilIllocon, GAMING: AccountAgeTier10LargeBadge.ControllerIllocon, FRIENDS: AccountAgeTier10LargeBadge.HeartIllocon, STUDY: AccountAgeTier10LargeBadge.AppleIllocon, CLUBS: AccountAgeTier10LargeBadge.BookIllocon, CREATORS: AccountAgeTier10LargeBadge.PaintIllocon, LOCAL_COMMUNITY: AccountAgeTier10LargeBadge.LeafIllocon, SCHOOL_CLUB: AccountAgeTier10LargeBadge.BookIllocon };

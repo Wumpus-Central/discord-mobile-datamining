@@ -2,7 +2,7 @@
 import set from "../../../../../_runtime/00002_set.js";
 import ME from "../../../../Constants.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import _modDef4160 from "../../../../lib/native/Linking.tsx";
+import _modDef4190 from "../../../../lib/native/Linking.tsx";
 import CircleInformationIcon from "../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
@@ -15,7 +15,7 @@ const pressable = createToggle.createPressable({
   parent: null,
   IconComponent: CircleInformationIcon.CircleInformationIcon,
   onPress: function handleAcknowledgementsSettingPress() {
-    _modDef4160.openURL(MarketingURLs.ACKNOWLEDGEMENTS);
+    _modDef4190.openURL(MarketingURLs.ACKNOWLEDGEMENTS);
   },
   withArrow: true
 });
@@ -27,7 +27,7 @@ const obj = {
   parent: null,
   IconComponent: CircleInformationIcon.CircleInformationIcon,
   onPress: function handleAcknowledgementsSettingPress() {
-    _modDef4160.openURL(MarketingURLs.ACKNOWLEDGEMENTS);
+    _modDef4190.openURL(MarketingURLs.ACKNOWLEDGEMENTS);
   },
   withArrow: true
 };

@@ -37,7 +37,7 @@ export const useRefreshChatInputCoachmark = function useRefreshChatInputCoachmar
       obj[5] = function onDismiss() {
         callback(closure_1_4.USER_DISMISS);
       };
-      obj = { type: "rive", rive: callback(4174).OmnibuttonCoachmarkRive, aspectRatio: "16/9" };
+      obj = { type: "rive", rive: callback(4204).OmnibuttonCoachmarkRive, aspectRatio: "16/9" };
       obj[6] = obj;
       return obj;
     }, items1);

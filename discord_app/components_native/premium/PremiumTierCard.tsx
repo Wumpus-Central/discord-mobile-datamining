@@ -3,7 +3,7 @@ import noopAll from "../../../_runtime/00019_noop.js";
 import keys from "../../ConstantsIOS.tsx";
 import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import getPremiumPlanItem from "../../utils/PremiumUtils.tsx";
-import LinearGradientDefault from "../../../_runtime/04908_LinearGradient.js";
+import LinearGradientDefault from "../../../_runtime/04940_LinearGradient.js";
 import PressableCard from "../../design/components/Card/native/Card.native.tsx";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
 import { getPremiumGradientColor } from "../../modules/colors/native/ColorConstants.tsx";
@@ -38,11 +38,11 @@ export default function _default(premiumType) {
   }
   obj[3] = textLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    let tmp5Result = tmp5(13189);
+    let tmp5Result = tmp5(13222);
   } else if (tmp10.TIER_1 === premiumType) {
-    tmp5Result = tmp5(13190);
+    tmp5Result = tmp5(13223);
   } else if (tmp10.TIER_2 === premiumType) {
-    tmp5Result = tmp5(7945);
+    tmp5Result = tmp5(7977);
   }
   obj[4] = tmp5Result;
   obj[4] = closure_7(closure_4, obj);
@@ -58,11 +58,11 @@ export default function _default(premiumType) {
   obj = { accessible: false, importantForAccessibility: "no", style: items1, source: null };
   items1[1] = wumpusLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    tmp5Result = tmp5(8324);
+    tmp5Result = tmp5(8356);
   } else if (tmp10.TIER_1 === premiumType) {
-    tmp5Result = tmp5(10454);
+    tmp5Result = tmp5(10492);
   } else if (tmp10.TIER_2 === premiumType) {
-    tmp5Result = tmp5(10455);
+    tmp5Result = tmp5(10493);
   }
   obj1 = { children: null };
   obj[3] = tmp5Result;

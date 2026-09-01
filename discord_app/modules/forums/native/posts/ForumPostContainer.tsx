@@ -23,7 +23,7 @@ export const ForumPostPressableContainer = function ForumPostPressableContainer(
   let sharedValue;
   ({ threadId, children, style } = arg0);
   const tmp = callback();
-  let obj = sharedValue(4187);
+  let obj = sharedValue(4217);
   sharedValue = obj.useSharedValue(false);
   const items = [sharedValue];
   const memo = importAllResult.useMemo(() => ({
@@ -35,11 +35,11 @@ export const ForumPostPressableContainer = function ForumPostPressableContainer(
     }
   }), items);
   ({ onPressIn, onPressOut } = memo);
-  obj = { style: tmp.card, children: jsx(sharedValue(5569).Card, { style: items1, variant: "surface-high", accessibilityRole: "button", onPress: onTapPost, onPressIn, onPressOut, onLongPress: onLongTapPost, unstable_pressDelay: 130, children }) };
+  obj = { style: tmp.card, children: jsx(sharedValue(5601).Card, { style: items1, variant: "surface-high", accessibilityRole: "button", onPress: onTapPost, onPressIn, onPressOut, onLongPress: onLongTapPost, unstable_pressDelay: 130, children }) };
   ({ onTapPost, onLongTapPost } = useNativeForumPostHandlersDefault({ threadId }));
   items1 = [tmp.childContainer, style];
-  obj = { value: sharedValue, children: <View style={tmp.card}>{jsx(sharedValue(5569).Card, { style: items1, variant: "surface-high", accessibilityRole: "button", onPress: onTapPost, onPressIn, onPressOut, onLongPress: onLongTapPost, unstable_pressDelay: 130, children })}</View> };
-  return <redux.Provider value={sharedValue}><View style={tmp.card}>{jsx(sharedValue(5569).Card, { style: items1, variant: "surface-high", accessibilityRole: "button", onPress: onTapPost, onPressIn, onPressOut, onLongPress: onLongTapPost, unstable_pressDelay: 130, children })}</View></redux.Provider>;
+  obj = { value: sharedValue, children: <View style={tmp.card}>{jsx(sharedValue(5601).Card, { style: items1, variant: "surface-high", accessibilityRole: "button", onPress: onTapPost, onPressIn, onPressOut, onLongPress: onLongTapPost, unstable_pressDelay: 130, children })}</View> };
+  return <redux.Provider value={sharedValue}><View style={tmp.card}>{jsx(sharedValue(5601).Card, { style: items1, variant: "surface-high", accessibilityRole: "button", onPress: onTapPost, onPressIn, onPressOut, onLongPress: onLongTapPost, unstable_pressDelay: 130, children })}</View></redux.Provider>;
 };
 export const ForumPostDisabledContainer = function ForumPostDisabledContainer(arg0) {
   ({ children, style } = arg0);

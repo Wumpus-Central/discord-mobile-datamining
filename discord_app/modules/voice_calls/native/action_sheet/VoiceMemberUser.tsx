@@ -41,7 +41,7 @@ function StreamingUserRow(user) {
       labelCallScreen = tmp2.labelCallScreen;
     }
     obj[1] = labelCallScreen;
-    obj.subLabel = closure_11(tmp3(8331).FormSubLabel, obj);
+    obj.subLabel = closure_11(tmp3(8363).FormSubLabel, obj);
     const items1 = [closure_11(closure_16, obj), ];
     let tmp10Result = user.id !== store.getId();
     if (tmp10Result) {
@@ -67,10 +67,10 @@ function StreamingUserRow(user) {
           const obj4 = user(closure_1_2[30]);
         }
       };
-      obj1[1] = tmp10(channel(10102), obj2);
+      obj1[1] = tmp10(channel(10141), obj2);
       tmp10Result = tmp10(closure_3, obj1);
       const tmp18 = closure_3;
-      const tmp20 = channel(10102);
+      const tmp20 = channel(10141);
     }
     let obj3 = { children: null };
     items1[1] = tmp10Result;
@@ -102,7 +102,7 @@ function RingButton(channelId) {
       obj[1] = stringResult;
       tmp4Result = tmp4(tmp5(1297).LegacyText, obj);
       obj[3] = tmp4Result;
-      tmp4Result = tmp4(channelId(5036).PressableOpacity, obj);
+      tmp4Result = tmp4(channelId(5068).PressableOpacity, obj);
     }
   }
   return tmp3;
@@ -131,7 +131,7 @@ function StopRingButton(channelId) {
       obj[1] = stringResult;
       tmp4Result = tmp4(tmp5(1297).LegacyText, obj);
       obj[3] = tmp4Result;
-      tmp4Result = tmp4(channelId(5036).PressableOpacity, obj);
+      tmp4Result = tmp4(channelId(5068).PressableOpacity, obj);
     }
   }
   return tmp3;
@@ -265,7 +265,7 @@ let closure_16 = importAllResult.memo((user) => {
   }
   obj1[1] = guild_id;
   obj1[2] = user(1297).AvatarSizes.REFRESH_MEDIUM_32;
-  obj1[3] = channel(9453)(obj);
+  obj1[3] = channel(9492)(obj);
   obj[2] = closure_11(user(1297).Avatar, obj1);
   let tmp23Result = null;
   if (flag3) {
@@ -277,7 +277,7 @@ let closure_16 = importAllResult.memo((user) => {
       if (user.isSpectating) {
         obj3 = { size: null, source: null, style: null };
         obj3[0] = tmp8(1297).Icon.Sizes.REFRESH_SMALL_16;
-        obj3[1] = tmp5(13413);
+        obj3[1] = tmp5(13446);
         obj3[2] = tmp19;
         tmp20Result = tmp20(tmp8(1297).Icon, obj3);
       }
@@ -288,7 +288,7 @@ let closure_16 = importAllResult.memo((user) => {
         if (tmp14) {
           obj4 = { size: null, source: null, style: null };
           obj4[0] = tmp8(1297).Icon.Sizes.REFRESH_SMALL_16;
-          obj4[1] = tmp5(13410);
+          obj4[1] = tmp5(13443);
           obj4[2] = tmp19;
           tmp20Result = tmp20(tmp8(1297).Icon, obj4);
         }
@@ -308,22 +308,22 @@ let closure_16 = importAllResult.memo((user) => {
           if (localVideoDisabled) {
             const obj6 = { size: null, source: null, style: null, disableColor: true };
             obj6[0] = tmp8(1297).Icon.Sizes.REFRESH_SMALL_16;
-            obj6[1] = tmp5(13411);
+            obj6[1] = tmp5(13444);
             obj6[2] = tmp2.voiceStatusIconMargin;
             let obj7 = obj6;
           } else {
             obj7 = { size: null, source: null, style: null };
             obj7[0] = tmp8(1297).Icon.Sizes.REFRESH_SMALL_16;
-            obj7[1] = tmp5(13412);
+            obj7[1] = tmp5(13445);
             obj7[2] = tmp19;
           }
           tmp20(tmp8(1297).Icon, obj7);
         }
       } else {
         if (tmp8Result.isThemeDark(stateFromStores)) {
-          let tmp5Result = tmp5(13408);
+          let tmp5Result = tmp5(13441);
         } else {
-          tmp5Result = tmp5(13409);
+          tmp5Result = tmp5(13442);
         }
         const obj8 = { size: null, source: null, style: null, color: null, disableColor: null };
         obj8[0] = tmp8(1297).Icon.Sizes.REFRESH_SMALL_16;
@@ -350,7 +350,7 @@ let closure_16 = importAllResult.memo((user) => {
     const intl = tmp8(1236).intl;
     const items5 = ["\u00A0", intl.string(tmp8(1236).t["pFO/Ph"])];
     obj11[3] = items5;
-    items4[1] = callback(tmp8(4444).Text, obj11);
+    items4[1] = callback(tmp8(4474).Text, obj11);
     obj10[0] = items4;
     tmp35 = callback(closure_13, obj10);
   }
@@ -360,19 +360,19 @@ let closure_16 = importAllResult.memo((user) => {
     labelCallScreen = tmp3.labelCallScreen;
   }
   obj12[1] = labelCallScreen;
-  obj9.label = closure_11(user(8331).FormRow.Label, obj12);
+  obj9.label = closure_11(user(8363).FormRow.Label, obj12);
   if (localVideoAutoDisabled) {
     const obj13 = { style: null, children: null };
     obj13[0] = tmp2.autoDisabledVideo;
     const obj14 = { source: null, size: null, disableColor: true };
-    obj14[0] = tmp5(9555);
+    obj14[0] = tmp5(9594);
     obj14[1] = tmp8(1297).Icon.Sizes.EXTRA_SMALL;
     const items6 = [tmp20(tmp8(1297).Icon, obj14), ];
     const obj15 = { variant: "text-xs/medium", color: "text-default", style: null, children: null };
     obj15[2] = tmp2.autoDisabledVideoLabel;
     const intl3 = tmp8(1236).intl;
     obj15[3] = intl3.string(tmp8(1236).t.m2Hyj0);
-    items6[1] = tmp20(tmp8(4444).Text, obj15);
+    items6[1] = tmp20(tmp8(4474).Text, obj15);
     obj13[1] = items6;
     let stringResult = callback(id, obj13);
   } else {
@@ -383,7 +383,7 @@ let closure_16 = importAllResult.memo((user) => {
     }
   }
   obj9.subLabel = stringResult;
-  return closure_11(user(8331).FormRow, obj9);
+  return closure_11(user(8363).FormRow, obj9);
 });
 let obj7 = { fontFamily: Fonts.PRIMARY_SEMIBOLD, fontSize: 14, lineHeight: 18, marginHorizontal: 16, color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 const memoResult = importAllResult.memo(function DisconnectedUserRow(user) {
@@ -402,9 +402,9 @@ const memoResult = importAllResult.memo(function DisconnectedUserRow(user) {
     }
     return hasItem;
   }, items1);
-  obj1 = id2(4641);
+  obj1 = id2(4673);
   const name = obj1.getName(id2.guild_id, id2.id, id);
-  let obj2 = id(9826);
+  let obj2 = id(9865);
   obj = {
     onPress() {
       return callback(id);
@@ -420,14 +420,14 @@ const memoResult = importAllResult.memo(function DisconnectedUserRow(user) {
     labelCallScreen = tmp.labelCallScreen;
   }
   obj[1] = labelCallScreen;
-  obj[1] = closure_11(id(8331).FormRow.Label, obj);
+  obj[1] = closure_11(id(8363).FormRow.Label, obj);
   obj1 = { user: id, guildId: id2.guild_id, size: tmp2(1297).AvatarSizes.REFRESH_MEDIUM_32 };
   obj[2] = closure_11(id(1297).Avatar, obj1);
   if (!canRing) {
     obj[3] = null;
     obj2 = {};
     const merged = Object.assign(obj);
-    return tmp7(tmp2(8331).FormRow, obj2);
+    return tmp7(tmp2(8363).FormRow, obj2);
   } else {
     const obj3 = { channelId: null, userId: null, isActionSheet: null };
     id2 = id2.id;

@@ -1,6 +1,6 @@
 // discord_app/modules/quests/native/VideoQuestModal/icons/SkipForwardIcon.tsx
-import inlineStyles from "../../../../../../_runtime/08209_inlineStyles.js";
-import inlineStylesDefault from "../../../../../../_runtime/08209_inlineStyles.js";
+import inlineStyles from "../../../../../../_runtime/08241_inlineStyles.js";
+import inlineStylesDefault from "../../../../../../_runtime/08241_inlineStyles.js";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 

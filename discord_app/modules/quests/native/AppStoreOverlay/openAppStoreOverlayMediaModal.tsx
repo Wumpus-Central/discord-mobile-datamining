@@ -23,7 +23,7 @@ function _openAppStoreOverlayMediaModal() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -61,7 +61,7 @@ function _openAppStoreOverlayMediaModal() {
               let initVideoStateStore;
               v0 = 1;
               c4 = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -93,7 +93,7 @@ function _openAppStoreOverlayMediaModal() {
             dependencyMap = v0(closure_8, 3);
             setMediaViewerSources = 32.setMediaViewerSources;
             MediaViewerAnalytics = 5.MediaViewerAnalytics;
-            initVideoStateStore = 4156.initVideoStateStore;
+            initVideoStateStore = 4186.initVideoStateStore;
             const obj4 = { text: null, onPress: null };
             const intl = callback(c2[10]).intl;
             obj4[0] = intl.string(callback(c2[10]).t.lwQdjB);
@@ -142,7 +142,7 @@ function _openAppStoreOverlayMediaModal() {
               initVideoStateStore();
             });
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp8) {
           c4 = tmp;

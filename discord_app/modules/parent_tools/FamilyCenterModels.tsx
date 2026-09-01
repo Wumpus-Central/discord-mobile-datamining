@@ -1,11 +1,11 @@
 // discord_app/modules/parent_tools/FamilyCenterModels.tsx
-import toJSDefault from "../../lib/Record.tsx";
 import create from "../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
+import toJSDefault from "../../lib/Record.tsx";
 
 require = arg1;
 toJSDefault;
 const frozen = Object.freeze({ 0: require("create").DayOfWeek.SUNDAY, 1: require("create").DayOfWeek.MONDAY, 2: require("create").DayOfWeek.TUESDAY, 3: require("create").DayOfWeek.WEDNESDAY, 4: require("create").DayOfWeek.THURSDAY, 5: require("create").DayOfWeek.FRIDAY, 6: require("create").DayOfWeek.SATURDAY });
-let closure_3 = Object.freeze({ [arg1(1938).DayOfWeek.DAY_OF_WEEK_UNSPECIFIED]: 0, [arg1(1938).DayOfWeek.MONDAY]: 1, [arg1(1938).DayOfWeek.TUESDAY]: 2, [arg1(1938).DayOfWeek.WEDNESDAY]: 3, [arg1(1938).DayOfWeek.THURSDAY]: 4, [arg1(1938).DayOfWeek.FRIDAY]: 5, [arg1(1938).DayOfWeek.SATURDAY]: 6, [arg1(1938).DayOfWeek.SUNDAY]: 0 });
+let closure_3 = Object.freeze({ [arg1(1930).DayOfWeek.DAY_OF_WEEK_UNSPECIFIED]: 0, [arg1(1930).DayOfWeek.MONDAY]: 1, [arg1(1930).DayOfWeek.TUESDAY]: 2, [arg1(1930).DayOfWeek.WEDNESDAY]: 3, [arg1(1930).DayOfWeek.THURSDAY]: 4, [arg1(1930).DayOfWeek.FRIDAY]: 5, [arg1(1930).DayOfWeek.SATURDAY]: 6, [arg1(1930).DayOfWeek.SUNDAY]: 0 });
 let ScheduleRuleRecord;
 class ScheduleRuleRecord extends tmp2 {
   constructor(arg0) {
@@ -66,7 +66,7 @@ prototype["isActiveAt"] = function isActiveAt(closure_0, c1) {
           }
           if (sum > sum1) {
             if (closure_0 === create.DayOfWeek.MONDAY) {
-              let SUNDAY = tmp6(1938).DayOfWeek.SUNDAY;
+              let SUNDAY = tmp6(1930).DayOfWeek.SUNDAY;
             } else {
               SUNDAY = closure_0 - 1;
             }

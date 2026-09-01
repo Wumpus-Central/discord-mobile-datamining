@@ -22,7 +22,7 @@ export default function CustomTypingIndicatorTypingSuggestionPickerSheet(onChang
   obj = { title: null };
   let intl = onChange(1236).intl;
   obj[0] = intl.string(messagesProxyDefault["X+ijyw"]);
-  obj[1] = jsx(onChange(5589).BottomSheetTitleHeader, { title: null });
+  obj[1] = jsx(onChange(5621).BottomSheetTitleHeader, { title: null });
   const intl2 = onChange(1236).intl;
   obj[2] = intl2.string(messagesProxyDefault.hrl2cG);
   obj = {
@@ -35,14 +35,14 @@ export default function CustomTypingIndicatorTypingSuggestionPickerSheet(onChang
     children: null
   };
   const tmp = callback2();
-  const customTypingIndicatorSuggestionPresets = onChange(11510).getCustomTypingIndicatorSuggestionPresets();
+  const customTypingIndicatorSuggestionPresets = onChange(11543).getCustomTypingIndicatorSuggestionPresets();
   obj[3] = customTypingIndicatorSuggestionPresets.map((value) => {
     const obj = { value, label: null };
     const intl = onChange(1236).intl;
-    obj[1] = intl.string(onChange(11510).getCustomTypingIndicatorSuggestionMessage(value));
-    return callback2(onChange(7661).TableRadioRow, obj, value);
+    obj[1] = intl.string(onChange(11543).getCustomTypingIndicatorSuggestionMessage(value));
+    return callback2(onChange(7693).TableRadioRow, obj, value);
   });
-  obj[3] = jsx(onChange(7660).TableRadioGroup, {
+  obj[3] = jsx(onChange(7692).TableRadioGroup, {
     value: tmp2[0],
     onChange(arg0) {
       callback(arg0);
@@ -51,7 +51,7 @@ export default function CustomTypingIndicatorTypingSuggestionPickerSheet(onChang
     hasIcons: false,
     children: null
   });
-  return jsx(onChange(5957).ActionSheet, {
+  return jsx(onChange(5989).ActionSheet, {
     value: tmp2[0],
     onChange(arg0) {
       callback(arg0);

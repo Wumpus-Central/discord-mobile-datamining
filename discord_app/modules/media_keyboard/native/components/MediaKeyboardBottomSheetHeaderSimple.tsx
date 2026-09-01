@@ -1,6 +1,6 @@
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardBottomSheetHeaderSimple.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef10395 from "MediaKeyboardBottomSheetHandle.tsx";
+import _modDef10434 from "MediaKeyboardBottomSheetHandle.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
@@ -12,7 +12,7 @@ obj[0] = obj;
 let closure_4 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function MediaKeyboardBottomSheetHeaderSimple(arg0) {
   ({ animatedIndex, onPress } = arg0);
-  return <View style={callback().headerHandleOnlyWrap}>{jsx(_modDef10395, { animatedIndex, onPress })}</View>;
+  return <View style={callback().headerHandleOnlyWrap}>{jsx(_modDef10434, { animatedIndex, onPress })}</View>;
 });
 const result = require("set").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardBottomSheetHeaderSimple.tsx");
 

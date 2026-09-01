@@ -13,102 +13,19 @@ function _promptForRegisterCredential() {
     c4 = 0;
     c5 = 0;
     const iter = (function*(arg0, credential) {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp5 === 3) {
-        if (arg0 === 1) {
-          throw credential;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = credential;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw credential;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = credential;
-              return obj;
-            } else {
-              let challenge = tmp3;
-              let ticket = tmp2;
-              let register;
-              if (register === undefined) {
-                register = closure_1_3.DCDSecurityKeyManager.register;
-              }
-              let obj4;
-              ticket = undefined;
-              challenge = undefined;
-              c4 = 1;
-              c5 = 1;
-              return { value: "Object", done: true };
-            }
-          } else if (1 === tmp6) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw credential;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = credential;
-              return obj1;
-            } else {
-              let obj5 = register(obj4[3]);
-              c4 = 2;
-              c5 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = obj5.startRegisterWebAuthnCredential();
-              return obj2;
-            }
-          } else if (2 === tmp6) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw credential;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              const obj3 = { value: null, done: true };
-              obj3[0] = credential;
-              return obj3;
-            } else {
-              obj4 = credential;
-              ticket = obj4.ticket;
-              challenge = obj4.challenge;
-              obj4 = { ticket };
-              c4 = 3;
-              c5 = 1;
-              obj5 = { value: null, done: false };
-              obj5[0] = register(challenge);
-              return obj5;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw credential;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = credential;
-            return obj6;
-          } else {
-            obj4.credential = credential;
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = obj4;
-            return obj;
-          }
-        } catch (tmp19) {
-          c5 = tmp;
-          throw tmp19;
-        }
+      let challenge = tmp3;
+      let ticket = tmp2;
+      if (register === undefined) {
+        register = closure_1_3.DCDSecurityKeyManager.register;
       }
+      yield "PX_16";
+      const obj5 = register(obj4[3]);
+      obj4 = yield obj5.startRegisterWebAuthnCredential();
+      ticket = obj4.ticket;
+      challenge = obj4.challenge;
+      obj4 = { ticket };
+      obj4.credential = yield register(challenge);
+      return obj4;
     })();
     iter.next();
     return iter;
@@ -181,7 +98,7 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -200,7 +117,7 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
               let code = tmp5;
               c5 = 1;
               c6 = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else if (1 === tmp8) {
             if (arg0 === 1) {

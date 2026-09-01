@@ -90,7 +90,7 @@ class QuestContentImpression {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -110,11 +110,11 @@ class QuestContentImpression {
               closure_0 = undefined;
               obj3 = undefined;
               obj4 = undefined;
-              const obj10 = closure_1_0(7442);
+              const obj10 = closure_1_0(7474);
               obj4 = 1;
               c3 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = obj10.getAdUser(closure_1_0(7441).getQuestContentName(closure_1_0.questContent));
+              obj1[0] = obj10.getAdUser(closure_1_0(7473).getQuestContentName(closure_1_0.questContent));
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -152,8 +152,8 @@ class QuestContentImpression {
               }
             }
             obj4[4] = advertisingId1;
-            let merged = Object.assign(closure_1_1(7390)());
-            obj2 = closure_1_0(8963);
+            let merged = Object.assign(closure_1_1(7422)());
+            obj2 = closure_1_0(9000);
             let merged1 = Object.assign(obj2.getBrandSafetyContext(closure_1_0.questContent));
             const adContentIds = closure_1_0.entity.adContentIds;
             const item = adContentIds.forEach((adCreativeId) => {
@@ -304,7 +304,7 @@ class QuestContentImpression {
               onImpressionCallback();
             }
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp34) {
           c3 = tmp;

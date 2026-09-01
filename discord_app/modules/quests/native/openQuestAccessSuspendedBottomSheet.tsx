@@ -7,6 +7,6 @@ const QuestAccessSuspendedBottomSheet = "QuestAccessSuspendedBottomSheet";
 const result = set.fileFinishedImporting("modules/quests/native/openQuestAccessSuspendedBottomSheet.tsx");
 
 export default function openQuestAccessSuspendedBottomSheet() {
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(14687, dependencyMap.paths), QuestAccessSuspendedBottomSheet, {});
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(14720, dependencyMap.paths), QuestAccessSuspendedBottomSheet, {});
 };
 export const ACTION_SHEET_KEY = "QuestAccessSuspendedBottomSheet";

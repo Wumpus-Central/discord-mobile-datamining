@@ -1,13 +1,13 @@
 // discord_app/modules/messages/native/handlers/handleMessagesTapGameMention.tsx
 import set from "../../../../../_runtime/00002_set.js";
-import _modDef8769 from "../../../game_profile/GameProfileActionCreators.native.tsx";
+import _modDef8806 from "../../../game_profile/GameProfileActionCreators.native.tsx";
 import GameProfileEmbedAction from "../../../game_profile/GameProfileAnalyticUtils.tsx";
 
 const result = set.fileFinishedImporting("modules/messages/native/handlers/handleMessagesTapGameMention.tsx");
 
 export const handleMessagesTapGameMention = function handleMessagesTapGameMention(gameId) {
   gameId = gameId.gameId;
-  let obj = _modDef8769;
+  let obj = _modDef8806;
   obj = { gameId, gameProfileModalChecks: { shouldOpenGameProfile: true, gameId }, source: GameProfileEmbedAction.GameProfileSources.GameMention };
   obj.openGameProfileModal(obj);
 };

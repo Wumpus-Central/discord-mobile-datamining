@@ -1,7 +1,7 @@
 // discord_app/modules/guild_settings/native/GuildSettingsModalInstantInvites.tsx
 import getSystemLocale from "../../../intl/index.native.tsx";
 import combinedDefault from "../../../utils/HelpdeskUtils.tsx";
-import registerAssetDefault from "../../../../_runtime/07648_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/07680_registerAsset.js";
 import TableCheckboxRow from "../../../design/components/TableRow/native/TableCheckboxRow.native.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
@@ -220,7 +220,7 @@ export default function ConnectedGuildSettingsModalInstantInvites(guildId) {
     obj[0] = stateFromStores;
     obj[1] = tmp5;
     obj[2] = guildId.contentContainerStyle;
-    const items1 = [callback(GuildSettingsModalInstantInvites, obj), callback(guildId(5907).NavScrim, {})];
+    const items1 = [callback(GuildSettingsModalInstantInvites, obj), callback(guildId(5939).NavScrim, {})];
     obj[0] = items1;
     tmp6 = callback2(closure_13, obj);
   }

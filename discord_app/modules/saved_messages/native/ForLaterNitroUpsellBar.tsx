@@ -12,10 +12,10 @@ export default function ForLaterNitroUpsellBar(isReminder) {
   isReminder = isReminder.isReminder;
   const isAtLimit = isReminder.isAtLimit;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(5921)().analyticsLocations;
+  analyticsLocations = analyticsLocations(5953)().analyticsLocations;
   const items = [isReminder, analyticsLocations];
   const callback = React.useCallback(() => analyticsLocations(closure_1_2[5])(isReminder, analyticsLocations), items);
-  let obj = isReminder(4109);
+  let obj = isReminder(4139);
   const premiumTypeDisplayName = obj.getPremiumTypeDisplayName(PremiumTypes.TIER_2);
   const intl = isReminder(1236).intl;
   const formatToPlainString = intl.formatToPlainString;

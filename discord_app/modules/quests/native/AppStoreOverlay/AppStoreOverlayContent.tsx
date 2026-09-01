@@ -1,6 +1,6 @@
 // discord_app/modules/quests/native/AppStoreOverlay/AppStoreOverlayContent.tsx
 import _openURL from "../../../../lib/openURL.tsx";
-import _modDef4160 from "../../../../lib/native/Linking.tsx";
+import _modDef4190 from "../../../../lib/native/Linking.tsx";
 import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = arg1;
@@ -24,7 +24,7 @@ function _getAppStoreOverlayContent() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -164,8 +164,8 @@ export const openAppStoreReviews = function openAppStoreReviews(storeUrl, platfo
     if (null != appId) {
       if ("" !== appId) {
         const _HermesInternal = HermesInternal;
-        _modDef4160.performURLNavigation("itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=" + appId + "&onlyLatestVersion=true&pageNumber=0&sortOrdering=1&type=Purple+Software");
-        const obj = _modDef4160;
+        _modDef4190.performURLNavigation("itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=" + appId + "&onlyLatestVersion=true&pageNumber=0&sortOrdering=1&type=Purple+Software");
+        const obj = _modDef4190;
       }
     }
   }

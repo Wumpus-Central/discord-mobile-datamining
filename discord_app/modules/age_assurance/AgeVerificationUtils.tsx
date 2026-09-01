@@ -72,7 +72,7 @@ function useAgeVerificationRunner(onComplete) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -214,8 +214,8 @@ function useShouldCallReactiveCheck() {
     tmp5 = prop1 !== tmp(1955).AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
   }
   _require = tmp5;
-  let tmpResult = tmp(4142);
-  const isFeatureAgeGated = tmpResult.useIsFeatureAgeGated(tmp(5335).AgeGatedFeature.REACTIVE_CHECK);
+  let tmpResult = tmp(4172);
+  const isFeatureAgeGated = tmpResult.useIsFeatureAgeGated(tmp(5367).AgeGatedFeature.REACTIVE_CHECK);
   tmpResult = tmp(589);
   const items1 = [closure_11];
   const items2 = [tmp5, isFeatureAgeGated];
@@ -247,7 +247,7 @@ function shouldCallReactiveCheck() {
   }
   let tmp7 = !tmp5;
   if (!tmp5) {
-    let isFeatureAgeGatedResult = closure_7.isFeatureAgeGated(tmp3(5335).AgeGatedFeature.REACTIVE_CHECK);
+    let isFeatureAgeGatedResult = closure_7.isFeatureAgeGated(tmp3(5367).AgeGatedFeature.REACTIVE_CHECK);
     if (isFeatureAgeGatedResult) {
       isFeatureAgeGatedResult = closure_11.shouldCallReactiveCheck();
     }
@@ -269,7 +269,7 @@ function _maybePerformReactiveCheck() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -347,7 +347,7 @@ export const shouldShowTiggerPawtect = function shouldShowTiggerPawtect() {
   }
   let tmp5 = prop !== PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT;
   if (tmp5) {
-    const isFeatureAgeGatedResult = closure_7.isFeatureAgeGated(tmp3(5335).AgeGatedFeature.REACTIVE_CHECK);
+    const isFeatureAgeGatedResult = closure_7.isFeatureAgeGated(tmp3(5367).AgeGatedFeature.REACTIVE_CHECK);
     let tmp8 = !isFeatureAgeGatedResult;
     if (isFeatureAgeGatedResult) {
       tmp8 = prop !== tmp3(1955).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
@@ -381,16 +381,18 @@ export const isVerifiedTeen = function isVerifiedTeen() {
   if (currentUser != null) {
     prop = currentUser.ageVerificationStatus;
   }
-  return prop === PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.VERIFIED_TEEN;
+  return prop === PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.VERIFIED_TEEN || prop === PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.INFERRED_TEEN;
 };
 export const useIsVerifiedTeen = function useIsVerifiedTeen() {
   const items = [closure_10];
-  const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let prop;
-  if (stateFromStores != null) {
-    prop = stateFromStores.ageVerificationStatus;
-  }
-  return prop === PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.VERIFIED_TEEN;
+  return initialize.useStateFromStores(items, () => {
+    currentUser = currentUser.getCurrentUser();
+    let prop;
+    if (currentUser != null) {
+      prop = currentUser.ageVerificationStatus;
+    }
+    return prop === callback(table[16]).AgeVerificationStatusUkAndAusOnly.VERIFIED_TEEN || prop === callback(table[16]).AgeVerificationStatusUkAndAusOnly.INFERRED_TEEN;
+  });
 };
 export const isVerifiedAdult = function isVerifiedAdult() {
   const currentUser = authStore.getCurrentUser();
@@ -400,8 +402,8 @@ export const isVerifiedAdult = function isVerifiedAdult() {
   }
   let tmp5 = prop === PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT;
   if (!tmp5) {
-    tmp5 = closure_7.isFeatureAgeGated(tmp3(5335).AgeGatedFeature.REACTIVE_CHECK) && prop === tmp3(1955).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
-    const tmp7 = closure_7.isFeatureAgeGated(tmp3(5335).AgeGatedFeature.REACTIVE_CHECK) && prop === tmp3(1955).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
+    tmp5 = closure_7.isFeatureAgeGated(tmp3(5367).AgeGatedFeature.REACTIVE_CHECK) && prop === tmp3(1955).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
+    const tmp7 = closure_7.isFeatureAgeGated(tmp3(5367).AgeGatedFeature.REACTIVE_CHECK) && prop === tmp3(1955).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
   }
   return tmp5;
 };
@@ -439,7 +441,7 @@ export const isAssignedByDiscord = function isAssignedByDiscord() {
   if (currentUser != null) {
     prop = currentUser.ageVerificationStatus;
   }
-  return prop === PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
+  return prop === PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT || prop === PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.INFERRED_TEEN;
 };
 export const useIsAssignedByDiscord = function useIsAssignedByDiscord() {
   const items = [closure_10];
@@ -449,7 +451,7 @@ export const useIsAssignedByDiscord = function useIsAssignedByDiscord() {
     if (currentUser != null) {
       prop = currentUser.ageVerificationStatus;
     }
-    return prop === callback(table[16]).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
+    return prop === callback(table[16]).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT || prop === callback(table[16]).AgeVerificationStatusUkAndAusOnly.INFERRED_TEEN;
   });
 };
 export const useShowAssignedAgeGroupSettings = function useShowAssignedAgeGroupSettings() {
@@ -460,7 +462,7 @@ export const useShowAssignedAgeGroupSettings = function useShowAssignedAgeGroupS
     if (currentUser != null) {
       prop = currentUser.ageVerificationStatus;
     }
-    return prop === callback(table[16]).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
+    return prop === callback(table[16]).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT || prop === callback(table[16]).AgeVerificationStatusUkAndAusOnly.INFERRED_TEEN;
   });
   obj = initialize;
   const obj2 = isFeatureAgeGated2;
@@ -621,7 +623,7 @@ export const useInitiateAgeVerificationV2 = function useInitiateAgeVerificationV
     loading: tmp.loading,
     initiateAgeVerificationV2: React.useCallback((arg0) => {
       startVerification = arg0;
-      return startVerification(() => lib(closure_1_2[23]).initiateAgeVerificationV2(lib.method, lib.vendor), arg0);
+      return startVerification(() => lib(closure_1_2[23]).requestAgeVerificationV2(lib.method, lib.vendor), arg0);
     }, items)
   };
   items = [startVerification];

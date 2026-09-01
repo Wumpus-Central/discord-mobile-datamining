@@ -3,7 +3,7 @@ import initialize from "../../../../../../discord_common/js/packages/flux/index.
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import CONFIG_NEVER_ANIMATE from "../../../../../design/animation/reanimated/spring/spring.tsx";
 import SUBTLE_SPRING from "../../../../../design/animation/reanimated/spring/springPresets.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/04908_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/04940_LinearGradient.js";
 import AnimatedRenderItemDefault from "../../../../../design/components/AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -18,7 +18,7 @@ function SettingsAppearanceChannelListPreviewNitroUpsellComponent(theme) {
   theme = theme.theme;
   let analyticsLocations;
   const tmp = callback3();
-  let obj = theme(4187);
+  let obj = theme(4217);
   const fn = function l() {
     let num = 1;
     if (theme.theme === closure_1_9.LIGHT) {
@@ -29,12 +29,12 @@ function SettingsAppearanceChannelListPreviewNitroUpsellComponent(theme) {
     obj.opacity = theme(closure_1_2[7]).withSpring(num, theme(closure_1_2[8]).springStandard);
     return obj;
   };
-  obj = { theme, ThemeTypes: closure_9, StyleSheet, withSpring: theme(4895).withSpring, springStandard: theme(4899).springStandard };
+  obj = { theme, ThemeTypes: closure_9, StyleSheet, withSpring: theme(4927).withSpring, springStandard: theme(4931).springStandard };
   fn.__closure = obj;
   fn.__workletHash = 16911565077998;
   fn.__initData = closure_18;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  analyticsLocations = analyticsLocations(5921)(analyticsLocations(5941).CLIENT_THEMES_EDITOR).analyticsLocations;
+  analyticsLocations = analyticsLocations(5953)(analyticsLocations(5973).CLIENT_THEMES_EDITOR).analyticsLocations;
   const items = [analyticsLocations];
   obj = { style: tmp.nitroUpsell, children: null };
   const callback = importAllResult.useCallback(() => {
@@ -50,7 +50,7 @@ function SettingsAppearanceChannelListPreviewNitroUpsellComponent(theme) {
   obj2[0] = intl.string(theme(1236).t.pj0XBN);
   obj2[1] = callback(theme(1297).NitroWheel, { style: tmp.nitroWheelIcon });
   obj2[3] = callback;
-  items1[1] = callback(theme(4896).Button, obj2);
+  items1[1] = callback(theme(4928).Button, obj2);
   obj[1] = items1;
   return callback2(View, obj);
 }

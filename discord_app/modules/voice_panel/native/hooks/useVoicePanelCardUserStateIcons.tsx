@@ -35,7 +35,7 @@ export default function useVoicePanelCardUserStateIcons(arg0, id, guildId) {
     tmp6 = id;
   }
   muteDeafenIconState = require("../utils/VoiceStateIconUtils.tsx").useMuteDeafenIconState(tmp6, guildId);
-  let tmp4Result = tmp4(9770);
+  let tmp4Result = tmp4(9809);
   let tmp8;
   if (arg0 === stateFromStores.USER) {
     tmp8 = id;
@@ -58,14 +58,14 @@ export default function useVoicePanelCardUserStateIcons(arg0, id, guildId) {
     return voicePlatformForChannel;
   }, items2);
   let tmp13;
-  let tmp2Result = tmp2(10061);
+  let tmp2Result = tmp2(10100);
   if (arg0 === stateFromStores.STREAM) {
     tmp13 = id;
   }
-  tmp2Result = tmp2(10026);
+  tmp2Result = tmp2(10065);
   showTileVolumeIndicator = tmp2Result.useConfig({ location: "useVoicePanelCardUserStateIcons" }).showTileVolumeIndicator;
   if (showTileVolumeIndicator) {
-    showTileVolumeIndicator = 0 === tmp2Result(tmp13, tmp4(4547).MediaEngineContextTypes.STREAM).effectiveVolume;
+    showTileVolumeIndicator = 0 === tmp2Result(tmp13, tmp4(4579).MediaEngineContextTypes.STREAM).effectiveVolume;
   }
   if (showTileVolumeIndicator) {
     showTileVolumeIndicator = arg0 === tmp5.STREAM;
@@ -81,7 +81,7 @@ export default function useVoicePanelCardUserStateIcons(arg0, id, guildId) {
     obj = {
       key: "user-disconnected-indicator",
       icon() {
-        return callback3(callback(7676).CircleErrorIcon, { size: "xs", color: callback2(712).colors.STATUS_WARNING });
+        return callback3(callback(7708).CircleErrorIcon, { size: "xs", color: callback2(712).colors.STATUS_WARNING });
       },
       content: null
     };

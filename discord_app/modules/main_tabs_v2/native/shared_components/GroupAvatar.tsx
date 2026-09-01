@@ -127,7 +127,7 @@ function GroupMemberAvatar(guildId) {
     obj = { style: null, source: null };
     obj[0] = tmp.avatar;
     obj[1] = memo;
-    obj[1] = callback(user(5461), obj);
+    obj[1] = callback(user(5493), obj);
     tmp3 = callback(View, obj);
   }
   return tmp3;

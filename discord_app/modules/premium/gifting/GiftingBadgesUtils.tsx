@@ -80,7 +80,7 @@ export const useIsEligibleToShowGiftingBadgeCoachmark = function useIsEligibleTo
     }
     return flag;
   });
-  tmpResult = tmp(4268);
+  tmpResult = tmp(4298);
   const result = tmpResult.useIsDismissibleContentDismissed_UNSAFE(tmp(1373).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
   if (tmp4) {
     tmp4 = stateFromStores;

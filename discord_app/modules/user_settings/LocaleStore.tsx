@@ -21,7 +21,7 @@ function _getSystemLocale() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -39,7 +39,7 @@ function _getSystemLocale() {
             closure_1 = tmp2;
             let callback = tmp3;
             callback = undefined;
-            const tmp25 = closure_1_1(4074);
+            const tmp25 = closure_1_1(4104);
             let prop;
             if (tmp25 != null) {
               const app = tmp25.app;
@@ -48,7 +48,7 @@ function _getSystemLocale() {
               }
             }
             if (null != prop) {
-              const app2 = tmp23(4074).app;
+              const app2 = tmp23(4104).app;
               const preferredSystemLanguages = app2.getPreferredSystemLanguages();
               dependencyMap = 1;
               c3 = 1;

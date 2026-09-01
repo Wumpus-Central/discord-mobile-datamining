@@ -14,13 +14,13 @@ require = arg1;
 function CatEarsBackdrop() {
   const tmp = callback3();
   const width = top(1493)().width;
-  let obj = animatedPosition(5592);
+  let obj = animatedPosition(5624);
   animatedPosition = obj.useBottomSheet().animatedPosition;
   top = top(1628)().top;
   const bound = Math.min(width, ACTION_SHEET_MAX_WIDTH);
   const result = (width - bound) / 2;
   const result1 = bound / 1200;
-  obj1 = animatedPosition(4187);
+  obj1 = animatedPosition(4217);
   const fn = function t() {
     let obj = { transform: null };
     obj = { translateY: animatedPosition.get() + top - 60 };
@@ -38,10 +38,10 @@ function CatEarsBackdrop() {
   items1 = [tmp.mascotLayer, ];
   obj1 = { top: -138 * result1, left: tmp6, right: tmp6 };
   items1[1] = obj1;
-  const obj2 = { source: { uri: top(16489) }, style: tmp.mascotImage, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
+  const obj2 = { source: { uri: top(16525) }, style: tmp.mascotImage, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
   obj[1] = callback(closure_4, obj2);
   obj[1] = callback(closure_5, obj);
-  return callback(top(4187).View, obj);
+  return callback(top(4217).View, obj);
 }
 function FeatureRow(arg0) {
   ({ icon, text } = arg0);
@@ -82,7 +82,7 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   importDefault = undefined;
   dependencyMap = undefined;
   const tmp = callback3();
-  let obj = markAsDismissed(16490);
+  let obj = markAsDismissed(16526);
   const intl = markAsDismissed(1236).intl;
   const string = intl.string;
   const t = markAsDismissed(1236).t;
@@ -107,8 +107,8 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   const callback = React.useCallback(() => {
     callback.current = true;
     markAsDismissed(closure_1_8.PRIMARY);
-    let obj = markAsDismissed(7254);
-    obj = { screen: closure_1_6.FEATURED_PAGE, analyticsLocations: [], analyticsSource: callback(5941).ACTION_SHEET };
+    let obj = markAsDismissed(7286);
+    obj = { screen: closure_1_6.FEATURED_PAGE, analyticsLocations: [], analyticsSource: callback(5973).ACTION_SHEET };
     const result = obj.openCollectiblesShopMobile(obj);
   }, items1);
   const callback1 = React.useCallback(() => {
@@ -123,26 +123,26 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   const obj3 = { variant: "heading-xl/bold", color: "text-strong", accessibilityRole: "header", style: tmp.headerText, children: null };
   const intl2 = tmp2(1236).intl;
   obj3[4] = intl2.string(markAsDismissed(1236).t.vRCvqo);
-  items3[1] = callback(markAsDismissed(4444).Text, obj3);
+  items3[1] = callback(markAsDismissed(4474).Text, obj3);
   const obj4 = { style: tmp.featureRows, children: null };
-  const obj5 = { icon: callback(markAsDismissed(6224).PaintIllocon, { size: 32 }), text: null };
+  const obj5 = { icon: callback(markAsDismissed(6256).PaintIllocon, { size: 32 }), text: null };
   const intl3 = tmp2(1236).intl;
   obj5[1] = intl3.string(markAsDismissed(1236).t["6ZWB0C"]);
   const items4 = [callback(FeatureRow, obj5), , ];
-  const obj6 = { icon: callback(markAsDismissed(6224).HeartIllocon, { size: 32 }), text: null };
+  const obj6 = { icon: callback(markAsDismissed(6256).HeartIllocon, { size: 32 }), text: null };
   const intl4 = tmp2(1236).intl;
   obj6[1] = intl4.string(markAsDismissed(1236).t.MkVbBY);
   items4[1] = callback(FeatureRow, obj6);
   const obj2 = { uri: metadataDefault };
-  items4[2] = callback(FeatureRow, { icon: callback(markAsDismissed(6224).ShopIllocon, { size: 32 }), text: stringResult });
+  items4[2] = callback(FeatureRow, { icon: callback(markAsDismissed(6256).ShopIllocon, { size: 32 }), text: stringResult });
   obj4[1] = items4;
   items3[2] = callback2(closure_5, obj4);
   const obj8 = { size: "lg", text: null, onPress: null };
   const intl5 = tmp2(1236).intl;
   obj8[1] = intl5.string(markAsDismissed(1236).t.S9hXPI);
   obj8[2] = callback;
-  items3[3] = callback(markAsDismissed(4896).Button, obj8);
+  items3[3] = callback(markAsDismissed(4928).Button, obj8);
   obj[1] = items3;
   obj[2] = callback2(closure_5, obj);
-  return callback(markAsDismissed(5590).BottomSheet, obj);
+  return callback(markAsDismissed(5622).BottomSheet, obj);
 };

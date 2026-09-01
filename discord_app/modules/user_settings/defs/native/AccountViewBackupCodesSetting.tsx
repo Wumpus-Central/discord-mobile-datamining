@@ -63,7 +63,7 @@ createToggle = {
       let intl3 = callback(1236).intl;
       obj[5] = intl3.string(callback(1236).t.PDTjLN);
       obj[6] = callback(1297).ButtonColors.BRAND;
-      callback2(14369)(obj);
+      callback2(14402)(obj);
       return false;
     }, []);
   },

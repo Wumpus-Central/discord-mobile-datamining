@@ -46,7 +46,7 @@ const memoResult = importAllResult.memo(function YouBarUser(isQuestRendered) {
   S.__workletHash = 12063452832866;
   S.__initData = closure_12;
   const animatedStyle = require("../../../reanimated/ReanimatedRexport.tsx").useAnimatedStyle(S);
-  let obj3 = sharedValue(4292);
+  let obj3 = sharedValue(4322);
   const name = obj3.useName(stateFromStores);
   if (null != stateFromStores) {
     if (null != name) {
@@ -55,26 +55,26 @@ const memoResult = importAllResult.memo(function YouBarUser(isQuestRendered) {
       obj = { isLargeAvatar: null, onPress: null };
       obj[0] = tmp5;
       obj[1] = isQuestRendered.onAvatarPress;
-      const items2 = [callback(tmp9(15940), obj), ];
+      const items2 = [callback(tmp9(15975), obj), ];
       obj1 = { style: null, children: null };
       const items3 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
       obj1[0] = items3;
       const obj2 = { userId: null, username: null };
       obj2[0] = stateFromStores.id;
       obj2[1] = name;
-      obj1[1] = callback(tmp9(15941), obj2);
-      items2[1] = callback(tmp9(4187).View, obj1);
+      obj1[1] = callback(tmp9(15976), obj2);
+      items2[1] = callback(tmp9(4217).View, obj1);
       obj[1] = items2;
     }
     return tmp11(tmp12, obj);
   }
   obj3 = { style: items4, children: null };
   items4 = [tmp.youButton];
-  const items5 = [callback(sharedValue(15939), { isLarge: !isQuestRendered }), ];
+  const items5 = [callback(sharedValue(15974), { isLarge: !isQuestRendered }), ];
   const tmp2 = _require;
   const tmp2Result = ReanimatedRexport;
   const items6 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
-  items5[1] = callback(sharedValue(4187).View, { style: items6, children: callback(View, obj5) });
+  items5[1] = callback(sharedValue(4217).View, { style: items6, children: callback(View, obj5) });
   obj3[1] = items5;
   obj = obj3;
 });

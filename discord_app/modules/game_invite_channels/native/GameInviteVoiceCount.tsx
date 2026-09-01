@@ -24,10 +24,10 @@ export default function GameInviteVoiceCount(channel) {
     obj[0] = tmp.container;
     obj = { size: "xs", color: null };
     obj[1] = ThemesDefault.colors.ICON_FEEDBACK_POSITIVE;
-    const items2 = [callback(tmp2(5018).VoiceNormalIcon, obj), ];
+    const items2 = [callback(tmp2(5050).VoiceNormalIcon, obj), ];
     obj1 = { variant: "text-sm/medium", color: "text-feedback-positive", children: null };
     obj1[2] = stateFromStores;
-    items2[1] = callback(tmp2(4444).Text, obj1);
+    items2[1] = callback(tmp2(4474).Text, obj1);
     obj[1] = items2;
     tmp5 = callback2(View, obj);
   }

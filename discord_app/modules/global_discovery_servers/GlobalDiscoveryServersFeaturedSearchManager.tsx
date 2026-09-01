@@ -49,7 +49,7 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -81,7 +81,7 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
                 obj1 = { categoryId: null };
                 obj1[0] = c6;
                 if (!total) {
-                  let obj6 = lib(17376);
+                  let obj6 = lib(17412);
                 }
                 let obj7 = closure_1_1(709);
                 const obj2 = { type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_START", categoryId: null, reset: true };
@@ -92,7 +92,7 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
                 let obj3 = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
                 obj3[0] = constants.GUILD_DISCOVERY;
                 const obj4 = { offset: 0, limit: null };
-                obj4[1] = lib(17377).GlobalDiscoveryServersLimits.FEATURED_DEFAULT_LIMIT;
+                obj4[1] = lib(17413).GlobalDiscoveryServersLimits.FEATURED_DEFAULT_LIMIT;
                 obj3[1] = closure_1_1(1483).stringify(obj4);
                 const obj11 = closure_1_1(1483);
                 obj3[3] = lib(530).rejectWithMigratedError();
@@ -115,7 +115,7 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
               obj6[1] = c6;
               obj6[2] = dependencyMap;
               obj1.dispatch(obj6);
-              obj3 = closure_1_2(6153);
+              obj3 = closure_1_2(6185);
               obj7 = { categoryId: null };
               obj7[0] = c6;
               const result = obj3.trackGuildDiscoveryGetFeaturedGuildsFailed(obj7);
@@ -126,7 +126,7 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
               lib = arg1;
               total = lib.body.total;
               const guilds = lib.body.guilds;
-              closure_2 = guilds.map(lib(17376).fromDiscoverableGuildServer);
+              closure_2 = guilds.map(lib(17412).fromDiscoverableGuildServer);
               const obj8 = { type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS", categoryId: null, guilds: null, total: null };
               obj8[1] = c6;
               obj8[2] = closure_2;
@@ -183,7 +183,7 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -212,7 +212,7 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
               lastFetchTimestamp = undefined;
               lastFetchTimestamp = 1;
               c6 = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else {
             if (1 === tmp7) {

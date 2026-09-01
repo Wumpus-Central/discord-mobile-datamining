@@ -3,7 +3,7 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import messagesProxyDefault from "../../../age_assurance/AgeAssurance.messages.js";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef14307 from "../../../settings/native/renderer/SettingLayout.tsx";
+import _modDef14340 from "../../../settings/native/renderer/SettingLayout.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { MobileUserSettings } from "../../core/native/SettingsConstants.tsx";
@@ -15,7 +15,7 @@ require = arg1;
 function SettingsAgeGroupHeader() {
   let obj = { style: callback3().headerContainer, children: null };
   const callback = React.useCallback(() => {
-    const obj = callback(8650);
+    const obj = callback(8682);
     obj.openUrl(callback(1995).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
   }, []);
   obj = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
@@ -38,11 +38,11 @@ const result = require("set").fileFinishedImporting("modules/user_settings/age_g
 
 export default function SettingsAgeGroupScreen() {
   const node = React.useMemo(() => {
-    let obj = callback(11031);
+    let obj = callback(11068);
     obj = { sections: null, ListHeaderComponent: null };
     obj = { label: null, settings: null };
     const intl = callback(1236).intl;
-    obj[0] = intl.string(callback2(2889)["5Mi5TE"]);
+    obj[0] = intl.string(callback2(2919)["5Mi5TE"]);
     const items = [, ];
     ({ AGE_GROUP_CONFIRM: arr[0], AGE_GROUP_RESET: arr[1] } = closure_5);
     obj[1] = items;
@@ -51,5 +51,5 @@ export default function SettingsAgeGroupScreen() {
     obj[1] = closure_10;
     return obj.createList(obj);
   }, []);
-  return callback(_modDef14307, { node });
+  return callback(_modDef14340, { node });
 };

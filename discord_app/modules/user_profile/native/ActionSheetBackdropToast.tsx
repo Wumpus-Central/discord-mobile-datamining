@@ -2,7 +2,7 @@
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef4187 from "../../reanimated/ReanimatedRexport.tsx";
+import _modDef4217 from "../../reanimated/ReanimatedRexport.tsx";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { ACTION_SHEET_START_HEIGHT_RATIO as closure_5 } from "../../action_sheet/native/ActionSheetConstants.tsx";
@@ -36,11 +36,11 @@ export const ActionSheetBackdropToast = function ActionSheetBackdropToast(childr
   const height = useWindowDimensionsDefault().height;
   let result = height * closure_5;
   importDefault = result;
-  const diff = height - isExpanded(5460).NAV_BAR_HEIGHT_MULTILINE - useSafeAreaInsetsDefault().top;
+  const diff = height - isExpanded(5492).NAV_BAR_HEIGHT_MULTILINE - useSafeAreaInsetsDefault().top;
   dependencyMap = diff;
-  let obj = isExpanded(4187);
+  let obj = isExpanded(4217);
   sharedValue = obj.useSharedValue(0);
-  obj1 = isExpanded(4187);
+  obj1 = isExpanded(4217);
   sharedValue1 = obj1.useSharedValue(0);
   const items = [sharedValue, sharedValue1];
   const effect = sharedValue.useEffect(() => {
@@ -89,9 +89,9 @@ export const ActionSheetBackdropToast = function ActionSheetBackdropToast(childr
   fn.__initData = closure_9;
   obj = { style: items1, pointerEvents: "none", children: null };
   items1 = [tmp.container];
-  const animatedStyle = isExpanded(4187).useAnimatedStyle(fn);
-  obj1 = { style: items2, children: jsx(isExpanded(4444).Text, { variant: "text-sm/medium", color: "mobile-text-heading-primary", children: children.text }) };
+  const animatedStyle = isExpanded(4217).useAnimatedStyle(fn);
+  obj1 = { style: items2, children: jsx(isExpanded(4474).Text, { variant: "text-sm/medium", color: "mobile-text-heading-primary", children: children.text }) };
   items2 = [tmp.toast, animatedStyle];
-  obj[2] = jsx(_modDef4187.View, { style: items2, children: jsx(isExpanded(4444).Text, { variant: "text-sm/medium", color: "mobile-text-heading-primary", children: children.text }) });
+  obj[2] = jsx(_modDef4217.View, { style: items2, children: jsx(isExpanded(4474).Text, { variant: "text-sm/medium", color: "mobile-text-heading-primary", children: children.text }) });
   return <sharedValue1 style={items1} pointerEvents="none">{null}</sharedValue1>;
 };

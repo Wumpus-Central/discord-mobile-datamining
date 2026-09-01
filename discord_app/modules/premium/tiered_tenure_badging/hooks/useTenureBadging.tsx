@@ -127,7 +127,7 @@ export const useTieredTenureEarnedOnDate = function useTieredTenureEarnedOnDate(
     if (null != stateFromStores1) {
       earnedOnDate = null;
       if (null != stateFromStores1.premiumSince) {
-        tmpResult = tmp(7347);
+        tmpResult = tmp(7379);
         earnedOnDate = tmpResult.getEarnedOnDate(tieredTenureBadgeForUser, stateFromStores1.premiumSince);
       }
     }
@@ -142,7 +142,7 @@ export const useTieredTenureBadgeData = function useTieredTenureBadgeData() {
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  let tmpResult = tmp(8930);
+  let tmpResult = tmp(8967);
   const tieredTenureBadgeForUser = tmpResult.useTieredTenureBadgeForUser(id);
   let tmp6 = null;
   if (null != tieredTenureBadgeForUser) {
@@ -169,8 +169,8 @@ export const useTieredTenureBadgeData = function useTieredTenureBadgeData() {
     if (null != stateFromStores2) {
       earnedOnDate = null;
       if (null != stateFromStores2.premiumSince) {
-        earnedOnDate = tmp(7347).getEarnedOnDate(tieredTenureBadgeForUser1, stateFromStores2.premiumSince);
-        const tmpResult3 = tmp(7347);
+        earnedOnDate = tmp(7379).getEarnedOnDate(tieredTenureBadgeForUser1, stateFromStores2.premiumSince);
+        const tmpResult3 = tmp(7379);
       }
     }
   }
@@ -189,18 +189,18 @@ export const useTieredTenureBadgeData = function useTieredTenureBadgeData() {
       result = stateFromStores.hasPaidTier2Subscription();
     }
     if (!result) {
-      const earnedTenureBadge = tmp(7347).getEarnedTenureBadge(tmp13);
+      const earnedTenureBadge = tmp(7379).getEarnedTenureBadge(tmp13);
       if (null != earnedTenureBadge) {
         if (tmpResult5.shouldShowWithheldTenureBadge("useTieredTenureBadgeData")) {
           obj = {};
           const merged1 = Object.assign(dependencyMap[earnedTenureBadge]);
-          obj.earnedOnDate = tmp(7347).getEarnedOnDate(earnedTenureBadge, tmp13);
+          obj.earnedOnDate = tmp(7379).getEarnedOnDate(earnedTenureBadge, tmp13);
           obj.status = obj.WITHHELD;
           return obj;
         }
-        tmpResult5 = tmp(8931);
+        tmpResult5 = tmp(8968);
       }
-      const tmpResult4 = tmp(7347);
+      const tmpResult4 = tmp(7379);
     }
     obj1 = {};
     const _Object = Object;

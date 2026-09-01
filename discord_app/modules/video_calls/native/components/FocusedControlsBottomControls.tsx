@@ -1,7 +1,7 @@
 // discord_app/modules/video_calls/native/components/FocusedControlsBottomControls.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod4187 from "../../../reanimated/ReanimatedRexport.tsx";
-import _modDef4187 from "../../../reanimated/ReanimatedRexport.tsx";
+import _mod4217 from "../../../reanimated/ReanimatedRexport.tsx";
+import _modDef4217 from "../../../reanimated/ReanimatedRexport.tsx";
 import CONFIG_NEVER_ANIMATE_TIMING from "../../../../design/animation/reanimated/timing/timing.tsx";
 import CallPTTButtonLooksDefault from "../../../../components_native/calls/CallPTTButton.tsx";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
@@ -57,9 +57,9 @@ function FocusedControlsExpanded(children) {
 function FocusedControlsBottomDrawerTooltip(positionY) {
   positionY = positionY.positionY;
   const tmp = callback3();
-  let obj = positionY(9623);
+  let obj = positionY(9662);
   const canShowTooltip = obj.useCanShowTooltip(positionY(691).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS, true);
-  positionY(4187);
+  positionY(4217);
   const fn = function o() {
     return { opacity: 1 - Math.min(-1 * positionY.get() / closure_1_15, 1) };
   };
@@ -79,7 +79,7 @@ function FocusedControlsBottomDrawerTooltip(positionY) {
     const intl = tmp2(1236).intl;
     obj1[7] = intl.string(tmp2(1236).t.zYzy2i);
     obj[1] = callback2(tmp2(1297).Tooltip, obj1);
-    tmp7 = callback2(_modDef4187.View, obj);
+    tmp7 = callback2(_modDef4217.View, obj);
   }
   return tmp7;
 }
@@ -89,7 +89,7 @@ function FocusedControlsAboveActionBarView(positionY) {
   const aboveActionBar = positionY.aboveActionBar;
   ({ onPressHeader, isExpanded } = positionY);
   const tmp = callback3();
-  let obj = positionY(4187);
+  let obj = positionY(4217);
   const fn = function _() {
     return { opacity: 2 - Math.max(Math.abs(positionY.get()) / (offsetY / 3 - closure_1_15), 0) };
   };
@@ -100,14 +100,14 @@ function FocusedControlsAboveActionBarView(positionY) {
   obj = { accessible: true, onPress: onPressHeader, accessibilityRole: "button", accessibilityLabel: "Group DM", accessibilityHint: "Press to start a new conversation", accessibilityState: { expanded: isExpanded }, children: null };
   obj1 = { style: tmp.aboveActionBarContainer, children: null };
   const animatedStyle = obj.useAnimatedStyle(fn);
-  const items = [callback2(FocusedControlsBottomDrawerTooltip, { positionY }), callback2(positionY(5905).ActionSheetHeaderBar, {}), ];
+  const items = [callback2(FocusedControlsBottomDrawerTooltip, { positionY }), callback2(positionY(5937).ActionSheetHeaderBar, {}), ];
   let tmp4Result = null != aboveActionBar;
   if (tmp4Result) {
     const obj2 = { style: null, children: null };
     const items1 = [tmp.aboveActionBarChildrenContainer, animatedStyle];
     obj2[0] = items1;
     obj2[1] = aboveActionBar;
-    tmp4Result = tmp4(offsetY(4187).View, obj2);
+    tmp4Result = tmp4(offsetY(4217).View, obj2);
   }
   items[2] = tmp4Result;
   obj1[1] = items;

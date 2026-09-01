@@ -5,7 +5,7 @@ import useManaTextMigrationHighlight2 from "useManaTextMigrationHighlight.tsx";
 import PlainTextExperimentProvider from "PlainTextExperimentContext.tsx";
 import useTypographyVariantRemap from "../../../../../discord_common/js/packages/design/components/Text/useTypographyVariantRemap.native.tsx";
 import set from "PlainTextEligibility.tsx";
-import __INTERNAL_VIEW_CONFIGDefault from "../../../../../_runtime/metro/04458___INTERNAL_VIEW_CONFIG.js";
+import __INTERNAL_VIEW_CONFIGDefault from "../../../../../_runtime/metro/04488___INTERNAL_VIEW_CONFIG.js";
 import closure_4 from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -30,13 +30,11 @@ let closure_12 = Object.fromEntries(keys.map((arg0) => {
   return items;
 }));
 let obj = { 400: null, 500: null, 600: null, 700: null, 800: null };
-({ DISPLAY_NORMAL: obj3[400], DISPLAY_MEDIUM: obj3[500], DISPLAY_SEMIBOLD: obj3[600], DISPLAY_BOLD: obj3[700], DISPLAY_EXTRABOLD: obj3[800] } = Fonts);
-obj = { 400: null, 500: null, 600: null, 700: null };
-({ PRIMARY_NORMAL: obj4[400], PRIMARY_MEDIUM: obj4[500], PRIMARY_SEMIBOLD: obj4[600], PRIMARY_BOLD: obj4[700] } = Fonts);
-let obj1 = { 800: null };
-obj1[800] = Fonts.GINTO_NORD_EXTRA_BOLD;
-const obj2 = { 400: null, 700: null };
-({ CODE_NORMAL: obj6[400], CODE_BOLD: obj6[700] } = Fonts);
+({ PRIMARY_NORMAL: obj3[400], PRIMARY_MEDIUM: obj3[500], PRIMARY_SEMIBOLD: obj3[600], PRIMARY_BOLD: obj3[700], PRIMARY_EXTRABOLD: obj3[800] } = Fonts);
+obj = { 800: null };
+obj[800] = Fonts.GINTO_NORD_EXTRA_BOLD;
+let obj1 = { 400: null, 700: null };
+({ CODE_NORMAL: obj5[400], CODE_BOLD: obj5[700] } = Fonts);
 const mapped = TextVariantsFlat.map((name) => {
   let tmp = null;
   if ("code" !== name.name) {
@@ -49,11 +47,10 @@ const mapped = TextVariantsFlat.map((name) => {
     }
     obj[2] = str;
     ({ weight, fontStack } = name);
-    obj = { headline: null, display: null, primary: null, code: null };
-    obj[0] = obj1;
+    obj = { headline: null, primary: null, code: null };
+    obj[0] = obj;
     obj[1] = obj;
-    obj[2] = obj;
-    obj[3] = obj2;
+    obj[2] = obj1;
     obj[3] = obj[fontStack][weight.toString(weight)];
     let result;
     if ("letterSpacing" in name) {
@@ -67,7 +64,7 @@ const mapped = TextVariantsFlat.map((name) => {
 });
 const fromEntriesResult = Object.fromEntries(mapped.filter(Boolean));
 let result = useManaTextMigrationHighlight.withManaTextMigrationHighlight(fromEntriesResult);
-let closure_18 = createCacheKey.createStyles((arg0, arg1) => {
+let closure_17 = createCacheKey.createStyles((arg0, arg1) => {
   let tmp;
   if ("none" !== arg0) {
     tmp = ThemesDefault.colors[table[arg0]];
@@ -106,14 +103,14 @@ const forwardRefResult = importAllResult.forwardRef((animated) => {
   const context = importAllResult.useContext(closure_7);
   obj1 = useTypographyVariantRemap;
   const typographyVariantRemap = obj1.useTypographyVariantRemap(animated.variant, false);
-  const tmp2 = closure_18;
-  const tmp2Result = closure_18(color, tabularNumbers);
+  const tmp2 = closure_17;
+  const tmp2Result = closure_17(color, tabularNumbers);
   items = [dependencyMap[typographyVariantRemap], tmp2Result.text, , ];
   const manaTextMigrationHighlight = useManaTextMigrationHighlight2.useManaTextMigrationHighlight(dependencyMap[typographyVariantRemap], style);
   const arraySpreadResult = HermesBuiltin.arraySpread(includeFontPadding ? items : closure_11, 2);
   items[arraySpreadResult] = style;
   items[arraySpreadResult + 1] = manaTextMigrationHighlight;
-  let tmp4Result = tmp4(4457);
+  let tmp4Result = tmp4(4487);
   obj = { animated: flag, children, enabled: plainTextExperimentEnabled, experimentalUseNativeText: flag2, hasRef: null != arg1, hasTextAncestor: context, isIOS: null, props: null, style: null };
   tmp4Result = tmp4(501);
   obj[6] = tmp4Result.isIOS();
@@ -188,7 +185,7 @@ const forwardRefResult1 = importAllResult.forwardRef((variant, ref) => {
   const merged = Object.assign(variant);
   obj.accessibilityRole = "header";
   obj.variant = typographyVariantRemap;
-  return <closure_19 ref={arg1} />;
+  return <closure_18 ref={arg1} />;
 });
 const result1 = require("set").fileFinishedImporting("design/components/Text/native/Text.tsx");
 

@@ -2,7 +2,7 @@
 import DISCORD_EPOCHDefault from "../utils/SnowflakeUtils.tsx";
 import _modDef1208 from "../utils/SentryUtils.native.tsx";
 import toJSDefault from "../lib/Record.tsx";
-import hooksDefault from "../../_runtime/04045_hooks.js";
+import hooksDefault from "../../_runtime/04075_hooks.js";
 import ME from "../Constants.tsx";
 
 function getTargetType(action) {

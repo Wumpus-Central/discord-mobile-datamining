@@ -8,7 +8,7 @@ const result = require("set").fileFinishedImporting("modules/dismissible_content
 
 export const getVersionedDismissibleContentCurrentVersion = function getVersionedDismissibleContentCurrentVersion(closure_0) {
   if (DismissibleContent.DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING === closure_0) {
-    marketingBySurface = marketingBySurface.getMarketingBySurface(tmp(13692).CollectiblesMarketingSurface.MOBILE_SHOP_BUTTON);
+    marketingBySurface = marketingBySurface.getMarketingBySurface(tmp(13725).CollectiblesMarketingSurface.MOBILE_SHOP_BUTTON);
     let num5;
     if (marketingBySurface != null) {
       num5 = marketingBySurface.version;
@@ -18,7 +18,7 @@ export const getVersionedDismissibleContentCurrentVersion = function getVersione
     }
     return num5;
   } else if (tmp(1373).DismissibleContent.ACTIVITIES_VOICE_LAUNCHER_BADGE === closure_0) {
-    let tmpResult = tmp(13693);
+    let tmpResult = tmp(13726);
     const obj = { storeState: null, surface: null };
     obj[0] = state.getState();
     obj[1] = tmp(1955).EmbeddedActivitySurfaces.VOICE_LAUNCHER;
@@ -27,7 +27,7 @@ export const getVersionedDismissibleContentCurrentVersion = function getVersione
     if (tmp(1373).DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_COACHMARK !== closure_0) {
       if (tmp(1373).DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE !== closure_0) {
         if (tmp(1373).DismissibleContent.COLLECTIBLES_SHOP_WIDE_BANNER === closure_0) {
-          tmpResult = tmp(13694);
+          tmpResult = tmp(13727);
           return tmpResult.getWideBannerDismissibleContentVersion();
         } else {
           if (tmp(1373).DismissibleContent.GAME_SHOP_ANNOUNCEMENT_MODAL !== closure_0) {

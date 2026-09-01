@@ -100,7 +100,7 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
           disabled: tmp,
           onPress() {
             closure_1_1(id.id);
-            closure_2_1(4415).hideActionSheet();
+            closure_2_1(4445).hideActionSheet();
           },
           children: null
         };
@@ -114,9 +114,9 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
             message.message.roleColor = undefined;
             const result = closure_2_0(1988).extractColorStringsFromServerColors(id.colors);
             const obj = closure_2_0(1988);
-            message.message.roleColors = closure_2_0(7838).processColorStrings(result);
+            message.message.roleColors = closure_2_0(7870).processColorStrings(result);
             message.message.shouldShowRoleOnName = true;
-            message.message.avatarURL = closure_2_1(12921);
+            message.message.avatarURL = closure_2_1(12954);
           }
         };
         const items1 = [closure_1_9(closure_1_1(button[16]), obj), ];
@@ -144,14 +144,14 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
     obj6[0] = items1;
     const intl4 = tmp4(1236).intl;
     obj6[2] = intl4.string(tmp(2401)["+/IHLl"]);
-    obj5[0] = tmp7(tmp4(4444).Text, obj6);
+    obj5[0] = tmp7(tmp4(4474).Text, obj6);
     obj4[2] = intl3.format(tmp(2401).VpEDJc, obj5);
-    const items2 = [tmp7(tmp4(4444).Text, obj4), ];
+    const items2 = [tmp7(tmp4(4474).Text, obj4), ];
     const obj7 = { style: null, variant: "text-sm/normal", children: null };
     obj7[0] = tmp3.upsellText;
     const intl5 = tmp4(1236).intl;
     obj7[2] = intl5.string(tmp(2401).FJZeZF);
-    items2[1] = tmp7(tmp4(4444).Text, obj7);
+    items2[1] = tmp7(tmp4(4474).Text, obj7);
     obj3[1] = items2;
     tmp8Result = tmp8(tmp9, obj3);
   }

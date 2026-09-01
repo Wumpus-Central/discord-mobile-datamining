@@ -99,7 +99,7 @@ function openContextMenu(stopPropagation, arg1, enableSpellCheck, arg3) {
     const _DOMRect = DOMRect;
     const dOMRect = new DOMRect(tmp3, sum1, 0, 0);
     obj[3] = dOMRect;
-    let APP = obj(5533).getCurrentlyInteractingAppContext();
+    let APP = obj(5565).getCurrentlyInteractingAppContext();
     if (APP == null) {
       APP = AppContext.APP;
     }
@@ -119,7 +119,7 @@ function openContextMenu(stopPropagation, arg1, enableSpellCheck, arg3) {
       let tmp16Result = tmp16(500);
       if (tmp16Result.isDesktop()) {
         if (nativeEvent.isTrusted) {
-          tmp16Result = tmp16(5536);
+          tmp16Result = tmp16(5568);
           importDefault = tmp16Result.addResultListener(() => {
             callback();
             obj = callback(closure_1_2[1]);
@@ -130,7 +130,7 @@ function openContextMenu(stopPropagation, arg1, enableSpellCheck, arg3) {
       }
     }
     stopPropagation.preventDefault();
-    const obj3 = obj(5533);
+    const obj3 = obj(5565);
     obj1 = { type: "CONTEXT_MENU_OPEN", contextMenu: null };
     obj1[1] = obj;
     dispatcherDefault.dispatch(obj1);

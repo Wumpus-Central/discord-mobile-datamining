@@ -2,7 +2,7 @@
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getFontScale from "../../../../modules/screen/native/useFontScale.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04908_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/04940_LinearGradient.js";
 import useHasEnhancedRoleColorsDefault from "../../../../modules/premium/powerups/hooks/useHasEnhancedRoleColors.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";

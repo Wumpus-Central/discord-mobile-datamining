@@ -103,7 +103,7 @@ function useOrbCheckoutModalContextProvider(value) {
 }
 ({ useContext: c3, useCallback: c4, useMemo: c5, createContext } = noop);
 const jsx = jsxProd.jsx;
-let obj = { skuId: "123", skuProductLine: null, skuApplicationId: "r", loadId: "Object", analyticsLocations: null, analyticsSourceLocation: null, isRedeeming: null, orbRedemptionError: "lg", orbProductContext: null, onRedeemVirtualCurrency: true };
+let obj = { skuId: "123", skuProductLine: null, skuApplicationId: "r", loadId: "PX_16", analyticsLocations: null, analyticsSourceLocation: null, isRedeeming: null, orbRedemptionError: "lg", orbProductContext: null, onRedeemVirtualCurrency: true };
 obj[3] = v1.v4();
 obj[4] = [];
 obj[9] = function onRedeemVirtualCurrency() {

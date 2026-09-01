@@ -25,7 +25,7 @@ function _uploadDebugLogFiles() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -55,7 +55,7 @@ function _uploadDebugLogFiles() {
           } else if (1 === tmp7) {
             c5 = 0;
             dependencyMap = closure_4;
-            if (dependencyMap instanceof callback(4346).UploadVoiceDebugLogsError) {
+            if (dependencyMap instanceof callback(4376).UploadVoiceDebugLogsError) {
               closure_2 = (function uploadErrorToAVUnderlyingError(closure_3) {
                 const code = closure_3.code;
                 if (callback(table[5]).UploadErrorCodes.GENERAL === code) {
@@ -72,10 +72,10 @@ function _uploadDebugLogFiles() {
               })(dependencyMap);
             }
             let obj2 = { type: null, underlyingError: null, errorMessage: null };
-            obj2[0] = callback(9526).AVError.DEBUG_LOG_UPLOAD_FAILED;
+            obj2[0] = callback(9565).AVError.DEBUG_LOG_UPLOAD_FAILED;
             obj2[1] = closure_1_2;
             obj2[2] = closure_1_3.message;
-            callback(9526).reportAVError(obj2);
+            callback(9565).reportAVError(obj2);
             throw closure_1_3;
           } else if (2 === tmp7) {
             if (arg0 === 1) {
@@ -88,9 +88,9 @@ function _uploadDebugLogFiles() {
               obj3[0] = arg1;
               return obj3;
             } else {
-              obj1 = enabled(10233);
+              obj1 = enabled(10272);
               enabled = obj1.getConfig({ location: "uploadDebugLogFiles" }).enabled;
-              obj2 = callback(10234);
+              obj2 = callback(10273);
               c6 = 3;
               c7 = 1;
               const obj4 = { value: null, done: false };
@@ -109,7 +109,7 @@ function _uploadDebugLogFiles() {
           } else {
             c5 = 0;
             c7 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp38) {
           closure_4 = tmp38;
@@ -166,7 +166,7 @@ function _uploadAppLogFiles() {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {

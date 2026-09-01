@@ -18,52 +18,58 @@ let closure_12 = createCacheKey.createStyles((backgroundColor) => {
   obj[0] = obj;
   obj[1] = { backgroundColor };
   obj[2] = { backgroundColor };
-  obj = { backgroundColor: ThemesDefault.colors.MOBILE_KEYBOARD_GAP_BACKGROUND };
-  obj[3] = obj;
+  obj[3] = { backgroundColor };
   return obj;
 });
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/channel/useChannelSafeAreaBottomStyles.tsx");
 
 export default function useChannelSafeAreaBottomStyles(arg0) {
-  const refreshToken = _require(stateFromStores[16]).resolveRefreshToken(importDefault(stateFromStores[9]).modules.mobile.CHANNEL_SAFE_AREA_BOTTOM_BACKGROUND);
+  let backgroundColor = _require(stateFromStores[16]).useToken(importDefault(stateFromStores[9]).colors.MOBILE_KEYBOARD_GAP_BACKGROUND);
   let obj = _require(stateFromStores[16]);
-  const tmp2 = callback(_require(stateFromStores[17]).useToken(refreshToken));
-  _require = tmp2;
-  const obj2 = _require(stateFromStores[17]);
-  const gradientBottom = _require(stateFromStores[18]).useGradientBottom();
-  importDefault = gradientBottom;
+  const tmp = _require;
+  const gradientBottom = _require(stateFromStores[17]).useGradientBottom();
+  _require = gradientBottom;
+  backgroundColor = undefined;
+  if (gradientBottom != null) {
+    backgroundColor = gradientBottom.backgroundColor;
+  }
+  if (null != backgroundColor) {
+    backgroundColor = gradientBottom.backgroundColor;
+  }
+  const tmp6 = callback(backgroundColor);
+  importDefault = tmp6;
   _require = arg0;
   importDefault = undefined;
   stateFromStores = undefined;
   let React;
-  importDefault = null != importDefault(stateFromStores[10])(arg0);
-  stateFromStores = importDefault(stateFromStores[11])(arg0).needSubscriptionToAccess;
-  React = importDefault(stateFromStores[12])();
-  const obj3 = _require(stateFromStores[18]);
+  importDefault = null != tmp3(tmp2[10])(arg0);
+  stateFromStores = tmp3(tmp2[11])(arg0).needSubscriptionToAccess;
+  React = tmp3(tmp2[12])();
+  const obj2 = _require(stateFromStores[17]);
   const items = [closure_4, closure_6, closure_5, closure_7, closure_8];
-  stateFromStores = _require(stateFromStores[13]).useStateFromStores(items, () => {
-    const channel = closure_1_6.getChannel(lib);
+  stateFromStores = tmp(stateFromStores[13]).useStateFromStores(items, () => {
+    const channel = closure_1_6.getChannel(callback);
     if (channel != null) {
       const guildId = channel.getGuildId();
     }
-    if (lib !== closure_1_10.GUILD_HOME) {
+    if (callback !== closure_1_10.GUILD_HOME) {
       if (tmp !== closure_1_10.ROLE_SUBSCRIPTIONS) {
         if (!stateFromStores) {
           if (closure_1_4.isConnected()) {
             if (closure_1_7.getMode() !== closure_1_9.PUSH_TO_TALK) {
-              if (closure_3 === lib(stateFromStores[14]).KeyboardTypes.EXPRESSION) {
+              if (closure_3 === callback(stateFromStores[14]).KeyboardTypes.EXPRESSION) {
                 let tmp10Result = tmp10(tmp11[15]);
                 if (tmp10Result.isAndroid()) {
                   let VOICE = closure_1_11.EXPRESSION_PICKER;
                 }
               }
-              if (closure_3 === lib(stateFromStores[14]).KeyboardTypes.MEDIA) {
+              if (closure_3 === callback(stateFromStores[14]).KeyboardTypes.MEDIA) {
                 tmp10Result = tmp10(tmp11[15]);
                 if (tmp10Result.isAndroid()) {
                   VOICE = closure_1_11.MEDIA;
                 }
               }
-              if (closure_3 === lib(stateFromStores[14]).KeyboardTypes.APP_LAUNCHER) {
+              if (closure_3 === callback(stateFromStores[14]).KeyboardTypes.APP_LAUNCHER) {
                 if (tmp10Result1.isAndroid()) {
                   VOICE = closure_1_11.APPS;
                 }
@@ -109,7 +115,7 @@ export default function useChannelSafeAreaBottomStyles(arg0) {
     }
     NONE = closure_1_11.NONE;
   });
-  const items1 = [tmp2, gradientBottom, stateFromStores];
+  const items1 = [tmp6, gradientBottom, stateFromStores];
   return React.useMemo(() => {
     if (stateFromStores !== closure_1_11.NONE) {
       if (tmp !== tmp2.DIRECTORY) {
@@ -118,24 +124,24 @@ export default function useChannelSafeAreaBottomStyles(arg0) {
             if (tmp !== tmp2.APPS) {
               if (tmp === tmp2.CHAT) {
                 let obj = {};
-                const merged = Object.assign(lib.chat);
-                const merged1 = Object.assign(closure_1);
+                const merged = Object.assign(closure_1.chat);
+                const merged1 = Object.assign(closure_0);
                 let prop = obj;
               } else if (tmp === tmp2.VOICE) {
                 obj = {};
-                const merged2 = Object.assign(lib.voice);
-                const merged3 = Object.assign(closure_1);
+                const merged2 = Object.assign(closure_1.voice);
+                const merged3 = Object.assign(closure_0);
                 prop = obj;
               } else {
                 prop = {};
-                const merged4 = Object.assign(lib[tmp]);
-                const merged5 = Object.assign(closure_1);
+                const merged4 = Object.assign(closure_1[tmp]);
+                const merged5 = Object.assign(closure_0);
               }
             }
             return prop;
           }
         }
-        prop = lib.expressionPickerBackground;
+        prop = closure_1.expressionPickerBackground;
       }
     }
   }, items1);

@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/tabs/guilds/HomePanelContent.tsx
 import context from "../../../../home_drawer/native/useHomeDrawerGesture.tsx";
-import _modDef15837 from "../../../../guilds_bar/native/GuildsBar.tsx";
+import _modDef15873 from "../../../../guilds_bar/native/GuildsBar.tsx";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_4 from "../../../../home_drawer/native/HomeDrawerStore.tsx";
 import { DM_WIDTH } from "../../../../../Constants.tsx";
@@ -64,7 +64,7 @@ const memoResult = importAllResult.memo(() => {
     obj[0] = tmp.container;
     obj = { style: null, children: null };
     obj[0] = tmp.guildLisetContainerDefault;
-    obj[1] = tmp3(_modDef15837, {});
+    obj[1] = tmp3(_modDef15873, {});
     obj[1] = tmp3(View, obj);
     tmp3Result = tmp3(View, obj);
   }

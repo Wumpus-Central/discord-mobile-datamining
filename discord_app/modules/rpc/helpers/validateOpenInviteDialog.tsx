@@ -28,7 +28,7 @@ export const validateOpenInviteDialog = function validateOpenInviteDialog(socket
       const surface = tmp46.surface;
       const type = surface.type;
       if (constants.MAIN === type) {
-        obj = { frame: null, channel: "Array", guild: "accessibilityLabel" };
+        obj = { frame: null, channel: "Array", guild: "accessible" };
         obj[0] = tmp46;
         return obj;
       } else if (tmp23.APP_CHANNEL === type) {
@@ -48,20 +48,20 @@ export const validateOpenInviteDialog = function validateOpenInviteDialog(socket
       if (null == obj9) {
         const obj3 = { errorCode: null };
         obj3[0] = RPCErrors.INVALID_CHANNEL;
-        const tmp21 = new tmp48(9464)(obj3, "Invalid channel");
+        const tmp21 = new tmp48(9503)(obj3, "Invalid channel");
         throw tmp21;
       } else {
         const guild = store.getGuild(obj9.getGuildId());
         if (null == guild) {
           const obj4 = { errorCode: null };
           obj4[0] = RPCErrors.INVALID_CHANNEL;
-          let tmp48Result = tmp48(9464);
+          let tmp48Result = tmp48(9503);
           const _HermesInternal2 = HermesInternal;
           tmp48Result = new tmp48Result(obj4, "Invalid guild " + obj9.getGuildId());
           throw tmp48Result;
         } else {
           if (obj10.canViewInviteModal(closure_6, guild, obj9)) {
-            const obj5 = { frame: "r", channel: "PX_16", guild: null };
+            const obj5 = { frame: "r", channel: "flexDirection", guild: null };
             obj5[1] = obj9;
             obj5[2] = guild;
             return obj5;
@@ -69,7 +69,7 @@ export const validateOpenInviteDialog = function validateOpenInviteDialog(socket
             obj = { errorCode: null };
             obj[0] = RPCErrors.INVALID_PERMISSIONS;
             const _HermesInternal = HermesInternal;
-            let tmp = tmp48(9464);
+            let tmp = tmp48(9503);
             tmp = new tmp(obj, "No invite permissions for " + obj9.id);
             throw tmp;
           }

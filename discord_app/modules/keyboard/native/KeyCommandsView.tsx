@@ -53,7 +53,7 @@ export default function KeyCommandsView(style) {
       found.onKeyCommand(nativeEvent);
     }
   };
-  obj[1] = jsx(first(14197), {});
+  obj[1] = jsx(first(14230), {});
   return <redux.Provider />;
 };
 export const useKeyCommands = function useKeyCommands(memo) {

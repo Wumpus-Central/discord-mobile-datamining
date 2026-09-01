@@ -1,11 +1,11 @@
 // discord_app/modules/in_app_notifications/native/InAppNotificationConstants.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod4187 from "../../reanimated/ReanimatedRexport.tsx";
+import _mod4217 from "../../reanimated/ReanimatedRexport.tsx";
 import set from "../../../../_runtime/00002_set.js";
 
 let set = new Set([10, 25]);
 const obj = { duration: 220, easing: null };
-const Easing = _mod4187.Easing;
+const Easing = _mod4217.Easing;
 obj[1] = Easing.bezier(0.16, 1, 0.3, 1);
 const result = set.fileFinishedImporting("modules/in_app_notifications/native/InAppNotificationConstants.tsx");
 

@@ -29,7 +29,7 @@ function _sendGiftIntentGif() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -54,7 +54,7 @@ function _sendGiftIntentGif() {
               c4 = undefined;
               url = 1;
               c4 = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else {
             if (1 === tmp5) {
@@ -107,7 +107,7 @@ function _sendGiftIntentGif() {
               obj5[2] = items;
               callback(c2[12]).track(constants.GIFT_INTENT_MESSAGE_SENT, obj5);
               c4 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
             obj2 = callback(c2[10]);
             const id = user.id;

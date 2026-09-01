@@ -3,7 +3,7 @@ import set from "../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("utils/PathUtils.tsx");
 
-export const pathJoin = function pathJoin(closure_1, closure_15) {
+export const pathJoin = function pathJoin(closure_1, closure_17) {
   const items = [...arguments];
   let str = "/";
   if (obj.isWindows()) {

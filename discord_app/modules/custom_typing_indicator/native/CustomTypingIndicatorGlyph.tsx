@@ -16,8 +16,8 @@ export default function CustomTypingIndicatorGlyph(config) {
   let obj = dependencyMap;
   const tmp = callback();
   const tmp2 = map;
-  dependencyMap = map(1937).getEffectiveCustomTypingIndicatorAnimation(map);
-  const obj2 = map(1937);
+  dependencyMap = map(1942).getEffectiveCustomTypingIndicatorAnimation(map);
+  const obj2 = map(1942);
   if (obj3.hasCustomTypingIndicatorEmojis(map.emojis)) {
     let items = [tmp.emojiRow, ];
     if (null == size) {

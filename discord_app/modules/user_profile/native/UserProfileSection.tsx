@@ -30,8 +30,8 @@ export default function UserProfileSection(title) {
   const merged1 = Object.assign(tmp2.contentContainer);
   if (null != primaryColor) {
     if (null != profileThemeValues) {
-      let borderColor = tmp3(4296).hexOpacityToRgba(tmp3(8337).DIVIDER_COLORS[theme], profileThemeValues.dividerOpacity);
-      const tmp3Result = tmp3(4296);
+      let borderColor = tmp3(4326).hexOpacityToRgba(tmp3(8369).DIVIDER_COLORS[theme], profileThemeValues.dividerOpacity);
+      const tmp3Result = tmp3(4326);
     }
     obj.borderColor = borderColor;
     obj = { style: null };
@@ -46,7 +46,7 @@ export default function UserProfileSection(title) {
       obj2[0] = tmp2.title;
       const obj3 = { variant: "eyebrow", accessibilityRole: "header", children: null };
       obj3[2] = title;
-      const items1 = [callback(tmp3(4444).Text, obj3), headerIcon];
+      const items1 = [callback(tmp3(4474).Text, obj3), headerIcon];
       obj2[1] = items1;
       const items2 = [tmp8(tmp9, obj2), trailingIcon];
       obj1[1] = items2;

@@ -108,7 +108,7 @@ export default function IconActionButton(variant) {
     obj[1] = buttonTextColor;
     obj[2] = tmp.actionText;
     obj[3] = buttonText;
-    tmp10Result = tmp10(tmp2(4444).Text, obj);
+    tmp10Result = tmp10(tmp2(4474).Text, obj);
   }
   items1[1] = tmp10Result;
   tmp10Result = null;

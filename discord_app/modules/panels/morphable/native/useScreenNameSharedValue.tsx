@@ -6,8 +6,8 @@ const unknown = "unknown";
 let result = require("set").fileFinishedImporting("modules/panels/morphable/native/useScreenNameSharedValue.tsx");
 
 export default function useScreenNameSharedValue() {
-  let rootNavigationRef = sharedValue(4303).getRootNavigationRef();
-  let obj = sharedValue(4303);
+  let rootNavigationRef = sharedValue(4333).getRootNavigationRef();
+  let obj = sharedValue(4333);
   let isReadyResult;
   if (rootNavigationRef != null) {
     isReadyResult = rootNavigationRef.isReady();
@@ -25,7 +25,7 @@ export default function useScreenNameSharedValue() {
   } else {
     tmp2 = unknown;
   }
-  sharedValue = sharedValue(4187).useSharedValue(tmp2);
+  sharedValue = sharedValue(4217).useSharedValue(tmp2);
   const items = [sharedValue];
   const effect = React.useEffect(() => {
     function handleStateChange() {

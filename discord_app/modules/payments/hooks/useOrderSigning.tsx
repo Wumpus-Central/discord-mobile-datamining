@@ -71,7 +71,7 @@ export const useOrderSigning = function useOrderSigning(order) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -98,7 +98,7 @@ export const useOrderSigning = function useOrderSigning(order) {
                 status = undefined;
                 v02 = 1;
                 v03 = 1;
-                return { value: "Object", done: true };
+                return { value: "PX_16", done: null };
               }
             } else if (1 === tmp7) {
               if (arg0 === 1) {

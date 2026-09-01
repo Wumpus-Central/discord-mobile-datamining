@@ -56,12 +56,12 @@ export default function QuestHomeOrbShopRewardCard(product) {
     obj1 = { product: null, isPurchased: false, solidBackground: true, cardWidth: null };
     obj1[0] = product;
     obj1[3] = COLLECTIBLES_SHOP_CARD_WIDTH;
-    const items3 = [callback(stateFromStores(12589), obj1), ];
+    const items3 = [callback(stateFromStores(12622), obj1), ];
     let tmp14Result = !flag;
     if (!flag) {
       const obj2 = { product: null, collectibleProductState: null, hidePrice: true };
       obj2[0] = product;
-      tmp14Result = tmp14(tmp15(12590), obj2);
+      tmp14Result = tmp14(tmp15(12623), obj2);
     }
     items3[1] = tmp14Result;
     obj[4] = items3;

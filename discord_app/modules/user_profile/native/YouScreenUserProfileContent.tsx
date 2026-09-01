@@ -18,9 +18,9 @@ import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 require = arg1;
 function YouAvatar(arg0) {
   const callback = React.useCallback(() => {
-    const result = callback(16340).trackYouTabAvatarPress();
-    const obj = callback(16340);
-    const result1 = callback(15925).showYouAccountActionSheet();
+    const result = callback(16376).trackYouTabAvatarPress();
+    const obj = callback(16376);
+    const result1 = callback(15960).showYouAccountActionSheet();
   }, []);
   let obj = set;
   const isAndroidResult = obj.isAndroid();
@@ -394,7 +394,7 @@ export default function YouScreenUserProfileContent(user) {
       const timeout = setTimeout(() => {
         closure_1_24(closure_1_4 === constants.WISHLIST ? constants.WISHLIST : constants.MAIN);
         closure_1_31.current(num, false, true);
-        closure_1_6.setParams({ initialTab: "Array" });
+        closure_1_6.setParams({ initialTab: "r" });
       }, 80);
     }
     return () => {

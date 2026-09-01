@@ -28,7 +28,7 @@ const result = require("set").fileFinishedImporting("modules/app_launcher/native
 export default function LearnMoreAboutAppsSection(visible) {
   const tmp = callback3();
   const callback = React.useCallback(() => {
-    const obj = callback(4160);
+    const obj = callback(4190);
     obj.openURL(callback(1995).getAppsSupportURL(constants.APPS_LEARN_MORE));
   }, []);
   const intl = getSystemLocale.intl;

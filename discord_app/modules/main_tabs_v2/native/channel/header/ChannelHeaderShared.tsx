@@ -8,8 +8,8 @@ import computeChannelName from "../../../../channel/useChannelName.tsx";
 import getChannelIcon from "../../../../../utils/native/ChannelUtils.tsx";
 import AVERAGE_FONT_WIDTH_RATIODefault from "../../../../display_name_styles/native/UsernameWithEffects.tsx";
 import FacepileGroupDMAvatarDefault from "../../../../group_dm/native/GroupDMAvatar.tsx";
-import registerAssetDefault from "../../../../../../_runtime/12901_registerAsset.js";
-import _modDef12902 from "../../../../guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx";
+import registerAssetDefault from "../../../../../../_runtime/12934_registerAsset.js";
+import _modDef12935 from "../../../../guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx";
 import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -47,7 +47,7 @@ function TitleWrapper(headerAccessibilityLabel) {
     obj[5] = tmp5;
     obj[6] = tmp.wrapper;
     obj[7] = children;
-    tmp6Result = callback2(titleContentHeight(5036).PressableOpacity, obj);
+    tmp6Result = callback2(titleContentHeight(5068).PressableOpacity, obj);
     const tmp6 = callback2;
   }
   return tmp6Result;
@@ -163,7 +163,7 @@ function MemberCountText(arg0) {
   }
   obj[1] = memberCount;
   obj[3] = leadingAccessoryWidth;
-  const children = [closure_8(_modDef12902, obj), ];
+  const children = [closure_8(_modDef12935, obj), ];
   let tmp4Result = null;
   if (withSeparator) {
     tmp4Result = tmp4(Text.Text, { variant: "text-sm/normal", color: "text-subtle", children: "\u2022" });

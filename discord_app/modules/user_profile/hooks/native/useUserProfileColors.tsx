@@ -34,7 +34,7 @@ export const useUserProfileColors = function useUserProfileColors(theme) {
     if (null != secondaryColor) {
       if (null != profileThemeValues) {
         ({ overlay, sectionBox, overlaySyncedWithUserTheme } = profileThemeValues);
-        let tmp3Result = tmp3(8088);
+        let tmp3Result = tmp3(8120);
         let tmp7 = overlay;
         if (stateFromStores) {
           tmp7 = overlaySyncedWithUserTheme;
@@ -44,12 +44,12 @@ export const useUserProfileColors = function useUserProfileColors(theme) {
         const merged = Object.assign(obj);
         obj.containerBackground = tmp6;
         tmp3Result = tmp3(688);
-        obj.gradientSecondaryBackground = tmp3Result.int2hex(tmp3(8088).calculateOverlayedColor(secondaryColor, overlay));
-        const tmp3Result1 = tmp3(8088);
+        obj.gradientSecondaryBackground = tmp3Result.int2hex(tmp3(8120).calculateOverlayedColor(secondaryColor, overlay));
+        const tmp3Result1 = tmp3(8120);
         obj.avatarBackground = tmp3(688).int2hex(result);
         const tmp3Result2 = tmp3(688);
         const tmp3Result3 = tmp3(688);
-        obj.statusBackground = tmp3Result3.int2hex(tmp3(8088).calculateOverlayedColor(result, sectionBox));
+        obj.statusBackground = tmp3Result3.int2hex(tmp3(8120).calculateOverlayedColor(result, sectionBox));
         return obj;
       }
     }

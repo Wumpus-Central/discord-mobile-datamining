@@ -34,10 +34,10 @@ function trackQuestEvent(sourceQuestContent) {
       allApplicationIds = [];
     }
     obj[2] = allApplicationIds;
-    let tmp24Result = tmp24(7441);
+    let tmp24Result = tmp24(7473);
     obj[3] = tmp24Result.getQuestStatus(value);
     const id = value.id;
-    tmp24Result = tmp24(7434);
+    tmp24Result = tmp24(7466);
     let uuid = tmp24Result.getOrRefreshAdSession(shouldExtendSession).uuid;
     const obj13 = getApplicationIdsByTaskTypes;
     const adDecisionData = getQuestDeliveryDataForPlacement.getAdDecisionData(id, sourceQuestContent);
@@ -45,7 +45,7 @@ function trackQuestEvent(sourceQuestContent) {
     obj[0] = uuid;
     const tmp24Result1 = getQuestDeliveryDataForPlacement;
     if (!tmp24Result2.isBillableQuestContent(sourceQuestContent)) {
-      const activeSessionUnsafe = tmp24(7175).getActiveSessionUnsafe();
+      const activeSessionUnsafe = tmp24(7207).getActiveSessionUnsafe();
       uuid = undefined;
       if (activeSessionUnsafe != null) {
         uuid = activeSessionUnsafe.uuid;
@@ -53,14 +53,14 @@ function trackQuestEvent(sourceQuestContent) {
       if (uuid == null) {
         uuid = null;
       }
-      const tmp24Result3 = tmp24(7175);
+      const tmp24Result3 = tmp24(7207);
     }
     obj[1] = uuid;
     obj[2] = id;
     const merged = Object.assign(adDecisionData);
     let QUEST = adDecisionData.creative_type;
     if (QUEST == null) {
-      QUEST = tmp24(7414).AdCreativeType.QUEST;
+      QUEST = tmp24(7446).AdCreativeType.QUEST;
     }
     obj1 = {};
     obj.creative_type = QUEST;
@@ -75,7 +75,7 @@ function trackQuestEvent(sourceQuestContent) {
       if (!value.preview) {
         const hasItem = set.has(event);
         if (trackGuildAndChannelMetadata) {
-          let tmp21Result = tmp21(4668);
+          let tmp21Result = tmp21(4700);
           tmp21Result.trackWithMetadata(event, obj1, hasItem);
         } else {
           tmp21Result = tmp21(698);
@@ -105,7 +105,7 @@ function trackAdContentEvent(sourceQuestContent) {
   obj = { client_ad_session_id: uuid, billing_session_id: null, ad_content_id: null };
   let obj3 = getQuestDeliveryDataForPlacement;
   if (!obj3.isBillableQuestContent(sourceQuestContent)) {
-    let tmp3Result = tmp3(7175);
+    let tmp3Result = tmp3(7207);
     const activeSessionUnsafe = tmp3Result.getActiveSessionUnsafe();
     uuid = undefined;
     if (activeSessionUnsafe != null) {
@@ -124,7 +124,7 @@ function trackAdContentEvent(sourceQuestContent) {
   }
   obj = { creative_type: adCreativeType };
   const merged1 = Object.assign(obj);
-  tmp3Result = tmp3(7411);
+  tmp3Result = tmp3(7443);
   let adMetadataSealed = tmp3Result.getAdMetadataSealed(sourceQuestContent, adContentId);
   if (adMetadataSealed == null) {
     adMetadataSealed = null;
@@ -140,8 +140,8 @@ function trackAdContentEvent(sourceQuestContent) {
     obj1[0] = relatedQuestId;
     let questStatus = null;
     if (null != quest) {
-      questStatus = tmp3(7441).getQuestStatus(quest);
-      const tmp3Result2 = tmp3(7441);
+      questStatus = tmp3(7473).getQuestStatus(quest);
+      const tmp3Result2 = tmp3(7473);
     }
     obj1[1] = questStatus;
     let obj2 = obj1;
@@ -159,7 +159,7 @@ function trackAdContentEvent(sourceQuestContent) {
     const isLoggingAnalyticsEvents = closure_5.isLoggingAnalyticsEvents;
     const hasItem = set.has(event);
     if (trackGuildAndChannelMetadata) {
-      let tmp20Result = tmp20(4668);
+      let tmp20Result = tmp20(4700);
       tmp20Result.trackWithMetadata(event, obj3, hasItem);
     } else {
       tmp20Result = tmp20(698);
@@ -186,112 +186,40 @@ function _getCommonClickEventProperties() {
     c4 = 0;
     c5 = 0;
     const iter = (function*(arg0) {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              c3 = tmp5;
-              dependencyMap = tmp2;
-              let callback;
-              let callback2;
-              dependencyMap = undefined;
-              c3 = undefined;
-              c4 = undefined;
-              c5 = undefined;
-              ({ questContent: c0, questContentPosition: closure_1, questContentRowIndex: c2, questContentCTA: c3, impressionId: c4, clickId: c5 } = callback);
-              closure_6 = undefined;
-              c4 = 1;
-              c5 = 1;
-              return { value: "Object", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              let obj5 = callback(7442);
-              c4 = 2;
-              c5 = 1;
-              let obj2 = { value: null, done: false };
-              obj2[0] = obj5.getAdUser(callback(7441).getQuestContentName(callback));
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else {
-            closure_6 = arg1;
-            const obj4 = {};
-            const merged = Object.assign(callback(7441).getContentProperties(callback, callback2, dependencyMap));
-            const merged1 = Object.assign(callback2(7390)());
-            obj4.cta_name = c3;
-            obj4.impression_id = c4;
-            let advertisingId = null;
-            if (null != closure_6) {
-              obj = callback(500);
-              advertisingId = null;
-              if (obj.isIOS()) {
-                advertisingId = closure_6.advertisingId;
-              }
-            }
-            obj4.apple_advertising_id = advertisingId;
-            let advertisingId1 = null;
-            if (null != closure_6) {
-              obj1 = callback(500);
-              advertisingId1 = null;
-              if (obj1.isAndroid()) {
-                advertisingId1 = closure_6.advertisingId;
-              }
-            }
-            obj4.android_advertising_id = advertisingId1;
-            callback2 = c5;
-            if (c5 == null) {
-              obj2 = callback(514);
-              callback2 = obj2.v4();
-            }
-            obj4.click_id = callback2;
-            c5 = 3;
-            obj5 = { value: null, done: true };
-            obj5[0] = obj4;
-            return obj5;
-          }
-        } catch (tmp33) {
-          c5 = tmp;
-          throw tmp33;
+      dependencyMap = tmp2;
+      ({ questContent: c0, questContentPosition: closure_1, questContentRowIndex: c2, questContentCTA: c3, impressionId: c4, clickId: c5 } = callback);
+      yield "PX_16";
+      const obj5 = callback(7474);
+      closure_6 = yield obj5.getAdUser(callback(7473).getQuestContentName(callback));
+      const obj4 = {};
+      const merged = Object.assign(callback(7473).getContentProperties(callback, callback2, dependencyMap));
+      const merged1 = Object.assign(callback2(7422)());
+      obj4.cta_name = c3;
+      obj4.impression_id = c4;
+      let advertisingId = null;
+      if (null != closure_6) {
+        const obj = callback(500);
+        advertisingId = null;
+        if (obj.isIOS()) {
+          advertisingId = closure_6.advertisingId;
         }
       }
+      obj4.apple_advertising_id = advertisingId;
+      let advertisingId1 = null;
+      if (null != closure_6) {
+        obj1 = callback(500);
+        advertisingId1 = null;
+        if (obj1.isAndroid()) {
+          advertisingId1 = closure_6.advertisingId;
+        }
+      }
+      obj4.android_advertising_id = advertisingId1;
+      if (c5 == null) {
+        const obj2 = callback(514);
+        callback2 = obj2.v4();
+      }
+      obj4.click_id = callback2;
+      return obj4;
     })();
     iter.next();
     return iter;
@@ -323,7 +251,7 @@ function _trackQuestContentClicked() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -353,7 +281,7 @@ function _trackQuestContentClicked() {
               adTrafficMetadataSealed = undefined;
               adTrafficMetadataSealed = 1;
               c10 = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -365,7 +293,7 @@ function _trackQuestContentClicked() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              adTrafficMetadataSealed = callback(7411).getAdTrafficMetadataSealed(callback2, callback);
+              adTrafficMetadataSealed = callback(7443).getAdTrafficMetadataSealed(callback2, callback);
               callback2 = adTrafficMetadataSealed;
               obj2 = { questId: callback, event: constants.QUEST_CONTENT_CLICKED };
               closure_4 = {};
@@ -392,7 +320,7 @@ function _trackQuestContentClicked() {
             return obj5;
           } else {
             const merged = Object.assign(arg1);
-            const adMetadataSealed = callback(7411).getAdMetadataSealed(callback2);
+            const adMetadataSealed = callback(7443).getAdMetadataSealed(callback2);
             c1 = adMetadataSealed;
             if (adMetadataSealed == null) {
               c1 = null;
@@ -403,7 +331,7 @@ function _trackQuestContentClicked() {
               dependencyMap = null;
             }
             closure_4.traffic_metadata_sealed = dependencyMap;
-            obj = callback(7447);
+            obj = callback(7479);
             const currentQuestHomeSearchSession = obj.getCurrentQuestHomeSearchSession();
             let uuid;
             if (currentQuestHomeSearchSession != null) {
@@ -416,12 +344,12 @@ function _trackQuestContentClicked() {
             closure_4.search_session_id = c3;
             obj2.properties = closure_4;
             obj2.trackGuildAndChannelMetadata = constants;
-            obj1 = callback(7411);
+            obj1 = callback(7443);
             obj2.shouldExtendSession = obj1.isBillableQuestContent(c1);
             obj2.sourceQuestContent = callback2;
             callback2(obj2);
             c10 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp29) {
           c10 = tmp;
@@ -459,7 +387,7 @@ function _trackAdContentClicked() {
           obj[0] = properties;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -489,7 +417,7 @@ function _trackAdContentClicked() {
               ({ adContentId: c0, relatedQuestId: obj2, adCreativeType: closure_2, questContent: c3, questContentCTA: c4, questContentPosition: c5, questContentRowIndex: c6, impressionId: c7, trackGuildAndChannelMetadata: c8, sourceQuestContent: c9 } = callback);
               c5 = 1;
               c6 = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -529,12 +457,12 @@ function _trackAdContentClicked() {
           } else {
             obj2.properties = properties;
             obj2.trackGuildAndChannelMetadata = c8;
-            obj = callback(7411);
+            obj = callback(7443);
             obj2.shouldExtendSession = obj.isBillableQuestContent(c3);
             obj2.sourceQuestContent = c9;
             dependencyMap(obj2);
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp16) {
           c6 = tmp;
@@ -734,7 +662,7 @@ export const trackBountyCarouselScroll = function trackBountyCarouselScroll(resu
   obj = { client_ad_session_id: uuid, billing_session_id: null, scrolling_type: null, scrolling_direction: null, carousel_position: null, content_name: null };
   const obj2 = expandEventPropertiesDefault;
   if (!obj4.isBillableQuestContent(questContent)) {
-    let tmpResult = tmp(7175);
+    let tmpResult = tmp(7207);
     const activeSessionUnsafe = tmpResult.getActiveSessionUnsafe();
     uuid = undefined;
     if (activeSessionUnsafe != null) {
@@ -748,7 +676,7 @@ export const trackBountyCarouselScroll = function trackBountyCarouselScroll(resu
   obj[2] = scrollingType;
   obj[3] = scrollingDirection;
   obj[4] = carouselPosition;
-  tmpResult = tmp(7441);
+  tmpResult = tmp(7473);
   obj[5] = tmpResult.getQuestContentName(questContent);
   obj2.track(AnalyticEvents.BOUNTY_CAROUSEL_SCROLL, obj);
 };
@@ -828,7 +756,7 @@ export const trackQuestHomeCarouselScroll = function trackQuestHomeCarouselScrol
   obj = { scrolling_type: scrollingType, client_ad_session_id: uuid, billing_session_id: null, scrolling_direction: null, scroll_window_start_index: null, scroll_window_end_index: null, scroll_window_size: null, content_name: null, content_id: null, carousel_size: null };
   const obj2 = expandEventPropertiesDefault;
   if (!obj4.isBillableQuestContent(questContent)) {
-    let tmpResult = tmp(7175);
+    let tmpResult = tmp(7207);
     const activeSessionUnsafe = tmpResult.getActiveSessionUnsafe();
     uuid = undefined;
     if (activeSessionUnsafe != null) {
@@ -843,7 +771,7 @@ export const trackQuestHomeCarouselScroll = function trackQuestHomeCarouselScrol
   obj[4] = scrollWindowStartIndex;
   obj[5] = scrollWindowEndIndex;
   obj[6] = scrollWindowSize;
-  tmpResult = tmp(7441);
+  tmpResult = tmp(7473);
   obj[7] = tmpResult.getQuestContentName(questContent);
   obj[8] = questContent;
   obj[9] = carouselSize;

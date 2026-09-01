@@ -38,26 +38,26 @@ function Screenshot(setUri) {
       return nextPromise;
     }, 500);
   }, items);
-  let obj = setUri(7584);
+  let obj = setUri(7616);
   obj = { style: { position: "absolute", top: -1000, overflow: "hidden" }, children: null };
   obj = { style: items1, children: null };
   items1 = [tmp.preview, { width: ref(1493)().width }];
   const clientThemesOverride = obj.useClientThemesOverride();
   obj1 = { ref, options: { fileName: "icymi_content", format: "png", quality: 1 }, children: null };
   const obj2 = { style: tmp.base, children: null };
-  const tmp4 = ref(4298)();
+  const tmp4 = ref(4328)();
   const obj3 = { absolute: true, wide: true, tall: true, mix: true, mixAmount: null };
   const obj4 = { dark: null, light: null };
-  const tmp6 = ref(16057);
-  obj4[0] = setUri(4266).OverlayOpacity.LEVEL_7;
-  obj4[1] = setUri(4266).OverlayOpacity.LEVEL_8;
+  const tmp6 = ref(16092);
+  obj4[0] = setUri(4296).OverlayOpacity.LEVEL_7;
+  obj4[1] = setUri(4296).OverlayOpacity.LEVEL_8;
   obj3[4] = obj4;
-  const items2 = [callback3(ref(5038), obj3), ];
+  const items2 = [callback3(ref(5070), obj3), ];
   const obj5 = { gradient: tmp4, children: null };
-  const tmp7 = ref(5038);
+  const tmp7 = ref(5070);
   const items3 = [tmp.contentContainer, clientThemesOverride];
   obj5[1] = callback3(View, { style: items3, children: setUri.render() });
-  items2[1] = callback3(setUri(4174).ThemeContextProvider, obj5);
+  items2[1] = callback3(setUri(4204).ThemeContextProvider, obj5);
   obj2[1] = items2;
   obj1[2] = callback4(View, obj2);
   obj[1] = callback3(tmp6, obj1);
@@ -152,7 +152,7 @@ class ICYMIShareModal {
               obj[0] = arr;
               return obj;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -195,7 +195,7 @@ class ICYMIShareModal {
                     closure_0 = arg0;
                     c2 = 0;
                     c1 = 0;
-                    return (/* F123017 */ function*() { ... })();
+                    return (/* F123197 */ function*() { ... })();
                   });
                   return function(arg0) {
                     const self = this;
@@ -381,7 +381,7 @@ export const GameShareModal = function GameShareModal(content) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

@@ -18,7 +18,7 @@ class PremiumTabPopover$Type extends MessageType {
       name: "asset",
       kind: "message",
       T() {
-            return callback(8431).ThemeAwareAsset;
+            return callback(8463).ThemeAwareAsset;
           }
     };
     items[3] = {
@@ -26,7 +26,7 @@ class PremiumTabPopover$Type extends MessageType {
       name: "button",
       kind: "message",
       T() {
-            return callback(8423).CTAButton;
+            return callback(8455).CTAButton;
           }
     };
     items[4] = { no: 5, name: "help_article_id", kind: "scalar", T: 9 };
@@ -35,7 +35,7 @@ class PremiumTabPopover$Type extends MessageType {
       name: "help_article",
       kind: "message",
       T() {
-            return callback(8422).HelpArticle;
+            return callback(8454).HelpArticle;
           }
     };
     obj = { no: 7, name: "header_localized", kind: "message", T: null };
@@ -51,7 +51,7 @@ class PremiumTabPopover$Type extends MessageType {
       name: "body_localized",
       kind: "message",
       T() {
-            return callback(8421).LocalizedString;
+            return callback(8453).LocalizedString;
           }
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.PremiumTabPopover", items, T);
@@ -226,7 +226,7 @@ let items = [
     name: "asset",
     kind: "message",
     T() {
-      return callback(8431).ThemeAwareAsset;
+      return callback(8463).ThemeAwareAsset;
     }
   },
   {
@@ -234,7 +234,7 @@ let items = [
     name: "button",
     kind: "message",
     T() {
-      return callback(8423).CTAButton;
+      return callback(8455).CTAButton;
     }
   },
   { no: 5, name: "help_article_id", kind: "scalar", T: 9 },
@@ -243,7 +243,7 @@ let items = [
     name: "help_article",
     kind: "message",
     T() {
-      return callback(8422).HelpArticle;
+      return callback(8454).HelpArticle;
     }
   },
 ,
@@ -262,7 +262,7 @@ items[7] = {
   name: "body_localized",
   kind: "message",
   T() {
-    return callback(8421).LocalizedString;
+    return callback(8453).LocalizedString;
   }
 };
 prototype = new prototype("discord_protos.premium_marketing.v1.PremiumTabPopover", items, tmp, T, PremiumTabPopover$Type, prototype, items);

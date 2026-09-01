@@ -128,9 +128,9 @@ export default function BaseChannelItem(mode) {
     items1[3] = channelInfo;
     obj[1] = items1;
     if (flag) {
-      let AnimatedPressableHighlight = hideIcon(11916);
+      let AnimatedPressableHighlight = hideIcon(11949);
     } else {
-      AnimatedPressableHighlight = mode(8947).AnimatedPressableHighlight;
+      AnimatedPressableHighlight = mode(8984).AnimatedPressableHighlight;
     }
     obj = {};
     const merged1 = Object.assign(merged);
@@ -147,9 +147,9 @@ export default function BaseChannelItem(mode) {
       ALL_MESSAGES = UnreadSetting.ALL_MESSAGES;
     }
     obj[2] = ALL_MESSAGES;
-    closure_8(hideIcon(10211), obj);
+    closure_8(hideIcon(10250), obj);
     const tmp6 = closure_8;
-    const tmp9 = hideIcon(10211);
+    const tmp9 = hideIcon(10250);
   }
 };
 export const ChannelModes = createCacheKey;

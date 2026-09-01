@@ -37,7 +37,7 @@ function _fetchBadgeDirectory() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -67,7 +67,7 @@ function _fetchBadgeDirectory() {
               c8 = undefined;
               body = 1;
               c8 = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else {
             if (1 === tmp7) {
@@ -129,9 +129,9 @@ function _fetchBadgeDirectory() {
               if (2 === tmp7) {
                 c6 = 0;
                 closure_9 = closure_5;
-                obj5 = obj1(7315);
+                obj5 = obj1(7347);
                 const obj6 = { name: null, tags: null };
-                obj6[0] = callback(7320).MetricEvents.BADGE_DIRECTORY_CATALOG_FETCH;
+                obj6[0] = callback(7352).MetricEvents.BADGE_DIRECTORY_CATALOG_FETCH;
                 const items = [authStore, "result:failure", "catalog_state:unknown", closure_5];
                 obj6[1] = items;
                 const _Date2 = Date;
@@ -155,9 +155,9 @@ function _fetchBadgeDirectory() {
                 items1[2] = "catalog_state:" + str;
                 items1[3] = closure_5;
                 c8 = items1;
-                obj = obj1(7315);
+                obj = obj1(7347);
                 const obj8 = { name: null, tags: null };
-                obj8[0] = callback(7320).MetricEvents.BADGE_DIRECTORY_CATALOG_FETCH;
+                obj8[0] = callback(7352).MetricEvents.BADGE_DIRECTORY_CATALOG_FETCH;
                 obj8[1] = c8;
                 const _Date = Date;
                 obj.distribution(obj8, Date.now() - c6);
@@ -219,7 +219,7 @@ function _fetchBadge() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

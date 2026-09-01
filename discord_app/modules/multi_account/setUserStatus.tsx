@@ -23,7 +23,7 @@ function _setUserStatus() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -55,7 +55,7 @@ function _setUserStatus() {
               let obj5;
               c3 = 1;
               globalStats = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -161,7 +161,7 @@ function _setUserStatus() {
               obj3.track(constants.USER_STATUS_UPDATED, obj5);
             }
             globalStats = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp54) {
           globalStats = tmp;

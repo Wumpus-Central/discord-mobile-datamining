@@ -71,7 +71,7 @@ let closure_10 = importAllResult.memo((section) => {
   obj[2] = formatToPlainStringResult;
   const items2 = [tmp.item, active ? tmp.activeItem : tmp.fadedItem];
   obj[3] = <stateFromStores style={items2}>{tmp6}</stateFromStores>;
-  return jsx(section(5036).PressableOpacity, {
+  return jsx(section(5068).PressableOpacity, {
     onPress() {
       return callback(closure_2);
     },

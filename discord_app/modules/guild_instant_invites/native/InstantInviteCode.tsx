@@ -72,11 +72,11 @@ export default function InstantInviteCode(invite) {
   const memo = React.useMemo(() => closure_1_5(invite.channel), items);
   obj = { children: null };
   obj = { variant: "text-lg/bold", tabularNumbers: true, children: invite.code };
-  const items1 = [callback(invite(4444).Text, obj), ];
+  const items1 = [callback(invite(4474).Text, obj), ];
   const tmp = callback3();
   items1[1] = callback(InstantInviteDetails, { channel: memo, expiresAt: invite.getExpiresAt() });
   obj[0] = items1;
-  obj[1] = callback2(invite(4894).Stack, obj);
+  obj[1] = callback2(invite(4926).Stack, obj);
   return callback(View, obj);
 };
 export { InstantInviteDetails };

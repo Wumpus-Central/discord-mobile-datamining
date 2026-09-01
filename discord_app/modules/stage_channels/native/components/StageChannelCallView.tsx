@@ -1,7 +1,7 @@
 // discord_app/modules/stage_channels/native/components/StageChannelCallView.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef4187 from "../../../reanimated/ReanimatedRexport.tsx";
+import _modDef4217 from "../../../reanimated/ReanimatedRexport.tsx";
 import componentDidMountDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
 import FocusedControlsHeader from "../../../video_calls/native/components/FocusedControls.tsx";
 import useStageActionBarAnimation from "StageChannelAnimationUtils.tsx";
@@ -18,7 +18,7 @@ function StageChannelCallBackground(arg0) {
   obj = { children: null };
   const tmp = callback3();
   const items = [tmp.container, stageActionBarAnimation];
-  obj[0] = callback(_modDef4187.View, { style: items, children });
+  obj[0] = callback(_modDef4217.View, { style: items, children });
   return callback(StageChannelBackgroundDefault, obj);
 }
 noopAll;

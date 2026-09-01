@@ -4,7 +4,7 @@ import Storage2 from "../../discord_common/js/packages/storage/Storage.tsx";
 import setDefault from "../utils/Durations.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import removeExecutablePathPrefix from "../modules/game_detection/GameAnalyticsUtils.tsx";
-import _modDef11035 from "../actions/ActivitiesActionCreators.tsx";
+import _modDef11072 from "../actions/ActivitiesActionCreators.tsx";
 import closure_3 from "../modules/game_detection/RunningGameStore.native.tsx";
 import closure_4 from "../modules/user_settings/UserSettingsProtoStore.tsx";
 import closure_5 from "AuthenticationStore.tsx";
@@ -67,10 +67,10 @@ function updateActivity(applicationId) {
   obj[7] = voiceChannelId;
   obj[8] = sessionId;
   obj[9] = mediaSessionId;
-  _modDef11035.updateActivity(obj);
+  _modDef11072.updateActivity(obj);
   applicationId.updatedAt = timestamp;
   if (null == dependencyMap[applicationId.applicationId]) {
-    const interval = new tmp3(4332).Interval();
+    const interval = new tmp3(4362).Interval();
     tmp11[applicationId.applicationId] = interval;
     interval.start(closure_12, () => {
       closure_1_18(closure_0);

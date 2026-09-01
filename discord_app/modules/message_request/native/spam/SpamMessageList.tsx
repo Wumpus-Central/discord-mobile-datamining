@@ -189,17 +189,17 @@ export default function SpamMessageList(goToMessageRequestPreview) {
   const tmp = callback2();
   importDefault = tmp;
   const bottom = useSafeAreaInsetsDefault().bottom;
-  let obj = goToMessageRequestPreview(16429);
+  let obj = goToMessageRequestPreview(16465);
   dependencyMap = obj.useSpamMessageRequestCount();
   arr = useSortedSpamMessageRequestsDefault();
-  obj1 = goToMessageRequestPreview(16427);
+  obj1 = goToMessageRequestPreview(16463);
   closure_4 = obj1.useListHasSingleSpamMessageRequest();
   useMountLayoutEffectDefault(() => {
     let obj = lib(698);
     obj = { num_spam_message_requests: dependencyMap };
     obj.track(closure_1_7.SPAM_MESSAGE_REQUESTS_VIEWED, obj);
-    obj = { name: goToMessageRequestPreview(7320).MetricEvents.SPAM_MESSAGE_REQUEST_VIEW };
-    lib(7315).increment(obj);
+    obj = { name: goToMessageRequestPreview(7352).MetricEvents.SPAM_MESSAGE_REQUEST_VIEW };
+    lib(7347).increment(obj);
   });
   if (0 === arr.length) {
     obj = { bodyText: null };
@@ -233,7 +233,7 @@ export default function SpamMessageList(goToMessageRequestPreview) {
         obj = { count: null };
         obj[0] = arr.length;
         obj[2] = intl.format(goToMessageRequestPreview(1236).t.aNh5Kf, obj);
-        obj[1] = closure_1_8(goToMessageRequestPreview(4444).Text, obj);
+        obj[1] = closure_1_8(goToMessageRequestPreview(4474).Text, obj);
         let tmp11Result = closure_1_8(closure_1_5, obj);
       } else {
         obj1 = { messageRequest: null, goToMessageRequestPreview: null, isLastRow: null, hasSingleMessageRequest: null };

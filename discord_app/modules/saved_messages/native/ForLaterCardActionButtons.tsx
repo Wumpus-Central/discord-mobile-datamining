@@ -36,7 +36,7 @@ export default function ForLaterCardActionButtons(savedMessage) {
   }, items);
   let intl = savedMessage(1236).intl;
   obj[0] = intl.string(savedMessage(1236).t["+TSRGD"]);
-  obj[1] = savedMessage(11276).ChatArrowRightIcon;
+  obj[1] = savedMessage(11313).ChatArrowRightIcon;
   obj[2] = function action() {
     return jumpToMessage();
   };
@@ -49,7 +49,7 @@ export default function ForLaterCardActionButtons(savedMessage) {
   }
   obj = {
     label: intl2.string(SvXS1Z),
-    IconComponent: tmp3(5519).XSmallIcon,
+    IconComponent: tmp3(5551).XSmallIcon,
     action() {
       return savedMessage(closure_1_2[7]).removeSavedMessage(savedMessage.saveData);
     },
@@ -69,10 +69,10 @@ export default function ForLaterCardActionButtons(savedMessage) {
       const intl = savedMessage(1236).intl;
       obj.accessibilityLabel = intl.string(savedMessage(1236).t.e1heBD);
       obj.size = "sm";
-      obj.icon = jumpToMessage(8762);
-      return callback(savedMessage(7974).IconButton, obj);
+      obj.icon = jumpToMessage(8799);
+      return callback(savedMessage(8006).IconButton, obj);
     };
-    obj[1] = jsx(tmp3(8755).ContextMenu, { items: null, keyboardShouldPersistTaps: "handled", triggerOnTap: true, children: null });
+    obj[1] = jsx(tmp3(8792).ContextMenu, { items: null, keyboardShouldPersistTaps: "handled", triggerOnTap: true, children: null });
     return <View style={null}>{null}</View>;
   } else {
     const intl3 = tmp3(1236).intl;
@@ -80,9 +80,9 @@ export default function ForLaterCardActionButtons(savedMessage) {
     let obj2 = { label: null, IconComponent: null, action: null };
     obj2[0] = intl3.string(savedMessage.throttledNow > savedMessage.saveData.dueAt ? t.GtBCnz : t.vrbqs1);
     if (savedMessage.throttledNow > savedMessage.saveData.dueAt) {
-      let PencilIcon = tmp3(12915).BellZIcon;
+      let PencilIcon = tmp3(12948).BellZIcon;
     } else {
-      PencilIcon = tmp3(10288).PencilIcon;
+      PencilIcon = tmp3(10327).PencilIcon;
     }
     obj2[1] = PencilIcon;
     obj2[2] = callback;

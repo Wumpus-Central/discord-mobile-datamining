@@ -133,10 +133,10 @@ export const getShopDiscountSource = function getShopDiscountSource(currentUser)
       if (currentUser != null) {
         perks = currentUser.perks;
       }
-      const perkSource = parseServerPerkConfigKind.getPerkSource(perks, tmp4(1938).Perk.SHOP_DISCOUNTS);
+      const perkSource = parseServerPerkConfigKind.getPerkSource(perks, tmp4(1930).Perk.SHOP_DISCOUNTS);
       let hasItem;
       if (perkSource != null) {
-        hasItem = perkSource.includes(tmp4(1938).PerkSource.SOURCE_NITRO);
+        hasItem = perkSource.includes(tmp4(1930).PerkSource.SOURCE_NITRO);
       }
       if (hasItem) {
         let NITRO = obj.NITRO;
@@ -145,14 +145,14 @@ export const getShopDiscountSource = function getShopDiscountSource(currentUser)
         if (tmp4Result.getIsXboxGamePassPerksEnabled("getShopDiscountSource")) {
           let hasItem1;
           if (perkSource != null) {
-            hasItem1 = perkSource.includes(tmp4(1938).PerkSource.SOURCE_THIRDPARTY_CROISSANT);
+            hasItem1 = perkSource.includes(tmp4(1930).PerkSource.SOURCE_THIRDPARTY_CROISSANT);
           }
           NITRO = null;
           if (hasItem1) {
             NITRO = obj.THIRDPARTY;
           }
         }
-        tmp4Result = tmp4(7269);
+        tmp4Result = tmp4(7301);
       }
       return NITRO;
     }

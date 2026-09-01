@@ -267,7 +267,7 @@ const localActivityStore = new LocalActivityStore(dispatcherDefault, {
         let tmp12 = num;
         let tmp13 = callback;
         let tmp14 = dependencyMap;
-        let obj2 = callback(9399);
+        let obj2 = callback(9438);
         let tmp15 = tmp9;
         let obj3 = callback(1399);
         let num2;
@@ -281,7 +281,7 @@ const localActivityStore = new LocalActivityStore(dispatcherDefault, {
         let tmp18 = tmp9;
         let tmp19 = constants2;
         let hasFlagResult = obj3.hasFlag(num2, constants.INSTANCE);
-        let tmp13Result = tmp13(9399);
+        let tmp13Result = tmp13(9438);
         let tmp20 = tmp11;
         let tmp21 = obj2;
         let tmp22 = tmp10;

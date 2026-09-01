@@ -94,7 +94,7 @@ export const useCreateGameInvitePost = function useCreateGameInvitePost(appliedT
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

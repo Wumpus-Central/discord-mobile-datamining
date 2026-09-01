@@ -27,7 +27,7 @@ export default function AnimatedButtonWrapper(onPressOut) {
   let width;
   let height;
   let sharedValue;
-  ({ onPress, onLongPress, accessibilityLabel, children, disabled } = onPressOut);
+  ({ onPress, onLongPress, accessibilityLabel, accessibilityHint, children, disabled } = onPressOut);
   let obj = onPressIn(style[6]);
   if (pressed == null) {
     pressed = obj.useSharedValue(false);
@@ -130,6 +130,7 @@ export default function AnimatedButtonWrapper(onPressOut) {
   const merged = Object.assign(memo);
   obj.accessibilityRole = "button";
   obj.accessibilityLabel = accessibilityLabel;
+  obj.accessibilityHint = accessibilityHint;
   obj.style = memo3;
   obj.children = children;
   return <height entering={memo1} exiting={memo2} onPress={onPress} onLongPress={onLongPress} disabled={disabled} />;

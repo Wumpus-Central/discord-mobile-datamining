@@ -4,7 +4,7 @@ import getSystemLocale from "../../../intl/index.native.tsx";
 import dispatcherDefault from "../../toast/native/ToastActionCreators.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import useGradientBottom from "../../client_themes/native/ClientThemesOverrides.tsx";
-import registerAssetDefault from "../../../../_runtime/12274_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/12307_registerAsset.js";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../lurker_mode/LurkingStore.tsx";
@@ -151,7 +151,7 @@ function SortAndViewOptions(channel) {
   }
   isMediaChannelResult = channel.isMediaChannel();
   const tmp4 = id;
-  return closure_14(id(4896).Button, { variant: "secondary", text: stringResult, onPress: callback, size: "sm", icon: closure_14(id(11688).ArrowsUpDownIcon, { size: "xxs" }) });
+  return closure_14(id(4928).Button, { variant: "secondary", text: stringResult, onPress: callback, size: "sm", icon: closure_14(id(11721).ArrowsUpDownIcon, { size: "xxs" }) });
 }
 function TagFilter(channel) {
   channel = channel.channel;
@@ -163,8 +163,8 @@ function TagFilter(channel) {
     obj = { channel };
     obj.openLazy(channel(closure_1_2[30])(closure_1_2[33], closure_1_2.paths), "ForumTagFilterActionSheet", obj);
   };
-  obj[4] = callback(channel(10381).TagIcon, { size: "xxs" });
-  return callback(channel(4896).Button, obj);
+  obj[4] = callback(channel(10420).TagIcon, { size: "xxs" });
+  return callback(channel(4928).Button, obj);
 }
 function getForumItemType(arg0) {
   let str = "thread";

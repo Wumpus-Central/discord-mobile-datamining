@@ -39,5 +39,5 @@ export default function NotificationSettingsMessageNotificationGuildActionSheet(
     const NotificationLabel = guildId(closure_1_2[11]).NotificationLabel;
     const result = unread(closure_1_2[10]).updateGuildNotificationSettings(guildId.guildId, obj, NotificationLabel.notifications(message_notifications));
   };
-  return jsx(unread(10207), { context: "guild", value: notification, allMessagesSubLabel: null, onChange: null });
+  return jsx(unread(10246), { context: "guild", value: notification, allMessagesSubLabel: null, onChange: null });
 };

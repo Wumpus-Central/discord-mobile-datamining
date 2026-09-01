@@ -127,10 +127,10 @@ export default function GameProfileSimilarGames(trackAction) {
     obj = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = trackAction(1236).intl;
     obj[2] = intl.string(trackAction(1236).t["6rLyQB"]);
-    obj[1] = callback(trackAction(4444).Text, obj);
+    obj[1] = callback(trackAction(4474).Text, obj);
     const items = [callback(closure_6, obj), ];
     obj1 = { horizontal: true, renderScrollComponent: null, data: null, renderItem: null, showsHorizontalScrollIndicator: false, ItemSeparatorComponent: null, ListHeaderComponent: null, ListFooterComponent: null };
-    obj1[1] = tmp2(8809);
+    obj1[1] = tmp2(8846);
     obj1[2] = closure_12;
     obj1[3] = function renderItem() {
       return closure_1_7(closure_1_17, { cardWidth: c1 });
@@ -138,7 +138,7 @@ export default function GameProfileSimilarGames(trackAction) {
     obj1[5] = Spacer;
     obj1[6] = ListPadding;
     obj1[7] = ListPadding;
-    items[1] = callback(trackAction(8073).FlashList, obj1);
+    items[1] = callback(trackAction(8105).FlashList, obj1);
     obj[1] = items;
     let tmp7 = callback2(closure_6, obj);
   } else {
@@ -151,10 +151,10 @@ export default function GameProfileSimilarGames(trackAction) {
       const obj4 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
       const intl2 = trackAction(1236).intl;
       obj4[2] = intl2.string(trackAction(1236).t["6rLyQB"]);
-      obj3[1] = callback(trackAction(4444).Text, obj4);
+      obj3[1] = callback(trackAction(4474).Text, obj4);
       const items1 = [callback(closure_6, obj3), ];
       const obj5 = { horizontal: true, renderScrollComponent: null, data: null, renderItem: null, showsHorizontalScrollIndicator: false, ItemSeparatorComponent: null, ListHeaderComponent: null, ListFooterComponent: null, decelerationRate: "fast", snapToInterval: null };
-      obj5[1] = tmp2(8809);
+      obj5[1] = tmp2(8846);
       obj5[2] = similarGames;
       obj5[3] = function renderItem(game) {
         return closure_1_7(closure_1_16, { game: game.item, trackAction, cardWidth: c1 });
@@ -163,7 +163,7 @@ export default function GameProfileSimilarGames(trackAction) {
       obj5[6] = ListPadding;
       obj5[7] = ListPadding;
       obj5[9] = result + tmp5;
-      items1[1] = callback(trackAction(8073).FlashList, obj5);
+      items1[1] = callback(trackAction(8105).FlashList, obj5);
       obj2[1] = items1;
       tmp7 = callback2(closure_6, obj2);
     }

@@ -79,7 +79,7 @@ class MessagePreviewManager extends tmp3 {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           while (true) {
@@ -111,7 +111,7 @@ class MessagePreviewManager extends tmp3 {
                 c7 = 1;
                 let num9 = 1;
                 c8 = 1;
-                return { value: "Object", done: true };
+                return { value: "PX_16", done: null };
               }
             } else {
               if (1 === tmp4) {
@@ -282,7 +282,7 @@ prototype["fetchLocal"] = function fetchLocal(guild_id) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -416,7 +416,7 @@ prototype["fetchDms"] = function fetchDms(closure_4) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -463,7 +463,7 @@ prototype["fetchDms"] = function fetchDms(closure_4) {
             obj5[2] = body;
             obj.dispatch(obj5);
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp12) {
           c3 = tmp;

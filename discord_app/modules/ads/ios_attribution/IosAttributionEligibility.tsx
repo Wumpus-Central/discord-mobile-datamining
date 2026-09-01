@@ -34,7 +34,7 @@ export const getIosAttributionClickFramework = function getIosAttributionClickFr
   if (enabled) {
     activeIosAttributionFramework = null;
     if (arg0) {
-      tmpResult = tmp(7411);
+      tmpResult = tmp(7443);
       const adContext = tmpResult.getAdContext(sourceQuestContent, adContentId);
       let prop;
       if (adContext != null) {
@@ -42,8 +42,8 @@ export const getIosAttributionClickFramework = function getIosAttributionClickFr
       }
       activeIosAttributionFramework = null;
       if (true === prop) {
-        activeIosAttributionFramework = tmp(11054).getActiveIosAttributionFramework();
-        const tmpResult1 = tmp(11054);
+        activeIosAttributionFramework = tmp(11091).getActiveIosAttributionFramework();
+        const tmpResult1 = tmp(11091);
       }
     }
   }

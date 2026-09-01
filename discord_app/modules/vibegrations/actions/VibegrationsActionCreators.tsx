@@ -64,7 +64,7 @@ function _listProjects() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -340,7 +340,7 @@ function _setProjectIcon() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -466,142 +466,81 @@ function _refreshPublishedProject() {
     c4 = 0;
     c5 = 0;
     const iter = (function*(arg0, body) {
-      if (project === 2) {
-        project = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+      body = tmp2;
+      isPreview = isPreview.isPreview;
+      yield "PX_16";
+      yield callback3(callback);
+      if (2 === tmp5) {
         if (arg0 === 1) {
+          let project = 3;
           throw body;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
+          project = 3;
+          const obj3 = { value: null, done: true };
+          obj3[0] = body;
+          return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
-        }
-      } else {
-        try {
-          project = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              project = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              project = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              let bot_permissions_changed = tmp5;
-              body = tmp2;
-              let isPreview;
-              isPreview = isPreview.isPreview;
-              body = undefined;
-              bot_permissions_changed = undefined;
-              c4 = undefined;
-              project = undefined;
-              let application_id;
-              c4 = 1;
-              project = 1;
-              return { value: "Object", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              project = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              project = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = body;
-              return obj1;
-            } else {
-              c4 = 2;
-              project = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = callback3(callback);
-              return obj2;
-            }
+          body = body.body;
+          const bot_permissions_changed = body.bot_permissions_changed;
+          c4 = body.integration_installed;
+          project = body.project;
+          if (isPreview) {
+            let application_id = tmp55.preview_application_id;
           } else {
-            if (2 === tmp5) {
-              if (arg0 === 1) {
-                project = 3;
-                throw body;
-              } else if (arg0 === 2) {
-                project = 3;
-                const obj3 = { value: null, done: true };
-                obj3[0] = body;
-                return obj3;
-              } else {
-                body = body.body;
-                bot_permissions_changed = body.bot_permissions_changed;
-                c4 = body.integration_installed;
-                project = body.project;
-                if (isPreview) {
-                  application_id = tmp55.preview_application_id;
-                } else {
-                  application_id = tmp55.application_id;
-                }
-                if (null != application_id) {
-                  let obj6 = callback(body[10]);
-                  c4 = 3;
-                  project = 1;
-                  let obj4 = { value: null, done: false };
-                  obj4[0] = obj6.fetchApplication(application_id);
-                  return obj4;
-                } else {
-                  obj4 = callback(body[6]);
-                  const obj5 = { isPreview: null };
-                  obj5[0] = isPreview;
-                  const result = obj4.trackVibegrationDeployed(callback, obj5);
-                  project = 3;
-                }
-              }
-            } else if (3 === tmp5) {
-              if (arg0 === 1) {
-                project = 3;
-                throw body;
-              } else if (arg0 === 2) {
-                project = 3;
-                obj6 = { value: null, done: true };
-                obj6[0] = body;
-                return obj6;
-              } else {
-                obj1 = callback(body[11]);
-                const widgetConfigs = obj1.fetchWidgetConfigs(application_id, { force: true });
-                c4 = 4;
-                project = 1;
-                const obj7 = { value: null, done: false };
-                obj7[0] = widgetConfigs.catch(() => {
-
-                });
-                return obj7;
-              }
-            } else if (arg0 === 1) {
-              project = 3;
-              throw body;
-            } else if (arg0 !== 2) {
-              let tmp8 = !isPreview;
-              if (isPreview) {
-                let tmp10 = c4;
-                if (c4) {
-                  tmp10 = !bot_permissions_changed;
-                }
-                tmp8 = tmp10;
-              }
-              if (tmp8) {
-                callback2(application_id);
-              }
-            }
-            project = 3;
-            obj = { value: null, done: true };
-            obj[0] = body;
-            return obj;
+            application_id = tmp55.application_id;
           }
-        } catch (tmp43) {
-          project = tmp;
-          throw tmp43;
+          if (null != application_id) {
+            let obj6 = callback(body[10]);
+            c4 = 3;
+            project = 1;
+            let obj4 = { value: null, done: false };
+            obj4[0] = obj6.fetchApplication(application_id);
+            return obj4;
+          } else {
+            obj4 = callback(body[6]);
+            const obj5 = { isPreview: null };
+            obj5[0] = isPreview;
+            const result = obj4.trackVibegrationDeployed(callback, obj5);
+            project = 3;
+          }
+        }
+      } else if (3 === tmp5) {
+        if (arg0 === 1) {
+          project = 3;
+          throw body;
+        } else if (arg0 === 2) {
+          project = 3;
+          obj6 = { value: null, done: true };
+          obj6[0] = body;
+          return obj6;
+        } else {
+          obj1 = callback(body[11]);
+          const widgetConfigs = obj1.fetchWidgetConfigs(application_id, { force: true });
+          c4 = 4;
+          project = 1;
+          const obj7 = { value: null, done: false };
+          obj7[0] = widgetConfigs.catch(() => {
+
+          });
+          return obj7;
+        }
+      } else if (arg0 === 1) {
+        project = 3;
+        throw body;
+      } else if (arg0 !== 2) {
+        let tmp8 = !isPreview;
+        if (isPreview) {
+          let tmp10 = c4;
+          if (c4) {
+            tmp10 = !bot_permissions_changed;
+          }
+          tmp8 = tmp10;
+        }
+        if (tmp8) {
+          callback2(application_id);
         }
       }
+      return body;
     })();
     iter.next();
     return iter;
@@ -718,5 +657,10 @@ export const setBuilderPreviewApplicationId = function setBuilderPreviewApplicat
 export const setBuilderPreviewMobile = function setBuilderPreviewMobile(enabled) {
   let obj = dispatcherDefault;
   obj = { type: "VIBEGRATIONS_BUILDER_PREVIEW_MOBILE_SET", enabled };
+  obj.dispatch(obj);
+};
+export const markLogsSeen = function markLogsSeen(projectId) {
+  let obj = dispatcherDefault;
+  obj = { type: "VIBEGRATIONS_LOGS_SEEN", projectId };
   obj.dispatch(obj);
 };

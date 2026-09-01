@@ -13,13 +13,13 @@ export const getPendingSource = function getPendingSource(theme) {
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(16432);
+      return callback(16468);
     },
     darker() {
-      return callback(16433);
+      return callback(16469);
     },
     light() {
-      return callback(16434);
+      return callback(16470);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -28,13 +28,13 @@ export const usePendingSource = function usePendingSource() {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(16432);
+      return callback(16468);
     },
     darker() {
-      return callback(16433);
+      return callback(16469);
     },
     light() {
-      return callback(16434);
+      return callback(16470);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -43,13 +43,13 @@ export const Pending = function Pending(arg0) {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(16432);
+      return callback(16468);
     },
     darker() {
-      return callback(16433);
+      return callback(16469);
     },
     light() {
-      return callback(16434);
+      return callback(16470);
     }
   };
   obj = {};

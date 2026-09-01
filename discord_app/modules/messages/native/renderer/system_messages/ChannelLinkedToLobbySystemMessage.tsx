@@ -28,7 +28,7 @@ export const createChannelLinkedToLobbySystemMessage = function createChannelLin
     obj[0] = message;
     obj[1] = messageAuthorWithProcessedColor;
     obj[2] = roleStyle;
-    obj[1] = tmp(7839)(obj);
+    obj[1] = tmp(7871)(obj);
     obj[2] = application.name;
     obj1 = { linkColor: null, medium: true };
     obj1[0] = tmp3.defaultUsernameColor;
@@ -40,7 +40,7 @@ export const createChannelLinkedToLobbySystemMessage = function createChannelLin
     const obj3 = { content: null };
     const intl = getSystemLocale.intl;
     obj3[0] = intl.formatToParts(getSystemLocale.t.gZfhOw, obj);
-    const merged = Object.assign(tmp(7841)(message));
+    const merged = Object.assign(tmp(7873)(message));
     return obj3;
   }
 };

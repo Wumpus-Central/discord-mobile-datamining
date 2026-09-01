@@ -8,5 +8,5 @@ const result = set.fileFinishedImporting("modules/collectibles/shop_this_look/na
 
 export const SHOP_THIS_LOOK_ACTION_SHEET_KEY = "Shop This Look";
 export const openShopThisLookActionSheet = function openShopThisLookActionSheet(arg0) {
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(12566, dependencyMap.paths), c3, arg0, "stack");
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(12599, dependencyMap.paths), c3, arg0, "stack");
 };

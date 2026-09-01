@@ -37,7 +37,7 @@ function _sendGuildInvite() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -66,12 +66,12 @@ function _sendGuildInvite() {
                 throw Error();
               } else {
                 obj1 = { max_uses: null, max_age: null, unique: true };
-                obj1[0] = callback2(9872).INVITE_OPTIONS_ONCE.value;
-                obj1[1] = callback2(9872).INVITE_OPTIONS_7_DAYS.value;
+                obj1[0] = callback2(9911).INVITE_OPTIONS_ONCE.value;
+                obj1[1] = callback2(9911).INVITE_OPTIONS_7_DAYS.value;
                 c6 = 2;
                 c7 = 1;
                 const obj2 = { value: null, done: false };
-                obj2[0] = callback2(8617).createInvite(defaultChannel.id, obj1, tmp45);
+                obj2[0] = callback2(8649).createInvite(defaultChannel.id, obj1, tmp45);
                 return obj2;
               }
               tmp45 = dependencyMap;
@@ -89,10 +89,10 @@ function _sendGuildInvite() {
               throw arg1;
             } else if (arg0 !== 2) {
               code = arg1;
-              let obj4 = callback2(9947);
+              let obj4 = callback2(9986);
               const obj3 = { inviteKey: null, type: null, user: null, location: null, inviteAnalyticsMetadata: null };
               obj3[0] = code.code;
-              obj3[1] = callback(9947).InvitePropertiesType.USER;
+              obj3[1] = callback(9986).InvitePropertiesType.USER;
               obj3[2] = user.getUser(callback);
               obj3[3] = dependencyMap;
               obj4 = { source: null };
@@ -141,7 +141,7 @@ export const showGuildInviteActionSheet = function showGuildInviteActionSheet(id
   obj.track(constants.OPEN_POPOUT, obj);
   const obj3 = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { recipientId: id, source: newestAnalyticsLocation };
-  obj3.openLazy(asyncRequireImpl(12559, dependencyMap.paths), "invite-to-guilds-" + id, obj);
+  obj3.openLazy(asyncRequireImpl(12592, dependencyMap.paths), "invite-to-guilds-" + id, obj);
 };
 export const useServerInviteRows = function useServerInviteRows(id, query) {
   const _require = id;

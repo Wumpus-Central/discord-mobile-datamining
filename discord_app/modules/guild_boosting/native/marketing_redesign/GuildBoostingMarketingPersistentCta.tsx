@@ -34,7 +34,7 @@ export default function GuildBoostingMarketingPersistentCta(arg0) {
   let obj = isVisible(647);
   let items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  obj1 = isVisible(4187);
+  obj1 = isVisible(4217);
   const fn = function _() {
     let num = -120;
     if (!stateFromStores) {
@@ -54,7 +54,7 @@ export default function GuildBoostingMarketingPersistentCta(arg0) {
     obj[1] = isVisible(closure_1_2[9]).withSpring(num3, closure_1_8);
     return obj;
   };
-  obj = { useReducedMotion: stateFromStores, VISIBILITY_OFFSET: 120, withSpring: isVisible(4895).withSpring, isVisible, SPRING_CONFIG: closure_8 };
+  obj = { useReducedMotion: stateFromStores, VISIBILITY_OFFSET: 120, withSpring: isVisible(4927).withSpring, isVisible, SPRING_CONFIG: closure_8 };
   fn.__closure = obj;
   fn.__workletHash = 14370895185277;
   fn.__initData = closure_10;
@@ -69,17 +69,17 @@ export default function GuildBoostingMarketingPersistentCta(arg0) {
   const obj2 = { style: tmp.innerWraper, children: null };
   const obj3 = { style: tmp.guildInfoContainer, children: null };
   const obj4 = { style: tmp.guildIcon, textStyle: tmp.guildIconText, guild, size: null };
-  const tmp4 = stateFromStores(4908);
-  obj4[3] = isVisible(5972).GuildIconSizes.LARGE;
-  const items3 = [callback(stateFromStores(5972), obj4), callback(isVisible(4444).Text, { style: tmp.guildName, variant: "text-md/bold", lineClamp: 1, children: guild.name })];
+  const tmp4 = stateFromStores(4940);
+  obj4[3] = isVisible(6004).GuildIconSizes.LARGE;
+  const items3 = [callback(stateFromStores(6004), obj4), callback(isVisible(4474).Text, { style: tmp.guildName, variant: "text-md/bold", lineClamp: 1, children: guild.name })];
   obj3[1] = items3;
   const items4 = [callback2(View, obj3), ];
   const obj5 = { style: tmp.guildName, variant: "text-md/bold", lineClamp: 1, children: guild.name };
-  const tmp5 = stateFromStores(5972);
-  items4[1] = callback(View, { style: tmp.buttonContainer, children: callback(stateFromStores(7113), obj7) });
+  const tmp5 = stateFromStores(6004);
+  items4[1] = callback(View, { style: tmp.buttonContainer, children: callback(stateFromStores(7145), obj7) });
   obj2[1] = items4;
   obj1[6] = callback2(View, obj2);
   obj[1] = callback(tmp4, obj1);
-  return callback(stateFromStores(4187).View, obj);
+  return callback(stateFromStores(4217).View, obj);
 };
 export const VISIBILITY_OFFSET = 120;

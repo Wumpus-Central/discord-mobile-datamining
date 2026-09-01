@@ -72,7 +72,7 @@ function _handleInviteUsers() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -98,7 +98,7 @@ function _handleInviteUsers() {
               closure_3 = undefined;
               c5 = 1;
               c6 = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else {
             if (1 === tmp5) {
@@ -122,7 +122,7 @@ function _handleInviteUsers() {
                         return obj2;
                       }
                     }
-                    const obj13 = arr(4461);
+                    const obj13 = arr(4491);
                     c5 = 2;
                     c6 = 1;
                     let obj3 = { value: null, done: false };
@@ -133,7 +133,7 @@ function _handleInviteUsers() {
                 if (null != lib) {
                   if (store.getChannelId() === lib.id) {
                     if (lib.isDM()) {
-                      let obj10 = lib(4695);
+                      let obj10 = lib(4727);
                       obj10.showGuardCallAlert(callback(function*() {
                         if (dependencyMap === 2) {
                           dependencyMap = 3;
@@ -146,7 +146,7 @@ function _handleInviteUsers() {
                             obj[0] = arg1;
                             return obj;
                           } else {
-                            return { value: "HermesInternal", done: "HermesInternal" };
+                            return { value: "HermesInternal", done: null };
                           }
                         } else {
                           try {
@@ -169,7 +169,7 @@ function _handleInviteUsers() {
                                   obj1[0] = closure_1_20(tmp33, dependencyMap);
                                   return obj1;
                                 } else {
-                                  let obj5 = v0(4461);
+                                  let obj5 = v0(4491);
                                   v0 = 1;
                                   dependencyMap = 1;
                                   let obj2 = { value: null, done: false };
@@ -207,19 +207,19 @@ function _handleInviteUsers() {
                                 obj[0] = arg1;
                                 return obj;
                               } else {
-                                const tmp8 = v0(9832);
+                                const tmp8 = v0(9871);
                                 const call = tmp8.call;
                                 if (typeof call === "unknown") {
                                   tmp8(false, true);
                                 } else {
                                   call(tmp9, false, true);
                                 }
-                                v0(12432)(closure_3);
+                                v0(12465)(closure_3);
                                 dependencyMap = 3;
                                 tmp9 = closure_3;
                               }
                               closure_3 = arg1;
-                              obj2 = closure_1_0(4695);
+                              obj2 = closure_1_0(4727);
                               v0 = 3;
                               dependencyMap = 1;
                               obj5 = { value: null, done: false };
@@ -233,7 +233,7 @@ function _handleInviteUsers() {
                         }
                       }));
                     } else if (lib.isGroupDM()) {
-                      let obj8 = arr(4461);
+                      let obj8 = arr(4491);
                       c5 = 5;
                       c6 = 1;
                       let obj4 = { value: null, done: false };
@@ -242,7 +242,7 @@ function _handleInviteUsers() {
                     }
                   }
                 }
-                let obj5 = arr(4461);
+                let obj5 = arr(4491);
                 obj5 = { recipientIds: null, location: "New Group DM", onBeforeTransition: null };
                 obj5[0] = arr;
                 obj5[2] = dependencyMap;
@@ -291,7 +291,7 @@ function _handleInviteUsers() {
                   throw arg1;
                 } else if (arg0 !== 2) {
                   closure_3 = arg1;
-                  obj = arr(9832);
+                  obj = arr(9871);
                   obj.ring(closure_3, arr, "gdm_invite");
                 }
                 c6 = 3;
@@ -301,9 +301,9 @@ function _handleInviteUsers() {
               }
               closure_3 = arg1;
             }
-            arr(4415).hideActionSheet(closure_16);
+            arr(4445).hideActionSheet(closure_16);
             c6 = 3;
-            const obj12 = arr(4415);
+            const obj12 = arr(4445);
           }
         } catch (tmp77) {
           c6 = tmp;
@@ -418,7 +418,7 @@ export default function NewGroupDMScreen(navigation) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -510,7 +510,7 @@ export default function NewGroupDMScreen(navigation) {
             return obj;
           }
           c5 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp37) {
         closure_2 = tmp37;
@@ -668,7 +668,7 @@ export default function NewGroupDMScreen(navigation) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {

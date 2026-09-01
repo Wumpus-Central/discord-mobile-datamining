@@ -33,7 +33,7 @@ function _handleIncomingURL() {
             obj[0] = url;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -188,18 +188,18 @@ function _handleIncomingURL() {
                         const obj32 = lib(closure_1_2[8]);
                       }
                       fingerprint = 3;
-                      return { value: "HermesInternal", done: "HermesInternal" };
+                      return { value: "HermesInternal", done: null };
                     } else {
                       throwTypeErrorResult = url;
                       const parts = url.split("voice/");
                       if (2 !== parts.length) {
                         fingerprint = 3;
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: null };
                       } else {
                         const parts1 = parts[1].split("/");
                         if (0 === parts1.length) {
                           fingerprint = 3;
-                          return { value: "HermesInternal", done: "HermesInternal" };
+                          return { value: "HermesInternal", done: null };
                         } else if ("user" !== parts1[0]) {
                           if ("invite" === parts1[0]) {
                             throwTypeErrorResult = callback;

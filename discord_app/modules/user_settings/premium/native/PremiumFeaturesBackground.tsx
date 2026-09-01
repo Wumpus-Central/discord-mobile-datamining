@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesBackground.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04908_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/04940_LinearGradient.js";
 import { Gradients } from "../../../colors/native/ColorConstants.tsx";
 import { PremiumTypes } from "../../../premium/PremiumConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";

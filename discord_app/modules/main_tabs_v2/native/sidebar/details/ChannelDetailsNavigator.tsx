@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsNavigator.tsx
-import registerAssetDefault from "../../../../../../_runtime/12278_registerAsset.js";
+import registerAssetDefault from "../../../../../../_runtime/12311_registerAsset.js";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../../../stores/ChannelStore.tsx";
@@ -7,7 +7,7 @@ import { ChannelDetailsNavigatorScreens as closure_6 } from "ChannelDetailsConst
 import { AnalyticEvents } from "../../../../../Constants.tsx";
 import { SearchNavigatorScreens } from "../../../../search/native/components/navigator/SearchNavigatorConstants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createNativeStackNavigator from "../../../../../../_runtime/07790_createNativeStackNavigator.js";
+import createNativeStackNavigator from "../../../../../../_runtime/07822_createNativeStackNavigator.js";
 
 const require = arg1;
 function ConnectedCreateThreadHeaderButton(channelId) {
@@ -25,7 +25,7 @@ function ConnectedCreateThreadHeaderButton(channelId) {
 }
 function CreateThreadHeaderButton(channel) {
   channel = channel.channel;
-  let obj = channel(6084);
+  let obj = channel(6116);
   [][0] = channel;
   const canStartThread = obj.useCanStartThread(channel);
   let tmp5 = null;
@@ -35,7 +35,7 @@ function CreateThreadHeaderButton(channel) {
     obj[0] = intl.string(tmp(1236).t.rBIGBL);
     obj[1] = tmp4;
     obj[2] = registerAssetDefault;
-    tmp5 = callback(tmp(7575).HeaderIconButton, obj);
+    tmp5 = callback(tmp(7607).HeaderIconButton, obj);
   }
   return tmp5;
 }
@@ -134,7 +134,7 @@ const memoResult = importAllResult.memo((navigation) => {
         route = route.route;
         let obj = {
           header(arg0) {
-            let obj = route(7575);
+            let obj = route(7607);
             obj = {};
             const merged = Object.assign(arg0);
             obj.shouldHandleSafeArea = route(500).isAndroid();

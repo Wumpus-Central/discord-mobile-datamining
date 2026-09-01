@@ -12,11 +12,11 @@ const result = require("set").fileFinishedImporting("modules/quests/native/Quest
 
 export default function QuestAccessSuspendedBottomSheet() {
   const callback = React.useCallback(() => {
-    let obj = callback2(4415);
-    obj.hideActionSheet(callback(14686).ACTION_SHEET_KEY);
+    let obj = callback2(4445);
+    obj.hideActionSheet(callback(14719).ACTION_SHEET_KEY);
     obj = { screen: constants.ACCOUNT, params: obj };
     obj = { initialTab: constants2.STANDING };
-    callback(6213).openUserSettings(obj);
+    callback(6245).openUserSettings(obj);
   }, []);
   let obj = { title: null, description: null, actions: null };
   const intl = getSystemLocale.intl;

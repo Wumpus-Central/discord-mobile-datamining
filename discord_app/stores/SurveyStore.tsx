@@ -3,7 +3,7 @@ import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import Storage2 from "../../discord_common/js/packages/storage/Storage.tsx";
 import setDefault from "../utils/Durations.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
-import hooksDefault from "../../_runtime/04045_hooks.js";
+import hooksDefault from "../../_runtime/04075_hooks.js";
 import overrideSurvey from "../actions/SurveyActionCreators.tsx";
 import closure_4 from "GuildMemberCountStore.tsx";
 import closure_5 from "GuildStore.tsx";
@@ -598,6 +598,7 @@ let c15 = false;
 let closure_16 = {};
 let c17 = null;
 let c18 = false;
+let c19 = null;
 const DAY = setDefault.Millis.DAY;
 const result = 10 * setDefault.Millis.HOUR;
 obj = { IS_OWNER: "is_owner", IS_ADMIN: "is_admin", IS_COMMUNITY: "is_community", GUILD_SIZE: "guild_size", IS_HUB: "is_hub", IS_VIEWING: "is_viewing", GUILD_PERMISSIONS: "guild_permissions", GUILD_SIZE_ALL: "guild_size_all" };
@@ -635,6 +636,9 @@ prototype["getCurrentSurvey"] = function getCurrentSurvey() {
 prototype["getSurveyOverride"] = function getSurveyOverride() {
   return obj.surveyOverride;
 };
+prototype["getActionTriggeredSurveyOverride"] = function getActionTriggeredSurveyOverride() {
+  return c19;
+};
 prototype["getLastSeenTimestamp"] = function getLastSeenTimestamp() {
   return obj.lastSeen;
 };
@@ -644,7 +648,7 @@ prototype["shouldAllowSurveyAction"] = function shouldAllowSurveyAction() {
   if (num == null) {
     num = 0;
   }
-  return timestamp - num >= closure_20;
+  return timestamp - num >= closure_21;
 };
 SurveyStore.displayName = "SurveyStore";
 SurveyStore.persistKey = "SurveyStore";
@@ -694,13 +698,18 @@ obj = {
   },
   SURVEY_OVERRIDE: function handleSurveyOverride(id) {
     id = id.id;
-    obj.surveyOverride = id;
-    if (null != id) {
-      const hiddenSurveys = obj.hiddenSurveys;
-      delete tmp[tmp2];
+    if (id.isActionTriggered) {
+      c19 = id;
+    } else {
+      c19 = null;
+      obj.surveyOverride = id;
+      if (null != id) {
+        const hiddenSurveys = obj.hiddenSurveys;
+        delete tmp2[tmp];
+      }
+      obj = overrideSurvey;
+      obj.surveyFetch(obj.surveyOverride, true);
     }
-    obj = overrideSurvey;
-    obj.surveyFetch(obj.surveyOverride, true);
   },
   PUSH_NOTIFICATION_CLICK: function handlePushNotificationClick() {
     c14 = true;

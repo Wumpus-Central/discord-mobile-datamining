@@ -34,7 +34,7 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -83,7 +83,7 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
             if (null == lib) {
               c4 = 0;
               c6 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else if (!closure_3.isCanceled) {
               if (200 === lib.status) {
                 lib(closure_1_0);
@@ -97,7 +97,7 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
                 if (closure_3.query.attempts > 5) {
                   c4 = 0;
                   c6 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 } else {
                   const _parseInt = parseInt;
                   callback = parseInt(lib.headers["retry-after"]);
@@ -120,7 +120,7 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
           }
           c4 = 0;
           c6 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
         c6 = 3;
       } catch (tmp49) {

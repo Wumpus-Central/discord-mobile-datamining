@@ -35,14 +35,14 @@ export default function _default() {
   const _require = tmp;
   let obj = useStickerPackCategories;
   const fetchStickerPacks = obj.useFetchStickerPacks();
-  analyticsLocations = analyticsLocations(5921)(analyticsLocations(5941).EMPTY_STATE).analyticsLocations;
+  analyticsLocations = analyticsLocations(5953)(analyticsLocations(5973).EMPTY_STATE).analyticsLocations;
   obj1 = initialize;
   const items = [closure_6];
   const stateFromStoresArray = obj1.useStateFromStoresArray(items, () => {
     const mapped = closure_7.map((arg0) => stickerById.getStickerById(arg0));
     return mapped.filter((arg0) => null != arg0);
   });
-  const tmp3 = analyticsLocations(5921);
+  const tmp3 = analyticsLocations(5953);
   [dependencyMap, closure_3] = callback(React.useState(null), 2);
   const items1 = [analyticsLocations];
   const effect = React.useEffect(() => {
@@ -108,9 +108,9 @@ export default function _default() {
       return closure_1_11(lib(closure_1_2[17]).PressableOpacity, obj, id);
     })
   };
-  obj5[0] = analyticsLocations(8183);
+  obj5[0] = analyticsLocations(8215);
   obj5[1] = tmp.nitroWheel;
-  obj4[0] = callback2(analyticsLocations(5461), obj5);
+  obj4[0] = callback2(analyticsLocations(5493), obj5);
   const intl3 = require("../../../intl/index.native.tsx").intl;
   obj4[1] = intl3.string(require("../../../intl/index.native.tsx").t.pj0XBN);
   obj4[4] = function onPress() {

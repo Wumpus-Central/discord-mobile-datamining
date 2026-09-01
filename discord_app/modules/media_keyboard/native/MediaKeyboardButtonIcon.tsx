@@ -1,6 +1,6 @@
 // discord_app/modules/media_keyboard/native/MediaKeyboardButtonIcon.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
-import _modDef4187 from "../../reanimated/ReanimatedRexport.tsx";
+import _modDef4217 from "../../reanimated/ReanimatedRexport.tsx";
 import useKeyboardTypeDefault from "../../keyboard/native/useKeyboardType.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
@@ -46,6 +46,6 @@ export const MediaKeyboardButtonIcon = function MediaKeyboardButtonIcon(arg0) {
     obj1 = {};
     const merged1 = Object.assign(merged);
     obj[1] = jsx(require("../../../design/components/Icon/native/redesign/generated/PlusLargeIcon.tsx").PlusLargeIcon, {});
-    return jsx(_modDef4187.View, { style: null, children: null });
+    return jsx(_modDef4217.View, { style: null, children: null });
   }
 };

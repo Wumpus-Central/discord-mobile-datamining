@@ -7,7 +7,7 @@ const require = arg1;
 let result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildAutoAddedThreadsAction.tsx");
 
 export default function useFavoritesGuildAutoAddedThreadsAction() {
-  let obj = hasAccess(10268);
+  let obj = hasAccess(10307);
   hasAccess = obj.useFavoritesAccess("useFavoritesGuildAutoAddedThreadsAction").hasAccess;
   const items = [closure_4];
   if (hasAccess) {
@@ -35,9 +35,9 @@ export default function useFavoritesGuildAutoAddedThreadsAction() {
     }
   }, items2);
   const intl = tmp(1236).intl;
-  obj[2] = intl.string(stateFromStores(3149).DIyQIF);
+  obj[2] = intl.string(stateFromStores(3179).DIyQIF);
   const intl2 = tmp(1236).intl;
-  obj[3] = intl2.string(stateFromStores(3149).g2vHYJ);
+  obj[3] = intl2.string(stateFromStores(3179).g2vHYJ);
   obj[4] = callback;
   return obj;
 };

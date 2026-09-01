@@ -70,7 +70,7 @@ let prototype = function SoundboardManager() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -95,7 +95,7 @@ let prototype = function SoundboardManager() {
               c4 = undefined;
               c5 = 1;
               c6 = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -142,7 +142,7 @@ let prototype = function SoundboardManager() {
               const result = obj2.reportSoundFinishedPlaying(c2, c3);
             }
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp30) {
           c3 = tmp30;

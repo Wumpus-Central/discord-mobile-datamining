@@ -1,6 +1,6 @@
 // discord_app/modules/instant_invite/resolveInvite.tsx
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
-import _modDef4681 from "../../utils/TrackedHTTPUtils.tsx";
+import _modDef4713 from "../../utils/TrackedHTTPUtils.tsx";
 import closure_3 from "../../stores/AuthenticationStore.tsx";
 import closure_4 from "../../stores/GuildStore.tsx";
 import InviteSendStates from "Constants.tsx";
@@ -155,8 +155,8 @@ export default function resolveInvite(inviteKey, arg1, inviteInstanceId) {
       return obj.exact(obj);
     };
     obj1[3] = obj2;
-    const value = _modDef4681.get(obj1);
-    const tmp4Result = _modDef4681;
+    const value = _modDef4713.get(obj1);
+    const tmp4Result = _modDef4713;
     const cleanupPromise = value.then((body) => {
       body = body.body;
       if (null != callback) {

@@ -7,7 +7,7 @@ import context2 from "../../../../design/components/TableRow/native/TableRadioGr
 import ClydeIcon from "../../../../design/components/Icon/native/redesign/generated/ClydeIcon.tsx";
 import VolumeSliderDefault from "../../../../components_native/common/VolumeSlider.tsx";
 import useHighlightSettingItem from "hooks/useHighlightSettingItem.tsx";
-import _modDef14314 from "SettingListItemHighlight.tsx";
+import _modDef14347 from "SettingListItemHighlight.tsx";
 import closure_5 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_6 from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
@@ -331,7 +331,7 @@ let closure_21 = importAllResult.memo((arg0) => {
     obj = { IconComponent: null, variant: null };
     obj[0] = IconComponent;
     obj[1] = variant;
-    tmp10Result = tmp10(tmp(5567).TableRow.Icon, obj);
+    tmp10Result = tmp10(tmp(5599).TableRow.Icon, obj);
   }
   obj[4] = tmp10Result;
   obj[5] = onPress;
@@ -342,7 +342,7 @@ let closure_21 = importAllResult.memo((arg0) => {
     if (typeof trailing === "string") {
       obj1 = { text: null };
       obj1[0] = trailing;
-      tmp10Result = tmp10(tmp(5567).TableRow.TrailingText, obj1);
+      tmp10Result = tmp10(tmp(5599).TableRow.TrailingText, obj1);
     }
     tmp12 = tmp10Result;
   }
@@ -354,7 +354,7 @@ let closure_21 = importAllResult.memo((arg0) => {
     const obj2 = { start: null, end: null };
     obj2[0] = start;
     obj2[1] = end;
-    highlightSettingItem = tmp10(_modDef14314, obj2);
+    highlightSettingItem = tmp10(_modDef14347, obj2);
   }
   children[1] = highlightSettingItem;
   return closure_16(closure_15, { children });
@@ -380,7 +380,7 @@ let closure_22 = importAllResult.memo((arg0) => {
     obj = { IconComponent: null, variant: null };
     obj[0] = IconComponent;
     obj[1] = variant;
-    tmp8Result = tmp8(tmp(5567).TableRow.Icon, obj);
+    tmp8Result = tmp8(tmp(5599).TableRow.Icon, obj);
   }
   obj[2] = tmp8Result;
   obj[3] = value;
@@ -389,7 +389,7 @@ let closure_22 = importAllResult.memo((arg0) => {
   obj[6] = onValueChange;
   obj[7] = start;
   obj[8] = end;
-  tmp8Result = tmp8(tmp(5961).TableSwitchRow, obj);
+  tmp8Result = tmp8(tmp(5993).TableSwitchRow, obj);
   let tmp8Result1 = tmp8Result;
   if (true === hasIcon) {
     obj1 = { children: null };
@@ -401,7 +401,7 @@ let closure_22 = importAllResult.memo((arg0) => {
     const obj2 = { start: null, end: null };
     obj2[0] = start;
     obj2[1] = end;
-    highlightSettingItem = tmp8(_modDef14314, obj2);
+    highlightSettingItem = tmp8(_modDef14347, obj2);
   }
   children[1] = highlightSettingItem;
   return closure_16(closure_15, { children });
@@ -437,7 +437,7 @@ let closure_24 = importAllResult.memo((arg0) => {
   if (highlightSettingItem) {
     obj = { start: true, end: true, style: null };
     obj[2] = tmp.radioSettingHighlight;
-    highlightSettingItem = callback3(_modDef14314, obj);
+    highlightSettingItem = callback3(_modDef14347, obj);
   }
   children[1] = highlightSettingItem;
   return closure_16(closure_15, { children });
@@ -446,7 +446,7 @@ let closure_25 = importAllResult.memo((arg0) => {
   ({ variant, useTrailing, useIsDisabled, useDescription, start, end, IconComponent } = arg0);
   let trailing;
   ({ setting, useTitle } = arg0);
-  let obj = trailing(14313);
+  let obj = trailing(14346);
   let highlightSettingItem = obj.useHighlightSettingItem(setting);
   trailing = undefined;
   const title = useTitle();
@@ -483,24 +483,24 @@ let closure_25 = importAllResult.memo((arg0) => {
     obj = { IconComponent: null, variant: null };
     obj[0] = IconComponent;
     obj[1] = variant;
-    tmp11Result = tmp11(tmp(5567).TableRow.Icon, obj);
+    tmp11Result = tmp11(tmp(5599).TableRow.Icon, obj);
   }
   obj[5] = tmp11Result;
   tmp11Result = null;
   if (null != trailing) {
     obj1 = { text: null };
     obj1[0] = trailing;
-    tmp11Result = tmp11(tmp(5567).TableRow.TrailingText, obj1);
+    tmp11Result = tmp11(tmp(5599).TableRow.TrailingText, obj1);
   }
   obj[6] = tmp11Result;
   obj[7] = start;
   obj[8] = end;
-  const children = [closure_14(trailing(5567).TableRow, obj), ];
+  const children = [closure_14(trailing(5599).TableRow, obj), ];
   if (highlightSettingItem) {
     let obj2 = { start: null, end: null };
     obj2[0] = start;
     obj2[1] = end;
-    highlightSettingItem = tmp11(_modDef14314, obj2);
+    highlightSettingItem = tmp11(_modDef14347, obj2);
   }
   children[1] = highlightSettingItem;
   return closure_16(closure_15, { children });
@@ -523,7 +523,7 @@ let closure_26 = importAllResult.memo((arg0) => {
     obj1 = { start: null, end: null };
     obj1[0] = start;
     obj1[1] = end;
-    highlightSettingItem = callback3(_modDef14314, obj1);
+    highlightSettingItem = callback3(_modDef14347, obj1);
   }
   children[1] = highlightSettingItem;
   return closure_16(closure_15, { children });

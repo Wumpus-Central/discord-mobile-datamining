@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/TieredTenureBadgeUtils.tsx
 import set from "../../../_runtime/00002_set.js";
-import hooksDefault from "../../../_runtime/04045_hooks.js";
+import hooksDefault from "../../../_runtime/04075_hooks.js";
 import GuildFeatures from "../premium/PremiumConstants.tsx";
 
 ({ TENURE_BADGES: obj1, TIERED_TENURE_BADGE_ORDER: c3 } = GuildFeatures);

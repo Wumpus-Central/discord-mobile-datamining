@@ -1,8 +1,8 @@
 // discord_app/design/animation/reanimated/ReanimatedConstants.tsx
 import set from "../../../../_runtime/00002_set.js";
-import _mod4187 from "../../../modules/reanimated/ReanimatedRexport.tsx";
+import _mod4217 from "../../../modules/reanimated/ReanimatedRexport.tsx";
 
-let obj = { duration: 1, reduceMotion: _mod4187.ReduceMotion.Always };
+let obj = { duration: 1, reduceMotion: _mod4217.ReduceMotion.Always };
 obj = {};
 const merged = Object.assign(obj);
 obj.reduceMotion = undefined;

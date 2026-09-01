@@ -8,7 +8,7 @@ import closure_6 from "../../stores/GuildChannelStore.tsx";
 import closure_7 from "../../stores/GuildStore.tsx";
 
 require = arg1;
-let closure_8 = { welcomeScreenModalVisible: false, shouldFetchGuildId: "Array" };
+let closure_8 = { welcomeScreenModalVisible: false, shouldFetchGuildId: "r" };
 const result = require("set").fileFinishedImporting("utils/native/WelcomeScreenUtils.tsx");
 
 export const useShowWelcomeModal = function useShowWelcomeModal(guildId, channelId) {
@@ -74,5 +74,5 @@ export const useShowWelcomeModal = function useShowWelcomeModal(guildId, channel
 export const openWelcomeActionSheet = function openWelcomeActionSheet(onHide) {
   const guildId = onHide.guildId;
   const obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj.openLazy(asyncRequireImpl(12162, dependencyMap.paths), "GuildWelcomeActionSheet" + guildId, { guildId, onHide: onHide.onHide });
+  obj.openLazy(asyncRequireImpl(12195, dependencyMap.paths), "GuildWelcomeActionSheet" + guildId, { guildId, onHide: onHide.onHide });
 };

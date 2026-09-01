@@ -1,5 +1,5 @@
 // discord_app/design/components/Button/native/BaseIconButton.native.tsx
-import _mod4187 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import _mod4217 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import IconSizesDefault from "../../../void/Icon/native/Icon.tsx";
 import MINIMUM_HIT_AREA from "ButtonConstants.native.tsx";
 import styleProperties from "ButtonHooks.native.tsx";
@@ -53,18 +53,18 @@ const forwardRefResult = importAllResult.forwardRef((variant, ref) => {
     num = scaleAmountInPx;
   }
   const tmp3 = callback(str, DEFAULT_BUTTON_SIZE);
-  let obj = _mod4187;
+  let obj = _mod4217;
   const sharedValue = obj.useSharedValue(0);
   obj1 = styleProperties;
   const iconTintStyles = obj1.useIconTintStyles(str);
   const iconSizeStyles = styleProperties.useIconSizeStyles(DEFAULT_BUTTON_SIZE, true, maxFontSizeMultiplier);
   let MEDIUM_BUTTON_HEIGHT = MINIMUM_HIT_AREA.LARGE_BUTTON_HEIGHT;
   if ("sm" === DEFAULT_BUTTON_SIZE) {
-    MEDIUM_BUTTON_HEIGHT = tmp4(4901).SMALL_BUTTON_HEIGHT;
+    MEDIUM_BUTTON_HEIGHT = tmp4(4933).SMALL_BUTTON_HEIGHT;
   } else if ("md" === DEFAULT_BUTTON_SIZE) {
-    MEDIUM_BUTTON_HEIGHT = tmp4(4901).MEDIUM_BUTTON_HEIGHT;
+    MEDIUM_BUTTON_HEIGHT = tmp4(4933).MEDIUM_BUTTON_HEIGHT;
   }
-  const bound = Math.max((tmp4(4901).MINIMUM_HIT_AREA - MEDIUM_BUTTON_HEIGHT) / 2, 0);
+  const bound = Math.max((tmp4(4933).MINIMUM_HIT_AREA - MEDIUM_BUTTON_HEIGHT) / 2, 0);
   obj = {};
   const merged = Object.assign(variant);
   obj.ref = ref;

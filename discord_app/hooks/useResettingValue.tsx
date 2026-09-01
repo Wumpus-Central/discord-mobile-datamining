@@ -13,7 +13,7 @@ export default function useResettingValue(arg0, arg1) {
   const tmp = callback(callback2(arg0), 2);
   dependencyMap = tmp[1];
   const tmp2 = useInitialValueDefault(() => {
-    const timeout = new callback(4332).Timeout();
+    const timeout = new callback(4362).Timeout();
     return timeout;
   });
   callback = tmp2;

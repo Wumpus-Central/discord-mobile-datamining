@@ -50,32 +50,50 @@ const forwardRefResult = importAllResult.forwardRef((initialIndex, ref) => {
   const itemCount = initialIndex.itemCount;
   const onScrollingChange = initialIndex.onScrollingChange;
   const tmp = callback();
+  let obj = importAllResult;
   ref = importAllResult.useRef(null);
   const sum = cardWidth + cardMarginRight;
   closure_5 = importAllResult.useRef(Math.max(0, Math.min(itemCount - 1, num)) * sum);
   let tmp4 = ref(sum.useState(() => Math.max(0, Math.min(itemCount - 1, num))), 2);
   const first = tmp4[0];
   closure_7 = tmp4[1];
-  let obj = num(onScrollingChange[8]);
+  [tmp7, closure_8] = ref(sum.useState(0), 2);
+  const tmp6 = ref(sum.useState(0), 2);
+  [tmp9, closure_9] = ref(sum.useState(0), 2);
+  obj1 = num(onScrollingChange[8]);
   let items = [closure_7];
-  const stateFromStores = obj.useStateFromStores(items, () => lib.useReducedMotion);
-  closure_9 = importAllResult.useRef(stateFromStores);
-  obj1 = num(onScrollingChange[9]);
-  let tmp19Result = first > 0;
-  closure_10 = tmp19Result;
-  tmp19Result = first < itemCount - 1;
-  closure_11 = tmp19Result;
+  const stateFromStores = obj1.useStateFromStores(items, () => lib.useReducedMotion);
+  closure_11 = importAllResult.useRef(stateFromStores);
+  let obj2 = num(onScrollingChange[9]);
+  let tmp14 = tmp9 > 0;
+  const isScreenReaderEnabled = obj2.useIsScreenReaderEnabled();
+  if (tmp14) {
+    const _Math = Math;
+    const _Math2 = Math;
+    const rounded = Math.round(tmp7);
+    tmp14 = rounded > Math.round(tmp9);
+  }
+  callback = tmp14;
+  let tmp25Result = tmp14;
+  if (tmp14) {
+    tmp25Result = first > 0;
+  }
+  closure_13 = tmp25Result;
+  tmp25Result = tmp14;
+  if (tmp14) {
+    tmp25Result = first < itemCount - 1;
+  }
+  closure_14 = tmp25Result;
   const items1 = [itemCount, sum];
-  const isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
   const items2 = [stateFromStores];
-  const memo = importAllResult.useMemo(() => {
+  const memo = obj.useMemo(() => {
     const array = new Array(itemCount);
     return array.fill(0).map((arg0, arg1) => arg1 * closure_4);
   }, items1);
-  const effect = importAllResult.useEffect(() => {
-    closure_9.current = stateFromStores;
+  const effect = obj.useEffect(() => {
+    closure_11.current = stateFromStores;
   }, items2);
-  const effect1 = importAllResult.useEffect(() => {
+  const effect1 = obj.useEffect(() => {
     const current = ref.current;
     if (0 !== current) {
       const current2 = ref.current;
@@ -87,7 +105,7 @@ const forwardRefResult = importAllResult.forwardRef((initialIndex, ref) => {
     }
   }, []);
   const items3 = [itemCount, sum];
-  callback = importAllResult.useCallback((arg0) => {
+  callback = obj.useCallback((arg0) => {
     const bound = Math.max(0, Math.min(itemCount - 1, arg0));
     lib(bound);
     const current = ref.current;
@@ -99,21 +117,21 @@ const forwardRefResult = importAllResult.forwardRef((initialIndex, ref) => {
     }
   }, items3);
   const items4 = [callback];
-  const imperativeHandle = importAllResult.useImperativeHandle(ref, () => ({ scrollToIndex: callback }), items4);
-  const items5 = [tmp19Result, tmp19Result];
+  const imperativeHandle = obj.useImperativeHandle(ref, () => ({ scrollToIndex: callback }), items4);
+  const items5 = [tmp25Result, tmp25Result];
   obj = { style: items6, children: null };
   items6 = [initialIndex.style, tmp.wrapper];
   obj = {
-    accessibilityActions: importAllResult.useMemo(() => {
+    accessibilityActions: obj.useMemo(() => {
       const items = [];
-      if (closure_10) {
+      if (closure_13) {
         let obj = { name: null, label: null };
-        obj[0] = closure_10;
+        obj[0] = stateFromStores;
         const intl = num(onScrollingChange[10]).intl;
         obj[1] = intl.string(num(onScrollingChange[10]).t.vgfxaA);
         items.push(obj);
       }
-      if (closure_11) {
+      if (closure_14) {
         obj = { name: null, label: null };
         obj[0] = closure_11;
         const intl2 = num(onScrollingChange[10]).intl;
@@ -128,15 +146,21 @@ const forwardRefResult = importAllResult.forwardRef((initialIndex, ref) => {
     horizontal: true,
     onAccessibilityAction(nativeEvent) {
       const actionName = nativeEvent.nativeEvent.actionName;
-      if (closure_10 === actionName) {
-        if (closure_10) {
+      if (stateFromStores === actionName) {
+        if (closure_13) {
           callback(first - 1);
         }
       } else if (closure_11 === actionName) {
-        if (closure_11) {
+        if (closure_14) {
           callback(first + 1);
         }
       }
+    },
+    onContentSizeChange(arg0) {
+      callback(arg0);
+    },
+    onLayout(nativeEvent) {
+      callback2(nativeEvent.nativeEvent.layout.width);
     },
     onMomentumScrollEnd(nativeEvent) {
       handleScrollEnd(nativeEvent);
@@ -151,53 +175,71 @@ const forwardRefResult = importAllResult.forwardRef((initialIndex, ref) => {
     },
     onScrollEndDrag: handleScrollEnd,
     ref,
-    scrollEnabled: !isScreenReaderEnabled,
-    snapToOffsets: memo,
-    children: Children.map(children, (arg0, arg1) => {
-      const obj = { accessibilityElementsHidden: arg1 !== first, importantForAccessibility: "no-hide-descendants", children: arg0 };
-      return stateFromStores(first, obj);
-    })
+    scrollEnabled: null,
+    snapToOffsets: null,
+    children: null
   };
-  Children = importAllResult.Children;
-  const items7 = [stateFromStores(closure_5, obj), , ];
-  if (tmp19Result) {
+  if (tmp14) {
+    tmp14 = !isScreenReaderEnabled;
+  }
+  obj[12] = tmp14;
+  obj[13] = memo;
+  const Children = obj.Children;
+  obj[14] = Children.map(children, (arg0, arg1) => {
+    let tmp4 = closure_12;
+    if (closure_12) {
+      tmp4 = arg1 !== first;
+    }
+    const obj = { accessibilityElementsHidden: tmp4, importantForAccessibility: null, children: null };
+    let str;
+    if (closure_12) {
+      if (arg1 !== first) {
+        str = "no-hide-descendants";
+      }
+    }
+    obj[1] = str;
+    obj[2] = arg0;
+    return closure_1_8(first, obj);
+  });
+  const items7 = [closure_8(closure_5, obj), , ];
+  if (tmp25Result) {
     function handleNavigatePrevious() {
-      if (closure_10) {
+      if (closure_13) {
         callback(first - 1);
       }
     }
     obj1 = { accessibilityLabel: null, accessibilityRole: "button", onPress: null, style: null, children: null };
-    let intl = tmp6(tmp7[10]).intl;
-    obj1[0] = intl.string(tmp6(tmp7[10]).t.vgfxaA);
+    let intl = tmp10(tmp11[10]).intl;
+    obj1[0] = intl.string(tmp10(tmp11[10]).t.vgfxaA);
     obj1[2] = handleNavigatePrevious;
     const items8 = [, ];
     ({ navigationButton: arr10[0], navigationButtonPrevious: arr10[1] } = tmp);
     obj1[3] = items8;
-    const obj2 = { color: null, size: "sm" };
-    obj2[0] = itemCount(tmp7[7]).colors.WHITE;
-    obj1[4] = tmp19(tmp6(tmp7[13]).ChevronLargeLeftIcon, obj2);
-    tmp19Result = tmp19(tmp6(tmp7[12]).PressableOpacity, obj1);
+    obj2 = { color: null, size: "sm" };
+    obj2[0] = itemCount(tmp11[7]).colors.WHITE;
+    obj1[4] = tmp25(tmp10(tmp11[13]).ChevronLargeLeftIcon, obj2);
+    tmp25Result = tmp25(tmp10(tmp11[12]).PressableOpacity, obj1);
   }
-  items7[1] = tmp19Result;
-  if (tmp19Result) {
+  items7[1] = tmp25Result;
+  if (tmp25Result) {
     function handleNavigateNext() {
-      if (closure_11) {
+      if (closure_14) {
         callback(first + 1);
       }
     }
     const obj3 = { accessibilityLabel: null, accessibilityRole: "button", onPress: null, style: null, children: null };
-    let intl2 = tmp6(tmp7[10]).intl;
-    obj3[0] = intl2.string(tmp6(tmp7[10]).t.XiOHRX);
+    let intl2 = tmp10(tmp11[10]).intl;
+    obj3[0] = intl2.string(tmp10(tmp11[10]).t.XiOHRX);
     obj3[2] = handleNavigateNext;
     const items9 = [, ];
     ({ navigationButton: arr11[0], navigationButtonNext: arr11[1] } = tmp);
     obj3[3] = items9;
     const obj4 = { color: null, size: "sm" };
-    obj4[0] = itemCount(tmp7[7]).colors.WHITE;
-    obj3[4] = tmp19(tmp6(tmp7[14]).ChevronLargeRightIcon, obj4);
-    tmp19Result = tmp19(tmp6(tmp7[12]).PressableOpacity, obj3);
+    obj4[0] = itemCount(tmp11[7]).colors.WHITE;
+    obj3[4] = tmp25(tmp10(tmp11[14]).ChevronLargeRightIcon, obj4);
+    tmp25Result = tmp25(tmp10(tmp11[12]).PressableOpacity, obj3);
   }
-  items7[2] = tmp19Result;
+  items7[2] = tmp25Result;
   obj[1] = items7;
   return closure_9(first, obj);
 });

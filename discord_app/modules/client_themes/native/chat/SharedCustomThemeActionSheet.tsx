@@ -24,10 +24,10 @@ function PrimaryActionButton(onPressApply) {
     obj[0] = intl2.string(tmp2(1236).t.pj0XBN);
     obj[1] = function onPressSubscribe() {
       const obj = { premiumType: TIER_2.TIER_2, analyticsLocations: null, analyticsLocation: null };
-      const items = [callback(5941).SHARE_CUSTOM_CLIENT_THEME_EMBED];
+      const items = [callback(5973).SHARE_CUSTOM_CLIENT_THEME_EMBED];
       obj[1] = items;
       obj[2] = {};
-      callback(7135)(obj);
+      callback(7167)(obj);
     };
     obj[2] = function renderIcon() {
       const style = [lib.nitroWheelButton];
@@ -40,7 +40,7 @@ function PrimaryActionButton(onPressApply) {
     const intl = tmp2(1236).intl;
     obj[0] = intl.string(tmp2(1236).t["1Qm822"]);
     obj[1] = onPressApply.onPressApply;
-    tmp6 = callback4(tmp2(4896).Button, obj);
+    tmp6 = callback4(tmp2(4928).Button, obj);
   }
   return tmp6;
 }

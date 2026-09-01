@@ -8,7 +8,7 @@ let closure_3 = ["height"];
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesSpecs.tsx");
 
 export default function useMessagesSpecs() {
-  fontScale = fontScale(4903).useFontScale();
+  fontScale = fontScale(4935).useFontScale();
   top = top(1628)().top;
   const items = [fontScale, top];
   return React.useMemo(() => {

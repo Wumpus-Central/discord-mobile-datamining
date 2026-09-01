@@ -6,7 +6,7 @@ import setDefault from "Durations.tsx";
 import getSystemLocale from "../intl/index.native.tsx";
 import isPremiumAtLeast from "PremiumTypeUtils.tsx";
 import messagesProxyDefault from "../modules/premium/premium_group/PremiumGroup.messages.js";
-import hooksDefault from "../../_runtime/04045_hooks.js";
+import hooksDefault from "../../_runtime/04075_hooks.js";
 import getNonePlanIdForIntervalType from "../modules/premium/PremiumSubscription.tsx";
 import _createGatewayCheckoutContext from "BillingUtils.tsx";
 import resetCache from "DateUtils.tsx";
@@ -134,8 +134,8 @@ function getPrice(id) {
         }
         obj5[2] = currency;
         obj3[1] = obj5;
-        const result = currency2(4124).captureBillingException(error, obj3);
-        const obj10 = currency2(4124);
+        const result = currency2(4154).captureBillingException(error, obj3);
+        const obj10 = currency2(4154);
       }
       throw error;
     } else {
@@ -146,7 +146,7 @@ function getPrice(id) {
     const _Error2 = Error;
     const error1 = new Error("Plan not found");
     if (flag3) {
-      obj2 = currency2(4124);
+      obj2 = currency2(4154);
       const obj6 = { planId: null, currency: null };
       obj6[0] = id;
       let str = currency;
@@ -609,7 +609,7 @@ function getPlanDescription(arg0) {
   const tmp4 = getPrice(dependencyMap3[planId].id, false, false, obj, true);
   const interval = tmp.interval;
   const tmp5 = planIdsForSkus;
-  obj1 = planIdsForSkus(6049);
+  obj1 = planIdsForSkus(6081);
   if (constants7.MONTH === interval) {
     const intl2 = tmp5(1236).intl;
     let stringResult = intl2.string(tmp5(1236).t.FPybU7);
@@ -847,10 +847,10 @@ function getPlanDescription(arg0) {
                 } else if (tmp17.PAST_DUE === CANCELED) {
                   const intl7 = tmp5(1236).intl;
                   const obj12 = { endDate: null, onClick: null };
-                  let tmp5Result = tmp5(4133);
+                  let tmp5Result = tmp5(4163);
                   obj12[0] = tmp5Result.dateFormat(getBillingGracePeriodDaysAndExpiresDate(subscription).expiresDate, "LL");
                   obj12[1] = function onClick() {
-                    callback(4154)("https://support.discord.com/hc/articles/23082866222871");
+                    callback(4184)("https://support.discord.com/hc/articles/23082866222871");
                   };
                   return intl7.format(tmp5(1236).t["d+0vwo"], obj12);
                 } else if (!hasDiscountApplied) {
@@ -985,10 +985,10 @@ function getPlanDescription(arg0) {
             } else if (tmp17.PAST_DUE === CANCELED) {
               const intl15 = tmp5(1236).intl;
               const obj20 = { endDate: null, onClick: null };
-              tmp5Result = tmp5(4133);
+              tmp5Result = tmp5(4163);
               obj20[0] = tmp5Result.dateFormat(getBillingGracePeriodDaysAndExpiresDate(subscription).expiresDate, "LL");
               obj20[1] = function onClick() {
-                callback(4154)("https://support.discord.com/hc/articles/23082866222871");
+                callback(4184)("https://support.discord.com/hc/articles/23082866222871");
               };
               return intl15.format(tmp5(1236).t["d+0vwo"], obj20);
             } else {
@@ -1063,9 +1063,9 @@ function getPlanDescription(arg0) {
         } else if (tmp17.PAST_DUE === CANCELED) {
           const intl22 = tmp5(1236).intl;
           const obj26 = { endDate: null, onClick: null };
-          obj26[0] = tmp5(4133).dateFormat(getBillingGracePeriodDaysAndExpiresDate(subscription).expiresDate, "LL");
+          obj26[0] = tmp5(4163).dateFormat(getBillingGracePeriodDaysAndExpiresDate(subscription).expiresDate, "LL");
           obj26[1] = function onClick() {
-            callback(4154)("https://support.discord.com/hc/articles/23082866222871");
+            callback(4184)("https://support.discord.com/hc/articles/23082866222871");
           };
           return intl22.format(tmp5(1236).t["d+0vwo"], obj26);
         } else {
@@ -1184,7 +1184,7 @@ function getBillingGracePeriodDaysAndExpiresDate(subscription) {
       const tmp11 = importDefault;
       const tmp13 = hooksDefault;
       obj2[0] = hooksDefault(prop4).diff(subscription.currentPeriodStart, "days");
-      obj2[1] = tmp11(4045)(subscription.metadata.grace_period_expires_date);
+      obj2[1] = tmp11(4075)(subscription.metadata.grace_period_expires_date);
       return obj2;
     } else {
       const tmp8 = null == subscription.paymentSourceId ? closure_19 : closure_30;
@@ -2527,40 +2527,40 @@ obj = {
       if (stateFromStores != null) {
         perks = stateFromStores.perks;
       }
-      hasPerkResult = tmp(1942).hasPerk(perks, tmp(1938).Perk.MONTHLY_ORBS);
-      const tmpResult = tmp(1942);
+      hasPerkResult = tmp(1928).hasPerk(perks, tmp(1930).Perk.MONTHLY_ORBS);
+      const tmpResult = tmp(1928);
     }
     return hasPerkResult;
   },
   canUseShopDiscounts(currentUser) {
     let isXboxGamePassPerksEnabled = apexExperiment.getIsXboxGamePassPerksEnabled("canUseShopDiscounts");
     if (isXboxGamePassPerksEnabled) {
-      let tmpResult = tmp(1942);
+      let tmpResult = tmp(1928);
       let perks;
       if (currentUser != null) {
         perks = currentUser.perks;
       }
-      isXboxGamePassPerksEnabled = tmpResult.hasPerk(perks, tmp(1938).Perk.SHOP_DISCOUNTS);
+      isXboxGamePassPerksEnabled = tmpResult.hasPerk(perks, tmp(1930).Perk.SHOP_DISCOUNTS);
     }
     if (!isXboxGamePassPerksEnabled) {
-      tmpResult = tmp(13686);
-      isXboxGamePassPerksEnabled = tmpResult.canUserUse(tmp(13686).COLLECTIBLES, currentUser);
+      tmpResult = tmp(13719);
+      isXboxGamePassPerksEnabled = tmpResult.canUserUse(tmp(13719).COLLECTIBLES, currentUser);
     }
     return isXboxGamePassPerksEnabled;
   },
   canUseMoreQuestOrbs(perks) {
     let isXboxGamePassPerksEnabled = apexExperiment.getIsXboxGamePassPerksEnabled("canUseMoreQuestOrbs");
     if (isXboxGamePassPerksEnabled) {
-      let tmpResult = tmp(1942);
+      let tmpResult = tmp(1928);
       perks = undefined;
       if (perks != null) {
         perks = perks.perks;
       }
-      isXboxGamePassPerksEnabled = tmpResult.hasPerk(perks, tmp(1938).Perk.MORE_QUEST_ORBS);
+      isXboxGamePassPerksEnabled = tmpResult.hasPerk(perks, tmp(1930).Perk.MORE_QUEST_ORBS);
     }
     if (!isXboxGamePassPerksEnabled) {
-      tmpResult = tmp(13686);
-      isXboxGamePassPerksEnabled = tmpResult.canUserUse(tmp(13686).QUEST_ORB_MULTIPLIER, perks);
+      tmpResult = tmp(13719);
+      isXboxGamePassPerksEnabled = tmpResult.canUserUse(tmp(13719).QUEST_ORB_MULTIPLIER, perks);
     }
     return isXboxGamePassPerksEnabled;
   },

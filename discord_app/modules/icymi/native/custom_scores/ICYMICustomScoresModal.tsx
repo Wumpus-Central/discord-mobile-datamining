@@ -2,7 +2,7 @@
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createNativeStackNavigator from "../../../../../_runtime/07790_createNativeStackNavigator.js";
+import createNativeStackNavigator from "../../../../../_runtime/07822_createNativeStackNavigator.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 
@@ -42,12 +42,12 @@ export default function ICYMICustomScoresModal() {
       const obj = { title: null, headerLeft: null };
       const intl = lib(1236).intl;
       obj[0] = intl.string(lib(1236).t.jVshKt);
-      obj[1] = lib(7575).getRenderModalCloseImage(navigation.navigation);
-      const merged = Object.assign(callback(10624)());
+      obj[1] = lib(7607).getRenderModalCloseImage(navigation.navigation);
+      const merged = Object.assign(callback(10662)());
       return obj;
     },
     getComponent() {
-      return lib(16009).default;
+      return lib(16044).default;
     }
   };
   const items = [
@@ -55,11 +55,11 @@ export default function ICYMICustomScoresModal() {
     callback(closure_5.Screen, {
       name: "guild",
       options(navigation) {
-        const obj = { headerLeft: lib(7575).getRenderModalBackImage(navigation.navigation) };
+        const obj = { headerLeft: lib(7607).getRenderModalBackImage(navigation.navigation) };
         return obj;
       },
       getComponent() {
-        return lib(16010).default;
+        return lib(16045).default;
       }
     })
   ];

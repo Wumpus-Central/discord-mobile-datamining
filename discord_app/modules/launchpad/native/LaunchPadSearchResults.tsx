@@ -7,11 +7,11 @@ import renderCategoryItem from "../../channel_list_v2/native/items/RedesignCateg
 import getLayoutStyleDefault from "shared/getLayoutStyles.tsx";
 import itemsDefault from "shared/renderChannelPressableWrapper.tsx";
 import renderChannelWrapperDefault from "shared/renderChannelWrapper.tsx";
-import _modDef16526 from "shared/UnreadBadge.tsx";
+import _modDef16562 from "shared/UnreadBadge.tsx";
 import ChannelContentDefault from "shared/renderChannelContent.tsx";
 import renderChannelBadgeDefault from "shared/renderChannelBadge.tsx";
-import _modDef16530 from "shared/TextChannel.tsx";
-import _modDef16536 from "shared/DMChannel.tsx";
+import _modDef16566 from "shared/TextChannel.tsx";
+import _modDef16572 from "shared/DMChannel.tsx";
 import handleVoiceOrStageChannelConnectPressDefault from "shared/VoiceOrStageChannel.tsx";
 import userDefault from "LaunchPadSearchResultUser.tsx";
 import importAllResult from "../../../../_runtime/00019_noop.js";
@@ -34,30 +34,30 @@ function renderItemJSX(result) {
       let obj = { guild: null };
       obj[0] = result.record;
       return callback(closure_14, obj);
-    } else if (tmp13(9885).AutocompleterResultTypes.TEXT_CHANNEL === type) {
+    } else if (tmp13(9924).AutocompleterResultTypes.TEXT_CHANNEL === type) {
       obj = { channel: null, navigationReplace: true, showGuildBadgeIcon: true };
       obj[0] = result.record;
-      return callback(_modDef16530, obj);
-    } else if (tmp13(9885).AutocompleterResultTypes.GROUP_DM === type) {
+      return callback(_modDef16566, obj);
+    } else if (tmp13(9924).AutocompleterResultTypes.GROUP_DM === type) {
       obj1 = { channel: null, navigationReplace: true };
       obj1[0] = result.record;
-      return callback(_modDef16536, obj1);
-    } else if (tmp13(9885).AutocompleterResultTypes.VOICE_CHANNEL === type) {
+      return callback(_modDef16572, obj1);
+    } else if (tmp13(9924).AutocompleterResultTypes.VOICE_CHANNEL === type) {
       const obj2 = { channel: null };
       obj2[0] = result.record;
       return callback(handleVoiceOrStageChannelConnectPressDefault, obj2);
-    } else if (tmp13(9885).AutocompleterResultTypes.USER === type) {
+    } else if (tmp13(9924).AutocompleterResultTypes.USER === type) {
       ({ record: obj4[0], comparator: obj4[1] } = result);
       return callback(userDefault, { user: null, comparator: null });
-    } else if (tmp13(9885).AutocompleterResultTypes.HEADER === type) {
+    } else if (tmp13(9924).AutocompleterResultTypes.HEADER === type) {
       const obj4 = { name: null, styles: null };
       obj4[0] = result.record.text;
       obj4[1] = tmp;
-      return tmp13(15659).renderCategoryItem(obj4);
+      return tmp13(15695).renderCategoryItem(obj4);
     } else {
       obj = { variant: "text-sm/semibold", children: null };
       obj[1] = result.type;
-      return callback(tmp13(4444).Text, obj);
+      return callback(tmp13(4474).Text, obj);
     }
   }
 }
@@ -90,7 +90,7 @@ let closure_14 = importAllResult.memo((guild) => {
   const items1 = [closure_6];
   const stateFromStoresObject = obj.useStateFromStoresObject(items1, () => ({ unread: closure_1_6.hasUnread(guild.id), mentionCount: closure_1_6.getMentionCount(guild.id), isMentionLowImportance: closure_1_6.getIsMentionLowImportance(guild.id) }));
   ({ unread, mentionCount, isMentionLowImportance } = stateFromStoresObject);
-  obj1 = guild(4903);
+  obj1 = guild(4935);
   const fontScale = obj1.useFontScale();
   let obj2 = guild(589);
   const items2 = [closure_5];
@@ -100,7 +100,7 @@ let closure_14 = importAllResult.memo((guild) => {
   obj = { children: null };
   const tmp7 = itemsDefault;
   obj1 = { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES };
-  const items4 = [callback(_modDef16526, obj1), , ];
+  const items4 = [callback(_modDef16562, obj1), , ];
   obj2 = { size: tmp2.icon.guildIconSize, guild, style: items5 };
   items5 = [tmp.guildIcon, tmp2.icon.margin];
   items4[1] = callback(GuildIconSizesDefault, obj2);
@@ -110,7 +110,7 @@ let closure_14 = importAllResult.memo((guild) => {
   items4[2] = ChannelContentDefault(obj3);
   obj[0] = items4;
   obj[3] = tmp8(callback2(closure_10, obj), { fontScale });
-  return tmp7(callback(guild(5036).PressableHighlight, obj));
+  return tmp7(callback(guild(5068).PressableHighlight, obj));
 });
 let closure_16 = importAllResult.memo((arg0) => {
   ({ name, onPress, note } = arg0);

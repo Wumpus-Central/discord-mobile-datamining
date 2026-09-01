@@ -1,6 +1,6 @@
 // discord_app/modules/premium/referral_program/hooks/native/useReferralProgramCoachmark.tsx
 import preloadDefault from "../../../../../components_native/common/FastImage.tsx";
-import registerAssetDefault from "../../../../../../_runtime/16334_registerAsset.js";
+import registerAssetDefault from "../../../../../../_runtime/16370_registerAsset.js";
 import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";

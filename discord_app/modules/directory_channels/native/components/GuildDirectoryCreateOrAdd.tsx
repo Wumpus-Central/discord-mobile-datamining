@@ -82,9 +82,9 @@ let closure_13 = importAllResult.memo((guild) => {
   let obj = guild(589);
   const items = [closure_8];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getDirectoryEntry(directoryChannelId, guild.id));
-  obj = { label: guild.name, icon: callback(directoryChannelId(5972), obj), trailing: callback(directoryChannelId(11847), { entry: stateFromStores }), start, end };
+  obj = { label: guild.name, icon: callback(directoryChannelId(6004), obj), trailing: callback(directoryChannelId(11880), { entry: stateFromStores }), start, end };
   obj = { style: callback3().guildIcon, guild };
-  return callback(guild(5567).TableRow, obj);
+  return callback(guild(5599).TableRow, obj);
 });
 let closure_14 = importAllResult.memo((guild) => {
   guild = guild.guild;
@@ -101,11 +101,11 @@ let closure_14 = importAllResult.memo((guild) => {
     end: null
   };
   obj = { style: callback3().guildIcon, guild };
-  obj[2] = callback(handleItemPress(5972), obj);
-  obj[3] = callback(guild(5567).TableRow.Arrow, {});
+  obj[2] = callback(handleItemPress(6004), obj);
+  obj[3] = callback(guild(5599).TableRow.Arrow, {});
   obj[4] = start;
   obj[5] = end;
-  return callback(guild(5567).TableRow, obj);
+  return callback(guild(5599).TableRow, obj);
 });
 let obj2 = { paddingHorizontal: ThemesDefault.space.PX_12, width: "100%", marginTop: 18 };
 const result = require("set").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryCreateOrAdd.tsx");

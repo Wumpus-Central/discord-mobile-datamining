@@ -50,7 +50,7 @@ function _retryACOMRequest() {
           obj[0] = value;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -143,7 +143,7 @@ function _retryACOMRequest() {
               const obj13 = obj8(1473);
               const _Math = Math;
               const _Date2 = Date;
-              items[1] = callback(4332).timeoutPromise(Math.max(0, dependencyMap - Date.now()));
+              items[1] = callback(4362).timeoutPromise(Math.max(0, dependencyMap - Date.now()));
               constants = 4;
               c7 = 1;
               const obj7 = { value: null, done: false };

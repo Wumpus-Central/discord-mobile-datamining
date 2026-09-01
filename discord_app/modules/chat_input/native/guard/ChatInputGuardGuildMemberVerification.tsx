@@ -1,8 +1,8 @@
 // discord_app/modules/chat_input/native/guard/ChatInputGuardGuildMemberVerification.tsx
 import playDefault from "../../../../components_native/common/LottieAnimationView.tsx";
 import ChatInputGuardDefault from "ChatInputGuard.tsx";
-import registerAssetDefault from "../../../../../_runtime/11988_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/11989_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/12021_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/12022_registerAsset.js";
 import { Image } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_4 from "../../../a11y/AccessibilityStore.tsx";
 import { TextAreaCta } from "../ChatInputConstants.tsx";
@@ -16,13 +16,13 @@ let closure_8 = createCacheKey.createStyles({ noticeIcon: { height: 36, width: 3
 const memoResult = importAllResult.memo(function ChatInputGuardGuildMemberVerification(guildId) {
   guildId = guildId.guildId;
   const tmp = callback();
-  let obj = guildId(7632);
+  let obj = guildId(7664);
   const currentUserGuildJoinRequest = obj.useCurrentUserGuildJoinRequest(guildId);
   let applicationStatus;
   if (currentUserGuildJoinRequest != null) {
     applicationStatus = currentUserGuildJoinRequest.applicationStatus;
   }
-  if (guildId(4272).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
+  if (guildId(4302).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
     let tmp8 = registerAssetDefault;
     const intl3 = tmp2(1236).intl;
     let stringResult = intl3.string(tmp2(1236).t.lk30cY);
@@ -33,7 +33,7 @@ const memoResult = importAllResult.memo(function ChatInputGuardGuildMemberVerifi
       obj = { guildId, canWithdraw: false };
       const result = guildId(closure_1_2[12]).openMemberVerificationRejectedAlert(obj);
     };
-  } else if (tmp2(4272).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
+  } else if (tmp2(4302).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
     tmp8 = registerAssetDefault2;
     const intl2 = tmp2(1236).intl;
     stringResult = intl2.string(tmp2(1236).t["5iLvSx"]);
@@ -46,7 +46,7 @@ const memoResult = importAllResult.memo(function ChatInputGuardGuildMemberVerifi
       obj[1] = intl.string(guildId(closure_1_2[10]).t["13tjTU"]);
       const result = guildId(closure_1_2[12]).openMemberVerificationCancelPendingAlert(obj);
     };
-    const tmp7 = jsx(tmp2(5519).XSmallIcon, {});
+    const tmp7 = jsx(tmp2(5551).XSmallIcon, {});
   } else {
     let intl = tmp2(1236).intl;
     stringResult = intl.string(tmp2(1236).t.rEBKvg);
@@ -69,7 +69,7 @@ const memoResult = importAllResult.memo(function ChatInputGuardGuildMemberVerifi
   } else {
     obj = { style: null, source: null, autoPlay: null };
     obj[0] = tmp.lottieAnimation;
-    obj[1] = tmp2(11990);
+    obj[1] = tmp2(12023);
     obj[2] = !stateFromStores;
     tmp13Result = tmp13(playDefault, obj);
     const tmp14Result = playDefault;

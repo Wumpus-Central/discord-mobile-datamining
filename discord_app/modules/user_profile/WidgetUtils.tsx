@@ -2,7 +2,7 @@
 import GAME_WIDGET_LIMITS_BY_TYPE from "../../../discord_common/js/shared/shared-constants/GameWidgetLimits.tsx";
 import isAgeRestrictedContentClassification from "../content_classification/utils.tsx";
 import items3 from "UserProfileGameWidgetTypes.tsx";
-import _modDef7341 from "WidgetActionCreators.tsx";
+import _modDef7373 from "WidgetActionCreators.tsx";
 import convertClip from "UserProfileClipsGalleryWidgetTypes.tsx";
 import createDefaultFieldsSection from "UserProfilePersonalWidget.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
@@ -96,7 +96,7 @@ export const getGameWidgetSubtitle = function getGameWidgetSubtitle(games, showE
       } else {
         const intl = tmp(1236).intl;
         const obj = { numGames: null };
-        obj[0] = tmp(5024).GAME_WIDGET_LIMITS_BY_TYPE[games.type];
+        obj[0] = tmp(5055).GAME_WIDGET_LIMITS_BY_TYPE[games.type];
         stringResult = intl.format(tmp(1236).t["zR1+0/"], obj);
       }
       return stringResult;
@@ -168,19 +168,19 @@ export const addWidgetToPending = function addWidgetToPending(type) {
     return uniqueKey === type.getUniqueKey();
   })) {
     if (type.type === require("../../../discord_common/js/shared/shared-constants/WidgetType.tsx").WidgetType.PERSONAL) {
-      let tmp16Result = tmp16(4268);
+      let tmp13Result = tmp13(4298);
       obj = { dismissAction: null };
       obj[0] = ContentDismissActionType.INDIRECT_ACTION;
-      const result = tmp16Result.UNSAFE_markDismissibleContentAsDismissed(tmp16(1373).DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_COACHMARK, obj);
-      tmp16Result = tmp16(4268);
+      const result = tmp13Result.UNSAFE_markDismissibleContentAsDismissed(tmp13(1373).DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_COACHMARK, obj);
+      tmp13Result = tmp13(4298);
       obj = { dismissAction: null };
       obj[0] = ContentDismissActionType.INDIRECT_ACTION;
-      const result1 = tmp16Result.UNSAFE_markDismissibleContentAsDismissed(tmp16(1373).DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_NEW_BADGE, obj);
+      const result1 = tmp13Result.UNSAFE_markDismissibleContentAsDismissed(tmp13(1373).DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_NEW_BADGE, obj);
     }
     const items = [type];
     HermesBuiltin.arraySpread(tmp7, 1);
-    _modDef7341.setPendingWidgets(items);
-    const obj6 = _modDef7341;
+    _modDef7373.setPendingWidgets(items);
+    const obj2 = _modDef7373;
   }
 };
 export const removeWidgetFromPending = function removeWidgetFromPending(arg0) {
@@ -209,7 +209,7 @@ export const removeWidgetFromPending = function removeWidgetFromPending(arg0) {
     const uniqueKey = getUniqueKey.getUniqueKey();
     return uniqueKey !== uniqueKey.getUniqueKey();
   });
-  _modDef7341.setPendingWidgets(found);
+  _modDef7373.setPendingWidgets(found);
 };
 export const addPendingClipToClipsGalleryWidget = function addPendingClipToClipsGalleryWidget(arg0) {
   let obj = closure_6;
@@ -255,8 +255,8 @@ export const addPendingClipToClipsGalleryWidget = function addPendingClipToClips
     items[HermesBuiltin.arraySpread(clips, 0)] = arg0;
     obj[1] = items;
     const clipsGalleryWidget = new convertClip.ClipsGalleryWidget(obj);
-    _modDef7341.setPendingWidgets(replaceWidgetInList(clipsGalleryWidget));
-    const obj3 = _modDef7341;
+    _modDef7373.setPendingWidgets(replaceWidgetInList(clipsGalleryWidget));
+    const obj3 = _modDef7373;
   }
 };
 export const updateClipTitleInClipsGalleryWidget = function updateClipTitleInClipsGalleryWidget(arg0, str) {
@@ -305,8 +305,8 @@ export const updateClipTitleInClipsGalleryWidget = function updateClipTitleInCli
       return tmp;
     });
     const clipsGalleryWidget = new require("UserProfileClipsGalleryWidgetTypes.tsx").ClipsGalleryWidget(obj);
-    _modDef7341.setPendingWidgets(replaceWidgetInList(clipsGalleryWidget));
-    const obj3 = _modDef7341;
+    _modDef7373.setPendingWidgets(replaceWidgetInList(clipsGalleryWidget));
+    const obj3 = _modDef7373;
   }
 };
 export const reorderClipsInClipsGalleryWidget = function reorderClipsInClipsGalleryWidget(arg0, arg1) {
@@ -348,8 +348,8 @@ export const reorderClipsInClipsGalleryWidget = function reorderClipsInClipsGall
               obj[0] = found.id;
               obj[1] = items;
               const clipsGalleryWidget = new convertClip.ClipsGalleryWidget(obj);
-              _modDef7341.setPendingWidgets(replaceWidgetInList(clipsGalleryWidget));
-              const obj3 = _modDef7341;
+              _modDef7373.setPendingWidgets(replaceWidgetInList(clipsGalleryWidget));
+              const obj3 = _modDef7373;
             }
           }
         }
@@ -403,8 +403,8 @@ export const updateClipTagsInClipsGalleryWidget = function updateClipTagsInClips
         return tmp;
       });
       const clipsGalleryWidget = new require("UserProfileClipsGalleryWidgetTypes.tsx").ClipsGalleryWidget(obj);
-      _modDef7341.setPendingWidgets(replaceWidgetInList(clipsGalleryWidget));
-      const obj2 = _modDef7341;
+      _modDef7373.setPendingWidgets(replaceWidgetInList(clipsGalleryWidget));
+      const obj2 = _modDef7373;
     }
     obj3 = closure_6;
   }
@@ -494,9 +494,9 @@ export const removeTagFromClip = function removeTagFromClip(arg0, arg1) {
             }
             return tmp;
           });
-          const clipsGalleryWidget = new tmp10(7342).ClipsGalleryWidget(obj);
-          found2(7341).setPendingWidgets(replaceWidgetInList(clipsGalleryWidget));
-          const obj3 = found2(7341);
+          const clipsGalleryWidget = new tmp10(7374).ClipsGalleryWidget(obj);
+          found2(7373).setPendingWidgets(replaceWidgetInList(clipsGalleryWidget));
+          const obj3 = found2(7373);
         }
       }
       tmp10 = _require;
@@ -535,8 +535,8 @@ export const removeClipFromClipsGalleryWidget = function removeClipFromClipsGall
     ({ id: obj2[0], clips } = found);
     obj[1] = clips.filter((id) => id.id !== closure_0);
     const clipsGalleryWidget = new require("UserProfileClipsGalleryWidgetTypes.tsx").ClipsGalleryWidget(obj);
-    _modDef7341.setPendingWidgets(replaceWidgetInList(clipsGalleryWidget));
-    const obj3 = _modDef7341;
+    _modDef7373.setPendingWidgets(replaceWidgetInList(clipsGalleryWidget));
+    const obj3 = _modDef7373;
   }
 };
 export const updatePersonalWidget = function updatePersonalWidget(arg0) {
@@ -571,7 +571,7 @@ export const updatePersonalWidget = function updatePersonalWidget(arg0) {
   obj = closure_6;
   const tmp = replaceWidgetInList;
   const tmpResult = replaceWidgetInList(arg0(found));
-  _modDef7341.setPendingWidgets(tmpResult);
+  _modDef7373.setPendingWidgets(tmpResult);
 };
 export const updatePendingGameTags = function updatePendingGameTags(widgetType, arg1, tags) {
   const _require = arg1;
@@ -597,8 +597,8 @@ export const updatePendingGameTags = function updatePendingGameTags(widgetType, 
         obj.games = mapped;
         const baseGameWidget = new require("UserProfileGameWidgetTypes.tsx").BaseGameWidget(obj);
         const tmp21 = replaceWidgetInList(baseGameWidget);
-        obj(7341).setPendingWidgets(tmp21);
-        const obj3 = obj(7341);
+        obj(7373).setPendingWidgets(tmp21);
+        const obj3 = obj(7373);
       }
     }
   }
@@ -640,10 +640,10 @@ export const removeTagFromGame = function removeTagFromGame(widgetType) {
                 obj = {};
                 const merged1 = Object.assign(tmpResult);
                 obj.games = mapped;
-                const baseGameWidget = new tmp4(7336).BaseGameWidget(obj);
+                const baseGameWidget = new tmp4(7368).BaseGameWidget(obj);
                 const tmp22 = replaceWidgetInList(baseGameWidget);
-                obj(7341).setPendingWidgets(tmp22);
-                const obj3 = obj(7341);
+                obj(7373).setPendingWidgets(tmp22);
+                const obj3 = obj(7373);
               }
             }
           }
@@ -677,8 +677,8 @@ export const updatePendingGameComment = function updatePendingGameComment(widget
         obj.games = mapped;
         const baseGameWidget = new require("UserProfileGameWidgetTypes.tsx").BaseGameWidget(obj);
         const tmp19 = replaceWidgetInList(baseGameWidget);
-        obj(7341).setPendingWidgets(tmp19);
-        const obj3 = obj(7341);
+        obj(7373).setPendingWidgets(tmp19);
+        const obj3 = obj(7373);
       }
     }
   }
@@ -691,8 +691,8 @@ export const addPendingGameToWidget = function addPendingGameToWidget(ignoreMaxG
   }
   const tmp = findGameWidget(widgetType);
   let num = 0;
-  if (widgetType in game(5024).GAME_WIDGET_LIMITS_BY_TYPE) {
-    num = tmp2(5024).GAME_WIDGET_LIMITS_BY_TYPE[widgetType];
+  if (widgetType in game(5055).GAME_WIDGET_LIMITS_BY_TYPE) {
+    num = tmp2(5055).GAME_WIDGET_LIMITS_BY_TYPE[widgetType];
   }
   if (null != tmp) {
     const games = tmp.games;
@@ -729,11 +729,11 @@ export const addPendingGameToWidget = function addPendingGameToWidget(ignoreMaxG
   obj = {};
   const merged = Object.assign(tmp8);
   obj.games = items1;
-  const baseGameWidget = new tmp2(7336).BaseGameWidget(obj);
+  const baseGameWidget = new tmp2(7368).BaseGameWidget(obj);
   const tmp7 = replaceWidgetInList;
   const tmp7Result = replaceWidgetInList(baseGameWidget);
-  _modDef7341.setPendingWidgets(tmp7Result);
-  const useGame = tmp2(6122).useGame;
+  _modDef7373.setPendingWidgets(tmp7Result);
+  const useGame = tmp2(6154).useGame;
   const items2 = [game.gameId];
   const many = useGame.fetchMany(items2);
 };
@@ -766,8 +766,8 @@ export const reorderWidgets = function reorderWidgets(arg0, arg1) {
             const items = [];
             HermesBuiltin.arraySpread(widgets, 0);
             items.splice(arg1, 0, callback(items.splice(arg0, 1), 1)[0]);
-            _modDef7341.setPendingWidgets(items);
-            const obj = _modDef7341;
+            _modDef7373.setPendingWidgets(items);
+            const obj = _modDef7373;
           }
         }
       }
@@ -792,8 +792,8 @@ export const reorderGamesInWidget = function reorderGamesInWidget(widgetType) {
                 obj.games = items;
                 const baseGameWidget = new items3.BaseGameWidget(obj);
                 const tmp19 = replaceWidgetInList(baseGameWidget);
-                _modDef7341.setPendingWidgets(tmp19);
-                const obj2 = _modDef7341;
+                _modDef7373.setPendingWidgets(tmp19);
+                const obj2 = _modDef7373;
               }
             }
           }
@@ -813,8 +813,8 @@ export const removePendingGameFromWidget = function removePendingGameFromWidget(
     const baseGameWidget = new require("UserProfileGameWidgetTypes.tsx").BaseGameWidget(obj);
     const arr = null != merged.games ? merged.games : [];
     const tmp13 = replaceWidgetInList(baseGameWidget);
-    _modDef7341.setPendingWidgets(tmp13);
-    const obj2 = _modDef7341;
+    _modDef7373.setPendingWidgets(tmp13);
+    const obj2 = _modDef7373;
   }
 };
 export const isGameLimitReached = function isGameLimitReached(type) {

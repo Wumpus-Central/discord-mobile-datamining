@@ -26,7 +26,7 @@ prototype["handleAuthenticatorDelete"] = function handleAuthenticatorDelete(cred
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -58,7 +58,7 @@ prototype["handleAuthenticatorDelete"] = function handleAuthenticatorDelete(cred
           return obj;
         } else {
           v0 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp8) {
         v0 = tmp;
@@ -81,7 +81,7 @@ prototype["handleWebAuthnCredentialsLoaded"] = function handleWebAuthnCredential
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -114,7 +114,7 @@ prototype["handleWebAuthnCredentialsLoaded"] = function handleWebAuthnCredential
           return obj;
         } else {
           v0 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp10) {
         v0 = tmp;
@@ -137,7 +137,7 @@ prototype["handleCurrentUserUpdate"] = function handleCurrentUserUpdate(user) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -169,7 +169,7 @@ prototype["handleCurrentUserUpdate"] = function handleCurrentUserUpdate(user) {
           return obj;
         } else {
           v0 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp8) {
         v0 = tmp;

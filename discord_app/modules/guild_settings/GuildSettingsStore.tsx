@@ -9,7 +9,7 @@ import createChannelRecord from "../../records/ChannelRecord.tsx";
 import fromGuildPropertiesWithAdditionalFields from "../../utils/GuildRecordUtils.tsx";
 import isValueEqual from "../../lib/PlainRecord.tsx";
 import GuildNSFWContentLevel from "../../records/GuildRecord.tsx";
-import hooksDefault from "../../../_runtime/04045_hooks.js";
+import hooksDefault from "../../../_runtime/04075_hooks.js";
 import DEFAULT_DISCOVERY_CATEGORY_ID2 from "../global_discovery_servers/GlobalDiscoveryServersConstants.tsx";
 import canUseMobileServerTagSettings from "GuildSettingsServerTagUtils.tsx";
 import fetchVanityUrl from "server_monetization/boost_perks/GuildSettingsVanityURLActionCreators.tsx";

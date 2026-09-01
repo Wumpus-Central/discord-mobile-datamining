@@ -42,13 +42,13 @@ export default function UserSettingsDesignSystemPile() {
       const callback = children;
       let obj = { children: null };
       obj = { variant: "text-md/medium", color: "text-subtle", children };
-      items = [callback2(callback(4444).Text, obj), ];
+      items = [callback2(callback(4474).Text, obj), ];
       obj = { size: children, names: closure_10, totalCount: callback(1434).DEFAULT_AVATARS.length, children: null };
       const DEFAULT_AVATARS = callback(1434).DEFAULT_AVATARS;
       obj[3] = DEFAULT_AVATARS.map((source) => closure_1_5(children(closure_1_2[4]).Avatar, { source, size: children }, arg1));
-      items[1] = callback2(callback(9388).AvatarPile, obj);
+      items[1] = callback2(callback(9427).AvatarPile, obj);
       obj[0] = items;
-      return callback3(callback(4894).Stack, obj, children);
+      return callback3(callback(4926).Stack, obj, children);
     })
   };
   items = [callback(SampleCard, obj), , , , , ];
@@ -58,13 +58,13 @@ export default function UserSettingsDesignSystemPile() {
       const callback = children;
       let obj = { children: null };
       obj = { variant: "text-md/medium", color: "text-subtle", children };
-      items = [callback2(callback(4444).Text, obj), ];
+      items = [callback2(callback(4474).Text, obj), ];
       obj = { size: children, names: closure_10, totalCount: 9500, children: null };
       const DEFAULT_AVATARS = callback(1434).DEFAULT_AVATARS;
       obj[3] = DEFAULT_AVATARS.map((source) => closure_1_5(children(closure_1_2[4]).Avatar, { source, size: children }, arg1));
-      items[1] = callback2(callback(9388).AvatarPile, obj);
+      items[1] = callback2(callback(9427).AvatarPile, obj);
       obj[0] = items;
-      return callback3(callback(4894).Stack, obj, children);
+      return callback3(callback(4926).Stack, obj, children);
     })
   });
   obj1 = {
@@ -73,13 +73,13 @@ export default function UserSettingsDesignSystemPile() {
       const callback = children;
       let obj = { children: null };
       obj = { variant: "text-md/medium", color: "text-subtle", children };
-      items = [callback2(callback(4444).Text, obj), ];
+      items = [callback2(callback(4474).Text, obj), ];
       obj = { size: children, names: closure_10, totalCount: 9500, children: null };
       const DEFAULT_AVATARS = callback(1434).DEFAULT_AVATARS;
       obj[3] = DEFAULT_AVATARS.map((source) => closure_1_5(children(closure_1_2[4]).Avatar, { source, size: children }, arg1));
-      items[1] = callback2(callback(9388).AvatarPile, obj);
+      items[1] = callback2(callback(9427).AvatarPile, obj);
       obj[0] = items;
-      return callback3(callback(4894).Stack, obj, children);
+      return callback3(callback(4926).Stack, obj, children);
     })
   };
   items[2] = callback(SampleCard, {
@@ -88,14 +88,14 @@ export default function UserSettingsDesignSystemPile() {
       const callback = children;
       let obj = { children: null };
       obj = { variant: "text-md/medium", color: "text-subtle", children };
-      items = [callback2(callback(4444).Text, obj), ];
+      items = [callback2(callback(4474).Text, obj), ];
       obj = { size: children, names: arr.slice(0, 2), children: null };
       const DEFAULT_AVATARS = callback(1434).DEFAULT_AVATARS;
       const substr = DEFAULT_AVATARS.slice(0, 2);
       obj[2] = substr.map((source) => closure_1_5(children(closure_1_2[4]).Avatar, { source, size: children }, arg1));
-      items[1] = callback2(callback(13787).AvatarDuoPile, obj);
+      items[1] = callback2(callback(13820).AvatarDuoPile, obj);
       obj[0] = items;
-      return callback3(callback(4894).Stack, obj, children);
+      return callback3(callback(4926).Stack, obj, children);
     })
   });
   const obj2 = {
@@ -104,14 +104,14 @@ export default function UserSettingsDesignSystemPile() {
       const callback = children;
       let obj = { children: null };
       obj = { variant: "text-md/medium", color: "text-subtle", children };
-      items = [callback2(callback(4444).Text, obj), ];
+      items = [callback2(callback(4474).Text, obj), ];
       obj = { size: children, names: arr.slice(0, 2), children: null };
       const DEFAULT_AVATARS = callback(1434).DEFAULT_AVATARS;
       const substr = DEFAULT_AVATARS.slice(0, 2);
       obj[2] = substr.map((source) => closure_1_5(children(closure_1_2[4]).Avatar, { source, size: children }, arg1));
-      items[1] = callback2(callback(13787).AvatarDuoPile, obj);
+      items[1] = callback2(callback(13820).AvatarDuoPile, obj);
       obj[0] = items;
-      return callback3(callback(4894).Stack, obj, children);
+      return callback3(callback(4926).Stack, obj, children);
     })
   };
   items[3] = callback(SampleCard, {
@@ -119,7 +119,7 @@ export default function UserSettingsDesignSystemPile() {
     children: items.map((children) => {
       let obj = { children: null };
       obj = { variant: "text-md/medium", color: "text-subtle", children };
-      items = [callback2(callback(4444).Text, obj), ];
+      items = [callback2(callback(4474).Text, obj), ];
       obj = { size: null, names: null, children: null };
       items1 = [children, callback(1297).AvatarSizes.NORMAL];
       obj[0] = items1;
@@ -128,9 +128,9 @@ export default function UserSettingsDesignSystemPile() {
       obj1 = { source: callback(1434).DEFAULT_AVATARS[0], size: children };
       items2[1] = callback2(callback(1297).Avatar, { source: callback(1434).DEFAULT_AVATARS[1], size: callback(1297).AvatarSizes.NORMAL });
       obj[2] = items2;
-      items[1] = callback3(callback(13787).AvatarDuoPile, obj);
+      items[1] = callback3(callback(13820).AvatarDuoPile, obj);
       obj[0] = items;
-      return callback3(callback(4894).Stack, obj, children);
+      return callback3(callback(4926).Stack, obj, children);
     })
   });
   const obj3 = {
@@ -138,7 +138,7 @@ export default function UserSettingsDesignSystemPile() {
     children: items.map((children) => {
       let obj = { children: null };
       obj = { variant: "text-md/medium", color: "text-subtle", children };
-      items = [callback2(callback(4444).Text, obj), ];
+      items = [callback2(callback(4474).Text, obj), ];
       obj = { size: null, names: null, children: null };
       items1 = [children, callback(1297).AvatarSizes.NORMAL];
       obj[0] = items1;
@@ -147,9 +147,9 @@ export default function UserSettingsDesignSystemPile() {
       obj1 = { source: callback(1434).DEFAULT_AVATARS[0], size: children };
       items2[1] = callback2(callback(1297).Avatar, { source: callback(1434).DEFAULT_AVATARS[1], size: callback(1297).AvatarSizes.NORMAL });
       obj[2] = items2;
-      items[1] = callback3(callback(13787).AvatarDuoPile, obj);
+      items[1] = callback3(callback(13820).AvatarDuoPile, obj);
       obj[0] = items;
-      return callback3(callback(4894).Stack, obj, children);
+      return callback3(callback(4926).Stack, obj, children);
     })
   };
   items[4] = callback(SampleCard, {
@@ -158,11 +158,11 @@ export default function UserSettingsDesignSystemPile() {
       const callback = size;
       let obj = { children: null };
       obj = { variant: "text-md/medium", color: "text-subtle", children: size.toLowerCase() };
-      items = [callback2(callback(4444).Text, obj), ];
+      items = [callback2(callback(4474).Text, obj), ];
       obj = { size, names: closure_11, totalCount: 128, children: closure_11.map((value) => closure_1_5(closure_1_1(closure_1_2[5]), { value, size: closure_0 }, arg1)) };
-      items[1] = callback2(callback(9231).GuildIconPile, obj);
+      items[1] = callback2(callback(9270).GuildIconPile, obj);
       obj[0] = items;
-      return callback3(callback(4894).Stack, obj, size);
+      return callback3(callback(4926).Stack, obj, size);
     })
   });
   const obj5 = { title: "Weird Piles", noScroll: true, children: null };
@@ -181,29 +181,29 @@ export default function UserSettingsDesignSystemPile() {
     }
     let obj = { children: null };
     items[3] = str2;
-    items1 = [closure_6(callback(4444).Text, { variant: "text-md/medium", color: "text-subtle", children: items }), , ];
+    items1 = [closure_6(callback(4474).Text, { variant: "text-md/medium", color: "text-subtle", children: items }), , ];
     obj = { "aria-label": null, shape: null, size: 48, gap: 2, depthX: null, depthY: null, children: null };
-    let tmp4Result = tmp4(9234);
+    let tmp4Result = tmp4(9273);
     obj[0] = tmp4Result.getListSummaryLabel(closure_10, callback(1434).DEFAULT_AVATARS.length);
-    obj[1] = callback(8066).CutoutShape.Circle;
+    obj[1] = callback(8098).CutoutShape.Circle;
     obj[4] = tmp;
     obj[5] = tmp2;
     const DEFAULT_AVATARS = tmp4(1434).DEFAULT_AVATARS;
     obj[6] = DEFAULT_AVATARS.map((source) => callback3(callback(1297).Avatar, { source, size: callback(1297).AvatarSizes.LARGE_48 }, arg1));
-    items1[1] = callback2(callback(9232).Pile, obj);
+    items1[1] = callback2(callback(9271).Pile, obj);
     obj = { "aria-label": null, shape: null, size: 48, gap: 2, depthX: null, depthY: null, children: null };
-    tmp4Result = tmp4(9234);
+    tmp4Result = tmp4(9273);
     obj[0] = tmp4Result.getListSummaryLabel(closure_11, closure_11.length);
-    obj[1] = callback(8066).CutoutShape.RoundedRect;
+    obj[1] = callback(8098).CutoutShape.RoundedRect;
     obj[4] = tmp;
     obj[5] = tmp2;
     obj[6] = closure_11.map((value) => {
-      const obj = { value, size: callback(5972).GuildIconSizes.LARGE };
-      return callback3(callback2(5972), obj, arg1);
+      const obj = { value, size: callback(6004).GuildIconSizes.LARGE };
+      return callback3(callback2(6004), obj, arg1);
     });
-    items1[2] = callback2(callback(9232).Pile, obj);
+    items1[2] = callback2(callback(9271).Pile, obj);
     obj[0] = items1;
-    return closure_6(callback(4894).Stack, obj, "" + tmp + "," + tmp2);
+    return closure_6(callback(4926).Stack, obj, "" + tmp + "," + tmp2);
   });
   obj5[2] = items1;
   items[5] = callback2(SampleCard, obj5);

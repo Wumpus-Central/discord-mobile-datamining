@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/native/FractionalNitroPreview.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/04908_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/04940_LinearGradient.js";
 import preloadDefault from "../../../components_native/common/FastImage.tsx";
 import metadataDefault from "../../../../discord_assets/assets/orbs/fn_pdp_preview_header.png.js";
 import NitroIconDefault from "NitroIcon.tsx";

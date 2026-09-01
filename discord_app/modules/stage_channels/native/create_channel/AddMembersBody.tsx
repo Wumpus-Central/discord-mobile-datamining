@@ -112,7 +112,7 @@ export default function AddMembersBody(pendingAdditions) {
   if (first) {
     let items2 = [];
   } else {
-    let tmp10Result = tmp10(9668);
+    let tmp10Result = tmp10(9707);
     const rolesRowsWithPermissionDisabled = tmp10Result.getRolesRowsWithPermissionDisabled(guild, stateFromStores, channel, permission, filterByQuery);
     let tmp19 = 0 === rolesRowsWithPermissionDisabled.length && "" === str.trim();
     if (tmp19) {
@@ -120,7 +120,7 @@ export default function AddMembersBody(pendingAdditions) {
     }
     items2 = rolesRowsWithPermissionDisabled;
     if (tmp19) {
-      tmp10Result = tmp10(9668);
+      tmp10Result = tmp10(9707);
       items2 = tmp10Result.getNoRolesRow();
     }
   }
@@ -156,12 +156,12 @@ export default function AddMembersBody(pendingAdditions) {
     }
   }, items4);
   if (inActionSheet) {
-    let BottomSheetScrollView = tmp6(5592).BottomSheetScrollView;
+    let BottomSheetScrollView = tmp6(5624).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = c8;
   }
   if (inActionSheet) {
-    let BottomSheetSectionList = tmp6(5592).BottomSheetSectionList;
+    let BottomSheetSectionList = tmp6(5624).BottomSheetSectionList;
   } else {
     BottomSheetSectionList = closure_9;
   }
@@ -191,7 +191,7 @@ export default function AddMembersBody(pendingAdditions) {
       return closure_1_4(arg0, items.map(closure_1_19));
     });
   };
-  obj1[1] = callback2(pendingAdditions(9677), obj2);
+  obj1[1] = callback2(pendingAdditions(9716), obj2);
   const items5 = [callback2(closure_7, obj1), , , ];
   let tmp27Result = null;
   if (null != inputDesc) {
@@ -200,7 +200,7 @@ export default function AddMembersBody(pendingAdditions) {
     obj4 = { style: null, variant: "text-xs/medium", color: "text-default", children: null };
     obj4[0] = tmp3.inputDescText;
     obj4[3] = inputDesc;
-    obj3[1] = tmp27(tmp6(4444).Text, obj4);
+    obj3[1] = tmp27(tmp6(4474).Text, obj4);
     tmp27Result = tmp27(tmp28, obj3);
   }
   items5[1] = tmp27Result;
@@ -220,7 +220,7 @@ export default function AddMembersBody(pendingAdditions) {
       if (0 === membersRows.length) {
         const obj7 = { children: null };
         const obj8 = { Illustration: null, style: null, bodyStyle: null, body: null };
-        obj8[0] = tmp6(9682).NoResultsAlt;
+        obj8[0] = tmp6(9721).NoResultsAlt;
         ({ emptyState: obj20[1], emptyStateText: obj20[2] } = tmp3);
         const intl5 = tmp6(1236).intl;
         const obj9 = { query: null };
@@ -236,8 +236,8 @@ export default function AddMembersBody(pendingAdditions) {
     }
   }
   const obj11 = { contentContainerStyle: null, renderItem: null, renderSectionHeader: null, sections: null, keyboardShouldPersistTaps: "always" };
-  const tmp4Result = pendingAdditions(9677);
-  obj11[0] = { paddingHorizontal: pendingAdditions(712).space.PX_16, paddingBottom: pendingAdditions(712).space.PX_16 + pendingAdditions(5562)(obj).insets.bottom };
+  const tmp4Result = pendingAdditions(9716);
+  obj11[0] = { paddingHorizontal: pendingAdditions(712).space.PX_16, paddingBottom: pendingAdditions(712).space.PX_16 + pendingAdditions(5594)(obj).insets.bottom };
   obj11[1] = function renderItem(item) {
     item = item.item;
     ({ index, section } = item);

@@ -19,12 +19,12 @@ export default {
     let tmp6 = null;
     if (tmp5) {
       tmp6 = null;
-      if (null != tmp(16923).soundpack) {
+      if (null != tmp(16959).soundpack) {
         tmp6 = null;
-        if (null != tmp(16923).soundpackLabel) {
+        if (null != tmp(16959).soundpackLabel) {
           obj = { soundpack: null, soundpackLabel: null };
-          obj[0] = tmp(16923).soundpack;
-          obj[1] = tmp(16923).soundpackLabel;
+          obj[0] = tmp(16959).soundpack;
+          obj[1] = tmp(16959).soundpackLabel;
           tmp6 = obj;
         }
       }
@@ -42,7 +42,7 @@ export default {
     const timestamp = Date.now();
     let appSpinnerSources = null;
     if (tmp4) {
-      appSpinnerSources = tmp2(16923).appSpinnerSources;
+      appSpinnerSources = tmp2(16959).appSpinnerSources;
     }
     return appSpinnerSources;
   },
@@ -50,13 +50,13 @@ export default {
     const timestamp = Date.now();
     let tmp5 = null;
     if (tmp4) {
-      const getLoadingTips = tmp2(16923).getLoadingTips;
+      const getLoadingTips = tmp2(16959).getLoadingTips;
       let loadingTips;
       if (getLoadingTips != null) {
         loadingTips = getLoadingTips();
       }
       tmp5 = loadingTips;
-      const tmp2Result = tmp2(16923);
+      const tmp2Result = tmp2(16959);
     }
     return tmp5;
   },
@@ -67,8 +67,8 @@ export default {
     let soundpack = null;
     if (tmp5) {
       soundpack = null;
-      if (null != tmp(16923).soundpack) {
-        soundpack = tmp(16923).soundpack;
+      if (null != tmp(16959).soundpack) {
+        soundpack = tmp(16959).soundpack;
       }
     }
     return soundpack;

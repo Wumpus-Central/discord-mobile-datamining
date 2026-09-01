@@ -23,7 +23,7 @@ function _openSafetyFlow() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -50,7 +50,7 @@ function _openSafetyFlow() {
               closure_2 = undefined;
               c6 = 1;
               c7 = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else {
             if (1 === tmp7) {
@@ -125,7 +125,7 @@ function _openSafetyFlow() {
               }
               constants = 0;
               c7 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
             c7 = 3;
           }

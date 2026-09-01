@@ -1,6 +1,6 @@
 // discord_app/actions/GiftCodeActionCreators.tsx
 import prototypeDefault from "../errors/V6OrEarlierAPIError.tsx";
-import _modDef8446 from "../modules/coded_links/web/CodedLinkActionCreators.tsx";
+import _modDef8478 from "../modules/coded_links/web/CodedLinkActionCreators.tsx";
 import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../modules/applications/ApplicationStore.tsx";
 import closure_5 from "../modules/collectibles/CollectiblesCategoryStore.tsx";
@@ -40,7 +40,7 @@ function _resolveGiftCode() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -69,7 +69,7 @@ function _resolveGiftCode() {
               application = undefined;
               c7 = 1;
               c8 = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else if (1 === tmp9) {
             if (arg0 === 1) {
@@ -364,7 +364,7 @@ export default {
     })();
   },
   openNativeGiftCodeModal(arg0) {
-    _modDef8446.openNativeAppModal(arg0, constants.GIFT_CODE_BROWSER);
+    _modDef8478.openNativeAppModal(arg0, constants.GIFT_CODE_BROWSER);
   }
 };
 export { resolveGiftCode };

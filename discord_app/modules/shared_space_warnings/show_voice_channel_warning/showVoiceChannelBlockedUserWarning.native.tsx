@@ -24,8 +24,8 @@ export const showVoiceChannelBlockedUserWarning = function showVoiceChannelBlock
     obj[1] = items;
     obj[2] = constants.POST_JOIN_SHEET;
     obj[3] = obj;
-    obj.openLazy(tmp2(2009)(13361, dependencyMap.paths), "gdm_blocked_user_action_sheet", obj);
-    const tmp11 = tmp2(2009)(13361, dependencyMap.paths);
+    obj.openLazy(tmp2(2009)(13394, dependencyMap.paths), "gdm_blocked_user_action_sheet", obj);
+    const tmp11 = tmp2(2009)(13394, dependencyMap.paths);
   } else {
     callback();
   }

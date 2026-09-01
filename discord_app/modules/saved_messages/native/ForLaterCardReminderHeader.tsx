@@ -14,16 +14,16 @@ export const ForLaterCardReminderHeader = function ForLaterCardReminderHeader(sa
   if (savedMessage != null) {
     dueAt = savedMessage.saveData.dueAt;
   }
-  obj = { dueAt, now: throttledNow, type: tmp(11257).DueInStringTypes.SHORT };
+  obj = { dueAt, now: throttledNow, type: tmp(11294).DueInStringTypes.SHORT };
   const dueInString = obj.useDueInString(obj);
   let tmp7 = null;
   if (null != savedMessage.saveData.dueAt) {
     obj = { IconComponent: null, label: null, isCritical: null, actions: null };
-    obj[0] = tmp(4411).ClockIcon;
+    obj[0] = tmp(4441).ClockIcon;
     obj[1] = tmp5;
     obj[2] = tmp6;
     obj[3] = actions;
-    tmp7 = jsx(tmp(11751).ForLaterCardStatusHeader, { IconComponent: null, label: null, isCritical: null, actions: null });
+    tmp7 = jsx(tmp(11784).ForLaterCardStatusHeader, { IconComponent: null, label: null, isCritical: null, actions: null });
   }
   return tmp7;
 };

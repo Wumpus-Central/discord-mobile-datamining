@@ -41,7 +41,7 @@ const memoResult = importAllResult.memo(function FavoritesGuildIntroPopover() {
           } else {
             items3 = [];
           }
-          const tmp12 = callback(tmp(6219).useSelectedDismissibleContent(items3, undefined, true), 1)[0] === tmp(1373).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
+          const tmp12 = callback(tmp(6251).useSelectedDismissibleContent(items3, undefined, true), 1)[0] === tmp(1373).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
           importDefault = tmp12;
           const items4 = [tmp12];
           const effect = importAllResult.useEffect(() => {

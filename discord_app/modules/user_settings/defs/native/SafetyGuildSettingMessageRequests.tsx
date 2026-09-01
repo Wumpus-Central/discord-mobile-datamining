@@ -72,9 +72,9 @@ createToggle = {
       }
       tmp7 = hasItem;
     }
-    const MessageRequestRestrictedDefault = tmp(4136).MessageRequestRestrictedDefault;
+    const MessageRequestRestrictedDefault = tmp(4166).MessageRequestRestrictedDefault;
     const obj3 = useParentalControlledExplicitContentSettings;
-    const MessageRequestRestrictedGuildIds = tmp(4136).MessageRequestRestrictedGuildIds;
+    const MessageRequestRestrictedGuildIds = tmp(4166).MessageRequestRestrictedGuildIds;
     const setting1 = MessageRequestRestrictedGuildIds.useSetting();
     let tmp9 = !setting1.includes(selectedGuildId);
     let tmp10 = !tmp7;

@@ -71,17 +71,17 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledBody() {
     if (closure_1_5) {
       obj1 = { questId: null, questContent: null, questContentCTA: null, sourceQuestContent: null };
       obj1[0] = closure_1_0.id;
-      obj1[1] = closure_1_0(5358).QuestContent.QUEST_BAR_MOBILE;
-      obj1[2] = closure_1_0(7441).QuestContentCTA.QUEST_ACCESS_SUSPENDED;
-      obj1[3] = closure_1_0(5358).QuestContent.QUEST_BAR_MOBILE;
+      obj1[1] = closure_1_0(5390).QuestContent.QUEST_BAR_MOBILE;
+      obj1[2] = closure_1_0(7473).QuestContentCTA.QUEST_ACCESS_SUSPENDED;
+      obj1[3] = closure_1_0(5390).QuestContent.QUEST_BAR_MOBILE;
       closure_1_6(obj1);
-      v0(14686)();
+      v0(14719)();
     }
-    const obj4 = closure_1_0(10875);
+    const obj4 = closure_1_0(10913);
     const obj3 = { questContentCTA: null, questContent: null, sourceQuestContent: null };
-    obj3[0] = closure_1_0(7441).QuestContentCTA.ACCEPT_QUEST;
-    obj3[1] = closure_1_0(5358).QuestContent.QUEST_BAR_MOBILE;
-    obj3[2] = closure_1_0(5358).QuestContent.QUEST_BAR_MOBILE;
+    obj3[0] = closure_1_0(7473).QuestContentCTA.ACCEPT_QUEST;
+    obj3[1] = closure_1_0(5390).QuestContent.QUEST_BAR_MOBILE;
+    obj3[2] = closure_1_0(5390).QuestContent.QUEST_BAR_MOBILE;
     yield obj4.enrollInQuest(closure_1_0.id, obj3);
     if (1 === tmp4) {
       if (arg0 === 1) {
@@ -102,10 +102,10 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledBody() {
         if (v0) {
           const obj7 = { questId: null, sourceQuestContent: null };
           obj7[0] = closure_1_0.id;
-          obj7[1] = closure_1_0(5358).QuestContent.QUEST_BAR_MOBILE;
-          v0(14692)(obj7);
+          obj7[1] = closure_1_0(5390).QuestContent.QUEST_BAR_MOBILE;
+          v0(14725)(obj7);
           closure_1_4(closure_1_8.COLLAPSED);
-          const tmp12 = v0(14692);
+          const tmp12 = v0(14725);
         }
         dependencyMap = 3;
       }

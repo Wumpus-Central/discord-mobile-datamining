@@ -359,7 +359,7 @@ const memoResult = importAllResult.memo(function QuestHomeBounties(shopCarouselC
   if (showOrbShopPlaceholderCarousel === undefined) {
     showOrbShopPlaceholderCarousel = false;
   }
-  let obj = first(11046);
+  let obj = first(11083);
   const questHomeBounties = obj.useQuestHomeBounties().questHomeBounties;
   const tmp3 = callback4();
   first = undefined;
@@ -371,7 +371,7 @@ const memoResult = importAllResult.memo(function QuestHomeBounties(shopCarouselC
   } else {
     items1 = [];
   }
-  let tmpResult = tmp(6219);
+  let tmpResult = tmp(6251);
   const tmp4 = callback(tmpResult.useSelectedDismissibleContent(items1), 2);
   first = tmp4[0];
   importDefault = tmp6;
@@ -410,8 +410,8 @@ const memoResult = importAllResult.memo(function QuestHomeBounties(shopCarouselC
       if (verticalScrollEnabled) {
         let tmp12 = "none" !== placement && obtainableOrbRewards > 0;
         if (tmp12) {
-          tmp12 = orbShopProducts.length >= tmp(14638).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
-          const tmp13 = orbShopProducts.length >= tmp(14638).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+          tmp12 = orbShopProducts.length >= tmp(14671).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+          const tmp13 = orbShopProducts.length >= tmp(14671).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
         }
         if (!tmp12) {
           obj = { style: null, children: null };

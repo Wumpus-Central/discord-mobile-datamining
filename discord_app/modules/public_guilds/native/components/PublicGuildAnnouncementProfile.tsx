@@ -7,7 +7,7 @@ import Text from "../../../../design/components/Text/native/Text.tsx";
 import preloadDefault from "../../../../components_native/common/FastImage.tsx";
 import Background from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import isPublicSystemMessage from "../../PublicGuildsUtils.tsx";
-import registerAssetDefault from "../../../../../_runtime/11198_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/11235_registerAsset.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";

@@ -6,7 +6,7 @@ import set2 from "../../utils/PlatformUtils.tsx";
 import get from "../../utils/ProcessArgs.tsx";
 import supportsZstd from "GatewayZstdUtils.native.tsx";
 import enforcing from "../../../discord_common/js/packages/rtn-codegen/js/NativeCompressionModule.tsx";
-import _mod13273 from "../../../_runtime/metro/13273__.js";
+import _mod13306 from "../../../_runtime/metro/13306__.js";
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 const items = [];
@@ -91,7 +91,7 @@ items.push(fn);
 const fn2 = (arg0) => {
   tmp = new tmp(arg0, new.target, tmp, new.target);
   // ThrowIfThisInitialized (0x7c)
-  tmp._pako = _mod13273;
+  tmp._pako = _mod13306;
   tmp._usesZstd = false;
   tmp._zstdDecoder = null;
   tmp._zstdStream = null;
@@ -219,7 +219,7 @@ prototype3["handleFlushEnd"] = function handleFlushEnd(arg0) {
 items.push(fn2);
 const fn3 = () => {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult._pako = _mod13273;
+  applyArgumentsResult._pako = _mod13306;
   return applyArgumentsResult;
 };
 const prototype4 = fn3.prototype;
@@ -284,7 +284,7 @@ prototype5["bindWebSocket"] = function bindWebSocket(_socketId) {
   const isAndroidResult = set2.isAndroid();
   if (supportsZstdResult) {
     if (isAndroidResult) {
-      const _default2 = tmp2(13272).default;
+      const _default2 = tmp2(13305).default;
       if (_default2 != null) {
         const result = _default2.enableZstdStreamSupport(self._socketId);
       }
@@ -293,7 +293,7 @@ prototype5["bindWebSocket"] = function bindWebSocket(_socketId) {
       const result1 = DCDCompressionManager2.enableZstdStreamSupport(self._socketId, 0);
     }
   } else if (isAndroidResult) {
-    const _default = tmp2(13272).default;
+    const _default = tmp2(13305).default;
     if (_default != null) {
       const result2 = _default.enableZlibStreamSupport(self._socketId);
     }
@@ -327,7 +327,7 @@ prototype5["close"] = function close() {
   this._socketId = null;
   if (null !== _socketId) {
     if (obj.isAndroid()) {
-      const _default = tmp(13272).default;
+      const _default = tmp(13305).default;
       if (_default != null) {
         const result = _default.disableZlibStreamSupport(_socketId);
       }

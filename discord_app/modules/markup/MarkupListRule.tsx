@@ -1,6 +1,6 @@
 // discord_app/modules/markup/MarkupListRule.tsx
 import _modDef38 from "../../../_runtime/metro/00038__.js";
-import tDefault from "../../../_runtime/04162_t.js";
+import tDefault from "../../../_runtime/04192_t.js";
 import closure_10 from "../../index.native.tsx";
 
 const re2 = /\n{2,}$/;

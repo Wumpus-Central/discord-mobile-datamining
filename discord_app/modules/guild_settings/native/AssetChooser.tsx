@@ -2,8 +2,8 @@
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
-import registerAssetDefault from "../../../../_runtime/17080_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/17081_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/17116_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/17117_registerAsset.js";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { UPLOAD_MEDIUM_SIZE } from "../../../Constants.tsx";
@@ -39,7 +39,7 @@ class AssetChooser extends PureComponent {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -91,7 +91,7 @@ class AssetChooser extends PureComponent {
               }
             }
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp17) {
           c3 = tmp;

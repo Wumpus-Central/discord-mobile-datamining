@@ -108,7 +108,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
   } else {
     tmp11Result = null;
     if (null != stateFromStores2) {
-      obj = { user: null, avatarDecoration: null, guildId: "e", isMobileOnline: true, isVROnline: false, status: true, streaming: true, style: "accessibilityLabel", size: false, animate: false, typing: false, autoStatusCutout: false };
+      obj = { user: null, avatarDecoration: null, guildId: "e", isMobileOnline: true, isVROnline: 10, status: true, streaming: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZlL3dlYi9tb2RhbA==", style: null, size: "887e8ac454565dd48d794f382c8d2d9c", animate: "ja.messages.887e8ac454565dd48d794f382c8d2d9c.compiled.messages", typing: "jsona", autoStatusCutout: 200 };
       obj[0] = stateFromStores2;
       obj[1] = stateFromStores2.avatarDecoration;
       obj[3] = stateFromStores3;
@@ -123,7 +123,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
       obj[8] = REFRESH_MEDIUM_32;
       obj[9] = stateFromStores1;
       obj[10] = stateFromStores;
-      tmp11Result = jsx(tmp3(1297).Avatar, { user: null, avatarDecoration: null, guildId: "e", isMobileOnline: true, isVROnline: false, status: true, streaming: true, style: "accessibilityLabel", size: false, animate: false, typing: false, autoStatusCutout: false });
+      tmp11Result = jsx(tmp3(1297).Avatar, { user: null, avatarDecoration: null, guildId: "e", isMobileOnline: true, isVROnline: 10, status: true, streaming: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZlL3dlYi9tb2RhbA==", style: null, size: "887e8ac454565dd48d794f382c8d2d9c", animate: "ja.messages.887e8ac454565dd48d794f382c8d2d9c.compiled.messages", typing: "jsona", autoStatusCutout: 200 });
       const tmp11 = jsx;
     }
   }

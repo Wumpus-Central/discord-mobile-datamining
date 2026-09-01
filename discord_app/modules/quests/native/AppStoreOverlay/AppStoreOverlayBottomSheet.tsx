@@ -15,7 +15,7 @@ function AppStoreOverlayFooter(arg0) {
   ({ onInstallPress, onLayout } = arg0);
   const tmp = callback3();
   bottom = token(1628)().bottom;
-  let obj = bottom(4167);
+  let obj = bottom(4197);
   token = obj.useToken(token(712).colors.MOBILE_ACTIONSHEET_BACKGROUND);
   let items = [token];
   const items1 = [bottom];
@@ -27,13 +27,13 @@ function AppStoreOverlayFooter(arg0) {
   obj = { style: tmp.footer, onLayout, children: null };
   const memo1 = React.useMemo(() => ({ paddingBottom: Math.max(bottom, closure_1_8) }), items1);
   obj = { pointerEvents: "none", style: tmp.footerGradient, colors: memo, start: constants.START, end: constants.END };
-  const items2 = [callback(token(4908), obj), ];
+  const items2 = [callback(token(4940), obj), ];
   obj1 = { style: memo1, children: null };
   const obj2 = { size: "lg", text: null, onPress: null };
   const intl = bottom(1236).intl;
   obj2[1] = intl.string(bottom(1236).t.lwQdjB);
   obj2[2] = onInstallPress;
-  obj1[1] = callback(bottom(4896).Button, obj2);
+  obj1[1] = callback(bottom(4928).Button, obj2);
   items2[1] = callback(View, obj1);
   obj[2] = items2;
   return callback2(View, obj);

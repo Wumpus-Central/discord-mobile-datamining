@@ -2,7 +2,7 @@
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import hooksDefault from "../../../../../_runtime/04045_hooks.js";
+import hooksDefault from "../../../../../_runtime/04075_hooks.js";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import getRoleEmojisAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
 import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
@@ -38,7 +38,7 @@ export default function ChangeSubscriptionCard(activeSubscription) {
   obj1 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = activeSubscription(1236).intl;
   obj1[2] = intl.format(activeSubscription(1236).t.l3uCCX, { activeListingName: first });
-  const items1 = [callback2(activeSubscription(4444).Text, obj1), callback2(activeSubscription(1297).Spacer, { size: 16 }), , ];
+  const items1 = [callback2(activeSubscription(4474).Text, obj1), callback2(activeSubscription(1297).Spacer, { size: 16 }), , ];
   obj2 = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl2 = activeSubscription(1236).intl;
   const formatResult = obj2.format("MMMM Do");
@@ -47,7 +47,7 @@ export default function ChangeSubscriptionCard(activeSubscription) {
   const intl3 = activeSubscription(1236).intl;
   items2[2] = intl3.format(activeSubscription(1236).t.KIiWca, { emphasisHook });
   obj2[2] = items2;
-  items1[2] = callback3(activeSubscription(4444).Text, obj2);
+  items1[2] = callback3(activeSubscription(4474).Text, obj2);
   let tmp7Result = null;
   if (activeSubscription.status !== SubscriptionStatusTypes.CANCELED) {
     const obj5 = { children: null };
@@ -61,7 +61,7 @@ export default function ChangeSubscriptionCard(activeSubscription) {
       obj.pushLazy(activeSubscription(closure_1_3[17])(closure_1_3[16], closure_1_3.paths), obj);
       closure_1_1(closure_1_3[18]).hideActionSheet();
     };
-    items3[1] = tmp5(tmp6(16094).ArrowButton, obj6);
+    items3[1] = tmp5(tmp6(16129).ArrowButton, obj6);
     obj5[0] = items3;
     tmp7Result = tmp7(closure_9, obj5);
   }
@@ -69,5 +69,5 @@ export default function ChangeSubscriptionCard(activeSubscription) {
   const obj4 = { emphasisHook };
   items1[3] = tmp7Result;
   obj[1] = items1;
-  return callback2(activeSubscription(5590).BottomSheet, { startExpanded: true, children: callback3(tmp8, obj) });
+  return callback2(activeSubscription(5622).BottomSheet, { startExpanded: true, children: callback3(tmp8, obj) });
 };

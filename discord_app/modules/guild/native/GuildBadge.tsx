@@ -2,10 +2,10 @@
 import noopAll from "../../../../_runtime/00019_noop.js";
 import Button from "../../../design/void/native.tsx";
 import fromGuildPropertiesWithAdditionalFields from "../../../utils/GuildRecordUtils.tsx";
-import registerAssetDefault from "../../../../_runtime/07642_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/07643_registerAsset.js";
-import registerAssetDefault3 from "../../../../_runtime/07644_registerAsset.js";
-import registerAssetDefault4 from "../../../../_runtime/07645_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/07674_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/07675_registerAsset.js";
+import registerAssetDefault3 from "../../../../_runtime/07676_registerAsset.js";
+import registerAssetDefault4 from "../../../../_runtime/07677_registerAsset.js";
 import { GuildFeatures } from "../../../Constants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 

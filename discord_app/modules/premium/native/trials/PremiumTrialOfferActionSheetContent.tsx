@@ -62,8 +62,8 @@ const memoResult = importAllResult.memo(function PremiumTrialOfferActionSheetCon
     if (subscriptionTrial != null) {
       skuId1 = subscriptionTrial.skuId;
     }
-    displayNameFromSku = tmp3(4109).getDisplayNameFromSku(skuId1);
-    const tmp3Result = tmp3(4109);
+    displayNameFromSku = tmp3(4139).getDisplayNameFromSku(skuId1);
+    const tmp3Result = tmp3(4139);
   }
   obj3[3] = intl7.formatToPlainString(getSystemLocale.t.q8eMc0, { displayName: displayNameFromSku, duration: intervalDuration });
   items1[1] = callback(Text.Text, obj3);

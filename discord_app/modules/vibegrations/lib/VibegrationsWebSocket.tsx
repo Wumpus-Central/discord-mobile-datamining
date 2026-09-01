@@ -38,17 +38,18 @@ prototype["open"] = function open(ticket) {
     }
   });
 };
-prototype["sendUserMessage"] = function sendUserMessage(arg0, arg1, arg2) {
+prototype["sendUserMessage"] = function sendUserMessage(arg0, arg1, arg2, arg3) {
   const self = this;
   if (null != this.socket) {
     const _WebSocket = WebSocket;
     if (self.socket.readyState === WebSocket.OPEN) {
       const socket = self.socket;
       const _JSON = JSON;
-      const obj = { type: "user_message", content: null, nonce: null, attachment_ids: null };
+      const obj = { type: "user_message", content: null, nonce: null, attachment_ids: null, project_name: null };
       obj[1] = arg0;
       obj[2] = arg1;
       obj[3] = arg2;
+      obj[4] = arg3;
       socket.send(JSON.stringify(obj));
     }
   }
@@ -110,6 +111,19 @@ prototype["sendLoadHistory"] = function sendLoadHistory(arg0) {
     obj[1] = arg0;
     socket.send(JSON.stringify(obj));
   }
+};
+prototype["sendDebugStatusRequest"] = function sendDebugStatusRequest() {
+  const self = this;
+  if (null != this.socket) {
+    const _WebSocket = WebSocket;
+    if (self.socket.readyState === WebSocket.OPEN) {
+      const socket = self.socket;
+      const _JSON = JSON;
+      socket.send(JSON.stringify({ type: "debug_status_request" }));
+    }
+  }
+  error = new Error("WebSocket not open");
+  throw error;
 };
 prototype["sendCaptureAck"] = function sendCaptureAck(id, accepted, code, message) {
   const self = this;

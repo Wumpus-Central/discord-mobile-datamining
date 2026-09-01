@@ -85,7 +85,7 @@ export const useFetchCollectiblesProducts = function useFetchCollectiblesProduct
       if (!tmp24) {
         let tmp34 = lib;
         let tmp35 = dependencyMap;
-        let obj = lib(7254);
+        let obj = lib(7286);
         let tmp36 = tmp8;
         obj = { includeBundles: null };
         obj[0] = tmp15;

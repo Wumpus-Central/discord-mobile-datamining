@@ -48,7 +48,7 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -73,10 +73,10 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
                 v0 = 4;
                 c5 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = closure_1_2(17233).acceptCreatorMonetizationTerms(tmp56, tmp42);
+                obj1[0] = closure_1_2(17269).acceptCreatorMonetizationTerms(tmp56, tmp42);
                 return obj1;
               } else {
-                let obj2 = closure_1_2(17233);
+                let obj2 = closure_1_2(17269);
                 v0 = 3;
                 c5 = 1;
                 obj2 = { value: null, done: false };
@@ -90,7 +90,7 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
           if (2 === tmp8) {
             dependencyMap = 1;
             closure_0 = closure_2;
-            const tmp25 = new closure_1_1(4347)(closure_0);
+            const tmp25 = new closure_1_1(4377)(closure_0);
             dependencyMap(tmp25);
           } else {
             if (3 === tmp8) {

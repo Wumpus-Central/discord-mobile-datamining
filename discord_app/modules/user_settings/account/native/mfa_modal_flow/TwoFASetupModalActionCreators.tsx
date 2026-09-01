@@ -1,18 +1,18 @@
 // discord_app/modules/user_settings/account/native/mfa_modal_flow/TwoFASetupModalActionCreators.tsx
 import set from "../../../../../../_runtime/00002_set.js";
 import asyncRequireImpl from "../../../../../../_runtime/02009_asyncRequireImpl.js";
-import _modDef4691 from "../../../../../actions/ModalActionCreators.tsx";
+import _modDef4723 from "../../../../../actions/ModalActionCreators.tsx";
 
 const TWO_FA_SETUP_MODAL_KEY = "TWO_FA_SETUP_MODAL_KEY";
 const result = set.fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupModalActionCreators.tsx");
 
 export default {
   open(initialRouteName) {
-    let obj = _modDef4691;
+    let obj = _modDef4723;
     obj = { initialRouteName };
-    obj.pushLazy(asyncRequireImpl(14355, dependencyMap.paths), obj, TWO_FA_SETUP_MODAL_KEY);
+    obj.pushLazy(asyncRequireImpl(14388, dependencyMap.paths), obj, TWO_FA_SETUP_MODAL_KEY);
   },
   close() {
-    _modDef4691.popWithKey(TWO_FA_SETUP_MODAL_KEY);
+    _modDef4723.popWithKey(TWO_FA_SETUP_MODAL_KEY);
   }
 };

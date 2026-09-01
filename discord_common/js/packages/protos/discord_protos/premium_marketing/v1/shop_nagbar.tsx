@@ -17,7 +17,7 @@ class ShopNagbar$Type extends MessageType {
       name: "cta_action",
       kind: "enum",
       T() {
-            const items = ["discord_protos.premium_marketing.v1.ButtonAction", callback(8423).ButtonAction, "BUTTON_ACTION_"];
+            const items = ["discord_protos.premium_marketing.v1.ButtonAction", callback(8455).ButtonAction, "BUTTON_ACTION_"];
             return items;
           }
     };
@@ -27,7 +27,7 @@ class ShopNagbar$Type extends MessageType {
       name: "help_article",
       kind: "message",
       T() {
-            return callback(8422).HelpArticle;
+            return callback(8454).HelpArticle;
           }
     };
     items[5] = {
@@ -35,7 +35,7 @@ class ShopNagbar$Type extends MessageType {
       name: "body_localized",
       kind: "message",
       T() {
-            return callback(8421).LocalizedString;
+            return callback(8453).LocalizedString;
           }
     };
     obj = { no: 7, name: "cta_label_localized", kind: "message", T: null };
@@ -218,7 +218,7 @@ let items = [
     name: "cta_action",
     kind: "enum",
     T() {
-      const items = ["discord_protos.premium_marketing.v1.ButtonAction", callback(8423).ButtonAction, "BUTTON_ACTION_"];
+      const items = ["discord_protos.premium_marketing.v1.ButtonAction", callback(8455).ButtonAction, "BUTTON_ACTION_"];
       return items;
     }
   },
@@ -228,7 +228,7 @@ let items = [
     name: "help_article",
     kind: "message",
     T() {
-      return callback(8422).HelpArticle;
+      return callback(8454).HelpArticle;
     }
   },
   {
@@ -236,7 +236,7 @@ let items = [
     name: "body_localized",
     kind: "message",
     T() {
-      return callback(8421).LocalizedString;
+      return callback(8453).LocalizedString;
     }
   },
 ,

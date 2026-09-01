@@ -8,7 +8,7 @@ const result = require("set").fileFinishedImporting("modules/calls/native/usePro
 export default function useProfileTileGradient(userId) {
   userId = userId.userId;
   const guildId = userId.guildId;
-  const tmp2 = guildId(8082)(userId, guildId);
+  const tmp2 = guildId(8114)(userId, guildId);
   let themeColors;
   if (tmp2 != null) {
     themeColors = tmp2.themeColors;
@@ -27,5 +27,5 @@ export default function useProfileTileGradient(userId) {
   }, items);
   const tmp3 = closure_3;
   const tmp3Result = closure_3(themeColors, 2);
-  return userId(8087).useVideoTileGradientColors(tmp5, tmp6);
+  return userId(8119).useVideoTileGradientColors(tmp5, tmp6);
 };

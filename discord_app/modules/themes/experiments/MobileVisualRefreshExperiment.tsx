@@ -15,6 +15,6 @@ export const useMobileVisualRefreshConfig = function useMobileVisualRefreshConfi
 export const isMobileVisualRefreshEnabled = function isMobileVisualRefreshEnabled(location) {
   return closure_0.getConfig({ location }).enabled;
 };
-export const resolveRefreshToken = function resolveRefreshToken(CHANNEL_SAFE_AREA_BOTTOM_BACKGROUND) {
-  return CHANNEL_SAFE_AREA_BOTTOM_BACKGROUND.resolve({ enabledExperiments: ["mobile-visual-refresh"] });
+export const resolveRefreshToken = function resolveRefreshToken(MESSAGES_HEADER_PADDING_BOTTOM) {
+  return MESSAGES_HEADER_PADDING_BOTTOM.resolve({ enabledExperiments: ["mobile-visual-refresh"] });
 };

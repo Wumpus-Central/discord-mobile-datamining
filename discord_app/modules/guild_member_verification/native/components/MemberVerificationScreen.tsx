@@ -2,7 +2,7 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import ActivityIndicator from "../../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
-import _modDef6017 from "../../../keyboard/native/KeyboardAwareView.tsx";
+import _modDef6049 from "../../../keyboard/native/KeyboardAwareView.tsx";
 import MemberVerificationModalDefault from "MemberVerificationModal.tsx";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -163,9 +163,9 @@ const authenticated = makeAuthenticated.makeAuthenticated(function MemberVerific
     obj1[0] = guildId;
     obj1[1] = callback;
     obj[1] = <MemberVerificationRouteView guildId={null} onClose={null} />;
-    obj[2] = jsx(_modDef6017, { marginLeft: null, marginRight: null });
+    obj[2] = jsx(_modDef6049, { marginLeft: null, marginRight: null });
     tmp10 = <ExistingJoinRequestHandler marginLeft={null} marginRight={null} />;
-    const tmp3Result = _modDef6017;
+    const tmp3Result = _modDef6049;
   }
   return tmp10;
 });

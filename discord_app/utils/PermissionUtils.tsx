@@ -84,13 +84,13 @@ function applyOverwrites(id, member, closure_23, overwrites) {
       const tmp19Result2 = tmp19(506);
     }
     const obj10 = GuildMemberFlags;
-    const tmp28Result = tmp28(4080);
+    const tmp28Result = tmp28(4110);
     found1 = found;
     if (tmp34) {
       found1 = tmp19(506).filter(found, closure_28);
       const tmp19Result3 = tmp19(506);
     }
-    tmp34 = tmp28(4080).isMemberCommunicationDisabled(member) && !hasItem;
+    tmp34 = tmp28(4110).isMemberCommunicationDisabled(member) && !hasItem;
   }
   return found1;
 }

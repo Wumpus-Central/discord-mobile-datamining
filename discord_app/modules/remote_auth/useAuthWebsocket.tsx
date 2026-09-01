@@ -124,7 +124,7 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -153,7 +153,7 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
                   c8 = undefined;
                   closure_3 = 1;
                   catchPromise = 1;
-                  return { value: "Object", done: true };
+                  return { value: "PX_16", done: null };
                 }
               } else if (1 === tmp5) {
                 if (arg0 === 1) {
@@ -253,11 +253,11 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
                   } else if ("heartbeat_ack" === op) {
                     _true = true;
                     catchPromise = 3;
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   } else {
                     !(function warn() { ... })("received unsupported message");
                     catchPromise = 3;
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 }
               } else if (2 === tmp5) {
@@ -369,7 +369,7 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -445,7 +445,7 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
               c2.send(JSON.stringify(obj6));
               closure_1_8.current = c3;
               c3 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp16) {
             c3 = tmp;

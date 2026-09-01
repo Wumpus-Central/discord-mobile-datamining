@@ -29,7 +29,7 @@ export default {
     const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
     const merged = Object.assign(obj);
     const merged1 = Object.assign(options.options);
-    obj2.openLazy(asyncRequireImpl(16829, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj);
+    obj2.openLazy(asyncRequireImpl(16865, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj);
   },
   showCaptchaAsync(nextResult1) {
     let obj = arg1;
@@ -52,8 +52,8 @@ export default {
           return callback({ captcha_key, captcha_rqtoken, captcha_session_id: closure_1_3 });
         },
         onReject(arg0) {
-          if (arg0 === obj(10876).CaptchaError.CANCEL) {
-            const captchaCancelError = new obj(10876).CaptchaCancelError();
+          if (arg0 === obj(10914).CaptchaError.CANCEL) {
+            const captchaCancelError = new obj(10914).CaptchaCancelError();
             callback2(captchaCancelError);
           } else {
             const _Error = Error;
@@ -63,7 +63,7 @@ export default {
           }
         },
         close() {
-          return callback2(4415).hideActionSheet(closure_4);
+          return callback2(4445).hideActionSheet(closure_4);
         }
       };
       const merged = Object.assign(closure_0);

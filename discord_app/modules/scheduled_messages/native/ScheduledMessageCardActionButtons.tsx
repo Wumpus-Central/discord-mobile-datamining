@@ -34,7 +34,7 @@ export default function ScheduledMessageCardActionButtons(arg0) {
   obj[0] = intl3.string(getSystemLocale.t.SBcdAN);
   obj[1] = ClockIcon.ClockIcon;
   obj[2] = function action() {
-    return closure_1_0(closure_1_2[3]).openRescheduleMessageActionSheet(closure_0.scheduledMessageId, closure_0.sendAtTimestamp);
+    return closure_1_0(closure_1_2[3]).openRescheduleMessageActionSheet(closure_0.scheduledMessageId, closure_0.sendAtTimestamp, closure_0.createArgs.channelId);
   };
   items[2] = obj;
   obj1 = { label: null, IconComponent: null, action: null, variant: "destructive" };

@@ -3,8 +3,8 @@ import onDefault from "../../shared/utils/TypedEventEmitter.tsx";
 import WantsVideoQuality from "VideoQualityManager.tsx";
 import logger2 from "ConnectionEventFramerateReducer.tsx";
 import BaseConnectionEvent from "BaseConnectionEvent.tsx";
-import cloneDeepDefault from "../../../../_runtime/04564_cloneDeep.js";
-import flatRestDefault from "../../../../_runtime/04593_flatRest.js";
+import cloneDeepDefault from "../../../../_runtime/04596_cloneDeep.js";
+import flatRestDefault from "../../../../_runtime/04625_flatRest.js";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import DesktopSources from "Constants.tsx";
 

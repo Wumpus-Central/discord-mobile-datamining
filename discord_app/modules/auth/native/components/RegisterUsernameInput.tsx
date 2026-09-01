@@ -22,23 +22,23 @@ function UsernameStatusMessage(arg0) {
     let obj = { direction: "horizontal", spacing: 4, align: "flex-start", children: null };
     obj = { size: "xs", color: null };
     obj[1] = ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL;
-    const items = [callback3(tmp3(7676).CircleErrorIcon, obj), ];
+    const items = [callback3(tmp3(7708).CircleErrorIcon, obj), ];
     obj1 = { variant: "text-xs/medium", color: "text-feedback-critical", style: null };
     obj1[2] = tmp.status;
     const merged = Object.assign(createCacheKey);
     const merged1 = Object.assign(createCacheKey);
     obj1.animated = true;
     obj1.children = usernameStatus.message;
-    items[1] = callback3(tmp3(4444).Text, obj1);
+    items[1] = callback3(tmp3(4474).Text, obj1);
     obj[3] = items;
-    let tmp6 = callback4(tmp3(4894).Stack, obj);
+    let tmp6 = callback4(tmp3(4926).Stack, obj);
   } else {
     if (isUsernameFocused) {
       let type1;
       if (usernameStatus != null) {
         type1 = usernameStatus.type;
       }
-      if (type1 === tmp3(14332).NameValidationState.AVAILABLE) {
+      if (type1 === tmp3(14365).NameValidationState.AVAILABLE) {
         const obj2 = {};
         const merged2 = Object.assign(createCacheKey);
         const merged3 = Object.assign(createCacheKey);
@@ -47,8 +47,8 @@ function UsernameStatusMessage(arg0) {
         obj2.animated = true;
         const obj3 = { variant: "text-xs/medium", color: "text-feedback-positive", children: null };
         obj3[2] = usernameStatus.message;
-        obj2.children = callback3(tmp3(4444).Text, obj3);
-        tmp6 = callback3(tmp3(4444).Text, obj2);
+        obj2.children = callback3(tmp3(4474).Text, obj3);
+        tmp6 = callback3(tmp3(4474).Text, obj2);
       }
     }
     tmp6 = null;
@@ -62,7 +62,7 @@ function UsernameStatusMessage(arg0) {
       obj.animated = true;
       const intl = tmp3(1236).intl;
       obj.children = intl.string(tmp3(1236).t.y7LSyU);
-      tmp6 = callback3(tmp3(4444).Text, obj);
+      tmp6 = callback3(tmp3(4474).Text, obj);
     }
   }
   return tmp6;
@@ -139,13 +139,13 @@ export const RegisterUsernameInput = function RegisterUsernameInput(setUsername)
     type = usernameStatus.type;
   }
   let str2;
-  if (type === tmp14(14332).NameValidationState.ERROR) {
+  if (type === tmp14(14365).NameValidationState.ERROR) {
     str2 = "error";
   }
   obj1 = { children: null };
   obj[16] = str2;
   obj[17] = submitBehavior;
-  const items3 = [closure_9(setUsername(7673).TextInput, obj), closure_9(UsernameStatusMessage, { usernameStatus, isUsernameFocused: tmp5[0] })];
+  const items3 = [closure_9(setUsername(7705).TextInput, obj), closure_9(UsernameStatusMessage, { usernameStatus, isUsernameFocused: tmp5[0] })];
   obj1[0] = items3;
   return tmp11(tmp12, obj1);
 };

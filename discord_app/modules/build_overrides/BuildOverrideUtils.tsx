@@ -4,7 +4,7 @@ import ME from "../../Constants.tsx";
 import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
 import UrlAll from "../../../_runtime/01488_Url.js";
 import BUILD_OVERRIDE_TARGET_NAMES from "BuildOverrideConstants.tsx";
-import parseDefault from "../../../_runtime/04365_parse.js";
+import parseDefault from "../../../_runtime/04395_parse.js";
 import getConstants from "../../utils/native/ClientInfoUtils.tsx";
 import set from "../../utils/PlatformUtils.tsx";
 

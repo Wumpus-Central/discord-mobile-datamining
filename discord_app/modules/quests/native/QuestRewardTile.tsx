@@ -1,96 +1,34 @@
 // discord_app/modules/quests/native/QuestRewardTile.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import noopDefault from "../../../../_runtime/00019_noop.js";
+import _modDef11338 from "QuestDockRewardTile.tsx";
 import { useMemo } from "../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_8 from "../../a11y/AccessibilityStore.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
-({ AppState: closure_6, View: error } = get_ActivityIndicator);
-let closure_10 = createCacheKey.createStyles(() => {
-  let obj = { container: null, video: null, image: null };
-  obj = { borderRadius: ThemesDefault.radii.sm, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" };
-  obj[0] = obj;
-  obj[1] = { overflow: "hidden", height: "100%", width: "100%" };
-  obj[2] = { height: "100%", width: "100%" };
-  return obj;
-});
+noopDefault;
 const result = require("set").fileFinishedImporting("modules/quests/native/QuestRewardTile.tsx");
 
 export default function QuestRewardTile(quest) {
   quest = quest.quest;
-  const height = quest.height;
-  const width = quest.width;
-  let flag = quest.paused;
-  if (flag === undefined) {
-    flag = false;
-  }
-  let withAnimation = quest.withAnimation;
-  if (withAnimation === undefined) {
-    let obj = quest(width[7]);
-    withAnimation = obj.isIOS();
-  }
-  let callback;
-  let React;
-  obj1 = quest(width[8]);
-  const items = [closure_8];
-  const items1 = [quest];
-  const stateFromStores = obj1.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  const tmp7 = useMemo(() => quest(width[9]).getQuestPrimaryReward(quest), items1);
-  if (null != tmp7.name) {
-    let name = tmp7.name;
+  const merged = Object.assign(quest, Object.create(null));
+  const items = [quest];
+  const tmp3 = useMemo(() => quest(closure_1_2[2]).getQuestPrimaryReward(quest), items);
+  if (null != tmp3.name) {
+    let name = tmp3.name;
   } else {
-    name = tmp7.messages.name;
+    name = tmp3.messages.name;
   }
-  const items2 = [quest];
-  const tmp6Result = useMemo(() => quest(width[10]).getQuestAsset(quest, quest(width[10]).QuestAssetType.REWARD, undefined, true), items2);
-  callback = tmp6Result;
-  const tmp9 = callback2();
-  [tmp11, c4] = callback(React.useState("active" === currentState.currentState), 2);
-  const items3 = [tmp6Result.isAnimated];
-  const effect = React.useEffect(() => {
-    if (closure_3.isAnimated) {
-      closure_0 = closure_1_6.addEventListener("change", (arg0) => {
-        callback("active" === arg0);
-      });
-      return () => {
-        closure_0.remove();
-      };
-    }
-  }, items3);
-  const items4 = [tmp6Result, width, height];
-  const memo = React.useMemo(() => {
-    let obj = quest(width[10]);
-    obj = { assetUrl: closure_3.url, width, height };
-    return obj.getScaledImageUrl(obj);
-  }, items4);
-  const items5 = [quest.accessibilityLabelPrefix, name];
-  const found = items5.filter(Boolean);
-  obj = { accessibilityLabel: found.join(", "), style: items6, children: null };
-  items6 = [tmp9.container, { height, width }, quest.style];
-  if (tmp6Result.isAnimated) {
-    if (withAnimation) {
-      obj = { style: null, source: null, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false, importantForAccessibility: "no-hide-descendants", poster: null, resizeMode: "cover", paused: null, muted: true };
-      obj[0] = tmp9.video;
-      obj1 = { uri: null };
-      obj1[0] = tmp6Result.url;
-      obj[1] = obj1;
-      obj[5] = memo;
-      let tmp17 = !tmp11;
-      if (tmp11) {
-        tmp17 = flag;
-      }
-      if (!tmp17) {
-        tmp17 = stateFromStores;
-      }
-      obj[7] = tmp17;
-      let tmp14Result = tmp14(quest(tmp4[11]).VideoComponent, obj);
-    }
-    obj[2] = tmp14Result;
-    return tmp14(tmp15, obj);
+  const items1 = [quest];
+  const tmp2Result = useMemo(() => quest(closure_1_2[3]).getQuestAsset(quest, quest(closure_1_2[3]).QuestAssetType.REWARD, undefined, true), items1);
+  const items2 = [quest.accessibilityLabelPrefix, name];
+  const found = items2.filter(Boolean);
+  const joined = found.join(", ");
+  const obj = { assetUrl: tmp2Result.url, isAnimatedAsset: tmp2Result.isAnimated, accessibilityLabel: null };
+  let tmp8;
+  if ("" !== joined) {
+    tmp8 = joined;
   }
-  tmp14Result = tmp14(height(tmp4[12]), { source: { uri: memo }, style: tmp9.image });
+  obj[2] = tmp8;
+  const merged1 = Object.assign(merged);
+  return jsx(_modDef11338, { assetUrl: tmp2Result.url, isAnimatedAsset: tmp2Result.isAnimated, accessibilityLabel: null });
 };

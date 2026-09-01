@@ -4,7 +4,7 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../../modules/safe_area/useSafeAreaInsets.native.tsx";
 import ManaContext from "../../../../../discord_common/js/packages/design/native.tsx";
-import _modDef4187 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import _modDef4217 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../Styles/native/createStyles.tsx";
@@ -87,6 +87,6 @@ export const Backdrop = function Backdrop(animatedProps) {
     obj5.style = items3;
     items2[1] = tmp7(tmp8, obj5);
     obj[3] = items2;
-    return closure_5(_modDef4187.View, obj);
+    return closure_5(_modDef4217.View, obj);
   }
 };

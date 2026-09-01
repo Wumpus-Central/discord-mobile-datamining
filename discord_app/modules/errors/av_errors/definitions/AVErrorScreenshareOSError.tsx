@@ -9,15 +9,15 @@ export const AVErrorScreenshareOSErrorDefinition = {
     activeStreams = activeStreams.activeStreams;
     const found = activeStreams.filter((errorCode) => null != errorCode.errorCode);
     return found.map((errorCode) => {
-      const obj = { type: callback(9526).AVError.SCREENSHARE_OS_ERROR, errorMessage: null };
+      const obj = { type: callback(9565).AVError.SCREENSHARE_OS_ERROR, errorMessage: null };
       if (obj2.isMac()) {
         if (str === closure_2) {
           const _HermesInternal = HermesInternal;
           let combined = "" + str + " - your Mac may be low on disk space";
         }
         obj[1] = combined;
-        let tmpResult = tmp(17382);
-        tmpResult = tmp(4514);
+        let tmpResult = tmp(17418);
+        tmpResult = tmp(4544);
         const merged = Object.assign(tmpResult.getStreamErrorContext(tmpResult.encodeStreamKey(errorCode)));
         return obj;
       }

@@ -38,9 +38,9 @@ export default function Divider(outer) {
   let tmp7 = null;
   if (tmp6) {
     obj = { backgroundColor: null };
-    obj[0] = tmp2(4296).hexOpacityToRgba(createCacheKey[theme], profileThemeValues.dividerOpacity);
+    obj[0] = tmp2(4326).hexOpacityToRgba(createCacheKey[theme], profileThemeValues.dividerOpacity);
     tmp7 = obj;
-    const tmp2Result = tmp2(4296);
+    const tmp2Result = tmp2(4326);
   }
   let tmp10Result = null;
   if (!React.useContext(context.RedesignCompatContext)) {

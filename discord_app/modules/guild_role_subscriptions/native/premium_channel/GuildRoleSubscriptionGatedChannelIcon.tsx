@@ -1,7 +1,7 @@
 // discord_app/modules/guild_role_subscriptions/native/premium_channel/GuildRoleSubscriptionGatedChannelIcon.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import Button from "../../../../design/void/native.tsx";
-import registerAssetDefault from "../../../../../_runtime/09101_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/09139_registerAsset.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;

@@ -63,7 +63,7 @@ import updateGuildState from "../messages/GuildOfficialMessagesStore.tsx";
 import _validate from "../notification_center/NotificationCenterItemsStore.tsx";
 import startInterval from "../notifications/settings_unread_notice/UnreadSettingNoticeStore2.tsx";
 import freshTeenActivityWithMap from "../parent_tools/FamilyCenterStore.tsx";
-import setPremiumTypeActual from "../premium/OverridePremiumTypeStore.tsx";
+import setActualFromUser from "../premium/OverridePremiumTypeStore.tsx";
 import getCurrentTime from "../premium/gifting/PremiumGiftingIntentStore.tsx";
 import clearDismissUntil from "../premium/native/NoticeStore.tsx";
 import handleConnectionOpenOrResumed from "../presence_subscriptions/PresenceSubscriptionsStore.tsx";

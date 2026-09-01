@@ -1,7 +1,7 @@
 // discord_app/modules/contact_sync/native/components/ContactSyncLandingOnboardingRedesign.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter.tsx";
-import registerAssetDefault from "../../../../../_runtime/12198_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/12231_registerAsset.js";
 import ContactSyncErrorDefault from "ContactSyncError.tsx";
 import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
@@ -50,7 +50,7 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -86,7 +86,7 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
             callback();
           }
           table = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp11) {
         table = tmp;
@@ -99,18 +99,18 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
   obj1 = { style: tmp.title, variant: "heading-xl/bold", children: null };
   const intl = onNext(1236).intl;
   obj1[2] = intl.string(onNext(1236).t["/G+nci"]);
-  items1[1] = callback2(onNext(4444).Text, obj1);
+  items1[1] = callback2(onNext(4474).Text, obj1);
   const obj2 = { style: tmp.subtitle, variant: "text-sm/medium", children: null };
   const intl2 = onNext(1236).intl;
   obj2[2] = intl2.string(onNext(1236).t.G8zcHt);
-  items1[2] = callback2(onNext(4444).Text, obj2);
+  items1[2] = callback2(onNext(4474).Text, obj2);
   const obj3 = { style: tmp.buttonContainer, children: null };
   const obj4 = { variant: "primary", size: "lg", text: null, onPress: null, loading: null };
   const intl3 = onNext(1236).intl;
   obj4[2] = intl3.string(onNext(1236).t.LhlgY9);
   obj4[3] = callback;
   obj4[4] = loading;
-  obj3[1] = callback2(onNext(4896).Button, obj4);
+  obj3[1] = callback2(onNext(4928).Button, obj4);
   items1[3] = callback2(closure_5, obj3);
   items1[4] = callback2(ContactSyncErrorDefault, { error });
   obj[1] = items1;

@@ -5,7 +5,7 @@ import Button from "../../../design/void/native.tsx";
 import map from "../../../design/tokens/native/useToken.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
-import registerAssetDefault from "../../../../_runtime/07681_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/07713_registerAsset.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_6 from "../../a11y/AccessibilityStore.tsx";
@@ -588,7 +588,7 @@ const memoResult = importAllResult.memo(function ChatInputContextBar(channel) {
       return chatInputRef(pendingReply[30]).clearDraft(channel.id, closure_1_8.ScheduledMessage);
     };
     obj7[2] = function onEditSchedule() {
-      return channel(pendingReply[31]).openScheduleMessageActionSheet(channel.id, stateFromStores.scheduledTimestamp);
+      return channel(pendingReply[31]).openScheduleMessageActionSheet(channel.id, channel(pendingReply[32]).ScheduledMessageEntryPoint.COMPOSER_BAR, stateFromStores.scheduledTimestamp);
     };
     obj6[0] = callback(ChatInputScheduledMessageBar, obj7);
     tmp20 = callback(closure_24, obj6);

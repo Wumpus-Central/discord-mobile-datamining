@@ -10,7 +10,7 @@ const result = set.fileFinishedImporting("lib/ZustandStore.tsx");
 export const createZustandStore = function createZustandStore(arg0) {
   const _require = arg0;
   let obj = identity;
-  dependencyMap = obj.createWithEqualityFn(require("../../_runtime/04315_createJSONStorage.js").subscribeWithSelector((arg0, arg1, arg2) => {
+  dependencyMap = obj.createWithEqualityFn(require("../../_runtime/04345_createJSONStorage.js").subscribeWithSelector((arg0, arg1, arg2) => {
     let callback = arg0;
     return callback((arg0) => {
       const callback = arg0;

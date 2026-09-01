@@ -22,7 +22,7 @@ function _uploadMessageAttachments() {
           obj[0] = attachments;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -50,7 +50,7 @@ function _uploadMessageAttachments() {
               closure_7 = undefined;
               c4 = 1;
               set = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -63,13 +63,13 @@ function _uploadMessageAttachments() {
               return obj1;
             } else if (set.has(dependencyMap)) {
               set = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else {
-              const tmp16 = new callback2(7551)();
+              const tmp16 = new callback2(7583)();
               set = tmp16;
               const _HermesInternal = HermesInternal;
               closure_6 = "pending-upload-" + set._file.id;
-              let obj2 = callback(4705);
+              let obj2 = callback(4737);
               obj2 = {};
               const merged = Object.assign(callback2);
               obj2.key = closure_6;

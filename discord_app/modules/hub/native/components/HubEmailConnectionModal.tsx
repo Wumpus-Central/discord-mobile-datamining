@@ -75,7 +75,7 @@ export default function HubEmailConnectionModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return navigation(callback(12233), {});
+        return navigation(callback(12266), {});
       }
     };
     obj2[closure_1_3.VERIFY_EMAIL] = {
@@ -90,7 +90,7 @@ export default function HubEmailConnectionModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return navigation(callback(12236), {});
+        return navigation(callback(12269), {});
       }
     };
     obj2[closure_1_3.EMAIL_WAITLIST] = {
@@ -100,7 +100,7 @@ export default function HubEmailConnectionModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return navigation(callback(12239), {});
+        return navigation(callback(12272), {});
       }
     };
     obj2[closure_1_3.SUBMIT_SCHOOL] = {
@@ -110,7 +110,7 @@ export default function HubEmailConnectionModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return navigation(callback(12241), {});
+        return navigation(callback(12274), {});
       }
     };
     obj2[closure_1_3.SELECT_SCHOOL] = {
@@ -120,7 +120,7 @@ export default function HubEmailConnectionModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return navigation(callback(12242), {});
+        return navigation(callback(12275), {});
       }
     };
     obj2[closure_1_3.VERIFY_PIN] = {
@@ -130,7 +130,7 @@ export default function HubEmailConnectionModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return navigation(callback(12243), {});
+        return navigation(callback(12276), {});
       }
     };
     obj2[closure_1_3.SELECT_SCHOOL_SEARCH] = {
@@ -138,7 +138,7 @@ export default function HubEmailConnectionModal(arg0) {
       headerShown: false,
       render(arg0) {
         const merged = Object.assign(arg0);
-        return navigation(callback(12246), {});
+        return navigation(callback(12279), {});
       }
     };
     obj1[0] = obj2;

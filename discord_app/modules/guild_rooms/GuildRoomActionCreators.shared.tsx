@@ -30,7 +30,7 @@ function _guildRoomConnect() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         while (true) {
@@ -73,7 +73,7 @@ function _guildRoomConnect() {
               if (tmp91 == null) {
                 let tmp41 = callback;
                 let tmp42 = dependencyMap;
-                UNSET = callback(4649).GuildRoomSeats.UNSET;
+                UNSET = callback(4681).GuildRoomSeats.UNSET;
               }
               let tmp43 = UNSET;
               let tmp44 = callback;
@@ -129,7 +129,7 @@ function _guildRoomConnect() {
               closure_6 = arg1;
               let tmp54 = callback;
               let tmp55 = dependencyMap;
-              let obj12 = callback(4650);
+              let obj12 = callback(4682);
               let tmp56 = closure_6;
               users = obj12.serverGuildRoomToClient(closure_6.body);
               let tmp57 = callback2;
@@ -152,7 +152,7 @@ function _guildRoomConnect() {
                 let tmp67 = items;
                 let tmp68 = callback;
                 let tmp69 = dependencyMap;
-                let obj16 = callback(4667);
+                let obj16 = callback(4699);
                 let obj7 = { guildId: null, channelId: null };
                 let tmp70 = callback;
                 obj7[0] = callback;
@@ -161,10 +161,10 @@ function _guildRoomConnect() {
                 let result = obj16.trackGuildRoomUserConnected(obj7);
                 let tmp73 = callback;
                 let tmp74 = dependencyMap;
-                let obj18 = callback(4678);
+                let obj18 = callback(4710);
                 let tmp75 = callback;
                 let tmp76 = dependencyMap;
-                let fireSurveyActionResult = obj18.fireSurveyAction(callback(4686).SurveyActionTypes.GUILD_ROOM_JOINED);
+                let fireSurveyActionResult = obj18.fireSurveyAction(callback(4718).SurveyActionTypes.GUILD_ROOM_JOINED);
                 let tmp78 = users;
                 users = users.users;
                 let tmp79 = id;
@@ -202,7 +202,7 @@ function _guildRoomConnect() {
                     c10 = tmp10;
                     let tmp13 = callback;
                     let tmp14 = dependencyMap;
-                    obj = callback(4667);
+                    obj = callback(4699);
                     obj12 = { channelId: null, update: null };
                     let tmp15 = callback2;
                     obj12[0] = callback2;
@@ -216,7 +216,7 @@ function _guildRoomConnect() {
                   let tmp19 = items;
                   let tmp20 = callback;
                   let tmp21 = dependencyMap;
-                  obj2 = callback(4667);
+                  obj2 = callback(4699);
                   obj13 = { guildId: null, channelId: null, actualSeatPosition: null, targetSeatPosition: null, actualSeatId: null, targetSeatId: null };
                   let tmp22 = callback;
                   obj13[0] = callback;
@@ -236,7 +236,7 @@ function _guildRoomConnect() {
               c11 = 0;
               let num2 = 3;
               c13 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             let tmp5 = c10;
@@ -280,7 +280,7 @@ function _guildRoomUpdate() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -440,7 +440,7 @@ function _guildRoomUpdate() {
             }
             c6 = 0;
             c8 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp71) {
           roomObjects = tmp71;
@@ -590,7 +590,7 @@ function _createGuildRoomNote() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -620,7 +620,7 @@ function _createGuildRoomNote() {
               closure_1_15(callback2);
               c7 = 1;
               const obj2 = { object_type: null, content: null, position: null };
-              obj2[0] = callback(4648).GuildRoomObjectTypes.NOTE;
+              obj2[0] = callback(4680).GuildRoomObjectTypes.NOTE;
               obj2[1] = dependencyMap;
               obj2[2] = closure_3;
               c8 = 2;
@@ -649,7 +649,7 @@ function _createGuildRoomNote() {
             return obj5;
           } else {
             if (callback2 !== callback) {
-              obj = callback(4667);
+              obj = callback(4699);
               const obj6 = { interactionType: "note_created", guildId: null, channelId: null };
               obj6[1] = callback;
               obj6[2] = callback2;
@@ -657,7 +657,7 @@ function _createGuildRoomNote() {
             }
             c7 = 0;
             c9 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp27) {
           closure_6 = tmp27;
@@ -700,7 +700,7 @@ function _deleteGuildRoomNote() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -718,7 +718,7 @@ function _deleteGuildRoomNote() {
               closure_4 = tmp5;
               closure_3 = tmp2;
               obj1 = { object_type: null };
-              obj1[0] = callback(4648).GuildRoomObjectTypes.NOTE;
+              obj1[0] = callback(4680).GuildRoomObjectTypes.NOTE;
               c5 = 1;
               c6 = 1;
               const obj2 = { value: null, done: false };
@@ -735,14 +735,14 @@ function _deleteGuildRoomNote() {
             return obj3;
           } else {
             if (closure_1 !== callback) {
-              obj = callback(4667);
+              obj = callback(4699);
               const obj4 = { interactionType: "note_deleted", guildId: null, channelId: null };
               obj4[1] = callback;
               obj4[2] = closure_1;
               const result = obj.trackGuildRoomObjectInteracted(obj4);
             }
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp15) {
           c6 = tmp;
@@ -777,7 +777,7 @@ function _fetchGuildRoom() {
       yield HTTP.get(obj1);
       if (1 === tmp7) {
         c5 = 0;
-        const obj4 = callback(4687);
+        const obj4 = callback(4719);
         obj4.handleGuildRoomError({ silent: true });
         c7 = 3;
       } else if (arg0 === 1) {
@@ -785,7 +785,7 @@ function _fetchGuildRoom() {
         throw arg1;
       } else if (arg0 !== 2) {
         lib = arg1;
-        const obj = callback(4650);
+        const obj = callback(4682);
         dependencyMap = obj.serverGuildRoomToClient(lib.body);
         obj1 = lib(709);
         const obj3 = { type: "GUILD_ROOM_FETCH_SUCCESS", guildId: null, room: null };

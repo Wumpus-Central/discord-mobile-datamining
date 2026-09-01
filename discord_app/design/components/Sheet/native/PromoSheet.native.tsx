@@ -36,7 +36,7 @@ export const PromoSheet = function PromoSheet(arg0) {
     obj = {};
     const merged1 = Object.assign(graphic);
     obj.style = tmp2.graphic;
-    let tmp4Result = tmp4(tmp5(8946).Graphic, obj);
+    let tmp4Result = tmp4(tmp5(8983).Graphic, obj);
   } else {
     tmp4Result = null;
     if (null != illustration) {
@@ -47,19 +47,19 @@ export const PromoSheet = function PromoSheet(arg0) {
     }
   }
   const items1 = [tmp4Result, , ];
-  const items2 = [closure_7(gradientColor(4444).Text, { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp2.title, children: title }), ];
+  const items2 = [closure_7(gradientColor(4474).Text, { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp2.title, children: title }), ];
   tmp4Result = null;
   if (null != description) {
     const obj2 = { variant: "redesign/heading-18/medium", color: "text-subtle", style: null, children: null };
     obj2[2] = tmp2.description;
     obj2[3] = description;
-    tmp4Result = tmp4(tmp5(4444).Text, obj2);
+    tmp4Result = tmp4(tmp5(4474).Text, obj2);
   }
   const obj3 = { spacing: 24, children: null };
   items2[1] = tmp4Result;
-  items1[1] = closure_8(gradientColor(4894).Stack, { children: items2 });
+  items1[1] = closure_8(gradientColor(4926).Stack, { children: items2 });
   items1[2] = actions;
   obj3[1] = items1;
-  obj.children = closure_8(gradientColor(4894).Stack, obj3);
-  return closure_7(gradientColor(5590).BottomSheet, obj);
+  obj.children = closure_8(gradientColor(4926).Stack, obj3);
+  return closure_7(gradientColor(5622).BottomSheet, obj);
 };

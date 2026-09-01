@@ -11,7 +11,7 @@ import IconSizesDefault from "Icon/native/Icon.tsx";
 import PressableBase from "Pressables/native/Pressables.tsx";
 import Form from "Form/native/index.tsx";
 import CardSectionDefault from "CardSection/native/CardSection.tsx";
-import _modDef8359 from "LegacyText/native/LegacyText.tsx";
+import _modDef8391 from "LegacyText/native/LegacyText.tsx";
 import renderDefault from "TouchableHitBox/native/TouchableHitBox.tsx";
 import StaticNativeCutoutAvatarImage from "CutoutableAvatarImage/native/CutoutableAvatarImage.tsx";
 import StaticNativeCutoutAvatarImageDefault from "CutoutableAvatarImage/native/CutoutableAvatarImage.tsx";
@@ -144,7 +144,7 @@ export const EXPERIMENTAL_HIGH_ELEVATION_SHADOW_PARAMS = generateBoxShadowStyle.
 export const NO_ELEVATION_SHADOW_PARAMS = generateBoxShadowStyle.NO_ELEVATION_SHADOW_PARAMS;
 export const NitroWheel = NitroWheelDefault;
 export const EmptyState = EmptyStateDefault;
-export const LegacyText = _modDef8359;
+export const LegacyText = _modDef8391;
 export const RNTextInput = RNTextInput.RNTextInput;
 export const Badge = BadgeDefault;
 export const MaskedBadge = Badge.MaskedBadge;

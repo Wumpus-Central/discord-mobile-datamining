@@ -22,9 +22,9 @@ export default function GiftingRewardPreviewAvatar(asset) {
     obj[0] = asset.asset;
     tmp5 = obj;
   }
-  obj = { user: stateFromStores, guildId: "r", avatarDecoration: "Object", animate: null };
+  obj = { user: stateFromStores, guildId: "r", avatarDecoration: "PX_16", animate: null };
   obj[2] = tmp5;
   obj[3] = !stateFromStores1;
   const merged = Object.assign(asset);
-  return jsx(Button.Avatar, { user: stateFromStores, guildId: "r", avatarDecoration: "Object", animate: null });
+  return jsx(Button.Avatar, { user: stateFromStores, guildId: "r", avatarDecoration: "PX_16", animate: null });
 };

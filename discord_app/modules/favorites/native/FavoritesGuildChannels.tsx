@@ -55,9 +55,9 @@ export default function FavoritesGuildChannels(arg0) {
       const merged = Object.assign(tmp2Result);
       obj2.guildChannels = guildChannels;
       obj2.guildChannelsVersion = 0;
-      obj2.favoritesSuggestionsNoticeHeight = tmp4(15754).getFavoritesSuggestionsNoticeHeight(fontScale, tmp3, tmp);
-      tmp10Result = tmp10(tmp4(15656).ChannelList, obj2);
-      const tmp4Result = tmp4(15754);
+      obj2.favoritesSuggestionsNoticeHeight = tmp4(15790).getFavoritesSuggestionsNoticeHeight(fontScale, tmp3, tmp);
+      tmp10Result = tmp10(tmp4(15692).ChannelList, obj2);
+      const tmp4Result = tmp4(15790);
     }
     const obj3 = { children: null };
     items[1] = tmp10Result;

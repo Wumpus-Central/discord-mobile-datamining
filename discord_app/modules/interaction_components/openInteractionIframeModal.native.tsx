@@ -20,7 +20,7 @@ function _openInteractionIframeModal() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -37,7 +37,7 @@ function _openInteractionIframeModal() {
             obj = v0(closure_1_2[2]);
             obj.pushLazy(callback(closure_1_2[4])(closure_1_2[3], closure_1_2.paths), callback, closure_1_4);
             v0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp10) {
           v0 = tmp;

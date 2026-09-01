@@ -2,10 +2,10 @@
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import AccessibilityAnnouncer from "../../../../design/shared.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05620_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05652_LegacyBaseButton.js";
 import getNoiseCancellationDeferredToSystem from "../../../noise_cancellation/NoiseCancellationUtils.tsx";
 import handleKrispLinkPressed from "KrispLogo.tsx";
-import _modDef14307 from "../../../settings/native/renderer/SettingLayout.tsx";
+import _modDef14340 from "../../../settings/native/renderer/SettingLayout.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_6 from "../../../../stores/MediaEngineStore.tsx";
@@ -20,9 +20,9 @@ function KrispLogo() {
   const tmp = callback3();
   let obj = AccessibilityAnnouncer;
   if (obj.isThemeLight(tmp4)) {
-    let tmp2Result = tmp2(10042);
+    let tmp2Result = tmp2(10081);
   } else {
-    tmp2Result = tmp2(10043);
+    tmp2Result = tmp2(10082);
   }
   obj = { style: tmp.krisp, children: null };
   obj = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };
@@ -53,7 +53,7 @@ function SystemProcessingSubLabel() {
       const result = mediaEngine.showSystemCaptureConfigurationUI("microphone_modes");
     };
     obj[1] = intl.format(tmp(1236).t.EUNgko, obj);
-    tmp3 = callback(tmp(4444).Text, obj);
+    tmp3 = callback(tmp(4474).Text, obj);
   }
   return tmp3;
 }
@@ -65,7 +65,7 @@ let result = require("set").fileFinishedImporting("modules/user_settings/voice/n
 
 export default function SettingsVoiceScreen() {
   const node = React.useMemo(() => {
-    let obj = callback(11031);
+    let obj = callback(11068);
     obj = { sections: null };
     obj = { label: null, settings: null };
     const intl = callback(1236).intl;
@@ -129,5 +129,5 @@ export default function SettingsVoiceScreen() {
     obj[0] = items1;
     return obj.createList(obj);
   }, []);
-  return callback(_modDef14307, { node });
+  return callback(_modDef14340, { node });
 };

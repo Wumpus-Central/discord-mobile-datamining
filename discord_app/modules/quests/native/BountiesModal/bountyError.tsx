@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/BountiesModal/bountyError.tsx
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import dispatcherDefault from "../../../toast/native/ToastActionCreators.tsx";
-import registerAssetDefault from "../../../../../_runtime/07648_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/07680_registerAsset.js";
 import BOUNTY_REWARD_CLAIM_FAILED_TOAST_DURATION_MS from "BountiesModalConstants.tsx";
 import set from "../../../../../_runtime/00002_set.js";
 

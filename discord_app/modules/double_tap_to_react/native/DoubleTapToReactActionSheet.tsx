@@ -21,15 +21,15 @@ function EmojiConfetti(children) {
   let sharedValue1;
   let sharedValue2;
   let sharedValue3;
-  sharedValue = top(4187).useSharedValue(0);
-  let obj = top(4187);
-  sharedValue1 = top(4187).useSharedValue(0);
-  let obj2 = top(4187);
-  sharedValue2 = top(4187).useSharedValue(0.2);
-  let obj3 = top(4187);
-  sharedValue3 = top(4187).useSharedValue(0);
-  let obj4 = top(4187);
-  const mountLayoutEffect = top(4913).useMountLayoutEffect(() => {
+  sharedValue = top(4217).useSharedValue(0);
+  let obj = top(4217);
+  sharedValue1 = top(4217).useSharedValue(0);
+  let obj2 = top(4217);
+  sharedValue2 = top(4217).useSharedValue(0.2);
+  let obj3 = top(4217);
+  sharedValue3 = top(4217).useSharedValue(0);
+  let obj4 = top(4217);
+  const mountLayoutEffect = top(4945).useMountLayoutEffect(() => {
     let obj = sharedValue;
     let num = 0;
     if (!closure_2) {
@@ -70,7 +70,7 @@ function EmojiConfetti(children) {
     const withTimingResult5 = top(closure_1_2[13]).withTiming(1, { duration: 360 });
     const result5 = obj4.set(obj17.withSequence(withTimingResult4, withTimingResult5, top(closure_1_2[13]).withTiming(0, { duration: 240 })));
   });
-  let obj5 = top(4913);
+  let obj5 = top(4945);
   const fn = function f() {
     let obj = { scale: sharedValue2.get() };
     const items = [obj, ];
@@ -103,8 +103,8 @@ function EmojiConfetti(children) {
   fn.__closure = { sizeValue: sharedValue2, left, rotationValue: sharedValue1, top, positionValue: sharedValue, opacityValue: sharedValue3 };
   fn.__workletHash = 1455873119263;
   fn.__initData = closure_14;
-  const style = top(4187).useAnimatedStyle(fn);
-  return callback3(left(4187).View, { style, children: children.emojiComponent });
+  const style = top(4217).useAnimatedStyle(fn);
+  return callback3(left(4217).View, { style, children: children.emojiComponent });
 }
 function EmojiBurstAnimation(emojiComponent) {
   emojiComponent = emojiComponent.emojiComponent;
@@ -315,7 +315,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -369,7 +369,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
           return obj.showDoubleTapEmojiUpdatedToast(obj);
         }, 500);
         c3 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp24) {
         c3 = tmp;
         throw tmp24;

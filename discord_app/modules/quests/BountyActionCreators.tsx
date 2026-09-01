@@ -112,7 +112,7 @@ function _fetchQuestHomeBounties() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -132,9 +132,9 @@ function _fetchQuestHomeBounties() {
               obj1 = { value: null, done: false };
               obj1[0] = closure_1_7(tmp5, closure_1_3(function*() {
                 let uuid = tmp2;
-                let obj5 = closure_1_0(7175);
+                let obj5 = closure_1_0(7207);
                 uuid = yield obj5.getSession();
-                const uuid2 = closure_1_0(7434).getOrRefreshAdSession();
+                const uuid2 = closure_1_0(7466).getOrRefreshAdSession();
                 const HTTP = closure_1_0(530).HTTP;
                 const obj3 = { url: null, query: null, rejectWithError: false, context: null };
                 obj3[0] = closure_1_6.QUESTS_GET_DECISIONS;
@@ -164,7 +164,7 @@ function _fetchQuestHomeBounties() {
             return obj;
           }
           c1 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp9) {
           c1 = tmp;
           throw tmp9;
@@ -200,7 +200,7 @@ function _fetchBountyPreview() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -250,7 +250,7 @@ function _fetchBountyPreview() {
             return obj;
           }
           c2 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp10) {
           c2 = tmp;
           throw tmp10;
@@ -287,7 +287,7 @@ function _claimBountyReward() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

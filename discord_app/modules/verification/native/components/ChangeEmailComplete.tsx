@@ -4,8 +4,8 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import Button from "../../../../design/components/Button/native/Button.native.tsx";
-import _modDef7655 from "../../../../actions/native/EmailVerificationModalActionCreators.tsx";
-import registerAssetDefault from "../../../../../_runtime/07669_registerAsset.js";
+import _modDef7687 from "../../../../actions/native/EmailVerificationModalActionCreators.tsx";
+import registerAssetDefault from "../../../../../_runtime/07701_registerAsset.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { resetChangeEmailStore } from "../../ChangeEmailStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -14,7 +14,7 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 require = arg1;
 function handlePress() {
   resetChangeEmailStore();
-  _modDef7655.close();
+  _modDef7687.close();
 }
 noopAll;
 ({ View: c3, Image: c4, ScrollView: c5 } = get_ActivityIndicator);

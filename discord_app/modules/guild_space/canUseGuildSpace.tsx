@@ -30,7 +30,7 @@ export function canUseGuildSpace(closure_2, getChannelIdForGuildTransition) {
 }
 export const useCanUseGuildSpace = function useCanUseGuildSpace(id, useGuildActionRows) {
   let stateFromStores = id;
-  const guildSpaceExperimentEnabled = stateFromStores(6040).useGuildSpaceExperimentEnabled(id, useGuildActionRows);
+  const guildSpaceExperimentEnabled = stateFromStores(6072).useGuildSpaceExperimentEnabled(id, useGuildActionRows);
   let tmpResult = tmp(589);
   const items = [closure_2];
   const items1 = [id];

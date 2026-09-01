@@ -58,7 +58,7 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
           tmp24 = new closure_4(initialInteractionMetadata.target_user);
         }
       }
-      let tmp16Result = tmp16(4714);
+      let tmp16Result = tmp16(4746);
       const userAuthor1 = tmp16Result.getUserAuthor(tmp24, channel);
       const colorString2 = userAuthor1.colorString;
       let tmp33 = defaultUsernameColor;
@@ -86,7 +86,7 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
         guildId = channel.getGuildId();
       }
       id = message.interaction.user.id;
-      tmp16Result = tmp16(7838);
+      tmp16Result = tmp16(7870);
       const result1 = tmp16Result.isNativeMessageEligibleForEnhancedRoleColors(guildId, id);
       let id1;
       if (tmp24 != null) {
@@ -95,13 +95,13 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
       let processColorStringsResult = null;
       const result2 = processColorStrings.isNativeMessageEligibleForEnhancedRoleColors(guildId, id1);
       if (result1) {
-        processColorStringsResult = tmp16(7838).processColorStrings(userAuthor.colorStrings);
-        const tmp16Result2 = tmp16(7838);
+        processColorStringsResult = tmp16(7870).processColorStrings(userAuthor.colorStrings);
+        const tmp16Result2 = tmp16(7870);
       }
       let processColorStringsResult1 = null;
       if (result2) {
-        processColorStringsResult1 = tmp16(7838).processColorStrings(userAuthor1.colorStrings);
-        const tmp16Result3 = tmp16(7838);
+        processColorStringsResult1 = tmp16(7870).processColorStrings(userAuthor1.colorStrings);
+        const tmp16Result3 = tmp16(7870);
       }
       user = obj.getUser(id);
       if (user == null) {
@@ -115,8 +115,8 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
         if (user2 == null) {
           user2 = tmp24;
         }
-        const displayNameFontIdForMobileUser1 = tmp16(7840).getDisplayNameFontIdForMobileUser(user2, guildId);
-        const tmp16Result5 = tmp16(7840);
+        const displayNameFontIdForMobileUser1 = tmp16(7872).getDisplayNameFontIdForMobileUser(user2, guildId);
+        const tmp16Result5 = tmp16(7872);
       }
       obj = { username: null, usernameOnClick: null };
       const tmp16Result4 = createDisplayNameStylesMobile;
@@ -148,7 +148,7 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
       obj[1] = obj;
       if (tmp) {
         if (!result) {
-          const result3 = tmp16(8112).isActivitiesInTextEnabled(channel);
+          const result3 = tmp16(8144).isActivitiesInTextEnabled(channel);
           const intl = tmp16(1236).intl;
           const formatToParts = intl.formatToParts;
           const t = tmp16(1236).t;
@@ -165,7 +165,7 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
             const merged2 = Object.assign(obj);
             formatToPartsResult = formatToParts(t.k964Wm, obj5);
           }
-          const tmp16Result7 = tmp16(8112);
+          const tmp16Result7 = tmp16(8144);
         }
         obj6 = { userId: null, username: null, usernameColor: null, avatarURL: null, targetUsernameColor: null, content: null, commandNameBackgroundStyles: null, showAppsIcon: true };
         obj6[0] = message.interaction.user.id;
@@ -181,8 +181,8 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
       }
       let result4 = displayName;
       if (result) {
-        result4 = tmp16(8113).formatPrimaryEntryPointCommandName(displayName);
-        const tmp16Result8 = tmp16(8113);
+        result4 = tmp16(8145).formatPrimaryEntryPointCommandName(displayName);
+        const tmp16Result8 = tmp16(8145);
       }
       const intl2 = tmp16(1236).intl;
       const obj8 = {};
@@ -206,7 +206,7 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
         const merged4 = Object.assign(obj);
         obj11.commandName = result4;
         obj11.commandNameOnClick = {};
-        obj11.targetUsername = tmp16(4714).getUserAuthor(tmp24, channel).nick;
+        obj11.targetUsername = tmp16(4746).getUserAuthor(tmp24, channel).nick;
         let id2;
         if (tmp24 != null) {
           id2 = tmp24.id;
@@ -235,7 +235,7 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
         const merged5 = Object.assign(obj14);
         obj11.targetUsernameOnClick = obj12;
         intl3.formatToParts(tmp16(1236).t.mqKdCM, obj11);
-        const tmp16Result9 = tmp16(4714);
+        const tmp16Result9 = tmp16(4746);
         const tmp72 = colorString2;
       }
       const tmp16Result6 = useNullableMessageAuthor;

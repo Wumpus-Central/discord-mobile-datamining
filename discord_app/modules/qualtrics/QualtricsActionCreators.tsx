@@ -37,7 +37,7 @@ function _fetchSurveyDetails() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -145,7 +145,7 @@ function _submitSurveyResponse() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -360,12 +360,12 @@ function _fireSurveyAction() {
   const tmp = callback((arg0, arg1) => {
     closure_0 = arg0;
     closure_1 = arg1;
-    c5 = 0;
     c6 = 0;
-    c4 = 0;
+    c7 = 0;
+    c5 = 0;
     return (function*(arg0, arg1) {
-      if (c6 === 2) {
-        c6 = 3;
+      if (c7 === 2) {
+        c7 = 3;
         HermesBuiltin.throwTypeError();
       } else if (tmp7 === 3) {
         if (arg0 === 1) {
@@ -375,55 +375,63 @@ function _fireSurveyAction() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
-          c6 = 2;
-          if (0 === c5) {
+          c7 = 2;
+          if (0 === c6) {
             if (arg0 === 1) {
-              c6 = 3;
+              c7 = 3;
               throw arg1;
             } else if (arg0 === 2) {
-              c6 = 3;
+              c7 = 3;
               obj = { value: null, done: true };
               obj[0] = arg1;
               return obj;
             } else {
-              closure_3 = tmp3;
-              const table = tmp5;
+              closure_4 = tmp3;
+              closure_3 = tmp5;
               let lib;
               if ((function shouldFireSurveyAction(closure_0) {
                 let result = c5.shouldAllowSurveyAction();
                 if (result) {
                   const _Math = Math;
-                  result = callback(tmp5[10]).SURVEY_ACTION_SAMPLE_PERCENTS[closure_0] >= 100 * Math.random();
+                  result = callback(_undefined[10]).SURVEY_ACTION_SAMPLE_PERCENTS[closure_0] >= 100 * Math.random();
                 }
                 return result;
               })(lib)) {
                 obj1 = { action_type: null };
-                obj1[0] = tmp26;
-                if (null != tmp27) {
-                  obj1.metadata = tmp27;
+                obj1[0] = tmp29;
+                if (null != tmp30) {
+                  obj1.metadata = tmp30;
                 }
-                c4 = 1;
+                let actionTriggeredSurveyOverride = 1;
                 const HTTP = lib(closure_1_2[7]).HTTP;
-                const obj2 = { url: null, body: null, rejectWithError: true };
+                const obj2 = { url: null, query: null, body: null, rejectWithError: true };
                 obj2[0] = closure_1_10.EMBEDDED_SURVEY_ACTION;
-                obj2[1] = obj1;
-                c5 = 2;
-                c6 = 1;
-                const obj3 = { value: null, done: false };
-                obj3[0] = HTTP.post(obj2);
-                return obj3;
+                actionTriggeredSurveyOverride = actionTriggeredSurveyOverride.getActionTriggeredSurveyOverride();
+                let table = actionTriggeredSurveyOverride;
+                if (actionTriggeredSurveyOverride == null) {
+                  table = undefined;
+                }
+                const obj3 = { force_survey_id: null };
+                obj3[0] = table;
+                obj2[1] = obj3;
+                obj2[2] = obj1;
+                c6 = 2;
+                c7 = 1;
+                const obj4 = { value: null, done: false };
+                obj4[0] = HTTP.post(obj2);
+                return obj4;
               }
-              tmp26 = lib;
+              tmp29 = lib;
             }
           } else {
             if (1 === tmp8) {
-              c4 = 0;
+              actionTriggeredSurveyOverride = 0;
             } else if (arg0 === 1) {
-              c6 = 3;
+              c7 = 3;
               throw arg1;
             } else if (arg0 !== 2) {
               lib = arg1;
@@ -435,24 +443,24 @@ function _fireSurveyAction() {
                   survey = body.survey;
                 }
               }
-              const obj4 = { type: "SURVEY_FETCHED", survey: null, isActionTriggered: true };
-              obj4[1] = survey;
-              obj.dispatch(obj4);
-              c4 = 0;
+              const obj5 = { type: "SURVEY_FETCHED", survey: null, isActionTriggered: true };
+              obj5[1] = survey;
+              obj.dispatch(obj5);
+              actionTriggeredSurveyOverride = 0;
             }
-            c4 = 0;
-            c6 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = arg1;
-            return obj5;
+            actionTriggeredSurveyOverride = 0;
+            c7 = 3;
+            const obj6 = { value: null, done: true };
+            obj6[0] = arg1;
+            return obj6;
           }
-          c6 = 3;
-        } catch (tmp18) {
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp18;
+          c7 = 3;
+        } catch (tmp21) {
+          if (tmp4 === actionTriggeredSurveyOverride) {
+            c7 = tmp2;
+            throw tmp21;
           } else {
-            c5 = tmp;
+            c6 = tmp;
           }
         }
       }

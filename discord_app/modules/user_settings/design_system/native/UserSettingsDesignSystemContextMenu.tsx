@@ -1,15 +1,15 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemContextMenu.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../../_runtime/04412_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/04442_registerAsset.js";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import PressableCard from "../../../../design/components/Card/native/Card.native.tsx";
-import registerAssetDefault2 from "../../../../../_runtime/07638_registerAsset.js";
-import registerAssetDefault3 from "../../../../../_runtime/07843_registerAsset.js";
-import registerAssetDefault4 from "../../../../../_runtime/10853_registerAsset.js";
-import registerAssetDefault5 from "../../../../../_runtime/11126_registerAsset.js";
-import registerAssetDefault6 from "../../../../../_runtime/12278_registerAsset.js";
-import registerAssetDefault7 from "../../../../../_runtime/15344_registerAsset.js";
-import registerAssetDefault8 from "../../../../../_runtime/15345_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/07670_registerAsset.js";
+import registerAssetDefault3 from "../../../../../_runtime/07875_registerAsset.js";
+import registerAssetDefault4 from "../../../../../_runtime/10891_registerAsset.js";
+import registerAssetDefault5 from "../../../../../_runtime/11163_registerAsset.js";
+import registerAssetDefault6 from "../../../../../_runtime/12311_registerAsset.js";
+import registerAssetDefault7 from "../../../../../_runtime/15378_registerAsset.js";
+import registerAssetDefault8 from "../../../../../_runtime/15379_registerAsset.js";
 import closure_2 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -49,7 +49,7 @@ function DemoContextMenu(align) {
         obj = { length: dependencyMap };
         const obj2 = callback(12);
         return Array.from(obj).map((arg0, arg1) => {
-          const obj = { label: length[arg1 % length.length], IconComponent: "a", iconSource: true, variant: true, action: true };
+          const obj = { label: length[arg1 % length.length], IconComponent: "a", iconSource: "a", variant: "isArray", action: "set" };
           obj[2] = length2[arg1 % length2.length];
           let str = "default";
           if (arg1 === closure_0 - 1) {
@@ -72,7 +72,7 @@ function DemoContextMenu(align) {
       obj[0] = closure_1;
       arr = Array.from(obj);
       mapped = arr.map((arg0, arg1) => {
-        const obj = { label: length[arg1 % length.length], IconComponent: "a", iconSource: true, variant: true, action: true };
+        const obj = { label: length[arg1 % length.length], IconComponent: "a", iconSource: "a", variant: "isArray", action: "set" };
         obj[2] = length2[arg1 % length2.length];
         let str = "default";
         if (arg1 === closure_0 - 1) {

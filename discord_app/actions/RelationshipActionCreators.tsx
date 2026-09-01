@@ -61,7 +61,7 @@ function handleRelationshipAddError(arg0, arg1, substr) {
         if (num !== tmp2.RELATIONSHIP_INVALID_NO_CONFIRMATION) {
           if (arg1 === obj.SHOW_ALWAYS) {
             if (null != substr) {
-              let tmp18Result = tmp18(9025);
+              let tmp18Result = tmp18(9063);
               if (!num) {
                 num = 0;
               }
@@ -76,7 +76,7 @@ function handleRelationshipAddError(arg0, arg1, substr) {
             obj1[1] = humanizeAbortCodeResult;
             const intl3 = tmp18(1236).intl;
             obj1[2] = intl3.string(tmp18(1236).t.BddRzS);
-            tmp18Result = tmp18(5532);
+            tmp18Result = tmp18(5564);
             tmp18Result.closeContextMenu();
             setDefault.show(obj1);
             const obj4 = setDefault;
@@ -191,10 +191,10 @@ obj = {
       AccessibilityAnnouncer.announce(intl.string(callback(1236).t.n6Jo3E));
     });
   },
-  updateRelationship(userId, c0) {
+  updateRelationship(closure_1_0, closure_0) {
     const HTTP = sendRequest.HTTP;
-    obj = { url: closure_6.USER_RELATIONSHIP(userId), body: obj, rejectWithError: null };
-    obj = { nickname: c0 };
+    obj = { url: closure_6.USER_RELATIONSHIP(closure_1_0), body: obj, rejectWithError: null };
+    obj = { nickname: closure_0 };
     obj[2] = sendRequest.rejectWithMigratedError();
     return HTTP.patch(obj);
   },
@@ -260,7 +260,7 @@ obj = {
       obj = { type: "RELATIONSHIP_IGNORE_USER_SUCCESS", userId: callback, timestamp: Date.now() };
       channelId(closure_1_3[14]).dispatch(obj);
     }).catch(() => {
-      channelId(8643).showFailedToast();
+      channelId(8675).showFailedToast();
       const AccessibilityAnnouncer = callback(1363).AccessibilityAnnouncer;
       const intl = callback(1236).intl;
       AccessibilityAnnouncer.announce(intl.string(callback(1236).t.n6Jo3E));
@@ -281,7 +281,7 @@ obj = {
       const intl = id(closure_1_3[7]).intl;
       AccessibilityAnnouncer.announce(intl.string(id(closure_1_3[7]).t.QlH5w6));
     }).catch(() => {
-      id2(8643).showFailedToast();
+      id2(8675).showFailedToast();
       const AccessibilityAnnouncer = id(1363).AccessibilityAnnouncer;
       const intl = id(1236).intl;
       AccessibilityAnnouncer.announce(intl.string(id(1236).t.n6Jo3E));

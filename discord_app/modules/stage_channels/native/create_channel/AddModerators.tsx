@@ -44,11 +44,11 @@ export default function AddModerators(guildId) {
     const mapped = found.map((row) => {
       row = row.row;
       if (row.rowType === constants.ROLE) {
-        let moderatorOverwrite = callback(5327).createModeratorOverwrite(row.id, callback(1955).PermissionOverwriteType.ROLE);
-        const obj2 = callback(5327);
+        let moderatorOverwrite = callback(5359).createModeratorOverwrite(row.id, callback(1955).PermissionOverwriteType.ROLE);
+        const obj2 = callback(5359);
       } else {
-        moderatorOverwrite = callback(5327).createModeratorOverwrite(row.id, callback(1955).PermissionOverwriteType.MEMBER);
-        const obj = callback(5327);
+        moderatorOverwrite = callback(5359).createModeratorOverwrite(row.id, callback(1955).PermissionOverwriteType.MEMBER);
+        const obj = callback(5359);
       }
       return moderatorOverwrite;
     });

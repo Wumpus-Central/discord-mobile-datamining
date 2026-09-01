@@ -27,16 +27,16 @@ function ApplicationRejectedNotice(guildId) {
   ({ resubmissionError, requestRejectedNoticeText, reapplyNoticeText } = useOnboardingMonetizationEnableFlowDefault(stateFromStores));
   if (null != resubmissionError) {
     obj = { children: null };
-    let tmp9Result = tmp9(11757);
+    let tmp9Result = tmp9(11790);
     obj[0] = resubmissionError.getAnyErrorMessage();
     let tmp14 = callback(tmp9Result, obj);
   } else if (null != requestRejectedNoticeText) {
     obj = { notice: null };
     obj[0] = requestRejectedNoticeText;
-    tmp14 = callback(tmp9(17231), obj);
+    tmp14 = callback(tmp9(17267), obj);
   } else if (tmp13) {
     obj1 = { notice: null };
-    tmp9Result = tmp9(17231);
+    tmp9Result = tmp9(17267);
     const intl3 = tmp2(1236).intl;
     obj1[0] = intl3.string(tmp2(1236).t.MyJpJT);
     tmp14 = callback(tmp9Result, obj1);
@@ -47,22 +47,22 @@ function ApplicationRejectedNotice(guildId) {
     obj2[1] = intl2.string(tmp2(1236).t["YKw/NQ"]);
     obj2[2] = tmp12;
     obj2[3] = tmp11;
-    tmp14 = callback(tmp9(17231), obj2);
-    const tmp9Result1 = tmp9(17231);
+    tmp14 = callback(tmp9(17267), obj2);
+    const tmp9Result1 = tmp9(17267);
   } else if (true === hasItem1) {
     const obj3 = { notice: null };
     const intl = tmp2(1236).intl;
     obj3[0] = intl.string(tmp2(1236).t.e2g9sW);
-    tmp14 = callback(tmp9(17231), obj3);
-    const tmp9Result2 = tmp9(17231);
+    tmp14 = callback(tmp9(17267), obj3);
+    const tmp9Result2 = tmp9(17267);
   } else {
     tmp14 = null;
     if (true === hasItem) {
       const obj4 = { notice: null };
       const intl4 = tmp2(1236).intl;
       obj4[0] = intl4.string(tmp2(1236).t.rxI9sl);
-      tmp14 = callback(tmp9(17231), obj4);
-      const tmp9Result3 = tmp9(17231);
+      tmp14 = callback(tmp9(17267), obj4);
+      const tmp9Result3 = tmp9(17267);
     }
   }
   let tmp24 = null;

@@ -30,7 +30,7 @@ function _updateEmoji() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -54,7 +54,7 @@ function _updateEmoji() {
               ({ guildId: c0, emojiId: c1, name: c2, roles: c3 } = callback);
               c5 = 1;
               c6 = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else if (1 === tmp8) {
             if (arg0 === 1) {
@@ -83,7 +83,7 @@ function _updateEmoji() {
           } else if (2 === tmp8) {
             c4 = 0;
             c4 = c3;
-            const tmp18 = new callback2(4347)(c4);
+            const tmp18 = new callback2(4377)(c4);
             throw tmp18;
           } else if (arg0 === 1) {
             c6 = 3;

@@ -22,7 +22,7 @@ export default function GroupDMRow(channel) {
   }
   const onPress = channel.onPress;
   const merged = Object.assign(channel, Object.create(null));
-  let str = onPress(4642)(channel);
+  let str = onPress(4674)(channel);
   const items = [channel, onPress];
   const callback = React.useCallback(() => {
     if (onPress != null) {
@@ -30,8 +30,8 @@ export default function GroupDMRow(channel) {
     }
   }, items);
   let obj = { size: channel(1297).AvatarSizes.REFRESH_MEDIUM_32, channel };
-  const tmp6 = onPress(10610);
-  obj1 = channel(10611);
+  const tmp6 = onPress(10648);
+  obj1 = channel(10649);
   const recipientsLabel = obj1.useRecipientsLabel(channel);
   obj = {};
   const merged1 = Object.assign(merged);
@@ -40,10 +40,10 @@ export default function GroupDMRow(channel) {
   if (null != recipientsLabel) {
     obj = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: null };
     obj[3] = recipientsLabel;
-    tmp5Result = tmp5(tmp7(4444).Text, obj);
+    tmp5Result = tmp5(tmp7(4474).Text, obj);
   }
   obj.subLabel = tmp5Result;
-  obj.icon = jsx(onPress(10610), {});
+  obj.icon = jsx(onPress(10648), {});
   obj.onPress = callback;
   if (str == null) {
     str = "";
@@ -55,11 +55,11 @@ export default function GroupDMRow(channel) {
     obj1 = {};
     const merged2 = Object.assign(obj);
     obj1.checked = flag;
-    tmp5Result = tmp5(tmp7(7651).TableCheckboxRow, obj1);
+    tmp5Result = tmp5(tmp7(7683).TableCheckboxRow, obj1);
   } else {
     const obj2 = {};
     const merged3 = Object.assign(obj);
-    tmp5Result = tmp5(tmp7(5567).TableRow, obj2);
+    tmp5Result = tmp5(tmp7(5599).TableRow, obj2);
   }
   return tmp5Result;
 };

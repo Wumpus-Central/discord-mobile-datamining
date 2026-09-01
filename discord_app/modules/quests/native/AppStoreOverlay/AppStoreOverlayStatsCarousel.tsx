@@ -3,7 +3,7 @@ import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05620_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05652_LegacyBaseButton.js";
 import formatAppStoreRatingValue from "AppStoreOverlayStatCardUtils.tsx";
 import FractionalStarDefault from "AppStoreOverlayStarRating.tsx";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -28,10 +28,10 @@ function AppStoreOverlayStatCardItem(onRatingPress) {
     const result = obj2.formatAppStoreRatingValue(stat.rating, getSystemLocale.intl.currentLocale);
     let result1;
     if (null != stat.ratingCount) {
-      let tmp9Result = tmp9(11066);
+      let tmp9Result = tmp9(11103);
       result1 = tmp9Result.formatAppStoreRatingCount(stat.ratingCount, tmp9(1236).intl.currentLocale);
     }
-    tmp9Result = tmp9(11066);
+    tmp9Result = tmp9(11103);
     const appStoreStarFillAmounts = tmp9Result.getAppStoreStarFillAmounts(stat.rating, num);
     const intl = tmp9(1236).intl;
     let obj = { label: null, rating: null, maxRating: null, ratingCount: null };
@@ -98,7 +98,7 @@ function AppStoreOverlayStatCardItem(onRatingPress) {
     if (null == secondaryContent) {
       const obj4 = { variant: "text-xs/medium", color: "text-subtle", lineClamp: 1, children: null };
       obj4[3] = secondaryText;
-      secondaryContent = tmp23(tmp20(4444).Text, obj4);
+      secondaryContent = tmp23(tmp20(4474).Text, obj4);
     }
     obj3[1] = secondaryContent;
     tmp23Result = tmp23(closure_5, obj3);

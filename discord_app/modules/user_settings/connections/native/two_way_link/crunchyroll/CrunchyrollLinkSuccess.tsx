@@ -5,7 +5,7 @@ import Text from "../../../../../../design/components/Text/native/Text.tsx";
 import Button from "../../../../../../design/components/Button/native/Button.native.tsx";
 import SafeAreaPaddingView from "../../../../../../components_native/common/SafeAreaView.tsx";
 import styles from "../TwoWayLinkStyles.tsx";
-import registerAssetDefault from "../../../../../../../_runtime/09309_registerAsset.js";
+import registerAssetDefault from "../../../../../../../_runtime/09348_registerAsset.js";
 import get_ActivityIndicator from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";

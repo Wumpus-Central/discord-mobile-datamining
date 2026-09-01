@@ -51,10 +51,10 @@ function getChatInputHeightAnimationTimingWorklet(height, textFieldMinHeight) {
   if (keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM) {
     keyboardHeight = customKeyboardHeight;
   }
-  let tmp2Result = tmp2(11572);
+  let tmp2Result = tmp2(11605);
   const bound1 = Math.min(bound, Math.min(c6, Math.max(2 * CHAT_INPUT_PILL_CONTENT_SIZE, tmp2Result.getWindowDimensionsWorklet({ ignoreKeyboard: true }).height - keyboardHeight - c6)));
-  tmp2Result = tmp2(4449);
-  obj = { duration: tmp2(4452).timingFastDuration, easing: tmp2(4187).Easing.linear };
+  tmp2Result = tmp2(4479);
+  obj = { duration: tmp2(4482).timingFastDuration, easing: tmp2(4217).Easing.linear };
   return tmp2Result.withTiming(bound1, obj);
 }
 obj = { getChatInputMaxHeightWorklet, withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, timingFastDuration: require("timingNone").timingFastDuration, Easing: require("../../reanimated/ReanimatedRexport.tsx").Easing };
@@ -120,8 +120,8 @@ export const getChatInputHeightAnimationTiming = function getChatInputHeightAnim
   }
   let tmp2Result = tmp2(1493);
   const bound1 = Math.min(bound, Math.min(c6, Math.max(2 * CHAT_INPUT_PILL_CONTENT_SIZE, tmp2Result.getWindowDimensions({ ignoreKeyboard: true }).height - systemKeyboardHeight - c6)));
-  tmp2Result = tmp2(4449);
-  obj = { duration: tmp2(4452).timingFastDuration, easing: tmp2(4187).Easing.linear };
+  tmp2Result = tmp2(4479);
+  obj = { duration: tmp2(4482).timingFastDuration, easing: tmp2(4217).Easing.linear };
   return tmp2Result.withTiming(bound1, obj);
 };
 export { getChatInputHeightAnimationTimingWorklet };

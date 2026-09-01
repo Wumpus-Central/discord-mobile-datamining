@@ -4,7 +4,7 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Button from "../../native.tsx";
 import PressableBase from "../../Pressables/native/Pressables.tsx";
-import registerAssetDefault from "../../../../../_runtime/07681_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/07713_registerAsset.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";

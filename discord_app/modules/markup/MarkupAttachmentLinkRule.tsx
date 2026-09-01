@@ -1,6 +1,6 @@
 // discord_app/modules/markup/MarkupAttachmentLinkRule.tsx
 import set from "../../../_runtime/00002_set.js";
-import tDefault from "../../../_runtime/04162_t.js";
+import tDefault from "../../../_runtime/04192_t.js";
 import set2 from "../messages/AttachmentUrlConstants.tsx";
 
 const mapped = Array.from(set2.ATTACHMENT_PATH_PREFIXES).map((str) => str.replaceAll("/", ""));

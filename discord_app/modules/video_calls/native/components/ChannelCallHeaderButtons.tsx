@@ -3,7 +3,7 @@ import noopAll from "../../../../../_runtime/00019_noop.js";
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import useSelectedParticipantDefault from "../../useSelectedParticipant.tsx";
 import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon.tsx";
-import registerAssetDefault from "../../../../../_runtime/10079_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/10118_registerAsset.js";
 import closure_3 from "../../../../stores/MediaEngineStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
@@ -44,12 +44,12 @@ export const GridButton = function GridButton(channel) {
       const obj = { accessibilityLabel: null, source: null, onPress: null, disableBackground: true };
       const intl = channel(1236).intl;
       obj[0] = intl.string(channel(1236).t.HK4JIu);
-      obj[1] = tmp(10080);
+      obj[1] = tmp(10119);
       obj[2] = function onPress() {
         return closure_1_1(closure_1_2[11]).selectParticipant(channel.id, null);
       };
-      tmp4 = jsx(tmp(9976), { accessibilityLabel: null, source: null, onPress: null, disableBackground: true });
-      const tmpResult = tmp(9976);
+      tmp4 = jsx(tmp(10015), { accessibilityLabel: null, source: null, onPress: null, disableBackground: true });
+      const tmpResult = tmp(10015);
     }
   }
   return tmp4;

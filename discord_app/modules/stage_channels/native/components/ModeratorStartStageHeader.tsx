@@ -24,7 +24,7 @@ const memoResult = importAllResult.memo((channel) => {
   if (speaker) {
     obj = { channelId: null };
     obj[0] = channel.id;
-    speaker = tmp7(tmp8(10071).MusicMuteButton, obj);
+    speaker = tmp7(tmp8(10110).MusicMuteButton, obj);
   }
   items[2] = speaker;
   obj = { channelId: channel.id };

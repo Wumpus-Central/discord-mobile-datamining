@@ -2,7 +2,7 @@
 import getSystemLocale from "../../intl/index.native.tsx";
 import getAvatarURLDefault from "../../utils/AvatarUtils.tsx";
 import isNullOrEmpty from "../../utils/StringUtils.tsx";
-import tDefault from "../../../_runtime/04162_t.js";
+import tDefault from "../../../_runtime/04192_t.js";
 import ME2 from "../links/LinkUtils.tsx";
 import textRegexpDefault from "MarkupTextRule.tsx";
 import closure_3 from "../channel/GatedChannelStore.tsx";
@@ -46,18 +46,18 @@ function getChannel(id, arr) {
   if (null != channel) {
     obj = { type: null, id: null, guildId: null, name: null, isDm: null, isForumPost: null, isMentionable: null, canViewChannel: null, roleSubscriptionGated: null, iconType: null, parentId: null };
     ({ type: obj4[0], id: obj4[1], guild_id: obj4[2] } = channel);
-    let tmpResult = tmp(4642);
+    let tmpResult = tmp(4674);
     obj[3] = tmpResult.computeChannelName(channel, closure_8, closure_7);
     obj[4] = channel.isPrivate();
     obj[5] = channel.isForumPost();
-    tmpResult = tmp(4929);
+    tmpResult = tmp(4961);
     obj[6] = tmpResult.isChannelTypeMentionable(channel.type);
-    obj[7] = tmp(4643).canViewChannel(channel);
+    obj[7] = tmp(4675).canViewChannel(channel);
     obj[8] = isSubscriptionGated;
     obj[9] = str;
     obj[10] = channel.parent_id;
     tmp4 = obj;
-    const tmpResult1 = tmp(4643);
+    const tmpResult1 = tmp(4675);
   }
   return tmp4;
 }
@@ -125,7 +125,7 @@ function parseChannel(canViewChannel) {
           obj.content = items3;
           let obj6 = obj;
         } else if (null != arg3) {
-          const obj4 = { type: "link", content: null, target: null, title: "accessibilityLabel" };
+          const obj4 = { type: "link", content: null, target: null, title: "category" };
           const obj5 = { type: "text", content: null };
           obj5[1] = arg3;
           const items4 = [obj5];
@@ -169,9 +169,9 @@ function parseChannel(canViewChannel) {
             if (canViewChannel.isForumPost) {
               const channel = store.getChannel(canViewChannel.parentId);
               if (null != channel) {
-                let tmp35Result = tmp35(4642);
+                let tmp35Result = tmp35(4674);
                 const channelName = tmp35Result.computeChannelName(channel, closure_8, closure_7);
-                tmp35Result = tmp35(4634);
+                tmp35Result = tmp35(4666);
                 let str3 = tmp35Result.getMentionIconType(channel);
                 if (str3 == null) {
                   str3 = "forum";
@@ -330,7 +330,7 @@ obj = {
   parse(arg0, arg1, channelId) {
     [tmp, tmp2, tmp3, tmp4] = arg0;
     if (null == tmp3) {
-      let obj = { type: "link", content: null, target: null, title: "accessibilityLabel" };
+      let obj = { type: "link", content: null, target: null, title: "category" };
       obj = { type: "text", content: null };
       obj[1] = tmp;
       const items = [obj];
@@ -405,7 +405,7 @@ obj[2] = {
       }
     }
     const content = [{ type: "text", content: target }];
-    return { type: "link", content, target, title: "accessibilityLabel" };
+    return { type: "link", content, target, title: "category" };
   }
 };
 let obj1 = {
@@ -452,7 +452,7 @@ let obj1 = {
       }
     }
     const content = [{ type: "text", content: target }];
-    return { type: "link", content, target, title: "accessibilityLabel" };
+    return { type: "link", content, target, title: "category" };
   }
 };
 const result = require("set").fileFinishedImporting("modules/markup/MarkupChannelMentionRule.tsx");

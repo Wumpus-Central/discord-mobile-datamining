@@ -20,7 +20,7 @@ function _getSafetyHubData() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -64,7 +64,7 @@ function _getSafetyHubData() {
             }
             const obj9 = v02(closure_1_2[5]);
             postResult.then((body) => {
-              ({ classifications, guild_classifications, appeal_eligibility, account_standing, is_dsa_eligible, username, is_appeal_eligible } = body.body);
+              ({ classifications, guild_classifications, appeal_eligibility, expressive_modal_v2_enabled, account_standing, is_dsa_eligible, username, is_appeal_eligible } = body.body);
               const mapped = classifications.map((flagged_content) => {
                 if (null != flagged_content.flagged_content) {
                   if (flagged_content.flagged_content.length > 0) {
@@ -93,11 +93,15 @@ function _getSafetyHubData() {
               if (guild_classifications == null) {
                 guild_classifications = [];
               }
-              let obj = { type: "SAFETY_HUB_FETCH_SUCCESS", classifications: mapped.concat(guild_classifications), accountStanding: account_standing, isDsaEligible: is_dsa_eligible, username, isAppealEligible: is_appeal_eligible, appealEligibility: null };
+              let obj = { type: "SAFETY_HUB_FETCH_SUCCESS", classifications: mapped.concat(guild_classifications), accountStanding: account_standing, isDsaEligible: is_dsa_eligible, username, isAppealEligible: is_appeal_eligible, appealEligibility: null, expressiveModalV2Enabled: null };
               if (appeal_eligibility == null) {
                 appeal_eligibility = [];
               }
               obj[6] = appeal_eligibility;
+              if (expressive_modal_v2_enabled == null) {
+                expressive_modal_v2_enabled = false;
+              }
+              obj[7] = expressive_modal_v2_enabled;
               v1(709).dispatch(obj);
             }).catch((body) => {
               let str;
@@ -115,7 +119,7 @@ function _getSafetyHubData() {
             v02 = 1;
             v0 = 1;
             const nextPromise = postResult.then((body) => {
-              ({ classifications, guild_classifications, appeal_eligibility, account_standing, is_dsa_eligible, username, is_appeal_eligible } = body.body);
+              ({ classifications, guild_classifications, appeal_eligibility, expressive_modal_v2_enabled, account_standing, is_dsa_eligible, username, is_appeal_eligible } = body.body);
               const mapped = classifications.map((flagged_content) => {
                 if (null != flagged_content.flagged_content) {
                   if (flagged_content.flagged_content.length > 0) {
@@ -144,11 +148,15 @@ function _getSafetyHubData() {
               if (guild_classifications == null) {
                 guild_classifications = [];
               }
-              let obj = { type: "SAFETY_HUB_FETCH_SUCCESS", classifications: mapped.concat(guild_classifications), accountStanding: account_standing, isDsaEligible: is_dsa_eligible, username, isAppealEligible: is_appeal_eligible, appealEligibility: null };
+              let obj = { type: "SAFETY_HUB_FETCH_SUCCESS", classifications: mapped.concat(guild_classifications), accountStanding: account_standing, isDsaEligible: is_dsa_eligible, username, isAppealEligible: is_appeal_eligible, appealEligibility: null, expressiveModalV2Enabled: null };
               if (appeal_eligibility == null) {
                 appeal_eligibility = [];
               }
               obj[6] = appeal_eligibility;
+              if (expressive_modal_v2_enabled == null) {
+                expressive_modal_v2_enabled = false;
+              }
+              obj[7] = expressive_modal_v2_enabled;
               v1(709).dispatch(obj);
             });
           }
@@ -162,7 +170,7 @@ function _getSafetyHubData() {
           return obj;
         } else {
           v0 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp11) {
         v0 = tmp;
@@ -197,7 +205,7 @@ function _getSafetyHubDataForClassification() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -265,7 +273,7 @@ function _getSafetyHubDataForClassification() {
                         items = [first];
                       }
                       found.flagged_content = items;
-                      obj3 = callback(8657);
+                      obj3 = callback(8689);
                     }
                   }
                   let obj = { type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS", classification: null, accountStanding: null, isDsaEligible: null, username: null, isAppealEligible: null };
@@ -322,7 +330,7 @@ function _getSafetyHubDataForClassification() {
                         items = [first];
                       }
                       found.flagged_content = items;
-                      obj3 = callback(8657);
+                      obj3 = callback(8689);
                     }
                   }
                   let obj = { type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS", classification: null, accountStanding: null, isDsaEligible: null, username: null, isAppealEligible: null };
@@ -351,7 +359,7 @@ function _getSafetyHubDataForClassification() {
             return obj;
           } else {
             v0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp11) {
           v0 = tmp;
@@ -389,7 +397,7 @@ function _requestReview() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -473,7 +481,7 @@ function _requestReview() {
             return obj;
           } else {
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp15) {
           c3 = tmp;
@@ -509,7 +517,7 @@ function _requestSuspendedUserAgeVerification() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -568,7 +576,7 @@ function _requestSuspendedUserAgeVerification() {
             return obj;
           } else {
             v0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp5) {
           v0 = tmp;
@@ -610,7 +618,7 @@ function _checkSuspendedUserAgeVerification() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -677,7 +685,7 @@ function _checkSuspendedUserAgeVerification() {
           return obj;
         } else {
           v0 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp5) {
         v0 = tmp;

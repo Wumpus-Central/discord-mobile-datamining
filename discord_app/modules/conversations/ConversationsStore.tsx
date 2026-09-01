@@ -193,7 +193,7 @@ function handleReaction(channelId) {
       } else {
         return false;
       }
-      obj2 = messageId(4102);
+      obj2 = messageId(4132);
     }
   }
 }
@@ -544,7 +544,7 @@ obj = {
     ({ channelId, rawConversations, direction, anchor, isJump, fullyHydrated } = requestKey);
     let set;
     if (removePendingListFetch(channelId, requestKey.requestKey)) {
-      const mapped = rawConversations.map(set(7312).mapConversation);
+      const mapped = rawConversations.map(set(7344).mapConversation);
       const found = mapped.filter(set(1471).isNotNullish);
       const peekResult = navigation.peek(channelId);
       if (isJump) {
@@ -1105,7 +1105,7 @@ obj = {
           }
           let flag = null != message;
           if (flag) {
-            const updateMessageRecordResult = id(4705).updateMessageRecord(value.message, message);
+            const updateMessageRecordResult = id(4737).updateMessageRecord(value.message, message);
             value.message = updateMessageRecordResult;
             value = null;
             if (null != value.conversationId) {
@@ -1129,7 +1129,7 @@ obj = {
                 flag = true;
               }
             }
-            const obj = id(4705);
+            const obj = id(4737);
           }
           return flag;
         }

@@ -3,10 +3,10 @@ import ThemesDefault from "../../../../../../../../discord_common/js/packages/to
 import Button from "../../../../../../../design/void/native.tsx";
 import useThemeDefault from "../../../../../../../hooks/useTheme.tsx";
 import computeChannelNameDefault from "../../../../../../channel/useChannelName.tsx";
-import registerAssetDefault from "../../../../../../../../_runtime/07710_registerAsset.js";
-import registerAssetDefault2 from "../../../../../../../../_runtime/07807_registerAsset.js";
-import registerAssetDefault3 from "../../../../../../../../_runtime/10189_registerAsset.js";
-import registerAssetDefault4 from "../../../../../../../../_runtime/10653_registerAsset.js";
+import registerAssetDefault from "../../../../../../../../_runtime/07742_registerAsset.js";
+import registerAssetDefault2 from "../../../../../../../../_runtime/07839_registerAsset.js";
+import registerAssetDefault3 from "../../../../../../../../_runtime/10228_registerAsset.js";
+import registerAssetDefault4 from "../../../../../../../../_runtime/10691_registerAsset.js";
 import useMessagePreviewDefault from "../../../../../useMessagePreviews.tsx";
 import usePrivateChannelWaveDefault from "../../../../../../channel/usePrivateChannelWave.native.tsx";
 import { View } from "../../../../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -129,14 +129,14 @@ const memoResult = importAllResult.memo(function MessagesItemChannelContent(chan
   const tmp11 = useMessagePreviewDefault(channel, { unread: hasUnreadMessages });
   let tmp12 = null != tmp11;
   if (tmp12) {
-    let obj2 = tmp3(4045)();
+    let obj2 = tmp3(4075)();
     tmp12 = obj2.diff(tmp11.timestamp, "hours") < 1 || !hasActivity || hasUnreadMessages;
     const tmp13 = obj2.diff(tmp11.timestamp, "hours") < 1 || !hasActivity || hasUnreadMessages;
   }
   if (tmp12) {
-    tmp12 = !tmp3(8613)(channel.id);
+    tmp12 = !tmp3(8645)(channel.id);
   }
-  tmpResult = tmp(15591);
+  tmpResult = tmp(15627);
   let tmp3Result = tmp3(11);
   let id = stateFromStores;
   if (stateFromStores == null) {
@@ -153,7 +153,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelContent(chan
   const waveShouldShow = tmp17.waveShouldShow;
   obj = { variant: null, style: null, lineClamp: 1, ellipsizeMode: "tail" };
   const isThemeLightResult = obj.isThemeLight(useThemeDefault());
-  obj[0] = channel(4167).useToken(ThemesDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_NAME_TEXT_STYLE);
+  obj[0] = channel(4197).useToken(ThemesDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_NAME_TEXT_STYLE);
   const items1 = [, ];
   ({ channelText: arr2[0], channelName: arr2[1] } = tmp9);
   obj[1] = items1;
@@ -166,8 +166,8 @@ const memoResult = importAllResult.memo(function MessagesItemChannelContent(chan
         const obj4 = { userId: null, userName: null, effectDisplayType: null };
         obj4[0] = channel.recipients[0];
         obj4[1] = tmp16;
-        tmp3Result = tmp3(8886);
-        const EffectDisplayType = tmp(8887).EffectDisplayType;
+        tmp3Result = tmp3(8923);
+        const EffectDisplayType = tmp(8924).EffectDisplayType;
         obj4[2] = channelSelected ? EffectDisplayType.STATIC : EffectDisplayType.PLAIN;
         obj = Object.assign(obj);
         callback(tmp3Result, obj4);
@@ -177,21 +177,21 @@ const memoResult = importAllResult.memo(function MessagesItemChannelContent(chan
   const obj5 = {};
   const merged = Object.assign(obj);
   obj5.children = tmp16;
-  const items2 = [callback(channel(4444).Text, obj5), , ];
+  const items2 = [callback(channel(4474).Text, obj5), , ];
   let tmp20Result = null;
   if (tmp15) {
     const obj6 = { userId: null, disabledTooltip: true };
     obj6[0] = channel.recipients[0];
-    tmp20Result = tmp20(tmp3(8970), obj6);
+    tmp20Result = tmp20(tmp3(9007), obj6);
   }
   items2[1] = tmp20Result;
   tmp20Result = null;
   if (channel.isSystemDM()) {
     const obj7 = { style: null, type: null, verified: true };
     obj7[0] = tmp8.botTag;
-    obj7[1] = tmp3(8896).Types.SYSTEM_DM;
-    tmp20Result = tmp20(tmp3(8896), obj7);
-    const tmp3Result1 = tmp3(8896);
+    obj7[1] = tmp3(8933).Types.SYSTEM_DM;
+    tmp20Result = tmp20(tmp3(8933), obj7);
+    const tmp3Result1 = tmp3(8933);
   }
   items2[2] = tmp20Result;
   obj3[1] = items2;
@@ -233,7 +233,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelContent(chan
       ({ channelText: arr8[0], timestamp: arr8[1] } = tmp9);
       obj13[0] = items7;
       obj13[3] = relativeTimestamp;
-      tmp20Result1 = tmp20(tmp(4444).Text, obj13);
+      tmp20Result1 = tmp20(tmp(4474).Text, obj13);
     }
     items6[1] = tmp20Result1;
     obj10[1] = items6;
@@ -262,9 +262,9 @@ const memoResult = importAllResult.memo(function MessagesItemChannelContent(chan
         str7 = str6;
       }
       obj15[2] = str7;
-      obj15[3] = tmp(4141).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
+      obj15[3] = tmp(4171).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
       obj15[4] = muted;
-      let tmp20Result2 = tmp20(tmp(10153).ChannelRowPreview, obj15);
+      let tmp20Result2 = tmp20(tmp(10192).ChannelRowPreview, obj15);
     } else if (channel.isDM()) {
       const obj16 = { textStyle: null, userId: null, guildId: null };
       obj16[0] = tmp9.channelText;
@@ -274,16 +274,16 @@ const memoResult = importAllResult.memo(function MessagesItemChannelContent(chan
         guild_id = channel.guild_id;
       }
       obj16[2] = guild_id;
-      tmp20Result2 = tmp20(tmp3(9200), obj16);
-      const tmp3Result2 = tmp3(9200);
+      tmp20Result2 = tmp20(tmp3(9239), obj16);
+      const tmp3Result2 = tmp3(9239);
     } else {
       tmp20Result2 = null;
-      if (tmp3(8613)(channel.id)) {
+      if (tmp3(8645)(channel.id)) {
         const obj17 = { variant: "text-xs/medium", style: null, lineClamp: 1, children: null };
         obj17[1] = tmp9.channelText;
         const intl = tmp(1236).intl;
         obj17[3] = intl.string(tmp(1236).t.FL5T01);
-        tmp20Result2 = tmp20(tmp(4444).Text, obj17);
+        tmp20Result2 = tmp20(tmp(4474).Text, obj17);
       }
     }
     obj14[1] = tmp20Result2;
@@ -295,7 +295,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelContent(chan
       const obj18 = { wavePressed: null, hasNameplate: null };
       obj18[0] = tmp17.wavePressed;
       obj18[1] = hasNameplate;
-      tmp20Result3 = tmp20(tmp3(15594), obj18);
+      tmp20Result3 = tmp20(tmp3(15630), obj18);
     }
     const obj19 = { children: null };
     items9[1] = tmp20Result3;

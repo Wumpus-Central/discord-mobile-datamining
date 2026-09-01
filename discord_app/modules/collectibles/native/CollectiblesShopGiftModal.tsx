@@ -14,40 +14,35 @@ function CollectiblesShopGiftModalContent(product) {
   ({ lockedRecipientUser, validateRecipient } = product);
   const GiftACOMOrderExperiment = require(giftingOrigin[5]).GiftACOMOrderExperiment;
   let obj = require(giftingOrigin[6]);
-  const androidShopOrdersEnabled = obj.useAndroidShopOrdersEnabled({ location: "CollectiblesShopGiftModal" });
-  obj1 = require(giftingOrigin[7]);
-  if (obj1.isIOS()) {
-    let GOOGLE = tmp4.APPLE_ADVANCED_COMMERCE;
-    let tmp5 = tmp4;
+  if (obj.isIOS()) {
+    let GOOGLE = tmp3.APPLE_ADVANCED_COMMERCE;
+    let tmp4 = tmp3;
   } else {
-    GOOGLE = tmp4.GOOGLE;
-    tmp5 = tmp4;
+    GOOGLE = tmp3.GOOGLE;
+    tmp4 = tmp3;
   }
-  let tmp6 = GOOGLE === tmp5.APPLE_ADVANCED_COMMERCE && GiftACOMOrderExperiment.useConfig({ location: "CollectiblesShopGiftModal" }).enabled;
-  if (!tmp6) {
-    let result = GOOGLE === tmp5.GOOGLE;
+  let tmp5 = GOOGLE === tmp4.APPLE_ADVANCED_COMMERCE && GiftACOMOrderExperiment.useConfig({ location: "CollectiblesShopGiftModal" }).enabled;
+  if (!tmp5) {
+    let result = GOOGLE === tmp4.GOOGLE;
     if (result) {
-      result = tmp(tmp2[8]).isGooglePlayBillingSupported();
-      const tmpResult = tmp(tmp2[8]);
+      result = tmp(tmp2[7]).isGooglePlayBillingSupported();
+      const tmpResult = tmp(tmp2[7]);
     }
-    if (result) {
-      result = androidShopOrdersEnabled;
-    }
-    tmp6 = result;
+    tmp5 = result;
   }
   const items = [onGiftModalDismiss];
   const callback = React.useCallback(() => {
-    product(giftingOrigin[10]).closeShopGiftModal();
+    product(giftingOrigin[9]).closeShopGiftModal();
     if (onGiftModalDismiss != null) {
       onGiftModalDismiss();
     }
   }, items);
   obj = { skuIDs: [], activeSubscription: null, children: null };
-  obj = { paymentGateway: GOOGLE, orderRequired: tmp6, skuIds: items1, isGift: true, activeSubscription: null, initialExternalGatewayFacet: onGiftModalDismiss(giftingOrigin[9])(product), onOrderRetryCancellation: callback, checkoutAnalyticsFields: obj1, analyticsInitialStep: "gift_customization", children: null };
+  obj = { paymentGateway: GOOGLE, orderRequired: tmp5, skuIds: items1, isGift: true, activeSubscription: null, initialExternalGatewayFacet: onGiftModalDismiss(giftingOrigin[8])(product), onOrderRetryCancellation: callback, checkoutAnalyticsFields: obj1, analyticsInitialStep: "gift_customization", children: null };
   items1 = [product.skuId];
   obj1 = { is_gift: true, location_stack: analyticsLocations, payment_type: "sku", sku_id: product.skuId, application_id: closure_5 };
-  const tmp8 = onGiftModalDismiss(giftingOrigin[9])(product);
-  obj[9] = jsx(onGiftModalDismiss(giftingOrigin[13]), {
+  const tmp7 = onGiftModalDismiss(giftingOrigin[8])(product);
+  obj[9] = jsx(onGiftModalDismiss(giftingOrigin[12]), {
     skuId: product.skuId,
     analyticsLocations,
     lockedRecipientUser,
@@ -56,15 +51,15 @@ function CollectiblesShopGiftModalContent(product) {
     validateRecipient,
     renderProductDetails(arg0) {
       ({ recipientUser, isValidRecipient } = arg0);
-      return closure_1_7(onGiftModalDismiss(giftingOrigin[14]), { product: closure_0, recipientUser, isValidRecipient, isGift: true });
+      return closure_1_7(onGiftModalDismiss(giftingOrigin[13]), { product: closure_0, recipientUser, isValidRecipient, isGift: true });
     },
     renderPurchaseSection(arg0) {
       ({ isPurchaseDisabled, giftOptions } = arg0);
-      return closure_1_7(onGiftModalDismiss(giftingOrigin[15]), { product: closure_0, isPurchaseDisabled, giftOptions, giftingOrigin });
+      return closure_1_7(onGiftModalDismiss(giftingOrigin[14]), { product: closure_0, isPurchaseDisabled, giftOptions, giftingOrigin });
     }
   });
-  obj[2] = jsx(onGiftModalDismiss(giftingOrigin[12]), { paymentGateway: GOOGLE, orderRequired: tmp6, skuIds: items1, isGift: true, activeSubscription: null, initialExternalGatewayFacet: onGiftModalDismiss(giftingOrigin[9])(product), onOrderRetryCancellation: callback, checkoutAnalyticsFields: obj1, analyticsInitialStep: "gift_customization", children: null }, product.skuId);
-  return jsx(require(giftingOrigin[11]).NativePaymentContextProvider, { paymentGateway: GOOGLE, orderRequired: tmp6, skuIds: items1, isGift: true, activeSubscription: null, initialExternalGatewayFacet: onGiftModalDismiss(giftingOrigin[9])(product), onOrderRetryCancellation: callback, checkoutAnalyticsFields: obj1, analyticsInitialStep: "gift_customization", children: null });
+  obj[2] = jsx(onGiftModalDismiss(giftingOrigin[11]), { paymentGateway: GOOGLE, orderRequired: tmp5, skuIds: items1, isGift: true, activeSubscription: null, initialExternalGatewayFacet: onGiftModalDismiss(giftingOrigin[8])(product), onOrderRetryCancellation: callback, checkoutAnalyticsFields: obj1, analyticsInitialStep: "gift_customization", children: null }, product.skuId);
+  return jsx(require(giftingOrigin[10]).NativePaymentContextProvider, { paymentGateway: GOOGLE, orderRequired: tmp5, skuIds: items1, isGift: true, activeSubscription: null, initialExternalGatewayFacet: onGiftModalDismiss(giftingOrigin[8])(product), onOrderRetryCancellation: callback, checkoutAnalyticsFields: obj1, analyticsInitialStep: "gift_customization", children: null });
 }
 let result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesShopGiftModal.tsx");
 
@@ -74,23 +69,23 @@ export default function CollectiblesShopGiftModal(skuId) {
   let enabled;
   skuId = undefined;
   ({ lockedRecipientUser, giftingOrigin } = skuId);
-  const GiftingBadgeExperiment = skuId(skuId[16]).GiftingBadgeExperiment;
+  const GiftingBadgeExperiment = skuId(skuId[15]).GiftingBadgeExperiment;
   enabled = GiftingBadgeExperiment.useConfig({ location: "CollectiblesShopGiftModal" }).enabled;
   const items = [enabled];
   const effect = React.useEffect(() => {
     if (enabled) {
-      const badge = skuId(skuId[17]).fetchBadge(skuId(skuId[18]).BadgeId.GIFTING);
-      const obj = skuId(skuId[17]);
+      const badge = skuId(skuId[16]).fetchBadge(skuId(skuId[17]).BadgeId.GIFTING);
+      const obj = skuId(skuId[16]);
     }
   }, items);
-  let obj = skuId(skuId[19]);
+  let obj = skuId(skuId[18]);
   const items1 = [closure_4];
   const items2 = [skuId];
   const stateFromStores = obj.useStateFromStores(items1, () => closure_1_4.getProduct(skuId), items2);
   const items3 = [];
   const tmp5 = enabled;
-  const tmp6 = enabled(skuId[20]);
-  items3[HermesBuiltin.arraySpread(analyticsLocations, 0)] = enabled(skuId[21]).COLLECTIBLES_MOBILE_GIFT_MODAL;
+  const tmp6 = enabled(skuId[19]);
+  items3[HermesBuiltin.arraySpread(analyticsLocations, 0)] = enabled(skuId[20]).COLLECTIBLES_MOBILE_GIFT_MODAL;
   skuId = undefined;
   if (stateFromStores != null) {
     skuId = stateFromStores.skuId;
@@ -111,11 +106,11 @@ export default function CollectiblesShopGiftModal(skuId) {
     } else {
       obj = { onDismiss: null, title: null };
       obj[0] = onGiftModalDismiss;
-      const intl = tmp(tmp2[25]).intl;
-      obj[1] = intl.string(tmp(tmp2[25]).t["JCFN/y"]);
-      tmp10Result = tmp10(tmp5(tmp2[24]), obj);
-      const tmp5Result = tmp5(tmp2[24]);
+      const intl = tmp(tmp2[24]).intl;
+      obj[1] = intl.string(tmp(tmp2[24]).t["JCFN/y"]);
+      tmp10Result = tmp10(tmp5(tmp2[23]), obj);
+      const tmp5Result = tmp5(tmp2[23]);
     }
-    tmpResult = tmp(tmp2[8]);
+    tmpResult = tmp(tmp2[7]);
   }
 };

@@ -3,13 +3,13 @@ import set from "../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
 import getAvatarURLDefault from "../../utils/AvatarUtils.tsx";
 import parseRawEmojiObjectDefault from "../emojis/UnicodeEmojis.tsx";
-import tDefault from "../../../_runtime/04162_t.js";
+import tDefault from "../../../_runtime/04192_t.js";
 import getGameMediaRefURLDefault from "../games/getGameMediaRefURL.tsx";
 import textRegexpDefault from "MarkupTextRule.tsx";
 import getChannelDefault from "MarkupChannelMentionRule.tsx";
 import regExpDefault from "MarkupAttachmentLinkRule.tsx";
-import INVISIBLE_CHAR_REGEX2 from "MarkupInvisibleUnicode.tsx";
 import getGameMentionData from "../game_mentions/hooks/useGameMentionData.tsx";
+import INVISIBLE_CHAR_REGEX2 from "MarkupInvisibleUnicode.tsx";
 
 const Image = get_ActivityIndicator.Image;
 obj = { escape: obj, invisibleUnicode: null, text: null, emoji: null, customEmoji: null, channelMention: null, gameMention: null, channelOrMessageUrl: null, mediaPostLink: null, attachmentLink: null, silentPrefix: null };
@@ -171,7 +171,7 @@ obj[5] = {
   }
 };
 obj[6] = {
-  parse(closure_0, arg1, channelId) {
+  parse(gameId, arg1, channelId) {
     let obj = getGameMentionData;
     const gameMentionData = obj.getGameMentionData(tmp);
     let gameIcon;
@@ -413,4 +413,23 @@ export const decorateWithIcon = function decorateWithIcon(str) {
     }
   }
   return mapped;
+};
+export const hydrateGameMention = function hydrateGameMention(gameId, channelId) {
+  let obj = getGameMentionData;
+  const gameMentionData = obj.getGameMentionData(gameId);
+  let gameIcon;
+  if (gameMentionData != null) {
+    gameIcon = gameMentionData.gameIcon;
+  }
+  obj = { type: "gameMention", gameId, channelId: channelId.channelId, icon: getGameMediaRefURLDefault(gameId, gameIcon, { size: 32 }), displayName: null };
+  let gameName;
+  if (gameMentionData != null) {
+    gameName = gameMentionData.gameName;
+  }
+  if (gameName == null) {
+    const intl = tmp(1236).intl;
+    gameName = intl.string(tmp(1236).t["11pdXZ"]);
+  }
+  obj[4] = gameName;
+  return obj;
 };

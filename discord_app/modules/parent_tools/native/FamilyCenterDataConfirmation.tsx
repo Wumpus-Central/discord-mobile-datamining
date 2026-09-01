@@ -34,8 +34,8 @@ function RowGroup(children) {
       if (true === negative) {
         str = "text-status-dnd";
       }
-      obj[2] = closure_3(callback(5567).TableRow.Icon, { variant: str, IconComponent });
-      return closure_3(callback(5567).TableRow, obj, header);
+      obj[2] = closure_3(callback(5599).TableRow.Icon, { variant: str, IconComponent });
+      return closure_3(callback(5599).TableRow, obj, header);
     })
   };
   items[1] = callback(TableRowGroupTitle.TableRowGroup, obj);

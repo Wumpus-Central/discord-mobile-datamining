@@ -22,7 +22,7 @@ function _onAddDirectoryGuildEntry() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -48,7 +48,7 @@ function _onAddDirectoryGuildEntry() {
               ({ directoryChannelId: c0, directoryGuildName: c1, guild: c2, description: c3, category: c4, onClose: c5 } = c0);
               dependencyMap = 1;
               c4 = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -60,7 +60,7 @@ function _onAddDirectoryGuildEntry() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              let obj3 = lib(11850);
+              let obj3 = lib(11883);
               dependencyMap = 2;
               c4 = 1;
               const obj2 = { value: null, done: false };
@@ -77,7 +77,7 @@ function _onAddDirectoryGuildEntry() {
             return obj3;
           } else {
             callback2();
-            obj = callback(4826);
+            obj = callback(4858);
             const obj4 = { importer: null };
             obj4[0] = function importer() {
               return _undefined(paths[6])(paths[5], paths.paths).then((arg0) => {
@@ -87,7 +87,7 @@ function _onAddDirectoryGuildEntry() {
             };
             obj.openLazy(obj4);
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp22) {
           c4 = tmp;

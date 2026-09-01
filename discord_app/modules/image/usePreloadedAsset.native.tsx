@@ -33,7 +33,7 @@ export default function usePreloadedAsset(arg0) {
   dependencyMap = tmp3;
   let tmp4 = !tmp3;
   if (tmp3) {
-    tmp4 = null != num(16497);
+    tmp4 = null != num(16533);
   }
   callback = tmp4;
   let str = "image";
@@ -74,9 +74,9 @@ export default function usePreloadedAsset(arg0) {
           }
         }, timeout);
         if (dependencyMap) {
-          if (null != num(16497)) {
-            let preloadResult = num(16497).preload(tmp);
-            const obj2 = num(16497);
+          if (null != num(16533)) {
+            let preloadResult = num(16533).preload(tmp);
+            const obj2 = num(16533);
           }
           preloadResult.then(() => {
             if (!c0) {
@@ -98,8 +98,8 @@ export default function usePreloadedAsset(arg0) {
             clearTimeout(closure_1);
           };
         }
-        preloadResult = num(5461).preload(tmp, timeout + 1000);
-        let obj = num(5461);
+        preloadResult = num(5493).preload(tmp, timeout + 1000);
+        let obj = num(5493);
         const tmp4 = timeout;
       }
     }

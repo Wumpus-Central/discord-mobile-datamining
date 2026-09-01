@@ -59,7 +59,7 @@ export const useAutoDismissGuildPowerupsNewBadge = function useAutoDismissGuildP
   const items = [closure_5];
   const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_5.getStateForGuild(closure_0));
   let obj = initialize;
-  const tmp2Result = num(12034)(guildId, stateFromStores);
+  const tmp2Result = num(12067)(guildId, stateFromStores);
   num = 0;
   if (tmp2Result >= constants.GUILD_THEME) {
     num = tmp2Result;

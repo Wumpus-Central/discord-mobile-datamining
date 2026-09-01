@@ -2,7 +2,7 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import asyncRequireImpl from "../../../../../_runtime/02009_asyncRequireImpl.js";
-import _modDef4691 from "../../../../actions/ModalActionCreators.tsx";
+import _modDef4723 from "../../../../actions/ModalActionCreators.tsx";
 import ChangePhoneReason from "../../../phone/PhoneActionCreators.tsx";
 import closure_3 from "../../../../stores/UserStore.tsx";
 import { PHONE_VERIFICATION_MODAL_KEY as closure_4 } from "../../../phone/PhoneConstants.tsx";
@@ -27,9 +27,9 @@ createToggle = {
     });
   },
   onPress: function onAccountPhoneSettingPress() {
-    let obj = _modDef4691;
+    let obj = _modDef4723;
     obj = { allowDeletePhone: true, reason: ChangePhoneReason.ChangePhoneReason.USER_SETTINGS_UPDATE };
-    obj.pushLazy(asyncRequireImpl(7736, dependencyMap.paths), obj, closure_4);
+    obj.pushLazy(asyncRequireImpl(7768, dependencyMap.paths), obj, closure_4);
   },
   withArrow: true
 };

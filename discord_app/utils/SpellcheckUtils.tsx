@@ -23,7 +23,7 @@ function _setEnabled() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -60,7 +60,7 @@ function _setEnabled() {
               closure_1.enabled = closure_0;
             }
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp13) {
           c3 = tmp;
@@ -96,7 +96,7 @@ function _setLearnedWords() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -133,7 +133,7 @@ function _setLearnedWords() {
               learnedWords.setLearnedWords(closure_0);
             }
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp14) {
           c3 = tmp;
@@ -159,83 +159,17 @@ function _isMisspelled() {
     c4 = 0;
     c5 = 0;
     const iter = (function*(arg0) {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_3 = tmp5;
-              let misspelled = tmp2;
-              let flag;
-              if (flag === undefined) {
-                flag = false;
-              }
-              misspelled = undefined;
-              c4 = 1;
-              c5 = 1;
-              return { value: "Object", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              c4 = 2;
-              c5 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = c5;
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else {
-            misspelled = arg1;
-            let isMisspelledResult = null != misspelled;
-            if (isMisspelledResult) {
-              isMisspelledResult = misspelled.isMisspelled(closure_0, flag);
-            }
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = isMisspelledResult;
-            return obj;
-          }
-        } catch (tmp16) {
-          c5 = tmp;
-          throw tmp16;
-        }
+      let misspelled = tmp2;
+      if (flag === undefined) {
+        flag = false;
       }
+      yield "PX_16";
+      misspelled = yield c5;
+      let isMisspelledResult = null != misspelled;
+      if (isMisspelledResult) {
+        isMisspelledResult = misspelled.isMisspelled(closure_0, flag);
+      }
+      return isMisspelledResult;
     })();
     iter.next();
     return iter;
@@ -269,7 +203,7 @@ function _getCorrections() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -297,7 +231,7 @@ function _getCorrections() {
               correctionsForMisspelling = undefined;
               c5 = 1;
               c6 = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -358,94 +292,23 @@ function _getCachedMisspelling() {
     c3 = 0;
     c4 = 0;
     const iter = (function*() {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let cachedMisspelling2 = tmp5;
-              let cachedMisspelling = tmp2;
-              let num11;
-              if (num11 === undefined) {
-                num11 = 5;
-              }
-              cachedMisspelling = undefined;
-              cachedMisspelling2 = undefined;
-              c3 = 1;
-              c4 = 1;
-              return { value: "Object", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              c3 = 2;
-              c4 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = closure_5;
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else {
-            cachedMisspelling = arg1;
-            if (null == cachedMisspelling) {
-              const obj4 = { misspelledWord: "", corrections: null };
-              obj4[1] = [];
-              c4 = 3;
-              const obj5 = { value: null, done: true };
-              obj5[0] = obj4;
-              return obj5;
-            } else {
-              cachedMisspelling2 = cachedMisspelling.getCachedMisspelling();
-              obj = { misspelledWord: null, corrections: null };
-              obj[0] = cachedMisspelling2.misspelledWord;
-              const corrections = cachedMisspelling2.corrections;
-              obj[1] = corrections.slice(0, num11);
-              c4 = 3;
-              const obj6 = { value: null, done: true };
-              obj6[0] = obj;
-              return obj6;
-            }
-          }
-        } catch (tmp12) {
-          c4 = tmp;
-          throw tmp12;
-        }
+      let cachedMisspelling = tmp2;
+      if (num11 === undefined) {
+        num11 = 5;
       }
+      yield "PX_16";
+      cachedMisspelling = yield closure_5;
+      if (null == cachedMisspelling) {
+        const obj4 = { misspelledWord: "", corrections: null };
+        obj4[1] = [];
+        return obj4;
+      }
+      const cachedMisspelling2 = cachedMisspelling.getCachedMisspelling();
+      const obj = { misspelledWord: null, corrections: null };
+      obj[0] = cachedMisspelling2.misspelledWord;
+      const corrections = cachedMisspelling2.corrections;
+      obj[1] = corrections.slice(0, num11);
+      return obj;
     })();
     iter.next();
     return iter;
@@ -477,7 +340,7 @@ function _replaceWithCorrection() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -514,7 +377,7 @@ function _replaceWithCorrection() {
               closure_1.replaceMisspelling(closure_0);
             }
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp14) {
           c3 = tmp;

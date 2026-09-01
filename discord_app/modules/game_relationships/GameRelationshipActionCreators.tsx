@@ -37,90 +37,28 @@ function _deleteGameRelationship() {
     c6 = 0;
     c4 = 0;
     const iter = (function*(arg0) {
-      if (v0 === 2) {
+      dependencyMap = tmp3;
+      c1 = tmp5;
+      ({ userId: c0, applicationId: c1, onSuccess: c2 } = callback);
+      yield "PX_16";
+      c4 = 1;
+      const HTTP = callback(530).HTTP;
+      const obj2 = { url: null, oldFormErrors: true, rejectWithError: false };
+      obj2[0] = c4.USER_GAME_RELATIONSHIP(callback, c1);
+      yield HTTP.del(obj2);
+      if (2 === tmp8) {
+        c4 = 0;
+        v0(closure_3);
         v0 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
-        }
-      } else {
-        try {
-          v0 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              v0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              dependencyMap = tmp3;
-              c1 = tmp5;
-              let callback;
-              c1 = undefined;
-              dependencyMap = undefined;
-              ({ userId: c0, applicationId: c1, onSuccess: c2 } = callback);
-              c5 = 1;
-              v0 = 1;
-              return { value: "Object", done: true };
-            }
-          } else if (1 === tmp8) {
-            if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              v0 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              c4 = 1;
-              const HTTP = callback(530).HTTP;
-              const obj2 = { url: null, oldFormErrors: true, rejectWithError: false };
-              obj2[0] = c4.USER_GAME_RELATIONSHIP(callback, c1);
-              c5 = 3;
-              v0 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.del(obj2);
-              return obj3;
-            }
-          } else {
-            if (2 === tmp8) {
-              c4 = 0;
-              v0(closure_3);
-              v0 = 3;
-            } else if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              dependencyMap();
-              c4 = 0;
-            }
-            c4 = 0;
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp25) {
-          closure_3 = tmp25;
-          if (tmp4 === c4) {
-            v0 = tmp2;
-            throw tmp25;
-          } else {
-            c5 = tmp;
-          }
-        }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        dependencyMap();
+        c4 = 0;
       }
+      c4 = 0;
+      return arg1;
     })();
     iter.next();
     return iter;
@@ -152,7 +90,7 @@ function _removeGameFriend() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -174,7 +112,7 @@ function _removeGameFriend() {
               ({ userId: c0, applicationId: c1 } = c0);
               c3 = 1;
               c4 = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -210,7 +148,7 @@ function _removeGameFriend() {
             return obj;
           } else {
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp12) {
           c4 = tmp;
@@ -248,7 +186,7 @@ function _cancelGameFriendRequest() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -270,7 +208,7 @@ function _cancelGameFriendRequest() {
               ({ userId: c0, applicationId: c1 } = c0);
               c3 = 1;
               c4 = 1;
-              return { value: "Object", done: true };
+              return { value: "PX_16", done: null };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -306,7 +244,7 @@ function _cancelGameFriendRequest() {
             return obj;
           } else {
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp12) {
           c4 = tmp;
@@ -353,7 +291,7 @@ export default {
       const intl = onSuccess(closure_1_2[4]).intl;
       AccessibilityAnnouncer.announce(intl.string(onSuccess(closure_1_2[4]).t.taJiuc));
     }).catch((arg0) => {
-      const aPIError = new onSuccess(4346).APIError(arg0);
+      const aPIError = new onSuccess(4376).APIError(arg0);
       let anyErrorMessage = aPIError.getAnyErrorMessage();
       const obj = { title: null, body: null };
       const intl = onSuccess(1236).intl;
@@ -363,7 +301,7 @@ export default {
         anyErrorMessage = intl2.string(tmp(1236).t.fEptJP);
       }
       obj[1] = anyErrorMessage;
-      callback(4825).show(obj);
+      callback(4857).show(obj);
       return Promise.reject(arg0);
     });
   },

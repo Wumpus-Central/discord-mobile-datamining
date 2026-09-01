@@ -17,13 +17,18 @@ function handleProjectUpsert(project) {
   project = project.project;
   const result = map.set(project.id, project);
 }
-const map = new Map();
-const map1 = new Map();
+let map = new Map();
+let map1 = new Map();
 const map2 = new Map();
 let c6 = null;
 let set = new Set();
 let closure_8 = [];
 const map3 = new Map();
+let c10 = 0;
+const map4 = new Map();
+const map5 = new Map();
+let closure_13 = { status: "idle", truncated: false, count: 0 };
+const map6 = new Map();
 const Store = initializeDefault.Store;
 class VibegrationsProjectStore extends Store {
 }
@@ -93,6 +98,49 @@ prototype["getLogs"] = function getLogs(arg0) {
   }
   return value;
 };
+prototype["getUnreadLogErrorCount"] = function getUnreadLogErrorCount(arg0) {
+  const value = map3.get(arg0);
+  if (null == value) {
+    return 0;
+  } else {
+    let num = map5.get(arg0);
+    if (num == null) {
+      num = 0;
+    }
+    let num2 = 0;
+    const iter = value[Symbol.iterator]();
+    const nextResult = iter.next();
+    while (iter !== undefined) {
+      let tmp6 = nextResult;
+      let tmp7 = nextResult.key > num;
+      if (tmp7) {
+        let tmp8 = nextResult;
+        tmp7 = "error" === tmp6.log.level;
+      }
+      if (tmp7) {
+        let tmp9 = nextResult;
+        tmp7 = true !== tmp6.log.historical;
+      }
+      if (tmp7) {
+        let tmp10 = num2;
+        num2 = num2 + 1;
+      }
+      continue;
+    }
+    return num2;
+  }
+};
+prototype["getHistoryState"] = function getHistoryState(arg0, arg1) {
+  let value = map6.get(arg0);
+  value = undefined;
+  if (value != null) {
+    value = value.get(arg1);
+  }
+  if (value == null) {
+    value = closure_13;
+  }
+  return value;
+};
 prototype["getProjectsFetchState"] = function getProjectsFetchState() {
   return c6;
 };
@@ -114,8 +162,10 @@ const vibegrationsProjectStore = new VibegrationsProjectStore(dispatcherDefault,
         if (0 === map2.size) {
           if (0 === map3.size) {
             if (0 === set.size) {
-              if (null == c6) {
-                return false;
+              if (0 === map6.size) {
+                if (null == c6) {
+                  return false;
+                }
               }
             }
           }
@@ -127,6 +177,9 @@ const vibegrationsProjectStore = new VibegrationsProjectStore(dispatcherDefault,
     map2.clear();
     map3.clear();
     set.clear();
+    map4.clear();
+    map5.clear();
+    map6.clear();
     c6 = null;
   },
   VIBEGRATIONS_PROJECTS_FETCH_START: function handleProjectsFetchStart() {
@@ -208,14 +261,17 @@ const vibegrationsProjectStore = new VibegrationsProjectStore(dispatcherDefault,
     map.delete(projectId);
     map1.delete(projectId);
     map3.delete(projectId);
-    while (tmp5 !== undefined) {
-      let tmp7 = callback;
-      let tmp8 = callback(tmp6, 2);
-      let first = tmp8[0];
-      if (tmp8[1] === projectId) {
-        let tmp10 = map2;
-        let tmp11 = first;
-        let deleteResult3 = map2.delete(first);
+    map4.delete(projectId);
+    map5.delete(projectId);
+    map6.delete(projectId);
+    while (tmp8 !== undefined) {
+      let tmp10 = callback;
+      let tmp11 = callback(tmp9, 2);
+      let first = tmp11[0];
+      if (tmp11[1] === projectId) {
+        let tmp13 = map2;
+        let tmp14 = first;
+        let deleteResult6 = map2.delete(first);
       }
       continue;
     }
@@ -234,20 +290,103 @@ const vibegrationsProjectStore = new VibegrationsProjectStore(dispatcherDefault,
       const result = obj.set(guildId, projectId);
     }
   },
+  VIBEGRATIONS_HISTORY_LOAD_SETTLE: function handleHistoryLoadSettle(status) {
+    ({ projectId, scope } = status);
+    if ("failed" !== status.status) {
+      let obj = { status: "loaded", truncated: null, count: null };
+      obj[1] = tmp2;
+      obj[2] = tmp;
+      let value = map6.get(projectId);
+      if (null == value) {
+        const _Map2 = Map;
+        map = new Map();
+        const result = obj4.set(projectId, map);
+        value = map;
+      }
+      const result1 = value.set(scope, obj);
+      obj4 = map6;
+    } else {
+      value = map6.get(projectId);
+      let value1;
+      if (value != null) {
+        value1 = value.get(scope);
+      }
+      let flag;
+      if (value1 != null) {
+        flag = value1.truncated;
+      }
+      if (flag == null) {
+        flag = false;
+      }
+      obj = { status: "failed", truncated: null, count: null };
+      obj[1] = flag;
+      let num;
+      if (value1 != null) {
+        num = value1.count;
+      }
+      if (num == null) {
+        num = 0;
+      }
+      obj[2] = num;
+      let value2 = obj6.get(projectId);
+      if (null == value2) {
+        const _Map = Map;
+        map1 = new Map();
+        const result2 = obj6.set(projectId, map1);
+        value2 = map1;
+      }
+      const result3 = value2.set(scope, obj);
+    }
+  },
   VIBEGRATIONS_LOG_APPEND: function handleLogAppend(arg0) {
     ({ projectId, log } = arg0);
-    const value = map3.get(projectId);
+    const seq = log.seq;
+    if (null != seq) {
+      let obj = map4;
+      let value = map4.get(projectId);
+      if (null != value) {
+        if (seq <= value) {
+          return false;
+        }
+      }
+      const result = obj.set(projectId, seq);
+    }
+    obj = { key: sum, log };
+    sum = c10 + 1;
+    c10 = sum;
+    value = map3.get(projectId);
     if (null == value) {
-      const items = [log];
+      const items = [obj];
       let combined = items;
     } else {
-      combined = value.concat(log);
+      combined = value.concat(obj);
     }
     let substr = combined;
     if (combined.length > 500) {
       substr = combined.slice(-500);
     }
-    const result = map3.set(projectId, substr);
+    const result1 = map3.set(projectId, substr);
+  },
+  VIBEGRATIONS_LOGS_SEEN: function handleLogsSeen(projectId) {
+    projectId = projectId.projectId;
+    const value = map3.get(projectId);
+    let num = 0;
+    if (null != value) {
+      num = 0;
+      if (0 !== value.length) {
+        num = value[value.length - 1].key;
+      }
+    }
+    let num3 = map5.get(projectId);
+    if (num3 == null) {
+      num3 = 0;
+    }
+    if (num3 >= num) {
+      return false;
+    } else {
+      const result = obj.set(projectId, num);
+    }
+    obj = map5;
   }
 });
 let result = set.fileFinishedImporting("modules/vibegrations/stores/VibegrationsProjectStore.tsx");

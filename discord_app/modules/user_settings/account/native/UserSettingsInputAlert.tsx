@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/account/native/UserSettingsInputAlert.tsx
 import componentDidMountDefault from "../../../../components_native/common/Alert.tsx";
-import _modDef6017 from "../../../keyboard/native/KeyboardAwareView.tsx";
+import _modDef6049 from "../../../keyboard/native/KeyboardAwareView.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 let require = arg1;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-let closure_5 = { input: "", error: "padding" };
+let closure_5 = { input: "", error: "accessible" };
 const PureComponent = importAllResult.PureComponent;
 class UserSettingsInputAlert extends PureComponent {
   constructor() {
@@ -74,7 +74,7 @@ prototype["renderContent"] = function renderContent() {
     if (tmp7) {
       let obj = { variant: "text-md/normal", children: null };
       obj[1] = helpText;
-      tmp7 = callback(tmp5(4444).Text, obj);
+      tmp7 = callback(tmp5(4474).Text, obj);
     }
     const items = [tmp7, ];
     obj = { label: null, placeholder: null, secureTextEntry: null, returnKeyType: "done", autoFocus: true, status: null, errorMessage: null, onSubmitEditing: null, onChange: null };
@@ -92,9 +92,9 @@ prototype["renderContent"] = function renderContent() {
     obj[8] = function onChange(input) {
       return self.setState({ input });
     };
-    items[1] = callback(self(7673).TextInput, obj);
+    items[1] = callback(self(7705).TextInput, obj);
     obj[1] = items;
-    return closure_4(self(4894).Stack, obj);
+    return closure_4(self(4926).Stack, obj);
   }
   error = self.state.error;
 };
@@ -106,7 +106,7 @@ prototype["render"] = function render() {
   if (useKeyboardAwareWrapper) {
     obj = { children: null };
     obj[0] = tmp5;
-    tmpResult = callback(_modDef6017, obj);
+    tmpResult = callback(_modDef6049, obj);
   }
   return tmpResult;
 };

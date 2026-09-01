@@ -186,21 +186,21 @@ let obj = {
     }
     let obj = store2;
     const selectedOptions = store2.getSelectedOptions(guildId);
-    obj1 = items1(5442);
+    obj1 = items1(5474);
     const selectedRoleIds = obj1.getSelectedRoleIds(selectedOptions);
-    const selectedChannelIds = items1(5442).getSelectedChannelIds(selectedOptions);
+    const selectedChannelIds = items1(5474).getSelectedChannelIds(selectedOptions);
     if (store2.getEnabled(guildId)) {
       let defaultChannelIds = obj.getDefaultChannelIds(guildId);
     } else {
       defaultChannelIds = [];
     }
-    let tmp2Result = tmp2(5442);
-    const obj3 = items1(5442);
+    let tmp2Result = tmp2(5474);
+    const obj3 = items1(5474);
     [arr3, arr4] = callback2(tmp2Result.getChannelCoverageForOnboarding(guildId, prompts, defaultChannelIds), 2);
     const items = [...defaultChannelIds];
     const mapped = items.map((arg0) => channel.getChannel(arg0));
     const found = mapped.filter(tmp2(1471).isNotNullish);
-    tmp2Result = tmp2(5445);
+    tmp2Result = tmp2(5477);
     const tmp6 = callback2(tmp2Result.getChannelCoverageForOnboarding(guildId, prompts, defaultChannelIds), 2);
     if (null == tmp) {
       items1 = [];
@@ -210,14 +210,14 @@ let obj = {
     }
     const connections = obj.getConnections(guildId);
     const set = new Set(items);
-    const providerConnectionState = items1(5442).getProviderConnectionState(connections);
-    const tmp2Result1 = items1(5442);
-    const applicationConnectionState = items1(5442).getApplicationConnectionState(connections);
+    const providerConnectionState = items1(5474).getProviderConnectionState(connections);
+    const tmp2Result1 = items1(5474);
+    const applicationConnectionState = items1(5474).getApplicationConnectionState(connections);
     const tmp12 = importDefault;
-    const tmp2Result2 = items1(5442);
+    const tmp2Result2 = items1(5474);
     obj = {};
     const obj8 = expandEventPropertiesDefault;
-    const merged = Object.assign(items1(4668).collectGuildAnalyticsMetadata(guildId));
+    const merged = Object.assign(items1(4700).collectGuildAnalyticsMetadata(guildId));
     obj.step = prompts.length - 1;
     let num2 = 0;
     if (null != tmp) {
@@ -235,17 +235,17 @@ let obj = {
     ({ connected: obj9.provider_connections_connected, notConnected: obj9.provider_connections_not_connected } = providerConnectionState);
     ({ connected: obj9.application_connections_connected, notConnected: obj9.application_connections_not_connected } = applicationConnectionState);
     obj8.track(constants.GUILD_ONBOARDING_STEP_COMPLETED, obj);
-    const tmp2Result3 = items1(4668);
-    const tmp2Result4 = items1(5446);
+    const tmp2Result3 = items1(4700);
+    const tmp2Result4 = items1(5478);
     tmp2Result4.ackGuildFeature(guildId, ReadStateTypes.GUILD_ONBOARDING_QUESTION, DISCORD_EPOCHDefault.fromTimestamp(Date.now()));
     _updateOnboardingResponses(guildId, true);
     if (closure_5.isFullServerPreview(guildId)) {
-      const result = tmp2(5441).updateImpersonatedChannels(guildId, items, []);
-      const tmp2Result5 = tmp2(5441);
-      const result1 = tmp2(5441).updateImpersonatedData(guildId, { optInEnabled: true });
-      const tmp2Result6 = tmp2(5441);
+      const result = tmp2(5473).updateImpersonatedChannels(guildId, items, []);
+      const tmp2Result5 = tmp2(5473);
+      const result1 = tmp2(5473).updateImpersonatedData(guildId, { optInEnabled: true });
+      const tmp2Result6 = tmp2(5473);
       const _Array = Array;
-      const result2 = tmp2(5441).updateImpersonatedRoles(guildId, Array.from(selectedRoleIds));
+      const result2 = tmp2(5473).updateImpersonatedRoles(guildId, Array.from(selectedRoleIds));
       currentUser = currentUser.getCurrentUser();
       if (null != currentUser) {
         const member = store.getMember(guildId, currentUser.id);
@@ -258,13 +258,13 @@ let obj = {
         }
         obj = { memberOptions: null };
         obj1 = { flags: null };
-        const tmp2Result8 = tmp2(5441);
+        const tmp2Result8 = tmp2(5473);
         obj1[0] = tmp2(1399).setFlag(num3, GuildMemberFlags.COMPLETED_ONBOARDING, true);
         obj[0] = obj1;
         const result3 = tmp2Result8.updateImpersonatedData(guildId, obj);
         const tmp2Result9 = tmp2(1399);
       }
-      const tmp2Result7 = tmp2(5441);
+      const tmp2Result7 = tmp2(5473);
     }
   },
   onboardExistingMember(id, set) {
@@ -277,7 +277,7 @@ let obj = {
     }
     const item = defaultChannelIds.forEach((arg0) => set.add(arg0));
     if (set.size > 0) {
-      const obj2 = set(5449);
+      const obj2 = set(5481);
       const _Array = Array;
       obj = { page: null };
       obj[0] = constants2.GUILD_ONBOARDING;
@@ -308,7 +308,7 @@ let obj = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -334,7 +334,7 @@ let obj = {
                 if (flags == null) {
                   c0 = 0;
                 }
-                obj1 = closure_1_0(5456);
+                obj1 = closure_1_0(5488);
                 obj1 = { flags: null };
                 obj1[0] = closure_1_0(1399).setFlag(c0, closure_1_13.COMPLETED_ONBOARDING, false);
                 dependencyMap = 1;
@@ -354,7 +354,7 @@ let obj = {
             return obj;
           }
           c1 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp13) {
           c1 = tmp;
           throw tmp13;

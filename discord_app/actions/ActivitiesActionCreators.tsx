@@ -1,5 +1,5 @@
 // discord_app/actions/ActivitiesActionCreators.tsx
-import _modDef4461 from "ChannelActionCreators.tsx";
+import _modDef4491 from "ChannelActionCreators.tsx";
 import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../stores/ChannelStore.tsx";
 import ME from "../Constants.tsx";
@@ -114,8 +114,8 @@ export default {
   sendActivityInviteUser(userId) {
     const self = this;
     ({ type: importDefault, activity: dependencyMap, content: closure_3, location: require } = userId);
-    const obj = _modDef4461;
-    return _modDef4461.ensurePrivateChannel(userId.userId).then((channelId) => self.sendActivityInvite({ channelId, type: closure_1, activity: closure_2, content: closure_3, location: closure_0 }));
+    const obj = _modDef4491;
+    return _modDef4491.ensurePrivateChannel(userId.userId).then((channelId) => self.sendActivityInvite({ channelId, type: closure_1, activity: closure_2, content: closure_3, location: closure_0 }));
   },
   getJoinSecret(arg0, arg1, arg2, arg3, arg4) {
     closure_0 = arg0;

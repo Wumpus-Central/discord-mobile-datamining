@@ -2,7 +2,7 @@
 import noopAll from "../../../../_runtime/00019_noop.js";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
-import registerAssetDefault from "../../../../_runtime/08762_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/08799_registerAsset.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
