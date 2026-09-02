@@ -2,8 +2,8 @@
 import num2 from "../04314_num2.js";
 import noop from "../00019_noop.js";
 import emptyFunction from "../04307_emptyFunction.js";
-import warning from "../01229_warning.js";
-import invariant from "../01230_invariant.js";
+import warning from "../01226_warning.js";
+import invariant from "../01227_invariant.js";
 import parse from "../04312_parse.js";
 import getStatics from "../04316_getStatics.js";
 
@@ -1148,7 +1148,7 @@ export const Redirect = function Redirect(arg0) {
           callback(closure_1);
         };
         obj2[1] = function onUpdate(arg0, to) {
-          let obj = callback(1223);
+          let obj = callback(1220);
           const _location = obj.createLocation(to.to);
           obj = { key: _location.key };
           if (!obj2.locationsAreEqual(_location, closure_1_7({}, dependencyMap, obj))) {

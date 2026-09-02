@@ -1,13 +1,13 @@
 // _runtime/05321_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
+  width: 267,
+  height: 267,
   scales: [1],
-  hash: "4a45d5464752b264a97efb61145f651f",
-  name: "img_account_sync_ebay_white",
-  type: "png",
+  hash: "8004c631509b26672d76ec4ff50dd8cb",
+  name: "img_roblox_light",
+  type: "svg",
 });

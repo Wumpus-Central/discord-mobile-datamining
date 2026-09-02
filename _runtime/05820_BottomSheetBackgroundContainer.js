@@ -1,0 +1,4 @@
+// _runtime/05820_BottomSheetBackgroundContainer.js
+import BottomSheetBackgroundContainer from "05821_BottomSheetBackgroundContainer.js";
+
+export const BottomSheetBackgroundContainer = BottomSheetBackgroundContainer.BottomSheetBackgroundContainer;

@@ -1,5 +1,5 @@
 // _runtime/15195_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "30f38e9cc06345b39ea1b73343d04289",
-  name: "CarIcon",
+  hash: "3158b67912ec8e847a3b53eb9bab7b63",
+  name: "EmojiCryingFaceIcon",
   type: "png",
 });

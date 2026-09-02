@@ -1,5 +1,5 @@
 // _runtime/05239_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [1],
-  hash: "f2fc96c4a753dd0c5dd02646aa2a518c",
-  name: "img_account_sync_battlenet_white",
+  hash: "2735b94e62f2bc71613cf7e1aec9c3fe",
+  name: "img_account_sync_twitch_white",
   type: "svg",
 });

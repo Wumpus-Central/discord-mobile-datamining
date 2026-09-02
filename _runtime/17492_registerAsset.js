@@ -1,13 +1,13 @@
 // _runtime/17492_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/guild_settings/community_settings",
+  width: 88,
+  height: 80,
   scales: [2, 3],
-  hash: "296c2ec8ad1d8af66f5b6c763e93cbfa",
-  name: "ConnectionAverageIcon",
+  hash: "0b8a6fa235bbde823695fe5cdeccf7e4",
+  name: "channel_setup_light",
   type: "png",
 });

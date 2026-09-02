@@ -1,5 +1,5 @@
 // _runtime/05014_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "0e8c9cd01e5a3da643cc71e6763376dc",
-  name: "ExperimentalLfgLockIcon",
+  hash: "7a4c4444d71334d193c868d5d6b78800",
+  name: "BookCheckIcon",
   type: "png",
 });

@@ -1,5 +1,5 @@
 // _runtime/15217_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "4aac4b9e524273cde97c71cf7da9357a",
-  name: "DoubleCheckmarkIcon",
+  hash: "64819f390c3fa24ca76c3246977f2a01",
+  name: "EmojiSmilingFaceWithHornsIcon",
   type: "png",
 });

@@ -1,6 +1,6 @@
 // _runtime/04606_assignValue.js
-import eq from "00752_eq.js";
-import baseAssignValue from "00804_baseAssignValue.js";
+import eq from "00749_eq.js";
+import baseAssignValue from "00801_baseAssignValue.js";
 
 export default function assignValue(arg0, arg1, arg2) {
   const call = hasOwnProperty.call;

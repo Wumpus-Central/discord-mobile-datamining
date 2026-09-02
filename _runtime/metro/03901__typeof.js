@@ -1,5 +1,5 @@
 // _runtime/metro/03901__typeof.js
-import Parser2 from "../03878_Parser.js";
+import Parser2 from "../03877_Parser.js";
 
 let _createSuperInternal = require;
 let closure_1 = dependencyMap;
@@ -28,15 +28,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(AMPMParser, Parser) {
+function _setPrototypeOf(AMPMMidnightParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(AMPMParser, Parser) {
-      AMPMParser.__proto__ = Parser;
-      return AMPMParser;
+    _setPrototypeOf = function _setPrototypeOf(AMPMMidnightParser, Parser) {
+      AMPMMidnightParser.__proto__ = Parser;
+      return AMPMMidnightParser;
     };
   }
-  return _setPrototypeOf(AMPMParser, Parser);
+  return _setPrototypeOf(AMPMMidnightParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -56,7 +56,7 @@ function _getPrototypeOf(arg0) {
 }
 const Parser = Parser2.Parser;
 _createSuperInternal = undefined;
-class AMPMParser {
+class AMPMMidnightParser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -111,7 +111,7 @@ class AMPMParser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["b", "B", "H", "k", "t", "T"];
+          items1 = ["a", "B", "H", "k", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -135,7 +135,7 @@ class AMPMParser {
     }
   }
 }
-closure_1 = AMPMParser;
+closure_1 = AMPMMidnightParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -147,12 +147,12 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-let obj = { value: AMPMParser, writable: true, configurable: true };
-AMPMParser.prototype = Object.create(prototype, { constructor: obj });
+let obj = { value: AMPMMidnightParser, writable: true, configurable: true };
+AMPMMidnightParser.prototype = Object.create(prototype, { constructor: obj });
 if (Parser) {
-  _setPrototypeOf(AMPMParser, Parser);
+  _setPrototypeOf(AMPMMidnightParser, Parser);
 }
-_createSuperInternal = AMPMParser;
+_createSuperInternal = AMPMMidnightParser;
 let num = 0;
 closure_1 = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
@@ -213,10 +213,10 @@ _createSuperInternal = function _createSuperInternal() {
 obj = {
   key: "parse",
   value: function parse(arg0, arg1, dayPeriod) {
-    if ("a" !== arg1) {
-      if ("aa" !== arg1) {
-        if ("aaa" !== arg1) {
-          if ("aaaaa" === arg1) {
+    if ("b" !== arg1) {
+      if ("bb" !== arg1) {
+        if ("bbb" !== arg1) {
+          if ("bbbbb" === arg1) {
             return dayPeriod.dayPeriod(arg0, { width: "narrow", context: "formatting" });
           } else {
             return (
@@ -263,4 +263,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { AMPMParser };
+export { AMPMMidnightParser };

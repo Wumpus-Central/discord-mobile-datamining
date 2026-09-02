@@ -1,8 +1,8 @@
 // _runtime/04781_StringToNumber.js
-import getEvalledConstructor from "00540_getEvalledConstructor.js";
-import _mod541 from "metro/00541__.js";
-import callBoundIntrinsic from "00574_callBoundIntrinsic.js";
-import regexTester from "01410_regexTester.js";
+import getEvalledConstructor from "00537_getEvalledConstructor.js";
+import _mod538 from "metro/00538__.js";
+import callBoundIntrinsic from "00571_callBoundIntrinsic.js";
+import regexTester from "01409_regexTester.js";
 import trim from "04782_trim.js";
 
 let tmp = getEvalledConstructor("%RegExp%");
@@ -22,7 +22,7 @@ class StringToNumber {
       tmp15 = new.target;
       str = "Assertion failed: `argument` is not a String";
       tmp16 = new.target;
-      tmp17 = new require("metro/00541__.js")("Assertion failed: `argument` is not a String");
+      tmp17 = new require("metro/00538__.js")("Assertion failed: `argument` is not a String");
       tmp18 = tmp17;
       throw tmp17;
     } else {

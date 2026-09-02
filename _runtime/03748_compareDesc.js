@@ -1,0 +1,37 @@
+// _runtime/03748_compareDesc.js
+import _typeof from "metro/03571__typeof.js";
+import requiredArgs from "03572_requiredArgs.js";
+
+if (!_typeof) {
+  let obj = { default: null };
+  obj[0] = _typeof;
+  let tmp3 = obj;
+} else {
+  tmp3 = _typeof;
+}
+_typeof = tmp3;
+if (!requiredArgs) {
+  obj = { default: null };
+  obj[0] = requiredArgs;
+  let tmp5 = obj;
+} else {
+  tmp5 = requiredArgs;
+}
+requiredArgs = tmp5;
+
+export default function compareDesc(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const time = defaultResult1.getTime();
+  const diff = time - _typeof.default(arg1).getTime();
+  let num = -1;
+  if (diff <= 0) {
+    let num2 = 1;
+    if (diff >= 0) {
+      num2 = diff;
+    }
+    num = num2;
+  }
+  return num;
+};
+export default exports.default;

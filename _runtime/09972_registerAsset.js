@@ -1,13 +1,13 @@
 // _runtime/09972_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/icons",
-  width: 32,
-  height: 32,
+  width: 24,
+  height: 24.5,
   scales: [2, 3],
-  hash: "1d1181e321dc8059ed1b1ce7cbbde121",
-  name: "ic_chat_bubble_32px",
+  hash: "8baf8e74a5de42544f8c13cd8c4c504d",
+  name: "ic_share_android",
   type: "png",
 });

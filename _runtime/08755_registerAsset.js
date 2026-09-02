@@ -1,13 +1,13 @@
 // _runtime/08755_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "fe638ed5adb730b6284af1a6c528af46",
-  name: "ic_report_message",
+  httpServerLocation: "/assets/modules/stage_channels/native/images",
+  width: 251,
+  height: 120,
+  scales: [1, 2, 3],
+  hash: "ded9c31a2e9dd512048ecebbadd9fab8",
+  name: "audience_welcome",
   type: "png",
 });

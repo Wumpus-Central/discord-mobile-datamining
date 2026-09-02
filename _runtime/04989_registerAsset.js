@@ -1,5 +1,5 @@
 // _runtime/04989_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "38e1b93a52067f9cce24c90cbb1af007",
-  name: "StageIcon",
+  hash: "36842ff43e56d815a37333dfec1ce713",
+  name: "AnnouncementsIcon",
   type: "png",
 });

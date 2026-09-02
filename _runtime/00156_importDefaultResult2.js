@@ -23,7 +23,7 @@ const error = importDefaultResult2Result;
   clearMeasures: closure_12,
 } = importDefaultResult2Result);
 let closure_13 = { startTime: 0, detail: "channel" };
-let closure_14 = { name: "", startTime: 0, duration: 0, detail: "sa" };
+let closure_14 = { name: "", startTime: 0, duration: 0, detail: "disabled" };
 function getMarkTimeForMeasure(arg0) {}
 let closure_16 = importDefaultResult1("eventCounts");
 class Performance {

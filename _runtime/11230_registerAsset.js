@@ -1,13 +1,13 @@
 // _runtime/11230_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/stream_feedback/light-theme-desaturated",
-  width: 64,
-  height: 64,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "9b2f923b8e946c7e2b9908f52890f136",
-  name: "feedback-modal-happy-desaturated",
+  hash: "dd65d7e499998d0d8096b10bdc086bb5",
+  name: "ic_close",
   type: "png",
 });

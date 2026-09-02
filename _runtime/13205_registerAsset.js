@@ -1,13 +1,13 @@
 // _runtime/13205_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/plan_selection",
-  width: 64,
-  height: 64,
-  scales: [1],
-  hash: "e56e37c53edc4951356b726ba43f79c4",
-  name: "img_wumpus_nitro_classic_boost",
+  httpServerLocation: "/assets/images/native/premium/illustrations",
+  width: 51,
+  height: 36,
+  scales: [2, 3],
+  hash: "eedc171301ae1180a08c85018b5d2811",
+  name: "img_boost_mobile",
   type: "png",
 });

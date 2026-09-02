@@ -1,5 +1,5 @@
 // _runtime/15203_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "9e0f7ca920e7d55418409ccf322d663c",
-  name: "BurgerIcon",
+  hash: "fbee7c9b6ebaa77bbc9a6cc9164a2ec7",
+  name: "EmojiFaceWithSpiralEyesIcon",
   type: "png",
 });

@@ -1,13 +1,13 @@
 // _runtime/07611_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/main_tabs_v2/native/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3, 4],
-  hash: "abb394aed71d149627aa4dc597482f89",
-  name: "stack-nav-back",
+  httpServerLocation: "/assets/modules/premium/roadblocks/images",
+  width: 552,
+  height: 336,
+  scales: [1],
+  hash: "f59c66d6f542b08761b44d6d5de547c8",
+  name: "client_themes_upsell",
   type: "png",
 });

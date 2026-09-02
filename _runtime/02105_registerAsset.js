@@ -1,11 +1,11 @@
 // _runtime/02105_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy92aXJ0dWFsX2N1cnJlbmN5L3dlYi9vcmJfd2FsbGV0L21lc3NhZ2Vz",
+  httpServerLocation: "/assets/modules/virtual_currency/web/orb_wallet/messages",
   scales: [1],
-  hash: "5f6f667b745d77aba2f79025268080d5",
-  name: "zh-TW.messages.5f6f667b745d77aba2f79025268080d5.compiled.messages",
+  hash: "46764013ef84370cf8ab919784e6f8aa",
+  name: "OrbWallet.compiled.messages",
   type: "jsona",
 });

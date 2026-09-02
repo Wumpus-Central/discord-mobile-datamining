@@ -1,5 +1,5 @@
 // _runtime/05275_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 255,
   height: 255,
   scales: [1],
-  hash: "e94b8b952ebeea94014c9e671ef91d08",
-  name: "img_account_sync_x_dark",
+  hash: "58031e8cd71ba255d9d80c351eb0d4d4",
+  name: "img_account_sync_facebook_white",
   type: "png",
 });

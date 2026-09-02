@@ -1,13 +1,13 @@
 // _runtime/11399_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/images/native/icons",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "dadf5e8629c7ac90f77087c81be9e773",
-  name: "UserIcon",
+  hash: "64a0c4e1c40187f5f8992fdc3d83c704",
+  name: "ic_arrow_back_24px",
   type: "png",
 });

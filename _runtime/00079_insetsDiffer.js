@@ -1,5 +1,5 @@
 // _runtime/00079_insetsDiffer.js
-let closure_0 = { top: "spriteIndex", left: "category", right: "paths", bottom: "replace" };
+let closure_0 = { top: "accessible", left: "includes", right: "pos", bottom: "r" };
 arg5.default = function insetsDiffer(arg0, arg1) {
   let rect = arg0;
   if (!arg0) {

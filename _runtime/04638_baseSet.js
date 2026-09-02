@@ -1,7 +1,7 @@
 // _runtime/04638_baseSet.js
-import isObject from "00606_isObject.js";
-import toKey from "00725_toKey.js";
-import castPath from "00728_castPath.js";
+import isObject from "00603_isObject.js";
+import toKey from "00722_toKey.js";
+import castPath from "00725_castPath.js";
 
 export default function baseSet(arg0, arg1, arg2, arg3) {
   if (isObject(arg0)) {
@@ -26,10 +26,10 @@ export default function baseSet(arg0, arg1, arg2, arg3) {
               }
               tmp13 = tmp12;
               if (undefined === tmp12) {
-                if (tmp6(606)(tmp11)) {
+                if (tmp6(603)(tmp11)) {
                   tmp13 = tmp11;
                 } else {
-                  let tmp14 = tmp6(628)(arr[num2 + 1]) ? [] : {};
+                  let tmp14 = tmp6(625)(arr[num2 + 1]) ? [] : {};
                 }
               }
             }

@@ -1,297 +1,123 @@
 // _runtime/metro/05183__.js
-obj = {
-  0: obj,
-  1: obj,
-  2: null,
-  3: null,
-  4: null,
-  5: null,
-  6: null,
-  7: null,
-  8: "GPSSatellites",
-  9: null,
-  10: null,
-  11: "GPSDOP",
-  12: null,
-  13: "GPSSpeed",
-  14: null,
-  15: "GPSTrack",
-  16: null,
-  17: "GPSImgDirection",
-  18: "GPSMapDatum",
-  19: null,
-  20: null,
-  21: null,
-  22: null,
-  23: null,
-  24: "GPSDestBearing",
-  25: null,
-  26: "GPSDestDistance",
-  27: null,
-  28: null,
-  29: "GPSDateStamp",
-  30: null,
-  31: "GPSHPositioningError",
-};
-obj = {
-  name: "GPSVersionID",
-  description(arg0) {
-    let str = "Unknown";
-    if (2 === arg0[0]) {
-      str = "Unknown";
-      if (2 === arg0[1]) {
-        str = "Unknown";
-        if (0 === arg0[2]) {
-          str = "Unknown";
-          if (0 === arg0[3]) {
-            str = "Version 2.2";
+const module = arg2;
+const dependencyMap = arg6;
+arg5.default = {
+  read(buffer, sum) {
+    let obj = module(5182);
+    const shortAt = obj.getShortAt(buffer, sum);
+    let tmp6;
+    if (15 <= shortAt) {
+      let tmp3Result = tmp3(5182);
+      const byteAt = tmp3Result.getByteAt(buffer, sum + 14);
+      obj = { value: null, description: null };
+      obj[0] = byteAt;
+      const _HermesInternal = HermesInternal;
+      obj[1] = "" + byteAt + "px";
+      tmp6 = obj;
+    }
+    let tmp9;
+    if (16 <= shortAt) {
+      tmp3Result = tmp3(5182);
+      const byteAt1 = tmp3Result.getByteAt(buffer, sum + 15);
+      obj = { value: null, description: null };
+      obj[0] = byteAt1;
+      const _HermesInternal2 = HermesInternal;
+      obj[1] = "" + byteAt1 + "px";
+      tmp9 = obj;
+    }
+    let tmp12;
+    if (9 <= shortAt) {
+      const byteAt2 = tmp3(5182).getByteAt(buffer, sum + 7);
+      const tmp3Result1 = tmp3(5182);
+      const byteAt3 = tmp3(5182).getByteAt(buffer, sum + 7 + 1);
+      obj1 = { value: null, description: null };
+      obj1[0] = 256 * byteAt2 + byteAt3;
+      obj1[1] = `${tmp13}.${tmp14}`;
+      tmp12 = obj1;
+      const tmp3Result2 = tmp3(5182);
+    }
+    const obj2 = {
+      "JFIF Version": tmp12,
+      "Resolution Unit": null,
+      XResolution: null,
+      YResolution: null,
+      "JFIF Thumbnail Width": null,
+      "JFIF Thumbnail Height": null,
+    };
+    let tmp15;
+    if (10 <= shortAt) {
+      const byteAt4 = tmp3(5182).getByteAt(buffer, sum + 9);
+      const obj3 = { value: null, description: null };
+      obj3[0] = byteAt4;
+      let str6 = "None";
+      if (0 !== byteAt4) {
+        let str7 = "inches";
+        if (1 !== byteAt4) {
+          let str8 = "Unknown";
+          if (2 === byteAt4) {
+            str8 = "cm";
+          }
+          str7 = str8;
+        }
+        str6 = str7;
+      }
+      obj3[1] = str6;
+      tmp15 = obj3;
+      const tmp3Result3 = tmp3(5182);
+    }
+    obj2[1] = tmp15;
+    let tmp17;
+    if (12 <= shortAt) {
+      const shortAt1 = tmp3(5182).getShortAt(buffer, sum + 10);
+      const obj4 = { value: null, description: null };
+      obj4[0] = shortAt1;
+      obj4[1] = "" + shortAt1;
+      tmp17 = obj4;
+      const tmp3Result4 = tmp3(5182);
+    }
+    obj2[2] = tmp17;
+    let tmp19;
+    if (14 <= shortAt) {
+      const shortAt2 = tmp3(5182).getShortAt(buffer, sum + 12);
+      const obj5 = { value: null, description: null };
+      obj5[0] = shortAt2;
+      obj5[1] = "" + shortAt2;
+      tmp19 = obj5;
+      const tmp3Result5 = tmp3(5182);
+    }
+    obj2[3] = tmp19;
+    obj2[4] = tmp6;
+    obj2[5] = tmp9;
+    if (undefined !== tmp6) {
+      if (undefined !== tmp9) {
+        const result = 3 * tmp6.value * tmp9.value;
+        let tmp22;
+        if (0 !== result) {
+          if (16 + result <= shortAt) {
+            buffer = buffer.buffer;
+            const obj6 = { value: null, description: "<24-bit RGB pixel data>" };
+            obj6[0] = buffer.slice(sum + 16, sum + 16 + result);
+            tmp22 = obj6;
           }
         }
-      }
-    }
-    return str;
-  },
-};
-obj = {
-  name: "GPSLatitudeRef",
-  description(join) {
-    const joined = join.join("");
-    let str = "North latitude";
-    if ("N" !== joined) {
-      let str2 = "Unknown";
-      if ("S" === joined) {
-        str2 = "South latitude";
-      }
-      str = str2;
-    }
-    return str;
-  },
-};
-obj[2] = { name: "GPSLatitude", description: require("getStringValue").getCalculatedGpsValue };
-obj[3] = {
-  name: "GPSLongitudeRef",
-  description(join) {
-    const joined = join.join("");
-    let str = "East longitude";
-    if ("E" !== joined) {
-      let str2 = "Unknown";
-      if ("W" === joined) {
-        str2 = "West longitude";
-      }
-      str = str2;
-    }
-    return str;
-  },
-};
-const obj1 = { name: "GPSLatitude", description: require("getStringValue").getCalculatedGpsValue };
-obj[4] = { name: "GPSLongitude", description: require("getStringValue").getCalculatedGpsValue };
-obj[5] = {
-  name: "GPSAltitudeRef",
-  description(arg0) {
-    let str = "Sea level";
-    if (0 !== arg0) {
-      let str2 = "Unknown";
-      if (1 === arg0) {
-        str2 = "Sea level reference (negative value)";
-      }
-      str = str2;
-    }
-    return str;
-  },
-};
-obj[6] = {
-  name: "GPSAltitude",
-  description(arg0) {
-    return arg0[0] / arg0[1] + " m";
-  },
-};
-obj[7] = {
-  name: "GPSTimeStamp",
-  description(arr) {
-    const mapped = arr.map((arg0) => {
-      [tmp, tmp2] = arg0;
-      const result = tmp / tmp2;
-      let combined = result;
-      if (obj.test("" + result)) {
-        const _HermesInternal = HermesInternal;
-        combined = "0" + result;
-      }
-      return combined;
-    });
-    return mapped.join(":");
-  },
-};
-obj[9] = {
-  name: "GPSStatus",
-  description(join) {
-    const joined = join.join("");
-    let str = "Measurement in progress";
-    if ("A" !== joined) {
-      let str2 = "Unknown";
-      if ("V" === joined) {
-        str2 = "Measurement Interoperability";
-      }
-      str = str2;
-    }
-    return str;
-  },
-};
-obj[10] = {
-  name: "GPSMeasureMode",
-  description(join) {
-    const joined = join.join("");
-    let str = "2-dimensional measurement";
-    if ("2" !== joined) {
-      let str2 = "Unknown";
-      if ("3" === joined) {
-        str2 = "3-dimensional measurement";
-      }
-      str = str2;
-    }
-    return str;
-  },
-};
-obj[12] = {
-  name: "GPSSpeedRef",
-  description(join) {
-    const joined = join.join("");
-    let str = "Kilometers per hour";
-    if ("K" !== joined) {
-      let str2 = "Miles per hour";
-      if ("M" !== joined) {
-        let str4 = "Unknown";
-        if ("N" === joined) {
-          str4 = "Knots";
+        if (tmp22) {
+          obj2["JFIF Thumbnail"] = tmp22;
         }
-        str2 = str4;
       }
-      str = str2;
     }
-    return str;
-  },
-};
-obj[14] = {
-  name: "GPSTrackRef",
-  description(join) {
-    const joined = join.join("");
-    let str = "True direction";
-    if ("T" !== joined) {
-      let str2 = "Unknown";
-      if ("M" === joined) {
-        str2 = "Magnetic direction";
-      }
-      str = str2;
-    }
-    return str;
-  },
-};
-obj[16] = {
-  name: "GPSImgDirectionRef",
-  description(join) {
-    const joined = join.join("");
-    let str = "True direction";
-    if ("T" !== joined) {
-      let str2 = "Unknown";
-      if ("M" === joined) {
-        str2 = "Magnetic direction";
-      }
-      str = str2;
-    }
-    return str;
-  },
-};
-obj[19] = {
-  name: "GPSDestLatitudeRef",
-  description(join) {
-    const joined = join.join("");
-    let str = "North latitude";
-    if ("N" !== joined) {
-      let str2 = "Unknown";
-      if ("S" === joined) {
-        str2 = "South latitude";
-      }
-      str = str2;
-    }
-    return str;
-  },
-};
-obj[20] = {
-  name: "GPSDestLatitude",
-  description(arg0) {
-    return arg0[0][0] / arg0[0][1] + arg0[1][0] / arg0[1][1] / 60 + arg0[2][0] / arg0[2][1] / 3600;
-  },
-};
-obj[21] = {
-  name: "GPSDestLongitudeRef",
-  description(join) {
-    const joined = join.join("");
-    let str = "East longitude";
-    if ("E" !== joined) {
-      let str2 = "Unknown";
-      if ("W" === joined) {
-        str2 = "West longitude";
-      }
-      str = str2;
-    }
-    return str;
-  },
-};
-obj[22] = {
-  name: "GPSDestLongitude",
-  description(arg0) {
-    return arg0[0][0] / arg0[0][1] + arg0[1][0] / arg0[1][1] / 60 + arg0[2][0] / arg0[2][1] / 3600;
-  },
-};
-obj[23] = {
-  name: "GPSDestBearingRef",
-  description(join) {
-    const joined = join.join("");
-    let str = "True direction";
-    if ("T" !== joined) {
-      let str2 = "Unknown";
-      if ("M" === joined) {
-        str2 = "Magnetic direction";
-      }
-      str = str2;
-    }
-    return str;
-  },
-};
-obj[25] = {
-  name: "GPSDestDistanceRef",
-  description(join) {
-    const joined = join.join("");
-    let str = "Kilometers";
-    if ("K" !== joined) {
-      let str2 = "Miles";
-      if ("M" !== joined) {
-        let str4 = "Unknown";
-        if ("N" === joined) {
-          str4 = "Knots";
+    const keys = Object.keys();
+    if (keys !== undefined) {
+      while (keys[16] !== undefined) {
+        let tmp25 = tmp24;
+        if (undefined !== obj2[tmp24]) {
+          continue;
+        } else {
+          delete tmp[tmp2];
+          continue;
         }
-        str2 = str4;
+        continue;
       }
-      str = str2;
     }
-    return str;
+    return obj2;
   },
 };
-const obj2 = { name: "GPSLongitude", description: require("getStringValue").getCalculatedGpsValue };
-obj[27] = { name: "GPSProcessingMethod", description: require("getStringValue").getEncodedString };
-const obj3 = { name: "GPSProcessingMethod", description: require("getStringValue").getEncodedString };
-obj[28] = { name: "GPSAreaInformation", description: require("getStringValue").getEncodedString };
-obj[30] = {
-  name: "GPSDifferential",
-  description(arg0) {
-    let str = "Measurement without differential correction";
-    if (0 !== arg0) {
-      let str2 = "Unknown";
-      if (1 === arg0) {
-        str2 = "Differential correction applied";
-      }
-      str = str2;
-    }
-    return str;
-  },
-};
-arg5.default = obj;

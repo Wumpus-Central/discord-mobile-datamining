@@ -1,13 +1,13 @@
 // _runtime/08212_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/upsell",
-  width: 240,
-  height: 152,
+  httpServerLocation: "/assets/images/native/custom_app_icons/ControllerIcon",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "1c56c6a8d7541177ea8c3d88699db89c",
-  name: "img_guild_cap_upsell_light",
+  hash: "6f32787e0c52eb22e7f564f5312dfb32",
+  name: "ControllerIcon",
   type: "png",
 });

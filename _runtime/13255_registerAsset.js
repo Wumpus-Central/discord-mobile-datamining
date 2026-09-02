@@ -1,13 +1,13 @@
 // _runtime/13255_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting/perks",
-  width: 30,
-  height: 30,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "1e3b48d91e5d1a57c5c0dcf0e9c39aca",
-  name: "role_2",
+  hash: "d287ab85d54506fcfae6aa3f9742222f",
+  name: "DoorEnterIcon",
   type: "png",
 });

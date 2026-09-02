@@ -1,13 +1,13 @@
 // _runtime/08950_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/tiered_tenure_badging/native/images",
-  width: 61,
-  height: 61,
-  scales: [3],
-  hash: "a162bb51b9ed292f4f10e545ed35e2e3",
-  name: "asset_platinum_badge_small",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "5b035d589db27733a20b85bf911f23f4",
+  name: "ChevronSmallDownIcon",
   type: "png",
 });

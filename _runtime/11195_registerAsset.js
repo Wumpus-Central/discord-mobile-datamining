@@ -1,13 +1,13 @@
 // _runtime/11195_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/main_tabs_v2/native/shared_components/user_list/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3, 4],
-  hash: "b49ac54ee052ec8e0d12b9dcde20cf19",
-  name: "icon-settings",
+  httpServerLocation: "/assets/images/channel_following/dark",
+  width: 280,
+  height: 120,
+  scales: [2, 3],
+  hash: "9c2cfd53ed0ab3abd70ee33b26a982e5",
+  name: "channel_following_success_2",
   type: "png",
 });

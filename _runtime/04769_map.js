@@ -1,5 +1,5 @@
 // _runtime/04769_map.js
-import callBoundIntrinsic from "00574_callBoundIntrinsic.js";
+import callBoundIntrinsic from "00571_callBoundIntrinsic.js";
 import ToObject from "04770_ToObject.js";
 import ToUint32 from "04773_ToUint32.js";
 import ToString from "04785_ToString.js";

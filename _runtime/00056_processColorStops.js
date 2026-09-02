@@ -581,17 +581,17 @@ function parseLinearGradientCSSString(str) {
       const match = str3.match(regex2);
       result = null;
       if (match) {
-        const tmp10 = callback(match, 3);
+        const tmp13 = callback(match, 3);
         const _parseFloat = parseFloat;
-        const parsed = parseFloat(tmp10[1]);
+        const parsed = parseFloat(tmp13[1]);
         result = parsed;
-        if ("deg" !== tmp10[2]) {
-          if ("grad" === tmp11) {
+        if ("deg" !== tmp13[2]) {
+          if ("grad" === tmp14) {
             result = 0.9 * parsed;
-          } else if ("rad" === tmp11) {
+          } else if ("rad" === tmp14) {
             const _Math = Math;
             result = (180 * parsed) / Math.PI;
-          } else if ("turn" === tmp11) {
+          } else if ("turn" === tmp14) {
             result = 360 * parsed;
           } else {
             result = null;
@@ -610,7 +610,9 @@ function parseLinearGradientCSSString(str) {
   } else if (regex.test(str3)) {
     obj = null;
     if (null != str3) {
+      const formatted = str3.replace(closure_8, " ").toLowerCase();
       obj = { type: "keyword", value: "to bottom left" };
+      const str5 = str3.replace(closure_8, " ");
     }
     while (true) {
       if (null == obj) {
@@ -621,15 +623,15 @@ function parseLinearGradientCSSString(str) {
       }
     }
   }
-  const tmp15 = parseColorStopsCSSString(parts);
-  let tmp16 = null;
-  if (null != tmp15) {
+  const tmp18 = parseColorStopsCSSString(parts);
+  let tmp19 = null;
+  if (null != tmp18) {
     obj = { type: "linear-gradient", direction: null, colorStops: null };
     obj[1] = tmp;
-    obj[2] = tmp15;
-    tmp16 = obj;
+    obj[2] = tmp18;
+    tmp19 = obj;
   }
-  return tmp16;
+  return tmp19;
 }
 function parseColorStopsCSSString(items) {
   items = [];

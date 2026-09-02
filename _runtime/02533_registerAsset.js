@@ -1,11 +1,11 @@
 // _runtime/02533_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9vdmVybGF5L3dlYi92Mw==",
+  httpServerLocation: "/assets/modules/overlay/web/v3",
   scales: [1],
-  hash: "47dc45d12cea027e7d880deff7e3ad19",
-  name: "zh-TW.messages.47dc45d12cea027e7d880deff7e3ad19.compiled.messages",
+  hash: "6c39ef1bf213cec6bbd51be68d36c0f1",
+  name: "OverlayWidgets.compiled.messages",
   type: "jsona",
 });

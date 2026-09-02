@@ -1,11 +1,11 @@
 // _runtime/02335_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9ndWlsZF9zZXR0aW5ncy9zZXJ2ZXJfbW9uZXRpemF0aW9uL3RhZ3Mvd2Vi",
+  httpServerLocation: "/assets/modules/guild_settings/server_monetization/tags/web",
   scales: [1],
-  hash: "680d23f845ab3a2dbc4ea24c30d88b7a",
-  name: "zh-TW.messages.680d23f845ab3a2dbc4ea24c30d88b7a.compiled.messages",
+  hash: "c3685a2fecec4fcf3399bcc8edd129b0",
+  name: "GuildSettingsTags.compiled.messages",
   type: "jsona",
 });

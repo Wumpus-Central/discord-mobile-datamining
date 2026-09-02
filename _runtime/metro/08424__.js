@@ -1,31 +1,39 @@
 // _runtime/metro/08424__.js
-import colorPropType from "../08408_colorPropType.js";
-import _mod8415 from "08415__.js";
+import colorPropType from "../08417_colorPropType.js";
+import _mod8425 from "08425__.js";
+import merged12 from "../08426_merged1.js";
+import merged22 from "../08427_merged2.js";
 import emptyFunction from "../04307_emptyFunction.js";
 
-let obj = {};
-const module_8415 = Object.assign(_mod8415);
-obj.color = colorPropType;
-obj.fontFamily = emptyFunction.string;
-obj.fontSize = emptyFunction.number;
-obj.fontStyle = emptyFunction.oneOf(["normal", "italic"]);
-obj.fontWeight = emptyFunction.oneOf(["normal", "bold", "100", "200", "300", "400", "500", "600", "700", "800", "900"]);
-obj.fontVariant = emptyFunction.arrayOf(
-  emptyFunction.oneOf(["small-caps", "oldstyle-nums", "lining-nums", "tabular-nums", "proportional-nums"]),
-);
-obj = { width: emptyFunction.number, height: emptyFunction.number };
-obj.textShadowOffset = emptyFunction.shape(obj);
-obj.textShadowRadius = emptyFunction.number;
-obj.textShadowColor = colorPropType;
-obj.letterSpacing = emptyFunction.number;
-obj.lineHeight = emptyFunction.number;
-obj.textAlign = emptyFunction.oneOf(["auto", "left", "right", "center", "justify"]);
-obj.textAlignVertical = emptyFunction.oneOf(["auto", "top", "bottom", "center"]);
-obj.includeFontPadding = emptyFunction.bool;
-obj.textDecorationLine = emptyFunction.oneOf(["none", "underline", "line-through", "underline line-through"]);
-obj.textDecorationStyle = emptyFunction.oneOf(["solid", "double", "dotted", "dashed"]);
-obj.textDecorationColor = colorPropType;
-obj.textTransform = emptyFunction.oneOf(["none", "capitalize", "uppercase", "lowercase"]);
-obj.writingDirection = emptyFunction.oneOf(["auto", "ltr", "rtl"]);
+const obj = {};
+const module_8425 = Object.assign(_mod8425);
+const merged1 = Object.assign(merged12);
+const merged2 = Object.assign(merged22);
+obj.backfaceVisibility = emptyFunction.oneOf(["visible", "hidden"]);
+obj.backgroundColor = colorPropType;
+obj.borderColor = colorPropType;
+obj.borderTopColor = colorPropType;
+obj.borderRightColor = colorPropType;
+obj.borderBottomColor = colorPropType;
+obj.borderLeftColor = colorPropType;
+obj.borderStartColor = colorPropType;
+obj.borderEndColor = colorPropType;
+obj.borderRadius = emptyFunction.number;
+obj.borderTopLeftRadius = emptyFunction.number;
+obj.borderTopRightRadius = emptyFunction.number;
+obj.borderTopStartRadius = emptyFunction.number;
+obj.borderTopEndRadius = emptyFunction.number;
+obj.borderBottomLeftRadius = emptyFunction.number;
+obj.borderBottomRightRadius = emptyFunction.number;
+obj.borderBottomStartRadius = emptyFunction.number;
+obj.borderBottomEndRadius = emptyFunction.number;
+obj.borderStyle = emptyFunction.oneOf(["solid", "dotted", "dashed"]);
+obj.borderWidth = emptyFunction.number;
+obj.borderTopWidth = emptyFunction.number;
+obj.borderRightWidth = emptyFunction.number;
+obj.borderBottomWidth = emptyFunction.number;
+obj.borderLeftWidth = emptyFunction.number;
+obj.opacity = emptyFunction.number;
+obj.elevation = emptyFunction.number;
 
 export default obj;

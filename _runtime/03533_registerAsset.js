@@ -1,11 +1,11 @@
 // _runtime/03533_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jdXN0b21fdHlwaW5nX2luZGljYXRvci9pbnRs",
+  httpServerLocation: "/assets/modules/custom_typing_indicator/intl",
   scales: [1],
-  hash: "8d9595de2656fce2e3241f4c359b5075",
-  name: "zh-TW.messages.8d9595de2656fce2e3241f4c359b5075.compiled.messages",
+  hash: "aa1a2f6cb8e40414f994299cdc8ed2c6",
+  name: "CustomTypingIndicator.compiled.messages",
   type: "jsona",
 });

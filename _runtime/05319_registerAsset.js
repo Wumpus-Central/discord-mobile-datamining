@@ -1,13 +1,13 @@
 // _runtime/05319_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
+  width: 256,
+  height: 256,
   scales: [1],
-  hash: "6cc805e0c42759b2e2dd9cbde8874a15",
-  name: "img_account_sync_paypal_white",
-  type: "svg",
+  hash: "8fce658b14b12e381e1ecc554a57f171",
+  name: "img_roblox_dark",
+  type: "png",
 });

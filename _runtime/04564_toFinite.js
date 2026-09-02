@@ -1,5 +1,5 @@
 // _runtime/04564_toFinite.js
-import toNumber from "00637_toNumber.js";
+import toNumber from "00634_toNumber.js";
 
 export default function toFinite(arg0) {
   if (arg0) {

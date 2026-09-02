@@ -1,5 +1,5 @@
 // _runtime/12149_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "de8b19411fa51d311a8da8e41361a538",
-  name: "BoostGemSlashIcon",
+  hash: "856ae0fb80fb3c5e7cc40888f4bebb2b",
+  name: "YoutubeNeutralIcon",
   type: "png",
 });

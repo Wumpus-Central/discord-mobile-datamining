@@ -1,13 +1,13 @@
 // _runtime/05341_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 24,
-  height: 24,
+  width: 255,
+  height: 255,
   scales: [1],
-  hash: "e3f87032d39c6463934b80bdbb1aa83c",
-  name: "img_domain_light",
-  type: "svg",
+  hash: "97cdba3c0b32d79e6f8d3cdafd7b4530",
+  name: "img_account_sync_mastodon_white",
+  type: "png",
 });

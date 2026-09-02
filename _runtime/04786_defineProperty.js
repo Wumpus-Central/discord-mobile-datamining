@@ -1,6 +1,6 @@
 // _runtime/04786_defineProperty.js
-import hasPropertyDescriptors from "01420_hasPropertyDescriptors.js";
-import defineDataProperty from "01421_defineDataProperty.js";
+import hasPropertyDescriptors from "01419_hasPropertyDescriptors.js";
+import defineDataProperty from "01420_defineDataProperty.js";
 import keys from "04787_keys.js";
 
 let tmp = typeof Symbol === "function";

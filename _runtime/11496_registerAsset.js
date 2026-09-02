@@ -1,5 +1,5 @@
 // _runtime/11496_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "a568e12daf3f479ad26c9db6582fe1a2",
-  name: "CreditCardIcon",
+  hash: "d25dc6aac0ffe1d35c3be44e5c9ce017",
+  name: "ArrowAngleRightUpIcon",
   type: "png",
 });

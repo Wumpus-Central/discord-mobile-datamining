@@ -1,13 +1,13 @@
 // _runtime/17491_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
+  width: 88,
+  height: 80,
   scales: [2, 3],
-  hash: "b7c23ecf7d498084060048eec006835a",
-  name: "CircleInformationIcon",
+  hash: "6d22576d9f7927048034966be0fe9d4c",
+  name: "channel_setup_darker",
   type: "png",
 });

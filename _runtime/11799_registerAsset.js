@@ -1,13 +1,13 @@
 // _runtime/11799_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
+  httpServerLocation: "/assets/images/native/chat_sidebar",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "d69e45ebad9f40b8957190ed86104514",
-  name: "ic_application_command_24px",
+  hash: "589ea89ec85b91078a06c4317f368a2d",
+  name: "ic_pins",
   type: "png",
 });

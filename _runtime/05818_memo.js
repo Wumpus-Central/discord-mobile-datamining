@@ -1,129 +1,67 @@
 // _runtime/05818_memo.js
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import noopDefault from "00019_noop.js";
 import jsxProd from "react/00021_jsxProd.js";
 import noop from "00019_noop.js";
 
 ({ useMemo: c3, memo } = noop);
 noopDefault;
+const Platform = get_ActivityIndicator.Platform;
 const jsx = jsxProd.jsx;
-const memoResult = memo((nativeGestureRef) => {
-  nativeGestureRef = nativeGestureRef.nativeGestureRef;
-  const refreshControlGestureRef = nativeGestureRef.refreshControlGestureRef;
-  ({ style, children } = nativeGestureRef);
-  const merged = Object.assign(nativeGestureRef, Object.create(null));
-  let enableContentPanningGesture;
-  let simultaneousHandlers;
-  let waitFor;
-  let activeOffsetX;
-  let activeOffsetY;
-  let failOffsetX;
-  let failOffsetY;
-  let contentPanGestureHandler;
-  closure_10 = undefined;
-  let obj = nativeGestureRef(enableContentPanningGesture[2]);
+let closure_6 = {
+  code: "function pnpm_BottomSheetBodyTsx1(){const{Platform,animatedIndex,animatedPosition}=this.__closure;return{opacity:Platform.OS==='android'&&animatedIndex.get()===-1?0:1,transform:[{translateY:animatedPosition.get()}]};}",
+};
+const memoResult = memo(function BottomSheetBodyComponent(children) {
+  const style = children.style;
+  let View = children.BodyComponent;
+  if (View === undefined) {
+    View = animatedIndex(animatedPosition[3]).View;
+  }
+  animatedIndex = undefined;
+  animatedPosition = undefined;
+  let animatedStyle;
+  let obj = style(animatedPosition[4]);
   const bottomSheetInternal = obj.useBottomSheetInternal();
-  enableContentPanningGesture = bottomSheetInternal.enableContentPanningGesture;
-  simultaneousHandlers = bottomSheetInternal.simultaneousHandlers;
-  waitFor = bottomSheetInternal.waitFor;
-  activeOffsetX = bottomSheetInternal.activeOffsetX;
-  activeOffsetY = bottomSheetInternal.activeOffsetY;
-  failOffsetX = bottomSheetInternal.failOffsetX;
-  failOffsetY = bottomSheetInternal.failOffsetY;
-  obj1 = nativeGestureRef(enableContentPanningGesture[2]);
-  contentPanGestureHandler = obj1.useBottomSheetGestureHandlers().contentPanGestureHandler;
-  let items = [simultaneousHandlers, nativeGestureRef, refreshControlGestureRef];
-  const tmp3 = simultaneousHandlers(() => {
-    const items = [];
-    if (nativeGestureRef) {
-      items.push(tmp);
+  animatedIndex = bottomSheetInternal.animatedIndex;
+  animatedPosition = bottomSheetInternal.animatedPosition;
+  const fn = function y() {
+    let num = 1;
+    if (-1 === animatedIndex.get()) {
+      num = 0;
     }
-    if (refreshControlGestureRef) {
-      items.push(tmp3);
-    }
-    if (simultaneousHandlers) {
-      const _Array = Array;
-      const push = items.push;
-      if (Array.isArray(tmp5)) {
-        const items1 = [];
-        HermesBuiltin.arraySpread(tmp5, 0);
-        HermesBuiltin.apply(items1, items);
-      } else {
-        push(tmp5);
-      }
-    }
-    return items;
-  }, items);
-  closure_10 = tmp3;
-  let items1 = [
-    activeOffsetX,
-    activeOffsetY,
-    enableContentPanningGesture,
-    failOffsetX,
-    failOffsetY,
-    tmp3,
-    waitFor,
-    ,
-    ,
-    ,
-  ];
-  ({
-    handleOnChange: arr2[7],
-    handleOnEnd: arr2[8],
-    handleOnFinalize: arr2[9],
-    handleOnStart: arr2[10],
-  } = contentPanGestureHandler);
-  const tmp4 = simultaneousHandlers(() => {
-    const Gesture = nativeGestureRef(enableContentPanningGesture[3]).Gesture;
-    const PanResult = Gesture.Pan();
-    const result = Gesture.Pan().enabled(enableContentPanningGesture).shouldCancelWhenOutside(false);
-    const enabledResult = Gesture.Pan().enabled(enableContentPanningGesture);
-    const runOnJSResult = result.runOnJS(false);
-    const onStartResult = result.runOnJS(false).onStart(contentPanGestureHandler.handleOnStart);
-    const onChangeResult = result
-      .runOnJS(false)
-      .onStart(contentPanGestureHandler.handleOnStart)
-      .onChange(contentPanGestureHandler.handleOnChange);
-    const onFinalizeResult = result
-      .runOnJS(false)
-      .onStart(contentPanGestureHandler.handleOnStart)
-      .onChange(contentPanGestureHandler.handleOnChange)
-      .onEnd(contentPanGestureHandler.handleOnEnd)
-      .onFinalize(contentPanGestureHandler.handleOnFinalize);
-    let result1 = onFinalizeResult;
-    if (waitFor) {
-      result1 = onFinalizeResult.requireExternalGestureToFail(tmp);
-    }
-    let result2 = result1;
-    if (closure_10) {
-      result2 = result1.simultaneousWithExternalGesture(tmp2);
-    }
-    let activeOffsetXResult = result2;
-    if (activeOffsetX) {
-      activeOffsetXResult = result2.activeOffsetX(tmp3);
-    }
-    let activeOffsetYResult = activeOffsetXResult;
-    if (activeOffsetY) {
-      activeOffsetYResult = activeOffsetXResult.activeOffsetY(tmp4);
-    }
-    let failOffsetXResult = activeOffsetYResult;
-    if (failOffsetX) {
-      failOffsetXResult = activeOffsetYResult.failOffsetX(tmp5);
-    }
-    let failOffsetYResult = failOffsetXResult;
-    if (failOffsetY) {
-      failOffsetYResult = failOffsetXResult.failOffsetY(tmp6);
-    }
-    return failOffsetYResult;
-  }, items1);
-  obj = { gesture: tmp4, children: null };
-  obj = { value: tmp4, children: null };
-  obj1 = { style };
-  const merged1 = Object.assign(merged);
-  obj1.children = children;
-  obj[1] = waitFor(refreshControlGestureRef(enableContentPanningGesture[5]).View, obj1);
-  obj[1] = waitFor(nativeGestureRef(enableContentPanningGesture[4]).BottomSheetDraggableContext.Provider, obj);
-  return waitFor(nativeGestureRef(enableContentPanningGesture[3]).GestureDetector, obj);
+    let obj = { opacity: num, transform: null };
+    obj = { translateY: animatedPosition.get() };
+    const items = [obj];
+    obj[1] = items;
+    return obj;
+  };
+  obj = { Platform, animatedIndex, animatedPosition };
+  fn.__closure = obj;
+  fn.__workletHash = 5915282482182;
+  fn.__initData = closure_6;
+  let items = [animatedPosition, animatedIndex];
+  animatedStyle = style(animatedPosition[3]).useAnimatedStyle(fn, items);
+  const items1 = [style, animatedStyle];
+  obj = {
+    style: animatedStyle(() => {
+      const items = [style, style(animatedPosition[5]).styles.container, animatedStyle];
+      return items;
+    }, items1),
+    collapsable: true,
+    children: children.children,
+  };
+  return (
+    <View
+      style={animatedStyle(() => {
+        const items = [style, style(animatedPosition[5]).styles.container, animatedStyle];
+        return items;
+      }, items1)}
+      collapsable
+    >
+      {arg0.children}
+    </View>
+  );
 });
-memoResult.displayName = "BottomSheetDraggableView";
+memoResult.displayName = "BottomSheetBody";
 
-export default memoResult;
+export const BottomSheetBody = memoResult;

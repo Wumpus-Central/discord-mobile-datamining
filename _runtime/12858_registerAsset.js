@@ -1,13 +1,13 @@
 // _runtime/12858_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/gifting",
-  width: 132,
-  height: 145,
-  scales: [1, 2, 3],
-  hash: "79c6466cf28ca8f6510b4a84fb435a2a",
-  name: "wumpus_snowglobe_premium120",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "34bb1c89964a0349aafd993e713936d7",
+  name: "ScreenIcon",
   type: "png",
 });

@@ -1,13 +1,13 @@
 // _runtime/17490_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/guild_settings/community_settings",
+  width: 88,
+  height: 80,
   scales: [2, 3],
-  hash: "f1884e5c4915e02981c5e72330110f57",
-  name: "CircleErrorIcon",
+  hash: "47e53f4c1a010a8a023be6a3f87eb4e2",
+  name: "channel_setup",
   type: "png",
 });

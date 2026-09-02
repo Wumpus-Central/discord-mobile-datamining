@@ -3,7 +3,7 @@ import RequireObjectCoercible from "04771_RequireObjectCoercible.js";
 import getPolyfill from "04783_getPolyfill.js";
 import trim2 from "04784_trim.js";
 import shimStringTrim from "04790_shimStringTrim.js";
-import callBind from "01418_callBind.js";
+import callBind from "01417_callBind.js";
 import defineProperty from "04786_defineProperty.js";
 
 let closure_2 = callBind(getPolyfill());

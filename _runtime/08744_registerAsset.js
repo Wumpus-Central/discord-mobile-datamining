@@ -1,13 +1,13 @@
 // _runtime/08744_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/stage_channels/native/images",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
-  scales: [1, 2, 3],
-  hash: "1264ef3550bb451574709cd13db33b41",
-  name: "ic_person_status",
+  scales: [2, 3],
+  hash: "88b9e4c8788e9863c575add881967ca5",
+  name: "LinkExternalSmallIcon",
   type: "png",
 });

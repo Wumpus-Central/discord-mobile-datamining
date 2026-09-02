@@ -1,13 +1,13 @@
 // _runtime/10081_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 195,
-  height: 92,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
   scales: [1, 2, 3],
-  hash: "a075205f01081abc73c7a94b31634a53",
-  name: "krisp_logo_light",
+  hash: "bed3256ccaf0e78cd27d637be4c78d04",
+  name: "ic_stop_stream_24px",
   type: "png",
 });

@@ -1,5 +1,5 @@
 // _runtime/09226_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "fe0742351cd038dd9567f8c1afd0c1cd",
-  name: "CirclePlusIcon-primary",
+  hash: "e482df76bca128861506eefe107fb633",
+  name: "BackspaceIcon",
   type: "png",
 });

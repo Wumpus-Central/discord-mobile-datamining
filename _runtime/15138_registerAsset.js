@@ -1,5 +1,5 @@
 // _runtime/15138_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "0182b31d51043571e01025e7bba542aa",
-  name: "FileUpIcon",
+  hash: "80a1b67e775ddb8de80fde27e63a5302",
+  name: "CircleMinusIcon-secondary",
   type: "png",
 });

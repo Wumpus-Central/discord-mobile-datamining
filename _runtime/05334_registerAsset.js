@@ -1,13 +1,13 @@
 // _runtime/05334_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 24,
-  height: 24,
+  width: 255,
+  height: 255,
   scales: [1],
-  hash: "39595ed126e57294bab83f7792a4b2ff",
-  name: "img_account_sync_mastodon_light_and_dark",
+  hash: "1c6dca03661172aa5af3340a0d3930a2",
+  name: "img_account_sync_tiktok_light",
   type: "svg",
 });

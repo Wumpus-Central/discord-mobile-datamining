@@ -1,13 +1,13 @@
 // _runtime/09745_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
+  width: 160,
+  height: 160,
   scales: [2, 3],
-  hash: "13168e0700737564714d8e4fc44106f6",
-  name: "ShareIcon",
+  hash: "85840ade8b69557ffa30f1445cbffe12",
+  name: "img_no_results_alt_darker",
   type: "png",
 });

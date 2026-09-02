@@ -3,37 +3,22 @@ if (Intl.ListFormat) {
   const _Intl = Intl;
   if (typeof Intl.ListFormat.__addLocaleData === "function") {
     const _Intl2 = Intl;
-    let obj = { data: null, locale: "uk" };
+    let obj = { data: null, locale: "vi" };
     obj = { conjunction: null, disjunction: null, unit: null };
     obj = { long: null, narrow: null, short: null };
-    obj[0] = { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" };
+    obj[0] = { end: "{0} v\u00E0 {1}", middle: "{0}, {1}", pair: "{0} v\u00E0 {1}", start: "{0}, {1}" };
     obj[1] = { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" };
-    obj[2] = { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" };
+    obj[2] = { end: "{0} v\u00E0 {1}", middle: "{0}, {1}", pair: "{0} v\u00E0 {1}", start: "{0}, {1}" };
     obj[0] = obj;
     const obj1 = { long: null, narrow: null, short: null };
-    obj1[0] = {
-      end: "{0} \u0430\u0431\u043E {1}",
-      middle: "{0}, {1}",
-      pair: "{0} \u0430\u0431\u043E {1}",
-      start: "{0}, {1}",
-    };
-    obj1[1] = {
-      end: "{0} \u0430\u0431\u043E {1}",
-      middle: "{0}, {1}",
-      pair: "{0} \u0430\u0431\u043E {1}",
-      start: "{0}, {1}",
-    };
-    obj1[2] = {
-      end: "{0} \u0430\u0431\u043E {1}",
-      middle: "{0}, {1}",
-      pair: "{0} \u0430\u0431\u043E {1}",
-      start: "{0}, {1}",
-    };
+    obj1[0] = { end: "{0} ho\u1EB7c {1}", middle: "{0}, {1}", pair: "{0} ho\u1EB7c {1}", start: "{0}, {1}" };
+    obj1[1] = { end: "{0} ho\u1EB7c {1}", middle: "{0}, {1}", pair: "{0} ho\u1EB7c {1}", start: "{0}, {1}" };
+    obj1[2] = { end: "{0} ho\u1EB7c {1}", middle: "{0}, {1}", pair: "{0} ho\u1EB7c {1}", start: "{0}, {1}" };
     obj[1] = obj1;
     const obj2 = { long: null, narrow: null, short: null };
-    obj2[0] = { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" };
-    obj2[1] = { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" };
-    obj2[2] = { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" };
+    obj2[0] = { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" };
+    obj2[1] = { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" };
+    obj2[2] = { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" };
     obj[2] = obj2;
     obj[0] = obj;
     ListFormat.__addLocaleData(obj);
@@ -47,35 +32,20 @@ globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
 prop.push({
   data: {
     conjunction: {
-      long: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" },
+      long: { end: "{0} v\u00E0 {1}", middle: "{0}, {1}", pair: "{0} v\u00E0 {1}", start: "{0}, {1}" },
       narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-      short: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" },
+      short: { end: "{0} v\u00E0 {1}", middle: "{0}, {1}", pair: "{0} v\u00E0 {1}", start: "{0}, {1}" },
     },
     disjunction: {
-      long: {
-        end: "{0} \u0430\u0431\u043E {1}",
-        middle: "{0}, {1}",
-        pair: "{0} \u0430\u0431\u043E {1}",
-        start: "{0}, {1}",
-      },
-      narrow: {
-        end: "{0} \u0430\u0431\u043E {1}",
-        middle: "{0}, {1}",
-        pair: "{0} \u0430\u0431\u043E {1}",
-        start: "{0}, {1}",
-      },
-      short: {
-        end: "{0} \u0430\u0431\u043E {1}",
-        middle: "{0}, {1}",
-        pair: "{0} \u0430\u0431\u043E {1}",
-        start: "{0}, {1}",
-      },
+      long: { end: "{0} ho\u1EB7c {1}", middle: "{0}, {1}", pair: "{0} ho\u1EB7c {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} ho\u1EB7c {1}", middle: "{0}, {1}", pair: "{0} ho\u1EB7c {1}", start: "{0}, {1}" },
+      short: { end: "{0} ho\u1EB7c {1}", middle: "{0}, {1}", pair: "{0} ho\u1EB7c {1}", start: "{0}, {1}" },
     },
     unit: {
-      long: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" },
-      narrow: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" },
-      short: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" },
+      long: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
+      short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
     },
   },
-  locale: "uk",
+  locale: "vi",
 });

@@ -1,5 +1,5 @@
 // _runtime/14986_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "de398aa4b5d51823872a90561f246715",
-  name: "EmojiSkullIcon",
+  hash: "17f53f43d68e8a19fbcd8776cb4d1537",
+  name: "RefreshIcon",
   type: "png",
 });

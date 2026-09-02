@@ -1,11 +1,10 @@
 // _runtime/08289__isNativeReflectConstruct.js
 import _inheritsDefault from "00098__inherits.js";
-import closure_2 from "metro/00041__classCallCheck.js";
-import closure_3 from "metro/00093__possibleConstructorReturn.js";
-import closure_4 from "00095__getPrototypeOf.js";
+import FilterPrimitive from "metro/00041__classCallCheck.js";
+import closure_1 from "metro/00093__possibleConstructorReturn.js";
+import closure_2 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 
-const FeDistantLight = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,38 +23,40 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class FeDistantLight {
+class FilterPrimitive {
   constructor() {
     self = this;
-    tmp = closure_2(this, FeDistantLight);
-    tmp2 = closure_4;
-    obj = closure_4(FeDistantLight);
-    tmp3 = closure_3;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = FilterPrimitive(this, closure_0);
+    items1 = [...items];
+    tmp2 = closure_2;
+    obj = closure_2(closure_0);
+    tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items1);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.root = null;
+    tmp3Result.refMethod = (root) => {
+      closure_0.root = root;
+    };
+    tmp3Result.setNativeProps = (arg0) => {
+      root = root.root;
+      if (root != null) {
+        root.setNativeProps(arg0);
+      }
+    };
+    return tmp3Result;
   }
 }
-_inheritsDefault(FeDistantLight, require("noop").Component);
-const items = [
-  {
-    key: "render",
-    value: function render() {
-      const result = FeDistantLight(8257).warnUnimplementedFilter();
-      return null;
-    },
-  },
-];
-const importDefaultResultResult = importDefaultResult(FeDistantLight, items);
-importDefaultResultResult.displayName = "FeDistantLight";
-importDefaultResultResult.defaultProps = {};
+_inheritsDefault(FilterPrimitive, require("noop").Component);
+const importDefaultResultResult = importDefaultResult(FilterPrimitive);
+importDefaultResultResult.defaultPrimitiveProps = {};
 
 export default importDefaultResultResult;

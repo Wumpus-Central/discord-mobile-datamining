@@ -1,13 +1,13 @@
 // _runtime/10975_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/channel_following/dark",
-  width: 280,
-  height: 120,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "9c2cfd53ed0ab3abd70ee33b26a982e5",
-  name: "channel_following_success_2",
+  hash: "2a494bf31a8fce454d9a34e7b4733430",
+  name: "OrbsIcon",
   type: "png",
 });

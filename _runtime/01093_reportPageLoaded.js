@@ -1,0 +1,16 @@
+// _runtime/01093_reportPageLoaded.js
+import registerSpanErrorInstrumentation from "00814_registerSpanErrorInstrumentation.js";
+
+require = arg1;
+const dependencyMap = arg6;
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+arg5.reportPageLoaded = function reportPageLoaded() {
+  let client = arg0;
+  if (arg0 === undefined) {
+    client = registerSpanErrorInstrumentation.getClient();
+    const obj2 = registerSpanErrorInstrumentation;
+  }
+  if (client != null) {
+    client.emit("endPageloadSpan");
+  }
+};

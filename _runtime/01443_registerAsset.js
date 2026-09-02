@@ -1,5 +1,5 @@
 // _runtime/01443_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 96,
   height: 96,
   scales: [1],
-  hash: "e2638b3766522b844050b85fb10215de",
-  name: "default_avatar_2_small",
+  hash: "f27907bace32e5b04cd2a7e2a779c82b",
+  name: "default_avatar_3_small",
   type: "png",
 });

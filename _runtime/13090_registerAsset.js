@@ -1,13 +1,13 @@
 // _runtime/13090_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/native/images/perks",
-  width: 300,
-  height: 175,
+  httpServerLocation: "/assets/images/native/gifting",
+  width: 270,
+  height: 134,
   scales: [2, 3],
-  hash: "b10c11253ea31418fc5b5f03e59f065a",
-  name: "hd_video",
+  hash: "05b73f8565eab54ae61e59eb9ff991a8",
+  name: "img_premium_embed_background_dark",
   type: "png",
 });

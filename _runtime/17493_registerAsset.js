@@ -1,13 +1,13 @@
 // _runtime/17493_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/guild_settings/community_settings",
+  width: 88,
+  height: 80,
   scales: [2, 3],
-  hash: "9b5a14aaf9d24f5535f3266845d28080",
-  name: "ConnectionBadIcon",
+  hash: "bfb98edbbbdba844f1779b23cfef0afa",
+  name: "finishing_touches_light",
   type: "png",
 });

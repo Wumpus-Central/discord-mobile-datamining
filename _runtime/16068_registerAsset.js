@@ -1,13 +1,13 @@
 // _runtime/16068_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
+  width: 375,
+  height: 120,
   scales: [2, 3],
-  hash: "2bf7738cbb1d2827663b492fedbd65fb",
-  name: "MedalIcon",
+  hash: "5ac140c0ecf6d86d0e8c0b66480112aa",
+  name: "IAP_feature_education",
   type: "png",
 });

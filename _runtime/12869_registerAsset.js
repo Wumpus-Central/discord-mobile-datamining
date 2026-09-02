@@ -1,13 +1,13 @@
 // _runtime/12869_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/gifting",
-  width: 270,
-  height: 134,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "415663ee17f9e1c2411c453e5e8ca806",
-  name: "img_premium_embed_background_light",
+  hash: "dcae1df15663c479951183ad5f2fe3dd",
+  name: "RedditNeutralIcon",
   type: "png",
 });

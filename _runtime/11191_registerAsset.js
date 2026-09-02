@@ -1,13 +1,13 @@
 // _runtime/11191_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/channel_following/light",
+  width: 280,
+  height: 120,
   scales: [2, 3],
-  hash: "2ec8d4d40c93ceea32933ae4e505df6e",
-  name: "ChatPlusIcon",
+  hash: "822095525bba6121eeb33373acfc6100",
+  name: "channel_following_success_1",
   type: "png",
 });

@@ -1,13 +1,13 @@
 // _runtime/05282_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 24,
-  height: 24,
+  width: 255,
+  height: 255,
   scales: [1],
-  hash: "9531281533f8a11dbbdded76baff0291",
-  name: "img_account_sync_spotify_light_and_dark",
-  type: "svg",
+  hash: "0d539ec6a23aeae492549e52511d1db8",
+  name: "img_account_sync_x_light",
+  type: "png",
 });

@@ -1,5 +1,5 @@
 // _runtime/07993_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "a333b4d54b908efbf29afe6221422e97",
-  name: "GifIcon",
+  hash: "6547bb7b75af42cdcf6f655476c57657",
+  name: "UserCheckIcon",
   type: "png",
 });

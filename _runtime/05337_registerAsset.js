@@ -1,13 +1,13 @@
 // _runtime/05337_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 500,
-  height: 500,
+  width: 255,
+  height: 255,
   scales: [1],
-  hash: "537a5a5a0fd47a14c531a6a53114ce50",
-  name: "img_account_sync_crunchyroll_light_and_dark",
-  type: "svg",
+  hash: "e219f41761a656e709d88fce70516612",
+  name: "img_account_sync_instagram_white",
+  type: "png",
 });

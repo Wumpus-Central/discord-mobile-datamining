@@ -1,13 +1,13 @@
 // _runtime/01440_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/avatars",
-  width: 256,
-  height: 256,
+  width: 96,
+  height: 96,
   scales: [1],
-  hash: "4c1b599b1ef5b9f1874fdb9933f3e03b",
-  name: "default_avatar_5",
+  hash: "1340ad5c2dee3f9bcbc341bc6a2e8c9b",
+  name: "default_avatar_0_small",
   type: "png",
 });

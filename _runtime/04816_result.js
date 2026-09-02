@@ -1,8 +1,8 @@
 // _runtime/04816_result.js
-import flag from "00564_flag.js";
-import callBoundIntrinsic from "00574_callBoundIntrinsic.js";
+import flag from "00561_flag.js";
+import callBoundIntrinsic from "00571_callBoundIntrinsic.js";
 import getEvalledConstructor from "04801_getEvalledConstructor.js";
-import hasPropertyDescriptors from "01420_hasPropertyDescriptors.js";
+import hasPropertyDescriptors from "01419_hasPropertyDescriptors.js";
 
 hasPropertyDescriptors = hasPropertyDescriptors.hasArrayLengthDefineBug();
 if (hasPropertyDescriptors) {

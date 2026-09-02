@@ -1,13 +1,13 @@
 // _runtime/07676_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 23,
-  scales: [2, 3],
-  hash: "dad967f4b91a8b9097664b2a63d76758",
-  name: "ic_verified_guild_icon_black_24px",
+  httpServerLocation: "/assets/modules/guild_member_verification/images",
+  width: 88,
+  height: 80,
+  scales: [1, 2, 3],
+  hash: "c8acaccaced63579ec708b5154ef923d",
+  name: "updateAppIcon",
   type: "png",
 });

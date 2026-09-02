@@ -1,13 +1,13 @@
 // _runtime/17440_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/application_streaming",
-  width: 272,
-  height: 93,
+  httpServerLocation: "/assets/modules/guild_settings/roles/native/images",
+  width: 375,
+  height: 280,
   scales: [2, 3],
-  hash: "c73d40dd66a153a872cf68d5a6b8779e",
-  name: "img_stream_full",
+  hash: "385febe027093418da10e0784f3891bd",
+  name: "illustration-dark",
   type: "png",
 });

@@ -1,11 +1,13 @@
 // _runtime/15227_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs",
-  scales: [1],
-  hash: "5de2b08de99a642bedb9972f5a6793f2",
-  name: "el.messages.5de2b08de99a642bedb9972f5a6793f2.compiled.messages",
-  type: "jsona",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "d54bf56841039bee9b0ab658257be5d8",
+  name: "EmojiZanyFaceIcon",
+  type: "png",
 });

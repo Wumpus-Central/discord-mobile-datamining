@@ -1,13 +1,13 @@
 // _runtime/16018_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/main_tabs",
+  httpServerLocation: "/assets/images/native/icons",
   width: 24,
   height: 24,
-  scales: [2, 3],
-  hash: "afec4e7bfe67c8da93450ca26af6a62e",
-  name: "NotificationCenter",
+  scales: [1, 2, 3],
+  hash: "734b87c0c83fffbdb266c05473eedb57",
+  name: "ic_wand",
   type: "png",
 });

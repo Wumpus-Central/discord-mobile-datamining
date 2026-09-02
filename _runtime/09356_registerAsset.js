@@ -1,13 +1,13 @@
 // _runtime/09356_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/user_settings",
+  width: 234,
+  height: 147.5,
   scales: [2, 3],
-  hash: "5bfdb70bf70b33af737927fefb52cdba",
-  name: "ServerIcon",
+  hash: "251353afd104effe8e007def09df8df2",
+  name: "crunchyroll_link_intro",
   type: "png",
 });

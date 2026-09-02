@@ -1,10 +1,10 @@
 // _runtime/04766_map.js
-import callBoundIntrinsic from "00574_callBoundIntrinsic.js";
+import callBoundIntrinsic from "00571_callBoundIntrinsic.js";
 import getPolyfill from "04767_getPolyfill.js";
 import map2 from "04769_map.js";
 import RequireObjectCoercible from "04771_RequireObjectCoercible.js";
 import shimArrayPrototypeMap from "04832_shimArrayPrototypeMap.js";
-import callBind from "01418_callBind.js";
+import callBind from "01417_callBind.js";
 import defineProperty from "04786_defineProperty.js";
 
 let closure_2 = callBind.apply(getPolyfill());

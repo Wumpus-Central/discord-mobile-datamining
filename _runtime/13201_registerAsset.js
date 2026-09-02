@@ -1,13 +1,13 @@
 // _runtime/13201_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/plan_selection",
-  width: 80,
-  height: 80,
-  scales: [1],
-  hash: "efc48aacb0f78e1462efe2b15e5ef702",
-  name: "img_boost",
+  httpServerLocation: "/assets/images/native/premium/illustrations",
+  width: 51,
+  height: 36,
+  scales: [2, 3],
+  hash: "f2d705f9d582bb6c65065afe8639e152",
+  name: "img_classic_error_mobile",
   type: "png",
 });

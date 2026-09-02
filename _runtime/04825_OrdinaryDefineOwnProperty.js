@@ -5,15 +5,15 @@ export default function OrdinaryDefineOwnProperty(arg0, arg1, __Writable__) {
   if (isObject(arg0)) {
     if (tmp(4809)(arg1)) {
       if (tmp(4813)(__Writable__)) {
-        if (tmp(542)) {
-          const tmp30 = tmp(542)(arg0, arg1);
+        if (tmp(539)) {
+          const tmp30 = tmp(539)(arg0, arg1);
           let tmp31 = tmp30;
           if (tmp30) {
             tmp31 = tmp(4814)(tmp30);
           }
           return tmp(4828)(arg0, arg1, tmp(4827)(arg0), __Writable__, tmp31);
         } else if (tmp(4826)(__Writable__)) {
-          const tmp28 = new tmp(562)("This environment does not support accessor property descriptors.");
+          const tmp28 = new tmp(559)("This environment does not support accessor property descriptors.");
           throw tmp28;
         } else {
           let tmp17 =
@@ -42,7 +42,7 @@ export default function OrdinaryDefineOwnProperty(arg0, arg1, __Writable__) {
           }
           if (!tmp17) {
             if (!tmp18) {
-              const tmp24 = new tmp(562)(
+              const tmp24 = new tmp(559)(
                 "This environment does not support defining non-writable, non-enumerable, or non-configurable properties",
               );
               throw tmp24;
@@ -52,15 +52,15 @@ export default function OrdinaryDefineOwnProperty(arg0, arg1, __Writable__) {
           return tmp(4818)(arg0[arg1], __Writable__["[[Value]]"]);
         }
       } else {
-        const tmp15 = new tmp(541)("Assertion failed: Desc must be a Property Descriptor");
+        const tmp15 = new tmp(538)("Assertion failed: Desc must be a Property Descriptor");
         throw tmp15;
       }
     } else {
-      const tmp10 = new tmp(541)("Assertion failed: P must be a Property Key");
+      const tmp10 = new tmp(538)("Assertion failed: P must be a Property Key");
       throw tmp10;
     }
   } else {
-    const tmp5 = new tmp(541)("Assertion failed: O must be an Object");
+    const tmp5 = new tmp(538)("Assertion failed: O must be an Object");
     throw tmp5;
   }
 }

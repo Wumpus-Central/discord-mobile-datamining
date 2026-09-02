@@ -1,13 +1,13 @@
 // _runtime/05303_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
+  width: 24,
+  height: 24,
   scales: [1],
-  hash: "8e2bbfe1d3e4356ba435a2b178386105",
-  name: "img_account_sync_epic_light",
+  hash: "18792494d95a201efe70aee5f49c4a4a",
+  name: "img_account_sync_github_light",
   type: "svg",
 });

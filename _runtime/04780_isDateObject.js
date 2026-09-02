@@ -1,6 +1,6 @@
 // _runtime/04780_isDateObject.js
-import callBoundIntrinsic from "00574_callBoundIntrinsic.js";
-import hasToStringTagShams from "01408_hasToStringTagShams.js";
+import callBoundIntrinsic from "00571_callBoundIntrinsic.js";
+import hasToStringTagShams from "01407_hasToStringTagShams.js";
 
 let closure_0 = callBoundIntrinsic("Date.prototype.getDay");
 let closure_1 = callBoundIntrinsic("Object.prototype.toString");

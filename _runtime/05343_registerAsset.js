@@ -1,13 +1,13 @@
 // _runtime/05343_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 256,
-  height: 256,
+  width: 24,
+  height: 24,
   scales: [1],
-  hash: "18bf95267062a719213a10081e62b607",
-  name: "img_amazon_music",
-  type: "png",
+  hash: "16b0b46c160f5dbee25bcf55b1de2e19",
+  name: "img_account_sync_mastodon_white",
+  type: "svg",
 });

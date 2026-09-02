@@ -1,5 +1,5 @@
 // _runtime/04827_getEvalledConstructor.js
-import getEvalledConstructor from "00540_getEvalledConstructor.js";
+import getEvalledConstructor from "00537_getEvalledConstructor.js";
 import isPrimitive from "04775_isPrimitive.js";
 
 let closure_2 = getEvalledConstructor("%Object.isExtensible%", true);

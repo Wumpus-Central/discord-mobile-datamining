@@ -1,13 +1,13 @@
 // _runtime/08766_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons/user_profile",
+  httpServerLocation: "/assets/images/native/chat_sidebar",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "edefaa7b105418ac79e91df5e7252965",
-  name: "ic_arrow",
+  hash: "f15a8eea867ca31909b0a1cf49c6c7d8",
+  name: "ic_notif",
   type: "png",
 });

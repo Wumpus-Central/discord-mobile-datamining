@@ -1,13 +1,13 @@
 // _runtime/05331_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 1000,
-  height: 1000,
+  width: 255,
+  height: 255,
   scales: [1],
-  hash: "4d8e6567a4b7a6a074dee33bdf087deb",
-  name: "img_account_sync_instagram_white",
+  hash: "8d6755adef39a79b94cc758161d8de0c",
+  name: "img_account_sync_ebay_white",
   type: "svg",
 });

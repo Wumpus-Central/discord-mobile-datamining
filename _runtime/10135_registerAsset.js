@@ -1,13 +1,13 @@
 // _runtime/10135_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/stage_channels/native/images",
-  width: 20,
-  height: 20,
-  scales: [1, 2, 3],
-  hash: "d3638c1d3e13cd543d354bc72debe331",
-  name: "ic_block",
+  httpServerLocation: "/assets/modules/guild_home/native/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "993926a8b2d3f46d31ad06ea07adc917",
+  name: "ic_feed_more",
   type: "png",
 });

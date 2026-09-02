@@ -1,5 +1,5 @@
 // _runtime/04804_setProto.js
-import _mod541 from "metro/00541__.js";
+import _mod538 from "metro/00538__.js";
 import setPrototypeOf from "04805_setPrototypeOf.js";
 import _mod4806 from "metro/04806__.js";
 import _mod4807 from "metro/04807__.js";
@@ -9,7 +9,7 @@ if (setPrototypeOf) {
     if (setPrototypeOf(arg0, arg1)) {
       return arg0;
     } else {
-      const tmp5 = new _mod541("Reflect.setPrototypeOf: failed to set [[Prototype]]");
+      const tmp5 = new _mod538("Reflect.setPrototypeOf: failed to set [[Prototype]]");
       throw tmp5;
     }
     const tmp = require;

@@ -1,13 +1,13 @@
 // _runtime/17342_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
-  width: 20,
-  height: 20,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "66f5395e0dcbde2df92fe7a6979a5fca",
-  name: "ic_emoji_picker_20px",
+  hash: "b4bc35e77125dd7a659435efd876e4cc",
+  name: "ChannelListIcon",
   type: "png",
 });

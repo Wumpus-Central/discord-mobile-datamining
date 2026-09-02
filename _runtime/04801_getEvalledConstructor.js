@@ -1,6 +1,6 @@
 // _runtime/04801_getEvalledConstructor.js
-import getEvalledConstructor from "00540_getEvalledConstructor.js";
-import callBoundIntrinsic from "00574_callBoundIntrinsic.js";
+import getEvalledConstructor from "00537_getEvalledConstructor.js";
+import callBoundIntrinsic from "00571_callBoundIntrinsic.js";
 
 const tmp = getEvalledConstructor("%Array%");
 const isArray = tmp.isArray;

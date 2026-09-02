@@ -1,13 +1,13 @@
 // _runtime/05248_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 256,
-  height: 256,
+  width: 255,
+  height: 255,
   scales: [1],
-  hash: "a9a658fd475f7a20d9e2c83953494ec4",
-  name: "img_bungie_dark",
-  type: "svg",
+  hash: "dd9ba5b8ac4831db353c60f9d72ff648",
+  name: "img_account_sync_bluesky_light_and_dark",
+  type: "png",
 });

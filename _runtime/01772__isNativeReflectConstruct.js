@@ -1,5 +1,5 @@
 // _runtime/01772__isNativeReflectConstruct.js
-import FadeOutDown from "metro/00032__slicedToArray.js";
+import FlipOutEasyY from "metro/00032__slicedToArray.js";
 import closure_1 from "metro/00041__classCallCheck.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import closure_2 from "metro/00093__possibleConstructorReturn.js";
@@ -25,9 +25,9 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 let closure_5 = {
-  code: "function pnpm_FadeTs1(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(1,config))},initialValues:{opacity:0,...initialValues},callback:callback};}",
+  code: "function pnpm_FlipTs1(targetValues){const{initialValues,delayFunction,delay,animation,config,callback}=this.__closure;return{initialValues:{transform:[{perspective:500},{rotateX:'90deg'},{translateY:-targetValues.targetHeight}],...initialValues},animations:{transform:[{perspective:500},{rotateX:delayFunction(delay,animation('0deg',config))},{translateY:delayFunction(delay,animation(0,config))}]},callback:callback};}",
 };
-class FadeIn {
+class FlipInXUp {
   constructor() {
     self = this;
     items = [...arguments];
@@ -51,42 +51,49 @@ class FadeIn {
       const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
       closure_2 = tmp4;
+      const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
-      const delay = delayFunction.getDelay();
-      const fn = function t() {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(1, closure_2)) };
-        obj[0] = obj;
-        obj = { opacity: 0 };
+      const fn = function n(targetHeight) {
+        let obj = { initialValues: null, animations: null, callback: null };
+        obj = { transform: items };
+        items = [{ perspective: 500 }, { rotateX: "90deg" }];
+        obj = { translateY: -targetHeight.targetHeight };
+        items[2] = obj;
         const merged = Object.assign(initialValues);
-        obj[1] = obj;
+        obj[0] = obj;
+        obj1 = { transform: null };
+        const items1 = [{ perspective: 500 }, { rotateX: delayFunction(delay, first("0deg", closure_2)) }];
+        const obj2 = { rotateX: delayFunction(delay, first("0deg", closure_2)) };
+        items1[2] = { translateY: delayFunction(delay, first(0, closure_2)) };
+        obj1[0] = items1;
+        obj[1] = obj1;
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 4187624806586;
+      fn.__closure = { initialValues, delayFunction, delay, animation: first, config: tmp2[1], callback: callbackV };
+      fn.__workletHash = 17482936202676;
       fn.__initData = closure_1_5;
       return fn;
     };
     return tmp3Result;
   }
 }
-FadeOutDown = FadeIn;
-importDefaultResult1(FadeIn, require("BaseAnimationBuilder").ComplexAnimationBuilder);
+FlipOutEasyY = FlipInXUp;
+importDefaultResult1(FlipInXUp, require("BaseAnimationBuilder").ComplexAnimationBuilder);
 let obj = {
   key: "createInstance",
   value: function createInstance() {
-    return FadeOutDown();
+    return FlipOutEasyY();
   },
 };
 let items = [obj];
-const importDefaultResultResult = importDefaultResult(FadeIn, null, items);
-importDefaultResultResult.presetName = "FadeIn";
+const importDefaultResultResult = importDefaultResult(FlipInXUp, null, items);
+importDefaultResultResult.presetName = "FlipInXUp";
 let closure_6 = {
-  code: "function pnpm_FadeTs2(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(1,config)),transform:[{translateX:delayFunction(delay,animation(0,config))}]},initialValues:{opacity:0,transform:[{translateX:25}],...initialValues},callback:callback};}",
+  code: "function pnpm_FlipTs2(targetValues){const{initialValues,delayFunction,delay,animation,config,callback}=this.__closure;return{initialValues:{transform:[{perspective:500},{rotateY:'-90deg'},{translateX:-targetValues.targetWidth}],...initialValues},animations:{transform:[{perspective:delayFunction(delay,animation(500,config))},{rotateY:delayFunction(delay,animation('0deg',config))},{translateX:delayFunction(delay,animation(0,config))}]},callback:callback};}",
 };
-class FadeInRight {
+class FlipInYLeft {
   constructor() {
     self = this;
     items = [...arguments];
@@ -110,45 +117,51 @@ class FadeInRight {
       const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
       closure_2 = tmp4;
+      const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
-      const delay = delayFunction.getDelay();
-      const fn = function t() {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
-        obj = { translateX: delayFunction(delay, first(0, closure_2)) };
-        const items = [obj];
-        obj[1] = items;
-        obj[0] = obj;
-        const items1 = [{ translateX: 25 }];
+      const fn = function n(targetWidth) {
+        let obj = { initialValues: null, animations: null, callback: null };
+        obj = { transform: items };
+        items = [{ perspective: 500 }, { rotateY: "-90deg" }];
+        obj = { translateX: -targetWidth.targetWidth };
+        items[2] = obj;
         const merged = Object.assign(initialValues);
-        obj[1] = { opacity: 0, transform: items1 };
+        obj[0] = obj;
+        obj1 = { transform: null };
+        const items1 = [{ perspective: delayFunction(delay, first(500, closure_2)) }, ,];
+        const obj2 = { perspective: delayFunction(delay, first(500, closure_2)) };
+        items1[1] = { rotateY: delayFunction(delay, first("0deg", closure_2)) };
+        const obj3 = { rotateY: delayFunction(delay, first("0deg", closure_2)) };
+        items1[2] = { translateX: delayFunction(delay, first(0, closure_2)) };
+        obj1[0] = items1;
+        obj[1] = obj1;
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 5328703857616;
+      fn.__closure = { initialValues, delayFunction, delay, animation: first, config: tmp2[1], callback: callbackV };
+      fn.__workletHash = 7030831354781;
       fn.__initData = closure_1_6;
       return fn;
     };
     return tmp3Result;
   }
 }
-FadeOutDown = FadeInRight;
-importDefaultResult1(FadeInRight, require("BaseAnimationBuilder").ComplexAnimationBuilder);
+FlipOutEasyY = FlipInYLeft;
+importDefaultResult1(FlipInYLeft, require("BaseAnimationBuilder").ComplexAnimationBuilder);
 obj = {
   key: "createInstance",
   value: function createInstance() {
-    return FadeOutDown();
+    return FlipOutEasyY();
   },
 };
 let items1 = [obj];
-const importDefaultResultResult1 = importDefaultResult(FadeInRight, null, items1);
-importDefaultResultResult1.presetName = "FadeInRight";
+const importDefaultResultResult1 = importDefaultResult(FlipInYLeft, null, items1);
+importDefaultResultResult1.presetName = "FlipInYLeft";
 let closure_7 = {
-  code: "function pnpm_FadeTs3(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(1,config)),transform:[{translateX:delayFunction(delay,animation(0,config))}]},initialValues:{opacity:0,transform:[{translateX:-25}],...initialValues},callback:callback};}",
+  code: "function pnpm_FlipTs3(targetValues){const{initialValues,delayFunction,delay,animation,config,callback}=this.__closure;return{initialValues:{transform:[{perspective:500},{rotateX:'-90deg'},{translateY:targetValues.targetHeight}],...initialValues},animations:{transform:[{perspective:delayFunction(delay,animation(500,config))},{rotateX:delayFunction(delay,animation('0deg',config))},{translateY:delayFunction(delay,animation(0,config))}]},callback:callback};}",
 };
-class FadeInLeft {
+class FlipInXDown {
   constructor() {
     self = this;
     items = [...arguments];
@@ -172,45 +185,51 @@ class FadeInLeft {
       const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
       closure_2 = tmp4;
+      const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
-      const delay = delayFunction.getDelay();
-      const fn = function t() {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
-        obj = { translateX: delayFunction(delay, first(0, closure_2)) };
-        const items = [obj];
-        obj[1] = items;
-        obj[0] = obj;
-        const items1 = [{ translateX: -25 }];
+      const fn = function n(targetHeight) {
+        let obj = { initialValues: null, animations: null, callback: null };
+        obj = { transform: items };
+        items = [{ perspective: 500 }, { rotateX: "-90deg" }];
+        obj = { translateY: targetHeight.targetHeight };
+        items[2] = obj;
         const merged = Object.assign(initialValues);
-        obj[1] = { opacity: 0, transform: items1 };
+        obj[0] = obj;
+        obj1 = { transform: null };
+        const items1 = [{ perspective: delayFunction(delay, first(500, closure_2)) }, ,];
+        const obj2 = { perspective: delayFunction(delay, first(500, closure_2)) };
+        items1[1] = { rotateX: delayFunction(delay, first("0deg", closure_2)) };
+        const obj3 = { rotateX: delayFunction(delay, first("0deg", closure_2)) };
+        items1[2] = { translateY: delayFunction(delay, first(0, closure_2)) };
+        obj1[0] = items1;
+        obj[1] = obj1;
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 3876464806620;
+      fn.__closure = { initialValues, delayFunction, delay, animation: first, config: tmp2[1], callback: callbackV };
+      fn.__workletHash = 8540727794920;
       fn.__initData = closure_1_7;
       return fn;
     };
     return tmp3Result;
   }
 }
-FadeOutDown = FadeInLeft;
-importDefaultResult1(FadeInLeft, require("BaseAnimationBuilder").ComplexAnimationBuilder);
+FlipOutEasyY = FlipInXDown;
+importDefaultResult1(FlipInXDown, require("BaseAnimationBuilder").ComplexAnimationBuilder);
 obj = {
   key: "createInstance",
   value: function createInstance() {
-    return FadeOutDown();
+    return FlipOutEasyY();
   },
 };
 const items2 = [obj];
-const importDefaultResultResult2 = importDefaultResult(FadeInLeft, null, items2);
-importDefaultResultResult2.presetName = "FadeInLeft";
+const importDefaultResultResult2 = importDefaultResult(FlipInXDown, null, items2);
+importDefaultResultResult2.presetName = "FlipInXDown";
 let closure_8 = {
-  code: "function pnpm_FadeTs4(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(1,config)),transform:[{translateY:delayFunction(delay,animation(0,config))}]},initialValues:{opacity:0,transform:[{translateY:-25}],...initialValues},callback:callback};}",
+  code: "function pnpm_FlipTs4(targetValues){const{initialValues,delayFunction,delay,animation,config,callback}=this.__closure;return{initialValues:{transform:[{perspective:500},{rotateY:'90deg'},{translateX:targetValues.targetWidth}],...initialValues},animations:{transform:[{perspective:delayFunction(delay,animation(500,config))},{rotateY:delayFunction(delay,animation('0deg',config))},{translateX:delayFunction(delay,animation(0,config))}]},callback:callback};}",
 };
-class FadeInUp {
+class FlipInYRight {
   constructor() {
     self = this;
     items = [...arguments];
@@ -234,46 +253,52 @@ class FadeInUp {
       const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
       closure_2 = tmp4;
+      const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
-      const delay = delayFunction.getDelay();
-      const fn = function t() {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
-        obj = { translateY: delayFunction(delay, first(0, closure_2)) };
-        const items = [obj];
-        obj[1] = items;
-        obj[0] = obj;
-        const items1 = [{ translateY: -25 }];
+      const fn = function n(targetWidth) {
+        let obj = { initialValues: null, animations: null, callback: null };
+        obj = { transform: items };
+        items = [{ perspective: 500 }, { rotateY: "90deg" }];
+        obj = { translateX: targetWidth.targetWidth };
+        items[2] = obj;
         const merged = Object.assign(initialValues);
-        obj[1] = { opacity: 0, transform: items1 };
+        obj[0] = obj;
+        obj1 = { transform: null };
+        const items1 = [{ perspective: delayFunction(delay, first(500, closure_2)) }, ,];
+        const obj2 = { perspective: delayFunction(delay, first(500, closure_2)) };
+        items1[1] = { rotateY: delayFunction(delay, first("0deg", closure_2)) };
+        const obj3 = { rotateY: delayFunction(delay, first("0deg", closure_2)) };
+        items1[2] = { translateX: delayFunction(delay, first(0, closure_2)) };
+        obj1[0] = items1;
+        obj[1] = obj1;
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 14652570092763;
+      fn.__closure = { initialValues, delayFunction, delay, animation: first, config: tmp2[1], callback: callbackV };
+      fn.__workletHash = 10571583952635;
       fn.__initData = closure_1_8;
       return fn;
     };
     return tmp3Result;
   }
 }
-FadeOutDown = FadeInUp;
-importDefaultResult1(FadeInUp, require("BaseAnimationBuilder").ComplexAnimationBuilder);
+FlipOutEasyY = FlipInYRight;
+importDefaultResult1(FlipInYRight, require("BaseAnimationBuilder").ComplexAnimationBuilder);
 const items3 = [
   {
     key: "createInstance",
     value: function createInstance() {
-      return FadeOutDown();
+      return FlipOutEasyY();
     },
   },
 ];
-const importDefaultResultResult3 = importDefaultResult(FadeInUp, null, items3);
-importDefaultResultResult3.presetName = "FadeInUp";
+const importDefaultResultResult3 = importDefaultResult(FlipInYRight, null, items3);
+importDefaultResultResult3.presetName = "FlipInYRight";
 let closure_9 = {
-  code: "function pnpm_FadeTs5(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(1,config)),transform:[{translateY:delayFunction(delay,animation(0,config))}]},initialValues:{opacity:0,transform:[{translateY:25}],...initialValues},callback:callback};}",
+  code: "function pnpm_FlipTs5(){const{initialValues,delayFunction,delay,animation,config,callback}=this.__closure;return{initialValues:{transform:[{perspective:500},{rotateX:'90deg'}],...initialValues},animations:{transform:[{perspective:delayFunction(delay,animation(500,config))},{rotateX:delayFunction(delay,animation('0deg',config))}]},callback:callback};}",
 };
-class FadeInDown {
+class FlipInEasyX {
   constructor() {
     self = this;
     items = [...arguments];
@@ -297,46 +322,48 @@ class FadeInDown {
       const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
       closure_2 = tmp4;
+      const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
-      const delay = delayFunction.getDelay();
-      const fn = function t() {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
-        obj = { translateY: delayFunction(delay, first(0, closure_2)) };
-        const items = [obj];
-        obj[1] = items;
-        obj[0] = obj;
-        const items1 = [{ translateY: 25 }];
+      const fn = function n() {
+        let obj = { initialValues: null, animations: null, callback: null };
+        obj = { transform: items };
+        items = [{ perspective: 500 }, { rotateX: "90deg" }];
         const merged = Object.assign(initialValues);
-        obj[1] = { opacity: 0, transform: items1 };
+        obj[0] = obj;
+        obj = { transform: null };
+        const items1 = [{ perspective: delayFunction(delay, first(500, closure_2)) }];
+        obj1 = { perspective: delayFunction(delay, first(500, closure_2)) };
+        items1[1] = { rotateX: delayFunction(delay, first("0deg", closure_2)) };
+        obj[0] = items1;
+        obj[1] = obj;
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 3370389664855;
+      fn.__closure = { initialValues, delayFunction, delay, animation: first, config: tmp2[1], callback: callbackV };
+      fn.__workletHash = 5139023366989;
       fn.__initData = closure_1_9;
       return fn;
     };
     return tmp3Result;
   }
 }
-FadeOutDown = FadeInDown;
-importDefaultResult1(FadeInDown, require("BaseAnimationBuilder").ComplexAnimationBuilder);
+FlipOutEasyY = FlipInEasyX;
+importDefaultResult1(FlipInEasyX, require("BaseAnimationBuilder").ComplexAnimationBuilder);
 const items4 = [
   {
     key: "createInstance",
     value: function createInstance() {
-      return FadeOutDown();
+      return FlipOutEasyY();
     },
   },
 ];
-const importDefaultResultResult4 = importDefaultResult(FadeInDown, null, items4);
-importDefaultResultResult4.presetName = "FadeInDown";
+const importDefaultResultResult4 = importDefaultResult(FlipInEasyX, null, items4);
+importDefaultResultResult4.presetName = "FlipInEasyX";
 let closure_10 = {
-  code: "function pnpm_FadeTs6(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(0,config))},initialValues:{opacity:1,...initialValues},callback:callback};}",
+  code: "function pnpm_FlipTs6(){const{initialValues,delayFunction,delay,animation,config,callback}=this.__closure;return{initialValues:{transform:[{perspective:500},{rotateY:'90deg'}],...initialValues},animations:{transform:[{perspective:delayFunction(delay,animation(500,config))},{rotateY:delayFunction(delay,animation('0deg',config))}]},callback:callback};}",
 };
-class FadeOut {
+class FlipInEasyY {
   constructor() {
     self = this;
     items = [...arguments];
@@ -360,43 +387,48 @@ class FadeOut {
       const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
       closure_2 = tmp4;
+      const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
-      const delay = delayFunction.getDelay();
-      const fn = function t() {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(0, closure_2)) };
-        obj[0] = obj;
-        obj = { opacity: 1 };
+      const fn = function n() {
+        let obj = { initialValues: null, animations: null, callback: null };
+        obj = { transform: items };
+        items = [{ perspective: 500 }, { rotateY: "90deg" }];
         const merged = Object.assign(initialValues);
+        obj[0] = obj;
+        obj = { transform: null };
+        const items1 = [{ perspective: delayFunction(delay, first(500, closure_2)) }];
+        obj1 = { perspective: delayFunction(delay, first(500, closure_2)) };
+        items1[1] = { rotateY: delayFunction(delay, first("0deg", closure_2)) };
+        obj[0] = items1;
         obj[1] = obj;
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 12496093665501;
+      fn.__closure = { initialValues, delayFunction, delay, animation: first, config: tmp2[1], callback: callbackV };
+      fn.__workletHash = 4577193778414;
       fn.__initData = closure_1_10;
       return fn;
     };
     return tmp3Result;
   }
 }
-FadeOutDown = FadeOut;
-importDefaultResult1(FadeOut, require("BaseAnimationBuilder").ComplexAnimationBuilder);
+FlipOutEasyY = FlipInEasyY;
+importDefaultResult1(FlipInEasyY, require("BaseAnimationBuilder").ComplexAnimationBuilder);
 const items5 = [
   {
     key: "createInstance",
     value: function createInstance() {
-      return FadeOutDown();
+      return FlipOutEasyY();
     },
   },
 ];
-const importDefaultResultResult5 = importDefaultResult(FadeOut, null, items5);
-importDefaultResultResult5.presetName = "FadeOut";
+const importDefaultResultResult5 = importDefaultResult(FlipInEasyY, null, items5);
+importDefaultResultResult5.presetName = "FlipInEasyY";
 let closure_11 = {
-  code: "function pnpm_FadeTs7(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(0,config)),transform:[{translateX:delayFunction(delay,animation(25,config))}]},initialValues:{opacity:1,transform:[{translateX:0}],...initialValues},callback:callback};}",
+  code: "function pnpm_FlipTs7(targetValues){const{initialValues,delayFunction,delay,animation,config,callback}=this.__closure;return{initialValues:{transform:[{perspective:500},{rotateX:'0deg'},{translateY:0}],...initialValues},animations:{transform:[{perspective:delayFunction(delay,animation(500,config))},{rotateX:delayFunction(delay,animation('90deg',config))},{translateY:delayFunction(delay,animation(-targetValues.currentHeight,config))}]},callback:callback};}",
 };
-class FadeOutRight {
+class FlipOutXUp {
   constructor() {
     self = this;
     items = [...arguments];
@@ -420,46 +452,50 @@ class FadeOutRight {
       const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
       closure_2 = tmp4;
+      const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
-      const delay = delayFunction.getDelay();
-      const fn = function t() {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
-        obj = { translateX: delayFunction(delay, first(25, closure_2)) };
-        const items = [obj];
-        obj[1] = items;
-        obj[0] = obj;
-        const items1 = [{ translateX: 0 }];
+      const fn = function n(currentHeight) {
+        let obj = { initialValues: null, animations: null, callback: null };
+        obj = { transform: items };
+        items = [{ perspective: 500 }, { rotateX: "0deg" }, { translateY: 0 }];
         const merged = Object.assign(initialValues);
-        obj[1] = { opacity: 1, transform: items1 };
+        obj[0] = obj;
+        obj = { transform: null };
+        const items1 = [{ perspective: delayFunction(delay, first(500, closure_2)) }, ,];
+        obj1 = { perspective: delayFunction(delay, first(500, closure_2)) };
+        items1[1] = { rotateX: delayFunction(delay, first("90deg", closure_2)) };
+        const obj2 = { rotateX: delayFunction(delay, first("90deg", closure_2)) };
+        items1[2] = { translateY: delayFunction(delay, first(-currentHeight.currentHeight, closure_2)) };
+        obj[0] = items1;
+        obj[1] = obj;
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 8966511332149;
+      fn.__closure = { initialValues, delayFunction, delay, animation: first, config: tmp2[1], callback: callbackV };
+      fn.__workletHash = 3506458137332;
       fn.__initData = closure_1_11;
       return fn;
     };
     return tmp3Result;
   }
 }
-FadeOutDown = FadeOutRight;
-importDefaultResult1(FadeOutRight, require("BaseAnimationBuilder").ComplexAnimationBuilder);
+FlipOutEasyY = FlipOutXUp;
+importDefaultResult1(FlipOutXUp, require("BaseAnimationBuilder").ComplexAnimationBuilder);
 const items6 = [
   {
     key: "createInstance",
     value: function createInstance() {
-      return FadeOutDown();
+      return FlipOutEasyY();
     },
   },
 ];
-const importDefaultResultResult6 = importDefaultResult(FadeOutRight, null, items6);
-importDefaultResultResult6.presetName = "FadeOutRight";
+const importDefaultResultResult6 = importDefaultResult(FlipOutXUp, null, items6);
+importDefaultResultResult6.presetName = "FlipOutXUp";
 let closure_12 = {
-  code: "function pnpm_FadeTs8(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(0,config)),transform:[{translateX:delayFunction(delay,animation(-25,config))}]},initialValues:{opacity:1,transform:[{translateX:0}],...initialValues},callback:callback};}",
+  code: "function pnpm_FlipTs8(targetValues){const{initialValues,delayFunction,delay,animation,config,callback}=this.__closure;return{initialValues:{transform:[{perspective:500},{rotateY:'0deg'},{translateX:0}],...initialValues},animations:{transform:[{perspective:delayFunction(delay,animation(500,config))},{rotateY:delayFunction(delay,animation('-90deg',config))},{translateX:delayFunction(delay,animation(-targetValues.currentWidth,config))}]},callback:callback};}",
 };
-class FadeOutLeft {
+class FlipOutYLeft {
   constructor() {
     self = this;
     items = [...arguments];
@@ -483,46 +519,50 @@ class FadeOutLeft {
       const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
       closure_2 = tmp4;
+      const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
-      const delay = delayFunction.getDelay();
-      const fn = function t() {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
-        obj = { translateX: delayFunction(delay, first(-25, closure_2)) };
-        const items = [obj];
-        obj[1] = items;
-        obj[0] = obj;
-        const items1 = [{ translateX: 0 }];
+      const fn = function n(currentWidth) {
+        let obj = { initialValues: null, animations: null, callback: null };
+        obj = { transform: items };
+        items = [{ perspective: 500 }, { rotateY: "0deg" }, { translateX: 0 }];
         const merged = Object.assign(initialValues);
-        obj[1] = { opacity: 1, transform: items1 };
+        obj[0] = obj;
+        obj = { transform: null };
+        const items1 = [{ perspective: delayFunction(delay, first(500, closure_2)) }, ,];
+        obj1 = { perspective: delayFunction(delay, first(500, closure_2)) };
+        items1[1] = { rotateY: delayFunction(delay, first("-90deg", closure_2)) };
+        const obj2 = { rotateY: delayFunction(delay, first("-90deg", closure_2)) };
+        items1[2] = { translateX: delayFunction(delay, first(-currentWidth.currentWidth, closure_2)) };
+        obj[0] = items1;
+        obj[1] = obj;
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 7570822684087;
+      fn.__closure = { initialValues, delayFunction, delay, animation: first, config: tmp2[1], callback: callbackV };
+      fn.__workletHash = 17419119819311;
       fn.__initData = closure_1_12;
       return fn;
     };
     return tmp3Result;
   }
 }
-FadeOutDown = FadeOutLeft;
-importDefaultResult1(FadeOutLeft, require("BaseAnimationBuilder").ComplexAnimationBuilder);
+FlipOutEasyY = FlipOutYLeft;
+importDefaultResult1(FlipOutYLeft, require("BaseAnimationBuilder").ComplexAnimationBuilder);
 const items7 = [
   {
     key: "createInstance",
     value: function createInstance() {
-      return FadeOutDown();
+      return FlipOutEasyY();
     },
   },
 ];
-const importDefaultResultResult7 = importDefaultResult(FadeOutLeft, null, items7);
-importDefaultResultResult7.presetName = "FadeOutLeft";
+const importDefaultResultResult7 = importDefaultResult(FlipOutYLeft, null, items7);
+importDefaultResultResult7.presetName = "FlipOutYLeft";
 let closure_13 = {
-  code: "function pnpm_FadeTs9(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(0,config)),transform:[{translateY:delayFunction(delay,animation(-25,config))}]},initialValues:{opacity:1,transform:[{translateY:0}],...initialValues},callback:callback};}",
+  code: "function pnpm_FlipTs9(targetValues){const{initialValues,delayFunction,delay,animation,config,callback}=this.__closure;return{initialValues:{transform:[{perspective:500},{rotateX:'0deg'},{translateY:0}],...initialValues},animations:{transform:[{perspective:delayFunction(delay,animation(500,config))},{rotateX:delayFunction(delay,animation('-90deg',config))},{translateY:delayFunction(delay,animation(targetValues.currentHeight,config))}]},callback:callback};}",
 };
-class FadeOutUp {
+class FlipOutXDown {
   constructor() {
     self = this;
     items = [...arguments];
@@ -546,46 +586,50 @@ class FadeOutUp {
       const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
       closure_2 = tmp4;
+      const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
-      const delay = delayFunction.getDelay();
-      const fn = function t() {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
-        obj = { translateY: delayFunction(delay, first(-25, closure_2)) };
-        const items = [obj];
-        obj[1] = items;
-        obj[0] = obj;
-        const items1 = [{ translateY: 0 }];
+      const fn = function n(currentHeight) {
+        let obj = { initialValues: null, animations: null, callback: null };
+        obj = { transform: items };
+        items = [{ perspective: 500 }, { rotateX: "0deg" }, { translateY: 0 }];
         const merged = Object.assign(initialValues);
-        obj[1] = { opacity: 1, transform: items1 };
+        obj[0] = obj;
+        obj = { transform: null };
+        const items1 = [{ perspective: delayFunction(delay, first(500, closure_2)) }, ,];
+        obj1 = { perspective: delayFunction(delay, first(500, closure_2)) };
+        items1[1] = { rotateX: delayFunction(delay, first("-90deg", closure_2)) };
+        const obj2 = { rotateX: delayFunction(delay, first("-90deg", closure_2)) };
+        items1[2] = { translateY: delayFunction(delay, first(currentHeight.currentHeight, closure_2)) };
+        obj[0] = items1;
+        obj[1] = obj;
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 7080775562358;
+      fn.__closure = { initialValues, delayFunction, delay, animation: first, config: tmp2[1], callback: callbackV };
+      fn.__workletHash = 9961334044730;
       fn.__initData = closure_1_13;
       return fn;
     };
     return tmp3Result;
   }
 }
-FadeOutDown = FadeOutUp;
-importDefaultResult1(FadeOutUp, require("BaseAnimationBuilder").ComplexAnimationBuilder);
+FlipOutEasyY = FlipOutXDown;
+importDefaultResult1(FlipOutXDown, require("BaseAnimationBuilder").ComplexAnimationBuilder);
 const items8 = [
   {
     key: "createInstance",
     value: function createInstance() {
-      return FadeOutDown();
+      return FlipOutEasyY();
     },
   },
 ];
-const importDefaultResultResult8 = importDefaultResult(FadeOutUp, null, items8);
-importDefaultResultResult8.presetName = "FadeOutUp";
+const importDefaultResultResult8 = importDefaultResult(FlipOutXDown, null, items8);
+importDefaultResultResult8.presetName = "FlipOutXDown";
 let closure_14 = {
-  code: "function pnpm_FadeTs10(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(0,config)),transform:[{translateY:delayFunction(delay,animation(25,config))}]},initialValues:{opacity:1,transform:[{translateY:0}],...initialValues},callback:callback};}",
+  code: "function pnpm_FlipTs10(targetValues){const{initialValues,delayFunction,delay,animation,config,callback}=this.__closure;return{initialValues:{transform:[{perspective:500},{rotateY:'0deg'},{translateX:0}],...initialValues},animations:{transform:[{perspective:delayFunction(delay,animation(500,config))},{rotateY:delayFunction(delay,animation('90deg',config))},{translateX:delayFunction(delay,animation(targetValues.currentWidth,config))}]},callback:callback};}",
 };
-class FadeOutDown {
+class FlipOutYRight {
   constructor() {
     self = this;
     items = [...arguments];
@@ -609,49 +653,185 @@ class FadeOutDown {
       const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
       const first = tmp2[0];
       closure_2 = tmp4;
+      const delay = delayFunction.getDelay();
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
-      const delay = delayFunction.getDelay();
-      const fn = function t() {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
-        obj = { translateY: delayFunction(delay, first(25, closure_2)) };
-        const items = [obj];
-        obj[1] = items;
-        obj[0] = obj;
-        const items1 = [{ translateY: 0 }];
+      const fn = function n(currentWidth) {
+        let obj = { initialValues: null, animations: null, callback: null };
+        obj = { transform: items };
+        items = [{ perspective: 500 }, { rotateY: "0deg" }, { translateX: 0 }];
         const merged = Object.assign(initialValues);
-        obj[1] = { opacity: 1, transform: items1 };
+        obj[0] = obj;
+        obj = { transform: null };
+        const items1 = [{ perspective: delayFunction(delay, first(500, closure_2)) }, ,];
+        obj1 = { perspective: delayFunction(delay, first(500, closure_2)) };
+        items1[1] = { rotateY: delayFunction(delay, first("90deg", closure_2)) };
+        const obj2 = { rotateY: delayFunction(delay, first("90deg", closure_2)) };
+        items1[2] = { translateX: delayFunction(delay, first(currentWidth.currentWidth, closure_2)) };
+        obj[0] = items1;
+        obj[1] = obj;
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 4897427935171;
+      fn.__closure = { initialValues, delayFunction, delay, animation: first, config: tmp2[1], callback: callbackV };
+      fn.__workletHash = 12107293900726;
       fn.__initData = closure_1_14;
       return fn;
     };
     return tmp3Result;
   }
 }
-importDefaultResult1(FadeOutDown, require("BaseAnimationBuilder").ComplexAnimationBuilder);
+FlipOutEasyY = FlipOutYRight;
+importDefaultResult1(FlipOutYRight, require("BaseAnimationBuilder").ComplexAnimationBuilder);
 const items9 = [
   {
     key: "createInstance",
     value: function createInstance() {
-      return FadeOutDown();
+      return FlipOutEasyY();
     },
   },
 ];
-const importDefaultResultResult9 = importDefaultResult(FadeOutDown, null, items9);
-importDefaultResultResult9.presetName = "FadeOutDown";
+const importDefaultResultResult9 = importDefaultResult(FlipOutYRight, null, items9);
+importDefaultResultResult9.presetName = "FlipOutYRight";
+let closure_15 = {
+  code: "function pnpm_FlipTs11(){const{initialValues,delayFunction,delay,animation,config,callback}=this.__closure;return{initialValues:{transform:[{perspective:500},{rotateX:'0deg'}],...initialValues},animations:{transform:[{perspective:delayFunction(delay,animation(500,config))},{rotateX:delayFunction(delay,animation('90deg',config))}]},callback:callback};}",
+};
+class FlipOutEasyX {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_1(this, closure_0);
+    items1 = [...items];
+    tmp2 = closure_3;
+    obj = closure_3(closure_0);
+    tmp3 = closure_2;
+    if (_isNativeReflectConstruct()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.build = () => {
+      delayFunction = delayFunction.getDelayFunction();
+      const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
+      const first = tmp2[0];
+      closure_2 = tmp4;
+      const delay = delayFunction.getDelay();
+      const callbackV = delayFunction.callbackV;
+      const initialValues = delayFunction.initialValues;
+      const fn = function n() {
+        let obj = { initialValues: null, animations: null, callback: null };
+        obj = { transform: items };
+        items = [{ perspective: 500 }, { rotateX: "0deg" }];
+        const merged = Object.assign(initialValues);
+        obj[0] = obj;
+        obj = { transform: null };
+        const items1 = [{ perspective: delayFunction(delay, first(500, closure_2)) }];
+        obj1 = { perspective: delayFunction(delay, first(500, closure_2)) };
+        items1[1] = { rotateX: delayFunction(delay, first("90deg", closure_2)) };
+        obj[0] = items1;
+        obj[1] = obj;
+        obj[2] = callbackV;
+        return obj;
+      };
+      fn.__closure = { initialValues, delayFunction, delay, animation: first, config: tmp2[1], callback: callbackV };
+      fn.__workletHash = 9417124215224;
+      fn.__initData = closure_1_15;
+      return fn;
+    };
+    return tmp3Result;
+  }
+}
+FlipOutEasyY = FlipOutEasyX;
+importDefaultResult1(FlipOutEasyX, require("BaseAnimationBuilder").ComplexAnimationBuilder);
+const items10 = [
+  {
+    key: "createInstance",
+    value: function createInstance() {
+      return FlipOutEasyY();
+    },
+  },
+];
+const importDefaultResultResult10 = importDefaultResult(FlipOutEasyX, null, items10);
+importDefaultResultResult10.presetName = "FlipOutEasyX";
+let closure_16 = {
+  code: "function pnpm_FlipTs12(){const{initialValues,delayFunction,delay,animation,config,callback}=this.__closure;return{initialValues:{transform:[{perspective:500},{rotateY:'0deg'}],...initialValues},animations:{transform:[{perspective:delayFunction(delay,animation(500,config))},{rotateY:delayFunction(delay,animation('90deg',config))}]},callback:callback};}",
+};
+class FlipOutEasyY {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_1(this, closure_0);
+    items1 = [...items];
+    tmp2 = closure_3;
+    obj = closure_3(closure_0);
+    tmp3 = closure_2;
+    if (_isNativeReflectConstruct()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.build = () => {
+      delayFunction = delayFunction.getDelayFunction();
+      const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
+      const first = tmp2[0];
+      closure_2 = tmp4;
+      const delay = delayFunction.getDelay();
+      const callbackV = delayFunction.callbackV;
+      const initialValues = delayFunction.initialValues;
+      const fn = function n() {
+        let obj = { initialValues: null, animations: null, callback: null };
+        obj = { transform: items };
+        items = [{ perspective: 500 }, { rotateY: "0deg" }];
+        const merged = Object.assign(initialValues);
+        obj[0] = obj;
+        obj = { transform: null };
+        const items1 = [{ perspective: delayFunction(delay, first(500, closure_2)) }];
+        obj1 = { perspective: delayFunction(delay, first(500, closure_2)) };
+        items1[1] = { rotateY: delayFunction(delay, first("90deg", closure_2)) };
+        obj[0] = items1;
+        obj[1] = obj;
+        obj[2] = callbackV;
+        return obj;
+      };
+      fn.__closure = { initialValues, delayFunction, delay, animation: first, config: tmp2[1], callback: callbackV };
+      fn.__workletHash = 4473299233947;
+      fn.__initData = closure_1_16;
+      return fn;
+    };
+    return tmp3Result;
+  }
+}
+importDefaultResult1(FlipOutEasyY, require("BaseAnimationBuilder").ComplexAnimationBuilder);
+const items11 = [
+  {
+    key: "createInstance",
+    value: function createInstance() {
+      return FlipOutEasyY();
+    },
+  },
+];
+const importDefaultResultResult11 = importDefaultResult(FlipOutEasyY, null, items11);
+importDefaultResultResult11.presetName = "FlipOutEasyY";
 
-export const FadeIn = importDefaultResultResult;
-export const FadeInRight = importDefaultResultResult1;
-export const FadeInLeft = importDefaultResultResult2;
-export const FadeInUp = importDefaultResultResult3;
-export const FadeInDown = importDefaultResultResult4;
-export const FadeOut = importDefaultResultResult5;
-export const FadeOutRight = importDefaultResultResult6;
-export const FadeOutLeft = importDefaultResultResult7;
-export const FadeOutUp = importDefaultResultResult8;
-export const FadeOutDown = importDefaultResultResult9;
+export const FlipInXUp = importDefaultResultResult;
+export const FlipInYLeft = importDefaultResultResult1;
+export const FlipInXDown = importDefaultResultResult2;
+export const FlipInYRight = importDefaultResultResult3;
+export const FlipInEasyX = importDefaultResultResult4;
+export const FlipInEasyY = importDefaultResultResult5;
+export const FlipOutXUp = importDefaultResultResult6;
+export const FlipOutYLeft = importDefaultResultResult7;
+export const FlipOutXDown = importDefaultResultResult8;
+export const FlipOutYRight = importDefaultResultResult9;
+export const FlipOutEasyX = importDefaultResultResult10;
+export const FlipOutEasyY = importDefaultResultResult11;

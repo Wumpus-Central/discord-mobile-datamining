@@ -1,13 +1,13 @@
 // _runtime/10111_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/stage_channels/native/images",
-  width: 20,
-  height: 20,
-  scales: [1, 2, 3],
-  hash: "e0680d70864324adcf08b4b59ecd7a41",
-  name: "ic_minimize",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "06839429466f04b07ee5c7156e6fbf8c",
+  name: "MicrophoneIcon",
   type: "png",
 });

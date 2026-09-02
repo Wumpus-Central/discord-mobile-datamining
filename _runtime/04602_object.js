@@ -3,7 +3,7 @@ let object = require;
 object = function object() {};
 
 export default (arg0) => {
-  if (object(606)(arg0)) {
+  if (object(603)(arg0)) {
     if (create) {
       return create(arg0);
     } else {

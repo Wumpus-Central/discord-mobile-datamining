@@ -1,5 +1,5 @@
 // _runtime/04988_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "36842ff43e56d815a37333dfec1ce713",
-  name: "AnnouncementsIcon",
+  hash: "3cca2566d6ada925d540d64d7940bca5",
+  name: "AtIcon",
   type: "png",
 });

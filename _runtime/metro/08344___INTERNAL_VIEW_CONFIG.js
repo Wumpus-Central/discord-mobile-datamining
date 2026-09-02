@@ -4,7 +4,7 @@ import weakSet from "../00106_weakSet.js";
 import setRuntimeConfigProvider from "../00065_setRuntimeConfigProvider.js";
 
 let obj = {
-  uiViewClassName: "RNSVGTextPath",
+  uiViewClassName: "RNSVGRect",
   directEventTypes: { topSvgLayout: { registrationName: "onSvgLayout" } },
   validAttributes: null,
 };
@@ -36,29 +36,15 @@ obj = {
   vectorEffect: true,
   propList: true,
   filter: true,
-  fontSize: true,
-  fontWeight: true,
-  font: true,
-  dx: true,
-  dy: true,
   x: true,
   y: true,
-  rotate: true,
-  inlineSize: true,
-  textLength: true,
-  baselineShift: true,
-  lengthAdjust: true,
-  alignmentBaseline: true,
-  verticalAlign: true,
-  href: true,
-  side: true,
-  method: true,
-  midLine: true,
-  spacing: true,
-  startOffset: true,
+  height: true,
+  width: true,
+  rx: true,
+  ry: true,
 };
 const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSvgLayout: true }));
 obj[2] = obj;
 
-export default setRuntimeConfigProvider.get("RNSVGTextPath", () => obj);
+export default setRuntimeConfigProvider.get("RNSVGRect", () => obj);
 export const __INTERNAL_VIEW_CONFIG = obj;

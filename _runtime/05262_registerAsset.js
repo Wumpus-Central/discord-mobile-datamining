@@ -1,5 +1,5 @@
 // _runtime/05262_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 255,
   height: 255,
   scales: [1],
-  hash: "6d22344f328170a77fc1da6d56f802d8",
-  name: "img_account_sync_reddit_light_and_dark",
+  hash: "6dfdeab813b7b4024164980d2fd4bf7a",
+  name: "img_account_sync_league_of_legends_light_and_dark",
   type: "png",
 });

@@ -1,13 +1,13 @@
 // _runtime/09265_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/empties",
-  width: 240,
-  height: 130,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "2f876cc58ec4f702ded646dd5a7d0ecf",
-  name: "no_mutual_friends_light",
+  hash: "d1dac949a0f852ec9c729a240d5758b0",
+  name: "MusicIcon",
   type: "png",
 });

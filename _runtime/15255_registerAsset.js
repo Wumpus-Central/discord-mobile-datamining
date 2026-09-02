@@ -1,11 +1,13 @@
 // _runtime/15255_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/intl/messages",
+  httpServerLocation: "/assets/../discord_common/js/shared/images/flags",
+  width: 70,
+  height: 47,
   scales: [1],
-  hash: "10b2c11f96663a832c7bc6992f4ab3f5",
-  name: "SecondTest.compiled.messages",
-  type: "jsona",
+  hash: "7fa2adf98f26db34178bb30a63dabe8c",
+  name: "de",
+  type: "png",
 });

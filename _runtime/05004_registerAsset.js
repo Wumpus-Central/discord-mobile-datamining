@@ -1,5 +1,5 @@
 // _runtime/05004_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "3c1f2faaaf73c3a8bd052c79cfecb913",
-  name: "ImageIcon",
+  hash: "50398ad483a7c69d1d35b3cb9c9b7bde",
+  name: "ForumSpoilerIcon",
   type: "png",
 });

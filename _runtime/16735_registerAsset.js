@@ -1,13 +1,13 @@
 // _runtime/16735_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/voice_panel/native/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "e57414c7a7beaf43becfa6bd320e5461",
-  name: "vr",
+  hash: "063292ce4c9cf6ef0db464edc768d34e",
+  name: "icon-server-muted",
   type: "png",
 });

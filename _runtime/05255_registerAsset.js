@@ -1,13 +1,13 @@
 // _runtime/05255_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
+  width: 256,
+  height: 256,
   scales: [1],
-  hash: "25ba997e1d3e8344c193637ad6eeccd3",
-  name: "img_account_sync_league_of_legends_white",
-  type: "png",
+  hash: "36aa11af17352d73b5ec4f98f307b37b",
+  name: "img_bungie_light",
+  type: "svg",
 });

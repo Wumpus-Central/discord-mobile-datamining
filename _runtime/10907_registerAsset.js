@@ -1,13 +1,13 @@
 // _runtime/10907_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 18,
-  height: 18,
+  httpServerLocation: "/assets/images/native/empties",
+  width: 256,
+  height: 128,
   scales: [2, 3],
-  hash: "b979d6fc20f59ff3d9b456c0fcc05d95",
-  name: "ic_add_super_reaction",
+  hash: "766abd1bba5c776641397ceaa2b62b88",
+  name: "img_invite_empty_light",
   type: "png",
 });

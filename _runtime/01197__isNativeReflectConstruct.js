@@ -1,11 +1,13 @@
 // _runtime/01197__isNativeReflectConstruct.js
-import closure_2 from "metro/00093__possibleConstructorReturn.js";
-import closure_3 from "00095__getPrototypeOf.js";
-import importDefaultResult from "00098__inherits.js";
-import closure_4 from "metro/00041__classCallCheck.js";
-import importDefaultResult1 from "metro/00042__createClass.js";
+import _inheritsDefault from "00098__inherits.js";
+import closure_2 from "metro/00041__classCallCheck.js";
+import closure_3 from "metro/00093__possibleConstructorReturn.js";
+import closure_4 from "00095__getPrototypeOf.js";
+import importDefaultResult from "metro/00042__createClass.js";
+import importAllResult from "00019_noop.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
-let ScreenshotButtonManager = arg1;
+const FeedbackButton = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,207 +26,105 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-function NOOP_SET_VISIBILITY() {}
-class FeedbackManager {
-  constructor() {
-    tmp = closure_4(this, ScreenshotButtonManager);
-    return;
+let c5 = importAllResult;
+({ Appearance: closure_6, Image: error, Text: closure_8, TouchableOpacity: c9 } = get_ActivityIndicator);
+class FeedbackButton {
+  constructor(arg0) {
+    self = this;
+    tmp = closure_2(this, FeedbackButton);
+    items = [];
+    items[0] = global;
+    tmp2 = closure_4;
+    obj = closure_4(FeedbackButton);
+    tmp3 = closure_3;
+    if (_isNativeReflectConstruct()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    obj2 = require("lazyLoadFeedbackIntegration");
+    result = obj2.lazyLoadFeedbackIntegration();
+    return tmp3Result;
   }
 }
-ScreenshotButtonManager = FeedbackManager;
-let obj = {
-  key: "_feedbackComponentName",
-  get() {
-    error = new Error("Subclasses must override feedbackComponentName");
-    throw error;
-  },
-};
-const items = [
-  obj,
+_inheritsDefault(FeedbackButton, importAllResult.Component);
+let items = [
   {
-    key: "initialize",
-    value: function initialize(_setVisibility) {
-      this._setVisibility = _setVisibility;
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      const self = this;
+      this._themeListener = closure_6.addChangeListener(() => {
+        self.forceUpdate();
+      });
     },
   },
   {
-    key: "reset",
-    value: function reset() {},
-  },
-  {
-    key: "show",
-    value: function show() {
-      const self = this;
-      if (this._setVisibility !== NOOP_SET_VISIBILITY) {
-        self._isVisible = true;
-        self._setVisibility(true);
-      } else {
-        const _console = console;
-        const _HermesInternal = HermesInternal;
-        console.warn(
-          "[Sentry] " +
-            self._feedbackComponentName +
-            " requires 'Sentry.wrap(RootComponent)' to be called before 'show" +
-            self._feedbackComponentName +
-            "()'.",
-        );
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      if (this._themeListener) {
+        const _themeListener = this._themeListener;
+        _themeListener.remove();
       }
     },
   },
   {
-    key: "hide",
-    value: function hide() {
+    key: "render",
+    value: function render() {
       const self = this;
-      if (this._setVisibility !== NOOP_SET_VISIBILITY) {
-        self._isVisible = false;
-        self._setVisibility(false);
-      } else {
-        const _console = console;
-        const _HermesInternal = HermesInternal;
-        console.warn(
-          "[Sentry] " +
-            self._feedbackComponentName +
-            " requires 'Sentry.wrap(RootComponent)' before interacting with the widget.",
-        );
+      let obj = FeedbackButton(1196);
+      const theme = obj.getTheme();
+      const merged = Object.assign(Object.assign({}, FeedbackButton(1198).defaultButtonConfiguration), this.props);
+      obj1 = FeedbackButton(1199);
+      const styles = this.props.styles;
+      let triggerButton;
+      const merged1 = Object.assign({}, obj1.defaultButtonStyles(theme).triggerButton);
+      if (null !== styles) {
+        if (undefined !== styles) {
+          triggerButton = styles.triggerButton;
+        }
       }
-    },
-  },
-  {
-    key: "isFormVisible",
-    value: function isFormVisible() {
-      return this._isVisible;
-    },
-  },
-];
-const importDefaultResult1Result = importDefaultResult1(FeedbackManager, null, items);
-importDefaultResult1Result._isVisible = false;
-class FeedbackWidgetManager {
-  constructor() {
-    self = this;
-    tmp = closure_4(this, ScreenshotButtonManager);
-    tmp2 = closure_3;
-    obj = closure_3(ScreenshotButtonManager);
-    tmp3 = closure_2;
-    if (_isNativeReflectConstruct()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-ScreenshotButtonManager = FeedbackWidgetManager;
-importDefaultResult(FeedbackWidgetManager, importDefaultResult1Result);
-obj = {
-  key: "_feedbackComponentName",
-  get() {
-    return "FeedbackWidget";
-  },
-};
-const items1 = [obj];
-const importDefaultResult1Result1 = importDefaultResult1(FeedbackWidgetManager, null, items1);
-class FeedbackButtonManager {
-  constructor() {
-    self = this;
-    tmp = closure_4(this, ScreenshotButtonManager);
-    tmp2 = closure_3;
-    obj = closure_3(ScreenshotButtonManager);
-    tmp3 = closure_2;
-    if (_isNativeReflectConstruct()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-ScreenshotButtonManager = FeedbackButtonManager;
-importDefaultResult(FeedbackButtonManager, importDefaultResult1Result);
-obj = {
-  key: "_feedbackComponentName",
-  get() {
-    return "FeedbackButton";
-  },
-};
-const items2 = [obj];
-const importDefaultResult1Result2 = importDefaultResult1(FeedbackButtonManager, null, items2);
-class ScreenshotButtonManager {
-  constructor() {
-    self = this;
-    tmp = closure_4(this, ScreenshotButtonManager);
-    tmp2 = closure_3;
-    obj = closure_3(ScreenshotButtonManager);
-    tmp3 = closure_2;
-    if (_isNativeReflectConstruct()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-importDefaultResult(ScreenshotButtonManager, importDefaultResult1Result);
-const items3 = [
-  {
-    key: "_feedbackComponentName",
-    get() {
-      return "ScreenshotButton";
+      const merged2 = Object.assign(merged1, triggerButton);
+      let tmpResult = tmp(1199);
+      const styles2 = self.props.styles;
+      let triggerText;
+      const merged3 = Object.assign({}, tmpResult.defaultButtonStyles(theme).triggerText);
+      if (null !== styles2) {
+        if (undefined !== styles2) {
+          triggerText = styles2.triggerText;
+        }
+      }
+      const style = Object.assign(merged3, triggerText);
+      tmpResult = tmp(1199);
+      const styles3 = self.props.styles;
+      let triggerIcon;
+      const merged5 = Object.assign({}, tmpResult.defaultButtonStyles(theme).triggerIcon);
+      if (null !== styles3) {
+        if (undefined !== styles3) {
+          triggerIcon = styles3.triggerIcon;
+        }
+      }
+      obj = { style: merged2, onPress: null, accessibilityLabel: null };
+      const merged6 = Object.assign(merged5, triggerIcon);
+      obj[1] = FeedbackButton(1194).showFeedbackWidget;
+      obj[2] = merged.triggerAriaLabel;
+      obj = { source: null, style: null };
+      obj1 = { uri: tmp(1200).feedbackIcon };
+      obj[0] = obj1;
+      obj[1] = merged6;
+      const element = <closure_7 source={null} style={null} />;
+      return (
+        <closure_9 source={null} style={null}>
+          {element}
+          <closure_8 style={style} testID="sentry-feedback-button">
+            {merged.triggerLabel}
+          </closure_8>
+        </closure_9>
+      );
     },
   },
 ];
-const importDefaultResult1Result3 = importDefaultResult1(ScreenshotButtonManager, null, items3);
 
-export const PULL_DOWN_CLOSE_THRESHOLD = 200;
-export const SLIDE_ANIMATION_DURATION = 200;
-export const BACKGROUND_ANIMATION_DURATION = 200;
-export const FeedbackWidgetManager = importDefaultResult1Result1;
-export const FeedbackButtonManager = importDefaultResult1Result2;
-export const ScreenshotButtonManager = importDefaultResult1Result3;
-export const showFeedbackButton = () => {
-  const result = ScreenshotButtonManager(1198).lazyLoadAutoInjectFeedbackButtonIntegration();
-  importDefaultResult1Result2.show();
-};
-export const hideFeedbackButton = () => {
-  importDefaultResult1Result2.hide();
-};
-export const showFeedbackWidget = () => {
-  const result = ScreenshotButtonManager(1198).lazyLoadAutoInjectFeedbackIntegration();
-  importDefaultResult1Result1.show();
-};
-export const showScreenshotButton = () => {
-  if (obj.isWeb()) {
-    const debug = tmp(817).debug;
-    debug.warn("ScreenshotButton is not supported on Web.");
-  } else {
-    const result = tmp(1198).lazyLoadAutoInjectScreenshotButtonIntegration();
-    importDefaultResult1Result3.show();
-    const tmpResult = tmp(1198);
-  }
-};
-export const hideScreenshotButton = () => {
-  importDefaultResult1Result3.hide();
-};
-export const resetFeedbackButtonManager = () => {
-  importDefaultResult1Result2.reset();
-};
-export const resetFeedbackWidgetManager = () => {
-  importDefaultResult1Result1.reset();
-};
-export const resetScreenshotButtonManager = () => {
-  importDefaultResult1Result3.reset();
-};
+export const FeedbackButton = importDefaultResult(FeedbackButton, items);

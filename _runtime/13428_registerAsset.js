@@ -1,13 +1,13 @@
 // _runtime/13428_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/nuf_channels/native/images",
-  width: 40,
-  height: 77,
+  httpServerLocation: "/assets/images/native/premium/plan_selection",
+  width: 64,
+  height: 64,
   scales: [1],
-  hash: "a22d4ac6a3cb3a331ce2730f706e3d95",
-  name: "star_pink",
+  hash: "7820559d802b687a2589b1c9f32203ab",
+  name: "img_wumpus_nitro_boost",
   type: "png",
 });

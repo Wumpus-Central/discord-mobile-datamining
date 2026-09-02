@@ -1,13 +1,13 @@
 // _runtime/17494_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/guild_settings/community_settings",
+  width: 88,
+  height: 80,
   scales: [2, 3],
-  hash: "3cfafdcd8589d496d2b3358a1b5ec72d",
-  name: "ImageBrokenIcon",
+  hash: "d16693419c73a203fe410baf14480d7e",
+  name: "finishing_touches",
   type: "png",
 });

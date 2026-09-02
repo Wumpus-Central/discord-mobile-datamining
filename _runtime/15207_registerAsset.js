@@ -1,5 +1,5 @@
 // _runtime/15207_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "fa8fba4f08666ddc130e1c29719257b7",
-  name: "PawPrintIcon",
+  hash: "152a215f261a7892afe1032dd66353df",
+  name: "EmojiMoneyMouthFaceIcon",
   type: "png",
 });

@@ -1,5 +1,5 @@
 // _runtime/09212_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "e482df76bca128861506eefe107fb633",
-  name: "BackspaceIcon",
+  hash: "26998a89da8a094ca27d79afeba3b61f",
+  name: "FoodIcon",
   type: "png",
 });

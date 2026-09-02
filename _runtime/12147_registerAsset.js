@@ -1,5 +1,5 @@
 // _runtime/12147_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "18fb368a457a812267e823f947169b18",
-  name: "BoostTier1Icon",
+  hash: "ae39bece93fb2e7db2a552f53a1d8fa1",
+  name: "TwitterNeutralIcon",
   type: "png",
 });

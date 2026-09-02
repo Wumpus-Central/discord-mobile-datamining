@@ -1,13 +1,13 @@
 // _runtime/15033_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/../discord_common/js/shared/images/flags",
-  width: 70,
-  height: 47,
-  scales: [1],
-  hash: "8d1d548a64761f0c5b1d7c9e00ae66a6",
-  name: "fr",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "e42f1b42dc7bf4b285d5f4924a46e5c4",
+  name: "TicketIcon",
   type: "png",
 });

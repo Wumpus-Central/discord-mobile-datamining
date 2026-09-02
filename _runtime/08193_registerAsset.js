@@ -1,13 +1,13 @@
 // _runtime/08193_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/GalaxyIcon",
+  httpServerLocation: "/assets/images/native/custom_app_icons/BlurpleTwilightIcon",
   width: 60,
   height: 60,
   scales: [2, 3],
-  hash: "2bb189919203a7299ceda12e2b9f8582",
-  name: "GalaxyIcon",
+  hash: "f385b38a044809a0b451d707fc7cd058",
+  name: "BlurpleTwilightIcon",
   type: "png",
 });

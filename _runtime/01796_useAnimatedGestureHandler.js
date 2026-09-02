@@ -1,36 +1,79 @@
 // _runtime/01796_useAnimatedGestureHandler.js
-import useAnimatedGestureHandler from "01797_useAnimatedGestureHandler.js";
-import useHandler from "01798_useHandler.js";
-import useEvent from "01800_useEvent.js";
-import useAnimatedKeyboard from "01801_useAnimatedKeyboard.js";
-import useAnimatedPropsJS from "01802_useAnimatedPropsJS.js";
-import checkSharedValueUsage from "01803_checkSharedValueUsage.js";
-import useSharedValue from "01805_useSharedValue.js";
-import useAnimatedReaction from "01806_useAnimatedReaction.js";
-import useAnimatedRef from "01807_useAnimatedRef.js";
-import useAnimatedScrollHandler from "01808_useAnimatedScrollHandler.js";
-import eulerToQuaternion from "01809_eulerToQuaternion.js";
-import useComposedEventHandler from "01810_useComposedEventHandler.js";
-import useDerivedValue from "01811_useDerivedValue.js";
-import useFrameCallback from "01812_useFrameCallback.js";
-import useReducedMotion from "01815_useReducedMotion.js";
-import getWebScrollableElement from "01816_getWebScrollableElement.js";
-import useWorkletCallback from "01817_useWorkletCallback.js";
-
-export const useAnimatedGestureHandler = useAnimatedGestureHandler.useAnimatedGestureHandler;
-export const useAnimatedKeyboard = useAnimatedKeyboard.useAnimatedKeyboard;
-export const useAnimatedProps = useAnimatedPropsJS.useAnimatedProps;
-export const useAnimatedReaction = useAnimatedReaction.useAnimatedReaction;
-export const useAnimatedRef = useAnimatedRef.useAnimatedRef;
-export const useAnimatedScrollHandler = useAnimatedScrollHandler.useAnimatedScrollHandler;
-export const useAnimatedSensor = eulerToQuaternion.useAnimatedSensor;
-export const useAnimatedStyle = checkSharedValueUsage.useAnimatedStyle;
-export const useComposedEventHandler = useComposedEventHandler.useComposedEventHandler;
-export const useDerivedValue = useDerivedValue.useDerivedValue;
-export const useEvent = useEvent.useEvent;
-export const useFrameCallback = useFrameCallback.useFrameCallback;
-export const useHandler = useHandler.useHandler;
-export const useReducedMotion = useReducedMotion.useReducedMotion;
-export const useScrollViewOffset = getWebScrollableElement.useScrollViewOffset;
-export const useSharedValue = useSharedValue.useSharedValue;
-export const useWorkletCallback = useWorkletCallback.useWorkletCallback;
+const require = arg1;
+const dependencyMap = arg6;
+let closure_2 = { UNDETERMINED: 0, FAILED: 1, BEGAN: 2, CANCELLED: 3, ACTIVE: 4, END: 5 };
+let closure_3 = {
+  code: "function pnpm_useAnimatedGestureHandlerTs1(e){const{useWeb,EVENT_TYPE,handlers,context}=this.__closure;const event=useWeb?e.nativeEvent:e;if(event.state===EVENT_TYPE.BEGAN&&handlers.onStart){handlers.onStart(event,context);}if(event.state===EVENT_TYPE.ACTIVE&&handlers.onActive){handlers.onActive(event,context);}if(event.oldState===EVENT_TYPE.ACTIVE&&event.state===EVENT_TYPE.END&&handlers.onEnd){handlers.onEnd(event,context);}if(event.oldState===EVENT_TYPE.BEGAN&&event.state===EVENT_TYPE.FAILED&&handlers.onFail){handlers.onFail(event,context);}if(event.oldState===EVENT_TYPE.ACTIVE&&event.state===EVENT_TYPE.CANCELLED&&handlers.onCancel){handlers.onCancel(event,context);}if((event.oldState===EVENT_TYPE.BEGAN||event.oldState===EVENT_TYPE.ACTIVE)&&event.state!==EVENT_TYPE.BEGAN&&event.state!==EVENT_TYPE.ACTIVE&&handlers.onFinish){handlers.onFinish(event,context,event.state===EVENT_TYPE.CANCELLED||event.state===EVENT_TYPE.FAILED);}}",
+};
+arg5.useAnimatedGestureHandler = function useAnimatedGestureHandler(handlers, items10) {
+  const _require = handlers;
+  let obj = _require(context[0]);
+  const handler = obj.useHandler(handlers, items10);
+  context = handler.context;
+  const useWeb = handler.useWeb;
+  const fn = function s(nativeEvent) {
+    if (useWeb) {
+      nativeEvent = nativeEvent.nativeEvent;
+    }
+    let onStart = nativeEvent.state === useWeb.BEGAN;
+    if (onStart) {
+      onStart = handlers.onStart;
+    }
+    if (onStart) {
+      handlers.onStart(nativeEvent, context);
+    }
+    let onActive = nativeEvent.state === tmp.ACTIVE;
+    if (onActive) {
+      onActive = handlers.onActive;
+    }
+    if (onActive) {
+      handlers.onActive(nativeEvent, context);
+    }
+    let onEnd = nativeEvent.oldState === tmp.ACTIVE && nativeEvent.state === tmp.END;
+    if (onEnd) {
+      onEnd = handlers.onEnd;
+    }
+    if (onEnd) {
+      handlers.onEnd(nativeEvent, context);
+    }
+    let onFail = nativeEvent.oldState === tmp.BEGAN && nativeEvent.state === tmp.FAILED;
+    if (onFail) {
+      onFail = handlers.onFail;
+    }
+    if (onFail) {
+      handlers.onFail(nativeEvent, context);
+    }
+    let onCancel = nativeEvent.oldState === tmp.ACTIVE && nativeEvent.state === tmp.CANCELLED;
+    if (onCancel) {
+      onCancel = handlers.onCancel;
+    }
+    if (onCancel) {
+      handlers.onCancel(nativeEvent, context);
+    }
+    let tmp22 =
+      (nativeEvent.oldState !== tmp.BEGAN && nativeEvent.oldState !== tmp.ACTIVE) ||
+      nativeEvent.state === tmp.BEGAN ||
+      nativeEvent.state === tmp.ACTIVE;
+    if (!tmp22) {
+      tmp22 = !handlers.onFinish;
+    }
+    if (!tmp22) {
+      let tmp26 = nativeEvent.state === tmp.CANCELLED;
+      if (!tmp26) {
+        tmp26 = nativeEvent.state === tmp.FAILED;
+      }
+      handlers.onFinish(nativeEvent, context, tmp26);
+      const tmp25 = context;
+    }
+  };
+  obj = { useWeb, EVENT_TYPE: useWeb, handlers, context };
+  fn.__closure = obj;
+  fn.__workletHash = 2401621621985;
+  fn.__initData = closure_3;
+  let event = fn;
+  if (!useWeb) {
+    event = _require(context[1]).useEvent(fn, ["onGestureHandlerStateChange", "onGestureHandlerEvent"], tmp4);
+    const tmpResult = _require(context[1]);
+  }
+  return event;
+};

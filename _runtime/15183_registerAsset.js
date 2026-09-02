@@ -1,5 +1,5 @@
 // _runtime/15183_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "3ef7b97baaf789cd87cf8f96f96361db",
-  name: "BeakerIcon",
+  hash: "86ab59c715f76d7aec2c8e734978dc00",
+  name: "ChatDotsIcon",
   type: "png",
 });

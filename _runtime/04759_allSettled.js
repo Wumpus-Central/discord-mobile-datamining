@@ -1,7 +1,7 @@
 // _runtime/04759_allSettled.js
-import getEvalledConstructor from "00540_getEvalledConstructor.js";
+import getEvalledConstructor from "00537_getEvalledConstructor.js";
 import requirePromise from "04757_requirePromise.js";
-import callBind from "01418_callBind.js";
+import callBind from "01417_callBind.js";
 
 requirePromise();
 let closure_2 = callBind(getEvalledConstructor("%Promise.all%"));

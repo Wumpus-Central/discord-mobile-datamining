@@ -137,7 +137,7 @@ export const useViewModelInstance = function useViewModelInstance(arg0, instance
           }
         }
       } else {
-        obj7 = { instance: "PX_16", needsDispose: null };
+        obj7 = { instance: "PX_16", needsDispose: true };
       }
       let current = obj7.instance;
       if (current) {

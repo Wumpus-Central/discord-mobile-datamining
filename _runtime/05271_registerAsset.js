@@ -1,5 +1,5 @@
 // _runtime/05271_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 255,
   height: 255,
   scales: [1],
-  hash: "8db07373f3f919fb237f49a66c873b13",
-  name: "img_account_sync_twitter_white",
+  hash: "6aac6dfb7a93b44151193b49a9d5adfb",
+  name: "img_account_sync_reddit_white",
   type: "png",
 });

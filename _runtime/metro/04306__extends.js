@@ -1,8 +1,8 @@
 // _runtime/metro/04306__extends.js
 import noop from "../00019_noop.js";
 import emptyFunction from "../04307_emptyFunction.js";
-import warning from "../01229_warning.js";
-import invariant from "../01230_invariant.js";
+import warning from "../01226_warning.js";
+import invariant from "../01227_invariant.js";
 
 let Component2 = require;
 function _extends() {

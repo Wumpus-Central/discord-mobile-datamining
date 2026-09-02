@@ -1,12 +1,13 @@
 // _runtime/metro/00971__.js
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.ANTHROPIC_AI_INSTRUMENTED_METHODS = [
-  "messages.create",
-  "messages.stream",
-  "messages.countTokens",
-  "models.get",
-  "completions.create",
-  "models.retrieve",
-  "beta.messages.create",
+arg5.CHATS_CREATE_METHOD = "chats.create";
+arg5.CHAT_PATH = "chat";
+arg5.GOOGLE_GENAI_INSTRUMENTED_METHODS = [
+  "models.generateContent",
+  "models.generateContentStream",
+  "chats.create",
+  "sendMessage",
+  "sendMessageStream",
 ];
-arg5.ANTHROPIC_AI_INTEGRATION_NAME = "Anthropic_AI";
+arg5.GOOGLE_GENAI_INTEGRATION_NAME = "Google_GenAI";
+arg5.GOOGLE_GENAI_SYSTEM_NAME = "google_genai";

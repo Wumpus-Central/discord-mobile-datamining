@@ -1,13 +1,13 @@
 // _runtime/14409_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/empties",
-  width: 433,
-  height: 231.5,
+  httpServerLocation: "/assets/images/native",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "cb806289f81913ccee7a9e209b850638",
-  name: "blocked_dark",
+  hash: "d63daceced7ceb0d84c7aba817626689",
+  name: "ic_call_status_yellow_24px",
   type: "png",
 });

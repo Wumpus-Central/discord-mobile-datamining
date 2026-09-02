@@ -1,13 +1,13 @@
 // _runtime/09133_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/age_gate/native/images",
-  width: 250.66666666666666,
-  height: 167,
-  scales: [3],
-  hash: "9a7cbd196902440a5e0240c4f2a08774",
-  name: "nsfw_gate",
+  httpServerLocation: "/assets/images/native/wumpus",
+  width: 84,
+  height: 66,
+  scales: [1],
+  hash: "18d0a2a6cf6cc6fa0358c3bbfd2bce6e",
+  name: "wumpus-mario",
   type: "png",
 });

@@ -1,5 +1,5 @@
 // _runtime/10239_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "fce86bae946901aed4dd9d012c5d05d2",
-  name: "BellSlashIcon",
+  hash: "07392a850e043822a5c8062588fbfbb4",
+  name: "WaveformIcon",
   type: "png",
 });

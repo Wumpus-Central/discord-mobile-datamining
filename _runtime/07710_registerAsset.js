@@ -1,13 +1,13 @@
 // _runtime/07710_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native",
+  width: 189,
+  height: 225,
   scales: [2, 3],
-  hash: "db11ea9da81d79144310eac53428fbe9",
-  name: "CircleErrorIcon-primary",
+  hash: "a6de2d9a12ce42b0ce36333de4aed4c3",
+  name: "img_verify_email_sent",
   type: "png",
 });

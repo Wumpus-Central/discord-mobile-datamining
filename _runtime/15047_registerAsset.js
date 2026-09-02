@@ -1,13 +1,13 @@
 // _runtime/15047_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/../discord_common/js/shared/images/flags",
-  width: 70,
-  height: 47,
-  scales: [1],
-  hash: "2ac1239c26c4ae1d27817a9d7b85dc53",
-  name: "sv-SE",
+  httpServerLocation: "/assets/images/native",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "edefaa7b105418ac79e91df5e7252965",
+  name: "ic_forward_chevron",
   type: "png",
 });

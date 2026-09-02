@@ -1,5 +1,5 @@
 // _runtime/metro/03912__typeof.js
-import Parser2 from "../03878_Parser.js";
+import Parser2 from "../03877_Parser.js";
 
 let _createSuperInternal = require;
 let closure_1 = dependencyMap;
@@ -28,15 +28,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(ISOTimezoneParser, Parser) {
+function _setPrototypeOf(TimestampSecondsParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(ISOTimezoneParser, Parser) {
-      ISOTimezoneParser.__proto__ = Parser;
-      return ISOTimezoneParser;
+    _setPrototypeOf = function _setPrototypeOf(TimestampSecondsParser, Parser) {
+      TimestampSecondsParser.__proto__ = Parser;
+      return TimestampSecondsParser;
     };
   }
-  return _setPrototypeOf(ISOTimezoneParser, Parser);
+  return _setPrototypeOf(TimestampSecondsParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -56,7 +56,7 @@ function _getPrototypeOf(arg0) {
 }
 const Parser = Parser2.Parser;
 _createSuperInternal = undefined;
-class ISOTimezoneParser {
+class TimestampSecondsParser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -83,7 +83,7 @@ class ISOTimezoneParser {
       if (tmp13) {
         _ReferenceError2 = ReferenceError;
         tmp20 = new.target;
-        str5 = "this hasn't been initialised - super() hasn't been called";
+        str6 = "this hasn't been initialised - super() hasn't been called";
         tmp21 = new.target;
         referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
         tmp23 = referenceError;
@@ -93,33 +93,36 @@ class ISOTimezoneParser {
         if ("priority" in applyResult) {
           _Object = Object;
           definePropertyResult = Object.defineProperty(applyResult, "priority", {
-            value: 10,
+            value: 40,
             enumerable: true,
             configurable: true,
             writable: true,
           });
         } else {
-          num3 = 10;
-          applyResult.priority = 10;
+          num3 = 40;
+          applyResult.priority = 40;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
           tmp16 = new.target;
-          str4 = "this hasn't been initialised - super() hasn't been called";
+          str5 = "this hasn't been initialised - super() hasn't been called";
           tmp17 = new.target;
           referenceError1 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["t", "T", "X"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
-            obj = { value: null, enumerable: true, configurable: true, writable: true };
-            obj[0] = items1;
-            definePropertyResult1 = Object.defineProperty(applyResult, "incompatibleTokens", obj);
+            definePropertyResult1 = Object.defineProperty(applyResult, "incompatibleTokens", {
+              value: "*",
+              enumerable: true,
+              configurable: true,
+              writable: true,
+            });
           } else {
-            applyResult.incompatibleTokens = items1;
+            str4 = "*";
+            applyResult.incompatibleTokens = "*";
           }
           return applyResult;
         }
@@ -135,7 +138,7 @@ class ISOTimezoneParser {
     }
   }
 }
-closure_1 = ISOTimezoneParser;
+closure_1 = TimestampSecondsParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -147,12 +150,12 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-let obj = { value: ISOTimezoneParser, writable: true, configurable: true };
-ISOTimezoneParser.prototype = Object.create(prototype, { constructor: obj });
+let obj = { value: TimestampSecondsParser, writable: true, configurable: true };
+TimestampSecondsParser.prototype = Object.create(prototype, { constructor: obj });
 if (Parser) {
-  _setPrototypeOf(ISOTimezoneParser, Parser);
+  _setPrototypeOf(TimestampSecondsParser, Parser);
 }
-_createSuperInternal = ISOTimezoneParser;
+_createSuperInternal = TimestampSecondsParser;
 let num = 0;
 closure_1 = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
@@ -212,43 +215,17 @@ _createSuperInternal = function _createSuperInternal() {
 };
 obj = {
   key: "parse",
-  value: function parse(arg0, arg1) {
-    if ("x" === arg1) {
-      return _createSuperInternal(3880).parseTimezonePattern(
-        _createSuperInternal(3881).timezonePatterns.basicOptionalMinutes,
-        arg0,
-      );
-    } else if ("xx" === arg1) {
-      return _createSuperInternal(3880).parseTimezonePattern(_createSuperInternal(3881).timezonePatterns.basic, arg0);
-    } else if ("xxxx" === arg1) {
-      return _createSuperInternal(3880).parseTimezonePattern(
-        _createSuperInternal(3881).timezonePatterns.basicOptionalSeconds,
-        arg0,
-      );
-    } else if ("xxxxx" === arg1) {
-      return _createSuperInternal(3880).parseTimezonePattern(
-        _createSuperInternal(3881).timezonePatterns.extendedOptionalSeconds,
-        arg0,
-      );
-    } else {
-      return _createSuperInternal(3880).parseTimezonePattern(
-        _createSuperInternal(3881).timezonePatterns.extended,
-        arg0,
-      );
-    }
+  value: function parse(arg0) {
+    return _createSuperInternal(table[0]).parseAnyDigitsSigned(arg0);
   },
 };
 let items = [
   obj,
   {
     key: "set",
-    value: function set(getTime, timestampIsSet) {
-      let date = getTime;
-      if (!timestampIsSet.timestampIsSet) {
-        const _Date = Date;
-        date = new Date(getTime.getTime() - arg2);
-      }
-      return date;
+    value: function set(arg0, arg1, arg2) {
+      const items = [new Date(1000 * arg2), { timestampIsSet: true }];
+      return items;
     },
   },
 ];
@@ -271,4 +248,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { ISOTimezoneParser };
+export { TimestampSecondsParser };

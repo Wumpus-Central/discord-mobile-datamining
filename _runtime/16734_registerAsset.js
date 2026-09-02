@@ -1,13 +1,13 @@
 // _runtime/16734_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/voice_panel/native/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "66b9e24621d91b1d766a73314d18bc9f",
-  name: "xbox",
+  hash: "ed431a42081d7323282ce4207b41689a",
+  name: "icon-afk",
   type: "png",
 });

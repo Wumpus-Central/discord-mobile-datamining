@@ -1,13 +1,13 @@
 // _runtime/08180_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/AppIcon",
-  width: 60,
-  height: 60,
+  httpServerLocation: "/assets/images/native/premium/upsell",
+  width: 120,
+  height: 80,
   scales: [2, 3],
-  hash: "2a589a040df4c6bcca56de9fa304d36a",
-  name: "AppIcon",
+  hash: "0e96bcd2b2f1118c31b249938bd6d191",
+  name: "img_nitro_animated_avatar",
   type: "png",
 });

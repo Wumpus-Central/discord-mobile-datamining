@@ -1,5 +1,5 @@
 // _runtime/04777_ToPrimitive.js
-import apply from "01417_apply.js";
+import apply from "01416_apply.js";
 import isPrimitive from "04778_isPrimitive.js";
 
 let tmp = typeof Symbol === "function";
@@ -84,7 +84,7 @@ export default function ToPrimitive(arg0) {
         let tmp8;
         if (null != arg0[toPrimitive]) {
           tmp8 = tmp6;
-          if (!tmp(1417)(tmp6)) {
+          if (!tmp(1416)(tmp6)) {
             const _TypeError = TypeError;
             const _String2 = String;
             const text = `${tmp6} returned for property `;

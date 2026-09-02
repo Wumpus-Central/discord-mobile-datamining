@@ -1,13 +1,13 @@
 // _runtime/17110_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "009fbd96b391fb5fe3194dabbc819a91",
-  name: "ic_premium_info_24px",
+  httpServerLocation: "/assets/modules/parent_tools/images",
+  width: 1080,
+  height: 2400,
+  scales: [1],
+  hash: "98ba52ca11c0740336b7f6cfc50c1516",
+  name: "sunbeam_gradient_mobile",
   type: "png",
 });

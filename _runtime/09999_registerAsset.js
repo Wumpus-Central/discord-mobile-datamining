@@ -1,13 +1,13 @@
 // _runtime/09999_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/stage_channels/native/images",
-  width: 24,
-  height: 24,
-  scales: [1, 2, 3],
-  hash: "1f11c88bfa9d7d98913e00d032cd6bd3",
-  name: "ic_stage_music",
+  httpServerLocation: "/assets/modules/instant_invite/native/images",
+  width: 60,
+  height: 60,
+  scales: [2, 3],
+  hash: "19a79c674ca352a1b9c59552160bbdc6",
+  name: "telegram",
   type: "png",
 });

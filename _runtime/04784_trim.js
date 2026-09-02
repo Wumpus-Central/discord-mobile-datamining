@@ -1,5 +1,5 @@
 // _runtime/04784_trim.js
-import callBoundIntrinsic from "00574_callBoundIntrinsic.js";
+import callBoundIntrinsic from "00571_callBoundIntrinsic.js";
 import RequireObjectCoercible from "04771_RequireObjectCoercible.js";
 import ToString from "04785_ToString.js";
 

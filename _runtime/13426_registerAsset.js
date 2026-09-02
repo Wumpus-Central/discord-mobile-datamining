@@ -1,13 +1,13 @@
 // _runtime/13426_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/nuf_channels/native/images",
-  width: 120,
-  height: 120,
+  httpServerLocation: "/assets/images/native/premium/plan_selection",
+  width: 80,
+  height: 80,
   scales: [1],
-  hash: "b269fec2e8135bbc2e2d49cb182b352b",
-  name: "amanda",
+  hash: "e2676a24ea3247f11452fad9b442341d",
+  name: "img_wumpus_nitro",
   type: "png",
 });

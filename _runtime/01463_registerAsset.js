@@ -1,13 +1,13 @@
 // _runtime/01463_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/auto_moderation",
+  httpServerLocation: "/assets/images/native",
   width: 256,
   height: 256,
   scales: [1],
-  hash: "424407a78216a455f8fc1ac2080855a1",
-  name: "auto_moderation_avatar",
+  hash: "c3359f2e4aef01a86f637754d719562b",
+  name: "icon-group",
   type: "png",
 });

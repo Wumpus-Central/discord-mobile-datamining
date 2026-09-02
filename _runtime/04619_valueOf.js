@@ -1,9 +1,9 @@
 // _runtime/04619_valueOf.js
-import _mod608 from "metro/00608__.js";
+import _mod605 from "metro/00605__.js";
 
 let prototype;
-if (_mod608) {
-  prototype = _mod608.prototype;
+if (_mod605) {
+  prototype = _mod605.prototype;
 }
 let valueOf;
 if (prototype) {

@@ -1,5 +1,5 @@
 // _runtime/metro/03884__typeof.js
-import Parser2 from "../03878_Parser.js";
+import Parser2 from "../03877_Parser.js";
 
 let _createSuperInternal = require;
 let closure_1 = dependencyMap;
@@ -28,15 +28,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(ExtendedYearParser, Parser) {
+function _setPrototypeOf(QuarterParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(ExtendedYearParser, Parser) {
-      ExtendedYearParser.__proto__ = Parser;
-      return ExtendedYearParser;
+    _setPrototypeOf = function _setPrototypeOf(QuarterParser, Parser) {
+      QuarterParser.__proto__ = Parser;
+      return QuarterParser;
     };
   }
-  return _setPrototypeOf(ExtendedYearParser, Parser);
+  return _setPrototypeOf(QuarterParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -56,7 +56,7 @@ function _getPrototypeOf(arg0) {
 }
 const Parser = Parser2.Parser;
 _createSuperInternal = undefined;
-class ExtendedYearParser {
+class QuarterParser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -93,14 +93,14 @@ class ExtendedYearParser {
         if ("priority" in applyResult) {
           _Object = Object;
           definePropertyResult = Object.defineProperty(applyResult, "priority", {
-            value: 130,
+            value: 120,
             enumerable: true,
             configurable: true,
             writable: true,
           });
         } else {
-          num3 = 130;
-          applyResult.priority = 130;
+          num3 = 120;
+          applyResult.priority = 120;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
@@ -111,7 +111,7 @@ class ExtendedYearParser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["G", "y", "Y", "R", "w", "I", "i", "e", "c", "t", "T"];
+          items1 = ["Y", "R", "q", "M", "L", "w", "I", "d", "D", "i", "e", "c", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -135,7 +135,7 @@ class ExtendedYearParser {
     }
   }
 }
-closure_1 = ExtendedYearParser;
+closure_1 = QuarterParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -147,12 +147,12 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-let obj = { value: ExtendedYearParser, writable: true, configurable: true };
-ExtendedYearParser.prototype = Object.create(prototype, { constructor: obj });
+let obj = { value: QuarterParser, writable: true, configurable: true };
+QuarterParser.prototype = Object.create(prototype, { constructor: obj });
 if (Parser) {
-  _setPrototypeOf(ExtendedYearParser, Parser);
+  _setPrototypeOf(QuarterParser, Parser);
 }
-_createSuperInternal = ExtendedYearParser;
+_createSuperInternal = QuarterParser;
 let num = 0;
 closure_1 = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
@@ -212,23 +212,48 @@ _createSuperInternal = function _createSuperInternal() {
 };
 obj = {
   key: "parse",
-  value: function parse(arg0, arg1) {
-    if ("u" === arg1) {
-      let parseNDigitsSignedResult = _createSuperInternal(3880).parseNDigitsSigned(4, arg0);
-    } else {
-      parseNDigitsSignedResult = _createSuperInternal(3880).parseNDigitsSigned(arg1.length, arg0);
+  value: function parse(arg0, arg1, ordinalNumber) {
+    if ("Q" !== arg1) {
+      if ("QQ" !== arg1) {
+        if ("Qo" === arg1) {
+          return ordinalNumber.ordinalNumber(arg0, { unit: "quarter" });
+        } else if ("QQQ" === arg1) {
+          return (
+            ordinalNumber.quarter(arg0, { width: "abbreviated", context: "formatting" }) ||
+            ordinalNumber.quarter(arg0, { width: "narrow", context: "formatting" })
+          );
+        } else if ("QQQQQ" === arg1) {
+          return ordinalNumber.quarter(arg0, { width: "narrow", context: "formatting" });
+        } else {
+          return (
+            ordinalNumber.quarter(arg0, { width: "wide", context: "formatting" }) ||
+            ordinalNumber.quarter(arg0, { width: "abbreviated", context: "formatting" }) ||
+            ordinalNumber.quarter(arg0, { width: "narrow", context: "formatting" })
+          );
+        }
+      }
     }
-    return parseNDigitsSignedResult;
+    return _createSuperInternal(table[0]).parseNDigits(arg1.length, arg0);
   },
 };
 let items = [
   obj,
   {
+    key: "validate",
+    value: function validate(arg0, arg1) {
+      let tmp = arg1 >= 1;
+      if (tmp) {
+        tmp = arg1 <= 4;
+      }
+      return tmp;
+    },
+  },
+  {
     key: "set",
-    value: function set(setUTCFullYear) {
-      setUTCFullYear.setUTCFullYear(arg2, 0, 1);
-      setUTCFullYear.setUTCHours(0, 0, 0, 0);
-      return setUTCFullYear;
+    value: function set(setUTCMonth) {
+      setUTCMonth.setUTCMonth(3 * (arg2 - 1), 1);
+      setUTCMonth.setUTCHours(0, 0, 0, 0);
+      return setUTCMonth;
     },
   },
 ];
@@ -251,4 +276,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { ExtendedYearParser };
+export { QuarterParser };

@@ -1,5 +1,5 @@
 // _runtime/metro/03913__typeof.js
-import Parser2 from "../03878_Parser.js";
+import Parser2 from "../03877_Parser.js";
 
 let _createSuperInternal = require;
 let closure_1 = dependencyMap;
@@ -28,15 +28,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(TimestampSecondsParser, Parser) {
+function _setPrototypeOf(TimestampMillisecondsParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(TimestampSecondsParser, Parser) {
-      TimestampSecondsParser.__proto__ = Parser;
-      return TimestampSecondsParser;
+    _setPrototypeOf = function _setPrototypeOf(TimestampMillisecondsParser, Parser) {
+      TimestampMillisecondsParser.__proto__ = Parser;
+      return TimestampMillisecondsParser;
     };
   }
-  return _setPrototypeOf(TimestampSecondsParser, Parser);
+  return _setPrototypeOf(TimestampMillisecondsParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -56,7 +56,7 @@ function _getPrototypeOf(arg0) {
 }
 const Parser = Parser2.Parser;
 _createSuperInternal = undefined;
-class TimestampSecondsParser {
+class TimestampMillisecondsParser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -93,14 +93,14 @@ class TimestampSecondsParser {
         if ("priority" in applyResult) {
           _Object = Object;
           definePropertyResult = Object.defineProperty(applyResult, "priority", {
-            value: 40,
+            value: 20,
             enumerable: true,
             configurable: true,
             writable: true,
           });
         } else {
-          num3 = 40;
-          applyResult.priority = 40;
+          num3 = 20;
+          applyResult.priority = 20;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
@@ -138,7 +138,7 @@ class TimestampSecondsParser {
     }
   }
 }
-closure_1 = TimestampSecondsParser;
+closure_1 = TimestampMillisecondsParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -150,12 +150,12 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-let obj = { value: TimestampSecondsParser, writable: true, configurable: true };
-TimestampSecondsParser.prototype = Object.create(prototype, { constructor: obj });
+let obj = { value: TimestampMillisecondsParser, writable: true, configurable: true };
+TimestampMillisecondsParser.prototype = Object.create(prototype, { constructor: obj });
 if (Parser) {
-  _setPrototypeOf(TimestampSecondsParser, Parser);
+  _setPrototypeOf(TimestampMillisecondsParser, Parser);
 }
-_createSuperInternal = TimestampSecondsParser;
+_createSuperInternal = TimestampMillisecondsParser;
 let num = 0;
 closure_1 = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
@@ -224,7 +224,7 @@ let items = [
   {
     key: "set",
     value: function set(arg0, arg1, arg2) {
-      const items = [new Date(1000 * arg2), { timestampIsSet: true }];
+      const items = [new Date(arg2), { timestampIsSet: true }];
       return items;
     },
   },
@@ -248,4 +248,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { TimestampSecondsParser };
+export { TimestampMillisecondsParser };

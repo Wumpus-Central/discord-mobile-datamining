@@ -1,13 +1,13 @@
 // _runtime/13267_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/flower_star/dark",
-  width: 16,
-  height: 16,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "90c1dc5d32c0284bd720743e9ec59702",
-  name: "tier_0_24px",
+  hash: "49797bf2e9feeabeb3ed3af5b9cf8473",
+  name: "SparklesIcon",
   type: "png",
 });

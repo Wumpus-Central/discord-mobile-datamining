@@ -1,15 +1,11 @@
 // _runtime/08314__isNativeReflectConstruct.js
-import noopAll from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
-import _isNativeReflectConstructDefault from "08265__isNativeReflectConstruct.js";
-import __INTERNAL_VIEW_CONFIGDefault from "metro/08315___INTERNAL_VIEW_CONFIG.js";
-import closure_3 from "metro/00041__classCallCheck.js";
-import closure_4 from "metro/00093__possibleConstructorReturn.js";
-import closure_5 from "00095__getPrototypeOf.js";
+import closure_2 from "metro/00041__classCallCheck.js";
+import closure_3 from "metro/00093__possibleConstructorReturn.js";
+import closure_4 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
-import { jsx } from "react/00021_jsxProd.js";
 
-const Line = arg1;
+const FeSpotLight = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,14 +24,13 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-noopAll;
-class Line {
+class FeSpotLight {
   constructor() {
     self = this;
-    tmp = closure_3(this, Line);
-    tmp2 = closure_5;
-    obj = closure_5(Line);
-    tmp3 = closure_4;
+    tmp = closure_2(this, FeSpotLight);
+    tmp2 = closure_4;
+    obj = closure_4(FeSpotLight);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -49,37 +44,18 @@ class Line {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(Line, _isNativeReflectConstructDefault);
+_inheritsDefault(FeSpotLight, require("noop").Component);
 const items = [
   {
     key: "render",
     value: function render() {
-      const self = this;
-      const props = this.props;
-      let obj = {};
-      ({ x1, y1, x2, y2 } = props);
-      const merged = Object.assign(self(8256).extract(this, props));
-      obj.x1 = x1;
-      obj.y1 = y1;
-      obj.x2 = x2;
-      obj.y2 = y2;
-      obj = {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        },
-      };
-      const obj2 = self(8256);
-      const merged1 = Object.assign(obj);
-      return jsx(__INTERNAL_VIEW_CONFIGDefault, {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        },
-      });
+      const result = FeSpotLight(8266).warnUnimplementedFilter();
+      return null;
     },
   },
 ];
-const importDefaultResultResult = importDefaultResult(Line, items);
-importDefaultResultResult.displayName = "Line";
-importDefaultResultResult.defaultProps = { x1: 0, y1: 0, x2: 0, y2: 0 };
+const importDefaultResultResult = importDefaultResult(FeSpotLight, items);
+importDefaultResultResult.displayName = "FeSpotLight";
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

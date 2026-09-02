@@ -1,5 +1,5 @@
 // _runtime/00771_getNative.js
-import _mod609 from "metro/00609__.js";
-import getNative from "00737_getNative.js";
+import _mod606 from "metro/00606__.js";
+import getNative from "00734_getNative.js";
 
-export default getNative(_mod609, "DataView");
+export default getNative(_mod606, "WeakMap");

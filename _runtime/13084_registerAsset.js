@@ -1,13 +1,13 @@
 // _runtime/13084_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/native/images/perks",
-  width: 300,
-  height: 175,
-  scales: [2, 3],
-  hash: "337f717407aa04f32bdedf504de7310b",
-  name: "emoji",
+  httpServerLocation: "/assets/images/native/gifting/standard",
+  width: 144,
+  height: 150,
+  scales: [1],
+  hash: "8ea6c899915dc4dfb91fde69307aaf42",
+  name: "chest_idle",
   type: "png",
 });

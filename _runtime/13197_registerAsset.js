@@ -1,13 +1,13 @@
 // _runtime/13197_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/logos",
-  width: 45.5,
-  height: 8.5,
+  httpServerLocation: "/assets/images/native/premium/illustrations",
+  width: 52,
+  height: 46,
   scales: [2, 3],
-  hash: "8d16389f341b45c184ca21d1deb5fd2e",
-  name: "img_logo_discord",
+  hash: "5dd914546a21d2f37ba762b2209e8ec8",
+  name: "img_bundle_mobile",
   type: "png",
 });

@@ -1,9 +1,8 @@
 // _runtime/05781__isNativeReflectConstruct.js
 import _inheritsDefault from "00098__inherits.js";
-import ManualGesture from "metro/00041__classCallCheck.js";
+import TapGesture from "metro/00041__classCallCheck.js";
 import closure_1 from "metro/00093__possibleConstructorReturn.js";
 import closure_2 from "00095__getPrototypeOf.js";
-import closure_3 from "metro/00096__get.js";
 import importDefaultResult from "metro/00042__createClass.js";
 
 function _isNativeReflectConstruct() {
@@ -24,20 +23,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-function changeEventCalculator(arg0, arg1) {
-  return arg0;
-}
-changeEventCalculator.__closure = {};
-changeEventCalculator.__workletHash = 12945462865583;
-changeEventCalculator.__initData = {
-  code: "function changeEventCalculator_Pnpm_manualGestureTs1(current,_previous){return current;}",
-};
-class ManualGesture {
+class TapGesture {
   constructor() {
     self = this;
-    tmp = ManualGesture(this, ManualGesture);
+    tmp = TapGesture(this, TapGesture);
     tmp2 = closure_2;
-    obj = closure_2(ManualGesture);
+    obj = closure_2(TapGesture);
     tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
@@ -47,26 +38,63 @@ class ManualGesture {
       constructResult = obj.apply(self, undefined);
     }
     tmp3Result = tmp3(self, constructResult);
-    tmp3Result.handlerName = "ManualGestureHandler";
+    tmp3Result.config = {};
+    tmp3Result.handlerName = "TapGestureHandler";
+    result = tmp3Result.shouldCancelWhenOutside(true);
     return tmp3Result;
   }
 }
-_inheritsDefault(ManualGesture, require("_isNativeReflectConstruct").ContinousBaseGesture);
-let items = [
+_inheritsDefault(TapGesture, require("_isNativeReflectConstruct").BaseGesture);
+const items = [
   {
-    key: "onChange",
-    value: function onChange(arg0) {
-      this.handlers.changeEventCalculator = changeEventCalculator;
-      const self = this;
-      let fn;
-      fn = callback2(callback(self.prototype), "onChange", this);
-      if (typeof fn === "function") {
-        fn = (items) => fn.apply(self, items);
-      }
-      const items = [arg0];
-      return fn(items);
+    key: "minPointers",
+    value: function minPointers(minPointers) {
+      this.config.minPointers = minPointers;
+      return this;
+    },
+  },
+  {
+    key: "numberOfTaps",
+    value: function numberOfTaps(numberOfTaps) {
+      this.config.numberOfTaps = numberOfTaps;
+      return this;
+    },
+  },
+  {
+    key: "maxDistance",
+    value: function maxDistance(maxDist) {
+      this.config.maxDist = maxDist;
+      return this;
+    },
+  },
+  {
+    key: "maxDuration",
+    value: function maxDuration(maxDurationMs) {
+      this.config.maxDurationMs = maxDurationMs;
+      return this;
+    },
+  },
+  {
+    key: "maxDelay",
+    value: function maxDelay(maxDelayMs) {
+      this.config.maxDelayMs = maxDelayMs;
+      return this;
+    },
+  },
+  {
+    key: "maxDeltaX",
+    value: function maxDeltaX(maxDeltaX) {
+      this.config.maxDeltaX = maxDeltaX;
+      return this;
+    },
+  },
+  {
+    key: "maxDeltaY",
+    value: function maxDeltaY(maxDeltaY) {
+      this.config.maxDeltaY = maxDeltaY;
+      return this;
     },
   },
 ];
 
-export const ManualGesture = importDefaultResult(ManualGesture, items);
+export const TapGesture = importDefaultResult(TapGesture, items);

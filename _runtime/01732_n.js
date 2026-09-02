@@ -1,87 +1,103 @@
 // _runtime/01732_n.js
-import { isValidLayoutAnimationProp } from "01693_isValidLayoutAnimationProp.js";
 const require = arg1;
-let dependencyMap = arg6;
+const dependencyMap = arg6;
 let closure_2 = {
-  code: "function pnpm_delayTs2(){const{_nextAnimation,delayMs,getReduceMotionForAnimation,reduceMotion}=this.__closure;const nextAnimation=typeof _nextAnimation==='function'?_nextAnimation():_nextAnimation;function delay(animation,now){const{startTime:startTime,started:started,previousAnimation:previousAnimation}=animation;const current=animation.current;if(now-startTime>=delayMs||animation.reduceMotion){if(!started){nextAnimation.onStart(nextAnimation,current,now,previousAnimation);animation.previousAnimation=null;animation.started=true;}const finished=nextAnimation.onFrame(nextAnimation,now);animation.current=nextAnimation.current;return finished;}else if(previousAnimation){const finished=previousAnimation.finished||previousAnimation.onFrame(previousAnimation,now);animation.current=previousAnimation.current;if(finished){animation.previousAnimation=null;}}return false;}function onStart(animation,value,now,previousAnimation){animation.startTime=now;animation.started=false;animation.current=value;if(previousAnimation===animation){animation.previousAnimation=previousAnimation.previousAnimation;}else{animation.previousAnimation=previousAnimation;}if(nextAnimation.reduceMotion===undefined){nextAnimation.reduceMotion=animation.reduceMotion;}}const callback=function(finished){if(nextAnimation.callback){nextAnimation.callback(finished);}};return{isHigherOrder:true,onFrame:delay,onStart:onStart,current:nextAnimation.current,callback:callback,previousAnimation:null,startTime:0,started:false,reduceMotion:getReduceMotionForAnimation(reduceMotion)};}",
+  code: "function pnpm_repeatTs2(){const{_nextAnimation,numberOfReps,reverse,callback,getReduceMotionForAnimation,reduceMotion}=this.__closure;const nextAnimation=typeof _nextAnimation==='function'?_nextAnimation():_nextAnimation;function repeat(animation,now){const finished=nextAnimation.onFrame(nextAnimation,now);animation.current=nextAnimation.current;if(finished){animation.reps+=1;if(nextAnimation.callback){nextAnimation.callback(true,animation.current);}if(animation.reduceMotion||numberOfReps>0&&animation.reps>=numberOfReps){return true;}const startValue=reverse?nextAnimation.current:animation.startValue;if(reverse){nextAnimation.toValue=animation.startValue;animation.startValue=startValue;}nextAnimation.onStart(nextAnimation,startValue,now,nextAnimation.previousAnimation);return false;}return false;}const repCallback=function(finished){if(callback){callback(finished);}if(!finished&&nextAnimation.callback){nextAnimation.callback(false);}};function onStart(animation,value,now,previousAnimation){animation.startValue=value;animation.reps=0;if(nextAnimation.reduceMotion===undefined){nextAnimation.reduceMotion=animation.reduceMotion;}if(animation.reduceMotion&&reverse&&(numberOfReps<=0||numberOfReps%2===0)){animation.current=animation.startValue;animation.onFrame=function(){return true;};}else{nextAnimation.onStart(nextAnimation,value,now,previousAnimation);}}return{isHigherOrder:true,onFrame:repeat,onStart:onStart,reps:0,current:nextAnimation.current,callback:repCallback,startValue:0,reduceMotion:getReduceMotionForAnimation(reduceMotion)};}",
 };
-let fn = function n(delayMs, _nextAnimation, reduceMotion) {
-  const _require = delayMs;
-  dependencyMap = _nextAnimation;
-  closure_2 = reduceMotion;
-  let obj = isValidLayoutAnimationProp;
-  const fn = function s() {
-    let tmpResult = table;
-    if (typeof table === "function") {
+let fn = function n(_nextAnimation, arg1, arg2, callback, reduceMotion) {
+  const _require = _nextAnimation;
+  let num = arg1;
+  if (arg1 === undefined) {
+    num = 2;
+  }
+  let flag = arg2;
+  if (arg2 === undefined) {
+    flag = false;
+  }
+  closure_3 = callback;
+  closure_4 = reduceMotion;
+  let obj = _require(num[0]);
+  const fn = function l() {
+    let tmpResult = _nextAnimation;
+    if (typeof _nextAnimation === "function") {
       tmpResult = tmp();
     }
-    delayMs = tmpResult;
+    _nextAnimation = tmpResult;
     const obj = {
       isHigherOrder: true,
-      onFrame: function delay(startTime) {
-        ({ previousAnimation, current } = startTime);
-        if (arg1 - startTime.startTime < closure_0) {
-          if (!startTime.reduceMotion) {
-            if (previousAnimation) {
-              startTime.current = previousAnimation.current;
-              if (tmp) {
-                startTime.previousAnimation = null;
-              }
-              tmp = previousAnimation.finished || previousAnimation.onFrame(previousAnimation, arg1);
+      onFrame: function repeat(reps) {
+        reps.current = closure_0.current;
+        if (closure_0.onFrame(closure_0, arg1)) {
+          reps.reps = reps.reps + 1;
+          if (obj.callback) {
+            obj.callback(true, reps.current);
+          }
+          if (!reps.reduceMotion) {
+            const tmp3 = closure_1_2 ? obj.current : reps.startValue;
+            if (closure_1_2) {
+              obj.toValue = reps.startValue;
+              reps.startValue = tmp3;
             }
+            obj.onStart(obj, tmp3, arg1, obj.previousAnimation);
             return false;
           }
+          return true;
+        } else {
+          return false;
         }
-        if (!startTime.started) {
-          closure_0.onStart(closure_0, current, arg1, previousAnimation);
-          startTime.previousAnimation = null;
-          startTime.started = true;
-        }
-        startTime.current = closure_0.current;
-        return closure_0.onFrame(closure_0, arg1);
       },
-      onStart(reduceMotion, current, startTime, previousAnimation) {
-        reduceMotion.startTime = startTime;
-        reduceMotion.started = false;
-        reduceMotion.current = current;
-        if (previousAnimation === reduceMotion) {
-          previousAnimation = previousAnimation.previousAnimation;
-        }
-        reduceMotion.previousAnimation = previousAnimation;
+      onStart(reduceMotion, startValue) {
+        reduceMotion.startValue = startValue;
+        reduceMotion.reps = 0;
         if (undefined === closure_0.reduceMotion) {
-          tmp.reduceMotion = reduceMotion.reduceMotion;
+          obj.reduceMotion = reduceMotion.reduceMotion;
         }
+        if (reduceMotion.reduceMotion) {
+          if (closure_1_2) {
+            reduceMotion.current = reduceMotion.startValue;
+            reduceMotion.onFrame = () => true;
+          }
+        }
+        closure_0.onStart(closure_0, startValue, arg2, arg3);
       },
+      reps: 0,
       current: tmpResult.current,
       callback(arg0) {
-        if (closure_0.callback) {
-          closure_0.callback(arg0);
+        if (closure_1_3) {
+          tmp(arg0);
+        }
+        callback = !arg0;
+        if (!arg0) {
+          callback = closure_0.callback;
+        }
+        if (callback) {
+          closure_0.callback(false);
         }
       },
-      previousAnimation: null,
-      startTime: 0,
-      started: false,
-      reduceMotion: delayMs(table[0]).getReduceMotionForAnimation(closure_2),
+      startValue: 0,
+      reduceMotion: _nextAnimation(num[0]).getReduceMotionForAnimation(closure_4),
     };
     return obj;
   };
   obj = {
     _nextAnimation,
-    delayMs,
-    getReduceMotionForAnimation: require("01693_isValidLayoutAnimationProp.js").getReduceMotionForAnimation,
+    numberOfReps: num,
+    reverse: flag,
+    callback,
+    getReduceMotionForAnimation: _require(num[0]).getReduceMotionForAnimation,
     reduceMotion,
   };
   fn.__closure = obj;
-  fn.__workletHash = 7904568249320;
-  fn.__initData = closure_2;
+  fn.__workletHash = 11413099333511;
+  fn.__initData = flag;
   return obj.defineAnimation(_nextAnimation, fn);
 };
 fn.__closure = {
   defineAnimation: require("isValidLayoutAnimationProp").defineAnimation,
   getReduceMotionForAnimation: require("isValidLayoutAnimationProp").getReduceMotionForAnimation,
 };
-fn.__workletHash = 10965419997083;
+fn.__workletHash = 13638828150427;
 fn.__initData = {
-  code: "function pnpm_delayTs1(delayMs,_nextAnimation,reduceMotion){const{defineAnimation,getReduceMotionForAnimation}=this.__closure;return defineAnimation(_nextAnimation,function(){'worklet';const nextAnimation=typeof _nextAnimation==='function'?_nextAnimation():_nextAnimation;function delay(animation,now){const{startTime:startTime,started:started,previousAnimation:previousAnimation}=animation;const current=animation.current;if(now-startTime>=delayMs||animation.reduceMotion){if(!started){nextAnimation.onStart(nextAnimation,current,now,previousAnimation);animation.previousAnimation=null;animation.started=true;}const finished=nextAnimation.onFrame(nextAnimation,now);animation.current=nextAnimation.current;return finished;}else if(previousAnimation){const finished=previousAnimation.finished||previousAnimation.onFrame(previousAnimation,now);animation.current=previousAnimation.current;if(finished){animation.previousAnimation=null;}}return false;}function onStart(animation,value,now,previousAnimation){animation.startTime=now;animation.started=false;animation.current=value;if(previousAnimation===animation){animation.previousAnimation=previousAnimation.previousAnimation;}else{animation.previousAnimation=previousAnimation;}if(nextAnimation.reduceMotion===undefined){nextAnimation.reduceMotion=animation.reduceMotion;}}const callback=function(finished){if(nextAnimation.callback){nextAnimation.callback(finished);}};return{isHigherOrder:true,onFrame:delay,onStart:onStart,current:nextAnimation.current,callback:callback,previousAnimation:null,startTime:0,started:false,reduceMotion:getReduceMotionForAnimation(reduceMotion)};});}",
+  code: "function pnpm_repeatTs1(_nextAnimation,numberOfReps=2,reverse=false,callback,reduceMotion){const{defineAnimation,getReduceMotionForAnimation}=this.__closure;return defineAnimation(_nextAnimation,function(){'worklet';const nextAnimation=typeof _nextAnimation==='function'?_nextAnimation():_nextAnimation;function repeat(animation,now){const finished=nextAnimation.onFrame(nextAnimation,now);animation.current=nextAnimation.current;if(finished){animation.reps+=1;if(nextAnimation.callback){nextAnimation.callback(true,animation.current);}if(animation.reduceMotion||numberOfReps>0&&animation.reps>=numberOfReps){return true;}const startValue=reverse?nextAnimation.current:animation.startValue;if(reverse){nextAnimation.toValue=animation.startValue;animation.startValue=startValue;}nextAnimation.onStart(nextAnimation,startValue,now,nextAnimation.previousAnimation);return false;}return false;}const repCallback=function(finished){if(callback){callback(finished);}if(!finished&&nextAnimation.callback){nextAnimation.callback(false);}};function onStart(animation,value,now,previousAnimation){animation.startValue=value;animation.reps=0;if(nextAnimation.reduceMotion===undefined){nextAnimation.reduceMotion=animation.reduceMotion;}if(animation.reduceMotion&&reverse&&(numberOfReps<=0||numberOfReps%2===0)){animation.current=animation.startValue;animation.onFrame=function(){return true;};}else{nextAnimation.onStart(nextAnimation,value,now,previousAnimation);}}return{isHigherOrder:true,onFrame:repeat,onStart:onStart,reps:0,current:nextAnimation.current,callback:repCallback,startValue:0,reduceMotion:getReduceMotionForAnimation(reduceMotion)};});}",
 };
-arg5.withDelay = fn;
+arg5.withRepeat = fn;

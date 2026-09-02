@@ -1,15 +1,12 @@
 // _runtime/08297__isNativeReflectConstruct.js
-import noopDefault from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
-import _isNativeReflectConstructDefault from "08280__isNativeReflectConstruct.js";
-import __INTERNAL_VIEW_CONFIGDefault from "metro/08298___INTERNAL_VIEW_CONFIG.js";
-import closure_3 from "metro/00041__classCallCheck.js";
-import closure_4 from "metro/00093__possibleConstructorReturn.js";
-import closure_5 from "00095__getPrototypeOf.js";
+import _isNativeReflectConstructDefault from "08289__isNativeReflectConstruct.js";
+import closure_2 from "metro/00041__classCallCheck.js";
+import closure_3 from "metro/00093__possibleConstructorReturn.js";
+import closure_4 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
-import { jsx } from "react/00021_jsxProd.js";
 
-const FeMerge = arg1;
+const FeDisplacementMap = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,14 +25,13 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-noopDefault;
-class FeMerge {
+class FeDisplacementMap {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeMerge);
-    tmp2 = closure_5;
-    obj = closure_5(FeMerge);
-    tmp3 = closure_4;
+    tmp = closure_2(this, FeDisplacementMap);
+    tmp2 = closure_4;
+    obj = closure_4(FeDisplacementMap);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -49,34 +45,19 @@ class FeMerge {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(FeMerge, _isNativeReflectConstructDefault);
+_inheritsDefault(FeDisplacementMap, _isNativeReflectConstructDefault);
 let obj = {
   key: "render",
   value: function render() {
-    const self = this;
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    };
-    const tmp = __INTERNAL_VIEW_CONFIGDefault;
-    const merged = Object.assign(self(8279).extractFilter(this.props));
-    const obj2 = self(8279);
-    const merged1 = Object.assign(self(8279).extractFeMerge(this.props, this));
-    return (
-      <tmp
-        ref={function ref(arg0) {
-          return self.refMethod(arg0);
-        }}
-      />
-    );
+    const result = FeDisplacementMap(8266).warnUnimplementedFilter();
+    return null;
   },
 };
 const items = [obj];
-const importDefaultResultResult = importDefaultResult(FeMerge, items);
-importDefaultResultResult.displayName = "FeMerge";
+const importDefaultResultResult = importDefaultResult(FeDisplacementMap, items);
+importDefaultResultResult.displayName = "FeDisplacementMap";
 obj = {};
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
 importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

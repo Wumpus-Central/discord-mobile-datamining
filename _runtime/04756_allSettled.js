@@ -3,7 +3,7 @@ import requirePromise from "04757_requirePromise.js";
 import getPolyfill from "04758_getPolyfill.js";
 import allSettled2 from "04759_allSettled.js";
 import shimAllSettled from "04834_shimAllSettled.js";
-import callBind from "01418_callBind.js";
+import callBind from "01417_callBind.js";
 import defineProperty from "04786_defineProperty.js";
 
 requirePromise();

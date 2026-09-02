@@ -1,5 +1,5 @@
 // _runtime/04774_ToNumber.js
-import getEvalledConstructor from "00540_getEvalledConstructor.js";
+import getEvalledConstructor from "00537_getEvalledConstructor.js";
 import isPrimitive from "04775_isPrimitive.js";
 
 let closure_2 = getEvalledConstructor("%Number%");
@@ -10,10 +10,10 @@ export default function ToNumber(arg0) {
     tmp3 = tmp(4776)(arg0, closure_2);
   }
   if (typeof tmp3 === "symbol") {
-    const tmp12 = new tmp(541)("Cannot convert a Symbol value to a number");
+    const tmp12 = new tmp(538)("Cannot convert a Symbol value to a number");
     throw tmp12;
   } else if (typeof tmp3 === "bigint") {
-    const tmp8 = new tmp(541)("Conversion from 'BigInt' to 'number' is not allowed.");
+    const tmp8 = new tmp(538)("Conversion from 'BigInt' to 'number' is not allowed.");
     throw tmp8;
   } else {
     if (typeof tmp3 === "string") {

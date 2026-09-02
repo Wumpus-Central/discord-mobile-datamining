@@ -1,5 +1,5 @@
 // _runtime/04600_allocUnsafe.js
-import _mod609 from "metro/00609__.js";
+import _mod606 from "metro/00606__.js";
 
 let tmp = typeof exports === "object";
 if (typeof exports === "object") {
@@ -27,7 +27,7 @@ if (tmp2) {
 let _Buffer;
 if (tmp2) {
   if (tmp2.exports === tmp) {
-    _Buffer = _mod609.Buffer;
+    _Buffer = _mod606.Buffer;
   }
 }
 let allocUnsafe;

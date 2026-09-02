@@ -1,10 +1,10 @@
 // _runtime/04771_RequireObjectCoercible.js
-import _mod541 from "metro/00541__.js";
+import _mod538 from "metro/00538__.js";
 
 export default function RequireObjectCoercible(arg0) {
   if (null == arg0) {
     let text = arguments.length > 0;
-    let tmp3 = _mod541;
+    let tmp3 = _mod538;
     if (text) {
       text = arguments[1];
     }

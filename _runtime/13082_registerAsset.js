@@ -1,13 +1,13 @@
 // _runtime/13082_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/native/images/perks",
-  width: 300.5,
-  height: 175,
-  scales: [2, 3],
-  hash: "cd214b5502d42e0d86b5bf4c01260ed5",
-  name: "grey_server_boosts",
+  httpServerLocation: "/assets/images/native/gifting/standard",
+  width: 144,
+  height: 150,
+  scales: [1],
+  hash: "c4e1982e9b2ef93acb5f2236a23782fc",
+  name: "coffee_idle",
   type: "png",
 });

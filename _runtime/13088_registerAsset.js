@@ -1,13 +1,13 @@
 // _runtime/13088_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/native/images/perks",
-  width: 300,
-  height: 175,
-  scales: [2, 3],
-  hash: "f171afff980c8e21add7808b4b6646ed",
-  name: "member_pricing",
+  httpServerLocation: "/assets/images/native/gifting/seasonal",
+  width: 144,
+  height: 150,
+  scales: [1],
+  hash: "9326b8f858addb08d8cfb2f4710ba77a",
+  name: "coffee_idle",
   type: "png",
 });

@@ -1,5 +1,5 @@
 // _runtime/06236_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "45c8ad8f30ca8563a8afaab90a692e66",
-  name: "MagnifyingGlassIcon",
+  hash: "737159bf8222c1bab03c6bbf25897f2f",
+  name: "CircleXIcon-primary",
   type: "png",
 });

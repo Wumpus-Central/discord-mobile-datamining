@@ -1,13 +1,13 @@
 // _runtime/10412_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
+  width: 12,
+  height: 12,
   scales: [2, 3],
-  hash: "efc7df36de437c3f1595567d5ebedccf",
-  name: "ic_sticker_24px",
+  hash: "91cf7e45c8979413a0ad2486eb772598",
+  name: "ic_nitro_wheel",
   type: "png",
 });

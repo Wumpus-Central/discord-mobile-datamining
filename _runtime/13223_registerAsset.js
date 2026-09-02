@@ -1,13 +1,13 @@
 // _runtime/13223_registerAsset.js
-import registerAsset from "01241_registerAsset.js";
+import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/logos",
-  width: 185,
-  height: 32,
+  httpServerLocation: "/assets/images/native/premium/illustrations",
+  width: 134.5,
+  height: 82,
   scales: [2, 3],
-  hash: "dba969ce1008f0b8964b0d6bd348ad3e",
-  name: "img_logo_premium_tier_1_full",
+  hash: "db25e5ae76d4f6a3f9af5fda0e269762",
+  name: "img_what_you_lose_uploads",
   type: "png",
 });
