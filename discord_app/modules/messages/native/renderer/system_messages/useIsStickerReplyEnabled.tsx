@@ -1,5 +1,5 @@
 // discord_app/modules/messages/native/renderer/system_messages/useIsStickerReplyEnabled.tsx
-import useCanUnarchiveThread from "../../../../threads/ThreadHooks.tsx";
+import useCanStartPrivateThread from "../../../../threads/ThreadHooks.tsx";
 import closure_2 from "../../../../../stores/GuildMemberStore.tsx";
 import closure_3 from "../../../../../stores/PermissionStore.tsx";
 import closure_4 from "../../../../../stores/UserStore.tsx";
@@ -21,7 +21,7 @@ export const computeIsStickerReplyEnabled = function computeIsStickerReplyEnable
     }
     tmp2 = isPending;
   }
-  const isReadOnlyThread = useCanUnarchiveThread.computeIsReadOnlyThread(channel);
+  const isReadOnlyThread = useCanStartPrivateThread.computeIsReadOnlyThread(channel);
   let canResult = closure_3.can(Permissions.SEND_MESSAGES, channel);
   if (canResult) {
     canResult = !isReadOnlyThread;

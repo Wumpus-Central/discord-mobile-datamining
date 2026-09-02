@@ -117,7 +117,7 @@ const memoResult = importAllResult.memo(function GuildDisableCommunication(arg0)
               return obj;
             } else {
               closure_1 = tmp4;
-              let obj3 = closure_1_1(11415);
+              let obj3 = closure_1_1(11638);
               dependencyMap = 1;
               c3 = 1;
               obj1 = { value: null, done: false };
@@ -138,7 +138,7 @@ const memoResult = importAllResult.memo(function GuildDisableCommunication(arg0)
             obj2[0] = arg1;
             return obj2;
           } else {
-            const intl = closure_1_0(1236).intl;
+            const intl = closure_1_0(1233).intl;
             const obj8 = closure_1_1(4194);
             const name = closure_1_1(4673).getName(closure_1, null, c0);
             c0 = name;
@@ -148,8 +148,8 @@ const memoResult = importAllResult.memo(function GuildDisableCommunication(arg0)
             obj = { key: "GUILD_COMMUNICATION_DISABLED_SUCCESS", content: null, icon: null };
             obj3 = { user: null };
             obj3[0] = c0;
-            obj[1] = intl.formatToPlainString(closure_1_0(1236).t.O9C3Nt, obj3);
-            obj[2] = closure_1_1(9518);
+            obj[1] = intl.formatToPlainString(closure_1_0(1233).t.O9C3Nt, obj3);
+            obj[2] = closure_1_1(9531);
             obj8.open(obj);
             dependencyMap();
             c3 = 3;

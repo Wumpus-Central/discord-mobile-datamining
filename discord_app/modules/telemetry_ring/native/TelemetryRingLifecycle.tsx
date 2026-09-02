@@ -19,9 +19,9 @@ class TelemetryRingLifecycleImpl extends tmp2 {
       const result = applyArgumentsResult._updateZoomedInExport();
     };
     applyArgumentsResult._handleLogout = function _handleLogout() {
-      applyArgumentsResult(13841).clear();
-      const obj = applyArgumentsResult(13841);
-      applyArgumentsResult(13837).reset();
+      applyArgumentsResult(14064).clear();
+      const obj = applyArgumentsResult(14064);
+      applyArgumentsResult(14060).reset();
     };
     return applyArgumentsResult;
   }
@@ -36,10 +36,10 @@ prototype["_updateZoomedInExport"] = function _updateZoomedInExport() {
   }
   const result = getHermesInstrumentedStatsSummaryDefault.setShouldCollectHermesInstrumentedStats(shouldRunResult);
   if (state === AppStates.ACTIVE) {
-    let tmp6Result = tmp6(13837);
+    let tmp6Result = tmp6(14060);
     tmp6Result.start();
   } else {
-    tmp6Result = tmp6(13837);
+    tmp6Result = tmp6(14060);
     tmp6Result.stop();
   }
 };
@@ -48,17 +48,17 @@ prototype["_initialize"] = function _initialize() {
   self = this;
   if (!this._initialized) {
     self._initialized = true;
-    const subscription = self(709).subscribe("LOGOUT", self._handleLogout);
+    const subscription = self(706).subscribe("LOGOUT", self._handleLogout);
     closure_4.addChangeListener(self._handleEligibilityChange);
     closure_3.addChangeListener(self._handleEligibilityChange);
     closure_2.addChangeListener(self._handleEligibilityChange);
     self._experimentUnsubscribe = () => {
       closure_1_2.removeChangeListener(self._handleEligibilityChange);
     };
-    const obj = self(709);
-    self(13837).initialize();
+    const obj = self(706);
+    self(14060).initialize();
     const result = self._updateZoomedInExport();
-    const obj2 = self(13837);
+    const obj2 = self(14060);
   }
 };
 prototype["_terminate"] = function _terminate() {
@@ -70,9 +70,9 @@ prototype["_terminate"] = function _terminate() {
     const result = self._experimentUnsubscribe();
     self._experimentUnsubscribe = null;
   }
-  let tmpResult = tmp(13837);
+  let tmpResult = tmp(14060);
   tmpResult.stop();
-  tmpResult = tmp(7419);
+  tmpResult = tmp(7428);
   const result1 = tmpResult.setShouldCollectHermesInstrumentedStats(false);
   self._initialized = false;
 };

@@ -18,7 +18,7 @@ export const useUsersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds =
     userIds = userIds.userIds;
     let items = [closure_3, closure_8];
     const items1 = [userIds];
-    return userIds(589).useStateFromStoresArray(
+    return userIds(586).useStateFromStoresArray(
       items,
       () => {
         const items = [];
@@ -284,11 +284,11 @@ export const useIsCurrentUserPlayingSocialLayerStorefrontGames =
 export const useIsCurrentUserInSocialLayerStorefrontGuildsApplicationIds =
   function useIsCurrentUserInSocialLayerStorefrontGuildsApplicationIds() {
     let items = [closure_6];
-    stateFromStores = stateFromStores(589).useStateFromStores(items, () => guildIds.getGuildIds());
-    const obj = stateFromStores(589);
+    stateFromStores = stateFromStores(586).useStateFromStores(items, () => guildIds.getGuildIds());
+    const obj = stateFromStores(586);
     const items1 = [closure_8];
     const items2 = [stateFromStores];
-    return stateFromStores(589).useStateFromStoresArray(
+    return stateFromStores(586).useStateFromStoresArray(
       items1,
       () => {
         const items = [];

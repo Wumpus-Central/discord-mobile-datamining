@@ -5,7 +5,7 @@ import mapDefault from "../../../settings/native/renderer/SettingHookHarness.tsx
 import DevToolsContentSortButtonsDefault from "DevToolsContent.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createNativeStackNavigator from "../../../../../_runtime/07822_createNativeStackNavigator.js";
+import createNativeStackNavigator from "../../../../../_runtime/07831_createNativeStackNavigator.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 
@@ -47,14 +47,14 @@ let closure_8 = importAllResult.memo((screenKey) => {
         return {
           headerTitle() {
             let obj = { style: { flexDirection: "row" }, children: null };
-            const items = [callback3(callback(9373).HammerIcon, { size: "sm" })];
+            const items = [callback3(callback(9386).HammerIcon, { size: "sm" })];
             obj = {
               style: null,
               variant: "heading-md/semibold",
               color: "mobile-text-heading-primary",
               children: "DevTools",
             };
-            obj = { marginLeft: callback2(712).space.PX_8 };
+            obj = { marginLeft: callback2(709).space.PX_8 };
             obj[0] = obj;
             items[1] = callback3(callback(4474).Text, obj);
             obj[1] = items;
@@ -66,8 +66,8 @@ let closure_8 = importAllResult.memo((screenKey) => {
     }),
     ,
   ];
-  let merged = Object.assign(tmp(15177).DevToolsScreens);
-  let merged1 = Object.assign(tmp(15177).PerformanceTestingScreens);
+  let merged = Object.assign(tmp(15406).DevToolsScreens);
+  let merged1 = Object.assign(tmp(15406).PerformanceTestingScreens);
   const entries = Object.entries({});
   items1[1] = entries.map((arg0) => {
     [tmp] = arg0;
@@ -90,14 +90,14 @@ let closure_8 = importAllResult.memo((screenKey) => {
       return {
         headerTitle() {
           let obj = { style: { flexDirection: "row" }, children: null };
-          const items = [callback3(callback(9373).HammerIcon, { size: "sm" })];
+          const items = [callback3(callback(9386).HammerIcon, { size: "sm" })];
           obj = {
             style: null,
             variant: "heading-md/semibold",
             color: "mobile-text-heading-primary",
             children: "DevTools",
           };
-          obj = { marginLeft: callback2(712).space.PX_8 };
+          obj = { marginLeft: callback2(709).space.PX_8 };
           obj[0] = obj;
           items[1] = callback3(callback(4474).Text, obj);
           obj[1] = items;

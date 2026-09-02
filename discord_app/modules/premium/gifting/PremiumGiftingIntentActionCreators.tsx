@@ -40,9 +40,9 @@ export const fetchAndReconcileGiftIntentDismissals = function fetchAndReconcileG
       }
     },
     (arg0) => {
-      callback(1208).captureException(arg0, { tags: { feature: "gift_intent" } });
-      const obj = callback(1208);
-      callback(709).dispatch({ type: "GIFT_INTENT_DISMISSALS_FETCH_FAILURE" });
+      callback(1205).captureException(arg0, { tags: { feature: "gift_intent" } });
+      const obj = callback(1205);
+      callback(706).dispatch({ type: "GIFT_INTENT_DISMISSALS_FETCH_FAILURE" });
     },
   );
 };

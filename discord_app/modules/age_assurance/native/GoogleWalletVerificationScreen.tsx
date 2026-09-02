@@ -17,7 +17,7 @@ export default function GoogleWalletVerificationScreen(modalSessionId) {
   let callback;
   let callback1;
   let React;
-  let obj = modalSessionId(1499);
+  let obj = modalSessionId(1498);
   navigation = obj.useNavigation();
   [tmp5, c2] = callback1(React.useState({ type: "loading" }), 2);
   obj1 = modalSessionId(4733);
@@ -187,13 +187,13 @@ export default function GoogleWalletVerificationScreen(modalSessionId) {
     obj1 = { align: "center", justify: "center", spacing: 16, children: null };
     const items3 = [callback(ActivityIndicator, { size: "large" })];
     let obj2 = { variant: "text-md/medium", color: "text-strong", children: null };
-    let intl = tmp(1236).intl;
-    obj2[2] = intl.string(navigation(2919).MlFuBI);
+    let intl = tmp(1233).intl;
+    obj2[2] = intl.string(navigation(2918).MlFuBI);
     items3[1] = callback(tmp(4474).Text, obj2);
     obj1[3] = items3;
     obj[0] = callback2(tmp(4926).Stack, obj1);
-    obj[0] = callback(tmp(8693).ModalContent, obj);
-    let tmp14 = callback(tmp(8692).ModalScreen, obj);
+    obj[0] = callback(tmp(8708).ModalContent, obj);
+    let tmp14 = callback(tmp(8707).ModalScreen, obj);
   } else {
     let obj3 = { children: null };
     let obj4 = { children: null };
@@ -203,8 +203,8 @@ export default function GoogleWalletVerificationScreen(modalSessionId) {
     const items4 = [callback(tmp(4474).Text, obj6)];
     let obj7 = { children: null };
     let obj8 = { variant: "primary", size: "lg", text: null, onPress: null };
-    let intl2 = tmp(1236).intl;
-    obj8[2] = intl2.string(navigation(2919).fEUKEv);
+    let intl2 = tmp(1233).intl;
+    obj8[2] = intl2.string(navigation(2918).fEUKEv);
     obj8[3] = function onPress() {
       const result = modalSessionId(_undefined[18]).trackAgeVerificationModalClicked(
         modalSessionId,
@@ -214,11 +214,11 @@ export default function GoogleWalletVerificationScreen(modalSessionId) {
       callback();
     };
     obj7[0] = callback(tmp(4928).Button, obj8);
-    items4[1] = callback(tmp(5376).ButtonGroup, obj7);
+    items4[1] = callback(tmp(5384).ButtonGroup, obj7);
     obj5[3] = items4;
     obj4[0] = callback2(tmp(4926).Stack, obj5);
-    obj3[0] = callback(tmp(8693).ModalContent, obj4);
-    tmp14 = callback(tmp(8692).ModalScreen, obj3);
+    obj3[0] = callback(tmp(8708).ModalContent, obj4);
+    tmp14 = callback(tmp(8707).ModalScreen, obj3);
   }
   return tmp14;
 }

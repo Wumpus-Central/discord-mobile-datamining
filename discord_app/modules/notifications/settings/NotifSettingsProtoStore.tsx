@@ -56,6 +56,12 @@ const notifSettingsProtoStore = new NotifSettingsProtoStore(dispatcherDefault, {
       return false;
     }
   },
+  DECLARATIVE_NOTIFICATION_SETTINGS_UPDATE: function handleDeclarativeNotificationSettingsUpdate(declarativeSettings) {
+    declarativeSettings = declarativeSettings.declarativeSettings;
+    if (null == declarativeSettings) {
+      return false;
+    }
+  },
   LOGOUT: function handleLogout() {
     const DeclarativeSettings = create.DeclarativeSettings;
     closure_2 = DeclarativeSettings.create();

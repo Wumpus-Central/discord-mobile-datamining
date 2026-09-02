@@ -2,7 +2,7 @@
 import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import noop from "../../../../../../../discord_common/js/packages/flash-list/index.js";
 import map from "../../../../../screen/native/useScaledTextLineHeight.android.tsx";
-import toNativeHorizontalOffset from "../../../../../../../_runtime/15632_toNativeHorizontalOffset.js";
+import toNativeHorizontalOffset from "../../../../../../../_runtime/15863_toNativeHorizontalOffset.js";
 import closure_3 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";

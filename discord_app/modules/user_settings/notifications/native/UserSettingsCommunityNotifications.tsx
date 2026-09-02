@@ -14,7 +14,7 @@ let result = require("set").fileFinishedImporting(
 );
 
 export default function UserSettingsCommunityNotifications() {
-  let obj = stateFromStores(589);
+  let obj = stateFromStores(586);
   let items = [closure_3];
   stateFromStores = obj.useStateFromStores(items, () => guildAlertSettings.getGuildAlertSettings());
   const tmp = callback2();
@@ -59,7 +59,7 @@ export default function UserSettingsCommunityNotifications() {
       return closure_1_5(stateFromStores(closure_1_2[8]).TableRowGroup, obj, arg0);
     });
     obj[0] = callback(tmp2(4926).Stack, obj);
-    tmp5 = callback(tmp2(8363).Form, obj);
+    tmp5 = callback(tmp2(8372).Form, obj);
   }
   return tmp5;
 }

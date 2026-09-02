@@ -1,6 +1,6 @@
 // discord_common/js/packages/media-engine/native/index.tsx
+import formatDefault from "../../../../../_runtime/00666_format.js";
 import PlatformTypes from "../../../shared/utils/PlatformUtils.tsx";
-import formatDefault from "../../../../../_runtime/00669_format.js";
 import inject from "inject.tsx";
 import BaseConnectionEvent from "../index.tsx";
 import onDefault from "../../../shared/utils/TypedEventEmitter.tsx";

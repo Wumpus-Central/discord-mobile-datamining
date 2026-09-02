@@ -56,7 +56,7 @@ class VibingWumpusScreen {
     obj1 = { style: tmp.container, children: null };
     obj2 = { source: null, ref: null, autoPlay: null, loop: true, style: null, progress: null };
     tmp14 = require("play");
-    obj2[0] = require("../../../../../_runtime/metro/11039__.js");
+    obj2[0] = require("../../../../../_runtime/metro/11259__.js");
     obj2[1] = ref;
     obj2[2] = !stateFromStores;
     obj2[4] = tmp.wumpus;

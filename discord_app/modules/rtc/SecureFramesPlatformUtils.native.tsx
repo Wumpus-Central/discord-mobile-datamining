@@ -1,6 +1,6 @@
 // discord_app/modules/rtc/SecureFramesPlatformUtils.native.tsx
 import getSystemLocale from "../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../_runtime/02009_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/02008_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
 import _modDef4723 from "../../actions/ModalActionCreators.tsx";
 import _modDef4858 from "../../actions/native/AlertActionCreators.tsx";
@@ -23,7 +23,7 @@ export default {
   openSecureFramesStreamVerification(streamKey, channelId) {
     let obj = ACTION_SHEET_HEIGHT_HALFDefault;
     obj = { streamKey, channelId };
-    obj.openLazy(asyncRequireImpl(9855, dependencyMap.paths), closure_6, obj);
+    obj.openLazy(asyncRequireImpl(9877, dependencyMap.paths), closure_6, obj);
   },
   openSecureFramesUserVerificationModal(id, id2, arg2) {
     if (arg2()) {
@@ -31,22 +31,22 @@ export default {
       obj = { userId: null, channelId: null };
       obj[0] = id;
       obj[1] = id2;
-      obj.pushLazy(asyncRequireImpl(9844, dependencyMap.paths), obj, closure_7);
+      obj.pushLazy(asyncRequireImpl(9866, dependencyMap.paths), obj, closure_7);
     }
   },
   openSecureFramesUpdateConfirmation(confirmText) {
     confirmText = confirmText.confirmText;
     ({ title, subtitle } = confirmText);
     if (confirmText === undefined) {
-      const intl = onConfirm(1236).intl;
-      confirmText = intl.string(onConfirm(1236).t["cY+Oob"]);
+      const intl = onConfirm(1233).intl;
+      confirmText = intl.string(onConfirm(1233).t["cY+Oob"]);
     }
     onConfirm = confirmText.onConfirm;
     let obj = _modDef4858;
     obj = { title, body: subtitle, confirmText, cancelText: null, confirmColor: null };
-    const intl2 = onConfirm(1236).intl;
-    obj[3] = intl2.string(onConfirm(1236).t["ETE/oC"]);
-    obj[4] = onConfirm(1297).ButtonColors.RED;
+    const intl2 = onConfirm(1233).intl;
+    obj[3] = intl2.string(onConfirm(1233).t["ETE/oC"]);
+    obj[4] = onConfirm(1296).ButtonColors.RED;
     obj.confirm(obj).then((arg0) => {
       if (arg0) {
         onConfirm();
@@ -73,7 +73,7 @@ export default {
         obj[1] = channelId;
         obj[2] = guildId;
         obj[3] = fingerprint;
-        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(9858, dependencyMap.paths), closure_5, obj);
+        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(9880, dependencyMap.paths), closure_5, obj);
         const obj4 = ACTION_SHEET_HEIGHT_HALFDefault;
       }
     }

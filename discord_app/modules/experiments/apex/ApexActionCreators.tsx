@@ -24,7 +24,7 @@ function _fetchApexExperimentsMetadata() {
       yield HTTP.get(obj1);
       if (1 === tmp7) {
         c4 = 0;
-        const obj3 = callback2(709);
+        const obj3 = callback2(706);
         obj3.dispatch({ type: "APEX_EXPERIMENTS_METADATA_FETCH_FAILURE" });
         c6 = 3;
       } else if (arg0 === 1) {
@@ -43,7 +43,7 @@ function _fetchApexExperimentsMetadata() {
             variants: variants.map((id) => ({ id: id.id, label: id.label, type: id.type })),
           };
         });
-        const obj = callback2(709);
+        const obj = callback2(706);
         const obj4 = { type: "APEX_EXPERIMENTS_METADATA_FETCH_SUCCESS", experiments: null };
         obj4[1] = callback;
         obj.dispatch(obj4);
@@ -124,7 +124,7 @@ function _fetchUserExperimentAssignments() {
           } else {
             if (1 === tmp7) {
               c4 = 0;
-              let obj5 = lib(709);
+              let obj5 = lib(706);
               obj5 = { type: "APEX_EXPERIMENTS_FETCH_FAILURE", unitId: null };
               obj5[1] = callback;
               obj5.dispatch(obj5);
@@ -135,7 +135,7 @@ function _fetchUserExperimentAssignments() {
               lib = arg1;
               if (null != lib) {
                 if (null != lib.body) {
-                  obj = lib(709);
+                  obj = lib(706);
                   const obj6 = { type: "APEX_EXPERIMENTS_FETCH_SUCCESS", unitId: null, experiments: null };
                   obj6[1] = callback;
                   obj6[2] = lib.body;
@@ -143,7 +143,7 @@ function _fetchUserExperimentAssignments() {
                 }
                 c4 = 0;
               }
-              obj2 = lib(709);
+              obj2 = lib(706);
               obj7 = { type: "APEX_EXPERIMENTS_FETCH_FAILURE", unitId: null };
               obj7[1] = callback;
               obj2.dispatch(obj7);

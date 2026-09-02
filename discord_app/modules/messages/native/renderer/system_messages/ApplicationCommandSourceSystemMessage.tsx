@@ -24,8 +24,8 @@ export const createApplicationCommandSourceSystemMessage = function createApplic
   }
   if (null != applicationCommand) {
     if (null != name) {
-      const messageAuthorWithProcessedColor = tmp(7869).getMessageAuthorWithProcessedColor(message);
-      const intl = tmp(1236).intl;
+      const messageAuthorWithProcessedColor = tmp(7878).getMessageAuthorWithProcessedColor(message);
+      const intl = tmp(1233).intl;
       obj = { username: null, usernameOnClick: null, commandName: null, applicationName: null };
       obj[0] = messageAuthorWithProcessedColor.nick;
       obj = { message: null, author: null, roleStyle: null };
@@ -42,7 +42,7 @@ export const createApplicationCommandSourceSystemMessage = function createApplic
       obj1 = { content: null };
       obj[2] = name2;
       obj[3] = name;
-      obj1[0] = intl.formatToParts(tmp(1236).t["1Zm+zw"], obj);
+      obj1[0] = intl.formatToParts(tmp(1233).t["1Zm+zw"], obj);
       const merged = Object.assign(createCommonMessageDefault(message));
       return obj1;
     }

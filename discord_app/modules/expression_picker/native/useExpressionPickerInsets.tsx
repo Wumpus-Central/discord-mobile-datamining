@@ -6,7 +6,7 @@ const result = require("set").fileFinishedImporting("modules/expression_picker/n
 
 export default function useExpressionPickerInsets(hasCategories) {
   let bottom;
-  bottom = bottom(1628)().bottom;
+  bottom = bottom(1627)().bottom;
   const obj = {
     safeAreaStyle: React.useMemo(() => ({ paddingBottom: bottom }), items),
     safeAreaBottomKeyboardAware: null,
@@ -16,7 +16,7 @@ export default function useExpressionPickerInsets(hasCategories) {
   if (hasCategories.hasCategories) {
     num = EXPRESSION_FOOTER_HEIGHT;
   }
-  const sum = bottom(5594)({ includeKeyboardHeight: true, includeCustomKeyboardHeight: false }).insets.bottom + num;
-  obj[1] = sum + bottom(712).space.PX_16;
+  const sum = bottom(5602)({ includeKeyboardHeight: true, includeCustomKeyboardHeight: false }).insets.bottom + num;
+  obj[1] = sum + bottom(709).space.PX_16;
   return obj;
 }

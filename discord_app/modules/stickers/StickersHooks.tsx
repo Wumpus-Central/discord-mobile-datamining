@@ -287,7 +287,7 @@ export const useStickersGrid = function useStickersGrid(collapsedStickersCategor
         const guildId = closure_2_7.getGuildId();
         let canCreateExpressions = null != guild;
         const findIndexResult = c6.findIndex(
-          (type) => type.type === SEARCH_RESULTS(5212).StickerCategoryTypes.FAVORITE,
+          (type) => type.type === SEARCH_RESULTS(5220).StickerCategoryTypes.FAVORITE,
         );
         if (canCreateExpressions) {
           canCreateExpressions = guildId === guild.id;
@@ -460,7 +460,7 @@ export const useFavoriteStickerIds = function useFavoriteStickerIds() {
   return stickerIds;
 };
 export const useFavoriteStickers = function useFavoriteStickers() {
-  const favoriteStickers = stickerIds(10363).useFrecencySettings().favoriteStickers;
+  const favoriteStickers = stickerIds(10385).useFrecencySettings().favoriteStickers;
   stickerIds = undefined;
   if (favoriteStickers != null) {
     stickerIds = favoriteStickers.stickerIds;
@@ -468,11 +468,11 @@ export const useFavoriteStickers = function useFavoriteStickers() {
   if (stickerIds == null) {
     stickerIds = closure_13;
   }
-  const obj = stickerIds(10363);
+  const obj = stickerIds(10385);
   const tmp = stickerIds;
   const items = [closure_11];
   const items1 = [stickerIds];
-  return stickerIds(589).useStateFromStoresArray(
+  return stickerIds(586).useStateFromStoresArray(
     items,
     () => {
       const mapped = channel.map((arg0) => stickerById.getStickerById(arg0));
@@ -519,7 +519,7 @@ export const useLatestFrecentStickerIds = function useLatestFrecentStickerIds() 
   return keys;
 };
 export const useLatestFrecentStickers = function useLatestFrecentStickers() {
-  const frecencySettings = keys(10363).useFrecencySettings();
+  const frecencySettings = keys(10385).useFrecencySettings();
   keys = closure_13;
   let stickers;
   if (frecencySettings != null) {
@@ -538,11 +538,11 @@ export const useLatestFrecentStickers = function useLatestFrecentStickers() {
     }
     keys = Object.keys(stickers1);
   }
-  const obj = keys(10363);
+  const obj = keys(10385);
   const tmp = keys;
   const items = [closure_11];
   const items1 = [keys];
-  return keys(589).useStateFromStoresArray(
+  return keys(586).useStateFromStoresArray(
     items,
     () => {
       const mapped = keys.map((arg0) => stickerById.getStickerById(arg0));
@@ -624,7 +624,7 @@ export const useStickerForRenderableSticker = function useStickerForRenderableSt
                       if (!current.hasFetched) {
                         dependencyMap(false);
                         dependencyMap = 1;
-                        obj1 = closure_1_0(10380);
+                        obj1 = closure_1_0(10402);
                         c1 = 2;
                         v0 = 1;
                         obj1 = { value: null, done: false };

@@ -26,7 +26,7 @@ export const useFetchCollectiblesProduct = function useFetchCollectiblesProduct(
     tmp4 = stateFromStores.productLine !== SKUProductLines.COLLECTIBLES;
   }
   const callback = tmp4;
-  let tmpResult = tmp(647);
+  let tmpResult = tmp(644);
   const items1 = [stateFromStores1];
   const tmp6 = callback(
     tmpResult.useStateFromStoresArray(items1, () => {
@@ -37,7 +37,7 @@ export const useFetchCollectiblesProduct = function useFetchCollectiblesProduct(
   );
   const first = tmp6[0];
   closure_4 = tmp8;
-  tmpResult = tmp(647);
+  tmpResult = tmp(644);
   const items2 = [stateFromStores1];
   stateFromStores1 = tmpResult.useStateFromStores(items2, () => stateFromStores1.isProductFetchBackedOff(closure_0));
   let tmp10 = true === arg1;
@@ -46,7 +46,7 @@ export const useFetchCollectiblesProduct = function useFetchCollectiblesProduct(
     if (first != null) {
       type = first.type;
     }
-    tmp10 = type === tmp(1950).CollectiblesItemType.BUNDLE;
+    tmp10 = type === tmp(1949).CollectiblesItemType.BUNDLE;
   }
   if (tmp10) {
     tmp10 = 0 === first.items.length;

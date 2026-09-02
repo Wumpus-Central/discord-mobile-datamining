@@ -155,7 +155,7 @@ function parseChannel(canViewChannel) {
           obj.content = items3;
           let obj6 = obj;
         } else if (null != arg3) {
-          const obj4 = { type: "link", content: null, target: null, title: "category" };
+          const obj4 = { type: "link", content: null, target: null, title: "call" };
           const obj5 = { type: "text", content: null };
           obj5[1] = arg3;
           const items4 = [obj5];
@@ -208,7 +208,7 @@ function parseChannel(canViewChannel) {
                 }
                 const obj13 = { inContent: null, content: null };
                 const obj14 = { type: "text", content: null };
-                obj14[1] = tmp35(1902).truncateText(channelName, 32);
+                obj14[1] = tmp35(1901).truncateText(channelName, 32);
                 const obj15 = { type: "channel", content: null, channelType: null, iconType: null };
                 const items7 = [obj14];
                 obj15[1] = items7;
@@ -219,7 +219,7 @@ function parseChannel(canViewChannel) {
                 const items9 = [obj11];
                 obj13[1] = items9;
                 let obj17 = obj13;
-                const tmp35Result1 = tmp35(1902);
+                const tmp35Result1 = tmp35(1901);
               }
             }
             const obj16 = { inContent: null, content: null };
@@ -367,7 +367,7 @@ obj = {
   parse(arg0, arg1, channelId) {
     [tmp, tmp2, tmp3, tmp4] = arg0;
     if (null == tmp3) {
-      let obj = { type: "link", content: null, target: null, title: "category" };
+      let obj = { type: "link", content: null, target: null, title: "call" };
       obj = { type: "text", content: null };
       obj[1] = tmp;
       const items = [obj];
@@ -442,7 +442,7 @@ obj[2] = {
       }
     }
     const content = [{ type: "text", content: target }];
-    return { type: "link", content, target, title: "category" };
+    return { type: "link", content, target, title: "call" };
   },
 };
 let obj1 = {
@@ -489,7 +489,7 @@ let obj1 = {
       }
     }
     const content = [{ type: "text", content: target }];
-    return { type: "link", content, target, title: "category" };
+    return { type: "link", content, target, title: "call" };
   },
 };
 const result = require("set").fileFinishedImporting("modules/markup/MarkupChannelMentionRule.tsx");

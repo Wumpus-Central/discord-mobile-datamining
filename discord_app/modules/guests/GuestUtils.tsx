@@ -27,8 +27,8 @@ export default {
         if (num2 == null) {
           num2 = 0;
         }
-        hasFlagResult1 = tmp2(1399).hasFlag(num2, tmp2(8663).GuildInviteFlags.IS_GUEST_INVITE);
-        const tmp2Result = tmp2(1399);
+        hasFlagResult1 = tmp2(1398).hasFlag(num2, tmp2(8678).GuildInviteFlags.IS_GUEST_INVITE);
+        const tmp2Result = tmp2(1398);
       }
       tmp = hasFlagResult1;
       const obj2 = hasFlag;

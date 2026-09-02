@@ -1,12 +1,12 @@
 // discord_app/modules/scheduled_messages/native/ScheduledMessagesModal.tsx
-import set from "../../../utils/PlatformUtils.tsx";
 import keys from "../../../ConstantsIOS.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 import getPremiumPlanItem from "../../../utils/PremiumUtils.tsx";
 import _mod4217 from "../../reanimated/ReanimatedRexport.tsx";
 import HeaderBackImage from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import Background from "../../../../_runtime/05502_Background.js";
+import Background from "../../../../_runtime/05510_Background.js";
 import contextDefault from "../../app_analytics/useAnalyticsLocations.tsx";
 import QUICK_SWITCHERDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import usePremiumUpsellConfig from "../../../utils/native/PremiumUpsellUtils.tsx";
@@ -228,9 +228,9 @@ export default function ScheduledMessagesModal() {
   const tmp9 = closure_11;
   let num = 0;
   if (!obj5.isIOS()) {
-    num = sharedValue(1628)().top;
+    num = sharedValue(1627)().top;
   }
-  obj[3] = num + sharedValue(712).space.PX_8;
+  obj[3] = num + sharedValue(709).space.PX_8;
   obj5 = set;
   obj[4] = HeaderBackImage.getHeaderCloseButton(sharedValue(4723).pop);
   ({ headerLeftContainer: obj4[5], headerRightContainer: obj4[6] } = tmp);

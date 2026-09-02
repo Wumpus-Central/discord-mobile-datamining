@@ -1,6 +1,6 @@
 // discord_app/modules/spotify/SpotifyActionCreators.tsx
-import set from "../../utils/PlatformUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import set from "../../utils/PlatformUtils.tsx";
 import setDefault from "../../utils/GameUtils.native.tsx";
 import closure_3 from "SpotifyProtocolStore.tsx";
 import SPOTIFY_APP_PROTOCOL from "SpotifyConstants.tsx";

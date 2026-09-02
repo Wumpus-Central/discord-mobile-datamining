@@ -17,9 +17,9 @@ let closure_6 = createCacheKey.createStyles({
 const memoResult = importAllResult.memo(function SettingsSearchEmptyState() {
   const tmp = callback3();
   const effect = importAllResult.useEffect(() => {
-    const AccessibilityAnnouncer = callback(1351).AccessibilityAnnouncer;
-    const intl = callback(1236).intl;
-    AccessibilityAnnouncer.announce(intl.string(callback(1236).t.zihbmv), "polite");
+    const AccessibilityAnnouncer = callback(1350).AccessibilityAnnouncer;
+    const intl = callback(1233).intl;
+    AccessibilityAnnouncer.announce(intl.string(callback(1233).t.zihbmv), "polite");
   }, []);
   let obj = { style: tmp.container, children: null };
   const items = [callback(getNoResultsAltSource.NoResultsAlt, { resizeMode: "contain" })];

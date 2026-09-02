@@ -3,7 +3,7 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import ChatIcon from "../../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
 import setDefault from "../../../core/native/NativeView.tsx";
-import _modDef16616 from "../shared/VoicePanelIconButton.tsx";
+import _modDef16851 from "../shared/VoicePanelIconButton.tsx";
 import useChatBadgeDefault from "../hooks/useChatBadge.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { ComponentActions } from "../../../../Constants.tsx";
@@ -35,7 +35,7 @@ export default function VoicePanelHeaderChatButton(channelId) {
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t["5KxXrK"]);
   obj[2] = callback;
-  const children = [callback(_modDef16616, obj)];
+  const children = [callback(_modDef16851, obj)];
   let tmp8Result = null != tmp5;
   if (tmp8Result) {
     obj = { style: null, children: null };
@@ -44,9 +44,9 @@ export default function VoicePanelHeaderChatButton(channelId) {
     const items1 = [,];
     ({ badge: arr2[0], notificationBadge: arr2[1] } = tmp);
     obj1[0] = items1;
-    obj[1] = tmp8(tmp3(6006), obj1);
-    tmp8Result = tmp8(tmp3(6006), obj);
-    const tmp3Result = tmp3(6006);
+    obj[1] = tmp8(tmp3(6014), obj1);
+    tmp8Result = tmp8(tmp3(6014), obj);
+    const tmp3Result = tmp3(6014);
   }
   children[1] = tmp8Result;
   return tmp6(tmp7, { children });

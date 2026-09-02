@@ -23,18 +23,18 @@ export const handleSenderFalsePositiveFlow = function handleSenderFalsePositiveF
     obj = { channelId: null, messageId: null };
     obj[0] = channelId;
     obj[1] = closure_1;
-    tmp4Result.openLazy(tmp(2009)(8399, tmp2.paths), closure_4, obj);
+    tmp4Result.openLazy(tmp(2008)(8408, tmp2.paths), closure_4, obj);
   } else {
     tmp4Result = tmp4(4858);
     obj1 = { title: null, body: null, confirmText: null };
-    const intl = tmp(1236).intl;
-    obj1[0] = intl.string(tmp(1236).t["iS/eFN"]);
-    const intl2 = tmp(1236).intl;
-    obj1[1] = intl2.string(tmp(1236).t.YrjcgR);
-    const intl3 = tmp(1236).intl;
-    obj1[2] = intl3.string(tmp(1236).t.BddRzS);
+    const intl = tmp(1233).intl;
+    obj1[0] = intl.string(tmp(1233).t["iS/eFN"]);
+    const intl2 = tmp(1233).intl;
+    obj1[1] = intl2.string(tmp(1233).t.YrjcgR);
+    const intl3 = tmp(1233).intl;
+    obj1[2] = intl3.string(tmp(1233).t.BddRzS);
     tmp4Result.show(obj1);
-    const result1 = tmp4(8398).disableFalsePositiveButton(channelId, closure_1);
+    const result1 = tmp4(8407).disableFalsePositiveButton(channelId, closure_1);
   }
   tmp2 = dependencyMap;
 };

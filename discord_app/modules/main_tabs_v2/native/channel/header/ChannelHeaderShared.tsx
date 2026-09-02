@@ -8,8 +8,8 @@ import computeChannelName from "../../../../channel/useChannelName.tsx";
 import getChannelIcon from "../../../../../utils/native/ChannelUtils.tsx";
 import AVERAGE_FONT_WIDTH_RATIODefault from "../../../../display_name_styles/native/UsernameWithEffects.tsx";
 import FacepileGroupDMAvatarDefault from "../../../../group_dm/native/GroupDMAvatar.tsx";
-import registerAssetDefault from "../../../../../../_runtime/12934_registerAsset.js";
-import _modDef12935 from "../../../../guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx";
+import registerAssetDefault from "../../../../../../_runtime/13156_registerAsset.js";
+import _modDef13157 from "../../../../guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx";
 import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -34,7 +34,7 @@ function TitleWrapper(headerAccessibilityLabel) {
     obj[2] = children;
     let tmp6Result = callback2(View, obj);
   } else {
-    obj = titleContentHeight(500);
+    obj = titleContentHeight(1234);
     let tmp9;
     if (obj.isAndroid()) {
       tmp9 = callback;
@@ -56,7 +56,7 @@ function TitleWrapper(headerAccessibilityLabel) {
     obj[5] = tmp5;
     obj[6] = tmp.wrapper;
     obj[7] = children;
-    tmp6Result = callback2(titleContentHeight(5068).PressableOpacity, obj);
+    tmp6Result = callback2(titleContentHeight(5076).PressableOpacity, obj);
     const tmp6 = callback2;
   }
   return tmp6Result;
@@ -180,10 +180,10 @@ function ChannelIconRaw(IconComponent) {
     let tmp6 = callback2(IconComponent, obj);
   } else {
     obj = { size: null, source: null, color: null };
-    obj[0] = tmp(1297).Icon.Sizes.SMALL_20;
+    obj[0] = tmp(1296).Icon.Sizes.SMALL_20;
     obj[1] = IconComponent.icon;
     obj[2] = tmp4.guildChannelIcon.tintColor;
-    tmp6 = callback2(tmp(1297).Icon, obj);
+    tmp6 = callback2(tmp(1296).Icon, obj);
   }
   return tmp6;
 }
@@ -203,7 +203,7 @@ function MemberCountText(arg0) {
   }
   obj[1] = memberCount;
   obj[3] = leadingAccessoryWidth;
-  const children = [closure_8(_modDef12935, obj)];
+  const children = [closure_8(_modDef13157, obj)];
   let tmp4Result = null;
   if (withSeparator) {
     tmp4Result = tmp4(Text.Text, { variant: "text-sm/normal", color: "text-subtle", children: "\u2022" });

@@ -5,12 +5,13 @@ import isNullOrEmpty from "../../../utils/StringUtils.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import getGameMediaRefURLDefault from "../../games/getGameMediaRefURL.tsx";
 import computeChannelName from "../../channel/useChannelName.tsx";
+import TIMESTAMP_FORMATS from "../../markup/TimestampUtils.tsx";
 import getChannelIcon from "../../../utils/native/ChannelUtils.tsx";
 import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
 import preloadDefault from "../../../components_native/common/FastImage.tsx";
 import TableRowInner from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowTrailingText from "../../../design/components/TableRow/native/TableRowTrailingText.native.tsx";
-import registerAssetDefault from "../../../../_runtime/08033_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/08042_registerAsset.js";
 import Form from "../../../design/void/Form/native/index.tsx";
 import StickerDefault from "../../stickers/native/Sticker.tsx";
 import useStickerPackCategories from "../../stickers/StickersHooks.tsx";
@@ -109,7 +110,7 @@ const obj9 = {
     ({ nick, guildId } = user);
     ({ status, onPress } = user);
     const tmp = callback3();
-    let obj = user(589);
+    let obj = user(586);
     const items = [closure_6];
     const stateFromStores = obj.useStateFromStores(items, () => {
       let nickname = null;
@@ -134,12 +135,12 @@ const obj9 = {
       const obj3 = guildId(4322);
     }
     obj[3] = closure_9(AutocompleteLabel, { text: nick });
-    obj = { status, user, size: tmp2(1297).AvatarSizes.SMALL, guildId, autoStatusCutout: true };
-    obj[4] = closure_9(user(1297).Avatar, obj);
+    obj = { status, user, size: tmp2(1296).AvatarSizes.SMALL, guildId, autoStatusCutout: true };
+    obj[4] = closure_9(user(1296).Avatar, obj);
     const items1 = [,];
     ({ trailing: arr2[0], username: arr2[1] } = tmp);
-    obj[5] = closure_9(guildId(9771), { user, usernameStyle: items1, discriminatorStyle: tmp.trailing });
-    return closure_9(user(8363).FormRow, obj);
+    obj[5] = closure_9(guildId(9793), { user, usernameStyle: items1, discriminatorStyle: tmp.trailing });
+    return closure_9(user(8372).FormRow, obj);
   },
   Global(arg0) {
     ({ text, badge } = arg0);
@@ -178,8 +179,8 @@ const obj9 = {
     obj[2] = closure_9(Form.FormRow.Label, obj);
     let str = "";
     if (showDescription) {
-      const intl = tmp3(1236).intl;
-      str = intl.string(tmp3(1236).t.HrUmDH);
+      const intl = tmp3(1233).intl;
+      str = intl.string(tmp3(1233).t.HrUmDH);
     }
     obj[3] = closure_9(TableRowTrailingText.TableRowTrailingText, { text: str });
     return closure_9(TableRowInner.TableRow, obj);
@@ -292,7 +293,7 @@ const obj9 = {
     if (obj.isNullOrEmpty(tmp4)) {
       obj = { size: "sm", style: null };
       obj[1] = tmp.gameIcon;
-      let tmp6Result = tmp6(tmp5(8721).UnknownGameIcon, obj);
+      let tmp6Result = tmp6(tmp5(8736).UnknownGameIcon, obj);
       let tmp8 = tmp6;
     } else {
       obj = { style: null, source: null };
@@ -310,8 +311,30 @@ const obj9 = {
       label: tmp8(AutocompleteLabel, obj3),
     });
   },
+  Timestamp(description) {
+    let str = description.description;
+    ({ mention, onPress } = description);
+    let obj = TIMESTAMP_FORMATS;
+    const result = obj.formatTimestampMention(mention);
+    let tmp5Result = null;
+    if (null != result) {
+      obj = { onPress: null, accessibilityRole: "menuitem", label: null, trailing: null };
+      obj[0] = onPress;
+      obj = { text: null };
+      obj[0] = result.formatted;
+      obj[2] = callback(AutocompleteLabel, obj);
+      if (str == null) {
+        str = "";
+      }
+      obj1 = { text: null };
+      obj1[0] = str;
+      obj[3] = callback(tmp(5616).TableRowTrailingText, obj1);
+      tmp5Result = tmp5(tmp(5607).TableRow, obj);
+    }
+    return tmp5Result;
+  },
 };
-const result = require("set").fileFinishedImporting("modules/autocompleter/native/Autocomplete.tsx");
+let result = require("set").fileFinishedImporting("modules/autocompleter/native/Autocomplete.tsx");
 
 export default obj9;
 export const AUTOCOMPLETE_STICKER_NODE_SIZE = 56;

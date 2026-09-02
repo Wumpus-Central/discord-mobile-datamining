@@ -49,12 +49,12 @@ export default function GiftingBadgeInfoActionSheet() {
   const _require = tmp;
   let obj = initialize;
   let items = [closure_6];
-  const stateFromStores = obj.useStateFromStores(items, () => badgeById.getBadgeById(lib(8557).BadgeId.GIFTING));
+  const stateFromStores = obj.useStateFromStores(items, () => badgeById.getBadgeById(lib(8570).BadgeId.GIFTING));
   obj1 = initialize;
   const items1 = [closure_5];
   importDefault = obj1.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
   const effect = React.useEffect(() => {
-    callback(698).track(constants.GIFTING_BADGE_INFO_ACTION_SHEET_OPENED);
+    callback(695).track(constants.GIFTING_BADGE_INFO_ACTION_SHEET_OPENED);
   }, []);
   obj = { style: null, children: null };
   const items2 = [tmp.container];

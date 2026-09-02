@@ -3,8 +3,8 @@ import noopAll from "../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Button from "../../../design/void/native.tsx";
 import useRoleIcon from "../../guild_boosting/native/RoleIconUtils.tsx";
-import registerAssetDefault from "../../../../_runtime/11166_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/11167_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/11387_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/11388_registerAsset.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import ME from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
@@ -57,10 +57,10 @@ export default function OfficialConnectionIcon(arg0) {
     roleColor = closure_4;
   }
   let PRIMARY_630 = ThemesDefault.unsafe_rawColors.WHITE;
-  let tmp2Result = tmp2(688);
-  tmp2Result = tmp2(688);
+  let tmp2Result = tmp2(685);
+  tmp2Result = tmp2(685);
   if (tmp2Result.getDarkness(hex2intResult) < 0.3) {
-    PRIMARY_630 = tmp7(712).unsafe_rawColors.PRIMARY_630;
+    PRIMARY_630 = tmp7(709).unsafe_rawColors.PRIMARY_630;
   }
   obj1 = { style: items1, children: null };
   items1 = [style, obj];

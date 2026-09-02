@@ -29,18 +29,18 @@ function QuestRewardDetailsBottomSheet(quest) {
     }
     const obj = quest(closure_1_2[9]);
   }, items1);
-  let obj = quest(589);
+  let obj = quest(586);
   const items2 = [closure_5];
   const stateFromStores = obj.useStateFromStores(items2, () => currentUser.getCurrentUser());
-  obj1 = quest(10927);
+  obj1 = quest(11147);
   const defaultRewardName = obj1.getDefaultRewardName(quest.config, stateFromStores);
-  obj = { direction: "vertical", spacing: memo(712).space.PX_16, style: tmp.wrapper, children: null };
-  obj = { align: "center", direction: "horizontal", spacing: memo(712).space.PX_16, children: null };
-  const items3 = [callback(memo(11337), { quest, height: 56, width: 56, withAnimation: true })];
-  obj1 = { direction: "vertical", spacing: memo(712).space.PX_4, style: tmp.rewardDetailsCopy, children: null };
+  obj = { direction: "vertical", spacing: memo(709).space.PX_16, style: tmp.wrapper, children: null };
+  obj = { align: "center", direction: "horizontal", spacing: memo(709).space.PX_16, children: null };
+  const items3 = [callback(memo(11560), { quest, height: 56, width: 56, withAnimation: true })];
+  obj1 = { direction: "vertical", spacing: memo(709).space.PX_4, style: tmp.rewardDetailsCopy, children: null };
   const obj2 = { variant: "eyebrow", color: "text-subtle", children: null };
-  let intl = quest(1236).intl;
-  obj2[2] = intl.string(quest(1236).t["jyYgZ+"]);
+  let intl = quest(1233).intl;
+  obj2[2] = intl.string(quest(1233).t["jyYgZ+"]);
   const items4 = [
     callback(quest(4474).Text, obj2),
     callback(quest(4474).Text, { variant: "heading-lg/semibold", color: "text-strong", children: defaultRewardName }),
@@ -63,7 +63,7 @@ function QuestRewardDetailsBottomSheet(quest) {
   }
   items5[1] = tmp9Result;
   obj[3] = items5;
-  return callback(quest(5622).BottomSheet, { startExpanded: true, children: callback2(quest(4926).Stack, obj) });
+  return callback(quest(5630).BottomSheet, { startExpanded: true, children: callback2(quest(4926).Stack, obj) });
 }
 ({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
 createCacheKey = { wrapper: null, rewardDetailsCopy: null, separator: null };
@@ -77,8 +77,8 @@ let result = require("set").fileFinishedImporting("modules/quests/native/QuestRe
 
 export default function QuestRewardDetailsBottomSheetConnected(questId) {
   const callback = React.useCallback(() => {
-    const result = callback(11334).showQuestUnavailableAlert();
-    const obj = callback(11334);
+    const result = callback(11557).showQuestUnavailableAlert();
+    const obj = callback(11557);
     callback2(4445).hideActionSheet();
   }, []);
   let obj = useQuests;

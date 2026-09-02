@@ -1,6 +1,6 @@
 // discord_app/actions/AudioActionCreators.tsx
 import timestampDefault from "../modules/debug/Logger.tsx";
-import debounceDefault from "../../_runtime/00636_debounce.js";
+import debounceDefault from "../../_runtime/00633_debounce.js";
 import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import isPremiumResolution from "../utils/StreamQualityUtils.tsx";
@@ -338,7 +338,7 @@ obj = {
       if (null != tmp24) {
         str2 = tmp24.name;
       }
-      let tmp4Result = tmp4(698);
+      let tmp4Result = tmp4(695);
       obj2 = {
         mode: null,
         location_stack: null,
@@ -375,7 +375,7 @@ obj = {
         if (null != tmp12) {
           str = tmp12.name;
         }
-        tmp4Result = tmp4(698);
+        tmp4Result = tmp4(695);
         obj3 = {
           location_stack: null,
           voice_channel_type: null,
@@ -705,7 +705,7 @@ obj = {
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = v0(9785)("debug_logging_enabled", closure_1_0, closure_1_6.getDebugLogging());
+              obj1[0] = v0(9807)("debug_logging_enabled", closure_1_0, closure_1_6.getDebugLogging());
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -717,7 +717,7 @@ obj = {
             obj2[0] = arg1;
             return obj2;
           } else {
-            obj = v0(709);
+            obj = v0(706);
             const obj3 = { type: "AUDIO_SET_DEBUG_LOGGING", enabled: null };
             obj3[1] = closure_0;
             obj.dispatch(obj3);
@@ -800,7 +800,7 @@ obj = {
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = v0(9785)("audio_subsystem", closure_1_0, closure_1_6.getAudioSubsystem());
+              obj1[0] = v0(9807)("audio_subsystem", closure_1_0, closure_1_6.getAudioSubsystem());
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -812,7 +812,7 @@ obj = {
             obj2[0] = arg1;
             return obj2;
           } else {
-            obj = v0(709);
+            obj = v0(706);
             const obj3 = { type: "AUDIO_SET_SUBSYSTEM", subsystem: null };
             obj3[1] = closure_0;
             obj.dispatch(obj3);

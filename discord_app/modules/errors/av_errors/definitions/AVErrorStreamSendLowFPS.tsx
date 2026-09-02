@@ -45,7 +45,7 @@ export const AVErrorStreamSendLowFPSDefinition = {
                 if (null == participant) {
                   return null;
                 } else {
-                  tmp11Result = tmp11(17421);
+                  tmp11Result = tmp11(17657);
                   const accumulatedStatsWithMinDatapoints = tmp11Result.getAccumulatedStatsWithMinDatapoints(
                     mediaEngineConnectionId,
                     currentUserActiveStream.ownerId,
@@ -53,7 +53,7 @@ export const AVErrorStreamSendLowFPSDefinition = {
                   if (null == accumulatedStatsWithMinDatapoints) {
                     return null;
                   } else {
-                    const maxQuality = tmp11(9588).getMaxQuality(participant);
+                    const maxQuality = tmp11(9601).getMaxQuality(participant);
                     let tmp9 = null;
                     if (null != maxQuality) {
                       if (
@@ -61,8 +61,8 @@ export const AVErrorStreamSendLowFPSDefinition = {
                         tmp11Result2.getWarningFrameRate(maxQuality.maxFrameRate)
                       ) {
                         obj = { type: null };
-                        obj[0] = tmp11(9565).AVError.STREAM_SEND_LOW_FPS;
-                        const tmp11Result3 = tmp11(17418);
+                        obj[0] = tmp11(9578).AVError.STREAM_SEND_LOW_FPS;
+                        const tmp11Result3 = tmp11(17654);
                         const merged = Object.assign(
                           tmp11Result3.getStreamErrorContext(tmp11(4544).encodeStreamKey(currentUserActiveStream)),
                         );
@@ -71,10 +71,10 @@ export const AVErrorStreamSendLowFPSDefinition = {
                         const tmp11Result4 = tmp11(4544);
                       } else {
                         tmp6 = null;
-                        const tmp11Result5 = tmp11(17421);
+                        const tmp11Result5 = tmp11(17657);
                       }
                       tmp9 = tmp6;
-                      tmp11Result2 = tmp11(17421);
+                      tmp11Result2 = tmp11(17657);
                     }
                     return tmp9;
                   }

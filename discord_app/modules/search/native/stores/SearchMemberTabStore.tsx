@@ -167,7 +167,7 @@ const searchGuildMemberTabStoreImpl = new SearchGuildMemberTabStoreImpl(dispatch
         }
       };
       let tmp4 = sortByMatchScoreDefault;
-      let items = [obj(9924).AutocompleterResultTypes.USER];
+      let items = [obj(9946).AutocompleterResultTypes.USER];
       tmp4 = new tmp4(onAutocompleterResultsChange, items, 50);
       obj.autocompleter = tmp4;
       const autocompleter = obj.autocompleter;

@@ -45,7 +45,7 @@ function doSearchRequest(q, arg1, limit) {
       const startTime = obj.startTime;
       const merged = Object.assign(obj, Object.create(null));
       obj = { offset: 0, limit: null, totalResults: body.length };
-      let obj2 = q(10360);
+      let obj2 = q(10382);
       obj = {};
       const analyticsID = closure_1_5.getAnalyticsID();
       const merged1 = Object.assign(obj);
@@ -62,14 +62,14 @@ function doSearchRequest(q, arg1, limit) {
       obj2 = {};
       const merged3 = Object.assign(result);
       const merged4 = Object.assign(obj1);
-      obj2.gif_provider = q(10359).GIF_PROVIDER;
+      obj2.gif_provider = q(10381).GIF_PROVIDER;
       callback(4700).trackWithMetadata(closure_1_6.SEARCH_RESULT_VIEWED, obj2);
       const obj6 = callback(4700);
       const tmp2 = q;
-      callback(709).dispatch({ type: "GIF_PICKER_QUERY_SUCCESS", query: q, items: body });
+      callback(706).dispatch({ type: "GIF_PICKER_QUERY_SUCCESS", query: q, items: body });
     },
     () => {
-      let obj = callback(709);
+      let obj = callback(706);
       obj = { type: "GIF_PICKER_QUERY_FAILURE", query: closure_0 };
       return obj.dispatch(obj);
     },
@@ -195,7 +195,7 @@ export const trackSelectGIF = function trackSelectGIF(arg0) {
   }
 };
 export const initializeSearch = function initializeSearch() {
-  let obj = replaced(514);
+  let obj = replaced(511);
   replaced = obj.v4().replace(closure_12, "");
   const str = obj.v4();
   obj = { search_type: constants3.GIF, load_id: replaced };
@@ -285,9 +285,9 @@ export const gifUrlKey = function gifUrlKey(uri) {
   let tmp4 = uri;
   if (null != toURLSafeResult) {
     if (obj2.isAttachmentPathUrl(toURLSafeResult)) {
-      str = tmp5(10033).removeSignedUrlParameters(toURLSafeResult);
+      str = tmp5(10055).removeSignedUrlParameters(toURLSafeResult);
       str = str.toString();
-      const tmp5Result = tmp5(10033);
+      const tmp5Result = tmp5(10055);
     }
     tmp4 = str;
     obj2 = isRefreshableAttachmentUrlAll;

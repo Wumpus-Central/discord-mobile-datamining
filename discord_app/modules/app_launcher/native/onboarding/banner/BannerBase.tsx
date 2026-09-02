@@ -6,7 +6,7 @@ import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js"
 import closure_6 from "../../../../a11y/AccessibilityStore.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
-import { 11634__ } from "../../../../../../_runtime/metro/11634__.js";
+import { 11857__ } from "../../../../../../_runtime/metro/11857__.js";
 import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import { hexToRgba } from "../../../../../utils/ColorUtils.tsx";
 import { ReanimatedRexport } from "../../../../reanimated/ReanimatedRexport.tsx";
@@ -39,7 +39,7 @@ export default function BannerBase(arg0) {
   [tmp3, c0] = callback(React.useState(0), 2);
   let obj = ReanimatedRexport;
   sharedValue = obj.useSharedValue(false);
-  const diff = sharedValue(1493)().width - 2 * sharedValue(712).space.PX_16;
+  const diff = sharedValue(1492)().width - 2 * sharedValue(709).space.PX_16;
   const backgroundColor = tmp.bannerGradientColor.backgroundColor;
   obj1 = hexToRgba;
   let items = [obj1.hexOpacityToRgba(backgroundColor, 0.2), ];
@@ -99,9 +99,9 @@ export default function BannerBase(arg0) {
   obj1 = { style: tmp.imageContainer, children: null };
   obj2 = { style: tmp.trinketsLottie, source: null, autoPlay: null };
   const tmp2 = callback(React.useState(0), 2);
-  obj2[1] = 11634__;
+  obj2[1] = 11857__;
   obj2[2] = !stateFromStores;
-  const items5 = [callback2(sharedValue(5944), obj2), image];
+  const items5 = [callback2(sharedValue(5952), obj2), image];
   obj1[1] = items5;
   items4[1] = closure_8(View, obj1);
   obj3 = { style: tmp.bannerTextContainer, children: callback2(tmp4(4474).Text, obj4) };

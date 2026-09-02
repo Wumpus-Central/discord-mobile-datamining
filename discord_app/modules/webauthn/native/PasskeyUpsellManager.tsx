@@ -3,7 +3,7 @@ import DismissibleContent from "../../../../discord_common/js/packages/protos/di
 import UNSAFE_isDismissibleContentDismissed from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
 import _crypto from "../../../utils/MFAUtils.tsx";
-import _modDef14317 from "PasskeyUpsellActionCreators.tsx";
+import _modDef14540 from "PasskeyUpsellActionCreators.tsx";
 import closure_3 from "../../../stores/AuthenticationStore.tsx";
 import closure_4 from "../../../stores/UserStore.tsx";
 import closure_5 from "../WebAuthnStore.tsx";
@@ -36,19 +36,19 @@ prototype["handlePasskeyUpsellShow"] = function handlePasskeyUpsellShow() {
       if (loginStatus.getLoginStatus() === LoginStates.NONE) {
         if (obj.attemptedPasswordLogin()) {
           let tmpResult = tmp(4298);
-          if (!tmpResult.UNSAFE_isDismissibleContentDismissed(tmp(1373).DismissibleContent.PASSWORDLESS_UPSELL)) {
+          if (!tmpResult.UNSAFE_isDismissibleContentDismissed(tmp(1372).DismissibleContent.PASSWORDLESS_UPSELL)) {
             if (!closure_5.hasFetchedCredentials()) {
               tmpResult = tmp(4332);
               if (!tmpResult.isModalOpen()) {
                 currentUser = currentUser.getCurrentUser();
                 if (tmp6) {
                   if (obj3.hasFetchedCredentials()) {
-                    _modDef14317.openPasskeyUpsell();
-                    const obj6 = _modDef14317;
+                    _modDef14540.openPasskeyUpsell();
+                    const obj6 = _modDef14540;
                   } else if (!c7) {
                     c7 = true;
-                    const webAuthnCredentials = tmp(6056).fetchWebAuthnCredentials();
-                    const tmpResult1 = tmp(6056);
+                    const webAuthnCredentials = tmp(6064).fetchWebAuthnCredentials();
+                    const tmpResult1 = tmp(6064);
                   }
                 }
                 tmp6 = undefined !== currentUser && currentUser.verified;

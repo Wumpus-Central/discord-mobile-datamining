@@ -28,24 +28,24 @@ export const getNames = function getNames(user) {
   const names = {};
   const nick = store.getNickname(user.id);
   if (null != nick) {
-    const obj3 = names(1902);
-    let str = names(1902).stripDiacritics(nick.toLocaleLowerCase());
-    names[nick] = names(1902).stripDiacritics(nick.toLocaleLowerCase()).trim().split(" ");
-    let str2 = names(1902).stripDiacritics(nick.toLocaleLowerCase()).trim();
+    const obj3 = names(1901);
+    let str = names(1901).stripDiacritics(nick.toLocaleLowerCase());
+    names[nick] = names(1901).stripDiacritics(nick.toLocaleLowerCase()).trim().split(" ");
+    let str2 = names(1901).stripDiacritics(nick.toLocaleLowerCase()).trim();
   }
   const globalName = nameFromUserDefault.getGlobalName(user);
   if (tmp4) {
-    const obj6 = names(1902);
-    const str4 = names(1902).stripDiacritics(globalName.toLocaleLowerCase());
-    names[globalName] = names(1902).stripDiacritics(globalName.toLocaleLowerCase()).trim().split(" ");
-    const str5 = names(1902).stripDiacritics(globalName.toLocaleLowerCase()).trim();
+    const obj6 = names(1901);
+    const str4 = names(1901).stripDiacritics(globalName.toLocaleLowerCase());
+    names[globalName] = names(1901).stripDiacritics(globalName.toLocaleLowerCase()).trim().split(" ");
+    const str5 = names(1901).stripDiacritics(globalName.toLocaleLowerCase()).trim();
   }
   const username = user.username;
   const obj4 = nameFromUserDefault;
   tmp4 = null != globalName && null == names[globalName];
-  const obj7 = names(1902);
-  const str7 = names(1902).stripDiacritics(username.toLocaleLowerCase());
-  names[user.username] = names(1902).stripDiacritics(username.toLocaleLowerCase()).trim().split(" ");
+  const obj7 = names(1901);
+  const str7 = names(1901).stripDiacritics(username.toLocaleLowerCase());
+  names[user.username] = names(1901).stripDiacritics(username.toLocaleLowerCase()).trim().split(" ");
   nicknames = nicknames.getNicknames(user.id);
   const item = nicknames.forEach((toLocaleLowerCase) => {
     if (null == names[toLocaleLowerCase]) {

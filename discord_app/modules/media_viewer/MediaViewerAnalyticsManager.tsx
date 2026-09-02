@@ -2,7 +2,7 @@
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import closure_2 from "../../stores/ChannelStore.tsx";
 import ME from "../../Constants.tsx";
-import keys from "../../../_runtime/00644_keys.js";
+import keys from "../../../_runtime/00641_keys.js";
 
 ({ AnalyticEvents: c3, AnalyticsSections: c4 } = ME);
 let obj = {
@@ -22,13 +22,13 @@ let obj = {
   CONTEXT_MENU_OPENED: "number_context_menu_opened",
 };
 obj = {
-  guildId: "disabled",
+  guildId: "ip",
   channelId: "isArray",
   channelType: "isArray",
   numMediaItems: "Array",
-  hasMediaOptions: "category",
-  source: true,
-  incrementableActions: true,
+  hasMediaOptions: "call",
+  source: 225509649,
+  incrementableActions: 1409286144,
 };
 const values = Object.values(obj);
 obj[6] = Object.fromEntries(

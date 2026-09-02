@@ -28,7 +28,7 @@ export default function GuildThemeMemberCoachmark(guildId) {
   dependencyMap = tmp;
   const items = [c5];
   const items1 = [guildId];
-  const stateFromStores = guildId(589).useStateFromStores(
+  const stateFromStores = guildId(586).useStateFromStores(
     items,
     () => {
       const stateForGuild = _undefined.getStateForGuild(guildId);
@@ -40,14 +40,14 @@ export default function GuildThemeMemberCoachmark(guildId) {
     },
     items1,
   );
-  let obj = guildId(589);
+  let obj = guildId(586);
   let tmp2 = guildId;
   const items2 = [guildPowerupBannerImage];
-  stateFromStores1 = guildId(589).useStateFromStores(items2, () => guildPowerupBannerImage.useReducedMotion);
-  const obj2 = guildId(589);
-  guildPowerupBannerImage = guildId(12084).getGuildPowerupBannerImage(stateFromStores, stateFromStores1, true);
+  stateFromStores1 = guildId(586).useStateFromStores(items2, () => guildPowerupBannerImage.useReducedMotion);
+  const obj2 = guildId(586);
+  guildPowerupBannerImage = guildId(12308).getGuildPowerupBannerImage(stateFromStores, stateFromStores1, true);
   if (guildPowerupBannerImage == null) {
-    guildPowerupBannerImage = markAsDismissed(15759);
+    guildPowerupBannerImage = markAsDismissed(15990);
   }
   const diff = callback - markAsDismissed(4384)(guildId).available;
   c5 = diff;
@@ -59,8 +59,8 @@ export default function GuildThemeMemberCoachmark(guildId) {
   callback1 = stateFromStores1.useCallback(() => {
     markAsDismissed(callback1.TAKE_ACTION);
     if (c5 > 0) {
-      guildId(5377).openApplyBoostModal(guildId);
-      const obj = guildId(5377);
+      guildId(5385).openApplyBoostModal(guildId);
+      const obj = guildId(5385);
     }
   }, items4);
   const items5 = [callback, callback1, guildPowerupBannerImage, tmp.coachmarkImage, stateFromStores1];
@@ -77,10 +77,10 @@ export default function GuildThemeMemberCoachmark(guildId) {
       buttonVariant: "primary",
       onButtonPress: null,
     };
-    const intl = guildId(1236).intl;
-    obj[0] = intl.string(markAsDismissed(2401).RK6NbY);
-    const intl2 = guildId(1236).intl;
-    obj[1] = intl2.string(markAsDismissed(2401).xlAqGk);
+    const intl = guildId(1233).intl;
+    obj[0] = intl.string(markAsDismissed(2400).RK6NbY);
+    const intl2 = guildId(1233).intl;
+    obj[1] = intl2.string(markAsDismissed(2400).xlAqGk);
     obj[5] = callback;
     obj[6] = function renderImgComponent() {
       return closure_1_8(closure_1_1(closure_1_2[16]), {
@@ -89,12 +89,12 @@ export default function GuildThemeMemberCoachmark(guildId) {
         style: coachmarkImage.coachmarkImage,
       });
     };
-    const intl3 = guildId(1236).intl;
-    obj[7] = intl3.string(guildId(1236).t.oPAx73);
+    const intl3 = guildId(1233).intl;
+    obj[7] = intl3.string(guildId(1233).t.oPAx73);
     obj[9] = callback1;
     return obj;
   }, items5);
-  const obj3 = guildId(12084);
-  const coachmark = tmp2(8973).useCoachmark(guildId.targetRef, memo);
+  const obj3 = guildId(12308);
+  const coachmark = tmp2(8987).useCoachmark(guildId.targetRef, memo);
   return null;
 }

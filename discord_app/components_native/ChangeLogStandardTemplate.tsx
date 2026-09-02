@@ -63,10 +63,10 @@ function LinkInner(target) {
   target = target.target;
   let changelog;
   ({ changelogId, className, children } = target);
-  obj = target(647);
+  obj = target(644);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
-  changelog = target(8000).useChangelog(changelogId, stateFromStores).changelog;
+  changelog = target(8009).useChangelog(changelogId, stateFromStores).changelog;
   obj = {
     accessibilityRole: "link",
     style: className,
@@ -96,7 +96,7 @@ function LinkInner(target) {
     },
     children,
   };
-  return callback(target(1297).LegacyText, obj);
+  return callback(target(1296).LegacyText, obj);
 }
 let c3 = importAllResult;
 ({ View: c4, ScrollView: c5, StyleSheet } = get_ActivityIndicator);
@@ -216,46 +216,46 @@ const memoResult1 = importAllResult.memo((video) => {
     size: "sm",
     variant: "tertiary",
     accessibilityRole: "link",
-    icon: callback(id(8008).XNeutralIcon, { size: "sm", color: "interactive-icon-default" }),
+    icon: callback(id(8017).XNeutralIcon, { size: "sm", color: "interactive-icon-default" }),
     accessibilityLabel: null,
     onPress: null,
   };
-  const intl = id(1236).intl;
-  obj3[4] = intl.string(id(1236).t["/lXfom"]);
+  const intl = id(1233).intl;
+  obj3[4] = intl.string(id(1233).t["/lXfom"]);
   obj3[5] = function onPress() {
-    callback(4190).openURL(callback(4105)(constants.TWITTER));
+    callback(4190).openURL(callback(4104)(constants.TWITTER));
   };
-  const items3 = [callback(id(8006).IconButton, obj3), ,];
+  const items3 = [callback(id(8015).IconButton, obj3), ,];
   const obj4 = {
     size: "sm",
     variant: "tertiary",
     accessibilityRole: "link",
-    icon: callback(id(8010).FacebookNeutralIcon, { size: "sm", color: "interactive-icon-default" }),
+    icon: callback(id(8019).FacebookNeutralIcon, { size: "sm", color: "interactive-icon-default" }),
     accessibilityLabel: null,
     onPress: null,
   };
-  const intl2 = id(1236).intl;
-  obj4[4] = intl2.string(id(1236).t["h0or/l"]);
+  const intl2 = id(1233).intl;
+  obj4[4] = intl2.string(id(1233).t["h0or/l"]);
   obj4[5] = function onPress() {
     callback(4190).openURL(constants2.FACEBOOK_URL);
   };
-  items3[1] = callback(id(8006).IconButton, obj4);
+  items3[1] = callback(id(8015).IconButton, obj4);
   const obj5 = {
     size: "sm",
     variant: "tertiary",
     accessibilityRole: "link",
-    icon: callback(id(8012).InstagramNeutralIcon, { size: "sm", color: "interactive-icon-default" }),
+    icon: callback(id(8021).InstagramNeutralIcon, { size: "sm", color: "interactive-icon-default" }),
     accessibilityLabel: null,
     onPress: null,
   };
-  const intl3 = id(1236).intl;
-  obj5[4] = intl3.string(id(1236).t["5uVPyf"]);
+  const intl3 = id(1233).intl;
+  obj5[4] = intl3.string(id(1233).t["5uVPyf"]);
   obj5[5] = function onPress() {
     callback(4190).openURL(constants2.INSTAGRAM_URL);
   };
-  items3[2] = callback(id(8006).IconButton, obj5);
+  items3[2] = callback(id(8015).IconButton, obj5);
   obj2[2] = items3;
-  items2[1] = closure_11(id(5553).SafeAreaPaddingView, obj2);
+  items2[1] = closure_11(id(5561).SafeAreaPaddingView, obj2);
   obj[1] = items2;
   return closure_11(closure_4, obj);
 });

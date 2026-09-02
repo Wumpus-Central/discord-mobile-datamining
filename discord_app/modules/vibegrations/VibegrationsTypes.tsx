@@ -102,7 +102,7 @@ export const formatVibegrationsAttachmentLimit = function formatVibegrationsAtta
 };
 export const VIBEGRATIONS_FALLBACK_MODEL_CHOICES = obj;
 export const VIBEGRATIONS_FALLBACK_MODEL_SETTINGS = {
-  main: { model: "claude-opus-5", thinking: "high" },
-  subagent: { model: "claude-sonnet-5", thinking: "medium" },
+  main: { model: "gpt-5.6-sol", thinking: "high" },
+  subagent: { model: "gpt-5.6-luna", thinking: "high" },
 };
 export const VIBEGRATIONS_DEV_FALLBACK_MODEL_CHOICES = obj;

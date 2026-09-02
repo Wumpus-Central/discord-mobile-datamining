@@ -21,7 +21,7 @@ export default function TypingSubtitle(arg0) {
     const tmpResult = tmp(4981);
   }
   if (channelIconComponentWithGuild == null) {
-    channelIconComponentWithGuild = tmp(5029).TextIcon;
+    channelIconComponentWithGuild = tmp(5033).TextIcon;
   }
   obj = { style: subtitleStyles.subtitleRow, children: null };
   let tmp7 = null;

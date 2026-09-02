@@ -1,7 +1,7 @@
 // discord_app/modules/application_commands/ApplicationCommandBuiltIns.tsx
 import explicitContentFromProto from "../user_settings/UserSettings.tsx";
-import useCanUnarchiveThread from "../threads/ThreadHooks.tsx";
-import _modDef8159 from "../../actions/ChangeNicknameActionCreators.tsx";
+import useCanStartPrivateThread from "../threads/ThreadHooks.tsx";
+import _modDef8167 from "../../actions/ChangeNicknameActionCreators.tsx";
 import importDefaultResult from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../stores/ChannelStore.tsx";
 import closure_5 from "../../stores/PermissionStore.tsx";
@@ -489,7 +489,7 @@ obj13.execute = function execute(arr) {
       if (str == null) {
         str = "";
       }
-      const obj = _modDef8159;
+      const obj = _modDef8167;
       const id = guild.id;
       const id2 = channel.id;
       if (!str) {
@@ -577,8 +577,8 @@ obj15.predicate = function predicate(channel) {
   channel = channel.channel;
   let canStartPublicThread = null != channel;
   if (canStartPublicThread) {
-    canStartPublicThread = useCanUnarchiveThread.computeCanStartPublicThread(channel);
-    const obj = useCanUnarchiveThread;
+    canStartPublicThread = useCanStartPrivateThread.computeCanStartPublicThread(channel);
+    const obj = useCanStartPrivateThread;
   }
   return canStartPublicThread;
 };
@@ -623,7 +623,7 @@ let closure_14 = importDefaultResult((arg0, arg1) => {
             id = undefined;
             c6 = 1;
             c7 = 1;
-            return { value: "PX_16", done: null };
+            return { value: "PX_16", done: true };
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
@@ -645,15 +645,15 @@ let closure_14 = importDefaultResult((arg0, arg1) => {
             if (tmp11 == null) {
               closure_3 = "";
             }
-            obj1 = callback(8161);
-            let obj2 = callback(8162);
+            obj1 = callback(8169);
+            let obj2 = callback(8170);
             c6 = 2;
             c7 = 1;
             obj2 = { value: null, done: false };
             obj2[0] = obj1.createThread(
               channel,
               dependencyMap,
-              callback(692).ChannelTypes.PUBLIC_THREAD,
+              callback(689).ChannelTypes.PUBLIC_THREAD,
               obj2.getAutoArchiveDuration(channel, null),
               "Slash Command",
             );
@@ -669,11 +669,11 @@ let closure_14 = importDefaultResult((arg0, arg1) => {
           return obj;
         } else {
           id = arg1;
-          const obj8 = channel(7201);
+          const obj8 = channel(7210);
           id = id.id;
           const obj3 = { location: null };
           obj3[0] = constants.THREAD_CREATION;
-          obj8.sendMessage(id, channel(7427).parse(id, closure_3), true, obj3);
+          obj8.sendMessage(id, channel(7436).parse(id, closure_3), true, obj3);
           c7 = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -1733,8 +1733,8 @@ obj32.execute = function execute(arr, channel) {
     }
     const NumberResult = Number(num);
     const NumberResult1 = Number(num2);
-    size(6092).startDiceRoll(channel.id, NumberResult, NumberResult1);
-    const obj = size(6092);
+    size(6100).startDiceRoll(channel.id, NumberResult, NumberResult1);
+    const obj = size(6100);
   }
 };
 items[sum10 + 1] = obj32;

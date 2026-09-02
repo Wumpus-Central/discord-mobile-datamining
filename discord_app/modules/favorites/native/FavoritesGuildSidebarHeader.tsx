@@ -133,9 +133,9 @@ export default function FavoritesGuildSidebarHeader() {
     tmp7 = callback2(View, obj);
   }
   const items = [tmp7, ,];
-  obj = { spacing: tmp6(712).space.PX_8, style: tmp.copy, children: null };
+  obj = { spacing: tmp6(709).space.PX_8, style: tmp.copy, children: null };
   obj1 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = tmp4(1236).intl;
+  const intl = tmp4(1233).intl;
   obj1[2] = intl.string(messagesProxyDefault["1n0TGE"]);
   const items1 = [callback2(Text.Heading, obj1), callback2(EmptyBody, {})];
   obj[2] = items1;

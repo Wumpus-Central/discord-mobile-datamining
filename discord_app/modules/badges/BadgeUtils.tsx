@@ -2,7 +2,7 @@
 import set from "../../../_runtime/00002_set.js";
 import USER_PROFILE_TOOLTIP_DELAY from "../user_profile/Constants.tsx";
 import BadgeId from "../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
-import set2 from "BadgeIdResolution.tsx";
+import items2 from "BadgeIdResolution.tsx";
 
 function isPinnedBadge(badge_id) {
   return badge_id === BadgeId.BadgeId.STAFF;
@@ -69,7 +69,7 @@ export const getLegacyIconUrlByBadgeId = function getLegacyIconUrlByBadgeId(badg
     let tmp3 = require;
     let tmp4 = dependencyMap;
     let tmp2 = nextResult;
-    let obj2 = set2;
+    let obj2 = items2;
     let profileBadgeId = obj2.resolveProfileBadgeId(nextResult.id);
     let tmp6 = profileBadgeId;
     let hasItem = null == profileBadgeId;

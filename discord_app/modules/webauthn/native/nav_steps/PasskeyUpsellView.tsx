@@ -1,7 +1,7 @@
 // discord_app/modules/webauthn/native/nav_steps/PasskeyUpsellView.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import combinedDefault from "../../../../utils/HelpdeskUtils.tsx";
-import registerAssetDefault from "../../../../../_runtime/14320_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/14543_registerAsset.js";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -73,11 +73,11 @@ export default function PasskeyUpsellView() {
     navigation.push(closure_1_8.NAME, obj);
   }
   function onCancel() {
-    callback(14316).markDismissed(constants.USER_DISMISS);
-    const obj = callback(14316);
-    const result = callback(14317).closePasskeyUpsellModal();
+    callback(14539).markDismissed(constants.USER_DISMISS);
+    const obj = callback(14539);
+    const result = callback(14540).closePasskeyUpsellModal();
   }
-  let obj = navigation(1499);
+  let obj = navigation(1498);
   navigation = obj.useNavigation();
   const tmp4 = callback2();
   [r10018, importDefault] = onRegisterSuccess(onCancel.useState(""), 2);
@@ -102,16 +102,16 @@ export default function PasskeyUpsellView() {
     style: tmp4.headerText,
     children: null,
   };
-  let intl = navigation(1236).intl;
-  obj3[4] = intl.string(navigation(1236).t.CjleBl);
+  let intl = navigation(1233).intl;
+  obj3[4] = intl.string(navigation(1233).t.CjleBl);
   items1[1] = callback(navigation(4474).Text, obj3);
   const obj4 = { variant: "heading-md/normal", color: "text-default", style: tmp4.headerText, children: null };
-  let obj8 = navigation(500);
+  let obj8 = navigation(1234);
   const obj2 = { source: registerAssetDefault, style: tmp4.headerImage };
   const tmp12 = closure_7;
-  const intl2 = navigation(1236).intl;
+  const intl2 = navigation(1233).intl;
   const string = intl2.string;
-  const t = navigation(1236).t;
+  const t = navigation(1233).t;
   if (isIOSResult) {
     let stringResult = string(t["7yxR9t"]);
   } else {
@@ -125,8 +125,8 @@ export default function PasskeyUpsellView() {
   const obj6 = { style: tmp4.row, children: null };
   const items3 = [callback(closure_5, { style: tmp4.circleIcon })];
   obj8 = { variant: "heading-md/normal", color: "text-default", style: tmp4.text, children: null };
-  const intl3 = tmp(1236).intl;
-  obj8[3] = intl3.string(navigation(1236).t.HtqVkj);
+  const intl3 = tmp(1233).intl;
+  obj8[3] = intl3.string(navigation(1233).t.HtqVkj);
   items3[1] = callback(navigation(4474).Text, obj8);
   obj6[1] = items3;
   const items4 = [closure_12(closure_5, obj6)];
@@ -136,10 +136,10 @@ export default function PasskeyUpsellView() {
   isIOSResult = obj8.isIOS();
   const obj10 = { style: tmp4.circleIcon };
   const obj7 = { style: tmp4.circleIcon };
-  const tmpResult = navigation(500);
-  const intl4 = tmp(1236).intl;
+  const tmpResult = navigation(1234);
+  const intl4 = tmp(1233).intl;
   const string2 = intl4.string;
-  const t2 = tmp(1236).t;
+  const t2 = tmp(1233).t;
   if (isIOSResult1) {
     let string2Result = string2(t2.U409I8);
   } else {
@@ -153,12 +153,12 @@ export default function PasskeyUpsellView() {
   items2[1] = closure_12(closure_5, obj5);
   const obj12 = { style: tmp4.buttonContainer, children: null };
   const obj13 = { variant: "text-sm/semibold", color: "text-brand", children: null };
-  const intl5 = tmp(1236).intl;
-  obj13[2] = intl5.format(navigation(1236).t.OeGXVv, { learnMoreLink: articleURL });
+  const intl5 = tmp(1233).intl;
+  obj13[2] = intl5.format(navigation(1233).t.OeGXVv, { learnMoreLink: articleURL });
   const items6 = [callback(navigation(4474).Text, obj13), ,];
-  const intl6 = tmp(1236).intl;
+  const intl6 = tmp(1233).intl;
   const string3 = intl6.string;
-  const t3 = tmp(1236).t;
+  const t3 = tmp(1233).t;
   if (tmp7) {
     let string3Result = string3(t3.wePEBF);
   } else {
@@ -177,9 +177,9 @@ export default function PasskeyUpsellView() {
     loading: tmp7,
     grow: true,
   });
-  const intl7 = tmp(1236).intl;
+  const intl7 = tmp(1233).intl;
   const string4 = intl7.string;
-  const t4 = tmp(1236).t;
+  const t4 = tmp(1233).t;
   if (tmp7) {
     let string4Result = string4(t4.wePEBF);
   } else {
@@ -196,5 +196,5 @@ export default function PasskeyUpsellView() {
   items2[2] = closure_12(closure_5, obj12);
   obj[1] = items2;
   obj[2] = closure_12(tmp12, obj);
-  return callback(navigation(5553).SafeAreaPaddingView, obj);
+  return callback(navigation(5561).SafeAreaPaddingView, obj);
 }

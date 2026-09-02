@@ -16,7 +16,7 @@ const result = require("set").fileFinishedImporting("modules/game_invite_channel
 
 export default function GameInviteVoiceCount(channel) {
   channel = channel.channel;
-  let obj = channel(589);
+  let obj = channel(586);
   const items = [closure_4];
   const items1 = [channel];
   const stateFromStores = obj.useStateFromStores(
@@ -30,7 +30,7 @@ export default function GameInviteVoiceCount(channel) {
     obj[0] = tmp.container;
     obj = { size: "xs", color: null };
     obj[1] = ThemesDefault.colors.ICON_FEEDBACK_POSITIVE;
-    const items2 = [callback(tmp2(5050).VoiceNormalIcon, obj)];
+    const items2 = [callback(tmp2(5054).VoiceNormalIcon, obj)];
     obj1 = { variant: "text-sm/medium", color: "text-feedback-positive", children: null };
     obj1[2] = stateFromStores;
     items2[1] = callback(tmp2(4474).Text, obj1);

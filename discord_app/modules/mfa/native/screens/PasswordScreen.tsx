@@ -8,7 +8,12 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/mfa/native/screens/PasswordScreen.tsx");
 
-export default function PasswordScreen() {
+export default function PasswordScreen(finish) {
+  finish = finish.finish;
+  importDefault = undefined;
+  let first;
+  c3 = undefined;
+  let callback;
   function sendPassword() {
     const self = this;
     const apply = _sendPassword.apply;
@@ -21,7 +26,7 @@ export default function PasswordScreen() {
   }
   function _sendPassword() {
     const self = this;
-    const tmp = closure_1_3(function* () {
+    const tmp = _undefined(function* () {
       closure_2 = tmp3;
       closure_1_1(null);
       closure_1_3(true);
@@ -63,23 +68,21 @@ export default function PasswordScreen() {
     }
     return applyArgumentsResult;
   }
-  let obj = finish(first[5]);
-  finish = obj.useMfaChallenge().finish;
-  obj1 = importDefault(first[7]);
-  const screenStyles = obj1.useScreenStyles(importDefault(first[6])());
-  const tmp6 = callback(_sendPassword.useState(null), 2);
-  importDefault = tmp6[1];
-  const tmp7 = callback(_sendPassword.useState(""), 2);
-  first = tmp7[0];
-  const tmp3 = importDefault;
-  const tmp4 = importDefault(first[6])();
-  [tmp9, closure_3] = callback(_sendPassword.useState(false), 2);
-  const tmp8 = callback(_sendPassword.useState(false), 2);
-  [tmp11, closure_4] = callback(_sendPassword.useState(false), 2);
-  obj = { headerText: null, input: null, submit: null, mfaMethod: "password" };
-  const tmp10 = callback(_sendPassword.useState(false), 2);
-  const intl = finish(first[9]).intl;
-  obj[0] = intl.string(finish(first[9]).t.Rw1XuM);
+  let obj = importDefault(first[6]);
+  const screenStyles = obj.useScreenStyles(importDefault(first[5])());
+  const tmp5 = callback(_sendPassword.useState(null), 2);
+  importDefault = tmp5[1];
+  const tmp6 = callback(_sendPassword.useState(""), 2);
+  first = tmp6[0];
+  let tmp = importDefault;
+  const tmp3 = importDefault(first[5])();
+  [tmp8, c3] = callback(_sendPassword.useState(false), 2);
+  const tmp7 = callback(_sendPassword.useState(false), 2);
+  [tmp10, c4] = callback(_sendPassword.useState(false), 2);
+  obj = { headerText: null, input: null, submit: null, screenProps: null, mfaMethod: "password" };
+  const tmp9 = callback(_sendPassword.useState(false), 2);
+  const intl = finish(first[8]).intl;
+  obj[0] = intl.string(finish(first[8]).t.Rw1XuM);
   obj = { style: screenStyles.inputContainer, children: null };
   obj1 = {
     autoFocus: true,
@@ -95,17 +98,17 @@ export default function PasswordScreen() {
     isClearable: true,
     secureTextEntry: true,
   };
-  const intl2 = finish(first[9]).intl;
-  obj1[3] = intl2.string(finish(first[9]).t["CIGa+7"]);
-  obj1[5] = tmp6[0];
-  obj1[7] = tmp7[1];
+  const intl2 = finish(first[8]).intl;
+  obj1[3] = intl2.string(finish(first[8]).t["CIGa+7"]);
+  obj1[5] = tmp5[0];
+  obj1[7] = tmp6[1];
   obj1[8] = sendPassword;
-  let tmp15 = tmp9;
-  if (!tmp9) {
-    tmp15 = tmp11;
+  let tmp15 = tmp8;
+  if (!tmp8) {
+    tmp15 = tmp10;
   }
   obj1[9] = tmp15;
-  obj[1] = jsx(finish(first[10]).TextInput, {
+  obj[1] = jsx(finish(first[9]).TextInput, {
     autoFocus: true,
     required: true,
     textContentType: "password",
@@ -121,20 +124,21 @@ export default function PasswordScreen() {
   });
   obj[1] = <View style={screenStyles.inputContainer}>{null}</View>;
   const obj2 = { text: null, disabled: null, loading: null, onPress: null };
-  const tmp13 = importDefault(first[8]);
+  const tmp12 = importDefault(first[7]);
   const tmp14 = View;
-  const intl3 = tmp(tmp2[9]).intl;
-  obj2[0] = intl3.string(finish(first[9]).t.geKm7t);
-  let tmp17 = tmp9;
-  if (!tmp9) {
-    tmp17 = tmp11;
+  const intl3 = tmp13(tmp2[8]).intl;
+  obj2[0] = intl3.string(finish(first[8]).t.geKm7t);
+  let tmp17 = tmp8;
+  if (!tmp8) {
+    tmp17 = tmp10;
   }
   if (!tmp17) {
     tmp17 = 0 === first.length;
   }
   obj2[1] = tmp17;
-  obj2[2] = tmp9;
+  obj2[2] = tmp8;
   obj2[3] = sendPassword;
-  obj[2] = jsx(tmp3(first[11]), { text: null, disabled: null, loading: null, onPress: null });
-  return <tmp13 style={screenStyles.inputContainer}>{null}</tmp13>;
+  obj[2] = jsx(tmp(first[10]), { text: null, disabled: null, loading: null, onPress: null });
+  obj[3] = { mfaChallenge: finish.mfaChallenge, finish };
+  return <tmp12 style={screenStyles.inputContainer}>{null}</tmp12>;
 }

@@ -153,7 +153,7 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
                   c8 = undefined;
                   closure_3 = 1;
                   catchPromise = 1;
-                  return { value: "PX_16", done: null };
+                  return { value: "PX_16", done: true };
                 }
               } else if (1 === tmp5) {
                 if (arg0 === 1) {

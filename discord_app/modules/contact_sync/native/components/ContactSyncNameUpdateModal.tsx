@@ -38,14 +38,14 @@ function ContactSyncNameInputScreen() {
         closure_1 = tmp3;
         callback(true);
         c3 = 1;
-        yield closure_1_1(12222).updateName(callback);
+        yield closure_1_1(12446).updateName(callback);
         if (1 === tmp7) {
           c3 = 0;
           obj1 = closure_1_1(4194);
           const obj2 = { key: "ERROR_GENERIC_TITLE", content: null, icon: null };
-          const intl = callback(1236).intl;
-          obj2[1] = intl.string(callback(1236).t.R0RpRX);
-          obj2[2] = closure_1_1(7680);
+          const intl = callback(1233).intl;
+          obj2[1] = intl.string(callback(1233).t.R0RpRX);
+          obj2[2] = closure_1_1(7689);
           obj1.open(obj2);
           callback(false);
           c4 = 3;

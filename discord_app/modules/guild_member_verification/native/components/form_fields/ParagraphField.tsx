@@ -44,7 +44,7 @@ export default function ParagraphField(field) {
     str = "";
   }
   obj[1] = str;
-  const intl = tmp5(1236).intl;
+  const intl = tmp5(1233).intl;
   obj[2] = intl.string(getSystemLocale.t["Sqn+Wh"]);
   obj[3] = field.onChange;
   items[1] = callback(TextArea.TextArea, obj);

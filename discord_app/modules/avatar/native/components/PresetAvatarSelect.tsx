@@ -37,7 +37,7 @@ function DefaultAvatarButton(selected) {
     children: null,
   };
   items[1] = prop;
-  const intl = tmp3(1236).intl;
+  const intl = tmp3(1233).intl;
   obj[4] = intl.string(getSystemLocale.t.vw2RsD);
   obj[5] = onSelect;
   obj = { style: tmp.defaultAvatarButton, source: { uri: source } };

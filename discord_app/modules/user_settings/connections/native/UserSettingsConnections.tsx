@@ -33,10 +33,10 @@ export const UserSettingsConnections = function UserSettingsConnections(selected
   let authorizedApps;
   const tmp = callback3();
   importDefault = useThemeDefault();
-  let obj = selectedPlatformType(589);
+  let obj = selectedPlatformType(586);
   const items = [closure_9];
   dependencyMap = obj.useStateFromStores(items, () => locale.locale);
-  obj1 = selectedPlatformType(589);
+  obj1 = selectedPlatformType(586);
   const items1 = [closure_8];
   const stateFromStoresObject = obj1.useStateFromStoresObject(items1, () => ({
     fetching: closure_8.isFetching(),
@@ -44,13 +44,13 @@ export const UserSettingsConnections = function UserSettingsConnections(selected
   }));
   ({ accounts, fetching } = stateFromStoresObject);
   const items2 = [closure_5];
-  const stateFromStoresObject1 = selectedPlatformType(589).useStateFromStoresObject(items2, () => ({
+  const stateFromStoresObject1 = selectedPlatformType(586).useStateFromStoresObject(items2, () => ({
     authorizedAppsFetchState: authStore.getFetchState(),
     authorizedApps: authStore.getNewestTokensForNonChildrenApplications(),
   }));
   authorizedAppsFetchState = stateFromStoresObject1.authorizedAppsFetchState;
   authorizedApps = stateFromStoresObject1.authorizedApps;
-  const obj3 = selectedPlatformType(589);
+  const obj3 = selectedPlatformType(586);
   const tmp2 = importDefault;
   const tmp7Result = useConnectionFilteredAppIdentitiesDefault(id.getId(), { includeHidden: true });
   const prop = tmp7Result.filteredAppIdentities;
@@ -107,7 +107,7 @@ export const UserSettingsConnections = function UserSettingsConnections(selected
       ];
       obj[1] = items5;
       obj[1] = callback2(tmp4(4926).Stack, obj);
-      tmp14 = callback(tmp4(8363).Form, obj);
+      tmp14 = callback(tmp4(8372).Form, obj);
     }
     return tmp14;
   }

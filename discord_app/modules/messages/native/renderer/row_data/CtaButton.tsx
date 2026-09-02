@@ -15,21 +15,21 @@ export const createCtaButtons = function createCtaButtons(id, channel_id, arg2) 
   const result = obj2.shouldShowTiggerPawtect();
   if (CtaButtonType.CtaButtonType.MARK_AS_FALSE_POSITIVE === ctaButtonType) {
     obj = { text: null, textColor: null, backgroundColor: null, callback: null };
-    const intl4 = tmp(1236).intl;
-    obj[0] = intl4.string(tmp(1236).t["4q1Elf"]);
+    const intl4 = tmp(1233).intl;
+    obj[0] = intl4.string(tmp(1233).t["4q1Elf"]);
     ({ reportFpTextColor: obj10[1], reportFpBackgroundColor: obj10[2] } = arg2);
     let prop;
     if (closure_3.canSubmitFpReport(id)) {
-      prop = tmp(11484).CtaButtonType.MARK_AS_FALSE_POSITIVE;
+      prop = tmp(11707).CtaButtonType.MARK_AS_FALSE_POSITIVE;
     }
     obj = { ctaButton: null };
     obj[3] = prop;
     obj[0] = obj;
     return obj;
-  } else if (tmp(11484).CtaButtonType.AGE_VERIFICATION_RETRY === ctaButtonType) {
-    const intl2 = tmp(1236).intl;
+  } else if (tmp(11707).CtaButtonType.AGE_VERIFICATION_RETRY === ctaButtonType) {
+    const intl2 = tmp(1233).intl;
     const string = intl2.string;
-    const t = tmp(1236).t;
+    const t = tmp(1233).t;
     if (isAgeVerifiedResult) {
       let stringResult = string(t["9KiIz6"]);
     } else {
@@ -40,7 +40,7 @@ export const createCtaButtons = function createCtaButtons(id, channel_id, arg2) 
     ({ retryTextColor: obj6[1], retryBackgroundColor: obj6[2] } = arg2);
     let prop1;
     if (result) {
-      prop1 = tmp(11484).CtaButtonType.AGE_VERIFICATION_RETRY;
+      prop1 = tmp(11707).CtaButtonType.AGE_VERIFICATION_RETRY;
     }
     obj2 = { ctaButton: null, secondaryCtaButton: null };
     obj1[3] = prop1;
@@ -48,25 +48,25 @@ export const createCtaButtons = function createCtaButtons(id, channel_id, arg2) 
     let tmp8;
     if (tmpResult.isAgeVerificationMessageWithManualReviewCta(channel_id, id)) {
       const obj3 = { text: null, textColor: null, backgroundColor: null, callback: null };
-      const intl3 = tmp(1236).intl;
+      const intl3 = tmp(1233).intl;
       obj3[0] = intl3.string(messagesProxyDefault.Z61nkt);
       ({ reportFpTextColor: obj9[1], reportFpBackgroundColor: obj9[2] } = arg2);
       let prop2;
       if (result) {
-        prop2 = tmp(11484).CtaButtonType.AGE_VERIFICATION_MANUAL_REVIEW;
+        prop2 = tmp(11707).CtaButtonType.AGE_VERIFICATION_MANUAL_REVIEW;
       }
       obj3[3] = prop2;
       tmp8 = obj3;
     }
     obj2[1] = tmp8;
     return obj2;
-  } else if (tmp(11484).CtaButtonType.CONNECT_TO_TEEN === ctaButtonType) {
+  } else if (tmp(11707).CtaButtonType.CONNECT_TO_TEEN === ctaButtonType) {
     const obj4 = { ctaButton: null };
     const obj5 = { text: null, textColor: null, backgroundColor: null, callback: null };
-    const intl = tmp(1236).intl;
-    obj5[0] = intl.string(tmp(1236).t.n8a49k);
+    const intl = tmp(1233).intl;
+    obj5[0] = intl.string(tmp(1233).t.n8a49k);
     ({ retryTextColor: obj5[1], retryBackgroundColor: obj5[2] } = arg2);
-    obj5[3] = tmp(11484).CtaButtonType.CONNECT_TO_TEEN;
+    obj5[3] = tmp(11707).CtaButtonType.CONNECT_TO_TEEN;
     obj4[0] = obj5;
     return obj4;
   } else {

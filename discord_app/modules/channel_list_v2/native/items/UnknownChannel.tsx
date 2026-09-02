@@ -2,8 +2,8 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import dispatcherDefault from "../../../toast/native/ToastActionCreators.tsx";
+import CircleInformationIcon from "../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import computeChannelNameDefault from "../../../channel/useChannelName.tsx";
-import registerAssetDefault from "../../../../../_runtime/10891_registerAsset.js";
 import getChannelModeDefault from "../../../guild_sidebar/native/ChannelItem.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { UnreadSetting } from "../../../read_states/ReadStateConstants.tsx";
@@ -13,10 +13,10 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 require = arg1;
 function handlePress() {
   let obj = dispatcherDefault;
-  obj = { key: "UNKNOWN_CHANNEL_UPDATE_DISCORD", content: null, icon: null };
+  obj = { key: "UNKNOWN_CHANNEL_UPDATE_DISCORD", content: null, IconComponent: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t["/ZjyYE"]);
-  obj[2] = registerAssetDefault;
+  obj[2] = CircleInformationIcon.CircleInformationIcon;
   obj.open(obj);
 }
 let c3 = importAllResult;
@@ -48,8 +48,8 @@ const memoResult = importAllResult.memo((channel) => {
     resolvedUnreadSetting: null,
   };
   const tmp2 = computeChannelNameDefault(channel);
-  const intl = channel(1236).intl;
-  obj[4] = intl.formatToPlainString(channel(1236).t.yjQ9P8, { channelName: tmp2 });
+  const intl = channel(1233).intl;
+  obj[4] = intl.formatToPlainString(channel(1233).t.yjQ9P8, { channelName: tmp2 });
   obj[5] = { selected };
   obj[6] = channel;
   obj[7] = selected;

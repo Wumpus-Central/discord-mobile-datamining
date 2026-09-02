@@ -13,7 +13,7 @@ const memoResult = importAllResult.memo(function ChatInputImageCarousel(canUploa
   dependencyMap = undefined;
   let tmp = callback(canUpload.screenIndex);
   dependencyMap = tmp;
-  let obj = canUpload(589);
+  let obj = canUpload(586);
   const items = [closure_5, closure_3];
   const items1 = [channelId, canUpload, tmp];
   const stateFromStores = obj.useStateFromStores(
@@ -40,7 +40,7 @@ const memoResult = importAllResult.memo(function ChatInputImageCarousel(canUploa
     obj = { attachments: null, channelId: null };
     obj[0] = stateFromStores;
     obj[1] = channelId;
-    tmp4 = jsx(channelId(10424), { attachments: null, channelId: null });
+    tmp4 = jsx(channelId(10645), { attachments: null, channelId: null });
   }
   return tmp4;
 });

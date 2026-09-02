@@ -20,7 +20,7 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 require = arg1;
 function GuildProfileBackground(guildProfile) {
   guildProfile = guildProfile.guildProfile;
-  let obj = guildProfile(589);
+  let obj = guildProfile(586);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let guild = closure_1_6.getGuild(guildProfile.id);
@@ -35,10 +35,10 @@ function GuildProfileBackground(guildProfile) {
     if (null != guildProfile.customBanner) {
       obj = { id: null, splash: null, size: null };
       ({ id: obj3[0], customBanner: obj3[1] } = guildProfile);
-      obj[2] = tmp3(9015)() * useWindowDimensionsDefault().width;
+      obj[2] = tmp3(9029)() * useWindowDimensionsDefault().width;
       obj = { style: null, source: null };
       obj[0] = tmp4.imageBanner;
-      obj[1] = tmp3(1431).getGuildDiscoverySplashSource(obj);
+      obj[1] = tmp3(1430).getGuildDiscoverySplashSource(obj);
       return callback(closure_5, obj);
     }
   }

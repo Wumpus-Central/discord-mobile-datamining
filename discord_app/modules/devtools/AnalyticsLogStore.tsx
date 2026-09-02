@@ -1,6 +1,6 @@
 // discord_app/modules/devtools/AnalyticsLogStore.tsx
 import extractId from "../../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx";
-import v1 from "../../../_runtime/00514_v1.js";
+import v1 from "../../../_runtime/00511_v1.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import closure_2 from "../../stores/AuthenticationStore.tsx";

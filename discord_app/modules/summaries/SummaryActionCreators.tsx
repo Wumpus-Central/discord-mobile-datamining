@@ -259,7 +259,7 @@ function _fetchSummaries() {
             closure_4 = summaries;
             obj1 = callback2(12);
             closure_4 = obj1.takeRight(closure_4, 75);
-            obj2 = callback2(709);
+            obj2 = callback2(706);
             obj4 = {
               type: "RECEIVE_CHANNEL_SUMMARIES",
               channelId: null,
@@ -546,7 +546,7 @@ function _fetchSummariesBulk() {
               let summaries;
               c7 = 1;
               constants = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -604,11 +604,11 @@ function _fetchSummariesBulk() {
                 const obj5 = { type: "REQUEST_CHANNEL_SUMMARIES_BULK", channelIds: null, requestedAt: null };
                 obj5[1] = closure_0;
                 obj5[2] = closure_1_3;
-                flag(709).dispatch(obj5);
+                flag(706).dispatch(obj5);
                 c4 = undefined;
                 c5 = undefined;
                 summaries = 1;
-                const HTTP = substr(530).HTTP;
+                const HTTP = substr(527).HTTP;
                 const obj6 = { url: null, body: null, rejectWithError: false };
                 obj6[0] = constants.USER_SUMMARIES;
                 const obj7 = { channel_ids: null };
@@ -643,7 +643,7 @@ function _fetchSummariesBulk() {
             if (_undefined != null) {
               summaries = _undefined.body.summaries;
             }
-            obj1 = flag(709);
+            obj1 = flag(706);
             const obj9 = {
               type: "RECEIVE_CHANNEL_SUMMARIES_BULK",
               requestedAt: null,
@@ -833,7 +833,7 @@ function _deleteSummary() {
             obj3[0] = arg1;
             return obj3;
           } else {
-            obj = callback(709);
+            obj = callback(706);
             const obj4 = { type: "DELETE_SUMMARY", summary: null };
             obj4[1] = lib;
             obj.dispatch(obj4);

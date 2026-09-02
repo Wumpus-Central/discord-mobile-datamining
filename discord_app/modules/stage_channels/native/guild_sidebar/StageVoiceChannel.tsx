@@ -30,7 +30,7 @@ const memoResult = importAllResult.memo((channel) => {
   channel = channel.channel;
   const selected = channel.selected;
   let tmp = callback();
-  let obj = channel(589);
+  let obj = channel(586);
   const items = [closure_12, closure_8, closure_9, closure_10, closure_7, closure_6];
   const items1 = [channel];
   const stateFromStoresObject = obj.useStateFromStoresObject(
@@ -55,10 +55,10 @@ const memoResult = importAllResult.memo((channel) => {
   if (arr3 == null) {
     arr3 = NO_VOICE_STATES;
   }
-  let tmp2Result = tmp2(5374);
+  let tmp2Result = tmp2(5382);
   const stageParticipantsCount = tmp2Result.useStageParticipantsCount(
     channel.id,
-    tmp2(5368).StageChannelParticipantNamedIndex.AUDIENCE,
+    tmp2(5376).StageChannelParticipantNamedIndex.AUDIENCE,
   );
   const sum = stageParticipantsCount + arr3.length;
   const items2 = [channel];
@@ -80,21 +80,21 @@ const memoResult = importAllResult.memo((channel) => {
     const result = channel(closure_1_3[23]).openChannelLongPressActionSheet(channel.id);
   }, items3);
   const tmp10 = computeChannelNameDefault(channel, false);
-  tmp2Result = tmp2(9524);
+  tmp2Result = tmp2(9537);
   const isConnectedToVoiceChannel = tmp2Result.useIsConnectedToVoiceChannel(channel);
   if (stageInstance != null) {
     const topic = stageInstance.topic;
   }
-  let tmp5Result = tmp5(15705);
-  const intl = tmp2(1236).intl;
+  let tmp5Result = tmp5(15936);
+  const intl = tmp2(1233).intl;
   if (null != channel.userLimit) {
     if (channel.userLimit > 0) {
-      const intl2 = tmp2(1236).intl;
+      const intl2 = tmp2(1233).intl;
       obj = { channelName: null, userCount: null, limit: null };
       obj[0] = tmp10;
       obj[1] = sum;
       obj[2] = channel.userLimit;
-      let formatToPlainStringResult1 = intl2.formatToPlainString(tmp2(1236).t.rhh6Ev, obj);
+      let formatToPlainStringResult1 = intl2.formatToPlainString(tmp2(1233).t.rhh6Ev, obj);
     }
     obj = {};
     obj1 = { accessible: true, accessibilityRole: "button", accessibilityLabel: null };
@@ -123,7 +123,7 @@ const memoResult = importAllResult.memo((channel) => {
     obj2[0] = channel;
     obj2[1] = selected;
     obj2[2] = collapsed;
-    tmp5Result = tmp5(15815);
+    tmp5Result = tmp5(16047);
     if (!hasMedia) {
       let tmp20 = channel.userLimit > 0;
       if (tmp20) {
@@ -143,19 +143,19 @@ const memoResult = importAllResult.memo((channel) => {
       obj4[1] = collapsed;
       obj4[2] = arr3;
       obj4[3] = stageParticipantsCount;
-      obj3[1] = tmp12(tmp5(15710), obj4);
+      obj3[1] = tmp12(tmp5(15941), obj4);
       tmp12Result = tmp12(View, obj3);
     }
     obj.children = tmp12Result;
     return tmp12(tmp5Result, obj);
   }
-  formatToPlainStringResult1 = intl.formatToPlainString(channel(1236).t.TPPk2T, { channelName: tmp10 });
+  formatToPlainStringResult1 = intl.formatToPlainString(channel(1233).t.TPPk2T, { channelName: tmp10 });
   if (sum > 0) {
-    const intl3 = tmp2(1236).intl;
+    const intl3 = tmp2(1233).intl;
     const obj5 = { channelName: null, userCount: null };
     obj5[0] = tmp10;
     obj5[1] = sum;
-    formatToPlainStringResult1 = intl3.formatToPlainString(tmp2(1236).t["7yr3Qc"], obj5);
+    formatToPlainStringResult1 = intl3.formatToPlainString(tmp2(1233).t["7yr3Qc"], obj5);
   }
 });
 let result = require("set").fileFinishedImporting("modules/stage_channels/native/guild_sidebar/StageVoiceChannel.tsx");

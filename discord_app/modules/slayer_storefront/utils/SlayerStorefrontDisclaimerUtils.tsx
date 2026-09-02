@@ -7,13 +7,13 @@ import { MarketingURLs } from "../../../Constants.tsx";
 
 require = arg1;
 let closure_6 = {
-  [arg1(10593).StorefrontPlatform.DESKTOP]: "PC",
-  [arg1(10593).StorefrontPlatform.XBOX]: "Xbox",
-  [arg1(10593).StorefrontPlatform.PLAYSTATION]: "PlayStation",
-  [arg1(10593).StorefrontPlatform.SWITCH]: "Switch",
-  [arg1(10593).StorefrontPlatform.APPLE_ARCADE]: "Apple Arcade",
-  [arg1(10593).StorefrontPlatform.NETFLIX]: "Netflix",
-  [arg1(10593).StorefrontPlatform.AMAZON_KIDS_PLUS]: "Amazon Kids+",
+  [arg1(10814).StorefrontPlatform.DESKTOP]: "PC",
+  [arg1(10814).StorefrontPlatform.XBOX]: "Xbox",
+  [arg1(10814).StorefrontPlatform.PLAYSTATION]: "PlayStation",
+  [arg1(10814).StorefrontPlatform.SWITCH]: "Switch",
+  [arg1(10814).StorefrontPlatform.APPLE_ARCADE]: "Apple Arcade",
+  [arg1(10814).StorefrontPlatform.NETFLIX]: "Netflix",
+  [arg1(10814).StorefrontPlatform.AMAZON_KIDS_PLUS]: "Amazon Kids+",
 };
 let items = [require("StorefrontPlatform").StorefrontPlatform.PLAYSTATION];
 const result = require("set").fileFinishedImporting(
@@ -79,7 +79,7 @@ export const getFinePrintMessageForApplication = function getFinePrintMessageFor
   if (shouldAppendDisclaimer.shouldAppendDisclaimer) {
     let obj = { applicationName: null, platforms_info: null };
     obj[0] = str;
-    const intl2 = tmp(1236).intl;
+    const intl2 = tmp(1233).intl;
     let id;
     if (name != null) {
       id = name.id;
@@ -92,13 +92,13 @@ export const getFinePrintMessageForApplication = function getFinePrintMessageFor
     }
     let str2 = "";
     if (0 !== arr.length) {
-      const intl3 = tmp(1236).intl;
+      const intl3 = tmp(1233).intl;
       obj = { platforms: null, count: null };
       const _Intl = Intl;
       const listFormat = new Intl.ListFormat(closure_3.locale);
       obj[0] = listFormat.format(arr.map((arg0) => table[arg0]));
       obj[1] = arr.length;
-      str2 = intl3.formatToPlainString(tmp4(3371)["5h8p5P"], obj);
+      str2 = intl3.formatToPlainString(tmp4(3370)["5h8p5P"], obj);
     }
     obj1 = { platforms_info: null };
     obj1[0] = str2;
@@ -108,7 +108,7 @@ export const getFinePrintMessageForApplication = function getFinePrintMessageFor
   } else {
     obj = { applicationName: null };
     obj[0] = str;
-    formatResult = format(tmp(1236).t.CVITgq, obj);
+    formatResult = format(tmp(1233).t.CVITgq, obj);
   }
   return formatResult;
 };
@@ -141,19 +141,19 @@ export const getMobileFinePrintMessageForApplication = function getMobileFinePri
     }
     let str2 = "";
     if (0 !== arr2.length) {
-      const intl3 = tmp(1236).intl;
+      const intl3 = tmp(1233).intl;
       obj = { platforms: null, count: null };
       const _Intl = Intl;
       const listFormat = new Intl.ListFormat(closure_3.locale);
       obj[0] = listFormat.format(arr2.map((arg0) => table[arg0]));
       obj[1] = arr2.length;
-      str2 = intl3.formatToPlainString(tmp3(3371)["5h8p5P"], obj);
+      str2 = intl3.formatToPlainString(tmp3(3370)["5h8p5P"], obj);
     }
     obj = { platforms_info: null };
     obj[0] = str2;
     items = [format(tmp4.Q0dHYO, obj)];
-    const intl2 = tmp(1236).intl;
-    items[1] = intl2.format(tmp3(3371).Ufm9XX, obj);
+    const intl2 = tmp(1233).intl;
+    items[1] = intl2.format(tmp3(3370).Ufm9XX, obj);
     let items1 = items;
   } else {
     items1 = [format(tmp4.Ufm9XX, obj)];
@@ -214,7 +214,7 @@ export const getGiftLinkAccountDescriptionForApplication = function getGiftLinkA
     const listFormat = new Intl.ListFormat(closure_3.locale);
     obj[0] = listFormat.format(arr.map((arg0) => table[arg0]));
     obj[1] = arr.length;
-    str = intl2.formatToPlainString(tmp4(3371)["5h8p5P"], obj);
+    str = intl2.formatToPlainString(tmp4(3370)["5h8p5P"], obj);
   }
   obj[1] = str;
   return intl.format(vyAtfo, obj);

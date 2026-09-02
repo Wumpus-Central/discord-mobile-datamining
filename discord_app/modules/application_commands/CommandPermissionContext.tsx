@@ -23,22 +23,22 @@ function computePermissions(isPrivate) {
       let flag = true;
       let flag2 = true;
       if (!obj6.has(permissions, constants2.ADMINISTRATOR)) {
-        let tmp13Result = tmp13(506);
+        let tmp13Result = tmp13(503);
         const hasItem = tmp13Result.has(permissions, SEND_MESSAGES_IN_THREADS.VIEW_CHANNEL);
         if (tmp3) {
           let hasItem1 = hasItem;
           if (hasItem) {
-            tmp13Result = tmp13(506);
+            tmp13Result = tmp13(503);
             hasItem1 = tmp13Result.has(permissions, SEND_MESSAGES_IN_THREADS.USE_APPLICATION_COMMANDS);
           }
-          const has = tmp13(506).has;
+          const has = tmp13(503).has;
           if (arg1) {
             SEND_MESSAGES_IN_THREADS = SEND_MESSAGES_IN_THREADS.SEND_MESSAGES_IN_THREADS;
             let hasItem2 = has(permissions, SEND_MESSAGES_IN_THREADS);
           } else {
             hasItem2 = has(permissions, SEND_MESSAGES_IN_THREADS.SEND_MESSAGES);
           }
-          const tmp13Result1 = tmp13(506);
+          const tmp13Result1 = tmp13(503);
         } else {
           flag = true;
           flag2 = hasItem;

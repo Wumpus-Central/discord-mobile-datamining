@@ -19,7 +19,7 @@ let obj = {
   },
   parent: MobileUserSettings.MobileUserSettings.VOICE,
   useDescription: function useVoiceSensitivitySettingDescription() {
-    let obj = inputMode(589);
+    let obj = inputMode(586);
     const items = [closure_4];
     const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
       inputMode: store.getMode(),
@@ -63,7 +63,7 @@ const createStaticResult = createToggle.createStatic({
   },
   parent: MobileUserSettings.MobileUserSettings.VOICE,
   useDescription: function useVoiceSensitivitySettingDescription() {
-    let obj = inputMode(589);
+    let obj = inputMode(586);
     const items = [closure_4];
     const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
       inputMode: store.getMode(),

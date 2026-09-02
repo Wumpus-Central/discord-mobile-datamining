@@ -136,7 +136,7 @@ class RoleItem {
 function RolesList(guildMemberRoleIds) {
   guildMemberRoleIds = guildMemberRoleIds.guildMemberRoleIds;
   const guildId = guildMemberRoleIds.guildId;
-  let obj = guildMemberRoleIds(589);
+  let obj = guildMemberRoleIds(586);
   const items = [closure_6];
   const items1 = [guildMemberRoleIds, guildId];
   const stateFromStoresArray = obj.useStateFromStoresArray(
@@ -176,7 +176,7 @@ let result = require("set").fileFinishedImporting("modules/user_profile/native/U
 export default function UserProfileRolesCard(userId) {
   userId = userId.userId;
   const guildId = userId.guildId;
-  let obj = userId(589);
+  let obj = userId(586);
   const items = [closure_5];
   const items1 = [userId, guildId];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getMember(guildId, userId), items1);
@@ -190,15 +190,15 @@ export default function UserProfileRolesCard(userId) {
   let tmp4 = null;
   if (0 !== roles.length) {
     obj = { title: null, style: null, children: null };
-    const intl = tmp(1236).intl;
-    obj[0] = intl.string(tmp(1236).t["LPJmL/"]);
+    const intl = tmp(1233).intl;
+    obj[0] = intl.string(tmp(1233).t["LPJmL/"]);
     obj[1] = userId.style;
     obj = { guildId: null, guildMemberRoleIds: null };
     obj[0] = guildId;
     obj[1] = roles;
     obj[2] = callback(RolesList, obj);
-    tmp4 = callback(guildId(6000), obj);
-    const tmp7 = guildId(6000);
+    tmp4 = callback(guildId(6008), obj);
+    const tmp7 = guildId(6008);
   }
   return tmp4;
 }

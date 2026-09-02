@@ -16,18 +16,18 @@ export const useGlobalStatusIndicatorState = function useGlobalStatusIndicatorSt
   }
   let stateFromStores;
   importDefault = undefined;
-  let obj = stateFromStores(9539);
+  let obj = stateFromStores(9552);
   let hasPipParticipant = obj.useHasPipParticipant({ isActivityViewFocused: false });
   const tmp5 = useVoiceStateForRemoteSessionDefault();
   const items = [closure_4];
-  stateFromStores = stateFromStores(589).useStateFromStores(items, () => channelId.getChannelId());
+  stateFromStores = stateFromStores(586).useStateFromStores(items, () => channelId.getChannelId());
   const tmp7 = useIsInvitedToSpeakDefault();
   importDefault = tmp7;
-  const obj2 = stateFromStores(589);
+  const obj2 = stateFromStores(586);
   const tmp4 = importDefault;
   const items1 = [closure_3];
   const items2 = [stateFromStores, tmp7];
-  const stateFromStores1 = stateFromStores(589).useStateFromStores(
+  const stateFromStores1 = stateFromStores(586).useStateFromStores(
     items1,
     () => {
       const channel = closure_1_3.getChannel(stateFromStores);
@@ -42,8 +42,8 @@ export const useGlobalStatusIndicatorState = function useGlobalStatusIndicatorSt
     },
     items2,
   );
-  const obj3 = stateFromStores(589);
-  let num = stateFromStores(9645).useGetStageRTCPanelHeight(stateFromStores);
+  const obj3 = stateFromStores(586);
+  let num = stateFromStores(9658).useGetStageRTCPanelHeight(stateFromStores);
   stateFromStores(4332);
   let tmp12 = null != tmp5;
   if (tmp12) {
@@ -54,7 +54,7 @@ export const useGlobalStatusIndicatorState = function useGlobalStatusIndicatorSt
     }
     tmp12 = tmpResult.getVoiceChannelKey(channelId) !== tmp11;
   }
-  tmpResult = tmp(9651);
+  tmpResult = tmp(9664);
   let isVoicePanelShowing = tmpResult.useIsVoicePanelShowing();
   const tmp14 = null != useMyCurrentStageChannelDefault();
   if (!isVoicePanelShowing) {

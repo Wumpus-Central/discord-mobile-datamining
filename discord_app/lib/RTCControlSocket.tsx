@@ -1,9 +1,9 @@
 // discord_app/lib/RTCControlSocket.tsx
 import timestampDefault from "../modules/debug/Logger.tsx";
 import _modDef38 from "../../_runtime/metro/00038__.js";
-import set from "../utils/PlatformUtils.tsx";
 import failsDefault from "../../discord_common/js/packages/backoff/Backoff.tsx";
 import setDefault from "../utils/Durations.tsx";
+import set from "../utils/PlatformUtils.tsx";
 import sleep from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
 import onDefault from "../../discord_common/js/shared/utils/TypedEventEmitter.tsx";
 import closure_3 from "../stores/DeveloperOptionsStore.tsx";
@@ -212,7 +212,7 @@ prototype["createWebSocket"] = function createWebSocket() {
     );
   }, closure_13);
   obj = { location: "RTCControlSocket", supportsSfuUpdate: closure_4.supports(constants.UDP_ENDPOINT_UPDATE) };
-  const webSocket = new WebSocket("" + self.url + "?v=" + self(13463).getVoiceGatewayProtocolVersion(obj));
+  const webSocket = new WebSocket("" + self.url + "?v=" + self(13686).getVoiceGatewayProtocolVersion(obj));
   self.webSocket = webSocket;
   webSocket.binaryType = "arraybuffer";
   webSocket.onopen = () => {

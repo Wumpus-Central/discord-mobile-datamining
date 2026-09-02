@@ -157,7 +157,7 @@ let prototype = function DeprecatedModalManager() {
     store: closure_3,
     closable: false,
     getComponent() {
-      return callback(17101).default;
+      return callback(17337).default;
     },
   };
   obj = {
@@ -165,7 +165,7 @@ let prototype = function DeprecatedModalManager() {
     store: closure_6,
     closable: false,
     getComponent() {
-      return callback(17375).default;
+      return callback(17611).default;
     },
   };
   applyArgumentsResult.actions = obj;

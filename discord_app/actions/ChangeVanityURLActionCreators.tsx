@@ -37,7 +37,7 @@ export default {
     const self = this;
     let obj = dispatcherDefault;
     obj.dispatch({ type: "CHANGE_VANITY_URL_MODAL_SUBMIT" });
-    const HTTP = self(530).HTTP;
+    const HTTP = self(527).HTTP;
     obj = { url: Endpoints.GUILD_VANITY_URL(id), body: obj, oldFormErrors: true, rejectWithError: true };
     obj = { code: vanityURLCode };
     return HTTP.patch(obj).then(
@@ -63,10 +63,10 @@ export default {
     return HTTP.patch(obj).then(
       (body) => {
         ({ code, uses } = body.body);
-        callback(709).dispatch({ type: "GUILD_SETTINGS_SET_VANITY_URL", code, uses });
+        callback(706).dispatch({ type: "GUILD_SETTINGS_SET_VANITY_URL", code, uses });
       },
       (body) => {
-        let obj = callback(709);
+        let obj = callback(706);
         obj = { type: "CHANGE_VANITY_URL_MODAL_SUBMIT_FAILURE", error: body.body, hasError: true };
         obj.dispatch(obj);
         return body;

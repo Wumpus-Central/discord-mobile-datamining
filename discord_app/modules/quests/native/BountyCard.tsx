@@ -339,19 +339,22 @@ const memoResult = importAllResult.memo((bounty) => {
   const items9 = [c11(bounty(isActive[12]).Card, obj2)];
   const obj11 = { style: tmp.cardFooter, children: null };
   const obj12 = { style: tmp.advertiserRow, children: null };
+  const items10 = [
+    c10(bounty(isActive[16]).Text, {
+      variant: "text-sm/medium",
+      color: "text-subtle",
+      lineClamp: 1,
+      style: tmp.advertiserName,
+      children: bounty.advertiserName,
+    }),
+  ];
   const obj13 = {
     variant: "text-sm/medium",
     color: "text-subtle",
     lineClamp: 1,
     style: tmp.advertiserName,
-    children: null,
+    children: bounty.advertiserName,
   };
-  let str = bounty.advertiserName;
-  if (str == null) {
-    str = "";
-  }
-  obj13[4] = str;
-  const items10 = [c10(bounty(isActive[16]).Text, obj13)];
   const tmp10Result = tmp10(obj1.useState("active" === currentState.currentState), 2);
   items10[1] = c10(bounty(isActive[19]).CircleCheckIcon, {
     size: "xxs",

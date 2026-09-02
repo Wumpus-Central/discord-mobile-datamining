@@ -13,7 +13,7 @@ export default function useNavigationTransitionEnded() {
   const _require = tmp2;
   const tmp3 = useAppLauncherNavigation();
   dependencyMap = tmp3;
-  route = require("../../../../../_runtime/01500_createStandardNavigationFactories.js").useRoute();
+  route = require("../../../../../_runtime/01499_createStandardNavigationFactories.js").useRoute();
   const items = [tmp3, route, tmp[1]];
   const effect = React.useEffect(
     () =>

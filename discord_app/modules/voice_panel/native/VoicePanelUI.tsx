@@ -40,12 +40,12 @@ function AnimatedWrapper(children) {
   let pIPState;
   let animatedStyle;
   let animatedStyle1;
-  obj = wrapperOffset(9648);
+  obj = wrapperOffset(9661);
   height = obj.useGlobalStatusIndicatorState().height;
   const tmp3 = callback3();
   dependencyMap = tmp3;
   obj1 = connected;
-  const context = connected.useContext(height(11839));
+  const context = connected.useContext(height(12062));
   wrapperDimensions = context.wrapperDimensions;
   connected = context.connected;
   controlsSpecs = context.controlsSpecs;
@@ -63,7 +63,7 @@ function AnimatedWrapper(children) {
   fn.__workletHash = 6243014585347;
   fn.__initData = closure_55;
   derivedValue = obj2.useDerivedValue(fn);
-  let obj3 = wrapperOffset(16673);
+  let obj3 = wrapperOffset(16908);
   pIPState = obj3.usePIPState();
   let obj4 = wrapperOffset(4217);
   const fn2 = function l() {
@@ -165,14 +165,14 @@ function AnimatedWrapper(children) {
     }
   };
   obj = {
-    cheapWorkletShallowEqual: wrapperOffset(9209).cheapWorkletShallowEqual,
+    cheapWorkletShallowEqual: wrapperOffset(9223).cheapWorkletShallowEqual,
     VoicePanelModes: animatedStyle1,
     wrapperDimensions,
-    updateSharedValueIfChanged: height(10991),
+    updateSharedValueIfChanged: height(11211),
     wrapperOffset,
-    getMaxPanelWidth: wrapperOffset(16661).getMaxPanelWidth,
-    getPanelX: wrapperOffset(16661).getPanelX,
-    roundToNearestPixel: height(10730),
+    getMaxPanelWidth: wrapperOffset(16896).getMaxPanelWidth,
+    getPanelX: wrapperOffset(16896).getPanelX,
+    roundToNearestPixel: height(10951),
     windowDimensions,
   };
   fn3.__closure = obj;
@@ -268,7 +268,7 @@ function AnimatedWrapper(children) {
     mode,
     VoicePanelModes: animatedStyle1,
     runOnJS: wrapperOffset(4217).runOnJS,
-    updateSourceTrackingView: height(9579).updateSourceTrackingView,
+    updateSourceTrackingView: height(9592).updateSourceTrackingView,
     withSpring: wrapperOffset(4927).withSpring,
     DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_17,
     DRAWER_SIZE_PHYSICS: obj2,
@@ -334,7 +334,7 @@ function AnimatedWrapper(children) {
   M.__workletHash = 1768699814221;
   M.__initData = closure_60;
   animatedStyle1 = obj8.useAnimatedStyle(M);
-  if (!wrapperOffset(7348).isStable) {
+  if (!wrapperOffset(7357).isStable) {
     let tmpResult = tmp(4217);
     class Y {
       constructor() {
@@ -395,11 +395,11 @@ function AnimatedWrapper(children) {
   );
   ({ wrapperRootStyles, wrapperTransformStyles, wrapperSurfaceStyles } = memo);
   obj6 = { style: wrapperRootStyles, pointerEvents: "box-none", children: null };
-  let tmp4Result = tmp4(7796);
+  let tmp4Result = tmp4(7805);
   const obj7 = { style: wrapperTransformStyles, pointerEvents: "box-none", children: null };
-  tmp4Result = tmp4(7796);
+  tmp4Result = tmp4(7805);
   obj8 = { style: wrapperSurfaceStyles, layout: layoutTransition, children: children.children };
-  obj7[2] = callback2(height(7796), obj8);
+  obj7[2] = callback2(height(7805), obj8);
   obj6[2] = callback2(tmp4Result, obj7);
   return callback2(tmp4Result, obj6);
 }

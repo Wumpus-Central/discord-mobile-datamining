@@ -13,9 +13,9 @@ export default function useTrackActivityPip(arg0) {
     require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () =>
       pipEnabledWhileFocusedOnActivityOrStream.isPipEnabledWhileFocusedOnActivityOrStream(),
     );
-  let tmp2 = stateFromStores(8576)(stateFromStores);
+  let tmp2 = stateFromStores(8591)(stateFromStores);
   dependencyMap = tmp2;
-  const tmp3 = stateFromStores(9602)();
+  const tmp3 = stateFromStores(9615)();
   const React = tmp3;
   const items1 = [stateFromStores, tmp2, arg0, tmp3];
   const effect = React.useEffect(() => {

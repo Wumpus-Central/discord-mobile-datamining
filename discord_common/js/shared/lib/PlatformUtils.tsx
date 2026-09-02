@@ -1,5 +1,5 @@
 // discord_common/js/shared/lib/PlatformUtils.tsx
-import importDefaultResult1 from "../../../../_runtime/00669_format.js";
+import importDefaultResult1 from "../../../../_runtime/00666_format.js";
 import set from "../../../../_runtime/00002_set.js";
 
 let set = new Set(["iPad", "Kindle", "Kindle Fire", "Nook", "PlayBook"]);

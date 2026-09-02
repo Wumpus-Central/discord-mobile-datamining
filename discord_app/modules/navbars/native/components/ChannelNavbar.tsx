@@ -93,7 +93,7 @@ function ParentChannelSubTitle(parentChannel) {
 }
 function DMChannelName(style) {
   const userId = style.userId;
-  let obj = userId(589);
+  let obj = userId(586);
   const items = [closure_11, closure_10];
   const items1 = [userId];
   const stateFromStores = obj.useStateFromStores(
@@ -119,14 +119,14 @@ function DMChannelName(style) {
     accessibilityRole: "header",
     children: null,
   };
-  const intl = userId(1236).intl;
-  obj[2] = intl.formatToPlainString(userId(1236).t.fYqXVY, { channelName: stateFromStores });
+  const intl = userId(1233).intl;
+  obj[2] = intl.formatToPlainString(userId(1233).t.fYqXVY, { channelName: stateFromStores });
   obj[5] = stateFromStores;
-  return callback(userId(1297).LegacyText, obj);
+  return callback(userId(1296).LegacyText, obj);
 }
 function ConnectedStatus(style) {
   const userId = style.userId;
-  let obj = userId(589);
+  let obj = userId(586);
   const items = [closure_9];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     const obj = {
@@ -138,8 +138,8 @@ function ConnectedStatus(style) {
     return obj;
   });
   ({ status, isMobileOnline, isVROnline, streaming } = stateFromStoresObject);
-  obj = { isMobileOnline, isVROnline, status, streaming, size: userId(1297).StatusSizes.SMALL, style: style.style };
-  return callback(userId(1297).Status, obj);
+  obj = { isMobileOnline, isVROnline, status, streaming, size: userId(1296).StatusSizes.SMALL, style: style.style };
+  return callback(userId(1296).Status, obj);
 }
 let c3 = importAllResult;
 ({ ChannelTypes: closure_12, Fonts } = ME);

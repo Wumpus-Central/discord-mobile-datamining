@@ -139,8 +139,8 @@ const referralTrialStore = new ReferralTrialStore(dispatcherDefault, {
   BILLING_REFERRAL_TRIAL_OFFER_UPDATE: function handleReferralTrialOfferUpdate(userTrialOfferId) {
     userTrialOfferId = userTrialOfferId.userTrialOfferId;
     if (!c8) {
-      const referralsRemaining = userTrialOfferId(7198).fetchReferralsRemaining();
-      const obj = userTrialOfferId(7198);
+      const referralsRemaining = userTrialOfferId(7207).fetchReferralsRemaining();
+      const obj = userTrialOfferId(7207);
     }
     if (!set1.has(userTrialOfferId)) {
       set1.add(userTrialOfferId);
@@ -236,7 +236,7 @@ const referralTrialStore = new ReferralTrialStore(dispatcherDefault, {
     message = message.message;
     let content;
     content = null;
-    if (message.type === content(686).MessageTypes.PREMIUM_REFERRAL) {
+    if (message.type === content(683).MessageTypes.PREMIUM_REFERRAL) {
       content = message.content;
     }
     if (null != content) {

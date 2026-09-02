@@ -70,7 +70,7 @@ function _executeMessageComponentInteraction() {
               let obj6;
               sessionId = 1;
               c5 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else {
             if (1 === tmp7) {
@@ -87,7 +87,7 @@ function _executeMessageComponentInteraction() {
                 closure_9 = callback2(11).fromTimestamp(Date.now());
                 if (c5.canQueueInteraction(callback2, closure_9)) {
                   c3 = 1;
-                  let obj8 = callback2(7509);
+                  let obj8 = callback2(7519);
                   sessionId = 3;
                   c5 = 1;
                   const obj2 = { value: null, done: false };
@@ -115,7 +115,7 @@ function _executeMessageComponentInteraction() {
                 const obj4 = { messageId: null, data: null, onFailure: null };
                 obj4[0] = callback2;
                 let obj5 = { interactionType: null, applicationId: null, customId: null, componentId: null };
-                obj5[0] = callback(1955).InteractionTypes.MESSAGE_COMPONENT;
+                obj5[0] = callback(1954).InteractionTypes.MESSAGE_COMPONENT;
                 obj5[1] = c5;
                 obj5[2] = c3;
                 obj5[3] = sessionId;
@@ -130,9 +130,9 @@ function _executeMessageComponentInteraction() {
                     obj = _undefined(_undefined2[9]);
                   }
                 };
-                callback(8026).addQueued(closure_9, obj4);
+                callback(8035).addQueued(closure_9, obj4);
                 if (null != c8) {
-                  obj1 = callback(8026);
+                  obj1 = callback(8035);
                   const result = obj1.queueInteractionComponentState(callback2, closure_9, c8, sessionId);
                 }
                 obj6 = {
@@ -146,7 +146,7 @@ function _executeMessageComponentInteraction() {
                   session_id: null,
                   data: null,
                 };
-                obj6[0] = callback(1955).InteractionTypes.MESSAGE_COMPONENT;
+                obj6[0] = callback(1954).InteractionTypes.MESSAGE_COMPONENT;
                 obj6[1] = closure_9;
                 obj6[2] = c7;
                 obj6[3] = constants;
@@ -159,11 +159,11 @@ function _executeMessageComponentInteraction() {
                 obj7[1] = c3;
                 const merged = Object.assign(callback3(c8));
                 obj6[8] = obj7;
-                const HTTP = callback(530).HTTP;
+                const HTTP = callback(527).HTTP;
                 obj8 = { url: null, body: null, timeout: 3000, rejectWithError: null };
                 obj8[0] = constants.INTERACTIONS;
                 obj8[1] = obj6;
-                obj5 = callback(530);
+                obj5 = callback(527);
                 obj8[3] = obj5.rejectWithMigratedError();
                 sessionId = 4;
                 c5 = 1;
@@ -213,17 +213,17 @@ function mapMessageComponentLocalStateForAPI(type) {
   } else {
     type = type.type;
     if (PermissionOverwriteType.ComponentType.TEXT_INPUT !== type) {
-      if (tmp(1955).ComponentType.FILE_UPLOAD !== type) {
-        if (tmp(1955).ComponentType.RADIO_GROUP !== type) {
-          if (tmp(1955).ComponentType.CHECKBOX_GROUP !== type) {
-            if (tmp(1955).ComponentType.CHECKBOX !== type) {
-              if (tmp(1955).ComponentType.STRING_SELECT === type) {
+      if (tmp(1954).ComponentType.FILE_UPLOAD !== type) {
+        if (tmp(1954).ComponentType.RADIO_GROUP !== type) {
+          if (tmp(1954).ComponentType.CHECKBOX_GROUP !== type) {
+            if (tmp(1954).ComponentType.CHECKBOX !== type) {
+              if (tmp(1954).ComponentType.STRING_SELECT === type) {
                 return type;
               } else {
-                if (tmp(1955).ComponentType.USER_SELECT !== type) {
-                  if (tmp(1955).ComponentType.ROLE_SELECT !== type) {
-                    if (tmp(1955).ComponentType.MENTIONABLE_SELECT !== type) {
-                      if (tmp(1955).ComponentType.CHANNEL_SELECT !== type) {
+                if (tmp(1954).ComponentType.USER_SELECT !== type) {
+                  if (tmp(1954).ComponentType.ROLE_SELECT !== type) {
+                    if (tmp(1954).ComponentType.MENTIONABLE_SELECT !== type) {
+                      if (tmp(1954).ComponentType.CHANNEL_SELECT !== type) {
                         return null;
                       }
                     }
@@ -481,7 +481,7 @@ export const canRetryInteractionData = function canRetryInteractionData(interact
             let tmp11 = tmp8;
             tmp4 = options1;
             items = options1;
-            if (options1[0].type !== tmp7(1955).ApplicationCommandOptionType.SUB_COMMAND) {
+            if (options1[0].type !== tmp7(1954).ApplicationCommandOptionType.SUB_COMMAND) {
               break;
             }
           }

@@ -5,5 +5,5 @@ const result = set.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/SafetyChatSpotIllustration-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/2ab6a1d1a5e16304b56f691460b2e9f0a6d8a8e3d0f57810b63bb63919247b56.png";
-export const metadata = { fileBytes: 34207 };
+export default "https://cdn.discordapp.com/assets/content/267e588c2ecd99bc026ea6dd9ca691d718db2b7db8dc9424a6762949f677f375.png";
+export const metadata = { fileBytes: 46718 };

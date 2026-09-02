@@ -10,7 +10,7 @@ import Text from "../../../design/components/Text/native/Text.tsx";
 import Button from "../../../design/components/Button/native/Button.native.tsx";
 import GuildIconSizesDefault from "../../guild/native/GuildIcon.tsx";
 import getDescriptiveInviteError from "../../../utils/InviteErrorUtils.tsx";
-import registerAssetDefault from "../../../../_runtime/12263_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/12487_registerAsset.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import ME from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
@@ -22,23 +22,23 @@ function InviteErrorBase(invite) {
   const tmp = callback3();
   let obj = AccessibilityAnnouncer;
   const tmp4 = importDefault;
-  const tmp4Result = importDefault(obj.isThemeDark(useThemeDefault()) ? 12260 : 12261);
+  const tmp4Result = importDefault(obj.isThemeDark(useThemeDefault()) ? 12484 : 12485);
   let code;
   if (inviteError != null) {
     code = inviteError.code;
   }
   const descriptiveInviteError = getDescriptiveInviteError.getDescriptiveInviteError(code);
   if (invite.invite.state === constants3.BANNED) {
-    const intl2 = tmp2(1236).intl;
-    let stringResult = intl2.string(tmp2(1236).t["GzD/aa"]);
+    const intl2 = tmp2(1233).intl;
+    let stringResult = intl2.string(tmp2(1233).t["GzD/aa"]);
   } else {
     stringResult = undefined;
     if (descriptiveInviteError != null) {
       stringResult = descriptiveInviteError.description;
     }
     if (stringResult == null) {
-      const intl = tmp2(1236).intl;
-      stringResult = intl.string(tmp2(1236).t.FWkU6P);
+      const intl = tmp2(1233).intl;
+      stringResult = intl.string(tmp2(1233).t.FWkU6P);
     }
   }
   obj = { style: tmp.expiredImage, source: tmp4Result };
@@ -54,8 +54,8 @@ function InviteErrorBase(invite) {
     title = descriptiveInviteError.title;
   }
   if (title == null) {
-    const intl3 = tmp2(1236).intl;
-    title = intl3.string(tmp2(1236).t.u9zxnX);
+    const intl3 = tmp2(1233).intl;
+    title = intl3.string(tmp2(1233).t.u9zxnX);
   }
   obj1 = { children: null };
   obj[3] = title;
@@ -70,7 +70,7 @@ function InviteErrorBase(invite) {
     children: stringResult,
   });
   const obj3 = { variant: "primary", size: "lg", text: null, onPress: null };
-  const intl4 = tmp2(1236).intl;
+  const intl4 = tmp2(1233).intl;
   obj3[2] = intl4.string(getSystemLocale.t.wcqOoF);
   obj3[3] = handlePressClose;
   items[3] = callback(Button.Button, obj3);
@@ -97,30 +97,30 @@ function InviteDisabledError(onPressClose) {
     const obj2 = { style: null, source: null };
     obj2[0] = tmp.disabledPauseIcon;
     obj2[1] = registerAssetDefault;
-    const items = [callback(onPressClose(1297).Icon, obj2)];
+    const items = [callback(onPressClose(1296).Icon, obj2)];
     const obj3 = { style: null, icon: null, size: null };
     obj3[0] = tmp.guildIcon;
     obj3[1] = guildIconURL;
-    obj3[2] = onPressClose(6004).GuildIconSizes.XLARGE;
+    obj3[2] = onPressClose(6012).GuildIconSizes.XLARGE;
     items[1] = callback(GuildIconSizesDefault, obj3);
     obj1[1] = items;
     const items1 = [callback2(closure_4, obj1), , ,];
     const obj4 = { style: null, variant: "heading-xl/semibold", color: "text-feedback-critical", children: null };
     obj4[0] = tmp.disabledTitle;
-    const intl = onPressClose(1236).intl;
-    obj4[3] = intl.string(onPressClose(1236).t.jlLX2Z);
+    const intl = onPressClose(1233).intl;
+    obj4[3] = intl.string(onPressClose(1233).t.jlLX2Z);
     items1[1] = callback(onPressClose(4474).Text, obj4);
     const obj5 = { style: null, variant: "text-md/normal", color: "text-default", children: null };
     obj5[0] = tmp.disabledBody;
-    const intl2 = onPressClose(1236).intl;
+    const intl2 = onPressClose(1233).intl;
     const obj6 = { articleLink: null };
     const tmp10 = GuildIconSizesDefault;
     obj6[0] = combinedDefault.getArticleURL(constants2.INVITE_DISABLED);
-    obj5[3] = intl2.format(onPressClose(1236).t.RXSeLl, obj6);
+    obj5[3] = intl2.format(onPressClose(1233).t.RXSeLl, obj6);
     items1[2] = callback(onPressClose(4474).Text, obj5);
     const obj7 = { variant: "primary", size: "lg", text: null, onPress: null };
-    const intl3 = onPressClose(1236).intl;
-    obj7[2] = intl3.string(onPressClose(1236).t["yD/zkn"]);
+    const intl3 = onPressClose(1233).intl;
+    obj7[2] = intl3.string(onPressClose(1233).t["yD/zkn"]);
     obj7[3] = handlePressClose;
     items1[3] = callback(onPressClose(4928).Button, obj7);
     obj[0] = items1;

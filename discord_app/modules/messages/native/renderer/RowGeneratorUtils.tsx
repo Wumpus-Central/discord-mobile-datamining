@@ -74,7 +74,7 @@ createCacheKey = {
             guild_id = channel.guild_id;
           }
           guild = guild.getGuild(guild_id);
-          let tmp3Result = tmp3(6114);
+          let tmp3Result = tmp3(6122);
           if (tmp3Result.isGuildOfficialMessagesEnabled(guild, "RowGeneratorUtils")) {
             let officialMessageColor;
             if (guild != null) {

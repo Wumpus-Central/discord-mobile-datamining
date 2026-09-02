@@ -1,7 +1,7 @@
 // discord_common/js/packages/id-generator/IdGenerator.tsx
 import set from "../../../../_runtime/00002_set.js";
 import IntegerDefault from "../../../../_runtime/00014_Integer.js";
-import Buffer from "../../../../_runtime/00511_Buffer.js";
+import Buffer from "../../../../_runtime/00508_Buffer.js";
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/id-generator/IdGenerator.tsx");
 class IdGenerator {

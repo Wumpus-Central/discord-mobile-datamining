@@ -15,10 +15,10 @@ function createNativePlaceholderConfig(type) {
   }
   obj = {
     borderRadius: "Array",
-    borderTopLeftRadius: "create",
-    borderTopRightRadius: "category",
-    borderBottomLeftRadius: "bottom",
-    borderBottomRightRadius: "diversity",
+    borderTopLeftRadius: "count",
+    borderTopRightRadius: "call",
+    borderBottomLeftRadius: "Set",
+    borderBottomRightRadius: "displayName",
     divider: "y",
     dividerColor: "e",
     dividerPaddingLeft: "isArray",
@@ -49,7 +49,7 @@ function createNativePlaceholderConfig(type) {
     return obj;
   } else {
     if (FastestListPropsPlaceholderType.FastestListPropsPlaceholderType.NONE !== type) {
-      if (tmp15(7785).FastestListPropsPlaceholderType.SHAPE === type) {
+      if (tmp15(7794).FastestListPropsPlaceholderType.SHAPE === type) {
         let num9 = type.borderRadius;
         if (num9 == null) {
           num9 = 0;
@@ -88,7 +88,7 @@ function createNativePlaceholderConfig(type) {
         }
         obj.horizontalAlignment = str2;
         const tmp15Result = tmp15(4326);
-      } else if (tmp15(7785).FastestListPropsPlaceholderType.FEED_ITEM === type) {
+      } else if (tmp15(7794).FastestListPropsPlaceholderType.FEED_ITEM === type) {
         let num = type.borderRadius;
         if (num == null) {
           num = 0;

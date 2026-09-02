@@ -32,10 +32,10 @@ export const useCanGiftProduct = function useCanGiftProduct(product) {
     result = result2;
   }
   if (!result) {
-    result = product.type === tmp(1950).CollectiblesItemType.EXTERNAL_SKU;
+    result = product.type === tmp(1949).CollectiblesItemType.EXTERNAL_SKU;
   }
   if (!result) {
-    let tmpResult = tmp(7299);
+    let tmpResult = tmp(7308);
     let currency;
     if (result3 != null) {
       currency = result3.currency;

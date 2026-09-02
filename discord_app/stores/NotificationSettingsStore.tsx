@@ -1,8 +1,8 @@
 // discord_app/stores/NotificationSettingsStore.tsx
 import set from "../../_runtime/00002_set.js";
-import set2 from "../utils/PlatformUtils.tsx";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
+import set2 from "../utils/PlatformUtils.tsx";
 import ME from "../Constants.tsx";
 
 const DesktopNotificationTypes = ME.DesktopNotificationTypes;

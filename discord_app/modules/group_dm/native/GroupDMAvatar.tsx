@@ -63,7 +63,13 @@ class FacepileGroupDMAvatar {
     }, items1);
     tmp9 = jsxs;
     tmp10 = View;
-    obj1 = { style: tmp.firstFace, size: pileSizeOverride, guildId: "r", cutout: false, animate: false };
+    obj1 = {
+      style: tmp.firstFace,
+      size: pileSizeOverride,
+      guildId: "r",
+      cutout: "<string:33555030>",
+      animate: "<string:1358954783>",
+    };
     obj1[3] = memo1;
     obj1[4] = animate;
     if (null == users) {
@@ -84,7 +90,7 @@ class FacepileGroupDMAvatar {
       style: tmp.secondFace,
       size: pileSizeOverride,
       guildId: "Array",
-      animate: "Ctg7PUHcQmZu",
+      animate: "true",
     };
     obj4[6] = animate;
     if (null == users) {
@@ -120,7 +126,7 @@ let result = require("set").fileFinishedImporting("modules/group_dm/native/Group
 export default function GroupDMAvatar(pileSizeOverride) {
   ({ style, channel } = pileSizeOverride);
   ({ size, animate, status, accessible, accessibilityLabel } = pileSizeOverride);
-  obj = channel(589);
+  obj = channel(586);
   const items = [closure_4];
   const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
     const recipients = channel.recipients;
@@ -138,9 +144,9 @@ export default function GroupDMAvatar(pileSizeOverride) {
             size: null,
             user: null,
             guildId: "a",
-            animate: 1518500249,
-            accessible: 1859775393,
-            accessibilityLabel: 2400959708,
+            animate: "md",
+            accessible: "primary",
+            accessibilityLabel: null,
           };
           obj[1] = status;
           obj[2] = style;
@@ -149,7 +155,7 @@ export default function GroupDMAvatar(pileSizeOverride) {
           obj[6] = animate;
           obj[7] = accessible;
           obj[8] = accessibilityLabel;
-          let tmp5 = callback(tmp(1297).Avatar, obj);
+          let tmp5 = callback(tmp(1296).Avatar, obj);
         } else {
           obj = {
             status: null,
@@ -175,7 +181,7 @@ export default function GroupDMAvatar(pileSizeOverride) {
       return tmp5;
     }
   }
-  tmp5 = callback(tmp(1297).Avatar, {
+  tmp5 = callback(tmp(1296).Avatar, {
     autoStatusCutout: true,
     status,
     style,

@@ -71,7 +71,7 @@ function getChatInputHeightAnimationTimingWorklet(height, textFieldMinHeight) {
   if (keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM) {
     keyboardHeight = customKeyboardHeight;
   }
-  let tmp2Result = tmp2(11605);
+  let tmp2Result = tmp2(11828);
   const bound1 = Math.min(
     bound,
     Math.min(
@@ -160,7 +160,7 @@ export const getChatInputHeightAnimationTiming = function getChatInputHeightAnim
   if (keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM) {
     systemKeyboardHeight = customKeyboardHeight;
   }
-  let tmp2Result = tmp2(1493);
+  let tmp2Result = tmp2(1492);
   const bound1 = Math.min(
     bound,
     Math.min(

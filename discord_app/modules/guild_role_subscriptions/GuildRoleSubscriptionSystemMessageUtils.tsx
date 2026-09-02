@@ -163,7 +163,7 @@ export const getRoleSubscriptionPurchaseSystemMessageContentMobile =
       } else {
         tmp6 = tmp3;
       }
-      const intl = tmp6(1236).intl;
+      const intl = tmp6(1233).intl;
       let name;
       if (guild != null) {
         name = guild.name;

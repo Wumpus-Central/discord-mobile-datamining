@@ -35,11 +35,11 @@ export const trackShopThisLookRowAction = function trackShopThisLookRowAction(ar
   obj = { action, sku_id: skuId, product_type: null, is_disabled: null, source: null };
   if (CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME === productType) {
     let NAMEPLATE = obj.PROFILE_FRAME;
-  } else if (tmp2(1950).CollectiblesItemType.PROFILE_EFFECT === productType) {
+  } else if (tmp2(1949).CollectiblesItemType.PROFILE_EFFECT === productType) {
     NAMEPLATE = obj.PROFILE_EFFECT;
-  } else if (tmp2(1950).CollectiblesItemType.AVATAR_DECORATION === productType) {
+  } else if (tmp2(1949).CollectiblesItemType.AVATAR_DECORATION === productType) {
     NAMEPLATE = obj.AVATAR_DECORATION;
-  } else if (tmp2(1950).CollectiblesItemType.NAMEPLATE === productType) {
+  } else if (tmp2(1949).CollectiblesItemType.NAMEPLATE === productType) {
     NAMEPLATE = obj.NAMEPLATE;
   }
   obj[2] = NAMEPLATE;

@@ -1,6 +1,5 @@
 // discord_app/modules/premium/premium_group/PremiumGroupConstants.tsx
 import set from "../../../../_runtime/00002_set.js";
-import setDefault from "../../../utils/Durations.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import messagesProxyDefault from "PremiumGroup.messages.js";
 import ME from "../../../Constants.tsx";
@@ -20,8 +19,6 @@ const result = set.fileFinishedImporting("modules/premium/premium_group/PremiumG
 
 export const TOTAL_PREMIUM_GROUP_MEMBER_SEATS = 5;
 export const TOTAL_PREMIUM_GROUP_USERS = 6;
-export const MIN_AVAILABLE_SEATS_FOR_REMINDER = 3;
-export const MIN_SUBSCRIPTION_AGE_FOR_PRIMARY_REMINDER_IN_MS = setDefault.Millis.DAY;
 export const PREMIUM_GROUP_COOLDOWN_MONTHS = 12;
 export const PREMIUM_GROUP_ANNOUNCEMENT_MODAL_PROMOTION_KEY = "2026-07-premium-group-announcement-modal";
 export const HELP_CENTER_LINK = articleURL;

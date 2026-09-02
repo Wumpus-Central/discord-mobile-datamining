@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/PremiumRestoreSubscriptionSetting.tsx
-import set from "../../../../utils/PlatformUtils.tsx";
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
+import set from "../../../../utils/PlatformUtils.tsx";
 import _modDef4858 from "../../../../actions/native/AlertActionCreators.tsx";
 import applyAppleReceiptDefault from "../../../../actions/native/BillingActionCreators.tsx";
 import closure_3 from "../../../../stores/UserStore.tsx";

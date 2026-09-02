@@ -19,8 +19,8 @@ const pressable = createToggle.createPressable({
     const intl = getSystemLocale.intl;
     let stringResult = intl.string(getSystemLocale.t.lKDPGA);
     if (isAgeVerified) {
-      const intl2 = tmp(1236).intl;
-      stringResult = intl2.string(tmp(1236).t.sK0dmH);
+      const intl2 = tmp(1233).intl;
+      stringResult = intl2.string(tmp(1233).t.sK0dmH);
     }
     return stringResult;
   },
@@ -57,8 +57,8 @@ let obj = {
     const intl = getSystemLocale.intl;
     let stringResult = intl.string(getSystemLocale.t.lKDPGA);
     if (isAgeVerified) {
-      const intl2 = tmp(1236).intl;
-      stringResult = intl2.string(tmp(1236).t.sK0dmH);
+      const intl2 = tmp(1233).intl;
+      stringResult = intl2.string(tmp(1233).t.sK0dmH);
     }
     return stringResult;
   },

@@ -6,7 +6,7 @@ import PressableBase from "../../../../design/void/Pressables/native/Pressables.
 import notSupportedDefault from "../../../payments/native/hooks/NativePaymentHooks.android.tsx";
 import useStoreFrontPriceDefault from "../../../billing/native/subscription/useStoreFrontPrice.tsx";
 import getRoleEmojisAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
-import registerAssetDefault from "../../../../../_runtime/16130_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/16361_registerAsset.js";
 import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_5 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -100,9 +100,9 @@ export const TruncatedText = function TruncatedText(lineClamp) {
   } else {
     obj = { style: null, children: null };
     obj[0] = tmp2.toggleTruncateButton;
-    const intl = num(1236).intl;
+    const intl = num(1233).intl;
     const string = intl.string;
-    let t = num(1236).t;
+    let t = num(1233).t;
     if (tmp4) {
       let stringResult = string(t["JQX/Pb"]);
     } else {
@@ -141,8 +141,8 @@ export const useFormattedSubscriptionPlan = function useFormattedSubscriptionPla
   let str = "No Price Available";
   if (null != price) {
     const _HermesInternal = HermesInternal;
-    str = "" + tmp2(6081).formatPrice(price.amount, price.currency) + "/mo.";
-    const tmp2Result = tmp2(6081);
+    str = "" + tmp2(6089).formatPrice(price.amount, price.currency) + "/mo.";
+    const tmp2Result = tmp2(6089);
   }
   return str;
 };

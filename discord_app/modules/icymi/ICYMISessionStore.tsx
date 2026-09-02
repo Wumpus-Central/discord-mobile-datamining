@@ -1,5 +1,5 @@
 // discord_app/modules/icymi/ICYMISessionStore.tsx
-import v1 from "../../../_runtime/00514_v1.js";
+import v1 from "../../../_runtime/00511_v1.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import DEFAULT_UX_VARIATION2 from "ICYMIAnalytics.tsx";
@@ -261,7 +261,7 @@ prototype["trackItemsLongImpression"] = function trackItemsLongImpression(items)
     let tmp19 = result;
     ({ interactionActionTypes: obj[13], interactionCount: obj[14], uxVariation } = tmp7);
     if (uxVariation == null) {
-      uxVariation = tmp11(8630).DEFAULT_UX_VARIATION;
+      uxVariation = tmp11(8645).DEFAULT_UX_VARIATION;
     }
     obj[15] = uxVariation;
     let tmp20 = result;
@@ -538,7 +538,7 @@ prototype["_endImpression"] = function _endImpression(itemId) {
     obj[13] = itemCardHeight;
     let DEFAULT_UX_VARIATION = tmp2.uxVariation;
     if (DEFAULT_UX_VARIATION == null) {
-      DEFAULT_UX_VARIATION = tmp5(8630).DEFAULT_UX_VARIATION;
+      DEFAULT_UX_VARIATION = tmp5(8645).DEFAULT_UX_VARIATION;
     }
     obj[14] = DEFAULT_UX_VARIATION;
     ({ interactionActionTypes: obj[15], interactionCount: obj[16], sessionImpressionIndex: obj[17] } = tmp2);

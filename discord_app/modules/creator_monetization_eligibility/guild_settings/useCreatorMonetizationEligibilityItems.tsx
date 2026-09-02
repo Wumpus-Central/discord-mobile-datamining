@@ -152,7 +152,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
       if (!noRecentViolations) {
         fn = () => {
           const tmp = callback(4184);
-          return tmp(callback(1995).getSubmitRequestURL());
+          return tmp(callback(1994).getSubmitRequestURL());
         };
       }
       obj[6] = fn;

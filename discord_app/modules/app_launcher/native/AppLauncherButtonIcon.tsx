@@ -21,12 +21,12 @@ export const AppLauncherButtonIcon = function AppLauncherButtonIcon(style) {
     obj[0] = items1;
     items[1] = obj;
     obj.style = items;
-    let tmp4Result = tmp4(tmp6(10688).PlusLargeIcon, obj);
+    let tmp4Result = tmp4(tmp6(10909).PlusLargeIcon, obj);
   } else {
     obj1 = { style: null };
     obj1[0] = style;
     const merged2 = Object.assign(merged);
-    tmp4Result = tmp4(tmp6(9250).AppsIcon, obj1);
+    tmp4Result = tmp4(tmp6(5059).AppsIcon, obj1);
   }
   obj[1] = tmp4Result;
   return <View style={{ overflow: "hidden" }}>{null}</View>;

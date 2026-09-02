@@ -27,7 +27,7 @@ export default function PersonalizationDisclaimerActionSheet() {
   const tmp = callback3();
   const callback = React.useCallback(() => {
     const obj = callback(4190);
-    obj.openURL(callback(1995).getArticleURL(constants.DATA_USED_FOR_RECOMMENDED));
+    obj.openURL(callback(1994).getArticleURL(constants.DATA_USED_FOR_RECOMMENDED));
   }, []);
   let obj = { contentStyles: tmp.container, children: null };
   obj = {

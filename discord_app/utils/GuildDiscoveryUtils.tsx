@@ -69,7 +69,7 @@ function _startLurking() {
                 closure_13 = undefined;
                 loadId = 1;
                 shouldNavigate = 1;
-                return { value: "PX_16", done: null };
+                return { value: "PX_16", done: true };
               }
             } else {
               if (1 === tmp5) {

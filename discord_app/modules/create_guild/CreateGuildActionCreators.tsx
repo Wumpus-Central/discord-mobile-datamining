@@ -61,7 +61,7 @@ function _createGuildFromTemplate() {
               obj2[6] = constants;
               obj1[1] = obj2;
               const obj3 = { event: null, properties: null };
-              obj3[0] = callback(503).NetworkActionNames.GUILD_CREATE;
+              obj3[0] = callback(500).NetworkActionNames.GUILD_CREATE;
               const obj4 = { template_name: null, is_community_intent: null };
               obj4[0] = dependencyMap.id;
               obj4[1] = closure_3;

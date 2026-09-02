@@ -70,9 +70,9 @@ let closure_11 = createCacheKey.createStyles((arg0) => {
     alignSelf: "flex-start",
   };
   if (arg0 === ThemeTypes.LIGHT) {
-    let BACKGROUND_SURFACE_HIGH = tmp(712).colors.BACKGROUND_BASE_LOW;
+    let BACKGROUND_SURFACE_HIGH = tmp(709).colors.BACKGROUND_BASE_LOW;
   } else {
-    BACKGROUND_SURFACE_HIGH = tmp(712).colors.BACKGROUND_SURFACE_HIGH;
+    BACKGROUND_SURFACE_HIGH = tmp(709).colors.BACKGROUND_SURFACE_HIGH;
   }
   const obj2 = {
     width: 400,
@@ -89,9 +89,9 @@ let closure_11 = createCacheKey.createStyles((arg0) => {
     paddingVertical: ThemesDefault.space.PX_8,
   };
   if (arg0 === tmp3.LIGHT) {
-    let BACKGROUND_SURFACE_HIGH2 = tmp(712).colors.BACKGROUND_BASE_LOW;
+    let BACKGROUND_SURFACE_HIGH2 = tmp(709).colors.BACKGROUND_BASE_LOW;
   } else {
-    BACKGROUND_SURFACE_HIGH2 = tmp(712).colors.BACKGROUND_SURFACE_HIGH;
+    BACKGROUND_SURFACE_HIGH2 = tmp(709).colors.BACKGROUND_SURFACE_HIGH;
   }
   const obj3 = {
     width: "100%",
@@ -176,11 +176,11 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
           rowGenerator: constants,
           modifyRow(message) {
             message.message.roleColor = undefined;
-            const result = closure_2_0(1988).extractColorStringsFromServerColors(id.colors);
-            const obj = closure_2_0(1988);
-            message.message.roleColors = closure_2_0(7870).processColorStrings(result);
+            const result = closure_2_0(1987).extractColorStringsFromServerColors(id.colors);
+            const obj = closure_2_0(1987);
+            message.message.roleColors = closure_2_0(7879).processColorStrings(result);
             message.message.shouldShowRoleOnName = true;
-            message.message.avatarURL = closure_2_1(12954);
+            message.message.avatarURL = closure_2_1(13176);
           },
         };
         const items1 = [closure_1_9(closure_1_1(button[16]), obj)];
@@ -199,21 +199,21 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
     obj3[0] = tmp3.upsellContainer;
     const obj4 = { style: null, variant: "text-sm/semibold", children: null };
     obj4[0] = tmp3.upsellText;
-    const intl3 = tmp4(1236).intl;
+    const intl3 = tmp4(1233).intl;
     const obj5 = { magical: null };
     const obj6 = { gradientColors: null, variant: "text-sm/semibold", children: null };
     let items1 = [, ,];
     ({ primary_color: arr2[0], secondary_color: arr2[1], tertiary_color: arr2[2] } = HOLOGRAPHIC_ROLE_COLORS);
     obj6[0] = items1;
-    const intl4 = tmp4(1236).intl;
-    obj6[2] = intl4.string(tmp(2401)["+/IHLl"]);
+    const intl4 = tmp4(1233).intl;
+    obj6[2] = intl4.string(tmp(2400)["+/IHLl"]);
     obj5[0] = tmp7(tmp4(4474).Text, obj6);
-    obj4[2] = intl3.format(tmp(2401).VpEDJc, obj5);
+    obj4[2] = intl3.format(tmp(2400).VpEDJc, obj5);
     const items2 = [tmp7(tmp4(4474).Text, obj4)];
     const obj7 = { style: null, variant: "text-sm/normal", children: null };
     obj7[0] = tmp3.upsellText;
-    const intl5 = tmp4(1236).intl;
-    obj7[2] = intl5.string(tmp(2401).FJZeZF);
+    const intl5 = tmp4(1233).intl;
+    obj7[2] = intl5.string(tmp(2400).FJZeZF);
     items2[1] = tmp7(tmp4(4474).Text, obj7);
     obj3[1] = items2;
     tmp8Result = tmp8(tmp9, obj3);

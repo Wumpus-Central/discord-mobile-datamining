@@ -35,9 +35,9 @@ export default function ActivateDeviceModal(userCode) {
     };
   }, items);
   let obj = { screens: memo, initialRouteName: constants.ACTIVATE_DEVICE, headerBackTitle: null };
-  let intl = userCode(1236).intl;
-  obj[2] = intl.string(userCode(1236).t["13/7kX"]);
-  return jsx(userCode(6008).Navigator, {
+  let intl = userCode(1233).intl;
+  obj[2] = intl.string(userCode(1233).t["13/7kX"]);
+  return jsx(userCode(6016).Navigator, {
     screens: memo,
     initialRouteName: constants.ACTIVATE_DEVICE,
     headerBackTitle: null,

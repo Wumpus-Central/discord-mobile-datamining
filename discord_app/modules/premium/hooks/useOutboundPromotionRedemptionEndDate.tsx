@@ -1,7 +1,7 @@
 // discord_app/modules/premium/hooks/useOutboundPromotionRedemptionEndDate.tsx
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import closure_4 from "../../../../_runtime/00030_get.js";
-import importDefaultResult from "../../../../_runtime/04075_hooks.js";
+import importDefaultResult from "../../../../_runtime/04074_hooks.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/hooks/useOutboundPromotionRedemptionEndDate.tsx");

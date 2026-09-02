@@ -42,8 +42,8 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
       description: null,
       onDismiss: null,
       renderImgComponent: "r",
-      buttonLabel: "unknown_error",
-      onButtonPress: 0,
+      buttonLabel: "M7 7H6v2h1V7Z",
+      onButtonPress: "#000",
     };
     const intl = stateFromStores(markPopoverAsDismissed[8]).intl;
     const tmp4 = shouldShowPopover(markPopoverAsDismissed[9]);

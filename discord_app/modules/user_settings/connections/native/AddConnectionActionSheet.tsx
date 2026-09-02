@@ -12,10 +12,10 @@ function AddApplicationIdentityTableRow(application) {
   let _require;
   let analyticsLocations;
   ({ start, end } = application);
-  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(5956)(application));
-  const tmp2 = analyticsLocations(5956)(application);
-  analyticsLocations = analyticsLocations(5953)(analyticsLocations(5973).ACTION_SHEET).analyticsLocations;
-  const tmp3 = analyticsLocations(5953);
+  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(5964)(application));
+  const tmp2 = analyticsLocations(5964)(application);
+  analyticsLocations = analyticsLocations(5961)(analyticsLocations(5981).ACTION_SHEET).analyticsLocations;
+  const tmp3 = analyticsLocations(5961);
   let obj = Button;
   const iconSource = application.getIconSource(
     obj.getIconSize(require("../../../../design/void/native.tsx").IconSizes.LARGE),
@@ -39,7 +39,7 @@ function AddApplicationIdentityTableRow(application) {
     obj = { source: null, style: null, disableColor: true };
     obj[0] = iconSource;
     obj[1] = tmp4.icon;
-    tmp7Result = tmp7(tmp5(1297).Icon, obj);
+    tmp7Result = tmp7(tmp5(1296).Icon, obj);
   }
   obj[4] = tmp7Result;
   obj[5] = closure_5(require("../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow.Arrow, {});

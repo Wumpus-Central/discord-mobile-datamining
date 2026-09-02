@@ -14,6 +14,7 @@ export const REACTION_START_SENTINEL = "+:";
 export const REACTION_END_SENTINEL = ":";
 export const COMMAND_SENTINEL = "/";
 export const GAME_MENTION_INPUT_PREFIX = "@game:";
+export const TIMESTAMP_MENTION_INPUT_PREFIX = "@time:";
 export const formatGameMentionRaw = function formatGameMentionRaw(arg0) {
   return "<@$" + arg0 + ">";
 };

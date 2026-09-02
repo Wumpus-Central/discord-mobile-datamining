@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/notifications/native/stores/AndroidNotificationSettingsStore.tsx
-import isIterable from "../../../../../../_runtime/04106_isIterable.js";
+import isIterable from "../../../../../../_runtime/04105_isIterable.js";
 import NativeModulesDefault from "../../../../../lib/pushnotification/PushNotification.tsx";
 import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
-import identity from "../../../../../../_runtime/00700_identity.js";
+import identity from "../../../../../../_runtime/00697_identity.js";
 import { batchUpdates } from "../../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 require = arg1;
@@ -46,10 +46,10 @@ function _initializeAndroidNotificationSettingsStore() {
               closure_3 = 2;
               c4 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_1(9657).getLightsEnabled();
+              obj1[0] = closure_1_1(9670).getLightsEnabled();
               return obj1;
             }
-            obj16 = closure_1_0(500);
+            obj16 = closure_1_0(1234);
           }
         } else {
           if (1 === tmp7) {
@@ -66,7 +66,7 @@ function _initializeAndroidNotificationSettingsStore() {
               return obj2;
             } else {
               callback = arg1;
-              let obj8 = callback2(9657);
+              let obj8 = callback2(9670);
               closure_3 = 3;
               c4 = 1;
               const obj3 = { value: null, done: false };
@@ -85,7 +85,7 @@ function _initializeAndroidNotificationSettingsStore() {
               return obj4;
             } else {
               callback2 = arg1;
-              let obj5 = callback2(9657);
+              let obj5 = callback2(9670);
               closure_3 = 4;
               c4 = 1;
               obj5 = { value: null, done: false };
@@ -104,7 +104,7 @@ function _initializeAndroidNotificationSettingsStore() {
               return obj6;
             } else {
               dependencyMap = arg1;
-              obj2 = callback2(9657);
+              obj2 = callback2(9670);
               closure_3 = 5;
               c4 = 1;
               const obj7 = { value: null, done: false };
@@ -116,7 +116,7 @@ function _initializeAndroidNotificationSettingsStore() {
             throw arg1;
           } else if (arg0 !== 2) {
             closure_3 = arg1;
-            obj = callback(705);
+            obj = callback(702);
             obj.batchUpdates(() => {
               state.setState({
                 isLightsEnabled: closure_0,
@@ -154,10 +154,10 @@ function _initializeAndroidNotificationSettingsStore() {
   return applyArgumentsResult;
 }
 let closure_4 = identity.createWithEqualityFn(() => ({
-  isLightsEnabled: "spriteIndex",
-  isVibrationsEnabled: "category",
-  isSoundsEnabled: "paths",
-  isNotifyEveryTime: "replace",
+  isLightsEnabled: "accessible",
+  isVibrationsEnabled: "includes",
+  isSoundsEnabled: "pos",
+  isNotifyEveryTime: "r",
 }));
 let result = require("set").fileFinishedImporting(
   "modules/user_settings/notifications/native/stores/AndroidNotificationSettingsStore.tsx",

@@ -1,7 +1,7 @@
 // discord_app/modules/keyboard/native/PortalKeyboardPlaceholder.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
-import set from "../../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
 import KeyboardTypes from "KeyboardTypes.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
@@ -47,7 +47,7 @@ let closure_6 = createCacheKey.createStyles((arg0, arg1, arg2, arg3) => {
   container.borderTopColor = ThemesDefault.colors.BORDER_SUBTLE;
   let BORDER_SUBTLE;
   if (arg3) {
-    BORDER_SUBTLE = tmp7(712).colors.BORDER_SUBTLE;
+    BORDER_SUBTLE = tmp7(709).colors.BORDER_SUBTLE;
   }
   container.borderRightColor = BORDER_SUBTLE;
   let hairlineWidth;
@@ -57,7 +57,7 @@ let closure_6 = createCacheKey.createStyles((arg0, arg1, arg2, arg3) => {
   container.borderRightWidth = hairlineWidth;
   let BORDER_SUBTLE1;
   if (arg3) {
-    BORDER_SUBTLE1 = tmp7(712).colors.BORDER_SUBTLE;
+    BORDER_SUBTLE1 = tmp7(709).colors.BORDER_SUBTLE;
   }
   container.borderLeftColor = BORDER_SUBTLE1;
   let hairlineWidth1;
@@ -65,14 +65,14 @@ let closure_6 = createCacheKey.createStyles((arg0, arg1, arg2, arg3) => {
     hairlineWidth1 = tmp6.hairlineWidth;
   }
   container.borderLeftWidth = hairlineWidth1;
-  const APP_LAUNCHER = tmp(1626).KeyboardTypes.APP_LAUNCHER;
+  const APP_LAUNCHER = tmp(1625).KeyboardTypes.APP_LAUNCHER;
   container.backgroundColor = ThemesDefault.colors.BACKGROUND_BASE_LOW;
-  let tmpResult = tmp(500);
+  let tmpResult = tmp(1234);
   if (tmpResult.isIOS()) {
     const tmp12 = arg1;
   }
   container.width = tmp12;
-  tmpResult = tmp(500);
+  tmpResult = tmp(1234);
   if (tmpResult.isIOS()) {
     const tmp13 = arg2;
   }

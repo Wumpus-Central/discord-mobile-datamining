@@ -22,8 +22,8 @@ export default function NotificationSettingsMessageUnreadChannelActionSheet(chan
   obj = { value: unread, disabledMentionOnlyWithReason: null, onChange: null };
   let stringResult;
   if (notification === UserNotificationSettings.ALL_MESSAGES) {
-    const intl = tmp(1236).intl;
-    stringResult = intl.string(tmp(1236).t.eP8yWU);
+    const intl = tmp(1233).intl;
+    stringResult = intl.string(tmp(1233).t.eP8yWU);
   }
   obj[1] = stringResult;
   obj[2] = function onChange(ONLY_MENTIONS) {

@@ -19,11 +19,11 @@ class UserFlashListActions {
       mapped = actions.map((arg0, arg1) => {
         ({ label, subLabel, icon, IconComponent, iconVariant, onPress } = arg0);
         return callback2(
-          callback(5599).TableRow,
+          callback(5607).TableRow,
           {
             label,
             subLabel,
-            icon: callback2(callback(5599).TableRow.Icon, { source: icon, IconComponent, variant: iconVariant }),
+            icon: callback2(callback(5607).TableRow.Icon, { source: icon, IconComponent, variant: iconVariant }),
             onPress,
             arrow: true,
           },
@@ -44,7 +44,7 @@ export const useUserListActionsProps = function useUserListActionsProps(actions)
   actions = actions.actions;
   const style = actions.style;
   dependencyMap = undefined;
-  const tmp = style(10637)();
+  const tmp = style(10858)();
   dependencyMap = tmp;
   const items = [actions, tmp, style];
   return React.useMemo(() => {

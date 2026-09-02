@@ -29,7 +29,7 @@ export const useDefaultSendStartStageNotificationToggle = function useDefaultSen
   }
   const items = [closure_2];
   const items1 = [guild_id];
-  const stateFromStores = guild_id(589).useStateFromStores(items, () => closure_1_2.getMemberCount(guild_id), items1);
+  const stateFromStores = guild_id(586).useStateFromStores(items, () => closure_1_2.getMemberCount(guild_id), items1);
   let tmp3 = null == first;
   if (!tmp3) {
     let tmp4 = null == stateFromStores;

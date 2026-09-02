@@ -3,9 +3,9 @@ import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/n
 import Button from "../../../../../design/void/native.tsx";
 import isDiscordFrontendDevelopment from "../../../../../utils/GlobalUtils.tsx";
 import Text from "../../../../../design/components/Text/native/Text.tsx";
-import registerAssetDefault from "../../../../../../_runtime/10883_registerAsset.js";
-import registerAssetDefault2 from "../../../../../../_runtime/11579_registerAsset.js";
-import registerAssetDefault3 from "../../../../../../_runtime/11580_registerAsset.js";
+import registerAssetDefault from "../../../../../../_runtime/11103_registerAsset.js";
+import registerAssetDefault2 from "../../../../../../_runtime/11802_registerAsset.js";
+import registerAssetDefault3 from "../../../../../../_runtime/11803_registerAsset.js";
 import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";

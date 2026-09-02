@@ -73,7 +73,7 @@ function _createSubscriptionInvoicePreview() {
               closure_11 = undefined;
               c5 = 1;
               c6 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -113,7 +113,7 @@ function _createSubscriptionInvoicePreview() {
               obj2[7] = c7;
               obj2[8] = c8;
               c4 = 1;
-              const HTTP = callback(530).HTTP;
+              const HTTP = callback(527).HTTP;
               const obj3 = { url: null, body: null, oldFormErrors: true, rejectWithError: false };
               obj3[0] = constants.BILLING_SUBSCRIPTIONS_PREVIEW;
               obj3[1] = obj2;
@@ -146,7 +146,7 @@ function _createSubscriptionInvoicePreview() {
               payment_sources = checkoutContext.payment_sources;
             }
             if (null != payment_sources) {
-              obj = callback2(709);
+              obj = callback2(706);
               const obj6 = {
                 type: "SUBSCRIPTION_PREVIEW_CHECKOUT_CONTEXT_UPDATE",
                 checkoutContext: null,
@@ -259,7 +259,7 @@ function _updateSubscriptionInvoicePreview() {
               closure_12 = undefined;
               c5 = 1;
               c6 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -301,7 +301,7 @@ function _updateSubscriptionInvoicePreview() {
               obj2[5] = c8;
               obj2[6] = c9;
               c4 = 1;
-              const HTTP = callback(530).HTTP;
+              const HTTP = callback(527).HTTP;
               const obj3 = { url: null, query: null, body: null, oldFormErrors: true, rejectWithError: false };
               obj3[0] = closure_12.BILLING_SUBSCRIPTION_PREVIEW(callback);
               obj4 = { location: null, location_stack: null };
@@ -342,7 +342,7 @@ function _updateSubscriptionInvoicePreview() {
               tmp11 = null != payment_sources;
             }
             if (tmp11) {
-              obj = callback2(709);
+              obj = callback2(706);
               const obj7 = {
                 type: "SUBSCRIPTION_PREVIEW_CHECKOUT_CONTEXT_UPDATE",
                 checkoutContext: null,
@@ -445,7 +445,7 @@ function _createOneTimePurchaseInvoicePreview() {
               let body;
               c5 = 1;
               c6 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -550,17 +550,84 @@ function _getSubscriptionInvoice() {
     c3 = 0;
     c4 = 0;
     const iter = (function* (arg0) {
-      c1 = tmp2;
-      ({ subscriptionId: c0, preventFetch: c1 } = callback);
-      yield "PX_16";
-      if (c1) {
-        return null;
+      if (c4 === 2) {
+        c4 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c4 = 2;
+          if (0 === c3) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let body = tmp5;
+              c1 = tmp2;
+              let callback;
+              c1 = undefined;
+              ({ subscriptionId: c0, preventFetch: c1 } = callback);
+              body = undefined;
+              c3 = 1;
+              c4 = 1;
+              return { value: "PX_16", done: true };
+            }
+          } else if (1 === tmp5) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj1 = { value: null, done: true };
+              obj1[0] = arg1;
+              return obj1;
+            } else if (c1) {
+              c4 = 3;
+              return { value: null, done: true };
+            } else {
+              const HTTP = callback(body[7]).HTTP;
+              const obj2 = { url: null, oldFormErrors: true, rejectWithError: false };
+              obj2[0] = closure_12.BILLING_SUBSCRIPTION_INVOICE(callback);
+              c3 = 2;
+              c4 = 1;
+              const obj3 = { value: null, done: false };
+              obj3[0] = HTTP.get(obj2);
+              return obj3;
+            }
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj4 = { value: null, done: true };
+            obj4[0] = arg1;
+            return obj4;
+          } else {
+            body = arg1;
+            c4 = 3;
+            obj = { value: null, done: true };
+            obj[0] = closure_11.createInvoiceFromServer(body.body);
+            return obj;
+          }
+        } catch (tmp16) {
+          c4 = tmp;
+          throw tmp16;
+        }
       }
-      const HTTP = callback(body[7]).HTTP;
-      const obj2 = { url: null, oldFormErrors: true, rejectWithError: false };
-      obj2[0] = closure_12.BILLING_SUBSCRIPTION_INVOICE(callback);
-      body = yield HTTP.get(obj2);
-      return closure_11.createInvoiceFromServer(body.body);
     })();
     iter.next();
     return iter;

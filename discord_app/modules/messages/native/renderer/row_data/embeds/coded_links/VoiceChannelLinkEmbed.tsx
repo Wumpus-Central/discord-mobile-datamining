@@ -1,6 +1,6 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/VoiceChannelLinkEmbed.tsx
-import set from "../../../../../../../utils/PlatformUtils.tsx";
 import getSystemLocale from "../../../../../../../intl/index.native.tsx";
+import set from "../../../../../../../utils/PlatformUtils.tsx";
 import getEmbedThemeColorsDefault from "../getEmbedThemeColors.tsx";
 import closure_3 from "../../../../../../../../_runtime/metro/00032__slicedToArray.js";
 import { Image } from "../../../../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -44,8 +44,8 @@ export const createVoiceChannelLinkEmbed = function createVoiceChannelLinkEmbed(
                 icon1 = guild.icon;
               }
               obj[1] = icon1;
-              const guildIconURL = tmp4(1431).getGuildIconURL(obj);
-              const tmp4Result = tmp4(1431);
+              const guildIconURL = tmp4(1430).getGuildIconURL(obj);
+              const tmp4Result = tmp4(1430);
             } else if (null != guild) {
               const tmp8 = getGuildAcronym(guild);
             }
@@ -60,9 +60,9 @@ export const createVoiceChannelLinkEmbed = function createVoiceChannelLinkEmbed(
             obj.headerText = str;
             obj.headerColor = colors.headerColor;
             obj5 = set;
-            const intl = tmp16(1236).intl;
+            const intl = tmp16(1233).intl;
             const string = intl.string;
-            const t = tmp16(1236).t;
+            const t = tmp16(1233).t;
             if (isGuildStageVoiceResult) {
               let stringResult = string(t["7vb2cc"]);
             } else {
@@ -93,7 +93,7 @@ export const createVoiceChannelLinkEmbed = function createVoiceChannelLinkEmbed(
             obj.acceptLabelColor = colors.acceptLabelGreenColor;
             obj.embedCanBeTapped = true;
             obj.canBeAccepted = true;
-            const intl2 = tmp16(1236).intl;
+            const intl2 = tmp16(1233).intl;
             obj1 = { guildName: null };
             obj1[0] = guild.name;
             obj.channelName = intl2.formatToPlainString(getSystemLocale.t["2wimj5"], obj1);

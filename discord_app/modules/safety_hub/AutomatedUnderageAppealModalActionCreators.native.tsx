@@ -1,6 +1,6 @@
 // discord_app/modules/safety_hub/AutomatedUnderageAppealModalActionCreators.native.tsx
 import dispatcherDefault from "../../Dispatcher.tsx";
-import asyncRequireImpl from "../../../_runtime/02009_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/02008_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
 import _modDef4723 from "../../actions/ModalActionCreators.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -15,7 +15,7 @@ let obj = {
     obj = dispatcherDefault;
     obj.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
     obj = { classificationId, onClose };
-    ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(11467, dependencyMap.paths), closure_4, obj);
+    ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(11690, dependencyMap.paths), closure_4, obj);
   },
   openV2(arg0, onClose) {
     closure_0 = arg0;

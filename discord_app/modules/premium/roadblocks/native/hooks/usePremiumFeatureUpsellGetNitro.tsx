@@ -50,7 +50,7 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, arg2, arg3) 
           obj[0] = obj;
           obj[1] = analyticsLocations;
           obj[2] = callback ? closure_1_8.TIER_0 : closure_1_8.TIER_2;
-          callback2(7167)(obj, dependencyMap);
+          callback2(7176)(obj, dependencyMap);
         }
       }
     }
@@ -67,8 +67,8 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, arg2, arg3) 
         if (isFetchingOfferResult) {
           let resolved1 = Promise.resolve();
         } else {
-          resolved1 = callback(7971).fetchUserOffer("usePremiumFeatureUpsellGetNitro");
-          const obj3 = callback(7971);
+          resolved1 = callback(7980).fetchUserOffer("usePremiumFeatureUpsellGetNitro");
+          const obj3 = callback(7980);
         }
         items[1] = resolved1;
         const allPromises = Promise.all(items);
@@ -82,8 +82,8 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, arg2, arg3) 
             callback4();
           })
           .catch(() => {
-            const intl = callback(1236).intl;
-            callback2(4193).presentFailedToast(intl.string(callback(1236).t.R0RpRX));
+            const intl = callback(1233).intl;
+            callback2(4193).presentFailedToast(intl.string(callback(1233).t.R0RpRX));
           })
           .finally(() => callback3(false));
         const catchPromise = Promise.all(items)
@@ -92,8 +92,8 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, arg2, arg3) 
             callback4();
           })
           .catch(() => {
-            const intl = callback(1236).intl;
-            callback2(4193).presentFailedToast(intl.string(callback(1236).t.R0RpRX));
+            const intl = callback(1233).intl;
+            callback2(4193).presentFailedToast(intl.string(callback(1233).t.R0RpRX));
           });
       }
     }

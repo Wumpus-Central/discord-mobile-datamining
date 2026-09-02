@@ -43,7 +43,7 @@ export default function JumpToPresentButton(channelId) {
   dependencyMap = undefined;
   let tmp = callback3();
   const tmp2 = callback4(screenIndex);
-  let obj = channelId(589);
+  let obj = channelId(586);
   const items = [closure_6];
   dependencyMap = obj.useStateFromStores(items, () => connected.isConnected(), []);
   let tmp5 = callback((showingAutoComplete) => {
@@ -61,12 +61,12 @@ export default function JumpToPresentButton(channelId) {
     }
     return tmp;
   });
-  const isVoicePanelMounted = channelId(9651).useIsVoicePanelMounted(channelId);
-  const obj2 = channelId(9651);
-  const isVoicePanelOpen = channelId(9651).useIsVoicePanelOpen(channelId);
-  const obj3 = channelId(9651);
+  const isVoicePanelMounted = channelId(9664).useIsVoicePanelMounted(channelId);
+  const obj2 = channelId(9664);
+  const isVoicePanelOpen = channelId(9664).useIsVoicePanelOpen(channelId);
+  const obj3 = channelId(9664);
   const items1 = [closure_7];
-  const stateFromStores = channelId(589).useStateFromStores(
+  const stateFromStores = channelId(586).useStateFromStores(
     items1,
     () => null != closure_1_7.getMessages(channelId).jumpReturnTargetId,
   );
@@ -77,9 +77,9 @@ export default function JumpToPresentButton(channelId) {
   if (tmp2 == null) {
     containerIOS = tmp.containerIOS;
   }
-  const intl = tmp3(1236).intl;
+  const intl = tmp3(1233).intl;
   const string = intl.string;
-  const t = tmp3(1236).t;
+  const t = tmp3(1233).t;
   if (stateFromStores) {
     let stringResult = string(t.dpjpOp);
   } else {
@@ -90,12 +90,12 @@ export default function JumpToPresentButton(channelId) {
   if (tmp5) {
     obj = { accessibilityLabel: null, icon: null, onPress: null };
     obj[0] = stringResult;
-    obj[1] = screenIndex(11836);
+    obj[1] = screenIndex(12059);
     obj[2] = channelId.onJumpToPresent;
-    let tmp11Result = tmp11(screenIndex(11835), obj);
-    const tmp15 = screenIndex(11835);
+    let tmp11Result = tmp11(screenIndex(12058), obj);
+    const tmp15 = screenIndex(12058);
   } else {
-    tmp11Result = tmp11(tmp3(11837).MemoedVoicePanelDismissChatButton, {});
+    tmp11Result = tmp11(tmp3(12060).MemoedVoicePanelDismissChatButton, {});
   }
   obj[1] = tmp11Result;
   return <View style={items2}>{null}</View>;

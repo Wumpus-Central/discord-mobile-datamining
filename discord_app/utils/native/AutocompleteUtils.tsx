@@ -4,7 +4,10 @@ import ME from "../../Constants.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
 
 ME.AutoCompleteResultTypes;
-const items = [["game", "gameMentionInput"]];
+const items = [
+  ["game", "gameMentionInput"],
+  ["time", "timestampMentionInput"],
+];
 const map = new Map(items);
 const result = set.fileFinishedImporting("utils/native/AutocompleteUtils.tsx");
 
@@ -25,6 +28,12 @@ export default {
     const obj = { test: "game", text: "@game", inlineAutocompleteType: "gameMentionInput", description: null };
     const intl = getSystemLocale.intl;
     obj[3] = intl.string(getSystemLocale.t["1kR88y"]);
+    return obj;
+  },
+  MENTION_TIMESTAMP() {
+    const obj = { test: "time", text: "@time", inlineAutocompleteType: "timestampMentionInput", description: null };
+    const intl = getSystemLocale.intl;
+    obj[3] = intl.string(getSystemLocale.t.V6L3TV);
     return obj;
   },
   LAUNCHABLE_APPLICATIONS() {

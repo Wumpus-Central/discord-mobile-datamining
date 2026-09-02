@@ -213,11 +213,11 @@ function PurchaseDisclaimer(arg0) {
   };
   let formatResult = product.type !== CollectiblesItemType.CollectiblesItemType.EXTERNAL_SKU;
   if (formatResult) {
-    const intl = tmp3(1236).intl;
+    const intl = tmp3(1233).intl;
     obj = { buyButtonLabel: null, paidServiceTermURL: null };
     obj[0] = buyButtonLabel;
     obj[1] = constants2.PAID_TERMS;
-    formatResult = intl.format(tmp3(1236).t.iIglwJ, obj);
+    formatResult = intl.format(tmp3(1233).t.iIglwJ, obj);
   }
   obj[3] = formatResult;
   return closure_15(Text.Text, obj);

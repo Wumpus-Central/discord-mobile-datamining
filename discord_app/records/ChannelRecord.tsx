@@ -7,7 +7,7 @@ import set29 from "../../discord_common/js/shared/shared-constants/ForumLayout.t
 import set30 from "../../discord_common/js/shared/shared-constants/ThreadSearchTagSetting.tsx";
 import hasFlag from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import exact from "../../discord_common/js/packages/type-utils/TypeUtils.tsx";
-import privDefault from "../../_runtime/01401_priv.js";
+import privDefault from "../../_runtime/01400_priv.js";
 import closure_4 from "../modules/stage_channels/StageInstanceStore.tsx";
 import ME from "../Constants.tsx";
 import { ChannelFlags } from "../modules/channel/ChannelConstants.tsx";
@@ -62,7 +62,7 @@ function createChannelRecord(type) {
 ({ BITRATE_DEFAULT: c5, ChannelTypes } = ME);
 const BasicPermissions = ME.BasicPermissions;
 ({ ChannelTypesSets: closure_8, Permissions } = ME);
-let items = [, , , , , , , , ,];
+let items = [, , , , , , , , , ,];
 ({
   GUILD_TEXT: arr[0],
   GUILD_ANNOUNCEMENT: arr[1],
@@ -72,11 +72,12 @@ let items = [, , , , , , , , ,];
   GUILD_DIRECTORY: arr[5],
   GUILD_FORUM: arr[6],
   GUILD_MEDIA: arr[7],
-  DM: arr[8],
-  GROUP_DM: arr[9],
+  GUILD_APP: arr[8],
+  DM: arr[9],
+  GROUP_DM: arr[10],
 } = ChannelTypes);
 let set = new Set(items);
-let items1 = [, , , , , , , , , , , , , , ,];
+let items1 = [, , , , , , , , , , , , , , , ,];
 ({
   DM: arr2[0],
   GROUP_DM: arr2[1],
@@ -94,17 +95,19 @@ let items1 = [, , , , , , , , , , , , , , ,];
   GUILD_MEDIA: arr2[13],
   GUILD_SPACE: arr2[14],
   MEDIA_THREAD: arr2[15],
+  GUILD_APP: arr2[16],
 } = ChannelTypes);
-const items2 = [, , , ,];
+const items2 = [, , , , ,];
 ({
   GUILD_TEXT: arr3[0],
   GUILD_ANNOUNCEMENT: arr3[1],
   ANNOUNCEMENT_THREAD: arr3[2],
   PUBLIC_THREAD: arr3[3],
   PRIVATE_THREAD: arr3[4],
+  GUILD_APP: arr3[5],
 } = ChannelTypes);
 const set2 = new Set(items2);
-const items3 = [, , , , ,];
+const items3 = [, , , , , ,];
 ({
   GUILD_TEXT: arr4[0],
   GUILD_ANNOUNCEMENT: arr4[1],
@@ -112,157 +115,176 @@ const items3 = [, , , , ,];
   GUILD_MEDIA: arr4[3],
   GUILD_VOICE: arr4[4],
   GUILD_STAGE_VOICE: arr4[5],
+  GUILD_APP: arr4[6],
 } = ChannelTypes);
 const set1 = new Set(items1);
-const items4 = [, , , , , , , , , , , ,];
+const items4 = [ChannelTypes.GUILD_TEXT];
+const set3 = new Set(items3);
+const items5 = [, , , , , , , , , , , , ,];
 ({
-  GUILD_TEXT: arr5[0],
-  GUILD_VOICE: arr5[1],
-  GUILD_STAGE_VOICE: arr5[2],
-  GUILD_CATEGORY: arr5[3],
-  GUILD_ANNOUNCEMENT: arr5[4],
-  GUILD_STORE: arr5[5],
-  ANNOUNCEMENT_THREAD: arr5[6],
-  PUBLIC_THREAD: arr5[7],
-  PRIVATE_THREAD: arr5[8],
-  GUILD_DIRECTORY: arr5[9],
-  GUILD_FORUM: arr5[10],
-  GUILD_MEDIA: arr5[11],
-  GUILD_SPACE: arr5[12],
+  GUILD_TEXT: arr6[0],
+  GUILD_VOICE: arr6[1],
+  GUILD_STAGE_VOICE: arr6[2],
+  GUILD_CATEGORY: arr6[3],
+  GUILD_ANNOUNCEMENT: arr6[4],
+  GUILD_STORE: arr6[5],
+  ANNOUNCEMENT_THREAD: arr6[6],
+  PUBLIC_THREAD: arr6[7],
+  PRIVATE_THREAD: arr6[8],
+  GUILD_DIRECTORY: arr6[9],
+  GUILD_FORUM: arr6[10],
+  GUILD_MEDIA: arr6[11],
+  GUILD_SPACE: arr6[12],
+  GUILD_APP: arr6[13],
+} = ChannelTypes);
+const set5 = new Set(items5);
+const items6 = [, , , ,];
+({
+  GUILD_TEXT: arr7[0],
+  GUILD_ANNOUNCEMENT: arr7[1],
+  GUILD_FORUM: arr7[2],
+  GUILD_MEDIA: arr7[3],
+  GUILD_APP: arr7[4],
 } = ChannelTypes);
 const set4 = new Set(items4);
-const items5 = [, , ,];
-({ GUILD_TEXT: arr6[0], GUILD_ANNOUNCEMENT: arr6[1], GUILD_FORUM: arr6[2], GUILD_MEDIA: arr6[3] } = ChannelTypes);
-const set3 = new Set(items3);
-const items6 = [,];
-({ GUILD_VOICE: arr7[0], GUILD_STAGE_VOICE: arr7[1] } = ChannelTypes);
+const items7 = [,];
+({ GUILD_VOICE: arr8[0], GUILD_STAGE_VOICE: arr8[1] } = ChannelTypes);
+const set7 = new Set(items7);
+const items8 = [ChannelTypes.GUILD_STAGE_VOICE];
 const set6 = new Set(items6);
-const items7 = [ChannelTypes.GUILD_STAGE_VOICE];
-const set5 = new Set(items5);
-const items8 = [,];
-({ DM: arr9[0], GROUP_DM: arr9[1] } = ChannelTypes);
-const set8 = new Set(items8);
-const items9 = [ChannelTypes.GROUP_DM];
+const items9 = [,];
+({ DM: arr10[0], GROUP_DM: arr10[1] } = ChannelTypes);
 const set9 = new Set(items9);
-const items10 = [, , , , , ,];
-({
-  DM: arr11[0],
-  GROUP_DM: arr11[1],
-  GUILD_TEXT: arr11[2],
-  GUILD_ANNOUNCEMENT: arr11[3],
-  ANNOUNCEMENT_THREAD: arr11[4],
-  PUBLIC_THREAD: arr11[5],
-  PRIVATE_THREAD: arr11[6],
-} = ChannelTypes);
+const items10 = [ChannelTypes.GROUP_DM];
 const set10 = new Set(items10);
-const items11 = [, , , , ,];
+const items11 = [, , , , , , ,];
 ({
   DM: arr12[0],
   GROUP_DM: arr12[1],
-  GUILD_VOICE: arr12[2],
-  GUILD_STAGE_VOICE: arr12[3],
-  PUBLIC_THREAD: arr12[4],
-  PRIVATE_THREAD: arr12[5],
+  GUILD_TEXT: arr12[2],
+  GUILD_ANNOUNCEMENT: arr12[3],
+  ANNOUNCEMENT_THREAD: arr12[4],
+  PUBLIC_THREAD: arr12[5],
+  PRIVATE_THREAD: arr12[6],
+  GUILD_APP: arr12[7],
 } = ChannelTypes);
 const set11 = new Set(items11);
-const items12 = [, , , , , , , , ,];
+const items12 = [, , , , ,];
 ({
-  GUILD_TEXT: arr13[0],
-  GUILD_ANNOUNCEMENT: arr13[1],
-  ANNOUNCEMENT_THREAD: arr13[2],
-  PUBLIC_THREAD: arr13[3],
-  PRIVATE_THREAD: arr13[4],
-  GUILD_DIRECTORY: arr13[5],
-  GUILD_FORUM: arr13[6],
-  GUILD_MEDIA: arr13[7],
-  DM: arr13[8],
-  GROUP_DM: arr13[9],
+  DM: arr13[0],
+  GROUP_DM: arr13[1],
+  GUILD_VOICE: arr13[2],
+  GUILD_STAGE_VOICE: arr13[3],
+  PUBLIC_THREAD: arr13[4],
+  PRIVATE_THREAD: arr13[5],
 } = ChannelTypes);
 const set12 = new Set(items12);
-const items13 = [, , ,];
+const items13 = [, , , , , , , , , ,];
 ({
-  ANNOUNCEMENT_THREAD: arr14[0],
-  PUBLIC_THREAD: arr14[1],
-  PRIVATE_THREAD: arr14[2],
-  MEDIA_THREAD: arr14[3],
+  GUILD_TEXT: arr14[0],
+  GUILD_ANNOUNCEMENT: arr14[1],
+  ANNOUNCEMENT_THREAD: arr14[2],
+  PUBLIC_THREAD: arr14[3],
+  PRIVATE_THREAD: arr14[4],
+  GUILD_DIRECTORY: arr14[5],
+  GUILD_FORUM: arr14[6],
+  GUILD_MEDIA: arr14[7],
+  GUILD_APP: arr14[8],
+  DM: arr14[9],
+  GROUP_DM: arr14[10],
 } = ChannelTypes);
 const set13 = new Set(items13);
-const items14 = [,];
-({ PUBLIC_THREAD: arr15[0], PRIVATE_THREAD: arr15[1] } = ChannelTypes);
+const items14 = [, , ,];
+({
+  ANNOUNCEMENT_THREAD: arr15[0],
+  PUBLIC_THREAD: arr15[1],
+  PRIVATE_THREAD: arr15[2],
+  MEDIA_THREAD: arr15[3],
+} = ChannelTypes);
 const set14 = new Set(items14);
-const items15 = [, , ,];
-({ GUILD_TEXT: arr16[0], GUILD_ANNOUNCEMENT: arr16[1], GUILD_FORUM: arr16[2], GUILD_MEDIA: arr16[3] } = ChannelTypes);
-const set7 = new Set(items7);
-const items16 = [, , , , , , , , , , ,];
-({
-  DM: arr17[0],
-  GROUP_DM: arr17[1],
-  GUILD_TEXT: arr17[2],
-  GUILD_ANNOUNCEMENT: arr17[3],
-  ANNOUNCEMENT_THREAD: arr17[4],
-  PUBLIC_THREAD: arr17[5],
-  PRIVATE_THREAD: arr17[6],
-  GUILD_FORUM: arr17[7],
-  GUILD_MEDIA: arr17[8],
-  GUILD_DIRECTORY: arr17[9],
-  GUILD_VOICE: arr17[10],
-  GUILD_STAGE_VOICE: arr17[11],
-} = ChannelTypes);
-const set16 = new Set(items16);
-const items17 = [, , , , , , , , , ,];
-({
-  GUILD_TEXT: arr18[0],
-  GUILD_ANNOUNCEMENT: arr18[1],
-  GUILD_STORE: arr18[2],
-  GUILD_VOICE: arr18[3],
-  GUILD_STAGE_VOICE: arr18[4],
-  ANNOUNCEMENT_THREAD: arr18[5],
-  PUBLIC_THREAD: arr18[6],
-  PRIVATE_THREAD: arr18[7],
-  GUILD_DIRECTORY: arr18[8],
-  GUILD_FORUM: arr18[9],
-  GUILD_MEDIA: arr18[10],
-} = ChannelTypes);
+const items15 = [,];
+({ PUBLIC_THREAD: arr16[0], PRIVATE_THREAD: arr16[1] } = ChannelTypes);
 const set15 = new Set(items15);
-const items18 = [, , , , , , , ,];
+const items16 = [, , , ,];
 ({
-  GUILD_ANNOUNCEMENT: arr19[0],
-  GUILD_CATEGORY: arr19[1],
-  GUILD_STORE: arr19[2],
-  GUILD_TEXT: arr19[3],
-  GUILD_VOICE: arr19[4],
-  GUILD_STAGE_VOICE: arr19[5],
-  GUILD_DIRECTORY: arr19[6],
-  GUILD_FORUM: arr19[7],
-  GUILD_MEDIA: arr19[8],
+  GUILD_TEXT: arr17[0],
+  GUILD_ANNOUNCEMENT: arr17[1],
+  GUILD_FORUM: arr17[2],
+  GUILD_MEDIA: arr17[3],
+  GUILD_APP: arr17[4],
+} = ChannelTypes);
+const set8 = new Set(items8);
+const items17 = [, , , , , , , , , , , ,];
+({
+  DM: arr18[0],
+  GROUP_DM: arr18[1],
+  GUILD_TEXT: arr18[2],
+  GUILD_ANNOUNCEMENT: arr18[3],
+  ANNOUNCEMENT_THREAD: arr18[4],
+  PUBLIC_THREAD: arr18[5],
+  PRIVATE_THREAD: arr18[6],
+  GUILD_FORUM: arr18[7],
+  GUILD_MEDIA: arr18[8],
+  GUILD_DIRECTORY: arr18[9],
+  GUILD_VOICE: arr18[10],
+  GUILD_STAGE_VOICE: arr18[11],
+  GUILD_APP: arr18[12],
 } = ChannelTypes);
 const set17 = new Set(items17);
-const items19 = [,];
-({ GUILD_TEXT: arr20[0], GUILD_ANNOUNCEMENT: arr20[1] } = ChannelTypes);
+const items18 = [, , , , , , , , , , ,];
+({
+  GUILD_TEXT: arr19[0],
+  GUILD_ANNOUNCEMENT: arr19[1],
+  GUILD_STORE: arr19[2],
+  GUILD_VOICE: arr19[3],
+  GUILD_STAGE_VOICE: arr19[4],
+  ANNOUNCEMENT_THREAD: arr19[5],
+  PUBLIC_THREAD: arr19[6],
+  PRIVATE_THREAD: arr19[7],
+  GUILD_DIRECTORY: arr19[8],
+  GUILD_FORUM: arr19[9],
+  GUILD_MEDIA: arr19[10],
+  GUILD_APP: arr19[11],
+} = ChannelTypes);
+const set16 = new Set(items16);
+const items19 = [, , , , , , , , ,];
+({
+  GUILD_ANNOUNCEMENT: arr20[0],
+  GUILD_CATEGORY: arr20[1],
+  GUILD_STORE: arr20[2],
+  GUILD_TEXT: arr20[3],
+  GUILD_VOICE: arr20[4],
+  GUILD_STAGE_VOICE: arr20[5],
+  GUILD_DIRECTORY: arr20[6],
+  GUILD_FORUM: arr20[7],
+  GUILD_MEDIA: arr20[8],
+  GUILD_APP: arr20[9],
+} = ChannelTypes);
 const set18 = new Set(items18);
-const items20 = [, , ,];
-({ GUILD_TEXT: arr21[0], GUILD_ANNOUNCEMENT: arr21[1], GUILD_FORUM: arr21[2], GUILD_MEDIA: arr21[3] } = ChannelTypes);
+const items20 = [,];
+({ GUILD_TEXT: arr21[0], GUILD_ANNOUNCEMENT: arr21[1] } = ChannelTypes);
 const set19 = new Set(items19);
-const items21 = [, , , , ,];
+const items21 = [, , , ,];
 ({
   GUILD_TEXT: arr22[0],
   GUILD_ANNOUNCEMENT: arr22[1],
   GUILD_FORUM: arr22[2],
   GUILD_MEDIA: arr22[3],
-  GUILD_VOICE: arr22[4],
-  GUILD_STAGE_VOICE: arr22[5],
+  GUILD_APP: arr22[4],
 } = ChannelTypes);
 const set20 = new Set(items20);
-const items22 = [, , , ,];
+const items22 = [, , , , , ,];
 ({
-  GUILD_ANNOUNCEMENT: arr23[0],
-  GUILD_TEXT: arr23[1],
+  GUILD_TEXT: arr23[0],
+  GUILD_ANNOUNCEMENT: arr23[1],
   GUILD_FORUM: arr23[2],
   GUILD_MEDIA: arr23[3],
-  ANNOUNCEMENT_THREAD: arr23[4],
+  GUILD_VOICE: arr23[4],
+  GUILD_STAGE_VOICE: arr23[5],
+  GUILD_APP: arr23[6],
 } = ChannelTypes);
 const set21 = new Set(items21);
-const items23 = [, , , , , , ,];
+const items23 = [, , , , , , , ,];
 ({
   GUILD_TEXT: arr24[0],
   GUILD_FORUM: arr24[1],
@@ -272,6 +294,7 @@ const items23 = [, , , , , , ,];
   PRIVATE_THREAD: arr24[5],
   GUILD_VOICE: arr24[6],
   GUILD_STAGE_VOICE: arr24[7],
+  GUILD_APP: arr24[8],
 } = ChannelTypes);
 const set22 = new Set(items22);
 const items24 = [, , ,];
@@ -285,16 +308,23 @@ const set23 = new Set(items23);
 const items25 = [, ,];
 ({ GUILD_TEXT: arr26[0], GUILD_FORUM: arr26[1], GUILD_MEDIA: arr26[2] } = ChannelTypes);
 const set24 = new Set(items24);
-const items26 = [, , ,];
+const items26 = [, , , ,];
 ({
   GUILD_TEXT: arr27[0],
   GUILD_CATEGORY: arr27[1],
   GUILD_FORUM: arr27[2],
   GUILD_ANNOUNCEMENT: arr27[3],
+  GUILD_APP: arr27[4],
 } = ChannelTypes);
 const set25 = new Set(items25);
-const items27 = [, , ,];
-({ GUILD_TEXT: arr28[0], GUILD_ANNOUNCEMENT: arr28[1], GUILD_FORUM: arr28[2], GUILD_VOICE: arr28[3] } = ChannelTypes);
+const items27 = [, , , ,];
+({
+  GUILD_TEXT: arr28[0],
+  GUILD_ANNOUNCEMENT: arr28[1],
+  GUILD_FORUM: arr28[2],
+  GUILD_VOICE: arr28[3],
+  GUILD_APP: arr28[4],
+} = ChannelTypes);
 const set26 = new Set(items26);
 const set27 = new Set(items27);
 let closure_23 = importAllResult.combine(Permissions.CONNECT, Permissions.VIEW_CHANNEL);
@@ -517,16 +547,21 @@ prototype["isNSFW"] = function isNSFW() {
   return this.nsfw;
 };
 prototype["isManaged"] = function isManaged() {
-  return null != this.application_id;
+  const APPLICATION_MANAGEABLE = constants.APPLICATION_MANAGEABLE;
+  let hasItem = APPLICATION_MANAGEABLE.has(this.type);
+  if (hasItem) {
+    hasItem = null != this.application_id;
+  }
+  return hasItem;
 };
 prototype["isPrivate"] = function isPrivate() {
-  return set8.has(this.type);
+  return set9.has(this.type);
 };
 prototype["isGroupDM"] = function isGroupDM() {
   return this.type === ChannelTypes.GROUP_DM;
 };
 prototype["isMultiUserDM"] = function isMultiUserDM() {
-  return set9.has(this.type);
+  return set10.has(this.type);
 };
 prototype["isDM"] = function isDM() {
   return this.type === ChannelTypes.DM;
@@ -563,7 +598,7 @@ prototype["isScheduledForDeletion"] = function isScheduledForDeletion() {
 };
 prototype["isArchivedLockedThread"] = function isArchivedLockedThread() {
   const self = this;
-  let hasItem = set13.has(this.type);
+  let hasItem = set14.has(this.type);
   if (hasItem) {
     const threadMetadata = self.threadMetadata;
     let archived;
@@ -609,13 +644,13 @@ prototype["isCategory"] = function isCategory() {
   return this.type === ChannelTypes.GUILD_CATEGORY;
 };
 prototype["isVocal"] = function isVocal() {
-  return set11.has(this.type);
+  return set12.has(this.type);
 };
 prototype["isGuildVocal"] = function isGuildVocal() {
   const type = this.type;
   let hasItem = "SELECTABLE" !== type;
   if (hasItem) {
-    hasItem = set6.has(type);
+    hasItem = set7.has(type);
   }
   return hasItem;
 };
@@ -637,7 +672,7 @@ prototype["isListenModeCapable"] = function isListenModeCapable() {
   return this.isGuildStageVoice();
 };
 prototype["isThread"] = function isThread() {
-  return set13.has(this.type);
+  return set14.has(this.type);
 };
 prototype["isAnnouncementThread"] = function isAnnouncementThread() {
   return this.type === ChannelTypes.ANNOUNCEMENT_THREAD;
@@ -735,7 +770,7 @@ Object.defineProperty(prototype, "accessPermissions", {
     const type = this.type;
     let hasItem = "SELECTABLE" !== type;
     if (hasItem) {
-      hasItem = set6.has(type);
+      hasItem = set7.has(type);
     }
     if (hasItem) {
       let VIEW_CHANNEL = closure_23;
@@ -859,29 +894,29 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id) {
     originChannelId: null,
     ownerId: null,
     parent_id: null,
-    parentChannelThreadType: "find",
+    parentChannelThreadType: "fill",
     permissionOverwrites_: true,
     position_: true,
     rateLimitPerUser_: true,
     rawRecipients: true,
     recipients: true,
     recipientFlags: true,
-    rtcRegion: "D",
-    safetyWarnings: "DD",
-    blockedUserWarningDismissed: "rightwards_pushing_hand",
-    template: "__initData",
-    themeColor: "Symbol",
-    threadMetadata: "Promise",
-    topic_: "children",
-    totalMessageSent: "items",
-    type: "channelId",
-    userLimit_: "forEach",
-    version: "values",
-    videoQualityMode: "WireType",
-    linkedLobby: "options",
-    hdStreamingUntil: "context",
-    hdStreamingBuyerId: "replace",
-    voiceHangout: "i",
+    rtcRegion: "\u05E2\u05B4\u05D1\u05E8\u05B4\u05D9\u05EA",
+    safetyWarnings: "Hebrew",
+    blockedUserWarningDismissed: "he",
+    template: "simple",
+    themeColor: false,
+    threadMetadata: true,
+    topic_: null,
+    totalMessageSent: null,
+    type: null,
+    userLimit_: null,
+    version: null,
+    videoQualityMode: null,
+    linkedLobby: null,
+    hdStreamingUntil: null,
+    hdStreamingBuyerId: 6,
+    voiceHangout: 8,
   };
   if (null == application_id.available_tags) {
     obj[2] = undefined;
@@ -1039,7 +1074,7 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id) {
       hd_streaming_buyer_id: obj[54],
       voice_hangout: obj[55],
     } = application_id);
-    return obj3(1400).dangerouslyCast(obj, UnknownChannelRecord);
+    return obj3(1399).dangerouslyCast(obj, UnknownChannelRecord);
   } else {
     const available_tags = application_id.available_tags;
     if (null == available_tags) {
@@ -1189,7 +1224,7 @@ GuildVocalChannelRecord["fromServer"] = function fromServer(application_id) {
   if (tmp7 == null) {
     tmp7 = UnknownChannelRecord;
   }
-  return obj(1400).dangerouslyCast(obj, tmp7);
+  return obj(1399).dangerouslyCast(obj, tmp7);
 };
 class GuildTextualChannelRecord extends ChannelRecordBase {
   constructor(arg0) {
@@ -1314,7 +1349,7 @@ GuildTextualChannelRecord["fromServer"] = function fromServer(application_id) {
   if (tmp7 == null) {
     tmp7 = UnknownChannelRecord;
   }
-  return obj(1400).dangerouslyCast(obj, tmp7);
+  return obj(1399).dangerouslyCast(obj, tmp7);
 };
 class GuildAnnouncementChannelRecord extends GuildTextualChannelRecord {}
 class GuildCategoryChannelRecord extends GuildTextualChannelRecord {}
@@ -1324,6 +1359,7 @@ class GuildStoreChannelRecord extends GuildTextualChannelRecord {}
 class GuildTextChannelRecord extends GuildTextualChannelRecord {}
 class GuildSpaceChannelRecord extends GuildTextualChannelRecord {}
 class GuildVoiceChannelRecord extends GuildVocalChannelRecord {}
+class GuildAppChannelRecord extends GuildTextualChannelRecord {}
 let ForumChannelRecord;
 class ForumChannelRecord extends ChannelRecordBase {
   constructor(arg0) {
@@ -1489,7 +1525,7 @@ ForumChannelRecord["fromServer"] = function fromServer(available_tags) {
     }
     obj[24] = GUILD_TEXT;
     obj[25] = available_tags.version;
-    return obj1(1400).dangerouslyCast(obj, ForumChannelRecord);
+    return obj1(1399).dangerouslyCast(obj, ForumChannelRecord);
   }
 };
 class IdAsNumberCache {
@@ -1819,6 +1855,7 @@ let closure_29 = {
   [ChannelTypes.GUILD_FORUM]: ForumChannelRecord.fromServer,
   [ChannelTypes.GUILD_MEDIA]: ForumChannelRecord.fromServer,
   [ChannelTypes.GUILD_SPACE]: GuildTextualChannelRecord.fromServer,
+  [ChannelTypes.GUILD_APP]: GuildTextualChannelRecord.fromServer,
 };
 let closure_30 = {
   [ChannelTypes.DM]: DMChannelRecord,
@@ -1837,6 +1874,7 @@ let closure_30 = {
   [ChannelTypes.GUILD_FORUM]: ForumChannelRecord,
   [ChannelTypes.GUILD_MEDIA]: ForumChannelRecord,
   [ChannelTypes.GUILD_SPACE]: GuildSpaceChannelRecord,
+  [ChannelTypes.GUILD_APP]: GuildAppChannelRecord,
 };
 let result = set.fileFinishedImporting("records/ChannelRecord.tsx");
 
@@ -1848,64 +1886,64 @@ export const isGuildTextChannelType = function isGuildTextChannelType(type) {
   return set2.has(type);
 };
 export const GUILD_WEBHOOK_CHANNEL_TYPES = set3;
-export const GUILD_CHANNEL_TYPES = set4;
+export const GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES = set4;
+export const GUILD_CHANNEL_TYPES = set5;
 export const isGuildChannelType = function isGuildChannelType(arg0) {
-  return set4.has(arg0);
+  return set5.has(arg0);
 };
-export const GUILD_CAN_CONTAIN_THREADS_CHANNEL_TYPES = set5;
-export const GUILD_VOCAL_CHANNEL_TYPES = set6;
+export const GUILD_CAN_CONTAIN_THREADS_CHANNEL_TYPES = set6;
+export const GUILD_VOCAL_CHANNEL_TYPES = set7;
 export const isGuildVocalChannelType = function isGuildVocalChannelType(closure_10) {
   let hasItem = "SELECTABLE" !== closure_10;
   if (hasItem) {
-    hasItem = set6.has(closure_10);
+    hasItem = set7.has(closure_10);
   }
   return hasItem;
 };
 export const isGuildVocalChannelOrVocalThreadType = function isGuildVocalChannelOrVocalThreadType(arg0) {
   let hasItem = "SELECTABLE" !== arg0;
   if (hasItem) {
-    hasItem = set6.has(arg0);
+    hasItem = set7.has(arg0);
   }
   if (!hasItem) {
-    hasItem = set14.has(arg0);
+    hasItem = set15.has(arg0);
   }
   return hasItem;
 };
-export const SILENT_JOIN_LEAVE_CHANNEL_TYPES = set7;
+export const SILENT_JOIN_LEAVE_CHANNEL_TYPES = set8;
 export const isPrivate = function isPrivate(arg0) {
-  return set8.has(arg0);
-};
-export const isMultiUserDM = function isMultiUserDM(arg0) {
   return set9.has(arg0);
 };
-export const TEXT_CHANNEL_TYPES = set10;
+export const isMultiUserDM = function isMultiUserDM(arg0) {
+  return set10.has(arg0);
+};
+export const TEXT_CHANNEL_TYPES = set11;
 export const isTextChannel = function isTextChannel(type) {
-  return set10.has(type);
+  return set11.has(type);
 };
 export const isVoiceChannel = function isVoiceChannel(arg0) {
-  return set11.has(arg0);
-};
-export const isGuildReadableType = function isGuildReadableType(arg0) {
   return set12.has(arg0);
 };
-export const THREAD_CHANNEL_TYPES = set13;
-export const VOCAL_THREAD_CHANNEL_TYPES = set14;
-export const THREADED_CHANNEL_TYPES = set15;
-export const isThread = function isThread(arg0) {
+export const isGuildReadableType = function isGuildReadableType(arg0) {
   return set13.has(arg0);
 };
-export const isVocalThreadType = function isVocalThreadType(arg0) {
+export const THREAD_CHANNEL_TYPES = set14;
+export const VOCAL_THREAD_CHANNEL_TYPES = set15;
+export const THREADED_CHANNEL_TYPES = set16;
+export const isThread = function isThread(arg0) {
   return set14.has(arg0);
 };
-export const isReadableType = function isReadableType(type) {
-  return set16.has(type);
+export const isVocalThreadType = function isVocalThreadType(arg0) {
+  return set15.has(arg0);
 };
-export const GUILD_NON_CATEGORY_CHANNEL_TYPES = set17;
-export const EDITABLE_CHANNEL_TYPES = set18;
-export const TOGGLE_ANNOUNCEMENT_CHANNEL_TYPES = set19;
-export const TOPIC_CHANNEL_TYPES = set20;
-export const NSFW_CHANNEL_TYPES = set21;
-export const CREATEABLE_NON_VOCAL_CHANNEL_NAME_TYPES = set22;
+export const isReadableType = function isReadableType(type) {
+  return set17.has(type);
+};
+export const GUILD_NON_CATEGORY_CHANNEL_TYPES = set18;
+export const EDITABLE_CHANNEL_TYPES = set19;
+export const TOGGLE_ANNOUNCEMENT_CHANNEL_TYPES = set20;
+export const TOPIC_CHANNEL_TYPES = set21;
+export const NSFW_CHANNEL_TYPES = set22;
 export const SLOWMODE_CHANNEL_TYPES = set23;
 export const EDITABLE_VOICE_SETTINGS_TYPES = set24;
 export const VOICE_THREAD_PARENT_CHANNEL_TYPES = set25;
@@ -1914,7 +1952,7 @@ export const GUILD_FAVORITES_CHANNEL_TYPES = set27;
 export const getAccessPermissions = function getAccessPermissions(arg0) {
   let hasItem = "SELECTABLE" !== arg0;
   if (hasItem) {
-    hasItem = set6.has(arg0);
+    hasItem = set7.has(arg0);
   }
   if (hasItem) {
     let VIEW_CHANNEL = closure_23;
@@ -1926,7 +1964,7 @@ export const getAccessPermissions = function getAccessPermissions(arg0) {
 export const getBasicAccessPermissions = function getBasicAccessPermissions(arg0) {
   let hasItem = "SELECTABLE" !== arg0;
   if (hasItem) {
-    hasItem = set6.has(arg0);
+    hasItem = set7.has(arg0);
   }
   if (hasItem) {
     let VIEW_CHANNEL = closure_24;
@@ -1948,6 +1986,7 @@ export { GuildStoreChannelRecord };
 export { GuildTextChannelRecord };
 export { GuildSpaceChannelRecord };
 export { GuildVoiceChannelRecord };
+export { GuildAppChannelRecord };
 export { ForumChannelRecord };
 export { PrivateChannelRecord };
 export { DMChannelRecord };

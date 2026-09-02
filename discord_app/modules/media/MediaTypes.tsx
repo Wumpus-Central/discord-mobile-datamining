@@ -32,7 +32,7 @@ function messageAttachmentToUnfurledMediaItem(flags) {
     originalContentType: flags.original_content_type,
     placeholder: flags.placeholder,
     placeholderVersion: flags.placeholder_version,
-    loadingState: tmp(1955).UnfurledMediaLoadingState.LOADED_SUCCESS,
+    loadingState: tmp(1954).UnfurledMediaLoadingState.LOADED_SUCCESS,
     contentScanMetadata: null,
     flags: null,
   };

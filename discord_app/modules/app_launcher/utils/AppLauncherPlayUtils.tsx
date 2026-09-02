@@ -54,7 +54,7 @@ function _launchActivityInBotDM() {
               closure_6 = undefined;
               c3 = 1;
               c4 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -69,23 +69,23 @@ function _launchActivityInBotDM() {
               const obj2 = { applicationId: null };
               obj2[0] = callback;
               if (obj14.tryLaunchAsFrame(obj2)) {
-                let obj7 = callback(9472);
-                const result = obj7.stashPendingFrameLaunch(callback, { isStart: true });
+                let obj8 = callback(9485);
+                const result = obj8.stashPendingFrameLaunch(callback, { isStart: true });
                 c4 = 3;
                 const obj3 = { value: null, done: true };
                 obj3[0] = Promise.resolve(true);
                 return obj3;
               } else {
-                let obj4 = callback2(4491);
-                obj4 = { recipientIds: null };
+                let obj5 = callback2(4491);
+                const obj4 = { recipientIds: null };
                 obj4[0] = callback2;
                 c3 = 2;
                 c4 = 1;
-                const obj5 = { value: null, done: false };
-                obj5[0] = obj4.openPrivateChannel(obj4);
+                obj5 = { value: null, done: false };
+                obj5[0] = obj5.openPrivateChannel(obj4);
                 return obj5;
               }
-              obj14 = callback(9471);
+              obj14 = callback(9484);
             }
           } else if (2 === tmp5) {
             if (arg0 === 1) {
@@ -98,7 +98,7 @@ function _launchActivityInBotDM() {
               return obj6;
             } else {
               closure_6 = arg1;
-              obj7 = {
+              const obj7 = {
                 targetApplicationId: null,
                 channelId: null,
                 analyticsLocations: null,
@@ -114,8 +114,8 @@ function _launchActivityInBotDM() {
               obj7[5] = c5;
               c3 = 3;
               c4 = 1;
-              const obj8 = { value: null, done: false };
-              obj8[0] = callback2(9515)(obj7);
+              obj8 = { value: null, done: false };
+              obj8[0] = callback2(9528)(obj7);
               return obj8;
             }
           } else if (arg0 === 1) {
@@ -132,9 +132,9 @@ function _launchActivityInBotDM() {
             obj[0] = arg1;
             return obj;
           }
-        } catch (tmp14) {
+        } catch (tmp24) {
           c4 = tmp;
-          throw tmp14;
+          throw tmp24;
         }
       }
     })();

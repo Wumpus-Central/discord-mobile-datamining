@@ -1,7 +1,7 @@
 // discord_app/modules/guilds_bar/native/GuildsBarDnDStore.tsx
 import set from "../../../../_runtime/00002_set.js";
 import insertUnsortedGuilds from "../../../stores/SortedGuildStore.tsx";
-import identity from "../../../../_runtime/00700_identity.js";
+import identity from "../../../../_runtime/00697_identity.js";
 import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 
 const GuildsNodeType = insertUnsortedGuilds.GuildsNodeType;
@@ -12,17 +12,17 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_1 = arg1;
   obj = {
     dragSpecs: "Boolean",
-    overSpecs: "disabled",
+    overSpecs: "ip",
     dropSpecs: "isArray",
     dragRegion: require("../../reanimated/ReanimatedRexport.tsx").makeMutable({ min: 0, max: 0 }),
     gestureState: null,
     dragDropInProgress: null,
-    listInsets: "sans-serif-medium",
-    scrollPosition: "normal",
-    windowSize: "a",
-    setStateShallow: "isArray",
-    dropStart: "no",
-    dropComplete: "channelId",
+    listInsets: 2312,
+    scrollPosition: 2313,
+    windowSize: 2314,
+    setStateShallow: 2315,
+    dropStart: 2316,
+    dropComplete: "man_wearing_turban_tone4",
   };
   const obj2 = ReanimatedRexport;
   obj[4] = require("../../reanimated/ReanimatedRexport.tsx").makeMutable(obj);
@@ -67,7 +67,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       throw error;
     } else {
       callback(tmp2[3]).batchUpdates(() =>
-        newDropSpec({ dropSpecs: newDropSpec, dragSpecs: "Array", overSpecs: "accessible" }),
+        newDropSpec({ dropSpecs: newDropSpec, dragSpecs: "Array", overSpecs: "alignItems" }),
       );
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
@@ -123,13 +123,7 @@ export const useItemDragState = function useItemDragState(arg0, arg1) {
     ({ dragSpecs, overSpecs, dropSpecs, dragDropInProgress } = arg0);
     if (null == dragSpecs) {
       if (null == dropSpecs) {
-        obj = {
-          isDragTarget: false,
-          dragState: "disabled",
-          overState: "isArray",
-          itemSize: null,
-          dragDropInProgress: 1,
-        };
+        obj = { isDragTarget: false, dragState: "ip", overState: "isArray", itemSize: null, dragDropInProgress: -1 };
         obj[4] = dragDropInProgress;
         return obj;
       }
@@ -220,7 +214,7 @@ export const useItemDragState = function useItemDragState(arg0, arg1) {
     obj[3] = num;
     obj[4] = dragDropInProgress;
     return obj;
-  }, require("../../../../_runtime/04106_isIterable.js").shallow);
+  }, require("../../../../_runtime/04105_isIterable.js").shallow);
 };
 export const useFolderBGHeightOffset = function useFolderBGHeightOffset(arg0) {
   closure_0 = arg0;

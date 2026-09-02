@@ -95,7 +95,7 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
   obj = { bottom: true, children: null };
   obj = { style: tmp2.content, children: null };
   const items3 = [
-    callback(markAsDismissed(5937).ActionSheetHeaderBar, {
+    callback(markAsDismissed(5945).ActionSheetHeaderBar, {
       onPress() {
         const current = ref.current;
         if (current != null) {
@@ -115,7 +115,7 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
   ({ row: arr5[0], outerRow: arr5[1] } = tmp2);
   const obj4 = {
     name: "Cap",
-    suggestion: markAsDismissed(1930).TypingSuggestion.UNSPECIFIED,
+    suggestion: markAsDismissed(1929).TypingSuggestion.UNSPECIFIED,
     emojiSize: 24,
     spacing: 8,
     textVariant: "text-md/medium",
@@ -124,10 +124,10 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
     emojiSource: null,
     style: null,
   };
-  const items5 = [ref(11544), ref(11545), ref(11544)];
+  const items5 = [ref(11767), ref(11768), ref(11767)];
   obj4[7] = items5;
   obj4[8] = tmp2.outerStack;
-  obj3[1] = callback(ref(11542), obj4);
+  obj3[1] = callback(ref(11765), obj4);
   const items6 = [callback(View, obj3), ,];
   const obj5 = { style: items7, children: null };
   items7 = [,];
@@ -152,12 +152,12 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
       markAsDismissed(closure_1_6.USER_DISMISS);
     },
   };
-  const tmp6 = ref(11542);
-  obj6[1] = markAsDismissed(1930).TypingSuggestion.YAPPING;
+  const tmp6 = ref(11765);
+  obj6[1] = markAsDismissed(1929).TypingSuggestion.YAPPING;
   obj6[7] = tmp2.innerStack;
-  const items8 = [ref(11546), ref(11547), ref(11546)];
+  const items8 = [ref(11769), ref(11770), ref(11769)];
   obj6[8] = items8;
-  obj5[1] = callback(ref(11542), obj6);
+  obj5[1] = callback(ref(11765), obj6);
   items6[1] = callback(View, obj5);
   const obj7 = { style: items9, children: null };
   items9 = [,];
@@ -173,44 +173,44 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
     style: null,
     emojiSource: null,
   };
-  const tmp7 = ref(11542);
-  obj8[1] = markAsDismissed(1930).TypingSuggestion.OVERSHARING;
+  const tmp7 = ref(11765);
+  obj8[1] = markAsDismissed(1929).TypingSuggestion.OVERSHARING;
   obj8[7] = tmp2.outerStack;
-  const items10 = [ref(11548), ref(11549), ref(11550)];
+  const items10 = [ref(11771), ref(11772), ref(11773)];
   obj8[8] = items10;
-  obj7[1] = callback(ref(11542), obj8);
+  obj7[1] = callback(ref(11765), obj8);
   items6[2] = callback(View, obj7);
   obj2[1] = items6;
   items3[1] = callback2(View, obj2);
   const obj9 = { text: null, color: null, style: null };
-  const intl = markAsDismissed(1236).intl;
-  obj9[0] = intl.string(markAsDismissed(1236).t.oW0eUd);
-  obj9[1] = markAsDismissed(1297).BadgeColors.EXPRESSIVE;
+  const intl = markAsDismissed(1233).intl;
+  obj9[0] = intl.string(markAsDismissed(1233).t.oW0eUd);
+  obj9[1] = markAsDismissed(1296).BadgeColors.EXPRESSIVE;
   obj9[2] = tmp2.betaBadge;
-  items3[2] = callback(markAsDismissed(1297).TextBadge, obj9);
+  items3[2] = callback(markAsDismissed(1296).TextBadge, obj9);
   const obj10 = { variant: "heading-lg/medium", style: tmp2.title, color: "text-default", children: null };
-  const intl2 = markAsDismissed(1236).intl;
-  obj10[3] = intl2.string(ref(3503).uGxDiu);
+  const intl2 = markAsDismissed(1233).intl;
+  obj10[3] = intl2.string(ref(3502).uGxDiu);
   items3[3] = callback(markAsDismissed(4474).Text, obj10);
   const obj11 = { variant: "text-md/normal", style: tmp2.body, color: "text-muted", children: null };
-  const intl3 = markAsDismissed(1236).intl;
-  obj11[3] = intl3.string(ref(3503).yezU3E);
+  const intl3 = markAsDismissed(1233).intl;
+  obj11[3] = intl3.string(ref(3502).yezU3E);
   items3[4] = callback(markAsDismissed(4474).Text, obj11);
   const obj12 = { style: tmp2.actions, children: null };
   const obj13 = { text: null, variant: "primary", size: "lg", onPress: null };
-  const intl4 = markAsDismissed(1236).intl;
-  obj13[0] = intl4.string(ref(3503).TswY68);
+  const intl4 = markAsDismissed(1233).intl;
+  obj13[0] = intl4.string(ref(3502).TswY68);
   obj13[3] = callback;
   const items11 = [callback(markAsDismissed(4928).Button, obj13)];
   const obj14 = { text: null, variant: "secondary", size: "lg", onPress: null };
-  const intl5 = markAsDismissed(1236).intl;
-  obj14[0] = intl5.string(markAsDismissed(1236).t.TulDPl);
+  const intl5 = markAsDismissed(1233).intl;
+  obj14[0] = intl5.string(markAsDismissed(1233).t.TulDPl);
   obj14[3] = callback1;
   items11[1] = callback(markAsDismissed(4928).Button, obj14);
   obj12[1] = items11;
   items3[5] = callback2(View, obj12);
   obj[1] = items3;
   obj[1] = callback2(View, obj);
-  obj[4] = callback(markAsDismissed(5553).SafeAreaPaddingView, obj);
-  return callback(markAsDismissed(5622).BottomSheet, obj);
+  obj[4] = callback(markAsDismissed(5561).SafeAreaPaddingView, obj);
+  return callback(markAsDismissed(5630).BottomSheet, obj);
 }

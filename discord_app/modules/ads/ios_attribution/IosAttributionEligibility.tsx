@@ -34,14 +34,14 @@ export const getIosAttributionClickFramework = function getIosAttributionClickFr
   const IosAttributionFeatureGate = apexExperiment.IosAttributionFeatureGate;
   let enabled = IosAttributionFeatureGate.getConfig({ location: "quest_ios_attribution" }).enabled;
   if (enabled) {
-    let tmpResult = tmp(500);
+    let tmpResult = tmp(1234);
     enabled = tmpResult.isIOS();
   }
   let activeIosAttributionFramework = null;
   if (enabled) {
     activeIosAttributionFramework = null;
     if (arg0) {
-      tmpResult = tmp(7443);
+      tmpResult = tmp(7453);
       const adContext = tmpResult.getAdContext(sourceQuestContent, adContentId);
       let prop;
       if (adContext != null) {
@@ -49,8 +49,8 @@ export const getIosAttributionClickFramework = function getIosAttributionClickFr
       }
       activeIosAttributionFramework = null;
       if (true === prop) {
-        activeIosAttributionFramework = tmp(11091).getActiveIosAttributionFramework();
-        const tmpResult1 = tmp(11091);
+        activeIosAttributionFramework = tmp(11311).getActiveIosAttributionFramework();
+        const tmpResult1 = tmp(11311);
       }
     }
   }

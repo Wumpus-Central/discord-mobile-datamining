@@ -77,33 +77,33 @@ export default function EditWishlistActionSheet(wishlistId) {
   closure_10 = undefined;
   let tmp = callback3();
   dependencyMap = tmp;
-  let obj = wishlistId(589);
+  let obj = wishlistId(586);
   let items = [stateFromStores2];
   callback = obj.useStateFromStores(items, () => stateFromStores2.useReducedMotion);
   if (analyticsLocations == null) {
     analyticsLocations = [];
   }
-  analyticsLocations = analyticsContext(5953)(
+  analyticsLocations = analyticsContext(5961)(
     analyticsLocations,
-    tmp4(5973).USER_PROFILE_EDIT_WISHLIST_ACTION_SHEET,
+    tmp4(5981).USER_PROFILE_EDIT_WISHLIST_ACTION_SHEET,
   ).analyticsLocations;
   obj = { maxWidth: ACTION_SHEET_MAX_WIDTH };
-  let tmp5 = analyticsContext(5953);
-  ({ cardWidth: c5, rowWidth } = analyticsContext(12522)(obj));
+  let tmp5 = analyticsContext(5961);
+  ({ cardWidth: c5, rowWidth } = analyticsContext(12746)(obj));
   if (null != rowWidth) {
     obj = { width: null };
     obj[0] = rowWidth;
     let tmp7 = obj;
   }
-  let tmp2Result = tmp2(589);
+  let tmp2Result = tmp2(586);
   const items1 = [first];
   stateFromStores = tmp2Result.useStateFromStores(items1, () => first.getWishlist(wishlistId));
-  tmp2Result = tmp2(589);
+  tmp2Result = tmp2(586);
   const items2 = [first];
   const stateFromStores1 = tmp2Result.useStateFromStores(items2, () => first.isFetching(wishlistId));
-  let tmp6 = analyticsContext(12522)(obj);
+  let tmp6 = analyticsContext(12746)(obj);
   const items3 = [closure_10, closure_11];
-  stateFromStores2 = wishlistId(589).useStateFromStores(items3, () => {
+  stateFromStores2 = wishlistId(586).useStateFromStores(items3, () => {
     currentUser = currentUser.getCurrentUser();
     let wishlistSettings = null;
     if (null != currentUser) {
@@ -167,22 +167,22 @@ export default function EditWishlistActionSheet(wishlistId) {
     const result = analyticsContext(itemWrapper[22]).removeSkuFromWishlist(wishlistId, closure_1_1, analyticsLocations);
   }, items7);
   obj1 = { scrollable: true, startExpanded: true, title: null, children: null };
-  const tmp2Result1 = wishlistId(589);
-  let intl = tmp2(1236).intl;
-  obj1[2] = intl.string(wishlistId(1236).t["OEgx/4"]);
-  let obj2 = { contentContainerStyle: { paddingBottom: analyticsContext(1628)().bottom }, children: null };
+  const tmp2Result1 = wishlistId(586);
+  let intl = tmp2(1233).intl;
+  obj1[2] = intl.string(wishlistId(1233).t["OEgx/4"]);
+  let obj2 = { contentContainerStyle: { paddingBottom: analyticsContext(1627)().bottom }, children: null };
   let obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.toggleRow, children: null };
   const obj5 = { hasIcons: false, children: null };
   obj6 = { label: null, subLabel: null, value: null, onValueChange: null };
-  let intl2 = tmp2(1236).intl;
-  obj6[0] = intl2.string(wishlistId(1236).t.b2nFyA);
-  const intl3 = tmp2(1236).intl;
-  obj6[1] = intl3.string(wishlistId(1236).t.dw58pE);
+  let intl2 = tmp2(1233).intl;
+  obj6[0] = intl2.string(wishlistId(1233).t.b2nFyA);
+  const intl3 = tmp2(1233).intl;
+  obj6[1] = intl3.string(wishlistId(1233).t.dw58pE);
   obj6[2] = first;
   obj6[3] = callback;
-  obj5[1] = callback2(wishlistId(5993).TableSwitchRow, obj6);
-  obj4[1] = callback2(wishlistId(5992).TableRowGroup, obj5);
+  obj5[1] = callback2(wishlistId(6001).TableSwitchRow, obj6);
+  obj4[1] = callback2(wishlistId(6000).TableRowGroup, obj5);
   const items8 = [callback2(stateFromStores, obj4)];
   if (stateFromStores1) {
     if (null == stateFromStores) {
@@ -194,7 +194,7 @@ export default function EditWishlistActionSheet(wishlistId) {
     items8[1] = tmp16Result;
     obj3[1] = items8;
     obj2[1] = closure_15(tmp19, obj3);
-    obj1[3] = tmp16(tmp2(5624).BottomSheetScrollView, obj2);
+    obj1[3] = tmp16(tmp2(5632).BottomSheetScrollView, obj2);
     return tmp16(tmp4Result, obj1);
   }
   tmp16Result = null;

@@ -3,7 +3,7 @@ import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05652_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05660_LegacyBaseButton.js";
 import formatAppStoreRatingValue from "AppStoreOverlayStatCardUtils.tsx";
 import FractionalStarDefault from "AppStoreOverlayStarRating.tsx";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -28,12 +28,12 @@ function AppStoreOverlayStatCardItem(onRatingPress) {
     const result = obj2.formatAppStoreRatingValue(stat.rating, getSystemLocale.intl.currentLocale);
     let result1;
     if (null != stat.ratingCount) {
-      let tmp9Result = tmp9(11103);
-      result1 = tmp9Result.formatAppStoreRatingCount(stat.ratingCount, tmp9(1236).intl.currentLocale);
+      let tmp9Result = tmp9(11324);
+      result1 = tmp9Result.formatAppStoreRatingCount(stat.ratingCount, tmp9(1233).intl.currentLocale);
     }
-    tmp9Result = tmp9(11103);
+    tmp9Result = tmp9(11324);
     const appStoreStarFillAmounts = tmp9Result.getAppStoreStarFillAmounts(stat.rating, num);
-    const intl = tmp9(1236).intl;
+    const intl = tmp9(1233).intl;
     let obj = { label: null, rating: null, maxRating: null, ratingCount: null };
     obj[0] = stat.label;
     obj[1] = result;
@@ -129,13 +129,13 @@ function AppStoreOverlayStatCardItem(onRatingPress) {
     obj5[4] = accessibilityLabel;
     let stringResult;
     if (tmp20Result.isIOS()) {
-      const intl2 = tmp20(1236).intl;
-      stringResult = intl2.string(tmp20(1236).t.quJD0Y);
+      const intl2 = tmp20(1233).intl;
+      stringResult = intl2.string(tmp20(1233).t.quJD0Y);
     }
     obj5[5] = stringResult;
     obj5[6] = tmp18Result;
     tmp23Result = tmp23(closure_3, obj5);
-    tmp20Result = tmp20(500);
+    tmp20Result = tmp20(1234);
     const tmp29 = closure_3;
   } else {
     const obj6 = { style: null, accessible: true, accessibilityRole: "text", accessibilityLabel: null, children: null };

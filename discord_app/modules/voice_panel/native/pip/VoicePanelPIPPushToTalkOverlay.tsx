@@ -50,7 +50,7 @@ const importDefaultResult1 = importDefaultResult;
 let result = require("set").fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPPushToTalkOverlay.tsx");
 
 export default function VoicePanelPIPPushToTalkOverlay() {
-  let obj = sharedValue(16673);
+  let obj = sharedValue(16908);
   const pIPState = obj.usePIPState();
   sharedValue = pIPState;
   const tmp2 = callback3();
@@ -65,17 +65,17 @@ export default function VoicePanelPIPPushToTalkOverlay() {
     BLACK.useCallback((current) => {
       if (current !== first.current) {
         first.current = current;
-        sharedValue(9666).setPushToTalkState(current);
+        sharedValue(9679).setPushToTalkState(current);
         const result = sharedValue.set(current);
-        const obj = sharedValue(9666);
+        const obj = sharedValue(9679);
       }
     }, items),
   ];
   const tmp4 = WHITE(items1, 2);
   first = tmp4[0];
   dependencyMap = tmp6;
-  WHITE = first(712).unsafe_rawColors.WHITE;
-  BLACK = first(712).unsafe_rawColors.BLACK;
+  WHITE = first(709).unsafe_rawColors.WHITE;
+  BLACK = first(709).unsafe_rawColors.BLACK;
   let obj2 = sharedValue(4217);
   let fn = function o() {
     let obj = first;
@@ -158,7 +158,7 @@ export default function VoicePanelPIPPushToTalkOverlay() {
     withSpring: sharedValue(4927).withSpring,
     isPushingToTalk: first,
     PUSH_TO_TALK_PIP_PHYSICS,
-    getVoicePanelPIPBorderRadius: sharedValue(16668).getVoicePanelPIPBorderRadius,
+    getVoicePanelPIPBorderRadius: sharedValue(16903).getVoicePanelPIPBorderRadius,
     pipState: pIPState,
   };
   H.__closure = obj1;
@@ -169,8 +169,8 @@ export default function VoicePanelPIPPushToTalkOverlay() {
   obj2 = { children: null };
   const items3 = [tmp2.overlay, animatedStyle2];
   const memo = BLACK.useMemo(() => {
-    const Gesture = sharedValue(5652).Gesture;
-    const Gesture2 = sharedValue(5652).Gesture;
+    const Gesture = sharedValue(5660).Gesture;
+    const Gesture2 = sharedValue(5660).Gesture;
     const TapResult = Gesture2.Tap();
     const fn = function o(arg0, arg1) {
       if (arg1) {
@@ -183,7 +183,7 @@ export default function VoicePanelPIPPushToTalkOverlay() {
     fn.__workletHash = 13736796804739;
     fn.__initData = closure_1_16;
     const maxDistanceResult = Gesture2.Tap().maxDistance(30);
-    const Gesture3 = sharedValue(5652).Gesture;
+    const Gesture3 = sharedValue(5660).Gesture;
     const onEndResult = Gesture2.Tap().maxDistance(30).onEnd(fn);
     const PanResult = Gesture3.Pan();
     const result = Gesture3.Pan().maxPointers(1).shouldCancelWhenOutside(false);
@@ -211,12 +211,12 @@ export default function VoicePanelPIPPushToTalkOverlay() {
   const obj7 = sharedValue(4217);
   obj4[2] = callback(closure_10, {
     style: animatedStyle1,
-    size: sharedValue(1297).Icon.Sizes.SMALL_20,
-    source: first(16749),
+    size: sharedValue(1296).Icon.Sizes.SMALL_20,
+    source: first(16984),
     disableColor: true,
   });
   obj3[1] = callback(closure_9, obj4);
-  items4[1] = callback(sharedValue(5652).GestureDetector, obj3);
+  items4[1] = callback(sharedValue(5660).GestureDetector, obj3);
   obj2[0] = items4;
   return callback2(closure_7, obj2);
 }

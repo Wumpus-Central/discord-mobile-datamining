@@ -1,5 +1,5 @@
 // discord_app/modules/quests/native/VideoQuestModal/openVideoQuestModal.tsx
-import v1All from "../../../../../_runtime/00514_v1.js";
+import v1All from "../../../../../_runtime/00511_v1.js";
 import closure_4 from "../../QuestStore.tsx";
 
 const require = arg1;
@@ -19,7 +19,7 @@ export default function openVideoQuestModal(questId) {
       }
     }
     if (null == completedAt) {
-      sourceQuestContent(14719)();
+      sourceQuestContent(14945)();
     }
   }
   const v4Result = v1All.v4();
@@ -38,6 +38,6 @@ export default function openVideoQuestModal(questId) {
     sourceQuestContent,
   };
   const obj3 = sourceQuestContent(4723);
-  const tmp8 = questId(2009)(14726, dependencyMap.paths);
-  return obj3.pushLazy(tmp8, obj, questId(11111).getVideoQuestModalKey(questId));
+  const tmp8 = questId(2008)(14952, dependencyMap.paths);
+  return obj3.pushLazy(tmp8, obj, questId(11332).getVideoQuestModalKey(questId));
 }

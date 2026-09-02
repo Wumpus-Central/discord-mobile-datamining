@@ -44,7 +44,7 @@ function _discardDraftOrder() {
               ({ checkoutSucceeded: c0, order: c1 } = callback);
               c5 = 1;
               c6 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else {
             if (1 === tmp8) {

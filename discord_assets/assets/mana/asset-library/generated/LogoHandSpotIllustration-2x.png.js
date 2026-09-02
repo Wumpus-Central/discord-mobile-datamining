@@ -5,5 +5,5 @@ const result = set.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/LogoHandSpotIllustration-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/477aa949fa6bf319ba401bbf69dbefc1657808703e11d5d25c8f5037c52016c8.png";
-export const metadata = { fileBytes: 100796 };
+export default "https://cdn.discordapp.com/assets/content/cd1fb874af99da7a624495c59f69020ebaaad495de64c3714ae54c50bde19510.png";
+export const metadata = { fileBytes: 100848 };

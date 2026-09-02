@@ -275,7 +275,12 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
     constants = undefined;
     table = undefined;
     closure_15 = undefined;
-    obj = { orderId: "a", planId: "channel", planSelection: "a", giftInfo: "isArray" };
+    obj = {
+      orderId: "a",
+      planId: "<string:2466251611>",
+      planSelection: "<string:1207960145>",
+      giftInfo: "dechov\u00FD",
+    };
     obj = { premiumType: null, planInterval: null };
     obj[0] = first;
     obj[1] = first1;

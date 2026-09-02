@@ -134,9 +134,9 @@ const memoResult = importAllResult.memo(function EmbeddedActivityViewInner(portr
   dependencyMap = undefined;
   let setIsResetting;
   currentEmbeddedActivity = currentEmbeddedActivity.getCurrentEmbeddedActivity();
-  const tmp4 = currentEmbeddedActivity(9601)();
+  const tmp4 = currentEmbeddedActivity(9614)();
   dependencyMap = tmp4;
-  let obj = layoutMode(589);
+  let obj = layoutMode(586);
   const items = [currentEmbeddedActivity];
   const items1 = [tmp4];
   obj1 = importAllResult;
@@ -155,7 +155,7 @@ const memoResult = importAllResult.memo(function EmbeddedActivityViewInner(portr
   if (null == currentEmbeddedActivity) {
     obj = { instance_id: "" };
   } else {
-    let tmp5Result = tmp5(9606);
+    let tmp5Result = tmp5(9619);
     const discordEnvQueryParams = tmp5Result.getDiscordEnvQueryParams();
     const ui_density = discordEnvQueryParams.ui_density;
     const tmp38 = callback(discordEnvQueryParams, setIsResetting);
@@ -203,7 +203,7 @@ const memoResult = importAllResult.memo(function EmbeddedActivityViewInner(portr
       obj.guild_id = guild_id2;
     }
   }
-  currentEmbeddedActivity(9610)({ connectedEmbeddedActivity: currentEmbeddedActivity });
+  currentEmbeddedActivity(9623)({ connectedEmbeddedActivity: currentEmbeddedActivity });
   const items2 = [layoutMode, currentEmbeddedActivity];
   const layoutEffect = obj1.useLayoutEffect(() => {
     if (null != currentEmbeddedActivity) {
@@ -254,7 +254,7 @@ const memoResult = importAllResult.memo(function EmbeddedActivityViewInner(portr
     showLoadingIndicator: tmp22,
     setShowLoadingStateForLockingOrientation: tmp9,
     application: tmp4,
-    setOrientationLockState: tmp5(9603).setOrientationLockState,
+    setOrientationLockState: tmp5(9616).setOrientationLockState,
   };
   const tmp7 = callback2(importAllResult.useState(true), 2);
   setIsResetting = useBaseActivityView(obj1).setIsResetting;
@@ -306,19 +306,19 @@ const memoResult = importAllResult.memo(function EmbeddedActivityViewInner(portr
       obj3[6] = compositeInstanceId;
       obj3[7] = obj;
       obj3[8] = callback;
-      tmp5Result = tmp5(9619);
+      tmp5Result = tmp5(9632);
       obj3[9] = tmp5Result.allowPopups(tmp4);
       obj3[11] = layoutMode === constants.PIP || layoutMode === constants.GRID;
-      obj3[12] = tmp5(9453).EMBEDDED_ACTIVITY_WEB_VIEW_KEY;
+      obj3[12] = tmp5(9466).EMBEDDED_ACTIVITY_WEB_VIEW_KEY;
       if (tmp26) {
         landscapeSafeAreasConfig = portraitSafeAreasConfig.landscapeSafeAreasConfig;
       }
       obj3[13] = landscapeSafeAreasConfig;
       obj3[14] = !set.has(id);
-      obj2[3] = closure_13(tmp2(9611), obj3);
+      obj2[3] = closure_13(tmp2(9624), obj3);
       tmp28Result = tmp28(BaseActivityView, obj2);
       const tmp29 = BaseActivityView;
-      const tmp2Result = tmp2(9611);
+      const tmp2Result = tmp2(9624);
     }
   }
   return tmp28Result;

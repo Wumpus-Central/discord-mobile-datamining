@@ -1,6 +1,6 @@
 // discord_app/actions/GiftCodeActionCreators.tsx
 import prototypeDefault from "../errors/V6OrEarlierAPIError.tsx";
-import _modDef8478 from "../modules/coded_links/web/CodedLinkActionCreators.tsx";
+import _modDef8491 from "../modules/coded_links/web/CodedLinkActionCreators.tsx";
 import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../modules/applications/ApplicationStore.tsx";
 import closure_5 from "../modules/collectibles/CollectiblesCategoryStore.tsx";
@@ -69,7 +69,7 @@ function _resolveGiftCode() {
               application = undefined;
               c7 = 1;
               c8 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp9) {
             if (arg0 === 1) {
@@ -215,7 +215,7 @@ function _resolveGiftCode() {
 function reportUnexpectedGiftCodeError(status) {
   if (status instanceof prototypeDefault) {
     if (404 !== status.status) {
-      let tmpResult = tmp(1208);
+      let tmpResult = tmp(1205);
       let str = status.status;
       if (str == null) {
         str = "unknown";
@@ -229,7 +229,7 @@ function reportUnexpectedGiftCodeError(status) {
   } else {
     const _Error = Error;
     if (status instanceof Error) {
-      tmpResult = tmp(1208);
+      tmpResult = tmp(1205);
       tmpResult.captureException(status);
     }
   }
@@ -366,7 +366,7 @@ export default {
     })();
   },
   openNativeGiftCodeModal(arg0) {
-    _modDef8478.openNativeAppModal(arg0, constants.GIFT_CODE_BROWSER);
+    _modDef8491.openNativeAppModal(arg0, constants.GIFT_CODE_BROWSER);
   },
 };
 export { resolveGiftCode };

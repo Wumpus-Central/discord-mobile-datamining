@@ -1,6 +1,6 @@
 // discord_app/modules/self_mod/inappropriate_conversation/takeover_modal/showTakeoverModal.native.tsx
 import set from "../../../../../_runtime/00002_set.js";
-import asyncRequireImpl from "../../../../../_runtime/02009_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02008_asyncRequireImpl.js";
 import _modDef4723 from "../../../../actions/ModalActionCreators.tsx";
 import InappropriateConversationExperiment from "../SelfModInappropriateConversationExperiment.tsx";
 import LOCATION_CONTEXT_MOBILE from "../../Constants.tsx";
@@ -19,7 +19,7 @@ export const showTakeoverModal = function showTakeoverModal(arg0) {
     obj[1] = warningType;
     obj[2] = senderId;
     obj[3] = channelId;
-    _modDef4723.pushLazy(asyncRequireImpl(15322, dependencyMap.paths), obj, TAKEOVER_MODAL_KEY);
+    _modDef4723.pushLazy(asyncRequireImpl(15550, dependencyMap.paths), obj, TAKEOVER_MODAL_KEY);
     const obj2 = _modDef4723;
   }
 };

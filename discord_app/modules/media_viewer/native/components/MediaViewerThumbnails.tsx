@@ -79,7 +79,7 @@ let closure_12 = importAllResult.memo((onSelect) => {
     thumbnail = first;
   }
   obj[1] = thumbnail;
-  const items2 = [closure_8(onSelect(5493), obj), closure_8(ObscuredView, { source: first, index })];
+  const items2 = [closure_8(onSelect(5501), obj), closure_8(ObscuredView, { source: first, index })];
   obj[7] = items2;
   obj[1] = closure_9(closure_5, obj);
   return closure_8(onSelect(4217).View, obj);

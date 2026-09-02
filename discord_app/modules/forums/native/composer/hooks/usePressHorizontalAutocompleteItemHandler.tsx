@@ -17,14 +17,10 @@ export const usePressHorizontalAutocompleteItemHandler = function usePressHorizo
   const handleTextChange = draftContent.handleTextChange;
   const setSelection = draftContent.setSelection;
   const channel = draftContent.channel;
-  let items = [draftContent, handleTextChange, setSelection, channel];
+  const items = [draftContent, handleTextChange, setSelection, channel];
   return setSelection.useCallback((type, length2) => {
     const obj = draftContent(handleTextChange[2]);
-    const str = draftContent.substring(0, length2);
-    const items = [...str];
-    const reversed = items.reverse();
-    const joined = reversed.join("");
-    const substr = str.substring(0, str.length - joined.search(/\s|\r|\n/));
+    const substr = draftContent.substring(0, length2);
     handleTextChange(`${tmp2}${tmp} ${draftContent.substring(length2 + arg2.length + 1)}`);
     const length = substr + draftContent(handleTextChange[2]).getAutocompleteResultText(type, channel, channel).length;
     setSelection({ start: length, end: length });

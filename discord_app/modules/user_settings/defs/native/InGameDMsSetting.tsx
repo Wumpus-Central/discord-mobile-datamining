@@ -14,20 +14,20 @@ createToggle = {
   parent: require("MobileUserSettings").MobileUserSettings.CONNECTED_GAMES,
   useOptions: function useInGameDMsSettingOptions() {
     return React.useMemo(() => {
-      let obj = { value: callback(1306).SlayerSDKReceiveInGameDMs.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL, label: null };
-      const intl = callback(1236).intl;
-      obj[1] = intl.string(callback(1236).t.JIFnN9);
+      let obj = { value: callback(1305).SlayerSDKReceiveInGameDMs.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL, label: null };
+      const intl = callback(1233).intl;
+      obj[1] = intl.string(callback(1233).t.JIFnN9);
       const items = [obj, ,];
       obj = {
-        value: callback(1306).SlayerSDKReceiveInGameDMs.SLAYER_SDK_RECEIVE_IN_GAME_DMS_USERS_WITH_GAME,
+        value: callback(1305).SlayerSDKReceiveInGameDMs.SLAYER_SDK_RECEIVE_IN_GAME_DMS_USERS_WITH_GAME,
         label: null,
       };
-      const intl2 = callback(1236).intl;
-      obj[1] = intl2.string(callback(1236).t.rRdsk1);
+      const intl2 = callback(1233).intl;
+      obj[1] = intl2.string(callback(1233).t.rRdsk1);
       items[1] = obj;
-      obj = { value: callback(1306).SlayerSDKReceiveInGameDMs.SLAYER_SDK_RECEIVE_IN_GAME_DMS_NONE, label: null };
-      const intl3 = callback(1236).intl;
-      obj[1] = intl3.string(callback(1236).t.AolKwN);
+      obj = { value: callback(1305).SlayerSDKReceiveInGameDMs.SLAYER_SDK_RECEIVE_IN_GAME_DMS_NONE, label: null };
+      const intl3 = callback(1233).intl;
+      obj[1] = intl3.string(callback(1233).t.AolKwN);
       items[2] = obj;
       return items;
     }, []);

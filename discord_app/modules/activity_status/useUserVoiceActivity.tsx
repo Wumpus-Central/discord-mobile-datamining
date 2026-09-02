@@ -67,7 +67,7 @@ let closure_6 = {
   PermissionStore: importDefaultResult1,
   VoiceStateStore: importDefaultResult2,
 };
-let closure_7 = Object.freeze({ voiceState: "children", voiceChannel: "c" });
+let closure_7 = Object.freeze({ voiceState: "disabled", voiceChannel: "Date" });
 const result = require("set").fileFinishedImporting("modules/activity_status/useUserVoiceActivity.tsx");
 
 export default function useUserVoiceActivity(userId) {

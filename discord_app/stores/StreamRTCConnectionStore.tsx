@@ -315,7 +315,7 @@ if (importDefaultResult.isSupported()) {
   obj[9] = function handleStreamStop(appContext) {
     appContext = appContext.appContext;
     const streamKey = appContext.streamKey;
-    closure_11[streamKey] = { appContext, analyticsLocations: "Array" };
+    closure_11[streamKey] = { appContext, analyticsLocations: "r" };
     const item = applyDefault.forEach(closure_18, (analyticsContext) => {
       analyticsContext = analyticsContext.analyticsContext;
       analyticsContext.setActionContext(appContext);
@@ -345,8 +345,8 @@ if (importDefaultResult.isSupported()) {
         tmp11 = null == dependencyMap2[streamKey];
       }
       if (tmp11) {
-        tmp10[streamKey] = tmp4(7483).getStreamerApplication(decodeStreamKeyResult, closure_7);
-        const tmp4Result = tmp4(7483);
+        tmp10[streamKey] = tmp4(7493).getStreamerApplication(decodeStreamKeyResult, closure_7);
+        const tmp4Result = tmp4(7493);
       }
       obj = {
         streamRegion: null,
@@ -361,7 +361,7 @@ if (importDefaultResult.isSupported()) {
       obj[1] = dependencyMap[streamKey];
       let str2 = "unknown";
       if (null != dependencyMap2[streamKey]) {
-        if (!tmp4(500).isPlatformEmbedded) {
+        if (!tmp4(1234).isPlatformEmbedded) {
           let name;
           if (globalThis.platform != null) {
             name = globalThis.platform.name;

@@ -171,11 +171,11 @@ export default {
       if (null != closure_1_4) {
         obj1.message_id = closure_1_4;
       }
-      const HTTP = closure_1_0(530).HTTP;
+      const HTTP = closure_1_0(527).HTTP;
       const obj2 = { url: null, retries: 3, query: null, rejectWithError: null };
       obj2[0] = closure_1_5.USER_ACTIVITY_JOIN(closure_1_0, c1, dependencyMap);
       obj2[2] = obj1;
-      const obj4 = closure_1_0(530);
+      const obj4 = closure_1_0(527);
       obj2[3] = obj4.rejectWithMigratedError();
       closure_0 = yield HTTP.get(obj2);
       const obj = { secret: null, joinUrl: null };

@@ -258,10 +258,10 @@ let obj3 = {
   marginRight: -1 * QUEST_DOCK_EXPANDED_PADDING_HORIZONTAL,
 };
 const memoResult = importAllResult.memo(function QuestDockEnrolledBody() {
-  let obj = minExpandedContentHeight(14703);
-  const questCreative = obj.useQuestCreative();
+  let obj = minExpandedContentHeight(14929);
+  const questDockQuest = obj.useQuestDockQuest();
   minExpandedContentHeight = importAllResult.useContext(
-    minExpandedContentHeight(14697).QuestDockGestureContext,
+    minExpandedContentHeight(14923).QuestDockGestureContext,
   ).minExpandedContentHeight;
   const items = [minExpandedContentHeight];
   const items1 = [minExpandedContentHeight];
@@ -287,13 +287,13 @@ const memoResult = importAllResult.memo(function QuestDockEnrolledBody() {
   obj[1] = callback;
   const tmp2 = callback3();
   const tmp6 = View;
-  if (obj4.hasWatchVideoTasks(questCreative)) {
+  if (obj4.hasWatchVideoTasks(questDockQuest)) {
     obj1 = { quest: null };
-    obj1[0] = questCreative;
+    obj1[0] = questDockQuest;
     let tmp5Result = tmp5(EnrolledBodyWatchTask, obj1);
   } else {
     const obj2 = { quest: null };
-    obj2[0] = questCreative;
+    obj2[0] = questDockQuest;
     tmp5Result = tmp5(EnrolledBodyPlayStreamTask, obj2);
   }
   obj[2] = tmp5Result;

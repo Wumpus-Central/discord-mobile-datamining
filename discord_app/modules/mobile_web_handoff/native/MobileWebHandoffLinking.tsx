@@ -94,7 +94,7 @@ function _redirectWithHandoffToken() {
               uRL = undefined;
               uRL = 1;
               c6 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -224,7 +224,7 @@ function _redirectDeveloperPortalWithHandoffToken() {
               uRL = undefined;
               c5 = 1;
               c6 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {

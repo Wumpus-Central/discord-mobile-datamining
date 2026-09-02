@@ -58,7 +58,7 @@ function UserRowSubLabel(arg0) {
     const obj4 = { uri: null };
     obj4[0] = str;
     obj3[2] = obj4;
-    const items1 = [callback(tmp(1297).Icon, obj3, stateFromStores.id)];
+    const items1 = [callback(tmp(1296).Icon, obj3, stateFromStores.id)];
     const obj5 = { lineClamp: 1, variant: "text-xs/medium", color: "text-subtle", children: null };
     obj5[3] = stateFromStores.name;
     items1[1] = callback(tmp(4474).Text, obj5);
@@ -211,7 +211,7 @@ const memoResult = importAllResult.memo(function UserRow(type) {
   const memo = flag2.useMemo(() => {
     const items = [];
     if (NONE !== guildId.ACTIONS) {
-      let obj = { accessibilityActions: null, actions: "Array" };
+      let obj = { accessibilityActions: null, actions: "r" };
       obj[0] = items;
       return obj;
     } else {
@@ -393,17 +393,17 @@ const memoResult = importAllResult.memo(function UserRow(type) {
               const channel = closure_1_8.getChannel(arg0);
               if (null != channel) {
                 closure_1_1(closure_1_2[14])(channel.isPrivate(), "must be a DM");
-                const obj4 = closure_1_1(closure_1_2[15])(channel, false);
-                if (!obj4.inCall) {
-                  obj4.onPress();
+                const obj2 = closure_1_1(closure_1_2[15])(channel, false);
+                if (!obj2.inCall) {
+                  obj2.onPress();
                 }
-                const tmp4 = closure_1_1;
-                const tmp5 = closure_1_2;
-                const tmp6 = closure_1_1(closure_1_2[14]);
+                const tmp = closure_1_1;
+                const tmp2 = closure_1_2;
+                const tmp3 = closure_1_1(closure_1_2[14]);
                 const obj = { recipientIds: null };
                 obj[0] = current.id;
                 closure_1_1(closure_1_2[13]).openPrivateChannel(obj);
-                const tmp4Result = closure_1_1(closure_1_2[13]);
+                const tmpResult = closure_1_1(closure_1_2[13]);
               }
             });
         };
@@ -454,17 +454,17 @@ const memoResult = importAllResult.memo(function UserRow(type) {
           const channel = closure_1_8.getChannel(arg0);
           if (null != channel) {
             closure_1_1(closure_1_2[14])(channel.isPrivate(), "must be a DM");
-            const obj4 = closure_1_1(closure_1_2[15])(channel, false);
-            if (!obj4.inCall) {
-              obj4.onPress();
+            const obj2 = closure_1_1(closure_1_2[15])(channel, false);
+            if (!obj2.inCall) {
+              obj2.onPress();
             }
-            const tmp4 = closure_1_1;
-            const tmp5 = closure_1_2;
-            const tmp6 = closure_1_1(closure_1_2[14]);
+            const tmp = closure_1_1;
+            const tmp2 = closure_1_2;
+            const tmp3 = closure_1_1(closure_1_2[14]);
             const obj = { recipientIds: null };
             obj[0] = current.id;
             closure_1_1(closure_1_2[13]).openPrivateChannel(obj);
-            const tmp4Result = closure_1_1(closure_1_2[13]);
+            const tmpResult = closure_1_1(closure_1_2[13]);
           }
         });
     } else if (tmp.MESSAGE === actionName) {

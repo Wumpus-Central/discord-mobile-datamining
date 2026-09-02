@@ -245,7 +245,7 @@ function _finishRegisterWebAuthnCredential() {
               obj2[2] = dependencyMap;
               obj1[1] = obj2;
               const obj3 = { event: null };
-              obj3[0] = lib(663).NetworkActionNames.WEBAUTHN_REGISTER;
+              obj3[0] = lib(660).NetworkActionNames.WEBAUTHN_REGISTER;
               obj1[2] = obj3;
               c5 = 1;
               c6 = 1;
@@ -263,11 +263,11 @@ function _finishRegisterWebAuthnCredential() {
             return obj;
           } else {
             lib = arg1;
-            obj4 = callback(709);
+            obj4 = callback(706);
             const obj5 = { type: "AUTHENTICATOR_CREATE", credential: null };
             obj5[1] = lib.body;
             obj4.dispatch(obj5);
-            let obj6 = callback(709);
+            let obj6 = callback(706);
             obj6 = { type: "MFA_ENABLE_SUCCESS", codes: null };
             obj6[1] = lib.body.backup_codes;
             obj6.dispatch(obj6);

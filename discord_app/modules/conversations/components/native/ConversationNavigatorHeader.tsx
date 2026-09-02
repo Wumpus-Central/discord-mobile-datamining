@@ -34,14 +34,14 @@ export default function ConversationNavigatorHeader(channelId) {
   if (flag === undefined) {
     flag = false;
   }
-  let obj = channelId(589);
+  let obj = channelId(586);
   const items = [closure_4];
   const items1 = [channelId];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getChannel(channelId), items1);
   const tmp3 = computeChannelNameDefault(stateFromStores, true);
   obj = { style: callback(flag).container, children: null };
   obj = { title: channelId.title, subtitle: tmp3, variant: "heading-lg/semibold", subtitleColor: "text-muted" };
-  obj[1] = jsx(channelId(7607).GenericHeaderTitle, {
+  obj[1] = jsx(channelId(7617).GenericHeaderTitle, {
     title: channelId.title,
     subtitle: tmp3,
     variant: "heading-lg/semibold",

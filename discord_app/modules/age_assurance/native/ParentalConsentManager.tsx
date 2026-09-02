@@ -229,11 +229,11 @@ prototype["collectAgeSignal"] = function collectAgeSignal() {
         } else if (1 === tmp7) {
           c3 = 0;
           callback = dependencyMap;
-          let obj2 = callback2(1208);
+          let obj2 = callback2(1205);
           obj2 = { tags: null };
           obj2[0] = { source: "parental_consent_manager", step: "collect_age_signal" };
           obj2.captureException(callback, obj2);
-          let obj4 = callback(500);
+          let obj4 = callback(1234);
           let str = "android";
           if (obj4.isIOS()) {
             str = "ios";

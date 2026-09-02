@@ -390,7 +390,7 @@ export default function PendingRequestList(arg0) {
   const obj2 = { style: tmp.dividerRow, children: null };
   const items1 = [callback(c5, { style: tmp.dividerLine }), ,];
   const obj4 = { style: tmp.dividerLabel, variant: "text-sm/medium", color: "text-muted", children: null };
-  let intl = tmp5(1236).intl;
+  let intl = tmp5(1233).intl;
   obj4[3] = intl.string(messagesProxyDefault["/SbB94"]);
   items1[1] = callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj4);
   items1[2] = callback(c5, { style: tmp.dividerLine });
@@ -408,18 +408,18 @@ export default function PendingRequestList(arg0) {
   ];
   const obj8 = { style: tmp.details, children: null };
   const obj9 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl2 = tmp5(1236).intl;
+  const intl2 = tmp5(1233).intl;
   obj9[2] = intl2.string(messagesProxyDefault.z9gkwZ);
   const items4 = [callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj9)];
   const obj10 = { variant: "text-xs/medium", color: "text-default", children: null };
-  const intl3 = tmp5(1236).intl;
+  const intl3 = tmp5(1233).intl;
   obj10[2] = intl3.string(messagesProxyDefault["9t4+vC"]);
   items4[1] = callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj10);
   obj8[1] = items4;
   items3[1] = closure_8(c5, obj8);
   const obj11 = { style: tmp.actions, children: null };
   const obj12 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
-  const intl4 = tmp5(1236).intl;
+  const intl4 = tmp5(1233).intl;
   obj12[1] = intl4.string(require("../../../../intl/index.native.tsx").t.Ej3B3Y);
   obj12[2] = onShare;
   const items5 = [,];
@@ -433,7 +433,7 @@ export default function PendingRequestList(arg0) {
     callback(require("../../../../design/void/Pressables/native/Pressables.tsx").PressableOpacity, obj12),
   ];
   const obj14 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
-  const intl5 = tmp5(1236).intl;
+  const intl5 = tmp5(1233).intl;
   obj14[1] = intl5.string(messagesProxyDefault.z9gkwZ);
   obj14[2] = onInviteAnotherGuardian;
   const items7 = [,];

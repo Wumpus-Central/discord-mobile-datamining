@@ -189,7 +189,7 @@ function _redeemVirtualCurrencyForSKU() {
                 let billingError;
                 c5 = 1;
                 logger = 1;
-                return { value: "PX_16", done: null };
+                return { value: "PX_16", done: true };
               }
             } else if (1 === tmp7) {
               if (arg0 === 1) {
@@ -205,7 +205,7 @@ function _redeemVirtualCurrencyForSKU() {
                 throwTypeErrorResult = dependencyMap;
                 throwTypeErrorResult = callback2;
                 throwTypeErrorResult = dependencyMap;
-                throwTypeErrorResult = callback2(709).wait(() => {
+                throwTypeErrorResult = callback2(706).wait(() => {
                   let obj = _undefined(_undefined2[4]);
                   obj = { type: "VIRTUAL_CURRENCY_REDEEM_START", skuId: c0 };
                   obj.dispatch(obj);
@@ -221,7 +221,7 @@ function _redeemVirtualCurrencyForSKU() {
                 }
                 let result = null != applicationId;
                 if (result) {
-                  let obj8 = callback(8497);
+                  let obj8 = callback(8510);
                   result = obj8.isTestModeForApplication(applicationId);
                 }
                 c8 = result;
@@ -230,7 +230,7 @@ function _redeemVirtualCurrencyForSKU() {
                 if (c8) {
                   obj2.test_mode = true;
                 }
-                const HTTP = callback(530).HTTP;
+                const HTTP = callback(527).HTTP;
                 let obj3 = { url: null, body: null, rejectWithError: false };
                 obj3[0] = c5.VIRTUAL_CURRENCY_SKU_REDEEM(callback);
                 obj3[1] = obj2;
@@ -248,7 +248,7 @@ function _redeemVirtualCurrencyForSKU() {
               } else {
                 billingError = new callback(4376).BillingError(closure_14);
               }
-              let obj6 = callback2(709);
+              let obj6 = callback2(706);
               const obj5 = { type: "VIRTUAL_CURRENCY_REDEEM_FAIL", skuId: null, error: null };
               obj5[1] = callback;
               obj5[2] = billingError;
@@ -279,7 +279,7 @@ function _redeemVirtualCurrencyForSKU() {
                 const _Array = Array;
                 throwTypeErrorResult = body;
                 if (Array.isArray(body)) {
-                  obj = callback2(709);
+                  obj = callback2(706);
                   const obj7 = { type: "VIRTUAL_CURRENCY_REDEEM_SUCCESS", skuId: null, entitlements: null };
                   obj7[1] = callback;
                   obj7[2] = body;
@@ -301,7 +301,7 @@ function _redeemVirtualCurrencyForSKU() {
               const _Error = Error;
               error = new Error(c11, body);
               logger.error(c11, body);
-              obj3 = callback2(1208);
+              obj3 = callback2(1205);
               const obj9 = { tags: null };
               obj9[0] = { app_context: "virtual_currency" };
               obj3.captureException(error, obj9);

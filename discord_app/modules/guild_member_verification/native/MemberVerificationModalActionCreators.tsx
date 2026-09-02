@@ -2,7 +2,7 @@
 import set from "../../../../_runtime/00002_set.js";
 import ME from "../../../Constants.tsx";
 import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/02009_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02008_asyncRequireImpl.js";
 import _modDef4723 from "../../../actions/ModalActionCreators.tsx";
 import _fetchVerificationFormDefault from "../MemberVerificationActionCreators.tsx";
 import items from "../MemberVerificationConstants.tsx";
@@ -21,7 +21,7 @@ export default {
     expandEventPropertiesDefault.track(AnalyticEvents.OPEN_MODAL, obj);
     const obj2 = expandEventPropertiesDefault;
     obj = { guildId, onClose: connect };
-    _modDef4723.pushLazy(asyncRequireImpl(7648, dependencyMap.paths), obj, closure_4);
+    _modDef4723.pushLazy(asyncRequireImpl(7657, dependencyMap.paths), obj, closure_4);
   },
   closeMemberVerificationModal() {
     let flag = arg0;

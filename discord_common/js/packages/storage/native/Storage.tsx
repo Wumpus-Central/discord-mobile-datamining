@@ -92,10 +92,10 @@ prototype["parse"] = function parse(arg0) {
   let self = this;
   self = this;
   [tmp, tmp2] = arg0;
-  self(598)(tmp2, (rawData) => {
+  self(595)(tmp2, (rawData) => {
     self.storage[arg1] = { parsed: false, rawData };
   });
-  self(598)(tmp, (rawData) => {
+  self(595)(tmp, (rawData) => {
     _self.storage[arg1] = { parsed: false, rawData };
     const secureKeys = _self.secureKeys;
     if (secureKeys.has(arg1)) {

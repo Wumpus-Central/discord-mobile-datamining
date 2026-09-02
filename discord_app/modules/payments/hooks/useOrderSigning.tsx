@@ -99,7 +99,7 @@ export const useOrderSigning = function useOrderSigning(order) {
                   status = undefined;
                   v02 = 1;
                   v03 = 1;
-                  return { value: "PX_16", done: null };
+                  return { value: "PX_16", done: true };
                 }
               } else if (1 === tmp7) {
                 if (arg0 === 1) {

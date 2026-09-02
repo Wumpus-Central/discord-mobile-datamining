@@ -72,16 +72,16 @@ export default function GiftCardMobileConsumptionActionSheet(markAsDismissed) {
   const items3 = [
     callback(View, {
       style: tmp.illustration,
-      children: callback(markAsDismissed(6256).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 }),
+      children: callback(markAsDismissed(6265).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 }),
     }),
     ,
   ];
   const obj2 = { variant: "text-md/medium", color: "text-default", style: tmp.body, children: null };
-  const intl = markAsDismissed(1236).intl;
+  const intl = markAsDismissed(1233).intl;
   obj2[3] = intl.string(messagesProxyDefault.V3DI1E);
   items3[1] = callback(markAsDismissed(4474).Text, obj2);
   const obj3 = { size: "lg", variant: "secondary", grow: true, text: null, onPress: null };
-  const intl2 = markAsDismissed(1236).intl;
+  const intl2 = markAsDismissed(1233).intl;
   obj3[3] = intl2.string(messagesProxyDefault.YZePWx);
   obj3[4] = function onPress() {
     return callback(closure_1_5.USER_DISMISS);
@@ -90,5 +90,5 @@ export default function GiftCardMobileConsumptionActionSheet(markAsDismissed) {
   obj[1] = items3;
   obj[1] = callback2(markAsDismissed(4926).Stack, obj);
   obj[3] = callback(View, obj);
-  return callback(markAsDismissed(5622).BottomSheet, obj);
+  return callback(markAsDismissed(5630).BottomSheet, obj);
 }

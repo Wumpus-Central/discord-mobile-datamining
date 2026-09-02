@@ -334,8 +334,8 @@ prototype["_trackWithMetadata"] = function _trackWithMetadata(CHANNEL_OPENED, fi
       obj = {};
       const merged = Object.assign(obj);
       const merged1 = Object.assign(self.collectDefaultAnalyticsMetadata(tmp, tmp2));
-      tmp3(698).track(CHANNEL_OPENED, obj);
-      const tmp3Result = tmp3(698);
+      tmp3(695).track(CHANNEL_OPENED, obj);
+      const tmp3Result = tmp3(695);
     }
     obj2 = expandEventPropertiesDefault;
     tmp3 = importDefault;

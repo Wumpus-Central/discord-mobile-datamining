@@ -71,8 +71,8 @@ export const getLanguageOptions = function getLanguageOptions() {
     if ("en-US" === code.code) {
       const obj = {};
       const merged = Object.assign(code);
-      const intl = callback(1236).intl;
-      obj.name = intl.string(callback(1236).t.LQLMGP);
+      const intl = callback(1233).intl;
+      obj.name = intl.string(callback(1233).t.LQLMGP);
       tmp = obj;
     }
     return tmp;

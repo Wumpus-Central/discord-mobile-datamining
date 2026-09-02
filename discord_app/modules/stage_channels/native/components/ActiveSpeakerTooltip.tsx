@@ -47,7 +47,7 @@ let obj2 = { lineHeight: 18, color: ThemesDefault.colors.TEXT_SUBTLE };
 const memoResult = importAllResult.memo((channel) => {
   channel = channel.channel;
   const tmp = callback5();
-  let obj = channel(589);
+  let obj = channel(586);
   let items = [closure_5];
   const items1 = [channel.id];
   const first = callback(
@@ -59,7 +59,7 @@ const memoResult = importAllResult.memo((channel) => {
         return items;
       },
       items1,
-      channel(5375).isVersionEqual,
+      channel(5383).isVersionEqual,
     ),
     1,
   )[0];
@@ -85,15 +85,15 @@ const memoResult = importAllResult.memo((channel) => {
       obj3[0] = tmp.participantNameplateContainer;
       const obj4 = { style: null, variant: "text-xs/medium", color: "text-default", children: null };
       obj4[0] = tmp.participantNameplateSpeakingText;
-      const intl = tmp2(1236).intl;
+      const intl = tmp2(1233).intl;
       const obj5 = { count: null };
       obj5[0] = first.length;
-      obj4[3] = intl.format(tmp2(1236).t["+dia6l"], obj5);
+      obj4[3] = intl.format(tmp2(1233).t["+dia6l"], obj5);
       obj3[1] = callback3(tmp2(4474).Text, obj4);
       items2[1] = callback3(View, obj3);
       obj[1] = items2;
       obj[3] = callback4(View, obj);
-      tmp5 = callback3(tmp2(5068).PressableOpacity, obj);
+      tmp5 = callback3(tmp2(5076).PressableOpacity, obj);
       const tmp10 = UserSummaryItemDefault;
     }
   }

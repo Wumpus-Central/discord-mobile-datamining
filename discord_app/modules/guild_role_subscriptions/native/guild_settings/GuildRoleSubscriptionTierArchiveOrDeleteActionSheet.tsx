@@ -8,7 +8,7 @@ import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.nativ
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import Button2 from "../../../../design/components/Button/native/Button.native.tsx";
 import Background from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/05624_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/05632_BottomSheetModal.js";
 import useArchiveOrDeleteDefault from "useArchiveOrDelete.tsx";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -62,7 +62,7 @@ export default function GuildRoleSubscriptionTierArchiveOrDeleteActionSheet(grou
     children: null,
   };
   const obj3 = { variant: "text-sm/semibold", color: "interactive-text-active", children: null };
-  const intl = tmp6(1236).intl;
+  const intl = tmp6(1233).intl;
   obj3[2] = intl.string(getSystemLocale.t["ETE/oC"]);
   obj2[3] = callback(Text.Text, obj3);
   items[6] = callback(closure_3, obj2);

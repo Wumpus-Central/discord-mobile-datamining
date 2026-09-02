@@ -182,14 +182,14 @@ const prototype = function SearchQueryStateManager(type) {
       obj = { type: null, searchTokenType: null, text: null, channelId: null, location: null };
       obj[0] = constants.COMPLETE;
       obj[1] = constants2.FILTER_IN;
-      const intl = obj(1236).intl;
-      const stringResult = intl.string(obj(1236).t.WNpFHa);
+      const intl = obj(1233).intl;
+      const stringResult = intl.string(obj(1233).t.WNpFHa);
       let _HermesInternal = HermesInternal;
-      obj[2] = "" + stringResult + ": " + obj(11907).quoteChannelName(channelName);
+      obj[2] = "" + stringResult + ": " + obj(12130).quoteChannelName(channelName);
       obj[3] = type.channelId;
       obj[4] = SearchFilterAddLocations.CLIENT_AUTO_ADD;
       items1 = [obj];
-      const obj4 = obj(11907);
+      const obj4 = obj(12130);
     }
     items = items1;
   }

@@ -40,7 +40,7 @@ function SettingsAppearanceChannelListPreviewNitroUpsellComponent(theme) {
   fn.__workletHash = 16911565077998;
   fn.__initData = closure_18;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  analyticsLocations = analyticsLocations(5953)(analyticsLocations(5973).CLIENT_THEMES_EDITOR).analyticsLocations;
+  analyticsLocations = analyticsLocations(5961)(analyticsLocations(5981).CLIENT_THEMES_EDITOR).analyticsLocations;
   const items = [analyticsLocations];
   obj = { style: tmp.nitroUpsell, children: null };
   const callback = importAllResult.useCallback(() => {
@@ -62,9 +62,9 @@ function SettingsAppearanceChannelListPreviewNitroUpsellComponent(theme) {
     }),
   ];
   const obj2 = { text: null, icon: null, variant: "active", onPress: null, size: "md" };
-  const intl = theme(1236).intl;
-  obj2[0] = intl.string(theme(1236).t.pj0XBN);
-  obj2[1] = callback(theme(1297).NitroWheel, { style: tmp.nitroWheelIcon });
+  const intl = theme(1233).intl;
+  obj2[0] = intl.string(theme(1233).t.pj0XBN);
+  obj2[1] = callback(theme(1296).NitroWheel, { style: tmp.nitroWheelIcon });
   obj2[3] = callback;
   items1[1] = callback(theme(4928).Button, obj2);
   obj[1] = items1;

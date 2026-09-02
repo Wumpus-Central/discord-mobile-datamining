@@ -1,6 +1,6 @@
 // discord_app/modules/quests/native/VideoQuestModal/hooks/useVideoExternallyPaused.tsx
-import set from "../../../../../utils/PlatformUtils.tsx";
 import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import set from "../../../../../utils/PlatformUtils.tsx";
 import coerceMainRoute from "../../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import useAlertStore from "../../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import updateContextMenuState from "../../../../../design/components/ContextMenu/native/ContextMenuState.native.tsx";

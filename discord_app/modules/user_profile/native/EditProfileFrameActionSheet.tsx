@@ -100,7 +100,7 @@ function ProfileFrameSectionPreview(arg0) {
   let purchase;
   ({ previewSkuId, user, guildId } = arg0);
   const tmp = callback3();
-  const tmp2 = purchase(8082)(previewSkuId);
+  const tmp2 = purchase(8090)(previewSkuId);
   const product = tmp2.product;
   c0 = product;
   purchase = tmp2.purchase;
@@ -124,7 +124,7 @@ function ProfileFrameSectionPreview(arg0) {
     }
     return tmp3;
   }, items);
-  const items1 = [callback(purchase(10857), { user, guildId, profileFrame: memo, maxWidth: 280 })];
+  const items1 = [callback(purchase(11077), { user, guildId, profileFrame: memo, maxWidth: 280 })];
   obj = { style: tmp.previewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: null };
   const items2 = ["" + tmp.previewGradient.color + "00", tmp.previewGradient.color];
   obj[3] = items2;

@@ -1,5 +1,5 @@
 // discord_app/modules/activities/native/EmbeddedActivitiesNativeManager.tsx
-import v1 from "../../../../_runtime/00514_v1.js";
+import v1 from "../../../../_runtime/00511_v1.js";
 import dispatcherDefault from "../../../Dispatcher.tsx";
 import ComponentDispatcher from "../../../utils/ComponentDispatchUtils.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
@@ -10,7 +10,7 @@ import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen
 import getShelfItemTrackingPropertiesDefault from "../EmbeddedActivitiesManager.tsx";
 import NativeModulesDefault from "../../device/ThermalUtils.native.tsx";
 import _runPrimaryAppCommandOrJoinEmbeddedActivity from "../EmbeddedActivitiesActionCreators.tsx";
-import registerAssetDefault from "../../../../_runtime/09518_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/09531_registerAsset.js";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../stores/ChannelStore.tsx";
 import closure_5 from "../../../stores/RTCConnectionStore.tsx";
@@ -18,7 +18,7 @@ import closure_6 from "../EmbeddedActivitiesStore.tsx";
 import { DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY as closure_7 } from "../Constants.tsx";
 import ME from "../../../Constants.tsx";
 import { TransportTypes } from "../../rpc/Constants.tsx";
-import WebView from "../../../../_runtime/08593_WebView.js";
+import WebView from "../../../../_runtime/08608_WebView.js";
 import set from "../../../utils/PlatformUtils.tsx";
 
 require = arg1;

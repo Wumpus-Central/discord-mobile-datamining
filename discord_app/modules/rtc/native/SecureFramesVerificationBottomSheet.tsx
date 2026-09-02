@@ -36,7 +36,7 @@ export default function SecureFramesVerificationBottomSheet(onShareClick) {
   let readableSecureFramesFingerprint;
   ({ title, subtitle, footer, epochAuthenticator } = onShareClick);
   const tmp = callback3();
-  let obj = onShareClick(9847);
+  let obj = onShareClick(9869);
   obj = { fingerprintBase64: epochAuthenticator, chunkSize: closure_5, desiredLength: closure_7 };
   readableSecureFramesFingerprint = obj.useReadableSecureFramesFingerprint(obj);
   const items = [readableSecureFramesFingerprint, onShareClick];
@@ -54,7 +54,7 @@ export default function SecureFramesVerificationBottomSheet(onShareClick) {
   obj = { startExpanded: true, header: null, children: null };
   obj1 = {
     title: null,
-    leading: callback(onShareClick(5990).ActionSheetCloseButton, { onPress: callback1 }),
+    leading: callback(onShareClick(5998).ActionSheetCloseButton, { onPress: callback1 }),
     trailing: null,
   };
   let obj2 = {
@@ -66,21 +66,21 @@ export default function SecureFramesVerificationBottomSheet(onShareClick) {
     accessibilityLabel: null,
     children: null,
   };
-  const intl = onShareClick(1236).intl;
-  obj2[5] = intl.string(onShareClick(1236).t.RDE0Sc);
+  const intl = onShareClick(1233).intl;
+  obj2[5] = intl.string(onShareClick(1233).t.RDE0Sc);
   const obj3 = { variant: "text-md/semibold", color: "text-brand", children: null };
-  const intl2 = onShareClick(1236).intl;
-  obj3[2] = intl2.string(onShareClick(1236).t.RDE0Sc);
+  const intl2 = onShareClick(1233).intl;
+  obj3[2] = intl2.string(onShareClick(1233).t.RDE0Sc);
   obj2[6] = callback(onShareClick(4474).Text, obj3);
-  obj1[2] = callback(onShareClick(5068).PressableOpacity, obj2);
-  obj[1] = callback(onShareClick(5621).BottomSheetTitleHeader, obj1);
+  obj1[2] = callback(onShareClick(5076).PressableOpacity, obj2);
+  obj[1] = callback(onShareClick(5629).BottomSheetTitleHeader, obj1);
   const obj4 = { style: tmp.content, children: null };
   const obj5 = { spacing: 8, justify: "center", align: "center", direction: "vertical", children: null };
   const obj6 = {
     style: tmp.iconContainer,
-    children: callback(onShareClick(5044).LockIcon, {
+    children: callback(onShareClick(5048).LockIcon, {
       style: tmp.icon,
-      color: readableSecureFramesFingerprint(712).colors.TEXT_SUBTLE,
+      color: readableSecureFramesFingerprint(709).colors.TEXT_SUBTLE,
     }),
   };
   const items1 = [
@@ -100,24 +100,24 @@ export default function SecureFramesVerificationBottomSheet(onShareClick) {
   obj5[4] = items1;
   const items2 = [callback2(onShareClick(4926).Stack, obj5), ,];
   const obj9 = { title: null, trailing: null, chunks: null, columns: null };
-  const obj7 = { style: tmp.icon, color: readableSecureFramesFingerprint(712).colors.TEXT_SUBTLE };
+  const obj7 = { style: tmp.icon, color: readableSecureFramesFingerprint(709).colors.TEXT_SUBTLE };
   const obj8 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: subtitle };
   const tmp10 = readableSecureFramesFingerprint;
   const tmp2 = onShareClick;
   const tmp8 = callback2;
   const tmp9 = View;
-  const intl3 = onShareClick(1236).intl;
-  obj9[0] = intl3.string(onShareClick(1236).t.cgBTyO);
+  const intl3 = onShareClick(1233).intl;
+  obj9[0] = intl3.string(onShareClick(1233).t.cgBTyO);
   let tmp7Result = null != readableSecureFramesFingerprint;
   if (tmp7Result) {
     const obj10 = { chunks: null };
     obj10[0] = readableSecureFramesFingerprint;
-    tmp7Result = tmp7(tmp10(9857), obj10);
+    tmp7Result = tmp7(tmp10(9879), obj10);
   }
   obj9[1] = tmp7Result;
   obj9[2] = readableSecureFramesFingerprint;
   obj9[3] = closure_6;
-  items2[1] = callback(readableSecureFramesFingerprint(9854), obj9);
+  items2[1] = callback(readableSecureFramesFingerprint(9876), obj9);
   items2[2] = callback(tmp2(4474).Text, {
     style: tmp.footer,
     variant: "text-xs/normal",
@@ -126,5 +126,5 @@ export default function SecureFramesVerificationBottomSheet(onShareClick) {
   });
   obj4[1] = items2;
   obj[2] = tmp8(tmp9, obj4);
-  return callback(onShareClick(5622).BottomSheet, obj);
+  return callback(onShareClick(5630).BottomSheet, obj);
 }

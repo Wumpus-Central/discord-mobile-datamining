@@ -1,6 +1,6 @@
 // discord_app/modules/share/native/SharePreparingModal.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef8640 from "../../media_viewer/native/components/overlay/MediaViewerOverlayButton.tsx";
+import _modDef8655 from "../../media_viewer/native/components/overlay/MediaViewerOverlayButton.tsx";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
@@ -30,17 +30,17 @@ export default function SharePreparingModal(onCancel) {
   obj = { style: tmp.topBar, pointerEvents: "box-none", children: null };
   obj = { style: tmp.topBarEnd, children: null };
   obj1 = { accessibilityLabel: null, icon: null, onPress: null };
-  const intl = onCancel(1236).intl;
-  obj1[0] = intl.string(onCancel(1236).t.cpT0Cq);
-  obj1[1] = callback(onCancel(5551).XSmallIcon, { size: "md", color: "interactive-text-active" });
+  const intl = onCancel(1233).intl;
+  obj1[0] = intl.string(onCancel(1233).t.cpT0Cq);
+  obj1[1] = callback(onCancel(5559).XSmallIcon, { size: "md", color: "interactive-text-active" });
   obj1[2] = onCancel;
-  obj[1] = callback(_modDef8640, obj1);
-  obj[2] = callback(onCancel(8639).MediaModalOverlayHeaderWrapper, obj);
+  obj[1] = callback(_modDef8655, obj1);
+  obj[2] = callback(onCancel(8654).MediaModalOverlayHeaderWrapper, obj);
   items1[1] = callback(closure_4, obj);
-  items1[2] = callback(onCancel(6048).ActivityIndicator, {});
+  items1[2] = callback(onCancel(6056).ActivityIndicator, {});
   const obj2 = { variant: "text-sm/medium", color: "text-overlay-light", children: null };
-  const intl2 = onCancel(1236).intl;
-  obj2[2] = intl2.string(onCancel(1236).t.DwTQE5);
+  const intl2 = onCancel(1233).intl;
+  obj2[2] = intl2.string(onCancel(1233).t.DwTQE5);
   items1[3] = callback(onCancel(4474).Text, obj2);
   obj[1] = items1;
   return callback2(closure_4, obj);

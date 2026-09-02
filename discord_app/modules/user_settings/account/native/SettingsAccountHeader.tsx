@@ -72,7 +72,7 @@ const memoResult = importAllResult.memo(() => {
       ({ button: obj6[0], button: obj6[1] } = bannerText);
       obj1[2] = callback;
       obj[4] = callback(tmp2(4928).Button, obj1);
-      tmp14 = callback(tmp2(5599).TableRow, obj);
+      tmp14 = callback(tmp2(5607).TableRow, obj);
     }
     items2[1] = tmp14;
     obj[1] = items2;

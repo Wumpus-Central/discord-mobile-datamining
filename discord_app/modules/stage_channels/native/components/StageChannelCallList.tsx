@@ -325,10 +325,10 @@ export default function StageChannelCallList(channel) {
   channel = channel.channel;
   let width;
   let isScreenLandscape;
-  obj = width(10154);
+  obj = width(10176);
   const throttleDurationForChannel = obj.useThrottleDurationForChannel(channel.id);
-  width = isScreenLandscape(1493)().width;
-  isScreenLandscape = width(5071).useIsScreenLandscape();
+  width = isScreenLandscape(1492)().width;
+  isScreenLandscape = width(5079).useIsScreenLandscape();
   const items = [width, isScreenLandscape];
   const memo = importAllResult.useMemo(() => {
     let num = 3;
@@ -342,9 +342,9 @@ export default function StageChannelCallList(channel) {
     obj[width(closure_1_2[7]).StageChannelParticipantNamedIndex.AUDIENCE] = closure_1_7;
     return obj;
   }, items);
-  const obj2 = width(5071);
+  const obj2 = width(5079);
   const tmp4 = callback(
-    width(10154).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true),
+    width(10176).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true),
     2,
   );
   obj = { channel, listSections: tmp4[0], rowsBySection: tmp4[1] };

@@ -7,7 +7,7 @@ require = arg1;
 function handleDismissWithDismissed() {
   let DISMISSED = AppLauncherEntrypoint.AppLauncherCloseReason.DISMISSED;
   if (DISMISSED === undefined) {
-    DISMISSED = tmp(8435).AppLauncherCloseReason.DISMISSED;
+    DISMISSED = tmp(8444).AppLauncherCloseReason.DISMISSED;
   }
   obj.show = false;
   obj.entrypoint = AppLauncherEntrypoint.AppLauncherEntrypoint.NONE;
@@ -18,7 +18,7 @@ function handleDismissWithDismissed() {
 function handleSetActiveCommand() {
   let DISMISSED = AppLauncherEntrypoint.AppLauncherCloseReason.COMMAND;
   if (DISMISSED === undefined) {
-    DISMISSED = tmp(8435).AppLauncherCloseReason.DISMISSED;
+    DISMISSED = tmp(8444).AppLauncherCloseReason.DISMISSED;
   }
   obj.show = false;
   obj.entrypoint = AppLauncherEntrypoint.AppLauncherEntrypoint.NONE;

@@ -22,7 +22,7 @@ export default function AppLauncherUserOption(option) {
   let callback2;
   ({ style, autoFocus, hasError } = option);
   const guild_id = channel.guild_id;
-  let obj = option(589);
+  let obj = option(586);
   const items = [onPress];
   const stateFromStores = obj.useStateFromStores(items, () => onPress.useReducedMotion);
   const tmp = callback2();
@@ -102,21 +102,21 @@ export default function AppLauncherUserOption(option) {
     obj[0] = tmp8;
     obj[1] = guild_id;
     obj[2] = !stateFromStores;
-    obj[3] = tmp2(1297).AvatarSizes.REFRESH_MEDIUM_32;
-    let tmp9Result = tmp9(tmp2(1297).Avatar, obj);
+    obj[3] = tmp2(1296).AvatarSizes.REFRESH_MEDIUM_32;
+    let tmp9Result = tmp9(tmp2(1296).Avatar, obj);
   } else {
     obj1 = { icon: null, wrapperStyle: null };
-    obj1[0] = tmp9(tmp2(10655).UserCircleIcon, { size: "sm", color: "interactive-text-default" });
+    obj1[0] = tmp9(tmp2(10876).UserCircleIcon, { size: "sm", color: "interactive-text-default" });
     obj1[1] = tmp.iconWrapper;
-    tmp9Result = tmp9(tmp10(11749), obj1);
-    const tmp10Result = tmp10(11749);
+    tmp9Result = tmp9(tmp10(11972), obj1);
+    const tmp10Result = tmp10(11972);
   }
   obj[5] = tmp9Result;
   if (null != tmp8) {
     let obj2 = { guildId: null, user: null };
     obj2[0] = guild_id;
     obj2[1] = tmp8;
-    tmp9Result = tmp9(tmp10(11752), obj2);
+    tmp9Result = tmp9(tmp10(11975), obj2);
   } else {
     tmp9Result = null;
     if (null != tmp6) {

@@ -1,10 +1,10 @@
 // discord_app/modules/payments/utils/BillingStandaloneUtils.tsx
 import set from "../../../../_runtime/00002_set.js";
-import v1 from "../../../../_runtime/00514_v1.js";
+import v1 from "../../../../_runtime/00511_v1.js";
 import sendRequest from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import isDiscordProxiedAssetUrlDefault from "../../../utils/URLUtils.tsx";
 import ME from "../../../Constants.tsx";
-import { v1 } from "../../../../_runtime/00514_v1.js";
+import { v1 } from "../../../../_runtime/00511_v1.js";
 
 function goToStandalonePremiumCheckout(planId, arg1, arg2) {
   const result = closure_4.BILLING_STANDALONE_CHECKOUT_PAGE(
@@ -44,7 +44,7 @@ export const goToBillingStandalonePageWithHandoff = function goToBillingStandalo
   dependencyMap = arg2;
   let obj = isDiscordProxiedAssetUrlDefault;
   const uRL = new URL(obj.makeUrl(closure_4.BILLING_LOGIN_HANDOFF, false));
-  const v4Result = require("../../../../_runtime/00514_v1.js").v4();
+  const v4Result = require("../../../../_runtime/00511_v1.js").v4();
   const searchParams = uRL.searchParams;
   searchParams.append("handoff_key", v4Result);
   const searchParams2 = uRL.searchParams;

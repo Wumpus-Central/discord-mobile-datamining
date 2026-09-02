@@ -14,16 +14,16 @@ function SharedUser(user) {
   const tmp = callback3();
   let obj = nameFromUserDefault;
   const name = obj.getName(user);
-  const tmp6 = user.trialCreationResult === user(7198).CreateReferralStatus.FAIL;
+  const tmp6 = user.trialCreationResult === user(7207).CreateReferralStatus.FAIL;
   obj = { style: tmp.recipientRow, children: null };
   const items = [tmp.avatarContainer];
   let erroredAvatar = tmp6;
   if (tmp6) {
     erroredAvatar = tmp.erroredAvatar;
   }
-  obj = { style: items, size: tmp5(1297).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "a" };
+  obj = { style: items, size: tmp5(1296).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "Array" };
   items[1] = erroredAvatar;
-  const items1 = [closure_5(user(1297).Avatar, obj), ,];
+  const items1 = [closure_5(user(1296).Avatar, obj), ,];
   if (tmp6) {
     obj1 = { children: null };
     const obj2 = { variant: "text-md/medium", color: "text-muted", style: null, children: null };
@@ -31,10 +31,10 @@ function SharedUser(user) {
     obj2[3] = name;
     const items2 = [tmp9(tmp5(4474).Text, obj2)];
     const obj3 = { variant: "text-md/medium", color: "text-muted", children: null };
-    const intl = tmp5(1236).intl;
+    const intl = tmp5(1233).intl;
     const obj4 = { userName: null };
     obj4[0] = name;
-    obj3[2] = intl.format(tmp5(1236).t.RO3T4B, obj4);
+    obj3[2] = intl.format(tmp5(1233).t.RO3T4B, obj4);
     items2[1] = tmp9(tmp5(4474).Text, obj3);
     obj1[0] = items2;
     let tmp9Result = tmp7(closure_6, obj1);
@@ -46,9 +46,9 @@ function SharedUser(user) {
   }
   items1[1] = tmp9Result;
   const obj6 = { variant: "secondary", size: "sm", text: null, icon: null, onPress: null };
-  const intl2 = tmp5(1236).intl;
-  obj6[2] = intl2.string(user(1236).t["g33r/P"]);
-  obj6[3] = closure_5(user(5020).ChatIcon, { size: "xs", color: ThemesDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT });
+  const intl2 = tmp5(1233).intl;
+  obj6[2] = intl2.string(user(1233).t["g33r/P"]);
+  obj6[3] = closure_5(user(5024).ChatIcon, { size: "xs", color: ThemesDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT });
   obj6[4] = function onPress() {
     let obj = closure_1_1(closure_1_2[12]);
     obj.hideActionSheet();
@@ -131,18 +131,18 @@ export default function ReferralProgramShareConfirmationActionSheet(trialCreatio
     stringResult = intl.string(getSystemLocale.t.tKCltd);
     tmp5 = require;
   }
-  const intl3 = tmp5(1236).intl;
+  const intl3 = tmp5(1233).intl;
   let obj = { helpdeskArticle: null };
   obj1 = combinedDefault;
   obj[0] = obj1.getArticleURL(HelpdeskArticles.REFERRAL_PROGRAM);
   obj = {
     startExpanded: true,
     contentStyles: tmp.content,
-    header: callback(tmp5(5621).BottomSheetTitleHeader, { title: null }),
+    header: callback(tmp5(5629).BottomSheetTitleHeader, { title: null }),
     children: null,
   };
   obj = { children: null };
-  obj1 = { style: tmp.headerAsset, children: callback(tmp5(6256).FistBumpSpotIllustration, {}) };
+  obj1 = { style: tmp.headerAsset, children: callback(tmp5(6265).FistBumpSpotIllustration, {}) };
   const items = [
     callback(View, obj1),
     callback(tmp5(4474).Text, {
@@ -153,7 +153,7 @@ export default function ReferralProgramShareConfirmationActionSheet(trialCreatio
     }),
     ,
   ];
-  const formatResult = intl3.format(tmp5(1236).t.AwGSWl, obj);
+  const formatResult = intl3.format(tmp5(1233).t.AwGSWl, obj);
   const obj2 = {
     variant: "heading-lg/bold",
     color: "mobile-text-heading-primary",
@@ -164,7 +164,7 @@ export default function ReferralProgramShareConfirmationActionSheet(trialCreatio
     variant: "text-md/medium",
     color: "text-default",
     style: tmp.subheader,
-    children: intl3.format(tmp5(1236).t.AwGSWl, obj),
+    children: intl3.format(tmp5(1233).t.AwGSWl, obj),
   });
   const obj4 = { style: tmp.recipientContainer, children: null };
   arr = Array.from(trialCreationResult.selectedUsers);
@@ -174,5 +174,5 @@ export default function ReferralProgramShareConfirmationActionSheet(trialCreatio
   items[3] = callback(View, obj4);
   obj[0] = items;
   obj[3] = callback2(tmp5(4926).Stack, obj);
-  return callback(tmp5(5622).BottomSheet, obj);
+  return callback(tmp5(5630).BottomSheet, obj);
 }

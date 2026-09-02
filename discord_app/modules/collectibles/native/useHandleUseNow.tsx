@@ -30,11 +30,11 @@ export const useHandleUseNow = function useHandleUseNow(onSuccess) {
   const callback1 = React.useCallback(() => {
     let obj = callback(4194);
     obj = { key: "collectible shop apply error", content: null };
-    const intl = onSuccess(1236).intl;
-    obj[1] = intl.string(onSuccess(1236).t.CKsXk3);
+    const intl = onSuccess(1233).intl;
+    obj[1] = intl.string(onSuccess(1233).t.CKsXk3);
     obj.open(obj);
   }, []);
-  let obj = onSuccess(10832);
+  let obj = onSuccess(11052);
   handleUseNow = obj.useHandleUseNow({ product, onSuccess: callback, onError: callback1 });
   ({ handleUseNow, isApplying, canUseNow } = handleUseNow);
   const tmp4 = useOpenProfileSettingsDefault({ analyticsLocations });

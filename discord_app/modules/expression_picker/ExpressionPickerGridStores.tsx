@@ -1,6 +1,6 @@
 // discord_app/modules/expression_picker/ExpressionPickerGridStores.tsx
 import set from "../../../_runtime/00002_set.js";
-import identity from "../../../_runtime/00700_identity.js";
+import identity from "../../../_runtime/00697_identity.js";
 import createJSONStorage from "../../../_runtime/04345_createJSONStorage.js";
 
 let c0 = require;
@@ -111,7 +111,7 @@ c0 = withEqualityFn3Result;
 const result = set.fileFinishedImporting("modules/expression_picker/ExpressionPickerGridStores.tsx");
 
 export default function createStore() {
-  let obj = _undefined(700);
+  let obj = _undefined(697);
   const withEqualityFn = obj.createWithEqualityFn();
   const withEqualityFnResult = withEqualityFn(_undefined(4345).subscribeWithSelector(() => closure_2));
   _undefined = withEqualityFnResult;

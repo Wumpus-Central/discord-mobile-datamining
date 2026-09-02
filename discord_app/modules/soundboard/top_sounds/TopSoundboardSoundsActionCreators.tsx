@@ -30,7 +30,7 @@ export const maybeFetchTopSoundboardSoundsByGuild = function maybeFetchTopSoundb
             let obj = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH", guildId: null };
             obj[1] = id;
             dispatcherDefault.dispatch(obj);
-            const HTTP = tmp9(530).HTTP;
+            const HTTP = tmp9(527).HTTP;
             obj = { url: null, oldFormErrors: true, rejectWithError: true };
             obj[0] = Endpoints.TOP_SOUNDBOARD_SOUNDS_FOR_GUILD(id);
             const value = HTTP.get(obj);

@@ -88,9 +88,9 @@ export const fetchStoreListingForSku = function fetchStoreListingForSku(skuId) {
   }
   obj = { url: STORE_LISTINGS_SKUResult, rejectWithError: null };
   const obj4 = _httpGetWithCountryCodeQuery;
-  obj[1] = tmp7(530).rejectWithMigratedError();
+  obj[1] = tmp7(527).rejectWithMigratedError();
   const result1 = obj4.httpGetWithCountryCodeQuery(obj);
-  const tmp7Result = tmp7(530);
+  const tmp7Result = tmp7(527);
   return result1
     .then((body) => {
       const dispatch = result(closure_1_2[6]).dispatch;

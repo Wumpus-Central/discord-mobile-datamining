@@ -1,6 +1,6 @@
 // discord_app/design/tokens/native/SemanticColorContext.native.tsx
 import set from "../../../../_runtime/00002_set.js";
-import nDefault from "../../../../_runtime/00689_n.js";
+import nDefault from "../../../../_runtime/00686_n.js";
 import getGradientThemeFromFlags from "../../components/ThemeContextProvider/native/getGradientThemeFromFlags.tsx";
 import getGradientColorByPercentage from "../../../modules/client_themes/native/ClientThemesUtils.tsx";
 
@@ -17,9 +17,9 @@ export const getSemanticColorContextFromThemeContext = function getSemanticColor
     ({ primaryColor: primaryColor2, secondaryColor } = themeContext);
     let tmp9 = null;
     if (null != primaryColor2) {
-      let tmpResult = tmp(688);
+      let tmpResult = tmp(685);
       const int2hexResult = tmpResult.int2hex(primaryColor2);
-      tmpResult = tmp(688);
+      tmpResult = tmp(685);
       if (secondaryColor == null) {
         secondaryColor = primaryColor2;
       }

@@ -1,7 +1,7 @@
 // discord_app/modules/search/native/components/layout/SearchScreenLayout.tsx
 import jsxDefault from "../../../../panels/morphable/native/AppFreezer.tsx";
 import NoSearchResultsScreenDefault from "../tabs/SearchTabsLayout.tsx";
-import _modDef16305 from "autocomplete/AutocompleteScreen.tsx";
+import _modDef16537 from "autocomplete/AutocompleteScreen.tsx";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_4 from "../../stores/SearchQueryStore.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
@@ -25,7 +25,7 @@ let closure_8 = createCacheKey.createStyles({ hidden: { opacity: 0 }, visible: {
 const memoResult = importAllResult.memo((width) => {
   const searchContext = width.searchContext;
   const containerStyle = width.containerStyle;
-  let obj = searchContext(589);
+  let obj = searchContext(586);
   const items = [closure_4];
   const items1 = [searchContext];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.isAutocompleteVisible(searchContext), items1);
@@ -40,7 +40,7 @@ const memoResult = importAllResult.memo((width) => {
     callback(SearchFreezeContainer, {
       visible: stateFromStores,
       containerStyle,
-      children: callback(_modDef16305, { searchContext }),
+      children: callback(_modDef16537, { searchContext }),
     }),
   ];
   obj[0] = items2;

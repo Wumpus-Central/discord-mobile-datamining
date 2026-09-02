@@ -70,7 +70,7 @@ let closure_13 = importAllResult.memo(function GuildItemInner(guildId) {
     onLongPress: callback1,
     backgroundColor: tmp.maskStrokeStyle.backgroundColor,
   };
-  obj[1] = callback(onGuildSelect(16551), obj);
+  obj[1] = callback(onGuildSelect(16786), obj);
   return callback(closure_5, obj);
 });
 let closure_14 = importAllResult.memo(function PrivateChannelItemInner(channelId) {

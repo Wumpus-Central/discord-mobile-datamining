@@ -1,5 +1,5 @@
 // discord_app/modules/quests/utils/QuestDataUtils.tsx
-import _modDef1208 from "../../../utils/SentryUtils.native.tsx";
+import _modDef1205 from "../../../utils/SentryUtils.native.tsx";
 import QuestsVisibleMessagesChangedSource from "../QuestTypes.tsx";
 import closure_3 from "../../ads/AdDeliveryStore.tsx";
 import closure_4 from "../../user_settings/LocaleStore.tsx";
@@ -25,9 +25,9 @@ function getQuestDeliveryDataForPlacement(arg0, adContentId) {
           trafficMetadataSealed: null,
           provenanceMetadataSealed: null,
         };
-        let tmpResult = tmp(7445);
+        let tmpResult = tmp(7455);
         obj[0] = tmpResult.getDeliveredQuestId(adDecisionByPlacementAndAdCreativeId.creative);
-        tmpResult = tmp(7445);
+        tmpResult = tmp(7455);
         obj[1] = tmpResult.getDeliveredAdCreativeId(adDecisionByPlacementAndAdCreativeId.creative);
         ({
           adDecisionData: obj[2],
@@ -48,7 +48,7 @@ function getQuestDeliveryDataForPlacement(arg0, adContentId) {
   } else {
     const deliveryAdDecisionByPlacement = obj.deliveryAdDecisionByPlacement;
     const value = deliveryAdDecisionByPlacement.get(arg0);
-    if (arg0 === tmp(5390).AdPlacement.QUEST_HOME_BANNER_DESKTOP) {
+    if (arg0 === tmp(5398).AdPlacement.QUEST_HOME_BANNER_DESKTOP) {
       if (null != value) {
         obj = {
           questId: null,
@@ -59,9 +59,9 @@ function getQuestDeliveryDataForPlacement(arg0, adContentId) {
           trafficMetadataSealed: null,
           provenanceMetadataSealed: null,
         };
-        obj[0] = tmp(7445).getDeliveredQuestId(value.creative);
-        const tmpResult1 = tmp(7445);
-        obj[1] = tmp(7445).getDeliveredAdCreativeId(value.creative);
+        obj[0] = tmp(7455).getDeliveredQuestId(value.creative);
+        const tmpResult1 = tmp(7455);
+        obj[1] = tmp(7455).getDeliveredAdCreativeId(value.creative);
         ({
           adDecisionData: obj7[2],
           adContext: obj7[3],
@@ -70,7 +70,7 @@ function getQuestDeliveryDataForPlacement(arg0, adContentId) {
           provenanceMetadataSealed: obj7[6],
         } = value);
         let tmp9 = obj;
-        const tmpResult2 = tmp(7445);
+        const tmpResult2 = tmp(7455);
       }
       return tmp9;
     }
@@ -85,9 +85,9 @@ function getQuestDeliveryDataForPlacement(arg0, adContentId) {
         trafficMetadataSealed: null,
         provenanceMetadataSealed: null,
       };
-      obj[0] = tmp(7445).getDeliveredQuestId(value.creative);
-      const tmpResult3 = tmp(7445);
-      obj[1] = tmp(7445).getDeliveredAdCreativeId(value.creative);
+      obj[0] = tmp(7455).getDeliveredQuestId(value.creative);
+      const tmpResult3 = tmp(7455);
+      obj[1] = tmp(7455).getDeliveredAdCreativeId(value.creative);
       ({
         adDecisionData: obj4[2],
         adContext: obj4[3],
@@ -96,7 +96,7 @@ function getQuestDeliveryDataForPlacement(arg0, adContentId) {
         provenanceMetadataSealed: obj4[6],
       } = value);
       tmp9 = obj;
-      const tmpResult4 = tmp(7445);
+      const tmpResult4 = tmp(7455);
     }
   }
 }
@@ -177,9 +177,9 @@ export const isDismissible = function isDismissible(closure_1) {
 export const isDismissed = function isDismissed(dismissedQuestContent) {
   const keys = Object.keys(closure_7);
   if (keys.includes(QuestsVisibleMessagesChangedSource.QuestContent[arg1])) {
-    return tmp2(1399).hasFlag(
+    return tmp2(1398).hasFlag(
       dismissedQuestContent.dismissedQuestContent,
-      tmp[tmp2(undefined, 5390).QuestContent[arg1]],
+      tmp[tmp2(undefined, 5398).QuestContent[arg1]],
     );
   } else {
     return false;
@@ -340,7 +340,7 @@ export const getAdContext = function getAdContext(sourceQuestContent, adContentI
   }
 };
 export const captureQuestsException = function captureQuestsException(error, tags) {
-  obj = _modDef1208;
+  obj = _modDef1205;
   obj = {};
   const merged = Object.assign(tags);
   tags = undefined;

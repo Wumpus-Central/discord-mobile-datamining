@@ -13,14 +13,14 @@ obj[require("DisplayNameEffect").DisplayNameEffect.POP] = messagesProxyDefault.c
 obj[require("DisplayNameEffect").DisplayNameEffect.GUMMY] = messagesProxyDefault.x9Gtie;
 obj[require("DisplayNameEffect").DisplayNameEffect.PRISM] = messagesProxyDefault["/M7psm"];
 let closure_5 = {
-  [arg1(1940).DisplayNameEffect.SOLID]: 3,
-  [arg1(1940).DisplayNameEffect.GRADIENT]: 2.5,
-  [arg1(1940).DisplayNameEffect.GLOW]: 2.5,
-  [arg1(1940).DisplayNameEffect.PRISM]: 2.5,
-  [arg1(1940).DisplayNameEffect.NEON]: 3,
-  [arg1(1940).DisplayNameEffect.TOON]: 3,
-  [arg1(1940).DisplayNameEffect.POP]: 3,
-  [arg1(1940).DisplayNameEffect.GUMMY]: 3,
+  [arg1(1939).DisplayNameEffect.SOLID]: 3,
+  [arg1(1939).DisplayNameEffect.GRADIENT]: 2.5,
+  [arg1(1939).DisplayNameEffect.GLOW]: 2.5,
+  [arg1(1939).DisplayNameEffect.PRISM]: 2.5,
+  [arg1(1939).DisplayNameEffect.NEON]: 3,
+  [arg1(1939).DisplayNameEffect.TOON]: 3,
+  [arg1(1939).DisplayNameEffect.POP]: 3,
+  [arg1(1939).DisplayNameEffect.GUMMY]: 3,
 };
 const result = require("set").fileFinishedImporting(
   "modules/display_name_styles/hooks/useDisplayNameStylesEffectConfigs.tsx",

@@ -37,7 +37,7 @@ const result = require("set").fileFinishedImporting(
 export default function ActivitiesPrivateChannelCallTooltip(onClosePress) {
   let num;
   const tmp = callback();
-  let obj = num(589);
+  let obj = num(586);
   let items = [closure_4];
   num = 4;
   if (obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion)) {
@@ -87,18 +87,18 @@ export default function ActivitiesPrivateChannelCallTooltip(onClosePress) {
     children: null,
   };
   items2 = [tmp.arrow];
-  const intl = tmp2(1236).intl;
-  obj1[3] = intl.format(num(1236).t.xAW71b, { helpdeskUrl: closure_5 });
-  const intl2 = tmp2(1236).intl;
-  obj1[4] = intl2.string(num(1236).t.HOPqzR);
+  const intl = tmp2(1233).intl;
+  obj1[3] = intl.format(num(1233).t.xAW71b, { helpdeskUrl: closure_5 });
+  const intl2 = tmp2(1233).intl;
+  obj1[4] = intl2.string(num(1233).t.HOPqzR);
   let obj3 = { style: tmp.closeButtonWrapper, children: null };
   let obj4 = { text: null, onPress: null, variant: "secondary", size: "sm", grow: true };
-  const intl3 = tmp2(1236).intl;
-  obj4[0] = intl3.string(num(1236).t["NX+WJN"]);
+  const intl3 = tmp2(1233).intl;
+  obj4[0] = intl3.string(num(1233).t["NX+WJN"]);
   obj4[1] = onClosePress.onClosePress;
   obj3[1] = jsx(num(4928).Button, { text: null, onPress: null, variant: "secondary", size: "sm", grow: true });
   obj1[5] = <View style={tmp.closeButtonWrapper}>{null}</View>;
-  obj[1] = jsx(num(1297).Tooltip, {
+  obj[1] = jsx(num(1296).Tooltip, {
     containerStyle: tmp.tooltip,
     labelStyle: tmp.tooltipText,
     arrowStyle: items2,

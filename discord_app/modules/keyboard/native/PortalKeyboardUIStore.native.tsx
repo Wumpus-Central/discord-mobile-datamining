@@ -53,14 +53,14 @@ export const openPortalKeyboard = function openPortalKeyboard(type, closure_0, a
   if (!tmp3) {
     obj = { keyboard: null, state: null };
     obj = { id: null, type: null, channelId: null, chatInputRef: null };
-    obj[0] = tmp5(514).v4();
+    obj[0] = tmp5(511).v4();
     obj[1] = type;
     obj[2] = closure_0;
     obj[3] = arg2;
     obj[0] = obj;
     obj[1] = tmp5(4346).PortalKeyboardState.REQUEST_OPEN;
     obj.setState(obj);
-    const tmp5Result = tmp5(514);
+    const tmp5Result = tmp5(511);
   }
 };
 export const registerPortalKeyboardRenderer = function registerPortalKeyboardRenderer(id) {

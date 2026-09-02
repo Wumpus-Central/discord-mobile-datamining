@@ -12,7 +12,7 @@ const result = require("set").fileFinishedImporting(
 
 export default function useConsoleConnectedAccountForVoiceUpsell() {
   const items = [closure_4];
-  const stateFromStores = found(589).useStateFromStores(items, () => activities.getActivities(true));
+  const stateFromStores = found(586).useStateFromStores(items, () => activities.getActivities(true));
   found = stateFromStores.filter((platform) => {
     platform = platform.platform;
     let hasItem = platform.type === constants.PLAYING;
@@ -24,17 +24,17 @@ export default function useConsoleConnectedAccountForVoiceUpsell() {
     }
     return hasItem;
   });
-  const obj = found(589);
+  const obj = found(586);
   const items1 = [closure_5];
-  const stateFromStores1 = found(589).useStateFromStores(
+  const stateFromStores1 = found(586).useStateFromStores(
     items1,
     () =>
       null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo() ||
       null != awaitingRemoteSessionInfo.getRemoteSessionId(),
   );
-  const obj2 = found(589);
+  const obj2 = found(586);
   const items2 = [closure_3];
-  const stateFromStores2 = found(589).useStateFromStores(items2, () => {
+  const stateFromStores2 = found(586).useStateFromStores(items2, () => {
     const mapped = found.map((platform) => {
       platform = platform.platform;
       if (null == platform) {

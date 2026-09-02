@@ -16,17 +16,17 @@ export default function useVideoStreamError(arg0, arg1) {
       if (closure_1_2.getId() !== dependencyMap) {
         const items = [];
         let arraySpreadResult = HermesBuiltin.arraySpread(
-          closure_1_3.getActiveErrorsOfType(callback(9565).AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT),
+          closure_1_3.getActiveErrorsOfType(callback(9578).AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT),
           0,
         );
         arraySpreadResult = HermesBuiltin.arraySpread(
-          closure_1_3.getActiveErrorsOfType(callback(9565).AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM),
+          closure_1_3.getActiveErrorsOfType(callback(9578).AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM),
           arraySpreadResult,
         );
         items[Symbol.iterator]();
       }
       if (callback === closure_1_4.STREAM) {
-        let activeErrorsOfType = closure_1_3.getActiveErrorsOfType(callback(9565).AVError.SCREENSHARE_OS_ERROR);
+        let activeErrorsOfType = closure_1_3.getActiveErrorsOfType(callback(9578).AVError.SCREENSHARE_OS_ERROR);
       } else {
         activeErrorsOfType = [];
       }
@@ -47,17 +47,17 @@ export const useVideoStreamErrorContext = function useVideoStreamErrorContext(ar
     if (closure_1_2.getId() !== dependencyMap) {
       const items = [];
       let arraySpreadResult = HermesBuiltin.arraySpread(
-        closure_1_3.getActiveErrorsOfType(callback(9565).AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT),
+        closure_1_3.getActiveErrorsOfType(callback(9578).AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT),
         0,
       );
       arraySpreadResult = HermesBuiltin.arraySpread(
-        closure_1_3.getActiveErrorsOfType(callback(9565).AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM),
+        closure_1_3.getActiveErrorsOfType(callback(9578).AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM),
         arraySpreadResult,
       );
       items[Symbol.iterator]();
     }
     if (callback === closure_1_4.STREAM) {
-      let activeErrorsOfType = closure_1_3.getActiveErrorsOfType(callback(9565).AVError.SCREENSHARE_OS_ERROR);
+      let activeErrorsOfType = closure_1_3.getActiveErrorsOfType(callback(9578).AVError.SCREENSHARE_OS_ERROR);
     } else {
       activeErrorsOfType = [];
     }

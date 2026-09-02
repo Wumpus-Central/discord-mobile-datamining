@@ -1,5 +1,5 @@
 // discord_app/modules/user_profile/native/UserProfileEditForm.tsx
-import registerAssetDefault from "../../../../_runtime/14244_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/14467_registerAsset.js";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_6 from "../../badges/BadgeDirectoryStore.tsx";
@@ -85,7 +85,7 @@ let obj = {
   imageUri: registerAssetDefault,
   staticImageUri: registerAssetDefault,
   description: "",
-  originalAsset: "accessible",
+  originalAsset: "ti",
 };
 let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileEditForm.tsx");
 

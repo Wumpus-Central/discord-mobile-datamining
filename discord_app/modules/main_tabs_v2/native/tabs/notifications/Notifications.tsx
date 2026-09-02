@@ -45,7 +45,7 @@ class Notifications {
     }
     tmp = closure_10();
     tmp2 = require("context");
-    layoutEffect = closure_3.useLayoutEffect(() => callback(7220).trackAppUIViewed(), []);
+    layoutEffect = closure_3.useLayoutEffect(() => callback(7229).trackAppUIViewed(), []);
     callback = closure_3.useCallback(() => {
       const navigation = callback(4333).getRootNavigationRef();
       if (null != navigation) {
@@ -202,11 +202,11 @@ let closure_12 = importAllResult.memo(function HeaderInner(nestedInLaunchPad) {
     obj[0] = tmp.headerTitle;
     obj1 = { style: null, accessibilityLabel: null, onPress: null, children: null };
     obj1[0] = tmp.headerClose;
-    const intl = tmp5(1236).intl;
-    obj1[1] = intl.string(tmp5(1236).t["13/7kX"]);
+    const intl = tmp5(1233).intl;
+    obj1[1] = intl.string(tmp5(1233).t["13/7kX"]);
     obj1[2] = goBack;
-    obj1[3] = tmp12(tmp5(15991).LeftBackIconWithBadge, {});
-    const items1 = [tmp12(tmp5(5068).PressableOpacity, obj1), ,];
+    obj1[3] = tmp12(tmp5(16222).LeftBackIconWithBadge, {});
+    const items1 = [tmp12(tmp5(5076).PressableOpacity, obj1), ,];
     const obj2 = {
       color: "mobile-text-heading-primary",
       variant: "heading-lg/bold",
@@ -216,8 +216,8 @@ let closure_12 = importAllResult.memo(function HeaderInner(nestedInLaunchPad) {
       children: null,
     };
     obj2[2] = tmp.headerText;
-    const intl2 = tmp5(1236).intl;
-    obj2[5] = intl2.string(tmp5(1236).t.HcoRu0);
+    const intl2 = tmp5(1233).intl;
+    obj2[5] = intl2.string(tmp5(1233).t.HcoRu0);
     items1[1] = tmp12(tmp5(4474).Text, obj2);
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.actionButtons;
@@ -226,19 +226,19 @@ let closure_12 = importAllResult.memo(function HeaderInner(nestedInLaunchPad) {
       const obj4 = { children: null };
       const obj5 = { ref: null, type: null, onOpen: null };
       obj5[0] = ref;
-      let tmp2Result = tmp2(15992);
-      obj5[1] = tmp5(7604).SavedMessageSortTypes.BOOKMARK;
+      let tmp2Result = tmp2(16223);
+      obj5[1] = tmp5(7614).SavedMessageSortTypes.BOOKMARK;
       obj5[2] = callback;
       const items2 = [tmp12(tmp2Result, obj5)];
       const obj6 = { type: null, onOpen: null };
-      tmp2Result = tmp2(15992);
-      obj6[0] = tmp5(7604).SavedMessageSortTypes.REMINDER;
+      tmp2Result = tmp2(16223);
+      obj6[0] = tmp5(7614).SavedMessageSortTypes.REMINDER;
       obj6[1] = callback;
       items2[1] = tmp12(tmp2Result, obj6);
       obj4[0] = items2;
       tmp10Result = tmp10(closure_8, obj4);
     }
-    const items3 = [tmp10Result, tmp12(tmp2(15994), {})];
+    const items3 = [tmp10Result, tmp12(tmp2(16225), {})];
     obj3[1] = items3;
     items1[2] = tmp10(tmp11, obj3);
     obj[1] = items1;

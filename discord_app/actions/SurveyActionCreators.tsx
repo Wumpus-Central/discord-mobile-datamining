@@ -57,7 +57,7 @@ export const surveyFetch = function surveyFetch(surveyOverride, disable_auto_see
       if (survey != null) {
         key = survey.key;
       }
-      return callback(1400).exact({ key });
+      return callback(1399).exact({ key });
     },
   };
   obj[2] = obj;
@@ -73,7 +73,7 @@ export const surveyFetch = function surveyFetch(surveyOverride, disable_auto_see
           survey = body.survey;
         }
       }
-      callback2(709).dispatch({ type: "SURVEY_FETCHED", survey });
+      callback2(706).dispatch({ type: "SURVEY_FETCHED", survey });
       let survey1;
       if (body != null) {
         const body2 = body.body;
@@ -84,7 +84,7 @@ export const surveyFetch = function surveyFetch(surveyOverride, disable_auto_see
       return survey1;
     },
     () => {
-      callback2(709).dispatch({ type: "SURVEY_FETCHED", survey: null });
+      callback2(706).dispatch({ type: "SURVEY_FETCHED", survey: null });
     },
   );
 };

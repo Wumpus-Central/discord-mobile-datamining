@@ -1,8 +1,8 @@
 // discord_app/modules/voice_calls/AudioRouteStore.native.tsx
 import set from "../../../_runtime/00002_set.js";
-import set2 from "../../utils/PlatformUtils.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import set2 from "../../utils/PlatformUtils.tsx";
 import RouteTypes2 from "VoiceCallTypes.tsx";
 import enforcingDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeAudioRouteEmitterModule.tsx";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";

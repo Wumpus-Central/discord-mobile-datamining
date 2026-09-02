@@ -77,14 +77,14 @@ export const getDeviceMediaPerformanceClass = function getDeviceMediaPerformance
   if (obj.isAndroid()) {
     let tmp5 = null == mediaPerformanceClass2;
     if (tmp5) {
-      const Storage = tmp(595).Storage;
+      const Storage = tmp(592).Storage;
       const value = Storage.get(mediaPerformanceClass);
       mediaPerformanceClass2 = value;
       tmp5 = null == value;
     }
     if (tmp5) {
       mediaPerformanceClass2 = enforcingDefault.getMediaPerformanceClass();
-      const Storage2 = tmp(595).Storage;
+      const Storage2 = tmp(592).Storage;
       const result = Storage2.set(mediaPerformanceClass, mediaPerformanceClass2);
       const obj2 = enforcingDefault;
     }

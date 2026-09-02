@@ -1,5 +1,5 @@
 // discord_app/modules/search/native/tracking/Tracking.tsx
-import v1 from "../../../../../_runtime/00514_v1.js";
+import v1 from "../../../../../_runtime/00511_v1.js";
 import explicitContentFromProto from "../../../user_settings/UserSettings.tsx";
 import collectGuildAnalyticsMetadataDefault from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import SearchTokenTypes from "../../SearchUtils.tsx";

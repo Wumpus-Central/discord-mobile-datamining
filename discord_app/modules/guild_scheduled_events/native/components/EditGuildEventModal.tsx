@@ -4,15 +4,18 @@ import EditGuildEventModalNavbarDefault from "EditGuildEventModalNavbar.tsx";
 import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_5 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
-import { GuildScheduledEventEntityTypes as closure_7 } from "../../GuildScheduledEventsConstants.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { GuildScheduledEventEntityTypes as closure_8 } from "../../GuildScheduledEventsConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
-let obj = { cardStyle: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+let obj = { container: null, cardStyle: null };
+obj = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[0] = obj;
-let closure_9 = createCacheKey.createStyles(obj);
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+obj[1] = createCacheKey;
+let closure_10 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((guild) => {
   guild = guild.guild;
   let PREVIEW = guild;
@@ -20,7 +23,7 @@ const memoResult = importAllResult.memo((guild) => {
   let first;
   closure_4 = undefined;
   let first1;
-  jsx = undefined;
+  closure_8 = undefined;
   function _handleSave() {
     const self = this;
     const tmp = callback(function* () {
@@ -70,9 +73,9 @@ const memoResult = importAllResult.memo((guild) => {
             return { value: "HermesInternal", done: null };
           } else {
             if (!closure_5) {
-              const AccessibilityAnnouncer = closure_1_0(closure_1_3[11]).AccessibilityAnnouncer;
-              const intl = closure_1_0(closure_1_3[12]).intl;
-              AccessibilityAnnouncer.announce(intl.string(closure_1_0(closure_1_3[12]).t["5HzXO5"]));
+              const AccessibilityAnnouncer = closure_1_0(closure_1_3[13]).AccessibilityAnnouncer;
+              const intl = closure_1_0(closure_1_3[14]).intl;
+              AccessibilityAnnouncer.announce(intl.string(closure_1_0(closure_1_3[14]).t["5HzXO5"]));
               v0();
             } else {
               id = undefined;
@@ -80,9 +83,9 @@ const memoResult = importAllResult.memo((guild) => {
                 id = id.id;
               }
             }
-            const AccessibilityAnnouncer2 = closure_1_0(closure_1_3[11]).AccessibilityAnnouncer;
-            const intl2 = closure_1_0(closure_1_3[12]).intl;
-            AccessibilityAnnouncer2.announce(intl2.string(closure_1_0(closure_1_3[12]).t["F9On+q"]));
+            const AccessibilityAnnouncer2 = closure_1_0(closure_1_3[13]).AccessibilityAnnouncer;
+            const intl2 = closure_1_0(closure_1_3[14]).intl;
+            AccessibilityAnnouncer2.announce(intl2.string(closure_1_0(closure_1_3[14]).t["F9On+q"]));
           }
         } catch (tmp26) {
           id = tmp;
@@ -99,39 +102,41 @@ const memoResult = importAllResult.memo((guild) => {
     }
     return applyArgumentsResult;
   }
-  let obj = PREVIEW(first[7]);
-  const tmp2 = first1(undefined.useState(obj.getInitialGuildEventData(initialGuildEvent, guild.targetChannel)), 2);
-  first = tmp2[0];
-  closure_4 = tmp2[1];
-  obj1 = PREVIEW(first[7]);
-  first1 = first1(importAllResult.useState(obj1.isEditingEvent(initialGuildEvent)), 1)[0];
   let tmp = callback();
-  [c6, tmp6] = first1(
-    importDefault(first[8])(() => {
-      const result = initialGuildEvent(first[9]).dismissGlobalKeyboard();
+  ({ left, right } = importDefault(first[8])());
+  let obj = PREVIEW(first[9]);
+  let tmp3 = first1(undefined.useState(obj.getInitialGuildEventData(initialGuildEvent, guild.targetChannel)), 2);
+  first = tmp3[0];
+  closure_4 = tmp3[1];
+  obj1 = PREVIEW(first[9]);
+  first1 = first1(importAllResult.useState(obj1.isEditingEvent(initialGuildEvent)), 1)[0];
+  const tmp2 = importDefault(first[8])();
+  [c6, tmp7] = first1(
+    importDefault(first[10])(() => {
+      const result = initialGuildEvent(first[11]).dismissGlobalKeyboard();
       if (first1) {
         let id;
         if (initialGuildEvent != null) {
           id = tmp3.id;
         }
         if (null != id) {
-          let saveEventResult = closure_1_1(tmp[10]).saveEvent(tmp3.id, first, PREVIEW.id);
-          const obj3 = closure_1_1(tmp[10]);
+          let saveEventResult = closure_1_1(tmp[12]).saveEvent(tmp3.id, first, PREVIEW.id);
+          const obj3 = closure_1_1(tmp[12]);
         }
         return saveEventResult;
       }
-      const obj = initialGuildEvent(first[9]);
-      saveEventResult = closure_1_1(first[10]).createGuildEvent(first, PREVIEW.id);
+      const obj = initialGuildEvent(first[11]);
+      saveEventResult = closure_1_1(first[12]).createGuildEvent(first, PREVIEW.id);
     }),
     2,
   );
-  jsx = {
+  closure_8 = {
     guild,
     guildEvent: first,
     initialGuildEvent,
     isEdit: first1,
-    error: tmp6.error,
-    loading: tmp6.loading,
+    error: tmp7.error,
+    loading: tmp7.loading,
     onSave: function handleSave() {
       const self = this;
       const apply = _handleSave.apply;
@@ -145,9 +150,9 @@ const memoResult = importAllResult.memo((guild) => {
     onChange: function handleChange(entityType) {
       PREVIEW = entityType;
       if (null != entityType.entityType) {
-        const channelTypeFromEntity = PREVIEW(first[13]).getChannelTypeFromEntity(entityType.entityType);
-        const obj = PREVIEW(first[13]);
-        first = first1(PREVIEW(first[14]).getEventChannelsByType(PREVIEW.id, channelTypeFromEntity), 1)[0];
+        const channelTypeFromEntity = PREVIEW(first[15]).getChannelTypeFromEntity(entityType.entityType);
+        const obj = PREVIEW(first[15]);
+        first = first1(PREVIEW(first[16]).getEventChannelsByType(PREVIEW.id, channelTypeFromEntity), 1)[0];
         let id;
         if (first != null) {
           id = first.id;
@@ -156,14 +161,14 @@ const memoResult = importAllResult.memo((guild) => {
           id = null;
         }
         entityType.channelId = id;
-        let tmp3 = entityType.entityType !== _handleSave.EXTERNAL;
+        let tmp3 = entityType.entityType !== constants.EXTERNAL;
         if (tmp3) {
           tmp3 = first.entityType === tmp2.EXTERNAL;
         }
         if (tmp3) {
           entityType.entityMetadata = null;
         }
-        const obj2 = PREVIEW(first[14]);
+        const obj2 = PREVIEW(first[16]);
       }
       callback((arg0) => {
         const merged = Object.assign(arg0);
@@ -174,7 +179,7 @@ const memoResult = importAllResult.memo((guild) => {
   };
   obj = {};
   obj = { title: "", customNavbar: null, headerLeft: null, render: null, fullscreen: true };
-  PREVIEW = PREVIEW(first[7]).EditGuildEventScreens.CHANNEL_SELECTOR;
+  PREVIEW = PREVIEW(first[9]).EditGuildEventScreens.CHANNEL_SELECTOR;
   obj[1] = () => jsx(EditGuildEventModalNavbarDefault, { screen: PREVIEW, onClose: closure_1_1 });
   obj[2] = function headerLeft() {
     return null;
@@ -187,54 +192,56 @@ const memoResult = importAllResult.memo((guild) => {
       id = initialGuildEvent.id;
     }
     obj.guildEventId = id;
-    return closure_8(closure_1_1(first[16]), obj);
+    return closure_1_9(closure_1_1(first[18]), obj);
   };
-  obj[PREVIEW(first[7]).EditGuildEventScreens.CHANNEL_SELECTOR] = obj;
+  obj[PREVIEW(first[9]).EditGuildEventScreens.CHANNEL_SELECTOR] = obj;
   obj1 = { title: "", customNavbar: null, render: null, fullscreen: true };
-  PREVIEW = PREVIEW(first[7]).EditGuildEventScreens.DETAILS;
+  PREVIEW = PREVIEW(first[9]).EditGuildEventScreens.DETAILS;
   obj1[1] = () => jsx(EditGuildEventModalNavbarDefault, { screen: PREVIEW, onClose: closure_1_1 });
   obj1[2] = function render() {
-    const merged = Object.assign(callback2);
-    return callback2(closure_1_1(first[17]), {});
+    const merged = Object.assign(closure_8);
+    return closure_1_9(closure_1_1(first[19]), {});
   };
-  obj[PREVIEW(first[7]).EditGuildEventScreens.DETAILS] = obj1;
+  obj[PREVIEW(first[9]).EditGuildEventScreens.DETAILS] = obj1;
   let obj2 = { title: "", customNavbar: null, render: null, fullscreen: true };
-  PREVIEW = PREVIEW(first[7]).EditGuildEventScreens.PREVIEW;
+  PREVIEW = PREVIEW(first[9]).EditGuildEventScreens.PREVIEW;
   obj2[1] = () => jsx(EditGuildEventModalNavbarDefault, { screen: PREVIEW, onClose: closure_1_1 });
   obj2[2] = function render() {
-    const merged = Object.assign(callback2);
-    return callback2(closure_1_1(first[18]), {});
+    const merged = Object.assign(closure_8);
+    return closure_1_9(closure_1_1(first[20]), {});
   };
-  obj[PREVIEW(first[7]).EditGuildEventScreens.PREVIEW] = obj2;
-  const tmp5 = first1(
-    importDefault(first[8])(() => {
-      const result = initialGuildEvent(first[9]).dismissGlobalKeyboard();
+  obj[PREVIEW(first[9]).EditGuildEventScreens.PREVIEW] = obj2;
+  let obj3 = { style: items, children: null };
+  items = [tmp.container, { paddingLeft: left, paddingRight: right }];
+  const tmp6 = first1(
+    importDefault(first[10])(() => {
+      const result = initialGuildEvent(first[11]).dismissGlobalKeyboard();
       if (first1) {
         let id;
         if (initialGuildEvent != null) {
           id = tmp3.id;
         }
         if (null != id) {
-          let saveEventResult = closure_1_1(tmp[10]).saveEvent(tmp3.id, first, PREVIEW.id);
-          const obj3 = closure_1_1(tmp[10]);
+          let saveEventResult = closure_1_1(tmp[12]).saveEvent(tmp3.id, first, PREVIEW.id);
+          const obj3 = closure_1_1(tmp[12]);
         }
         return saveEventResult;
       }
-      const obj = initialGuildEvent(first[9]);
-      saveEventResult = closure_1_1(first[10]).createGuildEvent(first, PREVIEW.id);
+      const obj = initialGuildEvent(first[11]);
+      saveEventResult = closure_1_1(first[12]).createGuildEvent(first, PREVIEW.id);
     }),
     2,
   );
-  return jsx(PREVIEW(first[19]).Navigator, {
+  obj3[1] = jsx(PREVIEW(first[21]).Navigator, {
     screens: obj,
-    initialRouteName: PREVIEW(first[7]).EditGuildEventScreens.CHANNEL_SELECTOR,
+    initialRouteName: PREVIEW(first[9]).EditGuildEventScreens.CHANNEL_SELECTOR,
     initialRouteStack: first1(
       undefined.useState(() => {
-        let obj = { name: PREVIEW(first[7]).EditGuildEventScreens.CHANNEL_SELECTOR };
+        let obj = { name: PREVIEW(first[9]).EditGuildEventScreens.CHANNEL_SELECTOR };
         if (first1) {
           const items = [obj];
           obj = { name: null };
-          obj[0] = PREVIEW(first[7]).EditGuildEventScreens.DETAILS;
+          obj[0] = PREVIEW(first[9]).EditGuildEventScreens.DETAILS;
           items[1] = obj;
           let items1 = items;
         } else {
@@ -248,6 +255,7 @@ const memoResult = importAllResult.memo((guild) => {
     cardOverlayEnabled: false,
     cardStyle: tmp.cardStyle,
   });
+  return <_handleSave style={items}>{null}</_handleSave>;
 });
 let result = require("set").fileFinishedImporting(
   "modules/guild_scheduled_events/native/components/EditGuildEventModal.tsx",

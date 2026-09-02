@@ -13,7 +13,7 @@ export const useIsViewingActivity = function useIsViewingActivity(channelId) {
   const obj = channelId(4332);
   const items = [closure_3];
   const items1 = [channelId];
-  const stateFromStores = channelId(589).useStateFromStores(items, () => closure_1_3.getChatOpen(channelId), items1);
+  const stateFromStores = channelId(586).useStateFromStores(items, () => closure_1_3.getChatOpen(channelId), items1);
   if (tmp) {
     tmp = isModalOpen;
   }

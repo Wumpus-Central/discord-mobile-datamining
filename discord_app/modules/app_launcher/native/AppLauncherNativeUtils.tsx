@@ -1,6 +1,6 @@
 // discord_app/modules/app_launcher/native/AppLauncherNativeUtils.tsx
 import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
-import registerAssetDefault from "../../../../_runtime/01901_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/01900_registerAsset.js";
 import collectGuildAnalyticsMetadata from "../../app_analytics/AppAnalyticsUtils.tsx";
 import setActiveCommandAll from "../../application_commands/ApplicationCommandActionCreators.tsx";
 import getShelfBadgeTypeIfActive from "../utils/AppLauncherUtils.tsx";
@@ -34,9 +34,9 @@ export const handleApplicationSelected = function handleApplicationSelected(entr
     source: null,
   };
   if (application.id === BuiltInSectionId.BUILT_IN) {
-    let APP = tmp(7268).ApplicationCommandTriggerSections.BUILT_IN;
+    let APP = tmp(7277).ApplicationCommandTriggerSections.BUILT_IN;
   } else {
-    APP = tmp(7268).ApplicationCommandTriggerSections.APP;
+    APP = tmp(7277).ApplicationCommandTriggerSections.APP;
   }
   obj[1] = APP;
   let id = application.id;
@@ -85,11 +85,11 @@ export const handleApplicationCommandSelected = function handleApplicationComman
   ({ location: _location, context, command } = arg0);
   ({ section, sectionDescriptors, query, navigation, installOnDemand, sectionName, entrypoint } = arg0);
   ({ searchResultsPosition, onCommandExecuted } = arg0);
-  let obj = command(7266);
+  let obj = command(7275);
   obj = {
     command,
     location: _location,
-    triggerSection: command(7266).getCommandTriggerSection(section),
+    triggerSection: command(7275).getCommandTriggerSection(section),
     queryLength: query.length,
     sectionName,
     query,
@@ -97,7 +97,7 @@ export const handleApplicationCommandSelected = function handleApplicationComman
     source: entrypoint,
   };
   obj.trackCommandSelected(obj);
-  if (command.type === command(1955).ApplicationCommandType.PRIMARY_ENTRY_POINT) {
+  if (command.type === command(1954).ApplicationCommandType.PRIMARY_ENTRY_POINT) {
     obj = { application: null, context: null, installOnDemand: null, sectionName: null, entrypoint: null };
     obj[0] = section.application;
     obj[1] = context;
@@ -146,7 +146,7 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
     found = prefilledValues.find((name) => name.name === option.name && name.type === tmp.type);
   }
   const type = option.type;
-  if (option(1955).ApplicationCommandOptionType.BOOLEAN === type) {
+  if (option(1954).ApplicationCommandOptionType.BOOLEAN === type) {
     if (null != found) {
       let obj = { type: "text", text: null };
       const _String8 = String;
@@ -159,10 +159,10 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
     }
     return items1;
   } else {
-    if (tmp2(1955).ApplicationCommandOptionType.STRING !== type) {
-      if (tmp2(1955).ApplicationCommandOptionType.INTEGER !== type) {
-        if (tmp2(1955).ApplicationCommandOptionType.NUMBER !== type) {
-          if (tmp2(1955).ApplicationCommandOptionType.CHANNEL === type) {
+    if (tmp2(1954).ApplicationCommandOptionType.STRING !== type) {
+      if (tmp2(1954).ApplicationCommandOptionType.INTEGER !== type) {
+        if (tmp2(1954).ApplicationCommandOptionType.NUMBER !== type) {
+          if (tmp2(1954).ApplicationCommandOptionType.CHANNEL === type) {
             if (null != found) {
               const _String5 = String;
               if (null != channel.getChannel(String(found.value))) {
@@ -175,7 +175,7 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
               return items3;
             }
             items3 = [{ type: "text", text: "" }];
-          } else if (tmp2(1955).ApplicationCommandOptionType.USER === type) {
+          } else if (tmp2(1954).ApplicationCommandOptionType.USER === type) {
             if (null != found) {
               const _String3 = String;
               if (null != authStore.getUser(String(found.value))) {
@@ -188,7 +188,7 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
               return items5;
             }
             items5 = [{ type: "text", text: "" }];
-          } else if (tmp2(1955).ApplicationCommandOptionType.ROLE === type) {
+          } else if (tmp2(1954).ApplicationCommandOptionType.ROLE === type) {
             if (null != found) {
               if (typeof found.value === "string") {
                 if (found.value in roles) {
@@ -201,7 +201,7 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
               }
             }
             items7 = [{ type: "text", text: "" }];
-          } else if (tmp2(1955).ApplicationCommandOptionType.MENTIONABLE === type) {
+          } else if (tmp2(1954).ApplicationCommandOptionType.MENTIONABLE === type) {
             if (null != found) {
               if (found.value === option.guildId) {
                 const items8 = [{ type: "textMention", text: "@everyone" }];

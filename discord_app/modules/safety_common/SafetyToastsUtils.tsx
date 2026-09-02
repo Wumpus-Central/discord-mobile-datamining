@@ -65,13 +65,13 @@ export const getSafetyToastTypeContent = function getSafetyToastTypeContent(BLOC
     return intl11.string(getSystemLocale.t.c6kn6F);
   } else if (tmp8.AGE_VERIFICATION_FAE_FAILED === BLOCK_SUCCESS) {
     const intl10 = getSystemLocale.intl;
-    return intl10.string(tmp3(2919)["9F2y52"]);
+    return intl10.string(tmp3(2918)["9F2y52"]);
   } else if (tmp8.AGE_VERIFICATION_ID_FAILED === BLOCK_SUCCESS) {
     const intl9 = getSystemLocale.intl;
-    return intl9.string(tmp3(2919)["40UKek"]);
+    return intl9.string(tmp3(2918)["40UKek"]);
   } else if (tmp8.AGE_VERIFICATION_UNDERAGE === BLOCK_SUCCESS) {
     const intl8 = getSystemLocale.intl;
-    return intl8.string(tmp3(2919).XBGt7g);
+    return intl8.string(tmp3(2918).XBGt7g);
   } else if (tmp8.TIGGER_PAWTECT_VERIFIED === BLOCK_SUCCESS) {
     const intl7 = getSystemLocale.intl;
     return intl7.string(getSystemLocale.t["7nKAXx"]);
@@ -80,7 +80,7 @@ export const getSafetyToastTypeContent = function getSafetyToastTypeContent(BLOC
     return intl6.string(getSystemLocale.t.zBpoc7);
   } else if (tmp8.REPORT_TO_MOD_SUCCESS === BLOCK_SUCCESS) {
     const intl5 = getSystemLocale.intl;
-    return intl5.string(tmp3(2501).iBypeZ);
+    return intl5.string(tmp3(2500).iBypeZ);
   } else if (tmp8.SAFETY_FEEDBACK_SUCCESS === BLOCK_SUCCESS) {
     const intl4 = getSystemLocale.intl;
     return intl4.string(getSystemLocale.t.TcFR5k);
@@ -89,7 +89,7 @@ export const getSafetyToastTypeContent = function getSafetyToastTypeContent(BLOC
     return intl3.string(getSystemLocale.t["susqq/"]);
   } else if (tmp8.AGE_VERIFICATION_METHOD_UNAVAILABLE === BLOCK_SUCCESS) {
     const intl2 = getSystemLocale.intl;
-    return intl2.string(tmp3(2919).vVwFCK);
+    return intl2.string(tmp3(2918).vVwFCK);
   } else {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["+c5xtT"]);

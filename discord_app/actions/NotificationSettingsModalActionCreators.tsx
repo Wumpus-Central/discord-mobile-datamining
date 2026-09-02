@@ -212,20 +212,20 @@ export default {
               closure_1 = tmp2;
               c0 = tmp5;
               c0 = undefined;
-              const setFlagResult = closure_1_0(1399).setFlag(
+              const setFlagResult = closure_1_0(1398).setFlag(
                 closure_1_4.accountNotificationSettings.flags,
                 closure_1_0,
                 closure_1_1,
               );
               c0 = setFlagResult;
-              const HTTP = closure_1_0(530).HTTP;
+              const HTTP = closure_1_0(527).HTTP;
               obj1 = { url: null, body: null, rejectWithError: null };
               obj1[0] = closure_1_5.ACCOUNT_NOTIFICATION_SETTINGS;
               const obj2 = { flags: null };
               obj2[0] = setFlagResult;
               obj1[1] = obj2;
-              const obj10 = closure_1_0(1399);
-              obj1[2] = closure_1_0(530).rejectWithMigratedError();
+              const obj10 = closure_1_0(1398);
+              obj1[2] = closure_1_0(527).rejectWithMigratedError();
               dependencyMap = 1;
               c3 = 1;
               const obj3 = { value: null, done: false };
@@ -242,7 +242,7 @@ export default {
               obj4[0] = arg1;
               return obj4;
             } else {
-              obj1 = closure_1_1(709);
+              obj1 = closure_1_1(706);
               const obj5 = { type: "NOTIFICATION_SETTINGS_UPDATE", settings: null };
               const obj6 = { flags: null };
               obj6[0] = c0;

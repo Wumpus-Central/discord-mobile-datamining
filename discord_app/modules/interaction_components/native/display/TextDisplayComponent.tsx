@@ -16,18 +16,18 @@ let result = require("set").fileFinishedImporting(
 );
 
 export default function TextDisplayComponent(content) {
-  let obj = channelId(8021);
+  let obj = channelId(8030);
   const componentContainerId = obj.useComponentContainerId();
   channelId = channelId.getChannelId();
   _modDef38(null != channelId, "channelId not available in TextDisplayComponent");
   obj1 = get_defaultRulesDefault;
-  let obj2 = channelId(7631);
+  let obj2 = channelId(7641);
   obj = { channelId, renderOptions: closure_6 };
   const parseToASTResult = obj1.parseToAST(content.content, true, obj2.getInitialParserState(obj));
   let items = [closure_4];
-  const obj5 = channelId(589);
+  const obj5 = channelId(586);
   [tmp6, tmp7] = callback(
-    channelId(589).useStateFromStoresArray(items, () => {
+    channelId(586).useStateFromStoresArray(items, () => {
       const items = [,];
       ({ roleStyle: arr[0], alwaysShowLinkDecorations: arr[1] } = closure_4);
       return items;
@@ -51,7 +51,7 @@ export default function TextDisplayComponent(content) {
   };
   obj1 = {};
   const tmp5 = callback(
-    channelId(589).useStateFromStoresArray(items, () => {
+    channelId(586).useStateFromStoresArray(items, () => {
       const items = [,];
       ({ roleStyle: arr[0], alwaysShowLinkDecorations: arr[1] } = closure_4);
       return items;
@@ -72,13 +72,13 @@ export default function TextDisplayComponent(content) {
   obj[2] = function onTapLink(nativeEvent) {
     const result = channelId(closure_1_2[13]).handleMessagesTapURLLink(nativeEvent.nativeEvent.data, channelId);
   };
-  obj[3] = channelId(11185).contentHandlers.onLongPressLink;
-  obj[4] = channelId(11185).contentHandlers.onTapAttachmentLink;
-  obj[5] = channelId(11185).contentHandlers.onLongPressAttachmentLink;
-  obj[6] = channelId(11185).contentHandlers.onTapMention;
-  obj[7] = channelId(11185).contentHandlers.onTapTimestamp;
-  obj[8] = channelId(11185).contentHandlers.onTapInlineCode;
-  obj[9] = channelId(11185).contentHandlers.onTapEmoji;
+  obj[3] = channelId(11406).contentHandlers.onLongPressLink;
+  obj[4] = channelId(11406).contentHandlers.onTapAttachmentLink;
+  obj[5] = channelId(11406).contentHandlers.onLongPressAttachmentLink;
+  obj[6] = channelId(11406).contentHandlers.onTapMention;
+  obj[7] = channelId(11406).contentHandlers.onTapTimestamp;
+  obj[8] = channelId(11406).contentHandlers.onTapInlineCode;
+  obj[9] = channelId(11406).contentHandlers.onTapEmoji;
   obj[10] = { width: "100%" };
   return jsx(__INTERNAL_VIEW_CONFIGDefault, {
     model: null,

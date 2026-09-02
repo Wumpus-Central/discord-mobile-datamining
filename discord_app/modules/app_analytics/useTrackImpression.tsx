@@ -42,7 +42,7 @@ function trackImpression(type, arg1, arg2) {
   if (channel_id == null) {
     channel_id = channelId.getChannelId(guild_id);
   }
-  let tmpResult = tmp(698);
+  let tmpResult = tmp(695);
   obj = { impression_type: type, location: callback3() };
   tmpResult = tmp(4700);
   const merged = Object.assign(tmpResult.collectGuildAnalyticsMetadata(guild_id));
@@ -55,9 +55,9 @@ function trackImpression(type, arg1, arg2) {
     callback2(null, null);
   } else {
     if (tmp15) {
-      tmp(698).debugLogEvent(name, result);
+      tmp(695).debugLogEvent(name, result);
       callback5(name, result);
-      const tmpResult2 = tmp(698);
+      const tmpResult2 = tmp(695);
     }
     callback2(name, result);
     tmp15 = null != name && null != type;
@@ -91,11 +91,11 @@ export default function useTrackImpression(arg0) {
   closure_4 = React.useRef(undefined);
   obj(4945)(() => {
     if (obj.trackOnInitialLoad) {
-      const tmp6 = obj(659)(ref.current, obj);
+      const tmp6 = obj(656)(ref.current, obj);
       if (!tmp6) {
         ref.current = tmp5;
       }
-      const tmp10 = obj(659)(ref2.current, dependencyMap);
+      const tmp10 = obj(656)(ref2.current, dependencyMap);
       if (!tmp10) {
         ref2.current = dependencyMap;
       }
@@ -115,11 +115,11 @@ export default function useTrackImpression(arg0) {
   });
   const effect = React.useEffect(() => {
     if (!obj.trackOnInitialLoad) {
-      const tmp6 = obj(659)(ref.current, obj);
+      const tmp6 = obj(656)(ref.current, obj);
       if (!tmp6) {
         ref.current = tmp5;
       }
-      const tmp10 = obj(659)(ref2.current, dependencyMap);
+      const tmp10 = obj(656)(ref2.current, dependencyMap);
       if (!tmp10) {
         ref2.current = dependencyMap;
       }

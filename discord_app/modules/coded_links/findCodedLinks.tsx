@@ -1,5 +1,5 @@
 // discord_app/modules/coded_links/findCodedLinks.tsx
-import Url from "../../../_runtime/01488_Url.js";
+import Url from "../../../_runtime/01487_Url.js";
 import findCodedLinkUrlsDefault from "findCodedLinkUrls.native.tsx";
 import closure_3 from "../../stores/InviteStore.tsx";
 import { PRIMARY_DOMAIN } from "../../Constants.tsx";

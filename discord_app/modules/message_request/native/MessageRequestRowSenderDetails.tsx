@@ -45,7 +45,7 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     flag = false;
   }
   const tmp = callback();
-  let obj = otherUser(589);
+  let obj = otherUser(586);
   const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let tmp2 = null;
@@ -59,13 +59,19 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     }
     return tmp2;
   });
-  obj1 = otherUser(16457);
+  obj1 = otherUser(16692);
   const messageRequestRelativeTimestampText = obj1.useMessageRequestRelativeTimestampText(channel);
   const random = Math.random();
   const rounded = Math.floor(random * ensureAvatarSourceDefault.DEFAULT_AVATARS.length);
   obj = { style: tmp.avatarContainer, children: null };
   if (null != otherUser) {
-    obj = { avatarStyle: null, user: null, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: -1 };
+    obj = {
+      avatarStyle: null,
+      user: null,
+      guildId: "HermesInternal",
+      disablePlaceholder: null,
+      avatarDecoration: "Warning",
+    };
     obj[0] = tmp.avatar;
     obj[1] = otherUser;
     let avatarDecoration;
@@ -79,7 +85,7 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     obj1[0] = tmp.avatar;
     obj1[1] = ensureAvatarSourceDefault.DEFAULT_AVATARS[rounded];
   }
-  obj[1] = closure_5(otherUser(1297).Avatar, obj1);
+  obj[1] = closure_5(otherUser(1296).Avatar, obj1);
   const items1 = [closure_5(View, obj)];
   const obj2 = { style: tmp.detailsContainer, children: null };
   const obj3 = { style: tmp.messageDetails, children: null };
@@ -105,8 +111,8 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     stringResult = username;
   }
   if (stringResult == null) {
-    const intl = tmp2(1236).intl;
-    stringResult = intl.string(tmp2(1236).t["30mdIx"]);
+    const intl = tmp2(1233).intl;
+    stringResult = intl.string(tmp2(1233).t["30mdIx"]);
   }
   obj5[3] = stringResult;
   const items2 = [closure_5(otherUser(4474).Text, obj5)];
@@ -141,7 +147,7 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     const obj8 = { style: null, channel: null };
     obj8[0] = tmp.messagePreview;
     obj8[1] = channel;
-    tmp11Result = tmp11(tmp7(16458), obj8);
+    tmp11Result = tmp11(tmp7(16693), obj8);
   }
   items5[1] = tmp11Result;
   if (flag) {
@@ -151,10 +157,10 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     const obj9 = { style: null, userId: null, suffix: null };
     obj9[0] = tmp.messagePreview;
     obj9[1] = otherUser.id;
-    const intl2 = tmp2(1236).intl;
-    obj9[2] = intl2.string(tmp2(1236).t.hTltPn);
-    flag = tmp11(tmp7(16459), obj9);
-    const tmp7Result = tmp7(16459);
+    const intl2 = tmp2(1233).intl;
+    obj9[2] = intl2.string(tmp2(1233).t.hTltPn);
+    flag = tmp11(tmp7(16694), obj9);
+    const tmp7Result = tmp7(16694);
   }
   const obj10 = { children: null };
   items5[2] = flag;

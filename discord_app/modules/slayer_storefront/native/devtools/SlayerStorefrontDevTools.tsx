@@ -213,7 +213,7 @@ export default function SlayerStorefrontDevTools() {
     const obj4 = { label: null };
     const _HermesInternal = HermesInternal;
     obj4[0] = "Fetch failed: " + tmp10;
-    tmp15Result = tmp15(tmp5(5599).TableRow, obj4);
+    tmp15Result = tmp15(tmp5(5607).TableRow, obj4);
   }
   items5[3] = tmp15Result;
   const items6 = [

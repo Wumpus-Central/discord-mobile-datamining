@@ -6,28 +6,28 @@ const result = set.fileFinishedImporting("modules/guild_boosting/native/GuildBoo
 
 export const getIconForPerk = function getIconForPerk(perkIcon) {
   if (getGuildTierFromGuild.PerkIcons.EMOJI === perkIcon) {
-    return tmp(8228).ReactionIcon;
+    return tmp(8237).ReactionIcon;
   } else if (tmp(4369).PerkIcons.SOUNDBOARD === perkIcon) {
-    return tmp(12092).SoundboardIcon;
+    return tmp(12316).SoundboardIcon;
   } else if (tmp(4369).PerkIcons.ANIMATED === perkIcon) {
-    return tmp(10373).GifIcon;
+    return tmp(10395).GifIcon;
   } else if (tmp(4369).PerkIcons.AUDIO === perkIcon) {
-    return tmp(12094).HeadphonesIcon;
+    return tmp(12318).HeadphonesIcon;
   } else if (tmp(4369).PerkIcons.STREAM === perkIcon) {
-    return tmp(12096).ScreenArrowIcon;
+    return tmp(12320).ScreenArrowIcon;
   } else if (tmp(4369).PerkIcons.UPLOAD === perkIcon) {
-    return tmp(8226).UploadIcon;
+    return tmp(8235).UploadIcon;
   } else if (tmp(4369).PerkIcons.CUSTOM_ROLE_ICON === perkIcon) {
-    return tmp(9713).ShieldUserIcon;
+    return tmp(9735).ShieldUserIcon;
   } else if (tmp(4369).PerkIcons.CUSTOMIZATION === perkIcon) {
-    return tmp(11282).ImagesIcon;
+    return tmp(11505).ImagesIcon;
   } else if (tmp(4369).PerkIcons.VANITY === perkIcon) {
-    return tmp(9181).StarIcon;
+    return tmp(9195).StarIcon;
   } else if (tmp(4369).PerkIcons.STAGE_VIDEO === perkIcon) {
-    return tmp(5046).StageIcon;
+    return tmp(5050).StageIcon;
   } else if (tmp(4369).PerkIcons.STICKER === perkIcon) {
-    return tmp(10197).StickerIcon;
+    return tmp(10219).StickerIcon;
   } else {
-    return tmp(8228).ReactionIcon;
+    return tmp(8237).ReactionIcon;
   }
 };

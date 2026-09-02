@@ -3,7 +3,7 @@ import noopAll from "../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import SafeAreaPaddingView from "../../../components_native/common/SafeAreaView.tsx";
-import registerAssetDefault from "../../../../_runtime/09281_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/09294_registerAsset.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
@@ -38,8 +38,8 @@ export default function ErrorResult(error) {
   const items = [callback(closure_3, obj)];
   obj1 = { style: tmp.text, variant: "text-md/medium", children: null };
   if (error == null) {
-    const intl = tmp3(1236).intl;
-    error = intl.string(tmp3(1236).t.mqn873);
+    const intl = tmp3(1233).intl;
+    error = intl.string(tmp3(1233).t.mqn873);
   }
   obj1[2] = error;
   items[1] = callback(Text.Text, obj1);
@@ -48,8 +48,8 @@ export default function ErrorResult(error) {
   let tmp6Result = null;
   if (!error.hideFooter) {
     const obj2 = { size: "lg", text: null, onPress: null };
-    const intl2 = tmp3(1236).intl;
-    obj2[1] = intl2.string(tmp3(1236).t.cpT0Cq);
+    const intl2 = tmp3(1233).intl;
+    obj2[1] = intl2.string(tmp3(1233).t.cpT0Cq);
     obj2[2] = function onPress() {
       return callback(table[10]).pop();
     };

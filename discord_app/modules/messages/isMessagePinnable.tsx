@@ -1,5 +1,5 @@
 // discord_app/modules/messages/isMessagePinnable.tsx
-import useCanUnarchiveThread from "../threads/ThreadHooks.tsx";
+import useCanStartPrivateThread from "../threads/ThreadHooks.tsx";
 import isSystemMessageDefault from "isSystemMessage.tsx";
 import closure_3 from "../../stores/PermissionStore.tsx";
 import ME from "../../Constants.tsx";
@@ -23,8 +23,8 @@ export default function isMessagePinnable(arg0, isSystemDM) {
     isActiveChannelOrUnarchivableThread = isPrivateResult;
   }
   if (isActiveChannelOrUnarchivableThread) {
-    isActiveChannelOrUnarchivableThread = useCanUnarchiveThread.getIsActiveChannelOrUnarchivableThread(isSystemDM);
-    const obj2 = useCanUnarchiveThread;
+    isActiveChannelOrUnarchivableThread = useCanStartPrivateThread.getIsActiveChannelOrUnarchivableThread(isSystemDM);
+    const obj2 = useCanStartPrivateThread;
   }
   if (isActiveChannelOrUnarchivableThread) {
     isActiveChannelOrUnarchivableThread = isSystemDM.type !== constants.GUILD_VOICE;

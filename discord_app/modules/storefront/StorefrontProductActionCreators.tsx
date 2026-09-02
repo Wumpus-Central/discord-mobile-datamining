@@ -53,7 +53,7 @@ function _maybeFetchProductsWithSkus() {
               let body;
               c5 = 1;
               fromServer = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else {
             if (1 === tmp7) {
@@ -231,7 +231,7 @@ function _maybeFetchProductsBySkuIds() {
               let body;
               c5 = 1;
               fromServer = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else {
             if (1 === tmp7) {

@@ -25,9 +25,9 @@ export default function useFavoritesGuildResetAction() {
     hasAccess = obj.useFavoritesAccess().hasAccess;
   }
   obj = { isAvailable: hasAccess, label: null, subLabel: null, perform: null };
-  const intl = tmp(1236).intl;
+  const intl = tmp(1233).intl;
   obj[1] = intl.string(messagesProxyDefault.YkET6R);
-  const intl2 = tmp(1236).intl;
+  const intl2 = tmp(1233).intl;
   obj[2] = intl2.string(messagesProxyDefault.ZzcwNk);
   obj[3] = callback;
   return obj;

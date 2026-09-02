@@ -467,9 +467,9 @@ export default function VibegrationsNativeComposer(projectId) {
               closure_1 = tmp5;
               closure_0 = tmp2;
               closure_0 = undefined;
-              obj1 = closure_1_1(5094);
+              obj1 = closure_1_1(5102);
               obj1 = { mediaType: "any", selectionLimit: null, skipProcessing: true };
-              obj1[1] = closure_1_0(6095).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE;
+              obj1[1] = closure_1_0(6103).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE;
               dependencyMap = 1;
               c3 = 1;
               const obj2 = { value: null, done: false };

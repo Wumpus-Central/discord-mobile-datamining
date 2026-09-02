@@ -4,7 +4,7 @@ import batchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchU
 import _mod4217 from "../../reanimated/ReanimatedRexport.tsx";
 import CONFIG_NEVER_ANIMATE from "../../../design/animation/reanimated/spring/spring.tsx";
 import VoiceMessageAnimationState from "../VoiceMessageConstants.tsx";
-import keys from "../../../../_runtime/00644_keys.js";
+import keys from "../../../../_runtime/00641_keys.js";
 
 ({ VoiceMessageAnimationState: obj1, WAVEFORM_WAVE_MAX_VALUE: c3 } = VoiceMessageAnimationState);
 let obj = keys.create(() => {
@@ -17,7 +17,7 @@ let obj = keys.create(() => {
     startTimeMillis: 0,
     waveform: false,
     waveformVersion: "flex",
-    showVoiceMessagesTooltip: "M4 2H3v1h1V2Z",
+    showVoiceMessagesTooltip: "M5 2H4v1h1V2Z",
     savedVoiceMessageUploadData: null,
     isVoiceMessageButtonMounted: 0.75,
     isUsingHoldGesture: null,
@@ -72,7 +72,7 @@ export const addVoiceMessageWave = function addVoiceMessageWave(arg0) {
   }
   const items = [arg0, waveformVersion];
   waveform.push(items);
-  waveformVersion(705).batchUpdates(() => {
+  waveformVersion(702).batchUpdates(() => {
     closure_1_4.setState({ waveformVersion: waveformVersion + 1 });
   });
 };
@@ -94,7 +94,7 @@ export const resetVoiceMessageState = function resetVoiceMessageState() {
       waveformVersion: 0,
       showRecordingOverlay: false,
       startTimeMillis: "Boolean",
-      savedVoiceMessageUploadData: "accessible",
+      savedVoiceMessageUploadData: "call",
     });
   });
   const currWaveHeight = obj.getState().currWaveHeight;

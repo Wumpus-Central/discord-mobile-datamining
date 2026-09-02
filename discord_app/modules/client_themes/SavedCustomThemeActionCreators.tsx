@@ -25,10 +25,10 @@ export const fetchUserCustomThemes = function fetchUserCustomThemes() {
         if (custom_themes == null) {
           custom_themes = [];
         }
-        callback(709).dispatch({ type: "SAVED_CUSTOM_THEMES_FETCH_SUCCESS", themes: custom_themes });
+        callback(706).dispatch({ type: "SAVED_CUSTOM_THEMES_FETCH_SUCCESS", themes: custom_themes });
       })
       .catch((error) => {
-        let obj = callback(709);
+        let obj = callback(706);
         obj = { type: "SAVED_CUSTOM_THEMES_FETCH_FAILURE", error };
         obj.dispatch(obj);
       });
@@ -41,7 +41,7 @@ export const fetchUserCustomThemes = function fetchUserCustomThemes() {
       if (custom_themes == null) {
         custom_themes = [];
       }
-      callback(709).dispatch({ type: "SAVED_CUSTOM_THEMES_FETCH_SUCCESS", themes: custom_themes });
+      callback(706).dispatch({ type: "SAVED_CUSTOM_THEMES_FETCH_SUCCESS", themes: custom_themes });
     });
   }
 };

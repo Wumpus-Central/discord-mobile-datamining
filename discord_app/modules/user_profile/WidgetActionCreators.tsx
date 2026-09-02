@@ -228,7 +228,7 @@ export default {
     ({ onProgress: importDefault, signal: dependencyMap } = obj);
     return callback(function* () {
       let upload_url = tmp2;
-      const HTTP2 = closure_1_0(530).HTTP;
+      const HTTP2 = closure_1_0(527).HTTP;
       obj1 = { url: null, body: null, rejectWithError: true };
       obj1[0] = closure_1_5.USER_PROFILE_WIDGET_CLIP_UPLOAD;
       const obj2 = { file_size: null };
@@ -237,7 +237,7 @@ export default {
       yield HTTP2.post(obj1);
       const body = arg1.body;
       upload_url = body.upload_url;
-      const HTTP = closure_1_0(530).HTTP;
+      const HTTP = closure_1_0(527).HTTP;
       const obj5 = {
         url: null,
         body: null,
@@ -249,7 +249,7 @@ export default {
       obj5[0] = upload_url;
       obj5[1] = body;
       const obj6 = { "Content-Type": null };
-      obj6[0] = closure_1_0(7374).WIDGET_CLIP_CONTENT_TYPE;
+      obj6[0] = closure_1_0(7383).WIDGET_CLIP_CONTENT_TYPE;
       obj5[2] = obj6;
       obj5[3] = function onRequestProgress(direction) {
         let tmp = "upload" === direction.direction;
@@ -312,9 +312,9 @@ export default {
           } else if (1 === tmp7) {
             constants = 0;
             let callback = closure_4;
-            let obj4 = callback(709);
+            let obj4 = callback(706);
             obj4.dispatch({ type: "WIDGET_SUGGESTED_FETCH_FAILURE" });
-            callback(1208).captureException(callback);
+            callback(1205).captureException(callback);
             throw callback;
           } else if (arg0 === 1) {
             c7 = 3;
@@ -342,10 +342,10 @@ export default {
               tmp9 = null != prop;
             }
             if (!tmp9) {
-              obj = callback(1208);
+              obj = callback(1205);
               obj.captureMessage("Suggested games or wishlist games not found");
             }
-            obj1 = callback(709);
+            obj1 = callback(706);
             const body2 = closure_0.body;
             let suggested_games1;
             if (body2 != null) {

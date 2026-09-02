@@ -1,12 +1,12 @@
 // discord_app/modules/conversations/components/native/ConversationNavigator.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
-import set from "../../../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import set from "../../../../utils/PlatformUtils.tsx";
 import map from "../../../../design/tokens/native/useToken.tsx";
 import getRootNavigationRef from "../../../main_tabs_v2/RootNavigationRef.native.tsx";
 import GenericHeaderTitle from "../../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createNativeStackNavigator from "../../../../../_runtime/07822_createNativeStackNavigator.js";
+import createNativeStackNavigator from "../../../../../_runtime/07831_createNativeStackNavigator.js";
 
 require = arg1;
 function HeaderWithBorder(arg0) {
@@ -29,11 +29,11 @@ const result = require("set").fileFinishedImporting(
 export default function ConversationNavigator(route) {
   const params = route.route.params;
   const channelId = params.channelId;
-  let obj = channelId(6008);
+  let obj = channelId(6016);
   obj = { id: "conversation-navigator", screenOptions: obj.useAccessibilityNativeStackOptions(), children: null };
   obj = {
     initialParams: { channelId, guildId: params.guildId },
-    name: channelId(7832).ConversationNavigatorScreens.LIST,
+    name: channelId(7841).ConversationNavigatorScreens.LIST,
     options(navigation) {
       let obj = {
         header(arg0) {
@@ -51,14 +51,14 @@ export default function ConversationNavigator(route) {
       return obj;
     },
     getComponent() {
-      return channelId(7834).default;
+      return channelId(7843).default;
     },
   };
   ({ Navigator, Screen } = Screen);
   const items = [
     callback(Screen, obj),
     callback(Screen.Screen, {
-      name: channelId(7832).ConversationNavigatorScreens.FOCUS,
+      name: channelId(7841).ConversationNavigatorScreens.FOCUS,
       options(route) {
         route = route.route;
         const obj = {
@@ -66,7 +66,7 @@ export default function ConversationNavigator(route) {
             const merged = Object.assign(arg0);
             return callback(closure_5, {});
           },
-          headerLeft: route(7607).getRenderBackImage(route.navigation),
+          headerLeft: route(7617).getRenderBackImage(route.navigation),
           headerTitle() {
             return closure_1_3(closure_1_1(closure_1_2[9]), {
               channelId: route.params.channelId,
@@ -84,7 +84,7 @@ export default function ConversationNavigator(route) {
         return obj;
       },
       getComponent() {
-        return channelId(12917).default;
+        return channelId(13139).default;
       },
     }),
   ];

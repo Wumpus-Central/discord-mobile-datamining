@@ -33,7 +33,7 @@ function createRTCConnection(arg0, arg1, arg2) {
       closure_0 = arg0;
       const callback = arg1;
       dependencyMap = arg2;
-      callback(709).wait(() => {
+      callback(706).wait(() => {
         let obj = callback(table[8]);
         obj = { type: "RTC_CONNECTION_STATE", state: closure_0 };
         const merged = Object.assign(callback);
@@ -65,7 +65,7 @@ function createRTCConnection(arg0, arg1, arg2) {
     _default.on(_default(4578).RTCConnectionEvent.Ping, (arg0, arg1) => {
       closure_0 = arg0;
       const callback = arg1;
-      callback(709).wait(() => {
+      callback(706).wait(() => {
         let obj = callback(closure_1_2[8]);
         obj = { type: "RTC_CONNECTION_PING", pings: closure_0, quality: callback };
         return obj.dispatch(obj);
@@ -73,7 +73,7 @@ function createRTCConnection(arg0, arg1, arg2) {
     });
     _default.on(_default(4578).RTCConnectionEvent.OutboundLossRate, (arg0) => {
       closure_0 = arg0;
-      callback(709).wait(() => {
+      callback(706).wait(() => {
         let obj = closure_1_1(closure_1_2[8]);
         obj = { type: "RTC_CONNECTION_LOSS_RATE", lossRate: closure_0 };
         return obj.dispatch(obj);
@@ -101,7 +101,7 @@ function createRTCConnection(arg0, arg1, arg2) {
       });
     });
     _default.on(_default(4578).RTCConnectionEvent.UsersMerged, (userIds, context) => {
-      let obj = callback(709);
+      let obj = callback(706);
       obj = { type: "RTC_CONNECTION_USERS_MERGED", userIds, context };
       obj.dispatch(obj);
     });
@@ -137,20 +137,20 @@ function createRTCConnection(arg0, arg1, arg2) {
       closure_0 = arg0;
       const callback = arg1;
       dependencyMap = arg2;
-      callback(709).wait(() => {
+      callback(706).wait(() => {
         let obj = callback(table[8]);
         obj = { type: "RTC_CONNECTION_PLATFORM", platform: callback, userId: closure_0, channelId: table };
         obj.dispatch(obj);
       });
     });
     _default.on(_default(4578).RTCConnectionEvent.SecureFramesUpdate, () => {
-      callback(709).wait(() => {
+      callback(706).wait(() => {
         callback(table[8]).dispatch({ type: "RTC_CONNECTION_SECURE_FRAMES_UPDATE" });
       });
     });
     _default.on(_default(4578).RTCConnectionEvent.RosterMapUpdate, (arg0) => {
       closure_0 = arg0;
-      callback(709).wait(() => {
+      callback(706).wait(() => {
         let obj = closure_1_1(closure_1_2[8]);
         obj = { type: "RTC_CONNECTION_ROSTER_MAP_UPDATE", userIds: closure_0 };
         obj.dispatch(obj);

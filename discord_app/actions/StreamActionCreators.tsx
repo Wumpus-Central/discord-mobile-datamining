@@ -6,7 +6,7 @@ import _modDef4491 from "ChannelActionCreators.tsx";
 import isStreamKey from "../modules/go_live/utils/StreamKeyUtils.tsx";
 import allowChannelAccess from "../utils/ChannelUtils.tsx";
 import transitionToStreamDefault from "../modules/go_live/utils/transitionToStream.native.tsx";
-import _modDef5355 from "SelectedChannelActionCreators.tsx";
+import _modDef5363 from "SelectedChannelActionCreators.tsx";
 import isPremiumResolution from "../utils/StreamQualityUtils.tsx";
 import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../modules/game_console/GameConsoleStore.tsx";
@@ -139,19 +139,19 @@ function _fetchStreamPreview() {
                 obj1[3] = timestamp;
                 const HTTPResult = HTTP(obj1);
                 c0 = HTTPResult;
-                let obj7 = lib(709);
+                let obj7 = lib(706);
                 const obj2 = { type: "STREAM_PREVIEW_FETCH_START", streamKey: null };
                 obj2[1] = HTTPResult;
                 obj7.dispatch(obj2);
                 c6 = 1;
-                HTTP = obj5(530).HTTP;
+                HTTP = obj5(527).HTTP;
                 let obj3 = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
                 obj3[0] = closure_1_13.STREAM_PREVIEW(HTTPResult);
                 const obj4 = { version: null };
                 timestamp = Date.now();
                 obj4[0] = timestamp;
                 obj3[1] = obj4;
-                obj5 = obj5(530);
+                obj5 = obj5(527);
                 result = obj5.rejectWithMigratedError();
                 obj3[3] = result;
                 const value = HTTP.get(obj3);
@@ -164,9 +164,9 @@ function _fetchStreamPreview() {
               c6 = 0;
               closure_3 = closure_5;
               if (429 === closure_3.status) {
-                dependencyMap = closure_3.body.retry_after * lib(687).Millis.SECOND;
+                dependencyMap = closure_3.body.retry_after * lib(684).Millis.SECOND;
               }
-              obj3 = lib(709);
+              obj3 = lib(706);
               obj5 = { type: "STREAM_PREVIEW_FETCH_FAIL", streamKey: null, retryAfter: null };
               obj5[1] = c0;
               obj5[2] = dependencyMap;
@@ -176,7 +176,7 @@ function _fetchStreamPreview() {
               throw arg1;
             } else if (arg0 !== 2) {
               lib = arg1;
-              obj = lib(709);
+              obj = lib(706);
               const obj6 = { type: "STREAM_PREVIEW_FETCH_SUCCESS", streamKey: null, previewURL: null };
               obj6[1] = c0;
               obj6[2] = lib.body.url;
@@ -223,7 +223,7 @@ function _notifyStreamStart() {
       obj1 = { url: null, oldFormErrors: true, trackedActionData: null, rejectWithError: true };
       obj1[0] = closure_1_13.STREAM_NOTIFY(callback);
       const obj2 = { event: null };
-      obj2[0] = callback(503).NetworkActionNames.STREAM_NOTIFY;
+      obj2[0] = callback(500).NetworkActionNames.STREAM_NOTIFY;
       obj1[2] = obj2;
       yield v0(4713).post(obj1);
       if (1 === tmp6) {
@@ -406,8 +406,8 @@ export const joinPrivateChannelAndWatchStream = function joinPrivateChannelAndWa
   importDefault = require("../modules/go_live/utils/StreamKeyUtils.tsx").decodeStreamKey(streamKey);
   const voiceChannelId = store2.getVoiceChannelId();
   if (tmp4) {
-    _modDef5355.disconnect();
-    const obj2 = _modDef5355;
+    _modDef5363.disconnect();
+    const obj2 = _modDef5363;
   }
   let obj = isStreamKey;
   tmp4 = null != voiceChannelId && voiceChannelId !== arg0;

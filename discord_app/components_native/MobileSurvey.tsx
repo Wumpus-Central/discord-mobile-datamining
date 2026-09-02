@@ -108,8 +108,8 @@ export default function MobileSurvey() {
       renderConfirmRightIcon: null,
     };
     ({ prompt: obj2[0], cta: obj2[1] } = stateFromStores);
-    const intl = tmp(1236).intl;
-    obj[2] = intl.string(tmp(1236).t.f3Pet9);
+    const intl = tmp(1233).intl;
+    obj[2] = intl.string(tmp(1233).t.f3Pet9);
     obj[3] = function onConfirm() {
       stateFromStores(closure_1_2[11]).openURL(stateFromStores.url);
       const obj = stateFromStores(closure_1_2[11]);

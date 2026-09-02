@@ -62,7 +62,7 @@ function _createStageChannelForEvent() {
               lib2 = undefined;
               c5 = 1;
               c6 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -265,7 +265,7 @@ function _setEventAsActive() {
               let guild_id;
               name = 1;
               id = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else {
             if (1 === tmp5) {

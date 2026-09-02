@@ -90,11 +90,11 @@ export default function ChooseAccount() {
                   cancelText: null,
                   isDismissable: true,
                 };
-                const intl3 = lib(1236).intl;
-                obj1[0] = intl3.string(lib(1236).t.n0Fbg6);
-                const intl4 = lib(1236).intl;
+                const intl3 = lib(1233).intl;
+                obj1[0] = intl3.string(lib(1233).t.n0Fbg6);
+                const intl4 = lib(1233).intl;
                 let intl = intl4.formatToPlainString;
-                let intl2 = lib(1236).t.phEQmS;
+                let intl2 = lib(1233).t.phEQmS;
                 if ("0" === lib.discriminator) {
                   const _HermesInternal2 = HermesInternal;
                   let combined = "" + string.username;
@@ -105,12 +105,12 @@ export default function ChooseAccount() {
                 const obj2 = { username: null };
                 obj2[0] = combined;
                 obj1[1] = intl(intl2, obj2);
-                intl = tmp31(1236).intl;
-                obj1[2] = intl.string(lib(1236).t.N86XcP);
-                obj1[3] = lib(1297).ButtonColors.RED;
-                intl2 = tmp31(1236).intl;
+                intl = tmp31(1233).intl;
+                obj1[2] = intl.string(lib(1233).t.N86XcP);
+                obj1[3] = lib(1296).ButtonColors.RED;
+                intl2 = tmp31(1233).intl;
                 string = intl2.string;
-                obj1[4] = string(lib(1236).t["ETE/oC"]);
+                obj1[4] = string(lib(1233).t["ETE/oC"]);
                 obj1 = closure_1_1(4858).confirm(obj1);
                 dependencyMap = 1;
                 c4 = 1;
@@ -128,7 +128,7 @@ export default function ChooseAccount() {
               if (arg1) {
                 obj = closure_1_1(4445);
                 obj.hideActionSheet();
-                obj1 = closure_1_2(11986);
+                obj1 = closure_1_2(12210);
                 obj1.removeAccount(lib.id);
               }
               c4 = 3;
@@ -169,7 +169,7 @@ export default function ChooseAccount() {
   let intl2 = require("../../../intl/index.native.tsx").intl;
   obj[2] = intl2.string(require("../../../intl/index.native.tsx").t["0M5fN7"]);
   obj[1] = callback(require("../../../design/components/Text/native/Text.tsx").Text, obj);
-  obj[2] = multiAccountUsers(13603);
+  obj[2] = multiAccountUsers(13826);
   obj[4] = tmp.container;
   obj1 = { style: tmp.mainCard, children: null };
   let items = [
@@ -243,11 +243,11 @@ export default function ChooseAccount() {
     }),
   ];
   let obj2 = { leading: null, label: null, labelStyle: null, onPress: null };
-  const tmp2 = multiAccountUsers(7745);
+  const tmp2 = multiAccountUsers(7754);
   obj2[0] = callback(require("../../../design/void/Form/native/index.tsx").FormRow.Icon, {
-    themedColor: multiAccountUsers(712).colors.TEXT_LINK,
+    themedColor: multiAccountUsers(709).colors.TEXT_LINK,
     size: require("../../../design/void/native.tsx").Icon.Sizes.SMALL_20,
-    source: multiAccountUsers(15544),
+    source: multiAccountUsers(15775),
   });
   let intl3 = require("../../../intl/index.native.tsx").intl;
   obj2[1] = intl3.string(require("../../../intl/index.native.tsx").t.bPP34Q);

@@ -15,12 +15,12 @@ export default {
     obj = { type: "DRAFT_COMMAND_CLEAR", channelId, draftType };
     obj.dispatch(obj);
   },
-  saveDraft(id, result, ChannelMessage, toDraftCommandResult) {
+  saveDraft(id, result1, ChannelMessage, toDraftCommandResult) {
     let obj = dispatcherDefault;
     obj = {
       type: "DRAFT_SAVE",
       channelId: id,
-      draft: result,
+      draft: result1,
       draftType: ChannelMessage,
       command: toDraftCommandResult,
     };

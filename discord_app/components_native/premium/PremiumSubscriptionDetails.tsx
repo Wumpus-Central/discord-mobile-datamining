@@ -3,38 +3,38 @@ import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx
 import getPremiumPlanItemDefault from "../../utils/PremiumUtils.tsx";
 import contextDefault from "../../modules/app_analytics/useAnalyticsLocations.tsx";
 import QUICK_SWITCHERDefault from "../../modules/app_analytics/AnalyticsLocation.tsx";
-import registerAssetDefault from "../../../_runtime/07977_registerAsset.js";
-import registerAssetDefault2 from "../../../_runtime/08356_registerAsset.js";
-import registerAssetDefault3 from "../../../_runtime/10487_registerAsset.js";
-import registerAssetDefault4 from "../../../_runtime/10488_registerAsset.js";
-import registerAssetDefault5 from "../../../_runtime/10489_registerAsset.js";
-import registerAssetDefault6 from "../../../_runtime/10490_registerAsset.js";
-import registerAssetDefault7 from "../../../_runtime/10491_registerAsset.js";
-import registerAssetDefault8 from "../../../_runtime/10493_registerAsset.js";
-import registerAssetDefault9 from "../../../_runtime/10496_registerAsset.js";
-import registerAssetDefault10 from "../../../_runtime/12971_registerAsset.js";
-import registerAssetDefault11 from "../../../_runtime/12972_registerAsset.js";
-import registerAssetDefault12 from "../../../_runtime/12973_registerAsset.js";
-import registerAssetDefault13 from "../../../_runtime/12974_registerAsset.js";
-import registerAssetDefault14 from "../../../_runtime/12975_registerAsset.js";
-import registerAssetDefault15 from "../../../_runtime/12976_registerAsset.js";
-import registerAssetDefault16 from "../../../_runtime/12977_registerAsset.js";
-import registerAssetDefault17 from "../../../_runtime/12978_registerAsset.js";
-import registerAssetDefault18 from "../../../_runtime/12979_registerAsset.js";
-import registerAssetDefault19 from "../../../_runtime/12980_registerAsset.js";
-import registerAssetDefault20 from "../../../_runtime/12981_registerAsset.js";
-import registerAssetDefault21 from "../../../_runtime/12982_registerAsset.js";
-import registerAssetDefault22 from "../../../_runtime/12983_registerAsset.js";
-import registerAssetDefault23 from "../../../_runtime/12984_registerAsset.js";
-import registerAssetDefault24 from "../../../_runtime/12985_registerAsset.js";
-import registerAssetDefault25 from "../../../_runtime/12986_registerAsset.js";
-import registerAssetDefault26 from "../../../_runtime/12987_registerAsset.js";
-import registerAssetDefault27 from "../../../_runtime/12988_registerAsset.js";
-import registerAssetDefault28 from "../../../_runtime/12989_registerAsset.js";
-import registerAssetDefault29 from "../../../_runtime/12990_registerAsset.js";
-import registerAssetDefault30 from "../../../_runtime/12991_registerAsset.js";
-import registerAssetDefault31 from "../../../_runtime/12992_registerAsset.js";
-import registerAssetDefault32 from "../../../_runtime/12993_registerAsset.js";
+import registerAssetDefault from "../../../_runtime/07986_registerAsset.js";
+import registerAssetDefault2 from "../../../_runtime/08365_registerAsset.js";
+import registerAssetDefault3 from "../../../_runtime/10708_registerAsset.js";
+import registerAssetDefault4 from "../../../_runtime/10709_registerAsset.js";
+import registerAssetDefault5 from "../../../_runtime/10710_registerAsset.js";
+import registerAssetDefault6 from "../../../_runtime/10711_registerAsset.js";
+import registerAssetDefault7 from "../../../_runtime/10712_registerAsset.js";
+import registerAssetDefault8 from "../../../_runtime/10714_registerAsset.js";
+import registerAssetDefault9 from "../../../_runtime/10717_registerAsset.js";
+import registerAssetDefault10 from "../../../_runtime/13193_registerAsset.js";
+import registerAssetDefault11 from "../../../_runtime/13194_registerAsset.js";
+import registerAssetDefault12 from "../../../_runtime/13195_registerAsset.js";
+import registerAssetDefault13 from "../../../_runtime/13196_registerAsset.js";
+import registerAssetDefault14 from "../../../_runtime/13197_registerAsset.js";
+import registerAssetDefault15 from "../../../_runtime/13198_registerAsset.js";
+import registerAssetDefault16 from "../../../_runtime/13199_registerAsset.js";
+import registerAssetDefault17 from "../../../_runtime/13200_registerAsset.js";
+import registerAssetDefault18 from "../../../_runtime/13201_registerAsset.js";
+import registerAssetDefault19 from "../../../_runtime/13202_registerAsset.js";
+import registerAssetDefault20 from "../../../_runtime/13203_registerAsset.js";
+import registerAssetDefault21 from "../../../_runtime/13204_registerAsset.js";
+import registerAssetDefault22 from "../../../_runtime/13205_registerAsset.js";
+import registerAssetDefault23 from "../../../_runtime/13206_registerAsset.js";
+import registerAssetDefault24 from "../../../_runtime/13207_registerAsset.js";
+import registerAssetDefault25 from "../../../_runtime/13208_registerAsset.js";
+import registerAssetDefault26 from "../../../_runtime/13209_registerAsset.js";
+import registerAssetDefault27 from "../../../_runtime/13210_registerAsset.js";
+import registerAssetDefault28 from "../../../_runtime/13211_registerAsset.js";
+import registerAssetDefault29 from "../../../_runtime/13212_registerAsset.js";
+import registerAssetDefault30 from "../../../_runtime/13213_registerAsset.js";
+import registerAssetDefault31 from "../../../_runtime/13214_registerAsset.js";
+import registerAssetDefault32 from "../../../_runtime/13215_registerAsset.js";
 import openPremiumPlanWhatYouLoseActionSheetDefault from "../../modules/premium/native/openPremiumPlanWhatYouLoseActionSheet.tsx";
 import createSubscriptionInvoicePreview from "../../modules/premium/PremiumSubscriptionInvoice.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
@@ -103,16 +103,16 @@ function _handleCancelSubscription() {
               obj1[1] = closure_1;
               obj1[2] = dependencyMap;
               obj1[3] =
-                callback(10456).STEP_ANALYTICS_NAMES[
-                  callback(undefined, 10456).CancellationFlowSteps.MOBILE_SUBSCRIPTION_MANAGE
+                callback(10677).STEP_ANALYTICS_NAMES[
+                  callback(undefined, 10677).CancellationFlowSteps.MOBILE_SUBSCRIPTION_MANAGE
                 ];
-              const result = callback(10456).trackPremiumSubscriptionCancellationFlowStep(obj1);
+              const result = callback(10677).trackPremiumSubscriptionCancellationFlowStep(obj1);
               let isPurchasedViaApple;
               if (callback != null) {
                 isPurchasedViaApple = tmp15.isPurchasedViaApple;
               }
               if (isPurchasedViaApple) {
-                let tmp18Result = tmp18(10794);
+                let tmp18Result = tmp18(11014);
                 c4 = 1;
                 c3 = 1;
                 const obj2 = { value: null, done: false };
@@ -130,7 +130,7 @@ function _handleCancelSubscription() {
                   );
                 }
               }
-              const obj7 = callback(10456);
+              const obj7 = callback(10677);
             }
           } else if (arg0 === 1) {
             c3 = 3;
@@ -292,8 +292,8 @@ function _onResubscribeClick() {
               closure_1 = tmp2;
               if (lib.isACOM) {
                 obj1 = { requestIdentifier: null, subscriptionId: null };
-                const obj9 = lib(7164);
-                obj1[0] = lib(514).v4();
+                const obj9 = lib(7173);
+                obj1[0] = lib(511).v4();
                 obj1[1] = tmp25.id;
                 dependencyMap = 1;
                 c3 = 1;
@@ -301,7 +301,7 @@ function _onResubscribeClick() {
                 obj2[0] = obj9.resubscribeGenericSubscription(obj1, true);
                 return obj2;
               } else if (tmp25.isPurchasedViaApple) {
-                obj6 = lib(10794);
+                obj6 = lib(11014);
                 dependencyMap = 3;
                 c3 = 1;
                 const obj3 = { value: null, done: false };
@@ -840,8 +840,8 @@ export default function PremiumSubscriptionDetails(subscription) {
     obj[0] = style;
     obj1 = { style: null, accessibilityRole: "header", variant: "eyebrow", color: "text-default", children: null };
     obj1[0] = tmp.title;
-    const intl = tmp4(1236).intl;
-    obj1[4] = intl.string(tmp4(1236).t.ITurwY);
+    const intl = tmp4(1233).intl;
+    obj1[4] = intl.string(tmp4(1233).t.ITurwY);
     const items = [callback3(tmp4(4474).Text, obj1), , , ,];
     let tmp9Result = null != subscription.renewalMutations;
     if (tmp9Result) {
@@ -851,14 +851,14 @@ export default function PremiumSubscriptionDetails(subscription) {
       const obj2 = { subscription: null, renewalMutations: null };
       obj2[0] = subscription;
       obj2[1] = subscription.renewalMutations;
-      tmp9Result = tmp9(tmp2(13005), obj2);
+      tmp9Result = tmp9(tmp2(13227), obj2);
     }
     items[1] = tmp9Result;
     tmp9Result = subscription.status === constants4.ACCOUNT_HOLD;
     if (tmp9Result) {
       const obj3 = { subscription: null };
       obj3[0] = subscription;
-      tmp9Result = tmp9(tmp2(13006), obj3);
+      tmp9Result = tmp9(tmp2(13228), obj3);
     }
     items[2] = tmp9Result;
     const obj4 = { subscription: null, renewalInvoicePreview: null, onClickManagePremiumGuild: null };
@@ -868,8 +868,8 @@ export default function PremiumSubscriptionDetails(subscription) {
     items[3] = callback3(PremiumSubscriptionHeader, obj4);
     const obj5 = { style: null, variant: "text-sm/medium", children: null };
     obj5[0] = tmp.desktopSubtext;
-    const intl2 = tmp4(1236).intl;
-    obj5[2] = intl2.string(tmp4(1236).t["MTG+3O"]);
+    const intl2 = tmp4(1233).intl;
+    obj5[2] = intl2.string(tmp4(1233).t["MTG+3O"]);
     items[4] = callback3(tmp4(4474).Text, obj5);
     obj[1] = items;
     tmp7Result = closure_19(closure_9, obj);

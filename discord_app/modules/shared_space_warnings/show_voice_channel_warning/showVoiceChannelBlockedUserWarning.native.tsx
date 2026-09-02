@@ -19,15 +19,15 @@ export const showVoiceChannelBlockedUserWarning = function showVoiceChannelBlock
     obj = { channelId: null, blockedUserId: null, impressionName: null, impressionProperties: null };
     obj[0] = channelId;
     obj[1] = id;
-    obj[2] = tmp2(503).ImpressionNames.VOICE_CHANNEL_BLOCKED_USER_WARNING;
+    obj[2] = tmp2(500).ImpressionNames.VOICE_CHANNEL_BLOCKED_USER_WARNING;
     obj = { channel_id: null, blocked_user_ids: null, warning_surface: null };
     obj[0] = channelId;
     const items = [id];
     obj[1] = items;
     obj[2] = constants.POST_JOIN_SHEET;
     obj[3] = obj;
-    obj.openLazy(tmp2(2009)(13394, dependencyMap.paths), "gdm_blocked_user_action_sheet", obj);
-    const tmp11 = tmp2(2009)(13394, dependencyMap.paths);
+    obj.openLazy(tmp2(2008)(13617, dependencyMap.paths), "gdm_blocked_user_action_sheet", obj);
+    const tmp11 = tmp2(2008)(13617, dependencyMap.paths);
   } else {
     callback();
   }

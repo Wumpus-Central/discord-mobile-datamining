@@ -19,10 +19,10 @@ export const useTieredTenureBadgeClickHandler = function useTieredTenureBadgeCli
   let isPremiumSubscriber = require("../../../useIsPremiumSubscriber.tsx").useIsPremiumSubscriber(PremiumTypes.TIER_2);
   let tmp4 = typeof id === "string";
   if (typeof id === "string") {
-    let tmpResult = tmp(7379);
+    let tmpResult = tmp(7388);
     tmp4 = null != tmpResult.getTieredTenureBadge(id);
   }
-  tmpResult = tmp(589);
+  tmpResult = tmp(586);
   const items = [isPremiumSubscriber];
   const stateFromStores = tmpResult.useStateFromStores(items, () => isPremiumSubscriber.getCurrentUser());
   if (!tmp4) {

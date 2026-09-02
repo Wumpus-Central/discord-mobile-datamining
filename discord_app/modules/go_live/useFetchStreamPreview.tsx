@@ -82,5 +82,5 @@ export default function useFetchStreamPreview(arg0, arg1, arg2) {
     }
     return obj;
   }
-  obj = { previewUrl: "PX_16", isLoading: null };
+  obj = { previewUrl: "PX_16", isLoading: true };
 }

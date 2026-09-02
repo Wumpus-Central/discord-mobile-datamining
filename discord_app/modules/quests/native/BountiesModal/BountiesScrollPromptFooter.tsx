@@ -32,7 +32,7 @@ function BountiesScrollPromptFooterContent(zIndex) {
     }
     return tmp2;
   }, items);
-  let obj = zIndex(589);
+  let obj = zIndex(586);
   const items1 = [closure_5];
   const stateFromStores = obj.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
   const tmp6 = useSafeAreaInsetsDefault();

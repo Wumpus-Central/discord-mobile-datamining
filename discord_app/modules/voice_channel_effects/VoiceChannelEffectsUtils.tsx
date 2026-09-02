@@ -2,15 +2,6 @@
 import getAvatarURLDefault from "../../utils/AvatarUtils.tsx";
 import parseRawEmojiObjectDefault from "../emojis/UnicodeEmojis.tsx";
 import getEmojiUnavailableReasonDefault from "../../utils/EmojiUtils.tsx";
-import _modDef6194 from "../../../_runtime/metro/06194__.js";
-import _modDef6195 from "../../../_runtime/metro/06195__.js";
-import _modDef6196 from "../../../_runtime/metro/06196__.js";
-import _modDef6197 from "../../../_runtime/metro/06197__.js";
-import _modDef6198 from "../../../_runtime/metro/06198__.js";
-import _modDef6199 from "../../../_runtime/metro/06199__.js";
-import _modDef6200 from "../../../_runtime/metro/06200__.js";
-import _modDef6201 from "../../../_runtime/metro/06201__.js";
-import _modDef6202 from "../../../_runtime/metro/06202__.js";
 import _modDef6203 from "../../../_runtime/metro/06203__.js";
 import _modDef6204 from "../../../_runtime/metro/06204__.js";
 import _modDef6205 from "../../../_runtime/metro/06205__.js";
@@ -24,23 +15,23 @@ import _modDef6212 from "../../../_runtime/metro/06212__.js";
 import _modDef6213 from "../../../_runtime/metro/06213__.js";
 import _modDef6214 from "../../../_runtime/metro/06214__.js";
 import _modDef6215 from "../../../_runtime/metro/06215__.js";
+import _modDef6216 from "../../../_runtime/metro/06216__.js";
+import _modDef6217 from "../../../_runtime/metro/06217__.js";
+import _modDef6218 from "../../../_runtime/metro/06218__.js";
+import _modDef6219 from "../../../_runtime/metro/06219__.js";
+import _modDef6220 from "../../../_runtime/metro/06220__.js";
+import _modDef6221 from "../../../_runtime/metro/06221__.js";
+import _modDef6222 from "../../../_runtime/metro/06222__.js";
+import _modDef6223 from "../../../_runtime/metro/06223__.js";
+import _modDef6224 from "../../../_runtime/metro/06224__.js";
 import closure_3 from "../../stores/UserStore.tsx";
 import VoiceChannelEffectAnimationType from "VoiceChannelEffectsConstants.tsx";
 import importDefaultResult from "../../../_runtime/00012_apply.js";
 
 const require = arg1;
 ({ EMOJI_SIZE: c4, VoiceChannelEffectAnimationType } = VoiceChannelEffectAnimationType);
-const items = [_modDef6194];
+const items = [_modDef6203];
 const items1 = [
-  _modDef6195,
-  _modDef6196,
-  _modDef6197,
-  _modDef6198,
-  _modDef6199,
-  _modDef6200,
-  _modDef6201,
-  _modDef6202,
-  _modDef6203,
   _modDef6204,
   _modDef6205,
   _modDef6206,
@@ -53,6 +44,15 @@ const items1 = [
   _modDef6213,
   _modDef6214,
   _modDef6215,
+  _modDef6216,
+  _modDef6217,
+  _modDef6218,
+  _modDef6219,
+  _modDef6220,
+  _modDef6221,
+  _modDef6222,
+  _modDef6223,
+  _modDef6224,
 ];
 let obj = { [VoiceChannelEffectAnimationType.BASIC]: items, [VoiceChannelEffectAnimationType.PREMIUM]: items1 };
 const memoizeResult = importDefaultResult.memoize((arg0) => {
@@ -165,8 +165,8 @@ export const getEffectAnnouncement = function getEffectAnnouncement(closure_7) {
     if (obj.length < 1) {
       return "";
     } else if (1 === obj.length) {
-      const intl2 = emojiName(1236).intl;
-      yZYxzF = emojiName(1236).t.yZYxzF;
+      const intl2 = emojiName(1233).intl;
+      yZYxzF = emojiName(1233).t.yZYxzF;
       const user = authStore.getUser(obj[0]);
       let username;
       if (user != null) {
@@ -177,7 +177,7 @@ export const getEffectAnnouncement = function getEffectAnnouncement(closure_7) {
       obj[1] = joined;
       let formatToPlainStringResult = intl2.formatToPlainString(yZYxzF, obj);
     } else if (2 === obj.length) {
-      const intl = emojiName(1236).intl;
+      const intl = emojiName(1233).intl;
       const user1 = authStore.getUser(obj[0]);
       let username1;
       if (user1 != null) {
@@ -192,10 +192,10 @@ export const getEffectAnnouncement = function getEffectAnnouncement(closure_7) {
       }
       obj[1] = username2;
       obj[2] = joined;
-      formatToPlainStringResult = intl.formatToPlainString(emojiName(1236).t["8rmtbd"], obj);
+      formatToPlainStringResult = intl.formatToPlainString(emojiName(1233).t["8rmtbd"], obj);
       const obj2 = authStore;
     } else {
-      const intl3 = emojiName(1236).intl;
+      const intl3 = emojiName(1233).intl;
       const user3 = authStore.getUser(obj[0]);
       let username3;
       if (user3 != null) {
@@ -211,7 +211,7 @@ export const getEffectAnnouncement = function getEffectAnnouncement(closure_7) {
       obj[1] = username4;
       obj[2] = obj.length - 2;
       obj[3] = joined;
-      formatToPlainStringResult = intl3.formatToPlainString(emojiName(1236).t["/okjv0"], obj);
+      formatToPlainStringResult = intl3.formatToPlainString(emojiName(1233).t["/okjv0"], obj);
       const obj7 = authStore;
     }
     const iter2 = found1.uniq();

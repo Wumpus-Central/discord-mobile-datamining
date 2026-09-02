@@ -48,7 +48,7 @@ export default function FamilyCenterActivityPurchaseRow(arg0) {
     return null;
   } else {
     let combined = displayName;
-    const tmp5Result = tmp5(6081);
+    const tmp5Result = tmp5(6089);
     if (null != typeName) {
       const _HermesInternal = HermesInternal;
       combined = "" + displayName + " \u2022 " + typeName;
@@ -57,7 +57,7 @@ export default function FamilyCenterActivityPurchaseRow(arg0) {
     obj[0] = tmp.container;
     obj = { displayName: null, product: null, isSubscription: null, subscriptionPlanId: null };
     obj[0] = displayName;
-    const formatPriceResult = tmp5(6081).formatPrice(total, currency);
+    const formatPriceResult = tmp5(6089).formatPrice(total, currency);
     if (product == null) {
       product = null;
     }

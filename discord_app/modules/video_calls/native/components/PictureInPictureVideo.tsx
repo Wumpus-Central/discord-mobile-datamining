@@ -1,6 +1,6 @@
 // discord_app/modules/video_calls/native/components/PictureInPictureVideo.tsx
-import set from "../../../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import set from "../../../../utils/PlatformUtils.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import useShouldForcePipOrientation from "useShouldForcePipOrientation.tsx";
 import usePipDimensionsDefault from "usePipDimensions.tsx";

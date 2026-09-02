@@ -35,7 +35,7 @@ function _emailSupport() {
             const tmp10 = closure_1_1(4190);
             closure_1 = tmp10;
             const openURL = tmp10.openURL;
-            obj1 = closure_1_1(1995);
+            obj1 = closure_1_1(1994);
             c2 = 1;
             dependencyMap = 1;
             obj1 = { value: null, done: false };

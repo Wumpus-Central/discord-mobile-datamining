@@ -34,8 +34,8 @@ export default function getXboxURIForChannel(channelId) {
     name = guild.name;
   }
   if (name == null) {
-    const intl = tmp5(1236).intl;
-    name = intl.string(tmp5(1236).t.LJpTRF);
+    const intl = tmp5(1233).intl;
+    name = intl.string(tmp5(1233).t.LJpTRF);
   }
   obj[3] = name;
   obj[4] = closure_3.isSelfMute();
@@ -43,10 +43,10 @@ export default function getXboxURIForChannel(channelId) {
   obj[6] = nonce;
   const str = closure_6(obj);
   if (forQRCode) {
-    const aPIBaseURL = tmp5(530).getAPIBaseURL();
+    const aPIBaseURL = tmp5(527).getAPIBaseURL();
     const _HermesInternal2 = HermesInternal;
     let combined = "" + aPIBaseURL + constants.XBOX_HANDOFF + "?" + str.toString();
-    const tmp5Result = tmp5(530);
+    const tmp5Result = tmp5(527);
   } else {
     const _HermesInternal = HermesInternal;
     combined = "" + closure_7 + "?" + str.toString();

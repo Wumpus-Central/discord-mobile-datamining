@@ -65,7 +65,7 @@ function _startNativeImpression() {
               let callback3;
               signAbort = 1;
               logger = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -91,8 +91,8 @@ function _startNativeImpression() {
               if (null == logger) {
                 const _HermesInternal = HermesInternal;
                 logger.warn("No strategy for " + c2 + "; impression " + callback + " is unattributed");
-                const result = callback(11092).trackIosAttributionImpression(
-                  callback(11092).IosAttributionImpressionResult.NO_FRAMEWORK,
+                const result = callback(11312).trackIosAttributionImpression(
+                  callback(11312).IosAttributionImpressionResult.NO_FRAMEWORK,
                   c2,
                 );
                 callback3(callback, signAbort);
@@ -116,7 +116,7 @@ function _startNativeImpression() {
                 signAbort = 2;
                 logger = 1;
                 const obj3 = { value: null, done: false };
-                obj3[0] = callback(11095).fetchIosAttributionSignedPayloads(obj2);
+                obj3[0] = callback(11315).fetchIosAttributionSignedPayloads(obj2);
                 return obj3;
               }
             }
@@ -150,9 +150,9 @@ function _startNativeImpression() {
                   }
                   callback2 = tmp38;
                   if (null == callback2) {
-                    let obj6 = callback(11092);
+                    let obj6 = callback(11312);
                     const result1 = obj6.trackIosAttributionImpression(
-                      callback(11092).IosAttributionImpressionResult.SIGN_FAILED,
+                      callback(11312).IosAttributionImpressionResult.SIGN_FAILED,
                       c2,
                       callback,
                     );
@@ -162,7 +162,7 @@ function _startNativeImpression() {
                     obj5[0] = undefined;
                     return obj5;
                   } else {
-                    obj4 = callback(11091);
+                    obj4 = callback(11311);
                     const _JSON = JSON;
                     signAbort = 3;
                     logger = 1;
@@ -189,9 +189,9 @@ function _startNativeImpression() {
               }
             }
             if (null == callback3) {
-              obj1 = callback(11092);
+              obj1 = callback(11312);
               const result2 = obj1.trackIosAttributionImpression(
-                callback(11092).IosAttributionImpressionResult.NO_TOKEN,
+                callback(11312).IosAttributionImpressionResult.NO_TOKEN,
                 c2,
                 callback,
               );
@@ -201,9 +201,9 @@ function _startNativeImpression() {
               obj8[0] = undefined;
               return obj8;
             } else {
-              obj = callback(11092);
+              obj = callback(11312);
               const result3 = obj.trackIosAttributionImpression(
-                callback(11092).IosAttributionImpressionResult.REGISTERED,
+                callback(11312).IosAttributionImpressionResult.REGISTERED,
                 c2,
                 callback,
               );
@@ -335,35 +335,100 @@ function _getStoreKitCredential() {
     c3 = 0;
     c4 = 0;
     const iter = (function* (arg0) {
-      let table = tmp2;
-      impressionId = impressionId.impressionId;
-      yield "PX_16";
-      table = impressionId(table[3]).getActiveIosAttributionFramework();
-      if (null != table) {
-        if (null != table2[table]) {
-          table2 = 2;
-          c4 = 1;
-          const obj2 = { value: null, done: false };
-          obj2[0] = (function getImpressionToken(impressionId) {
-            const self = this;
-            const apply = closure_10.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      if (c4 === 2) {
+        c4 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c4 = 2;
+          if (0 === table2) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
             } else {
-              applyArgumentsResult = apply(self, arguments);
+              closure_2 = tmp5;
+              let table = tmp2;
+              let impressionId;
+              impressionId = impressionId.impressionId;
+              table = undefined;
+              closure_2 = undefined;
+              table2 = 1;
+              c4 = 1;
+              return { value: "PX_16", done: true };
             }
-            return applyArgumentsResult;
-          })(impressionId);
-          return obj2;
+          } else if (1 === tmp5) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj1 = { value: null, done: true };
+              obj1[0] = arg1;
+              return obj1;
+            } else {
+              table = impressionId(table[3]).getActiveIosAttributionFramework();
+              if (null != table) {
+                if (null != table2[table]) {
+                  table2 = 2;
+                  c4 = 1;
+                  const obj2 = { value: null, done: false };
+                  obj2[0] = (function getImpressionToken(impressionId) {
+                    const self = this;
+                    const apply = closure_10.apply;
+                    if (typeof apply === "unknown") {
+                      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                    } else {
+                      applyArgumentsResult = apply(self, arguments);
+                    }
+                    return applyArgumentsResult;
+                  })(impressionId);
+                  return obj2;
+                }
+              }
+              c4 = 3;
+              return { value: "HermesInternal", done: null };
+            }
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj3 = { value: null, done: true };
+            obj3[0] = arg1;
+            return obj3;
+          } else {
+            closure_2 = arg1;
+            let tmp9;
+            if (null != closure_2) {
+              obj = { impressionToken: null };
+              obj[0] = closure_2;
+              tmp9 = obj;
+            }
+            c4 = 3;
+            const obj4 = { value: null, done: true };
+            obj4[0] = tmp9;
+            return obj4;
+          }
+        } catch (tmp19) {
+          c4 = tmp;
+          throw tmp19;
         }
       }
-      closure_2 = yield "HermesInternal";
-      if (null != closure_2) {
-        obj = { impressionToken: null };
-        obj[0] = closure_2;
-        const tmp9 = obj;
-      }
-      return tmp9;
     })();
     iter.next();
     return iter;

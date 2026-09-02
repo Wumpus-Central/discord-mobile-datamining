@@ -63,7 +63,7 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
   let isScreenLandscape;
   closure_18 = undefined;
   let tmp = callback();
-  let obj = sharedValue(8145);
+  let obj = sharedValue(8153);
   obj1 = importAllResult;
   const ref = importAllResult.useRef(null);
   sharedValue = ref;
@@ -85,9 +85,9 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
   fn.__workletHash = 23826674246;
   fn.__initData = closure_13;
   const animatedStyle = obj3.useAnimatedStyle(fn);
-  let obj4 = sharedValue(8145);
+  let obj4 = sharedValue(8153);
   const sectionName = obj4.getSectionName(application);
-  let obj5 = sharedValue(8145);
+  let obj5 = sharedValue(8153);
   str = obj5.getSectionDescription(application);
   let tmp28Result1 = null != str;
   if (tmp28Result1) {
@@ -110,14 +110,14 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
   const memo = obj1.useMemo(() => {
     let result = null;
     if (null != str) {
-      result = sharedValue(9038).parseBioReactWithCachedAST(tmp);
-      const obj = sharedValue(9038);
+      result = sharedValue(9052).parseBioReactWithCachedAST(tmp);
+      const obj = sharedValue(9052);
     }
     return result;
   }, items);
   const tmp6Result1 = first1(obj1.useState(false), 2);
-  isScreenLandscape = sharedValue(5071).useIsScreenLandscape();
-  const tmp24 = first(8576)(isScreenLandscape);
+  isScreenLandscape = sharedValue(5079).useIsScreenLandscape();
+  const tmp24 = first(8591)(isScreenLandscape);
   closure_18 = tmp24;
   const items1 = [isScreenLandscape, tmp24];
   const effect = obj1.useEffect(() => {
@@ -128,7 +128,7 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
     }
   }, items1);
   let tmp27 = first;
-  const tmp2Result = sharedValue(5071);
+  const tmp2Result = sharedValue(5079);
   if (first) {
     tmp27 = !first1;
   }
@@ -164,8 +164,8 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
     obj3 = { style: null, children: null };
     obj3[0] = tmp.partnerLabelWrapper;
     obj4 = { variant: "text-xs/medium", color: "text-default", children: null };
-    const intl = tmp2(1236).intl;
-    obj4[2] = intl.string(tmp2(1236).t.LO4f0P);
+    const intl = tmp2(1233).intl;
+    obj4[2] = intl.string(tmp2(1233).t.LO4f0P);
     obj3[1] = tmp30(tmp2(4474).Text, obj4);
     tmp30Result = tmp30(tmp31, obj3);
   }
@@ -209,7 +209,7 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
     };
     const obj6 = { style: null };
     const absoluteFill = str.absoluteFill;
-    let tmp23Result = tmp23(5535);
+    let tmp23Result = tmp23(5543);
     if (tmp27) {
       const obj7 = { style: null, children: null };
       obj7[0] = absoluteFill;
@@ -229,8 +229,8 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
       const items8 = [tmp30(tmp31, obj10), ,];
       const obj11 = { start: null, end: null, colors: null, style: null };
       tmp23Result = tmp23(4940);
-      obj11[0] = tmp2(691).HorizontalGradient.START;
-      obj11[1] = tmp2(691).HorizontalGradient.END;
+      obj11[0] = tmp2(688).HorizontalGradient.START;
+      obj11[1] = tmp2(688).HorizontalGradient.END;
       obj11[2] = closure_11;
       obj11[3] = tmp.maskFade;
       items8[1] = tmp30(tmp23Result, obj11);
@@ -268,8 +268,8 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
           callback2(nativeEvent.nativeEvent.layout.width);
         }
       };
-      const intl2 = tmp2(1236).intl;
-      const items11 = ["\u2026 ", intl2.string(tmp2(1236).t["OBCR+p"])];
+      const intl2 = tmp2(1233).intl;
+      const items11 = ["\u2026 ", intl2.string(tmp2(1233).t["OBCR+p"])];
       obj17[3] = items11;
       obj16[1] = tmp28(tmp2(4474).Text, obj17);
       tmp30Result2 = tmp30(tmp31, obj16);
@@ -281,8 +281,8 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
       if (first1) {
         const obj18 = { variant: "text-sm/medium", color: "text-brand", style: null, children: null };
         obj18[2] = tmp.collapseDescriptionCTA;
-        const intl3 = tmp2(1236).intl;
-        obj18[3] = intl3.string(tmp2(1236).t.D5xGUK);
+        const intl3 = tmp2(1233).intl;
+        obj18[3] = intl3.string(tmp2(1233).t.D5xGUK);
         tmp30Result3 = tmp30(tmp2(4474).Text, obj18);
       }
     }
@@ -342,8 +342,8 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
       const items15 = [tmp30(tmp2(4474).Text, obj22)];
       const obj23 = { variant: "text-sm/medium", color: "text-brand", style: null, children: null };
       obj23[2] = tmp.collapseDescriptionCTA;
-      const intl4 = tmp2(1236).intl;
-      obj23[3] = intl4.string(tmp2(1236).t.D5xGUK);
+      const intl4 = tmp2(1233).intl;
+      obj23[3] = intl4.string(tmp2(1233).t.D5xGUK);
       items15[1] = tmp30(tmp2(4474).Text, obj23);
       obj21[1] = items15;
       tmp28Result1 = tmp28(tmp31, obj21);

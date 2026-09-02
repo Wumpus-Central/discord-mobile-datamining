@@ -1,5 +1,5 @@
 // discord_app/modules/premium/enhanced_role_colors/native/EnhancedRoleColorUtils.tsx
-import nDefault from "../../../../../_runtime/00689_n.js";
+import nDefault from "../../../../../_runtime/00686_n.js";
 import isDiscordFrontendDevelopment from "../../../../utils/GlobalUtils.tsx";
 import useHasEnhancedRoleColors from "../../powerups/hooks/useHasEnhancedRoleColors.tsx";
 import useHasEnhancedRoleColorsDefault from "../../powerups/hooks/useHasEnhancedRoleColors.tsx";

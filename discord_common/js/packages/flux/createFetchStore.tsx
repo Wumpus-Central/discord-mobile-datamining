@@ -4,7 +4,7 @@ import shallowEqual from "../shallow-equal/shallowEqual.tsx";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import noop from "../../../../_runtime/00019_noop.js";
-import keys from "../../../../_runtime/00644_keys.js";
+import keys from "../../../../_runtime/00641_keys.js";
 
 require = arg1;
 function areStatesEqual(items, current) {
@@ -157,7 +157,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
                 let callback;
                 c6 = 1;
                 c7 = 1;
-                return { value: "PX_16", done: null };
+                return { value: "PX_16", done: true };
               }
             } else {
               if (1 === tmp7) {
@@ -509,7 +509,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
               store = undefined;
               c3 = 1;
               c4 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -593,7 +593,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
               closure_1 = tmp2;
               c2 = 1;
               c3 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -683,7 +683,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
               closure_1 = tmp2;
               c2 = 1;
               c3 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {

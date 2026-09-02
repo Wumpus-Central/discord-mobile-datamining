@@ -18,10 +18,10 @@ let result = require("set").fileFinishedImporting(
 export default function UpcomingEventsLongPressActionSheet(guildId) {
   guildId = guildId.guildId;
   let stateFromStores1;
-  let obj = guildId(589);
+  let obj = guildId(586);
   const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getGuild(guildId));
-  obj1 = guildId(589);
+  obj1 = guildId(586);
   const items1 = [closure_5];
   stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_5.isMuteScheduledEventsEnabled(guildId));
   obj = { leading: null, title: null };
@@ -30,45 +30,45 @@ export default function UpcomingEventsLongPressActionSheet(guildId) {
   const tmp = callback2();
   const tmp6 = closure_8;
   const tmp8 = stateFromStores1;
-  obj1[1] = guildId(6004).GuildIconSizes.LARGE;
-  obj[1] = callback(stateFromStores1(6004), obj1);
+  obj1[1] = guildId(6012).GuildIconSizes.LARGE;
+  obj[1] = callback(stateFromStores1(6012), obj1);
   obj[0] = callback(View, obj);
-  const intl = guildId(1236).intl;
-  obj[1] = intl.string(guildId(1236).t.tlopTM);
-  const items2 = [callback(guildId(5621).BottomSheetTitleHeader, obj), ,];
+  const intl = guildId(1233).intl;
+  obj[1] = intl.string(guildId(1233).t.tlopTM);
+  const items2 = [callback(guildId(5629).BottomSheetTitleHeader, obj), ,];
   const obj2 = { leading: null, label: null, onPress: null };
-  const tmp9 = stateFromStores1(6004);
-  obj2[0] = callback(guildId(1297).Icon, { source: stateFromStores1(11945) });
+  const tmp9 = stateFromStores1(6012);
+  obj2[0] = callback(guildId(1296).Icon, { source: stateFromStores1(12168) });
   const obj4 = { text: null };
-  const intl2 = guildId(1236).intl;
-  obj4[0] = intl2.string(guildId(1236).t.e6RscS);
-  obj2[1] = callback(guildId(8363).FormLabel, obj4);
+  const intl2 = guildId(1233).intl;
+  obj4[0] = intl2.string(guildId(1233).t.e6RscS);
+  obj2[1] = callback(guildId(8372).FormLabel, obj4);
   obj2[2] = function onPress() {
     guildId(closure_1_2[15]).ackGuildFeature(guildId, closure_1_6.GUILD_EVENT);
     const obj = guildId(closure_1_2[15]);
     stateFromStores1(closure_1_2[16]).hideActionSheet();
   };
-  items2[1] = callback(guildId(8363).FormRow, obj2);
+  items2[1] = callback(guildId(8372).FormRow, obj2);
   const obj5 = { leading: null, label: null, onPress: null };
-  const obj3 = { source: stateFromStores1(11945) };
-  obj5[0] = callback(guildId(1297).Icon, { source: tmp8(stateFromStores1 ? 11946 : 11947) });
-  const intl3 = tmp2(1236).intl;
+  const obj3 = { source: stateFromStores1(12168) };
+  obj5[0] = callback(guildId(1296).Icon, { source: tmp8(stateFromStores1 ? 12169 : 12170) });
+  const intl3 = tmp2(1233).intl;
   const string = intl3.string;
-  const t = tmp2(1236).t;
+  const t = tmp2(1233).t;
   if (stateFromStores1) {
     let stringResult = string(t.COiLo0);
   } else {
     stringResult = string(t.ONG3Yz);
   }
   const obj7 = { children: null };
-  obj5[1] = callback(guildId(8363).FormLabel, { text: stringResult });
+  obj5[1] = callback(guildId(8372).FormLabel, { text: stringResult });
   obj5[2] = function onPress() {
     let obj = stateFromStores1(closure_1_2[19]);
     obj = { mute_scheduled_events: !stateFromStores1 };
     const NotificationLabel = guildId(closure_1_2[20]).NotificationLabel;
     const result = obj.updateGuildNotificationSettings(guildId, obj, NotificationLabel.mutedEvents(!stateFromStores1));
   };
-  items2[2] = callback(guildId(8363).FormRow, obj5);
+  items2[2] = callback(guildId(8372).FormRow, obj5);
   obj7[0] = items2;
-  return tmp6(guildId(5989).ActionSheet, obj7);
+  return tmp6(guildId(5997).ActionSheet, obj7);
 }

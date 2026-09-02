@@ -3,7 +3,7 @@ import set from "../../../_runtime/00002_set.js";
 import ME from "../../Constants.tsx";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../_runtime/02009_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/02008_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
 import _modDef4858 from "../../actions/native/AlertActionCreators.tsx";
 import componentDidMountDefault from "../../components_native/common/Alert.tsx";
@@ -42,7 +42,7 @@ export const openAcceptMessageRequestConfirmModal = function openAcceptMessageRe
 };
 export const onMarkAsNotSpamConfirmationModal = function onMarkAsNotSpamConfirmationModal(arg0) {
   ({ onConfirm, onCancel, channel } = arg0);
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(12011, dependencyMap.paths), "SpamMessageHamActionSheet", {
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(12235, dependencyMap.paths), "SpamMessageHamActionSheet", {
     channel,
     onConfirm,
     onCancel,

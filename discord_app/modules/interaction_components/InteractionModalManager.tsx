@@ -60,8 +60,8 @@ function _handleInteractionModalCreate() {
             openInteractionModal.openInteractionModal(lib);
             const obj3 = { type: "interaction_modal", application_id: null };
             obj3[1] = lib.application.id;
-            callback(698).track(constants.OPEN_MODAL, obj3);
-            const AndroidPullModeRenderingExperiment = lib(1913).AndroidPullModeRenderingExperiment;
+            callback(695).track(constants.OPEN_MODAL, obj3);
+            const AndroidPullModeRenderingExperiment = lib(1912).AndroidPullModeRenderingExperiment;
             if (AndroidPullModeRenderingExperiment.getCurrentConfig().treatmentId >= 2) {
               callback = (function getInteractionModalDebugData(closure_0) {
                 interactionDebugContext = interactionDebugContext.getInteractionDebugContext(closure_0.nonce);
@@ -120,7 +120,7 @@ function _handleInteractionModalCreate() {
                 obj[12] = tmp11;
                 return obj;
               })(lib);
-              obj = callback(1208);
+              obj = callback(1205);
               const obj4 = { category: "interaction_modal", message: "Interaction modal opened", data: null };
               obj4[2] = callback;
               obj.addBreadcrumb(obj4);

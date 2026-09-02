@@ -1,8 +1,8 @@
 // discord_app/modules/quests/native/QuestHomeEmptyState.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
-import set from "../../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 import map from "../../../design/tokens/native/useToken.tsx";
 import useChatLayoutDefault from "../../chat/native/useChatLayout.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
@@ -94,7 +94,7 @@ export default function QuestHomeEmptyState(subtitle) {
     const obj6 = { children: null };
     const obj7 = { style: null, source: null, resizeMode: "cover" };
     obj7[0] = tmp5.emptyImage;
-    obj7[1] = tmp7(14666);
+    obj7[1] = tmp7(14892);
     const items2 = [tmp9(closure_4, obj7)];
     const obj8 = { style: null, end: null, start: null, colors: null };
     obj8[0] = tmp5.gradient;

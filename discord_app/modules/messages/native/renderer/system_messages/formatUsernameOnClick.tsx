@@ -24,7 +24,6 @@ export default function formatUsernameOnClick(arg0) {
     }
     user = author;
   }
-  const displayNameFontIdForMobileUser = createDisplayNameStylesMobile.getDisplayNameFontIdForMobileUser(user, guildId);
   obj = {
     action: "bindUserMenu",
     userId,
@@ -34,8 +33,10 @@ export default function formatUsernameOnClick(arg0) {
     shouldShowRoleDot: null,
     messageChannelId: null,
     medium: true,
+    fontId: null,
   };
   let tmp7 = null;
+  const displayNameFontIdForMobileUser = createDisplayNameStylesMobile.getDisplayNameFontIdForMobileUser(user, guildId);
   if ("username" === roleStyle) {
     tmp7 = colorString;
   }
@@ -51,13 +52,6 @@ export default function formatUsernameOnClick(arg0) {
     messageChannelId = message.channel_id;
   }
   obj[6] = messageChannelId;
-  if (null != displayNameFontIdForMobileUser) {
-    obj = { fontId: null };
-    obj[0] = displayNameFontIdForMobileUser;
-    obj1 = obj;
-  } else {
-    obj1 = {};
-  }
-  const merged = Object.assign(obj1);
+  obj[8] = displayNameFontIdForMobileUser;
   return obj;
 }

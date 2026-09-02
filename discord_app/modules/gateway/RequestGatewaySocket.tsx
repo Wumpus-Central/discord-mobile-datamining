@@ -153,7 +153,7 @@ export const startBridgeTo = function startBridgeTo(arg0) {
     num = 0;
   }
   let result = map.set(combined, num + 1);
-  combined(696).requestSafeIdleCallback(
+  combined(693).requestSafeIdleCallback(
     () => {
       let obj = closure_1_7;
       if (closure_1_7.has(combined)) {

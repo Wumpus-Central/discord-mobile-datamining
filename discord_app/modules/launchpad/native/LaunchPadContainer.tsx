@@ -36,11 +36,11 @@ export default function LaunchPadContainer(children) {
   updaters = undefined;
   dependencyMap = undefined;
   const tmp = callback2();
-  const tmp4 = updaters(11065)();
-  const tmp5 = updaters(16541)();
+  const tmp4 = updaters(11285)();
+  const tmp5 = updaters(16776)();
   launchPadSharedState = tmp5.launchPadSharedState;
   ({ launchPadPullTabState, launchPadShown, gestureState, updaters } = tmp5);
-  ({ gesture, gestureRef } = updaters(16543)({
+  ({ gesture, gestureRef } = updaters(16778)({
     launchPadType: tmp4,
     launchPadSharedState,
     launchPadPullTabState,
@@ -48,7 +48,7 @@ export default function LaunchPadContainer(children) {
     gestureState,
     updaters,
   }));
-  const tmp7 = updaters(11605)();
+  const tmp7 = updaters(11828)();
   dependencyMap = tmp7;
   let obj = launchPadSharedState(4217);
   const fn = function o() {
@@ -130,11 +130,11 @@ export default function LaunchPadContainer(children) {
     obj3[3] = launchPadSharedState;
     obj3[4] = launchPadPullTabState;
     obj3[5] = updaters;
-    const tmp10Result = tmp10(updaters(16544), obj3);
+    const tmp10Result = tmp10(updaters(16779), obj3);
   }
   items1[1] = tmp10Result;
   obj2[1] = items1;
   obj1[1] = closure_7(closure_3, obj2);
-  obj[1] = callback(launchPadSharedState(5652).GestureDetector, obj1);
-  return callback(updaters(15599).Provider, obj);
+  obj[1] = callback(launchPadSharedState(5660).GestureDetector, obj1);
+  return callback(updaters(15830).Provider, obj);
 }

@@ -1,9 +1,9 @@
 // discord_app/modules/messages/GuildOfficialMessageUtils.tsx
 import int2hslRaw from "../../../discord_common/js/shared/utils/ColorUtils.tsx";
-import nDefault from "../../../_runtime/00689_n.js";
+import nDefault from "../../../_runtime/00686_n.js";
 import hexToRgba from "../../utils/ColorUtils.tsx";
 import experimentDefault from "GuildOfficialMessagesExperiment.tsx";
-import useCanUnarchiveThread from "../threads/ThreadHooks.tsx";
+import useCanStartPrivateThread from "../threads/ThreadHooks.tsx";
 import isSystemMessageDefault from "isSystemMessage.tsx";
 import closure_3 from "../../stores/GuildStore.tsx";
 import closure_4 from "../../stores/PermissionStore.tsx";
@@ -80,7 +80,7 @@ export const getAccessibleGuildOfficialTextColor = function getAccessibleGuildOf
     tmp5 = mixResult;
   }
   obj4 = nDefault;
-  obj = { foreground: tmp6, background: tmp5, ratio: tmp2(1363).WCAGContrastRatios.Text, saturationFactor: num };
+  obj = { foreground: tmp6, background: tmp5, ratio: tmp2(1362).WCAGContrastRatios.Text, saturationFactor: num };
   return hexToRgba.getAccessibleForegroundColor(obj);
 };
 export function showGuildOfficialMessageGradient(officialMessageStyle) {
@@ -175,13 +175,13 @@ export const useCanToggleGuildOfficialMessages = function useCanToggleGuildOffic
   if (tmp3) {
     return !tmp3;
   } else if (message.hasFlag(constants3.IS_GUILD_OFFICIAL)) {
-    let isActiveChannelOrUnarchivableThread = useCanUnarchiveThread.getIsActiveChannelOrUnarchivableThread(channel);
-    const obj2 = useCanUnarchiveThread;
+    let isActiveChannelOrUnarchivableThread = useCanStartPrivateThread.getIsActiveChannelOrUnarchivableThread(channel);
+    const obj2 = useCanStartPrivateThread;
   } else {
     isActiveChannelOrUnarchivableThread = null != channel && !channel.isPrivate();
     if (isActiveChannelOrUnarchivableThread) {
-      isActiveChannelOrUnarchivableThread = useCanUnarchiveThread.getIsActiveChannelOrUnarchivableThread(channel);
-      const obj = useCanUnarchiveThread;
+      isActiveChannelOrUnarchivableThread = useCanStartPrivateThread.getIsActiveChannelOrUnarchivableThread(channel);
+      const obj = useCanStartPrivateThread;
     }
     if (isActiveChannelOrUnarchivableThread) {
       isActiveChannelOrUnarchivableThread = channel.type !== constants.GUILD_VOICE;
@@ -215,8 +215,8 @@ export const canSendGuildOfficialMessages = function canSendGuildOfficialMessage
     let isActiveChannelOrUnarchivableThread = null != throwTypeErrorResult2 && !throwTypeErrorResult2.isPrivate();
     if (isActiveChannelOrUnarchivableThread) {
       isActiveChannelOrUnarchivableThread =
-        useCanUnarchiveThread.getIsActiveChannelOrUnarchivableThread(throwTypeErrorResult2);
-      const obj3 = useCanUnarchiveThread;
+        useCanStartPrivateThread.getIsActiveChannelOrUnarchivableThread(throwTypeErrorResult2);
+      const obj3 = useCanStartPrivateThread;
     }
     if (isActiveChannelOrUnarchivableThread) {
       isActiveChannelOrUnarchivableThread = throwTypeErrorResult2.type !== constants.GUILD_VOICE;

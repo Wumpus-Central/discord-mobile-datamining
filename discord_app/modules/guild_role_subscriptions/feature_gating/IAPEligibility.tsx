@@ -11,7 +11,7 @@ const result = require("set").fileFinishedImporting(
 
 export const canUseRoleSubscriptionIAP = function canUseRoleSubscriptionIAP(guildId) {
   if (obj.isIOS()) {
-    const str = tmp(5442).getSystemVersion();
+    const str = tmp(5450).getSystemVersion();
     if (null != str) {
       const parts = str.split(".");
       const _Number = Number;
@@ -68,13 +68,13 @@ export const canUseRoleSubscriptionIAP = function canUseRoleSubscriptionIAP(guil
   } else {
     return false;
   }
-  obj = guild(500);
+  obj = guild(1234);
   tmp = guild;
 };
 export const useCanUseRoleSubscriptionIAP = function useCanUseRoleSubscriptionIAP(guildId) {
   const _require = guildId;
   const memo = React.useMemo(() => {
-    const str = guildId(5442).getSystemVersion();
+    const str = guildId(5450).getSystemVersion();
     let tmp = null != str;
     if (tmp) {
       const parts = str.split(".");
@@ -120,7 +120,7 @@ export const useCanUseRoleSubscriptionIAP = function useCanUseRoleSubscriptionIA
     }
     return tmp;
   }, []);
-  let memo1 = React.useMemo(() => guildId(500).isIOS(), []);
+  let memo1 = React.useMemo(() => guildId(1234).isIOS(), []);
   items = [closure_3];
   if (memo1) {
     memo1 = obj.useStateFromStores(items, () => {

@@ -1,10 +1,10 @@
 // discord_app/modules/payments/utils/MobileWebRedirectCheckoutUtils.tsx
 import set from "../../../../_runtime/00002_set.js";
-import _modDef1208 from "../../../utils/SentryUtils.native.tsx";
+import _modDef1205 from "../../../utils/SentryUtils.native.tsx";
 import isMetaQuest from "../../device/MetaQuestUtils.android.tsx";
 import _extends from "../../../../_runtime/metro/04305__extends.js";
 import CustomCheckoutFlow2 from "../PaymentConstants.tsx";
-import keysSorter from "../../../../_runtime/05398_keysSorter.js";
+import keysSorter from "../../../../_runtime/05406_keysSorter.js";
 import ME from "../../../Constants.tsx";
 
 const CustomCheckoutFlow = CustomCheckoutFlow2.CustomCheckoutFlow;
@@ -18,7 +18,7 @@ export const captureMobileWebRedirectCheckoutSentryError = function captureMobil
   source,
   tags,
 ) {
-  let obj = _modDef1208;
+  let obj = _modDef1205;
   obj = { tags: null, extra: null };
   obj = { app_context: mobile_web_redirect_checkout, source };
   const merged = Object.assign(tags.tags);

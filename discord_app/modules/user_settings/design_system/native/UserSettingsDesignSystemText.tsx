@@ -29,7 +29,7 @@ export default function UserSettingsDesignSystemText() {
       obj[0] = arg0;
       obj[1] = arg0;
       obj[0] = callback2(callback(4474).Text, obj, arg0);
-      tmp = callback2(callback(5599).TableRow, obj, arg0);
+      tmp = callback2(callback(5607).TableRow, obj, arg0);
     }
     return tmp;
   });

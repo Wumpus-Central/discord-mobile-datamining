@@ -167,14 +167,14 @@ export const useSharedICYMILogic = function useSharedICYMILogic(notificationItem
       const result = ICYMIAnalytics.trackItemLongImpression(
         viewableItems,
         viewableFeedItemsArray.map((id) => {
-          const obj = { id: id.id, type: callback(8619).typeToString(id) };
+          const obj = { id: id.id, type: callback(8634).typeToString(id) };
           return obj;
         }),
         stateFromStores,
       );
       let obj = notificationItem(unreadItems[10]);
       const found = viewableItems.filter((item) => {
-        const NON_ELIGIBLE_SCROLL_ITEMS = callback(8628).NON_ELIGIBLE_SCROLL_ITEMS;
+        const NON_ELIGIBLE_SCROLL_ITEMS = callback(8643).NON_ELIGIBLE_SCROLL_ITEMS;
         return !NON_ELIGIBLE_SCROLL_ITEMS.has(item.item.data.kind);
       });
       const result1 = callback(unreadItems[9]).triggerItemsLongImpression(
@@ -182,7 +182,7 @@ export const useSharedICYMILogic = function useSharedICYMILogic(notificationItem
           item = item.item;
           const obj = {
             itemId: item.id,
-            itemType: callback(8621).itemToType(item),
+            itemType: callback(8636).itemToType(item),
             triggerType: "list",
             itemFeedIndex: item.index,
             itemScore: null,
@@ -208,7 +208,7 @@ export const useSharedICYMILogic = function useSharedICYMILogic(notificationItem
   callback2 = allUnreadItemsHydrated.useCallback((viewableItems) => {
     viewableItems = viewableItems.viewableItems;
     const found = viewableItems.filter((item) => {
-      const NON_ELIGIBLE_SCROLL_ITEMS = callback(8628).NON_ELIGIBLE_SCROLL_ITEMS;
+      const NON_ELIGIBLE_SCROLL_ITEMS = callback(8643).NON_ELIGIBLE_SCROLL_ITEMS;
       return !NON_ELIGIBLE_SCROLL_ITEMS.has(item.item.data.kind);
     });
     callback(unreadItems[9]).startItemsDwell(
@@ -216,7 +216,7 @@ export const useSharedICYMILogic = function useSharedICYMILogic(notificationItem
         item = item.item;
         const obj = {
           itemId: item.id,
-          itemType: callback(8621).itemToType(item),
+          itemType: callback(8636).itemToType(item),
           triggerType: "list",
           itemFeedIndex: item.index,
           itemScore: null,

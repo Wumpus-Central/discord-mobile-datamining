@@ -3,7 +3,7 @@ import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import ContentIdType from "SafetyHubModels.tsx";
-import createAggregatorDefault from "../../../_runtime/08702_createAggregator.js";
+import createAggregatorDefault from "../../../_runtime/08717_createAggregator.js";
 import SafetyHubView from "SafetyHubConstants.tsx";
 
 function handleSafetyHubRequestAgeVerificationResetModalAction(arg0) {
@@ -216,18 +216,18 @@ obj = {
         HermesBuiltin.throwTypeError();
       } else {
         const LOADING = AgeCheckStatus.LOADING;
-        for (const key10002 in closure_6) {
-          let tmp7 = key10002;
+        for (const key10007 in closure_6) {
+          let tmp7 = key10007;
           let tmp8 = dependencyMap;
-          if (!dependencyMap[key10002].is_coppa) {
+          if (!dependencyMap[key10007].is_coppa) {
             continue;
           } else {
-            let tmp = dependencyMap;
-            obj = { status: null };
-            let tmp2 = require;
             let tmp3 = dependencyMap;
+            obj = { status: null };
+            let tmp4 = require;
+            let tmp5 = dependencyMap;
             obj[0] = ContentIdType.AppealStatusType.REVIEW_PENDING;
-            dependencyMap[key10002].appeal_status = obj;
+            dependencyMap[key10007].appeal_status = obj;
             continue;
           }
           continue;

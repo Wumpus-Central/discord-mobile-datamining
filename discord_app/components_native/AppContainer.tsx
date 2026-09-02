@@ -1,10 +1,10 @@
 // discord_app/components_native/AppContainer.tsx
 import ThemesDefault from "../../discord_common/js/packages/tokens/native.tsx";
-import _modDef1208 from "../utils/SentryUtils.native.tsx";
+import _modDef1205 from "../utils/SentryUtils.native.tsx";
 import _maybeBackfillMissingBreadcrumbsFromTelemetryRing from "../modules/errors/native/SentryInitUtils.tsx";
 import ComponentDispatcher from "../utils/ComponentDispatchUtils.tsx";
 import isDiscordFrontendDevelopment from "../utils/GlobalUtils.tsx";
-import createStandardNavigationFactories from "../../_runtime/01500_createStandardNavigationFactories.js";
+import createStandardNavigationFactories from "../../_runtime/01499_createStandardNavigationFactories.js";
 import getRootNavigationRef from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
 import useThemeDefault from "../hooks/useTheme.tsx";
 import enqueueDefault from "../modules/main_tabs_v2/native/modal/ModalDispatchQueue.tsx";
@@ -29,7 +29,7 @@ function GestureWrapper(children) {
   let isScreenLandscape;
   const tmp = callback3();
   closure_0 = tmp;
-  isScreenLandscape = isScreenLandscape(5071).useIsScreenLandscape();
+  isScreenLandscape = isScreenLandscape(5079).useIsScreenLandscape();
   let items = [isScreenLandscape, tmp];
   const style = React.useMemo(() => {
     const items = [styles.flex];
@@ -101,7 +101,7 @@ function AppNavigationContainer(children) {
         name = first.name;
       }
     }
-    callback(14213).log("Initial Screen: " + name);
+    callback(14436).log("Initial Screen: " + name);
     return tmp;
   }, []);
   _require = React.useRef(true);
@@ -142,7 +142,7 @@ function AppNavigationContainer(children) {
   obj[3] = callback;
   obj[4] = memo;
   obj[6] = children.children;
-  return callback2(require("../../_runtime/01500_createStandardNavigationFactories.js").NavigationContainer, obj);
+  return callback2(require("../../_runtime/01499_createStandardNavigationFactories.js").NavigationContainer, obj);
 }
 function ShareNavigationContainer(children) {
   const tmp = useThemeDefault();
@@ -189,13 +189,13 @@ try {
     code: "function AppContainerTsx1(){const{RNScreensTurboModule}=this.__closure;global.RNScreensTurboModule=RNScreensTurboModule;}",
   };
   let obj7 = require("designConfig");
-  const result1 = _modDef1208.profiledRootComponent(function AppContainer(children) {
+  const result1 = _modDef1205.profiledRootComponent(function AppContainer(children) {
     children = children.children;
     let riveAppStatePlaybackExperiment = children;
     const appEntryKey = children.appEntryKey;
     let memo = appEntryKey;
     let memo1;
-    const requestGatewaySocket = memo(14214).useRequestGatewaySocket("AppContainer:" + appEntryKey);
+    const requestGatewaySocket = memo(14437).useRequestGatewaySocket("AppContainer:" + appEntryKey);
     const effect = React.useEffect(() => {
       if (!c22) {
         RNScreensTurboModule = RNScreensTurboModule.RNScreensTurboModule;
@@ -213,7 +213,7 @@ try {
       }
     }, []);
     const effect1 = React.useEffect(() => {
-      let SplashScreenManager = memo(500).isIOS();
+      let SplashScreenManager = memo(1234).isIOS();
       if (SplashScreenManager) {
         SplashScreenManager = closure_6.SplashScreenManager;
       }
@@ -224,8 +224,8 @@ try {
     }, []);
     riveAppStatePlaybackExperiment = undefined;
     memo = undefined;
-    let obj = memo(14214);
-    riveAppStatePlaybackExperiment = memo(15530).useRiveAppStatePlaybackExperiment("AppContainer");
+    let obj = memo(14437);
+    riveAppStatePlaybackExperiment = memo(15761).useRiveAppStatePlaybackExperiment("AppContainer");
     let items = [riveAppStatePlaybackExperiment];
     memo = React.useMemo(() => {
       const items = [];
@@ -295,7 +295,7 @@ try {
       return closure_1_14(tmp, obj);
     }, items2);
   });
-  const importDefaultResult = _modDef1208;
+  const importDefaultResult = _modDef1205;
   const result2 = require("set").fileFinishedImporting("components_native/AppContainer.tsx");
   exports.default = result1;
 } catch (err) {}

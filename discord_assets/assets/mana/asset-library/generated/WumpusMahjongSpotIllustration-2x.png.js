@@ -5,5 +5,5 @@ const result = set.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/WumpusMahjongSpotIllustration-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/898fdb84307272360f8aa05df32758648652aa7d272d39486789950e55c55aac.png";
-export const metadata = { fileBytes: 34141 };
+export default "https://cdn.discordapp.com/assets/content/983b0ac71f7d76835efddd1c050fa8410e9c82413d76706042e39baff1b58a67.png";
+export const metadata = { fileBytes: 38869 };

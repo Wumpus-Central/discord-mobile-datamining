@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/IOSNativePhoneIntegrationSetting.tsx
 import set from "../../../../../_runtime/00002_set.js";
-import set2 from "../../../../utils/PlatformUtils.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
+import set2 from "../../../../utils/PlatformUtils.tsx";
 import explicitContentFromProto from "../../UserSettings.tsx";
 import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
 import apexExperimentDefault from "../../../voice_calls/CallKitMetricCollectionExperiment.tsx";

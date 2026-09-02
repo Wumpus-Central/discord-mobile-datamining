@@ -74,7 +74,7 @@ function _authorizeLink() {
             tmp6 = callback2;
             obj5.openURL(tmp19, IN_APP);
             c4 = 3;
-            obj6 = url(500);
+            obj6 = url(1234);
           }
         } catch (tmp9) {
           c4 = tmp;

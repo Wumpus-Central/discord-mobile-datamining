@@ -18,9 +18,9 @@ export default function EmptyState(showsGenericMessage) {
     flag = false;
   }
   const tmp = callback();
-  let obj = flag(11623);
+  let obj = flag(11846);
   const logAppLauncherEmptyStateView = obj.useLogAppLauncherEmptyStateView(
-    flag(8435).AppLauncherEmptyStateType.SEARCH_EMPTY,
+    flag(8444).AppLauncherEmptyStateType.SEARCH_EMPTY,
     showsGenericMessage.query,
   );
   const items = [flag];
@@ -39,9 +39,9 @@ export default function EmptyState(showsGenericMessage) {
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.textContainer, children: null };
   obj1 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
-  let intl = flag(1236).intl;
+  let intl = flag(1233).intl;
   let string = intl.string;
-  let t = flag(1236).t;
+  let t = flag(1233).t;
   if (flag) {
     let stringResult = string(t.aOkFv8);
   } else {

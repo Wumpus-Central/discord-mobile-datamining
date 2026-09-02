@@ -1,6 +1,6 @@
 // discord_app/modules/toast/native/ToastUtils.tsx
 import set from "../../../../_runtime/00002_set.js";
-import v1 from "../../../../_runtime/00514_v1.js";
+import v1 from "../../../../_runtime/00511_v1.js";
 import ME from "../../../Constants.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";

@@ -65,7 +65,7 @@ function _validatePurchase() {
               ({ productId: c0, premiumSubscription: c1, offerId: c2, currency: c3, price: c4, isGift: c5 } = callback);
               c5 = 1;
               c6 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp8) {
             if (arg0 === 1) {
@@ -78,7 +78,7 @@ function _validatePurchase() {
               return obj1;
             } else {
               c4 = 1;
-              const HTTP = callback(530).HTTP;
+              const HTTP = callback(527).HTTP;
               const obj2 = { url: null, body: null, rejectWithError: false };
               obj2[0] = constants.GOOGLE_PLAY_VALIDATE_PURCHASE;
               const obj3 = {
@@ -109,7 +109,7 @@ function _validatePurchase() {
           } else if (2 === tmp8) {
             c4 = 0;
             c6 = c3;
-            const tmp18 = new lib(10481)(c6);
+            const tmp18 = new lib(10702)(c6);
             throw tmp18;
           } else if (arg0 === 1) {
             c6 = 3;
@@ -270,7 +270,7 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
                 c21 = undefined;
                 c6 = 1;
                 c7 = 1;
-                return { value: "PX_16", done: null };
+                return { value: "PX_16", done: true };
               }
             } else {
               if (1 === tmp10) {

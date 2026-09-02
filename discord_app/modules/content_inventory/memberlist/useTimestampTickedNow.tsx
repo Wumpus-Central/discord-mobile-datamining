@@ -21,8 +21,8 @@ export const useTimestampTickedNow = function useTimestampTickedNow() {
   const now = callback(
     React.useState(() => {
       const timestamp = Date.now();
-      const rounded = Math.floor(timestamp / _undefined(687).Millis.SECOND);
-      return rounded * _undefined(687).Millis.SECOND;
+      const rounded = Math.floor(timestamp / _undefined(684).Millis.SECOND);
+      return rounded * _undefined(684).Millis.SECOND;
     }),
     2,
   );

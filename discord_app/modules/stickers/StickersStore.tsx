@@ -52,12 +52,12 @@ function _loadSavedGuildStickers() {
             c0 = undefined;
             callback = undefined;
             if (Loaded === closure_1_8.Unloaded) {
-              obj1 = closure_1_1(1956);
+              obj1 = closure_1_1(1955);
               const databaseResult = obj1.database();
               c0 = databaseResult;
               if (null != databaseResult) {
                 Loaded = tmp28.Loaded;
-                let obj2 = closure_1_0(1976);
+                let obj2 = closure_1_0(1975);
                 dependencyMap = 1;
                 c3 = 1;
                 obj1 = { value: null, done: false };
@@ -79,8 +79,8 @@ function _loadSavedGuildStickers() {
           if (null != callback) {
             obj2 = { type: "CACHED_STICKERS_LOADED", stickers: null };
             obj2[1] = callback;
-            callback(709).dispatch(obj2);
-            const obj7 = callback(709);
+            callback(706).dispatch(obj2);
+            const obj7 = callback(706);
           }
         }
         c3 = 3;

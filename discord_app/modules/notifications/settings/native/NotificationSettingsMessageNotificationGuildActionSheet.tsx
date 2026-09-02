@@ -23,8 +23,8 @@ export default function NotificationSettingsMessageNotificationGuildActionSheet(
   let stringResult;
   if (notification !== UserNotificationSettings.ALL_MESSAGES) {
     if (unread !== UnreadSetting.ALL_MESSAGES) {
-      const intl = tmp(1236).intl;
-      stringResult = intl.string(tmp(1236).t.eP8yWU);
+      const intl = tmp(1233).intl;
+      stringResult = intl.string(tmp(1233).t.eP8yWU);
     }
   }
   obj[2] = stringResult;
@@ -48,5 +48,5 @@ export default function NotificationSettingsMessageNotificationGuildActionSheet(
       NotificationLabel.notifications(message_notifications),
     );
   };
-  return jsx(unread(10246), { context: "guild", value: notification, allMessagesSubLabel: null, onChange: null });
+  return jsx(unread(10268), { context: "guild", value: notification, allMessagesSubLabel: null, onChange: null });
 }

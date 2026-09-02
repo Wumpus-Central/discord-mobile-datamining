@@ -1,7 +1,7 @@
 // discord_app/modules/launchpad/native/LaunchPadPullTabCache.tsx
 import set from "../../../../_runtime/00002_set.js";
-import set2 from "../../../utils/PlatformUtils.tsx";
 import Storage2 from "../../../../discord_common/js/packages/storage/Storage.tsx";
+import set2 from "../../../utils/PlatformUtils.tsx";
 import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceSettingsModule.tsx";
 import LAUNCH_PAD_SPRING_CONFIG from "LaunchPadConstants.tsx";
 
@@ -17,9 +17,9 @@ function setLaunchPadPullTabExclusionRect() {
   }
   let obj = set2;
   if (obj.isAndroid()) {
-    let tmp7Result = tmp7(1493);
+    let tmp7Result = tmp7(1492);
     const diff = tmp7Result.getWindowDimensions().width - closure_5;
-    tmp7Result = tmp7(1493);
+    tmp7Result = tmp7(1492);
     const width = tmp7Result.getWindowDimensions().width;
     const sum = tmp + closure_3;
     let left;

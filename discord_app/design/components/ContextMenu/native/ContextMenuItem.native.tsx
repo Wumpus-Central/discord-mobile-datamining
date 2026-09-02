@@ -39,9 +39,9 @@ let closure_7 = createCacheKey.createStyles((arg0) => {
   const obj2 = { borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
   obj[5] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
   if ("destructive" === arg0) {
-    let TEXT_STRONG = tmp2(712).colors.TEXT_FEEDBACK_CRITICAL;
+    let TEXT_STRONG = tmp2(709).colors.TEXT_FEEDBACK_CRITICAL;
   } else {
-    TEXT_STRONG = tmp2(712).colors.TEXT_STRONG;
+    TEXT_STRONG = tmp2(709).colors.TEXT_STRONG;
   }
   obj[6] = { width: 20, height: 20, tintColor: TEXT_STRONG };
   obj[7] = { flexShrink: 1 };

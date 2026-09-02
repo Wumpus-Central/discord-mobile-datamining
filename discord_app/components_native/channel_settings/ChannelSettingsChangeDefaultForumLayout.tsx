@@ -96,7 +96,7 @@ const result = require("set").fileFinishedImporting(
 
 export default function ConnectedChannelSettingsChangeDefaultForumLayout(channelId) {
   channelId = channelId.channelId;
-  let obj = channelId(589);
+  let obj = channelId(586);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getChannel(channelId));
   let tmp2 = null;

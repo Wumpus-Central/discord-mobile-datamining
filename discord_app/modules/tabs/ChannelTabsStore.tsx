@@ -1,7 +1,7 @@
 // discord_app/modules/tabs/ChannelTabsStore.tsx
-import PlatformTypes from "../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import PlatformTypes from "../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import apexExperimentDefault from "TabsExperiment.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../stores/SelectedChannelStore.tsx";
@@ -17,8 +17,8 @@ function handleChannelDelete(channel) {
     const obj = apexExperimentDefault;
   }
   if (enabled) {
-    enabled = channel(501).isDesktop();
-    const obj2 = channel(501);
+    enabled = channel(1235).isDesktop();
+    const obj2 = channel(1235);
   }
   if (enabled) {
     if (
@@ -53,8 +53,8 @@ function handleChannelDelete(channel) {
         const obj3 = apexExperimentDefault;
       }
       if (enabled2) {
-        enabled2 = channel(501).isDesktop();
-        const obj4 = channel(501);
+        enabled2 = channel(1235).isDesktop();
+        const obj4 = channel(1235);
       }
       let tmp10 = !enabled2;
       if (!enabled2) {
@@ -285,8 +285,8 @@ const channelTabsStore = new ChannelTabsStore(dispatcherDefault, {
         const obj = apexExperimentDefault;
       }
       if (enabled) {
-        enabled = tabId(501).isDesktop();
-        const obj2 = tabId(501);
+        enabled = tabId(1235).isDesktop();
+        const obj2 = tabId(1235);
       }
       if (enabled) {
         if (1 === closure_7.length) {
@@ -301,8 +301,8 @@ const channelTabsStore = new ChannelTabsStore(dispatcherDefault, {
         const obj3 = apexExperimentDefault;
       }
       if (enabled2) {
-        enabled2 = tabId(501).isDesktop();
-        const obj4 = tabId(501);
+        enabled2 = tabId(1235).isDesktop();
+        const obj4 = tabId(1235);
       }
       let tmp14 = !enabled2;
       if (!enabled2) {
@@ -470,8 +470,8 @@ const channelTabsStore = new ChannelTabsStore(dispatcherDefault, {
       enabled = obj.getConfig({ location: "ChannelTabsStore" }).enabled;
     }
     if (enabled) {
-      enabled = obj(501).isDesktop();
-      const obj2 = obj(501);
+      enabled = obj(1235).isDesktop();
+      const obj2 = obj(1235);
     }
     if (enabled) {
       if (0 !== closure_7.length) {
@@ -533,7 +533,7 @@ const channelTabsStore = new ChannelTabsStore(dispatcherDefault, {
       enabled = obj.getConfig({ location: "ChannelTabsStore" }).enabled;
     }
     if (enabled) {
-      obj1 = obj(501);
+      obj1 = obj(1235);
       enabled = obj1.isDesktop();
     }
     if (enabled) {

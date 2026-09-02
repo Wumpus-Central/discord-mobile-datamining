@@ -46,11 +46,11 @@ export default function subscribeGuildMembers(arg0) {
           if (null != self._subscriptions) {
             tmpResult = tmp(tmp2[3]);
             const item = tmpResult.forEach(self._subscriptions, (userIds, guildId) =>
-              callback(6157).unsubscribeMembers(guildId, userIds),
+              callback(6165).unsubscribeMembers(guildId, userIds),
             );
           }
           const item1 = tmp(tmp2[3]).forEach(tmp4, (userIds, guildId) =>
-            callback(6157).subscribeMembers(guildId, userIds),
+            callback(6165).subscribeMembers(guildId, userIds),
           );
           self._subscriptions = tmp4;
           const tmpResult1 = tmp(tmp2[3]);

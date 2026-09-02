@@ -19,14 +19,14 @@ const result = require("set").fileFinishedImporting("modules/premium/powerups/na
 
 export default function GuildPowerupsGameServerCard(guildId) {
   guildId = guildId.guildId;
-  let obj = guildId(589);
+  let obj = guildId(586);
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getStateForGuild(guildId));
   const tmp = callback();
   const tmp2 = guildId;
   const tmp5 = importDefault;
   const tmp7 = useGameServerPerkDefault(guildId);
-  obj1 = guildId(589);
+  obj1 = guildId(586);
   const items1 = [closure_4];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
   let tmp10 = null;

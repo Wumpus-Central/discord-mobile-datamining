@@ -9,7 +9,7 @@ import Text from "../../../../../design/components/Text/native/Text.tsx";
 import useMountLayoutEffectDefault from "../../../../../hooks/useMountEffect.tsx";
 import preloadDefault from "../../../../../components_native/common/FastImage.tsx";
 import RoleIconDefault from "../../../../roles/native/RoleIcon.tsx";
-import registerAssetDefault from "../../../../../../_runtime/08033_registerAsset.js";
+import registerAssetDefault from "../../../../../../_runtime/08042_registerAsset.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../../a11y/AccessibilityStore.tsx";
 import closure_6 from "../../../../../stores/GuildRoleStore.tsx";
@@ -127,8 +127,8 @@ let obj3 = {
     const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getRole(closure_0, closure_1));
     let roleIconData = null;
     if (null != stateFromStores) {
-      roleIconData = tmp2(5978).getRoleIconData(stateFromStores, 30);
-      const tmp2Result = tmp2(5978);
+      roleIconData = tmp2(5986).getRoleIconData(stateFromStores, 30);
+      const tmp2Result = tmp2(5986);
     }
     obj = { onPress: onPress.onPress, children: null };
     let tmp9Result = null;
@@ -165,7 +165,7 @@ let obj3 = {
   },
   Channel(channel) {
     channel = channel.channel;
-    channel(589);
+    channel(586);
     [][0] = channel;
     if (channel.type === constants.GUILD_CATEGORY) {
       let channelIconWithGuild = registerAssetDefault;
@@ -176,7 +176,7 @@ let obj3 = {
     const tmp = callback3();
     tmp2Result = tmp2(4674);
     let obj = { onPress: channel.onPress, children: null };
-    const items = [callback(channel(1297).Icon, { source: channelIconWithGuild })];
+    const items = [callback(channel(1296).Icon, { source: channelIconWithGuild })];
     const channelName = tmp2Result.computeChannelName(channel, closure_9, closure_8);
     obj = { style: tmp.channelName, variant: "text-sm/semibold", children: channelName };
     items[1] = callback(channel(4474).Text, obj);

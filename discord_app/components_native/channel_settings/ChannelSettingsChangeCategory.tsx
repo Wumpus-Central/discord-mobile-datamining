@@ -3,7 +3,7 @@ import _modDef38 from "../../../_runtime/metro/00038__.js";
 import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import TableRowGroupTitle from "../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import closure_4 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../_runtime/00853__toArray.js";
+import closure_5 from "../../../_runtime/00850__toArray.js";
 import closure_6 from "../../stores/ChannelStore.tsx";
 import closure_7 from "../../stores/GuildCategoryStore.tsx";
 import closure_8 from "../../stores/GuildStore.tsx";
@@ -155,10 +155,15 @@ prototype["handleSetCategory"] = function handleSetCategory(id) {
         obj1[1] = tmp3;
         arr = result.push(obj1);
       }
+      const appChannelBotUserId = self.props.appChannelBotUserId;
       let obj6 = _require(tmp7[15]);
-      closure_8 = navigation(tmp7[16]).areChannelsLocked(channel, channel);
+      closure_8 = navigation(tmp7[16]).areChannelsLocked(channel, channel, appChannelBotUserId);
       const obj3 = navigation(tmp7[16]);
-      closure_9 = navigation(tmp7[16]).areChannelsLocked(channel, obj.getChannel(channel.parent_id));
+      closure_9 = navigation(tmp7[16]).areChannelsLocked(
+        channel,
+        obj.getChannel(channel.parent_id),
+        appChannelBotUserId,
+      );
       self.setState({ submitting: true }, () => {
         if (null != channel) {
           if (closure_9) {
@@ -257,18 +262,18 @@ prototype["render"] = function render() {
   const first = callback(this.state.categories, 1)[0];
   const tmp2 = callback4(this.context);
   let obj = { style: tmp2.screenContainer, children: null };
-  obj = { style: tmp2.stackPadding, spacing: self(712).space.PX_24, children: null };
-  const intl = first(1236).intl;
+  obj = { style: tmp2.stackPadding, spacing: self(709).space.PX_24, children: null };
+  const intl = first(1233).intl;
   if (null != category) {
     let name = category.name;
   } else {
-    const intl2 = tmp4(1236).intl;
-    name = intl2.string(tmp4(1236).t.GSfOoo);
+    const intl2 = tmp4(1233).intl;
+    name = intl2.string(tmp4(1233).t.GSfOoo);
   }
   obj = {
     variant: "text-md/medium",
     color: "text-muted",
-    children: intl.formatToPlainString(first(1236).t.OqccVl, { categoryName: name }),
+    children: intl.formatToPlainString(first(1233).t.OqccVl, { categoryName: name }),
   };
   const items = [closure_13(first(4474).Text, obj), ,];
   let tmp3Result = null;
@@ -283,8 +288,8 @@ prototype["render"] = function render() {
         obj2[1] = function onPress() {
           return self.handleSetCategory(first.id);
         };
-        obj1[1] = tmp3(tmp4(5599).TableRow, obj2, first.id);
-        tmp3Result = tmp3(tmp4(5992).TableRowGroup, obj1);
+        obj1[1] = tmp3(tmp4(5607).TableRow, obj2, first.id);
+        tmp3Result = tmp3(tmp4(6000).TableRowGroup, obj1);
       }
     }
   }
@@ -292,7 +297,7 @@ prototype["render"] = function render() {
   items[2] = self.renderCategories();
   obj[2] = items;
   obj[1] = closure_14(first(4926).Stack, obj);
-  return closure_13(first(8363).Form, obj);
+  return closure_13(first(8372).Form, obj);
 };
 ChannelSettingsChangeCategory.contextType = require("ManaContext").ThemeContext;
 let obj1 = { paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
@@ -303,9 +308,11 @@ let result = require("set").fileFinishedImporting(
 export default function ConnectedChannelSettingsChangeCategory(channelId) {
   channelId = channelId.channelId;
   const items = [closure_6];
-  const channel = channelId(589).useStateFromStores(items, () => closure_1_6.getChannel(channelId));
-  const obj = channelId(589);
-  const navigation = channelId(1499).useNavigation();
+  const channel = channelId(586).useStateFromStores(items, () => closure_1_6.getChannel(channelId));
+  const obj = channelId(586);
+  const navigation = channelId(1498).useNavigation();
+  const obj2 = channelId(1498);
+  const appChannelBotUserId = channelId(11419).useAppChannelBotUserId(channel);
   _modDef38(null != channel, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
-  return callback3(ChannelSettingsChangeCategory, { channel, navigation });
+  return callback3(ChannelSettingsChangeCategory, { channel, navigation, appChannelBotUserId });
 }

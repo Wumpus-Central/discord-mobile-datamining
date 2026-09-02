@@ -1,13 +1,13 @@
 // discord_app/modules/auth/native/RegistrationUIStore.tsx
 import set from "../../../../_runtime/00002_set.js";
 import batchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import keys from "../../../../_runtime/00644_keys.js";
+import keys from "../../../../_runtime/00641_keys.js";
 
 let obj = keys.create(() => ({
   errors: {},
   registrationOptions: {},
   submitting: false,
-  registrationVariant: "HermesInternal",
+  registrationVariant: "padding",
 }));
 const result = set.fileFinishedImporting("modules/auth/native/RegistrationUIStore.tsx");
 
@@ -22,7 +22,7 @@ export const clearRegistrationErrorMessage = function clearRegistrationErrorMess
   obj = {};
   const merged = Object.assign(obj.getState().errors);
   delete tmp2[tmp];
-  obj(705).batchUpdates(() => {
+  obj(702).batchUpdates(() => {
     obj = { errors: obj };
     closure_1_2.setState(obj);
   });

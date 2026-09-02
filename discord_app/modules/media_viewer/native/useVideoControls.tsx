@@ -4,11 +4,11 @@ import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
 import closure_5 from "../../a11y/AccessibilityStore.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import keys from "../../../../_runtime/00644_keys.js";
+import keys from "../../../../_runtime/00641_keys.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
-keys = keys.create(() => ({ controls: "PX_16", paused: null }));
+keys = keys.create(() => ({ controls: "PX_16", paused: true }));
 let closure_8 = createCacheKey.createStyles({ slider: { marginBottom: 8 } });
 let result = require("set").fileFinishedImporting("modules/media_viewer/native/useVideoControls.tsx");
 
@@ -74,7 +74,7 @@ export default function useVideoControls(arg0, portal) {
 export const useVideoStateStore = keys;
 export const initVideoStateStore = function initVideoStateStore() {
   batchUpdates.batchUpdates(() => {
-    state.setState({ controls: "PX_16", paused: null });
+    state.setState({ controls: "PX_16", paused: true });
   });
 };
 export const setMuted = function setMuted(arg0) {

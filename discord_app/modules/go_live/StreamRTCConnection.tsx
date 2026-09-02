@@ -817,7 +817,7 @@ prototype["initializeEvents"] = function initializeEvents() {
   this.on(
     require("../../lib/RTCConnectionEvent.tsx").RTCConnectionEvent.VideoSourceQualityChanged,
     (guildId, channelId, senderUserId, maxResolution, maxFrameRate, context) => {
-      let obj = self(709);
+      let obj = self(706);
       obj = {
         type: "MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED",
         guildId,
@@ -831,10 +831,10 @@ prototype["initializeEvents"] = function initializeEvents() {
     },
   );
   this.on(require("../../lib/RTCConnectionEvent.tsx").RTCConnectionEvent.SecureFramesUpdate, () => {
-    self(709).dispatch({ type: "RTC_CONNECTION_SECURE_FRAMES_UPDATE" });
+    self(706).dispatch({ type: "RTC_CONNECTION_SECURE_FRAMES_UPDATE" });
   });
   this.on(require("../../lib/RTCConnectionEvent.tsx").RTCConnectionEvent.RosterMapUpdate, (userIds) => {
-    let obj = self(709);
+    let obj = self(706);
     obj = { type: "RTC_CONNECTION_ROSTER_MAP_UPDATE", userIds };
     obj.dispatch(obj);
   });
@@ -987,7 +987,7 @@ prototype["trackVideoEndStats"] = function trackVideoEndStats(arg0) {
         num = 0;
       }
       if (num > 0) {
-        obj2 = callback(698);
+        obj2 = callback(695);
         obj = {};
         const merged = Object.assign(codecUsageStats);
         const merged1 = Object.assign(dependencyMap);
@@ -1008,7 +1008,7 @@ prototype["trackVideoEndStats"] = function trackVideoEndStats(arg0) {
         obj.hardware_enabled = closure_1_9.getHardwareEncoding();
         let tmp = null;
         if (self.isOwner) {
-          tmp = tmp4(7415)();
+          tmp = tmp4(7424)();
         }
         obj.device_performance_class = tmp;
         obj.soundshare_experimental = closure_1_9.getExperimentalSoundshare();
@@ -1031,7 +1031,7 @@ prototype["trackVideoEndStats"] = function trackVideoEndStats(arg0) {
         num = 0;
       }
       if (num > 0) {
-        obj = callback(698);
+        obj = callback(695);
         obj = {};
         const merged = Object.assign(codecUsageStats);
         const merged1 = Object.assign(dependencyMap);
@@ -1052,7 +1052,7 @@ prototype["trackVideoEndStats"] = function trackVideoEndStats(arg0) {
         obj.hardware_enabled = closure_1_9.getHardwareEncoding();
         let tmp2 = null;
         if (self.isOwner) {
-          tmp2 = tmp4(7415)();
+          tmp2 = tmp4(7424)();
         }
         obj.device_performance_class = tmp2;
         obj.track(closure_1_13.VIDEO_STREAM_ENDED, obj);

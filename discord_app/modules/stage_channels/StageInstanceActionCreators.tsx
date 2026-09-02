@@ -15,7 +15,7 @@ function _startStageInstance() {
     c6 = 0;
     c5 = 0;
     return (function* (arg0, body) {
-      const HTTP = callback(530).HTTP;
+      const HTTP = callback(527).HTTP;
       obj1 = { url: null, body: null, rejectWithError: null };
       obj1[0] = constants.STAGE_INSTANCES;
       const obj2 = {
@@ -31,7 +31,7 @@ function _startStageInstance() {
       obj2[3] = closure_4;
       obj2[4] = constants;
       obj1[1] = obj2;
-      obj1[2] = callback(530).rejectWithMigratedError();
+      obj1[2] = callback(527).rejectWithMigratedError();
       yield HTTP.post(obj1);
       return body.body;
     })();
@@ -54,14 +54,14 @@ function _updateStageInstance() {
     c4 = 0;
     c3 = 0;
     return (function* (arg0, body) {
-      const HTTP = callback(530).HTTP;
+      const HTTP = callback(527).HTTP;
       obj1 = { url: null, body: null, rejectWithError: null };
       obj1[0] = c3.STAGE_INSTANCE(callback);
       const obj2 = { topic: null, privacy_level: null };
       obj2[0] = dependencyMap;
       obj2[1] = closure_2;
       obj1[1] = obj2;
-      obj1[2] = callback(530).rejectWithMigratedError();
+      obj1[2] = callback(527).rejectWithMigratedError();
       yield HTTP.patch(obj1);
       return body.body;
     })();

@@ -12,7 +12,7 @@ export default function FileOrLinkGridPlaceholderItem(imageStyle) {
   imageStyle = imageStyle.imageStyle;
   let width;
   importDefault = undefined;
-  let obj = width(16230);
+  let obj = width(16462);
   const placeholderAnimatedStyle = obj.usePlaceholderAnimatedStyle(true);
   width = imageStyle.width;
   const sum = imageStyle.height + 108 * width(4935).useFontScale();
@@ -22,12 +22,12 @@ export default function FileOrLinkGridPlaceholderItem(imageStyle) {
   obj = {
     style: items1,
     pointerEvents: "none",
-    children: jsx(width(16251).SearchListCardContainer, { containerStyle: memo }),
+    children: jsx(width(16483).SearchListCardContainer, { containerStyle: memo }),
   };
   items1 = [imageStyle.containerStyle, placeholderAnimatedStyle];
   return jsx(_modDef4217.View, {
     style: items1,
     pointerEvents: "none",
-    children: jsx(width(16251).SearchListCardContainer, { containerStyle: memo }),
+    children: jsx(width(16483).SearchListCardContainer, { containerStyle: memo }),
   });
 }

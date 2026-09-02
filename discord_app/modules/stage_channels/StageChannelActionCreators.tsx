@@ -103,10 +103,10 @@ function _startStage() {
               closure_1 = undefined;
               if ("" !== closure_1) {
                 if (closure_1_5.getVoiceChannelId() !== tmp28.id) {
-                  let obj2 = callback(8664);
+                  let obj2 = callback(8679);
                   obj2.connectToStage(tmp28);
                 }
-                const obj4 = callback(8677);
+                const obj4 = callback(8692);
                 c6 = 1;
                 c7 = 1;
                 obj1 = { value: null, done: false };
@@ -425,11 +425,11 @@ export const setEveryoneRolePermissionAllowed = function setEveryoneRolePermissi
   const obj2 = fromStringAll;
   if (arg2) {
     obj.allow = obj2.add(obj.allow, REQUEST_TO_SPEAK);
-    let tmp5Result = tmp5(506);
+    let tmp5Result = tmp5(503);
     obj.deny = tmp5Result.remove(obj.deny, REQUEST_TO_SPEAK);
   } else {
     obj.allow = obj2.remove(obj.allow, REQUEST_TO_SPEAK);
-    tmp5Result = tmp5(506);
+    tmp5Result = tmp5(503);
     obj.deny = tmp5Result.add(obj.deny, REQUEST_TO_SPEAK);
   }
   const result = _modDef4491.updatePermissionOverwrite(getGuildId.id, obj);

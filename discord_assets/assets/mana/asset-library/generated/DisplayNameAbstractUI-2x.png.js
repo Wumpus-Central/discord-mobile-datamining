@@ -5,5 +5,5 @@ const result = set.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/DisplayNameAbstractUI-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/f3c61704c770b412690be7228402668f8c1fb20dd8df39da011962f483fd6bee.png";
-export const metadata = { fileBytes: 18650 };
+export default "https://cdn.discordapp.com/assets/content/0b8398abcf7d8170e53a1119938dec5ca2eddcf6474981a022a1255f182eb7df.png";
+export const metadata = { fileBytes: 18110 };

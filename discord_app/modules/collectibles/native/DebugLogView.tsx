@@ -46,7 +46,7 @@ export default function DebugLogView() {
   dependencyMap = callback((clearLogs) => clearLogs.clearLogs);
   const tmp = callback4();
   const React = tmp;
-  let obj = arr(589);
+  let obj = arr(586);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => closure_6.get("shop_show_debug_overlay"));
   const items1 = [arr.length, stateFromStores];

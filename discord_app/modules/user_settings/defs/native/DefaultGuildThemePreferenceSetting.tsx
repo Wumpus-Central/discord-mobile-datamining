@@ -20,14 +20,14 @@ createToggle = {
   useOptions: function useDefaultGuildThemePreferenceOptions() {
     return React.useMemo(() => {
       let obj = { label: null, value: null };
-      const intl = callback(1236).intl;
-      obj[0] = intl.string(callback(1236).t.aN3RNQ);
-      obj[1] = callback(1306).GuildThemeSourcePreference.GUILD;
+      const intl = callback(1233).intl;
+      obj[0] = intl.string(callback(1233).t.aN3RNQ);
+      obj[1] = callback(1305).GuildThemeSourcePreference.GUILD;
       const items = [obj];
       obj = { label: null, value: null };
-      const intl2 = callback(1236).intl;
-      obj[0] = intl2.string(callback(1236).t.js8y7t);
-      obj[1] = callback(1306).GuildThemeSourcePreference.PERSONAL;
+      const intl2 = callback(1233).intl;
+      obj[0] = intl2.string(callback(1233).t.js8y7t);
+      obj[1] = callback(1305).GuildThemeSourcePreference.PERSONAL;
       items[1] = obj;
       return items;
     }, []);

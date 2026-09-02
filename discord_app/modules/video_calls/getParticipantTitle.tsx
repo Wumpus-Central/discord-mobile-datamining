@@ -28,9 +28,9 @@ export default function getParticipantTitle(guild_id, type, name) {
     let str = "";
     const name1 = getNicknameDefault.getName(guild_id.getGuildId(), guild_id.id, type.user);
     if (result) {
-      const intl = tmp10(1236).intl;
+      const intl = tmp10(1233).intl;
       const _HermesInternal = HermesInternal;
-      str = " " + intl.string(tmp10(1236).t["pFO/Ph"]);
+      str = " " + intl.string(tmp10(1233).t["pFO/Ph"]);
     }
     return name1 + str;
   }

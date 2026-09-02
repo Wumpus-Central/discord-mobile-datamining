@@ -26,12 +26,12 @@ prototype["checkForNewerBuild"] = function checkForNewerBuild() {
     const obj2 = _checkForNewerBuild;
     _checkForNewerBuild.checkForNewerBuild().then(
       (newBuild) => {
-        let obj = callback(709);
+        let obj = callback(706);
         obj = { type: "MOBILE_NATIVE_UPDATE_CHECK_FINISHED", newBuild };
         obj.dispatch(obj);
       },
       () => {
-        callback(709).dispatch({ type: "MOBILE_NATIVE_UPDATE_CHECK_FAILED" });
+        callback(706).dispatch({ type: "MOBILE_NATIVE_UPDATE_CHECK_FAILED" });
       },
     );
     const checkForNewerBuildResult = _checkForNewerBuild.checkForNewerBuild();

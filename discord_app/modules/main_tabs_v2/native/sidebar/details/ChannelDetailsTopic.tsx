@@ -214,7 +214,7 @@ function GuildChannelDetailsTopic(channel) {
 }
 function PrivateChannelDetailsTopic(channel) {
   channel = channel.channel;
-  let obj = channel(589);
+  let obj = channel(586);
   const items = [closure_7];
   const stateFromStores = obj.useStateFromStores(items, () => {
     const user = closure_1_7.getUser(channel.getRecipientId());
@@ -242,7 +242,7 @@ function PrivateChannelDetailsTopic(channel) {
 }
 function GroupDMChannelDetailsTopic(channel) {
   channel = channel.channel;
-  let obj = channel(589);
+  let obj = channel(586);
   const items = [closure_7];
   const stateFromStores = obj.useStateFromStores(items, () =>
     channel(closure_1_2[18]).getPrivateChannelUserTagsString(channel.recipients, closure_1_7),

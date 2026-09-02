@@ -45,14 +45,14 @@ export default function SettingsAgeGroupResetAlert() {
               c1 = 2;
               c3 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(13418).resetAgeVerification();
+              obj1[0] = closure_1_0(13641).resetAgeVerification();
               return obj1;
             }
           } else if (1 === tmp7) {
             dependencyMap = 0;
             let obj2 = closure_1_0(4193);
-            const intl = closure_1_0(1236).intl;
-            obj2.presentError(intl.string(closure_1_0(1236).t.fEptJP));
+            const intl = closure_1_0(1233).intl;
+            obj2.presentError(intl.string(closure_1_0(1233).t.fEptJP));
             const _Error = Error;
             error = new Error("Reset failed");
             throw error;
@@ -96,9 +96,9 @@ export default function SettingsAgeGroupResetAlert() {
   _require = obj.useNavigation();
   obj = { title: null, content: null, actions: null };
   let intl = require("../../../../intl/index.native.tsx").intl;
-  obj[0] = intl.string(_handleConfirm(2919)["bD//cU"]);
+  obj[0] = intl.string(_handleConfirm(2918)["bD//cU"]);
   const intl2 = require("../../../../intl/index.native.tsx").intl;
-  obj[1] = intl2.string(_handleConfirm(2919).FbTAmI);
+  obj[1] = intl2.string(_handleConfirm(2918).FbTAmI);
   obj = { children: null };
   obj1 = {
     variant: "destructive",
@@ -115,7 +115,7 @@ export default function SettingsAgeGroupResetAlert() {
     text: null,
   };
   const intl3 = require("../../../../intl/index.native.tsx").intl;
-  obj1[2] = intl3.string(_handleConfirm(2919).V822Mp);
+  obj1[2] = intl3.string(_handleConfirm(2918).V822Mp);
   const items = [
     callback(
       require("../../../../design/components/AlertModal/native/AlertModal.native.tsx").AlertActionButton,

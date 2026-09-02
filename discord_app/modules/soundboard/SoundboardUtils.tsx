@@ -293,7 +293,7 @@ export const useSoundBoardDismissContentTypes = function useSoundBoardDismissCon
       const tmpResult = tmp(4322);
       const obj5 = getPremiumPlanItemDefault;
       if (tmp9) {
-        items1.push(tmp(1373).DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL);
+        items1.push(tmp(1372).DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL);
       }
       tmp9 = getPremiumPlanItemDefault.canUseCustomCallSounds(stateFromStores) || result;
     }

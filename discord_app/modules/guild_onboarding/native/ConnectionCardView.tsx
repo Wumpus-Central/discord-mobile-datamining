@@ -75,8 +75,8 @@ export default function ConnectionCardView(description) {
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.connectedStatus;
     const obj4 = { variant: "text-sm/medium", color: "text-feedback-positive", children: null };
-    const intl2 = tmp5(1236).intl;
-    obj4[2] = intl2.string(tmp5(1236).t["LV+CXH"]);
+    const intl2 = tmp5(1233).intl;
+    obj4[2] = intl2.string(tmp5(1233).t["LV+CXH"]);
     const items3 = [
       tmp4(tmp5(4474).Text, obj4),
       tmp4(tmp5(4438).CircleCheckIcon, { size: "sm", color: "status-positive" }),
@@ -86,8 +86,8 @@ export default function ConnectionCardView(description) {
   } else {
     const obj5 = { variant: "primary", size: "sm", onPress: null, text: null, disabled: null };
     obj5[2] = onConnect;
-    const intl = tmp5(1236).intl;
-    obj5[3] = intl.string(tmp5(1236).t.S0W8Z5);
+    const intl = tmp5(1233).intl;
+    obj5[3] = intl.string(tmp5(1233).t.S0W8Z5);
     obj5[4] = !canConnect;
     tmp4Result = tmp4(tmp5(4928).Button, obj5);
   }

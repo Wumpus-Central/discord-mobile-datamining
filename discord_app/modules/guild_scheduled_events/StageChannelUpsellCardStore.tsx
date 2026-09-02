@@ -1,8 +1,8 @@
 // discord_app/modules/guild_scheduled_events/StageChannelUpsellCardStore.tsx
 import set from "../../../_runtime/00002_set.js";
 import GUILD_EVENT_MAX_NAME_LENGTH from "GuildScheduledEventsConstants.tsx";
-import isIterable from "../../../_runtime/04106_isIterable.js";
-import identity from "../../../_runtime/00700_identity.js";
+import isIterable from "../../../_runtime/04105_isIterable.js";
+import identity from "../../../_runtime/00697_identity.js";
 
 let closure_2 = GUILD_EVENT_MAX_NAME_LENGTH.GUILD_EVENT_STAGE_UPSELL_CARD_KEY;
 let closure_3 = identity.createWithEqualityFn((arg0) => {

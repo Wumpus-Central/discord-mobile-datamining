@@ -707,7 +707,7 @@ prototype["reset"] = function reset() {
     obj[0] = c7;
   }
   self.latestWants = obj;
-  const WindowVisibilityVideoManager = tmp3(9578).WindowVisibilityVideoManager;
+  const WindowVisibilityVideoManager = tmp3(9591).WindowVisibilityVideoManager;
   WindowVisibilityVideoManager.off(
     isIncomingVideoEnabled.WindowVisibilityEvent.IncomingVideoEnabledChanged,
     self.incomingVideoEnabledChanged,

@@ -10,7 +10,7 @@ const result = require("set").fileFinishedImporting("modules/favorites/hooks/use
 
 export default function useFavoritesGuildChannelFilter() {
   const items = [closure_5];
-  stateFromStores = stateFromStores(589).useStateFromStores(items, () => favoriteChannels.getFavoriteChannels());
+  stateFromStores = stateFromStores(586).useStateFromStores(items, () => favoriteChannels.getFavoriteChannels());
   const items1 = [stateFromStores];
   return React.useCallback((type) => {
     type = type.type;

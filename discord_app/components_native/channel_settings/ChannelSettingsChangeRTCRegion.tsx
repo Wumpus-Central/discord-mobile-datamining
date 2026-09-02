@@ -4,7 +4,7 @@ import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx
 import getSystemLocale from "../../intl/index.native.tsx";
 import TableRadioRow from "../../design/components/TableRow/native/TableRadioRow.native.tsx";
 import Form from "../../design/void/Form/native/index.tsx";
-import closure_3 from "../../../_runtime/00853__toArray.js";
+import closure_3 from "../../../_runtime/00850__toArray.js";
 import closure_4 from "../../stores/ChannelStore.tsx";
 import closure_5 from "../../stores/RegionStore.tsx";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
@@ -93,7 +93,7 @@ prototype["handleSetRegion"] = function handleSetRegion(arg0) {
     c0 = null;
     tmp = null;
   }
-  self(8752).updateChannel({ rtcRegion: tmp });
+  self(8767).updateChannel({ rtcRegion: tmp });
   self.setState({ submitting: true }, () => {
     let obj = self(closure_1_2[9]);
     obj = { rtcRegion: c0 };
@@ -107,7 +107,7 @@ prototype["renderRegions"] = function renderRegions() {
   const self = this;
   const substr = callback(this.state.regions).slice(0);
   const mapped = substr.map(this.renderRegion, this);
-  return jsx(self(7692).TableRadioGroup, {
+  return jsx(self(7701).TableRadioGroup, {
     defaultValue: this.state.selectedRegionId,
     onChange(arg0) {
       return self.handleSetRegion(arg0);
@@ -128,7 +128,7 @@ const result = require("set").fileFinishedImporting(
 export default function ConnectedChannelSettingsChangeRTCRegion(channelId) {
   channelId = channelId.channelId;
   const items = [closure_4];
-  const channel = channelId(589).useStateFromStores(items, () => closure_1_4.getChannel(channelId));
+  const channel = channelId(586).useStateFromStores(items, () => closure_1_4.getChannel(channelId));
   _modDef38(null != channel, "ConnectedChannelSettingsChangeRTCRegion: channel cannot be undefined");
   return <ChannelSettingsChangeRTCRegion channel={channel} />;
 }

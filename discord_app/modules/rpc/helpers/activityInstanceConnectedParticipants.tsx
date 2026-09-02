@@ -19,12 +19,12 @@ obj = {
         let obj = { participants: null };
         obj[0] = [];
       } else {
-        callback = callback(4111).getEmbeddedActivityLocationGuildId(currentEmbeddedActivity.location);
-        const obj4 = callback(4111);
-        callback2 = callback(4111).getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
+        callback = callback(4110).getEmbeddedActivityLocationGuildId(currentEmbeddedActivity.location);
+        const obj4 = callback(4110);
+        callback2 = callback(4110).getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
         obj = { participants: null };
         const _Array = Array;
-        const obj5 = callback(4111);
+        const obj5 = callback(4110);
         obj[0] = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
           const user = closure_1_4.getUser(arg0);
           if (null != user) {
@@ -35,7 +35,7 @@ obj = {
             obj.nickname = nickname;
             return obj;
           }
-        }).filter(callback(1471).isNotNullish);
+        }).filter(callback(1470).isNotNullish);
         const arr = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
           const user = closure_1_4.getUser(arg0);
           if (null != user) {

@@ -17,7 +17,7 @@ function getMatchingActivity(author_type) {
   if (!obj.isEntryExpired(author_type)) {
     let found;
     if (tmpResult.isEntryActive(author_type)) {
-      if (author_type.author_type === tmp(8627).ContentInventoryAuthorType.USER) {
+      if (author_type.author_type === tmp(8642).ContentInventoryAuthorType.USER) {
         activities = activities.getActivities(author_type.author_id);
         found = activities.find((type) => {
           if (type.type === closure_1_5.PLAYING) {
@@ -41,7 +41,7 @@ function getMatchingActivity(author_type) {
       }
     }
     tmp3 = found;
-    tmpResult = tmp(8044);
+    tmpResult = tmp(8053);
   }
   return tmp3;
 }

@@ -43,7 +43,7 @@ export default function FormHint(inset) {
     items1[2] = style;
     obj[0] = items1;
     obj[1] = children;
-    tmp4Result = tmp4(tmp2(1297).LegacyText, obj);
+    tmp4Result = tmp4(tmp2(1296).LegacyText, obj);
   }
   return tmp4Result;
 }

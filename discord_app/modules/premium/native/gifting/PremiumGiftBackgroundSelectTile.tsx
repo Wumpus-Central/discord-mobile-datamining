@@ -4,10 +4,10 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import messagesProxyDefault from "../../gifting/PremiumGifting.messages.js";
 import preloadDefault from "../../../../components_native/common/FastImage.tsx";
-import registerAssetDefault from "../../../../../_runtime/10762_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/10763_registerAsset.js";
-import registerAssetDefault3 from "../../../../../_runtime/10764_registerAsset.js";
-import registerAssetDefault4 from "../../../../../_runtime/10765_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/10982_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/10983_registerAsset.js";
+import registerAssetDefault3 from "../../../../../_runtime/10984_registerAsset.js";
+import registerAssetDefault4 from "../../../../../_runtime/10985_registerAsset.js";
 import metadataDefault from "../../../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
 import metadataDefault2 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_cake.png.js";
 import metadataDefault3 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_chest.png.js";
@@ -52,8 +52,8 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
   obj[4] = num;
   obj = {
     position: "absolute",
-    borderColor: tmp(712).colors.TEXT_BRAND,
-    borderRadius: tmp(712).radii.sm,
+    borderColor: tmp(709).colors.TEXT_BRAND,
+    borderRadius: tmp(709).radii.sm,
     borderWidth: 2,
     flex: 1,
     width: 78,

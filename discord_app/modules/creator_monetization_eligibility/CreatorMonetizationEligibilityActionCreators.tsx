@@ -38,10 +38,10 @@ function _createCreatorMonetizationEnableRequest() {
               obj[0] = arg1;
               return obj;
             } else {
-              const HTTP = callback(530).HTTP;
+              const HTTP = callback(527).HTTP;
               obj1 = { url: null, rejectWithError: null };
               obj1[0] = closure_1_4.CREATOR_MONETIZATION_ENABLE_REQUESTS(callback);
-              obj1[1] = callback(530).rejectWithMigratedError();
+              obj1[1] = callback(527).rejectWithMigratedError();
               dependencyMap = 1;
               c1 = 1;
               const obj2 = { value: null, done: false };
@@ -83,10 +83,10 @@ function _getCreatorMonetizationEligibility() {
     c2 = 0;
     c1 = 0;
     return (function* (arg0, body) {
-      const HTTP = callback(530).HTTP;
+      const HTTP = callback(527).HTTP;
       obj1 = { url: null, rejectWithError: null };
       obj1[0] = closure_1_4.CREATOR_MONETIZATION_ELIGIBILITY(callback);
-      const obj3 = callback(530);
+      const obj3 = callback(527);
       obj1[1] = obj3.rejectWithMigratedError();
       yield HTTP.get(obj1);
       return body.body;
@@ -135,10 +135,10 @@ function _acceptCreatorMonetizationTerms() {
               obj[0] = arg1;
               return obj;
             } else {
-              const HTTP = callback(530).HTTP;
+              const HTTP = callback(527).HTTP;
               obj1 = { url: null, rejectWithError: null };
               obj1[0] = closure_1_4.CREATOR_MONETIZATION_ACCEPT_TERMS(callback, closure_1);
-              obj1[1] = callback(530).rejectWithMigratedError();
+              obj1[1] = callback(527).rejectWithMigratedError();
               c3 = 1;
               dependencyMap = 1;
               const obj2 = { value: null, done: false };
@@ -206,10 +206,10 @@ function _acceptCreatorMonetizationTermsV() {
               obj[0] = arg1;
               return obj;
             } else {
-              const HTTP = callback(530).HTTP;
+              const HTTP = callback(527).HTTP;
               obj1 = { url: null, rejectWithError: null };
               obj1[0] = closure_1_4.CREATOR_MONETIZATION_ACCEPT_TERMS_V2(callback);
-              obj1[1] = callback(530).rejectWithMigratedError();
+              obj1[1] = callback(527).rejectWithMigratedError();
               dependencyMap = 1;
               c1 = 1;
               const obj2 = { value: null, done: false };
@@ -251,10 +251,10 @@ function _getCreatorMonetizationOnboardingMarketing() {
     c2 = 0;
     c1 = 0;
     return (function* (arg0, body) {
-      const HTTP = callback(530).HTTP;
+      const HTTP = callback(527).HTTP;
       obj1 = { url: null, rejectWithError: null };
       obj1[0] = closure_1_4.CREATOR_MONETIZATION_MARKETING_ONBOARDING(callback);
-      const obj3 = callback(530);
+      const obj3 = callback(527);
       obj1[1] = obj3.rejectWithMigratedError();
       yield HTTP.get(obj1);
       return body.body;
@@ -339,11 +339,11 @@ function _requestRemoveMonetization() {
               obj[0] = arg1;
               return obj;
             } else {
-              const HTTP = callback(530).HTTP;
+              const HTTP = callback(527).HTTP;
               obj1 = { url: null, body: null, rejectWithError: null };
               obj1[0] = closure_1_4.CREATOR_MONETIZATION_REMOVE_MONETIZATION(callback);
               obj1[1] = {};
-              obj1[2] = callback(530).rejectWithMigratedError();
+              obj1[2] = callback(527).rejectWithMigratedError();
               dependencyMap = 1;
               c1 = 1;
               const obj2 = { value: null, done: false };

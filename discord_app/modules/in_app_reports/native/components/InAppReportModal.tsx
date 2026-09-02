@@ -200,10 +200,10 @@ export default function InAppReportModal(arg0) {
       const obj2 = {};
       const obj3 = { headerRight: null, headerTitle: null, fullscreen: true, render: null };
       obj3[0] = function headerRight() {
-        const obj = { source: callback(7764), onPress: closure_6, accessibilityLabel: null };
-        const intl = _onSubmit(1236).intl;
-        obj[2] = intl.string(_onSubmit(1236).t.cpT0Cq);
-        return callback2(_onSubmit(6237).HeaderActionButton, obj);
+        const obj = { source: callback(7773), onPress: closure_6, accessibilityLabel: null };
+        const intl = _onSubmit(1233).intl;
+        obj[2] = intl.string(_onSubmit(1233).t.cpT0Cq);
+        return callback2(_onSubmit(6246).HeaderActionButton, obj);
       };
       obj3[1] = function headerTitle() {
         return null;
@@ -226,7 +226,7 @@ export default function InAppReportModal(arg0) {
         obj.addOnCloseCallback = callback2;
         obj.reportId = closure_5;
         obj.onNavigate = onNavigate;
-        return callback2(callback(8763), obj);
+        return callback2(callback(8778), obj);
       };
       obj2[c6] = obj3;
       obj[1] = obj2;

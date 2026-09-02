@@ -31,11 +31,11 @@ export default function UserSettingsVoice() {
   obj = { style: tmp.container, children: null };
   const items = [callback(handleInputModePressDefault, {}), , , , , ,];
   if (nonContextualStreamOutputPresent) {
-    nonContextualStreamOutputPresent = tmp4(tmp2(10068), {});
+    nonContextualStreamOutputPresent = tmp4(tmp2(10090), {});
   }
   items[1] = nonContextualStreamOutputPresent;
   obj = { style: tmp.tableRow, variant: "text-sm/medium", children: null };
-  const intl = tmp7(1236).intl;
+  const intl = tmp7(1233).intl;
   obj[2] = intl.format(getSystemLocale.t["V+B3FH"], { guideURL: closure_5 });
   items[2] = callback(Text.Text, obj);
   items[3] = callback(SoundboardVolumeDefault, {});

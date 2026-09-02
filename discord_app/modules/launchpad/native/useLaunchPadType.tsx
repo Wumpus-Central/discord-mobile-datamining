@@ -12,11 +12,11 @@ export default function useLaunchPadType() {
   const setting = LaunchPadModeSetting.useSetting();
   if (create.LaunchPadMode.LAUNCH_PAD_DISABLED === setting) {
     return LaunchPadTypes.DISABLED;
-  } else if (tmp(1306).LaunchPadMode.LAUNCH_PAD_GESTURE_FULL_SCREEN === setting) {
+  } else if (tmp(1305).LaunchPadMode.LAUNCH_PAD_GESTURE_FULL_SCREEN === setting) {
     return LaunchPadTypes.GESTURE_FULL;
-  } else if (tmp(1306).LaunchPadMode.LAUNCH_PAD_GESTURE_RIGHT_EDGE === setting) {
+  } else if (tmp(1305).LaunchPadMode.LAUNCH_PAD_GESTURE_RIGHT_EDGE === setting) {
     return LaunchPadTypes.GESTURE_EDGE;
-  } else if (tmp(1306).LaunchPadMode.LAUNCH_PAD_PULL_TAB === setting) {
+  } else if (tmp(1305).LaunchPadMode.LAUNCH_PAD_PULL_TAB === setting) {
     return LaunchPadTypes.PULL_TAB;
   }
 }

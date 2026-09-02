@@ -35,9 +35,9 @@ export default function AppShare(targetUserId) {
   const items = [first];
   const effect = obj.useEffect(() => {
     if (!first) {
-      first(14089).init();
+      first(14312).init();
       dependencyMap(true);
-      const obj = first(14089);
+      const obj = first(14312);
     }
   }, items);
   const items1 = [targetUserId];
@@ -61,24 +61,24 @@ export default function AppShare(targetUserId) {
   if (first) {
     first = tmpResult[0];
   }
-  obj1 = stateFromStores(589);
+  obj1 = stateFromStores(586);
   const items2 = [id];
   stateFromStores = obj1.useStateFromStores(items2, () => authenticated.isAuthenticated());
   const items3 = [stateFromStores];
   const effect2 = obj.useEffect(() => {
     if (stateFromStores) {
-      first(6052).startSession(closure_1_7.getToken());
-      const obj = first(6052);
+      first(6060).startSession(closure_1_7.getToken());
+      const obj = first(6060);
       if (obj2.isAndroid()) {
         const NativePermissionManager = closure_1_6.NativePermissionManager;
         const notificationAuthorization = NativePermissionManager.requestNotificationAuthorization();
       }
-      obj2 = stateFromStores(500);
+      obj2 = stateFromStores(1234);
     }
   }, items3);
   const items4 = [targetUserId.attachments.length, targetUserId.text];
   const effect3 = obj.useEffect(() => {
-    let obj = first(698);
+    let obj = first(695);
     let tmp2 = null != stateFromStores.text;
     if (tmp2) {
       tmp2 = tmp.text.length > 0;
@@ -95,7 +95,7 @@ export default function AppShare(targetUserId) {
       }
       return str;
     });
-    stateFromStores(7220).trackAppUIViewed("share", {
+    stateFromStores(7229).trackAppUIViewed("share", {
       share_num_attachments: stateFromStores.attachments.length,
       share_attachment_mimetypes: mapped,
     });
@@ -105,21 +105,21 @@ export default function AppShare(targetUserId) {
     obj = { appEntryKey: null, sharedContent: null, onClose: null };
     obj[0] = tmp18;
     obj[1] = targetUserId;
-    const tmp14Result = tmp14(13639);
+    const tmp14Result = tmp14(13862);
     if (tmp9Result.isMetaQuest()) {
-      let exitApp = tmp14(8633).close;
+      let exitApp = tmp14(8648).close;
     } else {
       exitApp = exitApp.exitApp;
     }
     obj[2] = exitApp;
     tmp19(tmp14Result, obj);
-    tmp9Result = tmp9(1624);
+    tmp9Result = tmp9(1623);
   } else {
-    const items5 = [tmp19(tmp9(6047).SceneLoadingIndicator, {}), , ,];
+    const items5 = [tmp19(tmp9(6055).SceneLoadingIndicator, {}), , ,];
     obj1 = { appEntryKey: null };
     obj1[0] = tmp18;
-    items5[1] = tmp19(tmp9(16488).ActionSheetContainer, obj1);
-    items5[2] = tmp19(tmp14(16534), {});
+    items5[1] = tmp19(tmp9(16723).ActionSheetContainer, obj1);
+    items5[2] = tmp19(tmp14(16769), {});
     items5[3] = tmp19(tmp9(4863).AlertModalContainer, {});
     obj[1] = items5;
     return closure_11(tmp17, obj);

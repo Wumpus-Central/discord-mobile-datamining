@@ -1,7 +1,7 @@
 // discord_app/components_native/premium/premium_guild_subscribe_modal/SubscribeModalGuildSelect.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import openApplyBoostModalAll from "../../../actions/native/BoostingActionCreators.tsx";
-import _modDef6220 from "../../../modules/main_tabs_v2/native/shared_components/SearchBarNav.tsx";
+import _modDef6229 from "../../../modules/main_tabs_v2/native/shared_components/SearchBarNav.tsx";
 import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_5 from "../../../../_runtime/00019_noop.js";
 import { ScrollView } from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -39,7 +39,7 @@ export default function SubscribeModalGuildSelect(guildBoostSlots) {
   let memo;
   const tmp = callback4();
   dependencyMap = tmp;
-  let obj = guildBoostSlots(1499);
+  let obj = guildBoostSlots(1498);
   callback = obj.useNavigation();
   const tmp2 = callback(first.useState(""), 2);
   first = tmp2[0];
@@ -71,7 +71,7 @@ export default function SubscribeModalGuildSelect(guildBoostSlots) {
     }
     return set;
   }, items);
-  obj1 = guildBoostSlots(589);
+  obj1 = guildBoostSlots(586);
   const items1 = [closure_7, closure_8];
   const items2 = [first, memo];
   const stateFromStoresArray = obj1.useStateFromStoresArray(
@@ -113,14 +113,14 @@ export default function SubscribeModalGuildSelect(guildBoostSlots) {
   );
   obj = { top: true, style: tmp.safeArea, children: null };
   obj = { placeholder: null, onChange: null, onClose: null };
-  const intl = guildBoostSlots(1236).intl;
-  obj[0] = intl.string(guildBoostSlots(1236).t.vf3ZTa);
+  const intl = guildBoostSlots(1233).intl;
+  obj[0] = intl.string(guildBoostSlots(1233).t.vf3ZTa);
   obj[1] = tmp2[1];
   obj[2] = openApplyBoostModalAll.closeApplyBoostModal;
-  const items3 = [callback2(_modDef6220, obj)];
+  const items3 = [callback2(_modDef6229, obj)];
   obj1 = { style: tmp.guildList, keyboardShouldPersistTaps: "always", children: null };
-  const tmp5 = _modDef6220;
-  obj1[2] = callback2(guildBoostSlots(5553).SafeAreaPaddingView, {
+  const tmp5 = _modDef6229;
+  obj1[2] = callback2(guildBoostSlots(5561).SafeAreaPaddingView, {
     bottom: true,
     children: stateFromStoresArray.map((children) => {
       closure_0 = children;
@@ -147,5 +147,5 @@ export default function SubscribeModalGuildSelect(guildBoostSlots) {
   });
   items3[1] = callback2(memo, obj1);
   obj[2] = items3;
-  return callback3(guildBoostSlots(5553).SafeAreaPaddingView, obj);
+  return callback3(guildBoostSlots(5561).SafeAreaPaddingView, obj);
 }

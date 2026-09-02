@@ -1,7 +1,7 @@
 // discord_app/modules/chat_input/native/GiftIconTrinketsAnimation.tsx
-import set from "../../../utils/PlatformUtils.tsx";
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 import map from "../../../design/tokens/native/useToken.tsx";
 import preloadDefault from "../../../components_native/common/FastImage.tsx";
 import useAPNGPlayerControls from "../../image/native/APNGPlayer.android.tsx";

@@ -121,7 +121,7 @@ export const useNewMemberBadge = function useNewMemberBadge(arg0, arg1) {
   obj = initialize;
   const items = [closure_3];
   const stateFromStores = obj.useStateFromStores(items, () => {
-    obj = callback(1399);
+    obj = callback(1398);
     const member = closure_1_3.getMember(callback, obj);
     let num;
     if (member != null) {

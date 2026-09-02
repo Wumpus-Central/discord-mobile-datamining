@@ -1,5 +1,5 @@
 // discord_app/modules/mobile_web_handoff/MobileWebHandoffUtils.tsx
-import v1 from "../../../_runtime/00514_v1.js";
+import v1 from "../../../_runtime/00511_v1.js";
 import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { Endpoints } from "../../Constants.tsx";
 

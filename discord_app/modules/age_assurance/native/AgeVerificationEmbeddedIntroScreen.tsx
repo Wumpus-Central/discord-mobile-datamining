@@ -21,7 +21,7 @@ export default function AgeVerificationEmbeddedIntroScreen(arg0) {
   ({ entryPoint, navigation } = arg0);
   ({ onClose, modalSessionId, classificationId } = arg0);
   const tmp = callback3();
-  let obj = navigation(8689);
+  let obj = navigation(8704);
   const items = [navigation];
   const isSuspendedUser = obj.useIsSuspendedUser();
   const callback = React.useCallback(() => {
@@ -31,7 +31,7 @@ export default function AgeVerificationEmbeddedIntroScreen(arg0) {
   obj = { children: null };
   obj1 = { align: "center", justify: "center", spacing: 24, children: null };
   const obj2 = { align: "center", justify: "center", spacing: 16, children: null };
-  const items1 = [callback(navigation(6256).ShieldSpotIllustration, { height: 100, width: 177 })];
+  const items1 = [callback(navigation(6265).ShieldSpotIllustration, { height: 100, width: 177 })];
   const obj3 = { align: "center", justify: "center", spacing: 8, children: null };
   const obj4 = {
     accessibilityRole: "header",
@@ -54,7 +54,7 @@ export default function AgeVerificationEmbeddedIntroScreen(arg0) {
   obj2[3] = items1;
   const items3 = [
     callback2(navigation(4926).Stack, obj2),
-    callback(navigation(8734).AgeVerificationMethodsContainer, {
+    callback(navigation(8749).AgeVerificationMethodsContainer, {
       ageVerificationMethods: useAgeVerificationMethodsDefault({
         onClose,
         classificationId,
@@ -66,16 +66,16 @@ export default function AgeVerificationEmbeddedIntroScreen(arg0) {
   obj1[3] = items3;
   const items4 = [callback2(navigation(4926).Stack, obj1)];
   const obj6 = { variant: "text-xs/medium", color: "text-muted", style: tmp.helpLink, children: null };
-  const intl = navigation(1236).intl;
+  const intl = navigation(1233).intl;
   obj7 = {
     handleOnHelpUrlHook() {
-      const obj = callback(8682);
-      obj.openUrl(callback(1995).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
+      const obj = callback(8697);
+      obj.openUrl(callback(1994).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
     },
   };
   obj6[3] = intl.format(messagesProxyDefault.lG69e1, obj7);
   items4[1] = callback(navigation(4474).Text, obj6);
   obj[0] = items4;
-  obj[0] = callback2(navigation(8693).ModalContent, obj);
-  return callback(navigation(8692).ModalScreen, obj);
+  obj[0] = callback2(navigation(8708).ModalContent, obj);
+  return callback(navigation(8707).ModalScreen, obj);
 }

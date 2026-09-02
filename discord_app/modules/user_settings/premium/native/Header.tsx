@@ -29,14 +29,14 @@ export default function Header(style) {
   obj[1] = intl.string(getSystemLocale.t.lpNrPu);
   const tmp8 = preloadDefault;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = tmp2(13058);
+    let tmp2Result = tmp2(13280);
   } else {
-    tmp2Result = tmp2(13130);
+    tmp2Result = tmp2(13352);
   }
   obj[3] = tmp2Result;
   const items1 = [closure_4(tmp8, obj)];
   obj = { style: tmp.headerText, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
-  const intl2 = tmp9(1236).intl;
+  const intl2 = tmp9(1233).intl;
   obj[3] = intl2.string(getSystemLocale.t.SD5MJW);
   items1[1] = closure_4(Text.Text, obj);
   obj[1] = items1;

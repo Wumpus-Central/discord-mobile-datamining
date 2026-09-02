@@ -1,6 +1,6 @@
 // discord_app/modules/premium/native/PremiumAnalyticsUtils.tsx
 import set from "../../../../_runtime/00002_set.js";
-import v1 from "../../../../_runtime/00514_v1.js";
+import v1 from "../../../../_runtime/00511_v1.js";
 import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
 import getPremiumPlanItem from "../../../utils/PremiumUtils.tsx";
 import ME from "../../../Constants.tsx";
@@ -53,8 +53,11 @@ export const getBasePurchaseFlowAnalyticsFields = function getBasePurchaseFlowAn
   obj[6] = section;
   return obj;
 };
-export const getPaymentFlowCompletedAnalyticsFields = function getPaymentFlowCompletedAnalyticsFields(arg0, arg1) {
-  const merged = Object.assign(arg0);
+export const getPaymentFlowCompletedAnalyticsFields = function getPaymentFlowCompletedAnalyticsFields(
+  throwTypeErrorResult,
+  arg1,
+) {
+  const merged = Object.assign(throwTypeErrorResult);
   const merged1 = Object.assign(arg1);
   return {};
 };

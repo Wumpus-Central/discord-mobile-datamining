@@ -3,7 +3,7 @@ import set2 from "../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import ME from "../../../Constants.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
-import _modDef1208 from "../../../utils/SentryUtils.native.tsx";
+import _modDef1205 from "../../../utils/SentryUtils.native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import messagesProxyDefault from "../NotificationSettings.messages.js";
 import initializeDefault from "../../../lib/LifecycleManager.tsx";
@@ -169,8 +169,8 @@ prototype["registerNotificationCategories"] = function registerNotificationCateg
     } else {
       try {
         if (config.clearDeclarative) {
-          _modDef1208.addBreadcrumb({ message: "Clearing declarative notification categories" });
-          const obj3 = _modDef1208;
+          _modDef1205.addBreadcrumb({ message: "Clearing declarative notification categories" });
+          const obj3 = _modDef1205;
           inferImportanceFromBehaviorDefault.clear();
           const obj4 = inferImportanceFromBehaviorDefault;
         }
@@ -292,7 +292,7 @@ prototype["registerLegacyNotificationCategories"] = function registerLegacyNotif
 prototype["trackDisabledAndroidNotifChannels"] = function trackDisabledAndroidNotifChannels() {
   if (!this.hasTrackedDisabledAndroidNotifChannels) {
     tmp.hasTrackedDisabledAndroidNotifChannels = true;
-    let obj = set(500);
+    let obj = set(1234);
     if (obj.isAndroid()) {
       const tmp5 = NativeNotifSettingsModuleDefault;
       let prop;
@@ -312,8 +312,8 @@ prototype["trackDisabledAndroidNotifChannels"] = function trackDisabledAndroidNo
         const propResult = prop();
         obj = { disabled_channels: null };
         obj[0] = found.map((channelId) => channelId.channelId);
-        tmp4(698).track(AnalyticEvents.ANDROID_NOTIFICATION_CHANNELS_SYNCED, obj);
-        const tmp4Result = tmp4(698);
+        tmp4(695).track(AnalyticEvents.ANDROID_NOTIFICATION_CHANNELS_SYNCED, obj);
+        const tmp4Result = tmp4(695);
       }
       tmp4 = importDefault;
     }

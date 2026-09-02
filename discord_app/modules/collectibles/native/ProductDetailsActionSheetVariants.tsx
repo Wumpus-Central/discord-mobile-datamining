@@ -16,10 +16,10 @@ function VariantOption(onPress) {
   let obj = getProductPurchaseState;
   let isPurchased = obj.useProductPurchaseState(variant).isPurchased;
   if (isPurchased) {
-    const intl = tmp2(1236).intl;
+    const intl = tmp2(1233).intl;
     obj = { variantLabel: null };
     obj[0] = variant.name;
-    let name = intl.formatToPlainString(tmp2(1236).t["SfQB4+"], obj);
+    let name = intl.formatToPlainString(tmp2(1233).t["SfQB4+"], obj);
   } else {
     name = variant.name;
   }
@@ -93,9 +93,9 @@ let closure_7 = createCacheKey.createStyles((arg0) => {
     height: "100%",
     justifyContent: "center",
     alignItems: "center",
-    borderRadius: tmp(712).radii.round,
+    borderRadius: tmp(709).radii.round,
     borderWidth: 1,
-    borderColor: tmp(712).colors.BACKGROUND_BASE_LOW,
+    borderColor: tmp(709).colors.BACKGROUND_BASE_LOW,
   };
   obj[1] = obj;
   return obj;

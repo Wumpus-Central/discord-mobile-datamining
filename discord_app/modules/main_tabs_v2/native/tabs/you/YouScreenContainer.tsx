@@ -41,7 +41,7 @@ const memoResult = importAllResult.memo(function YouScreenContainer(route) {
   }
   if (useChatLayoutDefault().isChatBesideChannelList) {
     const items = [items1.container];
-    let tmp3Result = tmp3(501);
+    let tmp3Result = tmp3(1235);
     let tmp7;
     if (tmp3Result.isAndroid()) {
       obj = {};
@@ -52,7 +52,7 @@ const memoResult = importAllResult.memo(function YouScreenContainer(route) {
     obj = { style: null, children: null };
     items[1] = tmp7;
     obj[0] = items;
-    tmp3Result = tmp3(501);
+    tmp3Result = tmp3(1235);
     if (tmp3Result.isAndroid()) {
       obj1 = { style: null, children: null };
       items1 = [,];

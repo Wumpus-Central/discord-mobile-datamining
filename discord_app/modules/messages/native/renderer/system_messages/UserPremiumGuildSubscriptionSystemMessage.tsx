@@ -22,18 +22,18 @@ export const createUserPremiumGuildSubscriptionSystemMessage = function createUs
     roleStyle: roleStyle.roleStyle,
   });
   if (tmp3 > 1) {
-    const intl2 = tmp4(1236).intl;
+    const intl2 = tmp4(1233).intl;
     obj = { username: null, usernameOnClick: null, numSubscriptions: null };
     obj[0] = messageAuthorWithProcessedColor.nick;
     obj[1] = tmp6;
     obj[2] = tmp3;
-    let formatToPartsResult = intl2.formatToParts(tmp4(1236).t.rbj006, obj);
+    let formatToPartsResult = intl2.formatToParts(tmp4(1233).t.rbj006, obj);
   } else {
-    const intl = tmp4(1236).intl;
+    const intl = tmp4(1233).intl;
     obj = { username: null, usernameOnClick: null };
     obj[0] = messageAuthorWithProcessedColor.nick;
     obj[1] = tmp6;
-    formatToPartsResult = intl.formatToParts(tmp4(1236).t.ihxM9x, obj);
+    formatToPartsResult = intl.formatToParts(tmp4(1233).t.ihxM9x, obj);
   }
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
   return { content: formatToPartsResult };

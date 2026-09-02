@@ -51,7 +51,7 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
         let string2 = _formatMessageCountLabel.formatMessageCountLabel(count, channel1.id);
         if (null != count) {
           if (count > 0) {
-            let tmp15Result = tmp15(6174);
+            let tmp15Result = tmp15(6182);
             if (tmp15Result.isChannelSpoilerGated(channel1)) {
               let obj = {
                 title: null,
@@ -64,9 +64,9 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
               obj[0] = channelName;
               obj[1] = intl5;
               obj[2] = string2;
-              intl5 = tmp15(1236).intl;
+              intl5 = tmp15(1233).intl;
               string2 = intl5.string;
-              string2Result = string2(tmp15(1236).t["5uaI/7"]);
+              string2Result = string2(tmp15(1233).t["5uaI/7"]);
               obj[3] = string2Result;
               obj[5] = backgroundColor;
               obj1 = obj;
@@ -89,10 +89,10 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
                 obj[0] = channelName;
                 obj[1] = intl5;
                 obj[2] = string2;
-                const intl4 = tmp15(1236).intl;
-                obj[3] = intl4.string(tmp15(1236).t.ZTo4HS);
-                tmp15Result = tmp15(7855);
-                obj[5] = tmp15Result.getAssetUriForEmbed(tmp19(7856));
+                const intl4 = tmp15(1233).intl;
+                obj[3] = intl4.string(tmp15(1233).t.ZTo4HS);
+                tmp15Result = tmp15(7864);
+                obj[5] = tmp15Result.getAssetUriForEmbed(tmp19(7865));
                 obj[6] = backgroundColor;
                 obj1 = obj;
               } else {
@@ -142,9 +142,9 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
                       obj4[0] = channelName;
                       obj4[1] = intl5;
                       obj4[2] = string2;
-                      const intl2 = tmp15(1236).intl;
+                      const intl2 = tmp15(1233).intl;
                       const string = intl2.string;
-                      let XAkOo2 = tmp15(1236).t;
+                      let XAkOo2 = tmp15(1233).t;
                       if (mostRecentMessage.blocked) {
                         XAkOo2 = XAkOo2.XAkOo2;
                         let stringResult = string(XAkOo2);
@@ -167,8 +167,8 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
                 obj5[0] = channelName;
                 obj5[1] = intl5;
                 obj5[2] = string2;
-                const intl3 = tmp15(1236).intl;
-                obj5[3] = intl3.string(tmp15(1236).t.ZTo4HS);
+                const intl3 = tmp15(1233).intl;
+                obj5[3] = intl3.string(tmp15(1233).t.ZTo4HS);
                 obj5[5] = backgroundColor;
                 obj1 = obj5;
               }
@@ -186,7 +186,7 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
         obj[0] = channelName;
         obj[1] = intl5;
         obj[2] = string2;
-        const intl = tmp15(1236).intl;
+        const intl = tmp15(1233).intl;
         obj[3] = intl.string(getSystemLocale.t.HYtNyE);
         obj[5] = backgroundColor;
         return obj;
@@ -1507,11 +1507,7 @@ function createMessageContent(message) {
       applicationIconSource = author.getAvatarSource(undefined);
       tmp13Result7 = tmp13(tmp3[53]);
     }
-    parseMessageMarkupResult = {
-      content: "flex",
-      hasSpoilerEmbeds: "BACKGROUND_SYNC",
-      hasBailedAst: "CONNECTION_OPEN",
-    };
+    parseMessageMarkupResult = { content: "flex", hasSpoilerEmbeds: "screens", hasBailedAst: "groups" };
     const tmp13Result1 = tmp13(tmp3[42]);
   }
 }

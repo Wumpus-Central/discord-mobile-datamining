@@ -11,7 +11,7 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-let obj = { [arg1(8691).AccountStandingState.ALL_GOOD]: { left: "0%" } };
+let obj = { [arg1(8706).AccountStandingState.ALL_GOOD]: { left: "0%" } };
 obj = { left: "25%", transform: null };
 obj = { translateX: -0.5 * require("SafetyHubAccountStandingSubwayMarker").SUBWAY_MARKER_WIDTH };
 let items = [obj];
@@ -122,74 +122,74 @@ export default function SafetyHubAccountStanding() {
   let items = [tmp4];
   memo = memo.useMemo(() => {
     obj = {};
-    obj = { title: accountStanding(1236).t.uaKrRi, description: null, status: null, style: null, CustomIcon: null };
-    const intl = accountStanding(1236).intl;
+    obj = { title: accountStanding(1233).t.uaKrRi, description: null, status: null, style: null, CustomIcon: null };
+    const intl = accountStanding(1233).intl;
     obj = { termsOfService: closure_1_8.TOS_LINK, communityGuidelines: closure_1_8.COMMUNITY_GUIDELINES };
-    obj[1] = intl.format(accountStanding(1236).t.pEdBD4, obj);
-    obj[2] = accountStanding(1236).t["/Idfao"];
+    obj[1] = intl.format(accountStanding(1233).t.pEdBD4, obj);
+    obj[2] = accountStanding(1233).t["/Idfao"];
     obj[3] = closure_3.good;
     obj[4] = accountStanding(4438).CircleCheckIcon;
-    obj[accountStanding(8691).AccountStandingState.ALL_GOOD] = obj;
+    obj[accountStanding(8706).AccountStandingState.ALL_GOOD] = obj;
     obj1 = {
-      title: accountStanding(1236).t.epkcmS,
+      title: accountStanding(1233).t.epkcmS,
       description: null,
       status: null,
       style: null,
       CustomIcon: null,
       iconSource: null,
     };
-    const intl2 = accountStanding(1236).intl;
-    obj1[1] = intl2.string(accountStanding(1236).t["774juc"]);
-    obj1[2] = accountStanding(1236).t.umleq4;
+    const intl2 = accountStanding(1233).intl;
+    obj1[1] = intl2.string(accountStanding(1233).t["774juc"]);
+    obj1[2] = accountStanding(1233).t.umleq4;
     obj1[3] = closure_3.limited;
-    obj1[4] = accountStanding(7708).CircleErrorIcon;
-    obj1[5] = first(9594);
-    obj[accountStanding(8691).AccountStandingState.LIMITED] = obj1;
+    obj1[4] = accountStanding(7717).CircleErrorIcon;
+    obj1[5] = first(9607);
+    obj[accountStanding(8706).AccountStandingState.LIMITED] = obj1;
     const obj2 = {
-      title: accountStanding(1236).t.crzE2X,
+      title: accountStanding(1233).t.crzE2X,
       description: null,
       status: null,
       style: null,
       CustomIcon: null,
       iconSource: null,
     };
-    const intl3 = accountStanding(1236).intl;
-    obj2[1] = intl3.string(accountStanding(1236).t["T/Ufh9"]);
-    obj2[2] = accountStanding(1236).t.WBtMHf;
+    const intl3 = accountStanding(1233).intl;
+    obj2[1] = intl3.string(accountStanding(1233).t["T/Ufh9"]);
+    obj2[2] = accountStanding(1233).t.WBtMHf;
     obj2[3] = closure_3.veryLimited;
-    obj2[4] = accountStanding(7708).CircleErrorIcon;
-    obj2[5] = first(9594);
-    obj[accountStanding(8691).AccountStandingState.VERY_LIMITED] = obj2;
+    obj2[4] = accountStanding(7717).CircleErrorIcon;
+    obj2[5] = first(9607);
+    obj[accountStanding(8706).AccountStandingState.VERY_LIMITED] = obj2;
     const obj3 = {
-      title: accountStanding(1236).t.XRNVzO,
+      title: accountStanding(1233).t.XRNVzO,
       description: null,
       status: null,
       style: null,
       CustomIcon: null,
       iconSource: null,
     };
-    const intl4 = accountStanding(1236).intl;
-    obj3[1] = intl4.string(accountStanding(1236).t["hbH+9S"]);
-    obj3[2] = accountStanding(1236).t["7f+4Lg"];
+    const intl4 = accountStanding(1233).intl;
+    obj3[1] = intl4.string(accountStanding(1233).t["hbH+9S"]);
+    obj3[2] = accountStanding(1233).t["7f+4Lg"];
     obj3[3] = closure_3.atRisk;
-    obj3[4] = accountStanding(7708).CircleErrorIcon;
-    obj3[5] = first(9594);
-    obj[accountStanding(8691).AccountStandingState.AT_RISK] = obj3;
+    obj3[4] = accountStanding(7717).CircleErrorIcon;
+    obj3[5] = first(9607);
+    obj[accountStanding(8706).AccountStandingState.AT_RISK] = obj3;
     const obj4 = {
-      title: accountStanding(1236).t.MExFkz,
+      title: accountStanding(1233).t.MExFkz,
       description: null,
       status: null,
       style: null,
       CustomIcon: null,
       iconSource: null,
     };
-    const intl5 = accountStanding(1236).intl;
-    obj4[1] = intl5.string(accountStanding(1236).t["2liUvt"]);
-    obj4[2] = accountStanding(1236).t["0OONGB"];
+    const intl5 = accountStanding(1233).intl;
+    obj4[1] = intl5.string(accountStanding(1233).t["2liUvt"]);
+    obj4[2] = accountStanding(1233).t["0OONGB"];
     obj4[3] = closure_3.suspended;
-    obj4[4] = accountStanding(6225).CircleXIcon;
-    obj4[5] = first(7713);
-    obj[accountStanding(8691).AccountStandingState.SUSPENDED] = obj4;
+    obj4[4] = accountStanding(6234).CircleXIcon;
+    obj4[5] = first(7722);
+    obj[accountStanding(8706).AccountStandingState.SUSPENDED] = obj4;
     return obj;
   }, items);
   const items1 = [accountStanding, memo, first, tmp4];
@@ -231,21 +231,21 @@ export default function SafetyHubAccountStanding() {
       return closure_1_9(closure_1_5, obj, arg1);
     });
   }, items1);
-  obj = accountStanding(589);
+  obj = accountStanding(586);
   const items2 = [closure_6];
   const stateFromStores = obj.useStateFromStores(items2, () => currentUser.getCurrentUser());
   if (null != stateFromStores) {
-    obj1 = first(1431);
+    obj1 = first(1430);
     let userAvatarSource = obj1.getUserAvatarSource(stateFromStores);
   } else {
-    userAvatarSource = first(8520);
+    userAvatarSource = first(8533);
   }
   const style = tmp13.style;
   obj = { style: items3, children: null };
   items3 = [tmp4.container];
   obj = { style: tmp4.avatarBackground, children: null };
   ({ title, description } = memo[accountStanding.state]);
-  obj1 = { source: userAvatarSource, size: tmp7(1297).AvatarSizes.XXLARGE, "aria-label": null };
+  obj1 = { source: userAvatarSource, size: tmp7(1296).AvatarSizes.XXLARGE, "aria-label": null };
   let str;
   if (stateFromStores != null) {
     str = stateFromStores.username;
@@ -254,12 +254,12 @@ export default function SafetyHubAccountStanding() {
     str = "";
   }
   obj1[2] = str;
-  obj[1] = closure_9(accountStanding(1297).Avatar, obj1);
+  obj[1] = closure_9(accountStanding(1296).Avatar, obj1);
   const items4 = [closure_9(style, obj)];
   let obj2 = { style: tmp4.body, children: null };
   let obj3 = { style: tmp4.bodyText, children: null };
   let obj4 = { variant: "heading-lg/medium", color: "text-default", style: { textAlign: "center" }, children: null };
-  let intl = tmp7(1236).intl;
+  let intl = tmp7(1233).intl;
   obj4[3] = intl.format(title, {
     hook(children) {
       return closure_1_9(accountStanding(4474).Text, { style, variant: "heading-lg/bold", children }, arg1);

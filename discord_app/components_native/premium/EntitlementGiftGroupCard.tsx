@@ -8,17 +8,17 @@ import getPrice from "../../modules/slayer_storefront/SlayerStorefrontUtils.tsx"
 import getSubscriptionPlans from "../../utils/SubscriptionUtils.tsx";
 import SlayerStorefrontItemCardDefault from "../../modules/slayer_storefront/native/SlayerStorefrontItemCard.tsx";
 import metadataDefault from "../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
-import registerAssetDefault from "../../../_runtime/12859_registerAsset.js";
-import registerAssetDefault2 from "../../../_runtime/12860_registerAsset.js";
-import registerAssetDefault3 from "../../../_runtime/12861_registerAsset.js";
-import registerAssetDefault4 from "../../../_runtime/12862_registerAsset.js";
-import registerAssetDefault5 from "../../../_runtime/12863_registerAsset.js";
-import registerAssetDefault6 from "../../../_runtime/12864_registerAsset.js";
-import registerAssetDefault7 from "../../../_runtime/12865_registerAsset.js";
-import registerAssetDefault8 from "../../../_runtime/12866_registerAsset.js";
-import registerAssetDefault9 from "../../../_runtime/12867_registerAsset.js";
-import registerAssetDefault10 from "../../../_runtime/12870_registerAsset.js";
-import registerAssetDefault11 from "../../../_runtime/12871_registerAsset.js";
+import registerAssetDefault from "../../../_runtime/13081_registerAsset.js";
+import registerAssetDefault2 from "../../../_runtime/13082_registerAsset.js";
+import registerAssetDefault3 from "../../../_runtime/13083_registerAsset.js";
+import registerAssetDefault4 from "../../../_runtime/13084_registerAsset.js";
+import registerAssetDefault5 from "../../../_runtime/13085_registerAsset.js";
+import registerAssetDefault6 from "../../../_runtime/13086_registerAsset.js";
+import registerAssetDefault7 from "../../../_runtime/13087_registerAsset.js";
+import registerAssetDefault8 from "../../../_runtime/13088_registerAsset.js";
+import registerAssetDefault9 from "../../../_runtime/13089_registerAsset.js";
+import registerAssetDefault10 from "../../../_runtime/13092_registerAsset.js";
+import registerAssetDefault11 from "../../../_runtime/13093_registerAsset.js";
 import importAllResult from "../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
 import importDefaultResult from "../../modules/applications/ApplicationStore.tsx";
@@ -184,18 +184,18 @@ prototype["renderHeader"] = function renderHeader(arg0, children) {
     obj1 = { sku: null, size: null, containerStyle: null };
     obj1[0] = sku;
     const tmp14 = SlayerStorefrontItemCardDefault;
-    obj1[1] = tmp2(1297).getIconSize(tmp2(1297).Icon.Sizes.LARGE);
+    obj1[1] = tmp2(1296).getIconSize(tmp2(1296).Icon.Sizes.LARGE);
     obj1[2] = tmp.giftIcon;
     let tmp6Result = tmp6(tmp14, obj1);
-    const tmp2Result = tmp2(1297);
+    const tmp2Result = tmp2(1296);
   } else {
     tmp6Result = null;
     if (null != arg0) {
       const obj2 = { resizeMode: "contain", source: null, disableColor: true, size: null, style: null };
       obj2[1] = arg0;
-      obj2[3] = tmp2(1297).Icon.Sizes.LARGE;
+      obj2[3] = tmp2(1296).Icon.Sizes.LARGE;
       obj2[4] = tmp.giftIcon;
-      tmp6Result = tmp6(tmp2(1297).Icon, obj2);
+      tmp6Result = tmp6(tmp2(1296).Icon, obj2);
     }
   }
   const items1 = [tmp6Result, ,];
@@ -225,9 +225,9 @@ prototype["renderHeader"] = function renderHeader(arg0, children) {
   }
   const items4 = [tmp6Result];
   const obj7 = { variant: "text-md/normal", color: "text-subtle", style: tmp.subtitle, children: null };
-  const intl = tmp2(1236).intl;
+  const intl = tmp2(1233).intl;
   const format = intl.format;
-  const t = tmp2(1236).t;
+  const t = tmp2(1233).t;
   if (isGameItemSKUResult) {
     const obj8 = { applicationName: null, copies: null };
     obj8[0] = application.name;
@@ -245,9 +245,9 @@ prototype["renderHeader"] = function renderHeader(arg0, children) {
   obj3[1] = items2;
   items1[1] = closure_15(closure_4, obj3);
   if (isOpen) {
-    let ChevronSmallRightIcon = tmp2(8935).ChevronSmallDownIcon;
+    let ChevronSmallRightIcon = tmp2(8949).ChevronSmallDownIcon;
   } else {
-    ChevronSmallRightIcon = tmp2(6003).ChevronSmallRightIcon;
+    ChevronSmallRightIcon = tmp2(6011).ChevronSmallRightIcon;
   }
   items1[2] = closure_14(ChevronSmallRightIcon, {});
   obj[1] = items1;
@@ -301,9 +301,9 @@ prototype["renderCardHeader"] = function renderCardHeader(sku) {
     } else {
       const intl = getSystemLocale.intl;
       if (subscriptionPlan.interval === constants.MONTH) {
-        let Vd3Iu8 = tmp4(1236).t.rCJvqo;
+        let Vd3Iu8 = tmp4(1233).t.rCJvqo;
       } else {
-        Vd3Iu8 = tmp4(1236).t.Vd3Iu8;
+        Vd3Iu8 = tmp4(1233).t.Vd3Iu8;
       }
       const obj = { skuName: null, intervalCount: null };
       obj[0] = sku.name;

@@ -1,7 +1,7 @@
 // discord_app/modules/icymi/native/ICYMICardInteractionRow.tsx
-import set from "../../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 import MAX_REACTIONS from "../../reactions/ReactionUtils.tsx";
 import hexToRgba from "../../../utils/ColorUtils.tsx";
 import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
@@ -264,7 +264,7 @@ function ForwardButton(disabled) {
   items[2] = disabled;
   obj[1] = items;
   obj[3] = disabled;
-  const intl = tmp3(1236).intl;
+  const intl = tmp3(1233).intl;
   obj[4] = intl.string(getSystemLocale.t.xIUfJS);
   obj[5] = closure_16(ForwardingIconDefault, { size: "sm" });
   return closure_16(PressableBase.PressableOpacity, obj);
@@ -289,7 +289,7 @@ function ReplyButton(disabled) {
   items[2] = disabled;
   obj[1] = items;
   obj[3] = disabled;
-  const intl = tmp3(1236).intl;
+  const intl = tmp3(1233).intl;
   obj[4] = intl.string(getSystemLocale.t["5NwaNY"]);
   obj[5] = closure_16(ArrowAngleLeftUpIcon.ArrowAngleLeftUpIcon, { size: "sm" });
   return closure_16(PressableBase.PressableOpacity, obj);
@@ -434,7 +434,7 @@ let closure_20 = createCacheKey.createStyles(() => {
     gap: 8,
   };
   obj[18] = { display: "flex", flexDirection: "row", alignItems: "center", gap: 4, justifySelf: "end" };
-  obj3 = { width: 20, height: 20, tintColor: tmp(712).colors.INTERACTIVE_TEXT_DEFAULT };
+  obj3 = { width: 20, height: 20, tintColor: tmp(709).colors.INTERACTIVE_TEXT_DEFAULT };
   obj[19] = obj3;
   return obj;
 });

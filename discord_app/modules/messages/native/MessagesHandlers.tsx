@@ -2588,10 +2588,10 @@ class MessagesHandlers {
                 closure_1 = tmp2;
                 isReveal = undefined;
                 closure_1 = undefined;
-                const nativeSyntheticEventData = callback(11146).getNativeSyntheticEventData(isReveal);
+                const nativeSyntheticEventData = callback(11367).getNativeSyntheticEventData(isReveal);
                 ({ messageId, channelId, isReveal } = nativeSyntheticEventData);
                 ({ attachmentId, embedId } = nativeSyntheticEventData);
-                const obj10 = callback(11146);
+                const obj10 = callback(11367);
                 if (isReveal) {
                   if (obj11.shouldAgeVerifyForExplicitMedia()) {
                     dependencyMap = 1;
@@ -2601,12 +2601,12 @@ class MessagesHandlers {
                     return obj1;
                   }
                 }
-                let obj3 = callback(7345);
+                let obj3 = callback(7354);
                 const obj2 = { obscure: null };
                 obj2[0] = isReveal;
                 const result = obj3.trackToggleMediaObscurityV2(obj2);
                 c4 = 3;
-                obj11 = callback(7345);
+                obj11 = callback(7354);
               }
             } else if (arg0 === 1) {
               c4 = 3;
@@ -2619,9 +2619,9 @@ class MessagesHandlers {
                 reactiveCheckPassed = closure_1_9.getReactiveCheckPassed();
               }
               if (!reactiveCheckPassed) {
-                obj = closure_1_1(8682);
+                obj = closure_1_1(8697);
                 obj3 = { entryPoint: null };
-                obj3[0] = callback(8684).AgeVerificationModalEntryPoint.OBSCURED_MEDIA;
+                obj3[0] = callback(8699).AgeVerificationModalEntryPoint.OBSCURED_MEDIA;
                 const result1 = obj.showAgeVerificationGetStartedModal(obj3);
               }
             }

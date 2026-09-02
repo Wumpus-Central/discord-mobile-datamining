@@ -32,11 +32,11 @@ let obj = {
     const value = HTTP.get({ url: closure_6.CONNECTIONS, oldFormErrors: true, rejectWithError: true });
     return value.then(
       (accounts) => {
-        let obj = callback(709);
+        let obj = callback(706);
         obj = { type: "USER_CONNECTIONS_UPDATE", local: true, accounts: accounts.body };
         return obj.dispatch(obj);
       },
-      () => callback(709).dispatch({ type: "USER_CONNECTIONS_UPDATE", local: true, accounts: [] }),
+      () => callback(706).dispatch({ type: "USER_CONNECTIONS_UPDATE", local: true, accounts: [] }),
     );
   },
   authorize(arg0) {

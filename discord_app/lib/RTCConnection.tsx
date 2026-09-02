@@ -1,13 +1,13 @@
 // discord_app/lib/RTCConnection.tsx
 import timestampDefault from "../modules/debug/Logger.tsx";
-import set2 from "../utils/PlatformUtils.tsx";
-import v1 from "../../_runtime/00514_v1.js";
+import v1 from "../../_runtime/00511_v1.js";
 import failsDefault from "../../discord_common/js/packages/backoff/Backoff.tsx";
-import debounceDefault from "../../_runtime/00636_debounce.js";
+import debounceDefault from "../../_runtime/00633_debounce.js";
 import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
-import _modDef1208 from "../utils/SentryUtils.native.tsx";
-import MurmurHashV3Default from "../../_runtime/01217_MurmurHashV3.js";
+import _modDef1205 from "../utils/SentryUtils.native.tsx";
+import MurmurHashV3Default from "../../_runtime/01214_MurmurHashV3.js";
+import set2 from "../utils/PlatformUtils.tsx";
 import awaitOnlineDefault from "../utils/NetworkUtils.tsx";
 import isDiscordProxiedAssetUrlDefault from "../utils/URLUtils.tsx";
 import setDefault from "../utils/CrossPlatformNativeUtils.native.tsx";
@@ -23,7 +23,7 @@ import openAll from "../actions/RTCDebugActionCreators.tsx";
 import noop from "RTCControlSocket.tsx";
 import noopDefault from "RTCControlSocket.tsx";
 import getUnitIdDefault2 from "../modules/calls/VideoStabilizationExperiment.tsx";
-import _modDef13479 from "../modules/media_engine/BandwidthEstimationExperiment.tsx";
+import _modDef13702 from "../modules/media_engine/BandwidthEstimationExperiment.tsx";
 import closure_4 from "../../_runtime/00005_asyncGeneratorStep.js";
 import closure_5 from "../modules/media_engine/DeviceFrecencyStore.tsx";
 import closure_6 from "../modules/media_engine/MediaEngineStatsStore.tsx";
@@ -723,12 +723,12 @@ prototype["destroy"] = function destroy() {
   }
   obj = { c: constants9.CONNECTION_DESTROY };
   self.recordEvent(obj);
-  const WindowVisibilityVideoManager = tmp5(9578).WindowVisibilityVideoManager;
+  const WindowVisibilityVideoManager = tmp5(9591).WindowVisibilityVideoManager;
   WindowVisibilityVideoManager.off(
     isIncomingVideoEnabled.WindowVisibilityEvent.IncomingVideoEnabledChanged,
     self.incomingVideoEnabledChanged,
   );
-  const WindowVisibilityVideoManager2 = tmp5(9578).WindowVisibilityVideoManager;
+  const WindowVisibilityVideoManager2 = tmp5(9591).WindowVisibilityVideoManager;
   WindowVisibilityVideoManager2.off(
     isIncomingVideoEnabled.WindowVisibilityEvent.WindowVisibilityChanged,
     self.windowVisibilityChanged,
@@ -782,8 +782,8 @@ prototype["shouldSendSpeaking"] = function shouldSendSpeaking(_lastSentSpeakingS
     return true;
   } else {
     const self = this;
-    let tmpResult = tmp(1399);
-    tmpResult = tmp(1399);
+    let tmpResult = tmp(1398);
+    tmpResult = tmp(1398);
     let tmp7 =
       this._lastSentSSRC !== _lastSentSSRC ||
       tmpResult.hasFlag(_lastSentSpeakingStatus, constants8.PRIORITY) !==
@@ -1176,13 +1176,13 @@ prototype["_chooseExperiments"] = function _chooseExperiments(items) {
   const tmp3 = importDefault;
   let enabled = set2.isWeb();
   if (enabled) {
-    const BrowserTransceiverPaddingRemovalExperiment = tmp8(13464).BrowserTransceiverPaddingRemovalExperiment;
+    const BrowserTransceiverPaddingRemovalExperiment = tmp8(13687).BrowserTransceiverPaddingRemovalExperiment;
     enabled = BrowserTransceiverPaddingRemovalExperiment.getConfig({ location: "RTCConnection" }).enabled;
   }
   if (enabled) {
     items.push("browser_transceiver_padding_removal");
   }
-  let tmp8Result = tmp8(500);
+  let tmp8Result = tmp8(1234);
   if (tmp8Result.isIOS()) {
     const mode = getUnitIdDefault2.getConfig({ location: "_chooseExperiments" }).mode;
     if ("standard" === mode) {
@@ -1192,14 +1192,14 @@ prototype["_chooseExperiments"] = function _chooseExperiments(items) {
     }
     const tmp3Result = getUnitIdDefault2;
   }
-  tmp8Result = tmp8(500);
+  tmp8Result = tmp8(1234);
   let isAndroidResult = tmp8Result.isAndroid();
   if (isAndroidResult) {
-    isAndroidResult = tmp8(9574).isSurfaceDirectRendererExperimentEnabled();
-    const tmp8Result1 = tmp8(9574);
+    isAndroidResult = tmp8(9587).isSurfaceDirectRendererExperimentEnabled();
+    const tmp8Result1 = tmp8(9587);
   }
   if (isAndroidResult) {
-    items.push(tmp8(9574).ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT);
+    items.push(tmp8(9587).ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT);
   }
   this._selectedExperiments = items;
 };
@@ -1860,8 +1860,8 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
     isWebResult = !closure_23;
   }
   if (isWebResult) {
-    _modDef1208.captureMessage("Browser does not support Unified Plan");
-    const obj8 = _modDef1208;
+    _modDef1205.captureMessage("Browser does not support Unified Plan");
+    const obj8 = _modDef1205;
   }
   connectResult.setUseElectronVideo(mediaEngine.supports(constants5.ELECTRON_VIDEO));
   let guild = null;
@@ -2145,16 +2145,16 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
       }
       if (type === closure_1_18.GUILD_STAGE_VOICE) {
         if (!tmp._videoDecoderFallbackSuppressed) {
-          const logger = tmp.logger;
-          logger.info("Suppressing video decoder fallback: stage channel");
+          const logger2 = tmp.logger;
+          logger2.info("Suppressing video decoder fallback: stage channel");
           tmp._videoDecoderFallbackSuppressed = true;
         }
       } else {
         const found = arr.filter((type) => "video" === type.type);
         const mapped = found.map((name) => name.name);
-        const logger2 = tmp.logger;
+        const logger = tmp.logger;
         const _HermesInternal = HermesInternal;
-        logger2.info(
+        logger.info(
           "The originally selected video decoder is not working, fallback to the other available decoders: " +
             mapped.join(","),
         );
@@ -2435,16 +2435,16 @@ prototype["getOrCreateVideoQuality"] = function getOrCreateVideoQuality() {
   self = this;
   if (null != this._connection) {
     if (null == self._videoQuality) {
-      const videoQuality = new self(13476).VideoQuality(self._connection);
+      const videoQuality = new self(13699).VideoQuality(self._connection);
       self._videoQuality = videoQuality;
       const _videoQuality2 = self._videoQuality;
       let result = _videoQuality2.updateCallUserIdsCount(self._userIds.size);
       const _videoQuality3 = self._videoQuality;
       _videoQuality3.start();
-      const defaultConfig = self(13477).VideoHealthManager.defaultConfig;
+      const defaultConfig = self(13700).VideoHealthManager.defaultConfig;
       ({ windowLength, allowedPoorFpsRatio, fpsThreshold, backoffTimeSec } = defaultConfig);
       if (defaultConfig.featureEnabled) {
-        const videoHealthManager = new tmp10(13477).VideoHealthManager(
+        const videoHealthManager = new tmp10(13700).VideoHealthManager(
           windowLength,
           allowedPoorFpsRatio,
           fpsThreshold,
@@ -2455,7 +2455,7 @@ prototype["getOrCreateVideoQuality"] = function getOrCreateVideoQuality() {
           self._localMediaSinkWantsManager.videoHealthManager = self._videoHealthManager;
         }
         const _videoQuality = self._videoQuality;
-        _videoQuality.on(tmp10(13476).VideoQualityEvent.FpsUpdate, (arg0, arg1, arg2) => {
+        _videoQuality.on(tmp10(13699).VideoQualityEvent.FpsUpdate, (arg0, arg1, arg2) => {
           const _localMediaSinkWantsManager = self._localMediaSinkWantsManager;
           let result;
           if (_localMediaSinkWantsManager != null) {
@@ -2953,8 +2953,8 @@ prototype["_trackVoiceConnectionSuccess"] = function _trackVoiceConnectionSucces
           }
         }
         obj[12] = diff4;
-        tmp9(698).track(tmp11.VOICE_CONNECTION_TTC_COLLECTED, obj);
-        const tmp9Result = tmp9(698);
+        tmp9(695).track(tmp11.VOICE_CONNECTION_TTC_COLLECTED, obj);
+        const tmp9Result = tmp9(695);
       }
     }
   }
@@ -3023,7 +3023,7 @@ prototype["_handleBandwidthEstimationExperiment"] = function _handleBandwidthEst
   _bandwidthEstimationExperiment,
 ) {
   this._bandwidthEstimationExperiment = _bandwidthEstimationExperiment;
-  const mediaEngineExperiments = _modDef13479.getMediaEngineExperiments(_bandwidthEstimationExperiment);
+  const mediaEngineExperiments = _modDef13702.getMediaEngineExperiments(_bandwidthEstimationExperiment);
   let tmp = null !== mediaEngineExperiments;
   if (tmp) {
     tmp = 0 !== mediaEngineExperiments.length;
@@ -3617,10 +3617,10 @@ prototype["_handleMLSFailure"] = function _handleMLSFailure(arr, reason) {
   _mlsFailures.push(obj);
   if (arr.includes("GetPersistedKeyPair")) {
     obj1 = { title: null, body: null };
-    const intl = tmp(1236).intl;
-    obj1[0] = intl.string(tmp(1236).t.fJUioH);
-    const intl2 = tmp(1236).intl;
-    obj1[1] = intl2.string(tmp(1236).t.CQLWvo);
+    const intl = tmp(1233).intl;
+    obj1[0] = intl.string(tmp(1233).t.fJUioH);
+    const intl2 = tmp(1233).intl;
+    obj1[1] = intl2.string(tmp(1233).t.CQLWvo);
     setDefault2.show(obj1);
     const obj4 = setDefault2;
   } else {

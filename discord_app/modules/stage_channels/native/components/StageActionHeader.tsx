@@ -8,8 +8,8 @@ import _modDef4723 from "../../../../actions/ModalActionCreators.tsx";
 import openChannelCallModal from "../../../../utils/native/PrivateChannelCallUtils.tsx";
 import componentDidMountDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
 import ChannelCallNavigatorIconDefault from "../../../video_calls/native/components/ChannelCallNavigatorIcon.tsx";
-import registerAssetDefault from "../../../../../_runtime/10111_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/10113_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/10133_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/10135_registerAsset.js";
 import useMyCurrentStageChannelRoleDefault from "../../useMyCurrentStageChannelRole.tsx";
 import CameraButton from "../../../video_calls/native/components/ChannelCallHeaderButtons.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -391,7 +391,7 @@ export { HideStageChannelCallIcon };
 export { StageChannelCallHeader };
 export const HideChannelCallButton = function HideChannelCallButton(channel) {
   channel = channel.channel;
-  let obj = channel(589);
+  let obj = channel(586);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => totalMentionCount.getTotalMentionCount());
   obj = {
@@ -404,8 +404,8 @@ export const HideChannelCallButton = function HideChannelCallButton(channel) {
   };
   const tmp = callback2();
   obj[0] = registerAssetDefault;
-  const intl = channel(1236).intl;
-  obj[1] = intl.string(channel(1236).t.cpT0Cq);
+  const intl = channel(1233).intl;
+  obj[1] = intl.string(channel(1233).t.cpT0Cq);
   obj[2] = function onPress() {
     let obj = closure_1_1(closure_1_2[14]);
     obj = { video_layout: "pop out" };
@@ -420,7 +420,7 @@ export const HideChannelCallButton = function HideChannelCallButton(channel) {
     const participant = closure_1_1(closure_1_2[23]).selectParticipant(channel.id, null);
   };
   obj[3] = tmp.iconContainer;
-  obj[5] = callback(channel(1297).MaskedBadge, { value: stateFromStores, maskStyle: {} });
+  obj[5] = callback(channel(1296).MaskedBadge, { value: stateFromStores, maskStyle: {} });
   return callback(ChannelCallNavigatorIconDefault, obj);
 };
 export { StageSettingsButton };

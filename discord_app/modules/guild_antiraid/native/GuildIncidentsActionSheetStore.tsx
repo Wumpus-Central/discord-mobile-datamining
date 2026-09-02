@@ -2,7 +2,7 @@
 import set from "../../../../_runtime/00002_set.js";
 import batchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import GUILD_REPORT_RAID_MOBILE_KEY from "../GuildAntiRaidConstants.tsx";
-import keys from "../../../../_runtime/00644_keys.js";
+import keys from "../../../../_runtime/00641_keys.js";
 
 const DEFAULT_LOCKDOWN_DURATION = GUILD_REPORT_RAID_MOBILE_KEY.DEFAULT_LOCKDOWN_DURATION;
 const obj = keys.create(() => ({

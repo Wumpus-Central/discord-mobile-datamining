@@ -9,7 +9,7 @@ const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native
 
 export default function useMessagesSpecs() {
   fontScale = fontScale(4935).useFontScale();
-  top = top(1628)().top;
+  top = top(1627)().top;
   const items = [fontScale, top];
   return React.useMemo(() => {
     let obj = fontScale(closure_1_2[5]);

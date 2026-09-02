@@ -48,21 +48,21 @@ export default function KrispLogo() {
   const stateFromStores = obj.useStateFromStores(items, () => theme.theme);
   obj1 = AccessibilityAnnouncer;
   if (obj1.isThemeLight(stateFromStores)) {
-    let tmp4Result = tmp4(10081);
+    let tmp4Result = tmp4(10103);
   } else {
-    tmp4Result = tmp4(10082);
+    tmp4Result = tmp4(10104);
   }
   obj = { style: closure_13.detailsView, children: null };
   obj = { style: closure_13.logo, source: tmp4Result, accessibilityLabel: null };
-  const intl = tmp(1236).intl;
+  const intl = tmp(1233).intl;
   obj[2] = intl.string(getSystemLocale.t.vFiCSx);
   const items1 = [callback(closure_3, obj)];
   obj1 = { accessibilityRole: "link", accessibilityLabel: null, onPress: null, children: null };
-  const intl2 = tmp(1236).intl;
+  const intl2 = tmp(1233).intl;
   obj1[1] = intl2.string(getSystemLocale.t.hvVgAZ);
   obj1[2] = handleKrispLinkPressed;
   const obj2 = { variant: "text-sm/medium", color: "text-link", children: null };
-  const intl3 = tmp(1236).intl;
+  const intl3 = tmp(1233).intl;
   obj2[2] = intl3.string(getSystemLocale.t.hvVgAZ);
   obj1[3] = callback(Text.Text, obj2);
   items1[1] = callback(closure_5, obj1);

@@ -68,7 +68,7 @@ function _fetchSurveyDetails() {
           } else if (1 === tmp7) {
             c4 = 0;
             dependencyMap = closure_3;
-            let obj4 = body(1208);
+            let obj4 = body(1205);
             obj4.captureException(dependencyMap);
             c6 = 3;
             return { value: null, done: true };
@@ -83,7 +83,7 @@ function _fetchSurveyDetails() {
             return obj3;
           } else {
             body = body.body;
-            obj = body(709);
+            obj = body(706);
             obj4 = { type: "QUALTRICS_SURVEY_FETCH_SUCCESS", surveyId: null, surveyDetails: null };
             obj4[1] = callback;
             obj4[2] = body;

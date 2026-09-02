@@ -45,7 +45,7 @@ export const getAccessibleEmojiDisplayName = function getAccessibleEmojiDisplayN
       PirBBE = t.PirBBE;
       tmp5 = tmp;
     }
-    const intl = tmp5(1236).intl;
+    const intl = tmp5(1233).intl;
     const obj = { reactions: null, emojiName: null };
     obj[0] = count;
     if (null == emoji.id) {

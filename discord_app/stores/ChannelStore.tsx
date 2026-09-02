@@ -46,7 +46,7 @@ function ensureGuildLoaded(guild_id, Basic, getBasicChannel) {
               );
             } else {
               [arr, tmp41] = callback(result, 2);
-              tmp4(1978)(arr);
+              tmp4(1977)(arr);
               if (Basic !== tmp2.Basic) {
                 closure_34 = closure_34 + 1;
               }
@@ -594,7 +594,7 @@ prototype["loadGuildFromChannelId"] = function loadGuildFromChannelId(channel_id
   return guildIds;
 };
 prototype["loadGuildIds"] = function loadGuildIds(items) {
-  found = items.filter(found(1471).isNotNullish);
+  found = items.filter(found(1470).isNotNullish);
   if (0 === found.length) {
     return null;
   } else {
@@ -604,7 +604,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
       return null;
     } else if (found.some((arg0) => !set.has(arg0))) {
       dependencyMap = c31;
-      return tmp(1976).tryLoadOrResetCacheGatewayAsync(
+      return tmp(1975).tryLoadOrResetCacheGatewayAsync(
         "loadChannels",
         callback2(function* () {
           if (c7 === 2) {

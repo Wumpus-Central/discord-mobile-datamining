@@ -34,10 +34,10 @@ function buildPlatformedThemedEmojiColorPalette(shouldProcessMobileColors) {
         );
         tmp2Result = tmp2(4326);
         obj = { foreground: null, background: null, ratio: 3, saturationFactor: null };
-        let tmp5Result = tmp5(689);
+        let tmp5Result = tmp5(686);
         const colorLightnessAdjusted = tmp2(4326).getColorLightnessAdjusted(parseStringResult, 0.6, true);
         obj[0] = tmp5Result(colorLightnessAdjusted.toHexString());
-        obj[1] = tmp5(689)(c3);
+        obj[1] = tmp5(686)(c3);
         obj[3] = saturationFactor;
         let accessibleForegroundColor = tmp2Result.getAccessibleForegroundColor(obj);
         if (accessibleForegroundColor == null) {
@@ -46,11 +46,11 @@ function buildPlatformedThemedEmojiColorPalette(shouldProcessMobileColors) {
         const tmp2Result1 = tmp2(4326);
         const tmp8 = c3;
         obj = { foreground: null, background: null, ratio: 5, saturationFactor: null };
-        tmp5Result = tmp5(689);
+        tmp5Result = tmp5(686);
         const tmp2Result2 = tmp2(4326);
         const colorLightnessAdjusted1 = tmp2(4326).getColorLightnessAdjusted(parseStringResult, 0.6, false);
         obj[0] = tmp5Result(colorLightnessAdjusted1.toHexString());
-        obj[1] = tmp5(689)(c4);
+        obj[1] = tmp5(686)(c4);
         obj[3] = saturationFactor;
         let accessibleForegroundColor1 = tmp2Result2.getAccessibleForegroundColor(obj);
         if (accessibleForegroundColor1 == null) {
@@ -59,14 +59,14 @@ function buildPlatformedThemedEmojiColorPalette(shouldProcessMobileColors) {
         const tmp11 = c4;
         const tmp2Result3 = tmp2(4326);
         obj1 = { foreground: null, background: null, ratio: 7, saturationFactor: null };
-        obj1[0] = tmp5(689)(findColorByHsvResult);
-        obj1[1] = tmp5(689)(tmp8);
+        obj1[0] = tmp5(686)(findColorByHsvResult);
+        obj1[1] = tmp5(686)(tmp8);
         obj1[3] = saturationFactor;
         const accessibleForegroundColor2 = tmp2(4326).getAccessibleForegroundColor(obj1);
         const tmp2Result4 = tmp2(4326);
         const obj2 = { foreground: null, background: null, ratio: 7, saturationFactor: null };
-        obj2[0] = tmp5(689)(findColorByHsvResult);
-        obj2[1] = tmp5(689)(tmp11);
+        obj2[0] = tmp5(686)(findColorByHsvResult);
+        obj2[1] = tmp5(686)(tmp11);
         obj2[3] = saturationFactor;
         const accessibleForegroundColor3 = tmp2(4326).getAccessibleForegroundColor(obj2);
         let hexResult;

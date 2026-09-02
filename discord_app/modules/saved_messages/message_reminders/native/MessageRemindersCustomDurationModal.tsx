@@ -116,13 +116,13 @@ const memoResult = importAllResult.memo((onClose) => {
     headerRightContainerStyle: null,
     headerRight: null,
   };
-  let obj4 = onClose(500);
+  let obj4 = onClose(1234);
   let num = 0;
   if (!obj4.isIOS()) {
-    num = createReminder(1628)().top;
+    num = createReminder(1627)().top;
   }
-  obj[3] = num + createReminder(712).space.PX_8;
-  obj[4] = onClose(5495).getHeaderCloseButton(onClose);
+  obj[3] = num + createReminder(709).space.PX_8;
+  obj[4] = onClose(5503).getHeaderCloseButton(onClose);
   ({ headerLeftContainer: obj4[5], headerRightContainer: obj4[6] } = tmp);
   obj[7] = function headerRight() {
     let obj = { accessibilityRole: "button", disabled: null != error, onPress: closure_9, children: null };
@@ -136,12 +136,12 @@ const memoResult = importAllResult.memo((onClose) => {
     obj[3] = error(onClose(closure_1_3[17]).Text, obj);
     return error(onClose(closure_1_3[16]).PressableOpacity, obj);
   };
-  const items1 = [error(onClose(5502).Header, obj)];
+  const items1 = [error(onClose(5510).Header, obj)];
   obj1 = { style: tmp.container, children: null };
   let obj2 = { children: null };
   const obj3 = { style: tmp.formHeader, variant: "text-sm/semibold", color: "text-subtle", children: null };
-  let intl = tmp11(1236).intl;
-  obj3[3] = intl.string(onClose(1236).t.pSZKvM);
+  let intl = tmp11(1233).intl;
+  obj3[3] = intl.string(onClose(1233).t.pSZKvM);
   const items2 = [error(onClose(4474).Text, obj3)];
   obj4 = {
     accessibilityRole: "button",
@@ -151,20 +151,20 @@ const memoResult = importAllResult.memo((onClose) => {
     style: null,
     children: null,
   };
-  const intl2 = tmp11(1236).intl;
-  obj4[1] = intl2.string(onClose(1236).t.pSZKvM);
+  const intl2 = tmp11(1233).intl;
+  obj4[1] = intl2.string(onClose(1233).t.pSZKvM);
   obj4[2] = { text: formatResult };
   obj4[3] = function onPress() {
     handleOpenDatePicker("date");
   };
   obj4[4] = tmp.inputContainer;
   obj4[5] = error(onClose(4474).Text, { variant: "text-md/medium", children: formatResult });
-  items2[1] = error(onClose(5068).PressableOpacity, obj4);
+  items2[1] = error(onClose(5076).PressableOpacity, obj4);
   obj2[0] = items2;
   const items3 = [handleOpenDatePicker(closure_6, obj2)];
   const obj5 = { style: tmp.formHeader, variant: "text-sm/semibold", color: "text-subtle", children: null };
-  const intl3 = tmp11(1236).intl;
-  obj5[3] = intl3.string(onClose(1236).t.GOmEb8);
+  const intl3 = tmp11(1233).intl;
+  obj5[3] = intl3.string(onClose(1233).t.GOmEb8);
   const items4 = [error(onClose(4474).Text, obj5), ,];
   const obj6 = {
     accessibilityRole: "button",
@@ -174,15 +174,15 @@ const memoResult = importAllResult.memo((onClose) => {
     style: null,
     children: null,
   };
-  const intl4 = tmp11(1236).intl;
-  obj6[1] = intl4.string(onClose(1236).t.GOmEb8);
+  const intl4 = tmp11(1233).intl;
+  obj6[1] = intl4.string(onClose(1233).t.GOmEb8);
   obj6[2] = { text: formatResult1 };
   obj6[3] = function onPress() {
     handleOpenDatePicker("time");
   };
   obj6[4] = tmp.inputContainer;
   obj6[5] = error(onClose(4474).Text, { variant: "text-md/medium", children: formatResult1 });
-  items4[1] = error(onClose(5068).PressableOpacity, obj6);
+  items4[1] = error(onClose(5076).PressableOpacity, obj6);
   let tmp10Result = null != error;
   if (tmp10Result) {
     const obj7 = {

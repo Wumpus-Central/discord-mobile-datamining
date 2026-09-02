@@ -5,5 +5,5 @@ const result = set.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/FavoritesSpotIllustration-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/d072a5e7d768c6cdd6144ad07a6b229e1d0e8e4690bfd76b74c43f8f550a7350.png";
-export const metadata = { fileBytes: 85958 };
+export default "https://cdn.discordapp.com/assets/content/67a34ce5d46798de8364709c7864dbe9d4d0265aceb8e3644ad54060f4ffbb9d.png";
+export const metadata = { fileBytes: 86906 };

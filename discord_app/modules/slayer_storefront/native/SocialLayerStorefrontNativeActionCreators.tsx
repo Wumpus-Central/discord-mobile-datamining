@@ -1,6 +1,6 @@
 // discord_app/modules/slayer_storefront/native/SocialLayerStorefrontNativeActionCreators.tsx
 import getSystemLocale from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/02009_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02008_asyncRequireImpl.js";
 import messagesProxyDefault from "../intl/SlayerStorefront.messages.js";
 import isPremiumGiftingSupported from "../../device/BillingPlatformUtils.tsx";
 import _modDef4723 from "../../../actions/ModalActionCreators.tsx";
@@ -37,7 +37,7 @@ export const openSocialLayerStorefrontProductDetailsModal = function openSocialL
 ) {
   const socialLayerStorefrontConfig = _fetchSocialLayerStorefront.fetchSocialLayerStorefrontConfig();
   const obj = _fetchSocialLayerStorefront;
-  _modDef4723.pushLazy(asyncRequireImpl(10573, dependencyMap.paths), closure_0, c5, { presentation: "modal" });
+  _modDef4723.pushLazy(asyncRequireImpl(10794, dependencyMap.paths), closure_0, c5, { presentation: "modal" });
 };
 export const closeSocialLayerStorefrontProductDetailsModal = function closeSocialLayerStorefrontProductDetailsModal() {
   _modDef4723.popWithKey(c5);
@@ -46,9 +46,9 @@ export const openSocialLayerStorefrontGiftModal = function openSocialLayerStoref
   let obj = isPremiumGiftingSupported;
   if (obj.isSocialLayerStorefrontGiftingSupported()) {
     let tmp3Result = tmp3(4723);
-    tmp3Result.pushLazy(asyncRequireImpl(10596, dependencyMap.paths), skuId, c6);
+    tmp3Result.pushLazy(asyncRequireImpl(10817, dependencyMap.paths), skuId, c6);
   } else {
-    tmp3Result = tmp3(10577);
+    tmp3Result = tmp3(10798);
     const value = closure_3.get(skuId.skuId);
     let applicationId;
     if (value != null) {

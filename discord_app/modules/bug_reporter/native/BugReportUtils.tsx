@@ -123,7 +123,7 @@ function _getAttachments() {
             let tmp38 = logger;
             let tmp39 = lib;
             let tmp40 = dependencyMap;
-            let obj3 = lib(1208);
+            let obj3 = lib(1205);
             let tmp41 = error;
             let obj2 = { tags: null };
             obj3 = { feature: "bug_reporter", attachment_uri_scheme: null };
@@ -179,10 +179,10 @@ function _getAttachments() {
             c6 = 2;
             let tmp53 = arr;
             let tmp54 = dependencyMap;
-            let obj6 = arr(514);
+            let obj6 = arr(511);
             dependencyMap = obj6.v4();
             let tmp55 = dependencyMap;
-            let obj8 = arr(5082);
+            let obj8 = arr(5090);
             let tmp56 = lib;
             c7 = 3;
             let num5 = 1;

@@ -3,7 +3,7 @@ import Text from "../../../../design/components/Text/native/Text.tsx";
 import QuestsVisibleMessagesChangedSource from "../../QuestTypes.tsx";
 import useQuests from "../../hooks/QuestHooks.tsx";
 import _getQuestsInstructionsToWinReward from "../../hooks/QuestCopyHooks.tsx";
-import getQuestDockMenuAdCreative from "QuestDockCreativeContext.tsx";
+import getCreativeAnalyticsParams from "QuestDockCreativeContext.tsx";
 import COMPLETION_GLOW_SHADOW_RADIUSDefault from "../QuestProgressIndicator.tsx";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -28,25 +28,25 @@ let closure_7 = createCacheKey.createStyles({
   copy: { flexGrow: 1, flexShrink: 1 },
 });
 const memoResult = importAllResult.memo(function QuestDockEnrolledHeader() {
-  let obj = getQuestDockMenuAdCreative;
-  const questCreative = obj.useQuestCreative();
+  let obj = getCreativeAnalyticsParams;
+  const questDockQuest = obj.useQuestDockQuest();
   const tmp2 = callback4();
   obj1 = useQuests;
-  const questTaskDetails = obj1.useQuestTaskDetails(questCreative);
+  const questTaskDetails = obj1.useQuestTaskDetails(questDockQuest);
   let obj2 = useQuests;
   let obj3 = _getQuestsInstructionsToWinReward;
-  const questBarTitle = obj3.useQuestBarTitle(questCreative);
+  const questBarTitle = obj3.useQuestBarTitle(questDockQuest);
   obj = {
-    quest: questCreative,
+    quest: questDockQuest,
     isExpanded: false,
-    activeScreen: callback(obj2.useTaskPlatformScreen(questCreative, questTaskDetails), 1)[0],
+    activeScreen: callback(obj2.useTaskPlatformScreen(questDockQuest, questTaskDetails), 1)[0],
     sourceQuestContent: QuestsVisibleMessagesChangedSource.QuestContent.QUEST_BAR_MOBILE,
   };
   obj = { style: tmp2.wrapper, children: null };
   obj1 = { style: tmp2.progressIndicatorWrapper, children: null };
   const questBarSubtitle = _getQuestsInstructionsToWinReward.useQuestBarSubtitle(obj);
   obj2 = {
-    quest: questCreative,
+    quest: questDockQuest,
     size: "x-sm",
     progress: questTaskDetails.percentComplete,
     loading: false,

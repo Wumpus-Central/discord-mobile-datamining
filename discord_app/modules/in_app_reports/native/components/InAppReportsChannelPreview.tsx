@@ -35,7 +35,7 @@ const result = require("set").fileFinishedImporting(
 export default function ChannelPreview(stageInstance) {
   stageInstance = stageInstance.stageInstance;
   const tmp = callback3();
-  let obj = stageInstance(589);
+  let obj = stageInstance(586);
   const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getGuild(stageInstance.guild_id));
   if (null != stateFromStores) {
@@ -45,8 +45,8 @@ export default function ChannelPreview(stageInstance) {
       const tmp2Result = tmp2(4326);
       obj = { style: null, accessibilityRole: "header", variant: "text-xs/bold", children: null };
       obj[0] = tmp.title;
-      const intl = tmp2(1236).intl;
-      obj[3] = intl.string(tmp2(1236).t.InbJ8x);
+      const intl = tmp2(1233).intl;
+      obj[3] = intl.string(tmp2(1233).t.InbJ8x);
       const items1 = [callback(tmp2(4474).Text, obj)];
       obj1 = { style: null, children: null };
       const items2 = [tmp.itemContainer];
@@ -59,7 +59,7 @@ export default function ChannelPreview(stageInstance) {
       const obj4 = { guild: null, size: null, selected: false };
       obj4[0] = stateFromStores;
       const hexWithOpacityResult = tmp2(4326).hexWithOpacity(tmp.borderColor.color, 0.08);
-      obj4[1] = tmp2(6004).GuildIconSizes.XXSMALL;
+      obj4[1] = tmp2(6012).GuildIconSizes.XXSMALL;
       const items3 = [callback(GuildIconSizesDefault, obj4)];
       const obj5 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
       obj5[0] = tmp.guildName;

@@ -43,9 +43,9 @@ const memoResult = importAllResult.memo(function MemberCount(arg0) {
   } else {
     const intl = getSystemLocale.intl;
     if ("online" === type) {
-      let etqpUG = tmp(1236).t.PIikks;
+      let etqpUG = tmp(1233).t.PIikks;
     } else {
-      etqpUG = tmp(1236).t.etqpUG;
+      etqpUG = tmp(1233).t.etqpUG;
     }
     let obj = { count: null };
     obj[0] = count;

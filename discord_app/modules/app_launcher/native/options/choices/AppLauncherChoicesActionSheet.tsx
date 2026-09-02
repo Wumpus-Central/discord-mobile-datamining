@@ -55,8 +55,8 @@ export default function AppLauncherChoicesActionSheet(option) {
   ({ initChoiceIndex, onDismiss } = option);
   const tmp = callback2();
   dependencyMap = tmp;
-  const bottom = onChoiceSelect(1628)().bottom;
-  let obj = option(500);
+  const bottom = onChoiceSelect(1627)().bottom;
+  let obj = option(1234);
   let sum = bottom;
   if (!obj.isIOS()) {
     sum = bottom + closure_6;
@@ -143,11 +143,11 @@ export default function AppLauncherChoicesActionSheet(option) {
   if (tmp13) {
     obj = { onChange: null };
     obj[0] = callback;
-    tmp16 = callback(tmp3(11737).AppLauncherListSearchBar, obj);
+    tmp16 = callback(tmp3(11960).AppLauncherListSearchBar, obj);
   }
   const items3 = [tmp16];
   if (0 === first.length) {
-    let tmp20 = callback(tmp3(11737).AppLauncherListEmptyState, {});
+    let tmp20 = callback(tmp3(11960).AppLauncherListEmptyState, {});
   } else {
     obj1 = {
       scrollable: null,
@@ -176,5 +176,5 @@ export default function AppLauncherChoicesActionSheet(option) {
   }
   items3[1] = tmp20;
   obj[4] = items3;
-  return closure_8(option(11736).AppLauncherCommandOptionActionSheet, obj);
+  return closure_8(option(11959).AppLauncherCommandOptionActionSheet, obj);
 }

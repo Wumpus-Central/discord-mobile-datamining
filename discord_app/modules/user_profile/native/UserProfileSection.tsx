@@ -40,7 +40,7 @@ export default function UserProfileSection(title) {
   if (null != primaryColor) {
     if (null != profileThemeValues) {
       let borderColor = tmp3(4326).hexOpacityToRgba(
-        tmp3(8369).DIVIDER_COLORS[theme],
+        tmp3(8378).DIVIDER_COLORS[theme],
         profileThemeValues.dividerOpacity,
       );
       const tmp3Result = tmp3(4326);

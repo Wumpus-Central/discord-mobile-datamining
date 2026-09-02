@@ -1,13 +1,13 @@
 // discord_app/modules/create_guild/native/CreateGuildIcons.tsx
 import set from "../../../../_runtime/00002_set.js";
 import AccountAgeTier10LargeBadge from "../../../design/assets/native.tsx";
-import registerAssetDefault from "../../../../_runtime/11893_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/11894_registerAsset.js";
-import registerAssetDefault3 from "../../../../_runtime/11895_registerAsset.js";
-import registerAssetDefault4 from "../../../../_runtime/11896_registerAsset.js";
-import registerAssetDefault5 from "../../../../_runtime/11897_registerAsset.js";
-import registerAssetDefault6 from "../../../../_runtime/11898_registerAsset.js";
-import registerAssetDefault7 from "../../../../_runtime/11899_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/12116_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/12117_registerAsset.js";
+import registerAssetDefault3 from "../../../../_runtime/12118_registerAsset.js";
+import registerAssetDefault4 from "../../../../_runtime/12119_registerAsset.js";
+import registerAssetDefault5 from "../../../../_runtime/12120_registerAsset.js";
+import registerAssetDefault6 from "../../../../_runtime/12121_registerAsset.js";
+import registerAssetDefault7 from "../../../../_runtime/12122_registerAsset.js";
 
 let obj = {
   CREATE: registerAssetDefault,

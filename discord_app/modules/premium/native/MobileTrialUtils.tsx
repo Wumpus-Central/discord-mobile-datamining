@@ -49,7 +49,7 @@ export const useNitroTrialCtaOverride = function useNitroTrialCtaOverride(user_p
   if (null == subscriptionTrial) {
     return null;
   } else {
-    let tmpResult = tmp(12959);
+    let tmpResult = tmp(13181);
     obj = { location: null };
     obj[0] = user_profile_premium_upsell_card;
     if (tmpResult.isAndroidTwoWeekTrialsTrialCTAEnabled(obj)) {
@@ -57,10 +57,10 @@ export const useNitroTrialCtaOverride = function useNitroTrialCtaOverride(user_p
       obj = { intervalType: null, intervalCount: null };
       ({ interval: obj3[0], intervalCount: obj3[1] } = subscriptionTrial);
       const result = tmpResult.formatIntervalDuration(obj);
-      const intl = tmp(1236).intl;
+      const intl = tmp(1233).intl;
       obj1 = { duration: null };
       obj1[0] = result;
-      return intl.formatToPlainString(tmp(1236).t["6xpY54"], obj1);
+      return intl.formatToPlainString(tmp(1233).t["6xpY54"], obj1);
     } else {
       return null;
     }

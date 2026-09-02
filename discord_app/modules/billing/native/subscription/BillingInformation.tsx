@@ -30,7 +30,7 @@ export const getBillingInformationStringNative = function getBillingInformationS
     tmp5 = subscription.status === SubscriptionStatusTypes.ACTIVE;
   }
   if (tmp5) {
-    const intl = tmp2(1236).intl;
+    const intl = tmp2(1233).intl;
     obj = { renewalDate: null, onSubscriptionManagementClick: null };
     obj[0] = first.subscriptionPeriodStart;
     _require = callback(function* () {
@@ -95,7 +95,7 @@ export const getBillingInformationStringNative = function getBillingInformationS
       }
       return applyArgumentsResult;
     };
-    billingInformationString = intl.format(tmp2(1236).t.gknRR3, obj);
+    billingInformationString = intl.format(tmp2(1233).t.gknRR3, obj);
   }
   return billingInformationString;
 };

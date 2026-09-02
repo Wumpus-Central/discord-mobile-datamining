@@ -13,10 +13,10 @@ function GridAvatar(user) {
   user = user.user;
   ({ guildId, pendingAvatarSrc, pendingAvatarDecoration } = user);
   ({ size, showStatus } = user);
-  let obj = user(589);
+  let obj = user(586);
   const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getStatus(user.id));
-  obj1 = user(589);
+  obj1 = user(586);
   const items1 = [closure_3];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
   if (undefined === pendingAvatarDecoration) {
@@ -32,7 +32,7 @@ function GridAvatar(user) {
   obj[3] = size;
   if (undefined !== pendingAvatarSrc) {
     obj = { source: null };
-    const tmp2Result = tmp2(8109);
+    const tmp2Result = tmp2(8117);
     obj[0] = tmp2Result.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores1);
     const merged = Object.assign(obj);
     obj1 = obj;
@@ -42,7 +42,7 @@ function GridAvatar(user) {
     obj1[1] = guildId;
     const merged1 = Object.assign(obj);
   }
-  return closure_5(user(1297).Avatar, obj1);
+  return closure_5(user(1296).Avatar, obj1);
 }
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);

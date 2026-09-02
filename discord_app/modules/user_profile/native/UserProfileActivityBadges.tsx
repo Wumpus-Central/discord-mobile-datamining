@@ -57,20 +57,20 @@ export const TimestampBadge = function TimestampBadge(activity) {
         flag2 = false;
       }
       if (flag2) {
-        let GameControllerIcon = tmp2(9396).HourglassIcon;
-      } else if (tmp10(7484)(activity)) {
-        GameControllerIcon = tmp2(9250).AppsIcon;
+        let GameControllerIcon = tmp2(9409).HourglassIcon;
+      } else if (tmp10(7494)(activity)) {
+        GameControllerIcon = tmp2(5059).AppsIcon;
       } else if (activity.type === ActivityTypes.WATCHING) {
-        GameControllerIcon = tmp2(9245).TvIcon;
+        GameControllerIcon = tmp2(9259).TvIcon;
       } else if (activity.type === tmp6.LISTENING) {
-        GameControllerIcon = tmp2(9251).MusicIcon;
+        GameControllerIcon = tmp2(9264).MusicIcon;
       } else {
-        GameControllerIcon = tmp2(9199).GameControllerIcon;
+        GameControllerIcon = tmp2(9213).GameControllerIcon;
       }
       obj = { style: null, children: null };
       obj[0] = tmp.container;
       obj = { size: "xxs", color: null };
-      obj[1] = tmp10(712).colors.TEXT_FEEDBACK_POSITIVE;
+      obj[1] = tmp10(709).colors.TEXT_FEEDBACK_POSITIVE;
       const items = [callback(GameControllerIcon, obj)];
       obj1 = { entry: null, style: null };
       const obj2 = { start: null, end: null, isCountDown: null };
@@ -79,7 +79,7 @@ export const TimestampBadge = function TimestampBadge(activity) {
       obj2[2] = flag;
       obj1[0] = obj2;
       obj1[1] = tmp.bold;
-      items[1] = callback(tmp2(9400).ActiveTimestamp, obj1);
+      items[1] = callback(tmp2(9413).ActiveTimestamp, obj1);
       obj[1] = items;
       return callback2(View, obj);
     }
@@ -100,7 +100,7 @@ export const PartyBadge = function PartyBadge(activity) {
         obj[0] = tmp.container;
         obj = { size: "xxs", color: null };
         obj[1] = ThemesDefault.colors.TEXT_MUTED;
-        const items = [callback(tmp9(5038).GroupIcon, obj)];
+        const items = [callback(tmp9(5042).GroupIcon, obj)];
         obj = { variant: "text-sm/medium", color: "text-muted", children: null };
         obj[2] = richGameStateBadgeText;
         items[1] = callback(tmp9(4474).Text, obj);
@@ -126,7 +126,7 @@ export const EpisodeBadge = function EpisodeBadge(activity) {
     obj[0] = tmp.container;
     obj = { size: "xxs", color: null };
     obj[1] = ThemesDefault.colors.TEXT_MUTED;
-    const items = [callback(tmp2(9410).TopicsIcon, obj)];
+    const items = [callback(tmp2(9423).TopicsIcon, obj)];
     obj1 = { variant: "text-sm/medium", color: "text-muted", children: null };
     obj1[2] = episodeBadgeText;
     items[1] = callback(tmp2(4474).Text, obj1);

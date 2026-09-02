@@ -67,14 +67,14 @@ export default function updateRules(paragraph) {
   let obj = {};
   const merged = Object.assign(paragraph.paragraph);
   obj.react = function react(content, arg1, key) {
-    return callback2(callback(1297).LegacyText, { children: arg1(content.content, key) }, key.key);
+    return callback2(callback(1296).LegacyText, { children: arg1(content.content, key) }, key.key);
   };
   paragraph.paragraph = obj;
   obj = {};
   const merged1 = Object.assign(paragraph.strong);
   obj.react = function react(content, arg1, key) {
     return callback2(
-      callback(1297).LegacyText,
+      callback(1296).LegacyText,
       { style: closure_5.strong, children: arg1(content.content, key) },
       key.key,
     );
@@ -84,7 +84,7 @@ export default function updateRules(paragraph) {
   const merged2 = Object.assign(paragraph.em);
   obj.react = function react(content, arg1, key) {
     return callback2(
-      callback(1297).LegacyText,
+      callback(1296).LegacyText,
       { style: closure_5.italic, children: arg1(content.content, key) },
       key.key,
     );
@@ -94,7 +94,7 @@ export default function updateRules(paragraph) {
   const merged3 = Object.assign(paragraph.u);
   obj1.react = function react(content, arg1, key) {
     return callback2(
-      callback(1297).LegacyText,
+      callback(1296).LegacyText,
       { style: closure_5.underline, children: arg1(content.content, key) },
       key.key,
     );

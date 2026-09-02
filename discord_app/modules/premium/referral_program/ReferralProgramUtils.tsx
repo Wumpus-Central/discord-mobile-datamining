@@ -115,14 +115,14 @@ export const useIsReferralProgramPopoverShowable = function useIsReferralProgram
     if (tmp8) {
       let tmpResult = tmp(4298);
       tmp8 = !tmpResult.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(
-        tmp(1373).DismissibleContent.REFERRAL_PROGRAM_POPOVER_V2,
+        tmp(1372).DismissibleContent.REFERRAL_PROGRAM_POPOVER_V2,
         stateFromStores1,
       ).isDismissed;
     }
     let tmp6 = tmp8;
   } else {
     tmpResult = tmp(4298);
-    tmp6 = !tmpResult.UNSAFE_isDismissibleContentDismissed(tmp(1373).DismissibleContent.REFERRAL_PROGRAM_POPOVER);
+    tmp6 = !tmpResult.UNSAFE_isDismissibleContentDismissed(tmp(1372).DismissibleContent.REFERRAL_PROGRAM_POPOVER);
   }
   if (isEligibleSenderForReferralProgram) {
     isEligibleSenderForReferralProgram = tmp6;

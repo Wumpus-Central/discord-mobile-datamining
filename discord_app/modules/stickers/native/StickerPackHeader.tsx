@@ -4,8 +4,8 @@ import getSystemLocale from "../../../intl/index.native.tsx";
 import Button from "../../../design/void/native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import getStickerExtensionFromFormatType from "../StickersUtils.tsx";
-import registerAssetDefault from "../../../../_runtime/10389_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/10390_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/10411_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/10412_registerAsset.js";
 import StickerPackBannerDefault from "StickerPackBanner.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import PADDING_HORIZONTAL from "StickerPickerConstants.tsx";
@@ -86,9 +86,9 @@ const memoResult = importAllResult.memo((withDescription) => {
     const obj2 = { source: null, style: null, size: null, color: null };
     obj2[0] = registerAssetDefault;
     obj2[1] = tmp.animatedIcon;
-    obj2[2] = tmp6(1297).Icon.Sizes.EXTRA_SMALL;
+    obj2[2] = tmp6(1296).Icon.Sizes.EXTRA_SMALL;
     obj2[3] = tmp.icon.color;
-    obj1[1] = tmp4(tmp6(1297).Icon, obj2);
+    obj1[1] = tmp4(tmp6(1296).Icon, obj2);
     result = tmp4(tmp5, obj1);
   }
   items[1] = result;
@@ -116,7 +116,7 @@ const memoResult = importAllResult.memo((withDescription) => {
   const obj6 = { children: null };
   items1[1] = flag;
   const obj7 = { lineClamp: 1, variant: "text-xs/medium", color: "text-default", children: null };
-  const intl = tmp6(1236).intl;
+  const intl = tmp6(1233).intl;
   obj7[3] = intl.format(getSystemLocale.t["0S3JpO"], { numStickers: stickerPack.stickers.length });
   items1[2] = callback(Text.Text, obj7);
   obj6[0] = items1;
@@ -134,7 +134,7 @@ const memoResult = importAllResult.memo((withDescription) => {
     obj10[0] = items3;
     obj10[1] = onPress;
     obj10[3] = tmp2Result;
-    let tmp4Result = tmp4(tmp6(5068).PressableOpacity, obj10);
+    let tmp4Result = tmp4(tmp6(5076).PressableOpacity, obj10);
   } else {
     const obj11 = { style: null, children: null };
     const items4 = [tmp.section, style];

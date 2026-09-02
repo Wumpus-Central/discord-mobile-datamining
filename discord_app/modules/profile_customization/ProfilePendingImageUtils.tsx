@@ -17,7 +17,7 @@ export const createPendingImage = function createPendingImage(assetOrigin) {
       staticImageUri: null,
       description: null,
       originalAsset: "Array",
-      originalMd5: false,
+      originalMd5: true,
     };
     obj[0] = NEW_ASSET;
     obj[1] = imageUri;
@@ -25,7 +25,7 @@ export const createPendingImage = function createPendingImage(assetOrigin) {
     obj[3] = description;
     obj[5] = originalMd5;
     return obj;
-  } else if (tmp3(7761).AssetOriginTypes.EDITED_ARCHIVED_ASSET === NEW_ASSET) {
+  } else if (tmp3(7770).AssetOriginTypes.EDITED_ARCHIVED_ASSET === NEW_ASSET) {
     obj = {
       assetOrigin: null,
       imageUri: null,
@@ -41,13 +41,13 @@ export const createPendingImage = function createPendingImage(assetOrigin) {
     obj[4] = originalAsset;
     obj[5] = originalMd5;
     return obj;
-  } else if (tmp3(7761).AssetOriginTypes.ARCHIVED_ASSET === NEW_ASSET) {
+  } else if (tmp3(7770).AssetOriginTypes.ARCHIVED_ASSET === NEW_ASSET) {
     obj1 = { assetOrigin: null, imageUri: null, description: "Array", originalAsset: true };
     obj1[0] = NEW_ASSET;
     obj1[1] = imageUri;
     obj1[3] = originalAsset;
     return obj1;
   } else {
-    tmp3(1471).assertNever(NEW_ASSET);
+    tmp3(1470).assertNever(NEW_ASSET);
   }
 };

@@ -26,7 +26,7 @@ const toggle = createToggle.createToggle({
     if (obj.shouldAgeVerifyForSettingsToggles()) {
       if (arg0) {
         obj = { entryPoint: null };
-        obj[0] = tmp(8684).AgeVerificationModalEntryPoint.AGE_RESTRICTED_DM_COMMANDS_SETTINGS;
+        obj[0] = tmp(8699).AgeVerificationModalEntryPoint.AGE_RESTRICTED_DM_COMMANDS_SETTINGS;
         const result = openIncodeAgeVerificationModalDefault.showAgeVerificationGetStartedModal(obj);
         const obj2 = openIncodeAgeVerificationModalDefault;
       }
@@ -49,7 +49,7 @@ const toggle = createToggle.createToggle({
       shouldAgeVerifyForSettingsToggles = flag;
     }
     if (shouldAgeVerifyForSettingsToggles) {
-      tmpResult = tmp(500);
+      tmpResult = tmp(1234);
       shouldAgeVerifyForSettingsToggles = tmpResult.isAndroid();
     }
     return shouldAgeVerifyForSettingsToggles;
@@ -73,7 +73,7 @@ let obj = {
     if (obj.shouldAgeVerifyForSettingsToggles()) {
       if (arg0) {
         obj = { entryPoint: null };
-        obj[0] = tmp(8684).AgeVerificationModalEntryPoint.AGE_RESTRICTED_DM_COMMANDS_SETTINGS;
+        obj[0] = tmp(8699).AgeVerificationModalEntryPoint.AGE_RESTRICTED_DM_COMMANDS_SETTINGS;
         const result = openIncodeAgeVerificationModalDefault.showAgeVerificationGetStartedModal(obj);
         const obj2 = openIncodeAgeVerificationModalDefault;
       }
@@ -96,7 +96,7 @@ let obj = {
       shouldAgeVerifyForSettingsToggles = flag;
     }
     if (shouldAgeVerifyForSettingsToggles) {
-      tmpResult = tmp(500);
+      tmpResult = tmp(1234);
       shouldAgeVerifyForSettingsToggles = tmpResult.isAndroid();
     }
     return shouldAgeVerifyForSettingsToggles;

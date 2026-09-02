@@ -21,9 +21,9 @@ function VideoButtonRive(arg0) {
   }
   obj[1] = str;
   if (isVideoEnabled) {
-    let VideoSlashIcon = tmp3(10193).VideoIcon;
+    let VideoSlashIcon = tmp3(10215).VideoIcon;
   } else {
-    VideoSlashIcon = tmp3(12477).VideoSlashIcon;
+    VideoSlashIcon = tmp3(12701).VideoSlashIcon;
   }
   obj[2] = <VideoSlashIcon color={color} />;
   obj[1] = jsx(ManaContext.CameraRive, {

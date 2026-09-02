@@ -36,24 +36,24 @@ function PrivacyPolicyCheckbox(onToggleConsent) {
     hitSlop: null,
     children: null,
   };
-  const intl = tmp2(1236).intl;
+  const intl = tmp2(1233).intl;
   obj[3] = intl.string(getSystemLocale.t.Y7Kgvf);
   obj[4] = onToggleConsent.onToggleConsent;
   obj[5] = { top: 11, bottom: 11, left: 11 };
   if (asCheckbox) {
     obj = { checked: null };
     obj[0] = consent;
-    let tmp7Result = tmp7(tmp2(7684).FormCheckbox, obj);
+    let tmp7Result = tmp7(tmp2(7693).FormCheckbox, obj);
     let tmp9 = tmp7;
   } else {
     obj1 = { selected: null };
     obj1[0] = consent;
-    tmp7Result = tmp7(tmp2(8363).FormRow.Radio, obj1);
+    tmp7Result = tmp7(tmp2(8372).FormRow.Radio, obj1);
     tmp9 = tmp7;
   }
   const items = [tmp7Result];
   const obj2 = { variant: "text-xs/medium", color: "text-muted", style: tmp.checkboxLabel, children: null };
-  const intl2 = tmp2(1236).intl;
+  const intl2 = tmp2(1233).intl;
   obj2[3] = intl2.format(getSystemLocale.t.qMDAP0, {
     termsURL: MarketingURLs.TERMS,
     privacyURL: MarketingURLs.PRIVACY,

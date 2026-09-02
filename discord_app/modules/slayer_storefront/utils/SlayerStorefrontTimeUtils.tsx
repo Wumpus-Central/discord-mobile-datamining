@@ -1,7 +1,7 @@
 // discord_app/modules/slayer_storefront/utils/SlayerStorefrontTimeUtils.tsx
 import getSystemLocale from "../../../intl/index.native.tsx";
 import messagesProxyDefault from "../intl/SlayerStorefront.messages.js";
-import hooksDefault from "../../../../_runtime/04075_hooks.js";
+import hooksDefault from "../../../../_runtime/04074_hooks.js";
 import useIntervalDefault from "../../../hooks/useInterval.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
@@ -16,14 +16,14 @@ function getLimitedOfferTimeLeft(arg0) {
     if (diffResult > 0) {
       const obj = { days: null, hours: null, minutes: null, seconds: null };
       const _Math = Math;
-      obj[0] = Math.floor(diffResult / tmp5(687).Seconds.DAY);
+      obj[0] = Math.floor(diffResult / tmp5(684).Seconds.DAY);
       const _Math2 = Math;
-      const result = diffResult % tmp5(687).Seconds.DAY;
-      obj[1] = Math.floor(result / tmp5(687).Seconds.HOUR);
+      const result = diffResult % tmp5(684).Seconds.DAY;
+      obj[1] = Math.floor(result / tmp5(684).Seconds.HOUR);
       const _Math3 = Math;
-      const result1 = diffResult % tmp5(687).Seconds.HOUR;
-      obj[2] = Math.floor(result1 / tmp5(687).Seconds.MINUTE);
-      obj[3] = diffResult % tmp5(687).Seconds.MINUTE;
+      const result1 = diffResult % tmp5(684).Seconds.HOUR;
+      obj[2] = Math.floor(result1 / tmp5(684).Seconds.MINUTE);
+      obj[3] = diffResult % tmp5(684).Seconds.MINUTE;
       tmp4 = obj;
     }
     return tmp4;

@@ -1,6 +1,6 @@
 // discord_app/utils/FileUtils.tsx
 import applyDefault from "../../_runtime/00012_apply.js";
-import noConflictDefault from "../../_runtime/05079_noConflict.js";
+import noConflictDefault from "../../_runtime/05087_noConflict.js";
 import closure_3 from "../stores/GuildStore.tsx";
 import closure_4 from "../stores/UserStore.tsx";
 import ME from "../Constants.tsx";
@@ -267,18 +267,18 @@ export const fileUploadLimitRoadblockDescription = function fileUploadLimitRoadb
   const formatSizeResult = obj.formatSize(maxSize / 1024, { useKibibytes: true });
   const formatSizeResult1 = _Math(4372).formatSize(closure_7 / 1024, { useKibibytes: true });
   if (true === hideLearnMore) {
-    const intl2 = tmp(1236).intl;
+    const intl2 = tmp(1233).intl;
     obj = { maxSize: null, premiumMaxSize: null };
     obj[0] = formatSizeResult;
     obj[1] = formatSizeResult1;
-    let formatResult = intl2.format(tmp(1236).t["+R2TzS"], obj);
+    let formatResult = intl2.format(tmp(1233).t["+R2TzS"], obj);
   } else {
-    const intl = tmp(1236).intl;
+    const intl = tmp(1233).intl;
     obj = { maxSize: null, premiumMaxSize: null, onClick: null };
     obj[0] = formatSizeResult;
     obj[1] = formatSizeResult1;
     obj[2] = onClick;
-    formatResult = intl.format(tmp(1236).t.tRuxk9, obj);
+    formatResult = intl.format(tmp(1233).t.tRuxk9, obj);
   }
   return formatResult;
 };

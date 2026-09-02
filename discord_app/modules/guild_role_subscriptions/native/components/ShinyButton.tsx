@@ -2,7 +2,7 @@
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import CollapsingText from "../../../../design/components/Button/native/BaseTextButton.native.tsx";
-import registerAssetDefault from "../../../../../_runtime/09139_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/09153_registerAsset.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
@@ -34,7 +34,7 @@ export default function ShinyButton(style) {
   let tmp3Result;
   if (!loading) {
     obj = { size: null, source: null, style: null };
-    obj[0] = tmp4(1297).Icon.Sizes.REFRESH_SMALL_16;
+    obj[0] = tmp4(1296).Icon.Sizes.REFRESH_SMALL_16;
     obj[1] = registerAssetDefault;
     const items1 = [tmp2.sparkleIcon];
     if (disabled) {
@@ -42,7 +42,7 @@ export default function ShinyButton(style) {
     }
     items1[1] = disabled;
     obj[2] = items1;
-    tmp3Result = tmp3(tmp4(1297).Icon, obj);
+    tmp3Result = tmp3(tmp4(1296).Icon, obj);
   }
   obj[4] = tmp3Result;
   const merged1 = Object.assign(merged);

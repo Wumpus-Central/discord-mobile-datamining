@@ -2,10 +2,10 @@
 import noopAll from "../../../../_runtime/00019_noop.js";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import _modDef4858 from "../../../actions/native/AlertActionCreators.tsx";
-import registerAssetDefault from "../../../../_runtime/08754_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/10084_registerAsset.js";
-import registerAssetDefault3 from "../../../../_runtime/16793_registerAsset.js";
-import registerAssetDefault4 from "../../../../_runtime/16794_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/08769_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/10106_registerAsset.js";
+import registerAssetDefault3 from "../../../../_runtime/17029_registerAsset.js";
+import registerAssetDefault4 from "../../../../_runtime/17030_registerAsset.js";
 import closure_3 from "../../../stores/StreamRTCConnectionStore.tsx";
 import ME from "../../../Constants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
@@ -26,7 +26,7 @@ export const voiceSettings = function voiceSettings() {
   obj[0] = intl.string(getSystemLocale.t.NiTd0e);
   obj[1] = registerAssetDefault3;
   obj[2] = function onPress() {
-    let obj = callback(6245);
+    let obj = callback(6254);
     obj = { screen: constants.VOICE };
     obj.openUserSettings(obj);
     callback2(4445).hideActionSheet();
@@ -111,19 +111,19 @@ export const invite = function invite(isPrivate) {
   dependencyMap = arg2;
   if (null != arg1) {
     function onPress() {
-      let obj = isPrivate(9909);
+      let obj = isPrivate(9931);
       obj = { source: closure_1_6.STREAM, stream: closure_1 };
       return obj.showInstantInviteActionSheet(isPrivate, obj);
     }
   } else {
     onPress = function onPress() {
-      let obj = isPrivate(9909);
+      let obj = isPrivate(9931);
       obj = { source: closure_1_6.VOICE_CHANNEL };
       return obj.showInstantInviteActionSheet(isPrivate, obj);
     };
     if (null != arg2) {
       onPress = function onPress() {
-        let obj = isPrivate(9909);
+        let obj = isPrivate(9931);
         obj = { source: closure_1_6.ACTIVITY_INVITE, targetApplicationId: dependencyMap };
         return obj.showInstantInviteActionSheet(isPrivate, obj);
       };

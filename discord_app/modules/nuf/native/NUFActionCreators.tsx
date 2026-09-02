@@ -1,7 +1,7 @@
 // discord_app/modules/nuf/native/NUFActionCreators.tsx
 import dispatcherDefault from "../../../Dispatcher.tsx";
 import _modDef4723 from "../../../actions/ModalActionCreators.tsx";
-import _modDef12281 from "../../hub/native/components/HubEmailConnectionModalActionCreators.tsx";
+import _modDef12505 from "../../hub/native/components/HubEmailConnectionModalActionCreators.tsx";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import ContactSyncModes from "../../contact_sync/native/ContactSyncModalStore.tsx";
 import closure_8 from "../../../stores/ConnectedAccountsStore.tsx";
@@ -51,14 +51,14 @@ function _startContactSyncForDiscoverability() {
                 phone = currentUser.phone;
               }
               const localAccount = closure_1_8.getLocalAccount(closure_1_11.CONTACTS);
-              callback(12218);
+              callback(12442);
               if (null == phone) {
                 const _Error = Error;
                 error = new Error("Cannot start contact sync without a phone number");
                 throw error;
               } else {
                 closure_1_6(tmp31);
-                let obj4 = closure_1_1(12222);
+                let obj4 = closure_1_1(12446);
                 obj1 = { enabled: null, name: null };
                 obj1[0] = tmp15;
                 obj1[1] = tmp31;
@@ -79,7 +79,7 @@ function _startContactSyncForDiscoverability() {
               obj3[0] = arg1;
               return obj3;
             } else {
-              obj1 = callback(12218);
+              obj1 = callback(12442);
               dependencyMap = 2;
               c3 = 1;
               obj4 = { value: null, done: false };
@@ -156,15 +156,15 @@ export const transitionToHubEmailConnectionModal = function transitionToHubEmail
   if (arg1 === undefined) {
     flag = false;
   }
-  let obj = _modDef12281;
+  let obj = _modDef12505;
   obj = {
     onCloseExtra(arg0) {
       if (arg0) {
-        const result = callback(12284).setNewUserFlowCompleted();
-        const obj2 = callback(12284);
+        const result = callback(12508).setNewUserFlowCompleted();
+        const obj2 = callback(12508);
       } else {
-        callback2(709).dispatch({ type: "ONBOARDING_STEP" });
-        const obj = callback2(709);
+        callback2(706).dispatch({ type: "ONBOARDING_STEP" });
+        const obj = callback2(706);
       }
     },
     displayStudentPrompt: flag,

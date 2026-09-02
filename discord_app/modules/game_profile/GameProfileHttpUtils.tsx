@@ -31,7 +31,7 @@ function _getShopCollection() {
       yield callback(closure_1_2[6]).httpGetWithCountryCodeQuery(obj2);
       if (1 === tmp7) {
         locale = 0;
-        obj3 = callback2(709);
+        obj3 = callback2(706);
         const obj5 = { type: "GAME_PROFILE_GET_SHOP_COLLECTION_ERROR", collectionId: null };
         obj5[1] = callback;
         obj3.dispatch(obj5);
@@ -42,7 +42,7 @@ function _getShopCollection() {
       } else if (arg0 !== 2) {
         const products = body.body.products;
         callback2 = products.flatMap((sku_ids) => sku_ids.sku_ids);
-        const obj = callback2(709);
+        const obj = callback2(706);
         const obj6 = { type: "GAME_PROFILE_GET_SHOP_COLLECTION_SUCCESS", collectionId: null, skuIds: null };
         obj6[1] = callback;
         obj6[2] = callback2;
@@ -181,7 +181,7 @@ function _getGameAnnouncements() {
       yield HTTP.get(obj3);
       if (1 === tmp8) {
         c7 = 0;
-        obj1 = body(709);
+        obj1 = body(706);
         const obj5 = { type: "GAME_PROFILE_GET_ANNOUNCEMENTS_ERROR", gameId: null };
         obj5[1] = callback;
         obj1.dispatch(obj5);
@@ -199,8 +199,8 @@ function _getGameAnnouncements() {
           guildId: null,
         };
         obj6[1] = callback;
-        const obj9 = body(709);
-        obj6[2] = callback(8878).toAnnouncementMessages(body.messages);
+        const obj9 = body(706);
+        obj6[2] = callback(8893).toAnnouncementMessages(body.messages);
         const channel_id = body.channel_id;
         dependencyMap = channel_id;
         if (channel_id == null) {
@@ -215,7 +215,7 @@ function _getGameAnnouncements() {
         obj6[4] = c3;
         obj9.dispatch(obj6);
         c7 = 0;
-        const obj11 = callback(8878);
+        const obj11 = callback(8893);
       }
       c7 = 0;
       return body;

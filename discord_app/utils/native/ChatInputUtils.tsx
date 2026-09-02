@@ -236,9 +236,9 @@ export const dismissKeyboard = function dismissKeyboard() {
   let tmpResult = tmp(4342);
   const keyboardType = tmpResult.getKeyboardType();
   if (keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM) {
-    tmpResult = tmp(1497);
+    tmpResult = tmp(1496);
     obj = { type: null };
-    obj[0] = tmp(1626).KeyboardTypes.SYSTEM;
+    obj[0] = tmp(1625).KeyboardTypes.SYSTEM;
     tmpResult.setKeyboardType(obj);
   }
   const result1 = zustandStore.closePortalKeyboardRequest();

@@ -4,7 +4,7 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import VoiceNormalIcon from "../../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
 import PhoneCallIcon from "../../../../design/components/Icon/native/redesign/generated/PhoneCallIcon.tsx";
 import PhoneHangUpIcon from "../../../../design/components/Icon/native/redesign/generated/PhoneHangUpIcon.tsx";
-import _modDef12925 from "header/PrivateChannelButtons.tsx";
+import _modDef13147 from "header/PrivateChannelButtons.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_4 from "../../../threads/ActiveThreadsStore.tsx";
 import { THREADED_CHANNEL_TYPES } from "../../../../records/ChannelRecord.tsx";
@@ -298,7 +298,7 @@ function ChannelActionButtons(channel) {
 function WrappedChannelNavButtons(channelId) {
   channelId = channelId.channelId;
   ({ screenIndex, showCreateThread } = channelId);
-  let obj = channelId(589);
+  let obj = channelId(586);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getChannel(channelId));
   channelId(4731);
@@ -328,7 +328,7 @@ export default function ChannelActions(channelId) {
   channelId = channelId.channelId;
   const screenIndex = channelId.screenIndex;
   ({ containerStyle, showCreateThread } = channelId);
-  let obj = channelId(589);
+  let obj = channelId(586);
   const items = [closure_6];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     let obj = closure_1_6;
@@ -353,12 +353,12 @@ export default function ChannelActions(channelId) {
     return obj;
   });
   ({ isMultiUserDM, isDM } = stateFromStoresObject);
-  obj1 = channelId(7628);
+  obj1 = channelId(7638);
   obj = { style: containerStyle, children: null };
   if (obj1.useHasForumSearchQuery(channelId)) {
     obj = { channelId: null };
     obj[0] = channelId;
-    let tmp4Result = tmp4(channelId(12923).ForumChannelCloseSearchButton, obj);
+    let tmp4Result = tmp4(channelId(13145).ForumChannelCloseSearchButton, obj);
   } else {
     if (!isDM) {
       if (!isMultiUserDM) {
@@ -372,7 +372,7 @@ export default function ChannelActions(channelId) {
     const obj2 = { channelId: null, screenIndex: null };
     obj2[0] = channelId;
     obj2[1] = screenIndex;
-    tmp4Result = tmp4(_modDef12925, obj2);
+    tmp4Result = tmp4(_modDef13147, obj2);
   }
   obj[1] = tmp4Result;
   return <View style={containerStyle}>{null}</View>;

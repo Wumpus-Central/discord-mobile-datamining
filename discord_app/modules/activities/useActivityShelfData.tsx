@@ -78,8 +78,8 @@ export const useActivityShelfData = function useActivityShelfData(guildId) {
       if (supported_platforms == null) {
         supported_platforms = [];
       }
-      const tmp = lib(8437);
-      return supported_platforms.includes(tmp(callback(500).getOS()));
+      const tmp = lib(8446);
+      return supported_platforms.includes(tmp(callback(1234).getOS()));
     });
     const found1 = found.filter((activity) => {
       const requires_age_gate = activity.activity.requires_age_gate;

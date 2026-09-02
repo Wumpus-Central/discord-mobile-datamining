@@ -31,7 +31,7 @@ export const fetchChannelAffinitiesV2 = function fetchChannelAffinitiesV2() {
       const value = HTTP.get(obj);
       let nextPromise = value.then(
         (body) => {
-          let obj = callback(709);
+          let obj = callback(706);
           obj = {
             type: "LOAD_CHANNEL_AFFINITIES_V2_SUCCESS",
             affineChannels: channel_affinities.map((channelId) => {
@@ -48,7 +48,7 @@ export const fetchChannelAffinitiesV2 = function fetchChannelAffinitiesV2() {
           obj.dispatch(obj);
         },
         () => {
-          callback(709).dispatch({ type: "LOAD_CHANNEL_AFFINITIES_V2_FAILURE" });
+          callback(706).dispatch({ type: "LOAD_CHANNEL_AFFINITIES_V2_FAILURE" });
         },
       );
     }

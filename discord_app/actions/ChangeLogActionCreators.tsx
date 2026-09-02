@@ -85,7 +85,7 @@ export default {
         str = "?" + closure_1_7();
       }
       dependencyMap = 1;
-      const HTTP = closure_1_0(530).HTTP;
+      const HTTP = closure_1_0(527).HTTP;
       obj1 = { url: null, rejectWithError: true };
       const _HermesInternal2 = HermesInternal;
       obj1[0] =
@@ -93,7 +93,7 @@ export default {
       yield HTTP.get(obj1);
       if (1 === tmp7) {
         dependencyMap = 0;
-        let obj5 = closure_1_1(709);
+        let obj5 = closure_1_1(706);
         const obj3 = { type: "CHANGE_LOG_FETCH_FAILED", id: null, locale: null };
         obj3[1] = closure_0;
         obj3[2] = closure_1;
@@ -118,7 +118,7 @@ export default {
           return obj5;
         } else {
           closure_0 = arg1;
-          obj1 = closure_1_1(709);
+          obj1 = closure_1_1(706);
           const obj6 = { type: "CHANGE_LOG_FETCH_SUCCESS", id: null, changelog: null };
           obj6[1] = closure_0;
           obj6[2] = closure_0.body;

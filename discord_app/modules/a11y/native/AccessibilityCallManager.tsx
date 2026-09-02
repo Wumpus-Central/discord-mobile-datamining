@@ -27,18 +27,18 @@ class AccessibilityCallManager extends tmp4 {
               const channelName = tmp4(4674).computeChannelName(channel, closure_6, closure_5);
               if (null != channelName) {
                 obj.add(channelId);
-                const AccessibilityAnnouncer = tmp4(1363).AccessibilityAnnouncer;
-                const intl = tmp4(1236).intl;
+                const AccessibilityAnnouncer = tmp4(1362).AccessibilityAnnouncer;
+                const intl = tmp4(1233).intl;
                 obj = { callLocation: null };
                 obj[0] = channelName;
-                AccessibilityAnnouncer.announce(intl.formatToPlainString(tmp4(1236).t["Bm0A/p"], obj), "assertive");
+                AccessibilityAnnouncer.announce(intl.formatToPlainString(tmp4(1233).t["Bm0A/p"], obj), "assertive");
               }
               const tmp4Result = tmp4(4674);
             }
           } else {
             const NativePhoneIntegrationEnabled = tmp4(4166).NativePhoneIntegrationEnabled;
           }
-          obj2 = callback(500);
+          obj2 = callback(1234);
         }
       }
     };
@@ -60,18 +60,18 @@ class AccessibilityCallManager extends tmp4 {
                 const channelName = tmp4(4674).computeChannelName(channel, closure_6, closure_5);
                 if (null != channelName) {
                   obj2.add(channelId);
-                  const AccessibilityAnnouncer = tmp4(1363).AccessibilityAnnouncer;
-                  const intl = tmp4(1236).intl;
+                  const AccessibilityAnnouncer = tmp4(1362).AccessibilityAnnouncer;
+                  const intl = tmp4(1233).intl;
                   obj = { callLocation: null };
                   obj[0] = channelName;
-                  AccessibilityAnnouncer.announce(intl.formatToPlainString(tmp4(1236).t["Bm0A/p"], obj), "assertive");
+                  AccessibilityAnnouncer.announce(intl.formatToPlainString(tmp4(1233).t["Bm0A/p"], obj), "assertive");
                 }
                 const tmp4Result = tmp4(4674);
               }
             } else {
               const NativePhoneIntegrationEnabled = tmp4(4166).NativePhoneIntegrationEnabled;
             }
-            obj3 = callback(500);
+            obj3 = callback(1234);
           }
           obj2 = set;
         }

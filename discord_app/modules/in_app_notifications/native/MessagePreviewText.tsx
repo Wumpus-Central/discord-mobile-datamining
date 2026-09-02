@@ -188,7 +188,7 @@ createCacheKey = {
   paddingHorizontal: ThemesDefault.space.PX_8,
 };
 createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { borderRadius: ThemesDefault.radii.xs, overflow: "hidden", height: 60, width: "channel" };
+createCacheKey[3] = { borderRadius: ThemesDefault.radii.xs, overflow: "hidden", height: 60, width: "HermesInternal" };
 createCacheKey[4] = { width: "100%", height: "100%" };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
 let result = set.fileFinishedImporting("modules/in_app_notifications/native/MessagePreviewText.tsx");
@@ -199,7 +199,7 @@ export default function MessagePreviewText(message) {
   if (showMessageAuthor === undefined) {
     showMessageAuthor = false;
   }
-  let obj = message(10212);
+  let obj = message(10234);
   const previewableMedia = obj.usePreviewableMedia(message);
   obj1 = message(4746);
   let tmp3 = null;
@@ -207,10 +207,10 @@ export default function MessagePreviewText(message) {
     tmp3 = message;
   }
   const nullableMessageAuthor = obj1.useNullableMessageAuthor(tmp3);
-  let tmpResult = tmp(10220);
+  let tmpResult = tmp(10242);
   const previewableMediaText = tmpResult.usePreviewableMediaText({ previewableMedia, author: nullableMessageAuthor });
   ({ text, secondaryText } = previewableMediaText);
-  tmpResult = tmp(10221);
+  tmpResult = tmp(10243);
   const getInitialMessagePreview = tmpResult.useGetInitialMessagePreview({ message });
   const items = [message.embeds];
   const memo = React.useMemo(() => {
@@ -219,7 +219,7 @@ export default function MessagePreviewText(message) {
   }, items);
   if (memo.length > 0) {
     const first = memo[0];
-    if (first.type === tmp(693).MessageEmbedTypes.GIFV) {
+    if (first.type === tmp(690).MessageEmbedTypes.GIFV) {
       if (null != text) {
         obj = { text: null };
         obj[0] = text;
@@ -241,17 +241,17 @@ export default function MessagePreviewText(message) {
   } else if (isForwardMessageDefault(message)) {
     let tmp29 = previewableMedia.length > 0;
     if (tmp29) {
-      tmp29 = previewableMedia[0].type === tmp(10212).PreviewableMediaTypes.GIF;
+      tmp29 = previewableMedia[0].type === tmp(10234).PreviewableMediaTypes.GIF;
     }
     if (previewableMedia.length > 0) {
       if (null != nullableMessageAuthor) {
-        const intl4 = tmp(1236).intl;
+        const intl4 = tmp(1233).intl;
         const obj3 = { username: null };
         obj3[0] = nullableMessageAuthor.nick;
-        let formatResult = intl4.format(tmp(1236).t.sLDHDi, obj3);
+        let formatResult = intl4.format(tmp(1233).t.sLDHDi, obj3);
       } else {
-        const intl3 = tmp(1236).intl;
-        formatResult = intl3.string(tmp(1236).t["9ddYKt"]);
+        const intl3 = tmp(1233).intl;
+        formatResult = intl3.string(tmp(1233).t["9ddYKt"]);
       }
       const obj4 = { text: null };
       obj4[0] = formatResult;
@@ -265,7 +265,7 @@ export default function MessagePreviewText(message) {
   } else if (message.content.length > 0) {
     if (null != nullableMessageAuthor) {
       channel = channel.getChannel(message.channel_id);
-      tmp(10177);
+      tmp(10199);
       if (null != channel) {
         const obj6 = {
           channel: null,
@@ -281,7 +281,7 @@ export default function MessagePreviewText(message) {
         obj6[3] = tmp(4171).ChannelListLayoutTypes.COZY;
         obj6[4] = tmp24;
         obj6[6] = lineClamp;
-        return callback(tmp(10192).ChannelRowPreview, obj6);
+        return callback(tmp(10214).ChannelRowPreview, obj6);
       }
     }
     const obj7 = { message: null, lineClamp: null, maxHeight: null };
@@ -315,13 +315,13 @@ export default function MessagePreviewText(message) {
     }
     if (null != message.poll) {
       if (null != nullableMessageAuthor) {
-        const intl2 = tmp(1236).intl;
+        const intl2 = tmp(1233).intl;
         const obj11 = { username: null };
         obj11[0] = nullableMessageAuthor.nick;
-        let formatResult1 = intl2.format(tmp(1236).t["1wtRlq"], obj11);
+        let formatResult1 = intl2.format(tmp(1233).t["1wtRlq"], obj11);
       } else {
-        const intl = tmp(1236).intl;
-        formatResult1 = intl.string(tmp(1236).t.n3shVJ);
+        const intl = tmp(1233).intl;
+        formatResult1 = intl.string(tmp(1233).t.n3shVJ);
       }
       const obj12 = { children: null };
       const obj13 = { text: null };

@@ -34,7 +34,7 @@ let obj = {
   setFocused: null,
   setIsFocusedVideoZoomed: null,
   setMode: null,
-  setShowFloatingCTA: "M9 1H7v1h2V1ZM9 7H7v2h2V7Z",
+  setShowFloatingCTA: "M2 2H1v2h1V2ZM5 1H2v1h3V1ZM7 2H6v1h1V2ZM9 1H7v1h2V1ZM12 1h-1v2h1V2h2V1h-2Z",
   showControls: null,
   showFloatingCTA: "",
   streamOutputSinkStack: "",

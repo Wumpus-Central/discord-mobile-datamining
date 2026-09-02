@@ -18,10 +18,10 @@ export default function SettingSearchBar() {
   const tmp = callback();
   callback = React.useCallback(() => {
     store.setState({ isActive: false, query: "", isFocused: false });
-    const result = callback(1891).dismissGlobalKeyboard();
+    const result = callback(1890).dismissGlobalKeyboard();
   }, []);
   const callback1 = React.useCallback(() => {
-    const result = callback(6244).trackSettingSearchInputFocused();
+    const result = callback(6253).trackSettingSearchInputFocused();
     store.setState({ isActive: true, isFocused: true });
   }, []);
   const callback2 = React.useCallback(() => {

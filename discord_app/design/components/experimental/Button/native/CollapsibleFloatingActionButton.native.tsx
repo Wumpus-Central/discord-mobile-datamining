@@ -82,11 +82,11 @@ export const CollapsibleFloatingActionButton = function CollapsibleFloatingActio
   }
   const items = [styles.button];
   if (positionRight == null) {
-    positionRight = tmp3(8991).DEFAULT_POSITION_OFFSET;
+    positionRight = tmp3(9005).DEFAULT_POSITION_OFFSET;
   }
   obj = { position: "absolute", right: positionRight, bottom: null };
   if (positionBottom == null) {
-    positionBottom = tmp3(8991).DEFAULT_POSITION_OFFSET;
+    positionBottom = tmp3(9005).DEFAULT_POSITION_OFFSET;
   }
   obj[2] = positionBottom;
   items[1] = obj;

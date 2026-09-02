@@ -12,7 +12,7 @@ function FavoritesGuildAddCategoryActionSheet() {
   const tmp = callback4();
   const tmp2 = callback(React.useState(""), 2);
   const first = tmp2[0];
-  let obj = first(1912);
+  let obj = first(1911);
   const result = obj.isFavoritesGuildCategoryNameValid(first);
   importDefault = result;
   const items = [result, first];
@@ -32,9 +32,9 @@ function FavoritesGuildAddCategoryActionSheet() {
     children: null,
   };
   obj = { title: null };
-  const intl = first(1236).intl;
-  obj[0] = intl.string(first(1236).t["ISN+NM"]);
-  obj[3] = callback2(first(5621).BottomSheetTitleHeader, obj);
+  const intl = first(1233).intl;
+  obj[0] = intl.string(first(1233).t["ISN+NM"]);
+  obj[3] = callback2(first(5629).BottomSheetTitleHeader, obj);
   obj1 = {
     label: null,
     placeholder: null,
@@ -46,23 +46,23 @@ function FavoritesGuildAddCategoryActionSheet() {
     returnKeyType: "done",
     onSubmitEditing: null,
   };
-  const intl2 = first(1236).intl;
-  obj1[0] = intl2.string(first(1236).t.OCAkGP);
-  const intl3 = first(1236).intl;
-  obj1[1] = intl3.string(first(1236).t.eTVbtx);
+  const intl2 = first(1233).intl;
+  obj1[0] = intl2.string(first(1233).t.OCAkGP);
+  const intl3 = first(1233).intl;
+  obj1[1] = intl3.string(first(1233).t.eTVbtx);
   obj1[2] = first;
   obj1[3] = tmp2[1];
   obj1[4] = closure_5;
   obj1[8] = callback;
-  const items1 = [callback2(first(7705).TextInput, obj1)];
+  const items1 = [callback2(first(7714).TextInput, obj1)];
   let obj2 = { text: null, onPress: null, disabled: null };
-  const intl4 = first(1236).intl;
-  obj2[0] = intl4.string(first(1236).t.CumH4u);
+  const intl4 = first(1233).intl;
+  obj2[0] = intl4.string(first(1233).t.CumH4u);
   obj2[1] = callback;
   obj2[2] = !result;
   items1[1] = callback2(first(4928).Button, obj2);
   obj[4] = items1;
-  return callback3(first(5622).BottomSheet, obj);
+  return callback3(first(5630).BottomSheet, obj);
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 FavoritesGuildAddCategoryActionSheet = "FavoritesGuildAddCategoryActionSheet";

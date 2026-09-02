@@ -34,10 +34,10 @@ export const useDerivedDmSpamFilterSettingValue = function useDerivedDmSpamFilte
     if (false !== nsfwAllowed) {
       let FRIENDS_AND_NON_FRIENDS = closure_3.get(setting1);
       if (FRIENDS_AND_NON_FRIENDS == null) {
-        FRIENDS_AND_NON_FRIENDS = tmp(1306).DmSpamFilterV2.NON_FRIENDS;
+        FRIENDS_AND_NON_FRIENDS = tmp(1305).DmSpamFilterV2.NON_FRIENDS;
       }
     }
-    DmSpamFilterV2 = tmp(1306).DmSpamFilterV2;
+    DmSpamFilterV2 = tmp(1305).DmSpamFilterV2;
     FRIENDS_AND_NON_FRIENDS = DmSpamFilterV2.FRIENDS_AND_NON_FRIENDS;
   }
 };

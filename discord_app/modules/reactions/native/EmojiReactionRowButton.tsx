@@ -60,7 +60,7 @@ export const EmojiPickerRowButton = function EmojiPickerRowButton(iconSize) {
     style: null,
     children: null,
   };
-  const intl = tmp2(1236).intl;
+  const intl = tmp2(1233).intl;
   obj[2] = intl.string(getSystemLocale.t.lfIHs4);
   obj[4] = onPress;
   const items = [tmp.emojiContainer, styles];
@@ -128,7 +128,7 @@ export const EmojiReactionRowButton = function EmojiReactionRowButton(emoji) {
     }
     obj[2] = str;
     if (null != animated.id) {
-      const emojiURL = getEmojiURL(1431);
+      const emojiURL = getEmojiURL(1430);
       getEmojiURL = emojiURL.getEmojiURL;
       obj = { id: null, animated: null, size: null };
       ({ id: obj[0], animated } = animated);

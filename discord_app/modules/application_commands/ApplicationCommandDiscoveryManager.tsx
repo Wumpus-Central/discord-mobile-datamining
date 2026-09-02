@@ -1,6 +1,6 @@
 // discord_app/modules/application_commands/ApplicationCommandDiscoveryManager.tsx
 import set from "../../../_runtime/00002_set.js";
-import keys from "../../../_runtime/00644_keys.js";
+import keys from "../../../_runtime/00641_keys.js";
 
 const obj = keys.create(() => ({ initialSectionId: "r" }));
 const result = set.fileFinishedImporting("modules/application_commands/ApplicationCommandDiscoveryManager.tsx");

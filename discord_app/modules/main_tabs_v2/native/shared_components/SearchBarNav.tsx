@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/SearchBarNav.tsx
-import set from "../../../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
+import set from "../../../../utils/PlatformUtils.tsx";
 import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
 import SearchField from "../../../../design/components/TextField/native/SearchField.native.tsx";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -41,7 +41,7 @@ const forwardRefResult = importAllResult.forwardRef((onClose, ref) => {
   if (obj1.isAndroid()) {
     obj = { style: null };
     obj[0] = tmp2.cancelIcon;
-    let tmp3Result = tmp3(tmp4(5499).ArrowLargeLeftIcon, obj);
+    let tmp3Result = tmp3(tmp4(5507).ArrowLargeLeftIcon, obj);
   } else {
     obj = {
       style: null,
@@ -51,14 +51,14 @@ const forwardRefResult = importAllResult.forwardRef((onClose, ref) => {
       children: null,
     };
     obj[0] = tmp2.cancelText;
-    const intl2 = tmp4(1236).intl;
-    obj[4] = intl2.string(tmp4(1236).t["ETE/oC"]);
+    const intl2 = tmp4(1233).intl;
+    obj[4] = intl2.string(tmp4(1233).t["ETE/oC"]);
     tmp3Result = tmp3(tmp4(4474).Text, obj);
   }
   obj[4] = tmp3Result;
   tmp3Result = tmp3(PressableBase.PressableOpacity, obj);
   obj1 = { style: tmp2.container, children: null };
-  let tmp4Result = tmp4(500);
+  let tmp4Result = tmp4(1234);
   let tmp10 = null;
   if (tmp4Result.isAndroid()) {
     tmp10 = tmp3Result;
@@ -70,7 +70,7 @@ const forwardRefResult = importAllResult.forwardRef((onClose, ref) => {
   obj3[0] = closure_3(SearchField.SearchField, { size: "md", isRound: true, ref });
   obj2[1] = closure_3(closure_2, obj3);
   items[1] = closure_3(closure_2, obj2);
-  tmp4Result = tmp4(500);
+  tmp4Result = tmp4(1234);
   let tmp12 = null;
   if (!tmp4Result.isAndroid()) {
     tmp12 = tmp3Result;

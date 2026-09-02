@@ -1,5 +1,5 @@
 // discord_app/modules/frames/native/FramesNativeManager.tsx
-import v1 from "../../../../_runtime/00514_v1.js";
+import v1 from "../../../../_runtime/00511_v1.js";
 import dispatcherDefault from "../../../Dispatcher.tsx";
 import ComponentDispatcher from "../../../utils/ComponentDispatchUtils.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
@@ -13,7 +13,7 @@ import { isLaunched } from "../FramesConstants.tsx";
 import { ComponentActions } from "../../../Constants.tsx";
 import { DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY as closure_7 } from "../../activities/Constants.tsx";
 import { TransportTypes } from "../../rpc/Constants.tsx";
-import WebView from "../../../../_runtime/08593_WebView.js";
+import WebView from "../../../../_runtime/08608_WebView.js";
 import PlatformTypes from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 
 require = arg1;

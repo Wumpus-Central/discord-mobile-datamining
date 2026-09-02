@@ -100,7 +100,7 @@ let prototype = function CustomStatusManager() {
             obj1[0] = constants.CUSTOM_STATUS_MANAGER;
             obj[0] = obj1;
             obj[1] = obj;
-            callback(10174)(obj);
+            callback(10196)(obj);
             closure_6.stop();
           }
         }
@@ -118,14 +118,14 @@ let prototype = function CustomStatusManager() {
       tmp = null == StatusCreatedAtSetting.getSetting();
     }
     if (tmp) {
-      const PreloadedUserSettingsActionCreators = applyArgumentsResult(1370).PreloadedUserSettingsActionCreators;
+      const PreloadedUserSettingsActionCreators = applyArgumentsResult(1369).PreloadedUserSettingsActionCreators;
       PreloadedUserSettingsActionCreators.updateAsync(
         "status",
         (arg0) => {
           const UInt64Value = callback(table[7]).UInt64Value;
           arg0.statusCreatedAtMs = UInt64Value.create({ value: "" + Date.now() });
         },
-        applyArgumentsResult(1370).UserSettingsDelay.INFREQUENT_USER_ACTION,
+        applyArgumentsResult(1369).UserSettingsDelay.INFREQUENT_USER_ACTION,
       );
     }
   };
@@ -150,9 +150,9 @@ let prototype = function CustomStatusManager() {
             true,
           );
         } else {
-          applyArgumentsResult(10173).setFocusMode(false);
+          applyArgumentsResult(10195).setFocusMode(false);
           closure_7.stop();
-          const tmpResult = applyArgumentsResult(10173);
+          const tmpResult = applyArgumentsResult(10195);
         }
       }
     }

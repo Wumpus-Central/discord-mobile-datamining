@@ -1,5 +1,5 @@
 // discord_app/actions/native/GiftCodeActionCreators.tsx
-import asyncRequireImpl from "../../../_runtime/02009_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/02008_asyncRequireImpl.js";
 import _modDef4723 from "../ModalActionCreators.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import ME from "../../Constants.tsx";
@@ -68,7 +68,7 @@ function _redeemGiftCode() {
               let billingError;
               constants = 1;
               paymentSource = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -81,7 +81,7 @@ function _redeemGiftCode() {
               return obj1;
             } else {
               if (obj18.getIsPaymentsBlocked()) {
-                options(8480)();
+                options(8493)();
                 paymentSource = 3;
                 return { value: "HermesInternal", done: null };
               } else {
@@ -97,12 +97,12 @@ function _redeemGiftCode() {
                   tmp46 = paymentSource;
                 }
                 id = tmp46;
-                let obj6 = options(709);
+                let obj6 = options(706);
                 const obj2 = { type: "GIFT_CODE_REDEEM", code: null };
                 obj2[1] = callback;
                 obj6.dispatch(obj2);
                 channelId = 1;
-                const HTTP = callback(530).HTTP;
+                const HTTP = callback(527).HTTP;
                 let obj3 = { url: null, body: null, oldFormErrors: true, rejectWithError: false };
                 obj3[0] = channelId.GIFT_CODE_REDEEM(callback);
                 const obj4 = { channel_id: null, payment_source_id: null };
@@ -119,18 +119,18 @@ function _redeemGiftCode() {
                 obj5[0] = HTTP.post(obj3);
                 return obj5;
               }
-              obj18 = callback(7162);
+              obj18 = callback(7171);
             }
           } else if (2 === tmp7) {
             channelId = 0;
             closure_10 = c3;
             billingError = new callback(4376).BillingError(closure_10);
-            obj3 = options(709);
+            obj3 = options(706);
             obj6 = { type: "GIFT_CODE_REDEEM_FAILURE", code: null, error: null };
             obj6[1] = callback;
             obj6[2] = billingError;
             obj3.dispatch(obj6);
-            obj5 = options(698);
+            obj5 = options(695);
             obj5.track(constants.OPEN_MODAL, { type: "gift_accept", location: null });
             if (c3 != null) {
               tmp32(billingError);
@@ -149,9 +149,9 @@ function _redeemGiftCode() {
             closure_8 = arg1;
             const obj8 = { type: "GIFT_CODE_REDEEM_SUCCESS", code: null };
             obj8[1] = callback;
-            options(709).dispatch(obj8);
-            const obj15 = options(709);
-            options(698).track(constants.OPEN_MODAL, { type: "gift_accept" });
+            options(706).dispatch(obj8);
+            const obj15 = options(706);
+            options(695).track(constants.OPEN_MODAL, { type: "gift_accept" });
             if (dependencyMap != null) {
               dependencyMap();
             }
@@ -190,7 +190,7 @@ function _redeemGiftCode() {
 function openGiftCodeRedeemModal(code) {
   let obj = _modDef4723;
   obj = { code };
-  obj.pushLazy(asyncRequireImpl(8485, dependencyMap.paths), obj, "GIFT_CODE_REDEEM_MODAL_KEY");
+  obj.pushLazy(asyncRequireImpl(8498, dependencyMap.paths), obj, "GIFT_CODE_REDEEM_MODAL_KEY");
 }
 ({ Endpoints: c4, AnalyticEvents: c5 } = ME);
 let closure_6 = Object.freeze({});

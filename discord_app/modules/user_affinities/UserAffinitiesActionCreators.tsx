@@ -29,7 +29,7 @@ export const fetchUserAffinitiesV2 = function fetchUserAffinitiesV2() {
       const value = HTTP.get(obj);
       let nextPromise = value.then(
         (body) => {
-          let obj = callback(709);
+          let obj = callback(706);
           obj = {
             type: "LOAD_USER_AFFINITIES_V2_SUCCESS",
             affineUsers: user_affinities.map((otherUserId) => {
@@ -94,7 +94,7 @@ export const fetchUserAffinitiesV2 = function fetchUserAffinitiesV2() {
           obj.dispatch(obj);
         },
         () => {
-          callback(709).dispatch({ type: "LOAD_USER_AFFINITIES_V2_FAILURE" });
+          callback(706).dispatch({ type: "LOAD_USER_AFFINITIES_V2_FAILURE" });
         },
       );
     }

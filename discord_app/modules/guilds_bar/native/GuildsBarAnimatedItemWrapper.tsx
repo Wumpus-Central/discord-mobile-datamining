@@ -216,17 +216,17 @@ let closure_13 = createCacheKey.createStyles((arg0, arg1, width, height) => {
   let str = "transparent";
   let str2 = "transparent";
   if (!arg1) {
-    str2 = tmp(712).colors.MOBILE_GUILDBAR_ICON_BACKGROUND_DEFAULT;
+    str2 = tmp(709).colors.MOBILE_GUILDBAR_ICON_BACKGROUND_DEFAULT;
   }
   obj[6] = str2;
   obj[1] = obj;
   if (arg0) {
     if (!arg1) {
-      str = tmp(712).colors.BACKGROUND_SURFACE_HIGH;
+      str = tmp(709).colors.BACKGROUND_SURFACE_HIGH;
     }
     let BACKGROUND_BRAND = str;
   } else {
-    BACKGROUND_BRAND = tmp(712).colors.BACKGROUND_BRAND;
+    BACKGROUND_BRAND = tmp(709).colors.BACKGROUND_BRAND;
   }
   obj[2] = { backgroundColor: BACKGROUND_BRAND };
   return obj;

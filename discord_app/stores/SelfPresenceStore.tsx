@@ -1,7 +1,7 @@
 // discord_app/stores/SelfPresenceStore.tsx
 import applyDefault from "../../_runtime/00012_apply.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import isUndefinedOrNullDefault from "../../_runtime/00659_isUndefinedOrNull.js";
+import isUndefinedOrNullDefault from "../../_runtime/00656_isUndefinedOrNull.js";
 import dispatcherDefault from "../Dispatcher.tsx";
 import hasFlag from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import explicitContentFromProto from "../modules/user_settings/UserSettings.tsx";

@@ -5,5 +5,5 @@ const result = set.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/DiscountsMegaphoneSpotIllustration-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/fbb1769bec933689cb8d52f20d5c9fd5f45e681d7c71a5a11fdd8534be6e4ec5.png";
-export const metadata = { fileBytes: 86052 };
+export default "https://cdn.discordapp.com/assets/content/945caab9e3f5f20d5f81c3ee82c9e83ef6be4e2ca5690550a6a44582fa6aadc3.png";
+export const metadata = { fileBytes: 86821 };

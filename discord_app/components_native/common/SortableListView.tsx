@@ -308,11 +308,11 @@ class SortableListView extends Component {
         sum = bound + 1;
       }
       if (sum !== obj.state.hoverIndex) {
-        const result = lib(5596).DeprecatedLayoutAnimation();
+        const result = lib(5604).DeprecatedLayoutAnimation();
         obj = { hovering: true, hoverIndex: null };
         obj[1] = sum;
         obj.setState(obj);
-        const obj2 = lib(5596);
+        const obj2 = lib(5604);
       }
     };
     tmp2.cancel = function cancel() {
@@ -475,7 +475,7 @@ class SortableListView extends Component {
             if (hoverIndex > index) {
               diff = hoverIndex - 1;
             }
-            obj1 = lib(5596);
+            obj1 = lib(5604);
             const result = obj1.DeprecatedLayoutAnimation({ duration: 0 });
             const props2 = obj.props;
             const onRowMoved = props2.onRowMoved;

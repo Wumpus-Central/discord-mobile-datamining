@@ -59,10 +59,10 @@ export default function AppLauncherTextInputOption(guildId) {
   );
   first = tmp2[0];
   React = tmp2[1];
-  let obj = onChangeText(9049);
+  let obj = onChangeText(9063);
   closure_5 = React.useRef({ start: 0, end: 0 });
   ref = React.useRef(null);
-  let tmp14Result = option.type === onChangeText(1955).ApplicationCommandOptionType.STRING;
+  let tmp14Result = option.type === onChangeText(1954).ApplicationCommandOptionType.STRING;
   closure_7 = tmp14Result;
   const items = [onChangeText];
   callback = React.useCallback((arg0) => {
@@ -115,17 +115,17 @@ export default function AppLauncherTextInputOption(guildId) {
       const obj = onChangeText(closure_1_2[9]);
     }
   }, items2);
-  obj1 = onChangeText(11739);
+  obj1 = onChangeText(11962);
   const animationDelayedAutoFocus = obj1.useAnimationDelayedAutoFocus(autoFocus, () => {
     const current = ref.current;
     if (current != null) {
       current.focus();
     }
   });
-  if (obj.useAppLauncherContext().entrypoint === onChangeText(8435).AppLauncherEntrypoint.VOICE) {
-    let TextInput = tmp4(1297).TextInput;
+  if (obj.useAppLauncherContext().entrypoint === onChangeText(8444).AppLauncherEntrypoint.VOICE) {
+    let TextInput = tmp4(1296).TextInput;
   } else {
-    TextInput = guildId(11743);
+    TextInput = guildId(11966);
   }
   const items3 = [tmp.container, ,];
   if (hasError) {
@@ -152,7 +152,7 @@ export default function AppLauncherTextInputOption(guildId) {
     onPressIn: null,
   };
   let maxLength;
-  if (option.type === onChangeText(1955).ApplicationCommandOptionType.STRING) {
+  if (option.type === onChangeText(1954).ApplicationCommandOptionType.STRING) {
     maxLength = option.maxLength;
   }
   obj[4] = maxLength;
@@ -162,13 +162,13 @@ export default function AppLauncherTextInputOption(guildId) {
   };
   obj[8] = onFocus;
   obj[9] = onEndEditing;
-  if (option.type === onChangeText(1955).ApplicationCommandOptionType.INTEGER) {
+  if (option.type === onChangeText(1954).ApplicationCommandOptionType.INTEGER) {
     let str2 = "numbers-and-punctuation";
     if (tmp4Result.isAndroid()) {
       str2 = "numeric";
     }
     let str = str2;
-    tmp4Result = tmp4(500);
+    tmp4Result = tmp4(1234);
   } else {
     str = "default";
   }
@@ -191,7 +191,7 @@ export default function AppLauncherTextInputOption(guildId) {
       };
       const result1 = onChangeText(closure_1_2[17]).openEmojiPickerActionSheet(obj);
     };
-    tmp14Result = tmp14(guildId(11744), obj1);
+    tmp14Result = tmp14(guildId(11967), obj1);
   }
   items4[1] = tmp14Result;
   obj[1] = items4;

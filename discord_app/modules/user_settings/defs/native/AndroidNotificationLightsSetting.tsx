@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/AndroidNotificationLightsSetting.tsx
 import set from "../../../../../_runtime/00002_set.js";
-import set2 from "../../../../utils/PlatformUtils.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
+import set2 from "../../../../utils/PlatformUtils.tsx";
 import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
 import hasAndroidNotificationChannels from "../../notifications/native/SettingsNotificationUtils.tsx";
 import _initializeAndroidNotificationSettingsStore from "../../notifications/native/stores/AndroidNotificationSettingsStore.tsx";

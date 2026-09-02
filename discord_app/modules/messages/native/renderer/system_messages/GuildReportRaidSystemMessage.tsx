@@ -27,7 +27,7 @@ export const createGuildReportRaidSystemMessage = function createGuildReportRaid
   let automodUsernameColor = nativeStyleProperties.resolveAlertModeColors(theme).automodUsernameColor;
   obj = {
     username: messageAuthorWithProcessedColor.nick,
-    usernameOnClick: tmp(7871)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }),
+    usernameOnClick: tmp(7880)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }),
     guildName: null,
   };
   let str;
@@ -40,17 +40,17 @@ export const createGuildReportRaidSystemMessage = function createGuildReportRaid
   obj[2] = str;
   const obj2 = nativeStyleProperties;
   obj = {};
-  const merged = Object.assign(tmp(7873)(roleStyle));
-  const intl = tmp8(1236).intl;
+  const merged = Object.assign(tmp(7882)(roleStyle));
+  const intl = tmp8(1233).intl;
   obj.content = intl.formatToParts(getSystemLocale.t["MTmH+u"], obj);
-  const intl2 = tmp8(1236).intl;
+  const intl2 = tmp8(1233).intl;
   obj.username = intl2.string(getSystemLocale.t.hG1StD);
   if (automodUsernameColor == null) {
     automodUsernameColor = null;
   }
   obj.usernameColor = automodUsernameColor;
-  let tmp8Result = tmp8(1434);
-  tmp8Result = tmp8(1431);
+  let tmp8Result = tmp8(1433);
+  tmp8Result = tmp8(1430);
   const tmp11 = getTagPropertiesDefault({ message, channel, isSystemDM: true, colors: tmp3 });
   obj.avatarURL = tmp8Result.ensureAvatarSource(tmp8Result.makeSource(ensureAvatarSource.getAutomodAvatarURL())).uri;
   const merged1 = Object.assign(tmp11);

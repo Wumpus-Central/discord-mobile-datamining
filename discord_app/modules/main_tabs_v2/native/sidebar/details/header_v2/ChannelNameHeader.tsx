@@ -16,13 +16,13 @@ const require = arg1;
 function DirectMessageIcon(channel) {
   channel = channel.channel;
   let stateFromStores;
-  let obj = channel(589);
+  let obj = channel(586);
   const items = [closure_9];
   stateFromStores = obj.useStateFromStores(items, () => closure_1_9.getUser(channel.getRecipientId()));
   const tmp = callback2();
   const items1 = [closure_8];
   const items2 = [stateFromStores];
-  const stateFromStoresObject = channel(589).useStateFromStoresObject(
+  const stateFromStoresObject = channel(586).useStateFromStoresObject(
     items1,
     () => {
       let isMobileOnlineResult = null != stateFromStores;
@@ -59,7 +59,7 @@ function DirectMessageIcon(channel) {
     };
     obj[0] = stateFromStores.avatarDecoration;
     obj[1] = stateFromStores;
-    obj[3] = tmp2(1297).AvatarSizes.NORMAL;
+    obj[3] = tmp2(1296).AvatarSizes.NORMAL;
     let isSystemUserResult;
     if (stateFromStores != null) {
       isSystemUserResult = stateFromStores.isSystemUser();
@@ -72,7 +72,7 @@ function DirectMessageIcon(channel) {
     obj[5] = tmp5;
     obj[6] = tmp6;
     obj[7] = tmp.statusStyle;
-    tmp9Result = closure_12(tmp2(1297).Avatar, obj);
+    tmp9Result = closure_12(tmp2(1296).Avatar, obj);
     const tmp9 = closure_12;
   }
   return tmp9Result;
@@ -109,7 +109,7 @@ function ThreadParentChannelLink(channel) {
 }
 function ChannelSubtitle(channel) {
   channel = channel.channel;
-  let obj = channel(589);
+  let obj = channel(586);
   const items = [closure_9];
   const items1 = [channel];
   const stateFromStores = obj.useStateFromStores(
@@ -139,7 +139,7 @@ function ChannelSubtitle(channel) {
     }
     return tmp8;
   } else if (channel.isGameInvitesChannel()) {
-    const intl = tmp(1236).intl;
+    const intl = tmp(1233).intl;
     let stringResult = intl.string(messagesProxyDefault["D+2/QP"]);
   } else {
     stringResult = tmp(4666).channelTypeString(channel);
@@ -286,7 +286,7 @@ function ChannelNameHeaderContent(channel) {
 function DMChannelNameHeader(channel) {
   channel = channel.channel;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(5953)().analyticsLocations;
+  analyticsLocations = analyticsLocations(5961)().analyticsLocations;
   const items = [channel, analyticsLocations];
   const callback = importAllResult.useCallback(() => {
     const recipientId = channel.getRecipientId();
@@ -300,7 +300,7 @@ function DMChannelNameHeader(channel) {
   }, items);
   const tmp = callback2();
   const items1 = [tmp.container, channel.containerStyle];
-  return callback(channel(5068).PressableOpacity, {
+  return callback(channel(5076).PressableOpacity, {
     style: items1,
     onPress: callback,
     children: callback(ChannelNameHeaderContent, { channel }),

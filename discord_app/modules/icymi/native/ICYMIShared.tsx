@@ -1,6 +1,6 @@
 // discord_app/modules/icymi/native/ICYMIShared.tsx
-import set from "../../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 import Button from "../../../design/void/native.tsx";
 import GuildIconSizes from "../../guild/native/GuildIcon.tsx";
 import GuildIconSizesDefault from "../../guild/native/GuildIcon.tsx";
@@ -654,9 +654,9 @@ export const SimplePost = function SimplePost(arg0) {
   let sharedValue;
   const tmp = callback3();
   let obj = highlight(4197);
-  token = obj.useToken(token(712).colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT, token(4413)());
+  token = obj.useToken(token(709).colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT, token(4413)());
   obj1 = highlight(4326);
-  const hexWithOpacityResult = obj1.hexWithOpacity(token(712).unsafe_rawColors.BRAND_360, 0.25);
+  const hexWithOpacityResult = obj1.hexWithOpacity(token(709).unsafe_rawColors.BRAND_360, 0.25);
   dependencyMap = hexWithOpacityResult;
   let obj2 = highlight(4217);
   sharedValue = obj2.useSharedValue(0);

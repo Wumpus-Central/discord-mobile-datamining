@@ -21,13 +21,13 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
       if (null != channel) {
         if (channel.isPrivate()) {
           let obj = { text: null, accessibilityHint: null, inCall: null };
-          ({ text: obj2[0], accessibilityHint: obj2[1], inCall: obj2[2] } = callback2(10641)(channel, callback2));
+          ({ text: obj2[0], accessibilityHint: obj2[1], inCall: obj2[2] } = callback2(10862)(channel, callback2));
           return obj;
         }
       }
-      const intl = callback(1236).intl;
+      const intl = callback(1233).intl;
       const string = intl.string;
-      const t = callback(1236).t;
+      const t = callback(1233).t;
       if (callback2) {
         let stringResult = string(t["7AWk50"]);
         let tmp10 = tmp6;
@@ -36,9 +36,9 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
         tmp10 = tmp6;
       }
       obj = { text: stringResult, accessibilityHint: null, inCall: false };
-      const intl2 = tmp10(1236).intl;
+      const intl2 = tmp10(1233).intl;
       const string2 = intl2.string;
-      const t2 = tmp10(1236).t;
+      const t2 = tmp10(1233).t;
       if (callback2) {
         let string2Result = string2(t2.oCqlGG);
       } else {
@@ -113,8 +113,8 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
               isPrivateResult = obj1.isPrivate();
             }
             if (isPrivateResult) {
-              closure_1_1(10641)(channel, closure_1).onPress();
-              const obj3 = closure_1_1(10641)(channel, closure_1);
+              closure_1_1(10862)(channel, closure_1).onPress();
+              const obj3 = closure_1_1(10862)(channel, closure_1);
             }
             if (dependencyMap != null) {
               dependencyMap();

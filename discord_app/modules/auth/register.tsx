@@ -143,7 +143,7 @@ function _registerPhone() {
               phone = phone.phone;
               c5 = 1;
               c6 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp8) {
             if (arg0 === 1) {
@@ -163,7 +163,7 @@ function _registerPhone() {
               obj3[0] = phone;
               obj2[1] = obj3;
               const obj4 = { event: null };
-              obj4[0] = phone(503).NetworkActionNames.USER_REGISTER_PHONE;
+              obj4[0] = phone(500).NetworkActionNames.USER_REGISTER_PHONE;
               obj2[2] = obj4;
               c5 = 3;
               c6 = 1;
@@ -174,7 +174,7 @@ function _registerPhone() {
           } else if (2 === tmp8) {
             c4 = 0;
             callback = dependencyMap;
-            if (callback instanceof phone(10914).CaptchaCancelError) {
+            if (callback instanceof phone(11134).CaptchaCancelError) {
               throw callback;
             } else {
               const tmp23 = new callback(4377)(callback);
@@ -240,13 +240,13 @@ function registerFull(giftCodeSKUId) {
   let obj = dispatcherDefault;
   obj.dispatch({ type: "REGISTER" });
   if (null != birthday) {
-    tmp4(15550)(birthday, constants2.REGISTER);
-    let tmp4Result = tmp4(698);
+    tmp4(15781)(birthday, constants2.REGISTER);
+    let tmp4Result = tmp4(695);
     obj = { source: null, action: null };
     obj[0] = constants5.REGISTER;
     obj[1] = constants4.AGE_GATE_SUBMITTED;
     tmp4Result.track(constants.AGE_GATE_ACTION, obj);
-    const diffResult = tmp4(4075)().diff(birthday, "years");
+    const diffResult = tmp4(4074)().diff(birthday, "years");
     if (diffResult >= 13) {
       if (diffResult < 13) {
         let str3 = "23+";
@@ -260,12 +260,12 @@ function registerFull(giftCodeSKUId) {
       } else {
         str = "13-17";
       }
-      tmp4Result = tmp4(698);
+      tmp4Result = tmp4(695);
       obj = { age_bucket: null };
       obj[0] = str;
       tmp4Result.track(tmp14.USER_AGE_SUBMITTED, obj);
     }
-    const obj11 = tmp4(4075)();
+    const obj11 = tmp4(4074)();
     tmp14 = constants;
   }
   obj1 = { url: constants3.REGISTER, body: null, trackedActionData: null, rejectWithError: false };
@@ -319,25 +319,25 @@ function registerFull(giftCodeSKUId) {
   const tmp4Result1 = _modDef4713;
   return _modDef4713.post(obj1).then(
     (body) => {
-      let obj = callback2(709);
+      let obj = callback2(706);
       obj = { type: "REGISTER_SUCCESS", token: body.body.token };
       obj.dispatch(obj);
       obj = { type: "GUARDIAN_CONNECT_REQUIRED", shouldShowGuardianConnect: true === body.body.show_guardian_connect };
-      callback2(709).dispatch(obj);
-      const obj3 = callback2(709);
-      callback2(698).track(constants.AGE_GATE_ACTION, {
+      callback2(706).dispatch(obj);
+      const obj3 = callback2(706);
+      callback2(695).track(constants.AGE_GATE_ACTION, {
         source: constants3.REGISTER,
         action: constants2.AGE_GATE_SUCCESS,
       });
     },
     (arg0) => {
-      if (arg0 instanceof callback(10914).CaptchaCancelError) {
+      if (arg0 instanceof callback(11134).CaptchaCancelError) {
         throw arg0;
       } else {
         let obj = new callback2(4377)(arg0);
         if (null != obj.getFieldErrors("date_of_birth")) {
-          const result = callback3(15551).preventUnderageRegistration(constants3.REGISTER);
-          const obj2 = callback3(15551);
+          const result = callback3(15782).preventUnderageRegistration(constants3.REGISTER);
+          const obj2 = callback3(15782);
         }
         obj = {
           is_unique_username_registration: true,
@@ -368,7 +368,7 @@ function registerFull(giftCodeSKUId) {
         obj[11] = obj.getFirstFieldErrorMessage("guild_template_code");
         obj[12] = obj.getFirstFieldErrorMessage("consent");
         obj[13] = obj.getAnyErrorMessage();
-        callback2(698).track(constants.REGISTER_SUBMIT_ERRORED, obj);
+        callback2(695).track(constants.REGISTER_SUBMIT_ERRORED, obj);
         throw obj;
       }
     },

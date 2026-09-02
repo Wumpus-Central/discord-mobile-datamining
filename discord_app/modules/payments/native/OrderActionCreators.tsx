@@ -225,7 +225,7 @@ function _createOrder() {
               body = undefined;
               constants = 1;
               logger = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -239,7 +239,7 @@ function _createOrder() {
             } else {
               dispatchResult = callback2;
               dispatchResult = dependencyMap;
-              dispatchResult = callback2(709).dispatch({ type: "ORDER_CREATE_START" });
+              dispatchResult = callback2(706).dispatch({ type: "ORDER_CREATE_START" });
               dispatchResult = callback2;
               c4 = 1;
               dispatchResult = c3;
@@ -309,7 +309,7 @@ function _createOrder() {
               if (null != logger) {
                 obj3.external_gateway_facet = logger;
               }
-              const HTTP = callback(530).HTTP;
+              const HTTP = callback(527).HTTP;
               const obj7 = { url: null, body: null, rejectWithError: true, retries: 3 };
               obj7[0] = constants.ORDER_CREATE;
               obj7[1] = obj3;
@@ -325,7 +325,7 @@ function _createOrder() {
             const obj9 = { response: null };
             obj9[0] = closure_11;
             logger.error("failed to create order", obj9);
-            obj6 = callback2(709);
+            obj6 = callback2(706);
             constants = 3;
             logger = 1;
             const obj10 = { value: null, done: false };
@@ -369,7 +369,7 @@ function _createOrder() {
               constants = 5;
               logger = 1;
               const obj15 = { value: null, done: false };
-              obj15[0] = callback2(709).dispatch(obj14);
+              obj15[0] = callback2(706).dispatch(obj14);
               return obj15;
             }
           } else if (arg0 === 1) {
@@ -418,55 +418,149 @@ function _getOrCreateOrder() {
     c3 = 0;
     c4 = 0;
     const iter = (function* (arg0) {
-      c1 = 0;
-      ({
-        skuId: c0,
-        paymentGateway: c1,
-        recipientUserId: c2,
-        purchaseType: c3,
-        isGift: c4,
-        giftInfo: c5,
-        createdAfter: c6,
-        subscriptionPlanId: c7,
-        externalGatewayFacet: c8,
-      } = c0);
-      yield "PX_16";
-      const obj2 = { isGift: null, status: null, skuId: null, createdAfter: null };
-      obj2[0] = constants;
-      obj2[1] = constants.DRAFT;
-      obj2[2] = c0;
-      obj2[3] = logger;
-      const lib = yield callback(obj2);
-      if (lib.length > 0) {
-        const id = lib[0];
-        const obj5 = { orderId: null, skuId: null, isGift: null };
-        obj5[0] = id.id;
-        obj5[1] = c0;
-        obj5[2] = constants;
-        logger.info("reusing existing draft order", obj5);
-        return id;
+      if (constants === 2) {
+        constants = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          constants = 2;
+          if (0 === c3) {
+            if (arg0 === 1) {
+              constants = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              constants = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              c2 = tmp4;
+              c1 = 0;
+              c0 = undefined;
+              c1 = undefined;
+              c2 = undefined;
+              c3 = undefined;
+              constants = undefined;
+              c5 = undefined;
+              let logger;
+              let callback;
+              c8 = undefined;
+              ({
+                skuId: c0,
+                paymentGateway: c1,
+                recipientUserId: c2,
+                purchaseType: c3,
+                isGift: c4,
+                giftInfo: c5,
+                createdAfter: c6,
+                subscriptionPlanId: c7,
+                externalGatewayFacet: c8,
+              } = c0);
+              let lib;
+              let id;
+              c3 = 1;
+              constants = 1;
+              return { value: "PX_16", done: true };
+            }
+          } else if (1 === tmp4) {
+            if (arg0 === 1) {
+              constants = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              constants = 3;
+              obj1 = { value: null, done: true };
+              obj1[0] = arg1;
+              return obj1;
+            } else {
+              const obj2 = { isGift: null, status: null, skuId: null, createdAfter: null };
+              obj2[0] = constants;
+              obj2[1] = constants.DRAFT;
+              obj2[2] = c0;
+              obj2[3] = logger;
+              c3 = 2;
+              constants = 1;
+              const obj3 = { value: null, done: false };
+              obj3[0] = callback(obj2);
+              return obj3;
+            }
+          } else if (2 === tmp4) {
+            if (arg0 === 1) {
+              constants = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              constants = 3;
+              const obj4 = { value: null, done: true };
+              obj4[0] = arg1;
+              return obj4;
+            } else {
+              lib = arg1;
+              if (lib.length > 0) {
+                id = lib[0];
+                const obj5 = { orderId: null, skuId: null, isGift: null };
+                obj5[0] = id.id;
+                obj5[1] = c0;
+                obj5[2] = constants;
+                logger.info("reusing existing draft order", obj5);
+                constants = 3;
+                const obj6 = { value: null, done: true };
+                obj6[0] = id;
+                return obj6;
+              } else {
+                const obj7 = {
+                  paymentGateway: null,
+                  recipientUserId: null,
+                  isGift: null,
+                  giftInfo: null,
+                  orderLineItems: null,
+                  externalGatewayFacet: null,
+                };
+                obj7[0] = c1;
+                obj7[1] = c2;
+                obj7[2] = constants;
+                obj7[3] = c5;
+                const obj8 = { sku_id: null, quantity: 1, purchase_type: null, subscription_plan_id: null };
+                obj8[0] = c0;
+                obj8[2] = c3;
+                obj8[3] = callback;
+                const items = [obj8];
+                obj7[4] = items;
+                obj7[5] = c8;
+                c3 = 3;
+                constants = 1;
+                const obj9 = { value: null, done: false };
+                obj9[0] = lib(obj7);
+                return obj9;
+              }
+            }
+          } else if (arg0 === 1) {
+            constants = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            constants = 3;
+            const obj10 = { value: null, done: true };
+            obj10[0] = arg1;
+            return obj10;
+          } else {
+            constants = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          }
+        } catch (tmp20) {
+          constants = tmp;
+          throw tmp20;
+        }
       }
-      const obj7 = {
-        paymentGateway: null,
-        recipientUserId: null,
-        isGift: null,
-        giftInfo: null,
-        orderLineItems: null,
-        externalGatewayFacet: null,
-      };
-      obj7[0] = c1;
-      obj7[1] = c2;
-      obj7[2] = constants;
-      obj7[3] = c5;
-      const obj8 = { sku_id: null, quantity: 1, purchase_type: null, subscription_plan_id: null };
-      obj8[0] = c0;
-      obj8[2] = c3;
-      obj8[3] = callback;
-      const items = [obj8];
-      obj7[4] = items;
-      obj7[5] = c8;
-      yield lib(obj7);
-      return arg1;
     })();
     iter.next();
     return iter;
@@ -525,7 +619,7 @@ function _patchOrderLineItem() {
               c5 = undefined;
               c5 = 1;
               logger = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -537,13 +631,13 @@ function _patchOrderLineItem() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              callback2(709).dispatch({ type: "ORDER_UPDATE_START" });
+              callback2(706).dispatch({ type: "ORDER_UPDATE_START" });
               c4 = 1;
               const obj2 = { expected_revision: null, subscription_plan_id: null };
               obj2[0] = c3;
               obj2[1] = dependencyMap;
               c4 = obj2;
-              const HTTP = callback(530).HTTP;
+              const HTTP = callback(527).HTTP;
               const obj3 = { url: null, body: null, rejectWithError: true };
               obj3[0] = c5.ORDER_PATCH_LINE_ITEM(callback, callback2);
               obj3[1] = c4;
@@ -570,7 +664,7 @@ function _patchOrderLineItem() {
             obj7[1] = callback;
             obj7[2] = callback2;
             logger.error("failed to update order line item id", obj7);
-            let obj9 = callback2(709);
+            let obj9 = callback2(706);
             c5 = 3;
             logger = 1;
             const obj8 = { value: null, done: false };
@@ -610,7 +704,7 @@ function _patchOrderLineItem() {
               c5 = 5;
               logger = 1;
               const obj13 = { value: null, done: false };
-              obj13[0] = callback2(709).dispatch(obj12);
+              obj13[0] = callback2(706).dispatch(obj12);
               return obj13;
             }
           } else if (arg0 === 1) {
@@ -704,7 +798,7 @@ function _patchOrder() {
               logger = undefined;
               c5 = 1;
               logger = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -716,7 +810,7 @@ function _patchOrder() {
               obj1[0] = body;
               return obj1;
             } else {
-              callback2(709).dispatch({ type: "ORDER_UPDATE_START" });
+              callback2(706).dispatch({ type: "ORDER_UPDATE_START" });
               c4 = 1;
               const obj2 = { expected_revision: null };
               obj2[0] = callback2;
@@ -730,7 +824,7 @@ function _patchOrder() {
               if (null != c4) {
                 c5.external_gateway_facet = c4;
               }
-              const HTTP = callback(530).HTTP;
+              const HTTP = callback(527).HTTP;
               const obj3 = { url: null, body: null, rejectWithError: true };
               obj3[0] = c5.ORDER_UPDATE(callback);
               obj3[1] = c5;
@@ -755,7 +849,7 @@ function _patchOrder() {
             obj7[0] = closure_7;
             obj7[1] = callback;
             logger.error("failed to patch order", obj7);
-            let obj9 = callback2(709);
+            let obj9 = callback2(706);
             c5 = 3;
             logger = 1;
             const obj8 = { value: null, done: false };
@@ -794,7 +888,7 @@ function _patchOrder() {
               c5 = 5;
               logger = 1;
               const obj13 = { value: null, done: false };
-              obj13[0] = callback2(709).dispatch(obj12);
+              obj13[0] = callback2(706).dispatch(obj12);
               return obj13;
             }
           } else if (arg0 === 1) {
@@ -881,7 +975,7 @@ function _updateOrder() {
               c5 = undefined;
               c5 = 1;
               logger = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -893,7 +987,7 @@ function _updateOrder() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              lib(709).dispatch({ type: "ORDER_UPDATE_START" });
+              lib(706).dispatch({ type: "ORDER_UPDATE_START" });
               c4 = 1;
               obj2 = { expected_revision: null };
               obj2[0] = dependencyMap;
@@ -924,7 +1018,7 @@ function _updateOrder() {
                 obj3[1] = c4;
                 obj2.gifting_facet = obj3;
               }
-              const HTTP = callback(530).HTTP;
+              const HTTP = callback(527).HTTP;
               const obj4 = { url: null, body: null, rejectWithError: true };
               obj4[0] = c5.ORDER_UPDATE(callback);
               obj4[1] = obj2;
@@ -949,7 +1043,7 @@ function _updateOrder() {
             obj8[0] = logger;
             obj8[1] = callback;
             logger.error("failed to update order", obj8);
-            let obj9 = lib(709);
+            let obj9 = lib(706);
             c5 = 3;
             logger = 1;
             obj9 = { value: null, done: false };
@@ -988,7 +1082,7 @@ function _updateOrder() {
               c5 = 5;
               logger = 1;
               const obj14 = { value: null, done: false };
-              obj14[0] = lib(709).dispatch(obj13);
+              obj14[0] = lib(706).dispatch(obj13);
               return obj14;
             }
           } else if (arg0 === 1) {

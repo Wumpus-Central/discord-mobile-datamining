@@ -78,19 +78,19 @@ export default function CreateGuild(arg0) {
     children: null,
   };
   if (customTitle == null) {
-    const intl = tmp4(1236).intl;
-    customTitle = intl.string(tmp4(1236).t.XioBx6);
+    const intl = tmp4(1233).intl;
+    customTitle = intl.string(tmp4(1233).t.XioBx6);
   }
   obj[5] = customTitle;
   const items1 = [closure_7(isScreenReaderEnabled(4474).Text, obj), , , , , , ,];
   obj1 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   if (customDescription == null) {
-    const intl2 = tmp4(1236).intl;
-    customDescription = intl2.string(tmp4(1236).t["/k/L/j"]);
+    const intl2 = tmp4(1233).intl;
+    customDescription = intl2.string(tmp4(1233).t["/k/L/j"]);
   }
   obj1[3] = customDescription;
   items1[1] = closure_7(isScreenReaderEnabled(4474).Text, obj1);
-  items1[2] = closure_7(ref(11371), {
+  items1[2] = closure_7(ref(11594), {
     iconBackgroundColor: tmp.contentContainer.backgroundColor,
     style: tmp.iconUploader,
     onPress: onIconPress,
@@ -106,8 +106,8 @@ export default function CreateGuild(arg0) {
     autoCorrect: false,
     returnKeyType: "done",
   };
-  const intl3 = tmp4(1236).intl;
-  obj3[1] = intl3.string(isScreenReaderEnabled(1236).t.dBih7e);
+  const intl3 = tmp4(1233).intl;
+  obj3[1] = intl3.string(isScreenReaderEnabled(1233).t.dBih7e);
   let firstFieldErrorMessage;
   if (error != null) {
     firstFieldErrorMessage = error.getFirstFieldErrorMessage("name");
@@ -120,24 +120,24 @@ export default function CreateGuild(arg0) {
   }
   let tmp9Result = !!isStaffResult;
   obj3[5] = autoFocus;
-  items1[3] = closure_7(isScreenReaderEnabled(7705).TextInput, obj3);
+  items1[3] = closure_7(isScreenReaderEnabled(7714).TextInput, obj3);
   if (tmp9Result) {
     const obj4 = { onValueChange: null, value: null, start: true, end: true, label: "Staff Only", subLabel: null };
     obj4[0] = onStaffOnlyChange;
     obj4[1] = guild.staffOnly;
-    const intl4 = tmp4(1236).intl;
-    obj4[5] = intl4.string(tmp4(1236).t.edQ5va);
-    tmp9Result = tmp9(tmp4(5993).TableSwitchRow, obj4);
+    const intl4 = tmp4(1233).intl;
+    obj4[5] = intl4.string(tmp4(1233).t.edQ5va);
+    tmp9Result = tmp9(tmp4(6001).TableSwitchRow, obj4);
   }
   items1[4] = tmp9Result;
   const obj5 = { style: tmp.hint, variant: "text-xs/medium", color: "text-muted", children: null };
-  const intl5 = tmp4(1236).intl;
-  obj5[3] = intl5.format(isScreenReaderEnabled(1236).t["2bprXx"], { guidelinesURL: MarketingURLs.GUIDELINES });
+  const intl5 = tmp4(1233).intl;
+  obj5[3] = intl5.format(isScreenReaderEnabled(1233).t["2bprXx"], { guidelinesURL: MarketingURLs.GUIDELINES });
   items1[5] = closure_7(isScreenReaderEnabled(4474).Text, obj5);
   const obj7 = { disabled: "" === guild.name, size: "md", grow: true, text: null, onPress: null, loading: null };
   if (customButtonLabel == null) {
-    const intl6 = tmp4(1236).intl;
-    customButtonLabel = intl6.string(tmp4(1236).t["O0p/lS"]);
+    const intl6 = tmp4(1233).intl;
+    customButtonLabel = intl6.string(tmp4(1233).t["O0p/lS"]);
   }
   obj7[3] = customButtonLabel;
   obj7[4] = onCreate;
@@ -167,8 +167,8 @@ export default function CreateGuild(arg0) {
         }
         const obj8 = { children: null };
         obj8[0] = message2;
-        tmp9Result = tmp9(ref(7714), obj8);
-        const tmp12Result = ref(7714);
+        tmp9Result = tmp9(ref(7723), obj8);
+        const tmp12Result = ref(7723);
       }
     }
   }

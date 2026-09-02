@@ -4,7 +4,7 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import NavigationStack from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 import HeaderActionButton from "../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
-import registerAssetDefault from "../../../../../_runtime/07764_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/07773_registerAsset.js";
 
 function CloseButton() {
   const obj = {
@@ -30,34 +30,36 @@ const result = set.fileFinishedImporting("modules/quests/native/QuestDisclosureM
 
 export default function QuestDisclosureModal(arg0) {
   ({
-    isTargetedDisclosure: require,
-    gamePublisher: importDefault,
-    gameTitle: dependencyMap,
-    cosponsorName: jsx,
-    isVideoQuest: closure_4,
+    adCreativeType: require,
+    isTargetedDisclosure: importDefault,
+    gamePublisher: dependencyMap,
+    gameTitle: jsx,
+    cosponsorName: closure_4,
+    isVideoQuest: CloseButton,
   } = arg0);
   function onClose() {
-    return callback2(14714).hideModal();
+    return callback2(14940).hideModal();
   }
   let obj = {
-    headerLeft: onClose,
+    headerLeft: CloseButton,
     headerRight() {
       return null;
     },
     headerTitle() {
       const obj = { title: null };
-      const intl = callback(1236).intl;
-      obj[0] = intl.string(callback(1236).t.GcsZKJ);
-      return callback3(callback(5495).NavigatorHeader, obj);
+      const intl = callback(1233).intl;
+      obj[0] = intl.string(callback(1233).t.GcsZKJ);
+      return callback3(callback(5503).NavigatorHeader, obj);
     },
     render() {
       return closure_1_3(closure_1_1(closure_1_2[6]), {
-        isTargetedDisclosure: closure_0,
-        gamePublisher: closure_1,
-        gameTitle: closure_2,
+        adCreativeType: closure_0,
+        isTargetedDisclosure: closure_1,
+        gamePublisher: closure_2,
+        gameTitle: closure_3,
         onClose,
-        cosponsorName: closure_3,
-        isVideoQuest: closure_4,
+        cosponsorName: closure_4,
+        isVideoQuest: closure_5,
       });
     },
   };

@@ -1,10 +1,10 @@
 // discord_app/utils/GuildBoostingUtils.tsx
-import _modDef1208 from "SentryUtils.native.tsx";
+import _modDef1205 from "SentryUtils.native.tsx";
 import getSystemLocale from "../intl/index.native.tsx";
 import isDiscordFrontendDevelopment from "GlobalUtils.tsx";
 import combinedDefault from "HelpdeskUtils.tsx";
 import messagesProxyDefault from "../modules/premium/premium_group/PremiumGroup.messages.js";
-import hooksDefault from "../../_runtime/04075_hooks.js";
+import hooksDefault from "../../_runtime/04074_hooks.js";
 import getPremiumPlanItemAll from "PremiumUtils.tsx";
 import PremiumGuildOverrides from "../../discord_common/js/shared/shared-constants/PremiumGuildOverrides.tsx";
 import formatSize from "FileSizeUtils.tsx";
@@ -785,8 +785,8 @@ export const getGracePeriodEndingDate = function getGracePeriodEndingDate(arr) {
       obj[1] = AppliedGuildBoostsRequiredForBoostedGuildTier[premiumTier1];
       obj[2] = found.length;
       obj[2] = obj;
-      _modDef1208.addBreadcrumb(obj);
-      const obj3 = _modDef1208;
+      _modDef1205.addBreadcrumb(obj);
+      const obj3 = _modDef1205;
       const tmp17 = AppliedGuildBoostsRequiredForBoostedGuildTier;
     }
     const _Math = Math;

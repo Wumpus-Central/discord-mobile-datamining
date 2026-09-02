@@ -138,12 +138,12 @@ function _createAutomodRule() {
     return (function* (arg0, body) {
       delete tmp3[tmp2];
       const callback = closure_1_13;
-      const HTTP = lib(530).HTTP;
+      const HTTP = lib(527).HTTP;
       obj1 = { url: null, body: null, rejectWithError: null };
       obj1[0] = closure_1_8.GUILD_AUTOMOD_RULES(lib.guildId);
       obj1[1] = closure_1_11(lib);
       const tmp16 = closure_1_11(lib);
-      obj1[2] = lib(530).rejectWithMigratedError();
+      obj1[2] = lib(527).rejectWithMigratedError();
       yield HTTP.post(obj1);
       return callback(body.body);
     })();
@@ -165,12 +165,12 @@ function _updateAutomodRule() {
     c3 = 0;
     return (function* (arg0, body) {
       const callback = closure_1_13;
-      const HTTP = lib(530).HTTP;
+      const HTTP = lib(527).HTTP;
       obj1 = { url: null, body: null, rejectWithError: null };
       obj1[0] = closure_1_8.GUILD_AUTOMOD_RULE(lib.guildId, lib.id);
       obj1[1] = closure_1_11(lib);
       const tmp14 = closure_1_11(lib);
-      obj1[2] = lib(530).rejectWithMigratedError();
+      obj1[2] = lib(527).rejectWithMigratedError();
       yield HTTP.patch(obj1);
       return callback(body.body);
     })();
@@ -192,10 +192,10 @@ function _deleteAutomodRule() {
     c3 = 0;
     c2 = 0;
     return (function* (arg0, arg1) {
-      const HTTP = callback(530).HTTP;
+      const HTTP = callback(527).HTTP;
       obj1 = { url: null, rejectWithError: null };
       obj1[0] = closure_1_8.GUILD_AUTOMOD_RULE(closure_1, callback);
-      obj1[1] = callback(530).rejectWithMigratedError();
+      obj1[1] = callback(527).rejectWithMigratedError();
       yield HTTP.del(obj1);
       return true;
     })();
@@ -326,7 +326,7 @@ function _executeAlertAction() {
               return obj;
             } else {
               if (closure_1_6.can(closure_1_9.MANAGE_MESSAGES, closure_1)) {
-                const HTTP = callback(530).HTTP;
+                const HTTP = callback(527).HTTP;
                 obj1 = { url: null, body: null, rejectWithError: null };
                 obj1[0] = closure_1_8.GUILD_AUTOMOD_ALERT_ACTION(tmp15.guild_id);
                 const obj2 = { message_id: null, channel_id: null, alert_action_type: null };
@@ -334,7 +334,7 @@ function _executeAlertAction() {
                 obj2[1] = tmp15.id;
                 obj2[2] = tmp16;
                 obj1[1] = obj2;
-                let obj3 = callback(530);
+                let obj3 = callback(527);
                 obj1[2] = obj3.rejectWithMigratedError();
                 c4 = 1;
                 c3 = 1;
@@ -451,9 +451,9 @@ export const removeMentionRaidRestrictionWithFeedback = function removeMentionRa
   if (canResult) {
     const result = require("GuildAutomodActionActionCreators.native.tsx").openConfirmRemoveMentionRaid(() => {
       let obj = callback(4700);
-      obj = { feedback_type: callback(7263).Feedback.MENTION_RAID_REMOVE_RESTRICTION, decision_id: closure_1 };
+      obj = { feedback_type: callback(7272).Feedback.MENTION_RAID_REMOVE_RESTRICTION, decision_id: closure_1 };
       obj.trackWithMetadata(closure_1_7.GUILD_AUTOMOD_FEEDBACK, obj);
-      const HTTP = callback(530).HTTP;
+      const HTTP = callback(527).HTTP;
       obj = { url: closure_1_8.GUILD_AUTOMOD_CLEAR_MENTION_RAID(callback), rejectWithError: true };
       HTTP.post(obj);
       dependencyMap();

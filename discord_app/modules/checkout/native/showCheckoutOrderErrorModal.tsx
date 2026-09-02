@@ -87,8 +87,8 @@ function SyncedLoadingAlertModal(onConfirm) {
   };
   const items = [callback3(onConfirm(4863).AlertActionButton, obj)];
   obj1 = { variant: "secondary", text: null, onPress: null, loading: null };
-  const intl = onConfirm(1236).intl;
-  obj1[1] = intl.string(onConfirm(1236).t["ETE/oC"]);
+  const intl = onConfirm(1233).intl;
+  obj1[1] = intl.string(onConfirm(1233).t["ETE/oC"]);
   obj1[2] = onCancel;
   obj1[3] = tmp2;
   items[1] = callback3(onConfirm(4863).AlertActionButton, obj1);
@@ -122,12 +122,12 @@ export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(
       onCancel: null,
       dismissable: false,
     };
-    const intl = callback(1236).intl;
-    obj[1] = intl.string(callback(1236).t.zrhHH3);
-    const intl2 = callback(1236).intl;
-    obj[2] = intl2.string(callback(1236).t.PjfUXe);
-    const intl3 = callback(1236).intl;
-    obj[3] = intl3.string(callback(1236).t["7NqTJn"]);
+    const intl = callback(1233).intl;
+    obj[1] = intl.string(callback(1233).t.zrhHH3);
+    const intl2 = callback(1233).intl;
+    obj[2] = intl2.string(callback(1233).t.PjfUXe);
+    const intl3 = callback(1233).intl;
+    obj[3] = intl3.string(callback(1233).t["7NqTJn"]);
     dependencyMap = closure_1_2(function* () {
       if (c3 === 2) {
         c3 = 3;

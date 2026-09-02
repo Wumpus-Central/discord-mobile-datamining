@@ -1,11 +1,12 @@
 // discord_app/modules/scheduled_messages/ScheduledMessageDraftCoachmarkHooks.tsx
 import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_3 from "../../../_runtime/00019_noop.js";
-import closure_4 from "../../stores/DraftStore.tsx";
+import closure_4 from "../gateway/GatewayConnectionStore.tsx";
+import closure_5 from "../../stores/DraftStore.tsx";
 import { ContentDismissActionType } from "../dismissible_content/DismissibleContentConstants.tsx";
 
 const require = arg1;
-let closure_6 = require("DismissibleContent").DismissibleContent.SCHEDULED_MESSAGES_DRAFT_COACHMARK;
+let closure_7 = require("DismissibleContent").DismissibleContent.SCHEDULED_MESSAGES_DRAFT_COACHMARK;
 let result = require("set").fileFinishedImporting("modules/scheduled_messages/ScheduledMessageDraftCoachmarkHooks.tsx");
 
 export const useScheduledMessageDraftCoachmarkState = function useScheduledMessageDraftCoachmarkState(channel) {
@@ -16,39 +17,45 @@ export const useScheduledMessageDraftCoachmarkState = function useScheduledMessa
   let first;
   closure_4 = undefined;
   let isCoachmarkVisible;
-  let result = channel(4298).useIsDismissibleContentDismissed_UNSAFE(closure_6);
+  let result = channel(4298).useIsDismissibleContentDismissed_UNSAFE(closure_7);
   dependencyMap = result;
   let obj = channel(4298);
-  const items = [closure_4];
-  const stateFromStores = channel(589).useStateFromStores(
+  const items = [isCoachmarkVisible];
+  const stateFromStores = channel(586).useStateFromStores(
     items,
-    () => null != scheduledMessage.getScheduledMessage(channel.id),
+    () => null != isCoachmarkVisible.getScheduledMessage(channel.id),
   );
+  let obj2 = channel(586);
+  const items1 = [closure_4];
+  const stateFromStores1 = channel(586).useStateFromStores(items1, () => connected.isConnected());
   if (isEligible) {
     isEligible = draftText.trim().length > 10;
   }
   if (isEligible) {
     isEligible = !stateFromStores;
   }
-  const tmp4 = isEligible(first.useState(false), 2);
-  first = tmp4[0];
-  closure_4 = tmp6;
+  if (isEligible) {
+    isEligible = stateFromStores1;
+  }
+  const tmp5 = isEligible(first.useState(false), 2);
+  first = tmp5[0];
+  closure_4 = tmp7;
   isCoachmarkVisible = first;
   if (first) {
     isCoachmarkVisible = isEligible;
   }
-  let obj2 = channel(589);
-  const tmp3 = isEligible;
-  if (tmp3Result[0] !== channel.id) {
-    tmp9(channel.id);
-    let tmp11 = isEligible;
+  const obj3 = channel(586);
+  const tmp4 = isEligible;
+  if (tmp4Result[0] !== channel.id) {
+    tmp10(channel.id);
+    let tmp12 = isEligible;
     if (isEligible) {
-      tmp11 = !result;
+      tmp12 = !result;
     }
-    tmp6(tmp11);
+    tmp7(tmp12);
   }
-  const items1 = [isEligible, result, first, draftText];
-  const effect = obj3.useEffect(() => {
+  const items2 = [isEligible, result, first, draftText];
+  const effect = obj4.useEffect(() => {
     if (isEligible) {
       if (!c1) {
         if (!first) {
@@ -58,23 +65,30 @@ export const useScheduledMessageDraftCoachmarkState = function useScheduledMessa
         }
       }
     }
-  }, items1);
-  const items2 = [isCoachmarkVisible];
-  const dismissCoachmark = obj3.useCallback((dismissAction) => {
-    scheduledMessage(false);
-    let obj = channel(_undefined[5]);
-    obj = { dismissAction };
-    const result = obj.UNSAFE_markDismissibleContentAsDismissed(closure_1_6, obj);
-  }, []);
-  const effect1 = obj3.useEffect(() => {
-    if (isCoachmarkVisible) {
-      let obj = channel(_undefined[7]);
-      const result = obj.trackDismissibleContentShown(closure_1_6);
-      obj = { dismissAction: null };
-      obj[0] = isCoachmarkVisible.AUTO_DISMISS;
-      const result1 = channel(_undefined[5]).UNSAFE_markDismissibleContentAsDismissed(closure_1_6, obj);
-      const obj2 = channel(_undefined[5]);
-    }
   }, items2);
+  let tmp15 = !isEligible;
+  if (!isEligible) {
+    tmp15 = first;
+  }
+  if (tmp15) {
+    tmp7(false);
+  }
+  const items3 = [isCoachmarkVisible];
+  const dismissCoachmark = obj4.useCallback((dismissAction) => {
+    connected(false);
+    let obj = channel(_undefined[6]);
+    obj = { dismissAction };
+    const result = obj.UNSAFE_markDismissibleContentAsDismissed(closure_1_7, obj);
+  }, []);
+  const effect1 = obj4.useEffect(() => {
+    if (isCoachmarkVisible) {
+      let obj = channel(_undefined[8]);
+      const result = obj.trackDismissibleContentShown(closure_1_7);
+      obj = { dismissAction: null };
+      obj[0] = closure_1_6.AUTO_DISMISS;
+      const result1 = channel(_undefined[6]).UNSAFE_markDismissibleContentAsDismissed(closure_1_7, obj);
+      const obj2 = channel(_undefined[6]);
+    }
+  }, items3);
   return { isCoachmarkVisible, dismissCoachmark };
 };

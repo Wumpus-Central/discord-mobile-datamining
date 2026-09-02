@@ -27,7 +27,7 @@ let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/t
 
 export default function MessagesEmptyState() {
   const tmp = callback2();
-  let width = navigation(1493)().width;
+  let width = navigation(1492)().width;
   [tmp5, require] = callback(React.useState(0), 2);
   callback = React.useCallback((nativeEvent) => {
     callback(nativeEvent.nativeEvent.layout.width);
@@ -46,14 +46,14 @@ export default function MessagesEmptyState() {
   const tmp4 = callback(React.useState(0), 2);
   obj[0] = encodeProperties.ImpressionTypes.VIEW;
   obj[1] = encodeProperties.ImpressionNames.MESSAGES_EMPTY_NUX;
-  navigation(8892)(obj);
+  navigation(8907)(obj);
   if (tmp5 > 0) {
     width = tmp5;
   }
   const result = 0.9 * width;
-  let tmp7Result = tmp7(5071);
+  let tmp7Result = tmp7(5079);
   const isScreenLandscape = tmp7Result.useIsScreenLandscape();
-  tmp7Result = tmp7(14701);
+  tmp7Result = tmp7(14927);
   const items1 = [tmp.scrollViewContentContainer];
   let tmp18;
   if (isScreenLandscape) {
@@ -66,12 +66,12 @@ export default function MessagesEmptyState() {
   const obj2 = { style: tmp.container, onLayout: callback, children: null };
   const obj3 = { style: tmp.innerContainer, children: null };
   const obj4 = { style: tmp.imageContainer, children: null };
-  const obj5 = { resizeMode: "contain", source: tmp2(15643), style: null };
+  const obj5 = { resizeMode: "contain", source: tmp2(15874), style: null };
   let num = 350;
   if (result < 622) {
     num = (result / 622) * 350;
   }
-  const tmp10 = navigation(8892);
+  const tmp10 = navigation(8907);
   const tmp17 = closure_7;
   const tmp21 = closure_6;
   obj5[2] = { height: num, width: Math.min(result, 622) };
@@ -79,11 +79,11 @@ export default function MessagesEmptyState() {
   const items2 = [closure_8(closure_5, obj4)];
   const obj7 = { style: tmp.textWrapper, children: null };
   const obj8 = { color: "mobile-text-heading-primary", variant: "heading-md/bold", style: tmp.title, children: null };
-  const intl = tmp7(1236).intl;
+  const intl = tmp7(1233).intl;
   obj8[3] = intl.string(getSystemLocale.t["8JZof8"]);
   const items3 = [closure_8(Text.Heading, obj8)];
   const obj9 = { color: "text-default", variant: "text-md/medium", style: tmp.body, children: null };
-  const intl2 = tmp7(1236).intl;
+  const intl2 = tmp7(1233).intl;
   obj9[3] = intl2.string(getSystemLocale.t["qm+H7x"]);
   items3[1] = closure_8(Text.Text, obj9);
   obj7[1] = items3;
@@ -92,7 +92,7 @@ export default function MessagesEmptyState() {
   const items4 = [closure_9(closure_5, obj3)];
   const obj10 = { style: tmp.buttonWrapper, children: null };
   const obj11 = { text: null, onPress: null, size: "lg" };
-  const intl3 = tmp7(1236).intl;
+  const intl3 = tmp7(1233).intl;
   obj11[0] = intl3.string(getSystemLocale.t.zIJnA6);
   obj11[1] = callback1;
   obj10[1] = closure_8(Button.Button, obj11);

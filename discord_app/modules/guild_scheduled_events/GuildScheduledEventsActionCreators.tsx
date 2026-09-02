@@ -2,7 +2,7 @@
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import transitionTo from "../routing/router_utils.tsx";
-import _modDef5355 from "../../actions/SelectedChannelActionCreators.tsx";
+import _modDef5363 from "../../actions/SelectedChannelActionCreators.tsx";
 import EditGuildEventScreens from "utils/EditGuildEventUtils.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../stores/AuthenticationStore.tsx";
@@ -38,8 +38,8 @@ export default {
     return HTTP.patch(obj);
   },
   joinVoiceEvent(arg0, id) {
-    const voiceChannel = _modDef5355.selectVoiceChannel(id);
-    const obj = _modDef5355;
+    const voiceChannel = _modDef5363.selectVoiceChannel(id);
+    const obj = _modDef5363;
     transitionTo.transitionTo(closure_11.CHANNEL(arg0, id));
   },
   saveEvent(arg0, entityType) {
@@ -102,10 +102,10 @@ export default {
       obj1 = { url: null, rejectWithError: null };
       obj1[0] = closure_1_10.GUILD_EVENT(closure_1_0, closure_1_1);
       const obj8 = closure_1_0(4755);
-      obj1[1] = closure_1_0(530).rejectWithMigratedError();
+      obj1[1] = closure_1_0(527).rejectWithMigratedError();
       yield obj8.httpGetWithCountryCodeQuery(obj1);
       body = arg1.body;
-      const obj = closure_1_1(709);
+      const obj = closure_1_1(706);
       const obj4 = { type: "FETCH_GUILD_EVENT", guildScheduledEvent: null };
       obj4[1] = body;
       obj.dispatch(obj4);
@@ -119,11 +119,11 @@ export default {
       let body = tmp5;
       obj1 = { url: null, rejectWithError: null };
       obj1[0] = closure_1_10.GUILD_EVENTS_FOR_GUILD(closure_1_0);
-      obj1[1] = closure_1_0(530).rejectWithMigratedError();
-      const obj9 = closure_1_0(530);
+      obj1[1] = closure_1_0(527).rejectWithMigratedError();
+      const obj9 = closure_1_0(527);
       yield closure_1_0(4755).httpGetWithCountryCodeQuery(obj1);
       body = arg1.body;
-      const obj = closure_1_1(709);
+      const obj = closure_1_1(706);
       const obj4 = { type: "FETCH_GUILD_EVENTS_FOR_GUILD", guildId: null, guildScheduledEvents: null };
       obj4[1] = body;
       obj4[2] = body;
@@ -143,14 +143,14 @@ export default {
       const obj2 = { guild_scheduled_event_exception_ids: null };
       obj2[0] = dependencyMap;
       obj1[1] = obj2;
-      obj1[2] = closure_1_0(530).rejectWithMigratedError();
-      const HTTP = closure_1_0(530).HTTP;
+      obj1[2] = closure_1_0(527).rejectWithMigratedError();
+      const HTTP = closure_1_0(527).HTTP;
       yield HTTP.get(obj1);
       body = arg1.body;
       obj5 = { eventCount: null, recurrenceCounts: null };
       obj5[0] = body.guild_scheduled_event_count;
       obj5[1] = body.guild_scheduled_event_exception_counts;
-      let obj6 = closure_1_1(709);
+      let obj6 = closure_1_1(706);
       obj6 = { type: "GUILD_SCHEDULED_EVENT_USER_COUNTS_FETCH_SUCCESS", guildId: null, eventId: null, counts: null };
       obj6[1] = body;
       obj6[2] = obj5;
@@ -206,14 +206,14 @@ export default {
               closure_1 = tmp2;
               let body = tmp5;
               body = undefined;
-              const HTTP = closure_1_0(530).HTTP;
+              const HTTP = closure_1_0(527).HTTP;
               obj1 = { url: null, query: null, rejectWithError: null };
               obj1[0] = closure_1_10.USER_GUILD_EVENTS;
               const obj2 = { guild_ids: null };
               const items = [closure_1_0];
               obj2[0] = items;
               obj1[1] = obj2;
-              obj1[2] = closure_1_0(530).rejectWithMigratedError();
+              obj1[2] = closure_1_0(527).rejectWithMigratedError();
               dependencyMap = 1;
               c3 = 1;
               const obj3 = { value: null, done: false };
@@ -230,7 +230,7 @@ export default {
             return obj4;
           } else {
             body = arg1.body;
-            obj = closure_1_1(709);
+            obj = closure_1_1(706);
             const obj5 = {
               type: "GUILD_SCHEDULED_EVENT_RSVPS_FETCH_SUCESS",
               guildScheduledEventUsers: null,
@@ -630,13 +630,13 @@ export default {
               closure_0 = undefined;
               if (null != closure_1_0) {
                 if (null != dependencyMap) {
-                  const HTTP = closure_1_0(530).HTTP;
+                  const HTTP = closure_1_0(527).HTTP;
                   obj1 = { url: null, query: null, rejectWithError: null };
                   obj1[0] = closure_1_10.GUILD_EVENT_USERS(dependencyMap, closure_1_0, closure_1_1);
                   const obj2 = { limit: null, with_member: true };
                   obj2[0] = c3;
                   obj1[1] = obj2;
-                  obj1[2] = closure_1_0(530).rejectWithMigratedError();
+                  obj1[2] = closure_1_0(527).rejectWithMigratedError();
                   dependencyMap = 1;
                   c3 = 1;
                   const obj3 = { value: null, done: false };
@@ -659,7 +659,7 @@ export default {
             return obj5;
           } else {
             closure_0 = arg1;
-            let obj6 = closure_1_1(709);
+            let obj6 = closure_1_1(706);
             obj6 = {
               type: "GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS",
               guildEventId: null,

@@ -40,23 +40,23 @@ export default function NotificationSettingsChannel(channel) {
     options.setOptions(obj);
     if (channel.inGuildContext) {
       obj = { headerLeft: null };
-      obj[0] = channel(5495).getHeaderBackButton(() => closure_3.popToTop());
+      obj[0] = channel(5503).getHeaderBackButton(() => closure_3.popToTop());
       obj.setOptions(obj);
-      const obj4 = channel(5495);
+      const obj4 = channel(5503);
     }
   });
   const items = [channel.channel];
   const items1 = [channel.channel];
   const callback = React.useCallback(
-    () => channel(10232).updateChannelToGuildDefault(channel.channel.guild_id, channel.channel.id),
+    () => channel(10254).updateChannelToGuildDefault(channel.channel.guild_id, channel.channel.id),
     items,
   );
   const callback1 = React.useCallback(() => {
-    const result = callback(5487).updateChannelOverrideSettings(
+    const result = callback(5495).updateChannelOverrideSettings(
       channel.channel.guild_id,
       channel.channel.id,
       { muted: false },
-      channel(5482).NotificationLabels.Unmuted,
+      channel(5490).NotificationLabels.Unmuted,
     );
   }, items1);
   let obj2 = initialize;
@@ -70,12 +70,12 @@ export default function NotificationSettingsChannel(channel) {
   if (muted) {
     obj = { style: null, title: null, subtitle: null, onPressUnmute: null };
     obj[0] = { marginBottom: 16 };
-    const intl2 = tmp(1236).intl;
-    obj[1] = intl2.string(tmp(1236).t["6MCxAy"]);
-    obj[2] = tmp(10234).getMuteBannerSubtitleFromConfig(stateFromStoresObject.config);
+    const intl2 = tmp(1233).intl;
+    obj[1] = intl2.string(tmp(1233).t["6MCxAy"]);
+    obj[2] = tmp(10256).getMuteBannerSubtitleFromConfig(stateFromStoresObject.config);
     obj[3] = callback1;
-    muted = callback(tmp(10234).NotificationSettingsMuteBanner, obj);
-    const tmpResult = tmp(10234);
+    muted = callback(tmp(10256).NotificationSettingsMuteBanner, obj);
+    const tmpResult = tmp(10256);
   }
   const items3 = [muted, , , , ,];
   obj1 = { channel: channel.channel };
@@ -95,7 +95,7 @@ export default function NotificationSettingsChannel(channel) {
     let obj4 = { style: null, channel: null };
     obj4[0] = { marginTop: 24 };
     obj4[1] = channel.channel;
-    isForumLikeChannelResult = tmp11(tmp(10254).NotificationSettingsChannelPost, obj4);
+    isForumLikeChannelResult = tmp11(tmp(10276).NotificationSettingsChannelPost, obj4);
   }
   items3[4] = isForumLikeChannelResult;
   const inherited = channelPresetInheritance.inherited;
@@ -105,8 +105,8 @@ export default function NotificationSettingsChannel(channel) {
     obj5[0] = { marginTop: 24 };
     const obj6 = { variant: "secondary", onPress: null, text: null };
     obj6[1] = callback;
-    const intl3 = tmp(1236).intl;
-    obj6[2] = intl3.string(tmp(1236).t["3PBFN6"]);
+    const intl3 = tmp(1233).intl;
+    obj6[2] = intl3.string(tmp(1233).t["3PBFN6"]);
     obj5[1] = tmp11(tmp(4928).Button, obj6);
     tmp11Result = tmp11(View, obj5);
   }

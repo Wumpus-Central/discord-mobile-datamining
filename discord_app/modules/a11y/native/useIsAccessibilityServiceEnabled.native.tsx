@@ -2,7 +2,7 @@
 import set from "../../../../_runtime/00002_set.js";
 import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceAccessibilityModule.tsx";
 import SCREEN_READER_ENABLED_GETTER from "useIsScreenReaderEnabled.native.tsx";
-import keys from "../../../../_runtime/00644_keys.js";
+import keys from "../../../../_runtime/00641_keys.js";
 
 function ACCESSIBILITY_SERVICE_ENABLED_GETTER(accessibilityServiceEnabled) {
   return accessibilityServiceEnabled.accessibilityServiceEnabled;

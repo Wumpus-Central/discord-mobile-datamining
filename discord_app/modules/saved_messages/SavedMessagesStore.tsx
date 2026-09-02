@@ -94,9 +94,9 @@ const secondaryIndexMap = new require("version").SecondaryIndexMap(
   (saveData) => {
     const items = [SavedMessageSortTypes.SavedMessageSortTypes.ALL];
     if (null != saveData.saveData.dueAt) {
-      let BOOKMARK = tmp(7604).SavedMessageSortTypes.REMINDER;
+      let BOOKMARK = tmp(7614).SavedMessageSortTypes.REMINDER;
     } else {
-      BOOKMARK = tmp(7604).SavedMessageSortTypes.BOOKMARK;
+      BOOKMARK = tmp(7614).SavedMessageSortTypes.BOOKMARK;
     }
     items[1] = BOOKMARK;
     return items;

@@ -16,7 +16,7 @@ import closure_8 from "../../../stores/MessageStore.tsx";
 import closure_9 from "../../../stores/PermissionStore.tsx";
 import closure_10 from "../../../stores/native/AppStateStore.tsx";
 import MediaPlaybackPanelModes from "../../media_panel/native/MediaPlaybackPanelConstants.tsx";
-import keys from "../../../../_runtime/00644_keys.js";
+import keys from "../../../../_runtime/00641_keys.js";
 
 ({ NativeEventEmitter: c3, NativeModules: c4 } = get_ActivityIndicator);
 const AppStates = ME.AppStates;
@@ -30,15 +30,15 @@ let obj = keys.create((arg0) => {
   obj = {
     activeMediaPlayerSource: "HermesInternal",
     mediaSourceMessage: "flex",
-    canAccessMedia: "disabled",
+    canAccessMedia: "ip",
     isPlaying: false,
     wasPipClosedByUser: null,
     progress: null,
     rate: "PX_16",
-    showPip: "lifecycle",
-    closePip: "App opened",
-    displayedMediaItemIdsPerChannel: null,
-    currentlyDisplayedChannelId: "flex",
+    showPip: "cowboy",
+    closePip: "face_with_cowboy_hat",
+    displayedMediaItemIdsPerChannel: "smiling_imp",
+    currentlyDisplayedChannelId: "angry",
   };
   obj[8] = function closePip() {
     callback(closure_1_2[13]).batchUpdates(() => callback({ showPip: false }));
@@ -123,7 +123,7 @@ prototype["_initialize"] = function _initialize() {
 };
 prototype["updateMediaPermissions"] = function updateMediaPermissions() {
   const self = this;
-  self(705).batchUpdates(() => {
+  self(702).batchUpdates(() => {
     const activeMediaPlayerSource = closure_1_17.getState().activeMediaPlayerSource;
     let channelId;
     if (activeMediaPlayerSource != null) {
@@ -180,7 +180,7 @@ prototype["userDidClosePip"] = function userDidClosePip() {
 };
 prototype["pauseAndClosePip"] = function pauseAndClosePip() {
   const self = this;
-  self(705).batchUpdates(() => {
+  self(702).batchUpdates(() => {
     self.pauseCurrentPlayer();
     closure_1_17.setState({ wasPipClosedByUser: true, showPip: false });
   });
@@ -293,7 +293,7 @@ prototype["handleMediaPlayerPlaybackProgressUpdated"] = function handleMediaPlay
 prototype["handleMediaPlayerPlaybackSourceChanged"] = function handleMediaPlayerPlaybackSourceChanged(source) {
   const self = this;
   source = source.source;
-  source(705).batchUpdates(() => {
+  source(702).batchUpdates(() => {
     obj = closure_1_17;
     let id;
     const state = closure_1_17.getState();
@@ -306,7 +306,7 @@ prototype["handleMediaPlayerPlaybackSourceChanged"] = function handleMediaPlayer
       obj = {
         activeMediaPlayerSource: null,
         mediaSourceMessage: null,
-        progress: "disabled",
+        progress: "ip",
         rate: false,
         isPlaying: false,
         wasPipClosedByUser: 0,
@@ -354,13 +354,13 @@ prototype["getOrFetchMediaSourceMessage"] = function getOrFetchMediaSourceMessag
         obj = { channelId: null, messageId: null };
         obj[0] = channelId;
         obj[1] = messageId;
-        const message1 = self(7201).fetchMessage(obj);
+        const message1 = self(7210).fetchMessage(obj);
         message1.then((arg0) => {
           if (null != arg0) {
             const result = self.handleMediaSourceMessageUpdated(arg0);
           }
         });
-        const obj2 = self(7201);
+        const obj2 = self(7210);
       }
       obj4 = message;
     }

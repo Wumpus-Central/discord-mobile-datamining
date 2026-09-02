@@ -266,17 +266,17 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   items[1] = tmp4Result;
   if (0 === found.length) {
     obj = { Illustration: null, title: null };
-    obj[0] = tmp5(16426).WebhookEmpty;
+    obj[0] = tmp5(16661).WebhookEmpty;
     if (webhookType === constants2.CHANNEL_FOLLOWER) {
-      const intl2 = tmp5(1236).intl;
-      dkHRkE = tmp5(1236).t.dkHRkE;
+      const intl2 = tmp5(1233).intl;
+      dkHRkE = tmp5(1233).t.dkHRkE;
       let stringResult = intl2.string(dkHRkE);
     } else {
-      const intl = tmp5(1236).intl;
-      stringResult = intl.string(tmp5(1236).t["4JAVI+"]);
+      const intl = tmp5(1233).intl;
+      stringResult = intl.string(tmp5(1233).t["4JAVI+"]);
     }
     obj[1] = stringResult;
-    tmp4Result = tmp4(tmp5(1297).EmptyState, obj);
+    tmp4Result = tmp4(tmp5(1296).EmptyState, obj);
   } else {
     obj = { hasIcons: true, children: null };
     obj[1] = found.map((type) => {
@@ -295,7 +295,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
       return closure_18(closure_23, obj, id);
     });
     obj1 = { children: null };
-    items[2] = tmp4(tmp5(5992).TableRowGroup, obj);
+    items[2] = tmp4(tmp5(6000).TableRowGroup, obj);
     obj1[0] = items;
     return closure_20(closure_19, obj1);
   }

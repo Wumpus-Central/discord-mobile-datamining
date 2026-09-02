@@ -68,8 +68,8 @@ function _openInviteModal() {
                 type: "DISPLAYED_INVITE_SHOW",
                 code: null,
                 username: "Array",
-                deeplinkAttemptId: "accessible",
-                invite_instance_id: "Array",
+                deeplinkAttemptId: "alignItems",
+                invite_instance_id: 46601043520741950000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
               };
               obj1[1] = closure_0;
               obj1[4] = callback;
@@ -333,7 +333,7 @@ export default function getOnClick(url) {
         if (_undefined.type !== tmp3(tmp4[25]).CodedLinkType.APP_DIRECTORY_STOREFRONT) {
           let result = tmp3(tmp4[26]).parseStorefrontSkuCodedLink(code);
           if (result == null) {
-            result = { applicationId: "children", skuId: "c" };
+            result = { applicationId: "disabled", skuId: "Date" };
           }
           const tmp3Result = tmp3(tmp4[26]);
         }
@@ -350,7 +350,7 @@ export default function getOnClick(url) {
         closure_1_1(tmp4[27])(url);
         return true;
       }
-      result = { applicationId: code, skuId: "Array" };
+      result = { applicationId: code, skuId: "r" };
     };
   }
   if (null != findCodedLinkResult) {
@@ -423,7 +423,7 @@ export default function getOnClick(url) {
                         customId = customId.customId;
                         c3 = 1;
                         c4 = 1;
-                        return { value: "PX_16", done: null };
+                        return { value: "PX_16", done: true };
                       }
                     } else if (1 === tmp5) {
                       if (arg0 === 1) {
@@ -683,7 +683,7 @@ export default function getOnClick(url) {
   }
   if (null != findCodedLinkResult) {
     if (findCodedLinkResult.type === tmp2(4466).CodedLinkType.QUESTS_EMBED) {
-      let tmp2Result = tmp2(11084);
+      let tmp2Result = tmp2(11304);
       if (tmp2Result.getIsEligibleForQuests()) {
         return (preventDefault) => {
           if (preventDefault != null) {
@@ -758,14 +758,14 @@ export default function getOnClick(url) {
   }
   ({ host, hostname, pathname } = toURLSafeResult);
   ({ search, hash } = toURLSafeResult);
-  let tmp5Result = tmp5(1486);
+  let tmp5Result = tmp5(1485);
   let tmp6 = hostname;
   if (hostname == null) {
     tmp6 = null;
   }
   let isDiscordHostnameResult = tmp5Result.isDiscordHostname(tmp6);
   if (!isDiscordHostnameResult) {
-    tmp5Result = tmp5(1486);
+    tmp5Result = tmp5(1485);
     if (host == null) {
       host = null;
     }
@@ -805,7 +805,7 @@ export default function getOnClick(url) {
           return true;
         };
       }
-      tmp5Result1 = tmp5(1486);
+      tmp5Result1 = tmp5(1485);
     }
   }
   if (null != findCodedLinkResult) {
@@ -835,6 +835,6 @@ export default function getOnClick(url) {
         return true;
       };
     }
-    tmp2Result1 = tmp2(8036);
+    tmp2Result1 = tmp2(8045);
   }
 }

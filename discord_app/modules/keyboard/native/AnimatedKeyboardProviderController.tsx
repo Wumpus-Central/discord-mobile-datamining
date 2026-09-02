@@ -1,5 +1,5 @@
 // discord_app/modules/keyboard/native/AnimatedKeyboardProviderController.tsx
-import KeyboardChatScrollView from "../../../../_runtime/01642_KeyboardChatScrollView.js";
+import KeyboardChatScrollView from "../../../../_runtime/01641_KeyboardChatScrollView.js";
 import _mod4217 from "../../reanimated/ReanimatedRexport.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";

@@ -6,7 +6,7 @@ import getSystemLocale from "../../../intl/index.native.tsx";
 import Button from "../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import ActivityIndicator from "../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
-import _modDef7704 from "../../../design/void/Form/native/FreeFormInputGroup.tsx";
+import _modDef7713 from "../../../design/void/Form/native/FreeFormInputGroup.tsx";
 import DividerDefault from "../../../design/void/Form/native/FormDivider.tsx";
 import getInvalidLinkSource from "../../../design/components/Illustration/native/redesign/generated/InvalidLink.tsx";
 import renderIconDefault from "../../guild/native/GuildIconUploader.tsx";
@@ -42,8 +42,8 @@ function GuildTemplateResolved(guildTemplate) {
   let obj = { contentContainerStyle: items, keyboardShouldPersistTaps: "handled", children: null };
   items = [tmp.wrapper, { marginBottom: useSafeAreaInsetsDefault().bottom }];
   obj = { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = guildTemplate(1236).intl;
-  obj[3] = intl.string(guildTemplate(1236).t.QzUORX);
+  const intl = guildTemplate(1233).intl;
+  obj[3] = intl.string(guildTemplate(1233).t.QzUORX);
   const items1 = [callback(guildTemplate(4474).Text, obj), , , , , , , , , ,];
   obj = { style: tmp.description, variant: "text-lg/medium", color: "text-default", children: guildTemplate.name };
   items1[1] = callback(guildTemplate(4474).Text, obj);
@@ -63,22 +63,22 @@ function GuildTemplateResolved(guildTemplate) {
     autoCorrect: false,
     returnKeyType: "done",
   };
-  const intl2 = guildTemplate(1236).intl;
-  obj2[0] = intl2.string(guildTemplate(1236).t.dBih7e);
+  const intl2 = guildTemplate(1233).intl;
+  obj2[0] = intl2.string(guildTemplate(1233).t.dBih7e);
   name = undefined;
   if (errors != null) {
     name = errors.name;
   }
   obj2[1] = name;
-  const intl3 = tmp10(1236).intl;
-  obj2[2] = intl3.format(guildTemplate(1236).t["2bprXx"], { guidelinesURL: constants.GUIDELINES });
+  const intl3 = tmp10(1233).intl;
+  obj2[2] = intl3.format(guildTemplate(1233).t["2bprXx"], { guidelinesURL: constants.GUIDELINES });
   obj2[3] = name;
   obj2[4] = setName;
-  items1[3] = callback(_modDef7704, obj2);
+  items1[3] = callback(_modDef7713, obj2);
   const obj4 = { style: tmp.createButtonWrapper, children: null };
   const obj5 = { size: "md", text: null, onPress: null, loading: null, disabled: null, grow: true };
-  const intl4 = tmp10(1236).intl;
-  obj5[1] = intl4.string(guildTemplate(1236).t["O0p/lS"]);
+  const intl4 = tmp10(1233).intl;
+  obj5[1] = intl4.string(guildTemplate(1233).t["O0p/lS"]);
   obj5[2] = createServer;
   obj5[3] = guildTemplate.state === GuildTemplateStates.ACCEPTING;
   obj5[4] = guildTemplate.state === GuildTemplateStates.ACCEPTING;
@@ -91,22 +91,22 @@ function GuildTemplateResolved(guildTemplate) {
     color: "mobile-text-heading-primary",
     children: null,
   };
-  const intl5 = tmp10(1236).intl;
-  obj7[3] = intl5.string(guildTemplate(1236).t.OGiMXJ);
+  const intl5 = tmp10(1233).intl;
+  obj7[3] = intl5.string(guildTemplate(1233).t.OGiMXJ);
   items1[6] = callback(guildTemplate(4474).Text, obj7);
   const obj8 = { variant: "text-xs/medium", color: "text-default", children: null };
-  const intl6 = tmp10(1236).intl;
-  obj8[2] = intl6.string(guildTemplate(1236).t.Ztwyoz);
+  const intl6 = tmp10(1233).intl;
+  obj8[2] = intl6.string(guildTemplate(1233).t.Ztwyoz);
   items1[7] = callback(guildTemplate(4474).Text, obj8);
   items1[8] = callback(Channels, { channels: guildTemplate.serializedSourceGuild.channels });
   const obj10 = { style: tmp.sectionTip, variant: "text-xs/medium", color: "interactive-text-default", children: null };
   const obj11 = { style: tmp.protip, children: null };
-  const intl7 = tmp10(1236).intl;
-  const items2 = [intl7.string(guildTemplate(1236).t["8tvIiN"]), ": "];
+  const intl7 = tmp10(1233).intl;
+  const items2 = [intl7.string(guildTemplate(1233).t["8tvIiN"]), ": "];
   obj11[1] = items2;
-  const items3 = [closure_12(guildTemplate(1297).LegacyText, obj11)];
-  const intl8 = tmp10(1236).intl;
-  items3[1] = intl8.string(guildTemplate(1236).t.de7DpI);
+  const items3 = [closure_12(guildTemplate(1296).LegacyText, obj11)];
+  const intl8 = tmp10(1233).intl;
+  items3[1] = intl8.string(guildTemplate(1233).t.de7DpI);
   obj10[3] = items3;
   items1[9] = closure_12(guildTemplate(4474).Text, obj10);
   let tmp7Result = null;
@@ -119,12 +119,12 @@ function GuildTemplateResolved(guildTemplate) {
       children: null,
     };
     obj13[0] = tmp.sectionHeader;
-    const intl9 = tmp10(1236).intl;
-    obj13[3] = intl9.string(tmp10(1236).t.mQ0H1p);
+    const intl9 = tmp10(1233).intl;
+    obj13[3] = intl9.string(tmp10(1233).t.mQ0H1p);
     const items4 = [tmp9(tmp10(4474).Text, obj13), ,];
     const obj14 = { variant: "text-xs/medium", color: "text-default", children: null };
-    const intl10 = tmp10(1236).intl;
-    obj14[2] = intl10.string(tmp10(1236).t.jOPEYC);
+    const intl10 = tmp10(1233).intl;
+    obj14[2] = intl10.string(tmp10(1233).t.jOPEYC);
     items4[1] = tmp9(tmp10(4474).Text, obj14);
     const obj15 = { roles: null };
     obj15[0] = found;

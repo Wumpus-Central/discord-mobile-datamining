@@ -152,7 +152,7 @@ const forwardRefResult = importAllResult.forwardRef((animated) => {
     props: null,
     style: null,
   };
-  tmp4Result = tmp4(501);
+  tmp4Result = tmp4(1235);
   obj[6] = tmp4Result.isIOS();
   obj[7] = merged;
   obj[8] = items;

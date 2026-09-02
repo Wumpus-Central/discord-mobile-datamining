@@ -77,11 +77,11 @@ export default function ConnectAccountStep(clientId) {
   const platformType = clientId.platformType;
   const platformName = clientId.platformName;
   const tmp = callback3();
-  let obj = clientId(589);
+  let obj = clientId(586);
   const items = [closure_5];
   const items1 = [clientId];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getApplication(clientId), items1);
-  obj1 = clientId(589);
+  obj1 = clientId(586);
   const items2 = [closure_6, closure_7];
   const stateFromStores1 = obj1.useStateFromStores(items2, () => {
     let currentUser = null;
@@ -90,19 +90,19 @@ export default function ConnectAccountStep(clientId) {
     }
     return currentUser;
   });
-  let obj2 = platformType(5227);
+  let obj2 = platformType(5235);
   const value = obj2.get(platformType);
   if (null == value) {
     let applicationIconSource;
     if (null != stateFromStores) {
-      let tmp2Result = tmp2(1431);
+      let tmp2Result = tmp2(1430);
       obj = { id: null, icon: null };
       ({ id: obj7[0], icon: obj7[1] } = stateFromStores);
       applicationIconSource = tmp2Result.getApplicationIconSource(obj);
     }
     let userAvatarSource;
     if (null != stateFromStores1) {
-      tmp2Result = tmp2(1431);
+      tmp2Result = tmp2(1430);
       userAvatarSource = tmp2Result.getUserAvatarSource(stateFromStores1);
     }
     let str;
@@ -124,20 +124,20 @@ export default function ConnectAccountStep(clientId) {
     obj2[0] = tmp.headerIcons;
     const obj3 = { source: null, size: null };
     obj3[0] = applicationIconSource;
-    obj3[1] = tmp5(1297).AvatarSizes.XLARGE;
-    const items4 = [callback(tmp5(1297).Avatar, obj3), ,];
+    obj3[1] = tmp5(1296).AvatarSizes.XLARGE;
+    const items4 = [callback(tmp5(1296).Avatar, obj3), ,];
     const obj4 = { color: null, size: "md" };
-    obj4[0] = tmp2(712).colors.INTERACTIVE_TEXT_DEFAULT;
-    items4[1] = callback(tmp5(8798).MoreHorizontalIcon, obj4);
+    obj4[0] = tmp2(709).colors.INTERACTIVE_TEXT_DEFAULT;
+    items4[1] = callback(tmp5(8813).MoreHorizontalIcon, obj4);
     const obj5 = { source: null, size: null };
     obj5[0] = userAvatarSource;
-    obj5[1] = tmp5(1297).AvatarSizes.XLARGE;
-    items4[2] = callback(tmp5(1297).Avatar, obj5);
+    obj5[1] = tmp5(1296).AvatarSizes.XLARGE;
+    items4[2] = callback(tmp5(1296).Avatar, obj5);
     obj2[1] = items4;
     const items5 = [callback2(View, obj2), ,];
     const obj6 = { variant: "text-lg/normal", color: "text-default", children: null };
-    const intl = tmp5(1236).intl;
-    obj6[2] = intl.string(tmp5(1236).t.uT1CPa);
+    const intl = tmp5(1233).intl;
+    obj6[2] = intl.string(tmp5(1233).t.uT1CPa);
     items5[1] = callback(tmp5(4474).Text, obj6);
     const obj7 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
     obj7[2] = str;
@@ -145,11 +145,11 @@ export default function ConnectAccountStep(clientId) {
     obj1[1] = items5;
     const items6 = [callback2(View, obj1), , ,];
     const obj8 = { variant: "text-sm/normal", color: "text-default", children: null };
-    const intl2 = tmp5(1236).intl;
+    const intl2 = tmp5(1233).intl;
     const obj9 = { applicationName: null, platformName: null };
     obj9[0] = str;
     obj9[1] = platformName;
-    obj8[2] = intl2.format(tmp5(1236).t["aJRE/Q"], obj9);
+    obj8[2] = intl2.format(tmp5(1233).t["aJRE/Q"], obj9);
     items6[1] = callback(tmp5(4474).Text, obj8);
     const obj10 = { style: null, children: null };
     obj10[0] = tmp.card;
@@ -158,7 +158,7 @@ export default function ConnectAccountStep(clientId) {
       const obj11 = { source: null, style: null, disableColor: true };
       obj11[0] = null;
       obj11[1] = tmp.platformIcon;
-      tmp16Result = tmp16(tmp5(1297).Icon, obj11);
+      tmp16Result = tmp16(tmp5(1296).Icon, obj11);
     }
     const items7 = [tmp16Result, ,];
     const obj12 = { variant: "text-md/medium", style: null, color: "text-default", children: null };
@@ -169,31 +169,31 @@ export default function ConnectAccountStep(clientId) {
     obj13[2] = function onPress() {
       platformType(closure_1_2[19])({ platformType, location: "OAuth2 Connect Account Step" });
     };
-    const intl3 = tmp5(1236).intl;
-    obj13[3] = intl3.string(tmp5(1236).t.S0W8Z5);
+    const intl3 = tmp5(1233).intl;
+    obj13[3] = intl3.string(tmp5(1233).t.S0W8Z5);
     items7[2] = callback(tmp5(4928).Button, obj13);
     obj10[1] = items7;
     items6[2] = callback2(View, obj10);
     const obj14 = { style: null, children: null };
     obj14[0] = tmp.infoNotice;
     const obj15 = { color: null, size: "sm" };
-    obj15[0] = tmp2(712).colors.ICON_FEEDBACK_INFO;
+    obj15[0] = tmp2(709).colors.ICON_FEEDBACK_INFO;
     const items8 = [callback(tmp5(4433).CircleInformationIcon, obj15)];
     const obj16 = { variant: "text-sm/normal", color: "text-default", style: null, children: null };
     obj16[2] = tmp.infoText;
-    const intl4 = tmp5(1236).intl;
+    const intl4 = tmp5(1233).intl;
     const obj17 = { platformName: null, applicationName: null };
     obj17[0] = platformName;
     obj17[1] = str;
-    obj16[3] = intl4.format(tmp5(1236).t["8psEFX"], obj17);
+    obj16[3] = intl4.format(tmp5(1233).t["8psEFX"], obj17);
     items8[1] = callback(tmp5(4474).Text, obj16);
     obj14[1] = items8;
     items6[3] = callback2(View, obj14);
     obj[1] = items6;
     return callback2(View, obj);
   } else {
-    let tmp5Result = tmp5(1431);
-    tmp5Result = tmp5(1363);
+    let tmp5Result = tmp5(1430);
+    tmp5Result = tmp5(1362);
     const icon = value.icon;
     const source = tmp5Result.makeSource(tmp5Result.isThemeLight(tmp4) ? icon.lightPNG : icon.darkPNG);
   }
@@ -220,7 +220,7 @@ export const ConnectedAccountCard = function ConnectedAccountCard(arg0) {
       const obj3 = { source: null, style: null, disableColor: true };
       obj3[0] = null;
       obj3[1] = tmp.platformIconSmall;
-      tmp10Result = tmp10(tmp11(1297).Icon, obj3);
+      tmp10Result = tmp10(tmp11(1296).Icon, obj3);
     }
     const items1 = [tmp10Result, ,];
     const obj4 = { style: null, children: null };
@@ -229,7 +229,7 @@ export const ConnectedAccountCard = function ConnectedAccountCard(arg0) {
     obj5[2] = connectedAccount.name;
     const items2 = [callback(Text.Text, obj5)];
     const obj6 = { variant: "text-xs/normal", color: "text-muted", children: null };
-    const intl2 = tmp11(1236).intl;
+    const intl2 = tmp11(1233).intl;
     const obj7 = { platformName: null, connectedAccountId: null };
     obj7[0] = platformName;
     obj7[1] = connectedAccount.id;
@@ -243,7 +243,7 @@ export const ConnectedAccountCard = function ConnectedAccountCard(arg0) {
     obj2[1] = items1;
     items[1] = closure_9(View, obj2);
     const obj9 = { variant: "text-sm/normal", color: "text-default", children: null };
-    const intl3 = tmp11(1236).intl;
+    const intl3 = tmp11(1233).intl;
     const obj10 = { applicationName: null };
     obj10[0] = applicationName;
     obj9[2] = intl3.format(getSystemLocale.t.pyRNXJ, obj10);

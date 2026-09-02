@@ -1,6 +1,6 @@
 // discord_app/design/utils/shared/colors.tsx
 import set from "../../../../_runtime/00002_set.js";
-import nDefault from "../../../../_runtime/00689_n.js";
+import nDefault from "../../../../_runtime/00686_n.js";
 
 const result = set.fileFinishedImporting("design/utils/shared/colors.tsx");
 

@@ -109,30 +109,58 @@ export default function MessageNotificationHeader(locationTextColor) {
   const type = channel.type;
   let tmp10 = channelName;
   if (set.ChannelTypes.GROUP_DM !== type) {
-    if (tmp2(692).ChannelTypes.GUILD_FORUM !== type) {
-      if (tmp2(692).ChannelTypes.GUILD_TEXT !== type) {
-        if (tmp2(692).ChannelTypes.GUILD_ANNOUNCEMENT !== type) {
-          if (tmp2(692).ChannelTypes.ANNOUNCEMENT_THREAD !== type) {
-            if (tmp2(692).ChannelTypes.PUBLIC_THREAD !== type) {
-              tmp10 = null;
+    if (tmp2(689).ChannelTypes.GUILD_FORUM !== type) {
+      if (tmp2(689).ChannelTypes.GUILD_MEDIA !== type) {
+        if (tmp2(689).ChannelTypes.GUILD_TEXT !== type) {
+          if (tmp2(689).ChannelTypes.GUILD_ANNOUNCEMENT !== type) {
+            if (tmp2(689).ChannelTypes.GUILD_APP !== type) {
+              if (tmp2(689).ChannelTypes.GUILD_VOICE !== type) {
+                if (tmp2(689).ChannelTypes.GUILD_STAGE_VOICE !== type) {
+                  if (tmp2(689).ChannelTypes.ANNOUNCEMENT_THREAD !== type) {
+                    if (tmp2(689).ChannelTypes.PUBLIC_THREAD !== type) {
+                      if (tmp2(689).ChannelTypes.PRIVATE_THREAD !== type) {
+                        if (tmp2(689).ChannelTypes.MEDIA_THREAD !== type) {
+                          tmp10 = null;
+                          if (tmp2(689).ChannelTypes.DM !== type) {
+                            tmp10 = null;
+                            if (tmp2(689).ChannelTypes.GUILD_CATEGORY !== type) {
+                              tmp10 = null;
+                              if (tmp2(689).ChannelTypes.GUILD_STORE !== type) {
+                                tmp10 = null;
+                                if (tmp2(689).ChannelTypes.GUILD_DIRECTORY !== type) {
+                                  tmp10 = null;
+                                  if (tmp2(689).ChannelTypes.GUILD_SPACE !== type) {
+                                    const UNKNOWN = tmp2(689).ChannelTypes.UNKNOWN;
+                                    tmp10 = null;
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                  let channelName1 = null;
+                  if (null != parentChannel) {
+                    tmp2Result = tmp2(4674);
+                    channelName1 = tmp2Result.computeChannelName(parentChannel, closure_6, closure_5);
+                  }
+                  if (null != channelName1) {
+                    const _HermesInternal2 = HermesInternal;
+                    let combined = "" + channelName + ", " + channelName1;
+                  } else {
+                    combined = channelName;
+                    if (null != guild) {
+                      const _HermesInternal = HermesInternal;
+                      combined = "" + channelName + ", " + guild.name;
+                    }
+                  }
+                  tmp10 = combined;
+                }
+              }
             }
           }
-          let channelName1 = null;
-          if (null != parentChannel) {
-            tmp2Result = tmp2(4674);
-            channelName1 = tmp2Result.computeChannelName(parentChannel, closure_6, closure_5);
-          }
-          if (null != channelName1) {
-            const _HermesInternal2 = HermesInternal;
-            let combined = "" + channelName + ", " + channelName1;
-          } else {
-            combined = channelName;
-            if (null != guild) {
-              const _HermesInternal = HermesInternal;
-              combined = "" + channelName + ", " + guild.name;
-            }
-          }
-          tmp10 = combined;
         }
       }
     }

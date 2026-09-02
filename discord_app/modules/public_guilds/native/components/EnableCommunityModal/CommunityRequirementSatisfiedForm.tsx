@@ -12,7 +12,7 @@ let result = require("set").fileFinishedImporting(
 
 export default function CommunityRequirementSatisfiedForm(formSwitchDisabled) {
   formSwitchDisabled = formSwitchDisabled.formSwitchDisabled;
-  let obj = formSwitchDisabled(17249);
+  let obj = formSwitchDisabled(17485);
   const enableCommunitySharedStyles = obj.useEnableCommunitySharedStyles();
   obj = { style: enableCommunitySharedStyles.communityRequirementSatisfiedFormWrapper, children: null };
   const items = [formSwitchDisabled.children];
@@ -26,7 +26,7 @@ export default function CommunityRequirementSatisfiedForm(formSwitchDisabled) {
         const obj = formSwitchDisabled(closure_1_1[3]);
       }
     };
-    tmp6 = callback(formSwitchDisabled(5068).PressableOpacity, obj);
+    tmp6 = callback(formSwitchDisabled(5076).PressableOpacity, obj);
   }
   items[1] = tmp6;
   obj[1] = items;

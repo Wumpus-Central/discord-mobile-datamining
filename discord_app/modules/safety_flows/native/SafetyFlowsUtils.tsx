@@ -3,7 +3,7 @@ import getSystemLocale from "../../../intl/index.native.tsx";
 import messagesProxyDefault from "../SafetyFlows.messages.js";
 import dispatcherDefault from "../../toast/native/ToastActionCreators.tsx";
 import _modDef4723 from "../../../actions/ModalActionCreators.tsx";
-import registerAssetDefault from "../../../../_runtime/09518_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/09531_registerAsset.js";
 import TaskType from "../types.tsx";
 import SAFETY_FLOWS_MODAL_KEY from "../constants.tsx";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -61,7 +61,7 @@ function navigateToScreenForTask(closure_1, closure_0) {
     let tmp5 = null;
     if (null != tmp16) {
       let tmp = tmp16;
-      if (task_type === tmp14(17447).TaskType.EMAIL_VERIFICATION) {
+      if (task_type === tmp14(17683).TaskType.EMAIL_VERIFICATION) {
         const currentUser = authStore.getCurrentUser();
         let email;
         if (currentUser != null) {
@@ -69,7 +69,7 @@ function navigateToScreenForTask(closure_1, closure_0) {
         }
         tmp = tmp16;
         if (null != email) {
-          const items = [tmp14(17447).SafetyFlowScreens.VERIFY_EMAIL];
+          const items = [tmp14(17683).SafetyFlowScreens.VERIFY_EMAIL];
           tmp = items;
         }
       }
@@ -78,7 +78,7 @@ function navigateToScreenForTask(closure_1, closure_0) {
     if (null != tmp5) {
       closure_1.push(tmp5[0]);
     } else {
-      closure_1.push(tmp14(17447).SafetyFlowScreens.UPDATE_APP);
+      closure_1.push(tmp14(17683).SafetyFlowScreens.UPDATE_APP);
     }
   }
 }
@@ -89,7 +89,7 @@ export const getScreensForTaskType = function getScreensForTaskType(task_type) {
   let tmp4 = null;
   if (null != tmp3) {
     let tmp5 = tmp3;
-    if (task_type === tmp(17447).TaskType.EMAIL_VERIFICATION) {
+    if (task_type === tmp(17683).TaskType.EMAIL_VERIFICATION) {
       const currentUser = authStore.getCurrentUser();
       let email;
       if (currentUser != null) {
@@ -97,7 +97,7 @@ export const getScreensForTaskType = function getScreensForTaskType(task_type) {
       }
       tmp5 = tmp3;
       if (null != email) {
-        const items = [tmp(17447).SafetyFlowScreens.VERIFY_EMAIL];
+        const items = [tmp(17683).SafetyFlowScreens.VERIFY_EMAIL];
         tmp5 = items;
       }
     }

@@ -1,7 +1,7 @@
 // discord_app/modules/global_discovery_apps/stores/ApplicationDirectorySimilarApplicationsStore.tsx
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
-import privDefault from "../../../../_runtime/01401_priv.js";
+import privDefault from "../../../../_runtime/01400_priv.js";
 
 let obj = {
   NOT_FETCHED: 0,

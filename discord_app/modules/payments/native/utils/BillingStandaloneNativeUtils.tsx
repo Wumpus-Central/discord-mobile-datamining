@@ -60,7 +60,7 @@ export const goToStandalonePremiumCheckoutFromMobileApp = function goToStandalon
     obj.flowType = CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT;
     let tmp5 = obj;
   } else {
-    obj.deepLinkType = tmp(691).LinkingTypes.MOBILE_WEB_REDIRECT_CHECKOUT;
+    obj.deepLinkType = tmp(688).LinkingTypes.MOBILE_WEB_REDIRECT_CHECKOUT;
     tmp5 = obj;
   }
   return obj.goToStandalonePremiumCheckout(
@@ -97,7 +97,7 @@ export const goToStandaloneNitroManagementFromMobileApp = function goToStandalon
     );
   } else {
     result = obj3.BILLING_MANAGE_SUBSCRIPTION_WITH_DEEP_LINK(
-      tmp(691).LinkingTypes.MOBILE_WEB_REDIRECT_CHECKOUT,
+      tmp(688).LinkingTypes.MOBILE_WEB_REDIRECT_CHECKOUT,
       loadId,
     );
   }
@@ -129,14 +129,14 @@ export const goToStandaloneGuildBoostCheckoutFromMobileApp = function goToStanda
   CustomCheckoutFlow = arg4;
   let prop;
   if (!obj.isMetaQuest()) {
-    prop = tmp(691).LinkingTypes.MOBILE_WEB_REDIRECT_CHECKOUT;
+    prop = tmp(688).LinkingTypes.MOBILE_WEB_REDIRECT_CHECKOUT;
   }
-  let tmpResult = tmp(1624);
+  let tmpResult = tmp(1623);
   let prop1;
   if (tmpResult.isMetaQuest()) {
     prop1 = CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT;
   }
-  tmpResult = tmp(7150);
+  tmpResult = tmp(7159);
   return tmpResult.goToBillingStandalonePageWithHandoff(
     Routes.BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE(closure_1, prop, newAnalyticsLoadId, prop1),
     (body, searchParams) => {

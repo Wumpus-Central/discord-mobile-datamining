@@ -75,8 +75,8 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
   const animatedStyle = tmp2Result.useAnimatedStyle(fn);
   if (notificationSetting.notificationSetting === UserNotificationSettings.ALL_MESSAGES) {
     obj = { variant: "text-sm/medium", color: "text-default", children: null };
-    const intl = tmp2(1236).intl;
-    obj[2] = intl.string(tmp2(1236).t.WYyzI5);
+    const intl = tmp2(1233).intl;
+    obj[2] = intl.string(tmp2(1233).t.WYyzI5);
     let tmp11 = callback(tmp2(4474).Text, obj);
     let tmp12 = callback;
   } else {
@@ -86,8 +86,8 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
     const items1 = ["@", str, " "];
     obj3[2] = items1;
     const items2 = [callback2(tmp2(4474).Text, obj3)];
-    const intl3 = tmp2(1236).intl;
-    items2[1] = intl3.string(tmp2(1236).t.WYyzI5);
+    const intl3 = tmp2(1233).intl;
+    items2[1] = intl3.string(tmp2(1233).t.WYyzI5);
     obj2[2] = items2;
     obj1[0] = callback2(tmp2(4474).Text, obj2);
     tmp11 = callback(View, obj1);
@@ -105,14 +105,14 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
   const obj5 = { style: tmp.cardContent, children: null };
   const obj6 = {
     children: tmp12(require("../../../../design/void/native.tsx").Avatar, {
-      source: sharedValue(10244),
+      source: sharedValue(10266),
       size: require("../../../../design/void/native.tsx").AvatarSizes.LARGE_48,
     }),
   };
   const items4 = [tmp12(View, obj6)];
   const obj8 = { style: tmp.cardMessage, children: null };
   const obj9 = { variant: "text-sm/semibold", children: null };
-  const intl2 = tmp2(1236).intl;
+  const intl2 = tmp2(1233).intl;
   obj9[1] = intl2.string(require("../../../../intl/index.native.tsx").t.qSq0tD);
   const items5 = [tmp12(require("../../../../design/components/Text/native/Text.tsx").Text, obj9), tmp11];
   obj8[1] = items5;

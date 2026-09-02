@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/native/UserProfileCustomStatusBubble.tsx
-import set from "../../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
 import explicitContentFromProto from "../../user_settings/UserSettings.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
@@ -162,20 +162,20 @@ let closure_11 = createCacheKey.createStyles((arg0) => {
     tmp4 = tmp;
   }
   obj = { backgroundColor: BACKGROUND_SURFACE_HIGH, borderColor: null, borderWidth: 1 };
-  const colors2 = tmp4(712).colors;
+  const colors2 = tmp4(709).colors;
   obj[1] = arg0 ? colors2.BORDER_MUTED : colors2.BORDER_SUBTLE;
   obj[1] = obj;
-  obj = { alignSelf: "flex-start", alignItems: "center", justifyContent: "center", borderRadius: tmp4(712).radii.lg };
-  const merged = Object.assign(tmp4(712).shadows.SHADOW_LOW);
+  obj = { alignSelf: "flex-start", alignItems: "center", justifyContent: "center", borderRadius: tmp4(709).radii.lg };
+  const merged = Object.assign(tmp4(709).shadows.SHADOW_LOW);
   obj.top = -14;
   obj[2] = obj;
   obj[3] = { position: "absolute", top: 0, left: 0, opacity: 0 };
-  const merged1 = Object.assign(tmp4(712).shadows.SHADOW_LOW);
-  obj[4] = { position: "absolute", top: -30, width: 12, height: 12, borderRadius: tmp4(712).radii.round };
-  obj1 = { position: "absolute", top: -30, width: 12, height: 12, borderRadius: tmp4(712).radii.round };
-  const merged2 = Object.assign(tmp4(712).shadows.SHADOW_LOW);
-  obj[5] = { position: "absolute", top: -8, left: 12, width: 20, height: 20, borderRadius: tmp4(712).radii.round };
-  const obj2 = { position: "absolute", top: -8, left: 12, width: 20, height: 20, borderRadius: tmp4(712).radii.round };
+  const merged1 = Object.assign(tmp4(709).shadows.SHADOW_LOW);
+  obj[4] = { position: "absolute", top: -30, width: 12, height: 12, borderRadius: tmp4(709).radii.round };
+  obj1 = { position: "absolute", top: -30, width: 12, height: 12, borderRadius: tmp4(709).radii.round };
+  const merged2 = Object.assign(tmp4(709).shadows.SHADOW_LOW);
+  obj[5] = { position: "absolute", top: -8, left: 12, width: 20, height: 20, borderRadius: tmp4(709).radii.round };
+  const obj2 = { position: "absolute", top: -8, left: 12, width: 20, height: 20, borderRadius: tmp4(709).radii.round };
   obj[6] = {
     position: "absolute",
     top: -7.5,
@@ -183,8 +183,8 @@ let closure_11 = createCacheKey.createStyles((arg0) => {
     width: 16,
     height: 16,
     borderWidth: 0,
-    borderTopLeftRadius: tmp4(712).radii.round,
-    borderTopRightRadius: tmp4(712).radii.round,
+    borderTopLeftRadius: tmp4(709).radii.round,
+    borderTopRightRadius: tmp4(709).radii.round,
   };
   obj[7] = { width: 6 };
   obj[8] = { alignItems: "flex-start" };
@@ -198,7 +198,7 @@ let closure_12 = {
   statusBubblePaddingVertical: 7,
 };
 let closure_13 = {
-  [arg1(6001).UserProfileThemeTypes.PREVIEW]: {
+  [arg1(6009).UserProfileThemeTypes.PREVIEW]: {
     textVariant: "text-sm/normal",
     emojiOnlyEmojiSize: 26,
     textMinWidth: 53,

@@ -1,8 +1,8 @@
 // discord_app/modules/app_icons/native/AppIconsCoachmark.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getPremiumPlanItemDefault from "../../../utils/PremiumUtils.tsx";
-import registerAssetDefault from "../../../../_runtime/09168_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/16506_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/09182_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/16741_registerAsset.js";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_6 from "../../../stores/UserStore.tsx";
@@ -37,7 +37,7 @@ let result = require("set").fileFinishedImporting("modules/app_icons/native/AppI
 export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   let tmp = callback3();
-  let obj = markAsDismissed(589);
+  let obj = markAsDismissed(586);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   obj1 = getPremiumPlanItemDefault;
@@ -61,23 +61,23 @@ export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
   const obj2 = { style: tmp.titleContainer, children: null };
   const isPremiumResult = obj1.isPremium(stateFromStores);
   const items3 = [
-    callback(markAsDismissed(1297).Icon, {
+    callback(markAsDismissed(1296).Icon, {
       source: registerAssetDefault,
-      size: markAsDismissed(1297).IconSizes.MEDIUM,
+      size: markAsDismissed(1296).IconSizes.MEDIUM,
       style: tmp.nitroWheel,
       disableColor: true,
     }),
   ];
   const obj4 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = markAsDismissed(1236).intl;
-  obj4[2] = intl.string(markAsDismissed(1236).t.EfA4Cq);
+  const intl = markAsDismissed(1233).intl;
+  obj4[2] = intl.string(markAsDismissed(1233).t.EfA4Cq);
   items3[1] = callback(markAsDismissed(4474).Text, obj4);
   obj2[1] = items3;
   items2[1] = callback2(closure_5, obj2);
   const obj5 = { variant: "text-md/normal", color: "text-default", style: tmp.subtitle, children: null };
-  const intl2 = markAsDismissed(1236).intl;
+  const intl2 = markAsDismissed(1233).intl;
   const string = intl2.string;
-  const t = markAsDismissed(1236).t;
+  const t = markAsDismissed(1233).t;
   if (isPremiumResult) {
     let stringResult = string(t.IgchKK);
   } else {
@@ -89,8 +89,8 @@ export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
   const items4 = [callback2(closure_5, obj)];
   const obj6 = { style: tmp.footer, children: null };
   const obj7 = { text: null, onPress: null };
-  const intl3 = tmp2(1236).intl;
-  obj7[0] = intl3.string(markAsDismissed(1236).t.Pt547C);
+  const intl3 = tmp2(1233).intl;
+  obj7[0] = intl3.string(markAsDismissed(1233).t.Pt547C);
   obj7[1] = function onPress() {
     closure_1_1(closure_1_2[9]).hideActionSheet();
     if (markAsDismissed != null) {
@@ -102,12 +102,12 @@ export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
   };
   const items5 = [callback(markAsDismissed(4928).Button, obj7)];
   const obj8 = { variant: "secondary", text: null, onPress: null };
-  const intl4 = tmp2(1236).intl;
-  obj8[1] = intl4.string(markAsDismissed(1236).t.iSrIIZ);
+  const intl4 = tmp2(1233).intl;
+  obj8[1] = intl4.string(markAsDismissed(1233).t.iSrIIZ);
   obj8[2] = callback;
   items5[1] = callback(markAsDismissed(4928).Button, obj8);
   obj6[1] = items5;
   items4[1] = callback2(closure_5, obj6);
   obj[2] = items4;
-  return callback2(markAsDismissed(5622).BottomSheet, obj);
+  return callback2(markAsDismissed(5630).BottomSheet, obj);
 }

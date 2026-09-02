@@ -27,9 +27,9 @@ const memoResult = importAllResult.memo(function CommunicationDisabledNoticeForG
     subtext: null,
     countdown: null,
   };
-  const intl = tmp(1236).intl;
+  const intl = tmp(1233).intl;
   obj[2] = intl.string(getSystemLocale.t.VSpdzK);
-  const intl2 = tmp(1236).intl;
+  const intl2 = tmp(1233).intl;
   obj = { link: closure_3 };
   obj[3] = intl2.format(getSystemLocale.t["4ZwD5G"], obj);
   obj[4] = date;

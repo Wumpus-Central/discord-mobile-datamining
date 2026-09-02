@@ -303,11 +303,11 @@ export default function QuestHomeOrbShopCarousel(showOrbShopPlaceholderCarousel)
 export const useQuestHomeOrbShopCarouselData = function useQuestHomeOrbShopCarouselData(arg0) {
   let orbAmount;
   ({ enabled, sortType } = arg0);
-  const BountiesStage1Experiment = orbAmount(11120).BountiesStage1Experiment;
+  const BountiesStage1Experiment = orbAmount(11341).BountiesStage1Experiment;
   let obj = { location: QuestsExperimentLocations.QUEST_HOME_MOBILE };
   orbAmount = BountiesStage1Experiment.useConfig(obj).orbAmount;
   const items = [closure_6];
-  const stateFromStores = orbAmount(589).useStateFromStores(items, () => {
+  const stateFromStores = orbAmount(586).useStateFromStores(items, () => {
     let num = 0;
     for (const item10007 of tmp) {
       let tmp2 = closure_1_6;
@@ -320,8 +320,8 @@ export const useQuestHomeOrbShopCarouselData = function useQuestHomeOrbShopCarou
     }
     return num;
   });
-  const obj2 = orbAmount(589);
-  const popularOrbShopProducts = orbAmount(14671).usePopularOrbShopProducts({ enabled, sortType });
+  const obj2 = orbAmount(586);
+  const popularOrbShopProducts = orbAmount(14897).usePopularOrbShopProducts({ enabled, sortType });
   obj = {
     products: popularOrbShopProducts.products,
     obtainableOrbRewards: stateFromStores,

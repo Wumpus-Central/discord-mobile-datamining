@@ -33,8 +33,8 @@ LoginRequiredActionManager.prototype["handleConnectionOpen"] = function handleCo
             const obj = closure_1_1(closure_1_2[5]);
           }
         };
-        currentUser(6245).openUserSettings(obj);
-        const obj2 = currentUser(6245);
+        currentUser(6254).openUserSettings(obj);
+        const obj2 = currentUser(6254);
       }
     }
     if (result1) {

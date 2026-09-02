@@ -35,8 +35,8 @@ const toggle = createToggle.createToggle({
   useDescription: function useInAppNotificationsDescription() {
     let stringResult;
     if (obj.useFocusModeEnabled()) {
-      const intl = tmp(1236).intl;
-      stringResult = intl.string(tmp(1236).t.cIRG0s);
+      const intl = tmp(1233).intl;
+      stringResult = intl.string(tmp(1233).t.cIRG0s);
     }
     return stringResult;
   },
@@ -68,8 +68,8 @@ let obj = {
   useDescription: function useInAppNotificationsDescription() {
     let stringResult;
     if (obj.useFocusModeEnabled()) {
-      const intl = tmp(1236).intl;
-      stringResult = intl.string(tmp(1236).t.cIRG0s);
+      const intl = tmp(1233).intl;
+      stringResult = intl.string(tmp(1233).t.cIRG0s);
     }
     return stringResult;
   },

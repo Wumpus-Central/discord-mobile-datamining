@@ -108,34 +108,34 @@ export const IndividualProductPreview = function IndividualProductPreview(arg0) 
     let obj = { product: null };
     obj[0] = product;
     return callback(NameplatePreview, obj);
-  } else if (tmp(1950).CollectiblesItemType.PROFILE_EFFECT === type) {
+  } else if (tmp(1949).CollectiblesItemType.PROFILE_EFFECT === type) {
     obj = { profileEffect: null, width: null, handlePreviewPress: null, onTrackPress: null };
     obj[0] = product.items[0];
     obj[1] = width;
     obj[2] = handlePreviewPress;
     obj[3] = onTrackPress;
     return callback(ProfileEffectPreview, obj);
-  } else if (tmp(1950).CollectiblesItemType.PROFILE_FRAME === type) {
+  } else if (tmp(1949).CollectiblesItemType.PROFILE_FRAME === type) {
     obj1 = { profileFrame: null, width: null, handlePreviewPress: null, onTrackPress: null };
     obj1[0] = product.items[0];
     obj1[1] = width;
     obj1[2] = handlePreviewPress;
     obj1[3] = onTrackPress;
     return callback(ProfileFramePreview, obj1);
-  } else if (tmp(1950).CollectiblesItemType.AVATAR_DECORATION === type) {
+  } else if (tmp(1949).CollectiblesItemType.AVATAR_DECORATION === type) {
     obj = { product: null, handlePreviewPress: null, onTrackPress: null };
     obj[0] = product;
     obj[1] = handlePreviewPress;
     obj[2] = onTrackPress;
     return callback(AvatarDecorationPreview, obj);
-  } else if (tmp(1950).CollectiblesItemType.EXTERNAL_SKU === type) {
-    const ALL = tmp(679).FractionalPremiumSKUsSets.ALL;
+  } else if (tmp(1949).CollectiblesItemType.EXTERNAL_SKU === type) {
+    const ALL = tmp(676).FractionalPremiumSKUsSets.ALL;
     if (ALL.has(product.skuId)) {
-      let tmp5 = callback(tmp(12547).FractionalNitroPreview, {});
+      let tmp5 = callback(tmp(12771).FractionalNitroPreview, {});
     } else {
       tmp5 = null;
       if (product.skuId === constants.ORB_PROFILE_BADGE) {
-        tmp5 = callback(tmp(12550).OrbBadgePreview, {});
+        tmp5 = callback(tmp(12774).OrbBadgePreview, {});
       }
     }
     return tmp5;

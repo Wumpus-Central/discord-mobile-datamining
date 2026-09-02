@@ -37,14 +37,14 @@ function useUnitId(arg0, guildId) {
   } else if ("user" === arg0) {
     return tmp4;
   } else if ("installation" === arg0) {
-    let tmpResult = tmp(513);
+    let tmpResult = tmp(510);
     let str3 = tmpResult.maybeExtractId(tmp5);
     if (str3 == null) {
       str3 = "";
     }
     return str3;
   } else {
-    tmpResult = tmp(1471);
+    tmpResult = tmp(1470);
     tmpResult.assertNever(arg0);
   }
   const obj = initialize;

@@ -13,13 +13,13 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 require = arg1;
 function GuildRow(guildActivity) {
   guildActivity = guildActivity.guildActivity;
-  let obj = guildActivity(589);
+  let obj = guildActivity(586);
   const items = [closure_3];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getGuild(guildActivity.guild_id));
   if (null == stateFromStores) {
     return null;
   } else {
-    const topUserOrGuildDescription = tmp2(7338).getTopUserOrGuildDescription(
+    const topUserOrGuildDescription = tmp2(7347).getTopUserOrGuildDescription(
       guildActivity.messages_sent,
       guildActivity.call_count,
     );
@@ -30,7 +30,7 @@ function GuildRow(guildActivity) {
     obj[0] = stateFromStores;
     obj[1] = tmp.guildIcon;
     obj[2] = callback(GuildIconSizesDefault, obj);
-    return callback(tmp2(5599).TableRow, obj);
+    return callback(tmp2(5607).TableRow, obj);
   }
   tmp = callback3();
 }

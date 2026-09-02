@@ -1,6 +1,6 @@
 // discord_app/modules/quests/native/QuestRewardTile.tsx
 import noopDefault from "../../../../_runtime/00019_noop.js";
-import _modDef11338 from "QuestDockRewardTile.tsx";
+import _modDef11561 from "QuestDockRewardTile.tsx";
 import { useMemo } from "../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
@@ -33,7 +33,7 @@ export default function QuestRewardTile(quest) {
   }
   obj[2] = tmp8;
   const merged1 = Object.assign(merged);
-  return jsx(_modDef11338, {
+  return jsx(_modDef11561, {
     assetUrl: tmp2Result.url,
     isAnimatedAsset: tmp2Result.isAnimated,
     accessibilityLabel: null,

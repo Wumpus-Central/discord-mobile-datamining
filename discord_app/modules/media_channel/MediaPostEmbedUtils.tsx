@@ -26,9 +26,9 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
     if (!canAccess) {
       has_media_attachment = mediaPostEmbedData.has_media_attachment;
     }
-    const intl = tmp17(1236).intl;
+    const intl = tmp17(1233).intl;
     const string = intl.string;
-    const t = tmp17(1236).t;
+    const t = tmp17(1233).t;
     if (canAccess) {
       let stringResult = string(t.UsZEBI);
     } else {
@@ -63,7 +63,7 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
     if (flag) {
       flag = !has_media_attachment;
     }
-    let tmp17Result = tmp17(1399);
+    let tmp17Result = tmp17(1398);
     const thumbnail2 = mediaPostEmbedData.thumbnail;
     let num2;
     if (thumbnail2 != null) {
@@ -108,8 +108,8 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
     obj[3] = thumbnailImage;
     let stringResult1;
     if (has_media_attachment) {
-      const intl2 = tmp17(1236).intl;
-      stringResult1 = intl2.string(tmp17(1236).t.Yonlia);
+      const intl2 = tmp17(1233).intl;
+      stringResult1 = intl2.string(tmp17(1233).t.Yonlia);
     }
     obj[4] = stringResult1;
     ({ parent_channel_id: obj5[5], channel_id: obj5[6] } = mediaPostEmbedData);

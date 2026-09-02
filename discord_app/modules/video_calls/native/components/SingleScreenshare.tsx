@@ -36,5 +36,5 @@ export default function SingleScreenshare(channel) {
     stageStreamContainer = tmp.stageStreamContainer;
   }
   obj[3] = stageStreamContainer;
-  return tmp3(channel(10107), obj);
+  return tmp3(channel(10129), obj);
 }

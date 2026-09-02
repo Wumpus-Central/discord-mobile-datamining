@@ -70,7 +70,7 @@ let result = require("set").fileFinishedImporting("modules/application_commands/
 export const getCachedCommand = function getCachedCommand(type, commandId, applicationId) {
   closure_0 = applicationId;
   if (null == commandId) {
-    return { application: "method", command: "T", section: "Map" };
+    return { application: "items", command: "call", section: "Promise" };
   } else {
     const userState = authStore.getUserState();
     const result2 = userState.result;
@@ -127,7 +127,7 @@ export const getCachedCommand = function getCachedCommand(type, commandId, appli
         }
       }
     }
-    return { application: "method", command: "T", section: "Map" };
+    return { application: "items", command: "call", section: "Promise" };
   }
 };
 export const getCachedApplicationSection = function getCachedApplicationSection(type, CHAT, applicationId) {
@@ -494,7 +494,7 @@ export const useCommand = function useCommand(arg0, commandId) {
         }
       }
     }
-    return { command: "children", application: "c" };
+    return { command: "disabled", application: "Date" };
   }, items);
 };
 export const useCommandsForApplication = function useCommandsForApplication(arg0, arg1, arg2) {

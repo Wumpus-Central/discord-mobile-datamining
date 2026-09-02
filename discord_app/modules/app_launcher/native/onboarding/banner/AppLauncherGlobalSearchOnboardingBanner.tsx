@@ -60,10 +60,10 @@ export default function GlobalSearchCoachmark(markAsDismissed) {
       obj[1] = closure_1_7(markAsDismissed(closure_2[7]).AppsIcon, obj);
       return closure_1_7(closure_1_4, obj);
     };
-    const intl = markAsDismissed(1236).intl;
-    obj[1] = intl.string(markAsDismissed(1236).t.bCPN5y);
-    const intl2 = markAsDismissed(1236).intl;
-    obj[2] = intl2.string(markAsDismissed(1236).t["0TBExc"]);
+    const intl = markAsDismissed(1233).intl;
+    obj[1] = intl.string(markAsDismissed(1233).t.bCPN5y);
+    const intl2 = markAsDismissed(1233).intl;
+    obj[2] = intl2.string(markAsDismissed(1233).t["0TBExc"]);
     obj[3] = function onDismiss() {
       markAsDismissed({ actionType: closure_1_6.TAKE_ACTION });
     };
@@ -74,7 +74,7 @@ export default function GlobalSearchCoachmark(markAsDismissed) {
     obj[2] = diff;
     obj[3] = windowDimensions.height;
     obj[5] = obj;
-    tmp3 = jsx(markAsDismissed(8982).Coachmark, { x: -140, y: -40, width: null, height: null });
+    tmp3 = jsx(markAsDismissed(8996).Coachmark, { x: -140, y: -40, width: null, height: null });
   }
   return tmp3;
 }

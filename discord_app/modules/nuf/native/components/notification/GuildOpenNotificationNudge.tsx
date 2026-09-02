@@ -24,7 +24,7 @@ let result = require("set").fileFinishedImporting(
 export default function GuildOpenNotificationNudge(guildId) {
   guildId = guildId.guildId;
   ({ markAsDismissed, onHide } = guildId);
-  let obj = guildId(589);
+  let obj = guildId(586);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => {
     const guild = closure_1_6.getGuild(guildId);
@@ -38,10 +38,10 @@ export default function GuildOpenNotificationNudge(guildId) {
     return str;
   });
   obj = { title: null, body: null, actionLocation: null, surface: null, markAsDismissed: null, onHide: null };
-  const intl = guildId(1236).intl;
-  obj[0] = intl.formatToPlainString(guildId(1236).t.tyWHMY, { guildName: stateFromStores });
-  const intl2 = guildId(1236).intl;
-  obj[1] = intl2.string(guildId(1236).t["ehJH+P"]);
+  const intl = guildId(1233).intl;
+  obj[0] = intl.formatToPlainString(guildId(1233).t.tyWHMY, { guildName: stateFromStores });
+  const intl2 = guildId(1233).intl;
+  obj[1] = intl2.string(guildId(1233).t["ehJH+P"]);
   obj[2] = constants.GUILD_OPEN;
   obj[3] = constants2.GUILD_OPEN_BOTTOM_SHEET;
   obj[4] = markAsDismissed;
@@ -58,28 +58,28 @@ export default function GuildOpenNotificationNudge(guildId) {
 export const GUILD_OPEN_NOTIFICATION_NUDGE_KEY = "guild-open-notification-nudge-key";
 export const useGuildOpenNudge = function useGuildOpenNudge() {
   const items = [closure_7];
-  stateFromStores = stateFromStores(589).useStateFromStores(items, () => {
+  stateFromStores = stateFromStores(586).useStateFromStores(items, () => {
     guildId = guildId.getGuildId();
     if (guildId == null) {
       guildId = null;
     }
     return guildId;
   });
-  let obj = stateFromStores(589);
-  let obj2 = stateFromStores3(15079);
-  const canSeePushNotificationNudge = stateFromStores(11980).useCanSeePushNotificationNudge();
-  const obj3 = stateFromStores(11980);
+  let obj = stateFromStores(586);
+  let obj2 = stateFromStores3(15308);
+  const canSeePushNotificationNudge = stateFromStores(12204).useCanSeePushNotificationNudge();
+  const obj3 = stateFromStores(12204);
   const items1 = [closure_8];
-  const stateFromStores1 = stateFromStores(589).useStateFromStores(items1, () => {
+  const stateFromStores1 = stateFromStores(586).useStateFromStores(items1, () => {
     let isMutedResult = null == stateFromStores;
     if (!isMutedResult) {
       isMutedResult = closure_1_8.isMuted(tmp);
     }
     return isMutedResult;
   });
-  const obj4 = stateFromStores(589);
+  const obj4 = stateFromStores(586);
   const items2 = [closure_8];
-  const stateFromStores2 = stateFromStores(589).useStateFromStores(items2, () => {
+  const stateFromStores2 = stateFromStores(586).useStateFromStores(items2, () => {
     if (null != stateFromStores) {
       let NO_MESSAGES = closure_1_8.getMessageNotifications(tmp);
     } else {
@@ -87,9 +87,9 @@ export const useGuildOpenNudge = function useGuildOpenNudge() {
     }
     return NO_MESSAGES;
   });
-  const obj5 = stateFromStores(589);
+  const obj5 = stateFromStores(586);
   const items3 = [closure_6, closure_5];
-  stateFromStores3 = stateFromStores(589).useStateFromStores(items3, () => {
+  stateFromStores3 = stateFromStores(586).useStateFromStores(items3, () => {
     let result = null != stateFromStores;
     if (result) {
       const guild = closure_1_6.getGuild(tmp);
@@ -110,12 +110,12 @@ export const useGuildOpenNudge = function useGuildOpenNudge() {
       callback(true);
     }
   }, items4);
-  const obj6 = stateFromStores(589);
+  const obj6 = stateFromStores(586);
   const obj7 = first;
   const tmp8 = callback;
   const items5 = [closure_9];
   let tmp12 = null != stateFromStores;
-  const stateFromStores4 = stateFromStores(589).useStateFromStores(items5, () => {
+  const stateFromStores4 = stateFromStores(586).useStateFromStores(items5, () => {
     const tmp = state.getState().promptLastSeen[constants.GUILD_OPEN_BOTTOM_SHEET];
     let tmp2 = null == tmp;
     if (!tmp2) {
@@ -149,10 +149,10 @@ export const useGuildOpenNudge = function useGuildOpenNudge() {
   if (tmp12) {
     tmp12 = stateFromStores4;
   }
-  tmpResult = tmp(6251);
+  tmpResult = tmp(6260);
   let prop = null;
   if (tmp12) {
-    prop = tmp(1373).DismissibleContent.NOTIFICATION_NUDGE_GUILD_OPEN_PER_GUILD;
+    prop = tmp(1372).DismissibleContent.NOTIFICATION_NUDGE_GUILD_OPEN_PER_GUILD;
   }
   let tmp15 = stateFromStores;
   if (stateFromStores == null) {

@@ -21,7 +21,7 @@ const result = require("set").fileFinishedImporting("modules/saved_messages/useS
 export default function useSavedMessagesForPage() {
   let ALL = arg0;
   if (arg0 === undefined) {
-    ALL = ALL(7604).SavedMessageSortTypes.ALL;
+    ALL = ALL(7614).SavedMessageSortTypes.ALL;
   }
   importDefault = undefined;
   dependencyMap = undefined;
@@ -109,7 +109,7 @@ export default function useSavedMessagesForPage() {
     2,
   );
   const items1 = [store];
-  return ALL(589).useStateFromStoresArray(items1, () => {
+  return ALL(586).useStateFromStoresArray(items1, () => {
     const mapped = _undefined.map((channelId) =>
       savedMessage.getSavedMessage(channelId.channelId, channelId.messageId),
     );

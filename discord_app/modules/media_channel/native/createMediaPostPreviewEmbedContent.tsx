@@ -71,11 +71,11 @@ export default function createMediaPostPreviewEmbedContent(arg0, arg1, url) {
           if (null != mediaPostEmbedCommonData.authorName) {
             if (null != mediaPostEmbedCommonData.channelName) {
               if (null != user) {
-                const userAuthorWithProcessedColor = tmp(7869).getUserAuthorWithProcessedColor(
+                const userAuthorWithProcessedColor = tmp(7878).getUserAuthorWithProcessedColor(
                   user,
                   mediaPostEmbedCommonData.postThread,
                 );
-                const intl6 = tmp(1236).intl;
+                const intl6 = tmp(1233).intl;
                 obj = { username: null, usernameOnClick: null, channelName: null };
                 obj[0] = mediaPostEmbedCommonData.authorName;
                 obj1 = { userId: null, message: null, author: null, roleStyle: null, messageChannelId: null };
@@ -86,8 +86,8 @@ export default function createMediaPostPreviewEmbedContent(arg0, arg1, url) {
                 obj1[4] = mediaPostEmbedCommonData.threadId;
                 obj[1] = formatUsernameOnClickDefault(obj1);
                 obj[2] = mediaPostEmbedCommonData.channelName;
-                let formatToPartsResult = intl6.formatToParts(tmp(1236).t.mCytFr, obj);
-                const tmpResult1 = tmp(7869);
+                let formatToPartsResult = intl6.formatToParts(tmp(1233).t.mCytFr, obj);
+                const tmpResult1 = tmp(7878);
               }
               if (false === mediaPostEmbedCommonData.canAccess) {
                 let tmp11 = callback(ThemesDefault.unsafe_rawColors.TEAL_430);
@@ -108,7 +108,7 @@ export default function createMediaPostPreviewEmbedContent(arg0, arg1, url) {
               if (mediaPostEmbedCommonData.shouldShowBlurredThumbnailImage) {
                 const obj2 = {};
                 const merged = Object.assign(mediaPostEmbedCommonData);
-                obj2.blurredCoverImage = closure_3.resolveAssetSource(tmp10(12910)).uri;
+                obj2.blurredCoverImage = closure_3.resolveAssetSource(tmp10(13132)).uri;
                 obj2.footer = formatToPartsResult;
                 obj2.ctaButtonColor = tmp11;
                 return obj2;
@@ -120,13 +120,13 @@ export default function createMediaPostPreviewEmbedContent(arg0, arg1, url) {
                 if (!value) {
                   value = obj7.get("obscure_blur_effect_self_harm_content_enabled");
                 }
-                const isPendingScanVersionResult = tmp(7345).isPendingScanVersion(
+                const isPendingScanVersionResult = tmp(7354).isPendingScanVersion(
                   mediaPostEmbedCommonData.contentScanVersion,
                 );
                 let result = value;
                 if (value) {
-                  result = tmp(7345).shouldAgeVerifyForExplicitMedia();
-                  const tmpResult4 = tmp(7345);
+                  result = tmp(7354).shouldAgeVerifyForExplicitMedia();
+                  const tmpResult4 = tmp(7354);
                 }
                 let isVerifiedTeenResult = value;
                 if (value) {
@@ -141,14 +141,14 @@ export default function createMediaPostPreviewEmbedContent(arg0, arg1, url) {
                     let str9 = "";
                     let str10 = "";
                     if (true === mediaPostEmbedCommonData.shouldSpoiler) {
-                      const intl4 = tmp(1236).intl;
-                      str10 = intl4.string(tmp(1236).t["F+x38C"]).toUpperCase();
-                      const str11 = intl4.string(tmp(1236).t["F+x38C"]);
+                      const intl4 = tmp(1233).intl;
+                      str10 = intl4.string(tmp(1233).t["F+x38C"]).toUpperCase();
+                      const str11 = intl4.string(tmp(1233).t["F+x38C"]);
                     }
                     obj3.spoiler = str10;
                     if (value) {
-                      const intl5 = tmp(1236).intl;
-                      str9 = intl5.string(tmp(1236).t.SpxcUR);
+                      const intl5 = tmp(1233).intl;
+                      str9 = intl5.string(tmp(1233).t.SpxcUR);
                     }
                     obj3.obscure = str9;
                     obj3.obscureAwaitingScan = isPendingScanVersionResult;
@@ -168,14 +168,14 @@ export default function createMediaPostPreviewEmbedContent(arg0, arg1, url) {
                 let str6 = "";
                 let str7 = "";
                 if (true === mediaPostEmbedCommonData.shouldSpoiler) {
-                  const intl2 = tmp(1236).intl;
-                  str7 = intl2.string(tmp(1236).t["F+x38C"]).toUpperCase();
-                  const str8 = intl2.string(tmp(1236).t["F+x38C"]);
+                  const intl2 = tmp(1233).intl;
+                  str7 = intl2.string(tmp(1233).t["F+x38C"]).toUpperCase();
+                  const str8 = intl2.string(tmp(1233).t["F+x38C"]);
                 }
                 obj4.spoiler = str7;
                 if (value) {
-                  const intl3 = tmp(1236).intl;
-                  str6 = intl3.string(tmp(1236).t.SpxcUR);
+                  const intl3 = tmp(1233).intl;
+                  str6 = intl3.string(tmp(1233).t.SpxcUR);
                 }
                 obj4.obscure = str6;
                 obj4.obscureAwaitingScan = isPendingScanVersionResult;
@@ -183,7 +183,7 @@ export default function createMediaPostPreviewEmbedContent(arg0, arg1, url) {
                 obj4.obscureHideControls = isVerifiedTeenResult;
                 obj4.obscureIsOpaque = value;
                 obj4.ctaButtonColor = tmp11;
-                const tmpResult3 = tmp(7345);
+                const tmpResult3 = tmp(7354);
               }
               tmp15 =
                 null != mediaPostEmbedCommonData.coverImage &&
@@ -192,10 +192,10 @@ export default function createMediaPostPreviewEmbedContent(arg0, arg1, url) {
                 flag;
             }
           }
-          const intl = tmp(1236).intl;
+          const intl = tmp(1233).intl;
           const obj5 = { guildName: null };
           obj5[0] = mediaPostEmbedCommonData.guildName;
-          formatToPartsResult = intl.formatToParts(tmp(1236).t.p4VdWJ, obj5);
+          formatToPartsResult = intl.formatToParts(tmp(1233).t.p4VdWJ, obj5);
         }
       }
     }

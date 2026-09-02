@@ -10,7 +10,7 @@ let result = require("set").fileFinishedImporting("modules/rtc/native/SecureFram
 
 export default function SecureFramesCallVerificationBottomSheet(channelId) {
   channelId = channelId.channelId;
-  let obj = channelId(589);
+  let obj = channelId(586);
   const items = [closure_4];
   const items1 = [channelId];
   const stateFromStores = obj.useStateFromStores(items, () => {
@@ -29,15 +29,15 @@ export default function SecureFramesCallVerificationBottomSheet(channelId) {
     channelId(closure_1_2[6]).showShareActionSheet(obj, closure_1_5.SECURE_FRAMES_STREAM_BOTTOM_SHEET);
   }, items1);
   obj = { title: null, subtitle: null, footer: null, epochAuthenticator: null, onShareClick: null };
-  const intl = channelId(1236).intl;
-  obj[0] = intl.string(channelId(1236).t.cTQI5t);
-  const intl2 = channelId(1236).intl;
-  obj[1] = intl2.string(channelId(1236).t["MPp7+C"]);
-  const intl3 = channelId(1236).intl;
+  const intl = channelId(1233).intl;
+  obj[0] = intl.string(channelId(1233).t.cTQI5t);
+  const intl2 = channelId(1233).intl;
+  obj[1] = intl2.string(channelId(1233).t["MPp7+C"]);
+  const intl3 = channelId(1233).intl;
   obj = { helpArticle: null };
   const tmp3 = SecureFramesVerificationBottomSheetDefault;
-  obj[0] = channelId(9839).getSecureFramesHelpdeskArticle();
-  obj[2] = intl3.format(channelId(1236).t.wKxADe, obj);
+  obj[0] = channelId(9861).getSecureFramesHelpdeskArticle();
+  obj[2] = intl3.format(channelId(1233).t.wKxADe, obj);
   obj[3] = stateFromStores;
   obj[4] = callback;
   return <tmp3 helpArticle={null} />;

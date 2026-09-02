@@ -20,12 +20,12 @@ export default function isActivityJoinableOnCurrentPlatform(type) {
       let DESKTOP = constants2.IOS;
       let tmp9 = constants2;
     } else {
-      let tmp6Result = tmp6(1624);
+      let tmp6Result = tmp6(1623);
       if (tmp6Result.isMetaQuest()) {
         DESKTOP = constants2.META_QUEST;
         tmp9 = constants2;
       } else {
-        tmp6Result = tmp6(501);
+        tmp6Result = tmp6(1235);
         if (tmp6Result.isAndroid()) {
           DESKTOP = tmp8.ANDROID;
           tmp9 = tmp8;
@@ -64,11 +64,11 @@ export const getCurrentActivityGamePlatform = function getCurrentActivityGamePla
   if (obj.isIOS()) {
     let META_QUEST = constants2.IOS;
   } else {
-    let tmpResult = tmp(1624);
+    let tmpResult = tmp(1623);
     if (tmpResult.isMetaQuest()) {
       META_QUEST = constants2.META_QUEST;
     } else {
-      tmpResult = tmp(501);
+      tmpResult = tmp(1235);
       META_QUEST = tmpResult.isAndroid() ? tmp3.ANDROID : tmp3.DESKTOP;
     }
   }

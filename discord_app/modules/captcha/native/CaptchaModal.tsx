@@ -1,6 +1,6 @@
 // discord_app/modules/captcha/native/CaptchaModal.tsx
 import getSystemLocale from "../../../intl/index.native.tsx";
-import createStandardNavigationFactories from "../../../../_runtime/01500_createStandardNavigationFactories.js";
+import createStandardNavigationFactories from "../../../../_runtime/01499_createStandardNavigationFactories.js";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import Button from "../../../design/components/Button/native/Button.native.tsx";
@@ -43,7 +43,7 @@ export default function CaptchaModal(arg0) {
   } = arg0);
   let navigation;
   let callback;
-  const tmp2 = callback2(onReject(7717)());
+  const tmp2 = callback2(onReject(7726)());
   let obj = createStandardNavigationFactories;
   navigation = obj.useNavigation();
   const items = [navigation];
@@ -65,23 +65,23 @@ export default function CaptchaModal(arg0) {
     }
     return str;
   }, items);
-  callback = onReject(16866)({ onReject, analyticsType: memo });
+  callback = onReject(17102)({ onReject, analyticsType: memo });
   const effect = React.useEffect(() => {
     closure_4.dismiss();
   }, []);
   obj = { style: tmp2.contentContainer, spacing: 12, children: null };
   const items1 = [callback(AccountAgeTier10LargeBadge.DisguiseSpotIllustration, { scale: 0.5 }), ,];
   if (headerText == null) {
-    const intl = tmp3(1236).intl;
-    headerText = intl.string(tmp3(1236).t.FpoiHe);
+    const intl = tmp3(1233).intl;
+    headerText = intl.string(tmp3(1233).t.FpoiHe);
   }
   const items2 = [
     callback(Text.Text, { variant: "heading-xl/bold", accessibilityRole: "header", children: headerText }),
   ];
   obj = { variant: "text-md/medium", color: "text-subtle", style: tmp2.description, children: null };
   if (bodyText == null) {
-    const intl2 = tmp3(1236).intl;
-    bodyText = intl2.string(tmp3(1236).t["/CidxO"]);
+    const intl2 = tmp3(1233).intl;
+    bodyText = intl2.string(tmp3(1233).t["/CidxO"]);
   }
   obj1 = { startHeight: 900, startExpanded: true, children: null };
   let obj2 = { children: null };
@@ -150,7 +150,7 @@ export default function CaptchaModal(arg0) {
     },
     text: null,
   };
-  const intl3 = tmp3(1236).intl;
+  const intl3 = tmp3(1233).intl;
   obj3[2] = intl3.string(getSystemLocale.t["cY+Oob"]);
   items1[2] = callback(Button.Button, obj3);
   obj[2] = items1;

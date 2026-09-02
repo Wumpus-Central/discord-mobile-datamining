@@ -1,6 +1,6 @@
 // discord_app/modules/activities/openActivityShareLinkModal.native.tsx
 import set from "../../../_runtime/00002_set.js";
-import asyncRequireImpl from "../../../_runtime/02009_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/02008_asyncRequireImpl.js";
 import getBestActiveInput from "../../utils/native/ChatInputUtils.tsx";
 import _modDef4723 from "../../actions/ModalActionCreators.tsx";
 
@@ -13,7 +13,7 @@ export const openActivityShareLinkModal = function openActivityShareLinkModal(ar
   let obj = getBestActiveInput;
   obj.dismissKeyboard();
   obj = { applicationId, customId, linkId, message, onShare };
-  _modDef4723.pushLazy(asyncRequireImpl(14140, dependencyMap.paths), obj, ACTIVITY_SHARE_LINK_MODAL, {
+  _modDef4723.pushLazy(asyncRequireImpl(14363, dependencyMap.paths), obj, ACTIVITY_SHARE_LINK_MODAL, {
     presentation: "modal",
   });
 };

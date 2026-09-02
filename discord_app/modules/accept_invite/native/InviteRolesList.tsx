@@ -38,8 +38,8 @@ export default function InviteRolesList(invite) {
       let obj = { spacing: 4, style: null, children: null };
       obj[1] = invite.style;
       obj = { variant: "text-sm/semibold", color: "text-default", children: null };
-      const intl = guild(1236).intl;
-      obj[2] = intl.string(guild(1236).t.stcSfI);
+      const intl = guild(1233).intl;
+      obj[2] = intl.string(guild(1233).t.stcSfI);
       const items1 = [callback(guild(4474).Text, obj)];
       obj = { style: null, children: null };
       obj[0] = tmp.rolesRow;

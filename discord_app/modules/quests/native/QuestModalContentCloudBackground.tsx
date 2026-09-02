@@ -81,7 +81,7 @@ export default function QuestModalContentCloudBackground(align) {
     const obj2 = { style: null, source: null, resizeMode: null };
     const items2 = [isThemeDarkResult ? tmp.cloudsImage : tmp.cloudsImageLight, imgStyle];
     obj2[0] = items2;
-    obj2[1] = importDefault(isThemeDarkResult ? 14729 : 14730);
+    obj2[1] = importDefault(isThemeDarkResult ? 14955 : 14956);
     obj2[2] = str2;
     items1[1] = tmp6(preloadDefault, obj2);
     obj[1] = items1;

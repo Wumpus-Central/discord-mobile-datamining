@@ -667,13 +667,13 @@ export const calculateLocaleOptions = function calculateLocaleOptions() {
   const mapped = availableLocales.map((value) => {
     value = value.value;
     if ("en-US" === value) {
-      let obj = { id: null, value: null, label: null, image: "a" };
+      let obj = { id: null, value: null, label: null, image: "Array" };
       obj[0] = value;
       obj[1] = value;
-      const intl = callback(1236).intl;
-      obj[2] = intl.string(callback(1236).t.WKEPHR);
+      const intl = callback(1233).intl;
+      obj[2] = intl.string(callback(1233).t.WKEPHR);
     } else {
-      obj = { id: null, value: null, label: null, image: "a" };
+      obj = { id: null, value: null, label: null, image: "Array" };
       obj[0] = value;
       obj[1] = value;
       obj[2] = tmp;

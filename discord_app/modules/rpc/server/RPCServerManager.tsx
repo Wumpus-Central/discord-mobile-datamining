@@ -1,6 +1,6 @@
 // discord_app/modules/rpc/server/RPCServerManager.tsx
-import set2 from "../../../utils/PlatformUtils.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
+import set2 from "../../../utils/PlatformUtils.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../frames/FramesStore.tsx";
 import closure_5 from "../../quests/QuestStore.tsx";
@@ -619,20 +619,20 @@ prototype["init"] = function init() {
   const self = this;
   this.rpcServer.getCurrentUser = () => currentUser.getCurrentUser();
   this.rpcServer.onConnect = (app_id) => {
-    let obj = callback(709);
+    let obj = callback(706);
     obj = { type: "RPC_APP_CONNECTED", socketId: app_id.id, application: app_id.application, source: app_id.source };
     obj.dispatch(obj);
     obj = { app_id: app_id.application.id, transport: app_id.transport };
-    callback(698).track(constants.AUTHORIZED_APP_CONNECTED, obj);
+    callback(695).track(constants.AUTHORIZED_APP_CONNECTED, obj);
   };
   this.rpcServer.onDisconnect = (id, reason) => {
-    let obj = callback(14113);
+    let obj = callback(14336);
     obj.releaseSocket(id.id);
     obj = { type: "RPC_APP_DISCONNECTED", socketId: id.id, application: id.application, source: id.source, reason };
-    callback(709).dispatch(obj);
+    callback(706).dispatch(obj);
   };
   const items = [closure_6, closure_7, closure_10, closure_15, closure_9, closure_11];
-  const batchedStoreListener = new self(589).BatchedStoreListener(items.concat(this.stores), () => {
+  const batchedStoreListener = new self(586).BatchedStoreListener(items.concat(this.stores), () => {
     const result = closure_1_1(closure_1_2[21]).reconcileParticipants();
     const rpcServer = self.rpcServer;
     rpcServer.updateSubscriptions();

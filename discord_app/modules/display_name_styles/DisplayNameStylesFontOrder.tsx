@@ -17,7 +17,7 @@ const result = require("set").fileFinishedImporting("modules/display_name_styles
 
 export const useVisibleFontOrder = function useVisibleFontOrder() {
   isDisplayNameStylesFlywheelSettersEnabled =
-    isDisplayNameStylesFlywheelSettersEnabled(8925).useIsDisplayNameStylesFlywheelSettersEnabled("font-order");
+    isDisplayNameStylesFlywheelSettersEnabled(8939).useIsDisplayNameStylesFlywheelSettersEnabled("font-order");
   items = [isDisplayNameStylesFlywheelSettersEnabled];
   return React.useMemo(() => (isDisplayNameStylesFlywheelSettersEnabled ? closure_1_4 : closure_1_3), items);
 };

@@ -72,8 +72,8 @@ export default function VoiceUserNameItem(arg0) {
   const items1 = [nick];
   if (isGuest) {
     const obj2 = { variant: "text-sm/normal", lineClamp: 1, color: "status-positive", children: null };
-    const intl = tmp5(1236).intl;
-    const items2 = ["\u00A0", intl.string(tmp5(1236).t["pFO/Ph"])];
+    const intl = tmp5(1233).intl;
+    const items2 = ["\u00A0", intl.string(tmp5(1233).t["pFO/Ph"])];
     obj2[3] = items2;
     isGuest = tmp18(tmp5(4474).Text, obj2);
   }
@@ -90,7 +90,7 @@ export default function VoiceUserNameItem(arg0) {
     obj3[1] = tmp.tag;
     const obj4 = { userId: null };
     obj4[0] = user.id;
-    obj3[2] = callback2(tmp2(15714), obj4);
+    obj3[2] = callback2(tmp2(15945), obj4);
     tmp12 = callback2(tmp19, obj3);
   }
   items3[1] = tmp12;

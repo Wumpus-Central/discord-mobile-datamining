@@ -46,8 +46,8 @@ prototype["initialize"] = function initialize() {
   let value = Storage.get(LibraryApplicationStore);
   if (null != value) {
     if (null == value.activeLaunchOptionIds) {
-      const Storage2 = tmp2(595).Storage;
-      const Storage3 = tmp2(595).Storage;
+      const Storage2 = tmp2(592).Storage;
+      const Storage3 = tmp2(592).Storage;
       value = Storage3.get(tmp4);
       if (value == null) {
         value = {};
@@ -60,8 +60,8 @@ prototype["initialize"] = function initialize() {
       activeLaunchOptionIds = value.activeLaunchOptionIds;
     }
     if (null == value.activeLibraryApplicationBranchIds) {
-      const Storage4 = tmp2(595).Storage;
-      const Storage5 = tmp2(595).Storage;
+      const Storage4 = tmp2(592).Storage;
+      const Storage5 = tmp2(592).Storage;
       let value1 = Storage5.get(tmp4);
       if (value1 == null) {
         value1 = {};

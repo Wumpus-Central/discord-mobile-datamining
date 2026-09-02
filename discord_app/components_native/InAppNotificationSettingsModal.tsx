@@ -15,7 +15,7 @@ import jsxProd from "../../_runtime/react/00021_jsxProd.js";
 require = arg1;
 function ConnectedInAppNotificationSettingsScreen(channel) {
   channel = channel.channel;
-  let obj = channel(589);
+  let obj = channel(586);
   const items = [closure_7];
   obj = {
     channel,
@@ -100,7 +100,9 @@ prototype["renderChannelNotificationSettings"] = function renderChannelNotificat
     } else {
       if (tmp.GUILD_TEXT !== type) {
         if (tmp.GUILD_ANNOUNCEMENT !== type) {
-          return null;
+          if (tmp.GUILD_APP !== type) {
+            return null;
+          }
         }
       }
       return self.renderTextChannelNotificationSettings();
@@ -155,7 +157,7 @@ const memoResult = importAllResult.memo((channelId) => {
     obj[0] = obj;
     return obj;
   }, items);
-  return callback(channelId(6008).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
+  return callback(channelId(6016).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
 });
 let result = require("set").fileFinishedImporting("components_native/InAppNotificationSettingsModal.tsx");
 

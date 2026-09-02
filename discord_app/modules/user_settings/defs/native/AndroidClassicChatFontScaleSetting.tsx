@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/defs/native/AndroidClassicChatFontScaleSetting.tsx
 import set from "../../../../../_runtime/00002_set.js";
-import set2 from "../../../../utils/PlatformUtils.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import isIterable from "../../../../../_runtime/04106_isIterable.js";
+import set2 from "../../../../utils/PlatformUtils.tsx";
+import isIterable from "../../../../../_runtime/04105_isIterable.js";
 import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
 import DEFAULT_FONT_SCALE_STORE_STATE from "../../appearance/native/FontScaleStore.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";

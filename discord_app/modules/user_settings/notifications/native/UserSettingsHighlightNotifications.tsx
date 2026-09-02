@@ -18,7 +18,7 @@ function Row(guildId) {
     const NotificationLabel = guildId(closure_1_2[7]).NotificationLabel;
     const result = obj.updateGuildNotificationSettings(guildId, obj, NotificationLabel.highlights(!arg0));
   }, items);
-  let obj = guildId(589);
+  let obj = guildId(586);
   const items1 = [closure_6, closure_4];
   const items2 = [guildId];
   const stateFromStoresObject = obj.useStateFromStoresObject(
@@ -57,7 +57,7 @@ function Row(guildId) {
     obj[3] = callback;
     obj[4] = isStart;
     obj[5] = isEnd;
-    return jsx(tmp2(5993).TableSwitchRow, {
+    return jsx(tmp2(6001).TableSwitchRow, {
       label: null,
       icon: null,
       value: null,
@@ -73,7 +73,7 @@ let result = require("set").fileFinishedImporting(
 );
 
 export default function UserSettingsHighlightNotifications() {
-  let obj = stateFromStoresArray(589);
+  let obj = stateFromStoresArray(586);
   const items = [closure_5];
   stateFromStoresArray = obj.useStateFromStoresArray(items, () => flattenedGuildIds.getFlattenedGuildIds());
   [][0] = stateFromStoresArray;
@@ -81,7 +81,7 @@ export default function UserSettingsHighlightNotifications() {
   if (0 !== stateFromStoresArray.length) {
     obj = { children: null };
     obj[0] = tmp3;
-    tmp4 = jsx(stateFromStoresArray(8363).Form, { children: null });
+    tmp4 = jsx(stateFromStoresArray(8372).Form, { children: null });
   }
   return tmp4;
 }

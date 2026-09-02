@@ -1,9 +1,9 @@
 // discord_app/modules/quests/native/QuestActivityUnenrolledModal.tsx
-import PlatformTypes from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
+import PlatformTypes from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import HeaderActionButton from "../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
-import registerAssetDefault from "../../../../_runtime/07764_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/07773_registerAsset.js";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_5 from "../../../../_runtime/00019_noop.js";
@@ -23,9 +23,9 @@ function QuestActivityUnenrolledModalInner(quest) {
   let trackQuestContentClickedWithImpression;
   let obj = quest(4413);
   const theme = obj.useTheme();
-  obj1 = quest(1364);
+  obj1 = quest(1363);
   const tmp4 = callback2(obj1.isThemeDark(theme));
-  let obj2 = quest(589);
+  let obj2 = quest(586);
   const items = [closure_9];
   const tmp5 = trackQuestContentClickedWithImpression(
     React.useState(obj2.useStateFromStores(items, () => state.getState().autoEnroll)),
@@ -33,24 +33,24 @@ function QuestActivityUnenrolledModalInner(quest) {
   );
   first = tmp5[0];
   dependencyMap = tmp5[1];
-  let obj3 = quest(5959);
-  let obj4 = quest(7469);
+  let obj3 = quest(5967);
+  let obj4 = quest(7479);
   getOrFetchApplication = obj3.useGetOrFetchApplication(obj4.getActivityApplicationId(quest));
-  let obj5 = quest(11083);
+  let obj5 = quest(11303);
   const questTaskDetails = obj5.useQuestTaskDetails(quest);
-  let obj6 = quest(11342);
+  let obj6 = quest(11565);
   obj = {
     quest,
     taskDetails: questTaskDetails,
     location: QuestsExperimentLocations.QUEST_ACTIVITY_UNENROLLED_MODAL,
-    sourceQuestContent: quest(5390).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL,
+    sourceQuestContent: quest(5398).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL,
   };
   const items1 = [getOrFetchApplication];
   const questsInstructionsToWinReward = obj6.useQuestsInstructionsToWinReward(obj);
   const memo = React.useMemo(() => {
     let applicationIconURL = null;
     if (null != getOrFetchApplication) {
-      let obj = first(1431);
+      let obj = first(1430);
       obj = { id: null, icon: null, size: 87 };
       ({ id: obj2[0], icon: obj2[1] } = getOrFetchApplication);
       applicationIconURL = obj.getApplicationIconURL(obj);
@@ -88,13 +88,13 @@ function QuestActivityUnenrolledModalInner(quest) {
             } else {
               closure_0 = tmp4;
               obj1 = { questContent: null, questContentCTA: null, sourceQuestContent: null };
-              obj1[0] = closure_1_0(5390).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL;
-              obj1[1] = closure_1_0(7473).QuestContentCTA.START_QUEST;
-              obj1[2] = closure_1_0(5390).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL;
+              obj1[0] = closure_1_0(5398).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL;
+              obj1[1] = closure_1_0(7483).QuestContentCTA.START_QUEST;
+              obj1[2] = closure_1_0(5398).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL;
               v0 = 1;
               dependencyMap = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = closure_1_0(10913).enrollInQuest(closure_1_0.id, obj1);
+              obj2[0] = closure_1_0(11133).enrollInQuest(closure_1_0.id, obj1);
               return obj2;
             }
           } else if (arg0 === 1) {
@@ -122,19 +122,19 @@ function QuestActivityUnenrolledModalInner(quest) {
   let obj8 = quest(4205);
   const checkboxA11yNative = obj8.useCheckboxA11yNative({ checked: first });
   ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
-  let obj9 = quest(11083);
+  let obj9 = quest(11303);
   const isQuestAccessSuspended = obj9.useIsQuestAccessSuspended();
-  let obj10 = quest(11341);
+  let obj10 = quest(11564);
   trackQuestContentClickedWithImpression = obj10.useTrackQuestContentClickedWithImpression();
   const items3 = [quest.id, trackQuestContentClickedWithImpression];
   const callback1 = React.useCallback(() => {
     trackQuestContentClickedWithImpression({
       questId: quest.id,
-      questContent: quest(5390).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL,
-      questContentCTA: quest(7473).QuestContentCTA.QUEST_ACCESS_SUSPENDED,
-      sourceQuestContent: quest(5390).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL,
+      questContent: quest(5398).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL,
+      questContentCTA: quest(7483).QuestContentCTA.QUEST_ACCESS_SUSPENDED,
+      sourceQuestContent: quest(5398).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL,
     });
-    first(14719)();
+    first(14945)();
   }, items3);
   obj = { direction: "vertical", align: "center", justify: "center", style: tmp4.container, children: null };
   obj1 = { style: tmp4.content, children: null };
@@ -149,12 +149,12 @@ function QuestActivityUnenrolledModalInner(quest) {
     obj6[0] = memo;
     obj5[0] = obj6;
     obj5[1] = tmp4.appIcon;
-    obj4[1] = tmp18(first(5493), obj5);
+    obj4[1] = tmp18(first(5501), obj5);
     tmp18Result = tmp18(tmp17, obj4);
   }
   const items4 = [tmp18Result];
   obj8 = { quest, height: 87, width: 87, style: tmp4.questRewardTile };
-  items4[1] = closure_11(closure_7, { style: tmp4.rewardTileContainer, children: closure_11(first(11337), obj8) });
+  items4[1] = closure_11(closure_7, { style: tmp4.rewardTileContainer, children: closure_11(first(11560), obj8) });
   obj3[1] = items4;
   obj2[1] = closure_12(closure_7, obj3);
   const items5 = [closure_11(closure_7, obj2)];
@@ -165,13 +165,13 @@ function QuestActivityUnenrolledModalInner(quest) {
     style: { textAlign: "center" },
     children: null,
   };
-  const intl = tmp(1236).intl;
-  obj10[3] = intl.string(quest(1236).t.IrNgN4);
+  const intl = tmp(1233).intl;
+  obj10[3] = intl.string(quest(1233).t.IrNgN4);
   const items6 = [closure_11(quest(4474).Text, obj10)];
   const obj11 = { variant: "text-sm/normal", color: "text-subtle", style: { textAlign: "center" }, children: null };
-  const intl2 = tmp(1236).intl;
+  const intl2 = tmp(1233).intl;
   const items7 = [
-    intl2.format(quest(1236).t.V3NSJx, { questName: quest.config.messages.questName }),
+    intl2.format(quest(1233).t.V3NSJx, { questName: quest.config.messages.questName }),
     "\u00A0",
     questsInstructionsToWinReward,
   ];
@@ -184,8 +184,8 @@ function QuestActivityUnenrolledModalInner(quest) {
   const obj13 = { style: tmp4.footer, children: null };
   const obj14 = { style: tmp4.buttonsContainer, children: null };
   const obj15 = { size: "lg", text: null, onPress: null, disabled: null, onPressDisabled: null };
-  const intl3 = tmp(1236).intl;
-  obj15[1] = intl3.string(quest(1236).t.l7E81v);
+  const intl3 = tmp(1233).intl;
+  obj15[1] = intl3.string(quest(1233).t.l7E81v);
   obj15[2] = callback;
   obj15[3] = isQuestAccessSuspended;
   let tmp21;
@@ -195,10 +195,10 @@ function QuestActivityUnenrolledModalInner(quest) {
   obj15[4] = tmp21;
   const items9 = [closure_11(quest(4928).Button, obj15)];
   const obj16 = { size: "lg", text: null, onPress: null, variant: "secondary" };
-  const intl4 = tmp(1236).intl;
-  obj16[1] = intl4.string(quest(1236).t.fyT2ol);
+  const intl4 = tmp(1233).intl;
+  obj16[1] = intl4.string(quest(1233).t.fyT2ol);
   obj16[2] = function onPress() {
-    const result = quest(10913).dismissQuestActivityModal(quest.id);
+    const result = quest(11133).dismissQuestActivityModal(quest.id);
     let arr = first(4723);
     arr = arr.pop();
   };
@@ -213,18 +213,18 @@ function QuestActivityUnenrolledModalInner(quest) {
     style: null,
     children: null,
   };
-  const intl5 = tmp(1236).intl;
-  obj17[1] = intl5.string(quest(1236).t["931n1T"]);
+  const intl5 = tmp(1233).intl;
+  obj17[1] = intl5.string(quest(1233).t["931n1T"]);
   obj17[2] = accessibilityState;
   obj17[3] = function onPress() {
     dependencyMap(!first);
-    quest(10913).setAutoEnroll(!first);
+    quest(11133).setAutoEnroll(!first);
   };
   obj17[4] = { alignSelf: "center", flexDirection: "row", alignItems: "center", gap: 8 };
-  const items11 = [closure_11(quest(7684).FormCheckbox, { checked: first })];
+  const items11 = [closure_11(quest(7693).FormCheckbox, { checked: first })];
   const obj18 = { variant: "text-sm/normal", color: "text-subtle", children: null };
-  const intl6 = tmp(1236).intl;
-  obj18[2] = intl6.string(quest(1236).t["931n1T"]);
+  const intl6 = tmp(1233).intl;
+  obj18[2] = intl6.string(quest(1233).t["931n1T"]);
   items11[1] = closure_11(quest(4474).Text, obj18);
   obj17[5] = items11;
   items10[1] = closure_12(closure_6, obj17);
@@ -321,12 +321,12 @@ let closure_14 = createCacheKey.createStyles((arg0) => {
         transform: null,
         overflow: "hidden",
       };
-      obj9[0] = tmp(712).radii.xl;
+      obj9[0] = tmp(709).radii.xl;
       const items2 = [{ rotate: "-12.41deg" }];
       obj9[4] = items2;
       obj[4] = obj9;
       const obj10 = { width: 87, height: 87, borderRadius: null };
-      obj10[2] = tmp(712).radii.xl - 2.18;
+      obj10[2] = tmp(709).radii.xl - 2.18;
       obj[5] = obj10;
       const obj11 = {
         borderWidth: 2.18,
@@ -336,18 +336,18 @@ let closure_14 = createCacheKey.createStyles((arg0) => {
         transform: null,
         overflow: "hidden",
       };
-      obj11[2] = tmp(712).radii.xl;
+      obj11[2] = tmp(709).radii.xl;
       const items3 = [{ translateX: -10 }, { rotate: "7.81deg" }];
       obj11[4] = items3;
       obj[6] = obj11;
       const obj12 = { borderRadius: null };
-      obj12[0] = tmp(712).radii.xl - 2.18;
+      obj12[0] = tmp(709).radii.xl - 2.18;
       obj[7] = obj12;
       const obj13 = { alignItems: "center", gap: null };
-      obj13[1] = tmp(712).space.PX_8;
+      obj13[1] = tmp(709).space.PX_8;
       obj[8] = obj13;
       const obj14 = { flexDirection: "column", gap: null, marginBottom: 20 };
-      obj14[1] = tmp(712).space.PX_8;
+      obj14[1] = tmp(709).space.PX_8;
       obj[9] = obj14;
       obj[10] = { flexDirection: "column", width: "100%", marginTop: "auto" };
       return obj;
@@ -360,7 +360,7 @@ let result = require("set").fileFinishedImporting("modules/quests/native/QuestAc
 export default function QuestActivityUnenrolledModal(questId) {
   questId = questId.questId;
   let stateFromStores;
-  let obj = questId(589);
+  let obj = questId(586);
   const items = [closure_8];
   stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getQuest(questId));
   if (null == stateFromStores) {
@@ -374,8 +374,8 @@ export default function QuestActivityUnenrolledModal(questId) {
     };
     obj[2] = function headerTitle() {
       const obj = { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", children: null };
-      const intl = questId(1236).intl;
-      obj[2] = intl.string(questId(1236).t.l7E81v);
+      const intl = questId(1233).intl;
+      obj[2] = intl.string(questId(1233).t.l7E81v);
       return callback(questId(4474).Text, obj);
     };
     obj[3] = function render() {
@@ -392,7 +392,7 @@ export default function QuestActivityUnenrolledModal(questId) {
     obj1 = { screens: null, initialRouteName: null };
     obj1[0] = obj;
     obj1[1] = constants.MAIN;
-    return callback(tmp(11501).Modal, obj1);
+    return callback(tmp(11724).Modal, obj1);
   }
   tmp = questId;
 }

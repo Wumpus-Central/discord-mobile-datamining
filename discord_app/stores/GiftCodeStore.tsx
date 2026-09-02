@@ -1,7 +1,7 @@
 // discord_app/stores/GiftCodeStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
-import hooksDefault from "../../_runtime/04075_hooks.js";
+import hooksDefault from "../../_runtime/04074_hooks.js";
 import _resolveGiftCode from "../utils/GiftCodeUtils.tsx";
 import closure_3 from "../records/GiftCodeRecord.tsx";
 import ME from "../Constants.tsx";

@@ -122,7 +122,7 @@ export const InlineFrameView = function InlineFrameView(frameId) {
   frameId = frameId.frameId;
   let tmp = null;
   const merged = Object.assign(frameId, Object.create(null));
-  let obj = frameId(589);
+  let obj = frameId(586);
   const items = [closure_5];
   const items1 = [frameId];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_6(closure_1_5.getFrame(frameId)), items1);

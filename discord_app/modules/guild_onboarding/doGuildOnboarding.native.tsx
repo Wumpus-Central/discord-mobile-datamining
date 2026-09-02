@@ -1,5 +1,5 @@
 // discord_app/modules/guild_onboarding/doGuildOnboarding.native.tsx
-import _mod5465 from "../../../_runtime/metro/05465__.js";
+import _mod5473 from "../../../_runtime/metro/05473__.js";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { NativeModules } from "../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../stores/SelectedGuildStore.tsx";
@@ -10,7 +10,7 @@ import { waitForOnboardingCompletion } from "doGuildOnboardingHelpers.tsx";
 
 require = arg1;
 function getBaseAnimationData() {
-  return JSON.parse(JSON.stringify(_mod5465));
+  return JSON.parse(JSON.stringify(_mod5473));
 }
 function _doGuildOnboarding() {
   let self = this;
@@ -52,7 +52,7 @@ function _doGuildOnboarding() {
               let lib;
               c5 = 1;
               c6 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -71,7 +71,7 @@ function _doGuildOnboarding() {
               c5 = 2;
               c6 = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = guildId(5457).waitForGuild(closure_0);
+              obj2[0] = guildId(5465).waitForGuild(closure_0);
               return obj2;
             }
           } else {
@@ -93,7 +93,7 @@ function _doGuildOnboarding() {
                   hasItem = features.has(constants.COMMUNITY);
                 }
                 if (hasItem) {
-                  let obj5 = guildId(5466);
+                  let obj5 = guildId(5474);
                   c5 = 3;
                   c6 = 1;
                   const obj4 = { value: null, done: false };
@@ -263,7 +263,7 @@ function _fetchLandingAsset() {
           } else {
             dependencyMap = arg1;
             const _HermesInternal = HermesInternal;
-            const tmp12 = callback(5470);
+            const tmp12 = callback(5478);
             c3 = 0;
             c5 = 3;
             obj = { value: null, done: true };

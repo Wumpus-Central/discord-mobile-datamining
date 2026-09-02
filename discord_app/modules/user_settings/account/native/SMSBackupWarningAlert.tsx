@@ -17,10 +17,10 @@ export default function SMSBackupWarningAlert(onConfirm) {
   onConfirm = onConfirm.onConfirm;
   const tmp = callback3();
   let obj = { cancelText: null, confirmText: null, onConfirm: null, onCancel: null, children: null };
-  const intl = onConfirm(1236).intl;
-  obj[0] = intl.string(onConfirm(1236).t["ETE/oC"]);
-  const intl2 = onConfirm(1236).intl;
-  obj[1] = intl2.string(onConfirm(1236).t.N86XcP);
+  const intl = onConfirm(1233).intl;
+  obj[0] = intl.string(onConfirm(1233).t["ETE/oC"]);
+  const intl2 = onConfirm(1233).intl;
+  obj[1] = intl2.string(onConfirm(1233).t.N86XcP);
   obj[2] = function onConfirm() {
     onConfirm();
     closure_1_1(closure_1_2[5]).close();
@@ -35,12 +35,12 @@ export default function SMSBackupWarningAlert(onConfirm) {
     color: "mobile-text-heading-primary",
     children: null,
   };
-  const intl3 = onConfirm(1236).intl;
-  obj[4] = intl3.string(onConfirm(1236).t.Ed4XQB);
+  const intl3 = onConfirm(1233).intl;
+  obj[4] = intl3.string(onConfirm(1233).t.Ed4XQB);
   const items = [callback(onConfirm(4474).Text, obj)];
   obj = { style: tmp.body, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl4 = onConfirm(1236).intl;
-  obj[3] = intl4.string(onConfirm(1236).t.EDU2Eg);
+  const intl4 = onConfirm(1233).intl;
+  obj[3] = intl4.string(onConfirm(1233).t.EDU2Eg);
   items[1] = callback(onConfirm(4474).Text, obj);
   obj[4] = items;
   return callback2(componentDidMountDefault, obj);

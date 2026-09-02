@@ -121,7 +121,7 @@ function _getSafetyHubData() {
                   expressive_modal_v2_enabled = false;
                 }
                 obj[7] = expressive_modal_v2_enabled;
-                v1(709).dispatch(obj);
+                v1(706).dispatch(obj);
               })
               .catch((body) => {
                 let str;
@@ -134,7 +134,7 @@ function _getSafetyHubData() {
                 if (str == null) {
                   str = "Unknown error";
                 }
-                v1(709).dispatch({ type: "SAFETY_HUB_FETCH_FAILURE", error: str });
+                v1(706).dispatch({ type: "SAFETY_HUB_FETCH_FAILURE", error: str });
               });
             v02 = 1;
             v0 = 1;
@@ -195,7 +195,7 @@ function _getSafetyHubData() {
                 expressive_modal_v2_enabled = false;
               }
               obj[7] = expressive_modal_v2_enabled;
-              v1(709).dispatch(obj);
+              v1(706).dispatch(obj);
             });
           }
         } else if (arg0 === 1) {
@@ -312,7 +312,7 @@ function _getSafetyHubDataForClassification() {
                           items = [first];
                         }
                         found.flagged_content = items;
-                        obj3 = callback(8689);
+                        obj3 = callback(8704);
                       }
                     }
                     let obj = {
@@ -328,10 +328,10 @@ function _getSafetyHubDataForClassification() {
                     obj[3] = is_dsa_eligible;
                     obj[4] = username;
                     obj[5] = is_appeal_eligible;
-                    v3(709).dispatch(obj);
-                    const obj4 = v3(709);
+                    v3(706).dispatch(obj);
+                    const obj4 = v3(706);
                   } else {
-                    obj = v3(709);
+                    obj = v3(706);
                     obj = {
                       type: "SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE",
                       error: "Classification not found.",
@@ -342,7 +342,7 @@ function _getSafetyHubDataForClassification() {
                   }
                 })
                 .catch((body) => {
-                  let obj = v3(709);
+                  let obj = v3(706);
                   let str;
                   if (body != null) {
                     body = body.body;
@@ -381,7 +381,7 @@ function _getSafetyHubDataForClassification() {
                         items = [first];
                       }
                       found.flagged_content = items;
-                      obj3 = callback(8689);
+                      obj3 = callback(8704);
                     }
                   }
                   let obj = {
@@ -397,10 +397,10 @@ function _getSafetyHubDataForClassification() {
                   obj[3] = is_dsa_eligible;
                   obj[4] = username;
                   obj[5] = is_appeal_eligible;
-                  v3(709).dispatch(obj);
-                  const obj4 = v3(709);
+                  v3(706).dispatch(obj);
+                  const obj4 = v3(706);
                 } else {
-                  obj = v3(709);
+                  obj = v3(706);
                   obj = {
                     type: "SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE",
                     error: "Classification not found.",
@@ -481,7 +481,7 @@ function _requestReview() {
                 result = closure_1_8.SAFETY_HUB_REQUEST_REVIEW(tmp21);
               }
               if (null != suspendedUserToken) {
-                const HTTP2 = callback(530).HTTP;
+                const HTTP2 = callback(527).HTTP;
                 obj1 = { url: null, body: null, rejectWithError: null };
                 obj1[0] = result;
                 const obj2 = { signal: null, user_input: null, token: null };
@@ -489,24 +489,24 @@ function _requestReview() {
                 obj2[1] = tmp23;
                 obj2[2] = suspendedUserToken;
                 obj1[1] = obj2;
-                result = callback(530).rejectWithMigratedError();
+                result = callback(527).rejectWithMigratedError();
                 obj1[2] = result;
                 let putResult = HTTP2.put(obj1);
-                const obj7 = callback(530);
+                const obj7 = callback(527);
               } else {
-                const HTTP = callback(530).HTTP;
+                const HTTP = callback(527).HTTP;
                 let obj3 = { url: null, body: null, rejectWithError: null };
                 obj3[0] = result;
                 const obj4 = { signal: null, user_input: null };
                 obj4[0] = tmp22;
                 obj4[1] = tmp23;
                 obj3[1] = obj4;
-                obj3 = callback(530);
+                obj3 = callback(527);
                 obj3[2] = obj3.rejectWithMigratedError();
                 putResult = HTTP.put(obj3);
               }
-              callback2(709).dispatch({ type: "SAFETY_HUB_REQUEST_REVIEW_START" });
-              const obj8 = callback2(709);
+              callback2(706).dispatch({ type: "SAFETY_HUB_REQUEST_REVIEW_START" });
+              const obj8 = callback2(706);
               putResult
                 .then(() => {
                   let obj = closure_1_1(closure_1_2[5]);
@@ -596,18 +596,18 @@ function _requestSuspendedUserAgeVerification() {
               obj[0] = arg1;
               return obj;
             } else {
-              v0(709).dispatch({ type: "SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_START" });
+              v0(706).dispatch({ type: "SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_START" });
               const suspendedUserToken = closure_1_4.getSuspendedUserToken();
-              const HTTP = callback(530).HTTP;
+              const HTTP = callback(527).HTTP;
               obj1 = { url: null, body: null, rejectWithError: null };
               obj1[0] = closure_1_8.SAFETY_HUB_REQUEST_SUSPENDED_AGE_VERIFICATION;
               const obj2 = { token: null, from_classification_id: null };
               obj2[0] = suspendedUserToken;
               obj2[1] = callback;
               obj1[1] = obj2;
-              const obj5 = v0(709);
-              obj1[2] = callback(530).rejectWithMigratedError();
-              const obj8 = callback(530);
+              const obj5 = v0(706);
+              obj1[2] = callback(527).rejectWithMigratedError();
+              const obj8 = callback(527);
               const postResult = HTTP.post(obj1);
               dependencyMap = 1;
               v0 = 1;
@@ -615,7 +615,7 @@ function _requestSuspendedUserAgeVerification() {
               obj3[0] = HTTP.post(obj1)
                 .then((body) => {
                   ({ verification_request_id, verification_webview_url } = body.body);
-                  v3(709).dispatch({
+                  v3(706).dispatch({
                     type: "SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_SUCCESS",
                     verificationRequestId: verification_request_id,
                     verificationWebviewUrl: verification_webview_url,
@@ -632,7 +632,7 @@ function _requestSuspendedUserAgeVerification() {
                   if (str == null) {
                     str = "Unknown error";
                   }
-                  v3(709).dispatch({ type: "SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_FAILURE", error: str });
+                  v3(706).dispatch({ type: "SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_FAILURE", error: str });
                 });
               return obj3;
             }

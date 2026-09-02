@@ -1,23 +1,23 @@
 // discord_app/modules/media/native/AttachmentPreview.tsx
-import set from "../../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 import Button from "../../../design/void/native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import preloadDefault from "../../../components_native/common/FastImage.tsx";
-import registerAssetDefault from "../../../../_runtime/10280_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/10281_registerAsset.js";
-import registerAssetDefault3 from "../../../../_runtime/10282_registerAsset.js";
-import registerAssetDefault4 from "../../../../_runtime/10283_registerAsset.js";
-import registerAssetDefault5 from "../../../../_runtime/10284_registerAsset.js";
-import registerAssetDefault6 from "../../../../_runtime/10285_registerAsset.js";
-import registerAssetDefault7 from "../../../../_runtime/10286_registerAsset.js";
-import registerAssetDefault8 from "../../../../_runtime/10287_registerAsset.js";
-import registerAssetDefault9 from "../../../../_runtime/10288_registerAsset.js";
-import registerAssetDefault10 from "../../../../_runtime/10289_registerAsset.js";
-import registerAssetDefault11 from "../../../../_runtime/10290_registerAsset.js";
-import registerAssetDefault12 from "../../../../_runtime/10291_registerAsset.js";
-import registerAssetDefault13 from "../../../../_runtime/10292_registerAsset.js";
-import registerAssetDefault14 from "../../../../_runtime/10293_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/10302_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/10303_registerAsset.js";
+import registerAssetDefault3 from "../../../../_runtime/10304_registerAsset.js";
+import registerAssetDefault4 from "../../../../_runtime/10305_registerAsset.js";
+import registerAssetDefault5 from "../../../../_runtime/10306_registerAsset.js";
+import registerAssetDefault6 from "../../../../_runtime/10307_registerAsset.js";
+import registerAssetDefault7 from "../../../../_runtime/10308_registerAsset.js";
+import registerAssetDefault8 from "../../../../_runtime/10309_registerAsset.js";
+import registerAssetDefault9 from "../../../../_runtime/10310_registerAsset.js";
+import registerAssetDefault10 from "../../../../_runtime/10311_registerAsset.js";
+import registerAssetDefault11 from "../../../../_runtime/10312_registerAsset.js";
+import registerAssetDefault12 from "../../../../_runtime/10313_registerAsset.js";
+import registerAssetDefault13 from "../../../../_runtime/10314_registerAsset.js";
+import registerAssetDefault14 from "../../../../_runtime/10315_registerAsset.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
@@ -153,12 +153,12 @@ let closure_13 = importAllResult.memo((borderRadius) => {
       isIOSResult = uri.startsWith("ph://");
     }
     if (!isIOSResult) {
-      let isAndroidResult = tmp2(500).isAndroid();
+      let isAndroidResult = tmp2(1234).isAndroid();
       if (isAndroidResult) {
         isAndroidResult = uri.startsWith("content://");
       }
       isIOSResult = isAndroidResult;
-      const tmp2Result = tmp2(500);
+      const tmp2Result = tmp2(1234);
     }
     isMatch = isIOSResult;
     const obj4 = set;
@@ -250,10 +250,10 @@ export default function AttachmentPreview(height) {
           const obj3 = { uri: null };
           obj3[0] = uri;
           obj1[1] = obj3;
-          obj[1] = callback(tmp7(8602).VideoComponent, obj1);
+          obj[1] = callback(tmp7(8617).VideoComponent, obj1);
           tmp9 = callback(closure_5, obj);
         }
-        tmp7Result = tmp7(500);
+        tmp7Result = tmp7(1234);
       }
       tmp8 = dependencyMap;
     } else {
@@ -275,7 +275,7 @@ export default function AttachmentPreview(height) {
       const obj6 = { style: null, children: null };
       videoIcon = videoIcon.videoIcon;
       obj6[0] = videoIcon;
-      CirclePlayIcon = CirclePlayIcon(10213).CirclePlayIcon;
+      CirclePlayIcon = CirclePlayIcon(10235).CirclePlayIcon;
       tmp6 = callback(CirclePlayIcon, { size: "md", color: "white", secondaryColor: "black" });
       obj6[1] = tmp6;
       items[1] = callback(closure_5, obj6);

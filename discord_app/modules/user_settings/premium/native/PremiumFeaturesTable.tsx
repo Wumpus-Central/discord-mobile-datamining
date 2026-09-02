@@ -5,8 +5,8 @@ import AccessibilityAnnouncer from "../../../../design/shared.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import LinearGradientDefault from "../../../../../_runtime/04940_LinearGradient.js";
-import registerAssetDefault from "../../../../../_runtime/13134_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/13135_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/13356_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/13357_registerAsset.js";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -25,7 +25,7 @@ function CheckIcon() {
   obj = {
     source: registerAssetDefault,
     color: obj.isThemeDark(useThemeDefault()) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860,
-    size: tmp4(1297).IconSizes.SMALL,
+    size: tmp4(1296).IconSizes.SMALL,
   };
   return callback2(Button.Icon, obj);
 }

@@ -513,7 +513,7 @@ export default function AgeVerificationExpressiveV2Modal(entryPoint) {
     const obj3 = entryPoint(closure_2[39]);
     obj[2] = entryPoint(closure_2[39]).getHeaderBackButton();
     obj[3] = function render() {
-      return closure_1_9(callback(8722), { onClose: closeModal, modalSessionId: closure_0 });
+      return closure_1_9(callback(8737), { onClose: closeModal, modalSessionId: closure_0 });
     };
     obj[closure_1_12.GOOGLE_WALLET_VERIFICATION] = obj;
     return obj;
@@ -526,7 +526,7 @@ export default function AgeVerificationExpressiveV2Modal(entryPoint) {
     );
   }, items1);
   let obj = { screens: memo1, initialRouteName: constants.METHODS, headerBackTitle: null };
-  const intl = entryPoint(1236).intl;
-  obj[2] = intl.string(entryPoint(1236).t["13/7kX"]);
-  return callback(entryPoint(6008).Navigator, obj);
+  const intl = entryPoint(1233).intl;
+  obj[2] = intl.string(entryPoint(1233).t["13/7kX"]);
+  return callback(entryPoint(6016).Navigator, obj);
 }

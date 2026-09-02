@@ -1,6 +1,6 @@
 // discord_app/modules/webauthn/native/nav_steps/PasskeyInitStep.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../../_runtime/14312_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/14535_registerAsset.js";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -15,7 +15,7 @@ function CredentialList(navigation) {
   importDefault = undefined;
   dependencyMap = undefined;
   let callback;
-  let obj = navigation(589);
+  let obj = navigation(586);
   let items = [closure_7];
   const credentials = obj.useStateFromStoresObject(items, () => ({
     credentials: credentials.getCredentials(),
@@ -32,15 +32,15 @@ function CredentialList(navigation) {
     const items1 = [callback2(closure_5, obj)];
     obj1 = { variant: "text-md/normal", style: null, children: null };
     obj1[1] = tmp3.upsellText;
-    let intl2 = tmp(1236).intl;
-    obj1[2] = intl2.string(tmp(1236).t.FSNwFW);
+    let intl2 = tmp(1233).intl;
+    obj1[2] = intl2.string(tmp(1233).t.FSNwFW);
     items1[1] = callback2(tmp(4474).Text, obj1);
     obj[1] = items1;
     return callback3(closure_6, obj);
   } else {
     let obj2 = { title: null, hasIcons: false, children: null };
-    let intl = tmp(1236).intl;
-    obj2[0] = intl.string(tmp(1236).t["4RIqrQ"]);
+    let intl = tmp(1233).intl;
+    obj2[0] = intl.string(tmp(1233).t["4RIqrQ"]);
     obj2[2] = credentials.map((label) => {
       let obj = { label: label.name, trailing: null, subLabel: null };
       closure_0 = label;
@@ -96,7 +96,7 @@ function CredentialList(navigation) {
       obj[2] = formatResult;
       return closure_1_9(navigation(_undefined[20]).TableRow, obj, label.id);
     });
-    return callback2(tmp(5992).TableRowGroup, obj2);
+    return callback2(tmp(6000).TableRowGroup, obj2);
   }
   const tmp4 = callback(React.useState(false), 2);
 }

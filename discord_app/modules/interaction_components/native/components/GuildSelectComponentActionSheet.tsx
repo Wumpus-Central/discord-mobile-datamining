@@ -52,7 +52,7 @@ export default function GuildSelectComponentActionSheet(arg0) {
   function submitSelection() {
     return lib(guildIdentity[9]).hideActionSheet();
   }
-  const intl = tmp4(1236).intl;
+  const intl = tmp4(1233).intl;
   obj[2] = intl.string(getSystemLocale.t["ZImm/x"]);
   callback = obj.useCallback((arg0) => {
     if (0 === arg0.length) {

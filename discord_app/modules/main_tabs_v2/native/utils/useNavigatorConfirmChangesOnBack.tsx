@@ -10,7 +10,7 @@ const result = require("set").fileFinishedImporting(
 export default function useNavigatorConfirmChangesOnBack() {
   const ref = React.useRef(null);
   dependencyMap = React.useRef(false);
-  obj = { onGoBack: ref(10660)(obj).onGoBack, ref };
+  obj = { onGoBack: ref(10881)(obj).onGoBack, ref };
   obj = {
     onBeforeGoBack(preventable) {
       if (preventable.preventable) {

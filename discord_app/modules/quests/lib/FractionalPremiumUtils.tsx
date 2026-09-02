@@ -13,15 +13,15 @@ export const getDurationStringOfFractionalPremium = function getDurationStringOf
     arr.map((skuId) => skuId.skuId),
   );
   if (fractionalPremiumUnitsHoursFromSkuIds % 24 === 0) {
-    const intl2 = tmp(1236).intl;
+    const intl2 = tmp(1233).intl;
     obj = { days: null };
     obj[0] = fractionalPremiumUnitsHoursFromSkuIds / 24;
-    let formatToPlainStringResult = intl2.formatToPlainString(tmp(1236).t.Cz1G97, obj);
+    let formatToPlainStringResult = intl2.formatToPlainString(tmp(1233).t.Cz1G97, obj);
   } else {
-    const intl = tmp(1236).intl;
+    const intl = tmp(1233).intl;
     obj = { hours: null };
     obj[0] = fractionalPremiumUnitsHoursFromSkuIds;
-    formatToPlainStringResult = intl.formatToPlainString(tmp(1236).t.J9Lu4h, obj);
+    formatToPlainStringResult = intl.formatToPlainString(tmp(1233).t.J9Lu4h, obj);
   }
   return formatToPlainStringResult;
 };

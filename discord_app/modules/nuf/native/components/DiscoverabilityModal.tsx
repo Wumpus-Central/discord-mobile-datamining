@@ -61,9 +61,9 @@ function DiscoverabilityNameScene() {
   }, items);
   let obj = { style: tmp.container, children: null };
   callback = React.useCallback((arg0) => {
-    const result = allowPhone(12242).startContactSyncForDiscoverability(arg0);
-    const obj = allowPhone(12242);
-    const result1 = allowPhone(12242).closeDiscoverabilityModal(false);
+    const result = allowPhone(12466).startContactSyncForDiscoverability(arg0);
+    const obj = allowPhone(12466);
+    const result1 = allowPhone(12466).closeDiscoverabilityModal(false);
   }, []);
   obj = { onNext: callback, loading: false, initialName: null };
   const tmp2 = useContactSyncModalStore();
@@ -82,7 +82,7 @@ class DiscoverabilityModal {
         let obj = {};
         obj = {
           ignoreKeyboard: true,
-          impressionName: callback(503).ImpressionNames.DISCOVERABILITY,
+          impressionName: callback(500).ImpressionNames.DISCOVERABILITY,
           fullscreen: true,
           headerLeft() {
             return null;
@@ -94,10 +94,10 @@ class DiscoverabilityModal {
             return callback(closure_9, {});
           },
         };
-        obj[callback(691).DiscoverabilityScenes.LANDING] = obj;
+        obj[callback(688).DiscoverabilityScenes.LANDING] = obj;
         obj = {
           ignoreKeyboard: true,
-          impressionName: callback(503).ImpressionNames.DISCOVERABILITY,
+          impressionName: callback(500).ImpressionNames.DISCOVERABILITY,
           fullscreen: true,
           headerTitle() {
             return null;
@@ -106,7 +106,7 @@ class DiscoverabilityModal {
             return callback(closure_10, {});
           },
         };
-        obj[callback(691).DiscoverabilityScenes.NAME] = obj;
+        obj[callback(688).DiscoverabilityScenes.NAME] = obj;
         return obj;
       }, []),
       initialRouteName: require("keys").DiscoverabilityScenes.LANDING,

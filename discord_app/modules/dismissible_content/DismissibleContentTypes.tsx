@@ -79,7 +79,6 @@ const items2 = [
   DismissibleContent.DismissibleContent.GIFTING_PROMOTION_REMINDER,
   DismissibleContent.DismissibleContent.PREMIUM_GROUP_PRIMARY_REMINDER_NAGBAR,
   DismissibleContent.DismissibleContent.GAME_SERVER_NEW_GAMES_COACHMARK,
-  DismissibleContent.DismissibleContent.PREMIUM_OFFER_TAB_BADGE_POPOVER,
   DismissibleContent.DismissibleContent.MONTHLY_TO_YEARLY_UPSELL_STICKY_BAR,
   DismissibleContent.DismissibleContent.MONTHLY_TO_YEARLY_UPSELL_NITRO_TAB_POPOVER,
   DismissibleContent.DismissibleContent.PREMIUM_SHOP_NAGBAR_NOTICE,

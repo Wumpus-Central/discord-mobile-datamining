@@ -13,10 +13,10 @@ export default function useBadges(getBadges) {
   if (undefined !== arg1) {
     setting = arg1;
   }
-  let tmpResult = tmp(647);
+  let tmpResult = tmp(644);
   const items = [closure_3];
   const stateFromStores = tmpResult.useStateFromStores(items, () => currentUser.getCurrentUser());
-  tmpResult = tmp(647);
+  tmpResult = tmp(644);
   [][0] = closure_2;
   if (null == getBadges) {
     return [];
@@ -38,8 +38,8 @@ export default function useBadges(getBadges) {
         const obj = {};
         const merged = Object.assign(id);
         if (id.id === closure_4) {
-          const intl = callback(1236).intl;
-          let description = intl.string(callback(1236).t.Br1ls3);
+          const intl = callback(1233).intl;
+          let description = intl.string(callback(1233).t.Br1ls3);
         } else {
           description = id.description;
         }

@@ -16,9 +16,9 @@ function getViewerProductId(subscription) {
         false,
       );
       try {
-        const productIdFromSubscription1 = tmp3(7152).getProductIdFromSubscription(subscription, true);
-        const tmp8 = tmp3(6087).AppStorePremiumProductIdsToPremiumBundledItems[productIdFromSubscription];
-        const tmp10 = tmp3(6087).AppStorePremiumProductIdsToPremiumBundledItems[productIdFromSubscription1];
+        const productIdFromSubscription1 = tmp3(7161).getProductIdFromSubscription(subscription, true);
+        const tmp8 = tmp3(6095).AppStorePremiumProductIdsToPremiumBundledItems[productIdFromSubscription];
+        const tmp10 = tmp3(6095).AppStorePremiumProductIdsToPremiumBundledItems[productIdFromSubscription1];
         if (null != tmp8) {
           if (null != tmp10) {
             if (tmp8.numPremiumGuild === tmp10.numPremiumGuild) {
@@ -28,7 +28,7 @@ function getViewerProductId(subscription) {
           }
         }
         tmp11 = productIdFromSubscription;
-        const tmp3Result = tmp3(7152);
+        const tmp3Result = tmp3(7161);
       } catch (err) {
         return tmp2;
       }

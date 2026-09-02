@@ -1,7 +1,7 @@
 // discord_app/modules/premium/UserOfferActionCreators.tsx
-import set from "../../utils/PlatformUtils.tsx";
 import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import set from "../../utils/PlatformUtils.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../user_offers/records/UserDiscountOfferRecord.tsx";
 import closure_5 from "../user_offers/records/UserTrialOfferRecord.tsx";
@@ -78,7 +78,7 @@ function _fetchUserOffer() {
                   flag = true;
                 }
                 if (obj1 === undefined) {
-                  obj1 = { offerId: "children", paymentGatewayOverride: "c" };
+                  obj1 = { offerId: "disabled", paymentGatewayOverride: "Date" };
                 }
                 throwTypeErrorResult = retries;
                 throwTypeErrorResult = closure_4;
@@ -93,7 +93,7 @@ function _fetchUserOffer() {
                 c13 = undefined;
                 c12 = 1;
                 c13 = 1;
-                return { value: "PX_16", done: null };
+                return { value: "PX_16", done: true };
               }
             } else if (1 === tmp7) {
               if (arg0 === 1) {
@@ -313,7 +313,7 @@ function _fetchExistingChurnDiscountOffer() {
     obj1[0] = closure_1_9.CHURN_USER_OFFER;
     yield HTTP.get(obj1);
     c4 = 0;
-    let obj5 = fromServer(709);
+    let obj5 = fromServer(706);
     obj5.dispatch({ type: "BILLING_USER_OFFER_FETCH_FAIL" });
     yield "HermesInternal";
     const offer = arg1.body.offer;
@@ -325,7 +325,7 @@ function _fetchExistingChurnDiscountOffer() {
     if (null != closure_0) {
       fromServer = c4.createFromServer(closure_0);
     }
-    const obj = fromServer(709);
+    const obj = fromServer(706);
     const obj4 = { type: "BILLING_USER_OFFER_FETCH_SUCCESS", userDiscountOffer: null };
     obj4[1] = fromServer;
     obj.dispatch(obj4);
@@ -465,7 +465,7 @@ export const acknowledgeUserOffer = function acknowledgeUserOffer(hasAcknowledge
       if (user_trial_offer == null) {
         user_trial_offer = null;
       }
-      let obj = callback(709);
+      let obj = callback(706);
       let fromServer = null;
       if (null != user_trial_offer) {
         fromServer = closure_5.createFromServer(user_trial_offer);
@@ -490,13 +490,13 @@ export const acknowledgeUserOffer = function acknowledgeUserOffer(hasAcknowledge
     })
     .catch((status) => {
       if (404 === status.status) {
-        callback(709).dispatch({
+        callback(706).dispatch({
           type: "BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS",
           userTrialOffer: null,
           userDiscount: null,
           userDiscountOffer: null,
         });
-        const obj = callback(709);
+        const obj = callback(706);
       }
     });
 };
@@ -522,7 +522,7 @@ export const triggerUserOffer = function triggerUserOffer(arg0, arg1, arg2) {
       if (postResultResult.isIOS()) {
         GOOGLE = constants2.APPLE;
       }
-      postResultResult = postResult(500);
+      postResultResult = postResult(1234);
     }
     obj = {
       payment_gateway: null,
@@ -537,7 +537,7 @@ export const triggerUserOffer = function triggerUserOffer(arg0, arg1, arg2) {
     _JSON = JSON;
     obj[3] = JSON.stringify(tmp5);
     obj[4] = obj.getUptimeForTrigger();
-    const HTTP = postResult(530).HTTP;
+    const HTTP = postResult(527).HTTP;
     obj1 = { url: null, body: null, rejectWithError: true };
     obj1[0] = constants.USER_OFFER_TRIGGER;
     obj1[1] = obj;

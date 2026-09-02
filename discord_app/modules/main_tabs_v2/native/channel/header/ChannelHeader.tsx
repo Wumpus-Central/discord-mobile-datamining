@@ -1,8 +1,8 @@
 // discord_app/modules/main_tabs_v2/native/channel/header/ChannelHeader.tsx
 import noopAll from "../../../../../../_runtime/00019_noop.js";
 import set from "../../../../../utils/PlatformUtils.tsx";
-import _modDef12928 from "../../../../guild_role_subscriptions/native/overview_tab/GuildRoleSubscriptionsChannelHeader.tsx";
-import _modDef12929 from "HomeChannelHeader.tsx";
+import _modDef13150 from "../../../../guild_role_subscriptions/native/overview_tab/GuildRoleSubscriptionsChannelHeader.tsx";
+import _modDef13151 from "HomeChannelHeader.tsx";
 import GroupDmMemberCountDefault from "PrivateChannelHeader.tsx";
 import closure_3 from "../../../../../stores/ChannelStore.tsx";
 import { ComponentActions } from "../../../../../Constants.tsx";
@@ -27,7 +27,7 @@ export default function ChannelHeader(channelId) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  let obj = channelId(647);
+  let obj = channelId(644);
   const items = [closure_3];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getChannel(channelId));
   const isChannelContentGated = channelId(4731).useIsChannelContentGated(stateFromStores);
@@ -36,9 +36,9 @@ export default function ChannelHeader(channelId) {
     tmp4 = pressable;
   }
   if (channelId === StaticChannelRoute.ROLE_SUBSCRIPTIONS) {
-    let tmp8Result = jsx(_modDef12928, {});
+    let tmp8Result = jsx(_modDef13150, {});
   } else if (channelId === tmp5.GUILD_HOME) {
-    tmp8Result = jsx(_modDef12929, {});
+    tmp8Result = jsx(_modDef13151, {});
   } else {
     let isPrivateResult;
     if (stateFromStores != null) {
@@ -67,7 +67,7 @@ export default function ChannelHeader(channelId) {
         };
         obj[0] = channelId;
         let guild_id;
-        let tmp9Result = tmp9(12936);
+        let tmp9Result = tmp9(13158);
         if (stateFromStores != null) {
           guild_id = stateFromStores.guild_id;
         }
@@ -78,8 +78,8 @@ export default function ChannelHeader(channelId) {
         obj[5] = screenIndex;
         let stringResult;
         if (!stateFromStores.isForumChannel()) {
-          const intl = tmp(1236).intl;
-          stringResult = intl.string(tmp(1236).t["L9fR+P"]);
+          const intl = tmp(1233).intl;
+          stringResult = intl.string(tmp(1233).t["L9fR+P"]);
         }
         obj[6] = stringResult;
         tmp8Result = tmp8(tmp9Result, obj);
@@ -95,7 +95,7 @@ export default function ChannelHeader(channelId) {
         };
         obj1[0] = channelId;
         let guild_id1;
-        tmp9Result = tmp9(12938);
+        tmp9Result = tmp9(13160);
         if (stateFromStores != null) {
           guild_id1 = stateFromStores.guild_id;
         }
@@ -120,9 +120,9 @@ export const navigateToChannelDetails = function navigateToChannelDetails(channe
       chatInputRef.blur();
     }
   }
-  tmpResult = tmp(11066);
+  tmpResult = tmp(11286);
   if (tmpResult.isSwipeToMemberListEnabled()) {
-    const ComponentDispatch = tmp(1231).ComponentDispatch;
+    const ComponentDispatch = tmp(1228).ComponentDispatch;
     obj = { source: null, channelId: null, screenIndex: null };
     obj[0] = arg2;
     obj[1] = channelId;

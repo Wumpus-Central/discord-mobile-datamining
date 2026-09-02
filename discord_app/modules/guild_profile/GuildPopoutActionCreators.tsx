@@ -22,7 +22,7 @@ function _fetchGuildForPopout() {
       yield HTTP.get(obj2);
       if (1 === tmp7) {
         c4 = 0;
-        const obj3 = lib(709);
+        const obj3 = lib(706);
         const obj4 = { type: "GUILD_POPOUT_FETCH_FAILURE", guildId: null };
         obj4[1] = callback;
         obj3.dispatch(obj4);
@@ -32,7 +32,7 @@ function _fetchGuildForPopout() {
         throw arg1;
       } else if (arg0 !== 2) {
         lib = arg1;
-        const obj = lib(709);
+        const obj = lib(706);
         const obj5 = { type: "GUILD_POPOUT_FETCH_SUCCESS", guildId: null, guild: null };
         obj5[1] = callback;
         obj5[2] = lib.body;

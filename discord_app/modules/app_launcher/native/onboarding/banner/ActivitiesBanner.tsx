@@ -21,10 +21,10 @@ export default function ActivitiesBanner(context) {
     if (null != tmp5) {
       obj = { image: null, text: null };
       obj[0] = tmp8;
-      const intl = tmp(1236).intl;
+      const intl = tmp(1233).intl;
       obj1 = { activityName: null };
       obj1[0] = tmp4.name;
-      obj[1] = intl.formatToPlainString(tmp(1236).t.zHMWuV, obj1);
+      obj[1] = intl.formatToPlainString(tmp(1233).t.zHMWuV, obj1);
       tmp6Result = jsx(BannerBaseDefault, { image: null, text: null });
       const tmp7Result = BannerBaseDefault;
     }

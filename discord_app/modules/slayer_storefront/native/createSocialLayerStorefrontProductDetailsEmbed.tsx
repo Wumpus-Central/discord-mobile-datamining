@@ -48,7 +48,7 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
       return null;
     } else {
       if (null != application) {
-        if (tmp(11131)(application)) {
+        if (tmp(11352)(application)) {
           if ("guild" !== guildOrApplication.type) {
             const result1 = useSKUPrice.isSlayerSkuAvailableOnThisPlatform(value);
             const obj4 = useSKUPrice;
@@ -66,17 +66,17 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
             obj.headerColor = colors.headerColor;
             obj.titleText = value.name;
             obj.titleColor = colors.titleColor;
-            const intl2 = tmp12(1236).intl;
+            const intl2 = tmp12(1233).intl;
             obj.subtitle = intl2.string(getSystemLocale.t.V91tvy);
             obj.subtitleColor = colors.subtitleColor;
             obj.thumbnailUrl = str;
             obj.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;
-            const intl3 = tmp12(1236).intl;
+            const intl3 = tmp12(1233).intl;
             const string = intl3.string;
             if (result1) {
-              let stringResult = string(tmp12(1236).t.boqtTA);
+              let stringResult = string(tmp12(1233).t.boqtTA);
             } else {
-              stringResult = string(tmp(3371).BKf0MM);
+              stringResult = string(tmp(3370).BKf0MM);
             }
             obj.acceptLabelText = stringResult;
             let prop;

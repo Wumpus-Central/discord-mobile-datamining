@@ -205,7 +205,7 @@ let items = [
     run(favoriteGifs) {
       let length3;
       if (null == favoriteGifs.favoriteGifs) {
-        const FavoriteGIFs = arr(1341).FavoriteGIFs;
+        const FavoriteGIFs = arr(1340).FavoriteGIFs;
         favoriteGifs.favoriteGifs = FavoriteGIFs.create();
       }
       if (null == favoriteGifs.favoriteGifs.gifs) {
@@ -222,7 +222,7 @@ let items = [
           arg0.order = sum;
           return sum;
         });
-        const FavoriteGIFs4 = arr(1341).FavoriteGIFs;
+        const FavoriteGIFs4 = arr(1340).FavoriteGIFs;
         let length = FavoriteGIFs4.toBinary(favoriteGifs.favoriteGifs).length;
         let num = 0;
         const iter = arr[Symbol.iterator]();
@@ -242,7 +242,7 @@ let items = [
           } else {
             let tmp11 = arr;
             let tmp12 = dependencyMap;
-            let FavoriteGIF = arr(1341).FavoriteGIF;
+            let FavoriteGIF = arr(1340).FavoriteGIF;
             let tmp13 = favorite;
             let tmp14 = url;
             let sum = FavoriteGIF.toBinary(tmp9).length + arr2.length + 7;
@@ -260,7 +260,7 @@ let items = [
           }
           continue;
         }
-        const FavoriteGIFs2 = arr(1341).FavoriteGIFs;
+        const FavoriteGIFs2 = arr(1340).FavoriteGIFs;
         const length2 = FavoriteGIFs2.toBinary(favoriteGifs.favoriteGifs).length;
         if (length2 > closure_4) {
           do {
@@ -281,7 +281,7 @@ let items = [
             }
             let tmp31 = arr;
             let tmp32 = dependencyMap;
-            let FavoriteGIFs3 = arr(1341).FavoriteGIFs;
+            let FavoriteGIFs3 = arr(1340).FavoriteGIFs;
             length3 = FavoriteGIFs3.toBinary(favoriteGifs.favoriteGifs).length;
             let tmp33 = length3;
             let tmp34 = closure_4;
@@ -324,7 +324,7 @@ let items = [
     version: 8,
     run(arg0) {
       const _require = arg0;
-      const PersistedStore = state(589).PersistedStore;
+      const PersistedStore = state(586).PersistedStore;
       state = PersistedStore.migrateAndReadStoreState("SoundboardFavoriteStore", []).state;
       if (null == state) {
         return false;
@@ -403,7 +403,7 @@ let items = [
           const EmojiFrecency2 = create.EmojiFrecency;
           EmojiFrecency2.mergePartial(obj, emojiFrecency.emojiFrecency);
           if (null != emojiFrecency.emojiReactionFrecency) {
-            const EmojiFrecency3 = tmp3(1341).EmojiFrecency;
+            const EmojiFrecency3 = tmp3(1340).EmojiFrecency;
             EmojiFrecency3.mergePartial(obj, emojiFrecency.emojiReactionFrecency);
           }
           emojiFrecency.emojiReactionFrecency = obj;
@@ -447,7 +447,7 @@ let items = [
                   isMatch = obj.test(tmp9.src);
                 }
                 if (isMatch) {
-                  tmp9.format = tmp3(1341).GIFType.IMAGE;
+                  tmp9.format = tmp3(1340).GIFType.IMAGE;
                   flag = true;
                 }
                 flag3 = flag;

@@ -43,7 +43,7 @@ export default function VibegrationsSettingsRequestCard(projectId) {
   let React;
   const tmp = callback2();
   dependencyMap = tmp;
-  let obj = projectId(589);
+  let obj = projectId(586);
   const items = [closure_5];
   React = obj.useStateFromStores(items, () => closure_1_5.getSettings(projectId));
   let keys = request.keys;
@@ -69,8 +69,8 @@ export default function VibegrationsSettingsRequestCard(projectId) {
     obj.showActionSheet(obj);
   }, items1);
   obj = { variant: "text-xs/semibold", color: "text-muted", children: null };
-  const intl = tmp2(1236).intl;
-  obj[2] = intl.string(request(3501).wgDhiQ);
+  const intl = tmp2(1233).intl;
+  obj[2] = intl.string(request(3500).wgDhiQ);
   const items2 = [callback(projectId(4474).Text, obj), , ,];
   if (null != request.note) {
     if ("" !== request.note) {
@@ -93,12 +93,12 @@ export default function VibegrationsSettingsRequestCard(projectId) {
     items2[2] = tmp7Result;
     const obj3 = { variant: "secondary", size: "sm", onPress: null, text: null };
     obj3[2] = callback;
-    const intl3 = tmp2(1236).intl;
-    obj3[3] = intl3.string(tmp8(3501)["KO2xN+"]);
+    const intl3 = tmp2(1233).intl;
+    obj3[3] = intl3.string(tmp8(3500)["KO2xN+"]);
     items2[3] = tmp7(tmp2(4928).Button, obj3);
     obj[1] = items2;
     return closure_7(tmp6, obj);
   }
-  const intl2 = tmp2(1236).intl;
-  note = intl2.string(tmp8(3501)["V+DBhs"]);
+  const intl2 = tmp2(1233).intl;
+  note = intl2.string(tmp8(3500)["V+DBhs"]);
 }

@@ -56,7 +56,7 @@ export default function HeadlessCollectiblesPurchaseFlow(arg0) {
     activeSubscription: null,
     initialExternalGatewayFacet: useCollectiblesExternalGatewayFacetDefault(product),
     onOrderRetryCancellation() {
-      return callback2(4445).hideActionSheet(callback(12527).PRODUCT_DETAILS_ACTION_SHEET_KEY);
+      return callback2(4445).hideActionSheet(callback(12751).PRODUCT_DETAILS_ACTION_SHEET_KEY);
     },
     checkoutAnalyticsFields: obj1,
     children: null,
@@ -89,7 +89,7 @@ export default function HeadlessCollectiblesPurchaseFlow(arg0) {
       activeSubscription: null,
       initialExternalGatewayFacet: useCollectiblesExternalGatewayFacetDefault(product),
       onOrderRetryCancellation() {
-        return callback2(4445).hideActionSheet(callback(12527).PRODUCT_DETAILS_ACTION_SHEET_KEY);
+        return callback2(4445).hideActionSheet(callback(12751).PRODUCT_DETAILS_ACTION_SHEET_KEY);
       },
       checkoutAnalyticsFields: obj1,
       children: null,
@@ -105,7 +105,7 @@ export default function HeadlessCollectiblesPurchaseFlow(arg0) {
     activeSubscription: null,
     initialExternalGatewayFacet: useCollectiblesExternalGatewayFacetDefault(product),
     onOrderRetryCancellation() {
-      return callback2(4445).hideActionSheet(callback(12527).PRODUCT_DETAILS_ACTION_SHEET_KEY);
+      return callback2(4445).hideActionSheet(callback(12751).PRODUCT_DETAILS_ACTION_SHEET_KEY);
     },
     checkoutAnalyticsFields: obj1,
     children: null,

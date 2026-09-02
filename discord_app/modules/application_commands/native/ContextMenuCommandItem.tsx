@@ -51,7 +51,7 @@ export default function ContextMenuCommandItem(item) {
       commandName: item.displayName,
     });
   }, items);
-  let obj = item(11798);
+  let obj = item(12021);
   const applicationCommandsIconSource = obj.getApplicationCommandsIconSource(section);
   obj = {
     accessibilityLabel: memo,
@@ -67,13 +67,13 @@ export default function ContextMenuCommandItem(item) {
     obj = { style: null, source: null };
     obj[0] = tmp.commandIcon;
     obj[1] = applicationCommandsIconSource;
-    tmp8Result = tmp8(section(5493), obj);
+    tmp8Result = tmp8(section(5501), obj);
   }
   obj[3] = tmp8Result;
   obj[4] = jsx(item(4423).SendMessageIcon, {});
   obj[5] = start;
   obj[6] = end;
-  return jsx(item(5599).TableRow, {
+  return jsx(item(5607).TableRow, {
     accessibilityLabel: memo,
     onPress,
     label: item.displayName,

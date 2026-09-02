@@ -1,6 +1,6 @@
 // discord_app/modules/messages/MessageRecordUtils.tsx
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
-import hooksDefault from "../../../_runtime/04075_hooks.js";
+import hooksDefault from "../../../_runtime/04074_hooks.js";
 import getPathsFromURLDefault from "../coded_links/findCodedLinks.tsx";
 import useNullableMessageAuthor from "useMessageAuthor.tsx";
 import isMentionedDefault from "isMessageMentioned.tsx";

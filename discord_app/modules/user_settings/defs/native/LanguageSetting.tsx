@@ -25,7 +25,7 @@ createToggle = {
     const found = availableLocales.find((value) => value.value === closure_0);
     let stringResult = null;
     if (null != found) {
-      const intl = tmp(1236).intl;
+      const intl = tmp(1233).intl;
       stringResult = intl.string(found.localizedName);
     }
     return stringResult;

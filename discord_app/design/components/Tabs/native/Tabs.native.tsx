@@ -39,9 +39,9 @@ let closure_11 = createCacheKey.createStyles((gap) => {
     marginLeft: ThemesDefault.space.PX_16,
   };
   if ("gradient-background" === arg1) {
-    let TEXT_BRAND = tmp(712).colors.TEXT_STRONG;
+    let TEXT_BRAND = tmp(709).colors.TEXT_STRONG;
   } else {
-    TEXT_BRAND = tmp(712).colors.TEXT_BRAND;
+    TEXT_BRAND = tmp(709).colors.TEXT_BRAND;
   }
   obj1 = {
     position: "absolute",

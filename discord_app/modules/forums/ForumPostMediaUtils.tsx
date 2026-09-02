@@ -359,7 +359,7 @@ function useForumPostMediaProperties(firstResult, flag) {
               return null;
             }
           })
-          .filter(tmp(1471).isNotNullish);
+          .filter(tmp(1470).isNotNullish);
         const flatMapResult = Array.from(tmp(4739).flattenComponents(components).values()).flatMap((type) => {
           type = type.type;
           if (callback(table[12]).ComponentType.THUMBNAIL === type) {
@@ -638,7 +638,7 @@ export const useForumPostComponentsMedia = function useForumPostComponentsMedia(
               return null;
             }
           })
-          .filter(tmp(1471).isNotNullish);
+          .filter(tmp(1470).isNotNullish);
         const flatMapResult = Array.from(tmp(4739).flattenComponents(components).values()).flatMap((type) => {
           type = type.type;
           if (callback(table[12]).ComponentType.THUMBNAIL === type) {
@@ -900,7 +900,7 @@ export const useFindFirstMediaProperties = function useFindFirstMediaProperties(
               return null;
             }
           })
-          .filter(tmp(1471).isNotNullish);
+          .filter(tmp(1470).isNotNullish);
         const flatMapResult = Array.from(tmp(4739).flattenComponents(components).values()).flatMap((type) => {
           type = type.type;
           if (callback(table[12]).ComponentType.THUMBNAIL === type) {
@@ -1138,7 +1138,7 @@ export const useFirstMediaIsEmbed = function useFirstMediaIsEmbed(firstMessage, 
               return null;
             }
           })
-          .filter(tmp(1471).isNotNullish);
+          .filter(tmp(1470).isNotNullish);
         const flatMapResult = Array.from(tmp(4739).flattenComponents(components).values()).flatMap((type) => {
           type = type.type;
           if (callback(table[12]).ComponentType.THUMBNAIL === type) {

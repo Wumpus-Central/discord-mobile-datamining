@@ -1,8 +1,8 @@
 // discord_app/modules/stage_channels/native/components/SpeakerTileStatuses.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Button from "../../../../design/void/native.tsx";
-import registerAssetDefault from "../../../../../_runtime/07742_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/10135_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/07751_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/10157_registerAsset.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_4 from "../../../../stores/MediaEngineStore.tsx";
@@ -43,14 +43,14 @@ const obj2 = { marginEnd: ThemesDefault.space.PX_4 };
 const memoResult = importAllResult.memo((userId) => {
   userId = userId.userId;
   const channelId = userId.channelId;
-  let obj = userId(589);
+  let obj = userId(586);
   const items = [closure_4];
   const items1 = [userId];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.isLocalMute(userId), items1);
   const tmp = callback();
   const items2 = [closure_5];
   const items3 = [channelId, userId];
-  const stateFromStores1 = userId(589).useStateFromStores(
+  const stateFromStores1 = userId(586).useStateFromStores(
     items2,
     () => closure_1_5.getVoiceStateForChannel(channelId, userId),
     items3,
@@ -70,15 +70,15 @@ const memoResult = importAllResult.memo((userId) => {
     flag2 = false;
   }
   if (stateFromStores) {
-    let tmp5 = channelId(10090);
+    let tmp5 = channelId(10112);
     let flag3 = true;
   } else if (flag2) {
-    tmp5 = channelId(9595);
+    tmp5 = channelId(9608);
     flag3 = false;
   } else {
     flag3 = false;
     if (flag) {
-      tmp5 = channelId(9596);
+      tmp5 = channelId(9609);
       flag3 = false;
     }
   }
@@ -89,10 +89,10 @@ const memoResult = importAllResult.memo((userId) => {
     obj[0] = items4;
     obj = { source: null, size: null, color: null, disableColor: null };
     obj[0] = tmp5;
-    obj[1] = tmp2(1297).Icon.Sizes.SMALL;
-    obj[2] = channelId(712).unsafe_rawColors.BLACK;
+    obj[1] = tmp2(1296).Icon.Sizes.SMALL;
+    obj[2] = channelId(709).unsafe_rawColors.BLACK;
     obj[3] = flag3;
-    obj[1] = jsx(tmp2(1297).Icon, { source: null, size: null, color: null, disableColor: null });
+    obj[1] = jsx(tmp2(1296).Icon, { source: null, size: null, color: null, disableColor: null });
     tmp9 = <View source={null} size={null} color={null} disableColor={null} />;
   }
   return tmp9;
@@ -100,12 +100,12 @@ const memoResult = importAllResult.memo((userId) => {
 const memoResult1 = importAllResult.memo((userId) => {
   userId = userId.userId;
   const channelId = userId.channelId;
-  let obj = userId(589);
+  let obj = userId(586);
   const items = [closure_6];
   const items1 = [channelId, userId];
   let tmp4;
   if (obj.useStateFromStores(items, () => closure_1_6.isModerator(userId, channelId), items1)) {
-    tmp4 = channelId(10134);
+    tmp4 = channelId(10156);
   }
   let tmp6 = null;
   if (null != tmp4) {
@@ -114,9 +114,9 @@ const memoResult1 = importAllResult.memo((userId) => {
     obj[0] = items2;
     obj = { source: null, size: null, color: null };
     obj[0] = tmp4;
-    obj[1] = tmp2(1297).Icon.Sizes.SMALL;
-    obj[2] = channelId(712).unsafe_rawColors.BLACK;
-    obj[1] = jsx(tmp2(1297).Icon, { source: null, size: null, color: null });
+    obj[1] = tmp2(1296).Icon.Sizes.SMALL;
+    obj[2] = channelId(709).unsafe_rawColors.BLACK;
+    obj[1] = jsx(tmp2(1296).Icon, { source: null, size: null, color: null });
     tmp6 = <View source={null} size={null} color={null} />;
   }
   return tmp6;

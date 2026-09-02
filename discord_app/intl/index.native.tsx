@@ -10,7 +10,7 @@ import { Fonts } from "../Constants.tsx";
 import { jsx } from "../../_runtime/react/00021_jsxProd.js";
 import set from "../utils/PlatformUtils.tsx";
 import getAvailableLocales from "util.tsx";
-import 01274__ from "../../_runtime/metro/01274__.js";
+import 01273__ from "../../_runtime/metro/01273__.js";
 
 require = arg1;
 noopAll;
@@ -62,9 +62,9 @@ obj = {
     return jsx(IntlLink.IntlLink, { target: tmp, children }, arg1);
   }
 };
-const reactFormatter = module_1274.makeReactFormatter(obj);
-const intlManager = new require("../../_runtime/metro/01274__.js").IntlManager({ initialLocale: normalizedLocale, defaultLocale: "en-US" });
-set = { format: reactFormatter, formatToPlainString: require("../../_runtime/metro/01274__.js").stringFormatter, formatToMarkdownString: require("../../_runtime/metro/01274__.js").markdownFormatter, formatToParts: require("../../_runtime/metro/01274__.js").astFormatter };
+const reactFormatter = module_1273.makeReactFormatter(obj);
+const intlManager = new require("../../_runtime/metro/01273__.js").IntlManager({ initialLocale: normalizedLocale, defaultLocale: "en-US" });
+set = { format: reactFormatter, formatToPlainString: require("../../_runtime/metro/01273__.js").stringFormatter, formatToMarkdownString: require("../../_runtime/metro/01273__.js").markdownFormatter, formatToParts: require("../../_runtime/metro/01273__.js").astFormatter };
 set = intlManager.withFormatters(set);
 const result = set.fileFinishedImporting("intl/index.native.tsx");
 

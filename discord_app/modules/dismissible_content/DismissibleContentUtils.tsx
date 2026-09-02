@@ -564,13 +564,13 @@ export const getDismissedRecurringDismissibleContentState = function getDismisse
   let obj = isSingleUseDismissibleContent;
   let num = 0;
   if (obj.isVersionedDismissibleContent(id)) {
-    let tmp2Result = tmp2(1385);
+    let tmp2Result = tmp2(1384);
     num = tmp2Result.getVersionedDismissibleContentCurrentVersion(id);
   }
   obj = { lastDismissedVersion: num, lastDismissedAtMs: null, lastDismissedObjectId: null, numTimesDismissed: null };
   const date = new Date();
   obj[1] = new Date().getTime().toString();
-  tmp2Result = tmp2(1374);
+  tmp2Result = tmp2(1373);
   let str2 = "0";
   if (tmp2Result.isSnowflakeBoundDismissibleContent(id)) {
     const _Date = Date;

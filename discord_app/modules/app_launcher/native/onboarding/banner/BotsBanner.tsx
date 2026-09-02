@@ -18,11 +18,11 @@ export default function BotsBanner(context) {
     if (null != secondBotApplication) {
       obj = { image: null, text: null };
       obj[0] = tmp6;
-      const intl = tmp(1236).intl;
+      const intl = tmp(1233).intl;
       obj = { firstApplicationName: null, secondApplicationName: null };
       obj[0] = firstBotApplication.name;
       obj[1] = secondBotApplication.name;
-      obj[1] = intl.formatToPlainString(tmp(1236).t["9SN0xw"], obj);
+      obj[1] = intl.formatToPlainString(tmp(1233).t["9SN0xw"], obj);
       tmp4Result = jsx(BannerBaseDefault, { firstApplicationName: null, secondApplicationName: null });
       const tmp5Result = BannerBaseDefault;
     }

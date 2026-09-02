@@ -156,7 +156,7 @@ function _saveRoleSettings() {
                   closure_14 = undefined;
                   c20 = 1;
                   c21 = 1;
-                  return { value: "PX_16", done: null };
+                  return { value: "PX_16", done: true };
                 }
                 break;
               case 1:

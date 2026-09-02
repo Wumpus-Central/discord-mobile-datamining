@@ -55,9 +55,9 @@ export default function GuildPowerupsPerkCard(arg0) {
   obj = { containerStyle: items, style: tmp2.card, status, onPress, children: null };
   items = [tmp2.container, style];
   obj = { style: tmp2.imageContainer, children: null };
-  let tmp3Result = tmp3(12132);
+  let tmp3Result = tmp3(12356);
   if (riveComponent == null) {
-    tmp3Result = tmp3(12087);
+    tmp3Result = tmp3(12311);
     if (imageUrl == null) {
       imageUrl = "";
     }
@@ -105,20 +105,20 @@ export default function GuildPowerupsPerkCard(arg0) {
   let tmp15Result = "new" === badge;
   if (tmp15Result) {
     const obj7 = { text: null, style: null };
-    const intl = tmp6(1236).intl;
-    obj7[0] = intl.string(tmp6(1236).t.y2b7CA);
+    const intl = tmp6(1233).intl;
+    obj7[0] = intl.string(tmp6(1233).t.y2b7CA);
     obj7[1] = tmp2.badge;
-    tmp15Result = tmp15(tmp6(1297).TextBadge, obj7);
+    tmp15Result = tmp15(tmp6(1296).TextBadge, obj7);
   }
   items2[2] = tmp15Result;
   tmp15Result = "beta" === badge;
   if (tmp15Result) {
     const obj8 = { text: null, color: null, style: null };
-    const intl2 = tmp6(1236).intl;
-    obj8[0] = intl2.string(tmp6(1236).t.oW0eUd);
-    obj8[1] = tmp6(1297).BadgeColors.BRAND;
+    const intl2 = tmp6(1233).intl;
+    obj8[0] = intl2.string(tmp6(1233).t.oW0eUd);
+    obj8[1] = tmp6(1296).BadgeColors.BRAND;
     obj8[2] = tmp2.badge;
-    tmp15Result = tmp15(tmp6(1297).TextBadge, obj8);
+    tmp15Result = tmp15(tmp6(1296).TextBadge, obj8);
   }
   items2[3] = tmp15Result;
   obj[4] = items2;

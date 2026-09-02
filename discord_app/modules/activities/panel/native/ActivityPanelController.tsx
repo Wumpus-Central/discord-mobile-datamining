@@ -81,7 +81,7 @@ class BaseActivityPanelController {
     effect = obj3.useEffect(() => {
       if (null != isActivityPanelFullscreen) {
         if (null == ref2.current) {
-          if (!isActivityPanelFullscreen(9605)(closure_10.isWindowLandscape, defaultOrientationLockState)) {
+          if (!isActivityPanelFullscreen(9618)(closure_10.isWindowLandscape, defaultOrientationLockState)) {
             if (!closure_8) {
               first(closure_1_14.LAUNCHING_WITH_ORIENTATION_CHANGE);
             }
@@ -97,7 +97,7 @@ class BaseActivityPanelController {
       }
       let tmp4 = sharedValue1 === closure_1_14.LAUNCHING_WITH_ORIENTATION_CHANGE;
       if (tmp4) {
-        tmp4 = isActivityPanelFullscreen(9605)(closure_10.isWindowLandscape, defaultOrientationLockState);
+        tmp4 = isActivityPanelFullscreen(9618)(closure_10.isWindowLandscape, defaultOrientationLockState);
       }
       if (tmp4) {
         first(closure_1_14.PANEL);
@@ -137,11 +137,11 @@ class BaseActivityPanelController {
       if (!first) {
         if (isActivityPanelFullscreen === closure_1_14.PANEL) {
           if (sharedValue1) {
-            isActivityPanelFullscreen(16590)(dependencyMap);
+            isActivityPanelFullscreen(16825)(dependencyMap);
           }
         }
-        const result = sharedValue1(8603).restoreDefaultOrientation();
-        const obj = sharedValue1(8603);
+        const result = sharedValue1(8618).restoreDefaultOrientation();
+        const obj = sharedValue1(8618);
       }
     }, items2);
     layoutEffect1 = obj3.useLayoutEffect(() => () => callback(table[13]).restoreDefaultOrientation(), []);
@@ -316,7 +316,7 @@ let result = require("set").fileFinishedImporting("modules/activities/panel/nati
 export default function ActivityPanelController(children) {
   let mode;
   let connectedActivityInTextChannelId;
-  let obj = mode(589);
+  let obj = mode(586);
   const items = [closure_10, closure_6];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     let obj = store;
@@ -377,7 +377,7 @@ export default function ActivityPanelController(children) {
     }
   }, items1);
   obj = {
-    context: connectedActivityInTextChannelId(16596),
+    context: connectedActivityInTextChannelId(16831),
     orientationLockStateForApp,
     mode,
     hasConnectedActivity,
@@ -388,7 +388,7 @@ export default function ActivityPanelController(children) {
   };
   return (
     <BaseActivityPanelController
-      context={connectedActivityInTextChannelId(16596)}
+      context={connectedActivityInTextChannelId(16831)}
       orientationLockStateForApp={orientationLockStateForApp}
       mode={mode}
       hasConnectedActivity={hasConnectedActivity}

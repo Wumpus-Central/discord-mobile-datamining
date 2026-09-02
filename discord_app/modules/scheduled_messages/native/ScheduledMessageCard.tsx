@@ -25,12 +25,12 @@ function ScheduledMessageCardStatusHeader(isPendingRemoval) {
     actions: null,
   };
   if (!isError) {
-    const intl = tmp(1236).intl;
+    const intl = tmp(1233).intl;
     obj = { timestamp: null };
     const _Date = Date;
     const date = new Date(scheduledMessage.sendAtTimestamp);
     obj[0] = date.valueOf();
-    stateMessage = intl.formatToPlainString(tmp(1236).t.ZN3tIx, obj);
+    stateMessage = intl.formatToPlainString(tmp(1233).t.ZN3tIx, obj);
   }
   obj[1] = stateMessage;
   obj[2] = isError;
@@ -58,7 +58,7 @@ const memoResult = importAllResult.memo(function ScheduledMessageCard(scheduledM
   const isPendingRemoval = scheduledMessage.isPendingRemoval;
   let stateFromStores;
   const tmp = callback2();
-  let obj = scheduledMessage(589);
+  let obj = scheduledMessage(586);
   const items = [closure_5];
   stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getChannel(scheduledMessage.createArgs.channelId));
   [][0] = stateFromStores;
@@ -74,14 +74,14 @@ const memoResult = importAllResult.memo(function ScheduledMessageCard(scheduledM
     const items1 = [callback(ScheduledMessageCardStatusHeader, obj), , ,];
     obj1 = { channel: null, actions: null };
     obj1[0] = stateFromStores;
-    items1[1] = callback(tmp2(11782).ForLaterCardHeader, obj1);
+    items1[1] = callback(tmp2(12005).ForLaterCardHeader, obj1);
     let obj2 = { style: null };
     obj2[0] = tmp.cardDivider;
     items1[2] = callback(View, obj2);
     if (isPendingRemoval) {
       const obj3 = { style: null, children: null };
       obj3[0] = tmp.pendingRemoval;
-      obj3[1] = tmp10(tmp2(6048).ActivityIndicator, { size: "small" });
+      obj3[1] = tmp10(tmp2(6056).ActivityIndicator, { size: "small" });
       let tmp10Result = tmp10(tmp12, obj3);
     } else {
       const obj4 = { message: null, lineClamp: 10, maxHeight: 400, footer: null };
@@ -91,23 +91,23 @@ const memoResult = importAllResult.memo(function ScheduledMessageCard(scheduledM
         const obj5 = { style: null, children: null };
         obj5[0] = tmp.attachmentCount;
         const obj6 = { size: "xxs", color: null };
-        obj6[1] = stateFromStores(712).colors.TEXT_MUTED;
-        const items2 = [tmp10(tmp2(10195).AttachmentIcon, obj6)];
+        obj6[1] = stateFromStores(709).colors.TEXT_MUTED;
+        const items2 = [tmp10(tmp2(10217).AttachmentIcon, obj6)];
         const obj7 = { variant: "text-sm/normal", color: "text-muted", children: null };
-        const intl = tmp2(1236).intl;
+        const intl = tmp2(1233).intl;
         const obj8 = { count: null };
         obj8[0] = length;
-        obj7[2] = intl.format(tmp2(1236).t.ZJ1tPW, obj8);
+        obj7[2] = intl.format(tmp2(1233).t.ZJ1tPW, obj8);
         items2[1] = tmp10(tmp2(4474).Text, obj7);
         obj5[1] = items2;
         tmp9Result = tmp9(tmp12, obj5);
       }
       obj4[3] = tmp9Result;
-      tmp10Result = tmp10(tmp2(11783).ForLaterMessageRow, obj4);
+      tmp10Result = tmp10(tmp2(12006).ForLaterMessageRow, obj4);
     }
     items1[3] = tmp10Result;
     obj[5] = items1;
-    return closure_8(tmp2(5601).Card, obj);
+    return closure_8(tmp2(5609).Card, obj);
   }
 });
 const result = require("set").fileFinishedImporting("modules/scheduled_messages/native/ScheduledMessageCard.tsx");

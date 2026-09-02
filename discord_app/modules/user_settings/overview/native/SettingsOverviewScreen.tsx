@@ -122,5 +122,5 @@ export default function SettingsOverviewScreen() {
     obj1[0] = items1;
     return obj.createList(obj1);
   }, items);
-  return jsx(hasPremiumSubscriptionToDisplay(14341).SearchableSettingsList, { node });
+  return jsx(hasPremiumSubscriptionToDisplay(14564).SearchableSettingsList, { node });
 }

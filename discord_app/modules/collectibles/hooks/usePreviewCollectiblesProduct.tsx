@@ -80,10 +80,10 @@ export const usePreviewCollectibleProduct = function usePreviewCollectibleProduc
       return () => {
         if (closure_1) {
           closure_1_0(closure_1_1[8]).setPendingChanges({
-            avatarDecoration: "spriteIndex",
-            profileEffect: "category",
-            nameplate: "paths",
-            profileFrame: "replace",
+            avatarDecoration: "accessible",
+            profileEffect: "includes",
+            nameplate: "pos",
+            profileFrame: "r",
           });
           const obj = closure_1_0(closure_1_1[8]);
         }

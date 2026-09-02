@@ -112,8 +112,8 @@ export default function ChannelCallNavigatorIcon(disableBackground) {
     const obj3 = { source: null, color: null, size: null };
     obj3[0] = source;
     obj3[1] = tmp.iconColor.color;
-    obj3[2] = tmp5(1297).Icon.Sizes.SMALL_20;
-    tmp2Result = tmp2(tmp5(1297).Icon, obj3);
+    obj3[2] = tmp5(1296).Icon.Sizes.SMALL_20;
+    tmp2Result = tmp2(tmp5(1296).Icon, obj3);
   }
   items1[1] = tmp2Result;
   let tmp2Result1 = null != membersCount;
@@ -124,7 +124,7 @@ export default function ChannelCallNavigatorIcon(disableBackground) {
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.text;
     obj4[1] = membersCount;
-    tmp2Result1 = tmp2(tmp5(1297).LegacyText, obj4);
+    tmp2Result1 = tmp2(tmp5(1296).LegacyText, obj4);
   }
   items1[2] = tmp2Result1;
   obj[1] = items1;

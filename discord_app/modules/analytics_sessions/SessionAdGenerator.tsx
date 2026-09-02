@@ -1,8 +1,8 @@
 // discord_app/modules/analytics_sessions/SessionAdGenerator.tsx
-import v1 from "../../../_runtime/00514_v1.js";
+import v1 from "../../../_runtime/00511_v1.js";
 import setDefault from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import _modDef1208 from "../../utils/SentryUtils.native.tsx";
+import _modDef1205 from "../../utils/SentryUtils.native.tsx";
 import result2 from "SessionUtils.tsx";
 
 require = arg1;
@@ -20,7 +20,7 @@ export const getOrRefreshAdSession = function getOrRefreshAdSession(shouldExtend
     const _Date = Date;
     const timestamp1 = Date.now();
     if (timestamp1 < obj.createdAtTimestamp) {
-      obj = _modDef1208;
+      obj = _modDef1205;
       obj = { category: "ad", message: null };
       const _HermesInternal = HermesInternal;
       obj[1] =
@@ -58,7 +58,7 @@ export function getCurrentAdSession() {
 export const isAdSessionExpired = function isAdSessionExpired(createdAtTimestamp) {
   const timestamp = Date.now();
   if (timestamp < createdAtTimestamp.createdAtTimestamp) {
-    let obj = _modDef1208;
+    let obj = _modDef1205;
     obj = { category: "ad", message: null };
     const _HermesInternal = HermesInternal;
     obj[1] =

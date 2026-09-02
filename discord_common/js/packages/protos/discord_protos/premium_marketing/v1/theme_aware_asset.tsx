@@ -1,7 +1,7 @@
 // discord_common/js/packages/protos/discord_protos/premium_marketing/v1/theme_aware_asset.tsx
-import _mod1307 from "../../../../../../../_runtime/metro/01307__.js";
+import _mod1306 from "../../../../../../../_runtime/metro/01306__.js";
 import closure_2 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
-import { MessageType } from "../../../../../../../_runtime/metro/01307__.js";
+import { MessageType } from "../../../../../../../_runtime/metro/01306__.js";
 
 require = arg1;
 class ThemeAwareAsset$Type extends MessageType {
@@ -21,10 +21,10 @@ prototype["create"] = function create(arr) {
   let obj = { lightUrl: "", darkUrl: "", lightStaticUrl: "", darkStaticUrl: "" };
   const _Object = Object;
   obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1306.MESSAGE_TYPE, obj);
   if (undefined !== arr) {
-    const result = _mod1307.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1307;
+    const result = _mod1306.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1306;
   }
   return obj;
 };
@@ -70,7 +70,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
             if (true === onRead) {
               let tmp8 = require;
               let tmp9 = dependencyMap;
-              onRead = _mod1307.UnknownFieldHandler.onRead;
+              onRead = _mod1306.UnknownFieldHandler.onRead;
             }
             let tmp10 = obj;
             let tmp11 = tmp5;
@@ -86,25 +86,25 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(lightUrl, tag, writeUnknownFields) {
   if ("" !== lightUrl.lightUrl) {
-    tag.tag(1, _mod1307.WireType.LengthDelimited).string(lightUrl.lightUrl);
-    const tagResult = tag.tag(1, _mod1307.WireType.LengthDelimited);
+    tag.tag(1, _mod1306.WireType.LengthDelimited).string(lightUrl.lightUrl);
+    const tagResult = tag.tag(1, _mod1306.WireType.LengthDelimited);
   }
   if ("" !== lightUrl.darkUrl) {
-    tag.tag(2, _mod1307.WireType.LengthDelimited).string(lightUrl.darkUrl);
-    const tagResult1 = tag.tag(2, _mod1307.WireType.LengthDelimited);
+    tag.tag(2, _mod1306.WireType.LengthDelimited).string(lightUrl.darkUrl);
+    const tagResult1 = tag.tag(2, _mod1306.WireType.LengthDelimited);
   }
   if ("" !== lightUrl.lightStaticUrl) {
-    tag.tag(3, _mod1307.WireType.LengthDelimited).string(lightUrl.lightStaticUrl);
-    const tagResult2 = tag.tag(3, _mod1307.WireType.LengthDelimited);
+    tag.tag(3, _mod1306.WireType.LengthDelimited).string(lightUrl.lightStaticUrl);
+    const tagResult2 = tag.tag(3, _mod1306.WireType.LengthDelimited);
   }
   if ("" !== lightUrl.darkStaticUrl) {
-    tag.tag(4, _mod1307.WireType.LengthDelimited).string(lightUrl.darkStaticUrl);
-    const tagResult3 = tag.tag(4, _mod1307.WireType.LengthDelimited);
+    tag.tag(4, _mod1306.WireType.LengthDelimited).string(lightUrl.darkStaticUrl);
+    const tagResult3 = tag.tag(4, _mod1306.WireType.LengthDelimited);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1307.UnknownFieldHandler.onWrite;
+      onWrite = _mod1306.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, lightUrl, tag);

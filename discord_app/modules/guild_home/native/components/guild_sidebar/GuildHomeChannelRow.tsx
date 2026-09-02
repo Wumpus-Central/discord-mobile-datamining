@@ -28,7 +28,7 @@ export default function GuildHomeChannelRow(selected) {
   const callback = React.useCallback(() => {
     id(closure_1_2[7]).transitionTo(closure_1_4.CHANNEL(id, closure_1_5.GUILD_HOME));
   }, items);
-  const ChannelModes = id(11948).ChannelModes;
+  const ChannelModes = id(12171).ChannelModes;
   if (selected) {
     let DEFAULT = ChannelModes.SELECTED;
     let tmp5 = tmp3;
@@ -47,16 +47,16 @@ export default function GuildHomeChannelRow(selected) {
     icon: null,
   };
   const tmp = callback();
-  const intl = tmp5(1236).intl;
-  obj[3] = intl.string(tmp5(1236).t.VbpLyU);
+  const intl = tmp5(1233).intl;
+  obj[3] = intl.string(tmp5(1233).t.VbpLyU);
   obj[4] = { selected };
   obj[5] = DEFAULT;
   obj = { name: null, mode: null };
-  const intl2 = tmp5(1236).intl;
-  obj[0] = intl2.string(tmp5(1236).t.VbpLyU);
+  const intl2 = tmp5(1233).intl;
+  obj[0] = intl2.string(tmp5(1233).t.VbpLyU);
   obj[1] = DEFAULT;
-  obj[6] = jsx(tmp5(11948).BaseChannelName, { name: null, mode: null });
-  obj = { mode: DEFAULT, IconComponent: tmp5(13580).SignPostIcon };
-  obj[7] = jsx(tmp5(11948).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(13580).SignPostIcon });
-  return jsx(BaseChannelSubtitleDefault, { mode: DEFAULT, IconComponent: tmp5(13580).SignPostIcon });
+  obj[6] = jsx(tmp5(12171).BaseChannelName, { name: null, mode: null });
+  obj = { mode: DEFAULT, IconComponent: tmp5(13803).SignPostIcon };
+  obj[7] = jsx(tmp5(12171).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(13803).SignPostIcon });
+  return jsx(BaseChannelSubtitleDefault, { mode: DEFAULT, IconComponent: tmp5(13803).SignPostIcon });
 }

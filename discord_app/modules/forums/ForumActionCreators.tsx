@@ -179,9 +179,9 @@ export default {
     obj[1] = obj;
     obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
     _require = HTTP.put(obj);
-    const intl = tmp(1236).intl;
+    const intl = tmp(1233).intl;
     const tmpResult = sendRequest;
-    const intl2 = tmp(1236).intl;
+    const intl2 = tmp(1233).intl;
     withErrorHandling(
       () => closure_0,
       intl.string(require("../../intl/index.native.tsx").t.T8sBLJ),
@@ -210,15 +210,15 @@ export default {
     closure_1 = arg1;
     return callback(function* () {
       closure_0 = tmp4;
-      const obj2 = v0(7509);
+      const obj2 = v0(7519);
       yield obj2.unarchiveThreadIfNecessary(closure_1_0);
-      const HTTP = closure_1_0(530).HTTP;
+      const HTTP = closure_1_0(527).HTTP;
       const obj3 = { url: null, body: null, rejectWithError: null };
       obj3[0] = closure_1_5.CHANNEL(closure_0);
       const obj4 = { applied_tags: null };
       obj4[0] = v0;
       obj3[1] = obj4;
-      obj3[2] = closure_1_0(530).rejectWithMigratedError();
+      obj3[2] = closure_1_0(527).rejectWithMigratedError();
       return HTTP.patch(obj3);
     })();
   },
@@ -260,13 +260,13 @@ export default {
       closure_1 = tmp3;
       obj1 = { type: "FORUM_SEARCH_START", channelId: null };
       obj1[1] = closure_1_1;
-      closure_1_1(709).dispatch(obj1);
+      closure_1_1(706).dispatch(obj1);
       dependencyMap = 1;
-      const obj13 = closure_1_1(7509);
+      const obj13 = closure_1_1(7519);
       yield obj13.searchThreads(closure_1_0, closure_1_1, dependencyMap, c3, c4);
       if (1 === tmp7) {
         dependencyMap = 0;
-        obj1 = closure_1_1(709);
+        obj1 = closure_1_1(706);
         const obj3 = { type: "FORUM_SEARCH_FAILURE", channelId: null };
         obj3[1] = closure_1;
         obj1.dispatch(obj3);
@@ -280,14 +280,14 @@ export default {
         obj4[0] = length;
         obj4[1] = closure_1;
         obj4[2] = length.length;
-        closure_1_0(7511).trackForumSearched(obj4);
-        const obj7 = closure_1_0(7511);
+        closure_1_0(7521).trackForumSearched(obj4);
+        const obj7 = closure_1_0(7521);
         const obj5 = { type: "FORUM_SEARCH_SUCCESS", channelId: null, threadIds: null };
         obj5[1] = closure_1;
         obj5[2] = length;
-        closure_1_1(709).dispatch(obj5);
+        closure_1_1(706).dispatch(obj5);
         dependencyMap = 0;
-        const obj9 = closure_1_1(709);
+        const obj9 = closure_1_1(706);
       }
       dependencyMap = 0;
       return arg1;

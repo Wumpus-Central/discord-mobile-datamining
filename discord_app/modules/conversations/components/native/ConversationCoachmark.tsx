@@ -45,7 +45,7 @@ export const ConversationCoachmark = function ConversationCoachmark(arg0) {
   dependencyMap = undefined;
   ({ children, isLast } = arg0);
   const ref = React.useRef(null);
-  let obj = first(6251);
+  let obj = first(6260);
   const tmp3 = callback(obj.useSelectedDismissibleContent(items), 2);
   first = tmp3[0];
   dependencyMap = tmp5;
@@ -59,10 +59,10 @@ export const ConversationCoachmark = function ConversationCoachmark(arg0) {
       onDismiss: null,
       renderImgComponent: null,
     };
-    const intl = first(1236).intl;
-    obj[0] = intl.string(first(1236).t.UcQjDe);
-    const intl2 = first(1236).intl;
-    obj[1] = intl2.string(first(1236).t.QeJIbA);
+    const intl = first(1233).intl;
+    obj[0] = intl.string(first(1233).t.UcQjDe);
+    const intl2 = first(1233).intl;
+    obj[1] = intl2.string(first(1233).t.QeJIbA);
     obj[3] = first === closure_1_7;
     obj[4] = function onDismiss() {
       callback(closure_1_5.USER_DISMISS);
@@ -73,7 +73,7 @@ export const ConversationCoachmark = function ConversationCoachmark(arg0) {
     return obj;
   }, items);
   const tmp = callback2();
-  const coachmark = first(8973).useCoachmark(ref, memo);
+  const coachmark = first(8987).useCoachmark(ref, memo);
   const items1 = [tmp3[1]];
   let coachmarkWrapper;
   callback = React.useCallback(() => {

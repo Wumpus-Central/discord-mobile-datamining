@@ -17,7 +17,7 @@ createCacheKey = {
   backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { height: "disabled", minHeight: false };
+createCacheKey[1] = { height: "ip", minHeight: false };
 createCacheKey[2] = { paddingTop: ThemesDefault.space.PX_8 };
 let obj1 = { paddingTop: ThemesDefault.space.PX_8 };
 createCacheKey[3] = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };

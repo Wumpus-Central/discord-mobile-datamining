@@ -1,6 +1,6 @@
 // discord_app/modules/keyboard/native/PortalKeyboardRenderer.tsx
 import ManaContext from "../../../../discord_common/js/packages/design/native.tsx";
-import _modDef16339 from "PortalKeyboardRendererComponent.tsx";
+import _modDef16571 from "PortalKeyboardRendererComponent.tsx";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import closure_4 from "subscribeToKeyboardUIStore.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
@@ -15,10 +15,10 @@ function transitionGroupRenderItem(arg0, arg1, arg2, arg3) {
   if (isAndroidResult) {
     let tmpResult = tmp(4342);
     const keyboardType = tmpResult.getKeyboardType();
-    isAndroidResult = keyboardType === tmp(1626).KeyboardTypes.SYSTEM;
+    isAndroidResult = keyboardType === tmp(1625).KeyboardTypes.SYSTEM;
   }
   if (isAndroidResult) {
-    tmpResult = tmp(500);
+    tmpResult = tmp(1234);
     isAndroidResult = tmpResult.isAndroid();
   }
   let tmp5 = null;
@@ -27,7 +27,7 @@ function transitionGroupRenderItem(arg0, arg1, arg2, arg3) {
     obj[0] = arg1;
     obj[1] = arg2;
     obj[2] = arg3;
-    tmp5 = jsx(_modDef16339, { item: null, state: null, cleanUp: null }, arg0);
+    tmp5 = jsx(_modDef16571, { item: null, state: null, cleanUp: null }, arg0);
   }
   return tmp5;
 }
@@ -129,7 +129,7 @@ export const PortalKeyboardRenderer = function PortalKeyboardRenderer(portal) {
   } else {
     obj1 = { value: true, children: null };
     obj1[1] = tmp11;
-    tmp10Result = tmp10(tmp5(9160).PortalKeyboardInModalContext.Provider, obj1);
+    tmp10Result = tmp10(tmp5(9174).PortalKeyboardInModalContext.Provider, obj1);
   }
   return tmp10Result;
 };

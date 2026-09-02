@@ -52,9 +52,18 @@ function sortRoles(guildId, id) {
   return diff;
 }
 function getMemberRowData(id, id2) {
-  const tmp3 = isGuildOwner(id2, id) ? RowType.OWNER : RowType.MEMBER;
+  if (arg2 === id.id) {
+    let MEMBER = RowType.APP_CHANNEL_APP;
+    let tmp3 = RowType;
+  } else if (isGuildOwner(id2, id)) {
+    MEMBER = tmp2.OWNER;
+    tmp3 = tmp2;
+  } else {
+    MEMBER = tmp2.MEMBER;
+    tmp3 = tmp2;
+  }
   const obj = {
-    rowType: tmp3,
+    rowType: MEMBER,
     name: null,
     username: null,
     id: null,
@@ -75,8 +84,9 @@ function getMemberRowData(id, id2) {
   obj[4] = id.getAvatarURL(id2.id, 24);
   obj[5] = id.bot;
   obj[6] = id.isVerifiedBot();
-  obj[7] = isGuildOwner(id2, id);
-  obj[8] = "" + tmp3 + ":" + id.id;
+  const obj3 = nameFromUserDefault;
+  obj[7] = isGuildOwner(id2, id) || MEMBER === tmp3.APP_CHANNEL_APP;
+  obj[8] = "" + MEMBER + ":" + id.id;
   return obj;
 }
 function sortMembers(rowType, rowType2) {
@@ -337,8 +347,8 @@ export const getExistingRolesRows = function getExistingRolesRows(guild, sortedG
     const intl2 = require("../../intl/index.native.tsx").intl;
     let stringResult = intl2.string(require("../../intl/index.native.tsx").t.nZfHsf);
     if (stringResult === undefined) {
-      const intl = tmp4(1236).intl;
-      stringResult = intl.string(tmp4(1236).t["gnsna/"]);
+      const intl = tmp4(1233).intl;
+      stringResult = intl.string(tmp4(1233).t["gnsna/"]);
     }
     let obj = { rowType: null, colorString: null, name: null, disabled: true, id: "EMPTY_STATE" };
     obj[0] = RowType.EMPTY_STATE;
@@ -409,8 +419,8 @@ export const getExistingRolesRowWithPermissionDisabled = function getExistingRol
     const intl2 = require("../../intl/index.native.tsx").intl;
     let stringResult = intl2.string(require("../../intl/index.native.tsx").t.nZfHsf);
     if (stringResult === undefined) {
-      const intl = tmp4(1236).intl;
-      stringResult = intl.string(tmp4(1236).t["gnsna/"]);
+      const intl = tmp4(1233).intl;
+      stringResult = intl.string(tmp4(1233).t["gnsna/"]);
     }
     let obj = { rowType: null, colorString: null, name: null, disabled: true, id: "EMPTY_STATE" };
     obj[0] = RowType.EMPTY_STATE;
@@ -421,18 +431,23 @@ export const getExistingRolesRowWithPermissionDisabled = function getExistingRol
   }
   return mapped;
 };
-export const getMembersRows = function getMembersRows(stateFromStoresArray, channel, guild, permission, filterByQuery) {
+export const getMembersRows = function getMembersRows(stateFromStoresArray, channel, guild, permission, arg4) {
   const _require = channel;
   closure_1 = guild;
   closure_2 = permission;
-  let fn = filterByQuery;
-  if (filterByQuery === undefined) {
+  let obj = arg4;
+  if (arg4 === undefined) {
+    obj = {};
+  }
+  let fn = obj.filter;
+  if (fn === undefined) {
     fn = function a() {
       return true;
     };
   }
+  const appChannelBotUserId = obj.appChannelBotUserId;
   const mapped = stateFromStoresArray.map(currentUser.getUser);
-  const found = mapped.filter(require("../../utils/GlobalUtils.tsx").isNotNullish);
+  const found = mapped.filter(_require(fn[12]).isNotNullish);
   const found1 = found.filter((id) => {
     const tmp2 = closure_1_5(guild, id);
     let tmp3 = !tmp2;
@@ -466,7 +481,7 @@ export const getMembersRows = function getMembersRows(stateFromStoresArray, chan
       tmp5 = permission;
     }
   });
-  const mapped1 = found1.map((arg0) => closure_1_16(arg0, closure_1));
+  const mapped1 = found1.map((arg0) => closure_1_16(arg0, closure_1, appChannelBotUserId));
   return mapped1.sort(sortMembers);
 };
 export const getExistingMembers = function getExistingMembers(memberIds, channel, guild, accessPermissions) {
@@ -494,8 +509,8 @@ export const getExistingMembers = function getExistingMembers(memberIds, channel
         }
         let tmp7 = null == tmp5;
         if (!tmp7) {
-          tmp7 = !accessPermissions(table[9]).has(tmp5.allow, accessPermissions);
-          const obj = accessPermissions(table[9]);
+          tmp7 = !accessPermissions(permissionUpdates[9]).has(tmp5.allow, accessPermissions);
+          const obj = accessPermissions(permissionUpdates[9]);
         }
         flag = tmp7;
       }
@@ -507,14 +522,25 @@ export const getExistingMembers = function getExistingMembers(memberIds, channel
     return tmp10;
   });
 };
-export const getExistingMembersRows = function getExistingMembersRows(memberIds, channel, guild, accessPermissions) {
+export const getExistingMembersRows = function getExistingMembersRows(
+  memberIds,
+  channel,
+  guild,
+  accessPermissions,
+  arg4,
+) {
   let _require = guild;
+  let obj = arg4;
+  if (arg4 === undefined) {
+    obj = {};
+  }
+  let appChannelBotUserId = obj.appChannelBotUserId;
   _require = channel;
-  closure_1 = guild;
+  appChannelBotUserId = guild;
   closure_2 = accessPermissions;
-  dependencyMap = arg4;
+  const permissionUpdates = obj.permissionUpdates;
   const mapped = memberIds.map(currentUser.getUser);
-  const found = mapped.filter(require("../../utils/GlobalUtils.tsx").isNotNullish);
+  const found = mapped.filter(_require(permissionUpdates[12]).isNotNullish);
   const found1 = found.filter((id) => {
     id = id.id;
     const currentUser = closure_1_9.getCurrentUser();
@@ -533,8 +559,8 @@ export const getExistingMembersRows = function getExistingMembersRows(memberIds,
         }
         let tmp7 = null == tmp5;
         if (!tmp7) {
-          tmp7 = !accessPermissions(table[9]).has(tmp5.allow, accessPermissions);
-          const obj = accessPermissions(table[9]);
+          tmp7 = !accessPermissions(permissionUpdates[9]).has(tmp5.allow, accessPermissions);
+          const obj = accessPermissions(permissionUpdates[9]);
         }
         flag = tmp7;
       }
@@ -545,26 +571,29 @@ export const getExistingMembersRows = function getExistingMembersRows(memberIds,
     }
     return tmp10;
   });
-  const mapped1 = found1.map((arg0) => closure_1_16(arg0, closure_0));
+  const mapped1 = found1.map((arg0) => closure_1_16(arg0, closure_0, closure_1));
   return mapped1.sort(sortMembers);
 };
 export const getRowTypeLabel = function getRowTypeLabel(rowType) {
   if (RowType.ROLE === rowType) {
-    const intl6 = getSystemLocale.intl;
-    return intl6.string(getSystemLocale.t.ZxoFOG);
+    const intl7 = getSystemLocale.intl;
+    return intl7.string(getSystemLocale.t.ZxoFOG);
   } else if (tmp.OWNER === rowType) {
-    const intl5 = getSystemLocale.intl;
-    return intl5.string(getSystemLocale.t.NWhYJg);
+    const intl6 = getSystemLocale.intl;
+    return intl6.string(getSystemLocale.t.NWhYJg);
   } else if (tmp.ADMINISTRATOR === rowType) {
-    const intl4 = getSystemLocale.intl;
-    return intl4.string(getSystemLocale.t["dwlcc+"]);
+    const intl5 = getSystemLocale.intl;
+    return intl5.string(getSystemLocale.t["dwlcc+"]);
   } else if (tmp.MEMBER === rowType) {
     let stringResult = null;
     if (arg1) {
-      const intl3 = getSystemLocale.intl;
-      stringResult = intl3.string(getSystemLocale.t.UAJxZi);
+      const intl4 = getSystemLocale.intl;
+      stringResult = intl4.string(getSystemLocale.t.UAJxZi);
     }
     return stringResult;
+  } else if (tmp.APP_CHANNEL_APP === rowType) {
+    const intl3 = getSystemLocale.intl;
+    return intl3.string(getSystemLocale.t["z2/ML4"]);
   } else if (tmp.USER === rowType) {
     const intl2 = getSystemLocale.intl;
     return intl2.string(getSystemLocale.t.KD6OJJ);
@@ -577,17 +606,20 @@ export const getRowTypeLabel = function getRowTypeLabel(rowType) {
 };
 export const getRemoveTooltipHint = function getRemoveTooltipHint(arg0) {
   if (RowType.ROLE === arg0) {
-    const intl4 = getSystemLocale.intl;
-    return intl4.string(getSystemLocale.t["Gzc/a8"]);
+    const intl5 = getSystemLocale.intl;
+    return intl5.string(getSystemLocale.t["Gzc/a8"]);
   } else if (tmp.OWNER === arg0) {
-    const intl3 = getSystemLocale.intl;
-    return intl3.string(getSystemLocale.t.icuNBM);
+    const intl4 = getSystemLocale.intl;
+    return intl4.string(getSystemLocale.t.icuNBM);
   } else if (tmp.ADMINISTRATOR === arg0) {
-    const intl2 = getSystemLocale.intl;
-    return intl2.string(getSystemLocale.t.eTmN5a);
+    const intl3 = getSystemLocale.intl;
+    return intl3.string(getSystemLocale.t.eTmN5a);
   } else if (tmp.MEMBER === arg0) {
+    const intl2 = getSystemLocale.intl;
+    return intl2.string(getSystemLocale.t["Gzc/a8"]);
+  } else if (tmp.APP_CHANNEL_APP === arg0) {
     const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["Gzc/a8"]);
+    return intl.string(getSystemLocale.t.v05vEp);
   } else {
     const EMPTY_STATE = tmp.EMPTY_STATE;
     return null;
@@ -686,19 +718,22 @@ export const canCreatePrivateChannel = function canCreatePrivateChannel(closure_
   if (closure_10 !== constants2.GUILD_TEXT) {
     tmp2 = canResult;
     if (closure_10 !== tmp.GUILD_ANNOUNCEMENT) {
-      const tmp4 = isGuildVocalChannelType(closure_10);
-      let tmp5 = !tmp4;
-      if (!tmp4) {
-        tmp5 = closure_10 !== tmp.GUILD_CATEGORY;
-      }
-      if (!tmp5) {
-        let tmp6 = canResult;
-        if (canResult) {
-          tmp6 = canResult1;
+      tmp2 = canResult;
+      if (closure_10 !== tmp.GUILD_APP) {
+        const tmp4 = isGuildVocalChannelType(closure_10);
+        let tmp5 = !tmp4;
+        if (!tmp4) {
+          tmp5 = closure_10 !== tmp.GUILD_CATEGORY;
         }
-        tmp5 = tmp6;
+        if (!tmp5) {
+          let tmp6 = canResult;
+          if (canResult) {
+            tmp6 = canResult1;
+          }
+          tmp5 = tmp6;
+        }
+        tmp2 = tmp5;
       }
-      tmp2 = tmp5;
     }
   }
   return tmp2;
@@ -706,14 +741,16 @@ export const canCreatePrivateChannel = function canCreatePrivateChannel(closure_
 export const getPrivateChannelHintText = function getPrivateChannelHintText(first1) {
   if (constants2.GUILD_TEXT !== first1) {
     if (tmp.GUILD_ANNOUNCEMENT !== first1) {
-      if (tmp.GUILD_VOICE === first1) {
-        const intl2 = getSystemLocale.intl;
-        return intl2.format(getSystemLocale.t.iZAMty, {});
-      } else if (tmp.GUILD_CATEGORY === first1) {
-        const intl = getSystemLocale.intl;
-        return intl.format(getSystemLocale.t.PhnARV, {});
-      } else {
-        return null;
+      if (tmp.GUILD_APP !== first1) {
+        if (tmp.GUILD_VOICE === first1) {
+          const intl2 = getSystemLocale.intl;
+          return intl2.format(getSystemLocale.t.iZAMty, {});
+        } else if (tmp.GUILD_CATEGORY === first1) {
+          const intl = getSystemLocale.intl;
+          return intl.format(getSystemLocale.t.PhnARV, {});
+        } else {
+          return null;
+        }
       }
     }
   }

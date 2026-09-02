@@ -49,11 +49,11 @@ export default {
     const obj3 = sendRequest;
     return HTTP.post(obj).then(
       (arg0) => {
-        callback(709).dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" });
+        callback(706).dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" });
         return arg0;
       },
       (arg0) => {
-        callback(709).dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" });
+        callback(706).dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" });
         throw arg0;
       },
     );
@@ -68,11 +68,11 @@ export default {
     const obj4 = sendRequest;
     return HTTP.post(obj).then(
       (arg0) => {
-        callback(709).dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" });
+        callback(706).dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" });
         return arg0;
       },
       (arg0) => {
-        callback(709).dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" });
+        callback(706).dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" });
         throw arg0;
       },
     );

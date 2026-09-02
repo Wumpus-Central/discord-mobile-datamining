@@ -14,7 +14,7 @@ export const AvatarDuoPile = function AvatarDuoPile(size) {
   if ("aria-label" in merged) {
     aria_label = merged["aria-label"];
   } else {
-    let tmp3Result = tmp3(9273);
+    let tmp3Result = tmp3(9286);
     aria_label = tmp3Result.getListSummaryLabel(merged.names);
   }
   const obj = { aria-label, shape: SolidCutout.CutoutShape.Circle, size: null, gap: 4, depthX: 0.5, depthY: 0.5, children: null };
@@ -22,7 +22,7 @@ export const AvatarDuoPile = function AvatarDuoPile(size) {
   if (tmp3Result.isArray(size)) {
     let mapped = size.map((arg0) => callback(table[6]).AVATAR_SIZE_MAP[arg0]);
   } else {
-    mapped = tmp3(9428).AVATAR_SIZE_MAP[size];
+    mapped = tmp3(9441).AVATAR_SIZE_MAP[size];
   }
   obj[2] = mapped;
   obj[6] = size.children;

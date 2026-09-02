@@ -21,7 +21,7 @@ export const createNewThreadSystemMessage = function createNewThreadSystemMessag
     channel_id = messageReference.channel_id;
   }
   channel = channel.getChannel(channel_id);
-  const intl = tmp(1236).intl;
+  const intl = tmp(1233).intl;
   obj = {
     actorName: messageAuthorWithProcessedColor.nick,
     actorHook: formatUsernameOnClickDefault({
@@ -44,7 +44,7 @@ export const createNewThreadSystemMessage = function createNewThreadSystemMessag
   if (messageReference2 != null) {
     channel_id1 = messageReference2.channel_id;
   }
-  obj = { content: intl.formatToParts(tmp(1236).t.veX9jq, obj) };
+  obj = { content: intl.formatToParts(tmp(1233).t.veX9jq, obj) };
   obj[3] = { action: "bindOpenThreadChannel", threadId: channel_id1, medium: true };
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
   return obj;

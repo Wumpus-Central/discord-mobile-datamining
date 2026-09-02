@@ -616,7 +616,7 @@ export const usePublishSubscriptionListing = function usePublishSubscriptionList
                 ({ guildId: c0, groupListingId: c1, listingId: c2 } = callback);
                 c5 = 1;
                 c6 = 1;
-                return { value: "PX_16", done: null };
+                return { value: "PX_16", done: true };
               }
             } else if (1 === tmp9) {
               if (arg0 === 1) {
@@ -1178,7 +1178,7 @@ export const useSubscriptionTrialsForGroup = function useSubscriptionTrialsForGr
   }
   let items = [closure_8];
   const items1 = [arg0, flag, flag2];
-  stateFromStoresArray = stateFromStoresArray(589).useStateFromStoresArray(
+  stateFromStoresArray = stateFromStoresArray(586).useStateFromStoresArray(
     items,
     () => {
       if (null == stateFromStoresArray) {
@@ -1221,10 +1221,10 @@ export const useSubscriptionTrialsForGroup = function useSubscriptionTrialsForGr
     },
     items1,
   );
-  const obj2 = stateFromStoresArray(589);
+  const obj2 = stateFromStoresArray(586);
   const items2 = [closure_8];
   const items3 = [stateFromStoresArray];
-  return stateFromStoresArray(589).useStateFromStoresArray(
+  return stateFromStoresArray(586).useStateFromStoresArray(
     items2,
     () => {
       const mapped = stateFromStoresArray.map((id) => subscriptionTrial.getSubscriptionTrial(id.id));
@@ -1238,7 +1238,7 @@ export const useSubscriptionTrialsForGuild = function useSubscriptionTrialsForGu
   closure_1 = { includeSoftDeleted: false, sortDeletedListingsLast: false };
   useFetchListingsForGuild(guildId);
   const items = [closure_8];
-  stateFromStoresArray = stateFromStoresArray(589).useStateFromStoresArray(items, () => {
+  stateFromStoresArray = stateFromStoresArray(586).useStateFromStoresArray(items, () => {
     let tmp = stateFromStoresArray;
     if (null != stateFromStoresArray) {
       let subscriptionGroupListingsForGuild = closure_1_8.getSubscriptionGroupListingsForGuild(tmp);
@@ -1248,10 +1248,10 @@ export const useSubscriptionTrialsForGuild = function useSubscriptionTrialsForGu
     tmp = subscriptionGroupListingsForGuild;
     subscriptionGroupListingsForGuild[Symbol.iterator]();
   });
-  const obj = stateFromStoresArray(589);
+  const obj = stateFromStoresArray(586);
   const items1 = [closure_8];
   const items2 = [stateFromStoresArray];
-  return stateFromStoresArray(589).useStateFromStoresArray(
+  return stateFromStoresArray(586).useStateFromStoresArray(
     items1,
     () => {
       const mapped = stateFromStoresArray.map((id) => subscriptionTrial.getSubscriptionTrial(id.id));

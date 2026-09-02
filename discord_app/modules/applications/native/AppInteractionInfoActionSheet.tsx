@@ -28,11 +28,11 @@ export default function AppInteractionInfoActionSheet(message) {
   const items = [onBack];
   const interactionMetadata = message.interactionMetadata;
   let tmp5;
-  const memo = React.useMemo(() => closure_1_8(onBack(11305), { onBack }), items);
+  const memo = React.useMemo(() => closure_1_8(onBack(11528), { onBack }), items);
   if (interactionMetadata != null) {
     tmp5 =
       interactionMetadata.authorizing_integration_owners[
-        message(undefined, 8433).ApplicationIntegrationType.USER_INSTALL
+        message(undefined, 8442).ApplicationIntegrationType.USER_INSTALL
       ];
   }
   dependencyMap = tmp5;
@@ -41,7 +41,7 @@ export default function AppInteractionInfoActionSheet(message) {
   if (interactionMetadata2 != null) {
     tmp7 =
       interactionMetadata2.authorizing_integration_owners[
-        message(undefined, 8433).ApplicationIntegrationType.GUILD_INSTALL
+        message(undefined, 8442).ApplicationIntegrationType.GUILD_INSTALL
       ];
   }
   React = tmp7;
@@ -50,13 +50,13 @@ export default function AppInteractionInfoActionSheet(message) {
   if (interactionMetadata3 != null) {
     id = interactionMetadata3.user.id;
   }
-  obj1 = message(589);
+  obj1 = message(586);
   const items1 = [closure_7];
   stateFromStores = obj1.useStateFromStores(items1, () => closure_1_7.getUser(closure_2));
-  let obj2 = message(589);
+  let obj2 = message(586);
   const items2 = [closure_6];
   const stateFromStores1 = obj2.useStateFromStores(items2, () => guild.getGuild(closure_3));
-  let obj3 = message(589);
+  let obj3 = message(586);
   const items3 = [closure_7];
   const stateFromStores2 = obj3.useStateFromStores(items3, () => closure_1_7.getUser(id));
   closure_6 = stateFromStores2;
@@ -67,8 +67,8 @@ export default function AppInteractionInfoActionSheet(message) {
       tmp = null != dependencyMap;
     }
     if (tmp) {
-      const user = message(8116).getUser(dependencyMap);
-      const obj = message(8116);
+      const user = message(8124).getUser(dependencyMap);
+      const obj = message(8124);
     }
   }, items4);
   let tmp15 = stateFromStores2;
@@ -88,87 +88,87 @@ export default function AppInteractionInfoActionSheet(message) {
     obj[0] = tmp.itemContainer;
     obj = { guild: null, size: null };
     obj[0] = stateFromStores1;
-    obj[1] = tmp10(6004).GuildIconSizes.SMALL_32;
-    const items5 = [callback(onBack(6004), obj)];
+    obj[1] = tmp10(6012).GuildIconSizes.SMALL_32;
+    const items5 = [callback(onBack(6012), obj)];
     obj1 = { style: null, children: null };
     obj1[0] = tmp.itemLabel;
     obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj2[2] = stateFromStores1.name;
     const items6 = [callback(tmp10(4474).Text, obj2)];
     obj3 = { variant: "text-xs/medium", color: "text-subtle", children: null };
-    const intl2 = tmp10(1236).intl;
+    const intl2 = tmp10(1233).intl;
     const obj4 = { application: null };
     obj4[0] = message.author.username;
-    obj3[2] = intl2.format(tmp10(1236).t.ShLXXB, obj4);
+    obj3[2] = intl2.format(tmp10(1233).t.ShLXXB, obj4);
     items6[1] = callback(tmp10(4474).Text, obj3);
     obj1[1] = items6;
     items5[1] = callback2(id, obj1);
     obj[1] = items5;
     let tmp26 = callback2(id, obj);
-    const tmp2Result = onBack(6004);
+    const tmp2Result = onBack(6012);
   } else {
     tmp26 = null;
     if (null != stateFromStores) {
       const obj5 = { onPress: null, children: null };
       obj5[0] = function onPress() {
-        return onBack(8896)({ userId: stateFromStores.id, channelId: message.channel_id });
+        return onBack(8911)({ userId: stateFromStores.id, channelId: message.channel_id });
       };
       const obj6 = { style: null, children: null };
       obj6[0] = tmp.itemContainer;
       const obj7 = { user: null, size: null, guildId: null };
       obj7[0] = stateFromStores;
-      obj7[1] = tmp10(1297).AvatarSizes.REFRESH_MEDIUM_32;
+      obj7[1] = tmp10(1296).AvatarSizes.REFRESH_MEDIUM_32;
       obj7[2] = guildId;
-      const items7 = [callback(tmp10(1297).Avatar, obj7)];
+      const items7 = [callback(tmp10(1296).Avatar, obj7)];
       const obj8 = { style: null, children: null };
       obj8[0] = tmp.itemLabel;
       const obj9 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
       obj9[2] = stateFromStores.username;
       const items8 = [callback(tmp10(4474).Text, obj9)];
       const obj10 = { variant: "text-xs/medium", color: "text-subtle", children: null };
-      const intl = tmp10(1236).intl;
+      const intl = tmp10(1233).intl;
       const obj11 = { application: null };
       obj11[0] = message.author.username;
-      obj10[2] = intl.format(tmp10(1236).t.ShLXXB, obj11);
+      obj10[2] = intl.format(tmp10(1233).t.ShLXXB, obj11);
       items8[1] = callback(tmp10(4474).Text, obj10);
       obj8[1] = items8;
       items7[1] = callback2(id, obj8);
       obj6[1] = items7;
       obj5[1] = callback2(id, obj6);
-      tmp26 = callback(tmp10(5068).PressableOpacity, obj5);
+      tmp26 = callback(tmp10(5076).PressableOpacity, obj5);
     }
   }
-  const obj12 = { header: memo, bodyStyles: { paddingBottom: onBack(1628)().bottom }, children: null };
+  const obj12 = { header: memo, bodyStyles: { paddingBottom: onBack(1627)().bottom }, children: null };
   const items9 = [tmp26];
   let tmp32 = null;
   if (null != tmp15) {
     const obj13 = { onPress: null, children: null };
     obj13[0] = function onPress() {
-      return onBack(8896)({ userId: guild.id, channelId: message.channel_id });
+      return onBack(8911)({ userId: guild.id, channelId: message.channel_id });
     };
     const obj14 = { style: null, children: null };
     obj14[0] = tmp.itemContainer;
     const obj15 = { user: null, size: null, guildId: null };
     obj15[0] = tmp15;
-    obj15[1] = tmp10(1297).AvatarSizes.REFRESH_MEDIUM_32;
+    obj15[1] = tmp10(1296).AvatarSizes.REFRESH_MEDIUM_32;
     obj15[2] = guildId;
-    const items10 = [callback(tmp10(1297).Avatar, obj15)];
+    const items10 = [callback(tmp10(1296).Avatar, obj15)];
     const obj16 = { style: null, children: null };
     obj16[0] = tmp.itemLabel;
     const obj17 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj17[2] = tmp15.username;
     const items11 = [callback(tmp10(4474).Text, obj17)];
     const obj18 = { variant: "text-xs/medium", color: "text-subtle", children: null };
-    const intl3 = tmp10(1236).intl;
-    obj18[2] = intl3.string(tmp10(1236).t["04gxNg"]);
+    const intl3 = tmp10(1233).intl;
+    obj18[2] = intl3.string(tmp10(1233).t["04gxNg"]);
     items11[1] = callback(tmp10(4474).Text, obj18);
     obj16[1] = items11;
     items10[1] = tmp31(id, obj16);
     obj14[1] = items10;
     obj13[1] = tmp31(id, obj14);
-    tmp32 = callback(tmp10(5068).PressableOpacity, obj13);
+    tmp32 = callback(tmp10(5076).PressableOpacity, obj13);
   }
   items9[1] = tmp32;
   obj12[2] = items9;
-  return callback2(message(5622).BottomSheet, obj12);
+  return callback2(message(5630).BottomSheet, obj12);
 }

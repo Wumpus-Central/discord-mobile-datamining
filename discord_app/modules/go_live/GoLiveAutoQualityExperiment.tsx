@@ -30,7 +30,7 @@ export const getGoLiveAutoQualityExperimentConfig = function getGoLiveAutoQualit
 export const useGoLiveAutoQualityExperimentConfig = function useGoLiveAutoQualityExperimentConfig(location) {
   location = location.location;
   const items = [closure_2];
-  return location(589).useStateFromStores(items, () => closure_1_6.getConfig({ location }));
+  return location(586).useStateFromStores(items, () => closure_1_6.getConfig({ location }));
 };
 export const maybeMigrateToAutoQuality = function maybeMigrateToAutoQuality() {
   const Storage = Storage3.Storage;
@@ -46,7 +46,7 @@ export const maybeMigrateToAutoQuality = function maybeMigrateToAutoQuality() {
         obj[0] = tmp9.PRESET_AUTO;
         ({ resolution: obj2[1], fps: obj2[2], soundshareEnabled: obj2[3] } = state);
         tmp(4663).updateStreamSettings(obj);
-        const Storage2 = tmp(595).Storage;
+        const Storage2 = tmp(592).Storage;
         const result = Storage2.set(GoLiveAutoQualityMigrationVersion, 1);
         const tmpResult = tmp(4663);
       }

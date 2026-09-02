@@ -16,18 +16,23 @@ function isValidClipboardCode(arg0) {
 }
 const result = require("set").fileFinishedImporting("modules/mfa/native/screens/TotpScreen.tsx");
 
-export default function TotpScreen() {
-  let obj = _require(first[5]);
-  const finish = obj.useMfaChallenge().finish;
-  _require = finish;
-  [tmp4, importDefault] = callback2(React.useState(false), 2);
-  const tmp5 = callback2(React.useState(""), 2);
-  first = tmp5[0];
-  let callback = tmp5[1];
-  const tmp3 = callback2(React.useState(false), 2);
-  [tmp7, closure_4] = callback2(React.useState(undefined), 2);
-  const tmp6 = callback2(React.useState(undefined), 2);
-  [tmp9, closure_5] = callback2(React.useState(false), 2);
+export default function TotpScreen(finish) {
+  finish = finish.finish;
+  let _require = finish;
+  importDefault = undefined;
+  let first;
+  let callback;
+  let callback2;
+  let React;
+  callback = undefined;
+  [tmp2, c1] = callback2(React.useState(false), 2);
+  const tmp3 = callback2(React.useState(""), 2);
+  first = tmp3[0];
+  callback = tmp3[1];
+  const tmp = callback2(React.useState(false), 2);
+  [tmp5, c4] = callback2(React.useState(undefined), 2);
+  const tmp4 = callback2(React.useState(undefined), 2);
+  [tmp7, c5] = callback2(React.useState(false), 2);
   _require = undefined;
   _require = callback((arg0) => {
     closure_0 = arg0;
@@ -135,11 +140,11 @@ export default function TotpScreen() {
     }
     return applyArgumentsResult;
   }, items);
-  obj = { headerText: null, input: null, submit: null, mfaMethod: "totp" };
-  const tmp12 = importDefault;
-  const tmp8 = callback2(React.useState(false), 2);
-  const intl = _require(first[7]).intl;
-  obj[0] = intl.string(_require(first[7]).t.uc00u5);
+  let obj = { headerText: null, input: null, submit: null, screenProps: null, mfaMethod: "totp" };
+  const tmp10 = importDefault;
+  const tmp6 = callback2(React.useState(false), 2);
+  const intl = _require(first[6]).intl;
+  obj[0] = intl.string(_require(first[6]).t.uc00u5);
   obj = {
     label: null,
     placeholder: null,
@@ -152,40 +157,41 @@ export default function TotpScreen() {
     autoComplete: "one-time-code",
     keyboardType: "number-pad",
   };
-  const tmp13 = importDefault(first[6]);
-  const intl2 = _require(first[7]).intl;
-  obj[0] = intl2.string(_require(first[7]).t.HZPBOd);
-  const intl3 = _require(first[7]).intl;
-  obj[1] = intl3.string(_require(first[7]).t.tARzgo);
+  const tmp12 = importDefault(first[5]);
+  const intl2 = _require(first[6]).intl;
+  obj[0] = intl2.string(_require(first[6]).t.HZPBOd);
+  const intl3 = _require(first[6]).intl;
+  obj[1] = intl3.string(_require(first[6]).t.tARzgo);
   obj[2] = isValidClipboardCode;
   obj[3] = _require(first[4]).TOTP_CODE_LENGTH;
   obj[4] = callback;
-  obj[5] = tmp7;
-  let tmp15 = tmp4;
-  if (!tmp4) {
-    tmp15 = tmp9;
+  obj[5] = tmp5;
+  let tmp15 = tmp2;
+  if (!tmp2) {
+    tmp15 = tmp7;
   }
   obj[6] = tmp15;
-  obj[1] = callback(importDefault(first[8]), obj);
-  obj1 = { variant: "primary", text: null, loading: null, onPress: null, disabled: null };
-  const tmp14 = importDefault(first[8]);
-  const intl4 = tmp(tmp2[7]).intl;
-  obj1[1] = intl4.string(_require(first[7]).t.geKm7t);
-  let tmp17 = tmp4;
-  if (!tmp4) {
-    tmp17 = tmp9;
+  obj[1] = callback(importDefault(first[7]), obj);
+  obj = { variant: "primary", text: null, loading: null, onPress: null, disabled: null };
+  const tmp14 = importDefault(first[7]);
+  const intl4 = tmp13(tmp11[6]).intl;
+  obj[1] = intl4.string(_require(first[6]).t.geKm7t);
+  let tmp17 = tmp2;
+  if (!tmp2) {
+    tmp17 = tmp7;
   }
-  obj1[2] = tmp17;
-  obj1[3] = function onPress() {
+  obj[2] = tmp17;
+  obj[3] = function onPress() {
     callback(first);
   };
-  if (!tmp4) {
-    tmp4 = tmp9;
+  if (!tmp2) {
+    tmp2 = tmp7;
   }
-  if (!tmp4) {
-    tmp4 = first.length !== tmp(tmp2[4]).TOTP_CODE_LENGTH;
+  if (!tmp2) {
+    tmp2 = first.length !== tmp13(tmp11[4]).TOTP_CODE_LENGTH;
   }
-  obj1[4] = tmp4;
-  obj[2] = callback(tmp12(first[9]), obj1);
-  return callback(tmp13, obj);
+  obj[4] = tmp2;
+  obj[2] = callback(tmp10(first[8]), obj);
+  obj[3] = { mfaChallenge: finish.mfaChallenge, finish };
+  return callback(tmp12, obj);
 }

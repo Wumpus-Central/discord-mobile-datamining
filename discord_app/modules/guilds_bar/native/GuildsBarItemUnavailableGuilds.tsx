@@ -1,6 +1,6 @@
 // discord_app/modules/guilds_bar/native/GuildsBarItemUnavailableGuilds.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../_runtime/15931_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/16162_registerAsset.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../stores/GuildAvailabilityStore.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
@@ -24,16 +24,16 @@ obj[1] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function GuildsBarItemUnavailableGuilds() {
   const tmp = callback();
-  let obj = stateFromStores(589);
+  let obj = stateFromStores(586);
   const items = [closure_5];
   stateFromStores = obj.useStateFromStores(items, () => obj.totalUnavailableGuilds);
   let tmp5 = null;
   if (stateFromStores > 0) {
     obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
-    let intl = tmp2(1236).intl;
+    let intl = tmp2(1233).intl;
     obj = { count: null };
     obj[0] = stateFromStores;
-    obj[1] = intl.formatToPlainString(tmp2(1236).t["MEpX+2"], obj);
+    obj[1] = intl.formatToPlainString(tmp2(1233).t["MEpX+2"], obj);
     obj[2] = function onPress() {
       let obj = closure_1_1(closure_1_2[6]);
       obj = { title: null, body: null };

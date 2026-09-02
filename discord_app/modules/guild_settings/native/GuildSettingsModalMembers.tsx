@@ -32,7 +32,7 @@ let closure_20 = importAllResult.memo((guild) => {
   const sortedGuildRoles = guild.sortedGuildRoles;
   dependencyMap = undefined;
   ({ start, end } = guild);
-  let obj = guild(1499);
+  let obj = guild(1498);
   dependencyMap = obj.useNavigation();
   if (null == guild) {
     return null;
@@ -67,11 +67,11 @@ let closure_20 = importAllResult.memo((guild) => {
       }
       const mapped1 = found.map((name) => name.name);
       const joined = mapped1.join(", ");
-      const intl = tmp2(1236).intl;
+      const intl = tmp2(1233).intl;
       obj = { memberName: null, roleNames: null };
       obj[0] = str;
       obj[1] = joined;
-      formatToPlainStringResult = intl.formatToPlainString(tmp2(1236).t["6eGpWx"], obj);
+      formatToPlainStringResult = intl.formatToPlainString(tmp2(1233).t["6eGpWx"], obj);
       tmp9 = guildMember;
     }
     obj = {
@@ -100,7 +100,7 @@ let closure_20 = importAllResult.memo((guild) => {
     obj[5] = function onPress() {};
     obj[7] = start;
     obj[8] = end;
-    return closure_15(guildMember(10679), obj);
+    return closure_15(guildMember(10900), obj);
   }
   tmp = callback();
 });
@@ -311,12 +311,12 @@ const memoResult = importAllResult.memo(function GuildSettingsModalMembers(guild
           items: membersManagementActions,
           children(ref) {
             const merged = Object.assign(ref, Object.create(null));
-            const obj = { source: callback2(9768), accessibilityLabel: null, ref: null };
-            const intl = callback(1236).intl;
-            obj[1] = intl.string(callback(1236).t.ogxXGq);
+            const obj = { source: callback2(9790), accessibilityLabel: null, ref: null };
+            const intl = callback(1233).intl;
+            obj[1] = intl.string(callback(1233).t.ogxXGq);
             obj[2] = ref.ref;
             const merged1 = Object.assign(merged);
-            return callback3(callback(6237).HeaderActionButton, obj);
+            return callback3(callback(6246).HeaderActionButton, obj);
           },
         };
         return closure_1_15(closure_1_0(closure_1_2[26]).ContextMenu, obj);

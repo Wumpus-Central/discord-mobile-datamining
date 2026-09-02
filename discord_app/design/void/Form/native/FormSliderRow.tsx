@@ -1,7 +1,7 @@
 // discord_app/design/void/Form/native/FormSliderRow.tsx
-import _modDef5592 from "FormRow.tsx";
+import _modDef5600 from "FormRow.tsx";
 import context2 from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
-import _modDef8381 from "../../../../../_runtime/metro/08381__.js";
+import _modDef8390 from "../../../../../_runtime/metro/08390__.js";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -32,22 +32,22 @@ export default function FormSliderRow(arg0) {
     const obj2 = {};
     const merged1 = Object.assign(merged);
     obj2.style = tmp5.slider;
-    items1[1] = callback(_modDef8381, obj2);
+    items1[1] = callback(_modDef8390, obj2);
     obj[0] = items1;
-    let tmp6Result = tmp6(tmp2(5601).Card, obj);
-    const tmp18 = _modDef8381;
+    let tmp6Result = tmp6(tmp2(5609).Card, obj);
+    const tmp18 = _modDef8390;
   } else {
     obj = { children: null };
     const obj3 = { label: null, trailing: null };
     obj3[0] = label;
     obj3[1] = trailing;
-    const items2 = [callback(_modDef5592, obj3)];
+    const items2 = [callback(_modDef5600, obj3)];
     const obj4 = {};
     const merged2 = Object.assign(merged);
-    items2[1] = callback(_modDef8381, obj4);
+    items2[1] = callback(_modDef8390, obj4);
     obj[0] = items2;
     tmp6Result = tmp6(closure_7, obj);
-    const tmp10 = _modDef8381;
+    const tmp10 = _modDef8390;
   }
   return tmp6Result;
 }

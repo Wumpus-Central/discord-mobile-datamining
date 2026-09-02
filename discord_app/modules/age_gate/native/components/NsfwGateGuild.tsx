@@ -32,14 +32,14 @@ export default function NsfwGateGuild(guildId) {
   guildId = guildId.guildId;
   let currentUser;
   const tmp = callback3();
-  const intl = guildId(1236).intl;
-  const intl2 = guildId(1236).intl;
-  const stringResult = intl.string(guildId(1236).t.vAymlG);
-  const intl3 = guildId(1236).intl;
+  const intl = guildId(1233).intl;
+  const intl2 = guildId(1233).intl;
+  const stringResult = intl.string(guildId(1233).t.vAymlG);
+  const intl3 = guildId(1233).intl;
   let obj = { helpURL: null };
-  obj1 = currentUser(1995);
+  obj1 = currentUser(1994);
   obj[0] = obj1.getArticleURL(constants.NSFW_GUILD_GUIDELINES);
-  const stringResult1 = intl2.string(guildId(1236).t.Crj6eC);
+  const stringResult1 = intl2.string(guildId(1233).t.Crj6eC);
   currentUser = currentUser.getCurrentUser();
   const items = [guildId, currentUser];
   const effect = React.useEffect(() => {
@@ -74,8 +74,8 @@ export default function NsfwGateGuild(guildId) {
     obj.track(closure_1_9.GUILD_NSFW_GATE_VIEWED, obj);
   }, items);
   obj = { style: tmp.container, children: null };
-  const items1 = [callback(currentUser(7748), {}), , , , ,];
-  obj = { source: currentUser(9133), style: tmp.image };
+  const items1 = [callback(currentUser(7757), {}), , , , ,];
+  obj = { source: currentUser(9147), style: tmp.image };
   items1[1] = callback(closure_5, obj);
   obj1 = {
     style: tmp.header,
@@ -90,17 +90,17 @@ export default function NsfwGateGuild(guildId) {
     color: "text-default",
     children: stringResult1,
   });
-  const formatResult = intl3.format(guildId(1236).t.Z12LNW, obj);
+  const formatResult = intl3.format(guildId(1233).t.Z12LNW, obj);
   const obj2 = { style: tmp.description, variant: "text-md/normal", color: "text-default", children: stringResult1 };
   items1[4] = callback(guildId(4474).Text, {
     style: tmp.description,
     variant: "text-md/normal",
     color: "text-default",
-    children: intl3.format(guildId(1236).t.Z12LNW, obj),
+    children: intl3.format(guildId(1233).t.Z12LNW, obj),
   });
   const obj4 = { onPress: guildId.onClose, size: "md", text: null };
-  const intl4 = guildId(1236).intl;
-  obj4[2] = intl4.string(guildId(1236).t.gRqiWV);
+  const intl4 = guildId(1233).intl;
+  obj4[2] = intl4.string(guildId(1233).t.gRqiWV);
   items1[5] = callback(guildId(4928).Button, obj4);
   obj[1] = items1;
   return callback2(closure_4, obj);

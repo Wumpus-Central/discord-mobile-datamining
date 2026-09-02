@@ -47,7 +47,7 @@ function _redirectToSlayerStorefrontWeb() {
               closure_3 = undefined;
               logger = 1;
               c6 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -60,15 +60,15 @@ function _redirectToSlayerStorefrontWeb() {
               return obj1;
             } else if (null == callback) {
               const obj2 = { key: "SHOP_ITEM_HANDOFF_ERROR", content: null };
-              const intl2 = callback(1236).intl;
-              obj2[1] = intl2.string(callback(1236).t["rTU7/z"]);
+              const intl2 = callback(1233).intl;
+              obj2[1] = intl2.string(callback(1233).t["rTU7/z"]);
               callback2(4194).open(obj2);
               c6 = 3;
               return { value: false, done: true };
             } else {
               c4 = 1;
               closure_3 = c4.COLLECTIBLES_SHOP_GAME_SHOP(callback, undefined, callback2);
-              let obj6 = callback2(6161);
+              let obj6 = callback2(6169);
               logger = 3;
               c6 = 1;
               const obj3 = { value: null, done: false };
@@ -90,8 +90,8 @@ function _redirectToSlayerStorefrontWeb() {
             const result = obj1.captureBillingException(c4, obj4);
             obj4 = callback2(4194);
             obj6 = { key: "SHOP_ITEM_HANDOFF_ERROR", content: null };
-            const intl = callback(1236).intl;
-            obj6[1] = intl.string(callback(1236).t["rTU7/z"]);
+            const intl = callback(1233).intl;
+            obj6[1] = intl.string(callback(1233).t["rTU7/z"]);
             obj4.open(obj6);
             c6 = 3;
             return { value: false, done: true };

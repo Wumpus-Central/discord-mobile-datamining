@@ -102,7 +102,7 @@ export default function QuestHomeSetting() {
   );
   navigation = undefined;
   importDefault = undefined;
-  let obj = navigation(1499);
+  let obj = navigation(1498);
   navigation = obj.useNavigation();
   const tmp10 = callback(React.useState(false), 2);
   importDefault = tmp10[1];

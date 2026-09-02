@@ -3,7 +3,7 @@ import noopAll from "../../../../../../_runtime/00019_noop.js";
 import getSystemLocale from "../../../../../intl/index.native.tsx";
 import Text from "../../../../../design/components/Text/native/Text.tsx";
 import componentDidMountDefault from "../../../../../components_native/common/Alert.tsx";
-import registerAssetDefault from "../../../../../../_runtime/07667_registerAsset.js";
+import registerAssetDefault from "../../../../../../_runtime/07676_registerAsset.js";
 import { Image } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { DownloadLinks } from "../../../../../Constants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";

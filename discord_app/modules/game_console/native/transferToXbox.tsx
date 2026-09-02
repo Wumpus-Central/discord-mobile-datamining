@@ -46,7 +46,7 @@ function _transferToXbox() {
               dependencyMap = 1;
               c4 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_1(9881).maybeShowPTTAlert(closure_1_6.XBOX);
+              obj1[0] = closure_1_1(9903).maybeShowPTTAlert(closure_1_6.XBOX);
               return obj1;
             }
           } else if (1 === tmp5) {
@@ -62,7 +62,7 @@ function _transferToXbox() {
               dependencyMap = 2;
               c4 = 1;
               let obj3 = { value: null, done: false };
-              obj3[0] = callback2(9878).disconnectRemote();
+              obj3[0] = callback2(9900).disconnectRemote();
               return obj3;
             }
           } else if (2 === tmp5) {
@@ -75,7 +75,7 @@ function _transferToXbox() {
               obj4[0] = arg1;
               return obj4;
             } else {
-              let obj9 = callback2(9878);
+              let obj9 = callback2(9900);
               dependencyMap = 3;
               c4 = 1;
               const obj5 = { value: null, done: false };
@@ -95,7 +95,7 @@ function _transferToXbox() {
               callback = arg1;
               const obj7 = { nonce: null, forQRCode: false };
               obj7[0] = callback;
-              callback2 = callback(9890)(user, obj7);
+              callback2 = callback(9912)(user, obj7);
               dependencyMap = 4;
               c4 = 1;
               const obj8 = { value: null, done: false };
@@ -111,8 +111,8 @@ function _transferToXbox() {
             obj9[0] = arg1;
             return obj9;
           } else if (arg1) {
-            tmp47(9884)(user.id, constants.XBOX);
-            obj3 = callback2(9878);
+            tmp47(9906)(user.id, constants.XBOX);
+            obj3 = callback2(9900);
             obj3.waitForSession(constants.XBOX, user.id, callback);
             obj4 = callback2(4663);
             obj4.stopOwnStream(false);

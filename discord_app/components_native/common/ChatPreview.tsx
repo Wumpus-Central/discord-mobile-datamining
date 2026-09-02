@@ -1,6 +1,6 @@
 // discord_app/components_native/common/ChatPreview.tsx
-import set from "../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import set from "../../utils/PlatformUtils.tsx";
 import useWindowDimensionsDefault from "../../modules/screen/useWindowDimensions.native.tsx";
 import Text from "../../design/components/Text/native/Text.tsx";
 import PressableBase from "../../design/void/Pressables/native/Pressables.tsx";
@@ -103,7 +103,7 @@ class ChatPreviewBase extends PureComponent {
           let arr = items;
           const first = items[0];
           if (null != first) {
-            if (messages(11525)(c0, first[first.length - 1], props)) {
+            if (messages(11748)(c0, first[first.length - 1], props)) {
               items = [props];
               arr = arr.unshift(items);
             } else {
@@ -168,10 +168,10 @@ class ChatPreviewBase extends PureComponent {
             });
             tmp8.revealed = tmp.id === messages.revealedMessageId;
             tmp8.context = tmp.id;
-            const intl2 = _undefined(1236).intl;
+            const intl2 = _undefined(1233).intl;
             obj1 = { count: null };
             obj1[0] = tmp8.content.length;
-            tmp8.text = intl2.formatToPlainString(_undefined(1236).t["+FcYM/"], obj1);
+            tmp8.text = intl2.formatToPlainString(_undefined(1233).t["+FcYM/"], obj1);
             tmp25 = null != tmp8 && tmp8.rowType === tmp10.BLOCKED_GROUP;
           } else if (tmp.ignored) {
             let tmp14 = tmp8;
@@ -195,10 +195,10 @@ class ChatPreviewBase extends PureComponent {
             });
             tmp14.revealed = tmp.id === messages.revealedMessageId;
             tmp14.context = tmp.id;
-            const intl = _undefined(1236).intl;
+            const intl = _undefined(1233).intl;
             const obj3 = { count: null };
             obj3[0] = tmp14.content.length;
-            tmp14.text = intl.formatToPlainString(_undefined(1236).t["VFWjc+"], obj3);
+            tmp14.text = intl.formatToPlainString(_undefined(1233).t["VFWjc+"], obj3);
             tmp13 = null != tmp8 && tmp8.rowType === tmp10.IGNORED_GROUP;
           } else {
             const item2 = arr.forEach((id) => {
@@ -262,8 +262,8 @@ class ChatPreviewBase extends PureComponent {
             jumpType: "flex",
             shouldInitialScroll: "Array",
             animated: 0,
-            scrollPosition: 2,
-            focusTargetId: 0,
+            scrollPosition: 3,
+            focusTargetId: 2,
           };
           obj[0] = tmp22;
           obj[1] = jumpTargetId;
@@ -607,7 +607,7 @@ prototype["render"] = function render() {
     onPress: self.handleJumpToChat,
     children: callback(Text.Text, obj4),
   });
-  tmp6Result = tmp6(tmp9(5553).SafeAreaPaddingView, obj2);
+  tmp6Result = tmp6(tmp9(5561).SafeAreaPaddingView, obj2);
   tmp14 = tmp6Result;
 };
 ChatPreviewBase.contextType = require("ManaContext").ThemeContext;
@@ -623,19 +623,19 @@ export const ChatPreview = function ChatPreview(channelId) {
   const setting1 = InlineEmbedMedia.useSetting();
   const RenderEmbeds = channelId(4166).RenderEmbeds;
   const setting2 = RenderEmbeds.useSetting();
-  let obj = channelId(589);
+  let obj = channelId(586);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => roleStyle.roleStyle);
   const items1 = [closure_8];
-  const stateFromStores1 = channelId(589).useStateFromStores(items1, () => closure_1_8.getChannel(channelId));
-  const obj2 = channelId(589);
-  const isChannelSpoilerGated = channelId(6174).useIsChannelSpoilerGated(stateFromStores1);
-  const obj3 = channelId(6174);
+  const stateFromStores1 = channelId(586).useStateFromStores(items1, () => closure_1_8.getChannel(channelId));
+  const obj2 = channelId(586);
+  const isChannelSpoilerGated = channelId(6182).useIsChannelSpoilerGated(stateFromStores1);
+  const obj3 = channelId(6182);
   const isChannelContentGated = channelId(4731).useIsChannelContentGated(stateFromStores1);
   const obj4 = channelId(4731);
   const items2 = [closure_7];
   obj = {};
-  const stateFromStores2 = channelId(589).useStateFromStores(items2, () => null != content.getContent());
+  const stateFromStores2 = channelId(586).useStateFromStores(items2, () => null != content.getContent());
   const merged = Object.assign(channelId);
   obj.inlineAttachmentMedia = setting;
   obj.inlineEmbedMedia = setting1;

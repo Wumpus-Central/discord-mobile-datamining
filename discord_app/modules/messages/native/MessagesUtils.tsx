@@ -2,8 +2,8 @@
 import serializeDefault from "../../tti_analytics/TTITracker.tsx";
 import DISCORD_EPOCHDefault from "../../../utils/SnowflakeUtils.tsx";
 import applyDefault from "../../../../_runtime/00012_apply.js";
-import set2 from "../../../utils/PlatformUtils.tsx";
 import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import set2 from "../../../utils/PlatformUtils.tsx";
 import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
 import isCommunicationDisabled from "../../guild_communication_disabled/CommunicationDisabledUtils.tsx";
 import presentAddedFriendToast from "../../toast/native/ToastUtils.tsx";
@@ -299,7 +299,7 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(
     } else {
       if (tmp8.type === constants4.IMAGE) {
         if (null != tmp8.url) {
-          obj = { sourceType: "embed", source: null, mediaType: "image", mediaUrl: null, contentType: "r" };
+          obj = { sourceType: "embed", source: null, mediaType: "image", mediaUrl: null, contentType: "o" };
           obj[1] = tmp8;
           obj[3] = tmp8.url;
           return obj;
@@ -362,7 +362,7 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(
       const value = flattenComponents.flattenComponents(obj.components).get(tmpResult);
       if (null == value) {
         return null;
-      } else if (value.type === tmp20(1955).ComponentType.MEDIA_GALLERY) {
+      } else if (value.type === tmp20(1954).ComponentType.MEDIA_GALLERY) {
         if (null == componentMediaIndex) {
           return null;
         } else if (null == value.items[componentMediaIndex]) {
@@ -446,9 +446,9 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(
   if (channel.isArchivedLockedThread()) {
     const obj15 = dispatcherDefault;
     const tmp36 = importDefault;
-    const intl = tmp12(1236).intl;
+    const intl = tmp12(1233).intl;
     const string = intl.string;
-    let t = tmp12(1236).t;
+    let t = tmp12(1233).t;
     if (isForumPostResult) {
       let stringResult = string(t.EJQrFq);
     } else {
@@ -456,21 +456,21 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(
     }
     obj = { key: "ARCHIVED_POST_REACTIONS_DISABLED_TOAST", content: null, icon: null };
     obj[1] = stringResult;
-    tmp36Result = tmp36(10891);
+    tmp36Result = tmp36(11111);
     obj[2] = tmp36Result;
     t = obj15.open(obj);
     isForumPostResult = channel.isForumPost();
   } else if (null != reaction) {
     if (flag) {
       if (true === !reaction.me_burst) {
-        let tmp12Result = tmp12(1946);
+        let tmp12Result = tmp12(1945);
         if (!tmp12Result.isPremium(currentUser)) {
-          tmp12Result = tmp12(10892);
+          tmp12Result = tmp12(11112);
           return tmp12Result.handleOutOfSuperReactions();
         }
       }
     }
-    const ReactionTypes = tmp12(7507).ReactionTypes;
+    const ReactionTypes = tmp12(7517).ReactionTypes;
     if (tmp12Result1.isMeReaction(reaction.me, reaction.me_burst, tmp23)) {
       const result2 = tmp12(4446).triggerHapticFeedback(IMPACT_LIGHTDefault.IMPACT_LIGHT);
       const tmp12Result2 = tmp12(4446);
@@ -482,12 +482,12 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(
       obj1 = { burst: null };
       obj1[0] = flag;
       obj[4] = obj1;
-      tmp12(7508).removeReaction(obj);
+      tmp12(7518).removeReaction(obj);
     } else {
       if (!result) {
         if (channel.isPrivate()) {
           if (!result1) {
-            const tmp12Result4 = tmp12(7508);
+            const tmp12Result4 = tmp12(7518);
             const obj2 = { burst: null };
             obj2[0] = flag;
             tmp12Result4.addReaction(channel.id, messageId, reaction.emoji, MESSAGE, obj2);
@@ -501,14 +501,14 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(
       if (result) {
         const guildId1 = channel.getGuildId();
         if (null != guildId1) {
-          return tmp12(7646).openMemberVerificationModal(guildId1);
+          return tmp12(7655).openMemberVerificationModal(guildId1);
         }
       }
     }
     tmp12Result1 = tmp12(4132);
     tmp23 = flag ? ReactionTypes.BURST : ReactionTypes.NORMAL;
   } else {
-    const tmp12Result7 = tmp12(10892);
+    const tmp12Result7 = tmp12(11112);
     const obj3 = { burst: null };
     obj3[0] = flag;
     const result4 = tmp12Result7.handleAddNewReactions(channel, messageId, MESSAGE, obj3);
@@ -548,7 +548,7 @@ export const handleCopyLinkForumPost = function handleCopyLinkForumPost(guildId,
   tmp4Result = tmp4(4446);
   const result1 = tmp4Result.triggerHapticFeedback(IMPACT_LIGHTDefault.IMPACT_LIGHT);
   if (null == channel) {
-    const tmp4Result1 = tmp4(5981);
+    const tmp4Result1 = tmp4(5989);
     let result2;
     if (true === flag) {
       result2 = DISCORD_EPOCHDefault.castChannelIdAsMessageId(id);
@@ -557,7 +557,7 @@ export const handleCopyLinkForumPost = function handleCopyLinkForumPost(guildId,
     tmp4Result1.copy(tmp4(4666).getChannelPermalink(guildId, id, result2));
     const tmp4Result2 = tmp4(4666);
   } else {
-    const tmp4Result3 = tmp4(5981);
+    const tmp4Result3 = tmp4(5989);
     tmp4Result3.copy(tmp4(4666).getChannelLinkToCopy(channel, channel1));
     const tmp4Result4 = tmp4(4666);
   }
@@ -659,6 +659,8 @@ export const handleMediaPlayFinishedAnalytics = function handleMediaPlayFinished
     mime_type: null,
     file_size: null,
     file_duration_sec: null,
+    error_code: null,
+    error_message: null,
     connection_type: null,
     effective_connection_speed: null,
     service_provider: null,
@@ -671,10 +673,22 @@ export const handleMediaPlayFinishedAnalytics = function handleMediaPlayFinished
     }
   }
   obj[8] = mimeType;
-  obj[10] = playWallTimeMs.fileDurationSec;
-  obj[11] = store2.getType();
-  obj[12] = store2.getEffectiveConnectionSpeed();
-  obj[13] = store2.getServiceProvider();
+  ({ fileDurationSec: obj2[10], errorCode } = playWallTimeMs);
+  if (errorCode == null) {
+    errorCode = null;
+  }
+  obj[11] = errorCode;
+  let errorMessage = null;
+  if (null != playWallTimeMs.errorMessage) {
+    errorMessage = null;
+    if ("" !== playWallTimeMs.errorMessage) {
+      errorMessage = playWallTimeMs.errorMessage;
+    }
+  }
+  obj[12] = errorMessage;
+  obj[13] = store2.getType();
+  obj[14] = store2.getEffectiveConnectionSpeed();
+  obj[15] = store2.getServiceProvider();
   obj.track(constants3.MEDIA_PLAY_FINISHED, obj);
 };
 export const scrollToBottom = function scrollToBottom(current) {

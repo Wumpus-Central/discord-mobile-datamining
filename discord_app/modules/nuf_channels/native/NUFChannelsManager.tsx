@@ -89,7 +89,7 @@ class NUFChannelsManager extends tmp2 {
       }
     };
     applyArgumentsResult.requiresVoiceChannelsOnboard = function requiresVoiceChannelsOnboard() {
-      const Storage = applyArgumentsResult(595).Storage;
+      const Storage = applyArgumentsResult(592).Storage;
       const value = Storage.get(closure_10);
       let isNewUserResult = !value;
       if (!value) {
@@ -99,13 +99,13 @@ class NUFChannelsManager extends tmp2 {
       return isNewUserResult;
     };
     applyArgumentsResult.handleVoiceChannelsOnboard = function handleVoiceChannelsOnboard() {
-      const Storage = applyArgumentsResult(595).Storage;
+      const Storage = applyArgumentsResult(592).Storage;
       const result = Storage.set(closure_10, true);
     };
     applyArgumentsResult.clear = function clear() {
-      const Storage = applyArgumentsResult(595).Storage;
+      const Storage = applyArgumentsResult(592).Storage;
       Storage.remove(closure_9);
-      const Storage2 = applyArgumentsResult(595).Storage;
+      const Storage2 = applyArgumentsResult(592).Storage;
       Storage2.remove(closure_10);
     };
     return applyArgumentsResult;

@@ -424,7 +424,7 @@ prototype["updateNavigation"] = function updateNavigation(role, submitting) {
   submitting = this.state.submitting;
   let setOptionsResult = { headerLeft: null, headerRight: null, headerTitle: null };
   const sectionChanges = self.getSectionChanges();
-  setOptionsResult[0] = role(5495).getHeaderConditionalBackButton(self.handleBack);
+  setOptionsResult[0] = role(5503).getHeaderConditionalBackButton(self.handleBack);
   if (submitting) {
     let fn = () => callback(role(table[18]).HeaderSubmittingIndicator, {});
   } else if (sectionChanges) {
@@ -448,28 +448,28 @@ prototype["renderSubScreenButtons"] = function renderSubScreenButtons() {
   const self = this;
   let obj = { hasIcons: false, children: null };
   obj = { label: null, onPress: null, arrow: true };
-  const intl = self(1236).intl;
-  obj[0] = intl.string(self(1236).t.WIDE1L);
+  const intl = self(1233).intl;
+  obj[0] = intl.string(self(1233).t.WIDE1L);
   obj[1] = function onPress() {
     return self.onSubScreenValueChange(closure_1_17.PERMISSIONS);
   };
-  const items = [callback2(self(5599).TableRow, obj), ,];
+  const items = [callback2(self(5607).TableRow, obj), ,];
   obj = { label: null, onPress: null, arrow: true };
-  const intl2 = self(1236).intl;
-  obj[0] = intl2.string(self(1236).t["5//Muu"]);
+  const intl2 = self(1233).intl;
+  obj[0] = intl2.string(self(1233).t["5//Muu"]);
   obj[1] = function onPress() {
     return self.onSubScreenValueChange(closure_1_17.VERIFICATIONS);
   };
-  items[1] = callback2(self(5599).TableRow, obj);
+  items[1] = callback2(self(5607).TableRow, obj);
   obj1 = { label: null, onPress: null, arrow: true };
-  const intl3 = self(1236).intl;
-  obj1[0] = intl3.string(self(1236).t.J4ZtH1);
+  const intl3 = self(1233).intl;
+  obj1[0] = intl3.string(self(1233).t.J4ZtH1);
   obj1[1] = function onPress() {
     return self.onSubScreenValueChange(closure_1_17.MEMBERS);
   };
-  items[2] = callback2(self(5599).TableRow, obj1);
+  items[2] = callback2(self(5607).TableRow, obj1);
   obj[1] = items;
-  return callback3(self(5992).TableRowGroup, obj);
+  return callback3(self(6000).TableRowGroup, obj);
 };
 prototype["renderDeleteButton"] = function renderDeleteButton() {
   let obj = { hasIcons: false, children: null };
@@ -605,7 +605,7 @@ prototype["render"] = function render() {
     items[3] = renderDeleteButtonResult;
     obj6[1] = items;
     obj5[1] = closure_23(tmp24(4926).Stack, obj6);
-    tmp22Result = tmp22(tmp24(8363).Form, obj5);
+    tmp22Result = tmp22(tmp24(8372).Form, obj5);
     const tmp26 = closure_23;
   }
   obj2[1] = tmp22Result;

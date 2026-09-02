@@ -3,7 +3,7 @@ import set from "../../../_runtime/00002_set.js";
 import ME from "../../Constants.tsx";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import asyncRequireImpl from "../../../_runtime/02009_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/02008_asyncRequireImpl.js";
 import _modDef4723 from "../ModalActionCreators.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
@@ -21,7 +21,7 @@ export default {
       const obj = expandEventPropertiesDefault;
     }
     _modDef4723.pushLazy(
-      asyncRequireImpl(7688, dependencyMap.paths),
+      asyncRequireImpl(7697, dependencyMap.paths),
       { isChangeEmail: flag },
       EMAIL_VERIFICATION_MODAL_KEY,
     );

@@ -1,5 +1,5 @@
 // discord_common/js/packages/design/components/Colors/shared/Colors.tsx
-import nDefault from "../../../../../../../_runtime/00689_n.js";
+import nDefault from "../../../../../../../_runtime/00686_n.js";
 import closure_2 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
 
 let obj = { NonText: 3, Text: 4.5, HighContrastText: 7 };
@@ -26,7 +26,7 @@ export const getContrastingColor = function getContrastingColor(arg0, arg1) {
     base = arg0;
   }
   const tmp4Result = nDefault(base);
-  let obj3 = tmp2(689)(arg0);
+  let obj3 = tmp2(686)(arg0);
   const tmp4 = nDefault;
   const luminanceResult = tmp4Result.luminance();
   let contrastResult = nDefault.contrast(tmp4Result, obj3);

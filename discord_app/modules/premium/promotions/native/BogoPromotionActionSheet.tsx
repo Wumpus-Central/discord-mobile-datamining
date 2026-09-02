@@ -55,7 +55,7 @@ export default function BogoPromotionActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   let analyticsLocations;
   const tmp = callback3();
-  analyticsLocations = analyticsLocations(5953)().analyticsLocations;
+  analyticsLocations = analyticsLocations(5961)().analyticsLocations;
   const items = [analyticsLocations, markAsDismissed];
   const items1 = [markAsDismissed];
   const callback = React.useCallback(() => {
@@ -81,28 +81,28 @@ export default function BogoPromotionActionSheet(markAsDismissed) {
     },
     style: tmp.image,
   };
-  const items3 = [callback(analyticsLocations(5493), obj), , ,];
+  const items3 = [callback(analyticsLocations(5501), obj), , ,];
   obj1 = { style: items4, color: "mobile-text-heading-primary", variant: "heading-xl/bold", children: null };
   items4 = [tmp.header];
-  const intl = markAsDismissed(1236).intl;
-  obj1[3] = intl.string(markAsDismissed(1236).t["6Jjfk8"]);
+  const intl = markAsDismissed(1233).intl;
+  obj1[3] = intl.string(markAsDismissed(1233).t["6Jjfk8"]);
   items3[1] = callback(markAsDismissed(4474).Text, obj1);
   const obj2 = { style: items5, color: "text-subtle", variant: "text-md/medium", children: null };
   items5 = [tmp.subheader];
-  const intl2 = markAsDismissed(1236).intl;
-  const obj3 = { helpCenterLink: analyticsLocations(1995).getArticleURL(SUMMER_BOGO_2025.SUMMER_BOGO_2025) };
-  obj2[3] = intl2.format(markAsDismissed(1236).t.y7lJK6, obj3);
+  const intl2 = markAsDismissed(1233).intl;
+  const obj3 = { helpCenterLink: analyticsLocations(1994).getArticleURL(SUMMER_BOGO_2025.SUMMER_BOGO_2025) };
+  obj2[3] = intl2.format(markAsDismissed(1233).t.y7lJK6, obj3);
   items3[2] = callback(markAsDismissed(4474).Text, obj2);
   const obj4 = { style: items6, children: null };
   items6 = [tmp.buttonContainer];
   const obj5 = { text: null, onPress: null };
-  const obj7 = analyticsLocations(1995);
-  const intl3 = markAsDismissed(1236).intl;
-  obj5[0] = intl3.string(markAsDismissed(1236).t.J61px0);
+  const obj7 = analyticsLocations(1994);
+  const intl3 = markAsDismissed(1233).intl;
+  obj5[0] = intl3.string(markAsDismissed(1233).t.J61px0);
   obj5[1] = callback;
-  obj4[1] = callback(analyticsLocations(8970), obj5);
+  obj4[1] = callback(analyticsLocations(8984), obj5);
   items3[3] = callback(View, obj4);
   obj[1] = items3;
   obj[1] = callback2(View, obj);
-  return callback(markAsDismissed(5622).BottomSheet, obj);
+  return callback(markAsDismissed(5630).BottomSheet, obj);
 }

@@ -3,7 +3,7 @@ import set from "../../../../_runtime/00002_set.js";
 import noop from "../../../../_runtime/00019_noop.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import __INTERNAL_VIEW_CONFIGDefault from "../../../../discord_common/js/packages/rtn-codegen/js/ReanimatedViewNativeComponent.tsx";
-import importDefaultResult from "../../../../_runtime/01653_cancelAnimation.js";
+import importDefaultResult from "../../../../_runtime/01652_cancelAnimation.js";
 
 const jsx = jsxProd.jsx;
 let closure_1 = importDefaultResult.createAnimatedComponent(__INTERNAL_VIEW_CONFIGDefault);

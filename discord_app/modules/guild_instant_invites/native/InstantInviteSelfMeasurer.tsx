@@ -30,11 +30,11 @@ const memoResult = importAllResult.memo(function InstantInviteSelfMeasurer(type)
   if ("invite" === item.type) {
     obj = { invite: null };
     obj[0] = item.data;
-    let tmp2Result = tmp2(str(10669), obj);
+    let tmp2Result = tmp2(str(10890), obj);
   } else {
     obj = { channel: null };
     obj[0] = item.data;
-    tmp2Result = tmp2(onMeasured(10669).LinkedChannelInvite, obj);
+    tmp2Result = tmp2(onMeasured(10890).LinkedChannelInvite, obj);
   }
   obj[6] = tmp2Result;
   return (

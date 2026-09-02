@@ -57,7 +57,7 @@ function _requestAgeVerification() {
               ({ method: c0, classificationId: c1, vendor: c2 } = callback);
               c3 = 1;
               c4 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -403,20 +403,86 @@ function _initiateSuspendedUserAgeVerification() {
     c3 = 0;
     c4 = 0;
     const iter = (function* (arg0, body) {
-      c1 = tmp2;
-      ({ classificationId: c0, method: c1 } = callback);
-      yield "PX_16";
-      const table = suspendedUserToken.getSuspendedUserToken();
-      const HTTP = callback(table[5]).HTTP;
-      const obj2 = { url: null, body: null, rejectWithError: true };
-      obj2[0] = constants.SAFETY_HUB_REQUEST_SUSPENDED_AGE_VERIFICATION;
-      const obj3 = { token: null, from_classification_id: null, method: null };
-      obj3[0] = table;
-      obj3[1] = callback;
-      obj3[2] = c1;
-      obj2[1] = obj3;
-      yield HTTP.post(obj2);
-      return body.body;
+      if (suspendedUserToken === 2) {
+        suspendedUserToken = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw body;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = body;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          suspendedUserToken = 2;
+          if (0 === c3) {
+            if (arg0 === 1) {
+              suspendedUserToken = 3;
+              throw body;
+            } else if (arg0 === 2) {
+              suspendedUserToken = 3;
+              obj = { value: null, done: true };
+              obj[0] = body;
+              return obj;
+            } else {
+              let table = tmp5;
+              c1 = tmp2;
+              let callback;
+              c1 = undefined;
+              ({ classificationId: c0, method: c1 } = callback);
+              table = undefined;
+              c3 = 1;
+              suspendedUserToken = 1;
+              return { value: "PX_16", done: true };
+            }
+          } else if (1 === tmp5) {
+            if (arg0 === 1) {
+              suspendedUserToken = 3;
+              throw body;
+            } else if (arg0 === 2) {
+              suspendedUserToken = 3;
+              obj1 = { value: null, done: true };
+              obj1[0] = body;
+              return obj1;
+            } else {
+              table = suspendedUserToken.getSuspendedUserToken();
+              const HTTP = callback(table[5]).HTTP;
+              const obj2 = { url: null, body: null, rejectWithError: true };
+              obj2[0] = constants.SAFETY_HUB_REQUEST_SUSPENDED_AGE_VERIFICATION;
+              const obj3 = { token: null, from_classification_id: null, method: null };
+              obj3[0] = table;
+              obj3[1] = callback;
+              obj3[2] = c1;
+              obj2[1] = obj3;
+              c3 = 2;
+              suspendedUserToken = 1;
+              const obj4 = { value: null, done: false };
+              obj4[0] = HTTP.post(obj2);
+              return obj4;
+            }
+          } else if (arg0 === 1) {
+            suspendedUserToken = 3;
+            throw body;
+          } else if (arg0 === 2) {
+            suspendedUserToken = 3;
+            const obj5 = { value: null, done: true };
+            obj5[0] = body;
+            return obj5;
+          } else {
+            suspendedUserToken = 3;
+            obj = { value: null, done: true };
+            obj[0] = body.body;
+            return obj;
+          }
+        } catch (tmp7) {
+          suspendedUserToken = tmp;
+          throw tmp7;
+        }
+      }
     })();
     iter.next();
     return iter;
@@ -510,22 +576,87 @@ function _requestIncodeSessionBootstrap() {
     c3 = 0;
     c4 = 0;
     const iter = (function* (arg0, body) {
-      closure_1 = tmp2;
-      if (obj1 === undefined) {
-        obj1 = {};
+      if (c4 === 2) {
+        c4 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw body;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = body;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c4 = 2;
+          if (0 === c3) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw body;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj = { value: null, done: true };
+              obj[0] = body;
+              return obj;
+            } else {
+              const table = tmp5;
+              closure_1 = tmp2;
+              obj1 = undefined;
+              if (obj1 === undefined) {
+                obj1 = {};
+              }
+              c3 = 1;
+              c4 = 1;
+              return { value: "PX_16", done: true };
+            }
+          } else if (1 === tmp5) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw body;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              const obj2 = { value: null, done: true };
+              obj2[0] = body;
+              return obj2;
+            } else {
+              let tmp8;
+              const HTTP = obj1(table[5]).HTTP;
+              const obj3 = { url: null, body: null, rejectWithError: true };
+              obj3[0] = constants.CREATE_INCODE_SESSION;
+              if (null != obj1.previousInterviewId) {
+                const obj4 = { previous_interview_id: null };
+                obj4[0] = obj1.previousInterviewId;
+                tmp8 = obj4;
+              }
+              obj3[1] = tmp8;
+              c3 = 2;
+              c4 = 1;
+              const obj5 = { value: null, done: false };
+              obj5[0] = HTTP.post(obj3);
+              return obj5;
+            }
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw body;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj6 = { value: null, done: true };
+            obj6[0] = body;
+            return obj6;
+          } else {
+            c4 = 3;
+            obj = { value: null, done: true };
+            obj[0] = body.body;
+            return obj;
+          }
+        } catch (tmp9) {
+          c4 = tmp;
+          throw tmp9;
+        }
       }
-      yield "PX_16";
-      const HTTP = obj1(table[5]).HTTP;
-      const obj3 = { url: null, body: null, rejectWithError: true };
-      obj3[0] = constants.CREATE_INCODE_SESSION;
-      if (null != obj1.previousInterviewId) {
-        const obj4 = { previous_interview_id: null };
-        obj4[0] = obj1.previousInterviewId;
-        const tmp8 = obj4;
-      }
-      obj3[1] = tmp8;
-      yield HTTP.post(obj3);
-      return body.body;
     })();
     iter.next();
     return iter;
@@ -552,15 +683,15 @@ function _getAgeVerificationMethods() {
     if (promise != null) {
       const catchPromise = promise
         .then((body) => {
-          let obj = v1(709);
+          let obj = v1(706);
           obj = { type: "AGE_VERIFICATION_METHODS_LOAD_SUCCESS", methods: body.body.methods };
           obj.dispatch(obj);
         })
         .catch(() => {
-          v1(709).dispatch({ type: "AGE_VERIFICATION_METHODS_LOAD_FAILURE" });
+          v1(706).dispatch({ type: "AGE_VERIFICATION_METHODS_LOAD_FAILURE" });
         });
       const nextPromise = promise.then((body) => {
-        let obj = v1(709);
+        let obj = v1(706);
         obj = { type: "AGE_VERIFICATION_METHODS_LOAD_SUCCESS", methods: body.body.methods };
         obj.dispatch(obj);
       });

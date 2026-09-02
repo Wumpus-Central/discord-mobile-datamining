@@ -1,34 +1,34 @@
 // discord_app/modules/asset_json/native/AssetJsonUtils.tsx
-import registerAsset from "../../../../_runtime/01240_registerAsset.js";
-import registerAsset2 from "../../../../_runtime/01242_registerAsset.js";
-import registerAsset3 from "../../../../_runtime/01243_registerAsset.js";
-import registerAsset4 from "../../../../_runtime/01244_registerAsset.js";
-import registerAsset5 from "../../../../_runtime/01245_registerAsset.js";
-import registerAsset6 from "../../../../_runtime/01246_registerAsset.js";
-import registerAsset7 from "../../../../_runtime/01247_registerAsset.js";
-import registerAsset8 from "../../../../_runtime/01248_registerAsset.js";
-import registerAsset9 from "../../../../_runtime/01249_registerAsset.js";
-import registerAsset10 from "../../../../_runtime/01250_registerAsset.js";
-import registerAsset11 from "../../../../_runtime/01251_registerAsset.js";
-import registerAsset12 from "../../../../_runtime/01252_registerAsset.js";
-import registerAsset13 from "../../../../_runtime/01253_registerAsset.js";
-import registerAsset14 from "../../../../_runtime/01254_registerAsset.js";
-import registerAsset15 from "../../../../_runtime/01255_registerAsset.js";
-import registerAsset16 from "../../../../_runtime/01256_registerAsset.js";
-import registerAsset17 from "../../../../_runtime/01257_registerAsset.js";
-import registerAsset18 from "../../../../_runtime/01258_registerAsset.js";
-import registerAsset19 from "../../../../_runtime/01259_registerAsset.js";
-import registerAsset20 from "../../../../_runtime/01260_registerAsset.js";
-import registerAsset21 from "../../../../_runtime/01261_registerAsset.js";
-import registerAsset22 from "../../../../_runtime/01262_registerAsset.js";
-import registerAsset23 from "../../../../_runtime/01263_registerAsset.js";
-import registerAsset24 from "../../../../_runtime/01264_registerAsset.js";
-import registerAsset25 from "../../../../_runtime/01265_registerAsset.js";
-import registerAsset26 from "../../../../_runtime/01266_registerAsset.js";
-import registerAsset27 from "../../../../_runtime/01267_registerAsset.js";
-import registerAsset28 from "../../../../_runtime/01268_registerAsset.js";
-import registerAsset29 from "../../../../_runtime/01269_registerAsset.js";
-import registerAsset30 from "../../../../_runtime/01270_registerAsset.js";
+import registerAsset from "../../../../_runtime/01239_registerAsset.js";
+import registerAsset2 from "../../../../_runtime/01241_registerAsset.js";
+import registerAsset3 from "../../../../_runtime/01242_registerAsset.js";
+import registerAsset4 from "../../../../_runtime/01243_registerAsset.js";
+import registerAsset5 from "../../../../_runtime/01244_registerAsset.js";
+import registerAsset6 from "../../../../_runtime/01245_registerAsset.js";
+import registerAsset7 from "../../../../_runtime/01246_registerAsset.js";
+import registerAsset8 from "../../../../_runtime/01247_registerAsset.js";
+import registerAsset9 from "../../../../_runtime/01248_registerAsset.js";
+import registerAsset10 from "../../../../_runtime/01249_registerAsset.js";
+import registerAsset11 from "../../../../_runtime/01250_registerAsset.js";
+import registerAsset12 from "../../../../_runtime/01251_registerAsset.js";
+import registerAsset13 from "../../../../_runtime/01252_registerAsset.js";
+import registerAsset14 from "../../../../_runtime/01253_registerAsset.js";
+import registerAsset15 from "../../../../_runtime/01254_registerAsset.js";
+import registerAsset16 from "../../../../_runtime/01255_registerAsset.js";
+import registerAsset17 from "../../../../_runtime/01256_registerAsset.js";
+import registerAsset18 from "../../../../_runtime/01257_registerAsset.js";
+import registerAsset19 from "../../../../_runtime/01258_registerAsset.js";
+import registerAsset20 from "../../../../_runtime/01259_registerAsset.js";
+import registerAsset21 from "../../../../_runtime/01260_registerAsset.js";
+import registerAsset22 from "../../../../_runtime/01261_registerAsset.js";
+import registerAsset23 from "../../../../_runtime/01262_registerAsset.js";
+import registerAsset24 from "../../../../_runtime/01263_registerAsset.js";
+import registerAsset25 from "../../../../_runtime/01264_registerAsset.js";
+import registerAsset26 from "../../../../_runtime/01265_registerAsset.js";
+import registerAsset27 from "../../../../_runtime/01266_registerAsset.js";
+import registerAsset28 from "../../../../_runtime/01267_registerAsset.js";
+import registerAsset29 from "../../../../_runtime/01268_registerAsset.js";
+import registerAsset30 from "../../../../_runtime/01269_registerAsset.js";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 
@@ -51,53 +51,125 @@ function _loadJsonAsset() {
     c4 = 0;
     c5 = 0;
     const iter = (function* (arg0) {
-      let asset1 = 0;
-      let uri = tmp2;
-      if (flag === undefined) {
-        flag = true;
-      }
-      yield "PX_16";
-      if (null != dependencyMap[callback]) {
-        if (flag) {
-          let DCDFileManager = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = dependencyMap[callback];
-          return obj2;
+      if (DCDFileManager === 2) {
+        DCDFileManager = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
         }
-      }
-      uri = closure_4.resolveAssetSource(callback).uri;
-      const obj3 = callback(uri[32]);
-      if (obj3.isAndroid()) {
-        const obj4 = flag(uri[33]);
-        let asset;
-        if (obj4 != null) {
-          asset = obj4.readAsset(uri, "utf8");
-        }
-        asset1 = asset;
       } else {
-        DCDFileManager = DCDFileManager.DCDFileManager;
-        asset1 = DCDFileManager.readAsset(uri, "utf8");
-      }
-      if (null == asset1) {
-        const _Error = Error;
-        error = new Error("RTNFileManager doesn't exist?");
-        throw error;
-      }
-      closure_4 = yield asset1;
-      if (null == closure_4) {
-        return null;
-      }
-      if (null != dependencyMap[callback]) {
-        if (flag) {
-          DCDFileManager = 3;
-          const obj5 = { value: null, done: true };
-          obj5[0] = dependencyMap[callback];
-          return obj5;
+        try {
+          DCDFileManager = 2;
+          if (0 === closure_4) {
+            if (arg0 === 1) {
+              DCDFileManager = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              DCDFileManager = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let asset1 = 0;
+              let uri = tmp2;
+              let flag;
+              if (flag === undefined) {
+                flag = true;
+              }
+              uri = undefined;
+              asset1 = undefined;
+              closure_4 = undefined;
+              DCDFileManager = undefined;
+              closure_4 = 1;
+              DCDFileManager = 1;
+              return { value: "PX_16", done: true };
+            }
+          } else if (1 === tmp5) {
+            if (arg0 === 1) {
+              DCDFileManager = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              DCDFileManager = 3;
+              obj1 = { value: null, done: true };
+              obj1[0] = arg1;
+              return obj1;
+            } else {
+              if (null != dependencyMap[callback]) {
+                if (flag) {
+                  DCDFileManager = 3;
+                  const obj2 = { value: null, done: true };
+                  obj2[0] = dependencyMap[callback];
+                  return obj2;
+                }
+              }
+              uri = closure_4.resolveAssetSource(callback).uri;
+              let obj3 = callback(uri[32]);
+              if (obj3.isAndroid()) {
+                let obj4 = flag(uri[33]);
+                let asset;
+                if (obj4 != null) {
+                  asset = obj4.readAsset(uri, "utf8");
+                }
+                asset1 = asset;
+              } else {
+                DCDFileManager = DCDFileManager.DCDFileManager;
+                asset1 = DCDFileManager.readAsset(uri, "utf8");
+              }
+              if (null == asset1) {
+                const _Error = Error;
+                error = new Error("RTNFileManager doesn't exist?");
+                throw error;
+              } else {
+                closure_4 = 2;
+                DCDFileManager = 1;
+                obj3 = { value: null, done: false };
+                obj3[0] = asset1;
+                return obj3;
+              }
+            }
+          } else if (arg0 === 1) {
+            DCDFileManager = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            DCDFileManager = 3;
+            obj4 = { value: null, done: true };
+            obj4[0] = arg1;
+            return obj4;
+          } else {
+            closure_4 = arg1;
+            if (null == closure_4) {
+              DCDFileManager = 3;
+              return { value: null, done: true };
+            } else {
+              if (null != dependencyMap[callback]) {
+                if (flag) {
+                  DCDFileManager = 3;
+                  const obj5 = { value: null, done: true };
+                  obj5[0] = dependencyMap[callback];
+                  return obj5;
+                }
+              }
+              const _JSON = JSON;
+              DCDFileManager = JSON.parse(closure_4);
+              dependencyMap[callback] = DCDFileManager;
+              DCDFileManager = 3;
+              obj = { value: null, done: true };
+              obj[0] = DCDFileManager;
+              return obj;
+            }
+          }
+        } catch (tmp49) {
+          DCDFileManager = tmp;
+          throw tmp49;
         }
       }
-      const _JSON = JSON;
-      dependencyMap[callback] = DCDFileManager;
-      return DCDFileManager;
     })();
     iter.next();
     return iter;

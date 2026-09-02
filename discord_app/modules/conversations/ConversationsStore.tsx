@@ -1,7 +1,7 @@
 // discord_app/modules/conversations/ConversationsStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import privDefault from "../../../_runtime/01401_priv.js";
+import privDefault from "../../../_runtime/01400_priv.js";
 import createMinimalMessageRecord from "../messages/MessageRecordUtils.tsx";
 import closure_3 from "../../stores/AuthenticationStore.tsx";
 import closure_4 from "../../stores/ChannelStore.tsx";
@@ -548,8 +548,8 @@ obj = {
     ({ channelId, rawConversations, direction, anchor, isJump, fullyHydrated } = requestKey);
     let set;
     if (removePendingListFetch(channelId, requestKey.requestKey)) {
-      const mapped = rawConversations.map(set(7344).mapConversation);
-      const found = mapped.filter(set(1471).isNotNullish);
+      const mapped = rawConversations.map(set(7353).mapConversation);
+      const found = mapped.filter(set(1470).isNotNullish);
       const peekResult = navigation.peek(channelId);
       if (isJump) {
         let prop;

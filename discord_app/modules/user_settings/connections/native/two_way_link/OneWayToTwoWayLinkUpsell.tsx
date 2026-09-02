@@ -15,7 +15,7 @@ function OneWayToTwoWayNewTag(markAsDismissed) {
   const items = [markAsDismissed];
   const effect = React.useEffect(() => markAsDismissed(closure_1_5.UNKNOWN), items);
   const tmp = callback3();
-  return callback(markAsDismissed(1297).NewTag, { containerStyle: callback3().newContainer, variant: "text-xs/bold" });
+  return callback(markAsDismissed(1296).NewTag, { containerStyle: callback3().newContainer, variant: "text-xs/bold" });
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = {
@@ -86,8 +86,8 @@ export const OneWayToTwoWayLinkUpsell = function OneWayToTwoWayLinkUpsell(newInd
   ];
   const obj4 = { style: tmp.reconnectButton, children: null };
   const obj5 = { text: null, onPress: null };
-  const intl = newIndicatorDismissibleContent(1236).intl;
-  obj5[0] = intl.string(newIndicatorDismissibleContent(1236).t.vD60Pv);
+  const intl = newIndicatorDismissibleContent(1233).intl;
+  obj5[0] = intl.string(newIndicatorDismissibleContent(1233).t.vD60Pv);
   obj5[1] = onPress;
   obj4[1] = callback(newIndicatorDismissibleContent(4928).Button, obj5);
   items3[2] = callback(View, obj4);

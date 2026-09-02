@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/tabs/you/YouBannerDecorations.tsx
-import PlatformTypes from "../../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import PlatformTypes from "../../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import DismissibleContent from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import UNSAFE_isDismissibleContentDismissed from "../../../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import hasUserTrialOfferExpired from "../../../../premium/useTrialOffer.tsx";
@@ -46,23 +46,23 @@ let closure_13 = createCacheKey.createStyles((arg0, arg1, color) => {
   let BACKGROUND_SURFACE_HIGH = arg1;
   obj1 = {
     marginBottom: PX_24,
-    paddingVertical: tmp7(712).space.PX_8,
-    paddingHorizontal: tmp7(712).space.PX_24,
-    borderRadius: tmp7(712).radii.lg,
+    paddingVertical: tmp7(709).space.PX_8,
+    paddingHorizontal: tmp7(709).space.PX_24,
+    borderRadius: tmp7(709).radii.lg,
     backgroundColor: null,
     flexDirection: "row",
     borderColor: null,
     borderWidth: 1,
   };
   if (arg1 == null) {
-    BACKGROUND_SURFACE_HIGH = tmp7(712).colors.BACKGROUND_SURFACE_HIGH;
+    BACKGROUND_SURFACE_HIGH = tmp7(709).colors.BACKGROUND_SURFACE_HIGH;
   }
   obj1[4] = BACKGROUND_SURFACE_HIGH;
   obj1[6] = arg3;
-  const merged2 = Object.assign(tmp7(712).shadows.SHADOW_HIGH);
+  const merged2 = Object.assign(tmp7(709).shadows.SHADOW_HIGH);
   obj[2] = obj1;
   isIOSResult = PlatformTypes.isIOS();
-  obj[3] = { flexDirection: "row", alignItems: "center", gap: tmp7(712).space.PX_16 };
+  obj[3] = { flexDirection: "row", alignItems: "center", gap: tmp7(709).space.PX_16 };
   obj[4] = { height: "100%", alignItems: "center", justifyContent: "center" };
   return obj;
 });

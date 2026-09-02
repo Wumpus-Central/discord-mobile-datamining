@@ -2,7 +2,7 @@
 import ThemesDefault from "../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../modules/safe_area/useSafeAreaInsets.native.tsx";
 import _modDef4723 from "../actions/ModalActionCreators.tsx";
-import registerAssetDefault from "../../_runtime/07812_registerAsset.js";
+import registerAssetDefault from "../../_runtime/07821_registerAsset.js";
 import renderDefault from "../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 import __INTERNAL_VIEW_CONFIGDefault from "../../discord_common/js/packages/rtn-codegen/js/QRScannerNativeComponent.tsx";
 import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
@@ -151,8 +151,8 @@ export default function QRScannerModal(showHelp) {
   obj1 = { accessibilityRole: "button", accessibilityLabel: null, source: null, style: null, onPress: null };
   const tmp7 = useSafeAreaInsetsDefault();
   let tmp8 = closure_9;
-  let intl = onScanSuccess(1236).intl;
-  obj1[1] = intl.string(onScanSuccess(1236).t.cpT0Cq);
+  let intl = onScanSuccess(1233).intl;
+  obj1[1] = intl.string(onScanSuccess(1233).t.cpT0Cq);
   obj1[2] = registerAssetDefault;
   const items2 = [tmp12.closeButton, { marginTop: top }];
   obj1[3] = items2;
@@ -170,9 +170,9 @@ export default function QRScannerModal(showHelp) {
       obj2[0] = items3;
       const obj4 = { style: null, children: null };
       obj4[0] = tmp12.text;
-      let intl2 = tmp17(1236).intl;
-      obj4[1] = intl2.string(tmp17(1236).t.dklV0G);
-      obj2[1] = tmp14(tmp17(1297).LegacyText, obj4);
+      let intl2 = tmp17(1233).intl;
+      obj4[1] = intl2.string(tmp17(1233).t.dklV0G);
+      obj2[1] = tmp14(tmp17(1296).LegacyText, obj4);
       tmp14Result = tmp14(tmp9, obj2);
     }
   }

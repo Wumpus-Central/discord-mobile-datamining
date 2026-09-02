@@ -306,10 +306,10 @@ let obj = {
     obj.moderator_reporting_enabled = moderatorReportingEnabled;
     obj.official_message_color = officialMessageColor;
     obj.verification_role_id = verificationRoleId;
-    obj(709).dispatch({ type: "GUILD_SETTINGS_SUBMIT" });
+    obj(706).dispatch({ type: "GUILD_SETTINGS_SUBMIT" });
     const pendingOriginalMd5s = store.getPendingOriginalMd5s();
-    const obj5 = obj(709);
-    const obj6 = obj(5113);
+    const obj5 = obj(706);
+    const obj6 = obj(5121);
     const headersForMd5 = obj6.buildHeadersForMd5({
       [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_ICON]: pendingOriginalMd5s.icon,
       [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_BANNER]: pendingOriginalMd5s.banner,
@@ -447,7 +447,7 @@ let obj = {
               c0 = undefined;
               const isLurkingResult = closure_1_5.isLurking(closure_1_0);
               c0 = isLurkingResult;
-              const HTTP = closure_1_0(530).HTTP;
+              const HTTP = closure_1_0(527).HTTP;
               obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
               obj1[0] = closure_1_10.GUILD_LEAVE(closure_1_0);
               let isCurrentUserGuestResult = isLurkingResult;
@@ -457,15 +457,15 @@ let obj = {
               const obj2 = { lurking: null };
               obj2[0] = isCurrentUserGuestResult;
               obj1[1] = obj2;
-              let obj3 = closure_1_0(530);
+              let obj3 = closure_1_0(527);
               obj1[3] = obj3.rejectWithMigratedError();
               dependencyMap = 1;
               c3 = 1;
               obj3 = { value: null, done: false };
               obj3[0] = HTTP.del(obj1).then(() => {
-                const AccessibilityAnnouncer = _undefined(1350).AccessibilityAnnouncer;
-                const intl = _undefined(1236).intl;
-                AccessibilityAnnouncer.announce(intl.string(_undefined(1236).t["7iPyVW"]));
+                const AccessibilityAnnouncer = _undefined(1349).AccessibilityAnnouncer;
+                const intl = _undefined(1233).intl;
+                AccessibilityAnnouncer.announce(intl.string(_undefined(1233).t["7iPyVW"]));
               });
               return obj3;
             }
@@ -484,7 +484,7 @@ let obj = {
               tmp10 = closure_1_0;
             }
             if (tmp10) {
-              obj = closure_1_0(1222);
+              obj = closure_1_0(1219);
               obj.transitionTo(closure_1_14.GUILD_DISCOVERY);
             }
             c3 = 3;
@@ -534,18 +534,18 @@ let obj = {
               c0 = 0;
               if (closure_1_4.isFullServerPreview(closure_1_0)) {
                 if (closure_1_1 === closure_1_6.getId()) {
-                  const result = closure_1_0(5473).updateImpersonatedRoles(tmp29, dependencyMap);
+                  const result = closure_1_0(5481).updateImpersonatedRoles(tmp29, dependencyMap);
                   c3 = 3;
-                  const obj6 = closure_1_0(5473);
+                  const obj6 = closure_1_0(5481);
                 }
               }
-              const HTTP = closure_1_0(530).HTTP;
+              const HTTP = closure_1_0(527).HTTP;
               obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
               obj1[0] = closure_1_10.GUILD_MEMBER(closure_1_0, closure_1_1);
               const obj2 = { roles: null };
               obj2[0] = dependencyMap;
               obj1[1] = obj2;
-              let obj3 = closure_1_0(530);
+              let obj3 = closure_1_0(527);
               obj1[3] = obj3.rejectWithMigratedError();
               dependencyMap = 1;
               c3 = 1;
@@ -558,12 +558,12 @@ let obj = {
             throw arg1;
           } else if (arg0 !== 2) {
             const item = c3.forEach((roleId) => {
-              obj = v0(709);
+              obj = v0(706);
               obj = { type: "GUILD_ROLE_MEMBER_ADD", guildId: c0, roleId, userId: v0 };
               return obj.dispatch(obj);
             });
             const item1 = closure_4.forEach((roleId) => {
-              obj = v0(709);
+              obj = v0(706);
               obj = { type: "GUILD_ROLE_MEMBER_REMOVE", guildId: c0, roleId, userId: v0 };
               return obj.dispatch(obj);
             });

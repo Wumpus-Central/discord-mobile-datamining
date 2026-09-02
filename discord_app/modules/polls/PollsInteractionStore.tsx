@@ -1,7 +1,7 @@
 // discord_app/modules/polls/PollsInteractionStore.tsx
 import set from "../../../_runtime/00002_set.js";
 import shallowEqualDefault from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
-import identity from "../../../_runtime/00700_identity.js";
+import identity from "../../../_runtime/00697_identity.js";
 
 let closure_3 = {};
 let closure_4 = identity.createWithEqualityFn((arg0) => {

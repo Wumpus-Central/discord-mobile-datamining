@@ -1,5 +1,5 @@
 // discord_app/modules/parent_tools/native/ParentalConsentWarningManager.tsx
-import asyncRequireImpl from "../../../../_runtime/02009_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02008_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
 import frozen from "../ParentalConsentWarningTypes.tsx";
@@ -47,7 +47,7 @@ function maybePresentModal(daysRemaining) {
     const obj = { daysRemaining: null };
     obj[0] = daysRemaining;
     ACTION_SHEET_HEIGHT_HALFDefault.openLazy(
-      asyncRequireImpl(17046, dependencyMap.paths),
+      asyncRequireImpl(17282, dependencyMap.paths),
       "ParentalConsentWarningModal",
       obj,
     );
@@ -71,18 +71,18 @@ let prototype = function ParentalConsentWarningManager() {
         }
         return tmp;
       });
-      callback(17048).maybeFetchWarning();
+      callback(17284).maybeFetchWarning();
       if (!closure_6.shouldFetchToday()) {
         callback2(closure_6.getWarning());
       }
     },
     APP_STATE_UPDATE(state) {
       if (state.state === constants.ACTIVE) {
-        callback(17048).maybeFetchWarning();
+        callback(17284).maybeFetchWarning();
         if (!closure_6.shouldFetchToday()) {
           callback2(obj2.getWarning());
         }
-        const obj = callback(17048);
+        const obj = callback(17284);
         obj2 = closure_6;
       }
     },
@@ -105,16 +105,16 @@ let prototype = function ParentalConsentWarningManager() {
             if (warning != null) {
               const surfaces = warning.surfaces;
               if (surfaces != null) {
-                hasItem = surfaces.includes(callback(14474).ParentalConsentWarningSurface.BANNER);
+                hasItem = surfaces.includes(callback(14697).ParentalConsentWarningSurface.BANNER);
               }
             }
             if (true === hasItem) {
-              callback(17048).forceFetchWarning();
-              const obj2 = callback(17048);
+              callback(17284).forceFetchWarning();
+              const obj2 = callback(17284);
             }
           } else {
-            callback(17048).forceFetchWarning();
-            const obj = callback(17048);
+            callback(17284).forceFetchWarning();
+            const obj = callback(17284);
           }
         }
         tmp = undefined !== closure_3 && closure_3 !== someResult;
@@ -122,7 +122,7 @@ let prototype = function ParentalConsentWarningManager() {
     },
     LOGOUT() {
       c3 = undefined;
-      callback(17048).resetFetchState();
+      callback(17284).resetFetchState();
     },
   };
   return applyArgumentsResult;

@@ -1,6 +1,6 @@
 // discord_app/modules/instant_invite/InstantInviteSendStateStore.tsx
 import set from "../../../_runtime/00002_set.js";
-import keys from "../../../_runtime/00644_keys.js";
+import keys from "../../../_runtime/00641_keys.js";
 import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 let obj = keys.create(() => ({}));

@@ -13,7 +13,7 @@ const require = arg1;
 function GroupDmMemberCount(channel) {
   channel = channel.channel;
   let items = [closure_7, closure_5];
-  const stateFromStores = channel(589).useStateFromStores(items, () => {
+  const stateFromStores = channel(586).useStateFromStores(items, () => {
     const items = [...channel.recipients];
     const currentUser = closure_1_7.getCurrentUser();
     let str;
@@ -39,8 +39,8 @@ function GroupDmMemberCount(channel) {
       return arg0 + num;
     }, 0);
   });
-  const obj = channel(589);
-  return channel(12933).renderMemberCountText(stateFromStores, channel.recipients.length);
+  const obj = channel(586);
+  return channel(13155).renderMemberCountText(stateFromStores, channel.recipients.length);
 }
 let c3 = importAllResult;
 ({ ChannelTypes: closure_8, StatusTypes: c9 } = ME);

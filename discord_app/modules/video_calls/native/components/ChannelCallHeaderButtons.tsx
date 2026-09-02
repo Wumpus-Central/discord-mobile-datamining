@@ -3,7 +3,7 @@ import noopAll from "../../../../../_runtime/00019_noop.js";
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import useSelectedParticipantDefault from "../../useSelectedParticipant.tsx";
 import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon.tsx";
-import registerAssetDefault from "../../../../../_runtime/10118_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/10140_registerAsset.js";
 import closure_3 from "../../../../stores/MediaEngineStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
@@ -25,8 +25,8 @@ export const CameraButton = function CameraButton() {
   let tmp4 = null;
   if (stateFromStoresObject.isVideoEnabled) {
     obj = { accessibilityLabel: null, source: null, onPress: null, disableBackground: true };
-    const intl = tmp(1236).intl;
-    obj[0] = intl.string(tmp(1236).t["t9eQ/g"]);
+    const intl = tmp(1233).intl;
+    obj[0] = intl.string(tmp(1233).t["t9eQ/g"]);
     obj[1] = registerAssetDefault;
     obj[2] = function onPress() {
       const keys = Object.keys(closure_1);
@@ -53,14 +53,14 @@ export const GridButton = function GridButton(channel) {
     tmp4 = null;
     if (!tmp3) {
       const obj = { accessibilityLabel: null, source: null, onPress: null, disableBackground: true };
-      const intl = channel(1236).intl;
-      obj[0] = intl.string(channel(1236).t.HK4JIu);
-      obj[1] = tmp(10119);
+      const intl = channel(1233).intl;
+      obj[0] = intl.string(channel(1233).t.HK4JIu);
+      obj[1] = tmp(10141);
       obj[2] = function onPress() {
         return closure_1_1(closure_1_2[11]).selectParticipant(channel.id, null);
       };
-      tmp4 = jsx(tmp(10015), { accessibilityLabel: null, source: null, onPress: null, disableBackground: true });
-      const tmpResult = tmp(10015);
+      tmp4 = jsx(tmp(10037), { accessibilityLabel: null, source: null, onPress: null, disableBackground: true });
+      const tmpResult = tmp(10037);
     }
   }
   return tmp4;

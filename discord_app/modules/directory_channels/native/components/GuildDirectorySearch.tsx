@@ -1,6 +1,6 @@
 // discord_app/modules/directory_channels/native/components/GuildDirectorySearch.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../../_runtime/11873_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/12096_registerAsset.js";
 import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_5 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -33,12 +33,12 @@ function EmptyState(channel) {
   channel = channel.channel;
   importDefault = undefined;
   const tmp = callback3();
-  let obj = channel(589);
+  let obj = channel(586);
   const items = [closure_9];
   importDefault = obj.useStateFromStores(items, () => closure_1_9.getGuild(channel.getGuildId()));
-  obj1 = channel(11874);
+  obj1 = channel(12097);
   const canCreateOrAddGuildInDirectory = obj1.useCanCreateOrAddGuildInDirectory(channel);
-  const intl = channel(1236).intl;
+  const intl = channel(1233).intl;
   if (canCreateOrAddGuildInDirectory) {
     obj = { addServerHook: null };
     obj[0] = function addServerHook() {
@@ -46,9 +46,9 @@ function EmptyState(channel) {
       obj = { directoryGuildName: lib.name, directoryGuildId: lib.id, directoryChannelId: channel.id };
       obj.open(obj);
     };
-    let formatResult = intl.format(tmp2(1236).t.ZxNVMy, obj);
+    let formatResult = intl.format(tmp2(1233).t.ZxNVMy, obj);
   } else {
-    formatResult = intl.string(tmp2(1236).t.vYyEnv);
+    formatResult = intl.string(tmp2(1233).t.vYyEnv);
   }
   obj = { style: tmp.emptyWrapper, children: null };
   obj1 = { style: tmp.emptyStateImage, source: registerAssetDefault };
@@ -59,8 +59,8 @@ function EmptyState(channel) {
     color: "mobile-text-heading-primary",
     children: null,
   };
-  const intl2 = tmp2(1236).intl;
-  obj2[3] = intl2.string(channel(1236).t["6HXiuE"]);
+  const intl2 = tmp2(1233).intl;
+  obj2[3] = intl2.string(channel(1233).t["6HXiuE"]);
   items1[1] = callback(channel(4474).Text, obj2);
   items1[2] = callback(channel(4474).Text, {
     style: tmp.emptyStateText,

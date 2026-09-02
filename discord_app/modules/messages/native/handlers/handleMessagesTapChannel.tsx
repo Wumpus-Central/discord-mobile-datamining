@@ -167,7 +167,7 @@ function _handleMessagesTapChannel() {
                 let role2;
                 v0 = 1;
                 channelId = 1;
-                return { value: "PX_16", done: null };
+                return { value: "PX_16", done: true };
               }
             } else {
               if (1 === tmp5) {

@@ -49,11 +49,11 @@ let closure_14 = {
 const memoResult = importAllResult.memo(function QuestDockDragHandle(arg0) {
   ({ isExpanded, variant } = arg0);
   const tmp = callback();
-  const context = youBarHorizontalMargin.useContext(activeQuestDockMode(14697).QuestDockGestureContext);
+  const context = youBarHorizontalMargin.useContext(activeQuestDockMode(14923).QuestDockGestureContext);
   activeQuestDockMode = context.activeQuestDockMode;
   const windowDimensions = context.windowDimensions;
   dependencyMap = tmp5;
-  let obj = activeQuestDockMode(14698);
+  let obj = activeQuestDockMode(14924);
   youBarHorizontalMargin = obj.useYouBarHorizontalMargin();
   obj1 = activeQuestDockMode(4217);
   const fn = function n() {
@@ -166,25 +166,25 @@ const memoResult = importAllResult.memo(function QuestDockDragHandle(arg0) {
   };
   const tmp12 = windowDimensions;
   const obj4 = { style: animatedStyle1, layout: null, children: null };
-  const tmp13 = windowDimensions(7796);
+  const tmp13 = windowDimensions(7805);
   const tmp14 = closure_8;
-  obj4[1] = activeQuestDockMode(14695).dimensionsLayoutTransition;
+  obj4[1] = activeQuestDockMode(14921).dimensionsLayoutTransition;
   obj5 = { style: items1, children: null };
   items1 = [tmp.dragHandleOverlay, animatedStyle3];
-  const tmp15 = windowDimensions(7796);
-  const intl = activeQuestDockMode(1236).intl;
+  const tmp15 = windowDimensions(7805);
+  const intl = activeQuestDockMode(1233).intl;
   const string = intl.string;
-  const t = activeQuestDockMode(1236).t;
+  const t = activeQuestDockMode(1233).t;
   if (isExpanded) {
     let stringResult = string(t["GQ+4bk"]);
   } else {
     stringResult = string(t.Yplnt6);
   }
-  obj5[1] = closure_7(activeQuestDockMode(5937).ActionSheetHeaderBar, {
+  obj5[1] = closure_7(activeQuestDockMode(5945).ActionSheetHeaderBar, {
     variant: "overlay",
     accessibilityLabel: stringResult,
   });
-  const items2 = [closure_7(windowDimensions(7796), obj5)];
+  const items2 = [closure_7(windowDimensions(7805), obj5)];
   const obj6 = {
     style: items3,
     pointerEvents: "none",
@@ -193,9 +193,9 @@ const memoResult = importAllResult.memo(function QuestDockDragHandle(arg0) {
     children: null,
   };
   items3 = [tmp.dragHandleOverlay, animatedStyle2];
-  const tmp16 = windowDimensions(7796);
-  obj6[4] = closure_7(tmp2(5937).ActionSheetHeaderBar, { variant: "default" });
-  items2[1] = closure_7(tmp12(7796), obj6);
+  const tmp16 = windowDimensions(7805);
+  obj6[4] = closure_7(tmp2(5945).ActionSheetHeaderBar, { variant: "default" });
+  items2[1] = closure_7(tmp12(7805), obj6);
   obj4[2] = items2;
   obj3[1] = tmp14(tmp15, obj4);
   return closure_7(tmp13, obj3);

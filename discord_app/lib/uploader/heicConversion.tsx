@@ -53,7 +53,7 @@ function _preConvertHeicForUpload() {
                 obj2[0] = tmp35;
                 return obj2;
               }
-              obj8 = lib(5115);
+              obj8 = lib(5123);
               tmp36 = closure_1;
               tmp37 = dependencyMap;
             }
@@ -73,7 +73,7 @@ function _preConvertHeicForUpload() {
               }
               const _File = File;
               const items = [closure_1.convertedBlob];
-              obj = lib(5115);
+              obj = lib(5123);
               const obj4 = { type: "image/jpeg", lastModified: null };
               obj4[1] = lib.lastModified;
               const file = new File(items, obj.renameToJpegExtension(lib.name), obj4);
@@ -169,7 +169,7 @@ function _maybeConvertHeicToJpeg() {
               }
               c7 = 1;
               c8 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -184,7 +184,7 @@ function _maybeConvertHeicToJpeg() {
               if (obj17.isHeicFile(lib)) {
                 const _performance = performance;
                 closure_3 = performance.now();
-                const tmp41 = num17(4104);
+                const tmp41 = num17(4103);
                 let sysimg;
                 if (tmp41 != null) {
                   sysimg = tmp41.sysimg;
@@ -207,7 +207,7 @@ function _maybeConvertHeicToJpeg() {
                 c8 = 3;
                 return { value: null, done: true };
               }
-              obj17 = lib(5115);
+              obj17 = lib(5123);
             }
           } else if (2 === tmp7) {
             if (arg0 === 1) {

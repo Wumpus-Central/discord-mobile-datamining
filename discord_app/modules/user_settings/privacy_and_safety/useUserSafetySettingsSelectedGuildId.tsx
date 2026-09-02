@@ -19,7 +19,7 @@ export const useAllServersOptionSelected = function useAllServersOptionSelected(
 export const useIsSelectedGuildAHub = function useIsSelectedGuildAHub() {
   const selectedGuildId = callback().selectedGuildId;
   const items = [closure_2];
-  const stateFromStores = selectedGuildId(589).useStateFromStores(items, () => closure_1_2.getGuild(selectedGuildId));
+  const stateFromStores = selectedGuildId(586).useStateFromStores(items, () => closure_1_2.getGuild(selectedGuildId));
   let flag;
   if (stateFromStores != null) {
     const features = stateFromStores.features;

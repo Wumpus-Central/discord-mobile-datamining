@@ -2,7 +2,7 @@
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef4217 from "../../../reanimated/ReanimatedRexport.tsx";
-import registerAssetDefault from "../../../../../_runtime/05943_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/05951_registerAsset.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
@@ -92,7 +92,7 @@ export default function StageSectionHeader(collapsed) {
   const obj3 = { style: tmp.collapseButton, children: null };
   const obj4 = {
     style: animatedStyle,
-    children: closure_6(collapsed(1297).Icon, { source: registerAssetDefault, style: tmp.collapseIcon }),
+    children: closure_6(collapsed(1296).Icon, { source: registerAssetDefault, style: tmp.collapseIcon }),
   };
   obj3[1] = closure_6(_modDef4217.View, obj4);
   items1[2] = closure_6(closure_4, obj3);

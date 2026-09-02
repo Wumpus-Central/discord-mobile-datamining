@@ -48,10 +48,10 @@ function HeaderSection(arg0) {
     obj3[1] = clearConnections;
     obj3[2] = locked;
     const obj4 = { variant: "text-sm/medium", color: "text-feedback-critical", children: null };
-    const intl3 = tmp10(1236).intl;
-    obj4[2] = intl3.string(tmp10(1236).t.ntW1cc);
+    const intl3 = tmp10(1233).intl;
+    obj4[2] = intl3.string(tmp10(1233).t.ntW1cc);
     obj3[3] = tmp13(tmp10(4474).Text, obj4);
-    tmp13Result = tmp13(tmp10(5068).PressableOpacity, obj3);
+    tmp13Result = tmp13(tmp10(5076).PressableOpacity, obj3);
   }
   const obj5 = { children: null };
   const obj6 = { children: null };
@@ -59,7 +59,7 @@ function HeaderSection(arg0) {
   obj1[1] = items2;
   const items3 = [closure_11(View, obj1)];
   const obj7 = { variant: "text-sm/medium", children: null };
-  const intl4 = tmp10(1236).intl;
+  const intl4 = tmp10(1233).intl;
   const obj8 = { helpdeskArticleUrl: combinedDefault.getArticleURL(HelpdeskArticles.CONNECTION_DETAILS_ADMIN) };
   obj7[1] = intl4.format(getSystemLocale.t.q5f7tK, obj8);
   items3[1] = callback(Text.Text, obj7);
@@ -72,8 +72,8 @@ function AndOrRadios(setPendingRoleConfigurations) {
   ({ locked, roleConnectionConfigurations } = setPendingRoleConfigurations);
   importDefault = setPendingRoleConfigurations.setPendingRoleConfigurations;
   if (
-    roleConnectionConfigurations(5351).ConnectionConfigurationRuleOperator.OR ===
-    roleConnectionConfigurations(5351).ConnectionConfigurationRuleOperator.AND
+    roleConnectionConfigurations(5359).ConnectionConfigurationRuleOperator.OR ===
+    roleConnectionConfigurations(5359).ConnectionConfigurationRuleOperator.AND
   ) {
     if (0 === roleConnectionConfigurations.length) {
       let items = [];
@@ -92,30 +92,30 @@ function AndOrRadios(setPendingRoleConfigurations) {
       ),
     );
     obj = { title: null, value: null, onChange: null, hasIcons: false, children: null };
-    const intl = tmp(1236).intl;
-    obj[0] = intl.string(tmp(1236).t.Xs7PHX);
+    const intl = tmp(1233).intl;
+    obj[0] = intl.string(tmp(1233).t.Xs7PHX);
     obj[1] = setPendingRoleConfigurations.currentOperator;
     obj[2] = function onChange(arg0) {
       callback(roleConnectionConfigurations, arg0);
     };
     obj = { value: null, label: null, disabled: null };
-    obj[0] = tmp(5351).ConnectionConfigurationRuleOperator.OR;
-    const intl2 = tmp(1236).intl;
-    obj[1] = intl2.string(tmp(1236).t.W3iY58);
+    obj[0] = tmp(5359).ConnectionConfigurationRuleOperator.OR;
+    const intl2 = tmp(1233).intl;
+    obj[1] = intl2.string(tmp(1233).t.W3iY58);
     let tmp11 = locked;
     if (!locked) {
       tmp11 = values.length < 2;
     }
     obj[2] = tmp11;
-    const items2 = [closure_10(tmp(7693).TableRadioRow, obj)];
+    const items2 = [closure_10(tmp(7702).TableRadioRow, obj)];
     obj1 = { value: null, label: null, disabled: null };
-    obj1[0] = tmp(5351).ConnectionConfigurationRuleOperator.AND;
-    const intl3 = tmp(1236).intl;
-    obj1[1] = intl3.string(tmp(1236).t.gHXS9A);
+    obj1[0] = tmp(5359).ConnectionConfigurationRuleOperator.AND;
+    const intl3 = tmp(1233).intl;
+    obj1[1] = intl3.string(tmp(1233).t.gHXS9A);
     obj1[2] = locked;
-    items2[1] = closure_10(tmp(7693).TableRadioRow, obj1);
+    items2[1] = closure_10(tmp(7702).TableRadioRow, obj1);
     obj[4] = items2;
-    return closure_11(tmp(7692).TableRadioGroup, obj);
+    return closure_11(tmp(7701).TableRadioGroup, obj);
   }
 }
 function renderRoleConnectionConfigurations(memo, arg1, locked, arg3, integrations) {
@@ -457,8 +457,8 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
         connectionType,
         connectionMetadataField: "Array",
         applicationId: "accessible",
-        operator: "Object",
-        value: false,
+        operator: "y",
+        value: null,
       };
       obj[2] = arg1;
       items.push(obj);

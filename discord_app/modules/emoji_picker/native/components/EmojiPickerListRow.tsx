@@ -1,7 +1,7 @@
 // discord_app/modules/emoji_picker/native/components/EmojiPickerListRow.tsx
-import set2 from "../../../../utils/PlatformUtils.tsx";
-import nDefault from "../../../../../_runtime/00689_n.js";
+import nDefault from "../../../../../_runtime/00686_n.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import set2 from "../../../../utils/PlatformUtils.tsx";
 import getAvatarURLDefault from "../../../../utils/AvatarUtils.tsx";
 import LockIcon from "../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
 import preloadDefault from "../../../../components_native/common/FastImage.tsx";
@@ -79,29 +79,29 @@ function EmojiItem(emoji) {
     obj1[1] = tmp.image;
     const tmp15 = preloadDefault;
     if (tmp7Result.isThemeDark(theme.theme)) {
-      tmp8 = 5586;
+      tmp8 = 5594;
       let tmp14Result = tmp14(tmp8);
     } else {
-      tmp14Result = tmp14(5587);
+      tmp14Result = tmp14(5595);
     }
     obj1[2] = tmp14Result;
     const obj2 = { uri: null };
     obj2[0] = emojiURL;
     obj1[3] = obj2;
     callback(tmp15, obj1);
-    tmp7Result = tmp7(1363);
+    tmp7Result = tmp7(1362);
   } else {
     const obj3 = { allowFontScaling: false, style: null, children: null };
     obj3[1] = tmp.surrogates;
     obj3[2] = emoji.surrogates;
-    const tmp10 = callback(tmp7(1297).LegacyText, obj3);
+    const tmp10 = callback(tmp7(1296).LegacyText, obj3);
     const items1 = [tmp10];
     if (disabled) {
       disabled = callback(EmojiItemLockedOverlay, {});
     }
     items1[1] = disabled;
     obj[5] = items1;
-    return closure_8(emoji(5068).PressableOpacity, obj);
+    return closure_8(emoji(5076).PressableOpacity, obj);
   }
 }
 ({ View: c3, StyleSheet } = get_ActivityIndicator);

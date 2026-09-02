@@ -29,16 +29,16 @@ export const createInGameMessageNuxSystemMessage = function createInGameMessageN
     obj[0] = message;
     obj[1] = messageAuthorWithProcessedColor;
     obj[2] = roleStyle;
-    obj[1] = tmp(7871)(obj);
+    obj[1] = tmp(7880)(obj);
     obj[2] = application.name;
     obj1 = { action: "bindOpenUrl", url: null, linkColor: null, medium: true };
-    obj1[1] = tmp(1995).getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS);
+    obj1[1] = tmp(1994).getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS);
     obj1[2] = tmp3.linkColor;
     obj[3] = obj1;
     const obj2 = { content: null };
     const intl = getSystemLocale.intl;
     obj2[0] = intl.formatToParts(getSystemLocale.t["92erOB"], obj);
-    const merged = Object.assign(tmp(7873)(message));
+    const merged = Object.assign(tmp(7882)(message));
     return obj2;
   }
   tmp3 = resultDefault(theme);

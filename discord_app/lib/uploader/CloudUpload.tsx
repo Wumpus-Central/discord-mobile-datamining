@@ -2248,11 +2248,11 @@ prototype["delete"] = function delete() {
             obj[0] = arg1;
             return obj;
           } else if (null != v0.uploadedFilename) {
-            obj1 = v0(5118);
+            obj1 = v0(5126);
             const uploadTarget = obj1.getUploadTarget(tmp18.item.target);
             dependencyMap = 1;
             const deleteUploadURL = uploadTarget.getDeleteUploadURL(tmp18.uploadedFilename);
-            const HTTP = v0(530).HTTP;
+            const HTTP = v0(527).HTTP;
             c1 = 2;
             v0 = 1;
             obj1 = { value: null, done: false };

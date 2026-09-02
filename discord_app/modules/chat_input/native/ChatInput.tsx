@@ -57,7 +57,7 @@ let closure_39 = createCacheKey.createStyles((arg0, arg1) => {
     borderColor: null,
   };
   if (arg0 == null) {
-    BACKGROUND_BASE_LOW = tmp(712).colors.BACKGROUND_BASE_LOW;
+    BACKGROUND_BASE_LOW = tmp(709).colors.BACKGROUND_BASE_LOW;
   }
   obj = {
     container: obj,
@@ -65,7 +65,7 @@ let closure_39 = createCacheKey.createStyles((arg0, arg1) => {
     accessories: { position: "absolute", bottom: "100%", left: 0, right: 0 },
     floatingContainer: BACKGROUND_BASE_LOW,
     floatingInputBox: null,
-    floatingInputBoxPressed: tmp(712).colors.BORDER_SUBTLE,
+    floatingInputBoxPressed: tmp(709).colors.BORDER_SUBTLE,
     floatingInputBoxTyping: null,
     floatingMainContents: null,
     inputFlat: null,
@@ -75,9 +75,9 @@ let closure_39 = createCacheKey.createStyles((arg0, arg1) => {
   obj = {
     borderTopWidth: 0,
     borderColor: "transparent",
-    borderRadius: tmp(712).radii.none,
+    borderRadius: tmp(709).radii.none,
     backgroundColor: "transparent",
-    paddingHorizontal: tmp(712).modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING,
+    paddingHorizontal: tmp(709).modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING,
     paddingVertical: 0,
     overflow: "visible",
   };
@@ -612,61 +612,106 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
       c3 = 0;
       c4 = 0;
       const iter = (function* (arg0) {
-        c1 = tmp2;
-        ({ url: c0, width: c1, height: c2, type: c3 } = lib.nativeEvent);
-        yield "PX_16";
-        if (1 === tmp5) {
+        if (styles === 2) {
+          styles = 3;
+          HermesBuiltin.throwTypeError();
+        } else if (tmp4 === 3) {
           if (arg0 === 1) {
-            let styles = 3;
             throw arg1;
           } else if (arg0 === 2) {
-            styles = 3;
-            obj1 = { value: null, done: true };
-            obj1[0] = arg1;
-            return obj1;
+            let obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
           } else {
-            if (closure_1_11.state.current.focused) {
-              if (closure_1_11.props.current.canUpload) {
-                obj1 = lib(closure_2_3[44]);
-                c3 = 2;
-                styles = 1;
-                const obj2 = { value: null, done: false };
-                obj2[0] = obj1.getImageDimensionsIfMissing(lib, closure_1_1, closure_1_2);
-                return obj2;
-              }
-            }
-            styles = 3;
+            return { value: "HermesInternal", done: null };
           }
-        } else if (arg0 === 1) {
-          styles = 3;
-          throw arg1;
-        } else if (arg0 !== 2) {
-          styles = arg1;
-          const obj3 = { channelId: null, file: null, draftType: null };
-          obj3[0] = closure_1_11.props.current.channel.id;
-          const obj4 = {
-            uri: null,
-            originalUri: null,
-            width: null,
-            height: null,
-            mimeType: null,
-            platform: null,
-            id: null,
-          };
-          obj4[0] = lib;
-          obj4[1] = lib;
-          obj4[2] = styles.width;
-          obj4[3] = styles.height;
-          obj4[4] = c3;
-          obj4[5] = lib(closure_2_3[46]).UploadPlatform.REACT_NATIVE;
-          const obj7 = closure_2_1(closure_2_3[45]);
-          obj4[6] = lib(closure_2_3[47]).v4();
-          obj3[1] = obj4;
-          obj3[2] = closure_2_15.ChannelMessage;
-          obj7.addFile(obj3);
-          const obj10 = lib(closure_2_3[47]);
+        } else {
+          try {
+            styles = 2;
+            if (0 === c3) {
+              if (arg0 === 1) {
+                styles = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                styles = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                c2 = tmp5;
+                c1 = tmp2;
+                let lib;
+                c1 = undefined;
+                c2 = undefined;
+                c3 = undefined;
+                ({ url: c0, width: c1, height: c2, type: c3 } = lib.nativeEvent);
+                styles = undefined;
+                c3 = 1;
+                styles = 1;
+                return { value: "PX_16", done: true };
+              }
+            } else {
+              if (1 === tmp5) {
+                if (arg0 === 1) {
+                  styles = 3;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  styles = 3;
+                  obj1 = { value: null, done: true };
+                  obj1[0] = arg1;
+                  return obj1;
+                } else {
+                  if (closure_1_11.state.current.focused) {
+                    if (closure_1_11.props.current.canUpload) {
+                      obj1 = lib(closure_2_3[44]);
+                      c3 = 2;
+                      styles = 1;
+                      const obj2 = { value: null, done: false };
+                      obj2[0] = obj1.getImageDimensionsIfMissing(lib, closure_1_1, closure_1_2);
+                      return obj2;
+                    }
+                  }
+                  styles = 3;
+                }
+              } else if (arg0 === 1) {
+                styles = 3;
+                throw arg1;
+              } else if (arg0 !== 2) {
+                styles = arg1;
+                const obj3 = { channelId: null, file: null, draftType: null };
+                obj3[0] = closure_1_11.props.current.channel.id;
+                const obj4 = {
+                  uri: null,
+                  originalUri: null,
+                  width: null,
+                  height: null,
+                  mimeType: null,
+                  platform: null,
+                  id: null,
+                };
+                obj4[0] = lib;
+                obj4[1] = lib;
+                obj4[2] = styles.width;
+                obj4[3] = styles.height;
+                obj4[4] = c3;
+                obj4[5] = lib(closure_2_3[46]).UploadPlatform.REACT_NATIVE;
+                const obj7 = closure_2_1(closure_2_3[45]);
+                obj4[6] = lib(closure_2_3[47]).v4();
+                obj3[1] = obj4;
+                obj3[2] = closure_2_15.ChannelMessage;
+                obj7.addFile(obj3);
+                const obj10 = lib(closure_2_3[47]);
+              }
+              styles = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            }
+          } catch (tmp16) {
+            styles = tmp;
+            throw tmp16;
+          }
         }
-        return arg1;
       })();
       iter.next();
       return iter;

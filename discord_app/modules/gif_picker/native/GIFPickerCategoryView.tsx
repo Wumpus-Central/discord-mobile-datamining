@@ -40,9 +40,9 @@ export default function GIFPickerCategoryView(onSelectCategory) {
   const callback = React.useCallback(() => {
     onSelectCategory(item.type, item.name);
   }, items);
-  const intl = onSelectCategory(1236).intl;
+  const intl = onSelectCategory(1233).intl;
   let obj = { categoryName: item.name };
-  const formatToPlainStringResult = intl.formatToPlainString(onSelectCategory(1236).t["j+63pw"], obj);
+  const formatToPlainStringResult = intl.formatToPlainString(onSelectCategory(1233).t["j+63pw"], obj);
   obj = {
     style: tmp.container,
     onPress: callback,
@@ -50,22 +50,22 @@ export default function GIFPickerCategoryView(onSelectCategory) {
     accessibilityRole: "button",
     accessibilityLabel: formatToPlainStringResult,
   };
-  const merged = Object.assign(item(9720)(callback, formatToPlainStringResult));
+  const merged = Object.assign(item(9742)(callback, formatToPlainStringResult));
   obj = { style: tmp.gifImage, source: obj1 };
-  const items1 = [callback(item(5493), obj), callback(closure_4, { style: tmp.gifOverlay })];
+  const items1 = [callback(item(5501), obj), callback(closure_4, { style: tmp.gifOverlay })];
   const obj3 = { style: tmp.categoryName, accessible: false, children: null };
   if (item.type === GIFPickerResultTypes.TRENDING_GIFS) {
     const obj4 = { size: "sm", style: null, color: null };
     obj4[1] = tmp.categoryNameIcon;
-    obj4[2] = tmp6(712).colors.WHITE;
-    let tmp10Result = tmp10(tmp3(10376).AnalyticsIcon, obj4);
+    obj4[2] = tmp6(709).colors.WHITE;
+    let tmp10Result = tmp10(tmp3(10398).AnalyticsIcon, obj4);
   } else {
     tmp10Result = null;
     if (item.type === tmp12.FAVORITES) {
       const obj5 = { size: "sm", style: null, color: null };
       obj5[1] = tmp.categoryNameIcon;
-      obj5[2] = tmp6(712).colors.WHITE;
-      tmp10Result = tmp10(tmp3(9181).StarIcon, obj5);
+      obj5[2] = tmp6(709).colors.WHITE;
+      tmp10Result = tmp10(tmp3(9195).StarIcon, obj5);
     }
   }
   const items2 = [

@@ -6,7 +6,7 @@ import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_5 from "../../activities/EmbeddedActivitiesStore.tsx";
 import { RPC_EMBEDDED_APP_SCOPE } from "../Constants.tsx";
 import ME from "../../../Constants.tsx";
-import { EventEmitter } from "../../../../_runtime/00652_EventEmitter.js";
+import { EventEmitter } from "../../../../_runtime/00649_EventEmitter.js";
 import set from "../../../../_runtime/00002_set.js";
 
 const require = arg1;
@@ -56,15 +56,15 @@ class PostMessageTransport extends EventEmitter {
         selfEmbeddedActivities = selfEmbeddedActivities.getSelfEmbeddedActivities();
         const item = Array.from(selfEmbeddedActivities.entries()).forEach((arg0) => {
           [tmp, tmp2] = arg0;
-          let obj = callback2(698);
+          let obj = callback2(695);
           obj = {
             application_id: tmp,
-            channel_id: callback(4111).getEmbeddedActivityLocationChannelId(tmp2.location),
+            channel_id: callback(4110).getEmbeddedActivityLocationChannelId(tmp2.location),
             guild_id: null,
             timeout_ms: null,
           };
-          const obj3 = callback(4111);
-          obj[2] = callback(4111).getEmbeddedActivityLocationGuildId(tmp2.location);
+          const obj3 = callback(4110);
+          obj[2] = callback(4110).getEmbeddedActivityLocationGuildId(tmp2.location);
           obj[3] = closure_11;
           obj.track(constants.ACTIVITY_HANDSHAKE_TIMED_OUT, obj);
         });
@@ -535,25 +535,25 @@ PostMessageTransport.prototype["routeEvent"] = function routeEvent(value, iframe
       if (null != value) {
         let obj = { closeCode: null };
         obj[0] = constants2.CLOSE_UNSUPPORTED;
-        const tmp35 = new tmp7(9503)(obj, "Already connected");
+        const tmp35 = new tmp7(9516)(obj, "Already connected");
         throw tmp35;
       } else {
         return self.handleHandshake(iframeId, tmp6, arg3);
       }
-    } else if (tmp7(9502).FRAME === tmp5) {
+    } else if (tmp7(9515).FRAME === tmp5) {
       if (null == value) {
         obj = { closeCode: null };
         obj[0] = constants2.CLOSE_UNSUPPORTED;
-        const tmp27 = new tmp7(9503)(obj, "Not connected");
+        const tmp27 = new tmp7(9516)(obj, "Not connected");
         throw tmp27;
       } else {
         return self.handleFrame(iframeId, value, tmp6);
       }
-    } else if (tmp7(9502).CLOSE === tmp5) {
+    } else if (tmp7(9515).CLOSE === tmp5) {
       if (null == value) {
         obj1 = { closeCode: null };
         obj1[0] = constants2.CLOSE_UNSUPPORTED;
-        const tmp20 = new tmp7(9503)(obj1, "Not connected");
+        const tmp20 = new tmp7(9516)(obj1, "Not connected");
         throw tmp20;
       } else {
         return self.handleClose(value, tmp6);
@@ -561,7 +561,7 @@ PostMessageTransport.prototype["routeEvent"] = function routeEvent(value, iframe
     } else {
       obj = { closeCode: null };
       obj[0] = constants2.CLOSE_UNSUPPORTED;
-      const tmp13 = new tmp7(9503)(obj, "Invalid opcode");
+      const tmp13 = new tmp7(9516)(obj, "Invalid opcode");
       throw tmp13;
     }
     const tmp4 = callback2(arg2, 2);

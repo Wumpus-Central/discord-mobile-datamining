@@ -192,7 +192,7 @@ obj = {
       } else {
         const items = tmp.items;
         tmp.items = items.slice();
-        tmp.items[findIndexResult].message = messageId(7345).handleExplicitMediaScanTimeoutForMessage(
+        tmp.items[findIndexResult].message = messageId(7354).handleExplicitMediaScanTimeoutForMessage(
           tmp.items[findIndexResult].message,
         );
       }

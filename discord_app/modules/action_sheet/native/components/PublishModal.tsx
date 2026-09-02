@@ -63,10 +63,10 @@ export default function PublishModal(channelId) {
       }
       obj1 = { numGuildsFollowing: null };
       obj1[0] = num2;
-      obj[1] = intl.format(tmp11(1236).t.GCGrNP, obj1);
+      obj[1] = intl.format(tmp11(1233).t.GCGrNP, obj1);
       let tmp12 = obj;
     } else {
-      obj[1] = intl.string(tmp11(1236).t["8FpqOs"]);
+      obj[1] = intl.string(tmp11(1233).t["8FpqOs"]);
       tmp12 = obj;
     }
     obj[1] = jsx(Button.LegacyText, tmp12);

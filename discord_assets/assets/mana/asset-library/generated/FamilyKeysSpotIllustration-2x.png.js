@@ -5,5 +5,5 @@ const result = set.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/FamilyKeysSpotIllustration-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/9e2a0099203e2347c6cd5164c8bff76e9b6afc0c5d5a77f85cd31375b784dd8a.png";
-export const metadata = { fileBytes: 59093 };
+export default "https://cdn.discordapp.com/assets/content/617c809cb01fbd494d05e13e5fe87c35530c97074d5a14555aaf38f9adedb5dd.png";
+export const metadata = { fileBytes: 62091 };

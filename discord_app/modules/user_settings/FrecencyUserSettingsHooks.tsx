@@ -18,5 +18,5 @@ export const useFrecencySettings = function useFrecencySettings(flag2) {
     }
   }, items);
   const items1 = [closure_3];
-  return flag(589).useStateFromStores(items1, () => obj.frecencyWithoutFetchingLatest);
+  return flag(586).useStateFromStores(items1, () => obj.frecencyWithoutFetchingLatest);
 };

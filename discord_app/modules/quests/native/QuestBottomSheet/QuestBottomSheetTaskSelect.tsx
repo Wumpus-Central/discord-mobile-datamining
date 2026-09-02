@@ -13,9 +13,9 @@ const result = require("set").fileFinishedImporting(
 export default function QuestBottomSheetTaskSelect(onTaskSelect) {
   onTaskSelect = onTaskSelect.onTaskSelect;
   let obj = { hasIcons: true, children: null };
-  obj = { arrow: true, icon: callback(onTaskSelect(12636).ScreenIcon, {}), label: null, onPress: null };
-  const intl = onTaskSelect(1236).intl;
-  obj[2] = intl.string(onTaskSelect(1236).t["QXc01+"]);
+  obj = { arrow: true, icon: callback(onTaskSelect(12857).ScreenIcon, {}), label: null, onPress: null };
+  const intl = onTaskSelect(1233).intl;
+  obj[2] = intl.string(onTaskSelect(1233).t["QXc01+"]);
   obj[3] = function onPress() {
     let tmpResult;
     if (onTaskSelect != null) {
@@ -23,10 +23,10 @@ export default function QuestBottomSheetTaskSelect(onTaskSelect) {
     }
     return tmpResult;
   };
-  const items = [callback(onTaskSelect(5599).TableRow, obj)];
-  obj = { arrow: true, icon: callback(onTaskSelect(9199).GameControllerIcon, {}), label: null, onPress: null };
-  const intl2 = onTaskSelect(1236).intl;
-  obj[2] = intl2.string(onTaskSelect(1236).t["8lAfuB"]);
+  const items = [callback(onTaskSelect(5607).TableRow, obj)];
+  obj = { arrow: true, icon: callback(onTaskSelect(9213).GameControllerIcon, {}), label: null, onPress: null };
+  const intl2 = onTaskSelect(1233).intl;
+  obj[2] = intl2.string(onTaskSelect(1233).t["8lAfuB"]);
   obj[3] = function onPress() {
     let tmpResult;
     if (onTaskSelect != null) {
@@ -34,7 +34,7 @@ export default function QuestBottomSheetTaskSelect(onTaskSelect) {
     }
     return tmpResult;
   };
-  items[1] = callback(onTaskSelect(5599).TableRow, obj);
+  items[1] = callback(onTaskSelect(5607).TableRow, obj);
   obj[1] = items;
-  return callback2(onTaskSelect(5992).TableRowGroup, obj);
+  return callback2(onTaskSelect(6000).TableRowGroup, obj);
 }

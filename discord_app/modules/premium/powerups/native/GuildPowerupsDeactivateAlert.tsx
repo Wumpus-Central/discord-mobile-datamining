@@ -73,7 +73,7 @@ export default function GuildPowerupsDeactivateAlert(arg0) {
     },
     text: null,
   };
-  const intl3 = tmp5(1236).intl;
+  const intl3 = tmp5(1233).intl;
   obj6[2] = intl3.string(messagesProxyDefault.PYPdl4);
   items[1] = callback(
     require("../../../../design/components/AlertModal/native/AlertModal.native.tsx").AlertActionButton,
@@ -85,7 +85,7 @@ export default function GuildPowerupsDeactivateAlert(arg0) {
     variant: "secondary",
     text: null,
   };
-  const intl4 = tmp5(1236).intl;
+  const intl4 = tmp5(1233).intl;
   obj7[2] = intl4.string(require("../../../../intl/index.native.tsx").t["ETE/oC"]);
   items[2] = callback(
     require("../../../../design/components/AlertModal/native/AlertModal.native.tsx").AlertActionButton,

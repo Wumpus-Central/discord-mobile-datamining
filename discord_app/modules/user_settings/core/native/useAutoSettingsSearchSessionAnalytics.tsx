@@ -12,7 +12,7 @@ let result = require("set").fileFinishedImporting(
 
 export const useAutoSettingsSearchSessionAnalytics = function useAutoSettingsSearchSessionAnalytics() {
   const items = [closure_4];
-  stateFromStores = stateFromStores(589).useStateFromStores(items, () => {
+  stateFromStores = stateFromStores(586).useStateFromStores(items, () => {
     state = state.getState();
     return state === stateFromStores(table[4]).AppStates.ACTIVE;
   });

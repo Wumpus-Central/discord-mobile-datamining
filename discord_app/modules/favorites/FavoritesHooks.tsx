@@ -154,7 +154,7 @@ export const getFavoritesCategories = function getFavoritesCategories(favoriteCh
     let tmp6 = favoriteChannels[key10010];
     let tmp7 = favoriteChannels;
     let tmp8 = dependencyMap;
-    if (tmp6.type !== favoriteChannels(1306).FavoriteChannelType.CATEGORY) {
+    if (tmp6.type !== favoriteChannels(1305).FavoriteChannelType.CATEGORY) {
       continue;
     } else {
       let obj = { id: null, name: null };

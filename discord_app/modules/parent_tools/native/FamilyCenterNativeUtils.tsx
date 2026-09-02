@@ -1,6 +1,6 @@
 // discord_app/modules/parent_tools/native/FamilyCenterNativeUtils.tsx
 import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/02009_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02008_asyncRequireImpl.js";
 import _modDef4723 from "../../../actions/ModalActionCreators.tsx";
 import maybeFetchCollectiblesForInvoicesDefault from "../FamilyCenterActionCreators.tsx";
 import closure_3 from "../FamilyCenterPendingConnectionStore.tsx";
@@ -29,7 +29,7 @@ export const handleFamilyCenterQRCodeScan = function handleFamilyCenterQRCodeSca
     obj = { userId: null, linkCode: null };
     obj[0] = match[1];
     obj[1] = match[2];
-    _modDef4723.pushLazy(asyncRequireImpl(11487, dependencyMap.paths), obj, c7);
+    _modDef4723.pushLazy(asyncRequireImpl(11710, dependencyMap.paths), obj, c7);
   }
 };
 export const resumeFamilyCenterConnection = function resumeFamilyCenterConnection() {
@@ -40,7 +40,7 @@ export const resumeFamilyCenterConnection = function resumeFamilyCenterConnectio
     obj.popWithKey(c7);
     obj = { userId: null, linkCode: null };
     ({ teenId: obj3[0], linkCode: obj3[1] } = pendingConnection);
-    _modDef4723.pushLazy(asyncRequireImpl(11487, dependencyMap.paths), obj, c7);
+    _modDef4723.pushLazy(asyncRequireImpl(11710, dependencyMap.paths), obj, c7);
     flag = true;
     const obj2 = _modDef4723;
   }

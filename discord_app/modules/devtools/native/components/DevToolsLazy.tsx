@@ -80,11 +80,11 @@ let result = set.fileFinishedImporting("modules/devtools/native/components/DevTo
 
 export default function DevToolsLazy() {
   items = [closure_5];
-  stateFromStores = stateFromStores(589).useStateFromStores(items, () => isDeveloper.isDeveloper);
-  const obj = stateFromStores(589);
+  stateFromStores = stateFromStores(586).useStateFromStores(items, () => isDeveloper.isDeveloper);
+  const obj = stateFromStores(586);
   const tmp = stateFromStores;
   const items1 = [closure_6];
-  const stateFromStores1 = stateFromStores(589).useStateFromStores(items1, () => showDevWidget.showDevWidget);
+  const stateFromStores1 = stateFromStores(586).useStateFromStores(items1, () => showDevWidget.showDevWidget);
   const effect = React.useEffect(() => {
     if (obj.isIOS()) {
       closure_1_5.addChangeListener(() => {
@@ -95,11 +95,11 @@ export default function DevToolsLazy() {
       });
     }
   });
-  const obj2 = stateFromStores(589);
-  const keyCommands = stateFromStores(14229).useKeyCommands(stateFromStores ? items : []);
+  const obj2 = stateFromStores(586);
+  const keyCommands = stateFromStores(14452).useKeyCommands(stateFromStores ? items : []);
   if (stateFromStores) {
     if (stateFromStores1) {
-      return jsx(tmp(15516).default, {});
+      return jsx(tmp(15747).default, {});
     }
   }
   return null;

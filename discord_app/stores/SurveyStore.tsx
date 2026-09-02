@@ -3,7 +3,7 @@ import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import Storage2 from "../../discord_common/js/packages/storage/Storage.tsx";
 import setDefault from "../utils/Durations.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
-import hooksDefault from "../../_runtime/04075_hooks.js";
+import hooksDefault from "../../_runtime/04074_hooks.js";
 import overrideSurvey from "../actions/SurveyActionCreators.tsx";
 import closure_4 from "GuildMemberCountStore.tsx";
 import closure_5 from "GuildStore.tsx";

@@ -1,6 +1,6 @@
 // discord_app/modules/forums/tracking/Tracking.tsx
-import set from "../../../utils/PlatformUtils.tsx";
 import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 import collectGuildAnalyticsMetadata from "../../app_analytics/AppAnalyticsUtils.tsx";
 import collectGuildAnalyticsMetadataDefault from "../../app_analytics/AppAnalyticsUtils.tsx";
 import collectForumAnalyticsMetadata from "TrackingUtils.tsx";

@@ -177,7 +177,7 @@ export default function Login(isMultiAccount) {
               v0(true);
               v02({});
               c3 = 2;
-              let obj3 = callback(6052);
+              let obj3 = callback(6060);
               v0 = 3;
               v02 = 1;
               obj1 = { value: null, done: false };
@@ -191,7 +191,7 @@ export default function Login(isMultiAccount) {
           } else {
             if (2 === tmp8) {
               c3 = 1;
-              let obj2 = closure_1_0(7721);
+              let obj2 = closure_1_0(7730);
               callback = obj2.getAuthenticationErrorsFromV6OrEarlierAPIError(dependencyMap);
               callback2(callback);
               c3 = 0;
@@ -210,17 +210,17 @@ export default function Login(isMultiAccount) {
             } else {
               closure_0 = arg1;
               if (false !== closure_0) {
-                if (closure_0 === closure_1_0(7719).PasswordResetMethods.ONE_TIME_LOGIN) {
+                if (closure_0 === closure_1_0(7728).PasswordResetMethods.ONE_TIME_LOGIN) {
                   obj = closure_1_0(4859);
-                  obj.openAlert("one-time-login-forgot-password-confirm", closure_1_10(callback(7720), {}));
+                  obj.openAlert("one-time-login-forgot-password-confirm", closure_1_10(callback(7729), {}));
                 } else {
                   obj3 = { title: null, body: null };
-                  const intl = closure_1_0(1236).intl;
-                  obj3[0] = intl.string(closure_1_0(1236).t.f5Pi7A);
-                  const intl2 = closure_1_0(1236).intl;
+                  const intl = closure_1_0(1233).intl;
+                  obj3[0] = intl.string(closure_1_0(1233).t.f5Pi7A);
+                  const intl2 = closure_1_0(1233).intl;
                   const obj4 = { email: null };
                   obj4[0] = closure_6;
-                  obj3[1] = intl2.format(closure_1_0(1236).t["6u5hQ9"], obj4);
+                  obj3[1] = intl2.format(closure_1_0(1233).t["6u5hQ9"], obj4);
                   callback(4858).show(obj3);
                   const obj8 = callback(4858);
                 }
@@ -256,37 +256,99 @@ export default function Login(isMultiAccount) {
     c8 = 0;
     c6 = 0;
     const iter = (function* (arg0, arg1) {
-      closure_4 = tmp3;
-      if (flag === undefined) {
-        flag = false;
-      }
-      yield "PX_16";
-      closure_1_4(true);
-      closure_1_5({});
-      c6 = 1;
-      const obj2 = { login: null, password: null, undelete: null, isMultiAccount: null };
-      obj2[0] = callback;
-      obj2[1] = closure_1;
-      obj2[2] = flag;
-      obj2[3] = callback;
-      yield navigation(ref[19]).login(obj2);
-      if (2 === tmp7) {
-        c6 = 0;
-        closure_4 = closure_5;
-        closure_1_4(false);
-        obj1 = callback(ref[23]);
-        const authenticationErrorsFromV6OrEarlierAPIError =
-          obj1.getAuthenticationErrorsFromV6OrEarlierAPIError(closure_4);
-        closure_1_12(authenticationErrorsFromV6OrEarlierAPIError);
+      if (c8 === 2) {
         c8 = 3;
-      } else if (arg0 === 1) {
-        c8 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        c6 = 0;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c8 = 2;
+          if (0 === c7) {
+            if (arg0 === 1) {
+              c8 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c8 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_4 = tmp3;
+              let authenticationErrorsFromV6OrEarlierAPIError = tmp7;
+              let flag;
+              if (flag === undefined) {
+                flag = false;
+              }
+              authenticationErrorsFromV6OrEarlierAPIError = undefined;
+              c7 = 1;
+              c8 = 1;
+              return { value: "PX_16", done: true };
+            }
+          } else if (1 === tmp7) {
+            if (arg0 === 1) {
+              c8 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c8 = 3;
+              obj1 = { value: null, done: true };
+              obj1[0] = arg1;
+              return obj1;
+            } else {
+              closure_1_4(true);
+              closure_1_5({});
+              c6 = 1;
+              const obj2 = { login: null, password: null, undelete: null, isMultiAccount: null };
+              obj2[0] = callback;
+              obj2[1] = closure_1;
+              obj2[2] = flag;
+              obj2[3] = callback;
+              c7 = 3;
+              c8 = 1;
+              const obj3 = { value: null, done: false };
+              obj3[0] = navigation(ref[19]).login(obj2);
+              return obj3;
+            }
+          } else {
+            if (2 === tmp7) {
+              c6 = 0;
+              closure_4 = closure_5;
+              closure_1_4(false);
+              obj1 = callback(ref[23]);
+              authenticationErrorsFromV6OrEarlierAPIError =
+                obj1.getAuthenticationErrorsFromV6OrEarlierAPIError(closure_4);
+              closure_1_12(authenticationErrorsFromV6OrEarlierAPIError);
+              c8 = 3;
+            } else if (arg0 === 1) {
+              c8 = 3;
+              throw arg1;
+            } else if (arg0 !== 2) {
+              c6 = 0;
+            }
+            c6 = 0;
+            c8 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          }
+        } catch (tmp22) {
+          closure_5 = tmp22;
+          if (tmp4 === c6) {
+            c8 = tmp2;
+            throw tmp22;
+          } else {
+            c7 = tmp;
+          }
+        }
       }
-      c6 = 0;
-      return arg1;
     })();
     iter.next();
     return iter;

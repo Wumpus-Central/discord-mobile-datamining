@@ -1,9 +1,9 @@
 // discord_app/modules/chat/native/NativeExperimentBridgeManager.tsx
 import set from "../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import set2 from "../../../utils/PlatformUtils.tsx";
 import sendRequest from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import set2 from "../../../utils/PlatformUtils.tsx";
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
 import shouldEnableYYTextReplacement from "../../messages/YYTextReplacementExperiment.tsx";
 import apexExperimentDefault from "../../cache/NotificationLoadMessagesExperiment.tsx";
@@ -30,7 +30,7 @@ function updateIOSExperiments() {
     if (NSUserDefaultsBridge != null) {
       const setShouldEnableYYTextReplacement = NSUserDefaultsBridge.setShouldEnableYYTextReplacement;
       if (setShouldEnableYYTextReplacement != null) {
-        let tmpResult = tmp(17402);
+        let tmpResult = tmp(17638);
         const result = setShouldEnableYYTextReplacement(
           tmpResult.shouldEnableYYTextReplacement({ location: "NativeExperimentBridgeManager" }),
         );
@@ -41,7 +41,7 @@ function updateIOSExperiments() {
   if (NSUserDefaultsBridge2 != null) {
     const setShouldFixPushNotificationRawPayload = NSUserDefaultsBridge2.setShouldFixPushNotificationRawPayload;
     if (setShouldFixPushNotificationRawPayload != null) {
-      tmpResult = tmp(5219);
+      tmpResult = tmp(5227);
       const result1 = setShouldFixPushNotificationRawPayload(
         tmpResult.isIOSPushNotificationRawPayloadFixExperimentEnabled(),
       );

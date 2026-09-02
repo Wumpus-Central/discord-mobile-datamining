@@ -7,7 +7,6 @@ import { SELECT_NAMES } from "../../MFAConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { context } from "../MfaChallengeContext.tsx";
 
 require = arg1;
 noopAll;
@@ -25,12 +24,12 @@ let closure_7 = createCacheKey.createStyles((arg0) => {
 });
 const result = require("set").fileFinishedImporting("modules/mfa/native/screens/SelectScreen.tsx");
 
-export default function SelectScreen() {
-  let obj = context;
+export default function SelectScreen(mfaChallenge) {
+  const _require = mfaChallenge;
   const tmp = useWideAuthViewDefault();
   const tmp2 = callback3(tmp);
-  obj1 = useNavigation;
-  _require = obj1.useNavigation();
+  let obj = useNavigation;
+  importDefault = obj.useNavigation();
   obj = { top: !tmp, style: tmp2.container, children: null };
   obj = { style: tmp2.selectContainer, children: null };
   obj1 = { variant: "heading-xl/extrabold", children: null };
@@ -43,14 +42,14 @@ export default function SelectScreen() {
   items[1] = callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj2);
   obj[1] = items;
   const items1 = [callback2(View, obj)];
-  const methods = obj.useMfaChallenge().mfaChallenge.methods;
+  const methods = mfaChallenge.mfaChallenge.methods;
   items1[1] = callback(View, {
     style: { marginTop: 16, gap: 8 },
     children: methods.map((type) => {
-      const callback = type;
-      closure_1 = callback;
+      closure_1 = type;
+      closure_2 = closure_1;
       return closure_1_5(
-        callback(closure_1_2[6]).RowButton,
+        mfaChallenge(closure_1_2[6]).RowButton,
         {
           label: closure_1_4[type.type],
           onPress() {},

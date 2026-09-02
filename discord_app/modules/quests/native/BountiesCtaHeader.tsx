@@ -6,7 +6,7 @@ import Button from "../../../design/components/Button/native/Button.native.tsx";
 import VideoComponent from "../../../components_native/common/Video.tsx";
 import metadataDefault from "../../../../discord_assets/assets/quests/bounties/starfield_bg.mp4.js";
 import openBountiesNuxPromoSheetDefault from "openBountiesNuxPromoSheet.tsx";
-import _modDef14684 from "BountiesBannerBackground.tsx";
+import _modDef14910 from "BountiesBannerBackground.tsx";
 import metadataDefault2 from "../../../../discord_assets/assets/quests/bounties/bounty_banner.mp4.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -59,12 +59,12 @@ function BountiesCtaDescription(arg0) {
     tmp5 = tmp2;
   }
   let obj = { variant: "text-sm/medium", color: "text-subtle", children: null };
-  const intl = tmp5(1236).intl;
+  const intl = tmp5(1233).intl;
   obj[2] = intl.string(AZGGo1);
   const tmp7 = callback(tmp5(4474).Text, obj);
-  const intl2 = tmp5(1236).intl;
+  const intl2 = tmp5(1233).intl;
   obj = { onClick: openBountiesNuxPromoSheetDefault };
-  const formatResult = intl2.format(tmp5(1236).t.fjSvsC, obj);
+  const formatResult = intl2.format(tmp5(1233).t.fjSvsC, obj);
   if (!isEmptyOrCompleted) {
     if (!inlineLearnMore) {
       obj = { style: null, children: null };
@@ -95,9 +95,9 @@ function BountiesCtaHeaderInner(bounties) {
   const tmp = callback3();
   let tmp10Result = null != footer;
   let tmp12Result3 = !flag;
-  let obj = bounties(14683);
+  let obj = bounties(14909);
   const bountiesEntryPointButtonVariant = obj.getBountiesEntryPointButtonVariant(shopCarouselButtonVariant);
-  obj1 = bounties(589);
+  obj1 = bounties(586);
   const items = [closure_7];
   const items1 = [bounties];
   const stateFromStores = obj1.useStateFromStores(
@@ -105,8 +105,8 @@ function BountiesCtaHeaderInner(bounties) {
     () => bounties.some((id) => !closure_7.hasSeen(callback(table[16]).AdCreativeType.BOUNTY, id.id)),
     items1,
   );
-  let obj2 = bounties(11118);
-  const QuestContent = bounties(5390).QuestContent;
+  let obj2 = bounties(11339);
+  const QuestContent = bounties(5398).QuestContent;
   const tmp8 = obj2.useBountiesExperience(constants2.QUEST_HOME_MOBILE).verticalScrollEnabled
     ? QuestContent.VIDEO_MODAL_MOBILE
     : QuestContent.QUEST_HOME_MOBILE_CAROUSEL;
@@ -151,13 +151,13 @@ function BountiesCtaHeaderInner(bounties) {
     let tmp12Result = stateFromStores;
     if (stateFromStores) {
       ({ newPillInline: obj14[1], newPillText: obj14[2] } = tmp);
-      tmp12Result = tmp12(tmp4(1297).NewTag, { variant: "text-xs/bold", containerStyle: null, textStyle: null });
+      tmp12Result = tmp12(tmp4(1296).NewTag, { variant: "text-xs/bold", containerStyle: null, textStyle: null });
       const obj4 = { variant: "text-xs/bold", containerStyle: null, textStyle: null };
     }
     const items6 = [tmp12Result];
     const obj5 = { variant: "text-lg/semibold", color: "text-strong", children: null };
-    const intl2 = tmp4(1236).intl;
-    obj5[2] = intl2.string(tmp4(1236).t.qetVDw);
+    const intl2 = tmp4(1233).intl;
+    obj5[2] = intl2.string(tmp4(1233).t.qetVDw);
     items6[1] = tmp12(tmp4(4474).Text, obj5);
     obj3[1] = items6;
     const items7 = [tmp10(tmp11, obj3)];
@@ -196,7 +196,7 @@ function BountiesCtaHeaderInner(bounties) {
     let tmp12Result1 = stateFromStores;
     if (stateFromStores) {
       ({ newPill: obj6[1], newPillText: obj6[2] } = tmp);
-      tmp12Result1 = tmp12(tmp4(1297).NewTag, { variant: "text-xs/bold", containerStyle: null, textStyle: null });
+      tmp12Result1 = tmp12(tmp4(1296).NewTag, { variant: "text-xs/bold", containerStyle: null, textStyle: null });
       const obj10 = { variant: "text-xs/bold", containerStyle: null, textStyle: null };
     }
     const items9 = [tmp12Result1];
@@ -209,8 +209,8 @@ function BountiesCtaHeaderInner(bounties) {
     items10[1] = headerTextBoxWithFooter;
     obj11[0] = items10;
     const obj12 = { variant: "text-lg/semibold", color: "text-strong", children: null };
-    const intl = tmp4(1236).intl;
-    obj12[2] = intl.string(tmp4(1236).t.qetVDw);
+    const intl = tmp4(1233).intl;
+    obj12[2] = intl.string(tmp4(1233).t.qetVDw);
     const items11 = [tmp12(tmp4(4474).Text, obj12), ,];
     const obj13 = { isEmptyOrCompleted: null };
     obj13[0] = flag;
@@ -229,8 +229,8 @@ function BountiesCtaHeaderInner(bounties) {
     obj11[1] = items11;
     items9[1] = tmp10(tmp11, obj11);
     obj9[2] = items9;
-    tmp10Result = tmp10(_modDef14684, obj9);
-    const tmp27 = _modDef14684;
+    tmp10Result = tmp10(_modDef14910, obj9);
+    const tmp27 = _modDef14910;
   }
   obj[1] = tmp10Result;
   const items12 = [closure_11(closure_5, obj)];
@@ -394,7 +394,7 @@ let closure_13 = createCacheKey.createStyles(() => {
 });
 const memoResult = importAllResult.memo(function BountiesCtaHeader(isEmptyOrCompleted) {
   const _require = isEmptyOrCompleted;
-  const tmp2 = containerRef(14680)();
+  const tmp2 = containerRef(14906)();
   containerRef = tmp2.containerRef;
   isEmptyOrCompleted = isEmptyOrCompleted.isEmptyOrCompleted;
   let tmp3 = undefined !== isEmptyOrCompleted;
@@ -422,17 +422,17 @@ const memoResult = importAllResult.memo(function BountiesCtaHeader(isEmptyOrComp
         children: null,
       };
       obj1[0] = closure_9;
-      obj1[1] = tmp7(7446).AdCreativeType.BOUNTY;
-      obj1[2] = tmp7(5390).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE;
+      obj1[1] = tmp7(7456).AdCreativeType.BOUNTY;
+      obj1[2] = tmp7(5398).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE;
       obj1[4] = tmp2.isInView;
-      obj1[5] = tmp7(5390).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE;
+      obj1[5] = tmp7(5398).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE;
       obj1[6] = function children() {
         const obj = {};
         const merged = Object.assign(closure_0);
         obj.containerRef = containerRef;
         return closure_1_11(closure_1_17, obj);
       };
-      tmp9Result = tmp9(tmp7(11345).QuestContentImpressionTrackerNative, obj1);
+      tmp9Result = tmp9(tmp7(11568).QuestContentImpressionTrackerNative, obj1);
     }
     obj[1] = tmp9Result;
     return closure_11(require("../../../../discord_common/js/packages/design/native.tsx").ThemeContextProvider, obj);

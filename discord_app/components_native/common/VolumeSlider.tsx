@@ -3,7 +3,7 @@ import noopAll from "../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import map from "../../design/tokens/native/useToken.tsx";
 import VoiceNormalIcon from "../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
-import _modDef8381 from "../../../_runtime/metro/08381__.js";
+import _modDef8390 from "../../../_runtime/metro/08390__.js";
 import VoiceXIcon from "../../design/components/Icon/native/redesign/generated/VoiceXIcon.tsx";
 import { View } from "../../../_runtime/00017_get_ActivityIndicator.js";
 import { MAX_EMBEDDED_VOLUME_PERCEPTUAL as closure_4 } from "../../../discord_common/js/packages/media-engine/Constants.tsx";
@@ -64,15 +64,15 @@ export default function VolumeSlider(maxTrackTintColor) {
   obj1[4] = minTrackColor;
   obj1[5] = PRIMARY_400;
   if (accessibilityLabel == null) {
-    const intl = tmp5(1236).intl;
-    accessibilityLabel = intl.string(tmp5(1236).t.xPHVBs);
+    const intl = tmp5(1233).intl;
+    accessibilityLabel = intl.string(tmp5(1233).t.xPHVBs);
   }
   obj1[6] = accessibilityLabel;
   obj1[7] = function onValueChange(arg0) {
     return callback(closure_1_0(closure_1_2[10]).perceptualToAmplitude(arg0));
   };
   if (onResponderGrant == null) {
-    tmp5Result = tmp5(500);
+    tmp5Result = tmp5(1234);
     let fn;
     if (tmp5Result.isAndroid()) {
       fn = () => true;
@@ -80,7 +80,7 @@ export default function VolumeSlider(maxTrackTintColor) {
     onResponderGrant = fn;
   }
   obj1[8] = onResponderGrant;
-  items1[1] = callback(_modDef8381, obj1);
+  items1[1] = callback(_modDef8390, obj1);
   items1[2] = callback(VoiceNormalIcon.VoiceNormalIcon, { style: tmp4.rightIcon });
   obj[1] = items1;
   return closure_6(View, obj);

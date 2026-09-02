@@ -26,10 +26,10 @@ export default function EligibilityActionSheet(onRequireModeratorMFAClick) {
       onEnableMFAClick() {
         let obj = callback2(4445);
         obj.hideActionSheet(closure_7);
-        callback2(9728).close();
-        const obj2 = callback2(9728);
+        callback2(9750).close();
+        const obj2 = callback2(9750);
         obj = { screen: constants.ACCOUNT };
-        callback(6245).openUserSettings(obj);
+        callback(6254).openUserSettings(obj);
       },
       onRequireModeratorMFAClick() {
         closure_1_1(closure_1_2[4]).hideActionSheet(closure_1_7);
@@ -40,8 +40,8 @@ export default function EligibilityActionSheet(onRequireModeratorMFAClick) {
   }, items);
   let obj = { startExpanded: true, children: null };
   obj = { style: tmp.title, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = onRequireModeratorMFAClick(1236).intl;
-  obj[3] = intl.string(onRequireModeratorMFAClick(1236).t["3s47iN"]);
+  const intl = onRequireModeratorMFAClick(1233).intl;
+  obj[3] = intl.string(onRequireModeratorMFAClick(1233).t["3s47iN"]);
   const items1 = [callback(onRequireModeratorMFAClick(4474).Heading, obj)];
   obj = {
     style: tmp.container,
@@ -49,6 +49,6 @@ export default function EligibilityActionSheet(onRequireModeratorMFAClick) {
   };
   items1[1] = callback(EligibilityChecklistRowDefault, obj);
   obj[1] = items1;
-  return callback2(onRequireModeratorMFAClick(5622).BottomSheet, obj);
+  return callback2(onRequireModeratorMFAClick(5630).BottomSheet, obj);
 }
 export const ELIGIBILITY_ACTION_SHEET_KEY = "EligibilityActionSheet";

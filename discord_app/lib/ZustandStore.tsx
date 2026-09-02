@@ -1,6 +1,6 @@
 // discord_app/lib/ZustandStore.tsx
 import set from "../../_runtime/00002_set.js";
-import { identity } from "../../_runtime/00700_identity.js";
+import { identity } from "../../_runtime/00697_identity.js";
 
 function defaultStatesAreEqual(arg0, arg1) {
   return arg0 === arg1;

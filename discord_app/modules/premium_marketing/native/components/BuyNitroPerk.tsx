@@ -52,10 +52,10 @@ export default function BuyNitroPerk(perk) {
     end: closure_8,
     style: absoluteFill.absoluteFill,
   };
-  const items = [callback(onOpenDetails(13055), obj)];
+  const items = [callback(onOpenDetails(13277), obj)];
   const tmp = callback3();
   const tmp4 = callback;
-  items[1] = callback(perk.IconComponent, { size: "sm", color: onOpenDetails(712).colors.WHITE });
+  items[1] = callback(perk.IconComponent, { size: "sm", color: onOpenDetails(709).colors.WHITE });
   obj[1] = items;
   obj[3] = callback2(closure_4, obj);
   obj[4] = tmp2;
@@ -66,5 +66,5 @@ export default function BuyNitroPerk(perk) {
   obj[5] = fn;
   obj[6] = start;
   obj[7] = end;
-  return tmp4(perk(5599).TableRow, obj);
+  return tmp4(perk(5607).TableRow, obj);
 }

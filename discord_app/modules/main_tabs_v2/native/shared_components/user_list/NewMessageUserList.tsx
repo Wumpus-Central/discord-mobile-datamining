@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/NewMessageUserList.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import computeChannelName from "../../../../channel/useChannelName.tsx";
-import fuzzysearchDefault from "../../../../../../_runtime/05454_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../../_runtime/05462_fuzzysearch.js";
 import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -40,7 +40,7 @@ function matchGroupDMRecipients(trimmed1, recipients) {
         }
         if (null != toLocaleLowerCaseResult1) {
           let tmp8 = toLocaleLowerCaseResult1;
-          if (tmp19(5454)(trimmed1, tmp7)) {
+          if (tmp19(5462)(trimmed1, tmp7)) {
             let tmp15 = obj;
             obj.return();
             let num2 = 1;
@@ -56,7 +56,7 @@ function matchGroupDMRecipients(trimmed1, recipients) {
         }
         if (null != toLocaleLowerCaseResult2) {
           let tmp13 = toLocaleLowerCaseResult2;
-          if (tmp19(5454)(trimmed1, tmp12)) {
+          if (tmp19(5462)(trimmed1, tmp12)) {
             let tmp14 = obj;
             obj.return();
             let num = 1;
@@ -268,8 +268,8 @@ export default function NewMessageUserList(selectedUserIds) {
       obj[0] = intl.string(flag9(trimmed[15]).t.qGlQrW);
       obj[1] = arr2.map((data) => ({ type: "GroupDMChannelRecord", data }));
       const findIndexResult = obj.findIndex((title) => {
-        const intl = callback(1236).intl;
-        return title.title === intl.string(callback(1236).t.y29JXs);
+        const intl = callback(1233).intl;
+        return title.title === intl.string(callback(1233).t.y29JXs);
       });
       if (-1 === findIndexResult) {
         let items = [];

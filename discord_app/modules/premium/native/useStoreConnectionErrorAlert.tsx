@@ -7,7 +7,7 @@ const result = require("set").fileFinishedImporting("modules/premium/native/useS
 
 export default function useStoreConnectionErrorAlert() {
   const items = [closure_4];
-  stateFromStores = stateFromStores(589).useStateFromStores(items, () => closure_4.hasConnectionError());
+  stateFromStores = stateFromStores(586).useStateFromStores(items, () => closure_4.hasConnectionError());
   const items1 = [stateFromStores];
   const effect = React.useEffect(() => {
     if (stateFromStores) {

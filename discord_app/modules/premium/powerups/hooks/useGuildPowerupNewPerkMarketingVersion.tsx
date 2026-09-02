@@ -51,7 +51,7 @@ export default function useGuildPowerupNewPerkMarketingVersion(guildId) {
   }
   obj4 = apexExperiment;
   const items1 = [serverThemeEnabled, tmp4];
-  const stateFromStores1 = tmp(589).useStateFromStores(items1, () =>
+  const stateFromStores1 = tmp(586).useStateFromStores(items1, () =>
     serverThemeEnabled.can(closure_1_8.MANAGE_GUILD, stateFromStores.getGuild(closure_0)),
   );
   const items2 = [arg1, gameServerEnabled, stateFromStores, serverThemeEnabled, guildId, stateFromStores1];
@@ -75,7 +75,7 @@ export default function useGuildPowerupNewPerkMarketingVersion(guildId) {
           if (obj.canUseMobileServerTagSettings(guildId)) {
             return stateFromStores1.GUILD_TAG;
           }
-          obj = guildId(9731);
+          obj = guildId(9753);
         }
       }
     }

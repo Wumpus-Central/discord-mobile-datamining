@@ -45,5 +45,5 @@ export default function useMessagesScrollToTop(listRef) {
       items,
     ),
   );
-  const scrollToTop = listRef(1500).useScrollToTop(ref);
+  const scrollToTop = listRef(1499).useScrollToTop(ref);
 }

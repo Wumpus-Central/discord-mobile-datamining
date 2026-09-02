@@ -1,6 +1,6 @@
 // discord_app/modules/premium/powerups/native/utils/openGuildPowerupsModal.tsx
 import set from "../../../../../../_runtime/00002_set.js";
-import asyncRequireImpl from "../../../../../../_runtime/02009_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/02008_asyncRequireImpl.js";
 import _modDef4723 from "../../../../../actions/ModalActionCreators.tsx";
 
 let c3 = 0;
@@ -18,7 +18,7 @@ export default function openGuildPowerupsModal(navigationParams) {
     tmp2 = obj;
   }
   _modDef4723.pushLazy(
-    asyncRequireImpl(12044, dependencyMap.paths),
+    asyncRequireImpl(12268, dependencyMap.paths),
     tmp2,
     "guild_powerups_modal_key",
     navigationParams.navigationParams,

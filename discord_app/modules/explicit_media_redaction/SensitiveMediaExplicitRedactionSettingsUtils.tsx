@@ -34,10 +34,10 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
     }
     if (isDm) {
       if (!flag) {
-        let BLUR2 = tmp4(1306).ExplicitContentRedaction.BLOCK;
+        let BLUR2 = tmp4(1305).ExplicitContentRedaction.BLOCK;
       }
     }
-    ExplicitContentRedaction = tmp4(1306).ExplicitContentRedaction;
+    ExplicitContentRedaction = tmp4(1305).ExplicitContentRedaction;
     BLUR2 = ExplicitContentRedaction.BLUR;
   } else {
     let nsfwAllowed;
@@ -54,7 +54,7 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
         flag6 = false;
       }
       if (!flag5) {
-        const BLUR = tmp4(1306).ExplicitContentRedaction.BLUR;
+        const BLUR = tmp4(1305).ExplicitContentRedaction.BLUR;
       }
       const ExplicitContentFilter2 = tmp4(4166).ExplicitContentFilter;
       setting = ExplicitContentFilter2.getSetting();
@@ -81,7 +81,7 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
           SHOW = obj[setting1];
         }
       } else {
-        SHOW = tmp4(1306).ExplicitContentRedaction.SHOW;
+        SHOW = tmp4(1305).ExplicitContentRedaction.SHOW;
       }
       return SHOW;
     }
@@ -153,7 +153,7 @@ export const resolveSettingWithDefaultsForTeen = function resolveSettingWithDefa
     }
     return tmp5;
   } else {
-    return tmp(1306).ExplicitContentRedaction.BLUR;
+    return tmp(1305).ExplicitContentRedaction.BLUR;
   }
 };
 export const getExplicitContentSettingOrDefault = function getExplicitContentSettingOrDefault(arg0) {

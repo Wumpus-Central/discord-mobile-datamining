@@ -40,10 +40,10 @@ function _deleteSavedMessage() {
     c2 = 0;
     c1 = 0;
     return (function* (arg0) {
-      const HTTP = lib(530).HTTP;
+      const HTTP = lib(527).HTTP;
       obj1 = { url: null, rejectWithError: null };
       obj1[0] = closure_1_5.DELETE_SAVED_MESSAGE(lib.channelId, lib.messageId);
-      obj1[1] = lib(530).rejectWithMigratedError();
+      obj1[1] = lib(527).rejectWithMigratedError();
       yield HTTP.del(obj1);
       return true;
     })();
@@ -92,10 +92,10 @@ function _fetchAndUpdateSavedMessages() {
             callback = undefined;
             if (isStale.getIsStale()) {
               dependencyMap = 1;
-              const HTTP = closure_1_0(530).HTTP;
+              const HTTP = closure_1_0(527).HTTP;
               obj1 = { url: null, rejectWithError: null };
               obj1[0] = closure_1_5.GET_SAVED_MESSAGES;
-              let obj10 = closure_1_0(530);
+              let obj10 = closure_1_0(527);
               obj1[1] = obj10.rejectWithMigratedError();
               c3 = 4;
               isStale = 1;
@@ -111,7 +111,7 @@ function _fetchAndUpdateSavedMessages() {
           }
         } else if (1 === tmp7) {
           dependencyMap = 0;
-          let obj5 = callback(709);
+          let obj5 = callback(706);
           const obj4 = { type: "SAVED_MESSAGES_UPDATE", savedMessages: null };
           obj4[1] = [];
           c3 = 2;
@@ -166,7 +166,7 @@ function _fetchAndUpdateSavedMessages() {
               let obj = callback(4737);
               messageRecord = obj.createMessageRecord(message.message);
             }
-            obj = { message: messageRecord, saveData: callback(7604).savedMessageDataToClient(message.save_data) };
+            obj = { message: messageRecord, saveData: callback(7614).savedMessageDataToClient(message.save_data) };
             return obj;
           });
           obj10 = { type: "SAVED_MESSAGES_UPDATE", savedMessages: null };
@@ -174,7 +174,7 @@ function _fetchAndUpdateSavedMessages() {
           c3 = 3;
           isStale = 1;
           obj = { value: null, done: false };
-          obj[0] = callback(709).dispatch(obj10);
+          obj[0] = callback(706).dispatch(obj10);
           return obj;
         }
       } catch (tmp15) {

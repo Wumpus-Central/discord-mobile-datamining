@@ -107,9 +107,9 @@ export default function getGuildsBarGuildMenuItems(arg0) {
     const splice = items.splice;
     const obj2 = { iconSource: null, label: null, action: null };
     if (isMutedResult) {
-      obj2[0] = tmp5(11947);
-      const intl5 = tmp(1236).intl;
-      obj2[1] = intl5.string(tmp(1236).t.De0BTC);
+      obj2[0] = tmp5(12170);
+      const intl5 = tmp(1233).intl;
+      obj2[1] = intl5.string(tmp(1233).t.De0BTC);
       obj2[2] = function action() {
         if (null != callback) {
           const result = closure_1_1(closure_1_2[10]).updateGuildNotificationSettings(
@@ -122,9 +122,9 @@ export default function getGuildsBarGuildMenuItems(arg0) {
       };
       splice(1, 0, obj2);
     } else {
-      obj2[0] = tmp5(11946);
-      const intl4 = tmp(1236).intl;
-      obj2[1] = intl4.string(tmp(1236).t.vRzp7P);
+      obj2[0] = tmp5(12169);
+      const intl4 = tmp(1233).intl;
+      obj2[1] = intl4.string(tmp(1233).t.vRzp7P);
       obj2[2] = function action() {
         let obj = closure_1_1(closure_1_2[14]);
         obj = { guildId: callback };

@@ -15,7 +15,7 @@ export const useAvailableTags = function useAvailableTags(parent_id) {
   }
   const items = [closure_3];
   const items1 = [parent_id];
-  return parent_id(589).useStateFromStoresObject(
+  return parent_id(586).useStateFromStoresObject(
     items,
     () => {
       const channel = closure_1_3.getChannel(parent_id);

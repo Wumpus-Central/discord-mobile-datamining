@@ -7,11 +7,11 @@ import findCommandInSectionAll from "ApplicationCommandQueryApi.tsx";
 const COMMAND_SENTINEL = regExp.COMMAND_SENTINEL;
 const result = set.fileFinishedImporting("modules/application_commands/DraftCommandUtils.tsx");
 
-export const toDraftCommand = function toDraftCommand(activeCommand, result) {
+export const toDraftCommand = function toDraftCommand(activeCommand, result1) {
   if (null == activeCommand) {
     return null;
   } else {
-    let tmp2 = (function getCommandTextPrefix(activeCommand, result) {
+    let tmp2 = (function getCommandTextPrefix(activeCommand, result1) {
       const items = [,];
       ({ displayName: arr[0], untranslatedName: arr[1] } = activeCommand);
       const obj = items[Symbol.iterator]();
@@ -19,7 +19,7 @@ export const toDraftCommand = function toDraftCommand(activeCommand, result) {
         let tmp2 = closure_3;
         let _HermesInternal = HermesInternal;
         let combined = "" + closure_3 + tmp;
-        if (result !== combined) {
+        if (result1 !== combined) {
           let tmp5 = combined;
           let _HermesInternal2 = HermesInternal;
         }
@@ -28,7 +28,7 @@ export const toDraftCommand = function toDraftCommand(activeCommand, result) {
         return combined;
       }
       return null;
-    })(activeCommand, result);
+    })(activeCommand, result1);
     let tmp3 = null;
     if (null != tmp2) {
       let obj = { commandId: null, applicationId: null, commandText: null };

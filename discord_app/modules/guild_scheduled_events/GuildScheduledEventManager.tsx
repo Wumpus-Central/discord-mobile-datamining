@@ -1,6 +1,6 @@
 // discord_app/modules/guild_scheduled_events/GuildScheduledEventManager.tsx
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import _modDef9673 from "GuildScheduledEventsActionCreators.tsx";
+import _modDef9686 from "GuildScheduledEventsActionCreators.tsx";
 import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_3 from "../../stores/SelectedGuildStore.tsx";
 import closure_4 from "GuildScheduledEventStore.tsx";
@@ -180,7 +180,7 @@ prototype["getGuildEventUserCounts"] = function getGuildEventUserCounts(guild_id
   })();
 };
 prototype["getGuildEventUsers"] = function getGuildEventUsers(id, arg1, guild_id) {
-  return _modDef9673.fetchUsersForGuildEvent(id, arg1, guild_id);
+  return _modDef9686.fetchUsersForGuildEvent(id, arg1, guild_id);
 };
 prototype["getGuildEventsForCurrentUser"] = function getGuildEventsForCurrentUser(arg0) {
   return getGuildEventsForCurrentUser(arg0);

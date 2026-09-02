@@ -57,14 +57,14 @@ export const maybeShowDoubleTapReminderToast = function maybeShowDoubleTapRemind
     if (flag == null) {
       flag = false;
     }
-    let tmpResult = tmp(7877);
+    let tmpResult = tmp(7886);
     const result = tmpResult.disambiguatedEmojiFromSettingsValue(setting);
     let areEmojisEqualResult = !flag;
     if (!flag) {
       areEmojisEqualResult = null != result;
     }
     if (areEmojisEqualResult) {
-      tmpResult = tmp(7877);
+      tmpResult = tmp(7886);
       areEmojisEqualResult = tmpResult.areEmojisEqual(result, emoji);
     }
     if (areEmojisEqualResult) {
@@ -80,7 +80,7 @@ export const maybeShowDoubleTapReminderToast = function maybeShowDoubleTapRemind
       obj = { dismissAction: null, forceTrack: true };
       obj[0] = ContentDismissActionType.AUTO_DISMISS;
       const result1 = tmp(4298).UNSAFE_markDismissibleContentAsDismissed(
-        tmp(1373).DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER,
+        tmp(1372).DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER,
         obj,
       );
       const tmpResult1 = tmp(4298);

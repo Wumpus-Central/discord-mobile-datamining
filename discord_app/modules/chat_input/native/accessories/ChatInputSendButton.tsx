@@ -61,12 +61,12 @@ let closure_12 = importAllResult.memo((type) => {
     num = closure_8;
   }
   obj = { cleanup, state, withBounce, bounceEnterDelayMs: num, children: null };
-  let tmp3Result = tmp3(11813);
+  let tmp3Result = tmp3(12036);
   if (type === constants.BUTTON_SEND_VOICE_MESSAGE || type === constants.BUTTON_SEND_VOICE_MESSAGE_DISABLED) {
     obj = { disabled: null, channelId: null };
     obj[0] = isOnCooldown;
     obj[1] = channelId;
-    let tmp7Result = tmp7(tmp3(11822), obj);
+    let tmp7Result = tmp7(tmp3(12045), obj);
   } else {
     obj1 = {
       active: true,
@@ -79,10 +79,10 @@ let closure_12 = importAllResult.memo((type) => {
       disabled: null,
     };
     ({ button: obj4[1], buttonActive: obj4[2], iconActive: obj4[3] } = tmp5);
-    tmp3Result = tmp3(11806);
+    tmp3Result = tmp3(12029);
     obj1[4] = tmp(4423).SendMessageIcon;
-    const intl = tmp(1236).intl;
-    obj1[5] = intl.string(tmp(1236).t.TXNS7S);
+    const intl = tmp(1233).intl;
+    obj1[5] = intl.string(tmp(1233).t.TXNS7S);
     obj1[6] = onSendMessage;
     obj1[7] = !sendEnabled;
     tmp7Result = tmp7(tmp3Result, obj1);
@@ -107,12 +107,12 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   importAllResult = undefined;
   canSendVoiceMessage = undefined;
   let obj = channel(4197);
-  const token = obj.useToken(onSendMessage(712).modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH);
+  const token = obj.useToken(onSendMessage(709).modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH);
   obj1 = channel(4197);
-  const token1 = obj1.useToken(onSendMessage(712).modules.mobile.CHAT_INPUT_SEND_BUTTON_HEIGHT);
+  const token1 = obj1.useToken(onSendMessage(709).modules.mobile.CHAT_INPUT_SEND_BUTTON_HEIGHT);
   let obj2 = channel(4197);
-  const token2 = obj2.useToken(onSendMessage(712).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
-  let obj3 = channel(589);
+  const token2 = obj2.useToken(onSendMessage(709).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
+  let obj3 = channel(586);
   let items = [closure_6];
   let obj4 = importAllResult;
   const stateFromStores = obj3.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
@@ -121,7 +121,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   const tmp9 = stateFromStores1(importAllResult.useState(defaultValue.length > 0), 2);
   const items1 = [closure_7];
   const items2 = [channel];
-  stateFromStores1 = channel(589).useStateFromStores(items1, () => closure_1_7.isChannelOnCooldown(channel), items2);
+  stateFromStores1 = channel(586).useStateFromStores(items1, () => closure_1_7.isChannelOnCooldown(channel), items2);
   let tmp12 = !stateFromStores1;
   if (stateFromStores1) {
     tmp12 = hasPendingEdit;
@@ -165,7 +165,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
       obj1 = { disabled: null, channelId: null };
       obj1[0] = stateFromStores1;
       obj1[1] = channel.id;
-      let tmp15Result = tmp15(tmp3(11822), obj1);
+      let tmp15Result = tmp15(tmp3(12045), obj1);
     } else {
       obj2 = {
         active: true,
@@ -179,12 +179,12 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
       };
       ({ button: obj11[1], buttonActive: obj11[2], iconActive: obj11[3] } = tmp7);
       obj2[4] = tmp(4423).SendMessageIcon;
-      const intl = tmp(1236).intl;
-      obj2[5] = intl.string(tmp(1236).t.TXNS7S);
+      const intl = tmp(1233).intl;
+      obj2[5] = intl.string(tmp(1233).t.TXNS7S);
       obj2[6] = onSendMessage;
       obj2[7] = !tmp12;
-      tmp15Result = tmp15(tmp3(11806), obj2);
-      const tmp3Result = tmp3(11806);
+      tmp15Result = tmp15(tmp3(12029), obj2);
+      const tmp3Result = tmp3(12029);
     }
     obj[1] = tmp15Result;
     return tmp15(canSendVoiceMessage, obj);
@@ -201,7 +201,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
     obj4[4] = tmp15(tmp(4204).TransitionGroup, obj3);
     return tmp15(FloatingSlot, obj4);
   }
-  const obj6 = channel(589);
+  const obj6 = channel(586);
 });
 forwardRefResult.displayName = "ChatInputSendButton";
 const memoResult = importAllResult.memo(forwardRefResult);

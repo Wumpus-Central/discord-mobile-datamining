@@ -18,7 +18,7 @@ import regExpDefault2 from "MarkupListRule.tsx";
 import _modDef4979 from "MarkupSubtextRule.tsx";
 import matchDefault2 from "PlatformMarkupRules.native.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../_runtime/00853__toArray.js";
+import closure_4 from "../../../_runtime/00850__toArray.js";
 import closure_5 from "../../stores/ChannelStore.tsx";
 import closure_6 from "../../stores/GuildRoleStore.tsx";
 import closure_7 from "../../stores/GuildStore.tsx";
@@ -38,7 +38,7 @@ function parseLink(arg0) {
     obj = { type: "text", content: null };
     obj[1] = arg0[1];
   } else {
-    obj = { type: "link", content: null, target: null, title: "category" };
+    obj = { type: "link", content: null, target: null, title: "call" };
     obj1 = { type: "text", content: null };
     obj1[1] = punycodeLinkResult.displayTarget;
     const items = [obj1];

@@ -6,7 +6,7 @@ import Text from "../../../design/components/Text/native/Text.tsx";
 import AttachmentIcon from "../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
 import PlusLargeIcon from "../../../design/components/Icon/native/redesign/generated/PlusLargeIcon.tsx";
 import CalendarPlusIcon from "../../../design/components/Icon/native/redesign/generated/CalendarPlusIcon.tsx";
-import registerAssetDefault from "../../../../_runtime/11787_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/12010_registerAsset.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";

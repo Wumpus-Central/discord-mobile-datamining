@@ -65,7 +65,7 @@ function handleUserSettingsProtoStoreUpdate() {
     result = null == backgroundGradientPresetId;
   }
   if (!result) {
-    let tmpResult = tmp(1366);
+    let tmpResult = tmp(1365);
     result = tmpResult.isPerModeThemingActive();
   }
   if (!result) {

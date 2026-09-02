@@ -24,12 +24,12 @@ class VoiceNotificationManager {
     obj.voiceServiceHandlerId = 9000;
     obj.state = {
       channelId: "flexDirection",
-      connectionState: "context",
+      connectionState: "content",
       selfMute: false,
-      deafened: "SensitivityType",
-      isPushToTalk: null,
-      embeddedActivity: "\u{1F1E6}\u{1F1E9}",
-      isStreaming: 6,
+      deafened: null,
+      isPushToTalk: "SEPA_INVALID_MANDATE_TYPE",
+      embeddedActivity: "SEPA mandate type is invalid",
+      isStreaming: "aC",
     };
     obj.handleVoiceStateChange = function handleVoiceStateChange() {
       const channelId = closure_1_9.getChannelId();
@@ -244,12 +244,12 @@ set = Object.create(VoiceNotificationManager.prototype);
 set.voiceServiceHandlerId = 9000;
 set.state = {
   channelId: "flexDirection",
-  connectionState: "context",
+  connectionState: "content",
   selfMute: false,
-  deafened: "SensitivityType",
-  isPushToTalk: null,
-  embeddedActivity: "\u{1F1E6}\u{1F1E9}",
-  isStreaming: 6,
+  deafened: null,
+  isPushToTalk: "SEPA_INVALID_MANDATE_TYPE",
+  embeddedActivity: "SEPA mandate type is invalid",
+  isStreaming: "aC",
 };
 set.handleVoiceStateChange = function handleVoiceStateChange() {
   const channelId = closure_1_9.getChannelId();

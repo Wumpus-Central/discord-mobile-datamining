@@ -18,7 +18,7 @@ function _validate(id) {
 function toNotificationCenterItem(item_enum) {
   let tmp3 = item_enum.item_enum === NotificationCenterScenes.ItemEnum.FIRST_MESSAGE;
   if (tmp3) {
-    tmp3 = item_enum.type === tmp(7385).NotificationCenterItems.LIFECYCLE_ITEM;
+    tmp3 = item_enum.type === tmp(7394).NotificationCenterItems.LIFECYCLE_ITEM;
   }
   if (tmp3) {
     item_enum.deeplink = "https://discord.com/feature/composeMessage";
@@ -44,7 +44,7 @@ function handleAddItem(type) {
     const item2 = type.item;
     let tmp3 = item2.item_enum === NotificationCenterScenes.ItemEnum.FIRST_MESSAGE;
     if (tmp3) {
-      tmp3 = item2.type === tmp(7385).NotificationCenterItems.LIFECYCLE_ITEM;
+      tmp3 = item2.type === tmp(7394).NotificationCenterItems.LIFECYCLE_ITEM;
     }
     if (tmp3) {
       item2.deeplink = "https://discord.com/feature/composeMessage";
@@ -208,8 +208,8 @@ let obj = {
   notifCenterLocalItems: null,
   paginationHasMore: true,
   paginationCursor: "flex",
-  notifCenterActive: "BACKGROUND_SYNC",
-  notifCenterTabFocused: "CONNECTION_OPEN",
+  notifCenterActive: "screens",
+  notifCenterTabFocused: "groups",
 };
 let set = new Set();
 obj[6] = set;
@@ -397,8 +397,8 @@ obj = {
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "flex",
-      notifCenterActive: "BACKGROUND_SYNC",
-      notifCenterTabFocused: "CONNECTION_OPEN",
+      notifCenterActive: "screens",
+      notifCenterTabFocused: "groups",
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -541,8 +541,8 @@ obj = {
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "flex",
-      notifCenterActive: "BACKGROUND_SYNC",
-      notifCenterTabFocused: "CONNECTION_OPEN",
+      notifCenterActive: "screens",
+      notifCenterTabFocused: "groups",
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -601,7 +601,7 @@ obj = {
       const user = authStore.getUser(id);
       if (tmp6) {
         const items = [];
-        obj = id(7386);
+        obj = id(7395);
         items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingGameFriendRequestLocalItem(
           user,
           since,
@@ -711,8 +711,8 @@ obj = {
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "flex",
-      notifCenterActive: "BACKGROUND_SYNC",
-      notifCenterTabFocused: "CONNECTION_OPEN",
+      notifCenterActive: "screens",
+      notifCenterTabFocused: "groups",
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;

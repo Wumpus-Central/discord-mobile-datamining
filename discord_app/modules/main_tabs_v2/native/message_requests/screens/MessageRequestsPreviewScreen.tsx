@@ -11,7 +11,7 @@ const result = require("set").fileFinishedImporting(
 
 export default function MessageRequestsScreen(route) {
   const channelId = route.route.params.channelId;
-  let obj = channelId(12004);
+  let obj = channelId(12228);
   const items = [channelId];
   const isMessageRequestRestrictedViewer = obj.useIsMessageRequestRestrictedViewer("MessageRequestsPreviewScreen");
   const effect = React.useEffect(() => {
@@ -23,7 +23,7 @@ export default function MessageRequestsScreen(route) {
   if (isMessageRequestRestrictedViewer) {
     obj = { channelId: null };
     obj[0] = channelId;
-    let tmp5Result = tmp5(tmp7(16475), obj);
+    let tmp5Result = tmp5(tmp7(16710), obj);
   } else {
     obj1 = {
       guildId: null,
@@ -35,8 +35,8 @@ export default function MessageRequestsScreen(route) {
     obj1[0] = tmp6;
     obj1[1] = channelId;
     obj1[2] = ref;
-    tmp5Result = tmp5(tmp7(10977), obj1);
+    tmp5Result = tmp5(tmp7(11197), obj1);
   }
   obj[2] = tmp5Result;
-  return jsx(channelId(10160).ChannelContainer, { guildId: ME, channelId, children: null });
+  return jsx(channelId(10182).ChannelContainer, { guildId: ME, channelId, children: null });
 }

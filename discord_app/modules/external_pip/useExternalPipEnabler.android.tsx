@@ -10,7 +10,7 @@ export default function useExternalPIPEnabler(disabled) {
   disabled = disabled.disabled;
   const items = [closure_2, closure_4, closure_3];
   const items1 = [disabled];
-  return disabled(589).useStateFromStoresObject(
+  return disabled(586).useStateFromStoresObject(
     items,
     () => {
       const channelId = closure_1_4.getChannelId();

@@ -224,7 +224,7 @@ export default function GuildRoleSubscriptionTierTemplateFullCard(template) {
   });
   items1[10] = callback(BenefitSection, obj9);
   obj2[3] = items1;
-  items[2] = callback2(require("../../../../../../_runtime/05624_BottomSheetModal.js").BottomSheetScrollView, obj2);
+  items[2] = callback2(require("../../../../../../_runtime/05632_BottomSheetModal.js").BottomSheetScrollView, obj2);
   obj[1] = items;
   obj[2] = callback2(View, obj);
   return callback(require("../../../../../design/components/Sheet/native/BottomSheet.native.tsx").BottomSheet, obj);

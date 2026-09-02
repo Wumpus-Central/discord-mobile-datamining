@@ -1,6 +1,6 @@
 // discord_app/design/components/Navigator/native/Navigator.native.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import createStandardNavigationFactories from "../../../../../_runtime/01500_createStandardNavigationFactories.js";
+import createStandardNavigationFactories from "../../../../../_runtime/01499_createStandardNavigationFactories.js";
 import useNavigationTheme from "useNavigationTheme.native.tsx";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
@@ -300,7 +300,7 @@ export const useNavigatorScreens = function useNavigatorScreens(getNextRenewalDa
   return React.useMemo(getNextRenewalDateLabel, items);
 };
 export const useAccessibilityNativeStackOptions = function useAccessibilityNativeStackOptions() {
-  navigatorShouldCrossfade = navigatorShouldCrossfade(6009).useNavigatorShouldCrossfade();
+  navigatorShouldCrossfade = navigatorShouldCrossfade(6017).useNavigatorShouldCrossfade();
   const items = [navigatorShouldCrossfade];
   return React.useMemo(() => {
     let obj;

@@ -66,7 +66,7 @@ prototype["topSummaries"] = function topSummaries() {
       obj = callback(11);
       const date = new Date();
       const time = date.getTime();
-      tmp = callback(11).extractTimestamp(people.endId) > time - 5 * callback(687).Millis.HOUR;
+      tmp = callback(11).extractTimestamp(people.endId) > time - 5 * callback(684).Millis.HOUR;
       const extractTimestampResult = callback(11).extractTimestamp(people.endId);
     }
     return tmp;
@@ -269,7 +269,7 @@ obj = {
     if (null != summary) {
       const _Object = Object;
       if (Object.keys(summary).length > 0) {
-        obj = summaryFromServer(10985);
+        obj = summaryFromServer(11205);
         summaryFromServer = obj.createSummaryFromServer(summary, channelId);
         let items = dependencyMap2[channelId];
         if (items == null) {

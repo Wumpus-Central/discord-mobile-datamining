@@ -7,7 +7,7 @@ import { AnalyticEvents } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import set from "../../../../utils/PlatformUtils.tsx";
-import { v1 } from "../../../../../_runtime/00514_v1.js";
+import { v1 } from "../../../../../_runtime/00511_v1.js";
 import { useEmojiAndSource } from "../../../emojis/hooks/useEmojiAndSource.tsx";
 
 const require = arg1;
@@ -46,7 +46,7 @@ function MessageCustomEmojiActionSheet(emojiNode) {
   if (emojiAndSource.isFetching) {
     return null;
   } else {
-    const v4Result = tmp2(514).v4();
+    const v4Result = tmp2(511).v4();
     _require = v4Result;
     obj = { startExpanded: true, onDismiss: null, children: null };
     obj[1] = function onDismiss() {
@@ -82,7 +82,7 @@ function MessageCustomEmojiActionSheet(emojiNode) {
       nonce: null,
     });
     obj[2] = <View style={null}>{null}</View>;
-    return jsx(tmp2(5622).BottomSheet, { startExpanded: true, onDismiss: null, children: null });
+    return jsx(tmp2(5630).BottomSheet, { startExpanded: true, onDismiss: null, children: null });
   }
   tmp = callback();
 }

@@ -95,8 +95,8 @@ export default function useScreenshareUtils(arg0) {
     let obj = { isFeatureEnabled: tmp3, isActive: tmp, text: null, onPress: null, imgSource: null };
     if (!showMobileGoLiveUpsell) {
       if (tmp) {
-        const intl = callback(1236).intl;
-        let stringResult = intl.string(callback(1236).t.CpkXwZ);
+        const intl = callback(1233).intl;
+        let stringResult = intl.string(callback(1233).t.CpkXwZ);
       }
       obj[2] = stringResult;
       let flag = tmp4;
@@ -117,7 +117,7 @@ export default function useScreenshareUtils(arg0) {
             }
           }
         } else {
-          fn = callback(9774).showScreenshareDisabledAlert;
+          fn = callback(9796).showScreenshareDisabledAlert;
         }
       } else {
         fn = function l() {
@@ -129,23 +129,23 @@ export default function useScreenshareUtils(arg0) {
       }
       obj[3] = fn;
       if (obj2.isMetaQuest()) {
-        tmp19(tmp ? 10054 : 10055);
+        tmp19(tmp ? 10076 : 10077);
       } else {
         if (tmp4) {
-          let tmp20 = 10056;
+          let tmp20 = 10078;
         } else {
-          tmp20 = tmp ? 10057 : 10056;
+          tmp20 = tmp ? 10079 : 10078;
         }
         obj[4] = tmp19(tmp20);
         return obj;
       }
-      obj2 = callback(1624);
+      obj2 = callback(1623);
       tmp11 = closure_1;
       tmp12 = dependencyMap;
       const tmp13 = analyticsLocations;
     }
-    const intl2 = callback(1236).intl;
-    stringResult = intl2.string(callback(1236).t.fjBNo1);
+    const intl2 = callback(1233).intl;
+    stringResult = intl2.string(callback(1233).t.fjBNo1);
   }, items2);
 }
 export const handleCloseScreenshare = function handleCloseScreenshare() {

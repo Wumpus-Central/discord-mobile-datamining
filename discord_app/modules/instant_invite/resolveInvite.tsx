@@ -59,7 +59,7 @@ export default function resolveInvite(inviteKey, arg1, inviteInstanceId) {
     obj1[0] = closure_7.INVITE(baseCode);
     obj1[1] = obj;
     let obj2 = { event: null, properties: null };
-    obj2[0] = tmp(503).NetworkActionNames.INVITE_RESOLVE;
+    obj2[0] = tmp(500).NetworkActionNames.INVITE_RESOLVE;
     obj2[1] = function properties(ok) {
       let body = null;
       if (ok.ok) {

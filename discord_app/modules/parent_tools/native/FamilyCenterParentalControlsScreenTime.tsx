@@ -13,17 +13,17 @@ function ScheduleRuleRow(rule) {
   if (readOnly === undefined) {
     readOnly = false;
   }
-  let obj = rule(10166);
+  let obj = rule(10188);
   const scheduleRuleDateRange = obj.getScheduleRuleDateRange(rule);
-  const obj2 = rule(10166);
+  const obj2 = rule(10188);
   obj = {
     label: scheduleRuleDateRange,
-    subLabel: rule(10166).formatDays(rule.days),
+    subLabel: rule(10188).formatDays(rule.days),
     trailing: null,
     arrow: null,
     onPress: null,
   };
-  const intl = rule(1236).intl;
+  const intl = rule(1233).intl;
   const string = intl.string;
   const tmp4 = messagesProxyDefault;
   if (rule.enabled) {
@@ -44,7 +44,7 @@ function ScheduleRuleRow(rule) {
     };
   }
   obj[4] = fn;
-  return closure_5(rule(5599).TableRow, obj);
+  return closure_5(rule(5607).TableRow, obj);
 }
 const View = get_ActivityIndicator.View;
 const UserSettingsSections = ME.UserSettingsSections;

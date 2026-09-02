@@ -73,8 +73,8 @@ function ClientClientInfoActionSheet() {
   obj1[0] = intl2.string(getSystemLocale.t.H66MEk);
   obj1[1] = getClientInfo().appVersion;
   obj1[2] = function onPress() {
-    callback(5981).copy(callback2().appVersion);
-    const obj = callback(5981);
+    callback(5989).copy(callback2().appVersion);
+    const obj = callback(5989);
     const result = callback(4193).presentCopiedToClipboard();
   };
   const items = [callback(ActionSheetRowIcon.ActionSheetRow, obj1), , , ,];
@@ -83,8 +83,8 @@ function ClientClientInfoActionSheet() {
   obj2[0] = intl3.string(getSystemLocale.t.zuaWIt);
   obj2[1] = getClientInfo().buildNumber;
   obj2[2] = function onPress() {
-    callback(5981).copy(callback2().buildNumber);
-    const obj = callback(5981);
+    callback(5989).copy(callback2().buildNumber);
+    const obj = callback(5989);
     const result = callback(4193).presentCopiedToClipboard();
   };
   items[1] = callback(ActionSheetRowIcon.ActionSheetRow, obj2);
@@ -93,8 +93,8 @@ function ClientClientInfoActionSheet() {
   obj3[0] = intl4.string(getSystemLocale.t["YD/2+H"]);
   obj3[1] = getClientInfo().releaseChannel;
   obj3[2] = function onPress() {
-    callback(5981).copy(callback2().releaseChannel);
-    const obj = callback(5981);
+    callback(5989).copy(callback2().releaseChannel);
+    const obj = callback(5989);
     const result = callback(4193).presentCopiedToClipboard();
   };
   items[2] = callback(ActionSheetRowIcon.ActionSheetRow, obj3);
@@ -103,8 +103,8 @@ function ClientClientInfoActionSheet() {
   obj4[0] = intl5.string(getSystemLocale.t["4bhpIV"]);
   obj4[1] = getClientInfo().manifest;
   obj4[2] = function onPress() {
-    callback(5981).copy(callback2().manifest);
-    const obj = callback(5981);
+    callback(5989).copy(callback2().manifest);
+    const obj = callback(5989);
     const result = callback(4193).presentCopiedToClipboard();
   };
   items[3] = callback(ActionSheetRowIcon.ActionSheetRow, obj4);
@@ -113,8 +113,8 @@ function ClientClientInfoActionSheet() {
   obj5[0] = intl6.string(getSystemLocale.t.Wj3LW4);
   obj5[1] = getClientInfo().buildOverride;
   obj5[2] = function onPress() {
-    callback(5981).copy(callback2().buildOverride);
-    const obj = callback(5981);
+    callback(5989).copy(callback2().buildOverride);
+    const obj = callback(5989);
     const result = callback(4193).presentCopiedToClipboard();
   };
   items[4] = callback(ActionSheetRowIcon.ActionSheetRow, obj5);
@@ -148,8 +148,8 @@ function ClientClientInfoActionSheet() {
       callback(4457).getSystemVersion() +
       ";";
     const obj2 = callback(4457);
-    callback(5981).copy(combined);
-    const obj3 = callback(5981);
+    callback(5989).copy(combined);
+    const obj3 = callback(5989);
     const result = callback(4193).presentCopiedToClipboard();
   };
   obj6[1] = callback(ActionSheetRowIcon.ActionSheetRow, obj7);

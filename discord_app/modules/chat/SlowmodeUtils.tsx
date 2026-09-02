@@ -25,7 +25,7 @@ export const getSlowmodeIndicatorText = function getSlowmodeIndicatorText(stateF
     const intl2 = getSystemLocale.intl;
     return intl2.string(getSystemLocale.t["8+NidX"]);
   } else if (stateFromStores >= setDefault.Millis.HOUR) {
-    let tmp2Result = tmp2(4075);
+    let tmp2Result = tmp2(4074);
     const durationResult = tmp2Result.duration(stateFromStores);
     const _HermesInternal3 = HermesInternal;
     const combined = "" + durationResult.minutes();
@@ -35,7 +35,7 @@ export const getSlowmodeIndicatorText = function getSlowmodeIndicatorText(stateF
     const _HermesInternal5 = HermesInternal;
     return "" + durationResult.hours() + ":" + padStartResult + ":" + combined1.padStart(2, "0");
   } else if (stateFromStores > 0) {
-    tmp2Result = tmp2(4075);
+    tmp2Result = tmp2(4074);
     const durationResult1 = tmp2Result.duration(stateFromStores);
     const _HermesInternal = HermesInternal;
     const combined2 = "" + durationResult1.seconds();
@@ -53,12 +53,12 @@ export const getSlowmodeDescription = function getSlowmodeDescription(rateLimitP
   }
   if (rateLimitPerUser >= setDefault.Seconds.HOUR) {
     const _Math2 = Math;
-    const rounded = Math.floor(rateLimitPerUser / tmp(687).Seconds.HOUR);
+    const rounded = Math.floor(rateLimitPerUser / tmp(684).Seconds.HOUR);
     const _Math3 = Math;
-    const diff = rateLimitPerUser - rounded * tmp(687).Seconds.HOUR;
-    const rounded1 = Math.floor(diff / tmp(687).Seconds.MINUTE);
-    const diff1 = rateLimitPerUser - rounded * tmp(687).Seconds.HOUR;
-    const diff2 = diff1 - rounded1 * tmp(687).Seconds.MINUTE;
+    const diff = rateLimitPerUser - rounded * tmp(684).Seconds.HOUR;
+    const rounded1 = Math.floor(diff / tmp(684).Seconds.MINUTE);
+    const diff1 = rateLimitPerUser - rounded * tmp(684).Seconds.HOUR;
+    const diff2 = diff1 - rounded1 * tmp(684).Seconds.MINUTE;
     const intl3 = getSystemLocale.intl;
     const t3 = getSystemLocale.t;
     let obj = { hours: null, minutes: null, seconds: null };

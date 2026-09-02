@@ -12,7 +12,7 @@ let closure_4 = {
   sm: { width: 18, height: 18 },
   md: { width: 24, height: 24 },
   lg: { width: 32, height: 32 },
-  custom: { width: "children", height: "c" },
+  custom: { width: "disabled", height: "Date" },
   refresh_sm: { width: 18, height: 18 },
 };
 const result = require("set").fileFinishedImporting("design/components/Icon/native/BaseIconImage.tsx");

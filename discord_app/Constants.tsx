@@ -900,6 +900,9 @@ obj = {
   GUILD_APPLICATIONS(closure_1_0) {
     return "/guilds/" + closure_1_0 + "/applications";
   },
+  GUILD_EMBEDDED_APPLICATIONS(arg0) {
+    return "/guilds/" + arg0 + "/embedded-applications";
+  },
   APPLIED_GUILD_BOOSTS_FOR_GUILD(closure_0) {
     return "/guilds/" + closure_0 + "/premium/subscriptions";
   },
@@ -2054,11 +2057,11 @@ obj = {
   VIBEGRATIONS_PROJECT(closure_0) {
     return "/vibegrations/projects/" + closure_0;
   },
-  VIBEGRATIONS_PROJECT_WS_TICKET(body) {
-    return "/vibegrations/projects/" + body + "/ws-ticket";
+  VIBEGRATIONS_PROJECT_WS_TICKET(closure_0) {
+    return "/vibegrations/projects/" + closure_0 + "/ws-ticket";
   },
-  VIBEGRATIONS_PROJECT_REMIX_TICKET(body) {
-    return "/vibegrations/projects/" + body + "/remix-ticket";
+  VIBEGRATIONS_PROJECT_REMIX_TICKET(closure_0) {
+    return "/vibegrations/projects/" + closure_0 + "/remix-ticket";
   },
   VIBEGRATIONS_PROJECT_PUBLISH(arg0) {
     return "/vibegrations/projects/" + arg0 + "/publish";
@@ -2207,6 +2210,7 @@ const obj2 = {
   PREMIUM_UPSELL_SOUNDBOARD_EVERYWHERE: "Premium Upsell Modal - Soundboard Everywhere",
   PREMIUM_UPSELL_ANIMATED_EMOJI: "Premium Upsell Modal - Animated Emoji",
   PREMIUM_UPSELL_EMOJI_EVERYWHERE: "Premium Upsell Modal - Emoji Everywhere",
+  PREMIUM_UPSELL_STICKERS_EVERYWHERE: "Premium Upsell Modal - Stickers Everywhere",
   PREMIUM_UPSELL_FILE_UPLOAD: "Premium Upsell Modal - Larger File Uploads",
   PREMIUM_UPSELL_CLIENT_THEMES: "Premium Upsell Modal - Client Themes",
   PREMIUM_UPSELL_APP_ICONS: "Premium Upsell Modal - App Icons",
@@ -3394,6 +3398,14 @@ const frozen16 = Object.freeze({
     }
     return combined;
   },
+  GUILD_EMBEDDED_APPLICATIONS(arg0, arg1) {
+    let combined = null;
+    if (null != arg1) {
+      const _HermesInternal = HermesInternal;
+      combined = "guild-embedded-applications/" + arg1 + "/" + arg0;
+    }
+    return combined;
+  },
   APP_PREMIUM_BUTTON(arg0) {
     let combined = null;
     if (null != arg0) {
@@ -3849,7 +3861,6 @@ export const NoticeTypes = {
   E2EE_UPDATE_REQUIRED: "E2EE_UPDATE_REQUIRED",
   WINDOWS_MEDIA_PACK_REQUIRED: "WINDOWS_MEDIA_PACK_REQUIRED",
   PREMIUM_MARKETING_NAGBAR: "PREMIUM_MARKETING_NAGBAR",
-  PREMIUM_GROUP_PRIMARY_REMINDER_NAGBAR: "PREMIUM_GROUP_PRIMARY_REMINDER_NAGBAR",
   RIOT_MIGRATION: "RIOT_MIGRATION",
   RIOT_CONNECTION_DEPRECATION_ADMIN: "RIOT_CONNECTION_DEPRECATION_ADMIN",
   RESTRICTED_HOURS_WARNING: "RESTRICTED_HOURS_WARNING",
@@ -5236,6 +5247,7 @@ export const AutoCompleteResultTypes = {
   CHOICE_LOADING: "CHOICE_LOADING",
   LABEL: "LABEL",
   GAME_MENTION: "GAME_MENTION",
+  TIMESTAMP_MENTION: "TIMESTAMP_MENTION",
 };
 export const Accessibility = frozen10;
 export const ChatInputComponentViewedTypes = {

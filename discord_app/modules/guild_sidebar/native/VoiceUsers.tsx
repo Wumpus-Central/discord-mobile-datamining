@@ -51,7 +51,7 @@ let closure_11 = createCacheKey.createStyles((arg0) => {
     BACKGROUND_BASE_LOWEST = colors.BACKGROUND_BASE_LOWEST;
     tmp4 = tmp;
   }
-  const round = tmp4(712).radii.round;
+  const round = tmp4(709).radii.round;
   let obj = {
     listeners: {
       display: "flex",
@@ -98,7 +98,7 @@ let closure_12 = importAllResult.memo((voiceState) => {
   ({ member, voiceState: voiceState2 } = voiceState);
   const channel = voiceState.channel;
   const collapsed = voiceState.collapsed;
-  let obj = user(589);
+  let obj = user(586);
   const items = [closure_5];
   const items1 = [channel.guild_id, user.id];
   const stateFromStoresObject = obj.useStateFromStoresObject(
@@ -133,7 +133,7 @@ let closure_12 = importAllResult.memo((voiceState) => {
     isGuest: null,
   };
   const tmp = channel;
-  tmp3 = callback2(channel(7617)());
+  tmp3 = callback2(channel(7627)());
   const tmp6 = View;
   if (member == null) {
     member = storeMember;
@@ -151,7 +151,7 @@ let closure_12 = importAllResult.memo((voiceState) => {
   obj[9] = voiceState2.sessionId;
   obj[10] = channel;
   obj[11] = isGuest;
-  obj[1] = closure_6(channel(15711), obj, user.id);
+  obj[1] = closure_6(channel(15942), obj, user.id);
   return closure_6(tmp6, obj);
 });
 const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/VoiceUsers.tsx");

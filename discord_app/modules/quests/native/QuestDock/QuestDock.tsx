@@ -2,6 +2,7 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import QuestsVisibleMessagesChangedSource from "../../QuestTypes.tsx";
 import useQuests from "../../hooks/QuestHooks.tsx";
+import _modDef15028 from "QuestDockBountyHeader.tsx";
 import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_5 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_6 from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -869,23 +870,24 @@ class QuestDockQuestContent {
       return closure_1_21(closure_1_34, { questId: quest.id, mode: mode.mode });
     };
     obj[1] = tmp6(tmp7, obj1);
-    return tmp6(require("getQuestDockMenuAdCreative").QuestDockQuestProvider, obj);
+    return tmp6(require("getCreativeAnalyticsParams").QuestDockQuestProvider, obj);
   }
 }
 function QuestDockBountyContent(bounty) {
   bounty = bounty.bounty;
-  return callback3(QuestDockWithEntranceAnimation, {
-    identifierMetricTag: "ad_content_id:" + bounty.id,
+  let obj = { bounty, children: null };
+  obj = {
+    identifierMetricTag: "ad_creative_id:" + bounty.id,
     iconUrl: bounty.productIcon,
     layoutVariant: "insetHeader",
     theme: ThemeTypes.DARK,
-    collapsedContent: null,
+    collapsedContent: callback3(_modDef15028, {}),
     expandedContent: null,
     backgroundContent: null,
     renderImpressionTracker(children) {
       return closure_1_21(bounty(closure_1_2[54]).BillableAdPlacementImpressionTrackerNative, {
         adContentId: bounty.id,
-        adCreativeType: bounty(closure_1_2[55]).AdCreativeType.BOUNTY,
+        adCreativeType: bounty(closure_1_2[56]).AdCreativeType.BOUNTY,
         overrideVisibility: false,
         questContent: bounty(closure_1_2[35]).QuestContent.QUEST_BAR_MOBILE,
         sourceQuestContent: bounty(closure_1_2[35]).QuestContent.QUEST_BAR_MOBILE,
@@ -894,12 +896,14 @@ function QuestDockBountyContent(bounty) {
     },
     renderModeChangeTracker(mode) {
       return closure_1_21(closure_1_34, {
-        adCreativeType: bounty(closure_1_2[55]).AdCreativeType.BOUNTY,
+        adCreativeType: bounty(closure_1_2[56]).AdCreativeType.BOUNTY,
         adContentId: bounty.id,
         mode: mode.mode,
       });
     },
-  });
+  };
+  obj[1] = callback3(QuestDockWithEntranceAnimation, obj);
+  return callback3(bounty(14929).QuestDockBountyProvider, obj);
 }
 let closure_3 = ["mode"];
 const error = importAllResult;
@@ -1009,20 +1013,20 @@ const memoResult = importAllResult.memo(function QuestDockWithVisibilityContext(
   );
   const memo1 = importAllResult.useMemo(() => {
     const type = mobileQuestDock.type;
-    if (mobileQuestDock(isMobileQuestDockVisibleToUser[55]).AdCreativeType.BOUNTY === type) {
+    if (mobileQuestDock(isMobileQuestDockVisibleToUser[56]).AdCreativeType.BOUNTY === type) {
       let obj = { bounty: null };
       obj[0] = tmp.bounty;
       return closure_1_21(closure_1_42, obj);
-    } else if (tmp2(tmp3[55]).AdCreativeType.QUEST === type) {
+    } else if (tmp2(tmp3[56]).AdCreativeType.QUEST === type) {
       obj = { quest: null };
       obj[0] = tmp.quest;
       return closure_1_21(closure_1_41, obj);
-    } else if (tmp2(tmp3[55]).AdCreativeType.NO_FILL === type) {
+    } else if (tmp2(tmp3[56]).AdCreativeType.NO_FILL === type) {
       return null;
     }
   }, items1);
   let tmp7 = null;
-  if (mobileQuestDock.type !== mobileQuestDock(isMobileQuestDockVisibleToUser[55]).AdCreativeType.NO_FILL) {
+  if (mobileQuestDock.type !== mobileQuestDock(isMobileQuestDockVisibleToUser[56]).AdCreativeType.NO_FILL) {
     obj = { value: null, children: null };
     obj[0] = memo;
     obj[1] = memo1;

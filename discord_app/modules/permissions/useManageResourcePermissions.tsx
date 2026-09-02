@@ -120,7 +120,7 @@ export const useManageResourcePermissions = function useManageResourcePermission
     const obj3 = fromStringAll;
   }
   [importAll, dependencyMap] = first(items2, 2);
-  let tmpResult = tmp(589);
+  let tmpResult = tmp(586);
   const items3 = [closure_5];
   const tmp10 = first(
     tmpResult.useStateFromStoresArray(items3, () => {
@@ -138,7 +138,7 @@ export const useManageResourcePermissions = function useManageResourcePermission
   const React = tmp12;
   closure_5 = tmp13;
   closure_6 = tmp14;
-  tmpResult = tmp(589);
+  tmpResult = tmp(586);
   const items4 = [closure_6];
   stateFromStores = tmpResult.useStateFromStores(items4, () => currentUser.getCurrentUser());
   const items5 = [first, tmp10[1], stateFromStores];

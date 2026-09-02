@@ -44,7 +44,7 @@ export default function ChannelSpoiler(channelId) {
     isVocalResult = stateFromStores1.isVocal();
   }
   dependencyMap = isVocalResult;
-  setControlsMode = obj3.useContext(tmp6(11839)).setControlsMode;
+  setControlsMode = obj3.useContext(tmp6(12062)).setControlsMode;
   const items2 = [, , ,];
   ({ guildId: arr3[0], channelId: arr3[1] } = channelId);
   items2[2] = setControlsMode;
@@ -97,8 +97,8 @@ export default function ChannelSpoiler(channelId) {
     obj[1] = items4;
     let stringResult = callback2(View, obj);
   } else {
-    const intl = tmp(1236).intl;
-    stringResult = intl.string(tmp(1236).t["q38/ae"]);
+    const intl = tmp(1233).intl;
+    stringResult = intl.string(tmp(1233).t["q38/ae"]);
   }
   let topic;
   if (stateFromStores1 != null) {
@@ -140,10 +140,10 @@ export default function ChannelSpoiler(channelId) {
         obj7[0] = callback2;
         const obj8 = { variant: "text-sm/medium", color: "text-brand", style: null, children: null };
         obj8[2] = { textDecorationLine: "underline" };
-        const intl2 = tmp(1236).intl;
-        obj8[3] = intl2.string(tmp(1236).t["/QvRak"]);
+        const intl2 = tmp(1233).intl;
+        obj8[3] = intl2.string(tmp(1233).t["/QvRak"]);
         obj7[2] = tmp24(tmp(4474).Text, obj8);
-        tmp24Result = tmp24(tmp(5068).PressableHighlight, obj7);
+        tmp24Result = tmp24(tmp(5076).PressableHighlight, obj7);
       }
       items5[2] = tmp24Result;
       const obj9 = { style: null };
@@ -177,11 +177,11 @@ export default function ChannelSpoiler(channelId) {
   obj10[2] = callback;
   obj10[3] = stringResult;
   obj10[4] = tmp23Result;
-  const intl3 = tmp(1236).intl;
+  const intl3 = tmp(1233).intl;
   obj10[5] = intl3.string(require("../../../intl/index.native.tsx").t["08bm2Z"]);
-  const intl4 = tmp(1236).intl;
+  const intl4 = tmp(1233).intl;
   obj10[6] = intl4.string(require("../../../intl/index.native.tsx").t.KmRwcW);
-  const intl5 = tmp(1236).intl;
+  const intl5 = tmp(1233).intl;
   obj10[7] = intl5.string(require("../../../intl/index.native.tsx").t["/g10LC"]);
   let id;
   if (stateFromStores != null) {

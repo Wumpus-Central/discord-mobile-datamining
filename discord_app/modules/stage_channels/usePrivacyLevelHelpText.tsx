@@ -28,26 +28,26 @@ export default function useStagePrivacyLevelSettings(channel, privacy_level) {
     privacy_level = privacy_level.privacy_level;
   }
   if (privacy_level === constants.PUBLIC) {
-    const intl4 = tmp(1236).intl;
-    let stringResult = intl4.string(tmp(1236).t.GFq5Rg);
+    const intl4 = tmp(1233).intl;
+    let stringResult = intl4.string(tmp(1233).t.GFq5Rg);
   } else if (stateFromStores) {
     if (canEveryoneRoleResult) {
       let formatResult = null;
       if (arg2 === tmp6.PUBLIC) {
-        const intl3 = tmp(1236).intl;
+        const intl3 = tmp(1233).intl;
         obj = { articleURL: null };
         obj[0] = combinedDefault.getArticleURL(HelpdeskArticles.STAGE_CHANNEL_GUIDELINES);
-        formatResult = intl3.format(tmp(1236).t["ew/Jq4"], obj);
+        formatResult = intl3.format(tmp(1233).t["ew/Jq4"], obj);
         const obj5 = combinedDefault;
       }
       let stringResult1 = formatResult;
     } else {
-      const intl2 = tmp(1236).intl;
-      stringResult1 = intl2.string(tmp(1236).t.E5T7a3);
+      const intl2 = tmp(1233).intl;
+      stringResult1 = intl2.string(tmp(1233).t.E5T7a3);
     }
   } else {
-    const intl = tmp(1236).intl;
-    stringResult = intl.string(tmp(1236).t.BOjr7t);
+    const intl = tmp(1233).intl;
+    stringResult = intl.string(tmp(1233).t.BOjr7t);
   }
   obj = { helpText: stringResult, guildOnlyDisabled: null, publicDisabled: null };
   let privacy_level1;

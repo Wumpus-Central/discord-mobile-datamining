@@ -1,9 +1,9 @@
 // discord_app/modules/guild_communication_disabled/useCommunicationDisabledNoticeStore.tsx
-import identity from "../../../_runtime/00700_identity.js";
-import isIterable from "../../../_runtime/04106_isIterable.js";
+import identity from "../../../_runtime/00697_identity.js";
+import isIterable from "../../../_runtime/04105_isIterable.js";
 import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
 import { DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY } from "GuildDisableCommunicationConstants.tsx";
-import keys from "../../../_runtime/00645_keys.js";
+import keys from "../../../_runtime/00642_keys.js";
 import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
 
 require = arg1;
@@ -20,18 +20,18 @@ let closure_4 = keys.createStore((arg0, arg1) => {
     dismissNotification(arg0) {
       const notificationDismissedInGuilds = dependencyMap().notificationDismissedInGuilds;
       notificationDismissedInGuilds.add(arg0);
-      const Storage = callback(595).Storage;
+      const Storage = callback(592).Storage;
       const result = Storage.set(closure_1_3, notificationDismissedInGuilds);
-      callback(705).batchUpdates(() => notificationDismissedInGuilds({ notificationDismissedInGuilds }));
+      callback(702).batchUpdates(() => notificationDismissedInGuilds({ notificationDismissedInGuilds }));
     },
     resetNotification(arg0) {
       const notificationDismissedInGuilds = dependencyMap().notificationDismissedInGuilds;
       if (notificationDismissedInGuilds.has(arg0)) {
         notificationDismissedInGuilds.delete(arg0);
-        const Storage = callback(595).Storage;
+        const Storage = callback(592).Storage;
         const result = Storage.set(closure_1_3, notificationDismissedInGuilds);
-        callback(705).batchUpdates(() => notificationDismissedInGuilds({ notificationDismissedInGuilds }));
-        const obj = callback(705);
+        callback(702).batchUpdates(() => notificationDismissedInGuilds({ notificationDismissedInGuilds }));
+        const obj = callback(702);
       }
     },
   };

@@ -1,5 +1,5 @@
 // discord_app/modules/quests/native/ATTModal/ATTManager.android.tsx
-import _modDef1208 from "../../../../utils/SentryUtils.native.tsx";
+import _modDef1205 from "../../../../utils/SentryUtils.native.tsx";
 import initializeDefault from "../../../../lib/AutomaticLifecycleManager.tsx";
 import _fetchAdUser from "../../../ads/native/AdUserActionCreators.android.tsx";
 
@@ -18,8 +18,8 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
   try {
     const adUser = _fetchAdUser.fetchAdUser("post_connection_open");
   } catch (tmp4) {
-    _modDef1208.captureException(tmp4);
-    const obj2 = _modDef1208;
+    _modDef1205.captureException(tmp4);
+    const obj2 = _modDef1205;
   }
 };
 prototype["_terminate"] = function _terminate() {

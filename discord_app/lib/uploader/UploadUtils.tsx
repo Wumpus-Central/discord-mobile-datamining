@@ -115,11 +115,11 @@ export const canUploadNatively = function canUploadNatively(item) {
     fileIsInAppDirResult = null != item.uri;
   }
   if (fileIsInAppDirResult) {
-    let tmpResult = tmp(5081);
+    let tmpResult = tmp(5089);
     fileIsInAppDirResult = tmpResult.fileIsInAppDir(item.uri);
   }
   if (fileIsInAppDirResult) {
-    tmpResult = tmp(1916);
+    tmpResult = tmp(1915);
     fileIsInAppDirResult = tmpResult.isLibdiscoreInitialized();
   }
   return fileIsInAppDirResult;

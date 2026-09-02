@@ -194,12 +194,12 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
   if (flag == null) {
     flag = true;
   }
-  ({ fractionalState: c2, endsAt } = flag(7141)({ forceFetch: true }));
-  let tmpResult = tmp(7974);
+  ({ fractionalState: c2, endsAt } = flag(7150)({ forceFetch: true }));
+  let tmpResult = tmp(7983);
   closure_3 = tmpResult.useIsInReverseTrial();
-  const tmp3 = flag(7141)({ forceFetch: true });
-  closure_4 = flag(13118)(endsAt, tmp(13118).CountDownMessageTypes.LONG_TIME_LEFT);
-  tmpResult = tmp(589);
+  const tmp3 = flag(7150)({ forceFetch: true });
+  closure_4 = flag(13340)(endsAt, tmp(13340).CountDownMessageTypes.LONG_TIME_LEFT);
+  tmpResult = tmp(586);
   const items = [closure_8, closure_7, closure_9, closure_6];
   const stateFromStoresObject = tmpResult.useStateFromStoresObject(items, () => {
     const obj = {
@@ -232,7 +232,7 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
     obj[10] = premiumGroupRole;
     return obj;
   });
-  const tmp4 = flag(13118);
+  const tmp4 = flag(13340);
   const items1 = [closure_10];
   const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
     items1,

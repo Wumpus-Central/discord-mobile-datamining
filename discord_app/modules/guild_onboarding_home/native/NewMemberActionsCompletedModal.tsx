@@ -75,14 +75,14 @@ export default function NewMemberActionsCompleted(arg0) {
   const animatedStyle = obj1.useAnimatedStyle(fn);
   const effect1 = React.useEffect(() => {
     const timerId = setTimeout(
-      () => callback2(4723).popWithKey(callback(11852).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
+      () => callback2(4723).popWithKey(callback(12075).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
       2500,
     );
   }, []);
   obj = { style: tmp.screen, children: null };
   obj1 = { style: tmp.text, variant: "heading-xl/semibold", color: "text-overlay-light", children: null };
-  const intl = sharedValue(1236).intl;
-  obj1[3] = intl.format(sharedValue(1236).t.pGj5u2, { count: numActions });
+  const intl = sharedValue(1233).intl;
+  obj1[3] = intl.format(sharedValue(1233).t.pGj5u2, { count: numActions });
   const items1 = [callback(sharedValue(4474).Text, obj1)];
   const items2 = [tmp.progressForeground, animatedStyle];
   items1[1] = callback(View, {

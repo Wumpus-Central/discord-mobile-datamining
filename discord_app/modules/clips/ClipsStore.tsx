@@ -69,7 +69,7 @@ function _migrateDefaultStorage() {
         } else if (1 === tmp7) {
           c3 = 0;
           logger.error("Failed to resolve videos path for default storage migration", dependencyMap);
-          const app = callback2(4104).app;
+          const app = callback2(4103).app;
           c4 = 2;
           c5 = 1;
           const obj2 = { value: null, done: false };

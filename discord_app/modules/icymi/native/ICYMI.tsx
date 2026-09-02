@@ -61,9 +61,9 @@ function InfoButton() {
     size: "sm",
     icon: callback(CircleInformationIcon.CircleInformationIcon, { size: "sm" }),
     onPress() {
-      callback2(8622).itemInteracted("info_button", "info_button", "press_info_button");
-      const obj = callback2(8622);
-      callback2(8622).feedPageActioned({
+      callback2(8637).itemInteracted("info_button", "info_button", "press_info_button");
+      const obj = callback2(8637);
+      callback2(8637).feedPageActioned({
         actionParameters: {
           actionGestureType: "press",
           actionTargetElement: "info_button",
@@ -71,8 +71,8 @@ function InfoButton() {
           actionDestinationType: null,
         },
       });
-      const obj2 = callback2(8622);
-      callback(16053).pushICYMIInfoModal({ extendedOnboarding: true });
+      const obj2 = callback2(8637);
+      callback(16284).pushICYMIInfoModal({ extendedOnboarding: true });
     },
   });
 }
@@ -89,12 +89,12 @@ function ICYMIHeaderTextWrapper() {
         accessibilityRole: "header",
         children: null,
       };
-      const intl = callback(1236).intl;
-      obj[4] = intl.string(callback(1236).t.SY4sdZ);
+      const intl = callback(1233).intl;
+      obj[4] = intl.string(callback(1233).t.SY4sdZ);
       const items = [callback2(callback(4474).Text, obj)];
       obj = { color: "text-brand", variant: "text-xs/bold", style: { marginTop: 4 }, children: null };
-      const intl2 = callback(1236).intl;
-      obj[3] = intl2.string(callback(1236).t.Ac2OZA);
+      const intl2 = callback(1233).intl;
+      obj[3] = intl2.string(callback(1233).t.Ac2OZA);
       items[1] = callback2(callback(4474).Text, obj);
       obj[0] = items;
       return callback3(closure_15, obj);
@@ -214,7 +214,7 @@ function ICYMI(inNestedNavigator) {
     } else {
       obj = { scrollToTop: null };
       obj[0] = function scrollToTop() {
-        callback(7603).showForLaterModal(callback(7604).SavedMessageSortTypes.BOOKMARK);
+        callback(7613).showForLaterModal(callback(7614).SavedMessageSortTypes.BOOKMARK);
       };
       ref1.current = obj;
     }

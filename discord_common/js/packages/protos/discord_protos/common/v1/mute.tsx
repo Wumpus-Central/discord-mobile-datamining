@@ -1,9 +1,9 @@
 // discord_common/js/packages/protos/discord_protos/common/v1/mute.tsx
-import _mod1307 from "../../../../../../../_runtime/metro/01307__.js";
+import _mod1306 from "../../../../../../../_runtime/metro/01306__.js";
 import now from "../../../google/protobuf/timestamp.tsx";
 import defineProperty from "../../../google/protobuf/wrappers.tsx";
 import closure_2 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
-import { MessageType } from "../../../../../../../_runtime/metro/01307__.js";
+import { MessageType } from "../../../../../../../_runtime/metro/01306__.js";
 
 require = arg1;
 class MuteNotificationSettings$Type extends MessageType {
@@ -13,7 +13,7 @@ class MuteNotificationSettings$Type extends MessageType {
       name: "end_time",
       kind: "message",
       T() {
-        return callback(1336).Timestamp;
+        return callback(1335).Timestamp;
       },
     };
     items = [,];
@@ -23,7 +23,7 @@ class MuteNotificationSettings$Type extends MessageType {
       name: "selected_time_window",
       kind: "message",
       T() {
-        return callback(1337).Int32Value;
+        return callback(1336).Int32Value;
       },
     };
     tmp = new tmp("discord_protos.common.v1.MuteNotificationSettings", items, new.target);
@@ -36,10 +36,10 @@ prototype["create"] = function create(arr) {
   let obj = {};
   const _Object = Object;
   obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1306.MESSAGE_TYPE, obj);
   if (undefined !== arr) {
-    const result = _mod1307.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1307;
+    const result = _mod1306.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1306;
   }
   return obj;
 };
@@ -98,7 +98,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
             if (true === onRead) {
               let tmp8 = require;
               let tmp9 = dependencyMap;
-              onRead = _mod1307.UnknownFieldHandler.onRead;
+              onRead = _mod1306.UnknownFieldHandler.onRead;
             }
             let tmp10 = obj;
             let tmp11 = tmp5;
@@ -115,36 +115,36 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 prototype["internalBinaryWrite"] = function internalBinaryWrite(endTime, tag, writeUnknownFields) {
   if (endTime.endTime) {
     const Timestamp = now.Timestamp;
-    const tagResult = tag.tag(1, _mod1307.WireType.LengthDelimited);
+    const tagResult = tag.tag(1, _mod1306.WireType.LengthDelimited);
     const joined = Timestamp.internalBinaryWrite(
       endTime.endTime,
-      tag.tag(1, _mod1307.WireType.LengthDelimited).fork(),
+      tag.tag(1, _mod1306.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult = Timestamp.internalBinaryWrite(
       endTime.endTime,
-      tag.tag(1, _mod1307.WireType.LengthDelimited).fork(),
+      tag.tag(1, _mod1306.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if (endTime.selectedTimeWindow) {
     const Int32Value = defineProperty.Int32Value;
-    const tagResult1 = tag.tag(2, _mod1307.WireType.LengthDelimited);
+    const tagResult1 = tag.tag(2, _mod1306.WireType.LengthDelimited);
     const joined1 = Int32Value.internalBinaryWrite(
       endTime.selectedTimeWindow,
-      tag.tag(2, _mod1307.WireType.LengthDelimited).fork(),
+      tag.tag(2, _mod1306.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult1 = Int32Value.internalBinaryWrite(
       endTime.selectedTimeWindow,
-      tag.tag(2, _mod1307.WireType.LengthDelimited).fork(),
+      tag.tag(2, _mod1306.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1307.UnknownFieldHandler.onWrite;
+      onWrite = _mod1306.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, endTime, tag);
@@ -157,7 +157,7 @@ let items = [
     name: "end_time",
     kind: "message",
     T() {
-      return callback(1336).Timestamp;
+      return callback(1335).Timestamp;
     },
   },
   {
@@ -165,7 +165,7 @@ let items = [
     name: "selected_time_window",
     kind: "message",
     T() {
-      return callback(1337).Int32Value;
+      return callback(1336).Int32Value;
     },
   },
 ];

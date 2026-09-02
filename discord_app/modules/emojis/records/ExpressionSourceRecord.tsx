@@ -114,7 +114,7 @@ prototype["getIconSource"] = function getIconSource(arg0, flag) {
   if (flag === undefined) {
     flag = false;
   }
-  return self(1431).getAnimatableSourceWithFallback(flag, (canAnimate) => {
+  return self(1430).getAnimatableSourceWithFallback(flag, (canAnimate) => {
     obj = self(closure_1_2[4]);
     obj = { id: self.id, size: closure_0, icon: self.icon, canAnimate };
     return obj.getGuildIconSource(obj);

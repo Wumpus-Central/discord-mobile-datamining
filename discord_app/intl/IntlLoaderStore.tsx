@@ -1,7 +1,7 @@
 // discord_app/intl/IntlLoaderStore.tsx
-import codeDefault from "../../_runtime/01998_code.js";
+import codeDefault from "../../_runtime/01997_code.js";
 import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
-import identity from "../../_runtime/00700_identity.js";
+import identity from "../../_runtime/00697_identity.js";
 
 const require = arg1;
 function _setAppLocale() {
@@ -77,7 +77,7 @@ function _setAppLocale() {
                           c1 = 1;
                           dependencyMap = 1;
                           obj1 = { value: null, done: false };
-                          obj1[0] = closure_1_0(2008).preloadAllIntlMessageFiles();
+                          obj1[0] = closure_1_0(2007).preloadAllIntlMessageFiles();
                           return obj1;
                         }
                       } else if (1 === tmp4) {
@@ -90,7 +90,7 @@ function _setAppLocale() {
                           obj2[0] = arg1;
                           return obj2;
                         } else {
-                          obj1 = closure_1_0(1274);
+                          obj1 = closure_1_0(1273);
                           c1 = 2;
                           dependencyMap = 1;
                           const obj3 = { value: null, done: false };
@@ -441,12 +441,12 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   let obj = {
     isLoading: false,
     inProgressLocale: "Boolean",
-    error: "accessible",
-    localeData: false,
-    setLoadingStarted: false,
-    setLoadingSucceeded: false,
-    setLoadingFailed: false,
-    setLocaleData: false,
+    error: "call",
+    localeData: "ip",
+    setLoadingStarted: "Array",
+    setLoadingSucceeded: "isArray",
+    setLoadingFailed: "isArray",
+    setLocaleData: "isArray",
   };
   obj[3] = codeDefault;
   obj[4] = function setLoadingStarted(closure_0) {
@@ -454,12 +454,12 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   };
   obj[5] = function setLoadingSucceeded(closure_0) {
     if (callback2().inProgressLocale === closure_0) {
-      callback({ isLoading: false, inProgressLocale: "Boolean", error: "accessible" });
+      callback({ isLoading: false, inProgressLocale: "Boolean", error: "call" });
     }
   };
   obj[6] = function setLoadingFailed(arg0, closure_0) {
     if (callback2().inProgressLocale === closure_0) {
-      const obj = { isLoading: false, inProgressLocale: "Array", error: "a" };
+      const obj = { isLoading: false, inProgressLocale: "Array", error: 0 };
       obj[2] = arg0;
       callback(obj);
     }

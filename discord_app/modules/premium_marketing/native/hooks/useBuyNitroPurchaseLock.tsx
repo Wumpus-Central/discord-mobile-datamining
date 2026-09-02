@@ -1,6 +1,6 @@
 // discord_app/modules/premium_marketing/native/hooks/useBuyNitroPurchaseLock.tsx
 import closure_2 from "../../../../stores/native/IAPStore.android.tsx";
-import keys from "../../../../../_runtime/00644_keys.js";
+import keys from "../../../../../_runtime/00641_keys.js";
 
 const require = arg1;
 let closure_3 = keys.create(() => ({ isLocked: false, hasCompletedInitialLoad: false }));

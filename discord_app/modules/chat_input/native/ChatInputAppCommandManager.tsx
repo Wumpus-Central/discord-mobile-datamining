@@ -42,7 +42,13 @@ let c5 = importAllResult;
   GAME_MENTION_RAW_RE_GLOBAL: closure_12,
   GAME_MENTION_SENTINEL: map1,
 } = regExp);
-let obj = { commandOption: null, commandErrorOption: null, gameMention: null, autocomplete: null };
+let obj = {
+  commandOption: null,
+  commandErrorOption: null,
+  gameMention: null,
+  timestampMention: null,
+  autocomplete: null,
+};
 obj = {
   backgroundColor: ThemesDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND,
   color: ThemesDefault.colors.TEXT_DEFAULT,
@@ -71,7 +77,21 @@ let obj2 = {
   fontSize: 14,
   fontWeight: "bold",
 };
-obj[3] = { color: ThemesDefault.colors.TEXT_BRAND, fontWeight: "bold" };
+obj[3] = {
+  backgroundColor: ThemesDefault.colors.MENTION_BACKGROUND,
+  color: ThemesDefault.colors.MENTION_FOREGROUND,
+  borderRadius: ThemesDefault.radii.xs,
+  fontSize: 14,
+  fontWeight: "bold",
+};
+let obj3 = {
+  backgroundColor: ThemesDefault.colors.MENTION_BACKGROUND,
+  color: ThemesDefault.colors.MENTION_FOREGROUND,
+  borderRadius: ThemesDefault.radii.xs,
+  fontSize: 14,
+  fontWeight: "bold",
+};
+obj[4] = { color: ThemesDefault.colors.TEXT_BRAND, fontWeight: "bold" };
 let closure_14 = createCacheKey.createStyles(obj);
 const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
   chatInputRef = chatInputRef.chatInputRef;
@@ -238,7 +258,13 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
       obj[1] = closure_0;
       obj[2] = applicationCommandOptionValueParser;
       closure_0 = closure_4;
-      obj = { commandOption: null, commandErrorOption: null, gameMention: null, autocomplete: null };
+      obj = {
+        commandOption: null,
+        commandErrorOption: null,
+        gameMention: null,
+        timestampMention: null,
+        autocomplete: null,
+      };
       obj[0] = function commandOption() {
         return lib(closure_1_3[10]).convertToNativeStyle(lib.commandOption);
       };
@@ -248,7 +274,10 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
       obj[2] = function gameMention() {
         return lib(closure_1_3[10]).convertToNativeStyle(lib.gameMention);
       };
-      obj[3] = function autocomplete(color) {
+      obj[3] = function timestampMention() {
+        return lib(closure_1_3[10]).convertToNativeStyle(lib.timestampMention);
+      };
+      obj[4] = function autocomplete(color) {
         if (null == color) {
           let autocomplete = lib.autocomplete;
         } else {
@@ -284,7 +313,13 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
     const current = ref.current;
     if (current != null) {
       closure_0 = closure_4;
-      const obj = { commandOption: null, commandErrorOption: null, gameMention: null, autocomplete: null };
+      const obj = {
+        commandOption: null,
+        commandErrorOption: null,
+        gameMention: null,
+        timestampMention: null,
+        autocomplete: null,
+      };
       obj[0] = function commandOption() {
         return lib(closure_1_3[10]).convertToNativeStyle(lib.commandOption);
       };
@@ -294,7 +329,10 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
       obj[2] = function gameMention() {
         return lib(closure_1_3[10]).convertToNativeStyle(lib.gameMention);
       };
-      obj[3] = function autocomplete(color) {
+      obj[3] = function timestampMention() {
+        return lib(closure_1_3[10]).convertToNativeStyle(lib.timestampMention);
+      };
+      obj[4] = function autocomplete(color) {
         if (null == color) {
           let autocomplete = lib.autocomplete;
         } else {
@@ -351,7 +389,7 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
   return null;
 });
 forwardRefResult.displayName = "ChatInputAppCommandManager";
-let obj3 = { color: ThemesDefault.colors.TEXT_BRAND, fontWeight: "bold" };
+let obj4 = { color: ThemesDefault.colors.TEXT_BRAND, fontWeight: "bold" };
 const memoResult = importAllResult.memo(forwardRefResult);
 let result = require("set").fileFinishedImporting("modules/chat_input/native/ChatInputAppCommandManager.tsx");
 

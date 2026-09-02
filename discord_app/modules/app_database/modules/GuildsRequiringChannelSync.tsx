@@ -106,21 +106,21 @@ prototype["detectRoleVisibilityChanges"] = function detectRoleVisibilityChanges(
     if (isSubscriptionRoleResult) {
       let tmp = obj;
       let tmp2 = dependencyMap;
-      obj = obj(4112);
+      obj = obj(4111);
       isSubscriptionRoleResult = obj.isSubscriptionRole(tmp18);
     }
     if (isSubscriptionRoleResult) {
       let tmp4 = obj;
       let tmp5 = dependencyMap;
-      let obj2 = obj(4112);
+      let obj2 = obj(4111);
       isSubscriptionRoleResult = obj2.isSubscriptionRoleAvailableForPurchase(tmp18);
     }
     let tmp7 = dependencyMap;
     let tmp6 = obj;
-    let obj3 = obj(4112);
+    let obj3 = obj(4111);
     let isSubscriptionRoleResult1 = obj3.isSubscriptionRole(tmp17);
     if (isSubscriptionRoleResult1) {
-      let tmp6Result = tmp6(4112);
+      let tmp6Result = tmp6(4111);
       isSubscriptionRoleResult1 = tmp6Result.isSubscriptionRoleAvailableForPurchase(tmp17);
     }
     if (!isSubscriptionRoleResult) {
@@ -406,7 +406,7 @@ prototype["markGuildForResync"] = function markGuildForResync(
   BackgroundSync,
   ChannelVisibleParentHidden,
 ) {
-  obj = obj(514);
+  obj = obj(511);
   const v4Result = obj.v4();
   obj = { guild_id: id, request_id: v4Result, trigger: BackgroundSync, change_type: ChannelVisibleParentHidden };
   expandEventPropertiesDefault.track(constants.GUILD_CHANNEL_RESYNC_REQUESTED, obj);

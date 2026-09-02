@@ -77,14 +77,14 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
               return obj;
             } else {
               closure_0 = tmp4;
-              const obj5 = v0(7427);
+              const obj5 = v0(7436);
               obj1 = { content: null, flags: null };
               obj1[0] = obj5.parse(dependencyMap, closure_1_3).content;
               obj1[1] = closure_1_0.createArgs.flags;
               v0 = 1;
               dependencyMap = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = closure_1_0(11778).editScheduledMessage(closure_1_0.scheduledMessageId, obj1);
+              obj2[0] = closure_1_0(12001).editScheduledMessage(closure_1_0.scheduledMessageId, obj1);
               return obj2;
             }
           } else if (arg0 === 1) {

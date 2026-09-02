@@ -1508,7 +1508,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
 prototype2["addCachedMessages"] = function addCachedMessages(messages, stale) {
   let self = this;
   self = this;
-  let obj = reversed(5220);
+  let obj = reversed(5228);
   const result = obj.requireSortedDescending(messages);
   const mapped = messages.map((arg0) => closure_1_10(self, arg0));
   reversed = mapped.reverse();

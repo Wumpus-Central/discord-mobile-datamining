@@ -19,7 +19,7 @@ const forwardRefResult = importAllResult.forwardRef((animate) => {
   ({ pendingAvatarSrc, style, onPress, size } = animate);
   ({ disableStatus, pendingAvatarDecoration, statusStyle } = animate);
   if (size === undefined) {
-    size = guildId(1297).AvatarSizes.XXLARGE;
+    size = guildId(1296).AvatarSizes.XXLARGE;
   }
   let flag = animate.animate;
   if (flag === undefined) {
@@ -30,10 +30,10 @@ const forwardRefResult = importAllResult.forwardRef((animate) => {
   id = user.id;
   let obj = guildId;
   let avatarSource = dependencyMap;
-  obj1 = guildId(589);
+  obj1 = guildId(586);
   const items = [closure_4];
   const stateFromStores = obj1.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  let obj2 = guildId(589);
+  let obj2 = guildId(586);
   const items1 = [closure_6];
   const items2 = [id];
   const stateFromStoresObject = obj2.useStateFromStoresObject(
@@ -48,7 +48,7 @@ const forwardRefResult = importAllResult.forwardRef((animate) => {
     items2,
   );
   ({ isMobileOnline, isVROnline, status, activities } = stateFromStoresObject);
-  let obj3 = guildId(589);
+  let obj3 = guildId(586);
   const items3 = [closure_5];
   const stateFromStores1 = obj3.useStateFromStores(items3, () => {
     let member = null;
@@ -59,7 +59,7 @@ const forwardRefResult = importAllResult.forwardRef((animate) => {
   });
   const tmp4 = callback();
   const tmp9 = id;
-  let obj4 = guildId(8076);
+  let obj4 = guildId(8084);
   obj = { pendingValue: pendingAvatarDecoration, userValue: null, guildValue: null, guildId: null };
   let avatarDecoration;
   if (user != null) {
@@ -83,19 +83,19 @@ const forwardRefResult = importAllResult.forwardRef((animate) => {
     avatarDecoration: null,
   };
   let tmp14 = null;
-  const tmp10 = id(8107);
+  const tmp10 = id(8115);
   if (!disableStatus) {
     tmp14 = status;
   }
   obj[3] = tmp14;
   const items4 = [tmp4.avatarStatusStyle, statusStyle];
   obj[4] = items4;
-  obj[5] = tmp9(8108)(activities);
+  obj[5] = tmp9(8116)(activities);
   if (flag) {
     flag = !stateFromStores;
   }
   obj[6] = flag;
-  obj[7] = id(8107)(obj4.getProfilePreviewValue(obj));
+  obj[7] = id(8115)(obj4.getProfilePreviewValue(obj));
   if (null != onPress) {
     obj1 = {
       ref: null,
@@ -112,7 +112,7 @@ const forwardRefResult = importAllResult.forwardRef((animate) => {
     const merged1 = Object.assign(merged);
     if (undefined !== pendingAvatarSrc) {
       obj2 = { source: null };
-      obj = obj(8109);
+      obj = obj(8117);
       avatarSource = obj.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores);
       obj2[0] = avatarSource;
       obj = Object.assign(obj);
@@ -123,8 +123,8 @@ const forwardRefResult = importAllResult.forwardRef((animate) => {
       obj3[1] = guildId;
       const merged2 = Object.assign(obj);
     }
-    obj1.children = jsx(obj(1297).Avatar, obj3);
-    jsx(obj(5068).PressableOpacity, {
+    obj1.children = jsx(obj(1296).Avatar, obj3);
+    jsx(obj(5076).PressableOpacity, {
       ref: null,
       onPress: null,
       onLongPress: null,
@@ -139,7 +139,7 @@ const forwardRefResult = importAllResult.forwardRef((animate) => {
     const merged3 = Object.assign(merged);
     if (undefined !== pendingAvatarSrc) {
       const obj5 = { source: null };
-      const objResult = obj(8109);
+      const objResult = obj(8117);
       obj5[0] = objResult.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores);
       const merged4 = Object.assign(obj);
       let obj6 = obj5;
@@ -149,7 +149,7 @@ const forwardRefResult = importAllResult.forwardRef((animate) => {
       obj6[1] = guildId;
       const merged5 = Object.assign(obj);
     }
-    obj4.children = jsx(obj(1297).Avatar, obj6);
+    obj4.children = jsx(obj(1296).Avatar, obj6);
     return <View ref={null} style={null} accessibilityRole="image" accessible />;
   }
 });

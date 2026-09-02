@@ -1,7 +1,7 @@
 // discord_app/modules/mobile_web_handoff/native/SimpleLoadingModal.tsx
 import set from "../../../../_runtime/00002_set.js";
 import _modDef4723 from "../../../actions/ModalActionCreators.tsx";
-import { asyncRequireImpl } from "../../../../_runtime/02009_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../_runtime/02008_asyncRequireImpl.js";
 
 const result = set.fileFinishedImporting("modules/mobile_web_handoff/native/SimpleLoadingModal.tsx");
 
@@ -18,5 +18,5 @@ export const showSimpleLoadingModal = function showSimpleLoadingModal(c3, arg1) 
       onDismissed();
     }
   };
-  obj.pushLazy(asyncRequireImpl(6163, dependencyMap.paths), obj, c3, { animation: "none" });
+  obj.pushLazy(asyncRequireImpl(6171, dependencyMap.paths), obj, c3, { animation: "none" });
 };

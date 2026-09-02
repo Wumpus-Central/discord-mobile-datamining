@@ -48,7 +48,7 @@ export default function useFavoritesGuildChannelActions(channelId, FavoritesGuil
   if (tmp7) {
     tmp7 = !isFavoritesGuildSelected;
   }
-  const favoritesBetaTagDismissibleContent = tmp(10319).useFavoritesBetaTagDismissibleContent(tmp7);
+  const favoritesBetaTagDismissibleContent = tmp(10341).useFavoritesBetaTagDismissibleContent(tmp7);
   obj = {
     isExperimentEnabled,
     hasFavoritesAccess: hasAccess,

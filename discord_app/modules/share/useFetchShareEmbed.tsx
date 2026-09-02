@@ -62,7 +62,7 @@ export default function useFetchShareEmbed(arg0) {
                   c4 = 3;
                   c5 = 1;
                   obj1 = { value: null, done: false };
-                  obj1[0] = closure_2_0(11448).unfurlEmbedUrl(items);
+                  obj1[0] = closure_2_0(11671).unfurlEmbedUrl(items);
                   return obj1;
                 } else {
                   c5 = 3;
@@ -79,7 +79,7 @@ export default function useFetchShareEmbed(arg0) {
                 throw arg1;
               } else if (arg0 === 2) {
                 c3 = 0;
-                closure_2_0(705).batchUpdates(() => {
+                closure_2_0(702).batchUpdates(() => {
                   v0(true);
                   if (closure_1_6.current === c0) {
                     tmp62(false);
@@ -93,7 +93,7 @@ export default function useFetchShareEmbed(arg0) {
                 closure_1 = arg1;
                 if (closure_1_6.current !== c0) {
                   c3 = 0;
-                  let obj3 = closure_2_0(705);
+                  let obj3 = closure_2_0(702);
                   obj3.batchUpdates(() => {
                     v0(true);
                     if (closure_1_6.current === c0) {
@@ -105,7 +105,7 @@ export default function useFetchShareEmbed(arg0) {
                 } else if (0 === closure_1.embeds.length) {
                   closure_1_1(undefined);
                   c3 = 0;
-                  obj1 = closure_2_0(705);
+                  obj1 = closure_2_0(702);
                   obj1.batchUpdates(() => {
                     v0(true);
                     if (closure_1_6.current === c0) {
@@ -125,16 +125,16 @@ export default function useFetchShareEmbed(arg0) {
                 }
               }
               c3 = 0;
-              closure_2_0(705).batchUpdates(() => {
+              closure_2_0(702).batchUpdates(() => {
                 v0(true);
                 if (closure_1_6.current === c0) {
                   tmp62(false);
                 }
               });
-              const obj7 = closure_2_0(705);
+              const obj7 = closure_2_0(702);
             }
             c3 = 0;
-            closure_2_0(705).batchUpdates(() => {
+            closure_2_0(702).batchUpdates(() => {
               v0(true);
               if (closure_1_6.current === c0) {
                 tmp62(false);

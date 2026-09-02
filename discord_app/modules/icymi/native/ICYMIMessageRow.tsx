@@ -1,6 +1,6 @@
 // discord_app/modules/icymi/native/ICYMIMessageRow.tsx
-import set from "../../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../stores/ChannelStore.tsx";
@@ -144,11 +144,11 @@ function ReplyMessageContent(message) {
   ({ channel, guild } = message);
   const tmp = callback3();
   let obj = importAllResult;
-  const context = importAllResult.useContext(message(16041).ICYMIContext);
-  obj1 = message(589);
+  const context = importAllResult.useContext(message(16272).ICYMIContext);
+  obj1 = message(586);
   const items = [closure_10];
   const stateFromStores = obj1.useStateFromStores(items, () => closure_1_10.getUser(message.author.id));
-  let obj2 = message(589);
+  let obj2 = message(586);
   const items1 = [closure_6];
   const stateFromStores1 = obj2.useStateFromStores(items1, () => closure_1_6.getMember(guild.id, message.author.id));
   let colorString;
@@ -158,23 +158,23 @@ function ReplyMessageContent(message) {
   if (colorString == null) {
     colorString = closure_12;
   }
-  const width = obj.useContext(tmp2(16041).ICYMIContext).width;
+  const width = obj.useContext(tmp2(16272).ICYMIContext).width;
   let tmp8 = null;
   if (null != stateFromStores) {
     obj = { style: null, children: null };
     obj[0] = tmp.replyPreview;
     obj = { variant: "text-sm/semibold", color: "text-muted", style: null, children: null };
     obj[2] = { fontStyle: "italic" };
-    const intl = tmp2(1236).intl;
-    obj[3] = intl.string(tmp2(1236).t.mPPcez);
+    const intl = tmp2(1233).intl;
+    obj[3] = intl.string(tmp2(1233).t.mPPcez);
     const items2 = [callback(tmp2(4474).Text, obj)];
     obj1 = { style: null, children: null };
     obj1[0] = tmp.replyInner;
     obj2 = { animate: false, guildId: null, user: null, size: null };
     obj2[1] = guild.id;
     obj2[2] = stateFromStores;
-    obj2[3] = tmp2(1297).AvatarSizes.SMALL;
-    const items3 = [callback(tmp2(1297).Avatar, obj2)];
+    obj2[3] = tmp2(1296).AvatarSizes.SMALL;
+    const items3 = [callback(tmp2(1296).Avatar, obj2)];
     const obj3 = { style: null, children: null };
     const obj4 = { gap: 4, width: null };
     obj4[1] = width - context.inset - 2 * ITEM_PADDING - 2 * PX_12 - 30 - PX_8 - 2;
@@ -195,7 +195,7 @@ function ReplyMessageContent(message) {
     obj9[1] = channel;
     obj9[2] = guild;
     obj7[1] = callback(MessageRowContent, obj9);
-    items4[1] = callback(tmp2(16041).ICYMIContext.Provider, obj7);
+    items4[1] = callback(tmp2(16272).ICYMIContext.Provider, obj7);
     obj3[1] = items4;
     items3[1] = callback2(View, obj3);
     obj1[1] = items3;
@@ -228,7 +228,7 @@ let closure_18 = createICYMIStyles.createICYMIStyles((paddingLeft) => {
   if (obj2.isAndroid()) {
     num = -2;
   }
-  obj = { marginTop: num, borderRadius: tmp(712).radii.md, gap: 0 };
+  obj = { marginTop: num, borderRadius: tmp(709).radii.md, gap: 0 };
   obj[1] = obj;
   obj[2] = {
     gap: ThemesDefault.space.PX_8,
@@ -428,22 +428,22 @@ export default function MessageRowWrapper(arg0) {
   let gravityMessage;
   let stateFromStores;
   ({ message, messageContext, visible } = arg0);
-  let obj = gravityMessage(8621);
+  let obj = gravityMessage(8636);
   gravityMessage = obj.useGravityMessage(message);
   const items = [closure_5];
-  stateFromStores = gravityMessage(589).useStateFromStores(items, () =>
+  stateFromStores = gravityMessage(586).useStateFromStores(items, () =>
     closure_1_5.getChannel(gravityMessage.getChannelId()),
   );
-  const obj2 = gravityMessage(589);
+  const obj2 = gravityMessage(586);
   const items1 = [closure_7];
-  const stateFromStores1 = gravityMessage(589).useStateFromStores(items1, () => {
+  const stateFromStores1 = gravityMessage(586).useStateFromStores(items1, () => {
     let guild_id;
     if (stateFromStores != null) {
       guild_id = stateFromStores.guild_id;
     }
     return closure_1_7.getGuild(guild_id);
   });
-  gravityMessage(589);
+  gravityMessage(586);
   [][0] = closure_8;
   let tmp6 = null;
   if (null != stateFromStores) {

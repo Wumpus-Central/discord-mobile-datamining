@@ -7,6 +7,7 @@ import TableRowInner from "../../design/components/TableRow/native/TableRow.nati
 import RoleLabel from "../../design/void/RoleLabel/native/RoleLabel.tsx";
 import memoResult1Default from "../../modules/guild_settings/native/DetailedGuildIdentityUserRow.tsx";
 import CircleMinusIcon from "../../design/components/Icon/native/redesign/generated/CircleMinusIcon.tsx";
+import useGetOrFetchChannelOverwriteUsersDefault from "../../modules/channel_settings/useGetOrFetchChannelOverwriteUsers.tsx";
 import closure_4 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_5 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_6 from "../../../_runtime/00019_noop.js";
@@ -37,7 +38,7 @@ function ChannelPermissionSyncModule(channel) {
       channelName: channel(closure_1_3[16]).computeChannelName(closure_0, closure_1_13, closure_1_12, true),
       categoryName: null,
     };
-    let obj4 = channel(closure_1_3[16]);
+    const obj4 = channel(closure_1_3[16]);
     obj[1] = channel(closure_1_3[16]).computeChannelName(category, closure_1_13, closure_1_12);
     obj[1] = intl2.format(channel(closure_1_3[15]).t["iKW+jY"], obj);
     const intl3 = channel(closure_1_3[15]).intl;
@@ -48,7 +49,7 @@ function ChannelPermissionSyncModule(channel) {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
-      } else if (tmp5 === 3) {
+      } else if (tmp4 === 3) {
         if (arg0 === 1) {
           throw arg1;
         } else if (arg0 === 2) {
@@ -71,52 +72,48 @@ function ChannelPermissionSyncModule(channel) {
               obj[0] = arg1;
               return obj;
             } else {
-              closure_1 = tmp2;
-              obj1 = tmp3;
-              obj1 = undefined;
+              closure_1 = tmp5;
+              let syncedPermissionOverwrites = tmp2;
+              syncedPermissionOverwrites = undefined;
               const guild_id = closure_1_1.guild_id;
-              obj1 = {};
-              const merged = Object.assign(closure_1_1.permissionOverwrites);
-              let tmp16 = null != guild_id;
-              if (tmp16) {
-                tmp16 = null == obj1[guild_id];
-              }
-              if (tmp16) {
-                let obj4 = closure_2_2(closure_2_3[17]);
-                obj1[guild_id] = obj4.makeEveryoneOverwrite(guild_id);
-              }
+              const obj8 = closure_2_2(closure_2_3[17]);
+              syncedPermissionOverwrites = obj8.getSyncedPermissionOverwrites(
+                closure_1_1,
+                callback(closure_2_3[18]).getAppChannelBotUserId(closure_1_0),
+              );
+              const obj9 = callback(closure_2_3[18]);
               c2 = 1;
               c3 = 1;
-              let obj2 = { value: null, done: false };
-              obj2[0] = callback(closure_2_3[18]).checkChattableChannelThresholdMetAfterChannelPermissionDeny(
+              obj1 = { value: null, done: false };
+              obj1[0] = callback(closure_2_3[19]).checkChattableChannelThresholdMetAfterChannelPermissionDeny(
                 closure_1_0,
-                obj1[guild_id].deny,
-                obj1[guild_id].allow,
+                syncedPermissionOverwrites[guild_id].deny,
+                syncedPermissionOverwrites[guild_id].allow,
               );
-              return obj2;
+              return obj1;
             }
           } else if (arg0 === 1) {
             c3 = 3;
             throw arg1;
           } else if (arg0 === 2) {
             c3 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
+            let obj2 = { value: null, done: true };
+            obj2[0] = arg1;
+            return obj2;
           } else {
             if (arg1) {
-              obj = callback(closure_2_3[19]);
-              obj4 = { permissionOverwrites: null };
-              obj2 = closure_2_1(closure_2_3[20]);
-              obj4[0] = obj2.values(obj1);
-              obj.saveChannel(closure_1_0.id, obj4);
+              obj = callback(closure_2_3[20]);
+              const obj3 = { permissionOverwrites: null };
+              obj2 = closure_2_1(closure_2_3[21]);
+              obj3[0] = obj2.values(syncedPermissionOverwrites);
+              obj.saveChannel(closure_1_0.id, obj3);
             }
             c3 = 3;
             return { value: "HermesInternal", done: null };
           }
-        } catch (tmp22) {
+        } catch (tmp15) {
           c3 = tmp;
-          throw tmp22;
+          throw tmp15;
         }
       }
     });
@@ -134,10 +131,10 @@ function ChannelPermissionSyncModule(channel) {
   }, items);
   let obj = channel(4674);
   const channelName = obj.computeChannelName(category, closure_13, closure_12);
-  obj = { style: callback3().tableRowGroupContainer, children: null };
-  let intl = channel(1236).intl;
+  obj = { style: callback4().tableRowGroupContainer, children: null };
+  let intl = channel(1233).intl;
   const formatToPlainString = intl.formatToPlainString;
-  const t = channel(1236).t;
+  const t = channel(1233).t;
   if (channel.locked) {
     obj = { categoryName: null };
     obj[0] = channelName;
@@ -148,12 +145,12 @@ function ChannelPermissionSyncModule(channel) {
     formatToPlainStringResult = formatToPlainString(t.OIhm0M, obj1);
   }
   let obj2 = { title: formatToPlainStringResult, hasIcons: true, children: null };
-  let obj3 = { icon: closure_16(channel(14759).RefreshIcon, {}), label: null, onPress: null };
-  let intl2 = tmp3(1236).intl;
-  obj3[1] = intl2.string(channel(1236).t.NVwuHq);
+  let obj3 = { icon: closure_16(channel(14985).RefreshIcon, {}), label: null, onPress: null };
+  let intl2 = tmp3(1233).intl;
+  obj3[1] = intl2.string(channel(1233).t.NVwuHq);
   obj3[2] = callback;
-  obj2[2] = closure_16(channel(5599).TableRow, obj3);
-  obj[1] = closure_16(channel(5992).TableRowGroup, obj2);
+  obj2[2] = closure_16(channel(5607).TableRow, obj3);
+  obj[1] = closure_16(channel(6000).TableRowGroup, obj2);
   return closure_16(View, obj);
 }
 function CategorySync(category) {
@@ -166,7 +163,7 @@ function CategorySync(category) {
       obj[0] = tmp;
       obj[1] = category;
       obj[2] = tmp3;
-      tmp4 = callback(ChannelPermissionSyncModule, obj);
+      tmp4 = callback2(ChannelPermissionSyncModule, obj);
     }
   }
   return tmp4;
@@ -181,32 +178,32 @@ function AddPermission(isEditing) {
     obj = { style: null, children: null };
     obj[0] = tmp.tableRowGroupContainer;
     obj = { title: null, hasIcons: true, children: null };
-    const intl = tmp2(1236).intl;
-    obj[0] = intl.string(tmp2(1236).t.vPHdP5);
+    const intl = tmp2(1233).intl;
+    obj[0] = intl.string(tmp2(1233).t.vPHdP5);
     obj1 = { icon: null, label: null, onPress: null };
-    obj1[0] = callback(tmp2(12291).PlusMediumIcon, {});
-    const intl2 = tmp2(1236).intl;
-    obj1[1] = intl2.string(tmp2(1236).t.fVWxvT);
+    obj1[0] = callback2(tmp2(12515).PlusMediumIcon, {});
+    const intl2 = tmp2(1233).intl;
+    obj1[1] = intl2.string(tmp2(1233).t.fVWxvT);
     obj1[2] = function onPress() {};
-    const items = [callback(tmp2(5599).TableRow, obj1)];
+    const items = [callback2(tmp2(5607).TableRow, obj1)];
     const obj2 = { icon: null, label: null, onPress: null };
-    obj2[0] = callback(tmp2(12291).PlusMediumIcon, {});
-    const intl3 = tmp2(1236).intl;
-    obj2[1] = intl3.string(tmp2(1236).t.riesLt);
+    obj2[0] = callback2(tmp2(12515).PlusMediumIcon, {});
+    const intl3 = tmp2(1233).intl;
+    obj2[1] = intl3.string(tmp2(1233).t.riesLt);
     obj2[2] = function onPress() {};
-    items[1] = callback(tmp2(5599).TableRow, obj2);
+    items[1] = callback2(tmp2(5607).TableRow, obj2);
     obj[2] = items;
-    obj[1] = callback2(tmp2(5992).TableRowGroup, obj);
-    return callback(View, obj);
+    obj[1] = callback3(tmp2(6000).TableRowGroup, obj);
+    return callback2(View, obj);
   }
-  tmp = callback3();
+  tmp = callback4();
 }
 function RoleRow(onDelete) {
   ({ role, isEditing, onSelect } = onDelete);
   ({ name, colorString, colorStrings } = role);
   const tmp = isEveryoneRole(role);
   let obj = {
-    label: callback(RoleLabel.RoleLabel, { name, color: colorString, colors: colorStrings }),
+    label: callback2(RoleLabel.RoleLabel, { name, color: colorString, colors: colorStrings }),
     arrow: !isEditing,
     icon: null,
     onPress: null,
@@ -217,9 +214,9 @@ function RoleRow(onDelete) {
     if (!tmp) {
       obj = { color: null, accessibilityLabel: null };
       obj[0] = ThemesDefault.colors.ICON_FEEDBACK_CRITICAL;
-      const intl = tmp3(1236).intl;
-      obj[1] = intl.string(tmp3(1236).t.N86XcP);
-      tmp2Result = tmp2(tmp3(14908).CircleMinusIcon, obj);
+      const intl = tmp3(1233).intl;
+      obj[1] = intl.string(tmp3(1233).t.N86XcP);
+      tmp2Result = tmp2(tmp3(15137).CircleMinusIcon, obj);
     }
   }
   obj[2] = tmp2Result;
@@ -231,13 +228,13 @@ function RoleRow(onDelete) {
     }
   }
   obj[3] = onDelete;
-  return callback(TableRowInner.TableRow, obj);
+  return callback2(TableRowInner.TableRow, obj);
 }
 function RoleOverwrites(guild) {
   guild = guild.guild;
   ({ isEditing: importDefault, onSelectRow: importAll, onDeleteRow: dependencyMap } = guild);
   let obj;
-  obj = guild(589);
+  obj = guild(586);
   const items = [closure_10];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_10.getSortedRoles(guild.id));
   obj = {};
@@ -251,12 +248,12 @@ function RoleOverwrites(guild) {
     if (obj[arg0.id] != null) {
       type = tmp.type;
     }
-    return type === guild(closure_1_3[29]).PermissionOverwriteType.ROLE;
+    return type === guild(closure_1_3[30]).PermissionOverwriteType.ROLE;
   });
-  obj = { style: callback3().tableRowGroupContainer, children: null };
+  obj = { style: callback4().tableRowGroupContainer, children: null };
   obj1 = { title: null, hasIcons: true, children: null };
-  const intl = tmp2(1236).intl;
-  obj1[0] = intl.string(guild(1236).t["LPJmL/"]);
+  const intl = tmp2(1233).intl;
+  obj1[0] = intl.string(guild(1233).t["LPJmL/"]);
   obj1[2] = found.map((id) => {
     closure_0 = id;
     return closure_1_16(
@@ -274,8 +271,8 @@ function RoleOverwrites(guild) {
       id.id,
     );
   });
-  obj[1] = callback(guild(5992).TableRowGroup, obj1);
-  return callback(View, obj);
+  obj[1] = callback2(guild(6000).TableRowGroup, obj1);
+  return callback2(View, obj);
 }
 function MemberRow(arg0) {
   ({ isEditing, onSelect } = arg0);
@@ -301,21 +298,17 @@ function MemberOverwrites(channel) {
   channel = channel.channel;
   const guild_id = channel.guild_id;
   ({ isEditing: importDefault, onSelectRow: importAll, onDeleteRow: dependencyMap } = channel);
-  const tmp = callback3();
-  const found = applyDefault(channel.permissionOverwrites).filter(
-    (type) => type.type === guild_id(table[29]).PermissionOverwriteType.MEMBER,
-  );
-  const mapped = found.map((id) => user.getUser(id.id));
-  const found1 = mapped.filter(guild_id(1471).isNotNullish);
-  const arr = applyDefault(channel.permissionOverwrites);
-  const valueResult = found1.sortBy((username) => username.username.toLowerCase()).value();
+  const tmp = callback4();
+  let obj = applyDefault(useGetOrFetchChannelOverwriteUsersDefault(guild_id, channel.permissionOverwrites));
+  const tmp3 = useGetOrFetchChannelOverwriteUsersDefault(guild_id, channel.permissionOverwrites);
+  const valueResult = obj.sortBy((username) => username.username.toLowerCase()).value();
   let tmp4 = null;
   if (valueResult.length > 0) {
-    let obj = { style: null, children: null };
+    obj = { style: null, children: null };
     obj[0] = tmp.tableRowGroupContainer;
     obj = { title: null, hasIcons: true, children: null };
-    const intl = tmp3(1236).intl;
-    obj[0] = intl.string(tmp3(1236).t["9Oq93m"]);
+    const intl = guild_id(1233).intl;
+    obj[0] = intl.string(guild_id(1233).t["9Oq93m"]);
     obj[2] = valueResult.map((id) => {
       closure_0 = id;
       return closure_1_16(
@@ -334,8 +327,8 @@ function MemberOverwrites(channel) {
         id.id,
       );
     });
-    obj[1] = callback(tmp3(5992).TableRowGroup, obj);
-    tmp4 = callback(View, obj);
+    obj[1] = callback2(guild_id(6000).TableRowGroup, obj);
+    tmp4 = callback2(View, obj);
   }
   return tmp4;
 }
@@ -355,12 +348,11 @@ export default function ChannelSettingsPermissionsOverview(channelId) {
   channelId = channelId.channelId;
   let navigation;
   let stateFromStores;
-  let stateFromStores1;
   let stateFromStores2;
-  closure_5 = undefined;
-  let first;
-  closure_7 = undefined;
   let callback;
+  let first;
+  let React;
+  callback = undefined;
   function handleClearPermissionOverwrite(arg0) {
     closure_0 = arg0;
     let tmp;
@@ -373,93 +365,96 @@ export default function ChannelSettingsPermissionsOverview(channelId) {
     } else if (user != null) {
       username = user.username;
     }
-    let obj = navigation(stateFromStores1[14]);
+    let obj = navigation(stateFromStores2[14]);
     obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null };
-    const intl = channelId(stateFromStores1[15]).intl;
-    obj[0] = intl.formatToPlainString(channelId(stateFromStores1[15]).t.txPV7k, { name: username });
-    const intl2 = channelId(stateFromStores1[15]).intl;
-    obj[1] = intl2.format(channelId(stateFromStores1[15]).t.xERCnZ, { name: username });
-    const intl3 = channelId(stateFromStores1[15]).intl;
-    obj[2] = intl3.string(channelId(stateFromStores1[15]).t.gm1Vej);
-    const intl4 = channelId(stateFromStores1[15]).intl;
-    obj[3] = intl4.string(channelId(stateFromStores1[15]).t.p89ACt);
+    const intl = channelId(stateFromStores2[15]).intl;
+    obj[0] = intl.formatToPlainString(channelId(stateFromStores2[15]).t.txPV7k, { name: username });
+    const intl2 = channelId(stateFromStores2[15]).intl;
+    obj[1] = intl2.format(channelId(stateFromStores2[15]).t.xERCnZ, { name: username });
+    const intl3 = channelId(stateFromStores2[15]).intl;
+    obj[2] = intl3.string(channelId(stateFromStores2[15]).t.gm1Vej);
+    const intl4 = channelId(stateFromStores2[15]).intl;
+    obj[3] = intl4.string(channelId(stateFromStores2[15]).t.p89ACt);
     obj[4] = function onConfirm() {
-      const result = navigation(stateFromStores1[34]).clearPermissionOverwrite(closure_0, closure_0);
+      const result = navigation(stateFromStores2[35]).clearPermissionOverwrite(closure_0, closure_0);
     };
     obj.show(obj);
   }
-  let obj = channelId(stateFromStores1[24]);
+  let obj = channelId(stateFromStores2[25]);
   navigation = obj.useNavigation();
-  obj1 = channelId(stateFromStores1[28]);
-  const items = [handleClearPermissionOverwrite];
+  obj1 = channelId(stateFromStores2[29]);
+  const items = [closure_9];
   const items1 = [channelId];
-  stateFromStores = obj1.useStateFromStores(items, () => handleClearPermissionOverwrite.getChannel(channelId), items1);
-  let obj2 = channelId(stateFromStores1[28]);
-  const items2 = [handleClearPermissionOverwrite];
-  stateFromStores1 = obj2.useStateFromStores(items2, () => {
+  stateFromStores = obj1.useStateFromStores(items, () => closure_1_9.getChannel(channelId), items1);
+  let obj2 = channelId(stateFromStores2[18]);
+  const appChannelBotUserId = obj2.useAppChannelBotUserId(stateFromStores);
+  let obj3 = channelId(stateFromStores2[29]);
+  const items2 = [closure_9];
+  const stateFromStores1 = obj3.useStateFromStores(items2, () => {
     let parent_id;
     if (stateFromStores != null) {
       parent_id = stateFromStores.parent_id;
     }
-    return handleClearPermissionOverwrite.getChannel(parent_id);
+    return closure_1_9.getChannel(parent_id);
   });
-  let obj3 = channelId(stateFromStores1[28]);
+  let tmp = callback4();
+  const tmp2 = stateFromStores2;
   const items3 = [closure_11];
-  stateFromStores2 = obj3.useStateFromStores(items3, () => {
+  stateFromStores2 = channelId(stateFromStores2[29]).useStateFromStores(items3, () => {
     let guild_id;
     if (stateFromStores != null) {
       guild_id = stateFromStores.guild_id;
     }
     return closure_1_11.getGuild(guild_id);
   });
-  let tmp = callback3();
+  const obj5 = channelId(stateFromStores2[29]);
   const items4 = [closure_10];
-  closure_5 = channelId(stateFromStores1[28]).useStateFromStores(items4, () => {
+  callback = channelId(stateFromStores2[29]).useStateFromStores(items4, () => {
     let rolesSnapshot;
     if (null != stateFromStores2) {
       rolesSnapshot = closure_1_10.getRolesSnapshot(tmp.id);
     }
     return rolesSnapshot;
   });
-  const items5 = [stateFromStores, stateFromStores1];
-  const memo = first.useMemo(() => {
-    let areChannelsLockedResult = null != stateFromStores;
-    if (areChannelsLockedResult) {
-      areChannelsLockedResult = stateFromStores(stateFromStores1[17]).areChannelsLocked(tmp, stateFromStores1);
-      const obj = stateFromStores(stateFromStores1[17]);
-    }
-    return areChannelsLockedResult;
-  }, items5);
-  const tmp7 = stateFromStores2(first.useState(false), 2);
-  first = tmp7[0];
-  closure_7 = tmp7[1];
-  callback = first.useCallback(() => {
+  let areChannelsLockedResult = null != stateFromStores;
+  if (areChannelsLockedResult) {
+    areChannelsLockedResult = stateFromStores(tmp2[17]).areChannelsLocked(
+      stateFromStores,
+      stateFromStores1,
+      appChannelBotUserId,
+    );
+    const obj7 = stateFromStores(tmp2[17]);
+  }
+  const tmp10 = callback(React.useState(false), 2);
+  first = tmp10[0];
+  React = tmp10[1];
+  callback = React.useCallback(() => {
     callback((arg0) => !arg0);
-    const result = channelId(stateFromStores1[32]).DeprecatedLayoutAnimation();
+    const result = channelId(stateFromStores2[33]).DeprecatedLayoutAnimation();
   }, []);
-  const items6 = [navigation, first, callback];
-  const layoutEffect = first.useLayoutEffect(() => {
+  const items5 = [navigation, first, callback];
+  const layoutEffect = React.useLayoutEffect(() => {
     navigation.setOptions({
       headerRight(arg0) {
         const obj = {};
         const merged = Object.assign(arg0);
-        obj.onPress = closure_8;
+        obj.onPress = closure_7;
         const intl = closure_1_0(closure_1_3[15]).intl;
         const string = intl.string;
         const t = closure_1_0(closure_1_3[15]).t;
-        if (closure_6) {
+        if (closure_5) {
           let stringResult = string(t.i4jeWR);
         } else {
           stringResult = string(t.bt75uw);
         }
         obj.label = stringResult;
-        return closure_1_16(closure_1_0(closure_1_3[33]).HeaderTextButton, obj);
+        return closure_1_16(closure_1_0(closure_1_3[34]).HeaderTextButton, obj);
       },
     });
-  }, items6);
-  let tmp11 = null;
+  }, items5);
+  let tmp14 = null;
   if (null != stateFromStores) {
-    tmp11 = null;
+    tmp14 = null;
     if (null != stateFromStores2) {
       obj = { style: null, children: null };
       obj[0] = tmp.tableContainer;
@@ -467,11 +462,11 @@ export default function ChannelSettingsPermissionsOverview(channelId) {
       obj[0] = stateFromStores;
       obj[1] = stateFromStores1;
       obj[2] = first;
-      obj[3] = memo;
-      const items7 = [callback(CategorySync, obj), , ,];
+      obj[3] = areChannelsLockedResult;
+      const items6 = [callback2(CategorySync, obj), , ,];
       obj1 = { isEditing: null };
       obj1[0] = first;
-      items7[1] = callback(AddPermission, obj1);
+      items6[1] = callback2(AddPermission, obj1);
       obj2 = { guild: null, channel: null, isEditing: null, onSelectRow: null, onDeleteRow: null };
       obj2[0] = stateFromStores2;
       obj2[1] = stateFromStores;
@@ -487,7 +482,7 @@ export default function ChannelSettingsPermissionsOverview(channelId) {
       obj2[4] = function onDeleteRow(arg0) {
         handleClearPermissionOverwrite(arg0);
       };
-      items7[2] = callback(RoleOverwrites, obj2);
+      items6[2] = callback2(RoleOverwrites, obj2);
       obj3 = { channel: null, isEditing: null, onSelectRow: null, onDeleteRow: null };
       obj3[0] = stateFromStores;
       obj3[1] = first;
@@ -502,10 +497,10 @@ export default function ChannelSettingsPermissionsOverview(channelId) {
       obj3[3] = function onDeleteRow(arg0) {
         handleClearPermissionOverwrite(arg0);
       };
-      items7[3] = callback(MemberOverwrites, obj3);
-      obj[1] = items7;
-      tmp11 = callback2(closure_7, obj);
+      items6[3] = callback2(MemberOverwrites, obj3);
+      obj[1] = items6;
+      tmp14 = callback3(callback, obj);
     }
   }
-  return tmp11;
+  return tmp14;
 }

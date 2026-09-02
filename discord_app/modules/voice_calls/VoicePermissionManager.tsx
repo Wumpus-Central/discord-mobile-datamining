@@ -46,15 +46,15 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(voiceSta
               isSpeakerResult = speaker.isSpeaker(userId, channelId);
             }
             if (isSpeakerResult) {
-              const permission = callback2(5083).requestPermission(constants2.AUDIO);
+              const permission = callback2(5091).requestPermission(constants2.AUDIO);
               permission.then((arg0) => {
                 if (arg0) {
                   callback(table[9])(true);
                 }
               });
               if (store.getMode() === constants.PUSH_TO_TALK) {
-                const permission1 = callback2(5083).requestPermission(constants2.INPUT_MONITORING);
-                const tmp19Result = callback2(5083);
+                const permission1 = callback2(5091).requestPermission(constants2.INPUT_MONITORING);
+                const tmp19Result = callback2(5091);
               }
             } else {
               const tmp8 = new closure_4(arg0);
@@ -63,17 +63,17 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(voiceSta
                 audienceRequestToSpeakState ===
                 callback(4668).RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK
               ) {
-                const permission2 = callback2(5083).requestPermission(constants2.AUDIO);
+                const permission2 = callback2(5091).requestPermission(constants2.AUDIO);
                 permission2.then((arg0) => {
                   if (arg0) {
                     callback(table[9])(true);
                   }
                 });
                 if (store.getMode() === constants.PUSH_TO_TALK) {
-                  const permission3 = tmp13(5083).requestPermission(tmp14.INPUT_MONITORING);
-                  const tmp13Result = tmp13(5083);
+                  const permission3 = tmp13(5091).requestPermission(tmp14.INPUT_MONITORING);
+                  const tmp13Result = tmp13(5091);
                 }
-                const obj2 = callback2(5083);
+                const obj2 = callback2(5091);
                 tmp13 = callback2;
                 tmp14 = constants2;
               }

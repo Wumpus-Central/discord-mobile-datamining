@@ -2,8 +2,8 @@
 import set from "../../../../_runtime/00002_set.js";
 import ME from "../../../Constants.tsx";
 import ParticipantTypes from "../../calls/CallConstants.tsx";
-import registerAssetDefault from "../../../../_runtime/09318_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/09893_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/09331_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/09915_registerAsset.js";
 
 const VoicePlatforms = ParticipantTypes.VoicePlatforms;
 const obj = {

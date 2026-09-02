@@ -29,11 +29,11 @@ export const PremiumAnimatedGiftButton = function PremiumAnimatedGiftButton(arg0
   ({ active, disabled, accessibilityState } = arg0);
   ({ style, activeStyle, channelId, animationDataUrl, onAnimationFinished, loop } = arg0);
   let obj = map;
-  const token = obj.useToken(stateFromStores(712).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
+  const token = obj.useToken(stateFromStores(709).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
   obj1 = map;
-  const token1 = obj1.useToken(stateFromStores(712).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
+  const token1 = obj1.useToken(stateFromStores(709).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
   let obj2 = map;
-  const token2 = obj2.useToken(stateFromStores(712).modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
+  const token2 = obj2.useToken(stateFromStores(709).modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
   const tmp7 = callback(token, token1);
   const bound = Math.max(0, (token2 - token) / 2);
   const tmp9 = useRef(null);
@@ -94,7 +94,7 @@ export const PremiumAnimatedGiftButton = function PremiumAnimatedGiftButton(arg0
     autoPlay: false,
     onAnimationFinish: onAnimationFinished,
   };
-  obj.children = jsx(stateFromStores(5944), {
+  obj.children = jsx(stateFromStores(5952), {
     ref: tmp9,
     style: tmp7.animationRefresh,
     source: { uri: animationDataUrl },

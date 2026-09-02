@@ -216,7 +216,7 @@ prototype["_initialize"] = function _initialize() {
     logger.log("Broadcast Finished");
     closure_14.stop();
     closure_15.stop();
-    const result = callback(10042).handleCloseScreenshare();
+    const result = callback(10064).handleCloseScreenshare();
   });
   const result2 = voiceEngine.setBroadcastAnnotatedCallback((arg0) => {
     logger.log("Broadcast Annotated:", arg0);
@@ -230,10 +230,10 @@ prototype["_initialize"] = function _initialize() {
   });
   const result3 = voiceEngine.setBroadcastBlockedCallback(() => {
     logger.log("Broadcast Blocked");
-    let obj = callback2(9657);
+    let obj = callback2(9670);
     obj = { alertBody: null };
-    const intl = callback(1236).intl;
-    obj[0] = intl.string(callback(1236).t.iYQlwv);
+    const intl = callback(1233).intl;
+    obj[0] = intl.string(callback(1233).t.iYQlwv);
     const result = obj.presentLocalNotification(obj);
   });
   let obj = inject;

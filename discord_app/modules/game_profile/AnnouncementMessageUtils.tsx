@@ -262,8 +262,8 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
 export const getPollExpiryLabel = function getPollExpiryLabel(poll) {
   let result = formatExpirationLabel.formatExpirationLabel(poll.expiry);
   if (result == null) {
-    const intl = tmp(1236).intl;
-    result = intl.string(tmp(1236).t["e+J3JZ"]);
+    const intl = tmp(1233).intl;
+    result = intl.string(tmp(1233).t["e+J3JZ"]);
   }
   return result;
 };

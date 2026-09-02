@@ -73,7 +73,7 @@ let result = require("set").fileFinishedImporting("modules/dismissible_content/u
 export const useGetDismissibleContent = function useGetDismissibleContent(items3, APP_LAUNCHER_ONBOARDING) {
   let found1 = APP_LAUNCHER_ONBOARDING;
   const items = [closure_4];
-  const stateFromStores = found1(589).useStateFromStores(items, () => {
+  const stateFromStores = found1(586).useStateFromStores(items, () => {
     const userContent = settings.settings.userContent;
     let dismissedContents;
     if (userContent != null) {
@@ -82,11 +82,11 @@ export const useGetDismissibleContent = function useGetDismissibleContent(items3
     return dismissedContents;
   });
   let stateFromStores1 = stateFromStores;
-  let obj = found1(589);
+  let obj = found1(586);
   const items1 = [anyOverlayRenderingLocked];
-  stateFromStores1 = found1(589).useStateFromStores(items1, () => anyOverlayRenderingLocked.getGuildId());
+  stateFromStores1 = found1(586).useStateFromStores(items1, () => anyOverlayRenderingLocked.getGuildId());
   dependencyMap = stateFromStores1;
-  const obj2 = found1(589);
+  const obj2 = found1(586);
   const newUserDismissibleContent = found1(4320).useNewUserDismissibleContent(items3);
   found1 = null;
   if (closure_4.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
@@ -112,9 +112,9 @@ export const useGetDismissibleContent = function useGetDismissibleContent(items3
   found1 = tmp5;
   dependencyMap = APP_LAUNCHER_ONBOARDING;
   const obj3 = found1(4320);
-  let tmpResult = tmp(6253);
+  let tmpResult = tmp(6262);
   anyOverlayRenderingLocked = tmpResult.useAnyOverlayRenderingLocked();
-  tmpResult = tmp(589);
+  tmpResult = tmp(586);
   const stateFromStores2 = tmpResult.useStateFromStores([], () => {});
   const tmp8 = ref((currentlyShown) => {
     let hasItem = null != closure_0;
@@ -125,7 +125,7 @@ export const useGetDismissibleContent = function useGetDismissibleContent(items3
     return hasItem;
   });
   const items2 = [stateFromStores2];
-  const stateFromStores3 = found1(589).useStateFromStores(items2, () => {
+  const stateFromStores3 = found1(586).useStateFromStores(items2, () => {
     let hasUserHitDCCapResult = null != closure_0;
     if (hasUserHitDCCapResult) {
       hasUserHitDCCapResult = stateFromStores1.hasUserHitDCCap(tmp, closure_1);
@@ -287,7 +287,7 @@ export const useGetVersionedDismissibleContent = function useGetVersionedDismiss
   dependencyMap = groupName;
   React = latestVersion;
   const obj3 = initialize;
-  tmpResult = tmp(6253);
+  tmpResult = tmp(6262);
   anyOverlayRenderingLocked = tmpResult.useAnyOverlayRenderingLocked();
   const tmp10 = ref((currentlyShown) => {
     let hasItem = null != closure_0;
@@ -453,7 +453,7 @@ export const useGetTimeRecurringDismissibleContent = function useGetTimeRecurrin
   _require = tmp5;
   dependencyMap = groupName;
   const obj2 = initialize;
-  tmpResult = tmp(6253);
+  tmpResult = tmp(6262);
   anyOverlayRenderingLocked = tmpResult.useAnyOverlayRenderingLocked();
   const tmp11 = ref((currentlyShown) => {
     let hasItem = null != closure_0;
@@ -628,7 +628,7 @@ export const useGetSnowflakeBoundDismissibleContent = function useGetSnowflakeBo
   dependencyMap = groupName;
   closure_4 = newSnowflakeId;
   const obj3 = initialize;
-  tmpResult = tmp(6253);
+  tmpResult = tmp(6262);
   anyOverlayRenderingLocked = tmpResult.useAnyOverlayRenderingLocked();
   const tmp12 = ref((currentlyShown) => {
     let hasItem = null != closure_0;
@@ -801,7 +801,7 @@ export const useGetSnowflakeBoundGuildDismissibleContent_UNSAFE =
     closure_4 = arg1;
     let obj = initialize;
     obj2 = closure_4;
-    tmpResult = tmp(6253);
+    tmpResult = tmp(6262);
     const anyOverlayRenderingLocked = tmpResult.useAnyOverlayRenderingLocked();
     const tmp15 = ref((currentlyShown) => {
       let hasItem = null != closure_0;
@@ -919,7 +919,7 @@ export const useGetTimeRecurringSnowflakeBoundDismissibleContent =
     let React = null;
     let result = null == contentType;
     if (!result) {
-      let tmpResult = tmp(1375);
+      let tmpResult = tmp(1374);
       result = tmpResult.isTimeRecurringSnowflakeBoundDismissibleContentDismissed(
         contentType,
         newSnowflakeId,
@@ -935,7 +935,7 @@ export const useGetTimeRecurringSnowflakeBoundDismissibleContent =
     dependencyMap = groupName;
     closure_4 = newSnowflakeId;
     let obj = initialize;
-    tmpResult = tmp(6253);
+    tmpResult = tmp(6262);
     anyOverlayRenderingLocked = tmpResult.useAnyOverlayRenderingLocked();
     const tmp7 = ref((currentlyShown) => {
       let hasItem = null != closure_0;
@@ -1052,11 +1052,11 @@ export const useGetSingleUseGuildDismissibleContent_UNSAFE = function useGetSing
   let found1 = current;
   closure_1 = CHANNEL_NOTICES;
   const items = [closure_4];
-  const stateFromStores = found1(589).useStateFromStores(items, () =>
+  const stateFromStores = found1(586).useStateFromStores(items, () =>
     closure_1_4.getGuildDismissedContentState(found1),
   );
   dependencyMap = stateFromStores;
-  let obj = found1(589);
+  let obj = found1(586);
   const newUserDismissibleContent = found1(4320).useNewUserDismissibleContent(items4);
   found1 = null;
   if (closure_4.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
@@ -1086,9 +1086,9 @@ export const useGetSingleUseGuildDismissibleContent_UNSAFE = function useGetSing
   closure_1 = current;
   dependencyMap = CHANNEL_NOTICES;
   const obj2 = found1(4320);
-  let tmpResult = tmp(6253);
+  let tmpResult = tmp(6262);
   const anyOverlayRenderingLocked = tmpResult.useAnyOverlayRenderingLocked();
-  tmpResult = tmp(589);
+  tmpResult = tmp(586);
   const stateFromStores1 = tmpResult.useStateFromStores([], () => {});
   const tmp7 = ref((currentlyShown) => {
     let hasItem = null != closure_0;
@@ -1099,7 +1099,7 @@ export const useGetSingleUseGuildDismissibleContent_UNSAFE = function useGetSing
     return hasItem;
   });
   const items1 = [stateFromStores1];
-  const stateFromStores2 = found1(589).useStateFromStores(items1, () => {
+  const stateFromStores2 = found1(586).useStateFromStores(items1, () => {
     let hasUserHitDCCapResult = null != closure_0;
     if (hasUserHitDCCapResult) {
       hasUserHitDCCapResult = stateFromStores1.hasUserHitDCCap(tmp, closure_1);
@@ -1233,7 +1233,7 @@ export const useGetTimeRecurringGuildDismissibleContent_UNSAFE =
     closure_1 = current;
     dependencyMap = GUILD_HEADER_TOOLTIPS;
     let obj = initialize;
-    tmpResult = tmp(6253);
+    tmpResult = tmp(6262);
     const anyOverlayRenderingLocked = tmpResult.useAnyOverlayRenderingLocked();
     const tmp16 = ref((currentlyShown) => {
       let hasItem = null != closure_0;

@@ -30,13 +30,13 @@ obj[4] = function onApply() {
   obj = {};
   ({ goreContentGuilds, goreContentFriendDm, goreContentNonFriendDm } = goreContentSettingOrDefault);
   if (goreContentGuilds === create.ExplicitContentRedaction.SHOW) {
-    obj.goreContentGuilds = tmp(1306).ExplicitContentRedaction.BLUR;
+    obj.goreContentGuilds = tmp(1305).ExplicitContentRedaction.BLUR;
   }
   if (goreContentFriendDm === create.ExplicitContentRedaction.SHOW) {
-    obj.goreContentFriendDm = tmp(1306).ExplicitContentRedaction.BLUR;
+    obj.goreContentFriendDm = tmp(1305).ExplicitContentRedaction.BLUR;
   }
   if (goreContentNonFriendDm === create.ExplicitContentRedaction.SHOW) {
-    obj.goreContentNonFriendDm = tmp(1306).ExplicitContentRedaction.BLUR;
+    obj.goreContentNonFriendDm = tmp(1305).ExplicitContentRedaction.BLUR;
   }
   return obj.updateGoreContentSetting(obj);
 };

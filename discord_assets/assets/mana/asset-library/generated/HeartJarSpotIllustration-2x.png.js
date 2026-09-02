@@ -5,5 +5,5 @@ const result = set.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/HeartJarSpotIllustration-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/a1d7e9efc5bf8fb02fa30fb8e3a1dfecc84e482fa099fdffb0a665eb4576dbcc.png";
-export const metadata = { fileBytes: 33923 };
+export default "https://cdn.discordapp.com/assets/content/de60cad3d73074018608b651067b9394f8994a4124c7da44bb8a0321ad09f681.png";
+export const metadata = { fileBytes: 34555 };

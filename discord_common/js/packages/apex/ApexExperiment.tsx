@@ -24,7 +24,7 @@ export default function createApexExperimentCommon(definition, registerExperimen
       const items = [evaluationAndAssignment];
       const items1 = [tmp, tmp2];
       const tmp3 = callback(
-        evaluationAndAssignment(589).useStateFromStoresArray(
+        evaluationAndAssignment(586).useStateFromStoresArray(
           items,
           () => _location.getEvaluationAndAssignment(revision, closure_1, trackedVariantId, closure_2),
           items1,

@@ -1,13 +1,13 @@
 // discord_app/modules/guild_scheduled_events/native/GuildScheduledEventModalActionCreators.tsx
 import _modDef38 from "../../../../_runtime/metro/00038__.js";
 import getSystemLocale from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/02009_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02008_asyncRequireImpl.js";
 import dispatcherDefault from "../../toast/native/ToastActionCreators.tsx";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import _modDef4723 from "../../../actions/ModalActionCreators.tsx";
 import useAlertStore from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
-import registerAssetDefault from "../../../../_runtime/09594_registerAsset.js";
-import _modDef9673 from "../GuildScheduledEventsActionCreators.tsx";
+import registerAssetDefault from "../../../../_runtime/09607_registerAsset.js";
+import _modDef9686 from "../GuildScheduledEventsActionCreators.tsx";
 import canEveryoneRoleViewEvent from "../useCanInviteForGuildEvent.tsx";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
@@ -38,7 +38,7 @@ function openCreateOrEditGuildEventModal(guild, arg1) {
     obj[0] = guildEvent;
     obj[1] = recurrenceId;
     obj[2] = handleClose;
-    _modDef4723.pushLazy(asyncRequireImpl(9670, dependencyMap.paths), obj, closure_13);
+    _modDef4723.pushLazy(asyncRequireImpl(9683, dependencyMap.paths), obj, closure_13);
     const obj4 = _modDef4723;
   } else {
     obj = ACTION_SHEET_HEIGHT_HALFDefault;
@@ -48,7 +48,7 @@ function openCreateOrEditGuildEventModal(guild, arg1) {
     obj[1] = tmp;
     obj[2] = guildEvent;
     obj[3] = handleClose;
-    _modDef4723.pushLazy(asyncRequireImpl(9695, dependencyMap.paths), obj, closure_13);
+    _modDef4723.pushLazy(asyncRequireImpl(9708, dependencyMap.paths), obj, closure_13);
     const obj2 = _modDef4723;
   }
 }
@@ -150,7 +150,7 @@ export { openCreateOrEditGuildEventModal };
 export const openGuildEventListActionSheet = function openGuildEventListActionSheet(closure_0) {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { guild: closure_0 };
-  obj.openLazy(asyncRequireImpl(9758, dependencyMap.paths), closure_14, obj);
+  obj.openLazy(asyncRequireImpl(9780, dependencyMap.paths), closure_14, obj);
 };
 export const closeGuildEventListActionSheet = function closeGuildEventListActionSheet() {
   ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet(closure_14);
@@ -163,7 +163,7 @@ export const openStartGuildEventModal = function openStartGuildEventModal(
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj.hideAllActionSheets();
   obj = { event, recurrenceId: nextRecurrenceIdInEvent, onCloseActionSheet };
-  _modDef4723.pushLazy(asyncRequireImpl(9898, dependencyMap.paths), obj, closure_15);
+  _modDef4723.pushLazy(asyncRequireImpl(9920, dependencyMap.paths), obj, closure_15);
 };
 export const openDeleteGuildEventActionSheet = function openDeleteGuildEventActionSheet(
   eventId,
@@ -182,7 +182,7 @@ export const openDeleteGuildEventActionSheet = function openDeleteGuildEventActi
 };
 export const updateRsvp = function updateRsvp(arg0, arg1, arg2, arg3) {
   closure_0 = arg3;
-  _modDef9673.updateRsvp(arg0, arg1, arg2, arg3, (arg0) => {
+  _modDef9686.updateRsvp(arg0, arg1, arg2, arg3, (arg0) => {
     let tmp2 = tmp;
     if (null == arg0) {
       tmp2 = callback === closure_1_12.INTERESTED;
@@ -279,7 +279,7 @@ export const openShareEvent = function openShareEvent(event, arg1) {
       if (null != vanityURLCode) {
         if ("" !== guild.vanityURLCode) {
           if (!closure_8.can(constants2.CREATE_INSTANT_INVITE, channel)) {
-            let tmp7Result = tmp7(9909);
+            let tmp7Result = tmp7(9931);
             let obj = { guildScheduledEventId: null, stackingBehavior: "stack" };
             obj[0] = event.id;
             const result1 = tmp7Result.showVanityUrlInviteActionSheet(
@@ -291,7 +291,7 @@ export const openShareEvent = function openShareEvent(event, arg1) {
           }
         }
       }
-      tmp7Result = tmp7(9909);
+      tmp7Result = tmp7(9931);
       obj = { createInvite: null, guildScheduledEventId: null, stackingBehavior: "stack", source: null };
       obj[0] = result;
       obj[1] = event.id;
@@ -303,8 +303,8 @@ export const openShareEvent = function openShareEvent(event, arg1) {
         tmp11 = "" !== arg1;
       }
       if (tmp11) {
-        tmp7(5981).copy(arg1);
-        const tmp7Result1 = tmp7(5981);
+        tmp7(5989).copy(arg1);
+        const tmp7Result1 = tmp7(5989);
         tmp7(4193).presentLinkCopied();
         const tmp7Result2 = tmp7(4193);
       }

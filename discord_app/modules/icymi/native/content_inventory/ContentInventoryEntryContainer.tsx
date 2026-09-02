@@ -1,6 +1,6 @@
 // discord_app/modules/icymi/native/content_inventory/ContentInventoryEntryContainer.tsx
-import set from "../../../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import set from "../../../../utils/PlatformUtils.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../../stores/UserStore.tsx";

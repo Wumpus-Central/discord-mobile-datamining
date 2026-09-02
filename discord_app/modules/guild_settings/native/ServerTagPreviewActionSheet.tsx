@@ -21,7 +21,7 @@ const result = require("set").fileFinishedImporting("modules/guild_settings/nati
 
 export default function ServerTagPreviewActionSheet(guildId) {
   guildId = guildId.guildId;
-  let obj = guildId(9011);
+  let obj = guildId(9025);
   let guildProfile = obj.useGuildProfile(guildId);
   guildProfile = guildProfile.guildProfile;
   const items = [guildId];
@@ -50,12 +50,12 @@ export default function ServerTagPreviewActionSheet(guildId) {
     obj = { style: null, children: null };
     obj[0] = tmp.error;
     obj1 = { variant: "text-md/medium", color: "text-muted", children: null };
-    const intl = tmp2(1236).intl;
-    obj1[2] = intl.string(tmp2(1236).t.tmGHjc);
+    const intl = tmp2(1233).intl;
+    obj1[2] = intl.string(tmp2(1233).t.tmGHjc);
     const items1 = [callback(tmp2(4474).Text, obj1)];
     const obj2 = { variant: "secondary", text: null, onPress: null };
-    const intl2 = tmp2(1236).intl;
-    obj2[1] = intl2.string(tmp2(1236).t["5911Lb"]);
+    const intl2 = tmp2(1233).intl;
+    obj2[1] = intl2.string(tmp2(1233).t["5911Lb"]);
     obj2[2] = function onPress() {
       return guildId(closure_1_2[7]).getGuildProfile(guildId, true);
     };
@@ -64,14 +64,14 @@ export default function ServerTagPreviewActionSheet(guildId) {
     tmp7 = callback2(View, obj);
     tmp8 = callback;
   } else {
-    tmp7 = callback(tmp2(6047).SceneLoadingIndicator, {});
+    tmp7 = callback(tmp2(6055).SceneLoadingIndicator, {});
     tmp8 = callback;
   }
   const obj3 = { children: null };
   const obj4 = { title: null };
-  const intl3 = tmp2(1236).intl;
-  obj4[0] = intl3.string(guildId(1236).t["2QmKZ2"]);
-  const items2 = [tmp8(guildId(5621).BottomSheetTitleHeader, obj4), tmp7];
+  const intl3 = tmp2(1233).intl;
+  obj4[0] = intl3.string(guildId(1233).t["2QmKZ2"]);
+  const items2 = [tmp8(guildId(5629).BottomSheetTitleHeader, obj4), tmp7];
   obj3[0] = items2;
-  return callback2(guildId(5989).ActionSheet, obj3);
+  return callback2(guildId(5997).ActionSheet, obj3);
 }

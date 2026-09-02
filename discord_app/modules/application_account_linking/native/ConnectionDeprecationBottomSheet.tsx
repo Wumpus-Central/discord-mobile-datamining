@@ -196,7 +196,7 @@ export const useShouldShowConnectionDeprecationBottomSheet = function useShouldS
 ) {
   deprecatedPlatformTypes = deprecatedPlatformTypes.deprecatedPlatformTypes;
   const items = [closure_6];
-  const stateFromStoresObject = deprecatedPlatformTypes(589).useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = deprecatedPlatformTypes(586).useStateFromStoresObject(items, () => {
     const obj = { fetchingConnections: closure_1_6.isFetching(), matchingPlatform: null };
     const accounts = closure_1_6.getAccounts();
     const mapped = accounts.map((type) => callback(table[11]).get(type.type));
@@ -214,7 +214,7 @@ export const useShouldShowConnectionDeprecationBottomSheet = function useShouldS
     return obj;
   });
   ({ fetchingConnections, matchingPlatform } = stateFromStoresObject);
-  let obj = deprecatedPlatformTypes(589);
+  let obj = deprecatedPlatformTypes(586);
   let replacedBy;
   if (matchingPlatform != null) {
     let migrationData = matchingPlatform.migrationData;
@@ -222,7 +222,7 @@ export const useShouldShowConnectionDeprecationBottomSheet = function useShouldS
       replacedBy = migrationData.replacedBy;
     }
   }
-  const getOrFetchApplication = deprecatedPlatformTypes(5959).useGetOrFetchApplication(replacedBy);
+  const getOrFetchApplication = deprecatedPlatformTypes(5967).useGetOrFetchApplication(replacedBy);
   const tmp5 = useStartAuthorizeDefault(getOrFetchApplication);
   ({ hasAlreadyLinked, canStartAuthorization } = tmp5);
   if (!fetchingConnections) {

@@ -101,7 +101,7 @@ function _joinGuild() {
                 let channelId;
                 c7 = 1;
                 sessionId = 1;
-                return { value: "PX_16", done: null };
+                return { value: "PX_16", done: true };
               }
             } else if (1 === tmp7) {
               if (arg0 === 1) {
@@ -1007,7 +1007,7 @@ export default {
           startsWithResult = icon.startsWith("data:");
         }
       }
-      const HTTP = closure_1_0(530).HTTP;
+      const HTTP = closure_1_0(527).HTTP;
       obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
       obj1[0] = closure_1_16.GUILD_ROLE(closure_1_0, closure_1_1);
       const obj2 = {};
@@ -1015,10 +1015,10 @@ export default {
       obj2.icon = tmp13;
       obj2.unicode_emoji = c2.unicodeEmoji;
       obj1[1] = obj2;
-      const obj5 = closure_1_0(530);
+      const obj5 = closure_1_0(527);
       obj1[3] = obj5.rejectWithMigratedError();
       closure_0 = yield HTTP.patch(obj1);
-      const obj = closure_1_1(6168);
+      const obj = closure_1_1(6176);
       const result = obj.checkGuildTemplateDirty(closure_0);
       return closure_0;
     })();
@@ -1044,13 +1044,13 @@ export default {
     return callback(function* () {
       closure_1 = tmp2;
       closure_0 = tmp5;
-      const HTTP = closure_1_0(530).HTTP;
+      const HTTP = closure_1_0(527).HTTP;
       obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
       obj1[0] = closure_1_16.GUILD_CHANNELS(closure_1_0);
       obj1[1] = closure_1_1;
-      obj1[3] = closure_1_0(530).rejectWithMigratedError();
+      obj1[3] = closure_1_0(527).rejectWithMigratedError();
       closure_0 = yield HTTP.patch(obj1);
-      const obj = closure_1_1(6168);
+      const obj = closure_1_1(6176);
       const result = obj.checkGuildTemplateDirty(closure_0);
       return closure_0;
     })();
@@ -1061,13 +1061,13 @@ export default {
     return callback(function* () {
       closure_1 = tmp2;
       closure_0 = tmp5;
-      const HTTP = closure_1_0(530).HTTP;
+      const HTTP = closure_1_0(527).HTTP;
       obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
       obj1[0] = closure_1_16.GUILD_ROLES(closure_1_0);
       obj1[1] = closure_1_1;
-      obj1[3] = closure_1_0(530).rejectWithMigratedError();
+      obj1[3] = closure_1_0(527).rejectWithMigratedError();
       closure_0 = yield HTTP.patch(obj1);
-      const obj = closure_1_1(6168);
+      const obj = closure_1_1(6176);
       const result = obj.checkGuildTemplateDirty(closure_0);
       return closure_0;
     })();
@@ -1199,9 +1199,9 @@ export default {
         const defaultChannel = store.getDefaultChannel(guildId);
         if (null != defaultChannel) {
           if (!obj3.isChannelContentGated(defaultChannel)) {
-            let tmp11Result = tmp11(6174);
+            let tmp11Result = tmp11(6182);
             if (!tmp11Result.isChannelSpoilerGated(defaultChannel)) {
-              tmp11Result = tmp11(1222);
+              tmp11Result = tmp11(1219);
               tmp11Result.transitionTo(closure_21.CHANNEL(guildId, defaultChannel.id));
             }
           }
@@ -1273,13 +1273,13 @@ export default {
               body = undefined;
               obj1 = { url: null, oldFormErrors: true, rejectWithError: null };
               obj1[0] = closure_1_16.GUILD_APPLICATIONS(closure_1_0);
-              obj1[2] = closure_1_0(530).rejectWithMigratedError();
+              obj1[2] = closure_1_0(527).rejectWithMigratedError();
               if (null != closure_1_1) {
                 const obj2 = { channel_id: null };
                 obj2[0] = tmp24;
                 obj1.query = obj2;
               }
-              const HTTP = closure_1_0(530).HTTP;
+              const HTTP = closure_1_0(527).HTTP;
               c2 = 1;
               dependencyMap = 1;
               const obj3 = { value: null, done: false };
@@ -1296,7 +1296,7 @@ export default {
             return obj4;
           } else {
             body = arg1.body;
-            obj = closure_1_1(709);
+            obj = closure_1_1(706);
             const obj5 = { type: "GUILD_APPLICATIONS_FETCH_SUCCESS", guildId: null, applications: null };
             obj5[1] = body;
             obj5[2] = body;

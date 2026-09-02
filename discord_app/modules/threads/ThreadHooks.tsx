@@ -13,6 +13,31 @@ import importDefaultResult from "../experiments/createExperiment.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
+function useCanStartPrivateThread(type) {
+  const _require = type;
+  const items = [closure_8];
+  const items1 = [type];
+  let tmp3 = type.type === constants3.GUILD_TEXT;
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => closure_1_8.can(closure_1_2(closure_1_3[9]).combine(closure_1_10.CREATE_PRIVATE_THREADS), closure_0),
+    items1,
+  );
+  if (!tmp3) {
+    tmp3 = type.type === tmp2.GUILD_APP;
+  }
+  if (tmp3) {
+    let flag = false;
+    if (stateFromStores) {
+      flag = false;
+      if (THREADED_CHANNEL_TYPES.has(type.type)) {
+        flag = true;
+      }
+    }
+    tmp3 = flag;
+  }
+  return tmp3;
+}
 function useCanUnarchiveThread(channel) {
   let _require = channel;
   const items = [closure_8];
@@ -193,23 +218,7 @@ export const computeCanStartPublicThread = function computeCanStartPublicThread(
   }
   return flag;
 };
-export const useCanStartPrivateThread = function useCanStartPrivateThread(type) {
-  const _require = type;
-  initialize;
-  [][0] = type;
-  let tmp3 = type.type === constants3.GUILD_TEXT;
-  if (tmp3) {
-    let flag = false;
-    if (tmp2) {
-      flag = false;
-      if (THREADED_CHANNEL_TYPES.has(type.type)) {
-        flag = true;
-      }
-    }
-    tmp3 = flag;
-  }
-  return tmp3;
-};
+export { useCanStartPrivateThread };
 export const computeCanStartPrivateThread = function computeCanStartPrivateThread(type, hasFlag) {
   let flag = false;
   if (closure_8.can(constants.CREATE_PRIVATE_THREADS, type)) {
@@ -230,7 +239,7 @@ export const computeCanStartPrivateThread = function computeCanStartPrivateThrea
   return flag;
 };
 export const useCanStartThread = function useCanStartThread(channel) {
-  let _require = channel;
+  const _require = channel;
   const items = [closure_8];
   const items1 = [channel];
   let flag = false;
@@ -257,22 +266,8 @@ export const useCanStartThread = function useCanStartThread(channel) {
       flag = true;
     }
   }
-  _require = channel;
-  initialize;
-  [][0] = channel;
-  let tmp6 = channel.type === constants3.GUILD_TEXT;
-  if (tmp6) {
-    let flag2 = false;
-    if (tmp5) {
-      flag2 = false;
-      if (THREADED_CHANNEL_TYPES.has(channel.type)) {
-        flag2 = true;
-      }
-    }
-    tmp6 = flag2;
-  }
   if (!flag) {
-    flag = tmp6;
+    flag = useCanStartPrivateThread(channel);
   }
   return flag;
 };
@@ -581,7 +576,7 @@ export const useCanJoinThreadVoice = function useCanJoinThreadVoice(channel) {
   }
   obj = { guildId: channel.guild_id, location: "e791ea_1" };
   let enabled = importDefaultResultResult.useExperiment(obj, { autoTrackExposure: false }).enabled;
-  let tmp3Result = tmp3(6119);
+  let tmp3Result = tmp3(6127);
   const isGameInvitesPost = tmp3Result.useIsGameInvitesPost(channel);
   tmp3Result = tmp3(4731);
   let shouldAgeVerifyForAgeGate = tmp3Result.useShouldAgeVerifyForAgeGate();

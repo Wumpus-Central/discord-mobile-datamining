@@ -36,11 +36,11 @@ export default function MutedUntilText(arg0) {
       }
       obj = { style: null, variant: "text-sm/medium", color: "text-muted", children: null };
       obj[0] = tmp.formHintText;
-      const intl5 = tmp15(1236).intl;
+      const intl5 = tmp15(1233).intl;
       obj = { endTime: null, endTimeHook: null };
       const _Date = Date;
       const date = new Date(muteConfig.end_time);
-      obj[0] = date.toLocaleString(tmp15(1236).intl.currentLocale, {
+      obj[0] = date.toLocaleString(tmp15(1233).intl.currentLocale, {
         month: "numeric",
         day: "numeric",
         hour: "numeric",

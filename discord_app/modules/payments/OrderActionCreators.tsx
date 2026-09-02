@@ -49,7 +49,7 @@ function _signOrder() {
               c4 = undefined;
               c5 = 1;
               c6 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -66,7 +66,7 @@ function _signOrder() {
                 c4.expected_revision = dependencyMap;
               }
               c4 = 1;
-              const HTTP = callback(530).HTTP;
+              const HTTP = callback(527).HTTP;
               const obj2 = { url: null, body: null, context: null, rejectWithError: true };
               obj2[0] = closure_3.ORDER_SIGN(callback);
               obj2[1] = c4;
@@ -88,7 +88,7 @@ function _signOrder() {
           } else if (2 === tmp7) {
             c4 = 0;
             c5 = closure_3;
-            if (c5 instanceof callback(530).HTTPResponseError) {
+            if (c5 instanceof callback(527).HTTPResponseError) {
               if (400 === c5.status) {
                 if ((function isOrderShape(body) {
                   let tmp = null != body && typeof body === "object";

@@ -75,7 +75,7 @@ obj[2] = function handler(socket) {
     const tmp10 = new prototypeDefault(obj, "No application.");
     throw tmp10;
   } else {
-    obj = devices(14124);
+    obj = devices(14347);
     obj.setCertifiedDevices(
       socket.application.id,
       devices.map((type) => {

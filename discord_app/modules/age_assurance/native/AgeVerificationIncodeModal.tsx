@@ -39,13 +39,13 @@ export default function AgeVerificationIncodeModal(webviewUrl) {
       },
       headerLeft() {
         const obj = { onPress: handleClose, text: null };
-        const intl = callback(1236).intl;
-        obj[1] = intl.string(callback(1236).t.cpT0Cq);
-        return handleClose(callback(6237).HeaderActionButton, obj);
+        const intl = callback(1233).intl;
+        obj[1] = intl.string(callback(1233).t.cpT0Cq);
+        return handleClose(callback(6246).HeaderActionButton, obj);
       },
       render(arg0, arg1) {
         closure_0 = arg1;
-        return handleClose(callback2(8687), {
+        return handleClose(callback2(8702), {
           onClose: handleClose,
           trustedOrigin: origin,
           onMethodSelected(injectedJavaScriptBeforeContentLoaded) {
@@ -59,12 +59,12 @@ export default function AgeVerificationIncodeModal(webviewUrl) {
       headerTitle: handleClose,
       headerLeft() {
         const obj = { onPress: handleClose, text: null };
-        const intl = callback(1236).intl;
-        obj[1] = intl.string(callback(1236).t.cpT0Cq);
-        return handleClose(callback(6237).HeaderActionButton, obj);
+        const intl = callback(1233).intl;
+        obj[1] = intl.string(callback(1233).t.cpT0Cq);
+        return handleClose(callback(6246).HeaderActionButton, obj);
       },
       render(injectedJavaScriptBeforeContentLoaded) {
-        return handleClose(callback2(8694), {
+        return handleClose(callback2(8709), {
           webviewUrl: closure_0,
           onComplete: callback2,
           onClose: handleClose,

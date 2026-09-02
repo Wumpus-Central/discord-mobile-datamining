@@ -1,5 +1,5 @@
 // discord_app/modules/game_profile/native/components/GameProfileHorizontalScrollView.tsx
-import LegacyBaseButton from "../../../../../_runtime/05652_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05660_LegacyBaseButton.js";
 import { ScrollView } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";

@@ -15,7 +15,7 @@ function CreateGameInvitePostContent(parentChannel) {
   dependencyMap = undefined;
   let noMicTag;
   const tmp = callback3();
-  const insets = first(5594)({ includeKeyboardHeight: true }).insets;
+  const insets = first(5602)({ includeKeyboardHeight: true }).insets;
   let availableTags = parentChannel.availableTags;
   if (availableTags == null) {
     availableTags = [];
@@ -26,7 +26,7 @@ function CreateGameInvitePostContent(parentChannel) {
   dependencyMap = tmp7[1];
   let items = [first];
   const memo = React.useMemo(() => new Set(first.map((id) => id.id)), items);
-  let obj = parentChannel(12310);
+  let obj = parentChannel(12534);
   obj = {
     parentChannel,
     description: tmp5,
@@ -76,34 +76,34 @@ function CreateGameInvitePostContent(parentChannel) {
     onPress: null,
     children: null,
   };
-  let intl = parentChannel(1236).intl;
-  obj2[2] = intl.string(parentChannel(1236).t.cpT0Cq);
+  let intl = parentChannel(1233).intl;
+  obj2[2] = intl.string(parentChannel(1233).t.cpT0Cq);
   obj2[3] = function onPress() {
     return parentChannel(lib[10]).closeCreateGameInvitePostModal();
   };
-  obj2[4] = callback(parentChannel(5551).XSmallIcon, {});
-  const items4 = [callback(parentChannel(5068).PressableOpacity, obj2)];
+  obj2[4] = callback(parentChannel(5559).XSmallIcon, {});
+  const items4 = [callback(parentChannel(5076).PressableOpacity, obj2)];
   const obj3 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl2 = parentChannel(1236).intl;
-  obj3[2] = intl2.string(first(3437).tOsHsu);
+  const intl2 = parentChannel(1233).intl;
+  obj3[2] = intl2.string(first(3436).tOsHsu);
   items4[1] = callback(parentChannel(4474).Text, obj3);
   obj1[1] = items4;
   const items5 = [callback2(View, obj1), ,];
   const obj4 = { style: tmp.body, children: null };
   const obj5 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, autoFocus: true };
-  const intl3 = parentChannel(1236).intl;
-  obj5[0] = intl3.string(first(3437)["/mEbGf"]);
-  const intl4 = parentChannel(1236).intl;
-  obj5[1] = intl4.string(first(3437)["SU/IAE"]);
+  const intl3 = parentChannel(1233).intl;
+  obj5[0] = intl3.string(first(3436)["/mEbGf"]);
+  const intl4 = parentChannel(1233).intl;
+  obj5[1] = intl4.string(first(3436)["SU/IAE"]);
   obj5[2] = tmp5;
   obj5[3] = tmp6;
-  obj5[4] = parentChannel(6119).GAME_INVITE_POST_MESSAGE_MAX_LENGTH;
-  const items6 = [callback(parentChannel(7808).TextArea, obj5)];
+  obj5[4] = parentChannel(6127).GAME_INVITE_POST_MESSAGE_MAX_LENGTH;
+  const items6 = [callback(parentChannel(7817).TextArea, obj5)];
   let tmp15Result = availableTags.length > 0;
   if (tmp15Result) {
     const obj6 = { label: null, subLabel: null, arrow: true, trailing: null, onPress: null };
-    const intl5 = tmp9(1236).intl;
-    obj6[0] = intl5.string(tmp9(1236).t.KM6lRG);
+    const intl5 = tmp9(1233).intl;
+    obj6[0] = intl5.string(tmp9(1233).t.KM6lRG);
     let joined;
     if (first.length > 0) {
       const mapped = first.map((name) => name.name);
@@ -117,21 +117,21 @@ function CreateGameInvitePostContent(parentChannel) {
     obj7[1] = tmp15(tmp9(4474).Text, obj8);
     obj6[3] = tmp15(tmp14, obj7);
     obj6[4] = callback1;
-    tmp15Result = tmp15(tmp9(5599).TableRow, obj6);
+    tmp15Result = tmp15(tmp9(5607).TableRow, obj6);
   }
   const obj9 = { hasIcons: false, children: null };
   const items7 = [tmp15Result];
   const obj10 = { label: null, subLabel: null, value: null, onValueChange: null, disabled: null };
-  const intl6 = tmp9(1236).intl;
-  obj10[0] = intl6.string(first(3437).Xd2NFi);
-  const intl7 = tmp9(1236).intl;
-  obj10[1] = intl7.string(first(3437).G91SYQ);
+  const intl6 = tmp9(1233).intl;
+  obj10[0] = intl6.string(first(3436).Xd2NFi);
+  const intl7 = tmp9(1233).intl;
+  obj10[1] = intl7.string(first(3436).G91SYQ);
   obj10[2] = voiceChatEnabled;
   obj10[3] = callback;
   obj10[4] = voiceToggleDisabled;
-  items7[1] = callback(parentChannel(5993).TableSwitchRow, obj10);
+  items7[1] = callback(parentChannel(6001).TableSwitchRow, obj10);
   obj9[1] = items7;
-  items6[1] = callback2(parentChannel(5992).TableRowGroup, obj9);
+  items6[1] = callback2(parentChannel(6000).TableRowGroup, obj9);
   obj4[1] = items6;
   items5[1] = callback2(View, obj4);
   const obj11 = { style: items8, children: null };
@@ -145,8 +145,8 @@ function CreateGameInvitePostContent(parentChannel) {
     disabled: null,
     onPress: null,
   };
-  const intl8 = tmp9(1236).intl;
-  obj12[3] = intl8.string(parentChannel(1236).t.CumH4u);
+  const intl8 = tmp9(1233).intl;
+  obj12[3] = intl8.string(parentChannel(1233).t.CumH4u);
   obj12[4] = submitting;
   obj12[5] = !canSubmit;
   obj12[6] = submit;
@@ -199,11 +199,11 @@ let result = require("set").fileFinishedImporting("modules/game_invite_channels/
 
 export default function CreateGameInvitePostModal(parentChannelId) {
   parentChannelId = parentChannelId.parentChannelId;
-  let obj = parentChannelId(589);
+  let obj = parentChannelId(586);
   const items = [closure_6];
   const items1 = [parentChannelId];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getChannel(parentChannelId), items1);
-  parentChannelId(5501).useNavigatorBackPressHandler(() => {
+  parentChannelId(5509).useNavigatorBackPressHandler(() => {
     const result = parentChannelId(table[10]).closeCreateGameInvitePostModal();
     return true;
   });
@@ -216,7 +216,7 @@ export default function CreateGameInvitePostModal(parentChannelId) {
       obj = { parentChannel: null };
       obj[0] = stateFromStores;
       obj[1] = callback(CreateGameInvitePostContent, obj);
-      tmp4 = callback(parentChannelId(5953).AnalyticsLocationProvider, obj);
+      tmp4 = callback(parentChannelId(5961).AnalyticsLocationProvider, obj);
     }
   }
   return tmp4;

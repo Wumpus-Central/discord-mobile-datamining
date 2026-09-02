@@ -6,10 +6,10 @@ import Button from "../../../../design/components/Button/native/Button.native.ts
 import MagnifyingGlassIcon from "../../../../design/components/Icon/native/redesign/generated/MagnifyingGlassIcon.tsx";
 import TTIFirstContentfulPaint from "../../../tti_analytics/native/TTIFirstContentfulPaint.tsx";
 import useCanManageGuildDirectoryEntry from "../../useCanManageGuildDirectoryEntry.tsx";
-import _modDef11902 from "GuildDirectoryRow.tsx";
-import _modDef11903 from "GuildDirectoryPlaceholderRow.tsx";
+import _modDef12125 from "GuildDirectoryRow.tsx";
+import _modDef12126 from "GuildDirectoryPlaceholderRow.tsx";
 import RowType from "../GuildDirectoryRowGenerator.tsx";
-import registerAsset from "../../../../../_runtime/12209_registerAsset.js";
+import registerAsset from "../../../../../_runtime/12433_registerAsset.js";
 import HubProgressHeaderDefault from "../../../hub/native/components/progress_bar/HubProgressHeader.tsx";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -54,9 +54,9 @@ function renderItem(item) {
   } else if (RowType.RowType.ENTRY === type) {
     obj = { entry: null };
     obj[0] = item.entry;
-    return callback(_modDef11902, obj);
+    return callback(_modDef12125, obj);
   } else {
-    return callback(_modDef11903, {});
+    return callback(_modDef12126, {});
   }
   const tmp2 = require;
 }
@@ -122,8 +122,8 @@ function GuildDirectoryFooter(hideFooter) {
     tmp4 = null;
     if (!hideFooter.hideFooter) {
       obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
-      const intl = tmp2(1236).intl;
-      obj[1] = intl.string(tmp2(1236).t.H9jxS1);
+      const intl = tmp2(1233).intl;
+      obj[1] = intl.string(tmp2(1233).t.H9jxS1);
       obj[2] = function onPress() {
         let obj = channel(closure_1_3[24]);
         obj = { directoryGuildName: user.name, directoryGuildId: user.id, directoryChannelId: channel.id };
@@ -133,15 +133,15 @@ function GuildDirectoryFooter(hideFooter) {
       obj[0] = tmp.footer;
       obj1 = { style: null, children: null };
       obj1[0] = tmp.addIcon;
-      obj1[1] = callback(tmp2(12291).PlusMediumIcon, {});
+      obj1[1] = callback(tmp2(12515).PlusMediumIcon, {});
       const items = [callback(closure_5, obj1)];
       const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-      const intl2 = tmp2(1236).intl;
-      obj2[2] = intl2.string(tmp2(1236).t.H9jxS1);
+      const intl2 = tmp2(1233).intl;
+      obj2[2] = intl2.string(tmp2(1233).t.H9jxS1);
       items[1] = callback(tmp2(4474).Text, obj2);
       obj[1] = items;
       obj[3] = callback2(closure_5, obj);
-      tmp4 = callback(tmp2(5068).PressableOpacity, obj);
+      tmp4 = callback(tmp2(5076).PressableOpacity, obj);
     }
   }
   return tmp4;
@@ -222,22 +222,22 @@ export default function GuildDirectory(channel) {
     }
   }
   let tmp = callback3();
-  let obj = channel(589);
+  let obj = channel(586);
   const items = [allEntriesCount];
   onPressSearch = obj.useStateFromStores(items, () => allEntriesCount.getGuild(guildId));
   obj1 = React;
   dependencyMap = React.useRef(null);
-  let bottom = guildId(1628)().bottom;
-  let obj2 = channel(12207);
+  let bottom = guildId(1627)().bottom;
+  let obj2 = channel(12431);
   const hubProgressBarCompletedSteps = obj2.useHubProgressBarCompletedSteps(onPressSearch);
-  let obj3 = channel(12207);
+  let obj3 = channel(12431);
   if (null == obj3.getNextHubProgressStep(hubProgressBarCompletedSteps)) {
     let sum = _location;
   } else {
     sum = history + _location;
   }
   React = sum;
-  let tmp2Result = tmp2(589);
+  let tmp2Result = tmp2(586);
   const items1 = [ref];
   const stateFromStoresObject = tmp2Result.useStateFromStoresObject(items1, () => {
     let obj = ref;
@@ -377,8 +377,8 @@ export default function GuildDirectory(channel) {
         obj2 = { guild: null, channel: null };
         obj2[0] = onPressSearch;
         obj2[1] = channel;
-        items9[1] = callback(guildId(12292), obj2);
-        items9[2] = callback(tmp2(11463).TTIFirstContentfulPaint, { label: "guild_directory_empty" });
+        items9[1] = callback(guildId(12516), obj2);
+        items9[2] = callback(tmp2(11686).TTIFirstContentfulPaint, { label: "guild_directory_empty" });
         obj[1] = items9;
         let tmp23 = callback2(currentCategoryId, obj);
       }

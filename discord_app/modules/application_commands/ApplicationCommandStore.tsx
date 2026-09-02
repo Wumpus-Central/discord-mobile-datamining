@@ -101,8 +101,8 @@ function handleSetActiveCommand(arg0) {
       obj[5] = query;
       obj[6] = searchResultsPosition;
       obj[7] = source;
-      obj(7266).trackCommandSelected(obj);
-      const obj3 = obj(7266);
+      obj(7275).trackCommandSelected(obj);
+      const obj3 = obj(7275);
     }
     return true;
   }

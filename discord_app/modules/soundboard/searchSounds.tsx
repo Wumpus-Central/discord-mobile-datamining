@@ -1,5 +1,5 @@
 // discord_app/modules/soundboard/searchSounds.tsx
-import debounceDefault from "../../../_runtime/00636_debounce.js";
+import debounceDefault from "../../../_runtime/00633_debounce.js";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import closure_3 from "../emojis/EmojiStore.tsx";
 import ME from "../../Constants.tsx";
@@ -98,8 +98,8 @@ export const searchSounds = function searchSounds(arg0, availableSounds, stateFr
     }
     let result1 = sum6 > 0;
     if (0 < sum6) {
-      result1 = lib(6188).canUseSoundboardSound(stateFromStores, name, tmp3);
-      const obj4 = lib(6188);
+      result1 = lib(6197).canUseSoundboardSound(stateFromStores, name, tmp3);
+      const obj4 = lib(6197);
     }
     let sum7 = sum6;
     if (result1) {

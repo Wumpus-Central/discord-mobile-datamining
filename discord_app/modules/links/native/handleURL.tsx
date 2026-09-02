@@ -131,7 +131,7 @@ function _handleURL() {
               };
               c7 = 1;
               v0 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else {
             if (1 === tmp8) {

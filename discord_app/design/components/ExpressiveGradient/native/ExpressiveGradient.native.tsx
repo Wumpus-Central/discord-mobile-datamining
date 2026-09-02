@@ -1,6 +1,6 @@
 // discord_app/design/components/ExpressiveGradient/native/ExpressiveGradient.native.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
-import nDefault from "../../../../../_runtime/00689_n.js";
+import nDefault from "../../../../../_runtime/00686_n.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import map from "../../../tokens/native/useToken.tsx";
 import LinearGradientDefault from "../../../../../_runtime/04940_LinearGradient.js";

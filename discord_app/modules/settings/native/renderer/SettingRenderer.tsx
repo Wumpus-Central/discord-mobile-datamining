@@ -7,7 +7,7 @@ import context2 from "../../../../design/components/TableRow/native/TableRadioGr
 import ClydeIcon from "../../../../design/components/Icon/native/redesign/generated/ClydeIcon.tsx";
 import VolumeSliderDefault from "../../../../components_native/common/VolumeSlider.tsx";
 import useHighlightSettingItem from "hooks/useHighlightSettingItem.tsx";
-import _modDef14347 from "SettingListItemHighlight.tsx";
+import _modDef14570 from "SettingListItemHighlight.tsx";
 import closure_5 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_6 from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
@@ -44,7 +44,7 @@ class GuildSelectDefaultIcon {
 }
 function ForceSwitchIcons(children) {
   let context;
-  context = importAllResult.useContext(context(1356).AccessibilityPreferencesContext);
+  context = importAllResult.useContext(context(1355).AccessibilityPreferencesContext);
   const items = [context];
   const value = importAllResult.useMemo(() => {
     const obj = {};
@@ -52,7 +52,7 @@ function ForceSwitchIcons(children) {
     obj.switchIconsEnabled = true;
     return obj;
   }, items);
-  return callback3(context(1356).AccessibilityPreferencesContext.Provider, { value, children: children.children });
+  return callback3(context(1355).AccessibilityPreferencesContext.Provider, { value, children: children.children });
 }
 function SettingSearchResultBreadcrumbs(breadcrumbs) {
   breadcrumbs = breadcrumbs.breadcrumbs;
@@ -334,27 +334,27 @@ let closure_20 = importAllResult.memo((useSelectedGuildId) => {
   closure_1 = undefined;
   dependencyMap = undefined;
   selectedGuildId = useSelectedGuildId.useSelectedGuildId();
-  let obj = selectedGuildId(589);
+  let obj = selectedGuildId(586);
   const items = [closure_11];
   closure_1 = obj.useStateFromStores(items, () => closure_1_11.getGuild(selectedGuildId));
   const items1 = [closure_11];
-  const stateFromStores = selectedGuildId(589).useStateFromStores(items1, () => closure_1_11.getGuild(selectedGuildId));
+  const stateFromStores = selectedGuildId(586).useStateFromStores(items1, () => closure_1_11.getGuild(selectedGuildId));
   if (selectedGuildId === closure_12) {
-    const intl2 = tmp3(1236).intl;
-    let stringResult = intl2.string(tmp3(1236).t.OMVg25);
+    const intl2 = tmp3(1233).intl;
+    let stringResult = intl2.string(tmp3(1233).t.OMVg25);
   } else {
     stringResult = undefined;
     if (stateFromStores != null) {
       stringResult = stateFromStores.name;
     }
     if (stringResult == null) {
-      const intl = tmp3(1236).intl;
-      stringResult = intl.string(tmp3(1236).t["XBwns+"]);
+      const intl = tmp3(1233).intl;
+      stringResult = intl.string(tmp3(1233).t["XBwns+"]);
     }
   }
   dependencyMap = stringResult;
   const items2 = [stringResult];
-  const obj2 = selectedGuildId(589);
+  const obj2 = selectedGuildId(586);
   obj = {};
   const callback = importAllResult.useCallback(() => c2, items2);
   const merged1 = Object.assign(merged);
@@ -410,7 +410,7 @@ let closure_21 = importAllResult.memo((arg0) => {
     obj = { IconComponent: null, variant: null };
     obj[0] = IconComponent;
     obj[1] = variant;
-    tmp10Result = tmp10(tmp(5599).TableRow.Icon, obj);
+    tmp10Result = tmp10(tmp(5607).TableRow.Icon, obj);
   }
   obj[4] = tmp10Result;
   obj[5] = onPress;
@@ -421,7 +421,7 @@ let closure_21 = importAllResult.memo((arg0) => {
     if (typeof trailing === "string") {
       obj1 = { text: null };
       obj1[0] = trailing;
-      tmp10Result = tmp10(tmp(5599).TableRow.TrailingText, obj1);
+      tmp10Result = tmp10(tmp(5607).TableRow.TrailingText, obj1);
     }
     tmp12 = tmp10Result;
   }
@@ -433,7 +433,7 @@ let closure_21 = importAllResult.memo((arg0) => {
     const obj2 = { start: null, end: null };
     obj2[0] = start;
     obj2[1] = end;
-    highlightSettingItem = tmp10(_modDef14347, obj2);
+    highlightSettingItem = tmp10(_modDef14570, obj2);
   }
   children[1] = highlightSettingItem;
   return closure_16(closure_15, { children });
@@ -469,7 +469,7 @@ let closure_22 = importAllResult.memo((arg0) => {
     obj = { IconComponent: null, variant: null };
     obj[0] = IconComponent;
     obj[1] = variant;
-    tmp8Result = tmp8(tmp(5599).TableRow.Icon, obj);
+    tmp8Result = tmp8(tmp(5607).TableRow.Icon, obj);
   }
   obj[2] = tmp8Result;
   obj[3] = value;
@@ -478,7 +478,7 @@ let closure_22 = importAllResult.memo((arg0) => {
   obj[6] = onValueChange;
   obj[7] = start;
   obj[8] = end;
-  tmp8Result = tmp8(tmp(5993).TableSwitchRow, obj);
+  tmp8Result = tmp8(tmp(6001).TableSwitchRow, obj);
   let tmp8Result1 = tmp8Result;
   if (true === hasIcon) {
     obj1 = { children: null };
@@ -490,7 +490,7 @@ let closure_22 = importAllResult.memo((arg0) => {
     const obj2 = { start: null, end: null };
     obj2[0] = start;
     obj2[1] = end;
-    highlightSettingItem = tmp8(_modDef14347, obj2);
+    highlightSettingItem = tmp8(_modDef14570, obj2);
   }
   children[1] = highlightSettingItem;
   return closure_16(closure_15, { children });
@@ -530,7 +530,7 @@ let closure_24 = importAllResult.memo((arg0) => {
   if (highlightSettingItem) {
     obj = { start: true, end: true, style: null };
     obj[2] = tmp.radioSettingHighlight;
-    highlightSettingItem = callback3(_modDef14347, obj);
+    highlightSettingItem = callback3(_modDef14570, obj);
   }
   children[1] = highlightSettingItem;
   return closure_16(closure_15, { children });
@@ -539,7 +539,7 @@ let closure_25 = importAllResult.memo((arg0) => {
   ({ variant, useTrailing, useIsDisabled, useDescription, start, end, IconComponent } = arg0);
   let trailing;
   ({ setting, useTitle } = arg0);
-  let obj = trailing(14346);
+  let obj = trailing(14569);
   let highlightSettingItem = obj.useHighlightSettingItem(setting);
   trailing = undefined;
   const title = useTitle();
@@ -586,24 +586,24 @@ let closure_25 = importAllResult.memo((arg0) => {
     obj = { IconComponent: null, variant: null };
     obj[0] = IconComponent;
     obj[1] = variant;
-    tmp11Result = tmp11(tmp(5599).TableRow.Icon, obj);
+    tmp11Result = tmp11(tmp(5607).TableRow.Icon, obj);
   }
   obj[5] = tmp11Result;
   tmp11Result = null;
   if (null != trailing) {
     obj1 = { text: null };
     obj1[0] = trailing;
-    tmp11Result = tmp11(tmp(5599).TableRow.TrailingText, obj1);
+    tmp11Result = tmp11(tmp(5607).TableRow.TrailingText, obj1);
   }
   obj[6] = tmp11Result;
   obj[7] = start;
   obj[8] = end;
-  const children = [closure_14(trailing(5599).TableRow, obj)];
+  const children = [closure_14(trailing(5607).TableRow, obj)];
   if (highlightSettingItem) {
     let obj2 = { start: null, end: null };
     obj2[0] = start;
     obj2[1] = end;
-    highlightSettingItem = tmp11(_modDef14347, obj2);
+    highlightSettingItem = tmp11(_modDef14570, obj2);
   }
   children[1] = highlightSettingItem;
   return closure_16(closure_15, { children });
@@ -629,7 +629,7 @@ let closure_26 = importAllResult.memo((arg0) => {
     obj1 = { start: null, end: null };
     obj1[0] = start;
     obj1[1] = end;
-    highlightSettingItem = callback3(_modDef14347, obj1);
+    highlightSettingItem = callback3(_modDef14570, obj1);
   }
   children[1] = highlightSettingItem;
   return closure_16(closure_15, { children });

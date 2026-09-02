@@ -31,7 +31,7 @@ const memoResult = importAllResult.memo((channel) => {
   const callback1 = importAllResult.useCallback(() => {
     channel(closure_1_2[9]).transitionToChannel(channel.id);
   }, items1);
-  let obj = channel(589);
+  let obj = channel(586);
   const items2 = [closure_4];
   const items3 = [channel.id];
   const stateFromStoresObject = obj.useStateFromStoresObject(
@@ -43,12 +43,12 @@ const memoResult = importAllResult.memo((channel) => {
   const tmp = callback();
   const items4 = [closure_5];
   const items5 = [channel];
-  const stateFromStores = channel(589).useStateFromStores(
+  const stateFromStores = channel(586).useStateFromStores(
     items4,
     () => closure_1_5.isChannelMuted(channel.getGuildId(), channel.id),
     items5,
   );
-  const obj2 = channel(589);
+  const obj2 = channel(586);
   ({ isIncomingCall, isOngoingCall } = useCallA11yStateDefault(channel.id));
   obj = {
     onPress: callback1,

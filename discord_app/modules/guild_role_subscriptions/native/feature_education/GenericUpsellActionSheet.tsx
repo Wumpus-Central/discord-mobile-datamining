@@ -24,7 +24,7 @@ export default function GenericUpsellActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   ({ imageSource, header, body, onCTAPress, cta } = markAsDismissed);
   const tmp = callback3();
-  let obj = markAsDismissed(8080);
+  let obj = markAsDismissed(8088);
   bottomSheetRef = obj.useBottomSheetRef();
   ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef);
   obj = {
@@ -40,7 +40,7 @@ export default function GenericUpsellActionSheet(markAsDismissed) {
   obj = { children: null };
   const items = [
     callback(preloadDefault, { source: imageSource, style: tmp.image }),
-    callback(markAsDismissed(5937).ActionSheetHeaderBar, { variant: "floating", onPress: bottomSheetClose }),
+    callback(markAsDismissed(5945).ActionSheetHeaderBar, { variant: "floating", onPress: bottomSheetClose }),
   ];
   obj[0] = items;
   obj[4] = callback2(View, obj);
@@ -52,7 +52,7 @@ export default function GenericUpsellActionSheet(markAsDismissed) {
       color: "mobile-text-heading-primary",
       children: header,
     }),
-    callback(markAsDismissed(1297).Spacer, { size: 12 }),
+    callback(markAsDismissed(1296).Spacer, { size: 12 }),
     callback(markAsDismissed(4474).Text, {
       style: tmp.description,
       variant: "text-sm/medium",
@@ -63,5 +63,5 @@ export default function GenericUpsellActionSheet(markAsDismissed) {
   ];
   obj2[1] = items1;
   obj[5] = callback2(View, obj2);
-  return callback(markAsDismissed(5622).BottomSheet, obj);
+  return callback(markAsDismissed(5630).BottomSheet, obj);
 }

@@ -107,7 +107,7 @@ function _executeCommand() {
                 c15 = 1;
                 let num11 = 1;
                 channelId = 1;
-                return { value: "PX_16", done: null };
+                return { value: "PX_16", done: true };
               }
             } else {
               if (1 === tmp4) {
@@ -1310,7 +1310,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
     obj[3] = tmp;
     let nonce = interactionLifecycleOptions.nonce;
     if (nonce == null) {
-      obj1 = obj(7498);
+      obj1 = obj(7508);
       nonce = obj1.createNonce();
     }
     obj[4] = nonce;
@@ -1323,7 +1323,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
     obj = { messageId: null, onCreate: null, onSuccess: null, onFailure: null, data: null };
     ({ messageId: obj4[0], onCreate: obj4[1], onSuccess: obj4[2], onFailure: obj4[3] } = interactionLifecycleOptions);
     obj = { interactionType: null, applicationId: null, channelId: null };
-    obj[0] = obj(1955).InteractionTypes.APPLICATION_COMMAND;
+    obj[0] = obj(1954).InteractionTypes.APPLICATION_COMMAND;
     obj[1] = applicationId;
     obj[2] = id;
     obj[4] = obj;
@@ -1378,9 +1378,9 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
     const obj3 = _fetchMessageInteractionDataAll;
     const tmp10 = obj;
     obj1 = { type: null, message: null };
-    obj1[0] = tmp10(7578).MessageDataType.COMMAND;
+    obj1[0] = tmp10(7588).MessageDataType.COMMAND;
     obj1[1] = obj;
-    onMessageSuccess(7578).enqueue(obj1, (ok) => {
+    onMessageSuccess(7588).enqueue(obj1, (ok) => {
       ({ nonce, applicationId, channelId, guildId } = callback);
       if (guildId == null) {
         guildId = null;
@@ -1394,7 +1394,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
         callback2();
       }
     });
-    const obj6 = onMessageSuccess(7578);
+    const obj6 = onMessageSuccess(7588);
   }
 }
 function displayInteractionLifecycleInChat() {
@@ -1589,25 +1589,25 @@ function _displayInteractionLifecycleInChat() {
 }
 function getAnalyticsLocationFromCommandOrigin(arg0) {
   if (ApplicationCommandSectionType.CommandOrigin.APPLICATION_LAUNCHER === arg0) {
-    return tmp(7268).ApplicationCommandTriggerLocations.APP_LAUNCHER;
-  } else if (tmp(7268).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW === arg0) {
-    return tmp(7268).ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW;
-  } else if (tmp(7268).CommandOrigin.IMAGE_RECS_MENU === arg0) {
-    return tmp(7268).ApplicationCommandTriggerLocations.IMAGE_RECS_MENU;
-  } else if (tmp(7268).CommandOrigin.IMAGE_RECS_SUBMENU === arg0) {
-    return tmp(7268).ApplicationCommandTriggerLocations.IMAGE_RECS_SUBMENU;
-  } else if (tmp(7268).CommandOrigin.ACTIVITY_INSTANCE_EMBED === arg0) {
-    return tmp(7268).ApplicationCommandTriggerLocations.ACTIVITY_INSTANCE_EMBED;
-  } else if (tmp(7268).CommandOrigin.ACTIVITY_BOOKMARK_EMBED === arg0) {
-    return tmp(7268).ApplicationCommandTriggerLocations.ACTIVITY_BOOKMARK_EMBED;
-  } else if (tmp(7268).CommandOrigin.MINI_SHELF === arg0) {
-    return tmp(7268).ApplicationCommandTriggerLocations.ACTIVITIES_MINI_SHELF;
-  } else if (tmp(7268).CommandOrigin.VOICE_TILE_ACTIVITY_SUGGESTIONS === arg0) {
-    return tmp(7268).ApplicationCommandTriggerLocations.VC_TILE_ACTIVITY_SUGGESTION;
-  } else if (tmp(7268).CommandOrigin.APP_DMS_ENTRY_POINT_COMMAND_BUTTON === arg0) {
-    return tmp(7268).ApplicationCommandTriggerLocations.APP_DMS_ENTRY_POINT_COMMAND_BUTTON;
+    return tmp(7277).ApplicationCommandTriggerLocations.APP_LAUNCHER;
+  } else if (tmp(7277).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW === arg0) {
+    return tmp(7277).ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW;
+  } else if (tmp(7277).CommandOrigin.IMAGE_RECS_MENU === arg0) {
+    return tmp(7277).ApplicationCommandTriggerLocations.IMAGE_RECS_MENU;
+  } else if (tmp(7277).CommandOrigin.IMAGE_RECS_SUBMENU === arg0) {
+    return tmp(7277).ApplicationCommandTriggerLocations.IMAGE_RECS_SUBMENU;
+  } else if (tmp(7277).CommandOrigin.ACTIVITY_INSTANCE_EMBED === arg0) {
+    return tmp(7277).ApplicationCommandTriggerLocations.ACTIVITY_INSTANCE_EMBED;
+  } else if (tmp(7277).CommandOrigin.ACTIVITY_BOOKMARK_EMBED === arg0) {
+    return tmp(7277).ApplicationCommandTriggerLocations.ACTIVITY_BOOKMARK_EMBED;
+  } else if (tmp(7277).CommandOrigin.MINI_SHELF === arg0) {
+    return tmp(7277).ApplicationCommandTriggerLocations.ACTIVITIES_MINI_SHELF;
+  } else if (tmp(7277).CommandOrigin.VOICE_TILE_ACTIVITY_SUGGESTIONS === arg0) {
+    return tmp(7277).ApplicationCommandTriggerLocations.VC_TILE_ACTIVITY_SUGGESTION;
+  } else if (tmp(7277).CommandOrigin.APP_DMS_ENTRY_POINT_COMMAND_BUTTON === arg0) {
+    return tmp(7277).ApplicationCommandTriggerLocations.APP_DMS_ENTRY_POINT_COMMAND_BUTTON;
   } else {
-    return tmp(7268).ApplicationCommandTriggerLocations.SLASH_UI;
+    return tmp(7277).ApplicationCommandTriggerLocations.SLASH_UI;
   }
 }
 function getMaxAndTotalFileSize() {
@@ -1809,12 +1809,12 @@ function _stageAttachments() {
                 if (callback2 != null) {
                   tmp(dependencyMap, arg0);
                 }
-                let obj = callback2(8026);
-                const intl = callback(1236).intl;
-                obj = { maxSize: callback(5078).sizeString(dependencyMap) };
-                obj.setFailed(closure_1, closure_1_11.ENTITY_TOO_LARGE, intl.formatToPlainString(callback(1236).t.fxEKdS, obj));
+                let obj = callback2(8035);
+                const intl = callback(1233).intl;
+                obj = { maxSize: callback(5086).sizeString(dependencyMap) };
+                obj.setFailed(closure_1, closure_1_11.ENTITY_TOO_LARGE, intl.formatToPlainString(callback(1233).t.fxEKdS, obj));
               };
-              dependencyMap = lib(5078).maxFileSize(callback2);
+              dependencyMap = lib(5086).maxFileSize(callback2);
               largestUploadedFileSize = 1;
               c8 = 1;
               obj1 = { value: null, done: false };
@@ -1836,12 +1836,12 @@ function _stageAttachments() {
               largestUploadedFileSize = closure_5.largestUploadedFileSize;
               const _Math = Math;
               if (largestUploadedFileSize <= Math.max(dependencyMap, closure_1_15)) {
-                if (totalSize <= lib(5074).MAX_TOTAL_ATTACHMENT_SIZE) {
+                if (totalSize <= lib(5082).MAX_TOTAL_ATTACHMENT_SIZE) {
                   totalSize = 1;
                   largestUploadedFileSize = 4;
                   c8 = 1;
                   let obj3 = { value: null, done: false };
-                  obj3[0] = callback(7586)(lib);
+                  obj3[0] = callback(7596)(lib);
                   return obj3;
                 }
               }
@@ -1852,11 +1852,11 @@ function _stageAttachments() {
           } else {
             if (2 === tmp8) {
               totalSize = 0;
-              obj3 = callback2(8026);
-              let intl = lib(1236).intl;
+              obj3 = callback2(8035);
+              let intl = lib(1233).intl;
               const obj4 = { count: null };
               obj4[0] = lib.length;
-              obj3.setFailed(callback, undefined, intl.formatToPlainString(lib(1236).t["9h1/1p"], obj4));
+              obj3.setFailed(callback, undefined, intl.formatToPlainString(lib(1233).t["9h1/1p"], obj4));
               callback3(lib, true);
               largestUploadedFileSize = 3;
               c8 = 1;
@@ -1875,7 +1875,7 @@ function _stageAttachments() {
                 largestUploadedFileSize = c8.largestUploadedFileSize;
                 let someResult = lib.some((error) => error.error === constants.ENTITY_TOO_LARGE);
                 if (!someResult) {
-                  someResult = totalSize > lib(5074).MAX_TOTAL_ATTACHMENT_SIZE;
+                  someResult = totalSize > lib(5082).MAX_TOTAL_ATTACHMENT_SIZE;
                 }
                 let flag = !someResult;
                 if (someResult) {

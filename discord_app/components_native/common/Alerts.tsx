@@ -2,7 +2,7 @@
 import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef4858 from "../../actions/native/AlertActionCreators.tsx";
 import Dialog from "../../design/components/Dialog/native/Dialog.native.tsx";
-import _modDef6049 from "../../modules/keyboard/native/KeyboardAwareView.tsx";
+import _modDef6057 from "../../modules/keyboard/native/KeyboardAwareView.tsx";
 import getStoresDefault from "../../lib/ModalRegistry.tsx";
 import importAllResult from "../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
@@ -146,11 +146,11 @@ AlertWrapper.prototype["render"] = function render() {
   const items3 = [{ scale }];
   items2[1] = callback(RN.View, { style: { transform: items3 }, children: renderAlertResult });
   obj[1] = items2;
-  obj[2] = callback2(_modDef6049, obj);
+  obj[2] = callback2(_modDef6057, obj);
   return callback(Dialog.Dialog, obj);
 };
 AlertWrapper.contextType = require("ManaContext").ThemeContext;
-let closure_18 = Object.freeze({ renderAlert: "method", renderKey: "T", props: "Map" });
+let closure_18 = Object.freeze({ renderAlert: "items", renderKey: "call", props: "Promise" });
 let obj1 = {
   stores: items3,
   center: true,
@@ -196,7 +196,7 @@ const memoResult = importAllResult.memo(function Alerts() {
           return <openModal.component />;
         };
       } else {
-        return { renderAlert: "method", renderKey: "T", props: "Map" };
+        return { renderAlert: "items", renderKey: "call", props: "Promise" };
       }
     }
   });

@@ -71,7 +71,7 @@ export const useIsEligibleToShowGiftingBadgeCoachmark = function useIsEligibleTo
     }
     tmp4 = enabled2;
   }
-  let tmpResult = tmp(589);
+  let tmpResult = tmp(586);
   const items = [closure_3];
   const stateFromStores = tmpResult.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
@@ -86,7 +86,7 @@ export const useIsEligibleToShowGiftingBadgeCoachmark = function useIsEligibleTo
   });
   tmpResult = tmp(4298);
   const result = tmpResult.useIsDismissibleContentDismissed_UNSAFE(
-    tmp(1373).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK,
+    tmp(1372).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK,
   );
   if (tmp4) {
     tmp4 = stateFromStores;

@@ -162,7 +162,7 @@ prototype["start"] = function start(id) {
         sources: null,
         appliedUserIds: null,
       };
-      let obj2 = set(514);
+      let obj2 = set(511);
       obj[0] = obj2.v4();
       obj[1] = id.id;
       obj[2] = frameId;
@@ -253,13 +253,13 @@ prototype["update"] = function update(id, id, arg2, arr) {
               obj.add(user_id);
               obj = { userId: null, position: null };
               obj[0] = user_id;
-              obj[1] = callback(14115).toListenerRelativePosition(callback, user_id.position);
+              obj[1] = callback(14338).toListenerRelativePosition(callback, user_id.position);
               return obj;
             }
           }
         }
         obj = { errorCode: closure_1_10.INVALID_PAYLOAD };
-        let tmp6 = set(9503);
+        let tmp6 = set(9516);
         tmp6 = new tmp6(obj, "Invalid spatial voice source " + user_id.user_id);
         throw tmp6;
       });

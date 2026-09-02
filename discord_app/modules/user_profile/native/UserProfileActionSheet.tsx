@@ -16,8 +16,8 @@ const require = arg1;
 function UseAnimatedPosition(animatedPosition) {
   animatedPosition = animatedPosition.animatedPosition;
   let animatedPosition2;
-  animatedPosition2 = animatedPosition(5624).useBottomSheet().animatedPosition;
-  const obj = animatedPosition(5624);
+  animatedPosition2 = animatedPosition(5632).useBottomSheet().animatedPosition;
+  const obj = animatedPosition(5632);
   const fn = function n() {
     return animatedPosition2.get();
   };

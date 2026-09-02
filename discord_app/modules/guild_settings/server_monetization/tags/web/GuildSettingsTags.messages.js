@@ -1,40 +1,40 @@
 // discord_app/modules/guild_settings/server_monetization/tags/web/GuildSettingsTags.messages.js
 import set from "../../../../../../_runtime/00002_set.js";
 import loadJsonAsset from "../../../../asset_json/native/AssetJsonUtils.tsx";
-import registerAsset from "../../../../../../_runtime/02306_registerAsset.js";
-import registerAsset2 from "../../../../../../_runtime/02307_registerAsset.js";
-import registerAsset3 from "../../../../../../_runtime/02308_registerAsset.js";
-import registerAsset4 from "../../../../../../_runtime/02309_registerAsset.js";
-import registerAsset5 from "../../../../../../_runtime/02310_registerAsset.js";
-import registerAsset6 from "../../../../../../_runtime/02311_registerAsset.js";
-import registerAsset7 from "../../../../../../_runtime/02312_registerAsset.js";
-import registerAsset8 from "../../../../../../_runtime/02313_registerAsset.js";
-import registerAsset9 from "../../../../../../_runtime/02314_registerAsset.js";
-import registerAsset10 from "../../../../../../_runtime/02315_registerAsset.js";
-import registerAsset11 from "../../../../../../_runtime/02316_registerAsset.js";
-import registerAsset12 from "../../../../../../_runtime/02317_registerAsset.js";
-import registerAsset13 from "../../../../../../_runtime/02318_registerAsset.js";
-import registerAsset14 from "../../../../../../_runtime/02319_registerAsset.js";
-import registerAsset15 from "../../../../../../_runtime/02320_registerAsset.js";
-import registerAsset16 from "../../../../../../_runtime/02321_registerAsset.js";
-import registerAsset17 from "../../../../../../_runtime/02322_registerAsset.js";
-import registerAsset18 from "../../../../../../_runtime/02323_registerAsset.js";
-import registerAsset19 from "../../../../../../_runtime/02324_registerAsset.js";
-import registerAsset20 from "../../../../../../_runtime/02325_registerAsset.js";
-import registerAsset21 from "../../../../../../_runtime/02326_registerAsset.js";
-import registerAsset22 from "../../../../../../_runtime/02327_registerAsset.js";
-import registerAsset23 from "../../../../../../_runtime/02328_registerAsset.js";
-import registerAsset24 from "../../../../../../_runtime/02329_registerAsset.js";
-import registerAsset25 from "../../../../../../_runtime/02330_registerAsset.js";
-import registerAsset26 from "../../../../../../_runtime/02331_registerAsset.js";
-import registerAsset27 from "../../../../../../_runtime/02332_registerAsset.js";
-import registerAsset28 from "../../../../../../_runtime/02333_registerAsset.js";
-import registerAsset29 from "../../../../../../_runtime/02334_registerAsset.js";
-import registerAsset30 from "../../../../../../_runtime/02335_registerAsset.js";
-import registerAsset31 from "../../../../../../_runtime/02336_registerAsset.js";
-import 01274__ from "../../../../../../_runtime/metro/01274__.js";
+import registerAsset from "../../../../../../_runtime/02305_registerAsset.js";
+import registerAsset2 from "../../../../../../_runtime/02306_registerAsset.js";
+import registerAsset3 from "../../../../../../_runtime/02307_registerAsset.js";
+import registerAsset4 from "../../../../../../_runtime/02308_registerAsset.js";
+import registerAsset5 from "../../../../../../_runtime/02309_registerAsset.js";
+import registerAsset6 from "../../../../../../_runtime/02310_registerAsset.js";
+import registerAsset7 from "../../../../../../_runtime/02311_registerAsset.js";
+import registerAsset8 from "../../../../../../_runtime/02312_registerAsset.js";
+import registerAsset9 from "../../../../../../_runtime/02313_registerAsset.js";
+import registerAsset10 from "../../../../../../_runtime/02314_registerAsset.js";
+import registerAsset11 from "../../../../../../_runtime/02315_registerAsset.js";
+import registerAsset12 from "../../../../../../_runtime/02316_registerAsset.js";
+import registerAsset13 from "../../../../../../_runtime/02317_registerAsset.js";
+import registerAsset14 from "../../../../../../_runtime/02318_registerAsset.js";
+import registerAsset15 from "../../../../../../_runtime/02319_registerAsset.js";
+import registerAsset16 from "../../../../../../_runtime/02320_registerAsset.js";
+import registerAsset17 from "../../../../../../_runtime/02321_registerAsset.js";
+import registerAsset18 from "../../../../../../_runtime/02322_registerAsset.js";
+import registerAsset19 from "../../../../../../_runtime/02323_registerAsset.js";
+import registerAsset20 from "../../../../../../_runtime/02324_registerAsset.js";
+import registerAsset21 from "../../../../../../_runtime/02325_registerAsset.js";
+import registerAsset22 from "../../../../../../_runtime/02326_registerAsset.js";
+import registerAsset23 from "../../../../../../_runtime/02327_registerAsset.js";
+import registerAsset24 from "../../../../../../_runtime/02328_registerAsset.js";
+import registerAsset25 from "../../../../../../_runtime/02329_registerAsset.js";
+import registerAsset26 from "../../../../../../_runtime/02330_registerAsset.js";
+import registerAsset27 from "../../../../../../_runtime/02331_registerAsset.js";
+import registerAsset28 from "../../../../../../_runtime/02332_registerAsset.js";
+import registerAsset29 from "../../../../../../_runtime/02333_registerAsset.js";
+import registerAsset30 from "../../../../../../_runtime/02334_registerAsset.js";
+import registerAsset31 from "../../../../../../_runtime/02335_registerAsset.js";
+import 01273__ from "../../../../../../_runtime/metro/01273__.js";
 
-const loader = module_1274.createLoader({
+const loader = module_1273.createLoader({
   bg() {
     const jsonAsset = loadJsonAsset.loadJsonAsset(registerAsset);
     return jsonAsset.then((arg0) => ({ default: arg0 }));
@@ -160,7 +160,7 @@ const loader = module_1274.createLoader({
     return jsonAsset.then((arg0) => ({ default: arg0 }));
   }
 }, "en-US");
-const messagesProxy = module_1274.makeMessagesProxy(loader);
+const messagesProxy = module_1273.makeMessagesProxy(loader);
 const result = set.fileFinishedImporting("modules/guild_settings/server_monetization/tags/web/GuildSettingsTags.messages.js");
 
 export default messagesProxy;

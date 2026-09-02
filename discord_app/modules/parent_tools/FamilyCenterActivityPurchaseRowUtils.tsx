@@ -9,19 +9,19 @@ import GuildFeatures from "../premium/PremiumConstants.tsx";
 
 function getCollectibleTypeName(type) {
   if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
-    const intl5 = tmp(1236).intl;
+    const intl5 = tmp(1233).intl;
     return intl5.string(messagesProxyDefault.obi47v);
-  } else if (tmp(1950).CollectiblesItemType.PROFILE_EFFECT === type) {
-    const intl4 = tmp(1236).intl;
+  } else if (tmp(1949).CollectiblesItemType.PROFILE_EFFECT === type) {
+    const intl4 = tmp(1233).intl;
     return intl4.string(messagesProxyDefault.RX8BMR);
-  } else if (tmp(1950).CollectiblesItemType.NAMEPLATE === type) {
-    const intl3 = tmp(1236).intl;
+  } else if (tmp(1949).CollectiblesItemType.NAMEPLATE === type) {
+    const intl3 = tmp(1233).intl;
     return intl3.string(messagesProxyDefault.nNGEHk);
-  } else if (tmp(1950).CollectiblesItemType.BUNDLE === type) {
-    const intl2 = tmp(1236).intl;
+  } else if (tmp(1949).CollectiblesItemType.BUNDLE === type) {
+    const intl2 = tmp(1233).intl;
     return intl2.string(messagesProxyDefault.VS1fKo);
-  } else if (tmp(1950).CollectiblesItemType.PROFILE_FRAME === type) {
-    const intl = tmp(1236).intl;
+  } else if (tmp(1949).CollectiblesItemType.PROFILE_FRAME === type) {
+    const intl = tmp(1233).intl;
     return intl.string(messagesProxyDefault.JiIY1l);
   } else {
     return "";

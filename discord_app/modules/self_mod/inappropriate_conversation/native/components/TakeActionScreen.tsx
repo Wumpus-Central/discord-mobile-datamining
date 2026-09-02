@@ -107,7 +107,7 @@ export default function TakeActionButtons(senderId) {
               closure_0 = tmp4;
               if (null != closure_1_9.getUser(closure_1_0)) {
                 closure_1_6(true);
-                let obj2 = closure_1_0(8756);
+                let obj2 = closure_1_0(8771);
                 v0 = 1;
                 dependencyMap = 1;
                 obj1 = { value: null, done: false };
@@ -123,16 +123,16 @@ export default function TakeActionButtons(senderId) {
                       iconColor: null,
                       containerStyle: null,
                     };
-                    const intl = tmp4(1236).intl;
-                    obj[1] = intl.string(tmp4(1236).t.gn2c6X);
+                    const intl = tmp4(1233).intl;
+                    obj[1] = intl.string(tmp4(1233).t.gn2c6X);
                     obj[2] = tmp4(4438).CircleCheckIcon;
                     obj[3] = closure_1_14;
                     obj[4] = toastContainer.toastContainer;
                     obj.open(obj);
                   },
                   () => {
-                    const intl = tmp4(1236).intl;
-                    tmp4(4193).presentFailedToast(intl.string(tmp4(1236).t["0YV04/"]));
+                    const intl = tmp4(1233).intl;
+                    tmp4(4193).presentFailedToast(intl.string(tmp4(1233).t["0YV04/"]));
                   },
                 );
                 return obj1;
@@ -145,9 +145,9 @@ export default function TakeActionButtons(senderId) {
             throw arg1;
           } else if (arg0 !== 2) {
             callback2(false);
-            obj = v0(8675);
+            obj = v0(8690);
             const result = obj.showReportSuccessToast(closure_0, v0);
-            callback(closure_1_0(11007).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
+            callback(closure_1_0(11227).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
           }
           dependencyMap = 3;
           obj2 = { value: null, done: true };

@@ -2,7 +2,7 @@
 import set from "../../../_runtime/00002_set.js";
 import timestampDefault from "../../modules/debug/Logger.tsx";
 import ME from "../../Constants.tsx";
-import importDefaultResult from "../../../_runtime/01475_configure.js";
+import importDefaultResult from "../../../_runtime/01474_configure.js";
 
 function notifyListeners(isConnected) {
   isConnected = isConnected.isConnected;

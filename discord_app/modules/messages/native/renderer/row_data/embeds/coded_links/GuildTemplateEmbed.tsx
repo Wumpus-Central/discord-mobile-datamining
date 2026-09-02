@@ -34,14 +34,14 @@ export const createGuildTemplateEmbed = function createGuildTemplateEmbed(code, 
     const intl = getSystemLocale.intl;
     obj.headerText = intl.string(getSystemLocale.t.C7ZRNw).toUpperCase();
     obj1 = processColorOrThrow;
-    obj.titleColor = obj1.processColorOrThrow(tmp(712).unsafe_rawColors.RED_400);
+    obj.titleColor = obj1.processColorOrThrow(tmp(709).unsafe_rawColors.RED_400);
     const intl2 = getSystemLocale.intl;
     obj.titleText = intl2.string(getSystemLocale.t.A6MwXE);
     const str = intl.string(getSystemLocale.t.C7ZRNw);
     if (obj3.isThemeDark(closure_2)) {
-      let tmpResult = tmp(11381);
+      let tmpResult = tmp(11604);
     } else {
-      tmpResult = tmp(11382);
+      tmpResult = tmp(11605);
     }
     obj.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
     obj.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;
@@ -62,7 +62,7 @@ export const createGuildTemplateEmbed = function createGuildTemplateEmbed(code, 
     obj1.titleColor = colors.titleColor;
     obj1.subtitle = formatToPlainStringResult;
     obj1.subtitleColor = colors.subtitleColor;
-    obj1.thumbnailUrl = Image.resolveAssetSource(tmp(12885)).uri;
+    obj1.thumbnailUrl = Image.resolveAssetSource(tmp(13107)).uri;
     ({
       acceptLabelGreenColor: obj6.acceptLabelColor,
       acceptLabelGreenBackgroundColor: obj6.acceptLabelBackgroundColor,

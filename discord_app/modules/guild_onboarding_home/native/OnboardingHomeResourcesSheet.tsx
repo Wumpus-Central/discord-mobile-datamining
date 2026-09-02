@@ -45,7 +45,7 @@ export default function OnboardingHomeResourcesSheet(guildId) {
       return closure_1_4(guildId(closure_1_2[9]).ActionSheetRow, obj, label.channelId);
     }),
   };
-  obj[0] = jsx(guildId(5991).ActionSheetRow.Group, {
+  obj[0] = jsx(guildId(5999).ActionSheetRow.Group, {
     hasIcons: true,
     children: useResourceChannelsDefault(guildId).map((label) => {
       closure_0 = label;
@@ -73,7 +73,7 @@ export default function OnboardingHomeResourcesSheet(guildId) {
       return closure_1_4(guildId(closure_1_2[9]).ActionSheetRow, obj, label.channelId);
     }),
   });
-  return jsx(guildId(5989).ActionSheet, {
+  return jsx(guildId(5997).ActionSheet, {
     hasIcons: true,
     children: useResourceChannelsDefault(guildId).map((label) => {
       closure_0 = label;

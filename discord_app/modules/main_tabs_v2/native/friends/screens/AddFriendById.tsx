@@ -126,7 +126,7 @@ let closure_16 = importAllResult.forwardRef((headerTextStyle, ref) => {
     a11yMessage = validationState.a11yMessage;
   }
   obj[3] = a11yMessage;
-  const intl3 = tmp10(1236).intl;
+  const intl3 = tmp10(1233).intl;
   obj[4] = intl3.string(getSystemLocale.t.qRaqel);
   obj[5] = tmp3.placeholderText.color;
   obj[6] = onChangeText;
@@ -170,8 +170,8 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
       let obj = { status: null, field: null, message: null };
       obj[0] = closure_1_13.ERROR;
       obj[1] = closure_1_14.DISCORD_TAG;
-      let intl = sourcePage(1236).intl;
-      obj[2] = intl.string(sourcePage(1236).t.mxnceg);
+      let intl = sourcePage(1233).intl;
+      obj[2] = intl.string(sourcePage(1233).t.mxnceg);
       callback(obj);
     } else {
       const hasItem = trimmed.includes("#");
@@ -184,7 +184,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
         substr = trimmed.substring(1);
         tmp2 = substr;
       }
-      obj = sourcePage(9063);
+      obj = sourcePage(9077);
       const validateDiscordTagResult = obj.validateDiscordTag(tmp2);
       if (null != validateDiscordTagResult) {
         obj = { status: null, field: null, message: null };
@@ -199,26 +199,26 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
         const obj2 = { discordTag: null, context: null, errorUxConfig: null, note: null };
         obj2[0] = tmp2;
         obj2[1] = { location: "Search - Add Friend Search" };
-        obj2[2] = sourcePage(9059).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED;
+        obj2[2] = sourcePage(9073).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED;
         let tmp9;
         if (trimmed1.length > 0) {
           tmp9 = trimmed1;
         }
         obj2[3] = tmp9;
-        const obj5 = ref(9059);
-        ref(9059)
+        const obj5 = ref(9073);
+        ref(9073)
           .sendRequest(obj2)
           .then(
             () => {
               let obj = { validatedText: "", hint: null };
-              const intl = sourcePage(1236).intl;
-              obj[1] = intl.string(sourcePage(1236).t["6p7Mhh"]);
+              const intl = sourcePage(1233).intl;
+              obj[1] = intl.string(sourcePage(1233).t["6p7Mhh"]);
               closure_1_4(obj);
               closure_1_8("");
               obj = { status: closure_2_13.SUCCESS, message: null };
-              const intl2 = sourcePage(1236).intl;
+              const intl2 = sourcePage(1233).intl;
               obj = { discordTag: substr };
-              obj[1] = intl2.format(sourcePage(1236).t.Rtl1Ep, obj);
+              obj[1] = intl2.format(sourcePage(1233).t.Rtl1Ep, obj);
               closure_1_6(obj);
               const result = sourcePage(4193).presentAddedFriendToast();
               closure_6.dismiss();
@@ -235,10 +235,10 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
                 let obj = { status: null, field: null, message: null, a11yMessage: null };
                 obj[0] = closure_2_13.ERROR;
                 obj[1] = closure_2_14.MESSAGE;
-                const intl = sourcePage(1236).intl;
-                obj[2] = intl.string(sourcePage(1236).t.ckHwck);
-                const intl2 = sourcePage(1236).intl;
-                obj[3] = intl2.string(sourcePage(1236).t.ckHwck);
+                const intl = sourcePage(1233).intl;
+                obj[2] = intl.string(sourcePage(1233).t.ckHwck);
+                const intl2 = sourcePage(1233).intl;
+                obj[3] = intl2.string(sourcePage(1233).t.ckHwck);
               } else {
                 obj = { status: null, field: null, message: null, a11yMessage: null };
                 obj[0] = closure_2_13.ERROR;
@@ -253,8 +253,8 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
                 if (num == null) {
                   num = -1;
                 }
-                obj[2] = sourcePage(9063).humanizeAbortCode(num, substr);
-                obj = sourcePage(9063);
+                obj[2] = sourcePage(9077).humanizeAbortCode(num, substr);
+                obj = sourcePage(9077);
                 let num2;
                 if (body != null) {
                   const body3 = body.body;
@@ -266,13 +266,13 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
                   num2 = -1;
                 }
                 obj[3] = obj.humanizeAbortCodeForA11y(num2, substr);
-                const obj4 = sourcePage(9063);
+                const obj4 = sourcePage(9077);
                 const tmp3 = substr;
               }
               closure_1_6(obj);
             },
           );
-        const sendRequestResult = ref(9059).sendRequest(obj2);
+        const sendRequestResult = ref(9073).sendRequest(obj2);
       }
     }
   }
@@ -283,8 +283,8 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   let tmp2 = first(
     importAllResult.useState(() => {
       const obj = { validatedText: "", hint: null };
-      const intl = sourcePage(1236).intl;
-      obj[1] = intl.string(sourcePage(1236).t["6p7Mhh"]);
+      const intl = sourcePage(1233).intl;
+      obj[1] = intl.string(sourcePage(1233).t["6p7Mhh"]);
       return obj;
     }),
     2,
@@ -305,8 +305,8 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   const callback = importAllResult.useCallback((arg0) => {
     if (arg0.length <= 0) {
       let obj = { validatedText: "", hint: null };
-      const intl = sourcePage(1236).intl;
-      obj[1] = intl.string(sourcePage(1236).t["6p7Mhh"]);
+      const intl = sourcePage(1233).intl;
+      obj[1] = intl.string(sourcePage(1233).t["6p7Mhh"]);
     } else {
       const arr = first(arg0.split("#"), 2)[1];
       let str2 = "";
@@ -346,7 +346,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     }
   }, items1);
   const effect = importAllResult.useEffect(() => {
-    let obj = ref(698);
+    let obj = ref(695);
     obj = { friend_add_type: "Id", source_page: sourcePage };
     obj.track(lib.FRIEND_ADD_VIEWED, obj);
   }, items2);
@@ -357,7 +357,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
       tmp2 = null != tmp.a11yMessage;
     }
     if (tmp2) {
-      const AccessibilityAnnouncer = sourcePage(1351).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = sourcePage(1350).AccessibilityAnnouncer;
       AccessibilityAnnouncer.announce(tmp.a11yMessage);
     }
   }, items3);
@@ -393,8 +393,8 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     obj2[0] = tmp.redesignGrow;
     items6[1] = tmp17(tmp16, obj2);
     const obj3 = { size: "lg", text: null, disabled: null, onPress: null, loading: null, grow: false };
-    const intl3 = sourcePage(1236).intl;
-    obj3[1] = intl3.string(sourcePage(1236).t["PMsq/b"]);
+    const intl3 = sourcePage(1233).intl;
+    obj3[1] = intl3.string(sourcePage(1233).t["PMsq/b"]);
     obj3[2] = str.trim().length <= 0;
     obj3[3] = handleSubmitEditing;
     obj3[4] = first1.status === tmp4.LOADING;
@@ -409,8 +409,8 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     ({ messageLabel: arr7[0], inputHeaderText: arr7[1] } = tmp);
     items7[2] = headerTextStyle;
     obj5[0] = items7;
-    let intl = sourcePage(1236).intl;
-    obj5[3] = intl.string(sourcePage(1236).t.Yi6Mpu);
+    let intl = sourcePage(1233).intl;
+    obj5[3] = intl.string(sourcePage(1233).t.Yi6Mpu);
     const items8 = [tmp17(sourcePage(4474).Text, obj5), ,];
     const obj6 = {
       returnKeyType: "done",
@@ -431,12 +431,12 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
       }
     }
     obj6[6] = str2;
-    items8[1] = tmp17(sourcePage(7808).TextArea, obj6);
+    items8[1] = tmp17(sourcePage(7817).TextArea, obj6);
     if (first1.status !== tmp4.ERROR) {
       const obj7 = { style: null, variant: "text-xs/medium", color: "text-muted", children: null };
       obj7[0] = tmp.messageFooterText;
-      let intl2 = tmp18(1236).intl;
-      obj7[3] = intl2.string(tmp18(1236).t.UtfQNw);
+      let intl2 = tmp18(1233).intl;
+      obj7[3] = intl2.string(tmp18(1233).t.UtfQNw);
       let tmp17Result = tmp17(tmp18(4474).Text, obj7);
       items8[2] = tmp17Result;
       obj4[1] = items8;

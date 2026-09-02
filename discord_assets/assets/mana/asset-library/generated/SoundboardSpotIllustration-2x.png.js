@@ -5,5 +5,5 @@ const result = set.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/SoundboardSpotIllustration-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/84800190a92237c8f3167825c51ff4a11d17eb9c3452dd9af65ebe0731ac9b21.png";
-export const metadata = { fileBytes: 109274 };
+export default "https://cdn.discordapp.com/assets/content/50baa24251d3fea6b8a46bb69ebb07b06ffdb9f3bab1826aaeefb7552fbff832.png";
+export const metadata = { fileBytes: 105543 };

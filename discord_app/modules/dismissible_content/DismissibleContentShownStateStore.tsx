@@ -5,7 +5,7 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 import isActionRequiredDefault from "../core/isActionRequired.tsx";
 import closure_3 from "../auth/LoginRequiredActionStore.tsx";
 import closure_4 from "../../stores/UserRequiredActionStore.tsx";
-import identity from "../../../_runtime/00700_identity.js";
+import identity from "../../../_runtime/00697_identity.js";
 
 require = arg1;
 function withContent(currentlyShown, content) {

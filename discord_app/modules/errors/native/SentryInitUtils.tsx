@@ -1,13 +1,13 @@
 // discord_app/modules/errors/native/SentryInitUtils.tsx
 import timestampDefault from "../../debug/Logger.tsx";
 import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
-import _modDef1208 from "../../../utils/SentryUtils.native.tsx";
+import _modDef1205 from "../../../utils/SentryUtils.native.tsx";
 import transitionTo from "../../routing/router_utils.tsx";
 import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { NativeModules } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import ME from "../../../Constants.tsx";
 import { PRIMARY_DOMAIN } from "../../../../discord_common/js/shared/Constants.tsx";
-import addBreadcrumb from "../../../../_runtime/00810_addBreadcrumb.js";
+import addBreadcrumb from "../../../../_runtime/00807_addBreadcrumb.js";
 import IGNORE_ANALYTICS_BREADCRUMB_EVENTS from "../CommonSentryInitUtils.tsx";
 
 require = arg1;
@@ -171,8 +171,8 @@ function filterError(event_id, originalException) {
       tmp17 = 0 !== event_id.length;
     }
     if (tmp17) {
-      _modDef1208.markCrashHandled(event_id);
-      const obj = _modDef1208;
+      _modDef1205.markCrashHandled(event_id);
+      const obj = _modDef1205;
     }
   } else {
     let originalException2;
@@ -399,7 +399,7 @@ function trackCrash(event, hint, arg2) {
         tmp7 = 0 !== event_id.length;
       }
       if (tmp7) {
-        obj1 = _modDef1208;
+        obj1 = _modDef1205;
         obj1.markCrashHandled(event_id);
       }
     }
@@ -576,20 +576,20 @@ function trackCrash(event, hint, arg2) {
     tmp39 = 0 !== event_id2.length;
   }
   if (tmp39) {
-    tmp25(1208).markCrashHandled(event_id2);
-    const tmp25Result = tmp25(1208);
+    tmp25(1205).markCrashHandled(event_id2);
+    const tmp25Result = tmp25(1205);
   }
-  const AppCrashedReasons = tmp11(13846).AppCrashedReasons;
+  const AppCrashedReasons = tmp11(14069).AppCrashedReasons;
   const tmp19 = expandEventPropertiesDefault;
   const tmp41 = tmp4 ? AppCrashedReasons.UNHANDLED_NATIVE_ERROR : AppCrashedReasons.UNHANDLED_JS_ERROR;
-  obj1 = { name: tmp11(7352).MetricEvents.APP_CRASHED, tags: null };
+  obj1 = { name: tmp11(7361).MetricEvents.APP_CRASHED, tags: null };
   items = ["reason:" + tmp41];
   if (level == null) {
     level = "unknown";
   }
   items[1] = "level:" + level;
   obj1[1] = items;
-  tmp26(7347).increment(obj1, true);
+  tmp26(7356).increment(obj1, true);
 }
 ({ AnalyticEvents: closure_6, Endpoints } = ME);
 addBreadcrumb = addBreadcrumb.reactNavigationIntegration();
@@ -680,13 +680,13 @@ export const initSentry = function initSentry() {
             tunnel: null,
             autoInitializeNativeSdk: false,
             beforeSend: null,
-            dist: "6327",
+            dist: "6336",
             dsn: null,
             environment: null,
             tracesSampleRate: 0,
             sampleRate: 1,
             ignoreErrors: null,
-            release: "discord_android@345.1.0-2+345201",
+            release: "discord_android@345.2.0-2+345202",
             tracePropagationTargets: null,
             integrations: null,
             beforeBreadcrumb: null,
@@ -728,7 +728,7 @@ export const initSentry = function initSentry() {
           };
           tmp14Result1.init(obj);
           const tmp14Result4 = callback(tmp[4]);
-          callback(tmp[4]).setTag("buildNumber", "6327");
+          callback(tmp[4]).setTag("buildNumber", "6336");
           const tmp14Result5 = callback(tmp[4]);
           callback(tmp[4]).setTag("appVersion", constants.Version);
           const tmp14Result6 = callback(tmp[4]);

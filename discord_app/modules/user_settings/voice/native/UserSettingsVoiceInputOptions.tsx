@@ -21,14 +21,14 @@ function handleInputModePress() {
   const intl2 = getSystemLocale.intl;
   obj1[0] = intl2.string(getSystemLocale.t.Q8gkVL);
   obj1[1] = function onPress() {
-    callback(9781).setMode(constants.PUSH_TO_TALK);
+    callback(9803).setMode(constants.PUSH_TO_TALK);
   };
   const items = [obj1];
   const obj2 = { label: null, onPress: null };
   const intl3 = getSystemLocale.intl;
   obj2[0] = intl3.string(getSystemLocale.t.cHCEOJ);
   obj2[1] = function onPress() {
-    callback(9781).setMode(constants.VOICE_ACTIVITY);
+    callback(9803).setMode(constants.VOICE_ACTIVITY);
   };
   items[1] = obj2;
   obj[2] = items;
@@ -43,7 +43,7 @@ let result = require("set").fileFinishedImporting(
 
 export default function UserSettingsVoiceInputOptions() {
   const iter = callback();
-  let obj = inputMode(589);
+  let obj = inputMode(586);
   const items = [closure_4];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
     inputMode: store.getMode(),
@@ -53,39 +53,39 @@ export default function UserSettingsVoiceInputOptions() {
   inputMode = stateFromStoresObject.inputMode;
   const vadAutoThreshold = stateFromStoresObject.vadAutoThreshold;
   obj = { title: null, hasIcons: false, children: null };
-  const intl = inputMode(1236).intl;
-  obj[0] = intl.string(inputMode(1236).t.LKCupB);
+  const intl = inputMode(1233).intl;
+  obj[0] = intl.string(inputMode(1233).t.LKCupB);
   obj = { label: null, trailing: null, onPress: null };
-  const intl2 = inputMode(1236).intl;
-  obj[0] = intl2.string(inputMode(1236).t["pS+K2L"]);
+  const intl2 = inputMode(1233).intl;
+  obj[0] = intl2.string(inputMode(1233).t["pS+K2L"]);
   obj1 = { style: iter.value, variant: "text-md/medium", color: "text-muted", children: null };
   if (inputMode === InputModes.PUSH_TO_TALK) {
-    const intl4 = tmp(1236).intl;
-    let stringResult = intl4.string(tmp(1236).t.Q8gkVL);
+    const intl4 = tmp(1233).intl;
+    let stringResult = intl4.string(tmp(1233).t.Q8gkVL);
   } else {
-    const intl3 = tmp(1236).intl;
-    stringResult = intl3.string(tmp(1236).t.cHCEOJ);
+    const intl3 = tmp(1233).intl;
+    stringResult = intl3.string(tmp(1233).t.cHCEOJ);
   }
   obj1[3] = stringResult;
   obj[1] = closure_6(inputMode(4474).Text, obj1);
   obj[2] = handleInputModePress;
-  const items1 = [closure_6(inputMode(5599).TableRow, obj)];
+  const items1 = [closure_6(inputMode(5607).TableRow, obj)];
   let tmp4Result = null;
   if (inputMode !== InputModes.PUSH_TO_TALK) {
     const obj2 = { children: null };
     const obj3 = { label: null, value: null, onValueChange: null };
-    const intl5 = tmp(1236).intl;
-    obj3[0] = intl5.string(tmp(1236).t.Z4oaN0);
+    const intl5 = tmp(1233).intl;
+    obj3[0] = intl5.string(tmp(1233).t.Z4oaN0);
     obj3[1] = vadAutoThreshold;
     obj3[2] = function onValueChange(autoThreshold) {
       let obj = closure_1_1(closure_1_2[8]);
       obj = { autoThreshold };
       return obj.setMode(inputMode, obj);
     };
-    const items2 = [tmp5(tmp(5993).TableSwitchRow, obj3)];
+    const items2 = [tmp5(tmp(6001).TableSwitchRow, obj3)];
     const obj4 = { label: null, subLabel: null };
-    const intl6 = tmp(1236).intl;
-    obj4[0] = intl6.string(tmp(1236).t["o+2oMK"]);
+    const intl6 = tmp(1233).intl;
+    obj4[0] = intl6.string(tmp(1233).t["o+2oMK"]);
     const obj5 = { style: null, children: null };
     obj5[0] = iter.slider;
     const obj6 = { auto: null, threshold: null, onThresholdChange: null };
@@ -98,12 +98,12 @@ export default function UserSettingsVoiceInputOptions() {
     };
     obj5[1] = tmp5(VoiceSensitivityDefault, obj6);
     obj4[1] = tmp5(View, obj5);
-    items2[1] = tmp5(tmp(5599).TableRow, obj4);
+    items2[1] = tmp5(tmp(5607).TableRow, obj4);
     obj2[0] = items2;
     tmp4Result = tmp4(closure_7, obj2);
   }
   items1[1] = tmp4Result;
   obj[2] = items1;
-  return closure_8(inputMode(10062).UserSettingsTableRowGroup, obj);
+  return closure_8(inputMode(10084).UserSettingsTableRowGroup, obj);
 }
 export { handleInputModePress };

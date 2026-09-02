@@ -5,7 +5,7 @@ import getSystemLocale from "../../../intl/index.native.tsx";
 import Button from "../../../design/void/native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import componentDidMountDefault from "../../../components_native/common/Alert.tsx";
-import registerAssetDefault from "../../../../_runtime/11443_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/11666_registerAsset.js";
 import closure_6 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_7 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -36,7 +36,7 @@ function ChatBlockedAlert(arg0) {
   obj.confirmText = buttonCta;
   obj.onConfirm = onConfirm;
   obj = { style: tmp2.body, children: null };
-  obj = { source: registerAssetDefault, size: tmp8(1297).Icon.Sizes.CUSTOM, style: tmp2.mainIcon };
+  obj = { source: registerAssetDefault, size: tmp8(1296).Icon.Sizes.CUSTOM, style: tmp2.mainIcon };
   const items = [
     closure_16(Button.Icon, obj),
     closure_16(Text.Text, {
@@ -69,15 +69,15 @@ function PerServerProfileAlert(arg0) {
     stringResult = intl.string(getSystemLocale.t.TBeZmG);
   }
   const tmp = callback2(arg0, closure_4);
-  const tmp2Result = tmp2(11444);
-  [require, tmp8] = callback(tmp2(11444).useOpenFixQuarantinedProfileModal({ guildId }), 2);
+  const tmp2Result = tmp2(11667);
+  [require, tmp8] = callback(tmp2(11667).useOpenFixQuarantinedProfileModal({ guildId }), 2);
   if (!tmp8) {
-    const intl3 = tmp2(1236).intl;
-    stringResult = intl3.string(tmp2(1236).t.FFj5Dt);
+    const intl3 = tmp2(1233).intl;
+    stringResult = intl3.string(tmp2(1233).t.FFj5Dt);
   }
-  const intl4 = tmp2(1236).intl;
+  const intl4 = tmp2(1233).intl;
   const string = intl4.string;
-  const t = tmp2(1236).t;
+  const t = tmp2(1233).t;
   if (tmp8) {
     let stringResult1 = string(t["/PGQf0"]);
   } else {
@@ -85,8 +85,8 @@ function PerServerProfileAlert(arg0) {
   }
   const obj = {};
   const merged = Object.assign(tmp);
-  const intl5 = tmp2(1236).intl;
-  obj.title = intl5.format(tmp2(1236).t.kcYdTq, { guildName });
+  const intl5 = tmp2(1233).intl;
+  obj.title = intl5.format(tmp2(1233).t.kcYdTq, { guildName });
   obj.description = stringResult;
   obj.buttonCta = stringResult1;
   obj.onConfirm = function onConfirm() {
@@ -134,10 +134,10 @@ const result = require("set").fileFinishedImporting(
 
 export default function AutomodUserProfileQuarantineAlert(guildId) {
   guildId = guildId.guildId;
-  let obj = guildId(647);
+  let obj = guildId(644);
   const items = [closure_9];
   const stateFromStores = obj.useStateFromStores(items, () => id.getId());
-  obj1 = guildId(647);
+  obj1 = guildId(644);
   const items1 = [closure_11];
   const items2 = [guildId];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_11.getGuild(guildId), items2);
@@ -150,7 +150,7 @@ export default function AutomodUserProfileQuarantineAlert(guildId) {
   }
   const items3 = [closure_10];
   const items4 = [guildId, stateFromStores];
-  const stateFromStores2 = guildId(647).useStateFromStores(
+  const stateFromStores2 = guildId(644).useStateFromStores(
     items3,
     () => {
       if (null == guildId) {

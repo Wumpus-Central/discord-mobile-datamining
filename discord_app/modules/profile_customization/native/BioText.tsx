@@ -16,7 +16,7 @@ function LinkButton(arg0) {
       let obj = callback(4190);
       obj.openURL(closure_6);
       obj = { cta_type: "profile_bio", target: closure_6 };
-      callback(698).track(constants.CHANGE_LOG_CTA_CLICKED, obj);
+      callback(695).track(constants.CHANGE_LOG_CTA_CLICKED, obj);
     },
     style: tmp.link,
     children: callback(Text.Text, obj),

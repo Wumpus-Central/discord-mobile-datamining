@@ -24,9 +24,9 @@ let obj = {
   selectedRoleIds: null,
   selectedJoinDateOption: null,
   selectedAccountAgeOption: null,
-  selectedJoinSourceType: "accessible",
-  selectedSourceInviteCode: "header",
-  selectedSort: "enumerable",
+  selectedJoinSourceType: "call",
+  selectedSourceInviteCode: "style",
+  selectedSort: "fill",
 };
 let set = new Set();
 obj[5] = set;
@@ -47,9 +47,9 @@ class GuildMemberSafetySearch {
       selectedRoleIds: null,
       selectedJoinDateOption: null,
       selectedAccountAgeOption: null,
-      selectedJoinSourceType: "accessible",
-      selectedSourceInviteCode: "header",
-      selectedSort: "enumerable",
+      selectedJoinSourceType: "call",
+      selectedSourceInviteCode: "style",
+      selectedSort: "fill",
     };
     set = new Set();
     obj[5] = set;
@@ -77,9 +77,9 @@ prototype["reset"] = function reset() {
     selectedRoleIds: new Set(),
     selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null },
     selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
-    selectedJoinSourceType: "accessible",
-    selectedSourceInviteCode: "header",
-    selectedSort: "enumerable",
+    selectedJoinSourceType: "call",
+    selectedSourceInviteCode: "style",
+    selectedSort: "fill",
   };
   this._searchState = obj;
   this.hasDefaultQuery = true;
@@ -105,9 +105,9 @@ prototype["resetSearchState"] = function resetSearchState() {
       selectedRoleIds: null,
       selectedJoinDateOption: null,
       selectedAccountAgeOption: null,
-      selectedJoinSourceType: "accessible",
-      selectedSourceInviteCode: "header",
-      selectedSort: "enumerable",
+      selectedJoinSourceType: "call",
+      selectedSourceInviteCode: "style",
+      selectedSort: "fill",
     };
     const _Set = Set;
     const set = new Set();
@@ -321,9 +321,9 @@ export const getDefaultSearchState = function getDefaultSearchState() {
     selectedRoleIds: new Set(),
     selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null },
     selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
-    selectedJoinSourceType: "accessible",
-    selectedSourceInviteCode: "header",
-    selectedSort: "enumerable",
+    selectedJoinSourceType: "call",
+    selectedSourceInviteCode: "style",
+    selectedSort: "fill",
   };
   return obj;
 };

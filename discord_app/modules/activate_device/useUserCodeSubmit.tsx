@@ -33,17 +33,17 @@ export const useUserCodeSubmit = function useUserCodeSubmit(arr, onUserCodeAccep
         c4(
           (function verifyUserCodeStatusToErrorMessage(status) {
             if (429 === status) {
-              const intl3 = callback(1236).intl;
-              let stringResult = intl3.string(callback(1236).t.BPmZvj);
+              const intl3 = callback(1233).intl;
+              let stringResult = intl3.string(callback(1233).t.BPmZvj);
             } else {
               if (404 !== status) {
                 if (400 !== status) {
-                  const intl = callback(1236).intl;
-                  stringResult = intl.string(callback(1236).t.JNQRU4);
+                  const intl = callback(1233).intl;
+                  stringResult = intl.string(callback(1233).t.JNQRU4);
                 }
               }
-              const intl2 = callback(1236).intl;
-              stringResult = intl2.string(callback(1236).t.aWa1Pw);
+              const intl2 = callback(1233).intl;
+              stringResult = intl2.string(callback(1233).t.aWa1Pw);
             }
             return stringResult;
           })(status),

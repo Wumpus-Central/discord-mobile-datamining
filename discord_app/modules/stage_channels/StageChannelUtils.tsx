@@ -155,30 +155,30 @@ export const getParticipantNamesText = function getParticipantNamesText(channel,
     return flag;
   });
   if (0 === found.length) {
-    const intl3 = set(1236).intl;
-    let stringResult = intl3.string(set(1236).t.FUVhyC);
+    const intl3 = set(1233).intl;
+    let stringResult = intl3.string(set(1233).t.FUVhyC);
   } else if (1 === found.length) {
-    const intl2 = set(1236).intl;
+    const intl2 = set(1233).intl;
     let obj = { a: null };
     obj[0] = getNicknameDefault.getName(channel.getGuildId(), channel.id, found[0].user);
-    stringResult = intl2.formatToPlainString(set(1236).t.EQwZlN, obj);
+    stringResult = intl2.formatToPlainString(set(1233).t.EQwZlN, obj);
     const obj5 = getNicknameDefault;
   } else if (2 === found.length) {
-    const intl = set(1236).intl;
+    const intl = set(1233).intl;
     obj = { a: null, b: null };
     obj[0] = getNicknameDefault.getName(channel.getGuildId(), channel.id, found[0].user);
     const obj2 = getNicknameDefault;
     obj[1] = getNicknameDefault.getName(channel.getGuildId(), channel.id, found[1].user);
-    stringResult = intl.formatToPlainString(set(1236).t.zBcKoA, obj);
+    stringResult = intl.formatToPlainString(set(1233).t.zBcKoA, obj);
     const obj3 = getNicknameDefault;
   } else {
-    const intl4 = set(1236).intl;
+    const intl4 = set(1233).intl;
     obj = { a: null, b: null, n: null };
     obj[0] = getNicknameDefault.getName(channel.getGuildId(), channel.id, found[0].user);
     const obj7 = getNicknameDefault;
     obj[1] = getNicknameDefault.getName(channel.getGuildId(), channel.id, found[1].user);
     obj[2] = found.length - 2;
-    stringResult = intl4.formatToPlainString(set(1236).t["3AqFaG"], obj);
+    stringResult = intl4.formatToPlainString(set(1233).t["3AqFaG"], obj);
     const obj8 = getNicknameDefault;
   }
   return stringResult;

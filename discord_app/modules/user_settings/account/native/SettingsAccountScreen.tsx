@@ -6,7 +6,7 @@ import useSettingNavigationRoute from "../../core/native/useSettingNavigationRou
 import useSegmentedControlState from "../../../../design/components/SegmentedControl/native/SegmentedControlState.native.tsx";
 import SegmentedControlPage from "../../../../design/components/SegmentedControl/native/SegmentedControlPages.native.tsx";
 import SegmentedControl from "../../../../design/components/SegmentedControl/native/SegmentedControl.native.tsx";
-import _modDef14340 from "../../../settings/native/renderer/SettingLayout.tsx";
+import _modDef14563 from "../../../settings/native/renderer/SettingLayout.tsx";
 import AutomatedUnderageAppealStatus from "../../../safety_hub/native/SafetyHubPage.tsx";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
@@ -18,7 +18,7 @@ import { AnalyticEvents } from "../../../../Constants.tsx";
 import { WebAuthnScreens } from "../../../webauthn/WebAuthnConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { registerAsset } from "../../../../../_runtime/14312_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/14535_registerAsset.js";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 
 require = arg1;
@@ -109,11 +109,11 @@ function AccountTwoFALabel() {
 }
 function AccountSecurityPage() {
   const node = importAllResult.useMemo(() => {
-    let obj = callback(11068);
+    let obj = callback(11288);
     obj = { sections: null, ListHeaderComponent: null };
     obj = { label: null, settings: null };
-    const intl = callback(1236).intl;
-    obj[0] = intl.string(callback(1236).t.e262Nn);
+    const intl = callback(1233).intl;
+    obj[0] = intl.string(callback(1233).t.e262Nn);
     const items = [, , , , , ,];
     ({
       ACCOUNT_USERNAME: arr[0],
@@ -137,17 +137,17 @@ function AccountSecurityPage() {
     } = closure_7);
     items1[1] = { label: callback3(closure_16, {}), settings: items2 };
     const obj2 = { label: null, settings: null };
-    const intl2 = callback(1236).intl;
-    obj2[0] = intl2.string(callback(1236).t["5V0AkP"]);
+    const intl2 = callback(1233).intl;
+    obj2[0] = intl2.string(callback(1233).t["5V0AkP"]);
     const items3 = [,];
     ({ ACCOUNT_DISABLE: arr4[0], ACCOUNT_DELETE: arr4[1] } = closure_7);
     obj2[1] = items3;
     items1[2] = obj2;
     obj[0] = items1.filter(Boolean);
-    obj[1] = callback2(14337);
+    obj[1] = callback2(14560);
     return obj.createList(obj);
   }, []);
-  return callback2(_modDef14340, { node });
+  return callback2(_modDef14563, { node });
 }
 function AccountStandingPage() {
   return callback2(AutomatedUnderageAppealStatus.default, { visible: true });
@@ -190,13 +190,13 @@ const memoResult = importAllResult.memo(() => {
   const tmp2 = callback(importAllResult.useState(0), 2);
   obj = { items: null, pageWidth: null, defaultIndex: null, onSetActiveIndex: null };
   obj = { label: null, id: null, page: null };
-  const intl = tmp5(1236).intl;
+  const intl = tmp5(1233).intl;
   obj[0] = intl.string(getSystemLocale.t.Am9YHi);
   obj[1] = AccountSettingsTabs.SECURITY;
   obj[2] = callback2(AccountSecurityPage, {});
   const items = [obj];
   obj1 = { label: null, id: null, page: null };
-  const intl2 = tmp5(1236).intl;
+  const intl2 = tmp5(1233).intl;
   obj1[0] = intl2.string(getSystemLocale.t["00Sfl/"]);
   obj1[1] = AccountSettingsTabs.STANDING;
   const tmp5Result = useSegmentedControlState;

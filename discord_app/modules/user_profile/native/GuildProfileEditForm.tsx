@@ -85,11 +85,11 @@ function EditGuildProfileBanner(user) {
       const result = tmpResult.handleShowUpsellAlert(obj);
     }
   };
-  let intl = tmp5(1236).intl;
-  obj[8] = intl.string(user(1236).t["95hPAe"]);
+  let intl = tmp5(1233).intl;
+  obj[8] = intl.string(user(1233).t["95hPAe"]);
   obj[9] = disabled;
   obj[1] = closure_17(ProfilePreviewButtonDefault, obj);
-  return closure_17(user(5953).AnalyticsLocationProvider, obj);
+  return closure_17(user(5961).AnalyticsLocationProvider, obj);
 }
 let closure_3 = ["nick", "bio", "guild_tag"];
 ({ ScrollView: closure_6, View: error } = get_ActivityIndicator);

@@ -18,8 +18,8 @@ function formatWatchRemainingDurationShort(questTaskDetails, truncate) {
     truncate = truncate.truncate;
   }
   if (truncate >= num) {
-    const intl2 = tmp(1236).intl;
-    let t = tmp(1236).t;
+    const intl2 = tmp(1233).intl;
+    let t = tmp(1233).t;
     t = { count: null };
     const _Math = Math;
     num = truncate / num;
@@ -27,8 +27,8 @@ function formatWatchRemainingDurationShort(questTaskDetails, truncate) {
     intl2.formatToPlainString(tmp5 ? t.XTdnRd : t.PHhTXX, t);
     const tmp6 = tmp5 ? t.XTdnRd : t.PHhTXX;
   } else {
-    const intl = tmp(1236).intl;
-    t = tmp(1236).t;
+    const intl = tmp(1233).intl;
+    t = tmp(1233).t;
     obj = { count: null };
     obj[0] = truncate;
     return intl.formatToPlainString(tmp5 ? t["spl/XS"] : t.rUfeQx, obj);
@@ -64,15 +64,15 @@ export const getVideoQuestWatchCtaAccessibilityLabel = function getVideoQuestWat
   ({ minutes, seconds } = remainingTaskTime);
   if (minutes > 0) {
     if (seconds > 0) {
-      const intl3 = tmp2(1236).intl;
+      const intl3 = tmp2(1233).intl;
       obj = { minutes: null, seconds: null };
       obj[0] = minutes;
       obj[1] = seconds;
-      let formatToPlainStringResult = intl3.formatToPlainString(tmp2(1236).t["lW/66D"], obj);
+      let formatToPlainStringResult = intl3.formatToPlainString(tmp2(1233).t["lW/66D"], obj);
     }
-    const intl4 = tmp2(1236).intl;
+    const intl4 = tmp2(1233).intl;
     const formatToPlainString = intl4.formatToPlainString;
-    const t = tmp2(1236).t;
+    const t = tmp2(1233).t;
     if (tmp) {
       obj = { remainTime: null };
       obj[0] = formatToPlainStringResult;
@@ -85,14 +85,14 @@ export const getVideoQuestWatchCtaAccessibilityLabel = function getVideoQuestWat
     return formatToPlainStringResult1;
   }
   if (minutes > 0) {
-    const intl2 = tmp2(1236).intl;
+    const intl2 = tmp2(1233).intl;
     const obj2 = { count: null };
     obj2[0] = minutes;
-    formatToPlainStringResult = intl2.formatToPlainString(tmp2(1236).t["SxnF/O"], obj2);
+    formatToPlainStringResult = intl2.formatToPlainString(tmp2(1233).t["SxnF/O"], obj2);
   } else {
-    const intl = tmp2(1236).intl;
+    const intl = tmp2(1233).intl;
     const obj3 = { count: null };
     obj3[0] = seconds;
-    formatToPlainStringResult = intl.formatToPlainString(tmp2(1236).t["0BZpdi"], obj3);
+    formatToPlainStringResult = intl.formatToPlainString(tmp2(1233).t["0BZpdi"], obj3);
   }
 };

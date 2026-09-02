@@ -1,7 +1,7 @@
 // discord_app/components_native/warnings/Suppressed.tsx
 import getSystemLocale from "../../intl/index.native.tsx";
-import registerAssetDefault from "../../../_runtime/16499_registerAsset.js";
-import registerAssetDefault2 from "../../../_runtime/16500_registerAsset.js";
+import registerAssetDefault from "../../../_runtime/16734_registerAsset.js";
+import registerAssetDefault2 from "../../../_runtime/16735_registerAsset.js";
 import closure_3 from "../../stores/PermissionSpeakStore.tsx";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../_runtime/00019_noop.js";
@@ -23,14 +23,14 @@ Suppressed.prototype["render"] = function render() {
   const t = getSystemLocale.t;
   if (isAFKChannelResult) {
     let stringResult = string(t.KuYcnU);
-    const intl3 = tmp2(1236).intl;
-    let stringResult1 = intl3.string(tmp2(1236).t["RaFZ3+"]);
+    const intl3 = tmp2(1233).intl;
+    let stringResult1 = intl3.string(tmp2(1233).t["RaFZ3+"]);
     let tmp7 = registerAssetDefault;
     let tmp6 = importDefault;
   } else {
     stringResult = string(t.FJSZVM);
-    const intl2 = tmp2(1236).intl;
-    stringResult1 = intl2.string(tmp2(1236).t.etJjgW);
+    const intl2 = tmp2(1233).intl;
+    stringResult1 = intl2.string(tmp2(1233).t.etJjgW);
     tmp6 = importDefault;
     tmp7 = registerAssetDefault2;
   }

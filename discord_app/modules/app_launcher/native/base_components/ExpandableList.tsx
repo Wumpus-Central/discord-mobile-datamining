@@ -176,23 +176,23 @@ export default function ExpandableList(items) {
     return tmp14(bound, obj3);
   } else {
     if (first) {
-      const intl2 = tmp9(1236).intl;
-      let stringResult = intl2.string(tmp9(1236).t.nPGLFQ);
+      const intl2 = tmp9(1233).intl;
+      let stringResult = intl2.string(tmp9(1233).t.nPGLFQ);
     } else if (null != title) {
-      const intl = tmp9(1236).intl;
+      const intl = tmp9(1233).intl;
       obj4 = { title: null };
       obj4[0] = title;
-      stringResult = intl.formatToPlainString(tmp9(1236).t["bj/2kV"], obj4);
+      stringResult = intl.formatToPlainString(tmp9(1233).t["bj/2kV"], obj4);
     }
     obj5 = { accessibilityLabel: null, label: null, onPress: null, end: true };
     obj5[0] = stringResult;
     let obj6 = { style: null, children: null };
     obj6[0] = tmp.expandCTALabelContainer;
-    const intl3 = tmp9(1236).intl;
+    const intl3 = tmp9(1233).intl;
     if (first) {
-      let stringResult1 = intl3.string(tmp9(1236).t.nPGLFQ);
+      let stringResult1 = intl3.string(tmp9(1233).t.nPGLFQ);
     } else {
-      stringResult1 = intl3.format(tmp9(1236).t.gVw57p, {});
+      stringResult1 = intl3.format(tmp9(1233).t.gVw57p, {});
     }
     obj7 = { children: null };
     const obj8 = { color: "text-brand", variant: "text-md/semibold", children: null };
@@ -212,7 +212,7 @@ export default function ExpandableList(items) {
         tmp4(obj);
       }
     };
-    obj5 = tmp16(tmp9(5599).TableRow, obj5);
+    obj5 = tmp16(tmp9(5607).TableRow, obj5);
     obj7[0] = obj5;
     tmp16Result = tmp16(tmp17, obj7);
   }

@@ -153,9 +153,9 @@ export default function WebAuthnNameStep(arg0) {
     required: true,
     large: true,
   };
-  let intl = tmp2(1236).intl;
+  let intl = tmp2(1233).intl;
   obj[5] = intl.string(getSystemLocale.t["Jzd+z/"]);
-  const intl2 = tmp2(1236).intl;
+  const intl2 = tmp2(1233).intl;
   obj[6] = intl2.string(getSystemLocale.t["I/sJtJ"]);
   obj[7] = tmp6[0];
   obj[8] = Button.ClearButtonVisibility.WITH_CONTENT;
@@ -176,7 +176,7 @@ export default function WebAuthnNameStep(arg0) {
     disabled: null,
     size: "lg",
   };
-  const intl3 = tmp2(1236).intl;
+  const intl3 = tmp2(1233).intl;
   obj2[1] = intl3.string(getSystemLocale.t["5dyZ1S"]);
   obj2[2] = "" === first;
   obj1[1] = callback2(Button2.Button, obj2);

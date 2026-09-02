@@ -74,25 +74,25 @@ export default function ChangeAvatarActionSheet(showRemoveAvatar) {
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.lqaIxI);
   if (isPremiumResult) {
-    isPremiumResult = tmp8(tmp2(8096).NitroWheelIcon, {});
+    isPremiumResult = tmp8(tmp2(8104).NitroWheelIcon, {});
   }
   obj[1] = isPremiumResult;
   ({ titleWrapper: obj3[2], titleContainer: obj3[3] } = tmp);
   const items1 = [closure_6(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj)];
   obj = { label: null, subLabel: null, onPress: null };
-  const intl2 = tmp2(1236).intl;
+  const intl2 = tmp2(1233).intl;
   obj[0] = intl2.string(getSystemLocale.t["MsUY/S"]);
-  const intl3 = tmp2(1236).intl;
+  const intl3 = tmp2(1233).intl;
   obj[1] = intl3.string(getSystemLocale.t.r5hKOy);
   obj[2] = handleUploadAvatarSelect;
   const items2 = [closure_6(TableRowInner.TableRow, obj), , , ,];
   let tmp8Result = null != handleUploadGIFAvatarSelect && !showAnimatedAvatarUpsell;
   if (tmp8Result) {
     obj1 = { label: null, onPress: null };
-    const intl4 = tmp2(1236).intl;
-    obj1[0] = intl4.string(tmp2(1236).t["xsC+/y"]);
+    const intl4 = tmp2(1233).intl;
+    obj1[0] = intl4.string(tmp2(1233).t["xsC+/y"]);
     obj1[1] = handleUploadGIFAvatarSelect;
-    tmp8Result = tmp8(tmp2(5599).TableRow, obj1);
+    tmp8Result = tmp8(tmp2(5607).TableRow, obj1);
   }
   items2[1] = tmp8Result;
   if (showAnimatedAvatarUpsell) {
@@ -100,31 +100,31 @@ export default function ChangeAvatarActionSheet(showRemoveAvatar) {
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.upsellTitleContainer;
     const obj4 = { text: null };
-    const intl5 = tmp2(1236).intl;
-    obj4[0] = intl5.string(tmp2(1236).t.xZ0Wot);
-    const items3 = [tmp8(tmp2(8363).FormLabel, obj4)];
+    const intl5 = tmp2(1233).intl;
+    obj4[0] = intl5.string(tmp2(1233).t.xZ0Wot);
+    const items3 = [tmp8(tmp2(8372).FormLabel, obj4)];
     const obj5 = { style: null, size: "sm" };
     obj5[0] = tmp.nitroWheel;
-    items3[1] = tmp8(tmp2(8096).NitroWheelIcon, obj5);
+    items3[1] = tmp8(tmp2(8104).NitroWheelIcon, obj5);
     obj3[1] = items3;
     obj2[0] = tmp7(View, obj3);
     const obj6 = { children: null };
     const obj7 = { style: null, numberOfLines: 3, text: null };
     obj7[0] = tmp.sublabel;
-    const intl6 = tmp2(1236).intl;
-    obj7[2] = intl6.string(tmp2(1236).t.L3UPqR);
-    const items4 = [tmp8(tmp2(8363).FormSubLabel, obj7)];
+    const intl6 = tmp2(1233).intl;
+    obj7[2] = intl6.string(tmp2(1233).t.L3UPqR);
+    const items4 = [tmp8(tmp2(8372).FormSubLabel, obj7)];
     const obj8 = { style: null, children: null };
     obj8[0] = tmp.upsellButton;
     const obj9 = { analyticsObject: null, label: null };
     obj9[0] = AnalyticsObjects.ANIMATED_AVATAR;
-    const intl7 = tmp2(1236).intl;
-    obj9[1] = intl7.string(tmp2(1236).t.mr4K7D);
+    const intl7 = tmp2(1233).intl;
+    obj9[1] = intl7.string(tmp2(1233).t.mr4K7D);
     obj8[1] = tmp8(UserProfileUpsellButtonDefault, obj9);
     items4[1] = tmp8(View, obj8);
     obj6[0] = items4;
     obj2[1] = tmp7(closure_8, obj6);
-    showAnimatedAvatarUpsell = tmp8(tmp2(5599).TableRow, obj2);
+    showAnimatedAvatarUpsell = tmp8(tmp2(5607).TableRow, obj2);
     const tmp5Result = UserProfileUpsellButtonDefault;
   }
   items2[2] = showAnimatedAvatarUpsell;
@@ -134,12 +134,12 @@ export default function ChangeAvatarActionSheet(showRemoveAvatar) {
     const obj11 = { style: null, children: null };
     obj11[0] = tmp.upsellTitleContainer;
     const obj12 = { text: null };
-    const intl8 = tmp2(1236).intl;
-    obj12[0] = intl8.string(tmp2(1236).t.BVcYCx);
-    obj11[1] = tmp8(tmp2(8363).FormLabel, obj12);
+    const intl8 = tmp2(1233).intl;
+    obj12[0] = intl8.string(tmp2(1233).t.BVcYCx);
+    obj11[1] = tmp8(tmp2(8372).FormLabel, obj12);
     obj10[0] = tmp8(View, obj11);
     obj10[1] = handleEditAvatarDecorationSelect;
-    tmp8Result = tmp8(tmp2(5599).TableRow, obj10);
+    tmp8Result = tmp8(tmp2(5607).TableRow, obj10);
   }
   items2[3] = tmp8Result;
   if (flag) {
@@ -148,11 +148,11 @@ export default function ChangeAvatarActionSheet(showRemoveAvatar) {
     const items5 = [,];
     ({ label: arr6[0], remove: arr6[1] } = tmp);
     obj14[0] = items5;
-    const intl9 = tmp2(1236).intl;
-    obj14[1] = intl9.string(tmp2(1236).t.twB3fz);
-    obj13[0] = tmp8(tmp2(8363).FormLabel, obj14);
+    const intl9 = tmp2(1233).intl;
+    obj14[1] = intl9.string(tmp2(1233).t.twB3fz);
+    obj13[0] = tmp8(tmp2(8372).FormLabel, obj14);
     obj13[1] = handleRemoveAvatarSelect;
-    flag = tmp8(tmp2(5599).TableRow, obj13);
+    flag = tmp8(tmp2(5607).TableRow, obj13);
   }
   const obj15 = { children: null };
   items2[4] = flag;

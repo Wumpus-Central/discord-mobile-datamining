@@ -310,7 +310,7 @@ export const useMessageRequestPreview = function useMessageRequestPreview(channe
   }
   const items = [closure_6, closure_4, closure_5];
   const items1 = [id];
-  const stateFromStoresObject = id(589).useStateFromStoresObject(
+  const stateFromStoresObject = id(586).useStateFromStoresObject(
     items,
     () => {
       const lastMessageIdResult = closure_1_5.lastMessageId(id);
@@ -330,10 +330,10 @@ export const useMessageRequestPreview = function useMessageRequestPreview(channe
     items1,
   );
   ({ loaded, message, error } = stateFromStoresObject);
-  const obj2 = id(589);
+  const obj2 = id(586);
   const items2 = [closure_6];
   const items3 = [id];
-  const stateFromStores = id(589).useStateFromStores(
+  const stateFromStores = id(586).useStateFromStores(
     items2,
     () => closure_1_6.shouldLoadMessageRequestPreview(id),
     items3,

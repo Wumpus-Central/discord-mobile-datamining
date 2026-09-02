@@ -1,6 +1,6 @@
 // discord_common/js/packages/tokens/transforms.tsx
 import set2 from "../../../../_runtime/00002_set.js";
-import nDefault from "../../../../_runtime/00689_n.js";
+import nDefault from "../../../../_runtime/00686_n.js";
 
 function interpolate(arg0, arg1, arg2) {
   [tmp, tmp2] = arg0;

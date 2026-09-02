@@ -4,8 +4,10 @@ import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import Storage2 from "../../discord_common/js/packages/storage/Storage.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import applyOverwritesAll from "../utils/PermissionUtils.tsx";
-import closure_6 from "ChannelSettingsStore.tsx";
-import closure_7 from "ChannelStore.tsx";
+import getAppChannelBotUserIdFromApplication from "../modules/app_channels/AppChannelPermissionUtils.tsx";
+import closure_6 from "../modules/applications/ApplicationStore.tsx";
+import closure_7 from "ChannelSettingsStore.tsx";
+import closure_8 from "ChannelStore.tsx";
 import ME from "../Constants.tsx";
 import { ADVANCED_MODE_ON_KEY } from "../modules/channel_permissions/ChannelPermissionsConstants.tsx";
 import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
@@ -27,9 +29,15 @@ function init() {
       obj[guildId1] = obj.makeEveryoneOverwrite(guildId1);
     }
     closure_5 = null != category;
-    closure_4 = applyOverwritesAll.areChannelsLocked(_null2, category);
-    c19 = null;
-    c13 = false;
+    const obj2 = applyOverwritesAll;
+    tmp = null != guildId1 && null == obj[guildId1];
+    closure_4 = obj2.areChannelsLocked(
+      _null2,
+      category,
+      getAppChannelBotUserIdFromApplication.getAppChannelBotUserId(_null2),
+    );
+    c21 = null;
+    c15 = false;
     CLOSED = FormStates.CLOSED;
     set.clear();
   }
@@ -70,19 +78,21 @@ function syncChannelUpdates(id) {
           obj1 = {};
           const merged1 = Object.assign(channel.permissionOverwrites);
           const merged2 = Object.assign(obj);
-          if (null == obj1[closure_18]) {
-            closure_18 = guildId;
+          if (null == obj1[closure_20]) {
+            closure_20 = guildId;
           } else {
-            let tmp18 = null != c19;
+            let tmp18 = null != c21;
             if (tmp18) {
-              tmp18 = null != obj1[c19];
+              tmp18 = null != obj1[c21];
             }
             if (tmp18) {
-              closure_18 = c19;
-              c19 = null;
+              closure_20 = c21;
+              c21 = null;
             }
           }
-          closure_4 = applyOverwritesAll.areChannelsLocked(channel, category);
+          const obj5 = applyOverwritesAll;
+          tmp = null != guildId1 && null == obj[guildId1];
+          closure_4 = obj5.areChannelsLocked(channel, category, obj(11419).getAppChannelBotUserId(channel));
           return true;
         }
       }
@@ -90,32 +100,32 @@ function syncChannelUpdates(id) {
   }
   return false;
 }
-({ ChannelSettingsSections: closure_8, FormStates } = ME);
+({ ChannelSettingsSections: c9, ChannelTypes: c10, FormStates } = ME);
 let set = new Set();
 let CLOSED = FormStates.CLOSED;
-let c13 = false;
-let c14 = null;
-let c15 = null;
+let c15 = false;
 let c16 = null;
 let c17 = null;
 let c18 = null;
 let c19 = null;
-let closure_20 = Storage.get(ADVANCED_MODE_ON_KEY) || false;
+let c20 = null;
+let c21 = null;
+let closure_22 = Storage.get(ADVANCED_MODE_ON_KEY) || false;
 const Store = initializeDefault.Store;
 class ChannelSettingsPermissionsStore extends Store {}
 const prototype = ChannelSettingsPermissionsStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_6, closure_7);
+  this.waitFor(closure_7, closure_8, closure_6);
 };
 prototype["hasChanges"] = function hasChanges() {
-  return c13;
+  return c15;
 };
 prototype["showNotice"] = function showNotice() {
   return this.hasChanges();
 };
 prototype["getPermissionOverwrite"] = function getPermissionOverwrite(arg0) {
   let tmp2;
-  if (c14 != null) {
+  if (c16 != null) {
     tmp2 = tmp[arg0];
   }
   return tmp2;
@@ -128,13 +138,13 @@ Object.defineProperty(prototype, "editedPermissionIds", {
 });
 Object.defineProperty(prototype, "permissionOverwrites", {
   get: function permissionOverwrites() {
-    return c14;
+    return c16;
   },
   set: undefined,
 });
 Object.defineProperty(prototype, "selectedOverwriteId", {
   get: function selectedOverwriteId() {
-    return c18;
+    return c20;
   },
   set: undefined,
 });
@@ -158,26 +168,26 @@ Object.defineProperty(prototype, "locked", {
 });
 Object.defineProperty(prototype, "channel", {
   get: function channel(channel, arg1) {
-    return c16;
+    return c18;
   },
   set: undefined,
 });
 Object.defineProperty(prototype, "category", {
   get: function category(arg0) {
-    return c17;
+    return c19;
   },
   set: undefined,
 });
 Object.defineProperty(prototype, "advancedMode", {
   get: function advancedMode() {
-    return closure_20;
+    return closure_22;
   },
   set: undefined,
 });
 ChannelSettingsPermissionsStore.displayName = "ChannelSettingsPermissionsStore";
 const channelSettingsPermissionsStore = new ChannelSettingsPermissionsStore(dispatcherDefault, {
   CHANNEL_SETTINGS_SET_SECTION: function handleSetSection(arg0) {
-    if (null == c16) {
+    if (null == c18) {
       if (tmp === constants.PERMISSIONS) {
         init();
       }
@@ -193,7 +203,7 @@ const channelSettingsPermissionsStore = new ChannelSettingsPermissionsStore(disp
       tmp = obj[id];
     }
     if (null != tmp) {
-      if (null != c16) {
+      if (null != c18) {
         obj = {};
         const merged = Object.assign(tmp);
         obj.allow = allow;
@@ -203,16 +213,17 @@ const channelSettingsPermissionsStore = new ChannelSettingsPermissionsStore(disp
         obj[id] = obj;
         set.add(id);
         const OPEN = FormStates.OPEN;
-        closure_13 = !applyDefault.isEqual(obj, c15);
+        closure_15 = !applyDefault.isEqual(obj, c17);
         const obj3 = applyDefault;
-        closure_4 = applyOverwritesAll.areChannelsLocked(c16, c17);
+        const obj4 = applyOverwritesAll;
+        closure_4 = obj4.areChannelsLocked(c18, c19, getAppChannelBotUserIdFromApplication.getAppChannelBotUserId(c18));
       }
     }
     return false;
   },
   CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function handleSelectPermission(id) {
     id = id.id;
-    if (null == c16) {
+    if (null == c18) {
       return false;
     }
   },
@@ -223,18 +234,18 @@ const channelSettingsPermissionsStore = new ChannelSettingsPermissionsStore(disp
   },
   CHANNEL_SETTINGS_CLOSE: function handleClose() {
     CLOSED = FormStates.CLOSED;
-    c14 = null;
-    c15 = null;
     c16 = null;
     c17 = null;
-    c13 = false;
-    set.clear();
     c18 = null;
     c19 = null;
+    c15 = false;
+    set.clear();
+    c20 = null;
+    c21 = null;
   },
   CHANNEL_UPDATES: function handleChannelUpdates(channels) {
     channels = channels.channels;
-    if (null == c16) {
+    if (null == c18) {
       return false;
     } else {
       let flag2 = false;
@@ -264,6 +275,21 @@ const channelSettingsPermissionsStore = new ChannelSettingsPermissionsStore(disp
     advancedMode = advancedMode.advancedMode;
     const Storage = Storage2.Storage;
     const result = Storage.set(ADVANCED_MODE_ON_KEY, advancedMode);
+  },
+  APPLICATION_FETCH_SUCCESS: function handleApplicationFetchSuccess() {
+    if (null != _null2) {
+      if (_null2.type === constants2.GUILD_APP) {
+        const obj = applyOverwritesAll;
+        const areChannelsLockedResult = obj.areChannelsLocked(
+          _null2,
+          c19,
+          getAppChannelBotUserIdFromApplication.getAppChannelBotUserId(_null2),
+        );
+        closure_4 = areChannelsLockedResult;
+        return areChannelsLockedResult !== closure_4;
+      }
+    }
+    return false;
   },
 });
 let result = set.fileFinishedImporting("stores/ChannelSettingsPermissionsStore.tsx");

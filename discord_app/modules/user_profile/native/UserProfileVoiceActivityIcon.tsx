@@ -12,7 +12,7 @@ const result = require("set").fileFinishedImporting("modules/user_profile/native
 export default function UserProfileVoiceActivityIcon(channel) {
   channel = channel.channel;
   const merged = Object.assign(channel, Object.create(null));
-  let obj = channel(589);
+  let obj = channel(586);
   const items = [closure_3];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let isPrivateResult = channel.isPrivate();
@@ -32,23 +32,23 @@ export default function UserProfileVoiceActivityIcon(channel) {
         if (tmp6) {
           obj = {};
           const merged1 = Object.assign(merged);
-          let tmp8Result = jsx(tmp2(5045).StageLockIcon, {});
+          let tmp8Result = jsx(tmp2(5049).StageLockIcon, {});
         }
         return tmp8Result;
       }
       if (isGuildStageVoiceResult) {
         obj = {};
         const merged2 = Object.assign(merged);
-        tmp8Result = jsx(tmp2(5046).StageIcon, {});
+        tmp8Result = jsx(tmp2(5050).StageIcon, {});
       } else if (channel.isNSFW()) {
         obj1 = {};
         const merged3 = Object.assign(merged);
-        tmp8Result = tmp8(tmp2(5048).VoiceWarningIcon, obj1);
+        tmp8Result = tmp8(tmp2(5052).VoiceWarningIcon, obj1);
       } else {
         if (tmp6) {
-          let VoiceNormalIcon = tmp2(5047).VoiceLockIcon;
+          let VoiceNormalIcon = tmp2(5051).VoiceLockIcon;
         } else {
-          VoiceNormalIcon = tmp2(5050).VoiceNormalIcon;
+          VoiceNormalIcon = tmp2(5054).VoiceNormalIcon;
         }
         const obj2 = {};
         const merged4 = Object.assign(merged);
@@ -57,5 +57,5 @@ export default function UserProfileVoiceActivityIcon(channel) {
     }
   }
   const merged5 = Object.assign(merged);
-  return jsx(channel(7623).PhoneCallIcon, {});
+  return jsx(channel(7633).PhoneCallIcon, {});
 }

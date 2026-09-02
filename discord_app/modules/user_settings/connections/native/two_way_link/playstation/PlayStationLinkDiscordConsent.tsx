@@ -14,7 +14,7 @@ export const PlayStationLinkDiscordConsent = function PlayStationLinkDiscordCons
   platformType = platformType.platformType;
   let navigation;
   ({ callbackCode, callbackState } = platformType);
-  let obj = navigation(1499);
+  let obj = navigation(1498);
   navigation = obj.useNavigation();
   const items = [navigation];
   const items1 = [navigation];
@@ -25,14 +25,14 @@ export const PlayStationLinkDiscordConsent = function PlayStationLinkDiscordCons
     navigation.push(closure_1_3.ERROR, { errorCode });
   }, items1);
   if (platformType === PlatformTypes.PLAYSTATION_STAGING) {
-    let PLAYSTATION_APPLICATION_ID = tmp(9315).ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID;
+    let PLAYSTATION_APPLICATION_ID = tmp(9328).ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID;
   } else {
-    PLAYSTATION_APPLICATION_ID = tmp(9315).ConsoleOAuthApplications.PLAYSTATION_APPLICATION_ID;
+    PLAYSTATION_APPLICATION_ID = tmp(9328).ConsoleOAuthApplications.PLAYSTATION_APPLICATION_ID;
   }
   if (platformType === PlatformTypes.PLAYSTATION_STAGING) {
-    let PLAYSTATION = tmp(9336).ConsoleAuthorizationRedirectURIs.PLAYSTATION_STAGING;
+    let PLAYSTATION = tmp(9349).ConsoleAuthorizationRedirectURIs.PLAYSTATION_STAGING;
   } else {
-    PLAYSTATION = tmp(9336).ConsoleAuthorizationRedirectURIs.PLAYSTATION;
+    PLAYSTATION = tmp(9349).ConsoleAuthorizationRedirectURIs.PLAYSTATION;
   }
   obj = {
     platformType,
@@ -44,7 +44,7 @@ export const PlayStationLinkDiscordConsent = function PlayStationLinkDiscordCons
     onError: callback1,
     redirectUri: PLAYSTATION,
   };
-  return jsx(navigation(9314).TwoWayLinkDiscordConsent, {
+  return jsx(navigation(9327).TwoWayLinkDiscordConsent, {
     platformType,
     callbackCode,
     callbackState,

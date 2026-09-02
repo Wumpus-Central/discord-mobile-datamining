@@ -1730,7 +1730,7 @@ const memoResult = importAllResult.memo(function VoicePanelCard(cleanUp) {
       tmp25 = callback;
     }
   }
-  const obj8 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "isArray", layout: "r", layoutPhysics: "isArray" };
+  const obj8 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "channelId", layout: true, layoutPhysics: true };
   obj8[3] = layoutTransition;
   obj8[4] = physics;
   tmp26Result = callback(closure_37, obj8);

@@ -31,7 +31,7 @@ export default function ShopFlashList(initialScrollIndex) {
   if (tmp5) {
     tmp5 = initialScrollIndex > 0;
   }
-  obj = { shouldScroll: tmp5, initialScrollIndex, flashListRef: ref, afterMs: tmp3(15413).INITIAL_SCROLL_DELAY_MS };
+  obj = { shouldScroll: tmp5, initialScrollIndex, flashListRef: ref, afterMs: tmp3(15641).INITIAL_SCROLL_DELAY_MS };
   const scrollToInitialIndexOnce = obj.useScrollToInitialIndexOnce(obj);
   obj = {
     ref,

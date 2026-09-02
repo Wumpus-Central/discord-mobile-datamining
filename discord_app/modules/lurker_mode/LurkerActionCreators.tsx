@@ -69,7 +69,7 @@ function _stopLurkingAll() {
                     c6 = 0;
                     c7 = 0;
                     c5 = 0;
-                    return (/* F122872 */ function*() { ... })();
+                    return (/* F124726 */ function*() { ... })();
                   });
                   return function() {
                     const self = this;
@@ -159,7 +159,7 @@ function _stopLurking() {
               table = undefined;
               c3 = 1;
               guildId = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else {
             if (1 === tmp4) {

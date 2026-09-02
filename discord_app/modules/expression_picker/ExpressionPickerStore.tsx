@@ -2,7 +2,7 @@
 import set from "../../../_runtime/00002_set.js";
 import ExpressionPickerViewType2 from "ExpressionPickerConstants.tsx";
 import uniqueIdDefault from "../../../_runtime/04724_uniqueId.js";
-import identity from "../../../_runtime/00700_identity.js";
+import identity from "../../../_runtime/00697_identity.js";
 import createJSONStorage from "../../../_runtime/04345_createJSONStorage.js";
 import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
@@ -52,7 +52,7 @@ export const closeExpressionPicker = function closeExpressionPicker(arg0, arg1) 
   }
   if (!tmp2) {
     if (null !== state.activeView) {
-      state(705).batchUpdates(() =>
+      state(702).batchUpdates(() =>
         closure_1_4.setState({
           activeView: null,
           activeViewType: null,
@@ -60,7 +60,7 @@ export const closeExpressionPicker = function closeExpressionPicker(arg0, arg1) 
           lastActiveView: activeView.activeView,
         }),
       );
-      const obj = state(705);
+      const obj = state(702);
     }
   }
 };
@@ -74,7 +74,7 @@ export const toggleMultiExpressionPicker = function toggleMultiExpressionPicker(
     let activeView = EMOJI;
     dependencyMap = arg0;
     ExpressionPickerViewType = arg1;
-    activeView(705).batchUpdates(() =>
+    activeView(702).batchUpdates(() =>
       closure_1_4.setState({
         activeView: closure_0,
         activeViewType: closure_1,
@@ -82,14 +82,14 @@ export const toggleMultiExpressionPicker = function toggleMultiExpressionPicker(
         lastActiveView: closure_1_4.getState().activeView,
       }),
     );
-    const obj3 = activeView(705);
+    const obj3 = activeView(702);
   } else {
     if (state.activeViewType === arg0) {
       if (state.activeChannelId === arg1) {
         const state1 = withEqualityFnResult.getState();
         activeView = state1;
         if (null !== state1.activeView) {
-          activeView(705).batchUpdates(() =>
+          activeView(702).batchUpdates(() =>
             closure_1_4.setState({
               activeView: null,
               activeViewType: null,
@@ -97,14 +97,14 @@ export const toggleMultiExpressionPicker = function toggleMultiExpressionPicker(
               lastActiveView: activeView.activeView,
             }),
           );
-          const obj4 = activeView(705);
+          const obj4 = activeView(702);
         }
       }
     }
     activeView = state.activeView;
     dependencyMap = arg0;
     ExpressionPickerViewType = arg1;
-    activeView(705).batchUpdates(() =>
+    activeView(702).batchUpdates(() =>
       closure_1_4.setState({
         activeView: closure_0,
         activeViewType: closure_1,
@@ -112,7 +112,7 @@ export const toggleMultiExpressionPicker = function toggleMultiExpressionPicker(
         lastActiveView: closure_1_4.getState().activeView,
       }),
     );
-    const obj2 = activeView(705);
+    const obj2 = activeView(702);
   }
 };
 export const toggleExpressionPicker = function toggleExpressionPicker(arg0, arg1, arg2) {

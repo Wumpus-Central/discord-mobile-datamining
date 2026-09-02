@@ -121,11 +121,11 @@ let c4 = importAllResult;
 ({ AnalyticsPages: error, MOBILE_GUILD_UPSELL_LIST: closure_8, TooltipNames: c9, UpsellTypes: c10 } = ME);
 let closure_13 = createCacheKey.createStyles({ stretch: { alignSelf: "stretch" } });
 const memoResult = importAllResult.memo(function GuildsBarCreateJoinButton() {
-  let obj = enabled(15885);
+  let obj = enabled(16116);
   const tmp = callback2();
-  const GameCommunityAddServerEntryExperiment = enabled(13366).GameCommunityAddServerEntryExperiment;
+  const GameCommunityAddServerEntryExperiment = enabled(13590).GameCommunityAddServerEntryExperiment;
   enabled = GameCommunityAddServerEntryExperiment.useConfig({ location: "GuildsBarCreateJoinButton" }).enabled;
-  obj1 = enabled(589);
+  obj1 = enabled(586);
   const items = [closure_6];
   let stateFromStores = enabled;
   if (enabled) {
@@ -161,20 +161,20 @@ const memoResult = importAllResult.memo(function GuildsBarCreateJoinButton() {
     unread: false,
     styles: obj.useGuildsBarAnimatedWrapperStyles(),
     overState: "y",
-    config: "never",
-    label: "always",
-    expandedChildren: "GuildProgress",
-    children: "GUILD_PROGRESS_INITIALIZE",
+    config: "heading-lg/semibold",
+    label: "mobile-text-heading-primary",
+    expandedChildren: 1,
+    children: null,
   };
   obj[5] = memo;
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles();
   const tmp8 = View;
-  const intl = tmp2(1236).intl;
-  obj[6] = intl.string(enabled(1236).t.l5WIbf);
-  obj[7] = jsx(enabled(15944).HomeDrawerAddServerRowExpandedChildren, {});
+  const intl = tmp2(1233).intl;
+  obj[6] = intl.string(enabled(1233).t.l5WIbf);
+  obj[7] = jsx(enabled(16175).HomeDrawerAddServerRowExpandedChildren, {});
   const colors = ThemesDefault.colors;
   obj1 = { size: "md", color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT };
-  obj[8] = jsx(enabled(9224).CirclePlusIcon, {
+  obj[8] = jsx(enabled(9238).CirclePlusIcon, {
     size: "md",
     color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT,
   });
@@ -184,10 +184,10 @@ const memoResult = importAllResult.memo(function GuildsBarCreateJoinButton() {
     unread: false,
     styles: obj.useGuildsBarAnimatedWrapperStyles(),
     overState: "y",
-    config: "never",
-    label: "always",
-    expandedChildren: "GuildProgress",
-    children: "GUILD_PROGRESS_INITIALIZE",
+    config: "heading-lg/semibold",
+    label: "mobile-text-heading-primary",
+    expandedChildren: 1,
+    children: null,
   });
   return (
     <tmp8
@@ -196,11 +196,11 @@ const memoResult = importAllResult.memo(function GuildsBarCreateJoinButton() {
       unread={false}
       styles={obj.useGuildsBarAnimatedWrapperStyles()}
       overState="y"
-      config="never"
-      label="always"
-      expandedChildren="GuildProgress"
+      config="heading-lg/semibold"
+      label="mobile-text-heading-primary"
+      expandedChildren={1}
     >
-      {"GUILD_PROGRESS_INITIALIZE"}
+      {null}
     </tmp8>
   );
 });

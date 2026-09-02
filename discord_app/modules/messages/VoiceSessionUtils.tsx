@@ -43,7 +43,7 @@ export const useSortedVoiceSessionParticipants = function useSortedVoiceSessionP
   let stateFromStoresArray = author;
   const items = [closure_6];
   const items1 = [author.author.id, author.call];
-  stateFromStoresArray = stateFromStoresArray(589).useStateFromStoresArray(
+  stateFromStoresArray = stateFromStoresArray(586).useStateFromStoresArray(
     items,
     () => {
       const call = stateFromStoresArray.call;
@@ -63,9 +63,9 @@ export const useSortedVoiceSessionParticipants = function useSortedVoiceSessionP
     },
     items1,
   );
-  const obj = stateFromStoresArray(589);
+  const obj = stateFromStoresArray(586);
   const items2 = [closure_4];
-  const stateFromStores = stateFromStoresArray(589).useStateFromStores(
+  const stateFromStores = stateFromStoresArray(586).useStateFromStores(
     items2,
     () => userAffinitiesMap.getUserAffinitiesMap(),
     [],
@@ -119,13 +119,13 @@ export const getVoiceSessionMessageContent = function getVoiceSessionMessageCont
     return obj;
   });
   if (null == tmp2) {
-    const intl = tmp3(1236).intl;
+    const intl = tmp3(1233).intl;
     obj = { username: null, usernameOnClick: null };
     obj[0] = messageAuthor.nick;
     obj[1] = tmp3(12).identity;
-    let formatToPlainStringResult = intl.formatToPlainString(tmp3(1236).t.HzBfIN, obj);
+    let formatToPlainStringResult = intl.formatToPlainString(tmp3(1233).t.HzBfIN, obj);
   } else {
-    const intl2 = tmp3(1236).intl;
+    const intl2 = tmp3(1233).intl;
     obj = {
       userCount: null,
       username: null,
@@ -155,7 +155,7 @@ export const getVoiceSessionMessageContent = function getVoiceSessionMessageCont
     obj[6] = tmp3(12).identity;
     obj[7] = mapped.length - 1;
     obj[8] = tmp2;
-    formatToPlainStringResult = intl2.formatToPlainString(tmp3(1236).t.atbXuX, obj);
+    formatToPlainStringResult = intl2.formatToPlainString(tmp3(1233).t.atbXuX, obj);
   }
   return formatToPlainStringResult;
 };

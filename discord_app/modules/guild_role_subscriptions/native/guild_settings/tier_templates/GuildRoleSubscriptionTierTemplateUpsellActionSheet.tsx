@@ -76,7 +76,7 @@ export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0)
   obj1 = { accessibilityRole: "image", accessibilityLabel: null, children: null };
   const intl = getSystemLocale.intl;
   obj1[1] = intl.string(getSystemLocale.t.gCgirr);
-  obj1[2] = callback2(markAsDismissed(8602), {
+  obj1[2] = callback2(markAsDismissed(8617), {
     style: tmp.videoContainer,
     src: closure_12,
     width: tmp3,

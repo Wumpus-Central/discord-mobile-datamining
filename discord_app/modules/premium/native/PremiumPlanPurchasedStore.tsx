@@ -4,7 +4,7 @@ import QUICK_SWITCHERDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet.tsx";
 import closure_3 from "../../action_sheet/native/ActionSheetStore.tsx";
 import GuildFeatures from "../PremiumConstants.tsx";
-import keys from "../../../../_runtime/00644_keys.js";
+import keys from "../../../../_runtime/00641_keys.js";
 import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 require = arg1;
@@ -101,8 +101,8 @@ export const reset = function reset() {
       initiatedPurchaseFromNewFlow: false,
       isPaymentSuccess: false,
       mobileWebRedirectCheckoutStatus: str,
-      onPaymentSuccess: "accessible",
-      onPaymentDismiss: "Error",
+      onPaymentSuccess: "r",
+      onPaymentDismiss: "channelId",
     });
   });
 };

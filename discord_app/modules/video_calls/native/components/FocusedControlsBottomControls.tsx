@@ -61,8 +61,8 @@ function FocusedControlsExpanded(children) {
 function FocusedControlsBottomDrawerTooltip(positionY) {
   positionY = positionY.positionY;
   const tmp = callback3();
-  let obj = positionY(9662);
-  const canShowTooltip = obj.useCanShowTooltip(positionY(691).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS, true);
+  let obj = positionY(9675);
+  const canShowTooltip = obj.useCanShowTooltip(positionY(688).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS, true);
   positionY(4217);
   const fn = function o() {
     return { opacity: 1 - Math.min((-1 * positionY.get()) / closure_1_15, 1) };
@@ -86,12 +86,12 @@ function FocusedControlsBottomDrawerTooltip(positionY) {
       label: null,
     };
     obj1[0] = tmp.tooltipStyle;
-    obj1[1] = tmp2(1297).TooltipArrowPositions.CENTER;
-    obj1[2] = tmp2(1297).TooltipArrowDirections.DOWN;
+    obj1[1] = tmp2(1296).TooltipArrowPositions.CENTER;
+    obj1[2] = tmp2(1296).TooltipArrowDirections.DOWN;
     ({ containerStyle: obj4[5], labelStyle: obj4[6] } = tmp);
-    const intl = tmp2(1236).intl;
-    obj1[7] = intl.string(tmp2(1236).t.zYzy2i);
-    obj[1] = callback2(tmp2(1297).Tooltip, obj1);
+    const intl = tmp2(1233).intl;
+    obj1[7] = intl.string(tmp2(1233).t.zYzy2i);
+    obj[1] = callback2(tmp2(1296).Tooltip, obj1);
     tmp7 = callback2(_modDef4217.View, obj);
   }
   return tmp7;
@@ -123,7 +123,7 @@ function FocusedControlsAboveActionBarView(positionY) {
   const animatedStyle = obj.useAnimatedStyle(fn);
   const items = [
     callback2(FocusedControlsBottomDrawerTooltip, { positionY }),
-    callback2(positionY(5937).ActionSheetHeaderBar, {}),
+    callback2(positionY(5945).ActionSheetHeaderBar, {}),
   ];
   let tmp4Result = null != aboveActionBar;
   if (tmp4Result) {

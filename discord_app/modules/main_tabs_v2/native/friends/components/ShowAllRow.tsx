@@ -29,14 +29,14 @@ export default function ShowAllRow(users) {
   const substr = users.slice(0, 2);
   obj[2] = substr.map((getAvatarSource) =>
     callback2(
-      callback(1297).Avatar,
+      callback(1296).Avatar,
       {
         source: getAvatarSource.getAvatarSource(
           null,
           false,
-          callback(1297).AVATAR_SIZE_MAP[callback(undefined, 1297).AvatarSizes.XSMALL],
+          callback(1296).AVATAR_SIZE_MAP[callback(undefined, 1296).AvatarSizes.XSMALL],
         ),
-        size: callback(1297).AvatarSizes.XSMALL_20,
+        size: callback(1296).AvatarSizes.XSMALL_20,
       },
       arg1,
     ),

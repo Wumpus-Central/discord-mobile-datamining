@@ -29,18 +29,18 @@ function RestrictedUser(guildId) {
   const avatarSource = user.getAvatarSource(guildId.guildId);
   const intl = getSystemLocale.intl;
   if (speaker) {
-    const intl3 = tmp2(1236).intl;
-    let stringResult = intl3.string(tmp2(1236).t.LqMmG2);
+    const intl3 = tmp2(1233).intl;
+    let stringResult = intl3.string(tmp2(1233).t.LqMmG2);
   } else {
     stringResult = tmp7;
     if (stateFromStores) {
-      const intl2 = tmp2(1236).intl;
-      stringResult = intl2.string(tmp2(1236).t.GMZqSi);
+      const intl2 = tmp2(1233).intl;
+      stringResult = intl2.string(tmp2(1233).t.GMZqSi);
     }
   }
   obj = { style: tmp.userContainer, children: null };
   obj = { style: tmp.avatarContainer, children: null };
-  obj1 = { source: avatarSource, size: tmp2(1297).AvatarSizes.REFRESH_MEDIUM_32, style: tmp.avatar };
+  obj1 = { source: avatarSource, size: tmp2(1296).AvatarSizes.REFRESH_MEDIUM_32, style: tmp.avatar };
   const items2 = [callback(Button.CutoutableAvatarImage, obj1)];
   if (speaker) {
     const obj2 = { style: null, children: null };
@@ -48,9 +48,9 @@ function RestrictedUser(guildId) {
     obj2[0] = items3;
     const obj3 = { style: null, source: null, color: null };
     obj3[0] = tmp.icon;
-    obj3[1] = user(8746);
-    obj3[2] = user(712).unsafe_rawColors.WHITE;
-    obj2[1] = tmp11(tmp2(1297).Icon, obj3);
+    obj3[1] = user(8761);
+    obj3[2] = user(709).unsafe_rawColors.WHITE;
+    obj2[1] = tmp11(tmp2(1296).Icon, obj3);
     speaker = tmp11(tmp10, obj2);
   }
   items2[1] = speaker;
@@ -74,9 +74,9 @@ function RestrictedUser(guildId) {
   const items7 = [closure_10(View, obj4)];
   const obj7 = { style: tmp.flex, children: null };
   const obj8 = { style: stateFromStores1 ? tmp.blocked : tmp.ignored, children: null };
-  const intl4 = tmp2(1236).intl;
+  const intl4 = tmp2(1233).intl;
   const string = intl4.string;
-  const t = tmp2(1236).t;
+  const t = tmp2(1233).t;
   if (stateFromStores1) {
     let stringResult1 = string(t["4bDptI"]);
   } else {
@@ -251,25 +251,25 @@ export default function StageBlockedUsersActionSheet(channel) {
   const tmp = callback3();
   const tmp2 = items1(React.useState(0), 2);
   dependencyMap = tmp2[1];
-  let obj = channel(8747);
+  let obj = channel(8762);
   const stageBlockedUsers = obj.useStageBlockedUsers(channel.id);
-  obj1 = channel(8747);
+  obj1 = channel(8762);
   const stageIgnoredUsers = obj1.useStageIgnoredUsers(channel.id);
   const callback = React.useCallback((nativeEvent) => {
     dependencyMap(nativeEvent.nativeEvent.layout.height);
   }, []);
   obj = { bottom: true, style: tmp.buttons, onLayout: callback, children: null };
   obj = { text: null, onPress: null };
-  const intl = channel(1236).intl;
-  obj[0] = intl.string(channel(1236).t.mbD50D);
+  const intl = channel(1233).intl;
+  obj[0] = intl.string(channel(1233).t.mbD50D);
   obj[1] = function onPress() {
     onAccept(channel);
     onAccept(4445).hideActionSheet(closure_1_8);
   };
   const items = [callback(channel(4928).Button, obj)];
   obj1 = { variant: "secondary", text: null, onPress: null };
-  const intl2 = channel(1236).intl;
-  obj1[1] = intl2.string(channel(1236).t.CZGqeT);
+  const intl2 = channel(1233).intl;
+  obj1[1] = intl2.string(channel(1233).t.CZGqeT);
   obj1[2] = function handleDismiss() {
     onAccept(4445).hideActionSheet(closure_8);
   };
@@ -283,7 +283,7 @@ export default function StageBlockedUsersActionSheet(channel) {
       blockedUserCount: stageBlockedUsers.length,
       ignoredUserCount: stageIgnoredUsers.length,
     }),
-    footer: callback2(channel(5553).SafeAreaPaddingView, obj),
+    footer: callback2(channel(5561).SafeAreaPaddingView, obj),
     children: null,
   };
   const obj3 = {
@@ -294,9 +294,9 @@ export default function StageBlockedUsersActionSheet(channel) {
     renderItem: null,
     itemSize: null,
   };
-  const tmp4 = callback2(channel(5553).SafeAreaPaddingView, obj);
-  const intl3 = channel(1236).intl;
-  obj3[2] = intl3.string(channel(1236).t["3VoRLH"]);
+  const tmp4 = callback2(channel(5561).SafeAreaPaddingView, obj);
+  const intl3 = channel(1233).intl;
+  obj3[2] = intl3.string(channel(1233).t["3VoRLH"]);
   const items2 = [items1.length];
   obj3[3] = items2;
   obj3[4] = function renderItem(arg0, arg1) {
@@ -309,7 +309,7 @@ export default function StageBlockedUsersActionSheet(channel) {
   obj3[5] = function itemSize() {
     return 48;
   };
-  const items3 = [callback(onAccept(7795), obj3), callback(View, { style: { height: tmp2[0] } })];
+  const items3 = [callback(onAccept(7804), obj3), callback(View, { style: { height: tmp2[0] } })];
   obj2[3] = items3;
-  return callback2(channel(5622).BottomSheet, obj2);
+  return callback2(channel(5630).BottomSheet, obj2);
 }

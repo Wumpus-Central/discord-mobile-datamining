@@ -14,16 +14,16 @@ export default function StreamFeedbackActionSheet(stream) {
   stream = stream.stream;
   const analyticsData = stream.analyticsData;
   dependencyMap = undefined;
-  let obj = stream(7483);
+  let obj = stream(7493);
   dependencyMap = obj.useGetStreamApplication(stream);
-  obj1 = stream(589);
+  obj1 = stream(586);
   const items = [closure_3];
   const stateFromStores = obj1.useStateFromStores(items, () => closure_1_3.getId() === stream.ownerId);
-  const intl = stream(1236).intl;
-  const intl2 = stream(1236).intl;
-  const stringResult = intl.string(stream(1236).t["5smP3R"]);
-  const intl3 = stream(1236).intl;
-  let stringResult2 = intl3.string(stream(1236).t.CqjnLN);
+  const intl = stream(1233).intl;
+  const intl2 = stream(1233).intl;
+  const stringResult = intl.string(stream(1233).t["5smP3R"]);
+  const intl3 = stream(1233).intl;
+  let stringResult2 = intl3.string(stream(1233).t.CqjnLN);
   obj = {
     value: stateFromStores ? tmp7.STREAMING : tmp7.STREAM_WATCHING,
     label: null,
@@ -31,8 +31,8 @@ export default function StreamFeedbackActionSheet(stream) {
     problemOptions: null,
     freeformConfig: null,
   };
-  const intl4 = tmp(1236).intl;
-  let tmp9 = analyticsData(2631);
+  const intl4 = tmp(1233).intl;
+  let tmp9 = analyticsData(2630);
   if (stateFromStores) {
     let TVTIT1 = tmp9["0ZBLiZ"];
     let tmp10 = tmp8;
@@ -41,13 +41,13 @@ export default function StreamFeedbackActionSheet(stream) {
     tmp10 = tmp8;
   }
   obj[1] = intl4.string(TVTIT1);
-  const intl5 = tmp(1236).intl;
-  obj[2] = intl5.string(stream(1236).t["6Y1t5P"]);
-  const stringResult1 = intl2.string(stream(1236).t["0uxA2V"]);
-  obj[3] = stream(11214).getStreamFeedbackOptions({ isStreamer: stateFromStores });
+  const intl5 = tmp(1233).intl;
+  obj[2] = intl5.string(stream(1233).t["6Y1t5P"]);
+  const stringResult1 = intl2.string(stream(1233).t["0uxA2V"]);
+  obj[3] = stream(11437).getStreamFeedbackOptions({ isStreamer: stateFromStores });
   obj = { value: constants.FREEFORM, label: null };
-  const intl6 = tmp(1236).intl;
-  obj[1] = intl6.string(stream(1236).t.emlT91);
+  const intl6 = tmp(1233).intl;
+  obj[1] = intl6.string(stream(1233).t.emlT91);
   obj[4] = obj;
   obj1 = {
     headerLabel: stringResult,
@@ -59,13 +59,13 @@ export default function StreamFeedbackActionSheet(stream) {
     trackReport: null,
   };
   const tmp11 = jsx;
-  const tmpResult = stream(11214);
+  const tmpResult = stream(11437);
   if (stateFromStores) {
     stringResult2 = stringResult1;
   }
   obj1[2] = stringResult2;
-  const intl7 = tmp(1236).intl;
-  obj1[3] = intl7.string(tmp10(2631).tq8598);
+  const intl7 = tmp(1233).intl;
+  obj1[3] = intl7.string(tmp10(2630).tq8598);
   const items1 = [obj];
   obj1[4] = items1;
   obj1[5] = function trackOpen() {
@@ -159,5 +159,5 @@ export default function StreamFeedbackActionSheet(stream) {
       const obj4 = stream(paths[17]);
     }
   };
-  return tmp11(tmp10(16932), obj1);
+  return tmp11(tmp10(17168), obj1);
 }

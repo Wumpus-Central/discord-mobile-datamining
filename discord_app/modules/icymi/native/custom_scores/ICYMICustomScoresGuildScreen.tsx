@@ -172,7 +172,7 @@ export default function ICYMICustomScoresGuildScreen(navigation) {
   let guildChannels;
   const tmp = callback3();
   dependencyMap = tmp;
-  let obj = navigation(589);
+  let obj = navigation(586);
   let items = [closure_8];
   stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getGuild(guildId));
   obj1 = React;
@@ -192,14 +192,14 @@ export default function ICYMICustomScoresGuildScreen(navigation) {
     }
     navigation.setOptions({ title: str });
   }, items1);
-  let tmp2Result = tmp2(589);
+  let tmp2Result = tmp2(586);
   const items2 = [closure_10];
   const stateFromStores1 = tmp2Result.useStateFromStores(items2, () => closure_1_10.getCustomGuildScore(guildId));
-  tmp2Result = tmp2(8621);
+  tmp2Result = tmp2(8636);
   const numberToCustomScoreResult = tmp2Result.numberToCustomScore(stateFromStores1);
   React = numberToCustomScoreResult;
   const items3 = [closure_6];
-  guildChannels = navigation(589).useStateFromStoresObject(items3, () => closure_1_6.getGuild(guildId)).guildChannels;
+  guildChannels = navigation(586).useStateFromStoresObject(items3, () => closure_1_6.getGuild(guildId)).guildChannels;
   const items4 = [numberToCustomScoreResult, guildChannels];
   const memo = obj1.useMemo(() => {
     const items = [];
@@ -345,11 +345,11 @@ export default function ICYMICustomScoresGuildScreen(navigation) {
     }
   }, items5);
   obj = { contentInset: null, showsVerticalScrollIndicator: false, renderItem: null, data: null, keyExtractor: null };
-  obj1 = { bottom: guildId(1628)().bottom, top: guildId(712).space.PX_12 };
+  obj1 = { bottom: guildId(1627)().bottom, top: guildId(709).space.PX_12 };
   obj[0] = obj1;
   obj[2] = callback;
   obj[3] = memo;
   obj[4] = keyExtractor;
-  obj[1] = callback(navigation(8105).AnimatedFlashList, obj);
+  obj[1] = callback(navigation(8113).AnimatedFlashList, obj);
   return callback(guildChannels, obj);
 }

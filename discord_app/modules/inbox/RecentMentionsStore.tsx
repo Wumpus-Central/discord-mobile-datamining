@@ -98,7 +98,7 @@ function parseMessage(message, channelId) {
       }
       id = id.getId();
       if (!blockedOrIgnoredForMessage.isBlockedOrIgnoredForMessage(message)) {
-        if (!tmp2(7383)(message, id)) {
+        if (!tmp2(7392)(message, id)) {
           let tmp12 = message;
           if (!(message instanceof closure_3)) {
             message = store2.getMessage(message.channel_id, message.id);
@@ -211,7 +211,7 @@ function handleSetRecentMentionsFilters(arg0) {
   const merged = Object.assign(closure_23);
   const obj2 = applyDefault;
   closure_23 = obj2.defaults(applyDefault.pick(arg0, ["guildFilter", "roleFilter", "everyoneFilter"]), closure_23);
-  const Storage = items(595).Storage;
+  const Storage = items(592).Storage;
   const result = Storage.set(recentMentionFilterSettings, closure_23);
   let tmp4 = obj.guildFilter !== closure_23.guildFilter;
   if (tmp4) {
@@ -572,11 +572,10 @@ obj = {
     message = message.message;
     const currentUser = authStore.getCurrentUser();
     if (null != currentUser) {
-      let obj = isMentioned;
-      obj = { rawMessage: null, userId: null, suppressRoles: false, suppressEveryone: false };
+      let obj = { rawMessage: null, userId: null, suppressRoles: false, suppressEveryone: false };
       obj[0] = message;
       obj[1] = currentUser.id;
-      if (obj.isRawMessageMentioned(obj)) {
+      if (obj2.isRawMessageMentioned(obj)) {
         const tmp3 = parseMessage(message, message.channelId);
         if (null == tmp3) {
           return false;
@@ -608,6 +607,7 @@ obj = {
           }
         }
       }
+      obj2 = isMentioned;
     }
     return false;
   },

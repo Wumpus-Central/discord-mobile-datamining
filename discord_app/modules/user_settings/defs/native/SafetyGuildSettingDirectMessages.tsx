@@ -30,9 +30,9 @@ createToggle = {
   useDescription() {
     const allowFriendsFromMutualGuildsOnly = useAllowFriendsFromMutualGuildsOnly.useAllowFriendsFromMutualGuildsOnly();
     if (callback2().selectedGuildId === closure_6) {
-      const intl2 = tmp(1236).intl;
+      const intl2 = tmp(1233).intl;
       const string2 = intl2.string;
-      let XXGmuB = tmp(1236).t;
+      let XXGmuB = tmp(1233).t;
       if (allowFriendsFromMutualGuildsOnly) {
         XXGmuB = XXGmuB.XXGmuB;
         let string2Result = string2(XXGmuB);
@@ -40,9 +40,9 @@ createToggle = {
         string2Result = string2(XXGmuB.wbYDfT);
       }
     } else {
-      const intl = tmp(1236).intl;
+      const intl = tmp(1233).intl;
       const string = intl.string;
-      const t = tmp(1236).t;
+      const t = tmp(1233).t;
       if (allowFriendsFromMutualGuildsOnly) {
         let stringResult = string(t.F9WY3f);
       } else {

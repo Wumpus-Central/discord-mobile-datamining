@@ -8,7 +8,7 @@ import PressableBase from "../../../../design/void/Pressables/native/Pressables.
 import GuildIconSizes from "../../../guild/native/GuildIcon.tsx";
 import GuildIconSizesDefault from "../../../guild/native/GuildIcon.tsx";
 import HotspotStore2 from "../../../hotspot/index.tsx";
-import registerAssetDefault from "../../../../../_runtime/07812_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/07821_registerAsset.js";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import StageSparkleInnerDefault from "../components/StageSparkle.tsx";
 import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -70,8 +70,8 @@ class NotificationToggle {
     items[0] = require("HotspotStore").HotspotStore;
     tmp5 = jsx;
     stateFromStores = obj.useStateFromStores(items, () => {
-      const HotspotStore = callback(6060).HotspotStore;
-      return HotspotStore.hasHotspot(callback(6060).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
+      const HotspotStore = callback(6068).HotspotStore;
+      return HotspotStore.hasHotspot(callback(6068).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
     });
     obj = { DEPRECATED_style: tmp.notificationToggle, label: null, onPress: null, trailing: null };
     tmp7 = View;
@@ -226,17 +226,17 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
                 if (null != closure_1_6) {
                   closure_1_8(true);
                   closure_1_9(null);
-                  let obj3 = closure_1_2(1891);
+                  let obj3 = closure_1_2(1890);
                   const result = obj3.dismissGlobalKeyboard();
                   dependencyMap = 1;
                   if (null != dependencyMap) {
                     c4 = 3;
                     c5 = 1;
                     obj1 = { value: null, done: false };
-                    obj1[0] = closure_1_2(8669).editStage(closure_1_2, tmp76, tmp47);
+                    obj1[0] = closure_1_2(8684).editStage(closure_1_2, tmp76, tmp47);
                     return obj1;
                   } else {
-                    const obj5 = closure_1_2(8669);
+                    const obj5 = closure_1_2(8684);
                     c4 = 2;
                     c5 = 1;
                     const obj2 = { value: null, done: false };
@@ -264,8 +264,8 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
                     tmp8 = closure_13;
                   }
                   if (tmp8) {
-                    obj1 = closure_1_2(6063);
-                    obj1.hideHotspot(closure_1_0(6060).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
+                    obj1 = closure_1_2(6071);
+                    obj1.hideHotspot(closure_1_0(6068).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
                   }
                 }
               } else if (arg0 === 1) {

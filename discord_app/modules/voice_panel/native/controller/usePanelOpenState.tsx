@@ -75,26 +75,26 @@ export default function usePanelOpenState(arg0, arg1, arg2, connected) {
         state.closeChannel(componentActionOpen);
       }
     }
-    let ComponentDispatch = callback(1231).ComponentDispatch;
+    let ComponentDispatch = callback(1228).ComponentDispatch;
     const subscription = ComponentDispatch.subscribe(closure_1_7.VOICE_PANEL_OPEN, componentActionOpen);
-    let ComponentDispatch2 = callback(1231).ComponentDispatch;
+    let ComponentDispatch2 = callback(1228).ComponentDispatch;
     const subscription1 = ComponentDispatch2.subscribe(closure_1_7.VOICE_PANEL_CLOSE, componentActionClose);
     return () => {
-      const ComponentDispatch = componentActionOpen(1231).ComponentDispatch;
+      const ComponentDispatch = componentActionOpen(1228).ComponentDispatch;
       ComponentDispatch.unsubscribe(closure_2_7.VOICE_PANEL_OPEN, componentActionOpen);
-      const ComponentDispatch2 = componentActionOpen(1231).ComponentDispatch;
+      const ComponentDispatch2 = componentActionOpen(1228).ComponentDispatch;
       ComponentDispatch2.unsubscribe(closure_2_7.VOICE_PANEL_CLOSE, componentActionClose);
     };
   }, items);
   const tmp3 = callback(
-    doCloseChannel.useState(() => callback2(12327).getHistory().location.pathname),
+    doCloseChannel.useState(() => callback2(12551).getHistory().location.pathname),
     2,
   );
   const first = tmp3[0];
   closure_6 = tmp3[1];
   const items1 = [arg0, first];
   const effect1 = doCloseChannel.useEffect(() => {
-    closure_0 = callback2(12327).addRouteChangeListener((pathname) => {
+    closure_0 = callback2(12551).addRouteChangeListener((pathname) => {
       if (closure_5 !== pathname.pathname) {
         callback2(tmp);
         let obj = callback(closure_1_2[8]);

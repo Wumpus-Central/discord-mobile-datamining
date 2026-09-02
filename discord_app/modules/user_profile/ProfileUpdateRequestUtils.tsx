@@ -58,7 +58,7 @@ export const getProfileChangesForUpdateRequest = function getProfileChangesForUp
   }
   const items = [...collectibles];
   if (undefined !== pendingProfileEffect) {
-    const found = items.filter((type) => type.type !== callback(1950).CollectiblesItemType.PROFILE_EFFECT);
+    const found = items.filter((type) => type.type !== callback(1949).CollectiblesItemType.PROFILE_EFFECT);
     let arr3 = found;
     if (null !== pendingProfileEffect) {
       obj = { skuId: null, type: null };
@@ -70,7 +70,7 @@ export const getProfileChangesForUpdateRequest = function getProfileChangesForUp
   }
   let arr5 = arr3;
   if (undefined !== pendingProfileFrame) {
-    const found1 = arr3.filter((type) => type.type !== callback(1950).CollectiblesItemType.PROFILE_FRAME);
+    const found1 = arr3.filter((type) => type.type !== callback(1949).CollectiblesItemType.PROFILE_FRAME);
     arr5 = found1;
     if (null !== pendingProfileFrame) {
       found1.push(pendingProfileFrame);

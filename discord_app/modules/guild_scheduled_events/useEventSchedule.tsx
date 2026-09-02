@@ -49,7 +49,7 @@ export const useEventScheduleById = function useEventScheduleById(guildEventId, 
   let stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getGuildScheduledEvent(closure_0));
   let tmp5 = null;
   if (recurrenceId == null) {
-    let tmp2Result = tmp2(9634);
+    let tmp2Result = tmp2(9647);
     nextRecurrenceIdInEvent = tmp2Result.getNextRecurrenceIdInEvent(stateFromStores);
   }
   useEventExceptionDefault;
@@ -61,12 +61,12 @@ export const useEventScheduleById = function useEventScheduleById(guildEventId, 
   } else {
     if (tmp5 != stateFromStores.recurrence_rule) {
       if (tmp5 != nextRecurrenceIdInEvent) {
-        tmp2Result = tmp2(9634);
+        tmp2Result = tmp2(9647);
         const baseScheduleForRecurrence = tmp2Result.getBaseScheduleForRecurrence(
           nextRecurrenceIdInEvent,
           stateFromStores,
         );
-        const scheduleForRecurrenceWithException = tmp2(9634).getScheduleForRecurrenceWithException(
+        const scheduleForRecurrenceWithException = tmp2(9647).getScheduleForRecurrenceWithException(
           baseScheduleForRecurrence,
           tmp7,
         );
@@ -78,7 +78,7 @@ export const useEventScheduleById = function useEventScheduleById(guildEventId, 
           toDateResult = endDate.toDate();
         }
         obj[1] = toDateResult;
-        const tmp2Result1 = tmp2(9634);
+        const tmp2Result1 = tmp2(9647);
       }
     }
     obj = { startTime: null, endTime: null };
@@ -99,9 +99,9 @@ export const getEventSchedule = function getEventSchedule(guildEvent, recurrence
   useEventException;
   if (null != guildEvent.recurrence_rule) {
     if (null != recurrenceId) {
-      let tmpResult = tmp(9634);
+      let tmpResult = tmp(9647);
       const baseScheduleForRecurrence = tmpResult.getBaseScheduleForRecurrence(recurrenceId, guildEvent);
-      tmpResult = tmp(9634);
+      tmpResult = tmp(9647);
       const scheduleForRecurrenceWithException = tmpResult.getScheduleForRecurrenceWithException(
         baseScheduleForRecurrence,
         tmp4,

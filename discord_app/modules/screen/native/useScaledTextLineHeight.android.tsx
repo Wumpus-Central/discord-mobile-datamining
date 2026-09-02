@@ -28,9 +28,9 @@ export const scaleTextLineHeight = function scaleTextLineHeight(c10, fontScale) 
   }
   return value;
 };
-export const useScaledTextLineHeight = function useScaledTextLineHeight(c3) {
+export const useScaledTextLineHeight = function useScaledTextLineHeight(anchor) {
   const fontScale = getFontScale.useFontScale();
-  const lineHeight = Text.TextStyleSheet[c3].lineHeight;
+  const lineHeight = Text.TextStyleSheet[anchor].lineHeight;
   let value = map.get(lineHeight);
   if (null == value) {
     const scaledHeightForText = enforcingDefault.getScaledHeightForText(lineHeight);

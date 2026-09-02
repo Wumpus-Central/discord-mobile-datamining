@@ -12,7 +12,7 @@ const result = require("set").fileFinishedImporting(
 );
 
 export default function XboxLinkPreConnect() {
-  let obj = navigation(1499);
+  let obj = navigation(1498);
   navigation = obj.useNavigation();
   const items = [navigation];
   const items1 = [navigation];
@@ -32,11 +32,11 @@ export default function XboxLinkPreConnect() {
     title: null,
     body: null,
   };
-  const intl = navigation(1236).intl;
-  obj[5] = intl.string(navigation(1236).t["e/z3na"]);
-  const intl2 = navigation(1236).intl;
-  obj[6] = intl2.string(navigation(1236).t["7tXu0i"]);
-  return jsx(navigation(9310).TwoWayLinkPreConnect, {
+  const intl = navigation(1233).intl;
+  obj[5] = intl.string(navigation(1233).t["e/z3na"]);
+  const intl2 = navigation(1233).intl;
+  obj[6] = intl2.string(navigation(1233).t["7tXu0i"]);
+  return jsx(navigation(9323).TwoWayLinkPreConnect, {
     platformType: PlatformTypes.XBOX,
     onError: callback1,
     onNext: callback,

@@ -69,16 +69,16 @@ export default function ChannelFollowSuccessAlert(arg0) {
   let obj = AccessibilityAnnouncer;
   const tmp6 = obj.isThemeDark(useThemeDefault()) ? items1 : items;
   _require = tmp6;
-  let tmp5Result = tmp5(7185);
+  let tmp5Result = tmp5(7194);
   items = [tmp6];
   const stableMemo = tmp5Result.useStableMemo(() => closure_1_1(closure_1_2[14]).sample(closure_0), items);
-  tmp5Result = tmp5(7185);
+  tmp5Result = tmp5(7194);
   const stableMemo1 = tmp5Result.useStableMemo(() => callback(table[14]).sample(closure_8), []);
   obj = {};
   const tmp2 = importDefault;
   const tmp4 = useThemeDefault();
   const merged = Object.assign(arg0);
-  const intl = tmp5(1236).intl;
+  const intl = tmp5(1233).intl;
   obj.confirmText = intl.string(require("../../../../intl/index.native.tsx").t["+IrDzN"]);
   obj = { source: stableMemo, style: tmp.image };
   items1 = [callback(Image, obj), ,];
@@ -90,7 +90,7 @@ export default function ChannelFollowSuccessAlert(arg0) {
     children: stableMemo1(),
   });
   const obj2 = { style: tmp.text, variant: "text-md/medium", color: "text-muted", children: null };
-  const intl2 = tmp5(1236).intl;
+  const intl2 = tmp5(1233).intl;
   obj2[3] = intl2.string(require("../../../../intl/index.native.tsx").t["2QbSea"]);
   items1[2] = callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj2);
   obj.children = items1;

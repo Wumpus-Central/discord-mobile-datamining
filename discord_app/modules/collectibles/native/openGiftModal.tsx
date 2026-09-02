@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/native/openGiftModal.tsx
 import set from "../../../../_runtime/00002_set.js";
-import asyncRequireImpl from "../../../../_runtime/02009_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02008_asyncRequireImpl.js";
 import _modDef4723 from "../../../actions/ModalActionCreators.tsx";
 
 let c3 = "Shop Gift Modal";
@@ -11,7 +11,7 @@ export const openShopGiftModal = function openShopGiftModal(arg0) {
   ({ navigationParams, skuId, analyticsLocations, lockedRecipientUser, onGiftModalDismiss, giftingOrigin } = arg0);
   let obj = _modDef4723;
   obj = { skuId, analyticsLocations, lockedRecipientUser, onGiftModalDismiss, giftingOrigin };
-  obj.pushLazy(asyncRequireImpl(10742, dependencyMap.paths), obj, c3, navigationParams);
+  obj.pushLazy(asyncRequireImpl(10963, dependencyMap.paths), obj, c3, navigationParams);
 };
 export const closeShopGiftModal = function closeShopGiftModal() {
   _modDef4723.popWithKey(c3);

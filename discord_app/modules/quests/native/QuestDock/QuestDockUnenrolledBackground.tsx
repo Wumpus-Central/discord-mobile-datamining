@@ -51,10 +51,10 @@ let closure_15 = {
 };
 const memoResult = importAllResult.memo(function QuestDockUnenrolledBackground() {
   let obj = activeQuestDockMode(setRestingQuestDockMode[9]);
-  const questCreative = obj.useQuestCreative();
+  const questDockQuest = obj.useQuestDockQuest();
   const tmp4 = callback2();
   obj1 = activeQuestDockMode(setRestingQuestDockMode[10]);
-  const questDockHeroAsset = obj1.useQuestDockHeroAsset(questCreative);
+  const questDockHeroAsset = obj1.useQuestDockHeroAsset(questDockQuest);
   ({ staticUrl, videoAsset } = questDockHeroAsset);
   let obj2 = importAllResult;
   const context = importAllResult.useContext(activeQuestDockMode(setRestingQuestDockMode[11]).QuestDockGestureContext);

@@ -1,7 +1,7 @@
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardBottomSheetActions.tsx
-import set from "../../../../utils/PlatformUtils.tsx";
-import nDefault from "../../../../../_runtime/00689_n.js";
+import nDefault from "../../../../../_runtime/00686_n.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import set from "../../../../utils/PlatformUtils.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import LinearGradientDefault from "../../../../../_runtime/04940_LinearGradient.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
@@ -32,7 +32,7 @@ let closure_8 = createCacheKey.createStyles((arg0, arg1, arg2) => {
   };
   let obj3 = set;
   if (obj3.isIOS()) {
-    PX_24 = tmp3(712).space.PX_24;
+    PX_24 = tmp3(709).space.PX_24;
   }
   let tmp5 = arg2;
   obj[2] = PX_24;
@@ -43,7 +43,7 @@ let closure_8 = createCacheKey.createStyles((arg0, arg1, arg2) => {
   obj[4] = tmp5;
   obj[5] = ThemesDefault.modules.mobile.MEDIA_KEYBOARD_BAR_PADDING_HORIZONTAL;
   obj[6] = ThemesDefault.modules.mobile.MEDIA_KEYBOARD_BAR_BORDER_WIDTH;
-  const merged1 = Object.assign(tmp3(712).shadows.SHADOW_HIGH);
+  const merged1 = Object.assign(tmp3(709).shadows.SHADOW_HIGH);
   obj.borderColor = ThemesDefault.colors.BORDER_MUTED;
   obj[1] = obj;
   obj[2] = {
@@ -106,11 +106,11 @@ const memoResult = importAllResult.memo(function MediaKeyboardBottomSheetActions
   let items = [tmp6.gradient.color];
   const memo = importAllResult.useMemo(() => {
     const obj = { start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, colors: null };
-    const obj2 = lib(689)(lib.gradient.color);
-    const items = [lib(689)(lib.gradient.color).alpha(0).hex()];
-    const alphaResult = lib(689)(lib.gradient.color).alpha(0);
-    const obj4 = lib(689)(lib.gradient.color);
-    items[1] = lib(689)(lib.gradient.color).alpha(1).hex();
+    const obj2 = lib(686)(lib.gradient.color);
+    const items = [lib(686)(lib.gradient.color).alpha(0).hex()];
+    const alphaResult = lib(686)(lib.gradient.color).alpha(0);
+    const obj4 = lib(686)(lib.gradient.color);
+    items[1] = lib(686)(lib.gradient.color).alpha(1).hex();
     obj[2] = items;
     return obj;
   }, items);
@@ -157,7 +157,7 @@ const memoResult = importAllResult.memo(function MediaKeyboardBottomSheetActions
       obj[3] = accessibilityLabel.text;
       items[1] = closure_1_6(onHeightChange(4474).Text, obj);
       obj[6] = items;
-      return closure_1_7(onHeightChange(5068).PressableOpacity, obj, arg1);
+      return closure_1_7(onHeightChange(5076).PressableOpacity, obj, arg1);
     }),
   });
   items2[1] = callback(closure_5, obj1);

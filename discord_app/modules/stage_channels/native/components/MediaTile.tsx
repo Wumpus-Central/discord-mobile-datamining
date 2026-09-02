@@ -17,14 +17,14 @@ const memoResult = importAllResult.memo((channel) => {
   const participant = channel.participant;
   const size = channel.size;
   const tmp = callback();
-  let obj = channel(10129);
+  let obj = channel(10151);
   const speakerTileStyles = obj.useSpeakerTileStyles();
-  const isScreenLandscape = channel(5071).useIsScreenLandscape();
-  const obj2 = channel(5071);
+  const isScreenLandscape = channel(5079).useIsScreenLandscape();
+  const obj2 = channel(5079);
   const tmp5 = participant;
   const items = [closure_4];
   const items1 = [channel.id, participant.id];
-  const stateFromStores = channel(589).useStateFromStores(
+  const stateFromStores = channel(586).useStateFromStores(
     items,
     () => closure_1_4.getParticipant(channel.id, participant.id),
     items1,
@@ -35,10 +35,10 @@ const memoResult = importAllResult.memo((channel) => {
     if (stateFromStores.type !== ParticipantTypes.ACTIVITY) {
       obj = { style: null, children: null };
       const items2 = [tmp.container, ,];
-      let tmp2Result = tmp2(10129);
+      let tmp2Result = tmp2(10151);
       items2[1] = tmp2Result.getSizeStyle(size, speakerTileStyles);
-      tmp2Result = tmp2(10129);
-      items2[2] = tmp2Result.getTileWidthStyle(size, participant(1493)().width, isScreenLandscape);
+      tmp2Result = tmp2(10151);
+      items2[2] = tmp2Result.getTileWidthStyle(size, participant(1492)().width, isScreenLandscape);
       obj[0] = items2;
       obj = {
         hasBottomSafeArea: false,
@@ -52,10 +52,10 @@ const memoResult = importAllResult.memo((channel) => {
         contentStyle: null,
       };
       obj[4] = stateFromStores;
-      obj[5] = tmp2(1297).AvatarSizes.XLARGE;
+      obj[5] = tmp2(1296).AvatarSizes.XLARGE;
       obj[6] = channel;
       obj[8] = tmp.media;
-      obj[1] = jsx(tmp5(10140), {
+      obj[1] = jsx(tmp5(10162), {
         hasBottomSafeArea: false,
         hasLeftSafeArea: false,
         hasRightSafeArea: false,
@@ -79,7 +79,7 @@ const memoResult = importAllResult.memo((channel) => {
           contentStyle={null}
         />
       );
-      const tmp5Result = tmp5(10140);
+      const tmp5Result = tmp5(10162);
     }
   }
   return tmp8;

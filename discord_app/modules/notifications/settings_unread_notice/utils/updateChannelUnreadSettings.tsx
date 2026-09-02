@@ -1,6 +1,6 @@
 // discord_app/modules/notifications/settings_unread_notice/utils/updateChannelUnreadSettings.tsx
 import UserNotificationSettings from "../../../../utils/NotificationSettingsUtils.tsx";
-import _modDef5487 from "../../../../actions/NotificationSettingsModalActionCreators.tsx";
+import _modDef5495 from "../../../../actions/NotificationSettingsModalActionCreators.tsx";
 import resetGuildUnreadFlags from "../../settings/utils/notificationSettingsFlagUtils.tsx";
 import closure_3 from "../../../../stores/UserGuildSettingsStore.tsx";
 import { AnalyticsObjects } from "../../../../Constants.tsx";
@@ -13,7 +13,7 @@ let result = require("set").fileFinishedImporting(
 );
 
 export default function updateChannelUnreadSettings(closure_0, id, UNREADS_ONLY_MENTIONS) {
-  let obj = _modDef5487;
+  let obj = _modDef5495;
   obj = {
     flags: resetGuildUnreadFlags.withChannelUnreadFlags(
       channelIdFlags.getChannelIdFlags(closure_0, id),

@@ -10,7 +10,7 @@ import closure_8 from "../../../../stores/UserStore.tsx";
 import closure_9 from "../../BugReportStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import importDefaultResult from "../../../../../_runtime/00689_n.js";
+import importDefaultResult from "../../../../../_runtime/00686_n.js";
 
 const require = arg1;
 function handleClose() {
@@ -80,7 +80,7 @@ class BugCreateScreen {
                 closure_1 = undefined;
                 obj2 = undefined;
                 c3 = undefined;
-                obj1 = closure_1_1(5094);
+                obj1 = closure_1_1(5102);
                 obj2 = 1;
                 c3 = 1;
                 obj1 = { value: null, done: false };
@@ -104,9 +104,9 @@ class BugCreateScreen {
                 const merged = Object.assign(closure_1);
                 obj2.uri = closure_1.uri;
                 obj2.originalUri = closure_1.uri;
-                obj2.platform = closure_1_0(5073).UploadPlatform.REACT_NATIVE;
+                obj2.platform = closure_1_0(5081).UploadPlatform.REACT_NATIVE;
                 obj2.filename = closure_1.fileName;
-                const tmp35 = new closure_1_1(5073)(obj2);
+                const tmp35 = new closure_1_1(5081)(obj2);
                 c3 = tmp35;
                 closure_23.current = closure_7.length;
                 callback((arg0) => {
@@ -297,7 +297,7 @@ class BugCreateScreen {
                       closure_2 = arg2;
                       c5 = 0;
                       c6 = 0;
-                      return (/* F123230 */ function*() { ... })();
+                      return (/* F125084 */ function*() { ... })();
                     });
                     closure_3 = tmp;
                     const apply = tmp.apply;
@@ -778,6 +778,6 @@ export default function BugReportModal(screenshotUri) {
     obj[0] = obj;
     return obj;
   }, items);
-  return callback(screenshotUri(6008).Navigator, { screens, initialRouteName: "BUG_REPORT_CREATE" });
+  return callback(screenshotUri(6016).Navigator, { screens, initialRouteName: "BUG_REPORT_CREATE" });
 };
 export { BugCreateScreen };

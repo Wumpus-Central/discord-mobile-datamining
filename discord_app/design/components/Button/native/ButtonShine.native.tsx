@@ -11,10 +11,10 @@ function useShineEffectStyles(width, variant) {
   const _require = width;
   let obj = styleProperties;
   const buttonTextColorStyles = obj.useButtonTextColorStyles(variant);
-  const obj2 = enabled(689)(buttonTextColorStyles.color);
-  const hexResult = enabled(689)(buttonTextColorStyles.color).alpha(0.1).hex();
+  const obj2 = enabled(686)(buttonTextColorStyles.color);
+  const hexResult = enabled(686)(buttonTextColorStyles.color).alpha(0.1).hex();
   enabled = React.useContext(require("../../../shared.tsx").AccessibilityPreferencesContext).reducedMotion.enabled;
-  const alphaResult = enabled(689)(buttonTextColorStyles.color).alpha(0.1);
+  const alphaResult = enabled(686)(buttonTextColorStyles.color).alpha(0.1);
   const fn = function o() {
     if (null == width) {
       let obj = { transform: null };

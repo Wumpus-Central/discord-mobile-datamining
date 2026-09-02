@@ -4,7 +4,7 @@ import getSystemLocale from "../intl/index.native.tsx";
 import nameFromUserAll from "UserUtils.tsx";
 import closure_5 from "../stores/GuildStore.tsx";
 import closure_6 from "../stores/UserStore.tsx";
-import importDefaultResult from "../../_runtime/01401_priv.js";
+import importDefaultResult from "../../_runtime/01400_priv.js";
 
 require = arg1;
 function getGuildNameSuggestion(truncateUsername) {

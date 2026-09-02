@@ -1,6 +1,6 @@
 // discord_app/modules/guild_sidebar/native/BaseChannelItem.tsx
-import PlatformTypes from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import PlatformTypes from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import Button from "../../../design/void/native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import closure_3 from "../../../../_runtime/00019_noop.js";
@@ -157,9 +157,9 @@ export default function BaseChannelItem(mode) {
     items1[3] = channelInfo;
     obj[1] = items1;
     if (flag) {
-      let AnimatedPressableHighlight = hideIcon(11949);
+      let AnimatedPressableHighlight = hideIcon(12172);
     } else {
-      AnimatedPressableHighlight = mode(8984).AnimatedPressableHighlight;
+      AnimatedPressableHighlight = mode(8998).AnimatedPressableHighlight;
     }
     obj = {};
     const merged1 = Object.assign(merged);
@@ -176,9 +176,9 @@ export default function BaseChannelItem(mode) {
       ALL_MESSAGES = UnreadSetting.ALL_MESSAGES;
     }
     obj[2] = ALL_MESSAGES;
-    closure_8(hideIcon(10250), obj);
+    closure_8(hideIcon(10272), obj);
     const tmp6 = closure_8;
-    const tmp9 = hideIcon(10250);
+    const tmp9 = hideIcon(10272);
   }
 }
 export const ChannelModes = createCacheKey;

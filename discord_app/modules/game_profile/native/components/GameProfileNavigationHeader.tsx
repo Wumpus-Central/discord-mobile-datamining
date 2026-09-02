@@ -87,7 +87,7 @@ export default function GameProfileNavigationHeader(game) {
     let iconURL;
     if (game != null) {
       let str = "png";
-      if (game(1431).SUPPORTS_WEBP) {
+      if (game(1430).SUPPORTS_WEBP) {
         str = "webp";
       }
       iconURL = game.getIconURL(32, str);
@@ -96,7 +96,7 @@ export default function GameProfileNavigationHeader(game) {
       let iconURL1;
       if (application != null) {
         let str2 = "png";
-        if (game(1431).SUPPORTS_WEBP) {
+        if (game(1430).SUPPORTS_WEBP) {
           str2 = "webp";
         }
         iconURL1 = obj2.getIconURL(32, str2);
@@ -124,7 +124,7 @@ export default function GameProfileNavigationHeader(game) {
   if (null != name) {
     obj = { style: null, children: null };
     obj[0] = tmp.headerContainer;
-    const items2 = [callback(tmp3(8984).BackgroundBlurFill, {})];
+    const items2 = [callback(tmp3(8998).BackgroundBlurFill, {})];
     obj = { style: null, children: null };
     obj[0] = tmp.headerRow;
     let tmp15Result = null != memo;
@@ -157,13 +157,13 @@ export default function GameProfileNavigationHeader(game) {
       obj5[0] = tmp.rankPillContainer;
       const obj6 = { rank: null, compact: true };
       obj6[0] = game.l30Rank;
-      const items5 = [tmp15(application(8842), obj6)];
+      const items5 = [tmp15(application(8857), obj6)];
       const obj7 = { style: null, children: null };
       const items6 = [StyleSheet.absoluteFill, animatedStyle1];
       obj7[0] = items6;
       const obj8 = { rank: null };
       obj8[0] = game.l30Rank;
-      obj7[1] = tmp15(application(8842), obj8);
+      obj7[1] = tmp15(application(8857), obj8);
       items5[1] = tmp15(application(4217).View, obj7);
       obj5[1] = items5;
       tmp13Result = tmp13(tmp14, obj5);

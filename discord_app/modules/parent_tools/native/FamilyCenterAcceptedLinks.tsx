@@ -7,7 +7,7 @@ import useUserIdsForLinkStatus from "../hooks/useUserLinks.tsx";
 import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
 import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
 import FamilyCenterLinkRowDefault from "FamilyCenterLinkRow.tsx";
-import registerAssetDefault from "../../../../_runtime/14529_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/14752_registerAsset.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import items from "../FamilyCenterConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
@@ -20,7 +20,7 @@ function FamilyCenterAcceptedLinkRow(otherUser) {
   if (undefined !== str) {
     let obj = { otherUser: null, actions: null };
     obj[0] = str;
-    const intl = str(1236).intl;
+    const intl = str(1233).intl;
     str = undefined;
     if (str != null) {
       str = str.toString();
@@ -36,10 +36,10 @@ function FamilyCenterAcceptedLinkRow(otherUser) {
     };
     obj[3] = tmp.actionButton;
     obj1 = { size: null, disableColor: true, source: null };
-    obj1[0] = str(1297).Icon.Sizes.SMALL;
+    obj1[0] = str(1296).Icon.Sizes.SMALL;
     obj1[2] = registerAssetDefault;
-    obj[4] = closure_6(str(1297).Icon, obj1);
-    obj[1] = closure_6(str(5068).PressableOpacity, obj);
+    obj[4] = closure_6(str(1296).Icon, obj1);
+    obj[1] = closure_6(str(5076).PressableOpacity, obj);
     tmp4Result = tmp4(FamilyCenterLinkRowDefault, obj);
     const tmp5 = importDefault;
     const tmp7 = FamilyCenterLinkRowDefault;
@@ -89,13 +89,13 @@ export default function FamilyCenterAcceptedLinks() {
   const activeLinkUsers = obj.useActiveLinkUsers();
   obj = { count: activeLinkUsers.length, max: useIsInAdultAgeGroupDefault() ? closure_4 : closure_5 };
   const tmp4 = useIsInAdultAgeGroupDefault();
-  const intl = tmp5(1236).intl;
+  const intl = tmp5(1233).intl;
   const tmp5Result = useAgeSpecificText;
-  const intl2 = tmp5(1236).intl;
+  const intl2 = tmp5(1233).intl;
   obj = { style: tmp.container, children: null };
   const ageSpecificText = tmp5Result.useAgeSpecificText(
     intl.formatToPlainString(messagesProxyDefault["+tnO34"], obj),
-    intl2.formatToPlainString(tmp2(2369)["pu6/U0"], obj),
+    intl2.formatToPlainString(tmp2(2368)["pu6/U0"], obj),
   );
   const items = [
     callback(Text.Text, { style: tmp.header, variant: "eyebrow", color: "text-default", children: ageSpecificText }),
@@ -105,11 +105,11 @@ export default function FamilyCenterAcceptedLinks() {
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.empty;
     const obj4 = { text: null };
-    const intl3 = tmp5(1236).intl;
-    obj4[0] = intl3.string(tmp2(2369).C4ScLD);
-    obj3[1] = tmp10(tmp2(14522), obj4);
+    const intl3 = tmp5(1233).intl;
+    obj4[0] = intl3.string(tmp2(2368).C4ScLD);
+    obj3[1] = tmp10(tmp2(14745), obj4);
     let mapped = tmp10(tmp9, obj3);
-    const tmp2Result = tmp2(14522);
+    const tmp2Result = tmp2(14745);
   } else {
     mapped = activeLinkUsers.map((id) => callback(closure_10, { otherUser: id }, "accepted-" + id.id));
   }

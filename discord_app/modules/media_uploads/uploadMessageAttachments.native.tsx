@@ -56,7 +56,7 @@ function _uploadMessageAttachments() {
               closure_7 = undefined;
               c4 = 1;
               set = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -71,7 +71,7 @@ function _uploadMessageAttachments() {
               set = 3;
               return { value: "HermesInternal", done: null };
             } else {
-              const tmp16 = new callback2(7583)();
+              const tmp16 = new callback2(7593)();
               set = tmp16;
               const _HermesInternal = HermesInternal;
               closure_6 = "pending-upload-" + set._file.id;

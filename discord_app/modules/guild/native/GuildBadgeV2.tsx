@@ -23,7 +23,7 @@ export default function GuildBadgeV2(arg0) {
   if (null == guild) {
     return null;
   } else {
-    const guildBadgeImageSource = tmp5(8867).getGuildBadgeImageSource(guild, tmp8);
+    const guildBadgeImageSource = tmp5(8882).getGuildBadgeImageSource(guild, tmp8);
     let tmp10 = null;
     if (null != guildBadgeImageSource) {
       const obj = { size: null, source: null, style: null, disableColor: true };
@@ -31,7 +31,7 @@ export default function GuildBadgeV2(arg0) {
       obj[1] = guildBadgeImageSource;
       obj[2] = tmp4.icon;
       const merged1 = Object.assign(merged);
-      tmp10 = jsx(tmp5(1297).Icon, { size: null, source: null, style: null, disableColor: true });
+      tmp10 = jsx(tmp5(1296).Icon, { size: null, source: null, style: null, disableColor: true });
     }
     return tmp10;
   }

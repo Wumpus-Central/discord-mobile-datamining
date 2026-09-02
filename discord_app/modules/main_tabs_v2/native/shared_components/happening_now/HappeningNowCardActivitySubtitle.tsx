@@ -22,7 +22,7 @@ const result = require("set").fileFinishedImporting(
 
 export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubtitle(voiceState) {
   voiceState = voiceState.voiceState;
-  let obj = voiceState(589);
+  let obj = voiceState(586);
   const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getChannel(voiceState.channelId));
   obj = { style: callback().cardDetails, children: null };
@@ -34,7 +34,7 @@ export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubti
     obj[0] = stateFromStores;
     tmp8 = getChannelA11yLabelDefault(obj);
   }
-  obj[1] = jsx(voiceState(14891).HappeningNowCardSubtitle, {
+  obj[1] = jsx(voiceState(15120).HappeningNowCardSubtitle, {
     lineClamp: 1,
     accessibilityLabel: tmp8,
     children: computeChannelNameDefault(stateFromStores),
@@ -72,7 +72,7 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
     tmp3 = null;
     if (null != name) {
       if (!_isStreamingDefault(activity)) {
-        if (tmp4(9256)(activity)) {
+        if (tmp4(9269)(activity)) {
           if (null != activity.details) {
             if (null != activity.state) {
               const _HermesInternal = HermesInternal;

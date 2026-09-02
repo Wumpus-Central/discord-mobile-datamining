@@ -11,7 +11,7 @@ import importAllResult from "../../../../_runtime/00019_noop.js";
 import { AppLauncherRouteName } from "AppLauncherNativeConstants.tsx";
 import { AnalyticEvents } from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createNativeStackNavigator from "../../../../_runtime/07822_createNativeStackNavigator.js";
+import createNativeStackNavigator from "../../../../_runtime/07831_createNativeStackNavigator.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
@@ -44,10 +44,10 @@ const memoResult = importAllResult.memo(function AppLauncherNavigator(arg0) {
   const tmp3 = contextDefault;
   let obj = entrypoint(4342);
   if (overrideParams == null) {
-    overrideParams = obj.useKeyboardContextForType(entrypoint(1626).KeyboardTypes.APP_LAUNCHER);
+    overrideParams = obj.useKeyboardContextForType(entrypoint(1625).KeyboardTypes.APP_LAUNCHER);
   }
   const tmp4 = callback2();
-  const accessibilityNativeStackOptions = entrypoint(6008).useAccessibilityNativeStackOptions();
+  const accessibilityNativeStackOptions = entrypoint(6016).useAccessibilityNativeStackOptions();
   const initialRouteName = overrideParams.initialRouteName;
   let obj12 = callback(overrideParams, closure_3);
   const items = [entrypoint];
@@ -117,10 +117,10 @@ const memoResult = importAllResult.memo(function AppLauncherNavigator(arg0) {
   items2[3] = closure_8(closure_10.Screen, obj10);
   obj[2] = items2;
   obj[1] = closure_9(closure_10.Navigator, obj);
-  obj14[0] = closure_8(entrypoint(5953).AnalyticsLocationProvider, obj);
-  obj13[0] = closure_8(entrypoint(1500).NavigationContainer, obj14);
+  obj14[0] = closure_8(entrypoint(5961).AnalyticsLocationProvider, obj);
+  obj13[0] = closure_8(entrypoint(1499).NavigationContainer, obj14);
   let tmp19 = "customId" in overrideParams;
-  const children = tmp8(tmp5(1500).NavigationIndependentTree, obj13);
+  const children = tmp8(tmp5(1499).NavigationIndependentTree, obj13);
   if (!tmp19) {
     tmp19 = "referrerId" in overrideParams;
   }
@@ -130,7 +130,7 @@ const memoResult = importAllResult.memo(function AppLauncherNavigator(arg0) {
     entrypointParams = { customId: null, referrerId: null };
     const obj15 = { customId: null, referrerId: null };
   }
-  return closure_8(entrypoint(9049).AppLauncherContext.Provider, {
+  return closure_8(entrypoint(9063).AppLauncherContext.Provider, {
     value: {
       bottomSheetExpandReasonRef,
       bottomSheetIndex,

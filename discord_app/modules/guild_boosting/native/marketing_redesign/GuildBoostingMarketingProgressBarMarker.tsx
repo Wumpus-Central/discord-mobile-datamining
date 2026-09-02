@@ -1,8 +1,8 @@
 // discord_app/modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingProgressBarMarker.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../../_runtime/13241_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/13242_registerAsset.js";
-import registerAssetDefault3 from "../../../../../_runtime/13243_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/13463_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/13464_registerAsset.js";
+import registerAssetDefault3 from "../../../../../_runtime/13465_registerAsset.js";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { BoostedGuildTiers } from "../../../../Constants.tsx";
@@ -205,7 +205,7 @@ export default function ProgressBarMarker(arg0) {
   React = tmp20Result;
   if (tier === guild.premiumTier) {
     if (tmp20Result) {
-      PREMIUM_PERK_PINK = tmp2(712).unsafe_rawColors.PREMIUM_PERK_PINK;
+      PREMIUM_PERK_PINK = tmp2(709).unsafe_rawColors.PREMIUM_PERK_PINK;
     }
     let items = [tmp20Result, sharedValue, tmp7];
     const effect = React.useEffect(() => {
@@ -288,7 +288,7 @@ export default function ProgressBarMarker(arg0) {
     }
     if (tmp20Result) {
       const obj5 = { source: null, style: null };
-      obj5[0] = tmp2(11163);
+      obj5[0] = tmp2(11384);
       obj5[1] = tmp.progressBarMarkerUnlockedIcon;
       tmp20Result = tmp20(closure_5, obj5);
     }
@@ -303,10 +303,10 @@ export default function ProgressBarMarker(arg0) {
     return closure_8(PREMIUM_PERK_PINK, obj);
   }
   const tmp4 = sharedValue(4413)();
-  const tmp5Result1 = useReducedMotion(1363);
-  const isThemeDarkResult = useReducedMotion(1363).isThemeDark(tmp4);
+  const tmp5Result1 = useReducedMotion(1362);
+  const isThemeDarkResult = useReducedMotion(1362).isThemeDark(tmp4);
   const hexWithOpacity = useReducedMotion(4326).hexWithOpacity;
-  const unsafe_rawColors = tmp2(712).unsafe_rawColors;
+  const unsafe_rawColors = tmp2(709).unsafe_rawColors;
   if (isThemeDarkResult) {
     PREMIUM_PERK_PINK = hexWithOpacity(unsafe_rawColors.WHITE, 0.4);
   } else {

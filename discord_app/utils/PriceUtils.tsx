@@ -1,6 +1,6 @@
 // discord_app/utils/PriceUtils.tsx
-import set from "PlatformUtils.tsx";
 import getSystemLocale from "../intl/index.native.tsx";
+import set from "PlatformUtils.tsx";
 import getPremiumPlanItem from "PremiumUtils.tsx";
 import CurrencyCodes2 from "../../discord_common/js/shared/utils/PriceUtils.tsx";
 import closure_2 from "../modules/user_settings/LocaleStore.tsx";
@@ -52,16 +52,16 @@ function formatPrice(amount, currency, localeOverride, localeOverride) {
   if (timestamp < date.getTime()) {
     const platformName = set.getPlatformName();
     if ("android" === platformName) {
-      let ipCountryCode = tmp2(6084).default.getUserCountry();
-      const _default2 = tmp2(6084).default;
+      let ipCountryCode = tmp2(6092).default.getUserCountry();
+      const _default2 = tmp2(6092).default;
     } else if ("ios" === platformName) {
-      const storeFront = tmp2(6086).default.getStoreFront();
+      const storeFront = tmp2(6094).default.getStoreFront();
       let country;
       if (storeFront != null) {
         country = storeFront.country;
       }
       ipCountryCode = country;
-      const _default = tmp2(6086).default;
+      const _default = tmp2(6094).default;
     } else {
       ipCountryCode = ipCountryCode.ipCountryCode;
     }

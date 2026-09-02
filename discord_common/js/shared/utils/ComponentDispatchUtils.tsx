@@ -1,6 +1,6 @@
 // discord_common/js/shared/utils/ComponentDispatchUtils.tsx
 import set from "../../../../_runtime/00002_set.js";
-import EventEmitter from "../../../../_runtime/00652_EventEmitter.js";
+import EventEmitter from "../../../../_runtime/00649_EventEmitter.js";
 
 let result = set.fileFinishedImporting("../discord_common/js/shared/utils/ComponentDispatchUtils.tsx");
 class ComponentDispatcher {

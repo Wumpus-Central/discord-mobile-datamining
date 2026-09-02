@@ -11,17 +11,17 @@ const require = arg1;
 function useRevealProviderValue(arg0, channel) {
   let tmp = arg0;
   const items = [closure_4];
-  const stateFromStores = stateFromStores1(589).useStateFromStores(items, () => null != key.getKey());
-  const obj = stateFromStores1(589);
+  const stateFromStores = stateFromStores1(586).useStateFromStores(items, () => null != key.getKey());
+  const obj = stateFromStores1(586);
   const tmp2 = stateFromStores1;
   const tmp5 = areParticipantStatesEqualDefault(channel);
   const tmp6 = callback2();
   const items1 = [closure_5];
-  stateFromStores1 = stateFromStores1(589).useStateFromStores(
+  stateFromStores1 = stateFromStores1(586).useStateFromStores(
     items1,
     () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo(),
   );
-  const obj2 = stateFromStores1(589);
+  const obj2 = stateFromStores1(586);
   if (!arg0) {
     tmp = stateFromStores;
   }
@@ -39,7 +39,7 @@ function useRevealProviderValue(arg0, channel) {
   }
   stateFromStores1 = tmp;
   const tmp8 = useIsActivityFocusedDefault(channel.id);
-  const tmp10 = tmp2(500).isIOS() && tmp8;
+  const tmp10 = tmp2(1234).isIOS() && tmp8;
   importDefault = tmp10;
   const items2 = [tmp, tmp10];
   return importAllResult.useMemo(
@@ -90,13 +90,13 @@ export default function RevealProvider(showStatus) {
   }
   const obj = { value: tmp2, children: null };
   let tmp10 = !reveal;
-  let tmp4Result = tmp4(9530);
+  let tmp4Result = tmp4(9543);
   if (!reveal) {
     tmp10 = !flag;
   }
   const items1 = [closure_10(tmp4Result, { hidden: tmp10, animated: true, barStyle: str }), children];
   let tmp12 = !reveal;
-  tmp4Result = tmp4(9532);
+  tmp4Result = tmp4(9545);
   if (!reveal) {
     tmp12 = !prefersDeferringSystemGestures;
   }

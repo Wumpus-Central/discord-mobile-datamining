@@ -83,7 +83,7 @@ function _fetchProfile() {
                 closure_12 = undefined;
                 c7 = 1;
                 logger = 1;
-                return { value: "PX_16", done: null };
+                return { value: "PX_16", done: true };
               }
             } else if (1 === tmp7) {
               if (arg0 === 1) {
@@ -108,7 +108,7 @@ function _fetchProfile() {
                 obj3[2] = c5;
                 dispatchResult = c4;
                 obj3[3] = c4;
-                dispatchResult = callback2(709).dispatch(obj3);
+                dispatchResult = callback2(706).dispatch(obj3);
                 dispatchResult = c3;
                 c6 = 1;
                 dispatchResult = c5;
@@ -119,7 +119,7 @@ function _fetchProfile() {
                   }
                 }
                 closure_11 = tmp68;
-                const HTTP = callback(530).HTTP;
+                const HTTP = callback(527).HTTP;
                 let obj4 = { url: null, query: null, signal: null, rejectWithError: true };
                 obj4[0] = c6.USER_PROFILE(callback);
                 const obj5 = {
@@ -169,7 +169,7 @@ function _fetchProfile() {
                 const _HermesInternal = HermesInternal;
                 logger.warn("fetchProfile error: " + closure_13.body.code + " - " + closure_13.body.message);
               }
-              let obj7 = callback2(709);
+              let obj7 = callback2(706);
               obj7 = {
                 type: "USER_PROFILE_FETCH_FAILURE",
                 apiError: null,
@@ -199,11 +199,11 @@ function _fetchProfile() {
               if (closure_9 != null) {
                 dispatchResult(closure_12.body, c5);
               }
-              obj = callback2(709);
+              obj = callback2(706);
               const obj9 = { type: "USER_UPDATE", user: null };
               obj9[1] = closure_12.body.user;
               obj.dispatch(obj9);
-              obj2 = callback2(709);
+              obj2 = callback2(706);
               const obj10 = {
                 type: "USER_PROFILE_FETCH_SUCCESS",
                 userProfile: null,
@@ -219,7 +219,7 @@ function _fetchProfile() {
                 tmp25 = null != closure_12.body.guild_member;
               }
               if (tmp25) {
-                obj4 = callback2(709);
+                obj4 = callback2(706);
                 const obj11 = { type: "GUILD_MEMBER_PROFILE_UPDATE", guildId: null, guildMember: null };
                 obj11[1] = c5;
                 obj11[2] = closure_12.body.guild_member;

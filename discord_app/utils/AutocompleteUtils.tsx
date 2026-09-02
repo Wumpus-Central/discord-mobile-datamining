@@ -9,7 +9,7 @@ import nameFromUserDefault from "UserUtils.tsx";
 import setDefault from "RegexUtils.tsx";
 import computeChannelName from "../modules/channel/useChannelName.tsx";
 import StickerFormat from "../modules/stickers/StickersTypes.tsx";
-import fuzzysearchDefault from "../../_runtime/05454_fuzzysearch.js";
+import fuzzysearchDefault from "../../_runtime/05462_fuzzysearch.js";
 import sortByMatchScoreDefault from "../modules/autocompleter/sortByMatchScore.tsx";
 import getGuildNameSuggestionDefault from "GuildUtils.tsx";
 import useCanSeeOnboardingHome from "../modules/guild_onboarding_home/OnboardingHomeUtils.tsx";
@@ -160,10 +160,10 @@ function queryMemberList(arg0) {
           if (null == str) {
             let items2 = [null, null];
           } else {
-            let tmp16Result = tmp16(1902);
+            let tmp16Result = tmp16(1901);
             let stripDiacriticsResult = tmp16Result.stripDiacritics(str);
             items2 = [stripDiacriticsResult];
-            tmp16Result = tmp16(1902);
+            tmp16Result = tmp16(1901);
             items2[1] = tmp16Result.normalize(stripDiacriticsResult);
           }
           let tmp18 = callback;
@@ -172,10 +172,10 @@ function queryMemberList(arg0) {
           if (null == str2) {
             let items3 = [null, null];
           } else {
-            let tmp16Result1 = tmp16(1902);
+            let tmp16Result1 = tmp16(1901);
             let stripDiacriticsResult1 = tmp16Result1.stripDiacritics(str2);
             items3 = [stripDiacriticsResult1];
-            let tmp16Result2 = tmp16(1902);
+            let tmp16Result2 = tmp16(1901);
             items3[1] = tmp16Result2.normalize(stripDiacriticsResult1);
           }
           let tmp18Result = tmp18(items3, 2);
@@ -217,21 +217,21 @@ function queryMemberList(arg0) {
                               let tmp33 = num < 50;
                               if (num < 50) {
                                 let tmp28 =
-                                  tmp12(5454)(toLocaleLowerCaseResult, str4) || tmp12(5454)(normalizeResult, str5);
+                                  tmp12(5462)(toLocaleLowerCaseResult, str4) || tmp12(5462)(normalizeResult, str5);
                                 if (!tmp28) {
-                                  let tmp29 = null != str6 && tmp12(5454)(toLocaleLowerCaseResult, str6);
+                                  let tmp29 = null != str6 && tmp12(5462)(toLocaleLowerCaseResult, str6);
                                   tmp28 = tmp29;
                                 }
                                 if (!tmp28) {
-                                  let tmp30 = null != str7 && tmp12(5454)(normalizeResult, str7);
+                                  let tmp30 = null != str7 && tmp12(5462)(normalizeResult, str7);
                                   tmp28 = tmp30;
                                 }
                                 if (!tmp28) {
-                                  let tmp31 = null != str8 && tmp12(5454)(toLocaleLowerCaseResult, str8);
+                                  let tmp31 = null != str8 && tmp12(5462)(toLocaleLowerCaseResult, str8);
                                   tmp28 = tmp31;
                                 }
                                 if (!tmp28) {
-                                  let tmp32 = null != str9 && tmp12(5454)(normalizeResult, str9);
+                                  let tmp32 = null != str9 && tmp12(5462)(normalizeResult, str9);
                                   tmp28 = tmp32;
                                 }
                                 tmp33 = tmp28;
@@ -365,13 +365,13 @@ function queryMemberList(arg0) {
 function getPriorityForStickerMetadataType(arg0) {
   if (StickerFormat.StickerMetadataTypes.STICKER_NAME === arg0) {
     return 11;
-  } else if (tmp(5212).StickerMetadataTypes.CORRELATED_EMOJI === arg0) {
+  } else if (tmp(5220).StickerMetadataTypes.CORRELATED_EMOJI === arg0) {
     return 6;
-  } else if (tmp(5212).StickerMetadataTypes.TAG === arg0) {
+  } else if (tmp(5220).StickerMetadataTypes.TAG === arg0) {
     return 1;
   } else {
-    if (tmp(5212).StickerMetadataTypes.GUILD_NAME !== arg0) {
-      if (tmp(5212).StickerMetadataTypes.PACK_NAME !== arg0) {
+    if (tmp(5220).StickerMetadataTypes.GUILD_NAME !== arg0) {
+      if (tmp(5220).StickerMetadataTypes.PACK_NAME !== arg0) {
         return 1;
       }
     }
@@ -1755,11 +1755,14 @@ areArraysShallowlyEqual = {
         }
         maybePushOtherGlobal(tmp32);
       }
-      let tmp35;
-      if (MENTION_TIMESTAMP != null) {
-        tmp35 = MENTION_TIMESTAMP();
+      const TimestampAutocompleteMobileExperiment = channel(flag7[47]).TimestampAutocompleteMobileExperiment;
+      if (TimestampAutocompleteMobileExperiment.getConfig({ location: "mention autocomplete" }).enabled) {
+        let tmp35;
+        if (MENTION_TIMESTAMP != null) {
+          tmp35 = MENTION_TIMESTAMP();
+        }
+        maybePushOtherGlobal(tmp35);
       }
-      maybePushOtherGlobal(tmp35);
       obj1 = { users: null, globals: null, roles: null };
       obj1[0] = items;
       obj1[1] = items2;
@@ -1924,15 +1927,15 @@ areArraysShallowlyEqual = {
       result = features3.has(tmp8.COMMUNITY);
     }
     obj = { id: StaticChannelId.SERVER_GUIDE, name: null };
-    const intl = tmp5(1236).intl;
+    const intl = tmp5(1233).intl;
     obj[1] = intl.string(getSystemLocale.t.VbpLyU);
     items = [obj, ,];
     obj = { id: StaticChannelId.CHANNEL_BROWSER, name: null };
-    const intl2 = tmp5(1236).intl;
+    const intl2 = tmp5(1233).intl;
     obj[1] = intl2.string(getSystemLocale.t.et6wav);
     items[1] = obj;
     obj1 = { id: StaticChannelId.CUSTOMIZE_COMMUNITY, name: null };
-    const intl3 = tmp5(1236).intl;
+    const intl3 = tmp5(1233).intl;
     obj1[1] = intl3.string(getSystemLocale.t.h9mGOP);
     items[2] = obj1;
     const items1 = [];
@@ -1986,18 +1989,16 @@ areArraysShallowlyEqual = {
       guildId: channel.getGuildId(),
       limit: "r",
       fuzzy: "HermesInternal",
-      filter: 20,
-      type: true,
-      allowEmptyQueries: "/assets/.cache/intl/bW9kdWxlcy9hZHM=",
+      filter(type) {
+        let hasItem = null == channelTypes;
+        if (!hasItem) {
+          hasItem = channelTypes.includes(type.type);
+        }
+        return hasItem;
+      },
+      type,
+      allowEmptyQueries: null,
     };
-    obj[4] = function filter(type) {
-      let hasItem = null == channelTypes;
-      if (!hasItem) {
-        hasItem = channelTypes.includes(type.type);
-      }
-      return hasItem;
-    };
-    obj[5] = type;
     obj[0] = this.queryChannels(obj).map((record) => record.record);
     return obj;
   },
@@ -2103,16 +2104,16 @@ areArraysShallowlyEqual = {
     set = new Set();
     items1 = [];
     closure_5 = items1;
-    const FrecencyUserSettingsActionCreators = flag(1370).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = flag(1369).FrecencyUserSettingsActionCreators;
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
     function _loop() {
       if ("" === closure_6) {
         return 1;
       } else {
         const toLocaleLowerCaseResult = obj.toLocaleLowerCase();
-        const stripDiacriticsResult = toLocaleLowerCaseResult(1902).stripDiacritics(toLocaleLowerCaseResult);
+        const stripDiacriticsResult = toLocaleLowerCaseResult(1901).stripDiacritics(toLocaleLowerCaseResult);
         const _RegExp = RegExp;
-        let obj2 = toLocaleLowerCaseResult(1902);
+        let obj2 = toLocaleLowerCaseResult(1901);
         const _HermesInternal = HermesInternal;
         const regExp = new RegExp("^" + nextResult(4465).escape(stripDiacriticsResult), "i");
         const _RegExp2 = RegExp;
@@ -2215,7 +2216,7 @@ areArraysShallowlyEqual = {
                   closure_1_5.push(obj);
                 }
               }
-              obj2 = toLocaleLowerCaseResult(closure_2_3[51]);
+              obj2 = toLocaleLowerCaseResult(closure_2_3[52]);
             }
           });
         });

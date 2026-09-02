@@ -54,7 +54,7 @@ function _launchFrame() {
               c6 = undefined;
               c5 = 1;
               c6 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -82,11 +82,11 @@ function _launchFrame() {
                 return obj3;
               } else {
                 if (callback4(callback2) === c5.MAIN) {
-                  let obj9 = callback(9468);
+                  let obj9 = callback(9481);
                   const result = obj9.leaveCurrentEmbeddedActivity();
                   callback6();
                 }
-                let obj10 = callback2(709);
+                let obj10 = callback2(706);
                 let obj4 = { type: "FRAME_LAUNCH_START", applicationId: null, frameId: null, surface: null };
                 obj4[1] = callback;
                 obj4[2] = dependencyMap;
@@ -96,15 +96,15 @@ function _launchFrame() {
                 c5 = 4;
                 c6 = 1;
                 const obj5 = { value: null, done: false };
-                obj5[0] = callback(9469).createProxyTicket(callback, callback3(callback2));
+                obj5[0] = callback(9482).createProxyTicket(callback, callback3(callback2));
                 return obj5;
               }
             }
           } else if (2 === tmp7) {
             frame = 0;
             callback3 = intent;
-            c5 = callback2(9452)();
-            let obj7 = callback(9495);
+            c5 = callback2(9465)();
+            let obj7 = callback(9508);
             c5 = 3;
             c6 = 1;
             const obj6 = { value: null, done: false };
@@ -122,7 +122,7 @@ function _launchFrame() {
             } else {
               c6 = arg1;
               c5.showLaunchErrorModal(c6.message);
-              obj4 = callback2(709);
+              obj4 = callback2(706);
               const obj8 = { type: "FRAME_LAUNCH_FAIL", applicationId: null, frameId: null, error: null };
               obj8[1] = callback;
               obj8[2] = dependencyMap;
@@ -141,7 +141,7 @@ function _launchFrame() {
             return obj9;
           } else {
             frame = arg1;
-            obj = callback2(709);
+            obj = callback2(706);
             obj10 = { type: "FRAME_LAUNCH", applicationId: null, frameId: null, surface: null, proxyTicket: null };
             obj10[1] = callback;
             obj10[2] = dependencyMap;
@@ -322,7 +322,7 @@ function _refreshProxyTicket() {
             }
           } else if (1 === tmp9) {
             frame = 0;
-            let obj10 = applicationId(709);
+            let obj10 = applicationId(706);
             let obj3 = {
               type: "FRAME_SET_PROXY_TICKET_REFRESHING",
               applicationId: null,
@@ -336,8 +336,8 @@ function _refreshProxyTicket() {
           } else if (2 === tmp9) {
             frame = 1;
             c5 = closure_3;
-            closure_3 = applicationId(9452)();
-            let obj8 = callback(9495);
+            closure_3 = applicationId(9465)();
+            let obj8 = callback(9508);
             c5 = 3;
             c6 = 1;
             const obj4 = { value: null, done: false };
@@ -349,7 +349,7 @@ function _refreshProxyTicket() {
               throw arg1;
             } else if (arg0 === 2) {
               frame = 0;
-              let obj5 = applicationId(709);
+              let obj5 = applicationId(706);
               obj5 = {
                 type: "FRAME_SET_PROXY_TICKET_REFRESHING",
                 applicationId: null,
@@ -367,7 +367,7 @@ function _refreshProxyTicket() {
               frame = arg1;
               closure_3.showLaunchErrorModal(frame.message);
               frame = 0;
-              obj3 = applicationId(709);
+              obj3 = applicationId(706);
               const obj7 = {
                 type: "FRAME_SET_PROXY_TICKET_REFRESHING",
                 applicationId: null,
@@ -385,7 +385,7 @@ function _refreshProxyTicket() {
             throw arg1;
           } else if (arg0 === 2) {
             frame = 0;
-            obj = applicationId(709);
+            obj = applicationId(706);
             obj8 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: null, frameId: null, refreshing: false };
             obj8[1] = applicationId;
             obj8[2] = callback;
@@ -400,9 +400,9 @@ function _refreshProxyTicket() {
             obj10[1] = applicationId;
             obj10[2] = callback;
             obj10[3] = dependencyMap;
-            applicationId(709).dispatch(obj10);
+            applicationId(706).dispatch(obj10);
             frame = 0;
-            const obj16 = applicationId(709);
+            const obj16 = applicationId(706);
             const obj11 = {
               type: "FRAME_SET_PROXY_TICKET_REFRESHING",
               applicationId: null,
@@ -411,7 +411,7 @@ function _refreshProxyTicket() {
             };
             obj11[1] = applicationId;
             obj11[2] = callback;
-            applicationId(709).dispatch(obj11);
+            applicationId(706).dispatch(obj11);
             c6 = 3;
             return { value: true, done: true };
           }

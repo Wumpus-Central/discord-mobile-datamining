@@ -3,7 +3,7 @@ import sendRequest from "../../../../discord_common/js/packages/http-utils/HTTPU
 import Button from "../../../design/void/native.tsx";
 import getConstantsAll from "../../../utils/native/ClientInfoUtils.tsx";
 import _modDef4190 from "../../../lib/native/Linking.tsx";
-import registerAssetDefault from "../../../../_runtime/08052_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/08060_registerAsset.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import SPOTIFY_APP_PROTOCOL from "../../spotify/SpotifyConstants.tsx";
@@ -43,7 +43,7 @@ SpotifyTrack.prototype["render"] = function render() {
   const self = this;
   const props = this.props;
   const onPress = props.onPress;
-  return callback(onPress(1297).LegacyText, {
+  return callback(onPress(1296).LegacyText, {
     onPress() {
       if (onPress != null) {
         tmp();
@@ -95,7 +95,7 @@ prototype["renderLink"] = function renderLink(children, arg1, arg2) {
   closure_1 = arg1;
   const onPress = this.props.onPress;
   children = [
-    callback(onPress(1297).LegacyText, {
+    callback(onPress(1296).LegacyText, {
       onPress() {
         if (onPress != null) {
           tmp();
@@ -111,7 +111,7 @@ prototype["renderLink"] = function renderLink(children, arg1, arg2) {
     str = "";
   }
   children[1] = str;
-  return closure_10(onPress(1297).LegacyText, { children }, arg1);
+  return closure_10(onPress(1296).LegacyText, { children }, arg1);
 };
 prototype["render"] = function render() {
   const self = this;
@@ -262,8 +262,8 @@ export const SpotifyPlayButton = function SpotifyPlayButton(activity) {
   obj = { icon: null, text: null, size: "sm", onPress: null, grow: true };
   obj = { source: registerAssetDefault };
   obj[0] = callback(activity(4928).Button.Icon, obj);
-  const intl = activity(1236).intl;
-  obj[1] = intl.formatToPlainString(activity(1236).t.LEgD7t, { platform: activity.name });
+  const intl = activity(1233).intl;
+  obj[1] = intl.formatToPlainString(activity(1233).t.LEgD7t, { platform: activity.name });
   obj[3] = function onPress() {
     sync_id = sync_id.sync_id;
     const canOpenURLResult = closure_1_4.canOpenURL("" + closure_1_6 + ":");

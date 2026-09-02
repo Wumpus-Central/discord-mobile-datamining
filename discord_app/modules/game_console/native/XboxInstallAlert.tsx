@@ -32,8 +32,8 @@ export default function XboxInstallAlert(arg0) {
     return closure_1_5(lib(closure_1_2[7]).Icon, { source: closure_1_1(closure_1_2[8]), style: lib.externalLinkIcon });
   };
   obj.onConfirm = function onConfirm() {
-    const obj = lib(500);
-    const isAndroidResult = lib(500).isAndroid();
+    const obj = lib(1234);
+    const isAndroidResult = lib(1234).isAndroid();
     const openURL = callback(4190).openURL;
     if (isAndroidResult) {
       openURL(closure_3);

@@ -97,7 +97,7 @@ let obj = {
   userOffersLastFetchedAtDate: "r",
   userTrialOffers: "flexDirection",
   userDiscountOffers: null,
-  userDiscounts: "\u{1F443}\u{1F3FC}",
+  userDiscounts: "\u{1F466}\u{1F3FE}",
   isFetching: true,
   lastFetchSuccessful: null,
   shouldTriggerOffer: 8,

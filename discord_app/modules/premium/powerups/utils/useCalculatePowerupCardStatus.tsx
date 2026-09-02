@@ -29,25 +29,25 @@ export const useCalculatePowerupCardStatus = function useCalculatePowerupCardSta
         }
       }
       if (tmp.type === closure_1_4.LEVEL_ACTIVATED) {
-        const intl2 = powerup(1236).intl;
+        const intl2 = powerup(1233).intl;
         const sourcePowerup = tmp.sourcePowerup;
         let title;
         if (sourcePowerup != null) {
           title = sourcePowerup.title;
         }
         if (title == null) {
-          const intl3 = tmp9(1236).intl;
-          title = intl3.string(tmp9(1236).t.BfF6ED);
+          const intl3 = tmp9(1233).intl;
+          title = intl3.string(tmp9(1233).t.BfF6ED);
         }
         obj1 = { type: "active", statusText: null };
         const obj2 = { perkName: null };
         obj2[0] = title;
-        obj1[1] = intl2.formatToPlainString(lib(2401).WRRYUT, obj2);
+        obj1[1] = intl2.formatToPlainString(lib(2400).WRRYUT, obj2);
         tmp5 = obj1;
       } else if (tmp.type !== tmp4.INACTIVE) {
         obj = { type: "active", statusText: null };
-        const intl = powerup(1236).intl;
-        obj[1] = intl.string(lib(2401).FFLkmx);
+        const intl = powerup(1233).intl;
+        obj[1] = intl.string(lib(2400).FFLkmx);
         tmp5 = obj;
       }
     }

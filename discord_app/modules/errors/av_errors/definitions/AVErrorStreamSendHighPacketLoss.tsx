@@ -25,7 +25,7 @@ export const AVErrorStreamSendHighPacketLossDefinition = {
       if (null == mediaEngineConnectionId) {
         return null;
       } else {
-        let tmp8Result = tmp8(17421);
+        let tmp8Result = tmp8(17657);
         const accumulatedStatsWithMinDatapoints = tmp8Result.getAccumulatedStatsWithMinDatapoints(
           mediaEngineConnectionId,
           currentUserActiveStream.ownerId,
@@ -34,8 +34,8 @@ export const AVErrorStreamSendHighPacketLossDefinition = {
         if (null != accumulatedStatsWithMinDatapoints) {
           if (10 < 100 * accumulatedStatsWithMinDatapoints.short.packetLossRate) {
             obj = { type: null };
-            obj[0] = tmp8(9565).AVError.STREAM_SEND_HIGH_PACKET_LOSS;
-            tmp8Result = tmp8(17418);
+            obj[0] = tmp8(9578).AVError.STREAM_SEND_HIGH_PACKET_LOSS;
+            tmp8Result = tmp8(17654);
             const merged = Object.assign(
               tmp8Result.getStreamErrorContext(tmp8(4544).encodeStreamKey(currentUserActiveStream)),
             );

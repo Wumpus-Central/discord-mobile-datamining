@@ -1,6 +1,6 @@
 // discord_app/modules/premium/promotions/MarketingComponentRecord.tsx
 import setDefault from "../../../utils/Durations.tsx";
-import MurmurHashV3Default from "../../../../_runtime/01217_MurmurHashV3.js";
+import MurmurHashV3Default from "../../../../_runtime/01214_MurmurHashV3.js";
 import toJSDefault from "../../../lib/Record.tsx";
 
 const require = arg1;
@@ -53,9 +53,9 @@ MarketingComponentRecord["createFromServer"] = function createFromServer(start_d
     endDate = null;
   }
   ({ id, component_type } = start_date);
-  const PremiumMarketingComponentProperties = textDecoder(8451).PremiumMarketingComponentProperties;
+  const PremiumMarketingComponentProperties = textDecoder(8460).PremiumMarketingComponentProperties;
   const fromBinary = PremiumMarketingComponentProperties.fromBinary;
-  const obj2 = textDecoder(1307);
+  const obj2 = textDecoder(1306);
   function readerFactory(buf) {
     const binaryReader = new textDecoder(closure_1_2[2]).BinaryReader(buf, textDecoder);
     return binaryReader;

@@ -1,6 +1,6 @@
 // discord_app/modules/app_launcher/native/base_components/AppLauncherBackButton.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
-import createStandardNavigationFactories from "../../../../../_runtime/01500_createStandardNavigationFactories.js";
+import createStandardNavigationFactories from "../../../../../_runtime/01499_createStandardNavigationFactories.js";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
@@ -17,18 +17,18 @@ export default function AppLauncherBackButton(onPress) {
   obj = {
     size: "sm",
     variant: "secondary-overlay",
-    icon: importDefault(canGoBackResult ? 5500 : 5552),
+    icon: importDefault(canGoBackResult ? 5508 : 5560),
     onPress: onPress.onPress,
     accessibilityLabel: null,
     maxFontSizeMultiplier: 1.5,
   };
-  const intl = tmp(1236).intl;
-  const t = tmp(1236).t;
+  const intl = tmp(1233).intl;
+  const t = tmp(1233).t;
   obj[4] = intl.string(canGoBackResult ? t["13/7kX"] : t.cpT0Cq);
   return jsx(IconButton.IconButton, {
     size: "sm",
     variant: "secondary-overlay",
-    icon: importDefault(canGoBackResult ? 5500 : 5552),
+    icon: importDefault(canGoBackResult ? 5508 : 5560),
     onPress: onPress.onPress,
     accessibilityLabel: null,
     maxFontSizeMultiplier: 1.5,

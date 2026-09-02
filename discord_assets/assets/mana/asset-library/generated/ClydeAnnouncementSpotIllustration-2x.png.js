@@ -5,5 +5,5 @@ const result = set.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/ClydeAnnouncementSpotIllustration-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/2a8708f60c1a4c811be77cb7fb1af9651422292c97715d86732c95cd2887cc58.png";
-export const metadata = { fileBytes: 18358 };
+export default "https://cdn.discordapp.com/assets/content/d31dc498c905226923d74aa5b1fd85d8f74f63939ed5b7d2d895790b3914f92f.png";
+export const metadata = { fileBytes: 18356 };

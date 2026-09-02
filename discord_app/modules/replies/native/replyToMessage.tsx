@@ -44,7 +44,7 @@ export default function longPressMessageHandleReply(arg0) {
       if (null != pendingReply) {
         if (pendingReply.message.id === message.id) {
           const currentUser1 = authStore.getCurrentUser();
-          let tmp3Result = tmp3(698);
+          let tmp3Result = tmp3(695);
           obj = {
             message_id: null,
             channel_id: null,
@@ -82,7 +82,7 @@ export default function longPressMessageHandleReply(arg0) {
       }
     }
   }
-  tmp3Result = tmp3(698);
+  tmp3Result = tmp3(695);
   const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(channel.guild_id));
   obj1 = { source: actionSource };
   const obj4 = collectGuildAnalyticsMetadata;

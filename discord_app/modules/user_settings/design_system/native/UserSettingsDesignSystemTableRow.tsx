@@ -15,10 +15,10 @@ import TableCheckboxRow from "../../../../design/components/TableRow/native/Tabl
 import context from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
 import TableRadioRow from "../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
 import RowButtonWrapper from "../../../../design/components/TableRow/native/RowButton.native.tsx";
-import registerAssetDefault from "../../../../../_runtime/13752_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/13753_registerAsset.js";
-import registerAssetDefault3 from "../../../../../_runtime/13754_registerAsset.js";
-import registerAssetDefault4 from "../../../../../_runtime/13755_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/13975_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/13976_registerAsset.js";
+import registerAssetDefault3 from "../../../../../_runtime/13977_registerAsset.js";
+import registerAssetDefault4 from "../../../../../_runtime/13978_registerAsset.js";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";

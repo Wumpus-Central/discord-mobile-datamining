@@ -91,9 +91,9 @@ export default function AgeVerificationModal(webviewUrl) {
         headerTitle: c4,
         headerLeft() {
           const obj = { onPress: handleClose, text: null };
-          const intl = callback(1236).intl;
-          obj[1] = intl.string(callback(1236).t.cpT0Cq);
-          return closure_1_5(callback(6237).HeaderActionButton, obj);
+          const intl = callback(1233).intl;
+          obj[1] = intl.string(callback(1233).t.cpT0Cq);
+          return closure_1_5(callback(6246).HeaderActionButton, obj);
         },
         render() {
           return closure_1_5(closure_1_7, { webviewUrl: closure_0, onComplete: closure_1, onClose: handleClose });

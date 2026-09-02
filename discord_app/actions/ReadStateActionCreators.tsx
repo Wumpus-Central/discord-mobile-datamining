@@ -86,7 +86,7 @@ export const ackChannel = function ackChannel(channel, arg1) {
     if (channel.isForumLikeChannel()) {
       let tmpResult = tmp(11);
       const _Date = Date;
-      tmpResult = tmp(709);
+      tmpResult = tmp(706);
       let obj = {
         type: "CHANNEL_ACK",
         channelId: null,
@@ -109,18 +109,18 @@ export const ackChannel = function ackChannel(channel, arg1) {
         type: "CHANNEL_ACK",
         channelId: null,
         messageId: "y",
-        immediate: "has",
-        force: null,
-        context: "\u{1F60E}",
-        location: 6,
+        immediate: "column",
+        force: "hidden",
+        context: "BULK_ACK",
+        location: null,
       };
       obj[1] = id;
       obj[3] = true;
       obj[4] = true;
       obj[5] = CURRENT_APP_CONTEXT;
       obj[6] = arg1;
-      tmp(709).dispatch(obj);
-      const tmpResult1 = tmp(709);
+      tmp(706).dispatch(obj);
+      const tmpResult1 = tmp(706);
     }
   }
 };

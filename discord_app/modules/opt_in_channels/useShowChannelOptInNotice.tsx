@@ -16,7 +16,7 @@ export default function useShowChannelOptInNotice(getGuildId) {
   let optInEnabledForGuild = require("isOptInEnabled.tsx").useOptInEnabledForGuild(
     null != guildId ? getGuildId.guild_id : NULL_STRING_GUILD_ID,
   );
-  let tmpResult = tmp(589);
+  let tmpResult = tmp(586);
   const items = [closure_2];
   const stateFromStores = tmpResult.useStateFromStores(items, () => {
     let result = null != closure_0;
@@ -25,7 +25,7 @@ export default function useShowChannelOptInNotice(getGuildId) {
     }
     return result;
   });
-  tmpResult = tmp(6069);
+  tmpResult = tmp(6077);
   let guild_id;
   if (getGuildId != null) {
     guild_id = getGuildId.guild_id;

@@ -98,7 +98,7 @@ function _handleInviteUsers() {
               closure_3 = undefined;
               c5 = 1;
               c6 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else {
             if (1 === tmp5) {
@@ -208,14 +208,14 @@ function _handleInviteUsers() {
                                   obj[0] = arg1;
                                   return obj;
                                 } else {
-                                  const tmp8 = v0(9871);
+                                  const tmp8 = v0(9893);
                                   const call = tmp8.call;
                                   if (typeof call === "unknown") {
                                     tmp8(false, true);
                                   } else {
                                     call(tmp9, false, true);
                                   }
-                                  v0(12465)(closure_3);
+                                  v0(12689)(closure_3);
                                   dependencyMap = 3;
                                   tmp9 = closure_3;
                                 }
@@ -293,7 +293,7 @@ function _handleInviteUsers() {
                   throw arg1;
                 } else if (arg0 !== 2) {
                   closure_3 = arg1;
-                  obj = arr(9871);
+                  obj = arr(9893);
                   obj.ring(closure_3, arr, "gdm_invite");
                 }
                 c6 = 3;

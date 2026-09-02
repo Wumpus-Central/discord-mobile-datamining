@@ -30,11 +30,11 @@ export default function ExpressionPickerActionSheet(arg0) {
   const diff = height - NAV_BAR_HEIGHT.NAV_BAR_HEIGHT_MULTILINE - useSafeAreaInsetsDefault().top;
   let tmp15Result = null;
   if (undefined !== stateFromStores) {
-    let isIOSResult = tmp2(500).isIOS();
+    let isIOSResult = tmp2(1234).isIOS();
     if (isIOSResult) {
       obj = { animatedSheetIndex: null, followSystemKeyboard: true };
       obj[0] = sharedValue;
-      isIOSResult = callback(tmp7(9124), obj);
+      isIOSResult = callback(tmp7(9138), obj);
     }
     obj = { children: null };
     const items1 = [isIOSResult];
@@ -91,13 +91,13 @@ export default function ExpressionPickerActionSheet(arg0) {
     obj2[9] = initialGifQuery;
     obj2[10] = STICKER_FORMATS;
     obj2[11] = diff;
-    obj1[5] = callback(tmp7(10352), obj2);
-    items1[1] = callback(tmp2(5622).BottomSheet, obj1);
+    obj1[5] = callback(tmp7(10374), obj2);
+    items1[1] = callback(tmp2(5630).BottomSheet, obj1);
     obj[0] = items1;
     tmp15Result = closure_9(closure_8, obj);
     const tmp15 = closure_9;
     const tmp16 = closure_8;
-    const tmp2Result = tmp2(500);
+    const tmp2Result = tmp2(1234);
   }
   return tmp15Result;
 }

@@ -4,7 +4,7 @@ import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import { ActivityIndicator } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { DebugLogCategory } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import keys from "../../../../../_runtime/00644_keys.js";
+import keys from "../../../../../_runtime/00641_keys.js";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
@@ -72,8 +72,8 @@ function _handleUploadDebugLogSettingPress() {
             obj1 = callback2(4194);
             obj1 = { key: "USER_SETTINGS_CACHES_CLEARED", IconComponent: null, content: null };
             obj1[1] = callback(4433).CircleInformationIcon;
-            const intl = callback(1236).intl;
-            obj1[2] = intl.string(callback(1236).t.VzHcSm);
+            const intl = callback(1233).intl;
+            obj1[2] = intl.string(callback(1233).t.VzHcSm);
             obj1.open(obj1);
             c3 = 0;
             (function onUploadDebugLogsRequestFinish() {
@@ -90,8 +90,8 @@ function _handleUploadDebugLogSettingPress() {
           } else if (arg0 !== 2) {
             const obj2 = { key: "USER_SETTINGS_CACHES_CLEARED", IconComponent: null, content: null };
             obj2[1] = callback(4433).CircleInformationIcon;
-            const intl2 = callback(1236).intl;
-            obj2[2] = intl2.string(callback(1236).t.BvyxE7);
+            const intl2 = callback(1233).intl;
+            obj2[2] = intl2.string(callback(1233).t.BvyxE7);
             callback2(4194).open(obj2);
             c3 = 1;
             const obj6 = callback2(4194);

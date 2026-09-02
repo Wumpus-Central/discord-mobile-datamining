@@ -1,7 +1,7 @@
 // discord_app/design/void/InputView/native/InputView.tsx
-import set from "../../../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
+import set from "../../../../utils/PlatformUtils.tsx";
 import Button from "../../native.tsx";
 import AccessibilityAnnouncer from "../../../shared.tsx";
 import Text from "../../../components/Text/native/Text.tsx";

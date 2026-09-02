@@ -12,9 +12,9 @@ function DurationSelectionActionSheet(onClose) {
   onClose = onClose.onClose;
   let obj = { children: null };
   obj = { title: null };
-  const intl = onClose(1236).intl;
-  obj[0] = intl.string(onClose(1236).t.vKYZzc);
-  const items = [callback2(onClose(5621).BottomSheetTitleHeader, obj)];
+  const intl = onClose(1233).intl;
+  obj[0] = intl.string(onClose(1233).t.vKYZzc);
+  const items = [callback2(onClose(5629).BottomSheetTitleHeader, obj)];
   obj = {
     hasIcons: false,
     children: getTimeframes().map((label) => {
@@ -32,9 +32,9 @@ function DurationSelectionActionSheet(onClose) {
       );
     }),
   };
-  items[1] = callback2(onClose(5991).ActionSheetRow.Group, obj);
+  items[1] = callback2(onClose(5999).ActionSheetRow.Group, obj);
   obj[0] = items;
-  return callback3(onClose(5989).ActionSheet, obj);
+  return callback3(onClose(5997).ActionSheet, obj);
 }
 ({
   resetGuildIncidentsActionSheetStore: c5,

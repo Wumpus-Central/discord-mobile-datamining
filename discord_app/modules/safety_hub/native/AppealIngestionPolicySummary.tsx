@@ -51,7 +51,7 @@ export default function AppealIngestionPolicySummary(classification) {
   obj = { style: tmp.policy, children: null };
   const tmp2Result = hexToRgba;
   obj = { style: tmp.sectionTitle, variant: "text-sm/bold", children: null };
-  const intl = tmp2(1236).intl;
+  const intl = tmp2(1233).intl;
   obj[2] = intl.string(getSystemLocale.t.xsdcxh);
   const items = [callback(Text.Text, obj)];
   const hexWithOpacityResult = hexToRgba.hexWithOpacity(tmp.borderColor.color, 0.08);

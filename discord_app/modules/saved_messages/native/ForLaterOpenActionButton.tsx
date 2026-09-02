@@ -22,7 +22,7 @@ function BadgedIcon(arg0) {
   if (type === SavedMessageSortTypes.SavedMessageSortTypes.REMINDER) {
     let BookmarkIcon = tmp4(4441).ClockIcon;
   } else {
-    BookmarkIcon = tmp4(11290).BookmarkIcon;
+    BookmarkIcon = tmp4(11513).BookmarkIcon;
   }
   obj = { style: items, children: null };
   items = [tmp6.container, iconSizeStyles];

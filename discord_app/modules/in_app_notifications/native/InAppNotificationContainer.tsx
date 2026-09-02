@@ -1,12 +1,12 @@
 // discord_app/modules/in_app_notifications/native/InAppNotificationContainer.tsx
-import _modDef10189 from "MessageNotification.tsx";
-import _modDef10264 from "MessageFailedToSendNotification.tsx";
+import _modDef10211 from "MessageNotification.tsx";
+import _modDef10286 from "MessageFailedToSendNotification.tsx";
 import ForumThreadCreatedNotificationDefault from "ForumThreadCreatedNotification.tsx";
 import BugReporterNotification from "../../bug_reporter/native/BugReporterNotification.tsx";
 import AlertNotificationDefault from "AlertNotification.tsx";
 import ReactionNotificationBodyDefault from "ReactionNotification.tsx";
 import NotificationAvatarDefault from "ReminderNotification.tsx";
-import _modDef10956 from "RestrictedHoursWarningNotification.tsx";
+import _modDef11176 from "RestrictedHoursWarningNotification.tsx";
 import MessageRequestInAppNotificationDefault from "MessageRequestNotification.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
@@ -25,11 +25,11 @@ function NotificationWrapper(notification) {
   if (constants.MESSAGE === type) {
     obj = { notification: null };
     obj[0] = notification;
-    return jsx(_modDef10189, { notification: null });
+    return jsx(_modDef10211, { notification: null });
   } else if (tmp.MESSAGE_FAILED_TO_SEND === type) {
     obj = { notification: null };
     obj[0] = notification;
-    return jsx(_modDef10264, { notification: null });
+    return jsx(_modDef10286, { notification: null });
   } else if (tmp.FORUM_THREAD_CREATED === type) {
     obj1 = { notification: null };
     obj1[0] = notification;
@@ -64,7 +64,7 @@ function NotificationWrapper(notification) {
     }
     const obj6 = { notification: null };
     obj6[0] = notification;
-    return jsx(_modDef10956, { notification: null });
+    return jsx(_modDef11176, { notification: null });
   }
 }
 ({

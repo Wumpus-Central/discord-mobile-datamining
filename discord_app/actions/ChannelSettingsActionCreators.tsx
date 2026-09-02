@@ -73,6 +73,7 @@ function updateChannel(arg0) {
     defaultTagSetting,
     iconEmoji,
     themeColor,
+    applicationId,
   } = arg0);
   dispatcherDefault.dispatch({
     type: "CHANNEL_SETTINGS_UPDATE",
@@ -99,6 +100,7 @@ function updateChannel(arg0) {
     defaultTagSetting,
     iconEmoji,
     themeColor,
+    applicationId,
   });
 }
 function saveChannel(id, arg1) {
@@ -172,6 +174,7 @@ function _saveChannel() {
               c23 = undefined;
               let user;
               c25 = undefined;
+              c26 = undefined;
               ({
                 name: c1,
                 type: c2,
@@ -198,11 +201,12 @@ function _saveChannel() {
                 defaultTagSetting: c23,
                 iconEmoji: c24,
                 themeColor: c25,
+                applicationId: c26,
               } = c1);
               let channel2;
               c4 = 1;
               channel = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -232,7 +236,7 @@ function _saveChannel() {
             obj3[0] = arg1;
             return obj3;
           } else {
-            let HTTP = callback(530).HTTP;
+            let HTTP = callback(527).HTTP;
             let then = HTTP.patch;
             let obj4 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
             obj4[0] = c6.CHANNEL(callback);
@@ -262,6 +266,7 @@ function _saveChannel() {
               default_tag_setting: null,
               icon_emoji: null,
               theme_color: null,
+              application_id: null,
             };
             obj5[0] = c1;
             obj5[1] = dependencyMap;
@@ -322,8 +327,9 @@ function _saveChannel() {
             }
             obj5[23] = tmp22;
             obj5[24] = c25;
+            obj5[25] = c26;
             obj4[1] = obj5;
-            obj5 = callback(530);
+            obj5 = callback(527);
             obj4[3] = obj5.rejectWithMigratedError();
             HTTP = then(obj4);
             then = HTTP.then;
@@ -333,17 +339,17 @@ function _saveChannel() {
                 obj = { type: "CHANNEL_SETTINGS_SUBMIT_SUCCESS", channelId: closure_0 };
                 obj.dispatch(obj);
                 let guildId;
-                if (closure_26 != null) {
-                  guildId = closure_26.getGuildId();
+                if (closure_27 != null) {
+                  guildId = closure_27.getGuildId();
                 }
                 let tmp5 = null == guildId;
                 if (!tmp5) {
                   let isThreadResult;
-                  if (closure_26 != null) {
+                  if (closure_27 != null) {
                     isThreadResult = obj4.isThread();
                   }
                   tmp5 = isThreadResult;
-                  obj4 = closure_26;
+                  obj4 = closure_27;
                 }
                 if (!tmp5) {
                   const result = _undefined(_undefined2[8]).checkGuildTemplateDirty(guildId);
@@ -361,9 +367,9 @@ function _saveChannel() {
             channel = 3;
             arr = c20;
           }
-        } catch (tmp31) {
+        } catch (tmp32) {
           channel = tmp;
-          throw tmp31;
+          throw tmp32;
         }
       }
     })();

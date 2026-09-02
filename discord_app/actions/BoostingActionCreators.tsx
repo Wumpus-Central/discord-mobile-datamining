@@ -14,32 +14,98 @@ function _fetchAppliedGuildBoostsForGuild() {
     c4 = 0;
     c5 = 0;
     const iter = (function* (arg0, body) {
-      dependencyMap = tmp2;
-      obj1 = flag;
-      if (flag === undefined) {
-        obj1 = {};
+      if (c5 === 2) {
+        c5 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw body;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = body;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c5 = 2;
+          if (0 === c4) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw body;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              obj = { value: null, done: true };
+              obj[0] = body;
+              return obj;
+            } else {
+              closure_3 = tmp5;
+              dependencyMap = tmp2;
+              let flag;
+              obj1 = flag;
+              if (flag === undefined) {
+                obj1 = {};
+              }
+              flag = obj1.includeEnded;
+              if (flag === undefined) {
+                flag = false;
+              }
+              dependencyMap = undefined;
+              c4 = 1;
+              c5 = 1;
+              return { value: "PX_16", done: true };
+            }
+          } else if (1 === tmp5) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw body;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              const obj2 = { value: null, done: true };
+              obj2[0] = body;
+              return obj2;
+            } else {
+              let obj4;
+              const HTTP = callback(527).HTTP;
+              const obj3 = { url: null, oldFormErrors: true, query: null, rejectWithError: true };
+              obj3[0] = closure_7.APPLIED_GUILD_BOOSTS_FOR_GUILD(callback);
+              if (flag) {
+                obj4 = { include_ended: true };
+              }
+              obj3[2] = obj4;
+              c4 = 2;
+              c5 = 1;
+              const obj5 = { value: null, done: false };
+              obj5[0] = HTTP.get(obj3);
+              return obj5;
+            }
+          } else if (arg0 === 1) {
+            c5 = 3;
+            throw body;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj6 = { value: null, done: true };
+            obj6[0] = body;
+            return obj6;
+          } else {
+            body = body.body;
+            dependencyMap = body.map((arg0) => c4.createFromServer(arg0));
+            obj = flag(706);
+            const obj7 = { type: "GUILD_APPLIED_BOOSTS_FETCH_SUCCESS", guildId: null, appliedBoosts: null };
+            obj7[1] = callback;
+            obj7[2] = dependencyMap;
+            obj.dispatch(obj7);
+            c5 = 3;
+            const obj8 = { value: null, done: true };
+            obj8[0] = dependencyMap;
+            return obj8;
+          }
+        } catch (tmp14) {
+          c5 = tmp;
+          throw tmp14;
+        }
       }
-      flag = obj1.includeEnded;
-      if (flag === undefined) {
-        flag = false;
-      }
-      yield "PX_16";
-      const HTTP = callback(530).HTTP;
-      const obj3 = { url: null, oldFormErrors: true, query: null, rejectWithError: true };
-      obj3[0] = closure_7.APPLIED_GUILD_BOOSTS_FOR_GUILD(callback);
-      if (flag) {
-        const obj4 = { include_ended: true };
-      }
-      obj3[2] = obj4;
-      yield HTTP.get(obj3);
-      body = body.body;
-      dependencyMap = body.map((arg0) => c4.createFromServer(arg0));
-      const obj = flag(709);
-      const obj7 = { type: "GUILD_APPLIED_BOOSTS_FETCH_SUCCESS", guildId: null, appliedBoosts: null };
-      obj7[1] = callback;
-      obj7[2] = dependencyMap;
-      obj.dispatch(obj7);
-      return dependencyMap;
     })();
     iter.next();
     return iter;
@@ -60,25 +126,90 @@ function _fetchAppliedGuildBoostsForUser() {
     c3 = 0;
     c4 = 0;
     const iter = (function* (arg0, body) {
-      let callback = tmp2;
-      if (flag === undefined) {
-        flag = false;
+      if (c4 === 2) {
+        c4 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw body;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = body;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c4 = 2;
+          if (0 === c3) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw body;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj = { value: null, done: true };
+              obj[0] = body;
+              return obj;
+            } else {
+              dependencyMap = tmp5;
+              let callback = tmp2;
+              let flag;
+              if (flag === undefined) {
+                flag = false;
+              }
+              callback = undefined;
+              c3 = 1;
+              c4 = 1;
+              return { value: "PX_16", done: true };
+            }
+          } else if (1 === tmp5) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw body;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj1 = { value: null, done: true };
+              obj1[0] = body;
+              return obj1;
+            } else {
+              const HTTP = flag(527).HTTP;
+              const obj2 = { url: null, oldFormErrors: true, query: null, rejectWithError: true };
+              obj2[0] = constants.USER_APPLIED_GUILD_BOOSTS;
+              const obj3 = { paused: null };
+              obj3[0] = flag;
+              obj2[2] = obj3;
+              c3 = 2;
+              c4 = 1;
+              const obj4 = { value: null, done: false };
+              obj4[0] = HTTP.get(obj2);
+              return obj4;
+            }
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw body;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj5 = { value: null, done: true };
+            obj5[0] = body;
+            return obj5;
+          } else {
+            body = body.body;
+            callback = body.map((arg0) => c4.createFromServer(arg0));
+            obj = callback(706);
+            const obj6 = { type: "USER_APPLIED_BOOSTS_FETCH_SUCCESS", appliedGuildBoosts: null };
+            obj6[1] = callback;
+            obj.dispatch(obj6);
+            c4 = 3;
+            const obj7 = { value: null, done: true };
+            obj7[0] = callback;
+            return obj7;
+          }
+        } catch (tmp18) {
+          c4 = tmp;
+          throw tmp18;
+        }
       }
-      yield "PX_16";
-      const HTTP = flag(530).HTTP;
-      const obj2 = { url: null, oldFormErrors: true, query: null, rejectWithError: true };
-      obj2[0] = constants.USER_APPLIED_GUILD_BOOSTS;
-      const obj3 = { paused: null };
-      obj3[0] = flag;
-      obj2[2] = obj3;
-      yield HTTP.get(obj2);
-      body = body.body;
-      callback = body.map((arg0) => c4.createFromServer(arg0));
-      const obj = callback(709);
-      const obj6 = { type: "USER_APPLIED_BOOSTS_FETCH_SUCCESS", appliedGuildBoosts: null };
-      obj6[1] = callback;
-      obj.dispatch(obj6);
-      return callback;
     })();
     iter.next();
     return iter;
@@ -107,12 +238,12 @@ function _fetchGuildBoostSlots() {
   const tmp = callback(function* () {
     const callback = tmp2;
     closure_0 = tmp5;
-    closure_1_1(709).dispatch({ type: "GUILD_BOOST_SLOTS_FETCH" });
-    const HTTP = closure_1_0(530).HTTP;
+    closure_1_1(706).dispatch({ type: "GUILD_BOOST_SLOTS_FETCH" });
+    const HTTP = closure_1_0(527).HTTP;
     obj1 = { url: null, oldFormErrors: true, rejectWithError: null };
     obj1[0] = closure_1_7.USER_GUILD_BOOST_SLOTS;
-    const obj8 = closure_1_1(709);
-    obj1[2] = closure_1_0(530).rejectWithMigratedError();
+    const obj8 = closure_1_1(706);
+    obj1[2] = closure_1_0(527).rejectWithMigratedError();
     yield HTTP.get(obj1);
     const body = arg1.body;
     closure_0 = body.map((subscription_id) =>
@@ -121,7 +252,7 @@ function _fetchGuildBoostSlots() {
         subscriptionById.getSubscriptionById(subscription_id.subscription_id),
       ),
     );
-    const obj = callback(709);
+    const obj = callback(706);
     const obj4 = { type: "GUILD_BOOST_SLOTS_FETCH_SUCCESS", guildBoostSlots: null };
     obj4[1] = closure_0;
     obj.dispatch(obj4);
@@ -183,7 +314,7 @@ function _fetchAppliedBoostsCooldown() {
           c3 = 0;
           lib = dependencyMap;
           if (404 === lib.status) {
-            let obj4 = lib(709);
+            let obj4 = lib(706);
             obj4.dispatch({ type: "APPLIED_BOOSTS_COOLDOWN_FETCH_SUCCESS", endsAt: null });
             c5 = 3;
             return { value: null, done: true };
@@ -202,7 +333,7 @@ function _fetchAppliedBoostsCooldown() {
           return obj3;
         } else {
           ends_at = arg1.body.ends_at;
-          obj = lib(709);
+          obj = lib(706);
           obj4 = { type: "APPLIED_BOOSTS_COOLDOWN_FETCH_SUCCESS", endsAt: null };
           obj4[1] = ends_at;
           obj.dispatch(obj4);
@@ -279,7 +410,7 @@ function _applyToGuild() {
               let appliedGuildBoostError;
               c7 = 1;
               c8 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -423,7 +554,7 @@ function _unapplyFromGuild() {
             c5 = 0;
             dependencyMap = closure_4;
             appliedGuildBoostError = new callback(4376).AppliedGuildBoostError(dependencyMap);
-            let obj3 = appliedGuildBoostError(709);
+            let obj3 = appliedGuildBoostError(706);
             obj3 = { type: "GUILD_UNAPPLY_BOOST_FAIL", error: null };
             obj3[1] = appliedGuildBoostError;
             obj3.dispatch(obj3);
@@ -440,7 +571,7 @@ function _unapplyFromGuild() {
           } else {
             callback3();
             c5 = 0;
-            obj = appliedGuildBoostError(709);
+            obj = appliedGuildBoostError(706);
             const obj5 = { type: "GUILD_UNAPPLY_BOOST_SUCCESS", boostId: null };
             obj5[1] = callback;
             obj.dispatch(obj5);

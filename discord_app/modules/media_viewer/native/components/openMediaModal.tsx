@@ -64,7 +64,7 @@ function _openMediaModal() {
               let initVideoStateStore;
               v0 = 1;
               c4 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {

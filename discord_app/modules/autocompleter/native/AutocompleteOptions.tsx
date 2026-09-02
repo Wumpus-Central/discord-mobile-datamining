@@ -135,49 +135,80 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
   };
   items1 = [closure_5];
   obj = {
-    queryResults(arg0, channelTypes) {
-      if (channelTypes != null) {
-        channelTypes = channelTypes.channelTypes;
-      }
-      let prop;
-      if (channelTypes != null) {
-        prop = channelTypes.isActiveApplicationCommand;
-      }
-      let obj = flag(flag2[14]);
-      if (prop) {
-        obj = { query: null, channel: null, channelTypes: null };
-        obj[0] = arg0;
-        obj[1] = closure_0;
-        obj[2] = channelTypes;
-        let result = obj.queryApplicationCommandChannelResults(obj);
+    queryResults(str) {
+      const TimestampAutocompleteMobileExperiment = _private(flag2[17]).TimestampAutocompleteMobileExperiment;
+      const items = [];
+      if (TimestampAutocompleteMobileExperiment.getConfig({ location: "timestamps autocomplete" }).enabled) {
+        const result = tmp(tmp2[18]).queryTimestampSuggestions(str.trim());
+        const iter = result[Symbol.iterator]();
+        const nextResult = iter.next();
+        while (iter !== undefined) {
+          let tmp10 = nextResult;
+          if (null != nextResult.mention) {
+            let obj = { type: null, mention: null, description: null };
+            let tmp11 = constants;
+            obj[0] = constants.TIMESTAMP_MENTION;
+            let tmp12 = nextResult;
+            ({ mention: obj2[1], description: obj2[2] } = tmp10);
+            let arr = items.push(obj);
+          }
+          continue;
+        }
+        return items;
       } else {
-        obj = { query: null, channel: null };
-        obj[0] = arg0;
-        obj[1] = closure_0;
-        result = obj.queryChannelResults(obj);
+        return items;
       }
-      const channels = result.channels;
-      return channels.map((channel) => ({
-        type: constants.CHANNEL,
-        channel,
-        category: channel.getChannel(channel.parent_id),
-      }));
+      tmp = _private;
+      tmp2 = flag2;
     },
-    matches(arg0, arg1) {
-      const isPrivateResult = _private.isPrivate();
-      let matchSentinelResult = !isPrivateResult;
-      if (!isPrivateResult) {
-        matchSentinelResult = flag(flag2[14]).matchSentinel(arg0, arg1, closure_1_14);
-        const obj = flag(flag2[14]);
-      }
-      return matchSentinelResult;
+    matches() {
+      return false;
     },
   };
   let items2 = [closure_4, closure_3];
   return {
     [closure_16.MENTIONS]: obj,
     [closure_16.GAME_MENTIONS]: obj,
-    [closure_16.CHANNELS]: obj,
+    [closure_16.TIMESTAMPS]: obj,
+    [closure_16.CHANNELS]: {
+      queryResults(arg0, channelTypes) {
+        if (channelTypes != null) {
+          channelTypes = channelTypes.channelTypes;
+        }
+        let prop;
+        if (channelTypes != null) {
+          prop = channelTypes.isActiveApplicationCommand;
+        }
+        let obj = flag(flag2[14]);
+        if (prop) {
+          obj = { query: null, channel: null, channelTypes: null };
+          obj[0] = arg0;
+          obj[1] = closure_0;
+          obj[2] = channelTypes;
+          let result = obj.queryApplicationCommandChannelResults(obj);
+        } else {
+          obj = { query: null, channel: null };
+          obj[0] = arg0;
+          obj[1] = closure_0;
+          result = obj.queryChannelResults(obj);
+        }
+        const channels = result.channels;
+        return channels.map((channel) => ({
+          type: constants.CHANNEL,
+          channel,
+          category: channel.getChannel(channel.parent_id),
+        }));
+      },
+      matches(arg0, arg1) {
+        const isPrivateResult = _private.isPrivate();
+        let matchSentinelResult = !isPrivateResult;
+        if (!isPrivateResult) {
+          matchSentinelResult = flag(flag2[14]).matchSentinel(arg0, arg1, closure_1_14);
+          const obj = flag(flag2[14]);
+        }
+        return matchSentinelResult;
+      },
+    },
     [closure_16.EMOJIS_AND_STICKERS]: {
       queryResults(query, includeEmojiPremiumUpsell) {
         let num = 40;
@@ -208,11 +239,11 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
               }
               if (!hasLoadedStickerPacks) {
                 c20 = true;
-                const stickerPacks = _private(tmp3[17]).fetchStickerPacks();
-                const obj4 = _private(tmp3[17]);
+                const stickerPacks = _private(tmp3[19]).fetchStickerPacks();
+                const obj4 = _private(tmp3[19]);
               }
               const items2 = [query];
-              const items3 = [_private, (arg0, arg1) => arg1 === callback(6181).StickerSendability.SENDABLE];
+              const items3 = [_private, (arg0, arg1) => arg1 === callback(6190).StickerSendability.SENDABLE];
               items1 = flag(tmp3[14]).queryStickers(items2, true, items3);
               const tmp2Result = flag(tmp3[14]);
             }
@@ -234,8 +265,8 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
                     obj = { id: null, animated: null, size: null };
                     ({ id: obj3[0], animated: obj3[1] } = name);
                     obj[2] = closure_19;
-                    let url = callback2(1431).getEmojiURL(obj);
-                    const obj2 = callback2(1431);
+                    let url = callback2(1430).getEmojiURL(obj);
+                    const obj2 = callback2(1430);
                   } else {
                     url = name.url;
                   }
@@ -350,8 +381,8 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
               } else if (0 === autocompleteChoices.length) {
                 const obj3 = { type: null, label: null };
                 obj3[0] = closure_1_10.LABEL;
-                const intl = _private(flag2[20]).intl;
-                obj3[1] = intl.string(_private(flag2[20]).t["41014u"]);
+                const intl = _private(flag2[22]).intl;
+                obj3[1] = intl.string(_private(flag2[22]).t["41014u"]);
                 const items = [obj3];
                 fillResult = items;
               } else {

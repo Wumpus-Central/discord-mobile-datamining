@@ -19,7 +19,7 @@ function ApplicationStatusIcon(status) {
     obj = { size: "sm", color: null, secondaryColor: null };
     obj[1] = ThemesDefault.colors.ICON_FEEDBACK_CRITICAL;
     obj[2] = ThemesDefault.colors.WHITE;
-    return callback(tmp(6225).CircleXIcon, obj);
+    return callback(tmp(6234).CircleXIcon, obj);
   } else {
     return null;
   }
@@ -55,8 +55,8 @@ const memoResult = importAllResult.memo((arg0) => {
     obj = { children: null };
     obj = { variant: "text-sm/semibold", color: "text-subtle", style: null, children: null };
     obj[2] = tmp.label;
-    const intl = tmp2(1236).intl;
-    obj[3] = intl.string(tmp2(1236).t["hxa+G3"]);
+    const intl = tmp2(1233).intl;
+    obj[3] = intl.string(tmp2(1233).t["hxa+G3"]);
     let items = [callback(tmp2(4474).Text, obj)];
     obj1 = { style: null, children: null };
     obj1[0] = tmp.container;

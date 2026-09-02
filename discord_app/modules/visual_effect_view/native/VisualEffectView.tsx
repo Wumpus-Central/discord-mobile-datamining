@@ -43,9 +43,9 @@ export default importAllResult.forwardRef(function VisualEffectView(blurAmount) 
   }
   items[2] = tmp8;
   let tmp3Result = tmp3(4197);
-  const token2 = tmp3Result.useToken(tmp5(712).colors.LEGACY_ANDROID_BLUR_OVERLAY_DEFAULT, blurTheme);
+  const token2 = tmp3Result.useToken(tmp5(709).colors.LEGACY_ANDROID_BLUR_OVERLAY_DEFAULT, blurTheme);
   tmp3Result = tmp3(4197);
-  let token3 = tmp3Result.useToken(tmp5(712).colors.LEGACY_ANDROID_BLUR_OVERLAY_ULTRA_THIN, blurTheme);
+  let token3 = tmp3Result.useToken(tmp5(709).colors.LEGACY_ANDROID_BLUR_OVERLAY_ULTRA_THIN, blurTheme);
   if ("default" === blurStyle) {
     token3 = token2;
   }

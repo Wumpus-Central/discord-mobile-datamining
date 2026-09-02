@@ -1,7 +1,7 @@
 // discord_app/modules/autocompleter/UserSearchManager.tsx
 import set from "../../../_runtime/00002_set.js";
 import ME from "../../Constants.tsx";
-import _modDef1208 from "../../utils/SentryUtils.native.tsx";
+import _modDef1205 from "../../utils/SentryUtils.native.tsx";
 import createChannelRecord from "../../records/ChannelRecord.tsx";
 import hasFlagAll from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
@@ -938,7 +938,7 @@ prototype2["updateUsers"] = function updateUsers(arr) {
       if (null == id) {
         let tmp20 = importDefault;
         let tmp21 = dependencyMap;
-        let obj3 = _modDef1208;
+        let obj3 = _modDef1205;
         let obj = { action: null, userFields: null };
         obj[0] = arg1;
         obj = {
@@ -1035,7 +1035,7 @@ prototype2["getUserSearchContext"] = function getUserSearchContext(handleUserSea
       }
     };
     obj._worker = _worker;
-    obj._uuid = obj(514).v4();
+    obj._uuid = obj(511).v4();
     obj._callback = handleUserSearchResults;
     obj._limit = num;
     obj._currentQuery = null;

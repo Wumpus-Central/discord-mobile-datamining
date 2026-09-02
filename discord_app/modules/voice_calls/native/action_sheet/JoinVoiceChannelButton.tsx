@@ -13,20 +13,20 @@ let result = require("set").fileFinishedImporting("modules/voice_calls/native/ac
 export default function JoinVoiceChannelButton(channel) {
   channel = channel.channel;
   const tmp = callback();
-  let obj = channel(589);
+  let obj = channel(586);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => !closure_1_6.can(closure_1_7.CONNECT, channel));
-  const intl = channel(1236).intl;
-  let stringResult = intl.string(channel(1236).t.eIi3Om);
+  const intl = channel(1233).intl;
+  let stringResult = intl.string(channel(1233).t.eIi3Om);
   if (tmp3) {
-    const intl3 = tmp4(1236).intl;
-    stringResult = intl3.string(tmp4(1236).t.rZfiNq);
+    const intl3 = tmp4(1233).intl;
+    stringResult = intl3.string(tmp4(1233).t.rZfiNq);
     let flag = true;
   } else {
     flag = false;
     if (stateFromStores) {
-      const intl2 = tmp4(1236).intl;
-      stringResult = intl2.string(tmp4(1236).t.TVBCKZ);
+      const intl2 = tmp4(1233).intl;
+      stringResult = intl2.string(tmp4(1233).t.TVBCKZ);
       flag = true;
     }
   }

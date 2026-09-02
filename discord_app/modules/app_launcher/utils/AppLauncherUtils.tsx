@@ -1,6 +1,6 @@
 // discord_app/modules/app_launcher/utils/AppLauncherUtils.tsx
-import set from "../../../utils/PlatformUtils.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
 import PermissionOverwriteType from "../../../flow/Server.tsx";
 import buildCommand from "../../application_commands/ApplicationCommandUtils.tsx";

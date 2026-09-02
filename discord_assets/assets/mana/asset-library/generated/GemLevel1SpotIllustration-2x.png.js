@@ -5,5 +5,5 @@ const result = set.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/GemLevel1SpotIllustration-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/770c8fc587374c856494850b57eb02e4c2c1519c5b7d2e05585b8beebf4667c8.png";
-export const metadata = { fileBytes: 14686 };
+export default "https://cdn.discordapp.com/assets/content/9f361157e2b366d8d267dedb43e9e0d0c03368fd072bc588151d023094d33d07.png";
+export const metadata = { fileBytes: 17344 };

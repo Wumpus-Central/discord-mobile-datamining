@@ -9,7 +9,7 @@ let result = require("set").fileFinishedImporting("modules/rtc/hooks/useIsSecure
 export const useIsSecureFramesKeyInconsistent = function useIsSecureFramesKeyInconsistent(userId) {
   userId = userId.userId;
   const items = [closure_3, closure_4];
-  return userId(589).useStateFromStores(items, () => {
+  return userId(586).useStateFromStores(items, () => {
     const items = [onAlertOpen, stateFromStores];
     return userId(userId[4]).getIsSecureFramesKeyInconsistent(userId, items);
   });

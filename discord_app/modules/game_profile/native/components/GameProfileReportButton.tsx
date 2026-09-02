@@ -24,8 +24,8 @@ export default function GameProfileReportButton(applicationId) {
     );
   }, items);
   let obj = { variant: "secondary", size: "md", text: null, onPress: null };
-  const intl = applicationId(1236).intl;
-  obj[2] = intl.string(applicationId(1236).t.qP2cXd);
+  const intl = applicationId(1233).intl;
+  obj[2] = intl.string(applicationId(1233).t.qP2cXd);
   obj[3] = callback;
   return jsx(applicationId(4928).Button, { variant: "secondary", size: "md", text: null, onPress: null });
 }

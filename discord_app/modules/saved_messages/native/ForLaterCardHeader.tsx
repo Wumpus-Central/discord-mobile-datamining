@@ -12,13 +12,13 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 function HeaderIcon(channel) {
   channel = channel.channel;
-  let obj = channel(589);
+  let obj = channel(586);
   const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getGuild(channel.guild_id));
   if (null != stateFromStores) {
     obj = { guild: null, size: null };
     obj[0] = stateFromStores;
-    obj[1] = tmp2(6004).GuildIconSizes.XSMALL;
+    obj[1] = tmp2(6012).GuildIconSizes.XSMALL;
     let tmp6Result = callback(GuildIconSizesDefault, obj);
     const tmp13 = GuildIconSizesDefault;
   } else {
@@ -29,13 +29,13 @@ function HeaderIcon(channel) {
     if (isGroupDMResult) {
       obj = { channel: null, size: null };
       obj[0] = channel;
-      obj[1] = tmp2(1297).AvatarSizes.XSMALL;
+      obj[1] = tmp2(1296).AvatarSizes.XSMALL;
       tmp6Result = tmp6(FacepileGroupDMAvatarDefault, obj);
       const tmp10 = FacepileGroupDMAvatarDefault;
     } else {
       obj1 = { style: null, children: null };
       obj1[0] = tmp.dmIcon;
-      obj1[1] = tmp6(tmp2(5020).ChatIcon, { size: "xxs" });
+      obj1[1] = tmp6(tmp2(5024).ChatIcon, { size: "xxs" });
       tmp6Result = tmp6(View, obj1);
     }
   }
@@ -44,7 +44,7 @@ function HeaderIcon(channel) {
 function ChannelName(channel) {
   channel = channel.channel;
   const tmp = callback2();
-  let obj = channel(589);
+  let obj = channel(586);
   const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getGuild(channel.guild_id));
   const tmp5 = computeChannelNameDefault(channel, false);
@@ -56,10 +56,10 @@ function ChannelName(channel) {
   }
   let formatToPlainStringResult = tmp5;
   if (channel.isDM()) {
-    const intl = tmp2(1236).intl;
+    const intl = tmp2(1233).intl;
     obj = { username: null };
     obj[0] = tmp5;
-    formatToPlainStringResult = intl.formatToPlainString(tmp2(1236).t.smD7XV, obj);
+    formatToPlainStringResult = intl.formatToPlainString(tmp2(1233).t.smD7XV, obj);
   }
   obj = { style: tmp.channelNameContainer, children: null };
   let tmp12 = null;

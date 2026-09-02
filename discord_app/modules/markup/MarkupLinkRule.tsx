@@ -1,5 +1,5 @@
 // discord_app/modules/markup/MarkupLinkRule.tsx
-import privDefault from "../../../_runtime/01401_priv.js";
+import privDefault from "../../../_runtime/01400_priv.js";
 import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
 import tDefault from "../../../_runtime/04192_t.js";
 import getPathsFromURL from "../coded_links/findCodedLinks.tsx";
@@ -103,7 +103,7 @@ function getRawText(content) {
                         if (tmp3(4949).AST_KEY.LIST !== type) {
                           if (tmp3(4949).AST_KEY.HEADING !== type) {
                             if (tmp3(4949).AST_KEY.SUBTEXT !== type) {
-                              let tmp3Result = tmp3(1471);
+                              let tmp3Result = tmp3(1470);
                               let tmp5 = nextResult;
                               let assertNeverResult = tmp3Result.assertNever(tmp2.type);
                             }
@@ -166,8 +166,8 @@ function isSuspiciousUrl(url) {
         if (!tmp7) {
           let tmp8 = "" !== parts[1];
           if (!tmp8) {
-            tmp8 = tmp9(1486).safeDecodeURIComponent(parts[2]) !== parts[2];
-            const tmp9Result = tmp9(1486);
+            tmp8 = tmp9(1485).safeDecodeURIComponent(parts[2]) !== parts[2];
+            const tmp9Result = tmp9(1485);
           }
           tmp7 = tmp8;
         }

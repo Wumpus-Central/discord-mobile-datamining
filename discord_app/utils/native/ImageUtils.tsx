@@ -2,7 +2,7 @@
 import getAvatarURL from "../AvatarUtils.tsx";
 import ensureAvatarSource from "AvatarUtils.tsx";
 import items2 from "../../modules/image_upload/AttachmentImageLadder.tsx";
-import parseDefault from "../../../_runtime/01483_parse.js";
+import parseDefault from "../../../_runtime/01482_parse.js";
 import useWindowDimensions from "../../modules/screen/useWindowDimensions.native.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
@@ -59,7 +59,7 @@ function getSrcWithWidthAndHeight(animated) {
       obj[2] = sourceWidth;
       obj[3] = sourceHeight;
       const obj2 = items2;
-      obj[4] = items2.getSnapDownMaxUpscale(tmp9, tmp2(1895)());
+      obj[4] = items2.getSnapDownMaxUpscale(tmp9, tmp2(1894)());
       size = obj2.snapAttachmentDimensions(obj);
       const obj4 = items2;
     }
@@ -75,7 +75,7 @@ function getSrcWithWidthAndHeight(animated) {
   let tmp2Result = tmp2(12);
   let text = tmp5;
   if (!tmp2Result.isEmpty(tmp6)) {
-    tmp2Result = tmp2(1483);
+    tmp2Result = tmp2(1482);
     text = `${tmp5}?${obj6.stringify(tmp6)}`;
   }
   return text;

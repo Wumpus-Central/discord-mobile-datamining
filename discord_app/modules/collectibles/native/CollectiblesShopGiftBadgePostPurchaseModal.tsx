@@ -52,11 +52,11 @@ export default function CollectiblesShopGiftBadgePostPurchaseModal(currentProgre
     arr = arr.pop();
   }, []);
   const callback1 = React.useCallback(() => {
-    let obj = callback(7286);
+    let obj = callback(7295);
     obj = { analyticsLocations: null, analyticsSource: null };
-    const items = [callback2(5973).GIFTING_BADGE_POST_PURCHASE];
+    const items = [callback2(5981).GIFTING_BADGE_POST_PURCHASE];
     obj[0] = items;
-    obj[1] = callback2(5973).GIFTING_BADGE_POST_PURCHASE;
+    obj[1] = callback2(5981).GIFTING_BADGE_POST_PURCHASE;
     const result = obj.openCollectiblesShopMobile(obj);
   }, []);
   let obj = { children: null };

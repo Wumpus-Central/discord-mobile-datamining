@@ -16,7 +16,7 @@ export const setHubProgressActionComplete = function setHubProgressActionComplet
     }
     if (hasItem) {
       const items = [JOIN_GUILD];
-      const result = items(1370).updateUserGuildSettings(
+      const result = items(1369).updateUserGuildSettings(
         guildId,
         (hubProgress) => {
           let flag = false;
@@ -35,9 +35,9 @@ export const setHubProgressActionComplete = function setHubProgressActionComplet
           }
           return flag;
         },
-        items(1370).UserSettingsDelay.INFREQUENT_USER_ACTION,
+        items(1369).UserSettingsDelay.INFREQUENT_USER_ACTION,
       );
-      const obj = items(1370);
+      const obj = items(1369);
     }
   }
 };

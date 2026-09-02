@@ -50,9 +50,9 @@ function NameplateUser(arg0) {
       guildId: "a",
       size: true,
       avatarDecoration: true,
-      animate: "text-sm/normal",
-      autoStatusCutout: "text-subtle",
-      "aria-hidden": null,
+      animate: "year",
+      autoStatusCutout: "week",
+      "aria-hidden": "hour",
     };
     obj[2] = currentUser(stateFromStores[19]).AvatarSizes.NORMAL;
     obj[3] = closure_1;
@@ -131,10 +131,10 @@ export default function NameplateProductPreview(product) {
       children: null,
     };
     obj[0] = tmp.container;
-    const intl = tmp2(1236).intl;
+    const intl = tmp2(1233).intl;
     obj = { a11y_text: null };
     obj[0] = nameplateData.imgAlt;
-    obj[2] = intl.formatToPlainString(tmp2(1236).t.YJig7C, obj);
+    obj[2] = intl.formatToPlainString(tmp2(1233).t.YJig7C, obj);
     obj1 = { style: null, children: null };
     obj1[0] = tmp.memberListContainer;
     obj2 = { user: null, end: true };
@@ -149,8 +149,8 @@ export default function NameplateProductPreview(product) {
       children: null,
     };
     obj3[4] = tmp.memberListTitle;
-    const intl2 = tmp2(1236).intl;
-    const items1 = [intl2.string(tmp2(1236).t["yzW/fZ"]), " \u2014 3"];
+    const intl2 = tmp2(1233).intl;
+    const items1 = [intl2.string(tmp2(1233).t["yzW/fZ"]), " \u2014 3"];
     obj3[5] = items1;
     items[1] = callback2(tmp2(4474).Text, obj3);
     const obj4 = { user: null, start: true };
@@ -172,8 +172,8 @@ export default function NameplateProductPreview(product) {
       children: null,
     };
     obj7[4] = tmp.memberListTitle;
-    const intl3 = tmp2(1236).intl;
-    const items2 = [intl3.string(tmp2(1236).t["NG43/6"]), " \u2014 12"];
+    const intl3 = tmp2(1233).intl;
+    const items2 = [intl3.string(tmp2(1233).t["NG43/6"]), " \u2014 12"];
     obj7[5] = items2;
     items[5] = callback2(tmp2(4474).Text, obj7);
     const obj8 = { user: null, start: true };

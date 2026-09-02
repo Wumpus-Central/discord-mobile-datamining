@@ -219,10 +219,10 @@ export const useShouldChannelShowLoadingIndicator = function useShouldChannelSho
 };
 export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndicator() {
   const tmp = callback4();
-  let obj = stateFromStores(589);
+  let obj = stateFromStores(586);
   let items = [closure_6];
   stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  obj1 = stateFromStores(589);
+  obj1 = stateFromStores(586);
   const items1 = [closure_10];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => {
     currentUser = currentUser.getCurrentUser();
@@ -285,8 +285,8 @@ export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndica
   const items2 = [tmp.pulse, animatedStyle];
   const items3 = [callback2(_modDef4217.View, { style: items2 })];
   obj1 = { variant: "text-xs/medium", color: "text-muted", children: null };
-  const intl = stateFromStores(1236).intl;
-  obj1[2] = intl.string(stateFromStores(1236).t.JwIJMV);
+  const intl = stateFromStores(1233).intl;
+  obj1[2] = intl.string(stateFromStores(1233).t.JwIJMV);
   items3[1] = callback2(stateFromStores(4474).Text, obj1);
   obj[1] = items3;
   const tmp8 = callback3(View, obj);
@@ -295,7 +295,7 @@ export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndica
     obj2 = { onPress: null, children: null };
     obj2[0] = openLoadingIndicatorDebugBody;
     obj2[1] = tmp8;
-    tmp7Result = callback2(stateFromStores(5068).PressableOpacity, obj2);
+    tmp7Result = callback2(stateFromStores(5076).PressableOpacity, obj2);
   }
   return tmp7Result;
 };

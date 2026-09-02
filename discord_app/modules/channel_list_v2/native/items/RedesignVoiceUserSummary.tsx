@@ -26,7 +26,7 @@ export default function RedesignVoiceUserSummary(channels) {
     items3,
   );
   const obj2 = channels(stateFromStores[4]);
-  obj = { channels, selectedChannelId: "r", selectedVoiceChannelId: "PX_16", voiceStates: null };
+  obj = { channels, selectedChannelId: "r", selectedVoiceChannelId: "getChannelIcon", voiceStates: "landscape" };
   obj[2] = stateFromStores1;
   obj[3] = stateFromStores;
   const summarizedVoiceUsers = channels(stateFromStores[5]).computeSummarizedVoiceUsers(obj);

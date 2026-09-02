@@ -1,13 +1,13 @@
 // discord_app/polyfillsNative.tsx
 import set from "../_runtime/00002_set.js";
-import Buffer from "../_runtime/00511_Buffer.js";
-import q from "../_runtime/01214_q.js";
-import _isNativeReflectConstruct from "../_runtime/14043__isNativeReflectConstruct.js";
+import Buffer from "../_runtime/00508_Buffer.js";
+import q from "../_runtime/01211_q.js";
+import _isNativeReflectConstruct from "../_runtime/14266__isNativeReflectConstruct.js";
 import timestamp from "modules/debug/Logger.tsx";
-import 13949__ from "../_runtime/metro/13949__.js";
-import get_ActivityIndicator from "../_runtime/14019_get_ActivityIndicator.js";
-import _typeof from "../_runtime/metro/14037__typeof.js";
-import GetOption from "../_runtime/14040_GetOption.js";
+import 14172__ from "../_runtime/metro/14172__.js";
+import get_ActivityIndicator from "../_runtime/14242_get_ActivityIndicator.js";
+import _typeof from "../_runtime/metro/14260__typeof.js";
+import GetOption from "../_runtime/14263_GetOption.js";
 
 if (typeof process === "undefined") {
   const _window3 = window;

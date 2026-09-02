@@ -48,7 +48,7 @@ function _networkAwareRetry() {
               closure_3 = undefined;
               c6 = 1;
               c7 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else {
             if (1 === tmp7) {
@@ -108,7 +108,7 @@ function _networkAwareRetry() {
                 obj5[0] = arg1;
                 return obj5;
               } else {
-                obj1 = num14(1473);
+                obj1 = num14(1472);
                 c6 = 5;
                 c7 = 1;
                 obj6 = { value: null, done: false };

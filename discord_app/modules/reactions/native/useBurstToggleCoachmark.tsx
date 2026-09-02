@@ -33,15 +33,15 @@ const result = require("set").fileFinishedImporting("modules/reactions/native/us
 
 export default function useBurstToggleCoachmark(targetRef) {
   const items = [closure_6];
-  const stateFromStores = first(589).useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj = first(589);
+  const stateFromStores = first(586).useStateFromStores(items, () => currentUser.getCurrentUser());
+  let obj = first(586);
   if (obj2.isPremium(stateFromStores)) {
     const items1 = [closure_9];
     let items2 = items1;
   } else {
     items2 = [];
   }
-  let tmpResult = tmp(6251);
+  let tmpResult = tmp(6260);
   const tmp5 = callback(tmpResult.useSelectedDismissibleContent(items2), 2);
   first = tmp5[0];
   closure_1 = tmp7;
@@ -68,7 +68,7 @@ export default function useBurstToggleCoachmark(targetRef) {
     obj[5] = first === closure_1_9;
     return obj;
   }, items3);
-  tmpResult = tmp(8973);
+  tmpResult = tmp(8987);
   const coachmark = tmpResult.useCoachmark(targetRef, memo);
   return tmp5[1];
 }

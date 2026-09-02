@@ -1,6 +1,6 @@
 // discord_app/design/components/Styles/native/createStyles.tsx
-import set2 from "../../../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import set2 from "../../../../utils/PlatformUtils.tsx";
 import getSemanticColorContextFromThemeContext from "../../../tokens/native/SemanticColorContext.native.tsx";
 import ManaContext from "../../../../../discord_common/js/packages/design/native.tsx";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
@@ -61,7 +61,7 @@ function parseThemedStyles(obj, enabledExperiments) {
         let tmp16 = require;
         let obj3 = getSemanticColorContextFromThemeContext;
         let semanticColorContextFromThemeContext = obj3.getSemanticColorContextFromThemeContext(arg1);
-        let internal4 = tmp6(712).internal;
+        let internal4 = tmp6(709).internal;
         obj[key10022] = internal4.resolveSemanticColor(theme, obj2, semanticColorContextFromThemeContext);
         continue;
       } else {
@@ -84,12 +84,12 @@ function parseThemedStyles(obj, enabledExperiments) {
               }
               let result = obj2;
               if (tmp) {
-                let internal2 = tmp6(712).internal;
+                let internal2 = tmp6(709).internal;
                 result = internal2.adjustColorSaturation(obj2, saturation, str);
               }
               let adjustColorContrastResult = result;
               if (1 !== contrast) {
-                let internal3 = tmp6(712).internal;
+                let internal3 = tmp6(709).internal;
                 let tmp11 = internal3;
                 let tmp12 = result;
                 let tmp13 = contrast;

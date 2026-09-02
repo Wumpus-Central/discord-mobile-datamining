@@ -10,8 +10,8 @@ let result = require("set").fileFinishedImporting(
 export default function ActivityPrivacyUpsellActionSheet(direction) {
   direction = direction.direction;
   const affectedGuildIds = direction.affectedGuildIds;
-  const upsellStrings = direction(14457).getUpsellStrings(
-    direction === direction(14457).ChangeDirection.RESTRICTING,
+  const upsellStrings = direction(14680).getUpsellStrings(
+    direction === direction(14680).ChangeDirection.RESTRICTING,
     direction.settingName,
   );
   const items = [direction, affectedGuildIds];
@@ -19,7 +19,7 @@ export default function ActivityPrivacyUpsellActionSheet(direction) {
   const onConfirm = React.useCallback(() => {
     const result = direction(closure_1_2[2]).applyBulkGuildRestrictionChange(direction, affectedGuildIds);
   }, items);
-  return jsx(affectedGuildIds(14459), {
+  return jsx(affectedGuildIds(14682), {
     direction,
     affectedGuildIds,
     title,

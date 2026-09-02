@@ -16,13 +16,13 @@ export const fetchGuildAffinities = function fetchGuildAffinities() {
   const value = HTTP.get(obj);
   return value.then(
     (guildAffinities) => {
-      callback(709).dispatch({
+      callback(706).dispatch({
         type: "LOAD_GUILD_AFFINITIES_SUCCESS",
         guildAffinities: guildAffinities.body.guild_affinities,
       });
     },
     () => {
-      callback(709).dispatch({ type: "LOAD_GUILD_AFFINITIES_FAILURE" });
+      callback(706).dispatch({ type: "LOAD_GUILD_AFFINITIES_FAILURE" });
     },
   );
 };

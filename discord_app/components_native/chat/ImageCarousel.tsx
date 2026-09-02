@@ -561,7 +561,7 @@ export const useTileEntranceAnimatedStyle = function useTileEntranceAnimatedStyl
   obj = {
     withTiming: sharedValue(4479).withTiming,
     animatedStylePropValue: sharedValue,
-    STANDARD_EASING: sharedValue(1297).STANDARD_EASING,
+    STANDARD_EASING: sharedValue(1296).STANDARD_EASING,
     withSpring: sharedValue(4927).withSpring,
   };
   fn.__closure = obj;

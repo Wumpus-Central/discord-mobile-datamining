@@ -91,11 +91,11 @@ export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdated
   emoji = emoji.emoji;
   let obj = emoji(4915);
   if (obj.getIsScreenReaderEnabled()) {
-    const AccessibilityAnnouncer = tmp(1351).AccessibilityAnnouncer;
-    const intl = tmp(1236).intl;
+    const AccessibilityAnnouncer = tmp(1350).AccessibilityAnnouncer;
+    const intl = tmp(1233).intl;
     obj = { emojiName: null };
     obj[0] = emoji.name;
-    AccessibilityAnnouncer.announce(intl.formatToPlainString(tmp(1236).t.nKY0Fl, obj));
+    AccessibilityAnnouncer.announce(intl.formatToPlainString(tmp(1233).t.nKY0Fl, obj));
   } else {
     obj = { key: "DEFAULT_REACTION_EMOJI_UPDATED", icon: null, content: null, toastDurationMs: 3000 };
     obj[1] = function icon() {

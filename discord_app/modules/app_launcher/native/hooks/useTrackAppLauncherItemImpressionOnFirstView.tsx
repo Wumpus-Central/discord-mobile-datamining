@@ -7,11 +7,11 @@ const result = require("set").fileFinishedImporting(
 );
 
 export const useTrackAppLauncherItemImpressionOnFirstView = function useTrackAppLauncherItemImpressionOnFirstView() {
-  let obj = entrypoint(9049);
+  let obj = entrypoint(9063);
   entrypoint = obj.useAppLauncherContext().entrypoint;
   dependencyMap = React.useRef(new Set());
   const set = new Set();
-  const focusEffect = entrypoint(1500).useFocusEffect(
+  const focusEffect = entrypoint(1499).useFocusEffect(
     React.useCallback(() => {
       const current = ref.current;
       current.clear();

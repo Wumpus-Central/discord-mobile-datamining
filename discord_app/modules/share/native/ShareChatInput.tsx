@@ -67,7 +67,7 @@ export default function ShareChatInput(onFocus) {
   dependencyMap = undefined;
   const tmp = callback3();
   const tmp2 = onBlur;
-  const tmp4 = onBlur(8160)();
+  const tmp4 = onBlur(8168)();
   [focused, c2] = callback(React.useState(false), 2);
   const items = [onFocus];
   const items1 = [onBlur];
@@ -108,11 +108,11 @@ export default function ShareChatInput(onFocus) {
   const tmp5 = callback(React.useState(false), 2);
   const tmp8 = closure_7;
   const tmp9 = View;
-  const intl = onFocus(1236).intl;
-  obj[2] = intl.string(onFocus(1236).t.ZroO3G);
+  const intl = onFocus(1233).intl;
+  obj[2] = intl.string(onFocus(1233).t.ZroO3G);
   obj[3] = tmp.inputPlaceholder.color;
-  const intl2 = onFocus(1236).intl;
-  obj[4] = intl2.string(onFocus(1236).t["/+MXmw"]);
+  const intl2 = onFocus(1233).intl;
+  obj[4] = intl2.string(onFocus(1233).t["/+MXmw"]);
   obj[5] = onSend;
   obj[6] = onSelectionChange;
   obj[7] = tmp.chatInput;
@@ -122,7 +122,7 @@ export default function ShareChatInput(onFocus) {
   obj[11] = callback1;
   obj[16] = tmp.chatText;
   obj[17] = !flag;
-  const items3 = [callback2(tmp2(8371), obj)];
+  const items3 = [callback2(tmp2(8380), obj)];
   obj = {
     accessibilityLabel: null,
     accessibilityRole: "button",
@@ -131,13 +131,13 @@ export default function ShareChatInput(onFocus) {
     disabled: null,
     children: null,
   };
-  const intl3 = onFocus(1236).intl;
-  obj[0] = intl3.string(onFocus(1236).t.iZ7Mz9);
+  const intl3 = onFocus(1233).intl;
+  obj[0] = intl3.string(onFocus(1233).t.iZ7Mz9);
   obj[2] = onPressEmoji;
   obj[3] = tmp.emojiButton;
   obj[4] = flag;
-  obj[5] = callback2(onFocus(8228).ReactionIcon, { size: "md" });
-  items3[1] = callback2(onFocus(5068).PressableOpacity, obj);
+  obj[5] = callback2(onFocus(8237).ReactionIcon, { size: "md" });
+  items3[1] = callback2(onFocus(5076).PressableOpacity, obj);
   obj[1] = items3;
   return tmp8(tmp9, obj);
 }

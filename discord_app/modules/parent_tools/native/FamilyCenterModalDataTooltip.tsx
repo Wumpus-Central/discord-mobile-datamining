@@ -140,7 +140,7 @@ export default function FamilyCenterModalDataTooltip() {
     obj = { DATA_TOOLTIP: null };
     obj = {
       headerShown: true,
-      headerLeft: callback(5495).getHeaderCloseButton(callback2(4723).pop),
+      headerLeft: callback(5503).getHeaderCloseButton(callback2(4723).pop),
       headerTitle() {
         return null;
       },

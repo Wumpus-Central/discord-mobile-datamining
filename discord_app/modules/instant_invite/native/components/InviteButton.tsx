@@ -17,23 +17,23 @@ const memoResult = importAllResult.memo(function InviteButton(onPress) {
   const intl = getSystemLocale.intl;
   intl.string(getSystemLocale.t.jYnGPG);
   if (InviteSendStates.SENDING === sendState) {
-    const intl5 = tmp2(1236).intl;
-    let stringResult1 = intl5.string(tmp2(1236).t.jYnGPG);
+    const intl5 = tmp2(1233).intl;
+    let stringResult1 = intl5.string(tmp2(1233).t.jYnGPG);
     disabled = false;
     let flag = true;
   } else if (tmp5.SENT === sendState) {
-    const intl4 = tmp2(1236).intl;
-    stringResult1 = intl4.string(tmp2(1236).t.dVT149);
+    const intl4 = tmp2(1233).intl;
+    stringResult1 = intl4.string(tmp2(1233).t.dVT149);
     disabled = true;
     flag = false;
   } else if (tmp5.ERROR === sendState) {
-    const intl3 = tmp2(1236).intl;
-    stringResult1 = intl3.string(tmp2(1236).t.wNcfpX);
+    const intl3 = tmp2(1233).intl;
+    stringResult1 = intl3.string(tmp2(1233).t.wNcfpX);
     disabled = false;
     flag = false;
   } else {
-    const intl2 = tmp2(1236).intl;
-    stringResult1 = intl2.string(tmp2(1236).t.jYnGPG);
+    const intl2 = tmp2(1233).intl;
+    stringResult1 = intl2.string(tmp2(1233).t.jYnGPG);
     flag = false;
   }
   let obj = { style: callback().buttonWrapper, children: null };

@@ -1,8 +1,8 @@
 // discord_app/modules/premium_marketing/native/components/purchase_button/BuyNitroPurchaseButtonLegalDisclaimer.tsx
 import noopAll from "../../../../../../_runtime/00019_noop.js";
-import set from "../../../../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../../intl/index.native.tsx";
+import set from "../../../../../utils/PlatformUtils.tsx";
 import combinedDefault from "../../../../../utils/HelpdeskUtils.tsx";
 import getPremiumPlanItem from "../../../../../utils/PremiumUtils.tsx";
 import getPremiumPlanItemDefault from "../../../../../utils/PremiumUtils.tsx";
@@ -42,12 +42,12 @@ export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
         obj[2] = combinedDefault.getArticleURL(constants.PREMIUM_DETAILS_CANCEL_SUB);
         const obj6 = combinedDefault;
         obj[3] = combinedDefault.getArticleURL(constants.PAID_TERMS);
-        let formatResult = format(tmp3(1236).t["3uC7vj"], obj);
+        let formatResult = format(tmp3(1233).t["3uC7vj"], obj);
         let tmp10 = tmp3;
         const obj7 = combinedDefault;
       } else {
-        let tmp3Result = tmp3(500);
-        let t = tmp3(1236).t;
+        let tmp3Result = tmp3(1234);
+        let t = tmp3(1233).t;
         obj = { paidURL: null, interval: null, ctaText: null };
         obj[0] = constants2.PAID_TERMS;
         const isAndroidResult = tmp3Result.isAndroid();
@@ -64,7 +64,7 @@ export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
       jsx(tmp10(4474).Text, { style: null, variant: "text-xxs/medium", children: null });
     }
     const tmp3Result1 = set;
-    t = tmp3(1236).t;
+    t = tmp3(1233).t;
     const isAndroidResult1 = set.isAndroid();
     t = { paidURL: null, interval: null, cancelURL: null };
     t[0] = constants2.PAID_TERMS;

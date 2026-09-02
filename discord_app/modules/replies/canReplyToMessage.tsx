@@ -1,5 +1,5 @@
 // discord_app/modules/replies/canReplyToMessage.tsx
-import useCanUnarchiveThread from "../threads/ThreadHooks.tsx";
+import useCanStartPrivateThread from "../threads/ThreadHooks.tsx";
 import useUserCommunicationDisabled from "../guild_communication_disabled/useUserCommunicationDisabled.tsx";
 import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_3 from "../../stores/PermissionStore.tsx";
@@ -7,7 +7,7 @@ import closure_4 from "../../stores/UserStore.tsx";
 import ME from "../../Constants.tsx";
 import { Permissions } from "../../../discord_common/js/shared/Constants.tsx";
 import { useUserCommunicationDisabled } from "../guild_communication_disabled/useUserCommunicationDisabled.tsx";
-import { useCanUnarchiveThread } from "../threads/ThreadHooks.tsx";
+import { useCanStartPrivateThread } from "../threads/ThreadHooks.tsx";
 
 require = arg1;
 ({ MessageFlags: c5, MessageStates: closure_6 } = ME);
@@ -17,7 +17,7 @@ export const useCanReplyToMessage = function useCanReplyToMessage(channel, messa
   const _require = channel;
   dependencyMap = message;
   const canUnarchiveThread = require("../threads/ThreadHooks.tsx").useCanUnarchiveThread(channel);
-  const obj = useCanUnarchiveThread;
+  const obj = useCanStartPrivateThread;
   let tmp = _require;
   let guildId;
   if (channel != null) {
@@ -25,7 +25,7 @@ export const useCanReplyToMessage = function useCanReplyToMessage(channel, messa
   }
   const obj2 = useUserCommunicationDisabled;
   const items = [closure_3];
-  let stateFromStores = tmp(589).useStateFromStores(items, () => {
+  let stateFromStores = tmp(586).useStateFromStores(items, () => {
     let tmp = null != channel;
     if (tmp) {
       tmp = null != message;
@@ -71,7 +71,7 @@ export const useCanReplyToMessage = function useCanReplyToMessage(channel, messa
   return tmp6;
 };
 export const canReplyToMessage = function canReplyToMessage(isPrivate, type) {
-  const obj = useCanUnarchiveThread;
+  const obj = useCanStartPrivateThread;
   if (isPrivate.isPrivate()) {
     let hasItem = !isPrivate.isSystemDM();
   } else {
@@ -79,11 +79,11 @@ export const canReplyToMessage = function canReplyToMessage(isPrivate, type) {
     const tmp4 = Permissions;
   }
   if (hasItem) {
-    const REPLYABLE = tmp(686).MessageTypesSets.REPLYABLE;
+    const REPLYABLE = tmp(683).MessageTypesSets.REPLYABLE;
     hasItem = REPLYABLE.has(type.type);
   }
   currentUser = currentUser.getCurrentUser();
-  const canUnarchiveThreadResult = useCanUnarchiveThread.canUnarchiveThread(isPrivate);
+  const canUnarchiveThreadResult = useCanStartPrivateThread.canUnarchiveThread(isPrivate);
   let id;
   if (currentUser != null) {
     id = currentUser.id;

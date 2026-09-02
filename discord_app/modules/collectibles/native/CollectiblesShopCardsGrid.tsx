@@ -13,7 +13,7 @@ function ShopCardGridItem(index) {
   ({ product, cardWidth, preferVCPrice, unpublishedAt, disableBundleStaticBackground, muteBundleStaticBackground } =
     index);
   const memo = React.useMemo(() => ({ tilePosition: index }), items);
-  return jsx(index(8890).CollectiblesAnalyticsProvider, {
+  return jsx(index(8905).CollectiblesAnalyticsProvider, {
     newValue: memo,
     children: jsx(CollectiblesShopCardInternalV2Default, {
       unpublishedAt,
@@ -44,7 +44,7 @@ export default function CollectiblesShopCardsGrid(accessibilityLabel) {
   let cardWidth;
   ({ onScroll, paddingTop, paddingBottom } = accessibilityLabel);
   closure_5 = callback();
-  let obj = products(15423);
+  let obj = products(15653);
   const cardLayout = obj.useCardLayout();
   columns = cardLayout.columns;
   cardWidth = cardLayout.cardWidth;
@@ -60,7 +60,7 @@ export default function CollectiblesShopCardsGrid(accessibilityLabel) {
     children: null,
   };
   obj = {
-    gap: products(8887).COLLECTIBLES_SHOP_CARD_GAP,
+    gap: products(8902).COLLECTIBLES_SHOP_CARD_GAP,
     paddingTop,
     paddingBottom,
     width: cardLayout.rowWidth,

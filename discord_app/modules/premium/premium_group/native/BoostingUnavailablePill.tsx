@@ -3,7 +3,7 @@ import set from "../../../../../_runtime/00002_set.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02009_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02008_asyncRequireImpl.js";
 import messagesProxyDefault from "../PremiumGroup.messages.js";
 import SubscriptionStatusTypes from "../PremiumGroupConstants.tsx";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -17,7 +17,7 @@ function handlePress() {
   const intl = getSystemLocale.intl;
   obj = { premiumGroupProductName: callback() };
   obj[0] = intl.formatToPlainString(messagesProxyDefault["5xN/C1"], obj);
-  obj.openLazy(asyncRequireImpl(13173, dependencyMap.paths), "PremiumGroupEducationActionSheet", obj);
+  obj.openLazy(asyncRequireImpl(13395, dependencyMap.paths), "PremiumGroupEducationActionSheet", obj);
 }
 ({ TouchableOpacity: c3, View: c4 } = get_ActivityIndicator);
 let closure_5 = SubscriptionStatusTypes.getPremiumGroupProductName;

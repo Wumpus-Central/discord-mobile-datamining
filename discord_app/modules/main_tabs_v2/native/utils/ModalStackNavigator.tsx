@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/utils/ModalStackNavigator.tsx
 import NavigationStack from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createNativeStackNavigator from "../../../../../_runtime/07822_createNativeStackNavigator.js";
+import createNativeStackNavigator from "../../../../../_runtime/07831_createNativeStackNavigator.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
@@ -23,11 +23,11 @@ const memoResult = importAllResult.memo(function ModalStackNavigator(children) {
             icon: closure_1,
           });
         },
-        headerLeft: closure_1_0(7607).getRenderModalCloseImage(navigation.navigation),
+        headerLeft: closure_1_0(7617).getRenderModalCloseImage(navigation.navigation),
         headerTitleAlign: "center",
       };
       let merged = Object.assign(dependencyMap);
-      let merged1 = Object.assign(closure_1_1(10662)());
+      let merged1 = Object.assign(closure_1_1(10883)());
       return obj;
     },
     children: <closure_4.Screen {...obj} />,

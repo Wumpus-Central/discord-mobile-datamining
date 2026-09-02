@@ -54,7 +54,7 @@ function _sendGiftIntentGif() {
               c4 = undefined;
               url = 1;
               c4 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else {
             if (1 === tmp5) {

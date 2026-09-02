@@ -89,12 +89,12 @@ function useDeliveredDockCreative() {
   }, items3);
 }
 function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
-  const deliveredQuest = deliveredAdCreativeId(14703).getDeliveredQuest(mobileQuestDock);
+  const deliveredQuest = deliveredAdCreativeId(14929).getDeliveredQuest(mobileQuestDock);
   const tmp4 = useIsWindowLargeDefault();
-  const obj = deliveredAdCreativeId(14703);
+  const obj = deliveredAdCreativeId(14929);
   const items = [closure_7];
   let userStatus;
-  const stateFromStores = deliveredAdCreativeId(589).useStateFromStores(
+  const stateFromStores = deliveredAdCreativeId(586).useStateFromStores(
     items,
     () =>
       null !=
@@ -106,8 +106,8 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }
   let isDismissedResult = null != userStatus;
   if (isDismissedResult) {
-    let tmpResult = tmp(7443);
-    isDismissedResult = tmpResult.isDismissed(deliveredQuest.userStatus, tmp(5390).QuestContent.QUEST_BAR_MOBILE);
+    let tmpResult = tmp(7453);
+    isDismissedResult = tmpResult.isDismissed(deliveredQuest.userStatus, tmp(5398).QuestContent.QUEST_BAR_MOBILE);
   }
   let claimedAt;
   if (deliveredQuest != null) {
@@ -116,18 +116,18 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
       claimedAt = userStatus.claimedAt;
     }
   }
-  tmpResult = tmp(11083);
+  tmpResult = tmp(11303);
   const isQuestExpired = tmpResult.useIsQuestExpired(deliveredQuest);
-  const obj2 = deliveredAdCreativeId(589);
+  const obj2 = deliveredAdCreativeId(586);
   const tmp5 = closure_7;
-  let isEligibleForQuests = deliveredAdCreativeId(11084).getIsEligibleForQuests();
-  const tmpResult1 = deliveredAdCreativeId(11084);
-  deliveredAdCreativeId = deliveredAdCreativeId(14703).getDeliveredAdCreativeId(mobileQuestDock);
-  const tmpResult2 = deliveredAdCreativeId(14703);
+  let isEligibleForQuests = deliveredAdCreativeId(11304).getIsEligibleForQuests();
+  const tmpResult1 = deliveredAdCreativeId(11304);
+  deliveredAdCreativeId = deliveredAdCreativeId(14929).getDeliveredAdCreativeId(mobileQuestDock);
+  const tmpResult2 = deliveredAdCreativeId(14929);
   const items1 = [tmp5];
   const items2 = [deliveredAdCreativeId];
   const type = mobileQuestDock.type;
-  const stateFromStores1 = deliveredAdCreativeId(589).useStateFromStores(
+  const stateFromStores1 = deliveredAdCreativeId(586).useStateFromStores(
     items1,
     () => {
       let isAdContentDismissedResult = null != deliveredAdCreativeId;
@@ -138,9 +138,9 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
     },
     items2,
   );
-  if (deliveredAdCreativeId(7446).AdCreativeType.NO_FILL === type) {
+  if (deliveredAdCreativeId(7456).AdCreativeType.NO_FILL === type) {
     return false;
-  } else if (tmp(7446).AdCreativeType.BOUNTY === type) {
+  } else if (tmp(7456).AdCreativeType.BOUNTY === type) {
     if (isEligibleForQuests) {
       isEligibleForQuests = !stateFromStores1;
     }
@@ -148,7 +148,7 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
       isEligibleForQuests = !tmp4;
     }
     return isEligibleForQuests;
-  } else if (tmp(7446).AdCreativeType.QUEST === type) {
+  } else if (tmp(7456).AdCreativeType.QUEST === type) {
     if (stateFromStores) {
       if (!tmp10) {
         let tmp15 = null != deliveredQuest && !tmp4;

@@ -50,7 +50,7 @@ export const isEqualAvatarDecoration = function isEqualAvatarDecoration(avatarDe
       if (typeof avatarDecoration === "object") {
         tmp2 = null;
         if (null != avatarDecoration) {
-          let tmp12Result = tmp12(1899);
+          let tmp12Result = tmp12(1898);
           const result = tmp12Result.parseSkuIdFromServerData(avatarDecoration);
           tmp2 = null;
           if (null != result) {
@@ -77,7 +77,7 @@ export const isEqualAvatarDecoration = function isEqualAvatarDecoration(avatarDe
       if (typeof skuId === "object") {
         tmp6 = null;
         if (null != skuId) {
-          tmp12Result = tmp12(1899);
+          tmp12Result = tmp12(1898);
           const result1 = tmp12Result.parseSkuIdFromServerData(skuId);
           tmp6 = null;
           if (null != result1) {

@@ -54,7 +54,7 @@ function _updateClipsAllowVoiceRecording() {
             obj2[0] = arg1;
             return obj2;
           } else {
-            obj = callback2(709);
+            obj = callback2(706);
             obj.dispatch({ type: "CLIPS_ALLOW_VOICE_RECORDING_UPDATE" });
             c3 = 3;
             return { value: "HermesInternal", done: null };

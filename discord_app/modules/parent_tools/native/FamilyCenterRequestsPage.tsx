@@ -24,11 +24,11 @@ function FamilyCenterMaxConnectionsBlurb() {
   const tmp = callback3();
   const tmp5 = importDefault;
   useAgeSpecificText;
-  const intl = tmp2(1236).intl;
+  const intl = tmp2(1233).intl;
   intl.formatToPlainString(messagesProxyDefault["1/PzIj"], {
     maxConnections: useIsInAdultAgeGroupDefault() ? closure_5 : closure_6,
   });
-  const intl2 = tmp2(1236).intl;
+  const intl2 = tmp2(1233).intl;
   let tmp10 = null;
   if (hasMaxConnections) {
     obj = { style: null, children: null };
@@ -46,14 +46,14 @@ function FamilyCenterHelpLineInfo() {
   const shouldShowHelplineLink = obj.useShouldShowHelplineLink();
   set;
   if (shouldShowHelplineLink) {
-    const intl2 = tmp2(1236).intl;
+    const intl2 = tmp2(1233).intl;
     let formatResult = intl2.format(messagesProxyDefault["KOwsf/"], {
       helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line",
     });
   } else {
     formatResult = null;
     if (tmp6) {
-      const intl = tmp2(1236).intl;
+      const intl = tmp2(1233).intl;
       obj = { helpLink: null };
       obj[0] = THROUGHLINE_URL;
       formatResult = intl.format(messagesProxyDefault["6tsC8u"], obj);
@@ -65,7 +65,7 @@ function FamilyCenterHelpLineInfo() {
     obj[0] = tmp.container;
     obj1 = { style: null, variant: "heading-sm/semibold", children: null };
     obj1[0] = tmp.supportHeader;
-    const intl3 = tmp2(1236).intl;
+    const intl3 = tmp2(1233).intl;
     obj1[2] = intl3.string(messagesProxyDefault["7/tVhv"]);
     const items = [callback(tmp2(4474).Text, obj1)];
     const obj2 = { variant: "text-xs/medium", color: "text-muted", children: null };

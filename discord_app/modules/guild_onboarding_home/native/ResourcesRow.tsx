@@ -60,12 +60,12 @@ export default function ResourcesRow(guildId) {
       obj.openLazy(guildId(closure_1_2[10])(closure_1_2[9], closure_1_2.paths), closure_1_4, obj);
     };
     obj = { variant: "text-md/medium", color: "text-default", children: null };
-    const intl = guildId(1236).intl;
+    const intl = guildId(1233).intl;
     obj1 = { count: null };
     obj1[0] = arr.length - 2;
-    obj[2] = intl.format(guildId(1236).t.F6iMs4, obj1);
+    obj[2] = intl.format(guildId(1233).t.F6iMs4, obj1);
     obj[2] = callback(guildId(4474).Text, obj);
-    tmp6 = callback(guildId(5068).PressableOpacity, obj);
+    tmp6 = callback(guildId(5076).PressableOpacity, obj);
   }
   items[1] = tmp6;
   obj[2] = items;

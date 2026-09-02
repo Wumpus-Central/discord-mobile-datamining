@@ -1,9 +1,9 @@
 // discord_app/utils/MFAUtils.tsx
 import set from "../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../_runtime/00017_get_ActivityIndicator.js";
-import _modDef1208 from "SentryUtils.native.tsx";
+import _modDef1205 from "SentryUtils.native.tsx";
 import isMetaQuest from "../modules/device/MetaQuestUtils.android.tsx";
-import encodeDefault from "../../_runtime/07725_encode.js";
+import encodeDefault from "../../_runtime/07734_encode.js";
 
 let _crypto;
 if (window != null) {
@@ -72,7 +72,7 @@ export const encodeTotpSecretAsUrl = function encodeTotpSecretAsUrl(arg0, str) {
   );
 };
 export const captureWebAuthnException = function captureWebAuthnException(closure_1, tags) {
-  let obj = _modDef1208;
+  let obj = _modDef1205;
   obj = {};
   const merged = Object.assign(tags);
   tags = undefined;

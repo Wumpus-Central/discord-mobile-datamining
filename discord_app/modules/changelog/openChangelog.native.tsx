@@ -1,7 +1,7 @@
 // discord_app/modules/changelog/openChangelog.native.tsx
 import set from "../../../_runtime/00002_set.js";
 import CHANGELOG_MODAL_KEY2 from "ChangelogConstants.tsx";
-import asyncRequireImpl from "../../../_runtime/02009_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/02008_asyncRequireImpl.js";
 import coerceMainRoute from "../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import _modDef4723 from "../../actions/ModalActionCreators.tsx";
 
@@ -19,7 +19,7 @@ export const openChangelog = function openChangelog() {
     const obj = coerceMainRoute;
   }
   if (!isModalOpenResult) {
-    _modDef4723.pushLazy(asyncRequireImpl(15141, dependencyMap.paths), {}, CHANGELOG_MODAL_KEY);
+    _modDef4723.pushLazy(asyncRequireImpl(15370, dependencyMap.paths), {}, CHANGELOG_MODAL_KEY);
     const obj2 = _modDef4723;
   }
 };

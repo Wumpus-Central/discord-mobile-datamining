@@ -19,10 +19,10 @@ export const getRunningGameAnalytics = function getRunningGameAnalytics(streamAp
   if (null == streamApplication) {
     return {
       gameName: "Array",
-      gameId: "category",
-      exe: "PX_16",
-      distributor: "variant",
-      sku: "sa",
+      gameId: "call",
+      exe: "Object",
+      distributor: "values",
+      sku: "disabled",
       gameMetadata: "o",
       rawExePath: "isArray",
     };
@@ -98,7 +98,7 @@ export const isVerifiedGameExecutable = function isVerifiedGameExecutable(str, a
       if (formatted.endsWith("/")) {
         substr = formatted.slice(0, -1);
       }
-      dependencyMap = substr(500).getPlatformName();
+      dependencyMap = substr(1234).getPlatformName();
       return arr.some((os) => {
         let tmp = os.os === closure_1;
         if (tmp) {

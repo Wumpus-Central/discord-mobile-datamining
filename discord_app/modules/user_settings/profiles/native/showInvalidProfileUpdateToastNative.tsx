@@ -2,7 +2,7 @@
 import set from "../../../../../_runtime/00002_set.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import dispatcherDefault from "../../../toast/native/ToastActionCreators.tsx";
-import registerAssetDefault from "../../../../../_runtime/07764_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/07773_registerAsset.js";
 
 const result = set.fileFinishedImporting(
   "modules/user_settings/profiles/native/showInvalidProfileUpdateToastNative.tsx",

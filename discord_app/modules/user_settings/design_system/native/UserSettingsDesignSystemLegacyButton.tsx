@@ -17,8 +17,8 @@ function ComparisonRow(entry) {
   const combined = "" + entry.color;
   let redesignVariant = null;
   if (entry.look !== Button.ButtonLooks.LINK) {
-    redesignVariant = tmp4(1297).getRedesignVariant(entry.color);
-    const tmp4Result = tmp4(1297);
+    redesignVariant = tmp4(1296).getRedesignVariant(entry.color);
+    const tmp4Result = tmp4(1296);
   }
   items = [tmp.comparisonRow];
   let darkBg = hasItem;
@@ -55,7 +55,7 @@ function ComparisonRow(entry) {
   let darkText = null;
   if (hasItem) {
     darkText = null;
-    if (entry.look === tmp4(1297).ButtonLooks.FILLED) {
+    if (entry.look === tmp4(1296).ButtonLooks.FILLED) {
       darkText = tmp.darkText;
     }
   }
@@ -122,7 +122,7 @@ function ComboRow(combo) {
   let darkText = null;
   if (hasItem) {
     darkText = null;
-    if (combo.look === tmp6(1297).ButtonLooks.FILLED) {
+    if (combo.look === tmp6(1296).ButtonLooks.FILLED) {
       darkText = tmp.darkText;
     }
   }
@@ -811,7 +811,7 @@ export default function UserSettingsDesignSystemLegacyButton() {
   items1[1] = entries.map((arg0) => {
     [tmp, arr] = arg0;
     return callback2(
-      callback(8363).FormSection,
+      callback(8372).FormSection,
       { title: tmp, children: arr.map((entry) => callback(closure_8, { entry }, arg1)) },
       "cmp-" + tmp,
     );
@@ -831,7 +831,7 @@ export default function UserSettingsDesignSystemLegacyButton() {
   items1[3] = entries1.map((arg0) => {
     [tmp, arr] = arg0;
     return callback2(
-      callback(8363).FormSection,
+      callback(8372).FormSection,
       {
         title: "" + tmp + " (" + arr.reduce((arg0, count) => arg0 + count.count, 0) + " usages)",
         children: arr.map((combo) => callback(closure_9, { combo }, arg1)),

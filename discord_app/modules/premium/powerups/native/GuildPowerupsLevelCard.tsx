@@ -237,10 +237,10 @@ export default function GuildPowerupsLevelCard(arg0) {
   ({ guildId, powerup, nextPowerup, index, isScrollingRef } = arg0);
   importDefault = undefined;
   const tmp = callback();
-  let obj = isScrollingRef(8004);
+  let obj = isScrollingRef(8013);
   const manaTypeConsolidationExperiment = obj.useManaTypeConsolidationExperiment("GuildPowerupsLevelCard");
   const tmp6 = usePowerupActiveStatusDefault(guildId, powerup);
-  obj1 = isScrollingRef(12083);
+  obj1 = isScrollingRef(12307);
   const calculatePowerupCardStatus = obj1.useCalculatePowerupCardStatus(powerup, tmp6, false);
   const tmp9 = useGuildPowerupOnShowMoreDefault(guildId, powerup);
   importDefault = tmp9;
@@ -293,7 +293,7 @@ export default function GuildPowerupsLevelCard(arg0) {
   const tmp5Result = importDefaultResult1Default;
   items2[2] = closure_10(View, {
     style: tmp.footerContainer,
-    children: closure_10(isScrollingRef(12088).GuildPowerupsCardFooter, obj4),
+    children: closure_10(isScrollingRef(12312).GuildPowerupsCardFooter, obj4),
   });
   obj1[1] = items2;
   items1[1] = closure_11(View, obj1);

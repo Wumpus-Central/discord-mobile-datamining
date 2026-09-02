@@ -23,13 +23,13 @@ export default function OrbCheckoutAmountTag(orbAmount) {
   obj = { size: "custom", color: "icon-strong", style: tmp.orbsIcon };
   const items = [callback(OrbsIcon.OrbsIcon, obj)];
   if (null == orbAmount) {
-    const intl2 = tmp5(1236).intl;
-    let stringResult = intl2.string(tmp5(1236).t.pfChQr);
+    const intl2 = tmp5(1233).intl;
+    let stringResult = intl2.string(tmp5(1233).t.pfChQr);
   } else {
-    const intl = tmp5(1236).intl;
+    const intl = tmp5(1233).intl;
     obj = { orbAmount: null };
     obj[0] = orbAmount;
-    stringResult = intl.formatToPlainString(tmp5(1236).t.W4DfeF, obj);
+    stringResult = intl.formatToPlainString(tmp5(1233).t.W4DfeF, obj);
   }
   obj1 = { variant: "text-md/semibold", accessibilityLabel: stringResult, children: null };
   let str = "--";

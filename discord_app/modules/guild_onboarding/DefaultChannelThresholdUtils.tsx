@@ -366,11 +366,11 @@ function _checkChattableChannelThresholdMetAfterChannelPermissionDeny() {
           } else {
             obj = callback(4857);
             obj5 = { title: null, body: null };
-            const intl = guildId(1236).intl;
-            obj5[0] = intl.string(guildId(1236).t.ut7sq0);
-            const intl2 = guildId(1236).intl;
+            const intl = guildId(1233).intl;
+            obj5[0] = intl.string(guildId(1233).t.ut7sq0);
+            const intl2 = guildId(1233).intl;
             const format = intl2.format;
-            let t = guildId(1236).t;
+            let t = guildId(1233).t;
             if (guildId) {
               t = {};
               let formatResult = format(t.w9Oz5K, t);

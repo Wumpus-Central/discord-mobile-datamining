@@ -4,7 +4,7 @@ import getSystemLocale from "../../../intl/index.native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import componentDidMountDefault from "../../common/Alert.tsx";
 import mapped from "../../../modules/errors/av_errors/AVError.tsx";
-import registerAssetDefault from "../../../../_runtime/17440_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/17676_registerAsset.js";
 import { Image } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
@@ -21,14 +21,14 @@ export default function StreamFullAlert(arg0) {
   if (errorInfo != null) {
     errorCode = errorInfo.errorCode;
   }
-  const intl = tmp(1236).intl;
+  const intl = tmp(1233).intl;
   obj = {};
   const formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t.ejOT95, { errorCode });
   const merged = Object.assign(arg0);
-  const intl2 = tmp(1236).intl;
+  const intl2 = tmp(1233).intl;
   obj.title = intl2.string(getSystemLocale.t.GzjdO5);
   obj = { variant: "text-md/normal", style: closure_6.body, children: null };
-  const intl3 = tmp(1236).intl;
+  const intl3 = tmp(1233).intl;
   obj[2] = intl3.string(getSystemLocale.t.VVZDBL);
   const items = [
     callback(Text.Text, obj),

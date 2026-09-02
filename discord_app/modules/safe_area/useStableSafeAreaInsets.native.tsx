@@ -9,7 +9,7 @@ require = arg1;
 const result = require("set").fileFinishedImporting("modules/safe_area/useStableSafeAreaInsets.native.tsx");
 
 export default function useStableSafeAreaInsets() {
-  appEntryKey = appEntryKey(1496).useAppEntryKey();
+  appEntryKey = appEntryKey(1495).useAppEntryKey();
   const tmp2 = callback(
     React.useState(() => {
       let DEFAULT_APP_ENTRY_KEY = appEntryKey;

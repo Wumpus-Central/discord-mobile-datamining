@@ -69,7 +69,7 @@ export default function GuildBoostingMarketingPersistentCta(arg0) {
   const tmp = callback3();
   ({ guild, isVisible } = arg0);
   ({ fractionalPremiumState, previousGuildSubscriptionSlot, premiumGroupRole } = arg0);
-  let obj = isVisible(647);
+  let obj = isVisible(644);
   let items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   obj1 = isVisible(4217);
@@ -115,8 +115,8 @@ export default function GuildBoostingMarketingPersistentCta(arg0) {
     children: null,
   };
   const items2 = [
-    stateFromStores(712).unsafe_rawColors.GUILD_BOOSTING_BLUE,
-    stateFromStores(712).unsafe_rawColors.GUILD_BOOSTING_PURPLE,
+    stateFromStores(709).unsafe_rawColors.GUILD_BOOSTING_BLUE,
+    stateFromStores(709).unsafe_rawColors.GUILD_BOOSTING_PURPLE,
   ];
   obj1[2] = items2;
   obj1[3] = [0, 1];
@@ -125,9 +125,9 @@ export default function GuildBoostingMarketingPersistentCta(arg0) {
   const obj3 = { style: tmp.guildInfoContainer, children: null };
   const obj4 = { style: tmp.guildIcon, textStyle: tmp.guildIconText, guild, size: null };
   const tmp4 = stateFromStores(4940);
-  obj4[3] = isVisible(6004).GuildIconSizes.LARGE;
+  obj4[3] = isVisible(6012).GuildIconSizes.LARGE;
   const items3 = [
-    callback(stateFromStores(6004), obj4),
+    callback(stateFromStores(6012), obj4),
     callback(isVisible(4474).Text, {
       style: tmp.guildName,
       variant: "text-md/bold",
@@ -138,8 +138,8 @@ export default function GuildBoostingMarketingPersistentCta(arg0) {
   obj3[1] = items3;
   const items4 = [callback2(View, obj3)];
   const obj5 = { style: tmp.guildName, variant: "text-md/bold", lineClamp: 1, children: guild.name };
-  const tmp5 = stateFromStores(6004);
-  items4[1] = callback(View, { style: tmp.buttonContainer, children: callback(stateFromStores(7145), obj7) });
+  const tmp5 = stateFromStores(6012);
+  items4[1] = callback(View, { style: tmp.buttonContainer, children: callback(stateFromStores(7154), obj7) });
   obj2[1] = items4;
   obj1[6] = callback2(View, obj2);
   obj[1] = callback(tmp4, obj1);

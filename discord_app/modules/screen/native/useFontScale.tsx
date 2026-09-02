@@ -13,7 +13,7 @@ export const getFontScale = function getFontScale() {
   return state.getState().byAppEntry[str].fontScale;
 };
 export const useFontScale = function useFontScale() {
-  appEntryKey = appEntryKey(1496).useAppEntryKey();
+  appEntryKey = appEntryKey(1495).useAppEntryKey();
   const items = [appEntryKey];
   return state(React.useCallback((arg0) => arg0.byAppEntry[appEntryKey].fontScale, items));
 };

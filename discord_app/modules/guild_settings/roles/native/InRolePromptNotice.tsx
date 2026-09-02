@@ -2,7 +2,7 @@
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import hasFlag from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import registerAssetDefault from "../../../../../_runtime/09594_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/09607_registerAsset.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { RoleFlags } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -35,8 +35,8 @@ export default function InRolePromptNotice(role) {
   } else {
     obj = { style: null, children: null };
     obj[0] = string.promptRow;
-    const tmpResult = tmp(17215);
-    let Icon = tmp(1297).Icon;
+    const tmpResult = tmp(17451);
+    let Icon = tmp(1296).Icon;
     if (isRolePowerfulResult) {
       obj = { style: null, source: null, color: null };
       obj[0] = string.icon;
@@ -45,9 +45,9 @@ export default function InRolePromptNotice(role) {
       const items = [tmp6(Icon, obj)];
       obj1 = { style: null, variant: "text-sm/medium", children: null };
       obj1[0] = string.promptText;
-      const intl2 = tmp(1236).intl;
+      const intl2 = tmp(1233).intl;
       string = intl2.string;
-      stringResult = string(tmp(1236).t.YRbgXz);
+      stringResult = string(tmp(1233).t.YRbgXz);
       obj1[2] = stringResult;
       Icon = tmp6(tmp(4474).Text, obj1);
       items[1] = Icon;
@@ -60,12 +60,12 @@ export default function InRolePromptNotice(role) {
       const items1 = [tmp6(Icon, obj2)];
       const obj3 = { style: null, variant: "text-sm/medium", children: null };
       obj3[0] = string.promptText;
-      const intl = tmp(1236).intl;
-      obj3[2] = intl.string(tmp(1236).t.mqeO2v);
+      const intl = tmp(1233).intl;
+      obj3[2] = intl.string(tmp(1233).t.mqeO2v);
       items1[1] = tmp6(tmp(4474).Text, obj3);
       obj[1] = items1;
       tmp4Result = tmp4(tmp5, obj);
     }
-    isRolePowerfulResult = tmp(17215).isRolePowerful(role);
+    isRolePowerfulResult = tmp(17451).isRolePowerful(role);
   }
 }

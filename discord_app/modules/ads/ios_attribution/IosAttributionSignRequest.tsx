@@ -46,7 +46,7 @@ function _fetchIosAttributionSignedPayloads() {
               ({ metadataSealed: c0, impressionId: c1, specs: c2, signal: c3 } = callback);
               c6 = 1;
               c7 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp8) {
             if (arg0 === 1) {
@@ -59,7 +59,7 @@ function _fetchIosAttributionSignedPayloads() {
               return obj1;
             } else {
               c5 = 1;
-              const HTTP = callback(530).HTTP;
+              const HTTP = callback(527).HTTP;
               let obj2 = {
                 url: null,
                 body: null,
@@ -83,7 +83,7 @@ function _fetchIosAttributionSignedPayloads() {
             }
           } else if (2 === tmp8) {
             c5 = 0;
-            obj2 = callback2(1208);
+            obj2 = callback2(1205);
             const obj5 = { tags: null };
             obj5[0] = { app_context: "ios_attribution" };
             obj2.captureException(constants, obj5);

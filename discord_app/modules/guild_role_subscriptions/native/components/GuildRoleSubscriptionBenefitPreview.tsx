@@ -3,7 +3,7 @@ import noopAll from "../../../../../_runtime/00019_noop.js";
 import Button from "../../../../design/void/native.tsx";
 import parseRawEmojiObjectDefault from "../../../emojis/UnicodeEmojis.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import registerAssetDefault from "../../../../../_runtime/10030_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/10052_registerAsset.js";
 import getUsedTemplateChannelsForGuild from "../../tier_templates/GuildRoleSubscriptionTierTemplatesUtils.tsx";
 import EmojiIconDefault from "EmojiIcon.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -71,9 +71,9 @@ function ChannelBenefitRow(benefit) {
   }
   if (null == channelWithTemplateFallback) {
     obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-    const intl = tmp2(1236).intl;
+    const intl = tmp2(1233).intl;
     const _HermesInternal = HermesInternal;
-    obj[2] = "[" + intl.string(tmp2(1236).t.bz1PZX) + "]";
+    obj[2] = "[" + intl.string(tmp2(1233).t.bz1PZX) + "]";
     let tmp9 = callback(tmp2(4474).Text, obj);
   } else {
     obj = { benefit: null, guildId: null, isInteractive: null, children: null };
@@ -84,9 +84,9 @@ function ChannelBenefitRow(benefit) {
     obj1[0] = tmp.channelRow;
     const obj2 = { style: null, size: null, source: null };
     obj2[0] = tmp.channelIcon;
-    obj2[1] = tmp2(1297).Icon.Sizes.CUSTOM;
+    obj2[1] = tmp2(1296).Icon.Sizes.CUSTOM;
     obj2[2] = channelIcon;
-    const items = [callback(tmp2(1297).Icon, obj2)];
+    const items = [callback(tmp2(1296).Icon, obj2)];
     const obj3 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj3[2] = tmp5;
     items[1] = callback(tmp2(4474).Text, obj3);

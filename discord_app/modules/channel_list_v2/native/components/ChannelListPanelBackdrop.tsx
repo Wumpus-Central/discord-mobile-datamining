@@ -31,9 +31,9 @@ export default function ChannelListPanelBackdrop(children) {
   let mobileQuestDockHeight;
   const tmp = callback();
   dependencyMap = tmp;
-  let obj = style(15614);
+  let obj = style(15845);
   const isHomeDrawerEnabled = obj.useIsHomeDrawerEnabled();
-  obj1 = style(14692);
+  obj1 = style(14918);
   mobileQuestDockHeight = obj1.useMobileQuestDockHeight();
   let items = [tmp, contentInset, mobileQuestDockHeight, style];
   obj = {
@@ -83,7 +83,7 @@ export default function ChannelListPanelBackdrop(children) {
   } else {
     ScreenAlignedThemedGradientSliding = contentInset(tmp9);
   }
-  obj = { offsetX: DM_WIDTH, offsetY: contentInset(1628)().top };
+  obj = { offsetX: DM_WIDTH, offsetY: contentInset(1627)().top };
   const items1 = [closure_6(ScreenAlignedThemedGradientSliding, obj), ,];
   obj1 = { pointerEvents: "none", style: tmp.panelTint };
   items1[1] = closure_6(closure_4, obj1);

@@ -210,7 +210,7 @@ export default function ForLaterIntro(type) {
   const tmp4 = type.type === SavedMessageSortTypes.SavedMessageSortTypes.REMINDER;
   let obj = { style: tmp.scrollView, contentContainerStyle: tmp.pageContainer, children: null };
   obj = { style: tmp.container, children: null };
-  obj = { source: importDefault(tmp4 ? 12952 : 12953), style: tmp.upsellImage };
+  obj = { source: importDefault(tmp4 ? 13174 : 13175), style: tmp.upsellImage };
   const items = [closure_6(closure_3, obj), ,];
   obj1 = { style: tmp.textContainer, children: null };
   const obj2 = {
@@ -219,8 +219,8 @@ export default function ForLaterIntro(type) {
     style: tmp.text,
     children: null,
   };
-  const intl = tmp2(1236).intl;
-  const t = tmp2(1236).t;
+  const intl = tmp2(1233).intl;
+  const t = tmp2(1233).t;
   obj2[3] = intl.string(tmp4 ? t["5Iw19e"] : t["93WOd1"]);
   const items1 = [closure_6(Text.Heading, obj2)];
   const obj3 = {
@@ -230,10 +230,10 @@ export default function ForLaterIntro(type) {
     includeFontPadding: true,
     children: null,
   };
-  const intl2 = tmp2(1236).intl;
-  const t2 = tmp2(1236).t;
-  const intl3 = tmp2(1236).intl;
-  const t3 = tmp2(1236).t;
+  const intl2 = tmp2(1233).intl;
+  const t2 = tmp2(1233).t;
+  const intl3 = tmp2(1233).intl;
+  const t3 = tmp2(1233).t;
   obj3[4] = intl2.format(tmp4 ? t2.YI4UjI : t2["5TSj/g"], { itemName: intl3.string(tmp4 ? t3.mJ3P0N : t3.tpxJto) });
   items1[1] = closure_6(Text.Text, obj3);
   obj1[1] = items1;

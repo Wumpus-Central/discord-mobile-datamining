@@ -1,17 +1,17 @@
 // discord_app/modules/icymi/native/util/openDetailsActionSheet.tsx
 import set from "../../../../../_runtime/00002_set.js";
-import asyncRequireImpl from "../../../../../_runtime/02009_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02008_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import _modDef8622 from "../../ICYMIActionCreators.tsx";
+import _modDef8637 from "../../ICYMIActionCreators.tsx";
 
 const result = set.fileFinishedImporting("modules/icymi/native/util/openDetailsActionSheet.tsx");
 
 export const openDetailsActionSheet = function openDetailsActionSheet(arg0) {
   ({ id, type } = arg0);
   ({ guildId, channelId } = arg0);
-  _modDef8622.itemInteracted(id, type, "overflow_menu");
-  const obj = _modDef8622;
-  _modDef8622.feedItemActioned({
+  _modDef8637.itemInteracted(id, type, "overflow_menu");
+  const obj = _modDef8637;
+  _modDef8637.feedItemActioned({
     itemId: id,
     itemType: type,
     actionParameters: {
@@ -21,8 +21,8 @@ export const openDetailsActionSheet = function openDetailsActionSheet(arg0) {
       actionDestinationType: null,
     },
   });
-  const obj2 = _modDef8622;
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(16046, dependencyMap.paths), "ItemDetailsActionSheet", {
+  const obj2 = _modDef8637;
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(16277, dependencyMap.paths), "ItemDetailsActionSheet", {
     guildId,
     channelId,
     id,

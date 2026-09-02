@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/QuestContextMenu.tsx
 import getSystemLocale from "../../../intl/index.native.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
-import registerAssetDefault from "../../../../_runtime/08799_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/08814_registerAsset.js";
 import closure_4 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import closure_6 from "../QuestStore.tsx";
@@ -123,30 +123,31 @@ const memoResult = importAllResult.memo((children) => {
   let items3 = [quest, sourceQuestContent];
   callback2 = handleResetDismissibilityClick.useCallback(() => {
     let obj = additionalItems(sourceQuestContent[21]);
-    obj = { quest, isTargetedDisclosure: false, trackingCtx: null };
-    obj = {
+    obj = { creative: null, isTargetedDisclosure: false, trackingCtx: null };
+    obj = { type: quest(sourceQuestContent[22]).AdCreativeType.QUEST, quest };
+    obj[0] = obj;
+    obj[2] = {
       content: quest(sourceQuestContent[10]).QuestContent.QUEST_HOME_MOBILE,
       ctaContent: quest(sourceQuestContent[19]).QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE,
       sourceQuestContent,
     };
-    obj[2] = obj;
     obj.showModal(obj);
   }, items3);
   const items4 = [quest.id];
   callback3 = handleResetDismissibilityClick.useCallback(
-    () => quest(sourceQuestContent[22]).manuallyStartConsoleQuest(quest.id, true),
+    () => quest(sourceQuestContent[23]).manuallyStartConsoleQuest(quest.id, true),
     items4,
   );
   const items5 = [quest.id];
   callback4 = handleResetDismissibilityClick.useCallback(
-    () => quest(sourceQuestContent[22]).manualStopConsoleQuest(quest.id),
+    () => quest(sourceQuestContent[23]).manualStopConsoleQuest(quest.id),
     items5,
   );
   const items6 = [externalCtaLabel, callback, callback2, flag, callback1];
   memo = handleResetDismissibilityClick.useMemo(() => {
     let obj = {
       label: externalCtaLabel,
-      IconComponent: quest(sourceQuestContent[23]).LinkExternalSmallIcon,
+      IconComponent: quest(sourceQuestContent[24]).LinkExternalSmallIcon,
       action: callback,
       accessibilityRole: "link",
     };
@@ -155,13 +156,13 @@ const memoResult = importAllResult.memo((children) => {
     const intl = quest(sourceQuestContent[7]).intl;
     obj[0] = intl.string(quest(sourceQuestContent[7]).t.GcsZKJ);
     obj[1] = callback2;
-    obj[2] = additionalItems(sourceQuestContent[24]);
+    obj[2] = additionalItems(sourceQuestContent[25]);
     items[1] = obj;
     if (flag) {
       obj = { label: null, IconComponent: null, action: null };
       const intl2 = tmp(tmp2[7]).intl;
       obj[0] = intl2.string(tmp(tmp2[7]).t.WqhZss);
-      obj[1] = tmp(tmp2[25]).CopyIcon;
+      obj[1] = tmp(tmp2[26]).CopyIcon;
       obj[2] = callback1;
       const items1 = [obj];
       let items2 = items1;
@@ -173,7 +174,7 @@ const memoResult = importAllResult.memo((children) => {
   }, items6);
   const items7 = [quest, callback3, callback4];
   memo1 = handleResetDismissibilityClick.useMemo(() => {
-    let obj = quest(sourceQuestContent[26]);
+    let obj = quest(sourceQuestContent[27]);
     if (obj.isConsoleQuest(quest)) {
       obj = { label: "Start Console Heartbeat", action: null };
       obj[1] = callback3;
@@ -213,7 +214,7 @@ const memoResult = importAllResult.memo((children) => {
     items[HermesBuiltin.arraySpread(memo1, 5)] = {
       label: "Copy Quest ID",
       action() {
-        return closure_1_0(closure_1_2[27]).copy(id.id);
+        return closure_1_0(closure_1_2[28]).copy(id.id);
       },
     };
     return items;
@@ -240,7 +241,7 @@ const memoResult = importAllResult.memo((children) => {
     }
     let CheckmarkLargeIcon;
     if (id === quest.id) {
-      CheckmarkLargeIcon = quest(sourceQuestContent[28]).CheckmarkLargeIcon;
+      CheckmarkLargeIcon = quest(sourceQuestContent[29]).CheckmarkLargeIcon;
     }
     obj[2] = CheckmarkLargeIcon;
     return obj;
@@ -267,10 +268,10 @@ const memoResult = importAllResult.memo((children) => {
     return tmp6;
   }, items10);
   const onOpen = obj7.useCallback(() => {
-    let obj = quest(sourceQuestContent[29]);
+    let obj = quest(sourceQuestContent[30]);
     if (
       obj.shouldMigrateToAdAnalyticsInterface(
-        quest(sourceQuestContent[29]).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
+        quest(sourceQuestContent[30]).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
         "quest_context_menu",
       )
     ) {
@@ -283,15 +284,15 @@ const memoResult = importAllResult.memo((children) => {
         sourceQuestContent: null,
         impressionId: null,
       };
-      obj[0] = tmp(tmp2[31]).AdUserActionType.CLICK_INTERNAL;
-      obj[1] = tmp(tmp2[32]).AdCreativeType.QUEST;
+      obj[0] = tmp(tmp2[32]).AdUserActionType.CLICK_INTERNAL;
+      obj[1] = tmp(tmp2[22]).AdCreativeType.QUEST;
       obj[2] = quest.id;
       obj[3] = tmp(tmp2[19]).QuestContentCTA.OPEN_CONTEXT_MENU;
       obj[4] = tmp(tmp2[10]).QuestContent.QUEST_HOME_MOBILE;
       obj[5] = sourceQuestContent;
       obj[6] = questImpressionId;
-      tmp(tmp2[30]).captureAdUserAction(obj);
-      const tmpResult = tmp(tmp2[30]);
+      tmp(tmp2[31]).captureAdUserAction(obj);
+      const tmpResult = tmp(tmp2[31]);
     } else {
       obj = { questId: null, questContent: null, questContentCTA: null, sourceQuestContent: null };
       obj[0] = quest.id;

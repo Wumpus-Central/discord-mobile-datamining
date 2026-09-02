@@ -13,19 +13,19 @@ export const useRelativeTimestamp = function useRelativeTimestamp(timestamp) {
   }
   closure_2 = undefined;
   const tmp = callback(
-    React.useState(() => timestamp(7386).getRelativeTimestamp(timestamp, flag)),
+    React.useState(() => timestamp(7395).getRelativeTimestamp(timestamp, flag)),
     2,
   );
   closure_2 = tmp[1];
   const items = [timestamp, flag];
   const effect = React.useEffect(() => {
-    dependencyMap(timestamp(7386).getRelativeTimestamp(interval, flag));
+    dependencyMap(timestamp(7395).getRelativeTimestamp(interval, flag));
     const diff = Date.now() - interval;
-    if (diff <= flag(687).Millis.DAY) {
-      if (diff >= tmp4(687).Millis.HOUR) {
-        let MINUTE = tmp4(687).Millis.HOUR;
+    if (diff <= flag(684).Millis.DAY) {
+      if (diff >= tmp4(684).Millis.HOUR) {
+        let MINUTE = tmp4(684).Millis.HOUR;
       } else {
-        MINUTE = tmp4(687).Millis.MINUTE;
+        MINUTE = tmp4(684).Millis.MINUTE;
       }
       const _setInterval = setInterval;
       interval = setInterval(
@@ -37,7 +37,7 @@ export const useRelativeTimestamp = function useRelativeTimestamp(timestamp) {
       );
       return () => clearInterval(closure_0);
     }
-    const obj = timestamp(7386);
+    const obj = timestamp(7395);
   }, items);
   return tmp[0];
 };

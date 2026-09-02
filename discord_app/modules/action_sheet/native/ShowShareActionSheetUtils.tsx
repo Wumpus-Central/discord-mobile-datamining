@@ -26,14 +26,14 @@ export const getMediaShareParams = function getMediaShareParams(source) {
     if (true !== source.disableDownload) {
       if (null != source.shareURI) {
         if (obj11.isDiscordDirectAssetUrl(source.shareURI)) {
-          let tmpResult = tmp(500);
+          let tmpResult = tmp(1234);
           if (tmpResult.isAndroid()) {
             obj = { presentDelayMs: null };
             obj[0] = closure_4;
           }
           ({ videoURI, contentType } = source);
           if (null != videoURI) {
-            tmpResult = tmp(5579);
+            tmpResult = tmp(5587);
             const decideFileExtensionResult = tmpResult.decideFileExtension(videoURI, contentType, true);
             obj = { mediaFallbackUrl: null, mediaStagingOptions: null };
             obj[0] = videoURI;
@@ -48,7 +48,7 @@ export const getMediaShareParams = function getMediaShareParams(source) {
             obj[1] = tmp11;
             return obj;
           } else {
-            const decideFileExtensionResult1 = tmp(5579).decideFileExtension(source.uri, contentType, true);
+            const decideFileExtensionResult1 = tmp(5587).decideFileExtension(source.uri, contentType, true);
             const obj2 = { mediaFallbackUrl: null, mediaStagingOptions: null };
             obj2[0] = source.shareURI;
             let tmp6;

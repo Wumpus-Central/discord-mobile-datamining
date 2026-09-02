@@ -16,9 +16,9 @@ export default function GuildDirectoryMoreMenu(entry) {
   ({ isEntryAdmin, canRemove } = tmp2);
   if (tmp2.canEdit) {
     let obj = { label: null, IconComponent: null, action: null };
-    let intl = entry(1236).intl;
-    obj[0] = intl.string(entry(1236).t.XnuOvN);
-    obj[1] = entry(10327).PencilIcon;
+    let intl = entry(1233).intl;
+    obj[0] = intl.string(entry(1233).t.XnuOvN);
+    obj[1] = entry(10349).PencilIcon;
     obj[2] = function handleEdit() {
       let obj = closure_1_1(closure_1_3[3]);
       obj = { entry };
@@ -28,8 +28,8 @@ export default function GuildDirectoryMoreMenu(entry) {
   }
   if (canRemove) {
     obj = { label: null, IconComponent: null, variant: "destructive", action: null };
-    let intl2 = entry(1236).intl;
-    obj[0] = intl2.string(entry(1236).t.KUxYWH);
+    let intl2 = entry(1233).intl;
+    obj[0] = intl2.string(entry(1233).t.KUxYWH);
     obj[1] = entry(4436).TrashIcon;
     obj[3] = function handleRemove() {
       let obj = closure_1_1(closure_1_3[4]);
@@ -64,9 +64,9 @@ export default function GuildDirectoryMoreMenu(entry) {
   }
   if (!isEntryAdmin) {
     obj = { label: null, IconComponent: null, variant: "destructive", action: null };
-    let intl3 = entry(1236).intl;
-    obj[0] = intl3.string(entry(1236).t.Aen9eh);
-    obj[1] = entry(8790).FlagIcon;
+    let intl3 = entry(1233).intl;
+    obj[0] = intl3.string(entry(1233).t.Aen9eh);
+    obj[1] = entry(8805).FlagIcon;
     obj[3] = function handleReport() {
       const result = entry(closure_1_3[8]).showReportModalForGuildDirectoryEntry(entry);
     };
@@ -82,13 +82,13 @@ export default function GuildDirectoryMoreMenu(entry) {
       const merged1 = Object.assign(merged);
       obj.size = "sm";
       obj.variant = "secondary";
-      const intl = entry(1236).intl;
-      obj.accessibilityLabel = intl.string(entry(1236).t.PdRCRg);
-      obj = { size: "sm", color: callback(712).colors.WHITE };
-      obj.icon = callback2(entry(8798).MoreHorizontalIcon, obj);
-      return callback2(entry(8006).IconButton, obj);
+      const intl = entry(1233).intl;
+      obj.accessibilityLabel = intl.string(entry(1233).t.PdRCRg);
+      obj = { size: "sm", color: callback(709).colors.WHITE };
+      obj.icon = callback2(entry(8813).MoreHorizontalIcon, obj);
+      return callback2(entry(8015).IconButton, obj);
     };
-    tmp9 = jsx(entry(8792).ContextMenu, { items: null, children: null });
+    tmp9 = jsx(entry(8807).ContextMenu, { items: null, children: null });
   }
   return tmp9;
 }

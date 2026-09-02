@@ -15,13 +15,13 @@ export const getNoResultsAltSource = function getNoResultsAltSource(theme) {
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(9722);
+      return callback(9744);
     },
     darker() {
-      return callback(9723);
+      return callback(9745);
     },
     light() {
-      return callback(7777);
+      return callback(7786);
     },
   };
   return obj.getIllustrationSource(theme, obj);
@@ -30,13 +30,13 @@ export const useNoResultsAltSource = function useNoResultsAltSource() {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(9722);
+      return callback(9744);
     },
     darker() {
-      return callback(9723);
+      return callback(9745);
     },
     light() {
-      return callback(7777);
+      return callback(7786);
     },
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -45,13 +45,13 @@ export const NoResultsAlt = function NoResultsAlt(arg0) {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(9722);
+      return callback(9744);
     },
     darker() {
-      return callback(9723);
+      return callback(9745);
     },
     light() {
-      return callback(7777);
+      return callback(7786);
     },
   };
   obj = {};

@@ -47,7 +47,7 @@ const result = require("set").fileFinishedImporting("modules/collectibles/native
 
 export const ShopSkipCategoriesFilter = function ShopSkipCategoriesFilter() {
   const tmp = callback2();
-  let obj = stateFromStores(589);
+  let obj = stateFromStores(586);
   const items = [closure_4];
   stateFromStores = obj.useStateFromStores(items, () => skipNumCategories.skipNumCategories);
   obj = { style: tmp.container, children: null };

@@ -49,7 +49,7 @@ const memoResult = importAllResult.memo((arg0) => {
   if (first == null) {
     first = null;
   }
-  const intl = tmp2(1236).intl;
+  const intl = tmp2(1233).intl;
   const tmp5 = importDefault;
   const tmp6 = useGameNameAndCoverImageDefault;
   const coverImageUrl = useGameNameAndCoverImageDefault(first, intl.string(getSystemLocale.t.VQq92a)).coverImageUrl;
@@ -58,9 +58,9 @@ const memoResult = importAllResult.memo((arg0) => {
   } else {
     const features = guild.features;
     const hasItem = features.has(constants.VERIFIED);
-    const intl4 = tmp2(1236).intl;
+    const intl4 = tmp2(1233).intl;
     const string = intl4.string;
-    const t = tmp2(1236).t;
+    const t = tmp2(1233).t;
     if (hasItem) {
       let stringResult = string(t.uUARXe);
     } else {
@@ -73,17 +73,17 @@ const memoResult = importAllResult.memo((arg0) => {
       return callback(closure_1_7.USER_DISMISS);
     };
     obj[2] = tmp.closeButton;
-    obj[3] = callback2(tmp2(5551).XSmallIcon, { size: "sm", color: "text-default" });
-    const items = [callback2(tmp2(5068).PressableOpacity, obj), , , ,];
+    obj[3] = callback2(tmp2(5559).XSmallIcon, { size: "sm", color: "text-default" });
+    const items = [callback2(tmp2(5076).PressableOpacity, obj), , , ,];
     obj1 = { imageSrc: null };
     obj1[0] = coverImageUrl;
     items[1] = callback2(importDefaultResult1Default, obj1);
     const obj2 = { variant: "text-md/medium", color: "text-overlay-light", style: null, children: null };
     obj2[2] = tmp.centeredText;
-    const intl2 = tmp2(1236).intl;
+    const intl2 = tmp2(1233).intl;
     const obj3 = { gameName: null };
     obj3[0] = tmp8;
-    obj2[3] = intl2.format(tmp2(1236).t.Q11WTQ, obj3);
+    obj2[3] = intl2.format(tmp2(1233).t.Q11WTQ, obj3);
     items[2] = callback2(tmp2(4474).Text, obj2);
     const obj4 = { variant: "text-sm/normal", color: "text-overlay-light", style: null, children: null };
     const items1 = [,];
@@ -94,9 +94,9 @@ const memoResult = importAllResult.memo((arg0) => {
     const obj5 = { style: null, children: null };
     obj5[0] = tmp.cta;
     const obj6 = { variant: "primary", size: "sm", text: null, icon: null, iconPosition: "end", onPress: null };
-    const intl3 = tmp2(1236).intl;
-    obj6[2] = intl3.string(tmp2(1236).t["2u6ZlY"]);
-    obj6[3] = callback2(tmp2(8728).LinkExternalSmallIcon, { size: "xs", color: "white" });
+    const intl3 = tmp2(1233).intl;
+    obj6[2] = intl3.string(tmp2(1233).t["2u6ZlY"]);
+    obj6[3] = callback2(tmp2(8743).LinkExternalSmallIcon, { size: "xs", color: "white" });
     obj6[5] = callback(function* () {
       if (v0 === 2) {
         v0 = 3;
@@ -155,7 +155,7 @@ const memoResult = importAllResult.memo((arg0) => {
     obj5[1] = callback2(tmp2(4928).Button, obj6);
     items[4] = callback2(View, obj5);
     obj[2] = items;
-    return callback3(tmp2(5601).Card, obj);
+    return callback3(tmp2(5609).Card, obj);
   }
   const tmp6Result = useGameNameAndCoverImageDefault(first, intl.string(getSystemLocale.t.VQq92a));
 });

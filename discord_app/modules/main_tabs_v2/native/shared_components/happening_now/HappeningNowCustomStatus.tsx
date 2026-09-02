@@ -94,7 +94,7 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
   const tmp4 = first(React.useState(undefined), 2);
   first = tmp4[0];
   React = tmp4[1];
-  let obj = user(647);
+  let obj = user(644);
   let items = [closure_8];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     let obj = closure_1_8;
@@ -109,7 +109,7 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
   obj = { userId: user.id, guildId };
   const tmp2 = first(React.useState(undefined), 2);
-  let obj2 = user(8926);
+  let obj2 = user(8940);
   const displayNameStylesFont = obj2.useDisplayNameStylesFont({ displayNameStyles: activity(4747)(obj) });
   items1 = [activity.emoji];
   const effect = React.useEffect(() => {
@@ -223,10 +223,10 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
   if (null != activity.emoji) {
     num = 1;
   }
-  let tmp6Result = tmp6(9087);
+  let tmp6Result = tmp6(9101);
   const gameMentionsAsPlainText = tmp6Result.useGameMentionsAsPlainText(activity.state);
   const items2 = [userTitle, ,];
-  tmp6Result = tmp6(9425);
+  tmp6Result = tmp6(9438);
   items2[1] = tmp6Result.getStatusLabel(status);
   items2[2] = gameMentionsAsPlainText;
   const joined = items2.join(", ");
@@ -261,7 +261,7 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
       obj5[0] = activity.emoji;
       obj5[1] = c16;
       obj5[2] = tmp.largeEmoji;
-      tmp15Result = tmp15(tmp9(9220), obj5);
+      tmp15Result = tmp15(tmp9(9234), obj5);
     }
     const items4 = [
       tmp15Result,
@@ -305,18 +305,18 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
     };
     obj7[0] = user;
     obj7[1] = user.avatarDecoration;
-    obj7[2] = tmp6(1297).AvatarSizes.XSMALL;
+    obj7[2] = tmp6(1296).AvatarSizes.XSMALL;
     obj7[3] = guildId;
     obj7[4] = status;
     obj7[5] = isMobileOnline;
     obj7[6] = isVROnline;
     obj7[7] = tmp.statusAvatar;
     obj7[8] = STATUS_CUTOUT_SMALL;
-    const items6 = [tmp15(tmp6(1297).Avatar, obj7), ,];
+    const items6 = [tmp15(tmp6(1296).Avatar, obj7), ,];
     const obj8 = { noMargin: true, displayNameFont: null, children: null };
     obj8[1] = displayNameStylesFont;
     obj8[2] = userTitle;
-    items6[1] = tmp15(tmp6(14891).HappeningNowCardHeader, obj8);
+    items6[1] = tmp15(tmp6(15120).HappeningNowCardHeader, obj8);
     const state = activity.state;
     let num2;
     if (state != null) {
@@ -346,7 +346,7 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
     obj10[0] = items5;
     let tmp18Result = tmp18(closure_14, obj10);
     const tmp19 = closure_14;
-    tmp6Result1 = tmp6(500);
+    tmp6Result1 = tmp6(1234);
   } else {
     const obj11 = { children: null };
     const obj12 = {
@@ -361,18 +361,18 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
     };
     obj12[0] = user;
     obj12[1] = user.avatarDecoration;
-    obj12[2] = tmp6(1297).AvatarSizes.LARGE;
+    obj12[2] = tmp6(1296).AvatarSizes.LARGE;
     obj12[3] = guildId;
     obj12[4] = status;
     obj12[5] = isMobileOnline;
     obj12[6] = isVROnline;
-    const items7 = [tmp15(tmp6(1297).Avatar, obj12)];
+    const items7 = [tmp15(tmp6(1296).Avatar, obj12)];
     const obj13 = { style: null, children: null };
     obj13[0] = tmp.customStatusContextContainer;
     const obj14 = { noMargin: true, displayNameFont: null, children: null };
     obj14[1] = displayNameStylesFont;
     obj14[2] = userTitle;
-    const items8 = [tmp15(tmp6(14891).HappeningNowCardHeader, obj14)];
+    const items8 = [tmp15(tmp6(15120).HappeningNowCardHeader, obj14)];
     const obj15 = {
       ellipsizeMode: "tail",
       variant: "text-xs/medium",
@@ -391,5 +391,5 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
   }
   obj1[1] = tmp18Result;
   obj[5] = closure_12(closure_6, obj1);
-  return closure_12(activity(14891), obj);
+  return closure_12(activity(15120), obj);
 };

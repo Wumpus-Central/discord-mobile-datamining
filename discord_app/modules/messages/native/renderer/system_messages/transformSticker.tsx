@@ -23,10 +23,10 @@ export const transformSticker = function transformSticker(tmp5Result1) {
     str2 = "";
   }
   obj.url = str2;
-  const NativeLottieRenderMode = tmp(7908).NativeLottieRenderMode;
+  const NativeLottieRenderMode = tmp(7917).NativeLottieRenderMode;
   obj.renderMode =
     setting === StickerAnimationSettings.ALWAYS_ANIMATE ? NativeLottieRenderMode.LOOP : NativeLottieRenderMode.STILL;
-  tmpResult = tmp(7860);
+  tmpResult = tmp(7869);
   obj = {
     expensive() {
       const intl = tmp5Result1(closure_1_1[4]).intl;
@@ -34,10 +34,10 @@ export const transformSticker = function transformSticker(tmp5Result1) {
     },
     cheap: null,
   };
-  let intl = tmp(1236).intl;
+  let intl = tmp(1233).intl;
   obj[1] = intl.string(require("../../../../../intl/index.native.tsx").t["fT+Yjp"]);
   obj.accessibilityLabel = tmpResult.getAccessibilityLabelOrCheapFallbackUnsafe(obj);
-  const intl2 = tmp(1236).intl;
+  const intl2 = tmp(1233).intl;
   obj.accessibilityHint = intl2.string(require("../../../../../intl/index.native.tsx").t.GCEruV);
   return obj;
 };

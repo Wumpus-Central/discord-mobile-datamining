@@ -1,7 +1,7 @@
 // discord_common/js/packages/flux/LoggingUtils.tsx
 import set from "../../../../_runtime/00002_set.js";
 import log from "../logger/Logger.tsx";
-import EventEmitter2 from "../../../../_runtime/00652_EventEmitter.js";
+import EventEmitter2 from "../../../../_runtime/00649_EventEmitter.js";
 
 const logger = new log.Logger("Flux");
 const EventEmitter = EventEmitter2.EventEmitter;

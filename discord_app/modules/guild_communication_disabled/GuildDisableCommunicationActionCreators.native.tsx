@@ -1,6 +1,6 @@
 // discord_app/modules/guild_communication_disabled/GuildDisableCommunicationActionCreators.native.tsx
 import noopAll from "../../../_runtime/00019_noop.js";
-import asyncRequireImpl from "../../../_runtime/02009_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/02008_asyncRequireImpl.js";
 import _modDef4723 from "../../actions/ModalActionCreators.tsx";
 import _modDef4858 from "../../actions/native/AlertActionCreators.tsx";
 import closure_3 from "../../stores/UserStore.tsx";
@@ -21,7 +21,7 @@ export const openDisableCommunication = function openDisableCommunication(userId
     obj[0] = guildId;
     obj[1] = user;
     obj[2] = cancelButtonCallback;
-    obj.pushLazy(asyncRequireImpl(11413, dependencyMap.paths), obj);
+    obj.pushLazy(asyncRequireImpl(11636, dependencyMap.paths), obj);
   }
 };
 export const openEnableCommunication = function openEnableCommunication(arg0) {

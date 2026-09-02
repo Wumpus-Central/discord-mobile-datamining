@@ -5,7 +5,7 @@ import Text from "../../../../../design/components/Text/native/Text.tsx";
 import preloadDefault from "../../../../../components_native/common/FastImage.tsx";
 import Form from "../../../../../design/void/Form/native/index.tsx";
 import StageSparkleInnerDefault from "../../../../stage_channels/native/components/StageSparkle.tsx";
-import registerAssetDefault from "../../../../../../_runtime/09770_registerAsset.js";
+import registerAssetDefault from "../../../../../../_runtime/09792_registerAsset.js";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../../../stores/PresenceStore.tsx";
@@ -262,11 +262,11 @@ const memoResult = importAllResult.memo((eventUser) => {
   eventUser = eventUser.eventUser;
   let analyticsLocations;
   const tmp = callback3();
-  analyticsLocations = analyticsLocations(5953)().analyticsLocations;
-  let obj = eventUser(589);
+  analyticsLocations = analyticsLocations(5961)().analyticsLocations;
+  let obj = eventUser(586);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getUser(eventUser.user_id));
-  obj1 = eventUser(589);
+  obj1 = eventUser(586);
   const items1 = [closure_5];
   const items2 = [eventUser.user_id];
   const stateFromStoresObject = obj1.useStateFromStoresObject(
@@ -296,14 +296,14 @@ const memoResult = importAllResult.memo((eventUser) => {
     obj[2] = isMobileOnline;
     obj[3] = isVROnline;
     obj[4] = status;
-    obj[5] = tmp4(1297).AvatarSizes.REFRESH_MEDIUM_32;
-    tmp7Result = tmp7(tmp4(1297).Avatar, obj);
+    obj[5] = tmp4(1296).AvatarSizes.REFRESH_MEDIUM_32;
+    tmp7Result = tmp7(tmp4(1296).Avatar, obj);
   }
   obj[1] = tmp7Result;
   obj1 = { user: stateFromStores, nick: null, usernameStyle: null, nicknameStyle: null };
   const member = eventUser.member;
   let nick;
-  let tmp2Result = tmp2(9771);
+  let tmp2Result = tmp2(9793);
   if (member != null) {
     nick = member.nick;
   }
@@ -317,7 +317,7 @@ const memoResult = importAllResult.memo((eventUser) => {
   obj[3] = function onPress() {
     analyticsLocations(closure_1_2[20])({ userId: eventUser.user_id, sourceAnalyticsLocations: analyticsLocations });
   };
-  return closure_7(eventUser(8363).FormRow, obj, eventUser.user_id);
+  return closure_7(eventUser(8372).FormRow, obj, eventUser.user_id);
 });
 EventDetailRsvpSheet.displayName = "EventDetailRsvpSheet";
 let obj3 = {

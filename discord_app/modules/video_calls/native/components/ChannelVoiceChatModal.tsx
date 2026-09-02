@@ -1,6 +1,6 @@
 // discord_app/modules/video_calls/native/components/ChannelVoiceChatModal.tsx
 import computeChannelNameDefault from "../../../channel/useChannelName.tsx";
-import _modDef10661 from "../../../main_tabs_v2/native/utils/ModalStackNavigator.tsx";
+import _modDef10882 from "../../../main_tabs_v2/native/utils/ModalStackNavigator.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
@@ -21,12 +21,12 @@ export default function ChannelVoiceChatModal(channel) {
   if (tmp2 == null) {
     str = "";
   }
-  const tmp5 = _modDef10661;
+  const tmp5 = _modDef10882;
   return (
     <tmp5
       screenKey="StageVoiceChat"
       title={str}
-      titleIcon={jsx(channel(5046).StageIcon, { size: "sm" })}
+      titleIcon={jsx(channel(5050).StageIcon, { size: "sm" })}
       render={function render() {
         let guild_id = channel.guild_id;
         if (guild_id == null) {

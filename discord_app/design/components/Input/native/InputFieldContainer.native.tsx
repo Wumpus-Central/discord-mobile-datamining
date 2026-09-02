@@ -40,11 +40,11 @@ function useInputStyles(size) {
   }
   tmpResult = tmp(4197);
   if ("sm" === str) {
-    let INPUT_FIELD_TEXT_STYLE_LG = tmp7(712).modules.mobile.INPUT_FIELD_TEXT_STYLE_SM;
+    let INPUT_FIELD_TEXT_STYLE_LG = tmp7(709).modules.mobile.INPUT_FIELD_TEXT_STYLE_SM;
   } else if ("md" === str) {
-    INPUT_FIELD_TEXT_STYLE_LG = tmp7(712).modules.mobile.INPUT_FIELD_TEXT_STYLE_MD;
+    INPUT_FIELD_TEXT_STYLE_LG = tmp7(709).modules.mobile.INPUT_FIELD_TEXT_STYLE_MD;
   } else if ("lg" === str) {
-    INPUT_FIELD_TEXT_STYLE_LG = tmp7(712).modules.mobile.INPUT_FIELD_TEXT_STYLE_LG;
+    INPUT_FIELD_TEXT_STYLE_LG = tmp7(709).modules.mobile.INPUT_FIELD_TEXT_STYLE_LG;
   }
   const token1 = tmpResult.useToken(INPUT_FIELD_TEXT_STYLE_LG);
   const obj = map;
@@ -142,7 +142,7 @@ let closure_9 = createCacheKey.createStyles(() => {
   const obj9 = {};
   const merged = Object.assign(Text.TextStyleSheet[str2]);
   obj9.lineHeight = undefined;
-  const colors = tmp3(712).colors;
+  const colors = tmp3(709).colors;
   obj9.color = flag ? colors.TEXT_MUTED : colors.TEXT_DEFAULT;
   obj9.flexGrow = 1;
   obj6[6] = obj9;

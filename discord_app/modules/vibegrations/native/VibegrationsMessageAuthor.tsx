@@ -18,7 +18,7 @@ export default function VibegrationsMessageAuthor(userId) {
   userId = userId.userId;
   const items = [userId];
   const effect = React.useEffect(() => userId(closure_1_1[6]).requestMessageAuthor(userId), items);
-  let obj = userId(589);
+  let obj = userId(586);
   const items1 = [closure_4];
   const items2 = [userId];
   const stateFromStores = obj.useStateFromStores(
@@ -38,9 +38,9 @@ export default function VibegrationsMessageAuthor(userId) {
     obj = { style: null, children: null };
     obj[0] = tmp.author;
     obj = { size: null, user: null, guildId: "r" };
-    obj[0] = tmp3(1297).AvatarSizes.SIZE_16;
+    obj[0] = tmp3(1296).AvatarSizes.SIZE_16;
     obj[1] = stateFromStores;
-    const items3 = [callback(tmp3(1297).Avatar, obj)];
+    const items3 = [callback(tmp3(1296).Avatar, obj)];
     obj1 = { variant: "text-xs/semibold", color: "text-muted", children: null };
     obj1[2] = tmp7;
     items3[1] = callback(tmp3(4474).Text, obj1);

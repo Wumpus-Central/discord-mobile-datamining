@@ -54,7 +54,7 @@ function _fetchApplicationCommandIndex() {
                   closure_0 = arg0;
                   c2 = 0;
                   c3 = 0;
-                  return (/* F122897 */ function*() { ... })();
+                  return (/* F124751 */ function*() { ... })();
                 });
                 closure_7 = tmp;
                 const apply = tmp.apply;
@@ -67,7 +67,7 @@ function _fetchApplicationCommandIndex() {
               }
               function end(error) {
                 const diff = performance.now() - c3;
-                let obj = lib2(698);
+                let obj = lib2(695);
                 obj = { duration_ms: diff, error: error.error, aborted: lib2.signal.aborted, include_applications: true, retries: Math.max(constants - 1, 0), kind: null, command_type: null, url: dependencyMap, target_type: lib.type, target_id: null, failure_statuses: null };
                 const type = lib.type;
                 if ("channel" === type) {
@@ -80,8 +80,8 @@ function _fetchApplicationCommandIndex() {
                     if ("application" === type) {
                       channelId = tmp3.applicationId;
                     } else {
-                      lib(1471).assertNever(tmp3);
-                      const obj3 = lib(1471);
+                      lib(1470).assertNever(tmp3);
+                      const obj3 = lib(1470);
                     }
                   }
                 }
@@ -107,7 +107,7 @@ function _fetchApplicationCommandIndex() {
                 c2 = closure_1_5.APPLICATION_COMMAND_INDEX_USER;
               }
               function fetch() {
-                const HTTP = lib(530).HTTP;
+                const HTTP = lib(527).HTTP;
                 const value = HTTP.get({
                   url: dependencyMap,
                   retries: 3 - c4 - 1,

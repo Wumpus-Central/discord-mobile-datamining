@@ -27,11 +27,11 @@ function formatMessagePreview(type, isBlocked) {
     type = type.type;
     const tmp4 = require;
     if (set.MessageTypes.DEFAULT !== type) {
-      if (tmp4(686).MessageTypes.CHANGELOG !== type) {
-        if (tmp4(686).MessageTypes.REPLY !== type) {
-          if (tmp4(686).MessageTypes.CHAT_INPUT_COMMAND !== type) {
-            if (tmp4(686).MessageTypes.CONTEXT_MENU_COMMAND !== type) {
-              if (tmp4(686).MessageTypes.POLL_RESULT !== type) {
+      if (tmp4(683).MessageTypes.CHANGELOG !== type) {
+        if (tmp4(683).MessageTypes.REPLY !== type) {
+          if (tmp4(683).MessageTypes.CHAT_INPUT_COMMAND !== type) {
+            if (tmp4(683).MessageTypes.CONTEXT_MENU_COMMAND !== type) {
+              if (tmp4(683).MessageTypes.POLL_RESULT !== type) {
                 let flag = false;
               }
               if (flag) {
@@ -59,8 +59,8 @@ function formatMessagePreview(type, isBlocked) {
                 }
                 if (type.hasFlag(MessageFlags.IS_VOICE_MESSAGE)) {
                   const obj4 = { type: "text", text: null };
-                  const intl11 = tmp4(1236).intl;
-                  obj4[1] = intl11.string(tmp4(1236).t.slFYgi);
+                  const intl11 = tmp4(1233).intl;
+                  obj4[1] = intl11.string(tmp4(1233).t.slFYgi);
                   tmp10 = obj4;
                 } else if (type.attachments.length > 0) {
                   const attachments = type.attachments;
@@ -80,31 +80,31 @@ function formatMessagePreview(type, isBlocked) {
                   }
                   if (everyResult) {
                     const obj5 = { type: "text", text: null, trailingIcon: "image" };
-                    const intl10 = tmp4(1236).intl;
+                    const intl10 = tmp4(1233).intl;
                     const obj6 = { count: null };
                     obj6[0] = type.attachments.length;
-                    obj5[1] = intl10.formatToPlainString(tmp4(1236).t.h4pFfU, obj6);
+                    obj5[1] = intl10.formatToPlainString(tmp4(1233).t.h4pFfU, obj6);
                     let obj11 = obj5;
                   } else if (everyResult1) {
                     const obj7 = { type: "text", text: null, trailingIcon: "video" };
-                    const intl9 = tmp4(1236).intl;
+                    const intl9 = tmp4(1233).intl;
                     const obj8 = { count: null };
                     obj8[0] = type.attachments.length;
-                    obj7[1] = intl9.formatToPlainString(tmp4(1236).t.SJ6pPX, obj8);
+                    obj7[1] = intl9.formatToPlainString(tmp4(1233).t.SJ6pPX, obj8);
                     obj11 = obj7;
                   } else if (everyResult2) {
                     const obj9 = { type: "text", text: null, trailingIcon: "audio" };
-                    const intl8 = tmp4(1236).intl;
+                    const intl8 = tmp4(1233).intl;
                     const obj10 = { count: null };
                     obj10[0] = type.attachments.length;
-                    obj9[1] = intl8.formatToPlainString(tmp4(1236).t.fnO3hK, obj10);
+                    obj9[1] = intl8.formatToPlainString(tmp4(1233).t.fnO3hK, obj10);
                     obj11 = obj9;
                   } else {
                     obj11 = { type: "text", text: null, trailingIcon: "attachment" };
-                    const intl7 = tmp4(1236).intl;
+                    const intl7 = tmp4(1233).intl;
                     const obj12 = { count: null };
                     obj12[0] = type.attachments.length;
-                    obj11[1] = intl7.formatToPlainString(tmp4(1236).t["89ihS8"], obj12);
+                    obj11[1] = intl7.formatToPlainString(tmp4(1233).t["89ihS8"], obj12);
                   }
                   tmp10 = obj11;
                 } else if (type.embeds.length > 0) {
@@ -146,24 +146,24 @@ function formatMessagePreview(type, isBlocked) {
                   }
                   if (everyResult3) {
                     const obj13 = { type: "text", text: null, trailingIcon: "image" };
-                    const intl6 = tmp4(1236).intl;
+                    const intl6 = tmp4(1233).intl;
                     const obj14 = { count: null };
                     obj14[0] = type.embeds.length;
-                    obj13[1] = intl6.formatToPlainString(tmp4(1236).t.h4pFfU, obj14);
+                    obj13[1] = intl6.formatToPlainString(tmp4(1233).t.h4pFfU, obj14);
                     let obj21 = obj13;
                   } else if (everyResult4) {
                     const obj15 = { type: "text", text: null, trailingIcon: "video" };
-                    const intl5 = tmp4(1236).intl;
+                    const intl5 = tmp4(1233).intl;
                     const obj16 = { count: null };
                     obj16[0] = type.embeds.length;
-                    obj15[1] = intl5.formatToPlainString(tmp4(1236).t.SJ6pPX, obj16);
+                    obj15[1] = intl5.formatToPlainString(tmp4(1233).t.SJ6pPX, obj16);
                     obj21 = obj15;
                   } else if (everyResult5) {
                     const obj17 = { type: "text", text: null, trailingIcon: "audio" };
-                    const intl4 = tmp4(1236).intl;
+                    const intl4 = tmp4(1233).intl;
                     const obj18 = { count: null };
                     obj18[0] = type.embeds.length;
-                    obj17[1] = intl4.formatToPlainString(tmp4(1236).t.fnO3hK, obj18);
+                    obj17[1] = intl4.formatToPlainString(tmp4(1233).t.fnO3hK, obj18);
                     obj21 = obj17;
                   } else {
                     if (type.embeds.length > 0) {
@@ -181,10 +181,10 @@ function formatMessagePreview(type, isBlocked) {
                       }
                     }
                     obj21 = { type: "text", text: null, trailingIcon: "link" };
-                    const intl3 = tmp4(1236).intl;
+                    const intl3 = tmp4(1233).intl;
                     const obj22 = { count: null };
                     obj22[0] = type.embeds.length;
-                    obj21[1] = intl3.formatToPlainString(tmp4(1236).t["9XuYjs"], obj22);
+                    obj21[1] = intl3.formatToPlainString(tmp4(1233).t["9XuYjs"], obj22);
                   }
                   tmp10 = obj21;
                 } else if (type.stickerItems.length > 0) {
@@ -192,7 +192,7 @@ function formatMessagePreview(type, isBlocked) {
                   obj23[1] = type.stickerItems[0].name;
                   tmp10 = obj23;
                 } else if (type.isPoll()) {
-                  const intl2 = tmp4(1236).intl;
+                  const intl2 = tmp4(1233).intl;
                   const poll = type.poll;
                   let text;
                   if (poll != null) {
@@ -201,26 +201,26 @@ function formatMessagePreview(type, isBlocked) {
                   const obj24 = { type: "text", text: null };
                   const obj25 = { question: null };
                   obj25[0] = text;
-                  obj24[1] = intl2.formatToPlainString(tmp4(1236).t.ImizdM, obj25);
+                  obj24[1] = intl2.formatToPlainString(tmp4(1233).t.ImizdM, obj25);
                   tmp10 = obj24;
                 } else if (isForwardMessageDefault(type)) {
                   obj = { type: "text", text: null };
-                  const intl = tmp4(1236).intl;
-                  obj[1] = intl.string(tmp4(1236).t["9ddYKt"]);
+                  const intl = tmp4(1233).intl;
+                  obj[1] = intl.string(tmp4(1233).t["9ddYKt"]);
                   tmp10 = obj;
                 }
               }
               ({ authorNick, otherUser, otherUserNick, isCallActive, currentUserId } = isBlocked);
-              if (type.type === tmp4(686).MessageTypes.RECIPIENT_ADD) {
+              if (type.type === tmp4(683).MessageTypes.RECIPIENT_ADD) {
                 if (null != otherUserNick) {
                   const obj26 = { type: "text", text: null };
-                  const intl27 = tmp4(1236).intl;
+                  const intl27 = tmp4(1233).intl;
                   const obj27 = { username: null, usernameHook: null, otherUsername: null, otherUsernameHook: null };
                   obj27[0] = authorNick;
                   obj27[1] = tmp4(12).identity;
                   obj27[2] = otherUserNick;
                   obj27[3] = tmp4(12).identity;
-                  obj26[1] = intl27.formatToPlainString(tmp4(1236).t.MMN2Jq, obj27);
+                  obj26[1] = intl27.formatToPlainString(tmp4(1233).t.MMN2Jq, obj27);
                   let tmp21 = obj26;
                 }
                 let tmp29;
@@ -229,46 +229,46 @@ function formatMessagePreview(type, isBlocked) {
                 }
                 return tmp29;
               }
-              if (type.type === tmp4(686).MessageTypes.RECIPIENT_REMOVE) {
+              if (type.type === tmp4(683).MessageTypes.RECIPIENT_REMOVE) {
                 if (null != otherUserNick) {
                   let id;
                   if (otherUser != null) {
                     id = otherUser.id;
                   }
                   if (type.author.id === id) {
-                    const intl26 = tmp4(1236).intl;
+                    const intl26 = tmp4(1233).intl;
                     const obj28 = { username: null, usernameHook: null };
                     obj28[0] = authorNick;
                     obj28[1] = tmp4(12).identity;
-                    let formatToPlainStringResult = intl26.formatToPlainString(tmp4(1236).t["5v2xa8"], obj28);
+                    let formatToPlainStringResult = intl26.formatToPlainString(tmp4(1233).t["5v2xa8"], obj28);
                   } else {
-                    const intl25 = tmp4(1236).intl;
+                    const intl25 = tmp4(1233).intl;
                     const obj29 = { username: null, usernameHook: null, otherUsername: null, otherUsernameHook: null };
                     obj29[0] = authorNick;
                     obj29[1] = tmp4(12).identity;
                     obj29[2] = otherUserNick;
                     obj29[3] = tmp4(12).identity;
-                    formatToPlainStringResult = intl25.formatToPlainString(tmp4(1236).t.L2FyVq, obj29);
+                    formatToPlainStringResult = intl25.formatToPlainString(tmp4(1233).t.L2FyVq, obj29);
                   }
                   const obj30 = { type: "text", text: null };
                   obj30[1] = formatToPlainStringResult;
                   tmp21 = obj30;
                 }
               }
-              if (type.type === tmp4(686).MessageTypes.CALL) {
+              if (type.type === tmp4(683).MessageTypes.CALL) {
                 if (isCallActive) {
-                  const intl24 = tmp4(1236).intl;
-                  let stringResult = intl24.string(tmp4(1236).t["NGg/fm"]);
+                  const intl24 = tmp4(1233).intl;
+                  let stringResult = intl24.string(tmp4(1233).t["NGg/fm"]);
                 } else {
                   if (null != type.call) {
                     const participants = type.call.participants;
                     if (!participants.includes(currentUserId)) {
-                      const intl22 = tmp4(1236).intl;
-                      stringResult = intl22.string(tmp4(1236).t["2CnhoI"]);
+                      const intl22 = tmp4(1233).intl;
+                      stringResult = intl22.string(tmp4(1233).t["2CnhoI"]);
                     }
                   }
-                  const intl23 = tmp4(1236).intl;
-                  stringResult = intl23.string(tmp4(1236).t.v05Xd6);
+                  const intl23 = tmp4(1233).intl;
+                  stringResult = intl23.string(tmp4(1233).t.v05Xd6);
                 }
                 const obj31 = { type: "text", text: null, color: null, trailingIcon: null };
                 obj31[1] = stringResult;
@@ -283,34 +283,34 @@ function formatMessagePreview(type, isBlocked) {
                 }
                 obj31[3] = str3;
                 tmp21 = obj31;
-              } else if (type.type === tmp4(686).MessageTypes.CHANNEL_NAME_CHANGE) {
+              } else if (type.type === tmp4(683).MessageTypes.CHANNEL_NAME_CHANGE) {
                 const obj32 = { type: "text", text: null };
-                const intl21 = tmp4(1236).intl;
+                const intl21 = tmp4(1233).intl;
                 const obj33 = { username: null, usernameHook: null, channelName: null };
                 obj33[0] = authorNick;
                 obj33[1] = tmp4(12).identity;
                 obj33[2] = type.content;
-                obj32[1] = intl21.formatToPlainString(tmp4(1236).t.oItgEw, obj33);
+                obj32[1] = intl21.formatToPlainString(tmp4(1233).t.oItgEw, obj33);
                 tmp21 = obj32;
-              } else if (type.type === tmp4(686).MessageTypes.CHANNEL_ICON_CHANGE) {
+              } else if (type.type === tmp4(683).MessageTypes.CHANNEL_ICON_CHANGE) {
                 const obj34 = { type: "text", text: null };
-                const intl20 = tmp4(1236).intl;
+                const intl20 = tmp4(1233).intl;
                 const obj35 = { username: null, usernameHook: null };
                 obj35[0] = authorNick;
                 obj35[1] = tmp4(12).identity;
-                obj34[1] = intl20.formatToPlainString(tmp4(1236).t.OEdU6X, obj35);
+                obj34[1] = intl20.formatToPlainString(tmp4(1233).t.OEdU6X, obj35);
                 tmp21 = obj34;
-              } else if (type.type === tmp4(686).MessageTypes.CHANNEL_PINNED_MESSAGE) {
+              } else if (type.type === tmp4(683).MessageTypes.CHANNEL_PINNED_MESSAGE) {
                 const obj36 = { type: "text", text: null };
-                const intl19 = tmp4(1236).intl;
+                const intl19 = tmp4(1233).intl;
                 const obj37 = { username: null, usernameHook: null };
                 obj37[0] = authorNick;
                 obj37[1] = tmp4(12).identity;
-                obj36[1] = intl19.formatToPlainString(tmp4(1236).t.vfkjqx, obj37);
+                obj36[1] = intl19.formatToPlainString(tmp4(1233).t.vfkjqx, obj37);
                 tmp21 = obj36;
-              } else if (type.type === tmp4(686).MessageTypes.USER_JOIN) {
+              } else if (type.type === tmp4(683).MessageTypes.USER_JOIN) {
                 let obj38 = { type: "text", text: null };
-                const intl18 = tmp4(1236).intl;
+                const intl18 = tmp4(1233).intl;
                 obj38 = getSystemMessageUserJoinMobileDefault;
                 const obj39 = { username: null, usernameHook: null };
                 obj39[0] = authorNick;
@@ -318,63 +318,63 @@ function formatMessagePreview(type, isBlocked) {
                 obj39[1] = tmp4(12).identity;
                 obj38[1] = intl18.formatToPlainString(systemMessageUserJoin, obj39);
                 tmp21 = obj38;
-              } else if (type.type === tmp4(686).MessageTypes.THREAD_CREATED) {
+              } else if (type.type === tmp4(683).MessageTypes.THREAD_CREATED) {
                 const obj40 = { type: "text", text: null };
-                const intl17 = tmp4(1236).intl;
+                const intl17 = tmp4(1233).intl;
                 const obj41 = { actorName: null, actorHook: null, threadName: null, threadOnClick: null };
                 obj41[0] = authorNick;
                 obj41[1] = tmp4(12).identity;
                 obj41[2] = type.content;
                 obj41[3] = tmp4(12).identity;
-                obj40[1] = intl17.formatToPlainString(tmp4(1236).t.SGaUAU, obj41);
+                obj40[1] = intl17.formatToPlainString(tmp4(1233).t.SGaUAU, obj41);
                 tmp21 = obj40;
-              } else if (type.type === tmp4(686).MessageTypes.PREMIUM_REFERRAL) {
+              } else if (type.type === tmp4(683).MessageTypes.PREMIUM_REFERRAL) {
                 const obj42 = { type: "text", text: null };
-                const intl16 = tmp4(1236).intl;
+                const intl16 = tmp4(1233).intl;
                 const obj43 = { username: null };
                 obj43[0] = authorNick;
-                obj42[1] = intl16.formatToPlainString(tmp4(1236).t.lieTqU, obj43);
+                obj42[1] = intl16.formatToPlainString(tmp4(1233).t.lieTqU, obj43);
                 tmp21 = obj42;
-              } else if (type.type === tmp4(686).MessageTypes.STAGE_START) {
+              } else if (type.type === tmp4(683).MessageTypes.STAGE_START) {
                 const obj44 = { type: "text", text: null };
-                const intl15 = tmp4(1236).intl;
+                const intl15 = tmp4(1233).intl;
                 const obj45 = { username: null, usernameOnClick: null, topic: null };
                 obj45[0] = authorNick;
                 obj45[1] = tmp4(12).identity;
                 obj45[2] = type.content;
-                obj44[1] = intl15.formatToPlainString(tmp4(1236).t.aZtRW8, obj45);
+                obj44[1] = intl15.formatToPlainString(tmp4(1233).t.aZtRW8, obj45);
                 tmp21 = obj44;
-              } else if (type.type === tmp4(686).MessageTypes.STAGE_END) {
+              } else if (type.type === tmp4(683).MessageTypes.STAGE_END) {
                 const obj46 = { type: "text", text: null };
-                const intl14 = tmp4(1236).intl;
+                const intl14 = tmp4(1233).intl;
                 const obj47 = { username: null, usernameOnClick: null, topic: null };
                 obj47[0] = authorNick;
                 obj47[1] = tmp4(12).identity;
                 obj47[2] = type.content;
-                obj46[1] = intl14.formatToPlainString(tmp4(1236).t.vMJhvG, obj47);
+                obj46[1] = intl14.formatToPlainString(tmp4(1233).t.vMJhvG, obj47);
                 tmp21 = obj46;
-              } else if (type.type === tmp4(686).MessageTypes.STAGE_SPEAKER) {
+              } else if (type.type === tmp4(683).MessageTypes.STAGE_SPEAKER) {
                 const obj48 = { type: "text", text: null };
-                const intl13 = tmp4(1236).intl;
+                const intl13 = tmp4(1233).intl;
                 const obj49 = { username: null, usernameOnClick: null };
                 obj49[0] = authorNick;
                 obj49[1] = tmp4(12).identity;
-                obj48[1] = intl13.formatToPlainString(tmp4(1236).t.V4uCm4, obj49);
+                obj48[1] = intl13.formatToPlainString(tmp4(1233).t.V4uCm4, obj49);
                 tmp21 = obj48;
-              } else if (type.type === tmp4(686).MessageTypes.STAGE_TOPIC) {
+              } else if (type.type === tmp4(683).MessageTypes.STAGE_TOPIC) {
                 const obj50 = { type: "text", text: null };
-                const intl12 = tmp4(1236).intl;
+                const intl12 = tmp4(1233).intl;
                 const obj51 = { username: null, usernameOnClick: null, topic: null };
                 obj51[0] = authorNick;
                 obj51[1] = tmp4(12).identity;
                 obj51[2] = type.content;
-                obj50[1] = intl12.formatToPlainString(tmp4(1236).t.ro3RM0, obj51);
+                obj50[1] = intl12.formatToPlainString(tmp4(1233).t.ro3RM0, obj51);
                 tmp21 = obj50;
-              } else if (type.type === tmp4(686).MessageTypes.VOICE_SESSION) {
+              } else if (type.type === tmp4(683).MessageTypes.VOICE_SESSION) {
                 const obj52 = { type: "text", text: null };
-                obj52[1] = tmp4(7980).getVoiceSessionMessageContent(type);
+                obj52[1] = tmp4(7989).getVoiceSessionMessageContent(type);
                 tmp21 = obj52;
-                const tmp4Result = tmp4(7980);
+                const tmp4Result = tmp4(7989);
               }
             }
           }
@@ -389,12 +389,12 @@ const result = require("set").fileFinishedImporting("modules/message_previews/us
 export const isMessageContentPreviewable = function isMessageContentPreviewable(messageRecord) {
   const type = messageRecord.type;
   if (set.MessageTypes.DEFAULT !== type) {
-    if (tmp(686).MessageTypes.CHANGELOG !== type) {
-      if (tmp(686).MessageTypes.REPLY !== type) {
-        if (tmp(686).MessageTypes.CHAT_INPUT_COMMAND !== type) {
-          if (tmp(686).MessageTypes.CONTEXT_MENU_COMMAND !== type) {
-            if (tmp(686).MessageTypes.POLL_RESULT !== type) {
-              if (tmp(686).MessageTypes.AUTO_MODERATION_ACTION !== type) {
+    if (tmp(683).MessageTypes.CHANGELOG !== type) {
+      if (tmp(683).MessageTypes.REPLY !== type) {
+        if (tmp(683).MessageTypes.CHAT_INPUT_COMMAND !== type) {
+          if (tmp(683).MessageTypes.CONTEXT_MENU_COMMAND !== type) {
+            if (tmp(683).MessageTypes.POLL_RESULT !== type) {
+              if (tmp(683).MessageTypes.AUTO_MODERATION_ACTION !== type) {
                 return false;
               }
             }
@@ -432,11 +432,11 @@ export const useFormattedMessagePreview = function useFormattedMessagePreview(me
   ) {
     stringResult = nick;
     if (message.author.id === stateFromStores) {
-      const intl = tmp(1236).intl;
-      stringResult = intl.string(tmp(1236).t.LuZzxn);
+      const intl = tmp(1233).intl;
+      stringResult = intl.string(tmp(1233).t.LuZzxn);
     }
   }
-  let tmpResult = tmp(589);
+  let tmpResult = tmp(586);
   const items3 = [closure_5];
   const stateFromStores1 = tmpResult.useStateFromStores(items3, () => {
     let user;

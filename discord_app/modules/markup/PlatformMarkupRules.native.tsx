@@ -202,8 +202,8 @@ obj[6] = {
       gameName = gameMentionData.gameName;
     }
     if (gameName == null) {
-      const intl = tmp2(1236).intl;
-      gameName = intl.string(tmp2(1236).t["11pdXZ"]);
+      const intl = tmp2(1233).intl;
+      gameName = intl.string(tmp2(1233).t["11pdXZ"]);
     }
     obj[4] = gameName;
     return obj;
@@ -451,8 +451,8 @@ export const hydrateGameMention = function hydrateGameMention(gameId, channelId)
     gameName = gameMentionData.gameName;
   }
   if (gameName == null) {
-    const intl = tmp(1236).intl;
-    gameName = intl.string(tmp(1236).t["11pdXZ"]);
+    const intl = tmp(1233).intl;
+    gameName = intl.string(tmp(1233).t["11pdXZ"]);
   }
   obj[4] = gameName;
   return obj;

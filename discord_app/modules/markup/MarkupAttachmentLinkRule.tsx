@@ -5,7 +5,11 @@ import set2 from "../messages/AttachmentUrlConstants.tsx";
 
 const mapped = Array.from(set2.ATTACHMENT_PATH_PREFIXES).map((str) => str.replaceAll("/", ""));
 const regExp = new RegExp(
-  "^https://(?:(?:media|images)\\.discordapp\\.net|(?:cdn\\.discordapp\\.com))/(?:" +
+  "^https://(?:[A-Za-z0-9-]+\\.)*(?:(?:media|images)" +
+    "(?:-[A-Za-z0-9]+)?" +
+    "\\.discordapp\\.net|(?:cdn" +
+    "(?:-[A-Za-z0-9]+)?" +
+    "\\.discordapp\\.com))/(?:" +
     mapped.join("|") +
     ")/\\d+/\\d+/([A-Za-z0-9._-]*[A-Za-z0-9_-])(?:[?][a-zA-Z0-9?&=_-]*)?",
 );

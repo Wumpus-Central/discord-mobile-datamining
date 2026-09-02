@@ -208,8 +208,8 @@ prototype["emitReactOnce"] = function emitReactOnce() {
   if (timestamp1 - timestamp > 100) {
     const _HermesInternal = HermesInternal;
     const combined = "Slow batch emitReactChanges took " + timestamp1 - timestamp + "ms recentActions:";
-    logger.verbose(combined, self(594).serialize());
-    const obj = self(594);
+    logger.verbose(combined, self(591).serialize());
+    const obj = self(591);
   }
 };
 let obj = Object.create(Emitter.prototype);

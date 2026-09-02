@@ -85,7 +85,7 @@ function _fetchSocialLayerStorefront2() {
                 closure_17 = undefined;
                 c8 = 1;
                 c9 = 1;
-                return { value: "PX_16", done: null };
+                return { value: "PX_16", done: true };
               }
             } else {
               if (1 === tmp7) {
@@ -400,7 +400,7 @@ function _fetchSocialLayerStorefrontSkuWithUrl2() {
               let storefront_metadata;
               c7 = 1;
               promotionIdOverride2 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -1106,7 +1106,7 @@ function _fetchSocialLayerStorefrontLaunchAnnouncement() {
     yield HTTP.get(obj1);
     if (1 === tmp7) {
       c11 = 0;
-      obj3 = obj3(709);
+      obj3 = obj3(706);
       obj3.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_LAUNCH_ANNOUNCEMENT_FETCH_FAILURE" });
       c13 = 3;
     } else if (arg0 === 1) {
@@ -1182,7 +1182,7 @@ function _fetchSocialLayerStorefrontLaunchAnnouncement() {
         }
         obj3[7] = c7;
       }
-      const obj = obj3(709);
+      const obj = obj3(706);
       const obj4 = { type: "SOCIAL_LAYER_STOREFRONT_LAUNCH_ANNOUNCEMENT_FETCH_SUCCESS", config: null };
       obj4[1] = obj3;
       obj.dispatch(obj4);

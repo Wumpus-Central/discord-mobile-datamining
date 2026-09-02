@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/HomeIndicator.tsx
 import { NativeModules } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import keys from "../../../../_runtime/00644_keys.js";
+import keys from "../../../../_runtime/00641_keys.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 
 const require = arg1;
@@ -63,12 +63,12 @@ HomeIndicator["_updatePropsStack"] = function _updatePropsStack() {
     const prefersHidden = obj.prefersHidden;
     const callback = tmp;
     const prefersDeferringSystemGestures = obj.prefersDeferringSystemGestures;
-    callback(705).batchUpdates(() => closure_1_4.setState({ autoHideHomeIndicator: closure_0 }));
-    const obj2 = callback(705);
+    callback(702).batchUpdates(() => closure_1_4.setState({ autoHideHomeIndicator: closure_0 }));
+    const obj2 = callback(702);
     const tmp2 = undefined !== prefersDeferringSystemGestures && prefersDeferringSystemGestures;
     if (obj3.isAndroid()) {
-      const result = callback2(1640).setNavigationBarVisible(!tmp);
-      const obj4 = callback2(1640);
+      const result = callback2(1639).setNavigationBarVisible(!tmp);
+      const obj4 = callback2(1639);
     } else if (DCDHomeIndicator.DCDHomeIndicator) {
       DCDHomeIndicator = tmp5.DCDHomeIndicator;
       DCDHomeIndicator.setPrefersAutoHidden(tmp);

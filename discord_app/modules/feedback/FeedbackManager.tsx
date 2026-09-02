@@ -70,7 +70,7 @@ function recencyEligibilityCheck(cooldown, storageKey) {
   }
   let tmp7;
   if (!isNaNResult) {
-    const Storage = tmp(595).Storage;
+    const Storage = tmp(592).Storage;
     const value = Storage.get(storageKey.storageKey);
     dependencyMap = value;
     isNaNResult = null == value;

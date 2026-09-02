@@ -1,7 +1,7 @@
 // discord_app/stores/ExternalStreamingStore.tsx
 import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import isUndefinedOrNullDefault from "../../_runtime/00659_isUndefinedOrNull.js";
+import isUndefinedOrNullDefault from "../../_runtime/00656_isUndefinedOrNull.js";
 import setDefault from "../utils/Durations.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import callbackDefault from "../actions/ConnectedAccountsActionCreators.tsx";

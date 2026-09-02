@@ -15,7 +15,7 @@ function updateCategoriesAndProducts(map) {
       return items;
     }),
   );
-  const productsFromCategories = map1(7299).getProductsFromCategories(map, true);
+  const productsFromCategories = map1(7308).getProductsFromCategories(map, true);
   map1 = new Map(
     productsFromCategories.map((skuId) => {
       const items = [skuId.skuId, skuId];
@@ -27,8 +27,8 @@ function updateCategoriesAndProducts(map) {
       const result = map1.set(skuId.skuId, skuId);
     }
   });
-  const obj = map1(7299);
-  const productsFromCategories1 = map1(7299).getProductsFromCategories(map, false);
+  const obj = map1(7308);
+  const productsFromCategories1 = map1(7308).getProductsFromCategories(map, false);
   map2 = new Map(
     productsFromCategories1.map((storeListingId) => {
       const items = [storeListingId.storeListingId, storeListingId];

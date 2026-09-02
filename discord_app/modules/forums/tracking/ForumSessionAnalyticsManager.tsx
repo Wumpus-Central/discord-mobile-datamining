@@ -1,6 +1,6 @@
 // discord_app/modules/forums/tracking/ForumSessionAnalyticsManager.tsx
 import set from "../../../../_runtime/00002_set.js";
-import v1 from "../../../../_runtime/00514_v1.js";
+import v1 from "../../../../_runtime/00511_v1.js";
 
 class ForumSessionAnalyticsManager {}
 ForumSessionAnalyticsManager.prototype["getForumChannelSessionId"] = function getForumChannelSessionId(arg0) {

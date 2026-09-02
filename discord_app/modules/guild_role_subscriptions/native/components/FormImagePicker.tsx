@@ -266,12 +266,12 @@ export default function FormImagePicker(children) {
   const merged = Object.assign(children, Object.create(null));
   const tmp2 = callback4();
   if (null == image) {
-    const intl2 = imageUploadSize(1236).intl;
-    let stringResult = intl2.string(imageUploadSize(1236).t.bGPfSp);
+    const intl2 = imageUploadSize(1233).intl;
+    let stringResult = intl2.string(imageUploadSize(1233).t.bGPfSp);
     let tmp6 = imageUploadSize;
   } else {
-    const intl = imageUploadSize(1236).intl;
-    stringResult = intl.string(imageUploadSize(1236).t["0KOido"]);
+    const intl = imageUploadSize(1233).intl;
+    stringResult = intl.string(imageUploadSize(1233).t["0KOido"]);
     tmp6 = imageUploadSize;
   }
   let obj = { style: tmp2.imageSelectionRow, children: null };

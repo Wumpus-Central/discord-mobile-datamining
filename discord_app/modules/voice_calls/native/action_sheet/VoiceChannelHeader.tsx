@@ -7,7 +7,7 @@ import computeChannelNameDefault from "../../../channel/useChannelName.tsx";
 import isRoleRequiredDefault from "../../../channel/isRoleRequired.tsx";
 import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
 import useIsVoiceChannelFullDefault from "../../useIsVoiceChannelFull.tsx";
-import registerAssetDefault from "../../../../../_runtime/10114_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/10136_registerAsset.js";
 import id from "../CallStateHooks.tsx";
 import idDefault from "../CallStateHooks.tsx";
 import OngoingCallStatusLabelDefault from "../components/OngoingCallStatusLabel.tsx";
@@ -35,7 +35,7 @@ function PrivateChannelSubtitle(channel) {
     tmp6Result = tmp6(tmp7(4474).Text, obj);
   }
   items[1] = tmp6Result;
-  tmp6Result = state === tmp7(13449).CallStates.CONNECTED;
+  tmp6Result = state === tmp7(13672).CallStates.CONNECTED;
   if (tmp6Result) {
     obj1 = { channelId: null, style: null };
     obj1[0] = channel.id;

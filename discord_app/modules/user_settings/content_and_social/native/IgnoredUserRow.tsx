@@ -7,7 +7,7 @@ const require = arg1;
 function IgnoredUserRow(userRecord) {
   userRecord = userRecord.userRecord;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(5953)().analyticsLocations;
+  analyticsLocations = analyticsLocations(5961)().analyticsLocations;
   let obj = {
     icon: null,
     label: null,
@@ -20,10 +20,10 @@ function IgnoredUserRow(userRecord) {
     onPress: null,
     trailing: null,
   };
-  obj = { source: userRecord.getAvatarSource(undefined), size: userRecord(1297).AvatarSizes.REFRESH_MEDIUM_32 };
-  obj[0] = jsx(userRecord(1297).Avatar, {
+  obj = { source: userRecord.getAvatarSource(undefined), size: userRecord(1296).AvatarSizes.REFRESH_MEDIUM_32 };
+  obj[0] = jsx(userRecord(1296).Avatar, {
     source: userRecord.getAvatarSource(undefined),
-    size: userRecord(1297).AvatarSizes.REFRESH_MEDIUM_32,
+    size: userRecord(1296).AvatarSizes.REFRESH_MEDIUM_32,
   });
   let tmp4 = null != userRecord;
   if (tmp4) {
@@ -48,8 +48,8 @@ function IgnoredUserRow(userRecord) {
   }
   obj[2] = tmp6;
   obj = { name: "unignore", label: null };
-  const intl = tmp3(1236).intl;
-  obj[1] = intl.string(userRecord(1236).t["8wXU9B"]);
+  const intl = tmp3(1233).intl;
+  obj[1] = intl.string(userRecord(1233).t["8wXU9B"]);
   const items = [obj];
   obj[6] = items;
   obj[7] = function onAccessibilityAction(nativeEvent) {
@@ -61,13 +61,13 @@ function IgnoredUserRow(userRecord) {
     return analyticsLocations(closure_1_2[8])({ userId: userRecord.id, sourceAnalyticsLocations: analyticsLocations });
   };
   obj1 = { size: "sm", variant: "secondary", text: null, onPress: null };
-  const intl2 = tmp3(1236).intl;
-  obj1[2] = intl2.string(userRecord(1236).t["3GZE6a"]);
+  const intl2 = tmp3(1233).intl;
+  obj1[2] = intl2.string(userRecord(1233).t["3GZE6a"]);
   obj1[3] = function onPress() {
     analyticsLocations(closure_1_2[3]).unignoreUser(userRecord.id, "ignored-users-list-mobile");
   };
   obj[9] = jsx(userRecord(4928).Button, { size: "sm", variant: "secondary", text: null, onPress: null });
-  return jsx(userRecord(5599).TableRow, { name: "unignore", label: null });
+  return jsx(userRecord(5607).TableRow, { name: "unignore", label: null });
 }
 noopAll;
 const result = require("set").fileFinishedImporting(
@@ -76,7 +76,7 @@ const result = require("set").fileFinishedImporting(
 
 export default function ConnectedIgnoredUserRow(userId) {
   userId = userId.userId;
-  let obj = userId(589);
+  let obj = userId(586);
   const items = [closure_3];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getUser(userId));
   let tmp2 = null;

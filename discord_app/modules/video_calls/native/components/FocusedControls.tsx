@@ -2,7 +2,7 @@
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import _mod4217 from "../../../reanimated/ReanimatedRexport.tsx";
 import SCREEN_READER_ENABLED_GETTER from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
-import inlineStyles from "../../../../../_runtime/08241_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08250_inlineStyles.js";
 import useRevealProviderValue from "RevealProvider.tsx";
 import useGlobalStatusIndicatorState from "../../../connectivity/native/useGlobalStatusIndicatorState.tsx";
 import nativeEventEmitter from "../../../connectivity/native/components/GlobalStatusIndicator.tsx";
@@ -45,12 +45,12 @@ function FocusedControlsHeader(reveal) {
   const animatedStyle = obj1.useAnimatedStyle(fn2);
   obj = { style: animatedStyle, children: null };
   obj1 = {
-    top: !derivedValue(9647)(),
+    top: !derivedValue(9660)(),
     left: isTouchingLeftScreenEdge,
     right: true,
     children: callback(closure_5, obj2),
   };
-  obj[1] = callback(reveal(5553).SafeAreaPaddingView, obj1);
+  obj[1] = callback(reveal(5561).SafeAreaPaddingView, obj1);
   return callback(derivedValue(4217).View, obj);
 }
 function FocusedControlsHeaderGradient() {
@@ -119,7 +119,7 @@ const memoResult = importAllResult.memo((disableGradient) => {
   const globalStatusIndicatorState = obj.useGlobalStatusIndicatorState();
   obj1 = nativeEventEmitter;
   globalStatusIndicatorHeightSharedValue = obj1.useGlobalStatusIndicatorHeightSharedValue(globalStatusIndicatorState);
-  const tmp6 = globalStatusIndicatorHeightSharedValue(9647)();
+  const tmp6 = globalStatusIndicatorHeightSharedValue(9660)();
   dependencyMap = tmp6;
   reveal = reveal.useContext(useRevealProviderValue.RevealContext).reveal;
   const isScreenReaderEnabled = SCREEN_READER_ENABLED_GETTER.useIsScreenReaderEnabled();
@@ -171,10 +171,10 @@ const memoResult = importAllResult.memo((disableGradient) => {
   fn.__initData = closure_17;
   const animatedStyle = _mod4217.useAnimatedStyle(fn);
   const tmpResult1 = _mod4217;
-  analyticsLocations = globalStatusIndicatorHeightSharedValue(5953)(
-    tmp5(5973).FOCUSED_VOICE_CONTROLS,
+  analyticsLocations = globalStatusIndicatorHeightSharedValue(5961)(
+    tmp5(5981).FOCUSED_VOICE_CONTROLS,
   ).analyticsLocations;
-  callback = tmp5(9602)();
+  callback = tmp5(9615)();
   if (containerStyle == null) {
     containerStyle = derivedValue.absoluteFill;
   }
@@ -205,7 +205,7 @@ const memoResult = importAllResult.memo((disableGradient) => {
         children: null,
       };
       obj1[0] = function onDrawerOpen() {
-        obj = globalStatusIndicatorHeightSharedValue(698);
+        obj = globalStatusIndicatorHeightSharedValue(695);
         obj = {
           channel_id: closure_0.id,
           guild_id: closure_0.guild_id,
@@ -233,7 +233,7 @@ const memoResult = importAllResult.memo((disableGradient) => {
       obj1[5] = onDrawerClose;
       obj1[6] = reveal;
       obj1[7] = children;
-      tmp17Result = callback(tmp5(9661), obj1);
+      tmp17Result = callback(tmp5(9674), obj1);
     }
   }
   items1[2] = tmp17Result;

@@ -5,11 +5,39 @@ import getSizedImageProxyURL from "../image_proxy/ImageProxyUtils.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { ATTACHMENT_PATH_PREFIXES } from "AttachmentUrlConstants.tsx";
 import { Endpoints } from "../../Constants.tsx";
-import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 function isRefreshableAttachmentUrl(result) {
-  let tmp2 = set.has(result.hostname) || false;
+  closure_0 = result;
+  let tmp2 =
+    closure_7.some((arr) => {
+      const hostname = closure_0.hostname;
+      let flag = true;
+      if (hostname !== arr) {
+        const _HermesInternal2 = HermesInternal;
+        flag = true;
+        if (!hostname.endsWith("." + arr)) {
+          const index = arr.indexOf(".");
+          const index1 = hostname.indexOf(".");
+          flag = false;
+          if (-1 !== index) {
+            flag = false;
+            if (-1 !== index1) {
+              const substr = hostname.substring(index1 + 1);
+              flag = false;
+              if (substr === arr.substring(index + 1)) {
+                const substr1 = hostname.substring(0, index1);
+                const _HermesInternal = HermesInternal;
+                const combined = "" + arr.substring(0, index) + "-";
+                flag = substr1.startsWith(combined) && substr1.length > combined.length;
+                const tmp3 = substr1.startsWith(combined) && substr1.length > combined.length;
+              }
+            }
+          }
+        }
+      }
+      return flag;
+    }) || false;
   if (tmp2) {
     let pathname = result.pathname;
     const startsWithResult = pathname.startsWith("/external/");
@@ -20,21 +48,78 @@ function isRefreshableAttachmentUrl(result) {
       if (!hasItem) {
         closure_0 = result;
         const _Array = Array;
+        closure_0 = result;
         const arr = Array.from(ATTACHMENT_PATH_PREFIXES);
         const someResult = Array.from(ATTACHMENT_PATH_PREFIXES).some((arg0) => {
-          pathname = pathname.pathname;
+          const pathname = closure_0.pathname;
           return pathname.startsWith(arg0);
         });
         hasItem =
-          (set.has(result.hostname) || false) &&
+          (closure_7.some((arr) => {
+            const hostname = closure_0.hostname;
+            let flag = true;
+            if (hostname !== arr) {
+              const _HermesInternal2 = HermesInternal;
+              flag = true;
+              if (!hostname.endsWith("." + arr)) {
+                const index = arr.indexOf(".");
+                const index1 = hostname.indexOf(".");
+                flag = false;
+                if (-1 !== index) {
+                  flag = false;
+                  if (-1 !== index1) {
+                    const substr = hostname.substring(index1 + 1);
+                    flag = false;
+                    if (substr === arr.substring(index + 1)) {
+                      const substr1 = hostname.substring(0, index1);
+                      const _HermesInternal = HermesInternal;
+                      const combined = "" + arr.substring(0, index) + "-";
+                      flag = substr1.startsWith(combined) && substr1.length > combined.length;
+                      const tmp3 = substr1.startsWith(combined) && substr1.length > combined.length;
+                    }
+                  }
+                }
+              }
+            }
+            return flag;
+          }) ||
+            false) &&
           Array.from(ATTACHMENT_PATH_PREFIXES).some((arg0) => {
-            pathname = pathname.pathname;
+            const pathname = closure_0.pathname;
             return pathname.startsWith(arg0);
           });
         const tmp9 =
-          (set.has(result.hostname) || false) &&
+          (closure_7.some((arr) => {
+            const hostname = closure_0.hostname;
+            let flag = true;
+            if (hostname !== arr) {
+              const _HermesInternal2 = HermesInternal;
+              flag = true;
+              if (!hostname.endsWith("." + arr)) {
+                const index = arr.indexOf(".");
+                const index1 = hostname.indexOf(".");
+                flag = false;
+                if (-1 !== index) {
+                  flag = false;
+                  if (-1 !== index1) {
+                    const substr = hostname.substring(index1 + 1);
+                    flag = false;
+                    if (substr === arr.substring(index + 1)) {
+                      const substr1 = hostname.substring(0, index1);
+                      const _HermesInternal = HermesInternal;
+                      const combined = "" + arr.substring(0, index) + "-";
+                      flag = substr1.startsWith(combined) && substr1.length > combined.length;
+                      const tmp3 = substr1.startsWith(combined) && substr1.length > combined.length;
+                    }
+                  }
+                }
+              }
+            }
+            return flag;
+          }) ||
+            false) &&
           Array.from(ATTACHMENT_PATH_PREFIXES).some((arg0) => {
-            pathname = pathname.pathname;
+            const pathname = closure_0.pathname;
             return pathname.startsWith(arg0);
           });
       }
@@ -140,14 +225,14 @@ function _refreshAttachmentUrl() {
     c2 = 0;
     c1 = 0;
     return (function* (arg0) {
-      const HTTP = callback(530).HTTP;
+      const HTTP = callback(527).HTTP;
       obj1 = { url: null, body: null, rejectWithError: null };
       obj1[0] = closure_1_5.ATTACHMENTS_REFRESH_URLS;
       const obj2 = { attachment_urls: null };
       const items = [callback];
       obj2[0] = items;
       obj1[1] = obj2;
-      obj1[2] = callback(530).rejectWithMigratedError();
+      obj1[2] = callback(527).rejectWithMigratedError();
       yield HTTP.post(obj1);
       return arg1.body.refreshed_urls[0].refreshed;
     })();
@@ -268,15 +353,44 @@ if (window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT != null) {
 items[1] = substr;
 function isAttachmentPathUrl(toURLSafeResult) {
   closure_0 = toURLSafeResult;
+  closure_0 = toURLSafeResult;
   const arr = Array.from(ATTACHMENT_PATH_PREFIXES);
   const someResult = Array.from(ATTACHMENT_PATH_PREFIXES).some((arg0) => {
-    pathname = pathname.pathname;
+    const pathname = closure_0.pathname;
     return pathname.startsWith(arg0);
   });
   return (
-    (set.has(toURLSafeResult.hostname) || false) &&
+    (closure_7.some((arr) => {
+      const hostname = closure_0.hostname;
+      let flag = true;
+      if (hostname !== arr) {
+        const _HermesInternal2 = HermesInternal;
+        flag = true;
+        if (!hostname.endsWith("." + arr)) {
+          const index = arr.indexOf(".");
+          const index1 = hostname.indexOf(".");
+          flag = false;
+          if (-1 !== index) {
+            flag = false;
+            if (-1 !== index1) {
+              const substr = hostname.substring(index1 + 1);
+              flag = false;
+              if (substr === arr.substring(index + 1)) {
+                const substr1 = hostname.substring(0, index1);
+                const _HermesInternal = HermesInternal;
+                const combined = "" + arr.substring(0, index) + "-";
+                flag = substr1.startsWith(combined) && substr1.length > combined.length;
+                const tmp3 = substr1.startsWith(combined) && substr1.length > combined.length;
+              }
+            }
+          }
+        }
+      }
+      return flag;
+    }) ||
+      false) &&
     Array.from(ATTACHMENT_PATH_PREFIXES).some((arg0) => {
-      pathname = pathname.pathname;
+      const pathname = closure_0.pathname;
       return pathname.startsWith(arg0);
     })
   );
@@ -295,8 +409,14 @@ function getSignedAttachmentExpiration(searchParams) {
   return result;
 }
 const mapped = items.map(require("getHostWithoutPort").getHostWithoutPort);
-let set = new Set(mapped.filter(Boolean));
-let result = set.fileFinishedImporting("modules/messages/AttachmentUrlUtils.tsx");
+let closure_7 = mapped.filter((arg0) => {
+  let tmp = null != arg0;
+  if (tmp) {
+    tmp = "" !== arg0;
+  }
+  return tmp;
+});
+let result = require("set").fileFinishedImporting("modules/messages/AttachmentUrlUtils.tsx");
 
 export { isAttachmentPathUrl };
 export { isRefreshableAttachmentUrl };

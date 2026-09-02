@@ -1,7 +1,7 @@
 // discord_app/modules/experiments/native/ExperimentEmbedPlatformUtils.tsx
 import set from "../../../../_runtime/00002_set.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import { asyncRequireImpl } from "../../../../_runtime/02009_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../_runtime/02008_asyncRequireImpl.js";
 import { makeClientVariant } from "../client_override_hooks/useApexExperiments.tsx";
 import { parseRegisteredExperiments } from "../client_override_hooks/useLegacyExperiments.tsx";
 
@@ -33,7 +33,7 @@ export const handleCodedLinkExperimentEmbedTap = function handleCodedLinkExperim
         if (tmp6 == null) {
           tmp6 = null;
         }
-        let tmpResult = tmp(7633);
+        let tmpResult = tmp(7643);
         const experimentBuckets = tmpResult.getExperimentBuckets(tmp5);
         const iter = experimentBuckets.find((value) => value.value === closure_0);
         if (null != iter) {
@@ -52,7 +52,7 @@ export const handleCodedLinkExperimentEmbedTap = function handleCodedLinkExperim
   }
   obj = { id: experimentFromEmbedURL };
   ACTION_SHEET_HEIGHT_HALFDefault.openLazy(
-    asyncRequireImpl(11380, dependencyMap.paths),
+    asyncRequireImpl(11603, dependencyMap.paths),
     "ExperimentOverrideSheet",
     obj,
   );

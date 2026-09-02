@@ -5,5 +5,5 @@ const result = set.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/DisplayNameLockeAbstractUI-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/05f6c2654ef93fa281c4d85b951529c90e24a4722ec056cfaf3d4dbb30f3bd27.png";
-export const metadata = { fileBytes: 51005 };
+export default "https://cdn.discordapp.com/assets/content/0cbb09b03d5b50a51c607f0614b98f75f1c780ff3f49096c688d679322f80d8c.png";
+export const metadata = { fileBytes: 47044 };

@@ -82,18 +82,18 @@ export default function DMMessageStickerGreeting(channel) {
   let obj3 = first(4322);
   let name = obj3.useName(stateFromStores1);
   if (name == null) {
-    let intl = Text(1236).intl;
-    name = intl.string(Text(1236).t.y1Wu2f);
+    let intl = Text(1233).intl;
+    name = intl.string(Text(1233).t.y1Wu2f);
   }
-  const intl2 = Text(1236).intl;
-  const formatToPlainStringResult = intl2.formatToPlainString(Text(1236).t.m0zYbV, { username: name });
-  const showConvoStarterInDM = Text(11833).useShowConvoStarterInDM(channel);
+  const intl2 = Text(1233).intl;
+  const formatToPlainStringResult = intl2.formatToPlainString(Text(1233).t.m0zYbV, { username: name });
+  const showConvoStarterInDM = Text(12056).useShowConvoStarterInDM(channel);
   callback = showConvoStarterInDM;
-  const TextResult = Text(11833);
+  const TextResult = Text(12056);
   const tmp2 = END;
   const items2 = [closure_7];
   const items3 = [showConvoStarterInDM];
-  const stateFromStores2 = Text(589).useStateFromStores(
+  const stateFromStores2 = Text(586).useStateFromStores(
     items2,
     () => {
       let stickerById = null;
@@ -229,7 +229,7 @@ export default function DMMessageStickerGreeting(channel) {
     items6,
   );
   _require = undefined;
-  const TextResult1 = Text(589);
+  const TextResult1 = Text(586);
   [tmp17, tmp18] = callback(React.useState(false), 2);
   _require = tmp18;
   const items7 = [tmp18];
@@ -275,7 +275,7 @@ export default function DMMessageStickerGreeting(channel) {
     HEIGHT_FULL: 180,
     withDelay: Text(4217).withDelay,
     withTiming: Text(4479).withTiming,
-    STANDARD_EASING: Text(1297).STANDARD_EASING,
+    STANDARD_EASING: Text(1296).STANDARD_EASING,
   };
   fn.__closure = obj;
   fn.__workletHash = 6327401707106;
@@ -285,13 +285,13 @@ export default function DMMessageStickerGreeting(channel) {
   let BACKGROUND_BASE_LOWER = Text(4296).useGradientValue(tmp2);
   const TextResult3 = Text(4296);
   if (BACKGROUND_BASE_LOWER == null) {
-    BACKGROUND_BASE_LOWER = tmp5(712).colors.BACKGROUND_BASE_LOWER;
+    BACKGROUND_BASE_LOWER = tmp5(709).colors.BACKGROUND_BASE_LOWER;
   }
   const token = Text(4197).useToken(BACKGROUND_BASE_LOWER);
   const TextResult4 = Text(4197);
   const items8 = [Text(4326).hexWithOpacity(token, 0), token];
   const TextResult5 = Text(4326);
-  const shouldAnimateSticker = Text(10379).useShouldAnimateSticker(false);
+  const shouldAnimateSticker = Text(10401).useShouldAnimateSticker(false);
   if (!showConvoStarterInDM) {
     return null;
   } else {
@@ -307,12 +307,12 @@ export default function DMMessageStickerGreeting(channel) {
     if (stateFromStores) {
       obj3 = { style: null, accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
       obj3[0] = toastContent.toastContainer;
-      const intl3 = Text(1236).intl;
-      obj3[2] = intl3.string(Text(1236).t.pJObYI);
+      const intl3 = Text(1233).intl;
+      obj3[2] = intl3.string(Text(1233).t.pJObYI);
       obj3[3] = callback;
       let tmp24Result = null;
       if (null != stateFromStores2) {
-        tmp5 = tmp5(10261);
+        tmp5 = tmp5(10283);
         const obj4 = { sticker: null, size: 24, animated: null };
         obj4[0] = stateFromStores2;
         obj4[2] = shouldAnimateSticker;
@@ -327,7 +327,7 @@ export default function DMMessageStickerGreeting(channel) {
       tmp = tmp24(Text, obj5);
       callback[1] = tmp;
       obj3[4] = callback;
-      let tmp23Result = tmp23(Text(5068).PressableOpacity, obj3);
+      let tmp23Result = tmp23(Text(5076).PressableOpacity, obj3);
     } else {
       tmp24Result = null;
       if (null != stateFromStores2) {
@@ -336,7 +336,7 @@ export default function DMMessageStickerGreeting(channel) {
         const obj7 = { sticker: null, size: 100, animated: null };
         obj7[0] = stateFromStores2;
         obj7[2] = shouldAnimateSticker;
-        obj6[1] = tmp24(tmp5(10261), obj7);
+        obj6[1] = tmp24(tmp5(10283), obj7);
         tmp24Result = tmp24(tmp25, obj6);
       }
       const obj8 = { children: null };

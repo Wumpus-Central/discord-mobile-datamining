@@ -43,13 +43,13 @@ export default function useUserCommunicationDisabled(arg0, arg1) {
 }
 export const useCurrentUserCommunicationDisabled = function useCurrentUserCommunicationDisabled(guild_id) {
   const items = [closure_3];
-  const stateFromStores = id(589).useStateFromStores(items, () => currentUser.getCurrentUser());
+  const stateFromStores = id(586).useStateFromStores(items, () => currentUser.getCurrentUser());
   id = undefined;
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
   dependencyMap = guild_id;
-  let tmpResult = tmp(589);
+  let tmpResult = tmp(586);
   const items1 = [closure_2];
   const items2 = [guild_id, id];
   const stateFromStores1 = tmpResult.useStateFromStores(
@@ -74,7 +74,7 @@ export const useCurrentUserCommunicationDisabled = function useCurrentUserCommun
     prop = null;
   }
   const items3 = [prop];
-  tmpResult = tmp(4110);
+  tmpResult = tmp(4109);
   items3[1] = tmpResult.isMemberCommunicationDisabled(stateFromStores1);
   return items3;
 };

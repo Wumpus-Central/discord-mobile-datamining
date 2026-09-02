@@ -8,7 +8,7 @@ const result = require("set").fileFinishedImporting(
 );
 
 export default function useNotificationsTabBadge() {
-  let obj = stateFromStores(589);
+  let obj = stateFromStores(586);
   const items = [closure_3];
   stateFromStores = obj.useStateFromStores(items, () => localItems.localItems);
   const items1 = [stateFromStores];

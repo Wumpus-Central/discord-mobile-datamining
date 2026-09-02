@@ -91,5 +91,5 @@ export default function markGuildsAsRead(arr, source, onFinished) {
   obj = { source, type: "guild" };
   expandEventPropertiesDefault.track(AnalyticEvents.MARK_AS_READ, obj);
   let obj2 = expandEventPropertiesDefault;
-  return mapped(5478).bulkAck(mapped, onFinished);
+  return mapped(5486).bulkAck(mapped, onFinished);
 }

@@ -32,7 +32,7 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
   if (setting != null) {
     text = setting.text;
   }
-  let tmp3Result = tmp3(9087);
+  let tmp3Result = tmp3(9101);
   let tmp7 = null;
   if ("" !== text) {
     tmp7 = text;
@@ -40,7 +40,7 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
   closure_3 = tmp3Result.useGameMentionsAsPlainText(tmp7);
   let tmp8;
   if (isYouBarGuildTagEnabled) {
-    tmp3Result = tmp3(8075);
+    tmp3Result = tmp3(8083);
     let primaryGuild;
     if (stateFromStores != null) {
       primaryGuild = stateFromStores.primaryGuild;
@@ -58,10 +58,10 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
   return require("../../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null != callback) {
       const status = closure_1_8.getStatus();
-      let obj = callback(9241);
+      let obj = callback(9255);
       const items = [closure_3, closure_1_7];
       const discoverableApplicationStream = obj.getDiscoverableApplicationStream(id, items);
-      obj1 = callback(9242);
+      obj1 = callback(9256);
       obj = { userId: null };
       obj[0] = id;
       obj = { ChannelStore: null, PermissionStore: null, VoiceStateStore: null };
@@ -81,19 +81,19 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
               if (null != discoverableApplicationStream) {
                 let name;
                 if (activities != null) {
-                  const found = activities.find(id(9248));
+                  const found = activities.find(id(9262));
                   if (found != null) {
                     name = found.name;
                   }
                 }
                 if (null == name) {
-                  const intl3 = tmp4(1236).intl;
-                  let stringResult = intl3.string(tmp4(1236).t.eXan7B);
+                  const intl3 = tmp4(1233).intl;
+                  let stringResult = intl3.string(tmp4(1233).t.eXan7B);
                 }
-                const intl4 = tmp4(1236).intl;
+                const intl4 = tmp4(1233).intl;
                 obj1 = { name: null };
                 obj1[0] = name;
-                stringResult = intl4.formatToPlainString(tmp4(1236).t["0wJXSh"], obj1);
+                stringResult = intl4.formatToPlainString(tmp4(1233).t["0wJXSh"], obj1);
               } else {
                 let found1;
                 if (activities != null) {
@@ -103,15 +103,15 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
                   });
                 }
                 if (null != found1) {
-                  text = id(9253)(found1, true).text;
+                  text = id(9266)(found1, true).text;
                 } else {
                   text = null;
                   if (null != voiceChannel) {
                     if (!voiceChannel.isDM()) {
                       if (!voiceChannel.isGroupDM()) {
-                        const intl = tmp4(1236).intl;
+                        const intl = tmp4(1233).intl;
                         const string = intl.string;
-                        const t = tmp4(1236).t;
+                        const t = tmp4(1233).t;
                         if (isGuildStageVoiceResult) {
                           let stringResult1 = string(t.QygGCN);
                         } else {
@@ -121,8 +121,8 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
                       }
                       text = stringResult1;
                     }
-                    const intl2 = tmp4(1236).intl;
-                    stringResult1 = intl2.string(tmp4(1236).t["9FaEzi"]);
+                    const intl2 = tmp4(1233).intl;
+                    stringResult1 = intl2.string(tmp4(1233).t["9FaEzi"]);
                   }
                 }
               }

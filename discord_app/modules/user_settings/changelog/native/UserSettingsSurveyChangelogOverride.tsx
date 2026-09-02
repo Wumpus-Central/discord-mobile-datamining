@@ -60,9 +60,9 @@ function SurveyOverrideActionSheet() {
     2,
   );
   const first = tmp[0];
-  let obj = { header: callback2(first(5621).BottomSheetTitleHeader, { title: "Survey Override" }), children: null };
+  let obj = { header: callback2(first(5629).BottomSheetTitleHeader, { title: "Survey Override" }), children: null };
   const items = [
-    callback2(first(7705).TextInput, {
+    callback2(first(7714).TextInput, {
       label: "Survey Override",
       size: "md",
       placeholder: "Enter the ID of the Survey you want to test",
@@ -96,7 +96,7 @@ function SurveyOverrideActionSheet() {
   };
   items[1] = callback2(first(4928).Button, obj);
   obj[1] = items;
-  return closure_10(first(5989).ActionSheet, obj);
+  return closure_10(first(5997).ActionSheet, obj);
 }
 function SurveyInfo() {
   let obj = initialize;
@@ -158,9 +158,9 @@ function ChangelogOverrideActionSheet() {
     2,
   );
   const first = tmp[0];
-  let obj = { header: callback2(first(5621).BottomSheetTitleHeader, { title: "Changelog Override" }), children: null };
+  let obj = { header: callback2(first(5629).BottomSheetTitleHeader, { title: "Changelog Override" }), children: null };
   const items = [
-    callback2(first(7705).TextInput, {
+    callback2(first(7714).TextInput, {
       label: "Changelog Override",
       size: "md",
       placeholder: "Enter the ID of the changelog you want to test",
@@ -194,7 +194,7 @@ function ChangelogOverrideActionSheet() {
   };
   items[1] = callback2(first(4928).Button, obj);
   obj[1] = items;
-  return closure_10(first(5989).ActionSheet, obj);
+  return closure_10(first(5997).ActionSheet, obj);
 }
 function ChangelogInfo() {
   let obj = { title: "Changelog", hasIcons: false, children: null };

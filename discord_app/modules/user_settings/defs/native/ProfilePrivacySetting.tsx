@@ -26,7 +26,7 @@ const radio = createToggle.createRadio({
     ProfileVisibility2.updateSetting(NumberResult);
     let obj = apexExperiment;
     if (obj.getIsInPrivateProfilesExperiment("ProfilePrivacySetting")) {
-      const profileToActivityUpsell = tmp2(14457).computeProfileToActivityUpsell(setting, NumberResult);
+      const profileToActivityUpsell = tmp2(14680).computeProfileToActivityUpsell(setting, NumberResult);
       if (null != profileToActivityUpsell) {
         obj = { direction: null, affectedGuildIds: null, settingName: null, mappedActivityValue: null };
         ({
@@ -36,13 +36,13 @@ const radio = createToggle.createRadio({
           mappedActivityValue: obj4[3],
         } = profileToActivityUpsell);
         ACTION_SHEET_HEIGHT_HALFDefault.openLazy(
-          tmp2(2009)(14458, dependencyMap.paths),
+          tmp2(2008)(14681, dependencyMap.paths),
           "ProfileToActivityPrivacyUpsellActionSheet",
           obj,
         );
         const obj3 = ACTION_SHEET_HEIGHT_HALFDefault;
       }
-      const tmp2Result = tmp2(14457);
+      const tmp2Result = tmp2(14680);
     }
   },
   useOptions() {
@@ -91,7 +91,7 @@ let obj = {
     ProfileVisibility2.updateSetting(NumberResult);
     let obj = apexExperiment;
     if (obj.getIsInPrivateProfilesExperiment("ProfilePrivacySetting")) {
-      const profileToActivityUpsell = tmp2(14457).computeProfileToActivityUpsell(setting, NumberResult);
+      const profileToActivityUpsell = tmp2(14680).computeProfileToActivityUpsell(setting, NumberResult);
       if (null != profileToActivityUpsell) {
         obj = { direction: null, affectedGuildIds: null, settingName: null, mappedActivityValue: null };
         ({
@@ -101,13 +101,13 @@ let obj = {
           mappedActivityValue: obj4[3],
         } = profileToActivityUpsell);
         ACTION_SHEET_HEIGHT_HALFDefault.openLazy(
-          tmp2(2009)(14458, dependencyMap.paths),
+          tmp2(2008)(14681, dependencyMap.paths),
           "ProfileToActivityPrivacyUpsellActionSheet",
           obj,
         );
         const obj3 = ACTION_SHEET_HEIGHT_HALFDefault;
       }
-      const tmp2Result = tmp2(14457);
+      const tmp2Result = tmp2(14680);
     }
   },
   useOptions() {

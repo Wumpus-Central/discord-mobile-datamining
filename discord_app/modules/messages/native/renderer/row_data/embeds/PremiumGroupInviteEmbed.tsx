@@ -3,7 +3,7 @@ import set from "../../../../../../../_runtime/00002_set.js";
 import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 import frozen from "../../EmbedUtils.tsx";
-import registerAssetDefault from "../../../../../../../_runtime/07957_registerAsset.js";
+import registerAssetDefault from "../../../../../../../_runtime/07966_registerAsset.js";
 import getPremiumGroupInviteEmbedText from "../../../../../premium/premium_group/PremiumGroupUtils.native.tsx";
 import SubscriptionStatusTypes from "../../../../../premium/premium_group/PremiumGroupConstants.tsx";
 
@@ -44,7 +44,7 @@ export const createPremiumGroupInviteEmbed = function createPremiumGroupInviteEm
     const premiumGroupInviteEmbedText = getPremiumGroupInviteEmbedText.getPremiumGroupInviteEmbedText(obj);
     if (null != premiumGroupInviteEmbedText) {
       ({ header, body } = premiumGroupInviteEmbedText);
-      const intl = tmp6(1236).intl;
+      const intl = tmp6(1233).intl;
       obj = { learnMoreLinkOnClick: null };
       obj1 = { action: "bindOpenUrl", url: null, linkColor: null };
       obj1[1] = closure_3;
@@ -68,9 +68,9 @@ export const createPremiumGroupInviteEmbed = function createPremiumGroupInviteEm
       obj2[2] = backgroundColor;
       obj2[3] = backgroundColor;
       obj2[4] = assetUriForEmbed;
-      const intl2 = tmp6(1236).intl;
-      const formatToPartsResult = intl.formatToParts(tmp8(3017)["9VTnfI"], obj);
-      obj2[5] = intl2.string(tmp6(1236).t.oW0eUd).toUpperCase();
+      const intl2 = tmp6(1233).intl;
+      const formatToPartsResult = intl.formatToParts(tmp8(3016)["9VTnfI"], obj);
+      obj2[5] = intl2.string(tmp6(1233).t.oW0eUd).toUpperCase();
       obj2[6] = betaPillTextColor;
       obj2[7] = betaPillBackgroundColor;
       obj2[8] = body;

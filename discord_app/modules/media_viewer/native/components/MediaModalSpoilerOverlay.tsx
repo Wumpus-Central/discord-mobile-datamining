@@ -54,7 +54,7 @@ export default importAllResult.memo(function MediaModalSpoilerOverlay(source) {
       let str = "dark";
     } else {
       str = "light";
-      const tmpResult = tmp(500);
+      const tmpResult = tmp(1234);
     }
     obj = { blurTheme: null, android_fallbackColor: null, style: null };
     obj[0] = str;
@@ -66,15 +66,15 @@ export default importAllResult.memo(function MediaModalSpoilerOverlay(source) {
     const obj2 = { style: null, children: null };
     if (source.obscure) {
       obj2[0] = items2.obscureContentContainer;
-      items2 = [tmp9(tmp(5030).ImageWarningIcon, { size: "lg", color: "white" })];
+      items2 = [tmp9(tmp(5034).ImageWarningIcon, { size: "lg", color: "white" })];
       const obj3 = {
         accessibilityRole: "text",
         variant: "heading-md/medium",
         color: "text-overlay-light",
         children: null,
       };
-      const intl2 = tmp(1236).intl;
-      stringResult = intl2.string(tmp(1236).t.SpxcUR);
+      const intl2 = tmp(1233).intl;
+      stringResult = intl2.string(tmp(1233).t.SpxcUR);
       obj3[3] = stringResult;
       items2[1] = tmp9(tmp(4474).Text, obj3);
       obj2[1] = items2;
@@ -87,11 +87,11 @@ export default importAllResult.memo(function MediaModalSpoilerOverlay(source) {
         color: "text-overlay-light",
         children: null,
       };
-      const intl = tmp(1236).intl;
-      obj4[3] = intl.string(tmp(1236).t["F+x38C"]).toUpperCase();
+      const intl = tmp(1233).intl;
+      obj4[3] = intl.string(tmp(1233).t["F+x38C"]).toUpperCase();
       obj2[1] = tmp9(tmp(4474).Text, obj4);
       tmp9Result = tmp9(tmp11, obj2);
-      const str2 = intl.string(tmp(1236).t["F+x38C"]);
+      const str2 = intl.string(tmp(1233).t["F+x38C"]);
     }
     obj1[1] = tmp9Result;
     obj1 = tmp9(tmp11, obj1);

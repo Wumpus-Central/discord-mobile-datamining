@@ -2,7 +2,7 @@
 import noopAll from "../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getNicknameDefault from "../../../utils/NicknameUtils.tsx";
-import _modDef8106 from "../../profile_customization/native/HeaderAvatar.tsx";
+import _modDef8114 from "../../profile_customization/native/HeaderAvatar.tsx";
 import useCustomStatusActivityForUserDefault from "../../custom_status/utils/useCustomStatusActivityForUser.tsx";
 import EmojiImageDefault from "UserProfileCustomStatusBubble.tsx";
 import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet.tsx";
@@ -42,7 +42,7 @@ export default function UserProfileCustomStatusActionSheet(user) {
   user = user.user;
   ({ guildId, channelId, previewEmoji, previewText } = user);
   const tmp = callback3();
-  let obj = user(589);
+  let obj = user(586);
   const items = [closure_4];
   const items1 = [user];
   const stateFromStores = obj.useStateFromStores(
@@ -59,19 +59,19 @@ export default function UserProfileCustomStatusActionSheet(user) {
   );
   obj1 = getNicknameDefault;
   const name = obj1.useName(guildId, channelId, user);
-  const intl = user(1236).intl;
+  const intl = user(1233).intl;
   if (stateFromStores) {
-    let stringResult = intl.string(tmp2(1236).t.AHoLf4);
+    let stringResult = intl.string(tmp2(1233).t.AHoLf4);
   } else {
     obj = { username: null };
     obj[0] = name;
-    stringResult = intl.formatToPlainString(tmp2(1236).t["pP5Aa+"], obj);
+    stringResult = intl.formatToPlainString(tmp2(1233).t["pP5Aa+"], obj);
   }
   obj = { title: stringResult, children: null };
   obj1 = { style: tmp.statusPreviewContainer, children: null };
   const obj2 = { style: tmp.avatarContainer, children: null };
   const tmp6 = useCustomStatusActivityForUserDefault(user.id);
-  obj2[1] = callback(_modDef8106, { user, statusStyle: tmp.avatarStatus });
+  obj2[1] = callback(_modDef8114, { user, statusStyle: tmp.avatarStatus });
   const items2 = [
     callback(View, obj2),
     callback(EmojiImageDefault, {

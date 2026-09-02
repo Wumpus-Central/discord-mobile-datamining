@@ -52,12 +52,12 @@ const items = [
     if (obj == null) {
       obj = {};
     }
-    const Storage2 = tmp(595).Storage;
+    const Storage2 = tmp(592).Storage;
     let value = Storage2.get("UserSettingsStore");
     if (value == null) {
       value = {};
     }
-    const Storage3 = tmp(595).Storage;
+    const Storage3 = tmp(592).Storage;
     Storage3.remove("UserSettingsSync");
     obj = {};
     if (false === obj[UserSettingsSections.TEXT]) {

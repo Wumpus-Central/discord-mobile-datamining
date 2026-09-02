@@ -11,7 +11,7 @@ const result = require("set").fileFinishedImporting("modules/video_calls/native/
 export const DisconnectRemoteButton = function DisconnectRemoteButton(channel) {
   channel = channel.channel;
   let remoteSessionId;
-  let obj = channel(589);
+  let obj = channel(586);
   const items = [closure_4];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
     awaitingRemote: null != store.getAwaitingRemoteSessionInfo(),
@@ -19,13 +19,13 @@ export const DisconnectRemoteButton = function DisconnectRemoteButton(channel) {
   }));
   remoteSessionId = stateFromStoresObject.remoteSessionId;
   obj = {
-    source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 7764 : 10058),
+    source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 7773 : 10080),
     accessibilityLabel: null,
     isSmallSize: null,
     onPress: null,
   };
-  const intl = tmp(1236).intl;
-  obj[1] = intl.string(channel(1236).t["6vrfgt"]);
+  const intl = tmp(1233).intl;
+  obj[1] = intl.string(channel(1233).t["6vrfgt"]);
   obj[2] = channel.isSmallSize;
   obj[3] = function onPress() {
     if (null != remoteSessionId) {
@@ -39,7 +39,7 @@ export const DisconnectRemoteButton = function DisconnectRemoteButton(channel) {
     }
   };
   return jsx(ActionButtonAll.PrimaryActionButton, {
-    source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 7764 : 10058),
+    source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 7773 : 10080),
     accessibilityLabel: null,
     isSmallSize: null,
     onPress: null,

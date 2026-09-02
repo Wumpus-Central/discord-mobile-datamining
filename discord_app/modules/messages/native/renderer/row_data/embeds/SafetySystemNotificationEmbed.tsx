@@ -2,7 +2,7 @@
 import set from "../../../../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import ME from "../../../../../../Constants.tsx";
-import hooksDefault from "../../../../../../../_runtime/04075_hooks.js";
+import hooksDefault from "../../../../../../../_runtime/04074_hooks.js";
 import parseMessageEmbedForProps from "../../../../../safety_hub/SafetyHubUtils.tsx";
 
 const Image = get_ActivityIndicator.Image;
@@ -34,7 +34,7 @@ export const createSafetySystemNotificationEmbed = function createSafetySystemNo
             if (null != parseMessageForPropsResult.ctas) {
               let mapCtaToNativeDataResult;
               if (null != parseMessageForPropsResult.ctas[0]) {
-                let tmp6Result = tmp6(8689);
+                let tmp6Result = tmp6(8704);
                 mapCtaToNativeDataResult = tmp6Result.mapCtaToNativeData(
                   parseMessageForPropsResult.ctas[0],
                   parseMessageForPropsResult.learn_more_link,
@@ -43,7 +43,7 @@ export const createSafetySystemNotificationEmbed = function createSafetySystemNo
               }
               let mapCtaToNativeDataResult1;
               if (null != parseMessageForPropsResult.ctas[1]) {
-                tmp6Result = tmp6(8689);
+                tmp6Result = tmp6(8704);
                 mapCtaToNativeDataResult1 = tmp6Result.mapCtaToNativeData(
                   parseMessageForPropsResult.ctas[1],
                   parseMessageForPropsResult.learn_more_link,
@@ -71,19 +71,19 @@ export const createSafetySystemNotificationEmbed = function createSafetySystemNo
               footerTheme: null,
             };
             obj[0] = str;
-            obj[1] = tmp6(7855).getAssetUriForEmbed(
-              Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 8737 : 4988)),
+            obj[1] = tmp6(7864).getAssetUriForEmbed(
+              Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 8752 : 4989)),
             );
-            const intl = tmp6(1236).intl;
+            const intl = tmp6(1233).intl;
             let num = parseMessageForPropsResult.timestamp;
             if (num == null) {
               num = 0;
             }
             obj = { daysAgo: null };
-            const tmp6Result1 = tmp6(7855);
+            const tmp6Result1 = tmp6(7864);
             const obj7 = hooksDefault();
             obj[0] = obj7.diff(hooksDefault.unix(num), "days");
-            obj[2] = intl.formatToPlainString(tmp6(1236).t.eevFb6, obj);
+            obj[2] = intl.formatToPlainString(tmp6(1233).t.eevFb6, obj);
             let str4 = parseMessageForPropsResult.body;
             if (str4 == null) {
               str4 = "";

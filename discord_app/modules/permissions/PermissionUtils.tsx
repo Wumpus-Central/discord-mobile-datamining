@@ -536,7 +536,7 @@ export const generateGuildPermissionSpec = function generateGuildPermissionSpec(
     found = items3.filter((arg0) => arg0 !== constants.USE_EXTERNAL_SOUNDS);
   }
   obj = { title: null, permissions: null };
-  const intl3 = tmp6(1236).intl;
+  const intl3 = tmp6(1233).intl;
   obj[0] = intl3.string(require("../../intl/index.native.tsx").t.cKobO5);
   _require = tmp;
   obj[1] = found.map((arg0) => table[arg0.toString(arg0)]);
@@ -558,7 +558,7 @@ export const generateGuildPermissionSpec = function generateGuildPermissionSpec(
     SET_VOICE_CHANNEL_STATUS: arr9[10],
   } = Permissions);
   obj1 = { title: null, permissions: null };
-  const intl4 = tmp6(1236).intl;
+  const intl4 = tmp6(1233).intl;
   obj1[0] = intl4.string(require("../../intl/index.native.tsx").t["46Ra1b"]);
   _require = tmp;
   obj1[1] = items4.map((arg0) => table[arg0.toString(arg0)]);
@@ -572,7 +572,7 @@ export const generateGuildPermissionSpec = function generateGuildPermissionSpec(
     USE_EXTERNAL_APPS: arr11[2],
   } = Permissions);
   const obj2 = { title: null, permissions: null };
-  const intl5 = tmp6(1236).intl;
+  const intl5 = tmp6(1233).intl;
   obj2[0] = intl5.string(require("../../intl/index.native.tsx").t["rrh/W6"]);
   _require = tmp;
   obj2[1] = items5.map((arg0) => table[arg0.toString(arg0)]);
@@ -581,8 +581,8 @@ export const generateGuildPermissionSpec = function generateGuildPermissionSpec(
   items1[4] = obj2;
   if (showCreatorMonetizationAnalyticsPermission.showStageChannelPermissions) {
     const obj3 = { title: null, permissions: null };
-    const intl6 = tmp6(1236).intl;
-    obj3[0] = intl6.string(tmp6(1236).t.yniauk);
+    const intl6 = tmp6(1233).intl;
+    obj3[0] = intl6.string(tmp6(1233).t.yniauk);
     const items6 = [tmp2.REQUEST_TO_SPEAK];
     _require = tmp;
     obj3[1] = items6.map((arg0) => table[arg0.toString(arg0)]);
@@ -597,7 +597,7 @@ export const generateGuildPermissionSpec = function generateGuildPermissionSpec(
     items1.push(obj3);
   }
   const obj4 = { title: null, permissions: null };
-  const intl7 = tmp6(1236).intl;
+  const intl7 = tmp6(1233).intl;
   obj4[0] = intl7.string(require("../../intl/index.native.tsx").t.b8lplT);
   const items7 = [,];
   ({ CREATE_EVENTS: arr15[0], MANAGE_EVENTS: arr15[1] } = Permissions);
@@ -613,7 +613,7 @@ export const generateGuildPermissionSpec = function generateGuildPermissionSpec(
   }
   items1.push(obj4);
   const obj5 = { title: null, permissions: null };
-  const intl8 = tmp6(1236).intl;
+  const intl8 = tmp6(1233).intl;
   obj5[0] = intl8.string(require("../../intl/index.native.tsx").t["3uI5CX"]);
   const items8 = [Permissions.ADMINISTRATOR];
   _require = tmp;

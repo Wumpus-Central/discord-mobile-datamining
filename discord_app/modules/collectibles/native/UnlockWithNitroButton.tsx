@@ -33,8 +33,8 @@ export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink
   });
   importDefault = useOpenNitroSubscribeActionSheetDefault();
   if (text == null) {
-    const intl = tmp(1236).intl;
-    text = intl.string(tmp(1236).t.sEAnVH);
+    const intl = tmp(1233).intl;
+    text = intl.string(tmp(1233).t.sEAnVH);
   }
   let tmp4Result;
   if (flag) {

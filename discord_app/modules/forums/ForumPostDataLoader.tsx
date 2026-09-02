@@ -336,11 +336,11 @@ export const useFirstForumPostMessage = function useFirstForumPostMessage(stateF
     flag2 = false;
   }
   const items = [closure_6];
-  const stateFromStoresObject = stateFromStores(589).useStateFromStoresObject(items, () => closure_1_6.getMessage(stateFromStores.id));
+  const stateFromStoresObject = stateFromStores(586).useStateFromStoresObject(items, () => closure_1_6.getMessage(stateFromStores.id));
   ({ loaded, firstMessage } = stateFromStoresObject);
-  const obj2 = stateFromStores(589);
+  const obj2 = stateFromStores(586);
   const items1 = [closure_4];
-  stateFromStores = stateFromStores(589).useStateFromStores(items1, () => closure_1_4.getChannel(stateFromStores.parent_id));
+  stateFromStores = stateFromStores(586).useStateFromStores(items1, () => closure_1_4.getChannel(stateFromStores.parent_id));
   let tmp3 = flag;
   if (flag) {
     tmp3 = null != stateFromStores;

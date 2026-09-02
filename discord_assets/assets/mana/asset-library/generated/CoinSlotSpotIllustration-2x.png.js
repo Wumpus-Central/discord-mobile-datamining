@@ -5,5 +5,5 @@ const result = set.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/CoinSlotSpotIllustration-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/8424828f4621dd45cab7ed66962bad70d853b7bb6eaae3b23c111cd645b19a2f.png";
-export const metadata = { fileBytes: 22525 };
+export default "https://cdn.discordapp.com/assets/content/99002d03ba70f21fb415b00bf5491d02214304d09885ece8f0b112a66c1570c2.png";
+export const metadata = { fileBytes: 26915 };

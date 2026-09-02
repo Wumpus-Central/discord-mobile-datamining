@@ -106,7 +106,7 @@ export default function GuildRoleSubscriptionBenefitModalHeader(canSave) {
   }
   const obj6 = { style: items4, children: null };
   items4[1] = disabledButton;
-  const intl2 = tmp4(1236).intl;
+  const intl2 = tmp4(1233).intl;
   obj6[1] = intl2.string(getSystemLocale.t["R3BPH+"]);
   obj5[4] = callback2(Button.LegacyText, obj6);
   items1[2] = callback2(renderDefault, obj5);

@@ -16,12 +16,12 @@ export const getDataHarvestStatus = function getDataHarvestStatus() {
   const value = HTTP.get(obj);
   return value
     .then((body) => {
-      let obj = callback(709);
+      let obj = callback(706);
       obj = { type: "UPDATE_DATA_HARVEST_TYPE", harvestType: body.body };
       obj.dispatch(obj);
     })
     .catch((error) => {
-      let obj = callback(709);
+      let obj = callback(706);
       obj = { type: "LOAD_DATA_HARVEST_TYPE_FAILURE", error };
       obj.dispatch(obj);
     });

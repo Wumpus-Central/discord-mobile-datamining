@@ -19,8 +19,8 @@ const memoResult = importAllResult.memo(() => {
         accessibilityRole: "header",
         style: null,
       };
-      const intl = tmp(1236).intl;
-      obj[2] = intl.string(tmp(1236).t["uKZtC/"]);
+      const intl = tmp(1233).intl;
+      obj[2] = intl.string(tmp(1233).t["uKZtC/"]);
       const items = [absoluteFill.absoluteFill, { height: 1 }];
       obj[4] = items;
       tmp3 = (
@@ -33,7 +33,7 @@ const memoResult = importAllResult.memo(() => {
         />
       );
     }
-    tmpResult = tmp(500);
+    tmpResult = tmp(1234);
   }
   return tmp3;
 });

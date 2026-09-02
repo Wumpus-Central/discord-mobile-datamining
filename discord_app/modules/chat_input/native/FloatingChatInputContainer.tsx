@@ -13,7 +13,7 @@ function useKeyboardOpenPaddingStyle() {
   const obj2 = React;
   [tmp5, importDefault] = sharedValue(
     React.useState(() => {
-      const KeyboardController = token(1642).KeyboardController;
+      const KeyboardController = token(1641).KeyboardController;
       const stateResult = KeyboardController.state();
       let num;
       if (stateResult != null) {
@@ -27,9 +27,9 @@ function useKeyboardOpenPaddingStyle() {
     2,
   );
   const effect = React.useEffect(() => {
-    const KeyboardEvents = token(1642).KeyboardEvents;
+    const KeyboardEvents = token(1641).KeyboardEvents;
     closure_0 = KeyboardEvents.addListener("keyboardWillShow", () => lib(true));
-    const KeyboardEvents2 = token(1642).KeyboardEvents;
+    const KeyboardEvents2 = token(1641).KeyboardEvents;
     closure_1 = KeyboardEvents2.addListener("keyboardWillHide", () => lib(false));
     return () => {
       closure_0.remove();
@@ -38,7 +38,7 @@ function useKeyboardOpenPaddingStyle() {
   }, []);
   const tmp4 = sharedValue(
     React.useState(() => {
-      const KeyboardController = token(1642).KeyboardController;
+      const KeyboardController = token(1641).KeyboardController;
       const stateResult = KeyboardController.state();
       let num;
       if (stateResult != null) {
@@ -53,10 +53,10 @@ function useKeyboardOpenPaddingStyle() {
   );
   const obj3 = token(4342);
   if (!tmp5) {
-    tmp5 = true === obj3.useKeyboardContextForType(token(1626).KeyboardTypes.SYSTEM).keyboardWillOpen;
+    tmp5 = true === obj3.useKeyboardContextForType(token(1625).KeyboardTypes.SYSTEM).keyboardWillOpen;
   }
   if (!tmp5) {
-    tmp5 = tmp7 !== token(1626).KeyboardTypes.SYSTEM;
+    tmp5 = tmp7 !== token(1625).KeyboardTypes.SYSTEM;
   }
   dependencyMap = tmp5;
   let tmpResult = tmp(4217);

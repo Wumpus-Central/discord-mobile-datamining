@@ -389,7 +389,7 @@ export const trackChannelNotificationSettingsUpdate = function trackChannelNotif
   }
   const isChannelMutedResult = store2.isChannelMuted(guildId, channelId);
   const tmp12 = num2 ^ num;
-  const obj4 = guildId(1399);
+  const obj4 = guildId(1398);
   lastMessage = lastMessage.getLastMessage(channelId);
   let type;
   if (lastMessage != null) {
@@ -398,7 +398,7 @@ export const trackChannelNotificationSettingsUpdate = function trackChannelNotif
   if (type == null) {
     type = null;
   }
-  const removeFlagsResult = guildId(1399).removeFlags(tmp12, constants3.FAVORITED, constants3.OPT_IN_ENABLED);
+  const removeFlagsResult = guildId(1398).removeFlags(tmp12, constants3.FAVORITED, constants3.OPT_IN_ENABLED);
   obj = {};
   const merged = Object.assign(computeResult1);
   const merged1 = Object.assign(store.getStats(guildId));

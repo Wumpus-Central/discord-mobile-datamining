@@ -16,9 +16,9 @@ const items = [
           if (null == extractEveryoneRoleResult) {
             return false;
           } else {
-            let tmp8Result = tmp8(10335);
+            let tmp8Result = tmp8(10357);
             if (tmp8Result.shouldShowEveryoneGuard(extractEveryoneRoleResult, getGuildId)) {
-              tmp8Result = tmp8(10335);
+              tmp8Result = tmp8(10357);
               const everyoneMemberCountResult = tmp8Result.everyoneMemberCount(extractEveryoneRoleResult, getGuildId);
               const _Math = Math;
               const _Math2 = Math;
@@ -28,14 +28,14 @@ const items = [
               } else if (getGuildId.isThread()) {
               }
               let obj = { body: null, footer: null };
-              const intl = tmp6(1236).intl;
+              const intl = tmp6(1233).intl;
               obj = { role: null, count: null };
               obj[0] = extractEveryoneRoleResult;
               const _Math4 = Math;
               const result = Math.trunc(everyoneMemberCountResult / powResult) * powResult;
               obj[1] = result.toLocaleString();
               obj[0] = intl.formatToPlainString(_2YaiQ1, obj);
-              const intl2 = tmp6(1236).intl;
+              const intl2 = tmp6(1233).intl;
               obj[1] = intl2.string(getSystemLocale.t.mVyrtu);
               return obj;
             } else {
@@ -49,7 +49,7 @@ const items = [
       }
     },
     analyticsType: "@Everyone Warning",
-    animation: "accessible",
+    animation: "call",
   },
   {
     check(arg0) {

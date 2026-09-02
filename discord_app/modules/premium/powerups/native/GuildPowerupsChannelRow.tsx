@@ -19,11 +19,11 @@ function GuildPowerupsChannelRowIndicator(indicator) {
     if (GUILD_POWERUP_NOTIFICATION_COOLDOWN.GuildPowerupNotificationIndicatorType.WARNING === type) {
       let obj = { color: null, size: "sm" };
       obj[0] = ThemesDefault.colors.STATUS_WARNING;
-      return callback(tmp4(7708).CircleErrorIcon, obj);
-    } else if (tmp4(12059).GuildPowerupNotificationIndicatorType.UNREAD === type) {
+      return callback(tmp4(7717).CircleErrorIcon, obj);
+    } else if (tmp4(12283).GuildPowerupNotificationIndicatorType.UNREAD === type) {
       obj = { value: null, isMentionLowImportance: true };
       obj[0] = indicator.count;
-      return callback(tmp4(1297).Badge, obj);
+      return callback(tmp4(1296).Badge, obj);
     } else {
       return null;
     }
@@ -63,7 +63,7 @@ export default function GuildPowerupsChannelRow(guildId) {
   let dismissNewBadgeIfShown;
   let obj = React;
   const ref = React.useRef(null);
-  const tmp5 = dismissNewBadgeIfShown(12055)(guildId);
+  const tmp5 = dismissNewBadgeIfShown(12279)(guildId);
   let indicator;
   const tmp = callback2();
   if (tmp5 != null) {
@@ -77,13 +77,13 @@ export default function GuildPowerupsChannelRow(guildId) {
     }
     tmp8 = null != popout;
   }
-  const tmp6Result = dismissNewBadgeIfShown(12074)(guildId, tmp8);
+  const tmp6Result = dismissNewBadgeIfShown(12298)(guildId, tmp8);
   dismissNewBadgeIfShown = tmp6Result.dismissNewBadgeIfShown;
   let showUnread;
   if (tmp5 != null) {
     showUnread = tmp5.showUnread;
   }
-  const ChannelModes = guildId(11948).ChannelModes;
+  const ChannelModes = guildId(12171).ChannelModes;
   if (true === showUnread) {
     let DEFAULT = ChannelModes.UNREAD_IMPORTANT;
     let tmp14 = tmp13;
@@ -120,19 +120,19 @@ export default function GuildPowerupsChannelRow(guildId) {
   const tmp17 = closure_6;
   const tmp18 = View;
   const tmp19 = GuildPowerupsCoachmark;
-  const tmp6 = dismissNewBadgeIfShown(12074);
-  const intl = tmp14(1236).intl;
-  obj1[5] = intl.string(dismissNewBadgeIfShown(2401).yv3DJJ);
+  const tmp6 = dismissNewBadgeIfShown(12298);
+  const intl = tmp14(1233).intl;
+  obj1[5] = intl.string(dismissNewBadgeIfShown(2400).yv3DJJ);
   obj1[6] = { selected: false };
   const obj2 = { name: null, mode: null };
-  const intl2 = tmp14(1236).intl;
-  obj2[0] = intl2.string(dismissNewBadgeIfShown(2401).yv3DJJ);
+  const intl2 = tmp14(1233).intl;
+  obj2[0] = intl2.string(dismissNewBadgeIfShown(2400).yv3DJJ);
   obj2[1] = DEFAULT;
-  obj1[7] = closure_5(tmp14(11948).BaseChannelName, obj2);
-  const tmp3Result = dismissNewBadgeIfShown(11948);
-  obj1[8] = closure_5(tmp14(11948).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp14(15807).BoostTier2Icon });
+  obj1[7] = closure_5(tmp14(12171).BaseChannelName, obj2);
+  const tmp3Result = dismissNewBadgeIfShown(12171);
+  obj1[8] = closure_5(tmp14(12171).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp14(16038).BoostTier2Icon });
   if (tmp6Result.showNewBadgeOnRow) {
-    let tmp16Result = tmp16(tmp14(11858).NewBadge, {});
+    let tmp16Result = tmp16(tmp14(12081).NewBadge, {});
   } else {
     let indicator1;
     if (tmp5 != null) {
@@ -148,5 +148,5 @@ export default function GuildPowerupsChannelRow(guildId) {
   items1[1] = closure_5(tmp3Result, obj1);
   obj[2] = items1;
   obj5[1] = tmp17(tmp18, obj);
-  return closure_5(tmp14(5940).LayerScope, obj5);
+  return closure_5(tmp14(5948).LayerScope, obj5);
 }

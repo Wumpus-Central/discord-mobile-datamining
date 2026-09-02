@@ -1,5 +1,5 @@
 // discord_app/modules/guilds_bar/native/GuildsBarDragPreview.tsx
-import isIterable from "../../../../_runtime/04106_isIterable.js";
+import isIterable from "../../../../_runtime/04105_isIterable.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import { GuildsNodeType } from "../../../stores/SortedGuildStore.tsx";
 import closure_5 from "GuildsBarDnDStore.tsx";
@@ -149,9 +149,9 @@ function PreviewItem(dragRegion) {
           id: -1,
           parentId: "PX_16",
           name: "Array",
-          color: "HermesInternal",
-          expanded: 15,
-          children: "variations",
+          color: "paddingHorizontal",
+          expanded: true,
+          children: true,
         };
         obj[0] = listInsets.FOLDER;
         const items = [tmp2];
@@ -419,12 +419,12 @@ const memoResult = importAllResult.memo(function GuildsBarDragPreview() {
             overState: null,
             overNode: null,
             dropPosition: "o",
-            gestureState: "b\u1EA3n \u0111\u1ED3",
-            scrollPosition: "b\u1EA3n \u0111\u1ED3 th\u1EBF gi\u1EDBi",
-            dragRegion: "th\u1EBF gi\u1EDBi",
-            windowSize: "b\u1EA3n \u0111\u1ED3",
-            dropComplete: "b\u1EA3n \u0111\u1ED3 Nh\u1EADt B\u1EA3n",
-            listInsets: "nh\u1EADt b\u1EA3n",
+            gestureState: true,
+            scrollPosition: "light-content",
+            dragRegion: null,
+            windowSize: "PAYPAL_POPUP_OPEN_FAILED",
+            dropComplete: "PayPal popup failed to open, make sure to tokenize in response to a user action.",
+            listInsets: "text-md/semibold",
           };
           ({ node: obj[0], itemSize: obj[1] } = dragSpecs);
           obj[2] = state;

@@ -158,11 +158,11 @@ export const MuteSettingsHint = function MuteSettingsHint(guildMessageNotificati
     }
     obj = dependencyMap;
     if (guildMessageNotifications === tmp2.ALL_MESSAGES) {
-      const intl2 = tmp5(1236).intl;
-      let stringResult = intl2.string(tmp5(1236).t.mUbulW);
+      const intl2 = tmp5(1233).intl;
+      let stringResult = intl2.string(tmp5(1233).t.mUbulW);
     } else {
-      const intl = tmp5(1236).intl;
-      stringResult = intl.string(tmp5(1236).t.GGAdHV);
+      const intl = tmp5(1233).intl;
+      stringResult = intl.string(tmp5(1233).t.GGAdHV);
     }
     obj = { variant: "text-sm/medium", color: "text-default", children: null };
     obj[2] = stringResult;

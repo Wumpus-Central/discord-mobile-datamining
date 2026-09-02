@@ -49,7 +49,7 @@ function _createScheduledMessage() {
               closure_4 = undefined;
               constants = 1;
               c8 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -220,7 +220,7 @@ function _updateScheduledMessage() {
               closure_9 = undefined;
               c7 = 1;
               body = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -234,7 +234,7 @@ function _updateScheduledMessage() {
             } else {
               let obj2 = { type: "SCHEDULED_MESSAGES_UPDATE_START", scheduledMessageId: null };
               obj2[1] = callback;
-              message(709).dispatch(obj2);
+              message(706).dispatch(obj2);
               constants = 1;
               if (null == dependencyMap) {
                 const items = [dependencyMap, callback2];
@@ -242,20 +242,20 @@ function _updateScheduledMessage() {
               } else {
                 const obj3 = { content: null, flags: null };
                 obj3[0] = dependencyMap;
-                const obj14 = callback(7589);
+                const obj14 = callback(7599);
                 dependencyMap = callback2;
                 if (callback2 == null) {
                   dependencyMap = 0;
                 }
-                obj3[1] = callback(1399).removeFlag(dependencyMap, constants.SUPPRESS_NOTIFICATIONS);
+                obj3[1] = callback(1398).removeFlag(dependencyMap, constants.SUPPRESS_NOTIFICATIONS);
                 result = obj14.parseContentAndFlagsForSilentMessage(obj3);
-                const obj16 = callback(1399);
+                const obj16 = callback(1398);
               }
               c4 = result;
               closure_5 = callback2(c4, 2);
               constants = closure_5[0];
               c7 = closure_5[1];
-              const HTTP = callback(530).HTTP;
+              const HTTP = callback(527).HTTP;
               let obj4 = { url: null, body: null, rejectWithError: true };
               obj4[0] = closure_5.SCHEDULED_MESSAGE(callback);
               const obj5 = { scheduled_timestamp: null, content: null, flags: null };
@@ -266,12 +266,12 @@ function _updateScheduledMessage() {
               HTTP.patch(obj4);
               c7 = 3;
               body = 1;
-              const obj12 = message(709);
+              const obj12 = message(706);
             }
           } else if (2 === tmp7) {
             constants = 0;
             closure_10 = closure_5;
-            const scheduledMessageLogger = callback(7589).scheduledMessageLogger;
+            const scheduledMessageLogger = callback(7599).scheduledMessageLogger;
             scheduledMessageLogger.error("Failed to update scheduled message", closure_10);
             body = closure_10.body;
             message = undefined;
@@ -282,7 +282,7 @@ function _updateScheduledMessage() {
               message = closure_10.message;
             }
             closure_9 = message;
-            obj4 = message(709);
+            obj4 = message(706);
             const obj6 = { type: "SCHEDULED_MESSAGES_UPDATE_FAILURE", scheduledMessageId: null, errorMsg: null };
             obj6[1] = callback;
             obj6[2] = closure_9;
@@ -301,9 +301,9 @@ function _updateScheduledMessage() {
             return obj7;
           } else {
             body = arg1;
-            obj = message(709);
+            obj = message(706);
             const obj8 = { type: "SCHEDULED_MESSAGES_UPDATE_SUCCESS", scheduledMessageSend: null };
-            obj2 = callback(7589);
+            obj2 = callback(7599);
             obj8[1] = obj2.convertServerScheduledMessageSend(body.body);
             obj.dispatch(obj8);
             constants = 0;
@@ -559,12 +559,12 @@ function _getScheduledMessages() {
   const self = this;
   const tmp = callback(function* () {
     const callback = tmp2;
-    const HTTP = closure_1_0(530).HTTP;
+    const HTTP = closure_1_0(527).HTTP;
     obj1 = { url: null, rejectWithError: true };
     obj1[0] = closure_1_5.SCHEDULED_MESSAGES;
     yield HTTP.get(obj1);
     const body = arg1.body;
-    return body.map(callback(7589).convertServerScheduledMessageSend);
+    return body.map(callback(7599).convertServerScheduledMessageSend);
   });
   closure_12 = tmp;
   const apply = tmp.apply;
@@ -594,9 +594,9 @@ function _fetchScheduledMessages() {
     if (1 === tmp7) {
       c3 = 0;
       callback2 = dependencyMap;
-      const scheduledMessageLogger2 = callback(7589).scheduledMessageLogger;
+      const scheduledMessageLogger2 = callback(7599).scheduledMessageLogger;
       scheduledMessageLogger2.error("Failed to fetch scheduled messages", callback2);
-      let obj3 = callback2(709);
+      let obj3 = callback2(706);
       const obj2 = { type: "FETCH_SCHEDULED_MESSAGES_FAILURE", error: null };
       obj2[1] = callback2;
       obj3.dispatch(obj2);
@@ -606,9 +606,9 @@ function _fetchScheduledMessages() {
       throw arg1;
     } else if (arg0 !== 2) {
       callback = arg1;
-      const scheduledMessageLogger = callback(7589).scheduledMessageLogger;
+      const scheduledMessageLogger = callback(7599).scheduledMessageLogger;
       scheduledMessageLogger.info("Fetched scheduled messages", callback);
-      const obj = callback2(709);
+      const obj = callback2(706);
       obj3 = { type: "FETCH_SCHEDULED_MESSAGES_SUCCESS", messages: null };
       obj3[1] = callback;
       obj.dispatch(obj3);

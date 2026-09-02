@@ -76,8 +76,8 @@ function _handleShare() {
           } else if (1 === tmp7) {
             c4 = 0;
             obj1 = callback(4193);
-            const intl = callback(1236).intl;
-            obj1.presentError(intl.string(callback(1236).t.R0RpRX));
+            const intl = callback(1233).intl;
+            obj1.presentError(intl.string(callback(1233).t.R0RpRX));
             c6 = 3;
             const obj2 = { value: null, done: true };
             obj2[0] = undefined;
@@ -96,10 +96,10 @@ function _handleShare() {
             c4 = 0;
             obj3 = { channel: null, code: null, message: null, location: null };
             obj3[1] = code;
-            const intl2 = callback(1236).intl;
+            const intl2 = callback(1233).intl;
             const obj4 = { link: null };
-            obj4[0] = code(7503)(code);
-            obj3[2] = intl2.formatToPlainString(callback(1236).t.PJf9P9, obj4);
+            obj4[0] = code(7513)(code);
+            obj3[2] = intl2.formatToPlainString(callback(1233).t.PJf9P9, obj4);
             obj3[3] = constants.ADD_FRIENDS_MODAL;
             callback(obj3);
             c6 = 3;

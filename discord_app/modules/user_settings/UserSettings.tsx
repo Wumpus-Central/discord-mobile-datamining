@@ -1947,9 +1947,9 @@ definePropertyResult = set.defineProtoSetting(
   (arg0) => {
     let DEFAULT = arg0;
     if (arg0 === create.UIDensity.UNSET_UI_DENSITY) {
-      DEFAULT = tmp(1306).UIDensity.DEFAULT;
+      DEFAULT = tmp(1305).UIDensity.DEFAULT;
     } else if (DEFAULT == null) {
-      DEFAULT = tmp(1306).UIDensity.DEFAULT;
+      DEFAULT = tmp(1305).UIDensity.DEFAULT;
     }
     return DEFAULT;
   },

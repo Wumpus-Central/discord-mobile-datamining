@@ -1,6 +1,6 @@
 // discord_app/modules/skus/SKURecord.tsx
 import toJSDefault from "../../lib/Record.tsx";
-import hooksDefault from "../../../_runtime/04075_hooks.js";
+import hooksDefault from "../../../_runtime/04074_hooks.js";
 import getPricesFromServerDefault from "utils/getPricesFromServer.tsx";
 import transformProfileEffectKeyFrameFromServerDefault from "utils/transformSKUTenantMetadata.tsx";
 import closure_3 from "../../records/ApplicationRecord.tsx";
@@ -393,8 +393,8 @@ prototype["isPremiumPerk"] = function isPremiumPerk() {
     let hasFlagResult = hasFlag /* hasFlag */
       .hasFlag(self.flags, constants2.PREMIUM_PURCHASE);
     if (!hasFlagResult) {
-      hasFlagResult = tmp(1399).hasFlag(self.flags, tmp3.PREMIUM_AND_DISTRIBUTION);
-      const tmpResult = tmp(1399);
+      hasFlagResult = tmp(1398).hasFlag(self.flags, tmp3.PREMIUM_AND_DISTRIBUTION);
+      const tmpResult = tmp(1398);
     }
     premium = hasFlagResult;
     const obj = hasFlag;

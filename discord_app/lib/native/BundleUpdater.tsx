@@ -126,7 +126,7 @@ prototype["emitOtaMetric"] = function emitOtaMetric(item10010) {
   const str = t;
   const withResult = match.with({ type: "OtaCheckAttempt" }, (result) => {
     closure_5.verbose("OTA check attempt", result);
-    let obj = callback(698);
+    let obj = callback(695);
     obj = {
       result: result.result,
       duration_seconds: result.durationSeconds,
@@ -135,12 +135,12 @@ prototype["emitOtaMetric"] = function emitOtaMetric(item10010) {
       used_streaming: result.usedStreaming,
     };
     obj.track(constants.MOBILE_OTA_CHECK_ATTEMPT, obj);
-    return callback(7347).increment(closure_9.prepareOtaMetricForDatadog(result, ["result"]));
+    return callback(7356).increment(closure_9.prepareOtaMetricForDatadog(result, ["result"]));
   });
   match
     .with({ type: "OtaCheckAttempt" }, (result) => {
       closure_5.verbose("OTA check attempt", result);
-      let obj = callback(698);
+      let obj = callback(695);
       obj = {
         result: result.result,
         duration_seconds: result.durationSeconds,
@@ -149,11 +149,11 @@ prototype["emitOtaMetric"] = function emitOtaMetric(item10010) {
         used_streaming: result.usedStreaming,
       };
       obj.track(constants.MOBILE_OTA_CHECK_ATTEMPT, obj);
-      return callback(7347).increment(closure_9.prepareOtaMetricForDatadog(result, ["result"]));
+      return callback(7356).increment(closure_9.prepareOtaMetricForDatadog(result, ["result"]));
     })
     .with({ type: "OtaAssetDownloadAttempt" }, (result) => {
       closure_5.verbose("OTA asset download attempt", result);
-      let obj = callback(698);
+      let obj = callback(695);
       obj = {
         result: result.result,
         duration_seconds: result.durationSeconds,
@@ -163,7 +163,7 @@ prototype["emitOtaMetric"] = function emitOtaMetric(item10010) {
         bytes_received: result.bytesReceived,
       };
       obj.track(constants.MOBILE_OTA_ASSET_DOWNLOAD_ATTEMPT, obj);
-      return callback(7347).increment(closure_9.prepareOtaMetricForDatadog(result, ["result", "statusCode"]));
+      return callback(7356).increment(closure_9.prepareOtaMetricForDatadog(result, ["result", "statusCode"]));
     })
     .exhaustive();
 };

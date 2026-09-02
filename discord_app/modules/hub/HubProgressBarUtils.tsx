@@ -11,18 +11,18 @@ const result = require("set").fileFinishedImporting("modules/hub/HubProgressBarU
 
 export const getHubProgressTitleForStep = function getHubProgressTitleForStep(nextHubProgressStep) {
   if (create.HubProgressStep.JOIN_GUILD === nextHubProgressStep) {
-    const intl3 = tmp(1236).intl;
-    return intl3.string(tmp(1236).t.iNR25n);
-  } else if (tmp(1306).HubProgressStep.INVITE_USER === nextHubProgressStep) {
-    const intl2 = tmp(1236).intl;
-    return intl2.string(tmp(1236).t["3NlTYU"]);
-  } else if (tmp(1306).HubProgressStep.CONTACT_SYNC === nextHubProgressStep) {
-    const intl = tmp(1236).intl;
-    return intl.string(tmp(1236).t.HFvFte);
-  } else if (tmp(1306).HubProgressStep.NO_PROGRESS === nextHubProgressStep) {
+    const intl3 = tmp(1233).intl;
+    return intl3.string(tmp(1233).t.iNR25n);
+  } else if (tmp(1305).HubProgressStep.INVITE_USER === nextHubProgressStep) {
+    const intl2 = tmp(1233).intl;
+    return intl2.string(tmp(1233).t["3NlTYU"]);
+  } else if (tmp(1305).HubProgressStep.CONTACT_SYNC === nextHubProgressStep) {
+    const intl = tmp(1233).intl;
+    return intl.string(tmp(1233).t.HFvFte);
+  } else if (tmp(1305).HubProgressStep.NO_PROGRESS === nextHubProgressStep) {
     return null;
   } else {
-    tmp(1471).assertNever(nextHubProgressStep);
+    tmp(1470).assertNever(nextHubProgressStep);
   }
 };
 export const useHubProgressBarCompletedSteps = function useHubProgressBarCompletedSteps(guild) {

@@ -7,7 +7,7 @@ const result = set.fileFinishedImporting("modules/noise_cancellation/getEffectiv
 
 export default function getEffectiveNoiseCancellation(arg0, arg1) {
   if (!obj.isIOS()) {
-    let tmpResult = tmp(500);
+    let tmpResult = tmp(1234);
     if (!tmpResult.isMac()) {
       let tmp3 = arg0;
       if (arg0) {
@@ -16,16 +16,16 @@ export default function getEffectiveNoiseCancellation(arg0, arg1) {
           tmp5 = "" === arg1;
         }
         if (!tmp5) {
-          tmpResult = tmp(500);
+          tmpResult = tmp(1234);
           tmp5 = !tmpResult.isWindows();
         }
         if (!tmp5) {
           tmp5 = arg1 !== deep_noise_suppression;
         }
         if (!tmp5) {
-          tmp5 = !tmp(10079).getWindowsAudioEffectsExperimentConfig({ location: "setNoiseCancellation" })
+          tmp5 = !tmp(10101).getWindowsAudioEffectsExperimentConfig({ location: "setNoiseCancellation" })
             .preferSystemEffects;
-          const tmpResult1 = tmp(10079);
+          const tmpResult1 = tmp(10101);
         }
         if (tmp5) {
           tmp5 = arg0;

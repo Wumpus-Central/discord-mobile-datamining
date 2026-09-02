@@ -1,9 +1,9 @@
 // discord_app/modules/api_request_config/native/ApiRequestConfigManager.tsx
 import set from "../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import set2 from "../../../utils/PlatformUtils.tsx";
 import sendRequest from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import set2 from "../../../utils/PlatformUtils.tsx";
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
 import closure_4 from "../../../stores/AuthenticationStore.tsx";
 

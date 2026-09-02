@@ -45,7 +45,7 @@ function _submitPollVote() {
               ({ channelId: c0, messageId: c1, answerIds: c2 } = callback);
               c5 = 1;
               c6 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp8) {
             if (arg0 === 1) {
@@ -58,7 +58,7 @@ function _submitPollVote() {
               return obj1;
             } else {
               c4 = 1;
-              const HTTP = callback(530).HTTP;
+              const HTTP = callback(527).HTTP;
               const obj2 = { url: null, body: null, rejectWithError: false };
               obj2[0] = closure_3.POLL_ANSWERS(callback, dependencyMap);
               const obj3 = { answer_ids: null };
@@ -152,7 +152,7 @@ function _endPollEarly() {
               ({ channelId: c0, messageId: c1 } = callback);
               c5 = 1;
               c6 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp8) {
             if (arg0 === 1) {
@@ -165,7 +165,7 @@ function _endPollEarly() {
               return obj1;
             } else {
               c4 = 1;
-              const HTTP = callback(530).HTTP;
+              const HTTP = callback(527).HTTP;
               const obj2 = { url: null, rejectWithError: false };
               obj2[0] = closure_3.POLL_EXPIRE(callback, dependencyMap);
               c5 = 3;

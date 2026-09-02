@@ -19,19 +19,19 @@ createToggle = {
   useOptions: function useDMsMessagePreviewsOptions() {
     return React.useMemo(() => {
       let obj = { label: null, value: null };
-      const intl = callback(1236).intl;
-      obj[0] = intl.string(callback(1236).t.FMWYvb);
-      obj[1] = callback(1306).TimestampHourCycle.AUTO;
+      const intl = callback(1233).intl;
+      obj[0] = intl.string(callback(1233).t.FMWYvb);
+      obj[1] = callback(1305).TimestampHourCycle.AUTO;
       const items = [obj, ,];
       obj = { label: null, value: null };
-      const intl2 = callback(1236).intl;
-      obj[0] = intl2.string(callback(1236).t.p8NOwi);
-      obj[1] = callback(1306).TimestampHourCycle.H12;
+      const intl2 = callback(1233).intl;
+      obj[0] = intl2.string(callback(1233).t.p8NOwi);
+      obj[1] = callback(1305).TimestampHourCycle.H12;
       items[1] = obj;
       obj = { label: null, value: null };
-      const intl3 = callback(1236).intl;
-      obj[0] = intl3.string(callback(1236).t["+o/sOo"]);
-      obj[1] = callback(1306).TimestampHourCycle.H23;
+      const intl3 = callback(1233).intl;
+      obj[0] = intl3.string(callback(1233).t["+o/sOo"]);
+      obj[1] = callback(1305).TimestampHourCycle.H23;
       items[2] = obj;
       return items;
     }, []);

@@ -120,7 +120,7 @@ export default function PromptOptionButton(option) {
   let derivedValue;
   let derivedValue1;
   const tmp = isUnseen();
-  obj = option(589);
+  obj = option(586);
   let items = [first];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let id;
@@ -143,7 +143,7 @@ export default function PromptOptionButton(option) {
     }
     return usableCustomEmojiById;
   });
-  obj1 = option(589);
+  obj1 = option(586);
   let items1 = [num];
   stateFromStores1 = obj1.useStateFromStores(items1, () => num.useReducedMotion);
   let obj2 = option(4217);
@@ -196,7 +196,7 @@ export default function PromptOptionButton(option) {
   R.__workletHash = 8281627194581;
   R.__initData = closure_13;
   const animatedStyle = obj2.useAnimatedStyle(R);
-  const tmp8 = selected(5582)(option.guildId);
+  const tmp8 = selected(5590)(option.guildId);
   closure_5 = tmp8;
   num = 0;
   if (null != tmp8) {
@@ -380,13 +380,13 @@ export default function PromptOptionButton(option) {
       title = tmp.title;
     }
   }, items5);
-  token = option(4197).useToken(tmp7(712).colors.BORDER_SUBTLE);
+  token = option(4197).useToken(tmp7(709).colors.BORDER_SUBTLE);
   let tmp2Result1 = option(4197);
-  token1 = option(4197).useToken(tmp7(712).colors.BACKGROUND_BRAND);
+  token1 = option(4197).useToken(tmp7(709).colors.BACKGROUND_BRAND);
   const tmp2Result2 = option(4197);
-  token2 = option(4197).useToken(tmp7(712).colors.BORDER_STRONG);
+  token2 = option(4197).useToken(tmp7(709).colors.BORDER_STRONG);
   const tmp2Result3 = option(4197);
-  token3 = option(4197).useToken(tmp7(712).colors.BACKGROUND_BASE_LOWEST);
+  token3 = option(4197).useToken(tmp7(709).colors.BACKGROUND_BASE_LOWEST);
   const tmp2Result4 = option(4197);
   const fn = function q() {
     num = 0;
@@ -536,9 +536,9 @@ export default function PromptOptionButton(option) {
     const obj7 = { textEmojiStyle: null, fastImageStyle: null, src: null, name: null };
     ({ optionTextEmoji: obj24[0], optionImageEmoji: obj24[1] } = tmp);
     let emojiURL;
-    let tmp7Result = tmp7(5585);
+    let tmp7Result = tmp7(5593);
     if (null != stateFromStores) {
-      tmp7Result = tmp7(1431);
+      tmp7Result = tmp7(1430);
       const obj8 = { id: null, animated: null, size: null };
       ({ id: obj26[0], animated: obj26[1] } = stateFromStores);
       obj8[2] = closure_8;
@@ -579,7 +579,7 @@ export default function PromptOptionButton(option) {
   obj9[1] = items9;
   items8[1] = closure_10(closure_5, obj9);
   obj5[8] = items8;
-  const items10 = [closure_10(option(5068).PressableOpacity, obj5), , ,];
+  const items10 = [closure_10(option(5076).PressableOpacity, obj5), , ,];
   tmp44Result = null;
   if (num > 0) {
     const obj12 = {
@@ -592,10 +592,10 @@ export default function PromptOptionButton(option) {
     const items11 = [tmp.roleCount, animatedStyle1];
     obj12[3] = items11;
     const obj13 = { variant: "text-xs/semibold", color: "text-overlay-light", children: null };
-    let intl = tmp2(1236).intl;
+    let intl = tmp2(1233).intl;
     const obj14 = { memberCount: null };
     obj14[0] = num;
-    obj13[2] = intl.format(tmp2(1236).t.EgKsZA, obj14);
+    obj13[2] = intl.format(tmp2(1233).t.EgKsZA, obj14);
     obj12[4] = tmp44(tmp2(4474).Text, obj13);
     tmp44Result = tmp44(tmp7(4217).View, obj12);
   }
@@ -605,7 +605,7 @@ export default function PromptOptionButton(option) {
   const obj10 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: option.title };
   const tmp2Result9 = option(4205);
   const tmp43 = closure_5;
-  obj15[1] = callback2(option(5588).CheckmarkSmallIcon, { size: "xs", color: selected(712).colors.WHITE });
+  obj15[1] = callback2(option(5596).CheckmarkSmallIcon, { size: "xs", color: selected(709).colors.WHITE });
   items10[2] = callback2(selected(4217).View, obj15);
   if (canBeNew) {
     canBeNew = !selected;
@@ -615,11 +615,11 @@ export default function PromptOptionButton(option) {
   }
   if (canBeNew) {
     const obj17 = { color: null, text: null, style: null, textStyle: null };
-    obj17[0] = tmp2(1297).BadgeColors.BRAND;
-    let intl2 = tmp2(1236).intl;
-    obj17[1] = intl2.string(tmp2(1236).t.y2b7CA);
+    obj17[0] = tmp2(1296).BadgeColors.BRAND;
+    let intl2 = tmp2(1233).intl;
+    obj17[1] = intl2.string(tmp2(1233).t.y2b7CA);
     ({ newBadgeWrapper: obj35[2], newBadge: obj35[3] } = tmp);
-    canBeNew = tmp44(tmp2(1297).TextBadge, obj17);
+    canBeNew = tmp44(tmp2(1296).TextBadge, obj17);
   }
   items10[3] = canBeNew;
   obj4[1] = items10;

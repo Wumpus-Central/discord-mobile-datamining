@@ -7,7 +7,7 @@ import Text from "../../../../design/components/Text/native/Text.tsx";
 import Button from "../../../../design/components/Button/native/Button.native.tsx";
 import NAV_BAR_HEIGHT from "../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
 import preloadDefault from "../../../../components_native/common/FastImage.tsx";
-import registerAssetDefault from "../../../../../_runtime/12288_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/12512_registerAsset.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
@@ -76,7 +76,7 @@ export default function RedesignDiscoverabilityLanding(onNext) {
     learnMoreHook(children) {
       return callback2(
         callback(4474).Text,
-        { onPress: callback(12218).handleOpenLearnMoreLink, variant: "text-sm/medium", color: "text-link", children },
+        { onPress: callback(12442).handleOpenLearnMoreLink, variant: "text-sm/medium", color: "text-link", children },
         arg1,
       );
     },

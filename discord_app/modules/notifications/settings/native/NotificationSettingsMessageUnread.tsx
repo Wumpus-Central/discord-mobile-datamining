@@ -41,7 +41,7 @@ function NotificationSettingsMessageUnread(onPress) {
   items2[1] = callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj6);
   const obj7 = { onPress: onPress.onCustomize, children: null };
   const obj8 = { variant: "text-sm/semibold", style: tmp.cta, color: "text-brand", children: null };
-  const intl3 = tmp2(1236).intl;
+  const intl3 = tmp2(1233).intl;
   const items3 = [intl3.string(require("../../../../intl/index.native.tsx").t.yxiV9W), " "];
   obj8[3] = items3;
   obj7[1] = callback2(require("../../../../design/components/Text/native/Text.tsx").Text, obj8);

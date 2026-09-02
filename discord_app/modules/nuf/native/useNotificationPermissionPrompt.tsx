@@ -10,10 +10,10 @@ const result = require("set").fileFinishedImporting("modules/nuf/native/useNotif
 
 export default function useNotificationPermissionPrompt() {
   const items = [closure_5];
-  stateFromStores = stateFromStores(589).useStateFromStores(items, () => connected.isConnected());
-  const obj = stateFromStores(589);
+  stateFromStores = stateFromStores(586).useStateFromStores(items, () => connected.isConnected());
+  const obj = stateFromStores(586);
   const items1 = [closure_6, closure_4];
-  const stateFromStores1 = stateFromStores(589).useStateFromStores(items1, () =>
+  const stateFromStores1 = stateFromStores(586).useStateFromStores(items1, () =>
     stateFromStores1(table[6])(closure_4, closure_6),
   );
   const items2 = [stateFromStores, stateFromStores1];
@@ -29,8 +29,8 @@ export default function useNotificationPermissionPrompt() {
       }
     }
   }, items2);
-  const obj2 = stateFromStores(589);
-  const guildOpenNudge = stateFromStores(16112).useGuildOpenNudge();
-  const obj3 = stateFromStores(16112);
-  const postCallDisconnectNudge = stateFromStores(16114).usePostCallDisconnectNudge();
+  const obj2 = stateFromStores(586);
+  const guildOpenNudge = stateFromStores(16343).useGuildOpenNudge();
+  const obj3 = stateFromStores(16343);
+  const postCallDisconnectNudge = stateFromStores(16345).usePostCallDisconnectNudge();
 }

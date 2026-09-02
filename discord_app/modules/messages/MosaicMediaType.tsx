@@ -35,7 +35,7 @@ export const getMosaicMediaTypeForAttachment = function getMosaicMediaTypeForAtt
               if (tmp5Result.isVideoFile(filename)) {
                 str5 = "INVALID";
                 if (null != proxy_url.proxy_url) {
-                  tmp5Result = tmp5(1399);
+                  tmp5Result = tmp5(1398);
                   let num2 = proxy_url.flags;
                   if (num2 == null) {
                     num2 = 0;

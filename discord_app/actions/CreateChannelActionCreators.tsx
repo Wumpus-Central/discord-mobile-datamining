@@ -17,8 +17,8 @@ export default {
     if (permissionOverwrites === undefined) {
       permissionOverwrites = [];
     }
-    ({ bitrate, userLimit, parentId, skuId, flags, availableTags, gameId } = guildId);
-    let obj = permissionOverwrites(709);
+    ({ bitrate, userLimit, parentId, skuId, applicationId, flags, availableTags, gameId } = guildId);
+    let obj = permissionOverwrites(706);
     obj.dispatch({ type: "CREATE_CHANNEL_MODAL_SUBMIT", guildId, channelType: type });
     obj = { type, name: guildId.name, permission_overwrites: permissionOverwrites };
     let tmp4 = null != bitrate;
@@ -58,12 +58,21 @@ export default {
     }
     if (type === constants.GUILD_STORE) {
       if (null == skuId) {
-        const _Error = Error;
+        const _Error2 = Error;
         error = new Error("Unexpected missing SKU");
         throw error;
       } else {
         obj.sku_id = skuId;
         obj.branch_id = guildId.branchId;
+      }
+    }
+    if (type === tmp8.GUILD_APP) {
+      if (null == applicationId) {
+        const _Error = Error;
+        const error1 = new Error("Unexpected missing application");
+        throw error1;
+      } else {
+        obj.application_id = applicationId;
       }
     }
     obj = {
@@ -74,9 +83,10 @@ export default {
       rejectWithError: null,
     };
     const tmp = permissionOverwrites;
+    tmp8 = constants;
     const tmpResult = permissionOverwrites(4713);
     obj[3] = {
-      event: guildId(503).NetworkActionNames.CHANNEL_CREATE,
+      event: guildId(500).NetworkActionNames.CHANNEL_CREATE,
       properties(body) {
         let obj = guildId(closure_1_2[6]);
         obj = { is_private: permissionOverwrites.length > 0, channel_id: null, channel_type: null };
@@ -100,7 +110,7 @@ export default {
       },
     };
     obj1 = {
-      event: guildId(503).NetworkActionNames.CHANNEL_CREATE,
+      event: guildId(500).NetworkActionNames.CHANNEL_CREATE,
       properties(body) {
         let obj = guildId(closure_1_2[6]);
         obj = { is_private: permissionOverwrites.length > 0, channel_id: null, channel_type: null };
@@ -123,8 +133,8 @@ export default {
         return obj.exact(obj);
       },
     };
-    obj[4] = guildId(530).rejectWithMigratedError();
-    const obj6 = guildId(530);
+    obj[4] = guildId(527).rejectWithMigratedError();
+    const obj6 = guildId(527);
     return tmpResult.post(obj).then(
       (body) => {
         if (closure_1_3.isOptInEnabled(guildId)) {

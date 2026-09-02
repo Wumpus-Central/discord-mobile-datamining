@@ -1,14 +1,14 @@
 // discord_common/js/packages/flux/PersistedStore.tsx
 import isTracingDefault from "../app-start-performance/AppStartPerformance.tsx";
 import Storage3 from "../storage/Storage.tsx";
-import throttleDefault from "../../../../_runtime/00635_throttle.js";
+import throttleDefault from "../../../../_runtime/00632_throttle.js";
 import closure_4 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import { Store } from "Store.tsx";
 import set from "../../../../_runtime/00002_set.js";
 
 require = arg1;
 let closure_3 = ["_state", "_version"];
-let closure_6 = { _state: "children", _version: "c" };
+let closure_6 = { _state: "disabled", _version: "Date" };
 let c7 = null;
 let PersistedStore;
 class PersistedStore extends r10016 {
@@ -241,7 +241,7 @@ PersistedStore["migrateAndReadStoreState"] = function migrateAndReadStoreState(E
     if (PersistedStore.shouldClear(c7, EmojiStore)) {
       const Storage2 = Storage3.Storage;
       Storage2.remove(EmojiStore);
-      return { state: "PX_16", requiresPersist: null };
+      return { state: "PX_16", requiresPersist: true };
     }
   }
   let value = null;

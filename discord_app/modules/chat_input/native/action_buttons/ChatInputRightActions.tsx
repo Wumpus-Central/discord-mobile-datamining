@@ -32,7 +32,7 @@ function LeftSlot(state) {
     channel,
     onPress,
     styleButton: "PX_16",
-    shouldShowThread: "lifecycle",
+    shouldShowThread: "cowboy",
   });
   return callback2(_modDef4217.View, obj);
 }
@@ -53,9 +53,9 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   importAllResult = undefined;
   ({ keyboardType, showKeyboardIcon, shouldShowGiftButton, onPressExpression } = channel);
   let obj = channel(4197);
-  const token = obj.useToken(onPressAction(712).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
+  const token = obj.useToken(onPressAction(709).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
   obj1 = channel(4197);
-  const sum = token + 2 * obj1.useToken(onPressAction(712).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
+  const sum = token + 2 * obj1.useToken(onPressAction(709).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
   dependencyMap = sum;
   const tmp6 = callback3();
   callback = tmp6;
@@ -90,11 +90,11 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   }
   const items1 = [tmp14Result];
   obj1 = {
-    active: keyboardType === channel(1626).KeyboardTypes.EXPRESSION,
+    active: keyboardType === channel(1625).KeyboardTypes.EXPRESSION,
     showKeyboardIcon,
     onPress: onPressExpression,
   };
-  items1[1] = callback2(onPressAction(11744), obj1);
+  items1[1] = callback2(onPressAction(11967), obj1);
   obj[1] = items1;
   return closure_8(View, obj);
 });

@@ -10,7 +10,7 @@ function _getCurrentTask() {
     obj1 = { url: null, trackedActionData: null, rejectWithError: true };
     obj1[0] = closure_1_4.SAFETY_FLOWS_TASK;
     const obj2 = { event: null };
-    obj2[0] = closure_1_0(503).NetworkActionNames.USER_VERIFY;
+    obj2[0] = closure_1_0(500).NetworkActionNames.USER_VERIFY;
     obj1[1] = obj2;
     closure_0 = yield v0(4713).get(obj1);
     let body = null;
@@ -39,7 +39,7 @@ function _completeTask() {
       obj1[0] = closure_1_4.SAFETY_FLOWS_TASK;
       obj1[1] = callback;
       const obj2 = { event: null };
-      obj2[0] = callback(503).NetworkActionNames.USER_VERIFY;
+      obj2[0] = callback(500).NetworkActionNames.USER_VERIFY;
       obj1[2] = obj2;
       yield v0(4713).post(obj1);
       return body.body;

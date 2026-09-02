@@ -1,8 +1,8 @@
 // discord_app/lib/uploader/Upload.tsx
 import set from "../../../_runtime/00002_set.js";
 import applyDefault from "../../../_runtime/00012_apply.js";
-import v1 from "../../../_runtime/00514_v1.js";
-import EventEmitter2 from "../../../_runtime/00652_EventEmitter.js";
+import v1 from "../../../_runtime/00511_v1.js";
+import EventEmitter2 from "../../../_runtime/00649_EventEmitter.js";
 import items from "../../utils/UploadUtils.tsx";
 import getUploadFileSizeSumAll from "../../utils/FileUtils.tsx";
 

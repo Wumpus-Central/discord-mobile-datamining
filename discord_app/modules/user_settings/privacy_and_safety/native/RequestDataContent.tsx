@@ -164,13 +164,13 @@ const memoResult = importAllResult.memo(() => {
               message = message1;
             }
             if (!message) {
-              const intl = arr(1236).intl;
-              message = intl.string(arr(1236).t["0F5Jyt"]);
+              const intl = arr(1233).intl;
+              message = intl.string(arr(1233).t["0F5Jyt"]);
             }
             let obj = callback(4857);
             obj = { title: null, body: null };
-            const intl2 = arr(1236).intl;
-            obj[0] = intl2.string(arr(1236).t.OjbtDm);
+            const intl2 = arr(1233).intl;
+            obj[0] = intl2.string(arr(1233).t.OjbtDm);
             obj[1] = message;
             obj.show(obj);
           },
@@ -214,13 +214,13 @@ const memoResult = importAllResult.memo(() => {
             message = message1;
           }
           if (!message) {
-            const intl = arr(1236).intl;
-            message = intl.string(arr(1236).t["0F5Jyt"]);
+            const intl = arr(1233).intl;
+            message = intl.string(arr(1233).t["0F5Jyt"]);
           }
           let obj = callback(4857);
           obj = { title: null, body: null };
-          const intl2 = arr(1236).intl;
-          obj[0] = intl2.string(arr(1236).t.OjbtDm);
+          const intl2 = arr(1233).intl;
+          obj[0] = intl2.string(arr(1233).t.OjbtDm);
           obj[1] = message;
           obj.show(obj);
         },

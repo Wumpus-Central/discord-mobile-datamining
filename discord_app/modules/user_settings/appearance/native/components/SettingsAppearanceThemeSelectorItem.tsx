@@ -11,7 +11,7 @@ import hslToRgbDefault from "../../../../../utils/Color.tsx";
 import PressableBase from "../../../../../design/void/Pressables/native/Pressables.tsx";
 import getMixedGradientColor from "../../../../client_themes/native/ThemedGradient.tsx";
 import getMixedGradientColorDefault from "../../../../client_themes/native/ThemedGradient.tsx";
-import registerAssetDefault from "../../../../../../_runtime/14870_registerAsset.js";
+import registerAssetDefault from "../../../../../../_runtime/15099_registerAsset.js";
 import SynchronizeIconDefault from "../../../../client_themes/images/native/SynchronizeIconNative.tsx";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_4 from "../../../ThemeStore.tsx";
@@ -110,7 +110,7 @@ function CustomThemeBackground(arg0) {
     const obj3 = { source: null, style: null };
     obj3[0] = registerAssetDefault;
     obj3[1] = tmp4.lock;
-    isThemeLocked = tmp7(tmp(1297).Icon, obj3);
+    isThemeLocked = tmp7(tmp(1296).Icon, obj3);
   }
   items1[1] = isThemeLocked;
   obj[1] = items1;
@@ -142,9 +142,9 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
   const internal = ThemesDefault.internal;
   const resolveSemanticColor = internal.resolveSemanticColor;
   if (arg0) {
-    let semanticColor = resolveSemanticColor(tmp3.DARKER, tmp(712).colors.INTERACTIVE_TEXT_DEFAULT);
+    let semanticColor = resolveSemanticColor(tmp3.DARKER, tmp(709).colors.INTERACTIVE_TEXT_DEFAULT);
   } else {
-    semanticColor = resolveSemanticColor(tmp3.LIGHT, tmp(712).colors.INTERACTIVE_TEXT_DEFAULT);
+    semanticColor = resolveSemanticColor(tmp3.LIGHT, tmp(709).colors.INTERACTIVE_TEXT_DEFAULT);
   }
   obj[1] = { position: "absolute", alignSelf: "center", opacity: 0.6, tintColor: semanticColor };
   return obj;
@@ -177,7 +177,7 @@ export default function ThemeSelectorItem(onPress) {
     obj[0] = themePreset;
     let tmp8 = callback(DefaultThemeBackground, obj);
     let tmp9 = callback;
-  } else if (themePreset.type === tmp4(1349).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
+  } else if (themePreset.type === tmp4(1348).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
     obj = { item: null, isThemeLocked: null };
     obj[0] = themePreset;
     obj[1] = isPreview;
@@ -204,8 +204,8 @@ export default function ThemeSelectorItem(onPress) {
   };
   let stringResult;
   if (isPreview) {
-    const intl = tmp4(1236).intl;
-    stringResult = intl.string(tmp4(1236).t.VqGKm0);
+    const intl = tmp4(1233).intl;
+    stringResult = intl.string(tmp4(1233).t.VqGKm0);
   }
   obj1[6] = stringResult;
   const obj2 = { style: tmp.themeSelectorItem, children: null };

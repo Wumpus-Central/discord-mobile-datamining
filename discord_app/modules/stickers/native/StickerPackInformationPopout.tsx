@@ -49,8 +49,8 @@ export default function StickerPackInformationPopout(stickerPack) {
   let obj = getStickerExtensionFromFormatType;
   if (obj.isStickerPackAnimated(stickerPack)) {
     obj = { key: "animated", description: null };
-    const intl = tmp2(1236).intl;
-    obj[1] = intl.string(tmp2(1236).t.W11rMa);
+    const intl = tmp2(1233).intl;
+    obj[1] = intl.string(tmp2(1233).t.W11rMa);
     items.push(obj);
   }
   obj = { style: items1, children: null };
@@ -62,14 +62,14 @@ export default function StickerPackInformationPopout(stickerPack) {
     color: "mobile-text-heading-primary",
     children: null,
   };
-  const intl2 = tmp2(1236).intl;
+  const intl2 = tmp2(1233).intl;
   obj2[3] = intl2.format(require("../../../intl/index.native.tsx").t.XDm6yN, { stickerPackName: stickerPack.name });
   const items2 = [callback(require("../../../design/components/Text/native/Text.tsx").Text, obj2)];
   const obj4 = { onPress: onClose, accessibilityRole: "button", accessibilityLabel: null, children: null };
-  const intl3 = tmp2(1236).intl;
+  const intl3 = tmp2(1233).intl;
   obj4[2] = intl3.string(require("../../../intl/index.native.tsx").t.cpT0Cq);
   const obj5 = { variant: "text-md/bold", color: "text-brand", children: null };
-  const intl4 = tmp2(1236).intl;
+  const intl4 = tmp2(1233).intl;
   obj5[2] = intl4.string(require("../../../intl/index.native.tsx").t.cpT0Cq);
   obj4[3] = callback(require("../../../design/components/Text/native/Text.tsx").Text, obj5);
   items2[1] = callback(require("../../../design/void/Pressables/native/Pressables.tsx").PressableOpacity, obj4);
@@ -99,8 +99,8 @@ export const doesStickerPackHavePopoutInformation = function doesStickerPackHave
   let obj = getStickerExtensionFromFormatType;
   if (obj.isStickerPackAnimated(stickerPack)) {
     obj = { key: "animated", description: null };
-    const intl = tmp(1236).intl;
-    obj[1] = intl.string(tmp(1236).t.W11rMa);
+    const intl = tmp(1233).intl;
+    obj[1] = intl.string(tmp(1233).t.W11rMa);
     items.push(obj);
   }
   return items.length > 0;

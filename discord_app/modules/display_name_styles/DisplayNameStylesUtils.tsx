@@ -1,6 +1,6 @@
 // discord_app/modules/display_name_styles/DisplayNameStylesUtils.tsx
 import int2hslRaw from "../../../discord_common/js/shared/utils/ColorUtils.tsx";
-import nDefault from "../../../_runtime/00689_n.js";
+import nDefault from "../../../_runtime/00686_n.js";
 import DisplayNameEffect from "../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx";
 import DisplayNameFont from "../../../discord_common/js/shared/shared-constants/DisplayNameFont.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
@@ -34,9 +34,9 @@ let result = set.fileFinishedImporting("modules/display_name_styles/DisplayNameS
 export const getEffectColorCount = function getEffectColorCount(effectId) {
   if (DisplayNameEffect.DisplayNameEffect.GRADIENT === effectId) {
     return 2;
-  } else if (tmp(1940).DisplayNameEffect.GUMMY === effectId) {
+  } else if (tmp(1939).DisplayNameEffect.GUMMY === effectId) {
     return 4;
-  } else if (tmp(1940).DisplayNameEffect.PRISM === effectId) {
+  } else if (tmp(1939).DisplayNameEffect.PRISM === effectId) {
     return 5;
   } else {
     return 1;
@@ -113,8 +113,8 @@ export const rebuildGummySourceColor = function rebuildGummySourceColor(selected
     const result = (callback(items, 1)[0] - items1[0].hueShift) % 360;
     const tmp12Result = tmp12(int2hslRaw.int2hex(first));
     const tmp14 = callback;
-    const tmp10Result = tmp10(689);
-    return tmp10(689)
+    const tmp10Result = tmp10(686);
+    return tmp10(686)
       .hsl((result + 360) % 360, closure_5, closure_4)
       .num();
   }

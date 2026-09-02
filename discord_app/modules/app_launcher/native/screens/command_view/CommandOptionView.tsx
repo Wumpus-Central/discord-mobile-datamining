@@ -64,12 +64,12 @@ export default function CommandOptionView(option) {
     isPreSelectedOption,
   } = option);
   const tmp = callback();
-  let obj = option(589);
+  let obj = option(586);
   const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => lib.useReducedMotion);
   const ReduceMotion = option(4217).ReduceMotion;
   const tmp5 = stateFromStores ? ReduceMotion.Always : ReduceMotion.Never;
-  const optionEnteringAnimation = option(11731).useOptionEnteringAnimation();
+  const optionEnteringAnimation = option(11954).useOptionEnteringAnimation();
   let fn = optionEnteringAnimation.registerAnimationCompleteCallback;
   if (set.has(option.type)) {
     if (option.required || isPreSelectedOption) {
@@ -97,8 +97,8 @@ export default function CommandOptionView(option) {
     obj1[0] = fn;
     const obj2 = { collapsable: false, entering: null, exiting: null, layout: null, onLayout: null, children: null };
     obj2[1] = optionEnteringAnimation.EnteringAnimation;
-    obj2[2] = tmp2(11731).ExitingAnimation;
-    obj2[3] = tmp2(11731).LayoutAnimation;
+    obj2[2] = tmp2(11954).ExitingAnimation;
+    obj2[3] = tmp2(11954).LayoutAnimation;
     obj2[4] = function onLayout(arg0) {
       callback(arg0, option);
     };
@@ -158,9 +158,9 @@ export default function CommandOptionView(option) {
       obj7[3] = tmp.optionErrorContainer;
       const obj8 = { style: null, source: null, size: null };
       obj8[0] = tmp.optionErrorIcon;
-      obj8[1] = tmp18(10407);
-      obj8[2] = tmp2(1297).IconSizes.REFRESH_SMALL_16;
-      const items3 = [tmp17(tmp2(1297).Icon, obj8)];
+      obj8[1] = tmp18(10429);
+      obj8[2] = tmp2(1296).IconSizes.REFRESH_SMALL_16;
+      const items3 = [tmp17(tmp2(1296).Icon, obj8)];
       const obj9 = { variant: "text-xs/medium", color: "text-feedback-critical", children: null };
       obj9[2] = optionValidationResults[option.name].error;
       items3[1] = tmp17(tmp2(4474).Text, obj9);
@@ -171,10 +171,10 @@ export default function CommandOptionView(option) {
     obj3[2] = items2;
     obj2[5] = closure_6(View, obj3);
     obj1[1] = closure_5(_modDef4217.View, obj2);
-    obj[1] = closure_5(tmp2(11732).AwaitAnimationContext, obj1);
+    obj[1] = closure_5(tmp2(11955).AwaitAnimationContext, obj1);
     return closure_5(tmp2(4217).LayoutAnimationConfig, obj);
   } else {
     return null;
   }
-  const tmp2Result = option(11731);
+  const tmp2Result = option(11954);
 }

@@ -21,21 +21,21 @@ class VoiceMessagesPlaybackManager extends tmp3 {
       id = id.id;
       if (id.channelId === currentlySelectedChannelId.getCurrentlySelectedChannelId()) {
         if (obj.isAndroid()) {
-          const result = callback(14197).handleVoiceMessageDeleted(id);
-          const obj2 = callback(14197);
+          const result = callback(14420).handleVoiceMessageDeleted(id);
+          const obj2 = callback(14420);
         } else {
           const DCDAudioPlayerManager = closure_4.DCDAudioPlayerManager;
           if (DCDAudioPlayerManager != null) {
             const result1 = DCDAudioPlayerManager.handleVoiceMessageDeleted(id);
           }
         }
-        obj = applyArgumentsResult(500);
+        obj = applyArgumentsResult(1234);
       }
     };
     applyArgumentsResult.handleLogout = function handleLogout() {
       if (obj.isAndroid()) {
-        callback(14197).pauseCurrentPlayer(false);
-        const obj2 = callback(14197);
+        callback(14420).pauseCurrentPlayer(false);
+        const obj2 = callback(14420);
       } else {
         const DCDAudioPlayerManager = closure_4.DCDAudioPlayerManager;
         if (DCDAudioPlayerManager != null) {

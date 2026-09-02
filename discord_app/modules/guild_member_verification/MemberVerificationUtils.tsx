@@ -21,7 +21,7 @@ export const isValidFormResponse = function isValidFormResponse(required) {
               if (tmp4(4302).VerificationFormFieldTypes.MULTIPLE_CHOICE === field_type) {
                 return typeof response === "number";
               } else {
-                return tmp4(1471).assertNever(field_type);
+                return tmp4(1470).assertNever(field_type);
               }
             }
           }

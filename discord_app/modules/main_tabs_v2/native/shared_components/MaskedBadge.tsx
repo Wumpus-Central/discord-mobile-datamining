@@ -39,7 +39,7 @@ export default function MaskedBadge(backgroundColor) {
     obj[2] = items1;
     obj[3] = value;
     obj[4] = maxValue;
-    let tmp7Result = jsx(backgroundColor(1297).MaskedBadge, {
+    let tmp7Result = jsx(backgroundColor(1296).MaskedBadge, {
       maskStyle: null,
       dotStyle: null,
       style: null,

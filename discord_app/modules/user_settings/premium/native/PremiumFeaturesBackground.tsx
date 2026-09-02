@@ -45,8 +45,8 @@ export default function PremiumFeaturesBackground(opacity) {
   let obj = { style: items, colors: mapped, start: null, end: null };
   items = [callback().cardContainer, style];
   const tmp2 = callback();
-  obj[2] = num(691).HorizontalGradient.START;
-  obj[3] = num(691).HorizontalGradient.END;
+  obj[2] = num(688).HorizontalGradient.START;
+  obj[3] = num(688).HorizontalGradient.END;
   const merged1 = Object.assign(merged);
   obj.children = children;
   return jsx(LinearGradientDefault, { style: items, colors: mapped, start: null, end: null });

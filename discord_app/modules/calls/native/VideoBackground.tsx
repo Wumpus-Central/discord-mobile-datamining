@@ -20,14 +20,14 @@ function useDominantRGBFromImage(arg0, arg1) {
     first = arg1[0];
     tmp = first;
   }
-  let tmp5 = first(8111)();
+  let tmp5 = first(8119)();
   dependencyMap = tmp5;
   let hexToRgbResult;
   if (null != arg0) {
-    hexToRgbResult = tmp3(8112).cachedDominantColors[arg0];
+    hexToRgbResult = tmp3(8120).cachedDominantColors[arg0];
   }
   if (hexToRgbResult == null) {
-    hexToRgbResult = require("../../../utils/ColorUtils.tsx").hexToRgb(tmp3(712).unsafe_rawColors.PRIMARY_800);
+    hexToRgbResult = require("../../../utils/ColorUtils.tsx").hexToRgb(tmp3(709).unsafe_rawColors.PRIMARY_800);
     const obj2 = hexToRgba;
   }
   const tmp8 = callback(importAllResult.useState(hexToRgbResult), 2);

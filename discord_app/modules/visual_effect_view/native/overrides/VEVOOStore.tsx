@@ -1,7 +1,7 @@
 // discord_app/modules/visual_effect_view/native/overrides/VEVOOStore.tsx
 import set from "../../../../../_runtime/00002_set.js";
 import batchUpdates from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import keys from "../../../../../_runtime/00644_keys.js";
+import keys from "../../../../../_runtime/00641_keys.js";
 
 let closure_2 = {};
 let closure_3 = keys.create(() => closure_2);

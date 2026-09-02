@@ -15,7 +15,7 @@ export default function useGuildPowerupExpiringNotificationsConfig(arg0) {
     let stringResult;
     if (arr2.length > 0) {
       const intl = getSystemLocale.intl;
-      stringResult = intl.string(tmp(2823)["B3OfL/"]);
+      stringResult = intl.string(tmp(2822)["B3OfL/"]);
     }
     const items = [];
     let arraySpreadResult = HermesBuiltin.arraySpread(
@@ -32,11 +32,11 @@ export default function useGuildPowerupExpiringNotificationsConfig(arg0) {
     const items3 = [];
     if (arr.some((skuId) => skuId.skuId === callback(table[4]).VANITY_URL_POWERUP_SKU_ID)) {
       const intl2 = getSystemLocale.intl;
-      arr = items3.push(intl2.string(tmp(2401).Sfr0Jw));
+      arr = items3.push(intl2.string(tmp(2400).Sfr0Jw));
     }
     if (arr2.length > 0) {
       const intl3 = getSystemLocale.intl;
-      arr = items3.push(intl3.string(tmp(2823).wiungr));
+      arr = items3.push(intl3.string(tmp(2822).wiungr));
     }
     let obj = { shouldShow: null, expiringPowerups: null, expiringPowerupNames: null, warnings: null };
     obj[0] = tmp3;

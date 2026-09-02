@@ -51,7 +51,7 @@ export default function useRequest(arg0) {
                   let lib = tmp6;
                   c5 = 1;
                   c6 = 1;
-                  return { value: "PX_16", done: null };
+                  return { value: "PX_16", done: true };
                 }
               } else if (1 === tmp9) {
                 if (arg0 === 1) {

@@ -2,7 +2,7 @@
 import set from "../../../../_runtime/00002_set.js";
 import ME from "../../../Constants.tsx";
 import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/02009_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02008_asyncRequireImpl.js";
 import _modDef4723 from "../../../actions/ModalActionCreators.tsx";
 import setDefault from "../../../actions/AlertActionCreators.tsx";
 import saveProfileAndAccountRequest from "../../../actions/UserSettingsAccountActionCreators.tsx";
@@ -68,5 +68,5 @@ export const showSkipAvatarModal = function showSkipAvatarModal(arg0) {
   setDefault.show(obj);
 };
 export const openAddAvatarModal = function openAddAvatarModal() {
-  _modDef4723.pushLazy(asyncRequireImpl(17013, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
+  _modDef4723.pushLazy(asyncRequireImpl(17249, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
 };

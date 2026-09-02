@@ -177,7 +177,7 @@ const memoResult = importAllResult.memo(function GuildDirectoryRow(entry) {
   }
   let tmp = callback2();
   ({ description, approximateMemberCount, approximatePresenceCount } = entry);
-  let obj = entry(589);
+  let obj = entry(586);
   const items = [closure_8];
   const tmp4 = null != obj.useStateFromStores(items, () => closure_1_8.getGuild(entry.guildId));
   importDefault = tmp4;
@@ -186,11 +186,11 @@ const memoResult = importAllResult.memo(function GuildDirectoryRow(entry) {
   obj1 = getAvatarURLDefault;
   obj = { id: entry.guildId, icon: entry.icon, size: 40 };
   const guildIconURL = obj1.getGuildIconURL(obj);
-  const intl = tmp2(1236).intl;
-  let stringResult = intl.string(tmp2(1236).t.VJlc0S);
+  const intl = tmp2(1233).intl;
+  let stringResult = intl.string(tmp2(1233).t.VJlc0S);
   if (tmp4) {
-    const intl2 = tmp2(1236).intl;
-    stringResult = intl2.string(tmp2(1236).t.cqWE2Z);
+    const intl2 = tmp2(1233).intl;
+    stringResult = intl2.string(tmp2(1233).t.cqWE2Z);
   }
   obj = { style: tmp.container, children: null };
   obj1 = { style: tmp.guildWrapper, children: null };
@@ -199,8 +199,8 @@ const memoResult = importAllResult.memo(function GuildDirectoryRow(entry) {
   const obj4 = { style: tmp.guildIcon, icon: guildIconURL, guild: null, selected: false };
   let result;
   if (null == guildIconURL) {
-    result = tmp2(1426).fromGuildDirectoryEntry(entry);
-    const tmp2Result = tmp2(1426);
+    result = tmp2(1425).fromGuildDirectoryEntry(entry);
+    const tmp2Result = tmp2(1425);
   }
   obj4[2] = result;
   const items1 = [closure_10(GuildIconSizesDefault, obj4)];
@@ -221,10 +221,10 @@ const memoResult = importAllResult.memo(function GuildDirectoryRow(entry) {
     obj8[0] = tmp.dotOnline;
     const items3 = [tmp9(tmp11, obj8)];
     const obj9 = { variant: "text-xs/medium", color: "text-default", children: null };
-    const intl3 = tmp2(1236).intl;
+    const intl3 = tmp2(1233).intl;
     const obj10 = { membersOnline: null };
     obj10[0] = approximatePresenceCount;
-    obj9[2] = intl3.format(tmp2(1236).t["LC+S+m"], obj10);
+    obj9[2] = intl3.format(tmp2(1233).t["LC+S+m"], obj10);
     items3[1] = tmp9(tmp2(4474).Text, obj9);
     obj7[0] = items3;
     tmp10Result = tmp10(closure_11, obj7);
@@ -237,10 +237,10 @@ const memoResult = importAllResult.memo(function GuildDirectoryRow(entry) {
     obj12[0] = tmp.dotOffline;
     const items5 = [tmp9(tmp11, obj12)];
     const obj13 = { variant: "text-xs/medium", color: "text-default", children: null };
-    const intl4 = tmp2(1236).intl;
+    const intl4 = tmp2(1233).intl;
     const obj14 = { count: null };
     obj14[0] = approximateMemberCount;
-    obj13[2] = intl4.format(tmp2(1236).t.zRl6XR, obj14);
+    obj13[2] = intl4.format(tmp2(1233).t.zRl6XR, obj14);
     items5[1] = tmp9(tmp2(4474).Text, obj13);
     obj11[0] = items5;
     tmp10Result = tmp10(closure_11, obj11);
@@ -292,7 +292,7 @@ const memoResult = importAllResult.memo(function GuildDirectoryRow(entry) {
   items7[3] = closure_10(entry(4928).Button, obj18);
   obj1[1] = items7;
   obj[1] = closure_12(View, obj1);
-  return closure_10(entry(5601).Card, obj);
+  return closure_10(entry(5609).Card, obj);
 });
 let result = require("set").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryRow.tsx");
 

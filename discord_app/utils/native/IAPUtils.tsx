@@ -1,8 +1,8 @@
 // discord_app/utils/native/IAPUtils.tsx
 import timestampDefault from "../../modules/debug/Logger.tsx";
 import _modDef38 from "../../../_runtime/metro/00038__.js";
+import v1 from "../../../_runtime/00511_v1.js";
 import set2 from "../PlatformUtils.tsx";
-import v1 from "../../../_runtime/00514_v1.js";
 import getConstantsAll from "ClientInfoUtils.tsx";
 import DCDDeviceManager from "DeviceUtils.tsx";
 import productSK2ToIAPProductDefault from "../../modules/billing/native/StorekitIAPQueue.tsx";
@@ -39,8 +39,8 @@ function serializePurchaseResponse(originalTransactionDate) {
   ({ productId: obj[4], transactionReceipt: obj[5], verificationResultIOS: obj[6] } = originalTransactionDate);
   return obj;
 }
-function convertToUUID(arg0) {
-  return v1.v5(arg0, NAMESPACE_SNOWFLAKE_UUID);
+function convertToUUID(id) {
+  return v1.v5(id, NAMESPACE_SNOWFLAKE_UUID);
 }
 function _restorePurchases() {
   const self = this;
@@ -84,7 +84,7 @@ function _restorePurchases() {
               closure_3 = undefined;
               c7 = 1;
               c8 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -330,7 +330,7 @@ function _fetchStoreFront() {
               c4 = 2;
               c5 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(10795).getStorefront();
+              obj1[0] = closure_1_0(11015).getStorefront();
               return obj1;
             } else {
               c5 = 3;
@@ -384,7 +384,7 @@ function _fetchStoreFront() {
 ({ CurrencyCodes: closure_8, IOS_BUNDLE_ID } = ME);
 ({ InAppUtils: unpackModuleId, RNIapIosSk2: closure_12 } = require("get ActivityIndicator").NativeModules);
 let items = [
-  require("../../../_runtime/metro/10795__.js").ErrorCode.E_USER_CANCELLED,
+  require("../../../_runtime/metro/11015__.js").ErrorCode.E_USER_CANCELLED,
   ME.StoreKitErrors.PAYMENT_CANCELED,
 ];
 let set = new Set(items);
@@ -393,10 +393,10 @@ let _default = {
   loadProducts() {
     if (obj.isIOS()) {
       const _Object = Object;
-      let items = [productSK2ToIAPProductDefault.fetchSubscriptions(Object.values(tmp(6087).ProductIds))];
+      let items = [productSK2ToIAPProductDefault.fetchSubscriptions(Object.values(tmp(6095).ProductIds))];
       const obj2 = productSK2ToIAPProductDefault;
       const _Object2 = Object;
-      items[1] = productSK2ToIAPProductDefault.fetchProducts(Object.values(tmp(6087).ProductIds));
+      items[1] = productSK2ToIAPProductDefault.fetchProducts(Object.values(tmp(6095).ProductIds));
       const obj3 = productSK2ToIAPProductDefault;
       let nextPromise = _Promise.all(items).then((arg0) => {
         [r10007, tmp] = arg0;

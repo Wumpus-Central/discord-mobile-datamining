@@ -5,7 +5,7 @@ import Button from "../../../design/void/native.tsx";
 import _modDef4217 from "../../reanimated/ReanimatedRexport.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import useCanManageGuildOfficialMessages from "../../messages/GuildOfficialMessageUtils.tsx";
-import registerAssetDefault from "../../../../_runtime/14878_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/15107_registerAsset.js";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -33,7 +33,7 @@ function MessagePreview(theme) {
   }
   let obj = useCanManageGuildOfficialMessages;
   const accessibleGuildOfficialTextColor = obj.getAccessibleGuildOfficialTextColor(selectedColor, semanticColor, num);
-  let obj2 = tmp3(689)(selectedColor);
+  let obj2 = tmp3(686)(selectedColor);
   const hexResult = accessibleGuildOfficialTextColor.hex();
   const alphaResult = obj2.alpha(closure_10);
   obj = { style: items, pointerEvents: "none", children: null };

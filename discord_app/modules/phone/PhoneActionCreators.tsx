@@ -122,12 +122,12 @@ export default {
       obj3[1] = closure_1_1;
       obj2[2] = obj3;
       const obj4 = { event: null };
-      obj4[0] = closure_1_0(503).NetworkActionNames.USER_VERIFY_PHONE;
+      obj4[0] = closure_1_0(500).NetworkActionNames.USER_VERIFY_PHONE;
       obj2[4] = obj4;
-      obj2[5] = closure_1_0(530).rejectWithMigratedError();
+      obj2[5] = closure_1_0(527).rejectWithMigratedError();
       body = yield obj5.post(obj2);
       if (dependencyMap) {
-        const obj = closure_1_1(709);
+        const obj = closure_1_1(706);
         const obj7 = { type: "MODAL_POP", key: null };
         obj7[1] = closure_1_5;
         obj.dispatch(obj7);

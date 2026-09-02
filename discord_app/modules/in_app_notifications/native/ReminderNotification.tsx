@@ -34,21 +34,21 @@ function NotificationAvatar(arg0) {
 function NotificationBody(channel) {
   channel = channel.channel;
   const message = channel.message;
-  obj = channel(589);
+  obj = channel(586);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getGuild(channel.guild_id));
-  obj1 = channel(589);
+  obj1 = channel(586);
   const items1 = [closure_5];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_5.getChannel(channel.parent_id));
-  let obj2 = channel(10177);
+  let obj2 = channel(10199);
   const hasPreviewableMedia = obj2.useHasPreviewableMedia(message);
-  const tmp6 = channel.type === channel(692).ChannelTypes.DM;
+  const tmp6 = channel.type === channel(689).ChannelTypes.DM;
   let num = 1;
   if (tmp6) {
     num = closure_8;
   }
   let tmp10 = null;
-  const messagePreviewTextVariant = channel(10177).getMessagePreviewTextVariant();
+  const messagePreviewTextVariant = channel(10199).getMessagePreviewTextVariant();
   if (!tmp6) {
     obj = { channel: null, parentChannel: null, guild: null, author: null };
     obj[0] = channel;
@@ -73,7 +73,7 @@ function NotificationBody(channel) {
       obj[3] = tmp(4171).ChannelListLayoutTypes.COZY;
       obj[4] = messagePreviewTextVariant;
       obj[6] = num;
-      let tmp14 = callback(tmp(10192).ChannelRowPreview, obj);
+      let tmp14 = callback(tmp(10214).ChannelRowPreview, obj);
     }
     obj1 = { children: null };
     items2[1] = tmp14;
@@ -121,8 +121,8 @@ export default importAllResult.memo(function ReminderNotification(notification) 
   const items = [notification];
   const memo = importAllResult.useMemo(() => {
     obj = { type: "simple", text: null };
-    const intl = notification(1236).intl;
-    obj[1] = intl.string(notification(1236).t.Whs8tE);
+    const intl = notification(1233).intl;
+    obj[1] = intl.string(notification(1233).t.Whs8tE);
     return obj;
   }, []);
   const callback = importAllResult.useCallback(() => {
@@ -142,5 +142,5 @@ export default importAllResult.memo(function ReminderNotification(notification) 
     rightAccessory: callback(closure_16, { message }),
     children: callback(NotificationBody, { channel, message }),
   };
-  return callback(notification(10255).NotificationPressable, obj);
+  return callback(notification(10277).NotificationPressable, obj);
 });

@@ -23,9 +23,9 @@ const memoResult = importAllResult.memo(function VideoQuestModalReward(style) {
     str = size;
   }
   ({ withRewardTileAnimation, onTextBlockLayout } = style);
-  let obj = quest(14727);
+  let obj = quest(14953);
   quest = obj.useVideoQuestModalContext().quest;
-  obj1 = quest(11083);
+  obj1 = quest(11303);
   const items = [quest.id];
   const questTaskDetails = obj1.useQuestTaskDetails(quest);
   const callback = importAllResult.useCallback(() => {
@@ -47,17 +47,17 @@ const memoResult = importAllResult.memo(function VideoQuestModalReward(style) {
   if (tmp) {
     const obj2 = { variant: "heading-lg/semibold", color: "text-strong", style: null, children: null };
     obj2[2] = tmp7.questName;
-    const intl = tmp3(1236).intl;
+    const intl = tmp3(1233).intl;
     const obj3 = { questName: null };
     obj3[0] = quest.config.messages.questName;
-    obj2[3] = intl.formatToPlainString(tmp3(1236).t.EAYZAr, obj3);
+    obj2[3] = intl.formatToPlainString(tmp3(1233).t.EAYZAr, obj3);
     tmp = tmp9(tmp3(4474).Text, obj2);
   }
   const items2 = [tmp];
   if (tmp9Result) {
     const obj4 = { variant: "heading-sm/medium", color: "text-subtle", children: null };
-    const intl2 = tmp3(1236).intl;
-    obj4[2] = intl2.string(tmp3(1236).t["1Wvve2"]);
+    const intl2 = tmp3(1233).intl;
+    obj4[2] = intl2.string(tmp3(1233).t["1Wvve2"]);
     tmp9Result = tmp9(tmp3(4474).Text, obj4);
   }
   items2[1] = tmp9Result;

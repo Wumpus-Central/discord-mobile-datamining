@@ -204,8 +204,8 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
   } else if ("update" === op) {
     writes = emojis.writes;
   } else {
-    set(1471).assertNever(emojis);
-    const obj = set(1471);
+    set(1470).assertNever(emojis);
+    const obj = set(1470);
   }
   this.updateWith(id, writes);
   const stickers = guild.stickers;
@@ -215,8 +215,8 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
   } else if ("update" === op2) {
     writes2 = stickers.writes;
   } else {
-    set(1471).assertNever(stickers);
-    const obj2 = set(1471);
+    set(1470).assertNever(stickers);
+    const obj2 = set(1470);
   }
   self.updateWith(id, writes2);
   const channels = guild.channels;
@@ -226,8 +226,8 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
   } else if ("update" === op3) {
     writes3 = channels.writes;
   } else {
-    set(1471).assertNever(channels);
-    const obj3 = set(1471);
+    set(1470).assertNever(channels);
+    const obj3 = set(1470);
   }
   self.updateWith(id, writes3);
   const roles = guild.roles;
@@ -237,8 +237,8 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
   } else if ("update" === op4) {
     writes4 = roles.writes;
   } else {
-    set(1471).assertNever(roles);
-    const obj4 = set(1471);
+    set(1470).assertNever(roles);
+    const obj4 = set(1470);
   }
   self.updateWith(id, writes4);
   self.commit(arg1);

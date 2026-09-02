@@ -1,6 +1,6 @@
 // discord_app/modules/quests/ConsoleQuestUIStore.tsx
 import set from "../../../_runtime/00002_set.js";
-import keys from "../../../_runtime/00644_keys.js";
+import keys from "../../../_runtime/00641_keys.js";
 
 let closure_0 = [];
 let obj = keys.create((arg0, arg1) => {

@@ -4,7 +4,7 @@ import timestampDefault from "../debug/Logger.tsx";
 import ComponentDispatcher from "../../utils/ComponentDispatchUtils.tsx";
 import set2 from "RoutingSources.tsx";
 import ME from "../../Constants.tsx";
-import _extends from "../../../_runtime/metro/01223__extends.js";
+import _extends from "../../../_runtime/metro/01220__extends.js";
 
 function transitionTo(ME, closure_1) {
   closure_0 = ME;
@@ -26,28 +26,65 @@ function transitionTo(ME, closure_1) {
     flag = true;
   }
   if (!flag) {
+    const _URL = URL;
+    const _window3 = window;
     const _HermesInternal2 = HermesInternal;
+    const uRL = new URL(ME, "https:" + window.GLOBAL_ENV.WEBAPP_ENDPOINT);
+    obj = { pathname: null, search: null, hash: null };
+    ({ pathname: obj[0], search: obj[1], hash: obj[2] } = uRL);
+    const merged = Object.assign(closure_1);
+    const _HermesInternal3 = HermesInternal;
     logger.log("transitionTo - Transitioning to " + ME);
-    let source;
     if (closure_1 != null) {
-      source = closure_1.source;
+      const source = closure_1.source;
     }
-    let sourceLocationStack;
     if (closure_1 != null) {
-      sourceLocationStack = closure_1.sourceLocationStack;
+      const sourceLocationStack = closure_1.sourceLocationStack;
     }
-    if (null == closure_1) {
-      _extends.push(ME);
-    } else {
-      const _URL = URL;
-      const _window3 = window;
-      const _HermesInternal3 = HermesInternal;
-      const uRL = new URL(ME, "https:" + window.GLOBAL_ENV.WEBAPP_ENDPOINT);
-      obj = { pathname: null, search: null, hash: null };
-      ({ pathname: obj[0], search: obj[1], hash: obj[2] } = uRL);
-      const merged = Object.assign(closure_1);
-      _extends.push(obj);
+    const _location2 = _extends.location;
+    let tmp24 = _location2.pathname === obj.pathname;
+    if (tmp24) {
+      const search = obj.search;
+      let str9 = "";
+      if (null != search) {
+        str9 = "";
+        if ("" !== search) {
+          str9 = "";
+          if (search !== "?") {
+            let text = search;
+            if (!search.startsWith("?")) {
+              text = `?${search}`;
+            }
+            str9 = text;
+          }
+        }
+      }
+      tmp24 = _location2.search === str9;
     }
+    if (tmp24) {
+      const hash = obj.hash;
+      let str12 = "";
+      if (null != hash) {
+        str12 = "";
+        if ("" !== hash) {
+          str12 = "";
+          if (hash !== "#") {
+            let text1 = hash;
+            if (!hash.startsWith("#")) {
+              text1 = `#${hash}`;
+            }
+            str12 = text1;
+          }
+        }
+      }
+      tmp24 = _location2.hash === str12;
+    }
+    if (tmp24) {
+      const replaced = str7.replace(obj);
+    } else if (null != closure_1) {
+      str7.push(obj);
+    }
+    _extends.push(ME);
   }
 }
 ({ Routes: c5, PageAnalyticsLocations: closure_6, ComponentActions: error } = ME);

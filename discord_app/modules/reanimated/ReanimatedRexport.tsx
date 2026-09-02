@@ -1,6 +1,6 @@
 // discord_app/modules/reanimated/ReanimatedRexport.tsx
 import set from "../../../_runtime/00002_set.js";
-import cancelAnimationDefault from "../../../_runtime/01653_cancelAnimation.js";
+import cancelAnimationDefault from "../../../_runtime/01652_cancelAnimation.js";
 import REAWorkaroundViewDefault from "native/REAWorkaroundView.tsx";
 import PlatformTypes from "../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 

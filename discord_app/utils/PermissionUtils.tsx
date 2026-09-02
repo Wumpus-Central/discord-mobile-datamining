@@ -3,6 +3,7 @@ import DISCORD_EPOCHDefault from "SnowflakeUtils.tsx";
 import PermissionOverwriteType from "../flow/Server.tsx";
 import compareGuildRoles from "GuildRoleUtils.tsx";
 import GuildMemberFlags from "../modules/guild_automod/AutomodPermissionUtils.tsx";
+import Permissions2 from "../modules/app_channels/AppChannelPermissions.tsx";
 import closure_4 from "../modules/impersonate/ImpersonateStore.tsx";
 import closure_5 from "../modules/lurker_mode/LurkingStore.tsx";
 import closure_6 from "../modules/threads/JoinedThreadsStore.tsx";
@@ -64,8 +65,8 @@ function applyOverwrites(id, member, closure_23, overwrites) {
     const addResult3 = importAllResult.add(removeResult1, tmp18);
     let addResult4 = addResult3;
     if (null != overwrites[member.userId]) {
-      let tmp19Result = tmp19(506);
-      tmp19Result = tmp19(506);
+      let tmp19Result = tmp19(503);
+      tmp19Result = tmp19(503);
       addResult4 = tmp19Result.add(tmp19Result.remove(addResult3, tmp23.deny), tmp23.allow);
       const removeResult2 = tmp19Result.remove(addResult3, tmp23.deny);
     }
@@ -80,17 +81,17 @@ function applyOverwrites(id, member, closure_23, overwrites) {
     }
     let found = addResult4;
     if (tmp31) {
-      found = tmp19(506).filter(addResult4, closure_29);
-      const tmp19Result2 = tmp19(506);
+      found = tmp19(503).filter(addResult4, closure_29);
+      const tmp19Result2 = tmp19(503);
     }
     const obj10 = GuildMemberFlags;
-    const tmp28Result = tmp28(4110);
+    const tmp28Result = tmp28(4109);
     found1 = found;
     if (tmp34) {
-      found1 = tmp19(506).filter(found, closure_28);
-      const tmp19Result3 = tmp19(506);
+      found1 = tmp19(503).filter(found, closure_28);
+      const tmp19Result3 = tmp19(503);
     }
-    tmp34 = tmp28(4110).isMemberCommunicationDisabled(member) && !hasItem;
+    tmp34 = tmp28(4109).isMemberCommunicationDisabled(member) && !hasItem;
   }
   return found1;
 }
@@ -158,12 +159,12 @@ function computePermissionsForMember(excludeGuildPermissions) {
     }
     let found = tmp29;
     if (isLurkingResult) {
-      let tmp21Result = tmp21(506);
+      let tmp21Result = tmp21(503);
       found = tmp21Result.filter(tmp29, lurkerPermissionsMask);
     }
     let found1 = found;
     if (authStore.isCurrentUserGuest(guild.id)) {
-      tmp21Result = tmp21(506);
+      tmp21Result = tmp21(503);
       found1 = tmp21Result.filter(found, closure_27);
     }
     if (checkElevated === undefined) {
@@ -184,8 +185,8 @@ function computePermissionsForMember(excludeGuildPermissions) {
       }
       let removeResult = found1;
       if (!mfaEnabled) {
-        removeResult = tmp21(506).remove(found1, closure_19);
-        const tmp21Result1 = tmp21(506);
+        removeResult = tmp21(503).remove(found1, closure_19);
+        const tmp21Result1 = tmp21(503);
       }
       tmp39 = removeResult;
     }
@@ -356,23 +357,62 @@ function applyThreadPermissions(context, permissionsForRoles, hasJoinedResult, c
     let combine = dependencyMap;
     let SEND_MESSAGES = Permissions;
     if (!obj2.has(permissionsForRoles, Permissions.SEND_MESSAGES_IN_THREADS)) {
-      let tmp8Result = tmp8(506);
+      let tmp8Result = tmp8(503);
       tmp8Result.remove(permissionsForRoles, SEND_MESSAGES.SEND_MESSAGES);
     }
     if (context.isLockedThread()) {
-      tmp8Result = tmp8(506);
+      tmp8Result = tmp8(503);
       if (!tmp8Result.has(permissionsForRoles, SEND_MESSAGES.MANAGE_THREADS)) {
-        let removeResult1 = tmp8(506).remove(permissionsForRoles, SEND_MESSAGES.SEND_MESSAGES);
-        const tmp8Result1 = tmp8(506);
+        let removeResult1 = tmp8(503).remove(permissionsForRoles, SEND_MESSAGES.SEND_MESSAGES);
+        const tmp8Result1 = tmp8(503);
       }
     }
-    tmp8 = tmp8(506);
+    tmp8 = tmp8(503);
     combine = tmp8.combine;
     SEND_MESSAGES = SEND_MESSAGES.SEND_MESSAGES;
     removeResult1 = combine(permissionsForRoles, SEND_MESSAGES);
     obj2 = importAllResult;
   }
   return combineResult;
+}
+function getSyncedPermissionOverwrites(closure_1_1, appChannelBotUserId) {
+  const guild_id = closure_1_1.guild_id;
+  let obj = {};
+  const merged = Object.assign(closure_1_1.permissionOverwrites);
+  if (tmp2) {
+    obj = { id: null, type: null, allow: null, deny: null };
+    obj[0] = guild_id;
+    obj[1] = PermissionOverwriteType.PermissionOverwriteType.ROLE;
+    obj[2] = closure_23;
+    obj[3] = closure_23;
+    obj[guild_id] = obj;
+  }
+  if (null != appChannelBotUserId) {
+    obj = { id: null, type: null, allow: null, deny: null };
+    obj[0] = appChannelBotUserId;
+    obj[1] = PermissionOverwriteType.PermissionOverwriteType.MEMBER;
+    let allow;
+    if (obj[appChannelBotUserId] != null) {
+      allow = tmp8.allow;
+    }
+    if (allow == null) {
+      allow = closure_23;
+    }
+    obj[2] = importAllResult.add(allow, Permissions2.APP_CHANNEL_MINIMUM_BOT_PERMISSIONS);
+    const obj5 = importAllResult;
+    const tmp11 = importAll;
+    let deny;
+    if (obj[appChannelBotUserId] != null) {
+      deny = tmp8.deny;
+    }
+    if (deny == null) {
+      deny = closure_23;
+    }
+    obj[3] = importAllResult.remove(deny, Permissions2.APP_CHANNEL_MINIMUM_BOT_PERMISSIONS);
+    obj[appChannelBotUserId] = obj;
+    const tmp11Result = importAllResult;
+  }
+  return obj;
 }
 ({ THREAD_CHANNEL_TYPES: error, ChannelRecordBase: closure_8 } = createChannelRecord);
 ({ getGuildEveryoneRoleId: c9, isGuildOwner: c10 } = GuildNSFWContentLevel);
@@ -571,7 +611,8 @@ export const VIEW_GUILD_SETTINGS = combineResult1;
 export { computePermissionsForRoles };
 export { computePermissions };
 export { applyThreadPermissions };
-export const areChannelsLocked = function areChannelsLocked(channel, channel2) {
+export { getSyncedPermissionOverwrites };
+export const areChannelsLocked = function areChannelsLocked(channel, channel2, appChannelBotUserId) {
   if (set.has(channel.type)) {
     return true;
   } else {
@@ -581,31 +622,23 @@ export const areChannelsLocked = function areChannelsLocked(channel, channel2) {
         if (guild_id === channel2.guild_id) {
           let obj = {};
           const merged = Object.assign(channel.permissionOverwrites);
-          obj = {};
-          const merged1 = Object.assign(channel2.permissionOverwrites);
+          const tmp12 = getSyncedPermissionOverwrites(channel2, appChannelBotUserId);
+          closure_1 = tmp12;
           if (null == obj[guild_id]) {
             obj = { id: null, type: null, allow: null, deny: null };
             obj[0] = guild_id;
-            obj[1] = obj(1955).PermissionOverwriteType.ROLE;
+            obj[1] = obj(1954).PermissionOverwriteType.ROLE;
             obj[2] = closure_23;
             obj[3] = closure_23;
             obj[guild_id] = obj;
           }
-          if (null == obj[guild_id]) {
-            obj1 = { id: null, type: null, allow: null, deny: null };
-            obj1[0] = guild_id;
-            obj1[1] = obj(1955).PermissionOverwriteType.ROLE;
-            obj1[2] = closure_23;
-            obj1[3] = closure_23;
-            obj[guild_id] = obj1;
-          }
           const _Object = Object;
           const _Object2 = Object;
-          let tmp10 = Object.keys(obj).length === Object.keys(obj).length;
-          if (tmp10) {
+          let tmp7 = Object.keys(obj).length === Object.keys(tmp12).length;
+          if (tmp7) {
             const _Object3 = Object;
             const keys = Object.keys(obj);
-            tmp10 = !keys.some((arg0) => {
+            tmp7 = !keys.some((arg0) => {
               let tmp3 = null == tmp2;
               if (!tmp3) {
                 obj = closure_1_2(closure_1_3[13]);
@@ -618,7 +651,7 @@ export const areChannelsLocked = function areChannelsLocked(channel, channel2) {
               return tmp3;
             });
           }
-          return tmp10;
+          return tmp7;
         }
       }
     }
@@ -678,9 +711,9 @@ export const getHighestHoistedRole = function getHighestHoistedRole(id, hoistRol
   }
   return role;
 };
-export const makeEveryoneOverwrite = function makeEveryoneOverwrite(guild_id) {
+export const makeEveryoneOverwrite = function makeEveryoneOverwrite(guildId1) {
   return {
-    id: guild_id,
+    id: guildId1,
     type: PermissionOverwriteType.PermissionOverwriteType.ROLE,
     allow: closure_23,
     deny: closure_23,

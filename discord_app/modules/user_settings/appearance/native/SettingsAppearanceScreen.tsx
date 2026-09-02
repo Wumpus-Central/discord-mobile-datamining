@@ -16,8 +16,8 @@ let c3 = importAllResult;
 const memoResult = importAllResult.memo(() => {
   nativeStackNavigation(4945)(() => {
     if (closure_5.shouldSync("appearance")) {
-      const userCustomThemes = lib(14860).fetchUserCustomThemes();
-      const obj = lib(14860);
+      const userCustomThemes = lib(15089).fetchUserCustomThemes();
+      const obj = lib(15089);
     }
   });
   let items = [closure_6, closure_4];
@@ -77,11 +77,11 @@ const memoResult = importAllResult.memo(() => {
     [],
   );
   const node = importAllResult.useMemo(() => {
-    let obj = lib(11068);
+    let obj = lib(11288);
     obj = { sections: null };
     obj = { label: null, settings: null };
-    const intl = lib(1236).intl;
-    obj[0] = intl.string(lib(1236).t.Ksh3ik);
+    const intl = lib(1233).intl;
+    obj[0] = intl.string(lib(1233).t.Ksh3ik);
     const items = [, , , ,];
     ({
       SAME_AS_DEVICE_THEME: arr[0],
@@ -95,8 +95,8 @@ const memoResult = importAllResult.memo(() => {
     const items2 = [constants.DEFAULT_GUILD_THEME_PREFERENCE];
     items1[1] = { settings: items2 };
     obj1 = { label: null, settings: null };
-    const intl2 = lib(1236).intl;
-    obj1[0] = intl2.string(lib(1236).t.i19n5L);
+    const intl2 = lib(1233).intl;
+    obj1[0] = intl2.string(lib(1233).t.i19n5L);
     const items3 = [,];
     ({ ANDROID_FONT_SCALE: arr4[0], ANDROID_CLASSIC_CHAT_FONT_SCALE: arr4[1] } = constants);
     obj1[1] = items3;
@@ -107,19 +107,19 @@ const memoResult = importAllResult.memo(() => {
     items1[4] = { settings: items5 };
     const obj2 = { settings: items6, subLabel: null };
     items6 = [constants.FAVORITES_GUILD_TOGGLE];
-    const intl3 = lib(1236).intl;
-    const obj3 = { helpCenterLink: nativeStackNavigation(1995).getArticleURL(constants2.FAVORITES_GUILD) };
-    obj2[1] = intl3.format(nativeStackNavigation(3179).GR2KOG, obj3);
+    const intl3 = lib(1233).intl;
+    const obj3 = { helpCenterLink: nativeStackNavigation(1994).getArticleURL(constants2.FAVORITES_GUILD) };
+    obj2[1] = intl3.format(nativeStackNavigation(3178).GR2KOG, obj3);
     items1[5] = obj2;
     const obj4 = { label: null, settings: null };
-    const intl4 = lib(1236).intl;
-    obj4[0] = intl4.string(lib(1236).t.lEde7i);
+    const intl4 = lib(1233).intl;
+    obj4[0] = intl4.string(lib(1233).t.lEde7i);
     const items7 = [constants.DMS_HAPPENING_NOW_CARDS];
     obj4[1] = items7;
     items1[6] = obj4;
     const obj5 = { label: null, settings: null };
-    const intl5 = lib(1236).intl;
-    obj5[0] = intl5.string(lib(1236).t["5h0QOP"]);
+    const intl5 = lib(1233).intl;
+    obj5[0] = intl5.string(lib(1233).t["5h0QOP"]);
     const items8 = [constants.EXACT_SEARCH_RESULT_COUNTS];
     obj5[1] = items8;
     items1[7] = obj5;
@@ -129,7 +129,7 @@ const memoResult = importAllResult.memo(() => {
     return obj.createList(obj);
   }, []);
   let obj2 = useNavigation;
-  return jsx(nativeStackNavigation(14340), { node }, "" + theme + "-" + gradientPresetId);
+  return jsx(nativeStackNavigation(14563), { node }, "" + theme + "-" + gradientPresetId);
 });
 const result = require("set").fileFinishedImporting(
   "modules/user_settings/appearance/native/SettingsAppearanceScreen.tsx",

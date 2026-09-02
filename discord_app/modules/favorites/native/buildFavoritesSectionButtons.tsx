@@ -1,6 +1,6 @@
 // discord_app/modules/favorites/native/buildFavoritesSectionButtons.tsx
 import getSystemLocale from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/02009_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02008_asyncRequireImpl.js";
 import messagesProxyDefault from "../intl/FavoritesGuild.messages.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
@@ -154,7 +154,7 @@ function _removeChannelFromFavorites() {
 }
 function openNoAccessUpsell() {
   const obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj.openLazy(asyncRequireImpl(10311, dependencyMap.paths), openFavoritesGuildLimitUpsell.FAVORITES_UPSELL_SHEET_KEY, {
+  obj.openLazy(asyncRequireImpl(10333, dependencyMap.paths), openFavoritesGuildLimitUpsell.FAVORITES_UPSELL_SHEET_KEY, {
     source: "channel_context_menu",
   });
 }
@@ -201,8 +201,8 @@ export default function buildFavoritesSectionButtons(isExperimentEnabled) {
           let tmp15;
           if (tmp5) {
             obj1 = { size: null };
-            obj1[0] = tmp12(1297).BetaSizes.SMALL;
-            tmp15 = jsx(tmp12(1297).BetaTag, { size: null });
+            obj1[0] = tmp12(1296).BetaSizes.SMALL;
+            tmp15 = jsx(tmp12(1296).BetaTag, { size: null });
           }
           obj[2] = tmp15;
           obj[3] = function onPress() {

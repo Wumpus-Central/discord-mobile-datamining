@@ -7,16 +7,16 @@ import set from "../../../_runtime/00002_set.js";
 
 function addApplication(fromServer) {
   const value = map.get(fromServer.id);
-  const result = map3.set(fromServer.id, Date.now());
+  const result = map4.set(fromServer.id, Date.now());
   let result1 = fromServer;
   if (null != value) {
     result1 = value.mergeFromApplicationUpdate(fromServer);
   }
   const result2 = map.set(fromServer.id, result1);
-  const result3 = map2.set(fromServer.name.toLowerCase(), result1);
+  const result3 = map3.set(fromServer.name.toLowerCase(), result1);
   for (const item10031 of tmp5) {
-    let tmp6 = map2;
-    let result4 = map2.set(item10031.toLowerCase(), result1);
+    let tmp6 = map3;
+    let result4 = map3.set(item10031.toLowerCase(), result1);
     continue;
   }
   if (null != fromServer.linkedGames) {
@@ -42,7 +42,7 @@ function addApplication(fromServer) {
       }
     }
   }
-  map4.delete(fromServer.id);
+  map5.delete(fromServer.id);
 }
 function handleWishlistAction(wishlistData) {
   const applications = wishlistData.wishlistData.applications;
@@ -59,8 +59,8 @@ function handleWishlistAction(wishlistData) {
 }
 function handleAppWithBot(arg0) {
   ({ userId, applicationId } = arg0);
-  let num = closure_9.botUserIdToAppUsage;
-  if (null == closure_9.botUserIdToAppUsage[userId]) {
+  let num = closure_10.botUserIdToAppUsage;
+  if (null == closure_10.botUserIdToAppUsage[userId]) {
     let obj = { applicationId: null, lastUsedMs: null };
     obj[0] = applicationId;
     const _Date = Date;
@@ -72,7 +72,7 @@ function handleAppWithBot(arg0) {
   }
   num[userId] = obj;
   new Map();
-  const entries = Object.entries(closure_9.botUserIdToAppUsage);
+  const entries = Object.entries(closure_10.botUserIdToAppUsage);
   applicationId = entries;
   userId = entries[Symbol.iterator]();
   num = 2;
@@ -112,14 +112,24 @@ function handleEntitlementsFetched(arg0) {
   }
   return flag;
 }
+function handleIntegrationsChanged(guildId) {
+  guildId = guildId.guildId;
+  if (map2.has(guildId)) {
+    obj.delete(guildId);
+  } else {
+    return false;
+  }
+  obj = map2;
+}
 let closure_2 = [];
-const map = new Map();
+let map = new Map();
 const map1 = new Map();
 const map2 = new Map();
 const map3 = new Map();
 const map4 = new Map();
+const map5 = new Map();
 let set = new Set();
-let closure_9 = { botUserIdToAppUsage: {} };
+let closure_10 = { botUserIdToAppUsage: {} };
 const PersistedStore = initializeDefault.PersistedStore;
 class ApplicationStore extends PersistedStore {}
 const prototype = ApplicationStore.prototype;
@@ -142,11 +152,11 @@ prototype["initialize"] = function initialize(botUserIdToAppUsage) {
         if (!tmp) {
           continue;
         } else {
-          let tmp2 = closure_9;
+          let tmp2 = closure_10;
           let obj = { applicationId: null, lastUsedMs: null };
           obj[0] = applicationId;
           obj[1] = lastUsedMs;
-          closure_9.botUserIdToAppUsage[key10002] = obj;
+          closure_10.botUserIdToAppUsage[key10002] = obj;
           continue;
         }
         continue;
@@ -155,7 +165,7 @@ prototype["initialize"] = function initialize(botUserIdToAppUsage) {
   }
 };
 prototype["getState"] = function getState() {
-  return closure_9;
+  return closure_10;
 };
 prototype["_getAllApplications"] = function _getAllApplications() {
   return Array.from(map.values());
@@ -187,6 +197,16 @@ prototype["getGuildApplicationIds"] = function getGuildApplicationIds(arg0) {
   }
   return value;
 };
+prototype["getGuildEmbeddedApplications"] = function getGuildEmbeddedApplications(arg0, arg1) {
+  if (null != arg0) {
+    let value = map2.get(arg0);
+    value = undefined;
+    if (value != null) {
+      value = value.get(arg1);
+    }
+    return value;
+  }
+};
 prototype["getApplication"] = function getApplication(arg0) {
   if (null != arg0) {
     return map.get(arg0);
@@ -196,31 +216,31 @@ prototype["getApplicationByName"] = function getApplicationByName(name) {
   if (null != name) {
     const formatted = name.toLowerCase();
     let value;
-    if (map2.has(formatted)) {
-      value = map2.get(formatted);
+    if (map3.has(formatted)) {
+      value = map3.get(formatted);
     }
     return value;
   }
 };
 prototype["getApplicationLastUpdated"] = function getApplicationLastUpdated(arg0) {
-  return map3.get(arg0);
+  return map4.get(arg0);
 };
 prototype["isFetchingApplication"] = function isFetchingApplication(id) {
-  return true === map4.get(id);
+  return true === map5.get(id);
 };
 prototype["isHydrated"] = function isHydrated(id) {
   return set.has(id);
 };
 prototype["didFetchingApplicationFail"] = function didFetchingApplicationFail(applicationId) {
-  return false === map4.get(applicationId);
+  return false === map5.get(applicationId);
 };
 prototype["getFetchingOrFailedFetchingIds"] = function getFetchingOrFailedFetchingIds() {
-  return Array.from(map4.keys());
+  return Array.from(map5.keys());
 };
 prototype["getAppIdForBotUserId"] = function getAppIdForBotUserId(id) {
   if (null != id) {
     let applicationId;
-    if (closure_9.botUserIdToAppUsage[id] != null) {
+    if (closure_10.botUserIdToAppUsage[id] != null) {
       applicationId = tmp2.applicationId;
     }
     return applicationId;
@@ -235,6 +255,7 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
     map2.clear();
     map3.clear();
     map4.clear();
+    map5.clear();
     set.clear();
   },
   OVERLAY_INITIALIZE: function handleOverlayInitialize(arg0) {
@@ -254,8 +275,8 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
   },
   APPLICATION_FETCH: function handleApplicationFetch(applicationId) {
     applicationId = applicationId.applicationId;
-    const value = map4.get(applicationId);
-    const result = map4.set(applicationId, true);
+    const value = map5.get(applicationId);
+    const result = map5.set(applicationId, true);
     return true !== value;
   },
   APPLICATION_FETCH_SUCCESS: function handleApplicationFetchSuccess(application) {
@@ -267,8 +288,8 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
   },
   APPLICATION_FETCH_FAIL: function handleApplicationFetchFail(applicationId) {
     applicationId = applicationId.applicationId;
-    const value = map4.get(applicationId);
-    const result = map4.set(applicationId, false);
+    const value = map5.get(applicationId);
+    const result = map5.set(applicationId, false);
     return false !== value;
   },
   APPLICATIONS_FETCH: function handleApplicationsFetch(arg0) {
@@ -276,9 +297,9 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
     const iter = arg0.applicationIds[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
-      let tmp2 = map4;
-      let value = map4.get(nextResult);
-      let result = map4.set(nextResult, true);
+      let tmp2 = map5;
+      let value = map5.get(nextResult);
+      let result = map5.set(nextResult, true);
       flag = true !== value;
       continue;
     }
@@ -304,9 +325,9 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
   APPLICATIONS_FETCH_FAIL: function handleApplicationsFetchFail(arg0) {
     let flag = false;
     for (const item10008 of tmp) {
-      let tmp2 = map4;
-      let value = map4.get(item10008);
-      let result = map4.set(item10008, false);
+      let tmp2 = map5;
+      let value = map5.get(item10008);
+      let result = map5.set(item10008, false);
       flag = false !== value;
       continue;
     }
@@ -331,6 +352,35 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
     }
     const result = map1.set(guildId.guildId, items);
   },
+  GUILD_EMBEDDED_APPLICATIONS_FETCH_SUCCESS: function handleGuildEmbeddedApplicationsFetchSuccess(surface) {
+    ({ guildId, items } = surface);
+    items = [];
+    const iter = items[Symbol.iterator]();
+    const nextResult = iter.next();
+    while (iter !== undefined) {
+      let application = nextResult.application;
+      let obj = { applicationId: null, status: null };
+      obj[0] = application.id;
+      obj[1] = nextResult.status;
+      let arr = items.push(obj);
+      let tmp3 = addApplication;
+      let tmp4 = closure_1;
+      let tmp5 = addApplication(closure_1.createFromServer(application));
+      continue;
+    }
+    let value = map2.get(guildId);
+    if (null == value) {
+      const _Map = Map;
+      map = new Map();
+      const result = map2.set(guildId, map);
+      value = map;
+    }
+    const result1 = value.set(surface.surface, items);
+  },
+  GUILD_INTEGRATIONS_UPDATE: handleIntegrationsChanged,
+  INTEGRATION_CREATE: handleIntegrationsChanged,
+  INTEGRATION_UPDATE: handleIntegrationsChanged,
+  INTEGRATION_DELETE: handleIntegrationsChanged,
   BILLING_PAYMENTS_FETCH_SUCCESS: function handleFetchPayments(arg0) {
     set = new Set();
     const iter = arg0.payments[Symbol.iterator]();
@@ -434,12 +484,12 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
   },
   APP_DM_OPEN: function handleAppDMOpen(botUserId) {
     botUserId = botUserId.botUserId;
-    if (null != closure_9.botUserIdToAppUsage[botUserId]) {
+    if (null != closure_10.botUserIdToAppUsage[botUserId]) {
       const obj = {};
       const merged = Object.assign(tmp);
       const _Date = Date;
       obj.lastUsedMs = Date.now();
-      closure_9.botUserIdToAppUsage[botUserId] = obj;
+      closure_10.botUserIdToAppUsage[botUserId] = obj;
     }
   },
   USER_AUTHORIZED_APPS_UPDATE: function handleAuthorizedAppsUpdate(tokens) {

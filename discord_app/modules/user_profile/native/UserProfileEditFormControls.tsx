@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/UserProfileEditFormControls.tsx
-import set from "../../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 import Button from "../../../design/void/native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
@@ -189,7 +189,7 @@ export const UserProfileEditFormSwitch = function UserProfileEditFormSwitch(arg0
     callback(closure_0);
   }, items);
   if (isAndroidResult) {
-    let PressableHighlight = tmp2(5068).PressableHighlight;
+    let PressableHighlight = tmp2(5076).PressableHighlight;
   } else {
     PressableHighlight = closure_4;
   }

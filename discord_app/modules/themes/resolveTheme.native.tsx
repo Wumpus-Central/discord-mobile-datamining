@@ -17,7 +17,7 @@ export default function resolveTheme(arg0, arg1) {
   } else {
     if (!obj6.isAuthenticated()) {
       if (arg0 !== constants.NO_PREFERENCE) {
-        let tmp17Result = tmp17(1347);
+        let tmp17Result = tmp17(1346);
         return tmp17Result.resolveThemeWithCustomSettings(arg1[arg0], previewTheme.getCustomTheme());
       }
     }
@@ -41,7 +41,7 @@ export default function resolveTheme(arg0, arg1) {
       }
     }
     if (null != theme) {
-      tmp17Result = tmp17(1347);
+      tmp17Result = tmp17(1346);
       return tmp17Result.resolveThemeWithCustomSettings(theme, customUserThemeSettings);
     } else {
       let theme1;
@@ -49,17 +49,17 @@ export default function resolveTheme(arg0, arg1) {
         theme1 = appearance.theme;
       }
       if (theme1 == null) {
-        theme1 = tmp17(1306).Theme.UNSET;
+        theme1 = tmp17(1305).Theme.UNSET;
       }
-      if (theme1 === tmp17(1306).Theme.UNSET) {
+      if (theme1 === tmp17(1305).Theme.UNSET) {
         if (arg0 !== constants.NO_PREFERENCE) {
-          let themeWithCustomSettings = tmp17(1347).resolveThemeWithCustomSettings(arg1[arg0], customUserThemeSettings);
-          const tmp17Result1 = tmp17(1347);
+          let themeWithCustomSettings = tmp17(1346).resolveThemeWithCustomSettings(arg1[arg0], customUserThemeSettings);
+          const tmp17Result1 = tmp17(1346);
         }
         return themeWithCustomSettings;
       }
-      themeWithCustomSettings = tmp17(1347).resolveThemeWithCustomSettings(table[theme1], customUserThemeSettings);
-      const tmp17Result2 = tmp17(1347);
+      themeWithCustomSettings = tmp17(1346).resolveThemeWithCustomSettings(table[theme1], customUserThemeSettings);
+      const tmp17Result2 = tmp17(1346);
     }
     obj6 = getToken;
   }

@@ -59,14 +59,14 @@ function _queryAudioEffects() {
                 return obj2;
               }
               obj12 = dependencyMap;
-              obj13 = callback(501);
+              obj13 = callback(1235);
               tmp47 = callback;
             }
           } else if (1 === tmp7) {
             c6 = 0;
             dependencyMap = logger;
             logger.error("Failed to probe audio effects for device", dependencyMap);
-            obj2 = lib(698);
+            obj2 = lib(695);
             obj2.track(constants.AUDIO_EFFECTS_PROBE_COMPLETED, { succeeded: false });
             c8 = 3;
             return { value: "HermesInternal", done: null };
@@ -84,12 +84,12 @@ function _queryAudioEffects() {
             const obj4 = { type: "MEDIA_ENGINE_SET_DEVICE_AUDIO_EFFECTS", deviceId: null };
             obj4[1] = callback;
             const merged = Object.assign(lib);
-            lib(709).dispatch(obj4);
-            const obj8 = lib(709);
+            lib(706).dispatch(obj4);
+            const obj8 = lib(706);
             const obj5 = { succeeded: true, active_effects: null, available_effects: null };
             obj5[1] = lib.active;
             obj5[2] = lib.available;
-            lib(698).track(constants.AUDIO_EFFECTS_PROBE_COMPLETED, obj5);
+            lib(695).track(constants.AUDIO_EFFECTS_PROBE_COMPLETED, obj5);
             c6 = 0;
             c8 = 3;
             obj = { value: null, done: true };

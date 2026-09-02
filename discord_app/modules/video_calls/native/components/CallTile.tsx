@@ -3,12 +3,12 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import Button from "../../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import _modDef4217 from "../../../reanimated/ReanimatedRexport.tsx";
-import registerAssetDefault from "../../../../../_runtime/09318_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/09893_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/09331_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/09915_registerAsset.js";
 import StreamPreviewContainerDefault from "../../../../components_native/TouchableStreamPreview.tsx";
-import registerAssetDefault3 from "../../../../../_runtime/10146_registerAsset.js";
-import registerAssetDefault4 from "../../../../../_runtime/10147_registerAsset.js";
-import registerAssetDefault5 from "../../../../../_runtime/10148_registerAsset.js";
+import registerAssetDefault3 from "../../../../../_runtime/10168_registerAsset.js";
+import registerAssetDefault4 from "../../../../../_runtime/10169_registerAsset.js";
+import registerAssetDefault5 from "../../../../../_runtime/10170_registerAsset.js";
 import ParticipantTitleDefault from "ParticipantTitle.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -32,7 +32,7 @@ class StreamPreviewTile {
     obj = {
       guildId: participant.stream.guildId,
       userId: participant.user.id,
-      style: { aspectRatio: "disabled", borderRadius: false },
+      style: { aspectRatio: "ip", borderRadius: false },
       disableTransition: true,
       onPress() {
         return callback();

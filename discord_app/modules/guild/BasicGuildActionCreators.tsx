@@ -68,7 +68,7 @@ function _fetchBasicGuild() {
           } else if (1 !== tmp8) {
             if (2 === tmp8) {
               guild = 1;
-              obj3 = body(709);
+              obj3 = body(706);
               const obj4 = { type: "BASIC_GUILD_FETCH_FAILURE", guildId: null };
               obj4[1] = callback;
               obj3.dispatch(obj4);
@@ -84,7 +84,7 @@ function _fetchBasicGuild() {
               return obj5;
             } else {
               body = body.body;
-              obj = body(709);
+              obj = body(706);
               const obj6 = { type: "BASIC_GUILD_FETCH_SUCCESS", guildId: null, guildInfo: null };
               obj6[1] = callback;
               obj6[2] = body;

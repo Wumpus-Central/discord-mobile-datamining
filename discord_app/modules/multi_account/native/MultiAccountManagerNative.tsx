@@ -6,7 +6,7 @@ import dispatcherDefault from "../../toast/native/ToastActionCreators.tsx";
 import _modDef4723 from "../../../actions/ModalActionCreators.tsx";
 import MAX_ACCOUNTS from "../Constants.tsx";
 import _initializeDefault from "../MultiAccountManager.tsx";
-import registerAssetDefault from "../../../../_runtime/17007_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/17243_registerAsset.js";
 import ME from "../../../Constants.tsx";
 
 let obj = require;
@@ -107,7 +107,7 @@ prototype["onSwitchStart"] = function onSwitchStart() {
 prototype["onSwitchSuccess"] = function onSwitchSuccess(currentUser, navigateHome) {
   obj = currentUser;
   if (navigateHome) {
-    obj = obj(1222);
+    obj = obj(1219);
     obj.transitionTo(constants.ME, { navigationReplace: true });
     const MobileHomeDrawerExperiment = obj(4338).MobileHomeDrawerExperiment;
     if (MobileHomeDrawerExperiment.getConfig({ location: "multi-account" }).enableHome) {
@@ -129,8 +129,8 @@ prototype["onSwitchSuccess"] = function onSwitchSuccess(currentUser, navigateHom
 prototype["onSwitchError"] = function onSwitchError(currentUser) {
   obj = dispatcherDefault;
   obj = { key: "SWITCH_ACCOUNTS_TOAST_LOGIN_ERROR", content: null, icon: null };
-  const intl = obj(1236).intl;
-  obj[1] = intl.string(obj(1236).t.pqvKWA);
+  const intl = obj(1233).intl;
+  obj[1] = intl.string(obj(1233).t.pqvKWA);
   obj[2] = registerAssetDefault;
   obj.open(obj);
 };

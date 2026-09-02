@@ -63,7 +63,7 @@ function getEnabledHarmTypesForChannelAndAuthorId(channelId, id) {
           return tmp;
         });
         if (null == tmp10) {
-          NONE = tmp12(6141).ContentHarmTypeBitMask.NONE;
+          NONE = tmp12(6149).ContentHarmTypeBitMask.NONE;
         } else {
           const mapped = found.map((harmType) => {
             const tmp = harmType.getUserSettingsWithDefaults()[GUILD];
@@ -81,7 +81,7 @@ function getEnabledHarmTypesForChannelAndAuthorId(channelId, id) {
             }
             return harmType;
           });
-          NONE = contentHarmTypesToFlags(mapped.filter(tmp12(1471).isNotNullish));
+          NONE = contentHarmTypesToFlags(mapped.filter(tmp12(1470).isNotNullish));
         }
       }
       return NONE;
@@ -175,17 +175,17 @@ function findComponentMedia(components) {
   return obj
     .flatMap((type) => {
       type = type.type;
-      if (callback(1955).ComponentType.MEDIA_GALLERY === type) {
+      if (callback(1954).ComponentType.MEDIA_GALLERY === type) {
         const items = type.items;
         return items.map((media) => media.media);
-      } else if (tmp(1955).ComponentType.THUMBNAIL === type) {
+      } else if (tmp(1954).ComponentType.THUMBNAIL === type) {
         return type.media;
-      } else if (tmp(1955).ComponentType.FILE === type) {
+      } else if (tmp(1954).ComponentType.FILE === type) {
         return type.file;
       } else {
-        if (tmp(1955).ComponentType.SECTION !== type) {
-          if (tmp(1955).ComponentType.ACTION_ROW !== type) {
-            if (tmp(1955).ComponentType.CONTAINER !== type) {
+        if (tmp(1954).ComponentType.SECTION !== type) {
+          if (tmp(1954).ComponentType.ACTION_ROW !== type) {
+            if (tmp(1954).ComponentType.CONTAINER !== type) {
               return [];
             }
           }
@@ -204,7 +204,7 @@ function findComponentMedia(components) {
     });
 }
 function isMediaScanPending(type, enabledContentHarmTypeFlags) {
-  if (enabledContentHarmTypeFlags === media(6141).ContentHarmTypeBitMask.NONE) {
+  if (enabledContentHarmTypeFlags === media(6149).ContentHarmTypeBitMask.NONE) {
     return false;
   } else if (store.get("explicit_media_redaction_ignore_pending_scan")) {
     return false;
@@ -214,7 +214,7 @@ function isMediaScanPending(type, enabledContentHarmTypeFlags) {
       return false;
     } else {
       type = type.type;
-      if (tmp(6143).ObscuredMediaTypes.Embed === type) {
+      if (tmp(6151).ObscuredMediaTypes.Embed === type) {
         const media3 = type.media;
         media = media3;
         let flag3 = false;
@@ -293,8 +293,8 @@ function isMediaScanPending(type, enabledContentHarmTypeFlags) {
                 if (-1 === content_scan_version) {
                   flag3 = tmp29;
                 } else {
-                  if (!arr.includes(tmp(6141).ContentHarmType.GORE)) {
-                    if (!arr.includes(tmp(6141).ContentHarmType.SELF_HARM)) {
+                  if (!arr.includes(tmp(6149).ContentHarmType.GORE)) {
+                    if (!arr.includes(tmp(6149).ContentHarmType.SELF_HARM)) {
                       let tmp30 = tmp31 == content_scan_version;
                     }
                   }
@@ -322,7 +322,7 @@ function isMediaScanPending(type, enabledContentHarmTypeFlags) {
           }
         }
         return flag3;
-      } else if (tmp(6143).ObscuredMediaTypes.Attachment === type) {
+      } else if (tmp(6151).ObscuredMediaTypes.Attachment === type) {
         const media2 = type.media;
         media = media2;
         let tmp11 = 0 !== arr.length;
@@ -341,8 +341,8 @@ function isMediaScanPending(type, enabledContentHarmTypeFlags) {
             if (-1 === contentScanVersion) {
               tmp12 = tmp16;
             } else {
-              if (!arr.includes(tmp(6141).ContentHarmType.GORE)) {
-                if (!arr.includes(tmp(6141).ContentHarmType.SELF_HARM)) {
+              if (!arr.includes(tmp(6149).ContentHarmType.GORE)) {
+                if (!arr.includes(tmp(6149).ContentHarmType.SELF_HARM)) {
                   let tmp17 = tmp13 == contentScanVersion;
                 }
               }
@@ -353,7 +353,7 @@ function isMediaScanPending(type, enabledContentHarmTypeFlags) {
           tmp11 = tmp12;
         }
         return tmp11;
-      } else if (tmp(6143).ObscuredMediaTypes.GenericMedia === type) {
+      } else if (tmp(6151).ObscuredMediaTypes.GenericMedia === type) {
         media = type.media;
         let flag2 = false;
         if (0 !== arr.length) {
@@ -373,8 +373,8 @@ function isMediaScanPending(type, enabledContentHarmTypeFlags) {
             if (-1 === version) {
               flag2 = tmp7;
             } else {
-              if (!arr.includes(tmp(6141).ContentHarmType.GORE)) {
-                if (!arr.includes(tmp(6141).ContentHarmType.SELF_HARM)) {
+              if (!arr.includes(tmp(6149).ContentHarmType.GORE)) {
+                if (!arr.includes(tmp(6149).ContentHarmType.SELF_HARM)) {
                   let tmp8 = tmp9 == version;
                 }
               }
@@ -402,20 +402,20 @@ function isMediaFlaggedForHarmType(EXPLICIT, type) {
     }
     type = type.type;
     if (ContentHarmTypeChannel.ObscuredMediaTypes.Embed === type) {
-      let tmp3Result = tmp3(1399);
+      let tmp3Result = tmp3(1398);
       let num3 = type.media.flags;
       if (num3 == null) {
         num3 = 0;
       }
       return tmp3Result.hasFlag(num3, tmp5.embedFlag);
-    } else if (tmp3(6143).ObscuredMediaTypes.Attachment === type) {
-      tmp3Result = tmp3(1399);
+    } else if (tmp3(6151).ObscuredMediaTypes.Attachment === type) {
+      tmp3Result = tmp3(1398);
       let num2 = type.media.flags;
       if (num2 == null) {
         num2 = 0;
       }
       return tmp3Result.hasFlag(num2, tmp5.attachmentFlag);
-    } else if (tmp3(6143).ObscuredMediaTypes.GenericMedia === type) {
+    } else if (tmp3(6151).ObscuredMediaTypes.GenericMedia === type) {
       const contentScanMetadata = type.media.contentScanMetadata;
       let num;
       if (contentScanMetadata != null) {
@@ -424,7 +424,7 @@ function isMediaFlaggedForHarmType(EXPLICIT, type) {
       if (num == null) {
         num = 0;
       }
-      return tmp3(1399).hasFlag(num, tmp5.genericMediaFlag);
+      return tmp3(1398).hasFlag(num, tmp5.genericMediaFlag);
     } else {
       return false;
     }
@@ -443,23 +443,23 @@ function contentHarmTypesToFlags(mapped) {
       let tmp14 = NONE;
       let tmp15 = tmp2;
       let tmp16 = tmp4;
-      NONE = NONE | tmp3(6141).ContentHarmTypeBitMask.EXPLICIT;
+      NONE = NONE | tmp3(6149).ContentHarmTypeBitMask.EXPLICIT;
     } else {
       let tmp17 = tmp2;
       let tmp18 = tmp4;
-      if (tmp3(6141).ContentHarmType.GORE === nextResult) {
+      if (tmp3(6149).ContentHarmType.GORE === nextResult) {
         let tmp11 = NONE;
         let tmp12 = tmp2;
         let tmp13 = tmp4;
-        NONE = NONE | tmp3(6141).ContentHarmTypeBitMask.GORE;
+        NONE = NONE | tmp3(6149).ContentHarmTypeBitMask.GORE;
       } else {
         let tmp6 = tmp2;
         let tmp7 = tmp4;
-        if (tmp3(6141).ContentHarmType.SELF_HARM === nextResult) {
+        if (tmp3(6149).ContentHarmType.SELF_HARM === nextResult) {
           let tmp8 = NONE;
           let tmp9 = tmp2;
           let tmp10 = tmp4;
-          NONE = NONE | tmp3(6141).ContentHarmTypeBitMask.SELF_HARM;
+          NONE = NONE | tmp3(6149).ContentHarmTypeBitMask.SELF_HARM;
         }
       }
     }
@@ -664,7 +664,7 @@ export const getEnabledHarmTypesBitmaskForChannelType = function getEnabledHarmT
     return tmp;
   });
   if (null == GUILD) {
-    let NONE = tmp(6141).ContentHarmTypeBitMask.NONE;
+    let NONE = tmp(6149).ContentHarmTypeBitMask.NONE;
   } else {
     const mapped = found.map((harmType) => {
       const tmp = harmType.getUserSettingsWithDefaults()[GUILD];
@@ -682,7 +682,7 @@ export const getEnabledHarmTypesBitmaskForChannelType = function getEnabledHarmT
       }
       return harmType;
     });
-    NONE = contentHarmTypesToFlags(mapped.filter(tmp(1471).isNotNullish));
+    NONE = contentHarmTypesToFlags(mapped.filter(tmp(1470).isNotNullish));
   }
   return NONE;
 };
@@ -711,17 +711,17 @@ export const isEligibleForScanning = function isEligibleForScanning(components) 
     const mapped = obj
       .flatMap((type) => {
         type = type.type;
-        if (callback(1955).ComponentType.MEDIA_GALLERY === type) {
+        if (callback(1954).ComponentType.MEDIA_GALLERY === type) {
           const items = type.items;
           return items.map((media) => media.media);
-        } else if (tmp(1955).ComponentType.THUMBNAIL === type) {
+        } else if (tmp(1954).ComponentType.THUMBNAIL === type) {
           return type.media;
-        } else if (tmp(1955).ComponentType.FILE === type) {
+        } else if (tmp(1954).ComponentType.FILE === type) {
           return type.file;
         } else {
-          if (tmp(1955).ComponentType.SECTION !== type) {
-            if (tmp(1955).ComponentType.ACTION_ROW !== type) {
-              if (tmp(1955).ComponentType.CONTAINER !== type) {
+          if (tmp(1954).ComponentType.SECTION !== type) {
+            if (tmp(1954).ComponentType.ACTION_ROW !== type) {
+              if (tmp(1954).ComponentType.CONTAINER !== type) {
                 return [];
               }
             }
@@ -739,21 +739,21 @@ export const isEligibleForScanning = function isEligibleForScanning(components) 
         return toUnfurledMediaItemResult;
       });
     tmp = !mapped.some(
-      (loadingState) => loadingState.loadingState === callback(1955).UnfurledMediaLoadingState.LOADING,
+      (loadingState) => loadingState.loadingState === callback(1954).UnfurledMediaLoadingState.LOADING,
     );
     const flatMapResult = obj.flatMap((type) => {
       type = type.type;
-      if (callback(1955).ComponentType.MEDIA_GALLERY === type) {
+      if (callback(1954).ComponentType.MEDIA_GALLERY === type) {
         const items = type.items;
         return items.map((media) => media.media);
-      } else if (tmp(1955).ComponentType.THUMBNAIL === type) {
+      } else if (tmp(1954).ComponentType.THUMBNAIL === type) {
         return type.media;
-      } else if (tmp(1955).ComponentType.FILE === type) {
+      } else if (tmp(1954).ComponentType.FILE === type) {
         return type.file;
       } else {
-        if (tmp(1955).ComponentType.SECTION !== type) {
-          if (tmp(1955).ComponentType.ACTION_ROW !== type) {
-            if (tmp(1955).ComponentType.CONTAINER !== type) {
+        if (tmp(1954).ComponentType.SECTION !== type) {
+          if (tmp(1954).ComponentType.ACTION_ROW !== type) {
+            if (tmp(1954).ComponentType.CONTAINER !== type) {
               return [];
             }
           }
@@ -771,7 +771,7 @@ export const getUnscannedMediaIds = function getUnscannedMediaIds(message) {
     if (null != message) {
       let NONE = getEnabledHarmTypesForChannelAndAuthorId(channelId, tmp2);
     }
-    if (NONE === NONE(6141).ContentHarmTypeBitMask.NONE) {
+    if (NONE === NONE(6149).ContentHarmTypeBitMask.NONE) {
       let obj = { attachmentIds: null, embedIds: null };
       obj[0] = [];
       obj[1] = [];
@@ -815,7 +815,7 @@ export const getUnscannedMediaIds = function getUnscannedMediaIds(message) {
       return obj;
     }
   }
-  NONE = NONE(6141).ContentHarmTypeBitMask.NONE;
+  NONE = NONE(6149).ContentHarmTypeBitMask.NONE;
 };
 export const getMediaObscuredReasonFromBitmask = function getMediaObscuredReasonFromBitmask(
   arg0,

@@ -1,7 +1,7 @@
 // discord_app/modules/games/autocomplete/GameAutocompleteStore.tsx
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
-import privDefault from "../../../../_runtime/01401_priv.js";
+import privDefault from "../../../../_runtime/01400_priv.js";
 import GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH from "GameAutocompleteUtils.tsx";
 import set from "../../../../_runtime/00002_set.js";
 

@@ -817,11 +817,11 @@ const applicationStreamingStore = new ApplicationStreamingStore(dispatcherDefaul
       } else if (reason === tmp3.SAFETY_GUILD_RATE_LIMITED) {
         let obj = guildId(4544);
         guildId = obj.decodeStreamKey(streamKey).guildId;
-        guildId(2009)(13569, dependencyMap.paths).then((arg0) => {
+        guildId(2008)(13792, dependencyMap.paths).then((arg0) => {
           arg0.default(guildId);
         });
         FAILED = tmp22.ENDED;
-        const promise = guildId(2009)(13569, dependencyMap.paths);
+        const promise = guildId(2008)(13792, dependencyMap.paths);
       } else {
         if (tmp9) {
           FAILED = tmp22.FAILED;

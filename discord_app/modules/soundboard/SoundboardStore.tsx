@@ -4,7 +4,7 @@ import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import hooksDefault from "../../../_runtime/04075_hooks.js";
+import hooksDefault from "../../../_runtime/04074_hooks.js";
 import explicitContentFromProto from "../user_settings/UserSettings.tsx";
 import DEFAULT_FRECENCYDefault from "../../lib/Frecency.tsx";
 import perceptualToAmplitude from "../../utils/PerceptualVolumeUtils.tsx";

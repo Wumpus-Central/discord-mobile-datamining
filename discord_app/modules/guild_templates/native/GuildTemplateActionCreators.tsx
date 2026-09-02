@@ -1,6 +1,6 @@
 // discord_app/modules/guild_templates/native/GuildTemplateActionCreators.tsx
 import dispatcherDefault from "../../../Dispatcher.tsx";
-import asyncRequireImpl from "../../../../_runtime/02009_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02008_asyncRequireImpl.js";
 import _modDef4723 from "../../../actions/ModalActionCreators.tsx";
 import mapDefault from "../GuildTemplateActionCreators.tsx";
 
@@ -11,7 +11,7 @@ const merged = Object.assign(mapDefault);
 obj.showModal = function showModal(code) {
   let obj = _modDef4723;
   obj = { code };
-  obj.pushLazy(asyncRequireImpl(11364, dependencyMap.paths), obj, GUILD_TEMPLATE_MODAL_KEY);
+  obj.pushLazy(asyncRequireImpl(11587, dependencyMap.paths), obj, GUILD_TEMPLATE_MODAL_KEY);
   obj = { type: "GUILD_TEMPLATE_MODAL_SHOW", code };
   dispatcherDefault.dispatch(obj);
   const obj3 = dispatcherDefault;

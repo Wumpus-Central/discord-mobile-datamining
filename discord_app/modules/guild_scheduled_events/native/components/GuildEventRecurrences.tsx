@@ -32,8 +32,8 @@ export default function GuildEventRecurrences(guildEventId) {
   } = useGuildEventRecurrencesDefault(guildEventId, guildId, recurrenceRule));
   let obj = { style: tmp2.container, children: null };
   obj = { variant: "heading-md/semibold", children: null };
-  const intl = guildEventId(1236).intl;
-  obj[1] = intl.string(guildEventId(1236).t["D/jjoa"]);
+  const intl = guildEventId(1233).intl;
+  obj[1] = intl.string(guildEventId(1233).t["D/jjoa"]);
   const items = [callback(guildEventId(4474).Text, obj), ,];
   obj = {
     style: tmp2.scrollView,
@@ -56,8 +56,8 @@ export default function GuildEventRecurrences(guildEventId) {
   }
   if (canViewMoreRecurrences) {
     obj1 = { text: null, onPress: null, size: "sm" };
-    const intl2 = tmp8(1236).intl;
-    obj1[0] = intl2.string(tmp8(1236).t["8O7Hpy"]);
+    const intl2 = tmp8(1233).intl;
+    obj1[0] = intl2.string(tmp8(1233).t["8O7Hpy"]);
     obj1[1] = function onPress(stopPropagation) {
       stopPropagation.stopPropagation();
       _undefined();

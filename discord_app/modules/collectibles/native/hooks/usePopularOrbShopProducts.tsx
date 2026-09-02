@@ -39,15 +39,15 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
   const tmp4 = callback(React.useState(false), 2);
   React = tmp4[1];
   const items = [POPULARITY];
-  const stateFromStores = enabled(589).useStateFromStores(items, () => POPULARITY.getCurrentUser());
-  let obj2 = enabled(589);
+  const stateFromStores = enabled(586).useStateFromStores(items, () => POPULARITY.getCurrentUser());
+  let obj2 = enabled(586);
   let tmp8 = first;
   const canUseShopDiscountsResult = first(4139).canUseShopDiscounts(stateFromStores);
   c6 = canUseShopDiscountsResult;
   if ("recency" === enabled.sortType) {
-    POPULARITY = tmp5(681).CollectibleSearchSortType.RECENCY;
+    POPULARITY = tmp5(678).CollectibleSearchSortType.RECENCY;
   } else {
-    POPULARITY = tmp5(681).CollectibleSearchSortType.POPULARITY;
+    POPULARITY = tmp5(678).CollectibleSearchSortType.POPULARITY;
   }
   const items1 = [enabled, POPULARITY];
   const effect = obj.useEffect(() => {
@@ -207,30 +207,30 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
     }
     callback2(false);
   }, items2);
-  let tmp5Result = tmp5(12631);
+  let tmp5Result = tmp5(12852);
   let fetchCollectiblesProducts = tmp5Result.useFetchCollectiblesProducts(first);
   const items3 = [first];
   const effect2 = obj.useEffect(() => {
     if (0 !== first.length) {
-      let obj = enabled(8906);
+      let obj = enabled(8921);
       obj = { skuIds: null };
       obj[0] = tmp;
       const result = obj.maybeFetchProductsBySkuIds(obj);
     }
   }, items3);
-  tmp5Result = tmp5(10465);
+  tmp5Result = tmp5(10686);
   const getOrFetchStorefrontPricesForSkuIds = tmp5Result.useGetOrFetchStorefrontPricesForSkuIds({ skuIds: first });
   let obj3 = first(4139);
   const items4 = [c6];
-  stateFromStoresArray = enabled(589).useStateFromStoresArray(items4, () =>
+  stateFromStoresArray = enabled(586).useStateFromStoresArray(items4, () =>
     first.map((closure_0) => productsForSku.getProductsForSku(closure_0)),
   );
-  const tmp5Result1 = enabled(589);
+  const tmp5Result1 = enabled(586);
   const items5 = [c6];
-  stateFromStoresArray1 = enabled(589).useStateFromStoresArray(items5, () =>
+  stateFromStoresArray1 = enabled(586).useStateFromStoresArray(items5, () =>
     first.map((closure_0) => fetchStateForSku.getFetchStateForSku(closure_0)),
   );
-  const tmp17 = tmp8(14674)();
+  const tmp17 = tmp8(14900)();
   constants = tmp17;
   const items6 = [tmp17, first, stateFromStoresArray, canUseShopDiscountsResult];
   memo = obj.useMemo(
@@ -355,9 +355,9 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
       }),
     items8,
   );
-  const tmp5Result2 = enabled(589);
+  const tmp5Result2 = enabled(586);
   obj = { products: memo2, screen: constants.ORBS, bypassAndroidUnsyncedFilter: true };
-  filteredAndSortedProducts = enabled(14676).useFilteredAndSortedProducts(obj);
+  filteredAndSortedProducts = enabled(14902).useFilteredAndSortedProducts(obj);
   const items9 = [filteredAndSortedProducts];
   const memo3 = obj.useMemo(() => filteredAndSortedProducts.slice(0, 10), items9);
   if (!fetchCollectiblesProducts) {

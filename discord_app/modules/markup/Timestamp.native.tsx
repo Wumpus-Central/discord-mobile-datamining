@@ -22,7 +22,7 @@ export default function Timestamp(node) {
   }
   const tmp2 = itemsDefault(node);
   const tmp3 = jsx;
-  return tmp3(node(1297).LegacyText, {
+  return tmp3(node(1296).LegacyText, {
     style,
     onPress() {
       let obj = closure_1_1(closure_1_2[6]);

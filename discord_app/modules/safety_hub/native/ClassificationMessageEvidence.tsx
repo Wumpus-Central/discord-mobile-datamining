@@ -28,7 +28,7 @@ const result = require("set").fileFinishedImporting("modules/safety_hub/native/C
 
 export default function ClassificationEvidence(arg0) {
   let attachments = callback2();
-  let obj = ref(589);
+  let obj = ref(586);
   const items = [memo];
   const stateFromStores = obj.useStateFromStores(items, () => memo.getCurrentUser());
   obj1 = React;
@@ -39,21 +39,21 @@ export default function ClassificationEvidence(arg0) {
   const tmp8 = first1(React.useState({}), 2);
   first1 = tmp8[0];
   React = tmp8[1];
-  let obj2 = ref(589);
+  let obj2 = ref(586);
   const items1 = [id];
   const resolveAssetSource = first3.resolveAssetSource;
-  if (obj2.useStateFromStores(items1, () => ref(1363).isThemeLight(id.theme))) {
-    let assetSource = resolveAssetSource(tmp11(11459));
+  if (obj2.useStateFromStores(items1, () => ref(1362).isThemeLight(id.theme))) {
+    let assetSource = resolveAssetSource(tmp11(11682));
     let tmp13 = tmp11;
   } else {
-    assetSource = resolveAssetSource(tmp11(11460));
+    assetSource = resolveAssetSource(tmp11(11683));
     tmp13 = tmp11;
   }
   let first2 = arg0.flaggedContent[0];
   const tmp5Result = first1(obj1.useState(first2.attachments.length), 2);
   first3 = tmp5Result[0];
   closure_8 = tmp5Result[1];
-  let tmpResult = tmp(589);
+  let tmpResult = tmp(586);
   const items2 = [closure_11];
   id = first2.id;
   const items3 = [first2.attachments, first1, assetSource];
@@ -167,7 +167,7 @@ export default function ClassificationEvidence(arg0) {
       obj[9] = uri.id;
       return obj;
     });
-    ref(8566).openMediaModal({
+    ref(8581).openMediaModal({
       initialIndex: index,
       initialSources: mapped,
       disableDownload: true,
@@ -243,7 +243,7 @@ export default function ClassificationEvidence(arg0) {
         },
       };
       obj = { uri: uri.url };
-      return closure_1_18(first(8402), obj, arg1);
+      return closure_1_18(first(8411), obj, arg1);
     });
     items8[1] = callback(tmp24, obj);
     obj[0] = items8;
@@ -252,10 +252,10 @@ export default function ClassificationEvidence(arg0) {
     obj1 = { ref: null, onTapImage: null, inverted: false };
     obj1[0] = ref;
     obj1[1] = callback;
-    const items9 = [callback(tmp13(11461), obj1)];
+    const items9 = [callback(tmp13(11684), obj1)];
     obj2 = { rowGenerator: null, message: null, modifyRow: null, pointerEvents: "none" };
     obj2[0] = closure_20;
-    let tmp13Result = tmp13(8779);
+    let tmp13Result = tmp13(8794);
     tmpResult = tmp(4737);
     const obj3 = {
       id: null,

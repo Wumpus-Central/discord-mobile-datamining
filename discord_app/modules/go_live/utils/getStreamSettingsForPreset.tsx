@@ -1,11 +1,11 @@
 // discord_app/modules/go_live/utils/getStreamSettingsForPreset.tsx
 import set from "../../../../_runtime/00002_set.js";
-import _modDef10045 from "../GoLiveVideoPresetResolutionExperiment.tsx";
+import _modDef10067 from "../GoLiveVideoPresetResolutionExperiment.tsx";
 import canStreamWithSettingsDefault from "canStreamWithSettings.tsx";
 import RESOLUTION_720 from "../StreamSettingsConstants.tsx";
 
 function getApplicationStreamPresetValues() {
-  let obj = _modDef10045;
+  let obj = _modDef10067;
   obj = { [closure_3.PRESET_DOCUMENTS]: items };
   obj = { resolution: closure_4.RESOLUTION_SOURCE, fps: closure_2.FPS_15 };
   items = [obj, { resolution: closure_4.RESOLUTION_SOURCE, fps: closure_2.FPS_5 }];

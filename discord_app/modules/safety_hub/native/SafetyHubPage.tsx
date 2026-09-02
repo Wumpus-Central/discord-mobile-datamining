@@ -16,7 +16,7 @@ function AutomatedUnderageAppealStatus() {
   const stateFromStores = obj.useStateFromStores(items, () => ageCheckStatus.getAgeCheckStatus());
   if (AgeCheckStatus.SUCCESS === stateFromStores) {
     obj = { message: null, type: null };
-    const intl4 = tmp(1236).intl;
+    const intl4 = tmp(1233).intl;
     obj = { loginHook: null };
     obj[0] = function loginHook(children) {
       return callback2(callback(table[7]).Text, {
@@ -28,26 +28,26 @@ function AutomatedUnderageAppealStatus() {
         children,
       });
     };
-    obj[0] = intl4.format(tmp(1236).t.hyh4ls, obj);
-    obj[1] = tmp(1297).HelpMessageTypes.SUCCESS;
+    obj[0] = intl4.format(tmp(1233).t.hyh4ls, obj);
+    obj[1] = tmp(1296).HelpMessageTypes.SUCCESS;
     let obj4 = obj;
   } else if (tmp4.ERROR === stateFromStores) {
     obj1 = { message: null, type: null };
-    const intl3 = tmp(1236).intl;
-    obj1[0] = intl3.string(tmp(1236).t["4sILBU"]);
-    obj1[1] = tmp(1297).HelpMessageTypes.ERROR;
+    const intl3 = tmp(1233).intl;
+    obj1[0] = intl3.string(tmp(1233).t["4sILBU"]);
+    obj1[1] = tmp(1296).HelpMessageTypes.ERROR;
     obj4 = obj1;
   } else if (tmp4.FAILURE === stateFromStores) {
     const obj2 = { message: null, type: null };
-    const intl2 = tmp(1236).intl;
-    obj2[0] = intl2.string(tmp(1236).t["40R63o"]);
-    obj2[1] = tmp(1297).HelpMessageTypes.ERROR;
+    const intl2 = tmp(1233).intl;
+    obj2[0] = intl2.string(tmp(1233).t["40R63o"]);
+    obj2[1] = tmp(1296).HelpMessageTypes.ERROR;
     obj4 = obj2;
   } else if (tmp4.LOADING === stateFromStores) {
     const obj3 = { message: null, type: null };
-    const intl = tmp(1236).intl;
-    obj3[0] = intl.string(tmp(1236).t["nhhy/R"]);
-    obj3[1] = tmp(1297).HelpMessageTypes.INFO;
+    const intl = tmp(1233).intl;
+    obj3[0] = intl.string(tmp(1233).t["nhhy/R"]);
+    obj3[1] = tmp(1296).HelpMessageTypes.INFO;
     obj4 = obj3;
   } else {
     obj4 = { message: null, type: null };
@@ -58,7 +58,7 @@ function AutomatedUnderageAppealStatus() {
     const obj5 = { messageType: null, children: null };
     obj5[0] = type;
     obj5[1] = tmp5;
-    tmp6 = callback(tmp(1297).HelpMessage, obj5);
+    tmp6 = callback(tmp(1296).HelpMessage, obj5);
   }
   return tmp6;
 }

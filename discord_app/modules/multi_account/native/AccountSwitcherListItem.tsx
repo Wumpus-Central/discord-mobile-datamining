@@ -86,14 +86,14 @@ export default function AccountSwitcherListItem(arg0) {
   if (user.id === id) {
     if (showActiveAccountLabel) {
       obj = { variant: "text-sm/semibold", color: "text-brand", children: null };
-      const intl = tmp2(1236).intl;
-      obj[2] = intl.string(tmp2(1236).t.seV8yt);
+      const intl = tmp2(1233).intl;
+      obj[2] = intl.string(tmp2(1233).t.seV8yt);
       let tmp8 = callback(tmp2(4474).Text, obj);
     }
     if (null == onPressUser) {
       let PressableOpacity = closure_3;
     } else {
-      PressableOpacity = tmp2(5068).PressableOpacity;
+      PressableOpacity = tmp2(5076).PressableOpacity;
     }
     obj = { selected: null };
     obj[0] = tmp7;
@@ -109,8 +109,8 @@ export default function AccountSwitcherListItem(arg0) {
     ({ accessibilityRole: obj7[0], accessibilityState: obj7[1] } = radioA11yNative);
     let stringResult;
     if (!tmp7) {
-      const intl2 = tmp2(1236).intl;
-      stringResult = intl2.string(tmp2(1236).t.wY4y0R);
+      const intl2 = tmp2(1233).intl;
+      stringResult = intl2.string(tmp2(1233).t.wY4y0R);
     }
     obj1[2] = stringResult;
     obj1[3] = tmp.accountSwitcherListItem;
@@ -120,9 +120,9 @@ export default function AccountSwitcherListItem(arg0) {
     const items2 = [leading, ,];
     obj2 = { style: null, children: null };
     obj2[0] = tmp.accountInfo;
-    const obj3 = { user: null, guildId: "Array" };
+    const obj3 = { user: null, guildId: "r" };
     obj3[0] = obj2;
-    const items3 = [callback(tmp2(1297).Avatar, obj3)];
+    const items3 = [callback(tmp2(1296).Avatar, obj3)];
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.accountListTag;
     const obj5 = { style: null, children: null };
@@ -167,8 +167,8 @@ export default function AccountSwitcherListItem(arg0) {
   tmp8 = null;
   if (user.tokenStatus === MultiAccountTokenStatus.INVALID) {
     const obj10 = { variant: "text-sm/semibold", color: "text-feedback-critical", children: null };
-    const intl3 = tmp2(1236).intl;
-    obj10[2] = intl3.string(tmp2(1236).t.tYX2ps);
+    const intl3 = tmp2(1233).intl;
+    obj10[2] = intl3.string(tmp2(1233).t.tYX2ps);
     tmp8 = callback(tmp2(4474).Text, obj10);
   }
 }

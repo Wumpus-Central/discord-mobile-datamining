@@ -192,7 +192,7 @@ export default function CustomTypingIndicatorEmojiSlots(arg0) {
   dependencyMap = undefined;
   dependencyMap = callback(
     React.useState(() =>
-      dependencyMap(12).sampleSize(closure_8, dependencyMap(1942).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT),
+      dependencyMap(12).sampleSize(closure_8, dependencyMap(1941).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT),
     ),
     1,
   )[0];

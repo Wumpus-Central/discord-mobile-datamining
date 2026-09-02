@@ -1,7 +1,7 @@
 // discord_app/modules/chat_input/native/ChatInputNativeComponent.tsx
-import set from "../../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 import AccessibilityAnnouncer from "../../../design/shared.tsx";
 import hexToRgba from "../../../utils/ColorUtils.tsx";
 import useTheme from "../../../hooks/useTheme.tsx";
@@ -58,12 +58,12 @@ const forwardRefResult = importAllResult.forwardRef((markAsSpoilerTitle, ref) =>
     num = 0.8;
   }
   const obj3 = hexToRgba;
-  let tmp4Result = tmp4(500);
+  let tmp4Result = tmp4(1234);
   let tmp11;
   if (!tmp4Result.isAndroid()) {
     tmp11 = accessibilityLabel;
   }
-  tmp4Result = tmp4(500);
+  tmp4Result = tmp4(1234);
   let tmp12;
   if (!tmp4Result.isAndroid()) {
     tmp12 = customKeyboard;
@@ -82,7 +82,7 @@ const forwardRefResult = importAllResult.forwardRef((markAsSpoilerTitle, ref) =>
     keyboardAppearance: num2,
     keyboardType: str,
     markAsSpoilerTitle,
-    maxHeight: tmp9(11603)(onMaxHeightChanged),
+    maxHeight: tmp9(11826)(onMaxHeightChanged),
     onBeginFocus,
     onEndBlur,
     onChangeContentSize,
@@ -110,7 +110,7 @@ const forwardRefResult = importAllResult.forwardRef((markAsSpoilerTitle, ref) =>
     keyboardAppearance: num2,
     keyboardType: str,
     markAsSpoilerTitle,
-    maxHeight: tmp9(11603)(onMaxHeightChanged),
+    maxHeight: tmp9(11826)(onMaxHeightChanged),
     onBeginFocus,
     onEndBlur,
     onChangeContentSize,

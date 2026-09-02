@@ -3,7 +3,7 @@ import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/n
 import getSystemLocale from "../../../../../intl/index.native.tsx";
 import Button from "../../../../../design/void/native.tsx";
 import Text from "../../../../../design/components/Text/native/Text.tsx";
-import registerAssetDefault from "../../../../../../_runtime/05943_registerAsset.js";
+import registerAssetDefault from "../../../../../../_runtime/05951_registerAsset.js";
 import getPrivateChannelIconComponent from "GuildRoleSubscriptionTierTemplateUtils.tsx";
 import closure_4 from "../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";

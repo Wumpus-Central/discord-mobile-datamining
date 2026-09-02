@@ -7,7 +7,7 @@ import { MEDIA_MODAL_KEY } from "../../../../Constants.tsx";
 const require = arg1;
 function _openAppStoreOverlayMediaModal() {
   const self = this;
-  let tmp = callback((arg0) => {
+  const tmp = callback((arg0) => {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
@@ -53,7 +53,7 @@ function _openAppStoreOverlayMediaModal() {
                 initialIndex = 0;
               }
               ({ initialSources: c2, analyticsSource: c3, channelId: c4, onGetGamePress: c5, onClose: c6 } = callback);
-              closure_7 = Object.assign(tmp45, Object.create(null));
+              closure_7 = Object.assign(tmp44, Object.create(null));
               closure_8 = undefined;
               dependencyMap = undefined;
               let setMediaViewerSources;
@@ -61,7 +61,7 @@ function _openAppStoreOverlayMediaModal() {
               let initVideoStateStore;
               v0 = 1;
               c4 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -97,7 +97,16 @@ function _openAppStoreOverlayMediaModal() {
             const obj4 = { text: null, onPress: null };
             const intl = callback(c2[10]).intl;
             obj4[0] = intl.string(callback(c2[10]).t.lwQdjB);
-            obj4[1] = c5;
+            obj4[1] = function onPress() {
+              if (_undefined3.isOpen()) {
+                let tmpResult = tmp(tmp2[11]);
+                tmpResult.hideActionSheet(c6);
+              } else {
+                tmpResult = tmp(tmp2[12]);
+                tmpResult.popWithKey(c6);
+              }
+              _undefined3();
+            };
             const result = callback(c2[9]).setMediaModalFooterAction(obj4);
             (function getMeasureInWindowFunction(c0) {
               closure_0 = c0;
@@ -122,10 +131,7 @@ function _openAppStoreOverlayMediaModal() {
               };
             })(callback)((arg0, arg1, width, height) => {
               let str = arg4;
-              initialIndex(_undefined2[11])(_undefined3.isOpen(), "An action sheet must be open to open the media modal as an action sheet");
-              let obj = initialIndex(_undefined2[12]);
-              const tmp = initialIndex(_undefined2[11]);
-              obj = {};
+              let obj = {};
               const merged = Object.assign(closure_7);
               obj.initialIndex = initialIndex;
               obj = { x: arg0, y: arg1, width, height, resizeMode: null };
@@ -136,8 +142,16 @@ function _openAppStoreOverlayMediaModal() {
               obj.originLayout = obj;
               obj.onCloseCallback = c6;
               obj.disableHapticOnOpen = true;
-              obj.openLazy(_undefined(_undefined2[6])(_undefined2[13], _undefined2.paths), c6, obj, "stack");
-              setMediaViewerSources({ sources: _undefined2, initialIndex });
+              obj.disableMediaOverlayFooter = true;
+              if (_undefined3.isOpen()) {
+                let tmp3Result = tmp3(tmp4[11]);
+                tmp3Result.openLazy(_undefined(tmp4[6])(tmp4[13], tmp4.paths), c6, obj, "stack");
+              } else {
+                tmp3Result = tmp3(tmp4[12]);
+                tmp3Result.pushLazy(_undefined(tmp4[6])(tmp4[13], tmp4.paths), obj, c6, { animation: "none" });
+              }
+              obj = { sources: _undefined2, initialIndex };
+              setMediaViewerSources(obj);
               MediaViewerAnalytics.markSessionStarted({ channelId: c4, numMediaItems: _undefined2.length, source: c3 });
               initVideoStateStore();
             });

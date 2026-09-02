@@ -29,16 +29,16 @@ function MusicMuteButton(channelId) {
   if (tmp3 != null) {
     const speaker = tmp3.speaker;
   }
-  let obj = stateFromStores(589);
+  let obj = stateFromStores(586);
   const items = [closure_8];
   stateFromStores = obj.useStateFromStores(items, () => muted.isMuted());
   let tmp6 = null;
   if (obj2.useShowStageMusicMuteButton(channelId)) {
     tmp6 = null;
     if (speaker) {
-      const intl = tmp4(1236).intl;
+      const intl = tmp4(1233).intl;
       const string = intl.string;
-      const t = tmp4(1236).t;
+      const t = tmp4(1233).t;
       if (stateFromStores) {
         let stringResult = string(t.ScHlfl);
       } else {
@@ -46,13 +46,13 @@ function MusicMuteButton(channelId) {
       }
       obj = { accessibilityLabel: null, icon: null, onPress: null };
       obj[0] = stringResult;
-      obj[1] = tmp(stateFromStores ? 10001 : 9252);
+      obj[1] = tmp(stateFromStores ? 10023 : 9265);
       obj[2] = function onPress() {
         return stateFromStores(closure_1_2[33]).updateStageMusicMuted(!stateFromStores);
       };
-      closure_23(tmp(16616), obj);
+      closure_23(tmp(16851), obj);
       const tmp7 = closure_23;
-      const tmpResult = tmp(16616);
+      const tmpResult = tmp(16851);
     }
   }
   return tmp6;

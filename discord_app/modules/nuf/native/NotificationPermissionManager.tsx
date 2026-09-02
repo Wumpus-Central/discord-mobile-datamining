@@ -1,5 +1,5 @@
 // discord_app/modules/nuf/native/NotificationPermissionManager.tsx
-import hooksDefault from "../../../../_runtime/04075_hooks.js";
+import hooksDefault from "../../../../_runtime/04074_hooks.js";
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
 import getOrRefreshPushSyncToken from "../../../actions/native/PushNotificationActionCreators.tsx";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -183,8 +183,8 @@ function _logNotificationPermissionStatus2() {
           return obj;
         } else {
           callback = arg1;
-          callback2 = callback(10168).allowInAppNotifications();
-          const obj5 = callback(10168);
+          callback2 = callback(10190).allowInAppNotifications();
+          const obj5 = callback(10190);
           const obj2 = {
             os_enabled: null,
             foreground_app_enabled: null,
@@ -194,7 +194,7 @@ function _logNotificationPermissionStatus2() {
           obj2[0] = callback === constants2.AUTHORIZED;
           obj2[1] = callback2;
           obj2[2] = callback2;
-          const obj6 = callback2(698);
+          const obj6 = callback2(695);
           let tmp7 = null;
           if (obj8.isIOS()) {
             tmp7 = callback;
@@ -360,7 +360,7 @@ class NotificationPermissionManager extends tmp4 {
                 ({ message: c0, optimistic: c1, isPushNotification: c2, sendMessageOptions: c3 } = author);
                 c3 = 1;
                 c4 = 1;
-                return { value: "PX_16", done: null };
+                return { value: "PX_16", done: true };
               }
             } else {
               if (1 === tmp5) {
@@ -470,7 +470,7 @@ class NotificationPermissionManager extends tmp4 {
                 invite = invite.invite;
                 c4 = 1;
                 c5 = 1;
-                return { value: "PX_16", done: null };
+                return { value: "PX_16", done: true };
               }
             } else {
               if (1 === tmp5) {
@@ -594,7 +594,7 @@ class NotificationPermissionManager extends tmp4 {
                 relationship = relationship.relationship;
                 c3 = 1;
                 c4 = 1;
-                return { value: "PX_16", done: null };
+                return { value: "PX_16", done: true };
               }
             } else {
               if (1 === tmp5) {
@@ -713,7 +713,7 @@ class NotificationPermissionManager extends tmp4 {
                 closure_2 = undefined;
                 c3 = 1;
                 c4 = 1;
-                return { value: "PX_16", done: null };
+                return { value: "PX_16", done: true };
               }
             } else {
               if (1 === tmp5) {

@@ -1,6 +1,6 @@
 // discord_app/modules/instant_invite/InviteCodeUtils.tsx
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
-import parseDefault from "../../../_runtime/01483_parse.js";
+import parseDefault from "../../../_runtime/01482_parse.js";
 import getFirstQueryStringValue from "../../utils/QueryStringUtils.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 

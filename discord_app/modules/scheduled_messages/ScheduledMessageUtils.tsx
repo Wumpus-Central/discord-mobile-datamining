@@ -5,7 +5,7 @@ import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
 import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import isPremiumAtLeast from "../../utils/PremiumTypeUtils.tsx";
-import hooksDefault from "../../../_runtime/04075_hooks.js";
+import hooksDefault from "../../../_runtime/04074_hooks.js";
 import createMinimalMessageRecord from "../messages/MessageRecordUtils.tsx";
 import regExp from "../suppress_notifications/parseContentForSuppressNotifications.tsx";
 import regExpDefault from "../suppress_notifications/parseContentForSuppressNotifications.tsx";
@@ -138,21 +138,21 @@ export const getScheduledTimeError = function getScheduledTimeError(isBefore, cl
     const intl2 = getSystemLocale.intl;
     let stringResult = intl2.string(getSystemLocale.t["w/fgvh"]);
   } else {
-    const addResult = tmp(4075)().add(closure_9, "seconds");
+    const addResult = tmp(4074)().add(closure_9, "seconds");
     let minResult = addResult;
     if (null != closure_2) {
-      let tmpResult = tmp(4075);
+      let tmpResult = tmp(4074);
       tmpResult = tmp(11);
       const tmpResultResult = tmpResult(tmpResult.extractTimestamp(closure_2));
-      minResult = tmp(4075).min(addResult, tmpResultResult.add(closure_8, "seconds"));
-      const tmpResult1 = tmp(4075);
+      minResult = tmp(4074).min(addResult, tmpResultResult.add(closure_8, "seconds"));
+      const tmpResult1 = tmp(4074);
     }
     stringResult = null;
     if (isBefore.isAfter(minResult)) {
       const intl = getSystemLocale.intl;
       stringResult = intl.string(getSystemLocale.t.Nt0tz7);
     }
-    const obj2 = tmp(4075)();
+    const obj2 = tmp(4074)();
   }
   return stringResult;
 };
@@ -164,10 +164,10 @@ export const getLatestScheduledTime = function getLatestScheduledTime(closure_2)
   if (null == closure_2) {
     return addResult;
   } else {
-    let tmpResult = tmp(4075);
+    let tmpResult = tmp(4074);
     tmpResult = tmp(11);
     const tmpResultResult = tmpResult(tmpResult.extractTimestamp(closure_2));
-    return tmp(4075).min(addResult, tmpResultResult.add(closure_8, "seconds"));
+    return tmp(4074).min(addResult, tmpResultResult.add(closure_8, "seconds"));
   }
   const obj = hooksDefault();
 };
@@ -243,36 +243,36 @@ export const convertServerScheduledMessageSend = function convertServerScheduled
 export const getMessageForState = function getMessageForState(state) {
   if (ScheduledMessageSendState.ScheduledMessageSendState.SCHEDULED === state) {
     let obj = { isError: false, stateMessage: null };
-    const intl6 = tmp(1236).intl;
-    obj[1] = intl6.string(tmp(1236).t.Fn6Odn);
+    const intl6 = tmp(1233).intl;
+    obj[1] = intl6.string(tmp(1233).t.Fn6Odn);
     return obj;
-  } else if (tmp(7591).ScheduledMessageSendState.ERROR_CHANNEL_NOT_FOUND === state) {
+  } else if (tmp(7601).ScheduledMessageSendState.ERROR_CHANNEL_NOT_FOUND === state) {
     obj = { isError: true, stateMessage: null };
-    const intl5 = tmp(1236).intl;
-    obj[1] = intl5.string(tmp(1236).t.v5O2dK);
+    const intl5 = tmp(1233).intl;
+    obj[1] = intl5.string(tmp(1233).t.v5O2dK);
     return obj;
-  } else if (tmp(7591).ScheduledMessageSendState.ERROR_USER_NOT_FOUND === state) {
+  } else if (tmp(7601).ScheduledMessageSendState.ERROR_USER_NOT_FOUND === state) {
     obj1 = { isError: true, stateMessage: null };
-    const intl4 = tmp(1236).intl;
-    obj1[1] = intl4.string(tmp(1236).t.j8uIfG);
+    const intl4 = tmp(1233).intl;
+    obj1[1] = intl4.string(tmp(1233).t.j8uIfG);
     return obj1;
-  } else if (tmp(7591).ScheduledMessageSendState.ERROR_USER_CANNOT_USE_SCHEDULED_MESSAGES === state) {
+  } else if (tmp(7601).ScheduledMessageSendState.ERROR_USER_CANNOT_USE_SCHEDULED_MESSAGES === state) {
     const obj2 = { isError: true, stateMessage: null };
-    const intl3 = tmp(1236).intl;
-    obj2[1] = intl3.string(tmp(1236).t["w6zHX/"]);
+    const intl3 = tmp(1233).intl;
+    obj2[1] = intl3.string(tmp(1233).t["w6zHX/"]);
     return obj2;
-  } else if (tmp(7591).ScheduledMessageSendState.ERROR_SEND_FAILED === state) {
+  } else if (tmp(7601).ScheduledMessageSendState.ERROR_SEND_FAILED === state) {
     const obj3 = { isError: true, stateMessage: null };
-    const intl2 = tmp(1236).intl;
-    obj3[1] = intl2.string(tmp(1236).t.pflV7z);
+    const intl2 = tmp(1233).intl;
+    obj3[1] = intl2.string(tmp(1233).t.pflV7z);
     return obj3;
-  } else if (tmp(7591).ScheduledMessageSendState.ERROR_SCHEDULED_MESSAGES_DISABLED === state) {
+  } else if (tmp(7601).ScheduledMessageSendState.ERROR_SCHEDULED_MESSAGES_DISABLED === state) {
     const obj4 = { isError: true, stateMessage: null };
-    const intl = tmp(1236).intl;
-    obj4[1] = intl.string(tmp(1236).t.j8uIfG);
+    const intl = tmp(1233).intl;
+    obj4[1] = intl.string(tmp(1233).t.j8uIfG);
     return obj4;
   } else {
-    tmp(1471).assertNever(state);
+    tmp(1470).assertNever(state);
   }
 };
 export const convertServerScheduledMessageCreateArgs = function convertServerScheduledMessageCreateArgs(channelId) {

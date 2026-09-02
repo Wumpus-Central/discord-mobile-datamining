@@ -2,7 +2,7 @@
 import set from "../../../_runtime/00002_set.js";
 import _modDef38 from "../../../_runtime/metro/00038__.js";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import asyncRequireImpl from "../../../_runtime/02009_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/02008_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
 
 const result = set.fileFinishedImporting("modules/game_profile/GameProfileActionCreators.native.tsx");
@@ -21,7 +21,7 @@ export default {
     );
     let obj = ACTION_SHEET_HEIGHT_HALFDefault;
     obj = { gameId, source, sourceUserId };
-    obj.openLazy(asyncRequireImpl(8807, dependencyMap.paths), "game-profile-" + gameId, obj, stackingBehavior);
+    obj.openLazy(asyncRequireImpl(8822, dependencyMap.paths), "game-profile-" + gameId, obj, stackingBehavior);
   },
   returnToGameProfile(gameId) {
     gameId = gameId.gameId;
@@ -29,7 +29,7 @@ export default {
     dispatcherDefault.dispatch({ type: "GAME_PROFILE_CLEAR_PENDING_RETURN", gameId });
     const obj = dispatcherDefault;
     const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
-    obj2.openLazy(asyncRequireImpl(8807, dependencyMap.paths), "game-profile-" + gameId, {
+    obj2.openLazy(asyncRequireImpl(8822, dependencyMap.paths), "game-profile-" + gameId, {
       gameId,
       source,
       initialScrollOffset,

@@ -3,7 +3,7 @@ import set from "../../../../_runtime/00002_set.js";
 import Storage4 from "../../../../discord_common/js/packages/storage/Storage.tsx";
 import batchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
-import keys from "../../../../_runtime/00644_keys.js";
+import keys from "../../../../_runtime/00641_keys.js";
 import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 const V2_DCD_CONTACTS_STORAGE_KEY = "V2_DCD_CONTACTS_STORAGE_KEY";
@@ -87,7 +87,7 @@ export const deleteStoredContacts = function deleteStoredContacts() {
   if (str == null) {
     str = "";
   }
-  const Storage2 = tmp(595).Storage;
+  const Storage2 = tmp(592).Storage;
   Storage2.remove(V2_DCD_CONTACTS_STORAGE_KEY);
   batchUpdates.batchUpdates(() => {
     state.setState((arg0) => {

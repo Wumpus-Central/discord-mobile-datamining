@@ -1,5 +1,5 @@
 // discord_app/modules/polls/PollsUtils.tsx
-import v1 from "../../../_runtime/00514_v1.js";
+import v1 from "../../../_runtime/00511_v1.js";
 import setDefault from "../../utils/Durations.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
 import useNullableMessageAuthor from "../messages/useMessageAuthor.tsx";
@@ -19,7 +19,7 @@ function getSampleOfVoterUsernamesForAnswer(message, id) {
     message.id,
     { id, name: "", animated: false },
     closure_9,
-    channel(7507).ReactionTypes.VOTE,
+    channel(7517).ReactionTypes.VOTE,
   );
   channel = channel.getChannel(channelId);
   let guildId = null;
@@ -290,10 +290,10 @@ export const getPollResultsReplyPreview = function getPollResultsReplyPreview(me
   }
   let truncateTextResult = str;
   if (null != closure_8) {
-    truncateTextResult = tmp(1903).truncateText(str, tmp4);
-    const tmpResult = tmp(1903);
+    truncateTextResult = tmp(1902).truncateText(str, tmp4);
+    const tmpResult = tmp(1902);
   }
-  const intl = tmp(1236).intl;
+  const intl = tmp(1233).intl;
   obj = { username: messageAuthor.nick, title: truncateTextResult };
   return intl.format(getSystemLocale.t.Vn97Ka, obj);
 };
@@ -317,10 +317,10 @@ export const getPollResultsReplyPreviewMobile = function getPollResultsReplyPrev
     }
     let truncateTextResult = str;
     if (null != closure_8) {
-      truncateTextResult = tmp2(1903).truncateText(str, tmp5);
-      const tmp2Result = tmp2(1903);
+      truncateTextResult = tmp2(1902).truncateText(str, tmp5);
+      const tmp2Result = tmp2(1902);
     }
-    const intl = tmp2(1236).intl;
+    const intl = tmp2(1233).intl;
     obj = { username: null, title: null };
     obj[0] = messageAuthor.nick;
     obj[1] = truncateTextResult;

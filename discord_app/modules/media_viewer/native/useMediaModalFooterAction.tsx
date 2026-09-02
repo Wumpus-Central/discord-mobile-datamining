@@ -1,7 +1,7 @@
 // discord_app/modules/media_viewer/native/useMediaModalFooterAction.tsx
 import set from "../../../../_runtime/00002_set.js";
 import batchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import keys from "../../../../_runtime/00644_keys.js";
+import keys from "../../../../_runtime/00641_keys.js";
 
 const obj = keys.create(() => ({}));
 const result = set.fileFinishedImporting("modules/media_viewer/native/useMediaModalFooterAction.tsx");

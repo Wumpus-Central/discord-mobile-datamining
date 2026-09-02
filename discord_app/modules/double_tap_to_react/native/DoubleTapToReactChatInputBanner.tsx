@@ -57,13 +57,13 @@ function DoubleTapToReactChatInputBannerInner(emoji) {
   const obj3 = { style: tmp.text, children: null };
   const obj4 = { style: tmp.header, children: null };
   const obj5 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = tmp2(1236).intl;
+  const intl = tmp2(1233).intl;
   obj5[2] = intl.string(getSystemLocale.t["6RUX7d"]);
   const items3 = [closure_9(Text.Text, obj5), closure_9(renderChannelBadge.NewBadge, {})];
   obj4[1] = items3;
   const items4 = [closure_10(View, obj4)];
   const obj6 = { variant: "text-xs/medium", color: "text-default", children: null };
-  const intl2 = tmp2(1236).intl;
+  const intl2 = tmp2(1233).intl;
   obj6[2] = intl2.format(getSystemLocale.t["5/l2rR"], {
     emojiName: emoji.name,
     emojiNameHook(children) {
@@ -84,7 +84,7 @@ function DoubleTapToReactChatInputBannerInner(emoji) {
     style: null,
     children: null,
   };
-  const intl3 = tmp2(1236).intl;
+  const intl3 = tmp2(1233).intl;
   obj8[2] = intl3.string(getSystemLocale.t.cpT0Cq);
   obj8[3] = emoji.handleDismissBanner;
   obj8[4] = tmp.closeButton;

@@ -41,8 +41,8 @@ function ProposalCard(proposal) {
   obj[2] = intl.string(messagesProxyDefault["60htw+"]);
   const items1 = [callback(Text.Text, obj), , , , ,];
   if ("" === trimmed) {
-    const intl2 = tmp6(1236).intl;
-    let stringResult = intl2.string(tmp8(3501).IHCafX);
+    const intl2 = tmp6(1233).intl;
+    let stringResult = intl2.string(tmp8(3500).IHCafX);
   } else {
     stringResult = tmp8(4468).parse(trimmed, true, closure_16);
     const tmp8Result = tmp8(4468);
@@ -52,8 +52,8 @@ function ProposalCard(proposal) {
   if (proposal.changes.length > 0) {
     obj = { direction: "vertical", spacing: 4, children: null };
     obj1 = { variant: "text-sm/semibold", color: "text-muted", children: null };
-    const intl3 = tmp6(1236).intl;
-    obj1[2] = intl3.string(tmp8(3501).KLyB8Y);
+    const intl3 = tmp6(1233).intl;
+    obj1[2] = intl3.string(tmp8(3500).KLyB8Y);
     const items2 = [tmp3(tmp6(4474).Text, obj1)];
     const changes = proposal.changes;
     items2[1] = changes.map((arg0, arg1) =>
@@ -71,8 +71,8 @@ function ProposalCard(proposal) {
   if (bot_permissions.length > 0) {
     const obj2 = { direction: "vertical", spacing: 4, children: null };
     const obj3 = { variant: "text-sm/semibold", color: "text-muted", children: null };
-    const intl4 = tmp6(1236).intl;
-    obj3[2] = intl4.string(tmp8(3501).ieqTtP);
+    const intl4 = tmp6(1233).intl;
+    obj3[2] = intl4.string(tmp8(3500).ieqTtP);
     const items3 = [tmp3(tmp6(4474).Text, obj3)];
     const obj4 = { variant: "text-sm/normal", color: "text-default", children: null };
     obj4[2] = bot_permissions.join(", ");
@@ -85,8 +85,8 @@ function ProposalCard(proposal) {
   if (privileged_intents.length > 0) {
     const obj5 = { direction: "vertical", spacing: 4, children: null };
     const obj6 = { variant: "text-sm/semibold", color: "text-muted", children: null };
-    const intl5 = tmp6(1236).intl;
-    obj6[2] = intl5.string(tmp8(3501).Cn9qix);
+    const intl5 = tmp6(1233).intl;
+    obj6[2] = intl5.string(tmp8(3500).Cn9qix);
     const items4 = [tmp3(tmp6(4474).Text, obj6)];
     const obj7 = { variant: "text-sm/normal", color: "text-default", children: null };
     obj7[2] = privileged_intents.join(", ");
@@ -98,8 +98,8 @@ function ProposalCard(proposal) {
   let tmp3Result = null;
   if (actionable) {
     const obj8 = { text: null, variant: "primary", onPress: null };
-    const intl6 = tmp6(1236).intl;
-    obj8[0] = intl6.string(tmp8(3501).GYoWRk);
+    const intl6 = tmp6(1233).intl;
+    obj8[0] = intl6.string(tmp8(3500).GYoWRk);
     obj8[2] = onApprove;
     tmp3Result = tmp3(tmp6(4928).Button, obj8);
   }
@@ -167,22 +167,22 @@ function AttachmentPills(projectId) {
         obj[1] = function onPress() {
           return closure_1_2(id.id);
         };
-        const intl = projectId(1236).intl;
+        const intl = projectId(1233).intl;
         obj = { name: null };
         obj[0] = id.name;
-        obj[2] = intl.formatToPlainString(lib(3501).QUFLUq, obj);
+        obj[2] = intl.formatToPlainString(lib(3500).QUFLUq, obj);
         obj = { variant: "text-xs/medium", color: "text-default", children: null };
         obj[2] = id.name;
         obj[3] = closure_1_14(projectId(4474).Text, obj);
-        let tmp12 = closure_1_14(projectId(5601).Card, obj, id.id);
+        let tmp12 = closure_1_14(projectId(5609).Card, obj, id.id);
       } else {
         obj1 = { style: null, children: null };
         obj1[0] = lib.attachmentPill;
         const obj2 = { variant: "text-xs/medium", color: "text-muted", children: null };
-        const intl2 = projectId(1236).intl;
+        const intl2 = projectId(1233).intl;
         const obj3 = { name: null };
         obj3[0] = id.name;
-        obj2[2] = intl2.formatToPlainString(lib(3501).OBr7WW, obj3);
+        obj2[2] = intl2.formatToPlainString(lib(3500).OBr7WW, obj3);
         obj1[1] = closure_1_14(projectId(4474).Text, obj2);
         const _HermesInternal = HermesInternal;
         tmp12 = closure_1_14(closure_1_5, obj1, "" + id.name + "-" + arg1);
@@ -218,7 +218,7 @@ function ActivityBox(tree) {
     const steps = tree.steps;
     const items1 = [
       steps.map((id) => {
-        const obj = { variant: "text-sm/normal", color: "text-muted", children: callback(16188).describeNode(id) };
+        const obj = { variant: "text-sm/normal", color: "text-muted", children: callback(16420).describeNode(id) };
         return callback3(callback(4474).Text, obj, id.id);
       }),
     ];

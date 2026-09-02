@@ -50,7 +50,7 @@ function _fetchPremiumGroupMembership() {
           }
         } else if (1 === tmp7) {
           c3 = 0;
-          let obj5 = callback(709);
+          let obj5 = callback(706);
           obj5.dispatch({ type: "PREMIUM_GROUP_MEMBERSHIP_FETCH_FAILURE" });
           c5 = 3;
           return { value: null, done: true };
@@ -66,7 +66,7 @@ function _fetchPremiumGroupMembership() {
         } else {
           body = arg1.body;
           if (null != body) {
-            obj1 = callback(709);
+            obj1 = callback(706);
             const obj4 = { type: "PREMIUM_GROUP_MEMBERSHIP_FETCH_SUCCESS", membership: null };
             obj5 = { subscriptionId: null, memberType: null, subscriptionStatus: null, currentPeriodEnd: null };
             obj5[0] = body.subscription_id;
@@ -78,7 +78,7 @@ function _fetchPremiumGroupMembership() {
             obj4[1] = obj5;
             obj1.dispatch(obj4);
           } else {
-            obj = callback(709);
+            obj = callback(706);
             obj.dispatch({ type: "PREMIUM_GROUP_MEMBERSHIP_NOT_FOUND" });
           }
           c3 = 0;
@@ -215,7 +215,7 @@ function _inviteUsersToSubscriptionGroup() {
             }
           } else if (1 === tmp7) {
             c5 = 0;
-            obj2 = lib(709);
+            obj2 = lib(706);
             obj2.dispatch({ type: "PREMIUM_GROUP_INVITE_USERS_FAILURE" });
             c7 = 3;
             return { value: null, done: true };
@@ -230,7 +230,7 @@ function _inviteUsersToSubscriptionGroup() {
             return obj4;
           } else {
             lib = arg1;
-            let obj6 = lib(709);
+            let obj6 = lib(706);
             const obj5 = { type: "PREMIUM_GROUP_INVITE_USERS_SUCCESS", subscriptionId: null };
             obj5[1] = callback;
             obj6.dispatch(obj5);
@@ -316,7 +316,7 @@ function _removeUserFromSubscriptionGroup() {
           } else if (1 === tmp7) {
             c5 = 0;
             dependencyMap = closure_4;
-            let obj4 = callback2(709);
+            let obj4 = callback2(706);
             obj4.dispatch({ type: "PREMIUM_GROUP_REMOVE_MEMBER_FAILURE" });
             c7 = 3;
             const obj3 = { value: null, done: true };
@@ -333,7 +333,7 @@ function _removeUserFromSubscriptionGroup() {
             return obj4;
           } else {
             callback2 = arg1;
-            obj = callback2(709);
+            obj = callback2(706);
             const obj5 = { type: "PREMIUM_GROUP_REMOVE_MEMBER_SUCCESS", subscriptionId: null };
             obj5[1] = callback;
             obj.dispatch(obj5);
@@ -415,7 +415,7 @@ function _fetchSubscriptionGroupMembers() {
             }
           } else if (1 === tmp7) {
             c4 = 0;
-            obj2 = lib2(709);
+            obj2 = lib2(706);
             obj2.dispatch({ type: "PREMIUM_GROUP_MEMBERS_FETCH_FAILURE" });
             c6 = 3;
             const obj3 = { value: null, done: true };
@@ -443,7 +443,7 @@ function _fetchSubscriptionGroupMembers() {
             const found1 = lib.filter((isInvited) => isInvited.isInvited());
             obj6[2] = found1.map((user) => user.user);
             obj5[1] = obj6;
-            lib2(709).dispatch(obj5);
+            lib2(706).dispatch(obj5);
             c4 = 0;
             c6 = 3;
             obj = { value: null, done: true };
@@ -513,9 +513,9 @@ function _acceptSubscriptionGroupInvite() {
               let callback2;
               obj1 = { type: "PREMIUM_GROUP_ACCEPT_INVITE_START", subscriptionGroupMemberId: null };
               obj1[1] = dependencyMap;
-              callback2(709).dispatch(obj1);
+              callback2(706).dispatch(obj1);
               c6 = 1;
-              const HTTP = callback(530).HTTP;
+              const HTTP = callback(527).HTTP;
               const obj2 = { url: null, rejectWithError: true };
               obj2[0] = c6.BILLING_SUBSCRIPTION_INVITE(callback, callback2);
               c7 = 2;
@@ -527,7 +527,7 @@ function _acceptSubscriptionGroupInvite() {
           } else if (1 === tmp7) {
             c6 = 0;
             dependencyMap = closure_5;
-            let obj4 = callback2(709);
+            let obj4 = callback2(706);
             obj4 = { type: "PREMIUM_GROUP_ACCEPT_INVITE_FAIL", subscriptionGroupMemberId: null };
             obj4[1] = callback;
             obj4.dispatch(obj4);
@@ -546,7 +546,7 @@ function _acceptSubscriptionGroupInvite() {
             return obj6;
           } else {
             callback2 = arg1;
-            obj = callback2(709);
+            obj = callback2(706);
             const obj7 = { type: "PREMIUM_GROUP_ACCEPT_INVITE_SUCCESS", subscriptionGroupMemberId: null };
             obj7[1] = callback;
             obj.dispatch(obj7);
@@ -619,9 +619,9 @@ function _removeSubscriptionGroupInvite() {
               dependencyMap = undefined;
               obj1 = { type: "PREMIUM_GROUP_REMOVE_INVITE_START", subscriptionGroupMemberId: null };
               obj1[1] = dependencyMap;
-              callback2(709).dispatch(obj1);
+              callback2(706).dispatch(obj1);
               c6 = 1;
-              const HTTP = callback(530).HTTP;
+              const HTTP = callback(527).HTTP;
               const obj2 = { url: null, rejectWithError: true };
               obj2[0] = c6.BILLING_SUBSCRIPTION_INVITE(callback, callback2);
               c7 = 2;
@@ -633,7 +633,7 @@ function _removeSubscriptionGroupInvite() {
           } else if (1 === tmp7) {
             c6 = 0;
             body = closure_5;
-            let obj4 = callback2(709);
+            let obj4 = callback2(706);
             obj4 = {
               type: "PREMIUM_GROUP_REMOVE_INVITE_FAILURE",
               subscriptionGroupMemberId: null,
@@ -664,7 +664,7 @@ function _removeSubscriptionGroupInvite() {
             return obj6;
           } else {
             dependencyMap = arg1;
-            obj = callback2(709);
+            obj = callback2(706);
             const obj7 = {
               type: "PREMIUM_GROUP_REMOVE_INVITE_SUCCESS",
               subscriptionId: null,
@@ -712,7 +712,7 @@ function _fetchPremiumGroupInvites() {
     yield HTTP.get(obj1);
     if (1 === tmp7) {
       c3 = 0;
-      let obj3 = callback(709);
+      let obj3 = callback(706);
       obj3.dispatch({ type: "PREMIUM_GROUP_INVITES_FETCH_FAIL" });
       c5 = 3;
     } else if (arg0 === 1) {
@@ -720,7 +720,7 @@ function _fetchPremiumGroupInvites() {
       throw arg1;
     } else if (arg0 !== 2) {
       const body = arg1.body;
-      const obj = callback(709);
+      const obj = callback(706);
       obj3 = { type: "PREMIUM_GROUP_INVITES_FETCH_SUCCESS", invites: null };
       obj3[1] = body;
       obj.dispatch(obj3);

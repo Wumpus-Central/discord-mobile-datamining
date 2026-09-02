@@ -165,7 +165,7 @@ export const AppLauncherCommandViewHeader = function AppLauncherCommandViewHeade
   N.__initData = closure_12;
   const animatedStyle2 = obj4.useAnimatedStyle(N);
   obj1 = { interpolate: scrollOffsetY(4217).interpolate, scrollOffsetY, TOTAL_SCROLL_RANGE: closure_8 };
-  let str = scrollOffsetY(4197).useToken(section(712).colors.BACKGROUND_BASE_LOW);
+  let str = scrollOffsetY(4197).useToken(section(709).colors.BACKGROUND_BASE_LOW);
   let tmp10 = memo;
   const obj7 = scrollOffsetY(4197);
   if (typeof memo !== "number") {
@@ -178,12 +178,12 @@ export const AppLauncherCommandViewHeader = function AppLauncherCommandViewHeade
   if (str == null) {
     str = "";
   }
-  const tmp9 = section(8041);
+  const tmp9 = section(8050);
   if (null != memo) {
     obj2 = { style: null, source: null };
     obj2[0] = tmp.appIcon;
     obj2[1] = memo;
-    let tmp15 = callback(tmp8(5493), obj2);
+    let tmp15 = callback(tmp8(5501), obj2);
     let tmp16 = callback;
   } else {
     const obj3 = { style: null };
@@ -205,7 +205,7 @@ export const AppLauncherCommandViewHeader = function AppLauncherCommandViewHeade
   let items3 = [tmp.headerBannerOverlay, animatedStyle2];
   const items4 = [
     tmp16(section(4217).View, { style: items3 }),
-    tmp16(section(11703), { onPress: onPress.onPressBack }),
+    tmp16(section(11926), { onPress: onPress.onPressBack }),
     ,
     ,
   ];
@@ -224,7 +224,7 @@ export const AppLauncherCommandViewHeader = function AppLauncherCommandViewHeade
   }
   obj5[5] = displayName;
   items4[2] = tmp16(scrollOffsetY(4474).Text, obj5);
-  items4[3] = tmp16(scrollOffsetY(1297).Spacer, { size: 32 });
+  items4[3] = tmp16(scrollOffsetY(1296).Spacer, { size: 32 });
   const items6 = [tmp.appIconMask, animatedStyle1];
   items4[4] = tmp16(section(4217).View, { style: items6, children: tmp15 });
   obj4[1] = items4;
