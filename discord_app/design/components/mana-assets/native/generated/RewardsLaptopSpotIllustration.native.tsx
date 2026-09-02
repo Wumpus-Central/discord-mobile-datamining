@@ -1,10 +1,10 @@
-// === Module 6937: RewardsLaptopSpotIllustration ===
+// === Module 6946: RewardsLaptopSpotIllustration ===
 
-// Module 6937 (RewardsLaptopSpotIllustration)
+// Module 6946 (RewardsLaptopSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5493 */;
-import metadataDefault from "metadata" /* 6938 */;
+import preloadDefault from "preload" /* 5501 */;
+import metadataDefault from "metadata" /* 6947 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/RewardsLaptopSpotIllustration.native.tsx");

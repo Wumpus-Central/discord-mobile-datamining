@@ -1,17 +1,17 @@
-// === Module 10141: StreamPreviewContainer ===
+// === Module 10163: StreamPreviewContainer ===
 
-// Module 10141 (StreamPreviewContainer)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 10163 (StreamPreviewContainer)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_5 from "set" /* 4495 */;
 import closure_6 from "reset" /* 4500 */;
-import closure_7 from "fetchFingerprint" /* 1218 */;
-import closure_8 from "ensureGuildLoaded" /* 1387 */;
-import closure_9 from "createGuildRecordFromRust" /* 1909 */;
-import closure_10 from "getUncachedChannelPermissions" /* 4121 */;
+import closure_7 from "fetchFingerprint" /* 1215 */;
+import closure_8 from "ensureGuildLoaded" /* 1386 */;
+import closure_9 from "createGuildRecordFromRust" /* 1908 */;
+import closure_10 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_11 from "updateVoiceState" /* 4497 */;
-import { Permissions } from "ME" /* 676 */;
+import { Permissions } from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 import hexToRgba from "hexToRgba" /* 4326 */;
@@ -124,11 +124,11 @@ let result = require("set").fileFinishedImporting("components_native/TouchableSt
 
 export default function VoiceChannelSettingsStreamPreview(arg0) {
   const _require = arg0;
-  let obj = _require(589);
+  let obj = _require(586);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getStreamForUser(closure_0.userId, closure_0.guildId));
   const items1 = [closure_8];
-  const stateFromStores1 = _require(589).useStateFromStores(items1, () => {
+  const stateFromStores1 = _require(586).useStateFromStores(items1, () => {
     let channel = null;
     if (null != stateFromStores) {
       channel = closure_1_8.getChannel(tmp.channelId);

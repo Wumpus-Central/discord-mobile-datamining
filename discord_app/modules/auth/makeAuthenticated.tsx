@@ -1,9 +1,9 @@
-// === Module 16324: makeAuthenticated ===
+// === Module 16556: makeAuthenticated ===
 
-// Module 16324 (makeAuthenticated)
+// Module 16556 (makeAuthenticated)
 import noopAll from "noop" /* 19 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import { LoginStates } from "ME" /* 676 */;
+import closure_3 from "fetchFingerprint" /* 1215 */;
+import { LoginStates } from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

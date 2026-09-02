@@ -1,10 +1,10 @@
-// === Module 7623: PhoneCallIcon ===
+// === Module 7633: PhoneCallIcon ===
 
-// Module 7623 (PhoneCallIcon)
+// Module 7633 (PhoneCallIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 7624 */;
+import registerAsset from "registerAsset" /* 7634 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,11 +1,11 @@
-// === Module 16631: useTransitionToConnectedActivityInVoice ===
+// === Module 16866: useTransitionToConnectedActivityInVoice ===
 
-// Module 16631 (useTransitionToConnectedActivityInVoice)
+// Module 16866 (useTransitionToConnectedActivityInVoice)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "ensureGuildLoaded" /* 1387 */;
-import closure_6 from "handleConnectionOpen" /* 1981 */;
-import { ComponentActions } from "ME" /* 676 */;
+import closure_5 from "ensureGuildLoaded" /* 1386 */;
+import closure_6 from "handleConnectionOpen" /* 1980 */;
+import { ComponentActions } from "ME" /* 673 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/activities/utils/useTransitionToConnectedActivityInVoice.tsx");
@@ -66,7 +66,7 @@ export default function useTransitionToConnectedActivityInVoice(onTransition) {
                   guild_id = undefined;
                   guild_id = 1;
                   c4 = 1;
-                  return { value: "PX_16", done: null };
+                  return { value: "PX_16", done: true };
                 }
               } else {
                 if (1 === tmp5) {

@@ -1,12 +1,12 @@
-// === Module 17268: useCreateCreatorMonetizationAcceptTermsRequest ===
+// === Module 17504: useCreateCreatorMonetizationAcceptTermsRequest ===
 
-// Module 17268 (useCreateCreatorMonetizationAcceptTermsRequest)
+// Module 17504 (useCreateCreatorMonetizationAcceptTermsRequest)
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
-import { isGuildOwner } from "GuildNSFWContentLevel" /* 1430 */;
-import closure_8 from "createGuildRecordFromRust" /* 1909 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import { isGuildOwner } from "GuildNSFWContentLevel" /* 1429 */;
+import closure_8 from "createGuildRecordFromRust" /* 1908 */;
+import closure_9 from "mergeGuildAvatar" /* 1921 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/useCreatorMonetizationAcceptTerms.tsx");
@@ -14,19 +14,19 @@ const result = require("set").fileFinishedImporting("modules/creator_monetizatio
 export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg1) {
   const _require = arg0;
   closure_1 = arg1;
-  let obj = _require(589);
+  let obj = _require(586);
   const items = [closure_8];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getGuild(closure_0));
   const tmp2 = isExpeditedOnboardingGuild(React.useState(), 2);
   dependencyMap = tmp2[1];
   [tmp4, closure_4] = isExpeditedOnboardingGuild(React.useState(false), 2);
   let tmp3 = isExpeditedOnboardingGuild(React.useState(false), 2);
-  isExpeditedOnboardingGuild = _require(6108).useIsExpeditedOnboardingGuild(stateFromStores);
+  isExpeditedOnboardingGuild = _require(6116).useIsExpeditedOnboardingGuild(stateFromStores);
   obj = { canSubmitAcceptance: null, error: null, loading: null, submitAcceptTermsRequest: null };
-  let obj2 = _require(6108);
+  let obj2 = _require(6116);
   const items1 = [closure_9];
   const items2 = [stateFromStores];
-  obj[0] = _require(589).useStateFromStores(items1, () => {
+  obj[0] = _require(586).useStateFromStores(items1, () => {
     let tmp3 = null != stateFromStores;
     if (tmp3) {
       tmp3 = closure_1_7(tmp2, tmp);
@@ -73,10 +73,10 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
                 v0 = 4;
                 c5 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = closure_1_2(17269).acceptCreatorMonetizationTerms(tmp56, tmp42);
+                obj1[0] = closure_1_2(17505).acceptCreatorMonetizationTerms(tmp56, tmp42);
                 return obj1;
               } else {
-                let obj2 = closure_1_2(17269);
+                let obj2 = closure_1_2(17505);
                 v0 = 3;
                 c5 = 1;
                 obj2 = { value: null, done: false };

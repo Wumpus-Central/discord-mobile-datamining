@@ -1,8 +1,8 @@
-// === Module 11625: initialize ===
+// === Module 11848: initialize ===
 
-// Module 11625 (initialize)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 11848 (initialize)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 let obj = { APPS: "apps", COMMANDS: "commands" };
 let closure_1 = { selection: null };

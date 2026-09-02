@@ -1,11 +1,11 @@
-// === Module 7699: ConfirmEmailChangeStart ===
+// === Module 7708: ConfirmEmailChangeStart ===
 
-// Module 7699 (ConfirmEmailChangeStart)
+// Module 7708 (ConfirmEmailChangeStart)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import closure_9 from "mergeGuildAvatar" /* 1921 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -18,9 +18,9 @@ const result = require("set").fileFinishedImporting("modules/verification/native
 export default function ConfirmEmailChangeStart() {
   const tmp = callback4();
   const _require = tmp;
-  let obj = _require(1499);
+  let obj = _require(1498);
   const navigation = obj.useNavigation();
-  obj1 = _require(589);
+  obj1 = _require(586);
   const items = [closure_9];
   const stateFromStores = obj1.useStateFromStores(items, () => currentUser.getCurrentUser());
   const tmp6 = callback(React.useState(false), 2);
@@ -29,7 +29,7 @@ export default function ConfirmEmailChangeStart() {
   if (null == stateFromStores) {
     return null;
   } else {
-    const intl = tmp2(1236).intl;
+    const intl = tmp2(1233).intl;
     obj = { oldEmail: null };
     obj[0] = stateFromStores.email;
     obj = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
@@ -37,19 +37,19 @@ export default function ConfirmEmailChangeStart() {
     obj1[0] = tmp.container;
     let obj2 = { style: null, source: null };
     obj2[0] = tmp.image;
-    obj2[1] = navigation(7701);
+    obj2[1] = navigation(7710);
     const items1 = [callback2(closure_7, obj2), , , ];
     const obj3 = { style: null, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     obj3[0] = tmp.title;
-    const intl2 = tmp2(1236).intl;
-    obj3[4] = intl2.string(tmp2(1236).t.dQ71Wa);
+    const intl2 = tmp2(1233).intl;
+    obj3[4] = intl2.string(tmp2(1233).t.dQ71Wa);
     items1[1] = callback2(tmp2(4474).Text, obj3);
-    items1[2] = intl.format(tmp2(1236).t.oMFSgi, obj).map((children) => closure_1_10(lib(table[15]).Text, { style: lib.body, variant: "text-sm/medium", color: "text-default", children }, arg1));
+    items1[2] = intl.format(tmp2(1233).t.oMFSgi, obj).map((children) => closure_1_10(lib(table[15]).Text, { style: lib.body, variant: "text-sm/medium", color: "text-default", children }, arg1));
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.button;
     const obj5 = { text: null, onPress: null, loading: null, grow: true };
-    const intl3 = tmp2(1236).intl;
-    obj5[0] = intl3.string(tmp2(1236).t.rXV81H);
+    const intl3 = tmp2(1233).intl;
+    obj5[0] = intl3.string(tmp2(1233).t.rXV81H);
     obj5[1] = tmp7;
     obj5[2] = tmp6[0];
     obj4[1] = callback2(tmp2(4928).Button, obj5);

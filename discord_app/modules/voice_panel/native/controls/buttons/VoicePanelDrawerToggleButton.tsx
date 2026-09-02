@@ -1,12 +1,12 @@
-// === Module 16783: VoicePanelDrawerToggleButton ===
+// === Module 17019: VoicePanelDrawerToggleButton ===
 
-// Module 16783 (VoicePanelDrawerToggleButton)
+// Module 17019 (VoicePanelDrawerToggleButton)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import setDefault from "set" /* 6006 */;
-import useDrawerToggleDefault from "useDrawerToggle" /* 16751 */;
-import useVoicePanelButtonStyles from "useVoicePanelButtonStyles" /* 16764 */;
-import AnimatedButtonWrapperDefault from "AnimatedButtonWrapper" /* 16765 */;
+import ThemesDefault from "Themes" /* 709 */;
+import setDefault from "set" /* 6014 */;
+import useDrawerToggleDefault from "useDrawerToggle" /* 16986 */;
+import useVoicePanelButtonStyles from "useVoicePanelButtonStyles" /* 17000 */;
+import AnimatedButtonWrapperDefault from "AnimatedButtonWrapper" /* 17001 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -34,9 +34,9 @@ export default function VoicePanelDrawerToggleButton(arg0) {
   obj = { style: tmp.iconContainer, children: null };
   const tmp7 = AnimatedButtonWrapperDefault;
   if (isDrawerOpen) {
-    let ChevronSmallUpIcon = tmp2(8935).ChevronSmallDownIcon;
+    let ChevronSmallUpIcon = tmp2(8949).ChevronSmallDownIcon;
   } else {
-    ChevronSmallUpIcon = tmp2(13230).ChevronSmallUpIcon;
+    ChevronSmallUpIcon = tmp2(13452).ChevronSmallUpIcon;
   }
   obj[1] = callback(ChevronSmallUpIcon, { color: voicePanelButtonStyles.iconFill.color });
   items1[1] = callback(setDefault, obj);

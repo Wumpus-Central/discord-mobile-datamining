@@ -1,10 +1,10 @@
-// === Module 9242: getVisibleUserVoiceActivity ===
+// === Module 9256: getVisibleUserVoiceActivity ===
 
-// Module 9242 (getVisibleUserVoiceActivity)
-import importDefaultResult from "ensureGuildLoaded" /* 1387 */;
-import importDefaultResult1 from "getUncachedChannelPermissions" /* 4121 */;
+// Module 9256 (getVisibleUserVoiceActivity)
+import importDefaultResult from "ensureGuildLoaded" /* 1386 */;
+import importDefaultResult1 from "getUncachedChannelPermissions" /* 4120 */;
 import importDefaultResult2 from "updateVoiceState" /* 4497 */;
-import { Permissions } from "sum" /* 505 */;
+import { Permissions } from "sum" /* 502 */;
 
 const require = arg1;
 function getVisibleUserVoiceActivity(arg0, arg1) {
@@ -65,7 +65,7 @@ function getVisibleUserVoiceActivity(arg0, arg1) {
   }
 }
 let closure_6 = { ChannelStore: importDefaultResult, PermissionStore: importDefaultResult1, VoiceStateStore: importDefaultResult2 };
-let closure_7 = Object.freeze({ voiceState: "children", voiceChannel: "c" });
+let closure_7 = Object.freeze({ voiceState: "disabled", voiceChannel: "Date" });
 const result = require("set").fileFinishedImporting("modules/activity_status/useUserVoiceActivity.tsx");
 
 export default function useUserVoiceActivity(userId) {

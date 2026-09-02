@@ -1,27 +1,27 @@
-// === Module 17387: handleRTCConnectionState ===
+// === Module 17623: handleRTCConnectionState ===
 
-// Module 17387 (handleRTCConnectionState)
-import set from "set" /* 500 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import setDefault from "set" /* 4104 */;
+// Module 17623 (handleRTCConnectionState)
+import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import set from "set" /* 1234 */;
+import setDefault from "set" /* 4103 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
 import isClipsEnabled from "isClipsEnabled" /* 4539 */;
 import apexExperiment from "apexExperiment" /* 4540 */;
 import isClientClipsCapableDefault from "isClientClipsCapable" /* 4541 */;
 import isStreamKeyAll from "isStreamKey" /* 4544 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4579 */;
-import apexExperiment2 from "apexExperiment" /* 5077 */;
-import initializeDefault from "initialize" /* 5486 */;
+import apexExperiment2 from "apexExperiment" /* 5085 */;
+import initializeDefault from "initialize" /* 5494 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import { getSystemAnalyticsInfo } from "getSystemAnalyticsInfo" /* 4551 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
+import closure_6 from "fetchFingerprint" /* 1215 */;
 import closure_7 from "_detectH265HardwareDecode" /* 4529 */;
 import closure_8 from "createRTCConnection" /* 4554 */;
 import closure_9 from "initialize" /* 4568 */;
 import closure_10 from "_migrateDefaultStorage" /* 4535 */;
 import result from "result" /* 4536 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 import { StreamTypes } from "StreamIssueReportReasons" /* 4545 */;
 
 require = arg1;
@@ -305,8 +305,8 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
           obj4[0] = classification;
           obj4[1] = closure_1_13;
           obj4[2] = gpuModels;
-          const obj7 = closure_1_1(698);
-          obj4[3] = closure_1_0(5077).getClipsRuntime("classifyHardwareAndTrack");
+          const obj7 = closure_1_1(695);
+          obj4[3] = closure_1_0(5085).getClipsRuntime("classifyHardwareAndTrack");
           obj7.track(closure_1_15.CLIPS_HARDWARE_CLASSIFICATION, obj4);
           dependencyMap = 0;
           c5 = 3;

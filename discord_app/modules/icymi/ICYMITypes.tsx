@@ -1,7 +1,7 @@
-// === Module 8619: MessageEmbedTypes ===
+// === Module 8634: MessageEmbedTypes ===
 
-// Module 8619 (MessageEmbedTypes)
-import ME from "ME" /* 676 */;
+// Module 8634 (MessageEmbedTypes)
+import ME from "ME" /* 673 */;
 import set from "set" /* 2 */;
 
 ({ ChannelTypes: c0, MessageEmbedTypes } = ME);

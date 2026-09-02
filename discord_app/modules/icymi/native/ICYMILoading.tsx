@@ -1,14 +1,14 @@
-// === Module 16101: ICYMILoadingItem ===
+// === Module 16332: ICYMILoadingItem ===
 
-// Module 16101 (ICYMILoadingItem)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 16332 (ICYMILoadingItem)
+import ThemesDefault from "Themes" /* 709 */;
 import _modDef4217 from "module_4217" /* 4217 */;
-import useChatPlaceholderAnimatedStylesDefault from "useChatPlaceholderAnimatedStyles" /* 12177 */;
-import Separator from "Separator" /* 16079 */;
+import useChatPlaceholderAnimatedStylesDefault from "useChatPlaceholderAnimatedStyles" /* 12401 */;
+import Separator from "Separator" /* 16310 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createICYMIStyles from "createICYMIStyles" /* 16040 */;
+import createICYMIStyles from "createICYMIStyles" /* 16271 */;
 
 require = arg1;
 function ICYMILoadingItem() {

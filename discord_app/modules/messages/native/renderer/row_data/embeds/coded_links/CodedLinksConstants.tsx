@@ -1,6 +1,6 @@
-// === Module 10946: CodedLinkExtendedType ===
+// === Module 11166: CodedLinkExtendedType ===
 
-// Module 10946 (CodedLinkExtendedType)
+// Module 11166 (CodedLinkExtendedType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/CodedLinksConstants.tsx");

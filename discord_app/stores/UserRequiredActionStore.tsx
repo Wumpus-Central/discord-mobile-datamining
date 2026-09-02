@@ -1,8 +1,8 @@
-// === Module 1381: handleRequiredAction ===
+// === Module 1380: handleRequiredAction ===
 
-// Module 1381 (handleRequiredAction)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 1380 (handleRequiredAction)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 function handleRequiredAction(requiredAction) {
   requiredAction = requiredAction.requiredAction;

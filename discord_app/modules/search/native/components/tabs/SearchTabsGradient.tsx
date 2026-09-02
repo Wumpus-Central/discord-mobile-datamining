@@ -1,8 +1,8 @@
-// === Module 16300: SearchTabsGradient ===
+// === Module 16532: SearchTabsGradient ===
 
-// Module 16300 (SearchTabsGradient)
-import ThemesDefault from "Themes" /* 712 */;
-import TabsGradientDefault from "TabsGradient" /* 12297 */;
+// Module 16532 (SearchTabsGradient)
+import ThemesDefault from "Themes" /* 709 */;
+import TabsGradientDefault from "TabsGradient" /* 12521 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 

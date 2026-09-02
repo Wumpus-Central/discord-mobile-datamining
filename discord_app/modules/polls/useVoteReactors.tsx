@@ -1,8 +1,8 @@
-// === Module 11300: useVoteReactors ===
+// === Module 11523: useVoteReactors ===
 
-// Module 11300 (useVoteReactors)
-import closure_3 from "reactionKey" /* 7506 */;
-import { DEFAULT_NUM_REACTION_USERS as closure_4 } from "ME" /* 676 */;
+// Module 11523 (useVoteReactors)
+import closure_3 from "reactionKey" /* 7516 */;
+import { DEFAULT_NUM_REACTION_USERS as closure_4 } from "ME" /* 673 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/polls/useVoteReactors.tsx");

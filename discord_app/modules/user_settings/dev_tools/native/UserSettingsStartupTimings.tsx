@@ -1,13 +1,13 @@
-// === Module 15166: Code ===
+// === Module 15395: Code ===
 
-// Module 15166 (Code)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 15395 (Code)
+import ThemesDefault from "Themes" /* 709 */;
 import Text from "Text" /* 4474 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "refreshSourceMapCookie" /* 706 */;
+import closure_7 from "refreshSourceMapCookie" /* 703 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 import importDefaultResult from "enforcing" /* 4339 */;
@@ -42,8 +42,8 @@ export default function UserSettingsStartupTimings() {
   const useResult = React.use(num);
   React = useResult;
   let items = [useResult, first, first1];
-  const memo = React.useMemo(() => first(10276)(closure_5, !first, first1).split("\n"), items);
-  obj1 = _require(589);
+  const memo = React.useMemo(() => first(10298)(closure_5, !first, first1).split("\n"), items);
+  obj1 = _require(586);
   let items1 = [closure_7];
   closure_6 = obj1.useStateFromStores(items1, () => alertStartupMetrics.alertStartupMetrics);
   closure_7 = first(9).loadIndex.start - useResult;
@@ -52,7 +52,7 @@ export default function UserSettingsStartupTimings() {
   closure_9 = first(9).loadLazyCache.end - first(9).loadLazyCache.start;
   closure_10 = first(9).ready.end - first(9).ready.start;
   callback3 = Math.ceil(first(9).renderLatestMessages.importTime);
-  const lastTrackedAppUiViewed2Properties = _require(7220).getLastTrackedAppUiViewed2Properties();
+  const lastTrackedAppUiViewed2Properties = _require(7229).getLastTrackedAppUiViewed2Properties();
   num = undefined;
   if (lastTrackedAppUiViewed2Properties != null) {
     num = lastTrackedAppUiViewed2Properties.time_first_contentful_paint;
@@ -108,8 +108,8 @@ export default function UserSettingsStartupTimings() {
           return obj2;
         } else {
           closure_0 = arg1;
-          closure_1 = closure_1_1(10276)(closure_0);
-          obj = closure_1_0(8632);
+          closure_1 = closure_1_1(10298)(closure_0);
+          obj = closure_1_0(8647);
           obj3 = { message: null };
           obj3[0] = closure_1;
           obj.showShareActionSheet(obj3, "Startup Timing");
@@ -124,11 +124,11 @@ export default function UserSettingsStartupTimings() {
   }), []);
   obj = { style: tmp.wrap, children: null };
   obj = { contentContainerStyle: null, ListHeaderComponent: null, data: null, renderItem: null };
-  obj1 = { paddingBottom: first(1628)().bottom + first(712).space.PX_16 };
+  obj1 = { paddingBottom: first(1627)().bottom + first(709).space.PX_16 };
   obj[0] = obj1;
   obj[1] = function ListHeaderComponent() {
     let obj = { spacing: 16, style: { padding: 16 }, children: null };
-    obj = { title: "Performance testing", hasIcons: false, children: callback(lib(7683).TableCheckboxRow, obj) };
+    obj = { title: "Performance testing", hasIcons: false, children: callback(lib(7692).TableCheckboxRow, obj) };
     obj = {
       label: "Show start times at launch",
       onPress() {
@@ -138,7 +138,7 @@ export default function UserSettingsStartupTimings() {
       },
       checked: closure_6
     };
-    const items = [callback(lib(5992).TableRowGroup, obj), , , , ];
+    const items = [callback(lib(6000).TableRowGroup, obj), , , , ];
     obj1 = { children: null };
     const result = closure_7 / 1000;
     const items1 = ["Native: ", callback(lastTrackedAppUiViewed2Properties, { color: "text-brand", children: "" + result + "s (" + Math.round(closure_7 / num * 100) + "%)" })];
@@ -215,26 +215,26 @@ export default function UserSettingsStartupTimings() {
     items2[7] = callback2(lastTrackedAppUiViewed2Properties, obj17);
     obj16[0] = items2;
     obj15[0] = callback2(closure_10, obj16);
-    obj14[2] = callback(lib(5599).TableRow, obj15);
-    items[1] = callback(lib(5992).TableRowGroup, obj14);
+    obj14[2] = callback(lib(5607).TableRow, obj15);
+    items[1] = callback(lib(6000).TableRowGroup, obj14);
     const obj18 = { title: "Legend", hasIcons: false, children: null };
     const obj19 = { label: null };
     const obj20 = { children: null };
     const items10 = [callback2(lastTrackedAppUiViewed2Properties, { children: ["\u2615", " - Java / Kotlin"] }), callback2(lastTrackedAppUiViewed2Properties, { children: ["\u{1F3A8}", " - React render"] }), callback2(lastTrackedAppUiViewed2Properties, { children: ["\u{1F4BE}", " - CacheStore"] }), callback2(lastTrackedAppUiViewed2Properties, { children: ["\u{1F9A5}", " - Slow Store Update / Handler"] }), callback2(lastTrackedAppUiViewed2Properties, { children: ["\u{1F3C3}", " - Startup Event"] }), callback2(lastTrackedAppUiViewed2Properties, { children: ["\u{1F310}", " - Socket Event"] })];
     obj20[0] = items10;
     obj19[0] = callback2(closure_10, obj20);
-    obj18[2] = callback(lib(5599).TableRow, obj19);
-    items[2] = callback(lib(5992).TableRowGroup, obj18);
+    obj18[2] = callback(lib(5607).TableRow, obj19);
+    items[2] = callback(lib(6000).TableRowGroup, obj18);
     const obj21 = { title: "Detailed Times", hasIcons: false, children: null };
     const items11 = [
-      callback(lib(7683).TableCheckboxRow, {
+      callback(lib(7692).TableCheckboxRow, {
         label: "Hide the Noise",
         onPress() {
           return callback((arg0) => !arg0);
         },
         checked: first
       }),
-      callback(lib(7683).TableCheckboxRow, {
+      callback(lib(7692).TableCheckboxRow, {
         label: "Hide paints",
         onPress() {
           return callback2((arg0) => !arg0);
@@ -243,7 +243,7 @@ export default function UserSettingsStartupTimings() {
       })
     ];
     obj21[2] = items11;
-    items[3] = callback2(lib(5992).TableRowGroup, obj21);
+    items[3] = callback2(lib(6000).TableRowGroup, obj21);
     const obj24 = { title: "Share Timings", hasIcons: true, children: null };
     const obj10 = { color: "text-brand", children: "" + result4 + "s (" + Math.round(closure_10 / num * 100) + "%)" };
     const obj22 = {
@@ -260,8 +260,8 @@ export default function UserSettingsStartupTimings() {
       },
       checked: !first1
     };
-    obj24[2] = callback(lib(5599).TableRow, { icon: callback(lib(12779).ShareIcon, {}), label: "Copy timings to clipboard.", arrow: true, onPress: closure_14 });
-    items[4] = callback(lib(5992).TableRowGroup, obj24);
+    obj24[2] = callback(lib(5607).TableRow, { icon: callback(lib(13000).ShareIcon, {}), label: "Copy timings to clipboard.", arrow: true, onPress: closure_14 });
+    items[4] = callback(lib(6000).TableRowGroup, obj24);
     obj[2] = items;
     const items12 = [callback2(lib(4926).Stack, obj), callback(closure_6, { style: lib.border })];
     obj13[0] = items12;
@@ -271,6 +271,6 @@ export default function UserSettingsStartupTimings() {
   obj[3] = function renderItem(children) {
     return callback(lastTrackedAppUiViewed2Properties, { children: children.item });
   };
-  obj[1] = callback2(_require(8105).FlashList, obj);
+  obj[1] = callback2(_require(8113).FlashList, obj);
   return callback2(closure_6, obj);
 };

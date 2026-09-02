@@ -1,8 +1,8 @@
-// === Module 11337: QuestRewardTile ===
+// === Module 11560: QuestRewardTile ===
 
-// Module 11337 (QuestRewardTile)
+// Module 11560 (QuestRewardTile)
 import noopDefault from "noop" /* 19 */;
-import _modDef11338 from "module_11338" /* 11338 */;
+import _modDef11561 from "module_11561" /* 11561 */;
 import { useMemo } from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -32,5 +32,5 @@ export default function QuestRewardTile(quest) {
   }
   obj[2] = tmp8;
   const merged1 = Object.assign(merged);
-  return jsx(_modDef11338, { assetUrl: tmp2Result.url, isAnimatedAsset: tmp2Result.isAnimated, accessibilityLabel: null });
+  return jsx(_modDef11561, { assetUrl: tmp2Result.url, isAnimatedAsset: tmp2Result.isAnimated, accessibilityLabel: null });
 };

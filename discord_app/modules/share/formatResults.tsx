@@ -1,15 +1,15 @@
-// === Module 10718: getChannelIdFromDestinationId ===
+// === Module 10939: getChannelIdFromDestinationId ===
 
-// Module 10718 (getChannelIdFromDestinationId)
-import sortByMatchScore from "sortByMatchScore" /* 9924 */;
-import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 9935 */;
+// Module 10939 (getChannelIdFromDestinationId)
+import sortByMatchScore from "sortByMatchScore" /* 9946 */;
+import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 9957 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleConnectionOpen" /* 9923 */;
-import closure_5 from "ensureGuildLoaded" /* 1387 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4121 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { isAllowedType } from "ALLOWED_TYPES" /* 10719 */;
-import ME from "ME" /* 676 */;
+import closure_4 from "handleConnectionOpen" /* 9945 */;
+import closure_5 from "ensureGuildLoaded" /* 1386 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4120 */;
+import closure_7 from "mergeGuildAvatar" /* 1921 */;
+import { isAllowedType } from "ALLOWED_TYPES" /* 10940 */;
+import ME from "ME" /* 673 */;
 
 require = arg1;
 function getChannelIdFromDestinationId(type) {
@@ -219,25 +219,25 @@ export default function formatResults(hasQuery) {
             let tmp6 = null;
             if (null != user) {
               const obj = { type: null, record: null, score: 0 };
-              obj[0] = includeMissingDMs(9924).AutocompleterResultTypes.USER;
+              obj[0] = includeMissingDMs(9946).AutocompleterResultTypes.USER;
               obj[1] = user;
               tmp6 = obj;
             }
             let tmp3 = tmp6;
           } else {
-            tmp3 = callback(9935)(type.id);
+            tmp3 = callback(9957)(type.id);
           }
           return tmp3;
         });
       }
       channelHistory = channelHistory.getChannelHistory();
       if (channelHistory.length > 0) {
-        let mapped1 = channelHistory.map((arg0) => callback(9935)(arg0));
+        let mapped1 = channelHistory.map((arg0) => callback(9957)(arg0));
       } else {
         mapped1 = [];
       }
       if (frequentChannels.length > 0) {
-        let mapped2 = frequentChannels.map((id) => callback(9935)(id.id));
+        let mapped2 = frequentChannels.map((id) => callback(9957)(id.id));
       } else {
         mapped2 = [];
       }
@@ -288,7 +288,7 @@ export default function formatResults(hasQuery) {
         targetDestination = null;
         if (null != user) {
           let obj = { type: null, record: null, score: 0 };
-          obj[0] = includeMissingDMs(9924).AutocompleterResultTypes.USER;
+          obj[0] = includeMissingDMs(9946).AutocompleterResultTypes.USER;
           obj[1] = user;
           targetDestination = obj;
         }
@@ -349,23 +349,23 @@ export const formatResultsWithHeaders = function formatResultsWithHeaders(hasNon
   } else {
     items1 = [];
   }
-  const intl = queryMode(1236).intl;
-  const headerResult = queryMode(9924).createHeaderResult(intl.string(queryMode(1236).t.qm9dSj));
+  const intl = queryMode(1233).intl;
+  const headerResult = queryMode(9946).createHeaderResult(intl.string(queryMode(1233).t.qm9dSj));
   if (hasNonEmptyQuery.hasNonEmptyQuery) {
     const items2 = [headerResult];
     HermesBuiltin.arraySpread(mergeAndDedupeResultsWithHeaders(results.filter(isAllowedType), items1), 1);
     return items2;
   } else {
     const mapped = frequentChannels.map((id) => callback(table[9])(id.id));
-    const found = mapped.filter(tmp(1471).isNotNullish);
+    const found = mapped.filter(tmp(1470).isNotNullish);
     const found1 = found.filter(isAllowedType);
     if (null != queryMode) {
       const items3 = [headerResult];
       HermesBuiltin.arraySpread(found1.filter((type) => type.type === queryMode), 1);
       let items4 = items3;
     } else {
-      const intl2 = tmp(1236).intl;
-      items4 = [tmp(9924).createHeaderResult(intl2.string(tmp(1236).t["80lOZ1"])), , ];
+      const intl2 = tmp(1233).intl;
+      items4 = [tmp(9946).createHeaderResult(intl2.string(tmp(1233).t["80lOZ1"])), , ];
       let tmp13 = null;
       if (null != selectedChannelId) {
         const tmp7 = createAutocompleterResultForChannelIdDefault(selectedChannelId);
@@ -373,7 +373,7 @@ export const formatResultsWithHeaders = function formatResultsWithHeaders(hasNon
         if (null != tmp7) {
           let tmp9 = null;
           if (isAllowedType(tmp7)) {
-            let canResult = tmp7.type === tmp(9924).AutocompleterResultTypes.USER;
+            let canResult = tmp7.type === tmp(9946).AutocompleterResultTypes.USER;
             if (!canResult) {
               canResult = closure_6.can(constants.VIEW_CHANNEL, tmp7.record);
             }
@@ -389,9 +389,9 @@ export const formatResultsWithHeaders = function formatResultsWithHeaders(hasNon
       items4[1] = tmp13;
       items4[2] = headerResult;
       HermesBuiltin.arraySpread(found1, 3);
-      const tmpResult = tmp(9924);
+      const tmpResult = tmp(9946);
     }
     return mergeAndDedupeResultsWithHeaders(items4, items1);
   }
-  const obj = queryMode(9924);
+  const obj = queryMode(9946);
 };

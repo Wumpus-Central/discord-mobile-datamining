@@ -1,10 +1,10 @@
-// === Module 6131: reset ===
+// === Module 6139: reset ===
 
-// Module 6131 (reset)
+// Module 6139 (reset)
 import timestampDefault from "timestamp" /* 3 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
-import setDefault from "set" /* 687 */;
+import setDefault from "set" /* 684 */;
 
 const require = arg1;
 const MINUTE = setDefault.Millis.MINUTE;

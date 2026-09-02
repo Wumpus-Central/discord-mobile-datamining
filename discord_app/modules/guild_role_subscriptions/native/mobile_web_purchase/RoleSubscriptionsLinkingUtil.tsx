@@ -1,9 +1,9 @@
-// === Module 6160: performRoleSubscriptionUpsellRedirect ===
+// === Module 6168: performRoleSubscriptionUpsellRedirect ===
 
-// Module 6160 (performRoleSubscriptionUpsellRedirect)
+// Module 6168 (performRoleSubscriptionUpsellRedirect)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import ME from "ME" /* 676 */;
-import { StaticChannelRoute } from "set" /* 1394 */;
+import ME from "ME" /* 673 */;
+import { StaticChannelRoute } from "set" /* 1393 */;
 
 const require = arg1;
 function performRoleSubscriptionUpsellRedirect(guildId) {

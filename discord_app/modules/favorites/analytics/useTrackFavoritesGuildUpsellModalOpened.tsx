@@ -1,10 +1,10 @@
-// === Module 10312: useTrackFavoritesGuildUpsellModalOpened ===
+// === Module 10334: useTrackFavoritesGuildUpsellModalOpened ===
 
-// Module 10312 (useTrackFavoritesGuildUpsellModalOpened)
-import contextDefault from "context" /* 5953 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5973 */;
+// Module 10334 (useTrackFavoritesGuildUpsellModalOpened)
+import contextDefault from "context" /* 5961 */;
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5981 */;
 import closure_2 from "noop" /* 19 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import { AnalyticEvents } from "ME" /* 673 */;
 
 const result = require("set").fileFinishedImporting("modules/favorites/analytics/useTrackFavoritesGuildUpsellModalOpened.tsx");
 

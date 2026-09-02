@@ -1,12 +1,12 @@
-// === Module 11473: AppealIngestionPolicySummary ===
+// === Module 11696: AppealIngestionPolicySummary ===
 
-// Module 11473 (AppealIngestionPolicySummary)
+// Module 11696 (AppealIngestionPolicySummary)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import hexToRgba from "hexToRgba" /* 4326 */;
 import Text from "Text" /* 4474 */;
-import parseMessageEmbedForProps from "parseMessageEmbedForProps" /* 8689 */;
+import parseMessageEmbedForProps from "parseMessageEmbedForProps" /* 8704 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -34,7 +34,7 @@ export default function AppealIngestionPolicySummary(classification) {
   obj = { style: tmp.policy, children: null };
   const tmp2Result = hexToRgba;
   obj = { style: tmp.sectionTitle, variant: "text-sm/bold", children: null };
-  const intl = tmp2(1236).intl;
+  const intl = tmp2(1233).intl;
   obj[2] = intl.string(getSystemLocale.t.xsdcxh);
   const items = [callback(Text.Text, obj), ];
   const hexWithOpacityResult = hexToRgba.hexWithOpacity(tmp.borderColor.color, 0.08);

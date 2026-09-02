@@ -1,10 +1,10 @@
-// === Module 14239: route ===
+// === Module 14462: route ===
 
-// Module 14239 (route)
+// Module 14462 (route)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import createToggle from "createToggle" /* 11068 */;
+import ME from "ME" /* 673 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import createToggle from "createToggle" /* 11288 */;
 
 obj = {
   useTitle() {
@@ -18,7 +18,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.PROFILE_CUSTOMIZATION,
   getComponent() {
-    return require(14240) /* ProfileCustomizationSubsection */.default;
+    return require(14463) /* ProfileCustomizationSubsection */.default;
   }
 };
 const route = createToggle.createRoute(obj);

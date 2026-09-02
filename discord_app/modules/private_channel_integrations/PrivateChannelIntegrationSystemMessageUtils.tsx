@@ -1,10 +1,10 @@
-// === Module 7905: getPrivateChannelIntegrationAddedSystemMessageContent ===
+// === Module 7914: getPrivateChannelIntegrationAddedSystemMessageContent ===
 
-// Module 7905 (getPrivateChannelIntegrationAddedSystemMessageContent)
+// Module 7914 (getPrivateChannelIntegrationAddedSystemMessageContent)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import combinedDefault from "combined" /* 1995 */;
-import ME from "ME" /* 676 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import combinedDefault from "combined" /* 1994 */;
+import ME from "ME" /* 673 */;
 
 ({ HelpdeskArticles: c3, NOOP: c4 } = ME);
 const result = set.fileFinishedImporting("modules/private_channel_integrations/PrivateChannelIntegrationSystemMessageUtils.tsx");

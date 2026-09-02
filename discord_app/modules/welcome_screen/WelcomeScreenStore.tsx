@@ -1,8 +1,8 @@
-// === Module 12192: handleInviteData ===
+// === Module 12416: handleInviteData ===
 
-// Module 12192 (handleInviteData)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 12416 (handleInviteData)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 function handleInviteData(invite) {
   const guild = invite.invite.guild;

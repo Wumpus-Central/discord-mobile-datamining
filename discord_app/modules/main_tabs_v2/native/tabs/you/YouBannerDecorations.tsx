@@ -1,17 +1,17 @@
-// === Module 16373: useHasSettingsBadge ===
+// === Module 16605: useHasSettingsBadge ===
 
-// Module 16373 (useHasSettingsBadge)
-import PlatformTypes from "PlatformTypes" /* 501 */;
-import ThemesDefault from "Themes" /* 712 */;
-import DismissibleContent from "DismissibleContent" /* 1373 */;
+// Module 16605 (useHasSettingsBadge)
+import ThemesDefault from "Themes" /* 709 */;
+import PlatformTypes from "PlatformTypes" /* 1235 */;
+import DismissibleContent from "DismissibleContent" /* 1372 */;
 import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4298 */;
-import hasUserTrialOfferExpired from "hasUserTrialOfferExpired" /* 7194 */;
-import useEligibleActiveOutboundPromotions from "useEligibleActiveOutboundPromotions" /* 13125 */;
+import hasUserTrialOfferExpired from "hasUserTrialOfferExpired" /* 7203 */;
+import useEligibleActiveOutboundPromotions from "useEligibleActiveOutboundPromotions" /* 13347 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1384 */;
-import { PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID as closure_9 } from "GuildFeatures" /* 1924 */;
+import closure_7 from "mergeGuildAvatar" /* 1921 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
+import { PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID as closure_9 } from "GuildFeatures" /* 1923 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -40,16 +40,16 @@ let closure_13 = createCacheKey.createStyles((arg0, arg1, color) => {
     tmp7 = tmp5;
   }
   let BACKGROUND_SURFACE_HIGH = arg1;
-  obj1 = { marginBottom: PX_24, paddingVertical: tmp7(712).space.PX_8, paddingHorizontal: tmp7(712).space.PX_24, borderRadius: tmp7(712).radii.lg, backgroundColor: null, flexDirection: "row", borderColor: null, borderWidth: 1 };
+  obj1 = { marginBottom: PX_24, paddingVertical: tmp7(709).space.PX_8, paddingHorizontal: tmp7(709).space.PX_24, borderRadius: tmp7(709).radii.lg, backgroundColor: null, flexDirection: "row", borderColor: null, borderWidth: 1 };
   if (arg1 == null) {
-    BACKGROUND_SURFACE_HIGH = tmp7(712).colors.BACKGROUND_SURFACE_HIGH;
+    BACKGROUND_SURFACE_HIGH = tmp7(709).colors.BACKGROUND_SURFACE_HIGH;
   }
   obj1[4] = BACKGROUND_SURFACE_HIGH;
   obj1[6] = arg3;
-  const merged2 = Object.assign(tmp7(712).shadows.SHADOW_HIGH);
+  const merged2 = Object.assign(tmp7(709).shadows.SHADOW_HIGH);
   obj[2] = obj1;
   isIOSResult = PlatformTypes.isIOS();
-  obj[3] = { flexDirection: "row", alignItems: "center", gap: tmp7(712).space.PX_16 };
+  obj[3] = { flexDirection: "row", alignItems: "center", gap: tmp7(709).space.PX_16 };
   obj[4] = { height: "100%", alignItems: "center", justifyContent: "center" };
   return obj;
 });

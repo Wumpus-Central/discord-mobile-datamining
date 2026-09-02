@@ -1,18 +1,18 @@
-// === Module 10716: useFavoritesGuildChannelFilter ===
+// === Module 10937: useFavoritesGuildChannelFilter ===
 
-// Module 10716 (useFavoritesGuildChannelFilter)
+// Module 10937 (useFavoritesGuildChannelFilter)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "ensureGuildLoaded" /* 1387 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4121 */;
-import closure_5 from "initializeFromUserSettings" /* 1390 */;
-import { Permissions } from "ME" /* 676 */;
+import closure_3 from "ensureGuildLoaded" /* 1386 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4120 */;
+import closure_5 from "initializeFromUserSettings" /* 1389 */;
+import { Permissions } from "ME" /* 673 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildChannelFilter.tsx");
 
 export default function useFavoritesGuildChannelFilter() {
   const items = [closure_5];
-  stateFromStores = stateFromStores(589).useStateFromStores(items, () => favoriteChannels.getFavoriteChannels());
+  stateFromStores = stateFromStores(586).useStateFromStores(items, () => favoriteChannels.getFavoriteChannels());
   const items1 = [stateFromStores];
   return React.useCallback((type) => {
     type = type.type;

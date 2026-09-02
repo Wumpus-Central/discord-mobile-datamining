@@ -1,10 +1,10 @@
-// === Module 10218: FileIcon ===
+// === Module 10240: FileIcon ===
 
-// Module 10218 (FileIcon)
+// Module 10240 (FileIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 10219 */;
+import registerAsset from "registerAsset" /* 10241 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

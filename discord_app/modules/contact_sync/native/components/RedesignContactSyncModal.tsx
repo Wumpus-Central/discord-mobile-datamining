@@ -1,20 +1,20 @@
-// === Module 12223: headerTitle ===
+// === Module 12447: headerTitle ===
 
-// Module 12223 (headerTitle)
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 12447 (headerTitle)
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Text from "Text" /* 4474 */;
-import _uploadContacts from "_uploadContacts" /* 12218 */;
-import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 12224 */;
+import _uploadContacts from "_uploadContacts" /* 12442 */;
+import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 12448 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import closure_8 from "getState" /* 7157 */;
-import ContactSyncModes from "ContactSyncModes" /* 12215 */;
-import ContactSyncLandingPage from "ContactSyncLandingPage" /* 12216 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import closure_7 from "mergeGuildAvatar" /* 1921 */;
+import closure_8 from "getState" /* 7166 */;
+import ContactSyncModes from "ContactSyncModes" /* 12439 */;
+import ContactSyncLandingPage from "ContactSyncLandingPage" /* 12440 */;
+import { AnalyticEvents } from "ME" /* 673 */;
 import { NativePermissionTypes } from "NativePermissionStatus" /* 4730 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -111,7 +111,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
               closure_1 = tmp2;
               closure_0 = tmp2;
               if (!closure_1_7) {
-                let obj2 = closure_1_1(12222);
+                let obj2 = closure_1_1(12446);
                 let tmp12 = closure_1_6;
                 if (tmp12) {
                   let email;
@@ -161,7 +161,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
           dependencyMap = 1;
           c3 = 1;
           const obj4 = { value: null, done: false };
-          obj4[0] = closure_1_0(12214).startContactSync(c3);
+          obj4[0] = closure_1_0(12438).startContactSync(c3);
           return obj4;
         } catch (tmp22) {
           c3 = tmp;
@@ -224,7 +224,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
             return obj;
           } else {
             closure_0 = tmp4;
-            let obj3 = v0(5083);
+            let obj3 = v0(5091);
             v0 = 1;
             dependencyMap = 1;
             obj1 = { value: null, done: false };
@@ -243,7 +243,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
           if (arg1) {
             callback();
           } else {
-            obj = closure_1_0(12214);
+            obj = closure_1_0(12438);
             obj3 = { onComplete: null, skip: true };
             obj3[0] = dependencyMap;
             const result = obj.closeContactSyncModal(obj3);
@@ -306,7 +306,7 @@ function ContactSyncNameInputScreen(navigateToLandingPage) {
   let first;
   dependencyMap = undefined;
   let callback;
-  let obj = _require(1499);
+  let obj = _require(1498);
   const navigation = obj.useNavigation();
   _require = navigation;
   const tmp3 = callback(React.useState(false), 2);
@@ -315,7 +315,7 @@ function ContactSyncNameInputScreen(navigateToLandingPage) {
   const tmp5 = callback2();
   const name = tmp5.name;
   ({ isNameFromContactBook, error } = tmp5);
-  first(12233)(navigation, navigateToLandingPage.navigateToLandingPage);
+  first(12457)(navigation, navigateToLandingPage.navigateToLandingPage);
   _require = undefined;
   _require = callback((arg0) => {
     closure_0 = arg0;
@@ -351,7 +351,7 @@ function ContactSyncNameInputScreen(navigateToLandingPage) {
               closure_1 = tmp2;
               dependencyMap(true);
               closure_2_9(callback);
-              obj1 = callback(12214);
+              obj1 = callback(12438);
               dependencyMap = 1;
               c3 = 1;
               obj1 = { value: null, done: false };
@@ -421,7 +421,7 @@ function ContactSyncNameInputScreen(navigateToLandingPage) {
     tmp12 = isNameFromContactBook;
   }
   obj[4] = tmp12;
-  obj[1] = closure_16(first(12235), obj);
+  obj[1] = closure_16(first(12459), obj);
   return closure_16(tmp10, obj);
 }
 function ContactSyncSuggestionScreen(onComplete) {
@@ -564,7 +564,7 @@ class ContactSyncModal {
         return closure_1_16(closure_1_1(closure_1_2[41]), obj);
       };
       obj6[5] = function render() {
-        return callback2(callback(12241).AddPhoneScreen, {});
+        return callback2(callback(12465).AddPhoneScreen, {});
       };
       obj1[closure_1_13.ADD_PHONE] = obj6;
       const obj8 = { impressionName: onComplete(first[39]).ImpressionNames.USER_VERIFY_PHONE, impressionProperties: null, fullscreen: true, headerTitle: null, headerLeft: null, render: null };
@@ -578,7 +578,7 @@ class ContactSyncModal {
         return closure_1_16(closure_1_1(closure_1_2[41]), obj);
       };
       obj8[5] = function render() {
-        return callback2(callback(12241).VerifyPhoneScreen, {});
+        return callback2(callback(12465).VerifyPhoneScreen, {});
       };
       obj1[closure_1_13.VERIFY_PHONE] = obj8;
       const obj10 = { impressionName: onComplete(first[39]).ImpressionNames.USER_VERIFY_PASSWORD, impressionProperties: null, fullscreen: true, headerLeft: null, headerTitle: null, render: null };
@@ -592,7 +592,7 @@ class ContactSyncModal {
       };
       obj10[4] = closure_1_20;
       obj10[5] = function render() {
-        return callback2(callback(12241).VerifyPasswordScreen, {});
+        return callback2(callback(12465).VerifyPasswordScreen, {});
       };
       obj1[closure_1_13.VERIFY_PASSWORD] = obj10;
       return obj1;

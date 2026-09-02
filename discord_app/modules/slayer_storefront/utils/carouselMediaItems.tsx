@@ -1,6 +1,6 @@
-// === Module 10575: WEB_HERO_WIDTH_PX ===
+// === Module 10796: WEB_HERO_WIDTH_PX ===
 
-// Module 10575 (WEB_HERO_WIDTH_PX)
+// Module 10796 (WEB_HERO_WIDTH_PX)
 import set from "set" /* 2 */;
 import _httpGetWithCountryCodeQuery from "_httpGetWithCountryCodeQuery" /* 4755 */;
 
@@ -80,7 +80,7 @@ export const convertCarouselItemsToMediaItems = function convertCarouselItemsToM
               let tmp45 = tmp26Result;
               let tmp46 = applicationId;
               let tmp47 = heroWidth;
-              assetURL1 = tmp26Result.getAssetURL(applicationId, tmp4.backgroundAssetId, heroWidth, tmp26(6073).LARGE_ASSET_FORMAT);
+              assetURL1 = tmp26Result.getAssetURL(applicationId, tmp4.backgroundAssetId, heroWidth, tmp26(6081).LARGE_ASSET_FORMAT);
             }
             obj[4] = assetURL1;
             arr = push(obj);
@@ -115,7 +115,7 @@ export const convertCarouselItemsToMediaItems = function convertCarouselItemsToM
               let tmp22 = tmp8Result;
               let tmp23 = applicationId;
               let tmp24 = heroWidth;
-              assetURL3 = tmp8Result.getAssetURL(applicationId, tmp4.backgroundAssetId, heroWidth, tmp8(6073).LARGE_ASSET_FORMAT);
+              assetURL3 = tmp8Result.getAssetURL(applicationId, tmp4.backgroundAssetId, heroWidth, tmp8(6081).LARGE_ASSET_FORMAT);
             }
             obj[3] = assetURL3;
             let arr1 = push(obj);

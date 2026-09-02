@@ -1,12 +1,12 @@
-// === Module 7712: ClearButton ===
+// === Module 7721: ClearButton ===
 
-// Module 7712 (ClearButton)
+// Module 7721 (ClearButton)
 import _modDef38 from "module_38" /* 38 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import PressableBase from "PressableBase" /* 5068 */;
-import registerAssetDefault from "registerAsset" /* 7713 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import Button from "Button" /* 1296 */;
+import PressableBase from "PressableBase" /* 5076 */;
+import registerAssetDefault from "registerAsset" /* 7722 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -53,7 +53,7 @@ const forwardRefResult = importAllResult.forwardRef((editable, ref) => {
   }
   let WITH_CONTENT = editable.clearButtonVisibility;
   if (WITH_CONTENT === undefined) {
-    WITH_CONTENT = onChangeText(1297).ClearButtonVisibility.WITH_CONTENT;
+    WITH_CONTENT = onChangeText(1296).ClearButtonVisibility.WITH_CONTENT;
   }
   const merged = Object.assign(editable, Object.create(null));
   ref = undefined;
@@ -61,14 +61,14 @@ const forwardRefResult = importAllResult.forwardRef((editable, ref) => {
   ref = onPress.useRef(null);
   const imperativeHandle = onPress.useImperativeHandle(ref, () => ref.current);
   let flag2 = true;
-  if (onChangeText(1297).ClearButtonVisibility.ALWAYS !== WITH_CONTENT) {
-    if (tmp7(1297).ClearButtonVisibility.WITH_CONTENT === WITH_CONTENT) {
+  if (onChangeText(1296).ClearButtonVisibility.ALWAYS !== WITH_CONTENT) {
+    if (tmp7(1296).ClearButtonVisibility.WITH_CONTENT === WITH_CONTENT) {
       let tmp9 = null != value;
       if (tmp9) {
         tmp9 = "" !== value;
       }
       flag2 = tmp9;
-    } else if (tmp7(1297).ClearButtonVisibility.NEVER === WITH_CONTENT) {
+    } else if (tmp7(1296).ClearButtonVisibility.NEVER === WITH_CONTENT) {
       flag2 = false;
     }
   }
@@ -176,7 +176,7 @@ const forwardRefResult = importAllResult.forwardRef((editable, ref) => {
   }
   obj1.importantForAccessibility = str4;
   obj1.accessibilityElementsHidden = !flag;
-  items1[1] = closure_7(onChangeText(1297).TextInput, obj1);
+  items1[1] = closure_7(onChangeText(1296).TextInput, obj1);
   let result1;
   if (renderTrailingComponent != null) {
     result1 = renderTrailingComponent();

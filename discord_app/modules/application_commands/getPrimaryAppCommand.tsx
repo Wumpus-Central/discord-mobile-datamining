@@ -1,14 +1,14 @@
-// === Module 9476: _getPrimaryAppCommand ===
+// === Module 9489: _getPrimaryAppCommand ===
 
-// Module 9476 (_getPrimaryAppCommand)
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
-import ScoreMethod from "ScoreMethod" /* 8154 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8433 */;
+// Module 9489 (_getPrimaryAppCommand)
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
+import ScoreMethod from "ScoreMethod" /* 8162 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8442 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1387 */;
-import getIndexKey from "getIndexKey" /* 8146 */;
-import closure_7 from "getIndexKey" /* 8146 */;
+import closure_4 from "ensureGuildLoaded" /* 1386 */;
+import getIndexKey from "getIndexKey" /* 8154 */;
+import closure_7 from "getIndexKey" /* 8154 */;
 
 require = arg1;
 function _getPrimaryAppCommand() {

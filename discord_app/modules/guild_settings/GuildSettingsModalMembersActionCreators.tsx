@@ -1,10 +1,10 @@
-// === Module 11411: ? ===
+// === Module 11634: ? ===
 
-// Module 11411
+// Module 11634
 import set from "set" /* 2 */;
-import sendRequest from "sendRequest" /* 530 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import ME from "ME" /* 676 */;
+import sendRequest from "sendRequest" /* 527 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import ME from "ME" /* 673 */;
 
 ({ Endpoints: c3, ME: c4 } = ME);
 const result = set.fileFinishedImporting("modules/guild_settings/GuildSettingsModalMembersActionCreators.tsx");
@@ -46,11 +46,11 @@ export default {
     }
     let obj = dispatcherDefault;
     obj.dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_CHANGE_NICKNAME" });
-    const HTTP = _require(530).HTTP;
+    const HTTP = _require(527).HTTP;
     obj = { url: GUILD_MEMBER_NICKResult, body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { nick };
-    obj[3] = _require(530).rejectWithMigratedError();
-    const obj4 = _require(530);
+    obj[3] = _require(527).rejectWithMigratedError();
+    const obj4 = _require(527);
     HTTP.patch(obj).then(() => {
       callback2(table[1]).dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_CHANGE_NICKNAME_SUCCESS" });
     }, (status) => {

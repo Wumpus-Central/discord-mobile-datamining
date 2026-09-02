@@ -1,11 +1,11 @@
-// === Module 15527: ScreenRecordingActionSheet ===
+// === Module 15758: ScreenRecordingActionSheet ===
 
-// Module 15527 (ScreenRecordingActionSheet)
+// Module 15758 (ScreenRecordingActionSheet)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import get_defaultRulesDefault from "get defaultRules" /* 4468 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { useScreenRecordingStore } from "useScreenRecordingStore" /* 15523 */;
+import { useScreenRecordingStore } from "useScreenRecordingStore" /* 15754 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -85,13 +85,13 @@ export default function ScreenRecordingActionSheet() {
   const tmp6 = callback2;
   const tmp9 = _require;
   const items1 = [
-    callback(_require(5068).PressableOpacity, {
+    callback(_require(5076).PressableOpacity, {
       style: tmp.closeButton,
       onPress() {
         return callback2(table[8]).hideActionSheet();
       },
       accessibilityLabel: "close",
-      children: callback(_require(5551).XSmallIcon, { size: "md", color: "text-default" })
+      children: callback(_require(5559).XSmallIcon, { size: "md", color: "text-default" })
     }),
     callback(_require(4474).Text, { variant: "heading-xl/bold", children: tmp5.title }),
   ,
@@ -104,7 +104,7 @@ export default function ScreenRecordingActionSheet() {
       return callback2(table[8]).hideActionSheet();
     },
     accessibilityLabel: "close",
-    children: callback(_require(5551).XSmallIcon, { size: "md", color: "text-default" })
+    children: callback(_require(5559).XSmallIcon, { size: "md", color: "text-default" })
   };
   const obj3 = { variant: "heading-xl/bold", children: tmp5.title };
   obj4[1] = get_defaultRulesDefault.parse(tmp5.instructions);
@@ -128,5 +128,5 @@ export default function ScreenRecordingActionSheet() {
   if (tmp3) {
     children = tmp11;
   }
-  return callback(tmp9(5989).ActionSheet, { children });
+  return callback(tmp9(5997).ActionSheet, { children });
 };

@@ -1,6 +1,6 @@
-// === Module 7718: useIsWindowLarge ===
+// === Module 7727: useIsWindowLarge ===
 
-// Module 7718 (useIsWindowLarge)
+// Module 7727 (useIsWindowLarge)
 import set from "set" /* 2 */;
 import useWindowSizeClassifier from "useWindowSizeClassifier" /* 4336 */;
 import useWindowSizeClassifierDefault from "useWindowSizeClassifier" /* 4336 */;

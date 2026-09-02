@@ -1,13 +1,13 @@
-// === Module 9287: filterScopes ===
+// === Module 9300: filterScopes ===
 
-// Module 9287 (filterScopes)
-import fromStringAll from "fromString" /* 506 */;
-import applyOverwritesAll from "applyOverwrites" /* 4126 */;
-import keysSorter from "keysSorter" /* 5398 */;
-import set from "set" /* 8610 */;
-import closure_3 from "ensureGuildLoaded" /* 1387 */;
+// Module 9300 (filterScopes)
+import fromStringAll from "fromString" /* 503 */;
+import applyOverwritesAll from "applyOverwrites" /* 4125 */;
+import keysSorter from "keysSorter" /* 5406 */;
+import set from "set" /* 8625 */;
+import closure_3 from "ensureGuildLoaded" /* 1386 */;
 import closure_4 from "handleConnectionOpen" /* 4299 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 
 require = arg1;
 ({ EMPTY_NUX_SERVER: c5, FAVORITES: closure_6, ME: error } = ME);
@@ -20,10 +20,10 @@ export const filterScopes = function filterScopes(items) {
   });
   let hasItem = found.includes(set.OAuth2Scopes.BOT);
   if (hasItem) {
-    hasItem = !found.includes(tmp(8610).OAuth2Scopes.APPLICATIONS_COMMANDS);
+    hasItem = !found.includes(tmp(8625).OAuth2Scopes.APPLICATIONS_COMMANDS);
   }
   if (hasItem) {
-    found.push(tmp(8610).OAuth2Scopes.APPLICATIONS_COMMANDS);
+    found.push(tmp(8625).OAuth2Scopes.APPLICATIONS_COMMANDS);
   }
   return found;
 };

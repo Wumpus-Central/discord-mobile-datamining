@@ -1,6 +1,6 @@
-// === Module 10039: LottieIcon ===
+// === Module 10061: LottieIcon ===
 
-// Module 10039 (LottieIcon)
+// Module 10061 (LottieIcon)
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;

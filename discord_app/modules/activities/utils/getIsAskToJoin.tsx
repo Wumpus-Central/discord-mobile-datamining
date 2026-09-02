@@ -1,8 +1,8 @@
-// === Module 11327: getIsAskToJoin ===
+// === Module 11550: getIsAskToJoin ===
 
-// Module 11327 (getIsAskToJoin)
+// Module 11550 (getIsAskToJoin)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 
 const ActivityActionTypes = ME.ActivityActionTypes;
 const result = set.fileFinishedImporting("modules/activities/utils/getIsAskToJoin.tsx");

@@ -1,7 +1,7 @@
-// === Module 14641: BountiesScrollIndicatorAnimation ===
+// === Module 14866: BountiesScrollIndicatorAnimation ===
 
-// Module 14641 (BountiesScrollIndicatorAnimation)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 14866 (BountiesScrollIndicatorAnimation)
+import ThemesDefault from "Themes" /* 709 */;
 import map from "map" /* 4197 */;
 import ManaContext from "ManaContext" /* 4204 */;
 import closure_3 from "_slicedToArray" /* 32 */;

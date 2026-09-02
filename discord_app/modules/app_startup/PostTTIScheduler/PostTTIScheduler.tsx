@@ -1,6 +1,6 @@
-// === Module 7412: promise ===
+// === Module 7421: promise ===
 
-// Module 7412 (promise)
+// Module 7421 (promise)
 import set from "set" /* 2 */;
 
 const obj = {

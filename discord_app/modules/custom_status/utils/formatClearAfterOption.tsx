@@ -1,12 +1,12 @@
-// === Module 9222: formatClearAfterOption ===
+// === Module 9236: formatClearAfterOption ===
 
-// Module 9222 (formatClearAfterOption)
+// Module 9236 (formatClearAfterOption)
 import set from "set" /* 2 */;
-import setDefault from "set" /* 687 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1471 */;
+import setDefault from "set" /* 684 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
 import resetCache from "resetCache" /* 4163 */;
-import StatusTypes from "StatusTypes" /* 9092 */;
+import StatusTypes from "StatusTypes" /* 9106 */;
 
 const ClearAfterValues = StatusTypes.ClearAfterValues;
 let result = set.fileFinishedImporting("modules/custom_status/utils/formatClearAfterOption.tsx");
@@ -28,9 +28,9 @@ export default function formatClearAfterOption(arg0) {
       let formatTimeResult = data8.formatTime(sum, { format: "short" });
     } else {
       let obj = { time: null };
-      const data7 = tmp66(1236).intl.data;
+      const data7 = tmp66(1233).intl.data;
       obj[0] = data7.formatTime(sum, { format: "short" });
-      formatTimeResult = intl9.formatToPlainString(tmp66(1236).t.DN91Jz, obj);
+      formatTimeResult = intl9.formatToPlainString(tmp66(1233).t.DN91Jz, obj);
     }
     const _HermesInternal4 = HermesInternal;
     return "" + formatToPlainStringResult + " (" + formatTimeResult + ")";
@@ -51,9 +51,9 @@ export default function formatClearAfterOption(arg0) {
       let formatTimeResult1 = data6.formatTime(sum1, { format: "short" });
     } else {
       obj = { time: null };
-      const data5 = tmp46(1236).intl.data;
+      const data5 = tmp46(1233).intl.data;
       obj[0] = data5.formatTime(sum1, { format: "short" });
-      formatTimeResult1 = intl7.formatToPlainString(tmp46(1236).t.DN91Jz, obj);
+      formatTimeResult1 = intl7.formatToPlainString(tmp46(1233).t.DN91Jz, obj);
     }
     const _HermesInternal3 = HermesInternal;
     return "" + formatToPlainStringResult1 + " (" + formatTimeResult1 + ")";
@@ -73,9 +73,9 @@ export default function formatClearAfterOption(arg0) {
       let formatTimeResult2 = data4.formatTime(sum2, { format: "short" });
     } else {
       obj1 = { time: null };
-      const data3 = tmp27(1236).intl.data;
+      const data3 = tmp27(1233).intl.data;
       obj1[0] = data3.formatTime(sum2, { format: "short" });
-      formatTimeResult2 = intl5.formatToPlainString(tmp27(1236).t.DN91Jz, obj1);
+      formatTimeResult2 = intl5.formatToPlainString(tmp27(1233).t.DN91Jz, obj1);
     }
     const _HermesInternal2 = HermesInternal;
     return "" + formatToPlainStringResult2 + " (" + formatTimeResult2 + ")";
@@ -96,9 +96,9 @@ export default function formatClearAfterOption(arg0) {
       let formatTimeResult3 = data2.formatTime(sum3, { format: "short" });
     } else {
       const obj2 = { time: null };
-      const data = tmp7(1236).intl.data;
+      const data = tmp7(1233).intl.data;
       obj2[0] = data.formatTime(sum3, { format: "short" });
-      formatTimeResult3 = intl3.formatToPlainString(tmp7(1236).t.DN91Jz, obj2);
+      formatTimeResult3 = intl3.formatToPlainString(tmp7(1233).t.DN91Jz, obj2);
     }
     const _HermesInternal = HermesInternal;
     return "" + formatToPlainStringResult3 + " (" + formatTimeResult3 + ")";

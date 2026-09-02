@@ -1,20 +1,20 @@
-// === Module 5072: set ===
+// === Module 5080: set ===
 
-// Module 5072 (set)
+// Module 5080 (set)
 import timestampDefault from "timestamp" /* 3 */;
-import failsDefault from "fails" /* 584 */;
-import setDefault from "set" /* 687 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import cancel from "cancel" /* 5073 */;
-import cancelDefault from "cancel" /* 5073 */;
-import fromBlobDefault from "fromBlob" /* 5113 */;
+import failsDefault from "fails" /* 581 */;
+import setDefault from "set" /* 684 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
+import cancel from "cancel" /* 5081 */;
+import cancelDefault from "cancel" /* 5081 */;
+import fromBlobDefault from "fromBlob" /* 5121 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
 import closure_6 from "_slicedToArray" /* 32 */;
 import closure_7 from "getUserAgnosticState" /* 4477 */;
-import closure_8 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
+import closure_8 from "CHANNEL_SIDEBAR_WIDTH" /* 1303 */;
 import closure_9 from "handleConnectionInfoChange" /* 4574 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 import set from "set" /* 2 */;
 
 require = arg1;
@@ -2250,11 +2250,11 @@ prototype["delete"] = function delete() {
             obj[0] = arg1;
             return obj;
           } else if (null != v0.uploadedFilename) {
-            obj1 = v0(5118);
+            obj1 = v0(5126);
             const uploadTarget = obj1.getUploadTarget(tmp18.item.target);
             dependencyMap = 1;
             const deleteUploadURL = uploadTarget.getDeleteUploadURL(tmp18.uploadedFilename);
-            const HTTP = v0(530).HTTP;
+            const HTTP = v0(527).HTTP;
             c1 = 2;
             v0 = 1;
             obj1 = { value: null, done: false };

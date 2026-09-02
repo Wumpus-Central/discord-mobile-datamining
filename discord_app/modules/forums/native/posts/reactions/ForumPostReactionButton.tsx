@@ -1,19 +1,19 @@
-// === Module 10301: BurstReactionButton ===
+// === Module 10323: BurstReactionButton ===
 
-// Module 10301 (BurstReactionButton)
-import int2hslRaw from "int2hslRaw" /* 688 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1431 */;
+// Module 10323 (BurstReactionButton)
+import int2hslRaw from "int2hslRaw" /* 685 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
 import MAX_REACTIONS from "MAX_REACTIONS" /* 4132 */;
 import Text from "Text" /* 4474 */;
-import PressableBase from "PressableBase" /* 5068 */;
-import EmojiDefault from "Emoji" /* 5585 */;
-import ReactionTypes from "ReactionTypes" /* 7507 */;
-import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10302 */;
-import handleOutOfSuperReactions from "handleOutOfSuperReactions" /* 10892 */;
-import useEmojiColorPalette from "useEmojiColorPalette" /* 10897 */;
-import AnimatedCountDefault from "AnimatedCount" /* 10953 */;
+import PressableBase from "PressableBase" /* 5076 */;
+import EmojiDefault from "Emoji" /* 5593 */;
+import ReactionTypes from "ReactionTypes" /* 7517 */;
+import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10324 */;
+import handleOutOfSuperReactions from "handleOutOfSuperReactions" /* 11112 */;
+import useEmojiColorPalette from "useEmojiColorPalette" /* 11117 */;
+import AnimatedCountDefault from "AnimatedCount" /* 11173 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;

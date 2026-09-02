@@ -1,14 +1,14 @@
-// === Module 15982: useNotificationsTabBadge ===
+// === Module 16213: useNotificationsTabBadge ===
 
-// Module 15982 (useNotificationsTabBadge)
+// Module 16213 (useNotificationsTabBadge)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "_validate" /* 7384 */;
+import closure_3 from "_validate" /* 7393 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/notifications/useNotificationsTabBadge.tsx");
 
 export default function useNotificationsTabBadge() {
-  let obj = stateFromStores(589);
+  let obj = stateFromStores(586);
   const items = [closure_3];
   stateFromStores = obj.useStateFromStores(items, () => localItems.localItems);
   const items1 = [stateFromStores];

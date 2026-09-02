@@ -1,22 +1,22 @@
-// === Module 16488: BurstReactionAnimationContainer ===
+// === Module 16723: BurstReactionAnimationContainer ===
 
-// Module 16488 (BurstReactionAnimationContainer)
-import initialize from "initialize" /* 589 */;
+// Module 16723 (BurstReactionAnimationContainer)
+import initialize from "initialize" /* 586 */;
 import coerceMainRoute from "coerceMainRoute" /* 4332 */;
-import usePipVideoOrStream from "usePipVideoOrStream" /* 9539 */;
-import isVoicePanelEnabled from "isVoicePanelEnabled" /* 9651 */;
-import KeyCommandsView from "KeyCommandsView" /* 14229 */;
-import PictureInPictureGlobalDefault from "PictureInPictureGlobal" /* 16489 */;
-import BurstReactionAnimationContainerInnerDefault from "BurstReactionAnimationContainerInner" /* 16492 */;
-import MenuContainerDefault from "MenuContainer" /* 16493 */;
-import ActionSheetPresenterDefault from "ActionSheetPresenter" /* 16494 */;
-import StyleSheetDefault from "StyleSheet" /* 16495 */;
-import MuteDeafenDefault from "MuteDeafen" /* 16503 */;
-import trackActionSheetImpressionDefault from "trackActionSheetImpression" /* 16504 */;
-import AnimatedToastDefault from "AnimatedToast" /* 16534 */;
+import usePipVideoOrStream from "usePipVideoOrStream" /* 9552 */;
+import isVoicePanelEnabled from "isVoicePanelEnabled" /* 9664 */;
+import KeyCommandsView from "KeyCommandsView" /* 14452 */;
+import PictureInPictureGlobalDefault from "PictureInPictureGlobal" /* 16724 */;
+import BurstReactionAnimationContainerInnerDefault from "BurstReactionAnimationContainerInner" /* 16727 */;
+import MenuContainerDefault from "MenuContainer" /* 16728 */;
+import ActionSheetPresenterDefault from "ActionSheetPresenter" /* 16729 */;
+import StyleSheetDefault from "StyleSheet" /* 16730 */;
+import MuteDeafenDefault from "MuteDeafen" /* 16738 */;
+import trackActionSheetImpressionDefault from "trackActionSheetImpression" /* 16739 */;
+import AnimatedToastDefault from "AnimatedToast" /* 16769 */;
 import closure_3 from "noop" /* 19 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "ensureGuildLoaded" /* 1387 */;
+import closure_5 from "ensureGuildLoaded" /* 1386 */;
 import closure_6 from "createRTCConnection" /* 4554 */;
 import { jsx } from "jsxProd" /* 21 */;
 

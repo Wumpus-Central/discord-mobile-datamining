@@ -1,12 +1,12 @@
-// === Module 16786: renderChat ===
+// === Module 17022: renderChat ===
 
-// Module 16786 (renderChat)
-import ThemesDefault from "Themes" /* 712 */;
-import memoResult1Default from "memoResult1" /* 11837 */;
+// Module 17022 (renderChat)
+import ThemesDefault from "Themes" /* 709 */;
+import memoResult1Default from "memoResult1" /* 12060 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import VoicePanelModes from "VoicePanelModes" /* 11840 */;
+import VoicePanelModes from "VoicePanelModes" /* 12063 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -55,7 +55,7 @@ const memoResult = importAllResult.memo((shown) => {
   }, items);
   const items1 = [renderContent, shown];
   const memo = obj.useMemo(() => renderContent(shown), items1);
-  if (renderContent(5554)(ref)) {
+  if (renderContent(5562)(ref)) {
     obj = { freeze: null, children: null };
     obj[0] = tmp2;
     obj[1] = memo;

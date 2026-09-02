@@ -1,7 +1,7 @@
-// === Module 11840: VoicePanelModes ===
+// === Module 12063: VoicePanelModes ===
 
-// Module 11840 (VoicePanelModes)
-import set from "set" /* 500 */;
+// Module 12063 (VoicePanelModes)
+import set from "set" /* 1234 */;
 
 let obj = { DISMISSED: "dismissed", PIP: "pip", PANEL: "panel" };
 obj = { mass: 0.5, damping: 80, stiffness: 200 };

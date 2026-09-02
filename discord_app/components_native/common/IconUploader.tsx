@@ -1,16 +1,16 @@
-// === Module 10665: IconUploader ===
+// === Module 10886: IconUploader ===
 
-// Module 10665 (IconUploader)
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getAvatarURL from "getAvatarURL" /* 1431 */;
-import PressableBase from "PressableBase" /* 5068 */;
-import GuildIconSizes from "GuildIconSizes" /* 6004 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 6004 */;
-import registerAssetDefault from "registerAsset" /* 10666 */;
+// Module 10886 (IconUploader)
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import getAvatarURL from "getAvatarURL" /* 1430 */;
+import PressableBase from "PressableBase" /* 5076 */;
+import GuildIconSizes from "GuildIconSizes" /* 6012 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 6012 */;
+import registerAssetDefault from "registerAsset" /* 10887 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { UPLOAD_MEDIUM_SIZE } from "ME" /* 676 */;
+import { UPLOAD_MEDIUM_SIZE } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

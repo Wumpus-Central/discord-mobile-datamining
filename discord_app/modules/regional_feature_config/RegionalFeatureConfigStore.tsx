@@ -2,8 +2,8 @@
 
 // Module 4173 (getRegionalFeatureConfig)
 import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 import isFeatureTeenByDefault from "isFeatureTeenByDefault" /* 4178 */;
 import DEFAULT_COUNTRY_CODE_NAME from "DEFAULT_COUNTRY_CODE_NAME" /* 4174 */;
 

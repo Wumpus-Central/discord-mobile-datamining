@@ -1,6 +1,6 @@
-// === Module 7020: metadata ===
+// === Module 7029: metadata ===
 
-// Module 7020 (metadata)
+// Module 7029 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SnailIllocon-2x.png.js");

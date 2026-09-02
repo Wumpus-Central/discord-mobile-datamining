@@ -1,9 +1,9 @@
-// === Module 14248: UserProfileUpsellButton ===
+// === Module 14471: UserProfileUpsellButton ===
 
-// Module 14248 (UserProfileUpsellButton)
+// Module 14471 (UserProfileUpsellButton)
 import closure_3 from "noop" /* 19 */;
-import ME from "ME" /* 676 */;
-import { PremiumUpsellTypes } from "GuildFeatures" /* 1924 */;
+import ME from "ME" /* 673 */;
+import { PremiumUpsellTypes } from "GuildFeatures" /* 1923 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -15,8 +15,8 @@ let result = require("set").fileFinishedImporting("modules/user_profile/native/U
 export default function UserProfileUpsellButton(analyticsObject) {
   analyticsObject = analyticsObject.analyticsObject;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(5953)().analyticsLocations;
-  let obj = analyticsObject(7191);
+  analyticsLocations = analyticsLocations(5961)().analyticsLocations;
+  let obj = analyticsObject(7200);
   let label = obj.useNitroTrialCtaOverride("user_profile_upsell_button");
   const items = [analyticsLocations, analyticsObject];
   const effect = React.useEffect(() => {
@@ -40,11 +40,11 @@ export default function UserProfileUpsellButton(analyticsObject) {
     label = analyticsObject.label;
   }
   if (label == null) {
-    const intl = tmp3(1236).intl;
-    label = intl.string(tmp3(1236).t.pj0XBN);
+    const intl = tmp3(1233).intl;
+    label = intl.string(tmp3(1233).t.pj0XBN);
   }
   obj[2] = label;
   obj = { color: "white", size: "sm", style: callback().nitroWheel };
-  obj[3] = jsx(analyticsObject(8096).NitroWheelIcon, { color: "white", size: "sm", style: callback().nitroWheel });
+  obj[3] = jsx(analyticsObject(8104).NitroWheelIcon, { color: "white", size: "sm", style: callback().nitroWheel });
   return jsx(analyticsObject(4928).Button, { color: "white", size: "sm", style: callback().nitroWheel });
 };

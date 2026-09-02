@@ -1,8 +1,8 @@
-// === Module 12113: usePowerupGroupConfig ===
+// === Module 12337: usePowerupGroupConfig ===
 
-// Module 12113 (usePowerupGroupConfig)
+// Module 12337 (usePowerupGroupConfig)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "createGuildRecordFromRust" /* 1909 */;
+import closure_4 from "createGuildRecordFromRust" /* 1908 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/native/hooks/usePowerupGroupConfig.tsx");

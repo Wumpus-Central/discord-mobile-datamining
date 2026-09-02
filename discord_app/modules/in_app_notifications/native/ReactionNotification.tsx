@@ -1,22 +1,22 @@
-// === Module 10300: ReactionNotificationBody ===
+// === Module 10322: ReactionNotificationBody ===
 
-// Module 10300 (ReactionNotificationBody)
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
+// Module 10322 (ReactionNotificationBody)
+import ThemesDefault from "Themes" /* 709 */;
+import Button from "Button" /* 1296 */;
 import Text from "Text" /* 4474 */;
-import GuildIconSizes from "GuildIconSizes" /* 6004 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 6004 */;
-import isReactionMilestoneNotification from "isReactionMilestoneNotification" /* 10177 */;
-import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 10191 */;
-import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 10648 */;
+import GuildIconSizes from "GuildIconSizes" /* 6012 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 6012 */;
+import isReactionMilestoneNotification from "isReactionMilestoneNotification" /* 10199 */;
+import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 10213 */;
+import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 10869 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import set from "set" /* 10178 */;
-import ME from "ME" /* 676 */;
+import set from "set" /* 10200 */;
+import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
-import PlatformTypes from "PlatformTypes" /* 501 */;
+import PlatformTypes from "PlatformTypes" /* 1235 */;
 
 require = arg1;
 function ReactionNotificationBody(arg0) {
@@ -45,7 +45,7 @@ function ReactionNotificationBody(arg0) {
       obj1[2] = closure_6;
       obj1[4] = gradientStyles;
       obj1[5] = gradientColors;
-      tmp8Result = tmp8(tmp2(10192).NativeChannelRowPreview, obj1);
+      tmp8Result = tmp8(tmp2(10214).NativeChannelRowPreview, obj1);
     }
   }
   children[2] = tmp8Result;
@@ -71,7 +71,7 @@ function ReactionNotificationBodyWrapper(arg0) {
   const React = tmp4;
   const AnimateEmoji = message(4166).AnimateEmoji;
   const setting = AnimateEmoji.useSetting();
-  let obj = message(10212);
+  let obj = message(10234);
   const previewableMedia = obj.usePreviewableMedia(message);
   const items = [setting, reaction, , , ];
   ({ imageEmoji: arr[2], textEmoji: arr[3], italic: arr[4] } = tmp4);
@@ -105,7 +105,7 @@ function ReactionNotificationBodyWrapper(arg0) {
       }
       let emojiURL;
       if (null != id1) {
-        obj = reaction(1431);
+        obj = reaction(1430);
         obj = { id: null, animated: null, size: null };
         obj[0] = tmp.emoji.id;
         let animated = setting;
@@ -113,14 +113,14 @@ function ReactionNotificationBodyWrapper(arg0) {
           animated = tmp.emoji.animated;
         }
         obj[1] = animated;
-        obj[2] = message(10301).DEFAULT_EMOJI_SIZE;
+        obj[2] = message(10323).DEFAULT_EMOJI_SIZE;
         emojiURL = obj.getEmojiURL(obj);
       }
       obj1 = { textEmojiStyle: null, fastImageStyle: null, src: null, name: null };
       ({ textEmoji: obj3[0], imageEmoji: obj3[1] } = italic);
       obj1[2] = emojiURL;
       obj1[3] = tmp.emoji.name;
-      return closure_1_10(reaction(5585), obj1);
+      return closure_1_10(reaction(5593), obj1);
     }
   }, items);
   const items1 = [callback, tmp3, message, previewableMedia];
@@ -130,83 +130,83 @@ function ReactionNotificationBodyWrapper(arg0) {
         if (1 === arr.length) {
           const first = arr[0];
           const type = first.type;
-          if (message(10212).PreviewableMediaTypes.IMAGE === type) {
+          if (message(10234).PreviewableMediaTypes.IMAGE === type) {
             let obj = { text: null, secondaryText: null };
-            const intl11 = message(1236).intl;
+            const intl11 = message(1233).intl;
             obj = { emojiHook: null };
             obj[0] = callback;
-            obj[0] = intl11.format(message(1236).t.I7mNcA, obj);
+            obj[0] = intl11.format(message(1233).t.I7mNcA, obj);
             return obj;
-          } else if (message(10212).PreviewableMediaTypes.VIDEO === type) {
+          } else if (message(10234).PreviewableMediaTypes.VIDEO === type) {
             obj1 = { text: null, secondaryText: null };
-            const intl10 = message(1236).intl;
+            const intl10 = message(1233).intl;
             const obj2 = { emojiHook: null };
             obj2[0] = callback;
-            obj1[0] = intl10.format(message(1236).t["Umew/z"], obj2);
+            obj1[0] = intl10.format(message(1233).t["Umew/z"], obj2);
             return obj1;
-          } else if (message(10212).PreviewableMediaTypes.AUDIO === type) {
+          } else if (message(10234).PreviewableMediaTypes.AUDIO === type) {
             const obj3 = { text: null, secondaryText: null };
-            const intl9 = message(1236).intl;
+            const intl9 = message(1233).intl;
             const obj4 = { emojiHook: null };
             obj4[0] = callback;
-            obj3[0] = intl9.format(message(1236).t["P/bwx9"], obj4);
+            obj3[0] = intl9.format(message(1233).t["P/bwx9"], obj4);
             obj3[1] = first.media.filename;
             return obj3;
-          } else if (message(10212).PreviewableMediaTypes.FILE === type) {
+          } else if (message(10234).PreviewableMediaTypes.FILE === type) {
             const obj5 = { text: null, secondaryText: null };
-            const intl8 = message(1236).intl;
+            const intl8 = message(1233).intl;
             const obj6 = { emojiHook: null };
             obj6[0] = callback;
-            obj5[0] = intl8.format(message(1236).t.TXNjGW, obj6);
+            obj5[0] = intl8.format(message(1233).t.TXNjGW, obj6);
             obj5[1] = first.media.filename;
             return obj5;
-          } else if (message(10212).PreviewableMediaTypes.STICKER === type) {
+          } else if (message(10234).PreviewableMediaTypes.STICKER === type) {
             const obj7 = { text: null, secondaryText: null };
-            const intl7 = message(1236).intl;
+            const intl7 = message(1233).intl;
             const obj8 = { emojiHook: null };
             obj8[0] = callback;
-            obj7[0] = intl7.format(message(1236).t.pnm8NC, obj8);
+            obj7[0] = intl7.format(message(1233).t.pnm8NC, obj8);
             return obj7;
-          } else if (message(10212).PreviewableMediaTypes.VOICE_MESSAGE === type) {
+          } else if (message(10234).PreviewableMediaTypes.VOICE_MESSAGE === type) {
             const obj9 = { text: null, secondaryText: null };
-            const intl6 = message(1236).intl;
+            const intl6 = message(1233).intl;
             const obj10 = { emojiHook: null };
             obj10[0] = callback;
-            obj9[0] = intl6.format(message(1236).t.k6YnQO, obj10);
+            obj9[0] = intl6.format(message(1233).t.k6YnQO, obj10);
             return obj9;
-          } else if (message(10212).PreviewableMediaTypes.GIF === type) {
+          } else if (message(10234).PreviewableMediaTypes.GIF === type) {
             const obj11 = { text: null, secondaryText: null };
-            const intl5 = message(1236).intl;
+            const intl5 = message(1233).intl;
             const obj12 = { emojiHook: null };
             obj12[0] = callback;
-            obj11[0] = intl5.format(message(1236).t["3oS3Jq"], obj12);
+            obj11[0] = intl5.format(message(1233).t["3oS3Jq"], obj12);
             return obj11;
           } else {
             const obj13 = { text: null, secondaryText: null };
-            const intl4 = message(1236).intl;
+            const intl4 = message(1233).intl;
             const obj14 = { emojiHook: null };
             obj14[0] = callback;
-            obj13[0] = intl4.format(message(1236).t.sHV43G, obj14);
+            obj13[0] = intl4.format(message(1233).t.sHV43G, obj14);
             return obj13;
           }
-        } else if (reaction(6147)(message)) {
+        } else if (reaction(6155)(message)) {
           const obj15 = { text: null, secondaryText: null };
-          const intl3 = message(1236).intl;
+          const intl3 = message(1233).intl;
           const obj16 = { emojiHook: null };
           obj16[0] = callback;
-          obj15[0] = intl3.format(message(1236).t["8xg9ZQ"], obj16);
+          obj15[0] = intl3.format(message(1233).t["8xg9ZQ"], obj16);
           return obj15;
         } else {
-          const intl = message(1236).intl;
+          const intl = message(1233).intl;
           obj = { emojiHook: null, count: null };
           obj[0] = callback;
           obj[1] = arr.length;
           const everyResult = arr.every((type) => type.type === callback(table[10]).PreviewableMediaTypes.FILE);
-          const intl2 = message(1236).intl;
+          const intl2 = message(1233).intl;
           const obj17 = { emojiHook: null, count: null };
           obj17[0] = callback;
           obj17[1] = arr.length;
-          let formatResult1 = intl2.format(message(1236).t.UNRyki, obj17);
+          let formatResult1 = intl2.format(message(1233).t.UNRyki, obj17);
           if (everyResult) {
             formatResult1 = formatResult;
           }
@@ -216,9 +216,9 @@ function ReactionNotificationBodyWrapper(arg0) {
         }
       }
     }
-    const intl12 = message(1236).intl;
+    const intl12 = message(1233).intl;
     const format = intl12.format;
-    const t = message(1236).t;
+    const t = message(1233).t;
     if (dependencyMap) {
       const obj19 = { emojiHook: null };
       obj19[0] = callback;
@@ -231,23 +231,23 @@ function ReactionNotificationBodyWrapper(arg0) {
     return { text, secondaryText: null };
   }, items1);
   ({ secondaryText, text } = memo);
-  obj1 = message(10177);
+  obj1 = message(10199);
   const hasPreviewableMedia = obj1.useHasPreviewableMedia(message);
-  let obj2 = message(10221);
+  let obj2 = message(10243);
   if (hasPreviewableMedia) {
     message = obj2.useGetInitialMessagePreview({ message });
   }
   if (renderAnnouncementText) {
     obj = { text: null };
-    let intl2 = tmp5(1236).intl;
+    let intl2 = tmp5(1233).intl;
     obj = { count: null };
     obj[0] = reactionCount;
-    obj[0] = intl2.format(tmp5(1236).t.Tqk79E, obj);
+    obj[0] = intl2.format(tmp5(1233).t.Tqk79E, obj);
     return callback(ReactionNotificationBody, obj);
   } else if (isMilestone) {
-    let intl = tmp5(1236).intl;
+    let intl = tmp5(1233).intl;
     let format = intl.format;
-    let t = tmp5(1236).t;
+    let t = tmp5(1233).t;
     if (tmp3) {
       obj1 = { count: null };
       obj1[0] = reactionCount;

@@ -1,18 +1,18 @@
-// === Module 8921: DisplayName ===
+// === Module 8936: DisplayName ===
 
-// Module 8921 (DisplayName)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 8936 (DisplayName)
+import ThemesDefault from "Themes" /* 709 */;
 import nameFromUserDefault from "nameFromUser" /* 4322 */;
-import guildHasTag from "guildHasTag" /* 8075 */;
-import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 8923 */;
-import memoResult1Default from "memoResult1" /* 9007 */;
+import guildHasTag from "guildHasTag" /* 8083 */;
+import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 8937 */;
+import memoResult1Default from "memoResult1" /* 9021 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { getBadgeName } from "USER_PROFILE_TOOLTIP_DELAY" /* 8556 */;
-import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 6001 */;
-import ME from "ME" /* 676 */;
-import { GuildTagBadgeSize } from "items" /* 7853 */;
-import { DEFAULT_PREMIUM_BADGE_ID } from "DEFAULT_PREMIUM_BADGE_ID" /* 8922 */;
+import { getBadgeName } from "USER_PROFILE_TOOLTIP_DELAY" /* 8569 */;
+import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 6009 */;
+import ME from "ME" /* 673 */;
+import { GuildTagBadgeSize } from "items" /* 7862 */;
+import { DEFAULT_PREMIUM_BADGE_ID } from "DEFAULT_PREMIUM_BADGE_ID" /* 8575 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

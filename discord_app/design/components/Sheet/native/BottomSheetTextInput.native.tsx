@@ -1,6 +1,6 @@
-// === Module 9717: BottomSheetTextInput ===
+// === Module 9739: BottomSheetTextInput ===
 
-// Module 9717 (BottomSheetTextInput)
+// Module 9739 (BottomSheetTextInput)
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -13,8 +13,8 @@ export const BottomSheetTextInput = function BottomSheetTextInput(ref) {
   ref = undefined;
   const merged = Object.assign(ref, Object.create(null));
   ref = React.useRef(null);
-  ({ onFocus: onFocus2, onBlur: onBlur2 } = ref(6234)({ onFocus, onBlur }));
-  let obj = ref(6232);
+  ({ onFocus: onFocus2, onBlur: onBlur2 } = ref(6243)({ onFocus, onBlur }));
+  let obj = ref(6241);
   const keyboardBlurring = obj.useKeyboardBlurring(ref);
   obj = {
     ref(current) {
@@ -28,9 +28,9 @@ export const BottomSheetTextInput = function BottomSheetTextInput(ref) {
     onFocus: onFocus2,
     onBlur: onBlur2
   };
-  const tmp3 = ref(6234)({ onFocus, onBlur });
+  const tmp3 = ref(6243)({ onFocus, onBlur });
   const merged1 = Object.assign(merged);
-  return jsx(ref(9718), {
+  return jsx(ref(9740), {
     ref(current) {
       ref.current = current;
       if (typeof ref === "function") {

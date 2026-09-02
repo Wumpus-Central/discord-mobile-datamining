@@ -1,8 +1,8 @@
-// === Module 7817: initialize ===
+// === Module 7826: initialize ===
 
-// Module 7817 (initialize)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 7826 (initialize)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 let c0 = 0;
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;

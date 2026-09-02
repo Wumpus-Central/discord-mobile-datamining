@@ -1,18 +1,18 @@
-// === Module 15327: effectName ===
+// === Module 15555: effectName ===
 
-// Module 15327 (effectName)
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2759 */;
+// Module 15555 (effectName)
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import messagesProxyDefault from "messagesProxy" /* 2758 */;
 import Text from "Text" /* 4474 */;
 import Stack from "Stack" /* 4926 */;
-import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 8923 */;
-import DisplayNameStyleColorPreset from "DisplayNameStyleColorPreset" /* 8924 */;
-import DISPLAY_NAME_STYLES_EFFECT_NAMES from "DISPLAY_NAME_STYLES_EFFECT_NAMES" /* 8928 */;
+import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 8937 */;
+import DisplayNameStyleColorPreset from "DisplayNameStyleColorPreset" /* 8938 */;
+import DISPLAY_NAME_STYLES_EFFECT_NAMES from "DISPLAY_NAME_STYLES_EFFECT_NAMES" /* 8942 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import closure_7 from "mergeGuildAvatar" /* 1921 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

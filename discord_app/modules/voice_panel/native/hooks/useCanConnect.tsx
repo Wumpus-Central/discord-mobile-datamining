@@ -1,11 +1,11 @@
-// === Module 16707: useCanConnect ===
+// === Module 16942: useCanConnect ===
 
-// Module 16707 (useCanConnect)
-import closure_2 from "ensureGuildLoaded" /* 1387 */;
-import closure_3 from "createGuildRecordFromRust" /* 1909 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4121 */;
+// Module 16942 (useCanConnect)
+import closure_2 from "ensureGuildLoaded" /* 1386 */;
+import closure_3 from "createGuildRecordFromRust" /* 1908 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_5 from "updateVoiceState" /* 4497 */;
-import { Permissions } from "sum" /* 505 */;
+import { Permissions } from "sum" /* 502 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useCanConnect.tsx");
@@ -14,7 +14,7 @@ export default function useCanConnect(arg0) {
   const _require = arg0;
   const items = [closure_2, closure_4, closure_3, closure_5];
   const items1 = [arg0];
-  return _require(589).useStateFromStoresObject(items, () => {
+  return _require(586).useStateFromStoresObject(items, () => {
     const channel = closure_1_2.getChannel(callback);
     let tmp = null != channel;
     if (tmp) {

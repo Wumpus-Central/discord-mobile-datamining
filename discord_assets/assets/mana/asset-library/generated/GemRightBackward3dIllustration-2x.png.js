@@ -1,6 +1,6 @@
-// === Module 6674: metadata ===
+// === Module 6683: metadata ===
 
-// Module 6674 (metadata)
+// Module 6683 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GemRightBackward3dIllustration-2x.png.js");

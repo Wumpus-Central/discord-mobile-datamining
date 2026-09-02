@@ -1,6 +1,6 @@
-// === Module 15475: useAllowFriendsFromMutualGuildsOnly ===
+// === Module 15705: useAllowFriendsFromMutualGuildsOnly ===
 
-// Module 15475 (useAllowFriendsFromMutualGuildsOnly)
+// Module 15705 (useAllowFriendsFromMutualGuildsOnly)
 import closure_2 from "noop" /* 19 */;
 
 const require = arg1;

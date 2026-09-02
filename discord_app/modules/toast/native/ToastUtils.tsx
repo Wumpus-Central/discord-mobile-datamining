@@ -2,10 +2,10 @@
 
 // Module 4193 (presentAddedFriendToast)
 import set from "set" /* 2 */;
-import v1 from "v1" /* 514 */;
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1431 */;
+import v1 from "v1" /* 511 */;
+import ME from "ME" /* 673 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
 import dispatcherDefault from "dispatcher" /* 4194 */;
 import FriendsIcon from "FriendsIcon" /* 4195 */;
 import UserPlatformIcon from "UserPlatformIcon" /* 4417 */;
@@ -365,9 +365,9 @@ export const presentGuildMemberBio = function presentGuildMemberBio(guildName) {
   const _require = arg1;
   let obj = dispatcherDefault;
   obj = { key: "GUILD_IDENTITY_BIO_TOAST", content: null, icon: null };
-  const intl = _require(1236).intl;
+  const intl = _require(1233).intl;
   obj = { guildName };
-  obj[1] = intl.formatToPlainString(_require(1236).t.pOy2tm, obj);
+  obj[1] = intl.formatToPlainString(_require(1233).t.pOy2tm, obj);
   obj[2] = function icon() {
     return closure_0;
   };
@@ -377,9 +377,9 @@ export const presentGuildMemberPronouns = function presentGuildMemberPronouns(gu
   const _require = arg1;
   let obj = dispatcherDefault;
   obj = { key: "GUILD_IDENTITY_PRONOUNS_TOAST", content: null, icon: null };
-  const intl = _require(1236).intl;
+  const intl = _require(1233).intl;
   obj = { guildName };
-  obj[1] = intl.formatToPlainString(_require(1236).t.gPVLS0, obj);
+  obj[1] = intl.formatToPlainString(_require(1233).t.gPVLS0, obj);
   obj[2] = function icon() {
     return closure_0;
   };

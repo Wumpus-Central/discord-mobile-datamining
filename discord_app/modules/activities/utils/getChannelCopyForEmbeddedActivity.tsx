@@ -1,8 +1,8 @@
-// === Module 9255: getChannelCopyForEmbeddedActivity ===
+// === Module 9268: getChannelCopyForEmbeddedActivity ===
 
-// Module 9255 (getChannelCopyForEmbeddedActivity)
+// Module 9268 (getChannelCopyForEmbeddedActivity)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 
 const result = set.fileFinishedImporting("modules/activities/utils/getChannelCopyForEmbeddedActivity.tsx");
 

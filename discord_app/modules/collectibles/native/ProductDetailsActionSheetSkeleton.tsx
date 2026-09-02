@@ -1,7 +1,7 @@
-// === Module 12580: ProductDetailsActionSheetSkeleton ===
+// === Module 12804: ProductDetailsActionSheetSkeleton ===
 
-// Module 12580 (ProductDetailsActionSheetSkeleton)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 12804 (ProductDetailsActionSheetSkeleton)
+import ThemesDefault from "Themes" /* 709 */;
 import _modDef4217 from "module_4217" /* 4217 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

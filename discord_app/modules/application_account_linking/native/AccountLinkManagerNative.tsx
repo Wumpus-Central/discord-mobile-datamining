@@ -1,8 +1,8 @@
-// === Module 17473: AccountLinkManagerNative ===
+// === Module 17709: AccountLinkManagerNative ===
 
-// Module 17473 (AccountLinkManagerNative)
+// Module 17709 (AccountLinkManagerNative)
 import set from "set" /* 2 */;
-import _claimIncentivizedAccountLinkingReward from "_claimIncentivizedAccountLinkingReward" /* 16521 */;
+import _claimIncentivizedAccountLinkingReward from "_claimIncentivizedAccountLinkingReward" /* 16756 */;
 
 const AccountLinkManager = _claimIncentivizedAccountLinkingReward.AccountLinkManager;
 class AccountLinkManagerNative extends AccountLinkManager {

@@ -1,10 +1,10 @@
-// === Module 6401: ChestLogoSpotIllustration ===
+// === Module 6410: ChestLogoSpotIllustration ===
 
-// Module 6401 (ChestLogoSpotIllustration)
+// Module 6410 (ChestLogoSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5493 */;
-import metadataDefault from "metadata" /* 6402 */;
+import preloadDefault from "preload" /* 5501 */;
+import metadataDefault from "metadata" /* 6411 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ChestLogoSpotIllustration.native.tsx");

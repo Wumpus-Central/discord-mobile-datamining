@@ -1,9 +1,9 @@
-// === Module 12924: useCanSearchForumPostsByChannelId ===
+// === Module 13146: useCanSearchForumPostsByChannelId ===
 
-// Module 12924 (useCanSearchForumPostsByChannelId)
-import closure_2 from "ensureGuildLoaded" /* 1387 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4121 */;
-import { Permissions } from "ME" /* 676 */;
+// Module 13146 (useCanSearchForumPostsByChannelId)
+import closure_2 from "ensureGuildLoaded" /* 1386 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4120 */;
+import { Permissions } from "ME" /* 673 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/forums/native/hooks/useCanSearchForumPostsByChannelId.tsx");
@@ -11,7 +11,7 @@ const result = require("set").fileFinishedImporting("modules/forums/native/hooks
 export const useCanSearchForumPostsByChannelId = function useCanSearchForumPostsByChannelId(channelId) {
   const _require = channelId;
   const items = [closure_2, closure_3];
-  return _require(589).useStateFromStores(items, () => {
+  return _require(586).useStateFromStores(items, () => {
     const channel = closure_1_2.getChannel(closure_0);
     let canResult = null != channel;
     if (canResult) {

@@ -1,22 +1,22 @@
-// === Module 6127: handlePermissionsChange ===
+// === Module 6135: handlePermissionsChange ===
 
-// Module 6127 (handlePermissionsChange)
+// Module 6135 (handlePermissionsChange)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import ComponentDispatcher from "ComponentDispatcher" /* 1231 */;
-import SidebarType from "SidebarType" /* 6129 */;
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import ComponentDispatcher from "ComponentDispatcher" /* 1228 */;
+import SidebarType from "SidebarType" /* 6137 */;
 import closure_3 from "getHash" /* 4391 */;
-import closure_4 from "handleReaction" /* 6128 */;
-import closure_5 from "ensureGuildLoaded" /* 1387 */;
-import closure_6 from "createGuildRecordFromRust" /* 1909 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4121 */;
-import closure_8 from "handleConnectionOpen" /* 1981 */;
+import closure_4 from "handleReaction" /* 6136 */;
+import closure_5 from "ensureGuildLoaded" /* 1386 */;
+import closure_6 from "createGuildRecordFromRust" /* 1908 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4120 */;
+import closure_8 from "handleConnectionOpen" /* 1980 */;
 import closure_9 from "handleConnectionOpen" /* 4299 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import set from "set" /* 1394 */;
-import { Permissions } from "sum" /* 505 */;
+import closure_10 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
+import set from "set" /* 1393 */;
+import { Permissions } from "sum" /* 502 */;
 
 require = arg1;
 function handlePermissionsChange() {
@@ -195,7 +195,7 @@ prototype["getCurrentSidebarChannelId"] = function getCurrentSidebarChannelId(ch
     let tmp9 = null;
     if (null != dependencyMap[tmp]) {
       if (tmp8.type !== SidebarType.SidebarType.VIEW_THREAD) {
-        if (tmp8.type !== tmp10(6129).SidebarType.VIEW_CHANNEL) {
+        if (tmp8.type !== tmp10(6137).SidebarType.VIEW_CHANNEL) {
           channelId = null;
         }
         tmp9 = channelId;
@@ -226,7 +226,7 @@ prototype["getCurrentSidebarMessageId"] = function getCurrentSidebarMessageId(ch
     let tmp9 = null;
     if (null != dependencyMap[tmp]) {
       if (tmp8.type !== SidebarType.SidebarType.VIEW_THREAD) {
-        if (tmp8.type !== tmp10(6129).SidebarType.VIEW_CHANNEL) {
+        if (tmp8.type !== tmp10(6137).SidebarType.VIEW_CHANNEL) {
           let tmp12 = null;
         }
         tmp9 = tmp12;

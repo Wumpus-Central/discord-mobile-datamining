@@ -1,7 +1,7 @@
-// === Module 9555: PopoutMenuRow ===
+// === Module 9568: PopoutMenuRow ===
 
-// Module 9555 (PopoutMenuRow)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 9568 (PopoutMenuRow)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -26,11 +26,11 @@ function PopoutMenuRow(onClose) {
   if (null != icon) {
     let obj = { source: null };
     obj[0] = icon;
-    tmp3Result = tmp3(onClick(1297).Icon, obj);
+    tmp3Result = tmp3(onClick(1296).Icon, obj);
   }
-  obj = { leading: tmp3Result, label: tmp3(onClick(8363).FormLabel, obj), style: tmp.popoutMenuRow, onPress: callback };
+  obj = { leading: tmp3Result, label: tmp3(onClick(8372).FormLabel, obj), style: tmp.popoutMenuRow, onPress: callback };
   obj = { style: tmp.popoutMenuRowLabel, text: onClose.text };
-  return closure_6(onClose(5592), obj);
+  return closure_6(onClose(5600), obj);
 }
 let c4 = importAllResult;
 ({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);

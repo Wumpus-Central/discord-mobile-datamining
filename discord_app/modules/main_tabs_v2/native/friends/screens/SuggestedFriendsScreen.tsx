@@ -1,10 +1,10 @@
-// === Module 16357: SuggestedFriendsScreen ===
+// === Module 16589: SuggestedFriendsScreen ===
 
-// Module 16357 (SuggestedFriendsScreen)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 16589 (SuggestedFriendsScreen)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

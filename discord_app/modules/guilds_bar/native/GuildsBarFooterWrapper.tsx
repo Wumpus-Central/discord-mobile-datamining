@@ -1,13 +1,13 @@
-// === Module 15939: GuildsBarFooterWrapper ===
+// === Module 16170: GuildsBarFooterWrapper ===
 
-// Module 15939 (GuildsBarFooterWrapper)
+// Module 16170 (GuildsBarFooterWrapper)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import map from "map" /* 4197 */;
-import setDefault from "set" /* 6006 */;
-import context from "context" /* 15614 */;
-import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE" /* 15876 */;
+import setDefault from "set" /* 6014 */;
+import context from "context" /* 15845 */;
+import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE" /* 16107 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
 const GUILD_ITEM_HIT_SLOP = GUILD_ITEM_SIZE.GUILD_ITEM_HIT_SLOP;

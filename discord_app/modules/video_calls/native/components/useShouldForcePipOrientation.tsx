@@ -1,10 +1,10 @@
-// === Module 9538: useShouldForcePipOrientation ===
+// === Module 9551: useShouldForcePipOrientation ===
 
-// Module 9538 (useShouldForcePipOrientation)
-import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 9539 */;
-import closure_3 from "participantFromServer" /* 1386 */;
+// Module 9551 (useShouldForcePipOrientation)
+import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 9552 */;
+import closure_3 from "participantFromServer" /* 1385 */;
 import closure_4 from "getParticipants" /* 4494 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "fetchFingerprint" /* 1215 */;
 import { OrientationLockState } from "items3" /* 4506 */;
 import ParticipantTypes from "ParticipantTypes" /* 4499 */;
 
@@ -17,7 +17,7 @@ export const useShouldForcePipOrientation = function useShouldForcePipOrientatio
   let OrientationType = dependencyMap;
   const tmp = usePipVideoOrStreamDefault(channel.id);
   const items = [closure_4, closure_5];
-  const stateFromStores = channel(589).useStateFromStores(items, () => {
+  const stateFromStores = channel(586).useStateFromStores(items, () => {
     const participant = closure_1_4.getParticipant(channel.id, closure_1_5.getId());
     let tmp2 = null;
     if (null != participant) {
@@ -31,10 +31,10 @@ export const useShouldForcePipOrientation = function useShouldForcePipOrientatio
     }
     return tmp2;
   });
-  let obj = channel(589);
+  let obj = channel(586);
   let obj2 = closure_5;
   const items1 = [closure_3, closure_4];
-  const stateFromStoresObject = channel(589).useStateFromStoresObject(items1, () => {
+  const stateFromStoresObject = channel(586).useStateFromStoresObject(items1, () => {
     let obj = closure_1_3;
     const currentEmbeddedActivity = closure_1_3.getCurrentEmbeddedActivity();
     const selectedParticipant = closure_1_4.getSelectedParticipant(channel.id);
@@ -78,17 +78,17 @@ export const useShouldForcePipOrientation = function useShouldForcePipOrientatio
   if (null != focusedEmbeddedActivityParticipant) {
     if (callback(focusedEmbeddedActivityParticipant)) {
       if (null == stateFromStores) {
-        return tmp2(8603).OrientationType.LANDSCAPE;
+        return tmp2(8618).OrientationType.LANDSCAPE;
       }
     }
   }
   if (activityLockOrientation === OrientationLockState.LANDSCAPE) {
-    OrientationType = tmp2(8603).OrientationType;
+    OrientationType = tmp2(8618).OrientationType;
     let LANDSCAPE = OrientationType.LANDSCAPE;
   } else {
     LANDSCAPE = null;
     if (activityLockOrientation === tmp8.PORTRAIT) {
-      LANDSCAPE = tmp2(8603).OrientationType.PORTRAIT;
+      LANDSCAPE = tmp2(8618).OrientationType.PORTRAIT;
     }
   }
 };

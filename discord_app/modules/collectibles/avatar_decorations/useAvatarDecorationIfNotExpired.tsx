@@ -1,9 +1,9 @@
-// === Module 8107: useAvatarDecorationIfNotExpired ===
+// === Module 8115: useAvatarDecorationIfNotExpired ===
 
-// Module 8107 (useAvatarDecorationIfNotExpired)
+// Module 8115 (useAvatarDecorationIfNotExpired)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
-import { MAX_TIMEOUT_MS } from "ME" /* 676 */;
+import { MAX_TIMEOUT_MS } from "ME" /* 673 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/collectibles/avatar_decorations/useAvatarDecorationIfNotExpired.tsx");

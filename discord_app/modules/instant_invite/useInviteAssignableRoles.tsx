@@ -1,12 +1,12 @@
-// === Module 17381: useInviteAssignableRoles ===
+// === Module 17617: useInviteAssignableRoles ===
 
-// Module 17381 (useInviteAssignableRoles)
+// Module 17617 (useInviteAssignableRoles)
 import closure_3 from "noop" /* 19 */;
-import { isEveryoneRole } from "GuildRoleRecordTypeTag" /* 1986 */;
-import closure_5 from "createGuildRoleRecordFromRust" /* 1985 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4121 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { Permissions } from "ME" /* 676 */;
+import { isEveryoneRole } from "GuildRoleRecordTypeTag" /* 1985 */;
+import closure_5 from "createGuildRoleRecordFromRust" /* 1984 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4120 */;
+import closure_7 from "mergeGuildAvatar" /* 1921 */;
+import { Permissions } from "ME" /* 673 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/instant_invite/useInviteAssignableRoles.tsx");

@@ -1,14 +1,14 @@
-// === Module 16710: VoicePanelHeaderChatButton ===
+// === Module 16945: VoicePanelHeaderChatButton ===
 
-// Module 16710 (VoicePanelHeaderChatButton)
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ChatIcon from "ChatIcon" /* 5020 */;
-import setDefault from "set" /* 6006 */;
-import _modDef16616 from "module_16616" /* 16616 */;
-import useChatBadgeDefault from "useChatBadge" /* 16711 */;
+// Module 16945 (VoicePanelHeaderChatButton)
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import ChatIcon from "ChatIcon" /* 5024 */;
+import setDefault from "set" /* 6014 */;
+import _modDef16851 from "module_16851" /* 16851 */;
+import useChatBadgeDefault from "useChatBadge" /* 16946 */;
 import closure_3 from "noop" /* 19 */;
-import { ComponentActions } from "ME" /* 676 */;
+import { ComponentActions } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -37,7 +37,7 @@ export default function VoicePanelHeaderChatButton(channelId) {
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t["5KxXrK"]);
   obj[2] = callback;
-  const children = [callback(_modDef16616, obj), ];
+  const children = [callback(_modDef16851, obj), ];
   let tmp8Result = null != tmp5;
   if (tmp8Result) {
     obj = { style: null, children: null };
@@ -46,9 +46,9 @@ export default function VoicePanelHeaderChatButton(channelId) {
     const items1 = [, ];
     ({ badge: arr2[0], notificationBadge: arr2[1] } = tmp);
     obj1[0] = items1;
-    obj[1] = tmp8(tmp3(6006), obj1);
-    tmp8Result = tmp8(tmp3(6006), obj);
-    const tmp3Result = tmp3(6006);
+    obj[1] = tmp8(tmp3(6014), obj1);
+    tmp8Result = tmp8(tmp3(6014), obj);
+    const tmp3Result = tmp3(6014);
   }
   children[1] = tmp8Result;
   return tmp6(tmp7, { children });

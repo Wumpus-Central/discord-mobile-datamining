@@ -1,6 +1,6 @@
-// === Module 15215: useToggleDismissibleContentDismissState ===
+// === Module 15444: useToggleDismissibleContentDismissState ===
 
-// Module 15215 (useToggleDismissibleContentDismissState)
+// Module 15444 (useToggleDismissibleContentDismissState)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
 import closure_4 from "handleConnectionOpen" /* 4299 */;
@@ -10,10 +10,10 @@ let result = set.fileFinishedImporting("modules/dismissible_content/utils/toggle
 
 export default function useToggleDismissibleContentDismissState(APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER) {
   const _require = APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER;
-  let obj = _require(589);
+  let obj = _require(586);
   const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => guildId.getGuildId());
-  obj = { cooldownDurationMs: stateFromStores(687).Millis.WEEK, guildId: stateFromStores };
+  obj = { cooldownDurationMs: stateFromStores(684).Millis.WEEK, guildId: stateFromStores };
   let result = _require(4298).useIsDismissibleContentDismissed_UNSAFE(APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER, obj);
   dependencyMap = result;
   const items1 = [APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER, stateFromStores, result];

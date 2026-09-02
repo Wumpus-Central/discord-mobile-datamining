@@ -1,18 +1,18 @@
-// === Module 16350: handleFindFriends ===
+// === Module 16582: handleFindFriends ===
 
-// Module 16350 (handleFindFriends)
-import ThemesDefault from "Themes" /* 712 */;
-import handleNameInputScreenOrSuggestions from "handleNameInputScreenOrSuggestions" /* 12214 */;
+// Module 16582 (handleFindFriends)
+import ThemesDefault from "Themes" /* 709 */;
+import handleNameInputScreenOrSuggestions from "handleNameInputScreenOrSuggestions" /* 12438 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "recountRelationshipTypes" /* 7403 */;
+import closure_8 from "recountRelationshipTypes" /* 7412 */;
 import closure_9 from "markAllUserIdListsStale" /* 4130 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import { Sections } from "SuggestedFriendSource" /* 12237 */;
-import ME from "ME" /* 676 */;
-import { ContactPermissions } from "ContactSyncLandingPage" /* 12216 */;
+import closure_10 from "mergeGuildAvatar" /* 1921 */;
+import { Sections } from "SuggestedFriendSource" /* 12461 */;
+import ME from "ME" /* 673 */;
+import { ContactPermissions } from "ContactSyncLandingPage" /* 12440 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -78,8 +78,8 @@ function _handleShare() {
           } else if (1 === tmp7) {
             c4 = 0;
             obj1 = callback(4193);
-            const intl = callback(1236).intl;
-            obj1.presentError(intl.string(callback(1236).t.R0RpRX));
+            const intl = callback(1233).intl;
+            obj1.presentError(intl.string(callback(1233).t.R0RpRX));
             c6 = 3;
             const obj2 = { value: null, done: true };
             obj2[0] = undefined;
@@ -98,10 +98,10 @@ function _handleShare() {
             c4 = 0;
             obj3 = { channel: null, code: null, message: null, location: null };
             obj3[1] = code;
-            const intl2 = callback(1236).intl;
+            const intl2 = callback(1233).intl;
             const obj4 = { link: null };
-            obj4[0] = code(7503)(code);
-            obj3[2] = intl2.formatToPlainString(callback(1236).t.PJf9P9, obj4);
+            obj4[0] = code(7513)(code);
+            obj3[2] = intl2.formatToPlainString(callback(1233).t.PJf9P9, obj4);
             obj3[3] = constants.ADD_FRIENDS_MODAL;
             callback(obj3);
             c6 = 3;

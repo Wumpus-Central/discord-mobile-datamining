@@ -1,8 +1,8 @@
-// === Module 11716: getItemSubtitleForMaxPlayers ===
+// === Module 11939: getItemSubtitleForMaxPlayers ===
 
-// Module 11716 (getItemSubtitleForMaxPlayers)
+// Module 11939 (getItemSubtitleForMaxPlayers)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 
 const result = set.fileFinishedImporting("modules/activities/utils/getItemSubtitleForMaxPlayers.tsx");
 

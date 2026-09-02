@@ -1,10 +1,10 @@
-// === Module 15259: DevToolsProfilingScreen ===
+// === Module 15488: DevToolsProfilingScreen ===
 
-// Module 15259 (DevToolsProfilingScreen)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 15488 (DevToolsProfilingScreen)
+import ThemesDefault from "Themes" /* 709 */;
 import Stack from "Stack" /* 4926 */;
-import addValue from "addValue" /* 10277 */;
-import DevToolsProfilingUseStateFromStores from "DevToolsProfilingUseStateFromStores" /* 15260 */;
+import addValue from "addValue" /* 10299 */;
+import DevToolsProfilingUseStateFromStores from "DevToolsProfilingUseStateFromStores" /* 15489 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -27,7 +27,7 @@ let result = require("set").fileFinishedImporting("modules/devtools/native/compo
 export default function DevToolsProfilingScreen() {
   [r10008, require] = componentRenderStats(React.useState(false), 2);
   const callback = React.useCallback(() => {
-    const result = closure_1_0(10277).clearComponentRenderStats();
+    const result = closure_1_0(10299).clearComponentRenderStats();
     callback(true);
   }, []);
   const tmp3 = callback();
@@ -41,14 +41,14 @@ export default function DevToolsProfilingScreen() {
     obj1 = { title: "Component Profiler", hasIcons: false, children: null };
     const obj2 = { variant: "danger", arrow: true, label: "Reset Stats", onPress: null };
     obj2[3] = callback;
-    obj1[2] = tmp8(tmp4(5599).TableRow, obj2);
-    let items = [tmp8(tmp4(5992).TableRowGroup, obj1), ];
+    obj1[2] = tmp8(tmp4(5607).TableRow, obj2);
+    let items = [tmp8(tmp4(6000).TableRowGroup, obj1), ];
     const _Object = Object;
     const keys = Object.keys(componentRenderStats);
     items[1] = keys.map((arg0) => {
       ({ mount, update, nestedUpdate } = componentRenderStats[arg0]);
       let items = [{ stat: mount, label: "Mount" }, { stat: update, label: "Update" }, { stat: nestedUpdate, label: "Nested Update" }];
-      return closure_1_5(closure_1_0(5992).TableRowGroup, {
+      return closure_1_5(closure_1_0(6000).TableRowGroup, {
         title: "Component Profiler Target: '" + arg0 + "'",
         hasIcons: false,
         children: items.map((stat) => {
@@ -75,8 +75,8 @@ export default function DevToolsProfilingScreen() {
     const items1 = ["Make sure you wrap your component in ", tmp8(tmp4(4474).Text, obj6), " to enable measurements."];
     obj5[2] = items1;
     obj4[1] = tmp10(tmp4(4474).Text, obj5);
-    obj3[2] = tmp8(tmp4(5599).TableRow, obj4);
-    tmp8Result = tmp8(tmp4(5992).TableRowGroup, obj3);
+    obj3[2] = tmp8(tmp4(5607).TableRow, obj4);
+    tmp8Result = tmp8(tmp4(6000).TableRowGroup, obj3);
   }
   const obj7 = { spacing: 16, children: null };
   const items2 = [tmp8Result, closure_5(DevToolsProfilingUseStateFromStores.DevToolsProfilingUseStateFromStores, {})];

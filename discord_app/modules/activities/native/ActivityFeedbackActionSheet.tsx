@@ -1,12 +1,12 @@
-// === Module 16935: ActivityFeedbackReasons ===
+// === Module 17171: ActivityFeedbackReasons ===
 
-// Module 16935 (ActivityFeedbackReasons)
+// Module 17171 (ActivityFeedbackReasons)
 import noopAll from "noop" /* 19 */;
-import closeActionSheetDefault from "closeActionSheet" /* 11232 */;
-import getActivityReportOptionsDefault from "getActivityReportOptions" /* 16936 */;
+import closeActionSheetDefault from "closeActionSheet" /* 11455 */;
+import getActivityReportOptionsDefault from "getActivityReportOptions" /* 17172 */;
 import { ActivityFeedbackReasons } from "items3" /* 4506 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { FeedbackType } from "FeedbackRating" /* 11211 */;
+import { AnalyticEvents } from "ME" /* 673 */;
+import { FeedbackType } from "FeedbackRating" /* 11434 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -25,13 +25,13 @@ export default function ActivityFeedbackActionSheet(activityApplication) {
   }
   let obj = { headerLabel: null, showHeaderCloseButton: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, feedbackReasons: null, otherKey: null, trackOpen: null, trackReport: null };
   const tmp2 = getActivityReportOptionsDefault(true, true === prop);
-  const intl = activityApplication(1236).intl;
+  const intl = activityApplication(1233).intl;
   obj = { applicationName: activityApplication.name };
-  obj[0] = intl.formatToPlainString(activityApplication(1236).t.QXYwoD, obj);
-  const intl2 = activityApplication(1236).intl;
-  obj[2] = intl2.string(activityApplication(1236).t["9hk2KF"]);
-  const intl3 = activityApplication(1236).intl;
-  obj[3] = intl3.string(activityApplication(1236).t.g1q5fr);
+  obj[0] = intl.formatToPlainString(activityApplication(1233).t.QXYwoD, obj);
+  const intl2 = activityApplication(1233).intl;
+  obj[2] = intl2.string(activityApplication(1233).t["9hk2KF"]);
+  const intl3 = activityApplication(1233).intl;
+  obj[3] = intl3.string(activityApplication(1233).t.g1q5fr);
   obj[4] = tmp2;
   obj[5] = items;
   obj[6] = ActivityFeedbackReasons.OTHER;

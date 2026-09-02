@@ -1,8 +1,8 @@
-// === Module 16582: useExternalPIPEnabler ===
+// === Module 16817: useExternalPIPEnabler ===
 
-// Module 16582 (useExternalPIPEnabler)
+// Module 16817 (useExternalPIPEnabler)
 import closure_2 from "getParticipants" /* 4494 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "fetchFingerprint" /* 1215 */;
 import closure_4 from "createRTCConnection" /* 4554 */;
 
 const require = arg1;
@@ -12,7 +12,7 @@ export default function useExternalPIPEnabler(disabled) {
   disabled = disabled.disabled;
   const items = [closure_2, closure_4, closure_3];
   const items1 = [disabled];
-  return disabled(589).useStateFromStoresObject(items, () => {
+  return disabled(586).useStateFromStoresObject(items, () => {
     const channelId = closure_1_4.getChannelId();
     if (null != channelId) {
       if (!disabled) {

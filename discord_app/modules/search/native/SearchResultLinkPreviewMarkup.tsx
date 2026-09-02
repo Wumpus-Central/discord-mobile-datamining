@@ -1,10 +1,10 @@
-// === Module 16259: NativeSearchResultLinkPreviewParser ===
+// === Module 16491: NativeSearchResultLinkPreviewParser ===
 
-// Module 16259 (NativeSearchResultLinkPreviewParser)
+// Module 16491 (NativeSearchResultLinkPreviewParser)
 import parseLinkDefault from "parseLink" /* 4951 */;
 import importDefaultResult from "combineMarkupRules" /* 4950 */;
-import createSearchResultLinkPreviewReactRules from "createSearchResultLinkPreviewReactRules" /* 16260 */;
-import importAllResult from "reactParserFor" /* 7896 */;
+import createSearchResultLinkPreviewReactRules from "createSearchResultLinkPreviewReactRules" /* 16492 */;
+import importAllResult from "reactParserFor" /* 7905 */;
 
 const items = [parseLinkDefault.NATIVE_SEARCH_RESULT_LINK_RULES, ];
 items[1] = require("createSearchResultLinkPreviewReactRules").createSearchResultLinkPreviewReactRules();

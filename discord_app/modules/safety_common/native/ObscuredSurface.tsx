@@ -1,11 +1,11 @@
-// === Module 8837: ObscuredSurface ===
+// === Module 8852: ObscuredSurface ===
 
-// Module 8837 (ObscuredSurface)
+// Module 8852 (ObscuredSurface)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import Text from "Text" /* 4474 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 5030 */;
-import context from "context" /* 8838 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 5034 */;
+import context from "context" /* 8853 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -43,15 +43,15 @@ export default function ObscuredSurface(obscured) {
     obj3[1] = ThemesDefault.colors.TEXT_DEFAULT;
     const items1 = [callback(ImageWarningIcon.ImageWarningIcon, obj3), , ];
     if (heading == null) {
-      const intl = tmp4(1236).intl;
-      heading = intl.string(tmp4(1236).t.xC8Saf);
+      const intl = tmp4(1233).intl;
+      heading = intl.string(tmp4(1233).t.xC8Saf);
     }
     const obj4 = { variant: "heading-md/semibold", color: "text-strong", children: null };
     obj4[2] = heading;
     items1[1] = callback(Text.Text, obj4);
     if (description == null) {
-      const intl2 = tmp4(1236).intl;
-      description = intl2.string(tmp4(1236).t["0fc/DG"]);
+      const intl2 = tmp4(1233).intl;
+      description = intl2.string(tmp4(1233).t["0fc/DG"]);
     }
     const obj5 = { variant: "text-sm/normal", color: "text-muted", children: null };
     obj5[2] = description;

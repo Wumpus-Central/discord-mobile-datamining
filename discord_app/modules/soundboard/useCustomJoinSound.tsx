@@ -1,7 +1,7 @@
-// === Module 6218: CustomSoundType ===
+// === Module 6227: CustomSoundType ===
 
-// Module 6218 (CustomSoundType)
-import closure_2 from "handleConnectionClosedOrResumed" /* 1340 */;
+// Module 6227 (CustomSoundType)
+import closure_2 from "handleConnectionClosedOrResumed" /* 1339 */;
 import { CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID as closure_3 } from "MAX_LENGTH_SOUND_NAME" /* 4967 */;
 
 const require = arg1;
@@ -12,7 +12,7 @@ export const CustomSoundType = obj;
 export const useCustomJoinSound = function useCustomJoinSound(arg0) {
   const _require = arg0;
   const items = [closure_2];
-  return _require(589).useStateFromStores(items, () => {
+  return _require(586).useStateFromStores(items, () => {
     let guilds = closure_1_2.settings.guilds;
     guilds = undefined;
     if (guilds != null) {

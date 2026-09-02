@@ -1,8 +1,8 @@
-// === Module 8112: prototype ===
+// === Module 8120: prototype ===
 
-// Module 8112 (prototype)
-import initializeDefault from "initialize" /* 5486 */;
-import closure_0 from "handleConnectionOpen" /* 1981 */;
+// Module 8120 (prototype)
+import initializeDefault from "initialize" /* 5494 */;
+import closure_0 from "handleConnectionOpen" /* 1980 */;
 
 initializeDefault;
 let prototype = function VideoBackgroundManager() {

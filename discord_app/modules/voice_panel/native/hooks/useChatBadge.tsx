@@ -1,6 +1,6 @@
-// === Module 16711: useChatBadge ===
+// === Module 16946: useChatBadge ===
 
-// Module 16711 (useChatBadge)
+// Module 16946 (useChatBadge)
 import closure_2 from "generateOldThreadCutoff" /* 4493 */;
 
 const require = arg1;
@@ -9,7 +9,7 @@ const result = require("set").fileFinishedImporting("modules/voice_panel/native/
 export default function useChatBadge(arg0) {
   const _require = arg0;
   const items = [closure_2];
-  return _require(589).useStateFromStores(items, () => {
+  return _require(586).useStateFromStores(items, () => {
     let str = "mention";
     if (closure_1_2.getMentionCount(closure_0) <= 0) {
       let str2 = null;

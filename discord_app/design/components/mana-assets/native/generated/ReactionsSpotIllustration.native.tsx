@@ -1,10 +1,10 @@
-// === Module 6935: ReactionsSpotIllustration ===
+// === Module 6944: ReactionsSpotIllustration ===
 
-// Module 6935 (ReactionsSpotIllustration)
+// Module 6944 (ReactionsSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5493 */;
-import metadataDefault from "metadata" /* 6936 */;
+import preloadDefault from "preload" /* 5501 */;
+import metadataDefault from "metadata" /* 6945 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ReactionsSpotIllustration.native.tsx");

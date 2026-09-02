@@ -1,10 +1,10 @@
-// === Module 14426: useExplicitContentSettingOrDefault ===
+// === Module 14649: useExplicitContentSettingOrDefault ===
 
-// Module 14426 (useExplicitContentSettingOrDefault)
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import resolveExplicitContentSettingWithDefaults from "resolveExplicitContentSettingWithDefaults" /* 6144 */;
-import resolveGoreSettingWithDefaults from "resolveGoreSettingWithDefaults" /* 6146 */;
-import closure_2 from "handleConnectionClosedOrResumed" /* 1340 */;
+// Module 14649 (useExplicitContentSettingOrDefault)
+import defaultAreStatesEqual from "defaultAreStatesEqual" /* 644 */;
+import resolveExplicitContentSettingWithDefaults from "resolveExplicitContentSettingWithDefaults" /* 6152 */;
+import resolveGoreSettingWithDefaults from "resolveGoreSettingWithDefaults" /* 6154 */;
+import closure_2 from "handleConnectionClosedOrResumed" /* 1339 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/hooks/useExplicitContentSettingsOrDefault.tsx");
@@ -29,13 +29,13 @@ export const useExplicitContentSettingOrDefault = function useExplicitContentSet
     prop = stateFromStoresObject.explicitContentGuilds;
   }
   obj = { explicitContentGuilds: resolveExplicitContentSettingWithDefaults.resolveExplicitContentSettingWithDefaults({ setting: prop }), explicitContentNonFriendDm: null, explicitContentFriendDm: null };
-  let tmpResult = tmp(6144);
+  let tmpResult = tmp(6152);
   let prop1;
   if (stateFromStoresObject != null) {
     prop1 = stateFromStoresObject.explicitContentNonFriendDm;
   }
   obj[1] = tmpResult.resolveExplicitContentSettingWithDefaults({ setting: prop1, isDm: true });
-  tmpResult = tmp(6144);
+  tmpResult = tmp(6152);
   let prop2;
   if (stateFromStoresObject != null) {
     prop2 = stateFromStoresObject.explicitContentFriendDm;
@@ -63,13 +63,13 @@ export const useGoreContentSettingOrDefault = function useGoreContentSettingOrDe
     goreContentGuilds = stateFromStoresObject.goreContentGuilds;
   }
   obj = { goreContentGuilds: resolveGoreSettingWithDefaults.resolveGoreSettingWithDefaults({ setting: goreContentGuilds }), goreContentNonFriendDm: null, goreContentFriendDm: null };
-  let tmpResult = tmp(6146);
+  let tmpResult = tmp(6154);
   let prop;
   if (stateFromStoresObject != null) {
     prop = stateFromStoresObject.goreContentNonFriendDm;
   }
   obj[1] = tmpResult.resolveGoreSettingWithDefaults({ setting: prop, isDm: true });
-  tmpResult = tmp(6146);
+  tmpResult = tmp(6154);
   let goreContentFriendDm;
   if (stateFromStoresObject != null) {
     goreContentFriendDm = stateFromStoresObject.goreContentFriendDm;

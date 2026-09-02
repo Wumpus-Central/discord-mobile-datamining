@@ -1,11 +1,11 @@
-// === Module 14307: EditGuildIdentityAvatar ===
+// === Module 14530: EditGuildIdentityAvatar ===
 
-// Module 14307 (EditGuildIdentityAvatar)
+// Module 14530 (EditGuildIdentityAvatar)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "trackCommunicationDisabled" /* 1992 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { PremiumUpsellTypes } from "GuildFeatures" /* 1924 */;
+import closure_4 from "trackCommunicationDisabled" /* 1991 */;
+import closure_5 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
+import { PremiumUpsellTypes } from "GuildFeatures" /* 1923 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

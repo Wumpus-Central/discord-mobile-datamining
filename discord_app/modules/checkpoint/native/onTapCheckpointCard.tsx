@@ -1,10 +1,10 @@
-// === Module 11512: onTapCheckpointCard ===
+// === Module 11735: onTapCheckpointCard ===
 
-// Module 11512 (onTapCheckpointCard)
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+// Module 11735 (onTapCheckpointCard)
+import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4700 */;
-import closure_3 from "ensureGuildLoaded" /* 1387 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import closure_3 from "ensureGuildLoaded" /* 1386 */;
+import { AnalyticEvents } from "ME" /* 673 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/checkpoint/native/onTapCheckpointCard.tsx");

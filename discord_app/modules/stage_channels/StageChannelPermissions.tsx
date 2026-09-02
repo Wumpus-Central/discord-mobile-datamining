@@ -1,8 +1,8 @@
-// === Module 1395: Permissions ===
+// === Module 1394: Permissions ===
 
-// Module 1395 (Permissions)
-import ME from "ME" /* 676 */;
-import importAllResult from "fromString" /* 506 */;
+// Module 1394 (Permissions)
+import ME from "ME" /* 673 */;
+import importAllResult from "fromString" /* 503 */;
 import set from "set" /* 2 */;
 
 const Permissions = ME.Permissions;

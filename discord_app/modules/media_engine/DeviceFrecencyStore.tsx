@@ -2,11 +2,11 @@
 
 // Module 4557 (DeviceTypes)
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 import DEFAULT_FRECENCYDefault from "DEFAULT_FRECENCY" /* 4566 */;
 import closure_2 from "_detectH265HardwareDecode" /* 4529 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "mergeGuildAvatar" /* 1921 */;
 import DesktopSources from "DesktopSources" /* 4542 */;
 
 const DeviceTypes = DesktopSources.DeviceTypes;

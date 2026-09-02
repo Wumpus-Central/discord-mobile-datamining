@@ -1,9 +1,9 @@
-// === Module 17354: FormPriceTier ===
+// === Module 17590: FormPriceTier ===
 
-// Module 17354 (FormPriceTier)
+// Module 17590 (FormPriceTier)
 import noopAll from "noop" /* 19 */;
-import usePriceTiers from "usePriceTiers" /* 17313 */;
-import { CurrencyCodes } from "ME" /* 676 */;
+import usePriceTiers from "usePriceTiers" /* 17549 */;
+import { CurrencyCodes } from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

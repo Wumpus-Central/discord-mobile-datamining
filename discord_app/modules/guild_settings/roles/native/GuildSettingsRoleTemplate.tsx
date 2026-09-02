@@ -1,19 +1,19 @@
-// === Module 17197: GuildSettingsRoleTemplate ===
+// === Module 17433: GuildSettingsRoleTemplate ===
 
-// Module 17197 (GuildSettingsRoleTemplate)
-import ThemesDefault from "Themes" /* 712 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
+// Module 17433 (GuildSettingsRoleTemplate)
+import ThemesDefault from "Themes" /* 709 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1492 */;
 import SCREEN_READER_ENABLED_GETTER from "SCREEN_READER_ENABLED_GETTER" /* 4915 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7718 */;
-import _modDef8381 from "module_8381" /* 8381 */;
-import PaginationDefault from "Pagination" /* 10532 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7727 */;
+import _modDef8390 from "module_8390" /* 8390 */;
+import PaginationDefault from "Pagination" /* 10753 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_8 from "createGuildRecordFromRust" /* 1909 */;
-import title from "title" /* 17193 */;
-import ME from "ME" /* 676 */;
+import closure_8 from "createGuildRecordFromRust" /* 1908 */;
+import title from "title" /* 17429 */;
+import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -144,8 +144,8 @@ export default function GuildSettingsRoleTemplate(arg0) {
   obj = { ref, style: tmp.container, children: null };
   obj1 = { style: tmp.sliderContainer, children: null };
   tmp4 = useIsWindowLargeDefault();
-  let items2 = [callback2(ref1, { accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: callback2(_modDef8381, obj3) }), ];
-  let obj2 = { accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: callback2(_modDef8381, obj3) };
+  let items2 = [callback2(ref1, { accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: callback2(_modDef8390, obj3) }), ];
+  let obj2 = { accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: callback2(_modDef8390, obj3) };
   items2[1] = callback2(ref1, {
     style: tmp.sliderLabels,
     children: values.map((title) => {

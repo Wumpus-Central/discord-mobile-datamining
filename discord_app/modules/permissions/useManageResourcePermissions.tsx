@@ -1,13 +1,13 @@
-// === Module 9640: canManageResource ===
+// === Module 9653: canManageResource ===
 
-// Module 9640 (canManageResource)
-import fromStringAll from "fromString" /* 506 */;
+// Module 9653 (canManageResource)
+import fromStringAll from "fromString" /* 503 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4121 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import VIEW_CHANNEL from "VIEW_CHANNEL" /* 9641 */;
-import { Permissions } from "sum" /* 505 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4120 */;
+import closure_6 from "mergeGuildAvatar" /* 1921 */;
+import VIEW_CHANNEL from "VIEW_CHANNEL" /* 9654 */;
+import { Permissions } from "sum" /* 502 */;
 
 const require = arg1;
 function canManageResource(arg0, arg1, arg2, arg3) {
@@ -95,7 +95,7 @@ export const attachChannelPermissions = function attachChannelPermissions(channe
 };
 export const useManageResourcePermissions = function useManageResourcePermissions(channel) {
   const _require = channel;
-  let obj = _require(1426);
+  let obj = _require(1425);
   if (obj.isGuildRecord(channel)) {
     let items = [, ];
     ({ CREATE_EVENTS: arr3[0], MANAGE_EVENTS: arr3[1] } = Permissions);
@@ -117,7 +117,7 @@ export const useManageResourcePermissions = function useManageResourcePermission
     const obj3 = fromStringAll;
   }
   [importAll, dependencyMap] = first(items2, 2);
-  let tmpResult = tmp(589);
+  let tmpResult = tmp(586);
   const items3 = [closure_5];
   const tmp10 = first(tmpResult.useStateFromStoresArray(items3, () => {
     const items = [closure_5.can(closure_1_10.CREATE_GUILD_EXPRESSIONS, closure_0), closure_5.can(closure_1_10.MANAGE_GUILD_EXPRESSIONS, closure_0), closure_5.can(closure_1, closure_0), closure_5.can(closure_2, closure_0)];
@@ -127,7 +127,7 @@ export const useManageResourcePermissions = function useManageResourcePermission
   const React = tmp12;
   closure_5 = tmp13;
   closure_6 = tmp14;
-  tmpResult = tmp(589);
+  tmpResult = tmp(586);
   const items4 = [closure_6];
   stateFromStores = tmpResult.useStateFromStores(items4, () => currentUser.getCurrentUser());
   const items5 = [first, tmp10[1], stateFromStores];

@@ -1,12 +1,12 @@
-// === Module 15696: useFavoritesGuildCategoryFullNotice ===
+// === Module 15927: useFavoritesGuildCategoryFullNotice ===
 
-// Module 15696 (useFavoritesGuildCategoryFullNotice)
-import initialize from "initialize" /* 589 */;
-import messagesProxyDefault from "messagesProxy" /* 3179 */;
-import useFavoritesAccess from "useFavoritesAccess" /* 10307 */;
-import closure_3 from "initializeFromUserSettings" /* 1390 */;
-import { FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME as closure_4 } from "date" /* 1425 */;
-import { ChannelTypes } from "ME" /* 676 */;
+// Module 15927 (useFavoritesGuildCategoryFullNotice)
+import initialize from "initialize" /* 586 */;
+import messagesProxyDefault from "messagesProxy" /* 3178 */;
+import useFavoritesAccess from "useFavoritesAccess" /* 10329 */;
+import closure_3 from "initializeFromUserSettings" /* 1389 */;
+import { FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME as closure_4 } from "date" /* 1424 */;
+import { ChannelTypes } from "ME" /* 673 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildCategoryFullNotice.tsx");
@@ -30,16 +30,16 @@ export default function useFavoritesGuildCategoryFullNotice(getGuildId, str) {
             tmp6 = null;
             if (formatted === closure_4.toLowerCase()) {
               obj = { label: null, tooltip: null };
-              const intl = tmp(1236).intl;
+              const intl = tmp(1233).intl;
               obj[0] = intl.string(messagesProxyDefault.WsUrMD);
-              const intl2 = tmp(1236).intl;
+              const intl2 = tmp(1233).intl;
               obj[1] = intl2.string(messagesProxyDefault.dW9Kov);
               tmp6 = obj;
             }
             str = str.trim();
           }
         }
-        tmpResult = tmp(1912);
+        tmpResult = tmp(1911);
       }
     }
   }

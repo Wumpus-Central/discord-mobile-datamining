@@ -1,8 +1,8 @@
-// === Module 11157: categoryCollapse ===
+// === Module 11378: categoryCollapse ===
 
-// Module 11157 (categoryCollapse)
+// Module 11378 (categoryCollapse)
 import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 const result = set.fileFinishedImporting("actions/CategoryCollapseActionCreators.tsx");
 

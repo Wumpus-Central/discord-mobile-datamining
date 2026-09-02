@@ -1,9 +1,9 @@
-// === Module 1997: _setAppLocale ===
+// === Module 1996: _setAppLocale ===
 
-// Module 1997 (_setAppLocale)
-import codeDefault from "code" /* 1998 */;
+// Module 1996 (_setAppLocale)
+import codeDefault from "code" /* 1997 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import identity from "identity" /* 700 */;
+import identity from "identity" /* 697 */;
 
 const require = arg1;
 function _setAppLocale() {
@@ -78,7 +78,7 @@ function _setAppLocale() {
                         c1 = 1;
                         dependencyMap = 1;
                         obj1 = { value: null, done: false };
-                        obj1[0] = closure_1_0(2008).preloadAllIntlMessageFiles();
+                        obj1[0] = closure_1_0(2007).preloadAllIntlMessageFiles();
                         return obj1;
                       }
                     } else if (1 === tmp4) {
@@ -91,7 +91,7 @@ function _setAppLocale() {
                         obj2[0] = arg1;
                         return obj2;
                       } else {
-                        obj1 = closure_1_0(1274);
+                        obj1 = closure_1_0(1273);
                         c1 = 2;
                         dependencyMap = 1;
                         const obj3 = { value: null, done: false };
@@ -430,19 +430,19 @@ function _setMomentLocale() {
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_0 = arg0;
   importDefault = arg1;
-  let obj = { isLoading: false, inProgressLocale: "Boolean", error: "accessible", localeData: false, setLoadingStarted: false, setLoadingSucceeded: false, setLoadingFailed: false, setLocaleData: false };
+  let obj = { isLoading: false, inProgressLocale: "Boolean", error: "call", localeData: "ip", setLoadingStarted: "Array", setLoadingSucceeded: "isArray", setLoadingFailed: "isArray", setLocaleData: "isArray" };
   obj[3] = codeDefault;
   obj[4] = function setLoadingStarted(closure_0) {
     return callback({ isLoading: true, inProgressLocale: closure_0 });
   };
   obj[5] = function setLoadingSucceeded(closure_0) {
     if (callback2().inProgressLocale === closure_0) {
-      callback({ isLoading: false, inProgressLocale: "Boolean", error: "accessible" });
+      callback({ isLoading: false, inProgressLocale: "Boolean", error: "call" });
     }
   };
   obj[6] = function setLoadingFailed(arg0, closure_0) {
     if (callback2().inProgressLocale === closure_0) {
-      const obj = { isLoading: false, inProgressLocale: "Array", error: "a" };
+      const obj = { isLoading: false, inProgressLocale: "Array", error: 0 };
       obj[2] = arg0;
       callback(obj);
     }

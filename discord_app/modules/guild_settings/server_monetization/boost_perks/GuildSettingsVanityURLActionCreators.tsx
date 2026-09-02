@@ -1,10 +1,10 @@
-// === Module 9733: fetchVanityUrl ===
+// === Module 9755: fetchVanityUrl ===
 
-// Module 9733 (fetchVanityUrl)
+// Module 9755 (fetchVanityUrl)
 import set from "set" /* 2 */;
-import sendRequest from "sendRequest" /* 530 */;
-import ME from "ME" /* 676 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import sendRequest from "sendRequest" /* 527 */;
+import ME from "ME" /* 673 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 const Endpoints = ME.Endpoints;
 const result = set.fileFinishedImporting("modules/guild_settings/server_monetization/boost_perks/GuildSettingsVanityURLActionCreators.tsx");
@@ -27,11 +27,11 @@ export const setCode = function setCode(code) {
 };
 export const saveCode = function saveCode(id, code) {
   const _require = arg2;
-  const HTTP = _require(530).HTTP;
+  const HTTP = _require(527).HTTP;
   obj = { url: Endpoints.GUILD_VANITY_URL(id), body: obj, oldFormErrors: true, rejectWithError: null };
   obj = { code };
-  obj[3] = _require(530).rejectWithMigratedError();
-  const obj3 = _require(530);
+  obj[3] = _require(527).rejectWithMigratedError();
+  const obj3 = _require(527);
   return HTTP.patch(obj).then((body) => {
     ({ code, uses } = body.body);
     callback(table[2]).dispatch({ type: "GUILD_SETTINGS_SET_VANITY_URL", code, uses });

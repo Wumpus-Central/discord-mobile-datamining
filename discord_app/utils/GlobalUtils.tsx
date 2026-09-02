@@ -1,6 +1,6 @@
-// === Module 1471: isDiscordFrontendDevelopment ===
+// === Module 1470: isDiscordFrontendDevelopment ===
 
-// Module 1471 (isDiscordFrontendDevelopment)
+// Module 1470 (isDiscordFrontendDevelopment)
 import set2 from "set" /* 2 */;
 
 let closure_0 = "development" === window.GLOBAL_ENV.PROJECT_ENV;

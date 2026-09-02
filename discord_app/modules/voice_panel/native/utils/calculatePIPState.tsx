@@ -1,11 +1,11 @@
-// === Module 16667: calculatePIPState ===
+// === Module 16902: calculatePIPState ===
 
-// Module 16667 (calculatePIPState)
+// Module 16902 (calculatePIPState)
 import isStreamKey from "isStreamKey" /* 4544 */;
-import PIPReferenceDimensions from "PIPReferenceDimensions" /* 16668 */;
+import PIPReferenceDimensions from "PIPReferenceDimensions" /* 16903 */;
 import closure_2 from "getParticipants" /* 4494 */;
 import closure_3 from "reset" /* 4500 */;
-import { VoicePanelModes } from "VoicePanelModes" /* 11840 */;
+import { VoicePanelModes } from "VoicePanelModes" /* 12063 */;
 import { ParticipantTypes } from "ParticipantTypes" /* 4499 */;
 
 require = arg1;
@@ -64,7 +64,7 @@ export default function calculatePIPState(channelId, getTargetDimensions, lastPa
   }
   let SquarePIPReferenceDimensions = getTargetDimensions.getTargetDimensions(id1);
   if (SquarePIPReferenceDimensions == null) {
-    SquarePIPReferenceDimensions = tmp13(16668).SquarePIPReferenceDimensions;
+    SquarePIPReferenceDimensions = tmp13(16903).SquarePIPReferenceDimensions;
   }
   if (tmp10) {
     tmp10 = tmp;

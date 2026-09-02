@@ -1,12 +1,12 @@
-// === Module 12068: items ===
+// === Module 12292: items ===
 
-// Module 12068 (items)
+// Module 12292 (items)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "createGuildRecordFromRust" /* 1909 */;
+import closure_5 from "createGuildRecordFromRust" /* 1908 */;
 import closure_6 from "calculateAppliedBoosts" /* 4364 */;
 import { GUILD_POWERUP_TIER_3_OVERRIDDEN_SKUS as closure_7 } from "BoostedGuildTiers" /* 4365 */;
-import { GuildFeatures } from "ME" /* 676 */;
+import { GuildFeatures } from "ME" /* 673 */;
 
 const require = arg1;
 let obj = { skuId: require("VANITY_URL_POWERUP_SKU_ID").GUILD_POWERUP_LEVEL_1_SKU_ID, threshold: 1 };

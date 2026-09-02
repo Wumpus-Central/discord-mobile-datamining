@@ -1,13 +1,13 @@
-// === Module 12768: getApplicationsFromConfigs ===
+// === Module 12989: getApplicationsFromConfigs ===
 
-// Module 12768 (getApplicationsFromConfigs)
-import setDefault from "set" /* 687 */;
+// Module 12989 (getApplicationsFromConfigs)
+import setDefault from "set" /* 684 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "updateApplicationConfigs" /* 12767 */;
-import { FetchState } from "updateApplicationConfigs" /* 12767 */;
-import { Endpoints } from "ME" /* 676 */;
-import importDefaultResult from "fails" /* 584 */;
-import importDefaultResult1 from "dispatcher" /* 709 */;
+import closure_4 from "updateApplicationConfigs" /* 12988 */;
+import { FetchState } from "updateApplicationConfigs" /* 12988 */;
+import { Endpoints } from "ME" /* 673 */;
+import importDefaultResult from "fails" /* 581 */;
+import importDefaultResult1 from "dispatcher" /* 706 */;
 
 const require = arg1;
 function getApplicationsFromConfigs(arg0) {
@@ -80,7 +80,7 @@ function _fetchFeaturedWidgetConfigsFromApi() {
         } else if (1 === tmp7) {
           c3 = 0;
           callback = dependencyMap;
-          obj1 = callback(709);
+          obj1 = callback(706);
           obj1.dispatch({ type: "APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_FAILURE" });
           if (!closure_9.pending) {
             closure_9.fail(() => {
@@ -89,7 +89,7 @@ function _fetchFeaturedWidgetConfigsFromApi() {
               });
             });
           }
-          obj2 = callback(1208);
+          obj2 = callback(1205);
           obj2.captureException(closure_1_1);
           throw closure_1_1;
         } else if (arg0 === 1) {
@@ -106,7 +106,7 @@ function _fetchFeaturedWidgetConfigsFromApi() {
           const obj3 = { type: "APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_SUCCESS", applications: null, configs: null };
           obj3[1] = closure_0.body.applications;
           obj3[2] = closure_0.body.configs;
-          callback(709).dispatch(obj3);
+          callback(706).dispatch(obj3);
           closure_9.succeed();
           c3 = 0;
           c5 = 3;
@@ -188,9 +188,9 @@ function _fetchDeveloperWidgetConfigsFromApi() {
         } else if (1 === tmp7) {
           c3 = 0;
           callback = dependencyMap;
-          let obj3 = callback(709);
+          let obj3 = callback(706);
           obj3.dispatch({ type: "APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_FAILURE" });
-          let obj4 = callback(1208);
+          let obj4 = callback(1205);
           obj4.captureException(callback);
           throw callback;
         } else if (arg0 === 1) {
@@ -204,7 +204,7 @@ function _fetchDeveloperWidgetConfigsFromApi() {
           return obj3;
         } else {
           closure_0 = arg1;
-          obj = callback(709);
+          obj = callback(706);
           obj4 = { type: "APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_SUCCESS", applications: null, configs: null };
           obj4[1] = closure_0.body.applications;
           obj4[2] = closure_0.body.configs;
@@ -286,11 +286,11 @@ function _fetchWidgetConfigsFromApi() {
           } else if (1 === tmp7) {
             c4 = 0;
             dependencyMap = closure_3;
-            obj3 = body(709);
+            obj3 = body(706);
             const obj4 = { type: "APPLICATION_WIDGET_CONFIG_FETCH_FAILURE", applicationId: null };
             obj4[1] = callback;
             obj3.dispatch(obj4);
-            let obj5 = body(1208);
+            let obj5 = body(1205);
             obj5.captureException(dependencyMap);
             throw dependencyMap;
           } else if (arg0 === 1) {
@@ -304,7 +304,7 @@ function _fetchWidgetConfigsFromApi() {
             return obj5;
           } else {
             body = body.body;
-            obj = body(709);
+            obj = body(706);
             const obj6 = { type: "APPLICATION_WIDGET_CONFIG_FETCH_SUCCESS", applicationId: null, applications: null, configs: null };
             obj6[1] = callback;
             obj6[2] = callback2(body);

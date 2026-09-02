@@ -1,9 +1,9 @@
-// === Module 9749: getGuildEventImageURL ===
+// === Module 9771: getGuildEventImageURL ===
 
-// Module 9749 (getGuildEventImageURL)
+// Module 9771 (getGuildEventImageURL)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import handleImageLoad from "handleImageLoad" /* 1465 */;
+import ME from "ME" /* 673 */;
+import handleImageLoad from "handleImageLoad" /* 1464 */;
 
 const Endpoints = ME.Endpoints;
 let result = set.fileFinishedImporting("modules/guild_scheduled_events/utils/getGuildEventImage.tsx");

@@ -1,6 +1,6 @@
-// === Module 7907: transformSticker ===
+// === Module 7916: transformSticker ===
 
-// Module 7907 (transformSticker)
+// Module 7916 (transformSticker)
 import set from "set" /* 2 */;
 import STICKER_PICKER_TAB_PANEL_ID from "STICKER_PICKER_TAB_PANEL_ID" /* 4169 */;
 
@@ -25,9 +25,9 @@ export const transformSticker = function transformSticker(tmp5Result1) {
     str2 = "";
   }
   obj.url = str2;
-  const NativeLottieRenderMode = tmp(7908).NativeLottieRenderMode;
+  const NativeLottieRenderMode = tmp(7917).NativeLottieRenderMode;
   obj.renderMode = setting === StickerAnimationSettings.ALWAYS_ANIMATE ? NativeLottieRenderMode.LOOP : NativeLottieRenderMode.STILL;
-  tmpResult = tmp(7860);
+  tmpResult = tmp(7869);
   obj = {
     expensive() {
       const intl = tmp5Result1(closure_1_1[4]).intl;
@@ -35,10 +35,10 @@ export const transformSticker = function transformSticker(tmp5Result1) {
     },
     cheap: null
   };
-  let intl = tmp(1236).intl;
-  obj[1] = intl.string(_require(1236).t["fT+Yjp"]);
+  let intl = tmp(1233).intl;
+  obj[1] = intl.string(_require(1233).t["fT+Yjp"]);
   obj.accessibilityLabel = tmpResult.getAccessibilityLabelOrCheapFallbackUnsafe(obj);
-  const intl2 = tmp(1236).intl;
-  obj.accessibilityHint = intl2.string(_require(1236).t.GCEruV);
+  const intl2 = tmp(1233).intl;
+  obj.accessibilityHint = intl2.string(_require(1233).t.GCEruV);
   return obj;
 };

@@ -1,13 +1,13 @@
-// === Module 14799: QUEST_DOCK_EXPANDED_HEIGHT ===
+// === Module 15027: QUEST_DOCK_EXPANDED_HEIGHT ===
 
-// Module 14799 (QUEST_DOCK_EXPANDED_HEIGHT)
+// Module 15027 (QUEST_DOCK_EXPANDED_HEIGHT)
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import { QuestDockMode } from "QuestsExperimentLocations" /* 5387 */;
-import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 14696 */;
-import { VerticalGradient } from "ME" /* 676 */;
+import { QuestDockMode } from "QuestsExperimentLocations" /* 5395 */;
+import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 14922 */;
+import { VerticalGradient } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -40,10 +40,10 @@ let closure_14 = { code: "function QuestDockUnenrolledBackgroundTsx1(){const{wit
 let closure_15 = { code: "function QuestDockUnenrolledBackgroundTsx2(){const{withSpring,activeQuestDockMode,QuestDockMode,videoLoaded,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED}=this.__closure;return{opacity:withSpring(activeQuestDockMode.get()!==QuestDockMode.EXPANDED||!videoLoaded?1:0,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)};}" };
 const memoResult = importAllResult.memo(function QuestDockUnenrolledBackground() {
   let obj = activeQuestDockMode(setRestingQuestDockMode[9]);
-  const questCreative = obj.useQuestCreative();
+  const questDockQuest = obj.useQuestDockQuest();
   const tmp4 = callback2();
   obj1 = activeQuestDockMode(setRestingQuestDockMode[10]);
-  const questDockHeroAsset = obj1.useQuestDockHeroAsset(questCreative);
+  const questDockHeroAsset = obj1.useQuestDockHeroAsset(questDockQuest);
   ({ staticUrl, videoAsset } = questDockHeroAsset);
   let obj2 = importAllResult;
   const context = importAllResult.useContext(activeQuestDockMode(setRestingQuestDockMode[11]).QuestDockGestureContext);

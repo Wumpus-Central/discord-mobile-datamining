@@ -1,9 +1,9 @@
-// === Module 15470: useAuthorizedSlayerApplications ===
+// === Module 15700: useAuthorizedSlayerApplications ===
 
-// Module 15470 (useAuthorizedSlayerApplications)
+// Module 15700 (useAuthorizedSlayerApplications)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "recomputeFromAppTokens" /* 5475 */;
-import { FetchState } from "recomputeFromAppTokens" /* 5475 */;
+import closure_4 from "recomputeFromAppTokens" /* 5483 */;
+import { FetchState } from "recomputeFromAppTokens" /* 5483 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_settings/authorized_apps/useAuthorizedSlayerApplications.tsx");

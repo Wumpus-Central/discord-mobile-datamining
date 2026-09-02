@@ -1,6 +1,6 @@
-// === Module 10671: useShowUnlinkChannelAlert ===
+// === Module 10892: useShowUnlinkChannelAlert ===
 
-// Module 10671 (useShowUnlinkChannelAlert)
+// Module 10892 (useShowUnlinkChannelAlert)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 
@@ -42,15 +42,15 @@ export default function useShowUnlinkChannelAlert(arg0, arg1, arg2) {
   return React.useCallback(() => {
     let obj = callback2(4858);
     obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, confirmColor: null };
-    const intl = callback(1236).intl;
-    obj[0] = intl.string(callback(1236).t.JmUENg);
-    const intl2 = callback(1236).intl;
+    const intl = callback(1233).intl;
+    obj[0] = intl.string(callback(1233).t.JmUENg);
+    const intl2 = callback(1233).intl;
     obj = { applicationName: callback2 };
-    obj[1] = intl2.format(callback(1236).t["6l2osp"], obj);
-    const intl3 = callback(1236).intl;
-    obj[2] = intl3.string(callback(1236).t["ETE/oC"]);
-    const intl4 = callback(1236).intl;
-    obj[3] = intl4.string(callback(1236).t["cY+Oob"]);
+    obj[1] = intl2.format(callback(1233).t["6l2osp"], obj);
+    const intl3 = callback(1233).intl;
+    obj[2] = intl3.string(callback(1233).t["ETE/oC"]);
+    const intl4 = callback(1233).intl;
+    obj[3] = intl4.string(callback(1233).t["cY+Oob"]);
     obj[4] = callback;
     obj[5] = callback2(4947).Colors.RED;
     obj.show(obj);

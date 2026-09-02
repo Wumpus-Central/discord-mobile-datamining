@@ -1,7 +1,7 @@
-// === Module 13384: PremiumRewardsOrbsTreatment ===
+// === Module 13607: PremiumRewardsOrbsTreatment ===
 
-// Module 13384 (PremiumRewardsOrbsTreatment)
-import getUnitIdDefault from "getUnitId" /* 1469 */;
+// Module 13607 (PremiumRewardsOrbsTreatment)
+import getUnitIdDefault from "getUnitId" /* 1468 */;
 
 let obj = { CONTROL: "control", TREATMENT_A: "treatment_a", TREATMENT_B: "treatment_b", TREATMENT_C: "treatment_c", TREATMENT_D: "treatment_d" };
 let closure_1 = { [obj.CONTROL]: 0, [obj.TREATMENT_A]: 250, [obj.TREATMENT_B]: 500, [obj.TREATMENT_C]: 250, [obj.TREATMENT_D]: 500 };

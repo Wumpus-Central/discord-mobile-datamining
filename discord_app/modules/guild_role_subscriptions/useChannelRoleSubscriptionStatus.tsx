@@ -1,10 +1,10 @@
 // === Module 4960: getChannelRoleSubscriptionStatus ===
 
 // Module 4960 (getChannelRoleSubscriptionStatus)
-import closure_2 from "isSubscriptionGated" /* 1983 */;
-import closure_3 from "ensureGuildLoaded" /* 1387 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4121 */;
-import { Permissions } from "ME" /* 676 */;
+import closure_2 from "isSubscriptionGated" /* 1982 */;
+import closure_3 from "ensureGuildLoaded" /* 1386 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4120 */;
+import { Permissions } from "ME" /* 673 */;
 
 const require = arg1;
 function getChannelRoleSubscriptionStatus(id, closure_1_7, closure_1_6, closure_1_8) {
@@ -52,6 +52,6 @@ export default function useChannelRoleSubscriptionStatus(arg0) {
   const _require = arg0;
   const items = [closure_3, closure_2, closure_4];
   const items1 = [arg0];
-  return _require(589).useStateFromStoresObject(items, () => closure_1_7(closure_0, closure_1_3, closure_1_2, closure_1_4), items1);
+  return _require(586).useStateFromStoresObject(items, () => closure_1_7(closure_0, closure_1_3, closure_1_2, closure_1_4), items1);
 };
 export { getChannelRoleSubscriptionStatus };

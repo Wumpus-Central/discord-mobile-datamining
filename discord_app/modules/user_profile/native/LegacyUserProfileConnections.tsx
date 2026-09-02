@@ -1,15 +1,15 @@
-// === Module 11173: LegacyUserProfileConnections ===
+// === Module 11394: LegacyUserProfileConnections ===
 
-// Module 11173 (LegacyUserProfileConnections)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 11394 (LegacyUserProfileConnections)
+import ThemesDefault from "Themes" /* 709 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "_getSystemLocale" /* 1996 */;
-import closure_7 from "createdAt" /* 1935 */;
+import closure_6 from "_getSystemLocale" /* 1995 */;
+import closure_7 from "createdAt" /* 1934 */;
 import closure_8 from "initialize" /* 4323 */;
-import closure_9 from "createUserWidgetFromServer" /* 7366 */;
-import ME from "ME" /* 676 */;
-import { MetadataFields } from "OperatorTypes" /* 5352 */;
+import closure_9 from "createUserWidgetFromServer" /* 7375 */;
+import ME from "ME" /* 673 */;
+import { MetadataFields } from "OperatorTypes" /* 5360 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -354,7 +354,7 @@ class ConnectedApplicationUserRoleAccount {
             obj = { style: obj.connectedAccountPoweredByText, children: null };
             let tmp5 = null;
             if (null != applicationRoleConnection.application.bot) {
-              obj = { style: null, user: null, size: null, guildId: "a" };
+              obj = { style: null, user: null, size: null, guildId: "Array" };
               obj[0] = tmp3.connectedAccountPoweredByAvatar;
               const tmp12 = new closure_1_7(tmp4.application.bot);
               obj[1] = tmp12;
@@ -524,7 +524,7 @@ export const useAppplicationRoleConnectionItems = function useAppplicationRoleCo
   const theme = _require(4204).useThemeContext().theme;
   const obj = _require(4204);
   const items = [closure_6];
-  dependencyMap = _require(589).useStateFromStores(items, () => closure_6.locale);
+  dependencyMap = _require(586).useStateFromStores(items, () => closure_6.locale);
   return arr.map((applicationRoleConnection) => {
     obj = { children: closure_1_14(closure_1_19, obj) };
     obj = { applicationRoleConnection, theme: c1, locale: theme, style: id };

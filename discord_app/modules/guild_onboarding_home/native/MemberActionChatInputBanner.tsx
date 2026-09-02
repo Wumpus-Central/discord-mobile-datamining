@@ -1,42 +1,42 @@
-// === Module 11854: ActionChannelInfo ===
+// === Module 12077: ActionChannelInfo ===
 
-// Module 11854 (ActionChannelInfo)
-import ThemesDefault from "Themes" /* 712 */;
-import registerAssetDefault from "registerAsset" /* 11377 */;
-import newMemberActionFromServer from "newMemberActionFromServer" /* 11852 */;
-import useMemberActionsForChannel from "useMemberActionsForChannel" /* 11855 */;
+// Module 12077 (ActionChannelInfo)
+import ThemesDefault from "Themes" /* 709 */;
+import registerAssetDefault from "registerAsset" /* 11600 */;
+import newMemberActionFromServer from "newMemberActionFromServer" /* 12075 */;
+import useMemberActionsForChannel from "useMemberActionsForChannel" /* 12078 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_7 from "getEmojiToGroupId" /* 5401 */;
-import closure_8 from "ensureGuildLoaded" /* 1387 */;
-import closure_9 from "trackCommunicationDisabled" /* 1992 */;
-import { Routes } from "ME" /* 676 */;
-import { EMOJI_URL_BASE_SIZE } from "set" /* 1925 */;
+import closure_7 from "getEmojiToGroupId" /* 5409 */;
+import closure_8 from "ensureGuildLoaded" /* 1386 */;
+import closure_9 from "trackCommunicationDisabled" /* 1991 */;
+import { Routes } from "ME" /* 673 */;
+import { EMOJI_URL_BASE_SIZE } from "set" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function ActionChannelInfo(action) {
   action = action.action;
-  let obj = action(647);
+  let obj = action(644);
   const items = [closure_8];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getChannel(action.channelId));
   if (null == stateFromStores) {
     obj = { variant: "text-xxs/normal", color: "text-default", children: null };
-    const intl2 = tmp(1236).intl;
+    const intl2 = tmp(1233).intl;
     obj = { channelName: null };
-    const intl3 = tmp(1236).intl;
-    obj[0] = intl3.string(tmp(1236).t.J90oLW);
-    obj[2] = intl2.format(tmp(1236).t.MkzlDL, obj);
+    const intl3 = tmp(1233).intl;
+    obj[0] = intl3.string(tmp(1233).t.J90oLW);
+    obj[2] = intl2.format(tmp(1233).t.MkzlDL, obj);
     obj1 = obj;
   } else {
     obj1 = { variant: "text-xxs/normal", color: "text-default", children: null };
-    const intl = tmp(1236).intl;
+    const intl = tmp(1233).intl;
     const obj2 = { channelName: null };
     obj2[0] = tmp4;
-    obj1[2] = intl.format(tmp(1236).t.MkzlDL, obj2);
+    obj1[2] = intl.format(tmp(1233).t.MkzlDL, obj2);
   }
   return closure_12(action(4474).Text, obj1);
 }
@@ -45,8 +45,8 @@ function ChannelActionEmoji(emoji) {
   let id;
   const tmp = callback2();
   let obj = { style: tmp.emojiPlaceholder, children: null };
-  obj = { size: id(1297).Icon.Sizes.REFRESH_SMALL_16, source: registerAssetDefault };
-  obj[1] = callback(id(1297).Icon, obj);
+  obj = { size: id(1296).Icon.Sizes.REFRESH_SMALL_16, source: registerAssetDefault };
+  obj[1] = callback(id(1296).Icon, obj);
   const tmp6 = callback(View, obj);
   id = undefined;
   if (emoji != null) {
@@ -57,7 +57,7 @@ function ChannelActionEmoji(emoji) {
   }
   const items = [closure_7];
   const items1 = [id];
-  const stateFromStores = id(647).useStateFromStores(items, () => {
+  const stateFromStores = id(644).useStateFromStores(items, () => {
     let customEmojiById = null;
     if (null != id) {
       customEmojiById = closure_1_7.getCustomEmojiById(tmp);
@@ -68,8 +68,8 @@ function ChannelActionEmoji(emoji) {
     obj = { style: null, source: null, resizeMode: "contain" };
     obj[0] = tmp.emoji;
     obj1 = { uri: null };
-    let tmp5Result = tmp5(5493);
-    tmp5Result = tmp5(1431);
+    let tmp5Result = tmp5(5501);
+    tmp5Result = tmp5(1430);
     const obj2 = { id: null, animated: null, size: null };
     ({ id: obj10[0], animated: obj10[1] } = stateFromStores);
     obj2[2] = EMOJI_URL_BASE_SIZE;
@@ -372,10 +372,10 @@ let closure_18 = { code: "function MemberActionChatInputBannerTsx1(){const{useRe
 let closure_19 = { code: "function MemberActionChatInputBannerTsx2(){const{useReducedMotion,nextHeight,withDelay,isViewAction,completed,withTiming,DECELERATED_EASING}=this.__closure;if(useReducedMotion){return{height:nextHeight.get()};}return{height:withDelay(!isViewAction&&completed?1200:0,withTiming(nextHeight.get(),{duration:400,easing:DECELERATED_EASING}))};}" };
 const memoResult = importAllResult.memo((channel) => {
   channel = channel.channel;
-  let obj = channel(6069);
+  let obj = channel(6077);
   const canSeeOnboardingHome = obj.useCanSeeOnboardingHome(channel.guild_id);
   const items = [closure_9];
-  const stateFromStores = channel(647).useStateFromStores(items, () => {
+  const stateFromStores = channel(644).useStateFromStores(items, () => {
     const selfMember = closure_1_9.getSelfMember(channel.guild_id);
     let isPending;
     if (selfMember != null) {
@@ -383,7 +383,7 @@ const memoResult = importAllResult.memo((channel) => {
     }
     return true === isPending;
   });
-  const obj2 = channel(647);
+  const obj2 = channel(644);
   let tmp3 = null;
   if (!obj3.useAllActionsCompleted(channel.guild_id)) {
     tmp3 = null;

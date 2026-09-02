@@ -1,15 +1,15 @@
-// === Module 15633: getMessagesItemSuggestedFriendHeight ===
+// === Module 15864: getMessagesItemSuggestedFriendHeight ===
 
-// Module 15633 (getMessagesItemSuggestedFriendHeight)
-import ThemesDefault from "Themes" /* 712 */;
-import noop from "noop" /* 8105 */;
-import map from "map" /* 9088 */;
-import toNativeHorizontalOffset from "toNativeHorizontalOffset" /* 15632 */;
+// Module 15864 (getMessagesItemSuggestedFriendHeight)
+import ThemesDefault from "Themes" /* 709 */;
+import noop from "noop" /* 8113 */;
+import map from "map" /* 9102 */;
+import toNativeHorizontalOffset from "toNativeHorizontalOffset" /* 15863 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "markAllUserIdListsStale" /* 4130 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

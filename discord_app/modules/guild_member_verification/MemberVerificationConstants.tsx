@@ -1,6 +1,6 @@
-// === Module 5009: items ===
+// === Module 5012: items ===
 
-// Module 5009 (items)
+// Module 5012 (items)
 import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4302 */;
 import set from "set" /* 2 */;
 

@@ -1,9 +1,9 @@
-// === Module 12651: GameProfileGameClaimCta ===
+// === Module 12872: GameProfileGameClaimCta ===
 
-// Module 12651 (GameProfileGameClaimCta)
+// Module 12872 (GameProfileGameClaimCta)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
-import { RelativeMarketingURLs } from "ME" /* 676 */;
+import { RelativeMarketingURLs } from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -72,8 +72,8 @@ export default function GameProfileGameClaimCta(trackAction) {
   }
   if (someResult == null) {
     let obj = { variant: "secondary", size: "md", text: null, onPress: null };
-    const intl = trackAction(1236).intl;
-    obj[2] = intl.string(trackAction(1236).t["mqg+to"]);
+    const intl = trackAction(1233).intl;
+    obj[2] = intl.string(trackAction(1233).t["mqg+to"]);
     obj[3] = callback;
     let tmp3 = jsx(trackAction(4928).Button, { variant: "secondary", size: "md", text: null, onPress: null });
   } else {

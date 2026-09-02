@@ -1,12 +1,12 @@
-// === Module 12562: useOrbCheckoutModalContextProvider ===
+// === Module 12786: useOrbCheckoutModalContextProvider ===
 
-// Module 12562 (useOrbCheckoutModalContextProvider)
+// Module 12786 (useOrbCheckoutModalContextProvider)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
 import noop from "noop" /* 19 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "mergeGuildAvatar" /* 1921 */;
 import closure_7 from "addSku" /* 4527 */;
-import v1 from "v1" /* 514 */;
+import v1 from "v1" /* 511 */;
 
 function useOrbCheckoutModalContextProvider(value) {
   const skuId = value.skuId;

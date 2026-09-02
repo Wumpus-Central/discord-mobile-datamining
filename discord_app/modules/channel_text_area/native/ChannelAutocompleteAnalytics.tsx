@@ -1,9 +1,9 @@
-// === Module 11961: iOSTrackAutocompleteOpen ===
+// === Module 12185: iOSTrackAutocompleteOpen ===
 
-// Module 11961 (iOSTrackAutocompleteOpen)
+// Module 12185 (iOSTrackAutocompleteOpen)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import ME from "ME" /* 673 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4700 */;
 
 const AnalyticEvents = ME.AnalyticEvents;

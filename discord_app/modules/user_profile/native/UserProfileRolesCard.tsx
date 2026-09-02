@@ -1,12 +1,12 @@
-// === Module 5976: RoleDot ===
+// === Module 5984: RoleDot ===
 
-// Module 5976 (RoleDot)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 5984 (RoleDot)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "trackCommunicationDisabled" /* 1992 */;
-import closure_6 from "createGuildRoleRecordFromRust" /* 1985 */;
-import ME from "ME" /* 676 */;
+import closure_5 from "trackCommunicationDisabled" /* 1991 */;
+import closure_6 from "createGuildRoleRecordFromRust" /* 1984 */;
+import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -130,7 +130,7 @@ class RoleItem {
 function RolesList(guildMemberRoleIds) {
   guildMemberRoleIds = guildMemberRoleIds.guildMemberRoleIds;
   const guildId = guildMemberRoleIds.guildId;
-  let obj = guildMemberRoleIds(589);
+  let obj = guildMemberRoleIds(586);
   const items = [closure_6];
   const items1 = [guildMemberRoleIds, guildId];
   const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
@@ -159,7 +159,7 @@ let result = require("set").fileFinishedImporting("modules/user_profile/native/U
 export default function UserProfileRolesCard(userId) {
   userId = userId.userId;
   const guildId = userId.guildId;
-  let obj = userId(589);
+  let obj = userId(586);
   const items = [closure_5];
   const items1 = [userId, guildId];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getMember(guildId, userId), items1);
@@ -173,15 +173,15 @@ export default function UserProfileRolesCard(userId) {
   let tmp4 = null;
   if (0 !== roles.length) {
     obj = { title: null, style: null, children: null };
-    const intl = tmp(1236).intl;
-    obj[0] = intl.string(tmp(1236).t["LPJmL/"]);
+    const intl = tmp(1233).intl;
+    obj[0] = intl.string(tmp(1233).t["LPJmL/"]);
     obj[1] = userId.style;
     obj = { guildId: null, guildMemberRoleIds: null };
     obj[0] = guildId;
     obj[1] = roles;
     obj[2] = callback(RolesList, obj);
-    tmp4 = callback(guildId(6000), obj);
-    const tmp7 = guildId(6000);
+    tmp4 = callback(guildId(6008), obj);
+    const tmp7 = guildId(6008);
   }
   return tmp4;
 };

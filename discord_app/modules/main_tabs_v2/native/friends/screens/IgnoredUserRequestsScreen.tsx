@@ -1,11 +1,11 @@
-// === Module 16364: IgnoredUserRequestsScreen ===
+// === Module 16596: IgnoredUserRequestsScreen ===
 
-// Module 16364 (IgnoredUserRequestsScreen)
+// Module 16596 (IgnoredUserRequestsScreen)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "markAllUserIdListsStale" /* 4130 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import { UserRowModes } from "UserRowModes" /* 10632 */;
-import { RelationshipTypes } from "ME" /* 676 */;
+import closure_5 from "mergeGuildAvatar" /* 1921 */;
+import { UserRowModes } from "UserRowModes" /* 10853 */;
+import { RelationshipTypes } from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

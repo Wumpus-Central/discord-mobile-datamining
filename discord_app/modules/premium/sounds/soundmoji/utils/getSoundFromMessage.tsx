@@ -37,7 +37,7 @@ export default function getSoundFromMessage(arg0, arg1, arg2, arr) {
           type = messageReference.type;
         }
       }
-      if (type === _require(694).MessageReferenceTypes.FORWARD) {
+      if (type === _require(691).MessageReferenceTypes.FORWARD) {
         let messageSnapshots;
         if (message != null) {
           messageSnapshots = message.messageSnapshots;

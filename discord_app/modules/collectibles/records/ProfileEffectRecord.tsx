@@ -1,8 +1,8 @@
-// === Module 7293: fromServer ===
+// === Module 7302: fromServer ===
 
-// Module 7293 (fromServer)
-import fromServerDefault from "fromServer" /* 1949 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1950 */;
+// Module 7302 (fromServer)
+import fromServerDefault from "fromServer" /* 1948 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
 
 require = arg1;
 fromServerDefault;

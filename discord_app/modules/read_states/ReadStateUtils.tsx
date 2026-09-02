@@ -1,6 +1,6 @@
-// === Module 9936: getHasImportantUnread ===
+// === Module 9958: getHasImportantUnread ===
 
-// Module 9936 (getHasImportantUnread)
+// Module 9958 (getHasImportantUnread)
 import closure_2 from "generateOldThreadCutoff" /* 4493 */;
 import closure_3 from "updateUserGuildSettingsInternal" /* 4701 */;
 import { UnreadSetting } from "ReadStateTypes" /* 4702 */;
@@ -18,7 +18,7 @@ export const getHasImportantUnread = function getHasImportantUnread(channel) {
 export const useHasImportantUnread = function useHasImportantUnread(arg0) {
   const _require = arg0;
   const items = [closure_2, closure_3];
-  return _require(589).useStateFromStores(items, () => {
+  return _require(586).useStateFromStores(items, () => {
     let hasUnreadResult = closure_1_2.hasUnread(id.id);
     if (hasUnreadResult) {
       hasUnreadResult = closure_1_3.resolveUnreadSetting(id) === closure_1_4.ALL_MESSAGES;

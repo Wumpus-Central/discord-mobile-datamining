@@ -1,11 +1,11 @@
-// === Module 12173: PortalAccessibilityWorkaroundView ===
+// === Module 12397: PortalAccessibilityWorkaroundView ===
 
-// Module 12173 (PortalAccessibilityWorkaroundView)
+// Module 12397 (PortalAccessibilityWorkaroundView)
 import noopAll from "noop" /* 19 */;
-import set2 from "set" /* 500 */;
+import set2 from "set" /* 1234 */;
 import { View as _default } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import set from "set" /* 500 */;
+import set from "set" /* 1234 */;
 
 require = arg1;
 noopAll;

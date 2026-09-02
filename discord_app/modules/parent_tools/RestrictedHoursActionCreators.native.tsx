@@ -1,6 +1,6 @@
-// === Module 16871: closeRestrictedHoursModal ===
+// === Module 17107: closeRestrictedHoursModal ===
 
-// Module 16871 (closeRestrictedHoursModal)
+// Module 17107 (closeRestrictedHoursModal)
 import _modDef4723 from "module_4723" /* 4723 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 

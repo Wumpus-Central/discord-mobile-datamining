@@ -1,8 +1,8 @@
-// === Module 12107: ModalType ===
+// === Module 12331: ModalType ===
 
-// Module 12107 (ModalType)
+// Module 12331 (ModalType)
 import closure_2 from "noop" /* 19 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import { AnalyticEvents } from "ME" /* 673 */;
 
 const result = require("set").fileFinishedImporting("modules/premium/powerups/analytics/GuildPowerupAnalytics.tsx");
 

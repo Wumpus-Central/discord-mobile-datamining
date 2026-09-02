@@ -1,6 +1,6 @@
-// === Module 9740: guildEventDetailsParser ===
+// === Module 9762: guildEventDetailsParser ===
 
-// Module 9740 (guildEventDetailsParser)
+// Module 9762 (guildEventDetailsParser)
 import importDefaultResult from "get defaultRules" /* 4468 */;
 
 const reactParserForResult = importDefaultResult.reactParserFor(importDefaultResult.guildEventLocationRules);

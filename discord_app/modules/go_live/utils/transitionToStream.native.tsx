@@ -4,7 +4,7 @@
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4445 */;
 import _modDef4723 from "module_4723" /* 4723 */;
 import openChannelCallModal from "openChannelCallModal" /* 4727 */;
-import closure_3 from "ensureGuildLoaded" /* 1387 */;
+import closure_3 from "ensureGuildLoaded" /* 1386 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/go_live/utils/transitionToStream.native.tsx");

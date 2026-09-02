@@ -1,9 +1,9 @@
-// === Module 7016: metadata ===
+// === Module 7025: metadata ===
 
-// Module 7016 (metadata)
+// Module 7025 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SleepingWumpusSpotIllustration-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/988739d8750b961a28f619f63c768a41157c70cc9ce08b40f54e41b158130d59.png";
-export const metadata = { fileBytes: 50274 };
+export default "https://cdn.discordapp.com/assets/content/62130003366bf759cc6dc9b2391f43041e793c8c2705e00a7ad2a4358eafc542.png";
+export const metadata = { fileBytes: 53407 };

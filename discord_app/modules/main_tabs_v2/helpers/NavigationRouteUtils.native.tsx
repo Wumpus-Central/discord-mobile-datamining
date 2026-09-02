@@ -1,7 +1,7 @@
 // === Module 4332: coerceMainRoute ===
 
 // Module 4332 (coerceMainRoute)
-import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1500 */;
+import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1499 */;
 import getRootNavigationRef from "getRootNavigationRef" /* 4333 */;
 import enforcingDefault from "enforcing" /* 4339 */;
 import getBestActiveInput from "getBestActiveInput" /* 4340 */;
@@ -150,7 +150,7 @@ function popModal(c3, onExited) {
             items[index] = obj;
             let tmp37 = _require;
             let tmp38 = dependencyMap;
-            let CommonActions2 = _require(1500).CommonActions;
+            let CommonActions2 = _require(1499).CommonActions;
             let obj3 = {};
             let tmp39 = obj3;
             let tmp40 = rootState;
@@ -178,7 +178,7 @@ function popModal(c3, onExited) {
           flag = false;
         }
       } else if (null == onExited) {
-        const CommonActions = _require(1500).CommonActions;
+        const CommonActions = _require(1499).CommonActions;
         const obj4 = {};
         const merged5 = Object.assign(rootState);
         obj4.routes = tmp2;
@@ -235,7 +235,7 @@ export const navigateToChannel = function navigateToChannel(channelId) {
             } else {
               let combined = channelId;
               if (channelId == null) {
-                let tmpResult = tmp(514);
+                let tmpResult = tmp(511);
                 const _HermesInternal2 = HermesInternal;
                 combined = "channel-" + tmpResult.v4();
               }
@@ -257,7 +257,7 @@ export const navigateToChannel = function navigateToChannel(channelId) {
         if (null != tmp5) {
           if (tmp5.params.channelId === channelId) {
             const obj3 = {};
-            const CommonActions = tmp(1500).CommonActions;
+            const CommonActions = tmp(1499).CommonActions;
             const obj4 = { channelId: null, guildId: null, messageId: null };
             obj4[0] = channelId;
             obj4[1] = guildId;
@@ -272,7 +272,7 @@ export const navigateToChannel = function navigateToChannel(channelId) {
         obj5[0] = channelId;
         obj5[1] = guildId;
         obj5[2] = messageId;
-        tmpResult = tmp(514);
+        tmpResult = tmp(511);
         const _HermesInternal = HermesInternal;
         obj5[3] = "channel-" + tmpResult.v4();
         rootNavigationRef.navigate("channel", obj5);
@@ -331,18 +331,18 @@ export const navigateToRootTab = function navigateToRootTab(drawerOpen) {
                   tmpResult = tmp(4334);
                   obj1 = { name: "tabs", key: null, params: null };
                   const _HermesInternal = HermesInternal;
-                  obj1[1] = "tabs-" + tmp(514).v4();
+                  obj1[1] = "tabs-" + tmp(511).v4();
                   obj1[2] = obj;
                   const items = [obj1];
                   const items1 = [];
                   HermesBuiltin.arraySpread(found, HermesBuiltin.arraySpread(tmpResult.wrapRouteForRootNavigator(items), 0));
-                  let CommonActions = tmp(1500).CommonActions;
+                  let CommonActions = tmp(1499).CommonActions;
                   const obj2 = {};
                   const merged = Object.assign(rootState);
                   obj2.routes = items1;
                   obj2.index = items1.length - 1;
                   rootNavigationRef1.dispatch(CommonActions.reset(obj2));
-                  const tmpResult1 = tmp(514);
+                  const tmpResult1 = tmp(511);
                 } else {
                   rootNavigationRef1.navigate("tabs", obj, { pop: true });
                 }
@@ -388,7 +388,7 @@ export const resetToAuthRoute = function resetToAuthRoute() {
   let flag = !tmp;
   if (!tmp) {
     rootNavigationRef.dispatch(() => {
-      const CommonActions = callback(1500).CommonActions;
+      const CommonActions = callback(1499).CommonActions;
       return CommonActions.reset(callback(4334).getInitialAuthState());
     });
     flag = true;

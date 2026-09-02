@@ -1,13 +1,13 @@
-// === Module 11466: ? ===
+// === Module 11689: ? ===
 
-// Module 11466
-import dispatcherDefault from "dispatcher" /* 709 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2009 */;
+// Module 11689
+import dispatcherDefault from "dispatcher" /* 706 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2008 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4445 */;
 import _modDef4723 from "module_4723" /* 4723 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import SafetyHubView from "SafetyHubView" /* 8690 */;
-import { AGE_VERIFICATION_GET_STARTED_MODAL_KEY as closure_6 } from "set" /* 8683 */;
+import SafetyHubView from "SafetyHubView" /* 8705 */;
+import { AGE_VERIFICATION_GET_STARTED_MODAL_KEY as closure_6 } from "set" /* 8698 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -17,7 +17,7 @@ let obj = {
     obj = dispatcherDefault;
     obj.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
     obj = { classificationId, onClose };
-    ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(11467, dependencyMap.paths), closure_4, obj);
+    ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(11690, dependencyMap.paths), closure_4, obj);
   },
   openV2(arg0, onClose) {
     closure_0 = arg0;

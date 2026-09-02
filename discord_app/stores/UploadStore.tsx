@@ -1,8 +1,8 @@
-// === Module 7582: initialize ===
+// === Module 7592: initialize ===
 
-// Module 7582 (initialize)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 7592 (initialize)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 import closure_0 from "reinjectEphemerals" /* 4735 */;
 
 const re1 = /^(assets-library|ph|file):\/\//;

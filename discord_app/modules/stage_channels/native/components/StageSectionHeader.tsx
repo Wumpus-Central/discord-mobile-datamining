@@ -1,10 +1,10 @@
-// === Module 10136: StageSectionHeader ===
+// === Module 10158: StageSectionHeader ===
 
-// Module 10136 (StageSectionHeader)
+// Module 10158 (StageSectionHeader)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import _modDef4217 from "module_4217" /* 4217 */;
-import registerAssetDefault from "registerAsset" /* 5943 */;
+import registerAssetDefault from "registerAsset" /* 5951 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -58,7 +58,7 @@ export default function StageSectionHeader(collapsed) {
   }
   items1[1] = tmp5Result;
   const obj3 = { style: tmp.collapseButton, children: null };
-  const obj4 = { style: animatedStyle, children: closure_6(collapsed(1297).Icon, { source: registerAssetDefault, style: tmp.collapseIcon }) };
+  const obj4 = { style: animatedStyle, children: closure_6(collapsed(1296).Icon, { source: registerAssetDefault, style: tmp.collapseIcon }) };
   obj3[1] = closure_6(_modDef4217.View, obj4);
   items1[2] = closure_6(closure_4, obj3);
   obj1[2] = items1;

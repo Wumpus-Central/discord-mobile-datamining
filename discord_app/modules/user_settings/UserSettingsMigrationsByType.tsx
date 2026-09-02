@@ -1,8 +1,8 @@
-// === Module 1343: MAX_FAVORITES ===
+// === Module 1342: MAX_FAVORITES ===
 
-// Module 1343 (MAX_FAVORITES)
+// Module 1342 (MAX_FAVORITES)
 import set from "set" /* 2 */;
-import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
+import MAX_FAVORITES from "MAX_FAVORITES" /* 682 */;
 
 const UserSettingsTypes = MAX_FAVORITES.UserSettingsTypes;
 const result = set.fileFinishedImporting("modules/user_settings/UserSettingsMigrationsByType.tsx");

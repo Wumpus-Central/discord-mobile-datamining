@@ -1,9 +1,9 @@
-// === Module 9529: useIsActivityFocused ===
+// === Module 9542: useIsActivityFocused ===
 
-// Module 9529 (useIsActivityFocused)
-import sortKey from "sortKey" /* 9490 */;
+// Module 9542 (useIsActivityFocused)
+import sortKey from "sortKey" /* 9503 */;
 import closure_2 from "getParticipants" /* 4494 */;
-import closure_3 from "participantFromServer" /* 1386 */;
+import closure_3 from "participantFromServer" /* 1385 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/activities/useIsActivityFocused.tsx");
@@ -11,7 +11,7 @@ const result = require("set").fileFinishedImporting("modules/activities/useIsAct
 export default function useIsActivityFocused(arg0) {
   const _require = arg0;
   const items = [closure_2, closure_3];
-  return _require(589).useStateFromStores(items, () => {
+  return _require(586).useStateFromStores(items, () => {
     const selectedParticipant = closure_1_2.getSelectedParticipant(callback);
     const currentEmbeddedActivity = closure_1_3.getCurrentEmbeddedActivity();
     let tmp3 = null != selectedParticipant && null != currentEmbeddedActivity;

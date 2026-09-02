@@ -1,9 +1,9 @@
-// === Module 6520: metadata ===
+// === Module 6529: metadata ===
 
-// Module 6520 (metadata)
+// Module 6529 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/EmojiWumpSweatExample-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/d3e15536854d1f086f53d13156e577e4c0f34ba24848fab2de68e21330c40d4e.png";
-export const metadata = { fileBytes: 16363 };
+export default "https://cdn.discordapp.com/assets/content/e1bfa757c5ed879ccc1ed0499d78eb04ca67599a848ea20f3d3a7c8a234746a2.png";
+export const metadata = { fileBytes: 15738 };

@@ -1,10 +1,10 @@
-// === Module 12471: useUserProfileActivity ===
+// === Module 12695: useUserProfileActivity ===
 
-// Module 12471 (useUserProfileActivity)
+// Module 12695 (useUserProfileActivity)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
 import DesktopSources from "DesktopSources" /* 4542 */;
-import closure_4 from "map" /* 9419 */;
+import closure_4 from "map" /* 9432 */;
 import closure_5 from "_detectH265HardwareDecode" /* 4529 */;
 import closure_6 from "sortActivity" /* 4569 */;
 

@@ -1,19 +1,19 @@
-// === Module 16520: ConnectionIcon ===
+// === Module 16755: ConnectionIcon ===
 
-// Module 16520 (ConnectionIcon)
-import ThemesDefault from "Themes" /* 712 */;
-import isThemeLight from "isThemeLight" /* 1364 */;
-import getAvatarURL from "getAvatarURL" /* 1431 */;
+// Module 16755 (ConnectionIcon)
+import ThemesDefault from "Themes" /* 709 */;
+import isThemeLight from "isThemeLight" /* 1363 */;
+import getAvatarURL from "getAvatarURL" /* 1430 */;
 import IconSizes from "IconSizes" /* 4930 */;
 import IconSizesDefault from "IconSizes" /* 4930 */;
-import useStartAuthorizeDefault from "useStartAuthorize" /* 5956 */;
-import GameIcon from "GameIcon" /* 5963 */;
-import GameIconDefault from "GameIcon" /* 5963 */;
+import useStartAuthorizeDefault from "useStartAuthorize" /* 5964 */;
+import GameIcon from "GameIcon" /* 5971 */;
+import GameIconDefault from "GameIcon" /* 5971 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "addApplication" /* 4519 */;
-import closure_6 from "set" /* 5225 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1384 */;
+import closure_6 from "set" /* 5233 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -181,7 +181,7 @@ export default function ConnectionDeprecationBottomSheet(arg0) {
 export const useShouldShowConnectionDeprecationBottomSheet = function useShouldShowConnectionDeprecationBottomSheet(deprecatedPlatformTypes) {
   deprecatedPlatformTypes = deprecatedPlatformTypes.deprecatedPlatformTypes;
   const items = [closure_6];
-  const stateFromStoresObject = deprecatedPlatformTypes(589).useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = deprecatedPlatformTypes(586).useStateFromStoresObject(items, () => {
     const obj = { fetchingConnections: closure_1_6.isFetching(), matchingPlatform: null };
     const accounts = closure_1_6.getAccounts();
     const mapped = accounts.map((type) => callback(table[11]).get(type.type));
@@ -199,7 +199,7 @@ export const useShouldShowConnectionDeprecationBottomSheet = function useShouldS
     return obj;
   });
   ({ fetchingConnections, matchingPlatform } = stateFromStoresObject);
-  let obj = deprecatedPlatformTypes(589);
+  let obj = deprecatedPlatformTypes(586);
   let replacedBy;
   if (matchingPlatform != null) {
     let migrationData = matchingPlatform.migrationData;
@@ -207,7 +207,7 @@ export const useShouldShowConnectionDeprecationBottomSheet = function useShouldS
       replacedBy = migrationData.replacedBy;
     }
   }
-  const getOrFetchApplication = deprecatedPlatformTypes(5959).useGetOrFetchApplication(replacedBy);
+  const getOrFetchApplication = deprecatedPlatformTypes(5967).useGetOrFetchApplication(replacedBy);
   const tmp5 = useStartAuthorizeDefault(getOrFetchApplication);
   ({ hasAlreadyLinked, canStartAuthorization } = tmp5);
   if (!fetchingConnections) {

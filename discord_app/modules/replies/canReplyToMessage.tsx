@@ -1,13 +1,13 @@
-// === Module 7885: useCanReplyToMessage ===
+// === Module 7894: useCanReplyToMessage ===
 
-// Module 7885 (useCanReplyToMessage)
-import useCanUnarchiveThread from "useCanUnarchiveThread" /* 6116 */;
-import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 7886 */;
+// Module 7894 (useCanReplyToMessage)
+import useCanStartPrivateThread from "useCanStartPrivateThread" /* 6124 */;
+import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 7895 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4121 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { Permissions } from "sum" /* 505 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4120 */;
+import closure_4 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
+import { Permissions } from "sum" /* 502 */;
 
 require = arg1;
 ({ MessageFlags: c5, MessageStates: closure_6 } = ME);
@@ -16,16 +16,16 @@ const result = require("set").fileFinishedImporting("modules/replies/canReplyToM
 export const useCanReplyToMessage = function useCanReplyToMessage(channel, message) {
   const _require = channel;
   dependencyMap = message;
-  const canUnarchiveThread = _require(6116).useCanUnarchiveThread(channel);
-  const obj = _require(6116);
+  const canUnarchiveThread = _require(6124).useCanUnarchiveThread(channel);
+  const obj = _require(6124);
   let tmp = _require;
   let guildId;
   if (channel != null) {
     guildId = channel.getGuildId();
   }
-  const obj2 = _require(7886);
+  const obj2 = _require(7895);
   const items = [closure_3];
-  let stateFromStores = tmp(589).useStateFromStores(items, () => {
+  let stateFromStores = tmp(586).useStateFromStores(items, () => {
     let tmp = null != channel;
     if (tmp) {
       tmp = null != message;
@@ -71,7 +71,7 @@ export const useCanReplyToMessage = function useCanReplyToMessage(channel, messa
   return tmp6;
 };
 export const canReplyToMessage = function canReplyToMessage(isPrivate, type) {
-  const obj = useCanUnarchiveThread;
+  const obj = useCanStartPrivateThread;
   if (isPrivate.isPrivate()) {
     let hasItem = !isPrivate.isSystemDM();
   } else {
@@ -79,11 +79,11 @@ export const canReplyToMessage = function canReplyToMessage(isPrivate, type) {
     const tmp4 = Permissions;
   }
   if (hasItem) {
-    const REPLYABLE = tmp(686).MessageTypesSets.REPLYABLE;
+    const REPLYABLE = tmp(683).MessageTypesSets.REPLYABLE;
     hasItem = REPLYABLE.has(type.type);
   }
   currentUser = currentUser.getCurrentUser();
-  const canUnarchiveThreadResult = useCanUnarchiveThread.canUnarchiveThread(isPrivate);
+  const canUnarchiveThreadResult = useCanStartPrivateThread.canUnarchiveThread(isPrivate);
   let id;
   if (currentUser != null) {
     id = currentUser.id;

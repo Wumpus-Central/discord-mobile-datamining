@@ -1,15 +1,15 @@
-// === Module 10466: shouldFetchStorefrontPromotions ===
+// === Module 10687: shouldFetchStorefrontPromotions ===
 
-// Module 10466 (shouldFetchStorefrontPromotions)
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import resetStoreStateDefault from "resetStoreState" /* 6079 */;
+// Module 10687 (shouldFetchStorefrontPromotions)
+import setDefault from "set" /* 684 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import resetStoreStateDefault from "resetStoreState" /* 6087 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "handlePaymentSourceCreateEnd" /* 4141 */;
-import closure_5 from "getPromotionIdOverride" /* 8496 */;
-import closure_6 from "handleReset" /* 10467 */;
-import closure_7 from "parseSkuIds" /* 10468 */;
-import { Endpoints } from "ME" /* 676 */;
+import closure_5 from "getPromotionIdOverride" /* 8509 */;
+import closure_6 from "handleReset" /* 10688 */;
+import closure_7 from "parseSkuIds" /* 10689 */;
+import { Endpoints } from "ME" /* 673 */;
 
 const require = arg1;
 function shouldFetchStorefrontPromotions(arg0) {
@@ -175,7 +175,7 @@ function _fetchStorefrontPromotions() {
           } else {
             if (1 === tmp7) {
               c3 = 0;
-              obj3 = callback(709);
+              obj3 = callback(706);
               const obj6 = { type: "STOREFRONT_PROMOTIONS_FETCH_FAIL", applicationIds: null };
               obj6[1] = lib;
               obj3.dispatch(obj6);
@@ -185,7 +185,7 @@ function _fetchStorefrontPromotions() {
             } else if (arg0 !== 2) {
               const promotions = body.body.promotions;
               callback = promotions.map((arg0) => closure_7.createFromServer(arg0));
-              obj = callback(709);
+              obj = callback(706);
               const obj7 = { type: "STOREFRONT_PROMOTIONS_FETCH_SUCCESS", applicationIds: null, promotions: null };
               obj7[1] = lib;
               obj7[2] = callback;
@@ -258,7 +258,7 @@ function _fetchStorefrontPricesForApplicationId() {
               applicationId = applicationId.applicationId;
               c3 = 1;
               c4 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -347,7 +347,7 @@ function _fetchStorefrontPricesForSkuIds() {
               skuIds = skuIds.skuIds;
               c3 = 1;
               c4 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -446,17 +446,17 @@ function _fetchStorefrontPrices() {
             dependencyMap = 0;
             obj1 = { type: "SKUS_PRICING_FETCH_FAIL", priceId: null };
             obj1[1] = callback;
-            body(709).dispatch(obj1);
-            const obj5 = body(709);
+            body(706).dispatch(obj1);
+            const obj5 = body(706);
           } else if (arg0 === 1) {
             c4 = 3;
             throw arg1;
           } else if (arg0 !== 2) {
             body = arg1.body;
-            obj = body(709);
+            obj = body(706);
             let obj2 = { type: "SKUS_PRICING_FETCH_SUCCESS", priceId: null, data: null };
             obj2[1] = callback;
-            obj2 = callback(6078);
+            obj2 = callback(6086);
             obj2[2] = obj2.transformStorefrontPricesServer(body);
             obj.dispatch(obj2);
             dependencyMap = 0;

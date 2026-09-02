@@ -5,8 +5,8 @@ import nameFromUserDefault from "nameFromUser" /* 4322 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "getHash" /* 4391 */;
 import closure_5 from "markAllUserIdListsStale" /* 4130 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import closure_6 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
 
 const require = arg1;
 function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
@@ -19,8 +19,8 @@ function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
     flag2 = false;
   }
   if (channel.isObfuscated()) {
-    const intl3 = _require(1236).intl;
-    return intl3.string(_require(1236).t["/YzI63"]);
+    const intl3 = _require(1233).intl;
+    return intl3.string(_require(1233).t["/YzI63"]);
   } else {
     const type = channel.type;
     if (constants.DM === type) {
@@ -34,7 +34,7 @@ function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
       } else {
         const recipients = channel.recipients;
         const mapped = recipients.map(closure_9.getUser);
-        const first = callback(mapped.filter(_require(1471).isNotNullish), 1)[0];
+        const first = callback(mapped.filter(_require(1470).isNotNullish), 1)[0];
         if (null == first) {
           return "???";
         } else {
@@ -63,7 +63,7 @@ function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
         const recipients1 = channel.recipients;
         _require = closure_7;
         const mapped1 = recipients1.map(closure_9.getUser);
-        const found = mapped1.filter(_require(1471).isNotNullish);
+        const found = mapped1.filter(_require(1470).isNotNullish);
         const mapped2 = found.map((id) => {
           nickname = nickname.getNickname(id.id);
           if (nickname == null) {
@@ -75,10 +75,10 @@ function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
         if (mapped2.length > 0) {
           let joined = mapped2.join(", ");
         } else {
-          const intl2 = tmp25(1236).intl;
+          const intl2 = tmp25(1233).intl;
           const obj = { name: null };
           obj[0] = nameFromUserDefault.getName(closure_9.getCurrentUser());
-          joined = intl2.formatToPlainString(tmp25(1236).t["9Uk8PF"], obj);
+          joined = intl2.formatToPlainString(tmp25(1233).t["9Uk8PF"], obj);
           const obj2 = nameFromUserDefault;
         }
       }
@@ -87,46 +87,57 @@ function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
         if (tmp3.GUILD_TEXT !== type) {
           if (tmp3.GUILD_FORUM !== type) {
             if (tmp3.GUILD_MEDIA !== type) {
-              if (tmp3.GUILD_CATEGORY === type) {
-                if (channel.id === closure_8) {
-                  const intl = _require(1236).intl;
-                  let stringResult = intl.string(_require(1236).t.GSfOoo);
-                } else {
-                  stringResult = str;
-                  if (flag2) {
-                    const _HermesInternal3 = HermesInternal;
-                    stringResult = "#\"" + str.replace(/\\/g, "\\\\").replace(/"/g, "\\\"") + "\"";
-                    const str9 = str.replace(/\\/g, "\\\\");
+              if (tmp3.GUILD_APP !== type) {
+                if (tmp3.GUILD_CATEGORY === type) {
+                  if (channel.id === closure_8) {
+                    const intl = _require(1233).intl;
+                    let stringResult = intl.string(_require(1233).t.GSfOoo);
+                  } else {
+                    stringResult = str;
+                    if (flag2) {
+                      const _HermesInternal3 = HermesInternal;
+                      stringResult = "#\"" + str.replace(/\\/g, "\\\\").replace(/"/g, "\\\"") + "\"";
+                      const str9 = str.replace(/\\/g, "\\\\");
+                    }
                   }
-                }
-                return stringResult;
-              } else {
-                if (tmp3.PUBLIC_THREAD !== type) {
-                  if (tmp3.PRIVATE_THREAD !== type) {
-                    if (tmp3.ANNOUNCEMENT_THREAD !== type) {
-                      if (tmp3.GUILD_VOICE !== type) {
-                        if (tmp3.GUILD_STAGE_VOICE !== type) {
-                          return str;
+                  return stringResult;
+                } else {
+                  if (tmp3.PUBLIC_THREAD !== type) {
+                    if (tmp3.PRIVATE_THREAD !== type) {
+                      if (tmp3.ANNOUNCEMENT_THREAD !== type) {
+                        if (tmp3.MEDIA_THREAD !== type) {
+                          if (tmp3.GUILD_VOICE !== type) {
+                            if (tmp3.GUILD_STAGE_VOICE !== type) {
+                              if (tmp3.GUILD_STORE !== type) {
+                                if (tmp3.GUILD_DIRECTORY !== type) {
+                                  if (tmp3.GUILD_SPACE !== type) {
+                                    const UNKNOWN = tmp3.UNKNOWN;
+                                  }
+                                }
+                              }
+                              return str;
+                            }
+                          }
                         }
                       }
                     }
                   }
-                }
-                if (flag2) {
-                  const _HermesInternal2 = HermesInternal;
-                  let combined1 = "#\"" + str.replace(/\\/g, "\\\\").replace(/"/g, "\\\"") + "\"";
-                  const str4 = str.replace(/\\/g, "\\\\");
-                } else {
-                  combined1 = str;
-                  if (flag) {
+                  if (flag2) {
+                    const _HermesInternal2 = HermesInternal;
+                    let combined1 = "#\"" + str.replace(/\\/g, "\\\\").replace(/"/g, "\\\"") + "\"";
+                    const str4 = str.replace(/\\/g, "\\\\");
+                  } else {
                     combined1 = str;
-                    if (channel.isThread()) {
-                      const _HermesInternal = HermesInternal;
-                      combined1 = "\"" + str + "\"";
+                    if (flag) {
+                      combined1 = str;
+                      if (channel.isThread()) {
+                        const _HermesInternal = HermesInternal;
+                        combined1 = "\"" + str + "\"";
+                      }
                     }
                   }
+                  return combined1;
                 }
-                return combined1;
               }
             }
           }
@@ -151,7 +162,7 @@ export default function useChannelName(arg0) {
     flag = false;
   }
   const items = [closure_6, closure_4, closure_5];
-  return _require(589).useStateFromStores(items, () => {
+  return _require(586).useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != closure_0) {
       tmp2 = closure_1_9(tmp, closure_1_6, closure_1_5, flag);
@@ -162,7 +173,7 @@ export default function useChannelName(arg0) {
 export const computeDefaultGroupDmNameFromUserIds = function computeDefaultGroupDmNameFromUserIds(arr, getUser) {
   const _require = arg2;
   const mapped = arr.map(getUser.getUser);
-  const found = mapped.filter(_require(1471).isNotNullish);
+  const found = mapped.filter(_require(1470).isNotNullish);
   const mapped1 = found.map((id) => {
     nickname = nickname.getNickname(id.id);
     if (nickname == null) {
@@ -174,10 +185,10 @@ export const computeDefaultGroupDmNameFromUserIds = function computeDefaultGroup
   if (mapped1.length > 0) {
     let joined = mapped1.join(", ");
   } else {
-    const intl = tmp(1236).intl;
+    const intl = tmp(1233).intl;
     const obj = { name: null };
     obj[0] = nameFromUserDefault.getName(getUser.getCurrentUser());
-    joined = intl.formatToPlainString(tmp(1236).t["9Uk8PF"], obj);
+    joined = intl.formatToPlainString(tmp(1233).t["9Uk8PF"], obj);
     const obj2 = nameFromUserDefault;
   }
   return joined;
@@ -186,7 +197,7 @@ export const computeDefaultGroupDmName = function computeDefaultGroupDmName(reci
   recipients = recipients.recipients;
   const _require = arg2;
   const mapped = recipients.map(getUser.getUser);
-  const found = mapped.filter(_require(1471).isNotNullish);
+  const found = mapped.filter(_require(1470).isNotNullish);
   const mapped1 = found.map((id) => {
     nickname = nickname.getNickname(id.id);
     if (nickname == null) {
@@ -198,27 +209,27 @@ export const computeDefaultGroupDmName = function computeDefaultGroupDmName(reci
   if (mapped1.length > 0) {
     let joined = mapped1.join(", ");
   } else {
-    const intl = tmp(1236).intl;
+    const intl = tmp(1233).intl;
     const obj = { name: null };
     obj[0] = nameFromUserDefault.getName(getUser.getCurrentUser());
-    joined = intl.formatToPlainString(tmp(1236).t["9Uk8PF"], obj);
+    joined = intl.formatToPlainString(tmp(1233).t["9Uk8PF"], obj);
     const obj2 = nameFromUserDefault;
   }
   return joined;
 };
-export const useComputedGroupDmName = function useComputedGroupDmName(arg0) {
-  const _require = arg0;
+export const useComputedGroupDmName = function useComputedGroupDmName(stateFromStores) {
+  const _require = stateFromStores;
   const items = [closure_6, closure_5];
-  return _require(589).useStateFromStores(items, () => {
-    let obj = callback;
+  return _require(586).useStateFromStores(items, () => {
+    let obj = stateFromStores;
     let tmp = null;
-    if (null != callback) {
+    if (null != stateFromStores) {
       tmp = null;
       if (obj.isMultiUserDM()) {
         const recipients = obj.recipients;
-        callback = closure_1_5;
+        stateFromStores = closure_1_5;
         const mapped = recipients.map(closure_1_6.getUser);
-        const found = mapped.filter(callback(closure_1_2[5]).isNotNullish);
+        const found = mapped.filter(stateFromStores(closure_1_2[5]).isNotNullish);
         const mapped1 = found.map((id) => {
           nickname = nickname.getNickname(id.id);
           if (nickname == null) {
@@ -242,10 +253,10 @@ export const useComputedGroupDmName = function useComputedGroupDmName(arg0) {
     return tmp;
   });
 };
-export const computeGroupDmName = function computeGroupDmName(isObfuscated) {
-  if (!isObfuscated.isObfuscated()) {
-    if (isObfuscated.isMultiUserDM()) {
-      const name = isObfuscated.name;
+export const computeGroupDmName = function computeGroupDmName(stateFromStores) {
+  if (!stateFromStores.isObfuscated()) {
+    if (stateFromStores.isMultiUserDM()) {
+      const name = stateFromStores.name;
       let tmp;
       if ("" !== name) {
         tmp = name;

@@ -1,7 +1,7 @@
-// === Module 12606: UserProfileIncomingFriendRequest ===
+// === Module 12830: UserProfileIncomingFriendRequest ===
 
-// Module 12606 (UserProfileIncomingFriendRequest)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 12830 (UserProfileIncomingFriendRequest)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;

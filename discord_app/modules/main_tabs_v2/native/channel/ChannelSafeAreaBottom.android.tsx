@@ -1,15 +1,15 @@
-// === Module 12180: ? ===
+// === Module 12404: ? ===
 
-// Module 12180
+// Module 12404
 import set from "set" /* 2 */;
-import _modDef12181 from "module_12181" /* 12181 */;
-import _modDef12182 from "module_12182" /* 12182 */;
-import apexExperiment from "apexExperiment" /* 10987 */;
+import _modDef12405 from "module_12405" /* 12405 */;
+import _modDef12406 from "module_12406" /* 12406 */;
+import apexExperiment from "apexExperiment" /* 11207 */;
 
 if (apexExperiment.isAnimatedAndroidKeyboard()) {
-  let importDefaultResult = _modDef12181;
+  let importDefaultResult = _modDef12405;
 } else {
-  importDefaultResult = _modDef12182;
+  importDefaultResult = _modDef12406;
 }
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelSafeAreaBottom.android.tsx");
 

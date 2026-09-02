@@ -1,10 +1,10 @@
-// === Module 6545: FavoritesSpotIllustration ===
+// === Module 6554: FavoritesSpotIllustration ===
 
-// Module 6545 (FavoritesSpotIllustration)
+// Module 6554 (FavoritesSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5493 */;
-import metadataDefault from "metadata" /* 6546 */;
+import preloadDefault from "preload" /* 5501 */;
+import metadataDefault from "metadata" /* 6555 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/FavoritesSpotIllustration.native.tsx");

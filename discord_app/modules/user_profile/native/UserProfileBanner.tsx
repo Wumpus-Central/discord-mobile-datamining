@@ -1,10 +1,10 @@
-// === Module 8552: UserProfileBanner ===
+// === Module 8565: UserProfileBanner ===
 
-// Module 8552 (UserProfileBanner)
+// Module 8565 (UserProfileBanner)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { BANNER_HEIGHT } from "ME" /* 676 */;
+import { BANNER_HEIGHT } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

@@ -1,9 +1,9 @@
-// === Module 13102: useNextTenureBadge ===
+// === Module 13324: useNextTenureBadge ===
 
-// Module 13102 (useNextTenureBadge)
+// Module 13324 (useNextTenureBadge)
 import set from "set" /* 2 */;
-import usePremiumSince from "usePremiumSince" /* 8966 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import usePremiumSince from "usePremiumSince" /* 8980 */;
+import GuildFeatures from "GuildFeatures" /* 1923 */;
 
 ({ TIERED_TENURE_BADGE_ORDER: obj1, TENURE_BADGES: c3 } = GuildFeatures);
 const result = set.fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useNextTenureBadge.tsx");

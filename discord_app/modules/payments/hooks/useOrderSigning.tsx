@@ -1,6 +1,6 @@
-// === Module 11355: useOrderSigning ===
+// === Module 11578: useOrderSigning ===
 
-// Module 11355 (useOrderSigning)
+// Module 11578 (useOrderSigning)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
@@ -100,7 +100,7 @@ export const useOrderSigning = function useOrderSigning(order) {
                 status = undefined;
                 v02 = 1;
                 v03 = 1;
-                return { value: "PX_16", done: null };
+                return { value: "PX_16", done: true };
               }
             } else if (1 === tmp7) {
               if (arg0 === 1) {

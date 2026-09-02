@@ -1,11 +1,11 @@
-// === Module 6135: canReportUser ===
+// === Module 6143: canReportUser ===
 
-// Module 6135 (canReportUser)
-import closure_0 from "ensureGuildLoaded" /* 1387 */;
+// Module 6143 (canReportUser)
+import closure_0 from "ensureGuildLoaded" /* 1386 */;
 import closure_1 from "handleInviteData" /* 4398 */;
-import closure_2 from "getUncachedChannelPermissions" /* 4121 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import closure_2 from "getUncachedChannelPermissions" /* 4120 */;
+import closure_3 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
 
 ({ ChannelTypes: c4, Permissions: c5, MessageTypesSets: closure_6 } = ME);
 const result = require("set").fileFinishedImporting("utils/ReportUtils.tsx");

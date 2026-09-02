@@ -1,32 +1,32 @@
-// === Module 8021: isInteractionComponent ===
+// === Module 8030: isInteractionComponent ===
 
-// Module 8021 (isInteractionComponent)
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
+// Module 8030 (isInteractionComponent)
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
 import ActionComponentState from "ActionComponentState" /* 4745 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
-import closure_5 from "deleteNonce" /* 7850 */;
-import closure_6 from "initialize" /* 4122 */;
-import closure_7 from "ensureGuildLoaded" /* 1387 */;
-import closure_8 from "trackCommunicationDisabled" /* 1992 */;
-import closure_9 from "recomputeGuild" /* 5357 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import closure_11 from "getInteractionComponentStates" /* 8022 */;
+import closure_5 from "deleteNonce" /* 7859 */;
+import closure_6 from "initialize" /* 4121 */;
+import closure_7 from "ensureGuildLoaded" /* 1386 */;
+import closure_8 from "trackCommunicationDisabled" /* 1991 */;
+import closure_9 from "recomputeGuild" /* 5365 */;
+import closure_10 from "mergeGuildAvatar" /* 1921 */;
+import closure_11 from "getInteractionComponentStates" /* 8031 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
 function isInteractionComponent(type) {
   type = type.type;
   if (PermissionOverwriteType.ComponentType.BUTTON === type) {
-    return type.style !== tmp(1955).ButtonStyle.LINK;
+    return type.style !== tmp(1954).ButtonStyle.LINK;
   } else {
-    if (tmp(1955).ComponentType.STRING_SELECT !== type) {
-      if (tmp(1955).ComponentType.USER_SELECT !== type) {
-        if (tmp(1955).ComponentType.ROLE_SELECT !== type) {
-          if (tmp(1955).ComponentType.MENTIONABLE_SELECT !== type) {
-            if (tmp(1955).ComponentType.CHANNEL_SELECT !== type) {
-              if (tmp(1955).ComponentType.ACTION_ROW !== type) {
-                const TEXT_INPUT = tmp(1955).ComponentType.TEXT_INPUT;
+    if (tmp(1954).ComponentType.STRING_SELECT !== type) {
+      if (tmp(1954).ComponentType.USER_SELECT !== type) {
+        if (tmp(1954).ComponentType.ROLE_SELECT !== type) {
+          if (tmp(1954).ComponentType.MENTIONABLE_SELECT !== type) {
+            if (tmp(1954).ComponentType.CHANNEL_SELECT !== type) {
+              if (tmp(1954).ComponentType.ACTION_ROW !== type) {
+                const TEXT_INPUT = tmp(1954).ComponentType.TEXT_INPUT;
               }
               return false;
             }
@@ -57,7 +57,7 @@ function getActionComponentState(interaction, id, shouldDisableInteractiveCompon
     }
     return DISABLED;
   } else {
-    if (interaction.data.interactionType !== tmp(1955).InteractionTypes.MESSAGE_COMPONENT) {
+    if (interaction.data.interactionType !== tmp(1954).InteractionTypes.MESSAGE_COMPONENT) {
       if (isInteractionComponent(id)) {
         LOADING = tmp(4745).ActionComponentState.DISABLED;
       }
@@ -69,7 +69,7 @@ function useShouldDisableInteractiveComponents(channel_id) {
   channel = channel.getChannel(channel_id);
   const items = [closure_9];
   const items1 = [channel];
-  const stateFromStores = channel(589).useStateFromStores(items, () => {
+  const stateFromStores = channel(586).useStateFromStores(items, () => {
     let guild_id;
     if (channel != null) {
       guild_id = tmp.guild_id;
@@ -80,10 +80,10 @@ function useShouldDisableInteractiveComponents(channel_id) {
     }
     return canChatInGuildResult;
   }, items1);
-  const obj2 = channel(589);
+  const obj2 = channel(586);
   const items2 = [closure_6];
   const items3 = [channel];
-  const stateFromStores1 = channel(589).useStateFromStores(items2, () => {
+  const stateFromStores1 = channel(586).useStateFromStores(items2, () => {
     let guild_id;
     if (channel != null) {
       guild_id = tmp.guild_id;
@@ -94,9 +94,9 @@ function useShouldDisableInteractiveComponents(channel_id) {
     }
     return isLurkingResult;
   }, items3);
-  const obj3 = channel(589);
+  const obj3 = channel(586);
   const items4 = [closure_8, closure_10];
-  const stateFromStores2 = channel(589).useStateFromStores(items4, () => {
+  const stateFromStores2 = channel(586).useStateFromStores(items4, () => {
     const currentUser = closure_1_10.getCurrentUser();
     let guild_id;
     if (channel != null) {
@@ -123,14 +123,14 @@ function useShouldDisableInteractiveComponents(channel_id) {
     }
     return flag;
   });
-  const obj4 = channel(589);
+  const obj4 = channel(586);
   let guild_id;
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  let tmpResult = tmp(6116);
+  let tmpResult = tmp(6124);
   const isThreadModerator = tmpResult.useIsThreadModerator(channel);
-  tmpResult = tmp(6116);
+  tmpResult = tmp(6124);
   let tmp9 = !stateFromStores;
   const canUnarchiveThread = tmpResult.useCanUnarchiveThread(channel);
   if (stateFromStores) {

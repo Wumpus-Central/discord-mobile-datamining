@@ -1,14 +1,14 @@
-// === Module 11869: DefaultState ===
+// === Module 12092: DefaultState ===
 
-// Module 11869 (DefaultState)
-import ThemesDefault from "Themes" /* 712 */;
-import registerAssetDefault from "registerAsset" /* 11873 */;
+// Module 12092 (DefaultState)
+import ThemesDefault from "Themes" /* 709 */;
+import registerAssetDefault from "registerAsset" /* 12096 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "createGuildRecordFromRust" /* 1909 */;
-import closure_10 from "getSearchState" /* 11870 */;
-import ME from "ME" /* 676 */;
+import closure_9 from "createGuildRecordFromRust" /* 1908 */;
+import closure_10 from "getSearchState" /* 12093 */;
+import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 import ArrayResult from "module_20" /* 20 */;
@@ -21,8 +21,8 @@ function DefaultState() {
   obj = { style: tmp.emptyStateImage, source: registerAssetDefault };
   const items = [callback(closure_7, obj), ];
   obj = { style: tmp.emptyStateText, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl = _require(1236).intl;
-  obj[3] = intl.format(_require(1236).t.aYLd8O, {
+  const intl = _require(1233).intl;
+  obj[3] = intl.format(_require(1233).t.aYLd8O, {
     protipHook(children) {
       return closure_1_12(lib(closure_1_3[12]).LegacyText, { style: lib.proTip, children }, "protip");
     }
@@ -35,12 +35,12 @@ function EmptyState(channel) {
   channel = channel.channel;
   importDefault = undefined;
   const tmp = callback3();
-  let obj = channel(589);
+  let obj = channel(586);
   const items = [closure_9];
   importDefault = obj.useStateFromStores(items, () => closure_1_9.getGuild(channel.getGuildId()));
-  obj1 = channel(11874);
+  obj1 = channel(12097);
   const canCreateOrAddGuildInDirectory = obj1.useCanCreateOrAddGuildInDirectory(channel);
-  const intl = channel(1236).intl;
+  const intl = channel(1233).intl;
   if (canCreateOrAddGuildInDirectory) {
     obj = { addServerHook: null };
     obj[0] = function addServerHook() {
@@ -48,16 +48,16 @@ function EmptyState(channel) {
       obj = { directoryGuildName: lib.name, directoryGuildId: lib.id, directoryChannelId: channel.id };
       obj.open(obj);
     };
-    let formatResult = intl.format(tmp2(1236).t.ZxNVMy, obj);
+    let formatResult = intl.format(tmp2(1233).t.ZxNVMy, obj);
   } else {
-    formatResult = intl.string(tmp2(1236).t.vYyEnv);
+    formatResult = intl.string(tmp2(1233).t.vYyEnv);
   }
   obj = { style: tmp.emptyWrapper, children: null };
   obj1 = { style: tmp.emptyStateImage, source: registerAssetDefault };
   const items1 = [callback(closure_7, obj1), , ];
   const obj2 = { style: tmp.emptyStateTitle, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl2 = tmp2(1236).intl;
-  obj2[3] = intl2.string(channel(1236).t["6HXiuE"]);
+  const intl2 = tmp2(1233).intl;
+  obj2[3] = intl2.string(channel(1233).t["6HXiuE"]);
   items1[1] = callback(channel(4474).Text, obj2);
   items1[2] = callback(channel(4474).Text, { style: tmp.emptyStateText, variant: "text-sm/medium", color: "text-default", children: formatResult });
   obj[1] = items1;

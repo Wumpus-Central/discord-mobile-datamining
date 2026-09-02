@@ -1,19 +1,19 @@
-// === Module 15984: ConnectionBannerIcon ===
+// === Module 16215: ConnectionBannerIcon ===
 
-// Module 15984 (ConnectionBannerIcon)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 16215 (ConnectionBannerIcon)
+import ThemesDefault from "Themes" /* 709 */;
 import map from "map" /* 4197 */;
 import _modDef4217 from "module_4217" /* 4217 */;
 import Text from "Text" /* 4474 */;
 import LinearGradientDefault from "LinearGradient" /* 4940 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 5535 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 5543 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "updateState" /* 13338 */;
-import { ConnectivityIndicatorState as closure_8 } from "updateState" /* 13338 */;
-import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 14699 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import closure_7 from "updateState" /* 13562 */;
+import { ConnectivityIndicatorState as closure_8 } from "updateState" /* 13562 */;
+import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 14925 */;
+import { AnalyticEvents } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -34,15 +34,15 @@ function ConnectionBannerIcon(state) {
     obj1 = { style: null, children: null };
     obj1[0] = tmp.leadingSlot;
     const obj2 = { size: "xs", color: null };
-    obj2[1] = tmp5(712).colors.INTERACTIVE_ICON_DEFAULT;
-    obj1[1] = callback2(tmp2(15985).ConnectionUnknownIcon, obj2);
+    obj2[1] = tmp5(709).colors.INTERACTIVE_ICON_DEFAULT;
+    obj1[1] = callback2(tmp2(16216).ConnectionUnknownIcon, obj2);
     return callback2(closure_6, obj1);
   } else if (tmp7.BACK_ONLINE === state) {
     obj = { style: null, children: null };
     obj[0] = tmp.leadingSlot;
     const obj3 = { size: "xs", color: null };
-    obj3[1] = tmp5(712).colors.ICON_FEEDBACK_POSITIVE;
-    obj[1] = callback2(tmp2(15987).ConnectionFineIcon, obj3);
+    obj3[1] = tmp5(709).colors.ICON_FEEDBACK_POSITIVE;
+    obj[1] = callback2(tmp2(16218).ConnectionFineIcon, obj3);
     return callback2(closure_6, obj);
   }
 }
@@ -56,14 +56,14 @@ function ConnectionBannerContent(state) {
   }
   obj = { variant: "text-sm/medium", color: str, maxFontSizeMultiplier: 1.5, children: null };
   if (constants.WAITING_FOR_NETWORK === state) {
-    const intl2 = tmp4(1236).intl;
-    let stringResult = intl2.string(tmp4(1236).t.XKk1gp);
+    const intl2 = tmp4(1233).intl;
+    let stringResult = intl2.string(tmp4(1233).t.XKk1gp);
   } else if (tmp6.NO_CONNECTION === state) {
-    const intl = tmp4(1236).intl;
-    stringResult = intl.string(tmp4(1236).t.zPerw8);
+    const intl = tmp4(1233).intl;
+    stringResult = intl.string(tmp4(1233).t.zPerw8);
   } else if (tmp6.BACK_ONLINE === state) {
-    const intl3 = tmp4(1236).intl;
-    stringResult = intl3.string(tmp4(1236).t.j8lYE2);
+    const intl3 = tmp4(1233).intl;
+    stringResult = intl3.string(tmp4(1233).t.j8lYE2);
   }
   obj[3] = stringResult;
   items[1] = callback2(Text.Text, obj);
@@ -203,13 +203,13 @@ let closure_26 = { code: "function ConnectionBannerTsx2(){const{progress,CONNECT
 let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/ConnectionBanner.tsx");
 
 export default function ConnectionBanner() {
-  const config = stateFromStores(13339).useConfig({ location: "ConnectionBanner" });
+  const config = stateFromStores(13563).useConfig({ location: "ConnectionBanner" });
   const hidden = config.hidden;
   stateFromStores = undefined;
   dependencyMap = undefined;
-  let obj = stateFromStores(13339);
+  let obj = stateFromStores(13563);
   const items = [closure_7];
-  stateFromStores = hidden(589).useStateFromStores(items, () => state.getState());
+  stateFromStores = hidden(586).useStateFromStores(items, () => state.getState());
   dependencyMap = React.useRef(null);
   const items1 = [stateFromStores, hidden];
   const effect = React.useEffect(() => {

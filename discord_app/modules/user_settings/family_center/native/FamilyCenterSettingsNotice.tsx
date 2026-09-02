@@ -1,10 +1,10 @@
-// === Module 14422: FamilyCenterSettingsParentalControlsNotice ===
+// === Module 14645: FamilyCenterSettingsParentalControlsNotice ===
 
-// Module 14422 (FamilyCenterSettingsParentalControlsNotice)
+// Module 14645 (FamilyCenterSettingsParentalControlsNotice)
 import noopAll from "noop" /* 19 */;
-import messagesProxyDefault from "messagesProxy" /* 2369 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14338 */;
-import { SafetySettingsNoticeType } from "SafetyToastType" /* 8670 */;
+import messagesProxyDefault from "messagesProxy" /* 2368 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14561 */;
+import { SafetySettingsNoticeType } from "SafetyToastType" /* 8685 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -12,7 +12,7 @@ noopAll;
 const result = require("set").fileFinishedImporting("modules/user_settings/family_center/native/FamilyCenterSettingsNotice.tsx");
 
 export default function FamilyCenterSettingsParentalControlsNotice() {
-  let obj = activeLinkUserIds(8772);
+  let obj = activeLinkUserIds(8787);
   activeLinkUserIds = obj.useActiveLinkUserIds();
   obj = {
     label: messagesProxyDefault.i284fU,

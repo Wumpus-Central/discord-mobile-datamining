@@ -1,11 +1,11 @@
-// === Module 15519: ? ===
+// === Module 15750: ? ===
 
-// Module 15519
-import ThemesDefault from "Themes" /* 712 */;
-import _modDef8381 from "module_8381" /* 8381 */;
+// Module 15750
+import ThemesDefault from "Themes" /* 709 */;
+import _modDef8390 from "module_8390" /* 8390 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
-import set from "set" /* 500 */;
+import set from "set" /* 1234 */;
 import importAllResult from "noop" /* 19 */;
 
 const require = arg1;
@@ -32,7 +32,7 @@ export default importAllResult.memo(function VEVOOSlider(disabled) {
   const obj = { style: items, disabled: disabled.disabled, value: current, minimumValue: 0, maximumValue: 1, minimumTrackTintColor: ThemesDefault.unsafe_rawColors.BRAND_500, maximumTrackTintColor: ThemesDefault.unsafe_rawColors.PRIMARY_400, onValueChange, onResponderGrant: null };
   items[1] = { opacity: num };
   current = initialValue.current;
-  const tmp5 = _modDef8381;
+  const tmp5 = _modDef8390;
   let fn;
   if (obj2.isAndroid()) {
     fn = () => true;

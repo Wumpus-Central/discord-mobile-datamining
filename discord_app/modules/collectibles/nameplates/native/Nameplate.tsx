@@ -1,6 +1,6 @@
-// === Module 8522: NameplateInner ===
+// === Module 8535: NameplateInner ===
 
-// Module 8522 (NameplateInner)
+// Module 8535 (NameplateInner)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -41,7 +41,7 @@ function NameplateInner(isFocused) {
     flag7 = false;
   }
   let sharedValue;
-  let obj = flag6(589);
+  let obj = flag6(586);
   const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const tmp4 = callback2(flag3, isPressed, flag, flag2, flag5);
@@ -72,10 +72,10 @@ function NameplateInner(isFocused) {
   A.__workletHash = 15588901070870;
   A.__initData = closure_8;
   const animatedStyle = tmpResult.useAnimatedStyle(A);
-  tmpResult = tmp(1947);
+  tmpResult = tmp(1946);
   const backgroundGradientColors = tmpResult.getBackgroundGradientColors(nameplate.palette, sharedValue(4413)());
   const tmp6 = sharedValue(4413)();
-  const nameplateAssets = flag6(8523).getNameplateAssets(nameplate);
+  const nameplateAssets = flag6(8536).getNameplateAssets(nameplate);
   let str = nameplateAssets.staticImageUrl;
   let tmp12 = true === flag7;
   if (tmp12) {
@@ -113,19 +113,19 @@ function NameplateInner(isFocused) {
   }
   const items4 = [tmp15Result, ];
   const tmp13 = closure_6;
-  const tmpResult1 = flag6(8523);
+  const tmpResult1 = flag6(8536);
   if (tmpResult2.isAndroid()) {
     if (tmp12) {
       const obj2 = { url: null, style: null, autoplay: true };
       obj2[0] = str;
       obj2[1] = tmp4.img;
-      let tmp17 = callback(tmp(8517).APNGPlayer, obj2);
+      let tmp17 = callback(tmp(8530).APNGPlayer, obj2);
     }
     items4[1] = tmp17;
     obj[1] = items4;
     return tmp13(tmp5(4217).View, obj);
   }
-  tmp17 = callback(tmp5(5493), { source: { uri: str }, style: tmp4.img, accessibilityRole: "image" });
+  tmp17 = callback(tmp5(5501), { source: { uri: str }, style: tmp4.img, accessibilityRole: "image" });
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles((arg0, arg1, arg2, arg3, arg4) => {

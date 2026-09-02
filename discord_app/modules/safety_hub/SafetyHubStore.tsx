@@ -1,12 +1,12 @@
-// === Module 8701: handleSafetyHubRequestAgeVerificationResetModalAction ===
+// === Module 8716: handleSafetyHubRequestAgeVerificationResetModalAction ===
 
-// Module 8701 (handleSafetyHubRequestAgeVerificationResetModalAction)
+// Module 8716 (handleSafetyHubRequestAgeVerificationResetModalAction)
 import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import ContentIdType from "ContentIdType" /* 8691 */;
-import createAggregatorDefault from "createAggregator" /* 8702 */;
-import SafetyHubView from "SafetyHubView" /* 8690 */;
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import ContentIdType from "ContentIdType" /* 8706 */;
+import createAggregatorDefault from "createAggregator" /* 8717 */;
+import SafetyHubView from "SafetyHubView" /* 8705 */;
 
 function handleSafetyHubRequestAgeVerificationResetModalAction(arg0) {
   if (arg0 == null) {
@@ -208,18 +208,18 @@ obj = {
       HermesBuiltin.throwTypeError();
     } else {
       const LOADING = AgeCheckStatus.LOADING;
-      for (const key10002 in closure_6) {
-        let tmp7 = key10002;
+      for (const key10007 in closure_6) {
+        let tmp7 = key10007;
         let tmp8 = dependencyMap;
-        if (!dependencyMap[key10002].is_coppa) {
+        if (!dependencyMap[key10007].is_coppa) {
           continue;
         } else {
-          let tmp = dependencyMap;
-          obj = { status: null };
-          let tmp2 = require;
           let tmp3 = dependencyMap;
+          obj = { status: null };
+          let tmp4 = require;
+          let tmp5 = dependencyMap;
           obj[0] = ContentIdType.AppealStatusType.REVIEW_PENDING;
-          dependencyMap[key10002].appeal_status = obj;
+          dependencyMap[key10007].appeal_status = obj;
           continue;
         }
         continue;

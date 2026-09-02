@@ -1,8 +1,8 @@
-// === Module 14326: handleInit ===
+// === Module 14549: handleInit ===
 
-// Module 14326 (handleInit)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 14549 (handleInit)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 function handleInit() {
   closure_0 = [];

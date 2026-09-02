@@ -1,6 +1,6 @@
-// === Module 7254: AutomodMessageEmbedKeys ===
+// === Module 7263: AutomodMessageEmbedKeys ===
 
-// Module 7254 (AutomodMessageEmbedKeys)
+// Module 7263 (AutomodMessageEmbedKeys)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/AutomodMessageEmbedKeys.tsx");

@@ -1,11 +1,11 @@
-// === Module 6099: computeHasRoleSubscriptionsInGuild ===
+// === Module 6107: computeHasRoleSubscriptionsInGuild ===
 
-// Module 6099 (computeHasRoleSubscriptionsInGuild)
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "trackCommunicationDisabled" /* 1992 */;
-import closure_4 from "createGuildRoleRecordFromRust" /* 1985 */;
-import closure_5 from "createGuildRecordFromRust" /* 1909 */;
-import { GuildFeatures } from "ME" /* 676 */;
+// Module 6107 (computeHasRoleSubscriptionsInGuild)
+import closure_2 from "fetchFingerprint" /* 1215 */;
+import closure_3 from "trackCommunicationDisabled" /* 1991 */;
+import closure_4 from "createGuildRoleRecordFromRust" /* 1984 */;
+import closure_5 from "createGuildRecordFromRust" /* 1908 */;
+import { GuildFeatures } from "ME" /* 673 */;
 
 const require = arg1;
 function computeHasRoleSubscriptionsInGuild(c0, closure_3) {

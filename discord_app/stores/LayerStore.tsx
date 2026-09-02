@@ -1,8 +1,8 @@
-// === Module 12037: handlePopAllLayers ===
+// === Module 12261: handlePopAllLayers ===
 
-// Module 12037 (handlePopAllLayers)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 12261 (handlePopAllLayers)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 function handlePopAllLayers() {
   closure_0 = [];

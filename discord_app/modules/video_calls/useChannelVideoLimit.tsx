@@ -1,9 +1,9 @@
-// === Module 9780: useChannelVideoLimit ===
+// === Module 9802: useChannelVideoLimit ===
 
-// Module 9780 (useChannelVideoLimit)
-import closure_2 from "createGuildRecordFromRust" /* 1909 */;
+// Module 9802 (useChannelVideoLimit)
+import closure_2 from "createGuildRecordFromRust" /* 1908 */;
 import closure_3 from "getVoiceStatesForGuild" /* 4555 */;
-import { ChannelTypes } from "ME" /* 676 */;
+import { ChannelTypes } from "ME" /* 673 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/video_calls/useChannelVideoLimit.tsx");
@@ -12,7 +12,7 @@ export default function useChannelVideoLimit(arg0) {
   const _require = arg0;
   const items = [closure_3, closure_2];
   const items1 = [arg0];
-  return _require(589).useStateFromStoresObject(items, () => {
+  return _require(586).useStateFromStoresObject(items, () => {
     const result = closure_1_3.countVoiceStatesForChannel(guildId.id);
     const guild = closure_1_2.getGuild(guildId.getGuildId());
     if (null == guild) {

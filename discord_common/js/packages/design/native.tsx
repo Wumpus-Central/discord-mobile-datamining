@@ -4,7 +4,7 @@
 import set from "set" /* 2 */;
 import context from "context" /* 4262 */;
 import isImage from "isImage" /* 4295 */;
-import LOW_SATURATION_THRESHOLD from "LOW_SATURATION_THRESHOLD" /* 1357 */;
+import LOW_SATURATION_THRESHOLD from "LOW_SATURATION_THRESHOLD" /* 1356 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/design/native.tsx");
 for (const key10018 in require("AccessibilityAnnouncer")) {

@@ -1,12 +1,12 @@
-// === Module 8136: createVoiceChannelBadge ===
+// === Module 8144: createVoiceChannelBadge ===
 
-// Module 8136 (createVoiceChannelBadge)
+// Module 8144 (createVoiceChannelBadge)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
-import experiment from "experiment" /* 8137 */;
-import closure_3 from "ensureGuildLoaded" /* 1387 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4121 */;
+import ME from "ME" /* 673 */;
+import experiment from "experiment" /* 8145 */;
+import closure_3 from "ensureGuildLoaded" /* 1386 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_5 from "updateVoiceState" /* 4497 */;
 
 const Image = get_ActivityIndicator.Image;

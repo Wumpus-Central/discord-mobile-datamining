@@ -1,9 +1,9 @@
-// === Module 14580: ClipsSettingsScreen ===
+// === Module 14803: ClipsSettingsScreen ===
 
-// Module 14580 (ClipsSettingsScreen)
-import _modDef14340 from "module_14340" /* 14340 */;
+// Module 14803 (ClipsSettingsScreen)
+import _modDef14563 from "module_14563" /* 14563 */;
 import closure_3 from "noop" /* 19 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 7884 */;
+import { MobileUserSettings } from "MobileUserSettings" /* 7893 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -15,5 +15,5 @@ export default function ClipsSettingsScreen() {
     const sections = [{ settings: items }];
     return callback(table[3]).createList({ sections });
   }, []);
-  return jsx(_modDef14340, { node });
+  return jsx(_modDef14563, { node });
 };

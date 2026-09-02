@@ -1,8 +1,8 @@
-// === Module 14683: apexExperiment ===
+// === Module 14909: apexExperiment ===
 
-// Module 14683 (apexExperiment)
+// Module 14909 (apexExperiment)
 import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1468 */;
+import ApexExperiment from "ApexExperiment" /* 1467 */;
 
 const obj = { 1: null, 2: { placement: "outside", sortType: "popularity", buttonVariant: "default" }, 3: { placement: "inside", sortType: "popularity", buttonVariant: "default" }, 4: { placement: "inside", sortType: "recency", buttonVariant: "default" }, 5: { placement: "replace_media", sortType: "popularity", buttonVariant: "default" } };
 obj[5] = { placement: "none", sortType: "popularity", buttonVariant: "blurple" };

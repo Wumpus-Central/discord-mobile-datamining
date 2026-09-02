@@ -1,10 +1,10 @@
-// === Module 13005: SubscriptionRenewalMutationsNotice ===
+// === Module 13227: SubscriptionRenewalMutationsNotice ===
 
-// Module 13005 (SubscriptionRenewalMutationsNotice)
+// Module 13227 (SubscriptionRenewalMutationsNotice)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import Button from "Button" /* 1296 */;
 import getPremiumPlanItem from "getPremiumPlanItem" /* 4139 */;
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4139 */;
 import { View } from "get ActivityIndicator" /* 17 */;

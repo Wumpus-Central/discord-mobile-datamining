@@ -1,8 +1,8 @@
-// === Module 6132: reset ===
+// === Module 6140: reset ===
 
-// Module 6132 (reset)
+// Module 6140 (reset)
 import set from "set" /* 2 */;
-import privDefault from "priv" /* 1401 */;
+import privDefault from "priv" /* 1400 */;
 
 let result = set.fileFinishedImporting("lib/guild/GuildChannelSubscriptions.tsx");
 class GuildChannelSubscriptions {

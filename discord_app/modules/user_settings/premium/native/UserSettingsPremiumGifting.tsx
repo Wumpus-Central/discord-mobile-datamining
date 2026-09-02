@@ -1,15 +1,15 @@
-// === Module 13211: GiftingSectionTitle ===
+// === Module 13433: GiftingSectionTitle ===
 
-// Module 13211 (GiftingSectionTitle)
-import ThemesDefault from "Themes" /* 712 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5992 */;
+// Module 13433 (GiftingSectionTitle)
+import ThemesDefault from "Themes" /* 709 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 6000 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "initialize" /* 8560 */;
-import closure_9 from "addEntitlement" /* 7142 */;
-import ME from "ME" /* 676 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import closure_8 from "initialize" /* 8573 */;
+import closure_9 from "addEntitlement" /* 7151 */;
+import ME from "ME" /* 673 */;
+import GuildFeatures from "GuildFeatures" /* 1923 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

@@ -1,9 +1,9 @@
-// === Module 11064: LAUNCH_PAD_SPRING_CONFIG ===
+// === Module 11284: LAUNCH_PAD_SPRING_CONFIG ===
 
-// Module 11064 (LAUNCH_PAD_SPRING_CONFIG)
+// Module 11284 (LAUNCH_PAD_SPRING_CONFIG)
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import DCDDeviceManager from "DCDDeviceManager" /* 4457 */;
-import set from "set" /* 500 */;
+import set from "set" /* 1234 */;
 
 const Dimensions = get_ActivityIndicator.Dimensions;
 const size = Dimensions.get("screen");

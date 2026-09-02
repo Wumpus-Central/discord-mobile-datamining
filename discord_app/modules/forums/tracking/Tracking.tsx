@@ -1,19 +1,19 @@
-// === Module 7511: trackForumChannelSeenBatch ===
+// === Module 7521: trackForumChannelSeenBatch ===
 
-// Module 7511 (trackForumChannelSeenBatch)
-import set from "set" /* 500 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+// Module 7521 (trackForumChannelSeenBatch)
+import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
+import set from "set" /* 1234 */;
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4700 */;
 import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4700 */;
-import collectForumAnalyticsMetadata from "collectForumAnalyticsMetadata" /* 7513 */;
-import collectThreadMetadata from "collectThreadMetadata" /* 7518 */;
-import trackChannelOpenedClickstreamDefault from "trackChannelOpenedClickstream" /* 7519 */;
-import closure_3 from "ensureGuildLoaded" /* 1387 */;
+import collectForumAnalyticsMetadata from "collectForumAnalyticsMetadata" /* 7523 */;
+import collectThreadMetadata from "collectThreadMetadata" /* 7528 */;
+import trackChannelOpenedClickstreamDefault from "trackChannelOpenedClickstream" /* 7529 */;
+import closure_3 from "ensureGuildLoaded" /* 1386 */;
 import closure_4 from "handleChanged" /* 4854 */;
 import { DraftType } from "handleChanged" /* 4854 */;
-import closure_6 from "handleLoadThreadsSuccess" /* 6124 */;
-import closure_7 from "initialize" /* 7512 */;
-import ME from "ME" /* 676 */;
+import closure_6 from "handleLoadThreadsSuccess" /* 6132 */;
+import closure_7 from "initialize" /* 7522 */;
+import ME from "ME" /* 673 */;
 
 require = arg1;
 ({ AnalyticEvents: closure_8, AnalyticsSections: c9 } = ME);

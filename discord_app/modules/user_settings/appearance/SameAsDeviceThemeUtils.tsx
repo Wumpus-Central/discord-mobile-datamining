@@ -1,13 +1,13 @@
-// === Module 14780: enableSameAsDeviceTheme ===
+// === Module 15006: enableSameAsDeviceTheme ===
 
-// Module 14780 (enableSameAsDeviceTheme)
-import getThemeForColor from "getThemeForColor" /* 1347 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
+// Module 15006 (enableSameAsDeviceTheme)
+import getThemeForColor from "getThemeForColor" /* 1346 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1362 */;
 import setSystemTheme from "setSystemTheme" /* 4325 */;
-import saveGuildFoldersDefault from "saveGuildFolders" /* 8213 */;
+import saveGuildFoldersDefault from "saveGuildFolders" /* 8222 */;
 import closure_3 from "reset" /* 4297 */;
-import closure_4 from "handleThemeChange" /* 1302 */;
-import SystemThemeState from "SystemThemeState" /* 1305 */;
+import closure_4 from "handleThemeChange" /* 1301 */;
+import SystemThemeState from "SystemThemeState" /* 1304 */;
 
 require = arg1;
 ({ SystemTheme: c5, SystemThemeState: closure_6 } = SystemThemeState);

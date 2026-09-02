@@ -1,6 +1,6 @@
-// === Module 7722: _promptForRegisterCredential ===
+// === Module 7731: _promptForRegisterCredential ===
 
-// Module 7722 (_promptForRegisterCredential)
+// Module 7731 (_promptForRegisterCredential)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
@@ -13,19 +13,102 @@ function _promptForRegisterCredential() {
     c4 = 0;
     c5 = 0;
     const iter = (function*(arg0, credential) {
-      let challenge = tmp3;
-      let ticket = tmp2;
-      if (register === undefined) {
-        register = closure_1_3.DCDSecurityKeyManager.register;
+      if (c5 === 2) {
+        c5 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp5 === 3) {
+        if (arg0 === 1) {
+          throw credential;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = credential;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c5 = 2;
+          if (0 === c4) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw credential;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              obj = { value: null, done: true };
+              obj[0] = credential;
+              return obj;
+            } else {
+              let challenge = tmp3;
+              let ticket = tmp2;
+              let register;
+              if (register === undefined) {
+                register = closure_1_3.DCDSecurityKeyManager.register;
+              }
+              let obj4;
+              ticket = undefined;
+              challenge = undefined;
+              c4 = 1;
+              c5 = 1;
+              return { value: "PX_16", done: true };
+            }
+          } else if (1 === tmp6) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw credential;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              obj1 = { value: null, done: true };
+              obj1[0] = credential;
+              return obj1;
+            } else {
+              let obj5 = register(obj4[3]);
+              c4 = 2;
+              c5 = 1;
+              const obj2 = { value: null, done: false };
+              obj2[0] = obj5.startRegisterWebAuthnCredential();
+              return obj2;
+            }
+          } else if (2 === tmp6) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw credential;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              const obj3 = { value: null, done: true };
+              obj3[0] = credential;
+              return obj3;
+            } else {
+              obj4 = credential;
+              ticket = obj4.ticket;
+              challenge = obj4.challenge;
+              obj4 = { ticket };
+              c4 = 3;
+              c5 = 1;
+              obj5 = { value: null, done: false };
+              obj5[0] = register(challenge);
+              return obj5;
+            }
+          } else if (arg0 === 1) {
+            c5 = 3;
+            throw credential;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj6 = { value: null, done: true };
+            obj6[0] = credential;
+            return obj6;
+          } else {
+            obj4.credential = credential;
+            c5 = 3;
+            obj = { value: null, done: true };
+            obj[0] = obj4;
+            return obj;
+          }
+        } catch (tmp19) {
+          c5 = tmp;
+          throw tmp19;
+        }
       }
-      yield "PX_16";
-      const obj5 = register(obj4[3]);
-      obj4 = yield obj5.startRegisterWebAuthnCredential();
-      ticket = obj4.ticket;
-      challenge = obj4.challenge;
-      obj4 = { ticket };
-      obj4.credential = yield register(challenge);
-      return obj4;
     })();
     iter.next();
     return iter;
@@ -43,7 +126,7 @@ let closure_4 = new timestampDefault("WebAuthnUtils");
 let obj = {};
 Object.defineProperty(obj, "hasAndroidPasskeySupport", {
   get: () => {
-    let isAndroidResult = require(500) /* set */.isAndroid();
+    let isAndroidResult = require(1234) /* set */.isAndroid();
     if (isAndroidResult) {
       const DCDSecurityKeyManager = NativeModules.DCDSecurityKeyManager;
       let registerPasskey;
@@ -58,10 +141,10 @@ Object.defineProperty(obj, "hasAndroidPasskeySupport", {
 });
 Object.defineProperty(obj, "shouldDisplayAndroidFidoSelector", {
   get: () => {
-    let isAndroidResult = require(500) /* set */.isAndroid();
+    let isAndroidResult = require(1234) /* set */.isAndroid();
     if (isAndroidResult) {
-      isAndroidResult = !require(1624) /* isMetaQuest */.isMetaQuest();
-      const tmpResult = require(1624) /* isMetaQuest */;
+      isAndroidResult = !require(1623) /* isMetaQuest */.isMetaQuest();
+      const tmpResult = require(1623) /* isMetaQuest */;
     }
     return isAndroidResult;
   },
@@ -69,7 +152,7 @@ Object.defineProperty(obj, "shouldDisplayAndroidFidoSelector", {
 });
 obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
   let authenticatePasskey = NativeModules.DCDSecurityKeyManager.authenticate;
-  let isAndroidResult = authenticatePasskey(500).isAndroid();
+  let isAndroidResult = authenticatePasskey(1234).isAndroid();
   if (isAndroidResult) {
     const DCDSecurityKeyManager = tmp.DCDSecurityKeyManager;
     authenticatePasskey = undefined;
@@ -117,7 +200,7 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
               let code = tmp5;
               c5 = 1;
               c6 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp8) {
             if (arg0 === 1) {

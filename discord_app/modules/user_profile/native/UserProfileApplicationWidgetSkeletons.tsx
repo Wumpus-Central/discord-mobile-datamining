@@ -1,8 +1,8 @@
-// === Module 12757: ImageSkeleton ===
+// === Module 12978: ImageSkeleton ===
 
-// Module 12757 (ImageSkeleton)
+// Module 12978 (ImageSkeleton)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import Text from "Text" /* 4474 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;

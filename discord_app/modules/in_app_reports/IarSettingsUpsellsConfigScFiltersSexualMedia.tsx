@@ -1,11 +1,11 @@
-// === Module 8769: items ===
+// === Module 8784: items ===
 
-// Module 8769 (items)
+// Module 8784 (items)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import create from "create" /* 1306 */;
-import resolveExplicitContentSettingWithDefaults from "resolveExplicitContentSettingWithDefaults" /* 6144 */;
-import ReportNames from "ReportNames" /* 8757 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import create from "create" /* 1305 */;
+import resolveExplicitContentSettingWithDefaults from "resolveExplicitContentSettingWithDefaults" /* 6152 */;
+import ReportNames from "ReportNames" /* 8772 */;
 
 let obj = {
   getTitle() {
@@ -32,13 +32,13 @@ obj[4] = function onApply() {
   obj = {};
   ({ explicitContentGuilds, explicitContentFriendDm, explicitContentNonFriendDm } = explicitContentSettingOrDefault);
   if (explicitContentGuilds === create.ExplicitContentRedaction.SHOW) {
-    obj.explicitContentGuilds = tmp(1306).ExplicitContentRedaction.BLUR;
+    obj.explicitContentGuilds = tmp(1305).ExplicitContentRedaction.BLUR;
   }
   if (explicitContentFriendDm === create.ExplicitContentRedaction.SHOW) {
-    obj.explicitContentFriendDm = tmp(1306).ExplicitContentRedaction.BLUR;
+    obj.explicitContentFriendDm = tmp(1305).ExplicitContentRedaction.BLUR;
   }
   if (explicitContentNonFriendDm === create.ExplicitContentRedaction.SHOW) {
-    obj.explicitContentNonFriendDm = tmp(1306).ExplicitContentRedaction.BLUR;
+    obj.explicitContentNonFriendDm = tmp(1305).ExplicitContentRedaction.BLUR;
   }
   return obj.updateExplicitContentSetting(obj);
 };

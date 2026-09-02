@@ -1,8 +1,8 @@
-// === Module 8523: getNameplateAssets ===
+// === Module 8536: getNameplateAssets ===
 
-// Module 8523 (getNameplateAssets)
+// Module 8536 (getNameplateAssets)
 import set from "set" /* 2 */;
-import parseSkuIdFromServerData from "parseSkuIdFromServerData" /* 1900 */;
+import parseSkuIdFromServerData from "parseSkuIdFromServerData" /* 1899 */;
 
 const result = set.fileFinishedImporting("modules/collectibles/nameplates/native/NameplateUtils.tsx");
 

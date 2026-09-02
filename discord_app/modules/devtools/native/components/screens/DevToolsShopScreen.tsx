@@ -1,17 +1,17 @@
-// === Module 15317: DevToolsShopScreen ===
+// === Module 15545: DevToolsShopScreen ===
 
-// Module 15317 (DevToolsShopScreen)
+// Module 15545 (DevToolsShopScreen)
 import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import DismissibleContent from "DismissibleContent" /* 1373 */;
+import initialize from "initialize" /* 586 */;
+import ThemesDefault from "Themes" /* 709 */;
+import DismissibleContent from "DismissibleContent" /* 1372 */;
 import Stack from "Stack" /* 4926 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5594 */;
-import TableRowInner from "TableRowInner" /* 5599 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5992 */;
-import TableSwitchRow from "TableSwitchRow" /* 5993 */;
-import FormSwitch from "FormSwitch" /* 5994 */;
-import useToggleDismissibleContentDismissStateDefault from "useToggleDismissibleContentDismissState" /* 15215 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5602 */;
+import TableRowInner from "TableRowInner" /* 5607 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 6000 */;
+import TableSwitchRow from "TableSwitchRow" /* 6001 */;
+import FormSwitch from "FormSwitch" /* 6002 */;
+import useToggleDismissibleContentDismissStateDefault from "useToggleDismissibleContentDismissState" /* 15444 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "getUserAgnosticState" /* 4477 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -52,7 +52,7 @@ export default function DevToolsShopScreen() {
   obj4 = {
     value: stateFromStores,
     onValueChange(arg0) {
-      return callback(15290).toggle("shop_disable_cache", arg0);
+      return callback(15518).toggle("shop_disable_cache", arg0);
     }
   };
   const tmp6Result = useToggleDismissibleContentDismissStateDefault(DismissibleContent.DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING);

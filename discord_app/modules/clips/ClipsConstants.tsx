@@ -2,7 +2,7 @@
 
 // Module 4536 (result)
 import timestampDefault from "timestamp" /* 3 */;
-import setDefault from "set" /* 687 */;
+import setDefault from "set" /* 684 */;
 
 let obj = {};
 const result = 30 * setDefault.Millis.SECOND;

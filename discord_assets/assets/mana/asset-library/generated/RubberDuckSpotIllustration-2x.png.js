@@ -1,9 +1,9 @@
-// === Module 6944: metadata ===
+// === Module 6953: metadata ===
 
-// Module 6944 (metadata)
+// Module 6953 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/RubberDuckSpotIllustration-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/d5172e9cded816deb254574edbc1db87936197b7f69471e74809ebb6ac4d4093.png";
-export const metadata = { fileBytes: 27763 };
+export default "https://cdn.discordapp.com/assets/content/76b3affa5fb94eba21975d672e8b6049764d87f7c89b7350433f9d5c0c50eb38.png";
+export const metadata = { fileBytes: 27936 };

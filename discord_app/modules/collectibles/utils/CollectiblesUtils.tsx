@@ -1,12 +1,12 @@
-// === Module 7333: constructGoLiveSource ===
+// === Module 7342: constructGoLiveSource ===
 
-// Module 7333 (constructGoLiveSource)
+// Module 7342 (constructGoLiveSource)
 import set from "set" /* 2 */;
 import resetCache from "resetCache" /* 4163 */;
 import RESOLUTION_720 from "RESOLUTION_720" /* 4537 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4579 */;
-import calculateFractionalPremiumInfoDefault from "calculateFractionalPremiumInfo" /* 7141 */;
-import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7334 */;
+import calculateFractionalPremiumInfoDefault from "calculateFractionalPremiumInfo" /* 7150 */;
+import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7343 */;
 
 const ApplicationStreamPresets = RESOLUTION_720.ApplicationStreamPresets;
 const result = set.fileFinishedImporting("modules/collectibles/utils/CollectiblesUtils.tsx");
@@ -58,7 +58,7 @@ export const buildFetchCollectiblesOptionsQuery = function buildFetchCollectible
       obj.payment_gateway = noCache.paymentGateway;
     }
     if (noCache.variantsReturnStyle === ShopVariantsReturnStyle.ShopVariantsReturnStyle.VARIANTS_GROUP) {
-      obj.variants_return_style = tmp2(7334).ShopVariantsReturnStyle.VARIANTS_GROUP;
+      obj.variants_return_style = tmp2(7343).ShopVariantsReturnStyle.VARIANTS_GROUP;
     }
     if (null != noCache.shopHomeConfig) {
       obj.shop_home_config = noCache.shopHomeConfig;

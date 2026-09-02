@@ -1,10 +1,19 @@
-// === Module 8561: set ===
+// === Module 8574: items ===
 
-// Module 8561 (set)
-import BadgeId from "BadgeId" /* 8557 */;
-import LEGACY_BADGE_ID_MAP from "LEGACY_BADGE_ID_MAP" /* 8562 */;
+// Module 8574 (items)
+import USER_PROFILE_TOOLTIP_DELAY from "USER_PROFILE_TOOLTIP_DELAY" /* 8569 */;
+import BadgeId from "BadgeId" /* 8570 */;
+import DEFAULT_PREMIUM_BADGE_ID from "DEFAULT_PREMIUM_BADGE_ID" /* 8575 */;
+import LEGACY_BADGE_ID_MAP from "LEGACY_BADGE_ID_MAP" /* 8576 */;
+import BalanceWidgetMode from "BalanceWidgetMode" /* 8577 */;
 import set from "set" /* 2 */;
 
+const getBadgeName = USER_PROFILE_TOOLTIP_DELAY.getBadgeName;
+const items = [BadgeId.BadgeId.PREMIUM_TENURE, DEFAULT_PREMIUM_BADGE_ID.DEFAULT_PREMIUM_BADGE_ID];
+const items1 = [items, ];
+const items2 = [BadgeId.BadgeId.ORB_PROFILE, BalanceWidgetMode.OrbBadges.ORB_PROFILE_BADGE];
+items1[1] = items2;
+const map = new Map(items1);
 let set = new Set(Object.values(LEGACY_BADGE_ID_MAP.LEGACY_BADGE_ID_MAP));
 const result = set.fileFinishedImporting("modules/badges/BadgeIdResolution.tsx");
 
@@ -24,6 +33,13 @@ export const resolveProfileBadgeId = function resolveProfileBadgeId(id) {
     return tmp5;
   }
   const tmp = require;
+};
+export const toProfileBadgeLegacyId = function toProfileBadgeLegacyId(badge_id) {
+  let value = map.get(badge_id);
+  if (value == null) {
+    value = getBadgeName(badge_id);
+  }
+  return value;
 };
 export const isLegacyBadgeId = function isLegacyBadgeId(arg0) {
   return set.has(arg0);

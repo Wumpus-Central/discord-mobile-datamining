@@ -1,8 +1,8 @@
-// === Module 10970: items ===
+// === Module 11190: items ===
 
-// Module 10970 (items)
+// Module 11190 (items)
 import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import useThemeDefault from "useTheme" /* 4413 */;
 import componentDidMountDefault from "componentDidMount" /* 4947 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
@@ -61,27 +61,27 @@ const result = require("set").fileFinishedImporting("modules/channel_following/n
 
 export default function ChannelFollowSuccessAlert(arg0) {
   const tmp = callback3();
-  let obj = _require(1363);
+  let obj = _require(1362);
   const tmp6 = obj.isThemeDark(useThemeDefault()) ? items1 : items;
   _require = tmp6;
-  let tmp5Result = tmp5(7185);
+  let tmp5Result = tmp5(7194);
   items = [tmp6];
   const stableMemo = tmp5Result.useStableMemo(() => closure_1_1(closure_1_2[14]).sample(closure_0), items);
-  tmp5Result = tmp5(7185);
+  tmp5Result = tmp5(7194);
   const stableMemo1 = tmp5Result.useStableMemo(() => callback(table[14]).sample(closure_8), []);
   obj = {};
   const tmp2 = importDefault;
   const tmp4 = useThemeDefault();
   const merged = Object.assign(arg0);
-  const intl = tmp5(1236).intl;
-  obj.confirmText = intl.string(_require(1236).t["+IrDzN"]);
+  const intl = tmp5(1233).intl;
+  obj.confirmText = intl.string(_require(1233).t["+IrDzN"]);
   obj = { source: stableMemo, style: tmp.image };
   items1 = [callback(Image, obj), , ];
   const tmp2Result = componentDidMountDefault;
   items1[1] = callback(_require(4474).Text, { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: stableMemo1() });
   const obj2 = { style: tmp.text, variant: "text-md/medium", color: "text-muted", children: null };
-  const intl2 = tmp5(1236).intl;
-  obj2[3] = intl2.string(_require(1236).t["2QbSea"]);
+  const intl2 = tmp5(1233).intl;
+  obj2[3] = intl2.string(_require(1233).t["2QbSea"]);
   items1[2] = callback(_require(4474).Text, obj2);
   obj.children = items1;
   return callback2(tmp2Result, obj);

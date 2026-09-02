@@ -1,21 +1,21 @@
-// === Module 7345: redactionSettingToRenderedString ===
+// === Module 7354: redactionSettingToRenderedString ===
 
-// Module 7345 (redactionSettingToRenderedString)
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import create from "create" /* 1306 */;
+// Module 7354 (redactionSettingToRenderedString)
+import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
+import create from "create" /* 1305 */;
 import isFeatureAgeGated2 from "isFeatureAgeGated" /* 4172 */;
 import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4733 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 5367 */;
-import isCurrentUserTeen from "isCurrentUserTeen" /* 6137 */;
-import ObscureReason from "ObscureReason" /* 6142 */;
-import setDefault from "set" /* 7347 */;
-import set from "set" /* 7352 */;
-import resetManager from "resetManager" /* 7353 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 5375 */;
+import isCurrentUserTeen from "isCurrentUserTeen" /* 6145 */;
+import ObscureReason from "ObscureReason" /* 6150 */;
+import setDefault from "set" /* 7356 */;
+import set from "set" /* 7361 */;
+import resetManager from "resetManager" /* 7362 */;
 import closure_3 from "getUserAgnosticState" /* 4477 */;
-import closure_4 from "ensureGuildLoaded" /* 1387 */;
-import closure_5 from "getFpMessageInfo" /* 6139 */;
-import USER_SETTING_ACTION_SHEET_KEY from "USER_SETTING_ACTION_SHEET_KEY" /* 7346 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import closure_4 from "ensureGuildLoaded" /* 1386 */;
+import closure_5 from "getFpMessageInfo" /* 6147 */;
+import USER_SETTING_ACTION_SHEET_KEY from "USER_SETTING_ACTION_SHEET_KEY" /* 7355 */;
+import { AnalyticEvents } from "ME" /* 673 */;
 
 require = arg1;
 ({ EXPLICIT_MEDIA_MIN_HEIGHT: closure_6, EXPLICIT_MEDIA_MIN_WIDTH: error } = USER_SETTING_ACTION_SHEET_KEY);
@@ -24,18 +24,18 @@ const result = require("set").fileFinishedImporting("modules/explicit_media_reda
 export const redactionSettingToRenderedString = function redactionSettingToRenderedString(prop) {
   if (create.ExplicitContentRedaction.SHOW === prop) {
     return () => {
-      const intl = callback(1236).intl;
-      return intl.string(callback(1236).t["5k5OFp"]);
+      const intl = callback(1233).intl;
+      return intl.string(callback(1233).t["5k5OFp"]);
     };
-  } else if (tmp(1306).ExplicitContentRedaction.BLUR === prop) {
+  } else if (tmp(1305).ExplicitContentRedaction.BLUR === prop) {
     return () => {
-      const intl = callback(1236).intl;
-      return intl.string(callback(1236).t.S49Uad);
+      const intl = callback(1233).intl;
+      return intl.string(callback(1233).t.S49Uad);
     };
-  } else if (tmp(1306).ExplicitContentRedaction.BLOCK === prop) {
+  } else if (tmp(1305).ExplicitContentRedaction.BLOCK === prop) {
     return () => {
-      const intl = callback(1236).intl;
-      return intl.string(callback(1236).t["D/157Y"]);
+      const intl = callback(1233).intl;
+      return intl.string(callback(1233).t["D/157Y"]);
     };
   }
 };
@@ -118,12 +118,12 @@ export const trackScanningTimedOut = function trackScanningTimedOut(arg0) {
         obj[5] = resetManager.MESSAGE_SCAN_TIMEOUT;
         obj[6] = attachmentIds;
         obj.track(AnalyticEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, obj);
-        let tmp3Result = tmp3(7347);
+        let tmp3Result = tmp3(7356);
         obj = { name: null, tags: null };
         obj[0] = set.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT;
         obj[1] = ["metricVersion:1"];
         tmp3Result.increment(obj);
-        tmp3Result = tmp3(7347);
+        tmp3Result = tmp3(7356);
         obj1 = { name: null };
         obj1[0] = set.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT_DISTRIBUTION;
         let num4;
@@ -174,8 +174,8 @@ export const trackExplicitMediaRedactableMessagedLoaded = function trackExplicit
     if (sum > 0) {
       obj = { name: null };
       obj[0] = set.MetricEvents.EXPLICIT_MEDIA_PENDING_MESSAGE_LOADED_V2;
-      tmp10(7347).distribution(obj, sum);
-      const tmp10Result = tmp10(7347);
+      tmp10(7356).distribution(obj, sum);
+      const tmp10Result = tmp10(7356);
     }
     const obj3 = expandEventPropertiesDefault;
     tmp10 = importDefault;

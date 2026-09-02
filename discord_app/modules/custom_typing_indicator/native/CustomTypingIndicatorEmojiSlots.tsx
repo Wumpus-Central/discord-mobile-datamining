@@ -1,14 +1,14 @@
-// === Module 14958: EmojiGlyph ===
+// === Module 15187: EmojiGlyph ===
 
-// Module 14958 (EmojiGlyph)
-import getAvatarURLDefault from "getAvatarURL" /* 1431 */;
-import CUSTOM_TYPING_INDICATOR_EMOJI_COUNT from "CUSTOM_TYPING_INDICATOR_EMOJI_COUNT" /* 1942 */;
+// Module 15187 (EmojiGlyph)
+import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
+import CUSTOM_TYPING_INDICATOR_EMOJI_COUNT from "CUSTOM_TYPING_INDICATOR_EMOJI_COUNT" /* 1941 */;
 import _modDef4217 from "module_4217" /* 4217 */;
 import Stack from "Stack" /* 4926 */;
-import EmojiDefault from "Emoji" /* 5585 */;
+import EmojiDefault from "Emoji" /* 5593 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import { EmojiIntention } from "set" /* 1925 */;
+import { EmojiIntention } from "set" /* 1924 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -134,7 +134,7 @@ let result = require("set").fileFinishedImporting("modules/custom_typing_indicat
 export default function CustomTypingIndicatorEmojiSlots(arg0) {
   ({ emojis: require, onChange: importDefault } = arg0);
   dependencyMap = undefined;
-  dependencyMap = callback(React.useState(() => dependencyMap(12).sampleSize(closure_8, dependencyMap(1942).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT)), 1)[0];
+  dependencyMap = callback(React.useState(() => dependencyMap(12).sampleSize(closure_8, dependencyMap(1941).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT)), 1)[0];
   let obj = { direction: "horizontal", spacing: 8, children: null };
   obj = { length: CUSTOM_TYPING_INDICATOR_EMOJI_COUNT.CUSTOM_TYPING_INDICATOR_EMOJI_COUNT };
   obj[2] = Array.from(obj, (arg0, index) => {

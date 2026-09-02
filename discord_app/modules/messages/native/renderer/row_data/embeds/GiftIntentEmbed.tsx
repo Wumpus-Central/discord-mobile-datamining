@@ -1,14 +1,14 @@
-// === Module 7986: createGiftIntentEmbed ===
+// === Module 7995: createGiftIntentEmbed ===
 
-// Module 7986 (createGiftIntentEmbed)
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 7995 (createGiftIntentEmbed)
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import nameFromUserDefault from "nameFromUser" /* 4322 */;
-import frozen from "frozen" /* 7855 */;
-import _sendGiftMessage from "_sendGiftMessage" /* 7991 */;
-import closure_3 from "getCurrentTime" /* 7987 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import { GiftIntentType } from "GuildFeatures" /* 1924 */;
+import frozen from "frozen" /* 7864 */;
+import _sendGiftMessage from "_sendGiftMessage" /* 8000 */;
+import closure_3 from "getCurrentTime" /* 7996 */;
+import closure_4 from "mergeGuildAvatar" /* 1921 */;
+import { GiftIntentType } from "GuildFeatures" /* 1923 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
@@ -71,9 +71,9 @@ export const createGiftIntentEmbed = function createGiftIntentEmbed(message, the
         const intl3 = getSystemLocale.intl;
         obj1[12] = intl3.string(getSystemLocale.t.ilhtIa);
         const obj5 = frozen;
-        obj1[13] = frozen.getAssetUriForEmbed(tmp8(7992));
+        obj1[13] = frozen.getAssetUriForEmbed(tmp8(8001));
         const obj6 = frozen;
-        obj1[14] = frozen.getAssetUriForEmbed(tmp8(7993));
+        obj1[14] = frozen.getAssetUriForEmbed(tmp8(8002));
         const intl4 = getSystemLocale.intl;
         obj1[15] = intl4.string(getSystemLocale.t.I5gL2H);
         return obj1;

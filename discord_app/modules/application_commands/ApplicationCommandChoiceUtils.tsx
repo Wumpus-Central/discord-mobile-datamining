@@ -1,7 +1,7 @@
-// === Module 8441: toChoiceBooleanValue ===
+// === Module 8450: toChoiceBooleanValue ===
 
-// Module 8441 (toChoiceBooleanValue)
-import closure_0 from "handleInit" /* 7523 */;
+// Module 8450 (toChoiceBooleanValue)
+import closure_0 from "handleInit" /* 7533 */;
 import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 4952 */;
 
 ({ FALSE_OPTION_NAME: closure_1, TRUE_OPTION_NAME: obj1 } = TRUE_OPTION_NAME);

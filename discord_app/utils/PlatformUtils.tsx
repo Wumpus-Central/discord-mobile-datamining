@@ -1,6 +1,6 @@
-// === Module 500: set ===
+// === Module 1234: set ===
 
-// Module 500 (set)
+// Module 1234 (set)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("utils/PlatformUtils.tsx");

@@ -1,14 +1,14 @@
-// === Module 11594: ForumPostListBody ===
+// === Module 11817: ForumPostListBody ===
 
-// Module 11594 (ForumPostListBody)
+// Module 11817 (ForumPostListBody)
 import noopAll from "noop" /* 19 */;
-import GAME_INVITES_CHANNEL_NO_MIC_TAG_NAME from "GAME_INVITES_CHANNEL_NO_MIC_TAG_NAME" /* 6119 */;
-import ForumPostUsername from "ForumPostUsername" /* 11577 */;
-import ForumPostTimestampDefault from "ForumPostTimestamp" /* 11586 */;
-import ForumPostNewTagDefault from "ForumPostNewTag" /* 11587 */;
-import ForumPostMessageContentDefault from "ForumPostMessageContent" /* 11595 */;
+import GAME_INVITES_CHANNEL_NO_MIC_TAG_NAME from "GAME_INVITES_CHANNEL_NO_MIC_TAG_NAME" /* 6127 */;
+import ForumPostUsername from "ForumPostUsername" /* 11800 */;
+import ForumPostTimestampDefault from "ForumPostTimestamp" /* 11809 */;
+import ForumPostNewTagDefault from "ForumPostNewTag" /* 11810 */;
+import ForumPostMessageContentDefault from "ForumPostMessageContent" /* 11818 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { ForumTimestampFormats } from "FORUM_GUIDELINES_ACTION_SHEET" /* 6120 */;
+import { ForumTimestampFormats } from "FORUM_GUIDELINES_ACTION_SHEET" /* 6128 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -41,7 +41,7 @@ export default function ForumPostListBody(arg0) {
     const obj4 = { title: null, lineClamp: 2, ellipsizeMode: "tail", hasUnreads: null };
     obj4[0] = thread.name;
     obj4[3] = hasUnreads;
-    tmp9Result = tmp9(tmp10(11588), obj4);
+    tmp9Result = tmp9(tmp10(11811), obj4);
   }
   items2[1] = tmp9Result;
   items2[2] = callback(ForumPostMessageContentDefault, { messageContent, message: firstMessage, isMessageDeleted: false, messageLoaded: firstMessageLoaded, hasUnreads, senderModifier });
@@ -66,7 +66,7 @@ export default function ForumPostListBody(arg0) {
       }
       obj5[4] = id;
       obj5[5] = tmp.thumbnailContainer;
-      tmp9Result = tmp9(tmp2(11581).ForumPostMediaThumbnail, obj5);
+      tmp9Result = tmp9(tmp2(11804).ForumPostMediaThumbnail, obj5);
     }
   }
   items3[1] = tmp9Result;

@@ -1,8 +1,8 @@
-// === Module 7904: getApplicationSubscriptionSystemMessageASTContent ===
+// === Module 7913: getApplicationSubscriptionSystemMessageASTContent ===
 
-// Module 7904 (getApplicationSubscriptionSystemMessageASTContent)
+// Module 7913 (getApplicationSubscriptionSystemMessageASTContent)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 
 const result = set.fileFinishedImporting("modules/premium_apps/ApplicationSubscriptionSystemMessageUtils.tsx");
 

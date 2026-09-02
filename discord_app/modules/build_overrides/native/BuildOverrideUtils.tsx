@@ -1,10 +1,10 @@
-// === Module 11360: setBuildOverrideForBranch ===
+// === Module 11583: setBuildOverrideForBranch ===
 
-// Module 11360 (setBuildOverrideForBranch)
-import BundleUpdaterManagerDefault from "BundleUpdaterManager" /* 11362 */;
+// Module 11583 (setBuildOverrideForBranch)
+import BundleUpdaterManagerDefault from "BundleUpdaterManager" /* 11585 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "getCurrentBuildOverride" /* 11059 */;
-import set from "set" /* 500 */;
+import closure_4 from "getCurrentBuildOverride" /* 11279 */;
+import set from "set" /* 1234 */;
 
 const require = arg1;
 function setBuildOverrideForBranch(id) {
@@ -76,7 +76,7 @@ function _setBuildOverride() {
           } else {
             lib = arg1;
             if (400 !== lib.status) {
-              obj2 = callback(11362);
+              obj2 = callback(11585);
               const result = obj2.checkForUpdateAndReload();
             } else {
               obj = callback(4858);
@@ -147,7 +147,7 @@ function _clearBuildOverride() {
             dependencyMap = 1;
             c3 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = closure_1_0(11361).clearBuildOverride();
+            obj1[0] = closure_1_0(11584).clearBuildOverride();
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -161,7 +161,7 @@ function _clearBuildOverride() {
         } else {
           closure_0 = arg1;
           if (400 !== closure_0.status) {
-            obj2 = callback(11362);
+            obj2 = callback(11585);
             const result = obj2.checkForUpdateAndReload();
           } else {
             obj = callback(4858);
@@ -278,7 +278,7 @@ function _toggleOverride() {
               obj.show(obj3);
             }
           }
-          obj2 = callback(11362);
+          obj2 = callback(11585);
           const result = obj2.checkForUpdateAndReload();
         } catch (tmp29) {
           currentBuildOverride = tmp;
@@ -380,7 +380,7 @@ function _setBuildOverrideFromLink() {
               obj.show(obj3);
             }
           }
-          obj2 = callback(11362);
+          obj2 = callback(11585);
           const result = obj2.checkForUpdateAndReload();
         } catch (tmp26) {
           currentBuildOverride = tmp;

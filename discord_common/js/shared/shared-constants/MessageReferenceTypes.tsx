@@ -1,6 +1,6 @@
-// === Module 694: MessageReferenceTypes ===
+// === Module 691: MessageReferenceTypes ===
 
-// Module 694 (MessageReferenceTypes)
+// Module 691 (MessageReferenceTypes)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/MessageReferenceTypes.tsx");

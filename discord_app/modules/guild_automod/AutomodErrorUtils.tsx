@@ -1,9 +1,9 @@
-// === Module 7848: getAutomodErrorMessageFromErrorResponse ===
+// === Module 7857: getAutomodErrorMessageFromErrorResponse ===
 
-// Module 7848 (getAutomodErrorMessageFromErrorResponse)
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_2 from "ensureGuildLoaded" /* 1387 */;
-import { AbortCodes } from "ME" /* 676 */;
+// Module 7857 (getAutomodErrorMessageFromErrorResponse)
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import closure_2 from "ensureGuildLoaded" /* 1386 */;
+import { AbortCodes } from "ME" /* 673 */;
 import set from "set" /* 2 */;
 
 require = arg1;
@@ -56,16 +56,16 @@ function getAutomodErrorMessageFromErrorResponse(errorResponseBody, id) {
 function getAutomodErrorMessageFromMessageData(message) {
   const channel = store.getChannel(message.message.channelId);
   if (obj2.isMessageDataEdit(message)) {
-    const intl4 = tmp(1236).intl;
-    let stringResult = intl4.string(tmp(1236).t.bU6o0z);
+    const intl4 = tmp(1233).intl;
+    let stringResult = intl4.string(tmp(1233).t.bU6o0z);
   } else {
     let isThreadResult;
     if (channel != null) {
       isThreadResult = channel.isThread();
     }
     if (isThreadResult) {
-      const intl3 = tmp(1236).intl;
-      stringResult = intl3.string(tmp(1236).t.DVdG9E);
+      const intl3 = tmp(1233).intl;
+      stringResult = intl3.string(tmp(1233).t.DVdG9E);
     } else {
       let isForumPostResult;
       if (channel != null) {
@@ -77,12 +77,12 @@ function getAutomodErrorMessageFromMessageData(message) {
           isForumLikeChannelResult = channel.isForumLikeChannel();
         }
         if (!isForumLikeChannelResult) {
-          const intl = tmp(1236).intl;
-          stringResult = intl.string(tmp(1236).t.zQ69pv);
+          const intl = tmp(1233).intl;
+          stringResult = intl.string(tmp(1233).t.zQ69pv);
         }
       }
-      const intl2 = tmp(1236).intl;
-      stringResult = intl2.string(tmp(1236).t.ipgKDg);
+      const intl2 = tmp(1233).intl;
+      stringResult = intl2.string(tmp(1233).t.ipgKDg);
     }
   }
   return stringResult;

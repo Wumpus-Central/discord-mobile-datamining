@@ -1,7 +1,7 @@
-// === Module 17511: promise ===
+// === Module 17747: promise ===
 
-// Module 17511 (promise)
-import closure_3 from "ensureGuildLoaded" /* 1387 */;
+// Module 17747 (promise)
+import closure_3 from "ensureGuildLoaded" /* 1386 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/headless_tasks/android/Disconnect.tsx");

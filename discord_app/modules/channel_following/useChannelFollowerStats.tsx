@@ -1,10 +1,10 @@
-// === Module 11254: useChannelFollowerStats ===
+// === Module 11477: useChannelFollowerStats ===
 
-// Module 11254 (useChannelFollowerStats)
-import setDefault from "set" /* 687 */;
+// Module 11477 (useChannelFollowerStats)
+import setDefault from "set" /* 684 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "getFollowerStatsForChannel" /* 11255 */;
+import closure_5 from "getFollowerStatsForChannel" /* 11478 */;
 
 const require = arg1;
 const HOUR = setDefault.Millis.HOUR;
@@ -17,14 +17,14 @@ export default function useChannelFollowerStats(arg0) {
   dependencyMap = tmp[1];
   const items = [closure_5];
   const items1 = [arg0];
-  stateFromStores = _require(589).useStateFromStores(items, () => closure_1_5.getFollowerStatsForChannel(closure_0), items1);
+  stateFromStores = _require(586).useStateFromStores(items, () => closure_1_5.getFollowerStatsForChannel(closure_0), items1);
   const items2 = [arg0, stateFromStores, first];
   const effect = React.useEffect(() => {
     if (null == stateFromStores) {
       if (!first) {
         dependencyMap(true);
-        const channelFollowerStats = first(10969).fetchChannelFollowerStats(closure_0);
-        const obj = first(10969);
+        const channelFollowerStats = first(11189).fetchChannelFollowerStats(closure_0);
+        const obj = first(11189);
       }
     } else {
       const _Date = Date;

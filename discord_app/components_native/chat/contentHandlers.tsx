@@ -1,15 +1,15 @@
-// === Module 11185: onTapMention ===
+// === Module 11406: onTapMention ===
 
-// Module 11185 (onTapMention)
+// Module 11406 (onTapMention)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2009 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2008 */;
 import presentAddedFriendToast from "presentAddedFriendToast" /* 4193 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4445 */;
 import setDefault from "set" /* 4857 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5973 */;
-import _copy from "_copy" /* 5981 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8896 */;
-import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 11183 */;
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5981 */;
+import _copy from "_copy" /* 5989 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8911 */;
+import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 11404 */;
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
 
 require = arg1;
@@ -38,42 +38,84 @@ let closure_5 = importDefaultResult((arg0) => {
   c3 = 0;
   c4 = 0;
   const iter = (function*(arg0) {
-    let callback = tmp2;
-    attachmentUrl = attachmentUrl.nativeEvent.data.attachmentUrl;
-    yield "PX_16";
-    if (1 === tmp5) {
+    if (c4 === 2) {
+      c4 = 3;
+      HermesBuiltin.throwTypeError();
+    } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        c4 = 3;
         throw arg1;
       } else if (arg0 === 2) {
-        c4 = 3;
-        obj1 = { value: null, done: true };
-        obj1[0] = arg1;
-        return obj1;
+        let obj = { value: null, done: true };
+        obj[0] = arg1;
+        return obj;
       } else {
-        if (null != attachmentUrl) {
-          if ("" !== attachmentUrl) {
-            const obj3 = callback2(10033);
-            dependencyMap = 2;
-            c4 = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = obj3.maybeRefreshAttachmentUrl(attachmentUrl);
-            return obj2;
-          }
-        }
-        c4 = 3;
+        return { value: "HermesInternal", done: null };
       }
-    } else if (arg0 === 1) {
-      c4 = 3;
-      throw arg1;
-    } else if (arg0 !== 2) {
-      callback = arg1;
-      const obj = callback(8646);
-      obj.trackLinkClicked(callback);
-      obj1 = callback(4190);
-      obj1.openURL(callback);
+    } else {
+      try {
+        c4 = 2;
+        if (0 === dependencyMap) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            const callback2 = tmp5;
+            let callback = tmp2;
+            let attachmentUrl;
+            attachmentUrl = attachmentUrl.nativeEvent.data.attachmentUrl;
+            callback = undefined;
+            dependencyMap = 1;
+            c4 = 1;
+            return { value: "PX_16", done: true };
+          }
+        } else {
+          if (1 === tmp5) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj1 = { value: null, done: true };
+              obj1[0] = arg1;
+              return obj1;
+            } else {
+              if (null != attachmentUrl) {
+                if ("" !== attachmentUrl) {
+                  let obj3 = callback2(10055);
+                  dependencyMap = 2;
+                  c4 = 1;
+                  const obj2 = { value: null, done: false };
+                  obj2[0] = obj3.maybeRefreshAttachmentUrl(attachmentUrl);
+                  return obj2;
+                }
+              }
+              c4 = 3;
+            }
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw arg1;
+          } else if (arg0 !== 2) {
+            callback = arg1;
+            obj = callback(8661);
+            obj.trackLinkClicked(callback);
+            obj1 = callback(4190);
+            obj1.openURL(callback);
+          }
+          c4 = 3;
+          obj3 = { value: null, done: true };
+          obj3[0] = arg1;
+          return obj3;
+        }
+      } catch (tmp25) {
+        c4 = tmp;
+        throw tmp25;
+      }
     }
-    return arg1;
   })();
   iter.next();
   return iter;
@@ -93,41 +135,83 @@ let closure_4 = importDefaultResult((arg0) => {
   c3 = 0;
   c4 = 0;
   const iter = (function*(arg0) {
-    let callback = tmp2;
-    attachmentUrl = attachmentUrl.nativeEvent.data.attachmentUrl;
-    yield "PX_16";
-    if (1 === tmp5) {
+    if (c4 === 2) {
+      c4 = 3;
+      HermesBuiltin.throwTypeError();
+    } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        c4 = 3;
         throw arg1;
       } else if (arg0 === 2) {
-        c4 = 3;
-        obj1 = { value: null, done: true };
-        obj1[0] = arg1;
-        return obj1;
+        let obj = { value: null, done: true };
+        obj[0] = arg1;
+        return obj;
       } else {
-        if (null != attachmentUrl) {
-          if ("" !== attachmentUrl) {
-            let obj2 = callback2(10033);
-            dependencyMap = 2;
-            c4 = 1;
-            obj2 = { value: null, done: false };
-            obj2[0] = obj2.maybeRefreshAttachmentUrl(attachmentUrl);
-            return obj2;
-          }
-        }
-        c4 = 3;
+        return { value: "HermesInternal", done: null };
       }
-    } else if (arg0 === 1) {
-      c4 = 3;
-      throw arg1;
-    } else if (arg0 !== 2) {
-      callback = arg1;
-      const obj = { urlString: null };
-      obj[0] = callback;
-      callback(11183)(obj);
+    } else {
+      try {
+        c4 = 2;
+        if (0 === dependencyMap) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            const callback2 = tmp5;
+            let callback = tmp2;
+            let attachmentUrl;
+            attachmentUrl = attachmentUrl.nativeEvent.data.attachmentUrl;
+            callback = undefined;
+            dependencyMap = 1;
+            c4 = 1;
+            return { value: "PX_16", done: true };
+          }
+        } else {
+          if (1 === tmp5) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj1 = { value: null, done: true };
+              obj1[0] = arg1;
+              return obj1;
+            } else {
+              if (null != attachmentUrl) {
+                if ("" !== attachmentUrl) {
+                  let obj2 = callback2(10055);
+                  dependencyMap = 2;
+                  c4 = 1;
+                  obj2 = { value: null, done: false };
+                  obj2[0] = obj2.maybeRefreshAttachmentUrl(attachmentUrl);
+                  return obj2;
+                }
+              }
+              c4 = 3;
+            }
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw arg1;
+          } else if (arg0 !== 2) {
+            callback = arg1;
+            obj = { urlString: null };
+            obj[0] = callback;
+            callback(11404)(obj);
+          }
+          c4 = 3;
+          const obj3 = { value: null, done: true };
+          obj3[0] = arg1;
+          return obj3;
+        }
+      } catch (tmp22) {
+        c4 = tmp;
+        throw tmp22;
+      }
     }
-    return arg1;
   })();
   iter.next();
   return iter;
@@ -143,7 +227,7 @@ obj[2] = function() {
   return applyArgumentsResult;
 };
 obj[3] = function onTapMention(closure_0) {
-  let obj = parsedUserId(11146);
+  let obj = parsedUserId(11367);
   const nativeSyntheticEventData = obj.getNativeSyntheticEventData(closure_0);
   ({ userId, channelId, roleName, parsedUserId } = nativeSyntheticEventData);
   ({ roleId, guildId } = nativeSyntheticEventData);
@@ -162,7 +246,7 @@ obj[3] = function onTapMention(closure_0) {
         obj[0] = guildId;
         obj[1] = roleId;
         obj[2] = channelId;
-        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(tmp(2009)(11186, tmp2.paths), "RoleMembersActionSheet", obj);
+        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(tmp(2008)(11407, tmp2.paths), "RoleMembersActionSheet", obj);
         const obj9 = ACTION_SHEET_HEIGHT_HALFDefault;
       }
     }
@@ -171,7 +255,7 @@ obj[3] = function onTapMention(closure_0) {
         obj1 = { guildId: null, roleId: null, channelId: null };
         obj1[0] = guildId;
         const obj6 = ACTION_SHEET_HEIGHT_HALFDefault;
-        const tmp10 = tmp(2009)(11186, tmp2.paths);
+        const tmp10 = tmp(2008)(11407, tmp2.paths);
         obj1[1] = DISCORD_EPOCHDefault.castGuildIdAsEveryoneGuildRoleId(guildId);
         obj1[2] = channelId;
         obj6.openLazy(tmp10, "RoleMembersActionSheet", obj1);
@@ -183,8 +267,8 @@ obj[3] = function onTapMention(closure_0) {
       if (DeveloperMode.getSetting()) {
         if (null != parsedUserId) {
           const obj2 = { secondaryConfirmText: null, onConfirmSecondary: null };
-          const intl = tmp(1236).intl;
-          obj2[0] = intl.string(tmp(1236).t["/AXYnE"]);
+          const intl = tmp(1233).intl;
+          obj2[0] = intl.string(tmp(1233).t["/AXYnE"]);
           obj2[1] = function onConfirmSecondary() {
             parsedUserId(closure_1_3[14]).copy(parsedUserId);
             const obj = parsedUserId(closure_1_3[14]);
@@ -194,12 +278,12 @@ obj[3] = function onTapMention(closure_0) {
         }
         let obj3 = setDefault;
         obj3 = { title: null, body: null, confirmText: null, isDismissable: true };
-        const intl2 = tmp(1236).intl;
-        obj3[0] = intl2.string(tmp(1236).t.r0DLNm);
-        const intl3 = tmp(1236).intl;
-        obj3[1] = intl3.string(tmp(1236).t.Fqqbhg);
-        const intl4 = tmp(1236).intl;
-        obj3[2] = intl4.string(tmp(1236).t.BddRzS);
+        const intl2 = tmp(1233).intl;
+        obj3[0] = intl2.string(tmp(1233).t.r0DLNm);
+        const intl3 = tmp(1233).intl;
+        obj3[1] = intl3.string(tmp(1233).t.Fqqbhg);
+        const intl4 = tmp(1233).intl;
+        obj3[2] = intl4.string(tmp(1233).t.BddRzS);
         const merged = Object.assign(obj4);
         obj3.show(obj3);
       }
@@ -220,7 +304,7 @@ obj[5] = function onTapInlineCode(nativeEvent) {
   }
 };
 obj[6] = function onTapEmoji(emojiNode) {
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(9171, dependencyMap.paths), "MessageEmojiActionSheet", { emojiNode: emojiNode.nativeEvent.node });
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(9185, dependencyMap.paths), "MessageEmojiActionSheet", { emojiNode: emojiNode.nativeEvent.node });
 };
 let result = require("set").fileFinishedImporting("components_native/chat/contentHandlers.tsx");
 

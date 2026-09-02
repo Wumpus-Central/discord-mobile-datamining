@@ -1,15 +1,15 @@
-// === Module 589: initialize ===
+// === Module 586: initialize ===
 
-// Module 589 (initialize)
+// Module 586 (initialize)
 import set from "set" /* 2 */;
-import initialize2 from "initialize" /* 591 */;
-import loggerDefault from "logger" /* 593 */;
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import attach from "attach" /* 648 */;
-import connectStoresDefault from "connectStores" /* 649 */;
-import setDisplayName from "setDisplayName" /* 650 */;
-import getClass from "getClass" /* 590 */;
-import areStatesEqual from "areStatesEqual" /* 642 */;
+import initialize2 from "initialize" /* 588 */;
+import loggerDefault from "logger" /* 590 */;
+import defaultAreStatesEqual from "defaultAreStatesEqual" /* 644 */;
+import attach from "attach" /* 645 */;
+import connectStoresDefault from "connectStores" /* 646 */;
+import setDisplayName from "setDisplayName" /* 647 */;
+import getClass from "getClass" /* 587 */;
+import areStatesEqual from "areStatesEqual" /* 639 */;
 
 function initialize() {
   Store.initialize();

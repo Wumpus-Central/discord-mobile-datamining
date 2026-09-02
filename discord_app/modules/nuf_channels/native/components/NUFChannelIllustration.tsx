@@ -1,7 +1,7 @@
-// === Module 13424: NUFChannelIllustration ===
+// === Module 13647: NUFChannelIllustration ===
 
-// Module 13424 (NUFChannelIllustration)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 13647 (NUFChannelIllustration)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -43,23 +43,23 @@ export default function NUFChannelIllustration() {
   const effect = sharedValue1.useEffect(() => {
     const timeout = setTimeout(() => callback((arg0) => {
       const items = [...arg0];
-      const intl = callback(1236).intl;
+      const intl = callback(1233).intl;
       const obj = { name: null, avatar: null, message: null };
-      const intl2 = callback(1236).intl;
-      obj[0] = intl2.string(callback(1236).t["9m/HsX"]);
-      obj[1] = callback2(13425);
-      obj[2] = intl.string(callback(1236).t["5alrl0"]);
+      const intl2 = callback(1233).intl;
+      obj[0] = intl2.string(callback(1233).t["9m/HsX"]);
+      obj[1] = callback2(13648);
+      obj[2] = intl.string(callback(1233).t["5alrl0"]);
       items[tmp] = obj;
       return items;
     }), 500);
     const timeout2 = setTimeout(() => callback((arg0) => {
       const items = [...arg0];
-      const intl = callback(1236).intl;
+      const intl = callback(1233).intl;
       const obj = { name: null, avatar: null, message: null };
-      const intl2 = callback(1236).intl;
-      obj[0] = intl2.string(callback(1236).t["AW1kM+"]);
-      obj[1] = callback2(13426);
-      obj[2] = intl.string(callback(1236).t["5Oo+vS"]);
+      const intl2 = callback(1233).intl;
+      obj[0] = intl2.string(callback(1233).t["AW1kM+"]);
+      obj[1] = callback2(13649);
+      obj[2] = intl.string(callback(1233).t["5Oo+vS"]);
       items[tmp] = obj;
       return items;
     }), 2000);
@@ -95,35 +95,35 @@ export default function NUFChannelIllustration() {
   obj = { style: tmp.container, children: null };
   obj1 = { source: null, style: null };
   const animatedStyle = obj2.useAnimatedStyle(fn);
-  obj1[0] = first(13427);
+  obj1[0] = first(13650);
   const items2 = [, ];
   ({ starSmall: arr4[0], starBlue: arr4[1] } = tmp);
   obj1[1] = items2;
   const items3 = [callback(closure_6, obj1), , , , , ];
-  obj2 = { source: first(13428), style: items4 };
+  obj2 = { source: first(13651), style: items4 };
   items4 = [, ];
   ({ starMedium: arr6[0], starPink: arr6[1] } = tmp);
   items3[1] = callback(closure_6, obj2);
   const items5 = [, ];
   ({ starMedium: arr7[0], starGreen: arr7[1] } = tmp);
-  items3[2] = callback(closure_6, { source: first(13429), style: items5 });
-  const obj3 = { source: first(13429), style: items5 };
+  items3[2] = callback(closure_6, { source: first(13652), style: items5 });
+  const obj3 = { source: first(13652), style: items5 };
   const items6 = [, ];
   ({ starSmall: arr8[0], starPurple: arr8[1] } = tmp);
-  items3[3] = callback(closure_6, { source: first(13430), style: items6 });
+  items3[3] = callback(closure_6, { source: first(13653), style: items6 });
   items3[4] = callback(closure_5, { style: tmp.cardBackground });
   const obj6 = { style: tmp.card, shadow: "low", border: "subtle", children: null };
   const obj7 = { style: tmp.header, children: null };
-  const items7 = [callback(_require(5029).TextIcon, { size: "sm" }), ];
+  const items7 = [callback(_require(5033).TextIcon, { size: "sm" }), ];
   const obj8 = { variant: "text-md/bold", allowFontScaling: false, children: null };
-  let intl = _require(1236).intl;
-  const items8 = [" ", intl.string(_require(1236).t.aLOLry)];
+  let intl = _require(1233).intl;
+  const items8 = [" ", intl.string(_require(1233).t.aLOLry)];
   obj8[2] = items8;
   items7[1] = callback2(_require(4474).Text, obj8);
   obj7[1] = items7;
   const items9 = [callback2(closure_5, obj7), ];
   const obj9 = { style: tmp.content, children: null };
-  const obj4 = { source: first(13430), style: items6 };
+  const obj4 = { source: first(13653), style: items6 };
   const obj5 = { style: tmp.cardBackground };
   obj9[1] = callback(first(4217).View, {
     style: animatedStyle,
@@ -141,7 +141,7 @@ export default function NUFChannelIllustration() {
   });
   items9[1] = callback(closure_5, obj9);
   obj6[3] = items9;
-  items3[5] = callback2(_require(5601).Card, obj6);
+  items3[5] = callback2(_require(5609).Card, obj6);
   obj[1] = items3;
   return callback2(closure_5, obj);
 };

@@ -1,8 +1,8 @@
-// === Module 10309: useFavoritesGuildConfig ===
+// === Module 10331: useFavoritesGuildConfig ===
 
-// Module 10309 (useFavoritesGuildConfig)
+// Module 10331 (useFavoritesGuildConfig)
 import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1468 */;
+import ApexExperiment from "ApexExperiment" /* 1467 */;
 
 let obj = { 1: null, 2: { enabled: true } };
 obj[2] = { enabled: true };

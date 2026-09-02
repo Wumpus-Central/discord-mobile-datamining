@@ -1,16 +1,16 @@
-// === Module 11559: useChatInputRefs ===
+// === Module 11782: useChatInputRefs ===
 
-// Module 11559 (useChatInputRefs)
+// Module 11782 (useChatInputRefs)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleInit" /* 7524 */;
-import closure_5 from "loadSavedGuildStickers" /* 5444 */;
+import closure_4 from "handleInit" /* 7534 */;
+import closure_5 from "loadSavedGuildStickers" /* 5452 */;
 import closure_6 from "handleChanged" /* 4854 */;
 import { DraftType } from "handleChanged" /* 4854 */;
-import closure_8 from "initialize" /* 7426 */;
-import closure_9 from "setCooldown" /* 7431 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import { updateChatInputContainerHeight as closure_11 } from "updateChatInputContainerHeight" /* 9534 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import closure_8 from "initialize" /* 7435 */;
+import closure_9 from "setCooldown" /* 7441 */;
+import closure_10 from "mergeGuildAvatar" /* 1921 */;
+import { updateChatInputContainerHeight as closure_11 } from "updateChatInputContainerHeight" /* 9547 */;
+import { AnalyticEvents } from "ME" /* 673 */;
 import { COMMAND_SENTINEL } from "regExp" /* 4953 */;
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4471 */;
 
@@ -44,7 +44,7 @@ export default function useChatInputRefs(chatInputProps) {
   closure_8 = React.useRef(null);
   closure_9 = React.useRef(null);
   closure_10 = React.useRef(new Map());
-  const tmp2 = chatInputTextFieldHeight(5941)(() => chatInputProps(4340).createInputRefTracker(chatInputProps.channel.id, chatInputProps.screenIndex));
+  const tmp2 = chatInputTextFieldHeight(5949)(() => chatInputProps(4340).createInputRefTracker(chatInputProps.channel.id, chatInputProps.screenIndex));
   closure_11 = tmp2;
   closure_12 = React.useRef(chatInputProps);
   closure_13 = React.useRef(chatInputProps);
@@ -70,7 +70,7 @@ export default function useChatInputRefs(chatInputProps) {
       closure_11.handleRef(null, channel.channel.id);
     };
   }, items2);
-  closure_14 = React.useRef(chatInputTextFieldHeight(5941)(() => ({ editId: null, focused: false, selectionStart: 0, selectionEnd: 0, text: chatInputProps.defaultValue, textPrev: chatInputProps.defaultValue, textFieldContentSize: 0, textFieldHeight: chatInputTextFieldHeight })));
+  closure_14 = React.useRef(chatInputTextFieldHeight(5949)(() => ({ editId: null, focused: false, selectionStart: 0, selectionEnd: 0, text: chatInputProps.defaultValue, textPrev: chatInputProps.defaultValue, textFieldContentSize: 0, textFieldHeight: chatInputTextFieldHeight })));
   closure_15 = React.useRef({ handledHereMention: false, sending: false });
   const items3 = [tmp2];
   const memo = React.useMemo(() => {
@@ -78,45 +78,58 @@ export default function useChatInputRefs(chatInputProps) {
     closure_0 = obj.throttle((arg0, arg1) => {
       lib(ref[14]).updateTextBlocks(editingMessage.current, arg0, arg1);
     }, 200);
-    closure_1 = chatInputTextFieldHeight(12).throttle((result) => {
+    closure_1 = chatInputTextFieldHeight(12).throttle((content) => {
       const current = closure_13.current;
       const channel = current.channel;
       if (null == current.pendingEdit) {
-        if (result.length > 0) {
-          if (!result.startsWith(closure_1_13)) {
+        if (content.length > 0) {
+          if (!content.startsWith(closure_1_13)) {
             lib(ref[15]).startTyping(channel.id);
             obj = lib(ref[15]);
           }
           const current2 = ref2.current;
-          let mentionGames;
+          let applicationCommandManager;
           if (current2 != null) {
-            const applicationCommandManager = current2.getApplicationCommandManager();
-            if (applicationCommandManager != null) {
-              mentionGames = applicationCommandManager.getMentionGames();
-            }
+            applicationCommandManager = current2.getApplicationCommandManager();
           }
+          let mentionGames;
+          if (applicationCommandManager != null) {
+            mentionGames = applicationCommandManager.getMentionGames();
+          }
+          let mentionTimestamps;
+          if (applicationCommandManager != null) {
+            mentionTimestamps = applicationCommandManager.getMentionTimestamps();
+          }
+          let result = content;
           if (null != mentionGames) {
+            result = content;
             if (mentionGames.size > 0) {
-              result = callback(ref[16]).serializeComposerGameMentions(result, mentionGames);
-              const obj4 = callback(ref[16]);
+              result = callback(ref[16]).serializeComposerGameMentions(content, mentionGames);
+              const obj3 = callback(ref[16]);
             }
           }
-          const toDraftCommandResult = callback(ref[17]).toDraftCommand(closure_1_4.getActiveCommand(channel.id), result);
+          let result1 = result;
+          if (tmp16) {
+            result1 = callback(ref[16]).serializeComposerTimestampMentions(result, mentionTimestamps);
+            const obj4 = callback(ref[16]);
+          }
+          const toDraftCommandResult = callback(ref[17]).toDraftCommand(closure_1_4.getActiveCommand(channel.id), result1);
           if (null == tmp) {
             if (!ref3.current.handledHereMention) {
               const obj7 = callback(ref[18]);
-              if (obj7.tryUpdateSubscriptionForHereMention(result, obj8.getMaxMessageLength(), channel.guild_id, channel.id)) {
-                tmp25.current.handledHereMention = true;
+              if (obj7.tryUpdateSubscriptionForHereMention(content, obj8.getMaxMessageLength(), channel.guild_id, channel.id)) {
+                tmp31.current.handledHereMention = true;
               }
               obj8 = callback(ref[19]);
             }
             const obj9 = lib(ref[20]);
-            obj9.saveDraft(channel.id, result, closure_1_7.ChannelMessage, toDraftCommandResult);
+            obj9.saveDraft(channel.id, result1, closure_1_7.ChannelMessage, toDraftCommandResult);
           } else {
             const obj6 = lib(ref[20]);
-            obj6.saveDraft(channel.id, result, closure_1_7.FirstThreadMessage, toDraftCommandResult);
+            obj6.saveDraft(channel.id, result1, closure_1_7.FirstThreadMessage, toDraftCommandResult);
           }
           const obj5 = callback(ref[17]);
+          tmp16 = null != mentionTimestamps && mentionTimestamps.size > 0;
         }
         lib(ref[15]).stopTyping(channel.id);
         const obj2 = lib(ref[15]);
@@ -253,8 +266,8 @@ export default function useChatInputRefs(chatInputProps) {
           }
         }
       },
-      handleSaveEditing(text) {
-        function handleSaveEditing(text) {
+      handleSaveEditing(content) {
+        function handleSaveEditing(content) {
           const channel = closure_1_13.current.channel;
           lib.cancel();
           obj = closure_2_8;
@@ -262,33 +275,49 @@ export default function useChatInputRefs(chatInputProps) {
           if (null != editingMessage) {
             obj = { channel: null, isEdit: true };
             obj[0] = channel;
-            const handleLegacyCommandsResult = callback(table[31]).handleLegacyCommands(text, obj);
-            let content;
+            const handleLegacyCommandsResult = callback(table[31]).handleLegacyCommands(content, obj);
+            content = undefined;
             if (handleLegacyCommandsResult != null) {
               content = handleLegacyCommandsResult.content;
             }
-            content = text;
             if (null != content) {
               content = handleLegacyCommandsResult.content;
             }
             if (content !== obj.getEditingTextValue(channel.id)) {
               const current2 = closure_1_16.current;
-              let mentionGames;
+              let applicationCommandManager;
               if (current2 != null) {
-                const applicationCommandManager = current2.getApplicationCommandManager();
-                if (applicationCommandManager != null) {
-                  mentionGames = applicationCommandManager.getMentionGames();
+                applicationCommandManager = current2.getApplicationCommandManager();
+              }
+              let mentionGames;
+              if (applicationCommandManager != null) {
+                mentionGames = applicationCommandManager.getMentionGames();
+              }
+              let mentionTimestamps;
+              if (applicationCommandManager != null) {
+                mentionTimestamps = applicationCommandManager.getMentionTimestamps();
+              }
+              let result = content;
+              if (null != mentionTimestamps) {
+                result = content;
+                if (mentionTimestamps.size > 0) {
+                  result = tmp21(tmp22[16]).serializeComposerTimestampMentions(content, mentionTimestamps);
+                  const tmp21Result = tmp21(tmp22[16]);
                 }
               }
-              const obj3 = lib(tmp18[32]);
-              const parsed = obj3.parse(channel, content, undefined, mentionGames);
+              const obj3 = lib(tmp22[32]);
+              const parsed = obj3.parse(channel, result, undefined, mentionGames);
               if (parsed.content !== editingMessage.content) {
-                tmp5(tmp18[29]).editMessage(channel.id, editingMessage.id, parsed);
-                const tmp5Result = tmp5(tmp18[29]);
+                tmp8(tmp22[29]).editMessage(channel.id, editingMessage.id, parsed);
+                const tmp8Result = tmp8(tmp22[29]);
               }
-              tmp5 = lib;
+              if (applicationCommandManager != null) {
+                const result1 = applicationCommandManager.clearTimestampMentions();
+              }
+              tmp8 = lib;
             }
             const obj6 = callback(table[31]);
+            tmp21 = callback;
             lib(table[29]).endEditMessage(channel.id);
             const current = closure_1_16.current;
             if (current != null) {
@@ -297,11 +326,11 @@ export default function useChatInputRefs(chatInputProps) {
             const obj5 = lib(table[29]);
           }
         }
-        if (null == text) {
-          text = chatInputTextFieldHeight(ref[14]).getText(closure_1_8.current, closure_1_10.current, handleSaveEditing);
+        if (null == content) {
+          const text = chatInputTextFieldHeight(ref[14]).getText(closure_1_8.current, closure_1_10.current, handleSaveEditing);
           obj = chatInputTextFieldHeight(ref[14]);
         } else {
-          handleSaveEditing(text);
+          handleSaveEditing(content);
         }
       },
       handleSend() {
@@ -311,7 +340,7 @@ export default function useChatInputRefs(chatInputProps) {
           threadCreationCallback = closure_1_13.current.threadCreationCallback;
           if (null != threadCreationCallback) {
             const text = chatInputTextFieldHeight(ref[14]).getText(closure_1_8.current, closure_1_10.current, (text) => {
-              obj = chatInputProps(11569);
+              obj = chatInputProps(11792);
               obj = { text, params: null };
               obj = {};
               const merged = Object.assign(closure_2_13.current);
@@ -322,14 +351,21 @@ export default function useChatInputRefs(chatInputProps) {
                 obj1 = { text: null, threadCreationCallback: null };
                 obj1[0] = result.content;
                 obj1[1] = threadCreationCallback;
-                const result1 = chatInputProps(11569).chatInputCreateThread(obj1);
-                const tmpResult = chatInputProps(11569);
+                const result1 = chatInputProps(11792).chatInputCreateThread(obj1);
+                const current = closure_2_16.current;
+                if (current != null) {
+                  const applicationCommandManager = current.getApplicationCommandManager();
+                  if (applicationCommandManager != null) {
+                    const result2 = applicationCommandManager.clearTimestampMentions();
+                  }
+                }
+                const tmpResult = chatInputProps(11792);
               }
             });
             tmp.current.sending = false;
           } else {
             let current = closure_1_16.current;
-            const applicationCommandManager = current.getApplicationCommandManager();
+            let applicationCommandManager = current.getApplicationCommandManager();
             let sendCommandResult;
             if (applicationCommandManager != null) {
               sendCommandResult = applicationCommandManager.sendCommand(closure_1_14.current.text, tmp4.current.channel, (command, optionValues) => {
@@ -355,7 +391,7 @@ export default function useChatInputRefs(chatInputProps) {
                   }
                 } else {
                   closure_1.cancel();
-                  obj = threadCreationCallback(11569);
+                  obj = threadCreationCallback(11792);
                   obj = { text: null, params: null };
                   obj[0] = arg0;
                   obj = {};
@@ -366,7 +402,7 @@ export default function useChatInputRefs(chatInputProps) {
                   const result = obj.chatInputHandleSendText(obj);
                 }
                 const keyboardType = threadCreationCallback(4342).getKeyboardType();
-                if (keyboardType === threadCreationCallback(1626).KeyboardTypes.SYSTEM) {
+                if (keyboardType === threadCreationCallback(1625).KeyboardTypes.SYSTEM) {
                   const current2 = tmp8.current;
                   current2.focus();
                 }
@@ -417,14 +453,14 @@ export default function useChatInputRefs(chatInputProps) {
         if (!channelOnCooldown.isChannelOnCooldown(channel)) {
           let current2 = sticker;
           if (null != sticker) {
-            if (!obj6.isStandardSticker(current2)) {
+            if (!obj7.isStandardSticker(current2)) {
               const text = closure_1_14.current.text;
               let sum = text;
               if (null != tokenStart) {
                 const substr = text.slice(0, tokenStart);
                 sum = substr + text.slice(tmp6);
               }
-              let tmp26Result = tmp26(tmp27[33]);
+              let tmp27Result = tmp27(tmp28[33]);
               obj = { text: null, params: null };
               obj[0] = sum;
               obj = {};
@@ -432,18 +468,18 @@ export default function useChatInputRefs(chatInputProps) {
               let dismissKeyboardResult = closure_1_16;
               obj.chatInputRef = closure_1_16;
               obj[1] = obj;
-              const result = tmp26Result.chatInputValidateContentLength(obj);
+              const result = tmp27Result.chatInputValidateContentLength(obj);
               if (null != result) {
                 lib.cancel();
                 if (null != threadCreationCallback) {
                   const items = [current2.id];
                   const result1 = threadCreationCallback(sum, items);
                 } else {
-                  const obj7 = chatInputTextFieldHeight(tmp27[29]);
+                  const obj8 = chatInputTextFieldHeight(tmp28[29]);
                   const id = channel.id;
                   const items1 = [current2.id];
                   obj1 = {};
-                  const merged1 = Object.assign(chatInputTextFieldHeight(tmp27[29]).getSendMessageOptionsForReply(current.pendingReply));
+                  const merged1 = Object.assign(chatInputTextFieldHeight(tmp28[29]).getSendMessageOptionsForReply(current.pendingReply));
                   obj1.location = closure_14.STICKER_REPLY;
                   scheduledMessage = scheduledMessage.getScheduledMessage(channel.id);
                   let scheduledTimestamp;
@@ -451,27 +487,34 @@ export default function useChatInputRefs(chatInputProps) {
                     scheduledTimestamp = scheduledMessage.scheduledTimestamp;
                   }
                   obj1.scheduledTimestamp = scheduledTimestamp;
-                  obj7.sendStickers(id, items1, result, obj1);
-                  tmp26Result = tmp26(tmp27[30]);
-                  tmp26Result.deletePendingReply(channel.id);
-                  const obj9 = chatInputTextFieldHeight(tmp27[29]);
-                  const tmp30 = chatInputTextFieldHeight;
-                  chatInputTextFieldHeight(tmp27[20]).saveDraft(channel.id, "", ChannelMessage.ChannelMessage);
+                  obj8.sendStickers(id, items1, result, obj1);
                   const current3 = dismissKeyboardResult.current;
                   if (current3 != null) {
-                    current3.clearText();
+                    const applicationCommandManager = current3.getApplicationCommandManager();
+                    if (applicationCommandManager != null) {
+                      const result2 = applicationCommandManager.clearTimestampMentions();
+                    }
                   }
+                  tmp27Result = tmp27(tmp28[30]);
+                  tmp27Result.deletePendingReply(channel.id);
+                  const obj10 = chatInputTextFieldHeight(tmp28[29]);
+                  const tmp31 = chatInputTextFieldHeight;
+                  chatInputTextFieldHeight(tmp28[20]).saveDraft(channel.id, "", ChannelMessage.ChannelMessage);
                   const current4 = dismissKeyboardResult.current;
                   if (current4 != null) {
-                    current4.showSideActions();
+                    current4.clearText();
                   }
-                  const tmp30Result = chatInputTextFieldHeight(tmp27[20]);
+                  const current5 = dismissKeyboardResult.current;
+                  if (current5 != null) {
+                    current5.showSideActions();
+                  }
+                  const tmp31Result = chatInputTextFieldHeight(tmp28[20]);
                 }
                 current2 = dismissKeyboardResult.current;
                 dismissKeyboardResult = current2.dismissKeyboard();
               }
             }
-            obj6 = chatInputProps(ref[34]);
+            obj7 = chatInputProps(ref[34]);
           }
         }
       },
@@ -488,7 +531,7 @@ export default function useChatInputRefs(chatInputProps) {
       handleTextChanged(text) {
         lib(text);
       },
-      insertText(c22, tokenStart, arg2, arg3, arg4) {
+      insertText(c22, tokenStart, flag, arg3, arg4) {
         let selectionStart = tokenStart;
         if (null == tokenStart) {
           selectionStart = closure_14.current.selectionStart;
@@ -500,7 +543,7 @@ export default function useChatInputRefs(chatInputProps) {
         const current = closure_16.current;
         obj = { location: selectionStart, length: Math.max(0, selectionEnd - selectionStart), text: null, nodes: null, editId: null };
         let text = c22;
-        if (arg2) {
+        if (flag) {
           text = `${c22} `;
         }
         obj[2] = text;

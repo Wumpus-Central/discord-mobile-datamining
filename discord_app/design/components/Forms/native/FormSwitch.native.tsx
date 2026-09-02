@@ -1,7 +1,7 @@
-// === Module 5994: FormSwitch ===
+// === Module 6002: FormSwitch ===
 
-// Module 5994 (FormSwitch)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 6002 (FormSwitch)
+import ThemesDefault from "Themes" /* 709 */;
 import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4927 */;
 import IconSizesDefault from "IconSizes" /* 4930 */;
 import SUBTLE_SPRING from "SUBTLE_SPRING" /* 4931 */;

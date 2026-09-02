@@ -2,7 +2,7 @@
 
 // Module 4570 (hasRichActivity)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 
 const ActivityTypes = ME.ActivityTypes;
 const result = set.fileFinishedImporting("modules/activities/utils/hasRichActivity.tsx");

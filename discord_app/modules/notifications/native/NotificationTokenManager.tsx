@@ -1,23 +1,23 @@
-// === Module 14098: _initialize ===
+// === Module 14321: _initialize ===
 
-// Module 14098 (_initialize)
+// Module 14321 (_initialize)
 import set2 from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import _modDef1208 from "module_1208" /* 1208 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2695 */;
+import ME from "ME" /* 673 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import _modDef1205 from "module_1205" /* 1205 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import messagesProxyDefault from "messagesProxy" /* 2694 */;
 import initializeDefault from "initialize" /* 4662 */;
-import NativeModulesDefault from "NativeModules" /* 9657 */;
-import items2 from "items2" /* 14099 */;
-import apexExperiment from "apexExperiment" /* 14102 */;
-import inferImportanceFromBehaviorDefault from "inferImportanceFromBehavior" /* 14103 */;
-import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 14104 */;
-import closure_4 from "initialize" /* 1212 */;
-import closure_5 from "initialize" /* 11982 */;
-import closure_6 from "initialize" /* 13373 */;
-import closure_7 from "fetchFingerprint" /* 1218 */;
+import NativeModulesDefault from "NativeModules" /* 9670 */;
+import items2 from "items2" /* 14322 */;
+import apexExperiment from "apexExperiment" /* 14325 */;
+import inferImportanceFromBehaviorDefault from "inferImportanceFromBehavior" /* 14326 */;
+import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 14327 */;
+import closure_4 from "initialize" /* 1209 */;
+import closure_5 from "initialize" /* 12206 */;
+import closure_6 from "initialize" /* 13597 */;
+import closure_7 from "fetchFingerprint" /* 1215 */;
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 const NOTIF_SETTINGS = items2.NOTIF_SETTINGS;
@@ -160,8 +160,8 @@ prototype["registerNotificationCategories"] = function registerNotificationCateg
     } else {
       try {
         if (config.clearDeclarative) {
-          _modDef1208.addBreadcrumb({ message: "Clearing declarative notification categories" });
-          const obj3 = _modDef1208;
+          _modDef1205.addBreadcrumb({ message: "Clearing declarative notification categories" });
+          const obj3 = _modDef1205;
           inferImportanceFromBehaviorDefault.clear();
           const obj4 = inferImportanceFromBehaviorDefault;
         }
@@ -253,7 +253,7 @@ prototype["registerLegacyNotificationCategories"] = function registerLegacyNotif
 prototype["trackDisabledAndroidNotifChannels"] = function trackDisabledAndroidNotifChannels() {
   if (!this.hasTrackedDisabledAndroidNotifChannels) {
     tmp.hasTrackedDisabledAndroidNotifChannels = true;
-    let obj = set(500);
+    let obj = set(1234);
     if (obj.isAndroid()) {
       const tmp5 = NativeNotifSettingsModuleDefault;
       let prop;
@@ -273,8 +273,8 @@ prototype["trackDisabledAndroidNotifChannels"] = function trackDisabledAndroidNo
         const propResult = prop();
         obj = { disabled_channels: null };
         obj[0] = found.map((channelId) => channelId.channelId);
-        tmp4(698).track(AnalyticEvents.ANDROID_NOTIFICATION_CHANNELS_SYNCED, obj);
-        const tmp4Result = tmp4(698);
+        tmp4(695).track(AnalyticEvents.ANDROID_NOTIFICATION_CHANNELS_SYNCED, obj);
+        const tmp4Result = tmp4(695);
       }
       tmp4 = importDefault;
     }

@@ -1,9 +1,9 @@
-// === Module 9875: useGameConsoleAccounts ===
+// === Module 9897: useGameConsoleAccounts ===
 
-// Module 9875 (useGameConsoleAccounts)
-import initialize from "initialize" /* 589 */;
-import closure_2 from "set" /* 5225 */;
-import { PlatformTypes } from "ME" /* 676 */;
+// Module 9897 (useGameConsoleAccounts)
+import initialize from "initialize" /* 586 */;
+import closure_2 from "set" /* 5233 */;
+import { PlatformTypes } from "ME" /* 673 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/game_console/useGameConsoleAccounts.tsx");

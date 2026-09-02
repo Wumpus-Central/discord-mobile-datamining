@@ -1,8 +1,8 @@
-// === Module 12765: handleFeaturedOrDeveloperFetchSuccess ===
+// === Module 12986: handleFeaturedOrDeveloperFetchSuccess ===
 
-// Module 12765 (handleFeaturedOrDeveloperFetchSuccess)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 12986 (handleFeaturedOrDeveloperFetchSuccess)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 const require = arg1;
 function handleFeaturedOrDeveloperFetchSuccess(configs) {

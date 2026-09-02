@@ -1,10 +1,10 @@
-// === Module 6997: ServerTagAbstractUI ===
+// === Module 7006: ServerTagAbstractUI ===
 
-// Module 6997 (ServerTagAbstractUI)
+// Module 7006 (ServerTagAbstractUI)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5493 */;
-import metadataDefault from "metadata" /* 6998 */;
+import preloadDefault from "preload" /* 5501 */;
+import metadataDefault from "metadata" /* 7007 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ServerTagAbstractUI.native.tsx");

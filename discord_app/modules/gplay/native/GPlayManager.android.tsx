@@ -1,23 +1,23 @@
-// === Module 10485: handleConnectionStateUpdated ===
+// === Module 10706: handleConnectionStateUpdated ===
 
-// Module 10485 (handleConnectionStateUpdated)
+// Module 10706 (handleConnectionStateUpdated)
 import timestampDefault from "timestamp" /* 3 */;
 import noopAll from "noop" /* 19 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getPlanIdForProduct from "getPlanIdForProduct" /* 8222 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import getPlanIdForProduct from "getPlanIdForProduct" /* 8231 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initialize" /* 7165 */;
-import usePremiumPlanPurchasedStore from "usePremiumPlanPurchasedStore" /* 7166 */;
-import closure_9 from "fetchFingerprint" /* 1218 */;
+import closure_6 from "initialize" /* 7174 */;
+import usePremiumPlanPurchasedStore from "usePremiumPlanPurchasedStore" /* 7175 */;
+import closure_9 from "fetchFingerprint" /* 1215 */;
 import closure_10 from "reset" /* 4145 */;
-import closure_11 from "updateProduct" /* 6084 */;
-import { useGPlayAnalyticsStore } from "setGPlayAnalytics" /* 8223 */;
-import GPlayConnectionState from "GPlayConnectionState" /* 6085 */;
-import ME from "ME" /* 676 */;
+import closure_11 from "updateProduct" /* 6092 */;
+import { useGPlayAnalyticsStore } from "setGPlayAnalytics" /* 8232 */;
+import GPlayConnectionState from "GPlayConnectionState" /* 6093 */;
+import ME from "ME" /* 673 */;
 import { OrderStatus } from "CustomCheckoutFlow" /* 4460 */;
-import { SubscriptionPlanInfo } from "GuildFeatures" /* 1924 */;
+import { SubscriptionPlanInfo } from "GuildFeatures" /* 1923 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -90,7 +90,7 @@ function _handlePurchaseUpdated() {
                   let tmp19 = closure_3;
                   let tmp20 = callback;
                   let tmp21 = dependencyMap;
-                  let obj4 = callback(709);
+                  let obj4 = callback(706);
                   obj = { type: "GPLAY_UPDATE_PENDING_DOWNGRADE", pendingDowngrade: null };
                   let tmp22 = closure_9;
                   obj[1] = closure_9.pendingDowngrade;
@@ -133,7 +133,7 @@ function _handlePurchaseUpdated() {
             c5 = 0;
             obj4 = { type: "GPLAY_VERIFICATION_END", productId: null };
             obj4[1] = lib.productId;
-            callback(709).dispatch(obj4);
+            callback(706).dispatch(obj4);
             c7 = 3;
             obj = { value: null, done: true };
             obj[0] = arg1;
@@ -215,7 +215,7 @@ function _handleDowngradeCommand() {
               downgradeCommand = downgradeCommand.downgradeCommand;
               c3 = 1;
               c4 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else {
             if (1 === tmp4) {
@@ -334,10 +334,10 @@ function _executePendingDowngrade() {
             const result = obj5.captureBillingException(lib);
             let obj6 = lib(4858);
             const obj2 = { title: null, body: null };
-            const intl = pendingDowngrade(1236).intl;
-            obj2[0] = intl.string(pendingDowngrade(1236).t["U+H+kd"]);
-            const intl2 = pendingDowngrade(1236).intl;
-            obj2[1] = intl2.string(pendingDowngrade(1236).t.LFFx5G);
+            const intl = pendingDowngrade(1233).intl;
+            obj2[0] = intl.string(pendingDowngrade(1233).t["U+H+kd"]);
+            const intl2 = pendingDowngrade(1233).intl;
+            obj2[1] = intl2.string(pendingDowngrade(1233).t.LFFx5G);
             obj6.show(obj2);
             let newSubscriptionSkuId;
             if (pendingDowngrade != null) {
@@ -351,15 +351,15 @@ function _executePendingDowngrade() {
             }
             obj3[2] = purchaseToken;
             obj3[3] = lib.message;
-            lib(698).track(constants.GPLAY_PURCHASE_FAILED, obj3);
-            const obj9 = lib(698);
+            lib(695).track(constants.GPLAY_PURCHASE_FAILED, obj3);
+            const obj9 = lib(695);
           } else if (3 === tmp8) {
             if (arg0 === 1) {
               c5 = 3;
               throw arg1;
             } else if (arg0 === 2) {
               c3 = 0;
-              obj3 = lib(709);
+              obj3 = lib(706);
               obj3.dispatch({ type: "GPLAY_UPDATE_IS_DOWNGRADING", isDowngrading: false });
               c5 = 3;
               const obj4 = { value: null, done: true };
@@ -378,7 +378,7 @@ function _executePendingDowngrade() {
             throw arg1;
           } else if (arg0 === 2) {
             c3 = 0;
-            obj = lib(709);
+            obj = lib(706);
             obj.dispatch({ type: "GPLAY_UPDATE_IS_DOWNGRADING", isDowngrading: false });
             c5 = 3;
             obj6 = { value: null, done: true };
@@ -388,11 +388,11 @@ function _executePendingDowngrade() {
             c3 = 1;
           }
           c3 = 0;
-          lib(709).dispatch({ type: "GPLAY_UPDATE_IS_DOWNGRADING", isDowngrading: false });
-          const obj11 = lib(709);
+          lib(706).dispatch({ type: "GPLAY_UPDATE_IS_DOWNGRADING", isDowngrading: false });
+          const obj11 = lib(706);
         }
         c3 = 0;
-        lib(709).dispatch({ type: "GPLAY_UPDATE_IS_DOWNGRADING", isDowngrading: false });
+        lib(706).dispatch({ type: "GPLAY_UPDATE_IS_DOWNGRADING", isDowngrading: false });
         throw dependencyMap;
       } catch (tmp64) {
         dependencyMap = tmp64;
@@ -480,8 +480,8 @@ function _fetchAndAlertActiveSubscription() {
           callback = premiumTypeSubscription.getPremiumTypeSubscription();
           if (null == callback) {
             const _Error = Error;
-            const intl = callback(1236).intl;
-            error = new Error(intl.string(callback(1236).t.PjfUXe));
+            const intl = callback(1233).intl;
+            error = new Error(intl.string(callback(1233).t.PjfUXe));
             throw error;
           } else {
             callback2();
@@ -566,7 +566,7 @@ function _handleAppStateUpdated() {
               state = state.state;
               c5 = 1;
               c6 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else {
             if (1 === tmp8) {

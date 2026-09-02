@@ -1,12 +1,12 @@
-// === Module 11079: canSeeExperimentEmbeds ===
+// === Module 11299: canSeeExperimentEmbeds ===
 
-// Module 11079 (canSeeExperimentEmbeds)
-import initialize from "initialize" /* 589 */;
+// Module 11299 (canSeeExperimentEmbeds)
+import initialize from "initialize" /* 586 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_4 from "mergeGuildAvatar" /* 1921 */;
 import closure_5 from "getHash" /* 4391 */;
-import closure_6 from "initialize" /* 1212 */;
+import closure_6 from "initialize" /* 1209 */;
 
 require = arg1;
 let closure_7 = {};

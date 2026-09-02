@@ -1,6 +1,6 @@
-// === Module 16185: THINKING_LABELS ===
+// === Module 16417: THINKING_LABELS ===
 
-// Module 16185 (THINKING_LABELS)
+// Module 16417 (THINKING_LABELS)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/vibegrations/lib/VibegrationsModelLabels.tsx");

@@ -1,10 +1,10 @@
-// === Module 11682: AppInThisServer ===
+// === Module 11905: AppInThisServer ===
 
-// Module 11682 (AppInThisServer)
+// Module 11905 (AppInThisServer)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1471 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
 import Text from "Text" /* 4474 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -16,7 +16,7 @@ function AppInThisServer(onAppSelected) {
   let application;
   const tmp = callback2();
   application = onAppSelected.appItem.application;
-  let obj = onAppSelected(11623);
+  let obj = onAppSelected(11846);
   const appLauncherIconSource = obj.getAppLauncherIconSource(application);
   obj = {
     accessible: true,
@@ -42,11 +42,11 @@ function AppInThisServer(onAppSelected) {
     obj = { iconSource: null, wrapperStyle: null, iconSize: 36 };
     obj[0] = appLauncherIconSource;
     obj[1] = tmp.iconContainer;
-    tmp6 = callback(application(11628), obj);
+    tmp6 = callback(application(11851), obj);
   }
   const items = [tmp6, callback(onAppSelected(4474).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: application.name })];
   obj[5] = items;
-  return closure_6(onAppSelected(8984).PressableScale, obj, application.id);
+  return closure_6(onAppSelected(8998).PressableScale, obj, application.id);
 }
 noopAll;
 ({ View: c3, ScrollView: c4 } = get_ActivityIndicator);
@@ -89,7 +89,7 @@ export default function InThisServerSection(arg0) {
     obj = { style: null, children: null };
     obj[0] = tmp.headerContainer;
     obj = { variant: "text-lg/bold", color: "mobile-text-heading-primary", children: null };
-    const intl = tmp11(1236).intl;
+    const intl = tmp11(1233).intl;
     obj[2] = intl.string(getSystemLocale.t.oJyzCu);
     const items1 = [callback(Text.Text, obj), ];
     let tmp5Result = null != dependencyMap;
@@ -104,10 +104,10 @@ export default function InThisServerSection(arg0) {
         return tmp;
       };
       const obj2 = { variant: "text-sm/medium", color: "text-brand", children: null };
-      const intl2 = tmp11(1236).intl;
-      obj2[2] = intl2.string(tmp11(1236).t["/qG8v7"]);
+      const intl2 = tmp11(1233).intl;
+      obj2[2] = intl2.string(tmp11(1233).t["/qG8v7"]);
       obj1[3] = tmp5(tmp11(4474).Text, obj2);
-      tmp5Result = tmp5(tmp11(5068).PressableOpacity, obj1);
+      tmp5Result = tmp5(tmp11(5076).PressableOpacity, obj1);
     }
     items1[1] = tmp5Result;
     obj[1] = items1;

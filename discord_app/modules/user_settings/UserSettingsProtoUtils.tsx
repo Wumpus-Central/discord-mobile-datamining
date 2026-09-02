@@ -1,8 +1,8 @@
-// === Module 1371: getProtoFieldClass ===
+// === Module 1370: getProtoFieldClass ===
 
-// Module 1371 (getProtoFieldClass)
+// Module 1370 (getProtoFieldClass)
 import set from "set" /* 2 */;
-import b64ToProto from "b64ToProto" /* 1342 */;
+import b64ToProto from "b64ToProto" /* 1341 */;
 
 const result = set.fileFinishedImporting("modules/user_settings/UserSettingsProtoUtils.tsx");
 

@@ -1,13 +1,13 @@
-// === Module 17080: maybeShowUrgentMessageModal ===
+// === Module 17316: maybeShowUrgentMessageModal ===
 
-// Module 17080 (maybeShowUrgentMessageModal)
-import initializeDefault from "initialize" /* 5486 */;
-import _fetchProfileAll from "_fetchProfile" /* 8116 */;
-import closure_2 from "ensureGuildLoaded" /* 1387 */;
-import closure_3 from "handleConnectionOpen" /* 1981 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import { SYSTEM_USER } from "SYSTEM_USER" /* 17081 */;
-import { UserFlags } from "ME" /* 676 */;
+// Module 17316 (maybeShowUrgentMessageModal)
+import initializeDefault from "initialize" /* 5494 */;
+import _fetchProfileAll from "_fetchProfile" /* 8124 */;
+import closure_2 from "ensureGuildLoaded" /* 1386 */;
+import closure_3 from "handleConnectionOpen" /* 1980 */;
+import closure_4 from "mergeGuildAvatar" /* 1921 */;
+import { SYSTEM_USER } from "SYSTEM_USER" /* 17317 */;
+import { UserFlags } from "ME" /* 673 */;
 
 function maybeShowUrgentMessageModal(arg0) {
   const currentUser = authStore2.getCurrentUser();

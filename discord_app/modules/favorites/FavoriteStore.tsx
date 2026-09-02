@@ -1,14 +1,14 @@
-// === Module 1390: initializeFromUserSettings ===
+// === Module 1389: initializeFromUserSettings ===
 
-// Module 1390 (initializeFromUserSettings)
+// Module 1389 (initializeFromUserSettings)
 import apply from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import create from "create" /* 1306 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
-import { createChannelRecord } from "createChannelRecord" /* 1391 */;
-import { FAVORITES_UNCATEGORIZED_PARENT_ID as closure_5 } from "date" /* 1425 */;
-import ME from "ME" /* 676 */;
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import create from "create" /* 1305 */;
+import closure_3 from "handleConnectionClosedOrResumed" /* 1339 */;
+import { createChannelRecord } from "createChannelRecord" /* 1390 */;
+import { FAVORITES_UNCATEGORIZED_PARENT_ID as closure_5 } from "date" /* 1424 */;
+import ME from "ME" /* 673 */;
 
 require = arg1;
 function initializeFromUserSettings() {

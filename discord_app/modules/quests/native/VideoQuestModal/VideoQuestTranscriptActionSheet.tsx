@@ -1,11 +1,11 @@
-// === Module 14755: VideoQuestTranscriptActionSheet ===
+// === Module 14981: VideoQuestTranscriptActionSheet ===
 
-// Module 14755 (VideoQuestTranscriptActionSheet)
-import ThemesDefault from "Themes" /* 712 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
+// Module 14981 (VideoQuestTranscriptActionSheet)
+import ThemesDefault from "Themes" /* 709 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import closure_3 from "noop" /* 19 */;
 import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
-import _toPropertyKey from "_toPropertyKey" /* 7450 */;
+import _toPropertyKey from "_toPropertyKey" /* 7460 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -70,9 +70,9 @@ export default function VideoQuestTranscriptActionSheet(quest) {
   }, items1);
   let obj = { scrollable: true, header: null, children: null };
   obj = { title: null };
-  const intl = quest(1236).intl;
-  obj[0] = intl.string(quest(1236).t["1YS80z"]);
-  obj[1] = callback2(quest(5621).BottomSheetTitleHeader, obj);
+  const intl = quest(1233).intl;
+  obj[0] = intl.string(quest(1233).t["1YS80z"]);
+  obj[1] = callback2(quest(5629).BottomSheetTitleHeader, obj);
   obj = { contentContainerStyle: { paddingBottom: useSafeAreaInsetsDefault().bottom }, children: null };
   obj1 = { spacing: 16, style: tmp.content, children: null };
   let fetchStatus;
@@ -88,6 +88,6 @@ export default function VideoQuestTranscriptActionSheet(quest) {
   const items2 = [tmp7Result, memo.length > 0 && memo.map((children) => callback(quest(table[14]).Text, { variant: "heading-md/normal", color: "text-muted", children }, arg1))];
   obj1[2] = items2;
   obj[1] = closure_8(quest(4926).Stack, obj1);
-  obj[2] = callback2(quest(5624).BottomSheetScrollView, obj);
-  return callback2(quest(5989).ActionSheet, obj);
+  obj[2] = callback2(quest(5632).BottomSheetScrollView, obj);
+  return callback2(quest(5997).ActionSheet, obj);
 };

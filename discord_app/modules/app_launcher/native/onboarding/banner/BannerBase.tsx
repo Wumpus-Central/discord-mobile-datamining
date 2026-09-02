@@ -1,7 +1,7 @@
-// === Module 11633: BannerBase ===
+// === Module 11856: BannerBase ===
 
-// Module 11633 (BannerBase)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 11856 (BannerBase)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -37,13 +37,13 @@ export default function BannerBase(arg0) {
   [tmp3, c0] = callback(React.useState(0), 2);
   let obj = _require(4217);
   sharedValue = obj.useSharedValue(false);
-  const diff = sharedValue(1493)().width - 2 * sharedValue(712).space.PX_16;
+  const diff = sharedValue(1492)().width - 2 * sharedValue(709).space.PX_16;
   const backgroundColor = tmp.bannerGradientColor.backgroundColor;
   obj1 = _require(4326);
   let items = [obj1.hexOpacityToRgba(backgroundColor, 0.2), ];
   let obj2 = _require(4326);
   items[1] = obj2.hexOpacityToRgba(backgroundColor, 0);
-  let obj3 = _require(589);
+  let obj3 = _require(586);
   const items1 = [closure_6];
   const stateFromStores = obj3.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
   let obj4 = _require(4217);
@@ -97,9 +97,9 @@ export default function BannerBase(arg0) {
   obj1 = { style: tmp.imageContainer, children: null };
   obj2 = { style: tmp.trinketsLottie, source: null, autoPlay: null };
   const tmp2 = callback(React.useState(0), 2);
-  obj2[1] = _require(11634);
+  obj2[1] = _require(11857);
   obj2[2] = !stateFromStores;
-  const items5 = [callback2(sharedValue(5944), obj2), image];
+  const items5 = [callback2(sharedValue(5952), obj2), image];
   obj1[1] = items5;
   items4[1] = closure_8(View, obj1);
   obj3 = { style: tmp.bannerTextContainer, children: callback2(tmp4(4474).Text, obj4) };

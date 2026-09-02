@@ -1,9 +1,9 @@
-// === Module 5070: getMixedGradientColor ===
+// === Module 5078: getMixedGradientColor ===
 
-// Module 5070 (getMixedGradientColor)
-import ThemesDefault from "Themes" /* 712 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
+// Module 5078 (getMixedGradientColor)
+import ThemesDefault from "Themes" /* 709 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1362 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1492 */;
 import hexToRgba from "hexToRgba" /* 4326 */;
 import hslToRgbDefault from "hslToRgb" /* 4327 */;
 import set from "set" /* 4329 */;
@@ -418,7 +418,7 @@ export default function ThemedGradient(overlayOpacity) {
   const tmp8 = obj.isThemeDark(useThemeDefault()) ? unsafe_rawColors.BLACK : unsafe_rawColors.WHITE;
   const withOverlay = merged.withOverlay;
   const isThemeDarkResult = obj.isThemeDark(useThemeDefault());
-  let tmp6Result = tmp6(647);
+  let tmp6Result = tmp6(644);
   const items = [closure_5];
   const preset = tmp6Result.useStateFromStoresObject(items, () => ({ preset: gradientPreset.gradientPreset })).preset;
   const tmp10 = getGuildIdFromNavigationStateDefault();
@@ -426,7 +426,7 @@ export default function ThemedGradient(overlayOpacity) {
   const customThemeDisplaySettings = tmp6Result.useCustomThemeDisplaySettings();
   if (null != gradientOverride) {
     if (tmp12) {
-      if (gradientOverride.type === tmp6(1349).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
+      if (gradientOverride.type === tmp6(1348).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
         obj = {};
         const merged1 = Object.assign(merged);
         const merged2 = Object.assign(gradientOverride.customThemeSettings);
@@ -451,7 +451,7 @@ export default function ThemedGradient(overlayOpacity) {
         return tmp60;
       }
     }
-    if (gradientOverride.type === tmp6(1349).ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
+    if (gradientOverride.type === tmp6(1348).ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
       const obj3 = {};
       const merged3 = Object.assign(merged);
       obj3.gradient = gradientOverride;

@@ -1,10 +1,10 @@
-// === Module 7685: UserVerification ===
+// === Module 7694: UserVerification ===
 
-// Module 7685 (UserVerification)
+// Module 7694 (UserVerification)
 import noopAll from "noop" /* 19 */;
 import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4302 */;
 import Text from "Text" /* 4474 */;
-import BaseIdentityVerificationFieldDefault from "BaseIdentityVerificationField" /* 7686 */;
+import BaseIdentityVerificationFieldDefault from "BaseIdentityVerificationField" /* 7695 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -36,11 +36,11 @@ export default function UserVerification(arg0) {
     obj = { style: null, variant: "heading-deprecated-12/medium", color: "text-default", children: null };
     obj[0] = tmp.emailPhoneNote;
     if (platform === MAX_RESULTS_PER_PAGE.UserVerificationFieldPlatforms.PHONE) {
-      const intl2 = tmp12(1236).intl;
-      let stringResult = intl2.string(tmp12(1236).t["jMh+TY"]);
+      const intl2 = tmp12(1233).intl;
+      let stringResult = intl2.string(tmp12(1233).t["jMh+TY"]);
     } else {
-      const intl = tmp12(1236).intl;
-      stringResult = intl.string(tmp12(1236).t.Vgv9ip);
+      const intl = tmp12(1233).intl;
+      stringResult = intl.string(tmp12(1233).t.Vgv9ip);
     }
     obj1 = { children: null };
     obj[3] = stringResult;

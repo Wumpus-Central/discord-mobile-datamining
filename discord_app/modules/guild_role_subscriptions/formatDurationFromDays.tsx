@@ -1,8 +1,8 @@
-// === Module 17274: formatDurationFromDays ===
+// === Module 17510: formatDurationFromDays ===
 
-// Module 17274 (formatDurationFromDays)
+// Module 17510 (formatDurationFromDays)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 
 const result = set.fileFinishedImporting("modules/guild_role_subscriptions/formatDurationFromDays.tsx");
 

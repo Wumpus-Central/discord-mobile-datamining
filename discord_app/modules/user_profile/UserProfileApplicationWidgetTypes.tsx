@@ -1,8 +1,8 @@
-// === Module 7378: toSubmission ===
+// === Module 7387: toSubmission ===
 
-// Module 7378 (toSubmission)
+// Module 7387 (toSubmission)
 import set from "set" /* 2 */;
-import WidgetType from "WidgetType" /* 7367 */;
+import WidgetType from "WidgetType" /* 7376 */;
 
 let ApplicationWidget;
 class ApplicationWidget {

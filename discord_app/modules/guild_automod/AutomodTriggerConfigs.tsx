@@ -1,10 +1,10 @@
-// === Module 17127: AutomodTriggerType ===
+// === Module 17363: AutomodTriggerType ===
 
-// Module 17127 (AutomodTriggerType)
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import isInMentionRaidExperiment from "isInMentionRaidExperiment" /* 10183 */;
+// Module 17363 (AutomodTriggerType)
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import isInMentionRaidExperiment from "isInMentionRaidExperiment" /* 10205 */;
 import closure_2 from "noop" /* 19 */;
-import AutomodEventType from "AutomodEventType" /* 11435 */;
+import AutomodEventType from "AutomodEventType" /* 11658 */;
 import set from "set" /* 2 */;
 
 require = arg1;
@@ -208,7 +208,7 @@ export const validateRuleByTriggerConfigOrThrow = function validateRuleByTrigger
   }
 };
 export const useAvailableTriggerTypes = function useAvailableTriggerTypes(arg0) {
-  isUserProfileRuleEnabled = isUserProfileRuleEnabled(16413).useIsUserProfileRuleEnabled(arg0);
+  isUserProfileRuleEnabled = isUserProfileRuleEnabled(16648).useIsUserProfileRuleEnabled(arg0);
   const items = [isUserProfileRuleEnabled];
   return React.useMemo(() => {
     const keys = Object.keys(closure_1_7);

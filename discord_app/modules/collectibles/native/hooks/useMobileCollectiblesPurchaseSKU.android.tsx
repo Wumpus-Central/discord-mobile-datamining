@@ -1,10 +1,10 @@
-// === Module 10758: useMobileCollectiblesPurchaseSKU ===
+// === Module 10978: useMobileCollectiblesPurchaseSKU ===
 
-// Module 10758 (useMobileCollectiblesPurchaseSKU)
-import initialize from "initialize" /* 589 */;
-import useMobilePurchaseSKUDefault from "useMobilePurchaseSKU" /* 10589 */;
-import hasAtLeastOneGPlaySynced from "hasAtLeastOneGPlaySynced" /* 10744 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+// Module 10978 (useMobileCollectiblesPurchaseSKU)
+import initialize from "initialize" /* 586 */;
+import useMobilePurchaseSKUDefault from "useMobilePurchaseSKU" /* 10810 */;
+import hasAtLeastOneGPlaySynced from "hasAtLeastOneGPlaySynced" /* 10965 */;
+import closure_3 from "mergeGuildAvatar" /* 1921 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/native/hooks/useMobileCollectiblesPurchaseSKU.android.tsx");

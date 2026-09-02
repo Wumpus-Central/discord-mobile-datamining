@@ -1,8 +1,8 @@
-// === Module 7328: fromServer ===
+// === Module 7337: fromServer ===
 
-// Module 7328 (fromServer)
+// Module 7337 (fromServer)
 import set from "set" /* 2 */;
-import ShopBlockType from "ShopBlockType" /* 7318 */;
+import ShopBlockType from "ShopBlockType" /* 7327 */;
 
 let prototype;
 prototype = function SocialLayerStorefrontPromotionalBannerBlockRecord(arg0) {

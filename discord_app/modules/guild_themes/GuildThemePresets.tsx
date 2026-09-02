@@ -1,8 +1,8 @@
 // === Module 4329: set ===
 
 // Module 4329 (set)
-import sum from "sum" /* 505 */;
-import nDefault from "n" /* 689 */;
+import sum from "sum" /* 502 */;
+import nDefault from "n" /* 686 */;
 import items21 from "items" /* 4330 */;
 import set from "set" /* 2 */;
 
@@ -56,7 +56,7 @@ export const getGuildThemePreset = function getGuildThemePreset(presetId) {
   return tmp;
 };
 export const getDefaultGuildThemePresetSettings = function getDefaultGuildThemePresetSettings() {
-  return { presetId: mapped[0].id, customUserThemeSettings: "Array" };
+  return { presetId: mapped[0].id, customUserThemeSettings: "r" };
 };
 export const getGuildThemePresetAppearance = function getGuildThemePresetAppearance(preset, arg1) {
   return arg1 === ThemeTypes.LIGHT ? preset.lightAppearance : preset.darkAppearance;

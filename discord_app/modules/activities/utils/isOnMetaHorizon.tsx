@@ -1,8 +1,8 @@
-// === Module 9416: isOnMetaHorizon ===
+// === Module 9429: isOnMetaHorizon ===
 
-// Module 9416 (isOnMetaHorizon)
+// Module 9429 (isOnMetaHorizon)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 import items3 from "items3" /* 4506 */;
 
 let closure_0 = items3.META_PRESENCE_APPLICATION_ID;

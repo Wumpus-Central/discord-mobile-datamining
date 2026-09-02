@@ -1,29 +1,29 @@
-// === Module 7509: patchThread ===
+// === Module 7519: patchThread ===
 
-// Module 7509 (patchThread)
-import sendRequest from "sendRequest" /* 530 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 7519 (patchThread)
+import sendRequest from "sendRequest" /* 527 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4700 */;
-import dispatcherDefault2 from "dispatcher" /* 7521 */;
-import setActiveCommand from "setActiveCommand" /* 7522 */;
+import dispatcherDefault2 from "dispatcher" /* 7531 */;
+import setActiveCommand from "setActiveCommand" /* 7532 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { createChannelRecordFromServer as closure_4 } from "createChannelRecord" /* 1391 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "ensureGuildLoaded" /* 1387 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4121 */;
-import closure_8 from "listKey" /* 7510 */;
-import { PAGE_SIZE } from "listKey" /* 7510 */;
-import closure_10 from "storeThread" /* 4123 */;
-import closure_11 from "handleSummarizeThreadFinish" /* 7520 */;
-import ME from "ME" /* 676 */;
-import { ChannelFlags } from "set" /* 1394 */;
+import { createChannelRecordFromServer as closure_4 } from "createChannelRecord" /* 1390 */;
+import closure_5 from "fetchFingerprint" /* 1215 */;
+import closure_6 from "ensureGuildLoaded" /* 1386 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4120 */;
+import closure_8 from "listKey" /* 7520 */;
+import { PAGE_SIZE } from "listKey" /* 7520 */;
+import closure_10 from "storeThread" /* 4122 */;
+import closure_11 from "handleSummarizeThreadFinish" /* 7530 */;
+import ME from "ME" /* 673 */;
+import { ChannelFlags } from "set" /* 1393 */;
 
 require = arg1;
 function patchThread(id, body) {
   const _require = id;
-  const HTTP = _require(530).HTTP;
-  const obj = { url: closure_12.CHANNEL(id.id), body, rejectWithError: _require(530).rejectWithMigratedError() };
-  const obj2 = _require(530);
+  const HTTP = _require(527).HTTP;
+  const obj = { url: closure_12.CHANNEL(id.id), body, rejectWithError: _require(527).rejectWithMigratedError() };
+  const obj2 = _require(527);
   return HTTP.patch(obj).then((body) => {
     let obj = closure_1_1(closure_1_2[11]);
     obj = { type: "THREAD_UPDATE", channel: closure_1_4(body.body) };
@@ -56,9 +56,9 @@ export default {
       obj.locked = true;
     }
     const _require = channel;
-    const HTTP = _require(530).HTTP;
-    obj = { url: closure_12.CHANNEL(channel.id), body: obj, rejectWithError: _require(530).rejectWithMigratedError() };
-    const obj3 = _require(530);
+    const HTTP = _require(527).HTTP;
+    obj = { url: closure_12.CHANNEL(channel.id), body: obj, rejectWithError: _require(527).rejectWithMigratedError() };
+    const obj3 = _require(527);
     return HTTP.patch(obj).then((body) => {
       let obj = closure_1_1(closure_1_2[11]);
       obj = { type: "THREAD_UPDATE", channel: closure_1_4(body.body) };
@@ -470,9 +470,9 @@ export default {
   setInvitable(id, invitable) {
     let obj = { invitable };
     const _require = id;
-    const HTTP = _require(530).HTTP;
-    obj = { url: closure_12.CHANNEL(id.id), body: obj, rejectWithError: _require(530).rejectWithMigratedError() };
-    const obj3 = _require(530);
+    const HTTP = _require(527).HTTP;
+    obj = { url: closure_12.CHANNEL(id.id), body: obj, rejectWithError: _require(527).rejectWithMigratedError() };
+    const obj3 = _require(527);
     return HTTP.patch(obj).then((body) => {
       let obj = closure_1_1(closure_1_2[11]);
       obj = { type: "THREAD_UPDATE", channel: closure_1_4(body.body) };
@@ -775,21 +775,21 @@ export default {
       const obj2 = { flags: null };
       obj2[0] = v0;
       obj1[1] = closure_1_0.merge(obj2);
-      v0(709).dispatch(obj1);
+      v0(706).dispatch(obj1);
       const obj3 = { flags: null };
       obj3[0] = v0;
       if (dependencyMap) {
         obj3.archived = false;
       }
       dependencyMap = 1;
-      const HTTP = closure_1_0(530).HTTP;
+      const HTTP = closure_1_0(527).HTTP;
       const obj4 = { url: null, body: null, rejectWithError: true };
       obj4[0] = closure_1_12.CHANNEL(closure_1_0.id);
       obj4[1] = obj3;
       yield HTTP.patch(obj4);
       if (1 === tmp7) {
         dependencyMap = 0;
-        obj1 = v0(709);
+        obj1 = v0(706);
         const obj6 = { type: "THREAD_UPDATE", channel: null };
         obj6[1] = closure_0;
         obj1.dispatch(obj6);
@@ -1121,7 +1121,7 @@ export default {
     const callback = c3;
     let MATCH_SOME = c4;
     if (c4 === undefined) {
-      MATCH_SOME = _require(1398).ThreadSearchTagSetting.MATCH_SOME;
+      MATCH_SOME = _require(1397).ThreadSearchTagSetting.MATCH_SOME;
     }
     return callback(function*() {
       let threads = tmp3;
@@ -1133,7 +1133,7 @@ export default {
           const arr = Array.from(tmp37);
         }
       }
-      const HTTP = closure_1_0(530).HTTP;
+      const HTTP = closure_1_0(527).HTTP;
       obj1 = { url: null, query: null, rejectWithError: null };
       obj1[0] = closure_1_12.THREAD_SEARCH(closure_1_1);
       const obj2 = { name: null, tag: null, tag_setting: null };
@@ -1141,7 +1141,7 @@ export default {
       obj2[1] = joined;
       obj2[2] = closure_1_4;
       obj1[1] = obj2;
-      let obj5 = closure_1_0(530);
+      let obj5 = closure_1_0(527);
       obj1[2] = obj5.rejectWithMigratedError();
       yield HTTP.get(obj1);
       body = arg1.body;
@@ -1153,7 +1153,7 @@ export default {
       obj5[3] = body;
       obj5[4] = first_messages;
       obj5[5] = most_recent_messages;
-      closure_1_1(709).dispatch(obj5);
+      closure_1_1(706).dispatch(obj5);
       return threads.map((id) => id.id);
     })();
   },
@@ -1164,7 +1164,7 @@ export default {
         let flag = arg1;
         let obj = dispatcherDefault;
         obj.dispatch({ type: "SUMMARIZE_THREAD_START" });
-        const HTTP = _require(530).HTTP;
+        const HTTP = _require(527).HTTP;
         obj = { url: null, body: null, rejectWithError: null };
         obj[0] = closure_12.AI_SUMMARIZE_THREAD(isThread.id);
         if (arg1 == null) {
@@ -1173,9 +1173,9 @@ export default {
         obj = { ephemeral: null };
         obj[0] = flag;
         obj[1] = obj;
-        obj[2] = _require(530).rejectWithMigratedError();
+        obj[2] = _require(527).rejectWithMigratedError();
         const tmp5 = _require;
-        const tmp5Result = _require(530);
+        const tmp5Result = _require(527);
         const postResult = HTTP.post(obj);
         return HTTP.post(obj).then(() => {
           let obj = closure_1_1(closure_1_2[11]);

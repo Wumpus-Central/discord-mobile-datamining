@@ -1,6 +1,6 @@
-// === Module 16856: I18nLink ===
+// === Module 17092: I18nLink ===
 
-// Module 16856 (I18nLink)
+// Module 17092 (I18nLink)
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -57,25 +57,25 @@ export default function updateRules(paragraph) {
   let obj = {};
   const merged = Object.assign(paragraph.paragraph);
   obj.react = function react(content, arg1, key) {
-    return callback2(callback(1297).LegacyText, { children: arg1(content.content, key) }, key.key);
+    return callback2(callback(1296).LegacyText, { children: arg1(content.content, key) }, key.key);
   };
   paragraph.paragraph = obj;
   obj = {};
   const merged1 = Object.assign(paragraph.strong);
   obj.react = function react(content, arg1, key) {
-    return callback2(callback(1297).LegacyText, { style: closure_5.strong, children: arg1(content.content, key) }, key.key);
+    return callback2(callback(1296).LegacyText, { style: closure_5.strong, children: arg1(content.content, key) }, key.key);
   };
   paragraph.strong = obj;
   obj = {};
   const merged2 = Object.assign(paragraph.em);
   obj.react = function react(content, arg1, key) {
-    return callback2(callback(1297).LegacyText, { style: closure_5.italic, children: arg1(content.content, key) }, key.key);
+    return callback2(callback(1296).LegacyText, { style: closure_5.italic, children: arg1(content.content, key) }, key.key);
   };
   paragraph.em = obj;
   obj1 = {};
   const merged3 = Object.assign(paragraph.u);
   obj1.react = function react(content, arg1, key) {
-    return callback2(callback(1297).LegacyText, { style: closure_5.underline, children: arg1(content.content, key) }, key.key);
+    return callback2(callback(1296).LegacyText, { style: closure_5.underline, children: arg1(content.content, key) }, key.key);
   };
   paragraph.u = obj1;
   const obj2 = {};

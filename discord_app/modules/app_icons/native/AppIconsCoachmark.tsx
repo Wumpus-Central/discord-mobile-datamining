@@ -1,14 +1,14 @@
-// === Module 16505: AppIconsCoachmarkActionSheet ===
+// === Module 16740: AppIconsCoachmarkActionSheet ===
 
-// Module 16505 (AppIconsCoachmarkActionSheet)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 16740 (AppIconsCoachmarkActionSheet)
+import ThemesDefault from "Themes" /* 709 */;
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4139 */;
-import registerAssetDefault from "registerAsset" /* 9168 */;
-import registerAssetDefault2 from "registerAsset" /* 16506 */;
+import registerAssetDefault from "registerAsset" /* 9182 */;
+import registerAssetDefault2 from "registerAsset" /* 16741 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1384 */;
+import closure_6 from "mergeGuildAvatar" /* 1921 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -31,7 +31,7 @@ let result = require("set").fileFinishedImporting("modules/app_icons/native/AppI
 export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   let tmp = callback3();
-  let obj = markAsDismissed(589);
+  let obj = markAsDismissed(586);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   obj1 = getPremiumPlanItemDefault;
@@ -54,17 +54,17 @@ export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
   const items2 = [callback(closure_4, obj1), , ];
   const obj2 = { style: tmp.titleContainer, children: null };
   const isPremiumResult = obj1.isPremium(stateFromStores);
-  const items3 = [callback(markAsDismissed(1297).Icon, { source: registerAssetDefault, size: markAsDismissed(1297).IconSizes.MEDIUM, style: tmp.nitroWheel, disableColor: true }), ];
+  const items3 = [callback(markAsDismissed(1296).Icon, { source: registerAssetDefault, size: markAsDismissed(1296).IconSizes.MEDIUM, style: tmp.nitroWheel, disableColor: true }), ];
   const obj4 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = markAsDismissed(1236).intl;
-  obj4[2] = intl.string(markAsDismissed(1236).t.EfA4Cq);
+  const intl = markAsDismissed(1233).intl;
+  obj4[2] = intl.string(markAsDismissed(1233).t.EfA4Cq);
   items3[1] = callback(markAsDismissed(4474).Text, obj4);
   obj2[1] = items3;
   items2[1] = callback2(closure_5, obj2);
   const obj5 = { variant: "text-md/normal", color: "text-default", style: tmp.subtitle, children: null };
-  const intl2 = markAsDismissed(1236).intl;
+  const intl2 = markAsDismissed(1233).intl;
   const string = intl2.string;
-  const t = markAsDismissed(1236).t;
+  const t = markAsDismissed(1233).t;
   if (isPremiumResult) {
     let stringResult = string(t.IgchKK);
   } else {
@@ -76,8 +76,8 @@ export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
   const items4 = [callback2(closure_5, obj), ];
   const obj6 = { style: tmp.footer, children: null };
   const obj7 = { text: null, onPress: null };
-  const intl3 = tmp2(1236).intl;
-  obj7[0] = intl3.string(markAsDismissed(1236).t.Pt547C);
+  const intl3 = tmp2(1233).intl;
+  obj7[0] = intl3.string(markAsDismissed(1233).t.Pt547C);
   obj7[1] = function onPress() {
     closure_1_1(closure_1_2[9]).hideActionSheet();
     if (markAsDismissed != null) {
@@ -89,12 +89,12 @@ export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
   };
   const items5 = [callback(markAsDismissed(4928).Button, obj7), ];
   const obj8 = { variant: "secondary", text: null, onPress: null };
-  const intl4 = tmp2(1236).intl;
-  obj8[1] = intl4.string(markAsDismissed(1236).t.iSrIIZ);
+  const intl4 = tmp2(1233).intl;
+  obj8[1] = intl4.string(markAsDismissed(1233).t.iSrIIZ);
   obj8[2] = callback;
   items5[1] = callback(markAsDismissed(4928).Button, obj8);
   obj6[1] = items5;
   items4[1] = callback2(closure_5, obj6);
   obj[2] = items4;
-  return callback2(markAsDismissed(5622).BottomSheet, obj);
+  return callback2(markAsDismissed(5630).BottomSheet, obj);
 };

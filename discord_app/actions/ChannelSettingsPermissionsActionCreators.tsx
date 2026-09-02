@@ -1,7 +1,7 @@
-// === Module 9708: _updatePermission ===
+// === Module 9722: _updatePermission ===
 
-// Module 9708 (_updatePermission)
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 9722 (_updatePermission)
+import dispatcherDefault from "dispatcher" /* 706 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;
@@ -52,7 +52,7 @@ function _updatePermission() {
                   c6 = 1;
                   c7 = 1;
                   obj1 = { value: null, done: false };
-                  obj1[0] = guildId(9709).checkChattableChannelThresholdMetAfterChannelPermissionDeny(tmp22, tmp25, tmp24);
+                  obj1[0] = guildId(9723).checkChattableChannelThresholdMetAfterChannelPermissionDeny(tmp22, tmp25, tmp24);
                   return obj1;
                 }
               }
@@ -73,7 +73,7 @@ function _updatePermission() {
             c7 = 3;
             return { value: false, done: true };
           }
-          obj1 = callback(709);
+          obj1 = callback(706);
           const obj2 = { type: "CHANNEL_SETTINGS_PERMISSIONS_UPDATE_PERMISSION", id: null, allow: null, deny: null };
           obj2[1] = guildId;
           obj2[2] = callback;

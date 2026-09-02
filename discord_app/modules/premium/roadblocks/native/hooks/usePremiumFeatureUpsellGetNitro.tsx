@@ -1,13 +1,13 @@
-// === Module 8969: usePremiumFeatureUpsellGetNitro ===
+// === Module 8983: usePremiumFeatureUpsellGetNitro ===
 
-// Module 8969 (usePremiumFeatureUpsellGetNitro)
-import contextDefault from "context" /* 5953 */;
+// Module 8983 (usePremiumFeatureUpsellGetNitro)
+import contextDefault from "context" /* 5961 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import closure_6 from "reset" /* 4145 */;
-import closure_7 from "emitChanges" /* 7195 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
-import { AnalyticsObjectTypes } from "ME" /* 676 */;
+import closure_7 from "emitChanges" /* 7204 */;
+import { PremiumTypes } from "GuildFeatures" /* 1923 */;
+import { AnalyticsObjectTypes } from "ME" /* 673 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/premium/roadblocks/native/hooks/usePremiumFeatureUpsellGetNitro.tsx");
@@ -50,7 +50,7 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, arg2, arg3) 
           obj[0] = obj;
           obj[1] = analyticsLocations;
           obj[2] = callback ? closure_1_8.TIER_0 : closure_1_8.TIER_2;
-          callback2(7167)(obj, dependencyMap);
+          callback2(7176)(obj, dependencyMap);
         }
       }
     }
@@ -67,8 +67,8 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, arg2, arg3) 
         if (isFetchingOfferResult) {
           let resolved1 = Promise.resolve();
         } else {
-          resolved1 = callback(7971).fetchUserOffer("usePremiumFeatureUpsellGetNitro");
-          const obj3 = callback(7971);
+          resolved1 = callback(7980).fetchUserOffer("usePremiumFeatureUpsellGetNitro");
+          const obj3 = callback(7980);
         }
         items[1] = resolved1;
         const allPromises = Promise.all(items);
@@ -80,15 +80,15 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, arg2, arg3) 
           ref.current = ref.current + 1;
           callback4();
         }).catch(() => {
-          const intl = callback(1236).intl;
-          callback2(4193).presentFailedToast(intl.string(callback(1236).t.R0RpRX));
+          const intl = callback(1233).intl;
+          callback2(4193).presentFailedToast(intl.string(callback(1233).t.R0RpRX));
         }).finally(() => callback3(false));
         const catchPromise = Promise.all(items).then(() => {
           ref.current = ref.current + 1;
           callback4();
         }).catch(() => {
-          const intl = callback(1236).intl;
-          callback2(4193).presentFailedToast(intl.string(callback(1236).t.R0RpRX));
+          const intl = callback(1233).intl;
+          callback2(4193).presentFailedToast(intl.string(callback(1233).t.R0RpRX));
         });
       }
     }

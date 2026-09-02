@@ -1,8 +1,8 @@
-// === Module 6054: hasConsented ===
+// === Module 6062: hasConsented ===
 
-// Module 6054 (hasConsented)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 6062 (hasConsented)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 let c0 = false;
 let c1 = false;

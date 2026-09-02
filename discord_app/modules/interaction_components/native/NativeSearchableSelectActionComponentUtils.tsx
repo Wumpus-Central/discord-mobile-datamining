@@ -1,13 +1,13 @@
-// === Module 8031: transformSearchableSelectOptions ===
+// === Module 8040: transformSearchableSelectOptions ===
 
-// Module 8031 (transformSearchableSelectOptions)
+// Module 8040 (transformSearchableSelectOptions)
 import getChannelIcon from "getChannelIcon" /* 4981 */;
-import registerAssetDefault from "registerAsset" /* 8033 */;
-import closure_3 from "ensureGuildLoaded" /* 1387 */;
-import closure_4 from "createGuildRoleRecordFromRust" /* 1985 */;
-import closure_5 from "createGuildRecordFromRust" /* 1909 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import registerAssetDefault from "registerAsset" /* 8042 */;
+import closure_3 from "ensureGuildLoaded" /* 1386 */;
+import closure_4 from "createGuildRoleRecordFromRust" /* 1984 */;
+import closure_5 from "createGuildRecordFromRust" /* 1908 */;
+import closure_6 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
 
 require = arg1;
 ({ ChannelTypes: error, DEFAULT_ROLE_COLOR: closure_8 } = ME);
@@ -101,7 +101,7 @@ export const transformSearchableSelectOptions = function transformSearchableSele
       return null;
     }
   });
-  return mapped.filter(_require(1471).isNotNullish);
+  return mapped.filter(_require(1470).isNotNullish);
 };
 export const getChannelIconData = function getChannelIconData(channel, guild) {
   if (channel.type === constants.GUILD_CATEGORY) {

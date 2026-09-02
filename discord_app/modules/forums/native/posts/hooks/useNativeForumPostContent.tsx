@@ -1,11 +1,11 @@
-// === Module 11596: useNativeForumPostContent ===
+// === Module 11819: useNativeForumPostContent ===
 
-// Module 11596 (useNativeForumPostContent)
+// Module 11819 (useNativeForumPostContent)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import ME from "ME" /* 673 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4852 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6117 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6125 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
 const MessageFlags = ME.MessageFlags;
@@ -74,26 +74,26 @@ export default function useNativeForumPostContent(arg0) {
               let stringResult = intl6.string(getSystemLocale.t.mE3KJN);
             } else {
               if (obj5.getMessageStickers(message).length > 0) {
-                const intl5 = tmp28(1236).intl;
-                stringResult = intl5.string(tmp28(1236).t["7K5Lma"]);
+                const intl5 = tmp28(1233).intl;
+                stringResult = intl5.string(tmp28(1233).t["7K5Lma"]);
               } else {
                 if (null != message.interaction) {
                   if ("" === message.content) {
-                    const intl4 = tmp28(1236).intl;
-                    stringResult = intl4.string(tmp28(1236).t["2v7kfl"]);
+                    const intl4 = tmp28(1233).intl;
+                    stringResult = intl4.string(tmp28(1233).t["2v7kfl"]);
                   }
                 }
                 if (message.hasFlag(MessageFlags.IS_VOICE_MESSAGE)) {
-                  const intl3 = tmp28(1236).intl;
-                  stringResult = intl3.string(tmp28(1236).t["6bhHrc"]);
+                  const intl3 = tmp28(1233).intl;
+                  stringResult = intl3.string(tmp28(1233).t["6bhHrc"]);
                 } else if (message.hasFlag(tmp14.IS_COMPONENTS_V2)) {
-                  const intl2 = tmp28(1236).intl;
-                  stringResult = intl2.string(tmp28(1236).t.Xxm5i3);
+                  const intl2 = tmp28(1233).intl;
+                  stringResult = intl2.string(tmp28(1233).t.Xxm5i3);
                 } else {
                   stringResult = null;
                   if (tmp15) {
-                    const intl = tmp28(1236).intl;
-                    stringResult = intl.string(tmp28(1236).t.JAKsM8);
+                    const intl = tmp28(1233).intl;
+                    stringResult = intl.string(tmp28(1233).t.JAKsM8);
                   }
                   tmp15 = message.embeds.length > 0 || message.attachments.length > 0;
                 }

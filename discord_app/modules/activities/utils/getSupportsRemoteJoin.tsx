@@ -1,9 +1,9 @@
-// === Module 11329: getSupportsRemoteJoin ===
+// === Module 11552: getSupportsRemoteJoin ===
 
-// Module 11329 (getSupportsRemoteJoin)
+// Module 11552 (getSupportsRemoteJoin)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import hasFlagDefault from "hasFlag" /* 6158 */;
+import ME from "ME" /* 673 */;
+import hasFlagDefault from "hasFlag" /* 6166 */;
 
 const ActivityFlags = ME.ActivityFlags;
 const result = set.fileFinishedImporting("modules/activities/utils/getSupportsRemoteJoin.tsx");

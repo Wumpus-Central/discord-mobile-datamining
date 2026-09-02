@@ -1,15 +1,15 @@
-// === Module 10157: ? ===
+// === Module 10179: ? ===
 
-// Module 10157
-import ThemesDefault from "Themes" /* 712 */;
-import UserSummaryItemDefault from "UserSummaryItem" /* 10137 */;
+// Module 10179
+import ThemesDefault from "Themes" /* 709 */;
+import UserSummaryItemDefault from "UserSummaryItem" /* 10159 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "getParticipants" /* 4494 */;
 import importAllResult from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
-import useActiveSpeakerPillScrollHandler from "useActiveSpeakerPillScrollHandler" /* 10128 */;
+import useActiveSpeakerPillScrollHandler from "useActiveSpeakerPillScrollHandler" /* 10150 */;
 
 const require = arg1;
 ({ useActiveSpeakerPillScrollHandler: closure_6, useActiveSpeakerPillState: error } = require("useActiveSpeakerPillScrollHandler"));
@@ -27,14 +27,14 @@ let obj2 = { lineHeight: 18, color: ThemesDefault.colors.TEXT_SUBTLE };
 const memoResult = importAllResult.memo((channel) => {
   channel = channel.channel;
   const tmp = callback5();
-  let obj = channel(589);
+  let obj = channel(586);
   let items = [closure_5];
   const items1 = [channel.id];
   const first = callback(obj.useStateFromStores(items, () => {
     const speakingParticipants = closure_1_5.getSpeakingParticipants(channel.id);
     const items = [speakingParticipants.map((user) => user.user), closure_1_5.getParticipantsVersion(channel.id)];
     return items;
-  }, items1, channel(5375).isVersionEqual), 1)[0];
+  }, items1, channel(5383).isVersionEqual), 1)[0];
   let tmp5 = null;
   if (0 !== first.length) {
     tmp5 = null;
@@ -57,15 +57,15 @@ const memoResult = importAllResult.memo((channel) => {
       obj3[0] = tmp.participantNameplateContainer;
       const obj4 = { style: null, variant: "text-xs/medium", color: "text-default", children: null };
       obj4[0] = tmp.participantNameplateSpeakingText;
-      const intl = tmp2(1236).intl;
+      const intl = tmp2(1233).intl;
       const obj5 = { count: null };
       obj5[0] = first.length;
-      obj4[3] = intl.format(tmp2(1236).t["+dia6l"], obj5);
+      obj4[3] = intl.format(tmp2(1233).t["+dia6l"], obj5);
       obj3[1] = callback3(tmp2(4474).Text, obj4);
       items2[1] = callback3(View, obj3);
       obj[1] = items2;
       obj[3] = callback4(View, obj);
-      tmp5 = callback3(tmp2(5068).PressableOpacity, obj);
+      tmp5 = callback3(tmp2(5076).PressableOpacity, obj);
       const tmp10 = UserSummaryItemDefault;
     }
   }

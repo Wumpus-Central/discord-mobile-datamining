@@ -1,10 +1,10 @@
-// === Module 6647: GameTrophySpotIllustration ===
+// === Module 6656: GameTrophySpotIllustration ===
 
-// Module 6647 (GameTrophySpotIllustration)
+// Module 6656 (GameTrophySpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5493 */;
-import metadataDefault from "metadata" /* 6648 */;
+import preloadDefault from "preload" /* 5501 */;
+import metadataDefault from "metadata" /* 6657 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/GameTrophySpotIllustration.native.tsx");

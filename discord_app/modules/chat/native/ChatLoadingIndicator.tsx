@@ -1,8 +1,8 @@
-// === Module 12931: openLoadingIndicatorDebugBody ===
+// === Module 13153: openLoadingIndicatorDebugBody ===
 
-// Module 12931 (openLoadingIndicatorDebugBody)
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
+// Module 13153 (openLoadingIndicatorDebugBody)
+import initialize from "initialize" /* 586 */;
+import ThemesDefault from "Themes" /* 709 */;
 import _modDef4217 from "module_4217" /* 4217 */;
 import Text from "Text" /* 4474 */;
 import _modDef4858 from "module_4858" /* 4858 */;
@@ -10,12 +10,12 @@ import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_7 from "_handleConnectionOpen" /* 5221 */;
+import closure_7 from "_handleConnectionOpen" /* 5229 */;
 import closure_8 from "reinjectEphemerals" /* 4735 */;
-import closure_9 from "handleConnectionOpen" /* 1981 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import closure_11 from "getState" /* 7157 */;
-import { AppStates } from "ME" /* 676 */;
+import closure_9 from "handleConnectionOpen" /* 1980 */;
+import closure_10 from "mergeGuildAvatar" /* 1921 */;
+import closure_11 from "getState" /* 7166 */;
+import { AppStates } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -214,10 +214,10 @@ export const useShouldChannelShowLoadingIndicator = function useShouldChannelSho
 };
 export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndicator() {
   const tmp = callback4();
-  let obj = stateFromStores(589);
+  let obj = stateFromStores(586);
   let items = [closure_6];
   stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  obj1 = stateFromStores(589);
+  obj1 = stateFromStores(586);
   const items1 = [closure_10];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => {
     currentUser = currentUser.getCurrentUser();
@@ -271,8 +271,8 @@ export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndica
   const items2 = [tmp.pulse, animatedStyle];
   const items3 = [callback2(_modDef4217.View, { style: items2 }), ];
   obj1 = { variant: "text-xs/medium", color: "text-muted", children: null };
-  const intl = stateFromStores(1236).intl;
-  obj1[2] = intl.string(stateFromStores(1236).t.JwIJMV);
+  const intl = stateFromStores(1233).intl;
+  obj1[2] = intl.string(stateFromStores(1233).t.JwIJMV);
   items3[1] = callback2(stateFromStores(4474).Text, obj1);
   obj[1] = items3;
   const tmp8 = callback3(View, obj);
@@ -281,7 +281,7 @@ export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndica
     obj2 = { onPress: null, children: null };
     obj2[0] = openLoadingIndicatorDebugBody;
     obj2[1] = tmp8;
-    tmp7Result = callback2(stateFromStores(5068).PressableOpacity, obj2);
+    tmp7Result = callback2(stateFromStores(5076).PressableOpacity, obj2);
   }
   return tmp7Result;
 };

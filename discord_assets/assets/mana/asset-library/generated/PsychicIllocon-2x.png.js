@@ -1,6 +1,6 @@
-// === Module 6924: metadata ===
+// === Module 6933: metadata ===
 
-// Module 6924 (metadata)
+// Module 6933 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PsychicIllocon-2x.png.js");

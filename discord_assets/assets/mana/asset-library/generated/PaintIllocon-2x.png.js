@@ -1,6 +1,6 @@
-// === Module 6892: metadata ===
+// === Module 6901: metadata ===
 
-// Module 6892 (metadata)
+// Module 6901 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PaintIllocon-2x.png.js");

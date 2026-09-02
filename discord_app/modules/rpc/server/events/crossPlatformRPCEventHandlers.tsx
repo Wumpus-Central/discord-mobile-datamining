@@ -1,24 +1,24 @@
-// === Module 14173: messageEventsValidation ===
+// === Module 14396: messageEventsValidation ===
 
-// Module 14173 (messageEventsValidation)
-import fromStringAll from "fromString" /* 506 */;
-import prototypeDefault from "prototype" /* 9503 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9506 */;
-import recurseReplaceContentTree from "recurseReplaceContentTree" /* 9508 */;
-import getCapabilitiesForSocketDefault from "getCapabilitiesForSocket" /* 14113 */;
+// Module 14396 (messageEventsValidation)
+import fromStringAll from "fromString" /* 503 */;
+import prototypeDefault from "prototype" /* 9516 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9519 */;
+import recurseReplaceContentTree from "recurseReplaceContentTree" /* 9521 */;
+import getCapabilitiesForSocketDefault from "getCapabilitiesForSocket" /* 14336 */;
 import closure_4 from "addApplication" /* 4519 */;
 import closure_5 from "initialize" /* 4501 */;
-import { getGuildIconURL } from "GuildNSFWContentLevel" /* 1430 */;
+import { getGuildIconURL } from "GuildNSFWContentLevel" /* 1429 */;
 import closure_7 from "reset" /* 4500 */;
-import closure_8 from "ensureGuildLoaded" /* 1387 */;
-import closure_9 from "trackCommunicationDisabled" /* 1992 */;
-import closure_10 from "createGuildRecordFromRust" /* 1909 */;
+import closure_8 from "ensureGuildLoaded" /* 1386 */;
+import closure_9 from "trackCommunicationDisabled" /* 1991 */;
+import closure_10 from "createGuildRecordFromRust" /* 1908 */;
 import closure_11 from "_detectH265HardwareDecode" /* 4529 */;
 import closure_12 from "createRTCConnection" /* 4554 */;
-import closure_13 from "mergeGuildAvatar" /* 1922 */;
+import closure_13 from "mergeGuildAvatar" /* 1921 */;
 import closure_14 from "updateVoiceState" /* 4497 */;
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4380 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 
 require = arg1;
 function messageEventsValidation(string) {
@@ -255,9 +255,9 @@ obj8[RPC_SCOPE_CONFIG.ANY] = items4;
 obj7[0] = obj8;
 obj7[1] = function handler() {
   return (arg0) => {
-    const obj = { state: callback(9508).getVoiceConnectionState(store.getState()), hostname: store.getHostname(), pings: store.getPings(), average_ping: store.getAveragePing(), last_ping: store.getLastPing() };
+    const obj = { state: callback(9521).getVoiceConnectionState(store.getState()), hostname: store.getHostname(), pings: store.getPings(), average_ping: store.getAveragePing(), last_ping: store.getLastPing() };
     ({ prevState, dispatch } = arg0);
-    const obj2 = callback(9508);
+    const obj2 = callback(9521);
     if (!obj3.isEqual(obj, prevState)) {
       dispatch(obj);
     }
@@ -292,7 +292,7 @@ obj[RPCEvents.VOICE_SESSION_PARTICIPANTS_UPDATE] = {
   handler(args) {
     const session_id = args.args.session_id;
     const socket = args.socket;
-    const result = socket(14113).validateEventSubscription(socket, session_id);
+    const result = socket(14336).validateEventSubscription(socket, session_id);
     return (prevState) => {
       prevState = prevState.prevState;
       let obj = socket(closure_1_3[17]);
@@ -494,12 +494,12 @@ obj39[1] = function handler() {
     if (!tmp) {
       let tmp2 = null != prevState;
       if (tmp2) {
-        tmp2 = callback(643)(obj, prevState);
+        tmp2 = callback(640)(obj, prevState);
       }
       tmp = tmp2;
     }
     if (!tmp) {
-      prevState.dispatch(callback(9509)(obj.currentUser));
+      prevState.dispatch(callback(9522)(obj.currentUser));
     }
     return obj;
   };
@@ -571,7 +571,7 @@ obj45[1] = function handler() {
     }
     let tmp8 = null;
     if (null != application) {
-      tmp8 = callback(14175)(application);
+      tmp8 = callback(14398)(application);
     }
     if (streamerActiveStreamMetadata != null) {
       const sourceName = streamerActiveStreamMetadata.sourceName;

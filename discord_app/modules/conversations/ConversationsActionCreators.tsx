@@ -1,16 +1,16 @@
-// === Module 7816: _fetchChannelConversations ===
+// === Module 7825: _fetchChannelConversations ===
 
-// Module 7816 (_fetchChannelConversations)
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 7825 (_fetchChannelConversations)
+import dispatcherDefault from "dispatcher" /* 706 */;
 import fetchSurveyDetailsDefault from "fetchSurveyDetails" /* 4710 */;
 import SurveyActionTypes from "SurveyActionTypes" /* 4718 */;
-import trackInviteDefault from "trackInvite" /* 7201 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 7818 */;
+import trackInviteDefault from "trackInvite" /* 7210 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 7827 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "removePendingListFetch" /* 7341 */;
-import closure_5 from "initialize" /* 7817 */;
-import { FETCH_LIMIT } from "CONVERSATION_COLORS" /* 7343 */;
-import { Endpoints } from "ME" /* 676 */;
+import closure_4 from "removePendingListFetch" /* 7350 */;
+import closure_5 from "initialize" /* 7826 */;
+import { FETCH_LIMIT } from "CONVERSATION_COLORS" /* 7352 */;
+import { Endpoints } from "ME" /* 673 */;
 
 require = arg1;
 function _fetchChannelConversations() {
@@ -72,7 +72,7 @@ function _fetchChannelConversations() {
               let conversations;
               hydrateMessages = 1;
               c8 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else {
             if (1 === tmp7) {
@@ -89,7 +89,7 @@ function _fetchChannelConversations() {
                   const _HermesInternal = HermesInternal;
                   c8 = "" + dependencyMap + ":" + c3 + ":" + limit2 + ":" + true === c5;
                   if (!limit2.isListFetchPending(callback, c8)) {
-                    let obj4 = callback2(709);
+                    let obj4 = callback2(706);
                     let obj2 = { type: "CONVERSATIONS_FETCH_START", channelId: null, direction: null, requestKey: null, isJump: null };
                     obj2[1] = callback;
                     obj2[2] = dependencyMap;
@@ -122,7 +122,7 @@ function _fetchChannelConversations() {
                       const tmp60 = obj3;
                     }
                     c6 = 1;
-                    const HTTP = callback(530).HTTP;
+                    const HTTP = callback(527).HTTP;
                     obj4 = { url: null, query: null, oldFormErrors: true, rejectWithError: true };
                     obj4[0] = hydrateMessages.CHANNEL_CONVERSATIONS(callback);
                     obj4[1] = obj3;
@@ -133,11 +133,11 @@ function _fetchChannelConversations() {
                     return obj5;
                   }
                 }
-                obj15 = callback(7814);
+                obj15 = callback(7823);
               }
             } else if (2 === tmp7) {
               c6 = 0;
-              obj2 = callback2(709);
+              obj2 = callback2(706);
               const obj6 = { type: "CONVERSATIONS_FETCH_FAILURE", channelId: null, requestKey: null };
               obj6[1] = callback;
               obj6[2] = c8;
@@ -174,7 +174,7 @@ function _fetchChannelConversations() {
                 limit = hydrateMessages.limit;
               }
               obj8[7] = null == limit;
-              callback2(709).dispatch(obj8);
+              callback2(706).dispatch(obj8);
               c6 = 0;
               c8 = 3;
               obj = { value: null, done: true };
@@ -283,14 +283,14 @@ function _fetchConversationMessages() {
                 }
                 if (tmp22) {
                   if (!obj3.isConversationFetchPending(tmp50, tmp18)) {
-                    let obj4 = callback2(709);
+                    let obj4 = callback2(706);
                     obj1 = { type: "CONVERSATION_FETCH_START", channelId: null, conversationId: null, full: null };
                     obj1[1] = tmp48;
                     obj1[2] = tmp50;
                     obj1[3] = tmp18;
                     obj4.dispatch(obj1);
                     c8 = 1;
-                    const HTTP = tmp52(530).HTTP;
+                    const HTTP = tmp52(527).HTTP;
                     const obj2 = { url: null, query: null, oldFormErrors: true, rejectWithError: true };
                     obj2[0] = closure_1_7.CHANNEL_CONVERSATION_MESSAGES(tmp48, tmp50);
                     obj3 = { limit: null, include_message_references: null, include_reactions: null };
@@ -306,13 +306,13 @@ function _fetchConversationMessages() {
                   }
                 }
               }
-              obj14 = callback(7814);
+              obj14 = callback(7823);
               tmp52 = callback;
             }
           } else {
             if (1 === tmp7) {
               c8 = 0;
-              obj1 = callback2(709);
+              obj1 = callback2(706);
               const obj5 = { type: "CONVERSATION_FETCH_FAILURE", channelId: null, conversationId: null, full: null };
               obj5[1] = callback;
               obj5[2] = callback2;
@@ -329,9 +329,9 @@ function _fetchConversationMessages() {
               obj6[3] = closure_3.body.messages;
               obj6[4] = closure_3.body.reference_messages;
               obj6[5] = dependencyMap;
-              callback2(709).dispatch(obj6);
+              callback2(706).dispatch(obj6);
               c8 = 0;
-              const obj12 = callback2(709);
+              const obj12 = callback2(706);
             }
             c8 = 0;
             c10 = 3;

@@ -1,8 +1,8 @@
-// === Module 13700: useGuildActionSheetPermissions ===
+// === Module 13923: useGuildActionSheetPermissions ===
 
-// Module 13700 (useGuildActionSheetPermissions)
-import closure_2 from "getUncachedChannelPermissions" /* 4121 */;
-import { Permissions } from "ME" /* 676 */;
+// Module 13923 (useGuildActionSheetPermissions)
+import closure_2 from "getUncachedChannelPermissions" /* 4120 */;
+import { Permissions } from "ME" /* 673 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_action_sheet/native/GuildActionSheetUtils.tsx");
@@ -11,7 +11,7 @@ export const useGuildActionSheetPermissions = function useGuildActionSheetPermis
   const _require = guild;
   const items = [closure_2];
   const items1 = [guild];
-  return _require(589).useStateFromStoresObject(items, () => {
+  return _require(586).useStateFromStoresObject(items, () => {
     if (null == closure_0) {
       let obj = { canAccessSettings: false, canEditNickname: false, canManageChannels: false };
     } else {

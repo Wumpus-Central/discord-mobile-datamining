@@ -1,19 +1,19 @@
-// === Module 14361: SafetyHubViolationsHeader ===
+// === Module 14584: SafetyHubViolationsHeader ===
 
-// Module 14361 (SafetyHubViolationsHeader)
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 14584 (SafetyHubViolationsHeader)
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Text from "Text" /* 4474 */;
-import parseMessageEmbedForProps from "parseMessageEmbedForProps" /* 8689 */;
-import WarningIcon from "WarningIcon" /* 8736 */;
-import renderDefault from "render" /* 9067 */;
-import useSafetyHubClassifications from "useSafetyHubClassifications" /* 11454 */;
+import parseMessageEmbedForProps from "parseMessageEmbedForProps" /* 8704 */;
+import WarningIcon from "WarningIcon" /* 8751 */;
+import renderDefault from "render" /* 9081 */;
+import useSafetyHubClassifications from "useSafetyHubClassifications" /* 11677 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8701 */;
-import SafetyHubView from "SafetyHubView" /* 8690 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import closure_7 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8716 */;
+import SafetyHubView from "SafetyHubView" /* 8705 */;
+import { AnalyticEvents } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -31,9 +31,9 @@ function SafetyHubViolationsHeader(count) {
   const items2 = [closure_11(closure_6, obj), , ];
   obj1 = { style: items3, children: null };
   items3 = [tmp.headerTextContainer];
-  const intl = tmp7(1236).intl;
+  const intl = tmp7(1233).intl;
   const formatToPlainString = intl.formatToPlainString;
-  const t = tmp7(1236).t;
+  const t = tmp7(1233).t;
   if ("active" === status) {
     const obj2 = { count: null };
     obj2[0] = str.toString();
@@ -44,9 +44,9 @@ function SafetyHubViolationsHeader(count) {
     formatToPlainStringResult = formatToPlainString(t.fZAHBT, obj3);
   }
   const items4 = [closure_11(Text.Text, { variant: "heading-sm/semibold", children: formatToPlainStringResult }), ];
-  const intl2 = tmp7(1236).intl;
+  const intl2 = tmp7(1233).intl;
   const string = intl2.string;
-  const t2 = tmp7(1236).t;
+  const t2 = tmp7(1233).t;
   if ("active" === status) {
     let stringResult = string(t2.XJ2YVR);
   } else {
@@ -56,9 +56,9 @@ function SafetyHubViolationsHeader(count) {
   obj1[1] = items4;
   items2[1] = closure_12(closure_6, obj1);
   if (opened) {
-    let ChevronSmallDownIcon = tmp7(13230).ChevronSmallUpIcon;
+    let ChevronSmallDownIcon = tmp7(13452).ChevronSmallUpIcon;
   } else {
-    ChevronSmallDownIcon = tmp7(8935).ChevronSmallDownIcon;
+    ChevronSmallDownIcon = tmp7(8949).ChevronSmallDownIcon;
   }
   const items5 = [tmp.chevron];
   items2[2] = closure_11(ChevronSmallDownIcon, { size: "md", style: items5 });
@@ -237,7 +237,7 @@ class SafetyHubViolationsContainer {
     items2[3] = stateFromStores;
     effect = closure_4.useEffect(() => {
       if (first) {
-        let obj = first(698);
+        let obj = first(695);
         obj = { action: null, account_standing: null, classification_ids: null, source: null, is_violative_content_shown: false, is_dsa_eligible: null };
         obj[0] = closure_1_9.ViewViolationsDropdown;
         obj[1] = safetyHubAccountStanding.state;

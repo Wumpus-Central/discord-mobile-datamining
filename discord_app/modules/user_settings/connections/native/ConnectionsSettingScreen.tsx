@@ -1,21 +1,21 @@
-// === Module 14562: onPress ===
+// === Module 14785: onPress ===
 
-// Module 14562 (onPress)
-import asyncRequireImpl from "asyncRequireImpl" /* 2009 */;
+// Module 14785 (onPress)
+import asyncRequireImpl from "asyncRequireImpl" /* 2008 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4445 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
 function onPress() {
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(14563, dependencyMap.paths), "AddConnection");
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(14786, dependencyMap.paths), "AddConnection");
 }
 let c3 = importAllResult;
 const memoResult = importAllResult.memo(function ConnectionsSettingScreen() {
-  stackNavigation = stackNavigation(1499).useStackNavigation();
-  let obj = stackNavigation(1499);
+  stackNavigation = stackNavigation(1498).useStackNavigation();
+  let obj = stackNavigation(1498);
   const tmp = stackNavigation;
-  const params = stackNavigation(7159).useSettingNavigationRoute().params;
+  const params = stackNavigation(7168).useSettingNavigationRoute().params;
   let selectedPlatformType;
   if (params != null) {
     selectedPlatformType = params.selectedPlatformType;
@@ -27,13 +27,13 @@ const memoResult = importAllResult.memo(function ConnectionsSettingScreen() {
         const obj = {};
         const merged = Object.assign(arg0);
         obj.onPress = closure_5;
-        const intl = callback(1236).intl;
-        obj.label = intl.string(callback(1236).t.OYkgVk);
-        return callback2(callback(7607).HeaderTextButton, obj);
+        const intl = callback(1233).intl;
+        obj.label = intl.string(callback(1233).t.OYkgVk);
+        return callback2(callback(7617).HeaderTextButton, obj);
       }
     });
   }, items);
-  return jsx(tmp(14564).UserSettingsConnections, { selectedPlatformType });
+  return jsx(tmp(14787).UserSettingsConnections, { selectedPlatformType });
 });
 const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/ConnectionsSettingScreen.tsx");
 

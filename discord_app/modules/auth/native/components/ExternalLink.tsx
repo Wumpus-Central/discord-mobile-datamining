@@ -1,7 +1,7 @@
-// === Module 15572: ExternalLink ===
+// === Module 15803: ExternalLink ===
 
-// Module 15572 (ExternalLink)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 15803 (ExternalLink)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -17,9 +17,9 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
     str = "space-between";
   }
   container[3] = str;
-  const space = tmp(712).space;
+  const space = tmp(709).space;
   container[4] = arg0 ? space.PX_24 : space.PX_16;
-  const space2 = tmp(712).space;
+  const space2 = tmp(709).space;
   container[5] = arg0 ? space2.PX_24 : space2.PX_16;
   return { container, description: { textAlign: "center", marginTop: 8 } };
 });

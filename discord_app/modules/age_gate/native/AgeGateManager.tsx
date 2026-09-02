@@ -1,15 +1,15 @@
-// === Module 16882: handlePostConnectionOpen ===
+// === Module 17118: handlePostConnectionOpen ===
 
-// Module 16882 (handlePostConnectionOpen)
+// Module 17118 (handlePostConnectionOpen)
 import _modDef4723 from "module_4723" /* 4723 */;
 import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 4731 */;
-import initializeDefault from "initialize" /* 5486 */;
+import initializeDefault from "initialize" /* 5494 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "ensureGuildLoaded" /* 1387 */;
-import closure_5 from "handleConnectionOpen" /* 1981 */;
+import closure_4 from "ensureGuildLoaded" /* 1386 */;
+import closure_5 from "handleConnectionOpen" /* 1980 */;
 import closure_6 from "handleConnectionOpen" /* 4299 */;
-import result from "result" /* 1221 */;
-import ME from "ME" /* 676 */;
+import result from "result" /* 1218 */;
+import ME from "ME" /* 673 */;
 
 require = arg1;
 ({ EXISTING_USER_AGE_GATE_MODAL_KEY: error, AgeGateSource: closure_8 } = result);

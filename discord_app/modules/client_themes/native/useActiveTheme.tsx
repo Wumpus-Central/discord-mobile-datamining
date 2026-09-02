@@ -1,12 +1,12 @@
-// === Module 7618: useActiveThemeType ===
+// === Module 7628: useActiveThemeType ===
 
-// Module 7618 (useActiveThemeType)
-import initialize from "initialize" /* 589 */;
+// Module 7628 (useActiveThemeType)
+import initialize from "initialize" /* 586 */;
 import getGuildIdFromNavigationStateDefault from "getGuildIdFromNavigationState" /* 4331 */;
-import closure_3 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
+import closure_3 from "CHANNEL_SIDEBAR_WIDTH" /* 1303 */;
 import closure_4 from "reset" /* 4297 */;
-import closure_5 from "reset" /* 1346 */;
-import SystemThemeState from "SystemThemeState" /* 1305 */;
+import closure_5 from "reset" /* 1345 */;
+import SystemThemeState from "SystemThemeState" /* 1304 */;
 
 require = arg1;
 function useActiveThemeType() {

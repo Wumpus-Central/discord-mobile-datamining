@@ -1,10 +1,10 @@
 // === Module 4412: useCustomThemeDisplaySettings ===
 
 // Module 4412 (useCustomThemeDisplaySettings)
-import initialize from "initialize" /* 589 */;
-import getThemeForColor from "getThemeForColor" /* 1347 */;
+import initialize from "initialize" /* 586 */;
+import getThemeForColor from "getThemeForColor" /* 1346 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "reset" /* 1346 */;
+import closure_3 from "reset" /* 1345 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/client_themes/native/useCustomThemeDisplaySettings.tsx");

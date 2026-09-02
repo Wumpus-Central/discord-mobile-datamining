@@ -1,14 +1,14 @@
-// === Module 11974: areResolvedGamesEqual ===
+// === Module 12198: areResolvedGamesEqual ===
 
-// Module 11974 (areResolvedGamesEqual)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 12198 (areResolvedGamesEqual)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
-import closure_6 from "handleInit" /* 7523 */;
-import closure_7 from "handleInit" /* 7524 */;
+import closure_6 from "handleInit" /* 7533 */;
+import closure_7 from "handleInit" /* 7534 */;
 import closure_8 from "handleLoadMessages" /* 4502 */;
-import closure_9 from "set" /* 5053 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
+import closure_9 from "set" /* 5061 */;
+import closure_10 from "mergeGuildAvatar" /* 1921 */;
 import regExp from "regExp" /* 4953 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -40,14 +40,16 @@ function areResolvedGamesEqual(size, size2) {
 }
 let c5 = importAllResult;
 ({ extractGameMentionIds: unpackModuleId, GAME_MENTION_RAW_RE_GLOBAL: closure_12, GAME_MENTION_SENTINEL: map1 } = regExp);
-let obj = { commandOption: null, commandErrorOption: null, gameMention: null, autocomplete: null };
+let obj = { commandOption: null, commandErrorOption: null, gameMention: null, timestampMention: null, autocomplete: null };
 obj = { backgroundColor: ThemesDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND, color: ThemesDefault.colors.TEXT_DEFAULT, borderRadius: ThemesDefault.radii.xs, fontSize: 14 };
 obj[0] = obj;
 createCacheKey = { backgroundColor: ThemesDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND, color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL, borderRadius: ThemesDefault.radii.xs, fontSize: 14 };
 obj[1] = createCacheKey;
 obj[2] = { backgroundColor: ThemesDefault.colors.MENTION_BACKGROUND, color: ThemesDefault.colors.MENTION_FOREGROUND, borderRadius: ThemesDefault.radii.xs, fontSize: 14, fontWeight: "bold" };
 let obj2 = { backgroundColor: ThemesDefault.colors.MENTION_BACKGROUND, color: ThemesDefault.colors.MENTION_FOREGROUND, borderRadius: ThemesDefault.radii.xs, fontSize: 14, fontWeight: "bold" };
-obj[3] = { color: ThemesDefault.colors.TEXT_BRAND, fontWeight: "bold" };
+obj[3] = { backgroundColor: ThemesDefault.colors.MENTION_BACKGROUND, color: ThemesDefault.colors.MENTION_FOREGROUND, borderRadius: ThemesDefault.radii.xs, fontSize: 14, fontWeight: "bold" };
+let obj3 = { backgroundColor: ThemesDefault.colors.MENTION_BACKGROUND, color: ThemesDefault.colors.MENTION_FOREGROUND, borderRadius: ThemesDefault.radii.xs, fontSize: 14, fontWeight: "bold" };
+obj[4] = { color: ThemesDefault.colors.TEXT_BRAND, fontWeight: "bold" };
 let closure_14 = createCacheKey.createStyles(obj);
 const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
   chatInputRef = chatInputRef.chatInputRef;
@@ -176,7 +178,7 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
       obj[1] = closure_0;
       obj[2] = applicationCommandOptionValueParser;
       closure_0 = closure_4;
-      obj = { commandOption: null, commandErrorOption: null, gameMention: null, autocomplete: null };
+      obj = { commandOption: null, commandErrorOption: null, gameMention: null, timestampMention: null, autocomplete: null };
       obj[0] = function commandOption() {
         return lib(closure_1_3[10]).convertToNativeStyle(lib.commandOption);
       };
@@ -186,7 +188,10 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
       obj[2] = function gameMention() {
         return lib(closure_1_3[10]).convertToNativeStyle(lib.gameMention);
       };
-      obj[3] = function autocomplete(color) {
+      obj[3] = function timestampMention() {
+        return lib(closure_1_3[10]).convertToNativeStyle(lib.timestampMention);
+      };
+      obj[4] = function autocomplete(color) {
         if (null == color) {
           let autocomplete = lib.autocomplete;
         } else {
@@ -222,7 +227,7 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
     const current = ref.current;
     if (current != null) {
       closure_0 = closure_4;
-      const obj = { commandOption: null, commandErrorOption: null, gameMention: null, autocomplete: null };
+      const obj = { commandOption: null, commandErrorOption: null, gameMention: null, timestampMention: null, autocomplete: null };
       obj[0] = function commandOption() {
         return lib(closure_1_3[10]).convertToNativeStyle(lib.commandOption);
       };
@@ -232,7 +237,10 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
       obj[2] = function gameMention() {
         return lib(closure_1_3[10]).convertToNativeStyle(lib.gameMention);
       };
-      obj[3] = function autocomplete(color) {
+      obj[3] = function timestampMention() {
+        return lib(closure_1_3[10]).convertToNativeStyle(lib.timestampMention);
+      };
+      obj[4] = function autocomplete(color) {
         if (null == color) {
           let autocomplete = lib.autocomplete;
         } else {
@@ -289,7 +297,7 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
   return null;
 });
 forwardRefResult.displayName = "ChatInputAppCommandManager";
-let obj3 = { color: ThemesDefault.colors.TEXT_BRAND, fontWeight: "bold" };
+let obj4 = { color: ThemesDefault.colors.TEXT_BRAND, fontWeight: "bold" };
 const memoResult = importAllResult.memo(forwardRefResult);
 let result = require("set").fileFinishedImporting("modules/chat_input/native/ChatInputAppCommandManager.tsx");
 

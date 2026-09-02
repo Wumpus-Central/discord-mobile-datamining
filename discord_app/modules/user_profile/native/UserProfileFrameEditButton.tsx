@@ -1,13 +1,13 @@
-// === Module 14284: COLLECTIBLES_PREVIEW_SIZE ===
+// === Module 14507: COLLECTIBLES_PREVIEW_SIZE ===
 
-// Module 14284 (COLLECTIBLES_PREVIEW_SIZE)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 14507 (COLLECTIBLES_PREVIEW_SIZE)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { COLLECTIBLES_PREVIEW_SIZE } from "ARBITRARY_LARGE_OFFSET" /* 6001 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1384 */;
-import { NOOP } from "sum" /* 505 */;
+import { COLLECTIBLES_PREVIEW_SIZE } from "ARBITRARY_LARGE_OFFSET" /* 6009 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
+import { NOOP } from "sum" /* 502 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -27,13 +27,13 @@ export default function UserProfileFrameEditButton(arg0) {
   dependencyMap = undefined;
   let userProfileFrame;
   const tmp = callback();
-  let obj = user(12530);
+  let obj = user(12754);
   const canViewProfileFramesInCollectiblesShop = obj.useCanViewProfileFramesInCollectiblesShop("UserProfileFrameEditButton");
-  obj1 = user(6251);
-  const items = [user(1373).DismissibleContent.PROFILE_FRAME_USER_PROFILE_NEW_BADGE];
+  obj1 = user(6260);
+  const items = [user(1372).DismissibleContent.PROFILE_FRAME_USER_PROFILE_NEW_BADGE];
   const tmp5 = userProfileFrame(obj1.useSelectedDismissibleContent(items), 2);
   dependencyMap = tmp6;
-  let obj2 = user(8076);
+  let obj2 = user(8084);
   obj = { pendingValue: pendingProfileFrame, userValue: null, guildValue: null, guildId: null };
   let profileFrame;
   if (displayProfile != null) {
@@ -53,7 +53,7 @@ export default function UserProfileFrameEditButton(arg0) {
   obj[2] = profileFrame1;
   obj[3] = guildId;
   const profilePreviewValue = obj2.getProfilePreviewValue(obj);
-  let tmp2Result = tmp2(8492);
+  let tmp2Result = tmp2(8505);
   let skuId;
   if (profilePreviewValue != null) {
     skuId = profilePreviewValue.skuId;
@@ -67,10 +67,10 @@ export default function UserProfileFrameEditButton(arg0) {
       type = first.type;
     }
   }
-  if (type === user(1950).CollectiblesItemType.PROFILE_FRAME) {
+  if (type === user(1949).CollectiblesItemType.PROFILE_FRAME) {
     const first1 = product.items[0];
   }
-  tmp2Result = tmp2(8076);
+  tmp2Result = tmp2(8084);
   userProfileFrame = tmp2Result.useUserProfileFrame({ user, guildId });
   if (undefined !== pendingProfileFrame) {
     userProfileFrame = pendingProfileFrame;
@@ -82,35 +82,35 @@ export default function UserProfileFrameEditButton(arg0) {
       name = product.name;
     }
     if (name == null) {
-      const intl = tmp2(1236).intl;
-      name = intl.string(tmp2(1236).t.PoWNfe);
+      const intl = tmp2(1233).intl;
+      name = intl.string(tmp2(1233).t.PoWNfe);
     }
     let formatToPlainStringResult = name;
     if (null != guildId) {
       formatToPlainStringResult = name;
       if (null == userProfileFrame) {
-        const intl2 = tmp2(1236).intl;
+        const intl2 = tmp2(1233).intl;
         obj = { label: null };
         obj[0] = name;
-        formatToPlainStringResult = intl2.formatToPlainString(tmp2(1236).t.ep5D4i, obj);
+        formatToPlainStringResult = intl2.formatToPlainString(tmp2(1233).t.ep5D4i, obj);
       }
     }
     if (fetchCollectiblesProduct.isFetching) {
       obj1 = { label: null, buttonText: null, onPress: null, leading: null, loading: true, disabled: true, hideArrow: true };
-      const intl4 = tmp2(1236).intl;
-      obj1[0] = intl4.string(tmp2(1236).t.GWrZOd);
-      const intl5 = tmp2(1236).intl;
-      obj1[1] = intl5.string(tmp2(1236).t.MKDeyL);
+      const intl4 = tmp2(1233).intl;
+      obj1[0] = intl4.string(tmp2(1233).t.GWrZOd);
+      const intl5 = tmp2(1233).intl;
+      obj1[1] = intl5.string(tmp2(1233).t.MKDeyL);
       obj1[2] = NOOP;
-      obj1[3] = tmp19(tmp2(6048).ActivityIndicator, { animating: true, size: "large" });
+      obj1[3] = tmp19(tmp2(6056).ActivityIndicator, { animating: true, size: "large" });
       obj2 = obj1;
     } else {
       obj2 = { label: null, labelTrailing: null, buttonText: null, accessibilityValue: null, onPress: null, leading: null };
-      const intl3 = tmp2(1236).intl;
-      obj2[0] = intl3.string(tmp2(1236).t.GWrZOd);
+      const intl3 = tmp2(1233).intl;
+      obj2[0] = intl3.string(tmp2(1233).t.GWrZOd);
       const obj3 = { showNewBadge: null };
-      obj3[0] = tmp5[0] === tmp2(1373).DismissibleContent.PROFILE_FRAME_USER_PROFILE_NEW_BADGE;
-      obj2[1] = tmp19(tmp2(14272).UserProfileEditFormLabelBadges, obj3);
+      obj3[0] = tmp5[0] === tmp2(1372).DismissibleContent.PROFILE_FRAME_USER_PROFILE_NEW_BADGE;
+      obj2[1] = tmp19(tmp2(14495).UserProfileEditFormLabelBadges, obj3);
       obj2[2] = formatToPlainStringResult;
       const obj4 = { text: null };
       obj4[0] = formatToPlainStringResult;
@@ -121,21 +121,21 @@ export default function UserProfileFrameEditButton(arg0) {
         obj5[0] = tmp.previewContainer;
         const obj6 = { profileFrame: null, previewWidth: null, previewHeight: null, profileBackgroundColor: null };
         obj6[0] = first1;
-        obj6[1] = COLLECTIBLES_PREVIEW_SIZE - 2 * guildId(712).space.PX_8;
+        obj6[1] = COLLECTIBLES_PREVIEW_SIZE - 2 * guildId(709).space.PX_8;
         obj6[2] = COLLECTIBLES_PREVIEW_SIZE - 2 * PX_4;
-        obj6[3] = guildId(712).colors.BACKGROUND_SURFACE_HIGH;
-        obj5[1] = tmp19(guildId(10749), obj6);
+        obj6[3] = guildId(709).colors.BACKGROUND_SURFACE_HIGH;
+        obj5[1] = tmp19(guildId(10969), obj6);
         let tmp19Result = tmp19(View, obj5);
-        const tmp24 = guildId(10749);
+        const tmp24 = guildId(10969);
       } else {
         const obj7 = { source: null, style: null };
-        obj7[0] = guildId(8092);
+        obj7[0] = guildId(8100);
         obj7[1] = tmp.noneIcon;
-        tmp19Result = tmp19(tmp2(1297).Icon, obj7);
+        tmp19Result = tmp19(tmp2(1296).Icon, obj7);
       }
       obj2[5] = tmp19Result;
     }
-    return jsx(tmp2(14272).UserProfileEditFormButton, obj2);
+    return jsx(tmp2(14495).UserProfileEditFormButton, obj2);
   } else {
     return null;
   }

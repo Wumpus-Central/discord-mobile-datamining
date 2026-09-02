@@ -1,8 +1,8 @@
-// === Module 10779: initialize ===
+// === Module 10999: initialize ===
 
-// Module 10779 (initialize)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 10999 (initialize)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 import closure_0 from "_slicedToArray" /* 32 */;
 
 let closure_1 = { sentGifts: {} };

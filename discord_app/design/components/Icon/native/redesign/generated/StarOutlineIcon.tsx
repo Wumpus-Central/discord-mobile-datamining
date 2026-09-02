@@ -1,10 +1,10 @@
-// === Module 9183: StarOutlineIcon ===
+// === Module 9197: StarOutlineIcon ===
 
-// Module 9183 (StarOutlineIcon)
+// Module 9197 (StarOutlineIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 9184 */;
+import registerAsset from "registerAsset" /* 9198 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

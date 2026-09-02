@@ -1,27 +1,27 @@
-// === Module 17076: nativeEventEmitter ===
+// === Module 17312: nativeEventEmitter ===
 
-// Module 17076 (nativeEventEmitter)
+// Module 17312 (nativeEventEmitter)
 import timestampDefault from "timestamp" /* 3 */;
-import isMetaQuest from "isMetaQuest" /* 1624 */;
-import initializeDefault from "initialize" /* 5486 */;
-import enforcingDefault from "enforcing" /* 9454 */;
-import trackDeviceChangedDefault from "trackDeviceChanged" /* 9781 */;
-import createSoundForPack from "createSoundForPack" /* 9993 */;
-import enforcingDefault2 from "enforcing" /* 17077 */;
+import isMetaQuest from "isMetaQuest" /* 1623 */;
+import initializeDefault from "initialize" /* 5494 */;
+import enforcingDefault from "enforcing" /* 9467 */;
+import trackDeviceChangedDefault from "trackDeviceChanged" /* 9803 */;
+import createSoundForPack from "createSoundForPack" /* 10015 */;
+import enforcingDefault2 from "enforcing" /* 17313 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "Soundpacks" /* 9994 */;
+import closure_5 from "Soundpacks" /* 10016 */;
 import closure_6 from "reset" /* 4500 */;
-import closure_7 from "fetchFingerprint" /* 1218 */;
-import closure_8 from "callConnect" /* 5222 */;
-import closure_9 from "ensureGuildLoaded" /* 1387 */;
+import closure_7 from "fetchFingerprint" /* 1215 */;
+import closure_8 from "callConnect" /* 5230 */;
+import closure_9 from "ensureGuildLoaded" /* 1386 */;
 import closure_10 from "_detectH265HardwareDecode" /* 4529 */;
-import closure_11 from "DesktopNotificationTypes" /* 10164 */;
+import closure_11 from "DesktopNotificationTypes" /* 10186 */;
 import closure_12 from "createRTCConnection" /* 4554 */;
 import closure_13 from "markAllUserIdListsStale" /* 4130 */;
 import closure_14 from "initialize" /* 4323 */;
-import closure_15 from "mergeGuildAvatar" /* 1922 */;
-import { ApplicationStreamStates } from "ME" /* 676 */;
+import closure_15 from "mergeGuildAvatar" /* 1921 */;
+import { ApplicationStreamStates } from "ME" /* 673 */;
 import { MediaEngineContextTypes } from "DesktopSources" /* 4542 */;
 
 require = arg1;
@@ -374,9 +374,9 @@ prototype["reportIncomingCall"] = function reportIncomingCall(channelId, channel
       obj[0] = guildId;
       tmp19 = obj;
     }
-    const obj4 = self(17077);
-    const reportIncomingCallResult = self(17077).reportIncomingCall(channelId, channelName, tmp19);
-    self(17077).reportIncomingCall(channelId, channelName, tmp19).then((arg0) => {
+    const obj4 = self(17313);
+    const reportIncomingCallResult = self(17313).reportIncomingCall(channelId, channelName, tmp19);
+    self(17313).reportIncomingCall(channelId, channelName, tmp19).then((arg0) => {
       if (!arg0) {
         closure_1_25.warn("Failed to report incoming call: resolved false");
         self.clearCall(closure_0);
@@ -385,7 +385,7 @@ prototype["reportIncomingCall"] = function reportIncomingCall(channelId, channel
       closure_1_25.warn("Failed to report incoming call:", arg0);
       self.clearCall(closure_0);
     });
-    const nextPromise = self(17077).reportIncomingCall(channelId, channelName, tmp19).then((arg0) => {
+    const nextPromise = self(17313).reportIncomingCall(channelId, channelName, tmp19).then((arg0) => {
       if (!arg0) {
         closure_1_25.warn("Failed to report incoming call: resolved false");
         self.clearCall(closure_0);
@@ -399,7 +399,7 @@ prototype["cancelIncomingCall"] = function cancelIncomingCall(channelId) {
   const self = this;
   closure_0 = channelId;
   obj.info("Cancelling incoming call:", channelId);
-  obj = self(17077);
+  obj = self(17313);
   const cancelIncomingCallResult = obj.cancelIncomingCall(channelId);
   return obj.cancelIncomingCall(channelId).then(() => {
     self.clearCall(closure_0);
@@ -418,8 +418,8 @@ prototype["reconcileTelecomState"] = function reconcileTelecomState() {
   self = this;
   let isEnabledResult = this.isEnabled();
   if (isEnabledResult) {
-    isEnabledResult = self(1624).isMetaQuest();
-    obj = self(1624);
+    isEnabledResult = self(1623).isMetaQuest();
+    obj = self(1623);
   }
   if (isEnabledResult) {
     if (null == self.reconcilePromise) {
@@ -887,7 +887,7 @@ prototype["endCall"] = function endCall(currentCall) {
   const self = this;
   closure_0 = currentCall;
   obj.info("Ending call:", currentCall.channelId);
-  obj = self(17077);
+  obj = self(17313);
   const endCallResult = obj.endCall(currentCall.channelId);
   return obj.endCall(currentCall.channelId).then((arg0) => {
     self.clearCall(currentCall.channelId);
@@ -1043,7 +1043,7 @@ prototype["handleScreenShareStoreChange"] = function handleScreenShareStoreChang
           const result = self.clearPendingScreenShareOffSync();
           if (tmp3) {
             obj.info("Syncing Discord -> Call Bar screen share state: true");
-            obj = self(17077);
+            obj = self(17313);
             obj.setScreenShareState(self.currentCall.channelId, true, true);
           } else {
             let channelId = self.currentCall.channelId;

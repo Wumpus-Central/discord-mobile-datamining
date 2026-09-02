@@ -1,10 +1,10 @@
-// === Module 10076: handleAutomaticGainControlChange ===
+// === Module 10098: handleAutomaticGainControlChange ===
 
-// Module 10076 (handleAutomaticGainControlChange)
-import initialize from "initialize" /* 589 */;
-import trackDeviceChangedDefault from "trackDeviceChanged" /* 9781 */;
+// Module 10098 (handleAutomaticGainControlChange)
+import initialize from "initialize" /* 586 */;
+import trackDeviceChangedDefault from "trackDeviceChanged" /* 9803 */;
 import closure_3 from "_detectH265HardwareDecode" /* 4529 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 
 require = arg1;
 ({ AnalyticsPages: c4, AnalyticsSections: c5 } = ME);

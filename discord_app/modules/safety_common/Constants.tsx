@@ -1,6 +1,6 @@
-// === Module 8670: SafetyToastType ===
+// === Module 8685: SafetyToastType ===
 
-// Module 8670 (SafetyToastType)
+// Module 8685 (SafetyToastType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/safety_common/Constants.tsx");

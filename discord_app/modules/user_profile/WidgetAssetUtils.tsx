@@ -1,9 +1,9 @@
-// === Module 8788: getWidgetAssetURL ===
+// === Module 8803: getWidgetAssetURL ===
 
-// Module 8788 (getWidgetAssetURL)
+// Module 8803 (getWidgetAssetURL)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getAvatarURL from "getAvatarURL" /* 1431 */;
+import ME from "ME" /* 673 */;
+import getAvatarURL from "getAvatarURL" /* 1430 */;
 
 const DEFAULT_CDN_HOST = ME.DEFAULT_CDN_HOST;
 const result = set.fileFinishedImporting("modules/user_profile/WidgetAssetUtils.tsx");

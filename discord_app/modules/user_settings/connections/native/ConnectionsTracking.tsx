@@ -1,9 +1,9 @@
-// === Module 14566: trackEmptyStateCardClicked ===
+// === Module 14789: trackEmptyStateCardClicked ===
 
-// Module 14566 (trackEmptyStateCardClicked)
+// Module 14789 (trackEmptyStateCardClicked)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import ME from "ME" /* 673 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
 const result = set.fileFinishedImporting("modules/user_settings/connections/native/ConnectionsTracking.tsx");

@@ -1,17 +1,17 @@
-// === Module 7765: UserSettingsConfirmPasswordWrapped ===
+// === Module 7774: UserSettingsConfirmPasswordWrapped ===
 
-// Module 7765 (UserSettingsConfirmPasswordWrapped)
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7159 */;
-import _modDef7704 from "module_7704" /* 7704 */;
-import handleOpenEmailVerificationDefault from "handleOpenEmailVerification" /* 7766 */;
+// Module 7774 (UserSettingsConfirmPasswordWrapped)
+import initialize from "initialize" /* 586 */;
+import ThemesDefault from "Themes" /* 709 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7168 */;
+import _modDef7713 from "module_7713" /* 7713 */;
+import handleOpenEmailVerificationDefault from "handleOpenEmailVerification" /* 7775 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import { UserSettingsSections } from "ME" /* 676 */;
+import closure_8 from "mergeGuildAvatar" /* 1921 */;
+import { UserSettingsSections } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -205,18 +205,18 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     obj[0] = tmp.container;
     obj1 = { style: null, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     obj1[0] = tmp.title;
-    let intl = tmp3(1236).intl;
-    obj1[4] = intl.string(tmp3(1236).t["x+d9t3"]);
+    let intl = tmp3(1233).intl;
+    obj1[4] = intl.string(tmp3(1233).t["x+d9t3"]);
     const items3 = [callback(tmp3(4474).Text, obj1), , , , ];
     obj2 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
     obj2[0] = tmp.prompt;
-    const intl2 = tmp3(1236).intl;
-    obj2[3] = intl2.string(tmp3(1236).t.vaZmAx);
+    const intl2 = tmp3(1233).intl;
+    obj2[3] = intl2.string(tmp3(1233).t.vaZmAx);
     items3[1] = callback(tmp3(4474).Text, obj2);
     let obj3 = { style: null, textStyle: null, label: null, textContentType: "password", keyboardType: "default", secureTextEntry: true, value: null, onChangeText: null, onSubmitEditing: null, error: null, returnKeyType: "done", autoCapitalize: "none", autoFocus: true };
     ({ input: obj7[0], redesignInput: obj7[1] } = tmp);
-    const intl3 = tmp3(1236).intl;
-    obj3[2] = intl3.string(tmp3(1236).t["CIGa+7"]);
+    const intl3 = tmp3(1233).intl;
+    obj3[2] = intl3.string(tmp3(1233).t["CIGa+7"]);
     obj3[6] = first;
     obj3[7] = tmp8[1];
     obj3[8] = handleSubmit;
@@ -225,7 +225,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
       fieldMessage = obj1.getFieldMessage("password");
     }
     obj3[9] = fieldMessage;
-    items3[2] = callback(_modDef7704, obj3);
+    items3[2] = callback(_modDef7713, obj3);
     let tmp19Result = null;
     if (null != obj1) {
       tmp19Result = null;
@@ -233,15 +233,15 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
         const obj4 = { style: null, children: null };
         obj4[0] = tmp.hint;
         obj4[1] = obj1.message;
-        tmp19Result = tmp19(tmp20(7714), obj4);
+        tmp19Result = tmp19(tmp20(7723), obj4);
       }
     }
     items3[3] = tmp19Result;
     const obj5 = { style: null, children: null };
     obj5[0] = tmp.button;
     const obj6 = { variant: "primary", size: "lg", text: null, onPress: null, loading: null };
-    const intl4 = tmp3(1236).intl;
-    obj6[2] = intl4.string(tmp3(1236).t.i4jeWR);
+    const intl4 = tmp3(1233).intl;
+    obj6[2] = intl4.string(tmp3(1233).t.i4jeWR);
     obj6[3] = handleSubmit;
     obj6[4] = tmp7;
     obj5[1] = callback(tmp3(4928).Button, obj6);
@@ -252,7 +252,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     tmp13Result = tmp13(closure_7, obj);
     const tmp14 = closure_7;
     tmp20 = importDefault;
-    const tmp21 = _modDef7704;
+    const tmp21 = _modDef7713;
   }
   return tmp13Result;
 });

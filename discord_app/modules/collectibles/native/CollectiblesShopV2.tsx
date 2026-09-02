@@ -1,17 +1,17 @@
-// === Module 15407: CollectiblesShopInternal ===
+// === Module 15635: CollectiblesShopInternal ===
 
-// Module 15407 (CollectiblesShopInternal)
-import _modDef1208 from "module_1208" /* 1208 */;
-import notSupportedDefault from "notSupported" /* 8221 */;
+// Module 15635 (CollectiblesShopInternal)
+import _modDef1205 from "module_1205" /* 1205 */;
+import notSupportedDefault from "notSupported" /* 8230 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "getUserAgnosticState" /* 4477 */;
-import closure_8 from "handleThemeChange" /* 1302 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import closure_10 from "updateCategoriesAndProducts" /* 7287 */;
-import items from "items" /* 678 */;
-import ME from "ME" /* 676 */;
+import closure_8 from "handleThemeChange" /* 1301 */;
+import closure_9 from "mergeGuildAvatar" /* 1921 */;
+import closure_10 from "updateCategoriesAndProducts" /* 7296 */;
+import items from "items" /* 675 */;
+import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -71,7 +71,7 @@ class CollectiblesShopV2 {
       tmp9 = !nativePaymentsConnected;
     }
     if (tmp9) {
-      tmpResult = require("module_1208");
+      tmpResult = require("module_1205");
       tmp5Result1 = require("set");
       str = "collectibles mobile shop failed to connect to native payments isIOS: ";
       text = `collectibles mobile shop failed to connect to native payments isIOS: ${obj7.isIOS()}`;

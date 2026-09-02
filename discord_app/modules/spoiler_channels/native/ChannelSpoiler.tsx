@@ -1,16 +1,16 @@
-// === Module 12205: ChannelSpoiler ===
+// === Module 12429: ChannelSpoiler ===
 
-// Module 12205 (ChannelSpoiler)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 12429 (ChannelSpoiler)
+import ThemesDefault from "Themes" /* 709 */;
 import computeChannelNameDefault from "computeChannelName" /* 4674 */;
-import GatedContentDefault from "GatedContent" /* 12204 */;
+import GatedContentDefault from "GatedContent" /* 12428 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "getParticipants" /* 4494 */;
-import closure_7 from "ensureGuildLoaded" /* 1387 */;
-import closure_8 from "createGuildRecordFromRust" /* 1909 */;
-import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11838 */;
+import closure_7 from "ensureGuildLoaded" /* 1386 */;
+import closure_8 from "createGuildRecordFromRust" /* 1908 */;
+import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 12061 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -25,10 +25,10 @@ const result = require("set").fileFinishedImporting("modules/spoiler_channels/na
 
 export default function ChannelSpoiler(channelId) {
   const _require = channelId;
-  let obj = _require(589);
+  let obj = _require(586);
   const items = [closure_8];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getGuild(channelId.guildId));
-  obj1 = _require(589);
+  obj1 = _require(586);
   const items1 = [closure_7];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_7.getChannel(channelId.channelId));
   const tmp4 = callback3();
@@ -40,7 +40,7 @@ export default function ChannelSpoiler(channelId) {
     isVocalResult = stateFromStores1.isVocal();
   }
   dependencyMap = isVocalResult;
-  setControlsMode = obj3.useContext(tmp6(11839)).setControlsMode;
+  setControlsMode = obj3.useContext(tmp6(12062)).setControlsMode;
   const items2 = [, , , ];
   ({ guildId: arr3[0], channelId: arr3[1] } = channelId);
   items2[2] = setControlsMode;
@@ -87,8 +87,8 @@ export default function ChannelSpoiler(channelId) {
     obj[1] = items4;
     let stringResult = callback2(View, obj);
   } else {
-    const intl = tmp(1236).intl;
-    stringResult = intl.string(tmp(1236).t["q38/ae"]);
+    const intl = tmp(1233).intl;
+    stringResult = intl.string(tmp(1233).t["q38/ae"]);
   }
   let topic;
   if (stateFromStores1 != null) {
@@ -123,10 +123,10 @@ export default function ChannelSpoiler(channelId) {
         obj7[0] = callback2;
         const obj8 = { variant: "text-sm/medium", color: "text-brand", style: null, children: null };
         obj8[2] = { textDecorationLine: "underline" };
-        const intl2 = tmp(1236).intl;
-        obj8[3] = intl2.string(tmp(1236).t["/QvRak"]);
+        const intl2 = tmp(1233).intl;
+        obj8[3] = intl2.string(tmp(1233).t["/QvRak"]);
         obj7[2] = tmp24(tmp(4474).Text, obj8);
-        tmp24Result = tmp24(tmp(5068).PressableHighlight, obj7);
+        tmp24Result = tmp24(tmp(5076).PressableHighlight, obj7);
       }
       items5[2] = tmp24Result;
       const obj9 = { style: null };
@@ -142,19 +142,19 @@ export default function ChannelSpoiler(channelId) {
   const obj10 = { modalType: null, onAgree: null, onDisagree: null, title: null, subtitle: null, description: null, agreement: null, disagreement: null, guildId: null, channelId: null };
   const tmp20 = callback;
   tmp7 = computeChannelNameDefault(stateFromStores1);
-  obj10[0] = _require(8684).NsfwSpaceWarningModalType.SPOILER_CHANNEL;
+  obj10[0] = _require(8699).NsfwSpaceWarningModalType.SPOILER_CHANNEL;
   obj10[1] = function onAgree() {
     callback(isVocalResult[14]).spoilerAgree(channelId.channelId);
   };
   obj10[2] = callback;
   obj10[3] = stringResult;
   obj10[4] = tmp23Result;
-  const intl3 = tmp(1236).intl;
-  obj10[5] = intl3.string(_require(1236).t["08bm2Z"]);
-  const intl4 = tmp(1236).intl;
-  obj10[6] = intl4.string(_require(1236).t.KmRwcW);
-  const intl5 = tmp(1236).intl;
-  obj10[7] = intl5.string(_require(1236).t["/g10LC"]);
+  const intl3 = tmp(1233).intl;
+  obj10[5] = intl3.string(_require(1233).t["08bm2Z"]);
+  const intl4 = tmp(1233).intl;
+  obj10[6] = intl4.string(_require(1233).t.KmRwcW);
+  const intl5 = tmp(1233).intl;
+  obj10[7] = intl5.string(_require(1233).t["/g10LC"]);
   let id;
   if (stateFromStores != null) {
     id = stateFromStores.id;

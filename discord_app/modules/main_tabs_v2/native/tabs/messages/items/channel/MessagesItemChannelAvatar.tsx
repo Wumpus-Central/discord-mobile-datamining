@@ -1,14 +1,14 @@
-// === Module 15625: ? ===
+// === Module 15856: ? ===
 
-// Module 15625
-import ThemesDefault from "Themes" /* 712 */;
-import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 10648 */;
+// Module 15856
+import ThemesDefault from "Themes" /* 709 */;
+import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 10869 */;
 import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_4 from "fetchFingerprint" /* 1215 */;
 import closure_5 from "sortActivity" /* 4569 */;
-import closure_6 from "handleTypingStart" /* 11537 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { MUTED_OPACITY_CONTENT } from "hairlineWidth" /* 10201 */;
+import closure_6 from "handleTypingStart" /* 11760 */;
+import closure_7 from "mergeGuildAvatar" /* 1921 */;
+import { MUTED_OPACITY_CONTENT } from "hairlineWidth" /* 10223 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 import importAllResult from "noop" /* 19 */;
@@ -39,9 +39,9 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
     muted = !channelSelected;
   }
   const tmpResult = closure_10(muted);
-  const REFRESH_MEDIUM_32 = channel(1297).AvatarSizes.REFRESH_MEDIUM_32;
+  const REFRESH_MEDIUM_32 = channel(1296).AvatarSizes.REFRESH_MEDIUM_32;
   dependencyMap = id.getId();
-  let obj = channel(589);
+  let obj = channel(586);
   const items = [closure_6];
   stateFromStores = obj.useStateFromStores(items, () => {
     const typingUsers = closure_1_6.getTypingUsers(channel.id);
@@ -58,7 +58,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
     return false;
   });
   const items1 = [stateFromStores];
-  const stateFromStores1 = channel(589).useStateFromStores(items1, () => {
+  const stateFromStores1 = channel(586).useStateFromStores(items1, () => {
     const useReducedMotion = stateFromStores.useReducedMotion;
     let tmp = !useReducedMotion;
     if (!useReducedMotion) {
@@ -70,29 +70,29 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
     }
     return tmp;
   });
-  const obj2 = channel(589);
+  const obj2 = channel(586);
   let tmp = closure_10;
   let tmp3 = channel;
   const items2 = [closure_7];
-  const stateFromStores2 = channel(589).useStateFromStores(items2, () => {
+  const stateFromStores2 = channel(586).useStateFromStores(items2, () => {
     let recipientId;
     if (true === channel.isDM()) {
       recipientId = channel.getRecipientId();
     }
     return closure_1_7.getUser(recipientId);
   });
-  const obj3 = channel(589);
+  const obj3 = channel(586);
   const items3 = [closure_5];
-  const stateFromStores3 = channel(589).useStateFromStores(items3, () => {
+  const stateFromStores3 = channel(586).useStateFromStores(items3, () => {
     let isMobileOnlineResult = channel.isDM();
     if (isMobileOnlineResult) {
       isMobileOnlineResult = closure_1_5.isMobileOnline(channel.getRecipientId());
     }
     return isMobileOnlineResult;
   });
-  const obj5 = channel(589);
+  const obj5 = channel(586);
   const items4 = [closure_5];
-  const stateFromStores4 = channel(589).useStateFromStores(items4, () => {
+  const stateFromStores4 = channel(586).useStateFromStores(items4, () => {
     let isVROnlineResult = channel.isDM();
     if (isVROnlineResult) {
       isVROnlineResult = closure_1_5.isVROnline(channel.getRecipientId());
@@ -110,7 +110,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
   } else {
     tmp11Result = null;
     if (null != stateFromStores2) {
-      obj = { user: null, avatarDecoration: null, guildId: "e", isMobileOnline: true, isVROnline: 10, status: true, streaming: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZlL3dlYi9tb2RhbA==", style: null, size: "887e8ac454565dd48d794f382c8d2d9c", animate: "ja.messages.887e8ac454565dd48d794f382c8d2d9c.compiled.messages", typing: "jsona", autoStatusCutout: 200 };
+      obj = { user: null, avatarDecoration: null, guildId: "e", isMobileOnline: true, isVROnline: false, status: true, streaming: true, style: "any", size: null, animate: true, typing: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZl", autoStatusCutout: null };
       obj[0] = stateFromStores2;
       obj[1] = stateFromStores2.avatarDecoration;
       obj[3] = stateFromStores3;
@@ -125,7 +125,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
       obj[8] = REFRESH_MEDIUM_32;
       obj[9] = stateFromStores1;
       obj[10] = stateFromStores;
-      tmp11Result = jsx(tmp3(1297).Avatar, { user: null, avatarDecoration: null, guildId: "e", isMobileOnline: true, isVROnline: 10, status: true, streaming: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZlL3dlYi9tb2RhbA==", style: null, size: "887e8ac454565dd48d794f382c8d2d9c", animate: "ja.messages.887e8ac454565dd48d794f382c8d2d9c.compiled.messages", typing: "jsona", autoStatusCutout: 200 });
+      tmp11Result = jsx(tmp3(1296).Avatar, { user: null, avatarDecoration: null, guildId: "e", isMobileOnline: true, isVROnline: false, status: true, streaming: true, style: "any", size: null, animate: true, typing: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZl", autoStatusCutout: null });
       const tmp11 = jsx;
     }
   }

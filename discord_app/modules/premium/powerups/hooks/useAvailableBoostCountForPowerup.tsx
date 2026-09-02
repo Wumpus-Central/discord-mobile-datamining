@@ -1,8 +1,8 @@
-// === Module 12101: useAvailableBoostCountForPowerup ===
+// === Module 12325: useAvailableBoostCountForPowerup ===
 
-// Module 12101 (useAvailableBoostCountForPowerup)
+// Module 12325 (useAvailableBoostCountForPowerup)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "createGuildRecordFromRust" /* 1909 */;
+import closure_4 from "createGuildRecordFromRust" /* 1908 */;
 import closure_5 from "calculateAppliedBoosts" /* 4364 */;
 import BoostedGuildTiers from "BoostedGuildTiers" /* 4365 */;
 

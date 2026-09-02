@@ -1,10 +1,10 @@
-// === Module 8646: SERVER_INVITE ===
+// === Module 8661: SERVER_INVITE ===
 
-// Module 8646 (SERVER_INVITE)
+// Module 8661 (SERVER_INVITE)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1486 */;
+import ME from "ME" /* 673 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1485 */;
 import ME2 from "ME" /* 4675 */;
 
 const AnalyticEvents = ME.AnalyticEvents;

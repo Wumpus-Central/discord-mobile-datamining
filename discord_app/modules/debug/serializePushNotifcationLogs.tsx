@@ -1,8 +1,8 @@
-// === Module 10275: serializePushNotificationLogs ===
+// === Module 10297: serializePushNotificationLogs ===
 
-// Module 10275 (serializePushNotificationLogs)
+// Module 10297 (serializePushNotificationLogs)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 
 ({ DEVICE_TOKEN: obj1, DEVICE_VOIP_TOKEN: c3 } = ME);
 const result = set.fileFinishedImporting("modules/debug/serializePushNotifcationLogs.tsx");
@@ -12,9 +12,9 @@ export default function serializePushNotificationLogs(arr) {
   if (0 === arr.length) {
     return "No logs";
   } else {
-    const Storage = _require(595).Storage;
+    const Storage = _require(592).Storage;
     let value = Storage.get(closure_2);
-    const Storage2 = _require(595).Storage;
+    const Storage2 = _require(592).Storage;
     value = Storage2.get(closure_3);
     let str2 = "";
     if (null != value) {

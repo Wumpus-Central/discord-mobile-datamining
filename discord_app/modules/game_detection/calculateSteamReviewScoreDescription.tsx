@@ -1,6 +1,6 @@
-// === Module 8849: calculateSteamReviewScoreDescription ===
+// === Module 8864: calculateSteamReviewScoreDescription ===
 
-// Module 8849 (calculateSteamReviewScoreDescription)
+// Module 8864 (calculateSteamReviewScoreDescription)
 import set from "set" /* 2 */;
 import GameTheme from "GameTheme" /* 4516 */;
 

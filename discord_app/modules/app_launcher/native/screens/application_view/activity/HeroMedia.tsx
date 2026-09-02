@@ -1,13 +1,13 @@
-// === Module 11656: HeroMedia ===
+// === Module 11879: HeroMedia ===
 
-// Module 11656 (HeroMedia)
+// Module 11879 (HeroMedia)
 import noopAll from "noop" /* 19 */;
-import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 9050 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9621 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11630 */;
+import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 9064 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9634 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11853 */;
 import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import { DEFAULT_CONTENT_PADDING } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1498 */;
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5623 */;
+import { DEFAULT_CONTENT_PADDING } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1497 */;
+import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5631 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -32,10 +32,10 @@ export default function HeroMedia(width) {
   const diff = bound - 2 * DEFAULT_CONTENT_PADDING;
   const rounded = Math.floor(9 * diff / 16);
   const tmp13 = useEmbeddedActivityBackgroundDefault({ applicationId, size: diff, names: ["embedded_cover"] });
-  let tmp2Result = tmp2(589);
+  let tmp2Result = tmp2(586);
   const items = [closure_3];
   const stateFromStores = tmp2Result.useStateFromStores(items, () => useReducedMotion.useReducedMotion, []);
-  tmp2Result = tmp2(5959);
+  tmp2Result = tmp2(5967);
   const getOrFetchApplication = tmp2Result.useGetOrFetchApplication(applicationId);
   let prop;
   if (getOrFetchApplication != null) {
@@ -65,7 +65,7 @@ export default function HeroMedia(width) {
         obj[3] = rounded;
         obj[4] = diff;
         obj[5] = tmp13.url;
-        const intl = tmp2(1236).intl;
+        const intl = tmp2(1233).intl;
         let str3;
         if (getOrFetchApplication != null) {
           str3 = getOrFetchApplication.name;
@@ -75,7 +75,7 @@ export default function HeroMedia(width) {
         }
         obj1 = { applicationName: null };
         obj1[0] = str3;
-        obj[7] = intl.formatToPlainString(tmp2(1236).t["Af+EQD"], obj1);
+        obj[7] = intl.formatToPlainString(tmp2(1233).t["Af+EQD"], obj1);
         const items1 = [tmp.mediaBackground, , ];
         const obj2 = { maxHeight: null };
         obj2[0] = rounded;

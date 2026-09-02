@@ -1,10 +1,10 @@
-// === Module 10021: useToggleRequestToSpeak ===
+// === Module 10043: useToggleRequestToSpeak ===
 
-// Module 10021 (useToggleRequestToSpeak)
+// Module 10043 (useToggleRequestToSpeak)
 import useAudienceRequestToSpeakStateDefault from "useAudienceRequestToSpeakState" /* 4668 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "fetchFingerprint" /* 1215 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/stage_channels/useToggleRequestToSpeak.tsx");
@@ -12,7 +12,7 @@ let result = require("set").fileFinishedImporting("modules/stage_channels/useTog
 export default function useToggleRequestToSpeak(id) {
   const _require = id;
   const items = [closure_5];
-  const stateFromStores = _require(589).useStateFromStores(items, () => id2.getId());
+  const stateFromStores = _require(586).useStateFromStores(items, () => id2.getId());
   const tmp4 = useAudienceRequestToSpeakStateDefault(stateFromStores, id.id);
   importDefault = tmp4;
   const tmp5 = tmp4 === _require(4668).RequestToSpeakStates.REQUESTED_TO_SPEAK || tmp4 === _require(4668).RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;

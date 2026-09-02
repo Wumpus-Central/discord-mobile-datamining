@@ -2,15 +2,15 @@
 
 // Module 4661 (handleThumbnailUpload)
 import timestampDefault from "timestamp" /* 3 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 import inject from "inject" /* 4531 */;
 import initializeDefault from "initialize" /* 4662 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Linking } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "reset" /* 4500 */;
-import closure_6 from "ensureGuildLoaded" /* 1387 */;
-import importDefaultResult from "handleConnectionOpen" /* 1981 */;
-import ME from "ME" /* 676 */;
+import closure_6 from "ensureGuildLoaded" /* 1386 */;
+import importDefaultResult from "handleConnectionOpen" /* 1980 */;
+import ME from "ME" /* 673 */;
 import { getAppIntentScheme } from "items3" /* 4506 */;
 
 require = arg1;
@@ -210,7 +210,7 @@ prototype["_initialize"] = function _initialize() {
     logger.log("Broadcast Finished");
     closure_14.stop();
     closure_15.stop();
-    const result = callback(10042).handleCloseScreenshare();
+    const result = callback(10064).handleCloseScreenshare();
   });
   const result2 = voiceEngine.setBroadcastAnnotatedCallback((arg0) => {
     logger.log("Broadcast Annotated:", arg0);
@@ -224,10 +224,10 @@ prototype["_initialize"] = function _initialize() {
   });
   const result3 = voiceEngine.setBroadcastBlockedCallback(() => {
     logger.log("Broadcast Blocked");
-    let obj = callback2(9657);
+    let obj = callback2(9670);
     obj = { alertBody: null };
-    const intl = callback(1236).intl;
-    obj[0] = intl.string(callback(1236).t.iYQlwv);
+    const intl = callback(1233).intl;
+    obj[0] = intl.string(callback(1233).t.iYQlwv);
     const result = obj.presentLocalNotification(obj);
   });
   let obj = inject;

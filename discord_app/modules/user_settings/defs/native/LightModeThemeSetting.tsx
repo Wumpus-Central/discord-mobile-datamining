@@ -1,12 +1,12 @@
-// === Module 14899: route ===
+// === Module 15128: route ===
 
-// Module 14899 (route)
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useSyncedModeThemeName from "useSyncedModeThemeName" /* 14900 */;
-import closure_2 from "handleThemeChange" /* 1302 */;
-import { SystemTheme } from "SystemThemeState" /* 1305 */;
-import createToggle from "createToggle" /* 11068 */;
+// Module 15128 (route)
+import initialize from "initialize" /* 586 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import useSyncedModeThemeName from "useSyncedModeThemeName" /* 15129 */;
+import closure_2 from "handleThemeChange" /* 1301 */;
+import { SystemTheme } from "SystemThemeState" /* 1304 */;
+import createToggle from "createToggle" /* 11288 */;
 
 require = arg1;
 createToggle = {
@@ -27,7 +27,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.APPEARANCE_LIGHT_MODE_THEME_PICKER,
   getComponent() {
-    return require(14901) /* SettingsAppearanceLightModeThemePickerScreen */.default;
+    return require(15130) /* SettingsAppearanceLightModeThemePickerScreen */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

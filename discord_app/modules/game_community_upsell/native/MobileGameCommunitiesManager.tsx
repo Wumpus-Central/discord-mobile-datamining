@@ -1,14 +1,14 @@
-// === Module 17086: _fetchGameCommunities ===
+// === Module 17322: _fetchGameCommunities ===
 
-// Module 17086 (_fetchGameCommunities)
-import initializeDefault from "initialize" /* 5486 */;
-import DetectableAppNames from "DetectableAppNames" /* 13364 */;
-import GAME_COMMUNITY_ADD_SERVER_ENTRY_EXPERIMENT from "GAME_COMMUNITY_ADD_SERVER_ENTRY_EXPERIMENT" /* 13366 */;
-import DETECTABLE_GAME_TO_APPLICATION_ID_MAP from "DETECTABLE_GAME_TO_APPLICATION_ID_MAP" /* 15220 */;
-import fetchMobileGameCommunitiesAll from "fetchMobileGameCommunities" /* 15857 */;
-import closure_3 from "initialize" /* 13363 */;
-import closure_4 from "set" /* 15219 */;
-import { MAX_DISPLAYED_UPSELL_GUILDS as closure_5 } from "MAX_DISPLAYED_UPSELL_GUILDS" /* 15856 */;
+// Module 17322 (_fetchGameCommunities)
+import initializeDefault from "initialize" /* 5494 */;
+import DetectableAppNames from "DetectableAppNames" /* 13588 */;
+import GAME_COMMUNITY_ADD_SERVER_ENTRY_EXPERIMENT from "GAME_COMMUNITY_ADD_SERVER_ENTRY_EXPERIMENT" /* 13590 */;
+import DETECTABLE_GAME_TO_APPLICATION_ID_MAP from "DETECTABLE_GAME_TO_APPLICATION_ID_MAP" /* 15449 */;
+import fetchMobileGameCommunitiesAll from "fetchMobileGameCommunities" /* 16088 */;
+import closure_3 from "initialize" /* 13587 */;
+import closure_4 from "set" /* 15448 */;
+import { MAX_DISPLAYED_UPSELL_GUILDS as closure_5 } from "MAX_DISPLAYED_UPSELL_GUILDS" /* 16087 */;
 
 require = arg1;
 initializeDefault;

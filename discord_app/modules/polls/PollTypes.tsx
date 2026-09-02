@@ -1,6 +1,6 @@
-// === Module 11773: PollMediaUploadAttachmentStatus ===
+// === Module 11996: PollMediaUploadAttachmentStatus ===
 
-// Module 11773 (PollMediaUploadAttachmentStatus)
+// Module 11996 (PollMediaUploadAttachmentStatus)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/polls/PollTypes.tsx");

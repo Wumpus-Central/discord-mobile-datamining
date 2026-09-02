@@ -1,6 +1,6 @@
-// === Module 14380: SettingsAgeGroupResetAlert ===
+// === Module 14603: SettingsAgeGroupResetAlert ===
 
-// Module 14380 (SettingsAgeGroupResetAlert)
+// Module 14603 (SettingsAgeGroupResetAlert)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import jsxProd from "jsxProd" /* 21 */;
 
@@ -44,14 +44,14 @@ export default function SettingsAgeGroupResetAlert() {
               c1 = 2;
               c3 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(13418).resetAgeVerification();
+              obj1[0] = closure_1_0(13641).resetAgeVerification();
               return obj1;
             }
           } else if (1 === tmp7) {
             dependencyMap = 0;
             let obj2 = closure_1_0(4193);
-            const intl = closure_1_0(1236).intl;
-            obj2.presentError(intl.string(closure_1_0(1236).t.fEptJP));
+            const intl = closure_1_0(1233).intl;
+            obj2.presentError(intl.string(closure_1_0(1233).t.fEptJP));
             const _Error = Error;
             error = new Error("Reset failed");
             throw error;
@@ -91,13 +91,13 @@ export default function SettingsAgeGroupResetAlert() {
     }
     return applyArgumentsResult;
   }
-  let obj = _require(1499);
+  let obj = _require(1498);
   _require = obj.useNavigation();
   obj = { title: null, content: null, actions: null };
-  let intl = _require(1236).intl;
-  obj[0] = intl.string(_handleConfirm(2919)["bD//cU"]);
-  const intl2 = _require(1236).intl;
-  obj[1] = intl2.string(_handleConfirm(2919).FbTAmI);
+  let intl = _require(1233).intl;
+  obj[0] = intl.string(_handleConfirm(2918)["bD//cU"]);
+  const intl2 = _require(1233).intl;
+  obj[1] = intl2.string(_handleConfirm(2918).FbTAmI);
   obj = { children: null };
   obj1 = {
     variant: "destructive",
@@ -113,12 +113,12 @@ export default function SettingsAgeGroupResetAlert() {
     },
     text: null
   };
-  const intl3 = _require(1236).intl;
-  obj1[2] = intl3.string(_handleConfirm(2919).V822Mp);
+  const intl3 = _require(1233).intl;
+  obj1[2] = intl3.string(_handleConfirm(2918).V822Mp);
   const items = [callback(_require(4863).AlertActionButton, obj1, "confirm"), ];
   let obj2 = { variant: "secondary", text: null };
-  const intl4 = _require(1236).intl;
-  obj2[1] = intl4.string(_require(1236).t["ETE/oC"]);
+  const intl4 = _require(1233).intl;
+  obj2[1] = intl4.string(_require(1233).t["ETE/oC"]);
   items[1] = callback(_require(4863).AlertActionButton, obj2, "cancel");
   obj[0] = items;
   obj[2] = callback2(_require(4863).AlertActions, obj);

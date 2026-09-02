@@ -1,8 +1,8 @@
-// === Module 9542: useIsViewingActivity ===
+// === Module 9555: useIsViewingActivity ===
 
-// Module 9542 (useIsViewingActivity)
-import ChannelCallCameraPreviewDefault from "ChannelCallCameraPreview" /* 9526 */;
-import useIsActivityFocusedDefault from "useIsActivityFocused" /* 9529 */;
+// Module 9555 (useIsViewingActivity)
+import ChannelCallCameraPreviewDefault from "ChannelCallCameraPreview" /* 9539 */;
+import useIsActivityFocusedDefault from "useIsActivityFocused" /* 9542 */;
 import closure_3 from "getParticipants" /* 4494 */;
 
 const require = arg1;
@@ -15,7 +15,7 @@ export const useIsViewingActivity = function useIsViewingActivity(channelId) {
   const obj = channelId(4332);
   const items = [closure_3];
   const items1 = [channelId];
-  const stateFromStores = channelId(589).useStateFromStores(items, () => closure_1_3.getChatOpen(channelId), items1);
+  const stateFromStores = channelId(586).useStateFromStores(items, () => closure_1_3.getChatOpen(channelId), items1);
   if (tmp) {
     tmp = isModalOpen;
   }

@@ -1,8 +1,8 @@
-// === Module 14166: toggleVoiceChannelChat ===
+// === Module 14389: toggleVoiceChannelChat ===
 
-// Module 14166 (toggleVoiceChannelChat)
+// Module 14389 (toggleVoiceChannelChat)
 import _modDef4721 from "module_4721" /* 4721 */;
-import closure_2 from "ensureGuildLoaded" /* 1387 */;
+import closure_2 from "ensureGuildLoaded" /* 1386 */;
 import closure_3 from "createRTCConnection" /* 4554 */;
 import closure_4 from "getParticipants" /* 4494 */;
 

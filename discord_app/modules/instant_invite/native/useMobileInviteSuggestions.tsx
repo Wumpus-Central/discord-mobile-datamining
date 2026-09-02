@@ -1,15 +1,15 @@
-// === Module 9921: useMobileInviteSuggestions ===
+// === Module 9943: useMobileInviteSuggestions ===
 
-// Module 9921 (useMobileInviteSuggestions)
+// Module 9943 (useMobileInviteSuggestions)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "trackCommunicationDisabled" /* 1992 */;
-import closure_6 from "createGuildRecordFromRust" /* 1909 */;
-import closure_7 from "_computeRows" /* 9922 */;
+import closure_5 from "trackCommunicationDisabled" /* 1991 */;
+import closure_6 from "createGuildRecordFromRust" /* 1908 */;
+import closure_7 from "_computeRows" /* 9944 */;
 import closure_8 from "getVoiceStatesForGuild" /* 4555 */;
-import { InviteTargetTypes } from "InviteSendStates" /* 7481 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { NOOP_NULL } from "sum" /* 505 */;
+import { InviteTargetTypes } from "InviteSendStates" /* 7491 */;
+import { AnalyticEvents } from "ME" /* 673 */;
+import { NOOP_NULL } from "sum" /* 502 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/instant_invite/native/useMobileInviteSuggestions.tsx");
@@ -20,7 +20,7 @@ export default function useMobileInviteSuggestions(arg0, arg1, arg2, arg3) {
   dependencyMap = arg2;
   const callback = arg3;
   let items = [closure_7, closure_8];
-  const tmp = callback(_require(589).useStateFromStoresArray(items, () => {
+  const tmp = callback(_require(586).useStateFromStoresArray(items, () => {
     const items = [store.getInviteSuggestionRows(), ];
     let voiceStatesForChannel = null;
     if (null != closure_0) {
@@ -38,7 +38,7 @@ export default function useMobileInviteSuggestions(arg0, arg1, arg2, arg3) {
   const effect = rows.useEffect(() => {
     if (!isFetchingRows) {
       const initialCounts = store.getInitialCounts();
-      let obj = callback(698);
+      let obj = callback(695);
       obj = { location: null, num_suggestions: null, guild_id: null, num_friends: null, num_dms: null, num_group_dms: null, application_id: null };
       obj[0] = callback;
       obj[1] = rows.length;
@@ -56,7 +56,7 @@ export default function useMobileInviteSuggestions(arg0, arg1, arg2, arg3) {
       isGuildVoiceResult = set.isGuildVoice();
     }
     if (isGuildVoiceResult) {
-      let obj = lib(9937);
+      let obj = lib(9959);
       obj = { location: "useMobileInviteSuggestions", guildId: null };
       obj[1] = set.guild_id;
       isGuildVoiceResult = obj.getGuildMembersInMobileVCInvitesExperiment(obj);
@@ -80,8 +80,8 @@ export default function useMobileInviteSuggestions(arg0, arg1, arg2, arg3) {
       obj[1] = isFetchingRows.getGuild(set.guild_id);
       obj[2] = set;
       obj[3] = dependencyMap;
-      const inviteSuggestions = lib(9938).loadInviteSuggestions(obj);
-      const obj3 = lib(9938);
+      const inviteSuggestions = lib(9960).loadInviteSuggestions(obj);
+      const obj3 = lib(9960);
       inviteSuggestions.catch(closure_1_11).finally(() => {
         callback(false);
       });

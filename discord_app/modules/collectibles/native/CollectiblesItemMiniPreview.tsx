@@ -1,17 +1,17 @@
-// === Module 12543: PX_8 ===
+// === Module 12767: PX_8 ===
 
-// Module 12543 (PX_8)
-import ThemesDefault from "Themes" /* 712 */;
-import getNameplateData from "getNameplateData" /* 1947 */;
-import preloadDefault from "preload" /* 5493 */;
-import StaticEffectDefault from "StaticEffect" /* 8510 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8519 */;
-import NameplateInnerDefault from "NameplateInner" /* 8522 */;
-import filterLayerDefault from "filterLayer" /* 10749 */;
-import metadataDefault from "metadata" /* 10750 */;
+// Module 12767 (PX_8)
+import ThemesDefault from "Themes" /* 709 */;
+import getNameplateData from "getNameplateData" /* 1946 */;
+import preloadDefault from "preload" /* 5501 */;
+import StaticEffectDefault from "StaticEffect" /* 8523 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8532 */;
+import NameplateInnerDefault from "NameplateInner" /* 8535 */;
+import filterLayerDefault from "filterLayer" /* 10969 */;
+import metadataDefault from "metadata" /* 10970 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { isAvatarDecorationRecord, isNameplateRecord, isProfileEffectRecord, isProfileFrameRecord } from "fromServer" /* 7292 */;
-import { PROFILE_FRAME_ASPECT_RATIO as closure_8 } from "PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO" /* 8549 */;
+import { isAvatarDecorationRecord, isNameplateRecord, isProfileEffectRecord, isProfileFrameRecord } from "fromServer" /* 7301 */;
+import { PROFILE_FRAME_ASPECT_RATIO as closure_8 } from "PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO" /* 8562 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 import importAllResult from "noop" /* 19 */;

@@ -1,12 +1,12 @@
-// === Module 11813: FadeTransitionItem ===
+// === Module 12036: FadeTransitionItem ===
 
-// Module 11813 (FadeTransitionItem)
+// Module 12036 (FadeTransitionItem)
 import ManaContext from "ManaContext" /* 4204 */;
 import _modDef4217 from "module_4217" /* 4217 */;
-import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 11814 */;
+import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 12037 */;
 import closure_3 from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import { CHAT_INPUT_TIMING_CONFIG } from "TextAreaCta" /* 11535 */;
+import { CHAT_INPUT_TIMING_CONFIG } from "TextAreaCta" /* 11758 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

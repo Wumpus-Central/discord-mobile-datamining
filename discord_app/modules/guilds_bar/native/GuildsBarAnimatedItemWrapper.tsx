@@ -1,11 +1,11 @@
-// === Module 15885: UnreadIndicator ===
+// === Module 16116: UnreadIndicator ===
 
-// Module 15885 (UnreadIndicator)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 16116 (UnreadIndicator)
+import ThemesDefault from "Themes" /* 709 */;
 import map from "map" /* 4197 */;
 import closure_3 from "noop" /* 19 */;
 import { IOS_POINTER_STYLE } from "IOS_POINTER_STYLE" /* 4937 */;
-import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE" /* 15876 */;
+import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE" /* 16107 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -158,17 +158,17 @@ let closure_13 = createCacheKey.createStyles((arg0, arg1, width, height) => {
   let str = "transparent";
   let str2 = "transparent";
   if (!arg1) {
-    str2 = tmp(712).colors.MOBILE_GUILDBAR_ICON_BACKGROUND_DEFAULT;
+    str2 = tmp(709).colors.MOBILE_GUILDBAR_ICON_BACKGROUND_DEFAULT;
   }
   obj[6] = str2;
   obj[1] = obj;
   if (arg0) {
     if (!arg1) {
-      str = tmp(712).colors.BACKGROUND_SURFACE_HIGH;
+      str = tmp(709).colors.BACKGROUND_SURFACE_HIGH;
     }
     let BACKGROUND_BRAND = str;
   } else {
-    BACKGROUND_BRAND = tmp(712).colors.BACKGROUND_BRAND;
+    BACKGROUND_BRAND = tmp(709).colors.BACKGROUND_BRAND;
   }
   obj[2] = { backgroundColor: BACKGROUND_BRAND };
   return obj;

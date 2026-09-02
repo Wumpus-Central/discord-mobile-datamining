@@ -1,8 +1,8 @@
-// === Module 10034: getMessageLimit ===
+// === Module 10056: getMessageLimit ===
 
-// Module 10034 (getMessageLimit)
+// Module 10056 (getMessageLimit)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 
 const MAX_MESSAGES_PER_CHANNEL = ME.MAX_MESSAGES_PER_CHANNEL;
 const result = set.fileFinishedImporting("modules/messages/getAdaptiveMessageLimit.native.tsx");

@@ -1,19 +1,19 @@
-// === Module 9898: NavigationBar ===
+// === Module 9920: NavigationBar ===
 
-// Module 9898 (NavigationBar)
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 9920 (NavigationBar)
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Text from "Text" /* 4474 */;
-import registerAssetDefault from "registerAsset" /* 7812 */;
-import GuildEventCardControlsDefault from "GuildEventCardControls" /* 9897 */;
+import registerAssetDefault from "registerAsset" /* 7821 */;
+import GuildEventCardControlsDefault from "GuildEventCardControls" /* 9919 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "ensureGuildLoaded" /* 1387 */;
-import closure_8 from "createGuildRecordFromRust" /* 1909 */;
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1393 */;
-import { START_EVENT_MODAL_KEY } from "CREATE_GUILD_EVENT_MODAL_KEY" /* 9669 */;
+import closure_7 from "ensureGuildLoaded" /* 1386 */;
+import closure_8 from "createGuildRecordFromRust" /* 1908 */;
+import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1392 */;
+import { START_EVENT_MODAL_KEY } from "CREATE_GUILD_EVENT_MODAL_KEY" /* 9682 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -22,14 +22,14 @@ function NavigationBar(onClose) {
   onClose = onClose.onClose;
   let obj = { children: null };
   obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
-  const intl = onClose(1236).intl;
-  obj[1] = intl.string(onClose(1236).t.cpT0Cq);
+  const intl = onClose(1233).intl;
+  obj[1] = intl.string(onClose(1233).t.cpT0Cq);
   obj[2] = function onPress() {
     return onClose();
   };
   obj = { source: registerAssetDefault };
-  obj[3] = callback(onClose(1297).Icon, obj);
-  obj[0] = callback(onClose(5068).PressableOpacity, obj);
+  obj[3] = callback(onClose(1296).Icon, obj);
+  obj[0] = callback(onClose(5076).PressableOpacity, obj);
   return callback(View, obj);
 }
 function StartEventHeader(children) {

@@ -1,18 +1,18 @@
-// === Module 17010: items ===
+// === Module 17246: items ===
 
-// Module 17010 (items)
-import keys from "keys" /* 691 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 5486 */;
-import _startContactSyncForDiscoverability from "_startContactSyncForDiscoverability" /* 12242 */;
+// Module 17246 (items)
+import keys from "keys" /* 688 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import initializeDefault from "initialize" /* 5494 */;
+import _startContactSyncForDiscoverability from "_startContactSyncForDiscoverability" /* 12466 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleSetLocationMetadata" /* 7716 */;
-import closure_5 from "set" /* 5225 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import closure_7 from "initialize" /* 5570 */;
-import { NewUserTypes } from "NewUserTypes" /* 12243 */;
-import { PlatformTypes } from "ME" /* 676 */;
-import { HUBS_IN_ONBOARDING_COUNTRIES as closure_10 } from "HubEmailConnectionSteps" /* 12257 */;
+import closure_4 from "handleSetLocationMetadata" /* 7725 */;
+import closure_5 from "set" /* 5233 */;
+import closure_6 from "mergeGuildAvatar" /* 1921 */;
+import closure_7 from "initialize" /* 5578 */;
+import { NewUserTypes } from "NewUserTypes" /* 12467 */;
+import { PlatformTypes } from "ME" /* 673 */;
+import { HUBS_IN_ONBOARDING_COUNTRIES as closure_10 } from "HubEmailConnectionSteps" /* 12481 */;
 
 require = arg1;
 let obj = { REGISTRATION: "Registration", ADD_AVATAR: "Add Avatar", CONTACT_SYNC: "Contact Sync", GUILD_TEMPLATE: "Guild Template", STUDENT_HUB: "Student Hub", NEW_USER_INTENT: "New User Intent", ACCEPT_INVITE: "Accept Invite", DISCOVERABILITY: "Discoverability" };
@@ -174,7 +174,7 @@ let prototype = function NewUserManager() {
               transitionToStep = undefined;
               c5 = 1;
               c6 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {

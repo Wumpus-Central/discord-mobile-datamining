@@ -1,10 +1,10 @@
-// === Module 6827: NitroGradientBackgroundAbstractUI ===
+// === Module 6836: NitroGradientBackgroundAbstractUI ===
 
-// Module 6827 (NitroGradientBackgroundAbstractUI)
+// Module 6836 (NitroGradientBackgroundAbstractUI)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5493 */;
-import metadataDefault from "metadata" /* 6828 */;
+import preloadDefault from "preload" /* 5501 */;
+import metadataDefault from "metadata" /* 6837 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/NitroGradientBackgroundAbstractUI.native.tsx");

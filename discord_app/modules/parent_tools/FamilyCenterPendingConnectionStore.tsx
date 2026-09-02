@@ -1,8 +1,8 @@
 // === Module 4734: initialize ===
 
 // Module 4734 (initialize)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 let c0 = null;
 const PersistedStore = initializeDefault.PersistedStore;

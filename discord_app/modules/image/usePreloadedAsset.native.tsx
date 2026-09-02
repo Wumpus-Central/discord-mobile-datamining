@@ -1,6 +1,6 @@
-// === Module 16532: usePreloadedAsset ===
+// === Module 16767: usePreloadedAsset ===
 
-// Module 16532 (usePreloadedAsset)
+// Module 16767 (usePreloadedAsset)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
@@ -27,13 +27,13 @@ export default function usePreloadedAsset(arg0) {
   let combined;
   c5 = undefined;
   const items = [c5];
-  const stateFromStores = _require(589).useStateFromStores(items, () => _undefined.useReducedMotion);
-  let obj2 = _require(589);
-  const tmp3 = _require(500).isAndroid() && flag && !stateFromStores;
+  const stateFromStores = _require(586).useStateFromStores(items, () => _undefined.useReducedMotion);
+  let obj2 = _require(586);
+  const tmp3 = _require(1234).isAndroid() && flag && !stateFromStores;
   dependencyMap = tmp3;
   let tmp4 = !tmp3;
   if (tmp3) {
-    tmp4 = null != num(16533);
+    tmp4 = null != num(16768);
   }
   callback = tmp4;
   let str = "image";
@@ -41,7 +41,7 @@ export default function usePreloadedAsset(arg0) {
     str = "apng";
   }
   combined = "" + str + ":" + arg0;
-  const obj3 = _require(500);
+  const obj3 = _require(1234);
   const obj4 = combined;
   [tmp9, c5] = callback(combined.useState(null), 2);
   let status = "skipped";
@@ -74,9 +74,9 @@ export default function usePreloadedAsset(arg0) {
           }
         }, timeout);
         if (dependencyMap) {
-          if (null != num(16533)) {
-            let preloadResult = num(16533).preload(tmp);
-            const obj2 = num(16533);
+          if (null != num(16768)) {
+            let preloadResult = num(16768).preload(tmp);
+            const obj2 = num(16768);
           }
           preloadResult.then(() => {
             if (!c0) {
@@ -98,8 +98,8 @@ export default function usePreloadedAsset(arg0) {
             clearTimeout(closure_1);
           };
         }
-        preloadResult = num(5493).preload(tmp, timeout + 1000);
-        let obj = num(5493);
+        preloadResult = num(5501).preload(tmp, timeout + 1000);
+        let obj = num(5501);
         const tmp4 = timeout;
       }
     }

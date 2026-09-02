@@ -1,13 +1,13 @@
-// === Module 15674: HappeningNowCardEmbeddedActivity ===
+// === Module 15905: HappeningNowCardEmbeddedActivity ===
 
-// Module 15674 (HappeningNowCardEmbeddedActivity)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 15905 (HappeningNowCardEmbeddedActivity)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14890 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import closure_6 from "mergeGuildAvatar" /* 1921 */;
+import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 15119 */;
+import { AnalyticEvents } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

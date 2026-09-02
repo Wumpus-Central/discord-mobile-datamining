@@ -1,10 +1,10 @@
-// === Module 6373: BrushIllocon ===
+// === Module 6382: BrushIllocon ===
 
-// Module 6373 (BrushIllocon)
+// Module 6382 (BrushIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5493 */;
-import metadataDefault from "metadata" /* 6374 */;
+import preloadDefault from "preload" /* 5501 */;
+import metadataDefault from "metadata" /* 6383 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/BrushIllocon.native.tsx");

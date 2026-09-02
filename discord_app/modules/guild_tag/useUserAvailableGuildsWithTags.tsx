@@ -1,9 +1,9 @@
-// === Module 14295: useUserAvailableGuildsWithTags ===
+// === Module 14518: useUserAvailableGuildsWithTags ===
 
-// Module 14295 (useUserAvailableGuildsWithTags)
-import initialize from "initialize" /* 589 */;
-import closure_2 from "trackCommunicationDisabled" /* 1992 */;
-import closure_3 from "createGuildRecordFromRust" /* 1909 */;
+// Module 14518 (useUserAvailableGuildsWithTags)
+import initialize from "initialize" /* 586 */;
+import closure_2 from "trackCommunicationDisabled" /* 1991 */;
+import closure_3 from "createGuildRecordFromRust" /* 1908 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_tag/useUserAvailableGuildsWithTags.tsx");

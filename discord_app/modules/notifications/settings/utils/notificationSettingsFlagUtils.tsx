@@ -1,9 +1,9 @@
-// === Module 10233: resetGuildUnreadFlags ===
+// === Module 10255: resetGuildUnreadFlags ===
 
-// Module 10233 (resetGuildUnreadFlags)
+// Module 10255 (resetGuildUnreadFlags)
 import set from "set" /* 2 */;
-import hasFlagAll from "hasFlag" /* 1399 */;
-import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
+import hasFlagAll from "hasFlag" /* 1398 */;
+import MAX_FAVORITES from "MAX_FAVORITES" /* 682 */;
 
 ({ GuildNotificationSettingsFlags: obj1, ChannelNotificationSettingsFlags: c3 } = MAX_FAVORITES);
 const result = set.fileFinishedImporting("modules/notifications/settings/utils/notificationSettingsFlagUtils.tsx");

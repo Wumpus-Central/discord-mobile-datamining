@@ -1,28 +1,28 @@
-// === Module 17472: isQuestProgressable ===
+// === Module 17708: isQuestProgressable ===
 
-// Module 17472 (isQuestProgressable)
+// Module 17708 (isQuestProgressable)
 import _slicedToArrayDefault from "_slicedToArray" /* 32 */;
-import setDefault from "set" /* 687 */;
+import setDefault from "set" /* 684 */;
 import _openRobloxURLWithRootPlaceId from "_openRobloxURLWithRootPlaceId" /* 4654 */;
-import QuestVariants from "QuestVariants" /* 5388 */;
-import set2 from "set" /* 5394 */;
-import initializeDefault from "initialize" /* 5486 */;
-import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement" /* 7443 */;
-import isSponsoredPlayQuest from "isSponsoredPlayQuest" /* 7467 */;
-import getApplicationIdsByTaskTypes from "getApplicationIdsByTaskTypes" /* 7469 */;
-import questMatchesActivity from "questMatchesActivity" /* 11114 */;
+import QuestVariants from "QuestVariants" /* 5396 */;
+import set2 from "set" /* 5402 */;
+import initializeDefault from "initialize" /* 5494 */;
+import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement" /* 7453 */;
+import isSponsoredPlayQuest from "isSponsoredPlayQuest" /* 7477 */;
+import getApplicationIdsByTaskTypes from "getApplicationIdsByTaskTypes" /* 7479 */;
+import questMatchesActivity from "questMatchesActivity" /* 11335 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "participantFromServer" /* 1386 */;
-import closure_5 from "map" /* 9464 */;
+import closure_4 from "participantFromServer" /* 1385 */;
+import closure_5 from "map" /* 9477 */;
 import closure_6 from "initialize" /* 4501 */;
 import closure_7 from "reset" /* 4500 */;
 import closure_8 from "gameFromServer" /* 4514 */;
 import closure_9 from "getVoiceStatesForGuild" /* 4555 */;
-import closure_10 from "initializeState" /* 7448 */;
-import closure_11 from "set" /* 16613 */;
-import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5387 */;
-import { isLaunched } from "FrameLayoutModes" /* 9465 */;
-import getQuestLogger from "getQuestLogger" /* 7454 */;
+import closure_10 from "initializeState" /* 7458 */;
+import closure_11 from "set" /* 16848 */;
+import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5395 */;
+import { isLaunched } from "FrameLayoutModes" /* 9478 */;
+import getQuestLogger from "getQuestLogger" /* 7464 */;
 
 require = arg1;
 function isQuestProgressable(item10047) {
@@ -53,11 +53,11 @@ function handleEmbeddedActivityLaunchSuccess(applicationId) {
       if (features.includes(QuestVariants.QuestVariants.MOBILE_ACTIVITY_QUEST)) {
         let tmp9 = tmp5;
         let tmp10 = tmp7;
-        let tmp6Result = tmp6(10913);
+        let tmp6Result = tmp6(11133);
         obj = { questContent: null, questContentCTA: null, sourceQuestContent: null };
-        obj[0] = tmp6(5390).QuestContent.RUNNING_ACTIVITY;
-        obj[1] = tmp6(7473).QuestContentCTA.START_QUEST;
-        obj[2] = tmp6(5390).QuestContent.RUNNING_ACTIVITY;
+        obj[0] = tmp6(5398).QuestContent.RUNNING_ACTIVITY;
+        obj[1] = tmp6(7483).QuestContentCTA.START_QUEST;
+        obj[2] = tmp6(5398).QuestContent.RUNNING_ACTIVITY;
         let tmp12 = obj2;
         let enrollInQuestResult = tmp6Result.enrollInQuest(item10020.id, obj);
         obj2.return();
@@ -104,10 +104,10 @@ class QuestProgressManager extends tmp4 {
       if (null != value) {
         if (null != value.config) {
           if (null != value.userStatus) {
-            const questTaskDetails = lib(7469).getQuestTaskDetails(value, lib(5394).FirstPartyQuestTaskTypesSets.DESKTOP);
+            const questTaskDetails = lib(7479).getQuestTaskDetails(value, lib(5402).FirstPartyQuestTaskTypesSets.DESKTOP);
             const _Math = Math;
             const diff = questTaskDetails.targetSeconds - questTaskDetails.progressSeconds;
-            const bound = Math.max(0, diff * applyArgumentsResult(687).Millis.SECOND);
+            const bound = Math.max(0, diff * applyArgumentsResult(684).Millis.SECOND);
             let sum = closure_14;
             if (bound <= closure_14) {
               sum = bound + closure_15;
@@ -360,7 +360,7 @@ class QuestProgressManager extends tmp4 {
                 applicationId = applicationId.applicationId;
                 c3 = 1;
                 c4 = 1;
-                return { value: "PX_16", done: null };
+                return { value: "PX_16", done: true };
               }
             } else if (1 === tmp5) {
               if (arg0 === 1) {
@@ -464,12 +464,12 @@ prototype["getActivelyProgressingQuests"] = function getActivelyProgressingQuest
   const self = this;
   if (set2.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP === closure_1) {
     return self.getActivelyProgressingPlayOnDesktopQuests();
-  } else if (tmp(5394).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP === closure_1) {
+  } else if (tmp(5402).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP === closure_1) {
     return self.getActivelyProgressingStreamOnDesktopQuests();
-  } else if (tmp(5394).FirstPartyQuestTaskTypes.PLAY_ACTIVITY === closure_1) {
+  } else if (tmp(5402).FirstPartyQuestTaskTypes.PLAY_ACTIVITY === closure_1) {
     return self.getActivelyProgressingActivityQuests();
   } else {
-    tmp(1471).assertNever(closure_1);
+    tmp(1470).assertNever(closure_1);
   }
 };
 prototype["getActivelyProgressingPlayOnDesktopQuests"] = function getActivelyProgressingPlayOnDesktopQuests() {

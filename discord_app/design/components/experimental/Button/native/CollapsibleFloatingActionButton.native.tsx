@@ -1,8 +1,8 @@
-// === Module 8990: CollapsableButton ===
+// === Module 9004: CollapsableButton ===
 
-// Module 8990 (CollapsableButton)
-import ThemesDefault from "Themes" /* 712 */;
-import styles2 from "styles" /* 8991 */;
+// Module 9004 (CollapsableButton)
+import ThemesDefault from "Themes" /* 709 */;
+import styles2 from "styles" /* 9005 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4933 */;
@@ -62,11 +62,11 @@ export const CollapsibleFloatingActionButton = function CollapsibleFloatingActio
   }
   const items = [styles.button, ];
   if (positionRight == null) {
-    positionRight = tmp3(8991).DEFAULT_POSITION_OFFSET;
+    positionRight = tmp3(9005).DEFAULT_POSITION_OFFSET;
   }
   obj = { position: "absolute", right: positionRight, bottom: null };
   if (positionBottom == null) {
-    positionBottom = tmp3(8991).DEFAULT_POSITION_OFFSET;
+    positionBottom = tmp3(9005).DEFAULT_POSITION_OFFSET;
   }
   obj[2] = positionBottom;
   items[1] = obj;

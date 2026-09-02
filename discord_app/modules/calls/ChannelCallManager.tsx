@@ -1,17 +1,17 @@
-// === Module 16907: _initialize ===
+// === Module 17143: _initialize ===
 
-// Module 16907 (_initialize)
-import initializeDefault from "initialize" /* 5486 */;
-import importDefaultResult from "Soundpacks" /* 9994 */;
-import closure_3 from "callConnect" /* 5222 */;
-import closure_4 from "ensureGuildLoaded" /* 1387 */;
-import closure_5 from "DesktopNotificationTypes" /* 10164 */;
-import closure_6 from "handleConnectionOpen" /* 1981 */;
+// Module 17143 (_initialize)
+import initializeDefault from "initialize" /* 5494 */;
+import importDefaultResult from "Soundpacks" /* 10016 */;
+import closure_3 from "callConnect" /* 5230 */;
+import closure_4 from "ensureGuildLoaded" /* 1386 */;
+import closure_5 from "DesktopNotificationTypes" /* 10186 */;
+import closure_6 from "handleConnectionOpen" /* 1980 */;
 import closure_7 from "initialize" /* 4323 */;
 import closure_8 from "updateVoiceState" /* 4497 */;
 import closure_9 from "getVoiceStatesForGuild" /* 4555 */;
 import closure_10 from "getParticipants" /* 4494 */;
-import createSoundForPack from "createSoundForPack" /* 9993 */;
+import createSoundForPack from "createSoundForPack" /* 10015 */;
 
 let require = arg1;
 let closure_11 = createSoundForPack.createSoundForPack("call_calling", importDefaultResult.getSoundpack());

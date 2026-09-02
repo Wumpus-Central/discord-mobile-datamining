@@ -1,17 +1,17 @@
-// === Module 15900: HomeDrawerDMsRow ===
+// === Module 16131: HomeDrawerDMsRow ===
 
-// Module 15900 (HomeDrawerDMsRow)
+// Module 16131 (HomeDrawerDMsRow)
 import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import initialize from "initialize" /* 586 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import MobileHomeDrawerExperiment2 from "MobileHomeDrawerExperiment" /* 4338 */;
 import Text from "Text" /* 4474 */;
-import HomeDrawerSharedItem from "HomeDrawerSharedItem" /* 15896 */;
+import HomeDrawerSharedItem from "HomeDrawerSharedItem" /* 16127 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "sortActivity" /* 4569 */;
 import closure_5 from "markAllUserIdListsStale" /* 4130 */;
-import { StatusTypes } from "ME" /* 676 */;
+import { StatusTypes } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -32,17 +32,17 @@ function HomeDrawerDMsRow() {
     obj[0] = tmp.onlineDot;
     const items1 = [callback(View, obj), ];
     obj1 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: null };
-    const intl = tmp2(1236).intl;
+    const intl = tmp2(1233).intl;
     const obj2 = { numFriends: null };
     obj2[0] = stateFromStores;
-    obj1[3] = intl.format(tmp2(1236).t.N5UIKr, obj2);
+    obj1[3] = intl.format(tmp2(1233).t.N5UIKr, obj2);
     items1[1] = callback(tmp2(4474).Text, obj1);
     obj[1] = items1;
     tmp5 = callback2(View, obj);
   }
   const obj3 = { title: null, subtitle: null };
   const obj4 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null };
-  const intl2 = tmp2(1236).intl;
+  const intl2 = tmp2(1233).intl;
   obj4[3] = intl2.string(getSystemLocale.t.YUU0RF);
   obj3[0] = callback(Text.Text, obj4);
   obj3[1] = tmp5;

@@ -2,7 +2,7 @@
 
 // Module 4372 (formatSize)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 
 function formatSize(result, arg1) {
   let tmp = arg1;

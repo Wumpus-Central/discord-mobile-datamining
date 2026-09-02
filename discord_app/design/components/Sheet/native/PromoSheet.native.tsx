@@ -1,7 +1,7 @@
-// === Module 10313: PromoSheet ===
+// === Module 10335: PromoSheet ===
 
-// Module 10313 (PromoSheet)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 10335 (PromoSheet)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -38,7 +38,7 @@ export const PromoSheet = function PromoSheet(arg0) {
     obj = {};
     const merged1 = Object.assign(graphic);
     obj.style = tmp2.graphic;
-    let tmp4Result = tmp4(tmp5(8983).Graphic, obj);
+    let tmp4Result = tmp4(tmp5(8997).Graphic, obj);
   } else {
     tmp4Result = null;
     if (null != illustration) {
@@ -63,5 +63,5 @@ export const PromoSheet = function PromoSheet(arg0) {
   items1[2] = actions;
   obj3[1] = items1;
   obj.children = closure_8(gradientColor(4926).Stack, obj3);
-  return closure_7(gradientColor(5622).BottomSheet, obj);
+  return closure_7(gradientColor(5630).BottomSheet, obj);
 };

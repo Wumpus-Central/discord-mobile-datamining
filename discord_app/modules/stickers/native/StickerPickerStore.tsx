@@ -1,8 +1,8 @@
-// === Module 10382: useStickerPickerStore ===
+// === Module 10404: useStickerPickerStore ===
 
-// Module 10382 (useStickerPickerStore)
+// Module 10404 (useStickerPickerStore)
 import set from "set" /* 2 */;
-import keys from "keys" /* 644 */;
+import keys from "keys" /* 641 */;
 
 let obj = keys.create((arg0) => {
   closure_0 = arg0;

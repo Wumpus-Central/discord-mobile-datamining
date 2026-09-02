@@ -1,9 +1,9 @@
-// === Module 9180: EmojiPopoutType ===
+// === Module 9194: EmojiPopoutType ===
 
-// Module 9180 (EmojiPopoutType)
+// Module 9194 (EmojiPopoutType)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getEmojiSourceData from "getEmojiSourceData" /* 6005 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import getEmojiSourceData from "getEmojiSourceData" /* 6013 */;
 
 const EmojiSourceDataTypes = getEmojiSourceData.EmojiSourceDataTypes;
 let closure_3 = { DEFAULT: "Custom Emoji Popout", CROSS_SERVER: "Custom Emoji Popout (Cross-Server)", UPSELL_CURRENT_SERVER_JOINED: "Custom Emoji Popout (Upsell Joined Current-Server)", UPSELL_CROSS_SERVER_JOINED: "Custom Emoji Popout (Upsell Joined Cross-Server)", UPSELL_CROSS_SERVER_JOINABLE: "Custom Emoji Popout (Upsell Not-Joined Cross-Server)", UPSELL_CROSS_SERVER_UNJOINABLE: "Custom Emoji Popout (Soft Upsell)" };
@@ -38,8 +38,8 @@ export const getEmojiPopoutData = function getEmojiPopoutData(sourceType) {
           if (isDiscoverable3) {
             obj = { type: null, text: null, description: null };
             obj[0] = obj.JOIN_GUILD;
-            const intl10 = tmp6(1236).intl;
-            obj[1] = intl10.string(tmp6(1236).t.riu2R5);
+            const intl10 = tmp6(1233).intl;
+            obj[1] = intl10.string(tmp6(1233).t.riu2R5);
             let obj2 = obj;
           }
           obj1 = {};
@@ -51,8 +51,8 @@ export const getEmojiPopoutData = function getEmojiPopoutData(sourceType) {
         if (!isPremium3) {
           obj2 = { type: null, text: null, description: null };
           obj2[0] = obj.GET_PREMIUM;
-          const intl9 = tmp6(1236).intl;
-          obj2[1] = intl9.string(tmp6(1236).t["gl/XHJ"]);
+          const intl9 = tmp6(1233).intl;
+          obj2[1] = intl9.string(tmp6(1233).t["gl/XHJ"]);
         }
         const obj3 = { type: null, text: null, description: null };
         obj3[0] = obj.UNAVAILABLE;
@@ -158,12 +158,12 @@ export const getEmojiPopoutData = function getEmojiPopoutData(sourceType) {
   } else {
     const intl = getSystemLocale.intl;
     if (isDiscoverable) {
-      formatToPlainStringResult = intl.string(tmp2(1236).t.FJ6Z01);
+      formatToPlainStringResult = intl.string(tmp2(1233).t.FJ6Z01);
       tmp6 = tmp2;
     } else {
       obj = { openPremiumSettings: null };
       obj[0] = onOpenPremiumSettings;
-      formatToPlainStringResult = intl.format(tmp2(1236).t.U6vLcA, obj);
+      formatToPlainStringResult = intl.format(tmp2(1233).t.U6vLcA, obj);
       tmp6 = tmp2;
     }
   }

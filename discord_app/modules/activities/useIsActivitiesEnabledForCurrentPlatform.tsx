@@ -1,6 +1,6 @@
-// === Module 9445: useIsActivitiesEnabledForCurrentPlatform ===
+// === Module 9458: useIsActivitiesEnabledForCurrentPlatform ===
 
-// Module 9445 (useIsActivitiesEnabledForCurrentPlatform)
+// Module 9458 (useIsActivitiesEnabledForCurrentPlatform)
 import set from "set" /* 2 */;
 import isTablet from "isTablet" /* 4754 */;
 

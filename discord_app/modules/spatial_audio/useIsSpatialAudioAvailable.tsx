@@ -1,7 +1,7 @@
-// === Module 13481: useIsSpatialAudioAvailable ===
+// === Module 13704: useIsSpatialAudioAvailable ===
 
-// Module 13481 (useIsSpatialAudioAvailable)
-import apexExperimentDefault from "apexExperiment" /* 13482 */;
+// Module 13704 (useIsSpatialAudioAvailable)
+import apexExperimentDefault from "apexExperiment" /* 13705 */;
 import closure_3 from "_detectH265HardwareDecode" /* 4529 */;
 import { Features } from "DesktopSources" /* 4542 */;
 

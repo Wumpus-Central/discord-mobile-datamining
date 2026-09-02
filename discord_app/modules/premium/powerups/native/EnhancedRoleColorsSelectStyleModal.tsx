@@ -1,19 +1,19 @@
-// === Module 17212: EnhancedRoleColorsSelectStyleModal ===
+// === Module 17448: EnhancedRoleColorsSelectStyleModal ===
 
-// Module 17212 (EnhancedRoleColorsSelectStyleModal)
+// Module 17448 (EnhancedRoleColorsSelectStyleModal)
 import set from "set" /* 2 */;
-import sum from "sum" /* 505 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import sum from "sum" /* 502 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import useThemeDefault from "useTheme" /* 4413 */;
 import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 4957 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5621 */;
-import Background from "Background" /* 5622 */;
-import setOptionsDefault from "setOptions" /* 7841 */;
-import title from "title" /* 17193 */;
-import handleSetSection from "handleSetSection" /* 17194 */;
-import HOLOGRAPHIC_ROLE_COLORS2 from "HOLOGRAPHIC_ROLE_COLORS" /* 17196 */;
-import useGuildSettingsRoleExampleMessage from "useGuildSettingsRoleExampleMessage" /* 17213 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5629 */;
+import Background from "Background" /* 5630 */;
+import setOptionsDefault from "setOptions" /* 7850 */;
+import title from "title" /* 17429 */;
+import handleSetSection from "handleSetSection" /* 17430 */;
+import HOLOGRAPHIC_ROLE_COLORS2 from "HOLOGRAPHIC_ROLE_COLORS" /* 17432 */;
+import useGuildSettingsRoleExampleMessage from "useGuildSettingsRoleExampleMessage" /* 17449 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -34,17 +34,17 @@ let closure_11 = createCacheKey.createStyles((arg0) => {
   obj1 = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden", height: 100, width: 100, flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" };
   obj[3] = { width: 400, flex: 1, marginStart: ThemesDefault.space.PX_8, marginVertical: ThemesDefault.space.PX_8, alignSelf: "flex-start" };
   if (arg0 === ThemeTypes.LIGHT) {
-    let BACKGROUND_SURFACE_HIGH = tmp(712).colors.BACKGROUND_BASE_LOW;
+    let BACKGROUND_SURFACE_HIGH = tmp(709).colors.BACKGROUND_BASE_LOW;
   } else {
-    BACKGROUND_SURFACE_HIGH = tmp(712).colors.BACKGROUND_SURFACE_HIGH;
+    BACKGROUND_SURFACE_HIGH = tmp(709).colors.BACKGROUND_SURFACE_HIGH;
   }
   const obj2 = { width: 400, flex: 1, marginStart: ThemesDefault.space.PX_8, marginVertical: ThemesDefault.space.PX_8, alignSelf: "flex-start" };
   const tmp3 = ThemeTypes;
   obj[4] = { width: "100%", textAlign: "center", backgroundColor: BACKGROUND_SURFACE_HIGH, paddingVertical: ThemesDefault.space.PX_8 };
   if (arg0 === tmp3.LIGHT) {
-    let BACKGROUND_SURFACE_HIGH2 = tmp(712).colors.BACKGROUND_BASE_LOW;
+    let BACKGROUND_SURFACE_HIGH2 = tmp(709).colors.BACKGROUND_BASE_LOW;
   } else {
-    BACKGROUND_SURFACE_HIGH2 = tmp(712).colors.BACKGROUND_SURFACE_HIGH;
+    BACKGROUND_SURFACE_HIGH2 = tmp(709).colors.BACKGROUND_SURFACE_HIGH;
   }
   const obj3 = { width: "100%", textAlign: "center", backgroundColor: BACKGROUND_SURFACE_HIGH, paddingVertical: ThemesDefault.space.PX_8 };
   obj[5] = { backgroundColor: BACKGROUND_SURFACE_HIGH2, padding: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_16, borderRadius: ThemesDefault.radii.sm };
@@ -114,11 +114,11 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
           rowGenerator: constants,
           modifyRow(message) {
             message.message.roleColor = undefined;
-            const result = closure_2_0(1988).extractColorStringsFromServerColors(id.colors);
-            const obj = closure_2_0(1988);
-            message.message.roleColors = closure_2_0(7870).processColorStrings(result);
+            const result = closure_2_0(1987).extractColorStringsFromServerColors(id.colors);
+            const obj = closure_2_0(1987);
+            message.message.roleColors = closure_2_0(7879).processColorStrings(result);
             message.message.shouldShowRoleOnName = true;
-            message.message.avatarURL = closure_2_1(12954);
+            message.message.avatarURL = closure_2_1(13176);
           }
         };
         const items1 = [closure_1_9(closure_1_1(button[16]), obj), ];
@@ -138,21 +138,21 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
     obj3[0] = tmp3.upsellContainer;
     const obj4 = { style: null, variant: "text-sm/semibold", children: null };
     obj4[0] = tmp3.upsellText;
-    const intl3 = tmp4(1236).intl;
+    const intl3 = tmp4(1233).intl;
     const obj5 = { magical: null };
     const obj6 = { gradientColors: null, variant: "text-sm/semibold", children: null };
     let items1 = [, , ];
     ({ primary_color: arr2[0], secondary_color: arr2[1], tertiary_color: arr2[2] } = HOLOGRAPHIC_ROLE_COLORS);
     obj6[0] = items1;
-    const intl4 = tmp4(1236).intl;
-    obj6[2] = intl4.string(tmp(2401)["+/IHLl"]);
+    const intl4 = tmp4(1233).intl;
+    obj6[2] = intl4.string(tmp(2400)["+/IHLl"]);
     obj5[0] = tmp7(tmp4(4474).Text, obj6);
-    obj4[2] = intl3.format(tmp(2401).VpEDJc, obj5);
+    obj4[2] = intl3.format(tmp(2400).VpEDJc, obj5);
     const items2 = [tmp7(tmp4(4474).Text, obj4), ];
     const obj7 = { style: null, variant: "text-sm/normal", children: null };
     obj7[0] = tmp3.upsellText;
-    const intl5 = tmp4(1236).intl;
-    obj7[2] = intl5.string(tmp(2401).FJZeZF);
+    const intl5 = tmp4(1233).intl;
+    obj7[2] = intl5.string(tmp(2400).FJZeZF);
     items2[1] = tmp7(tmp4(4474).Text, obj7);
     obj3[1] = items2;
     tmp8Result = tmp8(tmp9, obj3);

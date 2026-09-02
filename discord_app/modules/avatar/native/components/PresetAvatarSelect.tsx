@@ -1,20 +1,20 @@
-// === Module 17014: DefaultAvatarButton ===
+// === Module 17250: DefaultAvatarButton ===
 
-// Module 17014 (DefaultAvatarButton)
+// Module 17250 (DefaultAvatarButton)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Text from "Text" /* 4474 */;
-import PressableBase from "PressableBase" /* 5068 */;
-import preloadDefault from "preload" /* 5493 */;
-import setDefault from "set" /* 17015 */;
-import setDefault2 from "set" /* 17016 */;
-import setDefault3 from "set" /* 17017 */;
-import setDefault4 from "set" /* 17018 */;
-import setDefault5 from "set" /* 17019 */;
-import setDefault6 from "set" /* 17020 */;
-import setDefault7 from "set" /* 17021 */;
-import setDefault8 from "set" /* 17022 */;
+import PressableBase from "PressableBase" /* 5076 */;
+import preloadDefault from "preload" /* 5501 */;
+import setDefault from "set" /* 17251 */;
+import setDefault2 from "set" /* 17252 */;
+import setDefault3 from "set" /* 17253 */;
+import setDefault4 from "set" /* 17254 */;
+import setDefault5 from "set" /* 17255 */;
+import setDefault6 from "set" /* 17256 */;
+import setDefault7 from "set" /* 17257 */;
+import setDefault8 from "set" /* 17258 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -31,7 +31,7 @@ function DefaultAvatarButton(selected) {
   }
   let obj = { style: items, accessibilityRole: "button", accessibilityLabel, accessibilityState: { selected }, accessibilityHint: null, onPress: null, children: null };
   items[1] = prop;
-  const intl = tmp3(1236).intl;
+  const intl = tmp3(1233).intl;
   obj[4] = intl.string(getSystemLocale.t.vw2RsD);
   obj[5] = onSelect;
   obj = { style: tmp.defaultAvatarButton, source: { uri: source } };

@@ -1,12 +1,12 @@
-// === Module 11572: ForumPostGrid ===
+// === Module 11795: ForumPostGrid ===
 
-// Module 11572 (ForumPostGrid)
-import ForumPostGridHeaderDefault from "ForumPostGridHeader" /* 11574 */;
-import GIFIconDefault from "GIFIcon" /* 11578 */;
-import ForumPostGridFooterDefault from "ForumPostGridFooter" /* 11589 */;
-import closure_3 from "ensureGuildLoaded" /* 1387 */;
+// Module 11795 (ForumPostGrid)
+import ForumPostGridHeaderDefault from "ForumPostGridHeader" /* 11797 */;
+import GIFIconDefault from "GIFIcon" /* 11801 */;
+import ForumPostGridFooterDefault from "ForumPostGridFooter" /* 11812 */;
+import closure_3 from "ensureGuildLoaded" /* 1386 */;
 import closure_4 from "markAllUserIdListsStale" /* 4130 */;
-import { useForumChannelStore } from "set" /* 11573 */;
+import { useForumChannelStore } from "set" /* 11796 */;
 import jsxProd from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
@@ -126,7 +126,7 @@ function ConnectedForumPost(arg0) {
 ({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
 const memoResult = importAllResult.memo((arg0) => {
   const _require = arg0;
-  let obj = _require(589);
+  let obj = _require(586);
   const items = [closure_3];
   let tmp = null;
   if (null != obj.useStateFromStores(items, () => closure_1_3.getChannel(threadId.threadId))) {
@@ -143,19 +143,19 @@ export const ForumPostListDisabled = function ForumPostListDisabled(threadId) {
   threadId = threadId.threadId;
   let stateFromStores;
   ({ style, localDeviceMedia } = threadId);
-  let obj = threadId(589);
+  let obj = threadId(586);
   const items = [closure_3];
   stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getChannel(threadId));
   let tmp5 = null;
   stateFromStores(38)(null != stateFromStores, "[Forum Post] The thread should not be null here. A store must have missed an update.");
   const items1 = [closure_3];
-  const stateFromStores1 = threadId(589).useStateFromStores(items1, () => closure_1_3.getChannel(stateFromStores.parent_id));
-  const obj2 = threadId(589);
+  const stateFromStores1 = threadId(586).useStateFromStores(items1, () => closure_1_3.getChannel(stateFromStores.parent_id));
+  const obj2 = threadId(586);
   const tmp = threadId;
   const tmp4 = stateFromStores;
-  const firstForumPostMessage = threadId(6149).useFirstForumPostMessage(stateFromStores);
+  const firstForumPostMessage = threadId(6157).useFirstForumPostMessage(stateFromStores);
   ({ firstMessage, loaded } = firstForumPostMessage);
-  threadId(7628);
+  threadId(7638);
   if (loaded) {
     obj = { style: null, children: null };
     obj[0] = style;
@@ -166,8 +166,8 @@ export const ForumPostListDisabled = function ForumPostListDisabled(threadId) {
     obj[3] = tmp10;
     obj[4] = localDeviceMedia;
     obj[7] = loaded;
-    obj[1] = callback(tmp4(11593), obj);
-    tmp5 = callback(tmp(11592).ForumPostDisabledContainer, obj);
+    obj[1] = callback(tmp4(11816), obj);
+    tmp5 = callback(tmp(11815).ForumPostDisabledContainer, obj);
   }
   return tmp5;
 };

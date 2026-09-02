@@ -1,8 +1,8 @@
-// === Module 13336: reset ===
+// === Module 13560: reset ===
 
-// Module 13336 (reset)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 13560 (reset)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 function reset() {
   c0 = false;

@@ -1,12 +1,12 @@
-// === Module 12508: UserProfilePrivacyNotice ===
+// === Module 12732: UserProfilePrivacyNotice ===
 
-// Module 12508 (UserProfilePrivacyNotice)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 12732 (UserProfilePrivacyNotice)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { UserSettingsSections } from "ME" /* 676 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1384 */;
+import { UserSettingsSections } from "ME" /* 673 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

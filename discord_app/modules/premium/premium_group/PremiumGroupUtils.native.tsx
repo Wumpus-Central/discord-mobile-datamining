@@ -1,8 +1,8 @@
-// === Module 7958: getPremiumGroupInviteEmbedText ===
+// === Module 7967: getPremiumGroupInviteEmbedText ===
 
-// Module 7958 (getPremiumGroupInviteEmbedText)
-import messagesProxyDefault from "messagesProxy" /* 3017 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+// Module 7967 (getPremiumGroupInviteEmbedText)
+import messagesProxyDefault from "messagesProxy" /* 3016 */;
+import closure_3 from "mergeGuildAvatar" /* 1921 */;
 import SubscriptionStatusTypes from "SubscriptionStatusTypes" /* 4153 */;
 
 const require = arg1;
@@ -36,16 +36,16 @@ export const getPremiumGroupInviteEmbedText = function getPremiumGroupInviteEmbe
     let tmp15 = null;
     if (null != tmp8) {
       let obj = { message: null, header: null, body: null };
-      const intl4 = sender(1236).intl;
+      const intl4 = sender(1233).intl;
       obj = { receiverName: null, premiumGroupProductName: null };
       obj[0] = tmp8;
       obj[1] = tmp;
       obj[0] = intl4.format(messagesProxyDefault.MkcFjx, obj);
-      const intl5 = sender(1236).intl;
+      const intl5 = sender(1233).intl;
       obj1 = { premiumGroupProductName: null };
       obj1[0] = tmp;
       obj[1] = intl5.formatToPlainString(messagesProxyDefault["5uwv8J"], obj1);
-      const intl6 = sender(1236).intl;
+      const intl6 = sender(1233).intl;
       const obj2 = { receiverName: null };
       obj2[0] = tmp8;
       obj[2] = intl6.formatToPlainString(messagesProxyDefault["AmE0B/"], obj2);
@@ -56,15 +56,15 @@ export const getPremiumGroupInviteEmbedText = function getPremiumGroupInviteEmbe
     obj = sender(4322);
     const nameFromUserResult1 = obj.nameFromUser(sender);
     const obj3 = { message: null, header: null, body: null };
-    const intl = sender(1236).intl;
+    const intl = sender(1233).intl;
     obj4 = { senderName: null, premiumGroupProductName: null, helpCenterLink: null };
     obj4[0] = nameFromUserResult1;
     obj4[1] = tmp;
     obj4[2] = closure_5;
     obj3[0] = intl.format(messagesProxyDefault["51Kv/4"], obj4);
-    const intl2 = sender(1236).intl;
+    const intl2 = sender(1233).intl;
     obj3[1] = intl2.string(messagesProxyDefault.ssge1y);
-    const intl3 = sender(1236).intl;
+    const intl3 = sender(1233).intl;
     const obj5 = { senderName: null, premiumGroupProductName: null };
     obj5[0] = nameFromUserResult1;
     obj5[1] = tmp;
@@ -72,9 +72,6 @@ export const getPremiumGroupInviteEmbedText = function getPremiumGroupInviteEmbe
     return obj3;
   }
 };
-export function shouldShowPrimaryReminderNagbar() {
-  return false;
-}
 export function useIsEligibleForPremiumGroupPurchase() {
   return false;
 }

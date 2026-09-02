@@ -1,10 +1,10 @@
-// === Module 11556: useTextareaPlaceholderAndLabels ===
+// === Module 11779: useTextareaPlaceholderAndLabels ===
 
-// Module 11556 (useTextareaPlaceholderAndLabels)
+// Module 11779 (useTextareaPlaceholderAndLabels)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import computeChannelNameDefault from "computeChannelName" /* 4674 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 
 ({ ChannelTypes: c3, ChannelTypesSets: c4 } = ME);
 const result = set.fileFinishedImporting("modules/channel/useTextareaPlaceholderAndLabels.tsx");

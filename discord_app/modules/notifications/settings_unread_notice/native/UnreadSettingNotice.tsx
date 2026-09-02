@@ -1,11 +1,11 @@
-// === Module 11051: UnreadSettingNoticeConnected ===
+// === Module 11271: UnreadSettingNoticeConnected ===
 
-// Module 11051 (UnreadSettingNoticeConnected)
+// Module 11271 (UnreadSettingNoticeConnected)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import UnreadSettingNoticeImpressionTrackingDefault from "UnreadSettingNoticeImpressionTracking" /* 11052 */;
+import ThemesDefault from "Themes" /* 709 */;
+import UnreadSettingNoticeImpressionTrackingDefault from "UnreadSettingNoticeImpressionTracking" /* 11272 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { ChannelNotificationSettingsFlags as closure_4 } from "MAX_FAVORITES" /* 685 */;
+import { ChannelNotificationSettingsFlags as closure_4 } from "MAX_FAVORITES" /* 682 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -30,8 +30,8 @@ export default function UnreadSettingNoticeConnected(channel) {
   const items = [callback(UnreadSettingNoticeImpressionTrackingDefault, obj), , ];
   obj = { style: tmp.informations, children: null };
   obj1 = { variant: "text-md/semibold", children: null };
-  const intl = _require(1236).intl;
-  obj1[1] = intl.string(_require(1236).t.i4xQ5o);
+  const intl = _require(1233).intl;
+  obj1[1] = intl.string(_require(1233).t.i4xQ5o);
   obj[1] = callback(_require(4474).Text, obj1);
   items[1] = callback(View, obj);
   const obj2 = { style: tmp.actions, children: null };
@@ -45,10 +45,10 @@ export default function UnreadSettingNoticeConnected(channel) {
     children: null
   };
   const obj4 = { variant: "text-xs/medium", color: "text-link", children: null };
-  const intl2 = _require(1236).intl;
-  obj4[2] = intl2.string(_require(1236).t.KyUKhT);
+  const intl2 = _require(1233).intl;
+  obj4[2] = intl2.string(_require(1233).t.KyUKhT);
   obj3[3] = callback(_require(4474).Text, obj4);
-  obj2[1] = callback(_require(5068).PressableOpacity, obj3);
+  obj2[1] = callback(_require(5076).PressableOpacity, obj3);
   items[2] = callback(View, obj2);
   obj[1] = items;
   return callback2(View, obj);

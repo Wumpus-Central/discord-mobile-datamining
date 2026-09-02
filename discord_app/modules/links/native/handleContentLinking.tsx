@@ -1,8 +1,8 @@
-// === Module 11184: _handleContentLinking ===
+// === Module 11405: _handleContentLinking ===
 
-// Module 11184 (_handleContentLinking)
+// Module 11405 (_handleContentLinking)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { Routes } from "ME" /* 676 */;
+import { Routes } from "ME" /* 673 */;
 
 const require = arg1;
 function _handleContentLinking() {
@@ -54,7 +54,7 @@ function _handleContentLinking() {
               let skipMessageFetch;
               c3 = 1;
               c4 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else {
             if (1 === tmp5) {

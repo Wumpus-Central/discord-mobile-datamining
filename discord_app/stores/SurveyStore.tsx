@@ -1,18 +1,18 @@
 // === Module 4711: fetchSurveyIfNeeded ===
 
 // Module 4711 (fetchSurveyIfNeeded)
-import initializeDefault from "initialize" /* 589 */;
-import Storage2 from "Storage" /* 595 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import hooksDefault from "hooks" /* 4075 */;
+import initializeDefault from "initialize" /* 586 */;
+import Storage2 from "Storage" /* 592 */;
+import setDefault from "set" /* 684 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import hooksDefault from "hooks" /* 4074 */;
 import overrideSurvey from "overrideSurvey" /* 4712 */;
 import closure_4 from "handleInviteData" /* 4398 */;
-import closure_5 from "createGuildRecordFromRust" /* 1909 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4121 */;
+import closure_5 from "createGuildRecordFromRust" /* 1908 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_7 from "handleConnectionOpen" /* 4299 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import closure_8 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
 import set from "set" /* 2 */;
 
 require = arg1;

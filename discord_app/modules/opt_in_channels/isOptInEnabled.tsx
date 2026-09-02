@@ -1,11 +1,11 @@
-// === Module 7280: useOptInEnabledForGuild ===
+// === Module 7289: useOptInEnabledForGuild ===
 
-// Module 7280 (useOptInEnabledForGuild)
-import closure_2 from "createGuildRecordFromRust" /* 1909 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4121 */;
+// Module 7289 (useOptInEnabledForGuild)
+import closure_2 from "createGuildRecordFromRust" /* 1908 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_4 from "updateUserGuildSettingsInternal" /* 4701 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import closure_5 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
 
 const require = arg1;
 ({ GuildFeatures: closure_6, Permissions: error } = ME);
@@ -14,7 +14,7 @@ const result = require("set").fileFinishedImporting("modules/opt_in_channels/isO
 export const useOptInEnabledForGuild = function useOptInEnabledForGuild(id) {
   const _require = id;
   const items = [closure_4, closure_2, closure_5];
-  return _require(589).useStateFromStores(items, () => {
+  return _require(586).useStateFromStores(items, () => {
     let isOptInEnabledResult = closure_1_4.isOptInEnabled(closure_0);
     const guild = closure_1_2.getGuild(closure_0);
     let flag;
@@ -59,7 +59,7 @@ export const isOptInEnabledForGuild = function isOptInEnabledForGuild(_guildId) 
 export const useShouldShowOnboardingAdminUpsellForGuild = function useShouldShowOnboardingAdminUpsellForGuild(arg0) {
   const _require = arg0;
   const items = [closure_2, closure_3];
-  return _require(589).useStateFromStores(items, () => {
+  return _require(586).useStateFromStores(items, () => {
     const guild = closure_1_2.getGuild(closure_0);
     let flag;
     const canResult = closure_1_3.can(closure_1_7.MANAGE_GUILD, guild);

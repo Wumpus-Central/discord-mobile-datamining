@@ -1,7 +1,7 @@
-// === Module 15373: UserSettingsDesignSystemSegmentedControl ===
+// === Module 15601: UserSettingsDesignSystemSegmentedControl ===
 
-// Module 15373 (UserSettingsDesignSystemSegmentedControl)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 15601 (UserSettingsDesignSystemSegmentedControl)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -60,7 +60,7 @@ export default function UserSettingsDesignSystemSegmentedControl() {
     }
     return items;
   }, items);
-  let obj = first(9260);
+  let obj = first(9273);
   const segmentedControlState = obj.useSegmentedControlState({ items: memo, pageWidth: tmp[0], defaultIndex: 1 });
   obj = { children: null };
   obj = {
@@ -71,7 +71,7 @@ export default function UserSettingsDesignSystemSegmentedControl() {
     children: null
   };
   obj1 = { spacing: 24, children: null };
-  let items1 = [callback3(first(9762).SegmentedControl, { state: segmentedControlState }), callback3(first(9268).SegmentedControlPages, { state: segmentedControlState }), ];
+  let items1 = [callback3(first(9784).SegmentedControl, { state: segmentedControlState }), callback3(first(9281).SegmentedControlPages, { state: segmentedControlState }), ];
   const obj2 = { spacing: 8, direction: "horizontal", children: null };
   const items2 = [
     callback3(first(4928).Button, {

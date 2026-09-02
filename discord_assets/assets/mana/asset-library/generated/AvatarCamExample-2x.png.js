@@ -1,9 +1,9 @@
-// === Module 6314: metadata ===
+// === Module 6323: metadata ===
 
-// Module 6314 (metadata)
+// Module 6323 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AvatarCamExample-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/f24bb4f327650212a7f55f6d88a2e06a8226c2bde1bff55abc6ec13484959c87.png";
-export const metadata = { fileBytes: 17018 };
+export default "https://cdn.discordapp.com/assets/content/ca756a3ee2be2f337d38166e18efa749f6fc5110774b3cac6bd2fa2699af87b2.png";
+export const metadata = { fileBytes: 17008 };

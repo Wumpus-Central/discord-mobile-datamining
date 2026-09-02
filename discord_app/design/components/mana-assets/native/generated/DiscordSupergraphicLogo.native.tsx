@@ -1,12 +1,12 @@
-// === Module 6471: DiscordSupergraphicLogo ===
+// === Module 6480: DiscordSupergraphicLogo ===
 
-// Module 6471 (DiscordSupergraphicLogo)
+// Module 6480 (DiscordSupergraphicLogo)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import map from "map" /* 4197 */;
-import metadataDefault from "metadata" /* 6472 */;
+import metadataDefault from "metadata" /* 6481 */;
 
 const Image = get_ActivityIndicator.Image;
 const jsx = jsxProd.jsx;

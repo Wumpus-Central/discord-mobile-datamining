@@ -1,11 +1,11 @@
-// === Module 11264: trackForwardStart ===
+// === Module 11487: trackForwardStart ===
 
-// Module 11264 (trackForwardStart)
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+// Module 11487 (trackForwardStart)
+import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4700 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1387 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import closure_4 from "ensureGuildLoaded" /* 1386 */;
+import { AnalyticEvents } from "ME" /* 673 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/forwarding/ForwardingAnalyticsUtils.tsx");

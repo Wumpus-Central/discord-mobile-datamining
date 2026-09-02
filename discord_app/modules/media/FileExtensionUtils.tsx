@@ -1,8 +1,8 @@
-// === Module 5579: getExtensionFromContentType ===
+// === Module 5587: getExtensionFromContentType ===
 
-// Module 5579 (getExtensionFromContentType)
+// Module 5587 (getExtensionFromContentType)
 import set from "set" /* 2 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1486 */;
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1485 */;
 
 let closure_2 = { "image/avif": "avif", "image/gif": "gif", "image/heic": "heic", "image/jpeg": "jpg", "image/png": "png", "image/webp": "webp", "video/mp4": "mp4", "video/quicktime": "mov", "video/webm": "webm" };
 const result = set.fileFinishedImporting("modules/media/FileExtensionUtils.tsx");

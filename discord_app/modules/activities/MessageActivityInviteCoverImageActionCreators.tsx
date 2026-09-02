@@ -1,8 +1,8 @@
-// === Module 12905: setCoverImageURL ===
+// === Module 13127: setCoverImageURL ===
 
-// Module 12905 (setCoverImageURL)
+// Module 13127 (setCoverImageURL)
 import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 const result = set.fileFinishedImporting("modules/activities/MessageActivityInviteCoverImageActionCreators.tsx");
 

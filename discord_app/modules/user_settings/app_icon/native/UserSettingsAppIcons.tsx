@@ -1,14 +1,14 @@
-// === Module 15123: ? ===
+// === Module 15352: ? ===
 
-// Module 15123
-import contextDefault from "context" /* 5953 */;
-import _modDef8970 from "module_8970" /* 8970 */;
-import BackwardsCompatibleAppIconRowsDefault from "BackwardsCompatibleAppIconRows" /* 15124 */;
+// Module 15352
+import contextDefault from "context" /* 5961 */;
+import _modDef8984 from "module_8984" /* 8984 */;
+import BackwardsCompatibleAppIconRowsDefault from "BackwardsCompatibleAppIconRows" /* 15353 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { getIconById } from "items" /* 8178 */;
+import closure_5 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
+import { getIconById } from "items" /* 8187 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 import importAllResult from "noop" /* 19 */;
@@ -58,7 +58,7 @@ const memoResult = importAllResult.memo(() => {
                     if (v0 !== id) {
                       if (tmp27) {
                         if (!dependencyMap) {
-                          let obj4 = v0(8169);
+                          let obj4 = v0(8177);
                           obj1 = { initialUpsellKey: null, imageSource: null };
                           obj1[0] = closure_1_6.APP_ICONS;
                           obj1[1] = tmp28;
@@ -72,11 +72,11 @@ const memoResult = importAllResult.memo(() => {
                       dependencyMap = 1;
                       v0 = 1;
                       let obj2 = { value: null, done: false };
-                      obj2[0] = lib(13024).setAppIcon(id, premiumType);
+                      obj2[0] = lib(13246).setAppIcon(id, premiumType);
                       return obj2;
                     }
                   } else {
-                    obj2 = lib(13024);
+                    obj2 = lib(13246);
                     let premiumType1;
                     if (lib != null) {
                       premiumType1 = lib.premiumType;
@@ -84,7 +84,7 @@ const memoResult = importAllResult.memo(() => {
                     dependencyMap = 2;
                     v0 = 1;
                     const obj3 = { value: null, done: false };
-                    obj3[0] = obj2.setAppIcon(lib(8179).FreemiumAppIconIds.DEFAULT, premiumType1);
+                    obj3[0] = obj2.setAppIcon(lib(8188).FreemiumAppIconIds.DEFAULT, premiumType1);
                     return obj3;
                   }
                 }
@@ -127,12 +127,12 @@ const memoResult = importAllResult.memo(() => {
     }
     return applyArgumentsResult;
   }
-  let obj = stateFromStores(589);
+  let obj = stateFromStores(586);
   const items = [_onSelect];
   stateFromStores = obj.useStateFromStores(items, () => _onSelect.getCurrentUser());
-  obj1 = stateFromStores(13024);
+  obj1 = stateFromStores(13246);
   importDefault = obj1.useCurrentAppIcon();
-  let obj2 = stateFromStores(1946);
+  let obj2 = stateFromStores(1945);
   const isPremiumResult = obj2.isPremium(stateFromStores);
   dependencyMap = isPremiumResult;
   const analyticsLocations = contextDefault().analyticsLocations;
@@ -152,7 +152,7 @@ const memoResult = importAllResult.memo(() => {
     }
   };
   obj[0] = callback(obj, obj1);
-  const children = [callback(stateFromStores(8363).Form, obj), ];
+  const children = [callback(stateFromStores(8372).Form, obj), ];
   let tmp9Result = !isPremiumResult;
   if (!isPremiumResult) {
     let obj3 = { style: null, children: null };
@@ -162,11 +162,11 @@ const memoResult = importAllResult.memo(() => {
       obj = { analyticsLocation: obj, analyticsLocations, premiumFeatureCardOrder: stateFromStores(isPremiumResult[18]).PremiumFeatureCardOrder.TIER_2_LEADING };
       callback(isPremiumResult[17])(obj);
     };
-    const intl = tmp2(1236).intl;
-    obj4[1] = intl.string(tmp2(1236).t.M0rDSO);
-    obj3[1] = tmp9(_modDef8970, obj4);
+    const intl = tmp2(1233).intl;
+    obj4[1] = intl.string(tmp2(1233).t.M0rDSO);
+    obj3[1] = tmp9(_modDef8984, obj4);
     tmp9Result = tmp9(obj, obj3);
-    const tmp6Result = _modDef8970;
+    const tmp6Result = _modDef8984;
   }
   children[1] = tmp9Result;
   return closure_11(closure_10, { children });

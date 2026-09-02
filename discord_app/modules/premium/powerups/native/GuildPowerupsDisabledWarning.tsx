@@ -1,11 +1,11 @@
-// === Module 12109: GuildPowerupsDisabledWarning ===
+// === Module 12333: GuildPowerupsDisabledWarning ===
 
-// Module 12109 (GuildPowerupsDisabledWarning)
+// Module 12333 (GuildPowerupsDisabledWarning)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import Text from "Text" /* 4474 */;
-import WarningIcon from "WarningIcon" /* 8736 */;
+import WarningIcon from "WarningIcon" /* 8751 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

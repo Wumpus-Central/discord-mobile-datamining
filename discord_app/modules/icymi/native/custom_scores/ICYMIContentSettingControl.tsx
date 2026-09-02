@@ -1,20 +1,20 @@
-// === Module 16047: ContentSettingsControl ===
+// === Module 16278: ContentSettingsControl ===
 
-// Module 16047 (ContentSettingsControl)
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import generateHydrationId from "generateHydrationId" /* 8621 */;
-import useSegmentedControlState from "useSegmentedControlState" /* 9260 */;
-import SegmentedControl from "SegmentedControl" /* 9762 */;
-import registerAssetDefault from "registerAsset" /* 16048 */;
-import registerAssetDefault2 from "registerAsset" /* 16049 */;
-import registerAssetDefault3 from "registerAsset" /* 16050 */;
+// Module 16278 (ContentSettingsControl)
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import Button from "Button" /* 1296 */;
+import generateHydrationId from "generateHydrationId" /* 8636 */;
+import useSegmentedControlState from "useSegmentedControlState" /* 9273 */;
+import SegmentedControl from "SegmentedControl" /* 9784 */;
+import registerAssetDefault from "registerAsset" /* 16279 */;
+import registerAssetDefault2 from "registerAsset" /* 16280 */;
+import registerAssetDefault3 from "registerAsset" /* 16281 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "updateUserGuildSettingsInternal" /* 4701 */;
-import closure_7 from "filterStaffGuild" /* 8606 */;
+import closure_7 from "filterStaffGuild" /* 8621 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -38,7 +38,7 @@ function ContentSettingsControl(initialValue) {
   obj[2] = closure_8(Button.Icon, obj);
   const items1 = [obj, , ];
   obj = { label: null, id: "0", icon: null, page: null };
-  const intl2 = tmp4(1236).intl;
+  const intl2 = tmp4(1233).intl;
   obj[0] = intl2.string(getSystemLocale.t.SnrG00);
   obj1 = { source: registerAssetDefault2, style: null };
   const items2 = [tmp.icon, ];
@@ -51,7 +51,7 @@ function ContentSettingsControl(initialValue) {
   obj[2] = closure_8(Button.Icon, obj1);
   items1[1] = obj;
   const obj2 = { label: null, id: "1", icon: null, page: null };
-  const intl3 = tmp4(1236).intl;
+  const intl3 = tmp4(1233).intl;
   obj2[0] = intl3.string(getSystemLocale.t.Rxe3jF);
   const obj3 = { source: registerAssetDefault3, style: null };
   const items3 = [tmp.icon, ];
@@ -82,7 +82,7 @@ function ContentSettingsControl(initialValue) {
   let num = 0;
   if (generateHydrationId.ICYMICustomScore.LESS !== tmp3) {
     num = 1;
-    if (tmp4(8621).ICYMICustomScore.MORE === tmp3) {
+    if (tmp4(8636).ICYMICustomScore.MORE === tmp3) {
       num = 2;
     }
   }
@@ -121,13 +121,13 @@ export const GuildScoreSettings = function GuildScoreSettings(guild) {
   let id;
   c1 = undefined;
   id = guild.id;
-  let obj = id(589);
+  let obj = id(586);
   const items = [closure_7];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getCustomGuildScore(id));
-  obj1 = id(8621);
+  obj1 = id(8636);
   const numberToCustomScoreResult = obj1.numberToCustomScore(stateFromStores);
   c1 = numberToCustomScoreResult;
-  const tmp5 = numberToCustomScoreResult === id(8621).ICYMICustomScore.MUTED;
+  const tmp5 = numberToCustomScoreResult === id(8636).ICYMICustomScore.MUTED;
   const items1 = [id];
   const items2 = [numberToCustomScoreResult, id];
   const callback = React.useCallback((arg0) => {
@@ -155,13 +155,13 @@ export const GuildScoreSettings = function GuildScoreSettings(guild) {
   }, items2);
   const tmp8 = callback3();
   obj = { variant: "text-sm/semibold", color: "text-default", children: null };
-  const intl = id(1236).intl;
-  obj[2] = intl.string(id(1236).t.Clq6km);
+  const intl = id(1233).intl;
+  obj[2] = intl.string(id(1233).t.Clq6km);
   const items3 = [callback2(id(4474).Text, obj), , , , ];
   obj = { variant: "text-xs/normal", color: "text-default", children: null };
-  const intl2 = id(1236).intl;
+  const intl2 = id(1233).intl;
   obj1 = { guildName: guild.name };
-  obj[2] = intl2.format(id(1236).t["0DhU2P"], obj1);
+  obj[2] = intl2.format(id(1233).t["0DhU2P"], obj1);
   items3[1] = callback2(id(4474).Text, obj);
   let tmp11Result = null;
   if (!tmp5) {
@@ -181,13 +181,13 @@ export const GuildScoreSettings = function GuildScoreSettings(guild) {
   const obj4 = { children: null };
   const obj5 = { style: muted, children: null };
   const obj6 = { value: !tmp5, onValueChange: callback, label: null, start: true, end: true };
-  const intl3 = tmp(1236).intl;
-  obj6[2] = intl3.string(id(1236).t.oujX73);
-  obj5[1] = callback2(id(5993).TableSwitchRow, obj6);
+  const intl3 = tmp(1233).intl;
+  obj6[2] = intl3.string(id(1233).t.oujX73);
+  obj5[1] = callback2(id(6001).TableSwitchRow, obj6);
   items3[3] = callback2(View, obj5);
   const obj7 = { variant: "text-xs/normal", color: "text-muted", style: tmp8.warningText, children: null };
-  const intl4 = tmp(1236).intl;
-  obj7[3] = intl4.string(id(1236).t.vRVs07);
+  const intl4 = tmp(1233).intl;
+  obj7[3] = intl4.string(id(1233).t.vRVs07);
   items3[4] = callback2(id(4474).Text, obj7);
   obj4[0] = items3;
   return closure_9(View, obj4);

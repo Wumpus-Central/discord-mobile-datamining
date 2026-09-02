@@ -1,8 +1,8 @@
-// === Module 6174: isChannelSpoilerGated ===
+// === Module 6182: isChannelSpoilerGated ===
 
-// Module 6174 (isChannelSpoilerGated)
-import closure_2 from "ensureGuildLoaded" /* 1387 */;
-import closure_3 from "initialize" /* 6175 */;
+// Module 6182 (isChannelSpoilerGated)
+import closure_2 from "ensureGuildLoaded" /* 1386 */;
+import closure_3 from "initialize" /* 6183 */;
 
 const require = arg1;
 function isChannelSpoilerGated(channel) {
@@ -53,7 +53,7 @@ export const useGetSpoilerGatingChannelId = function useGetSpoilerGatingChannelI
   const _require = stateFromStores;
   const items = [closure_3, closure_2];
   const items1 = [stateFromStores];
-  return _require(589).useStateFromStores(items, () => {
+  return _require(586).useStateFromStores(items, () => {
     if (closure_1_3 !== undefined) {
       if (obj3 !== undefined) {
         let id1 = null;
@@ -91,13 +91,13 @@ export const useIsChannelSpoilerGated = function useIsChannelSpoilerGated(channe
   const _require = channel;
   const items = [closure_3, closure_2];
   const items1 = [channel];
-  return _require(589).useStateFromStores(items, () => closure_1_4(closure_0, closure_1_3, closure_1_2), items1);
+  return _require(586).useStateFromStores(items, () => closure_1_4(closure_0, closure_1_3, closure_1_2), items1);
 };
 export const useShouldShowSpoilerGateForChannelId = function useShouldShowSpoilerGateForChannelId(arg0) {
   const _require = arg0;
   const items = [closure_2, closure_3];
   const items1 = [arg0];
-  return _require(589).useStateFromStores(items, () => closure_1_4(closure_1_2.getChannel(closure_0), closure_1_3, closure_1_2), items1);
+  return _require(586).useStateFromStores(items, () => closure_1_4(closure_1_2.getChannel(closure_0), closure_1_3, closure_1_2), items1);
 };
 export const shouldShowSpoilerGateForChannelId = function shouldShowSpoilerGateForChannelId(channelId) {
   let tmp = null != channelId;

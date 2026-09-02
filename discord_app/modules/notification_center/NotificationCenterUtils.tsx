@@ -1,12 +1,12 @@
-// === Module 7386: getRelativeTimestamp ===
+// === Module 7395: getRelativeTimestamp ===
 
-// Module 7386 (getRelativeTimestamp)
+// Module 7395 (getRelativeTimestamp)
 import set from "set" /* 2 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import NotificationCenterScenes from "NotificationCenterScenes" /* 7385 */;
-import getDurationString from "getDurationString" /* 7387 */;
-import getDurationStringDefault from "getDurationString" /* 7387 */;
+import NotificationCenterScenes from "NotificationCenterScenes" /* 7394 */;
+import getDurationString from "getDurationString" /* 7396 */;
+import getDurationStringDefault from "getDurationString" /* 7396 */;
 
 const result = set.fileFinishedImporting("modules/notification_center/NotificationCenterUtils.tsx");
 

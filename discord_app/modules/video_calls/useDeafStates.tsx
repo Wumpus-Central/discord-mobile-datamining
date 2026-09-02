@@ -1,7 +1,7 @@
-// === Module 10101: useDeafStates ===
+// === Module 10123: useDeafStates ===
 
-// Module 10101 (useDeafStates)
-import closure_2 from "fetchFingerprint" /* 1218 */;
+// Module 10123 (useDeafStates)
+import closure_2 from "fetchFingerprint" /* 1215 */;
 import closure_3 from "_detectH265HardwareDecode" /* 4529 */;
 import closure_4 from "updateVoiceState" /* 4497 */;
 
@@ -12,7 +12,7 @@ export default function useDeafStates(arg0) {
   const _require = arg0;
   const items = [closure_4, closure_3, closure_2];
   const items1 = [arg0];
-  return _require(589).useStateFromStoresObject(items, () => {
+  return _require(586).useStateFromStoresObject(items, () => {
     let obj = closure_0;
     if (closure_1_4 !== undefined) {
       if (obj3 !== undefined) {

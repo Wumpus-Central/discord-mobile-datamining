@@ -1,11 +1,11 @@
-// === Module 16992: handleConnectionOpen ===
+// === Module 17228: handleConnectionOpen ===
 
-// Module 16992 (handleConnectionOpen)
-import initializeDefault from "initialize" /* 5486 */;
-import handleLogoutDefault from "handleLogout" /* 6052 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import closure_4 from "handleUpdateUser" /* 1380 */;
-import ME from "ME" /* 676 */;
+// Module 17228 (handleConnectionOpen)
+import initializeDefault from "initialize" /* 5494 */;
+import handleLogoutDefault from "handleLogout" /* 6060 */;
+import closure_3 from "mergeGuildAvatar" /* 1921 */;
+import closure_4 from "handleUpdateUser" /* 1379 */;
+import ME from "ME" /* 673 */;
 
 const require = arg1;
 ({ LoginRequiredActions: c5, Routes: closure_6, UserSettingsSections: error } = ME);
@@ -35,8 +35,8 @@ LoginRequiredActionManager.prototype["handleConnectionOpen"] = function handleCo
             const obj = closure_1_1(closure_1_2[5]);
           }
         };
-        currentUser(6245).openUserSettings(obj);
-        const obj2 = currentUser(6245);
+        currentUser(6254).openUserSettings(obj);
+        const obj2 = currentUser(6254);
       }
     }
     if (result1) {

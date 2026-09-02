@@ -1,12 +1,12 @@
-// === Module 9706: ? ===
+// === Module 9720: ? ===
 
-// Module 9706
+// Module 9720
 import set from "set" /* 2 */;
-import createChannelRecord from "createChannelRecord" /* 1391 */;
+import createChannelRecord from "createChannelRecord" /* 1390 */;
 import _modDef4723 from "module_4723" /* 4723 */;
-import closure_4 from "ensureGuildLoaded" /* 1387 */;
+import closure_4 from "ensureGuildLoaded" /* 1386 */;
 
-let closure_3 = createChannelRecord.CREATEABLE_NON_VOCAL_CHANNEL_NAME_TYPES;
+const isGuildReadableType = createChannelRecord.isGuildReadableType;
 const CREATE_CHANNEL_MODAL_KEY = "CREATE_CHANNEL_MODAL_KEY";
 const result = set.fileFinishedImporting("actions/native/CreateChannelModalActionCreators.tsx");
 
@@ -25,19 +25,19 @@ export default {
       obj[4] = function onChannelCreated(id) {
         self.close();
         const channel = closure_1_4.getChannel(id);
-        let hasItem = null != arg1 && null != channel;
-        if (hasItem) {
-          hasItem = closure_1_3.has(channel.type);
+        let tmp3 = null != arg1 && null != channel;
+        if (tmp3) {
+          tmp3 = closure_1_3(channel.type);
         }
-        if (hasItem) {
+        if (tmp3) {
           self(closure_1_2[2]).transitionToChannel(id);
           const obj = self(closure_1_2[2]);
         }
       };
-      obj2.pushLazy(self(2009)(9702, dependencyMap.paths), obj, CREATE_CHANNEL_MODAL_KEY);
+      obj2.pushLazy(self(2008)(9715, dependencyMap.paths), obj, CREATE_CHANNEL_MODAL_KEY);
       const tmp2 = arg2;
-      const tmp3 = arg3;
-      const tmp9 = self(2009)(9702, dependencyMap.paths);
+      let tmp3 = arg3;
+      const tmp9 = self(2008)(9715, dependencyMap.paths);
     }
   },
   close() {

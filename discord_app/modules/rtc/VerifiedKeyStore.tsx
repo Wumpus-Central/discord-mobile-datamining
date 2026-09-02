@@ -1,10 +1,10 @@
-// === Module 9823: initialize ===
+// === Module 9845: initialize ===
 
-// Module 9823 (initialize)
+// Module 9845 (initialize)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import set from "set" /* 9824 */;
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import set from "set" /* 9846 */;
 
 require = arg1;
 let closure_3 = {};

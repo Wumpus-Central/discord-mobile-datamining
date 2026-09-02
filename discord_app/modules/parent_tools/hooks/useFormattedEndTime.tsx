@@ -1,8 +1,8 @@
-// === Module 16873: useFormattedEndTime ===
+// === Module 17109: useFormattedEndTime ===
 
-// Module 16873 (useFormattedEndTime)
-import initialize from "initialize" /* 589 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+// Module 17109 (useFormattedEndTime)
+import initialize from "initialize" /* 586 */;
+import closure_2 from "mergeGuildAvatar" /* 1921 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useFormattedEndTime.tsx");

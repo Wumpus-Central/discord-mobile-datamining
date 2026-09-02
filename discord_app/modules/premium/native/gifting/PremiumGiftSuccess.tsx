@@ -1,11 +1,11 @@
-// === Module 10818: PremiumGiftSuccess ===
+// === Module 11038: PremiumGiftSuccess ===
 
-// Module 10818 (PremiumGiftSuccess)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 11038 (PremiumGiftSuccess)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "createEmptyPromotionsByType" /* 10475 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1384 */;
+import closure_5 from "createEmptyPromotionsByType" /* 10696 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

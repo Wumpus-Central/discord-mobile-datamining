@@ -1,10 +1,10 @@
-// === Module 11612: useActivityShelfData ===
+// === Module 11835: useActivityShelfData ===
 
-// Module 11612 (useActivityShelfData)
+// Module 11835 (useActivityShelfData)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "reset" /* 8499 */;
-import closure_6 from "participantFromServer" /* 1386 */;
+import closure_4 from "mergeGuildAvatar" /* 1921 */;
+import closure_5 from "reset" /* 8512 */;
+import closure_6 from "participantFromServer" /* 1385 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/activities/useActivityShelfData.tsx");
@@ -75,8 +75,8 @@ export const useActivityShelfData = function useActivityShelfData(guildId) {
       if (supported_platforms == null) {
         supported_platforms = [];
       }
-      const tmp = lib(8437);
-      return supported_platforms.includes(tmp(callback(500).getOS()));
+      const tmp = lib(8446);
+      return supported_platforms.includes(tmp(callback(1234).getOS()));
     });
     const found1 = found.filter((activity) => {
       const requires_age_gate = activity.activity.requires_age_gate;

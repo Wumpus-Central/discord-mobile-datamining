@@ -1,7 +1,7 @@
-// === Module 16478: HiddenMedia ===
+// === Module 16713: HiddenMedia ===
 
-// Module 16478 (HiddenMedia)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 16713 (HiddenMedia)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "reinjectEphemerals" /* 4735 */;
@@ -30,8 +30,8 @@ function HiddenMedia(length) {
   obj = { style: tmp.mediaHiddenRow, children: null };
   const items1 = [callback(_require(4433).CircleInformationIcon, { size: "sm", color: "text-muted" }), ];
   obj = { variant: "text-sm/normal", color: "text-muted", children: null };
-  let intl = _require(1236).intl;
-  obj[2] = intl.string(_require(1236).t["VGf+K3"]);
+  let intl = _require(1233).intl;
+  obj[2] = intl.string(_require(1233).t["VGf+K3"]);
   items1[1] = callback(_require(4474).Text, obj);
   obj[1] = items1;
   items[1] = callback2(View, obj);

@@ -1,6 +1,6 @@
-// === Module 643: shallowEqual ===
+// === Module 640: shallowEqual ===
 
-// Module 643 (shallowEqual)
+// Module 640 (shallowEqual)
 import set from "set" /* 2 */;
 
 let closure_0 = {};

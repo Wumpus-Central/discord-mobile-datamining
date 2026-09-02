@@ -1,6 +1,6 @@
-// === Module 11911: ANSWER_IN_REGEX ===
+// === Module 12134: ANSWER_IN_REGEX ===
 
-// Module 11911 (ANSWER_IN_REGEX)
+// Module 12134 (ANSWER_IN_REGEX)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/search/tokens/SearchTokensUtils.tsx");

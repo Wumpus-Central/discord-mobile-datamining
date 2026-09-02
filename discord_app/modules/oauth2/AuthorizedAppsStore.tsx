@@ -1,12 +1,12 @@
-// === Module 5475: recomputeFromAppTokens ===
+// === Module 5483: recomputeFromAppTokens ===
 
-// Module 5475 (recomputeFromAppTokens)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1471 */;
+// Module 5483 (recomputeFromAppTokens)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "ensureGuildLoaded" /* 1387 */;
-import closure_4 from "isConnected" /* 5476 */;
+import closure_3 from "ensureGuildLoaded" /* 1386 */;
+import closure_4 from "isConnected" /* 5484 */;
 import closure_5 from "reinjectEphemerals" /* 4735 */;
 
 require = arg1;

@@ -1,6 +1,6 @@
-// === Module 13455: canSpectate ===
+// === Module 13678: canSpectate ===
 
-// Module 13455 (canSpectate)
+// Module 13678 (canSpectate)
 import set from "set" /* 2 */;
 import DesktopSources from "DesktopSources" /* 4542 */;
 

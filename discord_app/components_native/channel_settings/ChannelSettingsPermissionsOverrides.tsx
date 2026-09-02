@@ -1,33 +1,33 @@
-// === Module 16409: ChannelSettingsPermissionsOverrides ===
+// === Module 16644: ChannelSettingsPermissionsOverrides ===
 
-// Module 16409 (ChannelSettingsPermissionsOverrides)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 16644 (ChannelSettingsPermissionsOverrides)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
 import closure_6 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { isGuildOwner } from "GuildNSFWContentLevel" /* 1430 */;
-import closure_10 from "ensureGuildLoaded" /* 1387 */;
-import closure_11 from "createGuildRoleRecordFromRust" /* 1985 */;
-import closure_12 from "createGuildRecordFromRust" /* 1909 */;
-import closure_13 from "getUncachedChannelPermissions" /* 4121 */;
+import { isGuildOwner } from "GuildNSFWContentLevel" /* 1429 */;
+import closure_10 from "ensureGuildLoaded" /* 1386 */;
+import closure_11 from "createGuildRoleRecordFromRust" /* 1984 */;
+import closure_12 from "createGuildRecordFromRust" /* 1908 */;
+import closure_13 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_14 from "markAllUserIdListsStale" /* 4130 */;
-import closure_15 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import closure_15 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
 const require = arg1;
 ({ View: error, ScrollView: closure_8 } = get_ActivityIndicator);
 ({ PermissionOverrideType: closure_16, HelpdeskArticles: closure_17, Permissions: closure_18 } = ME);
-({ jsx: closure_19, jsxs: closure_20 } = jsxProd);
+({ jsx: closure_19, Fragment: closure_20, jsxs: closure_21 } = jsxProd);
 createCacheKey = { container: null, containerContent: null, section: null };
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingTop: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_12 };
 let obj1 = { paddingTop: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_12 };
 createCacheKey[2] = { marginBottom: ThemesDefault.space.PX_16 };
-let closure_21 = createCacheKey.createStyles(createCacheKey);
+let closure_22 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { marginBottom: ThemesDefault.space.PX_16 };
 const result = require("set").fileFinishedImporting("components_native/channel_settings/ChannelSettingsPermissionsOverrides.tsx");
 
@@ -40,34 +40,44 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
   let React;
   closure_7 = undefined;
   closure_8 = undefined;
+  closure_9 = undefined;
   let first;
-  const tmp = callback5();
+  let tmp = callback4();
   dependencyMap = tmp;
-  let obj = _require(1499);
+  let obj = _require(1498);
   const navigation = obj.useNavigation();
   callback = navigation;
-  obj1 = _require(589);
-  const items = [closure_10];
-  const stateFromStores = obj1.useStateFromStores(items, () => closure_1_10.getChannel(closure_0));
+  obj1 = _require(586);
+  let items = [first];
+  const stateFromStores = obj1.useStateFromStores(items, () => first.getChannel(closure_0));
   callback2 = stateFromStores;
+  let obj2 = _require(11420);
+  const appChannelApplication = obj2.useAppChannelApplication(stateFromStores);
+  let obj3 = _require(11419);
+  const appChannelBotUserId = obj3.useAppChannelBotUserId(stateFromStores);
+  React = appChannelBotUserId;
+  let tmp9 = null;
+  if (appChannelBotUserId === id) {
+    tmp9 = appChannelApplication;
+  }
   _require = undefined;
   _require = callback2((arg0, arg1) => {
     closure_0 = arg0;
     closure_1 = arg1;
     let name = 0;
     c5 = 0;
-    return (function*(guild_id) {
+    return (function*(guildId1) {
       if (c5 === 2) {
         c5 = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
       } else {
         throwTypeErrorResult = arg1;
-        throwTypeErrorResult = guild_id;
+        throwTypeErrorResult = guildId1;
         throwTypeErrorResult = tmp3;
         if (tmp4 === 3) {
-          if (guild_id === 1) {
+          if (guildId1 === 1) {
             throw arg1;
-          } else if (guild_id === 2) {
+          } else if (guildId1 === 2) {
             let obj = { value: null, done: true };
             obj[0] = arg1;
             return obj;
@@ -78,10 +88,10 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
           try {
             c5 = 2;
             if (0 === c4) {
-              if (guild_id === 1) {
+              if (guildId1 === 1) {
                 c5 = 3;
                 throw arg1;
-              } else if (guild_id === 2) {
+              } else if (guildId1 === 2) {
                 c5 = 3;
                 obj = { value: null, done: true };
                 obj[0] = arg1;
@@ -111,30 +121,30 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
                   tmp6 = throwTypeErrorResult;
                 }
                 if (tmp6) {
-                  obj1 = fromCreate(4126);
+                  obj1 = fromCreate(4125);
                   everyoneOverwrite = obj1.makeEveryoneOverwrite(throwTypeErrorResult);
                   tmp10 = everyoneOverwrite;
                 }
                 obj1 = {};
                 const merged = Object.assign(tmp10);
-                let obj3 = fromCreate(506);
+                let obj3 = fromCreate(503);
                 obj1.deny = obj3.remove(obj1.deny, throwTypeErrorResult);
-                let obj4 = fromCreate(506);
+                let obj4 = fromCreate(503);
                 obj1.allow = obj4.remove(obj1.allow, throwTypeErrorResult);
-                if (throwTypeErrorResult === callback(4126).ALLOW) {
-                  obj1.allow = fromCreate(506).add(obj1.allow, throwTypeErrorResult);
-                  const obj9 = fromCreate(506);
+                if (throwTypeErrorResult === callback(4125).ALLOW) {
+                  obj1.allow = fromCreate(503).add(obj1.allow, throwTypeErrorResult);
+                  const obj9 = fromCreate(503);
                 } else {
                   throwTypeErrorResult = callback;
                   throwTypeErrorResult = dependencyMap;
-                  if (throwTypeErrorResult === callback(4126).DENY) {
+                  if (throwTypeErrorResult === callback(4125).DENY) {
                     throwTypeErrorResult = c5;
                     if (null != c5.guild_id) {
                       if (throwTypeErrorResult) {
                         c4 = 1;
                         c5 = 1;
                         const obj2 = { value: null, done: false };
-                        obj2[0] = callback(9709).checkChattableChannelThresholdMetAfterChannelPermissionDeny(c5, throwTypeErrorResult);
+                        obj2[0] = callback(9723).checkChattableChannelThresholdMetAfterChannelPermissionDeny(c5, throwTypeErrorResult);
                         return obj2;
                       }
                     }
@@ -154,15 +164,15 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
                   if (!closure_1) {
                     if (!obj11.has(closure_1_2.allow, callback)) {
                       if (!obj12.has(closure_1_2.deny, callback)) {
-                        closure_1_6(callback, callback(4126).ALLOW);
+                        closure_1_7(callback, callback(4125).ALLOW);
                       }
-                      obj12 = fromCreate(506);
+                      obj12 = fromCreate(503);
                     }
-                    obj11 = fromCreate(506);
+                    obj11 = fromCreate(503);
                   }
                 }
                 const type = fromCreate.type;
-                if (callback(1955).PermissionOverwriteType.MEMBER === type) {
+                if (callback(1954).PermissionOverwriteType.MEMBER === type) {
                   const user = closure_2_15.getUser(fromCreate.id);
                   if (null != user) {
                     const name2 = id(4322).getName(user);
@@ -172,7 +182,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
                   throwTypeErrorResult = obj1;
                   throwTypeErrorResult = callback;
                   throwTypeErrorResult = dependencyMap;
-                  if (callback(1955).PermissionOverwriteType.ROLE === type) {
+                  if (callback(1954).PermissionOverwriteType.ROLE === type) {
                     id = closure_2_12.getGuild(c5.guild_id);
                     if (null != id) {
                       throwTypeErrorResult = everyoneOverwrite;
@@ -191,38 +201,38 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
                   }
                 }
                 obj4 = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null };
-                const intl = callback(1236).intl;
-                obj4[0] = intl.string(callback(1236).t.vElC9b);
-                const intl2 = callback(1236).intl;
+                const intl = callback(1233).intl;
+                obj4[0] = intl.string(callback(1233).t.vElC9b);
+                const intl2 = callback(1233).intl;
                 throwTypeErrorResult = callback;
                 throwTypeErrorResult = dependencyMap;
                 let obj5 = { name: null };
                 throwTypeErrorResult = c4;
                 obj5[0] = c4;
-                obj4[1] = intl2.format(callback(1236).t.yslqFM, obj5);
+                obj4[1] = intl2.format(callback(1233).t.yslqFM, obj5);
                 throwTypeErrorResult = callback;
                 throwTypeErrorResult = dependencyMap;
-                const intl3 = callback(1236).intl;
+                const intl3 = callback(1233).intl;
                 throwTypeErrorResult = callback;
                 throwTypeErrorResult = dependencyMap;
-                obj4[2] = intl3.string(callback(1236).t["ETE/oC"]);
+                obj4[2] = intl3.string(callback(1233).t["ETE/oC"]);
                 throwTypeErrorResult = callback;
                 throwTypeErrorResult = dependencyMap;
-                const intl4 = callback(1236).intl;
+                const intl4 = callback(1233).intl;
                 throwTypeErrorResult = callback;
                 throwTypeErrorResult = dependencyMap;
-                obj4[3] = intl4.string(callback(1236).t.psXQHP);
+                obj4[3] = intl4.string(callback(1233).t.psXQHP);
                 obj4[4] = function onConfirm() {
-                  const obj = _undefined(obj1[26]);
-                  obj.openURL(_undefined(obj1[27]).getArticleURL(constants.PERMISSIONS_LOCKOUT));
+                  const obj = _undefined(obj1[28]);
+                  obj.openURL(_undefined(obj1[29]).getArticleURL(constants.PERMISSIONS_LOCKOUT));
                 };
                 throwTypeErrorResult = id(4857).show(obj4);
                 const obj14 = id(4857);
               }
-            } else if (guild_id === 1) {
+            } else if (guildId1 === 1) {
               c5 = 3;
               throw arg1;
-            } else if (guild_id === 2) {
+            } else if (guildId1 === 2) {
               c5 = 3;
               obj = { value: null, done: true };
               obj[0] = arg1;
@@ -231,7 +241,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
               c5 = 3;
               return { value: "HermesInternal", done: null };
             }
-            obj5 = fromCreate(506);
+            obj5 = fromCreate(503);
             obj1.deny = obj5.add(obj1.deny, callback);
           } catch (throwTypeErrorResult) {
             c5 = throwTypeErrorResult;
@@ -242,7 +252,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
     })();
   });
   const items1 = [stateFromStores, id];
-  React = React.useCallback(function() {
+  closure_7 = React.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -252,13 +262,13 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
     }
     return applyArgumentsResult;
   }, items1);
-  const items2 = [stateFromStores];
-  closure_7 = React.useCallback((arg0) => {
+  const items2 = [stateFromStores, id, appChannelBotUserId];
+  closure_8 = React.useCallback((arg0) => {
     const guild = closure_1_12.getGuild(closure_5.guild_id);
     const currentUser = closure_1_15.getCurrentUser();
     if (null != guild) {
       if (null != currentUser) {
-        let canResult = first(guild, currentUser);
+        let canResult = callback2(guild, currentUser);
         if (!canResult) {
           canResult = closure_1_13.can(closure_1_18.ADMINISTRATOR, guild);
         }
@@ -266,53 +276,59 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
           canResult = closure_1_13.can(closure_1_18.MANAGE_ROLES, obj, undefined, undefined, true);
         }
         if (obj.isGuildStageVoice()) {
-          const STAGE_CHANNEL_DISABLED_PERMISSIONS = callback(section[28]).STAGE_CHANNEL_DISABLED_PERMISSIONS;
+          const STAGE_CHANNEL_DISABLED_PERMISSIONS = callback(section[30]).STAGE_CHANNEL_DISABLED_PERMISSIONS;
           if (STAGE_CHANNEL_DISABLED_PERMISSIONS.has(arg0)) {
-            const intl2 = tmp11(tmp12[25]).intl;
-            let stringResult = intl2.string(tmp11(tmp12[25]).t.bTS5lf);
+            const intl3 = tmp11(tmp12[27]).intl;
+            let stringResult = intl3.string(tmp11(tmp12[27]).t.bTS5lf);
           }
           return stringResult;
         }
-        stringResult = arg0 === closure_1_18.MANAGE_ROLES && !canResult;
-        if (!stringResult) {
-          let tmp15 = null != arg0;
-          if (tmp15) {
-            tmp15 = !closure_1_13.can(arg0, guild);
+        if (obj2.isAppChannelFloorPermission(closure_6, id, arg0)) {
+          const intl2 = tmp13(tmp14[27]).intl;
+          stringResult = intl2.string(tmp13(tmp14[27]).t.yXmgpP);
+        } else {
+          stringResult = arg0 === closure_1_18.MANAGE_ROLES && !canResult;
+          if (!stringResult) {
+            let tmp19 = null != arg0;
+            if (tmp19) {
+              tmp19 = !closure_1_13.can(arg0, guild);
+            }
+            if (tmp19) {
+              tmp19 = !canResult;
+            }
+            stringResult = tmp19;
           }
-          if (tmp15) {
-            tmp15 = !canResult;
+          if (stringResult) {
+            const intl = tmp13(tmp14[27]).intl;
+            stringResult = intl.string(tmp13(tmp14[27]).t.nOtPMM);
           }
-          stringResult = tmp15;
         }
-        if (stringResult) {
-          const intl = callback(section[25]).intl;
-          stringResult = intl.string(callback(section[25]).t.nOtPMM);
-        }
+        obj2 = callback(section[19]);
       }
     }
     return false;
   }, items2);
   const items3 = [stateFromStores, id];
-  closure_8 = React.useCallback((arg0) => {
+  closure_9 = React.useCallback((arg0) => {
     let allow;
     if (closure_5.permissionOverwrites[id] != null) {
       allow = tmp.allow;
     }
     if (obj.has(allow, arg0)) {
-      let ALLOW = callback(tmp3[18]).ALLOW;
+      let ALLOW = callback(tmp3[20]).ALLOW;
     } else {
       let deny;
       if (tmp != null) {
         deny = tmp.deny;
       }
-      const hasItem = fromCreate(tmp3[19]).has(deny, arg0);
-      const tmp8 = callback(tmp3[18]);
+      const hasItem = fromCreate(tmp3[21]).has(deny, arg0);
+      const tmp8 = callback(tmp3[20]);
       ALLOW = hasItem ? tmp8.DENY : tmp8.PASSTHROUGH;
-      const tmp2Result = fromCreate(tmp3[19]);
+      const tmp2Result = fromCreate(tmp3[21]);
     }
     return ALLOW;
   }, items3);
-  first = callback(React.useState(() => id(section[29]).generateChannelPermissionSpec(closure_5.guild_id, closure_5, id === closure_5.guild_id)), 2)[0];
+  first = callback(React.useState(() => id(section[31]).generateChannelPermissionSpec(closure_5.guild_id, closure_5, id === closure_5.guild_id)), 2)[0];
   const items4 = [fromCreate, navigation];
   const effect = React.useEffect(() => {
     if (fromCreate) {
@@ -324,23 +340,24 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
           },
           label: null
         };
-        const intl = closure_1_0(closure_1_3[25]).intl;
-        obj[1] = intl.string(closure_1_0(closure_1_3[25]).t.i4jeWR);
-        return closure_1_19(closure_1_0(closure_1_3[30]).HeaderTextButton, obj);
+        const intl = closure_1_0(closure_1_3[27]).intl;
+        obj[1] = intl.string(closure_1_0(closure_1_3[27]).t.i4jeWR);
+        return closure_1_19(closure_1_0(closure_1_3[32]).HeaderTextButton, obj);
       };
       options.setOptions(obj);
     }
   }, items4);
   obj = { variant: "text-md/medium", color: "text-muted", children: null };
-  let obj3 = _require(4674);
-  obj[2] = obj3.computeChannelName(stateFromStores, closure_15, closure_14, true);
-  let tmp10 = callback3(_require(4474).Text, obj);
+  let tmp10 = callback(React.useState(() => id(section[31]).generateChannelPermissionSpec(closure_5.guild_id, closure_5, id === closure_5.guild_id)), 2);
+  const tmp5 = id;
+  obj[2] = _require(4674).computeChannelName(stateFromStores, closure_15, closure_14, true);
+  const tmp13 = callback3(_require(4474).Text, obj);
   if (fromCreate.type === constants.MEMBER) {
     obj = { userId: null, guildId: null, start: true, end: true, trailing: null };
     obj[0] = id;
     obj[1] = stateFromStores.guild_id;
-    obj[4] = tmp10;
-    let tmp9Result = tmp9(id(10679), obj);
+    obj[4] = tmp13;
+    let tmp12Result = tmp12(tmp5(10900), obj);
   } else {
     role = role.getRole(stateFromStores.guild_id, id);
     let str;
@@ -352,51 +369,73 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
     }
     obj1 = { end: true, label: null, start: true, trailing: null };
     obj1[1] = str;
-    obj1[3] = tmp10;
-    tmp9Result = tmp9(_require(5599).TableRow, obj1);
+    obj1[3] = tmp13;
+    tmp12Result = tmp12(tmp2(5607).TableRow, obj1);
   }
-  let obj2 = { style: tmp.container, contentContainerStyle: items5, children: null };
-  items5 = [tmp.containerContent, { paddingBottom: tmp.containerContent.paddingBottom + id(1628)().bottom }];
-  obj3 = { style: tmp.section, children: tmp9Result };
-  const items6 = [
-    callback3(closure_7, obj3),
-    first.map((permissions) => {
-      permissions = permissions.permissions;
-      let obj = { style: section.section, children: null };
-      let title;
-      if (first.length > 1) {
-        title = permissions.title;
-      }
-      obj = {
-        title,
-        hasIcons: false,
-        children: permissions.map((description) => {
-          ({ title, flag } = description);
-          let flag2 = callback(flag);
-          if (flag2 == null) {
-            flag2 = false;
+  obj2 = { style: tmp.container, contentContainerStyle: items5, children: null };
+  items5 = [tmp.containerContent, { paddingBottom: tmp.containerContent.paddingBottom + id(1627)().bottom }];
+  obj3 = { style: tmp.section, children: tmp12Result };
+  const items6 = [callback3(closure_7, obj3), , ];
+  tmp12Result = null;
+  if (null != tmp9) {
+    let obj4 = { style: null, children: null };
+    obj4[0] = tmp.section;
+    let obj5 = { messageType: null, children: null };
+    obj5[0] = tmp2(1296).HelpMessageTypes.INFO;
+    let intl = tmp2(1233).intl;
+    const obj6 = { appName: null };
+    obj6[0] = tmp9.name;
+    obj5[1] = intl.format(tmp2(1233).t["Xq++FA"], obj6);
+    obj4[1] = tmp12(tmp2(1296).HelpMessage, obj5);
+    tmp12Result = tmp12(closure_7, obj4);
+  }
+  items6[1] = tmp12Result;
+  items6[2] = first.map((permissions) => {
+    permissions = permissions.permissions;
+    let obj = { style: section.section, children: null };
+    let title;
+    if (first.length > 1) {
+      title = permissions.title;
+    }
+    obj = {
+      title,
+      hasIcons: false,
+      children: permissions.map((description) => {
+        ({ title, flag } = description);
+        const tmp = callback(flag);
+        let obj = { variant: "text-xs/medium", color: "text-subtle", children: null };
+        obj1 = closure_1_0(closure_1_3[39]);
+        obj[2] = obj1.renderDescription(description.description);
+        const items = [closure_1_19(closure_1_0(closure_1_3[33]).Text, obj), ];
+        let tmp5Result = null;
+        if (false !== tmp) {
+          tmp5Result = null;
+          if ("" !== tmp) {
+            obj = { variant: "text-xs/medium", color: "text-feedback-critical", children: null };
+            obj[2] = tmp;
+            tmp5Result = tmp5(tmp6(tmp7[33]).Text, obj);
           }
-          let obj = { variant: "text-xs/medium", color: "text-subtle", children: closure_1_0(closure_1_3[36]).renderDescription(description.description) };
-          const obj2 = closure_1_0(closure_1_3[36]);
-          const tmp2 = closure_1_3;
-          const tmp3 = closure_1_19(closure_1_0(closure_1_3[31]).Text, obj);
-          const obj3 = closure_1_0(closure_1_3[37]);
-          obj = { accessible: closure_1_0(closure_1_3[37]).isAndroid() || undefined, disabled: tmp5, label: title, subLabel: tmp3, trailing: null };
-          obj = { permissionTitle: title, value: null, disabled: null, onValueChange: null };
-          const tmp4 = closure_1_0(closure_1_3[37]).isAndroid() || undefined;
-          obj[1] = callback2(flag);
-          obj[2] = false !== flag2;
-          obj[3] = function onValueChange(arg0) {
-            closure_1_6(flag, arg0);
-          };
-          obj[4] = closure_1_19(closure_1_1(tmp2[38]), obj);
-          return closure_1_19(closure_1_0(closure_1_3[34]).TableRow, obj, "row-" + arg1);
-        })
-      };
-      obj[1] = closure_1_19(callback(section[35]).TableRowGroup, obj);
-      return closure_1_19(closure_7, obj, "section-" + arg1);
-    })
-  ];
+        }
+        items[1] = tmp5Result;
+        const tmp3 = closure_1_21;
+        const tmp3Result = closure_1_21(closure_1_20, { children: items });
+        const tmp4 = closure_1_20;
+        const tmp6Result = closure_1_0(closure_1_3[40]);
+        obj = { accessible: closure_1_0(closure_1_3[40]).isAndroid() || undefined, disabled: tmp2, label: title, subLabel: tmp3Result, trailing: null };
+        obj1 = { permissionTitle: title, value: null, disabled: null, onValueChange: null };
+        const tmp10 = closure_1_0(closure_1_3[40]).isAndroid() || undefined;
+        obj1[1] = callback2(flag);
+        obj1[2] = false !== tmp;
+        obj1[3] = function onValueChange(arg0) {
+          closure_1_7(flag, arg0);
+        };
+        obj[4] = closure_1_19(closure_1_1(closure_1_3[41]), obj1);
+        return closure_1_19(closure_1_0(closure_1_3[36]).TableRow, obj, "row-" + arg1);
+      })
+    };
+    obj[1] = closure_1_19(callback(section[38]).TableRowGroup, obj);
+    return closure_1_19(closure_7, obj, "section-" + arg1);
+  });
   obj2[2] = items6;
-  return callback4(closure_8, obj2);
+  return closure_21(closure_8, obj2);
 };

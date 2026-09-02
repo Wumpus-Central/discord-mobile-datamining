@@ -1,6 +1,6 @@
-// === Module 15639: useMessagesScrollToTop ===
+// === Module 15870: useMessagesScrollToTop ===
 
-// Module 15639 (useMessagesScrollToTop)
+// Module 15870 (useMessagesScrollToTop)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 
@@ -40,5 +40,5 @@ export default function useMessagesScrollToTop(listRef) {
       }
     }
   }), items));
-  const scrollToTop = listRef(1500).useScrollToTop(ref);
+  const scrollToTop = listRef(1499).useScrollToTop(ref);
 };

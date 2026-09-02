@@ -1,15 +1,15 @@
-// === Module 11667: LearnMoreAboutAppsSection ===
+// === Module 11890: LearnMoreAboutAppsSection ===
 
-// Module 11667 (LearnMoreAboutAppsSection)
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 11890 (LearnMoreAboutAppsSection)
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Text from "Text" /* 4474 */;
-import PressableBase from "PressableBase" /* 5068 */;
-import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 8435 */;
-import TrackSectionHeaderDefault from "TrackSectionHeader" /* 11668 */;
+import PressableBase from "PressableBase" /* 5076 */;
+import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 8444 */;
+import TrackSectionHeaderDefault from "TrackSectionHeader" /* 11891 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { HelpdeskArticles } from "ME" /* 676 */;
+import { HelpdeskArticles } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -31,7 +31,7 @@ export default function LearnMoreAboutAppsSection(visible) {
   const tmp = callback3();
   const callback = React.useCallback(() => {
     const obj = callback(4190);
-    obj.openURL(callback(1995).getAppsSupportURL(constants.APPS_LEARN_MORE));
+    obj.openURL(callback(1994).getAppsSupportURL(constants.APPS_LEARN_MORE));
   }, []);
   const intl = getSystemLocale.intl;
   const stringResult = intl.string(getSystemLocale.t["kw8/Ec"]);

@@ -1,13 +1,13 @@
-// === Module 8841: GameGenres ===
+// === Module 8856: GameGenres ===
 
-// Module 8841 (GameGenres)
-import set from "set" /* 500 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import hooksDefault from "hooks" /* 4075 */;
+// Module 8856 (GameGenres)
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import set from "set" /* 1234 */;
+import hooksDefault from "hooks" /* 4074 */;
 import matchPath from "matchPath" /* 4304 */;
 import _httpGetWithCountryCodeQuery from "_httpGetWithCountryCodeQuery" /* 4755 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 
 require = arg1;
 const GameGenres = ME.GameGenres;

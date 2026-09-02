@@ -1,7 +1,7 @@
 // === Module 4851: MessageEmbedTypes ===
 
 // Module 4851 (MessageEmbedTypes)
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 import set from "set" /* 2 */;
 
 const MessageEmbedTypes = ME.MessageEmbedTypes;

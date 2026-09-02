@@ -1,7 +1,7 @@
-// === Module 5477: getFlattenedChannels ===
+// === Module 5485: getFlattenedChannels ===
 
-// Module 5477 (getFlattenedChannels)
-import closure_3 from "ensureGuildLoaded" /* 1387 */;
+// Module 5485 (getFlattenedChannels)
+import closure_3 from "ensureGuildLoaded" /* 1386 */;
 
 const require = arg1;
 function getFlattenedChannels(guildId, set, found, arg3) {

@@ -1,12 +1,12 @@
-// === Module 6144: resolveExplicitContentSettingWithDefaults ===
+// === Module 6152: resolveExplicitContentSettingWithDefaults ===
 
-// Module 6144 (resolveExplicitContentSettingWithDefaults)
-import create from "create" /* 1306 */;
+// Module 6152 (resolveExplicitContentSettingWithDefaults)
+import create from "create" /* 1305 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
 import isFeatureAgeGated from "isFeatureAgeGated" /* 4172 */;
 import SettingsDefaultFeature from "SettingsDefaultFeature" /* 4179 */;
-import getShouldObscureForSetting from "getShouldObscureForSetting" /* 6145 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import getShouldObscureForSetting from "getShouldObscureForSetting" /* 6153 */;
+import closure_2 from "mergeGuildAvatar" /* 1921 */;
 import { ExplicitContentFilterTypes } from "items" /* 4168 */;
 
 require = arg1;
@@ -36,10 +36,10 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
     }
     if (isDm) {
       if (!flag) {
-        let BLUR2 = tmp4(1306).ExplicitContentRedaction.BLOCK;
+        let BLUR2 = tmp4(1305).ExplicitContentRedaction.BLOCK;
       }
     }
-    ExplicitContentRedaction = tmp4(1306).ExplicitContentRedaction;
+    ExplicitContentRedaction = tmp4(1305).ExplicitContentRedaction;
     BLUR2 = ExplicitContentRedaction.BLUR;
   } else {
     let nsfwAllowed;
@@ -56,7 +56,7 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
         flag6 = false;
       }
       if (!flag5) {
-        const BLUR = tmp4(1306).ExplicitContentRedaction.BLUR;
+        const BLUR = tmp4(1305).ExplicitContentRedaction.BLUR;
       }
       const ExplicitContentFilter2 = tmp4(4166).ExplicitContentFilter;
       setting = ExplicitContentFilter2.getSetting();
@@ -83,7 +83,7 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
           SHOW = obj[setting1];
         }
       } else {
-        SHOW = tmp4(1306).ExplicitContentRedaction.SHOW;
+        SHOW = tmp4(1305).ExplicitContentRedaction.SHOW;
       }
       return SHOW;
     }
@@ -153,7 +153,7 @@ export const resolveSettingWithDefaultsForTeen = function resolveSettingWithDefa
     }
     return tmp5;
   } else {
-    return tmp(1306).ExplicitContentRedaction.BLUR;
+    return tmp(1305).ExplicitContentRedaction.BLUR;
   }
 };
 export const getExplicitContentSettingOrDefault = function getExplicitContentSettingOrDefault(arg0) {

@@ -1,9 +1,9 @@
-// === Module 17067: handleChange ===
+// === Module 17303: handleChange ===
 
-// Module 17067 (handleChange)
-import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 5486 */;
-import closure_2 from "filterPlayingActivities" /* 5223 */;
+// Module 17303 (handleChange)
+import dispatcherDefault from "dispatcher" /* 706 */;
+import initializeDefault from "initialize" /* 5494 */;
+import closure_2 from "filterPlayingActivities" /* 5231 */;
 
 function handleChange() {
   let obj = dispatcherDefault;

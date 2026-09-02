@@ -1,11 +1,11 @@
-// === Module 12171: useJoinRequestButtonActions ===
+// === Module 12395: useJoinRequestButtonActions ===
 
-// Module 12171 (useJoinRequestButtonActions)
+// Module 12395 (useJoinRequestButtonActions)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import closure_6 from "ensureGuildLoaded" /* 1387 */;
-import { Routes } from "ME" /* 676 */;
+import closure_6 from "ensureGuildLoaded" /* 1386 */;
+import { Routes } from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

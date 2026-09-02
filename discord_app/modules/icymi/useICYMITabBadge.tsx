@@ -1,8 +1,8 @@
-// === Module 15979: useICYMITabBadge ===
+// === Module 16210: useICYMITabBadge ===
 
-// Module 15979 (useICYMITabBadge)
-import initialize from "initialize" /* 589 */;
-import closure_2 from "filterStaffGuild" /* 8606 */;
+// Module 16210 (useICYMITabBadge)
+import initialize from "initialize" /* 586 */;
+import closure_2 from "filterStaffGuild" /* 8621 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/icymi/useICYMITabBadge.tsx");

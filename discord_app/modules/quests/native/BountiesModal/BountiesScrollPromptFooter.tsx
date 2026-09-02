@@ -1,19 +1,19 @@
-// === Module 14611: BountiesScrollPromptFooterContent ===
+// === Module 14835: BountiesScrollPromptFooterContent ===
 
-// Module 14611 (BountiesScrollPromptFooterContent)
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
+// Module 14835 (BountiesScrollPromptFooterContent)
+import initialize from "initialize" /* 586 */;
+import ThemesDefault from "Themes" /* 709 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _modDef4217 from "module_4217" /* 4217 */;
 import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING" /* 4479 */;
 import timingNone from "timingNone" /* 4482 */;
-import AnimatedRenderItemDefault from "AnimatedRenderItem" /* 8979 */;
-import apexExperiment from "apexExperiment" /* 14612 */;
-import useVisibilityTransition from "useVisibilityTransition" /* 14613 */;
+import AnimatedRenderItemDefault from "AnimatedRenderItem" /* 8993 */;
+import apexExperiment from "apexExperiment" /* 14836 */;
+import useVisibilityTransition from "useVisibilityTransition" /* 14837 */;
 import closure_3 from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 5387 */;
+import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 5395 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -34,7 +34,7 @@ function BountiesScrollPromptFooterContent(zIndex) {
     }
     return tmp2;
   }, items);
-  let obj = zIndex(589);
+  let obj = zIndex(586);
   const items1 = [closure_5];
   const stateFromStores = obj.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
   const tmp6 = useSafeAreaInsetsDefault();

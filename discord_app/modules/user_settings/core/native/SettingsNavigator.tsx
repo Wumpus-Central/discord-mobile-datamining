@@ -1,25 +1,25 @@
-// === Module 16483: SettingHeaderBadge ===
+// === Module 16718: SettingHeaderBadge ===
 
-// Module 16483 (SettingHeaderBadge)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 16718 (SettingHeaderBadge)
+import ThemesDefault from "Themes" /* 709 */;
 import Text from "Text" /* 4474 */;
-import SettingsBadgeType from "SettingsBadgeType" /* 15004 */;
+import SettingsBadgeType from "SettingsBadgeType" /* 15233 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "_getSystemLocale" /* 1996 */;
-import closure_7 from "zustandStore" /* 14342 */;
-import ME from "ME" /* 676 */;
+import closure_6 from "_getSystemLocale" /* 1995 */;
+import closure_7 from "zustandStore" /* 14565 */;
+import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 7822 */;
+import createNativeStackNavigator from "createNativeStackNavigator" /* 7831 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function SettingHeaderBadge(badge) {
   if (badge.badge.badgeType === SettingsBadgeType.SettingsBadgeType.BETA) {
     const obj = { size: null };
-    obj[0] = tmp(1297).BetaSizes.SMALL;
-    return callback(tmp(1297).BetaTag, obj);
+    obj[0] = tmp(1296).BetaSizes.SMALL;
+    return callback(tmp(1296).BetaTag, obj);
   }
 }
 function LeftAlignedHeaderTitle(children) {

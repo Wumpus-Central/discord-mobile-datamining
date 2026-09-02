@@ -1,14 +1,14 @@
-// === Module 14270: DisplayNameStylesColorSwatch ===
+// === Module 14493: DisplayNameStylesColorSwatch ===
 
-// Module 14270 (DisplayNameStylesColorSwatch)
+// Module 14493 (DisplayNameStylesColorSwatch)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import int2hslRaw from "int2hslRaw" /* 688 */;
-import ThemesDefault from "Themes" /* 712 */;
-import DisplayNameEffect from "DisplayNameEffect" /* 1940 */;
+import int2hslRaw from "int2hslRaw" /* 685 */;
+import ThemesDefault from "Themes" /* 709 */;
+import DisplayNameEffect from "DisplayNameEffect" /* 1939 */;
 import LinearGradientDefault from "LinearGradient" /* 4940 */;
-import GummyStripesDefault from "GummyStripes" /* 14271 */;
+import GummyStripesDefault from "GummyStripes" /* 14494 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
 const View = get_ActivityIndicator.View;

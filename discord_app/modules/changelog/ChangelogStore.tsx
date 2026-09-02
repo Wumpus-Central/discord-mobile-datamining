@@ -1,13 +1,13 @@
 // === Module 4492: handleUserSettingsProtoStoreChange ===
 
 // Module 4492 (handleUserSettingsProtoStoreChange)
-import initializeDefault from "initialize" /* 589 */;
-import Storage3 from "Storage" /* 595 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "initialize" /* 586 */;
+import Storage3 from "Storage" /* 592 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import closure_2 from "_getSystemLocale" /* 1996 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
-import CHANGELOG_MODAL_KEY from "CHANGELOG_MODAL_KEY" /* 1980 */;
+import closure_2 from "_getSystemLocale" /* 1995 */;
+import closure_3 from "handleConnectionClosedOrResumed" /* 1339 */;
+import CHANGELOG_MODAL_KEY from "CHANGELOG_MODAL_KEY" /* 1979 */;
 import set from "set" /* 2 */;
 
 require = arg1;

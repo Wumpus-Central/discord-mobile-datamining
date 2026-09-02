@@ -1,6 +1,6 @@
-// === Module 11488: getConnectionPrereqTarget ===
+// === Module 11711: getConnectionPrereqTarget ===
 
-// Module 11488 (getConnectionPrereqTarget)
+// Module 11711 (getConnectionPrereqTarget)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 function getConnectionPrereqTarget(teen_identity) {

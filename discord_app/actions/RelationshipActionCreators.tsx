@@ -1,17 +1,17 @@
-// === Module 9059: handleRelationshipAddError ===
+// === Module 9073: handleRelationshipAddError ===
 
-// Module 9059 (handleRelationshipAddError)
-import sendRequest from "sendRequest" /* 530 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 9073 (handleRelationshipAddError)
+import sendRequest from "sendRequest" /* 527 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import setDefault from "set" /* 4857 */;
-import openQuarantineModeInfoModalDefault from "openQuarantineModeInfoModal" /* 5459 */;
-import openContextMenu from "openContextMenu" /* 5564 */;
-import isLimitedAccessErrorCode from "isLimitedAccessErrorCode" /* 9062 */;
-import openClearAllIncomingRequestsConfirmationModalDefault from "openClearAllIncomingRequestsConfirmationModal" /* 9064 */;
+import openQuarantineModeInfoModalDefault from "openQuarantineModeInfoModal" /* 5467 */;
+import openContextMenu from "openContextMenu" /* 5572 */;
+import isLimitedAccessErrorCode from "isLimitedAccessErrorCode" /* 9076 */;
+import openClearAllIncomingRequestsConfirmationModalDefault from "openClearAllIncomingRequestsConfirmationModal" /* 9078 */;
 import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { ClearFriendRequestFilters } from "ClearFriendRequestFilters" /* 9060 */;
+import closure_5 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
+import { ClearFriendRequestFilters } from "ClearFriendRequestFilters" /* 9074 */;
 
 require = arg1;
 function handleRelationshipAddError(arg0, arg1, substr) {
@@ -62,22 +62,22 @@ function handleRelationshipAddError(arg0, arg1, substr) {
         if (num !== tmp2.RELATIONSHIP_INVALID_NO_CONFIRMATION) {
           if (arg1 === obj.SHOW_ALWAYS) {
             if (null != substr) {
-              let tmp18Result = tmp18(9063);
+              let tmp18Result = tmp18(9077);
               if (!num) {
                 num = 0;
               }
               let humanizeAbortCodeResult = tmp18Result.humanizeAbortCode(num, substr);
             } else {
-              const intl = tmp18(1236).intl;
-              humanizeAbortCodeResult = intl.string(tmp18(1236).t.paDJBM);
+              const intl = tmp18(1233).intl;
+              humanizeAbortCodeResult = intl.string(tmp18(1233).t.paDJBM);
             }
             obj1 = { title: null, body: null, confirmText: null };
-            const intl2 = tmp18(1236).intl;
-            obj1[0] = intl2.string(tmp18(1236).t["6moJ8s"]);
+            const intl2 = tmp18(1233).intl;
+            obj1[0] = intl2.string(tmp18(1233).t["6moJ8s"]);
             obj1[1] = humanizeAbortCodeResult;
-            const intl3 = tmp18(1236).intl;
-            obj1[2] = intl3.string(tmp18(1236).t.BddRzS);
-            tmp18Result = tmp18(5564);
+            const intl3 = tmp18(1233).intl;
+            obj1[2] = intl3.string(tmp18(1233).t.BddRzS);
+            tmp18Result = tmp18(5572);
             tmp18Result.closeContextMenu();
             setDefault.show(obj1);
             const obj4 = setDefault;
@@ -100,15 +100,15 @@ obj = {
       errorUxConfig = obj.SHOW_ALWAYS;
     }
     [tmp3, tmp4] = callback(str.split("#"), 2);
-    const HTTP = str(530).HTTP;
+    const HTTP = str(527).HTTP;
     obj = { url: closure_6.USER_RELATIONSHIPS(), body: null, context: null, oldFormErrors: true, rejectWithError: null };
     obj = { username: tmp3, discriminator: parseInt(tmp4), note };
     const merged = Object.assign(captchaPayload);
     obj[1] = obj;
     obj[2] = context;
     const tmp2 = callback(str.split("#"), 2);
-    obj[4] = str(530).rejectWithMigratedError();
-    const obj3 = str(530);
+    obj[4] = str(527).rejectWithMigratedError();
+    const obj3 = str(527);
     return HTTP.post(obj).catch((arg0) => {
       closure_1_11(arg0, errorUxConfig, str);
     });
@@ -123,14 +123,14 @@ obj = {
     }
     let user2;
     user2 = user.getUser(userId);
-    const HTTP = _require(530).HTTP;
+    const HTTP = _require(527).HTTP;
     obj = { url: closure_6.USER_RELATIONSHIP(userId), body: null, context: null, oldFormErrors: true, rejectWithError: null };
     obj = { type, from_friend_suggestion: fromFriendSuggestion, confirm_stranger_request: confirmStrangerRequest };
     const merged = Object.assign(captchaPayload);
     obj[1] = obj;
     obj[2] = context;
-    obj[4] = _require(530).rejectWithMigratedError();
-    const obj3 = _require(530);
+    obj[4] = _require(527).rejectWithMigratedError();
+    const obj3 = _require(527);
     const putResult = HTTP.put(obj);
     return HTTP.put(obj).then(() => {
       if (closure_0 != null) {
@@ -142,54 +142,54 @@ obj = {
   },
   acceptFriendRequest(arg0) {
     return obj.addRelationship(arg0, () => {
-      const AccessibilityAnnouncer = callback(1363).AccessibilityAnnouncer;
-      const intl = callback(1236).intl;
-      AccessibilityAnnouncer.announce(intl.string(callback(1236).t["3goNa5"]));
+      const AccessibilityAnnouncer = callback(1362).AccessibilityAnnouncer;
+      const intl = callback(1233).intl;
+      AccessibilityAnnouncer.announce(intl.string(callback(1233).t["3goNa5"]));
     });
   },
   cancelFriendRequest(arg0, arg1) {
     return obj.removeRelationship(arg0, arg1, () => {
-      const AccessibilityAnnouncer = callback(1363).AccessibilityAnnouncer;
-      const intl = callback(1236).intl;
-      AccessibilityAnnouncer.announce(intl.string(callback(1236).t.pLUaxR));
+      const AccessibilityAnnouncer = callback(1362).AccessibilityAnnouncer;
+      const intl = callback(1233).intl;
+      AccessibilityAnnouncer.announce(intl.string(callback(1233).t.pLUaxR));
     });
   },
   removeFriend(arg0, arg1) {
     obj.removeRelationship(arg0, arg1, () => {
-      const AccessibilityAnnouncer = callback(1363).AccessibilityAnnouncer;
-      const intl = callback(1236).intl;
-      AccessibilityAnnouncer.announce(intl.string(callback(1236).t.vGSLa2));
+      const AccessibilityAnnouncer = callback(1362).AccessibilityAnnouncer;
+      const intl = callback(1233).intl;
+      AccessibilityAnnouncer.announce(intl.string(callback(1233).t.vGSLa2));
     });
   },
   blockUser(userId, context) {
     obj = { userId, context, type: constants2.BLOCKED };
     return obj.addRelationship(obj, () => {
-      const AccessibilityAnnouncer = callback(1363).AccessibilityAnnouncer;
-      const intl = callback(1236).intl;
-      AccessibilityAnnouncer.announce(intl.string(callback(1236).t.mU0Vrp));
+      const AccessibilityAnnouncer = callback(1362).AccessibilityAnnouncer;
+      const intl = callback(1233).intl;
+      AccessibilityAnnouncer.announce(intl.string(callback(1233).t.mU0Vrp));
     });
   },
   unblockUser(id, arg1) {
     return obj.removeRelationship(id, arg1, () => {
-      const AccessibilityAnnouncer = callback(1363).AccessibilityAnnouncer;
-      const intl = callback(1236).intl;
-      AccessibilityAnnouncer.announce(intl.string(callback(1236).t["9t1au7"]));
+      const AccessibilityAnnouncer = callback(1362).AccessibilityAnnouncer;
+      const intl = callback(1233).intl;
+      AccessibilityAnnouncer.announce(intl.string(callback(1233).t["9t1au7"]));
     });
   },
   removeRelationship(userId, context) {
     const _require = arg2;
-    const HTTP = _require(530).HTTP;
-    obj = { url: closure_6.USER_RELATIONSHIP(userId), context, oldFormErrors: true, rejectWithError: _require(530).rejectWithMigratedError() };
-    const obj2 = _require(530);
+    const HTTP = _require(527).HTTP;
+    obj = { url: closure_6.USER_RELATIONSHIP(userId), context, oldFormErrors: true, rejectWithError: _require(527).rejectWithMigratedError() };
+    const obj2 = _require(527);
     const delResult = HTTP.del(obj);
     return HTTP.del(obj).then(() => {
       if (closure_0 != null) {
         tmp();
       }
     }).catch(() => {
-      const AccessibilityAnnouncer = callback(1363).AccessibilityAnnouncer;
-      const intl = callback(1236).intl;
-      AccessibilityAnnouncer.announce(intl.string(callback(1236).t.n6Jo3E));
+      const AccessibilityAnnouncer = callback(1362).AccessibilityAnnouncer;
+      const intl = callback(1233).intl;
+      AccessibilityAnnouncer.announce(intl.string(callback(1233).t.n6Jo3E));
     });
   },
   updateRelationship(closure_1_0, closure_0) {
@@ -203,10 +203,10 @@ obj = {
     const HTTP = sendRequest.HTTP;
     const value = HTTP.get({ url: closure_6.USER_RELATIONSHIPS(), oldFormErrors: true, rejectWithError: true });
     value.then((body) => {
-      obj = callback(709);
+      obj = callback(706);
       obj = { type: "LOAD_RELATIONSHIPS_SUCCESS", relationships: body.body };
       return obj.dispatch(obj);
-    }, () => callback(709).dispatch({ type: "LOAD_RELATIONSHIPS_FAILURE" }));
+    }, () => callback(706).dispatch({ type: "LOAD_RELATIONSHIPS_FAILURE" }));
   },
   confirmClearPendingRelationships(arg0) {
     openClearAllIncomingRequestsConfirmationModalDefault(arg0);
@@ -219,11 +219,11 @@ obj = {
     const obj3 = sendRequest;
     const delResult = HTTP.del(obj);
     return HTTP.del(obj).then(() => {
-      callback2(709).dispatch({ type: "RELATIONSHIP_PENDING_INCOMING_REMOVED" });
+      callback2(706).dispatch({ type: "RELATIONSHIP_PENDING_INCOMING_REMOVED" });
     }).catch(() => {
-      const AccessibilityAnnouncer = callback(1363).AccessibilityAnnouncer;
-      const intl = callback(1236).intl;
-      AccessibilityAnnouncer.announce(intl.string(callback(1236).t.n6Jo3E));
+      const AccessibilityAnnouncer = callback(1362).AccessibilityAnnouncer;
+      const intl = callback(1233).intl;
+      AccessibilityAnnouncer.announce(intl.string(callback(1233).t.n6Jo3E));
     });
   },
   clearPendingSpamAndIgnored() {
@@ -236,21 +236,21 @@ obj = {
     const obj3 = sendRequest;
     const delResult = HTTP.del(obj);
     return HTTP.del(obj).then(() => {
-      callback2(709).dispatch({ type: "RELATIONSHIP_PENDING_INCOMING_REMOVED" });
+      callback2(706).dispatch({ type: "RELATIONSHIP_PENDING_INCOMING_REMOVED" });
     }).catch(() => {
-      const AccessibilityAnnouncer = callback(1363).AccessibilityAnnouncer;
-      const intl = callback(1236).intl;
-      AccessibilityAnnouncer.announce(intl.string(callback(1236).t.n6Jo3E));
+      const AccessibilityAnnouncer = callback(1362).AccessibilityAnnouncer;
+      const intl = callback(1233).intl;
+      AccessibilityAnnouncer.announce(intl.string(callback(1233).t.n6Jo3E));
     });
   },
   ignoreUser(closure_3, IGNORE_CONFIRMATION_ACTION_SHEET, channelId) {
     const _require = closure_3;
     closure_1 = channelId;
-    const HTTP = _require(530).HTTP;
+    const HTTP = _require(527).HTTP;
     obj = { url: closure_6.IGNORE_USER(closure_3), context: obj, rejectWithError: null };
     obj = { location: IGNORE_CONFIRMATION_ACTION_SHEET };
-    obj[2] = _require(530).rejectWithMigratedError();
-    const obj3 = _require(530);
+    obj[2] = _require(527).rejectWithMigratedError();
+    const obj3 = _require(527);
     const putResult = HTTP.put(obj);
     return HTTP.put(obj).then(() => {
       obj = channelId(closure_1_3[16]);
@@ -261,20 +261,20 @@ obj = {
       obj = { type: "RELATIONSHIP_IGNORE_USER_SUCCESS", userId: callback, timestamp: Date.now() };
       channelId(closure_1_3[14]).dispatch(obj);
     }).catch(() => {
-      channelId(8675).showFailedToast();
-      const AccessibilityAnnouncer = callback(1363).AccessibilityAnnouncer;
-      const intl = callback(1236).intl;
-      AccessibilityAnnouncer.announce(intl.string(callback(1236).t.n6Jo3E));
+      channelId(8690).showFailedToast();
+      const AccessibilityAnnouncer = callback(1362).AccessibilityAnnouncer;
+      const intl = callback(1233).intl;
+      AccessibilityAnnouncer.announce(intl.string(callback(1233).t.n6Jo3E));
     });
   },
   unignoreUser(id, UserProfileRemediatedNotice, id2) {
     const _require = id;
     closure_1 = id2;
-    const HTTP = _require(530).HTTP;
+    const HTTP = _require(527).HTTP;
     obj = { url: closure_6.IGNORE_USER(id), context: obj, rejectWithError: null };
     obj = { location: UserProfileRemediatedNotice };
-    obj[2] = _require(530).rejectWithMigratedError();
-    const obj3 = _require(530);
+    obj[2] = _require(527).rejectWithMigratedError();
+    const obj3 = _require(527);
     const delResult = HTTP.del(obj);
     return HTTP.del(obj).then(() => {
       const result = id2(closure_1_3[16]).showUnignoreSuccessToast(id, id2);
@@ -282,10 +282,10 @@ obj = {
       const intl = id(closure_1_3[7]).intl;
       AccessibilityAnnouncer.announce(intl.string(id(closure_1_3[7]).t.QlH5w6));
     }).catch(() => {
-      id2(8675).showFailedToast();
-      const AccessibilityAnnouncer = id(1363).AccessibilityAnnouncer;
-      const intl = id(1236).intl;
-      AccessibilityAnnouncer.announce(intl.string(id(1236).t.n6Jo3E));
+      id2(8690).showFailedToast();
+      const AccessibilityAnnouncer = id(1362).AccessibilityAnnouncer;
+      const intl = id(1233).intl;
+      AccessibilityAnnouncer.announce(intl.string(id(1233).t.n6Jo3E));
     });
   }
 };

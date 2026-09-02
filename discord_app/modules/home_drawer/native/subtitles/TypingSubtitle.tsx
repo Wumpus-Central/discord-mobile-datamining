@@ -1,9 +1,9 @@
-// === Module 15916: TypingSubtitle ===
+// === Module 16147: TypingSubtitle ===
 
-// Module 15916 (TypingSubtitle)
+// Module 16147 (TypingSubtitle)
 import noopAll from "noop" /* 19 */;
 import Text from "Text" /* 4474 */;
-import styles from "styles" /* 15915 */;
+import styles from "styles" /* 16146 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 
@@ -23,7 +23,7 @@ export default function TypingSubtitle(arg0) {
     const tmpResult = tmp(4981);
   }
   if (channelIconComponentWithGuild == null) {
-    channelIconComponentWithGuild = tmp(5029).TextIcon;
+    channelIconComponentWithGuild = tmp(5033).TextIcon;
   }
   obj = { style: subtitleStyles.subtitleRow, children: null };
   let tmp7 = null;

@@ -1,27 +1,27 @@
-// === Module 11723: AppLauncherCommandViewFooter ===
+// === Module 11946: AppLauncherCommandViewFooter ===
 
-// Module 11723 (AppLauncherCommandViewFooter)
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
+// Module 11946 (AppLauncherCommandViewFooter)
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import Button from "Button" /* 1296 */;
 import Text from "Text" /* 4474 */;
 import CollapsingText from "CollapsingText" /* 4929 */;
-import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 8435 */;
-import handleApplicationSelected from "handleApplicationSelected" /* 11623 */;
-import registerAssetDefault from "registerAsset" /* 11686 */;
-import registerAssetDefault2 from "registerAsset" /* 11687 */;
-import registerAssetDefault3 from "registerAsset" /* 11760 */;
-import registerAssetDefault4 from "registerAsset" /* 11761 */;
+import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 8444 */;
+import handleApplicationSelected from "handleApplicationSelected" /* 11846 */;
+import registerAssetDefault from "registerAsset" /* 11909 */;
+import registerAssetDefault2 from "registerAsset" /* 11910 */;
+import registerAssetDefault3 from "registerAsset" /* 11983 */;
+import registerAssetDefault4 from "registerAsset" /* 11984 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_10 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import getIndexKey from "getIndexKey" /* 8146 */;
-import closure_13 from "createGuildRoleRecordFromRust" /* 1985 */;
-import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1498 */;
-import ME from "ME" /* 676 */;
-import { MediaKeyboardTarget } from "DRAG_HANDLE" /* 1623 */;
+import getIndexKey from "getIndexKey" /* 8154 */;
+import closure_13 from "createGuildRoleRecordFromRust" /* 1984 */;
+import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1497 */;
+import ME from "ME" /* 673 */;
+import { MediaKeyboardTarget } from "DRAG_HANDLE" /* 1622 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

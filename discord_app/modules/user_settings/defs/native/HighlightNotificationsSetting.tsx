@@ -1,10 +1,10 @@
-// === Module 15118: useHighlightNotifications ===
+// === Module 15347: useHighlightNotifications ===
 
-// Module 15118 (useHighlightNotifications)
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_2 from "createGuildRecordFromRust" /* 1909 */;
-import createToggle from "createToggle" /* 11068 */;
+// Module 15347 (useHighlightNotifications)
+import initialize from "initialize" /* 586 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import closure_2 from "createGuildRecordFromRust" /* 1908 */;
+import createToggle from "createToggle" /* 11288 */;
 
 require = arg1;
 function useHighlightNotifications() {
@@ -27,7 +27,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.HIGHLIGHT_NOTIFICATIONS,
   getComponent() {
-    return require(15119) /* Row */.default;
+    return require(15348) /* Row */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

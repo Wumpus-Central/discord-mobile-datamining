@@ -1,6 +1,6 @@
-// === Module 5442: getSystemVersion ===
+// === Module 5450: getSystemVersion ===
 
-// Module 5442 (getSystemVersion)
+// Module 5450 (getSystemVersion)
 import set from "set" /* 2 */;
 import DCDDeviceManager from "DCDDeviceManager" /* 4457 */;
 

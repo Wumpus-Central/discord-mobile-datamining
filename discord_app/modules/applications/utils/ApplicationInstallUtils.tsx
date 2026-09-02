@@ -1,8 +1,8 @@
-// === Module 8445: canInstallApplication ===
+// === Module 8454: canInstallApplication ===
 
-// Module 8445 (canInstallApplication)
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8433 */;
-import closure_2 from "getIndexKey" /* 8146 */;
+// Module 8454 (canInstallApplication)
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8442 */;
+import closure_2 from "getIndexKey" /* 8154 */;
 import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 4952 */;
 
 require = arg1;

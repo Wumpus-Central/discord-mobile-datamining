@@ -1,11 +1,11 @@
-// === Module 11605: mutable ===
+// === Module 11828: mutable ===
 
-// Module 11605 (mutable)
+// Module 11828 (mutable)
 import set from "set" /* 2 */;
-import uDefault from "u" /* 10991 */;
-import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 11606 */;
+import uDefault from "u" /* 11211 */;
+import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 11829 */;
 import module_4217 from "module_4217" /* 4217 */;
-import useWindowDimensions from "useWindowDimensions" /* 1493 */;
+import useWindowDimensions from "useWindowDimensions" /* 1492 */;
 
 let obj = {};
 const merged = Object.assign(useWindowDimensions.getWindowDimensions());

@@ -1,20 +1,20 @@
-// === Module 16253: GuildChannelMessageRowHeader ===
+// === Module 16485: GuildChannelMessageRowHeader ===
 
-// Module 16253 (GuildChannelMessageRowHeader)
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
+// Module 16485 (GuildChannelMessageRowHeader)
+import initialize from "initialize" /* 586 */;
+import ThemesDefault from "Themes" /* 709 */;
+import Button from "Button" /* 1296 */;
 import computeChannelNameDefault from "computeChannelName" /* 4674 */;
 import useNullableMessageAuthorDefault from "useNullableMessageAuthor" /* 4746 */;
-import PollBadgeDefault from "PollBadge" /* 16255 */;
+import PollBadgeDefault from "PollBadge" /* 16487 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_6 from "initializeFromUserSettings" /* 1390 */;
-import closure_7 from "ensureGuildLoaded" /* 1387 */;
-import closure_8 from "createGuildRecordFromRust" /* 1909 */;
+import closure_6 from "initializeFromUserSettings" /* 1389 */;
+import closure_7 from "ensureGuildLoaded" /* 1386 */;
+import closure_8 from "createGuildRecordFromRust" /* 1908 */;
 import closure_9 from "updateUserGuildSettingsInternal" /* 4701 */;
-import { MessageFlags } from "ME" /* 676 */;
+import { MessageFlags } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -23,7 +23,7 @@ function GuildChannelMessageRowHeader(channel) {
   channel = channel.channel;
   ({ muted, isFavorite } = channel);
   const tmp = callback2();
-  let obj = channel(589);
+  let obj = channel(586);
   const items = [closure_8];
   const stateFromStores = obj.useStateFromStores(items, () => {
     const guild = closure_1_8.getGuild(channel.guild_id);
@@ -37,30 +37,30 @@ function GuildChannelMessageRowHeader(channel) {
   obj = { isRulesChannel: stateFromStores === channel.id };
   const channelIcon = obj1.getChannelIcon(channel, obj);
   obj = { style: tmp.header, children: null };
-  obj1 = { source: channelIcon, size: channel(1297).Icon.Sizes.REFRESH_SMALL_16, style: tmp.channelIcon };
-  const items1 = [callback(channel(1297).Icon, obj1), callback(channel(4474).Text, { lineClamp: 1, variant: "text-sm/semibold", color: "interactive-text-default", children: computeChannelNameDefault(channel) }), , , ];
+  obj1 = { source: channelIcon, size: channel(1296).Icon.Sizes.REFRESH_SMALL_16, style: tmp.channelIcon };
+  const items1 = [callback(channel(1296).Icon, obj1), callback(channel(4474).Text, { lineClamp: 1, variant: "text-sm/semibold", color: "interactive-text-default", children: computeChannelNameDefault(channel) }), , , ];
   if (muted) {
     const obj2 = { source: null, size: null, style: null };
-    obj2[0] = tmp6(10228);
-    obj2[1] = tmp2(1297).Icon.Sizes.EXTRA_SMALL;
+    obj2[0] = tmp6(10250);
+    obj2[1] = tmp2(1296).Icon.Sizes.EXTRA_SMALL;
     obj2[2] = tmp.channelStatus;
-    muted = tmp10(tmp2(1297).Icon, obj2);
+    muted = tmp10(tmp2(1296).Icon, obj2);
   }
   items1[2] = muted;
   if (isFavorite) {
     const obj3 = { source: null, size: null, style: null };
-    obj3[0] = tmp6(10383);
-    obj3[1] = tmp2(1297).Icon.Sizes.EXTRA_SMALL;
+    obj3[0] = tmp6(10405);
+    obj3[1] = tmp2(1296).Icon.Sizes.EXTRA_SMALL;
     obj3[2] = tmp.channelStatus;
-    isFavorite = tmp10(tmp2(1297).Icon, obj3);
+    isFavorite = tmp10(tmp2(1296).Icon, obj3);
   }
   items1[3] = isFavorite;
   let isSystemDMResult = channel.isSystemDM();
   if (isSystemDMResult) {
     const obj4 = { type: null, verified: true };
-    obj4[0] = tmp6(8933).Types.SYSTEM_DM;
-    isSystemDMResult = tmp10(tmp6(8933), obj4);
-    const tmp6Result = tmp6(8933);
+    obj4[0] = tmp6(8947).Types.SYSTEM_DM;
+    isSystemDMResult = tmp10(tmp6(8947), obj4);
+    const tmp6Result = tmp6(8947);
   }
   items1[4] = isSystemDMResult;
   obj[1] = items1;
@@ -84,7 +84,7 @@ function PrivateChannelMessageRowLabel(message) {
       const item = recipients.forEach((arg0) => callback(table[20]).getUser(arg0));
     }
   }, items1);
-  let obj = message(16254);
+  let obj = message(16486);
   const searchMessageTimestamp = obj.useSearchMessageTimestamp(message, channel);
   obj = { style: tmp.labelContainer, children: null };
   obj = { style: tmp.authorRow, children: null };
@@ -92,18 +92,18 @@ function PrivateChannelMessageRowLabel(message) {
   const items2 = [callback(message(4474).Text, { lineClamp: 1, variant: "text-md/semibold", color: "interactive-text-active", children: memo }), , ];
   if (muted) {
     obj1 = { source: null, size: null, style: null };
-    obj1[0] = channel(10228);
-    obj1[1] = tmp4(1297).Icon.Sizes.EXTRA_SMALL;
+    obj1[0] = channel(10250);
+    obj1[1] = tmp4(1296).Icon.Sizes.EXTRA_SMALL;
     obj1[2] = tmp.channelStatus;
-    muted = tmp9(tmp4(1297).Icon, obj1);
+    muted = tmp9(tmp4(1296).Icon, obj1);
   }
   items2[1] = muted;
   let isSystemDMResult = channel.isSystemDM();
   if (isSystemDMResult) {
     const obj2 = { type: null, verified: true };
-    obj2[0] = channel(8933).Types.SYSTEM_DM;
-    isSystemDMResult = tmp9(channel(8933), obj2);
-    const tmp13 = channel(8933);
+    obj2[0] = channel(8947).Types.SYSTEM_DM;
+    isSystemDMResult = tmp9(channel(8947), obj2);
+    const tmp13 = channel(8947);
   }
   items2[2] = isSystemDMResult;
   obj[1] = items2;
@@ -112,14 +112,14 @@ function PrivateChannelMessageRowLabel(message) {
   if (message.hasFlag(MessageFlags.SUPPRESS_NOTIFICATIONS)) {
     const obj4 = { size: "xs", style: null };
     obj4[1] = tmp.suppressNotificationsIcon;
-    tmp9Result = tmp9(tmp4(12948).BellZIcon, obj4);
+    tmp9Result = tmp9(tmp4(13170).BellZIcon, obj4);
   }
   items3[2] = tmp9Result;
   tmp9Result = null;
   if (message.isPoll()) {
     const obj5 = { style: null };
     obj5[0] = tmp.pollBadge;
-    tmp9Result = tmp9(channel(16255), obj5);
+    tmp9Result = tmp9(channel(16487), obj5);
   }
   items3[3] = tmp9Result;
   obj[1] = items3;
@@ -137,11 +137,11 @@ function GuildChannelMessageRowLabel(arg0) {
       obj = { color: null };
       obj[0] = colorString;
     }
-    let tmp2Result = tmp2(7870);
+    let tmp2Result = tmp2(7879);
     const processColorStringsArray = tmp2Result.useProcessColorStringsArray(colorStrings);
-    tmp2Result = tmp2(7870);
+    tmp2Result = tmp2(7879);
     const isRoleStyleAndRoleColorsEligibleForERC = tmp2Result.useIsRoleStyleAndRoleColorsEligibleForERC(channel.guild_id, message.author.id, stateFromStores, processColorStringsArray);
-    const searchMessageTimestamp = tmp2(16254).useSearchMessageTimestamp(message, channel);
+    const searchMessageTimestamp = tmp2(16486).useSearchMessageTimestamp(message, channel);
     obj = { style: null, children: null };
     obj[0] = tmp.labelContainer;
     obj1 = { style: null, children: null };
@@ -155,7 +155,7 @@ function GuildChannelMessageRowLabel(arg0) {
       const obj2 = { size: "small", color: null, colors: null };
       obj2[1] = colorString;
       obj2[2] = colorStrings;
-      tmp18 = callback(tmp2(1297).RoleDot, obj2);
+      tmp18 = callback(tmp2(1296).RoleDot, obj2);
     }
     const items1 = [tmp18, ];
     const obj3 = { variant: "text-sm/semibold", color: "interactive-text-active", lineClamp: 1, style: null, gradientColors: null, children: null };
@@ -178,7 +178,7 @@ function GuildChannelMessageRowLabel(arg0) {
     if (message.hasFlag(MessageFlags.SUPPRESS_NOTIFICATIONS)) {
       const obj5 = { size: "xs", style: null };
       obj5[1] = tmp.suppressNotificationsIcon;
-      tmp21Result = tmp21(tmp2(12948).BellZIcon, obj5);
+      tmp21Result = tmp21(tmp2(13170).BellZIcon, obj5);
     }
     items2[2] = tmp21Result;
     tmp21Result = null;

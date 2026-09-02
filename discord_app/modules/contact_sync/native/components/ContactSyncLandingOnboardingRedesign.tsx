@@ -1,10 +1,10 @@
-// === Module 12230: ContactSyncLandingOnboardingRedesign ===
+// === Module 12454: ContactSyncLandingOnboardingRedesign ===
 
-// Module 12230 (ContactSyncLandingOnboardingRedesign)
-import ThemesDefault from "Themes" /* 712 */;
-import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 12224 */;
-import registerAssetDefault from "registerAsset" /* 12231 */;
-import ContactSyncErrorDefault from "ContactSyncError" /* 12232 */;
+// Module 12454 (ContactSyncLandingOnboardingRedesign)
+import ThemesDefault from "Themes" /* 709 */;
+import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 12448 */;
+import registerAssetDefault from "registerAsset" /* 12455 */;
+import ContactSyncErrorDefault from "ContactSyncError" /* 12456 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -99,17 +99,17 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
   obj[2] = registerAssetDefault;
   const items1 = [callback2(closure_6, obj), , , , ];
   obj1 = { style: tmp.title, variant: "heading-xl/bold", children: null };
-  const intl = onNext(1236).intl;
-  obj1[2] = intl.string(onNext(1236).t["/G+nci"]);
+  const intl = onNext(1233).intl;
+  obj1[2] = intl.string(onNext(1233).t["/G+nci"]);
   items1[1] = callback2(onNext(4474).Text, obj1);
   const obj2 = { style: tmp.subtitle, variant: "text-sm/medium", children: null };
-  const intl2 = onNext(1236).intl;
-  obj2[2] = intl2.string(onNext(1236).t.G8zcHt);
+  const intl2 = onNext(1233).intl;
+  obj2[2] = intl2.string(onNext(1233).t.G8zcHt);
   items1[2] = callback2(onNext(4474).Text, obj2);
   const obj3 = { style: tmp.buttonContainer, children: null };
   const obj4 = { variant: "primary", size: "lg", text: null, onPress: null, loading: null };
-  const intl3 = onNext(1236).intl;
-  obj4[2] = intl3.string(onNext(1236).t.LhlgY9);
+  const intl3 = onNext(1233).intl;
+  obj4[2] = intl3.string(onNext(1233).t.LhlgY9);
   obj4[3] = callback;
   obj4[4] = loading;
   obj3[1] = callback2(onNext(4928).Button, obj4);

@@ -1,6 +1,6 @@
-// === Module 14212: getChannelDetailsFromRoute ===
+// === Module 14435: getChannelDetailsFromRoute ===
 
-// Module 14212 (getChannelDetailsFromRoute)
+// Module 14435 (getChannelDetailsFromRoute)
 import set from "set" /* 2 */;
 import coerceMainRoute from "coerceMainRoute" /* 4332 */;
 

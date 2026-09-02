@@ -1,6 +1,6 @@
-// === Module 15474: useDefaultGuildsRestricted ===
+// === Module 15704: useDefaultGuildsRestricted ===
 
-// Module 15474 (useDefaultGuildsRestricted)
+// Module 15704 (useDefaultGuildsRestricted)
 import set from "set" /* 2 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
 

@@ -1,12 +1,12 @@
-// === Module 11967: ApplicationCommandsCategories ===
+// === Module 12191: ApplicationCommandsCategories ===
 
-// Module 11967 (ApplicationCommandsCategories)
-import ThemesDefault from "Themes" /* 712 */;
-import preloadDefault from "preload" /* 5493 */;
+// Module 12191 (ApplicationCommandsCategories)
+import ThemesDefault from "Themes" /* 709 */;
+import preloadDefault from "preload" /* 5501 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "trackCommunicationDisabled" /* 1992 */;
-import ICON_SIZE from "ICON_SIZE" /* 11964 */;
+import closure_6 from "trackCommunicationDisabled" /* 1991 */;
+import ICON_SIZE from "ICON_SIZE" /* 12188 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -28,7 +28,7 @@ let closure_10 = importAllResult.memo((section) => {
   ({ handlePressCategory: importDefault, active, index: dependencyMap, guildId: closure_3 } = section);
   let stateFromStores;
   const tmp = callback();
-  let obj = section(589);
+  let obj = section(586);
   const items = [closure_6];
   stateFromStores = obj.useStateFromStores(items, () => {
     if (null != closure_3) {
@@ -58,9 +58,9 @@ let closure_10 = importAllResult.memo((section) => {
     accessibilityLabel: null,
     children: null
   };
-  const intl = tmp2(1236).intl;
+  const intl = tmp2(1233).intl;
   const formatToPlainString = intl.formatToPlainString;
-  const t = tmp2(1236).t;
+  const t = tmp2(1233).t;
   if (active) {
     obj1 = { applicationName: null };
     obj1[0] = section.name;
@@ -73,7 +73,7 @@ let closure_10 = importAllResult.memo((section) => {
   obj[2] = formatToPlainStringResult;
   const items2 = [tmp.item, active ? tmp.activeItem : tmp.fadedItem];
   obj[3] = <stateFromStores style={items2}>{tmp6}</stateFromStores>;
-  return jsx(section(5068).PressableOpacity, {
+  return jsx(section(5076).PressableOpacity, {
     onPress() {
       return callback(closure_2);
     },

@@ -1,24 +1,24 @@
-// === Module 11857: DoubleTapToReactChatInputBannerInner ===
+// === Module 12080: DoubleTapToReactChatInputBannerInner ===
 
-// Module 11857 (DoubleTapToReactChatInputBannerInner)
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1431 */;
+// Module 12080 (DoubleTapToReactChatInputBannerInner)
+import defaultAreStatesEqual from "defaultAreStatesEqual" /* 644 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
 import Text from "Text" /* 4474 */;
-import PressableBase from "PressableBase" /* 5068 */;
-import XSmallIcon from "XSmallIcon" /* 5551 */;
-import EmojiDefault from "Emoji" /* 5585 */;
-import renderChannelBadge from "renderChannelBadge" /* 11858 */;
+import PressableBase from "PressableBase" /* 5076 */;
+import XSmallIcon from "XSmallIcon" /* 5559 */;
+import EmojiDefault from "Emoji" /* 5593 */;
+import renderChannelBadge from "renderChannelBadge" /* 12081 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1384 */;
-import { EMOJI_URL_BASE_SIZE } from "set" /* 1925 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
+import { EMOJI_URL_BASE_SIZE } from "set" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
-import set from "set" /* 500 */;
+import set from "set" /* 1234 */;
 
 require = arg1;
 function DoubleTapToReactChatInputBannerInner(emoji) {
@@ -56,13 +56,13 @@ function DoubleTapToReactChatInputBannerInner(emoji) {
   const obj3 = { style: tmp.text, children: null };
   const obj4 = { style: tmp.header, children: null };
   const obj5 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = tmp2(1236).intl;
+  const intl = tmp2(1233).intl;
   obj5[2] = intl.string(getSystemLocale.t["6RUX7d"]);
   const items3 = [closure_9(Text.Text, obj5), closure_9(renderChannelBadge.NewBadge, {})];
   obj4[1] = items3;
   const items4 = [closure_10(View, obj4), ];
   const obj6 = { variant: "text-xs/medium", color: "text-default", children: null };
-  const intl2 = tmp2(1236).intl;
+  const intl2 = tmp2(1233).intl;
   obj6[2] = intl2.format(getSystemLocale.t["5/l2rR"], {
     emojiName: emoji.name,
     emojiNameHook(children) {
@@ -76,7 +76,7 @@ function DoubleTapToReactChatInputBannerInner(emoji) {
   obj3[1] = items4;
   items2[1] = closure_10(View, obj3);
   const obj8 = { hitSlop: 8, accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
-  const intl3 = tmp2(1236).intl;
+  const intl3 = tmp2(1233).intl;
   obj8[2] = intl3.string(getSystemLocale.t.cpT0Cq);
   obj8[3] = emoji.handleDismissBanner;
   obj8[4] = tmp.closeButton;

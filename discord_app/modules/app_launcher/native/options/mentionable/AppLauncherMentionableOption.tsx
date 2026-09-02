@@ -1,16 +1,16 @@
-// === Module 11748: MentionableIcon ===
+// === Module 11971: MentionableIcon ===
 
-// Module 11748 (MentionableIcon)
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import UserCircleIcon from "UserCircleIcon" /* 10655 */;
-import stylesDefault from "styles" /* 11749 */;
+// Module 11971 (MentionableIcon)
+import initialize from "initialize" /* 586 */;
+import ThemesDefault from "Themes" /* 709 */;
+import UserCircleIcon from "UserCircleIcon" /* 10876 */;
+import stylesDefault from "styles" /* 11972 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_6 from "createGuildRoleRecordFromRust" /* 1985 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { StatusTypes } from "sum" /* 505 */;
+import closure_6 from "createGuildRoleRecordFromRust" /* 1984 */;
+import closure_7 from "mergeGuildAvatar" /* 1921 */;
+import { StatusTypes } from "sum" /* 502 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -29,19 +29,19 @@ function MentionableIcon(mentionable) {
     return tmp7;
   } else {
     const type = mentionable.type;
-    if (tmp2(11750).MentionableItemTypes.USER === type) {
+    if (tmp2(11973).MentionableItemTypes.USER === type) {
       obj = { user: null, guildId: null, animate: null, size: null };
       obj[0] = mentionable.result.user;
       obj[1] = mentionable.guildId;
       obj[2] = !stateFromStores;
-      obj[3] = tmp2(1297).AvatarSizes.REFRESH_MEDIUM_32;
-      return tmp5(tmp2(1297).Avatar, obj);
-    } else if (tmp2(11750).MentionableItemTypes.ROLE === type) {
+      obj[3] = tmp2(1296).AvatarSizes.REFRESH_MEDIUM_32;
+      return tmp5(tmp2(1296).Avatar, obj);
+    } else if (tmp2(11973).MentionableItemTypes.ROLE === type) {
       obj1 = { role: null };
       obj1[0] = mentionable.result;
-      return tmp5(tmp2(11751).RoleIcon, obj1);
+      return tmp5(tmp2(11974).RoleIcon, obj1);
     } else {
-      const GLOBAL = tmp2(11750).MentionableItemTypes.GLOBAL;
+      const GLOBAL = tmp2(11973).MentionableItemTypes.GLOBAL;
       return tmp7;
     }
   }

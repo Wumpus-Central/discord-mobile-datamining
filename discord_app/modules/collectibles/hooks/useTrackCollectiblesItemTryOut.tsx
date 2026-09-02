@@ -1,12 +1,12 @@
-// === Module 8073: useTrackCollectiblesItemTryOut ===
+// === Module 8081: useTrackCollectiblesItemTryOut ===
 
-// Module 8073 (useTrackCollectiblesItemTryOut)
+// Module 8081 (useTrackCollectiblesItemTryOut)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import ME from "ME" /* 676 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1950 */;
-import closure_4 from "updateCategoriesAndProducts" /* 7287 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import ME from "ME" /* 673 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
+import closure_4 from "updateCategoriesAndProducts" /* 7296 */;
+import GuildFeatures from "GuildFeatures" /* 1923 */;
 
 noop.useCallback;
 const AnalyticEvents = ME.AnalyticEvents;
@@ -17,7 +17,7 @@ const result = set.fileFinishedImporting("modules/collectibles/hooks/useTrackCol
 export default function useTrackCollectiblesItemTryOut(arg0) {
   const _require = arg0;
   const items = [closure_4];
-  const stateFromStores = _require(647).useStateFromStores(items, () => products.products);
+  const stateFromStores = _require(644).useStateFromStores(items, () => products.products);
   const items1 = [stateFromStores, arg0];
   return useCallback((skuId) => {
     const value = stateFromStores.get(skuId.skuId);

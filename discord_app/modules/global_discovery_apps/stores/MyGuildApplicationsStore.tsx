@@ -1,9 +1,9 @@
-// === Module 11647: addToApplicationIdToGuildIds ===
+// === Module 11870: addToApplicationIdToGuildIds ===
 
-// Module 11647 (addToApplicationIdToGuildIds)
-import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 11870 (addToApplicationIdToGuildIds)
+import initializeDefault from "initialize" /* 586 */;
+import setDefault from "set" /* 684 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 function addToApplicationIdToGuildIds(applicationId) {
   applicationId = applicationId.applicationId;

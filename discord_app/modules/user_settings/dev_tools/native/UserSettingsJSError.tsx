@@ -1,6 +1,6 @@
-// === Module 15280: UserSettingsJSError ===
+// === Module 15508: UserSettingsJSError ===
 
-// Module 15280 (UserSettingsJSError)
+// Module 15508 (UserSettingsJSError)
 import noopAll from "noop" /* 19 */;
 import Text from "Text" /* 4474 */;
 import { jsx } from "jsxProd" /* 21 */;

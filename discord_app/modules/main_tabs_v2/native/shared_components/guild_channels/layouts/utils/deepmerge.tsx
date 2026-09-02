@@ -1,6 +1,6 @@
-// === Module 10204: merge ===
+// === Module 10226: merge ===
 
-// Module 10204 (merge)
+// Module 10226 (merge)
 import set2 from "set" /* 2 */;
 
 function merge() {

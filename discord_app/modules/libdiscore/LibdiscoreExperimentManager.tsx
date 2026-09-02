@@ -1,11 +1,11 @@
-// === Module 17441: experimentStoreUpdateHandler ===
+// === Module 17677: experimentStoreUpdateHandler ===
 
-// Module 17441 (experimentStoreUpdateHandler)
-import shallowEqualDefault from "shallowEqual" /* 643 */;
-import items2 from "items" /* 1913 */;
-import isBlockedDomain from "isBlockedDomain" /* 1916 */;
-import initializeDefault from "initialize" /* 5486 */;
-import closure_3 from "initialize" /* 1212 */;
+// Module 17677 (experimentStoreUpdateHandler)
+import shallowEqualDefault from "shallowEqual" /* 640 */;
+import items2 from "items" /* 1912 */;
+import isBlockedDomain from "isBlockedDomain" /* 1915 */;
+import initializeDefault from "initialize" /* 5494 */;
+import closure_3 from "initialize" /* 1209 */;
 
 require = arg1;
 function experimentStoreUpdateHandler() {
@@ -13,7 +13,7 @@ function experimentStoreUpdateHandler() {
   if (obj.isLibdiscoreInitialized()) {
     if (!tmpResult.isExperimentSyncDisabled()) {
       obj = {};
-      const ALL_LIBDISCORE_EXPERIMENTS = tmp(1913).ALL_LIBDISCORE_EXPERIMENTS;
+      const ALL_LIBDISCORE_EXPERIMENTS = tmp(1912).ALL_LIBDISCORE_EXPERIMENTS;
       for (const item10018 of ALL_LIBDISCORE_EXPERIMENTS) {
         obj[item10018.id] = item10018.getCurrentConfig();
         continue;
@@ -29,7 +29,7 @@ function experimentStoreUpdateHandler() {
         const obj4 = isBlockedDomain;
       }
     }
-    tmpResult = tmp(1913);
+    tmpResult = tmp(1912);
   }
 }
 let c4 = null;

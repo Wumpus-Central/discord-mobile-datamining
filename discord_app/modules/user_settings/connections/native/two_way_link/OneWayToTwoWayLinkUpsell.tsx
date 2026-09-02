@@ -1,15 +1,15 @@
-// === Module 14572: OneWayToTwoWayNewTag ===
+// === Module 14795: OneWayToTwoWayNewTag ===
 
-// Module 14572 (OneWayToTwoWayNewTag)
-import ThemesDefault from "Themes" /* 712 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10418 */;
+// Module 14795 (OneWayToTwoWayNewTag)
+import ThemesDefault from "Themes" /* 709 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10639 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { Fonts } from "ME" /* 676 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1384 */;
+import { Fonts } from "ME" /* 673 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
-import importDefaultResult from "createTextStyle" /* 5461 */;
+import importDefaultResult from "createTextStyle" /* 5469 */;
 
 const require = arg1;
 function OneWayToTwoWayNewTag(markAsDismissed) {
@@ -17,7 +17,7 @@ function OneWayToTwoWayNewTag(markAsDismissed) {
   const items = [markAsDismissed];
   const effect = React.useEffect(() => markAsDismissed(closure_1_5.UNKNOWN), items);
   const tmp = callback3();
-  return callback(markAsDismissed(1297).NewTag, { containerStyle: callback3().newContainer, variant: "text-xs/bold" });
+  return callback(markAsDismissed(1296).NewTag, { containerStyle: callback3().newContainer, variant: "text-xs/bold" });
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { container: null, header: null, titleContainer: null, title: null, body: null, newContainer: null, reconnectButton: null };
@@ -66,8 +66,8 @@ export const OneWayToTwoWayLinkUpsell = function OneWayToTwoWayLinkUpsell(newInd
   const items3 = [callback2(View, obj), callback(newIndicatorDismissibleContent(4474).Text, { style: tmp.body, variant: "text-sm/medium", children: body }), ];
   const obj4 = { style: tmp.reconnectButton, children: null };
   const obj5 = { text: null, onPress: null };
-  const intl = newIndicatorDismissibleContent(1236).intl;
-  obj5[0] = intl.string(newIndicatorDismissibleContent(1236).t.vD60Pv);
+  const intl = newIndicatorDismissibleContent(1233).intl;
+  obj5[0] = intl.string(newIndicatorDismissibleContent(1233).t.vD60Pv);
   obj5[1] = onPress;
   obj4[1] = callback(newIndicatorDismissibleContent(4928).Button, obj5);
   items3[2] = callback(View, obj4);

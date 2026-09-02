@@ -1,13 +1,13 @@
-// === Module 7955: createPremiumGroupInviteSystemMessage ===
+// === Module 7964: createPremiumGroupInviteSystemMessage ===
 
-// Module 7955 (createPremiumGroupInviteSystemMessage)
-import ThemesDefault from "Themes" /* 712 */;
-import frozen from "frozen" /* 7855 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7873 */;
-import createPremiumGroupInviteEmbed from "createPremiumGroupInviteEmbed" /* 7956 */;
-import registerAssetDefault from "registerAsset" /* 7960 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "ensureGuildLoaded" /* 1387 */;
+// Module 7964 (createPremiumGroupInviteSystemMessage)
+import ThemesDefault from "Themes" /* 709 */;
+import frozen from "frozen" /* 7864 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7882 */;
+import createPremiumGroupInviteEmbed from "createPremiumGroupInviteEmbed" /* 7965 */;
+import registerAssetDefault from "registerAsset" /* 7969 */;
+import closure_3 from "fetchFingerprint" /* 1215 */;
+import closure_4 from "ensureGuildLoaded" /* 1386 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;

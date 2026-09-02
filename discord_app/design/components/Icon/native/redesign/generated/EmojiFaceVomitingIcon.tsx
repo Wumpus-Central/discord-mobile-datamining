@@ -1,10 +1,10 @@
-// === Module 14969: EmojiFaceVomitingIcon ===
+// === Module 15198: EmojiFaceVomitingIcon ===
 
-// Module 14969 (EmojiFaceVomitingIcon)
+// Module 15198 (EmojiFaceVomitingIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 14970 */;
+import registerAsset from "registerAsset" /* 15199 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

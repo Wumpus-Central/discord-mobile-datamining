@@ -1,8 +1,8 @@
-// === Module 1350: ? ===
+// === Module 1349: ? ===
 
-// Module 1350
+// Module 1349
 import set from "set" /* 2 */;
-import LOW_SATURATION_THRESHOLD from "LOW_SATURATION_THRESHOLD" /* 1357 */;
+import LOW_SATURATION_THRESHOLD from "LOW_SATURATION_THRESHOLD" /* 1356 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/design/shared.tsx");
 for (const key10018 in require("AccessibilityAnnouncer")) {

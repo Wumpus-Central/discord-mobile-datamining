@@ -1,8 +1,8 @@
 // === Module 4580: destroy ===
 
 // Module 4580 (destroy)
-import PlatformTypes from "PlatformTypes" /* 501 */;
-import formatDefault from "format" /* 669 */;
+import formatDefault from "format" /* 666 */;
+import PlatformTypes from "PlatformTypes" /* 1235 */;
 import inject from "inject" /* 4531 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4579 */;
 import onDefault from "on" /* 4582 */;

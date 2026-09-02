@@ -1,9 +1,9 @@
-// === Module 1490: fit ===
+// === Module 1489: fit ===
 
-// Module 1490 (fit)
+// Module 1489 (fit)
 import _modDef38 from "module_38" /* 38 */;
-import PQueueDefault from "PQueue" /* 1491 */;
-import getSrcWithWidthAndHeight from "getSrcWithWidthAndHeight" /* 1492 */;
+import PQueueDefault from "PQueue" /* 1490 */;
+import getSrcWithWidthAndHeight from "getSrcWithWidthAndHeight" /* 1491 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import importDefaultResult from "apply" /* 12 */;
 

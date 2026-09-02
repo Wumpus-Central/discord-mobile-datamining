@@ -1,36 +1,36 @@
-// === Module 13199: BoostPurchaseNitroBanner ===
+// === Module 13421: BoostPurchaseNitroBanner ===
 
-// Module 13199 (BoostPurchaseNitroBanner)
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
+// Module 13421 (BoostPurchaseNitroBanner)
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import Button from "Button" /* 1296 */;
 import getPremiumPlanItem from "getPremiumPlanItem" /* 4139 */;
 import Text from "Text" /* 4474 */;
 import Stack from "Stack" /* 4926 */;
 import LinearGradientDefault from "LinearGradient" /* 4940 */;
-import createTextStyleDefault from "createTextStyle" /* 5461 */;
-import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 6256 */;
-import getPremiumBundledItemsFromProductId from "getPremiumBundledItemsFromProductId" /* 7152 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8096 */;
-import registerAssetDefault from "registerAsset" /* 13201 */;
-import registerAssetDefault2 from "registerAsset" /* 13202 */;
-import registerAssetDefault3 from "registerAsset" /* 13203 */;
-import registerAssetDefault4 from "registerAsset" /* 13204 */;
-import registerAssetDefault5 from "registerAsset" /* 13205 */;
-import registerAssetDefault6 from "registerAsset" /* 13206 */;
+import createTextStyleDefault from "createTextStyle" /* 5469 */;
+import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 6265 */;
+import getPremiumBundledItemsFromProductId from "getPremiumBundledItemsFromProductId" /* 7161 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8104 */;
+import registerAssetDefault from "registerAsset" /* 13423 */;
+import registerAssetDefault2 from "registerAsset" /* 13424 */;
+import registerAssetDefault3 from "registerAsset" /* 13425 */;
+import registerAssetDefault4 from "registerAsset" /* 13426 */;
+import registerAssetDefault5 from "registerAsset" /* 13427 */;
+import registerAssetDefault6 from "registerAsset" /* 13428 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { useNativeCheckoutStore } from "context" /* 7169 */;
-import closure_10 from "createGuildRecordFromRust" /* 1909 */;
+import { useNativeCheckoutStore } from "context" /* 7178 */;
+import closure_10 from "createGuildRecordFromRust" /* 1908 */;
 import closure_11 from "addSubscriptionPlan" /* 4144 */;
 import closure_12 from "reset" /* 4145 */;
-import closure_13 from "updateProduct" /* 6084 */;
-import usePremiumPlanSelectStore from "usePremiumPlanSelectStore" /* 13200 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import ME from "ME" /* 676 */;
-import items from "items" /* 7177 */;
+import closure_13 from "updateProduct" /* 6092 */;
+import usePremiumPlanSelectStore from "usePremiumPlanSelectStore" /* 13422 */;
+import GuildFeatures from "GuildFeatures" /* 1923 */;
+import ME from "ME" /* 673 */;
+import items from "items" /* 7186 */;
 import { ItemPurchaseType } from "CustomCheckoutFlow" /* 4460 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -78,12 +78,12 @@ function getPlanDescription(premiumTier) {
     if (flag) {
       obj = { numSubscriptions: null };
       obj[0] = premiumTier.numPremiumGuild;
-      formatToPlainStringResult = formatToPlainString(tmp7(1236).t.gDsyB9, obj);
+      formatToPlainStringResult = formatToPlainString(tmp7(1233).t.gDsyB9, obj);
     } else {
       if (premiumTier.premiumTier === closure_20.TIER_1) {
-        let u6dBsN = tmp7(1236).t.sexoHq;
+        let u6dBsN = tmp7(1233).t.sexoHq;
       } else {
-        u6dBsN = tmp7(1236).t.u6dBsN;
+        u6dBsN = tmp7(1233).t.u6dBsN;
       }
       obj = { num: null };
       obj[0] = premiumTier.numPremiumGuild;
@@ -99,9 +99,9 @@ function BoostDeltaPriceTrailing(arg0) {
   items = [callback3(NitroWheelIcon.NitroWheelIcon, obj), ];
   const intl = getSystemLocale.intl;
   if (interval === constants.MONTH) {
-    rS8FA_ = tmp2(1236).t.AbOLNu;
+    rS8FA_ = tmp2(1233).t.AbOLNu;
   } else {
-    rS8FA_ = tmp2(1236).t["rS8FA+"];
+    rS8FA_ = tmp2(1233).t["rS8FA+"];
   }
   obj = { variant: "text-sm/medium", color: "text-muted", children: intl.format(rS8FA_, { price: callback3(Text.Text, { variant: "text-sm/semibold", color: "text-feedback-positive", children: price }, "price") }) };
   items[1] = callback3(Text.Text, obj);
@@ -391,7 +391,7 @@ function PlanSection(showBoostOnlyLabels) {
   c12 = undefined;
   const tmp = useNativeCheckoutStore((getCheckoutContextRecord) => getCheckoutContextRecord.getCheckoutContextRecord());
   closure_11 = tmp;
-  let obj = shouldShowModernBoostFlow(501);
+  let obj = shouldShowModernBoostFlow(1235);
   let isIOSResult = obj.isIOS();
   if (isIOSResult) {
     isIOSResult = null != tmp;
@@ -468,7 +468,7 @@ function PlanSection(showBoostOnlyLabels) {
     obj = { title: null, hasIcons: true, children: null };
     obj[0] = showBoostOnlyLabels.label;
     obj[2] = mapped;
-    let tmp7Result = tmp7(shouldShowModernBoostFlow(5992).TableRowGroup, obj);
+    let tmp7Result = tmp7(shouldShowModernBoostFlow(6000).TableRowGroup, obj);
   } else {
     obj = { children: null };
     obj[0] = mapped;

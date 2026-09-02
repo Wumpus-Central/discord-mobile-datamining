@@ -1,6 +1,6 @@
-// === Module 17001: setupLoadFromMessageManagerHandlers ===
+// === Module 17237: setupLoadFromMessageManagerHandlers ===
 
-// Module 17001 (setupLoadFromMessageManagerHandlers)
+// Module 17237 (setupLoadFromMessageManagerHandlers)
 import set2 from "set" /* 2 */;
 
 const result = set2.fileFinishedImporting("modules/messages/setupLoadFromMessageManagerHandlers.tsx");

@@ -1,10 +1,10 @@
-// === Module 8518: useProfileEffect ===
+// === Module 8531: useProfileEffect ===
 
-// Module 8518 (useProfileEffect)
+// Module 8531 (useProfileEffect)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "updateCategoriesAndProducts" /* 7287 */;
-import closure_4 from "map" /* 7303 */;
-import { isProfileEffectRecord } from "fromServer" /* 7293 */;
+import closure_3 from "updateCategoriesAndProducts" /* 7296 */;
+import closure_4 from "map" /* 7312 */;
+import { isProfileEffectRecord } from "fromServer" /* 7302 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/collectibles/profile_effects/useProfileEffect.tsx");
@@ -12,7 +12,7 @@ let result = require("set").fileFinishedImporting("modules/collectibles/profile_
 export default function useProfileEffect(arg0) {
   const _require = arg0;
   const items = [closure_3, closure_4];
-  const stateFromStores = _require(589).useStateFromStores(items, () => {
+  const stateFromStores = _require(586).useStateFromStores(items, () => {
     if (null != closure_0) {
       const product = closure_1_3.getProduct(tmp);
       let first;

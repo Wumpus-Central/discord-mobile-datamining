@@ -1,10 +1,10 @@
-// === Module 17459: UpdateAppScreen ===
+// === Module 17695: UpdateAppScreen ===
 
-// Module 17459 (UpdateAppScreen)
+// Module 17695 (UpdateAppScreen)
 import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2663 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import messagesProxyDefault from "messagesProxy" /* 2662 */;
 import Text from "Text" /* 4474 */;
 import Button from "Button" /* 4928 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

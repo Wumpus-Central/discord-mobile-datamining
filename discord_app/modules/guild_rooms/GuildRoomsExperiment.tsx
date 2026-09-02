@@ -1,7 +1,7 @@
 // === Module 4720: GUILD_ROOMS_EXPERIMENT_ID ===
 
 // Module 4720 (GUILD_ROOMS_EXPERIMENT_ID)
-import closure_2 from "trackCommunicationDisabled" /* 1992 */;
+import closure_2 from "trackCommunicationDisabled" /* 1991 */;
 import createExperiment from "createExperiment" /* 4389 */;
 
 const require = arg1;
@@ -33,7 +33,7 @@ export const getGuildRoomsConfig = function getGuildRoomsConfig(guildId, disable
 };
 export const useGuildRoomsExperiment = function useGuildRoomsExperiment(guildId) {
   const _require = guildId;
-  let obj = _require(589);
+  let obj = _require(586);
   const items = [closure_2];
   const items1 = [guildId.guildId];
   obj = { autoTrackExposure: true };

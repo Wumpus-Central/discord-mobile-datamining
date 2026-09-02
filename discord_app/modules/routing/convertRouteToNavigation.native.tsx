@@ -1,8 +1,8 @@
-// === Module 12329: convertRouteToNavigation ===
+// === Module 12553: convertRouteToNavigation ===
 
-// Module 12329 (convertRouteToNavigation)
+// Module 12553 (convertRouteToNavigation)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 import getRootNavigationRef from "getRootNavigationRef" /* 4333 */;
 
 const Routes = ME.Routes;
@@ -101,7 +101,7 @@ export const convertRouteToNavigation = function convertRouteToNavigation(pathna
                 const tmpResult8 = tmp(4332);
               }
               if (tmp15) {
-                const obj6 = { channelId: null, guildId: null, messageId: null, replaceChannelAndFixRoot: "a" };
+                const obj6 = { channelId: null, guildId: null, messageId: null, replaceChannelAndFixRoot: "Array" };
                 obj6[0] = channelId;
                 obj6[1] = guildId;
                 obj6[2] = messageId;

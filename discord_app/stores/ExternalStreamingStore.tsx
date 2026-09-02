@@ -1,16 +1,16 @@
-// === Module 9436: makeTwitchRequest ===
+// === Module 9449: makeTwitchRequest ===
 
-// Module 9436 (makeTwitchRequest)
-import sendRequest from "sendRequest" /* 530 */;
-import initializeDefault from "initialize" /* 589 */;
-import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import callbackDefault from "callback" /* 5350 */;
+// Module 9449 (makeTwitchRequest)
+import sendRequest from "sendRequest" /* 527 */;
+import initializeDefault from "initialize" /* 586 */;
+import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 656 */;
+import setDefault from "set" /* 684 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import callbackDefault from "callback" /* 5358 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "set" /* 5225 */;
+import closure_4 from "set" /* 5233 */;
 import closure_5 from "initialize" /* 4323 */;
-import { PlatformTypes } from "ME" /* 676 */;
+import { PlatformTypes } from "ME" /* 673 */;
 import set from "set" /* 2 */;
 
 require = arg1;

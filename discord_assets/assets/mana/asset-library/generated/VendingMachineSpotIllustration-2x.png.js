@@ -1,9 +1,9 @@
-// === Module 7106: metadata ===
+// === Module 7115: metadata ===
 
-// Module 7106 (metadata)
+// Module 7115 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/VendingMachineSpotIllustration-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/f0590d0be72673d6e30e7b2ce7a521cce7813e90acee16e16782e9cf697c47d3.png";
-export const metadata = { fileBytes: 47490 };
+export default "https://cdn.discordapp.com/assets/content/d9a71306a5658e5c930ffe289dbdca4b324569844f9251130cb87c6ae2362c77.png";
+export const metadata = { fileBytes: 42066 };

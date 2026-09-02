@@ -1,11 +1,11 @@
-// === Module 10243: NotificationSettingsMockMessage ===
+// === Module 10265: NotificationSettingsMockMessage ===
 
-// Module 10243 (NotificationSettingsMockMessage)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 10265 (NotificationSettingsMockMessage)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import { UserNotificationSettings } from "ME" /* 676 */;
+import closure_5 from "mergeGuildAvatar" /* 1921 */;
+import { UserNotificationSettings } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -24,7 +24,7 @@ let result = require("set").fileFinishedImporting("modules/notifications/setting
 
 export default function NotificationSettingsMockMessage(notificationSetting) {
   const tmp = callback3();
-  let obj = _require(589);
+  let obj = _require(586);
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   obj1 = sharedValue(4322);
@@ -53,8 +53,8 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
   const animatedStyle = tmp2Result.useAnimatedStyle(fn);
   if (notificationSetting.notificationSetting === UserNotificationSettings.ALL_MESSAGES) {
     obj = { variant: "text-sm/medium", color: "text-default", children: null };
-    const intl = tmp2(1236).intl;
-    obj[2] = intl.string(tmp2(1236).t.WYyzI5);
+    const intl = tmp2(1233).intl;
+    obj[2] = intl.string(tmp2(1233).t.WYyzI5);
     let tmp11 = callback(tmp2(4474).Text, obj);
     let tmp12 = callback;
   } else {
@@ -64,8 +64,8 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
     const items1 = ["@", str, " "];
     obj3[2] = items1;
     const items2 = [callback2(tmp2(4474).Text, obj3), ];
-    const intl3 = tmp2(1236).intl;
-    items2[1] = intl3.string(tmp2(1236).t.WYyzI5);
+    const intl3 = tmp2(1233).intl;
+    items2[1] = intl3.string(tmp2(1233).t.WYyzI5);
     obj2[2] = items2;
     obj1[0] = callback2(tmp2(4474).Text, obj2);
     tmp11 = callback(View, obj1);
@@ -81,12 +81,12 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
   }, items3);
   const obj4 = { style: tmp.card, children: null };
   const obj5 = { style: tmp.cardContent, children: null };
-  const obj6 = { children: tmp12(_require(1297).Avatar, { source: sharedValue(10244), size: _require(1297).AvatarSizes.LARGE_48 }) };
+  const obj6 = { children: tmp12(_require(1296).Avatar, { source: sharedValue(10266), size: _require(1296).AvatarSizes.LARGE_48 }) };
   const items4 = [tmp12(View, obj6), ];
   const obj8 = { style: tmp.cardMessage, children: null };
   const obj9 = { variant: "text-sm/semibold", children: null };
-  const intl2 = tmp2(1236).intl;
-  obj9[1] = intl2.string(_require(1236).t.qSq0tD);
+  const intl2 = tmp2(1233).intl;
+  obj9[1] = intl2.string(_require(1233).t.qSq0tD);
   const items5 = [tmp12(_require(4474).Text, obj9), tmp11];
   obj8[1] = items5;
   items4[1] = callback2(View, obj8);

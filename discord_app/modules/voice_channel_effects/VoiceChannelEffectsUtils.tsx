@@ -1,18 +1,9 @@
-// === Module 6193: VoiceChannelEffectAnimationType ===
+// === Module 6202: VoiceChannelEffectAnimationType ===
 
-// Module 6193 (VoiceChannelEffectAnimationType)
-import getAvatarURLDefault from "getAvatarURL" /* 1431 */;
+// Module 6202 (VoiceChannelEffectAnimationType)
+import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
 import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4134 */;
 import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4138 */;
-import _modDef6194 from "module_6194" /* 6194 */;
-import _modDef6195 from "module_6195" /* 6195 */;
-import _modDef6196 from "module_6196" /* 6196 */;
-import _modDef6197 from "module_6197" /* 6197 */;
-import _modDef6198 from "module_6198" /* 6198 */;
-import _modDef6199 from "module_6199" /* 6199 */;
-import _modDef6200 from "module_6200" /* 6200 */;
-import _modDef6201 from "module_6201" /* 6201 */;
-import _modDef6202 from "module_6202" /* 6202 */;
 import _modDef6203 from "module_6203" /* 6203 */;
 import _modDef6204 from "module_6204" /* 6204 */;
 import _modDef6205 from "module_6205" /* 6205 */;
@@ -26,14 +17,23 @@ import _modDef6212 from "module_6212" /* 6212 */;
 import _modDef6213 from "module_6213" /* 6213 */;
 import _modDef6214 from "module_6214" /* 6214 */;
 import _modDef6215 from "module_6215" /* 6215 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import VoiceChannelEffectAnimationType from "VoiceChannelEffectAnimationType" /* 6192 */;
+import _modDef6216 from "module_6216" /* 6216 */;
+import _modDef6217 from "module_6217" /* 6217 */;
+import _modDef6218 from "module_6218" /* 6218 */;
+import _modDef6219 from "module_6219" /* 6219 */;
+import _modDef6220 from "module_6220" /* 6220 */;
+import _modDef6221 from "module_6221" /* 6221 */;
+import _modDef6222 from "module_6222" /* 6222 */;
+import _modDef6223 from "module_6223" /* 6223 */;
+import _modDef6224 from "module_6224" /* 6224 */;
+import closure_3 from "mergeGuildAvatar" /* 1921 */;
+import VoiceChannelEffectAnimationType from "VoiceChannelEffectAnimationType" /* 6201 */;
 import importDefaultResult from "apply" /* 12 */;
 
 const require = arg1;
 ({ EMOJI_SIZE: c4, VoiceChannelEffectAnimationType } = VoiceChannelEffectAnimationType);
-const items = [_modDef6194];
-const items1 = [_modDef6195, _modDef6196, _modDef6197, _modDef6198, _modDef6199, _modDef6200, _modDef6201, _modDef6202, _modDef6203, _modDef6204, _modDef6205, _modDef6206, _modDef6207, _modDef6208, _modDef6209, _modDef6210, _modDef6211, _modDef6212, _modDef6213, _modDef6214, _modDef6215];
+const items = [_modDef6203];
+const items1 = [_modDef6204, _modDef6205, _modDef6206, _modDef6207, _modDef6208, _modDef6209, _modDef6210, _modDef6211, _modDef6212, _modDef6213, _modDef6214, _modDef6215, _modDef6216, _modDef6217, _modDef6218, _modDef6219, _modDef6220, _modDef6221, _modDef6222, _modDef6223, _modDef6224];
 let obj = { [VoiceChannelEffectAnimationType.BASIC]: items, [VoiceChannelEffectAnimationType.PREMIUM]: items1 };
 const memoizeResult = importDefaultResult.memoize((arg0) => {
   closure_0 = arg0;
@@ -145,8 +145,8 @@ export const getEffectAnnouncement = function getEffectAnnouncement(closure_7) {
     if (obj.length < 1) {
       return "";
     } else if (1 === obj.length) {
-      const intl2 = emojiName(1236).intl;
-      yZYxzF = emojiName(1236).t.yZYxzF;
+      const intl2 = emojiName(1233).intl;
+      yZYxzF = emojiName(1233).t.yZYxzF;
       const user = authStore.getUser(obj[0]);
       let username;
       if (user != null) {
@@ -157,7 +157,7 @@ export const getEffectAnnouncement = function getEffectAnnouncement(closure_7) {
       obj[1] = joined;
       let formatToPlainStringResult = intl2.formatToPlainString(yZYxzF, obj);
     } else if (2 === obj.length) {
-      const intl = emojiName(1236).intl;
+      const intl = emojiName(1233).intl;
       const user1 = authStore.getUser(obj[0]);
       let username1;
       if (user1 != null) {
@@ -172,10 +172,10 @@ export const getEffectAnnouncement = function getEffectAnnouncement(closure_7) {
       }
       obj[1] = username2;
       obj[2] = joined;
-      formatToPlainStringResult = intl.formatToPlainString(emojiName(1236).t["8rmtbd"], obj);
+      formatToPlainStringResult = intl.formatToPlainString(emojiName(1233).t["8rmtbd"], obj);
       const obj2 = authStore;
     } else {
-      const intl3 = emojiName(1236).intl;
+      const intl3 = emojiName(1233).intl;
       const user3 = authStore.getUser(obj[0]);
       let username3;
       if (user3 != null) {
@@ -191,7 +191,7 @@ export const getEffectAnnouncement = function getEffectAnnouncement(closure_7) {
       obj[1] = username4;
       obj[2] = obj.length - 2;
       obj[3] = joined;
-      formatToPlainStringResult = intl3.formatToPlainString(emojiName(1236).t["/okjv0"], obj);
+      formatToPlainStringResult = intl3.formatToPlainString(emojiName(1233).t["/okjv0"], obj);
       const obj7 = authStore;
     }
     const iter2 = found1.uniq();

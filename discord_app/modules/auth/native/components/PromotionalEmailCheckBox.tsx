@@ -1,9 +1,9 @@
-// === Module 15576: PromotionalEmailCheckBox ===
+// === Module 15807: PromotionalEmailCheckBox ===
 
-// Module 15576 (PromotionalEmailCheckBox)
+// Module 15807 (PromotionalEmailCheckBox)
 import noopAll from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import setPromoEmailConsentState from "setPromoEmailConsentState" /* 6053 */;
+import setPromoEmailConsentState from "setPromoEmailConsentState" /* 6061 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -28,8 +28,8 @@ export default function PromotionalEmailCheckBox(style) {
     obj[0] = style.style;
     obj = { accessibilityRole: null, accessibilityLabel: null, accessibilityState: null, onPress: null, style: null, children: null };
     obj[0] = tmp7;
-    const intl = tmp4(1236).intl;
-    obj[1] = intl.string(tmp4(1236).t.ylFCLt);
+    const intl = tmp4(1233).intl;
+    obj[1] = intl.string(tmp4(1233).t.ylFCLt);
     obj[2] = tmp8;
     obj[3] = function onPress() {
       return closure_1_5(!closure_0);
@@ -37,11 +37,11 @@ export default function PromotionalEmailCheckBox(style) {
     obj[4] = tmp.checkboxRow;
     obj1 = { checked: null };
     obj1[0] = tmp3;
-    const items = [callback2(tmp4(7684).FormCheckbox, obj1), ];
+    const items = [callback2(tmp4(7693).FormCheckbox, obj1), ];
     const obj2 = { variant: "text-xs/medium", color: "text-muted", style: null, children: null };
     obj2[2] = tmp.checkboxLabel;
-    const intl2 = tmp4(1236).intl;
-    obj2[3] = intl2.string(tmp4(1236).t.ylFCLt);
+    const intl2 = tmp4(1233).intl;
+    obj2[3] = intl2.string(tmp4(1233).t.ylFCLt);
     items[1] = callback2(tmp4(4474).Text, obj2);
     obj[5] = items;
     obj[1] = callback3(closure_3, obj);

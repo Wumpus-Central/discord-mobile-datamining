@@ -3,7 +3,7 @@
 // Module 4134 (parseRawEmojiObject)
 import applyDefault from "apply" /* 12 */;
 import EmojiTypes from "EmojiTypes" /* 4137 */;
-import _mod13723 from "module_13723" /* 13723 */;
+import _mod13946 from "module_13946" /* 13946 */;
 import closure_3 from "defaultImageSrcGenerator" /* 4135 */;
 import closure_13 from "module_917631" /* 917631 */;
 import closure_14 from "module_127988" /* 127988 */;
@@ -483,7 +483,7 @@ let obj = {
     }
     const call = hasOwnProperty.call;
     if (typeof call === "unknown" ? hasOwnProperty(key10009) : call(tmp3, key10009)) {
-      str = _mod13723[key10009];
+      str = _mod13946[key10009];
     }
     let combined = str;
     if (flag) {

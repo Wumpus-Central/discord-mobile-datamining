@@ -1,15 +1,15 @@
-// === Module 11267: useSelectedDestinationChannel ===
+// === Module 11490: useSelectedDestinationChannel ===
 
-// Module 11267 (useSelectedDestinationChannel)
-import canBypassSlowmodeHelper from "canBypassSlowmodeHelper" /* 7432 */;
+// Module 11490 (useSelectedDestinationChannel)
+import canBypassSlowmodeHelper from "canBypassSlowmodeHelper" /* 7442 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "loadSavedGuildStickers" /* 5444 */;
-import createChannelRecord from "createChannelRecord" /* 1391 */;
-import closure_8 from "ensureGuildLoaded" /* 1387 */;
-import closure_9 from "getUncachedChannelPermissions" /* 4121 */;
+import closure_4 from "loadSavedGuildStickers" /* 5452 */;
+import createChannelRecord from "createChannelRecord" /* 1390 */;
+import closure_8 from "ensureGuildLoaded" /* 1386 */;
+import closure_9 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_10 from "markAllUserIdListsStale" /* 4130 */;
-import closure_11 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import closure_11 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
 
 require = arg1;
 ({ ChannelRecordBase: c5, isGuildChannelType: closure_6, createChannelRecord: error } = createChannelRecord);
@@ -17,11 +17,11 @@ require = arg1;
 const result = require("set").fileFinishedImporting("modules/forwarding/ForwardDestinationUtils.tsx");
 
 export const useSelectedDestinationChannel = function useSelectedDestinationChannel(selectedDestinations) {
-  const mapped = selectedDestinations.map(found(10718).getChannelIdFromDestinationId);
-  found = mapped.find(found(1471).isNotNullish);
+  const mapped = selectedDestinations.map(found(10939).getChannelIdFromDestinationId);
+  found = mapped.find(found(1470).isNotNullish);
   const items = [closure_8];
   const items1 = [found];
-  const stateFromStores = found(589).useStateFromStores(items, () => closure_1_8.getChannel(found), items1);
+  const stateFromStores = found(586).useStateFromStores(items, () => closure_1_8.getChannel(found), items1);
   const items2 = [stateFromStores];
   return React.useMemo(() => {
     let tmp = stateFromStores;
@@ -44,14 +44,14 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
   if (null != components) {
     let tmp5 = components.components.length > 0;
     if (tmp5) {
-      tmp5 = components.components[0].type === _require(1955).ComponentType.CHECKPOINT_CARD;
+      tmp5 = components.components[0].type === _require(1954).ComponentType.CHECKPOINT_CARD;
     }
     let tmp6 = components.messageSnapshots.length > 0;
     if (tmp6) {
       let message = components.messageSnapshots[0].message;
       let tmp7 = message.components.length > 0;
       if (tmp7) {
-        tmp7 = message.components[0].type === _require(1955).ComponentType.CHECKPOINT_CARD;
+        tmp7 = message.components[0].type === _require(1954).ComponentType.CHECKPOINT_CARD;
       }
       tmp6 = tmp7;
     }
@@ -62,8 +62,8 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
           let tmp11Result = tmp11(4731);
         }
         obj = { label: null, lineClamp: 2 };
-        const intl = tmp11(1236).intl;
-        obj[0] = intl.string(tmp11(1236).t.KgPx1D);
+        const intl = tmp11(1233).intl;
+        obj[0] = intl.string(tmp11(1233).t.KgPx1D);
         return obj;
       }
       if (tmp) {
@@ -71,8 +71,8 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
           if (components.attachments.length > 0) {
             if (!closure_9.can(constants2.ATTACH_FILES, type)) {
               obj = { label: null };
-              const intl2 = tmp11(1236).intl;
-              obj[0] = intl2.string(tmp11(1236).t.P7yvbm);
+              const intl2 = tmp11(1233).intl;
+              obj[0] = intl2.string(tmp11(1233).t.P7yvbm);
               return obj;
             }
           } else {
@@ -83,8 +83,8 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
             if (!tmp11Result.canEmbedLinks(type, closure_9)) {
               if (!tmp11Result1.shouldStripEmbeds(components)) {
                 obj1 = { label: null };
-                const intl3 = tmp11(1236).intl;
-                obj1[0] = intl3.string(tmp11(1236).t.Wr4RIX);
+                const intl3 = tmp11(1233).intl;
+                obj1[0] = intl3.string(tmp11(1233).t.Wr4RIX);
                 return obj1;
               }
               tmp11Result1 = tmp11(4850);
@@ -95,8 +95,8 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
           if (tmp5) {
             if (!tmp11Result2.canEmbedLinks(type, closure_9)) {
               const obj2 = { label: null };
-              const intl4 = tmp11(1236).intl;
-              obj2[0] = intl4.string(tmp11(1236).t.Wr4RIX);
+              const intl4 = tmp11(1233).intl;
+              obj2[0] = intl4.string(tmp11(1233).t.Wr4RIX);
               return obj2;
             }
             tmp11Result2 = tmp11(4850);
@@ -121,8 +121,8 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
                 return isGuildStickerResult;
               })) {
                 const obj3 = { label: null };
-                const intl5 = tmp11(1236).intl;
-                obj3[0] = intl5.string(tmp11(1236).t["0Yyrua"]);
+                const intl5 = tmp11(1233).intl;
+                obj3[0] = intl5.string(tmp11(1233).t["0Yyrua"]);
                 return obj3;
               }
             }
@@ -130,8 +130,8 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
           if (components.hasFlag(constants.IS_VOICE_MESSAGE)) {
             if (!closure_9.can(constants2.SEND_VOICE_MESSAGES, type)) {
               const obj4 = { label: null };
-              const intl6 = tmp11(1236).intl;
-              obj4[0] = intl6.string(tmp11(1236).t.quj4DY);
+              const intl6 = tmp11(1233).intl;
+              obj4[0] = intl6.string(tmp11(1233).t.quj4DY);
               return obj4;
             }
           } else {
@@ -158,7 +158,7 @@ export const useSelectedDestinationNames = function useSelectedDestinationNames(
   const _require = arg0;
   const items = [closure_11, closure_8, closure_10];
   const items1 = [arg0];
-  return _require(589).useStateFromStoresArray(items, () => {
+  return _require(586).useStateFromStoresArray(items, () => {
     const mapped = lib.map((id) => {
       id = id.id;
       if ("user" === id.type) {
@@ -190,7 +190,7 @@ export const useDestinationNamesWithSlowmode = function useDestinationNamesWithS
   const _require = selectedDestinations;
   const items = [closure_8, closure_9];
   const items1 = [selectedDestinations];
-  const stateFromStoresArray = _require(589).useStateFromStoresArray(items, () => {
+  const stateFromStoresArray = _require(586).useStateFromStoresArray(items, () => {
     const mapped = selectedDestinations.map((type) => {
       let channel = null;
       if ("channel" === type.type) {
@@ -211,8 +211,8 @@ export const useDestinationNamesWithSlowmode = function useDestinationNamesWithS
       return tmp2;
     });
   }, items1);
-  let obj = _require(589);
+  let obj = _require(586);
   const items2 = [closure_11, closure_10];
   const items3 = [stateFromStoresArray];
-  return _require(589).useStateFromStoresArray(items2, () => stateFromStoresArray.map((channel) => callback(table[19]).computeChannelName(channel, closure_11, closure_10, true)), items3);
+  return _require(586).useStateFromStoresArray(items2, () => stateFromStoresArray.map((channel) => callback(table[19]).computeChannelName(channel, closure_11, closure_10, true)), items3);
 };

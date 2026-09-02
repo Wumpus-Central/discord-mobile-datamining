@@ -1,8 +1,8 @@
-// === Module 7196: createFromServer ===
+// === Module 7205: createFromServer ===
 
-// Module 7196 (createFromServer)
-import toJSDefault from "toJS" /* 1936 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+// Module 7205 (createFromServer)
+import toJSDefault from "toJS" /* 1935 */;
+import GuildFeatures from "GuildFeatures" /* 1923 */;
 
 toJSDefault;
 ({ SubscriptionIntervalTypes, DiscountUserUsageLimitIntervalTypes } = GuildFeatures);

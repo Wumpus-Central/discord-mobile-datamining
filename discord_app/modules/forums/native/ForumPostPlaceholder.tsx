@@ -1,7 +1,7 @@
-// === Module 11599: ? ===
+// === Module 11822: ? ===
 
-// Module 11599
-import ThemesDefault from "Themes" /* 712 */;
+// Module 11822
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
@@ -17,7 +17,7 @@ let closure_7 = createCacheKey.createStyles(obj);
 let c8 = 0.55;
 let closure_9 = { code: "function ForumPostPlaceholderTsx1(){const{reducedMotion,ROW_OPACITY_END,withDelay,INITIAL_DELAY_MS,withRepeat,withSequence,withTiming,timingConfig}=this.__closure;if(reducedMotion){return{opacity:ROW_OPACITY_END};}return{opacity:withDelay(INITIAL_DELAY_MS,withRepeat(withSequence(withTiming(ROW_OPACITY_END,timingConfig),withTiming(1,timingConfig)),-1,true))};}" };
 const memoResult = importAllResult.memo(() => {
-  let obj = stateFromStores(589);
+  let obj = stateFromStores(586);
   const items = [closure_5];
   stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const timingConfig = callback(importAllResult.useState(() => {
@@ -51,9 +51,9 @@ const memoResult = importAllResult.memo(() => {
   fn.__workletHash = 9488742940898;
   fn.__initData = closure_9;
   const animatedStyle = obj1.useAnimatedStyle(fn);
-  obj = { style: animatedStyle, pointerEvents: "none", children: jsx(stateFromStores(5601).Card, obj1) };
+  obj = { style: animatedStyle, pointerEvents: "none", children: jsx(stateFromStores(5609).Card, obj1) };
   obj1 = { variant: "secondary", style: callback2().postPlaceholder };
-  return jsx(timingConfig(4217).View, { style: animatedStyle, pointerEvents: "none", children: jsx(stateFromStores(5601).Card, { variant: "secondary", style: callback2().postPlaceholder }) });
+  return jsx(timingConfig(4217).View, { style: animatedStyle, pointerEvents: "none", children: jsx(stateFromStores(5609).Card, { variant: "secondary", style: callback2().postPlaceholder }) });
 });
 const result = require("set").fileFinishedImporting("modules/forums/native/ForumPostPlaceholder.tsx");
 

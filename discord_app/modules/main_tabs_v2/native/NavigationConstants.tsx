@@ -1,6 +1,6 @@
-// === Module 15532: StackNavigationAnimationSettings ===
+// === Module 15763: StackNavigationAnimationSettings ===
 
-// Module 15532 (StackNavigationAnimationSettings)
+// Module 15763 (StackNavigationAnimationSettings)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/NavigationConstants.tsx");

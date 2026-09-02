@@ -1,14 +1,14 @@
-// === Module 13050: BuyNitroPurchaseButtonLegalDisclaimer ===
+// === Module 13272: BuyNitroPurchaseButtonLegalDisclaimer ===
 
-// Module 13050 (BuyNitroPurchaseButtonLegalDisclaimer)
+// Module 13272 (BuyNitroPurchaseButtonLegalDisclaimer)
 import noopAll from "noop" /* 19 */;
-import set from "set" /* 500 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import combinedDefault from "combined" /* 1995 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import set from "set" /* 1234 */;
+import combinedDefault from "combined" /* 1994 */;
 import getPremiumPlanItem from "getPremiumPlanItem" /* 4139 */;
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4139 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -42,12 +42,12 @@ export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
         obj[2] = combinedDefault.getArticleURL(constants.PREMIUM_DETAILS_CANCEL_SUB);
         const obj6 = combinedDefault;
         obj[3] = combinedDefault.getArticleURL(constants.PAID_TERMS);
-        let formatResult = format(tmp3(1236).t["3uC7vj"], obj);
+        let formatResult = format(tmp3(1233).t["3uC7vj"], obj);
         let tmp10 = tmp3;
         const obj7 = combinedDefault;
       } else {
-        let tmp3Result = tmp3(500);
-        let t = tmp3(1236).t;
+        let tmp3Result = tmp3(1234);
+        let t = tmp3(1233).t;
         obj = { paidURL: null, interval: null, ctaText: null };
         obj[0] = constants2.PAID_TERMS;
         const isAndroidResult = tmp3Result.isAndroid();
@@ -64,7 +64,7 @@ export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
       jsx(tmp10(4474).Text, { style: null, variant: "text-xxs/medium", children: null });
     }
     const tmp3Result1 = set;
-    t = tmp3(1236).t;
+    t = tmp3(1233).t;
     const isAndroidResult1 = set.isAndroid();
     t = { paidURL: null, interval: null, cancelURL: null };
     t[0] = constants2.PAID_TERMS;

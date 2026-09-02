@@ -1,6 +1,6 @@
-// === Module 12466: closeCustomKeyboard ===
+// === Module 12690: closeCustomKeyboard ===
 
-// Module 12466 (closeCustomKeyboard)
+// Module 12690 (closeCustomKeyboard)
 import set from "set" /* 2 */;
 import getBestActiveInput from "getBestActiveInput" /* 4340 */;
 

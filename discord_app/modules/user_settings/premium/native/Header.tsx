@@ -1,11 +1,11 @@
-// === Module 13129: Header ===
+// === Module 13351: Header ===
 
-// Module 13129 (Header)
+// Module 13351 (Header)
 import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import useThemeDefault from "useTheme" /* 4413 */;
 import Text from "Text" /* 4474 */;
-import preloadDefault from "preload" /* 5493 */;
+import preloadDefault from "preload" /* 5501 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -28,14 +28,14 @@ export default function Header(style) {
   obj[1] = intl.string(getSystemLocale.t.lpNrPu);
   const tmp8 = preloadDefault;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = tmp2(13058);
+    let tmp2Result = tmp2(13280);
   } else {
-    tmp2Result = tmp2(13130);
+    tmp2Result = tmp2(13352);
   }
   obj[3] = tmp2Result;
   const items1 = [closure_4(tmp8, obj), ];
   obj = { style: tmp.headerText, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
-  const intl2 = tmp9(1236).intl;
+  const intl2 = tmp9(1233).intl;
   obj[3] = intl2.string(getSystemLocale.t.SD5MJW);
   items1[1] = closure_4(Text.Text, obj);
   obj[1] = items1;

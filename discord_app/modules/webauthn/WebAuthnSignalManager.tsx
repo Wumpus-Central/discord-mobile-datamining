@@ -1,9 +1,9 @@
-// === Module 17410: handleAuthenticatorDelete ===
+// === Module 17646: handleAuthenticatorDelete ===
 
-// Module 17410 (handleAuthenticatorDelete)
-import initializeDefault from "initialize" /* 5486 */;
+// Module 17646 (handleAuthenticatorDelete)
+import initializeDefault from "initialize" /* 5494 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "fetchFingerprint" /* 1215 */;
 
 initializeDefault;
 class WebAuthnSignalManager extends tmp2 {

@@ -1,9 +1,9 @@
-// === Module 10603: LottieType ===
+// === Module 10824: LottieType ===
 
-// Module 10603 (LottieType)
+// Module 10824 (LottieType)
 import set from "set" /* 2 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import _sendGiftMessage from "_sendGiftMessage" /* 7991 */;
+import GuildFeatures from "GuildFeatures" /* 1923 */;
+import _sendGiftMessage from "_sendGiftMessage" /* 8000 */;
 
 const PremiumGiftStyles = GuildFeatures.PremiumGiftStyles;
 const obj = { JSON: 0, [0]: "JSON", LOTTIE: 1, [1]: "LOTTIE" };
@@ -21,67 +21,67 @@ export const getLottieType = function getLottieType(giftStyle) {
 export const getGiftAnimationData = function getGiftAnimationData(giftStyle, ACTION) {
   if (PremiumGiftStyles.STANDARD_BOX === giftStyle) {
     if (_sendGiftMessage.AnimationState.IDLE === ACTION) {
-      return tmp17(10604);
-    } else if (tmp17(7991).AnimationState.LOOP === ACTION) {
-      return tmp17(10605);
+      return tmp17(10825);
+    } else if (tmp17(8000).AnimationState.LOOP === ACTION) {
+      return tmp17(10826);
     } else {
-      return tmp17(10606);
+      return tmp17(10827);
     }
   } else if (tmp.CAKE === giftStyle) {
     if (_sendGiftMessage.AnimationState.IDLE === ACTION) {
-      return tmp15(10607);
-    } else if (tmp15(7991).AnimationState.LOOP === ACTION) {
-      return tmp15(10608);
+      return tmp15(10828);
+    } else if (tmp15(8000).AnimationState.LOOP === ACTION) {
+      return tmp15(10829);
     } else {
-      return tmp15(10609);
+      return tmp15(10830);
     }
   } else if (tmp.CHEST === giftStyle) {
     if (_sendGiftMessage.AnimationState.IDLE === ACTION) {
-      return tmp13(10610);
-    } else if (tmp13(7991).AnimationState.LOOP === ACTION) {
-      return tmp13(10611);
+      return tmp13(10831);
+    } else if (tmp13(8000).AnimationState.LOOP === ACTION) {
+      return tmp13(10832);
     } else {
-      return tmp13(10612);
+      return tmp13(10833);
     }
   } else if (tmp.COFFEE === giftStyle) {
     if (_sendGiftMessage.AnimationState.IDLE === ACTION) {
-      return tmp11(10613);
-    } else if (tmp11(7991).AnimationState.LOOP === ACTION) {
-      return tmp11(10614);
+      return tmp11(10834);
+    } else if (tmp11(8000).AnimationState.LOOP === ACTION) {
+      return tmp11(10835);
     } else {
-      return tmp11(10615);
+      return tmp11(10836);
     }
   } else if (tmp.SEASONAL_STANDARD_BOX === giftStyle) {
     if (_sendGiftMessage.AnimationState.IDLE === ACTION) {
-      return tmp9(10616);
-    } else if (tmp9(7991).AnimationState.LOOP === ACTION) {
-      return tmp9(10617);
+      return tmp9(10837);
+    } else if (tmp9(8000).AnimationState.LOOP === ACTION) {
+      return tmp9(10838);
     } else {
-      return tmp9(10618);
+      return tmp9(10839);
     }
   } else if (tmp.SEASONAL_CAKE === giftStyle) {
     if (_sendGiftMessage.AnimationState.IDLE === ACTION) {
-      return tmp7(10619);
-    } else if (tmp7(7991).AnimationState.LOOP === ACTION) {
-      return tmp7(10620);
+      return tmp7(10840);
+    } else if (tmp7(8000).AnimationState.LOOP === ACTION) {
+      return tmp7(10841);
     } else {
-      return tmp7(10621);
+      return tmp7(10842);
     }
   } else if (tmp.SEASONAL_CHEST === giftStyle) {
     if (_sendGiftMessage.AnimationState.IDLE === ACTION) {
-      return tmp5(10622);
-    } else if (tmp5(7991).AnimationState.LOOP === ACTION) {
-      return tmp5(10623);
+      return tmp5(10843);
+    } else if (tmp5(8000).AnimationState.LOOP === ACTION) {
+      return tmp5(10844);
     } else {
-      return tmp5(10624);
+      return tmp5(10845);
     }
   } else if (tmp.SEASONAL_COFFEE === giftStyle) {
     if (_sendGiftMessage.AnimationState.IDLE === ACTION) {
-      return tmp3(10625);
-    } else if (tmp3(7991).AnimationState.LOOP === ACTION) {
-      return tmp3(10626);
+      return tmp3(10846);
+    } else if (tmp3(8000).AnimationState.LOOP === ACTION) {
+      return tmp3(10847);
     } else {
-      return tmp3(10627);
+      return tmp3(10848);
     }
   } else {
     if (tmp.SNOWGLOBE !== giftStyle) {

@@ -1,9 +1,9 @@
-// === Module 8015: transformEmbeds ===
+// === Module 8024: transformEmbeds ===
 
-// Module 8015 (transformEmbeds)
+// Module 8024 (transformEmbeds)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 
 const processColor = get_ActivityIndicator.processColor;
 const MessageEmbedTypes = ME.MessageEmbedTypes;

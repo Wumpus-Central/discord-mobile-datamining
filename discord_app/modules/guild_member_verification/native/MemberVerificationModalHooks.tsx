@@ -1,11 +1,11 @@
-// === Module 7650: useSetInitialVerificationEffect ===
+// === Module 7659: useSetInitialVerificationEffect ===
 
-// Module 7650 (useSetInitialVerificationEffect)
-import initialize from "initialize" /* 589 */;
+// Module 7659 (useSetInitialVerificationEffect)
+import initialize from "initialize" /* 586 */;
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import closure_4 from "map" /* 7651 */;
-import { setInitialVerification } from "map" /* 7651 */;
+import closure_3 from "mergeGuildAvatar" /* 1921 */;
+import closure_4 from "map" /* 7660 */;
+import { setInitialVerification } from "map" /* 7660 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/MemberVerificationModalHooks.tsx");
@@ -79,5 +79,5 @@ export const useInitialVerification = function useInitialVerification(id) {
   const _require = id;
   const items = [closure_4];
   const items1 = [id];
-  return _require(589).useStateFromStores(items, () => closure_1_4.getInitialVerificationState(closure_0), items1);
+  return _require(586).useStateFromStores(items, () => closure_1_4.getInitialVerificationState(closure_0), items1);
 };

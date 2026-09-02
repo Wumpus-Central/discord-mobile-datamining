@@ -1,18 +1,18 @@
-// === Module 14669: EmptyState ===
+// === Module 14895: EmptyState ===
 
-// Module 14669 (EmptyState)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 14895 (EmptyState)
+import ThemesDefault from "Themes" /* 709 */;
 import Text from "Text" /* 4474 */;
-import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 6256 */;
-import useTrackQuestEventWithImpression from "useTrackQuestEventWithImpression" /* 11341 */;
-import StarfieldBackgroundDefault from "StarfieldBackground" /* 14681 */;
-import ListEdgeSpacerDefault from "ListEdgeSpacer" /* 14686 */;
+import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 6265 */;
+import useTrackQuestEventWithImpression from "useTrackQuestEventWithImpression" /* 11564 */;
+import StarfieldBackgroundDefault from "StarfieldBackground" /* 14907 */;
+import ListEdgeSpacerDefault from "ListEdgeSpacer" /* 14912 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "set" /* 7447 */;
-import { BountyCarouselEmptyStateReason as closure_7 } from "QuestsExperimentLocations" /* 5387 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1384 */;
+import closure_6 from "set" /* 7457 */;
+import { BountyCarouselEmptyStateReason as closure_7 } from "QuestsExperimentLocations" /* 5395 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -23,23 +23,23 @@ function EmptyState(reason) {
   let obj = useTrackQuestEventWithImpression;
   const bountyCarouselEmptyStateAnalytics = obj.useBountyCarouselEmptyStateAnalytics(reason);
   if (reason === constants.COMPLETED) {
-    const intl2 = tmp2(1236).intl;
-    let stringResult = intl2.string(tmp2(1236).t.O2hRaZ);
+    const intl2 = tmp2(1233).intl;
+    let stringResult = intl2.string(tmp2(1233).t.O2hRaZ);
   } else {
-    const intl = tmp2(1236).intl;
-    stringResult = intl.string(tmp2(1236).t.TKuW8z);
+    const intl = tmp2(1233).intl;
+    stringResult = intl.string(tmp2(1233).t.TKuW8z);
   }
   if (reason === constants.COMPLETED) {
-    let ReqPds = tmp2(1236).t["D/790X"];
+    let ReqPds = tmp2(1233).t["D/790X"];
   } else {
-    ReqPds = tmp2(1236).t.ReqPds;
+    ReqPds = tmp2(1233).t.ReqPds;
   }
   obj = { style: tmp.emptyState, children: null };
   const items = [callback2(AccountAgeTier10LargeBadge.BountiesPosterIllocon, { size: 32 }), ];
   obj = { style: tmp.emptyStateText, children: null };
   const items1 = [callback2(Text.Text, { variant: "text-sm/semibold", color: "text-default", children: stringResult }), ];
   obj1 = { variant: "text-xs/medium", color: "text-muted", children: null };
-  const intl3 = tmp2(1236).intl;
+  const intl3 = tmp2(1233).intl;
   obj1[2] = intl3.format(ReqPds, {
     onClickLearnMore() {
       callback(table[14])();
@@ -361,19 +361,19 @@ const memoResult = importAllResult.memo(function QuestHomeBounties(shopCarouselC
   if (showOrbShopPlaceholderCarousel === undefined) {
     showOrbShopPlaceholderCarousel = false;
   }
-  let obj = first(11083);
+  let obj = first(11303);
   const questHomeBounties = obj.useQuestHomeBounties().questHomeBounties;
   const tmp3 = callback4();
   first = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
   if (questHomeBounties.length > 0) {
-    const items = [tmp(1373).DismissibleContent.BOUNTIES_NUX_PROMO_SHEET];
+    const items = [tmp(1372).DismissibleContent.BOUNTIES_NUX_PROMO_SHEET];
     let items1 = items;
   } else {
     items1 = [];
   }
-  let tmpResult = tmp(6251);
+  let tmpResult = tmp(6260);
   const tmp4 = callback(tmpResult.useSelectedDismissibleContent(items1), 2);
   first = tmp4[0];
   importDefault = tmp6;
@@ -404,7 +404,7 @@ const memoResult = importAllResult.memo(function QuestHomeBounties(shopCarouselC
     }
     tmp = ref;
   }, items3);
-  tmpResult = tmp(589);
+  tmpResult = tmp(586);
   const items4 = [closure_6];
   ({ placement, buttonVariant } = shopCarouselConfig.shopCarouselConfig);
   if (0 !== questHomeBounties.length) {
@@ -412,8 +412,8 @@ const memoResult = importAllResult.memo(function QuestHomeBounties(shopCarouselC
       if (verticalScrollEnabled) {
         let tmp12 = "none" !== placement && obtainableOrbRewards > 0;
         if (tmp12) {
-          tmp12 = orbShopProducts.length >= tmp(14671).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
-          const tmp13 = orbShopProducts.length >= tmp(14671).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+          tmp12 = orbShopProducts.length >= tmp(14897).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+          const tmp13 = orbShopProducts.length >= tmp(14897).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
         }
         if (!tmp12) {
           obj = { style: null, children: null };
@@ -446,7 +446,7 @@ const memoResult = importAllResult.memo(function QuestHomeBounties(shopCarouselC
           if ("outside" === placement) {
             let PX_20 = PX_16;
           } else {
-            PX_20 = tmp16(712).space.PX_20;
+            PX_20 = tmp16(709).space.PX_20;
           }
           obj1[2] = PX_20;
           obj1[3] = orbShopProducts;

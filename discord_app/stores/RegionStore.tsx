@@ -1,10 +1,10 @@
-// === Module 16393: initialize ===
+// === Module 16625: initialize ===
 
-// Module 16393 (initialize)
+// Module 16625 (initialize)
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "createGuildRecordFromRust" /* 1909 */;
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import closure_2 from "createGuildRecordFromRust" /* 1908 */;
 
 let c3 = null;
 let closure_4 = {};

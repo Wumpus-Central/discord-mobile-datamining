@@ -1,10 +1,10 @@
-// === Module 4113: hasViewChannelPermission ===
+// === Module 4112: hasViewChannelPermission ===
 
-// Module 4113 (hasViewChannelPermission)
+// Module 4112 (hasViewChannelPermission)
 import set from "set" /* 2 */;
-import fromStringAll from "fromString" /* 506 */;
-import ME from "ME" /* 676 */;
-import GuildRoleRecordTypeTag from "GuildRoleRecordTypeTag" /* 1986 */;
+import fromStringAll from "fromString" /* 503 */;
+import ME from "ME" /* 673 */;
+import GuildRoleRecordTypeTag from "GuildRoleRecordTypeTag" /* 1985 */;
 
 const hasPermission = GuildRoleRecordTypeTag.hasPermission;
 const Permissions = ME.Permissions;
@@ -20,8 +20,8 @@ export const isChannelAccessDeniedBy = function isChannelAccessDeniedBy(isGuildV
     if (!hasItem) {
       let isGuildVocalResult = isGuildVocal.isGuildVocal();
       if (isGuildVocalResult) {
-        isGuildVocalResult = tmp2(506).has(deny.deny, tmp4.CONNECT);
-        const tmp2Result = tmp2(506);
+        isGuildVocalResult = tmp2(503).has(deny.deny, tmp4.CONNECT);
+        const tmp2Result = tmp2(503);
       }
       hasItem = isGuildVocalResult;
     }
@@ -41,8 +41,8 @@ export const isChannelAccessGrantedBy = function isChannelAccessGrantedBy(isGuil
       if (!hasItem) {
         let isGuildVocalResult = isGuildVocal.isGuildVocal();
         if (isGuildVocalResult) {
-          isGuildVocalResult = tmp4(506).has(deny.deny, tmp6.CONNECT);
-          const tmp4Result = tmp4(506);
+          isGuildVocalResult = tmp4(503).has(deny.deny, tmp6.CONNECT);
+          const tmp4Result = tmp4(503);
         }
         hasItem = isGuildVocalResult;
       }
@@ -58,8 +58,8 @@ export const isChannelAccessGrantedBy = function isChannelAccessGrantedBy(isGuil
         const isGuildVocalResult1 = isGuildVocal.isGuildVocal();
         hasItem = !isGuildVocalResult1;
         if (isGuildVocalResult1) {
-          hasItem = tmp10(506).has(deny.allow, tmp12.CONNECT);
-          const tmp10Result = tmp10(506);
+          hasItem = tmp10(503).has(deny.allow, tmp12.CONNECT);
+          const tmp10Result = tmp10(503);
         }
         hasItem1 = hasItem;
       }

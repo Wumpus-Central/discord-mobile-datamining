@@ -1,6 +1,6 @@
-// === Module 7845: processColorOrThrow ===
+// === Module 7854: processColorOrThrow ===
 
-// Module 7845 (processColorOrThrow)
+// Module 7854 (processColorOrThrow)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 

@@ -1,14 +1,14 @@
-// === Module 7868: createAddRecipientSystemMessage ===
+// === Module 7877: createAddRecipientSystemMessage ===
 
-// Module 7868 (createAddRecipientSystemMessage)
+// Module 7877 (createAddRecipientSystemMessage)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import createChannelRecord from "createChannelRecord" /* 1391 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7869 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7871 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7873 */;
-import closure_4 from "ensureGuildLoaded" /* 1387 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import createChannelRecord from "createChannelRecord" /* 1390 */;
+import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7878 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7880 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7882 */;
+import closure_4 from "ensureGuildLoaded" /* 1386 */;
+import closure_5 from "mergeGuildAvatar" /* 1921 */;
 
 const THREAD_CHANNEL_TYPES = createChannelRecord.THREAD_CHANNEL_TYPES;
 const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/AddRecipientSystemMessage.tsx");

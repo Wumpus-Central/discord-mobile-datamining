@@ -1,8 +1,8 @@
-// === Module 10947: getChannelAndRecipientsFromInvite ===
+// === Module 11167: getChannelAndRecipientsFromInvite ===
 
-// Module 10947 (getChannelAndRecipientsFromInvite)
+// Module 11167 (getChannelAndRecipientsFromInvite)
 import set from "set" /* 2 */;
-import createChannelRecord from "createChannelRecord" /* 1391 */;
+import createChannelRecord from "createChannelRecord" /* 1390 */;
 
 let closure_0 = createChannelRecord.createChannelRecordFromInvite;
 const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/getChannelAndRecipientsFromInvite.tsx");

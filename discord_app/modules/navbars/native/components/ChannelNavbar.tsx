@@ -1,29 +1,29 @@
-// === Module 12312: ChannelTitleContent ===
+// === Module 12536: ChannelTitleContent ===
 
-// Module 12312 (ChannelTitleContent)
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
+// Module 12536 (ChannelTitleContent)
+import initialize from "initialize" /* 586 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import Button from "Button" /* 1296 */;
 import Text from "Text" /* 4474 */;
 import computeChannelName from "computeChannelName" /* 4674 */;
-import PressableBase from "PressableBase" /* 5068 */;
-import ActivityStatusDefault from "ActivityStatus" /* 9239 */;
+import PressableBase from "PressableBase" /* 5076 */;
+import ActivityStatusDefault from "ActivityStatus" /* 9253 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "_handleConnectionOpen" /* 5221 */;
-import { THREAD_CHANNEL_TYPES } from "createChannelRecord" /* 1391 */;
-import closure_7 from "ensureGuildLoaded" /* 1387 */;
-import closure_8 from "createGuildRecordFromRust" /* 1909 */;
+import closure_5 from "_handleConnectionOpen" /* 5229 */;
+import { THREAD_CHANNEL_TYPES } from "createChannelRecord" /* 1390 */;
+import closure_7 from "ensureGuildLoaded" /* 1386 */;
+import closure_8 from "createGuildRecordFromRust" /* 1908 */;
 import closure_9 from "sortActivity" /* 4569 */;
 import closure_10 from "markAllUserIdListsStale" /* 4130 */;
-import closure_11 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { StaticChannelRoute } from "set" /* 1394 */;
-import ContentDismissActionType from "ContentDismissActionType" /* 1384 */;
+import closure_11 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
+import { StaticChannelRoute } from "set" /* 1393 */;
+import ContentDismissActionType from "ContentDismissActionType" /* 1383 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
-import importDefaultResult from "createTextStyle" /* 5461 */;
+import importDefaultResult from "createTextStyle" /* 5469 */;
 
 require = arg1;
 function ChannelTitleContent(arg0) {
@@ -78,7 +78,7 @@ function ParentChannelSubTitle(parentChannel) {
 }
 function DMChannelName(style) {
   const userId = style.userId;
-  let obj = userId(589);
+  let obj = userId(586);
   const items = [closure_11, closure_10];
   const items1 = [userId];
   const stateFromStores = obj.useStateFromStores(items, () => {
@@ -93,22 +93,22 @@ function DMChannelName(style) {
     return str;
   }, items1);
   obj = { numberOfLines: 1, style: style.style, accessibilityLabel: null, maxFontSizeMultiplier: 1, accessibilityRole: "header", children: null };
-  const intl = userId(1236).intl;
-  obj[2] = intl.formatToPlainString(userId(1236).t.fYqXVY, { channelName: stateFromStores });
+  const intl = userId(1233).intl;
+  obj[2] = intl.formatToPlainString(userId(1233).t.fYqXVY, { channelName: stateFromStores });
   obj[5] = stateFromStores;
-  return callback(userId(1297).LegacyText, obj);
+  return callback(userId(1296).LegacyText, obj);
 }
 function ConnectedStatus(style) {
   const userId = style.userId;
-  let obj = userId(589);
+  let obj = userId(586);
   const items = [closure_9];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     const obj = { status: closure_1_9.getStatus(userId), isMobileOnline: closure_1_9.isMobileOnline(userId), isVROnline: closure_1_9.isVROnline(userId), streaming: closure_1_1(closure_1_2[32])(closure_1_9.getActivities(userId)) };
     return obj;
   });
   ({ status, isMobileOnline, isVROnline, streaming } = stateFromStoresObject);
-  obj = { isMobileOnline, isVROnline, status, streaming, size: userId(1297).StatusSizes.SMALL, style: style.style };
-  return callback(userId(1297).Status, obj);
+  obj = { isMobileOnline, isVROnline, status, streaming, size: userId(1296).StatusSizes.SMALL, style: style.style };
+  return callback(userId(1296).Status, obj);
 }
 let c3 = importAllResult;
 ({ ChannelTypes: closure_12, Fonts } = ME);

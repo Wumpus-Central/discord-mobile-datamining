@@ -1,15 +1,15 @@
-// === Module 14242: EditUserProfileBanner ===
+// === Module 14465: EditUserProfileBanner ===
 
-// Module 14242 (EditUserProfileBanner)
-import registerAssetDefault from "registerAsset" /* 14244 */;
+// Module 14465 (EditUserProfileBanner)
+import registerAssetDefault from "registerAsset" /* 14467 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initialize" /* 8560 */;
-import closure_7 from "zustandStore" /* 9032 */;
-import { FLOATING_UPSELL_HEIGHT } from "ARBITRARY_LARGE_OFFSET" /* 6001 */;
-import ME from "ME" /* 676 */;
-import { ProfileCustomizationScrollPositions as closure_11 } from "MAX_FAVORITES" /* 685 */;
-import { UserProfileEditAutoFocusElement as closure_12 } from "UserProfileEditAutoFocusElement" /* 14243 */;
+import closure_6 from "initialize" /* 8573 */;
+import closure_7 from "zustandStore" /* 9046 */;
+import { FLOATING_UPSELL_HEIGHT } from "ARBITRARY_LARGE_OFFSET" /* 6009 */;
+import ME from "ME" /* 673 */;
+import { ProfileCustomizationScrollPositions as closure_11 } from "MAX_FAVORITES" /* 682 */;
+import { UserProfileEditAutoFocusElement as closure_12 } from "UserProfileEditAutoFocusElement" /* 14466 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -70,7 +70,7 @@ function EditUserProfileBanner(user) {
 ({ ScrollView: c4, View: c5 } = get_ActivityIndicator);
 ({ DISPLAY_NAME_MAX_LENGTH: c9, PRONOUNS_MAX_LENGTH: c10 } = ME);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-let obj = { assetOrigin: require("AssetOriginTypes").AssetOriginTypes.NEW_ASSET, imageUri: registerAssetDefault, staticImageUri: registerAssetDefault, description: "", originalAsset: "accessible" };
+let obj = { assetOrigin: require("AssetOriginTypes").AssetOriginTypes.NEW_ASSET, imageUri: registerAssetDefault, staticImageUri: registerAssetDefault, description: "", originalAsset: "ti" };
 let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileEditForm.tsx");
 
 export default function UserProfileEditForm(currentUser) {

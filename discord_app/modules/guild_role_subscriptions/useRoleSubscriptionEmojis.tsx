@@ -1,8 +1,8 @@
-// === Module 17334: items ===
+// === Module 17570: items ===
 
-// Module 17334 (items)
+// Module 17570 (items)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "getEmojiToGroupId" /* 5401 */;
+import closure_3 from "getEmojiToGroupId" /* 5409 */;
 
 const require = arg1;
 let items = [];

@@ -1,9 +1,9 @@
-// === Module 12896: getRemoteJoinFooterLabel ===
+// === Module 13118: getRemoteJoinFooterLabel ===
 
-// Module 12896 (getRemoteJoinFooterLabel)
+// Module 13118 (getRemoteJoinFooterLabel)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import ME from "ME" /* 673 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 
 const ActivityGamePlatforms = ME.ActivityGamePlatforms;
 const result = set.fileFinishedImporting("modules/activities/utils/getRemoteJoinFooterLabel.tsx");

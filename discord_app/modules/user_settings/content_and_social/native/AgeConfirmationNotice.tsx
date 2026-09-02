@@ -1,10 +1,10 @@
-// === Module 14424: AgeConfirmationNotice ===
+// === Module 14647: AgeConfirmationNotice ===
 
-// Module 14424 (AgeConfirmationNotice)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 14647 (AgeConfirmationNotice)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import SafetyToastType from "SafetyToastType" /* 8670 */;
+import SafetyToastType from "SafetyToastType" /* 8685 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -12,10 +12,10 @@ const require = arg1;
 let result = require("set").fileFinishedImporting("modules/user_settings/content_and_social/native/AgeConfirmationNotice.tsx");
 
 export default function AgeConfirmationNotice() {
-  let obj = sensitiveContentFilterHelpArticle(6146);
+  let obj = sensitiveContentFilterHelpArticle(6154);
   sensitiveContentFilterHelpArticle = obj.useSensitiveContentFilterHelpArticle();
   const effect = React.useEffect(() => {
-    const result = sensitiveContentFilterHelpArticle(14339).trackSafetySettingsNoticeAnalytics(constants2.AGE_CONFIRMATION_NOTICE, constants.VIEWED);
+    const result = sensitiveContentFilterHelpArticle(14562).trackSafetySettingsNoticeAnalytics(constants2.AGE_CONFIRMATION_NOTICE, constants.VIEWED);
   }, []);
   const items = [sensitiveContentFilterHelpArticle];
   importDefault = React.useCallback(() => {
@@ -27,25 +27,25 @@ export default function AgeConfirmationNotice() {
   obj = { style: null, children: null };
   obj = { marginBottom: null };
   const callback = React.useCallback(() => {
-    let obj = callback(8682);
-    obj = { entryPoint: sensitiveContentFilterHelpArticle(8684).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE };
+    let obj = callback(8697);
+    obj = { entryPoint: sensitiveContentFilterHelpArticle(8699).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE };
     const result = obj.showAgeVerificationGetStartedModal(obj);
-    const result1 = sensitiveContentFilterHelpArticle(14339).trackSafetySettingsNoticeAnalytics(constants2.AGE_CONFIRMATION_NOTICE, constants.CONFIRM_AGE);
+    const result1 = sensitiveContentFilterHelpArticle(14562).trackSafetySettingsNoticeAnalytics(constants2.AGE_CONFIRMATION_NOTICE, constants.CONFIRM_AGE);
   }, []);
   obj[0] = ThemesDefault.space.PX_8;
   obj[0] = obj;
-  obj1 = { messageType: sensitiveContentFilterHelpArticle(1297).HelpMessageTypes.INFO, borderRadius: ThemesDefault.radii.lg, button: null, children: null };
+  obj1 = { messageType: sensitiveContentFilterHelpArticle(1296).HelpMessageTypes.INFO, borderRadius: ThemesDefault.radii.lg, button: null, children: null };
   let obj2 = { variant: "secondary", size: "sm", text: null, onPress: null };
-  const intl = sensitiveContentFilterHelpArticle(1236).intl;
-  obj2[2] = intl.string(sensitiveContentFilterHelpArticle(1236).t.FDSSia);
+  const intl = sensitiveContentFilterHelpArticle(1233).intl;
+  obj2[2] = intl.string(sensitiveContentFilterHelpArticle(1233).t.FDSSia);
   obj2[3] = callback;
   obj1[2] = jsx(sensitiveContentFilterHelpArticle(4928).Button, { variant: "secondary", size: "sm", text: null, onPress: null });
-  const intl2 = sensitiveContentFilterHelpArticle(1236).intl;
-  obj1[3] = intl2.format(sensitiveContentFilterHelpArticle(1236).t.mFgsfg, {
+  const intl2 = sensitiveContentFilterHelpArticle(1233).intl;
+  obj1[3] = intl2.format(sensitiveContentFilterHelpArticle(1233).t.mFgsfg, {
     hook(children) {
       return closure_1_7(sensitiveContentFilterHelpArticle(closure_1_2[14]).Text, { role: "link", variant: "text-sm/medium", color: "text-link", onPress: closure_1, children });
     }
   });
-  obj[1] = jsx(sensitiveContentFilterHelpArticle(1297).HelpMessage, { messageType: sensitiveContentFilterHelpArticle(1297).HelpMessageTypes.INFO, borderRadius: ThemesDefault.radii.lg, button: null, children: null });
+  obj[1] = jsx(sensitiveContentFilterHelpArticle(1296).HelpMessage, { messageType: sensitiveContentFilterHelpArticle(1296).HelpMessageTypes.INFO, borderRadius: ThemesDefault.radii.lg, button: null, children: null });
   return <View marginBottom={null} />;
 };

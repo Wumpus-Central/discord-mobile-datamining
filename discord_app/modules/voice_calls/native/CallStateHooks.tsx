@@ -1,11 +1,11 @@
-// === Module 13449: id ===
+// === Module 13672: id ===
 
-// Module 13449 (id)
+// Module 13672 (id)
 import closure_3 from "getParticipants" /* 4494 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "callConnect" /* 5222 */;
+import closure_4 from "fetchFingerprint" /* 1215 */;
+import closure_5 from "callConnect" /* 5230 */;
 import closure_6 from "createRTCConnection" /* 4554 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 import { ParticipantTypes } from "ParticipantTypes" /* 4499 */;
 
 const require = arg1;
@@ -33,7 +33,7 @@ export default function _default() {
   dependencyMap = undefined;
   let stateFromStores;
   id = id.getId();
-  obj = _require(589);
+  obj = _require(586);
   const items = [closure_5];
   const items1 = [tmp, id];
   const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
@@ -59,14 +59,14 @@ export default function _default() {
     }
     return tmp;
   });
-  const tmp3 = id(9650)();
+  const tmp3 = id(9663)();
   dependencyMap = tmp3;
   const items2 = [getRTCConnectionId];
-  stateFromStores = _require(589).useStateFromStores(items2, getRTCConnectionId.getRTCConnectionId, []);
-  const obj2 = _require(589);
+  stateFromStores = _require(586).useStateFromStores(items2, getRTCConnectionId.getRTCConnectionId, []);
+  const obj2 = _require(586);
   const items3 = [getRTCConnectionId];
   const items4 = [stateFromStores, tmp3, tmp];
-  const stateFromStores1 = _require(589).useStateFromStores(items3, () => {
+  const stateFromStores1 = _require(586).useStateFromStores(items3, () => {
     let channelId;
     if (channelId != null) {
       channelId = channelId.channelId;

@@ -1,12 +1,12 @@
-// === Module 15136: _serializeIntlData ===
+// === Module 15365: _serializeIntlData ===
 
-// Module 15136 (_serializeIntlData)
+// Module 15365 (_serializeIntlData)
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
-import keys from "keys" /* 644 */;
-import createToggle from "createToggle" /* 11068 */;
+import keys from "keys" /* 641 */;
+import createToggle from "createToggle" /* 11288 */;
 
 const require = arg1;
 function _serializeIntlData() {
@@ -47,11 +47,11 @@ function _serializeIntlData() {
             Identifier = undefined;
             Build = undefined;
             dependencyMap = 1;
-            let obj5 = closure_1_0(1239);
+            let obj5 = closure_1_0(1238);
             Identifier = 2;
             Build = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = obj5.loadJsonAsset(closure_1_0(1273));
+            obj1[0] = obj5.loadJsonAsset(closure_1_0(1272));
             return obj1;
           }
         } else if (1 === tmp7) {
@@ -73,17 +73,17 @@ function _serializeIntlData() {
         } else {
           callback = arg1;
           obj4 = { currentLocale: null, systemLocale: null, initialLocale: null, messagesFromIntl: null, messagesFromFile: null, metadata: null };
-          obj4[0] = callback(1236).intl.currentLocale;
-          obj4[1] = callback(1236).systemLocale;
-          obj4[2] = callback(1236).initialLocale;
+          obj4[0] = callback(1233).intl.currentLocale;
+          obj4[1] = callback(1233).systemLocale;
+          obj4[2] = callback(1233).initialLocale;
           obj5 = {};
           const _Object3 = Object;
           const _Object4 = Object;
-          const keys = Object.keys(callback(1236).t);
+          const keys = Object.keys(callback(1233).t);
           const merged = Object.assign(Object.fromEntries(keys.map((arg0) => {
             const items = [arg0, ];
-            const intl = callback(1236).intl;
-            items[1] = intl.reserialize(callback(1236).t[arg0]);
+            const intl = callback(1233).intl;
+            items[1] = intl.reserialize(callback(1233).t[arg0]);
             return items;
           })));
           obj4[3] = obj5;
@@ -99,7 +99,7 @@ function _serializeIntlData() {
             str = "iOS";
           }
           obj7[1] = str;
-          obj = lib(1625);
+          obj = lib(1624);
           lib = obj.getConstants();
           let str3 = "N/A";
           if (str2.trim().length > 0) {
@@ -119,7 +119,7 @@ function _serializeIntlData() {
           const _Object = Object;
           obj7[3] = Object.keys(callback).length;
           const _Object2 = Object;
-          obj7[4] = Object.keys(callback(1236).t).length;
+          obj7[4] = Object.keys(callback(1233).t).length;
           obj4[5] = obj7;
           const _JSON = JSON;
           dependencyMap = 0;
@@ -183,7 +183,7 @@ function _handleUploadIntlDataSettingPress() {
             callback = undefined;
             closure_2 = undefined;
             (function onUploadIntlDataRequestStart() {
-              ANDROID_APP(705).batchUpdates(() => state.setState({ isDisabled: true, isUploading: true }));
+              ANDROID_APP(702).batchUpdates(() => state.setState({ isDisabled: true, isUploading: true }));
             })();
             if (obj11.isIOS()) {
               ANDROID_APP = tmp52.IOS_APP;
@@ -203,12 +203,12 @@ function _handleUploadIntlDataSettingPress() {
             })();
             c4 = 3;
             c5 = 1;
-            obj11 = closure_1_0(500);
+            obj11 = closure_1_0(1234);
           }
         } else if (1 === tmp9) {
           dependencyMap = 0;
           (function onUploadIntlDataRequestFinish() {
-            ANDROID_APP(705).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+            ANDROID_APP(702).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
             const timerId = setTimeout(() => callback(table[5]).batchUpdates(() => state.setState({ isDisabled: false })), 5000);
           })();
           throw closure_2;
@@ -221,7 +221,7 @@ function _handleUploadIntlDataSettingPress() {
             obj5.open(obj1);
             dependencyMap = 0;
             (function onUploadIntlDataRequestFinish() {
-              ANDROID_APP(705).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+              ANDROID_APP(702).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
               const timerId = setTimeout(() => callback(table[5]).batchUpdates(() => state.setState({ isDisabled: false })), 5000);
             })();
             c5 = 3;
@@ -232,7 +232,7 @@ function _handleUploadIntlDataSettingPress() {
             } else if (arg0 === 2) {
               dependencyMap = 0;
               (function onUploadIntlDataRequestFinish() {
-                ANDROID_APP(705).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+                ANDROID_APP(702).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
                 const timerId = setTimeout(() => callback(table[5]).batchUpdates(() => state.setState({ isDisabled: false })), 5000);
               })();
               c5 = 3;
@@ -242,7 +242,7 @@ function _handleUploadIntlDataSettingPress() {
             } else {
               callback = arg1;
               closure_2 = closure_1_7.DEBUG_LOG(ANDROID_APP, "intl_data");
-              const HTTP = closure_1_0(530).HTTP;
+              const HTTP = closure_1_0(527).HTTP;
               const obj3 = { url: null, body: null, retries: 3, headers: null, oldFormErrors: true, rejectWithError: true };
               obj3[0] = closure_2;
               obj3[1] = callback;
@@ -265,7 +265,7 @@ function _handleUploadIntlDataSettingPress() {
           }
           dependencyMap = 0;
           (function onUploadIntlDataRequestFinish() {
-            ANDROID_APP(705).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+            ANDROID_APP(702).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
             const timerId = setTimeout(() => callback(table[5]).batchUpdates(() => state.setState({ isDisabled: false })), 5000);
           })();
           c5 = 3;

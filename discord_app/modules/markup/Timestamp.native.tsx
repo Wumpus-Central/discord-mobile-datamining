@@ -1,9 +1,9 @@
-// === Module 10210: Timestamp ===
+// === Module 10232: Timestamp ===
 
-// Module 10210 (Timestamp)
+// Module 10232 (Timestamp)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import itemsDefault from "items" /* 10211 */;
+import ThemesDefault from "Themes" /* 709 */;
+import itemsDefault from "items" /* 10233 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -24,7 +24,7 @@ export default function Timestamp(node) {
   }
   const tmp2 = itemsDefault(node);
   const tmp3 = jsx;
-  return tmp3(node(1297).LegacyText, {
+  return tmp3(node(1296).LegacyText, {
     style,
     onPress() {
       let obj = closure_1_1(closure_1_2[6]);

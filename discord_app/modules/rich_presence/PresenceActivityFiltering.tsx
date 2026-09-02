@@ -1,6 +1,6 @@
-// === Module 9437: doesGameHaveRichPresence ===
+// === Module 9450: doesGameHaveRichPresence ===
 
-// Module 9437 (doesGameHaveRichPresence)
+// Module 9450 (doesGameHaveRichPresence)
 import closure_2 from "addApplication" /* 4519 */;
 
 const require = arg1;

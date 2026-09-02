@@ -1,10 +1,10 @@
-// === Module 8456: create ===
+// === Module 8465: create ===
 
-// Module 8456 (create)
-import _mod1307 from "module_1307" /* 1307 */;
-import create from "create" /* 8453 */;
+// Module 8465 (create)
+import _mod1306 from "module_1306" /* 1306 */;
+import create from "create" /* 8462 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import { MessageType } from "module_1307" /* 1307 */;
+import { MessageType } from "module_1306" /* 1306 */;
 
 require = arg1;
 class PremiumTab$Type extends MessageType {
@@ -27,7 +27,7 @@ class PremiumTab$Type extends MessageType {
       name: "acknowledged_badge_label_localized",
       kind: "message",
       T() {
-            return callback(8453).LocalizedString;
+            return callback(8462).LocalizedString;
           }
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.PremiumTab", items, T);
@@ -40,10 +40,10 @@ prototype["create"] = function create(arr) {
   let obj = { badgeLabel: "", acknowledgedBadgeLabel: "", showHoverGradient: false, deeplinkSection: "" };
   const _Object = Object;
   obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1306.MESSAGE_TYPE, obj);
   if (undefined !== arr) {
-    const result = _mod1307.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1307;
+    const result = _mod1306.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1306;
   }
   return obj;
 };
@@ -105,7 +105,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
             if (true === onRead) {
               let tmp8 = require;
               let tmp9 = dependencyMap;
-              onRead = _mod1307.UnknownFieldHandler.onRead;
+              onRead = _mod1306.UnknownFieldHandler.onRead;
             }
             let tmp10 = obj;
             let tmp11 = tmp5;
@@ -121,37 +121,37 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(badgeLabel, tag, writeUnknownFields) {
   if ("" !== badgeLabel.badgeLabel) {
-    tag.tag(1, _mod1307.WireType.LengthDelimited).string(badgeLabel.badgeLabel);
-    const tagResult = tag.tag(1, _mod1307.WireType.LengthDelimited);
+    tag.tag(1, _mod1306.WireType.LengthDelimited).string(badgeLabel.badgeLabel);
+    const tagResult = tag.tag(1, _mod1306.WireType.LengthDelimited);
   }
   if ("" !== badgeLabel.acknowledgedBadgeLabel) {
-    tag.tag(2, _mod1307.WireType.LengthDelimited).string(badgeLabel.acknowledgedBadgeLabel);
-    const tagResult1 = tag.tag(2, _mod1307.WireType.LengthDelimited);
+    tag.tag(2, _mod1306.WireType.LengthDelimited).string(badgeLabel.acknowledgedBadgeLabel);
+    const tagResult1 = tag.tag(2, _mod1306.WireType.LengthDelimited);
   }
   if (false !== badgeLabel.showHoverGradient) {
-    tag.tag(3, _mod1307.WireType.Varint).bool(badgeLabel.showHoverGradient);
-    const tagResult2 = tag.tag(3, _mod1307.WireType.Varint);
+    tag.tag(3, _mod1306.WireType.Varint).bool(badgeLabel.showHoverGradient);
+    const tagResult2 = tag.tag(3, _mod1306.WireType.Varint);
   }
   if ("" !== badgeLabel.deeplinkSection) {
-    tag.tag(4, _mod1307.WireType.LengthDelimited).string(badgeLabel.deeplinkSection);
-    const tagResult3 = tag.tag(4, _mod1307.WireType.LengthDelimited);
+    tag.tag(4, _mod1306.WireType.LengthDelimited).string(badgeLabel.deeplinkSection);
+    const tagResult3 = tag.tag(4, _mod1306.WireType.LengthDelimited);
   }
   if (badgeLabel.badgeLabelLocalized) {
     const LocalizedString = create.LocalizedString;
-    const tagResult4 = tag.tag(5, _mod1307.WireType.LengthDelimited);
-    const joined = LocalizedString.internalBinaryWrite(badgeLabel.badgeLabelLocalized, tag.tag(5, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(badgeLabel.badgeLabelLocalized, tag.tag(5, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult4 = tag.tag(5, _mod1306.WireType.LengthDelimited);
+    const joined = LocalizedString.internalBinaryWrite(badgeLabel.badgeLabelLocalized, tag.tag(5, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(badgeLabel.badgeLabelLocalized, tag.tag(5, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (badgeLabel.acknowledgedBadgeLabelLocalized) {
     const LocalizedString2 = create.LocalizedString;
-    const tagResult5 = tag.tag(6, _mod1307.WireType.LengthDelimited);
-    const joined1 = LocalizedString2.internalBinaryWrite(badgeLabel.acknowledgedBadgeLabelLocalized, tag.tag(6, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = LocalizedString2.internalBinaryWrite(badgeLabel.acknowledgedBadgeLabelLocalized, tag.tag(6, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult5 = tag.tag(6, _mod1306.WireType.LengthDelimited);
+    const joined1 = LocalizedString2.internalBinaryWrite(badgeLabel.acknowledgedBadgeLabelLocalized, tag.tag(6, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult1 = LocalizedString2.internalBinaryWrite(badgeLabel.acknowledgedBadgeLabelLocalized, tag.tag(6, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1307.UnknownFieldHandler.onWrite;
+      onWrite = _mod1306.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, badgeLabel, tag);
@@ -172,7 +172,7 @@ items[5] = {
   name: "acknowledged_badge_label_localized",
   kind: "message",
   T() {
-    return callback(8453).LocalizedString;
+    return callback(8462).LocalizedString;
   }
 };
 prototype = new prototype("discord_protos.premium_marketing.v1.PremiumTab", items, tmp, T, PremiumTab$Type, prototype, items);

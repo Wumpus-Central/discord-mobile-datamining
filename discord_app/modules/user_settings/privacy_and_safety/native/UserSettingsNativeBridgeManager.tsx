@@ -1,11 +1,11 @@
-// === Module 17407: prototype ===
+// === Module 17643: prototype ===
 
-// Module 17407 (prototype)
+// Module 17643 (prototype)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set2 from "set" /* 500 */;
-import initializeDefault from "initialize" /* 5486 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
+import set2 from "set" /* 1234 */;
+import initializeDefault from "initialize" /* 5494 */;
+import closure_3 from "handleConnectionClosedOrResumed" /* 1339 */;
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 initializeDefault;

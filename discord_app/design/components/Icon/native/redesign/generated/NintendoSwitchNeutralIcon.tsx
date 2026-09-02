@@ -1,10 +1,10 @@
-// === Module 12640: NintendoSwitchNeutralIcon ===
+// === Module 12861: NintendoSwitchNeutralIcon ===
 
-// Module 12640 (NintendoSwitchNeutralIcon)
+// Module 12861 (NintendoSwitchNeutralIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 12641 */;
+import registerAsset from "registerAsset" /* 12862 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

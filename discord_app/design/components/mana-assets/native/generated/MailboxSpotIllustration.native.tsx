@@ -1,10 +1,10 @@
-// === Module 6787: MailboxSpotIllustration ===
+// === Module 6796: MailboxSpotIllustration ===
 
-// Module 6787 (MailboxSpotIllustration)
+// Module 6796 (MailboxSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5493 */;
-import metadataDefault from "metadata" /* 6788 */;
+import preloadDefault from "preload" /* 5501 */;
+import metadataDefault from "metadata" /* 6797 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/MailboxSpotIllustration.native.tsx");

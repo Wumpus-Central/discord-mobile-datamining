@@ -1,13 +1,13 @@
-// === Module 12946: validateJumpWithAlert ===
+// === Module 13168: validateJumpWithAlert ===
 
-// Module 12946 (validateJumpWithAlert)
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 13168 (validateJumpWithAlert)
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import setDefault from "set" /* 4857 */;
-import isSpamSupported from "isSpamSupported" /* 7252 */;
-import closure_3 from "ensureGuildLoaded" /* 1387 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4121 */;
+import isSpamSupported from "isSpamSupported" /* 7261 */;
+import closure_3 from "ensureGuildLoaded" /* 1386 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_5 from "markAllUserIdListsStale" /* 4130 */;
-import { Permissions } from "ME" /* 676 */;
+import { Permissions } from "ME" /* 673 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/validateJumpWithAlert.tsx");
@@ -50,30 +50,30 @@ export default function validateJumpWithAlert(author) {
         if (!closure_4.can(Permissions.MODERATE_MEMBERS, channel)) {
           let obj3 = setDefault;
           obj3 = { title: null, body: null, confirmText: null };
-          const intl = tmp(1236).intl;
-          obj3[0] = intl.string(tmp(1236).t["6vJKFk"]);
-          const intl2 = tmp(1236).intl;
+          const intl = tmp(1233).intl;
+          obj3[0] = intl.string(tmp(1233).t["6vJKFk"]);
+          const intl2 = tmp(1233).intl;
           const obj4 = { name: null };
           obj4[0] = author.author.username;
-          obj3[1] = intl2.formatToPlainString(tmp(1236).t.zKNgPF, obj4);
-          const intl3 = tmp(1236).intl;
-          obj3[2] = intl3.string(tmp(1236).t.BddRzS);
+          obj3[1] = intl2.formatToPlainString(tmp(1233).t.zKNgPF, obj4);
+          const intl3 = tmp(1233).intl;
+          obj3[2] = intl3.string(tmp(1233).t.BddRzS);
           obj3.show(obj3);
         }
         return false;
       }
       let obj6 = setDefault;
       const obj5 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
-      const intl4 = tmp(1236).intl;
-      obj5[0] = intl4.string(tmp(1236).t["cZcG+P"]);
-      const intl5 = tmp(1236).intl;
+      const intl4 = tmp(1233).intl;
+      obj5[0] = intl4.string(tmp(1233).t["cZcG+P"]);
+      const intl5 = tmp(1233).intl;
       obj6 = { name: null };
       obj6[0] = author.author.username;
-      obj5[1] = intl5.formatToPlainString(tmp(1236).t["1YTWty"], obj6);
-      const intl6 = tmp(1236).intl;
-      obj5[2] = intl6.string(tmp(1236).t["+TSRGD"]);
-      const intl7 = tmp(1236).intl;
-      obj5[3] = intl7.string(tmp(1236).t["ETE/oC"]);
+      obj5[1] = intl5.formatToPlainString(tmp(1233).t["1YTWty"], obj6);
+      const intl6 = tmp(1233).intl;
+      obj5[2] = intl6.string(tmp(1233).t["+TSRGD"]);
+      const intl7 = tmp(1233).intl;
+      obj5[3] = intl7.string(tmp(1233).t["ETE/oC"]);
       obj5[4] = arg1;
       obj6.show(obj5);
     } else {

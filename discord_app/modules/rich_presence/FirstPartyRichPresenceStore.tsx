@@ -1,10 +1,10 @@
-// === Module 9434: updateActivities ===
+// === Module 9447: updateActivities ===
 
-// Module 9434 (updateActivities)
-import initializeDefault from "initialize" /* 589 */;
-import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import handleUpdateActivityDefault from "handleUpdateActivity" /* 9435 */;
+// Module 9447 (updateActivities)
+import initializeDefault from "initialize" /* 586 */;
+import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 656 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import handleUpdateActivityDefault from "handleUpdateActivity" /* 9448 */;
 
 function updateActivities() {
   items = [];

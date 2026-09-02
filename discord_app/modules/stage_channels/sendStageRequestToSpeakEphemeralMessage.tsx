@@ -1,10 +1,10 @@
-// === Module 17071: sendStageRequestToSpeakEphemeralMessage ===
+// === Module 17307: sendStageRequestToSpeakEphemeralMessage ===
 
-// Module 17071 (sendStageRequestToSpeakEphemeralMessage)
+// Module 17307 (sendStageRequestToSpeakEphemeralMessage)
 import set from "set" /* 2 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import ME from "ME" /* 676 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import ME from "ME" /* 673 */;
 
 ({ MessageFlags: obj1, MessageStates: c3, MessageTypes: c4 } = ME);
 const result = set.fileFinishedImporting("modules/stage_channels/sendStageRequestToSpeakEphemeralMessage.tsx");

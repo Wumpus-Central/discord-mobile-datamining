@@ -1,6 +1,6 @@
-// === Module 1954: isActivityParticipantValidGuildMember ===
+// === Module 1953: isActivityParticipantValidGuildMember ===
 
-// Module 1954 (isActivityParticipantValidGuildMember)
+// Module 1953 (isActivityParticipantValidGuildMember)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/activities/isActivityParticipantValidGuildMember.tsx");

@@ -1,13 +1,13 @@
-// === Module 13737: NewTag ===
+// === Module 13960: NewTag ===
 
-// Module 13737 (NewTag)
+// Module 13960 (NewTag)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Text from "Text" /* 4474 */;
 import LinearGradientDefault from "LinearGradient" /* 4940 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { HorizontalGradient } from "ME" /* 676 */;
+import { HorizontalGradient } from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

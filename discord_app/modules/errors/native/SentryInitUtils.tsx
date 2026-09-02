@@ -1,16 +1,16 @@
-// === Module 1209: _maybeBackfillMissingBreadcrumbsFromTelemetryRing ===
+// === Module 1206: _maybeBackfillMissingBreadcrumbsFromTelemetryRing ===
 
-// Module 1209 (_maybeBackfillMissingBreadcrumbsFromTelemetryRing)
+// Module 1206 (_maybeBackfillMissingBreadcrumbsFromTelemetryRing)
 import timestampDefault from "timestamp" /* 3 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import _modDef1208 from "module_1208" /* 1208 */;
-import transitionTo from "transitionTo" /* 1222 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
+import _modDef1205 from "module_1205" /* 1205 */;
+import transitionTo from "transitionTo" /* 1219 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
-import { PRIMARY_DOMAIN } from "sum" /* 505 */;
-import addBreadcrumb from "addBreadcrumb" /* 810 */;
-import IGNORE_ANALYTICS_BREADCRUMB_EVENTS from "IGNORE_ANALYTICS_BREADCRUMB_EVENTS" /* 13847 */;
+import ME from "ME" /* 673 */;
+import { PRIMARY_DOMAIN } from "sum" /* 502 */;
+import addBreadcrumb from "addBreadcrumb" /* 807 */;
+import IGNORE_ANALYTICS_BREADCRUMB_EVENTS from "IGNORE_ANALYTICS_BREADCRUMB_EVENTS" /* 14070 */;
 
 require = arg1;
 function _maybeBackfillMissingBreadcrumbsFromTelemetryRing() {
@@ -173,8 +173,8 @@ function filterError(event_id, originalException) {
       tmp17 = 0 !== event_id.length;
     }
     if (tmp17) {
-      _modDef1208.markCrashHandled(event_id);
-      const obj = _modDef1208;
+      _modDef1205.markCrashHandled(event_id);
+      const obj = _modDef1205;
     }
   } else {
     let originalException2;
@@ -401,7 +401,7 @@ function trackCrash(event, hint, arg2) {
         tmp7 = 0 !== event_id.length;
       }
       if (tmp7) {
-        obj1 = _modDef1208;
+        obj1 = _modDef1205;
         obj1.markCrashHandled(event_id);
       }
     }
@@ -555,20 +555,20 @@ function trackCrash(event, hint, arg2) {
     tmp39 = 0 !== event_id2.length;
   }
   if (tmp39) {
-    tmp25(1208).markCrashHandled(event_id2);
-    const tmp25Result = tmp25(1208);
+    tmp25(1205).markCrashHandled(event_id2);
+    const tmp25Result = tmp25(1205);
   }
-  const AppCrashedReasons = tmp11(13846).AppCrashedReasons;
+  const AppCrashedReasons = tmp11(14069).AppCrashedReasons;
   const tmp19 = expandEventPropertiesDefault;
   const tmp41 = tmp4 ? AppCrashedReasons.UNHANDLED_NATIVE_ERROR : AppCrashedReasons.UNHANDLED_JS_ERROR;
-  obj1 = { name: tmp11(7352).MetricEvents.APP_CRASHED, tags: null };
+  obj1 = { name: tmp11(7361).MetricEvents.APP_CRASHED, tags: null };
   items = ["reason:" + tmp41, ];
   if (level == null) {
     level = "unknown";
   }
   items[1] = "level:" + level;
   obj1[1] = items;
-  tmp26(7347).increment(obj1, true);
+  tmp26(7356).increment(obj1, true);
 }
 ({ AnalyticEvents: closure_6, Endpoints } = ME);
 addBreadcrumb = addBreadcrumb.reactNavigationIntegration();
@@ -647,7 +647,7 @@ export const initSentry = function initSentry() {
           if (tmp14Result2.isAndroid()) {
             str2 = "android";
           }
-          obj = { tunnel: null, autoInitializeNativeSdk: false, beforeSend: null, dist: "6327", dsn: null, environment: null, tracesSampleRate: 0, sampleRate: 1, ignoreErrors: null, release: "discord_android@345.1.0-2+345201", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
+          obj = { tunnel: null, autoInitializeNativeSdk: false, beforeSend: null, dist: "6336", dsn: null, environment: null, tracesSampleRate: 0, sampleRate: 1, ignoreErrors: null, release: "discord_android@345.2.0-2+345202", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
           obj[0] = `/error-reporting-proxy/${str2}`;
           obj[2] = closure_16;
           obj[4] = SentryStaffDsn;
@@ -685,7 +685,7 @@ export const initSentry = function initSentry() {
           };
           tmp14Result1.init(obj);
           const tmp14Result4 = callback(tmp[4]);
-          callback(tmp[4]).setTag("buildNumber", "6327");
+          callback(tmp[4]).setTag("buildNumber", "6336");
           const tmp14Result5 = callback(tmp[4]);
           callback(tmp[4]).setTag("appVersion", constants.Version);
           const tmp14Result6 = callback(tmp[4]);

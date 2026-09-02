@@ -1,13 +1,13 @@
-// === Module 17145: computeEmojiItem ===
+// === Module 17381: computeEmojiItem ===
 
-// Module 17145 (computeEmojiItem)
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 17381 (computeEmojiItem)
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "createGuildRecordFromRust" /* 1909 */;
-import closure_8 from "initialize" /* 17146 */;
+import closure_7 from "createGuildRecordFromRust" /* 1908 */;
+import closure_8 from "initialize" /* 17382 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 import importDefaultResult from "apply" /* 12 */;
@@ -193,18 +193,18 @@ let closure_15 = importDefaultResult.memoize((arr, stateFromStores) => {
   const obj2 = _require(4369);
   const obj3 = importDefaultResult;
   [arr2, arr3] = callback(importDefaultResult.partition(reversed, (emoji) => !emoji.emoji.animated), 2);
-  const intl = _require(1236).intl;
+  const intl = _require(1233).intl;
   const tmp3 = callback(importDefaultResult.partition(reversed, (emoji) => !emoji.emoji.animated), 2);
   const bound = Math.max(maxEmojiSlots - arr2.length, 0);
-  const intl2 = _require(1236).intl;
-  const stringResult = intl.string(_require(1236).t.sMOuuS);
-  const formatted = "" + intl.string(_require(1236).t.sMOuuS) + " - " + intl2.formatToPlainString(_require(1236).t.sgL8sI, { count: bound }).toUpperCase();
-  const intl3 = _require(1236).intl;
-  const str = "" + intl.string(_require(1236).t.sMOuuS) + " - " + intl2.formatToPlainString(_require(1236).t.sgL8sI, { count: bound });
+  const intl2 = _require(1233).intl;
+  const stringResult = intl.string(_require(1233).t.sMOuuS);
+  const formatted = "" + intl.string(_require(1233).t.sMOuuS) + " - " + intl2.formatToPlainString(_require(1233).t.sgL8sI, { count: bound }).toUpperCase();
+  const intl3 = _require(1233).intl;
+  const str = "" + intl.string(_require(1233).t.sMOuuS) + " - " + intl2.formatToPlainString(_require(1233).t.sgL8sI, { count: bound });
   const bound1 = Math.max(maxEmojiSlots - arr3.length, 0);
-  const intl4 = _require(1236).intl;
-  const stringResult1 = intl3.string(_require(1236).t.wWjQye);
-  const formatted1 = "" + intl3.string(_require(1236).t.wWjQye) + " - " + intl4.formatToPlainString(_require(1236).t.sgL8sI, { count: bound1 }).toUpperCase();
+  const intl4 = _require(1233).intl;
+  const stringResult1 = intl3.string(_require(1233).t.wWjQye);
+  const formatted1 = "" + intl3.string(_require(1233).t.wWjQye) + " - " + intl4.formatToPlainString(_require(1233).t.sgL8sI, { count: bound1 }).toUpperCase();
   if (arr2.length > 0) {
     const items = [{ type: "SECTION", key: formatted, section: formatted }];
     HermesBuiltin.arraySpread(arr2, 1);

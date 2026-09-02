@@ -1,44 +1,44 @@
-// === Module 10890: getVisibleMessages ===
+// === Module 11110: getVisibleMessages ===
 
-// Module 10890 (getVisibleMessages)
+// Module 11110 (getVisibleMessages)
 import serializeDefault from "serialize" /* 9 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
-import set2 from "set" /* 500 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import KeyboardTypes from "KeyboardTypes" /* 1626 */;
-import isCommunicationDisabled from "isCommunicationDisabled" /* 4110 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
+import set2 from "set" /* 1234 */;
+import KeyboardTypes from "KeyboardTypes" /* 1625 */;
+import isCommunicationDisabled from "isCommunicationDisabled" /* 4109 */;
 import presentAddedFriendToast from "presentAddedFriendToast" /* 4193 */;
 import dispatcherDefault from "dispatcher" /* 4194 */;
 import HapticFeedbackTypes from "HapticFeedbackTypes" /* 4446 */;
 import IMPACT_LIGHTDefault from "IMPACT_LIGHT" /* 4447 */;
 import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4671 */;
 import flattenComponents from "flattenComponents" /* 4739 */;
-import shouldShowMembershipVerificationGate from "shouldShowMembershipVerificationGate" /* 5007 */;
-import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 5390 */;
-import ContentHarmTypeChannel from "ContentHarmTypeChannel" /* 6143 */;
-import trackInviteDefault from "trackInvite" /* 7201 */;
-import checkReactionResponse from "checkReactionResponse" /* 7508 */;
-import patchThreadDefault from "patchThread" /* 7509 */;
-import trackForumChannelSeenBatch from "trackForumChannelSeenBatch" /* 7511 */;
-import computeScrollData from "computeScrollData" /* 10908 */;
-import ChatScrollPositionDefault from "ChatScrollPosition" /* 10909 */;
-import _manuallyStartConsoleQuest from "_manuallyStartConsoleQuest" /* 10913 */;
-import getVoiceInviteEmbedRenderInfo from "getVoiceInviteEmbedRenderInfo" /* 10941 */;
+import shouldShowMembershipVerificationGate from "shouldShowMembershipVerificationGate" /* 5010 */;
+import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 5398 */;
+import ContentHarmTypeChannel from "ContentHarmTypeChannel" /* 6151 */;
+import trackInviteDefault from "trackInvite" /* 7210 */;
+import checkReactionResponse from "checkReactionResponse" /* 7518 */;
+import patchThreadDefault from "patchThread" /* 7519 */;
+import trackForumChannelSeenBatch from "trackForumChannelSeenBatch" /* 7521 */;
+import computeScrollData from "computeScrollData" /* 11128 */;
+import ChatScrollPositionDefault from "ChatScrollPosition" /* 11129 */;
+import _manuallyStartConsoleQuest from "_manuallyStartConsoleQuest" /* 11133 */;
+import getVoiceInviteEmbedRenderInfo from "getVoiceInviteEmbedRenderInfo" /* 11161 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import { updateShouldShowJumpToPresentButton as closure_5 } from "updateChatInputContainerHeight" /* 9534 */;
-import closure_6 from "processMessage" /* 7340 */;
-import closure_7 from "ensureGuildLoaded" /* 1387 */;
-import closure_8 from "trackCommunicationDisabled" /* 1992 */;
-import closure_9 from "recomputeGuild" /* 5357 */;
+import { updateShouldShowJumpToPresentButton as closure_5 } from "updateChatInputContainerHeight" /* 9547 */;
+import closure_6 from "processMessage" /* 7349 */;
+import closure_7 from "ensureGuildLoaded" /* 1386 */;
+import closure_8 from "trackCommunicationDisabled" /* 1991 */;
+import closure_9 from "recomputeGuild" /* 5365 */;
 import closure_10 from "reinjectEphemerals" /* 4735 */;
 import closure_11 from "handleConnectionInfoChange" /* 4574 */;
-import closure_12 from "getUncachedChannelPermissions" /* 4121 */;
+import closure_12 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_13 from "generateOldThreadCutoff" /* 4493 */;
-import closure_14 from "mergeGuildAvatar" /* 1922 */;
-import Changeset from "Changeset" /* 7842 */;
-import ME from "ME" /* 676 */;
+import closure_14 from "mergeGuildAvatar" /* 1921 */;
+import Changeset from "Changeset" /* 7851 */;
+import ME from "ME" /* 673 */;
 
 require = arg1;
 function getVisibleMessages(arg0) {
@@ -283,7 +283,7 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(mess
     } else {
       if (tmp8.type === constants4.IMAGE) {
         if (null != tmp8.url) {
-          obj = { sourceType: "embed", source: null, mediaType: "image", mediaUrl: null, contentType: "r" };
+          obj = { sourceType: "embed", source: null, mediaType: "image", mediaUrl: null, contentType: "o" };
           obj[1] = tmp8;
           obj[3] = tmp8.url;
           return obj;
@@ -346,7 +346,7 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(mess
       const value = flattenComponents.flattenComponents(obj.components).get(tmpResult);
       if (null == value) {
         return null;
-      } else if (value.type === tmp20(1955).ComponentType.MEDIA_GALLERY) {
+      } else if (value.type === tmp20(1954).ComponentType.MEDIA_GALLERY) {
         if (null == componentMediaIndex) {
           return null;
         } else if (null == value.items[componentMediaIndex]) {
@@ -424,9 +424,9 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
   if (channel.isArchivedLockedThread()) {
     const obj15 = dispatcherDefault;
     const tmp36 = importDefault;
-    const intl = tmp12(1236).intl;
+    const intl = tmp12(1233).intl;
     const string = intl.string;
-    let t = tmp12(1236).t;
+    let t = tmp12(1233).t;
     if (isForumPostResult) {
       let stringResult = string(t.EJQrFq);
     } else {
@@ -434,21 +434,21 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
     }
     obj = { key: "ARCHIVED_POST_REACTIONS_DISABLED_TOAST", content: null, icon: null };
     obj[1] = stringResult;
-    tmp36Result = tmp36(10891);
+    tmp36Result = tmp36(11111);
     obj[2] = tmp36Result;
     t = obj15.open(obj);
     isForumPostResult = channel.isForumPost();
   } else if (null != reaction) {
     if (flag) {
       if (true === !reaction.me_burst) {
-        let tmp12Result = tmp12(1946);
+        let tmp12Result = tmp12(1945);
         if (!tmp12Result.isPremium(currentUser)) {
-          tmp12Result = tmp12(10892);
+          tmp12Result = tmp12(11112);
           return tmp12Result.handleOutOfSuperReactions();
         }
       }
     }
-    const ReactionTypes = tmp12(7507).ReactionTypes;
+    const ReactionTypes = tmp12(7517).ReactionTypes;
     if (tmp12Result1.isMeReaction(reaction.me, reaction.me_burst, tmp23)) {
       const result2 = tmp12(4446).triggerHapticFeedback(IMPACT_LIGHTDefault.IMPACT_LIGHT);
       const tmp12Result2 = tmp12(4446);
@@ -460,12 +460,12 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
       obj1 = { burst: null };
       obj1[0] = flag;
       obj[4] = obj1;
-      tmp12(7508).removeReaction(obj);
+      tmp12(7518).removeReaction(obj);
     } else {
       if (!result) {
         if (channel.isPrivate()) {
           if (!result1) {
-            const tmp12Result4 = tmp12(7508);
+            const tmp12Result4 = tmp12(7518);
             const obj2 = { burst: null };
             obj2[0] = flag;
             tmp12Result4.addReaction(channel.id, messageId, reaction.emoji, MESSAGE, obj2);
@@ -479,14 +479,14 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
       if (result) {
         const guildId1 = channel.getGuildId();
         if (null != guildId1) {
-          return tmp12(7646).openMemberVerificationModal(guildId1);
+          return tmp12(7655).openMemberVerificationModal(guildId1);
         }
       }
     }
     tmp12Result1 = tmp12(4132);
     tmp23 = flag ? ReactionTypes.BURST : ReactionTypes.NORMAL;
   } else {
-    const tmp12Result7 = tmp12(10892);
+    const tmp12Result7 = tmp12(11112);
     const obj3 = { burst: null };
     obj3[0] = flag;
     const result4 = tmp12Result7.handleAddNewReactions(channel, messageId, MESSAGE, obj3);
@@ -526,7 +526,7 @@ export const handleCopyLinkForumPost = function handleCopyLinkForumPost(guildId,
   tmp4Result = tmp4(4446);
   const result1 = tmp4Result.triggerHapticFeedback(IMPACT_LIGHTDefault.IMPACT_LIGHT);
   if (null == channel) {
-    const tmp4Result1 = tmp4(5981);
+    const tmp4Result1 = tmp4(5989);
     let result2;
     if (true === flag) {
       result2 = DISCORD_EPOCHDefault.castChannelIdAsMessageId(id);
@@ -535,7 +535,7 @@ export const handleCopyLinkForumPost = function handleCopyLinkForumPost(guildId,
     tmp4Result1.copy(tmp4(4666).getChannelPermalink(guildId, id, result2));
     const tmp4Result2 = tmp4(4666);
   } else {
-    const tmp4Result3 = tmp4(5981);
+    const tmp4Result3 = tmp4(5989);
     tmp4Result3.copy(tmp4(4666).getChannelLinkToCopy(channel, channel1));
     const tmp4Result4 = tmp4(4666);
   }
@@ -623,7 +623,7 @@ export const handleTapTableView = function handleTapTableView(current) {
 };
 export const handleMediaPlayFinishedAnalytics = function handleMediaPlayFinishedAnalytics(playWallTimeMs) {
   let obj = expandEventPropertiesDefault;
-  obj = { play_time_sec: playWallTimeMs.playWallTimeMs / 1000, play_wall_time_ms: playWallTimeMs.playWallTimeMs, first_play_waiting_ms: Math.min(playWallTimeMs.firstPlayWaitingMs, 600000), stall_count: playWallTimeMs.stallCount, stall_ms: playWallTimeMs.stallMs, seek_count: playWallTimeMs.seekCount, seek_waiting_ms: null, media_source: playWallTimeMs.mediaSource, mime_type: null, file_size: null, file_duration_sec: null, connection_type: null, effective_connection_speed: null, service_provider: null };
+  obj = { play_time_sec: playWallTimeMs.playWallTimeMs / 1000, play_wall_time_ms: playWallTimeMs.playWallTimeMs, first_play_waiting_ms: Math.min(playWallTimeMs.firstPlayWaitingMs, 600000), stall_count: playWallTimeMs.stallCount, stall_ms: playWallTimeMs.stallMs, seek_count: playWallTimeMs.seekCount, seek_waiting_ms: null, media_source: playWallTimeMs.mediaSource, mime_type: null, file_size: null, file_duration_sec: null, error_code: null, error_message: null, connection_type: null, effective_connection_speed: null, service_provider: null };
   let mimeType = null;
   if (null != playWallTimeMs.mimeType) {
     mimeType = null;
@@ -632,10 +632,22 @@ export const handleMediaPlayFinishedAnalytics = function handleMediaPlayFinished
     }
   }
   obj[8] = mimeType;
-  obj[10] = playWallTimeMs.fileDurationSec;
-  obj[11] = store2.getType();
-  obj[12] = store2.getEffectiveConnectionSpeed();
-  obj[13] = store2.getServiceProvider();
+  ({ fileDurationSec: obj2[10], errorCode } = playWallTimeMs);
+  if (errorCode == null) {
+    errorCode = null;
+  }
+  obj[11] = errorCode;
+  let errorMessage = null;
+  if (null != playWallTimeMs.errorMessage) {
+    errorMessage = null;
+    if ("" !== playWallTimeMs.errorMessage) {
+      errorMessage = playWallTimeMs.errorMessage;
+    }
+  }
+  obj[12] = errorMessage;
+  obj[13] = store2.getType();
+  obj[14] = store2.getEffectiveConnectionSpeed();
+  obj[15] = store2.getServiceProvider();
   obj.track(constants3.MEDIA_PLAY_FINISHED, obj);
 };
 export const scrollToBottom = function scrollToBottom(current) {

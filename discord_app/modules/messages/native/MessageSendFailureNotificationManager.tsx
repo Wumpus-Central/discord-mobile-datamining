@@ -1,17 +1,17 @@
-// === Module 17400: handleMessageSendFailure ===
+// === Module 17636: handleMessageSendFailure ===
 
-// Module 17400 (handleMessageSendFailure)
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import initializeDefault from "initialize" /* 5486 */;
-import NativeModulesDefault from "NativeModules" /* 9657 */;
-import isReactionMilestoneNotification from "isReactionMilestoneNotification" /* 10177 */;
-import dispatcherDefault from "dispatcher" /* 10179 */;
-import closure_3 from "handleConnectionOpen" /* 1981 */;
+// Module 17636 (handleMessageSendFailure)
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import initializeDefault from "initialize" /* 5494 */;
+import NativeModulesDefault from "NativeModules" /* 9670 */;
+import isReactionMilestoneNotification from "isReactionMilestoneNotification" /* 10199 */;
+import dispatcherDefault from "dispatcher" /* 10201 */;
+import closure_3 from "handleConnectionOpen" /* 1980 */;
 import closure_4 from "handleConnectionOpen" /* 4299 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import closure_6 from "getState" /* 7157 */;
-import ME from "ME" /* 676 */;
-import { LocalNotificationTypes } from "LocalNotificationTypes" /* 13368 */;
+import closure_5 from "mergeGuildAvatar" /* 1921 */;
+import closure_6 from "getState" /* 7166 */;
+import ME from "ME" /* 673 */;
+import { LocalNotificationTypes } from "LocalNotificationTypes" /* 13592 */;
 
 require = arg1;
 function handleMessageSendFailure(shouldNotify) {

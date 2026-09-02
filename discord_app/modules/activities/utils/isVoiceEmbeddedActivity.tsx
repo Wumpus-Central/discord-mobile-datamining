@@ -1,10 +1,10 @@
-// === Module 9488: isVoiceEmbeddedActivity ===
+// === Module 9501: isVoiceEmbeddedActivity ===
 
-// Module 9488 (isVoiceEmbeddedActivity)
-import set from "set" /* 692 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "ensureGuildLoaded" /* 1387 */;
-import closure_4 from "handleConnectionOpen" /* 1981 */;
+// Module 9501 (isVoiceEmbeddedActivity)
+import set from "set" /* 689 */;
+import closure_2 from "fetchFingerprint" /* 1215 */;
+import closure_3 from "ensureGuildLoaded" /* 1386 */;
+import closure_4 from "handleConnectionOpen" /* 1980 */;
 import closure_5 from "updateVoiceState" /* 4497 */;
 
 require = arg1;

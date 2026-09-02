@@ -1,8 +1,8 @@
-// === Module 16905: getAppMajorVersion ===
+// === Module 17141: getAppMajorVersion ===
 
-// Module 16905 (getAppMajorVersion)
+// Module 17141 (getAppMajorVersion)
 import set from "set" /* 2 */;
-import getConstants from "getConstants" /* 1625 */;
+import getConstants from "getConstants" /* 1624 */;
 
 const constants = getConstants.getConstants();
 const result = set.fileFinishedImporting("utils/native/AppInfoUtils.tsx");

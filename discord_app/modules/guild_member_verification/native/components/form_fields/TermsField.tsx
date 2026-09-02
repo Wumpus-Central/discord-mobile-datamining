@@ -1,10 +1,10 @@
-// === Module 7682: TermsField ===
+// === Module 7691: TermsField ===
 
-// Module 7682 (TermsField)
+// Module 7691 (TermsField)
 import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import TermsFieldListItemDefault from "TermsFieldListItem" /* 5556 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 7683 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import TermsFieldListItemDefault from "TermsFieldListItem" /* 5564 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 7692 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -25,7 +25,7 @@ export default function TermsField(field) {
     flag = false;
   }
   obj = { start: true, end: true, checked: flag, label: null, onPress: null };
-  const intl = tmp5(1236).intl;
+  const intl = tmp5(1233).intl;
   obj[3] = intl.string(getSystemLocale.t["2EXfGJ"]);
   obj[4] = onChange;
   items[1] = callback(TableCheckboxRow.TableCheckboxRow, obj);

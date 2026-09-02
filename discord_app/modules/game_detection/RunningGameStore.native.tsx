@@ -1,8 +1,8 @@
 // === Module 4501: initialize ===
 
 // Module 4501 (initialize)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 import DevToolsFocusedPidsTrackMode from "DevToolsFocusedPidsTrackMode" /* 4528 */;
 import closure_2 from "handleLoadMessages" /* 4502 */;
 import closure_3 from "gameFromServer" /* 4514 */;

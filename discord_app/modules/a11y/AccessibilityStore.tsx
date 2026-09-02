@@ -1,16 +1,16 @@
 // === Module 4470: maybeApplyNoTextColorForLightCustomTheme ===
 
 // Module 4470 (maybeApplyNoTextColorForLightCustomTheme)
-import initializeDefault from "initialize" /* 589 */;
-import Storage7 from "Storage" /* 595 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
+import initializeDefault from "initialize" /* 586 */;
+import Storage7 from "Storage" /* 592 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1362 */;
 import setDefault from "set" /* 4472 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "initialize" /* 1303 */;
-import closure_6 from "handleThemeChange" /* 1302 */;
-import closure_7 from "handleConnectionClosedOrResumed" /* 1340 */;
-import ME from "ME" /* 676 */;
+import closure_5 from "initialize" /* 1302 */;
+import closure_6 from "handleThemeChange" /* 1301 */;
+import closure_7 from "handleConnectionClosedOrResumed" /* 1339 */;
+import ME from "ME" /* 673 */;
 import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4471 */;
 
 require = arg1;
@@ -465,18 +465,18 @@ let items = [
   () => {
     const Storage = Storage7.Storage;
     const fontScale = Storage.get("a11yFontScale") || 100;
-    const Storage2 = tmp(595).Storage;
+    const Storage2 = tmp(592).Storage;
     let zoom = Storage2.get("a11yZoom");
     if (!zoom) {
       zoom = Accessibility.ZOOM_DEFAULT;
     }
-    const Storage3 = tmp(595).Storage;
+    const Storage3 = tmp(592).Storage;
     const colorblindMode = Storage3.get("a11yColorblindMode") || false;
-    const Storage4 = tmp(595).Storage;
+    const Storage4 = tmp(592).Storage;
     Storage4.remove("a11yFontScale");
-    const Storage5 = tmp(595).Storage;
+    const Storage5 = tmp(592).Storage;
     Storage5.remove("a11yZoom");
-    const Storage6 = tmp(595).Storage;
+    const Storage6 = tmp(592).Storage;
     Storage6.remove("a11yColorblindMode");
     return { fontScale, zoom, colorblindMode, keyboardModeEnabled: false };
   },

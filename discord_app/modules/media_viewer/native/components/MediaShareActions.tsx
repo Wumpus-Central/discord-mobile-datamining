@@ -1,15 +1,15 @@
-// === Module 8605: useMediaShareActions ===
+// === Module 8620: useMediaShareActions ===
 
-// Module 8605 (useMediaShareActions)
-import ActionSheet from "ActionSheet" /* 5989 */;
-import ActionSheetRowIcon from "ActionSheetRowIcon" /* 5991 */;
+// Module 8620 (useMediaShareActions)
+import ActionSheet from "ActionSheet" /* 5997 */;
+import ActionSheetRowIcon from "ActionSheetRowIcon" /* 5999 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "filterStaffGuild" /* 8606 */;
-import closure_5 from "ensureGuildLoaded" /* 1387 */;
+import closure_4 from "filterStaffGuild" /* 8621 */;
+import closure_5 from "ensureGuildLoaded" /* 1386 */;
 import closure_6 from "reinjectEphemerals" /* 4735 */;
-import closure_7 from "messages" /* 8631 */;
-import ME from "ME" /* 676 */;
-import { EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_11 } from "USER_SETTING_ACTION_SHEET_KEY" /* 7346 */;
+import closure_7 from "messages" /* 8646 */;
+import ME from "ME" /* 673 */;
+import { EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_11 } from "USER_SETTING_ACTION_SHEET_KEY" /* 7355 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -100,7 +100,7 @@ function useMediaShareActions(source) {
       if ("embed" !== source.accessoryType) {
         const attachmentId = tmp8.attachmentId;
         if (null != attachmentId) {
-          obj = { message: null, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "M13 3v1h1V3h-1ZM2 3v1h1V3H2ZM3 4v1h1V4H3ZM1 4v2h1V4H1Z" };
+          obj = { message: null, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "pokemongo" };
           obj[0] = tmp3;
           obj = { onlyAttachmentIds: null };
           const items = [attachmentId];
@@ -111,7 +111,7 @@ function useMediaShareActions(source) {
         }
       } else {
         obj1 = source(tmp[18]);
-        obj1 = { message: null, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "M13 3v1h1V3h-1ZM2 3v1h1V3H2ZM3 4v1h1V4H3ZM1 4v2h1V4H1Z" };
+        obj1 = { message: null, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "pokemongo" };
         obj1[0] = tmp3;
         const obj2 = { onlyEmbedIndices: null };
         const items1 = [tmp8.mediaIndex];
@@ -231,9 +231,9 @@ export default function MediaShareActionSheet(source) {
     children: useMediaShareActions(obj).map((IconComponent) => {
       let obj = { icon: null, onPress: null, label: null };
       obj = { IconComponent: IconComponent.IconComponent };
-      obj[0] = callback2(callback(5991).ActionSheetRow.Icon, obj);
+      obj[0] = callback2(callback(5999).ActionSheetRow.Icon, obj);
       ({ action: obj[1], label: obj[2] } = IconComponent);
-      return callback2(callback(5991).ActionSheetRow, obj, arg1);
+      return callback2(callback(5999).ActionSheetRow, obj, arg1);
     })
   };
   obj[0] = jsx(ActionSheetRowIcon.ActionSheetRow.Group, {
@@ -241,9 +241,9 @@ export default function MediaShareActionSheet(source) {
     children: useMediaShareActions(obj).map((IconComponent) => {
       let obj = { icon: null, onPress: null, label: null };
       obj = { IconComponent: IconComponent.IconComponent };
-      obj[0] = callback2(callback(5991).ActionSheetRow.Icon, obj);
+      obj[0] = callback2(callback(5999).ActionSheetRow.Icon, obj);
       ({ action: obj[1], label: obj[2] } = IconComponent);
-      return callback2(callback(5991).ActionSheetRow, obj, arg1);
+      return callback2(callback(5999).ActionSheetRow, obj, arg1);
     })
   });
   return jsx(ActionSheet.ActionSheet, {
@@ -251,9 +251,9 @@ export default function MediaShareActionSheet(source) {
     children: useMediaShareActions(obj).map((IconComponent) => {
       let obj = { icon: null, onPress: null, label: null };
       obj = { IconComponent: IconComponent.IconComponent };
-      obj[0] = callback2(callback(5991).ActionSheetRow.Icon, obj);
+      obj[0] = callback2(callback(5999).ActionSheetRow.Icon, obj);
       ({ action: obj[1], label: obj[2] } = IconComponent);
-      return callback2(callback(5991).ActionSheetRow, obj, arg1);
+      return callback2(callback(5999).ActionSheetRow, obj, arg1);
     })
   });
 };

@@ -1,11 +1,11 @@
-// === Module 12151: GuildPowerupsBoostButton ===
+// === Module 12375: GuildPowerupsBoostButton ===
 
-// Module 12151 (GuildPowerupsBoostButton)
+// Module 12375 (GuildPowerupsBoostButton)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "createGuildRecordFromRust" /* 1909 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import closure_4 from "createGuildRecordFromRust" /* 1908 */;
+import closure_5 from "mergeGuildAvatar" /* 1921 */;
 import closure_6 from "handleGuildBoostsUpdate" /* 4370 */;
-import { AnalyticsSections } from "ME" /* 676 */;
+import { AnalyticsSections } from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -14,21 +14,21 @@ const result = require("set").fileFinishedImporting("modules/premium/powerups/na
 export const GuildPowerupsBoostButton = function GuildPowerupsBoostButton(guildId) {
   guildId = guildId.guildId;
   let stateFromStores1;
-  let obj = guildId(589);
+  let obj = guildId(586);
   let items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getGuild(guildId));
   const items1 = [closure_6];
-  stateFromStores1 = guildId(589).useStateFromStores(items1, () => boostSlots.boostSlots);
-  const obj2 = guildId(589);
+  stateFromStores1 = guildId(586).useStateFromStores(items1, () => boostSlots.boostSlots);
+  const obj2 = guildId(586);
   const tmp = guildId;
   const tmp5 = stateFromStores1;
-  const tmp6 = stateFromStores1(7141)({ forceFetch: true });
+  const tmp6 = stateFromStores1(7150)({ forceFetch: true });
   const items2 = [closure_5];
-  const stateFromStores2 = guildId(589).useStateFromStores(items2, () => currentUser.getCurrentUser());
+  const stateFromStores2 = guildId(586).useStateFromStores(items2, () => currentUser.getCurrentUser());
   if (null != stateFromStores2) {
     let UNSPECIFIED = stateFromStores2.premiumGroupRole;
   } else {
-    UNSPECIFIED = tmp(1930).PremiumSubscriptionGroupRole.UNSPECIFIED;
+    UNSPECIFIED = tmp(1929).PremiumSubscriptionGroupRole.UNSPECIFIED;
   }
   const items3 = [stateFromStores1];
   const memo = React.useMemo(() => {
@@ -44,7 +44,7 @@ export const GuildPowerupsBoostButton = function GuildPowerupsBoostButton(guildI
     obj[3] = tmp6.fractionalState;
     obj[4] = tmp9;
     obj[5] = UNSPECIFIED;
-    tmp10 = jsx(tmp5(7145), { guild: null, previousGuildSubscriptionSlot: null, analyticsSection: null, fractionalPremiumState: null, onAvailableSlotPress: null, premiumGroupRole: null });
+    tmp10 = jsx(tmp5(7154), { guild: null, previousGuildSubscriptionSlot: null, analyticsSection: null, fractionalPremiumState: null, onAvailableSlotPress: null, premiumGroupRole: null });
   }
   return tmp10;
 };

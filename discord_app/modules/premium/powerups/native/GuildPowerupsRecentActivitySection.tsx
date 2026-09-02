@@ -1,15 +1,15 @@
-// === Module 12143: GuildPowerupsRecentActivityRow ===
+// === Module 12367: GuildPowerupsRecentActivityRow ===
 
-// Module 12143 (GuildPowerupsRecentActivityRow)
+// Module 12367 (GuildPowerupsRecentActivityRow)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
+import initialize from "initialize" /* 586 */;
+import ThemesDefault from "Themes" /* 709 */;
 import resetCache from "resetCache" /* 4163 */;
-import apexExperiment from "apexExperiment" /* 8004 */;
-import useMaybeGetSortedBoosts from "useMaybeGetSortedBoosts" /* 12144 */;
-import useMaybeGetSortedBoostsDefault from "useMaybeGetSortedBoosts" /* 12144 */;
-import getBoostRowMessageTextDefault from "getBoostRowMessageText" /* 12150 */;
+import apexExperiment from "apexExperiment" /* 8013 */;
+import useMaybeGetSortedBoosts from "useMaybeGetSortedBoosts" /* 12368 */;
+import useMaybeGetSortedBoostsDefault from "useMaybeGetSortedBoosts" /* 12368 */;
+import getBoostRowMessageTextDefault from "getBoostRowMessageText" /* 12374 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -33,16 +33,16 @@ function GuildPowerupsRecentActivityRow(row) {
       obj = { color: null };
       obj[0] = roleColor;
     }
-    let tmpResult = tmp(7870);
+    let tmpResult = tmp(7879);
     const processColorStringsArray = tmpResult.useProcessColorStringsArray(roleColorStrings);
-    tmpResult = tmp(7870);
+    tmpResult = tmp(7879);
     const isRoleStyleAndRoleColorsEligibleForERC = tmpResult.useIsRoleStyleAndRoleColorsEligibleForERC(boost.guildId, boost.userId, stateFromStores, processColorStringsArray);
     if ("gave" === phase) {
-      let BoostGemSlashIcon = tmp(8234).BoostGemIcon;
+      let BoostGemSlashIcon = tmp(8243).BoostGemIcon;
     } else if ("expiring" === phase) {
-      BoostGemSlashIcon = tmp(12146).BoostTier1Icon;
+      BoostGemSlashIcon = tmp(12370).BoostTier1Icon;
     } else {
-      BoostGemSlashIcon = tmp(12148).BoostGemSlashIcon;
+      BoostGemSlashIcon = tmp(12372).BoostGemSlashIcon;
     }
     obj = { style: null, children: null };
     obj[0] = tmp4.boostRowContainer;
@@ -64,7 +64,7 @@ function GuildPowerupsRecentActivityRow(row) {
       const obj4 = { size: "small", color: null, colors: null };
       obj4[1] = roleColor;
       obj4[2] = roleColorStrings;
-      tmp19Result = tmp19(tmp(1297).RoleDot, obj4);
+      tmp19Result = tmp19(tmp(1296).RoleDot, obj4);
     }
     const items2 = [tmp19Result, , , ];
     const obj5 = { variant: "text-md/medium", color: "interactive-text-active", lineClamp: 1, style: null, gradientColors: null, children: null };
@@ -132,8 +132,8 @@ export default function GuildPowerupsRecentActivitySection(guildId) {
     }
     obj = { variant: "heading-lg/semibold", color: null, children: null };
     obj[1] = str;
-    const intl = tmp(1236).intl;
-    obj[2] = intl.string(tmp(1236).t.yM9Krm);
+    const intl = tmp(1233).intl;
+    obj[2] = intl.string(tmp(1233).t.yM9Krm);
     const items = [closure_5(tmp(4474).Text, obj), ];
     obj1 = { style: null, children: null };
     obj1[0] = tmp4.boostContainer;

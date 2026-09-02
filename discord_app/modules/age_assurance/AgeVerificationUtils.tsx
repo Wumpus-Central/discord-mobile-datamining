@@ -1,28 +1,28 @@
 // === Module 4733: useAgeVerificationRunner ===
 
 // Module 4733 (useAgeVerificationRunner)
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
-import messagesProxyDefault from "messagesProxy" /* 2919 */;
+import initialize from "initialize" /* 586 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
+import messagesProxyDefault from "messagesProxy" /* 2918 */;
 import isFeatureAgeGated2 from "isFeatureAgeGated" /* 4172 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 5367 */;
-import usePreviousDefault from "usePrevious" /* 8576 */;
-import apexExperiment from "apexExperiment" /* 11500 */;
-import isManualAgeAssuranceFallbackEnabled from "isManualAgeAssuranceFallbackEnabled" /* 13417 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 5375 */;
+import usePreviousDefault from "usePrevious" /* 8591 */;
+import apexExperiment from "apexExperiment" /* 11723 */;
+import isManualAgeAssuranceFallbackEnabled from "isManualAgeAssuranceFallbackEnabled" /* 13640 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import closure_6 from "initialize" /* 4734 */;
 import closure_7 from "getRegionalFeatureConfig" /* 4173 */;
-import closure_8 from "fetchFingerprint" /* 1218 */;
+import closure_8 from "fetchFingerprint" /* 1215 */;
 import closure_9 from "reinjectEphemerals" /* 4735 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import closure_11 from "initialize" /* 8715 */;
-import { FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS as closure_12 } from "set" /* 8683 */;
-import ME from "ME" /* 676 */;
-import result from "result" /* 1221 */;
-import { SafetyToastType } from "SafetyToastType" /* 8670 */;
+import closure_10 from "mergeGuildAvatar" /* 1921 */;
+import closure_11 from "initialize" /* 8730 */;
+import { FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS as closure_12 } from "set" /* 8698 */;
+import ME from "ME" /* 673 */;
+import result from "result" /* 1218 */;
+import { SafetyToastType } from "SafetyToastType" /* 8685 */;
 import set from "set" /* 2 */;
 
 require = arg1;
@@ -201,23 +201,23 @@ function useAgeVerificationRunner(onComplete) {
 }
 function useShouldCallReactiveCheck() {
   const items = [closure_10];
-  const stateFromStores = _require(589).useStateFromStores(items, () => currentUser.getCurrentUser());
+  const stateFromStores = _require(586).useStateFromStores(items, () => currentUser.getCurrentUser());
   let prop;
   if (stateFromStores != null) {
     prop = stateFromStores.ageVerificationStatus;
   }
-  let tmp5 = prop !== tmp(1955).AgeVerificationStatusUkAndAusOnly.UNVERIFIED;
+  let tmp5 = prop !== tmp(1954).AgeVerificationStatusUkAndAusOnly.UNVERIFIED;
   if (tmp5) {
     let prop1;
     if (stateFromStores != null) {
       prop1 = stateFromStores.ageVerificationStatus;
     }
-    tmp5 = prop1 !== tmp(1955).AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
+    tmp5 = prop1 !== tmp(1954).AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
   }
   _require = tmp5;
   let tmpResult = tmp(4172);
-  const isFeatureAgeGated = tmpResult.useIsFeatureAgeGated(tmp(5367).AgeGatedFeature.REACTIVE_CHECK);
-  tmpResult = tmp(589);
+  const isFeatureAgeGated = tmpResult.useIsFeatureAgeGated(tmp(5375).AgeGatedFeature.REACTIVE_CHECK);
+  tmpResult = tmp(586);
   const items1 = [closure_11];
   const items2 = [tmp5, isFeatureAgeGated];
   return tmpResult.useStateFromStores(items1, () => {
@@ -244,11 +244,11 @@ function shouldCallReactiveCheck() {
     if (currentUser != null) {
       prop1 = currentUser.ageVerificationStatus;
     }
-    tmp5 = prop1 !== tmp3(1955).AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
+    tmp5 = prop1 !== tmp3(1954).AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
   }
   let tmp7 = !tmp5;
   if (!tmp5) {
-    let isFeatureAgeGatedResult = closure_7.isFeatureAgeGated(tmp3(5367).AgeGatedFeature.REACTIVE_CHECK);
+    let isFeatureAgeGatedResult = closure_7.isFeatureAgeGated(tmp3(5375).AgeGatedFeature.REACTIVE_CHECK);
     if (isFeatureAgeGatedResult) {
       isFeatureAgeGatedResult = closure_11.shouldCallReactiveCheck();
     }
@@ -348,10 +348,10 @@ export const shouldShowTiggerPawtect = function shouldShowTiggerPawtect() {
   }
   let tmp5 = prop !== PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT;
   if (tmp5) {
-    const isFeatureAgeGatedResult = closure_7.isFeatureAgeGated(tmp3(5367).AgeGatedFeature.REACTIVE_CHECK);
+    const isFeatureAgeGatedResult = closure_7.isFeatureAgeGated(tmp3(5375).AgeGatedFeature.REACTIVE_CHECK);
     let tmp8 = !isFeatureAgeGatedResult;
     if (isFeatureAgeGatedResult) {
-      tmp8 = prop !== tmp3(1955).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
+      tmp8 = prop !== tmp3(1954).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
     }
     tmp5 = tmp8;
   }
@@ -367,7 +367,7 @@ export const useShouldShowTiggerPawtect = function useShouldShowTiggerPawtect() 
     if (stateFromStores != null) {
       prop = stateFromStores.ageVerificationStatus;
     }
-    isFeatureAgeGated = prop === tmp(1955).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
+    isFeatureAgeGated = prop === tmp(1954).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
   }
   let prop1;
   if (stateFromStores != null) {
@@ -403,8 +403,8 @@ export const isVerifiedAdult = function isVerifiedAdult() {
   }
   let tmp5 = prop === PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT;
   if (!tmp5) {
-    tmp5 = closure_7.isFeatureAgeGated(tmp3(5367).AgeGatedFeature.REACTIVE_CHECK) && prop === tmp3(1955).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
-    const tmp7 = closure_7.isFeatureAgeGated(tmp3(5367).AgeGatedFeature.REACTIVE_CHECK) && prop === tmp3(1955).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
+    tmp5 = closure_7.isFeatureAgeGated(tmp3(5375).AgeGatedFeature.REACTIVE_CHECK) && prop === tmp3(1954).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
+    const tmp7 = closure_7.isFeatureAgeGated(tmp3(5375).AgeGatedFeature.REACTIVE_CHECK) && prop === tmp3(1954).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
   }
   return tmp5;
 };
@@ -418,7 +418,7 @@ export const useIsVerifiedAdult = function useIsVerifiedAdult() {
     if (stateFromStores != null) {
       prop = stateFromStores.ageVerificationStatus;
     }
-    isFeatureAgeGated = prop === tmp(1955).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
+    isFeatureAgeGated = prop === tmp(1954).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
   }
   let prop1;
   if (stateFromStores != null) {
@@ -578,13 +578,13 @@ export const useIsAgeVerified = function useIsAgeVerified() {
   if (stateFromStores != null) {
     prop = stateFromStores.ageVerificationStatus;
   }
-  let tmp5 = prop !== tmp(1955).AgeVerificationStatusUkAndAusOnly.UNVERIFIED;
+  let tmp5 = prop !== tmp(1954).AgeVerificationStatusUkAndAusOnly.UNVERIFIED;
   if (tmp5) {
     let prop1;
     if (stateFromStores != null) {
       prop1 = stateFromStores.ageVerificationStatus;
     }
-    tmp5 = prop1 !== tmp(1955).AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
+    tmp5 = prop1 !== tmp(1954).AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
   }
   return tmp5;
 };
@@ -633,7 +633,7 @@ export const useInitiateAgeVerificationV2 = function useInitiateAgeVerificationV
 export const useWatchAgeVerificationStatusChange = function useWatchAgeVerificationStatusChange(callback) {
   const _require = callback;
   const items = [closure_10];
-  const stateFromStores = _require(589).useStateFromStores(items, () => {
+  const stateFromStores = _require(586).useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let prop;
     if (currentUser != null) {
@@ -642,13 +642,13 @@ export const useWatchAgeVerificationStatusChange = function useWatchAgeVerificat
     return prop;
   });
   const tmp2 = usePreviousDefault(stateFromStores);
-  obj = _require(589);
+  obj = _require(586);
   const items1 = [closure_8];
-  const stateFromStores1 = _require(589).useStateFromStores(items1, () => null != closure_8.getSuspendedUserToken());
-  const obj2 = _require(589);
+  const stateFromStores1 = _require(586).useStateFromStores(items1, () => null != closure_8.getSuspendedUserToken());
+  const obj2 = _require(586);
   const items2 = [closure_8];
   let tmp5 = null != tmp2;
-  const stateFromStores2 = _require(589).useStateFromStores(items2, () => closure_8.isAuthenticated());
+  const stateFromStores2 = _require(586).useStateFromStores(items2, () => closure_8.isAuthenticated());
   if (tmp5) {
     tmp5 = null != stateFromStores;
   }
@@ -688,11 +688,11 @@ export const getAgeVerificationGetStartedTitle = function getAgeVerificationGetS
   const intl = getSystemLocale.intl;
   const string = intl.string;
   if (hasItem) {
-    let stringResult = string(tmp2(1236).t.lSWVTM);
+    let stringResult = string(tmp2(1233).t.lSWVTM);
   } else if (flag) {
     stringResult = string(messagesProxyDefault["/kgWIg"]);
   } else {
-    stringResult = string(tmp2(1236).t.xYXsr6);
+    stringResult = string(tmp2(1233).t.xYXsr6);
   }
   return stringResult;
 };

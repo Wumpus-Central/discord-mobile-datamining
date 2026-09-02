@@ -1,9 +1,9 @@
-// === Module 14549: AuthorizedAppPermissionsScreen ===
+// === Module 14772: AuthorizedAppPermissionsScreen ===
 
-// Module 14549 (AuthorizedAppPermissionsScreen)
+// Module 14772 (AuthorizedAppPermissionsScreen)
 import noopAll from "noop" /* 19 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7159 */;
-import UserSettingsAuthedAppPermissionsDefault from "UserSettingsAuthedAppPermissions" /* 14550 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7168 */;
+import UserSettingsAuthedAppPermissionsDefault from "UserSettingsAuthedAppPermissions" /* 14773 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

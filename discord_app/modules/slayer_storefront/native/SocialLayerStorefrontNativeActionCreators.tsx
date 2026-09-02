@@ -1,13 +1,13 @@
-// === Module 10572: SOCIAL_LAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_KEY ===
+// === Module 10793: SOCIAL_LAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_KEY ===
 
-// Module 10572 (SOCIAL_LAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_KEY)
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2009 */;
-import messagesProxyDefault from "messagesProxy" /* 3371 */;
+// Module 10793 (SOCIAL_LAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_KEY)
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2008 */;
+import messagesProxyDefault from "messagesProxy" /* 3370 */;
 import isPremiumGiftingSupported from "isPremiumGiftingSupported" /* 4152 */;
 import _modDef4723 from "module_4723" /* 4723 */;
 import _modDef4858 from "module_4858" /* 4858 */;
-import _fetchSocialLayerStorefront from "_fetchSocialLayerStorefront" /* 8495 */;
+import _fetchSocialLayerStorefront from "_fetchSocialLayerStorefront" /* 8508 */;
 import closure_3 from "addSku" /* 4527 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -32,7 +32,7 @@ export const openSocialLayerStorefrontUnsupportedOnMobileAlert = function openSo
 export const openSocialLayerStorefrontProductDetailsModal = function openSocialLayerStorefrontProductDetailsModal(closure_0) {
   const socialLayerStorefrontConfig = _fetchSocialLayerStorefront.fetchSocialLayerStorefrontConfig();
   const obj = _fetchSocialLayerStorefront;
-  _modDef4723.pushLazy(asyncRequireImpl(10573, dependencyMap.paths), closure_0, c5, { presentation: "modal" });
+  _modDef4723.pushLazy(asyncRequireImpl(10794, dependencyMap.paths), closure_0, c5, { presentation: "modal" });
 };
 export const closeSocialLayerStorefrontProductDetailsModal = function closeSocialLayerStorefrontProductDetailsModal() {
   _modDef4723.popWithKey(c5);
@@ -41,9 +41,9 @@ export const openSocialLayerStorefrontGiftModal = function openSocialLayerStoref
   let obj = isPremiumGiftingSupported;
   if (obj.isSocialLayerStorefrontGiftingSupported()) {
     let tmp3Result = tmp3(4723);
-    tmp3Result.pushLazy(asyncRequireImpl(10596, dependencyMap.paths), skuId, c6);
+    tmp3Result.pushLazy(asyncRequireImpl(10817, dependencyMap.paths), skuId, c6);
   } else {
-    tmp3Result = tmp3(10577);
+    tmp3Result = tmp3(10798);
     const value = closure_3.get(skuId.skuId);
     let applicationId;
     if (value != null) {

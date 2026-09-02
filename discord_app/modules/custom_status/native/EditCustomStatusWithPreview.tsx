@@ -1,18 +1,18 @@
-// === Module 9091: ClearInputButton ===
+// === Module 9105: ClearInputButton ===
 
-// Module 9091 (ClearInputButton)
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import PressableBase from "PressableBase" /* 5068 */;
-import registerAssetDefault from "registerAsset" /* 7713 */;
+// Module 9105 (ClearInputButton)
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import Button from "Button" /* 1296 */;
+import PressableBase from "PressableBase" /* 5076 */;
+import registerAssetDefault from "registerAsset" /* 7722 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { STATUS_MAX_LENGTH } from "StatusTypes" /* 9092 */;
-import ME from "ME" /* 676 */;
-import { EmojiIntention } from "set" /* 1925 */;
+import closure_7 from "mergeGuildAvatar" /* 1921 */;
+import { STATUS_MAX_LENGTH } from "StatusTypes" /* 9106 */;
+import ME from "ME" /* 673 */;
+import { EmojiIntention } from "set" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -111,9 +111,9 @@ function EditCustomStatusWithPreview(navigation) {
   const callback1 = obj.useCallback(() => {
     onClose(analyticsLocations[21])();
     const timerId = setTimeout(() => {
-      const AccessibilityAnnouncer = callback(1363).AccessibilityAnnouncer;
-      const intl = callback(1236).intl;
-      AccessibilityAnnouncer.announce(intl.string(callback(1236).t.YdUwBS));
+      const AccessibilityAnnouncer = callback(1362).AccessibilityAnnouncer;
+      const intl = callback(1233).intl;
+      AccessibilityAnnouncer.announce(intl.string(callback(1233).t.YdUwBS));
     }, 300);
     onClose();
   }, items3);
@@ -359,9 +359,9 @@ export default function EditCustomStatusWithPreviewModal(analyticsLocations) {
     obj[0] = intl.string(analyticsLocations(closure_1_2[11]).t.Iuzg8R);
     obj[1] = function headerTitle() {
       const obj = { title: null };
-      const intl = callback(1236).intl;
-      obj[0] = intl.string(callback(1236).t.Iuzg8R);
-      return callback3(callback(7607).GenericHeaderTitle, obj);
+      const intl = callback(1233).intl;
+      obj[0] = intl.string(callback(1233).t.Iuzg8R);
+      return callback3(callback(7617).GenericHeaderTitle, obj);
     };
     obj[2] = analyticsLocations(closure_1_2[30]).getHeaderCloseButton(_prompt(closure_1_2[43]).pop);
     obj[4] = function render(arg0, navigation) {
@@ -371,7 +371,7 @@ export default function EditCustomStatusWithPreviewModal(analyticsLocations) {
     return obj;
   }, items);
   let obj = { initialRouteName: "root", screens: memo, headerStatusBarHeight: 12, headerStyle: null };
-  const obj2 = analyticsLocations(501);
+  const obj2 = analyticsLocations(1235);
   const tmp2 = closure_13;
   const tmp3 = analyticsLocations;
   obj = undefined;
@@ -379,5 +379,5 @@ export default function EditCustomStatusWithPreviewModal(analyticsLocations) {
     obj = { height: 56 };
   }
   obj[3] = obj;
-  return tmp2(analyticsLocations(6008).Navigator, obj);
+  return tmp2(analyticsLocations(6016).Navigator, obj);
 };

@@ -1,8 +1,8 @@
-// === Module 10654: ChannelDetailsNavigatorScreens ===
+// === Module 10875: ChannelDetailsNavigatorScreens ===
 
-// Module 10654 (ChannelDetailsNavigatorScreens)
+// Module 10875 (ChannelDetailsNavigatorScreens)
 import set from "set" /* 2 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 7622 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 7632 */;
 
 const sum = MessageEmbedTypes.SEARCH_BAR_HEIGHT + 40;
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsConstants.tsx");

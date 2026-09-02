@@ -1,9 +1,9 @@
-// === Module 5056: useGameProfileObscured ===
+// === Module 5064: useGameProfileObscured ===
 
-// Module 5056 (useGameProfileObscured)
-import initialize from "initialize" /* 589 */;
-import isAgeRestrictedContentClassification from "isAgeRestrictedContentClassification" /* 5057 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+// Module 5064 (useGameProfileObscured)
+import initialize from "initialize" /* 586 */;
+import isAgeRestrictedContentClassification from "isAgeRestrictedContentClassification" /* 5065 */;
+import closure_2 from "mergeGuildAvatar" /* 1921 */;
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/game_profile/hooks/useGameProfileObscured.tsx");

@@ -1,11 +1,11 @@
-// === Module 15440: DebugLogView ===
+// === Module 15670: DebugLogView ===
 
-// Module 15440 (DebugLogView)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 15670 (DebugLogView)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_2 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "getUserAgnosticState" /* 4477 */;
-import useCollectiblesDebugStore from "useCollectiblesDebugStore" /* 7302 */;
+import useCollectiblesDebugStore from "useCollectiblesDebugStore" /* 7311 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -25,7 +25,7 @@ export default function DebugLogView() {
   dependencyMap = callback((clearLogs) => clearLogs.clearLogs);
   const tmp = callback4();
   const React = tmp;
-  let obj = arr(589);
+  let obj = arr(586);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => closure_6.get("shop_show_debug_overlay"));
   const items1 = [arr.length, stateFromStores];

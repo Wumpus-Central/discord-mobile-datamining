@@ -1,24 +1,24 @@
-// === Module 16087: AddEmojiButton ===
+// === Module 16318: AddEmojiButton ===
 
-// Module 16087 (AddEmojiButton)
-import set from "set" /* 500 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 16318 (AddEmojiButton)
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import set from "set" /* 1234 */;
 import MAX_REACTIONS from "MAX_REACTIONS" /* 4132 */;
 import hexToRgba from "hexToRgba" /* 4326 */;
-import PressableBase from "PressableBase" /* 5068 */;
-import checkReactionResponse from "checkReactionResponse" /* 7508 */;
-import ForwardingIconDefault from "ForwardingIcon" /* 11271 */;
-import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 11311 */;
+import PressableBase from "PressableBase" /* 5076 */;
+import checkReactionResponse from "checkReactionResponse" /* 7518 */;
+import ForwardingIconDefault from "ForwardingIcon" /* 11494 */;
+import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 11534 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "updateState" /* 6151 */;
-import closure_9 from "ensureGuildLoaded" /* 1387 */;
-import closure_10 from "recomputeGuild" /* 5357 */;
-import closure_11 from "getUncachedChannelPermissions" /* 4121 */;
-import ME from "ME" /* 676 */;
-import { EmojiIntention } from "set" /* 1925 */;
+import closure_8 from "updateState" /* 6159 */;
+import closure_9 from "ensureGuildLoaded" /* 1386 */;
+import closure_10 from "recomputeGuild" /* 5365 */;
+import closure_11 from "getUncachedChannelPermissions" /* 4120 */;
+import ME from "ME" /* 673 */;
+import { EmojiIntention } from "set" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -216,7 +216,7 @@ function ForwardButton(disabled) {
   items[2] = disabled;
   obj[1] = items;
   obj[3] = disabled;
-  const intl = tmp3(1236).intl;
+  const intl = tmp3(1233).intl;
   obj[4] = intl.string(getSystemLocale.t.xIUfJS);
   obj[5] = closure_16(ForwardingIconDefault, { size: "sm" });
   return closure_16(PressableBase.PressableOpacity, obj);
@@ -234,7 +234,7 @@ function ReplyButton(disabled) {
   items[2] = disabled;
   obj[1] = items;
   obj[3] = disabled;
-  const intl = tmp3(1236).intl;
+  const intl = tmp3(1233).intl;
   obj[4] = intl.string(getSystemLocale.t["5NwaNY"]);
   obj[5] = closure_16(ArrowAngleLeftUpIcon.ArrowAngleLeftUpIcon, { size: "sm" });
   return closure_16(PressableBase.PressableOpacity, obj);
@@ -330,7 +330,7 @@ let closure_20 = createCacheKey.createStyles(() => {
   const tmp4Result = hexToRgba;
   obj[17] = { paddingVertical: 6, paddingHorizontal: 8, backgroundColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, borderRadius: ThemesDefault.radii.sm, display: "flex", flexDirection: "row", alignItems: "center", gap: 8 };
   obj[18] = { display: "flex", flexDirection: "row", alignItems: "center", gap: 4, justifySelf: "end" };
-  obj3 = { width: 20, height: 20, tintColor: tmp(712).colors.INTERACTIVE_TEXT_DEFAULT };
+  obj3 = { width: 20, height: 20, tintColor: tmp(709).colors.INTERACTIVE_TEXT_DEFAULT };
   obj[19] = obj3;
   return obj;
 });
@@ -665,7 +665,7 @@ export const useThread = function useThread(id) {
   closure_1 = arg1;
   dependencyMap = arg2;
   const items = [closure_9, closure_8];
-  const stateFromStoresObject = _require(589).useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = _require(586).useStateFromStoresObject(items, () => {
     if (null != message) {
       if (null != guild) {
         let channel = canForwardMessage.getChannel(tmp.id);

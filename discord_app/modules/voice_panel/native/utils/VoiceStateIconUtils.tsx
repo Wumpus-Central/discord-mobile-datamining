@@ -1,7 +1,7 @@
-// === Module 9809: isStableVoiceStateEqual ===
+// === Module 9831: isStableVoiceStateEqual ===
 
-// Module 9809 (isStableVoiceStateEqual)
-import shallowEqualDefault from "shallowEqual" /* 643 */;
+// Module 9831 (isStableVoiceStateEqual)
+import shallowEqualDefault from "shallowEqual" /* 640 */;
 import closure_3 from "_detectH265HardwareDecode" /* 4529 */;
 import closure_4 from "updateVoiceState" /* 4497 */;
 
@@ -28,7 +28,7 @@ export const useStableVoiceParticipant = function useStableVoiceParticipant(arg0
   closure_1 = arg1;
   const items = [closure_3, closure_4];
   const items1 = [arg0, arg1];
-  return _require(589).useStateFromStores(items, () => {
+  return _require(586).useStateFromStores(items, () => {
     if (null != closure_0) {
       const voiceState = closure_1_4.getVoiceState(closure_1, tmp);
       if (null != voiceState) {
@@ -44,7 +44,7 @@ export const useStableVoiceParticipant = function useStableVoiceParticipant(arg0
 export const useMuteDeafenIconState = function useMuteDeafenIconState(id, guildId) {
   const _require = id;
   closure_1 = guildId;
-  obj = _require(589);
+  obj = _require(586);
   const items = [closure_3, closure_4];
   const items1 = [id, guildId];
   const stateFromStores = obj.useStateFromStores(items, () => {
@@ -81,7 +81,7 @@ export const useStableVideoState = function useStableVideoState(arg0, arg1) {
   closure_1 = arg1;
   const items = [closure_3, closure_4];
   const items1 = [arg1, arg0];
-  return _require(589).useStateFromStoresObject(items, () => {
+  return _require(586).useStateFromStoresObject(items, () => {
     if (null != closure_0) {
       const voiceState = closure_1_4.getVoiceState(closure_1, tmp);
     }
@@ -108,7 +108,7 @@ export const useStableVideoState = function useStableVideoState(arg0, arg1) {
 export const useVideoIconState = function useVideoIconState(id, guildId) {
   const _require = id;
   closure_1 = guildId;
-  obj = _require(589);
+  obj = _require(586);
   const items = [closure_3, closure_4];
   const items1 = [guildId, id];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {

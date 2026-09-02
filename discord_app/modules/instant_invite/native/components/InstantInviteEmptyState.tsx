@@ -1,12 +1,12 @@
-// === Module 9944: stateFromStores ===
+// === Module 9966: stateFromStores ===
 
-// Module 9944 (stateFromStores)
+// Module 9966 (stateFromStores)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import ClearButtonDefault from "ClearButton" /* 7712 */;
-import registerAssetDefault from "registerAsset" /* 9945 */;
+import ThemesDefault from "Themes" /* 709 */;
+import ClearButtonDefault from "ClearButton" /* 7721 */;
+import registerAssetDefault from "registerAsset" /* 9967 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "updateWithLatestInvite" /* 9910 */;
+import closure_4 from "updateWithLatestInvite" /* 9932 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -24,16 +24,16 @@ export default function _default(link) {
   let stateFromStores;
   ({ onCopy, onShare, onPressSettings } = link);
   const tmp = callback2();
-  let obj = stateFromStores(589);
+  let obj = stateFromStores(586);
   const items = [closure_4];
   stateFromStores = obj.useStateFromStores(items, () => inviteSettings.getInviteSettings());
   obj = { style: tmp.container, children: null };
   obj = { containerStyle: tmp.emptyStateContainer, imageStyle: tmp.emptyStateArt, titleStyle: tmp.emptyStateTitle, source: registerAssetDefault, title: null, body: null };
-  const intl = stateFromStores(1236).intl;
-  obj[4] = intl.string(stateFromStores(1236).t.tQc0l8);
-  const intl2 = stateFromStores(1236).intl;
-  obj[5] = intl2.string(stateFromStores(1236).t.DXgdcD);
-  const items1 = [callback(stateFromStores(1297).RefreshEmptyState, obj), , , ];
+  const intl = stateFromStores(1233).intl;
+  obj[4] = intl.string(stateFromStores(1233).t.tQc0l8);
+  const intl2 = stateFromStores(1233).intl;
+  obj[5] = intl2.string(stateFromStores(1233).t.DXgdcD);
+  const items1 = [callback(stateFromStores(1296).RefreshEmptyState, obj), , , ];
   obj1 = { style: tmp.linkContainer, children: null };
   const obj2 = { accessibilityRole: "button", onPress: onCopy, editable: false, value: null, style: null, forceAccessibleContainer: true, clearButtonVisibility: null };
   if (str == null) {
@@ -41,15 +41,15 @@ export default function _default(link) {
   }
   obj2[3] = str;
   obj2[4] = tmp.inviteInput;
-  obj2[6] = stateFromStores(1297).ClearButtonVisibility.NEVER;
+  obj2[6] = stateFromStores(1296).ClearButtonVisibility.NEVER;
   const items2 = [callback(ClearButtonDefault, obj2), ];
   const obj3 = { accessibilityLabel: null, accessibilityRole: "button", onPress: null, style: null, children: null };
-  const intl3 = tmp2(1236).intl;
-  obj3[0] = intl3.string(stateFromStores(1236).t["3D5yo/"]);
+  const intl3 = tmp2(1233).intl;
+  obj3[0] = intl3.string(stateFromStores(1233).t["3D5yo/"]);
   obj3[2] = onPressSettings;
   obj3[3] = tmp.settingsButton;
-  obj3[4] = callback(stateFromStores(6240).SettingsIcon, {});
-  items2[1] = callback(stateFromStores(5068).PressableOpacity, obj3);
+  obj3[4] = callback(stateFromStores(6249).SettingsIcon, {});
+  items2[1] = callback(stateFromStores(5076).PressableOpacity, obj3);
   obj1[1] = items2;
   items1[1] = closure_6(View, obj1);
   const obj4 = { style: tmp.expireCaption, variant: "text-xs/medium", color: "text-muted", children: null };
@@ -57,14 +57,14 @@ export default function _default(link) {
     obj4[3] = null;
     items1[2] = tmp7(tmp10, obj4);
     const obj5 = { text: null, onPress: null };
-    const intl5 = tmp2(1236).intl;
-    obj5[0] = intl5.string(tmp2(1236).t.Ej3B3Y);
+    const intl5 = tmp2(1233).intl;
+    obj5[0] = intl5.string(tmp2(1233).t.Ej3B3Y);
     obj5[1] = onShare;
     items1[3] = tmp7(tmp2(4928).Button, obj5);
     obj[1] = items1;
     return tmp5(tmp6, obj);
   } else {
-    const maxAgeOptionByValue = tmp8(9911).getMaxAgeOptionByValue(stateFromStores.maxAge);
+    const maxAgeOptionByValue = tmp8(9933).getMaxAgeOptionByValue(stateFromStores.maxAge);
     let str2 = "";
     let str3 = "";
     if (null != maxAgeOptionByValue) {
@@ -74,21 +74,21 @@ export default function _default(link) {
       }
       str3 = descriptiveLabel;
     }
-    const getMaxUsesOptions = tmp8(9911).getMaxUsesOptions;
+    const getMaxUsesOptions = tmp8(9933).getMaxUsesOptions;
     const found = getMaxUsesOptions.find((value) => value.value === stateFromStores.maxUses);
     if (null != found) {
       str2 = found.descriptiveLabel;
     }
     if (0 === stateFromStores.maxAge) {
-      let dqPWMN = tmp2(1236).t["99ISmn"];
+      let dqPWMN = tmp2(1233).t["99ISmn"];
     } else {
-      dqPWMN = tmp2(1236).t.dqPWMN;
+      dqPWMN = tmp2(1233).t.dqPWMN;
     }
-    const intl4 = tmp2(1236).intl;
+    const intl4 = tmp2(1233).intl;
     const obj6 = { maxAge: null, maxUses: null };
     obj6[0] = str3;
     obj6[1] = str2;
     intl4.format(dqPWMN, obj6);
-    const tmp8Result = tmp8(9911);
+    const tmp8Result = tmp8(9933);
   }
 };

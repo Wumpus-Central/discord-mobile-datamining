@@ -1,33 +1,33 @@
-// === Module 7922: createAutoModerationActionSystemMessage ===
+// === Module 7931: createAutoModerationActionSystemMessage ===
 
-// Module 7922 (createAutoModerationActionSystemMessage)
+// Module 7931 (createAutoModerationActionSystemMessage)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import getAvatarURL from "getAvatarURL" /* 1431 */;
-import ensureAvatarSource from "ensureAvatarSource" /* 1434 */;
-import hooksDefault from "hooks" /* 4075 */;
-import isCommunicationDisabled from "isCommunicationDisabled" /* 4110 */;
+import ME from "ME" /* 673 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1362 */;
+import getAvatarURL from "getAvatarURL" /* 1430 */;
+import ensureAvatarSource from "ensureAvatarSource" /* 1433 */;
+import hooksDefault from "hooks" /* 4074 */;
+import isCommunicationDisabled from "isCommunicationDisabled" /* 4109 */;
 import resetCache from "resetCache" /* 4163 */;
 import computeChannelName from "computeChannelName" /* 4674 */;
 import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4746 */;
-import useRoleIcon from "useRoleIcon" /* 5977 */;
-import getDecisionOutcomeFromMessage from "getDecisionOutcomeFromMessage" /* 7253 */;
-import registerAssetDefault from "registerAsset" /* 7710 */;
-import processColorOrThrow from "processColorOrThrow" /* 7845 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7873 */;
-import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 7900 */;
-import AutomodRaidAlertTypes from "AutomodRaidAlertTypes" /* 7923 */;
-import DATE_CONFIG from "DATE_CONFIG" /* 7924 */;
-import registerAssetDefault2 from "registerAsset" /* 7928 */;
+import useRoleIcon from "useRoleIcon" /* 5985 */;
+import getDecisionOutcomeFromMessage from "getDecisionOutcomeFromMessage" /* 7262 */;
+import registerAssetDefault from "registerAsset" /* 7719 */;
+import processColorOrThrow from "processColorOrThrow" /* 7854 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7882 */;
+import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 7909 */;
+import AutomodRaidAlertTypes from "AutomodRaidAlertTypes" /* 7932 */;
+import DATE_CONFIG from "DATE_CONFIG" /* 7933 */;
+import registerAssetDefault2 from "registerAsset" /* 7937 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "ensureGuildLoaded" /* 1387 */;
-import closure_6 from "trackCommunicationDisabled" /* 1992 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4121 */;
+import closure_5 from "ensureGuildLoaded" /* 1386 */;
+import closure_6 from "trackCommunicationDisabled" /* 1991 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_8 from "markAllUserIdListsStale" /* 4130 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import closure_9 from "mergeGuildAvatar" /* 1921 */;
 import apply from "apply" /* 12 */;
 
 ({ processColor: c3, Image: c4 } = get_ActivityIndicator);
@@ -238,9 +238,9 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       let getRaidAlertResolveCTAText = closure_4.resolveAssetSource;
       let internal6 = getAvatarURL;
       let intl9 = internal6.makeSource;
-      obj5[6] = getRaidAlertResolveCTAText(intl9(importDefault(tmp42 ? 7927 : 7710))).uri;
+      obj5[6] = getRaidAlertResolveCTAText(intl9(importDefault(tmp42 ? 7936 : 7719))).uri;
       const tmpResult16 = processColorOrThrow;
-      internal6 = tmp45(712).internal;
+      internal6 = tmp45(709).internal;
       obj5[7] = processColorOrThrow.processColorOrThrow(internal6.resolveSemanticColor(theme, ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL));
       intl9 = getSystemLocale.intl;
       const obj6 = { dateTime: null };
@@ -362,7 +362,7 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       }
       obj9[6] = formatToPlainStringResult1;
       const tmpResult25 = resetCache;
-      obj9[7] = closure_4.resolveAssetSource(getAvatarURL.makeSource(tmp57(result1 ? 7929 : 7930))).uri;
+      obj9[7] = closure_4.resolveAssetSource(getAvatarURL.makeSource(tmp57(result1 ? 7938 : 7939))).uri;
       const intl16 = getSystemLocale.intl;
       const string2 = intl16.string;
       const t3 = getSystemLocale.t;

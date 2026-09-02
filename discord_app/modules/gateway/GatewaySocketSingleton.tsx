@@ -1,18 +1,18 @@
-// === Module 13285: handleIdentify ===
+// === Module 13507: handleIdentify ===
 
-// Module 13285 (handleIdentify)
+// Module 13507 (handleIdentify)
 import timestampDefault from "timestamp" /* 3 */;
-import setRequestedByAll from "setRequestedBy" /* 675 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import setDefault from "set" /* 4104 */;
-import _modDef10937 from "module_10937" /* 10937 */;
-import noopDefault from "noop" /* 13286 */;
-import getInitialStateDefault from "getInitialState" /* 13326 */;
-import guildIdDefault from "guildId" /* 13329 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import set from "set" /* 500 */;
-import importDefaultResult from "awaitOnline" /* 1473 */;
+import setRequestedByAll from "setRequestedBy" /* 672 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import setDefault from "set" /* 4103 */;
+import _modDef11157 from "module_11157" /* 11157 */;
+import noopDefault from "noop" /* 13508 */;
+import getInitialStateDefault from "getInitialState" /* 13549 */;
+import guildIdDefault from "guildId" /* 13552 */;
+import closure_3 from "fetchFingerprint" /* 1215 */;
+import set from "set" /* 1234 */;
+import importDefaultResult from "awaitOnline" /* 1472 */;
 
 let closure_4 = new timestampDefault("ConnectionStore");
 let obj = new noopDefault();
@@ -27,12 +27,12 @@ obj.handleIdentify = () => {
   if (null == token) {
     return null;
   } else {
-    const state = _modDef10937.getState();
+    const state = _modDef11157.getState();
     const installationForTracking = obj.getInstallationForTracking();
     obj = { token: null, properties: null, presence: null };
     obj[0] = token;
     obj1 = {};
-    const obj5 = _modDef10937;
+    const obj5 = _modDef11157;
     const merged = Object.assign(expandEventPropertiesDefault.getSuperProperties());
     obj1.client_app_state = state;
     obj1.is_fast_connect = false;

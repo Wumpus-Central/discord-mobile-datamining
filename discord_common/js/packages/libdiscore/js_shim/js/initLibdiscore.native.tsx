@@ -1,9 +1,9 @@
-// === Module 1920: _initLibdiscore ===
+// === Module 1919: _initLibdiscore ===
 
-// Module 1920 (_initLibdiscore)
+// Module 1919 (_initLibdiscore)
 import closure_0 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import importAllResult from "setTimeout" /* 1921 */;
+import importAllResult from "setTimeout" /* 1920 */;
 
 function _initLibdiscore() {
   const self = this;

@@ -1,18 +1,18 @@
-// === Module 11975: addGameMention ===
+// === Module 12199: addGameMention ===
 
-// Module 11975 (addGameMention)
-import setActiveCommandAll from "setActiveCommand" /* 7522 */;
-import _modDef8163 from "module_8163" /* 8163 */;
-import findGameMentionTokens from "findGameMentionTokens" /* 11563 */;
-import addRule from "addRule" /* 11564 */;
-import addRuleDefault from "addRule" /* 11564 */;
+// Module 12199 (addGameMention)
+import setActiveCommandAll from "setActiveCommand" /* 7532 */;
+import _modDef8171 from "module_8171" /* 8171 */;
+import findTokenLocations from "findTokenLocations" /* 11786 */;
+import addRule from "addRule" /* 11787 */;
+import addRuleDefault from "addRule" /* 11787 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "handleChanged" /* 4854 */;
 import { DraftType } from "handleChanged" /* 4854 */;
-import closure_7 from "handleInit" /* 7524 */;
-import ME from "ME" /* 676 */;
+import closure_7 from "handleInit" /* 7534 */;
+import ME from "ME" /* 673 */;
 import regExp from "regExp" /* 4953 */;
-import { MediaKeyboardTarget } from "DRAG_HANDLE" /* 1623 */;
+import { MediaKeyboardTarget } from "DRAG_HANDLE" /* 1622 */;
 
 require = arg1;
 ({ AnalyticEvents: closure_8, AutoCompleteResultTypes: c9, WHITESPACE_RE: c10 } = ME);
@@ -30,19 +30,23 @@ class ApplicationCommandManager {
     obj.optionValueNodes = map1;
     map2 = new Map();
     obj.mentionGames = map2;
-    tmp4 = new require("addRule")();
-    obj.parser = tmp4;
+    map3 = new Map();
+    obj.mentionTimestamps = map3;
+    tmp5 = new require("addRule")();
+    obj.parser = tmp5;
     obj.optionValues = {};
     obj.optionValidationResults = {};
     obj.canAutoInsertFirstOption = true;
     obj.preferredOptionValues = {};
-    obj.setAutoCompleteResult = function setAutoCompleteResult(id, autocompleteResultText, arg2, type) {
+    obj.setAutoCompleteResult = function setAutoCompleteResult(id, arg1, arg2, type) {
       let insertOrJumpCommandOption = type;
       const activeOption = closure_1_7.getActiveOption(id);
       if (arg2) {
         if (null != obj.props.activeCommand) {
           if (null != activeOption) {
             if (insertOrJumpCommandOption.type === closure_1_9.GAME_MENTION) {
+              return false;
+            } else if (insertOrJumpCommandOption.type === tmp4.TIMESTAMP_MENTION) {
               return false;
             } else {
               type = insertOrJumpCommandOption.type;
@@ -52,7 +56,7 @@ class ApplicationCommandManager {
                 let tmp5 = obj;
                 insertOrJumpCommandOption = obj.insertOrJumpCommandOption;
                 obj = { displayText: null, preferred: true, value: null };
-                obj[0] = autocompleteResultText;
+                obj[0] = arg1;
                 obj[2] = tmp5;
                 const result = insertOrJumpCommandOption(activeOption, undefined, false, obj);
               } else if (tmp4.ROLE !== type) {
@@ -326,7 +330,7 @@ class ApplicationCommandManager {
         ruleId: "commandOptionParserRuleId",
         type: obj(closure_1_3[6]).ChatInputNodeType.COMMAND_OPTION,
         matchFunction(arg0, arg1) {
-          return lib(11563).getMatchedOptions(arg0, arg1);
+          return lib(11786).getMatchedOptions(arg0, arg1);
         },
         style() {
           const styles = lib.styles;
@@ -341,7 +345,7 @@ class ApplicationCommandManager {
         ruleId: "commandOptionValueParserRuleId",
         type: obj(closure_1_3[6]).ChatInputNodeType.COMMAND_OPTION_WITH_VALUE,
         matchFunction(arg0, arg1) {
-          return lib(11563).getMatchedOptionsWithValue(arg0, arg1);
+          return lib(11786).getMatchedOptionsWithValue(arg0, arg1);
         },
         style() {
           const styles = lib.styles;
@@ -353,7 +357,7 @@ class ApplicationCommandManager {
           if (data != null) {
             type = data.option.type;
           }
-          return type === lib(1955).ApplicationCommandOptionType.ATTACHMENT;
+          return type === lib(1954).ApplicationCommandOptionType.ATTACHMENT;
         }
       };
       parser2.addRule(obj);
@@ -475,7 +479,7 @@ class ApplicationCommandManager {
         ruleId: "silentHighlightRuleId",
         type: obj(closure_1_3[6]).ChatInputNodeType.SILENT_HIGHLIGHT,
         matchFunction(arg0) {
-          return lib(11563).getSilentHighlightNodes(arg0);
+          return lib(11786).getSilentHighlightNodes(arg0);
         },
         style() {
           const styles = lib.styles;
@@ -490,7 +494,7 @@ class ApplicationCommandManager {
         ruleId: "silentHighlightRuleId",
         type: obj(closure_1_3[6]).ChatInputNodeType.SILENT_HIGHLIGHT,
         matchFunction(arg0) {
-          return lib(11563).getSilentHighlightNodes(arg0);
+          return lib(11786).getSilentHighlightNodes(arg0);
         },
         style() {
           const styles = lib.styles;
@@ -535,7 +539,69 @@ class ApplicationCommandManager {
         ruleId: "gameMentionInputRuleId",
         type: obj(closure_1_3[6]).ChatInputNodeType.GAME_MENTION_INPUT,
         matchFunction(arr) {
-          return lib(11563).getGameMentionInputNodes(arr);
+          return lib(11786).getGameMentionInputNodes(arr);
+        },
+        style() {
+          const styles = lib.styles;
+          return styles.commandOption();
+        },
+        deleteNodeOnBackspace: true,
+        editDisabled() {
+          return true;
+        }
+      });
+      const parser10 = obj.parser;
+      const obj6 = {
+        ruleId: "gameMentionInputRuleId",
+        type: obj(closure_1_3[6]).ChatInputNodeType.GAME_MENTION_INPUT,
+        matchFunction(arr) {
+          return lib(11786).getGameMentionInputNodes(arr);
+        },
+        style() {
+          const styles = lib.styles;
+          return styles.commandOption();
+        },
+        deleteNodeOnBackspace: true,
+        editDisabled() {
+          return true;
+        }
+      };
+      parser10.addRule({
+        ruleId: "timestampHighlightRuleId",
+        type: obj(closure_1_3[6]).ChatInputNodeType.TIMESTAMP_HIGHLIGHT,
+        matchFunction(content) {
+          return closure_1_0(closure_1_3[7]).getTimestampHighlightNodes(lib.mentionTimestamps, content);
+        },
+        style() {
+          const styles = lib.styles;
+          return styles.timestampMention();
+        },
+        deleteNodeOnBackspace: true,
+        editDisabled() {
+          return true;
+        }
+      });
+      const parser11 = obj.parser;
+      const obj7 = {
+        ruleId: "timestampHighlightRuleId",
+        type: obj(closure_1_3[6]).ChatInputNodeType.TIMESTAMP_HIGHLIGHT,
+        matchFunction(content) {
+          return closure_1_0(closure_1_3[7]).getTimestampHighlightNodes(lib.mentionTimestamps, content);
+        },
+        style() {
+          const styles = lib.styles;
+          return styles.timestampMention();
+        },
+        deleteNodeOnBackspace: true,
+        editDisabled() {
+          return true;
+        }
+      };
+      parser11.addRule({
+        ruleId: "timestampMentionInputRuleId",
+        type: obj(closure_1_3[6]).ChatInputNodeType.TIMESTAMP_MENTION_INPUT,
+        matchFunction(arr) {
+          return lib(11786).getTimestampMentionInputNodes(arr);
         },
         style() {
           const styles = lib.styles;
@@ -1110,8 +1176,26 @@ prototype["getMentionGames"] = function getMentionGames() {
 prototype["buildGameMentionNode"] = function buildGameMentionNode(game) {
   const styles = this.styles;
   const obj = { type: addRule.ChatInputNodeType.GAME_HIGHLIGHT, style: styles.gameMention(), deleteNodeOnBackspace: true, editDisabled: true };
-  const merged = Object.assign(findGameMentionTokens.buildGameMentionResult(game));
+  const merged = Object.assign(findTokenLocations.buildGameMentionResult(game));
   return obj;
+};
+prototype["addTimestampMention"] = function addTimestampMention(formatted, mention) {
+  const obj = findTokenLocations;
+  const result = obj.uniqueTimestampPillText(this.mentionTimestamps, findTokenLocations.formatTimestampPillText(formatted), mention);
+  const mentionTimestamps = this.mentionTimestamps;
+  const result1 = mentionTimestamps.set(result, mention);
+  return result;
+};
+prototype["getMentionTimestamps"] = function getMentionTimestamps() {
+  return this.mentionTimestamps;
+};
+prototype["clearTimestampMentions"] = function clearTimestampMentions() {
+  const mentionTimestamps = this.mentionTimestamps;
+  mentionTimestamps.clear();
+};
+prototype["buildTimestampMentionNode"] = function buildTimestampMentionNode(addTimestampMentionResult) {
+  const styles = this.styles;
+  return { type: addRule.ChatInputNodeType.TIMESTAMP_HIGHLIGHT, style: styles.timestampMention(), deleteNodeOnBackspace: true, editDisabled: true, location: 0, length: addTimestampMentionResult.length };
 };
 prototype["setPreferredOptionValue"] = function setPreferredOptionValue(id, name, displayText) {
   const self = this;
@@ -1169,7 +1253,7 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
       if (!focused2) {
         let obj5 = obj1(4342);
         const keyboardType = obj5.getKeyboardType();
-        focused2 = keyboardType !== obj1(1626).KeyboardTypes.SYSTEM;
+        focused2 = keyboardType !== obj1(1625).KeyboardTypes.SYSTEM;
       }
       currentOption = self.getCurrentOption(focused2, editId.selectionStart);
       activeOption = currentOption;
@@ -1179,8 +1263,8 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
       tmp91 = null != self.activeCommand;
     }
     if (tmp91) {
-      _modDef8163.clearAll(channel.id, self.SlashCommand);
-      const obj7 = _modDef8163;
+      _modDef8171.clearAll(channel.id, self.SlashCommand);
+      const obj7 = _modDef8171;
     }
     let name;
     if (activeOption != null) {
@@ -1213,16 +1297,16 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
       preferredCommandType = obj1;
       preferredCommandType = dependencyMap;
       preferredCommandType = dependencyMap;
-      const obj8 = obj1(11725);
+      const obj8 = obj1(11948);
       preferredCommandType = obj8;
       preferredCommandType = activeCommand;
       self.optionValidationResults = obj8.getValidationResults(activeCommand, self.optionValues, editId.channel.guild_id, editId.channel.id, false);
       const chatInputNodes = self.chatInputNodes;
       self.chatInputNodes = chatInputNodes.map((type) => {
-        if (type.type === obj1(11564).ChatInputNodeType.COMMAND_OPTION) {
+        if (type.type === obj1(11787).ChatInputNodeType.COMMAND_OPTION) {
           if (null != type.data) {
             const option = type.data.option;
-            if (type.type === tmp(11564).ChatInputNodeType.COMMAND_OPTION_WITH_VALUE) {
+            if (type.type === tmp(11787).ChatInputNodeType.COMMAND_OPTION_WITH_VALUE) {
               let name;
               if (currentOption != null) {
                 name = currentOption.name;
@@ -1253,7 +1337,7 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
                   success = tmp15.success;
                 }
                 if (success) {
-                  success = option.type === tmp(1955).ApplicationCommandOptionType.ATTACHMENT;
+                  success = option.type === tmp(1954).ApplicationCommandOptionType.ATTACHMENT;
                 }
                 if (success) {
                   obj = { action: "tapAttachment", channelId: null, optionName: null };
@@ -1364,11 +1448,11 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
       if (activeOption != null) {
         preferredCommandType = activeOption.type;
       }
-      if (preferredCommandType === preferredCommandType(1955).ApplicationCommandOptionType.ATTACHMENT) {
+      if (preferredCommandType === preferredCommandType(1954).ApplicationCommandOptionType.ATTACHMENT) {
         if (!self.optionValidationResults[activeOption.name].success) {
           const current2 = self.ref.current;
           let obj = { type: null, context: null };
-          obj[0] = preferredCommandType(1626).KeyboardTypes.MEDIA;
+          obj[0] = preferredCommandType(1625).KeyboardTypes.MEDIA;
           obj = { target: null, option: null };
           preferredCommandType = MediaKeyboardTarget;
           obj[0] = MediaKeyboardTarget.COMMAND;
@@ -1520,11 +1604,11 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
       preferredCommandType = null != activeOption;
     }
     if (preferredCommandType) {
-      preferredCommandType = activeOption.type !== preferredCommandType(1955).ApplicationCommandOptionType.ATTACHMENT;
+      preferredCommandType = activeOption.type !== preferredCommandType(1954).ApplicationCommandOptionType.ATTACHMENT;
     }
     if (preferredCommandType) {
       preferredCommandType = preferredCommandType(4342).getKeyboardType();
-      preferredCommandType = preferredCommandType !== preferredCommandType(1626).KeyboardTypes.SYSTEM;
+      preferredCommandType = preferredCommandType !== preferredCommandType(1625).KeyboardTypes.SYSTEM;
       const preferredCommandTypeResult1 = preferredCommandType(4342);
     }
     if (preferredCommandType) {
@@ -1631,7 +1715,7 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
       let tmp39 = obj1;
       let tmp40 = dependencyMap;
       let tmp41 = dependencyMap;
-      obj3 = obj1(11563);
+      obj3 = obj1(11786);
       let hasItem = 0 !== obj3.findGameMentionTokens(editId.text, tmp36[1].name, mapped).locations.length;
       if (!hasItem) {
         let text2 = editId.text;
@@ -1652,25 +1736,25 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
     optionValueNodes.clear();
     const chatInputNodes1 = self.chatInputNodes;
     const item = chatInputNodes1.forEach((type) => {
-      if (type.type === obj1(11564).ChatInputNodeType.COMMAND_OPTION) {
+      if (type.type === obj1(11787).ChatInputNodeType.COMMAND_OPTION) {
         const data = type.data;
         type = undefined;
         if (data != null) {
           type = data.type;
         }
-        if (type === tmp(11564).ChatInputParseResultDataType.COMMAND_OPTION) {
+        if (type === tmp(11787).ChatInputParseResultDataType.COMMAND_OPTION) {
           const optionsToNodes = self.optionsToNodes;
           const result = optionsToNodes.set(type.data.option.name, type);
         }
       }
-      let tmp5 = type.type === tmp(11564).ChatInputNodeType.COMMAND_OPTION_WITH_VALUE;
+      let tmp5 = type.type === tmp(11787).ChatInputNodeType.COMMAND_OPTION_WITH_VALUE;
       if (tmp5) {
         const data2 = type.data;
         let type1;
         if (data2 != null) {
           type1 = data2.type;
         }
-        tmp5 = type1 === tmp(11564).ChatInputParseResultDataType.COMMAND_OPTION;
+        tmp5 = type1 === tmp(11787).ChatInputParseResultDataType.COMMAND_OPTION;
       }
       if (tmp5) {
         const optionValueNodes = self.optionValueNodes;
@@ -1728,7 +1812,7 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
             let tmp70 = obj1;
             let tmp71 = dependencyMap;
             let tmp72 = dependencyMap;
-            if (tmp56.type === obj1(1955).ApplicationCommandOptionType.ATTACHMENT) {
+            if (tmp56.type === obj1(1954).ApplicationCommandOptionType.ATTACHMENT) {
               let tmp73 = name;
               let arr = items3.push(tmp57);
             }
@@ -1736,7 +1820,7 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
           continue;
         }
         if (items3.length > 0) {
-          obj4 = _modDef8163;
+          obj4 = _modDef8171;
           obj4.removeFiles(channel.id, items3, self.SlashCommand);
         }
       }

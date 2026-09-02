@@ -1,11 +1,11 @@
-// === Module 15841: useCanSeeNUFChannelsForGuild ===
+// === Module 16072: useCanSeeNUFChannelsForGuild ===
 
-// Module 15841 (useCanSeeNUFChannelsForGuild)
-import closure_2 from "trackCommunicationDisabled" /* 1992 */;
-import closure_3 from "createGuildRecordFromRust" /* 1909 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import { GuildFeatures } from "ME" /* 676 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4109 */;
+// Module 16072 (useCanSeeNUFChannelsForGuild)
+import closure_2 from "trackCommunicationDisabled" /* 1991 */;
+import closure_3 from "createGuildRecordFromRust" /* 1908 */;
+import closure_4 from "mergeGuildAvatar" /* 1921 */;
+import { GuildFeatures } from "ME" /* 673 */;
+import { GuildMemberFlags } from "GuildMemberFlags" /* 4108 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/nuf_channels/native/useCanSeeNUFChannelsForGuild.tsx");
@@ -14,7 +14,7 @@ export const useCanSeeNUFChannelsForGuild = function useCanSeeNUFChannelsForGuil
   const _require = id;
   const items = [closure_4, closure_3, closure_2];
   const items1 = [id];
-  return _require(589).useStateFromStores(items, () => {
+  return _require(586).useStateFromStores(items, () => {
     const currentUser = closure_1_4.getCurrentUser();
     if (null != currentUser) {
       if (obj3.isNewUser(currentUser)) {

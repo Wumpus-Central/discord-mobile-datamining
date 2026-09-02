@@ -1,8 +1,8 @@
-// === Module 13416: isNotAutomodEmbed ===
+// === Module 13639: isNotAutomodEmbed ===
 
-// Module 13416 (isNotAutomodEmbed)
+// Module 13639 (isNotAutomodEmbed)
 import set from "set" /* 2 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 693 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 690 */;
 
 const result = set.fileFinishedImporting("modules/guild_automod/GuildAutomodMessageStoreUtils.tsx");
 

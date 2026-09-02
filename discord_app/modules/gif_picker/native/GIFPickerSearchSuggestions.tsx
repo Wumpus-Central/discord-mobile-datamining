@@ -1,9 +1,9 @@
-// === Module 10365: ? ===
+// === Module 10387: ? ===
 
-// Module 10365
-import ThemesDefault from "Themes" /* 712 */;
+// Module 10387
+import ThemesDefault from "Themes" /* 709 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "getFormatFromUrl" /* 10357 */;
+import closure_4 from "getFormatFromUrl" /* 10379 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 import importAllResult from "noop" /* 19 */;
@@ -21,7 +21,7 @@ const obj2 = { marginBottom: ThemesDefault.space.PX_16, textAlign: "center" };
 const memoResult = importAllResult.memo(function GIFPickerSearchSuggestions(onClickSuggestion) {
   onClickSuggestion = onClickSuggestion.onClickSuggestion;
   const tmp = callback3();
-  let obj = onClickSuggestion(589);
+  let obj = onClickSuggestion(586);
   const items = [closure_4];
   const stateFromStoresArray = obj.useStateFromStoresArray(items, () => suggestions.getSuggestions());
   let tmp4 = null;
@@ -30,8 +30,8 @@ const memoResult = importAllResult.memo(function GIFPickerSearchSuggestions(onCl
     obj[0] = tmp.footerSuggestionsContainer;
     obj = { style: null, variant: "text-md/medium", color: "text-default", children: null };
     obj[0] = tmp.footerSuggestionsTitle;
-    const intl = tmp2(1236).intl;
-    obj[3] = intl.string(tmp2(1236).t["3JGJo2"]);
+    const intl = tmp2(1233).intl;
+    obj[3] = intl.string(tmp2(1233).t["3JGJo2"]);
     const items1 = [callback(tmp2(4474).Text, obj), ];
     obj1 = { style: null, children: null };
     obj1[0] = tmp.suggestionsContainer;

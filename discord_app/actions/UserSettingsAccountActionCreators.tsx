@@ -1,11 +1,11 @@
-// === Module 7756: saveProfileAndAccountRequest ===
+// === Module 7765: saveProfileAndAccountRequest ===
 
-// Module 7756 (saveProfileAndAccountRequest)
-import sendRequest from "sendRequest" /* 530 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 7765 (saveProfileAndAccountRequest)
+import sendRequest from "sendRequest" /* 527 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import ME from "ME" /* 676 */;
-import str2 from "str2" /* 6055 */;
+import ME from "ME" /* 673 */;
+import str2 from "str2" /* 6063 */;
 
 require = arg1;
 function saveProfileAndAccountRequest(arg0, arg1) {
@@ -26,51 +26,119 @@ function _saveProfileAndAccountRequest() {
     c4 = 0;
     c5 = 0;
     const iter = (function*(arg0) {
-      let body = tmp2;
-      if (obj1 === undefined) {
-        obj1 = {};
-      }
-      yield "PX_16";
-      const HTTP = lib(body[4]).HTTP;
-      const obj3 = { url: null, oldFormErrors: true, body: null, headers: null, rejectWithError: null };
-      obj3[0] = token.ME;
-      obj3[2] = lib;
-      obj3[3] = obj1.headers;
-      obj3[4] = lib(body[4]).rejectWithMigratedError();
-      body = yield HTTP.patch(obj3);
-      body = body.body;
-      if (body.token) {
-        token = body.token;
-        delete tmp4[tmp3];
-        const obj = obj1(body[3]);
-        const obj6 = { type: "UPDATE_TOKEN", token: null, userId: null };
-        obj6[1] = token;
-        obj6[2] = body.id;
-        obj.dispatch(obj6);
-        let password;
-        if (lib != null) {
-          password = lib.password;
+      if (c5 === 2) {
+        c5 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
         }
-        let tmp19 = null != password;
-        if (tmp19) {
-          let new_password;
-          if (lib != null) {
-            new_password = lib.new_password;
+      } else {
+        try {
+          c5 = 2;
+          if (0 === token) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let body = tmp7;
+              body = tmp2;
+              obj1 = undefined;
+              if (obj1 === undefined) {
+                obj1 = {};
+              }
+              body = undefined;
+              body = undefined;
+              token = undefined;
+              token = 1;
+              c5 = 1;
+              return { value: "PX_16", done: true };
+            }
+          } else if (1 === tmp7) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              let obj2 = { value: null, done: true };
+              obj2[0] = arg1;
+              return obj2;
+            } else {
+              const HTTP = lib(body[4]).HTTP;
+              const obj3 = { url: null, oldFormErrors: true, body: null, headers: null, rejectWithError: null };
+              obj3[0] = token.ME;
+              obj3[2] = lib;
+              obj3[3] = obj1.headers;
+              obj3[4] = lib(body[4]).rejectWithMigratedError();
+              token = 2;
+              c5 = 1;
+              let obj4 = { value: null, done: false };
+              obj4[0] = HTTP.patch(obj3);
+              return obj4;
+            }
+          } else if (arg0 === 1) {
+            c5 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj5 = { value: null, done: true };
+            obj5[0] = arg1;
+            return obj5;
+          } else {
+            body = arg1;
+            body = body.body;
+            if (body.token) {
+              token = body.token;
+              delete tmp4[tmp3];
+              obj = obj1(body[3]);
+              const obj6 = { type: "UPDATE_TOKEN", token: null, userId: null };
+              obj6[1] = token;
+              obj6[2] = body.id;
+              obj.dispatch(obj6);
+              let password;
+              if (lib != null) {
+                password = lib.password;
+              }
+              let tmp19 = null != password;
+              if (tmp19) {
+                let new_password;
+                if (lib != null) {
+                  new_password = lib.new_password;
+                }
+                tmp19 = null != new_password;
+              }
+              if (tmp19) {
+                obj2 = obj1(body[3]);
+                const obj7 = { type: "PASSWORD_UPDATED", userId: null };
+                obj7[1] = body.id;
+                obj2.dispatch(obj7);
+              }
+            }
+            obj4 = obj1(body[3]);
+            const obj8 = { type: "CURRENT_USER_UPDATE", user: null };
+            obj8[1] = body;
+            obj4.dispatch(obj8);
+            c5 = 3;
+            const obj9 = { value: null, done: true };
+            obj9[0] = body;
+            return obj9;
           }
-          tmp19 = null != new_password;
-        }
-        if (tmp19) {
-          const obj2 = obj1(body[3]);
-          const obj7 = { type: "PASSWORD_UPDATED", userId: null };
-          obj7[1] = body.id;
-          obj2.dispatch(obj7);
+        } catch (tmp35) {
+          c5 = tmp;
+          throw tmp35;
         }
       }
-      const obj4 = obj1(body[3]);
-      const obj8 = { type: "CURRENT_USER_UPDATE", user: null };
-      obj8[1] = body;
-      obj4.dispatch(obj8);
-      return body;
     })();
     iter.next();
     return iter;
@@ -102,9 +170,9 @@ export const disableAccount = function disableAccount(password, arg1) {
   const obj3 = sendRequest;
   const tmp2 = arg1 ? closure_4.DELETE_ACCOUNT : closure_4.DISABLE_ACCOUNT;
   return HTTP.post(obj).then(() => {
-    callback2(6052).logoutInternal();
-    const obj = callback2(6052);
-    callback(1222).transitionTo(constants.DEFAULT_LOGGED_OUT);
+    callback2(6060).logoutInternal();
+    const obj = callback2(6060);
+    callback(1219).transitionTo(constants.DEFAULT_LOGGED_OUT);
   });
 };
 export { saveProfileAndAccountRequest };
@@ -113,7 +181,7 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
   const avatarId = c0.avatarId;
   ({ avatarDecoration, nameplate, primaryGuildId, displayNameStyles, typingIndicatorStyle } = c0);
   ({ username, discriminator, email, emailToken, password, avatarDescription, newPassword, globalName, legacyUsername, avatarOriginalMd5 } = c0);
-  let obj = avatarId(709);
+  let obj = avatarId(706);
   obj.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT" });
   obj = { username, email, email_token: emailToken, password, avatar, avatar_description: avatarDescription, avatar_id: avatarId, discriminator, global_name: globalName, legacy_username: legacyUsername, new_password: newPassword };
   if (undefined !== avatarDecoration) {
@@ -149,19 +217,19 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
   if (undefined !== typingIndicatorStyle) {
     let result = null;
     if (null != typingIndicatorStyle) {
-      result = avatar(1942).serializeTypingIndicatorStyle(typingIndicatorStyle);
-      const obj3 = avatar(1942);
+      result = avatar(1941).serializeTypingIndicatorStyle(typingIndicatorStyle);
+      const obj3 = avatar(1941);
     }
     obj.typing_indicator_style = result;
   }
-  const Storage = avatar(595).Storage;
+  const Storage = avatar(592).Storage;
   let value = Storage.get(closure_6);
   const tmp12 = callback2();
   if (tmp13) {
     obj.push_provider = tmp12;
     obj.push_token = value;
   }
-  const Storage2 = tmp10(595).Storage;
+  const Storage2 = tmp10(592).Storage;
   value = Storage2.get(closure_7);
   let tmp16 = null != closure_8;
   if (tmp16) {
@@ -171,11 +239,11 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
     obj.push_voip_provider = tmp15;
     obj.push_voip_token = value;
   }
-  obj = { headers: avatarId(5113).buildHeadersForMd5({ [avatar(7757).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5 }) };
+  obj = { headers: avatarId(5121).buildHeadersForMd5({ [avatar(7766).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5 }) };
   const tmp = avatarId;
   tmp13 = null != tmp12 && null != value;
   tmp15 = closure_8;
-  let tmpResult = avatarId(5113);
+  let tmpResult = avatarId(5121);
   return saveProfileAndAccountRequest(obj, obj).then((arg0) => {
     avatarId(closure_1_2[3]).dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS" });
     let tmp4 = null == avatar;

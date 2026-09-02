@@ -1,8 +1,8 @@
-// === Module 1219: initialize ===
+// === Module 1216: initialize ===
 
-// Module 1219 (initialize)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 1216 (initialize)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 const Store = initializeDefault.Store;
 class BrowserHandoffStore extends Store {

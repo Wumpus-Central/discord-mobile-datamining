@@ -1,10 +1,10 @@
-// === Module 12277: _initialize ===
+// === Module 12501: _initialize ===
 
-// Module 12277 (_initialize)
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 12501 (_initialize)
+import dispatcherDefault from "dispatcher" /* 706 */;
 import initializeDefault from "initialize" /* 4662 */;
-import closure_3 from "createGuildRecordFromRust" /* 1909 */;
-import { GuildFeatures } from "ME" /* 676 */;
+import closure_3 from "createGuildRecordFromRust" /* 1908 */;
+import { GuildFeatures } from "ME" /* 673 */;
 
 let require = arg1;
 initializeDefault;

@@ -1,8 +1,8 @@
-// === Module 15638: apexExperiment ===
+// === Module 15869: apexExperiment ===
 
-// Module 15638 (apexExperiment)
+// Module 15869 (apexExperiment)
 import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1468 */;
+import ApexExperiment from "ApexExperiment" /* 1467 */;
 
 const obj = { 1: null, 2: { list: "flash", recycleItems: false }, 3: { list: "legend", recycleItems: false } };
 obj[3] = { list: "legend", recycleItems: true };

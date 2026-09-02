@@ -1,17 +1,17 @@
-// === Module 15377: DemoContextMenu ===
+// === Module 15605: DemoContextMenu ===
 
-// Module 15377 (DemoContextMenu)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 15605 (DemoContextMenu)
+import ThemesDefault from "Themes" /* 709 */;
 import registerAssetDefault from "registerAsset" /* 4442 */;
 import Text from "Text" /* 4474 */;
-import PressableCard from "PressableCard" /* 5601 */;
-import registerAssetDefault2 from "registerAsset" /* 7670 */;
-import registerAssetDefault3 from "registerAsset" /* 7875 */;
-import registerAssetDefault4 from "registerAsset" /* 10891 */;
-import registerAssetDefault5 from "registerAsset" /* 11163 */;
-import registerAssetDefault6 from "registerAsset" /* 12311 */;
-import registerAssetDefault7 from "registerAsset" /* 15378 */;
-import registerAssetDefault8 from "registerAsset" /* 15379 */;
+import PressableCard from "PressableCard" /* 5609 */;
+import registerAssetDefault2 from "registerAsset" /* 7679 */;
+import registerAssetDefault3 from "registerAsset" /* 7884 */;
+import registerAssetDefault4 from "registerAsset" /* 11111 */;
+import registerAssetDefault5 from "registerAsset" /* 11384 */;
+import registerAssetDefault6 from "registerAsset" /* 12535 */;
+import registerAssetDefault7 from "registerAsset" /* 15606 */;
+import registerAssetDefault8 from "registerAsset" /* 15607 */;
 import closure_2 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -51,7 +51,7 @@ function DemoContextMenu(align) {
         obj = { length: dependencyMap };
         const obj2 = callback(12);
         return Array.from(obj).map((arg0, arg1) => {
-          const obj = { label: length[arg1 % length.length], IconComponent: "a", iconSource: "a", variant: "isArray", action: "set" };
+          const obj = { label: length[arg1 % length.length], IconComponent: "a", iconSource: true, variant: true, action: "year" };
           obj[2] = length2[arg1 % length2.length];
           let str = "default";
           if (arg1 === closure_0 - 1) {
@@ -74,7 +74,7 @@ function DemoContextMenu(align) {
       obj[0] = closure_1;
       arr = Array.from(obj);
       mapped = arr.map((arg0, arg1) => {
-        const obj = { label: length[arg1 % length.length], IconComponent: "a", iconSource: "a", variant: "isArray", action: "set" };
+        const obj = { label: length[arg1 % length.length], IconComponent: "a", iconSource: true, variant: true, action: "year" };
         obj[2] = length2[arg1 % length2.length];
         let str = "default";
         if (arg1 === closure_0 - 1) {

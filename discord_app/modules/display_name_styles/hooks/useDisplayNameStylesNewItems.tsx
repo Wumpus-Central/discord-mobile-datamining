@@ -1,9 +1,9 @@
-// === Module 14935: useDisplayNameStylesNewFonts ===
+// === Module 15164: useDisplayNameStylesNewFonts ===
 
-// Module 14935 (useDisplayNameStylesNewFonts)
+// Module 15164 (useDisplayNameStylesNewFonts)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "set" /* 14936 */;
-import items3 from "items3" /* 1939 */;
+import closure_3 from "set" /* 15165 */;
+import items3 from "items3" /* 1938 */;
 
 const require = arg1;
 ({ FLYWHEEL_EFFECTS: c4, FLYWHEEL_FONTS: c5 } = items3);
@@ -51,7 +51,7 @@ export const useDisplayNameStylesNewEffects = function useDisplayNameStylesNewEf
 };
 export const useDisplayNameStylesNewFontsBadge = function useDisplayNameStylesNewFontsBadge(visibleFontOrder) {
   const _require = visibleFontOrder;
-  let obj = _require(589);
+  let obj = _require(586);
   const items = [closure_3];
   const items1 = [visibleFontOrder];
   const stateFromStores = obj.useStateFromStores(items, () => newFontsBadgeDismissed.getNewFontsBadgeDismissed());
@@ -65,7 +65,7 @@ export const useDisplayNameStylesNewFontsBadge = function useDisplayNameStylesNe
 };
 export const useDisplayNameStylesNewEffectsBadge = function useDisplayNameStylesNewEffectsBadge(visibleEffectOrder) {
   const _require = visibleEffectOrder;
-  let obj = _require(589);
+  let obj = _require(586);
   const items = [closure_3];
   const items1 = [visibleEffectOrder];
   const stateFromStores = obj.useStateFromStores(items, () => newEffectsBadgeDismissed.getNewEffectsBadgeDismissed());

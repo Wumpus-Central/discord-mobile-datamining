@@ -1,14 +1,14 @@
-// === Module 15083: toggle ===
+// === Module 15312: toggle ===
 
-// Module 15083 (toggle)
+// Module 15312 (toggle)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import ME from "ME" /* 673 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import MobileUserSettings from "MobileUserSettings" /* 7884 */;
-import useFocusModeEnabled from "useFocusModeEnabled" /* 10173 */;
-import createToggle from "createToggle" /* 11068 */;
+import MobileUserSettings from "MobileUserSettings" /* 7893 */;
+import useFocusModeEnabled from "useFocusModeEnabled" /* 10195 */;
+import createToggle from "createToggle" /* 11288 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
 const toggle = createToggle.createToggle({
@@ -37,8 +37,8 @@ const toggle = createToggle.createToggle({
   useDescription: function useInAppNotificationsDescription() {
     let stringResult;
     if (obj.useFocusModeEnabled()) {
-      const intl = tmp(1236).intl;
-      stringResult = intl.string(tmp(1236).t.cIRG0s);
+      const intl = tmp(1233).intl;
+      stringResult = intl.string(tmp(1233).t.cIRG0s);
     }
     return stringResult;
   },
@@ -70,8 +70,8 @@ let obj = {
   useDescription: function useInAppNotificationsDescription() {
     let stringResult;
     if (obj.useFocusModeEnabled()) {
-      const intl = tmp(1236).intl;
-      stringResult = intl.string(tmp(1236).t.cIRG0s);
+      const intl = tmp(1233).intl;
+      stringResult = intl.string(tmp(1233).t.cIRG0s);
     }
     return stringResult;
   },

@@ -1,9 +1,9 @@
-// === Module 11143: isAlertOrActionSheetOpen ===
+// === Module 11364: isAlertOrActionSheetOpen ===
 
-// Module 11143 (isAlertOrActionSheetOpen)
+// Module 11364 (isAlertOrActionSheetOpen)
 import useAlertStore2 from "useAlertStore" /* 4859 */;
 import closure_2 from "setContent" /* 4186 */;
-import closure_3 from "getAlert" /* 11144 */;
+import closure_3 from "getAlert" /* 11365 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("components_native/chat/isAlertOrActionSheetOpen.tsx");

@@ -1,10 +1,10 @@
-// === Module 8118: premiumSince ===
+// === Module 8126: premiumSince ===
 
-// Module 8118 (premiumSince)
+// Module 8126 (premiumSince)
 import set from "set" /* 2 */;
-import getAvatarURL from "getAvatarURL" /* 1431 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import useAvatarsWithGuilds from "useAvatarsWithGuilds" /* 8076 */;
+import getAvatarURL from "getAvatarURL" /* 1430 */;
+import GuildFeatures from "GuildFeatures" /* 1923 */;
+import useAvatarsWithGuilds from "useAvatarsWithGuilds" /* 8084 */;
 
 const PremiumTypes = GuildFeatures.PremiumTypes;
 const result = set.fileFinishedImporting("modules/user_profile/DisplayProfile.tsx");
@@ -120,7 +120,7 @@ Object.defineProperty(prototype, "gameWidgets", {
     const widgets = this._userProfile.widgets;
     let found;
     if (widgets != null) {
-      found = widgets.filter(require(7368) /* items */.isGameWidget);
+      found = widgets.filter(require(7377) /* items */.isGameWidget);
     }
     return found;
   },

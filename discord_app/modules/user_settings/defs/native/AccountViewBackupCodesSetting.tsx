@@ -1,10 +1,10 @@
-// === Module 14401: route ===
+// === Module 14624: route ===
 
-// Module 14401 (route)
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 14624 (route)
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import closure_3 from "noop" /* 19 */;
-import ME from "ME" /* 676 */;
-import createToggle from "createToggle" /* 11068 */;
+import ME from "ME" /* 673 */;
+import createToggle from "createToggle" /* 11288 */;
 
 require = arg1;
 ({ NOOP_NULL: c4, UserSettingsSections } = ME);
@@ -57,14 +57,14 @@ createToggle = {
         confirmColor: null,
         useKeyboardAwareWrapper: true
       };
-      let intl = callback(1236).intl;
-      obj[2] = intl.string(callback(1236).t.PsQmzU);
-      let intl2 = callback(1236).intl;
-      obj[3] = intl2.string(callback(1236).t["CIGa+7"]);
-      let intl3 = callback(1236).intl;
-      obj[5] = intl3.string(callback(1236).t.PDTjLN);
-      obj[6] = callback(1297).ButtonColors.BRAND;
-      callback2(14402)(obj);
+      let intl = callback(1233).intl;
+      obj[2] = intl.string(callback(1233).t.PsQmzU);
+      let intl2 = callback(1233).intl;
+      obj[3] = intl2.string(callback(1233).t["CIGa+7"]);
+      let intl3 = callback(1233).intl;
+      obj[5] = intl3.string(callback(1233).t.PDTjLN);
+      obj[6] = callback(1296).ButtonColors.BRAND;
+      callback2(14625)(obj);
       return false;
     }, []);
   },
@@ -73,7 +73,7 @@ createToggle = {
 createToggle = {
   route: UserSettingsSections.ACCOUNT_CONFIRM_VIEW_BACKUP_CODES,
   getComponent() {
-    return require(14334) /* CodeRow */.default;
+    return require(14557) /* CodeRow */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

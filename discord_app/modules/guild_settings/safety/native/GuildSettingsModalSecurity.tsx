@@ -1,14 +1,14 @@
-// === Module 17186: GuildSettingsModalSecurity ===
+// === Module 17422: GuildSettingsModalSecurity ===
 
-// Module 17186 (GuildSettingsModalSecurity)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 17422 (GuildSettingsModalSecurity)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { isGuildOwnerWithRequiredMfaLevel as closure_6 } from "GuildNSFWContentLevel" /* 1430 */;
-import closure_7 from "createGuildRecordFromRust" /* 1909 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import closure_9 from "handleFormInit" /* 9729 */;
-import ME from "ME" /* 676 */;
+import { isGuildOwnerWithRequiredMfaLevel as closure_6 } from "GuildNSFWContentLevel" /* 1429 */;
+import closure_7 from "createGuildRecordFromRust" /* 1908 */;
+import closure_8 from "mergeGuildAvatar" /* 1921 */;
+import closure_9 from "handleFormInit" /* 9751 */;
+import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -31,10 +31,10 @@ export default function GuildSettingsModalSecurity(guildId) {
   let stateFromStores;
   dependencyMap = undefined;
   const tmp = callback3();
-  let obj = guildId(589);
+  let obj = guildId(586);
   const items = [closure_7];
   stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getGuild(guildId));
-  obj1 = guildId(589);
+  obj1 = guildId(586);
   const items1 = [closure_9];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => props.getProps().mfaLevel);
   currentUser = currentUser.getCurrentUser();
@@ -69,13 +69,13 @@ export default function GuildSettingsModalSecurity(guildId) {
     }
   }, items2);
   obj1 = { style: tmp.label, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
-  const intl = tmp2(1236).intl;
-  obj1[3] = intl.string(guildId(1236).t.Wi9LEV);
+  const intl = tmp2(1233).intl;
+  obj1[3] = intl.string(guildId(1233).t.Wi9LEV);
   const items4 = [callback2(guildId(4474).Text, obj1), , ];
   const obj2 = { style: tmp.button, children: null };
-  const intl2 = tmp2(1236).intl;
+  const intl2 = tmp2(1233).intl;
   const string = intl2.string;
-  const t = tmp2(1236).t;
+  const t = tmp2(1233).t;
   if (stateFromStores1 === constants2.ELEVATED) {
     let stringResult = string(t["MP0Ho+"]);
   } else {
@@ -98,8 +98,8 @@ export default function GuildSettingsModalSecurity(guildId) {
   let tmp17Result = null;
   if (hasItem) {
     const obj4 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
-    const intl3 = tmp2(1236).intl;
-    obj4[2] = intl3.string(tmp2(1236).t["KG1V/E"]);
+    const intl3 = tmp2(1233).intl;
+    obj4[2] = intl3.string(tmp2(1233).t["KG1V/E"]);
     tmp17Result = tmp17(tmp2(4474).Text, obj4);
   }
   const obj5 = { children: null };
@@ -107,17 +107,17 @@ export default function GuildSettingsModalSecurity(guildId) {
   obj[1] = items4;
   const items5 = [closure_13(closure_4, obj), ];
   const obj6 = { style: tmp.center, children: null };
-  const items6 = [callback2(closure_5, { source: stateFromStores(14398), style: tmp.image, resizeMode: "contain" }), ];
+  const items6 = [callback2(closure_5, { source: stateFromStores(14621), style: tmp.image, resizeMode: "contain" }), ];
   const obj8 = { style: tmp.infoWrapper, children: null };
   const obj9 = { variant: "text-sm/medium", color: "text-muted", children: null };
-  const intl4 = tmp2(1236).intl;
-  obj9[2] = intl4.format(guildId(1236).t["FK0+iX"], {});
+  const intl4 = tmp2(1233).intl;
+  obj9[2] = intl4.format(guildId(1233).t["FK0+iX"], {});
   obj8[1] = callback2(guildId(4474).Text, obj9);
   items6[1] = callback2(closure_4, obj8);
   obj6[1] = items6;
   items5[1] = closure_13(closure_4, obj6);
   obj[1] = items5;
-  const items7 = [closure_13(closure_4, obj), callback2(guildId(5939).NavScrim, {})];
+  const items7 = [closure_13(closure_4, obj), callback2(guildId(5947).NavScrim, {})];
   obj5[0] = items7;
   return closure_13(closure_14, obj5);
 };

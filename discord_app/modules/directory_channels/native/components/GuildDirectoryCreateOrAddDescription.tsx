@@ -1,8 +1,8 @@
-// === Module 11886: GuildDirectoryCreateOrAddDescription ===
+// === Module 12109: GuildDirectoryCreateOrAddDescription ===
 
-// Module 11886 (GuildDirectoryCreateOrAddDescription)
+// Module 12109 (GuildDirectoryCreateOrAddDescription)
 import noopAll from "noop" /* 19 */;
-import GuildDirectoryEditDescriptionTemplateDefault from "GuildDirectoryEditDescriptionTemplate" /* 11884 */;
+import GuildDirectoryEditDescriptionTemplateDefault from "GuildDirectoryEditDescriptionTemplate" /* 12107 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -130,12 +130,12 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
   obj = { style: tmp.container, keyboardShouldPersistTaps: "handled", children: null };
   obj = { style: tmp.header, children: null };
   obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = directoryChannelId(1236).intl;
-  obj1[4] = intl.string(directoryChannelId(1236).t["5bQcoa"]);
+  const intl = directoryChannelId(1233).intl;
+  obj1[4] = intl.string(directoryChannelId(1233).t["5bQcoa"]);
   const items = [callback(directoryChannelId(4474).Text, obj1), ];
   let obj2 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = directoryChannelId(1236).intl;
-  obj2[3] = intl2.string(directoryChannelId(1236).t.Ie60Wc);
+  const intl2 = directoryChannelId(1233).intl;
+  obj2[3] = intl2.string(directoryChannelId(1233).t.Ie60Wc);
   items[1] = callback(directoryChannelId(4474).Text, obj2);
   obj[1] = items;
   const items1 = [callback2(_onSubmit, obj), ];
@@ -153,11 +153,11 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
     buttonLabel: null,
     directoryChannelId: null
   };
-  const intl3 = directoryChannelId(1236).intl;
-  obj3[1] = intl3.string(directoryChannelId(1236).t.H9jxS1);
+  const intl3 = directoryChannelId(1233).intl;
+  obj3[1] = intl3.string(directoryChannelId(1233).t.H9jxS1);
   obj3[2] = directoryChannelId;
   items1[1] = callback(GuildDirectoryEditDescriptionTemplateDefault, obj3);
   obj[2] = items1;
   obj[0] = callback2(closure_5, obj);
-  return callback(directoryChannelId(11876).GuildDirectoryAddModalScreen, obj);
+  return callback(directoryChannelId(12099).GuildDirectoryAddModalScreen, obj);
 };

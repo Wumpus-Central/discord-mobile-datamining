@@ -1,6 +1,6 @@
-// === Module 12080: orderPowerupListings ===
+// === Module 12304: orderPowerupListings ===
 
-// Module 12080 (orderPowerupListings)
+// Module 12304 (orderPowerupListings)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "calculateAppliedBoosts" /* 4364 */;
@@ -144,7 +144,7 @@ export const useBuildGuildPowerupsSections = function useBuildGuildPowerupsSecti
   const _require = guildId;
   dependencyMap = gameServerEnabled;
   const items = [closure_4];
-  const stateFromStores = _require(589).useStateFromStores(items, () => closure_1_4.getStateForGuild(closure_0));
+  const stateFromStores = _require(586).useStateFromStores(items, () => closure_1_4.getStateForGuild(closure_0));
   let powerupCatalog;
   if (stateFromStores != null) {
     powerupCatalog = stateFromStores.powerupCatalog;

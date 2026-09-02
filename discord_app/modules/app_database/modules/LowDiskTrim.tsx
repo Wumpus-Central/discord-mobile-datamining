@@ -1,7 +1,7 @@
-// === Module 7400: handlePostConnectionOpen ===
+// === Module 7409: handlePostConnectionOpen ===
 
-// Module 7400 (handlePostConnectionOpen)
-import importDefaultResult from "result" /* 7224 */;
+// Module 7409 (handlePostConnectionOpen)
+import importDefaultResult from "result" /* 7233 */;
 
 let obj = importDefault;
 class LowDiskTrim {
@@ -31,7 +31,7 @@ prototype["handleFileSystemStoreChanged"] = function handleFileSystemStoreChange
     tmp = self.isLowDisk !== isLowDisk;
   }
   if (tmp) {
-    obj = obj(1956);
+    obj = obj(1955);
     const databaseResult = obj.database();
     if (databaseResult != null) {
       databaseResult.incrementalVacuum();

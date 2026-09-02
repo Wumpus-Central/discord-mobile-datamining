@@ -1,8 +1,8 @@
-// === Module 11245: useShouldHideMediaOptions ===
+// === Module 11468: useShouldHideMediaOptions ===
 
-// Module 11245 (useShouldHideMediaOptions)
-import closure_2 from "ensureGuildLoaded" /* 1387 */;
-import { ChannelFlags } from "set" /* 1394 */;
+// Module 11468 (useShouldHideMediaOptions)
+import closure_2 from "ensureGuildLoaded" /* 1386 */;
+import { ChannelFlags } from "set" /* 1393 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/media_channel/useShouldHideMediaOptions.tsx");
@@ -10,7 +10,7 @@ const result = require("set").fileFinishedImporting("modules/media_channel/useSh
 export default function useShouldHideMediaOptions(arg0) {
   const _require = arg0;
   const items = [closure_2];
-  const stateFromStores = _require(647).useStateFromStores(items, () => {
+  const stateFromStores = _require(644).useStateFromStores(items, () => {
     const channel = closure_1_2.getChannel(closure_0);
     let parent_id;
     if (channel != null) {

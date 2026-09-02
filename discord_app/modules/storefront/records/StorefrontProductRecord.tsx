@@ -1,7 +1,7 @@
-// === Module 7308: fromServer ===
+// === Module 7317: fromServer ===
 
-// Module 7308 (fromServer)
-import closure_0 from "fromServer" /* 7307 */;
+// Module 7317 (fromServer)
+import closure_0 from "fromServer" /* 7316 */;
 import closure_1 from "createFromServer" /* 4521 */;
 
 let prototype;

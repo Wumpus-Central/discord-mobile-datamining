@@ -1,19 +1,19 @@
-// === Module 15486: SettingsEmoji ===
+// === Module 15716: SettingsEmoji ===
 
-// Module 15486 (SettingsEmoji)
+// Module 15716 (SettingsEmoji)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1431 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import EmojiDefault from "Emoji" /* 5585 */;
-import getFallbackDoubleTapDisambiguatedEmoji from "getFallbackDoubleTapDisambiguatedEmoji" /* 7877 */;
+import EmojiDefault from "Emoji" /* 5593 */;
+import getFallbackDoubleTapDisambiguatedEmoji from "getFallbackDoubleTapDisambiguatedEmoji" /* 7886 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { EmojiIntention } from "set" /* 1925 */;
+import { AnalyticEvents } from "ME" /* 673 */;
+import { EmojiIntention } from "set" /* 1924 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
-import createToggle from "createToggle" /* 11068 */;
+import createToggle from "createToggle" /* 11288 */;
 
 require = arg1;
 function SettingsEmoji(emoji) {
@@ -70,7 +70,7 @@ const pressable = createToggle.createPressable({
     }
   },
   onPress: function onPressSetting() {
-    let obj = _require(9098);
+    let obj = _require(9112);
     obj = { pickerIntention: EmojiIntention.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };
     _require = callback((arg0) => {
       closure_0 = arg0;
@@ -209,7 +209,7 @@ let obj1 = {
     }
   },
   onPress: function onPressSetting() {
-    let obj = _require(9098);
+    let obj = _require(9112);
     obj = { pickerIntention: EmojiIntention.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };
     _require = callback((arg0) => {
       closure_0 = arg0;

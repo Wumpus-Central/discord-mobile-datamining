@@ -1,6 +1,6 @@
-// === Module 17184: set ===
+// === Module 17420: set ===
 
-// Module 17184 (set)
+// Module 17420 (set)
 import set from "set" /* 2 */;
 
 const obj = { SYNCABLE: null };

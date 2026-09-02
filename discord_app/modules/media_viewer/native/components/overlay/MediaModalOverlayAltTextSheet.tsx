@@ -1,13 +1,13 @@
-// === Module 11135: MediaViewerAltTextSheet ===
+// === Module 11356: MediaViewerAltTextSheet ===
 
-// Module 11135 (MediaViewerAltTextSheet)
+// Module 11356 (MediaViewerAltTextSheet)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Text from "Text" /* 4474 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5621 */;
-import Background from "Background" /* 5622 */;
-import useMessagePreviewHeightStore from "useMessagePreviewHeightStore" /* 11136 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5629 */;
+import Background from "Background" /* 5630 */;
+import useMessagePreviewHeightStore from "useMessagePreviewHeightStore" /* 11357 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -29,7 +29,7 @@ export default function MediaViewerAltTextSheet(children) {
   }
   obj = { header: null, contentStyles: null, children: null };
   obj = { title: null };
-  const intl = tmp2(1236).intl;
+  const intl = tmp2(1233).intl;
   obj[0] = intl.string(getSystemLocale.t.J3IOO1);
   obj[0] = jsx(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, { title: null });
   const items = [tmp.container, { minHeight: num }];

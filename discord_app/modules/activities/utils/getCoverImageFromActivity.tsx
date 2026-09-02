@@ -1,9 +1,9 @@
-// === Module 12900: getCoverImageFromActivity ===
+// === Module 13122: getCoverImageFromActivity ===
 
-// Module 12900 (getCoverImageFromActivity)
+// Module 13122 (getCoverImageFromActivity)
 import set from "set" /* 2 */;
 import items3 from "items3" /* 4506 */;
-import updateAssets from "updateAssets" /* 8049 */;
+import updateAssets from "updateAssets" /* 8057 */;
 
 let closure_2 = items3.ACTIVITY_INVITE_COVER_IMAGE_SIZE;
 const result = set.fileFinishedImporting("modules/activities/utils/getCoverImageFromActivity.tsx");

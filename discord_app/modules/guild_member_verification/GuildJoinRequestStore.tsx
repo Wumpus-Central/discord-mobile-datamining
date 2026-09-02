@@ -1,13 +1,13 @@
-// === Module 7202: updateSubmittedGuildJoinRequestTotal ===
+// === Module 7211: updateSubmittedGuildJoinRequestTotal ===
 
-// Module 7202 (updateSubmittedGuildJoinRequestTotal)
-import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import hooksDefault from "hooks" /* 4075 */;
+// Module 7211 (updateSubmittedGuildJoinRequestTotal)
+import initializeDefault from "initialize" /* 586 */;
+import setDefault from "set" /* 684 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import hooksDefault from "hooks" /* 4074 */;
 import isActionedApplicationStatus from "isActionedApplicationStatus" /* 4301 */;
 import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4302 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "mergeGuildAvatar" /* 1921 */;
 import { joinRequestFromServer } from "handleGatewayJoinRequestUpdate" /* 4300 */;
 
 require = arg1;

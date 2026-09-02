@@ -1,7 +1,7 @@
-// === Module 5154: create ===
+// === Module 5162: create ===
 
-// Module 5154 (create)
-import decodeImageDefault from "decodeImage" /* 1953 */;
+// Module 5162 (create)
+import decodeImageDefault from "decodeImage" /* 1952 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;

@@ -1,9 +1,9 @@
-// === Module 15605: trackTabPressed ===
+// === Module 15836: trackTabPressed ===
 
-// Module 15605 (trackTabPressed)
+// Module 15836 (trackTabPressed)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "noop" /* 19 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import { AnalyticEvents } from "ME" /* 673 */;
 
 const require = arg1;
 let closure_5 = new timestampDefault("TabsPerformanceTracker");

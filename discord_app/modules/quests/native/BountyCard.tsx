@@ -1,15 +1,15 @@
-// === Module 14670: CARD_WIDTH ===
+// === Module 14896: CARD_WIDTH ===
 
-// Module 14670 (CARD_WIDTH)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 14896 (CARD_WIDTH)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_9 from "set" /* 7447 */;
+import closure_9 from "set" /* 7457 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
-import PlatformTypes from "PlatformTypes" /* 501 */;
+import PlatformTypes from "PlatformTypes" /* 1235 */;
 
 const require = arg1;
 let c4 = importAllResult;
@@ -279,13 +279,8 @@ const memoResult = importAllResult.memo((bounty) => {
   const items9 = [c11(bounty(isActive[12]).Card, obj2), ];
   const obj11 = { style: tmp.cardFooter, children: null };
   const obj12 = { style: tmp.advertiserRow, children: null };
-  const obj13 = { variant: "text-sm/medium", color: "text-subtle", lineClamp: 1, style: tmp.advertiserName, children: null };
-  let str = bounty.advertiserName;
-  if (str == null) {
-    str = "";
-  }
-  obj13[4] = str;
-  const items10 = [c10(bounty(isActive[16]).Text, obj13), ];
+  const items10 = [c10(bounty(isActive[16]).Text, { variant: "text-sm/medium", color: "text-subtle", lineClamp: 1, style: tmp.advertiserName, children: bounty.advertiserName }), ];
+  const obj13 = { variant: "text-sm/medium", color: "text-subtle", lineClamp: 1, style: tmp.advertiserName, children: bounty.advertiserName };
   const tmp10Result = tmp10(obj1.useState("active" === currentState.currentState), 2);
   items10[1] = c10(bounty(isActive[19]).CircleCheckIcon, { size: "xxs", style: tmp.advertiserIcon, color: index(isActive[7]).colors.ICON_SUBTLE });
   obj12[1] = items10;

@@ -1,10 +1,10 @@
-// === Module 5361: useStageHasMedia ===
+// === Module 5369: useStageHasMedia ===
 
-// Module 5361 (useStageHasMedia)
-import sortKey from "sortKey" /* 5368 */;
-import closure_2 from "createGuildRecordFromRust" /* 1909 */;
+// Module 5369 (useStageHasMedia)
+import sortKey from "sortKey" /* 5376 */;
+import closure_2 from "createGuildRecordFromRust" /* 1908 */;
 import closure_3 from "updateVoiceState" /* 4497 */;
-import closure_4 from "getActiveStageChannelIds" /* 5362 */;
+import closure_4 from "getActiveStageChannelIds" /* 5370 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/stage_channels/StageMediaHooks.tsx");
@@ -13,21 +13,21 @@ export const useStageHasMedia = function useStageHasMedia(id) {
   const _require = id;
   const items = [closure_4];
   const items1 = [id];
-  const stateFromStores = _require(589).useStateFromStores(items, () => {
+  const stateFromStores = _require(586).useStateFromStores(items, () => {
     const mutableParticipants = closure_1_4.getMutableParticipants(id, id(closure_1_1[4]).StageChannelParticipantNamedIndex.SPEAKER);
     return null != mutableParticipants.find((type) => type.type === callback(table[4]).StageChannelParticipantTypes.STREAM);
   }, items1);
-  const obj = _require(589);
+  const obj = _require(586);
   const items2 = [closure_3];
   const items3 = [id];
-  const obj2 = _require(589);
-  return _require(589).useStateFromStores(items2, () => closure_1_3.hasVideo(closure_0), items3) || stateFromStores;
+  const obj2 = _require(586);
+  return _require(586).useStateFromStores(items2, () => closure_1_3.hasVideo(closure_0), items3) || stateFromStores;
 };
 export const useStageHasStream = function useStageHasStream(id) {
   const _require = id;
   const items = [closure_4];
   const items1 = [id];
-  return _require(589).useStateFromStores(items, () => {
+  return _require(586).useStateFromStores(items, () => {
     const mutableParticipants = closure_1_4.getMutableParticipants(id, id(closure_1_1[4]).StageChannelParticipantNamedIndex.SPEAKER);
     return null != mutableParticipants.find((type) => type.type === callback(table[4]).StageChannelParticipantTypes.STREAM);
   }, items1);
@@ -47,7 +47,7 @@ export const getStageHasStream = function getStageHasStream(closure_0) {
 export const useIsStageVideoEnabled = function useIsStageVideoEnabled(arg0) {
   const _require = arg0;
   const items = [closure_2];
-  const stateFromStores = _require(589).useStateFromStores(items, () => closure_1_2.getGuild(closure_0));
+  const stateFromStores = _require(586).useStateFromStores(items, () => closure_1_2.getGuild(closure_0));
   let tmp2 = null != stateFromStores;
   if (tmp2) {
     let num;

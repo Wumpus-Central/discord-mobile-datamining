@@ -1,9 +1,9 @@
-// === Module 1623: DRAG_HANDLE ===
+// === Module 1622: DRAG_HANDLE ===
 
-// Module 1623 (DRAG_HANDLE)
+// Module 1622 (DRAG_HANDLE)
 import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
-import isMetaQuest from "isMetaQuest" /* 1624 */;
+import ThemesDefault from "Themes" /* 709 */;
+import isMetaQuest from "isMetaQuest" /* 1623 */;
 
 if (isMetaQuest.isMetaQuest()) {
   let obj = { slotHeight: 24, barColor: null, barWidth: null, barHeight: null, barMarginTop: null };

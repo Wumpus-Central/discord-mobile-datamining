@@ -1,10 +1,10 @@
-// === Module 7232: fromMessage ===
+// === Module 7241: fromMessage ===
 
-// Module 7232 (fromMessage)
+// Module 7241 (fromMessage)
 import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "trackCommunicationDisabled" /* 1992 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
+import closure_1 from "trackCommunicationDisabled" /* 1991 */;
+import closure_2 from "mergeGuildAvatar" /* 1921 */;
+import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 673 */;
 
 let prototype;
 prototype = function KvMessage() {

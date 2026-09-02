@@ -1,9 +1,9 @@
-// === Module 17479: ? ===
+// === Module 17715: ? ===
 
-// Module 17479
+// Module 17715
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import setDefault from "set" /* 4857 */;
 
 const NativeModules = get_ActivityIndicator.NativeModules;

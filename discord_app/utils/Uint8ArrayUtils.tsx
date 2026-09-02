@@ -1,6 +1,6 @@
-// === Module 1372: hasBit ===
+// === Module 1371: hasBit ===
 
-// Module 1372 (hasBit)
+// Module 1371 (hasBit)
 import set from "set" /* 2 */;
 
 let result = set.fileFinishedImporting("utils/Uint8ArrayUtils.tsx");

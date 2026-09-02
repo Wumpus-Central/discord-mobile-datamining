@@ -1,22 +1,22 @@
-// === Module 15326: getSelectedGuildChannel ===
+// === Module 15554: getSelectedGuildChannel ===
 
-// Module 15326 (getSelectedGuildChannel)
+// Module 15554 (getSelectedGuildChannel)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import ThemesDefault from "Themes" /* 712 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
+import ThemesDefault from "Themes" /* 709 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import dispatcherDefault from "dispatcher" /* 4194 */;
-import StickerFormat from "StickerFormat" /* 5212 */;
-import isReactionMilestoneNotification from "isReactionMilestoneNotification" /* 10177 */;
+import StickerFormat from "StickerFormat" /* 5220 */;
+import isReactionMilestoneNotification from "isReactionMilestoneNotification" /* 10199 */;
 import closure_3 from "noop" /* 19 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "loadSavedGuildStickers" /* 5444 */;
-import { createChannelRecord } from "createChannelRecord" /* 1391 */;
+import closure_5 from "loadSavedGuildStickers" /* 5452 */;
+import { createChannelRecord } from "createChannelRecord" /* 1390 */;
 import closure_7 from "hasFlag" /* 4131 */;
-import closure_8 from "ensureGuildLoaded" /* 1387 */;
-import closure_9 from "createGuildRecordFromRust" /* 1909 */;
-import closure_10 from "handleConnectionOpen" /* 1981 */;
-import closure_11 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import closure_8 from "ensureGuildLoaded" /* 1386 */;
+import closure_9 from "createGuildRecordFromRust" /* 1908 */;
+import closure_10 from "handleConnectionOpen" /* 1980 */;
+import closure_11 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -643,7 +643,7 @@ export default function DevToolsInAppNotificationTestingScreen() {
   items = [tmp.content, { paddingBottom: tmp.content.padding + useSafeAreaInsetsDefault().bottom }];
   obj = { size: ThemesDefault.space.PX_16 };
   items1 = [
-    callback(_require(1297).Spacer, obj),
+    callback(_require(1296).Spacer, obj),
     closure_25.map((title) => {
       let obj = { children: null };
       obj = {
@@ -688,7 +688,7 @@ export default function DevToolsInAppNotificationTestingScreen() {
       }, label.label);
     })
   };
-  items1[2] = callback(_require(5992).TableRowGroup, obj);
+  items1[2] = callback(_require(6000).TableRowGroup, obj);
   obj[2] = items1;
   return callback2(ScrollView, obj);
 };

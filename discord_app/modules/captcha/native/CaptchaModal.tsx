@@ -1,17 +1,17 @@
-// === Module 16865: CaptchaModal ===
+// === Module 17101: CaptchaModal ===
 
-// Module 16865 (CaptchaModal)
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1500 */;
+// Module 17101 (CaptchaModal)
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1499 */;
 import Text from "Text" /* 4474 */;
 import Stack from "Stack" /* 4926 */;
 import Button from "Button" /* 4928 */;
-import Background from "Background" /* 5622 */;
-import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 6256 */;
+import Background from "Background" /* 5630 */;
+import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 6265 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { doesRegistrationHaveIdentityType as closure_6 } from "useRegistrationUIStore" /* 15537 */;
-import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15538 */;
+import { doesRegistrationHaveIdentityType as closure_6 } from "useRegistrationUIStore" /* 15768 */;
+import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15769 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -33,7 +33,7 @@ export default function CaptchaModal(arg0) {
   ({ close: dependencyMap, sitekey: closure_3, captchaService: closure_4, headerText, bodyText, rqdata: closure_5, rqtoken: closure_6, userflow: closure_7 } = arg0);
   let navigation;
   let callback;
-  const tmp2 = callback2(onReject(7717)());
+  const tmp2 = callback2(onReject(7726)());
   let obj = createStandardNavigationFactories;
   navigation = obj.useNavigation();
   const items = [navigation];
@@ -55,21 +55,21 @@ export default function CaptchaModal(arg0) {
     }
     return str;
   }, items);
-  callback = onReject(16866)({ onReject, analyticsType: memo });
+  callback = onReject(17102)({ onReject, analyticsType: memo });
   const effect = React.useEffect(() => {
     closure_4.dismiss();
   }, []);
   obj = { style: tmp2.contentContainer, spacing: 12, children: null };
   const items1 = [callback(AccountAgeTier10LargeBadge.DisguiseSpotIllustration, { scale: 0.5 }), , ];
   if (headerText == null) {
-    const intl = tmp3(1236).intl;
-    headerText = intl.string(tmp3(1236).t.FpoiHe);
+    const intl = tmp3(1233).intl;
+    headerText = intl.string(tmp3(1233).t.FpoiHe);
   }
   const items2 = [callback(Text.Text, { variant: "heading-xl/bold", accessibilityRole: "header", children: headerText }), ];
   obj = { variant: "text-md/medium", color: "text-subtle", style: tmp2.description, children: null };
   if (bodyText == null) {
-    const intl2 = tmp3(1236).intl;
-    bodyText = intl2.string(tmp3(1236).t["/CidxO"]);
+    const intl2 = tmp3(1233).intl;
+    bodyText = intl2.string(tmp3(1233).t["/CidxO"]);
   }
   obj1 = { startHeight: 900, startExpanded: true, children: null };
   let obj2 = { children: null };
@@ -135,7 +135,7 @@ export default function CaptchaModal(arg0) {
     },
     text: null
   };
-  const intl3 = tmp3(1236).intl;
+  const intl3 = tmp3(1233).intl;
   obj3[2] = intl3.string(getSystemLocale.t["cY+Oob"]);
   items1[2] = callback(Button.Button, obj3);
   obj[2] = items1;

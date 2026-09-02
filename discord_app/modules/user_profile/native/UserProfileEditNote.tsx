@@ -1,10 +1,10 @@
-// === Module 12489: UserProfileEditNote ===
+// === Module 12713: UserProfileEditNote ===
 
-// Module 12489 (UserProfileEditNote)
+// Module 12713 (UserProfileEditNote)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import { NOTE_MAX_LENGTH } from "ME" /* 676 */;
+import { NOTE_MAX_LENGTH } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

@@ -1,10 +1,10 @@
-// === Module 15743: FolderPlusIcon ===
+// === Module 15974: FolderPlusIcon ===
 
-// Module 15743 (FolderPlusIcon)
+// Module 15974 (FolderPlusIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 15356 */;
+import registerAsset from "registerAsset" /* 15584 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

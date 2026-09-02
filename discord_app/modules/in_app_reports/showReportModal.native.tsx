@@ -1,6 +1,6 @@
-// === Module 8758: _showReportModal ===
+// === Module 8773: _showReportModal ===
 
-// Module 8758 (_showReportModal)
+// Module 8773 (_showReportModal)
 import _modDef4723 from "module_4723" /* 4723 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 
@@ -52,7 +52,7 @@ function _showReportModal() {
               closure_4 = undefined;
               c6 = 1;
               c7 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {

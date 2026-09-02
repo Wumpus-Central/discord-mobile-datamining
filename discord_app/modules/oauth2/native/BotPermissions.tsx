@@ -1,7 +1,7 @@
-// === Module 9366: BotPermissions ===
+// === Module 9379: BotPermissions ===
 
-// Module 9366 (BotPermissions)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 9379 (BotPermissions)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

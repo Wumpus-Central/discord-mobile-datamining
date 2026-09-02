@@ -1,15 +1,15 @@
-// === Module 10521: GiftingBadgeInfoActionSheet ===
+// === Module 10742: GiftingBadgeInfoActionSheet ===
 
-// Module 10521 (GiftingBadgeInfoActionSheet)
-import ThemesDefault from "Themes" /* 712 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import messagesProxyDefault from "messagesProxy" /* 2465 */;
+// Module 10742 (GiftingBadgeInfoActionSheet)
+import ThemesDefault from "Themes" /* 709 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
+import messagesProxyDefault from "messagesProxy" /* 2464 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_6 from "initialize" /* 8560 */;
-import { getSingleRequirementThreshold as closure_7 } from "initialize" /* 8560 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import closure_6 from "initialize" /* 8573 */;
+import { getSingleRequirementThreshold as closure_7 } from "initialize" /* 8573 */;
+import { AnalyticEvents } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -36,14 +36,14 @@ const result = require("set").fileFinishedImporting("modules/premium/gifting/nat
 export default function GiftingBadgeInfoActionSheet() {
   const tmp = callback3();
   const _require = tmp;
-  let obj = _require(589);
+  let obj = _require(586);
   let items = [closure_6];
-  const stateFromStores = obj.useStateFromStores(items, () => badgeById.getBadgeById(lib(8557).BadgeId.GIFTING));
-  obj1 = _require(589);
+  const stateFromStores = obj.useStateFromStores(items, () => badgeById.getBadgeById(lib(8570).BadgeId.GIFTING));
+  obj1 = _require(586);
   const items1 = [closure_5];
   importDefault = obj1.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
   const effect = React.useEffect(() => {
-    callback(698).track(constants.GIFTING_BADGE_INFO_ACTION_SHEET_OPENED);
+    callback(695).track(constants.GIFTING_BADGE_INFO_ACTION_SHEET_OPENED);
   }, []);
   obj = { style: null, children: null };
   const items2 = [tmp.container, ];
@@ -52,11 +52,11 @@ export default function GiftingBadgeInfoActionSheet() {
   obj[0] = items2;
   obj1 = { style: tmp.headerContainer, children: null };
   let obj2 = { style: tmp.title, variant: "heading-xl/semibold", color: "text-strong", accessibilityRole: "header", children: null };
-  let intl = _require(1236).intl;
+  let intl = _require(1233).intl;
   obj2[4] = intl.string(messagesProxyDefault["0MB2C6"]);
   const items3 = [callback(_require(4474).Text, obj2), ];
   let obj3 = { style: tmp.description, variant: "text-md/medium", color: "text-default", children: null };
-  const intl2 = _require(1236).intl;
+  const intl2 = _require(1233).intl;
   obj3[3] = intl2.string(messagesProxyDefault.k9sNVH);
   items3[1] = callback(_require(4474).Text, obj3);
   obj1[1] = items3;
@@ -114,5 +114,5 @@ export default function GiftingBadgeInfoActionSheet() {
   items4[1] = callback(View, obj4);
   obj[1] = items4;
   obj5[2] = callback2(View, obj);
-  return callback(_require(5622).BottomSheet, obj5);
+  return callback(_require(5630).BottomSheet, obj5);
 };

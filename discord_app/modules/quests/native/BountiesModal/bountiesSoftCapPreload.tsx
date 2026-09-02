@@ -1,6 +1,6 @@
-// === Module 14639: SOFT_CAP_PRELOAD_MAX_BITRATE ===
+// === Module 14864: SOFT_CAP_PRELOAD_MAX_BITRATE ===
 
-// Module 14639 (SOFT_CAP_PRELOAD_MAX_BITRATE)
+// Module 14864 (SOFT_CAP_PRELOAD_MAX_BITRATE)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/quests/native/BountiesModal/bountiesSoftCapPreload.tsx");

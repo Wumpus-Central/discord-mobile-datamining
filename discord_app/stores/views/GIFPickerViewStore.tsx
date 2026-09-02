@@ -1,12 +1,12 @@
-// === Module 10357: getFormatFromUrl ===
+// === Module 10379: getFormatFromUrl ===
 
-// Module 10357 (getFormatFromUrl)
+// Module 10379 (getFormatFromUrl)
 import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import ME from "ME" /* 676 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import create from "create" /* 1341 */;
+import initializeDefault from "initialize" /* 586 */;
+import ME from "ME" /* 673 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import create from "create" /* 1340 */;
 
 function getFormatFromUrl(src) {
   try {

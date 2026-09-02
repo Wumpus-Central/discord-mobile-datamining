@@ -1,22 +1,22 @@
-// === Module 11158: setIndex ===
+// === Module 11379: setIndex ===
 
-// Module 11158 (setIndex)
+// Module 11379 (setIndex)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import transitionTo from "transitionTo" /* 1222 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import hooksDefault from "hooks" /* 4075 */;
-import ack from "ack" /* 5478 */;
-import computeSubtitle from "computeSubtitle" /* 7273 */;
-import _bulkClearRecents from "_bulkClearRecents" /* 11159 */;
+import transitionTo from "transitionTo" /* 1219 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import hooksDefault from "hooks" /* 4074 */;
+import ack from "ack" /* 5486 */;
+import computeSubtitle from "computeSubtitle" /* 7282 */;
+import _bulkClearRecents from "_bulkClearRecents" /* 11380 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1387 */;
-import closure_5 from "setIndex" /* 5479 */;
+import closure_4 from "ensureGuildLoaded" /* 1386 */;
+import closure_5 from "setIndex" /* 5487 */;
 import closure_6 from "generateOldThreadCutoff" /* 4493 */;
 import closure_7 from "markAllUserIdListsStale" /* 4130 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import set from "set" /* 1394 */;
-import { ChannelListGuildActionRow } from "ChannelListGuildActionRow" /* 7279 */;
+import closure_8 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
+import set from "set" /* 1393 */;
+import { ChannelListGuildActionRow } from "ChannelListGuildActionRow" /* 7288 */;
 import { ReadStateTypes } from "ReadStateTypes" /* 4702 */;
 
 require = arg1;
@@ -141,10 +141,10 @@ export const useChannelBrowserSections = function useChannelBrowserSections(guil
   closure_1 = filterCategoriesByQuery;
   dependencyMap = arg2;
   let obj = _require(4298);
-  let result = obj.useIsDismissibleContentDismissed_UNSAFE(_require(1373).DismissibleContent.CHANNEL_BROWSER_NUX);
+  let result = obj.useIsDismissibleContentDismissed_UNSAFE(_require(1372).DismissibleContent.CHANNEL_BROWSER_NUX);
   const items = [closure_4];
   const items1 = [guildId];
-  closure_3 = _require(589).useStateFromStoresObject(items, () => {
+  closure_3 = _require(586).useStateFromStoresObject(items, () => {
     const obj = {};
     const mutableGuildChannelsForGuild = closure_1_4.getMutableGuildChannelsForGuild(closure_0);
     for (const key10009 in mutableGuildChannelsForGuild) {
@@ -192,7 +192,7 @@ export const useChannelBrowserSections = function useChannelBrowserSections(guil
 export const useChannelBrowserChannelCount = function useChannelBrowserChannelCount(arg0) {
   const _require = arg0;
   const items = [closure_5];
-  const stateFromStores = _require(589).useStateFromStores(items, () => closure_1_5.getCategories(closure_0));
+  const stateFromStores = _require(586).useStateFromStores(items, () => closure_1_5.getCategories(closure_0));
   let sum = stateFromStores._categories[stateFromStores._categories.length - 1];
   if (null == sum) {
     return 0;

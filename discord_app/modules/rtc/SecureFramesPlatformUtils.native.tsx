@@ -1,16 +1,16 @@
-// === Module 9843: ? ===
+// === Module 9865: ? ===
 
-// Module 9843
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2009 */;
+// Module 9865
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2008 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4445 */;
 import _modDef4723 from "module_4723" /* 4723 */;
 import _modDef4858 from "module_4858" /* 4858 */;
-import _safeTransitionToDefault from "_safeTransitionTo" /* 6091 */;
-import closure_3 from "ensureGuildLoaded" /* 1387 */;
+import _safeTransitionToDefault from "_safeTransitionTo" /* 6099 */;
+import closure_3 from "ensureGuildLoaded" /* 1386 */;
 import closure_4 from "createRTCConnection" /* 4554 */;
-import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9841 */;
-import ME from "ME" /* 676 */;
+import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9863 */;
+import ME from "ME" /* 673 */;
 
 require = arg1;
 ({ SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY: c5, SECURE_FRAMES_STREAM_VERIFICATION_BOTTOM_SHEET_KEY: closure_6, SECURE_FRAMES_USER_VERIFICATION_MODAL_KEY: error } = SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY);
@@ -21,7 +21,7 @@ export default {
   openSecureFramesStreamVerification(streamKey, channelId) {
     let obj = ACTION_SHEET_HEIGHT_HALFDefault;
     obj = { streamKey, channelId };
-    obj.openLazy(asyncRequireImpl(9855, dependencyMap.paths), closure_6, obj);
+    obj.openLazy(asyncRequireImpl(9877, dependencyMap.paths), closure_6, obj);
   },
   openSecureFramesUserVerificationModal(id, id2, arg2) {
     if (arg2()) {
@@ -29,22 +29,22 @@ export default {
       obj = { userId: null, channelId: null };
       obj[0] = id;
       obj[1] = id2;
-      obj.pushLazy(asyncRequireImpl(9844, dependencyMap.paths), obj, closure_7);
+      obj.pushLazy(asyncRequireImpl(9866, dependencyMap.paths), obj, closure_7);
     }
   },
   openSecureFramesUpdateConfirmation(confirmText) {
     confirmText = confirmText.confirmText;
     ({ title, subtitle } = confirmText);
     if (confirmText === undefined) {
-      const intl = onConfirm(1236).intl;
-      confirmText = intl.string(onConfirm(1236).t["cY+Oob"]);
+      const intl = onConfirm(1233).intl;
+      confirmText = intl.string(onConfirm(1233).t["cY+Oob"]);
     }
     onConfirm = confirmText.onConfirm;
     let obj = _modDef4858;
     obj = { title, body: subtitle, confirmText, cancelText: null, confirmColor: null };
-    const intl2 = onConfirm(1236).intl;
-    obj[3] = intl2.string(onConfirm(1236).t["ETE/oC"]);
-    obj[4] = onConfirm(1297).ButtonColors.RED;
+    const intl2 = onConfirm(1233).intl;
+    obj[3] = intl2.string(onConfirm(1233).t["ETE/oC"]);
+    obj[4] = onConfirm(1296).ButtonColors.RED;
     obj.confirm(obj).then((arg0) => {
       if (arg0) {
         onConfirm();
@@ -71,7 +71,7 @@ export default {
         obj[1] = channelId;
         obj[2] = guildId;
         obj[3] = fingerprint;
-        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(9858, dependencyMap.paths), closure_5, obj);
+        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(9880, dependencyMap.paths), closure_5, obj);
         const obj4 = ACTION_SHEET_HEIGHT_HALFDefault;
       }
     }

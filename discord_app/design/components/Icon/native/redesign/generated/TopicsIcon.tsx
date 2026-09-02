@@ -1,10 +1,10 @@
-// === Module 9410: TopicsIcon ===
+// === Module 9423: TopicsIcon ===
 
-// Module 9410 (TopicsIcon)
+// Module 9423 (TopicsIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 9411 */;
+import registerAsset from "registerAsset" /* 9424 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,14 +1,14 @@
-// === Module 15895: Wrapper ===
+// === Module 16126: Wrapper ===
 
-// Module 15895 (Wrapper)
+// Module 16126 (Wrapper)
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "updateGuildUnreadSentinel" /* 7381 */;
-import closure_6 from "createGuildRecordFromRust" /* 1909 */;
-import closure_7 from "insertUnsortedGuilds" /* 5381 */;
+import closure_5 from "updateGuildUnreadSentinel" /* 7390 */;
+import closure_6 from "createGuildRecordFromRust" /* 1908 */;
+import closure_7 from "insertUnsortedGuilds" /* 5389 */;
 import closure_8 from "updateUserGuildSettingsInternal" /* 4701 */;
 import closure_9 from "updateVoiceState" /* 4497 */;
-import { NOOP } from "ME" /* 676 */;
+import { NOOP } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -222,7 +222,7 @@ const result = require("set").fileFinishedImporting("modules/home_drawer/native/
 
 export default function HomeDrawerFolderExpandedChildren(folderId) {
   folderId = folderId.folderId;
-  let obj = folderId(589);
+  let obj = folderId(586);
   const items = [closure_7];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let guildFolderById = null;

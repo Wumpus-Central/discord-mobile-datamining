@@ -1,6 +1,6 @@
-// === Module 9442: getIsInParty ===
+// === Module 9455: getIsInParty ===
 
-// Module 9442 (getIsInParty)
+// Module 9455 (getIsInParty)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/activities/utils/getIsInParty.tsx");

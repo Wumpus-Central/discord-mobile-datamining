@@ -1,12 +1,12 @@
-// === Module 16621: FramePanelController ===
+// === Module 16856: FramePanelController ===
 
-// Module 16621 (FramePanelController)
-import contextDefault from "context" /* 16622 */;
+// Module 16856 (FramePanelController)
+import contextDefault from "context" /* 16857 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "addApplication" /* 4519 */;
-import closure_5 from "map" /* 9464 */;
-import { asLaunched } from "FrameLayoutModes" /* 9465 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 9466 */;
+import closure_5 from "map" /* 9477 */;
+import { asLaunched } from "FrameLayoutModes" /* 9478 */;
+import { ActivityPanelModes } from "ActivityPanelModes" /* 9479 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -14,7 +14,7 @@ const result = require("set").fileFinishedImporting("modules/frames/panel/native
 
 export default function FramePanelController(children) {
   let mainFrameId;
-  let obj = mainFrameId(589);
+  let obj = mainFrameId(586);
   const items = [closure_5, closure_4];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     const tmp = callback(mainFrame.getMainFrame());
@@ -53,5 +53,5 @@ export default function FramePanelController(children) {
     }
   }, items1);
   obj = { context: contextDefault, orientationLockStateForApp, mode, hasConnectedActivity: null != mainFrameId, connectedActivityAppId, currentApp, updateActivityPanelMode: callback, children: children.children };
-  return jsx(mainFrameId(16588).BaseActivityPanelController, { context: contextDefault, orientationLockStateForApp, mode, hasConnectedActivity: null != mainFrameId, connectedActivityAppId, currentApp, updateActivityPanelMode: callback, children: children.children });
+  return jsx(mainFrameId(16823).BaseActivityPanelController, { context: contextDefault, orientationLockStateForApp, mode, hasConnectedActivity: null != mainFrameId, connectedActivityAppId, currentApp, updateActivityPanelMode: callback, children: children.children });
 };

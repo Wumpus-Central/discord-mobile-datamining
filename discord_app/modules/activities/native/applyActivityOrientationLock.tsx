@@ -1,9 +1,9 @@
-// === Module 16590: applyActivityOrientationLock ===
+// === Module 16825: applyActivityOrientationLock ===
 
-// Module 16590 (applyActivityOrientationLock)
+// Module 16825 (applyActivityOrientationLock)
 import set from "set" /* 2 */;
 import items3 from "items3" /* 4506 */;
-import applyOrientationLock from "applyOrientationLock" /* 11356 */;
+import applyOrientationLock from "applyOrientationLock" /* 11579 */;
 
 const OrientationLockState = items3.OrientationLockState;
 let result = set.fileFinishedImporting("modules/activities/native/applyActivityOrientationLock.tsx");

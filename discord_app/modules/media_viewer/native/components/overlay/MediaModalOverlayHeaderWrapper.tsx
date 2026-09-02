@@ -1,9 +1,9 @@
-// === Module 8639: MediaModalOverlayHeaderWrapper ===
+// === Module 8654: MediaModalOverlayHeaderWrapper ===
 
-// Module 8639 (MediaModalOverlayHeaderWrapper)
+// Module 8654 (MediaModalOverlayHeaderWrapper)
 import noopAll from "noop" /* 19 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import NAV_BAR_HEIGHT from "NAV_BAR_HEIGHT" /* 5492 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
+import NAV_BAR_HEIGHT from "NAV_BAR_HEIGHT" /* 5500 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

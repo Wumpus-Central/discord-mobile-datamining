@@ -1,8 +1,8 @@
-// === Module 9414: PlatformTypes ===
+// === Module 9427: PlatformTypes ===
 
-// Module 9414 (PlatformTypes)
-import ME from "ME" /* 676 */;
-import parseProviderRouteHeadlessSessionIdDefault from "parseProviderRouteHeadlessSessionId" /* 9413 */;
+// Module 9427 (PlatformTypes)
+import ME from "ME" /* 673 */;
+import parseProviderRouteHeadlessSessionIdDefault from "parseProviderRouteHeadlessSessionId" /* 9426 */;
 import set from "set" /* 2 */;
 
 const PlatformTypes = ME.PlatformTypes;
@@ -16,20 +16,20 @@ export default function getActivityPlatform(session_id) {
   const tmp3 = parseProviderRouteHeadlessSessionIdDefault(session_id.session_id);
   if (null != tmp3) {
     return tmp3;
-  } else if (tmp(9256)(session_id)) {
-    let tmpResult = tmp(5227);
+  } else if (tmp(9269)(session_id)) {
+    let tmpResult = tmp(5235);
     return tmpResult.get(PlatformTypes.SPOTIFY);
-  } else if (tmp(8615)(session_id)) {
-    tmpResult = tmp(5227);
+  } else if (tmp(8630)(session_id)) {
+    tmpResult = tmp(5235);
     return tmpResult.get(PlatformTypes.CRUNCHYROLL);
-  } else if (tmp(9387)(session_id)) {
-    return tmp(5227).get(PlatformTypes.XBOX);
-  } else if (tmp(9388)(session_id)) {
-    return tmp(5227).get(PlatformTypes.PLAYSTATION);
+  } else if (tmp(9400)(session_id)) {
+    return tmp(5235).get(PlatformTypes.XBOX);
+  } else if (tmp(9401)(session_id)) {
+    return tmp(5235).get(PlatformTypes.PLAYSTATION);
   } else {
-    if (!tmp(9415)(session_id)) {
-      if (!tmp(9416)(session_id)) {
-        const found = tmp(5227).find((name) => name.name === session_id.name);
+    if (!tmp(9428)(session_id)) {
+      if (!tmp(9429)(session_id)) {
+        const found = tmp(5235).find((name) => name.name === session_id.name);
         let tmp5 = null;
         if (null != found) {
           tmp5 = null;
@@ -40,6 +40,6 @@ export default function getActivityPlatform(session_id) {
         return tmp5;
       }
     }
-    return tmp(5227).get(PlatformTypes.META_QUEST_OR_HORIZON);
+    return tmp(5235).get(PlatformTypes.META_QUEST_OR_HORIZON);
   }
 };

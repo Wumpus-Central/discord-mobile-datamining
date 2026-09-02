@@ -1,9 +1,9 @@
-// === Module 12621: useSelectedVariantIndex ===
+// === Module 12845: useSelectedVariantIndex ===
 
-// Module 12621 (useSelectedVariantIndex)
+// Module 12845 (useSelectedVariantIndex)
 import set from "set" /* 2 */;
-import isIterable from "isIterable" /* 4106 */;
-import identity from "identity" /* 700 */;
+import isIterable from "isIterable" /* 4105 */;
+import identity from "identity" /* 697 */;
 
 let closure_2 = identity.createWithEqualityFn(() => {
   const obj = { selectionStates: new Map() };
@@ -13,7 +13,7 @@ const result = set.fileFinishedImporting("modules/collectibles/CollectiblesShopV
 
 export const useSelectedVariantIndex = function useSelectedVariantIndex(product) {
   const _require = product;
-  let defaultVariantIndex = _require(8888).useDefaultVariantIndex(product);
+  let defaultVariantIndex = _require(8903).useDefaultVariantIndex(product);
   let tmp2 = state((selectionStates) => {
     let tmp2 = null;
     if (null != product) {

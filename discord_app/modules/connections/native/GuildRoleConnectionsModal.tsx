@@ -1,6 +1,6 @@
-// === Module 11169: ? ===
+// === Module 11390: ? ===
 
-// Module 11169
+// Module 11390
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -31,7 +31,7 @@ const memoResult = importAllResult.memo((guildId) => {
     obj[closure_1_5] = obj;
     return obj;
   }, items);
-  return jsx(guildId(6008).Navigator, { screens: memo, initialRouteName: GUILD_ROLE_CONNECTIONS_SCREEN });
+  return jsx(guildId(6016).Navigator, { screens: memo, initialRouteName: GUILD_ROLE_CONNECTIONS_SCREEN });
 });
 const result = require("set").fileFinishedImporting("modules/connections/native/GuildRoleConnectionsModal.tsx");
 

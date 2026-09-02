@@ -1,14 +1,14 @@
-// === Module 8725: GetStartedScreen ===
+// === Module 8740: GetStartedScreen ===
 
-// Module 8725 (GetStartedScreen)
+// Module 8740 (GetStartedScreen)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
+import ThemesDefault from "Themes" /* 709 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { getAgeVerificationGetStartedSteps as closure_6 } from "set" /* 8683 */;
-import { HelpdeskArticles } from "ME" /* 676 */;
-import { SafetyHubLinks } from "SafetyHubView" /* 8690 */;
+import { getAgeVerificationGetStartedSteps as closure_6 } from "set" /* 8698 */;
+import { HelpdeskArticles } from "ME" /* 673 */;
+import { SafetyHubLinks } from "SafetyHubView" /* 8705 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -42,12 +42,12 @@ export default function GetStartedScreen(onComplete) {
   let obj = modalSessionId(4733);
   const initiateAgeVerification = obj.useInitiateAgeVerification({ onComplete: onComplete.onClose, entryPoint });
   ({ initiateAgeVerification: c1, loading } = initiateAgeVerification);
-  obj1 = modalSessionId(8726);
+  obj1 = modalSessionId(8741);
   const isManualAgeVerificationHidden = obj1.useIsManualAgeVerificationHidden("age_verification_get_started_modal");
   obj = { children: null };
   obj = { style: tmp.getStartedContainer, children: null };
   obj1 = { style: tmp.getStartedHeaderContainer, children: null };
-  const items = [callback3(modalSessionId(6256).ShieldSpotIllustration, {}), , ];
+  const items = [callback3(modalSessionId(6265).ShieldSpotIllustration, {}), , ];
   let obj2 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.getStartedHeaderText, children: null };
   let obj6 = modalSessionId(4733);
   obj2[3] = obj6.getAgeVerificationGetStartedTitle(entryPoint);
@@ -70,14 +70,14 @@ export default function GetStartedScreen(onComplete) {
         tmpResult = tmp(modalSessionId(4474).Text, obj);
       }
       obj[2] = tmpResult;
-      return callback(_undefined(8727), obj, arg1);
+      return callback(_undefined(8742), obj, arg1);
     })
   };
-  items1[1] = callback3(modalSessionId(5992).TableRowGroup, obj4);
+  items1[1] = callback3(modalSessionId(6000).TableRowGroup, obj4);
   const obj5 = { style: tmp.ageGroupLearnMoreContainer, children: null };
   obj6 = { variant: "text-xs/medium", color: "text-muted", children: null };
-  const intl = modalSessionId(1236).intl;
-  obj6[2] = intl.format(modalSessionId(1236).t["L+FgkZ"], {
+  const intl = modalSessionId(1233).intl;
+  obj6[2] = intl.format(modalSessionId(1233).t["L+FgkZ"], {
     handleOnHelpUrlHook() {
       const obj = _undefined(closure_1_2[17]);
       obj.openUrl(_undefined(closure_1_2[18]).getArticleURL(closure_1_7.TIGGER_PAWTECT_LEARN_MORE));
@@ -98,14 +98,14 @@ export default function GetStartedScreen(onComplete) {
     obj9[0] = tmp.getStartedRequestTextContainer;
     const obj10 = { variant: "text-xs/medium", color: "text-muted", style: null, children: null };
     obj10[2] = tmp.getStartedRequestText;
-    const intl2 = tmp4(1236).intl;
+    const intl2 = tmp4(1233).intl;
     const obj11 = { handleOnRequestHook: null };
     obj11[0] = function handleOnRequestHook() {
       _undefined(closure_1_2[17]).openUrl(closure_1_8.APPEALS_LINK);
       const obj = _undefined(closure_1_2[17]);
       const result = modalSessionId(closure_1_2[19]).trackAgeVerificationModalClicked(modalSessionId, modalSessionId(closure_1_2[19]).AgeVerificationModalVersion.PRIMARY, modalSessionId(closure_1_2[19]).AgeVerificationModalCta.MANUAL_REVIEW_REQUEST);
     };
-    obj10[3] = intl2.format(tmp4(1236).t.pJAxgQ, obj11);
+    obj10[3] = intl2.format(tmp4(1233).t.pJAxgQ, obj11);
     obj9[1] = tmp9(tmp4(4474).Text, obj10);
     tmp9Result = tmp9(tmp10, obj9);
   }
@@ -113,8 +113,8 @@ export default function GetStartedScreen(onComplete) {
   const items4 = [tmp9Result, ];
   const obj13 = { style: tmp.getStartedFooterButtonsContainer, children: null };
   const obj14 = { variant: "primary", size: "lg", text: null, onPress: null, icon: null, loading: null, iconPosition: "end" };
-  const intl3 = tmp4(1236).intl;
-  obj14[2] = intl3.string(modalSessionId(1236).t.SJMnkX);
+  const intl3 = tmp4(1233).intl;
+  obj14[2] = intl3.string(modalSessionId(1233).t.SJMnkX);
   obj14[3] = callback(function*() {
     if (v0 === 2) {
       v0 = 3;
@@ -179,7 +179,7 @@ export default function GetStartedScreen(onComplete) {
   };
   const tmp2 = importDefault;
   const tmp8 = closure_11;
-  obj14[4] = callback3(modalSessionId(8728).LinkExternalSmallIcon, { color: ThemesDefault.colors.WHITE });
+  obj14[4] = callback3(modalSessionId(8743).LinkExternalSmallIcon, { color: ThemesDefault.colors.WHITE });
   obj14[5] = loading;
   obj13[1] = callback3(modalSessionId(4928).Button, obj14);
   items4[1] = callback3(closure_5, obj13);

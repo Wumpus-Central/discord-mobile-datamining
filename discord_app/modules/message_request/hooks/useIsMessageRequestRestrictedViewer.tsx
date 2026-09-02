@@ -1,6 +1,6 @@
-// === Module 12004: useIsMessageRequestRestrictedViewer ===
+// === Module 12228: useIsMessageRequestRestrictedViewer ===
 
-// Module 12004 (useIsMessageRequestRestrictedViewer)
+// Module 12228 (useIsMessageRequestRestrictedViewer)
 import set from "set" /* 2 */;
 import isFeatureAgeGated from "isFeatureAgeGated" /* 4172 */;
 import SettingsDefaultFeature from "SettingsDefaultFeature" /* 4179 */;

@@ -1,13 +1,13 @@
-// === Module 14838: BenefitRow ===
+// === Module 15067: BenefitRow ===
 
-// Module 14838 (BenefitRow)
+// Module 15067 (BenefitRow)
 import noopAll from "noop" /* 19 */;
-import Button from "Button" /* 1297 */;
+import Button from "Button" /* 1296 */;
 import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4134 */;
 import Text from "Text" /* 4474 */;
-import EmojiIconDefault from "EmojiIcon" /* 14836 */;
+import EmojiIconDefault from "EmojiIcon" /* 15065 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "ensureGuildLoaded" /* 1387 */;
+import closure_4 from "ensureGuildLoaded" /* 1386 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -41,22 +41,22 @@ const result = require("set").fileFinishedImporting("modules/guild_role_subscrip
 export const ChannelBenefitRow = function ChannelBenefitRow(benefit) {
   benefit = benefit.benefit;
   const tmp = callback3();
-  let obj = benefit(589);
+  let obj = benefit(586);
   const items = [closure_4];
   const items1 = [benefit.ref_id];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getChannel(benefit.ref_id), items1);
   obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = benefit(1236).intl;
-  obj[2] = "[" + intl.string(benefit(1236).t.bz1PZX) + "]";
+  const intl = benefit(1233).intl;
+  obj[2] = "[" + intl.string(benefit(1233).t.bz1PZX) + "]";
   let tmp8 = callback(benefit(4474).Text, obj);
   if (null != stateFromStores) {
     obj = { style: null, children: null };
     obj[0] = tmp.channelTitle;
     obj1 = { style: null, size: null, source: null };
     obj1[0] = tmp.channelIcon;
-    obj1[1] = tmp2(1297).Icon.Sizes.CUSTOM;
+    obj1[1] = tmp2(1296).Icon.Sizes.CUSTOM;
     obj1[2] = tmp2(4981).getChannelIcon(stateFromStores);
-    const items2 = [tmp7(tmp2(1297).Icon, obj1), ];
+    const items2 = [tmp7(tmp2(1296).Icon, obj1), ];
     const obj2 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
     obj2[2] = tmp6;
     items2[1] = tmp7(tmp2(4474).Text, obj2);

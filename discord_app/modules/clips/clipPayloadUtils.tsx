@@ -1,9 +1,9 @@
-// === Module 5075: getClipCreatedAt ===
+// === Module 5083: getClipCreatedAt ===
 
-// Module 5075 (getClipCreatedAt)
+// Module 5083 (getClipCreatedAt)
 import closure_3 from "_slicedToArray" /* 32 */;
 import result from "result" /* 4536 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import { AnalyticEvents } from "ME" /* 673 */;
 import { SpeakingFlags } from "DesktopSources" /* 4542 */;
 
 const require = arg1;
@@ -61,7 +61,7 @@ export const getClipEventsTimeline = function getClipEventsTimeline(clip) {
       const diff = clip.decision.timestamp - clip.length;
       const sum = diff + 1000 * editMetadata.end;
       const sum1 = diff + 1000 * editMetadata.start;
-      closure_1 = _require(5076).isGameEventsOnPlayerEnabled("getClipEventsTimeline");
+      closure_1 = _require(5084).isGameEventsOnPlayerEnabled("getClipEventsTimeline");
       const timeline1 = clip.timeline;
       const found = timeline1.filter((signal) => {
         editMetadata = editMetadata.editMetadata;
@@ -116,7 +116,7 @@ export const getClipEventsTimeline = function getClipEventsTimeline(clip) {
         }
         const tmp10 = map;
       }
-      const obj2 = _require(5076);
+      const obj2 = _require(5084);
     }
   }
 };

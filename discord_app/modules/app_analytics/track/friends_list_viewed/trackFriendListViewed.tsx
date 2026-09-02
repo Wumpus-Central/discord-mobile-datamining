@@ -1,11 +1,11 @@
-// === Module 16329: trackFriendsListViewed ===
+// === Module 16561: trackFriendsListViewed ===
 
-// Module 16329 (trackFriendsListViewed)
+// Module 16561 (trackFriendsListViewed)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import isClickstreamEnabled from "isClickstreamEnabled" /* 7211 */;
-import getTrackFriendsListViewedDataDefault from "getTrackFriendsListViewedData" /* 16330 */;
+import ME from "ME" /* 673 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
+import isClickstreamEnabled from "isClickstreamEnabled" /* 7220 */;
+import getTrackFriendsListViewedDataDefault from "getTrackFriendsListViewedData" /* 16562 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
 const result = set.fileFinishedImporting("modules/app_analytics/track/friends_list_viewed/trackFriendListViewed.tsx");

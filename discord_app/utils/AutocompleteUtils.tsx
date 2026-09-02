@@ -1,51 +1,51 @@
-// === Module 5385: NOOP ===
+// === Module 5393: NOOP ===
 
-// Module 5385 (NOOP)
+// Module 5393 (NOOP)
 import timestampDefault from "timestamp" /* 3 */;
 import applyDefault from "apply" /* 12 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import updateUserGuildSettings from "updateUserGuildSettings" /* 1370 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1471 */;
-import isNullOrEmpty from "isNullOrEmpty" /* 1902 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import updateUserGuildSettings from "updateUserGuildSettings" /* 1369 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
+import isNullOrEmpty from "isNullOrEmpty" /* 1901 */;
 import nameFromUserDefault from "nameFromUser" /* 4322 */;
 import setDefault from "set" /* 4465 */;
 import computeChannelName from "computeChannelName" /* 4674 */;
-import StickerFormat from "StickerFormat" /* 5212 */;
-import fuzzysearchDefault from "fuzzysearch" /* 5454 */;
-import sortByMatchScoreDefault from "sortByMatchScore" /* 5455 */;
-import getGuildNameSuggestionDefault from "getGuildNameSuggestion" /* 5456 */;
-import useCanSeeOnboardingHome from "useCanSeeOnboardingHome" /* 6069 */;
-import useGuildOnboardingAvailable from "useGuildOnboardingAvailable" /* 6179 */;
-import compareChannelsByScoreAndPositionDefault from "compareChannelsByScoreAndPosition" /* 6180 */;
+import StickerFormat from "StickerFormat" /* 5220 */;
+import fuzzysearchDefault from "fuzzysearch" /* 5462 */;
+import sortByMatchScoreDefault from "sortByMatchScore" /* 5463 */;
+import getGuildNameSuggestionDefault from "getGuildNameSuggestion" /* 5464 */;
+import useCanSeeOnboardingHome from "useCanSeeOnboardingHome" /* 6077 */;
+import useGuildOnboardingAvailable from "useGuildOnboardingAvailable" /* 6188 */;
+import compareChannelsByScoreAndPositionDefault from "compareChannelsByScoreAndPosition" /* 6189 */;
 import closure_4 from "_slicedToArray" /* 32 */;
-import fromType from "fromType" /* 5386 */;
-import closure_7 from "getEmojiToGroupId" /* 5401 */;
+import fromType from "fromType" /* 5394 */;
+import closure_7 from "getEmojiToGroupId" /* 5409 */;
 import closure_8 from "handleSoundCreateOrUpdate" /* 4965 */;
-import closure_9 from "handleStickersStoreUpdate" /* 5443 */;
-import closure_10 from "loadSavedGuildStickers" /* 5444 */;
-import closure_11 from "rebuild" /* 5448 */;
-import closure_12 from "storeThread" /* 4123 */;
-import createChannelRecord from "createChannelRecord" /* 1391 */;
-import { isEveryoneRole } from "GuildRoleRecordTypeTag" /* 1986 */;
-import closure_21 from "createdAt" /* 1935 */;
-import closure_22 from "ensureGuildLoaded" /* 1387 */;
-import closure_23 from "handleChannelSelect" /* 5451 */;
-import comparator from "comparator" /* 1982 */;
-import closure_26 from "comparator" /* 1982 */;
-import closure_27 from "trackCommunicationDisabled" /* 1992 */;
-import closure_28 from "createGuildRoleRecordFromRust" /* 1985 */;
-import closure_29 from "createGuildRecordFromRust" /* 1909 */;
+import closure_9 from "handleStickersStoreUpdate" /* 5451 */;
+import closure_10 from "loadSavedGuildStickers" /* 5452 */;
+import closure_11 from "rebuild" /* 5456 */;
+import closure_12 from "storeThread" /* 4122 */;
+import createChannelRecord from "createChannelRecord" /* 1390 */;
+import { isEveryoneRole } from "GuildRoleRecordTypeTag" /* 1985 */;
+import closure_21 from "createdAt" /* 1934 */;
+import closure_22 from "ensureGuildLoaded" /* 1386 */;
+import closure_23 from "handleChannelSelect" /* 5459 */;
+import comparator from "comparator" /* 1981 */;
+import closure_26 from "comparator" /* 1981 */;
+import closure_27 from "trackCommunicationDisabled" /* 1991 */;
+import closure_28 from "createGuildRoleRecordFromRust" /* 1984 */;
+import closure_29 from "createGuildRecordFromRust" /* 1908 */;
 import closure_30 from "reinjectEphemerals" /* 4735 */;
-import closure_31 from "getUncachedChannelPermissions" /* 4121 */;
+import closure_31 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_32 from "sortActivity" /* 4569 */;
 import closure_33 from "markAllUserIdListsStale" /* 4130 */;
-import closure_34 from "handleConnectionOpen" /* 1981 */;
+import closure_34 from "handleConnectionOpen" /* 1980 */;
 import closure_35 from "handleConnectionOpen" /* 4299 */;
-import closure_36 from "mergeGuildAvatar" /* 1922 */;
+import closure_36 from "mergeGuildAvatar" /* 1921 */;
 import closure_37 from "addSku" /* 4527 */;
-import ME from "ME" /* 676 */;
-import { StaticChannelId } from "set" /* 1394 */;
-import areArraysShallowlyEqual from "areArraysShallowlyEqual" /* 1991 */;
+import ME from "ME" /* 673 */;
+import { StaticChannelId } from "set" /* 1393 */;
+import areArraysShallowlyEqual from "areArraysShallowlyEqual" /* 1990 */;
 
 require = arg1;
 function NOOP() {
@@ -159,10 +159,10 @@ function queryMemberList(arg0) {
           if (null == str) {
             let items2 = [null, null];
           } else {
-            let tmp16Result = tmp16(1902);
+            let tmp16Result = tmp16(1901);
             let stripDiacriticsResult = tmp16Result.stripDiacritics(str);
             items2 = [stripDiacriticsResult, ];
-            tmp16Result = tmp16(1902);
+            tmp16Result = tmp16(1901);
             items2[1] = tmp16Result.normalize(stripDiacriticsResult);
           }
           let tmp18 = callback;
@@ -171,10 +171,10 @@ function queryMemberList(arg0) {
           if (null == str2) {
             let items3 = [null, null];
           } else {
-            let tmp16Result1 = tmp16(1902);
+            let tmp16Result1 = tmp16(1901);
             let stripDiacriticsResult1 = tmp16Result1.stripDiacritics(str2);
             items3 = [stripDiacriticsResult1, ];
-            let tmp16Result2 = tmp16(1902);
+            let tmp16Result2 = tmp16(1901);
             items3[1] = tmp16Result2.normalize(stripDiacriticsResult1);
           }
           let tmp18Result = tmp18(items3, 2);
@@ -215,21 +215,21 @@ function queryMemberList(arg0) {
                             if (substr5 !== normalizeResult) {
                               let tmp33 = num < 50;
                               if (num < 50) {
-                                let tmp28 = tmp12(5454)(toLocaleLowerCaseResult, str4) || tmp12(5454)(normalizeResult, str5);
+                                let tmp28 = tmp12(5462)(toLocaleLowerCaseResult, str4) || tmp12(5462)(normalizeResult, str5);
                                 if (!tmp28) {
-                                  let tmp29 = null != str6 && tmp12(5454)(toLocaleLowerCaseResult, str6);
+                                  let tmp29 = null != str6 && tmp12(5462)(toLocaleLowerCaseResult, str6);
                                   tmp28 = tmp29;
                                 }
                                 if (!tmp28) {
-                                  let tmp30 = null != str7 && tmp12(5454)(normalizeResult, str7);
+                                  let tmp30 = null != str7 && tmp12(5462)(normalizeResult, str7);
                                   tmp28 = tmp30;
                                 }
                                 if (!tmp28) {
-                                  let tmp31 = null != str8 && tmp12(5454)(toLocaleLowerCaseResult, str8);
+                                  let tmp31 = null != str8 && tmp12(5462)(toLocaleLowerCaseResult, str8);
                                   tmp28 = tmp31;
                                 }
                                 if (!tmp28) {
-                                  let tmp32 = null != str9 && tmp12(5454)(normalizeResult, str9);
+                                  let tmp32 = null != str9 && tmp12(5462)(normalizeResult, str9);
                                   tmp28 = tmp32;
                                 }
                                 tmp33 = tmp28;
@@ -363,13 +363,13 @@ function queryMemberList(arg0) {
 function getPriorityForStickerMetadataType(arg0) {
   if (StickerFormat.StickerMetadataTypes.STICKER_NAME === arg0) {
     return 11;
-  } else if (tmp(5212).StickerMetadataTypes.CORRELATED_EMOJI === arg0) {
+  } else if (tmp(5220).StickerMetadataTypes.CORRELATED_EMOJI === arg0) {
     return 6;
-  } else if (tmp(5212).StickerMetadataTypes.TAG === arg0) {
+  } else if (tmp(5220).StickerMetadataTypes.TAG === arg0) {
     return 1;
   } else {
-    if (tmp(5212).StickerMetadataTypes.GUILD_NAME !== arg0) {
-      if (tmp(5212).StickerMetadataTypes.PACK_NAME !== arg0) {
+    if (tmp(5220).StickerMetadataTypes.GUILD_NAME !== arg0) {
+      if (tmp(5220).StickerMetadataTypes.PACK_NAME !== arg0) {
         return 1;
       }
     }
@@ -1689,11 +1689,14 @@ areArraysShallowlyEqual = {
         }
         maybePushOtherGlobal(tmp32);
       }
-      let tmp35;
-      if (MENTION_TIMESTAMP != null) {
-        tmp35 = MENTION_TIMESTAMP();
+      const TimestampAutocompleteMobileExperiment = channel(flag7[47]).TimestampAutocompleteMobileExperiment;
+      if (TimestampAutocompleteMobileExperiment.getConfig({ location: "mention autocomplete" }).enabled) {
+        let tmp35;
+        if (MENTION_TIMESTAMP != null) {
+          tmp35 = MENTION_TIMESTAMP();
+        }
+        maybePushOtherGlobal(tmp35);
       }
-      maybePushOtherGlobal(tmp35);
       obj1 = { users: null, globals: null, roles: null };
       obj1[0] = items;
       obj1[1] = items2;
@@ -1858,15 +1861,15 @@ areArraysShallowlyEqual = {
       result = features3.has(tmp8.COMMUNITY);
     }
     obj = { id: StaticChannelId.SERVER_GUIDE, name: null };
-    const intl = tmp5(1236).intl;
+    const intl = tmp5(1233).intl;
     obj[1] = intl.string(getSystemLocale.t.VbpLyU);
     items = [obj, , ];
     obj = { id: StaticChannelId.CHANNEL_BROWSER, name: null };
-    const intl2 = tmp5(1236).intl;
+    const intl2 = tmp5(1233).intl;
     obj[1] = intl2.string(getSystemLocale.t.et6wav);
     items[1] = obj;
     obj1 = { id: StaticChannelId.CUSTOMIZE_COMMUNITY, name: null };
-    const intl3 = tmp5(1236).intl;
+    const intl3 = tmp5(1233).intl;
     obj1[1] = intl3.string(getSystemLocale.t.h9mGOP);
     items[2] = obj1;
     const items1 = [];
@@ -1915,15 +1918,21 @@ areArraysShallowlyEqual = {
     }
     channelTypes = channelTypes.channelTypes;
     let obj = { channels: null };
-    obj = { query: channelTypes.query, guildId: channel.getGuildId(), limit: "r", fuzzy: "HermesInternal", filter: 20, type: true, allowEmptyQueries: "/assets/.cache/intl/bW9kdWxlcy9hZHM=" };
-    obj[4] = function filter(type) {
-      let hasItem = null == channelTypes;
-      if (!hasItem) {
-        hasItem = channelTypes.includes(type.type);
-      }
-      return hasItem;
+    obj = {
+      query: channelTypes.query,
+      guildId: channel.getGuildId(),
+      limit: "r",
+      fuzzy: "HermesInternal",
+      filter(type) {
+        let hasItem = null == channelTypes;
+        if (!hasItem) {
+          hasItem = channelTypes.includes(type.type);
+        }
+        return hasItem;
+      },
+      type,
+      allowEmptyQueries: null
     };
-    obj[5] = type;
     obj[0] = this.queryChannels(obj).map((record) => record.record);
     return obj;
   },
@@ -2011,16 +2020,16 @@ areArraysShallowlyEqual = {
     set = new Set();
     items1 = [];
     closure_5 = items1;
-    const FrecencyUserSettingsActionCreators = flag(1370).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = flag(1369).FrecencyUserSettingsActionCreators;
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
     function _loop() {
       if ("" === closure_6) {
         return 1;
       } else {
         const toLocaleLowerCaseResult = obj.toLocaleLowerCase();
-        const stripDiacriticsResult = toLocaleLowerCaseResult(1902).stripDiacritics(toLocaleLowerCaseResult);
+        const stripDiacriticsResult = toLocaleLowerCaseResult(1901).stripDiacritics(toLocaleLowerCaseResult);
         const _RegExp = RegExp;
-        let obj2 = toLocaleLowerCaseResult(1902);
+        let obj2 = toLocaleLowerCaseResult(1901);
         const _HermesInternal = HermesInternal;
         const regExp = new RegExp("^" + nextResult(4465).escape(stripDiacriticsResult), "i");
         const _RegExp2 = RegExp;
@@ -2123,7 +2132,7 @@ areArraysShallowlyEqual = {
                   closure_1_5.push(obj);
                 }
               }
-              obj2 = toLocaleLowerCaseResult(closure_2_3[51]);
+              obj2 = toLocaleLowerCaseResult(closure_2_3[52]);
             }
           });
         });
@@ -2154,10 +2163,10 @@ areArraysShallowlyEqual = {
       tmp3 = !obj.hasFetchedAllSounds();
     }
     if (tmp3) {
-      const result = _require(6182).maybeFetchSoundboardSounds();
-      const obj2 = _require(6182);
+      const result = _require(6191).maybeFetchSoundboardSounds();
+      const obj2 = _require(6191);
     }
-    const FrecencyUserSettingsActionCreators = _require(1370).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = _require(1369).FrecencyUserSettingsActionCreators;
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
     const sounds = obj.getSounds();
     const reduced = Array.from(sounds.values()).reduce((arg0, arr) => {
@@ -2178,7 +2187,7 @@ areArraysShallowlyEqual = {
       return arg0;
     }, []);
     let arr = Array.from(sounds.values());
-    return _require(6187).searchSounds(arg0, reduced, currentUser, channel);
+    return _require(6196).searchSounds(arg0, reduced, currentUser, channel);
   },
   matchSentinel(arg0, arg1, closure_12) {
     const isMatch = regex.test(arg1);

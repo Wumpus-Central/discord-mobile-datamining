@@ -1,14 +1,14 @@
-// === Module 16313: GuildChannelDetailsTopic ===
+// === Module 16545: GuildChannelDetailsTopic ===
 
-// Module 16313 (GuildChannelDetailsTopic)
+// Module 16545 (GuildChannelDetailsTopic)
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 10654 */;
-import { VerticalGradient } from "ME" /* 676 */;
+import closure_7 from "mergeGuildAvatar" /* 1921 */;
+import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 10875 */;
+import { VerticalGradient } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
-import set from "set" /* 500 */;
+import set from "set" /* 1234 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
 const require = arg1;
@@ -177,7 +177,7 @@ function GuildChannelDetailsTopic(channel) {
 }
 function PrivateChannelDetailsTopic(channel) {
   channel = channel.channel;
-  let obj = channel(589);
+  let obj = channel(586);
   const items = [closure_7];
   const stateFromStores = obj.useStateFromStores(items, () => {
     const user = closure_1_7.getUser(channel.getRecipientId());
@@ -205,7 +205,7 @@ function PrivateChannelDetailsTopic(channel) {
 }
 function GroupDMChannelDetailsTopic(channel) {
   channel = channel.channel;
-  let obj = channel(589);
+  let obj = channel(586);
   const items = [closure_7];
   const stateFromStores = obj.useStateFromStores(items, () => channel(closure_1_2[18]).getPrivateChannelUserTagsString(channel.recipients, closure_1_7));
   let tmp4 = null;

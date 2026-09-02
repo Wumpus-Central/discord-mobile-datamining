@@ -1,10 +1,10 @@
-// === Module 6439: CrownIllocon ===
+// === Module 6448: CrownIllocon ===
 
-// Module 6439 (CrownIllocon)
+// Module 6448 (CrownIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5493 */;
-import metadataDefault from "metadata" /* 6440 */;
+import preloadDefault from "preload" /* 5501 */;
+import metadataDefault from "metadata" /* 6449 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/CrownIllocon.native.tsx");

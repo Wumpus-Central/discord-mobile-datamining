@@ -1,43 +1,43 @@
-// === Module 11142: items ===
+// === Module 11363: items ===
 
-// Module 11142 (items)
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5973 */;
+// Module 11363 (items)
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5981 */;
 import closure_6 from "_objectWithoutProperties" /* 109 */;
 import closure_7 from "asyncGeneratorStep" /* 5 */;
 import closure_8 from "_slicedToArray" /* 32 */;
-import closure_9 from "initialize" /* 8715 */;
+import closure_9 from "initialize" /* 8730 */;
 import closure_10 from "addApplication" /* 4519 */;
-import closure_11 from "set" /* 5955 */;
-import closure_12 from "computeAlertSettings" /* 10163 */;
-import closure_13 from "scheduledEventSort" /* 7271 */;
-import { isGuildScheduledEventActive as closure_14 } from "scheduledEventSort" /* 7271 */;
-import closure_15 from "getCurrentTime" /* 7987 */;
-import closure_16 from "initializeState" /* 7448 */;
-import closure_17 from "processMessage" /* 7340 */;
-import closure_18 from "handleQuickSwitcherUpdate" /* 10982 */;
-import closure_19 from "storeThread" /* 4123 */;
-import closure_20 from "recomputeAffinities" /* 7404 */;
-import closure_21 from "fetchFingerprint" /* 1218 */;
-import closure_22 from "ensureGuildLoaded" /* 1387 */;
-import closure_23 from "updateGiftCode" /* 8447 */;
-import closure_24 from "trackCommunicationDisabled" /* 1992 */;
-import closure_25 from "createGuildRecordFromRust" /* 1909 */;
+import closure_11 from "set" /* 5963 */;
+import closure_12 from "computeAlertSettings" /* 10185 */;
+import closure_13 from "scheduledEventSort" /* 7280 */;
+import { isGuildScheduledEventActive as closure_14 } from "scheduledEventSort" /* 7280 */;
+import closure_15 from "getCurrentTime" /* 7996 */;
+import closure_16 from "initializeState" /* 7458 */;
+import closure_17 from "processMessage" /* 7349 */;
+import closure_18 from "handleQuickSwitcherUpdate" /* 11202 */;
+import closure_19 from "storeThread" /* 4122 */;
+import closure_20 from "recomputeAffinities" /* 7413 */;
+import closure_21 from "fetchFingerprint" /* 1215 */;
+import closure_22 from "ensureGuildLoaded" /* 1386 */;
+import closure_23 from "updateGiftCode" /* 8456 */;
+import closure_24 from "trackCommunicationDisabled" /* 1991 */;
+import closure_25 from "createGuildRecordFromRust" /* 1908 */;
 import closure_26 from "updateInvite" /* 4462 */;
-import closure_27 from "updateActivities" /* 9433 */;
+import closure_27 from "updateActivities" /* 9446 */;
 import closure_28 from "reinjectEphemerals" /* 4735 */;
-import closure_29 from "getUncachedChannelPermissions" /* 4121 */;
+import closure_29 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_30 from "sortActivity" /* 4569 */;
-import closure_31 from "handleConnectionOpen" /* 1981 */;
+import closure_31 from "handleConnectionOpen" /* 1980 */;
 import closure_32 from "handleConnectionOpen" /* 4299 */;
-import closure_33 from "filterPlayingActivities" /* 5223 */;
-import closure_34 from "initialize" /* 7582 */;
-import closure_35 from "mergeGuildAvatar" /* 1922 */;
-import { SeparatorAction } from "Changeset" /* 7842 */;
-import ME from "ME" /* 676 */;
-import { InviteTypes } from "InviteSendStates" /* 7481 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import { SafetySystemNotificationCtaType as closure_61 } from "SafetyHubView" /* 8690 */;
-import { OpenThreadAnalyticsLocations as closure_62 } from "AbortCodes" /* 1235 */;
+import closure_33 from "filterPlayingActivities" /* 5231 */;
+import closure_34 from "initialize" /* 7592 */;
+import closure_35 from "mergeGuildAvatar" /* 1921 */;
+import { SeparatorAction } from "Changeset" /* 7851 */;
+import ME from "ME" /* 673 */;
+import { InviteTypes } from "InviteSendStates" /* 7491 */;
+import GuildFeatures from "GuildFeatures" /* 1923 */;
+import { SafetySystemNotificationCtaType as closure_61 } from "SafetyHubView" /* 8705 */;
+import { OpenThreadAnalyticsLocations as closure_62 } from "AbortCodes" /* 1232 */;
 
 const require = arg1;
 let closure_4 = ["messageId"];
@@ -2286,10 +2286,10 @@ class MessagesHandlers {
                 closure_1 = tmp2;
                 isReveal = undefined;
                 closure_1 = undefined;
-                const nativeSyntheticEventData = callback(11146).getNativeSyntheticEventData(isReveal);
+                const nativeSyntheticEventData = callback(11367).getNativeSyntheticEventData(isReveal);
                 ({ messageId, channelId, isReveal } = nativeSyntheticEventData);
                 ({ attachmentId, embedId } = nativeSyntheticEventData);
-                const obj10 = callback(11146);
+                const obj10 = callback(11367);
                 if (isReveal) {
                   if (obj11.shouldAgeVerifyForExplicitMedia()) {
                     dependencyMap = 1;
@@ -2299,12 +2299,12 @@ class MessagesHandlers {
                     return obj1;
                   }
                 }
-                let obj3 = callback(7345);
+                let obj3 = callback(7354);
                 const obj2 = { obscure: null };
                 obj2[0] = isReveal;
                 const result = obj3.trackToggleMediaObscurityV2(obj2);
                 c4 = 3;
-                obj11 = callback(7345);
+                obj11 = callback(7354);
               }
             } else if (arg0 === 1) {
               c4 = 3;
@@ -2317,9 +2317,9 @@ class MessagesHandlers {
                 reactiveCheckPassed = closure_1_9.getReactiveCheckPassed();
               }
               if (!reactiveCheckPassed) {
-                obj = closure_1_1(8682);
+                obj = closure_1_1(8697);
                 obj3 = { entryPoint: null };
-                obj3[0] = callback(8684).AgeVerificationModalEntryPoint.OBSCURED_MEDIA;
+                obj3[0] = callback(8699).AgeVerificationModalEntryPoint.OBSCURED_MEDIA;
                 const result1 = obj.showAgeVerificationGetStartedModal(obj3);
               }
             }

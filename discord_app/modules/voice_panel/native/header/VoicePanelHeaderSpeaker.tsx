@@ -1,17 +1,17 @@
-// === Module 16699: ? ===
+// === Module 16934: ? ===
 
-// Module 16699
-import useSpeakerTooltipsDefault from "useSpeakerTooltips" /* 16703 */;
+// Module 16934
+import useSpeakerTooltipsDefault from "useSpeakerTooltips" /* 16938 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import importAllResult from "noop" /* 19 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import { setVoiceUpsellDismissed } from "useConsoleVoiceUpsellStore" /* 16700 */;
+import { setVoiceUpsellDismissed } from "useConsoleVoiceUpsellStore" /* 16935 */;
 import closure_8 from "set" /* 4495 */;
-import closure_9 from "handleAudioRouteChanged" /* 16701 */;
-import closure_10 from "handleAudioRouteChanged" /* 9775 */;
-import closure_11 from "ensureGuildLoaded" /* 1387 */;
+import closure_9 from "handleAudioRouteChanged" /* 16936 */;
+import closure_10 from "handleAudioRouteChanged" /* 9797 */;
+import closure_11 from "ensureGuildLoaded" /* 1386 */;
 import closure_12 from "handleUpdate" /* 4496 */;
-import { PlatformTypes } from "ME" /* 676 */;
+import { PlatformTypes } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -215,7 +215,7 @@ const memoResult = importAllResult.memo(function VoicePanelHeaderSpeaker(isConne
     function renderButton(arg0) {
       let tmp = arg0;
       if (arg0 == null) {
-        let obj = { onPress: null, ref: "Array" };
+        let obj = { onPress: null, ref: "r" };
         obj[0] = closure_15;
         tmp = obj;
       }

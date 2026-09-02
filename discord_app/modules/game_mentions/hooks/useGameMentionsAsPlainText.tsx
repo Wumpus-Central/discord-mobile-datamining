@@ -1,9 +1,9 @@
-// === Module 9087: useGameMentionsAsPlainText ===
+// === Module 9101: useGameMentionsAsPlainText ===
 
-// Module 9087 (useGameMentionsAsPlainText)
+// Module 9101 (useGameMentionsAsPlainText)
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "handleLoadMessages" /* 4502 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_4 from "mergeGuildAvatar" /* 1921 */;
 import regExp from "regExp" /* 4953 */;
 
 const require = arg1;

@@ -1,6 +1,6 @@
-// === Module 6171: GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD ===
+// === Module 6179: GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD ===
 
-// Module 6171 (GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD)
+// Module 6179 (GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/guild_templates/GuildTemplatesConstants.tsx");

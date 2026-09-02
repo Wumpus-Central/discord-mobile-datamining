@@ -1,10 +1,10 @@
-// === Module 16798: ? ===
+// === Module 17034: ? ===
 
-// Module 16798
+// Module 17034
 import importAllResult from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1387 */;
-import VoicePanelControlsModes from "VoicePanelControlsModes" /* 11838 */;
-import { ComponentActions } from "ME" /* 676 */;
+import closure_4 from "ensureGuildLoaded" /* 1386 */;
+import VoicePanelControlsModes from "VoicePanelControlsModes" /* 12061 */;
+import { ComponentActions } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -24,30 +24,30 @@ const memoResult = importAllResult.memo(function VoicePanelControlsAppLauncher(g
   let rect;
   let derivedValue;
   let derivedValue1;
-  let obj = gestureSpecs(7616);
+  let obj = gestureSpecs(7626);
   const gradientTop = obj.useGradientTop();
-  const context = importAllResult.useContext(setControlsMode(11839));
+  const context = importAllResult.useContext(setControlsMode(12062));
   setControlsMode = context.setControlsMode;
   ({ channelId: c2, safeArea, windowDimensions } = context);
-  const tmp4 = setControlsMode(8569)(windowDimensions);
+  const tmp4 = setControlsMode(8584)(windowDimensions);
   importAllResult = tmp4;
-  rect = setControlsMode(8569)(safeArea);
-  obj1 = gestureSpecs(589);
+  rect = setControlsMode(8584)(safeArea);
+  obj1 = gestureSpecs(586);
   const items = [rect];
   const stateFromStores = obj1.useStateFromStores(items, () => rect.getChannel(c2));
   setControlsMode(38)(null != stateFromStores, "channel should not be null");
   const tmp = callback3();
   const items1 = [setControlsMode];
-  const controlsDrawerOpenWidth = gestureSpecs(11846).getControlsDrawerOpenWidth(tmp4.width, rect.left, rect.right);
+  const controlsDrawerOpenWidth = gestureSpecs(12069).getControlsDrawerOpenWidth(tmp4.width, rect.left, rect.right);
   const callback = importAllResult.useCallback(() => {
     const ComponentDispatch = gestureSpecs(_undefined[12]).ComponentDispatch;
     ComponentDispatch.dispatch(derivedValue1.SELECT_ACTIVITY);
     setControlsMode({ mode: derivedValue.HIDDEN });
   }, items1);
-  const obj3 = gestureSpecs(11846);
-  const appLauncherChatInputRefDummy = gestureSpecs(9049).useAppLauncherChatInputRefDummy({ noop: true });
-  const obj4 = gestureSpecs(9049);
-  const ref = importAllResult.useRef(gestureSpecs(9049).AppLauncherKeyboardCloseReason.DISMISSED);
+  const obj3 = gestureSpecs(12069);
+  const appLauncherChatInputRefDummy = gestureSpecs(9063).useAppLauncherChatInputRefDummy({ noop: true });
+  const obj4 = gestureSpecs(9063);
+  const ref = importAllResult.useRef(gestureSpecs(9063).AppLauncherKeyboardCloseReason.DISMISSED);
   const ref1 = importAllResult.useRef(undefined);
   const sharedValue = gestureSpecs(4217).useSharedValue(0);
   const obj5 = gestureSpecs(4217);
@@ -91,12 +91,12 @@ const memoResult = importAllResult.memo(function VoicePanelControlsAppLauncher(g
   const animatedStyle = gestureSpecs(4217).useAnimatedStyle(L);
   obj = { style: items2, children: null };
   items2 = [tmp.container, gradientTop, animatedStyle];
-  const items3 = [callback(setControlsMode(11654), { bottomSheetIndex: sharedValue1, bottomSheetPosition: sharedValue, bottomSheetExpandReasonRef: ref1, context: { type: "channel", channel: stateFromStores }, chatInputRef: appLauncherChatInputRefDummy, entrypoint: gestureSpecs(8435).AppLauncherEntrypoint.VOICE, keyboardCloseReasonRef: ref, onActivityItemSelected: callback, width: controlsDrawerOpenWidth }), ];
+  const items3 = [callback(setControlsMode(11877), { bottomSheetIndex: sharedValue1, bottomSheetPosition: sharedValue, bottomSheetExpandReasonRef: ref1, context: { type: "channel", channel: stateFromStores }, chatInputRef: appLauncherChatInputRefDummy, entrypoint: gestureSpecs(8444).AppLauncherEntrypoint.VOICE, keyboardCloseReasonRef: ref, onActivityItemSelected: callback, width: controlsDrawerOpenWidth }), ];
   obj1 = { title: null, disablePill: true };
   const obj9 = gestureSpecs(4217);
-  const intl = gestureSpecs(1236).intl;
-  obj1[0] = intl.string(gestureSpecs(1236).t.shUONg);
-  items3[1] = callback(setControlsMode(11847), obj1);
+  const intl = gestureSpecs(1233).intl;
+  obj1[0] = intl.string(gestureSpecs(1233).t.shUONg);
+  items3[1] = callback(setControlsMode(12070), obj1);
   obj[1] = items3;
   obj[0] = callback2(setControlsMode(4217).View, obj);
   return callback(closure_9, obj);

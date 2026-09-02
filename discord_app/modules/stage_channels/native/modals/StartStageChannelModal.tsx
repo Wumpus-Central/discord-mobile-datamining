@@ -1,26 +1,26 @@
-// === Module 9902: closeModal ===
+// === Module 9924: closeModal ===
 
-// Module 9902 (closeModal)
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
+// Module 9924 (closeModal)
+import initialize from "initialize" /* 586 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import Button from "Button" /* 1296 */;
 import _modDef4723 from "module_4723" /* 4723 */;
-import PressableBase from "PressableBase" /* 5068 */;
-import GuildIconSizes from "GuildIconSizes" /* 6004 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 6004 */;
-import HotspotStore2 from "HotspotStore" /* 6060 */;
-import registerAssetDefault from "registerAsset" /* 7812 */;
-import Form from "Form" /* 8363 */;
-import StageSparkleInnerDefault from "StageSparkleInner" /* 8678 */;
+import PressableBase from "PressableBase" /* 5076 */;
+import GuildIconSizes from "GuildIconSizes" /* 6012 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 6012 */;
+import HotspotStore2 from "HotspotStore" /* 6068 */;
+import registerAssetDefault from "registerAsset" /* 7821 */;
+import Form from "Form" /* 8372 */;
+import StageSparkleInnerDefault from "StageSparkleInner" /* 8693 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "handleStageInstanceCreateOrUpdate" /* 1392 */;
-import MAX_STAGE_TOPIC_LENGTH from "MAX_STAGE_TOPIC_LENGTH" /* 5358 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { GuildScheduledEventPrivacyLevel as closure_13 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1393 */;
+import closure_9 from "handleStageInstanceCreateOrUpdate" /* 1391 */;
+import MAX_STAGE_TOPIC_LENGTH from "MAX_STAGE_TOPIC_LENGTH" /* 5366 */;
+import { AnalyticEvents } from "ME" /* 673 */;
+import { GuildScheduledEventPrivacyLevel as closure_13 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1392 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -72,8 +72,8 @@ class NotificationToggle {
     items[0] = require("HotspotStore").HotspotStore;
     tmp5 = jsx;
     stateFromStores = obj.useStateFromStores(items, () => {
-      const HotspotStore = callback(6060).HotspotStore;
-      return HotspotStore.hasHotspot(callback(6060).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
+      const HotspotStore = callback(6068).HotspotStore;
+      return HotspotStore.hasHotspot(callback(6068).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
     });
     obj = { DEPRECATED_style: tmp.notificationToggle, label: null, onPress: null, trailing: null };
     tmp7 = View;
@@ -183,17 +183,17 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
                 if (null != closure_1_6) {
                   closure_1_8(true);
                   closure_1_9(null);
-                  let obj3 = closure_1_2(1891);
+                  let obj3 = closure_1_2(1890);
                   const result = obj3.dismissGlobalKeyboard();
                   dependencyMap = 1;
                   if (null != dependencyMap) {
                     c4 = 3;
                     c5 = 1;
                     obj1 = { value: null, done: false };
-                    obj1[0] = closure_1_2(8669).editStage(closure_1_2, tmp76, tmp47);
+                    obj1[0] = closure_1_2(8684).editStage(closure_1_2, tmp76, tmp47);
                     return obj1;
                   } else {
-                    const obj5 = closure_1_2(8669);
+                    const obj5 = closure_1_2(8684);
                     c4 = 2;
                     c5 = 1;
                     const obj2 = { value: null, done: false };
@@ -221,8 +221,8 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
                     tmp8 = closure_13;
                   }
                   if (tmp8) {
-                    obj1 = closure_1_2(6063);
-                    obj1.hideHotspot(closure_1_0(6060).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
+                    obj1 = closure_1_2(6071);
+                    obj1.hideHotspot(closure_1_0(6068).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
                   }
                 }
               } else if (arg0 === 1) {

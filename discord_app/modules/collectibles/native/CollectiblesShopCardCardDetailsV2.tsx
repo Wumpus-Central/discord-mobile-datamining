@@ -1,20 +1,20 @@
-// === Module 12623: memoResult1 ===
+// === Module 12847: memoResult1 ===
 
-// Module 12623 (memoResult1)
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
+// Module 12847 (memoResult1)
+import initialize from "initialize" /* 586 */;
+import ThemesDefault from "Themes" /* 709 */;
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4139 */;
 import map from "map" /* 4197 */;
 import hexToRgba from "hexToRgba" /* 4326 */;
 import Text from "Text" /* 4474 */;
 import LinearGradientDefault from "LinearGradient" /* 4940 */;
-import useCurrentUser from "useCurrentUser" /* 8891 */;
-import getCardProductName from "getCardProductName" /* 10756 */;
-import useCanPurchaseFrames from "useCanPurchaseFrames" /* 12530 */;
+import useCurrentUser from "useCurrentUser" /* 8906 */;
+import getCardProductName from "getCardProductName" /* 10976 */;
+import useCanPurchaseFrames from "useCanPurchaseFrames" /* 12754 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "updateProduct" /* 6084 */;
-import ME from "ME" /* 676 */;
+import closure_5 from "updateProduct" /* 6092 */;
+import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -229,15 +229,15 @@ const memoResult1 = importAllResult.memo(function CardDetailsV2(arg0) {
   obj1 = useCanPurchaseFrames;
   let isProfileFramesEarlyAccessPhase = obj1.useIsProfileFramesEarlyAccessPhase("CollectiblesShopCardCardDetailsV2");
   if (isProfileFramesEarlyAccessPhase) {
-    let tmp2Result = tmp2(7298);
+    let tmp2Result = tmp2(7307);
     const productType = tmp2Result.getProductType(product);
-    isProfileFramesEarlyAccessPhase = productType === tmp2(1950).CollectiblesItemType.PROFILE_FRAME;
+    isProfileFramesEarlyAccessPhase = productType === tmp2(1949).CollectiblesItemType.PROFILE_FRAME;
   }
   let obj3 = getPremiumPlanItemDefault;
-  tmp2Result = tmp2(7299);
+  tmp2Result = tmp2(7308);
   const shopDiscountSource = tmp2Result.getShopDiscountSource(currentUser);
   const tmp8 = obj3.canUseShopDiscounts(currentUser) || isProfileFramesEarlyAccessPhase;
-  const token = map.useToken(tmp7(712).colors.BACKGROUND_BASE_LOW);
+  const token = map.useToken(tmp7(709).colors.BACKGROUND_BASE_LOW);
   const tmp2Result1 = map;
   const tmp2Result2 = hexToRgba;
   const tmp2Result3 = hexToRgba;
@@ -271,7 +271,7 @@ const memoResult1 = importAllResult.memo(function CardDetailsV2(arg0) {
     const items4 = [tmp17(closure_11, obj2), ];
     obj3 = { product: null };
     obj3[0] = product;
-    items4[1] = tmp17(tmp7(12624), obj3);
+    items4[1] = tmp17(tmp7(12848), obj3);
     obj1[1] = items4;
     tmp15Result = tmp15(View, obj1);
   }

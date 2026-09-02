@@ -1,10 +1,10 @@
 // === Module 4143: createFromServer ===
 
 // Module 4143 (createFromServer)
-import hasFlag from "hasFlag" /* 1399 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1471 */;
-import toJSDefault from "toJS" /* 1936 */;
-import ME from "ME" /* 676 */;
+import hasFlag from "hasFlag" /* 1398 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
+import toJSDefault from "toJS" /* 1935 */;
+import ME from "ME" /* 673 */;
 
 require = arg1;
 toJSDefault;

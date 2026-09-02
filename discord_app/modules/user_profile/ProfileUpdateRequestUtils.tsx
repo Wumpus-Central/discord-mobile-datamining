@@ -1,10 +1,10 @@
-// === Module 10833: getProfileChangesForUpdateRequest ===
+// === Module 11053: getProfileChangesForUpdateRequest ===
 
-// Module 10833 (getProfileChangesForUpdateRequest)
+// Module 11053 (getProfileChangesForUpdateRequest)
 import set from "set" /* 2 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1950 */;
-import AssetOriginTypes from "AssetOriginTypes" /* 7761 */;
-import getCurrentUserProfileDefault from "getCurrentUserProfile" /* 10834 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
+import AssetOriginTypes from "AssetOriginTypes" /* 7770 */;
+import getCurrentUserProfileDefault from "getCurrentUserProfile" /* 11054 */;
 
 const result = set.fileFinishedImporting("modules/user_profile/ProfileUpdateRequestUtils.tsx");
 
@@ -60,7 +60,7 @@ export const getProfileChangesForUpdateRequest = function getProfileChangesForUp
   }
   const items = [...collectibles];
   if (undefined !== pendingProfileEffect) {
-    const found = items.filter((type) => type.type !== callback(1950).CollectiblesItemType.PROFILE_EFFECT);
+    const found = items.filter((type) => type.type !== callback(1949).CollectiblesItemType.PROFILE_EFFECT);
     let arr3 = found;
     if (null !== pendingProfileEffect) {
       obj = { skuId: null, type: null };
@@ -72,7 +72,7 @@ export const getProfileChangesForUpdateRequest = function getProfileChangesForUp
   }
   let arr5 = arr3;
   if (undefined !== pendingProfileFrame) {
-    const found1 = arr3.filter((type) => type.type !== callback(1950).CollectiblesItemType.PROFILE_FRAME);
+    const found1 = arr3.filter((type) => type.type !== callback(1949).CollectiblesItemType.PROFILE_FRAME);
     arr5 = found1;
     if (null !== pendingProfileFrame) {
       found1.push(pendingProfileFrame);

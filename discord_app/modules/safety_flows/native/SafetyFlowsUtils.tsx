@@ -1,16 +1,16 @@
-// === Module 17453: fetchAndUpdateTask ===
+// === Module 17689: fetchAndUpdateTask ===
 
-// Module 17453 (fetchAndUpdateTask)
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2663 */;
+// Module 17689 (fetchAndUpdateTask)
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import messagesProxyDefault from "messagesProxy" /* 2662 */;
 import dispatcherDefault from "dispatcher" /* 4194 */;
 import _modDef4723 from "module_4723" /* 4723 */;
-import registerAssetDefault from "registerAsset" /* 9518 */;
-import TaskType from "TaskType" /* 17447 */;
-import SAFETY_FLOWS_MODAL_KEY from "SAFETY_FLOWS_MODAL_KEY" /* 17448 */;
+import registerAssetDefault from "registerAsset" /* 9531 */;
+import TaskType from "TaskType" /* 17683 */;
+import SAFETY_FLOWS_MODAL_KEY from "SAFETY_FLOWS_MODAL_KEY" /* 17684 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "mergeGuildAvatar" /* 1921 */;
 
 require = arg1;
 function fetchAndUpdateTask() {
@@ -63,7 +63,7 @@ function navigateToScreenForTask(closure_1, closure_0) {
     let tmp5 = null;
     if (null != tmp16) {
       let tmp = tmp16;
-      if (task_type === tmp14(17447).TaskType.EMAIL_VERIFICATION) {
+      if (task_type === tmp14(17683).TaskType.EMAIL_VERIFICATION) {
         const currentUser = authStore.getCurrentUser();
         let email;
         if (currentUser != null) {
@@ -71,7 +71,7 @@ function navigateToScreenForTask(closure_1, closure_0) {
         }
         tmp = tmp16;
         if (null != email) {
-          const items = [tmp14(17447).SafetyFlowScreens.VERIFY_EMAIL];
+          const items = [tmp14(17683).SafetyFlowScreens.VERIFY_EMAIL];
           tmp = items;
         }
       }
@@ -80,7 +80,7 @@ function navigateToScreenForTask(closure_1, closure_0) {
     if (null != tmp5) {
       closure_1.push(tmp5[0]);
     } else {
-      closure_1.push(tmp14(17447).SafetyFlowScreens.UPDATE_APP);
+      closure_1.push(tmp14(17683).SafetyFlowScreens.UPDATE_APP);
     }
   }
 }
@@ -91,7 +91,7 @@ export const getScreensForTaskType = function getScreensForTaskType(task_type) {
   let tmp4 = null;
   if (null != tmp3) {
     let tmp5 = tmp3;
-    if (task_type === tmp(17447).TaskType.EMAIL_VERIFICATION) {
+    if (task_type === tmp(17683).TaskType.EMAIL_VERIFICATION) {
       const currentUser = authStore.getCurrentUser();
       let email;
       if (currentUser != null) {
@@ -99,7 +99,7 @@ export const getScreensForTaskType = function getScreensForTaskType(task_type) {
       }
       tmp5 = tmp3;
       if (null != email) {
-        const items = [tmp(17447).SafetyFlowScreens.VERIFY_EMAIL];
+        const items = [tmp(17683).SafetyFlowScreens.VERIFY_EMAIL];
         tmp5 = items;
       }
     }

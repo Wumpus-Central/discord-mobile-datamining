@@ -1,8 +1,8 @@
-// === Module 15812: updateGuildPremiumSubscriptionCount ===
+// === Module 16043: updateGuildPremiumSubscriptionCount ===
 
-// Module 15812 (updateGuildPremiumSubscriptionCount)
+// Module 16043 (updateGuildPremiumSubscriptionCount)
 import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 const result = set.fileFinishedImporting("modules/guild_boosting/GuildBoostingProgressBarActionCreators.tsx");
 

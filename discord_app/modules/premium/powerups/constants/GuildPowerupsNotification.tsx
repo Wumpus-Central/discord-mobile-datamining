@@ -1,6 +1,6 @@
-// === Module 12059: GUILD_POWERUP_NOTIFICATION_COOLDOWN ===
+// === Module 12283: GUILD_POWERUP_NOTIFICATION_COOLDOWN ===
 
-// Module 12059 (GUILD_POWERUP_NOTIFICATION_COOLDOWN)
+// Module 12283 (GUILD_POWERUP_NOTIFICATION_COOLDOWN)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/premium/powerups/constants/GuildPowerupsNotification.tsx");

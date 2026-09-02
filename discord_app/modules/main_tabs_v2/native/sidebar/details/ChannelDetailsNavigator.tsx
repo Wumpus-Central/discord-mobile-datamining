@@ -1,20 +1,20 @@
-// === Module 16390: ConnectedCreateThreadHeaderButton ===
+// === Module 16622: ConnectedCreateThreadHeaderButton ===
 
-// Module 16390 (ConnectedCreateThreadHeaderButton)
-import registerAssetDefault from "registerAsset" /* 12311 */;
+// Module 16622 (ConnectedCreateThreadHeaderButton)
+import registerAssetDefault from "registerAsset" /* 12535 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "ensureGuildLoaded" /* 1387 */;
-import { ChannelDetailsNavigatorScreens as closure_6 } from "ChannelDetailsNavigatorScreens" /* 10654 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { SearchNavigatorScreens } from "SearchNavigatorScreens" /* 16227 */;
+import closure_5 from "ensureGuildLoaded" /* 1386 */;
+import { ChannelDetailsNavigatorScreens as closure_6 } from "ChannelDetailsNavigatorScreens" /* 10875 */;
+import { AnalyticEvents } from "ME" /* 673 */;
+import { SearchNavigatorScreens } from "SearchNavigatorScreens" /* 16459 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 7822 */;
+import createNativeStackNavigator from "createNativeStackNavigator" /* 7831 */;
 
 const require = arg1;
 function ConnectedCreateThreadHeaderButton(channelId) {
   channelId = channelId.channelId;
-  let obj = channelId(647);
+  let obj = channelId(644);
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getChannel(channelId));
   let tmp2 = null;
@@ -27,17 +27,17 @@ function ConnectedCreateThreadHeaderButton(channelId) {
 }
 function CreateThreadHeaderButton(channel) {
   channel = channel.channel;
-  let obj = channel(6116);
+  let obj = channel(6124);
   [][0] = channel;
   const canStartThread = obj.useCanStartThread(channel);
   let tmp5 = null;
   if (canStartThread) {
     obj = { accessibilityLabel: null, onPress: null, source: null };
-    const intl = tmp(1236).intl;
-    obj[0] = intl.string(tmp(1236).t.rBIGBL);
+    const intl = tmp(1233).intl;
+    obj[0] = intl.string(tmp(1233).t.rBIGBL);
     obj[1] = tmp4;
     obj[2] = registerAssetDefault;
-    tmp5 = callback(tmp(7607).HeaderIconButton, obj);
+    tmp5 = callback(tmp(7617).HeaderIconButton, obj);
   }
   return tmp5;
 }
@@ -136,10 +136,10 @@ const memoResult = importAllResult.memo((navigation) => {
         route = route.route;
         let obj = {
           header(arg0) {
-            let obj = route(7607);
+            let obj = route(7617);
             obj = {};
             const merged = Object.assign(arg0);
-            obj.shouldHandleSafeArea = route(500).isAndroid();
+            obj.shouldHandleSafeArea = route(1234).isAndroid();
             return obj.renderHeader(obj);
           },
           headerTitle() {

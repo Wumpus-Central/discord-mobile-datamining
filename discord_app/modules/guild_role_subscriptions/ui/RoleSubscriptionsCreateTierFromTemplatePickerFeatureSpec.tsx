@@ -1,11 +1,11 @@
-// === Module 13631: ? ===
+// === Module 13854: ? ===
 
-// Module 13631
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 13854
+import initialize from "initialize" /* 586 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import closure_2 from "getHash" /* 4391 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4121 */;
-import ME from "ME" /* 676 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4120 */;
+import ME from "ME" /* 673 */;
 
 require = arg1;
 ({ GuildFeatures: c4, Permissions: c5 } = ME);

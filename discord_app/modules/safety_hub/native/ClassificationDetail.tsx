@@ -1,18 +1,18 @@
-// === Module 11453: ClassificationHeader ===
+// === Module 11676: ClassificationHeader ===
 
-// Module 11453 (ClassificationHeader)
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 11676 (ClassificationHeader)
+import initialize from "initialize" /* 586 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Text from "Text" /* 4474 */;
 import Button from "Button" /* 4928 */;
-import renderDefault from "render" /* 9067 */;
+import renderDefault from "render" /* 9081 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "_getSystemLocale" /* 1996 */;
-import closure_8 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8701 */;
-import SafetyHubView from "SafetyHubView" /* 8690 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import closure_7 from "_getSystemLocale" /* 1995 */;
+import closure_8 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8716 */;
+import SafetyHubView from "SafetyHubView" /* 8705 */;
+import { AnalyticEvents } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -81,8 +81,8 @@ function ClassificationActionsTaken(arg0) {
     obj = { style: null, children: null };
     obj[0] = tmp4.sectionContainer;
     obj = { variant: "eyebrow", color: "text-muted", children: null };
-    const intl = tmp(1236).intl;
-    obj[2] = intl.string(tmp(1236).t["O2nYk+"]);
+    const intl = tmp(1233).intl;
+    obj[2] = intl.string(tmp(1233).t["O2nYk+"]);
     const items1 = [callback(tmp(4474).Text, obj), ];
     obj1 = { style: null, children: null };
     const items2 = [tmp4.actionsTaken];
@@ -96,10 +96,10 @@ function ClassificationActionsTaken(arg0) {
       obj3[1] = [" ", "\u2022"];
       const items4 = [tmp6(tmp(4474).Text, obj3), ];
       const obj4 = { variant: "text-xs/normal", children: null };
-      const intl2 = tmp(1236).intl;
+      const intl2 = tmp(1233).intl;
       const obj5 = { expirationDate: null };
       obj5[0] = classificationExpiration.toLocaleDateString(stateFromStores, { dateStyle: "medium" });
-      obj4[1] = intl2.format(tmp(1236).t.TByIjT, obj5);
+      obj4[1] = intl2.format(tmp(1233).t.TByIjT, obj5);
       items4[1] = tmp8(tmp(4474).Text, obj4);
       obj2[1] = items4;
       tmp6Result = tmp6(tmp7, obj2, "expiration");
@@ -159,12 +159,12 @@ function ClassificationPolicyCard(classificationDescription) {
   items = [tmp.classificationPolicyCard];
   obj = { style: tmp.classificationPolicyCardIcon, children: null };
   const tmp2 = renderDefault;
-  obj[1] = callback(policyExplainerLink(8427).ShieldIcon, { size: "sm", color: ThemesDefault.colors.TEXT_LINK });
+  obj[1] = callback(policyExplainerLink(8436).ShieldIcon, { size: "sm", color: ThemesDefault.colors.TEXT_LINK });
   const items1 = [callback(closure_4, obj), ];
   const obj2 = { style: tmp.classificationPolicyCardContent, children: null };
   const obj3 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = policyExplainerLink(1236).intl;
-  obj3[2] = intl.format(policyExplainerLink(1236).t.zxUdpj, { classificationDescription: classificationDescription.classificationTypeText });
+  const intl = policyExplainerLink(1233).intl;
+  obj3[2] = intl.format(policyExplainerLink(1233).t.zxUdpj, { classificationDescription: classificationDescription.classificationTypeText });
   obj2[1] = callback(policyExplainerLink(4474).Text, obj3);
   items1[1] = callback(closure_4, obj2);
   obj[2] = items1;
@@ -180,13 +180,13 @@ function AppealStatus() {
 function LetUsKnow(arg0) {
   const _require = arg0;
   let obj = { variant: "text-sm/normal", color: "text-muted", children: null };
-  const intl = _require(1236).intl;
+  const intl = _require(1233).intl;
   obj = {
     letUsKnowHook(children) {
       return closure_1_13(lib(closure_1_2[9]).Text, { onPress: lib.onPressLetUsKnow, variant: "text-sm/normal", color: "text-link", children }, arg1);
     }
   };
-  obj[2] = intl.format(_require(1236).t.IFxUaT, obj);
+  obj[2] = intl.format(_require(1233).t.IFxUaT, obj);
   return callback(_require(4474).Text, obj);
 }
 function AppealFooter(hasBeenAppealed) {

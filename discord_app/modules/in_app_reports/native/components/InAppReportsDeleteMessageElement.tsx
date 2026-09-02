@@ -1,10 +1,10 @@
-// === Module 12782: DeleteMessageElement ===
+// === Module 13003: DeleteMessageElement ===
 
-// Module 12782 (DeleteMessageElement)
+// Module 13003 (DeleteMessageElement)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "reinjectEphemerals" /* 4735 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import { AnalyticEvents } from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -17,7 +17,7 @@ export default function DeleteMessageElement(message) {
   let stateFromStores;
   const tmp = stateFromStores(React.useState(false), 2);
   dependencyMap = tmp[1];
-  let obj = message(589);
+  let obj = message(586);
   const items = [closure_5];
   const items1 = [message];
   stateFromStores = obj.useStateFromStores(items, () => null == closure_1_5.getMessage(message.getChannelId(), message.id), items1);
@@ -31,17 +31,17 @@ export default function DeleteMessageElement(message) {
     let obj = reportId(4700);
     obj = { report_id: reportId };
     obj.trackWithMetadata(closure_1_6.IAR_DELETE_MESSAGE_BUTTON_CLICKED, obj);
-    reportId(7201).deleteMessage(message.getChannelId(), message.id);
+    reportId(7210).deleteMessage(message.getChannelId(), message.id);
   }, items3);
   obj = { title: null, disabledTitle: null, description: null, disabled: null, variant: "danger", onPress: null, icon: null };
-  const intl = message(1236).intl;
-  obj[0] = intl.string(message(1236).t.c9BHL9);
-  const intl2 = message(1236).intl;
-  obj[1] = intl2.string(message(1236).t.AT2KSd);
-  const intl3 = message(1236).intl;
-  obj[2] = intl3.string(message(1236).t.dK8S0w);
+  const intl = message(1233).intl;
+  obj[0] = intl.string(message(1233).t.c9BHL9);
+  const intl2 = message(1233).intl;
+  obj[1] = intl2.string(message(1233).t.AT2KSd);
+  const intl3 = message(1233).intl;
+  obj[2] = intl3.string(message(1233).t.dK8S0w);
   obj[3] = tmp[0];
   obj[5] = callback;
   obj[6] = jsx(message(4436).TrashIcon, { color: "text-feedback-critical" });
-  return jsx(reportId(12777), { title: null, disabledTitle: null, description: null, disabled: null, variant: "danger", onPress: null, icon: null });
+  return jsx(reportId(12998), { title: null, disabledTitle: null, description: null, disabled: null, variant: "danger", onPress: null, icon: null });
 };

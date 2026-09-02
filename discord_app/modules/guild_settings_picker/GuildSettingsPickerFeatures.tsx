@@ -1,16 +1,16 @@
-// === Module 13629: useGuildSettingsPickerFeature ===
+// === Module 13852: useGuildSettingsPickerFeature ===
 
-// Module 13629 (useGuildSettingsPickerFeature)
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import _modDef13630 from "module_13630" /* 13630 */;
-import _modDef13631 from "module_13631" /* 13631 */;
+// Module 13852 (useGuildSettingsPickerFeature)
+import initialize from "initialize" /* 586 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import _modDef13853 from "module_13853" /* 13853 */;
+import _modDef13854 from "module_13854" /* 13854 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4121 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4120 */;
 
 require = arg1;
-let obj = { "server-subscriptions-onboarding": _modDef13630, "server-subscriptions-create-tier-from-template": _modDef13631 };
+let obj = { "server-subscriptions-onboarding": _modDef13853, "server-subscriptions-create-tier-from-template": _modDef13854 };
 let closure_6 = {
   title() {
     const intl = getSystemLocale.intl;

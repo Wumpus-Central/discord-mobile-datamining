@@ -1,7 +1,7 @@
-// === Module 8503: SlayerStorefrontItemCard ===
+// === Module 8516: SlayerStorefrontItemCard ===
 
-// Module 8503 (SlayerStorefrontItemCard)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 8516 (SlayerStorefrontItemCard)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;

@@ -1,22 +1,22 @@
-// === Module 13589: handleSupportedURL ===
+// === Module 13812: handleSupportedURL ===
 
-// Module 13589 (handleSupportedURL)
+// Module 13812 (handleSupportedURL)
 import closure_5 from "_objectWithoutProperties" /* 109 */;
 import closure_6 from "asyncGeneratorStep" /* 5 */;
-import closure_8 from "scheduledEventSort" /* 7271 */;
-import { handleMobileWebCheckoutStatus as closure_9 } from "usePremiumPlanPurchasedStore" /* 7166 */;
-import closure_10 from "zustandStore" /* 13074 */;
-import closure_11 from "fetchFingerprint" /* 1218 */;
-import ME from "ME" /* 676 */;
-import { StaticChannelRoute } from "set" /* 1394 */;
+import closure_8 from "scheduledEventSort" /* 7280 */;
+import { handleMobileWebCheckoutStatus as closure_9 } from "usePremiumPlanPurchasedStore" /* 7175 */;
+import closure_10 from "zustandStore" /* 13296 */;
+import closure_11 from "fetchFingerprint" /* 1215 */;
+import ME from "ME" /* 673 */;
+import { StaticChannelRoute } from "set" /* 1393 */;
 import { StreamTypes } from "StreamIssueReportReasons" /* 4545 */;
 import { NativePermissionTypes } from "NativePermissionStatus" /* 4730 */;
-import { OAUTH2_AUTHORIZE_MODAL_KEY as closure_20 } from "OAUTH2_AUTHORIZE_MODAL_KEY" /* 9278 */;
-import { FAMILY_CENTER_LINK_REQUEST_REGEX as closure_21 } from "items" /* 7283 */;
+import { OAUTH2_AUTHORIZE_MODAL_KEY as closure_20 } from "OAUTH2_AUTHORIZE_MODAL_KEY" /* 9291 */;
+import { FAMILY_CENTER_LINK_REQUEST_REGEX as closure_21 } from "items" /* 7292 */;
 import { MobileWebRedirectCheckoutDeepLinkActions as closure_22 } from "CustomCheckoutFlow" /* 4460 */;
-import { SHARE_SCREEN_MODAL_KEY } from "SHARE_SCREEN_MODAL_KEY" /* 13590 */;
-import { AccountSettingsTabs } from "AccountSettingsTabs" /* 11452 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 7884 */;
+import { SHARE_SCREEN_MODAL_KEY } from "SHARE_SCREEN_MODAL_KEY" /* 13813 */;
+import { AccountSettingsTabs } from "AccountSettingsTabs" /* 11675 */;
+import { MobileUserSettings } from "MobileUserSettings" /* 7893 */;
 
 const require = arg1;
 let closure_4 = ["code", "state"];
@@ -864,15 +864,15 @@ export default function handleSupportedURL(payload) {
               } else if (result.QUESTS === type) {
                 addPostConnectionCallback(() => {
                   if (null != payload.questId) {
-                    let obj = { questId: null, event: null, sourceQuestContent: null, properties: null };
+                    let obj = payload(inviteCode[70]);
+                    obj = { questId: null, event: null, sourceQuestContent: null, properties: null };
                     obj[0] = arr.questId;
                     obj[1] = closure_1_12.QUEST_SHARE_LINK_DEEP_LINKED_INTO_MOBILE_CLIENT;
                     obj[2] = payload(inviteCode[71]).QuestContent.QUEST_EMBED_MOBILE;
                     obj = { referrer_id: null };
                     obj[0] = arr.referrerId;
                     obj[3] = obj;
-                    payload(inviteCode[70]).trackQuestEvent(obj);
-                    const obj3 = payload(inviteCode[70]);
+                    obj.trackQuestEvent(obj);
                   }
                   let sort;
                   if (payload != null) {
@@ -882,26 +882,25 @@ export default function handleSupportedURL(payload) {
                   if (payload != null) {
                     filter = arr.filter;
                   }
-                  obj = payload(inviteCode[72]);
                   obj1 = { scrollToQuestId: payload.questId, sort: null, filter: null, fromContent: null };
-                  let tmp3 = null;
+                  let tmp9 = null;
                   if (null != sort) {
-                    tmp3 = null;
+                    tmp9 = null;
                     if ("" !== sort) {
-                      tmp3 = sort;
+                      tmp9 = sort;
                     }
                   }
-                  obj1[1] = tmp3;
-                  let tmp4 = null;
+                  obj1[1] = tmp9;
+                  let tmp10 = null;
                   if (null != filter) {
-                    tmp4 = null;
+                    tmp10 = null;
                     if ("" !== filter) {
-                      tmp4 = filter;
+                      tmp10 = filter;
                     }
                   }
-                  obj1[2] = tmp4;
+                  obj1[2] = tmp10;
                   obj1[3] = payload(inviteCode[71]).QuestContent.QUEST_SHARE_LINK;
-                  obj.openQuestHome(obj1);
+                  payload(inviteCode[72]).openQuestHome(obj1);
                 });
                 flag = true;
               } else if (result.QUEST_HOME_PREVIEW === type) {

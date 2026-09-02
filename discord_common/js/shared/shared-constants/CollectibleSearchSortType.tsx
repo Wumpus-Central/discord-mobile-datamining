@@ -1,6 +1,6 @@
-// === Module 681: CollectibleSearchSortType ===
+// === Module 678: CollectibleSearchSortType ===
 
-// Module 681 (CollectibleSearchSortType)
+// Module 678 (CollectibleSearchSortType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/CollectibleSearchSortType.tsx");

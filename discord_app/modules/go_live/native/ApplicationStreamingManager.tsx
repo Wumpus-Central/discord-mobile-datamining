@@ -1,11 +1,11 @@
-// === Module 17437: platformShowStreamFull ===
+// === Module 17673: platformShowStreamFull ===
 
-// Module 17437 (platformShowStreamFull)
+// Module 17673 (platformShowStreamFull)
 import timestampDefault from "timestamp" /* 3 */;
 import noopAll from "noop" /* 19 */;
 import _modDef4858 from "module_4858" /* 4858 */;
-import apexExperimentDefault from "apexExperiment" /* 10049 */;
-import updateRegionDefault from "updateRegion" /* 17438 */;
+import apexExperimentDefault from "apexExperiment" /* 10071 */;
+import updateRegionDefault from "updateRegion" /* 17674 */;
 import closure_3 from "ApplicationStreamPresets" /* 4572 */;
 import { ApplicationStreamPresets } from "RESOLUTION_720" /* 4537 */;
 import { MediaEngineContextTypes } from "DesktopSources" /* 4542 */;
@@ -46,7 +46,7 @@ prototype["platformHandleStreamStart"] = function platformHandleStreamStart(sour
       state[0] = ApplicationStreamPresets.PRESET_CUSTOM;
     }
     ({ preset, resolution, fps, soundshareEnabled } = state);
-    setGoLiveSource = setGoLiveSource(9781).setGoLiveSource;
+    setGoLiveSource = setGoLiveSource(9803).setGoLiveSource;
     obj = { desktopSettings: null, qualityOptions: null, context: null };
     obj = { sourceId: null, sound: null };
     obj[0] = sourceId;
@@ -59,7 +59,7 @@ prototype["platformHandleStreamStart"] = function platformHandleStreamStart(sour
     obj[1] = obj1;
     obj[2] = MediaEngineContextTypes.STREAM;
     setGoLiveSource(obj);
-    const setGoLiveSourceResult = setGoLiveSource(9781);
+    const setGoLiveSourceResult = setGoLiveSource(9803);
   } else {
     const _HermesInternal = HermesInternal;
     obj.warn("invalid start_stream: both application + display modes were specified (source-id: " + sourceId + ")");

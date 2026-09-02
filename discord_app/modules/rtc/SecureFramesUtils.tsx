@@ -1,28 +1,28 @@
-// === Module 9839: getCurrentUserSigningKey ===
+// === Module 9861: getCurrentUserSigningKey ===
 
-// Module 9839 (getCurrentUserSigningKey)
+// Module 9861 (getCurrentUserSigningKey)
 import byteLengthDefault from "byteLength" /* 206 */;
-import setDefault from "set" /* 687 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import combinedDefault from "combined" /* 1995 */;
-import hooksDefault from "hooks" /* 4075 */;
+import setDefault from "set" /* 684 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import combinedDefault from "combined" /* 1994 */;
+import hooksDefault from "hooks" /* 4074 */;
 import nameFromUserDefault from "nameFromUser" /* 4322 */;
 import getNicknameDefault from "getNickname" /* 4673 */;
 import setDefault2 from "set" /* 4857 */;
-import set from "set" /* 9824 */;
-import savePersistentCodesEnabledDefault from "savePersistentCodesEnabled" /* 9842 */;
-import _modDef9843 from "module_9843" /* 9843 */;
-import trackRTCPanelViewed from "trackRTCPanelViewed" /* 9850 */;
+import set from "set" /* 9846 */;
+import savePersistentCodesEnabledDefault from "savePersistentCodesEnabled" /* 9864 */;
+import _modDef9865 from "module_9865" /* 9865 */;
+import trackRTCPanelViewed from "trackRTCPanelViewed" /* 9872 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "fetchFingerprint" /* 1215 */;
 import closure_6 from "_detectH265HardwareDecode" /* 4529 */;
 import closure_7 from "createRTCConnection" /* 4554 */;
 import closure_8 from "initialize" /* 4568 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import closure_10 from "items" /* 9840 */;
-import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9841 */;
-import ME from "ME" /* 676 */;
+import closure_9 from "mergeGuildAvatar" /* 1921 */;
+import closure_10 from "items" /* 9862 */;
+import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9863 */;
+import ME from "ME" /* 673 */;
 
 require = arg1;
 function getCurrentUserSigningKey() {
@@ -110,7 +110,7 @@ function _isPublicKeyMatch() {
               closure_4 = tmp3;
               closure_3 = tmp7;
               c6 = 1;
-              const HTTP = callback(530).HTTP;
+              const HTTP = callback(527).HTTP;
               obj1 = { url: null, body: null, rejectWithError: false };
               obj1[0] = closure_1_15.VOICE_MATCH_PUBLIC_KEY(callback);
               let obj2 = { public_key: null, key_version: null };
@@ -126,7 +126,7 @@ function _isPublicKeyMatch() {
           } else if (1 === tmp7) {
             c6 = 0;
             callback = closure_5;
-            obj2 = callback2(1208);
+            obj2 = callback2(1205);
             obj2.captureException(callback);
             throw callback;
           } else if (arg0 === 1) {
@@ -577,12 +577,12 @@ export const deleteVerification = function deleteVerification(userId, arg1, isOt
 export const deletePersistentVerification = function deletePersistentVerification(userId, verifiedKey) {
   const _require = userId;
   importDefault = verifiedKey;
-  let obj = _modDef9843;
+  let obj = _modDef9865;
   obj = { title: null, subtitle: null, onConfirm: null };
-  const intl = _require(1236).intl;
-  obj[0] = intl.string(_require(1236).t.hdL152);
-  const intl2 = _require(1236).intl;
-  obj[1] = intl2.string(_require(1236).t["8VGYKg"]);
+  const intl = _require(1233).intl;
+  obj[0] = intl.string(_require(1233).t.hdL152);
+  const intl2 = _require(1233).intl;
+  obj[1] = intl2.string(_require(1233).t["8VGYKg"]);
   obj[2] = function onConfirm() {
     const result = verifiedKey(closure_1_2[11]).deleteSecureFramesVerifiedKey(userId, verifiedKey);
     const obj = verifiedKey(closure_1_2[11]);
@@ -596,58 +596,58 @@ export const deleteUserPersistentVerifications = function deleteUserPersistentVe
   let obj = nameFromUserDefault;
   const name = obj.getName(user);
   obj = { title: null, subtitle: null, onConfirm: null };
-  const intl = _require(1236).intl;
-  obj[0] = intl.formatToPlainString(_require(1236).t.K6NGBy, { username: name });
-  const intl2 = _require(1236).intl;
-  obj[1] = intl2.string(_require(1236).t.F1BQK3);
+  const intl = _require(1233).intl;
+  obj[0] = intl.formatToPlainString(_require(1233).t.K6NGBy, { username: name });
+  const intl2 = _require(1233).intl;
+  obj[1] = intl2.string(_require(1233).t.F1BQK3);
   obj[2] = function onConfirm() {
     const result = closure_1_1(closure_1_2[11]).deleteSecureFramesUserVerifiedKeys(userId);
     const obj = closure_1_1(closure_1_2[11]);
     const result1 = userId(closure_1_2[12]).trackE2EESettingsUserDelete();
   };
-  let result = _modDef9843.openSecureFramesUpdateConfirmation(obj);
+  let result = _modDef9865.openSecureFramesUpdateConfirmation(obj);
 };
 export const getSecureFramesUserVerifiedTimestamp = function getSecureFramesUserVerifiedTimestamp(timestamp) {
   let obj = hooksDefault();
   const diffResult = obj.diff(hooksDefault(timestamp), "s");
   if (diffResult > 12 * setDefault.Seconds.DAYS_30) {
     const _Math6 = Math;
-    const rounded = Math.round(diffResult / (12 * tmp(687).Seconds.DAYS_30));
+    const rounded = Math.round(diffResult / (12 * tmp(684).Seconds.DAYS_30));
     const intl7 = getSystemLocale.intl;
     obj = { count: null };
     obj[0] = rounded;
     return intl7.formatToPlainString(getSystemLocale.t.F1wqkD, obj);
-  } else if (diffResult > tmp(687).Seconds.DAYS_30) {
+  } else if (diffResult > tmp(684).Seconds.DAYS_30) {
     const _Math5 = Math;
-    const rounded1 = Math.round(diffResult / tmp(687).Seconds.DAYS_30);
+    const rounded1 = Math.round(diffResult / tmp(684).Seconds.DAYS_30);
     const intl6 = getSystemLocale.intl;
     obj = { count: null };
     obj[0] = rounded1;
     return intl6.formatToPlainString(getSystemLocale.t["iT+b+2"], obj);
-  } else if (diffResult > 7 * tmp(687).Seconds.DAY) {
+  } else if (diffResult > 7 * tmp(684).Seconds.DAY) {
     const _Math4 = Math;
-    const rounded2 = Math.round(diffResult / (7 * tmp(687).Seconds.DAY));
+    const rounded2 = Math.round(diffResult / (7 * tmp(684).Seconds.DAY));
     const intl5 = getSystemLocale.intl;
     obj1 = { count: null };
     obj1[0] = rounded2;
     return intl5.formatToPlainString(getSystemLocale.t.dLurKZ, obj1);
-  } else if (diffResult > tmp(687).Seconds.DAY) {
+  } else if (diffResult > tmp(684).Seconds.DAY) {
     const _Math3 = Math;
-    const rounded3 = Math.round(diffResult / tmp(687).Seconds.DAY);
+    const rounded3 = Math.round(diffResult / tmp(684).Seconds.DAY);
     const intl4 = getSystemLocale.intl;
     const obj2 = { count: null };
     obj2[0] = rounded3;
     return intl4.formatToPlainString(getSystemLocale.t.LE8a2H, obj2);
-  } else if (diffResult > tmp(687).Seconds.HOUR) {
+  } else if (diffResult > tmp(684).Seconds.HOUR) {
     const _Math2 = Math;
-    const rounded4 = Math.round(diffResult / tmp(687).Seconds.HOUR);
+    const rounded4 = Math.round(diffResult / tmp(684).Seconds.HOUR);
     const intl3 = getSystemLocale.intl;
     const obj3 = { count: null };
     obj3[0] = rounded4;
     return intl3.formatToPlainString(getSystemLocale.t.KULxVS, obj3);
-  } else if (diffResult > tmp(687).Seconds.MINUTE) {
+  } else if (diffResult > tmp(684).Seconds.MINUTE) {
     const _Math = Math;
-    const rounded5 = Math.round(diffResult / tmp(687).Seconds.MINUTE);
+    const rounded5 = Math.round(diffResult / tmp(684).Seconds.MINUTE);
     const intl2 = getSystemLocale.intl;
     const obj4 = { count: null };
     obj4[0] = rounded5;

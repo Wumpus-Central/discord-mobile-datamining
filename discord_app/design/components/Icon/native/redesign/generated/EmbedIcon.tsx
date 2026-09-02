@@ -1,10 +1,10 @@
-// === Module 9371: EmbedIcon ===
+// === Module 9384: EmbedIcon ===
 
-// Module 9371 (EmbedIcon)
+// Module 9384 (EmbedIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 9372 */;
+import registerAsset from "registerAsset" /* 9385 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

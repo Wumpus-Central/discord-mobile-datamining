@@ -1,6 +1,6 @@
-// === Module 12060: useGuildPowerupRollbackEnabled ===
+// === Module 12284: useGuildPowerupRollbackEnabled ===
 
-// Module 12060 (useGuildPowerupRollbackEnabled)
+// Module 12284 (useGuildPowerupRollbackEnabled)
 import set from "set" /* 2 */;
 import VANITY_URL_POWERUP_SKU_ID from "VANITY_URL_POWERUP_SKU_ID" /* 4368 */;
 import experiment from "experiment" /* 4405 */;

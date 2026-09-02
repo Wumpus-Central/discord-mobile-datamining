@@ -1,14 +1,14 @@
-// === Module 16876: scheduleUpcomingWarning ===
+// === Module 17112: scheduleUpcomingWarning ===
 
-// Module 16876 (scheduleUpcomingWarning)
-import dispatcherDefault from "dispatcher" /* 709 */;
-import messagesProxyDefault from "messagesProxy" /* 2369 */;
-import initializeDefault from "initialize" /* 5486 */;
-import apexExperiment from "apexExperiment" /* 7339 */;
-import closeRestrictedHoursModal from "closeRestrictedHoursModal" /* 16871 */;
-import closure_3 from "DesktopNotificationTypes" /* 10164 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "freshTeenActivityWithMap" /* 7282 */;
+// Module 17112 (scheduleUpcomingWarning)
+import dispatcherDefault from "dispatcher" /* 706 */;
+import messagesProxyDefault from "messagesProxy" /* 2368 */;
+import initializeDefault from "initialize" /* 5494 */;
+import apexExperiment from "apexExperiment" /* 7348 */;
+import closeRestrictedHoursModal from "closeRestrictedHoursModal" /* 17107 */;
+import closure_3 from "DesktopNotificationTypes" /* 10186 */;
+import closure_4 from "mergeGuildAvatar" /* 1921 */;
+import closure_5 from "freshTeenActivityWithMap" /* 7291 */;
 
 require = arg1;
 function scheduleUpcomingWarning() {
@@ -52,13 +52,13 @@ function scheduleUpcomingWarning() {
       const combined = "" + tmp7.rule.ruleId + ":" + tmp7.startAtMs;
       if (combined !== combined) {
         ({ startAtMs, rule } = tmp7);
-        const intl = tmp5(1236).intl;
+        const intl = tmp5(1233).intl;
         const _Date2 = Date;
         const date2 = new Date(startAtMs);
-        let tmp5Result = tmp5(10166);
-        const items = [tmp5(1944).JS_DAY_TO_DAY_OF_WEEK[date2.getDay(date2)]];
+        let tmp5Result = tmp5(10188);
+        const items = [tmp5(1943).JS_DAY_TO_DAY_OF_WEEK[date2.getDay(date2)]];
         const stringResult = intl.string(messagesProxyDefault["0JlDg0"]);
-        tmp5Result = tmp5(10166);
+        tmp5Result = tmp5(10188);
         const _HermesInternal2 = HermesInternal;
         const formatDaysResult = tmp5Result.formatDays(items);
         const trimmed = "" + tmp5Result.formatDays(items) + " " + tmp5Result.getScheduleRuleDateRange(rule).trim();

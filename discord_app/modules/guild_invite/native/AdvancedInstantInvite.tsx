@@ -1,10 +1,10 @@
-// === Module 17379: AdvancedInstantInvite ===
+// === Module 17615: AdvancedInstantInvite ===
 
-// Module 17379 (AdvancedInstantInvite)
+// Module 17615 (AdvancedInstantInvite)
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "markAllUserIdListsStale" /* 4130 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "mergeGuildAvatar" /* 1921 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

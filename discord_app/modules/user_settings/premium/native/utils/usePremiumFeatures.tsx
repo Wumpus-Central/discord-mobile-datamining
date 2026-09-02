@@ -1,8 +1,8 @@
-// === Module 8225: usePremiumFeatures ===
+// === Module 8234: usePremiumFeatures ===
 
-// Module 8225 (usePremiumFeatures)
+// Module 8234 (usePremiumFeatures)
 import closure_3 from "noop" /* 19 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import GuildFeatures from "GuildFeatures" /* 1923 */;
 import { TOTAL_PREMIUM_GROUP_USERS } from "SubscriptionStatusTypes" /* 4153 */;
 
 const require = arg1;

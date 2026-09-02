@@ -1,6 +1,6 @@
-// === Module 6536: metadata ===
+// === Module 6545: metadata ===
 
-// Module 6536 (metadata)
+// Module 6545 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ExperimentalGiftEnvelopeIllocon-2x.png.js");

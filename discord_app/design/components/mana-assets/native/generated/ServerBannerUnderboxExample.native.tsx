@@ -1,10 +1,10 @@
-// === Module 6969: ServerBannerUnderboxExample ===
+// === Module 6978: ServerBannerUnderboxExample ===
 
-// Module 6969 (ServerBannerUnderboxExample)
+// Module 6978 (ServerBannerUnderboxExample)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5493 */;
-import metadataDefault from "metadata" /* 6970 */;
+import preloadDefault from "preload" /* 5501 */;
+import metadataDefault from "metadata" /* 6979 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ServerBannerUnderboxExample.native.tsx");

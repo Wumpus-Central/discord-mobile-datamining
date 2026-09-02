@@ -1,14 +1,14 @@
-// === Module 11848: StyleSheet ===
+// === Module 12071: StyleSheet ===
 
-// Module 11848 (StyleSheet)
+// Module 12071 (StyleSheet)
 import useThemeDefault from "useTheme" /* 4413 */;
 import animatedComponentDefault from "animatedComponent" /* 4917 */;
-import setDefault from "set" /* 6006 */;
-import setDefault2 from "set" /* 7796 */;
+import setDefault from "set" /* 6014 */;
+import setDefault2 from "set" /* 7805 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
-import set from "set" /* 500 */;
+import set from "set" /* 1234 */;
 import importAllResult from "noop" /* 19 */;
 
 const require = arg1;
@@ -72,13 +72,13 @@ export default importAllResult.memo(function HeaderGlassBlur(shown) {
   const items1 = [StyleSheet.absoluteFillObject, blurStyle];
   const items2 = [closure_4(tmp11, { blurStyle: "ultra-thin", blurTheme: str, style: items1, animatedProps }), ];
   obj2 = { style: tmp.strokeContainer, children: null };
-  let tmp6Result = tmp6(6006);
+  let tmp6Result = tmp6(6014);
   const items3 = [closure_4(setDefault, { style: tmp.stroke }), ];
-  tmp6Result = tmp6(6006);
+  tmp6Result = tmp6(6014);
   const obj3 = { style: tmp.stroke };
-  obj6 = shown(1363);
-  const tmp2Result = tmp2(1363);
-  items3[1] = closure_4(tmp6Result, { style: tmp2(1363).isThemeDark(tmp7) ? tmp.strokeAlt : tmp.strokeAltLight });
+  obj6 = shown(1362);
+  const tmp2Result = tmp2(1362);
+  items3[1] = closure_4(tmp6Result, { style: tmp2(1362).isThemeDark(tmp7) ? tmp.strokeAlt : tmp.strokeAltLight });
   obj2[1] = items3;
   items2[1] = closure_5(tmp6Result, obj2);
   obj1[1] = items2;

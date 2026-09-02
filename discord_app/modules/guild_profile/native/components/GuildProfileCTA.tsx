@@ -1,9 +1,9 @@
-// === Module 9028: GuildProfileCTA ===
+// === Module 9042: GuildProfileCTA ===
 
-// Module 9028 (GuildProfileCTA)
+// Module 9042 (GuildProfileCTA)
 import closure_3 from "noop" /* 19 */;
-import { AnalyticsObjects } from "ME" /* 676 */;
-import { ProfileCustomizationScrollPositions as closure_5 } from "MAX_FAVORITES" /* 685 */;
+import { AnalyticsObjects } from "ME" /* 673 */;
+import { ProfileCustomizationScrollPositions as closure_5 } from "MAX_FAVORITES" /* 682 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

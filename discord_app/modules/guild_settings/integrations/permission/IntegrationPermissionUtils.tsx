@@ -1,8 +1,8 @@
-// === Module 7267: commandPermissions ===
+// === Module 7276: commandPermissions ===
 
-// Module 7267 (commandPermissions)
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
-import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 7268 */;
+// Module 7276 (commandPermissions)
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
+import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 7277 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 
 require = arg1;

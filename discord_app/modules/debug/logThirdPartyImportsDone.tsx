@@ -1,6 +1,6 @@
-// === Module 16877: timestamp ===
+// === Module 17113: timestamp ===
 
-// Module 16877 (timestamp)
+// Module 17113 (timestamp)
 import timestampDefault from "timestamp" /* 3 */;
 
 new timestampDefault("app").log("Finished loading third party imports");

@@ -1,8 +1,8 @@
-// === Module 7304: items ===
+// === Module 7313: items ===
 
-// Module 7304 (items)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 7313 (items)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 import set from "set" /* 2 */;
 
 const items = [];

@@ -1,7 +1,7 @@
-// === Module 16501: render ===
+// === Module 16736: render ===
 
-// Module 16501 (render)
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 16736 (render)
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import componentDidMountDefault from "componentDidMount" /* 4947 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;

@@ -1,13 +1,13 @@
-// === Module 9593: recentlyUsedEmojis ===
+// === Module 9606: recentlyUsedEmojis ===
 
-// Module 9593 (recentlyUsedEmojis)
+// Module 9606 (recentlyUsedEmojis)
 import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 1363 */;
+import initializeDefault from "initialize" /* 586 */;
+import setDefault from "set" /* 684 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 1362 */;
 import ParticipantTypes from "ParticipantTypes" /* 4499 */;
-import VoiceChannelEffectAnimationType from "VoiceChannelEffectAnimationType" /* 6193 */;
+import VoiceChannelEffectAnimationType from "VoiceChannelEffectAnimationType" /* 6202 */;
 import apply from "apply" /* 12 */;
 
 let closure_4 = ParticipantTypes.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT;

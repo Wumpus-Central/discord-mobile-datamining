@@ -1,8 +1,8 @@
-// === Module 13399: getGeoRestrictedGuilds ===
+// === Module 13622: getGeoRestrictedGuilds ===
 
-// Module 13399 (getGeoRestrictedGuilds)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 13622 (getGeoRestrictedGuilds)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 let closure_0 = [];
 const Store = initializeDefault.Store;

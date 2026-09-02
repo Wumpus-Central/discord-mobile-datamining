@@ -1,13 +1,13 @@
-// === Module 15085: onChange ===
+// === Module 15314: onChange ===
 
-// Module 15085 (onChange)
+// Module 15314 (onChange)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import create from "create" /* 1306 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import create from "create" /* 1305 */;
 import MAX_REACTIONS from "MAX_REACTIONS" /* 4132 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import MobileUserSettings from "MobileUserSettings" /* 7884 */;
-import createToggle from "createToggle" /* 11068 */;
+import MobileUserSettings from "MobileUserSettings" /* 7893 */;
+import createToggle from "createToggle" /* 11288 */;
 
 function onChange(arg0) {
   const obj = MAX_REACTIONS;

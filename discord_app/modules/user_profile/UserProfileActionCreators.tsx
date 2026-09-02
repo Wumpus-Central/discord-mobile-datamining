@@ -1,15 +1,15 @@
-// === Module 8077: _saveProfileChanges ===
+// === Module 8085: _saveProfileChanges ===
 
-// Module 8077 (_saveProfileChanges)
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import ComponentDispatcher from "ComponentDispatcher" /* 1231 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 1363 */;
+// Module 8085 (_saveProfileChanges)
+import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import ComponentDispatcher from "ComponentDispatcher" /* 1228 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 1362 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import closure_4 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
+import GuildFeatures from "GuildFeatures" /* 1923 */;
 
 require = arg1;
 function _saveProfileChanges() {

@@ -1,17 +1,17 @@
-// === Module 17025: _shouldSkipContactSyncStep ===
+// === Module 17261: _shouldSkipContactSyncStep ===
 
-// Module 17025 (_shouldSkipContactSyncStep)
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 17261 (_shouldSkipContactSyncStep)
+import dispatcherDefault from "dispatcher" /* 706 */;
 import _modDef4723 from "module_4723" /* 4723 */;
-import trackNUFStep from "trackNUFStep" /* 12221 */;
-import NEW_USER_MODAL_KEY from "NEW_USER_MODAL_KEY" /* 17026 */;
+import trackNUFStep from "trackNUFStep" /* 12445 */;
+import NEW_USER_MODAL_KEY from "NEW_USER_MODAL_KEY" /* 17262 */;
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "initialize" /* 15549 */;
-import closure_6 from "set" /* 5225 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { ContactPermissions } from "ContactSyncLandingPage" /* 12216 */;
+import closure_5 from "initialize" /* 15780 */;
+import closure_6 from "set" /* 5233 */;
+import closure_7 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
+import { ContactPermissions } from "ContactSyncLandingPage" /* 12440 */;
 import { NotificationAuthorizationStatus as closure_11 } from "NativePermissionStatus" /* 4730 */;
 
 require = arg1;
@@ -45,13 +45,13 @@ function _shouldSkipContactSyncStep() {
             return obj;
           } else {
             const callback = tmp4;
-            let obj2 = closure_1_0(12218);
+            let obj2 = closure_1_0(12442);
             const result = obj2.isContactSyncAvailable();
             if (result) {
               c1 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(12218).checkContactPermissions();
+              obj1[0] = closure_1_0(12442).checkContactPermissions();
               return obj1;
             } else {
               dependencyMap = 3;
@@ -62,7 +62,7 @@ function _shouldSkipContactSyncStep() {
           throw arg1;
         } else if (arg0 !== 2) {
           if (arg1 === constants.UNAUTHORIZED) {
-            obj = callback(500);
+            obj = callback(1234);
             obj.isIOS();
           }
         }
@@ -89,12 +89,12 @@ function lastStepComplete(STEP_GUILD_TEMPLATE) {
   trackNUFStep.trackNUFStep(STEP_GUILD_TEMPLATE, "NUF Complete");
   const obj = trackNUFStep;
   if (obj2.isModalOpen(NEW_USER_MODAL_KEY.NEW_USER_MODAL_KEY)) {
-    _modDef4723.popWithKey(tmp(17026).NEW_USER_MODAL_KEY);
+    _modDef4723.popWithKey(tmp(17262).NEW_USER_MODAL_KEY);
     const obj3 = _modDef4723;
   }
-  let tmpResult = tmp(1222);
+  let tmpResult = tmp(1219);
   tmpResult.transitionTo(constants.ME, { navigationReplace: true });
-  tmpResult = tmp(12284);
+  tmpResult = tmp(12508);
   const result = tmpResult.setNewUserFlowCompleted();
 }
 function getNextOnboardingStep(flag, first1, first) {
@@ -157,7 +157,7 @@ function _getNextOnboardingStep() {
               transitionStep2 = undefined;
               v0 = 1;
               transitionStep2 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -211,13 +211,13 @@ function _getNextOnboardingStep() {
               return obj5;
             } else if (arg1) {
               callback = dependencyMap;
-              obj3 = flag(12221);
+              obj3 = flag(12445);
               const obj6 = { skip: null };
               obj6[0] = flag;
               obj3.trackNUFStep(closure_3, key, obj6);
               if (null != transitionStep2) {
                 callback2(key);
-                obj2 = callback(709);
+                obj2 = callback(706);
                 obj2.wait(transitionStep2);
                 const obj7 = { lastShownStepIndex: null, onboardingStepIndex: null, continueNavigation: false };
                 obj7[0] = callback;

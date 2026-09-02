@@ -3,13 +3,13 @@
 // Module 4569 (sortActivity)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "initialize" /* 586 */;
+import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 656 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 import hasRichActivityDefault from "hasRichActivity" /* 4570 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import closure_2 from "fetchFingerprint" /* 1215 */;
+import closure_3 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
 
 function sortActivity(type, type2) {
   type = type2.type;

@@ -1,10 +1,10 @@
-// === Module 6953: SafetyShieldCenter3dIllustration ===
+// === Module 6962: SafetyShieldCenter3dIllustration ===
 
-// Module 6953 (SafetyShieldCenter3dIllustration)
+// Module 6962 (SafetyShieldCenter3dIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5493 */;
-import metadataDefault from "metadata" /* 6954 */;
+import preloadDefault from "preload" /* 5501 */;
+import metadataDefault from "metadata" /* 6963 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/SafetyShieldCenter3dIllustration.native.tsx");

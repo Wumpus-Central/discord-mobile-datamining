@@ -1,10 +1,10 @@
-// === Module 7119: WaypostSpotIllustration ===
+// === Module 7128: WaypostSpotIllustration ===
 
-// Module 7119 (WaypostSpotIllustration)
+// Module 7128 (WaypostSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5493 */;
-import metadataDefault from "metadata" /* 7120 */;
+import preloadDefault from "preload" /* 5501 */;
+import metadataDefault from "metadata" /* 7129 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/WaypostSpotIllustration.native.tsx");

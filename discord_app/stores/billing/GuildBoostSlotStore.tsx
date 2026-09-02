@@ -1,8 +1,8 @@
 // === Module 4370: handleGuildBoostsUpdate ===
 
 // Module 4370 (handleGuildBoostsUpdate)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 import closure_0 from "reset" /* 4145 */;
 
 function handleGuildBoostsUpdate(guildBoostSlot) {

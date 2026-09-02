@@ -1,11 +1,11 @@
-// === Module 9915: ? ===
+// === Module 9937: ? ===
 
-// Module 9915
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import generateAcceptInviteOptionsDefault from "generateAcceptInviteOptions" /* 8649 */;
-import closure_3 from "updateWithLatestInvite" /* 9910 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+// Module 9937
+import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import generateAcceptInviteOptionsDefault from "generateAcceptInviteOptions" /* 8664 */;
+import closure_3 from "updateWithLatestInvite" /* 9932 */;
+import { AnalyticEvents } from "ME" /* 673 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("actions/CreateInviteModalActionCreators.tsx");
@@ -80,8 +80,8 @@ export default {
         obj = { type: "CREATE_INVITE_MODAL_GENERATE_INVITE_SUCCESS", channelId };
         obj.dispatch(obj);
       }, (message) => {
-        const intl = channelId(1236).intl;
-        message = intl.string(channelId(1236).t.WB1ip6);
+        const intl = channelId(1233).intl;
+        message = intl.string(channelId(1233).t.WB1ip6);
         message = undefined;
         if (message != null) {
           message = message.message;
@@ -89,7 +89,7 @@ export default {
         if (null != message) {
           message = message.message;
         }
-        callback(709).dispatch({ type: "CREATE_INVITE_MODAL_GENERATE_INVITE_FAILURE", message });
+        callback(706).dispatch({ type: "CREATE_INVITE_MODAL_GENERATE_INVITE_FAILURE", message });
       });
       const tmp7Result = generateAcceptInviteOptionsDefault;
     }

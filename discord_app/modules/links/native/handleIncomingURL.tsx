@@ -1,12 +1,12 @@
-// === Module 17476: _handleIncomingURL ===
+// === Module 17712: _handleIncomingURL ===
 
-// Module 17476 (_handleIncomingURL)
+// Module 17712 (_handleIncomingURL)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "ensureGuildLoaded" /* 1387 */;
+import closure_4 from "ensureGuildLoaded" /* 1386 */;
 import closure_5 from "createRTCConnection" /* 4554 */;
-import closure_6 from "getState" /* 7157 */;
-import ME from "ME" /* 676 */;
+import closure_6 from "getState" /* 7166 */;
+import ME from "ME" /* 673 */;
 
 const require = arg1;
 function _handleIncomingURL() {

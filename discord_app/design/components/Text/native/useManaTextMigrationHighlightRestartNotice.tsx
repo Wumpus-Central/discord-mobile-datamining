@@ -1,6 +1,6 @@
-// === Module 15307: useManaTextMigrationHighlightRestartNotice ===
+// === Module 15535: useManaTextMigrationHighlightRestartNotice ===
 
-// Module 15307 (useManaTextMigrationHighlightRestartNotice)
+// Module 15535 (useManaTextMigrationHighlightRestartNotice)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "getUserAgnosticState" /* 4477 */;
 
@@ -9,7 +9,7 @@ const result = require("set").fileFinishedImporting("design/components/Text/nati
 
 export const useManaTextMigrationHighlightRestartNotice = function useManaTextMigrationHighlightRestartNotice() {
   const items = [closure_4];
-  const stateFromStores = _require(589).useStateFromStores(items, () => closure_4.get("highlight_mana_text"));
+  const stateFromStores = _require(586).useStateFromStores(items, () => closure_4.get("highlight_mana_text"));
   _require = React.useRef(true);
   const items1 = [stateFromStores];
   const effect = React.useEffect(() => {

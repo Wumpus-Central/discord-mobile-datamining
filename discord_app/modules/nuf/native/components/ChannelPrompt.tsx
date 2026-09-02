@@ -1,12 +1,12 @@
-// === Module 12283: ChannelPrompt ===
+// === Module 12507: ChannelPrompt ===
 
-// Module 12283 (ChannelPrompt)
+// Module 12507 (ChannelPrompt)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "comparator" /* 1982 */;
-import closure_9 from "createGuildRecordFromRust" /* 1909 */;
+import closure_8 from "comparator" /* 1981 */;
+import closure_9 from "createGuildRecordFromRust" /* 1908 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

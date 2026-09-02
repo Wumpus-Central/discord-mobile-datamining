@@ -1,7 +1,7 @@
-// === Module 17519: promise ===
+// === Module 17755: promise ===
 
-// Module 17519 (promise)
-import closure_3 from "ensureGuildLoaded" /* 1387 */;
+// Module 17755 (promise)
+import closure_3 from "ensureGuildLoaded" /* 1386 */;
 import closure_4 from "createRTCConnection" /* 4554 */;
 
 const require = arg1;

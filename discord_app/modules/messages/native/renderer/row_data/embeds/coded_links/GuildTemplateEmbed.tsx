@@ -1,14 +1,14 @@
-// === Module 12884: createGuildTemplateEmbed ===
+// === Module 13106: createGuildTemplateEmbed ===
 
-// Module 12884 (createGuildTemplateEmbed)
+// Module 13106 (createGuildTemplateEmbed)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD" /* 6171 */;
-import InviteSendStates from "InviteSendStates" /* 7481 */;
-import processColorOrThrow from "processColorOrThrow" /* 7845 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7854 */;
-import closure_4 from "handleGuildTemplateResolveSuccess" /* 7203 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD" /* 6179 */;
+import InviteSendStates from "InviteSendStates" /* 7491 */;
+import processColorOrThrow from "processColorOrThrow" /* 7854 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7863 */;
+import closure_4 from "handleGuildTemplateResolveSuccess" /* 7212 */;
 
 const Image = get_ActivityIndicator.Image;
 const GuildTemplateStates = GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD.GuildTemplateStates;
@@ -34,14 +34,14 @@ export const createGuildTemplateEmbed = function createGuildTemplateEmbed(code, 
     const intl = getSystemLocale.intl;
     obj.headerText = intl.string(getSystemLocale.t.C7ZRNw).toUpperCase();
     obj1 = processColorOrThrow;
-    obj.titleColor = obj1.processColorOrThrow(tmp(712).unsafe_rawColors.RED_400);
+    obj.titleColor = obj1.processColorOrThrow(tmp(709).unsafe_rawColors.RED_400);
     const intl2 = getSystemLocale.intl;
     obj.titleText = intl2.string(getSystemLocale.t.A6MwXE);
     const str = intl.string(getSystemLocale.t.C7ZRNw);
     if (obj3.isThemeDark(closure_2)) {
-      let tmpResult = tmp(11381);
+      let tmpResult = tmp(11604);
     } else {
-      tmpResult = tmp(11382);
+      tmpResult = tmp(11605);
     }
     obj.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
     obj.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;
@@ -62,7 +62,7 @@ export const createGuildTemplateEmbed = function createGuildTemplateEmbed(code, 
     obj1.titleColor = colors.titleColor;
     obj1.subtitle = formatToPlainStringResult;
     obj1.subtitleColor = colors.subtitleColor;
-    obj1.thumbnailUrl = Image.resolveAssetSource(tmp(12885)).uri;
+    obj1.thumbnailUrl = Image.resolveAssetSource(tmp(13107)).uri;
     ({ acceptLabelGreenColor: obj6.acceptLabelColor, acceptLabelGreenBackgroundColor: obj6.acceptLabelBackgroundColor } = colors);
     const intl6 = getSystemLocale.intl;
     obj1.acceptLabelText = intl6.string(getSystemLocale.t["a3Gl+e"]);

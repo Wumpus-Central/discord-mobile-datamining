@@ -1,13 +1,13 @@
-// === Module 16157: ? ===
+// === Module 16388: ? ===
 
-// Module 16157
-import ThemesDefault from "Themes" /* 712 */;
+// Module 16388
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "createGuildRecordFromRust" /* 1909 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4121 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "createGuildRecordFromRust" /* 1908 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4120 */;
+import closure_8 from "mergeGuildAvatar" /* 1921 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -111,12 +111,12 @@ const memoResult = importAllResult.memo((guildId) => {
       items: membersManagementActions,
       children(ref) {
         const merged = Object.assign(ref, Object.create(null));
-        const obj = { source: callback2(9768), accessibilityLabel: null, ref: null };
-        const intl = callback(1236).intl;
-        obj[1] = intl.string(callback(1236).t.ogxXGq);
+        const obj = { source: callback2(9790), accessibilityLabel: null, ref: null };
+        const intl = callback(1233).intl;
+        obj[1] = intl.string(callback(1233).t.ogxXGq);
         obj[2] = ref.ref;
         const merged1 = Object.assign(merged);
-        return callback3(callback(6237).HeaderActionButton, obj);
+        return callback3(callback(6246).HeaderActionButton, obj);
       }
     };
     return closure_1_9(guildId(num[18]).ContextMenu, obj);

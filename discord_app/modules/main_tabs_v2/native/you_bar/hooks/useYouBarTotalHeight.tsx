@@ -1,10 +1,10 @@
-// === Module 14701: useYouBarTotalHeight ===
+// === Module 14927: useYouBarTotalHeight ===
 
-// Module 14701 (useYouBarTotalHeight)
+// Module 14927 (useYouBarTotalHeight)
 import set from "set" /* 2 */;
-import useYouBarHorizontalMargin from "useYouBarHorizontalMargin" /* 14698 */;
-import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 14699 */;
-import useConnectionBannerHeight from "useConnectionBannerHeight" /* 14702 */;
+import useYouBarHorizontalMargin from "useYouBarHorizontalMargin" /* 14924 */;
+import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 14925 */;
+import useConnectionBannerHeight from "useConnectionBannerHeight" /* 14928 */;
 
 const YOU_BAR_HEIGHT = CONNECTION_BANNER_HEIGHT.YOU_BAR_HEIGHT;
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarTotalHeight.tsx");

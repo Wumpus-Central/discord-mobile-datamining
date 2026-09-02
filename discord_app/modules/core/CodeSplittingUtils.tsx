@@ -2,7 +2,7 @@
 
 // Module 4157
 import set from "set" /* 2 */;
-import awaitOnlineDefault from "awaitOnline" /* 1473 */;
+import awaitOnlineDefault from "awaitOnline" /* 1472 */;
 import loaderMaker from "loaderMaker" /* 4158 */;
 
 loaderMaker.setAwaitOnline(awaitOnlineDefault.awaitOnline);

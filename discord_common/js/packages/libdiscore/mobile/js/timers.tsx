@@ -1,8 +1,8 @@
-// === Module 1921: setTimeout ===
+// === Module 1920: setTimeout ===
 
-// Module 1921 (setTimeout)
+// Module 1920 (setTimeout)
 import set from "set" /* 2 */;
-import typedGlobal from "typedGlobal" /* 1918 */;
+import typedGlobal from "typedGlobal" /* 1917 */;
 
 function setTimeout(arg0, arg1) {
   let num = arg1;

@@ -1,10 +1,10 @@
-// === Module 12569: useShouldShowPremiumProfileFrameCTA ===
+// === Module 12793: useShouldShowPremiumProfileFrameCTA ===
 
-// Module 12569 (useShouldShowPremiumProfileFrameCTA)
+// Module 12793 (useShouldShowPremiumProfileFrameCTA)
 import set from "set" /* 2 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1950 */;
-import useCanPurchaseFramesDefault from "useCanPurchaseFrames" /* 12530 */;
-import useShouldShowPremiumProfileFrameEADefault from "useShouldShowPremiumProfileFrameEA" /* 12570 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
+import useCanPurchaseFramesDefault from "useCanPurchaseFrames" /* 12754 */;
+import useShouldShowPremiumProfileFrameEADefault from "useShouldShowPremiumProfileFrameEA" /* 12794 */;
 
 const result = set.fileFinishedImporting("modules/collectibles/hooks/useShouldShowPremiumProfileFrameCTA.tsx");
 

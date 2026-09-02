@@ -1,11 +1,11 @@
-// === Module 8042: useHeroColors ===
+// === Module 8051: useHeroColors ===
 
-// Module 8042 (useHeroColors)
-import nDefault from "n" /* 689 */;
+// Module 8051 (useHeroColors)
+import nDefault from "n" /* 686 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_6 from "handleThemeChange" /* 1302 */;
+import closure_6 from "handleThemeChange" /* 1301 */;
 
 const require = arg1;
 let c7 = 0.725;
@@ -13,14 +13,14 @@ const result = require("set").fileFinishedImporting("modules/content_inventory/m
 
 export default function useHeroColors(pendingAvatarSrc) {
   const items = [closure_5];
-  const stateFromStores = first(589).useStateFromStores(items, () => saturation.saturation);
-  let obj = first(589);
+  const stateFromStores = first(586).useStateFromStores(items, () => saturation.saturation);
+  let obj = first(586);
   const items1 = [closure_6];
-  const stateFromStores1 = first(589).useStateFromStores(items1, () => theme.theme);
-  let obj2 = first(589);
-  const fallbackHeroColor = first(8043).getFallbackHeroColor(stateFromStores1, stateFromStores);
-  let obj3 = first(8043);
-  let tmp4 = callback(first(8041).useAvatarColors(pendingAvatarSrc, fallbackHeroColor), 2);
+  const stateFromStores1 = first(586).useStateFromStores(items1, () => theme.theme);
+  let obj2 = first(586);
+  const fallbackHeroColor = first(8052).getFallbackHeroColor(stateFromStores1, stateFromStores);
+  let obj3 = first(8052);
+  let tmp4 = callback(first(8050).useAvatarColors(pendingAvatarSrc, fallbackHeroColor), 2);
   first = tmp4[0];
   closure_1 = tmp6;
   const items2 = [first, tmp4[1]];
@@ -86,14 +86,14 @@ export default function useHeroColors(pendingAvatarSrc) {
   }, items2);
 };
 export const getHeroColors = function getHeroColors(game_name) {
-  let obj = num(8043);
+  let obj = num(8052);
   const fallbackHeroColor = obj.getFallbackHeroColor(theme.theme, closure_5.saturation);
   num = undefined;
   num = 1;
   if (closure_5.desaturateUserColors) {
     num = tmp.saturation;
   }
-  const useColorStore = tmp2(8041).useColorStore;
+  const useColorStore = tmp2(8050).useColorStore;
   const arr = useColorStore.getState().palette[game_name];
   let mapped;
   if (arr != null) {
@@ -111,9 +111,9 @@ export const getHeroColors = function getHeroColors(game_name) {
     mapped = items;
   }
   [tmp7, tmp8] = callback(mapped, 2);
-  let tmp2Result = tmp2(688);
+  let tmp2Result = tmp2(685);
   const hex2intResult = tmp2Result.hex2int(tmp7);
-  tmp2Result = tmp2(688);
+  tmp2Result = tmp2(685);
   const hex2intResult1 = tmp2Result.hex2int(tmp8);
   tmp = closure_5;
   const tmp6 = callback(mapped, 2);
@@ -128,7 +128,7 @@ export const getHeroColors = function getHeroColors(game_name) {
     tmp12 = numResult;
     while (sum < 8) {
       let tmp17 = num;
-      let obj7 = num(688);
+      let obj7 = num(685);
       let tmp18 = c7;
       num2 = sum;
       tmp11 = numResult;
@@ -140,7 +140,7 @@ export const getHeroColors = function getHeroColors(game_name) {
     }
     const darkenResult = nDefault(tmp11).darken(0.5);
   }
-  tmp2Result1 = num(688);
+  tmp2Result1 = num(685);
   let num3 = 1;
   let tmp19 = hex2intResult1;
   let tmp20 = hex2intResult1;
@@ -152,7 +152,7 @@ export const getHeroColors = function getHeroColors(game_name) {
     tmp20 = numResult1;
     while (sum1 < 8) {
       let tmp25 = num;
-      let obj11 = num(688);
+      let obj11 = num(685);
       let tmp26 = c7;
       num3 = sum1;
       tmp19 = numResult1;
@@ -165,9 +165,9 @@ export const getHeroColors = function getHeroColors(game_name) {
     const darkenResult1 = nDefault(tmp19).darken(0.5);
   }
   obj = { primaryColor: null, secondaryColor: null };
-  obj8 = num(688);
-  obj[0] = num(688).int2hex(tmp12);
-  const obj13 = num(688);
-  obj[1] = num(688).int2hex(tmp20);
+  obj8 = num(685);
+  obj[0] = num(685).int2hex(tmp12);
+  const obj13 = num(685);
+  obj[1] = num(685).int2hex(tmp20);
   return obj;
 };

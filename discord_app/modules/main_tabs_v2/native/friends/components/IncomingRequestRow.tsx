@@ -1,13 +1,13 @@
-// === Module 16352: IncomingRequestRow ===
+// === Module 16584: IncomingRequestRow ===
 
-// Module 16352 (IncomingRequestRow)
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 16584 (IncomingRequestRow)
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import nameFromUserDefault from "nameFromUser" /* 4322 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import closure_5 from "addApplication" /* 4519 */;
-import { UserRowModes } from "UserRowModes" /* 10632 */;
-import { RelationshipTypes } from "ME" /* 676 */;
+import { UserRowModes } from "UserRowModes" /* 10853 */;
+import { RelationshipTypes } from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -116,21 +116,21 @@ function IncomingGameFriendRequestRow(arg0) {
   let obj = nameFromUserDefault;
   const userTag = obj.useUserTag(user);
   obj = { user, applicationId: application.id, accessibilityLabel: null, acceptedRequestLabel: null, acceptedRequestAccessibilityLabel: null, acceptRequestAccessibilityLabel: null, ignoreRequestAccessibilityLabel: null };
-  const intl = application(1236).intl;
-  obj[2] = intl.formatToPlainString(application(1236).t.u6lp4x, { name: userTag });
-  const intl2 = application(1236).intl;
+  const intl = application(1233).intl;
+  obj[2] = intl.formatToPlainString(application(1233).t.u6lp4x, { name: userTag });
+  const intl2 = application(1233).intl;
   obj = {
     applicationNameHook() {
       return closure_1_8(closure_1_1(closure_1_2[11]), { application, textVariant: "text-xs/medium", iconSize: 12 }, application.id);
     }
   };
-  obj[3] = intl2.format(application(1236).t.gRgJGR, obj);
-  const intl3 = application(1236).intl;
-  obj[4] = intl3.formatToPlainString(application(1236).t.Ke6fRJ, { name: userTag, applicationName: application.name });
-  const intl4 = application(1236).intl;
-  obj[5] = intl4.formatToPlainString(application(1236).t.kMUpdH, { name: userTag, applicationName: application.name });
-  const intl5 = application(1236).intl;
-  obj[6] = intl5.formatToPlainString(application(1236).t.d8Cw5e, { name: userTag, applicationName: application.name });
+  obj[3] = intl2.format(application(1233).t.gRgJGR, obj);
+  const intl3 = application(1233).intl;
+  obj[4] = intl3.formatToPlainString(application(1233).t.Ke6fRJ, { name: userTag, applicationName: application.name });
+  const intl4 = application(1233).intl;
+  obj[5] = intl4.formatToPlainString(application(1233).t.kMUpdH, { name: userTag, applicationName: application.name });
+  const intl5 = application(1233).intl;
+  obj[6] = intl5.formatToPlainString(application(1233).t.d8Cw5e, { name: userTag, applicationName: application.name });
   const merged1 = Object.assign(merged);
   return <IncomingRequestRow applicationNameHook={function applicationNameHook() {
     return closure_1_8(closure_1_1(closure_1_2[11]), { application, textVariant: "text-xs/medium", iconSize: 12 }, application.id);
@@ -162,7 +162,7 @@ export const ConnectedIncomingGameFriendRequestRow = function ConnectedIncomingG
   applicationId = applicationId.applicationId;
   let tmp = null;
   const merged = Object.assign(applicationId, Object.create(null));
-  let obj = applicationId(647);
+  let obj = applicationId(644);
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getApplication(applicationId));
   if (null != stateFromStores) {

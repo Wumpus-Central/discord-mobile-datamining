@@ -1,8 +1,8 @@
-// === Module 15538: RegistrationTransitionActionTypes ===
+// === Module 15769: RegistrationTransitionActionTypes ===
 
-// Module 15538 (RegistrationTransitionActionTypes)
+// Module 15769 (RegistrationTransitionActionTypes)
 import set from "set" /* 2 */;
-import keys from "keys" /* 691 */;
+import keys from "keys" /* 688 */;
 
 const obj = { ACCOUNT_IDENTITY: "Account Identity", ACCOUNT_DISPLAY_NAME: "Account Display Name", ACCOUNT_INFORMATION: "Account Information", AGE_GATE: "Age Gate", AGE_GATE_UNDERAGE: "Age Gate Underage", PHONE_VERIFICATION: "Phone Verification", REGISTER: "Register", CAPTCHA: "Captcha" };
 const result = set.fileFinishedImporting("modules/auth/RegistrationConstants.tsx");
@@ -13,13 +13,13 @@ export const RegisterTransitionSteps = obj;
 export const authStateToRegisterTransitionStep = function authStateToRegisterTransitionStep(arg0) {
   if (keys.AuthStates.REGISTER_IDENTITY === arg0) {
     return obj.ACCOUNT_IDENTITY;
-  } else if (tmp(691).AuthStates.REGISTER_DISPLAY_NAME === arg0) {
+  } else if (tmp(688).AuthStates.REGISTER_DISPLAY_NAME === arg0) {
     return obj.ACCOUNT_DISPLAY_NAME;
-  } else if (tmp(691).AuthStates.REGISTER_ACCOUNT_INFORMATION === arg0) {
+  } else if (tmp(688).AuthStates.REGISTER_ACCOUNT_INFORMATION === arg0) {
     return obj.ACCOUNT_INFORMATION;
-  } else if (tmp(691).AuthStates.AGE_GATE === arg0) {
+  } else if (tmp(688).AuthStates.AGE_GATE === arg0) {
     return obj.AGE_GATE;
-  } else if (tmp(691).AuthStates.VERIFY_PHONE === arg0) {
+  } else if (tmp(688).AuthStates.VERIFY_PHONE === arg0) {
     return obj.PHONE_VERIFICATION;
   }
 };

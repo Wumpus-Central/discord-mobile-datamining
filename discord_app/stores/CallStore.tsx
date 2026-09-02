@@ -1,14 +1,14 @@
-// === Module 5222: callConnect ===
+// === Module 5230: callConnect ===
 
-// Module 5222 (callConnect)
+// Module 5230 (callConnect)
 import applyDefault from "apply" /* 12 */;
-import sendRequest from "sendRequest" /* 530 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "ensureGuildLoaded" /* 1387 */;
-import closure_4 from "handleConnectionOpen" /* 1981 */;
+import sendRequest from "sendRequest" /* 527 */;
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import closure_3 from "ensureGuildLoaded" /* 1386 */;
+import closure_4 from "handleConnectionOpen" /* 1980 */;
 import closure_5 from "handleConnectionOpen" /* 4299 */;
-import { Endpoints } from "ME" /* 676 */;
+import { Endpoints } from "ME" /* 673 */;
 
 require = arg1;
 function callConnect() {

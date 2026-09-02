@@ -1,9 +1,9 @@
-// === Module 16954: GUILD_ROOM_SPATIAL_AUDIO_ENABLED ===
+// === Module 17190: GUILD_ROOM_SPATIAL_AUDIO_ENABLED ===
 
-// Module 16954 (GUILD_ROOM_SPATIAL_AUDIO_ENABLED)
-import initialize from "initialize" /* 589 */;
+// Module 17190 (GUILD_ROOM_SPATIAL_AUDIO_ENABLED)
+import initialize from "initialize" /* 586 */;
 import GUILD_ROOMS_EXPERIMENT_ID from "GUILD_ROOMS_EXPERIMENT_ID" /* 4720 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
+import closure_2 from "fetchFingerprint" /* 1215 */;
 import closure_3 from "resolveCreatingNotes" /* 4679 */;
 import items from "items" /* 4683 */;
 

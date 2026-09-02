@@ -5,7 +5,7 @@ import applyDefault from "apply" /* 12 */;
 import ROBLOX_PROTOCOL_URL from "ROBLOX_PROTOCOL_URL" /* 4655 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { isDetectionEnabled } from "initialize" /* 4501 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 
 require = arg1;
 function _openRobloxURLWithRootPlaceId() {

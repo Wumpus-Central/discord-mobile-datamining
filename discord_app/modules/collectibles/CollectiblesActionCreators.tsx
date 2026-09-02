@@ -1,23 +1,23 @@
-// === Module 7286: openCollectiblesShop ===
+// === Module 7295: openCollectiblesShop ===
 
-// Module 7286 (openCollectiblesShop)
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 7295 (openCollectiblesShop)
+import dispatcherDefault from "dispatcher" /* 706 */;
 import getRootNavigationRef from "getRootNavigationRef" /* 4333 */;
-import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 7299 */;
-import pushLayer from "pushLayer" /* 7332 */;
+import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 7308 */;
+import pushLayer from "pushLayer" /* 7341 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "getUserAgnosticState" /* 4477 */;
-import closure_5 from "_getSystemLocale" /* 1996 */;
-import closure_6 from "updateCategoriesAndProducts" /* 7287 */;
-import { addDebugLog } from "useCollectiblesDebugStore" /* 7302 */;
-import closure_8 from "map" /* 7303 */;
-import closure_9 from "items" /* 7304 */;
-import { CollectiblesCategoriesRecord as closure_10, CollectiblesMarketingsRecord as closure_11, CollectiblesShopHomeRecord as closure_14 } from "fromServer" /* 7305 */;
-import closure_12 from "fromServer" /* 7289 */;
-import closure_13 from "fromServer" /* 7315 */;
-import { CollectiblesMobileShopScreen as closure_15 } from "items" /* 678 */;
-import ME from "ME" /* 676 */;
-import getMarketingBySurface from "getMarketingBySurface" /* 7330 */;
+import closure_5 from "_getSystemLocale" /* 1995 */;
+import closure_6 from "updateCategoriesAndProducts" /* 7296 */;
+import { addDebugLog } from "useCollectiblesDebugStore" /* 7311 */;
+import closure_8 from "map" /* 7312 */;
+import closure_9 from "items" /* 7313 */;
+import { CollectiblesCategoriesRecord as closure_10, CollectiblesMarketingsRecord as closure_11, CollectiblesShopHomeRecord as closure_14 } from "fromServer" /* 7314 */;
+import closure_12 from "fromServer" /* 7298 */;
+import closure_13 from "fromServer" /* 7324 */;
+import { CollectiblesMobileShopScreen as closure_15 } from "items" /* 675 */;
+import ME from "ME" /* 673 */;
+import getMarketingBySurface from "getMarketingBySurface" /* 7339 */;
 import "map";
 
 require = arg1;
@@ -684,7 +684,7 @@ function _validateCollectiblesRecipient() {
           } else if (1 === tmp7) {
             c5 = 0;
             callback = closure_4;
-            obj2 = callback(6183);
+            obj2 = callback(6192);
             const aPIError = new callback(4376).APIError(callback);
             const result = obj2.captureOrIgnoreApiError(aPIError);
             c7 = 3;
@@ -780,7 +780,7 @@ function _validateCollectiblesRecipientsBatch() {
           } else if (1 === tmp7) {
             c5 = 0;
             callback = closure_4;
-            obj2 = callback(6183);
+            obj2 = callback(6192);
             const aPIError = new callback(4376).APIError(callback);
             const result = obj2.captureOrIgnoreApiError(aPIError);
             c7 = 3;
@@ -832,45 +832,108 @@ function _fetchCollectiblesMarketings() {
     c6 = 0;
     c4 = 0;
     const iter = (function*(arg0) {
-      let body = tmp3;
-      PROD = PROD.release;
-      if (PROD === undefined) {
-        PROD = callback(closure_1_2[26]).CollectiblesMarketingReleaseType.PROD;
-      }
-      yield "PX_16";
-      obj2(body[17]).dispatch({ type: "COLLECTIBLES_MARKETING_FETCH" });
-      obj2 = { platform: null };
-      obj2[0] = PROD(body[27]).CollectiblesMarketingPlatform.MOBILE;
-      if (PROD !== PROD(body[26]).CollectiblesMarketingReleaseType.PROD) {
-        obj2.release = PROD;
-      }
-      c4 = 1;
-      const HTTP = PROD(body[21]).HTTP;
-      let obj3 = { url: null, query: null, rejectWithError: true };
-      obj3[0] = constants.COLLECTIBLES_MARKETING;
-      obj3[1] = obj2;
-      yield HTTP.get(obj3);
-      if (2 === tmp7) {
-        c4 = 0;
-        obj3 = PROD(body[23]);
-        const aPIError = new PROD(body[22]).APIError(closure_3);
-        const result = obj3.captureOrIgnoreApiError(aPIError);
-        const obj4 = obj2(body[17]);
-        obj4.dispatch({ type: "COLLECTIBLES_MARKETING_FETCH_FAILURE" });
+      if (c6 === 2) {
         c6 = 3;
-      } else if (arg0 === 1) {
-        c6 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        body = arg1;
-        const obj = obj2(body[17]);
-        const obj5 = { type: "COLLECTIBLES_MARKETING_FETCH_SUCCESS", marketings: null };
-        obj5[1] = closure_11.fromServer(body.body);
-        obj.dispatch(obj5);
-        c4 = 0;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c6 = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let body = tmp3;
+              let obj2 = tmp7;
+              let PROD;
+              PROD = PROD.release;
+              if (PROD === undefined) {
+                PROD = callback(closure_1_2[26]).CollectiblesMarketingReleaseType.PROD;
+              }
+              obj2 = undefined;
+              body = undefined;
+              c5 = 1;
+              c6 = 1;
+              return { value: "PX_16", done: true };
+            }
+          } else if (1 === tmp7) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              obj1 = { value: null, done: true };
+              obj1[0] = arg1;
+              return obj1;
+            } else {
+              obj2(body[17]).dispatch({ type: "COLLECTIBLES_MARKETING_FETCH" });
+              obj2 = { platform: null };
+              obj2[0] = PROD(body[27]).CollectiblesMarketingPlatform.MOBILE;
+              if (PROD !== PROD(body[26]).CollectiblesMarketingReleaseType.PROD) {
+                obj2.release = PROD;
+              }
+              c4 = 1;
+              const HTTP = PROD(body[21]).HTTP;
+              let obj3 = { url: null, query: null, rejectWithError: true };
+              obj3[0] = constants.COLLECTIBLES_MARKETING;
+              obj3[1] = obj2;
+              c5 = 3;
+              c6 = 1;
+              let obj4 = { value: null, done: false };
+              obj4[0] = HTTP.get(obj3);
+              return obj4;
+            }
+          } else {
+            if (2 === tmp7) {
+              c4 = 0;
+              obj3 = PROD(body[23]);
+              const aPIError = new PROD(body[22]).APIError(closure_3);
+              const result = obj3.captureOrIgnoreApiError(aPIError);
+              obj4 = obj2(body[17]);
+              obj4.dispatch({ type: "COLLECTIBLES_MARKETING_FETCH_FAILURE" });
+              c6 = 3;
+            } else if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 !== 2) {
+              body = arg1;
+              obj = obj2(body[17]);
+              const obj5 = { type: "COLLECTIBLES_MARKETING_FETCH_SUCCESS", marketings: null };
+              obj5[1] = closure_11.fromServer(body.body);
+              obj.dispatch(obj5);
+              c4 = 0;
+            }
+            c4 = 0;
+            c6 = 3;
+            const obj6 = { value: null, done: true };
+            obj6[0] = arg1;
+            return obj6;
+          }
+        } catch (tmp44) {
+          closure_3 = tmp44;
+          if (tmp4 === c4) {
+            c6 = tmp2;
+            throw tmp44;
+          } else {
+            c5 = tmp;
+          }
+        }
       }
-      c4 = 0;
-      return arg1;
     })();
     iter.next();
     return iter;
@@ -1127,74 +1190,124 @@ function _maybeFetchCollectiblesShopTabLayout() {
     c6 = 0;
     c4 = 0;
     const iter = (function*(arg0) {
-      let layoutFetchError = tmp3;
-      ({ tab: c0, abortSignal: c1 } = callback);
-      yield "PX_16";
-      if (1 === tmp7) {
+      if (c6 === 2) {
+        c6 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
         if (arg0 === 1) {
-          c6 = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          c6 = 3;
-          obj1 = { value: null, done: true };
-          obj1[0] = arg1;
-          return obj1;
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
         } else {
-          if (!closure_9.isFetchingLayout(callback)) {
-            layoutFetchError = closure_9.getLayoutFetchError(callback);
-            let status;
-            if (layoutFetchError != null) {
-              status = layoutFetchError.status;
-            }
-            if (404 !== status) {
-              let status1;
-              if (layoutFetchError != null) {
-                status1 = layoutFetchError.status;
-              }
-              if (429 !== status1) {
-                c4 = 1;
-                const obj2 = { type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH", tab: null };
-                obj2[1] = callback;
-                callback2(layoutFetchError[17]).dispatch(obj2);
-                const HTTP = callback(layoutFetchError[21]).HTTP;
-                let obj3 = { url: null, rejectWithError: true, signal: null };
-                obj3[0] = closure_16.COLLECTIBLES_SHOP_TAB_LAYOUT(callback);
-                obj3[2] = callback2;
-                c5 = 3;
-                c6 = 1;
-                const obj4 = { value: null, done: false };
-                obj4[0] = HTTP.get(obj3);
-                return obj4;
-              }
-            }
-          }
-          c6 = 3;
+          return { value: "HermesInternal", done: null };
         }
-      } else if (2 === tmp7) {
-        c4 = 0;
-        c5 = body;
-        const aPIError = new callback(layoutFetchError[22]).APIError(c5);
-        c4 = aPIError;
-        obj3 = callback2(layoutFetchError[17]);
-        const obj5 = { type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_FAILURE", tab: null, apiError: null };
-        obj5[1] = callback;
-        obj5[2] = c4;
-        obj3.dispatch(obj5);
-        throw c4;
-      } else if (arg0 === 1) {
-        c6 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        body = arg1;
-        const obj = callback2(layoutFetchError[17]);
-        const obj6 = { type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_SUCCESS", tab: null, layoutId: null };
-        obj6[1] = callback;
-        obj6[2] = body.body.layout_id;
-        obj.dispatch(obj6);
-        c4 = 0;
+      } else {
+        try {
+          c6 = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let layoutFetchError = tmp3;
+              let callback2 = tmp7;
+              let callback;
+              callback2 = undefined;
+              ({ tab: c0, abortSignal: c1 } = callback);
+              layoutFetchError = undefined;
+              let body;
+              c4 = undefined;
+              c5 = 1;
+              c6 = 1;
+              return { value: "PX_16", done: true };
+            }
+          } else {
+            if (1 === tmp7) {
+              if (arg0 === 1) {
+                c6 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c6 = 3;
+                obj1 = { value: null, done: true };
+                obj1[0] = arg1;
+                return obj1;
+              } else {
+                if (!closure_9.isFetchingLayout(callback)) {
+                  layoutFetchError = closure_9.getLayoutFetchError(callback);
+                  let status;
+                  if (layoutFetchError != null) {
+                    status = layoutFetchError.status;
+                  }
+                  if (404 !== status) {
+                    let status1;
+                    if (layoutFetchError != null) {
+                      status1 = layoutFetchError.status;
+                    }
+                    if (429 !== status1) {
+                      c4 = 1;
+                      const obj2 = { type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH", tab: null };
+                      obj2[1] = callback;
+                      callback2(layoutFetchError[17]).dispatch(obj2);
+                      const HTTP = callback(layoutFetchError[21]).HTTP;
+                      let obj3 = { url: null, rejectWithError: true, signal: null };
+                      obj3[0] = closure_16.COLLECTIBLES_SHOP_TAB_LAYOUT(callback);
+                      obj3[2] = callback2;
+                      c5 = 3;
+                      c6 = 1;
+                      const obj4 = { value: null, done: false };
+                      obj4[0] = HTTP.get(obj3);
+                      return obj4;
+                    }
+                  }
+                }
+                c6 = 3;
+              }
+            } else if (2 === tmp7) {
+              c4 = 0;
+              c5 = body;
+              const aPIError = new callback(layoutFetchError[22]).APIError(c5);
+              c4 = aPIError;
+              obj3 = callback2(layoutFetchError[17]);
+              const obj5 = { type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_FAILURE", tab: null, apiError: null };
+              obj5[1] = callback;
+              obj5[2] = c4;
+              obj3.dispatch(obj5);
+              throw c4;
+            } else if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 !== 2) {
+              body = arg1;
+              obj = callback2(layoutFetchError[17]);
+              const obj6 = { type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_SUCCESS", tab: null, layoutId: null };
+              obj6[1] = callback;
+              obj6[2] = body.body.layout_id;
+              obj.dispatch(obj6);
+              c4 = 0;
+            }
+            c4 = 0;
+            c6 = 3;
+            const obj7 = { value: null, done: true };
+            obj7[0] = arg1;
+            return obj7;
+          }
+        } catch (tmp39) {
+          body = tmp39;
+          if (tmp4 === c4) {
+            c6 = tmp2;
+            throw tmp39;
+          } else {
+            c5 = tmp;
+          }
+        }
       }
-      c4 = 0;
-      return arg1;
     })();
     iter.next();
     return iter;

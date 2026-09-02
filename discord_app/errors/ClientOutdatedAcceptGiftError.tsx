@@ -2,7 +2,7 @@
 
 // Module 4382 (prototype)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 
 const AbortCodes = ME.AbortCodes;
 const prototype = function ClientOutdatedAcceptGiftError(arg0) {

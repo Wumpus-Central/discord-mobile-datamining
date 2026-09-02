@@ -1,6 +1,6 @@
-// === Module 12907: transformStickers ===
+// === Module 13129: transformStickers ===
 
-// Module 12907 (transformStickers)
+// Module 13129 (transformStickers)
 import set from "set" /* 2 */;
 import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4852 */;
 

@@ -1,10 +1,10 @@
-// === Module 6638: vanityUrl ===
+// === Module 6647: vanityUrl ===
 
-// Module 6638 (vanityUrl)
+// Module 6647 (vanityUrl)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GameDiversityTier8SmallBadge-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/0f62e6728ac0c29806a6583e9029352748e77cfad93b8853a55c6b552c0baac4.png";
+export default "https://cdn.discordapp.com/assets/content/c49fea6ba9ddf61116fd303906d87c95180f64f2ae477f1688f7dc043b97e422.png";
 export const vanityUrl = "https://cdn.discordapp.com/assets/mana/asset-library/generated/GameDiversityTier8SmallBadge-2x.png";
-export const metadata = { fileBytes: 2115 };
+export const metadata = { fileBytes: 1865 };

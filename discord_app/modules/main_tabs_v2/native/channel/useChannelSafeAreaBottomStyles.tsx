@@ -1,15 +1,15 @@
-// === Module 10994: useChannelSafeAreaBottomStyles ===
+// === Module 11214: useChannelSafeAreaBottomStyles ===
 
-// Module 10994 (useChannelSafeAreaBottomStyles)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 11214 (useChannelSafeAreaBottomStyles)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "_handleConnectionOpen" /* 5221 */;
-import closure_5 from "initialize" /* 4122 */;
-import closure_6 from "ensureGuildLoaded" /* 1387 */;
+import closure_4 from "_handleConnectionOpen" /* 5229 */;
+import closure_5 from "initialize" /* 4121 */;
+import closure_6 from "ensureGuildLoaded" /* 1386 */;
 import closure_7 from "_detectH265HardwareDecode" /* 4529 */;
 import closure_8 from "createRTCConnection" /* 4554 */;
-import { InputModes } from "ME" /* 676 */;
-import { StaticChannelRoute } from "set" /* 1394 */;
+import { InputModes } from "ME" /* 673 */;
+import { StaticChannelRoute } from "set" /* 1393 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
 const require = arg1;

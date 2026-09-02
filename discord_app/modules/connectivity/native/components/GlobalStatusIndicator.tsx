@@ -1,12 +1,12 @@
-// === Module 9653: nativeEventEmitter ===
+// === Module 9666: nativeEventEmitter ===
 
-// Module 9653 (nativeEventEmitter)
+// Module 9666 (nativeEventEmitter)
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "setContent" /* 4186 */;
 import closure_8 from "getParticipants" /* 4494 */;
-import closure_9 from "initialize" /* 9654 */;
-import closure_10 from "ensureGuildLoaded" /* 1387 */;
+import closure_9 from "initialize" /* 9667 */;
+import closure_10 from "ensureGuildLoaded" /* 1386 */;
 import closure_11 from "createRTCConnection" /* 4554 */;
 import jsxProd from "jsxProd" /* 21 */;
 

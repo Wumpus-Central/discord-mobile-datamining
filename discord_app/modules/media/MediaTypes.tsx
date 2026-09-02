@@ -2,9 +2,9 @@
 
 // Module 4744 (messageAttachmentToUnfurledMediaItem)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import hasFlag from "hasFlag" /* 1399 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1486 */;
+import ME from "ME" /* 673 */;
+import hasFlag from "hasFlag" /* 1398 */;
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1485 */;
 import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4671 */;
 
 function messageAttachmentToUnfurledMediaItem(flags) {
@@ -25,7 +25,7 @@ function messageAttachmentToUnfurledMediaItem(flags) {
   if (tmpResult.hasFlag(num3, MessageAttachmentFlags.IS_ANIMATED)) {
     num4 = obj.IS_ANIMATED | 0;
   }
-  obj = { url: flags.url, proxyUrl: flags.proxy_url, height: flags.height, width: flags.width, contentType: flags.content_type, originalContentType: flags.original_content_type, placeholder: flags.placeholder, placeholderVersion: flags.placeholder_version, loadingState: tmp(1955).UnfurledMediaLoadingState.LOADED_SUCCESS, contentScanMetadata: null, flags: null };
+  obj = { url: flags.url, proxyUrl: flags.proxy_url, height: flags.height, width: flags.width, contentType: flags.content_type, originalContentType: flags.original_content_type, placeholder: flags.placeholder, placeholderVersion: flags.placeholder_version, loadingState: tmp(1954).UnfurledMediaLoadingState.LOADED_SUCCESS, contentScanMetadata: null, flags: null };
   let tmp6;
   if (null != flags.content_scan_version) {
     obj = { version: null, flags: null };

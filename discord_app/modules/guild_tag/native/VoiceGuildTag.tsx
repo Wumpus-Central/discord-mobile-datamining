@@ -1,13 +1,13 @@
-// === Module 15714: VoiceGuildTagChiplet ===
+// === Module 15945: VoiceGuildTagChiplet ===
 
-// Module 15714 (VoiceGuildTagChiplet)
+// Module 15945 (VoiceGuildTagChiplet)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import { GuildTagBadgeSize } from "items" /* 7853 */;
+import closure_3 from "mergeGuildAvatar" /* 1921 */;
+import { GuildTagBadgeSize } from "items" /* 7862 */;
 import jsxProd from "jsxProd" /* 21 */;
-import set from "set" /* 500 */;
+import set from "set" /* 1234 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
 const require = arg1;
@@ -31,11 +31,11 @@ const result = set.fileFinishedImporting("modules/guild_tag/native/VoiceGuildTag
 export default function VoiceGuildTagChiplet(userId) {
   userId = userId.userId;
   const tmp = callback3();
-  let obj = userId(589);
+  let obj = userId(586);
   const items = [closure_3];
   const items1 = [userId];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getUser(userId), items1);
-  obj1 = userId(8075);
+  obj1 = userId(8083);
   let primaryGuild;
   if (stateFromStores != null) {
     primaryGuild = stateFromStores.primaryGuild;
@@ -48,13 +48,13 @@ export default function VoiceGuildTagChiplet(userId) {
       obj[0] = tmp.gapContainer;
       obj = { style: null, children: null };
       obj[0] = tmp.tagContainer;
-      const guildTagBadgeUrl = tmp2(8075).getGuildTagBadgeUrl(guildId, tmp7, GuildTagBadgeSize.SIZE_12);
+      const guildTagBadgeUrl = tmp2(8083).getGuildTagBadgeUrl(guildId, tmp7, GuildTagBadgeSize.SIZE_12);
       obj1 = { source: null, size: null };
       const obj2 = { uri: null };
       obj2[0] = guildTagBadgeUrl;
       obj1[0] = obj2;
       obj1[1] = GuildTagBadgeSize.SIZE_12;
-      const items2 = [callback(tmp2(9007).GuildTagBadge, obj1), ];
+      const items2 = [callback(tmp2(9021).GuildTagBadge, obj1), ];
       const obj3 = { variant: "text-xs/semibold", color: "text-default", style: null, children: null };
       obj3[2] = tmp.tag;
       obj3[3] = tag;

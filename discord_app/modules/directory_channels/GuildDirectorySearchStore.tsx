@@ -1,8 +1,8 @@
-// === Module 11870: getSearchState ===
+// === Module 12093: getSearchState ===
 
-// Module 11870 (getSearchState)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 12093 (getSearchState)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 const require = arg1;
 let closure_2 = [];
@@ -63,7 +63,7 @@ const guildDirectorySearchStore = new GuildDirectorySearchStore(dispatcherDefaul
     });
     obj = {};
     const merged1 = Object.assign(dependencyMap2[channelId]);
-    obj = { results: items(11871).orderByTotalMemberCount(items), lastSearchedAt: Date.now() };
+    obj = { results: items(12094).orderByTotalMemberCount(items), lastSearchedAt: Date.now() };
     obj[query.query] = obj;
     dependencyMap2[channelId] = obj;
   },

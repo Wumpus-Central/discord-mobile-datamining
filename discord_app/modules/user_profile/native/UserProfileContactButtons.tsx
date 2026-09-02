@@ -1,12 +1,12 @@
-// === Module 12612: FlatFriendButton ===
+// === Module 12836: FlatFriendButton ===
 
-// Module 12612 (FlatFriendButton)
+// Module 12836 (FlatFriendButton)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import Button from "Button" /* 4928 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "markAllUserIdListsStale" /* 4130 */;
-import { RelationshipTypes } from "ME" /* 676 */;
+import { RelationshipTypes } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -36,15 +36,15 @@ function FriendRequestButton(user) {
   let stateFromStores;
   closure_4 = undefined;
   ({ hasCustomProfileTheme, ButtonComponent } = user);
-  let obj = user(8558);
+  let obj = user(8571);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
   if (newestAnalyticsLocation == null) {
-    newestAnalyticsLocation = trackUserProfileAction(5953)().newestAnalyticsLocation;
+    newestAnalyticsLocation = trackUserProfileAction(5961)().newestAnalyticsLocation;
   }
   dependencyMap = { location: newestAnalyticsLocation };
-  let tmp3Result = tmp3(12494);
+  let tmp3Result = tmp3(12718);
   const gameFriendsForUser = tmp3Result.useGameFriendsForUser(user.id);
-  tmp3Result = tmp3(589);
+  tmp3Result = tmp3(586);
   const items = [closure_4];
   stateFromStores = tmp3Result.useStateFromStores(items, () => relationshipType.getRelationshipType(user.id));
   closure_4 = trackUserProfileAction(4322).useName(user);
@@ -56,21 +56,21 @@ function FriendRequestButton(user) {
         return null;
       } else {
         if (stateFromStores === tmp5.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp3(12613).UserClockIcon;
+          let UserPlusIcon = tmp3(12837).UserClockIcon;
         } else {
           UserPlusIcon = tmp3(4415).UserPlusIcon;
         }
-        const intl = tmp3(1236).intl;
+        const intl = tmp3(1233).intl;
         const string = intl.string;
-        const t = tmp3(1236).t;
+        const t = tmp3(1233).t;
         if (stateFromStores === tmp5.PENDING_OUTGOING) {
           let stringResult = string(t["fMm5q/"]);
         } else {
           stringResult = string(t["7815ae"]);
         }
-        const intl2 = tmp3(1236).intl;
+        const intl2 = tmp3(1233).intl;
         const string2 = intl2.string;
-        const t2 = tmp3(1236).t;
+        const t2 = tmp3(1233).t;
         if (stateFromStores === tmp5.PENDING_OUTGOING) {
           let string2Result = string2(t2.H0Ql7N);
         } else {
@@ -88,11 +88,11 @@ function FriendRequestButton(user) {
               callback({ action: "CANCEL_FRIEND_REQUEST" });
               closure_1_1(closure_1_2[17]).cancelFriendRequest(id.id, closure_2);
             };
-            const result = user(9071).confirmCancelFriendRequest(obj);
-            const obj3 = user(9071);
+            const result = user(9085).confirmCancelFriendRequest(obj);
+            const obj3 = user(9085);
           } else {
             trackUserProfileAction({ action: "SEND_FRIEND_REQUEST" });
-            obj = trackUserProfileAction(9059);
+            obj = trackUserProfileAction(9073);
             obj = { userId: null, context: null };
             obj[0] = user.id;
             obj[1] = dependencyMap;

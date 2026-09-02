@@ -1,10 +1,10 @@
-// === Module 8498: initialize ===
+// === Module 8511: initialize ===
 
-// Module 8498 (initialize)
+// Module 8511 (initialize)
 import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import ME from "ME" /* 676 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "initialize" /* 586 */;
+import ME from "ME" /* 673 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
 
 const ApplicationFlags = ME.ApplicationFlags;

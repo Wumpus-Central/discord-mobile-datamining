@@ -1,8 +1,8 @@
-// === Module 13500: getKrispCpuDisablementConfig ===
+// === Module 13723: getKrispCpuDisablementConfig ===
 
-// Module 13500 (getKrispCpuDisablementConfig)
+// Module 13723 (getKrispCpuDisablementConfig)
 import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1468 */;
+import ApexExperiment from "ApexExperiment" /* 1467 */;
 
 const obj = { 1: null, 2: { consecutiveFailures: 3 }, 3: { consecutiveFailures: 5 } };
 obj[3] = { consecutiveFailures: 10 };

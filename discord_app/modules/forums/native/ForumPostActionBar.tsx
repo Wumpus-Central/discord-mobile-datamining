@@ -1,14 +1,14 @@
-// === Module 11047: ForumPostActionBar ===
+// === Module 11267: ForumPostActionBar ===
 
-// Module 11047 (ForumPostActionBar)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 11267 (ForumPostActionBar)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initialize" /* 4122 */;
-import closure_7 from "storeThread" /* 4123 */;
-import closure_8 from "ensureGuildLoaded" /* 1387 */;
-import { AnalyticsSections } from "ME" /* 676 */;
+import closure_6 from "initialize" /* 4121 */;
+import closure_7 from "storeThread" /* 4122 */;
+import closure_8 from "ensureGuildLoaded" /* 1386 */;
+import { AnalyticsSections } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -34,16 +34,16 @@ export default function ForumPostActionBar(channel) {
   let width;
   let React;
   const tmp = callback2();
-  let obj = channel(589);
+  let obj = channel(586);
   const items = [closure_8];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getChannel(channel.parent_id));
-  obj1 = channel(6149);
+  obj1 = channel(6157);
   const firstMessage = obj1.useFirstForumPostMessage(channel).firstMessage;
-  let obj2 = channel(589);
+  let obj2 = channel(586);
   const items1 = [closure_7];
   stateFromStores1 = obj2.useStateFromStores(items1, () => closure_1_7.hasJoined(channel.id));
   dependencyMap = channel.getGuildId();
-  let obj3 = channel(589);
+  let obj3 = channel(586);
   const items2 = [closure_6];
   const stateFromStores2 = obj3.useStateFromStores(items2, () => {
     let isLurkingResult = null != closure_2;
@@ -52,14 +52,14 @@ export default function ForumPostActionBar(channel) {
     }
     return isLurkingResult;
   });
-  width = stateFromStores1(1493)().width;
+  width = stateFromStores1(1492)().width;
   const tmp7 = width(React.useState(0), 2);
   React = tmp7[1];
   const items3 = [width];
   const callback = React.useCallback((nativeEvent) => {
     callback(width - nativeEvent.nativeEvent.layout.width - 40);
   }, items3);
-  let obj4 = channel(7616);
+  let obj4 = channel(7626);
   obj = { style: null, children: null };
   const items4 = [tmp.actionBarContainer, obj4.useGradientTop()];
   obj[0] = items4;
@@ -72,7 +72,7 @@ export default function ForumPostActionBar(channel) {
     obj1[1] = stateFromStores;
     obj1[2] = firstMessage;
     obj1[3] = tmp7[0];
-    obj[1] = callback(tmp2(11048).ForumPostActionBarReactions, obj1);
+    obj[1] = callback(tmp2(11268).ForumPostActionBarReactions, obj1);
     tmp11 = callback(tmp10, obj);
   }
   const items5 = [tmp11, ];
@@ -82,45 +82,45 @@ export default function ForumPostActionBar(channel) {
   if (stateFromStores2) {
     const items7 = [tmp13, , ];
     obj3 = { accessible: true, accessibilityLabel: null, style: null, onPress: null, children: null };
-    const intl4 = tmp2(1236).intl;
-    obj3[1] = intl4.string(tmp2(1236).t.WqhZss);
+    const intl4 = tmp2(1233).intl;
+    obj3[1] = intl4.string(tmp2(1233).t.WqhZss);
     obj3[2] = tmp.actionButton;
     obj3[3] = function onPress() {
       const guildId = channel.getGuildId();
       if (null != guildId) {
-        let obj = channel(10890);
+        let obj = channel(11110);
         obj = { section: null };
         obj[0] = closure_1_9.CHANNEL_HEADER;
         const result = obj.handleCopyLinkForumPost(guildId, channel.id, obj);
       }
     };
     obj3[4] = callback(tmp2(4421).LinkIcon, { size: "xs" });
-    items7[1] = callback(tmp2(5068).PressableOpacity, obj3);
+    items7[1] = callback(tmp2(5076).PressableOpacity, obj3);
     obj4 = { accessible: true, accessibilityLabel: null, style: null, onPress: null, children: null };
-    const intl5 = tmp2(1236).intl;
-    obj4[1] = intl5.string(tmp2(1236).t.nFP4oa);
+    const intl5 = tmp2(1233).intl;
+    obj4[1] = intl5.string(tmp2(1233).t.nFP4oa);
     const items8 = [, ];
     ({ actionButton: arr12[0], lastActionButton: arr12[1] } = tmp);
     obj4[2] = items8;
     obj4[3] = function onPress() {
-      let obj = stateFromStores1(7201);
+      let obj = stateFromStores1(7210);
       obj = { channelId: channel.id, messageId: stateFromStores1(11).castChannelIdAsMessageId(channel.id), flash: true, jumpType: channel(4409).JumpType.ANIMATED };
       obj.jumpToMessage(obj);
     };
-    obj4[4] = callback(tmp2(11049).ArrowLargeUpIcon, { size: "xs" });
-    items7[2] = callback(tmp2(5068).PressableOpacity, obj4);
+    obj4[4] = callback(tmp2(11269).ArrowLargeUpIcon, { size: "xs" });
+    items7[2] = callback(tmp2(5076).PressableOpacity, obj4);
     obj2[2] = items7;
     items5[1] = tmp9(tmp10, obj2);
     obj[1] = items5;
     return tmp9(tmp10, obj);
   } else {
     let items9 = function handleFollow() {
-      const result = channel(10890).handleToggleFollowForumPost(channel, stateFromStores1);
+      const result = channel(11110).handleToggleFollowForumPost(channel, stateFromStores1);
     };
     const obj5 = { accessible: true, accessibilityLabel: null, style: null, onPress: null, children: null };
-    let intl = tmp2(1236).intl;
+    let intl = tmp2(1233).intl;
     let Text = intl.string;
-    let t = tmp2(1236).t;
+    let t = tmp2(1233).t;
     if (stateFromStores1) {
       obj5[1] = Text(t.G3ooHD);
       obj5[2] = tmp.actionButton;
@@ -131,8 +131,8 @@ export default function ForumPostActionBar(channel) {
       const obj6 = { style: null, variant: "text-sm/semibold", color: "text-brand", children: null };
       const items10 = [tmp.buttonText];
       obj6[0] = items10;
-      const intl3 = tmp2(1236).intl;
-      obj6[3] = intl3.string(tmp2(1236).t["OtF+lC"]);
+      const intl3 = tmp2(1233).intl;
+      obj6[3] = intl3.string(tmp2(1233).t["OtF+lC"]);
       t = callback(Text, obj6);
       items9[1] = t;
       obj5[4] = items9;
@@ -141,15 +141,15 @@ export default function ForumPostActionBar(channel) {
       obj5[1] = Text(t["DjZ+6E"]);
       obj5[2] = tmp.actionButton;
       obj5[3] = items9;
-      const items11 = [callback(tmp2(9746).BellIcon, { size: "xs" }), ];
+      const items11 = [callback(tmp2(9768).BellIcon, { size: "xs" }), ];
       const obj7 = { style: null, variant: "text-sm/semibold", color: "interactive-text-default", children: null };
       obj7[0] = tmp.buttonText;
-      const intl2 = tmp2(1236).intl;
-      obj7[3] = intl2.string(tmp2(1236).t["0rQinA"]);
+      const intl2 = tmp2(1233).intl;
+      obj7[3] = intl2.string(tmp2(1233).t["0rQinA"]);
       items11[1] = callback(tmp2(4474).Text, obj7);
       obj5[4] = items11;
       tmp15 = obj5;
     }
-    tmp9(tmp2(5068).PressableOpacity, tmp15);
+    tmp9(tmp2(5076).PressableOpacity, tmp15);
   }
 };

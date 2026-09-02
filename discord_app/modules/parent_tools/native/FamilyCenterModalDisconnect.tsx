@@ -1,12 +1,12 @@
-// === Module 14527: FamilyCenterModalDisconnectScreen ===
+// === Module 14750: FamilyCenterModalDisconnectScreen ===
 
-// Module 14527 (FamilyCenterModalDisconnectScreen)
-import ThemesDefault from "Themes" /* 712 */;
-import messagesProxyDefault from "messagesProxy" /* 2369 */;
+// Module 14750 (FamilyCenterModalDisconnectScreen)
+import ThemesDefault from "Themes" /* 709 */;
+import messagesProxyDefault from "messagesProxy" /* 2368 */;
 import nameFromUserDefault from "nameFromUser" /* 4322 */;
 import _modDef4723 from "module_4723" /* 4723 */;
-import registerAssetDefault from "registerAsset" /* 7764 */;
-import FamilyCenterAvatarPairDefault from "FamilyCenterAvatarPair" /* 14528 */;
+import registerAssetDefault from "registerAsset" /* 7773 */;
+import FamilyCenterAvatarPairDefault from "FamilyCenterAvatarPair" /* 14751 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -27,7 +27,7 @@ function FamilyCenterModalDisconnectScreen(otherUser) {
   }, []);
   let obj = nameFromUserDefault;
   const name = obj.useName(otherUser);
-  obj1 = otherUser(8772);
+  obj1 = otherUser(8787);
   const requiresParentalConsent = obj1.useRequiresParentalConsent(otherUser.id);
   [tmp9, c1] = disconnectLinkRequest(isDisconnectLoading.useState(false), 2);
   const tmp8 = disconnectLinkRequest(isDisconnectLoading.useState(false), 2);
@@ -38,34 +38,34 @@ function FamilyCenterModalDisconnectScreen(otherUser) {
     _undefined(false);
     _undefined2(false);
   }, []);
-  let obj2 = otherUser(11489);
+  let obj2 = otherUser(11712);
   const familyCenterActions = obj2.useFamilyCenterActions({ onSuccess: callback, onError: callback1 });
   disconnectLinkRequest = familyCenterActions.disconnectLinkRequest;
   isDisconnectLoading = familyCenterActions.isDisconnectLoading;
-  let obj3 = otherUser(11492);
-  let intl = otherUser(1236).intl;
+  let obj3 = otherUser(11715);
+  let intl = otherUser(1233).intl;
   const tmp10 = disconnectLinkRequest(isDisconnectLoading.useState(false), 2);
-  const intl2 = otherUser(1236).intl;
+  const intl2 = otherUser(1233).intl;
   const ageSpecificText = obj3.useAgeSpecificText(intl.format(messagesProxyDefault.F2lccv, { username: name }), intl2.string(messagesProxyDefault["WH+Gba"]));
-  let obj4 = otherUser(11492);
-  const intl3 = otherUser(1236).intl;
+  let obj4 = otherUser(11715);
+  const intl3 = otherUser(1233).intl;
   const formatResult = intl.format(messagesProxyDefault.F2lccv, { username: name });
-  const intl4 = otherUser(1236).intl;
+  const intl4 = otherUser(1233).intl;
   const ageSpecificText1 = obj4.useAgeSpecificText(intl3.string(messagesProxyDefault.hOEHFn), intl4.format(messagesProxyDefault.Or6hgl, { username: name }));
-  let obj5 = otherUser(11492);
-  const intl5 = otherUser(1236).intl;
+  let obj5 = otherUser(11715);
+  const intl5 = otherUser(1233).intl;
   const stringResult = intl3.string(messagesProxyDefault.hOEHFn);
-  const intl6 = otherUser(1236).intl;
+  const intl6 = otherUser(1233).intl;
   const ageSpecificText2 = obj5.useAgeSpecificText(intl5.format(messagesProxyDefault.XyRW4c, { username: name }), intl6.format(messagesProxyDefault.PlrZal, { username: name }));
-  let obj6 = otherUser(11492);
-  const intl7 = otherUser(1236).intl;
+  let obj6 = otherUser(11715);
+  const intl7 = otherUser(1233).intl;
   const formatResult1 = intl5.format(messagesProxyDefault.XyRW4c, { username: name });
-  const intl8 = otherUser(1236).intl;
+  const intl8 = otherUser(1233).intl;
   const ageSpecificText3 = obj6.useAgeSpecificText(intl7.string(messagesProxyDefault.eiABQz), intl8.string(messagesProxyDefault.PGQBnk));
-  let obj7 = otherUser(11492);
-  const intl9 = otherUser(1236).intl;
+  let obj7 = otherUser(11715);
+  const intl9 = otherUser(1233).intl;
   const stringResult1 = intl7.string(messagesProxyDefault.eiABQz);
-  const intl10 = otherUser(1236).intl;
+  const intl10 = otherUser(1233).intl;
   const items = [disconnectLinkRequest, otherUser.id];
   const ageSpecificText4 = obj7.useAgeSpecificText(intl9.string(messagesProxyDefault.sCbKs4), intl10.string(messagesProxyDefault["0ki7+P"]));
   const items1 = [isDisconnectLoading];
@@ -89,7 +89,7 @@ function FamilyCenterModalDisconnectScreen(otherUser) {
   obj[1] = registerAssetDefault;
   const items3 = [callback(FamilyCenterAvatarPairDefault, obj), , ];
   obj1 = { style: tmp.title, variant: "text-lg/bold", children: null };
-  const intl11 = otherUser(1236).intl;
+  const intl11 = otherUser(1233).intl;
   obj1[2] = intl11.format(messagesProxyDefault.o0JXuK, { username: name });
   items3[1] = callback(otherUser(4474).Text, obj1);
   obj2 = { style: tmp.subtitle, variant: "text-sm/bold", color: "text-default", children: ageSpecificText };
@@ -101,18 +101,18 @@ function FamilyCenterModalDisconnectScreen(otherUser) {
     obj3 = { style: null, text: null };
     obj3[0] = tmp.warning;
     obj3[1] = ageSpecificText1;
-    tmp28Result = tmp28(tmp3(14480), obj3);
+    tmp28Result = tmp28(tmp3(14703), obj3);
   }
   obj4 = { children: null };
   items4[1] = tmp28Result;
   obj5 = { style: tmp.body, variant: "text-md/normal", color: "text-default", children: ageSpecificText2 };
   items4[2] = callback(otherUser(4474).Text, obj5);
-  obj6 = { spacing: tmp3(712).space.PX_12, children: null };
-  const items5 = [callback(otherUser(9367).Checkbox, { label: ageSpecificText3, checked: tmp9, onToggle: callback3 }), callback(otherUser(9367).Checkbox, { label: ageSpecificText4, checked: tmp11, onToggle: callback4 })];
+  obj6 = { spacing: tmp3(709).space.PX_12, children: null };
+  const items5 = [callback(otherUser(9380).Checkbox, { label: ageSpecificText3, checked: tmp9, onToggle: callback3 }), callback(otherUser(9380).Checkbox, { label: ageSpecificText4, checked: tmp11, onToggle: callback4 })];
   obj6[1] = items5;
   items4[3] = callback2(otherUser(4926).Stack, obj6);
   obj4[0] = items4;
-  const items6 = [callback2(otherUser(8693).ModalContent, obj4), ];
+  const items6 = [callback2(otherUser(8708).ModalContent, obj4), ];
   let tmp31 = !tmp9;
   if (tmp9) {
     tmp31 = !tmp11;
@@ -124,20 +124,20 @@ function FamilyCenterModalDisconnectScreen(otherUser) {
   const obj8 = { children: null };
   const obj9 = { children: null };
   const obj10 = { variant: "destructive", disabled: tmp31, loading: isDisconnectLoading, text: null, onPress: null };
-  const intl12 = tmp6(1236).intl;
+  const intl12 = tmp6(1233).intl;
   obj10[3] = intl12.string(messagesProxyDefault["c5L+sl"]);
   obj10[4] = callback2;
   const items7 = [callback(otherUser(4928).Button, obj10), ];
   const obj11 = { variant: "tertiary", text: null, onPress: null };
-  const intl13 = tmp6(1236).intl;
-  obj11[1] = intl13.string(otherUser(1236).t["3ilveh"]);
+  const intl13 = tmp6(1233).intl;
+  obj11[1] = intl13.string(otherUser(1233).t["3ilveh"]);
   obj11[2] = _modDef4723.pop;
   items7[1] = callback(otherUser(4928).Button, obj11);
   obj9[0] = items7;
-  obj8[0] = callback2(otherUser(5376).ButtonGroup, obj9);
-  items6[1] = callback(otherUser(11499).ModalFooter, obj8);
+  obj8[0] = callback2(otherUser(5384).ButtonGroup, obj9);
+  items6[1] = callback(otherUser(11722).ModalFooter, obj8);
   obj7[0] = items6;
-  return callback2(otherUser(8692).ModalScreen, obj7);
+  return callback2(otherUser(8707).ModalScreen, obj7);
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { header: null, title: null, subtitle: null, warning: null, body: null };
@@ -173,7 +173,7 @@ export default function FamilyCenterModalDisconnect(otherUser) {
     return obj;
   }, items);
   let obj = { initialRouteName: "DISCONNECT", screens: memo, headerBackTitle: null };
-  const intl = otherUser(1236).intl;
-  obj[2] = intl.string(otherUser(1236).t["13/7kX"]);
-  return callback(otherUser(11501).Modal, obj);
+  const intl = otherUser(1233).intl;
+  obj[2] = intl.string(otherUser(1233).t["13/7kX"]);
+  return callback(otherUser(11724).Modal, obj);
 };

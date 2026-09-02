@@ -1,12 +1,12 @@
-// === Module 7166: usePremiumPlanPurchasedStore ===
+// === Module 7175: usePremiumPlanPurchasedStore ===
 
-// Module 7166 (usePremiumPlanPurchasedStore)
-import batchUpdates from "batchUpdates" /* 705 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5973 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7167 */;
+// Module 7175 (usePremiumPlanPurchasedStore)
+import batchUpdates from "batchUpdates" /* 702 */;
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5981 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7176 */;
 import closure_3 from "setContent" /* 4186 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import keys from "keys" /* 644 */;
+import GuildFeatures from "GuildFeatures" /* 1923 */;
+import keys from "keys" /* 641 */;
 
 require = arg1;
 ({ PREMIUM_PLAN_SELECTION_ACTION_SHEET_KEY: c4, PremiumTypes: c5 } = GuildFeatures);
@@ -33,7 +33,7 @@ export const setPaymentSuccess = function setPaymentSuccess() {
 };
 export const setMobileWebRedirectCheckoutStatus = function setMobileWebRedirectCheckoutStatus(arg0) {
   const _require = arg0;
-  _require(705).batchUpdates(() => closure_1_6.setState({ mobileWebRedirectCheckoutStatus: closure_0 }));
+  _require(702).batchUpdates(() => closure_1_6.setState({ mobileWebRedirectCheckoutStatus: closure_0 }));
 };
 export const handleMobileWebCheckoutStatus = function handleMobileWebCheckoutStatus(arg0) {
   const _require = arg0;
@@ -50,11 +50,11 @@ export const handleMobileWebCheckoutStatus = function handleMobileWebCheckoutSta
         openPremiumPlanSelectionActionSheetDefault(obj);
         const tmp3 = openPremiumPlanSelectionActionSheetDefault;
       }
-      _require(705).batchUpdates(() => closure_1_6.setState({ isPaymentSuccess: true, mobileWebRedirectCheckoutStatus: closure_0 }));
+      _require(702).batchUpdates(() => closure_1_6.setState({ isPaymentSuccess: true, mobileWebRedirectCheckoutStatus: closure_0 }));
       if (null != onPaymentSuccess) {
         onPaymentSuccess(tmp13);
       }
-      const obj2 = _require(705);
+      const obj2 = _require(702);
     }
   }
 };
@@ -83,6 +83,6 @@ export const reset = function reset() {
         str = "dismissed";
       }
     }
-    closure_1_6.setState({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: str, onPaymentSuccess: "accessible", onPaymentDismiss: "Error" });
+    closure_1_6.setState({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: str, onPaymentSuccess: "r", onPaymentDismiss: "channelId" });
   });
 };

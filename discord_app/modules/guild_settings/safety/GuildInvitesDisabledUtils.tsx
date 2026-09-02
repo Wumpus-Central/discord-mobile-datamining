@@ -1,9 +1,9 @@
-// === Module 11940: useInvitesDisabledPermission ===
+// === Module 12163: useInvitesDisabledPermission ===
 
-// Module 11940 (useInvitesDisabledPermission)
-import closure_2 from "computeAlertSettings" /* 10163 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4121 */;
-import ME from "ME" /* 676 */;
+// Module 12163 (useInvitesDisabledPermission)
+import closure_2 from "computeAlertSettings" /* 10185 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4120 */;
+import ME from "ME" /* 673 */;
 
 const require = arg1;
 ({ GuildFeatures: c4, Permissions: c5 } = ME);
@@ -13,7 +13,7 @@ export const useInvitesDisabledPermission = function useInvitesDisabledPermissio
   const _require = guild;
   const items = [closure_3];
   const items1 = [guild];
-  return _require(589).useStateFromStores(items, () => {
+  return _require(586).useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
       canResult = closure_1_3.can(closure_1_5.MANAGE_GUILD, tmp);
@@ -24,7 +24,7 @@ export const useInvitesDisabledPermission = function useInvitesDisabledPermissio
 export const useInvitesDisabled = function useInvitesDisabled(features) {
   const _require = features;
   const items = [closure_2];
-  const stateFromStores = _require(589).useStateFromStores(items, () => {
+  const stateFromStores = _require(586).useStateFromStores(items, () => {
     let guildIncident = null;
     if (null != closure_0) {
       guildIncident = closure_1_2.getGuildIncident(tmp.id);
@@ -57,7 +57,7 @@ export const useShouldShowInvitesDisabledNotif = function useShouldShowInvitesDi
   let _require = guild;
   const items = [closure_3];
   const items1 = [guild];
-  let stateFromStores = _require(589).useStateFromStores(items, () => {
+  let stateFromStores = _require(586).useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
       canResult = closure_1_3.can(closure_1_5.MANAGE_GUILD, tmp);
@@ -65,9 +65,9 @@ export const useShouldShowInvitesDisabledNotif = function useShouldShowInvitesDi
     return canResult;
   }, items1);
   _require = guild;
-  const obj = _require(589);
+  const obj = _require(586);
   const items2 = [closure_2];
-  const stateFromStores1 = _require(589).useStateFromStores(items2, () => {
+  const stateFromStores1 = _require(586).useStateFromStores(items2, () => {
     let guildIncident = null;
     if (null != closure_0) {
       guildIncident = closure_1_2.getGuildIncident(tmp.id);

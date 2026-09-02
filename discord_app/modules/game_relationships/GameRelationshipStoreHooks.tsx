@@ -1,9 +1,9 @@
-// === Module 12494: useGameRelationshipsByType ===
+// === Module 12718: useGameRelationshipsByType ===
 
-// Module 12494 (useGameRelationshipsByType)
+// Module 12718 (useGameRelationshipsByType)
 import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "recountRelationshipTypes" /* 7403 */;
-import { RelationshipTypes } from "ME" /* 676 */;
+import closure_3 from "recountRelationshipTypes" /* 7412 */;
+import { RelationshipTypes } from "ME" /* 673 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/game_relationships/GameRelationshipStoreHooks.tsx");
@@ -12,10 +12,10 @@ export const useGameRelationshipsByType = function useGameRelationshipsByType(FR
   const _require = FRIEND;
   let items = [closure_3];
   const items1 = [FRIEND];
-  return callback(_require(589).useStateFromStores(items, () => {
+  return callback(_require(586).useStateFromStores(items, () => {
     const items = [closure_1_3.getGameRelationshipsByType(closure_0), closure_1_3.getGameRelationshipsVersion()];
     return items;
-  }, items1, _require(5375).isVersionEqual), 1)[0];
+  }, items1, _require(5383).isVersionEqual), 1)[0];
 };
 export const useGameFriendsForUser = function useGameFriendsForUser(id) {
   const FRIEND = RelationshipTypes.FRIEND;
@@ -41,20 +41,20 @@ export const useHasGameRelationshipsForUser = function useHasGameRelationshipsFo
   const _require = arg0;
   let items = [closure_3];
   const items1 = [arg0];
-  return callback(_require(589).useStateFromStores(items, () => {
+  return callback(_require(586).useStateFromStores(items, () => {
     const gameRelationshipsForUser = closure_1_3.getGameRelationshipsForUser(closure_0);
     const items = [gameRelationshipsForUser.length > 0, closure_1_3.getGameRelationshipsVersion()];
     return items;
-  }, items1, _require(5375).isVersionEqual), 1)[0];
+  }, items1, _require(5383).isVersionEqual), 1)[0];
 };
 export const useHasGameRelationshipsForUserByType = function useHasGameRelationshipsForUserByType(arg0, arg1) {
   const _require = arg0;
   dependencyMap = arg1;
   let items = [closure_3];
   const items1 = [arg1, arg0];
-  return callback(_require(589).useStateFromStores(items, () => {
+  return callback(_require(586).useStateFromStores(items, () => {
     const gameRelationshipsForUserByType = closure_1_3.getGameRelationshipsForUserByType(closure_0, closure_1);
     const items = [gameRelationshipsForUserByType.length > 0, closure_1_3.getGameRelationshipsVersion()];
     return items;
-  }, items1, _require(5375).isVersionEqual), 1)[0];
+  }, items1, _require(5383).isVersionEqual), 1)[0];
 };

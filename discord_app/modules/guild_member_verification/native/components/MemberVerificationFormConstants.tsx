@@ -1,8 +1,8 @@
-// === Module 7649: BANNER_RATIO_HEIGHT_16_9 ===
+// === Module 7658: BANNER_RATIO_HEIGHT_16_9 ===
 
-// Module 7649 (BANNER_RATIO_HEIGHT_16_9)
+// Module 7658 (BANNER_RATIO_HEIGHT_16_9)
 import set from "set" /* 2 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1492 */;
 
 let c2 = 0.5625;
 const result = set.fileFinishedImporting("modules/guild_member_verification/native/components/MemberVerificationFormConstants.tsx");

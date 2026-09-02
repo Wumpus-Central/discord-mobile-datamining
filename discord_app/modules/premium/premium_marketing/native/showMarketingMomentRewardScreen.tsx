@@ -1,8 +1,8 @@
-// === Module 13062: _showMarketingMomentRewardScreen ===
+// === Module 13284: _showMarketingMomentRewardScreen ===
 
-// Module 13062 (_showMarketingMomentRewardScreen)
+// Module 13284 (_showMarketingMomentRewardScreen)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "updateCategoriesAndProducts" /* 7287 */;
+import closure_4 from "updateCategoriesAndProducts" /* 7296 */;
 
 const require = arg1;
 function _showMarketingMomentRewardScreen() {

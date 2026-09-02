@@ -1,6 +1,6 @@
-// === Module 1373: DismissibleContent ===
+// === Module 1372: DismissibleContent ===
 
-// Module 1373 (DismissibleContent)
+// Module 1372 (DismissibleContent)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx");

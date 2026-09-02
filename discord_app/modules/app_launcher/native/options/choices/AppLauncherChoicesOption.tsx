@@ -1,7 +1,7 @@
-// === Module 11734: AppLauncherChoicesOption ===
+// === Module 11957: AppLauncherChoicesOption ===
 
-// Module 11734 (AppLauncherChoicesOption)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 11957 (AppLauncherChoicesOption)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;

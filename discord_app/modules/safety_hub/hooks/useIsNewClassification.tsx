@@ -1,6 +1,6 @@
-// === Module 14362: useIsNewClassification ===
+// === Module 14585: useIsNewClassification ===
 
-// Module 14362 (useIsNewClassification)
+// Module 14585 (useIsNewClassification)
 import set from "set" /* 2 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 

@@ -1,11 +1,11 @@
-// === Module 9126: useExpressionPickerListWidth ===
+// === Module 9140: useExpressionPickerListWidth ===
 
-// Module 9126 (useExpressionPickerListWidth)
+// Module 9140 (useExpressionPickerListWidth)
 import set from "set" /* 2 */;
-import ExpressionPickerViewType from "ExpressionPickerViewType" /* 1338 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import ACTION_SHEET_START_HEIGHT_RATIO from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5623 */;
+import ExpressionPickerViewType from "ExpressionPickerViewType" /* 1337 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1492 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
+import ACTION_SHEET_START_HEIGHT_RATIO from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5631 */;
 
 const PADDING_HORIZONTAL = ExpressionPickerViewType.PADDING_HORIZONTAL;
 const ACTION_SHEET_MAX_WIDTH = ACTION_SHEET_START_HEIGHT_RATIO.ACTION_SHEET_MAX_WIDTH;

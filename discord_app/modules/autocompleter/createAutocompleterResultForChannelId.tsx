@@ -1,11 +1,11 @@
-// === Module 9935: createAutocompleterResultForChannelId ===
+// === Module 9957: createAutocompleterResultForChannelId ===
 
-// Module 9935 (createAutocompleterResultForChannelId)
+// Module 9957 (createAutocompleterResultForChannelId)
 import computeChannelName from "computeChannelName" /* 4674 */;
-import closure_2 from "ensureGuildLoaded" /* 1387 */;
+import closure_2 from "ensureGuildLoaded" /* 1386 */;
 import closure_3 from "markAllUserIdListsStale" /* 4130 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import { ChannelTypes } from "ME" /* 676 */;
+import closure_4 from "mergeGuildAvatar" /* 1921 */;
+import { ChannelTypes } from "ME" /* 673 */;
 
 require = arg1;
 require("HeaderRecord").AutocompleterResultTypes;

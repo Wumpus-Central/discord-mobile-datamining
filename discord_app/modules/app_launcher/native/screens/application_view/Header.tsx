@@ -1,16 +1,16 @@
-// === Module 11702: xl ===
+// === Module 11925: xl ===
 
-// Module 11702 (xl)
+// Module 11925 (xl)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import _modDef4217 from "module_4217" /* 4217 */;
-import hasFetchedColorsDefault from "hasFetchedColors" /* 8041 */;
-import AppLauncherBackButtonDefault from "AppLauncherBackButton" /* 11703 */;
+import hasFetchedColorsDefault from "hasFetchedColors" /* 8050 */;
+import AppLauncherBackButtonDefault from "AppLauncherBackButton" /* 11926 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "handleDismissWithDismissed" /* 8434 */;
-import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1498 */;
-import ME from "ME" /* 676 */;
+import closure_4 from "mergeGuildAvatar" /* 1921 */;
+import closure_5 from "handleDismissWithDismissed" /* 8443 */;
+import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1497 */;
+import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -46,13 +46,13 @@ export default function Header(application) {
   dependencyMap = undefined;
   let currentUser2;
   ({ onPressBack, onAddAppMenuClick } = application);
-  let obj = scrollOffsetY(589);
+  let obj = scrollOffsetY(586);
   let items = [closure_5];
   importDefault = obj.useStateFromStores(items, () => closure_5.entrypoint());
   const tmp3 = callback3();
   let appLauncherIconSource = null;
   if (null != application) {
-    let tmpResult = tmp(11623);
+    let tmpResult = tmp(11846);
     appLauncherIconSource = tmpResult.getAppLauncherIconSource(application);
   }
   tmpResult = tmp(4197);
@@ -73,7 +73,7 @@ export default function Header(application) {
     obj = { iconSource: null, iconBorderRadius: null, iconSize: 72 };
     obj[0] = appLauncherIconSource;
     obj[1] = xl;
-    let tmp12 = callback(tmp5(11628), obj);
+    let tmp12 = callback(tmp5(11851), obj);
     let tmp13 = callback;
   } else {
     obj = { style: null };
@@ -140,16 +140,16 @@ export default function Header(application) {
   let str2 = "";
   const animatedStyle3 = tmpResult4.useAnimatedStyle(fn4);
   if (null != application) {
-    str2 = tmp(8145).getSectionName(application);
-    const tmpResult5 = tmp(8145);
+    str2 = tmp(8153).getSectionName(application);
+    const tmpResult5 = tmp(8153);
   }
   let hasApplicationFlagResult = null != application;
   if (hasApplicationFlagResult) {
     hasApplicationFlagResult = "flags" in application;
   }
   if (hasApplicationFlagResult) {
-    hasApplicationFlagResult = tmp(8436).hasApplicationFlag(application, constants.EMBEDDED);
-    const tmpResult6 = tmp(8436);
+    hasApplicationFlagResult = tmp(8445).hasApplicationFlag(application, constants.EMBEDDED);
+    const tmpResult6 = tmp(8445);
   }
   dependencyMap = hasApplicationFlagResult;
   currentUser2 = currentUser.getCurrentUser();
@@ -165,7 +165,7 @@ export default function Header(application) {
   const obj6 = { style: items2, pointerEvents: "none", children: tmp13(currentUser2, obj7) };
   const tmp23 = currentUser2;
   items6[2] = tmp13(_modDef4217.View, { style: animatedStyle2, pointerEvents: "none", children: tmp13(scrollOffsetY(4474).Heading, { variant: "heading-lg/bold", color: "text-overlay-light", children: str2 }) });
-  items6[3] = tmp13(scrollOffsetY(1297).Spacer, { size: 32, pointerEvents: "none" });
+  items6[3] = tmp13(scrollOffsetY(1296).Spacer, { size: 32, pointerEvents: "none" });
   obj8[2] = items6;
   items3[1] = callback2(_modDef4217.View, obj8);
   let tmp22Result = null;
@@ -201,17 +201,17 @@ export default function Header(application) {
         tmp4Result = tmp4(tmp[25]);
         tmp4Result.presentLinkCopied();
       };
-      const intl = tmp(1236).intl;
-      obj11[4] = intl.string(tmp(1236).t.XWDihq);
-      const items7 = [tmp13(tmp(8006).IconButton, obj11), ];
+      const intl = tmp(1233).intl;
+      obj11[4] = intl.string(tmp(1233).t.XWDihq);
+      const items7 = [tmp13(tmp(8015).IconButton, obj11), ];
       const obj12 = { application: null, onAddAppMenuClick: null };
       obj12[0] = application;
       obj12[1] = onAddAppMenuClick;
-      items7[1] = tmp13(tmp5(11704), obj12);
+      items7[1] = tmp13(tmp5(11927), obj12);
       obj10[1] = items7;
       tmp22Result = tmp22(tmp23, obj10);
     }
-    tmpResult7 = tmp(8145);
+    tmpResult7 = tmp(8153);
   }
   items3[2] = tmp22Result;
   obj5[2] = items3;

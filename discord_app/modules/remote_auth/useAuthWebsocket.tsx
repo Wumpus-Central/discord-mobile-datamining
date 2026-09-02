@@ -1,11 +1,11 @@
-// === Module 15580: useAuthWebsocket ===
+// === Module 15811: useAuthWebsocket ===
 
-// Module 15580 (useAuthWebsocket)
+// Module 15811 (useAuthWebsocket)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 
 const require = arg1;
 ({ ComponentActions: closure_6, Endpoints: error } = ME);
@@ -155,7 +155,7 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
                   c8 = undefined;
                   closure_3 = 1;
                   catchPromise = 1;
-                  return { value: "PX_16", done: null };
+                  return { value: "PX_16", done: true };
                 }
               } else if (1 === tmp5) {
                 if (arg0 === 1) {

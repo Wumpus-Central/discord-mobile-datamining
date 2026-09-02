@@ -1,6 +1,6 @@
-// === Module 11752: UsernameText ===
+// === Module 11975: UsernameText ===
 
-// Module 11752 (UsernameText)
+// Module 11975 (UsernameText)
 import noopAll from "noop" /* 19 */;
 import Text from "Text" /* 4474 */;
 import getNickname from "getNickname" /* 4673 */;

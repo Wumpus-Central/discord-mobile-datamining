@@ -1,9 +1,9 @@
-// === Module 17464: AgeUpdateFooter ===
+// === Module 17700: AgeUpdateFooter ===
 
-// Module 17464 (AgeUpdateFooter)
+// Module 17700 (AgeUpdateFooter)
 import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2663 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import messagesProxyDefault from "messagesProxy" /* 2662 */;
 import Text from "Text" /* 4474 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -18,16 +18,16 @@ export default function AgeUpdateFooter() {
   const intl = getSystemLocale.intl;
   obj = {
     handleAgeVerifyHook() {
-      let obj = callback2(8682);
-      obj = { entryPoint: callback(8684).AgeVerificationModalEntryPoint.PARENTAL_CONSENT_LOCKOUT };
+      let obj = callback2(8697);
+      obj = { entryPoint: callback(8699).AgeVerificationModalEntryPoint.PARENTAL_CONSENT_LOCKOUT };
       return obj.showAgeVerificationGetStartedModal(obj);
     }
   };
   obj[3] = intl.format(messagesProxyDefault.ifObbX, obj);
   return jsx(Text.Text, {
     handleAgeVerifyHook() {
-      let obj = callback2(8682);
-      obj = { entryPoint: callback(8684).AgeVerificationModalEntryPoint.PARENTAL_CONSENT_LOCKOUT };
+      let obj = callback2(8697);
+      obj = { entryPoint: callback(8699).AgeVerificationModalEntryPoint.PARENTAL_CONSENT_LOCKOUT };
       return obj.showAgeVerificationGetStartedModal(obj);
     }
   });

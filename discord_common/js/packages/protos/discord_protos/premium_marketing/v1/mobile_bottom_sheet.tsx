@@ -1,12 +1,12 @@
-// === Module 8459: create ===
+// === Module 8468: create ===
 
-// Module 8459 (create)
-import _mod1307 from "module_1307" /* 1307 */;
-import create from "create" /* 8453 */;
-import create2 from "create" /* 8454 */;
-import create3 from "create" /* 8455 */;
+// Module 8468 (create)
+import _mod1306 from "module_1306" /* 1306 */;
+import create from "create" /* 8462 */;
+import create2 from "create" /* 8463 */;
+import create3 from "create" /* 8464 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import { MessageType } from "module_1307" /* 1307 */;
+import { MessageType } from "module_1306" /* 1306 */;
 
 require = arg1;
 class MobileBottomSheet$Type extends MessageType {
@@ -21,7 +21,7 @@ class MobileBottomSheet$Type extends MessageType {
       name: "button",
       kind: "message",
       T() {
-            return callback(8455).CTAButton;
+            return callback(8464).CTAButton;
           }
     };
     items[5] = {
@@ -29,7 +29,7 @@ class MobileBottomSheet$Type extends MessageType {
       name: "dismissible_content",
       kind: "enum",
       T() {
-            const items = ["discord_protos.discord_users.v1.DismissibleContent", callback(1373).DismissibleContent];
+            const items = ["discord_protos.discord_users.v1.DismissibleContent", callback(1372).DismissibleContent];
             return items;
           }
     };
@@ -38,7 +38,7 @@ class MobileBottomSheet$Type extends MessageType {
       name: "help_article",
       kind: "message",
       T() {
-            return callback(8454).HelpArticle;
+            return callback(8463).HelpArticle;
           }
     };
     obj = { no: 8, name: "header_localized", kind: "message", T: null };
@@ -54,7 +54,7 @@ class MobileBottomSheet$Type extends MessageType {
       name: "body_localized",
       kind: "message",
       T() {
-            return callback(8453).LocalizedString;
+            return callback(8462).LocalizedString;
           }
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.MobileBottomSheet", items, T);
@@ -67,10 +67,10 @@ prototype["create"] = function create(arr) {
   let obj = { assetUrl: "", header: "", body: "", helpArticleId: "", dismissibleContent: 0 };
   const _Object = Object;
   obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1306.MESSAGE_TYPE, obj);
   if (undefined !== arr) {
-    const result = _mod1307.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1307;
+    const result = _mod1306.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1306;
   }
   return obj;
 };
@@ -150,7 +150,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
             if (true === onRead) {
               let tmp8 = require;
               let tmp9 = dependencyMap;
-              onRead = _mod1307.UnknownFieldHandler.onRead;
+              onRead = _mod1306.UnknownFieldHandler.onRead;
             }
             let tmp10 = obj;
             let tmp11 = tmp5;
@@ -166,53 +166,53 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(assetUrl, tag, writeUnknownFields) {
   if ("" !== assetUrl.assetUrl) {
-    tag.tag(1, _mod1307.WireType.LengthDelimited).string(assetUrl.assetUrl);
-    const tagResult = tag.tag(1, _mod1307.WireType.LengthDelimited);
+    tag.tag(1, _mod1306.WireType.LengthDelimited).string(assetUrl.assetUrl);
+    const tagResult = tag.tag(1, _mod1306.WireType.LengthDelimited);
   }
   if ("" !== assetUrl.header) {
-    tag.tag(2, _mod1307.WireType.LengthDelimited).string(assetUrl.header);
-    const tagResult1 = tag.tag(2, _mod1307.WireType.LengthDelimited);
+    tag.tag(2, _mod1306.WireType.LengthDelimited).string(assetUrl.header);
+    const tagResult1 = tag.tag(2, _mod1306.WireType.LengthDelimited);
   }
   if ("" !== assetUrl.body) {
-    tag.tag(3, _mod1307.WireType.LengthDelimited).string(assetUrl.body);
-    const tagResult2 = tag.tag(3, _mod1307.WireType.LengthDelimited);
+    tag.tag(3, _mod1306.WireType.LengthDelimited).string(assetUrl.body);
+    const tagResult2 = tag.tag(3, _mod1306.WireType.LengthDelimited);
   }
   if ("" !== assetUrl.helpArticleId) {
-    tag.tag(4, _mod1307.WireType.LengthDelimited).string(assetUrl.helpArticleId);
-    const tagResult3 = tag.tag(4, _mod1307.WireType.LengthDelimited);
+    tag.tag(4, _mod1306.WireType.LengthDelimited).string(assetUrl.helpArticleId);
+    const tagResult3 = tag.tag(4, _mod1306.WireType.LengthDelimited);
   }
   if (assetUrl.button) {
     const CTAButton = create3.CTAButton;
-    const tagResult4 = tag.tag(5, _mod1307.WireType.LengthDelimited);
-    const joined = CTAButton.internalBinaryWrite(assetUrl.button, tag.tag(5, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = CTAButton.internalBinaryWrite(assetUrl.button, tag.tag(5, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult4 = tag.tag(5, _mod1306.WireType.LengthDelimited);
+    const joined = CTAButton.internalBinaryWrite(assetUrl.button, tag.tag(5, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult = CTAButton.internalBinaryWrite(assetUrl.button, tag.tag(5, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (0 !== assetUrl.dismissibleContent) {
-    tag.tag(6, _mod1307.WireType.Varint).int32(assetUrl.dismissibleContent);
-    const tagResult5 = tag.tag(6, _mod1307.WireType.Varint);
+    tag.tag(6, _mod1306.WireType.Varint).int32(assetUrl.dismissibleContent);
+    const tagResult5 = tag.tag(6, _mod1306.WireType.Varint);
   }
   if (assetUrl.helpArticle) {
     const HelpArticle = create2.HelpArticle;
-    const tagResult6 = tag.tag(7, _mod1307.WireType.LengthDelimited);
-    const joined1 = HelpArticle.internalBinaryWrite(assetUrl.helpArticle, tag.tag(7, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = HelpArticle.internalBinaryWrite(assetUrl.helpArticle, tag.tag(7, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult6 = tag.tag(7, _mod1306.WireType.LengthDelimited);
+    const joined1 = HelpArticle.internalBinaryWrite(assetUrl.helpArticle, tag.tag(7, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult1 = HelpArticle.internalBinaryWrite(assetUrl.helpArticle, tag.tag(7, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (assetUrl.headerLocalized) {
     const LocalizedString = create.LocalizedString;
-    const tagResult7 = tag.tag(8, _mod1307.WireType.LengthDelimited);
-    const joined2 = LocalizedString.internalBinaryWrite(assetUrl.headerLocalized, tag.tag(8, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult2 = LocalizedString.internalBinaryWrite(assetUrl.headerLocalized, tag.tag(8, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult7 = tag.tag(8, _mod1306.WireType.LengthDelimited);
+    const joined2 = LocalizedString.internalBinaryWrite(assetUrl.headerLocalized, tag.tag(8, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult2 = LocalizedString.internalBinaryWrite(assetUrl.headerLocalized, tag.tag(8, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (assetUrl.bodyLocalized) {
     const LocalizedString2 = create.LocalizedString;
-    const tagResult8 = tag.tag(9, _mod1307.WireType.LengthDelimited);
-    const joined3 = LocalizedString2.internalBinaryWrite(assetUrl.bodyLocalized, tag.tag(9, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult3 = LocalizedString2.internalBinaryWrite(assetUrl.bodyLocalized, tag.tag(9, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult8 = tag.tag(9, _mod1306.WireType.LengthDelimited);
+    const joined3 = LocalizedString2.internalBinaryWrite(assetUrl.bodyLocalized, tag.tag(9, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult3 = LocalizedString2.internalBinaryWrite(assetUrl.bodyLocalized, tag.tag(9, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1307.UnknownFieldHandler.onWrite;
+      onWrite = _mod1306.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, assetUrl, tag);
@@ -229,7 +229,7 @@ let items = [
     name: "button",
     kind: "message",
     T() {
-      return callback(8455).CTAButton;
+      return callback(8464).CTAButton;
     }
   },
   {
@@ -237,7 +237,7 @@ let items = [
     name: "dismissible_content",
     kind: "enum",
     T() {
-      const items = ["discord_protos.discord_users.v1.DismissibleContent", callback(1373).DismissibleContent];
+      const items = ["discord_protos.discord_users.v1.DismissibleContent", callback(1372).DismissibleContent];
       return items;
     }
   },
@@ -246,7 +246,7 @@ let items = [
     name: "help_article",
     kind: "message",
     T() {
-      return callback(8454).HelpArticle;
+      return callback(8463).HelpArticle;
     }
   },
 ,
@@ -265,7 +265,7 @@ items[8] = {
   name: "body_localized",
   kind: "message",
   T() {
-    return callback(8453).LocalizedString;
+    return callback(8462).LocalizedString;
   }
 };
 prototype = new prototype("discord_protos.premium_marketing.v1.MobileBottomSheet", items, tmp, T, MobileBottomSheet$Type, prototype, items);

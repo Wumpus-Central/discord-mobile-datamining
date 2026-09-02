@@ -1,11 +1,11 @@
-// === Module 14128: ? ===
+// === Module 14351: ? ===
 
-// Module 14128
-import getAvatarURLDefault from "getAvatarURL" /* 1431 */;
-import prototypeDefault from "prototype" /* 9503 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9506 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+// Module 14351
+import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
+import prototypeDefault from "prototype" /* 9516 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9519 */;
+import closure_3 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
 
 const require = arg1;
 const RPCErrors = ME.RPCErrors;

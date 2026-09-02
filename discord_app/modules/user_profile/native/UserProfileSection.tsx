@@ -1,10 +1,10 @@
-// === Module 11181: UserProfileSection ===
+// === Module 11402: UserProfileSection ===
 
-// Module 11181 (UserProfileSection)
+// Module 11402 (UserProfileSection)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import ManaContext from "ManaContext" /* 4204 */;
-import useProfileThemeValues from "useProfileThemeValues" /* 5975 */;
+import useProfileThemeValues from "useProfileThemeValues" /* 5983 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -32,7 +32,7 @@ export default function UserProfileSection(title) {
   const merged1 = Object.assign(tmp2.contentContainer);
   if (null != primaryColor) {
     if (null != profileThemeValues) {
-      let borderColor = tmp3(4326).hexOpacityToRgba(tmp3(8369).DIVIDER_COLORS[theme], profileThemeValues.dividerOpacity);
+      let borderColor = tmp3(4326).hexOpacityToRgba(tmp3(8378).DIVIDER_COLORS[theme], profileThemeValues.dividerOpacity);
       const tmp3Result = tmp3(4326);
     }
     obj.borderColor = borderColor;

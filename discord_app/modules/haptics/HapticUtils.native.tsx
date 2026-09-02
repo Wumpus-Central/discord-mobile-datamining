@@ -2,7 +2,7 @@
 
 // Module 4446 (HapticFeedbackTypes)
 import set from "set" /* 2 */;
-import set2 from "set" /* 500 */;
+import set2 from "set" /* 1234 */;
 import IMPACT_LIGHTDefault from "IMPACT_LIGHT" /* 4447 */;
 import useHaptics from "useHaptics" /* 4448 */;
 

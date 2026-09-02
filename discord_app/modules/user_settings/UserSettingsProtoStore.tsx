@@ -1,18 +1,18 @@
-// === Module 1340: handleConnectionClosedOrResumed ===
+// === Module 1339: handleConnectionClosedOrResumed ===
 
-// Module 1340 (handleConnectionClosedOrResumed)
+// Module 1339 (handleConnectionClosedOrResumed)
 import set from "set" /* 2 */;
 import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import create from "create" /* 1306 */;
-import now from "now" /* 1336 */;
-import create2 from "create" /* 1341 */;
-import b64ToProto from "b64ToProto" /* 1342 */;
-import MAX_FAVORITESDefault from "MAX_FAVORITES" /* 1343 */;
-import resolveDefaultGuildThemePreference from "resolveDefaultGuildThemePreference" /* 1344 */;
-import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import create from "create" /* 1305 */;
+import now from "now" /* 1335 */;
+import create2 from "create" /* 1340 */;
+import b64ToProto from "b64ToProto" /* 1341 */;
+import MAX_FAVORITESDefault from "MAX_FAVORITES" /* 1342 */;
+import resolveDefaultGuildThemePreference from "resolveDefaultGuildThemePreference" /* 1343 */;
+import MAX_FAVORITES from "MAX_FAVORITES" /* 682 */;
 
 function handleConnectionClosedOrResumed() {
   const values = Object.values(closure_7);

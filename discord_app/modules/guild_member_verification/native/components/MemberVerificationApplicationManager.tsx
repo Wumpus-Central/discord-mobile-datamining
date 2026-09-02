@@ -1,7 +1,7 @@
-// === Module 16956: prototype ===
+// === Module 17192: prototype ===
 
-// Module 16956 (prototype)
-import initializeDefault from "initialize" /* 5486 */;
+// Module 17192 (prototype)
+import initializeDefault from "initialize" /* 5494 */;
 import closure_3 from "handleConnectionOpen" /* 4299 */;
 import closure_4 from "handleGatewayJoinRequestUpdate" /* 4300 */;
 

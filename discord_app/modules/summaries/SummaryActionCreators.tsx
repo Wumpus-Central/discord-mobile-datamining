@@ -1,14 +1,14 @@
-// === Module 10981: fetchSummary ===
+// === Module 11201: fetchSummary ===
 
-// Module 10981 (fetchSummary)
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 11201 (fetchSummary)
+import setDefault from "set" /* 684 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "_handleConnectionOpen" /* 5221 */;
-import closure_6 from "ensureGuildLoaded" /* 1387 */;
-import closure_7 from "handleQuickSwitcherUpdate" /* 10982 */;
-import { Routes } from "ME" /* 676 */;
+import closure_5 from "_handleConnectionOpen" /* 5229 */;
+import closure_6 from "ensureGuildLoaded" /* 1386 */;
+import closure_7 from "handleQuickSwitcherUpdate" /* 11202 */;
+import { Routes } from "ME" /* 673 */;
 
 const require = arg1;
 function fetchSummary(c1, c4) {
@@ -254,7 +254,7 @@ function _fetchSummaries() {
             closure_4 = summaries;
             obj1 = callback2(12);
             closure_4 = obj1.takeRight(closure_4, 75);
-            obj2 = callback2(709);
+            obj2 = callback2(706);
             obj4 = { type: "RECEIVE_CHANNEL_SUMMARIES", channelId: null, summaries: null, error: null, requestedAt: null, receivedAt: null };
             obj4[1] = callback;
             obj4[2] = closure_4;
@@ -528,7 +528,7 @@ function _fetchSummariesBulk() {
               let summaries;
               c7 = 1;
               constants = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -586,11 +586,11 @@ function _fetchSummariesBulk() {
                 const obj5 = { type: "REQUEST_CHANNEL_SUMMARIES_BULK", channelIds: null, requestedAt: null };
                 obj5[1] = closure_0;
                 obj5[2] = closure_1_3;
-                flag(709).dispatch(obj5);
+                flag(706).dispatch(obj5);
                 c4 = undefined;
                 c5 = undefined;
                 summaries = 1;
-                const HTTP = substr(530).HTTP;
+                const HTTP = substr(527).HTTP;
                 const obj6 = { url: null, body: null, rejectWithError: false };
                 obj6[0] = constants.USER_SUMMARIES;
                 const obj7 = { channel_ids: null };
@@ -625,7 +625,7 @@ function _fetchSummariesBulk() {
             if (_undefined != null) {
               summaries = _undefined.body.summaries;
             }
-            obj1 = flag(709);
+            obj1 = flag(706);
             const obj9 = { type: "RECEIVE_CHANNEL_SUMMARIES_BULK", requestedAt: null, receivedAt: null, summaries: null, requestArgs: null, error: null };
             obj9[1] = closure_3;
             const _Date = Date;
@@ -808,7 +808,7 @@ function _deleteSummary() {
             obj3[0] = arg1;
             return obj3;
           } else {
-            obj = callback(709);
+            obj = callback(706);
             const obj4 = { type: "DELETE_SUMMARY", summary: null };
             obj4[1] = lib;
             obj.dispatch(obj4);

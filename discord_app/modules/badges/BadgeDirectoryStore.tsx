@@ -1,13 +1,13 @@
-// === Module 8560: initialize ===
+// === Module 8573: initialize ===
 
-// Module 8560 (initialize)
-import failsDefault from "fails" /* 584 */;
-import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import privDefault from "priv" /* 1401 */;
-import urlUserId from "urlUserId" /* 8563 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+// Module 8573 (initialize)
+import failsDefault from "fails" /* 581 */;
+import initializeDefault from "initialize" /* 586 */;
+import setDefault from "set" /* 684 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import privDefault from "priv" /* 1400 */;
+import urlUserId from "urlUserId" /* 8578 */;
+import closure_3 from "mergeGuildAvatar" /* 1921 */;
 
 require = arg1;
 const HOUR = setDefault.Millis.HOUR;

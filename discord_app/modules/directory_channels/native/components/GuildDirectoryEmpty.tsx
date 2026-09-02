@@ -1,11 +1,11 @@
-// === Module 12292: GuildDirectoryEmpty ===
+// === Module 12516: GuildDirectoryEmpty ===
 
-// Module 12292 (GuildDirectoryEmpty)
+// Module 12516 (GuildDirectoryEmpty)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "comparator" /* 1982 */;
-import ME from "ME" /* 676 */;
+import closure_5 from "comparator" /* 1981 */;
+import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -30,53 +30,53 @@ export default function GuildDirectoryEmpty(guild) {
   const channel = guild.channel;
   dependencyMap = undefined;
   const tmp = callback2();
-  let obj = guild(589);
+  let obj = guild(586);
   const items = [closure_5];
   dependencyMap = obj.useStateFromStores(items, () => closure_1_5.getChannels(guild.id));
-  obj1 = guild(11874);
+  obj1 = guild(12097);
   obj = { contentContainerStyle: items1, children: null };
   items1 = [tmp.container, ];
-  obj = { paddingBottom: channel(1628)().bottom + 16 };
+  obj = { paddingBottom: channel(1627)().bottom + 16 };
   items1[1] = obj;
   obj1 = { source: null, style: null };
   const canCreateOrAddGuildInDirectory = obj1.useCanCreateOrAddGuildInDirectory(channel);
-  obj1[0] = channel(12293);
+  obj1[0] = channel(12517);
   obj1[1] = tmp.header;
   const items2 = [callback(closure_3, obj1), , , , ];
   const obj2 = { style: tmp.title, accessibilityRole: "header", children: null };
-  const intl = guild(1236).intl;
-  obj2[2] = intl.format(guild(1236).t.vyvrpC, { guildName: guild.name });
-  items2[1] = callback(guild(1297).LegacyText, obj2);
+  const intl = guild(1233).intl;
+  obj2[2] = intl.format(guild(1233).t.vyvrpC, { guildName: guild.name });
+  items2[1] = callback(guild(1296).LegacyText, obj2);
   const obj4 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = guild(1236).intl;
-  obj4[3] = intl2.string(guild(1236).t.WypE0i);
+  const intl2 = guild(1233).intl;
+  obj4[3] = intl2.string(guild(1233).t.WypE0i);
   items2[2] = callback(guild(4474).Text, obj4);
   let tmp8Result = null;
   if (canCreateOrAddGuildInDirectory) {
     const obj5 = { style: null, onPress: null, iconSource: null, title: null };
     obj5[0] = tmp.ctaContainer;
     obj5[1] = function onPress() {
-      let obj = channel(11875);
+      let obj = channel(12098);
       obj = { directoryGuildName: guild.name, directoryGuildId: guild.id, directoryChannelId: channel.id };
       return obj.open(obj);
     };
-    obj5[2] = tmp2(12294);
-    const intl3 = tmp4(1236).intl;
-    obj5[3] = intl3.string(tmp4(1236).t.hyK15i);
-    tmp8Result = tmp8(tmp4(8363).FormCTA, obj5);
+    obj5[2] = tmp2(12518);
+    const intl3 = tmp4(1233).intl;
+    obj5[3] = intl3.string(tmp4(1233).t.hyK15i);
+    tmp8Result = tmp8(tmp4(8372).FormCTA, obj5);
   }
   items2[3] = tmp8Result;
   const obj6 = {
     style: tmp.ctaContainer,
     onPress() {
-      return guild(9909).handleOpenInviteActionsheet(guild, channel.id, dependencyMap, closure_1_6.HUB_EMPTY_STATE);
+      return guild(9931).handleOpenInviteActionsheet(guild, channel.id, dependencyMap, closure_1_6.HUB_EMPTY_STATE);
     },
-    iconSource: channel(12295),
+    iconSource: channel(12519),
     title: null
   };
-  const intl4 = tmp4(1236).intl;
-  obj6[3] = intl4.string(guild(1236).t.L4bwJ9);
-  items2[4] = callback(guild(8363).FormCTA, obj6);
+  const intl4 = tmp4(1233).intl;
+  obj6[3] = intl4.string(guild(1233).t.L4bwJ9);
+  items2[4] = callback(guild(8372).FormCTA, obj6);
   obj[1] = items2;
   return closure_8(closure_4, obj);
 };

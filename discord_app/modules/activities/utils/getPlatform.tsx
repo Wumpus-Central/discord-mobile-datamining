@@ -1,8 +1,8 @@
-// === Module 8437: getPlatform ===
+// === Module 8446: getPlatform ===
 
-// Module 8437 (getPlatform)
+// Module 8446 (getPlatform)
 import set from "set" /* 2 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
 
 const result = set.fileFinishedImporting("modules/activities/utils/getPlatform.tsx");
 

@@ -1,8 +1,8 @@
-// === Module 11172: _putRoleConnectionsConfigurations ===
+// === Module 11393: _putRoleConnectionsConfigurations ===
 
-// Module 11172 (_putRoleConnectionsConfigurations)
+// Module 11393 (_putRoleConnectionsConfigurations)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 676 */;
+import { Endpoints } from "ME" /* 673 */;
 
 const require = arg1;
 function _putRoleConnectionsConfigurations() {
@@ -146,7 +146,7 @@ const result = require("set").fileFinishedImporting("modules/connections/Connect
 
 export const fetchRoleConnectionsConfiguration = function fetchRoleConnectionsConfiguration(guildId, id) {
   const _require = id;
-  const HTTP = _require(530).HTTP;
+  const HTTP = _require(527).HTTP;
   const value = HTTP.get({ url: Endpoints.GUILD_ROLE_CONNECTIONS_CONFIGURATION(guildId, id), rejectWithError: true });
   let obj = { url: Endpoints.GUILD_ROLE_CONNECTIONS_CONFIGURATION(guildId, id), rejectWithError: true };
   value.then((body) => {

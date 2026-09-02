@@ -1,10 +1,10 @@
-// === Module 13044: SparklesIcon ===
+// === Module 13266: SparklesIcon ===
 
-// Module 13044 (SparklesIcon)
+// Module 13266 (SparklesIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 13045 */;
+import registerAsset from "registerAsset" /* 13267 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,8 +1,8 @@
-// === Module 9387: isOnXbox ===
+// === Module 9400: isOnXbox ===
 
-// Module 9387 (isOnXbox)
+// Module 9400 (isOnXbox)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 import items3 from "items3" /* 4506 */;
 
 let closure_0 = items3.XBOX_ACTIVITY_APPLICATION_ID;

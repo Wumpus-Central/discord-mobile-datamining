@@ -1,8 +1,8 @@
-// === Module 13398: getSkuIdForChannel ===
+// === Module 13621: getSkuIdForChannel ===
 
-// Module 13398 (getSkuIdForChannel)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 13621 (getSkuIdForChannel)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 let closure_0 = {};
 const Store = initializeDefault.Store;

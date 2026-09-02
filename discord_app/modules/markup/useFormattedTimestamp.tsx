@@ -1,7 +1,7 @@
-// === Module 10211: items ===
+// === Module 10233: items ===
 
-// Module 10211 (items)
-import setDefault from "set" /* 687 */;
+// Module 10233 (items)
+import setDefault from "set" /* 684 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 
@@ -19,7 +19,7 @@ let result = require("set").fileFinishedImporting("modules/markup/useFormattedTi
 
 export default function useFormattedTimestamp(format) {
   const _require = format;
-  const forceUpdate = _require(7185).useForceUpdate();
+  const forceUpdate = _require(7194).useForceUpdate();
   const items = [forceUpdate, , ];
   ({ format: arr[1], parsed: arr[2] } = format);
   const effect = React.useEffect(() => {

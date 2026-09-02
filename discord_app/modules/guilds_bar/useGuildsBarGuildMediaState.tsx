@@ -1,8 +1,8 @@
-// === Module 15920: useGuildsBarGuildMediaState ===
+// === Module 16151: useGuildsBarGuildMediaState ===
 
-// Module 15920 (useGuildsBarGuildMediaState)
+// Module 16151 (useGuildsBarGuildMediaState)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "markAllStale" /* 13359 */;
+import closure_4 from "markAllStale" /* 13583 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/guilds_bar/useGuildsBarGuildMediaState.tsx");

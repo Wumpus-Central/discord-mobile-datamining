@@ -1,8 +1,8 @@
-// === Module 12190: viewPrompt ===
+// === Module 12414: viewPrompt ===
 
-// Module 12190 (viewPrompt)
+// Module 12414 (viewPrompt)
 import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 function viewPrompt(REAL_NAME_PROMPT, closure_0) {
   importDefault = REAL_NAME_PROMPT;

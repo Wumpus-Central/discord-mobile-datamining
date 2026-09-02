@@ -1,6 +1,6 @@
-// === Module 6136: getGuildModeratorReportChannelId ===
+// === Module 6144: getGuildModeratorReportChannelId ===
 
-// Module 6136 (getGuildModeratorReportChannelId)
+// Module 6144 (getGuildModeratorReportChannelId)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/report_to_mod/getGuildModeratorReportChannelId.tsx");

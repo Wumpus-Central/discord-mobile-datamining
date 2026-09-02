@@ -1,8 +1,8 @@
-// === Module 688: int2hslRaw ===
+// === Module 685: int2hslRaw ===
 
-// Module 688 (int2hslRaw)
+// Module 685 (int2hslRaw)
 import set from "set" /* 2 */;
-import nDefault from "n" /* 689 */;
+import nDefault from "n" /* 686 */;
 
 function int2hslRaw(initialColor) {
   const result = (initialColor >> 16 & 255) / 255;

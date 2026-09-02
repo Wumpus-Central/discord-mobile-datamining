@@ -1,21 +1,21 @@
-// === Module 6052: handleLogout ===
+// === Module 6060: handleLogout ===
 
-// Module 6052 (handleLogout)
+// Module 6060 (handleLogout)
 import timestampDefault from "timestamp" /* 3 */;
-import encodeProperties from "encodeProperties" /* 503 */;
-import sendRequest from "sendRequest" /* 530 */;
-import setSecondaryTokenAll from "setSecondaryToken" /* 707 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import encodeProperties from "encodeProperties" /* 500 */;
+import sendRequest from "sendRequest" /* 527 */;
+import setSecondaryTokenAll from "setSecondaryToken" /* 704 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 import getRootNavigationRef from "getRootNavigationRef" /* 4333 */;
 import setDefault from "set" /* 4472 */;
 import _modDef4713 from "module_4713" /* 4713 */;
 import _modDef4723 from "module_4723" /* 4723 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
-import { setPromoEmailConsentState } from "setPromoEmailConsentState" /* 6053 */;
-import closure_7 from "fetchFingerprint" /* 1218 */;
-import closure_8 from "hasConsented" /* 6054 */;
-import ME from "ME" /* 676 */;
-import str2 from "str2" /* 6055 */;
+import { setPromoEmailConsentState } from "setPromoEmailConsentState" /* 6061 */;
+import closure_7 from "fetchFingerprint" /* 1215 */;
+import closure_8 from "hasConsented" /* 6062 */;
+import ME from "ME" /* 673 */;
+import str2 from "str2" /* 6063 */;
 
 require = arg1;
 function handleLogout(arg0, ME) {
@@ -48,8 +48,8 @@ function handleLogout(arg0, ME) {
     } else {
       obj1 = { source: null };
       obj1[0] = arg0;
-      tmp11(1222).transitionTo(DEFAULT_LOGGED_OUT, obj1);
-      const tmp11Result = tmp11(1222);
+      tmp11(1219).transitionTo(DEFAULT_LOGGED_OUT, obj1);
+      const tmp11Result = tmp11(1219);
     }
     const obj8 = getRootNavigationRef;
     tmp11 = require;
@@ -276,20 +276,20 @@ obj = {
               if (challenge != null) {
                 obj17.abort("Starting non-conditional mediation");
               }
-              challenge(709).dispatch({ type: "PASSWORDLESS_START" });
+              challenge(706).dispatch({ type: "PASSWORDLESS_START" });
               dependencyMap = 1;
-              const obj12 = challenge(709);
+              const obj12 = challenge(706);
               obj17 = challenge;
               c4 = 2;
               c5 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = lib(6056).fetchWebAuthnPasswordlessChallenge();
+              obj1[0] = lib(6064).fetchWebAuthnPasswordlessChallenge();
               return obj1;
             }
           } else if (1 === tmp8) {
             dependencyMap = 0;
             closure_5 = c2;
-            let obj9 = challenge(709);
+            let obj9 = challenge(706);
             let obj2 = { type: "PASSWORDLESS_FAILURE", error: null };
             obj2[1] = closure_5;
             obj9.dispatch(obj2);
@@ -354,7 +354,7 @@ obj = {
                 tmp16 = c4.status < 500;
               }
               if (tmp16) {
-                obj2 = challenge(6057);
+                obj2 = challenge(6065);
                 c4 = 6;
                 c5 = 1;
                 const obj8 = { value: null, done: false };
@@ -408,7 +408,7 @@ obj = {
     ({ ticket, credential, source, giftCodeSKUId } = isMultiAccount);
     obj = self(4713);
     obj = { url: closure_9.WEBAUTHN_CONDITIONAL_UI_LOGIN, body: { credential, ticket, source, giftCodeSKUId }, retries: 1, trackedActionData: null, rejectWithError: true };
-    obj = { event: isMultiAccount(503).NetworkActionNames.USER_LOGIN_PASSWORDLESS };
+    obj = { event: isMultiAccount(500).NetworkActionNames.USER_LOGIN_PASSWORDLESS };
     obj[3] = obj;
     const postResult = obj.post(obj);
     return obj.post(obj).then((body) => {
@@ -495,16 +495,16 @@ obj = {
               closure_1 = tmp3;
               let token = tmp7;
               token = undefined;
-              closure_1_1(709).dispatch({ type: "LOGIN" });
+              closure_1_1(706).dispatch({ type: "LOGIN" });
               dependencyMap = 1;
-              const obj10 = closure_1_1(709);
+              const obj10 = closure_1_1(706);
               obj1 = { url: null, body: null, oldFormErrors: true, trackedActionData: null, rejectWithError: true };
               obj1[0] = closure_1_9.ONE_TIME_LOGIN;
               const obj2 = { ticket: null };
               obj2[0] = closure_1_0;
               obj1[1] = obj2;
               const obj3 = { event: null };
-              obj3[0] = closure_1_0(503).NetworkActionNames.USER_ONE_TIME_LOGIN;
+              obj3[0] = closure_1_0(500).NetworkActionNames.USER_ONE_TIME_LOGIN;
               obj1[3] = obj3;
               c4 = 2;
               c5 = 1;
@@ -515,7 +515,7 @@ obj = {
           } else if (1 === tmp7) {
             dependencyMap = 0;
             closure_1 = closure_2;
-            obj4 = closure_1_1(709);
+            obj4 = closure_1_1(706);
             const obj5 = { type: "LOGIN_FAILURE", error: null };
             const v6OrEarlierAPIError = new closure_1_0(4376).V6OrEarlierAPIError(closure_1);
             obj5[1] = v6OrEarlierAPIError;
@@ -605,13 +605,13 @@ obj = {
     obj = DEFAULT_LOGGED_OUT(4713);
     obj = { url: closure_9.LOGOUT, body: null, oldFormErrors: true, trackedActionData: null };
     obj = { provider: callback2(), token: null, voip_provider: null, voip_token: null };
-    const Storage = _require(595).Storage;
+    const Storage = _require(592).Storage;
     obj[1] = Storage.get(closure_10);
     obj[2] = closure_14;
-    const Storage2 = _require(595).Storage;
+    const Storage2 = _require(592).Storage;
     obj[3] = Storage2.get(closure_11);
     obj[1] = obj;
-    obj[3] = { event: _require(503).NetworkActionNames.USER_LOGOUT, properties: obj2 };
+    obj[3] = { event: _require(500).NetworkActionNames.USER_LOGOUT, properties: obj2 };
     let tmp4 = null != arg2;
     if (tmp4) {
       let str = setSecondaryTokenAll.getToken(arg2);
@@ -626,10 +626,10 @@ obj = {
       const obj6 = setSecondaryTokenAll;
     }
     const merged = Object.assign(tmp4);
-    obj1 = { event: _require(503).NetworkActionNames.USER_LOGOUT, properties: obj2 };
+    obj1 = { event: _require(500).NetworkActionNames.USER_LOGOUT, properties: obj2 };
     const tmp3 = _require;
-    obj.rejectWithError = _require(530).rejectWithMigratedError();
-    const tmp3Result = _require(530);
+    obj.rejectWithError = _require(527).rejectWithMigratedError();
+    const tmp3Result = _require(527);
     return obj.post(obj).finally(() => {
       let tmp2 = null != closure_2;
       if (tmp2) {
@@ -675,7 +675,7 @@ obj = {
     if (arg1 === undefined) {
       DEFAULT_LOGGED_OUT = constants.DEFAULT_LOGGED_OUT;
     }
-    const HTTP = _require(530).HTTP;
+    const HTTP = _require(527).HTTP;
     const value = HTTP.get({ url: closure_9.ME, oldFormErrors: true, rejectWithError: true });
     return value.catch(() => {
       closure_1_19(closure_0, DEFAULT_LOGGED_OUT);
@@ -693,11 +693,11 @@ obj = {
       obj2[0] = closure_1_0;
       obj1[1] = obj2;
       const obj3 = { event: null };
-      obj3[0] = closure_1_0(503).NetworkActionNames.USER_VERIFY;
+      obj3[0] = closure_1_0(500).NetworkActionNames.USER_VERIFY;
       obj1[2] = obj3;
-      obj1[3] = closure_1_0(530).rejectWithMigratedError();
+      obj1[3] = closure_1_0(527).rejectWithMigratedError();
       closure_0 = yield obj7.post(obj1);
-      obj = closure_1_1(709);
+      obj = closure_1_1(706);
       const obj6 = { type: "LOGIN_SUCCESS", token: null };
       obj6[1] = closure_0.body.token;
       obj.dispatch(obj6);
@@ -768,12 +768,12 @@ obj = {
               let backup;
               let totp;
               c8 = undefined;
-              closure_1_1(709).dispatch({ type: "LOGIN" });
+              closure_1_1(706).dispatch({ type: "LOGIN" });
               obj1 = { token: null, password: null, source: null };
               obj1[0] = closure_1_0;
               obj1[1] = closure_1_1;
               obj1[2] = closure_1_2;
-              const Storage2 = closure_1_0(595).Storage;
+              const Storage2 = closure_1_0(592).Storage;
               let value = Storage2.get(closure_1_10);
               const tmp75 = closure_1_15();
               let tmp31 = null != tmp75;
@@ -784,7 +784,7 @@ obj = {
                 obj1.push_provider = tmp75;
                 obj1.push_token = value;
               }
-              const Storage = closure_1_0(595).Storage;
+              const Storage = closure_1_0(592).Storage;
               value = Storage.get(closure_1_11);
               let tmp37 = null != closure_1_14;
               if (tmp37) {
@@ -800,11 +800,11 @@ obj = {
               obj2[0] = constants.RESET_PASSWORD;
               obj2[1] = obj1;
               const obj3 = { event: null };
-              obj3[0] = closure_1_0(503).NetworkActionNames.USER_RESET_PASSWORD;
+              obj3[0] = closure_1_0(500).NetworkActionNames.USER_RESET_PASSWORD;
               obj2[3] = obj3;
-              const obj12 = closure_1_1(709);
+              const obj12 = closure_1_1(706);
               tmp36 = closure_1_14;
-              obj2[4] = closure_1_0(530).rejectWithMigratedError();
+              obj2[4] = closure_1_0(527).rejectWithMigratedError();
               ticket = 2;
               token = 1;
               obj4 = { value: null, done: false };
@@ -815,7 +815,7 @@ obj = {
             dependencyMap = 0;
             constants = sms;
             const v6OrEarlierAPIError = new closure_1_0(4376).V6OrEarlierAPIError(constants);
-            obj2 = closure_1_1(709);
+            obj2 = closure_1_1(706);
             const obj5 = { type: "LOGIN_FAILURE", error: null };
             obj5[1] = v6OrEarlierAPIError;
             obj2.dispatch(obj5);
@@ -924,19 +924,19 @@ obj = {
               let body = tmp7;
               body = undefined;
               c1 = undefined;
-              v6OrEarlierAPIError(709).dispatch({ type: "FORGOT_PASSWORD_REQUEST" });
+              v6OrEarlierAPIError(706).dispatch({ type: "FORGOT_PASSWORD_REQUEST" });
               dependencyMap = 1;
-              const obj12 = v6OrEarlierAPIError(709);
+              const obj12 = v6OrEarlierAPIError(706);
               obj1 = { url: null, body: null, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
               obj1[0] = closure_1_9.FORGOT_PASSWORD;
               const obj2 = { login: null };
               obj2[0] = closure_1_0;
               obj1[1] = obj2;
               let obj3 = { event: null };
-              obj3[0] = closure_1_0(503).NetworkActionNames.FORGOT_PASSWORD;
+              obj3[0] = closure_1_0(500).NetworkActionNames.FORGOT_PASSWORD;
               obj1[3] = obj3;
               const obj13 = v6OrEarlierAPIError(4713);
-              obj1[4] = closure_1_0(530).rejectWithMigratedError();
+              obj1[4] = closure_1_0(527).rejectWithMigratedError();
               c4 = 2;
               c5 = 1;
               const obj4 = { value: null, done: false };
@@ -947,7 +947,7 @@ obj = {
             dependencyMap = 0;
             v6OrEarlierAPIError = new closure_1_0(4376).V6OrEarlierAPIError(closure_2);
             if (v6OrEarlierAPIError.code === closure_1_12.PHONE_VERIFICATION_REQUIRED) {
-              let obj5 = v6OrEarlierAPIError(709);
+              let obj5 = v6OrEarlierAPIError(706);
               obj5 = { type: "LOGIN_PASSWORD_RECOVERY_PHONE_VERIFICATION", credentials: null };
               const obj6 = { login: null };
               obj6[0] = body;
@@ -956,7 +956,7 @@ obj = {
               c5 = 3;
               return { value: false, done: true };
             } else {
-              obj3 = v6OrEarlierAPIError(709);
+              obj3 = v6OrEarlierAPIError(706);
               const obj7 = { type: "LOGIN_FAILURE", error: null };
               obj7[1] = v6OrEarlierAPIError;
               obj3.dispatch(obj7);
@@ -973,7 +973,7 @@ obj = {
             return obj8;
           } else {
             body = arg1;
-            obj = v6OrEarlierAPIError(709);
+            obj = v6OrEarlierAPIError(706);
             obj.dispatch({ type: "FORGOT_PASSWORD_SENT" });
             dependencyMap = 0;
             c5 = 3;
@@ -1009,7 +1009,7 @@ obj = {
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
       timeout = setTimeout(() => {
-        callback(709).dispatch({ type: "SET_CONSENT_REQUIRED", consentRequired: true });
+        callback(706).dispatch({ type: "SET_CONSENT_REQUIRED", consentRequired: true });
       }, 5000);
       const HTTP = sendRequest.HTTP;
       obj = { url: null, retries: 2, oldFormErrors: true, rejectWithError: true };
@@ -1028,7 +1028,7 @@ obj = {
           if (flag == null) {
             flag = true;
           }
-          obj = callback(709);
+          obj = callback(706);
           obj = { type: "SET_CONSENT_REQUIRED", consentRequired: null };
           obj[1] = flag;
           obj.dispatch(obj);
@@ -1040,7 +1040,7 @@ obj = {
             country_code = body2.country_code;
           }
         }
-        callback(709).dispatch({ type: "SET_LOCATION_METADATA", countryCode: country_code });
+        callback(706).dispatch({ type: "SET_LOCATION_METADATA", countryCode: country_code });
         c17 = null;
         let prop;
         if (body != null) {
@@ -1056,7 +1056,7 @@ obj = {
         }
       }, () => {
         clearTimeout(closure_4);
-        callback(709).dispatch({ type: "SET_CONSENT_REQUIRED", consentRequired: true });
+        callback(706).dispatch({ type: "SET_CONSENT_REQUIRED", consentRequired: true });
         c17 = null;
       });
     }

@@ -1,8 +1,8 @@
-// === Module 7587: logMessageSendFailure ===
+// === Module 7597: logMessageSendFailure ===
 
-// Module 7587 (logMessageSendFailure)
+// Module 7597 (logMessageSendFailure)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4700 */;
 
 const AnalyticEvents = ME.AnalyticEvents;

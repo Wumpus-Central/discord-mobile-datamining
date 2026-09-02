@@ -1,10 +1,10 @@
-// === Module 15637: useSuggestedFriends ===
+// === Module 15868: useSuggestedFriends ===
 
-// Module 15637 (useSuggestedFriends)
+// Module 15868 (useSuggestedFriends)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "initialize" /* 7407 */;
-import { SuggestedFriendSource } from "SuggestedFriendSource" /* 12237 */;
+import closure_5 from "initialize" /* 7416 */;
+import { SuggestedFriendSource } from "SuggestedFriendSource" /* 12461 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/useSuggestedFriends.tsx");

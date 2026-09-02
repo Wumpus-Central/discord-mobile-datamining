@@ -1,7 +1,7 @@
-// === Module 11744: ? ===
+// === Module 11967: ? ===
 
-// Module 11744
-import ThemesDefault from "Themes" /* 712 */;
+// Module 11967
+import ThemesDefault from "Themes" /* 709 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -46,13 +46,13 @@ const memoResult = importAllResult.memo((active) => {
     tmp12 = bound;
   }
   obj[2] = tmp12;
-  const intl = tmp(1236).intl;
-  obj[4] = intl.string(onPress(1236).t.iZ7Mz9);
+  const intl = tmp(1233).intl;
+  obj[4] = intl.string(onPress(1233).t.iZ7Mz9);
   obj[5] = { expanded: flag };
   obj[6] = callback;
-  obj = { size: token1, style: tmp7.expressionButtonIconTint, source: tmp3(showKeyboardIcon ? 10885 : 8229) };
-  obj[7] = jsx(onPress(1297).Icon, { size: token1, style: tmp7.expressionButtonIconTint, source: tmp3(showKeyboardIcon ? 10885 : 8229) });
-  return jsx(onPress(5068).PressableOpacity, { size: token1, style: tmp7.expressionButtonIconTint, source: tmp3(showKeyboardIcon ? 10885 : 8229) });
+  obj = { size: token1, style: tmp7.expressionButtonIconTint, source: tmp3(showKeyboardIcon ? 11105 : 8238) };
+  obj[7] = jsx(onPress(1296).Icon, { size: token1, style: tmp7.expressionButtonIconTint, source: tmp3(showKeyboardIcon ? 11105 : 8238) });
+  return jsx(onPress(5076).PressableOpacity, { size: token1, style: tmp7.expressionButtonIconTint, source: tmp3(showKeyboardIcon ? 11105 : 8238) });
 });
 const result = require("set").fileFinishedImporting("modules/chat_input/native/accessories/ChatInputExpressionButton.tsx");
 

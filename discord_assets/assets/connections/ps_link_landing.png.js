@@ -1,6 +1,6 @@
-// === Module 9332: metadata ===
+// === Module 9345: metadata ===
 
-// Module 9332 (metadata)
+// Module 9345 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/connections/ps_link_landing.png.js");

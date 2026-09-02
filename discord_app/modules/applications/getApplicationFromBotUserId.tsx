@@ -1,8 +1,8 @@
-// === Module 12164: useGetApplicationFromBotUserId ===
+// === Module 12388: useGetApplicationFromBotUserId ===
 
-// Module 12164 (useGetApplicationFromBotUserId)
-import closure_2 from "createUserWidgetFromServer" /* 7366 */;
-import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
+// Module 12388 (useGetApplicationFromBotUserId)
+import closure_2 from "createUserWidgetFromServer" /* 7375 */;
+import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 673 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/applications/getApplicationFromBotUserId.tsx");
@@ -10,7 +10,7 @@ const result = require("set").fileFinishedImporting("modules/applications/getApp
 export default function useGetApplicationFromBotUserId(arg0) {
   const _require = arg0;
   const items = [closure_2];
-  const stateFromStores = _require(589).useStateFromStores(items, () => {
+  const stateFromStores = _require(586).useStateFromStores(items, () => {
     let tmp = closure_0;
     let tmp2;
     if (null !== closure_0) {

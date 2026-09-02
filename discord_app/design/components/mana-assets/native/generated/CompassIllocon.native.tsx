@@ -1,10 +1,10 @@
-// === Module 6425: CompassIllocon ===
+// === Module 6434: CompassIllocon ===
 
-// Module 6425 (CompassIllocon)
+// Module 6434 (CompassIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5493 */;
-import metadataDefault from "metadata" /* 6426 */;
+import preloadDefault from "preload" /* 5501 */;
+import metadataDefault from "metadata" /* 6435 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/CompassIllocon.native.tsx");

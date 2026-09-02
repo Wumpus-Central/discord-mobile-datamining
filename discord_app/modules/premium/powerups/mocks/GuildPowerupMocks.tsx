@@ -1,6 +1,6 @@
-// === Module 12053: items ===
+// === Module 12277: items ===
 
-// Module 12053 (items)
+// Module 12277 (items)
 import set from "set" /* 2 */;
 import BoostedGuildTiers from "BoostedGuildTiers" /* 4365 */;
 

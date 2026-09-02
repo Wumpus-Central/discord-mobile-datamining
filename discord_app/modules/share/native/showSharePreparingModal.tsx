@@ -1,8 +1,8 @@
-// === Module 8637: showSharePreparingModal ===
+// === Module 8652: showSharePreparingModal ===
 
-// Module 8637 (showSharePreparingModal)
+// Module 8652 (showSharePreparingModal)
 import set from "set" /* 2 */;
-import SHARE_PREPARING_MODAL_KEY2 from "SHARE_PREPARING_MODAL_KEY" /* 8635 */;
+import SHARE_PREPARING_MODAL_KEY2 from "SHARE_PREPARING_MODAL_KEY" /* 8650 */;
 
 const SHARE_PREPARING_MODAL_KEY = SHARE_PREPARING_MODAL_KEY2.SHARE_PREPARING_MODAL_KEY;
 const result = set.fileFinishedImporting("modules/share/native/showSharePreparingModal.tsx");

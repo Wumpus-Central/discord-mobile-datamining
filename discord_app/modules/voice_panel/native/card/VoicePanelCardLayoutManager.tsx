@@ -1,13 +1,13 @@
-// === Module 11842: getTargetCardSize ===
+// === Module 12065: getTargetCardSize ===
 
-// Module 11842 (getTargetCardSize)
-import shallowEqualDefault from "shallowEqual" /* 643 */;
+// Module 12065 (getTargetCardSize)
+import shallowEqualDefault from "shallowEqual" /* 640 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { PixelRatio } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "getParticipants" /* 4494 */;
-import VoicePanelModes from "VoicePanelModes" /* 11840 */;
-import CARD_SIZE from "CARD_SIZE" /* 11843 */;
+import VoicePanelModes from "VoicePanelModes" /* 12063 */;
+import CARD_SIZE from "CARD_SIZE" /* 12066 */;
 import { ParticipantTypes } from "ParticipantTypes" /* 4499 */;
 import set from "set" /* 2 */;
 
@@ -817,7 +817,7 @@ prototype["emitLayoutChanges"] = function emitLayoutChanges() {
   self = this;
   if (tmp) {
     self.emitItemChanges = false;
-    self(705).batchUpdates(() => {
+    self(702).batchUpdates(() => {
       for (const item10006 of tmp) {
         let item10006Result = item10006();
         continue;
@@ -827,7 +827,7 @@ prototype["emitLayoutChanges"] = function emitLayoutChanges() {
         continue;
       }
     });
-    const obj = self(705);
+    const obj = self(702);
   }
 };
 prototype["deferredLayoutChange"] = function deferredLayoutChange() {

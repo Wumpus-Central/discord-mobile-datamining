@@ -1,7 +1,7 @@
-// === Module 4117: version ===
+// === Module 4116: version ===
 
-// Module 4117 (version)
-import sortedIndexByDefault from "sortedIndexBy" /* 4118 */;
+// Module 4116 (version)
+import sortedIndexByDefault from "sortedIndexBy" /* 4117 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 
 let closure_3 = [];

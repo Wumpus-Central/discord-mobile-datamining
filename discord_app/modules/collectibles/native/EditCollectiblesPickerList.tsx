@@ -1,6 +1,6 @@
-// === Module 8104: EditCollectiblesPickerList ===
+// === Module 8112: EditCollectiblesPickerList ===
 
-// Module 8104 (EditCollectiblesPickerList)
+// Module 8112 (EditCollectiblesPickerList)
 import Text from "Text" /* 4474 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;

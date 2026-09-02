@@ -1,16 +1,16 @@
-// === Module 11935: matchGroupDMRecipients ===
+// === Module 12158: matchGroupDMRecipients ===
 
-// Module 11935 (matchGroupDMRecipients)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 12158 (matchGroupDMRecipients)
+import ThemesDefault from "Themes" /* 709 */;
 import computeChannelName from "computeChannelName" /* 4674 */;
-import fuzzysearchDefault from "fuzzysearch" /* 5454 */;
+import fuzzysearchDefault from "fuzzysearch" /* 5462 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "ensureGuildLoaded" /* 1387 */;
+import closure_6 from "ensureGuildLoaded" /* 1386 */;
 import closure_7 from "markAllUserIdListsStale" /* 4130 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import { UserRowModes } from "UserRowModes" /* 10632 */;
+import closure_8 from "mergeGuildAvatar" /* 1921 */;
+import { UserRowModes } from "UserRowModes" /* 10853 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -42,7 +42,7 @@ function matchGroupDMRecipients(trimmed1, recipients) {
         }
         if (null != toLocaleLowerCaseResult1) {
           let tmp8 = toLocaleLowerCaseResult1;
-          if (tmp19(5454)(trimmed1, tmp7)) {
+          if (tmp19(5462)(trimmed1, tmp7)) {
             let tmp15 = obj;
             obj.return();
             let num2 = 1;
@@ -58,7 +58,7 @@ function matchGroupDMRecipients(trimmed1, recipients) {
         }
         if (null != toLocaleLowerCaseResult2) {
           let tmp13 = toLocaleLowerCaseResult2;
-          if (tmp19(5454)(trimmed1, tmp12)) {
+          if (tmp19(5462)(trimmed1, tmp12)) {
             let tmp14 = obj;
             obj.return();
             let num = 1;
@@ -253,8 +253,8 @@ export default function NewMessageUserList(selectedUserIds) {
       obj[0] = intl.string(flag9(trimmed[15]).t.qGlQrW);
       obj[1] = arr2.map((data) => ({ type: "GroupDMChannelRecord", data }));
       const findIndexResult = obj.findIndex((title) => {
-        const intl = callback(1236).intl;
-        return title.title === intl.string(callback(1236).t.y29JXs);
+        const intl = callback(1233).intl;
+        return title.title === intl.string(callback(1233).t.y29JXs);
       });
       if (-1 === findIndexResult) {
         let items = [];

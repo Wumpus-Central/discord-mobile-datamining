@@ -1,10 +1,10 @@
-// === Module 6169: map ===
+// === Module 6177: map ===
 
-// Module 6169 (map)
+// Module 6177 (map)
 import set from "set" /* 2 */;
-import sendRequest from "sendRequest" /* 530 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import ME from "ME" /* 676 */;
+import sendRequest from "sendRequest" /* 527 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import ME from "ME" /* 673 */;
 
 ({ Endpoints: c3, AnalyticEvents: c4 } = ME);
 const map = new Map();
@@ -223,7 +223,7 @@ export default {
         obj = { type: "GUILD_TEMPLATE_RESOLVE", code: null };
         obj[1] = code;
         dispatcherDefault.dispatch(obj);
-        const HTTP = _require(530).HTTP;
+        const HTTP = _require(527).HTTP;
         obj = { url: null, oldFormErrors: true, rejectWithError: true };
         obj[0] = closure_3.UNRESOLVED_GUILD_TEMPLATE(code);
         value = HTTP.get(obj);
@@ -279,9 +279,9 @@ export default {
   },
   syncGuildTemplate(arg0, arg1) {
     const _require = arg1;
-    const HTTP = _require(530).HTTP;
-    let obj = { url: closure_3.GUILD_TEMPLATE(arg0, arg1), oldFormErrors: true, rejectWithError: _require(530).rejectWithMigratedError() };
-    const obj2 = _require(530);
+    const HTTP = _require(527).HTTP;
+    let obj = { url: closure_3.GUILD_TEMPLATE(arg0, arg1), oldFormErrors: true, rejectWithError: _require(527).rejectWithMigratedError() };
+    const obj2 = _require(527);
     return HTTP.put(obj).then((body) => {
       let obj = closure_1_1(closure_1_2[1]);
       obj = { type: "GUILD_TEMPLATE_SYNC_SUCCESS", guildTemplate: body.body, code: closure_0 };
@@ -290,11 +290,11 @@ export default {
   },
   updateGuildTemplate(arg0, arg1, name, description) {
     const _require = arg1;
-    const HTTP = _require(530).HTTP;
+    const HTTP = _require(527).HTTP;
     obj = { url: closure_3.GUILD_TEMPLATE(arg0, arg1), body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { name, description };
-    obj[3] = _require(530).rejectWithMigratedError();
-    const obj3 = _require(530);
+    obj[3] = _require(527).rejectWithMigratedError();
+    const obj3 = _require(527);
     return HTTP.patch(obj).then((body) => {
       let obj = closure_1_1(closure_1_2[1]);
       obj = { type: "GUILD_TEMPLATE_SYNC_SUCCESS", guildTemplate: body.body, code: closure_0 };
@@ -304,9 +304,9 @@ export default {
   deleteGuildTemplate(arg0, arg1) {
     const _require = arg0;
     closure_1 = arg1;
-    const HTTP = _require(530).HTTP;
-    let obj = { url: closure_3.GUILD_TEMPLATE(arg0, arg1), oldFormErrors: true, rejectWithError: _require(530).rejectWithMigratedError() };
-    const obj2 = _require(530);
+    const HTTP = _require(527).HTTP;
+    let obj = { url: closure_3.GUILD_TEMPLATE(arg0, arg1), oldFormErrors: true, rejectWithError: _require(527).rejectWithMigratedError() };
+    const obj2 = _require(527);
     return HTTP.del(obj).then(() => {
       let obj = callback(closure_1_2[1]);
       obj = { type: "GUILD_TEMPLATE_DELETE_SUCCESS", guildId: closure_0, code: callback };

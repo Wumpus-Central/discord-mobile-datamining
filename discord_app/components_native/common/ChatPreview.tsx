@@ -1,23 +1,23 @@
-// === Module 12918: componentDidMount ===
+// === Module 13140: componentDidMount ===
 
-// Module 12918 (componentDidMount)
-import set from "set" /* 500 */;
-import ThemesDefault from "Themes" /* 712 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
+// Module 13140 (componentDidMount)
+import ThemesDefault from "Themes" /* 709 */;
+import set from "set" /* 1234 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1492 */;
 import Text from "Text" /* 4474 */;
-import PressableBase from "PressableBase" /* 5068 */;
-import setOptionsDefault from "setOptions" /* 7841 */;
-import getPreviousMessagesDefault from "getPreviousMessages" /* 11137 */;
-import DCDChatListDefault from "DCDChatList" /* 11461 */;
-import GuildNSFWDefault from "GuildNSFW" /* 12203 */;
-import ChannelSpoilerDefault from "ChannelSpoiler" /* 12205 */;
+import PressableBase from "PressableBase" /* 5076 */;
+import setOptionsDefault from "setOptions" /* 7850 */;
+import getPreviousMessagesDefault from "getPreviousMessages" /* 11358 */;
+import DCDChatListDefault from "DCDChatList" /* 11684 */;
+import GuildNSFWDefault from "GuildNSFW" /* 12427 */;
+import ChannelSpoilerDefault from "ChannelSpoiler" /* 12429 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import closure_7 from "setContent" /* 4186 */;
-import closure_8 from "ensureGuildLoaded" /* 1387 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import Changeset from "Changeset" /* 7842 */;
+import closure_8 from "ensureGuildLoaded" /* 1386 */;
+import closure_9 from "mergeGuildAvatar" /* 1921 */;
+import Changeset from "Changeset" /* 7851 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -93,7 +93,7 @@ class ChatPreviewBase extends PureComponent {
           let arr = items;
           const first = items[0];
           if (null != first) {
-            if (messages(11525)(c0, first[first.length - 1], props)) {
+            if (messages(11748)(c0, first[first.length - 1], props)) {
               items = [props];
               arr = arr.unshift(items);
             } else {
@@ -143,10 +143,10 @@ class ChatPreviewBase extends PureComponent {
             });
             tmp8.revealed = tmp.id === messages.revealedMessageId;
             tmp8.context = tmp.id;
-            const intl2 = _undefined(1236).intl;
+            const intl2 = _undefined(1233).intl;
             obj1 = { count: null };
             obj1[0] = tmp8.content.length;
-            tmp8.text = intl2.formatToPlainString(_undefined(1236).t["+FcYM/"], obj1);
+            tmp8.text = intl2.formatToPlainString(_undefined(1233).t["+FcYM/"], obj1);
             tmp25 = null != tmp8 && tmp8.rowType === tmp10.BLOCKED_GROUP;
           } else if (tmp.ignored) {
             let tmp14 = tmp8;
@@ -164,10 +164,10 @@ class ChatPreviewBase extends PureComponent {
             });
             tmp14.revealed = tmp.id === messages.revealedMessageId;
             tmp14.context = tmp.id;
-            const intl = _undefined(1236).intl;
+            const intl = _undefined(1233).intl;
             const obj3 = { count: null };
             obj3[0] = tmp14.content.length;
-            tmp14.text = intl.formatToPlainString(_undefined(1236).t["VFWjc+"], obj3);
+            tmp14.text = intl.formatToPlainString(_undefined(1233).t["VFWjc+"], obj3);
             tmp13 = null != tmp8 && tmp8.rowType === tmp10.IGNORED_GROUP;
           } else {
             const item2 = arr.forEach((id) => {
@@ -216,7 +216,7 @@ class ChatPreviewBase extends PureComponent {
         const jumpTargetId = tmp3.jumpTargetId;
         let tmp23;
         if (!tmp7) {
-          obj = { rows: null, scrollToMessageId: null, jumpTargetId: null, jumpType: "flex", shouldInitialScroll: "Array", animated: 0, scrollPosition: 2, focusTargetId: 0 };
+          obj = { rows: null, scrollToMessageId: null, jumpTargetId: null, jumpType: "flex", shouldInitialScroll: "Array", animated: 0, scrollPosition: 3, focusTargetId: 2 };
           obj[0] = tmp22;
           obj[1] = jumpTargetId;
           obj[2] = jumpTargetId;
@@ -504,7 +504,7 @@ prototype["render"] = function render() {
   const obj2 = { bottom: true, style: tmp.jumpToChatButtonContainer, children: null };
   tmp9Result = set;
   obj2[2] = callback(PressableBase.PressableOpacity, { accessibilityRole: "button", style: tmp.jumpToChatButton, onPress: self.handleJumpToChat, children: callback(Text.Text, obj4) });
-  tmp6Result = tmp6(tmp9(5553).SafeAreaPaddingView, obj2);
+  tmp6Result = tmp6(tmp9(5561).SafeAreaPaddingView, obj2);
   tmp14 = tmp6Result;
 };
 ChatPreviewBase.contextType = require("ManaContext").ThemeContext;
@@ -520,19 +520,19 @@ export const ChatPreview = function ChatPreview(channelId) {
   const setting1 = InlineEmbedMedia.useSetting();
   const RenderEmbeds = channelId(4166).RenderEmbeds;
   const setting2 = RenderEmbeds.useSetting();
-  let obj = channelId(589);
+  let obj = channelId(586);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => roleStyle.roleStyle);
   const items1 = [closure_8];
-  const stateFromStores1 = channelId(589).useStateFromStores(items1, () => closure_1_8.getChannel(channelId));
-  const obj2 = channelId(589);
-  const isChannelSpoilerGated = channelId(6174).useIsChannelSpoilerGated(stateFromStores1);
-  const obj3 = channelId(6174);
+  const stateFromStores1 = channelId(586).useStateFromStores(items1, () => closure_1_8.getChannel(channelId));
+  const obj2 = channelId(586);
+  const isChannelSpoilerGated = channelId(6182).useIsChannelSpoilerGated(stateFromStores1);
+  const obj3 = channelId(6182);
   const isChannelContentGated = channelId(4731).useIsChannelContentGated(stateFromStores1);
   const obj4 = channelId(4731);
   const items2 = [closure_7];
   obj = {};
-  const stateFromStores2 = channelId(589).useStateFromStores(items2, () => null != content.getContent());
+  const stateFromStores2 = channelId(586).useStateFromStores(items2, () => null != content.getContent());
   const merged = Object.assign(channelId);
   obj.inlineAttachmentMedia = setting;
   obj.inlineEmbedMedia = setting1;

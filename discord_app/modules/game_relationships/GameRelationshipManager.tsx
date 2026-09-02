@@ -1,10 +1,10 @@
-// === Module 14199: _initialize ===
+// === Module 14422: _initialize ===
 
-// Module 14199 (_initialize)
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 14422 (_initialize)
+import dispatcherDefault from "dispatcher" /* 706 */;
 import initializeDefault from "initialize" /* 4662 */;
-import closure_2 from "recountRelationshipTypes" /* 7403 */;
-import { RelationshipTypes } from "ME" /* 676 */;
+import closure_2 from "recountRelationshipTypes" /* 7412 */;
+import { RelationshipTypes } from "ME" /* 673 */;
 
 initializeDefault;
 class GameRelationshipManager extends tmp2 {

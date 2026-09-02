@@ -1,8 +1,8 @@
-// === Module 4105: getLocalizedLink ===
+// === Module 4104: getLocalizedLink ===
 
-// Module 4105 (getLocalizedLink)
+// Module 4104 (getLocalizedLink)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 
 const result = set.fileFinishedImporting("modules/links/getLocalizedLink.tsx");
 

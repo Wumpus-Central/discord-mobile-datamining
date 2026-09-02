@@ -1,13 +1,13 @@
-// === Module 14766: QuestOrbMultiplierPerkPill ===
+// === Module 14992: QuestOrbMultiplierPerkPill ===
 
-// Module 14766 (QuestOrbMultiplierPerkPill)
-import ThemesDefault from "Themes" /* 712 */;
-import isThemeLight from "isThemeLight" /* 1364 */;
+// Module 14992 (QuestOrbMultiplierPerkPill)
+import ThemesDefault from "Themes" /* 709 */;
+import isThemeLight from "isThemeLight" /* 1363 */;
 import map from "map" /* 4197 */;
 import hexToRgba from "hexToRgba" /* 4326 */;
 import useTheme from "useTheme" /* 4413 */;
-import items5 from "items" /* 10930 */;
-import useQuests from "useQuests" /* 11083 */;
+import items5 from "items" /* 11150 */;
+import useQuests from "useQuests" /* 11303 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -44,17 +44,17 @@ export const QuestOrbMultiplierPerkPill = function QuestOrbMultiplierPerkPill(qu
   const isThemeDarkResult = obj1.isThemeDark(theme);
   dependencyMap = isThemeDarkResult;
   let obj2 = map;
-  const token = obj2.useToken(orbMultiplierEligibility(712).colors.EXPRESSIVE_GRADIENT_PINK_START, "dark");
+  const token = obj2.useToken(orbMultiplierEligibility(709).colors.EXPRESSIVE_GRADIENT_PINK_START, "dark");
   let obj3 = map;
-  const token1 = obj3.useToken(orbMultiplierEligibility(712).colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_DIAMOND_END, "dark");
+  const token1 = obj3.useToken(orbMultiplierEligibility(709).colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_DIAMOND_END, "dark");
   let obj4 = map;
-  token2 = obj4.useToken(orbMultiplierEligibility(712).colors.BACKGROUND_BASE_LOWEST, "dark");
+  token2 = obj4.useToken(orbMultiplierEligibility(709).colors.BACKGROUND_BASE_LOWEST, "dark");
   let obj5 = hexToRgba;
   const items = [obj5.hexOpacityToRgba(token, 1), ];
   let obj6 = hexToRgba;
   items[1] = obj6.hexOpacityToRgba(token1, 0.5);
   let obj7 = map;
-  token3 = obj7.useToken(orbMultiplierEligibility(712).colors.BACKGROUND_BRAND);
+  token3 = obj7.useToken(orbMultiplierEligibility(709).colors.BACKGROUND_BRAND);
   questOrbRewardMultiplier = useQuests.useQuestOrbRewardMultiplier(questId.questId);
   const obj9 = useQuests;
   const tmp6 = orbMultiplierEligibility;
@@ -65,9 +65,9 @@ export const QuestOrbMultiplierPerkPill = function QuestOrbMultiplierPerkPill(qu
   if (null == questOrbRewardMultiplier) {
     return null;
   } else {
-    const intl = tmp2(1236).intl;
+    const intl = tmp2(1233).intl;
     const formatToPlainString = intl.formatToPlainString;
-    const t = tmp2(1236).t;
+    const t = tmp2(1233).t;
     if (result) {
       obj = { bonusOrbMultiplier: null };
       obj[0] = questOrbRewardMultiplier;
@@ -80,7 +80,7 @@ export const QuestOrbMultiplierPerkPill = function QuestOrbMultiplierPerkPill(qu
     let tmp21Result = !tmp13;
     let tmp19 = tmp21Result;
     if (!tmp13) {
-      tmp19 = questOrbRewardMultiplier(tmp2(8096).NitroWheelIcon, { size: "xs", color: "white" });
+      tmp19 = questOrbRewardMultiplier(tmp2(8104).NitroWheelIcon, { size: "xs", color: "white" });
     }
     obj1 = { children: null };
     const items2 = [tmp19, ];
@@ -119,7 +119,7 @@ export const QuestOrbMultiplierPerkPill = function QuestOrbMultiplierPerkPill(qu
     items4[1] = questOrbRewardMultiplier(token3, obj7);
     obj4[1] = items4;
     obj3[4] = closure_7(token3, obj4);
-    return questOrbRewardMultiplier(tmp2(5068).PressableOpacity, obj3);
+    return questOrbRewardMultiplier(tmp2(5076).PressableOpacity, obj3);
   }
   const obj10 = items5;
 };

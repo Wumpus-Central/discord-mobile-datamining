@@ -1,19 +1,19 @@
-// === Module 12011: SpamMessageRequestHamActionSheet ===
+// === Module 12235: SpamMessageRequestHamActionSheet ===
 
-// Module 12011 (SpamMessageRequestHamActionSheet)
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 12235 (SpamMessageRequestHamActionSheet)
+import initialize from "initialize" /* 586 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Button from "Button" /* 4928 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5621 */;
-import Background from "Background" /* 5622 */;
-import ActionSheetCloseButton from "ActionSheetCloseButton" /* 5990 */;
-import Form from "Form" /* 8363 */;
-import useMessageRequestActions from "useMessageRequestActions" /* 12006 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5629 */;
+import Background from "Background" /* 5630 */;
+import ActionSheetCloseButton from "ActionSheetCloseButton" /* 5998 */;
+import Form from "Form" /* 8372 */;
+import useMessageRequestActions from "useMessageRequestActions" /* 12230 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "mergeGuildAvatar" /* 1921 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -48,9 +48,9 @@ export default function SpamMessageRequestHamActionSheet(arg0) {
     onError() {
       let obj = callback(4194);
       obj = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
-      const intl = recipientId(1236).intl;
-      obj[1] = intl.string(recipientId(1236).t["EDYbS+"]);
-      obj[2] = callback(7680);
+      const intl = recipientId(1233).intl;
+      obj[1] = intl.string(recipientId(1233).t["EDYbS+"]);
+      obj[2] = callback(7689);
       obj.open(obj);
     },
     onAcceptSuccess(arg0) {

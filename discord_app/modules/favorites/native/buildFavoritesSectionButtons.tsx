@@ -1,14 +1,14 @@
-// === Module 10305: _addChannelToFavorites ===
+// === Module 10327: _addChannelToFavorites ===
 
-// Module 10305 (_addChannelToFavorites)
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2009 */;
-import messagesProxyDefault from "messagesProxy" /* 3179 */;
+// Module 10327 (_addChannelToFavorites)
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2008 */;
+import messagesProxyDefault from "messagesProxy" /* 3178 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4445 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8096 */;
-import StarIcon from "StarIcon" /* 9181 */;
-import StarOutlineIcon from "StarOutlineIcon" /* 9183 */;
-import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10310 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8104 */;
+import StarIcon from "StarIcon" /* 9195 */;
+import StarOutlineIcon from "StarOutlineIcon" /* 9197 */;
+import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10332 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -156,7 +156,7 @@ function _removeChannelFromFavorites() {
 }
 function openNoAccessUpsell() {
   const obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj.openLazy(asyncRequireImpl(10311, dependencyMap.paths), openFavoritesGuildLimitUpsell.FAVORITES_UPSELL_SHEET_KEY, { source: "channel_context_menu" });
+  obj.openLazy(asyncRequireImpl(10333, dependencyMap.paths), openFavoritesGuildLimitUpsell.FAVORITES_UPSELL_SHEET_KEY, { source: "channel_context_menu" });
 }
 let result = require("set").fileFinishedImporting("modules/favorites/native/buildFavoritesSectionButtons.tsx");
 
@@ -201,8 +201,8 @@ export default function buildFavoritesSectionButtons(isExperimentEnabled) {
           let tmp15;
           if (tmp5) {
             obj1 = { size: null };
-            obj1[0] = tmp12(1297).BetaSizes.SMALL;
-            tmp15 = jsx(tmp12(1297).BetaTag, { size: null });
+            obj1[0] = tmp12(1296).BetaSizes.SMALL;
+            tmp15 = jsx(tmp12(1296).BetaTag, { size: null });
           }
           obj[2] = tmp15;
           obj[3] = function onPress() {

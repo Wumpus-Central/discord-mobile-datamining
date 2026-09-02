@@ -1,12 +1,12 @@
-// === Module 10145: useFetchStreamPreview ===
+// === Module 10167: useFetchStreamPreview ===
 
-// Module 10145 (useFetchStreamPreview)
+// Module 10167 (useFetchStreamPreview)
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "reset" /* 4665 */;
-import closure_4 from "ensureGuildLoaded" /* 1387 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4121 */;
-import closure_6 from "handleConnectionOpen" /* 1981 */;
-import { BasicPermissions } from "sum" /* 505 */;
+import closure_4 from "ensureGuildLoaded" /* 1386 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4120 */;
+import closure_6 from "handleConnectionOpen" /* 1980 */;
+import { BasicPermissions } from "sum" /* 502 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/go_live/useFetchStreamPreview.tsx");
@@ -16,23 +16,23 @@ export default function useFetchStreamPreview(arg0, arg1, arg2) {
   dependencyMap = arg1;
   const React = arg2;
   closure_3 = tmp;
-  let obj = _require(589);
+  let obj = _require(586);
   const items = [closure_4];
   closure_4 = obj.useStateFromStores(items, () => channel.getChannel(closure_1));
   const items1 = [shouldFetchPreview];
-  let stateFromStores = _require(589).useStateFromStores(items1, () => {
+  let stateFromStores = _require(586).useStateFromStores(items1, () => {
     let canBasicChannelResult = null != closure_4;
     if (canBasicChannelResult) {
       canBasicChannelResult = shouldFetchPreview.canBasicChannel(closure_1_7.CONNECT, tmp);
     }
     return canBasicChannelResult;
   });
-  const obj2 = _require(589);
+  const obj2 = _require(586);
   const items2 = [stateFromStores];
-  const stateFromStores1 = _require(589).useStateFromStores(items2, () => stateFromStores.getVoiceChannelId() === closure_1);
-  const obj3 = _require(589);
+  const stateFromStores1 = _require(586).useStateFromStores(items2, () => stateFromStores.getVoiceChannelId() === closure_1);
+  const obj3 = _require(586);
   const items3 = [closure_3];
-  const stateFromStoresObject = _require(589).useStateFromStoresObject(items3, () => {
+  const stateFromStoresObject = _require(586).useStateFromStoresObject(items3, () => {
     let isPreviewLoading = !store;
     let shouldFetchPreviewResult = isPreviewLoading;
     if (!store) {
@@ -77,5 +77,5 @@ export default function useFetchStreamPreview(arg0, arg1, arg2) {
     }
     return obj;
   }
-  obj = { previewUrl: "PX_16", isLoading: null };
+  obj = { previewUrl: "PX_16", isLoading: true };
 };

@@ -1,8 +1,8 @@
-// === Module 15417: useCollectiblesCoachmarkScrollDismissContext ===
+// === Module 15645: useCollectiblesCoachmarkScrollDismissContext ===
 
-// Module 15417 (useCollectiblesCoachmarkScrollDismissContext)
+// Module 15645 (useCollectiblesCoachmarkScrollDismissContext)
 import importAllResult from "noop" /* 19 */;
-import { NOOP } from "sum" /* 505 */;
+import { NOOP } from "sum" /* 502 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 let c0 = importAllResult;
@@ -10,7 +10,7 @@ const context = importAllResult.createContext({
   registerDismiss(arg0) {
     return NOOP;
   },
-  handleDismissCoachmarkOnScroll: "Array"
+  handleDismissCoachmarkOnScroll: "r"
 });
 const result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesCoachmarkScrollDismissContext.tsx");
 

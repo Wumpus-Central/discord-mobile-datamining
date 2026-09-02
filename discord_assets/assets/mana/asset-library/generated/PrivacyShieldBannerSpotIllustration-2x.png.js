@@ -1,9 +1,9 @@
-// === Module 6914: metadata ===
+// === Module 6923: metadata ===
 
-// Module 6914 (metadata)
+// Module 6923 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PrivacyShieldBannerSpotIllustration-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/2f296e0ff2af6ecd5fbcf924fa42deb179597a2cd89cc86ac2413578d5aa9f61.png";
-export const metadata = { fileBytes: 60715 };
+export default "https://cdn.discordapp.com/assets/content/5c86bf3bd12b6c28c23a329ea71a9a27d94601393b701de5fcf0ebcedd41415e.png";
+export const metadata = { fileBytes: 64353 };

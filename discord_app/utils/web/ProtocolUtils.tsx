@@ -1,6 +1,6 @@
-// === Module 12803: launchMobile ===
+// === Module 13024: launchMobile ===
 
-// Module 12803 (launchMobile)
+// Module 13024 (launchMobile)
 import formatDefault from "format" /* 4836 */;
 
 const os = formatDefault.os;

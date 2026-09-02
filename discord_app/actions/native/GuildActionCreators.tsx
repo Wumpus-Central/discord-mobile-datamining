@@ -1,10 +1,10 @@
-// === Module 17200: batchChannelUpdate ===
+// === Module 17436: batchChannelUpdate ===
 
-// Module 17200 (batchChannelUpdate)
+// Module 17436 (batchChannelUpdate)
 import set from "set" /* 2 */;
-import sendRequest from "sendRequest" /* 530 */;
-import ME from "ME" /* 676 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import sendRequest from "sendRequest" /* 527 */;
+import ME from "ME" /* 673 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 function batchChannelUpdate(closure_1_0) {
   if (arg1.length > 0) {

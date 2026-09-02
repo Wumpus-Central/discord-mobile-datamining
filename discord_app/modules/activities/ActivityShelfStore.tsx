@@ -1,8 +1,8 @@
-// === Module 9457: initialize ===
+// === Module 9470: initialize ===
 
-// Module 9457 (initialize)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 9470 (initialize)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 let closure_0 = { usageByApplicationId: {}, shelfOrder: [] };
 const PersistedStore = initializeDefault.PersistedStore;

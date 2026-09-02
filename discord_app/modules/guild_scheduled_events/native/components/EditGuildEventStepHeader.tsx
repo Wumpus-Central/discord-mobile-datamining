@@ -1,6 +1,6 @@
-// === Module 9726: EditGuildEventStepHeader ===
+// === Module 9748: EditGuildEventStepHeader ===
 
-// Module 9726 (EditGuildEventStepHeader)
+// Module 9748 (EditGuildEventStepHeader)
 import noopAll from "noop" /* 19 */;
 import Text from "Text" /* 4474 */;
 import { View } from "get ActivityIndicator" /* 17 */;

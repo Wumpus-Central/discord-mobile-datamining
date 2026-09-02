@@ -1,13 +1,13 @@
-// === Module 12238: ContactSyncInviteFriends ===
+// === Module 12462: ContactSyncInviteFriends ===
 
-// Module 12238 (ContactSyncInviteFriends)
+// Module 12462 (ContactSyncInviteFriends)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import preloadDefault from "preload" /* 5493 */;
-import registerAssetDefault from "registerAsset" /* 12239 */;
+import ThemesDefault from "Themes" /* 709 */;
+import preloadDefault from "preload" /* 5501 */;
+import registerAssetDefault from "registerAsset" /* 12463 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import closure_4 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -23,7 +23,7 @@ const result = require("set").fileFinishedImporting("modules/contact_sync/native
 
 export default function ContactSyncInviteFriends() {
   let tmp = callback3();
-  let obj = _require(589);
+  let obj = _require(586);
   const items = [closure_4];
   _require = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   obj = { children: null };
@@ -31,19 +31,19 @@ export default function ContactSyncInviteFriends() {
   obj1 = { style: tmp.art, source: registerAssetDefault };
   const items1 = [callback(preloadDefault, obj1), , ];
   const obj2 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  let intl = _require(1236).intl;
-  obj2[4] = intl.string(_require(1236).t.ZxBpLf);
+  let intl = _require(1233).intl;
+  obj2[4] = intl.string(_require(1233).t.ZxBpLf);
   items1[1] = callback(_require(4474).Text, obj2);
   const obj3 = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = _require(1236).intl;
-  obj3[3] = intl2.string(_require(1236).t["fXtCJ+"]);
+  const intl2 = _require(1233).intl;
+  obj3[3] = intl2.string(_require(1233).t["fXtCJ+"]);
   items1[2] = callback(_require(4474).Text, obj3);
   obj[1] = items1;
   const items2 = [callback2(View, obj), ];
   const obj4 = { style: tmp.button, children: null };
   const obj5 = { variant: "primary", size: "lg", text: null, onPress: null };
-  const intl3 = _require(1236).intl;
-  obj5[2] = intl3.string(_require(1236).t["6Qgrev"]);
+  const intl3 = _require(1233).intl;
+  obj5[2] = intl3.string(_require(1233).t["6Qgrev"]);
   obj5[3] = function onPress() {
     let obj = closure_1_1(closure_1_2[13]);
     obj = { friend_add_type: "Invite", source_page: closure_1_6.CONTACT_SYNC_MODAL };

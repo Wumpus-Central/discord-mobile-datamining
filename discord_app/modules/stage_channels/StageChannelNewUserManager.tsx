@@ -1,12 +1,12 @@
-// === Module 12792: _initialize ===
+// === Module 13013: _initialize ===
 
-// Module 12792 (_initialize)
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 13013 (_initialize)
+import dispatcherDefault from "dispatcher" /* 706 */;
 import initializeDefault from "initialize" /* 4662 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "handleConnectionOpen" /* 1981 */;
-import closure_6 from "buildStageChannelUserRoles" /* 5365 */;
-import { STAGE_AUDIENCE_NOTICE_SHOWN_STORAGE_KEY as closure_7 } from "MAX_STAGE_TOPIC_LENGTH" /* 5358 */;
+import closure_4 from "fetchFingerprint" /* 1215 */;
+import closure_5 from "handleConnectionOpen" /* 1980 */;
+import closure_6 from "buildStageChannelUserRoles" /* 5373 */;
+import { STAGE_AUDIENCE_NOTICE_SHOWN_STORAGE_KEY as closure_7 } from "MAX_STAGE_TOPIC_LENGTH" /* 5366 */;
 
 let require = arg1;
 initializeDefault;

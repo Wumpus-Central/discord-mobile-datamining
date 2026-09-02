@@ -1,15 +1,15 @@
-// === Module 7863: getForwardInfo ===
+// === Module 7872: getForwardInfo ===
 
-// Module 7863 (getForwardInfo)
-import getAvatarURLDefault from "getAvatarURL" /* 1431 */;
+// Module 7872 (getForwardInfo)
+import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
 import resetCache from "resetCache" /* 4163 */;
-import isForwardMessageDefault from "isForwardMessage" /* 6147 */;
-import closure_3 from "getGuild" /* 7864 */;
-import closure_4 from "ensureGuildLoaded" /* 1387 */;
-import closure_5 from "createGuildRecordFromRust" /* 1909 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4121 */;
+import isForwardMessageDefault from "isForwardMessage" /* 6155 */;
+import closure_3 from "getGuild" /* 7873 */;
+import closure_4 from "ensureGuildLoaded" /* 1386 */;
+import closure_5 from "createGuildRecordFromRust" /* 1908 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_7 from "markAllUserIdListsStale" /* 4130 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import closure_8 from "mergeGuildAvatar" /* 1921 */;
 
 require = arg1;
 class MessageForward {
@@ -77,11 +77,11 @@ MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0, closu
           ({ id: obj22[0], icon: obj22[2] } = guild);
           obj1[1] = getAvatarURLDefault.getGuildIconURL(obj2);
           obj1[2] = result;
-          const intl3 = tmp3(1236).intl;
+          const intl3 = tmp3(1233).intl;
           obj3 = { origin: null, timestamp: null };
           obj3[0] = guild.name;
           obj3[1] = result;
-          obj1[3] = intl3.formatToPlainString(tmp3(1236).t["+l04BN"], obj3);
+          obj1[3] = intl3.formatToPlainString(tmp3(1233).t["+l04BN"], obj3);
           obj[1] = obj1;
           const obj21 = getAvatarURLDefault;
         }
@@ -95,11 +95,11 @@ MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0, closu
           const obj5 = { originLabel: null, timestampLabel: null, accessibilityLabel: null };
           obj5[0] = channelName;
           obj5[1] = result;
-          const intl = tmp3(1236).intl;
+          const intl = tmp3(1233).intl;
           const obj6 = { origin: null, timestamp: null };
           obj6[0] = channelName;
           obj6[1] = result;
-          obj5[2] = intl.formatToPlainString(tmp3(1236).t["+l04BN"], obj6);
+          obj5[2] = intl.formatToPlainString(tmp3(1233).t["+l04BN"], obj6);
           obj4[1] = obj5;
           let obj7 = obj4;
         } else {
@@ -136,11 +136,11 @@ MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0, closu
       ({ id: obj18[0], icon: obj18[2] } = guild1);
       obj11[1] = getAvatarURLDefault.getGuildIconURL({ id: null, size: 16, icon: null, canAnimate: false });
       obj11[2] = result;
-      const intl2 = tmp3(1236).intl;
+      const intl2 = tmp3(1233).intl;
       const obj13 = { origin: null, timestamp: null };
       obj13[0] = guild1.name;
       obj13[1] = result;
-      obj11[3] = intl2.formatToPlainString(tmp3(1236).t["+l04BN"], obj13);
+      obj11[3] = intl2.formatToPlainString(tmp3(1233).t["+l04BN"], obj13);
       obj10[1] = obj11;
       const obj12 = { id: null, size: 16, icon: null, canAnimate: false };
       const obj17 = getAvatarURLDefault;

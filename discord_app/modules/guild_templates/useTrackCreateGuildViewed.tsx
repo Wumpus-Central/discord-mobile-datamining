@@ -1,9 +1,9 @@
-// === Module 11365: useTrackCreateGuildViewed ===
+// === Module 11588: useTrackCreateGuildViewed ===
 
-// Module 11365 (useTrackCreateGuildViewed)
+// Module 11588 (useTrackCreateGuildViewed)
 import closure_2 from "noop" /* 19 */;
-import { GuildTemplateStates } from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD" /* 6171 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import { GuildTemplateStates } from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD" /* 6179 */;
+import { AnalyticEvents } from "ME" /* 673 */;
 
 const result = require("set").fileFinishedImporting("modules/guild_templates/useTrackCreateGuildViewed.tsx");
 

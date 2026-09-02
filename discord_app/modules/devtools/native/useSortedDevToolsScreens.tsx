@@ -1,9 +1,9 @@
-// === Module 15344: getSortedDevToolsScreens ===
+// === Module 15572: getSortedDevToolsScreens ===
 
-// Module 15344 (getSortedDevToolsScreens)
-import updateDevToolsSettings from "updateDevToolsSettings" /* 15173 */;
+// Module 15572 (getSortedDevToolsScreens)
+import updateDevToolsSettings from "updateDevToolsSettings" /* 15402 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "initialize" /* 7464 */;
+import closure_3 from "initialize" /* 7474 */;
 
 require = arg1;
 function getSortedDevToolsScreens() {
@@ -11,7 +11,7 @@ function getSortedDevToolsScreens() {
   {
     sortedScreenKeys = closure_3.sortedScreenKeys;
   }
-  const entries = Object.entries(sortedScreenKeys(15177).DevToolsScreens);
+  const entries = Object.entries(sortedScreenKeys(15406).DevToolsScreens);
   const found = entries.filter((arg0) => {
     [, obj] = arg0;
     return null == obj.predicate || obj.predicate();
@@ -41,12 +41,12 @@ let result = require("set").fileFinishedImporting("modules/devtools/native/useSo
 
 export default function useSortedDevToolsScreens() {
   const items = [closure_3];
-  sortedScreenKeys = sortedScreenKeys(589).useStateFromStores(items, () => sortedScreenKeys.sortedScreenKeys);
+  sortedScreenKeys = sortedScreenKeys(586).useStateFromStores(items, () => sortedScreenKeys.sortedScreenKeys);
   sortedScreenKeys = undefined;
   if (sortedScreenKeys === undefined) {
     sortedScreenKeys = closure_3.sortedScreenKeys;
   }
-  const entries = Object.entries(sortedScreenKeys(15177).DevToolsScreens);
+  const entries = Object.entries(sortedScreenKeys(15406).DevToolsScreens);
   const found = entries.filter((arg0) => {
     [, obj] = arg0;
     return null == obj.predicate || obj.predicate();

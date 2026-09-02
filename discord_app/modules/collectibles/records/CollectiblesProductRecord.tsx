@@ -1,13 +1,13 @@
-// === Module 7289: fromServer ===
+// === Module 7298: fromServer ===
 
-// Module 7289 (fromServer)
+// Module 7298 (fromServer)
 import getPricesFromServerDefault from "getPricesFromServer" /* 4523 */;
-import fromServerDefault from "fromServer" /* 7296 */;
+import fromServerDefault from "fromServer" /* 7305 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "fromServer" /* 7290 */;
-import createCollectiblesItemsFromServerResponse from "createCollectiblesItemsFromServerResponse" /* 7291 */;
-import { REWARD_CATEGORY_AND_REWARD_SKU_IDS as closure_7 } from "items" /* 678 */;
-import ME from "ME" /* 676 */;
+import closure_4 from "fromServer" /* 7299 */;
+import createCollectiblesItemsFromServerResponse from "createCollectiblesItemsFromServerResponse" /* 7300 */;
+import { REWARD_CATEGORY_AND_REWARD_SKU_IDS as closure_7 } from "items" /* 675 */;
+import ME from "ME" /* 673 */;
 
 const require = arg1;
 ({ createCollectiblesItemsFromServerResponse: c5, transformSKUToCollectiblesItem: closure_6 } = createCollectiblesItemsFromServerResponse);
@@ -81,7 +81,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
     }
     if (null != collectibles) {
       if (skus.skus.length > 1) {
-        let type = _require(1950).CollectiblesItemType.VARIANTS_GROUP;
+        let type = _require(1949).CollectiblesItemType.VARIANTS_GROUP;
       } else {
         type = collectibles.type;
       }
@@ -119,7 +119,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
       ({ badgeOverride: obj2[11], hideBadge: obj2[12] } = skus);
       const previewAssetPaths = first.previewAssetPaths;
       obj[13] = previewAssetPaths;
-      let str2 = _require(1950).CollectiblesItemType.VARIANTS_GROUP;
+      let str2 = _require(1949).CollectiblesItemType.VARIANTS_GROUP;
       let found;
       if (type === str2) {
         skus = skus.skus;
@@ -139,7 +139,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
             }
             ({ items, item } = obj);
             first = closure_1_3(tenantMetadata.selectedOptions, 1)[0];
-            obj = { baseVariantName: null, baseVariantSkuId: null, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "accessible", items: null, categorySkuId: null, isCategoryReward: null, prices: null, previewAssets: null, googleSkuIds: null, eligibleOffers: null, variants: null, bundledProducts: "<string:4148428801>", isFirstParty: "<string:1224737288>" };
+            obj = { baseVariantName: null, baseVariantSkuId: null, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "accessible", items: true, categorySkuId: true, isCategoryReward: true, prices: true, previewAssets: true, googleSkuIds: true, eligibleOffers: true, variants: true, bundledProducts: null, isFirstParty: null };
             obj[0] = skus.name;
             obj[1] = first.id;
             let str;

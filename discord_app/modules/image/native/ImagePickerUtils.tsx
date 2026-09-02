@@ -1,8 +1,8 @@
-// === Module 5095: isActionPickSupported ===
+// === Module 5103: isActionPickSupported ===
 
-// Module 5095 (isActionPickSupported)
+// Module 5103 (isActionPickSupported)
 import set from "set" /* 2 */;
-import isMetaQuest from "isMetaQuest" /* 1624 */;
+import isMetaQuest from "isMetaQuest" /* 1623 */;
 
 const result = set.fileFinishedImporting("modules/image/native/ImagePickerUtils.tsx");
 

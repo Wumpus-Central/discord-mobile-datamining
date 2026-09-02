@@ -1,9 +1,9 @@
-// === Module 10169: initialize ===
+// === Module 10191: initialize ===
 
-// Module 10169 (initialize)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "fetchFingerprint" /* 1218 */;
+// Module 10191 (initialize)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import closure_0 from "fetchFingerprint" /* 1215 */;
 
 let closure_1 = {};
 const Store = initializeDefault.Store;

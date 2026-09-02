@@ -1,16 +1,16 @@
-// === Module 11981: getOrRefreshPushSyncToken ===
+// === Module 12205: getOrRefreshPushSyncToken ===
 
-// Module 11981 (getOrRefreshPushSyncToken)
+// Module 12205 (getOrRefreshPushSyncToken)
 import timestampDefault from "timestamp" /* 3 */;
-import encodeProperties from "encodeProperties" /* 503 */;
-import Storage2 from "Storage" /* 595 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import encodeProperties from "encodeProperties" /* 500 */;
+import Storage2 from "Storage" /* 592 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 import _modDef4713 from "module_4713" /* 4713 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "initialize" /* 11982 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import ME from "ME" /* 676 */;
-import str2 from "str2" /* 6055 */;
+import closure_5 from "initialize" /* 12206 */;
+import closure_6 from "fetchFingerprint" /* 1215 */;
+import ME from "ME" /* 673 */;
+import str2 from "str2" /* 6063 */;
 
 require = arg1;
 function getOrRefreshPushSyncToken() {
@@ -90,7 +90,7 @@ function _getOrRefreshPushSyncToken() {
           } else if (1 === tmp8) {
             c4 = 0;
             callback = dependencyMap;
-            obj3 = token(1208);
+            obj3 = token(1205);
             obj3.captureException(callback);
             c6 = 3;
             return { value: null, done: true };
@@ -106,7 +106,7 @@ function _getOrRefreshPushSyncToken() {
           } else {
             token = body.body.token;
             c4 = 0;
-            obj = callback(11986);
+            obj = callback(12210);
             obj.updatePushSyncToken(lib.id, token);
             c6 = 3;
             const obj6 = { value: null, done: true };
@@ -161,7 +161,7 @@ let obj = {
       obj = { provider: null, token: null, bypass_server_throttling_supported: null, bundle_id: null };
       obj[0] = tmp8;
       obj[1] = token;
-      let isAndroidResult = tmp2(500).isAndroid();
+      let isAndroidResult = tmp2(1234).isAndroid();
       if (isAndroidResult) {
         isAndroidResult = !closure_13;
       }
@@ -169,10 +169,10 @@ let obj = {
       obj[3] = closure_10;
       obj[1] = obj;
       obj1 = { event: null };
-      obj1[0] = tmp2(503).NetworkActionNames.USER_REGISTER_DEVICE_TOKEN;
+      obj1[0] = tmp2(500).NetworkActionNames.USER_REGISTER_DEVICE_TOKEN;
       obj[3] = obj1;
       syncDeviceResult = obj.post(obj);
-      const tmp2Result = tmp2(500);
+      const tmp2Result = tmp2(1234);
     }
     return syncDeviceResult;
   },
@@ -210,7 +210,7 @@ let obj = {
           closure_1 = arg1;
           if (closure_1.length >= 1) {
             if (null != closure_1[0]) {
-              const HTTP = closure_1_0(530).HTTP;
+              const HTTP = closure_1_0(527).HTTP;
               const obj3 = { url: null, body: null, rejectWithError: false };
               obj3[0] = closure_1_9.DEVICES_SYNC;
               if (closure_1) {
@@ -221,8 +221,8 @@ let obj = {
               const obj4 = { provider: null, token: null, push_sync_tokens: null, bypass_server_throttling_supported: null, bundle_id: null };
               obj4[0] = tmp9;
               obj4[1] = closure_1_0;
-              obj4[2] = closure_1.filter(closure_1_0(1471).isNotNullish);
-              obj2 = closure_1_0(500);
+              obj4[2] = closure_1.filter(closure_1_0(1470).isNotNullish);
+              obj2 = closure_1_0(1234);
               let isAndroidResult = obj2.isAndroid();
               if (isAndroidResult) {
                 isAndroidResult = !closure_1_13;
@@ -245,8 +245,8 @@ let obj = {
       } else if (arg0 !== 2) {
         v0 = arg1;
         if (v0.body.invalid_push_sync_tokens.length > 0) {
-          const result = v0(11986).invalidatePushSyncTokens(v0.body.invalid_push_sync_tokens);
-          const obj9 = v0(11986);
+          const result = v0(12210).invalidatePushSyncTokens(v0.body.invalid_push_sync_tokens);
+          const obj9 = v0(12210);
         }
       }
       return arg1;

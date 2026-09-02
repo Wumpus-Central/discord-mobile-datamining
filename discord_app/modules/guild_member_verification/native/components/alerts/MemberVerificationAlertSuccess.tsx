@@ -1,10 +1,10 @@
-// === Module 7654: MemberVerificationAlertSuccess ===
+// === Module 7663: MemberVerificationAlertSuccess ===
 
-// Module 7654 (MemberVerificationAlertSuccess)
+// Module 7663 (MemberVerificationAlertSuccess)
 import noopAll from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_5 from "createGuildRecordFromRust" /* 1909 */;
+import closure_5 from "createGuildRecordFromRust" /* 1908 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

@@ -1,8 +1,8 @@
-// === Module 5023: FolderIcon ===
+// === Module 5027: FolderIcon ===
 
-// Module 5023 (FolderIcon)
+// Module 5027 (FolderIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
 import registerAsset from "registerAsset" /* 4984 */;
 import { jsx } from "jsxProd" /* 21 */;

@@ -1,8 +1,8 @@
-// === Module 14356: useIsSafetyHubLoading ===
+// === Module 14579: useIsSafetyHubLoading ===
 
-// Module 14356 (useIsSafetyHubLoading)
-import initialize from "initialize" /* 589 */;
-import closure_2 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8701 */;
+// Module 14579 (useIsSafetyHubLoading)
+import initialize from "initialize" /* 586 */;
+import closure_2 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8716 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/safety_hub/hooks/useSafetyHubLoading.tsx");

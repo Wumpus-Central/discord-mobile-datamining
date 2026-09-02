@@ -1,16 +1,16 @@
-// === Module 9646: FocusedControlsHeader ===
+// === Module 9659: FocusedControlsHeader ===
 
-// Module 9646 (FocusedControlsHeader)
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
+// Module 9659 (FocusedControlsHeader)
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1492 */;
 import _mod4217 from "module_4217" /* 4217 */;
 import SCREEN_READER_ENABLED_GETTER from "SCREEN_READER_ENABLED_GETTER" /* 4915 */;
-import inlineStyles from "inlineStyles" /* 8241 */;
-import useRevealProviderValue from "useRevealProviderValue" /* 9528 */;
-import useGlobalStatusIndicatorState from "useGlobalStatusIndicatorState" /* 9648 */;
-import nativeEventEmitter from "nativeEventEmitter" /* 9653 */;
+import inlineStyles from "inlineStyles" /* 8250 */;
+import useRevealProviderValue from "useRevealProviderValue" /* 9541 */;
+import useGlobalStatusIndicatorState from "useGlobalStatusIndicatorState" /* 9661 */;
+import nativeEventEmitter from "nativeEventEmitter" /* 9666 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import { AnalyticEvents } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -46,8 +46,8 @@ function FocusedControlsHeader(reveal) {
   fn2.__initData = closure_12;
   const animatedStyle = obj1.useAnimatedStyle(fn2);
   obj = { style: animatedStyle, children: null };
-  obj1 = { top: !derivedValue(9647)(), left: isTouchingLeftScreenEdge, right: true, children: callback(closure_5, obj2) };
-  obj[1] = callback(reveal(5553).SafeAreaPaddingView, obj1);
+  obj1 = { top: !derivedValue(9660)(), left: isTouchingLeftScreenEdge, right: true, children: callback(closure_5, obj2) };
+  obj[1] = callback(reveal(5561).SafeAreaPaddingView, obj1);
   return callback(derivedValue(4217).View, obj);
 }
 function FocusedControlsHeaderGradient() {
@@ -98,7 +98,7 @@ const memoResult = importAllResult.memo((disableGradient) => {
   const globalStatusIndicatorState = obj.useGlobalStatusIndicatorState();
   obj1 = nativeEventEmitter;
   globalStatusIndicatorHeightSharedValue = obj1.useGlobalStatusIndicatorHeightSharedValue(globalStatusIndicatorState);
-  const tmp6 = globalStatusIndicatorHeightSharedValue(9647)();
+  const tmp6 = globalStatusIndicatorHeightSharedValue(9660)();
   dependencyMap = tmp6;
   reveal = reveal.useContext(useRevealProviderValue.RevealContext).reveal;
   const isScreenReaderEnabled = SCREEN_READER_ENABLED_GETTER.useIsScreenReaderEnabled();
@@ -150,8 +150,8 @@ const memoResult = importAllResult.memo((disableGradient) => {
   fn.__initData = closure_17;
   const animatedStyle = _mod4217.useAnimatedStyle(fn);
   const tmpResult1 = _mod4217;
-  analyticsLocations = globalStatusIndicatorHeightSharedValue(5953)(tmp5(5973).FOCUSED_VOICE_CONTROLS).analyticsLocations;
-  callback = tmp5(9602)();
+  analyticsLocations = globalStatusIndicatorHeightSharedValue(5961)(tmp5(5981).FOCUSED_VOICE_CONTROLS).analyticsLocations;
+  callback = tmp5(9615)();
   if (containerStyle == null) {
     containerStyle = derivedValue.absoluteFill;
   }
@@ -173,7 +173,7 @@ const memoResult = importAllResult.memo((disableGradient) => {
     if (null != expandedControls) {
       obj1 = { onDrawerOpen: null, omitPTT: null, actionBar: null, expandedControls: null, header: null, onDrawerClose: null, reveal: null, children: null };
       obj1[0] = function onDrawerOpen() {
-        obj = globalStatusIndicatorHeightSharedValue(698);
+        obj = globalStatusIndicatorHeightSharedValue(695);
         obj = { channel_id: closure_0.id, guild_id: closure_0.guild_id, application_id: null, activity_session_id: null, location_stack: null };
         let applicationId;
         if (closure_7 != null) {
@@ -195,7 +195,7 @@ const memoResult = importAllResult.memo((disableGradient) => {
       obj1[5] = onDrawerClose;
       obj1[6] = reveal;
       obj1[7] = children;
-      tmp17Result = callback(tmp5(9661), obj1);
+      tmp17Result = callback(tmp5(9674), obj1);
     }
   }
   items1[2] = tmp17Result;

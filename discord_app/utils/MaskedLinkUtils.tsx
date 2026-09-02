@@ -1,14 +1,14 @@
-// === Module 8641: isLinkTrusted ===
+// === Module 8656: isLinkTrusted ===
 
-// Module 8641 (isLinkTrusted)
-import closure_3 from "isBlockedDomain" /* 8642 */;
-import closure_4 from "ensureGuildLoaded" /* 1387 */;
-import closure_5 from "createGuildRecordFromRust" /* 1909 */;
-import closure_6 from "set" /* 8643 */;
+// Module 8656 (isLinkTrusted)
+import closure_3 from "isBlockedDomain" /* 8657 */;
+import closure_4 from "ensureGuildLoaded" /* 1386 */;
+import closure_5 from "createGuildRecordFromRust" /* 1908 */;
+import closure_6 from "set" /* 8658 */;
 import closure_7 from "reinjectEphemerals" /* 4735 */;
 import closure_8 from "markAllUserIdListsStale" /* 4130 */;
-import closure_9 from "handleConnectionOpen" /* 1981 */;
-import ME from "ME" /* 676 */;
+import closure_9 from "handleConnectionOpen" /* 1980 */;
+import ME from "ME" /* 673 */;
 
 const require = arg1;
 ({ ChannelTypes: c10, AnalyticEvents: unpackModuleId, GuildFeatures: closure_12, MessageFlags: map1 } = ME);
@@ -55,12 +55,12 @@ export const handleClick = function handleClick(href, preventDefault) {
     }
     let tmp3Result = tmp3(4857);
     obj = { title: null, body: null, isDismissable: true, contextKey: null };
-    const intl = _require(1236).intl;
-    obj[0] = intl.string(_require(1236).t.x87gan);
-    const intl2 = _require(1236).intl;
+    const intl = _require(1233).intl;
+    obj[0] = intl.string(_require(1233).t.x87gan);
+    const intl2 = _require(1233).intl;
     obj = { url: null };
     obj[0] = href.href;
-    obj[1] = intl2.format(_require(1236).t["9rqRwl"], obj);
+    obj[1] = intl2.format(_require(1233).t["9rqRwl"], obj);
     obj[3] = arg3;
     tmp3Result.show(obj);
   } else {
@@ -191,28 +191,28 @@ export const handleClick = function handleClick(href, preventDefault) {
           hasItem1 = features2.has(constants3.DISCOVERABLE);
         }
         if (hasItem1) {
-          tmp3Result = tmp3(698);
+          tmp3Result = tmp3(695);
           obj1 = { url_domain: null, guild_id: null, channel_id: null };
-          let obj4 = _require(8644);
+          let obj4 = _require(8659);
           obj1[0] = obj4.getHostname(tmp8);
           obj1[1] = guild1.id;
           obj1[2] = channel.id;
           tmp3Result.track(constants2.URL_CLICKED, obj1);
         }
-        if (tmp3(8645)(channelId)) {
+        if (tmp3(8660)(channelId)) {
           const obj2 = { cta_type: "inline_link", target: null };
           obj2[1] = tmp8;
-          tmp3(698).track(constants2.CHANGE_LOG_CTA_CLICKED, obj2);
-          const tmp3Result1 = tmp3(698);
+          tmp3(695).track(constants2.CHANGE_LOG_CTA_CLICKED, obj2);
+          const tmp3Result1 = tmp3(695);
         }
       }
-      tmp3(8646).trackLinkClicked(tmp8);
+      tmp3(8661).trackLinkClicked(tmp8);
       if (null == onClick) {
-        const obj3 = { skipExtensionCheck: "a", analyticsLocations: "channel", messageId: "a", channelId: "isArray" };
+        const obj3 = { skipExtensionCheck: "a", analyticsLocations: "<string:2466251611>", messageId: "<string:1207960145>", channelId: "dechov\u00FD" };
         obj3[1] = items;
         obj3[2] = messageId;
         obj3[3] = channelId;
-        const defaultResult = _require(8648).default(tmp8, obj3);
+        const defaultResult = _require(8663).default(tmp8, obj3);
       }
       if (onCancel == null) {
         onCancel = () => {
@@ -223,17 +223,17 @@ export const handleClick = function handleClick(href, preventDefault) {
         if (preventDefault != null) {
           preventDefault.preventDefault();
         }
-        tmp3(12812).show(tmp8);
+        tmp3(13033).show(tmp8);
       } else {
         let trustedResult = trusted;
         if (typeof trusted === "function") {
           trustedResult = trusted();
         }
         if (!trustedResult) {
-          const TRUSTED_URLS = _require(12816).TRUSTED_URLS;
+          const TRUSTED_URLS = _require(13037).TRUSTED_URLS;
           trustedResult = TRUSTED_URLS.has(tmp8);
         }
-        const protocol = _require(8644).getProtocol(tmp8);
+        const protocol = _require(8659).getProtocol(tmp8);
         let tmp55 = "http:" === protocol;
         if (!tmp55) {
           tmp55 = "https:" === protocol;
@@ -262,12 +262,12 @@ export const handleClick = function handleClick(href, preventDefault) {
           if (tmp56) {
             obj4 = { url: null, trustUrl: null, onConfirm: null, onCancel: null, isProtocol: true, contextKey: null };
             obj4[0] = tmp8;
-            obj4[1] = tmp53(12819).trustProtocol;
+            obj4[1] = tmp53(13040).trustProtocol;
             obj4[2] = handleConfirm;
             obj4[3] = onCancel;
             obj4[5] = arg3;
-            tmp3(12817).show(obj4);
-            const tmp3Result4 = tmp3(12817);
+            tmp3(13038).show(obj4);
+            const tmp3Result4 = tmp3(13038);
           } else {
             const punycodeLinkResult = tmp53(4954).punycodeLink(tmp8);
             let displayTarget = tmp8;
@@ -277,12 +277,12 @@ export const handleClick = function handleClick(href, preventDefault) {
             const tmp53Result = tmp53(4954);
             const obj5 = { url: null, trustUrl: null, onConfirm: null, onCancel: null, isProtocol: false, contextKey: null };
             obj5[0] = displayTarget;
-            obj5[1] = tmp53(12819).trustDomain;
+            obj5[1] = tmp53(13040).trustDomain;
             obj5[2] = handleConfirm;
             obj5[3] = onCancel;
             obj5[5] = arg3;
-            tmp3(12817).show(obj5);
-            const tmp3Result5 = tmp3(12817);
+            tmp3(13038).show(obj5);
+            const tmp3Result5 = tmp3(13038);
           }
         }
         if (null == preventDefault) {
@@ -294,12 +294,12 @@ export const handleClick = function handleClick(href, preventDefault) {
           obj6[2] = tmp14;
           obj6[3] = tmp12;
           obj6[4] = tmp11;
-          let result = tmp3(8646).trackAnnouncementMessageLinkClicked(obj6);
-          const tmp3Result6 = tmp3(8646);
+          let result = tmp3(8661).trackAnnouncementMessageLinkClicked(obj6);
+          const tmp3Result6 = tmp3(8661);
         }
-        const obj10 = _require(8644);
+        const obj10 = _require(8659);
       }
-      const tmp3Result2 = tmp3(8646);
+      const tmp3Result2 = tmp3(8661);
     } catch (err) {
       const _encodeURI = encodeURI;
       const encodeURIResult = encodeURI(tmp2);

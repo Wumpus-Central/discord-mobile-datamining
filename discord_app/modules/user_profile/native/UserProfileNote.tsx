@@ -1,6 +1,6 @@
-// === Module 12482: UserProfileNote ===
+// === Module 12706: UserProfileNote ===
 
-// Module 12482 (UserProfileNote)
+// Module 12706 (UserProfileNote)
 import noopAll from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

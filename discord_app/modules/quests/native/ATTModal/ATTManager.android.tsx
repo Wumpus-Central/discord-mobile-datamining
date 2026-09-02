@@ -1,9 +1,9 @@
-// === Module 16893: onPostConnectionOpen ===
+// === Module 17129: onPostConnectionOpen ===
 
-// Module 16893 (onPostConnectionOpen)
-import _modDef1208 from "module_1208" /* 1208 */;
-import initializeDefault from "initialize" /* 5486 */;
-import _fetchAdUser from "_fetchAdUser" /* 7477 */;
+// Module 17129 (onPostConnectionOpen)
+import _modDef1205 from "module_1205" /* 1205 */;
+import initializeDefault from "initialize" /* 5494 */;
+import _fetchAdUser from "_fetchAdUser" /* 7487 */;
 
 require = arg1;
 initializeDefault;
@@ -20,8 +20,8 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
   try {
     const adUser = _fetchAdUser.fetchAdUser("post_connection_open");
   } catch (tmp4) {
-    _modDef1208.captureException(tmp4);
-    const obj2 = _modDef1208;
+    _modDef1205.captureException(tmp4);
+    const obj2 = _modDef1205;
   }
 };
 prototype["_terminate"] = function _terminate() {

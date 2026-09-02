@@ -1,6 +1,6 @@
-// === Module 716: _private ===
+// === Module 713: _private ===
 
-// Module 716 (_private)
+// Module 713 (_private)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/tokens/colors/generated/raw-color-definitions.tsx");

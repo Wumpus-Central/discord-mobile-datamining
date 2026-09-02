@@ -1,10 +1,10 @@
-// === Module 12301: ForumDisplaySettingsActionSheet ===
+// === Module 12525: ForumDisplaySettingsActionSheet ===
 
-// Module 12301 (ForumDisplaySettingsActionSheet)
+// Module 12525 (ForumDisplaySettingsActionSheet)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "ensureGuildLoaded" /* 1387 */;
-import set from "set" /* 11573 */;
+import closure_5 from "ensureGuildLoaded" /* 1386 */;
+import set from "set" /* 11796 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 const require = arg1;

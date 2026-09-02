@@ -1,27 +1,27 @@
-// === Module 4121: getUncachedChannelPermissions ===
+// === Module 4120: getUncachedChannelPermissions ===
 
-// Module 4121 (getUncachedChannelPermissions)
+// Module 4120 (getUncachedChannelPermissions)
 import applyDefault from "apply" /* 12 */;
-import fromStringAll from "fromString" /* 506 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1426 */;
-import applyOverwritesAll from "applyOverwrites" /* 4126 */;
+import fromStringAll from "fromString" /* 503 */;
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1425 */;
+import applyOverwritesAll from "applyOverwrites" /* 4125 */;
 import doesThreadMembersActionAffectMe from "doesThreadMembersActionAffectMe" /* 4128 */;
 import hasDefault from "has" /* 4129 */;
-import closure_4 from "initialize" /* 1984 */;
-import closure_5 from "initialize" /* 4122 */;
-import closure_6 from "handleStageInstanceCreateOrUpdate" /* 1392 */;
-import closure_7 from "storeThread" /* 4123 */;
-import createChannelRecord from "createChannelRecord" /* 1391 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1430 */;
-import closure_12 from "createdAt" /* 1935 */;
-import closure_13 from "ensureGuildLoaded" /* 1387 */;
-import closure_14 from "trackCommunicationDisabled" /* 1992 */;
-import closure_15 from "createGuildRecordFromRust" /* 1909 */;
-import closure_16 from "mergeGuildAvatar" /* 1922 */;
-import { Permissions } from "ME" /* 676 */;
-import { MemberSafetyPagePermissions as closure_18 } from "MemberSafetyPagePermissions" /* 4125 */;
+import closure_4 from "initialize" /* 1983 */;
+import closure_5 from "initialize" /* 4121 */;
+import closure_6 from "handleStageInstanceCreateOrUpdate" /* 1391 */;
+import closure_7 from "storeThread" /* 4122 */;
+import createChannelRecord from "createChannelRecord" /* 1390 */;
+import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1429 */;
+import closure_12 from "createdAt" /* 1934 */;
+import closure_13 from "ensureGuildLoaded" /* 1386 */;
+import closure_14 from "trackCommunicationDisabled" /* 1991 */;
+import closure_15 from "createGuildRecordFromRust" /* 1908 */;
+import closure_16 from "mergeGuildAvatar" /* 1921 */;
+import { Permissions } from "ME" /* 673 */;
+import { MemberSafetyPagePermissions as closure_18 } from "MemberSafetyPagePermissions" /* 4124 */;
 
 require = arg1;
 function getUncachedChannelPermissions(id, arg1) {
@@ -217,9 +217,9 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
     if (set.has(context.type)) {
       const channel = store.getChannel(context.parent_id);
       if (null == channel) {
-        let NONE4 = tmp(4126).NONE;
+        let NONE4 = tmp(4125).NONE;
       } else {
-        let tmpResult = tmp(4126);
+        let tmpResult = tmp(4125);
         const tmp24 = computePermissions(channel, overwrites, roles, excludeGuildPermissions);
         NONE4 = tmpResult.applyThreadPermissions(context, tmp24, closure_7.hasJoined(context.id), closure_14.isCurrentUserGuest(context.guild_id));
         const hasJoinedResult = closure_7.hasJoined(context.id);
@@ -243,13 +243,13 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
       if (null == NONE2) {
         const currentUser = authStore.getCurrentUser();
         if (null == currentUser) {
-          NONE2 = tmp(4126).NONE;
+          NONE2 = tmp(4125).NONE;
         } else {
           const guild = store2.getGuild(id);
           if (null == guild) {
-            let NONE3 = tmp(4126).NONE;
+            let NONE3 = tmp(4125).NONE;
           } else {
-            tmpResult = tmp(4126);
+            tmpResult = tmp(4125);
             obj = { user: null, context: null, checkElevated: null };
             obj[0] = currentUser;
             obj[1] = guild;
@@ -345,19 +345,19 @@ prototype["canAccessMemberSafetyPage"] = function canAccessMemberSafetyPage(id) 
   if (null == NONE) {
     const currentUser = authStore.getCurrentUser();
     if (null == currentUser) {
-      NONE = tmp(4126).NONE;
+      NONE = tmp(4125).NONE;
     } else {
       const guild = store2.getGuild(id);
       if (null == guild) {
-        let NONE2 = tmp(4126).NONE;
+        let NONE2 = tmp(4125).NONE;
       } else {
         obj = { user: null, context: null, checkElevated: null };
         obj[0] = currentUser;
         obj[1] = guild;
         obj[2] = true;
-        NONE2 = tmp(4126).computePermissions(obj);
+        NONE2 = tmp(4125).computePermissions(obj);
         dependencyMap[id] = NONE2;
-        const tmpResult = tmp(4126);
+        const tmpResult = tmp(4125);
       }
       NONE = NONE2;
     }
@@ -371,19 +371,19 @@ prototype["canAccessGuildSettings"] = function canAccessGuildSettings(guild) {
   if (null == NONE) {
     const currentUser = authStore.getCurrentUser();
     if (null == currentUser) {
-      NONE = tmp(4126).NONE;
+      NONE = tmp(4125).NONE;
     } else {
       guild = store2.getGuild(id);
       if (null == guild) {
-        let NONE2 = tmp(4126).NONE;
+        let NONE2 = tmp(4125).NONE;
       } else {
         obj = { user: null, context: null, checkElevated: null };
         obj[0] = currentUser;
         obj[1] = guild;
         obj[2] = true;
-        NONE2 = tmp(4126).computePermissions(obj);
+        NONE2 = tmp(4125).computePermissions(obj);
         dependencyMap[id] = NONE2;
-        const tmpResult = tmp(4126);
+        const tmpResult = tmp(4125);
       }
       NONE = NONE2;
     }

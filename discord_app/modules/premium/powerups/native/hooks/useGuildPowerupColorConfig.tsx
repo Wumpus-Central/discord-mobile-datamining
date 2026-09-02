@@ -1,8 +1,8 @@
-// === Module 12112: useGuildPowerupColorConfig ===
+// === Module 12336: useGuildPowerupColorConfig ===
 
-// Module 12112 (useGuildPowerupColorConfig)
+// Module 12336 (useGuildPowerupColorConfig)
 import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 
 const result = set.fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupColorConfig.tsx");
 

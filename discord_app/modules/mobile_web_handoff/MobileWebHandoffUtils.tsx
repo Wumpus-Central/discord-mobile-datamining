@@ -1,9 +1,9 @@
-// === Module 6164: _createHandoffToken ===
+// === Module 6172: _createHandoffToken ===
 
-// Module 6164 (_createHandoffToken)
-import v1 from "v1" /* 514 */;
+// Module 6172 (_createHandoffToken)
+import v1 from "v1" /* 511 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 676 */;
+import { Endpoints } from "ME" /* 673 */;
 
 require = arg1;
 function _createHandoffToken() {

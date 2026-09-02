@@ -1,10 +1,10 @@
-// === Module 13742: LocalImageThumbnail ===
+// === Module 13965: LocalImageThumbnail ===
 
-// Module 13742 (LocalImageThumbnail)
+// Module 13965 (LocalImageThumbnail)
 import noopAll from "noop" /* 19 */;
 import { Image as _default } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import set from "set" /* 500 */;
+import set from "set" /* 1234 */;
 
 noopAll;
 if (set.isAndroid()) {

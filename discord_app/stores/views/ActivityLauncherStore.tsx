@@ -1,11 +1,11 @@
-// === Module 11062: handleActivityStateChanged ===
+// === Module 11282: handleActivityStateChanged ===
 
-// Module 11062 (handleActivityStateChanged)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "updateActivities" /* 9433 */;
-import closure_4 from "filterPlayingActivities" /* 5223 */;
-import ME from "ME" /* 676 */;
+// Module 11282 (handleActivityStateChanged)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import closure_3 from "updateActivities" /* 9446 */;
+import closure_4 from "filterPlayingActivities" /* 5231 */;
+import ME from "ME" /* 673 */;
 
 const require = arg1;
 function handleActivityStateChanged(COMPLETE, JOIN, type) {

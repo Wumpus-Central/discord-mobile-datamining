@@ -1,18 +1,18 @@
-// === Module 2501: messagesProxy ===
+// === Module 2500: messagesProxy ===
 
-// Module 2501 (messagesProxy)
+// Module 2500 (messagesProxy)
 import set from "set" /* 2 */;
-import loadJsonAsset from "loadJsonAsset" /* 1239 */;
-import registerAsset from "registerAsset" /* 2502 */;
-import module_1274 from "module_1274" /* 1274 */;
+import loadJsonAsset from "loadJsonAsset" /* 1238 */;
+import registerAsset from "registerAsset" /* 2501 */;
+import module_1273 from "module_1273" /* 1273 */;
 
-const loader = module_1274.createLoader({
+const loader = module_1273.createLoader({
   () => {
     const jsonAsset = loadJsonAsset.loadJsonAsset(registerAsset);
     return jsonAsset.then((arg0) => ({ default: arg0 }));
   }
 }, "en-US");
-const messagesProxy = module_1274.makeMessagesProxy(loader);
+const messagesProxy = module_1273.makeMessagesProxy(loader);
 const result = set.fileFinishedImporting("modules/report_to_mod/ReportToMod.messages.js");
 
 export default messagesProxy;

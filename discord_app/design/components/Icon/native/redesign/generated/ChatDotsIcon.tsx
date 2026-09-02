@@ -1,10 +1,10 @@
-// === Module 14953: ChatDotsIcon ===
+// === Module 15182: ChatDotsIcon ===
 
-// Module 14953 (ChatDotsIcon)
+// Module 15182 (ChatDotsIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 14954 */;
+import registerAsset from "registerAsset" /* 15183 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

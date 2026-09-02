@@ -1,9 +1,9 @@
-// === Module 9651: isVoicePanelEnabled ===
+// === Module 9664: isVoicePanelEnabled ===
 
-// Module 9651 (isVoicePanelEnabled)
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
+// Module 9664 (isVoicePanelEnabled)
+import defaultAreStatesEqual from "defaultAreStatesEqual" /* 644 */;
 import useIsStageVoicePanelEnabled from "useIsStageVoicePanelEnabled" /* 4729 */;
-import closure_2 from "ensureGuildLoaded" /* 1387 */;
+import closure_2 from "ensureGuildLoaded" /* 1386 */;
 import closure_3 from "createRTCConnection" /* 4554 */;
 import closure_4 from "withEqualityFn" /* 4728 */;
 

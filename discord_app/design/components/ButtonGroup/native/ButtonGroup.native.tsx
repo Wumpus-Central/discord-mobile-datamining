@@ -1,6 +1,6 @@
-// === Module 5376: ButtonGroup ===
+// === Module 5384: ButtonGroup ===
 
-// Module 5376 (ButtonGroup)
+// Module 5384 (ButtonGroup)
 import noopAll from "noop" /* 19 */;
 import Stack from "Stack" /* 4926 */;
 import { jsx } from "jsxProd" /* 21 */;

@@ -1,9 +1,9 @@
-// === Module 16916: timeout ===
+// === Module 17152: timeout ===
 
-// Module 16916 (timeout)
-import initializeDefault from "initialize" /* 5486 */;
-import closure_3 from "filterPlayingActivities" /* 5223 */;
-import ME from "ME" /* 676 */;
+// Module 17152 (timeout)
+import initializeDefault from "initialize" /* 5494 */;
+import closure_3 from "filterPlayingActivities" /* 5231 */;
+import ME from "ME" /* 673 */;
 
 let require = arg1;
 ({ AnalyticsObjects: c4, StatusTypes: c5 } = ME);
@@ -94,7 +94,7 @@ let prototype = function CustomStatusManager() {
             obj1[0] = constants.CUSTOM_STATUS_MANAGER;
             obj[0] = obj1;
             obj[1] = obj;
-            callback(10174)(obj);
+            callback(10196)(obj);
             closure_6.stop();
           }
         }
@@ -112,11 +112,11 @@ let prototype = function CustomStatusManager() {
       tmp = null == StatusCreatedAtSetting.getSetting();
     }
     if (tmp) {
-      const PreloadedUserSettingsActionCreators = applyArgumentsResult(1370).PreloadedUserSettingsActionCreators;
+      const PreloadedUserSettingsActionCreators = applyArgumentsResult(1369).PreloadedUserSettingsActionCreators;
       PreloadedUserSettingsActionCreators.updateAsync("status", (arg0) => {
         const UInt64Value = callback(table[7]).UInt64Value;
         arg0.statusCreatedAtMs = UInt64Value.create({ value: "" + Date.now() });
-      }, applyArgumentsResult(1370).UserSettingsDelay.INFREQUENT_USER_ACTION);
+      }, applyArgumentsResult(1369).UserSettingsDelay.INFREQUENT_USER_ACTION);
     }
   };
   applyArgumentsResult.manageExpiringFocusMode = function manageExpiringFocusMode() {
@@ -136,9 +136,9 @@ let prototype = function CustomStatusManager() {
             callback(table[8]).setFocusMode(false);
           }, true);
         } else {
-          applyArgumentsResult(10173).setFocusMode(false);
+          applyArgumentsResult(10195).setFocusMode(false);
           closure_7.stop();
-          const tmpResult = applyArgumentsResult(10173);
+          const tmpResult = applyArgumentsResult(10195);
         }
       }
     }

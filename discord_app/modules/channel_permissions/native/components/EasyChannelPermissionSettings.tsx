@@ -1,22 +1,22 @@
-// === Module 16403: ChannelPermissionSettingsBasicView ===
+// === Module 16636: ChannelPermissionSettingsBasicView ===
 
-// Module 16403 (ChannelPermissionSettingsBasicView)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 16636 (ChannelPermissionSettingsBasicView)
+import ThemesDefault from "Themes" /* 709 */;
 import setDefault from "set" /* 4857 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
 import closure_6 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "init" /* 16404 */;
-import closure_10 from "ensureGuildLoaded" /* 1387 */;
-import closure_11 from "trackCommunicationDisabled" /* 1992 */;
-import closure_12 from "createGuildRoleRecordFromRust" /* 1985 */;
-import closure_13 from "createGuildRecordFromRust" /* 1909 */;
-import closure_14 from "getUncachedChannelPermissions" /* 4121 */;
+import closure_9 from "init" /* 16637 */;
+import closure_10 from "ensureGuildLoaded" /* 1386 */;
+import closure_11 from "trackCommunicationDisabled" /* 1991 */;
+import closure_12 from "createGuildRoleRecordFromRust" /* 1984 */;
+import closure_13 from "createGuildRecordFromRust" /* 1908 */;
+import closure_14 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_15 from "markAllUserIdListsStale" /* 4130 */;
-import closure_16 from "mergeGuildAvatar" /* 1922 */;
-import { SettingMode } from "RowType" /* 8672 */;
-import ME from "ME" /* 676 */;
+import closure_16 from "mergeGuildAvatar" /* 1921 */;
+import { SettingMode } from "RowType" /* 8687 */;
+import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -72,13 +72,13 @@ function ChannelPermissionSettingsBasicView(channel) {
               closure_0 = tmp2;
               closure_0 = undefined;
               const accessPermissions = closure_1_0.accessPermissions;
-              const result = v0(9707).isPrivateGuildChannel(closure_1_0);
-              const obj9 = v0(9707);
+              const result = v0(9721).isPrivateGuildChannel(closure_1_0);
+              const obj9 = v0(9721);
               const tmp22 = v0;
-              closure_0 = v0(9707).flipEveryonePermission(closure_1_0, accessPermissions, result);
+              closure_0 = v0(9721).flipEveryonePermission(closure_1_0, accessPermissions, result);
               const currentUser = closure_1_16.getCurrentUser();
               let tmp7 = closure_1_9;
-              const obj10 = v0(9707);
+              const obj10 = v0(9721);
               if (!closure_1_9) {
                 tmp7 = null == currentUser;
               }
@@ -89,7 +89,7 @@ function ChannelPermissionSettingsBasicView(channel) {
                 v0 = 1;
                 dependencyMap = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = tmp22(9707).grantUserChannelAccess(closure_1_0, accessPermissions);
+                obj1[0] = tmp22(9721).grantUserChannelAccess(closure_1_0, accessPermissions);
                 return obj1;
               }
               canResult = closure_1_14.can(closure_1_19.ADMINISTRATOR, closure_1_4);
@@ -120,7 +120,7 @@ function ChannelPermissionSettingsBasicView(channel) {
           v0 = 2;
           dependencyMap = 1;
           const obj3 = { value: null, done: false };
-          obj3[0] = closure_1_0(9708).savePermissionUpdates(closure_1_0.id, items);
+          obj3[0] = closure_1_0(9722).savePermissionUpdates(closure_1_0.id, items);
           return obj3;
         } catch (tmp16) {
           dependencyMap = tmp;
@@ -173,7 +173,7 @@ function ChannelPermissionSettingsBasicView(channel) {
               v0 = undefined;
               if (null != stringResult.guild_id) {
                 if (!callback) {
-                  obj1 = stringResult(9709);
+                  obj1 = stringResult(9723);
                   v0 = 1;
                   dependencyMap = 1;
                   obj1 = { value: null, done: false };
@@ -194,9 +194,9 @@ function ChannelPermissionSettingsBasicView(channel) {
             dependencyMap = 3;
             return { value: "HermesInternal", done: null };
           }
-          const intl = stringResult(1236).intl;
+          const intl = stringResult(1233).intl;
           const string = intl.string;
-          const t = stringResult(1236).t;
+          const t = stringResult(1233).t;
           if (c1) {
             stringResult = string(t.vw48TT);
           } else {
@@ -204,9 +204,9 @@ function ChannelPermissionSettingsBasicView(channel) {
           }
           let obj3 = stringResult(4674);
           callback = obj3.computeChannelName(stringResult, closure_1_16, closure_1_15);
-          let intl2 = stringResult(1236).intl;
+          let intl2 = stringResult(1233).intl;
           let onCancel = intl2.format;
-          let show = stringResult(1236).t;
+          let show = stringResult(1233).t;
           if (callback) {
             const obj2 = { channelName: null };
             obj2[0] = c1;
@@ -222,14 +222,14 @@ function ChannelPermissionSettingsBasicView(channel) {
           const obj4 = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, hideActionSheet: false, onCancel: null };
           obj4[0] = c0;
           obj4[1] = v0;
-          const intl3 = stringResult(1236).intl;
-          obj4[2] = intl3.string(stringResult(1236).t["ETE/oC"]);
-          const intl4 = stringResult(1236).intl;
-          obj4[3] = intl4.string(stringResult(1236).t.p89ACt);
+          const intl3 = stringResult(1233).intl;
+          obj4[2] = intl3.string(stringResult(1233).t["ETE/oC"]);
+          const intl4 = stringResult(1233).intl;
+          obj4[3] = intl4.string(stringResult(1233).t.p89ACt);
           intl2 = closure_6;
           obj4[4] = closure_6;
           onCancel = function onCancel() {
-            v1(v1(table[19]).isPrivateGuildChannel(c0));
+            v1(v1(table[20]).isPrivateGuildChannel(c0));
           };
           obj4[6] = onCancel;
           show(obj4);
@@ -254,8 +254,10 @@ function ChannelPermissionSettingsBasicView(channel) {
   let obj = channel(navigation[17]);
   navigation = obj.useNavigation();
   obj1 = channel(navigation[18]);
+  const appChannelBotUserId = obj1.useAppChannelBotUserId(channel);
+  let obj2 = channel(navigation[19]);
   let items = [closure_13, closure_12];
-  const stateFromStoresObject = obj1.useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = obj2.useStateFromStoresObject(items, () => {
     guild = closure_1_13.getGuild(channel.getGuildId());
     const obj = { guild, sortedGuildRoles: null };
     let sortedRoles;
@@ -275,7 +277,7 @@ function ChannelPermissionSettingsBasicView(channel) {
   const memo = togglePrivateChannel.useMemo(() => {
     if (null != guild) {
       if (null != sortedGuildRoles) {
-        const obj = setPrivateToggleState(navigation[19]);
+        const obj = setPrivateToggleState(navigation[20]);
         const existingRolesRows = obj.getExistingRolesRows(tmp, tmp2, channel, channel.accessPermissions);
       }
       return [];
@@ -288,46 +290,48 @@ function ChannelPermissionSettingsBasicView(channel) {
         id = guild.id;
       }
       memberIds = memberIds.getMemberIds(id);
-      let obj2 = setPrivateToggleState(tmp3[19]);
-      const existingMembersRows = obj2.getExistingMembersRows(memberIds, channel, guild, channel.accessPermissions);
-      let obj3 = setPrivateToggleState(tmp3[19]);
-      let result = obj3.isPrivateGuildChannel(channel);
+      let obj3 = setPrivateToggleState(tmp3[20]);
+      obj = { appChannelBotUserId: null };
+      obj[0] = appChannelBotUserId;
+      const existingMembersRows = obj3.getExistingMembersRows(memberIds, channel, guild, channel.accessPermissions, obj);
+      let obj5 = setPrivateToggleState(tmp3[20]);
+      let result = obj5.isPrivateGuildChannel(channel);
       c9 = result;
-      let obj4 = setPrivateToggleState(tmp3[26]);
+      let obj6 = setPrivateToggleState(tmp3[27]);
       const isCategoryResult = channel.isCategory();
-      let obj5 = setPrivateToggleState(tmp3[26]);
-      const canEveryoneRoleResult1 = obj5.canEveryoneRole(constants2.ADMINISTRATOR, guild);
+      let obj7 = setPrivateToggleState(tmp3[27]);
+      const canEveryoneRoleResult1 = obj7.canEveryoneRole(constants2.ADMINISTRATOR, guild);
       const type = channel.type;
-      let string = tmp2(tmp3[22]).intl.string;
+      let string = tmp2(tmp3[23]).intl.string;
       if (type === constants.GUILD_CATEGORY) {
-        let intl2 = tmp2(tmp3[22]).intl;
-        let stringResult = intl2.string(tmp2(tmp3[22]).t.RQUk61);
+        let intl2 = tmp2(tmp3[23]).intl;
+        let stringResult = intl2.string(tmp2(tmp3[23]).t.RQUk61);
       } else {
-        stringResult = tmp18;
-        if (type === tmp19.GUILD_VOICE) {
-          let intl = tmp2(tmp3[22]).intl;
-          stringResult = intl.string(tmp2(tmp3[22]).t.cLjvKg);
+        stringResult = tmp20;
+        if (type === tmp21.GUILD_VOICE) {
+          let intl = tmp2(tmp3[23]).intl;
+          stringResult = intl.string(tmp2(tmp3[23]).t.cLjvKg);
         }
       }
       obj = { style: null, spacing: null, children: null };
-      obj = { paddingHorizontal: null };
-      obj[0] = privateToggleState(tmp3[16]).space.PX_16;
-      obj[0] = obj;
+      obj1 = { paddingHorizontal: null };
+      obj1[0] = privateToggleState(tmp3[16]).space.PX_16;
+      obj[0] = obj1;
       obj[1] = privateToggleState(tmp3[16]).space.PX_16;
-      obj1 = { title: null, hasIcons: false, children: null };
-      obj1[0] = stringResult;
-      let intl3 = tmp2(tmp3[22]).intl;
+      obj2 = { title: null, hasIcons: false, children: null };
+      obj2[0] = stringResult;
+      let intl3 = tmp2(tmp3[23]).intl;
       const string2 = intl3.string;
-      let t = tmp2(tmp3[22]).t;
+      let t = tmp2(tmp3[23]).t;
       if (isCategoryResult) {
         let string2Result = string2(t.lEPAZ5);
       } else {
         string2Result = string2(t.aUI70g);
       }
-      obj2 = { label: null, value: null, onValueChange: null };
-      obj2[0] = string2Result;
-      obj2[1] = privateToggleState;
-      obj2[2] = function onPrivateChannelSwitchChange() {
+      obj3 = { label: null, value: null, onValueChange: null };
+      obj3[0] = string2Result;
+      obj3[1] = privateToggleState;
+      obj3[2] = function onPrivateChannelSwitchChange() {
         const self = this;
         const apply = _onPrivateChannelSwitchChange.apply;
         if (typeof apply === "unknown") {
@@ -337,61 +341,61 @@ function ChannelPermissionSettingsBasicView(channel) {
         }
         return applyArgumentsResult;
       };
-      obj1[2] = closure_23(tmp2(tmp3[29]).TableSwitchRow, obj2);
-      const items3 = [closure_23(tmp2(tmp3[28]).TableRowGroup, obj1), , , , , ];
-      let tmp23Result = canEveryoneRoleResult1;
+      obj2[2] = closure_23(tmp2(tmp3[30]).TableSwitchRow, obj3);
+      const items3 = [closure_23(tmp2(tmp3[29]).TableRowGroup, obj2), , , , , ];
+      let tmp25Result = canEveryoneRoleResult1;
       if (canEveryoneRoleResult1) {
-        obj3 = { style: null, children: null };
-        obj3[0] = tmp.adminWarning;
-        obj4 = { messageType: null, children: null };
-        obj4[0] = tmp2(tmp3[30]).HelpMessageTypes.WARNING;
-        let intl4 = tmp2(tmp3[22]).intl;
-        obj4[1] = intl4.string(tmp2(tmp3[22]).t["5f3HIC"]);
-        obj3[1] = tmp23(tmp2(tmp3[30]).HelpMessage, obj4);
-        tmp23Result = tmp23(_togglePrivateChannel, obj3);
+        let obj4 = { style: null, children: null };
+        obj4[0] = tmp.adminWarning;
+        obj5 = { messageType: null, children: null };
+        obj5[0] = tmp2(tmp3[31]).HelpMessageTypes.WARNING;
+        let intl4 = tmp2(tmp3[23]).intl;
+        obj5[1] = intl4.string(tmp2(tmp3[23]).t["5f3HIC"]);
+        obj4[1] = tmp25(tmp2(tmp3[31]).HelpMessage, obj5);
+        tmp25Result = tmp25(_togglePrivateChannel, obj4);
       }
-      items3[1] = tmp23Result;
-      tmp23Result = !canEveryoneRoleResult1;
+      items3[1] = tmp25Result;
+      tmp25Result = !canEveryoneRoleResult1;
       if (!canEveryoneRoleResult1) {
-        tmp23Result = !canEveryoneRoleResult;
+        tmp25Result = !canEveryoneRoleResult;
       }
-      if (tmp23Result) {
-        tmp23Result = !result;
+      if (tmp25Result) {
+        tmp25Result = !result;
       }
-      if (tmp23Result) {
-        obj5 = { style: null, children: null };
-        obj5[0] = tmp.adminWarning;
-        const obj6 = { messageType: null, children: null };
-        obj6[0] = tmp2(tmp3[30]).HelpMessageTypes.WARNING;
-        const intl5 = tmp2(tmp3[22]).intl;
-        obj6[1] = intl5.string(tmp2(tmp3[22]).t.ZAk4Q9);
-        obj5[1] = tmp23(tmp2(tmp3[30]).HelpMessage, obj6);
-        tmp23Result = tmp23(_togglePrivateChannel, obj5);
+      if (tmp25Result) {
+        obj6 = { style: null, children: null };
+        obj6[0] = tmp.adminWarning;
+        obj7 = { messageType: null, children: null };
+        obj7[0] = tmp2(tmp3[31]).HelpMessageTypes.WARNING;
+        const intl5 = tmp2(tmp3[23]).intl;
+        obj7[1] = intl5.string(tmp2(tmp3[23]).t.ZAk4Q9);
+        obj6[1] = tmp25(tmp2(tmp3[31]).HelpMessage, obj7);
+        tmp25Result = tmp25(_togglePrivateChannel, obj6);
       }
-      items3[2] = tmp23Result;
-      const obj7 = { hasIcons: true, children: null };
-      const obj8 = { arrow: true, icon: null, label: null, onPress: null };
-      obj8[1] = closure_23(tmp2(tmp3[32]).CirclePlusIcon, {});
-      const intl6 = tmp2(tmp3[22]).intl;
-      obj8[2] = intl6.string(tmp2(tmp3[22]).t.dMJ3Y6);
-      obj8[3] = function onPress() {
+      items3[2] = tmp25Result;
+      const obj8 = { hasIcons: true, children: null };
+      let obj9 = { arrow: true, icon: null, label: null, onPress: null };
+      obj9[1] = closure_23(tmp2(tmp3[33]).CirclePlusIcon, {});
+      const intl6 = tmp2(tmp3[23]).intl;
+      obj9[2] = intl6.string(tmp2(tmp3[23]).t.dMJ3Y6);
+      obj9[3] = function onPress() {
         if (null != channel) {
-          const result = channel(navigation[33]).openAddMembersActionSheet(tmp);
-          const obj = channel(navigation[33]);
+          const result = channel(navigation[34]).openAddMembersActionSheet(tmp);
+          const obj = channel(navigation[34]);
         }
       };
-      obj7[1] = closure_23(tmp2(tmp3[31]).TableRow, obj8);
-      items3[3] = closure_23(tmp2(tmp3[28]).TableRowGroup, obj7);
-      let obj9 = { title: null, hasIcons: true, children: null };
-      const intl7 = tmp2(tmp3[22]).intl;
-      obj9[0] = intl7.string(tmp2(tmp3[22]).t.ES4CC6);
-      obj9[2] = memo.map((id) => closure_1_23(privateToggleState(navigation[25]), { item: id, channelId: channel.id, showType: true, showRemove: true, guildId: channel.guild_id }, id.id));
-      items3[4] = closure_23(tmp2(tmp3[28]).TableRowGroup, obj9);
-      let obj10 = { hasIcons: true, children: null };
-      obj10[1] = existingMembersRows.map((id) => closure_1_23(privateToggleState(navigation[25]), { item: id, channelId: channel.id, showType: true, showRemove: true, guildId: channel.guild_id }, id.id));
-      items3[5] = closure_23(tmp2(tmp3[28]).TableRowGroup, obj10);
+      obj8[1] = closure_23(tmp2(tmp3[32]).TableRow, obj9);
+      items3[3] = closure_23(tmp2(tmp3[29]).TableRowGroup, obj8);
+      let obj10 = { title: null, hasIcons: true, children: null };
+      const intl7 = tmp2(tmp3[23]).intl;
+      obj10[0] = intl7.string(tmp2(tmp3[23]).t.ES4CC6);
+      obj10[2] = memo.map((id) => closure_1_23(privateToggleState(navigation[26]), { item: id, channelId: channel.id, showType: true, showRemove: true, guildId: channel.guild_id }, id.id));
+      items3[4] = closure_23(tmp2(tmp3[29]).TableRowGroup, obj10);
+      const obj11 = { hasIcons: true, children: null };
+      obj11[1] = existingMembersRows.map((id) => closure_1_23(privateToggleState(navigation[26]), { item: id, channelId: channel.id, showType: true, showRemove: true, guildId: channel.guild_id }, id.id));
+      items3[5] = closure_23(tmp2(tmp3[29]).TableRowGroup, obj11);
       obj[2] = items3;
-      return closure_24(tmp2(tmp3[27]).Stack, obj);
+      return closure_24(tmp2(tmp3[28]).Stack, obj);
     }
   }
   return null;
@@ -419,13 +423,13 @@ export default function EasyChannelPermissionSettings(arg0) {
   let first;
   let callback;
   closure_5 = undefined;
-  let obj = require(first[34]);
+  let obj = require(first[35]);
   obj.useNavigatorBackPressHandler(onBack);
   const tmp4 = callback3();
-  obj1 = require(first[18]);
+  obj1 = require(first[19]);
   const items = [closure_10];
   stateFromStores = obj1.useStateFromStores(items, () => closure_1_10.getChannel(closure_0));
-  let obj3 = require(first[18]);
+  let obj3 = require(first[19]);
   const items1 = [closure_9];
   let obj4 = React;
   let isGuildStageVoiceResult;
@@ -446,12 +450,12 @@ export default function EasyChannelPermissionSettings(arg0) {
   const tmp9 = callback(React.useState(BASIC), 2);
   first = tmp9[0];
   callback = tmp9[1];
-  let obj5 = stateFromStores(tmp2[19]);
+  let obj5 = stateFromStores(tmp2[20]);
   const tmp11 = callback(obj4.useState(obj5.isPrivateGuildChannel(stateFromStores)), 2);
   closure_5 = tmp12;
   const items2 = [origin];
   const effect = obj4.useEffect(() => {
-    let obj = origin(first[35]);
+    let obj = origin(first[36]);
     let CHANNEL_SETTINGS = null;
     if (origin === closure_1_21.OVERVIEW) {
       CHANNEL_SETTINGS = closure_1_22.CHANNEL_SETTINGS;
@@ -462,39 +466,39 @@ export default function EasyChannelPermissionSettings(arg0) {
   const items3 = [stateFromStores];
   callback = obj4.useCallback((arg0) => {
     if (arg0 === closure_1_25.ADVANCED) {
-      closure_1_0(first[20]).setAdvancedMode(true);
-      const obj3 = closure_1_0(first[20]);
+      closure_1_0(first[21]).setAdvancedMode(true);
+      const obj3 = closure_1_0(first[21]);
     } else {
-      callback2(stateFromStores(first[19]).isPrivateGuildChannel(stateFromStores));
-      const obj = stateFromStores(first[19]);
-      closure_1_0(first[20]).setAdvancedMode(false);
-      const obj2 = closure_1_0(first[20]);
+      callback2(stateFromStores(first[20]).isPrivateGuildChannel(stateFromStores));
+      const obj = stateFromStores(first[20]);
+      closure_1_0(first[21]).setAdvancedMode(false);
+      const obj2 = closure_1_0(first[21]);
     }
     callback(arg0);
   }, items3);
-  const intl = tmp(tmp2[22]).intl;
-  const items4 = [intl.string(require(first[22]).t["Mw/UDN"]), ];
-  const intl2 = tmp(tmp2[22]).intl;
-  items4[1] = intl2.string(require(first[22]).t["0a6awf"]);
+  const intl = tmp(tmp2[23]).intl;
+  const items4 = [intl.string(require(first[23]).t["Mw/UDN"]), ];
+  const intl2 = tmp(tmp2[23]).intl;
+  items4[1] = intl2.string(require(first[23]).t["0a6awf"]);
   let isGuildStageVoiceResult1;
   if (stateFromStores != null) {
     isGuildStageVoiceResult1 = stateFromStores.isGuildStageVoice();
   }
   if (true === isGuildStageVoiceResult1) {
-    const intl3 = tmp(tmp2[22]).intl;
-    items4.push(intl3.string(tmp(tmp2[22]).t.YIIUJ3));
+    const intl3 = tmp(tmp2[23]).intl;
+    items4.push(intl3.string(tmp(tmp2[23]).t.YIIUJ3));
   }
   obj = { pageWidth: 0, defaultIndex: first, onSetActiveIndex: callback, items: items4.map((id) => ({ id, label: id, page: null })) };
   const items5 = [stateFromStores, first];
-  const segmentedControlState = require(first[36]).useSegmentedControlState(obj);
+  const segmentedControlState = require(first[37]).useSegmentedControlState(obj);
   const effect1 = obj4.useEffect(() => {
-    let obj = origin(first[35]);
+    let obj = origin(first[36]);
     if (first === closure_1_25.BASIC) {
       let ADVANCED = closure_1_17.BASIC;
     } else {
       ADVANCED = closure_1_17.ADVANCED;
     }
-    obj = { mode: ADVANCED, channel_is_private: stateFromStores(first[19]).isPrivateGuildChannel(stateFromStores) };
+    obj = { mode: ADVANCED, channel_is_private: stateFromStores(first[20]).isPrivateGuildChannel(stateFromStores) };
     obj.trackWithMetadata(closure_1_20.CHANNEL_PERMISSIONS_PAGE_VIEWED, obj);
   }, items5);
   if (null == stateFromStores) {
@@ -508,7 +512,7 @@ export default function EasyChannelPermissionSettings(arg0) {
     obj1[0] = obj2;
     obj3 = { state: null };
     obj3[0] = segmentedControlState;
-    obj1[1] = callback2(tmp(tmp2[37]).SegmentedControl, obj3);
+    obj1[1] = callback2(tmp(tmp2[38]).SegmentedControl, obj3);
     const items6 = [callback2(closure_7, obj1), ];
     obj4 = { style: null, children: null };
     obj4[0] = tmp4.content;
@@ -521,11 +525,11 @@ export default function EasyChannelPermissionSettings(arg0) {
     } else if (first === tmp8.MODERATORS) {
       const obj6 = { channel: null };
       obj6[0] = stateFromStores;
-      tmp21Result = tmp21(tmp22(tmp2[38]), obj6);
+      tmp21Result = tmp21(tmp22(tmp2[39]), obj6);
     } else {
       const obj7 = { channelId: null };
       obj7[0] = stateFromStores.id;
-      tmp21Result = tmp21(tmp22(tmp2[39]), obj7);
+      tmp21Result = tmp21(tmp22(tmp2[40]), obj7);
     }
     obj4[1] = tmp21Result;
     obj4 = tmp21(closure_8, obj4);

@@ -1,10 +1,10 @@
-// === Module 11104: FractionalStar ===
+// === Module 11325: FractionalStar ===
 
-// Module 11104 (FractionalStar)
+// Module 11325 (FractionalStar)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import StarIcon from "StarIcon" /* 9181 */;
-import StarOutlineIcon from "StarOutlineIcon" /* 9183 */;
+import ThemesDefault from "Themes" /* 709 */;
+import StarIcon from "StarIcon" /* 9195 */;
+import StarOutlineIcon from "StarOutlineIcon" /* 9197 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -21,11 +21,11 @@ function FractionalStar(fillAmount) {
     obj = { style: null, children: null };
     const items1 = [tmp.starFillMask, ];
     obj1 = { width: null };
-    obj1[0] = tmp7(712).space.PX_10 * fillAmount;
+    obj1[0] = tmp7(709).space.PX_10 * fillAmount;
     items1[1] = obj1;
     obj[0] = items1;
     const obj2 = { size: "custom", color: null, style: null };
-    obj2[1] = tmp7(712).colors.TEXT_MUTED;
+    obj2[1] = tmp7(709).colors.TEXT_MUTED;
     obj2[2] = tmp.starIcon;
     obj[1] = tmp4(StarIcon.StarIcon, obj2);
     tmp4Result = tmp4(tmp3, obj);

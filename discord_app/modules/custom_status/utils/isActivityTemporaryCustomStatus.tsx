@@ -1,8 +1,8 @@
-// === Module 15654: isActivityTemporaryCustomStatus ===
+// === Module 15885: isActivityTemporaryCustomStatus ===
 
-// Module 15654 (isActivityTemporaryCustomStatus)
+// Module 15885 (isActivityTemporaryCustomStatus)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 
 const ActivityTypes = ME.ActivityTypes;
 const result = set.fileFinishedImporting("modules/custom_status/utils/isActivityTemporaryCustomStatus.tsx");

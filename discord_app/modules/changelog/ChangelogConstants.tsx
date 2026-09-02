@@ -1,6 +1,6 @@
-// === Module 1980: CHANGELOG_MODAL_KEY ===
+// === Module 1979: CHANGELOG_MODAL_KEY ===
 
-// Module 1980 (CHANGELOG_MODAL_KEY)
+// Module 1979 (CHANGELOG_MODAL_KEY)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/changelog/ChangelogConstants.tsx");

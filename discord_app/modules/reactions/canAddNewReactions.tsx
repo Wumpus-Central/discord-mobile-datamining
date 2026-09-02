@@ -1,9 +1,9 @@
-// === Module 7880: ? ===
+// === Module 7889: ? ===
 
-// Module 7880
-import closure_0 from "recomputeGuild" /* 5357 */;
-import closure_1 from "getUncachedChannelPermissions" /* 4121 */;
-import { Permissions } from "ME" /* 676 */;
+// Module 7889
+import closure_0 from "recomputeGuild" /* 5365 */;
+import closure_1 from "getUncachedChannelPermissions" /* 4120 */;
+import { Permissions } from "ME" /* 673 */;
 
 const result = require("set").fileFinishedImporting("modules/reactions/canAddNewReactions.tsx");
 

@@ -1,12 +1,12 @@
-// === Module 16562: ? ===
+// === Module 16797: ? ===
 
-// Module 16562
+// Module 16797
 import getFontScale from "getFontScale" /* 4935 */;
-import DEFAULT_BADGE_SIZE from "DEFAULT_BADGE_SIZE" /* 7613 */;
-import DEFAULT_BADGE_SIZEDefault from "DEFAULT_BADGE_SIZE" /* 7613 */;
-import getLayoutStyleDefault from "getLayoutStyle" /* 16558 */;
+import DEFAULT_BADGE_SIZE from "DEFAULT_BADGE_SIZE" /* 7623 */;
+import DEFAULT_BADGE_SIZEDefault from "DEFAULT_BADGE_SIZE" /* 7623 */;
+import getLayoutStyleDefault from "getLayoutStyle" /* 16793 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { MUTED_OPACITY_CONTENT } from "hairlineWidth" /* 10201 */;
+import { MUTED_OPACITY_CONTENT } from "hairlineWidth" /* 10223 */;
 import { UnreadSetting } from "ReadStateTypes" /* 4702 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

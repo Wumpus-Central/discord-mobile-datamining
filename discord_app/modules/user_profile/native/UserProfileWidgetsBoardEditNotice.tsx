@@ -1,12 +1,12 @@
-// === Module 12495: UserProfileWidgetsBoardEditNotice ===
+// === Module 12719: UserProfileWidgetsBoardEditNotice ===
 
-// Module 12495 (UserProfileWidgetsBoardEditNotice)
+// Module 12719 (UserProfileWidgetsBoardEditNotice)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import useSharedStylesDefault from "useSharedStyles" /* 8530 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10418 */;
+import ThemesDefault from "Themes" /* 709 */;
+import useSharedStylesDefault from "useSharedStyles" /* 8543 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10639 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1384 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -26,7 +26,7 @@ export default function UserProfileWidgetsBoardEditNotice() {
   const _require = callback2();
   importDefault = useSharedStylesDefault();
   let obj = { contentTypes: null, bypassAutoDismiss: true, children: null };
-  let items = [_require(1373).DismissibleContent.USER_PROFILE_WIDGETS_BOARD_MOBILE_EDIT_NOTICE];
+  let items = [_require(1372).DismissibleContent.USER_PROFILE_WIDGETS_BOARD_MOBILE_EDIT_NOTICE];
   obj[0] = items;
   obj[2] = function children(markAsDismissed) {
     markAsDismissed = markAsDismissed.markAsDismissed;

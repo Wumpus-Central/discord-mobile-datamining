@@ -1,13 +1,13 @@
-// === Module 7661: _fetchGuildJoinRequests ===
+// === Module 7670: _fetchGuildJoinRequests ===
 
-// Module 7661 (_fetchGuildJoinRequests)
-import dispatcherDefault from "dispatcher" /* 709 */;
-import trackMemberApplicationViewed from "trackMemberApplicationViewed" /* 7662 */;
+// Module 7670 (_fetchGuildJoinRequests)
+import dispatcherDefault from "dispatcher" /* 706 */;
+import trackMemberApplicationViewed from "trackMemberApplicationViewed" /* 7671 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { createChannelRecordFromServer as closure_4 } from "createChannelRecord" /* 1391 */;
-import closure_5 from "updateSubmittedGuildJoinRequestTotal" /* 7202 */;
+import { createChannelRecordFromServer as closure_4 } from "createChannelRecord" /* 1390 */;
+import closure_5 from "updateSubmittedGuildJoinRequestTotal" /* 7211 */;
 import { joinRequestFromServer } from "handleGatewayJoinRequestUpdate" /* 4300 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 
 require = arg1;
 function _fetchGuildJoinRequests() {
@@ -72,7 +72,7 @@ function _fetchGuildJoinRequests() {
               closure_9 = undefined;
               c6 = 1;
               c7 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -91,10 +91,10 @@ function _fetchGuildJoinRequests() {
               c6 = tmp31;
               if (!c5.isFetching()) {
                 if (c6) {
-                  let obj5 = lib(709);
+                  let obj5 = lib(706);
                   obj5.dispatch({ type: "GUILD_JOIN_REQUESTS_FETCH_START" });
                   c5 = 1;
-                  const HTTP = callback(530).HTTP;
+                  const HTTP = callback(527).HTTP;
                   const obj2 = { url: null, query: null, rejectWithError: null };
                   obj2[0] = total.GUILD_JOIN_REQUESTS(callback);
                   const obj3 = { status: null, limit: null, before: null, after: null };
@@ -103,7 +103,7 @@ function _fetchGuildJoinRequests() {
                   obj3[2] = dependencyMap;
                   obj3[3] = c3;
                   obj2[1] = obj3;
-                  obj2[2] = callback(530).rejectWithMigratedError();
+                  obj2[2] = callback(527).rejectWithMigratedError();
                   c6 = 3;
                   c7 = 1;
                   let obj4 = { value: null, done: false };
@@ -117,7 +117,7 @@ function _fetchGuildJoinRequests() {
           } else if (2 === tmp7) {
             c5 = 0;
             closure_10 = limit;
-            obj4 = lib(709);
+            obj4 = lib(706);
             obj4.dispatch({ type: "GUILD_JOIN_REQUESTS_FETCH_FAILURE" });
             throw closure_10;
           } else if (arg0 === 1) {
@@ -138,7 +138,7 @@ function _fetchGuildJoinRequests() {
               lib = [];
             }
             closure_9 = lib.map(c6);
-            obj = lib(709);
+            obj = lib(706);
             const obj6 = { type: "GUILD_JOIN_REQUESTS_FETCH_SUCCESS", status: null, requests: null, total: null, limit: null, guildId: null };
             obj6[1] = lib;
             obj6[2] = closure_9;
@@ -357,7 +357,7 @@ function _ackUserGuildJoinRequest() {
             }
           } else if (1 === tmp8) {
             c5 = 0;
-            let obj8 = callback2(709);
+            let obj8 = callback2(706);
             let obj3 = { type: "ACK_APPROVED_GUILD_JOIN_REQUEST", id: null, guildId: null };
             obj3[1] = callback2;
             obj3[2] = callback;
@@ -365,7 +365,7 @@ function _ackUserGuildJoinRequest() {
             throw closure_4;
           } else if (2 === tmp8) {
             c5 = 0;
-            let obj6 = callback2(709);
+            let obj6 = callback2(706);
             const obj4 = { type: "ACK_APPROVED_GUILD_JOIN_REQUEST", id: null, guildId: null };
             obj4[1] = callback2;
             obj4[2] = callback;
@@ -377,7 +377,7 @@ function _ackUserGuildJoinRequest() {
             throw arg1;
           } else if (arg0 === 2) {
             c5 = 0;
-            obj3 = callback2(709);
+            obj3 = callback2(706);
             const obj5 = { type: "ACK_APPROVED_GUILD_JOIN_REQUEST", id: null, guildId: null };
             obj5[1] = callback2;
             obj5[2] = callback;
@@ -388,7 +388,7 @@ function _ackUserGuildJoinRequest() {
             return obj6;
           } else {
             c5 = 0;
-            obj = callback2(709);
+            obj = callback2(706);
             const obj7 = { type: "ACK_APPROVED_GUILD_JOIN_REQUEST", id: null, guildId: null };
             obj7[1] = callback2;
             obj7[2] = callback;
@@ -468,7 +468,7 @@ function _updateGuildJoinRequest() {
               closure_5 = undefined;
               c7 = 1;
               c8 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp6) {
             if (arg0 === 1) {
@@ -480,21 +480,21 @@ function _updateGuildJoinRequest() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              let obj7 = callback(7662);
+              let obj7 = callback(7671);
               const obj2 = { guildId: null, actionType: null, applicationUserId: null };
               obj2[0] = callback;
               obj2[1] = APPROVED;
               obj2[2] = callback2;
               const result = obj7.trackMemberApplicationAction(obj2);
-              const HTTP = callback(530).HTTP;
+              const HTTP = callback(527).HTTP;
               const obj3 = { url: null, body: null, rejectWithError: null };
               obj3[0] = c8.GUILD_JOIN_REQUEST(callback, dependencyMap);
               const obj4 = { action: null, rejection_reason: null };
               obj4[0] = APPROVED;
               obj4[1] = closure_4;
               obj3[1] = obj4;
-              obj3[2] = callback(530).rejectWithMigratedError();
-              const obj12 = callback(530);
+              obj3[2] = callback(527).rejectWithMigratedError();
+              const obj12 = callback(527);
               c7 = 2;
               c8 = 1;
               const obj5 = { value: null, done: false };
@@ -508,10 +508,10 @@ function _updateGuildJoinRequest() {
                 if (body) {
                   let obj = callback2(4857);
                   obj = { title: null, body: null };
-                  const intl = callback(1236).intl;
-                  obj[0] = intl.string(callback(1236).t.DxJj4e);
-                  const intl2 = callback(1236).intl;
-                  obj[1] = intl2.string(callback(1236).t.rSAOk9);
+                  const intl = callback(1233).intl;
+                  obj[0] = intl.string(callback(1233).t.DxJj4e);
+                  const intl2 = callback(1233).intl;
+                  obj[1] = intl2.string(callback(1233).t.rSAOk9);
                   obj.show(obj);
                 }
                 return Promise.reject(body);
@@ -528,7 +528,7 @@ function _updateGuildJoinRequest() {
             return obj6;
           } else {
             closure_5 = arg1;
-            obj = callback2(709);
+            obj = callback2(706);
             obj7 = { type: "GUILD_JOIN_REQUEST_UPDATE", guildId: null, status: null, request: null };
             obj7[1] = callback;
             obj7[2] = closure_5.body.application_status;
@@ -681,10 +681,10 @@ function _fetchRequestToJoinGuilds() {
             const callback = tmp2;
             let body = tmp5;
             body = undefined;
-            const HTTP = closure_1_0(530).HTTP;
+            const HTTP = closure_1_0(527).HTTP;
             obj1 = { url: null, rejectWithError: null };
             obj1[0] = closure_1_8.USER_JOIN_REQUEST_GUILDS;
-            obj1[1] = closure_1_0(530).rejectWithMigratedError();
+            obj1[1] = closure_1_0(527).rejectWithMigratedError();
             dependencyMap = 1;
             c3 = 1;
             const obj2 = { value: null, done: false };
@@ -701,7 +701,7 @@ function _fetchRequestToJoinGuilds() {
           return obj3;
         } else {
           body = arg1;
-          obj = callback(709);
+          obj = callback(706);
           const obj4 = { type: "USER_JOIN_REQUEST_GUILDS_FETCH", guilds: null };
           obj4[1] = body.body;
           obj.dispatch(obj4);
@@ -762,25 +762,92 @@ function _createOrEnterJoinRequestInterview() {
     c4 = 0;
     c5 = 0;
     const iter = (function*(arg0) {
-      let body = tmp2;
-      if (flag === undefined) {
-        flag = true;
+      if (c5 === 2) {
+        c5 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c5 = 2;
+          if (0 === v0) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let user = tmp5;
+              let body = tmp2;
+              let flag;
+              if (flag === undefined) {
+                flag = true;
+              }
+              body = undefined;
+              user = undefined;
+              v0 = 1;
+              c5 = 1;
+              return { value: "PX_16", done: true };
+            }
+          } else if (1 === tmp5) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              obj1 = { value: null, done: true };
+              obj1[0] = arg1;
+              return obj1;
+            } else {
+              const HTTP = callback(body[7]).HTTP;
+              const obj2 = { url: null, rejectWithError: null };
+              obj2[0] = closure_8.JOIN_REQUEST_INTERVIEW(callback);
+              obj2[1] = callback(body[7]).rejectWithMigratedError();
+              v0 = 2;
+              c5 = 1;
+              const obj3 = { value: null, done: false };
+              obj3[0] = HTTP.post(obj2);
+              return obj3;
+            }
+          } else if (arg0 === 1) {
+            c5 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj4 = { value: null, done: true };
+            obj4[0] = arg1;
+            return obj4;
+          } else {
+            body = arg1;
+            user = v0(body.body);
+            const obj5 = { type: "CHANNEL_CREATE", channel: null };
+            obj5[1] = user;
+            flag(body[6]).dispatch(obj5);
+            if (flag) {
+              obj = flag(body[11]);
+              const privateChannel = obj.selectPrivateChannel(user.id);
+            }
+            c5 = 3;
+            const obj6 = { value: null, done: true };
+            obj6[0] = user.id;
+            return obj6;
+          }
+        } catch (tmp15) {
+          c5 = tmp;
+          throw tmp15;
+        }
       }
-      yield "PX_16";
-      const HTTP = callback(body[7]).HTTP;
-      const obj2 = { url: null, rejectWithError: null };
-      obj2[0] = closure_8.JOIN_REQUEST_INTERVIEW(callback);
-      obj2[1] = callback(body[7]).rejectWithMigratedError();
-      body = yield HTTP.post(obj2);
-      const user = v0(body.body);
-      const obj5 = { type: "CHANNEL_CREATE", channel: null };
-      obj5[1] = user;
-      flag(body[6]).dispatch(obj5);
-      if (flag) {
-        const obj = flag(body[11]);
-        const privateChannel = obj.selectPrivateChannel(user.id);
-      }
-      return user.id;
     })();
     iter.next();
     return iter;

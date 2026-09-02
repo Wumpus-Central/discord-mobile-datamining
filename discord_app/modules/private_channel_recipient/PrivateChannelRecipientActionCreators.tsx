@@ -1,9 +1,9 @@
-// === Module 11528: ? ===
+// === Module 11751: ? ===
 
-// Module 11528
+// Module 11751
 import set from "set" /* 2 */;
-import sendRequest from "sendRequest" /* 530 */;
-import ME from "ME" /* 676 */;
+import sendRequest from "sendRequest" /* 527 */;
+import ME from "ME" /* 673 */;
 
 const Endpoints = ME.Endpoints;
 const result = set.fileFinishedImporting("modules/private_channel_recipient/PrivateChannelRecipientActionCreators.tsx");

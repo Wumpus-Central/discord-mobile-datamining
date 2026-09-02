@@ -1,11 +1,11 @@
-// === Module 11855: useMemberActionsForChannel ===
+// === Module 12078: useMemberActionsForChannel ===
 
-// Module 11855 (useMemberActionsForChannel)
-import useIsNewMemberDefault from "useIsNewMember" /* 6070 */;
-import closure_3 from "trackCommunicationDisabled" /* 1992 */;
+// Module 12078 (useMemberActionsForChannel)
+import useIsNewMemberDefault from "useIsNewMember" /* 6078 */;
+import closure_3 from "trackCommunicationDisabled" /* 1991 */;
 import closure_4 from "handleSettingsLoadSuccess" /* 4707 */;
 import closure_5 from "set" /* 4708 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4109 */;
+import { GuildMemberFlags } from "GuildMemberFlags" /* 4108 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/MemberActionUtils.tsx");
@@ -13,13 +13,13 @@ const result = require("set").fileFinishedImporting("modules/guild_onboarding_ho
 export const useMemberActionsForChannel = function useMemberActionsForChannel(guild_id, channel) {
   const _require = guild_id;
   importDefault = channel;
-  let obj = _require(647);
+  let obj = _require(644);
   const items = [closure_4];
   const items1 = [guild_id];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getNewMemberActions(closure_0), items1);
   const tmp = useIsNewMemberDefault(guild_id);
   const items2 = [closure_5];
-  const stateFromStores1 = _require(647).useStateFromStores(items2, () => closure_1_5.getCompletedActions(closure_0));
+  const stateFromStores1 = _require(644).useStateFromStores(items2, () => closure_1_5.getCompletedActions(closure_0));
   if (tmp) {
     let num;
     if (stateFromStores != null) {
@@ -50,16 +50,16 @@ export const useMemberActionsForChannel = function useMemberActionsForChannel(gu
   } else {
     return {};
   }
-  const obj3 = _require(647);
+  const obj3 = _require(644);
 };
 export const useNextMemberAction = function useNextMemberAction(guild_id, channelId) {
   const _require = guild_id;
   closure_1 = channelId;
   const items = [closure_4];
-  const stateFromStores = _require(647).useStateFromStores(items, () => closure_1_4.getNewMemberActions(closure_0));
-  const obj = _require(647);
+  const stateFromStores = _require(644).useStateFromStores(items, () => closure_1_4.getNewMemberActions(closure_0));
+  const obj = _require(644);
   const items1 = [closure_5];
-  dependencyMap = _require(647).useStateFromStores(items1, () => closure_1_5.getCompletedActions(closure_0));
+  dependencyMap = _require(644).useStateFromStores(items1, () => closure_1_5.getCompletedActions(closure_0));
   let found;
   if (stateFromStores != null) {
     found = stateFromStores.find((channelId) => {
@@ -79,8 +79,8 @@ export const useNextMemberAction = function useNextMemberAction(guild_id, channe
 export const useAllActionsCompleted = function useAllActionsCompleted(guild_id) {
   const _require = guild_id;
   const items = [closure_3];
-  const stateFromStores = _require(647).useStateFromStores(items, () => closure_1_3.getSelfMember(closure_0));
-  const obj = _require(647);
+  const stateFromStores = _require(644).useStateFromStores(items, () => closure_1_3.getSelfMember(closure_0));
+  const obj = _require(644);
   let num;
   if (stateFromStores != null) {
     num = stateFromStores.flags;
@@ -88,5 +88,5 @@ export const useAllActionsCompleted = function useAllActionsCompleted(guild_id) 
   if (num == null) {
     num = 0;
   }
-  return _require(1399).hasFlag(num, GuildMemberFlags.COMPLETED_HOME_ACTIONS);
+  return _require(1398).hasFlag(num, GuildMemberFlags.COMPLETED_HOME_ACTIONS);
 };

@@ -1,6 +1,6 @@
-// === Module 16054: ICYMIInfoModal ===
+// === Module 16285: ICYMIInfoModal ===
 
-// Module 16054 (ICYMIInfoModal)
+// Module 16285 (ICYMIInfoModal)
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -10,7 +10,7 @@ let result = require("set").fileFinishedImporting("modules/icymi/native/info_mod
 export default function ICYMIInfoModal(extendedOnboarding) {
   extendedOnboarding = extendedOnboarding.extendedOnboarding;
   const skipIntro = extendedOnboarding.skipIntro;
-  let obj = extendedOnboarding(6008);
+  let obj = extendedOnboarding(6016);
   let items = [extendedOnboarding, skipIntro];
   const navigatorScreens = obj.useNavigatorScreens(() => {
     let obj = {};
@@ -26,7 +26,7 @@ export default function ICYMIInfoModal(extendedOnboarding) {
     obj[extendedOnboarding(closure_1_2[3]).ICYMIInfoScreens.DEFAULT] = obj;
     const obj5 = extendedOnboarding(closure_1_2[4]);
     if (skipIntro) {
-      let headerCloseButton = obj5.getHeaderCloseButton(() => callback2(4723).popWithKey(callback(16055).ICYMI_INFO_MODAL_KEY));
+      let headerCloseButton = obj5.getHeaderCloseButton(() => callback2(4723).popWithKey(callback(16286).ICYMI_INFO_MODAL_KEY));
     } else {
       headerCloseButton = obj5.getHeaderBackButton();
     }
@@ -39,7 +39,7 @@ export default function ICYMIInfoModal(extendedOnboarding) {
           const intl = closure_1_0(closure_1_2[9]).intl;
           obj[0] = intl.string(closure_1_0(closure_1_2[9]).t["5Wxrcd"]);
           obj[1] = function onPress() {
-            const ICYMIAnalytics = callback(8630).ICYMIAnalytics;
+            const ICYMIAnalytics = callback(8645).ICYMIAnalytics;
             const result = ICYMIAnalytics.trackFeedOnboardingScreenSkipped({ location: "topics" });
             let arr = callback2(4723);
             arr = arr.pop();
@@ -49,7 +49,7 @@ export default function ICYMIInfoModal(extendedOnboarding) {
         return tmp;
       },
       render() {
-        return callback3(callback2(16064), {});
+        return callback3(callback2(16295), {});
       },
       impressionName: extendedOnboarding(closure_1_2[6]).ImpressionNames.ICYMI_ONBOARDING_TOPICS
     };
@@ -63,7 +63,7 @@ export default function ICYMIInfoModal(extendedOnboarding) {
           const intl = closure_1_0(closure_1_2[9]).intl;
           obj[0] = intl.string(closure_1_0(closure_1_2[9]).t["5Wxrcd"]);
           obj[1] = function onPress() {
-            const ICYMIAnalytics = callback(8630).ICYMIAnalytics;
+            const ICYMIAnalytics = callback(8645).ICYMIAnalytics;
             const result = ICYMIAnalytics.trackFeedOnboardingScreenSkipped({ location: "topics" });
             let arr = callback2(4723);
             arr = arr.pop();
@@ -73,25 +73,25 @@ export default function ICYMIInfoModal(extendedOnboarding) {
         return tmp;
       },
       render() {
-        return callback3(callback2(16064), {});
+        return callback3(callback2(16295), {});
       },
       impressionName: extendedOnboarding(closure_1_2[6]).ImpressionNames.ICYMI_ONBOARDING_TOPICS
     };
     obj2[0] = extendedOnboarding(closure_1_2[4]).getHeaderBackButton();
     obj2[1] = function headerRight() {
       const obj = { text: null, onPress: null };
-      const intl = callback(1236).intl;
-      obj[0] = intl.string(callback(1236).t["5Wxrcd"]);
+      const intl = callback(1233).intl;
+      obj[0] = intl.string(callback(1233).t["5Wxrcd"]);
       obj[1] = function onPress() {
-        const ICYMIAnalytics = callback(8630).ICYMIAnalytics;
+        const ICYMIAnalytics = callback(8645).ICYMIAnalytics;
         const result = ICYMIAnalytics.trackFeedOnboardingScreenSkipped({ location: "guilds" });
         let arr = callback2(4723);
         arr = arr.pop();
       };
-      return callback3(callback(6237).HeaderActionButton, obj);
+      return callback3(callback(6246).HeaderActionButton, obj);
     };
     obj2[2] = function render() {
-      return callback3(callback2(16072), {});
+      return callback3(callback2(16303), {});
     };
     obj2[3] = extendedOnboarding(closure_1_2[6]).ImpressionNames.ICYMI_ONBOARDING_SELECT_GUILDS;
     obj[extendedOnboarding(closure_1_2[3]).ICYMIInfoScreens.JOIN_GUILDS] = obj2;
@@ -102,13 +102,13 @@ export default function ICYMIInfoModal(extendedOnboarding) {
     obj = { screens: null, steps: null, initialRouteName: null };
     obj[0] = navigatorScreens;
     obj[1] = tmp4;
-    let ICYMIInfoScreens = tmp(16055).ICYMIInfoScreens;
+    let ICYMIInfoScreens = tmp(16286).ICYMIInfoScreens;
     obj[2] = skipIntro ? ICYMIInfoScreens.TOPICS_CLOUD : ICYMIInfoScreens.DEFAULT;
-    tmp5(tmp(13817).StepModal, obj);
+    tmp5(tmp(14040).StepModal, obj);
   } else {
     obj = { screens: null, initialRouteName: null };
     obj[0] = navigatorScreens;
-    obj[1] = tmp(16055).ICYMIInfoScreens.DEFAULT;
-    return tmp5(tmp(11501).Modal, obj);
+    obj[1] = tmp(16286).ICYMIInfoScreens.DEFAULT;
+    return tmp5(tmp(11724).Modal, obj);
   }
 };

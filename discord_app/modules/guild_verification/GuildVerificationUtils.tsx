@@ -1,11 +1,11 @@
-// === Module 12799: inviteGuildHasPendingMemberDisabledVerification ===
+// === Module 13020: inviteGuildHasPendingMemberDisabledVerification ===
 
-// Module 12799 (inviteGuildHasPendingMemberDisabledVerification)
-import transitionTo from "transitionTo" /* 1222 */;
+// Module 13020 (inviteGuildHasPendingMemberDisabledVerification)
+import transitionTo from "transitionTo" /* 1219 */;
 import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4302 */;
-import openMemberVerificationModal from "openMemberVerificationModal" /* 7646 */;
+import openMemberVerificationModal from "openMemberVerificationModal" /* 7655 */;
 import closure_2 from "handleGatewayJoinRequestUpdate" /* 4300 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 
 require = arg1;
 ({ GuildFeatures: c3, Routes: c4 } = ME);

@@ -1,34 +1,35 @@
-// === Module 17139: ApplicationHook ===
+// === Module 17375: ApplicationHook ===
 
-// Module 17139 (ApplicationHook)
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
+// Module 17375 (ApplicationHook)
+import ThemesDefault from "Themes" /* 709 */;
+import Button from "Button" /* 1296 */;
 import Text from "Text" /* 4474 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 5959 */;
-import getPermissionChangesAll from "getPermissionChanges" /* 17122 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 5967 */;
+import getPermissionChangesAll from "getPermissionChanges" /* 17358 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import importDefaultResult from "handleThemeChange" /* 1302 */;
-import closure_7 from "createdAt" /* 1935 */;
+import importDefaultResult from "handleThemeChange" /* 1301 */;
+import closure_7 from "createdAt" /* 1934 */;
 import closure_8 from "markAllUserIdListsStale" /* 4130 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import closure_9 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
-import set from "set" /* 500 */;
-import importDefaultResult1 from "initialize" /* 589 */;
+import set from "set" /* 1234 */;
+import importDefaultResult1 from "initialize" /* 586 */;
 
 require = arg1;
 function ApplicationHook(applicationId) {
-  let obj = useGetOrFetchApplications;
-  const getOrFetchApplication = obj.useGetOrFetchApplication(applicationId.applicationId);
-  let tmp4 = null;
-  if (null != getOrFetchApplication) {
-    obj = { variant: "text-md/normal", color: "text-default", children: null };
-    obj[2] = getOrFetchApplication.name;
-    tmp4 = callback(Text.Text, obj);
+  applicationId = applicationId.applicationId;
+  const getOrFetchApplication = useGetOrFetchApplications.useGetOrFetchApplication(applicationId);
+  let children;
+  if (getOrFetchApplication != null) {
+    children = getOrFetchApplication.name;
   }
-  return tmp4;
+  if (children == null) {
+    children = applicationId;
+  }
+  return closure_14(Text.Text, { variant: "text-sm/semibold", children });
 }
 function InlineSegment(children) {
   children = children.children;
@@ -280,7 +281,7 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                 return null;
               } else {
                 const intl = v0(tmp[19]).intl;
-                const obj2 = { oldValue: null, newValue: null, count: null, subtarget: null, newColorHook: null, newColorsHook: null, oldColorHook: null, oldTagHook: null, newTagHook: null, oldEmojiHook: null, newEmojiHook: null, applicationHook: null };
+                const obj2 = { oldValue: null, newValue: null, count: null, subtarget: null, newColorHook: null, newColorsHook: null, oldColorHook: null, oldTagHook: null, newTagHook: null, oldEmojiHook: null, newEmojiHook: null, applicationHook: null, oldApplicationHook: null, newApplicationHook: null };
                 obj2[0] = oldValue2;
                 obj2[1] = newValue;
                 const _Array = Array;
@@ -382,6 +383,12 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                     applicationId = application_id1;
                   }
                   return closure_2_14(closure_2_17, { applicationId }, arg1);
+                };
+                obj2[12] = function oldApplicationHook(arg0, arg1) {
+                  return closure_2_14(closure_2_17, { applicationId: changeItemTextLine }, arg1);
+                };
+                obj2[13] = function newApplicationHook(arg0, arg1) {
+                  return closure_2_14(closure_2_17, { applicationId: items3 }, arg1);
                 };
                 const formatResult = intl.format(tmp18Result, obj2);
                 if (null == formatResult) {
@@ -556,10 +563,10 @@ prototype["render"] = function render() {
   obj1[3] = str3;
   obj1[4] = onHeaderClick;
   const obj2 = { style: tmp.rowContainer, children: null };
-  const items2 = [callback(user(17131), { action: log.action }), , , ];
+  const items2 = [callback(user(17367), { action: log.action }), , , ];
   const obj4 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, onPress: null, children: null };
-  const intl = tmp10(1236).intl;
-  obj4[1] = intl.string(tmp10(1236).t.iXAna6);
+  const intl = tmp10(1233).intl;
+  obj4[1] = intl.string(tmp10(1233).t.iXAna6);
   let username;
   if (user != null) {
     username = user.username;
@@ -581,15 +588,15 @@ prototype["render"] = function render() {
       if (log.action !== tmp21.AUTO_MODERATION_USER_COMMUNICATION_DISABLED) {
         if (log.action !== tmp21.AUTO_MODERATION_QUARANTINE_USER) {
           if (null != log.options.integration_type) {
-            const value = tmp18(5227).get(log.options.integration_type);
+            const value = tmp18(5235).get(log.options.integration_type);
             if (null != value) {
-              let tmp9Result = tmp9(1363);
+              let tmp9Result = tmp9(1362);
               const icon = value.icon;
-              tmp9Result = tmp9(1431);
+              tmp9Result = tmp9(1430);
               let source = tmp9Result.makeSource(tmp9Result.isThemeDark(theme) ? icon.darkPNG : icon.lightPNG);
               const tmp25 = tmp9Result.isThemeDark(theme) ? icon.darkPNG : icon.lightPNG;
             }
-            const tmp18Result = tmp18(5227);
+            const tmp18Result = tmp18(5235);
           }
           if (null != guildId) {
             const user2 = log.user;
@@ -601,9 +608,9 @@ prototype["render"] = function render() {
           }
         }
         obj5[1] = source;
-        obj5[2] = tmp10(1297).AvatarSizes.SMALL;
+        obj5[2] = tmp10(1296).AvatarSizes.SMALL;
         obj4[4] = tmp17(tmp20, obj5);
-        items2[1] = tmp17(tmp10(5068).PressableOpacity, obj4);
+        items2[1] = tmp17(tmp10(5076).PressableOpacity, obj4);
         const obj6 = { accessibilityRole: "button", accessibilityState: null, onPress: null, style: null, disabled: null, children: null };
         obj7 = { expanded: null, disabled: null };
         obj7[0] = expanded;
@@ -614,15 +621,15 @@ prototype["render"] = function render() {
         obj6[4] = !checkChangesToRenderResult;
         const items3 = [self.renderTitle(), tmp8];
         obj6[5] = items3;
-        items2[2] = tmp15(tmp10(5068).PressableOpacity, obj6);
+        items2[2] = tmp15(tmp10(5076).PressableOpacity, obj6);
         let tmp17Result = null;
         if (checkChangesToRenderResult) {
           const obj8 = { style: null, size: null, source: null };
           const items4 = [tmp.arrow, rotate90];
           obj8[0] = items4;
-          obj8[1] = tmp10(1297).Icon.Sizes.CUSTOM;
-          obj8[2] = tmp18(14256);
-          tmp17Result = tmp17(tmp10(1297).Icon, obj8);
+          obj8[1] = tmp10(1296).Icon.Sizes.CUSTOM;
+          obj8[2] = tmp18(14479);
+          tmp17Result = tmp17(tmp10(1296).Icon, obj8);
         }
         items2[3] = tmp17Result;
         obj2[1] = items2;
@@ -633,15 +640,15 @@ prototype["render"] = function render() {
         }
         items5[1] = renderChangeSummaryResult;
         obj1[5] = items5;
-        return tmp15(tmp10(5601).Card, obj1);
+        return tmp15(tmp10(5609).Card, obj1);
       }
     }
   }
   const obj3 = { action: log.action };
   tmp16 = View;
-  const tmp9Result1 = tmp9(1434);
-  const tmp9Result2 = tmp9(1431);
-  source = tmp9Result1.ensureAvatarSource(tmp9Result2.makeSource(tmp9(1434).getAutomodAvatarURL()));
+  const tmp9Result1 = tmp9(1433);
+  const tmp9Result2 = tmp9(1430);
+  source = tmp9Result1.ensureAvatarSource(tmp9Result2.makeSource(tmp9(1433).getAutomodAvatarURL()));
 };
 AuditLog.contextType = require("ManaContext").ThemeContext;
 let obj6 = { height: "auto", paddingVertical: 0, paddingHorizontal: ThemesDefault.space.PX_4, transform: items1 };

@@ -1,10 +1,10 @@
-// === Module 10759: UnifiedGiftModalSuccessScreen ===
+// === Module 10979: UnifiedGiftModalSuccessScreen ===
 
-// Module 10759 (UnifiedGiftModalSuccessScreen)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 10979 (UnifiedGiftModalSuccessScreen)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
-import { UserSettingsSections } from "ME" /* 676 */;
+import { UserSettingsSections } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

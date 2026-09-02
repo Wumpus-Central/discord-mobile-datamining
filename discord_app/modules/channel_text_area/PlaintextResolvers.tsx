@@ -1,23 +1,23 @@
-// === Module 8442: resolvePlaintextInlineVoid ===
+// === Module 8451: resolvePlaintextInlineVoid ===
 
-// Module 8442 (resolvePlaintextInlineVoid)
+// Module 8451 (resolvePlaintextInlineVoid)
 import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4134 */;
 import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4138 */;
-import createEmptyState from "createEmptyState" /* 7430 */;
+import createEmptyState from "createEmptyState" /* 7440 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "getEmojiToGroupId" /* 5401 */;
-import closure_5 from "rebuild" /* 5448 */;
-import closure_6 from "ensureGuildLoaded" /* 1387 */;
-import closure_7 from "comparator" /* 1982 */;
-import { GUILD_SELECTABLE_CHANNELS_KEY as closure_8 } from "comparator" /* 1982 */;
-import closure_9 from "trackCommunicationDisabled" /* 1992 */;
-import closure_10 from "createGuildRoleRecordFromRust" /* 1985 */;
-import closure_11 from "createGuildRecordFromRust" /* 1909 */;
-import closure_12 from "getUncachedChannelPermissions" /* 4121 */;
+import closure_4 from "getEmojiToGroupId" /* 5409 */;
+import closure_5 from "rebuild" /* 5456 */;
+import closure_6 from "ensureGuildLoaded" /* 1386 */;
+import closure_7 from "comparator" /* 1981 */;
+import { GUILD_SELECTABLE_CHANNELS_KEY as closure_8 } from "comparator" /* 1981 */;
+import closure_9 from "trackCommunicationDisabled" /* 1991 */;
+import closure_10 from "createGuildRoleRecordFromRust" /* 1984 */;
+import closure_11 from "createGuildRecordFromRust" /* 1908 */;
+import closure_12 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_13 from "markAllUserIdListsStale" /* 4130 */;
-import closure_14 from "mergeGuildAvatar" /* 1922 */;
-import { Permissions } from "ME" /* 676 */;
-import { EmojiIntention } from "set" /* 1925 */;
+import closure_14 from "mergeGuildAvatar" /* 1921 */;
+import { Permissions } from "ME" /* 673 */;
+import { EmojiIntention } from "set" /* 1924 */;
 
 require = arg1;
 function resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, forceIncludeExternalGuilds) {

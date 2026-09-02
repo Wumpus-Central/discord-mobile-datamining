@@ -1,8 +1,8 @@
-// === Module 9099: toggleGuildExpandedState ===
+// === Module 9113: toggleGuildExpandedState ===
 
-// Module 9099 (toggleGuildExpandedState)
+// Module 9113 (toggleGuildExpandedState)
 import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 const result = set.fileFinishedImporting("modules/emojis/EmojiActionCreators.tsx");
 

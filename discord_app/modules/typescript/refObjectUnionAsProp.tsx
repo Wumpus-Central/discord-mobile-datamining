@@ -1,6 +1,6 @@
-// === Module 7798: refObjectUnionAsProp ===
+// === Module 7807: refObjectUnionAsProp ===
 
-// Module 7798 (refObjectUnionAsProp)
+// Module 7807 (refObjectUnionAsProp)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/typescript/refObjectUnionAsProp.tsx");

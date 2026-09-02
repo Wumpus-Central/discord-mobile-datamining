@@ -1,28 +1,29 @@
-// === Module 11957: AutocompleteLabel ===
+// === Module 12180: AutocompleteLabel ===
 
-// Module 11957 (AutocompleteLabel)
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import isNullOrEmpty from "isNullOrEmpty" /* 1902 */;
+// Module 12180 (AutocompleteLabel)
+import ThemesDefault from "Themes" /* 709 */;
+import Button from "Button" /* 1296 */;
+import isNullOrEmpty from "isNullOrEmpty" /* 1901 */;
 import Text from "Text" /* 4474 */;
 import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 4511 */;
 import computeChannelName from "computeChannelName" /* 4674 */;
+import TIMESTAMP_FORMATS from "TIMESTAMP_FORMATS" /* 4975 */;
 import getChannelIcon from "getChannelIcon" /* 4981 */;
-import PressableBase from "PressableBase" /* 5068 */;
-import preloadDefault from "preload" /* 5493 */;
-import TableRowInner from "TableRowInner" /* 5599 */;
-import TableRowTrailingText from "TableRowTrailingText" /* 5608 */;
-import registerAssetDefault from "registerAsset" /* 8033 */;
-import Form from "Form" /* 8363 */;
-import StickerDefault from "Sticker" /* 10261 */;
-import useStickerPackCategories from "useStickerPackCategories" /* 10379 */;
-import ChannelAutocompleteEmojiUpsellDefault from "ChannelAutocompleteEmojiUpsell" /* 11958 */;
+import PressableBase from "PressableBase" /* 5076 */;
+import preloadDefault from "preload" /* 5501 */;
+import TableRowInner from "TableRowInner" /* 5607 */;
+import TableRowTrailingText from "TableRowTrailingText" /* 5616 */;
+import registerAssetDefault from "registerAsset" /* 8042 */;
+import Form from "Form" /* 8372 */;
+import StickerDefault from "Sticker" /* 10283 */;
+import useStickerPackCategories from "useStickerPackCategories" /* 10401 */;
+import ChannelAutocompleteEmojiUpsellDefault from "ChannelAutocompleteEmojiUpsell" /* 12181 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "createGuildRecordFromRust" /* 1909 */;
+import closure_5 from "createGuildRecordFromRust" /* 1908 */;
 import closure_6 from "markAllUserIdListsStale" /* 4130 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import closure_7 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -63,7 +64,7 @@ const obj9 = {
     ({ nick, guildId } = user);
     ({ status, onPress } = user);
     const tmp = callback3();
-    let obj = user(589);
+    let obj = user(586);
     const items = [closure_6];
     const stateFromStores = obj.useStateFromStores(items, () => {
       let nickname = null;
@@ -81,12 +82,12 @@ const obj9 = {
       const obj3 = guildId(4322);
     }
     obj[3] = closure_9(AutocompleteLabel, { text: nick });
-    obj = { status, user, size: tmp2(1297).AvatarSizes.SMALL, guildId, autoStatusCutout: true };
-    obj[4] = closure_9(user(1297).Avatar, obj);
+    obj = { status, user, size: tmp2(1296).AvatarSizes.SMALL, guildId, autoStatusCutout: true };
+    obj[4] = closure_9(user(1296).Avatar, obj);
     const items1 = [, ];
     ({ trailing: arr2[0], username: arr2[1] } = tmp);
-    obj[5] = closure_9(guildId(9771), { user, usernameStyle: items1, discriminatorStyle: tmp.trailing });
-    return closure_9(user(8363).FormRow, obj);
+    obj[5] = closure_9(guildId(9793), { user, usernameStyle: items1, discriminatorStyle: tmp.trailing });
+    return closure_9(user(8372).FormRow, obj);
   },
   Global(arg0) {
     ({ text, badge } = arg0);
@@ -125,8 +126,8 @@ const obj9 = {
     obj[2] = closure_9(Form.FormRow.Label, obj);
     let str = "";
     if (showDescription) {
-      const intl = tmp3(1236).intl;
-      str = intl.string(tmp3(1236).t.HrUmDH);
+      const intl = tmp3(1233).intl;
+      str = intl.string(tmp3(1233).t.HrUmDH);
     }
     obj[3] = closure_9(TableRowTrailingText.TableRowTrailingText, { text: str });
     return closure_9(TableRowInner.TableRow, obj);
@@ -217,7 +218,7 @@ const obj9 = {
     if (obj.isNullOrEmpty(tmp4)) {
       obj = { size: "sm", style: null };
       obj[1] = tmp.gameIcon;
-      let tmp6Result = tmp6(tmp5(8721).UnknownGameIcon, obj);
+      let tmp6Result = tmp6(tmp5(8736).UnknownGameIcon, obj);
       let tmp8 = tmp6;
     } else {
       obj = { style: null, source: null };
@@ -229,9 +230,31 @@ const obj9 = {
       tmp8 = tmp6;
     }
     return tmp8(Form.FormRow, { onPress: game.onPress, accessibilityRole: "menuitem", leading: tmp6Result, label: tmp8(AutocompleteLabel, obj3) });
+  },
+  Timestamp(description) {
+    let str = description.description;
+    ({ mention, onPress } = description);
+    let obj = TIMESTAMP_FORMATS;
+    const result = obj.formatTimestampMention(mention);
+    let tmp5Result = null;
+    if (null != result) {
+      obj = { onPress: null, accessibilityRole: "menuitem", label: null, trailing: null };
+      obj[0] = onPress;
+      obj = { text: null };
+      obj[0] = result.formatted;
+      obj[2] = callback(AutocompleteLabel, obj);
+      if (str == null) {
+        str = "";
+      }
+      obj1 = { text: null };
+      obj1[0] = str;
+      obj[3] = callback(tmp(5616).TableRowTrailingText, obj1);
+      tmp5Result = tmp5(tmp(5607).TableRow, obj);
+    }
+    return tmp5Result;
   }
 };
-const result = require("set").fileFinishedImporting("modules/autocompleter/native/Autocomplete.tsx");
+let result = require("set").fileFinishedImporting("modules/autocompleter/native/Autocomplete.tsx");
 
 export default obj9;
 export const AUTOCOMPLETE_STICKER_NODE_SIZE = 56;

@@ -1,6 +1,6 @@
-// === Module 16939: _trackVoiceFeedback ===
+// === Module 17175: _trackVoiceFeedback ===
 
-// Module 16939 (_trackVoiceFeedback)
+// Module 17175 (_trackVoiceFeedback)
 import closure_3 from "_objectWithoutProperties" /* 109 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_detectH265HardwareDecode" /* 4529 */;
@@ -65,7 +65,7 @@ function _trackVoiceFeedback() {
               closure_21 = undefined;
               c6 = 1;
               c7 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -92,7 +92,7 @@ function _trackVoiceFeedback() {
               c6 = 2;
               c7 = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = callback(13466).getKrispModel();
+              obj2[0] = callback(13689).getKrispModel();
               return obj2;
             }
           } else if (arg0 === 1) {
@@ -112,7 +112,7 @@ function _trackVoiceFeedback() {
             obj = closure_2;
             output_audio_route_type = obj.output_audio_route_type;
             closure_21 = callback2(obj, closure_2);
-            obj = callback(698);
+            obj = callback(695);
             callback2 = dependencyMap;
             if (dependencyMap == null) {
               callback2 = "no response";

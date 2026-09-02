@@ -1,17 +1,17 @@
-// === Module 9368: ApplicationDetailsEntry ===
+// === Module 9381: ApplicationDetailsEntry ===
 
-// Module 9368 (ApplicationDetailsEntry)
+// Module 9381 (ApplicationDetailsEntry)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import ClockIcon from "ClockIcon" /* 4441 */;
 import Text from "Text" /* 4474 */;
-import LockIcon from "LockIcon" /* 5044 */;
-import ShieldIcon from "ShieldIcon" /* 8427 */;
-import set from "set" /* 8610 */;
-import items2 from "items" /* 9288 */;
-import getApplicationDetailsText from "getApplicationDetailsText" /* 9292 */;
+import LockIcon from "LockIcon" /* 5048 */;
+import ShieldIcon from "ShieldIcon" /* 8436 */;
+import set from "set" /* 8625 */;
+import items2 from "items" /* 9301 */;
+import getApplicationDetailsText from "getApplicationDetailsText" /* 9305 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -68,10 +68,10 @@ export default function ApplicationDetails(arg0) {
   if (null != joined) {
     obj = { iconComponent: null, text: null };
     obj[0] = tmp5(4421).LinkIcon;
-    const intl = tmp5(1236).intl;
+    const intl = tmp5(1233).intl;
     obj1 = { origin: null };
     obj1[0] = joined;
-    obj[1] = intl.format(tmp5(1236).t["5k5OKD"], obj1);
+    obj[1] = intl.format(tmp5(1233).t["5k5OKD"], obj1);
     tmp15 = callback(ApplicationDetailsEntry, obj);
   }
   const items = [tmp15, , , , , , ];
@@ -84,14 +84,14 @@ export default function ApplicationDetails(arg0) {
   let tmp18Result = null;
   if (null != connectedAccount) {
     const obj3 = { iconComponent: null, text: null };
-    obj3[0] = tmp5(9373).HammerIcon;
-    const intl2 = tmp5(1236).intl;
-    obj3[1] = intl2.string(tmp5(1236).t["8qui3M"]);
+    obj3[0] = tmp5(9386).HammerIcon;
+    const intl2 = tmp5(1233).intl;
+    obj3[1] = intl2.string(tmp5(1233).t["8qui3M"]);
     tmp18Result = tmp18(tmp19, obj3);
   }
   items[2] = tmp18Result;
   const obj4 = { iconComponent: ClockIcon.ClockIcon, text: null };
-  const intl3 = tmp5(1236).intl;
+  const intl3 = tmp5(1233).intl;
   obj4[1] = intl3.formatToPlainString(getSystemLocale.t["+1bjc8"], { date });
   items[3] = callback(ApplicationDetailsEntry, obj4);
   tmp18Result = null;
@@ -99,11 +99,11 @@ export default function ApplicationDetails(arg0) {
     tmp18Result = null;
     if (null != approximateGuildCount) {
       const obj5 = { iconComponent: null, text: null };
-      obj5[0] = tmp5(9375).RobotIcon;
-      const intl4 = tmp5(1236).intl;
+      obj5[0] = tmp5(9388).RobotIcon;
+      const intl4 = tmp5(1233).intl;
       const obj6 = { guildCount: null };
       obj6[0] = approximateGuildCount;
-      obj5[1] = intl4.formatToPlainString(tmp5(1236).t.UHGHSP, obj6);
+      obj5[1] = intl4.formatToPlainString(tmp5(1233).t.UHGHSP, obj6);
       tmp18Result = tmp18(tmp19, obj5);
     }
   }
@@ -113,17 +113,17 @@ export default function ApplicationDetails(arg0) {
   let mapped = null;
   if (null != disclosures) {
     mapped = disclosures.map((toFixed) => {
-      let obj = callback(9290);
+      let obj = callback(9303);
       const textForDisclosure = obj.getTextForDisclosure(toFixed);
-      if (callback(9290).ApplicationDisclosure.IP_LOCATION === toFixed) {
+      if (callback(9303).ApplicationDisclosure.IP_LOCATION === toFixed) {
         obj = { iconComponent: null };
-        obj[0] = tmp(9369).GlobeEarthIcon;
+        obj[0] = tmp(9382).GlobeEarthIcon;
         let tmp4 = obj;
       } else {
         tmp4 = null;
-        if (tmp(9290).ApplicationDisclosure.DISPLAYS_ADVERTISEMENTS === toFixed) {
+        if (tmp(9303).ApplicationDisclosure.DISPLAYS_ADVERTISEMENTS === toFixed) {
           obj = { iconComponent: null };
-          obj[0] = tmp(9371).EmbedIcon;
+          obj[0] = tmp(9384).EmbedIcon;
           tmp4 = obj;
         }
       }

@@ -1,8 +1,8 @@
-// === Module 9026: TraitEmoji ===
+// === Module 9040: TraitEmoji ===
 
-// Module 9026 (TraitEmoji)
-import ThemesDefault from "Themes" /* 712 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1431 */;
+// Module 9040 (TraitEmoji)
+import ThemesDefault from "Themes" /* 709 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
 import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4138 */;
 import Text from "Text" /* 4474 */;
 import closure_3 from "noop" /* 19 */;
@@ -29,7 +29,7 @@ function TraitEmoji(emoji) {
     obj[0] = emojiURL;
     obj[1] = getEmojiUnavailableReasonDefault.isCustomEmoji(emoji) ? emoji.name : emoji.surrogates;
     obj[2] = tmp.emojiImage;
-    return callback(tmp5(5585), obj);
+    return callback(tmp5(5593), obj);
   }
 }
 function GuildProfileTraitView(trait) {

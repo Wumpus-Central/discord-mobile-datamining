@@ -1,12 +1,12 @@
-// === Module 16993: resolveMessageCodedLinks ===
+// === Module 17229: resolveMessageCodedLinks ===
 
-// Module 16993 (resolveMessageCodedLinks)
-import ensureGuildLoadedDefault from "ensureGuildLoaded" /* 1387 */;
+// Module 17229 (resolveMessageCodedLinks)
+import ensureGuildLoadedDefault from "ensureGuildLoaded" /* 1386 */;
 import getPathsFromURLDefault from "getPathsFromURL" /* 4461 */;
-import initializeDefault from "initialize" /* 5486 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 17001 */;
+import initializeDefault from "initialize" /* 5494 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 17237 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleGuildTemplateResolveSuccess" /* 7203 */;
+import closure_4 from "handleGuildTemplateResolveSuccess" /* 7212 */;
 import closure_5 from "updateInvite" /* 4462 */;
 
 const require = arg1;

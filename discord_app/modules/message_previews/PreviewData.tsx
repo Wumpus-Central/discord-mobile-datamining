@@ -1,6 +1,6 @@
-// === Module 13371: isLatest ===
+// === Module 13595: isLatest ===
 
-// Module 13371 (isLatest)
+// Module 13595 (isLatest)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4737 */;
 import closure_3 from "hasFlag" /* 4131 */;

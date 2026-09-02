@@ -1,10 +1,10 @@
-// === Module 15807: BoostTier2Icon ===
+// === Module 16038: BoostTier2Icon ===
 
-// Module 15807 (BoostTier2Icon)
+// Module 16038 (BoostTier2Icon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 15808 */;
+import registerAsset from "registerAsset" /* 16039 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

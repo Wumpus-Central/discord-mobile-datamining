@@ -1,12 +1,12 @@
-// === Module 10984: canSeeChannelSummaries ===
+// === Module 11204: canSeeChannelSummaries ===
 
-// Module 10984 (canSeeChannelSummaries)
+// Module 11204 (canSeeChannelSummaries)
 import set from "set" /* 2 */;
-import set2 from "set" /* 1394 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1430 */;
-import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1912 */;
-import closure_3 from "createGuildRecordFromRust" /* 1909 */;
-import ME from "ME" /* 676 */;
+import set2 from "set" /* 1393 */;
+import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1429 */;
+import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1911 */;
+import closure_3 from "createGuildRecordFromRust" /* 1908 */;
+import ME from "ME" /* 673 */;
 
 function canSeeChannelSummaries(channel, flag, arg2) {
   if (flag === undefined) {
@@ -135,7 +135,7 @@ export const useGuildEligibleForSummaries = function useGuildEligibleForSummarie
   const _require = arg0;
   const items = [closure_3];
   const items1 = [arg0];
-  return _require(647).useStateFromStores(items, () => {
+  return _require(644).useStateFromStores(items, () => {
     let id;
     if (lib != null) {
       id = lib.id;

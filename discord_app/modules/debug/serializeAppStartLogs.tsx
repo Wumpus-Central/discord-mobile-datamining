@@ -1,6 +1,6 @@
-// === Module 10276: getDisplayName ===
+// === Module 10298: getDisplayName ===
 
-// Module 10276 (getDisplayName)
+// Module 10298 (getDisplayName)
 import set2 from "set" /* 2 */;
 
 function getDisplayName(tag) {

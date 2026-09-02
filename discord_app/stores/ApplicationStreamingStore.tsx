@@ -1,24 +1,24 @@
 // === Module 4500: reset ===
 
 // Module 4500 (reset)
-import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "initialize" /* 586 */;
+import setDefault from "set" /* 684 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 import isStreamKey from "isStreamKey" /* 4544 */;
-import canStreamInChannel from "canStreamInChannel" /* 7471 */;
-import canSpectateDefault from "canSpectate" /* 13455 */;
-import getTitleFromPickedStreamContentDefault from "getTitleFromPickedStreamContent" /* 13568 */;
+import canStreamInChannel from "canStreamInChannel" /* 7481 */;
+import canSpectateDefault from "canSpectate" /* 13678 */;
+import getTitleFromPickedStreamContentDefault from "getTitleFromPickedStreamContent" /* 13791 */;
 import closure_8 from "set" /* 4495 */;
 import closure_9 from "initialize" /* 4501 */;
-import closure_10 from "fetchFingerprint" /* 1218 */;
-import closure_11 from "ensureGuildLoaded" /* 1387 */;
-import closure_12 from "createGuildRecordFromRust" /* 1909 */;
+import closure_10 from "fetchFingerprint" /* 1215 */;
+import closure_11 from "ensureGuildLoaded" /* 1386 */;
+import closure_12 from "createGuildRecordFromRust" /* 1908 */;
 import closure_13 from "_detectH265HardwareDecode" /* 4529 */;
-import closure_14 from "getUncachedChannelPermissions" /* 4121 */;
+import closure_14 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_15 from "createRTCConnection" /* 4554 */;
-import closure_16 from "handleConnectionOpen" /* 1981 */;
+import closure_16 from "handleConnectionOpen" /* 1980 */;
 import closure_17 from "updateVoiceState" /* 4497 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 import { StreamTypes } from "StreamIssueReportReasons" /* 4545 */;
 
 require = arg1;
@@ -807,11 +807,11 @@ const applicationStreamingStore = new ApplicationStreamingStore(dispatcherDefaul
       } else if (reason === tmp3.SAFETY_GUILD_RATE_LIMITED) {
         let obj = guildId(4544);
         guildId = obj.decodeStreamKey(streamKey).guildId;
-        guildId(2009)(13569, dependencyMap.paths).then((arg0) => {
+        guildId(2008)(13792, dependencyMap.paths).then((arg0) => {
           arg0.default(guildId);
         });
         FAILED = tmp22.ENDED;
-        const promise = guildId(2009)(13569, dependencyMap.paths);
+        const promise = guildId(2008)(13792, dependencyMap.paths);
       } else {
         if (tmp9) {
           FAILED = tmp22.FAILED;

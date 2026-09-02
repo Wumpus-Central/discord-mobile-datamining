@@ -1,14 +1,14 @@
-// === Module 8554: GifTag ===
+// === Module 8567: GifTag ===
 
-// Module 8554 (GifTag)
+// Module 8567 (GifTag)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Text from "Text" /* 4474 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
-import importDefaultResult from "n" /* 689 */;
+import importDefaultResult from "n" /* 686 */;
 
 const View = get_ActivityIndicator.View;
 const jsx = jsxProd.jsx;

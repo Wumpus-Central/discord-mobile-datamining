@@ -1,9 +1,9 @@
-// === Module 11637: BotsBanner ===
+// === Module 11860: BotsBanner ===
 
-// Module 11637 (BotsBanner)
+// Module 11860 (BotsBanner)
 import noopAll from "noop" /* 19 */;
-import BannerBaseDefault from "BannerBase" /* 11633 */;
-import useBannerBots from "useBannerBots" /* 11638 */;
+import BannerBaseDefault from "BannerBase" /* 11856 */;
+import useBannerBots from "useBannerBots" /* 11861 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -20,11 +20,11 @@ export default function BotsBanner(context) {
     if (null != secondBotApplication) {
       obj = { image: null, text: null };
       obj[0] = tmp6;
-      const intl = tmp(1236).intl;
+      const intl = tmp(1233).intl;
       obj = { firstApplicationName: null, secondApplicationName: null };
       obj[0] = firstBotApplication.name;
       obj[1] = secondBotApplication.name;
-      obj[1] = intl.formatToPlainString(tmp(1236).t["9SN0xw"], obj);
+      obj[1] = intl.formatToPlainString(tmp(1233).t["9SN0xw"], obj);
       tmp4Result = jsx(BannerBaseDefault, { firstApplicationName: null, secondApplicationName: null });
       const tmp5Result = BannerBaseDefault;
     }

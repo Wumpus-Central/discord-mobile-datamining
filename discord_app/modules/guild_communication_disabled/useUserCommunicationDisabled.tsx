@@ -1,9 +1,9 @@
-// === Module 7886: useUserCommunicationDisabled ===
+// === Module 7895: useUserCommunicationDisabled ===
 
-// Module 7886 (useUserCommunicationDisabled)
-import isCommunicationDisabled from "isCommunicationDisabled" /* 4110 */;
-import closure_2 from "trackCommunicationDisabled" /* 1992 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+// Module 7895 (useUserCommunicationDisabled)
+import isCommunicationDisabled from "isCommunicationDisabled" /* 4109 */;
+import closure_2 from "trackCommunicationDisabled" /* 1991 */;
+import closure_3 from "mergeGuildAvatar" /* 1921 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_communication_disabled/useUserCommunicationDisabled.tsx");
@@ -13,7 +13,7 @@ export default function useUserCommunicationDisabled(arg0, arg1) {
   dependencyMap = arg1;
   const items = [closure_2];
   const items1 = [arg1, arg0];
-  const stateFromStores = _require(589).useStateFromStores(items, () => {
+  const stateFromStores = _require(586).useStateFromStores(items, () => {
     let member = null;
     if (null != closure_1) {
       member = null;
@@ -31,20 +31,20 @@ export default function useUserCommunicationDisabled(arg0, arg1) {
     prop = null;
   }
   const items2 = [prop, ];
-  const obj = _require(589);
+  const obj = _require(586);
   const tmp = _require;
-  items2[1] = _require(4110).isMemberCommunicationDisabled(stateFromStores);
+  items2[1] = _require(4109).isMemberCommunicationDisabled(stateFromStores);
   return items2;
 };
 export const useCurrentUserCommunicationDisabled = function useCurrentUserCommunicationDisabled(guild_id) {
   const items = [closure_3];
-  const stateFromStores = id(589).useStateFromStores(items, () => currentUser.getCurrentUser());
+  const stateFromStores = id(586).useStateFromStores(items, () => currentUser.getCurrentUser());
   id = undefined;
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
   dependencyMap = guild_id;
-  let tmpResult = tmp(589);
+  let tmpResult = tmp(586);
   const items1 = [closure_2];
   const items2 = [guild_id, id];
   const stateFromStores1 = tmpResult.useStateFromStores(items1, () => {
@@ -65,7 +65,7 @@ export const useCurrentUserCommunicationDisabled = function useCurrentUserCommun
     prop = null;
   }
   const items3 = [prop, ];
-  tmpResult = tmp(4110);
+  tmpResult = tmp(4109);
   items3[1] = tmpResult.isMemberCommunicationDisabled(stateFromStores1);
   return items3;
 };

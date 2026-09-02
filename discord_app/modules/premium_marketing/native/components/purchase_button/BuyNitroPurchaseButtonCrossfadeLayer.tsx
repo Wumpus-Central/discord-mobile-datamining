@@ -1,6 +1,6 @@
-// === Module 13049: BuyNitroPurchaseButtonCrossfadeLayer ===
+// === Module 13271: BuyNitroPurchaseButtonCrossfadeLayer ===
 
-// Module 13049 (BuyNitroPurchaseButtonCrossfadeLayer)
+// Module 13271 (BuyNitroPurchaseButtonCrossfadeLayer)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;

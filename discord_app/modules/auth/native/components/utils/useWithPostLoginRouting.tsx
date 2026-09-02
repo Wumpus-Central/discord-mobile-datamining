@@ -1,11 +1,11 @@
-// === Module 7728: useWithPostLoginRouting ===
+// === Module 7737: useWithPostLoginRouting ===
 
-// Module 7728 (useWithPostLoginRouting)
+// Module 7737 (useWithPostLoginRouting)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import ME from "ME" /* 676 */;
+import closure_6 from "fetchFingerprint" /* 1215 */;
+import ME from "ME" /* 673 */;
 
 const require = arg1;
 ({ LoginStates: error, AuthStates: closure_8 } = ME);
@@ -48,10 +48,10 @@ export default function useWithPostLoginRouting(arg0, arg1) {
       obj[1] = intl2.string(arr(first[6]).t.myKyqh);
       obj[2] = closure_1_6.getCredentials().login;
       obj[3] = function onPhoneTokenReceived(arg0) {
-        const replaced = closure_0.replace(closure_1_8.EXTERNAL_LINK, { externalURL: closure_1_1(7729)(arg0) });
+        const replaced = closure_0.replace(closure_1_8.EXTERNAL_LINK, { externalURL: closure_1_1(7738)(arg0) });
       };
       obj[4] = function onClose() {
-        callback(6052).loginReset();
+        callback(6060).loginReset();
       };
       let replaced = arr.replace(closure_1_8.VERIFY_PHONE, obj);
     } else if (tmp2.PHONE_IP_AUTHORIZATION === tmp6) {

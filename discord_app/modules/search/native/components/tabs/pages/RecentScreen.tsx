@@ -1,19 +1,19 @@
-// === Module 16224: ClearAllHistory ===
+// === Module 16456: ClearAllHistory ===
 
-// Module 16224 (ClearAllHistory)
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 16456 (ClearAllHistory)
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Text from "Text" /* 4474 */;
-import PressableBase from "PressableBase" /* 5068 */;
+import PressableBase from "PressableBase" /* 5076 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
-import closure_6 from "handleReaction" /* 6128 */;
-import closure_7 from "search" /* 11932 */;
-import closure_8 from "deserialize" /* 16225 */;
-import closure_9 from "prototype" /* 11906 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 7622 */;
-import { EMPTY_MEDIA_RESULTS } from "SEARCH_TEXT_INPUT_DEBOUNCE_TIME" /* 11920 */;
-import { SearchTypes } from "ME" /* 676 */;
+import closure_6 from "handleReaction" /* 6136 */;
+import closure_7 from "search" /* 12155 */;
+import closure_8 from "deserialize" /* 16457 */;
+import closure_9 from "prototype" /* 12129 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 7632 */;
+import { EMPTY_MEDIA_RESULTS } from "SEARCH_TEXT_INPUT_DEBOUNCE_TIME" /* 12143 */;
+import { SearchTypes } from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -28,13 +28,13 @@ function ClearAllHistory(searchContext) {
     accessibilityLabel: null,
     children: null
   };
-  const intl = searchContext(1236).intl;
-  obj[3] = intl.string(searchContext(1236).t.LFTAUp);
+  const intl = searchContext(1233).intl;
+  obj[3] = intl.string(searchContext(1233).t.LFTAUp);
   obj = { variant: "text-sm/semibold", color: "text-brand", children: null };
-  const intl2 = searchContext(1236).intl;
-  obj[2] = intl2.string(searchContext(1236).t.LFTAUp);
+  const intl2 = searchContext(1233).intl;
+  obj[2] = intl2.string(searchContext(1233).t.LFTAUp);
   obj[4] = jsx(searchContext(4474).Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
-  return jsx(searchContext(5068).PressableHighlight, { variant: "text-sm/semibold", color: "text-brand", children: null });
+  return jsx(searchContext(5076).PressableHighlight, { variant: "text-sm/semibold", color: "text-brand", children: null });
 }
 function ViewAll(onJumpToMedia) {
   let obj = { onPress: onJumpToMedia.onJumpToMedia, accessibilityRole: "button", unstable_pressDelay: 130, accessibilityLabel: null, children: null };

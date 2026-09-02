@@ -1,8 +1,8 @@
-// === Module 11204: removeAutomodMessageNotice ===
+// === Module 11427: removeAutomodMessageNotice ===
 
-// Module 11204 (removeAutomodMessageNotice)
+// Module 11427 (removeAutomodMessageNotice)
 import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 const result = set.fileFinishedImporting("modules/guild_automod/GuildAutomodMessageActionCreators.tsx");
 

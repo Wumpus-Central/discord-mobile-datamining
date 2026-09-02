@@ -1,10 +1,10 @@
-// === Module 8566: _openMediaModal ===
+// === Module 8581: _openMediaModal ===
 
-// Module 8566 (_openMediaModal)
+// Module 8581 (_openMediaModal)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "setContent" /* 4186 */;
-import { MEDIA_MODAL_KEY } from "ME" /* 676 */;
+import { MEDIA_MODAL_KEY } from "ME" /* 673 */;
 
 const require = arg1;
 function _openMediaModal() {
@@ -66,7 +66,7 @@ function _openMediaModal() {
               let initVideoStateStore;
               v0 = 1;
               c4 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {

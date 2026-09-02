@@ -1,19 +1,19 @@
-// === Module 15823: _handleVoiceChannelPress ===
+// === Module 16055: _handleVoiceChannelPress ===
 
-// Module 15823 (_handleVoiceChannelPress)
-import ThemesDefault from "Themes" /* 712 */;
-import useEmbeddedAppsDefault from "useEmbeddedApps" /* 11631 */;
+// Module 16055 (_handleVoiceChannelPress)
+import ThemesDefault from "Themes" /* 709 */;
+import useEmbeddedAppsDefault from "useEmbeddedApps" /* 11854 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleConnectionOpen" /* 7272 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4121 */;
+import closure_6 from "handleConnectionOpen" /* 7281 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_8 from "generateOldThreadCutoff" /* 4493 */;
 import closure_9 from "updateUserGuildSettingsInternal" /* 4701 */;
 import closure_10 from "getVoiceStatesForGuild" /* 4555 */;
 import { NO_VOICE_STATES } from "getVoiceStatesForGuild" /* 4555 */;
-import hairlineWidth from "hairlineWidth" /* 10201 */;
-import ME from "ME" /* 676 */;
+import hairlineWidth from "hairlineWidth" /* 10223 */;
+import ME from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -305,13 +305,13 @@ let obj1 = { marginVertical: CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borde
 const memoResult = importAllResult.memo((channel) => {
   channel = channel.channel;
   ({ selected, subtitle } = channel);
-  obj = channel(589);
+  obj = channel(586);
   const items = [closure_10];
   const items1 = [channel.guild_id];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_10.getVoiceStates(channel.guild_id), items1);
   const arr3 = useEmbeddedAppsDefault(channel);
   const items2 = [closure_7, closure_6];
-  const stateFromStoresObject = channel(589).useStateFromStoresObject(items2, () => ({ locked: !closure_1_7.can(closure_1_14.CONNECT, channel), bypassLimit: closure_1_7.can(closure_1_14.MOVE_MEMBERS, channel), collapsed: closure_1_6.isCollapsed(channel.id) }));
+  const stateFromStoresObject = channel(586).useStateFromStoresObject(items2, () => ({ locked: !closure_1_7.can(closure_1_14.CONNECT, channel), bypassLimit: closure_1_7.can(closure_1_14.MOVE_MEMBERS, channel), collapsed: closure_1_6.isCollapsed(channel.id) }));
   obj = { channel, embeddedActivitiesCount: null, collapsed: null, voiceStates: null, selected: null, locked: null, bypassLimit: null, subtitle: null };
   let num;
   ({ locked, bypassLimit, collapsed } = stateFromStoresObject);

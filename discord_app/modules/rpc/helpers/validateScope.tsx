@@ -1,6 +1,6 @@
-// === Module 14156: validateScope ===
+// === Module 14379: validateScope ===
 
-// Module 14156 (validateScope)
+// Module 14379 (validateScope)
 import set from "set" /* 2 */;
 import RPC_SCOPE_CONFIG2 from "RPC_SCOPE_CONFIG" /* 4380 */;
 

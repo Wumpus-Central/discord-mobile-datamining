@@ -1,8 +1,8 @@
-// === Module 14696: QUEST_DOCK_COLLAPSED_HEIGHT ===
+// === Module 14922: QUEST_DOCK_COLLAPSED_HEIGHT ===
 
-// Module 14696 (QUEST_DOCK_COLLAPSED_HEIGHT)
+// Module 14922 (QUEST_DOCK_COLLAPSED_HEIGHT)
 import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 
 let obj = { mass: 0.5, damping: 80, stiffness: 320 };
 obj = {};

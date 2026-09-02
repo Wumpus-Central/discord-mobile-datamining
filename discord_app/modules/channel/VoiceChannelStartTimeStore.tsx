@@ -1,11 +1,11 @@
-// === Module 10945: _toTimestampMs ===
+// === Module 11165: _toTimestampMs ===
 
-// Module 10945 (_toTimestampMs)
-import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import set2 from "set" /* 692 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "_handleConnectionOpen" /* 5221 */;
+// Module 11165 (_toTimestampMs)
+import initializeDefault from "initialize" /* 586 */;
+import setDefault from "set" /* 684 */;
+import set2 from "set" /* 689 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import closure_3 from "_handleConnectionOpen" /* 5229 */;
 import set from "set" /* 2 */;
 
 require = arg1;

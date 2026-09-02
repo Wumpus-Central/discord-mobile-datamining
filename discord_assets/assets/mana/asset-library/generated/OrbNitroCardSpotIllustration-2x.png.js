@@ -1,6 +1,6 @@
-// === Module 6888: metadata ===
+// === Module 6897: metadata ===
 
-// Module 6888 (metadata)
+// Module 6897 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/OrbNitroCardSpotIllustration-2x.png.js");

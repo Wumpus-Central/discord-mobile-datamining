@@ -1,14 +1,14 @@
-// === Module 8068: EditAvatarDecorationInner ===
+// === Module 8076: EditAvatarDecorationInner ===
 
-// Module 8068 (EditAvatarDecorationInner)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 8076 (EditAvatarDecorationInner)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "map" /* 7303 */;
-import { isAvatarDecorationRecord } from "fromServer" /* 7292 */;
-import closure_8 from "trackCommunicationDisabled" /* 1992 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import closure_6 from "map" /* 7312 */;
+import { isAvatarDecorationRecord } from "fromServer" /* 7301 */;
+import closure_8 from "trackCommunicationDisabled" /* 1991 */;
+import { AnalyticEvents } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -92,7 +92,7 @@ function AvatarDecorationSectionPreview(previewSkuId) {
   ({ user, guildId, pendingAvatarSrc } = previewSkuId);
   let _require;
   let purchase;
-  const tmp4 = purchase(8082)(previewSkuId.previewSkuId);
+  const tmp4 = purchase(8090)(previewSkuId.previewSkuId);
   const product = tmp4.product;
   _require = product;
   purchase = tmp4.purchase;
@@ -117,14 +117,14 @@ function AvatarDecorationSectionPreview(previewSkuId) {
   }, items);
   let obj = { style: callback4().avatarDisplayContainer, accessibilityLabel: null, accessibilityRole: "image", accessible: true, children: null };
   if (null != memo) {
-    const intl2 = _require(1236).intl;
+    const intl2 = _require(1233).intl;
     obj = { a11y_text: null };
     obj[0] = memo.label;
-    let formatToPlainStringResult = intl2.formatToPlainString(_require(1236).t.Do2lxE, obj);
+    let formatToPlainStringResult = intl2.formatToPlainString(_require(1233).t.Do2lxE, obj);
     let tmp10 = _require;
   } else {
-    const intl = _require(1236).intl;
-    formatToPlainStringResult = intl.string(_require(1236).t["7hRBmC"]);
+    const intl = _require(1233).intl;
+    formatToPlainStringResult = intl.string(_require(1233).t["7hRBmC"]);
     tmp10 = _require;
   }
   obj[1] = formatToPlainStringResult;
@@ -132,8 +132,8 @@ function AvatarDecorationSectionPreview(previewSkuId) {
   const tmp = callback4();
   const tmp6 = closure_11;
   const tmp7 = View;
-  obj[4] = tmp10(1297).AvatarSizes.EDIT_AVATAR_DECORATION;
-  const items1 = [callback2(purchase(8106), obj), callback2(purchase(8121), { user, guildId, pendingAvatarSrc, pendingAvatarDecoration: memo })];
+  obj[4] = tmp10(1296).AvatarSizes.EDIT_AVATAR_DECORATION;
+  const items1 = [callback2(purchase(8114), obj), callback2(purchase(8129), { user, guildId, pendingAvatarSrc, pendingAvatarDecoration: memo })];
   obj[4] = items1;
   return tmp6(tmp7, obj);
 }
@@ -153,23 +153,23 @@ export default function EditAvatarDecorationActionSheet(arg0) {
   let setPendingAvatarDecoration;
   let first;
   const tmp = callback4();
-  const tmp4 = first(8069)({ analyticsLocations, isTryItOut, guildId });
+  const tmp4 = first(8077)({ analyticsLocations, isTryItOut, guildId });
   setPendingAvatarDecoration = tmp4.setPendingAvatarDecoration;
-  let obj = setPendingAvatarDecoration(8079);
+  let obj = setPendingAvatarDecoration(8087);
   obj = { userId: user.id, image: tmp4.pendingAvatar };
   let obj2 = React;
   const pendingAvatarSrc = obj.getPendingAvatarSrc(obj);
   const tmp7 = callback(React.useState(currentAvatarDecoration), 2);
   first = tmp7[0];
-  let obj3 = setPendingAvatarDecoration(8080);
+  let obj3 = setPendingAvatarDecoration(8088);
   if (analyticsLocations == null) {
     analyticsLocations = [];
   }
-  const analyticsLocations2 = first(5953)(analyticsLocations, tmp2(5973).EDIT_AVATAR_DECORATION_SHEET).analyticsLocations;
+  const analyticsLocations2 = first(5961)(analyticsLocations, tmp2(5981).EDIT_AVATAR_DECORATION_SHEET).analyticsLocations;
   const items = [first, setPendingAvatarDecoration];
   callback = obj2.useCallback(() => {
-    let obj = first(698);
-    obj = { type: first(5973).EDIT_AVATAR_DECORATION_SHEET, is_fullscreen: true };
+    let obj = first(695);
+    obj = { type: first(5981).EDIT_AVATAR_DECORATION_SHEET, is_fullscreen: true };
     obj.track(constants.OPEN_POPOUT, obj);
   }, []);
   const callback1 = obj2.useCallback(() => {
@@ -185,8 +185,8 @@ export default function EditAvatarDecorationActionSheet(arg0) {
   obj3 = { style: tmp.bounceOffset };
   const items1 = [callback2(View, obj3), , ];
   const obj4 = { variant: "redesign/heading-18/bold", style: tmp.title, accessibilityRole: "header", children: null };
-  const intl = tmp5(1236).intl;
-  obj4[3] = intl.string(setPendingAvatarDecoration(1236).t.HykynS);
+  const intl = tmp5(1233).intl;
+  obj4[3] = intl.string(setPendingAvatarDecoration(1233).t.HykynS);
   items1[1] = callback2(setPendingAvatarDecoration(4474).Text, obj4);
   items1[2] = callback2(EditAvatarDecorationInner, { user, guildId, pendingAvatarSrc, selectedAvatarDecoration: first, setSelectedAvatarDecoration: tmp7[1], isTryItOut });
   obj2[1] = items1;
@@ -194,7 +194,7 @@ export default function EditAvatarDecorationActionSheet(arg0) {
   const obj5 = { user, currentSkuId: null, selectedSkuId: null, isTryItOut: null, onApply: null, analyticsLocations: null, analyticsSource: null };
   let skuId;
   const tmp13 = callback3;
-  const tmp9 = first(5953);
+  const tmp9 = first(5961);
   if (currentAvatarDecoration != null) {
     skuId = currentAvatarDecoration.skuId;
   }
@@ -208,10 +208,10 @@ export default function EditAvatarDecorationActionSheet(arg0) {
   obj5[3] = isTryItOut;
   obj5[4] = callback1;
   obj5[5] = analyticsLocations2;
-  obj5[6] = first(5973).EDIT_AVATAR_DECORATION_SHEET;
-  items2[1] = callback2(first(8081), obj5);
+  obj5[6] = first(5981).EDIT_AVATAR_DECORATION_SHEET;
+  items2[1] = callback2(first(8089), obj5);
   obj1[4] = items2;
-  obj[1] = tmp13(setPendingAvatarDecoration(5622).BottomSheet, obj1);
-  obj6[0] = callback2(setPendingAvatarDecoration(5953).AnalyticsLocationProvider, obj);
+  obj[1] = tmp13(setPendingAvatarDecoration(5630).BottomSheet, obj1);
+  obj6[0] = callback2(setPendingAvatarDecoration(5961).AnalyticsLocationProvider, obj);
   return callback2(setPendingAvatarDecoration(4204).ThemeContextProvider, obj6);
 };

@@ -1,18 +1,18 @@
-// === Module 14240: ProfileCustomizationSubsection ===
+// === Module 14463: ProfileCustomizationSubsection ===
 
-// Module 14240 (ProfileCustomizationSubsection)
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 14241 */;
-import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 14299 */;
+// Module 14463 (ProfileCustomizationSubsection)
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 14464 */;
+import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 14522 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
 import closure_6 from "_objectWithoutProperties" /* 109 */;
 import closure_7 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_10 from "zustandStore" /* 9032 */;
-import closure_11 from "handleFormOpen" /* 8070 */;
-import { ProfileCustomizationSubsection } from "MAX_FAVORITES" /* 685 */;
-import ME from "ME" /* 676 */;
+import closure_10 from "zustandStore" /* 9046 */;
+import closure_11 from "handleFormOpen" /* 8078 */;
+import { ProfileCustomizationSubsection } from "MAX_FAVORITES" /* 682 */;
+import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

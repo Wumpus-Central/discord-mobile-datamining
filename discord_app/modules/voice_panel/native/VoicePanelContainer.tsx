@@ -1,18 +1,18 @@
-// === Module 16629: VoicePanel ===
+// === Module 16864: VoicePanel ===
 
-// Module 16629 (VoicePanel)
-import isIterable from "isIterable" /* 4106 */;
+// Module 16864 (VoicePanel)
+import isIterable from "isIterable" /* 4105 */;
 import ManaContext from "ManaContext" /* 4204 */;
-import VoicePanelControllerDefault from "VoicePanelController" /* 16630 */;
+import VoicePanelControllerDefault from "VoicePanelController" /* 16865 */;
 import importAllResult from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1387 */;
+import closure_4 from "ensureGuildLoaded" /* 1386 */;
 import closure_5 from "withEqualityFn" /* 4728 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
 function VoicePanel(arg0) {
   const _require = arg0;
-  let obj = _require(589);
+  let obj = _require(586);
   const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => {
     const channel = closure_1_4.getChannel(channelId.channelId);

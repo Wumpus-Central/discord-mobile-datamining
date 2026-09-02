@@ -1,8 +1,8 @@
-// === Module 663: ImpressionNames ===
+// === Module 660: ImpressionNames ===
 
-// Module 663 (ImpressionNames)
+// Module 660 (ImpressionNames)
 import set from "set" /* 2 */;
-import sum from "sum" /* 505 */;
+import sum from "sum" /* 502 */;
 
 const WebAnalyticsEvents = sum.WebAnalyticsEvents;
 const result = set.fileFinishedImporting("../discord_common/js/packages/analytics-utils/AnalyticsSchema.tsx");

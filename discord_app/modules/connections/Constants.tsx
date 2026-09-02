@@ -1,6 +1,6 @@
-// === Module 5352: OperatorTypes ===
+// === Module 5360: OperatorTypes ===
 
-// Module 5352 (OperatorTypes)
+// Module 5360 (OperatorTypes)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/connections/Constants.tsx");

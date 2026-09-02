@@ -1,13 +1,13 @@
-// === Module 11537: handleTypingStart ===
+// === Module 11760: handleTypingStart ===
 
-// Module 11537 (handleTypingStart)
-import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "ensureGuildLoaded" /* 1387 */;
-import { SlowmodeType } from "setCooldown" /* 7431 */;
-import { Endpoints } from "ME" /* 676 */;
+// Module 11760 (handleTypingStart)
+import initializeDefault from "initialize" /* 586 */;
+import setDefault from "set" /* 684 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import closure_4 from "fetchFingerprint" /* 1215 */;
+import closure_5 from "ensureGuildLoaded" /* 1386 */;
+import { SlowmodeType } from "setCooldown" /* 7441 */;
+import { Endpoints } from "ME" /* 673 */;
 
 const require = arg1;
 function handleTypingStart(arg0) {
@@ -160,7 +160,7 @@ const typingStore = new TypingStore(dispatcherDefault, {
     id = store.getId();
     if (null == id) {
       return false;
-    } else if (channelId === channelId(6068).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+    } else if (channelId === channelId(6076).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
       return false;
     } else {
       let tmp3 = null != obj;

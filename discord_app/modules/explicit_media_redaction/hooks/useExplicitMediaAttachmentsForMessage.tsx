@@ -1,6 +1,6 @@
-// === Module 11261: useRedactableMediaAttachmentsForMessage ===
+// === Module 11484: useRedactableMediaAttachmentsForMessage ===
 
-// Module 11261 (useRedactableMediaAttachmentsForMessage)
+// Module 11484 (useRedactableMediaAttachmentsForMessage)
 import closure_2 from "reinjectEphemerals" /* 4735 */;
 
 const require = arg1;
@@ -11,9 +11,9 @@ export const useRedactableMediaAttachmentsForMessage = function useRedactableMed
   dependencyMap = messageId;
   closure_2 = attachmentId;
   const items = [closure_2];
-  const stateFromStores = _require(647).useStateFromStores(items, () => attachmentId.getMessage(closure_0, closure_1));
-  let obj = _require(647);
-  closure_3 = _require(10260).useEnabledHarmTypesBitmaskForMessage(stateFromStores);
+  const stateFromStores = _require(644).useStateFromStores(items, () => attachmentId.getMessage(closure_0, closure_1));
+  let obj = _require(644);
+  closure_3 = _require(10282).useEnabledHarmTypesBitmaskForMessage(stateFromStores);
   if (null == stateFromStores) {
     return [];
   } else {
@@ -29,16 +29,16 @@ export const useRedactableMediaAttachmentsForMessage = function useRedactableMed
     }
     return found;
   }
-  const obj2 = _require(10260);
+  const obj2 = _require(10282);
 };
 export const useRedactableMediaEmbedsForMessage = function useRedactableMediaEmbedsForMessage(channelId, messageId, embedId) {
   const _require = channelId;
   dependencyMap = messageId;
   closure_2 = embedId;
   const items = [closure_2];
-  const stateFromStores = _require(647).useStateFromStores(items, () => embedId.getMessage(closure_0, closure_1));
-  let obj = _require(647);
-  closure_3 = _require(10260).useEnabledHarmTypesBitmaskForMessage(stateFromStores);
+  const stateFromStores = _require(644).useStateFromStores(items, () => embedId.getMessage(closure_0, closure_1));
+  let obj = _require(644);
+  closure_3 = _require(10282).useEnabledHarmTypesBitmaskForMessage(stateFromStores);
   if (null == stateFromStores) {
     return [];
   } else {
@@ -54,5 +54,5 @@ export const useRedactableMediaEmbedsForMessage = function useRedactableMediaEmb
     }
     return found;
   }
-  const obj2 = _require(10260);
+  const obj2 = _require(10282);
 };

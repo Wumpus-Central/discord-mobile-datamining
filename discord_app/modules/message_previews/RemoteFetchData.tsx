@@ -1,6 +1,6 @@
-// === Module 14916: FetchStatus ===
+// === Module 15145: FetchStatus ===
 
-// Module 14916 (FetchStatus)
+// Module 15145 (FetchStatus)
 import closure_0 from "asyncGeneratorStep" /* 5 */;
 
 let obj = { Pending: 0, [0]: "Pending", Fetching: 1, [1]: "Fetching" };

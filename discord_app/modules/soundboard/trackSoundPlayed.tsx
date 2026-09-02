@@ -1,14 +1,14 @@
-// === Module 6216: trackSoundPlayed ===
+// === Module 6225: trackSoundPlayed ===
 
-// Module 6216 (trackSoundPlayed)
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+// Module 6225 (trackSoundPlayed)
+import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
 import closure_2 from "initialize" /* 4501 */;
-import closure_3 from "ensureGuildLoaded" /* 1387 */;
+import closure_3 from "ensureGuildLoaded" /* 1386 */;
 import closure_4 from "createRTCConnection" /* 4554 */;
-import closure_5 from "handleConnectionOpen" /* 1981 */;
+import closure_5 from "handleConnectionOpen" /* 1980 */;
 import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME" /* 4967 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import { AnalyticEvents } from "ME" /* 673 */;
+import GuildFeatures from "GuildFeatures" /* 1923 */;
 
 ({ AnalyticsPremiumFeatureNames: closure_8, AnalyticsPremiumFeatureTiers: c9 } = GuildFeatures);
 const result = require("set").fileFinishedImporting("modules/soundboard/trackSoundPlayed.tsx");

@@ -1,8 +1,8 @@
 // === Module 4385: handleGameServerInstanceCreated ===
 
 // Module 4385 (handleGameServerInstanceCreated)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 import gameServerResponseToInstanceDefault from "gameServerResponseToInstance" /* 4387 */;
 
 function handleGameServerInstanceCreated(arg0) {

@@ -1,18 +1,18 @@
-// === Module 14915: addWant ===
+// === Module 15144: addWant ===
 
-// Module 14915 (addWant)
+// Module 15144 (addWant)
 import timestampDefault from "timestamp" /* 3 */;
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 5486 */;
-import FetchStatus from "FetchStatus" /* 14916 */;
+import initializeDefault from "initialize" /* 5494 */;
+import FetchStatus from "FetchStatus" /* 15145 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_handleConnectionOpen" /* 5221 */;
-import { isThread } from "createChannelRecord" /* 1391 */;
-import closure_7 from "fetchFingerprint" /* 1218 */;
-import closure_8 from "ensureGuildLoaded" /* 1387 */;
-import closure_9 from "initialize" /* 13370 */;
-import { Endpoints } from "ME" /* 676 */;
+import closure_5 from "_handleConnectionOpen" /* 5229 */;
+import { isThread } from "createChannelRecord" /* 1390 */;
+import closure_7 from "fetchFingerprint" /* 1215 */;
+import closure_8 from "ensureGuildLoaded" /* 1386 */;
+import closure_9 from "initialize" /* 13594 */;
+import { Endpoints } from "ME" /* 673 */;
 
 require = arg1;
 let closure_11 = new timestampDefault("MessagePreviewManager");
@@ -113,7 +113,7 @@ class MessagePreviewManager extends tmp3 {
                 c7 = 1;
                 let num9 = 1;
                 c8 = 1;
-                return { value: "PX_16", done: null };
+                return { value: "PX_16", done: true };
               }
             } else {
               if (1 === tmp4) {
@@ -312,7 +312,7 @@ prototype["fetchLocal"] = function fetchLocal(guild_id) {
                 const localFetching5 = closure_1_1.localFetching;
                 localFetching5.add(closure_1_0);
                 id = closure_1_7.getId();
-                let obj3 = closure_1_1(1956);
+                let obj3 = closure_1_1(1955);
                 const messagesResult = obj3.messages();
                 let mostRecents;
                 if (messagesResult != null) {
@@ -350,7 +350,7 @@ prototype["fetchLocal"] = function fetchLocal(guild_id) {
               tmp14 = id === closure_1_7.getId();
             }
             if (tmp14) {
-              obj = closure_1_1(709);
+              obj = closure_1_1(706);
               obj3 = { type: "MESSAGE_PREVIEWS_LOCALLY_LOADED", guildId: null, messages: null };
               obj3[1] = id;
               obj3[2] = closure_1.map((arg0) => {
@@ -438,7 +438,7 @@ prototype["fetchDms"] = function fetchDms(closure_4) {
               body = undefined;
               const _HermesInternal = HermesInternal;
               closure_1_11.verbose("fetching dm previews (via: http, channel_ids: " + closure_1_0.join(", ") + ")");
-              const HTTP = closure_1_0(530).HTTP;
+              const HTTP = closure_1_0(527).HTTP;
               obj1 = { url: null, body: null, rejectWithError: false };
               obj1[0] = closure_1_10.MESSAGE_PREVIEWS;
               const obj2 = { channel_ids: null };
@@ -460,7 +460,7 @@ prototype["fetchDms"] = function fetchDms(closure_4) {
             return obj4;
           } else {
             body = arg1.body;
-            obj = closure_1_1(709);
+            obj = closure_1_1(706);
             const obj5 = { type: "MESSAGE_PREVIEWS_LOADED", guildId: null, messages: null };
             obj5[2] = body;
             obj.dispatch(obj5);

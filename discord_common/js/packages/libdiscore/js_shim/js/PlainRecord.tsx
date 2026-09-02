@@ -1,6 +1,6 @@
-// === Module 1428: TypeTag ===
+// === Module 1427: TypeTag ===
 
-// Module 1428 (TypeTag)
+// Module 1427 (TypeTag)
 import set from "set" /* 2 */;
 
 const forResult = Symbol.for("PlainRecord.TypeTag");

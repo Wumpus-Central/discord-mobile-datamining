@@ -1,26 +1,26 @@
-// === Module 15221: TestLocaleSelector ===
+// === Module 15450: TestLocaleSelector ===
 
-// Module 15221 (TestLocaleSelector)
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import hooksDefault from "hooks" /* 4075 */;
-import TableRowInner from "TableRowInner" /* 5599 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5992 */;
-import messagesProxyDefault from "messagesProxy" /* 15222 */;
-import messagesProxyDefault2 from "messagesProxy" /* 15254 */;
+// Module 15450 (TestLocaleSelector)
+import initialize from "initialize" /* 586 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import hooksDefault from "hooks" /* 4074 */;
+import TableRowInner from "TableRowInner" /* 5607 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 6000 */;
+import messagesProxyDefault from "messagesProxy" /* 15451 */;
+import messagesProxyDefault2 from "messagesProxy" /* 15483 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { setAppLocale } from "_setAppLocale" /* 1997 */;
-import closure_9 from "_getSystemLocale" /* 1996 */;
+import { setAppLocale } from "_setAppLocale" /* 1996 */;
+import closure_9 from "_getSystemLocale" /* 1995 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function TestLocaleSelector() {
-  let obj = { title: "Locale", hasIcons: false, defaultValue: _require(1236).intl.currentLocale, onChange: null, children: null };
+  let obj = { title: "Locale", hasIcons: false, defaultValue: _require(1233).intl.currentLocale, onChange: null, children: null };
   _require = undefined;
   _require = callback2((arg0) => {
     closure_0 = arg0;
@@ -92,9 +92,9 @@ function TestLocaleSelector() {
     }
     return applyArgumentsResult;
   };
-  const items = [callback3(_require(7693).TableRadioRow, { label: "English", value: "en-US" }), callback3(_require(7693).TableRadioRow, { label: "French", value: "fr" })];
+  const items = [callback3(_require(7702).TableRadioRow, { label: "English", value: "en-US" }), callback3(_require(7702).TableRadioRow, { label: "French", value: "fr" })];
   obj[4] = items;
-  return callback4(_require(7692).TableRadioGroup, obj);
+  return callback4(_require(7701).TableRadioGroup, obj);
 }
 function LocaleInfo() {
   let obj = initialize;
@@ -147,7 +147,7 @@ let result = require("set").fileFinishedImporting("modules/intl/native/IntlTesti
 
 export default function IntlTestingSettingsPage() {
   const tmp = callback5();
-  const syncExternalStore = React.useSyncExternalStore(_require(1236).intl.onLocaleChange, () => callback(1236).intl.currentLocale);
+  const syncExternalStore = React.useSyncExternalStore(_require(1233).intl.onLocaleChange, () => callback(1233).intl.currentLocale);
   _require = callback(React.useState({}), 2)[1];
   const effect = React.useEffect(() => {
     const result = callback(closure_1_2[17]).waitForAllDefaultIntlMessagesLoaded();
@@ -159,19 +159,19 @@ export default function IntlTestingSettingsPage() {
   obj = { spacing: 24, style: tmp.container, children: null };
   const items = [callback3(LocaleInfo, {}), callback3(TestLocaleSelector, {}), , , , , , ];
   obj = { variant: "text-md/normal", children: null };
-  const intl = _require(1236).intl;
+  const intl = _require(1233).intl;
   obj[1] = intl.format(messagesProxyDefault.HMvEC5, {});
   items[2] = callback3(_require(4474).Text, obj);
   obj1 = { variant: "text-md/normal", children: null };
-  const intl2 = _require(1236).intl;
+  const intl2 = _require(1233).intl;
   obj1[1] = intl2.format(messagesProxyDefault2.swfLzV, {});
   items[3] = callback3(_require(4474).Text, obj1);
   const obj2 = { variant: "text-md/normal", children: null };
-  const intl3 = _require(1236).intl;
+  const intl3 = _require(1233).intl;
   obj2[1] = intl3.format(messagesProxyDefault.rmps8y, {});
   items[4] = callback3(_require(4474).Text, obj2);
   const obj3 = { variant: "text-md/normal", children: null };
-  const intl4 = _require(1236).intl;
+  const intl4 = _require(1233).intl;
   obj3[1] = intl4.format(messagesProxyDefault.uczI4g, {
     linkTarget() {
 
@@ -179,11 +179,11 @@ export default function IntlTestingSettingsPage() {
   });
   items[5] = callback3(_require(4474).Text, obj3);
   const obj5 = { variant: "text-md/normal", children: null };
-  const intl5 = _require(1236).intl;
+  const intl5 = _require(1233).intl;
   obj5[1] = intl5.format(messagesProxyDefault.rdfRyh, {});
   items[6] = callback3(_require(4474).Text, obj5);
   const obj6 = { variant: "text-md/normal", children: null };
-  const intl6 = _require(1236).intl;
+  const intl6 = _require(1233).intl;
   obj6[1] = intl6.format(messagesProxyDefault.XOdbAy, {
     username: "some user",
     usernameHook(children) {

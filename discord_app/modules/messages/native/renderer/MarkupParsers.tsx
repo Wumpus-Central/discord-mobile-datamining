@@ -1,13 +1,13 @@
-// === Module 7998: parseEmbedTitleMarkup ===
+// === Module 8007: parseEmbedTitleMarkup ===
 
-// Module 7998 (parseEmbedTitleMarkup)
+// Module 8007 (parseEmbedTitleMarkup)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import setDefault from "set" /* 687 */;
+import ME from "ME" /* 673 */;
+import setDefault from "set" /* 684 */;
 import get_defaultRulesDefault from "get defaultRules" /* 4468 */;
-import getInitialParserState from "getInitialParserState" /* 7631 */;
-import LHeading from "LHeading" /* 7999 */;
-import importDefaultResult from "priv" /* 1401 */;
+import getInitialParserState from "getInitialParserState" /* 7641 */;
+import LHeading from "LHeading" /* 8008 */;
+import importDefaultResult from "priv" /* 1400 */;
 
 const MessageTypes = ME.MessageTypes;
 let obj = { max: Infinity, maxAge: 15 * setDefault.Millis.MINUTE, updateAgeOnGet: true };

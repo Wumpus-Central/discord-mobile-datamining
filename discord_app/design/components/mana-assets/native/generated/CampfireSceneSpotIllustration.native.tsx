@@ -1,10 +1,10 @@
-// === Module 6385: CampfireSceneSpotIllustration ===
+// === Module 6394: CampfireSceneSpotIllustration ===
 
-// Module 6385 (CampfireSceneSpotIllustration)
+// Module 6394 (CampfireSceneSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5493 */;
-import metadataDefault from "metadata" /* 6386 */;
+import preloadDefault from "preload" /* 5501 */;
+import metadataDefault from "metadata" /* 6395 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/CampfireSceneSpotIllustration.native.tsx");

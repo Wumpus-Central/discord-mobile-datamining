@@ -1,9 +1,9 @@
-// === Module 8130: buildPlatformPollResources ===
+// === Module 8138: buildPlatformPollResources ===
 
-// Module 8130 (buildPlatformPollResources)
-import ensureAvatarSource from "ensureAvatarSource" /* 1434 */;
-import registerAssetDefault from "registerAsset" /* 5616 */;
-import registerAssetDefault2 from "registerAsset" /* 5995 */;
+// Module 8138 (buildPlatformPollResources)
+import ensureAvatarSource from "ensureAvatarSource" /* 1433 */;
+import registerAssetDefault from "registerAsset" /* 5624 */;
+import registerAssetDefault2 from "registerAsset" /* 6003 */;
 import importDefaultResult from "apply" /* 12 */;
 
 require = arg1;
@@ -41,9 +41,9 @@ export const buildPlatformPollResources = function buildPlatformPollResources(th
   importDefault = layoutType;
   const obj = { styles: importDefaultResult.mapValues(closure_3, (arg0) => arg0(closure_0, closure_1)), selectedIcon: null, checkmarkIcon: null };
   const obj2 = importDefaultResult;
-  obj[1] = _require(7855).getAssetUriForEmbed(registerAssetDefault);
-  const obj3 = _require(7855);
-  obj[2] = _require(7855).getAssetUriForEmbed(registerAssetDefault2);
+  obj[1] = _require(7864).getAssetUriForEmbed(registerAssetDefault);
+  const obj3 = _require(7864);
+  obj[2] = _require(7864).getAssetUriForEmbed(registerAssetDefault2);
   return obj;
 };
 export const getAvatarUrl = function getAvatarUrl(currentUser, guildId) {

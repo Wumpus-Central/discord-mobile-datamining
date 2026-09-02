@@ -1,11 +1,11 @@
-// === Module 9424: usePersonalizedVoiceChannelUsers ===
+// === Module 9437: usePersonalizedVoiceChannelUsers ===
 
-// Module 9424 (usePersonalizedVoiceChannelUsers)
-import closure_2 from "recomputeAffinities" /* 7404 */;
-import closure_3 from "hasConsented" /* 6054 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+// Module 9437 (usePersonalizedVoiceChannelUsers)
+import closure_2 from "recomputeAffinities" /* 7413 */;
+import closure_3 from "hasConsented" /* 6062 */;
+import closure_4 from "mergeGuildAvatar" /* 1921 */;
 import closure_5 from "getVoiceStatesForGuild" /* 4555 */;
-import { Consents } from "ME" /* 676 */;
+import { Consents } from "ME" /* 673 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_profile/hooks/usePersonalizedVoiceChannelUsers.tsx");

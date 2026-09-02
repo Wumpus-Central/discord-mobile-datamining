@@ -1,17 +1,17 @@
 // === Module 4138: getEmojiUnavailableReason ===
 
 // Module 4138 (getEmojiUnavailableReason)
-import getAvatarURLDefault from "getAvatarURL" /* 1431 */;
-import fit from "fit" /* 1490 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
+import fit from "fit" /* 1489 */;
 import EmojiTypes from "EmojiTypes" /* 4137 */;
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4139 */;
-import getURLDefault from "getURL" /* 7527 */;
+import getURLDefault from "getURL" /* 7537 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import createChannelRecord from "createChannelRecord" /* 1391 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4121 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { Permissions } from "ME" /* 676 */;
-import set from "set" /* 1925 */;
+import createChannelRecord from "createChannelRecord" /* 1390 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4120 */;
+import closure_7 from "mergeGuildAvatar" /* 1921 */;
+import { Permissions } from "ME" /* 673 */;
+import set from "set" /* 1924 */;
 
 require = arg1;
 function getEmojiUnavailableReason(forceIncludeExternalGuilds) {
@@ -97,9 +97,9 @@ function getEmojiUnavailableReason(forceIncludeExternalGuilds) {
             }
             obj = getPremiumPlanItemDefault;
           }
-          let tmp3Result = tmp3(5406);
+          let tmp3Result = tmp3(5414);
           if (tmp3Result.isUnusableRoleSubscriptionEmoji(emoji, guildId)) {
-            tmp3Result = tmp3(4114);
+            tmp3Result = tmp3(4113);
             tmp3Result.shouldHideGuildPurchaseEntryPoints(emoji.guildId) ? EmojiDisabledReasons.ROLE_SUBSCRIPTION_UNAVAILABLE : EmojiDisabledReasons.ROLE_SUBSCRIPTION_LOCKED;
           } else {
             let PREMIUM_LOCKED = null;
@@ -112,7 +112,7 @@ function getEmojiUnavailableReason(forceIncludeExternalGuilds) {
                   if (!tmp3Result1.isPurchasableRoleSubscriptionEmoji(emoji)) {
                     PREMIUM_LOCKED = EmojiDisabledReasons.PREMIUM_LOCKED;
                   }
-                  tmp3Result1 = tmp3(5406);
+                  tmp3Result1 = tmp3(5414);
                 }
                 obj3 = getPremiumPlanItemDefault;
               }

@@ -1,6 +1,6 @@
-// === Module 1929: PerkConfigType ===
+// === Module 1928: PerkConfigType ===
 
-// Module 1929 (PerkConfigType)
+// Module 1928 (PerkConfigType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/premium/perks_state/types.tsx");

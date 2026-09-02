@@ -1,10 +1,10 @@
-// === Module 10897: useEmojiColorPalette ===
+// === Module 11117: useEmojiColorPalette ===
 
-// Module 10897 (useEmojiColorPalette)
-import initialize from "initialize" /* 589 */;
-import buildPlatformedThemedEmojiColorPalette from "buildPlatformedThemedEmojiColorPalette" /* 7866 */;
+// Module 11117 (useEmojiColorPalette)
+import initialize from "initialize" /* 586 */;
+import buildPlatformedThemedEmojiColorPalette from "buildPlatformedThemedEmojiColorPalette" /* 7875 */;
 import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_3 from "handleThemeChange" /* 1302 */;
+import closure_3 from "handleThemeChange" /* 1301 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/emojis/hooks/useEmojiColorPalette.tsx");

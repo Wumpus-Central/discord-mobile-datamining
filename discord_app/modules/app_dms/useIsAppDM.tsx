@@ -1,7 +1,7 @@
-// === Module 9276: useIsAppDM ===
+// === Module 9289: useIsAppDM ===
 
-// Module 9276 (useIsAppDM)
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+// Module 9289 (useIsAppDM)
+import closure_2 from "mergeGuildAvatar" /* 1921 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/app_dms/useIsAppDM.tsx");
@@ -9,7 +9,7 @@ const result = require("set").fileFinishedImporting("modules/app_dms/useIsAppDM.
 export default function useIsAppDM(arg0) {
   const _require = arg0;
   const items = [closure_2];
-  return _require(647).useStateFromStores(items, () => {
+  return _require(644).useStateFromStores(items, () => {
     let tmp = null != closure_0 && obj.isDM();
     if (tmp) {
       tmp = 1 === obj.recipients.length;

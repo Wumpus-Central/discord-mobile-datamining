@@ -1,10 +1,10 @@
-// === Module 8734: AgeVerificationMethodsContainer ===
+// === Module 8749: AgeVerificationMethodsContainer ===
 
-// Module 8734 (AgeVerificationMethodsContainer)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 8749 (AgeVerificationMethodsContainer)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
-import { VerificationMethod } from "set" /* 8683 */;
-import { SafetyHubLinks } from "SafetyHubView" /* 8690 */;
+import { VerificationMethod } from "set" /* 8698 */;
+import { SafetyHubLinks } from "SafetyHubView" /* 8705 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -25,7 +25,7 @@ export const AgeVerificationMethodsContainer = function AgeVerificationMethodsCo
   const prop = ageVerificationMethods.ageVerificationMethods;
   const modalSessionId = ageVerificationMethods.modalSessionId;
   const tmp = callback2();
-  let obj = prop(8689);
+  let obj = prop(8704);
   const isSuspendedUser = obj.useIsSuspendedUser();
   const items = [prop];
   const effect = React.useEffect(() => {
@@ -42,10 +42,10 @@ export const AgeVerificationMethodsContainer = function AgeVerificationMethodsCo
     }
   }, items);
   obj = { spacing: 16, style: tmp.content, children: null };
-  obj = { messageType: prop(1297).HelpMessageTypes.INFO, textColor: "text-feedback-info", textVariant: "text-sm/medium", children: null };
-  const intl = prop(1236).intl;
-  obj[3] = intl.string(prop(1236).t.El4aXl);
-  const items1 = [callback(prop(1297).HelpMessage, obj), ];
+  obj = { messageType: prop(1296).HelpMessageTypes.INFO, textColor: "text-feedback-info", textVariant: "text-sm/medium", children: null };
+  const intl = prop(1233).intl;
+  obj[3] = intl.string(prop(1233).t.El4aXl);
+  const items1 = [callback(prop(1296).HelpMessage, obj), ];
   if (null != prop) {
     if (0 !== prop.length) {
       let mapped = prop.map((label) => {
@@ -68,12 +68,12 @@ export const AgeVerificationMethodsContainer = function AgeVerificationMethodsCo
     let tmp7Result = isSuspendedUser;
     if (isSuspendedUser) {
       let obj2 = { variant: "text-xs/medium", children: null };
-      const intl4 = tmp2(1236).intl;
+      const intl4 = tmp2(1233).intl;
       const obj3 = { handleOnHelpUrlHook: null };
       obj3[0] = function handleOnHelpUrlHook() {
         modalSessionId(table[19]).openUrl(constants.LEARN_MORE_UU_APPEAL_LINK);
       };
-      obj2[1] = intl4.format(modalSessionId(2919).htWh1G, obj3);
+      obj2[1] = intl4.format(modalSessionId(2918).htWh1G, obj3);
       tmp7Result = tmp7(tmp2(4474).Text, obj2);
     }
     const obj4 = { spacing: 8, align: "center", children: null };
@@ -83,16 +83,16 @@ export const AgeVerificationMethodsContainer = function AgeVerificationMethodsCo
   }
   const obj5 = { direction: "vertical", align: "center", spacing: 16, style: tmp.errorContainer, children: null };
   const obj6 = { variant: "text-sm/medium", color: "text-subtle", style: tmp.noMethodsText, children: null };
-  const intl2 = tmp2(1236).intl;
-  obj6[3] = intl2.string(modalSessionId(2919).cR6336);
+  const intl2 = tmp2(1233).intl;
+  obj6[3] = intl2.string(modalSessionId(2918).cR6336);
   const items3 = [callback(prop(4474).Text, obj6), ];
   const obj7 = { style: tmp.buttonGroup, children: null };
   const obj8 = { variant: "primary", size: "lg", text: null, onPress: null };
-  const intl3 = tmp2(1236).intl;
-  obj8[2] = intl3.string(modalSessionId(2919).hDvmYP);
-  obj8[3] = prop(8688).getAgeVerificationMethods;
+  const intl3 = tmp2(1233).intl;
+  obj8[2] = intl3.string(modalSessionId(2918).hDvmYP);
+  obj8[3] = prop(8703).getAgeVerificationMethods;
   obj7[1] = callback(prop(4928).Button, obj8);
-  items3[1] = callback(prop(5376).ButtonGroup, obj7);
+  items3[1] = callback(prop(5384).ButtonGroup, obj7);
   obj5[4] = items3;
   mapped = tmp6(tmp2(4926).Stack, obj5);
 };

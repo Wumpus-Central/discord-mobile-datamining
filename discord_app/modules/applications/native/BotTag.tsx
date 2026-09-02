@@ -1,10 +1,10 @@
-// === Module 8933: getBotLabel ===
+// === Module 8947: getBotLabel ===
 
-// Module 8933 (getBotLabel)
+// Module 8947 (getBotLabel)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 8934 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 8948 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { BotTagTypes } from "ApplicationTypes" /* 4507 */;
 import jsxProd from "jsxProd" /* 21 */;

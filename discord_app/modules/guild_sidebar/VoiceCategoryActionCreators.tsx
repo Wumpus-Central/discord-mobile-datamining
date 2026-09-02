@@ -1,8 +1,8 @@
-// === Module 15785: voiceCategoryExpand ===
+// === Module 16016: voiceCategoryExpand ===
 
-// Module 15785 (voiceCategoryExpand)
+// Module 16016 (voiceCategoryExpand)
 import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 const result = set.fileFinishedImporting("modules/guild_sidebar/VoiceCategoryActionCreators.tsx");
 

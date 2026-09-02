@@ -3,20 +3,20 @@
 // Module 4965 (handleSoundCreateOrUpdate)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import hooksDefault from "hooks" /* 4075 */;
+import initializeDefault from "initialize" /* 586 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import hooksDefault from "hooks" /* 4074 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
 import DEFAULT_FRECENCYDefault from "DEFAULT_FRECENCY" /* 4566 */;
 import perceptualToAmplitude from "perceptualToAmplitude" /* 4968 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import closure_4 from "handleConnectionClosedOrResumed" /* 1339 */;
+import closure_5 from "mergeGuildAvatar" /* 1921 */;
 import closure_6 from "initialize" /* 4966 */;
 import MAX_LENGTH_SOUND_NAME from "MAX_LENGTH_SOUND_NAME" /* 4967 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { UserSettingsTypes } from "MAX_FAVORITES" /* 685 */;
+import { AnalyticEvents } from "ME" /* 673 */;
+import { UserSettingsTypes } from "MAX_FAVORITES" /* 682 */;
 import closure_20 from "module_2026" /* 2026 */;
 import set from "set" /* 2 */;
 

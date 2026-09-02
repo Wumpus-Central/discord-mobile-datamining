@@ -1,10 +1,10 @@
-// === Module 8119: rgbToHex ===
+// === Module 8127: rgbToHex ===
 
-// Module 8119 (rgbToHex)
-import int2hslRaw from "int2hslRaw" /* 688 */;
-import getProfileTheme from "getProfileTheme" /* 8120 */;
+// Module 8127 (rgbToHex)
+import int2hslRaw from "int2hslRaw" /* 685 */;
+import getProfileTheme from "getProfileTheme" /* 8128 */;
 import closure_2 from "noop" /* 19 */;
-import { ThemeTypes } from "ME" /* 676 */;
+import { ThemeTypes } from "ME" /* 673 */;
 
 require = arg1;
 function rgbToHex(arg0) {
@@ -25,8 +25,8 @@ function computeVideoTileGradientStops(modalV2BackgroundColor, modalV2Background
       if (DARK == null) {
         DARK = ThemeTypes.DARK;
       }
-      let tmp9Result = tmp9(688);
-      tmp9Result = tmp9(8120);
+      let tmp9Result = tmp9(685);
+      tmp9Result = tmp9(8128);
       const int2rgbArrayResult = tmp9Result.int2rgbArray(tmp9Result.calculateModalV2BackgroundColor(modalV2BackgroundColor, modalV2BackgroundColor, DARK));
       const obj7 = getProfileTheme;
       const tmp9Result1 = int2hslRaw;

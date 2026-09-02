@@ -1,11 +1,11 @@
-// === Module 10629: SelectedUserField ===
+// === Module 10850: SelectedUserField ===
 
-// Module 10629 (SelectedUserField)
+// Module 10850 (SelectedUserField)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import nameFromUserDefault from "nameFromUser" /* 4322 */;
-import useInputStyles from "useInputStyles" /* 6229 */;
-import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 6235 */;
+import useInputStyles from "useInputStyles" /* 6238 */;
+import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 6244 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -44,27 +44,27 @@ export default function SelectedUserField(onPress) {
   obj = { style: items, onPress: onPress.onPress, accessibilityRole: "button", accessibilityLabel: null, children: null };
   items[1] = openerWithClearButton;
   if (null != selectedUser) {
-    const intl3 = tmp4(1236).intl;
+    const intl3 = tmp4(1233).intl;
     let obj3 = nameFromUserDefault;
     const _HermesInternal2 = HermesInternal;
-    let combined = "" + intl3.string(tmp4(1236).t.xFn72s) + ", " + obj3.getName(selectedUser);
-    const stringResult = intl3.string(tmp4(1236).t.xFn72s);
+    let combined = "" + intl3.string(tmp4(1233).t.xFn72s) + ", " + obj3.getName(selectedUser);
+    const stringResult = intl3.string(tmp4(1233).t.xFn72s);
   } else {
-    const intl = tmp4(1236).intl;
-    const intl2 = tmp4(1236).intl;
+    const intl = tmp4(1233).intl;
+    const intl2 = tmp4(1233).intl;
     const _HermesInternal = HermesInternal;
-    combined = "" + intl.string(tmp4(1236).t.xFn72s) + ", " + intl2.string(tmp4(1236).t.R0vK0N);
-    const stringResult1 = intl.string(tmp4(1236).t.xFn72s);
+    combined = "" + intl.string(tmp4(1233).t.xFn72s) + ", " + intl2.string(tmp4(1233).t.R0vK0N);
+    const stringResult1 = intl.string(tmp4(1233).t.xFn72s);
   }
   obj[3] = combined;
   const items1 = [closure_5(MagnifyingGlassIcon.MagnifyingGlassIcon, { style: tmp.searchIcon, size: "xs", color: "interactive-text-default" }), ];
   if (null != selectedUser) {
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.userPill;
-    obj3 = { user: null, guildId: "Array", size: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000055359227687093 };
+    obj3 = { user: null, guildId: "Array", size: true };
     obj3[0] = selectedUser;
-    obj3[2] = tmp4(1297).AvatarSizes.XSMALL_20;
-    const items2 = [tmp2(tmp4(1297).Avatar, obj3), ];
+    obj3[2] = tmp4(1296).AvatarSizes.XSMALL_20;
+    const items2 = [tmp2(tmp4(1296).Avatar, obj3), ];
     const obj4 = { variant: "text-md/medium", style: null, children: null };
     obj4[1] = tmp.userPillText;
     obj4[2] = nameFromUserDefault.getName(selectedUser);
@@ -75,8 +75,8 @@ export default function SelectedUserField(onPress) {
   } else {
     const obj5 = { variant: "text-sm/semibold", color: "text-subtle", style: null, children: null };
     obj5[2] = tmp.userPillText;
-    const intl4 = tmp4(1236).intl;
-    obj5[3] = intl4.string(tmp4(1236).t.R0vK0N);
+    const intl4 = tmp4(1233).intl;
+    obj5[3] = intl4.string(tmp4(1233).t.R0vK0N);
     tmp2Result = tmp2(tmp4(4474).Text, obj5);
   }
   items1[1] = tmp2Result;
@@ -89,11 +89,11 @@ export default function SelectedUserField(onPress) {
     obj6[1] = function onPress() {
       return callback(undefined);
     };
-    const intl5 = tmp4(1236).intl;
+    const intl5 = tmp4(1233).intl;
     const obj7 = { text: null };
     obj7[0] = nameFromUserDefault.getName(selectedUser);
-    obj6[3] = intl5.formatToPlainString(tmp4(1236).t["0Vb9FQ"], obj7);
-    obj6[4] = tmp2(tmp4(6225).CircleXIcon, { size: "xs" });
+    obj6[3] = intl5.formatToPlainString(tmp4(1233).t["0Vb9FQ"], obj7);
+    obj6[4] = tmp2(tmp4(6234).CircleXIcon, { size: "xs" });
     tmp2Result = tmp2(tmp7, obj6);
     const obj13 = nameFromUserDefault;
   }

@@ -1,13 +1,13 @@
-// === Module 16369: ReferralProgramCoachmarkImg ===
+// === Module 16601: ReferralProgramCoachmarkImg ===
 
-// Module 16369 (ReferralProgramCoachmarkImg)
-import preloadDefault from "preload" /* 5493 */;
-import registerAssetDefault from "registerAsset" /* 16370 */;
+// Module 16601 (ReferralProgramCoachmarkImg)
+import preloadDefault from "preload" /* 5501 */;
+import registerAssetDefault from "registerAsset" /* 16602 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { UserSettingsSections } from "ME" /* 676 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1384 */;
+import { UserSettingsSections } from "ME" /* 673 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -27,19 +27,19 @@ export const useReferralProgramCoachmark = function useReferralProgramCoachmark(
   let _require;
   closure_1 = undefined;
   let obj = _require(4298);
-  let result = obj.useIsDismissibleContentDismissed_UNSAFE(_require(1373).DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK);
+  let result = obj.useIsDismissibleContentDismissed_UNSAFE(_require(1372).DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK);
   if (!result) {
     result = disabled;
   }
-  const isEligibleSenderForReferralProgram = _require(7965).useIsEligibleSenderForReferralProgram(result);
-  _require(6251);
+  const isEligibleSenderForReferralProgram = _require(7974).useIsEligibleSenderForReferralProgram(result);
+  _require(6260);
   if (isEligibleSenderForReferralProgram) {
     if (!disabled) {
-      let items = [tmp(1373).DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK];
+      let items = [tmp(1372).DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK];
     }
     const tmp8 = callback(tmp6(items), 2);
     _require = tmp9;
-    const tmp10 = tmp8[0] === tmp(1373).DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK;
+    const tmp10 = tmp8[0] === tmp(1372).DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK;
     closure_1 = tmp10;
     const items1 = [tmp10, tmp8[1]];
     let tmp13 = null;

@@ -1,17 +1,17 @@
-// === Module 5451: handleChannelSelect ===
+// === Module 5459: handleChannelSelect ===
 
-// Module 5451 (handleChannelSelect)
+// Module 5459 (handleChannelSelect)
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 import DEFAULT_FRECENCYDefault from "DEFAULT_FRECENCY" /* 4566 */;
-import closure_2 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_3 from "ensureGuildLoaded" /* 1387 */;
-import closure_4 from "createGuildRecordFromRust" /* 1909 */;
-import closure_5 from "handleConnectionOpen" /* 1981 */;
+import closure_2 from "handleConnectionClosedOrResumed" /* 1339 */;
+import closure_3 from "ensureGuildLoaded" /* 1386 */;
+import closure_4 from "createGuildRecordFromRust" /* 1908 */;
+import closure_5 from "handleConnectionOpen" /* 1980 */;
 import closure_6 from "handleConnectionOpen" /* 4299 */;
-import { ID_REGEX } from "ME" /* 676 */;
-import { UserSettingsTypes } from "MAX_FAVORITES" /* 685 */;
+import { ID_REGEX } from "ME" /* 673 */;
+import { UserSettingsTypes } from "MAX_FAVORITES" /* 682 */;
 
 function handleChannelSelect(arg0) {
   ({ guildId, channelId } = arg0);

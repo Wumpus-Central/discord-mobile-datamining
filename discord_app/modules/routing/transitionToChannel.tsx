@@ -2,11 +2,11 @@
 
 // Module 4489 (transitionToChannel)
 import _modDef38 from "module_38" /* 38 */;
-import transitionTo from "transitionTo" /* 1222 */;
+import transitionTo from "transitionTo" /* 1219 */;
 import useGuildIdForChannelRoute from "useGuildIdForChannelRoute" /* 4490 */;
 import _modDef4491 from "module_4491" /* 4491 */;
-import closure_3 from "ensureGuildLoaded" /* 1387 */;
-import { Routes } from "ME" /* 676 */;
+import closure_3 from "ensureGuildLoaded" /* 1386 */;
+import { Routes } from "ME" /* 673 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/routing/transitionToChannel.tsx");

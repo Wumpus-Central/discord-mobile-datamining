@@ -1,10 +1,10 @@
-// === Module 7194: hasUserTrialOfferExpired ===
+// === Module 7203: hasUserTrialOfferExpired ===
 
-// Module 7194 (hasUserTrialOfferExpired)
+// Module 7203 (hasUserTrialOfferExpired)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "emitChanges" /* 7195 */;
+import closure_4 from "mergeGuildAvatar" /* 1921 */;
+import closure_5 from "emitChanges" /* 7204 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/premium/useTrialOffer.tsx");

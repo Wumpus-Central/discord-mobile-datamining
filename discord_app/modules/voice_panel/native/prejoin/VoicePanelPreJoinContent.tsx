@@ -1,33 +1,33 @@
-// === Module 16741: StreamPreview ===
+// === Module 16976: StreamPreview ===
 
-// Module 16741 (StreamPreview)
-import encodeProperties from "encodeProperties" /* 503 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 16976 (StreamPreview)
+import encodeProperties from "encodeProperties" /* 500 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Text from "Text" /* 4474 */;
-import setDefault from "set" /* 6006 */;
-import trackImpressionDefault from "trackImpression" /* 8892 */;
-import VoiceBadges from "VoiceBadges" /* 9807 */;
+import setDefault from "set" /* 6014 */;
+import trackImpressionDefault from "trackImpression" /* 8907 */;
+import VoiceBadges from "VoiceBadges" /* 9829 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "participantFromServer" /* 1386 */;
+import closure_6 from "participantFromServer" /* 1385 */;
 import closure_7 from "set" /* 4495 */;
-import closure_8 from "init" /* 13386 */;
+import closure_8 from "init" /* 13609 */;
 import closure_9 from "reset" /* 4500 */;
-import closure_10 from "fetchFingerprint" /* 1218 */;
-import closure_11 from "ensureGuildLoaded" /* 1387 */;
+import closure_10 from "fetchFingerprint" /* 1215 */;
+import closure_11 from "ensureGuildLoaded" /* 1386 */;
 import closure_12 from "_detectH265HardwareDecode" /* 4529 */;
-import closure_13 from "getUncachedChannelPermissions" /* 4121 */;
+import closure_13 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_14 from "handleUpdate" /* 4496 */;
-import closure_15 from "mergeGuildAvatar" /* 1922 */;
+import closure_15 from "mergeGuildAvatar" /* 1921 */;
 import closure_16 from "updateVoiceState" /* 4497 */;
 import closure_17 from "getVoiceStatesForGuild" /* 4555 */;
-import { MODE_CHANGE_PHYSICS } from "VoicePanelModes" /* 11840 */;
-import { EDGE_GUTTER } from "CARD_SIZE" /* 11843 */;
-import ME from "ME" /* 676 */;
-import { VoiceChannelWarningSurfaces as closure_23 } from "GdmWarningMedium" /* 13391 */;
+import { MODE_CHANGE_PHYSICS } from "VoicePanelModes" /* 12063 */;
+import { EDGE_GUTTER } from "CARD_SIZE" /* 12066 */;
+import ME from "ME" /* 673 */;
+import { VoiceChannelWarningSurfaces as closure_23 } from "GdmWarningMedium" /* 13614 */;
 import { Features } from "DesktopSources" /* 4542 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -553,12 +553,12 @@ let closure_34 = importAllResult.memo((blockedUserIds) => {
   const stringResult = intl.string(getSystemLocale.t.CjrALd);
   if (size2 > 0) {
     if (size > 0) {
-      const intl4 = tmp5(1236).intl;
-      let stringResult1 = intl4.string(tmp5(1236).t.MpRfpC);
+      const intl4 = tmp5(1233).intl;
+      let stringResult1 = intl4.string(tmp5(1233).t.MpRfpC);
     }
     obj = { style: null, children: null };
     obj[0] = tmp.blockedMemberWarning;
-    const items = [callback(tmp5(7708).CircleErrorIcon, { color: "text-feedback-warning" }), ];
+    const items = [callback(tmp5(7717).CircleErrorIcon, { color: "text-feedback-warning" }), ];
     obj1 = { variant: "text-sm/bold", color: "interactive-text-active", style: null, children: null };
     obj1[2] = { flexShrink: 1 };
     const items1 = [stringResult1, " ", ];
@@ -575,20 +575,20 @@ let closure_34 = importAllResult.memo((blockedUserIds) => {
     return closure_26(setDefault, obj);
   }
   if (size > 0) {
-    const intl3 = tmp5(1236).intl;
+    const intl3 = tmp5(1233).intl;
     const obj3 = { n: null };
     obj3[0] = size;
-    stringResult1 = intl3.format(tmp5(1236).t.u9trAZ, obj3);
+    stringResult1 = intl3.format(tmp5(1233).t.u9trAZ, obj3);
   } else {
-    const intl2 = tmp5(1236).intl;
+    const intl2 = tmp5(1233).intl;
     const obj4 = { n: null };
     obj4[0] = size2;
-    stringResult1 = intl2.format(tmp5(1236).t["6X29zb"], obj4);
+    stringResult1 = intl2.format(tmp5(1233).t["6X29zb"], obj4);
   }
 });
 let closure_37 = importAllResult.memo((channelId) => {
   channelId = channelId.channelId;
-  let obj = channelId(589);
+  let obj = channelId(586);
   const items = [closure_10, closure_7, closure_16, closure_14];
   const items1 = [channelId];
   let tmp3 = null;
@@ -698,12 +698,12 @@ let closure_39 = { code: "function VoicePanelPreJoinContentTsx3(){const{windowDi
 let closure_40 = { code: "function VoicePanelPreJoinContentTsx4(finished=false){const{transitionState,TransitionStates,runOnJS,transitionCleanUp}=this.__closure;finished&&transitionState===TransitionStates.YEETED&&runOnJS(transitionCleanUp)();}" };
 let obj4 = { display: "flex", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, padding: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.xs, borderColor: ThemesDefault.colors.ICON_FEEDBACK_WARNING, borderWidth: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_WARNING, marginHorizontal: ThemesDefault.space.PX_16 };
 const memoResult = importAllResult.memo(function VoicePanelPreJoinWrapper() {
-  const context = importAllResult.useContext(guildId(11839));
+  const context = importAllResult.useContext(guildId(12062));
   const channelId = context.channelId;
   guildId = context.guildId;
-  const tmp2 = guildId(16618)(channelId);
+  const tmp2 = guildId(16853)(channelId);
   dependencyMap = tmp2;
-  let obj = channelId(589);
+  let obj = channelId(586);
   let items = [closure_17, closure_8, closure_6, closure_12, closure_9];
   let items1 = [tmp2, channelId, guildId];
   const stateFromStores = obj.useStateFromStores(items, () => {
@@ -746,7 +746,7 @@ const memoResult = importAllResult.memo(function VoicePanelPreJoinWrapper() {
       obj[4] = ignoredUsersForVoiceChannel;
       return obj;
     }
-  }, items1, channelId(16744).areVoicePanelPreJoinContentPropsEqual);
+  }, items1, channelId(16979).areVoicePanelPreJoinContentPropsEqual);
   obj = { item: stateFromStores, renderItem };
   return callback(channelId(4204).TransitionItem, obj);
 });

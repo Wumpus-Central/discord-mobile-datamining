@@ -1,14 +1,14 @@
-// === Module 11054: OptInChannelBanner ===
+// === Module 11274: OptInChannelBanner ===
 
-// Module 11054 (OptInChannelBanner)
-import ThemesDefault from "Themes" /* 712 */;
-import ChatOverlaysDefault from "ChatOverlays" /* 11057 */;
+// Module 11274 (OptInChannelBanner)
+import ThemesDefault from "Themes" /* 709 */;
+import ChatOverlaysDefault from "ChatOverlays" /* 11277 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "_handleConnectionOpen" /* 5221 */;
+import closure_5 from "_handleConnectionOpen" /* 5229 */;
 import closure_6 from "generateOldThreadCutoff" /* 4493 */;
-import { ChatOverlays } from "ChatOverlays" /* 11055 */;
-import ME from "ME" /* 676 */;
+import { ChatOverlays } from "ChatOverlays" /* 11275 */;
+import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -84,13 +84,13 @@ function ArchivedLockedThreadChatBanner(channel) {
     obj.banner_type = "thread";
     obj.track(closure_1_10.CHANNEL_BANNER_VIEWED, obj);
   }, items);
-  let obj = channel(6116);
+  let obj = channel(6124);
   let canUnarchiveThread = obj.useCanUnarchiveThread(channel);
   obj = { style: tmp.threadBannerContainer, children: null };
   obj = { lineClamp: 4, style: tmp.threadBannerTitle, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl = channel(1236).intl;
+  const intl = channel(1233).intl;
   const string = intl.string;
-  const t = channel(1236).t;
+  const t = channel(1233).t;
   if (isForumPostResult) {
     let stringResult = string(t["833FDn"]);
   } else {
@@ -102,8 +102,8 @@ function ArchivedLockedThreadChatBanner(channel) {
     obj1 = { style: null, children: null };
     obj1[0] = tmp.threadBannerButton;
     const obj2 = { variant: "secondary", size: "sm", text: null, onPress: null };
-    const intl2 = tmp3(1236).intl;
-    obj2[2] = intl2.string(tmp3(1236).t["0dvvEi"]);
+    const intl2 = tmp3(1233).intl;
+    obj2[2] = intl2.string(tmp3(1233).t["0dvvEi"]);
     obj2[3] = function onPress() {
       let obj = closure_1_1(closure_1_2[13]);
       obj = {};
@@ -136,13 +136,13 @@ function LockedThreadChatBanner(channel) {
     obj.banner_type = "thread";
     obj.track(closure_1_10.CHANNEL_BANNER_VIEWED, obj);
   }, items);
-  let obj = channel(6116);
+  let obj = channel(6124);
   let isThreadModerator = obj.useIsThreadModerator(channel);
   obj = { style: tmp.threadBannerContainer, children: null };
   obj = { lineClamp: 4, style: tmp.threadBannerTitle, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl = channel(1236).intl;
+  const intl = channel(1233).intl;
   const string = intl.string;
-  const t = channel(1236).t;
+  const t = channel(1233).t;
   if (isForumPostResult) {
     let stringResult = string(t.E7oO8u);
   } else {
@@ -154,8 +154,8 @@ function LockedThreadChatBanner(channel) {
     obj1 = { style: null, children: null };
     obj1[0] = tmp.threadBannerButton;
     const obj2 = { variant: "secondary", size: "sm", text: null, onPress: null };
-    const intl2 = tmp3(1236).intl;
-    obj2[2] = intl2.string(tmp3(1236).t.zA9d1J);
+    const intl2 = tmp3(1233).intl;
+    obj2[2] = intl2.string(tmp3(1233).t.zA9d1J);
     obj2[3] = function onPress() {
       let obj = closure_1_1(closure_1_2[13]);
       obj = {};
@@ -181,14 +181,14 @@ function NewMessagesChatBar(channel) {
   let stringResult = callback3();
   let XSmallBoldIcon = channel;
   let WHITE = dependencyMap;
-  let obj = channel(589);
+  let obj = channel(586);
   const items = [closure_5];
   let tmp2 = null;
   if (obj.useStateFromStores(items, () => connected.isConnected(), [])) {
     if (unreadCount <= 0) {
       tmp2 = null;
     } else {
-      let t = XSmallBoldIcon(1236).t;
+      let t = XSmallBoldIcon(1233).t;
       const isEstimatedResult = estimated.isEstimated(channel.id);
       t = { style: null, children: null };
       t[0] = stringResult.newMessageBar;
@@ -196,25 +196,25 @@ function NewMessagesChatBar(channel) {
       obj[1] = stringResult.newMessageBarTextContainer;
       obj[2] = handleScrollToNewMessages;
       obj = { variant: "text-sm/semibold", color: "text-overlay-light", children: null };
-      const intl = XSmallBoldIcon(1236).intl;
+      const intl = XSmallBoldIcon(1233).intl;
       obj1 = { count: null, timestamp: null };
       obj1[0] = unreadCount;
       obj1[1] = channel.oldestUnreadTimestamp;
       obj[2] = intl.format(estimated.isEstimated(channel.id) ? t.wvtbbG : t["BctFH/"], obj1);
       obj[3] = callback(XSmallBoldIcon(4474).Text, obj);
-      const items1 = [callback(XSmallBoldIcon(5068).PressableOpacity, obj), ];
-      handleScrollToNewMessages = XSmallBoldIcon(5068).PressableOpacity;
+      const items1 = [callback(XSmallBoldIcon(5076).PressableOpacity, obj), ];
+      handleScrollToNewMessages = XSmallBoldIcon(5076).PressableOpacity;
       const obj2 = { style: null, accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
       obj2[0] = stringResult.newMessageBarCloseButton;
-      const intl2 = XSmallBoldIcon(1236).intl;
-      stringResult = intl2.string(XSmallBoldIcon(1236).t.e6RscS);
+      const intl2 = XSmallBoldIcon(1233).intl;
+      stringResult = intl2.string(XSmallBoldIcon(1233).t.e6RscS);
       obj2[2] = stringResult;
       obj2[3] = function onPress() {
         let obj = channel(closure_1_2[22]);
         obj = { section: closure_1_11.NEW_MESSAGES_BANNER, object: closure_1_9.MARK_CHANNEL_AS_READ_BUTTON, objectType: closure_1_8.ACK_MANUAL };
         return obj.ack(channel.id, obj);
       };
-      XSmallBoldIcon = XSmallBoldIcon(7882).XSmallBoldIcon;
+      XSmallBoldIcon = XSmallBoldIcon(7891).XSmallBoldIcon;
       const obj3 = { size: "sm", color: null };
       WHITE = ThemesDefault.colors.WHITE;
       obj3[1] = WHITE;
@@ -251,7 +251,7 @@ const result = require("set").fileFinishedImporting("modules/messages/native/Cha
 export default function ChatBanner(channel) {
   channel = channel.channel;
   let obj = ChatOverlaysDefault();
-  obj1 = channel(589);
+  obj1 = channel(586);
   const items = [closure_6];
   const items1 = [channel.id];
   const stateFromStoresObject = obj1.useStateFromStoresObject(items, () => {

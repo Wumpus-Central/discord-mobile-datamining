@@ -1,16 +1,16 @@
-// === Module 15586: useIsHCaptchaModalOpenTracking ===
+// === Module 15817: useIsHCaptchaModalOpenTracking ===
 
-// Module 15586 (useIsHCaptchaModalOpenTracking)
+// Module 15817 (useIsHCaptchaModalOpenTracking)
 import closure_2 from "noop" /* 19 */;
-import { doesRegistrationHaveIdentityType as closure_3 } from "useRegistrationUIStore" /* 15537 */;
-import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15538 */;
+import { doesRegistrationHaveIdentityType as closure_3 } from "useRegistrationUIStore" /* 15768 */;
+import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15769 */;
 
 const require = arg1;
 ({ RegisterTransitionSteps: c4, RegistrationTransitionActionTypes: c5 } = RegistrationTransitionActionTypes);
 const result = require("set").fileFinishedImporting("modules/auth/native/components/utils/useIsHCaptchaModalOpenTracking.tsx");
 
 export const useIsHCaptchaModalOpenTracking = function useIsHCaptchaModalOpenTracking() {
-  context = React.useContext(context(15534).TrackRegistrationContext);
+  context = React.useContext(context(15765).TrackRegistrationContext);
   const items = [context];
   const layoutEffect = React.useLayoutEffect(() => {
     const rootNavigationRef = context(closure_1_1[4]).getRootNavigationRef();

@@ -1,16 +1,16 @@
-// === Module 10212: VoiceMessageIcon ===
+// === Module 10234: VoiceMessageIcon ===
 
-// Module 10212 (VoiceMessageIcon)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 10234 (VoiceMessageIcon)
+import ThemesDefault from "Themes" /* 709 */;
 import map from "map" /* 4197 */;
 import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4671 */;
-import inlineStyles from "inlineStyles" /* 8241 */;
-import inlineStylesDefault from "inlineStyles" /* 8241 */;
-import CirclePlayIcon from "CirclePlayIcon" /* 10213 */;
-import WaveformIcon from "WaveformIcon" /* 10216 */;
+import inlineStyles from "inlineStyles" /* 8250 */;
+import inlineStylesDefault from "inlineStyles" /* 8250 */;
+import CirclePlayIcon from "CirclePlayIcon" /* 10235 */;
+import WaveformIcon from "WaveformIcon" /* 10238 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -106,7 +106,7 @@ function getBasePreviewableMedia(arg0) {
               obj2[1] = tmp13.AUDIO;
               obj2[2] = tmp6;
               let tmp17 = callback;
-              obj2[3] = callback(tmp8(10213).CirclePlayIcon, { size: "lg", color: "background-brand", secondaryColor: "white" });
+              obj2[3] = callback(tmp8(10235).CirclePlayIcon, { size: "lg", color: "background-brand", secondaryColor: "white" });
               let str5 = null;
               if (isForward) {
                 str5 = "forward";
@@ -122,7 +122,7 @@ function getBasePreviewableMedia(arg0) {
               let obj3 = { size: "lg", color: null };
               let tmp15 = importDefault;
               obj3[1] = ThemesDefault.colors.ICON_SUBTLE;
-              obj2[3] = callback(tmp8(10218).FileIcon, obj3);
+              obj2[3] = callback(tmp8(10240).FileIcon, obj3);
               let str4 = null;
               if (isForward) {
                 str4 = "forward";

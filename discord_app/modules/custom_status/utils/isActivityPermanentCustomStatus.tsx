@@ -1,8 +1,8 @@
-// === Module 15653: isActivityPermanentCustomStatus ===
+// === Module 15884: isActivityPermanentCustomStatus ===
 
-// Module 15653 (isActivityPermanentCustomStatus)
+// Module 15884 (isActivityPermanentCustomStatus)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 
 const ActivityTypes = ME.ActivityTypes;
 const result = set.fileFinishedImporting("modules/custom_status/utils/isActivityPermanentCustomStatus.tsx");

@@ -1,9 +1,9 @@
-// === Module 10399: _openStickersPremiumUpsellAlert ===
+// === Module 10421: _openStickersPremiumUpsellAlert ===
 
-// Module 10399 (_openStickersPremiumUpsellAlert)
+// Module 10421 (_openStickersPremiumUpsellAlert)
 import noopAll from "noop" /* 19 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

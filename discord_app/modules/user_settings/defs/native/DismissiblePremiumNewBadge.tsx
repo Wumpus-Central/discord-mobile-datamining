@@ -1,10 +1,10 @@
-// === Module 14952: DismissiblePremiumNewBadge ===
+// === Module 15181: DismissiblePremiumNewBadge ===
 
-// Module 14952 (DismissiblePremiumNewBadge)
+// Module 15181 (DismissiblePremiumNewBadge)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10418 */;
-import { Gradients } from "items" /* 7177 */;
+import ThemesDefault from "Themes" /* 709 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10639 */;
+import { Gradients } from "items" /* 7186 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

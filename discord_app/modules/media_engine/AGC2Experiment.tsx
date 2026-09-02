@@ -1,8 +1,8 @@
-// === Module 13489: getAGC2ExperimentConfig ===
+// === Module 13712: getAGC2ExperimentConfig ===
 
-// Module 13489 (getAGC2ExperimentConfig)
+// Module 13712 (getAGC2ExperimentConfig)
 import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1468 */;
+import ApexExperiment from "ApexExperiment" /* 1467 */;
 
 let obj = { useAGC2: true, enableAnalog: false, enableDigital: true, headroom_db: 5, max_gain_db: 50, initial_gain_db: 15, max_gain_change_db_per_second: 6, max_output_noise_level_dbfs: -50, fixed_gain_db: 0 };
 obj = { 1: null, 2: { noiseCancellationDuringProcessing: true, noiseCancellationConfig: { useAGC2: false } }, 3: { noiseCancellationDuringProcessing: true, noiseCancellationConfig: obj, vadKrispActivationThreshold: 0.5 }, 4: { noiseCancellationDuringProcessing: true, noiseCancellationConfig: obj, vadKrispActivationThreshold: 0.55 }, 5: { noiseCancellationDuringProcessing: true, noiseCancellationConfig: obj, vadKrispActivationThreshold: 0.6 }, 6: { noiseCancellationDuringProcessing: true, noiseCancellationConfig: obj, vadKrispActivationThreshold: 0.65 } };

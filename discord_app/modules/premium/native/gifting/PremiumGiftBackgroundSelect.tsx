@@ -1,8 +1,8 @@
-// === Module 10601: GiftBackgroundSelect ===
+// === Module 10822: GiftBackgroundSelect ===
 
-// Module 10601 (GiftBackgroundSelect)
-import ThemesDefault from "Themes" /* 712 */;
-import NativeGiftContextProvider from "NativeGiftContextProvider" /* 10477 */;
+// Module 10822 (GiftBackgroundSelect)
+import ThemesDefault from "Themes" /* 709 */;
+import NativeGiftContextProvider from "NativeGiftContextProvider" /* 10698 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;

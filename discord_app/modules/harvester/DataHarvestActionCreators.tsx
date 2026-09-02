@@ -1,11 +1,11 @@
-// === Module 14469: getDataHarvestStatus ===
+// === Module 14692: getDataHarvestStatus ===
 
-// Module 14469 (getDataHarvestStatus)
+// Module 14692 (getDataHarvestStatus)
 import set from "set" /* 2 */;
-import sendRequest from "sendRequest" /* 530 */;
-import ME from "ME" /* 676 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import saveProfileAndAccountRequest from "saveProfileAndAccountRequest" /* 7756 */;
+import sendRequest from "sendRequest" /* 527 */;
+import ME from "ME" /* 673 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import saveProfileAndAccountRequest from "saveProfileAndAccountRequest" /* 7765 */;
 
 const Endpoints = ME.Endpoints;
 const result = set.fileFinishedImporting("modules/harvester/DataHarvestActionCreators.tsx");
@@ -17,11 +17,11 @@ export const getDataHarvestStatus = function getDataHarvestStatus() {
   obj = { url: Endpoints.USER_HARVEST, oldFormErrors: true, rejectWithError: false };
   const value = HTTP.get(obj);
   return value.then((body) => {
-    let obj = callback(709);
+    let obj = callback(706);
     obj = { type: "UPDATE_DATA_HARVEST_TYPE", harvestType: body.body };
     obj.dispatch(obj);
   }).catch((error) => {
-    let obj = callback(709);
+    let obj = callback(706);
     obj = { type: "LOAD_DATA_HARVEST_TYPE_FAILURE", error };
     obj.dispatch(obj);
   });

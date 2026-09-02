@@ -7,7 +7,7 @@ import contextDefault from "context" /* 4358 */;
 import resolveSavedActiveGuildTheme from "resolveSavedActiveGuildTheme" /* 4359 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import { ME } from "ME" /* 676 */;
+import { ME } from "ME" /* 673 */;
 
 require = arg1;
 function getGuildIdFromNavigationState(routes) {

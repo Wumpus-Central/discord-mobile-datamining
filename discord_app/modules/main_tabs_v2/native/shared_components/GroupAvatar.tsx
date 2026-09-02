@@ -1,9 +1,9 @@
-// === Module 12470: AnimatedContainer ===
+// === Module 12694: AnimatedContainer ===
 
-// Module 12470 (AnimatedContainer)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 12694 (AnimatedContainer)
+import ThemesDefault from "Themes" /* 709 */;
 import Text from "Text" /* 4474 */;
-import apexExperiment from "apexExperiment" /* 8004 */;
+import apexExperiment from "apexExperiment" /* 8013 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
@@ -129,7 +129,7 @@ function GroupMemberAvatar(guildId) {
     obj = { style: null, source: null };
     obj[0] = tmp.avatar;
     obj[1] = memo;
-    obj[1] = callback(user(5493), obj);
+    obj[1] = callback(user(5501), obj);
     tmp3 = callback(View, obj);
   }
   return tmp3;

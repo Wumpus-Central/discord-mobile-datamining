@@ -1,9 +1,9 @@
-// === Module 17446: _openSafetyFlow ===
+// === Module 17682: _openSafetyFlow ===
 
-// Module 17446 (_openSafetyFlow)
+// Module 17682 (_openSafetyFlow)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleRequiredAction" /* 1381 */;
-import { UserRequiredActions } from "ME" /* 676 */;
+import closure_4 from "handleRequiredAction" /* 1380 */;
+import { UserRequiredActions } from "ME" /* 673 */;
 
 const require = arg1;
 function _openSafetyFlow() {
@@ -52,7 +52,7 @@ function _openSafetyFlow() {
               closure_2 = undefined;
               c6 = 1;
               c7 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else {
             if (1 === tmp7) {

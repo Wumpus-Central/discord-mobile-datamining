@@ -1,21 +1,21 @@
-// === Module 6073: getPrice ===
+// === Module 6081: getPrice ===
 
-// Module 6073 (getPrice)
+// Module 6081 (getPrice)
 import applyDefault from "apply" /* 12 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1486 */;
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1485 */;
 import _httpGetWithCountryCodeQuery from "_httpGetWithCountryCodeQuery" /* 4755 */;
-import keysSorter from "keysSorter" /* 5398 */;
-import RewardRequirementType from "RewardRequirementType" /* 6077 */;
-import useSKUPrice from "useSKUPrice" /* 6078 */;
+import keysSorter from "keysSorter" /* 5406 */;
+import RewardRequirementType from "RewardRequirementType" /* 6085 */;
+import useSKUPrice from "useSKUPrice" /* 6086 */;
 import closure_3 from "addApplication" /* 4519 */;
-import { WishlistRecommendationReason as closure_4 } from "fromServer" /* 6074 */;
+import { WishlistRecommendationReason as closure_4 } from "fromServer" /* 6082 */;
 import closure_5 from "createExecutable" /* 4504 */;
-import closure_6 from "createGuildRecordFromRust" /* 1909 */;
-import closure_7 from "handleUserSettingsStoreUpdate" /* 6075 */;
-import STOREFRONT_MARKETING_GUILD_ID from "STOREFRONT_MARKETING_GUILD_ID" /* 6076 */;
-import ME from "ME" /* 676 */;
-import { CollectibleShopTab } from "items" /* 678 */;
-import { CurrencyCodes } from "sum" /* 505 */;
+import closure_6 from "createGuildRecordFromRust" /* 1908 */;
+import closure_7 from "handleUserSettingsStoreUpdate" /* 6083 */;
+import STOREFRONT_MARKETING_GUILD_ID from "STOREFRONT_MARKETING_GUILD_ID" /* 6084 */;
+import ME from "ME" /* 673 */;
+import { CollectibleShopTab } from "items" /* 675 */;
+import { CurrencyCodes } from "sum" /* 502 */;
 
 require = arg1;
 function getPrice(price) {
@@ -450,7 +450,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       if (0 !== tenantMetadata.tenantMetadata.socialLayer.carouselItems.length) {
         const first = tenantMetadata.tenantMetadata.socialLayer.carouselItems[0];
         if (null == first.labelIconAssetId) {
-          obj = { primaryIconAsset: "children", primaryIconLabel: "c" };
+          obj = { primaryIconAsset: "disabled", primaryIconLabel: "Date" };
         } else {
           const obj3 = _httpGetWithCountryCodeQuery;
           const toURLSafeResult = isDiscordProxiedAssetUrlDefault.toURLSafe(obj3.getAssetURL(arg1, first.labelIconAssetId, num, "webp"));
@@ -463,7 +463,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       }
     }
   }
-  return { primaryIconAsset: "children", primaryIconLabel: "c" };
+  return { primaryIconAsset: "disabled", primaryIconLabel: "Date" };
 };
 export const getGameItemThumbnailUrl = function getGameItemThumbnailUrl(error) {
   let obj = arg1;
@@ -659,9 +659,9 @@ export const isOnSocialLayerStorefrontSkuPage = function isOnSocialLayerStorefro
 export const useGetSocialLayerStorefrontGuildIdAndApplication = function useGetSocialLayerStorefrontGuildIdAndApplication(applicationId) {
   const _require = applicationId;
   const items = [closure_7];
-  const stateFromStores = _require(589).useStateFromStores(items, () => closure_1_7.getGuildIdFromApplicationId(closure_0));
-  const obj = _require(589);
-  const application = _require(5959).useGetOrFetchApplication(applicationId);
+  const stateFromStores = _require(586).useStateFromStores(items, () => closure_1_7.getGuildIdFromApplicationId(closure_0));
+  const obj = _require(586);
+  const application = _require(5967).useGetOrFetchApplication(applicationId);
   let guildId = stateFromStores;
   if (stateFromStores == null) {
     guildId = undefined;
@@ -693,11 +693,11 @@ export const getSocialLayerStorefrontApplicationId = function getSocialLayerStor
 export const useGetSocialLayerStorefrontApplicationId = function useGetSocialLayerStorefrontApplicationId(arg0) {
   const _require = arg0;
   const items = [closure_7];
-  let stateFromStores = _require(589).useStateFromStores(items, () => closure_1_7.getApplicationIdFromGuildId(closure_0));
-  const obj = _require(589);
+  let stateFromStores = _require(586).useStateFromStores(items, () => closure_1_7.getApplicationIdFromGuildId(closure_0));
+  const obj = _require(586);
   const items1 = [closure_6];
   const items2 = [arg0];
-  const stateFromStores1 = _require(589).useStateFromStores(items1, () => closure_1_6.getGuild(closure_0), items2);
+  const stateFromStores1 = _require(586).useStateFromStores(items1, () => closure_1_6.getGuild(closure_0), items2);
   if (stateFromStores == null) {
     let length;
     if (stateFromStores1 != null) {

@@ -1,9 +1,9 @@
-// === Module 16201: setOrientationLockState ===
+// === Module 16433: setOrientationLockState ===
 
-// Module 16201 (setOrientationLockState)
+// Module 16433 (setOrientationLockState)
 import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getIsTabletActivitySurface from "getIsTabletActivitySurface" /* 9603 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import getIsTabletActivitySurface from "getIsTabletActivitySurface" /* 9616 */;
 
 const result = set.fileFinishedImporting("modules/frames/native/getDefaultOrientationLockState.tsx");
 

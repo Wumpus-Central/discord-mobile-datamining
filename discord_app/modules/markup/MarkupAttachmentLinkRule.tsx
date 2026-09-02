@@ -6,7 +6,7 @@ import tDefault from "t" /* 4192 */;
 import set2 from "set" /* 4963 */;
 
 const mapped = Array.from(set2.ATTACHMENT_PATH_PREFIXES).map((str) => str.replaceAll("/", ""));
-const regExp = new RegExp("^https://(?:(?:media|images)\\.discordapp\\.net|(?:cdn\\.discordapp\\.com))/(?:" + mapped.join("|") + ")/\\d+/\\d+/([A-Za-z0-9._-]*[A-Za-z0-9_-])(?:[?][a-zA-Z0-9?&=_-]*)?");
+const regExp = new RegExp("^https://(?:[A-Za-z0-9-]+\\.)*(?:(?:media|images)" + "(?:-[A-Za-z0-9]+)?" + "\\.discordapp\\.net|(?:cdn" + "(?:-[A-Za-z0-9]+)?" + "\\.discordapp\\.com))/(?:" + mapped.join("|") + ")/\\d+/\\d+/([A-Za-z0-9._-]*[A-Za-z0-9_-])(?:[?][a-zA-Z0-9?&=_-]*)?");
 let obj = { attachmentLink: null };
 obj = {
   order: tDefault.defaultRules.url.order - 0.5,

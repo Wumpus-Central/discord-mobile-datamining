@@ -1,10 +1,10 @@
-// === Module 11072: ? ===
+// === Module 11292: ? ===
 
-// Module 11072
+// Module 11292
 import _modDef4491 from "module_4491" /* 4491 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "ensureGuildLoaded" /* 1387 */;
-import ME from "ME" /* 676 */;
+import closure_4 from "ensureGuildLoaded" /* 1386 */;
+import ME from "ME" /* 673 */;
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4471 */;
 
 const require = arg1;
@@ -134,11 +134,11 @@ export default {
       if (null != closure_1_4) {
         obj1.message_id = closure_1_4;
       }
-      const HTTP = closure_1_0(530).HTTP;
+      const HTTP = closure_1_0(527).HTTP;
       const obj2 = { url: null, retries: 3, query: null, rejectWithError: null };
       obj2[0] = closure_1_5.USER_ACTIVITY_JOIN(closure_1_0, c1, dependencyMap);
       obj2[2] = obj1;
-      const obj4 = closure_1_0(530);
+      const obj4 = closure_1_0(527);
       obj2[3] = obj4.rejectWithMigratedError();
       closure_0 = yield HTTP.get(obj2);
       const obj = { secret: null, joinUrl: null };

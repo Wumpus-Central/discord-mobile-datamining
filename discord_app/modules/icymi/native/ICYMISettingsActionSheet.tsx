@@ -1,14 +1,14 @@
-// === Module 16042: ICYMISettingsActionSheet ===
+// === Module 16273: ICYMISettingsActionSheet ===
 
-// Module 16042 (ICYMISettingsActionSheet)
+// Module 16273 (ICYMISettingsActionSheet)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "generateOldThreadCutoff" /* 4493 */;
-import closure_6 from "initialize" /* 8618 */;
-import closure_7 from "filterStaffGuild" /* 8606 */;
-import ME from "ME" /* 676 */;
+import closure_6 from "initialize" /* 8633 */;
+import closure_7 from "filterStaffGuild" /* 8621 */;
+import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -23,18 +23,18 @@ let closure_13 = createCacheKey.createStyles(createCacheKey);
 const result = require("set").fileFinishedImporting("modules/icymi/native/ICYMISettingsActionSheet.tsx");
 
 export default function ICYMISettingsActionSheet() {
-  let obj = stateFromStoresObject(589);
+  let obj = stateFromStoresObject(586);
   const items = [closure_6];
   stateFromStoresObject = obj.useStateFromStoresObject(items, () => state.getState());
-  const ICYMIStaffDebuggingUtilityExperiment = stateFromStoresObject(8623).ICYMIStaffDebuggingUtilityExperiment;
+  const ICYMIStaffDebuggingUtilityExperiment = stateFromStoresObject(8638).ICYMIStaffDebuggingUtilityExperiment;
   obj = { title: null, hasIcons: false, children: null };
-  const intl = stateFromStoresObject(1236).intl;
-  obj[0] = intl.string(stateFromStoresObject(1236).t["7Si8Ul"]);
+  const intl = stateFromStoresObject(1233).intl;
+  obj[0] = intl.string(stateFromStoresObject(1233).t["7Si8Ul"]);
   let tmp5Result = null;
   if (ICYMIStaffDebuggingUtilityExperiment.useConfig({ location: "settings action sheet" }).enabled) {
     obj = { label: null, value: null, onValueChange: null };
-    const intl2 = tmp(1236).intl;
-    obj[0] = intl2.string(tmp(1236).t["3wDyfQ"]);
+    const intl2 = tmp(1233).intl;
+    obj[0] = intl2.string(tmp(1233).t["3wDyfQ"]);
     let flag = stateFromStoresObject.filterStaffContent;
     if (flag == null) {
       flag = false;
@@ -49,7 +49,7 @@ export default function ICYMISettingsActionSheet() {
       obj.setFilters(obj);
       const dehydrated = closure_1_1(closure_1_2[16]).fetchDehydrated();
     };
-    const items1 = [callback2(tmp(5993).TableSwitchRow, obj), , ];
+    const items1 = [callback2(tmp(6001).TableSwitchRow, obj), , ];
     let obj2 = { label: "Clear read states", onPress: null };
     obj2[1] = function onPress() {
       dehydratedItems = dehydratedItems.getDehydratedItems();
@@ -76,7 +76,7 @@ export default function ICYMISettingsActionSheet() {
       let obj = callback(paths[16]);
       callback(paths[22]).hideActionSheet();
     };
-    items1[1] = callback2(tmp(5599).TableRow, obj2);
+    items1[1] = callback2(tmp(5607).TableRow, obj2);
     let obj3 = { label: "Regenerate feed and clear read states", onPress: null };
     obj3[1] = callback(function*() {
       if (dependencyMap === 2) {
@@ -106,7 +106,7 @@ export default function ICYMISettingsActionSheet() {
               return obj;
             } else {
               closure_0 = tmp4;
-              let obj2 = closure_1_0(8621);
+              let obj2 = closure_1_0(8636);
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
@@ -133,7 +133,7 @@ export default function ICYMISettingsActionSheet() {
         }
       }
     });
-    items1[2] = callback2(tmp(5599).TableRow, obj3);
+    items1[2] = callback2(tmp(5607).TableRow, obj3);
     obj1[0] = items1;
     tmp5Result = tmp5(closure_11, obj1);
     const tmp7 = closure_11;
@@ -141,8 +141,8 @@ export default function ICYMISettingsActionSheet() {
   let obj4 = { showGradient: true, startExpanded: true, children: null };
   const items2 = [tmp5Result, ];
   const obj5 = { label: null, onPress: null };
-  const intl3 = tmp(1236).intl;
-  obj5[0] = intl3.string(stateFromStoresObject(1236).t.Eorjmy);
+  const intl3 = tmp(1233).intl;
+  obj5[0] = intl3.string(stateFromStoresObject(1233).t.Eorjmy);
   obj5[1] = function onPress() {
     callback(paths[16]).itemInteracted("icymi_settings_action_sheet", "icymi_settings_action_sheet", "custom_scoring_button");
     const obj = callback(paths[16]);
@@ -153,11 +153,11 @@ export default function ICYMISettingsActionSheet() {
     const tmp3 = stateFromStoresObject(paths[26])(paths[25], paths.paths);
     callback(paths[22]).hideActionSheet();
   };
-  items2[1] = callback2(stateFromStoresObject(5599).TableRow, obj5);
+  items2[1] = callback2(stateFromStoresObject(5607).TableRow, obj5);
   obj[2] = items2;
-  const items3 = [closure_12(stateFromStoresObject(5992).TableRowGroup, obj), ];
+  const items3 = [closure_12(stateFromStoresObject(6000).TableRowGroup, obj), ];
   const tmp4 = callback3();
   items3[1] = callback2(View, { style: callback3().padding });
   obj4[2] = items3;
-  return closure_12(stateFromStoresObject(5989).ActionSheet, obj4);
+  return closure_12(stateFromStoresObject(5997).ActionSheet, obj4);
 };

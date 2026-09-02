@@ -1,13 +1,13 @@
-// === Module 13061: navigateToSocialLayerStorefrontWithGuildPreview ===
+// === Module 13283: navigateToSocialLayerStorefrontWithGuildPreview ===
 
-// Module 13061 (navigateToSocialLayerStorefrontWithGuildPreview)
-import transitionTo from "transitionTo" /* 1222 */;
-import getPrice from "getPrice" /* 6073 */;
-import _fetchSocialLayerStorefront from "_fetchSocialLayerStorefront" /* 8495 */;
+// Module 13283 (navigateToSocialLayerStorefrontWithGuildPreview)
+import transitionTo from "transitionTo" /* 1219 */;
+import getPrice from "getPrice" /* 6081 */;
+import _fetchSocialLayerStorefront from "_fetchSocialLayerStorefront" /* 8508 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createGuildRecordFromRust" /* 1909 */;
-import closure_5 from "handleUserSettingsStoreUpdate" /* 6075 */;
-import ME from "ME" /* 676 */;
+import closure_4 from "createGuildRecordFromRust" /* 1908 */;
+import closure_5 from "handleUserSettingsStoreUpdate" /* 6083 */;
+import ME from "ME" /* 673 */;
 
 require = arg1;
 function navigateToSocialLayerStorefrontWithGuildPreview(arg0) {
@@ -27,87 +27,134 @@ function _navigateToSocialLayerStorefrontWithGuildPreview() {
     c3 = 0;
     c4 = 0;
     const iter = (function*(arg0) {
-      const lib = tmp2;
-      ({ guildId: id, invite: c1, pageIndex: c2, skuId: c3, slug: c4 } = id);
-      yield "PX_16";
-      if (1 === tmp5) {
+      if (guild === 2) {
+        guild = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
         if (arg0 === 1) {
-          let guild = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          guild = 3;
-          obj1 = { value: null, done: true };
-          obj1[0] = arg1;
-          return obj1;
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
         } else {
-          let set = null;
-          if (null != lib) {
-            guild = lib.guild;
-            id = undefined;
-            if (guild != null) {
-              id = guild.id;
-            }
-            const guild2 = lib.guild;
-            let features;
-            if (guild2 != null) {
-              features = guild2.features;
-            }
-            set = new Set(features);
-          }
-          if (null != id) {
-            const guild3 = guild.getGuild(id);
-            let joinedAt;
-            if (guild3 != null) {
-              joinedAt = guild3.joinedAt;
-            }
-            if (null == joinedAt) {
-              if (null != set) {
-                if (!set.has(guild3.PREVIEW_ENABLED)) {
-                  if (null != lib) {
-                    let obj4 = lib(8649);
-                    let obj2 = { inviteKey: null, context: null, skipOnboarding: true };
-                    obj2[0] = lib.code;
-                    obj2[1] = { location: "game_shop" };
-                    c3 = 3;
-                    guild = 1;
-                    const obj3 = { value: null, done: false };
-                    obj3[0] = obj4.acceptInvite(obj2);
-                    return obj3;
-                  }
-                }
-              }
-              c3 = 2;
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          guild = 2;
+          if (0 === c3) {
+            if (arg0 === 1) {
+              guild = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              guild = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              dependencyMap = tmp5;
+              let lib = tmp2;
+              id = undefined;
+              lib = undefined;
+              dependencyMap = undefined;
+              c3 = undefined;
+              guild = undefined;
+              ({ guildId: id, invite: c1, pageIndex: c2, skuId: c3, slug: c4 } = id);
+              let set;
+              let guild3;
+              c3 = 1;
               guild = 1;
-              obj4 = { value: null, done: false };
-              obj4[0] = id(6185).startLurking(id, {}, { shouldNavigate: false });
-              return obj4;
+              return { value: "PX_16", done: true };
             }
           } else {
+            if (1 === tmp5) {
+              if (arg0 === 1) {
+                guild = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                guild = 3;
+                obj1 = { value: null, done: true };
+                obj1[0] = arg1;
+                return obj1;
+              } else {
+                set = null;
+                if (null != lib) {
+                  guild = lib.guild;
+                  id = undefined;
+                  if (guild != null) {
+                    id = guild.id;
+                  }
+                  const guild2 = lib.guild;
+                  let features;
+                  if (guild2 != null) {
+                    features = guild2.features;
+                  }
+                  set = new Set(features);
+                }
+                if (null != id) {
+                  guild3 = guild.getGuild(id);
+                  let joinedAt;
+                  if (guild3 != null) {
+                    joinedAt = guild3.joinedAt;
+                  }
+                  if (null == joinedAt) {
+                    if (null != set) {
+                      if (!set.has(guild3.PREVIEW_ENABLED)) {
+                        if (null != lib) {
+                          let obj4 = lib(8664);
+                          let obj2 = { inviteKey: null, context: null, skipOnboarding: true };
+                          obj2[0] = lib.code;
+                          obj2[1] = { location: "game_shop" };
+                          c3 = 3;
+                          guild = 1;
+                          const obj3 = { value: null, done: false };
+                          obj3[0] = obj4.acceptInvite(obj2);
+                          return obj3;
+                        }
+                      }
+                    }
+                    c3 = 2;
+                    guild = 1;
+                    obj4 = { value: null, done: false };
+                    obj4[0] = id(6194).startLurking(id, {}, { shouldNavigate: false });
+                    return obj4;
+                  }
+                } else {
+                  guild = 3;
+                  return { value: "HermesInternal", done: null };
+                }
+              }
+            } else if (2 === tmp5) {
+              if (arg0 === 1) {
+                guild = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                guild = 3;
+                const obj5 = { value: null, done: true };
+                obj5[0] = arg1;
+                return obj5;
+              }
+            } else if (arg0 === 1) {
+              guild = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              guild = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            }
+            obj2 = id(1219);
             guild = 3;
-            return { value: "HermesInternal", done: null };
+            const obj6 = { value: null, done: true };
+            obj6[0] = obj2.transitionTo(closure_7.CHANNELS_GAME_SHOP(id, dependencyMap, c3, guild));
+            return obj6;
           }
+        } catch (tmp50) {
+          guild = tmp;
+          throw tmp50;
         }
-      } else if (2 === tmp5) {
-        if (arg0 === 1) {
-          guild = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          guild = 3;
-          const obj5 = { value: null, done: true };
-          obj5[0] = arg1;
-          return obj5;
-        }
-      } else if (arg0 === 1) {
-        guild = 3;
-        throw arg1;
-      } else if (arg0 === 2) {
-        guild = 3;
-        const obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
       }
-      obj2 = id(1222);
-      return obj2.transitionTo(closure_7.CHANNELS_GAME_SHOP(id, dependencyMap, c3, guild));
     })();
     iter.next();
     return iter;

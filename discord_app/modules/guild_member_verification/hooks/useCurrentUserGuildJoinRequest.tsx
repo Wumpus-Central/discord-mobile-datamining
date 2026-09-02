@@ -1,6 +1,6 @@
-// === Module 7664: useCurrentUserGuildJoinRequest ===
+// === Module 7673: useCurrentUserGuildJoinRequest ===
 
-// Module 7664 (useCurrentUserGuildJoinRequest)
+// Module 7673 (useCurrentUserGuildJoinRequest)
 import closure_2 from "handleGatewayJoinRequestUpdate" /* 4300 */;
 
 const require = arg1;
@@ -10,7 +10,7 @@ export const useCurrentUserGuildJoinRequest = function useCurrentUserGuildJoinRe
   const _require = guildId;
   const items = [closure_2];
   const items1 = [guildId];
-  return _require(589).useStateFromStores(items, () => {
+  return _require(586).useStateFromStores(items, () => {
     let request = null;
     if (null != closure_0) {
       request = closure_1_2.getRequest(tmp);

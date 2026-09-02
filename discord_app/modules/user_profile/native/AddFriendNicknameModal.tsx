@@ -1,17 +1,17 @@
-// === Module 12603: AddFriendNicknameModal ===
+// === Module 12827: AddFriendNicknameModal ===
 
-// Module 12603 (AddFriendNicknameModal)
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 12827 (AddFriendNicknameModal)
+import initialize from "initialize" /* 586 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Text from "Text" /* 4474 */;
-import TextField from "TextField" /* 6222 */;
+import TextField from "TextField" /* 6231 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_7 from "markAllUserIdListsStale" /* 4130 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import closure_8 from "mergeGuildAvatar" /* 1921 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -149,7 +149,7 @@ export default function AddFriendNicknameModal(arg0) {
   let tmp = callback4();
   let obj = React;
   [c2, c3] = callback(React.useState(false), 2);
-  callback = showUserProfile(10664)();
+  callback = showUserProfile(10885)();
   obj1 = initialize;
   const items = [_handleSubmit];
   const stateFromStores = obj1.useStateFromStores(items, () => _handleSubmit.getNickname(closure_0));
@@ -165,11 +165,11 @@ export default function AddFriendNicknameModal(arg0) {
   const items1 = [closure_8];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => closure_1_8.getUser(closure_0));
   if (null == stateFromStores) {
-    let intl2 = tmp5(1236).intl;
-    let stringResult = intl2.string(tmp5(1236).t.BGYkaH);
+    let intl2 = tmp5(1233).intl;
+    let stringResult = intl2.string(tmp5(1233).t.BGYkaH);
   } else {
-    let intl = tmp5(1236).intl;
-    stringResult = intl.string(tmp5(1236).t["8pOYUE"]);
+    let intl = tmp5(1233).intl;
+    stringResult = intl.string(tmp5(1233).t["8pOYUE"]);
   }
   const items2 = [showUserProfile];
   callback1 = obj.useCallback(() => {
@@ -181,10 +181,10 @@ export default function AddFriendNicknameModal(arg0) {
   }, items2);
   obj = { style: tmp.container, children: null };
   obj = { children: null };
-  let tmp3Result = tmp3(6049);
+  let tmp3Result = tmp3(6057);
   obj1 = { confirmText: null, onConfirm: null, cancelText: null, onCancel: null, children: null };
   tmp3Result = tmp3(4947);
-  const intl3 = tmp5(1236).intl;
+  const intl3 = tmp5(1233).intl;
   obj1[0] = intl3.string(getSystemLocale.t["R3BPH+"]);
   obj1[1] = function handleSubmit() {
     const self = this;
@@ -196,16 +196,16 @@ export default function AddFriendNicknameModal(arg0) {
     }
     return applyArgumentsResult;
   };
-  const intl4 = tmp5(1236).intl;
+  const intl4 = tmp5(1233).intl;
   obj1[2] = intl4.string(getSystemLocale.t["ETE/oC"]);
   obj1[3] = callback1;
   const items3 = [callback2(Text.Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: stringResult }), , ];
   let obj3 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl5 = tmp5(1236).intl;
+  const intl5 = tmp5(1233).intl;
   obj3[3] = intl5.string(getSystemLocale.t["NdQ+lP"]);
   items3[1] = callback2(Text.Text, obj3);
   const obj4 = { onChange: callback, autoFocus: true, accessibilityLabel: null, placeholder: null, defaultValue: null, maxLength: 32, isClearable: true };
-  const intl6 = tmp5(1236).intl;
+  const intl6 = tmp5(1233).intl;
   obj4[2] = intl6.string(getSystemLocale.t.pqG6GS);
   let obj2 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: stringResult };
   const tmp5Result = initialize;

@@ -1,24 +1,24 @@
-// === Module 15603: getGuildsComponent ===
+// === Module 15834: getGuildsComponent ===
 
-// Module 15603 (getGuildsComponent)
-import goBack from "goBack" /* 15989 */;
+// Module 15834 (getGuildsComponent)
+import goBack from "goBack" /* 16220 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleConnectionOpen" /* 1981 */;
+import closure_6 from "handleConnectionOpen" /* 1980 */;
 import closure_7 from "handleConnectionOpen" /* 4299 */;
-import { YouBarNavigatorScreens } from "MODE_CHANGE_PHYSICS" /* 10831 */;
+import { YouBarNavigatorScreens } from "MODE_CHANGE_PHYSICS" /* 11051 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 7822 */;
+import createNativeStackNavigator from "createNativeStackNavigator" /* 7831 */;
 
 require = arg1;
 function getGuildsComponent() {
-  return require(15604).default;
+  return require(15835).default;
 }
 function getNotificationsComponent() {
   return goBack.ThemedNotifications;
 }
 function getICYMIComponent() {
-  return require(16037) /* ICYMINavigator */.default;
+  return require(16268) /* ICYMINavigator */.default;
 }
 let c3 = importAllResult;
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);

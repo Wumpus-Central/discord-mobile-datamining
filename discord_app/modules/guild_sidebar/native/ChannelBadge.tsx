@@ -1,12 +1,12 @@
-// === Module 15817: ChannelBadge ===
+// === Module 16049: ChannelBadge ===
 
-// Module 15817 (ChannelBadge)
+// Module 16049 (ChannelBadge)
 import noopAll from "noop" /* 19 */;
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import NewBadgeDefault from "NewBadge" /* 11863 */;
-import MentionsBadgeDefault from "MentionsBadge" /* 15818 */;
+import defaultAreStatesEqual from "defaultAreStatesEqual" /* 644 */;
+import NewBadgeDefault from "NewBadge" /* 12086 */;
+import MentionsBadgeDefault from "MentionsBadge" /* 16050 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "_getSystemLocale" /* 1996 */;
+import closure_4 from "_getSystemLocale" /* 1995 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -51,10 +51,10 @@ export default function ChannelBadge(arg0) {
             const obj2 = { style: null, children: null };
             obj2[0] = tmp.channelInfoContainer;
             const obj3 = { variant: "text-xs/semibold", color: "text-muted", children: null };
-            obj3[2] = tmp2(1897).humanizeValue(postsWithUnreadsCount, stateFromStores);
+            obj3[2] = tmp2(1896).humanizeValue(postsWithUnreadsCount, stateFromStores);
             obj2[1] = jsx(tmp2(4474).Text, { variant: "text-xs/semibold", color: "text-muted", children: null });
             tmp5 = <View style={null}>{null}</View>;
-            const tmp2Result = tmp2(1897);
+            const tmp2Result = tmp2(1896);
           }
         }
       }

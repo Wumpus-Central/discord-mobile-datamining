@@ -1,10 +1,10 @@
-// === Module 9891: XboxInstallAlert ===
+// === Module 9913: XboxInstallAlert ===
 
-// Module 9891 (XboxInstallAlert)
+// Module 9913 (XboxInstallAlert)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import componentDidMountDefault from "componentDidMount" /* 4947 */;
-import XBOX_URL_BASE from "XBOX_URL_BASE" /* 9313 */;
+import XBOX_URL_BASE from "XBOX_URL_BASE" /* 9326 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -21,21 +21,21 @@ export default function XboxInstallAlert(arg0) {
   const _require = callback();
   let obj = {};
   const merged = Object.assign(arg0);
-  const intl = _require(1236).intl;
-  obj.title = intl.string(_require(1236).t["12Kx2v"]);
-  const intl2 = _require(1236).intl;
-  obj.body = intl2.string(_require(1236).t.msZW3j);
-  const intl3 = _require(1236).intl;
-  obj.confirmText = intl3.string(_require(1236).t["n+VrqG"]);
-  const intl4 = _require(1236).intl;
-  obj.cancelText = intl4.string(_require(1236).t.kYaBOg);
+  const intl = _require(1233).intl;
+  obj.title = intl.string(_require(1233).t["12Kx2v"]);
+  const intl2 = _require(1233).intl;
+  obj.body = intl2.string(_require(1233).t.msZW3j);
+  const intl3 = _require(1233).intl;
+  obj.confirmText = intl3.string(_require(1233).t["n+VrqG"]);
+  const intl4 = _require(1233).intl;
+  obj.cancelText = intl4.string(_require(1233).t.kYaBOg);
   obj.fillCancelText = true;
   obj.renderConfirmRightIcon = function renderConfirmRightIcon() {
     return closure_1_5(lib(closure_1_2[7]).Icon, { source: closure_1_1(closure_1_2[8]), style: lib.externalLinkIcon });
   };
   obj.onConfirm = function onConfirm() {
-    const obj = lib(500);
-    const isAndroidResult = lib(500).isAndroid();
+    const obj = lib(1234);
+    const isAndroidResult = lib(1234).isAndroid();
     const openURL = callback(4190).openURL;
     if (isAndroidResult) {
       openURL(closure_3);

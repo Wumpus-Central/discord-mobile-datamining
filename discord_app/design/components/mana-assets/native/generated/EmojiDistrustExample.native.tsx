@@ -1,10 +1,10 @@
-// === Module 6501: EmojiDistrustExample ===
+// === Module 6510: EmojiDistrustExample ===
 
-// Module 6501 (EmojiDistrustExample)
+// Module 6510 (EmojiDistrustExample)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5493 */;
-import metadataDefault from "metadata" /* 6502 */;
+import preloadDefault from "preload" /* 5501 */;
+import metadataDefault from "metadata" /* 6511 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/EmojiDistrustExample.native.tsx");

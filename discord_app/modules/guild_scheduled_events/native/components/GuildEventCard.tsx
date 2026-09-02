@@ -1,13 +1,13 @@
-// === Module 9897: GuildEventCardControls ===
+// === Module 9919: GuildEventCardControls ===
 
-// Module 9897 (GuildEventCardControls)
-import ThemesDefault from "Themes" /* 712 */;
-import ButtonGroup from "ButtonGroup" /* 5376 */;
-import usePrimaryActionButtonType from "usePrimaryActionButtonType" /* 9741 */;
+// Module 9919 (GuildEventCardControls)
+import ThemesDefault from "Themes" /* 709 */;
+import ButtonGroup from "ButtonGroup" /* 5384 */;
+import usePrimaryActionButtonType from "usePrimaryActionButtonType" /* 9763 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "createRTCConnection" /* 4554 */;
-import { isGuildScheduledEventActive as closure_5 } from "scheduledEventSort" /* 7271 */;
-import { AGE_VERIFICATION_STAGE_CHANNEL_TYPES as closure_6 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1393 */;
+import { isGuildScheduledEventActive as closure_5 } from "scheduledEventSort" /* 7280 */;
+import { AGE_VERIFICATION_STAGE_CHANNEL_TYPES as closure_6 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1392 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 import importAllResult from "noop" /* 19 */;
@@ -23,7 +23,7 @@ function GuildEventCardControls(onCloseAction) {
   if (tmp6Result) {
     obj = { event: null };
     obj[0] = event;
-    tmp6Result = tmp6(tmp2(9741).GuildEventCardRSVPAction, obj);
+    tmp6Result = tmp6(tmp2(9763).GuildEventCardRSVPAction, obj);
   }
   items[1] = tmp6Result;
   items[2] = callback2(usePrimaryActionButtonType.GuildEventShareAction, { event });

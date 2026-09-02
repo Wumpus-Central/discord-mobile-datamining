@@ -1,14 +1,14 @@
-// === Module 17222: IdentityApplicationRow ===
+// === Module 17458: IdentityApplicationRow ===
 
-// Module 17222 (IdentityApplicationRow)
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 17458 (IdentityApplicationRow)
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import useThemeDefault from "useTheme" /* 4413 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5553 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5621 */;
-import BottomSheetModal from "BottomSheetModal" /* 5624 */;
-import ActionSheet from "ActionSheet" /* 5989 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5992 */;
-import request from "request" /* 11162 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5561 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5629 */;
+import BottomSheetModal from "BottomSheetModal" /* 5632 */;
+import ActionSheet from "ActionSheet" /* 5997 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 6000 */;
+import request from "request" /* 11383 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -27,8 +27,8 @@ function IdentityApplicationRow(arg0) {
     if (null != bot) {
       obj = { user: null, size: null, guildId: "r" };
       obj[0] = bot;
-      obj[1] = tmp(1297).AvatarSizes.XSMALL;
-      tmp6Result = tmp6(tmp(1297).Avatar, obj);
+      obj[1] = tmp(1296).AvatarSizes.XSMALL;
+      tmp6Result = tmp6(tmp(1296).Avatar, obj);
     }
     obj = { icon: null, label: null, subLabel: null, onPress: null };
     obj[0] = tmp6Result;
@@ -39,7 +39,7 @@ function IdentityApplicationRow(arg0) {
     }
     obj[2] = description;
     obj[3] = onPress;
-    return closure_6(tmp(5599).TableRow, obj);
+    return closure_6(tmp(5607).TableRow, obj);
   }
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
@@ -74,7 +74,7 @@ export default function SelectConnectionActionSheet(arg0) {
       return tmp2;
     });
   }
-  let tmp3Result = tmp3(7248);
+  let tmp3Result = tmp3(7257);
   const platforms = tmp3Result.usePlatforms();
   const found1 = platforms.filter((type) => !set.has(type.type));
   let mapped1;
@@ -145,17 +145,17 @@ export default function SelectConnectionActionSheet(arg0) {
   if (num == null) {
     num = 0;
   }
-  const intl2 = tmp3(1236).intl;
+  const intl2 = tmp3(1233).intl;
   const items = [intl2.string(getSystemLocale.t["3fe7U5"])];
   if (num > 0) {
-    const intl3 = tmp3(1236).intl;
-    items.push(intl3.string(tmp3(1236).t.PHjkRE));
+    const intl3 = tmp3(1233).intl;
+    items.push(intl3.string(tmp3(1233).t.PHjkRE));
   }
   if (mapped2.length > 0) {
-    const intl4 = tmp3(1236).intl;
-    items.push(intl4.string(tmp3(1236).t.y3ZnnU));
+    const intl4 = tmp3(1233).intl;
+    items.push(intl4.string(tmp3(1233).t.y3ZnnU));
   }
-  tmp3Result = tmp3(9260);
+  tmp3Result = tmp3(9273);
   obj = { pageWidth: 0, defaultIndex: first, onSetActiveIndex: tmp5[1], items: items.map((id) => ({ id, label: id, page: null })) };
   const segmentedControlState = tmp3Result.useSegmentedControlState(obj);
   if (1 === first) {
@@ -174,7 +174,7 @@ export default function SelectConnectionActionSheet(arg0) {
     obj1 = { children: null };
     const obj2 = { state: null };
     obj2[0] = segmentedControlState;
-    obj1[0] = tmp2(tmp3(9762).SegmentedControl, obj2);
+    obj1[0] = tmp2(tmp3(9784).SegmentedControl, obj2);
     let tmp2Result = tmp2(closure_5, obj1);
   } else {
     tmp2Result = null;

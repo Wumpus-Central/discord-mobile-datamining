@@ -1,6 +1,6 @@
-// === Module 16860: getTimeZone ===
+// === Module 17096: getTimeZone ===
 
-// Module 16860 (getTimeZone)
+// Module 17096 (getTimeZone)
 import set from "set" /* 2 */;
 import DCDDeviceManager from "DCDDeviceManager" /* 4457 */;
 

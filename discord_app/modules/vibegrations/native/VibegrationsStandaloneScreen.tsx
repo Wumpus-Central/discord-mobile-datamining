@@ -1,21 +1,21 @@
-// === Module 16173: ProjectList ===
+// === Module 16404: ProjectList ===
 
-// Module 16173 (ProjectList)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 16404 (ProjectList)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "trackCommunicationDisabled" /* 1992 */;
-import closure_10 from "createGuildRecordFromRust" /* 1909 */;
-import closure_11 from "getUncachedChannelPermissions" /* 4121 */;
-import closure_12 from "newMessage" /* 16174 */;
-import rejectPendingPublish from "rejectPendingPublish" /* 16177 */;
-import closure_16 from "rejectPendingPublish" /* 16177 */;
-import closure_17 from "isProjectOwner" /* 16175 */;
-import { isProjectOwner } from "isProjectOwner" /* 16175 */;
-import { Permissions } from "ME" /* 676 */;
-import { MAIN_SURFACE } from "FrameLayoutModes" /* 9465 */;
+import closure_9 from "trackCommunicationDisabled" /* 1991 */;
+import closure_10 from "createGuildRecordFromRust" /* 1908 */;
+import closure_11 from "getUncachedChannelPermissions" /* 4120 */;
+import closure_12 from "newMessage" /* 16405 */;
+import rejectPendingPublish from "rejectPendingPublish" /* 16408 */;
+import closure_16 from "rejectPendingPublish" /* 16408 */;
+import isProjectOwner from "isProjectOwner" /* 16406 */;
+import closure_19 from "isProjectOwner" /* 16406 */;
+import { Permissions } from "ME" /* 673 */;
+import { MAIN_SURFACE } from "FrameLayoutModes" /* 9478 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -34,14 +34,14 @@ function ProjectList(guildId) {
   let obj = guildId(stateFromStoresArray[16]);
   navigation = obj.useNavigation();
   obj1 = guildId(stateFromStoresArray[17]);
-  const items = [closure_17];
+  const items = [closure_19];
   stateFromStoresArray = obj1.useStateFromStoresArray(items, () => store.getOwnedProjects(), []);
   let obj2 = guildId(stateFromStoresArray[17]);
-  const items1 = [closure_17];
+  const items1 = [closure_19];
   const items2 = [guildId];
-  stateFromStoresArray1 = obj2.useStateFromStoresArray(items1, () => closure_1_17.getSharedProjects(guildId), items2);
+  stateFromStoresArray1 = obj2.useStateFromStoresArray(items1, () => closure_1_19.getSharedProjects(guildId), items2);
   let obj3 = guildId(stateFromStoresArray[17]);
-  const items3 = [closure_17];
+  const items3 = [closure_19];
   const stateFromStores = obj3.useStateFromStores(items3, () => store.getProjectsFetchState(), []);
   const items4 = [stateFromStoresArray, guildId];
   const memo = React.useMemo(() => {
@@ -162,7 +162,7 @@ function ProjectList(guildId) {
             v0("");
             obj = { projectId: null };
             obj[0] = arr;
-            arr = arr.push(closure_1_24.CHAT, obj);
+            arr = arr.push(closure_1_25.CHAT, obj);
             c3 = 1;
             c3 = 0;
             closure_1_7(false);
@@ -220,7 +220,7 @@ function ProjectList(guildId) {
     obj5[4] = callback;
     items7[3] = callback2(tmp4(tmp2[24]).Button, obj5);
     obj1[1] = items7;
-    const items8 = [closure_22(c8, obj1), , , ];
+    const items8 = [closure_23(c8, obj1), , , ];
     tmp23Result = null;
     if (memo.length > 0) {
       const obj6 = { hasIcons: false, children: null };
@@ -236,9 +236,9 @@ function ProjectList(guildId) {
         }
         obj[1] = relativeTimestamp;
         obj[3] = function onPress() {
-          return closure_1_1.push(closure_2_24.CHAT, { projectId: label.id });
+          return closure_1_1.push(closure_2_25.CHAT, { projectId: label.id });
         };
-        return closure_1_21(guildId(stateFromStoresArray[26]).TableRow, obj, label.id);
+        return closure_1_22(guildId(stateFromStoresArray[26]).TableRow, obj, label.id);
       });
       tmp23Result = tmp23(tmp4(tmp2[25]).TableRowGroup, obj6);
     }
@@ -272,9 +272,9 @@ function ProjectList(guildId) {
         }
         obj[1] = relativeTimestamp;
         obj[3] = function onPress() {
-          return closure_1_1.push(closure_2_24.CHAT, { projectId: label.id });
+          return closure_1_1.push(closure_2_25.CHAT, { projectId: label.id });
         };
-        return closure_1_21(guildId(stateFromStoresArray[26]).TableRow, obj, label.id);
+        return closure_1_22(guildId(stateFromStoresArray[26]).TableRow, obj, label.id);
       });
       items10[1] = tmp23(tmp4(tmp2[25]).TableRowGroup, obj11);
       obj7[1] = items10;
@@ -283,7 +283,7 @@ function ProjectList(guildId) {
     items8[2] = tmp25Result;
     items8[3] = null;
     obj[1] = items8;
-    obj[1] = closure_22(closure_7, obj);
+    obj[1] = closure_23(closure_7, obj);
     return callback2(c8, obj);
   } else {
     const obj12 = { style: null, children: null };
@@ -314,26 +314,27 @@ function ChatScene(guildId) {
   let projectName;
   previewAppId = undefined;
   let isOwner;
+  let canPublish;
   let stateFromStores2;
   callback = undefined;
-  closure_10 = undefined;
+  closure_11 = undefined;
   let callback1;
-  closure_12 = undefined;
+  closure_13 = undefined;
   let callback2;
   let callback3;
   projectGuildId = undefined;
   let callback4;
   let memo;
-  c18 = undefined;
+  c19 = undefined;
   let obj = guildId(navigation[16]);
   navigation = obj.useNavigation();
   let tmp5 = callback3(projectId(navigation[28])({ includeKeyboardHeight: true }).insets.bottom);
   callback = tmp5;
-  let items = [memo];
+  let items = [c19];
   const items1 = [projectId];
   const stateFromStoresObject = guildId(navigation[17]).useStateFromStoresObject(items, () => {
-    const project = memo.getProject(projectId);
-    const obj = { projectExists: null != project, projectName: null, projectGuildId: null, previewAppId: null, isOwner: null };
+    const project = _undefined.getProject(projectId);
+    const obj = { projectExists: null != project, projectName: null, projectGuildId: null, previewAppId: null, isOwner: null, canPublish: null };
     let name;
     if (project != null) {
       name = project.name;
@@ -360,15 +361,21 @@ function ChatScene(guildId) {
     obj[3] = prop;
     let tmp5 = null != project;
     if (tmp5) {
-      tmp5 = _undefined(project);
+      tmp5 = memo(project);
     }
     obj[4] = tmp5;
+    let tmp7 = null != project;
+    if (tmp7) {
+      tmp7 = callback4(project);
+    }
+    obj[5] = tmp7;
     return obj;
   }, items1);
   projectExists = stateFromStoresObject.projectExists;
   projectName = stateFromStoresObject.projectName;
   ({ projectGuildId, previewAppId } = stateFromStoresObject);
   isOwner = stateFromStoresObject.isOwner;
+  canPublish = stateFromStoresObject.canPublish;
   const items2 = [navigation, projectExists];
   const effect = projectName.useEffect(() => {
     if (!projectExists) {
@@ -376,10 +383,10 @@ function ChatScene(guildId) {
     }
   }, items2);
   let obj2 = guildId(navigation[17]);
-  const items3 = [memo];
+  const items3 = [c19];
   const items4 = [projectId];
   const stateFromStores = guildId(navigation[17]).useStateFromStores(items3, () => {
-    const integrationStatus = memo.getIntegrationStatus(projectId);
+    const integrationStatus = _undefined.getIntegrationStatus(projectId);
     let preview_ready;
     if (integrationStatus != null) {
       preview_ready = integrationStatus.preview_ready;
@@ -387,13 +394,13 @@ function ChatScene(guildId) {
     return true === preview_ready;
   }, items4);
   let obj4 = guildId(navigation[17]);
-  const items5 = [closure_12];
+  const items5 = [callback1];
   const items6 = [projectId];
-  const stateFromStores1 = guildId(navigation[17]).useStateFromStores(items5, () => projectUsage.getProjectUsage(projectId), items6);
+  const stateFromStores1 = guildId(navigation[17]).useStateFromStores(items5, () => callback1.getProjectUsage(projectId), items6);
   let obj5 = guildId(navigation[17]);
-  const items7 = [callback4];
+  const items7 = [projectGuildId];
   const items8 = [projectId];
-  stateFromStores2 = guildId(navigation[17]).useStateFromStores(items7, () => null != callback4.getModelSettings(projectId), items8);
+  stateFromStores2 = guildId(navigation[17]).useStateFromStores(items7, () => null != projectGuildId.getModelSettings(projectId), items8);
   const items9 = [projectId];
   const effect1 = projectName.useEffect(() => {
     const project = guildId(navigation[19]).getProject(projectId);
@@ -407,19 +414,19 @@ function ChatScene(guildId) {
       let obj = projectId(navigation[29]);
       obj = { applicationId: null, surface: null };
       obj[0] = tmp;
-      obj[1] = closure_1_20;
+      obj[1] = closure_1_21;
       obj.launchFrame(obj).catch(() => {
 
       });
       const launchFrameResult = obj.launchFrame(obj);
     }
   }, items10);
-  closure_10 = tmp13;
+  closure_11 = tmp13;
   const items11 = [previewAppId];
   callback1 = obj3.useCallback(() => {
     projectId(navigation[30])(previewAppId);
   }, items11);
-  closure_12 = obj3.useRef(false);
+  closure_13 = obj3.useRef(false);
   const items12 = [projectId];
   callback2 = obj3.useCallback(callback(function*() {
     if (c5 === 2) {
@@ -451,9 +458,9 @@ function ChatScene(guildId) {
             let lib = tmp4;
             let project = tmp6;
             project = undefined;
-            if (!closure_1_12.current) {
-              let obj3 = closure_1_17;
-              project = closure_1_17.getProject(lib);
+            if (!closure_1_13.current) {
+              let obj3 = closure_1_19;
+              project = closure_1_19.getProject(lib);
               if (null != project) {
                 const integrationStatus = obj3.getIntegrationStatus(lib);
                 let preview_ready;
@@ -463,7 +470,7 @@ function ChatScene(guildId) {
                 if (true === preview_ready) {
                   if (integrationStatus.integration_installed) {
                     if (!integrationStatus.bot_permissions_changed) {
-                      closure_1_12.current = true;
+                      closure_1_13.current = true;
                       c3 = 2;
                       showResult1 = 3;
                       c5 = 1;
@@ -517,7 +524,7 @@ function ChatScene(guildId) {
             throw arg1;
           } else if (arg0 === 2) {
             c3 = 0;
-            closure_1_12.current = false;
+            closure_1_13.current = false;
             c5 = 3;
             obj = { value: null, done: true };
             obj[0] = arg1;
@@ -543,12 +550,12 @@ function ChatScene(guildId) {
             lib(closure_1_2[31]).show(obj5);
             c3 = 1;
             c3 = 0;
-            closure_1_12.current = false;
+            closure_1_13.current = false;
             const obj11 = lib(closure_1_2[31]);
           }
         }
         c3 = 0;
-        closure_12.current = false;
+        closure_13.current = false;
         throw closure_2;
       } catch (tmp62) {
         closure_2 = tmp62;
@@ -564,7 +571,7 @@ function ChatScene(guildId) {
   const items13 = [projectId];
   callback3 = obj3.useCallback(() => {
     let obj = guildId(navigation[32]);
-    obj = { content: closure_1_21(projectId(navigation[33]), obj), key: guildId(navigation[33]).VIBEGRATIONS_MODEL_SETTINGS_SHEET_KEY };
+    obj = { content: closure_1_22(projectId(navigation[33]), obj), key: guildId(navigation[33]).VIBEGRATIONS_MODEL_SETTINGS_SHEET_KEY };
     obj = { projectId };
     obj.showActionSheet(obj);
   }, items13);
@@ -574,20 +581,22 @@ function ChatScene(guildId) {
   const items14 = [projectId, projectGuildId];
   callback4 = obj3.useCallback(() => {
     let obj = guildId(navigation[32]);
-    obj = { content: closure_1_21(projectId(navigation[34]), obj), key: guildId(navigation[34]).VIBEGRATIONS_PROJECT_SETTINGS_SHEET_KEY };
+    obj = { content: closure_1_22(projectId(navigation[34]), obj), key: guildId(navigation[34]).VIBEGRATIONS_PROJECT_SETTINGS_SHEET_KEY };
     obj = { projectId, guildId: projectGuildId };
     obj.showActionSheet(obj);
   }, items14);
-  const items15 = [callback3, callback4, callback2, callback1, stateFromStores2, isOwner];
+  const items15 = [canPublish, callback3, callback4, callback2, callback1, stateFromStores2, isOwner];
   memo = obj3.useMemo(() => {
     const items = [];
-    if (isOwner) {
+    if (canPublish) {
       let obj = { label: null, IconComponent: null, action: null };
       const intl = guildId(navigation[20]).intl;
       obj[0] = intl.string(projectId(navigation[21])["5gU57O"]);
       obj[1] = guildId(navigation[35]).UploadIcon;
       obj[2] = callback2;
       items.push(obj);
+    }
+    if (isOwner) {
       obj = { label: null, IconComponent: null, action: null };
       const intl2 = guildId(navigation[20]).intl;
       obj[0] = intl2.string(projectId(navigation[21])["xhcY+n"]);
@@ -620,7 +629,7 @@ function ChatScene(guildId) {
     formatToPlainStringResult = intl.formatToPlainString(tmp4(tmp2[21])["4PFO2p"], obj);
     const runesFromUsdResult = tmp(tmp2[39]).runesFromUsd(stateFromStores1.cost_usd);
   }
-  c18 = formatToPlainStringResult;
+  c19 = formatToPlainStringResult;
   const items16 = [callback, navigation, memo, projectName, formatToPlainStringResult, null != previewAppId && stateFromStores, tmp5];
   const effect2 = obj3.useEffect(() => {
     let stringResult = projectName;
@@ -631,36 +640,36 @@ function ChatScene(guildId) {
     guildId = stringResult;
     navigation.setOptions({
       headerTitle() {
-        return closure_2_21(guildId(navigation[40]).NavigatorHeader, { title: closure_0, subtitle: closure_1_18 });
+        return closure_2_22(guildId(navigation[40]).NavigatorHeader, { title: closure_0, subtitle: closure_1_19 });
       },
       headerRight() {
         let obj = { style: headerActions.headerActions, children: null };
         let tmp3 = null;
-        if (closure_10) {
+        if (closure_11) {
           obj = { IconComponent: null, onPress: null, accessibilityLabel: null };
           obj[0] = stringResult(closure_1_2[42]).PlayIcon;
-          obj[1] = closure_9;
+          obj[1] = closure_10;
           let intl = stringResult(closure_1_2[20]).intl;
           obj[2] = intl.string(closure_1_1(closure_1_2[21]).ecod4C);
-          tmp3 = closure_1_21(stringResult(closure_1_2[41]).HeaderActionButton, obj);
+          tmp3 = closure_1_22(stringResult(closure_1_2[41]).HeaderActionButton, obj);
         }
         const items = [tmp3, ];
         obj = {
-          items: closure_17,
+          items: closure_18,
           align: "below",
           children(arg0) {
             ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
-            const obj = { ref, IconComponent: callback(8798).MoreHorizontalIcon, onPress, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null };
-            const intl = callback(1236).intl;
-            obj[3] = intl.string(callback(1236).t["UKOtz+"]);
+            const obj = { ref, IconComponent: callback(8813).MoreHorizontalIcon, onPress, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null };
+            const intl = callback(1233).intl;
+            obj[3] = intl.string(callback(1233).t["UKOtz+"]);
             obj[4] = accessibilityActions;
             obj[5] = onAccessibilityAction;
-            return callback2(callback(6237).HeaderActionButton, obj);
+            return callback2(callback(6246).HeaderActionButton, obj);
           }
         };
-        items[1] = closure_1_21(stringResult(closure_1_2[43]).ContextMenu, obj);
+        items[1] = closure_1_22(stringResult(closure_1_2[43]).ContextMenu, obj);
         obj[1] = items;
-        return closure_1_22(closure_1_8, obj);
+        return closure_1_23(closure_1_8, obj);
       }
     });
   }, items16);
@@ -670,12 +679,13 @@ function ChatScene(guildId) {
     return () => closure_1_0(closure_1_2[19]).setSelectedProjectForGuild(closure_0, null);
   }, items17);
   obj = { style: tmp5.content, children: callback2(tmp4(tmp2[45]), { projectId }) };
-  return callback2(stateFromStores2, obj);
+  return callback2(canPublish, obj);
 }
 ({ ActivityIndicator: closure_6, ScrollView: error, View: closure_8 } = get_ActivityIndicator);
 ({ ensureConnection: map1, publishProject: closure_14, sendUserMessage: closure_15 } = rejectPendingPublish);
-({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
-let closure_23 = createCacheKey.createStyles((paddingBottom) => {
+({ canPublishProject: closure_17, isProjectOwner: closure_18 } = isProjectOwner);
+({ jsx: closure_22, jsxs: closure_23 } = jsxProd);
+let closure_24 = createCacheKey.createStyles((paddingBottom) => {
   let obj = { content: null, centered: null, listContent: null, createSection: null, sharedSection: null, sharedHeading: null, headerActions: null };
   obj = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingBottom };
   obj[0] = obj;
@@ -692,7 +702,7 @@ let closure_23 = createCacheKey.createStyles((paddingBottom) => {
   obj[6] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_16 };
   return obj;
 });
-let closure_24 = { PROJECTS: "PROJECTS", CHAT: "CHAT" };
+let closure_25 = { PROJECTS: "PROJECTS", CHAT: "CHAT" };
 let result = require("set").fileFinishedImporting("modules/vibegrations/native/VibegrationsStandaloneScreen.tsx");
 
 export default function VibegrationsStandaloneScreen(guildId) {
@@ -732,7 +742,7 @@ export default function VibegrationsStandaloneScreen(guildId) {
       const guild = closure_1_10.getGuild(guildId);
       let canResult = null != guild;
       if (canResult) {
-        canResult = closure_1_11.can(closure_1_19.MANAGE_GUILD, guild);
+        canResult = closure_1_11.can(closure_1_20.MANAGE_GUILD, guild);
       }
       return canResult;
     }, items5)
@@ -760,13 +770,13 @@ export default function VibegrationsStandaloneScreen(guildId) {
     return callback(guildId(stateFromStores[40]).NavigatorHeader, obj);
   };
   obj[2] = function render() {
-    return closure_1_21(closure_1_25, { guildId });
+    return closure_1_22(closure_1_26, { guildId });
   };
   obj[constants.PROJECTS] = obj;
   obj[constants.CHAT] = {
     ignoreKeyboard: true,
     render(projectId) {
-      return closure_1_21(closure_1_26, { guildId, projectId: projectId.projectId });
+      return closure_1_22(closure_1_27, { guildId, projectId: projectId.projectId });
     }
   };
   obj1 = { screens: obj, initialRouteName: constants.PROJECTS, headerBackTitle: null };

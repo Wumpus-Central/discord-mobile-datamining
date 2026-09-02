@@ -1,7 +1,7 @@
-// === Module 8840: GameProfileHeader ===
+// === Module 8855: GameProfileHeader ===
 
-// Module 8840 (GameProfileHeader)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 8855 (GameProfileHeader)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

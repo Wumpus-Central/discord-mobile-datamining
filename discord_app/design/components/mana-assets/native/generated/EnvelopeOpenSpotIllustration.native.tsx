@@ -1,10 +1,10 @@
-// === Module 6523: EnvelopeOpenSpotIllustration ===
+// === Module 6532: EnvelopeOpenSpotIllustration ===
 
-// Module 6523 (EnvelopeOpenSpotIllustration)
+// Module 6532 (EnvelopeOpenSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5493 */;
-import metadataDefault from "metadata" /* 6524 */;
+import preloadDefault from "preload" /* 5501 */;
+import metadataDefault from "metadata" /* 6533 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/EnvelopeOpenSpotIllustration.native.tsx");

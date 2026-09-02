@@ -1,14 +1,14 @@
-// === Module 16319: trackFavoritesGuildViewed ===
+// === Module 16551: trackFavoritesGuildViewed ===
 
-// Module 16319 (trackFavoritesGuildViewed)
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import isPremiumAtLeastDefault from "isPremiumAtLeast" /* 1946 */;
-import useFavoritesAccess from "useFavoritesAccess" /* 10307 */;
-import setNextFavoritesGuildViewSource from "setNextFavoritesGuildViewSource" /* 10314 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import closure_4 from "initializeFromUserSettings" /* 1390 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
+// Module 16551 (trackFavoritesGuildViewed)
+import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
+import isPremiumAtLeastDefault from "isPremiumAtLeast" /* 1945 */;
+import useFavoritesAccess from "useFavoritesAccess" /* 10329 */;
+import setNextFavoritesGuildViewSource from "setNextFavoritesGuildViewSource" /* 10336 */;
+import closure_3 from "mergeGuildAvatar" /* 1921 */;
+import closure_4 from "initializeFromUserSettings" /* 1389 */;
+import { AnalyticEvents } from "ME" /* 673 */;
+import { PremiumTypes } from "GuildFeatures" /* 1923 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/favorites/analytics/trackFavoritesGuildViewed.tsx");

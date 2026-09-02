@@ -1,10 +1,10 @@
-// === Module 11714: useIsPrimaryEntryPointDisabled ===
+// === Module 11937: useIsPrimaryEntryPointDisabled ===
 
-// Module 11714 (useIsPrimaryEntryPointDisabled)
-import getPlatformDefault from "getPlatform" /* 8437 */;
+// Module 11937 (useIsPrimaryEntryPointDisabled)
+import getPlatformDefault from "getPlatform" /* 8446 */;
 import closure_3 from "createExecutable" /* 4504 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4121 */;
-import { Permissions } from "sum" /* 505 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4120 */;
+import { Permissions } from "sum" /* 502 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/app_launcher/hooks/useIsPrimaryEntryPointDisabled.tsx");
@@ -17,16 +17,16 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
     channel = context.channel;
   }
   const items = [closure_4];
-  const stateFromStores = channel(589).useStateFromStores(items, () => closure_1_4.can(closure_1_5.USE_EMBEDDED_ACTIVITIES, channel));
-  const obj = channel(589);
+  const stateFromStores = channel(586).useStateFromStores(items, () => closure_1_4.can(closure_1_5.USE_EMBEDDED_ACTIVITIES, channel));
+  const obj = channel(586);
   let id;
   if (channel != null) {
     id = channel.id;
   }
-  const embeddedActivityLaunchability = channel(9486).useEmbeddedActivityLaunchability(id);
+  const embeddedActivityLaunchability = channel(9499).useEmbeddedActivityLaunchability(id);
   let flag = false;
-  if (channel(11629).ActivityAction.LEAVE !== activityAction) {
-    if (tmp2(11629).ActivityAction.START === activityAction) {
+  if (channel(11852).ActivityAction.LEAVE !== activityAction) {
+    if (tmp2(11852).ActivityAction.START === activityAction) {
       flag = false;
       if (null != channel) {
         let isGuildVoiceResult;
@@ -35,11 +35,11 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
         }
         if (isGuildVoiceResult) {
           flag = false;
-          if (embeddedActivityLaunchability !== tmp2(9486).EmbeddedActivityLaunchability.CAN_LAUNCH) {
+          if (embeddedActivityLaunchability !== tmp2(9499).EmbeddedActivityLaunchability.CAN_LAUNCH) {
             flag = true;
           }
         } else {
-          let tmp2Result = tmp2(8144);
+          let tmp2Result = tmp2(8152);
           flag = false;
           if (!tmp2Result.isActivitiesInTextEnabled(channel)) {
             flag = true;
@@ -48,7 +48,7 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
       }
     } else {
       flag = false;
-      if (tmp2(11629).ActivityAction.JOIN === activityAction) {
+      if (tmp2(11852).ActivityAction.JOIN === activityAction) {
         let isGuildVoiceResult1;
         if (channel != null) {
           isGuildVoiceResult1 = channel.isGuildVoice();
@@ -56,7 +56,7 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
         if (isGuildVoiceResult1) {
           flag = !stateFromStores;
         } else {
-          tmp2Result = tmp2(8144);
+          tmp2Result = tmp2(8152);
           flag = false;
           if (!tmp2Result.isActivitiesInTextEnabled(channel)) {
             flag = true;
@@ -67,15 +67,15 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
   }
   let disabled = flag;
   let reason;
-  if (activityAction !== channel(11629).ActivityAction.LEAVE) {
+  if (activityAction !== channel(11852).ActivityAction.LEAVE) {
     const tmp10 = application instanceof closure_3 ? application.embeddedActivityConfig : application.embedded_activity_config;
     getPlatformDefault;
-    tmp2(500);
+    tmp2(1234);
     if (null != tmp10) {
       const supported_platforms = tmp10.supported_platforms;
       if (!supported_platforms.includes(tmp14)) {
-        const intl = tmp2(1236).intl;
-        reason = intl.string(tmp2(1236).t.z2YTgJ);
+        const intl = tmp2(1233).intl;
+        reason = intl.string(tmp2(1233).t.z2YTgJ);
         disabled = false;
       }
     }
@@ -85,8 +85,8 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
     }
     disabled = flag;
     if (isThreadResult) {
-      const intl2 = tmp2(1236).intl;
-      reason = intl2.string(tmp2(1236).t.ddSR3v);
+      const intl2 = tmp2(1233).intl;
+      reason = intl2.string(tmp2(1233).t.ddSR3v);
       disabled = true;
     }
   }
@@ -95,8 +95,8 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
     tmp16 = null == reason;
   }
   if (tmp16) {
-    const intl3 = tmp2(1236).intl;
-    reason = intl3.string(tmp2(1236).t.f41E1g);
+    const intl3 = tmp2(1233).intl;
+    reason = intl3.string(tmp2(1233).t.f41E1g);
   }
   return { disabled, reason };
 };

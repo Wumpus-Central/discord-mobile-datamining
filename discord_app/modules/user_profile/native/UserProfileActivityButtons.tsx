@@ -1,29 +1,29 @@
-// === Module 9432: JoinActivityButton ===
+// === Module 9445: JoinActivityButton ===
 
-// Module 9432 (JoinActivityButton)
+// Module 9445 (JoinActivityButton)
 import noopAll from "noop" /* 19 */;
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
+import defaultAreStatesEqual from "defaultAreStatesEqual" /* 644 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import Button from "Button" /* 1296 */;
 import Button2 from "Button" /* 4928 */;
-import contextDefault from "context" /* 5953 */;
-import _isStreamingDefault from "_isStreaming" /* 8108 */;
-import getStreamURLDefault from "getStreamURL" /* 12467 */;
+import contextDefault from "context" /* 5961 */;
+import _isStreamingDefault from "_isStreaming" /* 8116 */;
+import getStreamURLDefault from "getStreamURL" /* 12691 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "participantFromServer" /* 1386 */;
-import closure_5 from "ensureGuildLoaded" /* 1387 */;
-import closure_6 from "set" /* 5225 */;
+import closure_4 from "participantFromServer" /* 1385 */;
+import closure_5 from "ensureGuildLoaded" /* 1386 */;
+import closure_6 from "set" /* 5233 */;
 import closure_7 from "handleInviteData" /* 4398 */;
-import closure_8 from "createGuildRecordFromRust" /* 1909 */;
-import closure_9 from "updateActivities" /* 9433 */;
-import closure_10 from "getUncachedChannelPermissions" /* 4121 */;
+import closure_8 from "createGuildRecordFromRust" /* 1908 */;
+import closure_9 from "updateActivities" /* 9446 */;
+import closure_10 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_11 from "markAllUserIdListsStale" /* 4130 */;
-import closure_12 from "handleConnectionOpen" /* 1981 */;
-import closure_13 from "filterPlayingActivities" /* 5223 */;
+import closure_12 from "handleConnectionOpen" /* 1980 */;
+import closure_13 from "filterPlayingActivities" /* 5231 */;
 import closure_14 from "updateVoiceState" /* 4497 */;
-import ME from "ME" /* 676 */;
-import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 8611 */;
+import ME from "ME" /* 673 */;
+import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 8626 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -106,17 +106,17 @@ export const JoinGameActivityButton = function JoinGameActivityButton(onAction) 
   let tmp3 = null;
   if (null != application) {
     tmp3 = null;
-    if (stateFromStores !== tmp(9440).ActivityJoinability.CANNOT_JOIN) {
-      if (stateFromStores === tmp(9440).ActivityJoinability.JOINED) {
-        const intl2 = tmp(1236).intl;
-        let stringResult = intl2.string(tmp(1236).t.DPfdsq);
+    if (stateFromStores !== tmp(9453).ActivityJoinability.CANNOT_JOIN) {
+      if (stateFromStores === tmp(9453).ActivityJoinability.JOINED) {
+        const intl2 = tmp(1233).intl;
+        let stringResult = intl2.string(tmp(1233).t.DPfdsq);
       } else {
-        const intl = tmp(1236).intl;
-        stringResult = intl.string(tmp(1236).t.VJlc0S);
+        const intl = tmp(1233).intl;
+        stringResult = intl.string(tmp(1233).t.VJlc0S);
       }
       obj = { text: null, variant: "active", disabled: null, onPress: null };
       obj[0] = stringResult;
-      JOINED = tmp(9440).ActivityJoinability.JOINED;
+      JOINED = tmp(9453).ActivityJoinability.JOINED;
       obj[2] = stateFromStores === JOINED;
       obj[3] = function onPress() {
         onAction({ action: "PRESS_JOIN_BUTTON" });
@@ -136,7 +136,7 @@ export const PlayOnSpotifyButton = function PlayOnSpotifyButton(arg0) {
   let sync_id;
   sync_id = activity.sync_id;
   let tmp4 = null;
-  if (sync_id(9256)(activity)) {
+  if (sync_id(9269)(activity)) {
     tmp4 = null;
     if (null != sync_id) {
       let obj = { text: null, icon: null, variant: "secondary", onPress: null };
@@ -146,7 +146,7 @@ export const PlayOnSpotifyButton = function PlayOnSpotifyButton(arg0) {
       obj[0] = intl.formatToPlainString(getSystemLocale.t.LEgD7t, obj);
       obj = { size: null, source: null, disableColor: true, style: null };
       obj[0] = Button.Icon.Sizes.SMALL;
-      obj[1] = sync_id(8052);
+      obj[1] = sync_id(8060);
       obj[3] = tmp.icon;
       obj[1] = jsx(Button.Icon, { size: null, source: null, disableColor: true, style: null });
       obj[3] = callback(function*() {

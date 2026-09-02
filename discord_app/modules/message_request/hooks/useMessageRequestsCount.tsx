@@ -1,8 +1,8 @@
-// === Module 16464: useMessageRequestsCount ===
+// === Module 16699: useMessageRequestsCount ===
 
-// Module 16464 (useMessageRequestsCount)
-import initialize from "initialize" /* 589 */;
-import closure_2 from "processChannel" /* 6066 */;
+// Module 16699 (useMessageRequestsCount)
+import initialize from "initialize" /* 586 */;
+import closure_2 from "processChannel" /* 6074 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/message_request/hooks/useMessageRequestsCount.tsx");

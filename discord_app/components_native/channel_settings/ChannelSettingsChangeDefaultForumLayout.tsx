@@ -1,12 +1,12 @@
-// === Module 16436: ChannelSettingsChangeDefaultForumLayout ===
+// === Module 16671: ChannelSettingsChangeDefaultForumLayout ===
 
-// Module 16436 (ChannelSettingsChangeDefaultForumLayout)
-import ThemesDefault from "Themes" /* 712 */;
-import preloadDefault from "preload" /* 5493 */;
+// Module 16671 (ChannelSettingsChangeDefaultForumLayout)
+import ThemesDefault from "Themes" /* 709 */;
+import preloadDefault from "preload" /* 5501 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "ensureGuildLoaded" /* 1387 */;
+import closure_6 from "ensureGuildLoaded" /* 1386 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -91,7 +91,7 @@ const result = require("set").fileFinishedImporting("components_native/channel_s
 
 export default function ConnectedChannelSettingsChangeDefaultForumLayout(channelId) {
   channelId = channelId.channelId;
-  let obj = channelId(589);
+  let obj = channelId(586);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getChannel(channelId));
   let tmp2 = null;

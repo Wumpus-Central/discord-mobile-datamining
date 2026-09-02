@@ -1,15 +1,15 @@
-// === Module 11371: renderIcon ===
+// === Module 11594: renderIcon ===
 
-// Module 11371 (renderIcon)
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
+// Module 11594 (renderIcon)
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1362 */;
 import Text from "Text" /* 4474 */;
-import PressableBase from "PressableBase" /* 5068 */;
-import registerAssetDefault from "registerAsset" /* 11374 */;
-import registerAssetDefault2 from "registerAsset" /* 11375 */;
+import PressableBase from "PressableBase" /* 5076 */;
+import registerAssetDefault from "registerAsset" /* 11597 */;
+import registerAssetDefault2 from "registerAsset" /* 11598 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "handleThemeChange" /* 1302 */;
+import closure_5 from "handleThemeChange" /* 1301 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 import importAllResult from "noop" /* 19 */;
@@ -52,16 +52,16 @@ prototype["renderIcon"] = function renderIcon() {
     ({ guildIcon: arr3[0], emptyGuildIcon: arr3[1] } = tmp);
     obj1[0] = items1;
     if (obj6.isThemeDark(theme.theme)) {
-      let tmp13Result = tmp13(11372);
+      let tmp13Result = tmp13(11595);
     } else {
-      tmp13Result = tmp13(11373);
+      tmp13Result = tmp13(11596);
     }
     obj = { source: null };
     obj[0] = tmp13Result;
     const items2 = [callback(closure_4, obj), ];
     const obj2 = { style: null, variant: "text-xs/bold", color: "text-default", children: null };
     obj2[0] = tmp.emptyGuildIconText;
-    const intl = tmp10(1236).intl;
+    const intl = tmp10(1233).intl;
     obj6 = AccessibilityAnnouncer;
     const tmp6 = closure_7;
     const tmp7 = closure_3;
@@ -110,11 +110,11 @@ prototype["render"] = function render() {
   const tmp = callback3(this.context);
   ({ style, onPress, icon } = this.props);
   if (null != icon) {
-    const intl2 = tmp3(1236).intl;
-    let stringResult = intl2.string(tmp3(1236).t.VATxfe);
+    const intl2 = tmp3(1233).intl;
+    let stringResult = intl2.string(tmp3(1233).t.VATxfe);
   } else {
-    const intl = tmp3(1236).intl;
-    stringResult = intl.string(tmp3(1236).t["MsUY/S"]);
+    const intl = tmp3(1233).intl;
+    stringResult = intl.string(tmp3(1233).t["MsUY/S"]);
   }
   let obj = { accessibilityRole: "button", accessibilityLabel: stringResult, onPress, children: null };
   obj = { style: items, children: null };

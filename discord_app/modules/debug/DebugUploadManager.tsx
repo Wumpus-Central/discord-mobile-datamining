@@ -1,10 +1,10 @@
-// === Module 10271: _uploadDebugLogFiles ===
+// === Module 10293: _uploadDebugLogFiles ===
 
-// Module 10271 (_uploadDebugLogFiles)
+// Module 10293 (_uploadDebugLogFiles)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "ensureGuildLoaded" /* 1387 */;
-import { Endpoints } from "ME" /* 676 */;
+import closure_5 from "ensureGuildLoaded" /* 1386 */;
+import { Endpoints } from "ME" /* 673 */;
 
 const require = arg1;
 function _uploadDebugLogFiles() {
@@ -74,10 +74,10 @@ function _uploadDebugLogFiles() {
               })(dependencyMap);
             }
             let obj2 = { type: null, underlyingError: null, errorMessage: null };
-            obj2[0] = callback(9565).AVError.DEBUG_LOG_UPLOAD_FAILED;
+            obj2[0] = callback(9578).AVError.DEBUG_LOG_UPLOAD_FAILED;
             obj2[1] = closure_1_2;
             obj2[2] = closure_1_3.message;
-            callback(9565).reportAVError(obj2);
+            callback(9578).reportAVError(obj2);
             throw closure_1_3;
           } else if (2 === tmp7) {
             if (arg0 === 1) {
@@ -90,9 +90,9 @@ function _uploadDebugLogFiles() {
               obj3[0] = arg1;
               return obj3;
             } else {
-              obj1 = enabled(10272);
+              obj1 = enabled(10294);
               enabled = obj1.getConfig({ location: "uploadDebugLogFiles" }).enabled;
-              obj2 = callback(10273);
+              obj2 = callback(10295);
               c6 = 3;
               c7 = 1;
               const obj4 = { value: null, done: false };

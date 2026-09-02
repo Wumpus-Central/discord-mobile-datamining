@@ -1,17 +1,17 @@
-// === Module 10678: InstantInviteDetails ===
+// === Module 10899: InstantInviteDetails ===
 
-// Module 10678 (InstantInviteDetails)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 10899 (InstantInviteDetails)
+import ThemesDefault from "Themes" /* 709 */;
 import Text from "Text" /* 4474 */;
 import computeChannelName from "computeChannelName" /* 4674 */;
 import Stack from "Stack" /* 4926 */;
 import getChannelIcon from "getChannelIcon" /* 4981 */;
-import componentDidMountDefault from "componentDidMount" /* 10667 */;
+import componentDidMountDefault from "componentDidMount" /* 10888 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { createChannelRecordFromInvite as closure_5 } from "createChannelRecord" /* 1391 */;
+import { createChannelRecordFromInvite as closure_5 } from "createChannelRecord" /* 1390 */;
 import closure_6 from "markAllUserIdListsStale" /* 4130 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import closure_7 from "mergeGuildAvatar" /* 1921 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

@@ -1,14 +1,14 @@
-// === Module 10517: fetchAndReconcileGiftIntentDismissals ===
+// === Module 10738: fetchAndReconcileGiftIntentDismissals ===
 
-// Module 10517 (fetchAndReconcileGiftIntentDismissals)
-import sendRequest from "sendRequest" /* 530 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "recomputeAffinities" /* 7404 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
+// Module 10738 (fetchAndReconcileGiftIntentDismissals)
+import sendRequest from "sendRequest" /* 527 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import closure_3 from "recomputeAffinities" /* 7413 */;
+import closure_4 from "fetchFingerprint" /* 1215 */;
 import closure_5 from "reinjectEphemerals" /* 4735 */;
-import { GiftIntentType } from "GuildFeatures" /* 1924 */;
-import ME from "ME" /* 676 */;
+import { GiftIntentType } from "GuildFeatures" /* 1923 */;
+import ME from "ME" /* 673 */;
 
 require = arg1;
 ({ AnalyticEvents: error, Endpoints: closure_8 } = ME);
@@ -17,7 +17,7 @@ const result = require("set").fileFinishedImporting("modules/premium/gifting/Pre
 export const fetchAndReconcileGiftIntentDismissals = function fetchAndReconcileGiftIntentDismissals(serverDismissalTimestampMs) {
   const _require = serverDismissalTimestampMs;
   const id2 = id.getId();
-  const HTTP = _require(530).HTTP;
+  const HTTP = _require(527).HTTP;
   const value = HTTP.get({ url: constants2.GIFT_INTENT_DISMISSALS, oldFormErrors: true, rejectWithError: true });
   return value.then((body) => {
     if (closure_1_4.getId() === callback) {
@@ -35,9 +35,9 @@ export const fetchAndReconcileGiftIntentDismissals = function fetchAndReconcileG
       obj.dispatch({ type: "GIFT_INTENT_DISMISSALS_FETCH_FAILURE" });
     }
   }, (arg0) => {
-    callback(1208).captureException(arg0, { tags: { feature: "gift_intent" } });
-    const obj = callback(1208);
-    callback(709).dispatch({ type: "GIFT_INTENT_DISMISSALS_FETCH_FAILURE" });
+    callback(1205).captureException(arg0, { tags: { feature: "gift_intent" } });
+    const obj = callback(1205);
+    callback(706).dispatch({ type: "GIFT_INTENT_DISMISSALS_FETCH_FAILURE" });
   });
 };
 export const logFriendsListGiftIntentsShown = function logFriendsListGiftIntentsShown() {

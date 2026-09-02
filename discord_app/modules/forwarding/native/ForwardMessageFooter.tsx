@@ -1,6 +1,6 @@
-// === Module 11274: ForwardMessageFooter ===
+// === Module 11497: ForwardMessageFooter ===
 
-// Module 11274 (ForwardMessageFooter)
+// Module 11497 (ForwardMessageFooter)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "handleChanged" /* 4854 */;

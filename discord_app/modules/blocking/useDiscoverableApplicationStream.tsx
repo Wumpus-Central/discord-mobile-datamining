@@ -1,9 +1,9 @@
-// === Module 9241: getDiscoverableApplicationStream ===
+// === Module 9255: getDiscoverableApplicationStream ===
 
-// Module 9241 (getDiscoverableApplicationStream)
+// Module 9255 (getDiscoverableApplicationStream)
 import closure_2 from "reset" /* 4500 */;
 import closure_3 from "markAllUserIdListsStale" /* 4130 */;
-import { RelationshipTypes } from "ME" /* 676 */;
+import { RelationshipTypes } from "ME" /* 673 */;
 
 const require = arg1;
 function getDiscoverableApplicationStream(id, items) {
@@ -37,7 +37,7 @@ export default function useDiscoverableApplicationStream(arg0) {
   const _require = arg0;
   let items = [closure_2, closure_3];
   const items1 = [arg0];
-  return _require(589).useStateFromStores(items, () => {
+  return _require(586).useStateFromStores(items, () => {
     const items = [closure_1_2, closure_1_3];
     return closure_1_5(closure_0, items);
   }, items1);

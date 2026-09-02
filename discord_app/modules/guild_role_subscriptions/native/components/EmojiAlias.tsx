@@ -1,6 +1,6 @@
-// === Module 17330: EmojiAlias ===
+// === Module 17566: EmojiAlias ===
 
-// Module 17330 (EmojiAlias)
+// Module 17566 (EmojiAlias)
 import noopAll from "noop" /* 19 */;
 import Text from "Text" /* 4474 */;
 import { View } from "get ActivityIndicator" /* 17 */;

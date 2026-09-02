@@ -1,12 +1,12 @@
-// === Module 7956: createPremiumGroupInviteEmbed ===
+// === Module 7965: createPremiumGroupInviteEmbed ===
 
-// Module 7956 (createPremiumGroupInviteEmbed)
+// Module 7965 (createPremiumGroupInviteEmbed)
 import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
-import frozen from "frozen" /* 7855 */;
-import registerAssetDefault from "registerAsset" /* 7957 */;
-import getPremiumGroupInviteEmbedText from "getPremiumGroupInviteEmbedText" /* 7958 */;
+import frozen from "frozen" /* 7864 */;
+import registerAssetDefault from "registerAsset" /* 7966 */;
+import getPremiumGroupInviteEmbedText from "getPremiumGroupInviteEmbedText" /* 7967 */;
 import SubscriptionStatusTypes from "SubscriptionStatusTypes" /* 4153 */;
 
 ({ HELP_CENTER_LINK: c3, PremiumGroupInviteState: c4 } = SubscriptionStatusTypes);
@@ -36,7 +36,7 @@ export const createPremiumGroupInviteEmbed = function createPremiumGroupInviteEm
     const premiumGroupInviteEmbedText = getPremiumGroupInviteEmbedText.getPremiumGroupInviteEmbedText(obj);
     if (null != premiumGroupInviteEmbedText) {
       ({ header, body } = premiumGroupInviteEmbedText);
-      const intl = tmp6(1236).intl;
+      const intl = tmp6(1233).intl;
       obj = { learnMoreLinkOnClick: null };
       obj1 = { action: "bindOpenUrl", url: null, linkColor: null };
       obj1[1] = closure_3;
@@ -48,9 +48,9 @@ export const createPremiumGroupInviteEmbed = function createPremiumGroupInviteEm
       obj2[2] = backgroundColor;
       obj2[3] = backgroundColor;
       obj2[4] = assetUriForEmbed;
-      const intl2 = tmp6(1236).intl;
-      const formatToPartsResult = intl.formatToParts(tmp8(3017)["9VTnfI"], obj);
-      obj2[5] = intl2.string(tmp6(1236).t.oW0eUd).toUpperCase();
+      const intl2 = tmp6(1233).intl;
+      const formatToPartsResult = intl.formatToParts(tmp8(3016)["9VTnfI"], obj);
+      obj2[5] = intl2.string(tmp6(1233).t.oW0eUd).toUpperCase();
       obj2[6] = betaPillTextColor;
       obj2[7] = betaPillBackgroundColor;
       obj2[8] = body;

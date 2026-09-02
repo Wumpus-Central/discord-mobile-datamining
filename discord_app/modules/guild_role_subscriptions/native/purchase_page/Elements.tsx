@@ -1,14 +1,14 @@
-// === Module 16129: TruncatedText ===
+// === Module 16360: TruncatedText ===
 
-// Module 16129 (TruncatedText)
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
+// Module 16360 (TruncatedText)
+import ThemesDefault from "Themes" /* 709 */;
+import Button from "Button" /* 1296 */;
 import Text from "Text" /* 4474 */;
-import PressableBase from "PressableBase" /* 5068 */;
-import notSupportedDefault from "notSupported" /* 8221 */;
-import useStoreFrontPriceDefault from "useStoreFrontPrice" /* 8224 */;
-import getRoleEmojisAll from "getRoleEmojis" /* 14823 */;
-import registerAssetDefault from "registerAsset" /* 16130 */;
+import PressableBase from "PressableBase" /* 5076 */;
+import notSupportedDefault from "notSupported" /* 8230 */;
+import useStoreFrontPriceDefault from "useStoreFrontPrice" /* 8233 */;
+import getRoleEmojisAll from "getRoleEmojis" /* 15052 */;
+import registerAssetDefault from "registerAsset" /* 16361 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -81,9 +81,9 @@ export const TruncatedText = function TruncatedText(lineClamp) {
   } else {
     obj = { style: null, children: null };
     obj[0] = tmp2.toggleTruncateButton;
-    const intl = num(1236).intl;
+    const intl = num(1233).intl;
     const string = intl.string;
-    let t = num(1236).t;
+    let t = num(1233).t;
     if (tmp4) {
       let stringResult = string(t["JQX/Pb"]);
     } else {
@@ -114,13 +114,13 @@ export const useFormattedSubscriptionPlan = function useFormattedSubscriptionPla
   const obj2 = getRoleEmojisAll;
   const tmp2 = _require;
   const items = [closure_8];
-  const stateFromStores = _require(647).useStateFromStores(items, () => closure_1_8.get(id.id));
+  const stateFromStores = _require(644).useStateFromStores(items, () => closure_1_8.get(id.id));
   const price = useStoreFrontPriceDefault(stateFromStores, obj.useNativeIAPPayments().storeFront).price;
   let str = "No Price Available";
   if (null != price) {
     const _HermesInternal = HermesInternal;
-    str = "" + tmp2(6081).formatPrice(price.amount, price.currency) + "/mo.";
-    const tmp2Result = tmp2(6081);
+    str = "" + tmp2(6089).formatPrice(price.amount, price.currency) + "/mo.";
+    const tmp2Result = tmp2(6089);
   }
   return str;
 };

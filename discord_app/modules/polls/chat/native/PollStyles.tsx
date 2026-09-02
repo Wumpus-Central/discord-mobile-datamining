@@ -1,18 +1,18 @@
-// === Module 8131: normal ===
+// === Module 8139: normal ===
 
-// Module 8131 (normal)
+// Module 8139 (normal)
 import set from "set" /* 2 */;
-import NativeShadowType from "NativeShadowType" /* 8133 */;
+import NativeShadowType from "NativeShadowType" /* 8141 */;
 
 function normal(border) {
   const _require = border;
   const obj = { border: border.colors.BORDER_SUBTLE, borderWidth: 1, fill: border.colors.CARD_SECONDARY_BG, label: null, opacity: 1, answerBackground: null, answerFill: null, radioStyle: null, radioBackground: null, radioForeground: null };
   const match = _require(4705).match(arg1);
   const str = _require(4705);
-  obj[3] = match.with(_require(8132).PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => border.colors.WHITE).otherwise(() => border.colors.TEXT_DEFAULT);
+  obj[3] = match.with(_require(8140).PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => border.colors.WHITE).otherwise(() => border.colors.TEXT_DEFAULT);
   obj[5] = border.colors.BACKGROUND_MOD_MUTED;
   obj[6] = border.colors.BACKGROUND_MOD_SUBTLE;
-  obj[7] = _require(8133).PollRadioStyle.HOLLOW;
+  obj[7] = _require(8141).PollRadioStyle.HOLLOW;
   obj[8] = border.colors.INTERACTIVE_TEXT_ACTIVE;
   obj[9] = border.colors.WHITE;
   return obj;
@@ -26,10 +26,10 @@ function normalVote(border, arg1) {
   obj = { border: border.colors.BORDER_SUBTLE, borderWidth: 1, fill: border.colors.CARD_SECONDARY_BG, label: null, opacity: 1, answerBackground: null, answerFill: null, radioStyle: null, radioBackground: null, radioForeground: null };
   const match = _require(4705).match(arg1);
   const str = _require(4705);
-  obj[3] = match.with(_require(8132).PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => border.colors.WHITE).otherwise(() => border.colors.TEXT_DEFAULT);
+  obj[3] = match.with(_require(8140).PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => border.colors.WHITE).otherwise(() => border.colors.TEXT_DEFAULT);
   obj[5] = border.colors.BACKGROUND_MOD_MUTED;
   obj[6] = border.colors.BACKGROUND_MOD_SUBTLE;
-  obj[7] = _require(8133).PollRadioStyle.HOLLOW;
+  obj[7] = _require(8141).PollRadioStyle.HOLLOW;
   obj[8] = border.colors.INTERACTIVE_TEXT_ACTIVE;
   obj[9] = border.colors.WHITE;
   const merged = Object.assign(obj);

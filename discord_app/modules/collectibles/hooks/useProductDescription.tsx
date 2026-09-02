@@ -1,10 +1,10 @@
-// === Module 12552: getBundleDescription ===
+// === Module 12776: getBundleDescription ===
 
-// Module 12552 (getBundleDescription)
+// Module 12776 (getBundleDescription)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1950 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
 
 function getBundleDescription(bundledProducts) {
   let flag = arg1;
@@ -38,33 +38,33 @@ function getBundleDescription(bundledProducts) {
       if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
         let tmp13 = tmp5;
         let tmp14 = tmp7;
-        let intl2 = tmp6(1236).intl;
+        let intl2 = tmp6(1233).intl;
         obj = { itemName: null };
         let tmp15 = item10012;
         obj[0] = tmp4.name;
-        let arr = items.push(intl2.formatToPlainString(tmp6(1236).t.Ntv9Jt, obj));
+        let arr = items.push(intl2.formatToPlainString(tmp6(1233).t.Ntv9Jt, obj));
       } else {
         let tmp33 = tmp5;
         let tmp34 = tmp7;
-        if (tmp6(1950).CollectiblesItemType.PROFILE_EFFECT === type) {
+        if (tmp6(1949).CollectiblesItemType.PROFILE_EFFECT === type) {
           let tmp9 = tmp5;
           let tmp10 = tmp7;
-          let intl = tmp6(1236).intl;
+          let intl = tmp6(1233).intl;
           obj = { itemName: null };
           let tmp11 = item10012;
           obj[0] = tmp4.name;
-          arr = items.push(intl.formatToPlainString(tmp6(1236).t["3Y8q7a"], obj));
+          arr = items.push(intl.formatToPlainString(tmp6(1233).t["3Y8q7a"], obj));
         } else {
           let tmp35 = tmp5;
           let tmp36 = tmp7;
-          if (tmp6(1950).CollectiblesItemType.NAMEPLATE === type) {
+          if (tmp6(1949).CollectiblesItemType.NAMEPLATE === type) {
             let tmp37 = tmp5;
             let tmp38 = tmp7;
-            let intl6 = tmp6(1236).intl;
+            let intl6 = tmp6(1233).intl;
             obj1 = { itemName: null };
             let tmp39 = item10012;
             obj1[0] = tmp4.name;
-            let arr1 = items.push(intl6.formatToPlainString(tmp6(1236).t["2keXky"], obj1));
+            let arr1 = items.push(intl6.formatToPlainString(tmp6(1233).t["2keXky"], obj1));
             flag2 = true;
           }
         }

@@ -1,6 +1,6 @@
-// === Module 15369: DemoModal ===
+// === Module 15597: DemoModal ===
 
-// Module 15369 (DemoModal)
+// Module 15597 (DemoModal)
 import useAlertStore from "useAlertStore" /* 4859 */;
 import getAlertModalItemKey from "getAlertModalItemKey" /* 4863 */;
 import Button from "Button" /* 4928 */;

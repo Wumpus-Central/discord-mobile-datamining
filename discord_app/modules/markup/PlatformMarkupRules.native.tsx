@@ -3,15 +3,15 @@
 // Module 4980 (match)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1431 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
 import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4134 */;
 import tDefault from "t" /* 4192 */;
 import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 4511 */;
 import textRegexpDefault from "textRegexp" /* 4958 */;
 import getChannelDefault from "getChannel" /* 4959 */;
 import regExpDefault from "regExp" /* 4962 */;
-import getGameMentionData from "getGameMentionData" /* 5052 */;
-import INVISIBLE_CHAR_REGEX2 from "INVISIBLE_CHAR_REGEX" /* 5067 */;
+import getGameMentionData from "getGameMentionData" /* 5060 */;
+import INVISIBLE_CHAR_REGEX2 from "INVISIBLE_CHAR_REGEX" /* 5075 */;
 
 const Image = get_ActivityIndicator.Image;
 obj = { escape: obj, invisibleUnicode: null, text: null, emoji: null, customEmoji: null, channelMention: null, gameMention: null, channelOrMessageUrl: null, mediaPostLink: null, attachmentLink: null, silentPrefix: null };
@@ -186,8 +186,8 @@ obj[6] = {
       gameName = gameMentionData.gameName;
     }
     if (gameName == null) {
-      const intl = tmp2(1236).intl;
-      gameName = intl.string(tmp2(1236).t["11pdXZ"]);
+      const intl = tmp2(1233).intl;
+      gameName = intl.string(tmp2(1233).t["11pdXZ"]);
     }
     obj[4] = gameName;
     return obj;
@@ -429,8 +429,8 @@ export const hydrateGameMention = function hydrateGameMention(gameId, channelId)
     gameName = gameMentionData.gameName;
   }
   if (gameName == null) {
-    const intl = tmp(1236).intl;
-    gameName = intl.string(tmp(1236).t["11pdXZ"]);
+    const intl = tmp(1233).intl;
+    gameName = intl.string(tmp(1233).t["11pdXZ"]);
   }
   obj[4] = gameName;
   return obj;

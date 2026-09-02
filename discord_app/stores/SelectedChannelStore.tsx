@@ -1,22 +1,22 @@
-// === Module 1981: handleConnectionOpen ===
+// === Module 1980: handleConnectionOpen ===
 
-// Module 1981 (handleConnectionOpen)
+// Module 1980 (handleConnectionOpen)
 import applyDefault from "apply" /* 12 */;
-import fromStringAll from "fromString" /* 506 */;
-import initializeDefault from "initialize" /* 589 */;
-import Storage3 from "Storage" /* 595 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import set2 from "set" /* 1394 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1471 */;
-import createChannelRecord from "createChannelRecord" /* 1391 */;
-import closure_13 from "fetchFingerprint" /* 1218 */;
-import closure_14 from "ensureGuildLoaded" /* 1387 */;
-import closure_15 from "comparator" /* 1982 */;
-import closure_16 from "createGuildRecordFromRust" /* 1909 */;
+import fromStringAll from "fromString" /* 503 */;
+import initializeDefault from "initialize" /* 586 */;
+import Storage3 from "Storage" /* 592 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import set2 from "set" /* 1393 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
+import createChannelRecord from "createChannelRecord" /* 1390 */;
+import closure_13 from "fetchFingerprint" /* 1215 */;
+import closure_14 from "ensureGuildLoaded" /* 1386 */;
+import closure_15 from "comparator" /* 1981 */;
+import closure_16 from "createGuildRecordFromRust" /* 1908 */;
 import closure_17 from "_detectH265HardwareDecode" /* 4529 */;
-import closure_18 from "getUncachedChannelPermissions" /* 4121 */;
+import closure_18 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_19 from "handleConnectionOpen" /* 4299 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 import set from "set" /* 2 */;
 
 function handleConnectionOpen(sessionId) {
@@ -110,7 +110,7 @@ function handleConnectionOpen(sessionId) {
     _require = true;
   }
   if (_require) {
-    const Storage = _require(595).Storage;
+    const Storage = _require(592).Storage;
     const obj = { selectedChannelId: null, selectedVoiceChannelId: null, lastChannelFollowingDestination: null, lastConnectedTime: null, selectedChannelIds: null, mostRecentSelectedTextChannelIds: null, knownThreadIds: null };
     obj[0] = closure_6;
     obj[1] = c8;
@@ -121,7 +121,7 @@ function handleConnectionOpen(sessionId) {
     const values = tmp9(12)(closure_25).values();
     const obj6 = tmp9(12)(closure_25);
     const combined = values.concat(tmp9(12).values(closure_27));
-    const found = combined.filter(_require(1471).isNotNullish);
+    const found = combined.filter(_require(1470).isNotNullish);
     const tmp9Result = tmp9(12);
     const uniqResult = found.uniq();
     obj[6] = found.uniq().filter((arg0) => {
@@ -750,12 +750,12 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
           const _setInterval = setInterval;
           interval = setInterval(() => {
             closure_9 = Date.now();
-            const Storage = callback(595).Storage;
+            const Storage = callback(592).Storage;
             const obj = { selectedChannelId: closure_6, selectedVoiceChannelId: c8, lastChannelFollowingDestination: closure_7, lastConnectedTime: closure_9, selectedChannelIds: closure_25, mostRecentSelectedTextChannelIds: closure_27, knownThreadIds: null };
             const values = callback2(12)(closure_25).values();
             const obj2 = callback2(12)(closure_25);
             const combined = values.concat(callback2(12).values(closure_27));
-            const found = combined.filter(callback(1471).isNotNullish);
+            const found = combined.filter(callback(1470).isNotNullish);
             const obj4 = callback2(12);
             const uniqResult = found.uniq();
             obj[6] = found.uniq().filter((arg0) => {
@@ -773,7 +773,7 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
             const result = Storage.set(closure_24, obj);
           }, 60000);
         }
-        const Storage2 = callback(595).Storage;
+        const Storage2 = callback(592).Storage;
         let obj = { selectedChannelId: null, selectedVoiceChannelId: null, lastChannelFollowingDestination: null, lastConnectedTime: null, selectedChannelIds: null, mostRecentSelectedTextChannelIds: null, knownThreadIds: null };
         obj[0] = closure_6;
         obj[1] = channelId;
@@ -785,7 +785,7 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
         const obj9 = callback2(12)(closure_25);
         tmp26 = sessionId.guildId !== guildId && null == sessionId.channelId;
         let combined = values.concat(callback2(12).values(closure_27));
-        let found = combined.filter(callback(1471).isNotNullish);
+        let found = combined.filter(callback(1470).isNotNullish);
         const obj11 = callback2(12);
         let uniqResult = found.uniq();
         obj[6] = found.uniq().filter((arg0) => {
@@ -837,7 +837,7 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
         if (tmp3) {
           channelId = null;
         }
-        let Storage = callback(595).Storage;
+        let Storage = callback(592).Storage;
         obj = { selectedChannelId: null, selectedVoiceChannelId: null, lastChannelFollowingDestination: null, lastConnectedTime: null, selectedChannelIds: null, mostRecentSelectedTextChannelIds: null, knownThreadIds: null };
         obj[0] = closure_6;
         obj[1] = channelId;
@@ -849,7 +849,7 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
         const obj13 = store;
         const obj3 = callback2(12)(closure_25);
         const combined1 = values.concat(callback2(12).values(closure_27));
-        const found1 = combined1.filter(callback(1471).isNotNullish);
+        const found1 = combined1.filter(callback(1470).isNotNullish);
         const obj5 = callback2(12);
         const uniqResult1 = found1.uniq();
         obj[6] = found1.uniq().filter((arg0) => {

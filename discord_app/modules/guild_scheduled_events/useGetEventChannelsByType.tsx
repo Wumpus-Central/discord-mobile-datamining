@@ -1,12 +1,12 @@
-// === Module 9696: getEventChannelsByType ===
+// === Module 9709: getEventChannelsByType ===
 
-// Module 9696 (getEventChannelsByType)
-import canManageResource from "canManageResource" /* 9640 */;
-import closure_2 from "handleStageInstanceCreateOrUpdate" /* 1392 */;
-import closure_3 from "comparator" /* 1982 */;
-import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1982 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4121 */;
-import VIEW_CHANNEL from "VIEW_CHANNEL" /* 9641 */;
+// Module 9709 (getEventChannelsByType)
+import canManageResource from "canManageResource" /* 9653 */;
+import closure_2 from "handleStageInstanceCreateOrUpdate" /* 1391 */;
+import closure_3 from "comparator" /* 1981 */;
+import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1981 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4120 */;
+import VIEW_CHANNEL from "VIEW_CHANNEL" /* 9654 */;
 
 require = arg1;
 function getEventChannelsByType(id, channelTypeFromEntity) {
@@ -65,10 +65,10 @@ export const useCanCreateEventInStageChannel = function useCanCreateEventInStage
   const _require = isGuildStageVoice;
   const items = [closure_5];
   const items1 = [isGuildStageVoice];
-  const stateFromStores = _require(589).useStateFromStores(items, () => closure_1_5.can(closure_1_7, closure_0), items1);
-  const obj = _require(589);
+  const stateFromStores = _require(586).useStateFromStores(items, () => closure_1_5.can(closure_1_7, closure_0), items1);
+  const obj = _require(586);
   const items2 = [closure_2];
-  const stateFromStores1 = _require(589).useStateFromStores(items2, () => closure_1_2.getStageInstanceByChannel(isGuildStageVoice.id));
+  const stateFromStores1 = _require(586).useStateFromStores(items2, () => closure_1_2.getStageInstanceByChannel(isGuildStageVoice.id));
   let tmp3 = isGuildStageVoice.isGuildStageVoice() && stateFromStores;
   if (tmp3) {
     tmp3 = null == stateFromStores1;
@@ -79,8 +79,8 @@ export const useCanCreateEventInVoiceChannel = function useCanCreateEventInVoice
   const _require = isGuildVoice;
   const items = [closure_5];
   const items1 = [isGuildVoice];
-  const stateFromStores = _require(589).useStateFromStores(items, () => closure_1_5.can(closure_1_6, closure_0), items1);
-  const obj = _require(589);
+  const stateFromStores = _require(586).useStateFromStores(items, () => closure_1_5.can(closure_1_6, closure_0), items1);
+  const obj = _require(586);
   return isGuildVoice.isGuildVoice() && stateFromStores;
 };
 export { getEventChannelsByType };
@@ -89,7 +89,7 @@ export const useGetEventChannelsByType = function useGetEventChannelsByType(id, 
   dependencyMap = channelType;
   let items = [closure_3];
   const items1 = [id, channelType];
-  return _require(589).useStateFromStoresArray(items, () => {
+  return _require(586).useStateFromStoresArray(items, () => {
     const items = [closure_1_3];
     return closure_1_8(closure_0, closure_1, items);
   }, items1);

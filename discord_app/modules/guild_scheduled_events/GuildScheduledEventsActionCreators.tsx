@@ -1,16 +1,16 @@
-// === Module 9673: ? ===
+// === Module 9686: ? ===
 
-// Module 9673
+// Module 9686
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import sendRequest from "sendRequest" /* 530 */;
-import transitionTo from "transitionTo" /* 1222 */;
-import _modDef5355 from "module_5355" /* 5355 */;
-import EditGuildEventScreens from "EditGuildEventScreens" /* 9674 */;
+import sendRequest from "sendRequest" /* 527 */;
+import transitionTo from "transitionTo" /* 1219 */;
+import _modDef5363 from "module_5363" /* 5363 */;
+import EditGuildEventScreens from "EditGuildEventScreens" /* 9687 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "scheduledEventSort" /* 7271 */;
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1393 */;
-import ME from "ME" /* 676 */;
+import closure_4 from "fetchFingerprint" /* 1215 */;
+import closure_5 from "scheduledEventSort" /* 7280 */;
+import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1392 */;
+import ME from "ME" /* 673 */;
 
 require = arg1;
 ({ ENTITY_TYPES_REQUIRED_CHANNEL_ID: closure_6, ENTITY_TYPES_REQUIRED_ENTITY_METADATA: error, GuildScheduledEventStatus: closure_8, MAX_RSVP_USER_DISPLAY_COUNT: c9 } = GUILD_EVENT_MAX_NAME_LENGTH);
@@ -33,8 +33,8 @@ export default {
     return HTTP.patch(obj);
   },
   joinVoiceEvent(arg0, id) {
-    const voiceChannel = _modDef5355.selectVoiceChannel(id);
-    const obj = _modDef5355;
+    const voiceChannel = _modDef5363.selectVoiceChannel(id);
+    const obj = _modDef5363;
     transitionTo.transitionTo(closure_11.CHANNEL(arg0, id));
   },
   saveEvent(arg0, entityType) {
@@ -75,10 +75,10 @@ export default {
       obj1 = { url: null, rejectWithError: null };
       obj1[0] = closure_1_10.GUILD_EVENT(closure_1_0, closure_1_1);
       const obj8 = closure_1_0(4755);
-      obj1[1] = closure_1_0(530).rejectWithMigratedError();
+      obj1[1] = closure_1_0(527).rejectWithMigratedError();
       yield obj8.httpGetWithCountryCodeQuery(obj1);
       body = arg1.body;
-      const obj = closure_1_1(709);
+      const obj = closure_1_1(706);
       const obj4 = { type: "FETCH_GUILD_EVENT", guildScheduledEvent: null };
       obj4[1] = body;
       obj.dispatch(obj4);
@@ -92,11 +92,11 @@ export default {
       let body = tmp5;
       obj1 = { url: null, rejectWithError: null };
       obj1[0] = closure_1_10.GUILD_EVENTS_FOR_GUILD(closure_1_0);
-      obj1[1] = closure_1_0(530).rejectWithMigratedError();
-      const obj9 = closure_1_0(530);
+      obj1[1] = closure_1_0(527).rejectWithMigratedError();
+      const obj9 = closure_1_0(527);
       yield closure_1_0(4755).httpGetWithCountryCodeQuery(obj1);
       body = arg1.body;
-      const obj = closure_1_1(709);
+      const obj = closure_1_1(706);
       const obj4 = { type: "FETCH_GUILD_EVENTS_FOR_GUILD", guildId: null, guildScheduledEvents: null };
       obj4[1] = body;
       obj4[2] = body;
@@ -116,14 +116,14 @@ export default {
       const obj2 = { guild_scheduled_event_exception_ids: null };
       obj2[0] = dependencyMap;
       obj1[1] = obj2;
-      obj1[2] = closure_1_0(530).rejectWithMigratedError();
-      const HTTP = closure_1_0(530).HTTP;
+      obj1[2] = closure_1_0(527).rejectWithMigratedError();
+      const HTTP = closure_1_0(527).HTTP;
       yield HTTP.get(obj1);
       body = arg1.body;
       obj5 = { eventCount: null, recurrenceCounts: null };
       obj5[0] = body.guild_scheduled_event_count;
       obj5[1] = body.guild_scheduled_event_exception_counts;
-      let obj6 = closure_1_1(709);
+      let obj6 = closure_1_1(706);
       obj6 = { type: "GUILD_SCHEDULED_EVENT_USER_COUNTS_FETCH_SUCCESS", guildId: null, eventId: null, counts: null };
       obj6[1] = body;
       obj6[2] = obj5;
@@ -176,14 +176,14 @@ export default {
               closure_1 = tmp2;
               let body = tmp5;
               body = undefined;
-              const HTTP = closure_1_0(530).HTTP;
+              const HTTP = closure_1_0(527).HTTP;
               obj1 = { url: null, query: null, rejectWithError: null };
               obj1[0] = closure_1_10.USER_GUILD_EVENTS;
               const obj2 = { guild_ids: null };
               const items = [closure_1_0];
               obj2[0] = items;
               obj1[1] = obj2;
-              obj1[2] = closure_1_0(530).rejectWithMigratedError();
+              obj1[2] = closure_1_0(527).rejectWithMigratedError();
               dependencyMap = 1;
               c3 = 1;
               const obj3 = { value: null, done: false };
@@ -200,7 +200,7 @@ export default {
             return obj4;
           } else {
             body = arg1.body;
-            obj = closure_1_1(709);
+            obj = closure_1_1(706);
             const obj5 = { type: "GUILD_SCHEDULED_EVENT_RSVPS_FETCH_SUCESS", guildScheduledEventUsers: null, guildId: null };
             obj5[1] = body;
             obj5[2] = body;
@@ -568,13 +568,13 @@ export default {
               closure_0 = undefined;
               if (null != closure_1_0) {
                 if (null != dependencyMap) {
-                  const HTTP = closure_1_0(530).HTTP;
+                  const HTTP = closure_1_0(527).HTTP;
                   obj1 = { url: null, query: null, rejectWithError: null };
                   obj1[0] = closure_1_10.GUILD_EVENT_USERS(dependencyMap, closure_1_0, closure_1_1);
                   const obj2 = { limit: null, with_member: true };
                   obj2[0] = c3;
                   obj1[1] = obj2;
-                  obj1[2] = closure_1_0(530).rejectWithMigratedError();
+                  obj1[2] = closure_1_0(527).rejectWithMigratedError();
                   dependencyMap = 1;
                   c3 = 1;
                   const obj3 = { value: null, done: false };
@@ -597,7 +597,7 @@ export default {
             return obj5;
           } else {
             closure_0 = arg1;
-            let obj6 = closure_1_1(709);
+            let obj6 = closure_1_1(706);
             obj6 = { type: "GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS", guildEventId: null, guildScheduledEventUsers: null, guildId: null, guildEventExceptionId: null };
             obj6[1] = closure_0;
             obj6[2] = closure_0.body;

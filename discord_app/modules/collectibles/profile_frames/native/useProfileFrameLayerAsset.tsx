@@ -1,6 +1,6 @@
-// === Module 8550: map ===
+// === Module 8563: map ===
 
-// Module 8550 (map)
+// Module 8563 (map)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -15,8 +15,8 @@ export default function useProfileFrameLayerAsset(width) {
   let collectiblesItemAssetUrl;
   dependencyMap = undefined;
   ({ skuId, layer } = width);
-  let obj = collectiblesItemAssetUrl(1900);
-  obj = { skuId, assetFormat: collectiblesItemAssetUrl(1900).CollectiblesItemAssetFormat.STATIC, assetId: layer.id };
+  let obj = collectiblesItemAssetUrl(1899);
+  obj = { skuId, assetFormat: collectiblesItemAssetUrl(1899).CollectiblesItemAssetFormat.STATIC, assetId: layer.id };
   collectiblesItemAssetUrl = obj.getCollectiblesItemAssetUrl(obj);
   dependencyMap = callback(React.useReducer((arg0) => arg0 + 1, 0), 2)[1];
   const items = [collectiblesItemAssetUrl];

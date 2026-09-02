@@ -1,9 +1,9 @@
-// === Module 12600: isShoppableCollectibleSku ===
+// === Module 12824: isShoppableCollectibleSku ===
 
-// Module 12600 (isShoppableCollectibleSku)
+// Module 12824 (isShoppableCollectibleSku)
 import set from "set" /* 2 */;
-import _modDef1208 from "module_1208" /* 1208 */;
-import CollectiblesSKUSourceType from "CollectiblesSKUSourceType" /* 12601 */;
+import _modDef1205 from "module_1205" /* 1205 */;
+import CollectiblesSKUSourceType from "CollectiblesSKUSourceType" /* 12825 */;
 
 const result = set.fileFinishedImporting("modules/collectibles/shop_this_look/ShopThisLookUtils.tsx");
 
@@ -12,7 +12,7 @@ export const isShoppableCollectibleSku = function isShoppableCollectibleSku(stat
   if (null == stateFromStores) {
     return tmp;
   } else if (typeof type.isAvailable !== "function") {
-    let obj = _modDef1208;
+    let obj = _modDef1205;
     obj = { extra: null };
     obj = { skuId: null, skuType: null };
     ({ id: obj3[0], type } = type);

@@ -1,12 +1,12 @@
-// === Module 6189: getMuteStates ===
+// === Module 6198: getMuteStates ===
 
-// Module 6189 (getMuteStates)
-import closure_2 from "initialize" /* 1984 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
+// Module 6198 (getMuteStates)
+import closure_2 from "initialize" /* 1983 */;
+import closure_3 from "fetchFingerprint" /* 1215 */;
 import closure_4 from "_detectH265HardwareDecode" /* 4529 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4121 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_6 from "updateVoiceState" /* 4497 */;
-import { Permissions } from "ME" /* 676 */;
+import { Permissions } from "ME" /* 673 */;
 
 const require = arg1;
 function getMuteStates(voiceStateStore) {
@@ -67,6 +67,6 @@ const result = require("set").fileFinishedImporting("modules/video_calls/useMute
 export default function useMuteStates(arg0) {
   const _require = arg0;
   const items = [closure_3, closure_6, closure_4, closure_5, closure_2];
-  return _require(589).useStateFromStoresObject(items, () => closure_1_8({ channel: closure_0, authenticationStore: closure_1_3, voiceStateStore: closure_1_6, mediaEngineStore: closure_1_4, permissionStore: closure_1_5, impersonateStore: closure_1_2 }));
+  return _require(586).useStateFromStoresObject(items, () => closure_1_8({ channel: closure_0, authenticationStore: closure_1_3, voiceStateStore: closure_1_6, mediaEngineStore: closure_1_4, permissionStore: closure_1_5, impersonateStore: closure_1_2 }));
 };
 export { getMuteStates };

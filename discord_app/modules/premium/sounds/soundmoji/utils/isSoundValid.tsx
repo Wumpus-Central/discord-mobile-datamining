@@ -2,11 +2,11 @@
 
 // Module 4971 (isSoundValid)
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4139 */;
-import closure_2 from "ensureGuildLoaded" /* 1387 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4121 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_2 from "ensureGuildLoaded" /* 1386 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4120 */;
+import closure_4 from "mergeGuildAvatar" /* 1921 */;
 import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME" /* 4967 */;
-import { Permissions } from "sum" /* 505 */;
+import { Permissions } from "sum" /* 502 */;
 
 let result = require("set").fileFinishedImporting("modules/premium/sounds/soundmoji/utils/isSoundValid.tsx");
 

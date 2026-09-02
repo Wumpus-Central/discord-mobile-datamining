@@ -1,7 +1,7 @@
-// === Module 12557: CollectiblesShopPricePlaceholder ===
+// === Module 12781: CollectiblesShopPricePlaceholder ===
 
-// Module 12557 (CollectiblesShopPricePlaceholder)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 12781 (CollectiblesShopPricePlaceholder)
+import ThemesDefault from "Themes" /* 709 */;
 import _modDef4217 from "module_4217" /* 4217 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;

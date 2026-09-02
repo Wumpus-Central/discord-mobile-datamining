@@ -1,8 +1,8 @@
-// === Module 15650: _fetchActiveChannels ===
+// === Module 15881: _fetchActiveChannels ===
 
-// Module 15650 (_fetchActiveChannels)
+// Module 15881 (_fetchActiveChannels)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 676 */;
+import { Endpoints } from "ME" /* 673 */;
 
 const require = arg1;
 function _fetchActiveChannels() {
@@ -50,7 +50,7 @@ function _fetchActiveChannels() {
               closure_3 = undefined;
               c7 = 1;
               c8 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {

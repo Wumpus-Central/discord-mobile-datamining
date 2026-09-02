@@ -1,15 +1,15 @@
-// === Module 10566: PremiumGiftWishlistBanner ===
+// === Module 10787: PremiumGiftWishlistBanner ===
 
-// Module 10566 (PremiumGiftWishlistBanner)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 10787 (PremiumGiftWishlistBanner)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { WishlistRecommendationReason as closure_7 } from "fromServer" /* 6074 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import ME from "ME" /* 676 */;
-import { CollectiblesMobileShopScreen as closure_12 } from "items" /* 678 */;
-import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY" /* 8556 */;
+import { WishlistRecommendationReason as closure_7 } from "fromServer" /* 6082 */;
+import GuildFeatures from "GuildFeatures" /* 1923 */;
+import ME from "ME" /* 673 */;
+import { CollectiblesMobileShopScreen as closure_12 } from "items" /* 675 */;
+import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY" /* 8569 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

@@ -1,8 +1,8 @@
-// === Module 13767: generateBoxShadowStyle ===
+// === Module 13990: generateBoxShadowStyle ===
 
-// Module 13767 (generateBoxShadowStyle)
+// Module 13990 (generateBoxShadowStyle)
 import set from "set" /* 2 */;
-import set2 from "set" /* 500 */;
+import set2 from "set" /* 1234 */;
 
 const result = set.fileFinishedImporting("design/void/Shadows/native/Shadows.tsx");
 

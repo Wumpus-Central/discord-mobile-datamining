@@ -1,9 +1,9 @@
-// === Module 16560: renderChannelWrapper ===
+// === Module 16795: renderChannelWrapper ===
 
-// Module 16560 (renderChannelWrapper)
+// Module 16795 (renderChannelWrapper)
 import noopAll from "noop" /* 19 */;
-import getLayoutStyleDefault from "getLayoutStyle" /* 16558 */;
-import getScaledChannelRowHeightDefault from "getScaledChannelRowHeight" /* 16561 */;
+import getLayoutStyleDefault from "getLayoutStyle" /* 16793 */;
+import getScaledChannelRowHeightDefault from "getScaledChannelRowHeight" /* 16796 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 

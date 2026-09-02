@@ -1,18 +1,18 @@
-// === Module 9865: useCanRingToGuildVoiceChannel ===
+// === Module 9887: useCanRingToGuildVoiceChannel ===
 
-// Module 9865 (useCanRingToGuildVoiceChannel)
+// Module 9887 (useCanRingToGuildVoiceChannel)
 import getChannelRoleSubscriptionStatusDefault from "getChannelRoleSubscriptionStatus" /* 4960 */;
-import experimentDefault from "experiment" /* 9866 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "callConnect" /* 5222 */;
-import closure_5 from "ensureGuildLoaded" /* 1387 */;
-import closure_6 from "trackCommunicationDisabled" /* 1992 */;
-import closure_7 from "recomputeGuild" /* 5357 */;
-import closure_8 from "getUncachedChannelPermissions" /* 4121 */;
+import experimentDefault from "experiment" /* 9888 */;
+import closure_3 from "fetchFingerprint" /* 1215 */;
+import closure_4 from "callConnect" /* 5230 */;
+import closure_5 from "ensureGuildLoaded" /* 1386 */;
+import closure_6 from "trackCommunicationDisabled" /* 1991 */;
+import closure_7 from "recomputeGuild" /* 5365 */;
+import closure_8 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_9 from "sortActivity" /* 4569 */;
 import closure_10 from "markAllUserIdListsStale" /* 4130 */;
 import closure_11 from "updateVoiceState" /* 4497 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 
 const require = arg1;
 function useCanRingToGuildVoiceChannel(user, DisconnectedUserRow, stateFromStores) {
@@ -23,16 +23,16 @@ function useCanRingToGuildVoiceChannel(user, DisconnectedUserRow, stateFromStore
   }
   importDefault = stateFromStores;
   const items = [closure_8];
-  stateFromStores = _require(589).useStateFromStores(items, () => {
+  stateFromStores = _require(586).useStateFromStores(items, () => {
     let tmp2 = null != stateFromStores;
     if (tmp2) {
       tmp2 = stateFromStores(closure_1_2[12])(tmp, closure_1_8);
     }
     return tmp2;
   });
-  const obj = _require(589);
+  const obj = _require(586);
   const items1 = [closure_6, closure_7];
-  const stateFromStores1 = _require(589).useStateFromStores(items1, () => {
+  const stateFromStores1 = _require(586).useStateFromStores(items1, () => {
     let guild_id;
     if (stateFromStores != null) {
       guild_id = stateFromStores.guild_id;
@@ -48,7 +48,7 @@ function useCanRingToGuildVoiceChannel(user, DisconnectedUserRow, stateFromStore
     }
   });
   let id;
-  const obj2 = _require(589);
+  const obj2 = _require(586);
   const tmp4 = importDefault;
   if (stateFromStores != null) {
     id = stateFromStores.id;

@@ -1,10 +1,10 @@
-// === Module 9498: leaveFrame ===
+// === Module 9511: leaveFrame ===
 
-// Module 9498 (leaveFrame)
-import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 5486 */;
-import closure_3 from "map" /* 9464 */;
-import ME from "ME" /* 676 */;
+// Module 9511 (leaveFrame)
+import dispatcherDefault from "dispatcher" /* 706 */;
+import initializeDefault from "initialize" /* 5494 */;
+import closure_3 from "map" /* 9477 */;
+import ME from "ME" /* 673 */;
 import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4380 */;
 
 let require = arg1;
@@ -19,13 +19,13 @@ class FramesManager extends tmp3 {
             applyArgumentsResult.handleRPCDisconnect(arg0);
           },
       FRAME_LAUNCH(applicationId) {
-            const result = applyArgumentsResult(9456).trackFrameSessionStart(applicationId.applicationId);
+            const result = applyArgumentsResult(9469).trackFrameSessionStart(applicationId.applicationId);
           },
       FRAME_LAUNCH_FAIL(applicationId) {
-            const result = applyArgumentsResult(9472).discardPendingFrameLaunch(applicationId.applicationId);
+            const result = applyArgumentsResult(9485).discardPendingFrameLaunch(applicationId.applicationId);
           },
       FRAME_STOP(applicationId) {
-            applyArgumentsResult(9456).trackFrameSessionEnd(applicationId.applicationId);
+            applyArgumentsResult(9469).trackFrameSessionEnd(applicationId.applicationId);
           }
     };
     applyArgumentsResult.handleRPCDisconnect = function handleRPCDisconnect(arg0) {

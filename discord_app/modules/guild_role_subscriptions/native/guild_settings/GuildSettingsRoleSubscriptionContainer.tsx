@@ -1,20 +1,20 @@
-// === Module 17318: ApplicationRejectedNotice ===
+// === Module 17554: ApplicationRejectedNotice ===
 
-// Module 17318 (ApplicationRejectedNotice)
+// Module 17554 (ApplicationRejectedNotice)
 import noopAll from "noop" /* 19 */;
-import useGroupListingsFetchContext from "useGroupListingsFetchContext" /* 14809 */;
-import useOnboardingMonetizationEnableFlowDefault from "useOnboardingMonetizationEnableFlow" /* 17294 */;
-import useRoleSubscriptionSettingsDisabled from "useRoleSubscriptionSettingsDisabled" /* 17308 */;
+import useGroupListingsFetchContext from "useGroupListingsFetchContext" /* 15038 */;
+import useOnboardingMonetizationEnableFlowDefault from "useOnboardingMonetizationEnableFlow" /* 17530 */;
+import useRoleSubscriptionSettingsDisabled from "useRoleSubscriptionSettingsDisabled" /* 17544 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "createGuildRecordFromRust" /* 1909 */;
-import { GuildFeatures } from "ME" /* 676 */;
+import closure_5 from "createGuildRecordFromRust" /* 1908 */;
+import { GuildFeatures } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function ApplicationRejectedNotice(guildId) {
   guildId = guildId.guildId;
-  let obj = guildId(589);
+  let obj = guildId(586);
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getGuild(guildId));
   if (stateFromStores != null) {
@@ -29,42 +29,42 @@ function ApplicationRejectedNotice(guildId) {
   ({ resubmissionError, requestRejectedNoticeText, reapplyNoticeText } = useOnboardingMonetizationEnableFlowDefault(stateFromStores));
   if (null != resubmissionError) {
     obj = { children: null };
-    let tmp9Result = tmp9(11790);
+    let tmp9Result = tmp9(12013);
     obj[0] = resubmissionError.getAnyErrorMessage();
     let tmp14 = callback(tmp9Result, obj);
   } else if (null != requestRejectedNoticeText) {
     obj = { notice: null };
     obj[0] = requestRejectedNoticeText;
-    tmp14 = callback(tmp9(17267), obj);
+    tmp14 = callback(tmp9(17503), obj);
   } else if (tmp13) {
     obj1 = { notice: null };
-    tmp9Result = tmp9(17267);
-    const intl3 = tmp2(1236).intl;
-    obj1[0] = intl3.string(tmp2(1236).t.MyJpJT);
+    tmp9Result = tmp9(17503);
+    const intl3 = tmp2(1233).intl;
+    obj1[0] = intl3.string(tmp2(1233).t.MyJpJT);
     tmp14 = callback(tmp9Result, obj1);
   } else if (null != reapplyNoticeText) {
     const obj2 = { notice: null, ctaLabel: null, onClick: null, submitting: null };
     obj2[0] = reapplyNoticeText;
-    const intl2 = tmp2(1236).intl;
-    obj2[1] = intl2.string(tmp2(1236).t["YKw/NQ"]);
+    const intl2 = tmp2(1233).intl;
+    obj2[1] = intl2.string(tmp2(1233).t["YKw/NQ"]);
     obj2[2] = tmp12;
     obj2[3] = tmp11;
-    tmp14 = callback(tmp9(17267), obj2);
-    const tmp9Result1 = tmp9(17267);
+    tmp14 = callback(tmp9(17503), obj2);
+    const tmp9Result1 = tmp9(17503);
   } else if (true === hasItem1) {
     const obj3 = { notice: null };
-    const intl = tmp2(1236).intl;
-    obj3[0] = intl.string(tmp2(1236).t.e2g9sW);
-    tmp14 = callback(tmp9(17267), obj3);
-    const tmp9Result2 = tmp9(17267);
+    const intl = tmp2(1233).intl;
+    obj3[0] = intl.string(tmp2(1233).t.e2g9sW);
+    tmp14 = callback(tmp9(17503), obj3);
+    const tmp9Result2 = tmp9(17503);
   } else {
     tmp14 = null;
     if (true === hasItem) {
       const obj4 = { notice: null };
-      const intl4 = tmp2(1236).intl;
-      obj4[0] = intl4.string(tmp2(1236).t.rxI9sl);
-      tmp14 = callback(tmp9(17267), obj4);
-      const tmp9Result3 = tmp9(17267);
+      const intl4 = tmp2(1233).intl;
+      obj4[0] = intl4.string(tmp2(1233).t.rxI9sl);
+      tmp14 = callback(tmp9(17503), obj4);
+      const tmp9Result3 = tmp9(17503);
     }
   }
   let tmp24 = null;

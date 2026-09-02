@@ -1,6 +1,6 @@
-// === Module 11679: ApplicationDirectorySearchResultType ===
+// === Module 11902: ApplicationDirectorySearchResultType ===
 
-// Module 11679 (ApplicationDirectorySearchResultType)
+// Module 11902 (ApplicationDirectorySearchResultType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ApplicationDirectorySearchResultType.tsx");

@@ -3,7 +3,7 @@
 // Module 4155 (getBraintreeSDK)
 import _mod4157 from "module_4157" /* 4157 */;
 import closure_2 from "getClient" /* 4156 */;
-import { PaymentSettings } from "ME" /* 676 */;
+import { PaymentSettings } from "ME" /* 673 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("utils/BraintreeUtils.tsx");

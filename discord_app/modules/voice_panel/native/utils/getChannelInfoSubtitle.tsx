@@ -1,8 +1,8 @@
-// === Module 16693: getChannelInfoSubtitle ===
+// === Module 16928: getChannelInfoSubtitle ===
 
-// Module 16693 (getChannelInfoSubtitle)
+// Module 16928 (getChannelInfoSubtitle)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import getNicknameDefault from "getNickname" /* 4673 */;
 
 const result = set.fileFinishedImporting("modules/voice_panel/native/utils/getChannelInfoSubtitle.tsx");

@@ -1,10 +1,10 @@
-// === Module 15899: transitionGuildsBarToGuildOrOpenSelectedChannel ===
+// === Module 16130: transitionGuildsBarToGuildOrOpenSelectedChannel ===
 
-// Module 15899 (transitionGuildsBarToGuildOrOpenSelectedChannel)
+// Module 16130 (transitionGuildsBarToGuildOrOpenSelectedChannel)
 import getRootNavigationRef from "getRootNavigationRef" /* 4333 */;
-import closure_2 from "handleConnectionOpen" /* 1981 */;
+import closure_2 from "handleConnectionOpen" /* 1980 */;
 import closure_3 from "handleConnectionOpen" /* 4299 */;
-import { ME } from "ME" /* 676 */;
+import { ME } from "ME" /* 673 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/guilds_bar/native/utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx");
@@ -47,7 +47,7 @@ export default function transitionGuildsBarToGuildOrOpenSelectedChannel(arg0) {
     tmpResult = tmp(4489);
     tmpResult.transitionToChannel(tmp4);
   } else {
-    tmp(6186).transitionToGuild(arg0);
-    const tmpResult1 = tmp(6186);
+    tmp(6195).transitionToGuild(arg0);
+    const tmpResult1 = tmp(6195);
   }
 };

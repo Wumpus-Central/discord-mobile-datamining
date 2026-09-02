@@ -1,10 +1,10 @@
-// === Module 14592: route ===
+// === Module 14815: route ===
 
-// Module 14592 (route)
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 14815 (route)
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import getPremiumPlanItem from "getPremiumPlanItem" /* 4139 */;
 import closure_3 from "noop" /* 19 */;
-import createToggle from "createToggle" /* 11068 */;
+import createToggle from "createToggle" /* 11288 */;
 
 require = arg1;
 createToggle = {
@@ -38,7 +38,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.PREMIUM_MANAGE_PLAN,
   getComponent() {
-    return require(14591) /* PremiumPlanSelectSettingScreen */.default;
+    return require(14814) /* PremiumPlanSelectSettingScreen */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

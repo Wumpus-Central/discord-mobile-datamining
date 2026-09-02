@@ -1,9 +1,9 @@
-// === Module 7871: formatUsernameOnClick ===
+// === Module 7880: formatUsernameOnClick ===
 
-// Module 7871 (formatUsernameOnClick)
-import processColorStrings from "processColorStrings" /* 7870 */;
-import createDisplayNameStylesMobile from "createDisplayNameStylesMobile" /* 7872 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+// Module 7880 (formatUsernameOnClick)
+import processColorStrings from "processColorStrings" /* 7879 */;
+import createDisplayNameStylesMobile from "createDisplayNameStylesMobile" /* 7881 */;
+import closure_2 from "mergeGuildAvatar" /* 1921 */;
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/formatUsernameOnClick.tsx");
@@ -24,9 +24,9 @@ export default function formatUsernameOnClick(arg0) {
     }
     user = author;
   }
-  const displayNameFontIdForMobileUser = createDisplayNameStylesMobile.getDisplayNameFontIdForMobileUser(user, guildId);
-  obj = { action: "bindUserMenu", userId, linkColor: null, roleColor: null, roleColors: null, shouldShowRoleDot: null, messageChannelId: null, medium: true };
+  obj = { action: "bindUserMenu", userId, linkColor: null, roleColor: null, roleColors: null, shouldShowRoleDot: null, messageChannelId: null, medium: true, fontId: null };
   let tmp7 = null;
+  const displayNameFontIdForMobileUser = createDisplayNameStylesMobile.getDisplayNameFontIdForMobileUser(user, guildId);
   if ("username" === roleStyle) {
     tmp7 = colorString;
   }
@@ -42,13 +42,6 @@ export default function formatUsernameOnClick(arg0) {
     messageChannelId = message.channel_id;
   }
   obj[6] = messageChannelId;
-  if (null != displayNameFontIdForMobileUser) {
-    obj = { fontId: null };
-    obj[0] = displayNameFontIdForMobileUser;
-    obj1 = obj;
-  } else {
-    obj1 = {};
-  }
-  const merged = Object.assign(obj1);
+  obj[8] = displayNameFontIdForMobileUser;
   return obj;
 };

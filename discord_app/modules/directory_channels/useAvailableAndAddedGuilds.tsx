@@ -1,14 +1,14 @@
-// === Module 11885: useAvailableAndAddedGuilds ===
+// === Module 12108: useAvailableAndAddedGuilds ===
 
-// Module 11885 (useAvailableAndAddedGuilds)
+// Module 12108 (useAvailableAndAddedGuilds)
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
-import closure_7 from "createGuildRecordFromRust" /* 1909 */;
-import closure_8 from "getUncachedChannelPermissions" /* 4121 */;
-import closure_9 from "insertUnsortedGuilds" /* 5381 */;
-import closure_10 from "isFetching" /* 11879 */;
-import { Permissions } from "ME" /* 676 */;
+import closure_7 from "createGuildRecordFromRust" /* 1908 */;
+import closure_8 from "getUncachedChannelPermissions" /* 4120 */;
+import closure_9 from "insertUnsortedGuilds" /* 5389 */;
+import closure_10 from "isFetching" /* 12102 */;
+import { Permissions } from "ME" /* 673 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/directory_channels/useAvailableAndAddedGuilds.tsx");

@@ -1,6 +1,6 @@
-// === Module 1908: cloneGuildThemeSettings ===
+// === Module 1907: cloneGuildThemeSettings ===
 
-// Module 1908 (cloneGuildThemeSettings)
+// Module 1907 (cloneGuildThemeSettings)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/guild_themes/guildThemeSerialization.tsx");

@@ -1,9 +1,9 @@
-// === Module 10658: ChatGDMCustomizeActionSheet ===
+// === Module 10879: ChatGDMCustomizeActionSheet ===
 
-// Module 10658 (ChatGDMCustomizeActionSheet)
+// Module 10879 (ChatGDMCustomizeActionSheet)
 import noopAll from "noop" /* 19 */;
-import useNavigatorConfirmChangesOnBackDefault from "useNavigatorConfirmChangesOnBack" /* 10659 */;
-import _modDef10661 from "module_10661" /* 10661 */;
+import useNavigatorConfirmChangesOnBackDefault from "useNavigatorConfirmChangesOnBack" /* 10880 */;
+import _modDef10882 from "module_10882" /* 10882 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -17,10 +17,10 @@ export default function ChatGDMCustomizeActionSheet(channelId) {
   ({ onGoBack: c1, ref: c2 } = useNavigatorConfirmChangesOnBackDefault());
   const obj = { screenKey: "kick", title: null, render: null };
   const tmp = useNavigatorConfirmChangesOnBackDefault();
-  const intl = channelId(1236).intl;
-  obj[1] = intl.string(channelId(1236).t["1r5E+m"]);
+  const intl = channelId(1233).intl;
+  obj[1] = intl.string(channelId(1233).t["1r5E+m"]);
   obj[2] = function render() {
     return closure_1_3(_undefined(_undefined2[5]), { ref: _undefined2, onFinish: _undefined, channelId });
   };
-  return jsx(_modDef10661, { screenKey: "kick", title: null, render: null });
+  return jsx(_modDef10882, { screenKey: "kick", title: null, render: null });
 };

@@ -1,8 +1,8 @@
-// === Module 8775: ShieldElement ===
+// === Module 8790: ShieldElement ===
 
-// Module 8775 (ShieldElement)
+// Module 8790 (ShieldElement)
 import noopAll from "noop" /* 19 */;
-import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 6256 */;
+import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 6265 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

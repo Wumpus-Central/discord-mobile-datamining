@@ -1,10 +1,10 @@
-// === Module 9088: map ===
+// === Module 9102: map ===
 
-// Module 9088 (map)
+// Module 9102 (map)
 import set from "set" /* 2 */;
 import Text from "Text" /* 4474 */;
 import getFontScale from "getFontScale" /* 4935 */;
-import enforcingDefault from "enforcing" /* 9089 */;
+import enforcingDefault from "enforcing" /* 9103 */;
 
 const map = new Map();
 let result = set.fileFinishedImporting("modules/screen/native/useScaledTextLineHeight.android.tsx");
@@ -30,9 +30,9 @@ export const scaleTextLineHeight = function scaleTextLineHeight(c10, fontScale) 
   }
   return value;
 };
-export const useScaledTextLineHeight = function useScaledTextLineHeight(c3) {
+export const useScaledTextLineHeight = function useScaledTextLineHeight(anchor) {
   const fontScale = getFontScale.useFontScale();
-  const lineHeight = Text.TextStyleSheet[c3].lineHeight;
+  const lineHeight = Text.TextStyleSheet[anchor].lineHeight;
   let value = map.get(lineHeight);
   if (null == value) {
     const scaledHeightForText = enforcingDefault.getScaledHeightForText(lineHeight);

@@ -1,11 +1,11 @@
-// === Module 9037: LinkButton ===
+// === Module 9051: LinkButton ===
 
-// Module 9037 (LinkButton)
+// Module 9051 (LinkButton)
 import Text from "Text" /* 4474 */;
 import closure_3 from "noop" /* 19 */;
 import { Pressable } from "get ActivityIndicator" /* 17 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { CHANGELOG_URL } from "CHANGELOG_MODAL_KEY" /* 1980 */;
+import { AnalyticEvents } from "ME" /* 673 */;
+import { CHANGELOG_URL } from "CHANGELOG_MODAL_KEY" /* 1979 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -18,7 +18,7 @@ function LinkButton(arg0) {
       let obj = callback(4190);
       obj.openURL(closure_6);
       obj = { cta_type: "profile_bio", target: closure_6 };
-      callback(698).track(constants.CHANGE_LOG_CTA_CLICKED, obj);
+      callback(695).track(constants.CHANGE_LOG_CTA_CLICKED, obj);
     },
     style: tmp.link,
     children: callback(Text.Text, obj)

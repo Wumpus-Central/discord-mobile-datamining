@@ -1,8 +1,8 @@
-// === Module 10359: GIF_PROVIDER ===
+// === Module 10381: GIF_PROVIDER ===
 
-// Module 10359 (GIF_PROVIDER)
+// Module 10381 (GIF_PROVIDER)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 
 const result = set.fileFinishedImporting("modules/gif_picker/GifProvider.tsx");
 

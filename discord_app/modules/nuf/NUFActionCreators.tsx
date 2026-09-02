@@ -1,8 +1,8 @@
-// === Module 12284: setNewUser ===
+// === Module 12508: setNewUser ===
 
-// Module 12284 (setNewUser)
+// Module 12508 (setNewUser)
 import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 const result = set.fileFinishedImporting("modules/nuf/NUFActionCreators.tsx");
 

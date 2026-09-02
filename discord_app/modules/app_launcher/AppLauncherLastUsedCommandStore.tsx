@@ -1,9 +1,9 @@
-// === Module 11692: initialize ===
+// === Module 11915: initialize ===
 
-// Module 11692 (initialize)
-import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 11915 (initialize)
+import initializeDefault from "initialize" /* 586 */;
+import setDefault from "set" /* 684 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 let closure_0 = 10 * setDefault.Millis.MINUTE;
 let closure_1 = { lastUsedCommandId: null, lastUsedTimeMs: null };

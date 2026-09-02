@@ -1,8 +1,8 @@
-// === Module 10048: canUseStreamSetting ===
+// === Module 10070: canUseStreamSetting ===
 
-// Module 10048 (canUseStreamSetting)
+// Module 10070 (canUseStreamSetting)
 import set from "set" /* 2 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import GuildFeatures from "GuildFeatures" /* 1923 */;
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4139 */;
 import getGuildTierFromGuild from "getGuildTierFromGuild" /* 4369 */;
 

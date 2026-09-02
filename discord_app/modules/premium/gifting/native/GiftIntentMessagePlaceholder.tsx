@@ -1,8 +1,8 @@
-// === Module 11390: getGiftIntentCustomMessagePlaceholder ===
+// === Module 11613: getGiftIntentCustomMessagePlaceholder ===
 
-// Module 11390 (getGiftIntentCustomMessagePlaceholder)
+// Module 11613 (getGiftIntentCustomMessagePlaceholder)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 
 const result = set.fileFinishedImporting("modules/premium/gifting/native/GiftIntentMessagePlaceholder.tsx");
 

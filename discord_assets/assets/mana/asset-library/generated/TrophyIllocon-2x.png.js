@@ -1,6 +1,6 @@
-// === Module 7104: metadata ===
+// === Module 7113: metadata ===
 
-// Module 7104 (metadata)
+// Module 7113 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/TrophyIllocon-2x.png.js");

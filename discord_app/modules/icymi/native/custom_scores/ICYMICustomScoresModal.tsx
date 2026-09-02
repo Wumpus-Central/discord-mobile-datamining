@@ -1,10 +1,10 @@
-// === Module 16043: ICYMICustomScoresModal ===
+// === Module 16274: ICYMICustomScoresModal ===
 
-// Module 16043 (ICYMICustomScoresModal)
+// Module 16274 (ICYMICustomScoresModal)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 7822 */;
+import createNativeStackNavigator from "createNativeStackNavigator" /* 7831 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
 const require = arg1;
@@ -19,7 +19,7 @@ const result = require("set").fileFinishedImporting("modules/icymi/native/custom
 
 export default function ICYMICustomScoresModal() {
   const _require = callback3();
-  let obj = _require(6008);
+  let obj = _require(6016);
   closure_1 = obj.useAccessibilityNativeStackOptions();
   obj = {
     screenOptions() {
@@ -41,14 +41,14 @@ export default function ICYMICustomScoresModal() {
     name: "default",
     options(navigation) {
       const obj = { title: null, headerLeft: null };
-      const intl = lib(1236).intl;
-      obj[0] = intl.string(lib(1236).t.jVshKt);
-      obj[1] = lib(7607).getRenderModalCloseImage(navigation.navigation);
-      const merged = Object.assign(callback(10662)());
+      const intl = lib(1233).intl;
+      obj[0] = intl.string(lib(1233).t.jVshKt);
+      obj[1] = lib(7617).getRenderModalCloseImage(navigation.navigation);
+      const merged = Object.assign(callback(10883)());
       return obj;
     },
     getComponent() {
-      return lib(16044).default;
+      return lib(16275).default;
     }
   };
   const items = [
@@ -56,11 +56,11 @@ export default function ICYMICustomScoresModal() {
     callback(closure_5.Screen, {
       name: "guild",
       options(navigation) {
-        const obj = { headerLeft: lib(7607).getRenderModalBackImage(navigation.navigation) };
+        const obj = { headerLeft: lib(7617).getRenderModalBackImage(navigation.navigation) };
         return obj;
       },
       getComponent() {
-        return lib(16045).default;
+        return lib(16276).default;
       }
     })
   ];

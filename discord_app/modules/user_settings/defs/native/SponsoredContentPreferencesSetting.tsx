@@ -1,13 +1,13 @@
-// === Module 15457: route ===
+// === Module 15687: route ===
 
-// Module 15457 (route)
+// Module 15687 (route)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2043 */;
-import QuestsIcon from "QuestsIcon" /* 14600 */;
-import apexExperiment from "apexExperiment" /* 15455 */;
-import createToggle from "createToggle" /* 11068 */;
+import ME from "ME" /* 673 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import messagesProxyDefault from "messagesProxy" /* 2042 */;
+import QuestsIcon from "QuestsIcon" /* 14823 */;
+import apexExperiment from "apexExperiment" /* 15685 */;
+import createToggle from "createToggle" /* 11288 */;
 
 obj = {
   useTitle() {
@@ -22,7 +22,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.SPONSORED_CONTENT_PREFERENCES,
   getComponent() {
-    return require(15458) /* SponsoredContentPreferencesScreen */.default;
+    return require(15688) /* SponsoredContentPreferencesScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

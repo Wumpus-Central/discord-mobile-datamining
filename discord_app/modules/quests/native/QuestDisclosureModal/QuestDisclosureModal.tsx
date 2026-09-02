@@ -1,12 +1,12 @@
-// === Module 14715: CloseButton ===
+// === Module 14941: CloseButton ===
 
-// Module 14715 (CloseButton)
+// Module 14941 (CloseButton)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import NavigationStack from "NavigationStack" /* 6008 */;
-import HeaderActionButton from "HeaderActionButton" /* 6237 */;
-import registerAssetDefault from "registerAsset" /* 7764 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import NavigationStack from "NavigationStack" /* 6016 */;
+import HeaderActionButton from "HeaderActionButton" /* 6246 */;
+import registerAssetDefault from "registerAsset" /* 7773 */;
 
 function CloseButton() {
   const obj = {
@@ -31,23 +31,23 @@ let closure_4 = { DISCLOSURE: "disclosure" };
 const result = set.fileFinishedImporting("modules/quests/native/QuestDisclosureModal/QuestDisclosureModal.tsx");
 
 export default function QuestDisclosureModal(arg0) {
-  ({ isTargetedDisclosure: require, gamePublisher: importDefault, gameTitle: dependencyMap, cosponsorName: jsx, isVideoQuest: closure_4 } = arg0);
+  ({ adCreativeType: require, isTargetedDisclosure: importDefault, gamePublisher: dependencyMap, gameTitle: jsx, cosponsorName: closure_4, isVideoQuest: CloseButton } = arg0);
   function onClose() {
-    return callback2(14714).hideModal();
+    return callback2(14940).hideModal();
   }
   let obj = {
-    headerLeft: onClose,
+    headerLeft: CloseButton,
     headerRight() {
       return null;
     },
     headerTitle() {
       const obj = { title: null };
-      const intl = callback(1236).intl;
-      obj[0] = intl.string(callback(1236).t.GcsZKJ);
-      return callback3(callback(5495).NavigatorHeader, obj);
+      const intl = callback(1233).intl;
+      obj[0] = intl.string(callback(1233).t.GcsZKJ);
+      return callback3(callback(5503).NavigatorHeader, obj);
     },
     render() {
-      return closure_1_3(closure_1_1(closure_1_2[6]), { isTargetedDisclosure: closure_0, gamePublisher: closure_1, gameTitle: closure_2, onClose, cosponsorName: closure_3, isVideoQuest: closure_4 });
+      return closure_1_3(closure_1_1(closure_1_2[6]), { adCreativeType: closure_0, isTargetedDisclosure: closure_1, gamePublisher: closure_2, gameTitle: closure_3, onClose, cosponsorName: closure_4, isVideoQuest: closure_5 });
     }
   };
   obj = { screens: { [closure_4.DISCLOSURE]: obj }, initialRouteName: constants.DISCLOSURE, headerBackTitle: null };

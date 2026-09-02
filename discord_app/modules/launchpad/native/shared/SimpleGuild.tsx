@@ -1,12 +1,12 @@
-// === Module 16551: SimpleGuild ===
+// === Module 16786: SimpleGuild ===
 
-// Module 16551 (SimpleGuild)
+// Module 16786 (SimpleGuild)
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { getGuildIconSource } from "GuildNSFWContentLevel" /* 1430 */;
-import closure_6 from "updateGuildUnreadSentinel" /* 7381 */;
-import closure_7 from "createGuildRecordFromRust" /* 1909 */;
-import { ME } from "ME" /* 676 */;
+import { getGuildIconSource } from "GuildNSFWContentLevel" /* 1429 */;
+import closure_6 from "updateGuildUnreadSentinel" /* 7390 */;
+import closure_7 from "createGuildRecordFromRust" /* 1908 */;
+import { ME } from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

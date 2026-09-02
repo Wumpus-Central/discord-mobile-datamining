@@ -1,8 +1,8 @@
-// === Module 9840: items ===
+// === Module 9862: items ===
 
-// Module 9840 (items)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 9862 (items)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 let items = [];
 let c1 = false;

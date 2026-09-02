@@ -1,10 +1,10 @@
-// === Module 6521: EmojiWumpThinkExample ===
+// === Module 6530: EmojiWumpThinkExample ===
 
-// Module 6521 (EmojiWumpThinkExample)
+// Module 6530 (EmojiWumpThinkExample)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5493 */;
-import metadataDefault from "metadata" /* 6522 */;
+import preloadDefault from "preload" /* 5501 */;
+import metadataDefault from "metadata" /* 6531 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/EmojiWumpThinkExample.native.tsx");

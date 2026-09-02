@@ -1,14 +1,14 @@
-// === Module 7877: getFallbackDoubleTapDisambiguatedEmoji ===
+// === Module 7886: getFallbackDoubleTapDisambiguatedEmoji ===
 
-// Module 7877 (getFallbackDoubleTapDisambiguatedEmoji)
+// Module 7886 (getFallbackDoubleTapDisambiguatedEmoji)
 import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4134 */;
 import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4138 */;
 import closure_3 from "noop" /* 19 */;
-import { isContentShown } from "withContent" /* 1379 */;
-import closure_5 from "getEmojiToGroupId" /* 5401 */;
-import { NITRO_UPSELL_ALERT_KEY } from "NITRO_UPSELL_ALERT_KEY" /* 7878 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1384 */;
-import set from "set" /* 1925 */;
+import { isContentShown } from "withContent" /* 1378 */;
+import closure_5 from "getEmojiToGroupId" /* 5409 */;
+import { NITRO_UPSELL_ALERT_KEY } from "NITRO_UPSELL_ALERT_KEY" /* 7887 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
+import set from "set" /* 1924 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -81,7 +81,7 @@ export const handleAddDefaultDoubleTapReaction = function handleAddDefaultDouble
     disableDoubleTap = setting.disableDoubleTap;
   }
   if (true !== disableDoubleTap) {
-    let tmpResult = tmp(7879);
+    let tmpResult = tmp(7888);
     if (tmpResult.canReactToMessage(message, channel)) {
       obj = setting;
       if (setting == null) {
@@ -120,7 +120,7 @@ export const handleAddDefaultDoubleTapReaction = function handleAddDefaultDouble
         const result1 = obj3.convertNameToSurrogate("heart");
         let tmp11 = null;
         if ("" !== result1) {
-          obj = { name: null, id: "PX_16", animated: "kasvot" };
+          obj = { name: null, id: "PX_16", animated: "circle" };
           obj[0] = result1;
           tmp11 = obj;
         }
@@ -148,8 +148,8 @@ export const handleAddDefaultDoubleTapReaction = function handleAddDefaultDouble
         obj1[0] = channel.id;
         obj1[1] = message.id;
         obj1[2] = tmp8;
-        obj1[3] = tmp(7508).ReactionLocations.DOUBLE_TAP;
-        tmp(7508).removeReaction(obj1);
+        obj1[3] = tmp(7518).ReactionLocations.DOUBLE_TAP;
+        tmp(7518).removeReaction(obj1);
       } else {
         if (flag) {
           let obj7 = parseRawEmojiObjectDefault;
@@ -199,22 +199,22 @@ export const handleAddDefaultDoubleTapReaction = function handleAddDefaultDouble
               const obj5 = { emojiName: null, reason: null };
               obj5[0] = customEmojiById.name;
               obj5[1] = emojiUnavailableReason;
-              const result3 = tmp(7881).showDoubleTapErrorToast(obj5);
+              const result3 = tmp(7890).showDoubleTapErrorToast(obj5);
             }
             const obj12 = getEmojiUnavailableReasonDefault;
           }
           const result4 = tmp(4446).triggerHapticFeedback(tmp(4446).HapticFeedbackTypes.IMPACT_LIGHT);
-          const tmpResult5 = tmp(7508);
+          const tmpResult5 = tmp(7518);
           const id = channel.id;
-          tmpResult5.addReaction(id, message.id, tmp8, tmp(7508).ReactionLocations.DOUBLE_TAP);
+          tmpResult5.addReaction(id, message.id, tmp8, tmp(7518).ReactionLocations.DOUBLE_TAP);
           const tmpResult4 = tmp(4446);
           obj6 = { dismissAction: null };
           obj6[0] = ContentDismissActionType.INDIRECT_ACTION;
-          const result5 = tmp(4298).UNSAFE_markDismissibleContentAsDismissed(tmp(1373).DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER, obj6);
-          if (isContentShown(tmp(1373).DismissibleContent.DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL)) {
+          const result5 = tmp(4298).UNSAFE_markDismissibleContentAsDismissed(tmp(1372).DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER, obj6);
+          if (isContentShown(tmp(1372).DismissibleContent.DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL)) {
             obj7 = { dismissAction: null, forceTrack: true };
             obj7[0] = tmp31.INDIRECT_ACTION;
-            const result6 = tmp(4298).UNSAFE_markDismissibleContentAsDismissed(tmp(1373).DismissibleContent.DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL, obj7);
+            const result6 = tmp(4298).UNSAFE_markDismissibleContentAsDismissed(tmp(1372).DismissibleContent.DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL, obj7);
             const tmpResult7 = tmp(4298);
           }
           tmp31 = ContentDismissActionType;
@@ -226,8 +226,8 @@ export const handleAddDefaultDoubleTapReaction = function handleAddDefaultDouble
           }
           const obj8 = { emojiName: null };
           obj8[0] = emojiName;
-          const result7 = tmp(7881).showDoubleTapErrorToast(obj8);
-          const tmpResult8 = tmp(7881);
+          const result7 = tmp(7890).showDoubleTapErrorToast(obj8);
+          const tmpResult8 = tmp(7890);
         }
       }
     }

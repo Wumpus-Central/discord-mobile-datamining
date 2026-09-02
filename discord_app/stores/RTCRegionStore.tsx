@@ -2,9 +2,9 @@
 
 // Module 4575 (initialize)
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "initialize" /* 586 */;
+import setDefault from "set" /* 684 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 let obj = { preferredRegions: null, lastTestTimestamp: null, lastGeoRankedOrder: null };
 const HOUR = setDefault.Millis.HOUR;

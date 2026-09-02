@@ -1,10 +1,10 @@
-// === Module 17460: AgeVerificationScreen ===
+// === Module 17696: AgeVerificationScreen ===
 
-// Module 17460 (AgeVerificationScreen)
+// Module 17696 (AgeVerificationScreen)
 import closure_3 from "noop" /* 19 */;
 import { Pressable } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import { HelpdeskArticles } from "ME" /* 676 */;
+import closure_5 from "mergeGuildAvatar" /* 1921 */;
+import { HelpdeskArticles } from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

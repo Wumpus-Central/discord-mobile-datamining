@@ -1,13 +1,13 @@
-// === Module 14364: UsernameStatusMessage ===
+// === Module 14587: UsernameStatusMessage ===
 
-// Module 14364 (UsernameStatusMessage)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 14587 (UsernameStatusMessage)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import { UserSettingsSections } from "ME" /* 676 */;
+import closure_9 from "mergeGuildAvatar" /* 1921 */;
+import { UserSettingsSections } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -15,11 +15,11 @@ const require = arg1;
 function UsernameStatusMessage(showHint) {
   showHint = showHint.showHint;
   const match = showHint(4705).match(showHint.usernameStatus);
-  let obj = { type: showHint(14365).NameValidationState.ERROR, message: null };
+  let obj = { type: showHint(14588).NameValidationState.ERROR, message: null };
   const P = showHint(4705).P;
   obj[1] = P.select();
   const str = showHint(4705);
-  obj = { type: showHint(14365).NameValidationState.AVAILABLE, message: null };
+  obj = { type: showHint(14588).NameValidationState.AVAILABLE, message: null };
   const P2 = showHint(4705).P;
   obj[1] = P2.select();
   const withResult = match.with(obj, (children) => callback(showHint(4474).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }));

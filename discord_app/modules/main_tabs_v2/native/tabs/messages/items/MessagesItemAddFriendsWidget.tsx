@@ -1,17 +1,17 @@
-// === Module 15687: getFriendInviteCode ===
+// === Module 15918: getFriendInviteCode ===
 
-// Module 15687 (getFriendInviteCode)
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 15918 (getFriendInviteCode)
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Text from "Text" /* 4474 */;
-import PressableBase from "PressableBase" /* 5068 */;
-import ButtonBadgeDefault from "ButtonBadge" /* 12919 */;
-import registerAssetDefault from "registerAsset" /* 13593 */;
-import registerAssetDefault2 from "registerAsset" /* 15688 */;
+import PressableBase from "PressableBase" /* 5076 */;
+import ButtonBadgeDefault from "ButtonBadge" /* 13141 */;
+import registerAssetDefault from "registerAsset" /* 13816 */;
+import registerAssetDefault2 from "registerAsset" /* 15919 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { InstantInviteSources } from "ME" /* 676 */;
+import { InstantInviteSources } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -68,8 +68,8 @@ function _getFriendInviteCode() {
         } else if (1 === tmp7) {
           c3 = 0;
           let obj2 = code(4193);
-          const intl = code(1236).intl;
-          obj2.presentError(intl.string(code(1236).t.R0RpRX));
+          const intl = code(1233).intl;
+          obj2.presentError(intl.string(code(1233).t.R0RpRX));
           c5 = 3;
           obj2 = { value: null, done: true };
           obj2[0] = undefined;
@@ -169,11 +169,11 @@ function _handleShare() {
           return obj;
         } else {
           callback = arg1;
-          const obj5 = callback(9909);
-          const intl = callback(1236).intl;
+          const obj5 = callback(9931);
+          const intl = callback(1233).intl;
           const obj2 = { link: null };
-          obj2[0] = callback2(7503)(callback);
-          obj5.handleOpenShareSheet(callback, null, intl.formatToPlainString(callback(1236).t.PJf9P9, obj2), constants.ADD_FRIENDS_WIDGET);
+          obj2[0] = callback2(7513)(callback);
+          obj5.handleOpenShareSheet(callback, null, intl.formatToPlainString(callback(1233).t.PJf9P9, obj2), constants.ADD_FRIENDS_WIDGET);
           c3 = 3;
           return { value: "HermesInternal", done: null };
         }

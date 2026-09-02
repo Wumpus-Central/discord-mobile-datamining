@@ -1,21 +1,21 @@
-// === Module 14518: FamilyCenterMaxConnectionsBlurb ===
+// === Module 14741: FamilyCenterMaxConnectionsBlurb ===
 
-// Module 14518 (FamilyCenterMaxConnectionsBlurb)
+// Module 14741 (FamilyCenterMaxConnectionsBlurb)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import messagesProxyDefault from "messagesProxy" /* 2369 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5553 */;
-import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 8772 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8773 */;
-import set from "set" /* 11027 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 11492 */;
-import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 14479 */;
-import FamilyCenterLinkingBannerParentContentDefault from "FamilyCenterLinkingBannerParentContent" /* 14519 */;
-import FamilyCenterAcceptedLinkRowDefault from "FamilyCenterAcceptedLinkRow" /* 14521 */;
-import FamilyCenterPendingLinkRowDefault from "FamilyCenterPendingLinkRow" /* 14530 */;
+import ThemesDefault from "Themes" /* 709 */;
+import messagesProxyDefault from "messagesProxy" /* 2368 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5561 */;
+import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 8787 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8788 */;
+import set from "set" /* 11247 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 11715 */;
+import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 14702 */;
+import FamilyCenterLinkingBannerParentContentDefault from "FamilyCenterLinkingBannerParentContent" /* 14742 */;
+import FamilyCenterAcceptedLinkRowDefault from "FamilyCenterAcceptedLinkRow" /* 14744 */;
+import FamilyCenterPendingLinkRowDefault from "FamilyCenterPendingLinkRow" /* 14753 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import items from "items" /* 7283 */;
-import { THROUGHLINE_URL } from "LOCATION_CONTEXT_MOBILE" /* 11000 */;
+import items from "items" /* 7292 */;
+import { THROUGHLINE_URL } from "LOCATION_CONTEXT_MOBILE" /* 11220 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -26,9 +26,9 @@ function FamilyCenterMaxConnectionsBlurb() {
   const tmp = callback3();
   const tmp5 = importDefault;
   useAgeSpecificText;
-  const intl = tmp2(1236).intl;
+  const intl = tmp2(1233).intl;
   intl.formatToPlainString(messagesProxyDefault["1/PzIj"], { maxConnections: useIsInAdultAgeGroupDefault() ? closure_5 : closure_6 });
-  const intl2 = tmp2(1236).intl;
+  const intl2 = tmp2(1233).intl;
   let tmp10 = null;
   if (hasMaxConnections) {
     obj = { style: null, children: null };
@@ -46,12 +46,12 @@ function FamilyCenterHelpLineInfo() {
   const shouldShowHelplineLink = obj.useShouldShowHelplineLink();
   set;
   if (shouldShowHelplineLink) {
-    const intl2 = tmp2(1236).intl;
+    const intl2 = tmp2(1233).intl;
     let formatResult = intl2.format(messagesProxyDefault["KOwsf/"], { helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line" });
   } else {
     formatResult = null;
     if (tmp6) {
-      const intl = tmp2(1236).intl;
+      const intl = tmp2(1233).intl;
       obj = { helpLink: null };
       obj[0] = THROUGHLINE_URL;
       formatResult = intl.format(messagesProxyDefault["6tsC8u"], obj);
@@ -63,7 +63,7 @@ function FamilyCenterHelpLineInfo() {
     obj[0] = tmp.container;
     obj1 = { style: null, variant: "heading-sm/semibold", children: null };
     obj1[0] = tmp.supportHeader;
-    const intl3 = tmp2(1236).intl;
+    const intl3 = tmp2(1233).intl;
     obj1[2] = intl3.string(messagesProxyDefault["7/tVhv"]);
     const items = [callback(tmp2(4474).Text, obj1), ];
     const obj2 = { variant: "text-xs/medium", color: "text-muted", children: null };

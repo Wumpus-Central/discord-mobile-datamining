@@ -1,11 +1,11 @@
-// === Module 11525: isNewMessageGroup ===
+// === Module 11748: isNewMessageGroup ===
 
-// Module 11525 (isNewMessageGroup)
+// Module 11748 (isNewMessageGroup)
 import set from "set" /* 2 */;
-import setDefault from "set" /* 687 */;
+import setDefault from "set" /* 684 */;
 import resetCache from "resetCache" /* 4163 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6117 */;
-import ME from "ME" /* 676 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6125 */;
+import ME from "ME" /* 673 */;
 
 function isNewMessageGroup(isForumPost, content, hasFlag) {
   let type = hasFlag;

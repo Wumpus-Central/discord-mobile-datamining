@@ -1,14 +1,14 @@
-// === Module 10474: items ===
+// === Module 10695: items ===
 
-// Module 10474 (items)
-import nDefault from "n" /* 689 */;
-import ThemesDefault from "Themes" /* 712 */;
+// Module 10695 (items)
+import nDefault from "n" /* 686 */;
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "initialize" /* 8560 */;
-import closure_10 from "createEmptyPromotionsByType" /* 10475 */;
-import { VerticalGradient } from "ME" /* 676 */;
+import closure_9 from "initialize" /* 8573 */;
+import closure_10 from "createEmptyPromotionsByType" /* 10696 */;
+import { VerticalGradient } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -36,12 +36,12 @@ let closure_17 = createCacheKey.createStyles((width) => {
   const space = ThemesDefault.space;
   const alphaResult = obj5.alpha(0.8);
   obj[7] = { textAlign: "center", marginTop: arg2 ? space.PX_16 : space.PX_12, marginHorizontal: ThemesDefault.space.PX_24 };
-  const space2 = tmp(712).space;
+  const space2 = tmp(709).space;
   const obj3 = { textAlign: "center", marginTop: arg2 ? space.PX_16 : space.PX_12, marginHorizontal: ThemesDefault.space.PX_24 };
   obj[8] = { textAlign: "center", marginTop: arg2 ? space2.PX_16 : space2.PX_12, marginHorizontal: ThemesDefault.space.PX_24 };
-  const space3 = tmp(712).space;
+  const space3 = tmp(709).space;
   obj[9] = { marginTop: arg2 ? space3.PX_16 : space3.PX_32 };
-  obj5 = { paddingTop: tmp(712).space.PX_16, paddingBottom: tmp(712).space.PX_48 };
+  obj5 = { paddingTop: tmp(709).space.PX_16, paddingBottom: tmp(709).space.PX_48 };
   obj[10] = obj5;
   obj[11] = { flex: 1, alignItems: "center", justifyContent: "center" };
   obj[12] = { position: "absolute", top: 0, left: 0, zIndex: 1 };
@@ -532,7 +532,7 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
         const tmp4Result3 = tmp4(tmp2[30]);
       }
     } else {
-      const obj34 = { style: null, guildId: "r", size: "PX_16", user: null };
+      const obj34 = { style: null, guildId: "r", size: "getChannelIcon", user: "landscape" };
       obj34[0] = tmp13.avatar;
       const AvatarSizes = tmp(tmp2[26]).AvatarSizes;
       obj34[2] = tmp65Result ? AvatarSizes.LARGE_48 : AvatarSizes.XLARGE;

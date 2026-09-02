@@ -1,8 +1,8 @@
-// === Module 9522: areParticipantStatesEqual ===
+// === Module 9535: areParticipantStatesEqual ===
 
-// Module 9522 (areParticipantStatesEqual)
+// Module 9535 (areParticipantStatesEqual)
 import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "participantFromServer" /* 1386 */;
+import closure_3 from "participantFromServer" /* 1385 */;
 import closure_4 from "getParticipants" /* 4494 */;
 import closure_5 from "reset" /* 4500 */;
 import closure_6 from "_detectH265HardwareDecode" /* 4529 */;
@@ -29,11 +29,11 @@ export default function useIsPrivateAudioOnlyCall(id) {
     }, items1, areParticipantStatesEqual), 1)[0]);
   }
   dependencyMap = tmp3;
-  obj = _require(589);
+  obj = _require(586);
   const tmp = _require;
   const items2 = [closure_7, closure_6, closure_5];
   const items3 = [id, tmp3];
-  return _require(589).useStateFromStores(items2, () => {
+  return _require(586).useStateFromStores(items2, () => {
     let isPrivateResult = _private.isPrivate();
     if (isPrivateResult) {
       isPrivateResult = !closure_1_7.hasVideo(tmp.id);

@@ -1,12 +1,12 @@
-// === Module 12995: WhatYouLoseItem ===
+// === Module 13217: WhatYouLoseItem ===
 
-// Module 12995 (WhatYouLoseItem)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 13217 (WhatYouLoseItem)
+import ThemesDefault from "Themes" /* 709 */;
 import Text from "Text" /* 4474 */;
-import preloadDefault from "preload" /* 5493 */;
+import preloadDefault from "preload" /* 5501 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
+import { PremiumTypes } from "GuildFeatures" /* 1923 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

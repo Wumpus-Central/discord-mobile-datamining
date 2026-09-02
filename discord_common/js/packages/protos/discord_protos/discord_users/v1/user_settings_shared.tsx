@@ -1,9 +1,9 @@
-// === Module 1335: create ===
+// === Module 1334: create ===
 
-// Module 1335 (create)
-import _mod1307 from "module_1307" /* 1307 */;
+// Module 1334 (create)
+import _mod1306 from "module_1306" /* 1306 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import { MessageType } from "module_1307" /* 1307 */;
+import { MessageType } from "module_1306" /* 1306 */;
 
 require = arg1;
 class Versions$Type extends MessageType {
@@ -22,10 +22,10 @@ prototype["create"] = function create(arr) {
   let obj = { clientVersion: 0, serverVersion: 0, dataVersion: 0 };
   const _Object = Object;
   obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1306.MESSAGE_TYPE, obj);
   if (undefined !== arr) {
-    const result = _mod1307.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1307;
+    const result = _mod1306.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1306;
   }
   return obj;
 };
@@ -69,7 +69,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
             if (true === onRead) {
               let tmp8 = require;
               let tmp9 = dependencyMap;
-              onRead = _mod1307.UnknownFieldHandler.onRead;
+              onRead = _mod1306.UnknownFieldHandler.onRead;
             }
             let tmp10 = obj;
             let tmp11 = tmp5;
@@ -85,21 +85,21 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(clientVersion, tag, writeUnknownFields) {
   if (0 !== clientVersion.clientVersion) {
-    tag.tag(1, _mod1307.WireType.Varint).uint32(clientVersion.clientVersion);
-    const tagResult = tag.tag(1, _mod1307.WireType.Varint);
+    tag.tag(1, _mod1306.WireType.Varint).uint32(clientVersion.clientVersion);
+    const tagResult = tag.tag(1, _mod1306.WireType.Varint);
   }
   if (0 !== clientVersion.serverVersion) {
-    tag.tag(2, _mod1307.WireType.Varint).uint32(clientVersion.serverVersion);
-    const tagResult1 = tag.tag(2, _mod1307.WireType.Varint);
+    tag.tag(2, _mod1306.WireType.Varint).uint32(clientVersion.serverVersion);
+    const tagResult1 = tag.tag(2, _mod1306.WireType.Varint);
   }
   if (0 !== clientVersion.dataVersion) {
-    tag.tag(3, _mod1307.WireType.Varint).uint32(clientVersion.dataVersion);
-    const tagResult2 = tag.tag(3, _mod1307.WireType.Varint);
+    tag.tag(3, _mod1306.WireType.Varint).uint32(clientVersion.dataVersion);
+    const tagResult2 = tag.tag(3, _mod1306.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1307.UnknownFieldHandler.onWrite;
+      onWrite = _mod1306.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, clientVersion, tag);

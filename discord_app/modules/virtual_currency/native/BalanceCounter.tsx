@@ -1,7 +1,7 @@
-// === Module 10847: BalanceCounter ===
+// === Module 11067: BalanceCounter ===
 
-// Module 10847 (BalanceCounter)
-import context from "context" /* 1356 */;
+// Module 11067 (BalanceCounter)
+import context from "context" /* 1355 */;
 import _mod4217 from "module_4217" /* 4217 */;
 import Text from "Text" /* 4474 */;
 import closure_3 from "_slicedToArray" /* 32 */;

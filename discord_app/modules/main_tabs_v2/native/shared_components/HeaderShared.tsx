@@ -1,17 +1,17 @@
-// === Module 7607: GenericHeaderTitle ===
+// === Module 7617: GenericHeaderTitle ===
 
-// Module 7607 (GenericHeaderTitle)
-import shallowEqualDefault from "shallowEqual" /* 643 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
+// Module 7617 (GenericHeaderTitle)
+import shallowEqualDefault from "shallowEqual" /* 640 */;
+import ThemesDefault from "Themes" /* 709 */;
+import Button from "Button" /* 1296 */;
 import map from "map" /* 4197 */;
 import Text from "Text" /* 4474 */;
-import PressableBase from "PressableBase" /* 5068 */;
-import Background from "Background" /* 5502 */;
-import JoinCallIconDefault from "JoinCallIcon" /* 7619 */;
+import PressableBase from "PressableBase" /* 5076 */;
+import Background from "Background" /* 5510 */;
+import JoinCallIconDefault from "JoinCallIcon" /* 7629 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { MIN_HEADER_HEIGHT } from "MIN_HEADER_HEIGHT" /* 7608 */;
+import { MIN_HEADER_HEIGHT } from "MIN_HEADER_HEIGHT" /* 7618 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -271,11 +271,11 @@ export function getRenderBackImage(navigation) {
 }
 export const getRenderModalBackImage = function getRenderModalBackImage(navigation) {
   const _require = navigation;
-  return _require(500).isAndroid() ? undefined : (() => closure_1_6(closure_1_1(closure_1_2[12]), { navigation: closure_0 }));
+  return _require(1234).isAndroid() ? undefined : (() => closure_1_6(closure_1_1(closure_1_2[12]), { navigation: closure_0 }));
 };
 export const getRenderModalCloseImage = function getRenderModalCloseImage(navigation) {
   const _require = navigation;
-  return _require(500).isAndroid() ? undefined : (() => closure_1_6(closure_1_1(closure_1_2[12]), { navigation: closure_0, type: "close" }));
+  return _require(1234).isAndroid() ? undefined : (() => closure_1_6(closure_1_1(closure_1_2[12]), { navigation: closure_0, type: "close" }));
 };
 export const Header = memoResult;
 export function getDefaultStackHeaderProps(navigation) {

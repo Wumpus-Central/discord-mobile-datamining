@@ -1,8 +1,8 @@
-// === Module 13825: BadgeColors ===
+// === Module 14048: BadgeColors ===
 
-// Module 13825 (BadgeColors)
+// Module 14048 (BadgeColors)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import Text from "Text" /* 4474 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;

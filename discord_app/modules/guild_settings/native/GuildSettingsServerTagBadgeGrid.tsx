@@ -1,11 +1,11 @@
-// === Module 17173: GuildSettingsServerTagBadgeGrid ===
+// === Module 17409: GuildSettingsServerTagBadgeGrid ===
 
-// Module 17173 (GuildSettingsServerTagBadgeGrid)
-import ThemesDefault from "Themes" /* 712 */;
-import useGuildTagBadgeCollectionDefault from "useGuildTagBadgeCollection" /* 17174 */;
+// Module 17409 (GuildSettingsServerTagBadgeGrid)
+import ThemesDefault from "Themes" /* 709 */;
+import useGuildTagBadgeCollectionDefault from "useGuildTagBadgeCollection" /* 17410 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { GuildTagBadgeSize } from "items" /* 7853 */;
+import { GuildTagBadgeSize } from "items" /* 7862 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -32,8 +32,8 @@ export default function GuildSettingsServerTagBadgeGrid(guildId) {
   }, items);
   let obj = { spacing: ThemesDefault.space.PX_8, children: null };
   obj = { variant: "text-md/medium", color: "text-subtle", accessibilityRole: "header", children: null };
-  const intl = guildId(1236).intl;
-  obj[3] = intl.string(guildId(1236).t.wRnfnY);
+  const intl = guildId(1233).intl;
+  obj[3] = intl.string(guildId(1233).t.wRnfnY);
   const items1 = [callback(guildId(4474).Text, obj), , ];
   obj = {
     accessibilityRole: "radiogroup",
@@ -58,8 +58,8 @@ export default function GuildSettingsServerTagBadgeGrid(guildId) {
   let tmp6Result = lockedBadges.length > 0;
   if (tmp6Result) {
     obj1 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
-    const intl2 = tmp7(1236).intl;
-    obj1[1] = intl2.string(tmp7(1236).t.U5p3GZ);
+    const intl2 = tmp7(1233).intl;
+    obj1[1] = intl2.string(tmp7(1233).t.U5p3GZ);
     obj1[2] = callback;
     obj1[3] = tmp.upsellCard;
     const obj2 = { style: null, children: null };
@@ -69,12 +69,12 @@ export default function GuildSettingsServerTagBadgeGrid(guildId) {
     const items2 = [tmp8(closure_5, obj2), , ];
     const obj3 = { variant: "text-md/medium", color: "text-subtle", style: null, children: null };
     obj3[2] = tmp.upsellText;
-    const intl3 = tmp7(1236).intl;
-    obj3[3] = intl3.string(tmp7(1236).t.U5p3GZ);
+    const intl3 = tmp7(1233).intl;
+    obj3[3] = intl3.string(tmp7(1233).t.U5p3GZ);
     items2[1] = tmp8(tmp7(4474).Text, obj3);
     const obj4 = { size: "md", color: null };
     obj4[1] = ThemesDefault.colors.ICON_SUBTLE;
-    items2[2] = tmp8(tmp7(6003).ChevronSmallRightIcon, obj4);
+    items2[2] = tmp8(tmp7(6011).ChevronSmallRightIcon, obj4);
     obj1[4] = items2;
     tmp6Result = tmp6(closure_4, obj1);
   }

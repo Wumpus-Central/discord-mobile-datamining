@@ -1,8 +1,8 @@
-// === Module 8845: MEDIA_ITEM_MAX_WIDTH ===
+// === Module 8860: MEDIA_ITEM_MAX_WIDTH ===
 
-// Module 8845 (MEDIA_ITEM_MAX_WIDTH)
+// Module 8860 (MEDIA_ITEM_MAX_WIDTH)
 import set from "set" /* 2 */;
-import handleImageLoad from "handleImageLoad" /* 1465 */;
+import handleImageLoad from "handleImageLoad" /* 1464 */;
 
 let c2 = 366;
 let closure_3 = { width: 1920, height: 1080 };

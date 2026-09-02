@@ -1,8 +1,8 @@
-// === Module 15651: useFirstGloballyViewbleGuildChannelId ===
+// === Module 15882: useFirstGloballyViewbleGuildChannelId ===
 
-// Module 15651 (useFirstGloballyViewbleGuildChannelId)
-import closure_3 from "comparator" /* 1982 */;
-import { Permissions } from "sum" /* 505 */;
+// Module 15882 (useFirstGloballyViewbleGuildChannelId)
+import closure_3 from "comparator" /* 1981 */;
+import { Permissions } from "sum" /* 502 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/permissions/useFirstGloballyViewbleGuildChannelId.tsx");
@@ -11,7 +11,7 @@ export const useFirstGloballyViewbleGuildChannelId = function useFirstGloballyVi
   const _require = guildId;
   const items = [closure_3];
   const items1 = [guildId];
-  return _require(589).useStateFromStores(items, () => {
+  return _require(586).useStateFromStores(items, () => {
     if (null != closure_0) {
       const selectableChannels = closure_1_3.getSelectableChannels(tmp);
       for (const item10010 of selectableChannels) {

@@ -1,7 +1,7 @@
-// === Module 16440: ? ===
+// === Module 16675: ? ===
 
-// Module 16440
-import ChannelHeaderDefault from "ChannelHeader" /* 12927 */;
+// Module 16675
+import ChannelHeaderDefault from "ChannelHeader" /* 13149 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

@@ -2,7 +2,7 @@
 
 // Module 4423 (SendMessageIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
 import registerAsset from "registerAsset" /* 4424 */;
 import { jsx } from "jsxProd" /* 21 */;

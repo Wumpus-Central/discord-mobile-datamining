@@ -1,15 +1,15 @@
-// === Module 9910: updateWithLatestInvite ===
+// === Module 9932: updateWithLatestInvite ===
 
-// Module 9910 (updateWithLatestInvite)
+// Module 9932 (updateWithLatestInvite)
 import _modDef38 from "module_38" /* 38 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import isGuildMemberDefault from "isGuildMember" /* 9911 */;
-import getDefaultInviteExpiration from "getDefaultInviteExpiration" /* 9913 */;
-import closure_9 from "ensureGuildLoaded" /* 1387 */;
-import closure_10 from "createGuildRecordFromRust" /* 1909 */;
-import closure_11 from "map" /* 8650 */;
-import { FormStates } from "ME" /* 676 */;
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import isGuildMemberDefault from "isGuildMember" /* 9933 */;
+import getDefaultInviteExpiration from "getDefaultInviteExpiration" /* 9935 */;
+import closure_9 from "ensureGuildLoaded" /* 1386 */;
+import closure_10 from "createGuildRecordFromRust" /* 1908 */;
+import closure_11 from "map" /* 8665 */;
+import { FormStates } from "ME" /* 673 */;
 
 require = arg1;
 function updateWithLatestInvite(channelId, arg1) {

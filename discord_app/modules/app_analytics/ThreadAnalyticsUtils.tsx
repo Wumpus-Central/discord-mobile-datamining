@@ -1,13 +1,13 @@
-// === Module 7518: collectThreadMetadata ===
+// === Module 7528: collectThreadMetadata ===
 
-// Module 7518 (collectThreadMetadata)
+// Module 7528 (collectThreadMetadata)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import transitionTo from "transitionTo" /* 1222 */;
-import closure_3 from "updateFromGuild" /* 7514 */;
-import closure_4 from "updateState" /* 6151 */;
-import { THREAD_CHANNEL_TYPES } from "createChannelRecord" /* 1391 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4121 */;
-import { Permissions } from "ME" /* 676 */;
+import transitionTo from "transitionTo" /* 1219 */;
+import closure_3 from "updateFromGuild" /* 7524 */;
+import closure_4 from "updateState" /* 6159 */;
+import { THREAD_CHANNEL_TYPES } from "createChannelRecord" /* 1390 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4120 */;
+import { Permissions } from "ME" /* 673 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/app_analytics/ThreadAnalyticsUtils.tsx");

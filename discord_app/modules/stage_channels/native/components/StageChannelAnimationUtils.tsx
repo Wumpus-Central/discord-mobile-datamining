@@ -1,6 +1,6 @@
-// === Module 10125: useStageActionBarAnimation ===
+// === Module 10147: useStageActionBarAnimation ===
 
-// Module 10125 (useStageActionBarAnimation)
+// Module 10147 (useStageActionBarAnimation)
 import set from "set" /* 2 */;
 import _mod4217 from "module_4217" /* 4217 */;
 

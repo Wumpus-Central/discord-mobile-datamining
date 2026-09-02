@@ -1,8 +1,8 @@
-// === Module 11326: result ===
+// === Module 11549: result ===
 
-// Module 11326 (result)
+// Module 11549 (result)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import setDefault from "set" /* 687 */;
+import setDefault from "set" /* 684 */;
 
 const result = 2 * setDefault.Millis.HOUR;
 const result1 = require("set").fileFinishedImporting("modules/activities/utils/isInviteActive.tsx");

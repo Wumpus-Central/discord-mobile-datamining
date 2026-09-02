@@ -1,9 +1,9 @@
-// === Module 7408: ? ===
+// === Module 7417: ? ===
 
-// Module 7408
-import sendRequest from "sendRequest" /* 530 */;
+// Module 7417
+import sendRequest from "sendRequest" /* 527 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 676 */;
+import { Endpoints } from "ME" /* 673 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/friend_suggestions/FriendSuggestionActionCreators.tsx");
@@ -19,7 +19,7 @@ export default {
       yield HTTP.get(obj1);
       if (1 === tmp7) {
         c3 = 0;
-        let obj3 = callback(709);
+        let obj3 = callback(706);
         obj3.dispatch({ type: "LOAD_FRIEND_SUGGESTIONS_FAILURE" });
         c5 = 3;
       } else if (arg0 === 1) {
@@ -27,7 +27,7 @@ export default {
         throw arg1;
       } else if (arg0 !== 2) {
         const body = arg1;
-        const obj = callback(709);
+        const obj = callback(706);
         obj3 = { type: "LOAD_FRIEND_SUGGESTIONS_SUCCESS", suggestions: null };
         obj3[1] = body.body;
         obj.dispatch(obj3);

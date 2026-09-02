@@ -1,9 +1,9 @@
-// === Module 16322: getGamePlatform ===
+// === Module 16554: getGamePlatform ===
 
-// Module 16322 (getGamePlatform)
+// Module 16554 (getGamePlatform)
 import set from "set" /* 2 */;
-import isOnXboxDefault from "isOnXbox" /* 9387 */;
-import ME from "ME" /* 676 */;
+import isOnXboxDefault from "isOnXbox" /* 9400 */;
+import ME from "ME" /* 673 */;
 
 ({ ActivityTypes: obj1, ActivityGamePlatforms: c3 } = ME);
 const result = set.fileFinishedImporting("modules/activities/utils/getGamePlatform.tsx");

@@ -1,6 +1,6 @@
-// === Module 12122: useGetExpiringGuildPowerups ===
+// === Module 12346: useGetExpiringGuildPowerups ===
 
-// Module 12122 (useGetExpiringGuildPowerups)
+// Module 12346 (useGetExpiringGuildPowerups)
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "calculateAppliedBoosts" /* 4364 */;
 

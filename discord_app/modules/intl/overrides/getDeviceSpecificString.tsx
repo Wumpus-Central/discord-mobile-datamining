@@ -1,8 +1,8 @@
-// === Module 7568: getDeviceSpecificString ===
+// === Module 7578: getDeviceSpecificString ===
 
-// Module 7568 (getDeviceSpecificString)
+// Module 7578 (getDeviceSpecificString)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 
 const result = set.fileFinishedImporting("modules/intl/overrides/getDeviceSpecificString.tsx");
 

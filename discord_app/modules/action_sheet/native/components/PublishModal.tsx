@@ -1,10 +1,10 @@
-// === Module 11253: PublishModal ===
+// === Module 11476: PublishModal ===
 
-// Module 11253 (PublishModal)
+// Module 11476 (PublishModal)
 import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import useChannelFollowerStatsDefault from "useChannelFollowerStats" /* 11254 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import Button from "Button" /* 1296 */;
+import useChannelFollowerStatsDefault from "useChannelFollowerStats" /* 11477 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -56,10 +56,10 @@ export default function PublishModal(channelId) {
       }
       obj1 = { numGuildsFollowing: null };
       obj1[0] = num2;
-      obj[1] = intl.format(tmp11(1236).t.GCGrNP, obj1);
+      obj[1] = intl.format(tmp11(1233).t.GCGrNP, obj1);
       let tmp12 = obj;
     } else {
-      obj[1] = intl.string(tmp11(1236).t["8FpqOs"]);
+      obj[1] = intl.string(tmp11(1233).t["8FpqOs"]);
       tmp12 = obj;
     }
     obj[1] = jsx(Button.LegacyText, tmp12);

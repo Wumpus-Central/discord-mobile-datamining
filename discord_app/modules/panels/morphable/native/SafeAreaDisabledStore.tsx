@@ -1,8 +1,8 @@
-// === Module 9627: ? ===
+// === Module 9640: ? ===
 
-// Module 9627
+// Module 9640
 import set2 from "set" /* 2 */;
-import keys from "keys" /* 644 */;
+import keys from "keys" /* 641 */;
 
 let obj = keys.create((arg0, arg1) => {
   closure_0 = arg0;
@@ -14,7 +14,7 @@ let obj = keys.create((arg0, arg1) => {
     },
     requestSafeAreaDisableLock(arg0) {
       ({ key: closure_0, lockEnabled: closure_1 } = arg0);
-      callback(705).batchUpdates(() => {
+      callback(702).batchUpdates(() => {
         closure_1_0((lockKeys) => {
           lockKeys = lockKeys.lockKeys;
           const hasItem = lockKeys.has(closure_0);

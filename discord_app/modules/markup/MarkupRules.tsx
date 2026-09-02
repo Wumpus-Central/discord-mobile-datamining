@@ -1,8 +1,8 @@
 // === Module 4951: parseLink ===
 
 // Module 4951 (parseLink)
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import extractColorStringsFromServerColors from "extractColorStringsFromServerColors" /* 1988 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import extractColorStringsFromServerColors from "extractColorStringsFromServerColors" /* 1987 */;
 import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4134 */;
 import getNicknameDefault from "getNickname" /* 4673 */;
 import validateContentTypes from "validateContentTypes" /* 4954 */;
@@ -20,12 +20,12 @@ import regExpDefault2 from "regExp" /* 4978 */;
 import _modDef4979 from "module_4979" /* 4979 */;
 import matchDefault2 from "match" /* 4980 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "_toArray" /* 853 */;
-import closure_5 from "ensureGuildLoaded" /* 1387 */;
-import closure_6 from "createGuildRoleRecordFromRust" /* 1985 */;
-import closure_7 from "createGuildRecordFromRust" /* 1909 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import closure_4 from "_toArray" /* 850 */;
+import closure_5 from "ensureGuildLoaded" /* 1386 */;
+import closure_6 from "createGuildRoleRecordFromRust" /* 1984 */;
+import closure_7 from "createGuildRecordFromRust" /* 1908 */;
+import closure_8 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
 import { SUB_COMMAND_KEY_SEPARATOR } from "TRUE_OPTION_NAME" /* 4952 */;
 import { GAME_MENTION_RAW_RE } from "regExp" /* 4953 */;
 import importDefaultResult from "t" /* 4192 */;
@@ -40,7 +40,7 @@ function parseLink(arg0) {
     obj = { type: "text", content: null };
     obj[1] = arg0[1];
   } else {
-    obj = { type: "link", content: null, target: null, title: "category" };
+    obj = { type: "link", content: null, target: null, title: "call" };
     obj1 = { type: "text", content: null };
     obj1[1] = punycodeLinkResult.displayTarget;
     const items = [obj1];

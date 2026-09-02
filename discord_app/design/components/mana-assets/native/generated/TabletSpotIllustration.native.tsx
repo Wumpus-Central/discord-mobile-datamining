@@ -1,10 +1,10 @@
-// === Module 7089: TabletSpotIllustration ===
+// === Module 7098: TabletSpotIllustration ===
 
-// Module 7089 (TabletSpotIllustration)
+// Module 7098 (TabletSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5493 */;
-import metadataDefault from "metadata" /* 7090 */;
+import preloadDefault from "preload" /* 5501 */;
+import metadataDefault from "metadata" /* 7099 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/TabletSpotIllustration.native.tsx");

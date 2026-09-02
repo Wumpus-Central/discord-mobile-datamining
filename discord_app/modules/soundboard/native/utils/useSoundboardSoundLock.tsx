@@ -1,9 +1,9 @@
-// === Module 16654: useSoundboardSoundLock ===
+// === Module 16889: useSoundboardSoundLock ===
 
-// Module 16654 (useSoundboardSoundLock)
+// Module 16889 (useSoundboardSoundLock)
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4139 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_4 from "mergeGuildAvatar" /* 1921 */;
 import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME" /* 4967 */;
 
 const require = arg1;
@@ -12,11 +12,11 @@ let result = require("set").fileFinishedImporting("modules/soundboard/native/uti
 export const useSoundboardSoundLock = function useSoundboardSoundLock(sound, channel) {
   const _require = sound;
   let BARTXV = dependencyMap;
-  let obj = _require(589);
+  let obj = _require(586);
   const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const result = _require(6188).canUseSoundboardSound(stateFromStores, sound, channel);
-  const obj2 = _require(6188);
+  const result = _require(6197).canUseSoundboardSound(stateFromStores, sound, channel);
+  const obj2 = _require(6197);
   const tmp4 = !result;
   const result1 = getPremiumPlanItemDefault.canUseSoundboardEverywhere(stateFromStores);
   let tmp6 = !result1;
@@ -35,11 +35,11 @@ export const useSoundboardSoundLock = function useSoundboardSoundLock(sound, cha
     obj[2] = tmp8;
     return obj;
   } else if (tmp6) {
-    const intl2 = tmp(1236).intl;
-    BARTXV = tmp(1236).t.BARTXV;
+    const intl2 = tmp(1233).intl;
+    BARTXV = tmp(1233).t.BARTXV;
     let stringResult = intl2.string(BARTXV);
   } else if (!sound.available) {
-    let intl = tmp(1236).intl;
-    stringResult = intl.string(tmp(1236).t.MDOXJR);
+    let intl = tmp(1233).intl;
+    stringResult = intl.string(tmp(1233).t.MDOXJR);
   }
 };

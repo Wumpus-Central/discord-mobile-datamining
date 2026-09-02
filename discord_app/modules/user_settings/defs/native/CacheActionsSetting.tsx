@@ -1,20 +1,20 @@
-// === Module 15168: handleCacheActionPress ===
+// === Module 15397: handleCacheActionPress ===
 
-// Module 15168 (handleCacheActionPress)
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 15397 (handleCacheActionPress)
+import initialize from "initialize" /* 586 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
 import dispatcherDefault from "dispatcher" /* 4194 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4445 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5621 */;
-import ActionSheet from "ActionSheet" /* 5989 */;
-import ActionSheetRowIcon from "ActionSheetRowIcon" /* 5991 */;
-import FileUpIcon from "FileUpIcon" /* 15137 */;
-import FileWarningIcon from "FileWarningIcon" /* 15170 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5629 */;
+import ActionSheet from "ActionSheet" /* 5997 */;
+import ActionSheetRowIcon from "ActionSheetRowIcon" /* 5999 */;
+import FileUpIcon from "FileUpIcon" /* 15366 */;
+import FileWarningIcon from "FileWarningIcon" /* 15399 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_handleConnectionOpen" /* 5221 */;
+import closure_4 from "_handleConnectionOpen" /* 5229 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 11068 */;
+import createToggle from "createToggle" /* 11288 */;
 
 require = arg1;
 function handleCacheActionPress(key) {
@@ -67,7 +67,7 @@ function CacheActionsActionSheet() {
             return obj;
           } else {
             const callback = tmp2;
-            obj1 = closure_1_0(15169);
+            obj1 = closure_1_0(15398);
             c1 = 1;
             dependencyMap = 1;
             obj1 = { value: null, done: false };
@@ -83,8 +83,8 @@ function CacheActionsActionSheet() {
           obj[0] = arg1;
           return obj;
         } else {
-          const intl = callback(1236).intl;
-          callback2(intl.string(callback(1236).t.GgUIfl));
+          const intl = callback(1233).intl;
+          callback2(intl.string(callback(1233).t.GgUIfl));
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -99,10 +99,10 @@ function CacheActionsActionSheet() {
   const intl3 = getSystemLocale.intl;
   obj2[2] = intl3.string(getSystemLocale.t.tgwiMO);
   obj2[3] = function onPress() {
-    let obj = callback(15169);
+    let obj = callback(15398);
     obj.clearCaches();
-    const intl = callback(1236).intl;
-    const stringResult = intl.string(callback(1236).t["23xR5w"]);
+    const intl = callback(1233).intl;
+    const stringResult = intl.string(callback(1233).t["23xR5w"]);
     obj = {
       key: stringResult,
       icon() {

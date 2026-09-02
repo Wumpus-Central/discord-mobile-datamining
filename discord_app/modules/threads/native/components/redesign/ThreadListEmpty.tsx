@@ -1,11 +1,11 @@
-// === Module 16288: ? ===
+// === Module 16520: ? ===
 
-// Module 16288
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
+// Module 16520
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import Button from "Button" /* 1296 */;
 import Text from "Text" /* 4474 */;
-import registerAssetDefault from "registerAsset" /* 11805 */;
+import registerAssetDefault from "registerAsset" /* 12028 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -39,8 +39,8 @@ const memoResult = importAllResult.memo((onCreateThreadPress) => {
   if (tmp4Result) {
     const obj3 = { onPress: null, text: null };
     obj3[0] = onCreateThreadPress;
-    const intl3 = tmp5(1236).intl;
-    obj3[1] = intl3.string(tmp5(1236).t.rBIGBL);
+    const intl3 = tmp5(1233).intl;
+    obj3[1] = intl3.string(tmp5(1233).t.rBIGBL);
     tmp4Result = callback(tmp5(4928).Button, obj3);
   }
   items[3] = tmp4Result;

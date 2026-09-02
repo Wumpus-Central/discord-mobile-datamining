@@ -1,8 +1,8 @@
-// === Module 7515: getForumChannelSessionId ===
+// === Module 7525: getForumChannelSessionId ===
 
-// Module 7515 (getForumChannelSessionId)
+// Module 7525 (getForumChannelSessionId)
 import set from "set" /* 2 */;
-import v1 from "v1" /* 514 */;
+import v1 from "v1" /* 511 */;
 
 class ForumSessionAnalyticsManager {
 }

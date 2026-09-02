@@ -1,11 +1,11 @@
-// === Module 7980: getSortedVoiceSessionParticipants ===
+// === Module 7989: getSortedVoiceSessionParticipants ===
 
-// Module 7980 (getSortedVoiceSessionParticipants)
-import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 7889 */;
+// Module 7989 (getSortedVoiceSessionParticipants)
+import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 7898 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "recomputeAffinities" /* 7404 */;
-import closure_5 from "ensureGuildLoaded" /* 1387 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import closure_4 from "recomputeAffinities" /* 7413 */;
+import closure_5 from "ensureGuildLoaded" /* 1386 */;
+import closure_6 from "mergeGuildAvatar" /* 1921 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/messages/VoiceSessionUtils.tsx");
@@ -34,13 +34,13 @@ export const getSortedVoiceSessionParticipants = function getSortedVoiceSessionP
     reduced = [];
   }
   const userAffinitiesMap = authStore.getUserAffinitiesMap();
-  return _require(7981).maybeSortByProbability(reduced, userAffinitiesMap, "VoiceSessionUtils - participants");
+  return _require(7990).maybeSortByProbability(reduced, userAffinitiesMap, "VoiceSessionUtils - participants");
 };
 export const useSortedVoiceSessionParticipants = function useSortedVoiceSessionParticipants(author) {
   let stateFromStoresArray = author;
   const items = [closure_6];
   const items1 = [author.author.id, author.call];
-  stateFromStoresArray = stateFromStoresArray(589).useStateFromStoresArray(items, () => {
+  stateFromStoresArray = stateFromStoresArray(586).useStateFromStoresArray(items, () => {
     const call = stateFromStoresArray.call;
     let participants;
     if (call != null) {
@@ -56,9 +56,9 @@ export const useSortedVoiceSessionParticipants = function useSortedVoiceSessionP
     }
     return found1;
   }, items1);
-  const obj = stateFromStoresArray(589);
+  const obj = stateFromStoresArray(586);
   const items2 = [closure_4];
-  const stateFromStores = stateFromStoresArray(589).useStateFromStores(items2, () => userAffinitiesMap.getUserAffinitiesMap(), []);
+  const stateFromStores = stateFromStoresArray(586).useStateFromStores(items2, () => userAffinitiesMap.getUserAffinitiesMap(), []);
   const items3 = [stateFromStoresArray, stateFromStores];
   return React.useMemo(() => stateFromStoresArray(closure_1_2[4]).maybeSortByProbability(stateFromStoresArray, stateFromStores, "VoiceSessionUtils - participants"), items3);
 };
@@ -90,19 +90,19 @@ export const getVoiceSessionMessageContent = function getVoiceSessionMessageCont
     reduced = [];
   }
   const userAffinitiesMap = authStore.getUserAffinitiesMap();
-  const result = _require(7981).maybeSortByProbability(reduced, userAffinitiesMap, "VoiceSessionUtils - participants");
+  const result = _require(7990).maybeSortByProbability(reduced, userAffinitiesMap, "VoiceSessionUtils - participants");
   const mapped = result.map((user) => {
     const obj = { user, messageAuthor: channel_id(closure_1_2[7]).getUserAuthor(user, channel_id) };
     return obj;
   });
   if (null == tmp2) {
-    const intl = tmp3(1236).intl;
+    const intl = tmp3(1233).intl;
     obj = { username: null, usernameOnClick: null };
     obj[0] = messageAuthor.nick;
     obj[1] = tmp3(12).identity;
-    let formatToPlainStringResult = intl.formatToPlainString(tmp3(1236).t.HzBfIN, obj);
+    let formatToPlainStringResult = intl.formatToPlainString(tmp3(1233).t.HzBfIN, obj);
   } else {
-    const intl2 = tmp3(1236).intl;
+    const intl2 = tmp3(1233).intl;
     obj = { userCount: null, username: null, usernameOnClick: null, username2: null, username2OnClick: null, username3: null, username3OnClick: null, otherCount: null, duration: null };
     obj[0] = mapped.length + 1;
     obj[1] = messageAuthor.nick;
@@ -122,7 +122,7 @@ export const getVoiceSessionMessageContent = function getVoiceSessionMessageCont
     obj[6] = tmp3(12).identity;
     obj[7] = mapped.length - 1;
     obj[8] = tmp2;
-    formatToPlainStringResult = intl2.formatToPlainString(tmp3(1236).t.atbXuX, obj);
+    formatToPlainStringResult = intl2.formatToPlainString(tmp3(1233).t.atbXuX, obj);
   }
   return formatToPlainStringResult;
 };

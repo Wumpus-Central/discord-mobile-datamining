@@ -1,9 +1,9 @@
-// === Module 10182: canReportRaid ===
+// === Module 10204: canReportRaid ===
 
-// Module 10182 (canReportRaid)
-import closure_2 from "getUncachedChannelPermissions" /* 4121 */;
-import closure_3 from "computeAlertSettings" /* 10163 */;
-import ME from "ME" /* 676 */;
+// Module 10204 (canReportRaid)
+import closure_2 from "getUncachedChannelPermissions" /* 4120 */;
+import closure_3 from "computeAlertSettings" /* 10185 */;
+import ME from "ME" /* 673 */;
 
 const require = arg1;
 ({ EMPTY_STRING_SNOWFLAKE_ID: c4, Permissions: c5 } = ME);
@@ -30,16 +30,16 @@ export const useCanReportRaid = function useCanReportRaid(guild) {
   const _require = guild;
   const items = [closure_2];
   const items1 = [guild];
-  const stateFromStores = _require(589).useStateFromStores(items, () => {
+  const stateFromStores = _require(586).useStateFromStores(items, () => {
     if (closure_1_2 !== undefined) {
       return obj.can(closure_1_5.BAN_MEMBERS, tmp) || obj.can(closure_1_5.KICK_MEMBERS, tmp) || obj.can(closure_1_5.MODERATE_MEMBERS, tmp) || obj.can(closure_1_5.MANAGE_GUILD, tmp);
     }
   }, items1);
-  const obj = _require(589);
+  const obj = _require(586);
   const tmp = _require;
   const items2 = [closure_3];
   const items3 = [guild];
-  const stateFromStores1 = _require(589).useStateFromStores(items2, () => {
+  const stateFromStores1 = _require(586).useStateFromStores(items2, () => {
     let guildIncident = null;
     if (null != closure_0) {
       guildIncident = closure_1_3.getGuildIncident(tmp.id);
@@ -48,8 +48,8 @@ export const useCanReportRaid = function useCanReportRaid(guild) {
   }, items3);
   let hasDetectedActivityResult = null != stateFromStores1;
   if (hasDetectedActivityResult) {
-    hasDetectedActivityResult = tmp(7924).hasDetectedActivity(stateFromStores1);
-    const tmpResult = tmp(7924);
+    hasDetectedActivityResult = tmp(7933).hasDetectedActivity(stateFromStores1);
+    const tmpResult = tmp(7933);
   }
   let tmp6 = !hasDetectedActivityResult;
   if (!hasDetectedActivityResult) {
@@ -68,7 +68,7 @@ export const useCanEnableRaidAlerts = function useCanEnableRaidAlerts(arg0) {
   const _require = arg0;
   const items = [closure_2];
   const items1 = [arg0];
-  return _require(589).useStateFromStores(items, () => {
+  return _require(586).useStateFromStores(items, () => {
     if (closure_1_2 !== undefined) {
       return closure_1_2.can(closure_1_5.MANAGE_GUILD, tmp);
     }
@@ -78,12 +78,12 @@ export const useShowMentionRaidLimitUpsell = function useShowMentionRaidLimitUps
   const _require = id;
   const items = [closure_2];
   const items1 = [id];
-  const stateFromStores = _require(589).useStateFromStores(items, () => {
+  const stateFromStores = _require(586).useStateFromStores(items, () => {
     if (closure_1_2 !== undefined) {
       return closure_1_2.can(closure_1_5.MANAGE_GUILD, tmp);
     }
   }, items1);
-  const obj = _require(589);
+  const obj = _require(586);
   id = undefined;
   if (id != null) {
     id = id.id;
@@ -91,6 +91,6 @@ export const useShowMentionRaidLimitUpsell = function useShowMentionRaidLimitUps
   if (id == null) {
     id = closure_4;
   }
-  const obj2 = _require(10183);
-  return _require(10183).useIsMentionRaidExperimentEnabled(id, false) && stateFromStores;
+  const obj2 = _require(10205);
+  return _require(10205).useIsMentionRaidExperimentEnabled(id, false) && stateFromStores;
 };

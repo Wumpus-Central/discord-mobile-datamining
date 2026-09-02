@@ -1,14 +1,14 @@
-// === Module 12572: UnlockWithNitroButton ===
+// === Module 12796: UnlockWithNitroButton ===
 
-// Module 12572 (UnlockWithNitroButton)
+// Module 12796 (UnlockWithNitroButton)
 import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 589 */;
+import initialize from "initialize" /* 586 */;
 import CollapsingText from "CollapsingText" /* 4929 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8096 */;
-import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 12554 */;
-import closure_3 from "updateProduct" /* 6084 */;
-import closure_4 from "map" /* 7303 */;
-import { ShopCtaEnum } from "items" /* 678 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8104 */;
+import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 12778 */;
+import closure_3 from "updateProduct" /* 6092 */;
+import closure_4 from "map" /* 7312 */;
+import { ShopCtaEnum } from "items" /* 675 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -33,8 +33,8 @@ export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink
   });
   importDefault = useOpenNitroSubscribeActionSheetDefault();
   if (text == null) {
-    const intl = tmp(1236).intl;
-    text = intl.string(tmp(1236).t.sEAnVH);
+    const intl = tmp(1233).intl;
+    text = intl.string(tmp(1233).t.sEAnVH);
   }
   let tmp4Result;
   if (flag) {

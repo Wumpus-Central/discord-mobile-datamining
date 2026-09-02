@@ -1,10 +1,10 @@
-// === Module 9051: navigateToLastChannel ===
+// === Module 9065: navigateToLastChannel ===
 
-// Module 9051 (navigateToLastChannel)
+// Module 9065 (navigateToLastChannel)
 import set from "set" /* 2 */;
 import coerceMainRoute from "coerceMainRoute" /* 4332 */;
 import transitionToChannel from "transitionToChannel" /* 4489 */;
-import getNavigatorCurrentRouteDefault from "getNavigatorCurrentRoute" /* 9052 */;
+import getNavigatorCurrentRouteDefault from "getNavigatorCurrentRoute" /* 9066 */;
 
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/navigateToLastChannel.tsx");
 

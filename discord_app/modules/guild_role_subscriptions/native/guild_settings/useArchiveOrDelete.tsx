@@ -1,7 +1,7 @@
-// === Module 17321: useArchiveOrDelete ===
+// === Module 17557: useArchiveOrDelete ===
 
-// Module 17321 (useArchiveOrDelete)
-import getRoleEmojisAll from "getRoleEmojis" /* 14823 */;
+// Module 17557 (useArchiveOrDelete)
+import getRoleEmojisAll from "getRoleEmojis" /* 15052 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
@@ -131,18 +131,18 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId)
     return applyArgumentsResult;
   }
   let stringResult3 = dependencyMap;
-  let obj = _require(14808);
+  let obj = _require(15037);
   const subscriptionListing = obj.useSubscriptionListing(editStateId);
   const removeEditStateId = getRoleEmojisAll.useEditStateIds(groupListingId, guildId).removeEditStateId;
   let obj2 = getRoleEmojisAll;
-  const deleteSubscriptionListing = _require(14808).useDeleteSubscriptionListing();
+  const deleteSubscriptionListing = _require(15037).useDeleteSubscriptionListing();
   ({ error, deleteSubscriptionListing: closure_8, submitting } = deleteSubscriptionListing);
-  let obj3 = _require(14808);
-  const archiveSubscriptionListing = _require(14808).useArchiveSubscriptionListing();
+  let obj3 = _require(15037);
+  const archiveSubscriptionListing = _require(15037).useArchiveSubscriptionListing();
   closure_9 = archiveSubscriptionListing.archiveSubscriptionListing;
   ({ submitting: submitting2, error: error2 } = archiveSubscriptionListing);
   closure_10 = removeEditStateId(null);
-  let obj4 = _require(14808);
+  let obj4 = _require(15037);
   const first = callback(getRoleEmojisAll.useName(editStateId), 1)[0];
   let archived;
   if (subscriptionListing != null) {
@@ -155,19 +155,19 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId)
   }
   if (true !== archived) {
     if (!tmp9) {
-      let intl = tmp(1236).intl;
+      let intl = tmp(1233).intl;
       obj = { tierName: null };
       obj[0] = first;
-      const intl2 = tmp(1236).intl;
-      const formatToPlainStringResult = intl.formatToPlainString(tmp(1236).t.OuuIOY, obj);
-      const intl3 = tmp(1236).intl;
-      const stringResult = intl2.string(tmp(1236).t.RL0wjm);
-      const intl4 = tmp(1236).intl;
-      closure_4 = intl4.string(tmp(1236).t.N5AIuE);
-      const intl5 = tmp(1236).intl;
-      callback = intl5.string(tmp(1236).t.TEKiiP);
-      const intl6 = tmp(1236).intl;
-      stringResult3 = intl6.string(tmp(1236).t["170XOL"]);
+      const intl2 = tmp(1233).intl;
+      const formatToPlainStringResult = intl.formatToPlainString(tmp(1233).t.OuuIOY, obj);
+      const intl3 = tmp(1233).intl;
+      const stringResult = intl2.string(tmp(1233).t.RL0wjm);
+      const intl4 = tmp(1233).intl;
+      closure_4 = intl4.string(tmp(1233).t.N5AIuE);
+      const intl5 = tmp(1233).intl;
+      callback = intl5.string(tmp(1233).t.TEKiiP);
+      const intl6 = tmp(1233).intl;
+      stringResult3 = intl6.string(tmp(1233).t["170XOL"]);
       const items = [error];
       stringResult3(() => {
         let tmp2;
@@ -176,15 +176,15 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId)
         }
         if (null != tmp2) {
           ref.current = tmp2;
-          const intl = guildId(1236).intl;
-          editStateId(4193).presentFailedToast(intl.string(guildId(1236).t.R0RpRX));
+          const intl = guildId(1233).intl;
+          editStateId(4193).presentFailedToast(intl.string(guildId(1233).t.R0RpRX));
           const obj = editStateId(4193);
         }
       }, items);
       obj = { headerText: null, buttonText: null, descriptionText: null, handleArchiveOrDelete: null, deleting: null, archiving: null };
       obj[0] = formatToPlainStringResult;
       obj[1] = stringResult;
-      obj[2] = intl3.string(tmp(1236).t["5/Jeg2"]);
+      obj[2] = intl3.string(tmp(1233).t["5/Jeg2"]);
       obj[3] = function handleArchiveOrDelete() {
         const self = this;
         const apply = _handleArchiveOrDelete.apply;
@@ -200,23 +200,23 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId)
       return obj;
     }
   }
-  const intl7 = tmp(1236).intl;
-  intl7.formatToPlainString(_require(1236).t.x2qwWL, { tierName: first });
-  const intl8 = tmp(1236).intl;
-  intl8.string(_require(1236).t.GMtG6p);
-  let intl9 = tmp(1236).intl;
+  const intl7 = tmp(1233).intl;
+  intl7.formatToPlainString(_require(1233).t.x2qwWL, { tierName: first });
+  const intl8 = tmp(1233).intl;
+  intl8.string(_require(1233).t.GMtG6p);
+  let intl9 = tmp(1233).intl;
   let intl10 = intl9.string;
-  let string = tmp(1236).t;
+  let string = tmp(1233).t;
   if (undefined === subscriptionListing) {
     intl10(string.DHWKJS);
   } else {
     intl10(string.Y4KjUN);
   }
-  const intl11 = tmp(1236).intl;
-  closure_4 = intl11.string(tmp(1236).t["4H6RLl"]);
-  intl9 = tmp(1236).intl;
-  callback = intl9.string(tmp(1236).t.uG6b1w);
-  intl10 = tmp(1236).intl;
+  const intl11 = tmp(1233).intl;
+  closure_4 = intl11.string(tmp(1233).t["4H6RLl"]);
+  intl9 = tmp(1233).intl;
+  callback = intl9.string(tmp(1233).t.uG6b1w);
+  intl10 = tmp(1233).intl;
   string = intl10.string;
-  stringResult3 = string(tmp(1236).t.JoCdPC);
+  stringResult3 = string(tmp(1233).t.JoCdPC);
 };

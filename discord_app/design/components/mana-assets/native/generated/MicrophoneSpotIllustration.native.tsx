@@ -1,10 +1,10 @@
-// === Module 6793: MicrophoneSpotIllustration ===
+// === Module 6802: MicrophoneSpotIllustration ===
 
-// Module 6793 (MicrophoneSpotIllustration)
+// Module 6802 (MicrophoneSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5493 */;
-import metadataDefault from "metadata" /* 6794 */;
+import preloadDefault from "preload" /* 5501 */;
+import metadataDefault from "metadata" /* 6803 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/MicrophoneSpotIllustration.native.tsx");

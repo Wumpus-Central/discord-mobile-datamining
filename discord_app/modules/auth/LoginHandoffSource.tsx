@@ -1,9 +1,9 @@
-// === Module 6165: LoginHandoffSource ===
+// === Module 6173: LoginHandoffSource ===
 
-// Module 6165 (LoginHandoffSource)
+// Module 6173 (LoginHandoffSource)
 import set from "set" /* 2 */;
-import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
-import set2 from "set" /* 1394 */;
+import MAX_FAVORITES from "MAX_FAVORITES" /* 682 */;
+import set2 from "set" /* 1393 */;
 import ME from "ME" /* 4675 */;
 
 const StaticChannelRoute = set2.StaticChannelRoute;

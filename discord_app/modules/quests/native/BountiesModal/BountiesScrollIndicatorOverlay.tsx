@@ -1,7 +1,7 @@
-// === Module 14640: BountiesScrollIndicatorOverlay ===
+// === Module 14865: BountiesScrollIndicatorOverlay ===
 
-// Module 14640 (BountiesScrollIndicatorOverlay)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 14865 (BountiesScrollIndicatorOverlay)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;

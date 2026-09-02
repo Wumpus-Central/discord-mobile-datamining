@@ -1,7 +1,7 @@
-// === Module 9220: ActivityEmoji ===
+// === Module 9234: ActivityEmoji ===
 
-// Module 9220 (ActivityEmoji)
-import EmojiDefault from "Emoji" /* 5585 */;
+// Module 9234 (ActivityEmoji)
+import EmojiDefault from "Emoji" /* 5593 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -62,7 +62,7 @@ export default function ActivityEmoji(emoji) {
     }
   }
   if (null == emoji) {
-    ReactionIcon = ReactionIcon(8228).ReactionIcon;
+    ReactionIcon = ReactionIcon(8237).ReactionIcon;
     obj = { style: null, size: "sm" };
     obj[0] = style;
     <ReactionIcon style={null} size="sm" />;

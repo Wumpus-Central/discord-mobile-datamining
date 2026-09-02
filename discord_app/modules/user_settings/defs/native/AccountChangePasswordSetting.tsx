@@ -1,11 +1,11 @@
-// === Module 14381: route ===
+// === Module 14604: route ===
 
-// Module 14381 (route)
+// Module 14604 (route)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import MobileUserSettings from "MobileUserSettings" /* 7884 */;
-import createToggle from "createToggle" /* 11068 */;
+import ME from "ME" /* 673 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import MobileUserSettings from "MobileUserSettings" /* 7893 */;
+import createToggle from "createToggle" /* 11288 */;
 
 obj = {
   useTitle() {
@@ -18,7 +18,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.ACCOUNT_CHANGE_PASSWORD,
   getComponent() {
-    return require(14382).default;
+    return require(14605).default;
   }
 };
 const route = createToggle.createRoute(obj);

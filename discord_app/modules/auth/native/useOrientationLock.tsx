@@ -1,7 +1,7 @@
-// === Module 15592: usePortraitOrientationOnly ===
+// === Module 15823: usePortraitOrientationOnly ===
 
-// Module 15592 (usePortraitOrientationOnly)
-import useWideAuthViewDefault from "useWideAuthView" /* 7717 */;
+// Module 15823 (usePortraitOrientationOnly)
+import useWideAuthViewDefault from "useWideAuthView" /* 7726 */;
 import closure_3 from "noop" /* 19 */;
 
 const require = arg1;

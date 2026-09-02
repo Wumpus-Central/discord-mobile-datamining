@@ -1,17 +1,17 @@
-// === Module 8017: nativeStyleProperties ===
+// === Module 8026: nativeStyleProperties ===
 
-// Module 8017 (nativeStyleProperties)
-import ThemesDefault from "Themes" /* 712 */;
-import getSrcWithWidthAndHeightDefault from "getSrcWithWidthAndHeight" /* 1492 */;
+// Module 8026 (nativeStyleProperties)
+import ThemesDefault from "Themes" /* 709 */;
+import getSrcWithWidthAndHeightDefault from "getSrcWithWidthAndHeight" /* 1491 */;
 import hexToRgba from "hexToRgba" /* 4326 */;
 import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4737 */;
-import useCanManageGuildOfficialMessages from "useCanManageGuildOfficialMessages" /* 6114 */;
+import useCanManageGuildOfficialMessages from "useCanManageGuildOfficialMessages" /* 6122 */;
 import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_4 from "ensureGuildLoaded" /* 1387 */;
-import closure_5 from "createGuildRecordFromRust" /* 1909 */;
+import closure_4 from "ensureGuildLoaded" /* 1386 */;
+import closure_5 from "createGuildRecordFromRust" /* 1908 */;
 import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4471 */;
-import { SwipeActionsType } from "Changeset" /* 7842 */;
-import ME from "ME" /* 676 */;
+import { SwipeActionsType } from "Changeset" /* 7851 */;
+import ME from "ME" /* 673 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 import set from "set" /* 2 */;
 
@@ -65,7 +65,7 @@ createCacheKey = {
             guild_id = channel.guild_id;
           }
           guild = guild.getGuild(guild_id);
-          let tmp3Result = tmp3(6114);
+          let tmp3Result = tmp3(6122);
           if (tmp3Result.isGuildOfficialMessagesEnabled(guild, "RowGeneratorUtils")) {
             let officialMessageColor;
             if (guild != null) {

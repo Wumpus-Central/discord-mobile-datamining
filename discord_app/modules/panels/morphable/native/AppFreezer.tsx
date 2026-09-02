@@ -1,9 +1,9 @@
-// === Module 16110: jsx ===
+// === Module 16341: jsx ===
 
-// Module 16110 (jsx)
+// Module 16341 (jsx)
 import noopAll from "noop" /* 19 */;
-import setDefault from "set" /* 6006 */;
-import closure_2 from "module_8585" /* 8585 */;
+import setDefault from "set" /* 6014 */;
+import closure_2 from "module_8600" /* 8600 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

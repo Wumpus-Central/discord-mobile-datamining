@@ -1,12 +1,12 @@
-// === Module 12133: GuildPowerupPerksSection ===
+// === Module 12357: GuildPowerupPerksSection ===
 
-// Module 12133 (GuildPowerupPerksSection)
+// Module 12357 (GuildPowerupPerksSection)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2401 */;
-import GuildPowerupsSectionHeaderDefault from "GuildPowerupsSectionHeader" /* 12116 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import messagesProxyDefault from "messagesProxy" /* 2400 */;
+import GuildPowerupsSectionHeaderDefault from "GuildPowerupsSectionHeader" /* 12340 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

@@ -1,6 +1,6 @@
-// === Module 10364: filterFavoriteGIFsByQuery ===
+// === Module 10386: filterFavoriteGIFsByQuery ===
 
-// Module 10364 (filterFavoriteGIFsByQuery)
+// Module 10386 (filterFavoriteGIFsByQuery)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/gif_picker/GifPickerUtils.tsx");

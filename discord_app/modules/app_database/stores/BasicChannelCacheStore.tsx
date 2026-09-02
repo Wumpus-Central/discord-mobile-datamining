@@ -1,11 +1,11 @@
-// === Module 1388: hasChannel ===
+// === Module 1387: hasChannel ===
 
-// Module 1388 (hasChannel)
+// Module 1387 (hasChannel)
 import timestampDefault from "timestamp" /* 3 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "allGuildIds" /* 1389 */;
+import closure_3 from "allGuildIds" /* 1388 */;
 
 let object = importDefault;
 new timestampDefault("BasicChannelCacheStore");

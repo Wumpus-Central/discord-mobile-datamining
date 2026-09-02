@@ -1,7 +1,7 @@
-// === Module 17050: handleFocusParticipant ===
+// === Module 17286: handleFocusParticipant ===
 
-// Module 17050 (handleFocusParticipant)
-import initializeDefault from "initialize" /* 5486 */;
+// Module 17286 (handleFocusParticipant)
+import initializeDefault from "initialize" /* 5494 */;
 import closure_0 from "createRTCConnection" /* 4554 */;
 import closure_1 from "getParticipants" /* 4494 */;
 

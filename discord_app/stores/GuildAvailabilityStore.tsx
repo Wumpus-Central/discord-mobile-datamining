@@ -2,9 +2,9 @@
 
 // Module 4855 (handleConnectionOpen)
 import timestampDefault from "timestamp" /* 3 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "createGuildRecordFromRust" /* 1909 */;
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import closure_0 from "createGuildRecordFromRust" /* 1908 */;
 import set from "set" /* 2 */;
 
 function handleConnectionOpen(unavailableGuilds) {

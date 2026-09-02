@@ -1,16 +1,16 @@
-// === Module 11590: num2 ===
+// === Module 11813: num2 ===
 
-// Module 11590 (num2)
+// Module 11813 (num2)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ChatIcon from "ChatIcon" /* 5020 */;
-import useLoadForumUnreadCounts from "useLoadForumUnreadCounts" /* 7628 */;
-import AnimatedCountDefault from "AnimatedCount" /* 10953 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import ChatIcon from "ChatIcon" /* 5024 */;
+import useLoadForumUnreadCounts from "useLoadForumUnreadCounts" /* 7638 */;
+import AnimatedCountDefault from "AnimatedCount" /* 11173 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
-import set from "set" /* 500 */;
+import set from "set" /* 1234 */;
 
 require = arg1;
 noopAll;
@@ -47,7 +47,7 @@ export default function ForumPostMessageCount(hasUnreads) {
   }
   obj = { style: items, accessibilityLabel: null, children: null };
   items = [tmp.container, containerStyle];
-  const intl = tmp2(1236).intl;
+  const intl = tmp2(1233).intl;
   obj[1] = intl.formatToPlainString(getSystemLocale.t["8M0DrB"], { count: messageCountText });
   obj = { size: "xs", style: hasUnreads ? tmp.iconUnread : tmp.iconRead, color: null };
   let str2 = "icon-muted";
@@ -72,10 +72,10 @@ export default function ForumPostMessageCount(hasUnreads) {
   if (tmp5Result) {
     const obj3 = { variant: "text-sm/semibold", color: "text-brand", style: null, children: null };
     obj3[2] = tmp.messageUnreadCount;
-    const intl2 = tmp2(1236).intl;
+    const intl2 = tmp2(1233).intl;
     const obj4 = { count: null };
     obj4[0] = unreadCount;
-    const items2 = ["(", intl2.format(tmp2(1236).t.z3PEth, obj4), ")"];
+    const items2 = ["(", intl2.format(tmp2(1233).t.z3PEth, obj4), ")"];
     obj3[3] = items2;
     tmp5Result = tmp5(tmp2(4474).Text, obj3);
   }

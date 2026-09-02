@@ -1,11 +1,11 @@
-// === Module 5403: fromServer ===
+// === Module 5411: fromServer ===
 
-// Module 5403 (fromServer)
+// Module 5411 (fromServer)
 import EmojiTypes from "EmojiTypes" /* 4137 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import { TypeTag } from "TypeTag" /* 1428 */;
-import { LibdiscoreStore } from "identity" /* 1910 */;
-import { LibdiscoreBatchStoreRefactorExperiment } from "items" /* 1913 */;
+import { TypeTag } from "TypeTag" /* 1427 */;
+import { LibdiscoreStore } from "identity" /* 1909 */;
+import { LibdiscoreBatchStoreRefactorExperiment } from "items" /* 1912 */;
 
 require = arg1;
 function fromServer(guildId) {

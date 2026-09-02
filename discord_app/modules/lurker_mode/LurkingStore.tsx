@@ -1,14 +1,14 @@
-// === Module 4122: initialize ===
+// === Module 4121: initialize ===
 
-// Module 4122 (initialize)
+// Module 4121 (initialize)
 import set2 from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1430 */;
-import closure_1 from "trackCommunicationDisabled" /* 1992 */;
-import closure_2 from "createGuildRecordFromRust" /* 1909 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1429 */;
+import closure_1 from "trackCommunicationDisabled" /* 1991 */;
+import closure_2 from "createGuildRecordFromRust" /* 1908 */;
+import closure_3 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
 
 const isGuildLurker = GuildNSFWContentLevel.isGuildLurker;
 ({ JoinGuildSources: c4, ME: c5 } = ME);

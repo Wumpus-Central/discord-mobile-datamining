@@ -1,8 +1,8 @@
-// === Module 9743: canViewInviteModal ===
+// === Module 9765: canViewInviteModal ===
 
-// Module 9743 (canViewInviteModal)
+// Module 9765 (canViewInviteModal)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 
 const Permissions = ME.Permissions;
 const result = set.fileFinishedImporting("modules/instant_invite/canViewInviteModal.tsx");

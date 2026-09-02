@@ -1,11 +1,11 @@
-// === Module 9566: VideoEmptyState ===
+// === Module 9579: VideoEmptyState ===
 
-// Module 9566 (VideoEmptyState)
+// Module 9579 (VideoEmptyState)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4945 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "ensureGuildLoaded" /* 1387 */;
+import closure_4 from "ensureGuildLoaded" /* 1386 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -35,15 +35,15 @@ export default function VideoEmptyState(style) {
     if (!removeSplashImage) {
       obj = { style: null };
       obj[0] = tmp2.placeholderImage;
-      tmp16 = callback(stream(9567).StreamEnded, obj);
+      tmp16 = callback(stream(9580).StreamEnded, obj);
     }
     obj = { children: null };
     const items = [tmp16, ];
     obj1 = { style: null, children: null };
     obj1[0] = tmp2.placeholderText;
-    const intl2 = stream(1236).intl;
-    obj1[1] = intl2.formatToMarkdownString(stream(1236).t["1Ww0Hi"], {});
-    items[1] = callback(stream(1297).LegacyText, obj1);
+    const intl2 = stream(1233).intl;
+    obj1[1] = intl2.formatToMarkdownString(stream(1233).t["1Ww0Hi"], {});
+    items[1] = callback(stream(1296).LegacyText, obj1);
     obj[0] = items;
     let tmp5Result = closure_7(closure_6, obj);
     const tmp14 = closure_7;
@@ -53,15 +53,15 @@ export default function VideoEmptyState(style) {
     if (!removeSplashImage) {
       obj = { style: null };
       obj[0] = tmp2.placeholderImage;
-      tmp7 = callback(stream(9570).StreamFailed, obj);
+      tmp7 = callback(stream(9583).StreamFailed, obj);
     }
     let obj2 = { children: null };
     const items1 = [tmp7, ];
     let obj3 = { style: null, children: null };
     obj3[0] = tmp2.placeholderText;
-    const intl = stream(1236).intl;
-    obj3[1] = intl.string(stream(1236).t.rSlOep);
-    items1[1] = callback(stream(1297).LegacyText, obj3);
+    const intl = stream(1233).intl;
+    obj3[1] = intl.string(stream(1233).t.rSlOep);
+    items1[1] = callback(stream(1296).LegacyText, obj3);
     obj2[0] = items1;
     tmp5Result = closure_7(closure_6, obj2);
     const tmp5 = closure_7;
@@ -70,16 +70,16 @@ export default function VideoEmptyState(style) {
     tmp5Result = null;
   }
   if (null != avError) {
-    let obj7 = stream(9565);
+    let obj7 = stream(9578);
     let errorCode = obj7.getErrorInfo(avError).errorCode;
   } else {
     errorCode = null;
     if (type === tmp3.STREAM_FAILED) {
-      let obj6 = stream(9565);
-      errorCode = obj6.getErrorInfo(stream(9565).AVError.STREAM_FAILED_TO_START).errorCode;
+      let obj6 = stream(9578);
+      errorCode = obj6.getErrorInfo(stream(9578).AVError.STREAM_FAILED_TO_START).errorCode;
     }
   }
-  let obj8 = stream(589);
+  let obj8 = stream(586);
   const items2 = [closure_4];
   const items3 = [stream.channelId];
   importDefault = obj8.useStateFromStores(items2, () => closure_1_4.getChannel(stream.channelId), items3);
@@ -102,10 +102,10 @@ export default function VideoEmptyState(style) {
   let tmp34 = null != errorCode;
   if (tmp34) {
     const obj5 = { variant: "text-sm/semibold", color: "text-muted", selectable: true, children: null };
-    const intl3 = tmp28(1236).intl;
+    const intl3 = tmp28(1233).intl;
     obj6 = { errorCode: null };
     obj6[0] = errorCode;
-    obj5[3] = intl3.formatToPlainString(tmp28(1236).t.ejOT95, obj6);
+    obj5[3] = intl3.formatToPlainString(tmp28(1233).t.ejOT95, obj6);
     tmp34 = callback(tmp28(4474).Text, obj5);
   }
   items5[1] = tmp34;
@@ -115,8 +115,8 @@ export default function VideoEmptyState(style) {
     obj7[0] = tmp2.buttonWrapper;
     obj8 = { pillStyle: null, variant: "secondary-overlay", text: null, onPress: null };
     obj8[0] = tmp2.buttonPill;
-    const intl4 = tmp28(1236).intl;
-    obj8[2] = intl4.string(tmp28(1236).t["4EGMWL"]);
+    const intl4 = tmp28(1233).intl;
+    obj8[2] = intl4.string(tmp28(1233).t["4EGMWL"]);
     obj8[3] = function onPress() {
       obj = stream(closure_1_2[14]);
       obj.stopStream(stream(closure_1_2[15]).encodeStreamKey(stream));

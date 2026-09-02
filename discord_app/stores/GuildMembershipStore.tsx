@@ -1,8 +1,8 @@
-// === Module 1389: allGuildIds ===
+// === Module 1388: allGuildIds ===
 
-// Module 1389 (allGuildIds)
-import initializeDefault from "initialize" /* 589 */;
-import importDefaultResult from "dispatcher" /* 709 */;
+// Module 1388 (allGuildIds)
+import initializeDefault from "initialize" /* 586 */;
+import importDefaultResult from "dispatcher" /* 706 */;
 import set from "set" /* 2 */;
 
 let closure_0 = arg1;

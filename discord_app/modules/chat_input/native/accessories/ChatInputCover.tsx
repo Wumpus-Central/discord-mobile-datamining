@@ -1,6 +1,6 @@
-// === Module 11820: ChatInputCover ===
+// === Module 12043: ChatInputCover ===
 
-// Module 11820 (ChatInputCover)
+// Module 12043 (ChatInputCover)
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;

@@ -1,8 +1,8 @@
-// === Module 12808: openGuildProductLink ===
+// === Module 13029: openGuildProductLink ===
 
-// Module 12808 (openGuildProductLink)
+// Module 13029 (openGuildProductLink)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import _modDef4858 from "module_4858" /* 4858 */;
 
 const result = set.fileFinishedImporting("modules/guild_products/GuildProductLinkActionCreators.native.tsx");

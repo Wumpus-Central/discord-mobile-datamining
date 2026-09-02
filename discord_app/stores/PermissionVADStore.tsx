@@ -1,15 +1,15 @@
-// === Module 14051: handleUpdateVADPermission ===
+// === Module 14274: handleUpdateVADPermission ===
 
-// Module 14051 (handleUpdateVADPermission)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "ensureGuildLoaded" /* 1387 */;
+// Module 14274 (handleUpdateVADPermission)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import closure_2 from "fetchFingerprint" /* 1215 */;
+import closure_3 from "ensureGuildLoaded" /* 1386 */;
 import closure_4 from "_detectH265HardwareDecode" /* 4529 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4121 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_6 from "createRTCConnection" /* 4554 */;
 import closure_7 from "updateVoiceState" /* 4497 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 
 function handleUpdateVADPermission() {
   channelId = channelId.getChannelId();

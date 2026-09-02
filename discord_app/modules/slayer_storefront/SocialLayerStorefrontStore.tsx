@@ -1,10 +1,10 @@
-// === Module 6075: handleUserSettingsStoreUpdate ===
+// === Module 6083: handleUserSettingsStoreUpdate ===
 
-// Module 6075 (handleUserSettingsStoreUpdate)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_1 from "_getSystemLocale" /* 1996 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
+// Module 6083 (handleUserSettingsStoreUpdate)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import closure_1 from "_getSystemLocale" /* 1995 */;
+import closure_2 from "fetchFingerprint" /* 1215 */;
 import set from "set" /* 2 */;
 
 function handleUserSettingsStoreUpdate() {
@@ -392,7 +392,7 @@ const socialLayerStorefrontStore = new SocialLayerStorefrontStore(dispatcherDefa
       const merged7 = Object.assign(obj9);
       obj9 = obj5;
     } else {
-      obj = { state: "error", fetchedAt: null, storefront: "Boolean" };
+      obj = { state: "error", fetchedAt: null, storefront: "r" };
       const _Date = Date;
       obj[1] = Date.now();
       if (null != guildId) {

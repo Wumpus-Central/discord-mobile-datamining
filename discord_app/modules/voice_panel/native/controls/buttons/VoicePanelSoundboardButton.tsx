@@ -1,11 +1,11 @@
-// === Module 16778: SoundboardButton ===
+// === Module 17014: SoundboardButton ===
 
-// Module 16778 (SoundboardButton)
-import ThemesDefault from "Themes" /* 712 */;
-import dismissPanelDefault from "dismissPanel" /* 11839 */;
-import useVoicePanelButtonStyles from "useVoicePanelButtonStyles" /* 16764 */;
-import useSoundboardConfig from "useSoundboardConfig" /* 16779 */;
-import useSoundboardConfigDefault from "useSoundboardConfig" /* 16779 */;
+// Module 17014 (SoundboardButton)
+import ThemesDefault from "Themes" /* 709 */;
+import dismissPanelDefault from "dismissPanel" /* 12062 */;
+import useVoicePanelButtonStyles from "useVoicePanelButtonStyles" /* 17000 */;
+import useSoundboardConfig from "useSoundboardConfig" /* 17015 */;
+import useSoundboardConfigDefault from "useSoundboardConfig" /* 17015 */;
 import closure_3 from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -27,7 +27,7 @@ export default function SoundboardButton(arg0) {
   const tmp6 = useSoundboardConfigDefault;
   ({ disabled, handlePress, disabledAccessibilityHint, visible } = useSoundboardConfigDefault(React.useContext(dismissPanelDefault).channelId, useSoundboardConfig.SoundboardButtonLocation.VOICE_PANEL_CONTROLS));
   if (disabled) {
-    let color = tmp(712).colors.ICON_MUTED;
+    let color = tmp(709).colors.ICON_MUTED;
   } else {
     color = voicePanelButtonStyles.iconFill.color;
   }
@@ -37,9 +37,9 @@ export default function SoundboardButton(arg0) {
     obj[0] = handlePress;
     obj[1] = disabled;
     obj[2] = props;
-    let tmpResult = tmp(16765);
-    const intl = tmp4(1236).intl;
-    obj[3] = intl.string(tmp4(1236).t["6EJvHt"]);
+    let tmpResult = tmp(17001);
+    const intl = tmp4(1233).intl;
+    obj[3] = intl.string(tmp4(1233).t["6EJvHt"]);
     obj[4] = disabledAccessibilityHint;
     obj = { style: null };
     const items = [tmp3.circle, ];
@@ -47,13 +47,13 @@ export default function SoundboardButton(arg0) {
     obj1[0] = voicePanelButtonStyles.iconBg.backgroundColor;
     items[1] = obj1;
     obj[0] = items;
-    const items1 = [callback(tmp(6006), obj), ];
+    const items1 = [callback(tmp(6014), obj), ];
     const obj2 = { style: null, children: null };
     obj2[0] = tmp3.iconContainer;
-    tmpResult = tmp(6006);
+    tmpResult = tmp(6014);
     const obj3 = { color: null };
     obj3[0] = color;
-    obj2[1] = callback(tmp4(12092).SoundboardIcon, obj3);
+    obj2[1] = callback(tmp4(12316).SoundboardIcon, obj3);
     items1[1] = callback(tmpResult, obj2);
     obj[5] = items1;
     tmp8 = callback2(tmpResult, obj);

@@ -1,6 +1,6 @@
-// === Module 11080: parseRegisteredExperiments ===
+// === Module 11300: parseRegisteredExperiments ===
 
-// Module 11080 (parseRegisteredExperiments)
+// Module 11300 (parseRegisteredExperiments)
 import closure_3 from "_slicedToArray" /* 32 */;
 import { useMemo } from "noop" /* 19 */;
 import closure_5 from "getHash" /* 4391 */;
@@ -82,11 +82,11 @@ export const getLegacyExperiments = function getLegacyExperiments() {
   return obj;
 };
 export const useLegacyExperiments = function useLegacyExperiments() {
-  let obj = stateFromStoresObject(589);
+  let obj = stateFromStoresObject(586);
   const items = [closure_5];
   stateFromStoresObject = obj.useStateFromStoresObject(items, () => store.getRegisteredExperiments());
   const items1 = [closure_5];
-  const stateFromStoresObject1 = stateFromStoresObject(589).useStateFromStoresObject(items1, () => store.getAllExperimentOverrideDescriptors());
+  const stateFromStoresObject1 = stateFromStoresObject(586).useStateFromStoresObject(items1, () => store.getAllExperimentOverrideDescriptors());
   obj = { experiments: useMemo(() => closure_1_8(stateFromStoresObject), items2), overridesInfo: useMemo(() => closure_1_9(stateFromStoresObject1), items3) };
   items2 = [stateFromStoresObject];
   items3 = [stateFromStoresObject1];

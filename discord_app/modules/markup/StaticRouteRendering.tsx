@@ -1,8 +1,8 @@
 // === Module 4976: staticRouteToTranslation ===
 
 // Module 4976 (staticRouteToTranslation)
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_2 from "createGuildRoleRecordFromRust" /* 1985 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import closure_2 from "createGuildRoleRecordFromRust" /* 1984 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/markup/StaticRouteRendering.tsx");

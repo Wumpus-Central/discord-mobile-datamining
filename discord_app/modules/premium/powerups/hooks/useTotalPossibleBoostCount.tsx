@@ -1,10 +1,10 @@
-// === Module 15811: useTotalPossibleBoostCount ===
+// === Module 16042: useTotalPossibleBoostCount ===
 
-// Module 15811 (useTotalPossibleBoostCount)
+// Module 16042 (useTotalPossibleBoostCount)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
 import BoostedGuildTiers from "BoostedGuildTiers" /* 4365 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 
 let useMemo = noop.useMemo;
 ({ MULTIPLE_PURCHASEABLE_PREMIUM_FEATURES_BOOST_INFO: closure_1, PURCHASABLE_PREMIUM_FEATURES_BOOST_INFO: obj1 } = BoostedGuildTiers);

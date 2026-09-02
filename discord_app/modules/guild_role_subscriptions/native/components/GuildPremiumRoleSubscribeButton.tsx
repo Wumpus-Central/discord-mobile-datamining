@@ -1,9 +1,9 @@
-// === Module 17350: GuildPremiumRoleSubscribeButton ===
+// === Module 17586: GuildPremiumRoleSubscribeButton ===
 
-// Module 17350 (GuildPremiumRoleSubscribeButton)
+// Module 17586 (GuildPremiumRoleSubscribeButton)
 import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import CreatorRevenueButton from "CreatorRevenueButton" /* 9137 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import CreatorRevenueButton from "CreatorRevenueButton" /* 9151 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

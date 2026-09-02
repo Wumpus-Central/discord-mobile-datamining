@@ -1,8 +1,8 @@
-// === Module 7653: openMemberVerificationSuccessAlert ===
+// === Module 7662: openMemberVerificationSuccessAlert ===
 
-// Module 7653 (openMemberVerificationSuccessAlert)
+// Module 7662 (openMemberVerificationSuccessAlert)
 import noopAll from "noop" /* 19 */;
-import dismissGlobalKeyboardAll from "dismissGlobalKeyboard" /* 1891 */;
+import dismissGlobalKeyboardAll from "dismissGlobalKeyboard" /* 1890 */;
 import _modDef4858 from "module_4858" /* 4858 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -97,8 +97,8 @@ export const openMemberVerificationRejectedAlert = function openMemberVerificati
   };
   if (canWithdraw.canWithdraw) {
     let obj = { text: null, variant: "destructive", onPress: null };
-    const intl2 = tmp2(1236).intl;
-    obj[0] = intl2.string(tmp2(1236).t.g9tK0o);
+    const intl2 = tmp2(1233).intl;
+    obj[0] = intl2.string(tmp2(1233).t.g9tK0o);
     obj[2] = function onPress() {
       if (typeof fn !== "function") {
         HermesBuiltin.throwTypeError();
@@ -133,13 +133,13 @@ export const openMemberVerificationRejectedAlert = function openMemberVerificati
     };
   } else {
     obj = { text: null, onPress: null };
-    const intl = tmp2(1236).intl;
-    obj[0] = intl.string(tmp2(1236).t.BddRzS);
+    const intl = tmp2(1233).intl;
+    obj[0] = intl.string(tmp2(1233).t.BddRzS);
     obj[1] = fn;
   }
   dependencyMap = jsx(onClose(4928).Button, obj);
-  let result = fn(1891).dismissGlobalKeyboard();
-  let obj3 = fn(1891);
+  let result = fn(1890).dismissGlobalKeyboard();
+  let obj3 = fn(1890);
   const tmp = jsx;
   obj = {
     importer() {

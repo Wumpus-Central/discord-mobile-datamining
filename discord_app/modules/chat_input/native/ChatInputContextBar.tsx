@@ -1,20 +1,20 @@
-// === Module 11990: ChatInputReplyBarNoAuthor ===
+// === Module 12214: ChatInputReplyBarNoAuthor ===
 
-// Module 11990 (ChatInputReplyBarNoAuthor)
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
+// Module 12214 (ChatInputReplyBarNoAuthor)
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import Button from "Button" /* 1296 */;
 import map from "map" /* 4197 */;
 import Text from "Text" /* 4474 */;
-import PressableBase from "PressableBase" /* 5068 */;
-import registerAssetDefault from "registerAsset" /* 7713 */;
+import PressableBase from "PressableBase" /* 5076 */;
+import registerAssetDefault from "registerAsset" /* 7722 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import closure_7 from "handleChanged" /* 4854 */;
 import { DraftType } from "handleChanged" /* 4854 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import closure_9 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -344,7 +344,7 @@ function ChatInputEditBar(onCancelEditing) {
   }
   obj[3] = tmp9;
   obj[4] = onCancelEditing.onCancelEditing;
-  obj1 = { source: registerAssetDefault, size: tmp2(1297).Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
+  obj1 = { source: registerAssetDefault, size: tmp2(1296).Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
   obj[5] = callback(Button.Icon, obj1);
   const obj2 = { style: tmp.contextBarRow, children: null };
   const obj3 = { children: null };

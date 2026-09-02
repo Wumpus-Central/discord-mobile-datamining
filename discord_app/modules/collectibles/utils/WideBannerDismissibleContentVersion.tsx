@@ -1,8 +1,8 @@
-// === Module 13727: getWideBannerDismissibleContentVersion ===
+// === Module 13950: getWideBannerDismissibleContentVersion ===
 
-// Module 13727 (getWideBannerDismissibleContentVersion)
-import closure_2 from "map" /* 7331 */;
-import { CollectibleShopTab } from "items" /* 678 */;
+// Module 13950 (getWideBannerDismissibleContentVersion)
+import closure_2 from "map" /* 7340 */;
+import { CollectibleShopTab } from "items" /* 675 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/utils/WideBannerDismissibleContentVersion.tsx");

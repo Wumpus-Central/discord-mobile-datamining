@@ -1,14 +1,14 @@
-// === Module 5489: headerTitle ===
+// === Module 5497: headerTitle ===
 
-// Module 5489 (headerTitle)
+// Module 5497 (headerTitle)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "get" /* 5490 */;
-import closure_5 from "ensureGuildLoaded" /* 1387 */;
-import closure_6 from "createGuildRecordFromRust" /* 1909 */;
-import closure_7 from "handleConnectionOpen" /* 1981 */;
-import closure_8 from "handleUpdate" /* 5467 */;
-import { GuildOnboardingModalStates as closure_9 } from "GUILD_ONBOARDING_MODAL_KEY" /* 5464 */;
-import ME from "ME" /* 676 */;
+import closure_4 from "get" /* 5498 */;
+import closure_5 from "ensureGuildLoaded" /* 1386 */;
+import closure_6 from "createGuildRecordFromRust" /* 1908 */;
+import closure_7 from "handleConnectionOpen" /* 1980 */;
+import closure_8 from "handleUpdate" /* 5475 */;
+import { GuildOnboardingModalStates as closure_9 } from "GUILD_ONBOARDING_MODAL_KEY" /* 5472 */;
+import ME from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

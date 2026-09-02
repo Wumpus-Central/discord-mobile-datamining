@@ -1,9 +1,9 @@
-// === Module 17153: getEmptyServerSettingsEmojiSource ===
+// === Module 17389: getEmptyServerSettingsEmojiSource ===
 
-// Module 17153 (getEmptyServerSettingsEmojiSource)
+// Module 17389 (getEmptyServerSettingsEmojiSource)
 import noopAll from "noop" /* 19 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import getIllustrationSource from "getIllustrationSource" /* 8911 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1362 */;
+import getIllustrationSource from "getIllustrationSource" /* 8926 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -15,13 +15,13 @@ export const getEmptyServerSettingsEmojiSource = function getEmptyServerSettings
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(17154);
+      return callback(17390);
     },
     darker() {
-      return callback(17155);
+      return callback(17391);
     },
     light() {
-      return callback(17156);
+      return callback(17392);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -30,13 +30,13 @@ export const useEmptyServerSettingsEmojiSource = function useEmptyServerSettings
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(17154);
+      return callback(17390);
     },
     darker() {
-      return callback(17155);
+      return callback(17391);
     },
     light() {
-      return callback(17156);
+      return callback(17392);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -45,13 +45,13 @@ export const EmptyServerSettingsEmoji = function EmptyServerSettingsEmoji(arg0) 
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(17154);
+      return callback(17390);
     },
     darker() {
-      return callback(17155);
+      return callback(17391);
     },
     light() {
-      return callback(17156);
+      return callback(17392);
     }
   };
   obj = {};

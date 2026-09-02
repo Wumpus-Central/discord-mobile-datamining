@@ -1,9 +1,9 @@
-// === Module 13386: init ===
+// === Module 13609: init ===
 
-// Module 13386 (init)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import handleChannelSelectDefault from "handleChannelSelect" /* 13387 */;
+// Module 13609 (init)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import handleChannelSelectDefault from "handleChannelSelect" /* 13610 */;
 import closure_2 from "markAllUserIdListsStale" /* 4130 */;
 import closure_3 from "updateVoiceState" /* 4497 */;
 import set from "set" /* 2 */;

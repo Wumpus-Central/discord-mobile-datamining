@@ -1,18 +1,18 @@
-// === Module 7766: handleOpenEmailVerification ===
+// === Module 7775: handleOpenEmailVerification ===
 
-// Module 7766 (handleOpenEmailVerification)
+// Module 7775 (handleOpenEmailVerification)
 import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import _modDef7687 from "module_7687" /* 7687 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import initialize from "initialize" /* 586 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import _modDef7696 from "module_7696" /* 7696 */;
+import closure_3 from "mergeGuildAvatar" /* 1921 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function handleOpenEmailVerification() {
-  _modDef7687.open();
+  _modDef7696.open();
 }
 function getBannerText(currentUser) {
   if (null == currentUser) {
@@ -66,7 +66,7 @@ export default function UserSettingsAccountUnverifiedHeader() {
     obj1[3] = tmp4.button;
     items1[1] = callback(tmp2(4474).Text, obj1);
     obj[3] = items1;
-    tmp5 = callback2(tmp2(5068).PressableOpacity, obj);
+    tmp5 = callback2(tmp2(5076).PressableOpacity, obj);
   }
   return tmp5;
 };

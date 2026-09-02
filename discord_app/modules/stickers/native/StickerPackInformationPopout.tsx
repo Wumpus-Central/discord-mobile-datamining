@@ -1,8 +1,8 @@
-// === Module 10392: StickerPackInformationPopout ===
+// === Module 10414: StickerPackInformationPopout ===
 
-// Module 10392 (StickerPackInformationPopout)
+// Module 10414 (StickerPackInformationPopout)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4852 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -33,25 +33,25 @@ export default function StickerPackInformationPopout(stickerPack) {
   let obj = _require(4852);
   if (obj.isStickerPackAnimated(stickerPack)) {
     obj = { key: "animated", description: null };
-    const intl = tmp2(1236).intl;
-    obj[1] = intl.string(tmp2(1236).t.W11rMa);
+    const intl = tmp2(1233).intl;
+    obj[1] = intl.string(tmp2(1233).t.W11rMa);
     items.push(obj);
   }
   obj = { style: items1, children: null };
   items1 = [tmp.informationContainer, style];
   obj1 = { style: tmp.headerContainer, children: null };
   const obj2 = { style: tmp.informationHeader, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl2 = tmp2(1236).intl;
-  obj2[3] = intl2.format(_require(1236).t.XDm6yN, { stickerPackName: stickerPack.name });
+  const intl2 = tmp2(1233).intl;
+  obj2[3] = intl2.format(_require(1233).t.XDm6yN, { stickerPackName: stickerPack.name });
   const items2 = [callback(_require(4474).Text, obj2), ];
   const obj4 = { onPress: onClose, accessibilityRole: "button", accessibilityLabel: null, children: null };
-  const intl3 = tmp2(1236).intl;
-  obj4[2] = intl3.string(_require(1236).t.cpT0Cq);
+  const intl3 = tmp2(1233).intl;
+  obj4[2] = intl3.string(_require(1233).t.cpT0Cq);
   const obj5 = { variant: "text-md/bold", color: "text-brand", children: null };
-  const intl4 = tmp2(1236).intl;
-  obj5[2] = intl4.string(_require(1236).t.cpT0Cq);
+  const intl4 = tmp2(1233).intl;
+  obj5[2] = intl4.string(_require(1233).t.cpT0Cq);
   obj4[3] = callback(_require(4474).Text, obj5);
-  items2[1] = callback(_require(5068).PressableOpacity, obj4);
+  items2[1] = callback(_require(5076).PressableOpacity, obj4);
   obj1[1] = items2;
   const items3 = [
     callback2(closure_2, obj1),
@@ -78,8 +78,8 @@ export const doesStickerPackHavePopoutInformation = function doesStickerPackHave
   let obj = getStickerExtensionFromFormatType;
   if (obj.isStickerPackAnimated(stickerPack)) {
     obj = { key: "animated", description: null };
-    const intl = tmp(1236).intl;
-    obj[1] = intl.string(tmp(1236).t.W11rMa);
+    const intl = tmp(1233).intl;
+    obj[1] = intl.string(tmp(1233).t.W11rMa);
     items.push(obj);
   }
   return items.length > 0;

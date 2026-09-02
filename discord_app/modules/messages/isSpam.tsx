@@ -1,9 +1,9 @@
-// === Module 7252: isSpamSupported ===
+// === Module 7261: isSpamSupported ===
 
-// Module 7252 (isSpamSupported)
-import getDecisionOutcomeFromMessage from "getDecisionOutcomeFromMessage" /* 7253 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+// Module 7261 (isSpamSupported)
+import getDecisionOutcomeFromMessage from "getDecisionOutcomeFromMessage" /* 7262 */;
+import closure_2 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
 
 require = arg1;
 ({ UserFlags: c3, ChannelTypes: c4 } = ME);

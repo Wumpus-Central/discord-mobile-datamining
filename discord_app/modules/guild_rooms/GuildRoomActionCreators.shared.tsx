@@ -1,13 +1,13 @@
 // === Module 4678: _guildRoomConnect ===
 
 // Module 4678 (_guildRoomConnect)
-import dispatcherDefault from "dispatcher" /* 709 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 import getBaseProperties from "getBaseProperties" /* 4699 */;
 import GUILD_ROOMS_EXPERIMENT_ID from "GUILD_ROOMS_EXPERIMENT_ID" /* 4720 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_4 from "fetchFingerprint" /* 1215 */;
 import closure_5 from "resolveCreatingNotes" /* 4679 */;
-import { Endpoints } from "ME" /* 676 */;
+import { Endpoints } from "ME" /* 673 */;
 
 require = arg1;
 function _guildRoomConnect() {
@@ -80,7 +80,7 @@ function _guildRoomConnect() {
               let tmp43 = UNSET;
               let tmp44 = callback;
               let tmp45 = dependencyMap;
-              let HTTP = callback(530).HTTP;
+              let HTTP = callback(527).HTTP;
               obj1 = { url: null, body: null, rejectWithError: true };
               let tmp46 = closure_1_6;
               obj1[0] = closure_1_6.GUILD_ROOM_CONNECT(tmp88, tmp89);
@@ -104,7 +104,7 @@ function _guildRoomConnect() {
             c11 = c10;
             let tmp33 = callback2;
             let tmp34 = dependencyMap;
-            let obj5 = callback2(709);
+            let obj5 = callback2(706);
             let obj4 = { type: "GUILD_ROOM_CONNECT_FAILURE", guildId: null, roomId: null };
             let tmp35 = callback;
             obj4[1] = callback;
@@ -136,7 +136,7 @@ function _guildRoomConnect() {
               users = obj12.serverGuildRoomToClient(closure_6.body);
               let tmp57 = callback2;
               let tmp58 = dependencyMap;
-              let obj13 = callback2(709);
+              let obj13 = callback2(706);
               let obj6 = { type: "GUILD_ROOM_CONNECT", room: null, guildId: null, pendingPosition: null, pendingSeat: null };
               let tmp59 = users;
               obj6[1] = users;
@@ -618,7 +618,7 @@ function _createGuildRoomNote() {
               obj1[1] = callback2;
               obj1[2] = fromTimestampResult;
               obj1[3] = closure_3;
-              callback2(709).dispatch(obj1);
+              callback2(706).dispatch(obj1);
               closure_1_15(callback2);
               c7 = 1;
               const obj2 = { object_type: null, content: null, position: null };
@@ -634,7 +634,7 @@ function _createGuildRoomNote() {
           } else if (1 === tmp7) {
             c7 = 0;
             closure_3 = closure_6;
-            obj3 = callback2(709);
+            obj3 = callback2(706);
             const obj4 = { type: "GUILD_ROOM_NOTE_CREATE_FAILURE", roomId: null, localId: null };
             obj4[1] = callback2;
             obj4[2] = dependencyMap;
@@ -789,7 +789,7 @@ function _fetchGuildRoom() {
         lib = arg1;
         const obj = callback(4682);
         dependencyMap = obj.serverGuildRoomToClient(lib.body);
-        obj1 = lib(709);
+        obj1 = lib(706);
         const obj3 = { type: "GUILD_ROOM_FETCH_SUCCESS", guildId: null, room: null };
         obj3[1] = callback;
         obj3[2] = dependencyMap;

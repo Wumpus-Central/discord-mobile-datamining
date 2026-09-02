@@ -1,16 +1,16 @@
-// === Module 11444: useCurrentUserHasAutomodQuarantinedProfile ===
+// === Module 11667: useCurrentUserHasAutomodQuarantinedProfile ===
 
-// Module 11444 (useCurrentUserHasAutomodQuarantinedProfile)
+// Module 11667 (useCurrentUserHasAutomodQuarantinedProfile)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "zustandStore" /* 9032 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "trackCommunicationDisabled" /* 1992 */;
-import closure_6 from "createGuildRecordFromRust" /* 1909 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4121 */;
+import closure_3 from "zustandStore" /* 9046 */;
+import closure_4 from "fetchFingerprint" /* 1215 */;
+import closure_5 from "trackCommunicationDisabled" /* 1991 */;
+import closure_6 from "createGuildRecordFromRust" /* 1908 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_8 from "handleConnectionOpen" /* 4299 */;
-import ME from "ME" /* 676 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4109 */;
-import { ProfileCustomizationSubsection as closure_12 } from "MAX_FAVORITES" /* 685 */;
+import ME from "ME" /* 673 */;
+import { GuildMemberFlags } from "GuildMemberFlags" /* 4108 */;
+import { ProfileCustomizationSubsection as closure_12 } from "MAX_FAVORITES" /* 682 */;
 
 const require = arg1;
 ({ Permissions: c9, UserSettingsSections: c10 } = ME);
@@ -20,7 +20,7 @@ export const useCurrentUserHasAutomodQuarantinedProfile = function useCurrentUse
   const _require = arg0;
   const items = [closure_4, closure_5];
   const items1 = [arg0];
-  return _require(647).useStateFromStores(items, () => {
+  return _require(644).useStateFromStores(items, () => {
     if (null == callback) {
       return false;
     } else {
@@ -33,12 +33,12 @@ export const useGuildAutomodProfileQuarantineErrors = function useGuildAutomodPr
   const _require = id;
   let items = [closure_4, closure_5, closure_8, closure_6];
   let items1 = [id];
-  return _require(647).useStateFromStoresObject(items, () => {
+  return _require(644).useStateFromStoresObject(items, () => {
     let guildId = id;
     if (id == null) {
       guildId = closure_1_8.getGuildId();
     }
-    let obj = { nick: "children", bio: "c" };
+    let obj = { nick: "disabled", bio: "Date" };
     let guild = closure_1_6.getGuild(guildId);
     if (null != guild) {
       if (null != guildId) {

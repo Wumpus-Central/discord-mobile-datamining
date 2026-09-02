@@ -1,12 +1,12 @@
-// === Module 14535: FamilyCenterParentalControlsSettings ===
+// === Module 14758: FamilyCenterParentalControlsSettings ===
 
-// Module 14535 (FamilyCenterParentalControlsSettings)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 14758 (FamilyCenterParentalControlsSettings)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { UserSettingsSections } from "ME" /* 676 */;
-import { FamilyCenterSubPages } from "items" /* 7283 */;
+import { UserSettingsSections } from "ME" /* 673 */;
+import { FamilyCenterSubPages } from "items" /* 7292 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -101,7 +101,7 @@ export default function FamilyCenterParentalControlsSettings() {
         }
       }
     }
-    stackNavigation.setOptions({ title: "children", headerRight: "c" });
+    stackNavigation.setOptions({ title: "disabled", headerRight: "Date" });
   }, items1);
   if (isFamilyCenterV3Enabled) {
     isFamilyCenterV3Enabled = selectedSubPage === items2.SCREEN_TIME_CONTROLS;

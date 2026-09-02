@@ -1,6 +1,6 @@
-// === Module 8927: useDisplayNameStylesAccessibleColors ===
+// === Module 8941: useDisplayNameStylesAccessibleColors ===
 
-// Module 8927 (useDisplayNameStylesAccessibleColors)
+// Module 8941 (useDisplayNameStylesAccessibleColors)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 

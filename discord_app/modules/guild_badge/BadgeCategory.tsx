@@ -1,8 +1,8 @@
-// === Module 8868: BadgeCategory ===
+// === Module 8883: BadgeCategory ===
 
-// Module 8868 (BadgeCategory)
+// Module 8883 (BadgeCategory)
 import set from "set" /* 2 */;
-import GuildVisibility from "GuildVisibility" /* 8869 */;
+import GuildVisibility from "GuildVisibility" /* 8884 */;
 
 const obj = { PARTNERED: 0, [0]: "PARTNERED", VERIFIED: 1, [1]: "VERIFIED", VERIFIED_AND_PARTNERED: 2, [2]: "VERIFIED_AND_PARTNERED", COMMUNITY: 3, [3]: "COMMUNITY", DISCOVERABLE: 4, [4]: "DISCOVERABLE", STAFF: 5, [5]: "STAFF", NONE: 6, [6]: "NONE" };
 const result = set.fileFinishedImporting("modules/guild_badge/BadgeCategory.tsx");

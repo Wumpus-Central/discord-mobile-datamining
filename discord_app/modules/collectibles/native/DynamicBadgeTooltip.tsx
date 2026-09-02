@@ -1,6 +1,6 @@
-// === Module 12533: DynamicBadgeTooltip ===
+// === Module 12757: DynamicBadgeTooltip ===
 
-// Module 12533 (DynamicBadgeTooltip)
+// Module 12757 (DynamicBadgeTooltip)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;

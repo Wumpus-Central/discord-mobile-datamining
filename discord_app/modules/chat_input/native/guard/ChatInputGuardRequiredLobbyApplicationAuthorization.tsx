@@ -1,8 +1,8 @@
-// === Module 12024: ? ===
+// === Module 12248: ? ===
 
-// Module 12024
-import ThemesDefault from "Themes" /* 712 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 12012 */;
+// Module 12248
+import ThemesDefault from "Themes" /* 709 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 12236 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -29,23 +29,23 @@ const memoResult = importAllResult.memo(function ChatInputGuardRequiredLobbyAppl
       if (shouldRelaunchLinkedLobbyApplication) {
         obj = { type: "simple-action", icon: null, message: null };
         obj[1] = tmp5;
-        const intl3 = connectionEntrypointUrl(1236).intl;
+        const intl3 = connectionEntrypointUrl(1233).intl;
         obj = { name: null };
         obj[0] = requiredLinkedLobbyApplication.name;
-        obj[2] = intl3.format(connectionEntrypointUrl(1236).t["SU2mY/"], obj);
+        obj[2] = intl3.format(connectionEntrypointUrl(1233).t["SU2mY/"], obj);
         return jsx(ChatInputGuardDefault, { name: null });
       } else {
         connectionEntrypointUrl = requiredLinkedLobbyApplication.connectionEntrypointUrl;
         obj1 = { type: "simple-action", icon: null, message: null, actionLabel: null, actionOnPress: null };
         obj1[1] = tmp5;
-        const intl = connectionEntrypointUrl(1236).intl;
+        const intl = connectionEntrypointUrl(1233).intl;
         const obj2 = { name: null };
         obj2[0] = requiredLinkedLobbyApplication.name;
-        obj1[2] = intl.format(connectionEntrypointUrl(1236).t.EvDn1D, obj2);
+        obj1[2] = intl.format(connectionEntrypointUrl(1233).t.EvDn1D, obj2);
         let stringResult;
         if (null != connectionEntrypointUrl) {
-          const intl2 = tmp10(1236).intl;
-          stringResult = intl2.string(tmp10(1236).t.S0W8Z5);
+          const intl2 = tmp10(1233).intl;
+          stringResult = intl2.string(tmp10(1233).t.S0W8Z5);
         }
         obj1[3] = stringResult;
         let fn;

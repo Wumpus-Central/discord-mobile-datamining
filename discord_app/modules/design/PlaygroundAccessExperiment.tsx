@@ -1,9 +1,9 @@
-// === Module 10725: apexExperiment ===
+// === Module 10946: apexExperiment ===
 
-// Module 10725 (apexExperiment)
-import initialize from "initialize" /* 589 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import ApexExperiment from "ApexExperiment" /* 1468 */;
+// Module 10946 (apexExperiment)
+import initialize from "initialize" /* 586 */;
+import closure_2 from "mergeGuildAvatar" /* 1921 */;
+import ApexExperiment from "ApexExperiment" /* 1467 */;
 
 require = arg1;
 ApexExperiment = { 1: null };

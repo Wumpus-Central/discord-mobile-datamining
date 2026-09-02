@@ -1,16 +1,16 @@
-// === Module 10659: useNavigatorConfirmChangesOnBack ===
+// === Module 10880: useNavigatorConfirmChangesOnBack ===
 
-// Module 10659 (useNavigatorConfirmChangesOnBack)
+// Module 10880 (useNavigatorConfirmChangesOnBack)
 import closure_2 from "noop" /* 19 */;
 import { Keyboard } from "get ActivityIndicator" /* 17 */;
-import { NOOP } from "ME" /* 676 */;
+import { NOOP } from "ME" /* 673 */;
 
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/utils/useNavigatorConfirmChangesOnBack.tsx");
 
 export default function useNavigatorConfirmChangesOnBack() {
   const ref = React.useRef(null);
   dependencyMap = React.useRef(false);
-  obj = { onGoBack: ref(10660)(obj).onGoBack, ref };
+  obj = { onGoBack: ref(10881)(obj).onGoBack, ref };
   obj = {
     onBeforeGoBack(preventable) {
       if (preventable.preventable) {

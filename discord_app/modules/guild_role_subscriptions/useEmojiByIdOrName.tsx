@@ -1,7 +1,7 @@
-// === Module 14837: useEmojiByIdOrName ===
+// === Module 15066: useEmojiByIdOrName ===
 
-// Module 14837 (useEmojiByIdOrName)
-import closure_2 from "getEmojiToGroupId" /* 5401 */;
+// Module 15066 (useEmojiByIdOrName)
+import closure_2 from "getEmojiToGroupId" /* 5409 */;
 
 const require = arg1;
 function useEmojiByIdOrName(guildId, emojiId) {
@@ -9,7 +9,7 @@ function useEmojiByIdOrName(guildId, emojiId) {
   dependencyMap = emojiId;
   const items = [closure_2];
   const items1 = [guildId, emojiId];
-  return _require(589).useStateFromStores(items, () => {
+  return _require(586).useStateFromStores(items, () => {
     if (null == closure_1) {
       return null;
     } else {

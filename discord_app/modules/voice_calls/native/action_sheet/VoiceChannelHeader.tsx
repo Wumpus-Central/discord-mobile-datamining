@@ -1,24 +1,24 @@
-// === Module 13448: PrivateChannelSubtitle ===
+// === Module 13671: PrivateChannelSubtitle ===
 
-// Module 13448 (PrivateChannelSubtitle)
+// Module 13671 (PrivateChannelSubtitle)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import Button from "Button" /* 1296 */;
 import computeChannelNameDefault from "computeChannelName" /* 4674 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 5012 */;
-import PressableBase from "PressableBase" /* 5068 */;
-import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 10028 */;
-import registerAssetDefault from "registerAsset" /* 10114 */;
-import id from "id" /* 13449 */;
-import idDefault from "id" /* 13449 */;
-import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 13450 */;
-import OnGoingCallTimerDefault from "OnGoingCallTimer" /* 13451 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 5015 */;
+import PressableBase from "PressableBase" /* 5076 */;
+import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 10050 */;
+import registerAssetDefault from "registerAsset" /* 10136 */;
+import id from "id" /* 13672 */;
+import idDefault from "id" /* 13672 */;
+import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 13673 */;
+import OnGoingCallTimerDefault from "OnGoingCallTimer" /* 13674 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "participantFromServer" /* 1386 */;
-import closure_5 from "createGuildRecordFromRust" /* 1909 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4121 */;
-import ME from "ME" /* 676 */;
+import closure_4 from "participantFromServer" /* 1385 */;
+import closure_5 from "createGuildRecordFromRust" /* 1908 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4120 */;
+import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -37,7 +37,7 @@ function PrivateChannelSubtitle(channel) {
     tmp6Result = tmp6(tmp7(4474).Text, obj);
   }
   items[1] = tmp6Result;
-  tmp6Result = state === tmp7(13449).CallStates.CONNECTED;
+  tmp6Result = state === tmp7(13672).CallStates.CONNECTED;
   if (tmp6Result) {
     obj1 = { channelId: null, style: null };
     obj1[0] = channel.id;

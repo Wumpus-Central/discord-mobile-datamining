@@ -1,16 +1,16 @@
-// === Module 9992: checkVoiceStates ===
+// === Module 10014: checkVoiceStates ===
 
-// Module 9992 (checkVoiceStates)
-import sortKey from "sortKey" /* 5368 */;
-import initializeDefault from "initialize" /* 5486 */;
-import closure_2 from "ensureGuildLoaded" /* 1387 */;
+// Module 10014 (checkVoiceStates)
+import sortKey from "sortKey" /* 5376 */;
+import initializeDefault from "initialize" /* 5494 */;
+import closure_2 from "ensureGuildLoaded" /* 1386 */;
 import importDefaultResult from "_detectH265HardwareDecode" /* 4529 */;
-import closure_4 from "handleConnectionOpen" /* 1981 */;
+import closure_4 from "handleConnectionOpen" /* 1980 */;
 import closure_5 from "updateVoiceState" /* 4497 */;
-import closure_6 from "getActiveStageChannelIds" /* 5362 */;
-import closure_7 from "handleStageInstanceCreateOrUpdate" /* 1392 */;
-import closure_8 from "initialize" /* 9990 */;
-import createSoundForPack from "createSoundForPack" /* 9993 */;
+import closure_6 from "getActiveStageChannelIds" /* 5370 */;
+import closure_7 from "handleStageInstanceCreateOrUpdate" /* 1391 */;
+import closure_8 from "initialize" /* 10012 */;
+import createSoundForPack from "createSoundForPack" /* 10015 */;
 
 require = arg1;
 function checkVoiceStates() {
@@ -137,10 +137,10 @@ export default stageMusicManager;
 export const useShowStageMusicMuteButton = function useShowStageMusicMuteButton(channelId) {
   const _require = channelId;
   const items = [closure_4];
-  let stateFromStores = _require(589).useStateFromStores(items, () => closure_1_4.getVoiceChannelId() === closure_0);
-  const obj = _require(589);
-  const stageParticipants = _require(5374).useStageParticipants(channelId, _require(5368).StageChannelParticipantNamedIndex.SPEAKER);
-  const obj2 = _require(5374);
+  let stateFromStores = _require(586).useStateFromStores(items, () => closure_1_4.getVoiceChannelId() === closure_0);
+  const obj = _require(586);
+  const stageParticipants = _require(5382).useStageParticipants(channelId, _require(5376).StageChannelParticipantNamedIndex.SPEAKER);
+  const obj2 = _require(5382);
   const tmp2 = null != stageParticipants.find((voiceState) => {
     voiceState = voiceState.voiceState;
     return !voiceState.isVoiceMuted();

@@ -1,10 +1,10 @@
-// === Module 13230: ChevronSmallUpIcon ===
+// === Module 13452: ChevronSmallUpIcon ===
 
-// Module 13230 (ChevronSmallUpIcon)
+// Module 13452 (ChevronSmallUpIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 12184 */;
+import registerAsset from "registerAsset" /* 12408 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

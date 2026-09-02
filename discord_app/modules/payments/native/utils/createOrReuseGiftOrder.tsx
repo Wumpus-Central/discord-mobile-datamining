@@ -1,12 +1,12 @@
-// === Module 10519: useCreateOrReuseGiftOrder ===
+// === Module 10740: useCreateOrReuseGiftOrder ===
 
-// Module 10519 (useCreateOrReuseGiftOrder)
+// Module 10740 (useCreateOrReuseGiftOrder)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import { ItemPurchaseType } from "CustomCheckoutFlow" /* 4460 */;
-import { SubscriptionPlanInfo } from "GuildFeatures" /* 1924 */;
-import { PaymentGateways } from "sum" /* 505 */;
+import { SubscriptionPlanInfo } from "GuildFeatures" /* 1923 */;
+import { PaymentGateways } from "sum" /* 502 */;
 
 const require = arg1;
 let closure_8 = new timestampDefault("createOrReuseGiftOrder");
@@ -58,7 +58,7 @@ export const useCreateOrReuseGiftOrder = function useCreateOrReuseGiftOrder(Gift
               c4 = undefined;
               c5 = 1;
               c6 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {

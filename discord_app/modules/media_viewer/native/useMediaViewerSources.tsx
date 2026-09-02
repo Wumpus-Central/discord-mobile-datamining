@@ -1,6 +1,6 @@
-// === Module 8567: zustandStore ===
+// === Module 8582: zustandStore ===
 
-// Module 8567 (zustandStore)
+// Module 8582 (zustandStore)
 import set2 from "set" /* 2 */;
 import defaultStatesAreEqual from "defaultStatesAreEqual" /* 4344 */;
 

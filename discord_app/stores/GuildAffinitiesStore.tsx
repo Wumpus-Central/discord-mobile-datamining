@@ -1,10 +1,10 @@
-// === Module 8616: initialize ===
+// === Module 8631: initialize ===
 
-// Module 8616 (initialize)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import fetchGuildAffinities from "fetchGuildAffinities" /* 8617 */;
-import closure_2 from "createGuildRecordFromRust" /* 1909 */;
+// Module 8631 (initialize)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import fetchGuildAffinities from "fetchGuildAffinities" /* 8632 */;
+import closure_2 from "createGuildRecordFromRust" /* 1908 */;
 
 require = arg1;
 let closure_3 = { guildAffinitiesByGuildId: {}, guildAffinities: [], lastFetched: 0 };

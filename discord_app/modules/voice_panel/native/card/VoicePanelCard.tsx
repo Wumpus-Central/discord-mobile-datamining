@@ -1,7 +1,7 @@
-// === Module 16713: SelfStreamCard ===
+// === Module 16948: SelfStreamCard ===
 
-// Module 16713 (SelfStreamCard)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 16948 (SelfStreamCard)
+import ThemesDefault from "Themes" /* 709 */;
 import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4927 */;
 import LinearGradientDefault from "LinearGradient" /* 4940 */;
 import closure_3 from "_slicedToArray" /* 32 */;
@@ -9,14 +9,14 @@ import importAllResult from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "reset" /* 4500 */;
 import closure_7 from "createRTCConnection" /* 4554 */;
-import closure_8 from "anyoneHasFlagInContext" /* 5363 */;
-import VoicePanelModes from "VoicePanelModes" /* 11840 */;
-import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11838 */;
-import { VoicePanelPIPModes } from "VoicePanelPIPModes" /* 16669 */;
-import { EDGE_GUTTER } from "CARD_SIZE" /* 11843 */;
-import { ApplicationStreamStates } from "ME" /* 676 */;
+import closure_8 from "anyoneHasFlagInContext" /* 5371 */;
+import VoicePanelModes from "VoicePanelModes" /* 12063 */;
+import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 12061 */;
+import { VoicePanelPIPModes } from "VoicePanelPIPModes" /* 16904 */;
+import { EDGE_GUTTER } from "CARD_SIZE" /* 12066 */;
+import { ApplicationStreamStates } from "ME" /* 673 */;
 import { ParticipantTypes } from "ParticipantTypes" /* 4499 */;
-import { SCALE_PHYSICS } from "MIN_PAN_GESTURE_MOVE" /* 11841 */;
+import { SCALE_PHYSICS } from "MIN_PAN_GESTURE_MOVE" /* 12064 */;
 import jsxProd from "jsxProd" /* 21 */;
 import importDefaultResult from "module_4217" /* 4217 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -1447,7 +1447,7 @@ const memoResult = importAllResult.memo(function VoicePanelCard(cleanUp) {
       tmp25 = callback;
     }
   }
-  const obj8 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "isArray", layout: "r", layoutPhysics: "isArray" };
+  const obj8 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "channelId", layout: true, layoutPhysics: true };
   obj8[3] = layoutTransition;
   obj8[4] = physics;
   tmp26Result = callback(closure_37, obj8);

@@ -2,46 +2,46 @@
 
 // Module 4556 (getEventHistoryString)
 import timestampDefault from "timestamp" /* 3 */;
-import set2 from "set" /* 500 */;
-import v1 from "v1" /* 514 */;
-import failsDefault from "fails" /* 584 */;
-import debounceDefault from "debounce" /* 636 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import _modDef1208 from "module_1208" /* 1208 */;
-import MurmurHashV3Default from "MurmurHashV3" /* 1217 */;
-import awaitOnlineDefault from "awaitOnline" /* 1473 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1486 */;
+import v1 from "v1" /* 511 */;
+import failsDefault from "fails" /* 581 */;
+import debounceDefault from "debounce" /* 633 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import _modDef1205 from "module_1205" /* 1205 */;
+import MurmurHashV3Default from "MurmurHashV3" /* 1214 */;
+import set2 from "set" /* 1234 */;
+import awaitOnlineDefault from "awaitOnline" /* 1472 */;
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1485 */;
 import setDefault from "set" /* 4472 */;
 import sleep from "sleep" /* 4558 */;
 import RTCConnectionEvent from "RTCConnectionEvent" /* 4578 */;
 import onDefault from "on" /* 4582 */;
 import setDefault2 from "set" /* 4857 */;
-import getUnitIdDefault from "getUnitId" /* 5364 */;
-import createDefault from "create" /* 7219 */;
-import NativeModulesDefault from "NativeModules" /* 9459 */;
-import isIncomingVideoEnabled from "isIncomingVideoEnabled" /* 9578 */;
-import openAll from "open" /* 10122 */;
-import noop from "noop" /* 13462 */;
-import noopDefault from "noop" /* 13462 */;
-import getUnitIdDefault2 from "getUnitId" /* 13465 */;
-import _modDef13479 from "module_13479" /* 13479 */;
+import getUnitIdDefault from "getUnitId" /* 5372 */;
+import createDefault from "create" /* 7228 */;
+import NativeModulesDefault from "NativeModules" /* 9472 */;
+import isIncomingVideoEnabled from "isIncomingVideoEnabled" /* 9591 */;
+import openAll from "open" /* 10144 */;
+import noop from "noop" /* 13685 */;
+import noopDefault from "noop" /* 13685 */;
+import getUnitIdDefault2 from "getUnitId" /* 13688 */;
+import _modDef13702 from "module_13702" /* 13702 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "DeviceTypes" /* 4557 */;
 import closure_6 from "updateAveragedStatsHelper" /* 4567 */;
-import closure_7 from "items" /* 9840 */;
-import closure_8 from "handleAudioRouteChanged" /* 9775 */;
-import closure_9 from "fetchFingerprint" /* 1218 */;
-import closure_10 from "ensureGuildLoaded" /* 1387 */;
-import closure_11 from "createGuildRecordFromRust" /* 1909 */;
+import closure_7 from "items" /* 9862 */;
+import closure_8 from "handleAudioRouteChanged" /* 9797 */;
+import closure_9 from "fetchFingerprint" /* 1215 */;
+import closure_10 from "ensureGuildLoaded" /* 1386 */;
+import closure_11 from "createGuildRecordFromRust" /* 1908 */;
 import closure_12 from "_detectH265HardwareDecode" /* 4529 */;
 import closure_13 from "createRTCConnection" /* 4554 */;
-import closure_14 from "updateStats" /* 10121 */;
+import closure_14 from "updateStats" /* 10143 */;
 import closure_15 from "initialize" /* 4575 */;
-import closure_16 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
-import { BROWSER_SUPPORTS_UNIFIED_PLAN as closure_23 } from "parsed" /* 13456 */;
+import closure_16 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
+import { PremiumTypes } from "GuildFeatures" /* 1923 */;
+import { BROWSER_SUPPORTS_UNIFIED_PLAN as closure_23 } from "parsed" /* 13679 */;
 import DesktopSources from "DesktopSources" /* 4542 */;
 
 require = arg1;
@@ -643,9 +643,9 @@ prototype["destroy"] = function destroy() {
   }
   obj = { c: constants9.CONNECTION_DESTROY };
   self.recordEvent(obj);
-  const WindowVisibilityVideoManager = tmp5(9578).WindowVisibilityVideoManager;
+  const WindowVisibilityVideoManager = tmp5(9591).WindowVisibilityVideoManager;
   WindowVisibilityVideoManager.off(isIncomingVideoEnabled.WindowVisibilityEvent.IncomingVideoEnabledChanged, self.incomingVideoEnabledChanged);
-  const WindowVisibilityVideoManager2 = tmp5(9578).WindowVisibilityVideoManager;
+  const WindowVisibilityVideoManager2 = tmp5(9591).WindowVisibilityVideoManager;
   WindowVisibilityVideoManager2.off(isIncomingVideoEnabled.WindowVisibilityEvent.WindowVisibilityChanged, self.windowVisibilityChanged);
   self._cancelReconnect();
   self._cleanupSocket();
@@ -696,8 +696,8 @@ prototype["shouldSendSpeaking"] = function shouldSendSpeaking(_lastSentSpeakingS
     return true;
   } else {
     const self = this;
-    let tmpResult = tmp(1399);
-    tmpResult = tmp(1399);
+    let tmpResult = tmp(1398);
+    tmpResult = tmp(1398);
     let tmp7 = this._lastSentSSRC !== _lastSentSSRC || tmpResult.hasFlag(_lastSentSpeakingStatus, constants8.PRIORITY) !== tmpResult.hasFlag(this._lastSentSpeakingStatus, constants8.PRIORITY);
     if (tmp7) {
       let tmp8 = undefined !== self._lastSentSSRC || _lastSentSpeakingStatus !== tmp5.NONE;
@@ -1089,13 +1089,13 @@ prototype["_chooseExperiments"] = function _chooseExperiments(items) {
   const tmp3 = importDefault;
   let enabled = set2.isWeb();
   if (enabled) {
-    const BrowserTransceiverPaddingRemovalExperiment = tmp8(13464).BrowserTransceiverPaddingRemovalExperiment;
+    const BrowserTransceiverPaddingRemovalExperiment = tmp8(13687).BrowserTransceiverPaddingRemovalExperiment;
     enabled = BrowserTransceiverPaddingRemovalExperiment.getConfig({ location: "RTCConnection" }).enabled;
   }
   if (enabled) {
     items.push("browser_transceiver_padding_removal");
   }
-  let tmp8Result = tmp8(500);
+  let tmp8Result = tmp8(1234);
   if (tmp8Result.isIOS()) {
     const mode = getUnitIdDefault2.getConfig({ location: "_chooseExperiments" }).mode;
     if ("standard" === mode) {
@@ -1105,14 +1105,14 @@ prototype["_chooseExperiments"] = function _chooseExperiments(items) {
     }
     const tmp3Result = getUnitIdDefault2;
   }
-  tmp8Result = tmp8(500);
+  tmp8Result = tmp8(1234);
   let isAndroidResult = tmp8Result.isAndroid();
   if (isAndroidResult) {
-    isAndroidResult = tmp8(9574).isSurfaceDirectRendererExperimentEnabled();
-    const tmp8Result1 = tmp8(9574);
+    isAndroidResult = tmp8(9587).isSurfaceDirectRendererExperimentEnabled();
+    const tmp8Result1 = tmp8(9587);
   }
   if (isAndroidResult) {
-    items.push(tmp8(9574).ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT);
+    items.push(tmp8(9587).ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT);
   }
   this._selectedExperiments = items;
 };
@@ -1685,7 +1685,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
   ({ ssrc, streamParameters } = _readyData);
   this.setState(constants3.RTC_CONNECTING);
   this.port = _sfuEndpoint.port;
-  const ProcessBoostExperiment = _require(13468).ProcessBoostExperiment;
+  const ProcessBoostExperiment = _require(13691).ProcessBoostExperiment;
   const config = ProcessBoostExperiment.getConfig({ location: "media_engine_connect" });
   let obj = store2;
   ({ processPriority, threadPriorityConfiguration } = config);
@@ -1708,13 +1708,13 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
   tmp2Result = tmp2(4558);
   self._mediaEngineConnectDuration = tmp2Result.now() - tmp2Result.now();
   const nowResult = tmp2Result.now();
-  let isWebResult = _require(500).isWeb();
+  let isWebResult = _require(1234).isWeb();
   if (isWebResult) {
     isWebResult = !closure_23;
   }
   if (isWebResult) {
-    _modDef1208.captureMessage("Browser does not support Unified Plan");
-    const obj8 = _modDef1208;
+    _modDef1205.captureMessage("Browser does not support Unified Plan");
+    const obj8 = _modDef1205;
   }
   connectResult.setUseElectronVideo(mediaEngine.supports(constants5.ELECTRON_VIDEO));
   let guild = null;
@@ -1929,16 +1929,16 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
     }
     if (type === closure_1_18.GUILD_STAGE_VOICE) {
       if (!tmp._videoDecoderFallbackSuppressed) {
-        const logger = tmp.logger;
-        logger.info("Suppressing video decoder fallback: stage channel");
+        const logger2 = tmp.logger;
+        logger2.info("Suppressing video decoder fallback: stage channel");
         tmp._videoDecoderFallbackSuppressed = true;
       }
     } else {
       const found = arr.filter((type) => "video" === type.type);
       const mapped = found.map((name) => name.name);
-      const logger2 = tmp.logger;
+      const logger = tmp.logger;
       const _HermesInternal = HermesInternal;
-      logger2.info("The originally selected video decoder is not working, fallback to the other available decoders: " + mapped.join(","));
+      logger.info("The originally selected video decoder is not working, fallback to the other available decoders: " + mapped.join(","));
       const obj = { codecs: null };
       obj[0] = arr;
       socket.updateSession(obj);
@@ -2043,7 +2043,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
   connectResult.on(_require(4579).BaseConnectionEvent.OutboundLossRate, _handleOutboundLossRate.bind(self));
   const _handleLocalVideoDisabled = self._handleLocalVideoDisabled;
   connectResult.on(_require(4579).BaseConnectionEvent.LocalVideoDisabled, _handleLocalVideoDisabled.bind(self));
-  const tmp2Result1 = _require(500);
+  const tmp2Result1 = _require(1234);
   connectResult.on(_require(4579).BaseConnectionEvent.Stats, createDefault.create());
   const _handleRemoteStreamsReady = self._handleRemoteStreamsReady;
   connectResult.on(_require(4579).BaseConnectionEvent.RemoteStreamsReady, _handleRemoteStreamsReady.bind(self));
@@ -2162,22 +2162,22 @@ prototype["getOrCreateVideoQuality"] = function getOrCreateVideoQuality() {
   self = this;
   if (null != this._connection) {
     if (null == self._videoQuality) {
-      const videoQuality = new self(13476).VideoQuality(self._connection);
+      const videoQuality = new self(13699).VideoQuality(self._connection);
       self._videoQuality = videoQuality;
       const _videoQuality2 = self._videoQuality;
       let result = _videoQuality2.updateCallUserIdsCount(self._userIds.size);
       const _videoQuality3 = self._videoQuality;
       _videoQuality3.start();
-      const defaultConfig = self(13477).VideoHealthManager.defaultConfig;
+      const defaultConfig = self(13700).VideoHealthManager.defaultConfig;
       ({ windowLength, allowedPoorFpsRatio, fpsThreshold, backoffTimeSec } = defaultConfig);
       if (defaultConfig.featureEnabled) {
-        const videoHealthManager = new tmp10(13477).VideoHealthManager(windowLength, allowedPoorFpsRatio, fpsThreshold, backoffTimeSec);
+        const videoHealthManager = new tmp10(13700).VideoHealthManager(windowLength, allowedPoorFpsRatio, fpsThreshold, backoffTimeSec);
         self._videoHealthManager = videoHealthManager;
         if (null != self._localMediaSinkWantsManager) {
           self._localMediaSinkWantsManager.videoHealthManager = self._videoHealthManager;
         }
         const _videoQuality = self._videoQuality;
-        _videoQuality.on(tmp10(13476).VideoQualityEvent.FpsUpdate, (arg0, arg1, arg2) => {
+        _videoQuality.on(tmp10(13699).VideoQualityEvent.FpsUpdate, (arg0, arg1, arg2) => {
           const _localMediaSinkWantsManager = self._localMediaSinkWantsManager;
           let result;
           if (_localMediaSinkWantsManager != null) {
@@ -2638,8 +2638,8 @@ prototype["_trackVoiceConnectionSuccess"] = function _trackVoiceConnectionSucces
           }
         }
         obj[12] = diff4;
-        tmp9(698).track(tmp11.VOICE_CONNECTION_TTC_COLLECTED, obj);
-        const tmp9Result = tmp9(698);
+        tmp9(695).track(tmp11.VOICE_CONNECTION_TTC_COLLECTED, obj);
+        const tmp9Result = tmp9(695);
       }
     }
   }
@@ -2699,7 +2699,7 @@ prototype["_handleKeyframeInterval"] = function _handleKeyframeInterval(keyframe
 };
 prototype["_handleBandwidthEstimationExperiment"] = function _handleBandwidthEstimationExperiment(_bandwidthEstimationExperiment) {
   this._bandwidthEstimationExperiment = _bandwidthEstimationExperiment;
-  const mediaEngineExperiments = _modDef13479.getMediaEngineExperiments(_bandwidthEstimationExperiment);
+  const mediaEngineExperiments = _modDef13702.getMediaEngineExperiments(_bandwidthEstimationExperiment);
   let tmp = null !== mediaEngineExperiments;
   if (tmp) {
     tmp = 0 !== mediaEngineExperiments.length;
@@ -3237,10 +3237,10 @@ prototype["_handleMLSFailure"] = function _handleMLSFailure(arr, reason) {
   _mlsFailures.push(obj);
   if (arr.includes("GetPersistedKeyPair")) {
     obj1 = { title: null, body: null };
-    const intl = tmp(1236).intl;
-    obj1[0] = intl.string(tmp(1236).t.fJUioH);
-    const intl2 = tmp(1236).intl;
-    obj1[1] = intl2.string(tmp(1236).t.CQLWvo);
+    const intl = tmp(1233).intl;
+    obj1[0] = intl.string(tmp(1233).t.fJUioH);
+    const intl2 = tmp(1233).intl;
+    obj1[1] = intl2.string(tmp(1233).t.CQLWvo);
     setDefault2.show(obj1);
     const obj4 = setDefault2;
   } else {

@@ -1,13 +1,13 @@
-// === Module 10722: makeAutocompleterSearchParams ===
+// === Module 10943: makeAutocompleterSearchParams ===
 
-// Module 10722 (makeAutocompleterSearchParams)
-import getQuickSwitcherOptions from "getQuickSwitcherOptions" /* 10723 */;
+// Module 10943 (makeAutocompleterSearchParams)
+import getQuickSwitcherOptions from "getQuickSwitcherOptions" /* 10944 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "_handleConnectionOpen" /* 5221 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "handleChannelSelect" /* 5451 */;
-import { ALLOWED_TYPES } from "ALLOWED_TYPES" /* 10719 */;
+import closure_5 from "_handleConnectionOpen" /* 5229 */;
+import closure_6 from "fetchFingerprint" /* 1215 */;
+import closure_7 from "handleChannelSelect" /* 5459 */;
+import { ALLOWED_TYPES } from "ALLOWED_TYPES" /* 10940 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/share/useShareSearchResults.tsx");

@@ -1,10 +1,10 @@
-// === Module 13707: initialize ===
+// === Module 13930: initialize ===
 
-// Module 13707 (initialize)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import _startLurking from "_startLurking" /* 6185 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
+// Module 13930 (initialize)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import _startLurking from "_startLurking" /* 6194 */;
+import closure_2 from "fetchFingerprint" /* 1215 */;
 
 require = arg1;
 let closure_3 = { UNSET: "unset", FETCHING: "fetching", FAILED: "failed", SUCCEEDED: "succeeded" };

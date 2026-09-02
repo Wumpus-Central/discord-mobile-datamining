@@ -2,8 +2,8 @@
 
 // Module 4975 (TIMESTAMP_FORMATS)
 import set from "set" /* 2 */;
-import setDefault from "set" /* 687 */;
-import hooksDefault from "hooks" /* 4075 */;
+import setDefault from "set" /* 684 */;
+import hooksDefault from "hooks" /* 4074 */;
 import resetCache from "resetCache" /* 4163 */;
 
 let obj = {
@@ -44,18 +44,18 @@ let obj = {
     const obj5 = hooksDefault;
     const result5 = hooksDefault.relativeTimeThreshold("m", 60);
     try {
-      let tmpResult = tmp(4075);
+      let tmpResult = tmp(4074);
       let fromNowResult = tmpResult(toDate.toDate()).fromNow();
-      tmpResult = tmp(4075);
+      tmpResult = tmp(4074);
       const result6 = tmpResult.relativeTimeThreshold("s", result);
       const tmpResultResult = tmpResult(toDate.toDate());
-      const result7 = tmp(4075).relativeTimeThreshold("ss", result2);
-      const tmpResult1 = tmp(4075);
-      const result8 = tmp(4075).relativeTimeThreshold("m", result4);
+      const result7 = tmp(4074).relativeTimeThreshold("ss", result2);
+      const tmpResult1 = tmp(4074);
+      const result8 = tmp(4074).relativeTimeThreshold("m", result4);
       if (fromNowResult == null) {
-        const tmpResult3 = tmp(4075);
-        fromNowResult = tmp(4075)(toDate.toDate()).fromNow();
-        const tmpResult4Result = tmp(4075)(toDate.toDate());
+        const tmpResult3 = tmp(4074);
+        fromNowResult = tmp(4074)(toDate.toDate()).fromNow();
+        const tmpResult4Result = tmp(4074)(toDate.toDate());
       }
       return fromNowResult;
     } catch (err) {
@@ -70,8 +70,8 @@ let result = set.fileFinishedImporting("modules/markup/TimestampUtils.tsx");
 export const TIMESTAMP_FORMATS = obj;
 export const DEFAULT_TIMESTAMP_FORMAT = "f";
 export const TIMESTAMP_REGEX = regExp;
-export const formatTimestampMention = function formatTimestampMention(arg0) {
-  ({ timestamp, format } = arg0);
+export const formatTimestampMention = function formatTimestampMention(mention) {
+  ({ timestamp, format } = mention);
   const tmp = hooksDefault;
   const tmpResult = tmp(Number(timestamp) * setDefault.Millis.SECOND);
   if (tmpResult.isValid()) {
@@ -116,13 +116,13 @@ export const parseTimestamp = function parseTimestamp(arg0, arg1) {
   }
   return tmp3;
 };
-export const unparseTimestamp = function unparseTimestamp(arg0, arg1) {
-  if (null != arg1) {
+export const unparseTimestamp = function unparseTimestamp(timestamp, format) {
+  if (null != format) {
     const _HermesInternal2 = HermesInternal;
-    let combined = "<t:" + arg0 + ":" + arg1 + ">";
+    let combined = "<t:" + timestamp + ":" + format + ">";
   } else {
     const _HermesInternal = HermesInternal;
-    combined = "<t:" + arg0 + ">";
+    combined = "<t:" + timestamp + ">";
   }
   return combined;
 };

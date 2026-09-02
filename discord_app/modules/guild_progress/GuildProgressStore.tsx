@@ -1,13 +1,13 @@
-// === Module 12039: completeStep ===
+// === Module 12263: completeStep ===
 
-// Module 12039 (completeStep)
+// Module 12263 (completeStep)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "ensureGuildLoaded" /* 1387 */;
-import closure_4 from "createGuildRecordFromRust" /* 1909 */;
-import { Steps } from "Steps" /* 12033 */;
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import closure_2 from "fetchFingerprint" /* 1215 */;
+import closure_3 from "ensureGuildLoaded" /* 1386 */;
+import closure_4 from "createGuildRecordFromRust" /* 1908 */;
+import { Steps } from "Steps" /* 12257 */;
 
 function completeStep(guild_id, CHANNEL) {
   let tmp = null != obj;

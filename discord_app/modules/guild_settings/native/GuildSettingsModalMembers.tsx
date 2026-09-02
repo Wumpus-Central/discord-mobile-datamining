@@ -1,19 +1,19 @@
-// === Module 16159: items ===
+// === Module 16390: items ===
 
-// Module 16159 (items)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 16390 (items)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
+import closure_6 from "fetchFingerprint" /* 1215 */;
 import closure_7 from "handleInviteData" /* 4398 */;
-import closure_8 from "trackCommunicationDisabled" /* 1992 */;
-import closure_9 from "createGuildRoleRecordFromRust" /* 1985 */;
-import closure_10 from "createGuildRecordFromRust" /* 1909 */;
-import closure_11 from "getUncachedChannelPermissions" /* 4121 */;
-import closure_12 from "mergeGuildAvatar" /* 1922 */;
-import closure_13 from "handleFormInit" /* 9729 */;
-import { GuildSettingsSections } from "ME" /* 676 */;
+import closure_8 from "trackCommunicationDisabled" /* 1991 */;
+import closure_9 from "createGuildRoleRecordFromRust" /* 1984 */;
+import closure_10 from "createGuildRecordFromRust" /* 1908 */;
+import closure_11 from "getUncachedChannelPermissions" /* 4120 */;
+import closure_12 from "mergeGuildAvatar" /* 1921 */;
+import closure_13 from "handleFormInit" /* 9751 */;
+import { GuildSettingsSections } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -34,7 +34,7 @@ let closure_20 = importAllResult.memo((guild) => {
   const sortedGuildRoles = guild.sortedGuildRoles;
   dependencyMap = undefined;
   ({ start, end } = guild);
-  let obj = guild(1499);
+  let obj = guild(1498);
   dependencyMap = obj.useNavigation();
   if (null == guild) {
     return null;
@@ -69,11 +69,11 @@ let closure_20 = importAllResult.memo((guild) => {
       }
       const mapped1 = found.map((name) => name.name);
       const joined = mapped1.join(", ");
-      const intl = tmp2(1236).intl;
+      const intl = tmp2(1233).intl;
       obj = { memberName: null, roleNames: null };
       obj[0] = str;
       obj[1] = joined;
-      formatToPlainStringResult = intl.formatToPlainString(tmp2(1236).t["6eGpWx"], obj);
+      formatToPlainStringResult = intl.formatToPlainString(tmp2(1233).t["6eGpWx"], obj);
       tmp9 = guildMember;
     }
     obj = { userId: null, guildId: null, accessibilityLabel: null, subLabel: null, disabled: null, onPress: null, arrow: true, start: null, end: null };
@@ -94,7 +94,7 @@ let closure_20 = importAllResult.memo((guild) => {
     };
     obj[7] = start;
     obj[8] = end;
-    return closure_15(guildMember(10679), obj);
+    return closure_15(guildMember(10900), obj);
   }
   tmp = callback();
 });
@@ -284,12 +284,12 @@ const memoResult = importAllResult.memo(function GuildSettingsModalMembers(guild
           items: membersManagementActions,
           children(ref) {
             const merged = Object.assign(ref, Object.create(null));
-            const obj = { source: callback2(9768), accessibilityLabel: null, ref: null };
-            const intl = callback(1236).intl;
-            obj[1] = intl.string(callback(1236).t.ogxXGq);
+            const obj = { source: callback2(9790), accessibilityLabel: null, ref: null };
+            const intl = callback(1233).intl;
+            obj[1] = intl.string(callback(1233).t.ogxXGq);
             obj[2] = ref.ref;
             const merged1 = Object.assign(merged);
-            return callback3(callback(6237).HeaderActionButton, obj);
+            return callback3(callback(6246).HeaderActionButton, obj);
           }
         };
         return closure_1_15(closure_1_0(closure_1_2[26]).ContextMenu, obj);

@@ -1,10 +1,10 @@
-// === Module 14624: useBountyVideoProgressPersistence ===
+// === Module 14849: useBountyVideoProgressPersistence ===
 
-// Module 14624 (useBountyVideoProgressPersistence)
+// Module 14849 (useBountyVideoProgressPersistence)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "set" /* 7447 */;
-import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 5387 */;
+import closure_4 from "set" /* 7457 */;
+import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 5395 */;
 
 const require = arg1;
 let closure_6 = { timestampSec: 0, maxTimestampSec: 0, duration: 0 };
@@ -24,16 +24,20 @@ export const useBountyVideoProgressPersistence = function useBountyVideoProgress
   const first = callback(React.useState(() => {
     if (closure_2) {
       let bountyVideoProgress = ref2.getBountyVideoProgress(bountyId);
-      if (null == bountyVideoProgress) {
-        bountyVideoProgress = closure_6;
-      } else if (endMode === bountyId(endMode[5]).BountyVideoEndMode.LOOP) {
-        const duration = bountyVideoProgress.duration;
-        let tmp10 = duration > 0;
-        if (tmp10) {
-          tmp10 = tmp9 >= duration - 1;
+      if (null != bountyVideoProgress) {
+        if (endMode === bountyId(endMode[5]).BountyVideoEndMode.LOOP) {
+          const duration = bountyVideoProgress.duration;
+          let tmp10 = duration > 0;
+          if (tmp10) {
+            tmp10 = tmp9 >= duration - 1;
+          }
+          return bountyVideoProgress;
         }
+        const tmp6 = endMode;
+        const tmp7 = bountyId;
+        const tmp8 = endMode;
       }
-      return bountyVideoProgress;
+      bountyVideoProgress = closure_6;
     } else {
       return closure_6;
     }

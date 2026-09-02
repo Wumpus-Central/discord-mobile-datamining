@@ -1,20 +1,20 @@
-// === Module 15910: VoiceUsers ===
+// === Module 16141: VoiceUsers ===
 
-// Module 15910 (VoiceUsers)
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
+// Module 16141 (VoiceUsers)
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import Button from "Button" /* 1296 */;
 import Text from "Text" /* 4474 */;
-import AvatarPile from "AvatarPile" /* 9427 */;
-import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 10145 */;
+import AvatarPile from "AvatarPile" /* 9440 */;
+import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 10167 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "comparator" /* 1982 */;
-import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1982 */;
+import closure_5 from "comparator" /* 1981 */;
+import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1981 */;
 import closure_7 from "markAllUserIdListsStale" /* 4130 */;
 import closure_8 from "updateUserGuildSettingsInternal" /* 4701 */;
 import closure_9 from "getVoiceStatesForGuild" /* 4555 */;
-import { ChannelTypes } from "ME" /* 676 */;
+import { ChannelTypes } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -104,7 +104,7 @@ export const GuildVoiceState = function GuildVoiceState(arg0) {
       const obj4 = { uri: null };
       obj4[0] = previewUrl;
       obj3[1] = obj4;
-      const items1 = [tmp7(tmp3(5493), obj3), , , , ];
+      const items1 = [tmp7(tmp3(5501), obj3), , , , ];
       const obj5 = { colors: null, start: null, end: null, style: null, pointerEvents: "none" };
       obj5[0] = ["rgba(0, 0, 0, 1)", "rgba(0, 0, 0, 0)"];
       obj5[1] = { x: 0, y: 0 };

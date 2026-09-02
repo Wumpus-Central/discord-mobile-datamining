@@ -1,13 +1,13 @@
-// === Module 14497: Row ===
+// === Module 14720: Row ===
 
-// Module 14497 (Row)
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2369 */;
+// Module 14720 (Row)
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import messagesProxyDefault from "messagesProxy" /* 2368 */;
 import Text from "Text" /* 4474 */;
 import _modDef4723 from "module_4723" /* 4723 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8773 */;
-import Modal from "Modal" /* 11501 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8788 */;
+import Modal from "Modal" /* 11724 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -30,12 +30,12 @@ function Row(arg0) {
 }
 function FamilyCenterModalDataTooltipScreen() {
   const tmp = callback4();
-  obj = _require(11492);
-  const intl = _require(1236).intl;
-  const intl2 = _require(1236).intl;
+  obj = _require(11715);
+  const intl = _require(1233).intl;
+  const intl2 = _require(1233).intl;
   const ageSpecificText = obj.useAgeSpecificText(intl.string(messagesProxyDefault.n6LOrh), intl2.string(messagesProxyDefault.JNLpDZ));
   _require = useIsInAdultAgeGroupDefault();
-  obj1 = _require(7338);
+  obj1 = _require(7347);
   const sortedActivityTypeConfigs = obj1.getSortedActivityTypeConfigs();
   obj = { children: null };
   obj = { children: null };
@@ -50,16 +50,16 @@ function FamilyCenterModalDataTooltipScreen() {
   ];
   obj1[1] = items;
   obj[0] = callback2(View, obj1);
-  const items1 = [callback(_require(8693).ModalContent, obj), ];
+  const items1 = [callback(_require(8708).ModalContent, obj), ];
   const obj3 = { children: null };
   const obj4 = { variant: "primary", text: null, onPress: null };
-  const intl3 = _require(1236).intl;
-  obj4[1] = intl3.string(_require(1236).t["NX+WJN"]);
+  const intl3 = _require(1233).intl;
+  obj4[1] = intl3.string(_require(1233).t["NX+WJN"]);
   obj4[2] = _modDef4723.pop;
   obj3[0] = callback(_require(4928).Button, obj4);
-  items1[1] = callback(_require(11499).ModalFooter, obj3);
+  items1[1] = callback(_require(11722).ModalFooter, obj3);
   obj[0] = items1;
-  return callback2(_require(8692).ModalScreen, obj);
+  return callback2(_require(8707).ModalScreen, obj);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let obj = { [USER_INTERACTION]: require("ChatIcon").ChatIcon, [USER_CALLED]: require("PhoneIcon").PhoneIcon, [USER_ADD]: require("FriendsIcon").FriendsIcon, [GUILD_ADD]: require("ServerGridIcon").ServerGridIcon, [GUILD_INTERACTION]: require("ThreadIcon").ThreadIcon, [PURCHASES]: require("CreditCardIcon").CreditCardIcon, [TOTAL_VOICE_MINUTES]: require("ClockIcon").ClockIcon, [GIFTS]: require("GiftIcon").GiftIcon };
@@ -88,7 +88,7 @@ export default function FamilyCenterModalDataTooltip() {
     obj = { DATA_TOOLTIP: null };
     obj = {
       headerShown: true,
-      headerLeft: callback(5495).getHeaderCloseButton(callback2(4723).pop),
+      headerLeft: callback(5503).getHeaderCloseButton(callback2(4723).pop),
       headerTitle() {
         return null;
       },

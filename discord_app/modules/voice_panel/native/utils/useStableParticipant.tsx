@@ -1,11 +1,11 @@
-// === Module 16685: areStableParticipantsEqual ===
+// === Module 16920: areStableParticipantsEqual ===
 
-// Module 16685 (areStableParticipantsEqual)
-import shallowEqualDefault from "shallowEqual" /* 643 */;
+// Module 16920 (areStableParticipantsEqual)
+import shallowEqualDefault from "shallowEqual" /* 640 */;
 import closure_3 from "getParticipants" /* 4494 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_4 from "fetchFingerprint" /* 1215 */;
 import closure_5 from "_detectH265HardwareDecode" /* 4529 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "mergeGuildAvatar" /* 1921 */;
 import { ParticipantTypes } from "ParticipantTypes" /* 4499 */;
 
 const require = arg1;
@@ -28,25 +28,25 @@ export default function useStableParticipant(arg0, arg1, arg2) {
   dependencyMap = arg2;
   const items = [closure_3, closure_6, closure_4, closure_5];
   const items1 = [arg0, arg1, arg2];
-  return _require(589).useStateFromStores(items, () => {
+  return _require(586).useStateFromStores(items, () => {
     if (null != callback) {
       const participant = closure_1_3.getParticipant(callback2, tmp);
       if (null == participant) {
         const user = closure_1_6.getUser(tmp);
         if (null != user) {
-          let obj = { type: null, id: null, user: null, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "flex", ringing: null, hasVideo: "LottieFiles AE 3.0.2", isSelf: "" };
+          let obj = { type: null, id: null, user: null, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "flex", ringing: null, hasVideo: 0, isSelf: 2 };
           obj[0] = closure_1_7.USER;
           obj[1] = tmp;
           obj[2] = user;
           const id = closure_1_4.getId();
           obj[5] = callback(4673).getName(dependencyMap, tmp3, user);
           const obj5 = callback(4673);
-          obj[6] = callback(8904).getAvatarDecoration(user, dependencyMap);
+          obj[6] = callback(8919).getAvatarDecoration(user, dependencyMap);
           obj[10] = user.id === id;
           return obj;
         }
       } else {
-        const tmp15 = callback2(9591)(participant);
+        const tmp15 = callback2(9604)(participant);
         const type = participant.type;
         if (closure_1_7.ACTIVITY === type) {
           obj = { type: null, id: null, applicationId: null };

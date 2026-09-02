@@ -1,8 +1,8 @@
-// === Module 12108: useGuildPowerupConfigureCallback ===
+// === Module 12332: useGuildPowerupConfigureCallback ===
 
-// Module 12108 (useGuildPowerupConfigureCallback)
+// Module 12332 (useGuildPowerupConfigureCallback)
 import closure_3 from "noop" /* 19 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 
 const require = arg1;
 ({ GuildSettingsSections: c4, AnalyticsSections: c5 } = ME);

@@ -1,9 +1,9 @@
-// === Module 12077: useHasAllocateBoostPermission ===
+// === Module 12301: useHasAllocateBoostPermission ===
 
-// Module 12077 (useHasAllocateBoostPermission)
-import closure_2 from "createGuildRecordFromRust" /* 1909 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4121 */;
-import { Permissions } from "sum" /* 505 */;
+// Module 12301 (useHasAllocateBoostPermission)
+import closure_2 from "createGuildRecordFromRust" /* 1908 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4120 */;
+import { Permissions } from "sum" /* 502 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useHasAllocateBoostPermission.tsx");
@@ -11,7 +11,7 @@ const result = require("set").fileFinishedImporting("modules/premium/powerups/ho
 export default function useHasAllocateBoostPermission(arg0) {
   const _require = arg0;
   const items = [closure_3, closure_2];
-  return _require(589).useStateFromStores(items, () => {
+  return _require(586).useStateFromStores(items, () => {
     const guild = closure_1_2.getGuild(closure_0);
     let canResult = null;
     if (null != guild) {

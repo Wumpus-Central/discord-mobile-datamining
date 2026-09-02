@@ -1,18 +1,18 @@
-// === Module 12183: LockPill ===
+// === Module 12407: LockPill ===
 
-// Module 12183 (LockPill)
-import ThemesDefault from "Themes" /* 712 */;
-import result2 from "result" /* 5384 */;
-import inlineStyles from "inlineStyles" /* 8241 */;
+// Module 12407 (LockPill)
+import ThemesDefault from "Themes" /* 709 */;
+import result2 from "result" /* 5392 */;
+import inlineStyles from "inlineStyles" /* 8250 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_8 from "ensureGuildLoaded" /* 1387 */;
-import { useVoiceMessagesUIStore } from "VoiceMessageRecordingStatus" /* 11533 */;
-import { VoiceMessageAnimationState } from "VoiceMessageAnimationState" /* 11534 */;
-import { ComponentActionsKeyed } from "ME" /* 676 */;
-import { CHAT_INPUT_HEIGHT } from "TextAreaCta" /* 11535 */;
+import closure_8 from "ensureGuildLoaded" /* 1386 */;
+import { useVoiceMessagesUIStore } from "VoiceMessageRecordingStatus" /* 11756 */;
+import { VoiceMessageAnimationState } from "VoiceMessageAnimationState" /* 11757 */;
+import { ComponentActionsKeyed } from "ME" /* 673 */;
+import { CHAT_INPUT_HEIGHT } from "TextAreaCta" /* 11758 */;
 import jsxProd from "jsxProd" /* 21 */;
 import importDefaultResult from "module_4217" /* 4217 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -680,7 +680,7 @@ const memoResult1 = importAllResult.memo((channelId) => {
   dependencyMap = undefined;
   const tmp = useVoiceMessagesUIStore((showRecordingOverlay) => showRecordingOverlay.showRecordingOverlay);
   closure_1 = tmp;
-  let obj = channelId(589);
+  let obj = channelId(586);
   items = [closure_8];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getChannel(channelId));
   const tmp2 = useVoiceMessagesUIStore((voiceMessageAnimationState) => voiceMessageAnimationState.voiceMessageAnimationState);

@@ -1,8 +1,8 @@
-// === Module 5089: setPermission ===
+// === Module 5097: setPermission ===
 
-// Module 5089 (setPermission)
+// Module 5097 (setPermission)
 import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 const prototype = function NativePermissionActionCreators() {
   return Object.create(new.target.prototype);

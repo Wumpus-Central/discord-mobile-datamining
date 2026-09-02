@@ -1,13 +1,13 @@
-// === Module 14911: toggle ===
+// === Module 15140: toggle ===
 
-// Module 14911 (toggle)
+// Module 15140 (toggle)
 import set from "set" /* 2 */;
-import set2 from "set" /* 500 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import isIterable from "isIterable" /* 4106 */;
-import MobileUserSettings from "MobileUserSettings" /* 7884 */;
-import DEFAULT_FONT_SCALE_STORE_STATE from "DEFAULT_FONT_SCALE_STORE_STATE" /* 14859 */;
-import createToggle from "createToggle" /* 11068 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import set2 from "set" /* 1234 */;
+import isIterable from "isIterable" /* 4105 */;
+import MobileUserSettings from "MobileUserSettings" /* 7893 */;
+import DEFAULT_FONT_SCALE_STORE_STATE from "DEFAULT_FONT_SCALE_STORE_STATE" /* 15088 */;
+import createToggle from "createToggle" /* 11288 */;
 
 const useFontScaleStore = DEFAULT_FONT_SCALE_STORE_STATE.useFontScaleStore;
 const toggle = createToggle.createToggle({
@@ -21,7 +21,7 @@ const toggle = createToggle.createToggle({
   },
   onValueChange: function onClassicChatFontScaleChange(arg0) {
     const _require = arg0;
-    return _require(705).batchUpdates(() => closure_1_2.setState({ isClassicChatFontScaleEnabled: closure_0 }));
+    return _require(702).batchUpdates(() => closure_1_2.setState({ isClassicChatFontScaleEnabled: closure_0 }));
   },
   useDescription: function useClassicChatFontScaleDescription() {
     const intl = getSystemLocale.intl;
@@ -40,7 +40,7 @@ const obj = {
   },
   onValueChange: function onClassicChatFontScaleChange(arg0) {
     const _require = arg0;
-    return _require(705).batchUpdates(() => closure_1_2.setState({ isClassicChatFontScaleEnabled: closure_0 }));
+    return _require(702).batchUpdates(() => closure_1_2.setState({ isClassicChatFontScaleEnabled: closure_0 }));
   },
   useDescription: function useClassicChatFontScaleDescription() {
     const intl = getSystemLocale.intl;

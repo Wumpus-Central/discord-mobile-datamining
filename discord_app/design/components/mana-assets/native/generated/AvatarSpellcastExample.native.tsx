@@ -1,10 +1,10 @@
-// === Module 6339: AvatarSpellcastExample ===
+// === Module 6348: AvatarSpellcastExample ===
 
-// Module 6339 (AvatarSpellcastExample)
+// Module 6348 (AvatarSpellcastExample)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5493 */;
-import metadataDefault from "metadata" /* 6340 */;
+import preloadDefault from "preload" /* 5501 */;
+import metadataDefault from "metadata" /* 6349 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/AvatarSpellcastExample.native.tsx");

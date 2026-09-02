@@ -1,23 +1,23 @@
-// === Module 12200: GuildDirectoryNicknameUpsell ===
+// === Module 12424: GuildDirectoryNicknameUpsell ===
 
-// Module 12200 (GuildDirectoryNicknameUpsell)
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
+// Module 12424 (GuildDirectoryNicknameUpsell)
+import initialize from "initialize" /* 586 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import Button from "Button" /* 1296 */;
 import Text from "Text" /* 4474 */;
 import Button2 from "Button" /* 4928 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5594 */;
-import useInitialValueDefault from "useInitialValue" /* 5941 */;
-import GuildIconSizes from "GuildIconSizes" /* 6004 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 6004 */;
-import _modDef7704 from "module_7704" /* 7704 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5602 */;
+import useInitialValueDefault from "useInitialValue" /* 5949 */;
+import GuildIconSizes from "GuildIconSizes" /* 6012 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 6012 */;
+import _modDef7713 from "module_7713" /* 7713 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "createGuildRecordFromRust" /* 1909 */;
-import { GuildPrompts } from "GuildPrompts" /* 12189 */;
+import closure_8 from "createGuildRecordFromRust" /* 1908 */;
+import { GuildPrompts } from "GuildPrompts" /* 12413 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -92,16 +92,16 @@ function GuildDirectoryNicknameUpsell(arg0) {
   obj3[4] = intl.format(getSystemLocale.t["d+6kzl"], { guildName: name });
   const items3 = [callback(Text.Text, obj3), ];
   const obj4 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = tmp2(1236).intl;
+  const intl2 = tmp2(1233).intl;
   obj4[3] = intl2.string(getSystemLocale.t.b3L8yx);
   items3[1] = callback(Text.Text, obj4);
   obj2[1] = items3;
   items2[1] = closure_11(closure_6, obj2);
   const obj5 = { label: null, placeholder: null, value: null, onChangeText: null, style: null, textStyle: null, clearButtonVisibility: null, error: null, onFocus: null, onBlur: null };
   const tmp13 = GuildIconSizesDefault;
-  const intl3 = tmp2(1236).intl;
+  const intl3 = tmp2(1233).intl;
   obj5[0] = intl3.string(getSystemLocale.t.ilDlmW);
-  const intl4 = tmp2(1236).intl;
+  const intl4 = tmp2(1233).intl;
   obj5[1] = intl4.string(getSystemLocale.t.RfWvWI);
   obj5[2] = first;
   obj5[3] = tmp7[1];
@@ -128,11 +128,11 @@ function GuildDirectoryNicknameUpsell(arg0) {
       }
     }, 100);
   };
-  items2[2] = callback(_modDef7704, obj5);
+  items2[2] = callback(_modDef7713, obj5);
   items2[3] = callback(closure_6, { style: tmp.redesignGrowSpacing });
   const obj7 = { style: tmp.redesignButtonContainer, children: null };
   const obj8 = { size: "lg", text: null, onPress: null };
-  const intl5 = tmp2(1236).intl;
+  const intl5 = tmp2(1233).intl;
   obj8[1] = intl5.string(getSystemLocale.t.Np4yXU);
   obj8[2] = function handleSubmit() {
     const self = this;
@@ -171,7 +171,7 @@ const result = require("set").fileFinishedImporting("modules/directory_channels/
 
 export default function GuildDirectoryNicknameUpsellModal(arg0) {
   const _require = arg0;
-  return callback(_require(6008).Navigator, {
+  return callback(_require(6016).Navigator, {
     screens: useInitialValueDefault(() => {
       ({ guildId: closure_0, onHide: closure_1 } = callback);
       function handleClose() {

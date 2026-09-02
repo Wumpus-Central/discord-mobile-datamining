@@ -1,12 +1,12 @@
-// === Module 6084: updateProduct ===
+// === Module 6092: updateProduct ===
 
-// Module 6084 (updateProduct)
-import sum from "sum" /* 505 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 6092 (updateProduct)
+import sum from "sum" /* 502 */;
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 import _createGatewayCheckoutContext from "_createGatewayCheckoutContext" /* 4154 */;
-import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 6081 */;
-import GPlayConnectionState from "GPlayConnectionState" /* 6085 */;
+import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 6089 */;
+import GPlayConnectionState from "GPlayConnectionState" /* 6093 */;
 import set from "set" /* 2 */;
 
 function updateProduct(currencyCode) {

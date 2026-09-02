@@ -1,14 +1,14 @@
-// === Module 7901: identityHook ===
+// === Module 7910: identityHook ===
 
-// Module 7901 (identityHook)
+// Module 7910 (identityHook)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4700 */;
-import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 6098 */;
-import closure_3 from "createGuildRecordFromRust" /* 1909 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import getJoinButtonLabels from "getJoinButtonLabels" /* 7902 */;
-import ME from "ME" /* 676 */;
+import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 6106 */;
+import closure_3 from "createGuildRecordFromRust" /* 1908 */;
+import closure_4 from "mergeGuildAvatar" /* 1921 */;
+import getJoinButtonLabels from "getJoinButtonLabels" /* 7911 */;
+import ME from "ME" /* 673 */;
 
 require = arg1;
 function identityHook(arg0) {
@@ -141,7 +141,7 @@ export const getRoleSubscriptionPurchaseSystemMessageContentMobile = function ge
     } else {
       tmp6 = tmp3;
     }
-    const intl = tmp6(1236).intl;
+    const intl = tmp6(1233).intl;
     let name;
     if (guild != null) {
       name = guild.name;

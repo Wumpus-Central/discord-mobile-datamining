@@ -1,10 +1,10 @@
-// === Module 11280: isVisualMedia ===
+// === Module 11503: isVisualMedia ===
 
-// Module 11280 (isVisualMedia)
+// Module 11503 (isVisualMedia)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4671 */;
-import set2 from "set" /* 11281 */;
+import set2 from "set" /* 11504 */;
 
 const MessageAttachmentFlags = ME.MessageAttachmentFlags;
 const re3 = /\.(mp3|m4a|ogg|opus|wav|flac)$/i;
@@ -37,7 +37,7 @@ export const getMosaicMediaTypeForAttachment = function getMosaicMediaTypeForAtt
               if (tmp5Result.isVideoFile(filename)) {
                 str5 = "INVALID";
                 if (null != proxy_url.proxy_url) {
-                  tmp5Result = tmp5(1399);
+                  tmp5Result = tmp5(1398);
                   let num2 = proxy_url.flags;
                   if (num2 == null) {
                     num2 = 0;

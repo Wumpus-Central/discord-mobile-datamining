@@ -1,17 +1,17 @@
-// === Module 12836: MeasureMessage ===
+// === Module 13058: MeasureMessage ===
 
-// Module 12836 (MeasureMessage)
-import ThemesDefault from "Themes" /* 712 */;
-import setOptionsDefault from "setOptions" /* 7841 */;
+// Module 13058 (MeasureMessage)
+import ThemesDefault from "Themes" /* 709 */;
+import setOptionsDefault from "setOptions" /* 7850 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "handleLoadThreadsSuccess" /* 6124 */;
-import closure_8 from "handleReaction" /* 6128 */;
-import closure_9 from "ensureGuildLoaded" /* 1387 */;
+import closure_7 from "handleLoadThreadsSuccess" /* 6132 */;
+import closure_8 from "handleReaction" /* 6136 */;
+import closure_9 from "ensureGuildLoaded" /* 1386 */;
 import closure_10 from "reinjectEphemerals" /* 4735 */;
-import closure_11 from "messages" /* 8631 */;
-import { ThemeTypes } from "ME" /* 676 */;
+import closure_11 from "messages" /* 8646 */;
+import { ThemeTypes } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -304,7 +304,7 @@ export default function MediaMessagePreview(channelId) {
           }
         }
         obj = channelId(onClose[27]);
-        obj = { allowWithinModal: true, chatInputRef: "Boolean", handleTransitionToThread: "BuyNitroPurchaseFlow", message: "absolute", messageChannel: null, selectedChannelId: "category", tapLinkData: "Error" };
+        obj = { allowWithinModal: true, chatInputRef: "Boolean", handleTransitionToThread: "abiti", message: "camice", messageChannel: "camice bianco", selectedChannelId: "camice da laboratorio", tapLinkData: "dottore" };
         obj[2] = function handleTransitionToThread(arg0, arg1, arg2) {
           channel = channel.getChannel(arg1);
           if (null != channel) {

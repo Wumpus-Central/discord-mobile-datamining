@@ -1,10 +1,10 @@
-// === Module 9266: defaultCountFormatter ===
+// === Module 9279: defaultCountFormatter ===
 
-// Module 9266 (defaultCountFormatter)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 9279 (defaultCountFormatter)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "_getSystemLocale" /* 1996 */;
+import closure_5 from "_getSystemLocale" /* 1995 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 import importDefaultResult from "module_4217" /* 4217 */;
@@ -26,9 +26,9 @@ let closure_11 = createCacheKey.createStyles((gap) => {
   obj[1] = obj;
   obj[2] = { position: "absolute", width: "100%", height: "100%", flexDirection: "row", alignItems: "flex-end", marginLeft: ThemesDefault.space.PX_16 };
   if ("gradient-background" === arg1) {
-    let TEXT_BRAND = tmp(712).colors.TEXT_STRONG;
+    let TEXT_BRAND = tmp(709).colors.TEXT_STRONG;
   } else {
-    TEXT_BRAND = tmp(712).colors.TEXT_BRAND;
+    TEXT_BRAND = tmp(709).colors.TEXT_BRAND;
   }
   obj1 = { position: "absolute", width: "100%", height: "100%", flexDirection: "row", alignItems: "flex-end", marginLeft: ThemesDefault.space.PX_16 };
   obj[3] = { height: 2, backgroundColor: TEXT_BRAND, borderTopStartRadius: ThemesDefault.radii.xs, borderTopEndRadius: ThemesDefault.radii.xs };

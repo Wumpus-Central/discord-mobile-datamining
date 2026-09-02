@@ -1,9 +1,9 @@
-// === Module 13145: usePremiumGroupMembership ===
+// === Module 13367: usePremiumGroupMembership ===
 
-// Module 13145 (usePremiumGroupMembership)
+// Module 13367 (usePremiumGroupMembership)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import closure_4 from "handleMutationStart" /* 13146 */;
+import closure_4 from "handleMutationStart" /* 13368 */;
 
 const useEffect = noop.useEffect;
 const result = set.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupMembership.tsx");
@@ -22,7 +22,7 @@ export default function usePremiumGroupMembership() {
     flag2 = true;
   }
   const items = [closure_4];
-  const stateFromStoresObject = flag(589).useStateFromStoresObject(items, () => ({ premiumGroupMembership: closure_4.getMembership(), isFetchingMembership: closure_4.isFetchingMembership() }));
+  const stateFromStoresObject = flag(586).useStateFromStoresObject(items, () => ({ premiumGroupMembership: closure_4.getMembership(), isFetchingMembership: closure_4.isFetchingMembership() }));
   const items1 = [flag2, flag];
   ({ premiumGroupMembership, isFetchingMembership } = stateFromStoresObject);
   useEffect(() => {

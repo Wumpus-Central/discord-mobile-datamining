@@ -1,17 +1,17 @@
-// === Module 12560: GiftButton ===
+// === Module 12784: GiftButton ===
 
-// Module 12560 (GiftButton)
-import ThemesDefault from "Themes" /* 712 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1950 */;
+// Module 12784 (GiftButton)
+import ThemesDefault from "Themes" /* 709 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
 import Text from "Text" /* 4474 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "map" /* 7303 */;
-import items from "items" /* 678 */;
-import ME from "ME" /* 676 */;
-import { RootNavigatorScreen } from "MODE_CHANGE_PHYSICS" /* 10831 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import closure_6 from "map" /* 7312 */;
+import items from "items" /* 675 */;
+import ME from "ME" /* 673 */;
+import { RootNavigatorScreen } from "MODE_CHANGE_PHYSICS" /* 11051 */;
+import GuildFeatures from "GuildFeatures" /* 1923 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -198,11 +198,11 @@ function PurchaseDisclaimer(arg0) {
   let obj = { style: callback3().disclaimer, variant: "text-xxs/normal", color: "interactive-text-active", children: null };
   let formatResult = product.type !== CollectiblesItemType.CollectiblesItemType.EXTERNAL_SKU;
   if (formatResult) {
-    const intl = tmp3(1236).intl;
+    const intl = tmp3(1233).intl;
     obj = { buyButtonLabel: null, paidServiceTermURL: null };
     obj[0] = buyButtonLabel;
     obj[1] = constants2.PAID_TERMS;
-    formatResult = intl.format(tmp3(1236).t.iIglwJ, obj);
+    formatResult = intl.format(tmp3(1233).t.iIglwJ, obj);
   }
   obj[3] = formatResult;
   return closure_15(Text.Text, obj);

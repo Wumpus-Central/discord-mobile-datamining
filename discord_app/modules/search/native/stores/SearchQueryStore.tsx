@@ -1,17 +1,17 @@
-// === Module 11906: prototype ===
+// === Module 12129: prototype ===
 
-// Module 11906 (prototype)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import SearchTokenTypes from "SearchTokenTypes" /* 11907 */;
-import isCompleteDefault from "isComplete" /* 11919 */;
-import closure_3 from "ensureGuildLoaded" /* 1387 */;
+// Module 12129 (prototype)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import SearchTokenTypes from "SearchTokenTypes" /* 12130 */;
+import isCompleteDefault from "isComplete" /* 12142 */;
+import closure_3 from "ensureGuildLoaded" /* 1386 */;
 import closure_4 from "markAllUserIdListsStale" /* 4130 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 7622 */;
-import { SearchFilterAddLocations } from "SearchEntrypointAnalyticsLocations" /* 7621 */;
-import ME from "ME" /* 676 */;
-import areArraysShallowlyEqual from "areArraysShallowlyEqual" /* 1991 */;
+import closure_5 from "mergeGuildAvatar" /* 1921 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 7632 */;
+import { SearchFilterAddLocations } from "SearchEntrypointAnalyticsLocations" /* 7631 */;
+import ME from "ME" /* 673 */;
+import areArraysShallowlyEqual from "areArraysShallowlyEqual" /* 1990 */;
 
 require = arg1;
 ({ EMPTY_SEARCH_QUERY_STRING: closure_6, SearchQueryTagTypes: error } = MessageEmbedTypes);
@@ -184,14 +184,14 @@ const prototype = function SearchQueryStateManager(type) {
       obj = { type: null, searchTokenType: null, text: null, channelId: null, location: null };
       obj[0] = constants.COMPLETE;
       obj[1] = constants2.FILTER_IN;
-      const intl = obj(1236).intl;
-      const stringResult = intl.string(obj(1236).t.WNpFHa);
+      const intl = obj(1233).intl;
+      const stringResult = intl.string(obj(1233).t.WNpFHa);
       let _HermesInternal = HermesInternal;
-      obj[2] = "" + stringResult + ": " + obj(11907).quoteChannelName(channelName);
+      obj[2] = "" + stringResult + ": " + obj(12130).quoteChannelName(channelName);
       obj[3] = type.channelId;
       obj[4] = SearchFilterAddLocations.CLIENT_AUTO_ADD;
       items1 = [obj];
-      const obj4 = obj(11907);
+      const obj4 = obj(12130);
     }
     items = items1;
   }

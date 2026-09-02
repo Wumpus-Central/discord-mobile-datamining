@@ -1,8 +1,8 @@
-// === Module 1976: _tryLoadAsync ===
+// === Module 1975: _tryLoadAsync ===
 
-// Module 1976 (_tryLoadAsync)
+// Module 1975 (_tryLoadAsync)
 import timestampDefault from "timestamp" /* 3 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 function _tryLoadAsync() {
@@ -142,7 +142,7 @@ function _tryLoadOrResetCacheGatewayAsync() {
             stack = closure_6;
             const _HermesInternal = HermesInternal;
             logger.log("" + callback + ": exception thrown, resetting socket.", stack, stack.stack);
-            let obj2 = callback(709);
+            let obj2 = callback(706);
             obj2 = { error: null, action: null, metricAction: null };
             obj2[0] = stack;
             const _HermesInternal2 = HermesInternal;

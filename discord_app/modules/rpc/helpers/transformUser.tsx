@@ -1,8 +1,8 @@
-// === Module 9509: transformUser ===
+// === Module 9522: transformUser ===
 
-// Module 9509 (transformUser)
+// Module 9522 (transformUser)
 import set from "set" /* 2 */;
-import parseAvatarDecorationData from "parseAvatarDecorationData" /* 1898 */;
+import parseAvatarDecorationData from "parseAvatarDecorationData" /* 1897 */;
 
 const result = set.fileFinishedImporting("modules/rpc/helpers/transformUser.tsx");
 

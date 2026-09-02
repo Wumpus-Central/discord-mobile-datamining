@@ -1,6 +1,6 @@
-// === Module 1907: fromServerGuildIncidentsData ===
+// === Module 1906: fromServerGuildIncidentsData ===
 
-// Module 1907 (fromServerGuildIncidentsData)
+// Module 1906 (fromServerGuildIncidentsData)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/guild_antiraid/guildIncidentsSerialization.tsx");

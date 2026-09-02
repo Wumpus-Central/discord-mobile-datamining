@@ -1,6 +1,6 @@
-// === Module 13741: ThemedIcon ===
+// === Module 13964: ThemedIcon ===
 
-// Module 13741 (ThemedIcon)
+// Module 13964 (ThemedIcon)
 import noopAll from "noop" /* 19 */;
 import map from "map" /* 4197 */;
 import IconSizesDefault from "IconSizes" /* 4930 */;

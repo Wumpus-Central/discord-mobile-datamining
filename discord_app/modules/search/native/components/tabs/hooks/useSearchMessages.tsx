@@ -1,8 +1,8 @@
-// === Module 16274: useSearchMessages ===
+// === Module 16506: useSearchMessages ===
 
-// Module 16274 (useSearchMessages)
-import closure_2 from "handleReaction" /* 6128 */;
-import closure_3 from "prototype" /* 11906 */;
+// Module 16506 (useSearchMessages)
+import closure_2 from "handleReaction" /* 6136 */;
+import closure_3 from "prototype" /* 12129 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/search/native/components/tabs/hooks/useSearchMessages.tsx");
@@ -12,7 +12,7 @@ export const useSearchMessages = function useSearchMessages(searchContext, tab) 
   dependencyMap = tab;
   const items = [closure_3, closure_2];
   const items1 = [searchContext, tab];
-  return _require(589).useStateFromStores(items, () => {
+  return _require(586).useStateFromStores(items, () => {
     const searchResultsQuery = closure_1_3.getSearchResultsQuery(searchContext);
     return closure_1_2.getMessages(searchContext(tab[3]).getSearchTabFetchId(searchContext, tab, searchResultsQuery));
   }, items1);

@@ -1,16 +1,16 @@
-// === Module 1304: CHANNEL_SIDEBAR_WIDTH ===
+// === Module 1303: CHANNEL_SIDEBAR_WIDTH ===
 
-// Module 1304 (CHANNEL_SIDEBAR_WIDTH)
+// Module 1303 (CHANNEL_SIDEBAR_WIDTH)
 import set from "set" /* 2 */;
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import Storage3 from "Storage" /* 595 */;
-import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import SystemThemeState2 from "SystemThemeState" /* 1305 */;
-import ExpressionPickerViewType from "ExpressionPickerViewType" /* 1338 */;
-import getSystemThemeDefault from "getSystemTheme" /* 1339 */;
-import ME from "ME" /* 676 */;
+import initializeDefault from "initialize" /* 586 */;
+import Storage3 from "Storage" /* 592 */;
+import MAX_FAVORITES from "MAX_FAVORITES" /* 682 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import SystemThemeState2 from "SystemThemeState" /* 1304 */;
+import ExpressionPickerViewType from "ExpressionPickerViewType" /* 1337 */;
+import getSystemThemeDefault from "getSystemTheme" /* 1338 */;
+import ME from "ME" /* 673 */;
 
 const SystemThemeState = SystemThemeState2.SystemThemeState;
 const ListDensityMode = MAX_FAVORITES.ListDensityMode;

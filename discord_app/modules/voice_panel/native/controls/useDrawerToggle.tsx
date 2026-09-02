@@ -1,8 +1,8 @@
-// === Module 16751: useDrawerToggle ===
+// === Module 16986: useDrawerToggle ===
 
-// Module 16751 (useDrawerToggle)
+// Module 16986 (useDrawerToggle)
 import closure_3 from "noop" /* 19 */;
-import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11838 */;
+import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 12061 */;
 
 const require = arg1;
 let closure_5 = { code: "function useDrawerToggleTsx1(){const{controlsSpecs,VoicePanelControlsModes}=this.__closure;return controlsSpecs.get().mode===VoicePanelControlsModes.DRAWER;}" };

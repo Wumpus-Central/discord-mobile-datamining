@@ -1,8 +1,8 @@
-// === Module 14137: _fetchIsLinkTrusted ===
+// === Module 14360: _fetchIsLinkTrusted ===
 
-// Module 14137 (_fetchIsLinkTrusted)
+// Module 14360 (_fetchIsLinkTrusted)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 676 */;
+import { Endpoints } from "ME" /* 673 */;
 
 const require = arg1;
 function _fetchIsLinkTrusted() {

@@ -1,13 +1,13 @@
-// === Module 11658: ActivityShelfBadge ===
+// === Module 11881: ActivityShelfBadge ===
 
-// Module 11658 (ActivityShelfBadge)
+// Module 11881 (ActivityShelfBadge)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
+import ThemesDefault from "Themes" /* 709 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
-import Button from "Button" /* 1297 */;
+import Button from "Button" /* 1296 */;
 
 require = arg1;
 noopAll;
@@ -36,21 +36,21 @@ export default function ActivityShelfBadge(arg0) {
     obj[0] = items;
     obj = { variant: "text-xs/semibold", style: null, color: "text-overlay-light", children: null };
     obj[1] = tmp.badgeText;
-    const intl = tmp2(1236).intl;
-    obj[3] = intl.string(tmp2(1236).t.y2b7CA);
+    const intl = tmp2(1233).intl;
+    obj[3] = intl.string(tmp2(1233).t.y2b7CA);
     obj[1] = jsx(tmp2(4474).Text, { variant: "text-xs/semibold", style: null, color: "text-overlay-light", children: null });
     let tmp6 = <View variant="text-xs/semibold" style={null} color="text-overlay-light">{null}</View>;
   } else {
     tmp6 = null;
-    if (labelType === tmp2(1955).EmbeddedActivityLabelTypes.UPDATED) {
+    if (labelType === tmp2(1954).EmbeddedActivityLabelTypes.UPDATED) {
       obj = { style: null, children: null };
       const items1 = [replacementStyles, , ];
       ({ updatedBadge: arr2[1], elevationShadow: arr2[2] } = tmp);
       obj[0] = items1;
       obj1 = { variant: "text-xs/semibold", style: null, color: "text-overlay-light", children: null };
       obj1[1] = tmp.badgeText;
-      const intl2 = tmp2(1236).intl;
-      obj1[3] = intl2.string(tmp2(1236).t["/qdhkk"]);
+      const intl2 = tmp2(1233).intl;
+      obj1[3] = intl2.string(tmp2(1233).t["/qdhkk"]);
       obj[1] = jsx(tmp2(4474).Text, { variant: "text-xs/semibold", style: null, color: "text-overlay-light", children: null });
       tmp6 = <View style={null}>{null}</View>;
     }

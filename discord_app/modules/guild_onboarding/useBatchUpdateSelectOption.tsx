@@ -1,10 +1,10 @@
-// === Module 11153: useBatchUpdateSelectOption ===
+// === Module 11374: useBatchUpdateSelectOption ===
 
-// Module 11153 (useBatchUpdateSelectOption)
+// Module 11374 (useBatchUpdateSelectOption)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "updateUserGuildSettingsInternal" /* 4701 */;
-import closure_5 from "handleUpdate" /* 5467 */;
-import { ChannelNotificationSettingsFlags as closure_6 } from "MAX_FAVORITES" /* 685 */;
+import closure_5 from "handleUpdate" /* 5475 */;
+import { ChannelNotificationSettingsFlags as closure_6 } from "MAX_FAVORITES" /* 682 */;
 
 const require = arg1;
 let closure_7 = {};
@@ -12,7 +12,7 @@ let result = require("set").fileFinishedImporting("modules/guild_onboarding/useB
 
 export default function useBatchUpdateSelectOption(arg0) {
   const _require = arg0;
-  let obj = _require(589);
+  let obj = _require(586);
   let items = [closure_5];
   let items1 = [arg0];
   const stateFromStores = obj.useStateFromStores(items, () => {

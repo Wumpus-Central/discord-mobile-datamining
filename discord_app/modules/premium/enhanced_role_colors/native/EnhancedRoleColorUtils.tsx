@@ -1,15 +1,15 @@
-// === Module 7870: processColorStrings ===
+// === Module 7879: processColorStrings ===
 
-// Module 7870 (processColorStrings)
-import nDefault from "n" /* 689 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1471 */;
+// Module 7879 (processColorStrings)
+import nDefault from "n" /* 686 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
 import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 4957 */;
 import useHasEnhancedRoleColorsDefault from "useHasEnhancedRoleColors" /* 4957 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { processColor } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleThemeChange" /* 1302 */;
-import { ThemeTypes } from "sum" /* 505 */;
+import closure_6 from "handleThemeChange" /* 1301 */;
+import { ThemeTypes } from "sum" /* 502 */;
 
 require = arg1;
 function processColorStrings(colorStrings) {

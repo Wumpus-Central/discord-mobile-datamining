@@ -1,10 +1,10 @@
-// === Module 16618: useIsConnectedToVoiceChannel ===
+// === Module 16853: useIsConnectedToVoiceChannel ===
 
-// Module 16618 (useIsConnectedToVoiceChannel)
-import closure_2 from "fetchFingerprint" /* 1218 */;
+// Module 16853 (useIsConnectedToVoiceChannel)
+import closure_2 from "fetchFingerprint" /* 1215 */;
 import closure_3 from "createRTCConnection" /* 4554 */;
 import closure_4 from "updateVoiceState" /* 4497 */;
-import { RTCConnectionStates } from "ME" /* 676 */;
+import { RTCConnectionStates } from "ME" /* 673 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useIsConnectedToVoiceChannel.tsx");
@@ -12,7 +12,7 @@ const result = require("set").fileFinishedImporting("modules/voice_panel/native/
 export default function useIsConnectedToVoiceChannel(arg0) {
   const _require = arg0;
   const items = [closure_3, closure_4, closure_2];
-  return _require(589).useStateFromStores(items, () => {
+  return _require(586).useStateFromStores(items, () => {
     const channelId = closure_1_3.getChannelId();
     let tmp2 = closure_0;
     if (closure_0 == null) {

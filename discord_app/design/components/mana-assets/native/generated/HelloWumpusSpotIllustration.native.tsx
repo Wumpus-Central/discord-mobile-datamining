@@ -1,10 +1,10 @@
-// === Module 6753: HelloWumpusSpotIllustration ===
+// === Module 6762: HelloWumpusSpotIllustration ===
 
-// Module 6753 (HelloWumpusSpotIllustration)
+// Module 6762 (HelloWumpusSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5493 */;
-import metadataDefault from "metadata" /* 6754 */;
+import preloadDefault from "preload" /* 5501 */;
+import metadataDefault from "metadata" /* 6763 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/HelloWumpusSpotIllustration.native.tsx");

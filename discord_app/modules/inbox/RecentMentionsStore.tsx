@@ -1,26 +1,26 @@
-// === Module 7382: findOrCreateMessageRecord ===
+// === Module 7391: findOrCreateMessageRecord ===
 
-// Module 7382 (findOrCreateMessageRecord)
+// Module 7391 (findOrCreateMessageRecord)
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 import sleep from "sleep" /* 4558 */;
 import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 4731 */;
 import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4737 */;
 import isMentioned from "isMentioned" /* 4751 */;
 import isMentionedDefault from "isMentioned" /* 4751 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6117 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6125 */;
 import closure_3 from "hasFlag" /* 4131 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "ensureGuildLoaded" /* 1387 */;
+import closure_4 from "fetchFingerprint" /* 1215 */;
+import closure_5 from "ensureGuildLoaded" /* 1386 */;
 import closure_6 from "reinjectEphemerals" /* 4735 */;
 import closure_7 from "generateOldThreadCutoff" /* 4493 */;
 import closure_8 from "markAllUserIdListsStale" /* 4130 */;
 import closure_9 from "handleConnectionOpen" /* 4299 */;
 import closure_10 from "updateUserGuildSettingsInternal" /* 4701 */;
-import closure_11 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { Storage } from "Storage" /* 595 */;
+import closure_11 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
+import { Storage } from "Storage" /* 592 */;
 
 require = arg1;
 function findOrCreateMessageRecord(channel_id) {
@@ -100,7 +100,7 @@ function parseMessage(message, channelId) {
       }
       id = id.getId();
       if (!blockedOrIgnoredForMessage.isBlockedOrIgnoredForMessage(message)) {
-        if (!tmp2(7383)(message, id)) {
+        if (!tmp2(7392)(message, id)) {
           let tmp12 = message;
           if (!(message instanceof closure_3)) {
             message = store2.getMessage(message.channel_id, message.id);
@@ -213,7 +213,7 @@ function handleSetRecentMentionsFilters(arg0) {
   const merged = Object.assign(closure_23);
   const obj2 = applyDefault;
   closure_23 = obj2.defaults(applyDefault.pick(arg0, ["guildFilter", "roleFilter", "everyoneFilter"]), closure_23);
-  const Storage = items(595).Storage;
+  const Storage = items(592).Storage;
   const result = Storage.set(recentMentionFilterSettings, closure_23);
   let tmp4 = obj.guildFilter !== closure_23.guildFilter;
   if (tmp4) {
@@ -568,11 +568,10 @@ obj = {
     message = message.message;
     const currentUser = authStore.getCurrentUser();
     if (null != currentUser) {
-      let obj = isMentioned;
-      obj = { rawMessage: null, userId: null, suppressRoles: false, suppressEveryone: false };
+      let obj = { rawMessage: null, userId: null, suppressRoles: false, suppressEveryone: false };
       obj[0] = message;
       obj[1] = currentUser.id;
-      if (obj.isRawMessageMentioned(obj)) {
+      if (obj2.isRawMessageMentioned(obj)) {
         const tmp3 = parseMessage(message, message.channelId);
         if (null == tmp3) {
           return false;
@@ -604,6 +603,7 @@ obj = {
           }
         }
       }
+      obj2 = isMentioned;
     }
     return false;
   },

@@ -1,6 +1,6 @@
-// === Module 10852: metadata ===
+// === Module 11072: metadata ===
 
-// Module 10852 (metadata)
+// Module 11072 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/virtual_currency/images/native/balancePromotion_bg_static.png.js");

@@ -1,14 +1,14 @@
-// === Module 5350: callback ===
+// === Module 5358: callback ===
 
-// Module 5350 (callback)
+// Module 5358 (callback)
 import timestampDefault from "timestamp" /* 3 */;
-import encodeProperties from "encodeProperties" /* 503 */;
-import sendRequest from "sendRequest" /* 530 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import encodeProperties from "encodeProperties" /* 500 */;
+import sendRequest from "sendRequest" /* 527 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 import _modDef4713 from "module_4713" /* 4713 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "set" /* 5225 */;
-import ME from "ME" /* 676 */;
+import closure_4 from "set" /* 5233 */;
+import ME from "ME" /* 673 */;
 
 require = arg1;
 function callback(arg0, arg1) {
@@ -33,10 +33,10 @@ let obj = {
     const HTTP = sendRequest.HTTP;
     const value = HTTP.get({ url: closure_6.CONNECTIONS, oldFormErrors: true, rejectWithError: true });
     return value.then((accounts) => {
-      let obj = callback(709);
+      let obj = callback(706);
       obj = { type: "USER_CONNECTIONS_UPDATE", local: true, accounts: accounts.body };
       return obj.dispatch(obj);
-    }, () => callback(709).dispatch({ type: "USER_CONNECTIONS_UPDATE", local: true, accounts: [] }));
+    }, () => callback(706).dispatch({ type: "USER_CONNECTIONS_UPDATE", local: true, accounts: [] }));
   },
   authorize(arg0) {
     closure_0 = arg0;
@@ -150,8 +150,8 @@ let obj = {
     let obj = dispatcherDefault;
     obj = { type: "USER_CONNECTIONS_INTEGRATION_JOINING", integrationId: id, joining: true };
     obj.dispatch(obj);
-    const HTTP = _require(530).HTTP;
-    obj = { url: closure_6.INTEGRATION_JOIN(id), oldFormErrors: true, rejectWithError: _require(530).rejectWithMigratedError() };
+    const HTTP = _require(527).HTTP;
+    obj = { url: closure_6.INTEGRATION_JOIN(id), oldFormErrors: true, rejectWithError: _require(527).rejectWithMigratedError() };
     HTTP.post(obj, (ok) => {
       let obj = callback(closure_1_2[5]);
       obj = { type: "USER_CONNECTIONS_INTEGRATION_JOINING", integrationId: closure_0, joining: false };

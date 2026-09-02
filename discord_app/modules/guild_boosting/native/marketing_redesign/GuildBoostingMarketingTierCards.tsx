@@ -1,15 +1,15 @@
-// === Module 13244: TierFeatures ===
+// === Module 13466: TierFeatures ===
 
-// Module 13244 (TierFeatures)
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 13466 (TierFeatures)
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import useThemeDefault from "useTheme" /* 4413 */;
-import CONTROL_RESOLUTION from "CONTROL_RESOLUTION" /* 13245 */;
+import CONTROL_RESOLUTION from "CONTROL_RESOLUTION" /* 13467 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
-import { BoostedGuildFeatures } from "GuildFeatures" /* 1924 */;
+import ME from "ME" /* 673 */;
+import { BoostedGuildFeatures } from "GuildFeatures" /* 1923 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -782,13 +782,13 @@ let closure_16 = importAllResult.forwardRef((onCardPress, ref) => {
     });
   }, items);
   const sum = guild.premiumTier + 1;
-  let obj = features(1363);
+  let obj = features(1362);
   const tmp4 = useThemeDefault();
   const unsafe_rawColors = ThemesDefault.unsafe_rawColors;
   const tmp9 = obj.isThemeDark(useThemeDefault()) ? unsafe_rawColors.WHITE : unsafe_rawColors.GUILD_BOOSTING_PINK;
-  const intl = tmp7(1236).intl;
+  const intl = tmp7(1233).intl;
   const string = intl.string;
-  const t = tmp7(1236).t;
+  const t = tmp7(1233).t;
   if (isExpanded) {
     let stringResult = string(t.DFwxsR);
   } else {
@@ -809,8 +809,8 @@ let closure_16 = importAllResult.forwardRef((onCardPress, ref) => {
   obj4[3] = tmp7Result.getTierName(tier, { useLevels: false });
   const items2 = [callback2(features(4474).Text, obj4), ];
   const obj5 = { color: "text-overlay-light", style: tmp.cardTierBoostcount, variant: "text-md/medium", children: null };
-  const intl2 = tmp7(1236).intl;
-  obj5[3] = intl2.format(features(1236).t.gDsyB9, { numSubscriptions: table[tier] });
+  const intl2 = tmp7(1233).intl;
+  obj5[3] = intl2.format(features(1233).t.gDsyB9, { numSubscriptions: table[tier] });
   items2[1] = callback2(features(4474).Text, obj5);
   obj3[1] = items2;
   const items3 = [callback3(View, obj3), , ];
@@ -821,9 +821,9 @@ let closure_16 = importAllResult.forwardRef((onCardPress, ref) => {
   const obj9 = { style: tmp.cardFooter, children: null };
   const items5 = [callback2(features(4474).Text, { color: "text-overlay-light", variant: "text-md/semibold", children: stringResult }), ];
   if (isExpanded) {
-    let ChevronLargeDownIcon = tmp7(13246).ChevronLargeUpIcon;
+    let ChevronLargeDownIcon = tmp7(13468).ChevronLargeUpIcon;
   } else {
-    ChevronLargeDownIcon = tmp7(13248).ChevronLargeDownIcon;
+    ChevronLargeDownIcon = tmp7(13470).ChevronLargeDownIcon;
   }
   const isThemeDarkResult = obj.isThemeDark(useThemeDefault());
   const obj6 = { numSubscriptions: table[tier] };
@@ -832,7 +832,7 @@ let closure_16 = importAllResult.forwardRef((onCardPress, ref) => {
   obj9[1] = items5;
   items3[2] = callback3(View, obj9);
   obj2[5] = items3;
-  obj1[1] = callback3(features(5068).PressableHighlight, obj2);
+  obj1[1] = callback3(features(5076).PressableHighlight, obj2);
   obj[6] = callback2(View, obj1);
   const items6 = [callback2(tmp2Result, obj), , ];
   let tmp16 = tmp15;
@@ -879,29 +879,29 @@ let closure_16 = importAllResult.forwardRef((onCardPress, ref) => {
       obj13[4] = items11;
       items9[1] = tmp13(tmp2Result1, obj13);
       const obj14 = { source: null, style: null };
-      obj14[0] = tmp2(13250);
+      obj14[0] = tmp2(13472);
       const items12 = [, , ];
       ({ sparkleStar: arr14[0], sparkleStarPointed: arr14[1], sparkleStarPointed1: arr14[2] } = tmp);
       obj14[1] = items12;
-      items9[2] = tmp13(tmp7(1297).Icon, obj14);
+      items9[2] = tmp13(tmp7(1296).Icon, obj14);
       const obj15 = { source: null, style: null };
-      obj15[0] = tmp2(13250);
+      obj15[0] = tmp2(13472);
       const items13 = [, , ];
       ({ sparkleStar: arr15[0], sparkleStarPointed: arr15[1], sparkleStarPointed2: arr15[2] } = tmp);
       obj15[1] = items13;
-      items9[3] = tmp13(tmp7(1297).Icon, obj15);
+      items9[3] = tmp13(tmp7(1296).Icon, obj15);
       const obj16 = { source: null, style: null };
-      obj16[0] = tmp2(13250);
+      obj16[0] = tmp2(13472);
       const items14 = [, , ];
       ({ sparkleStar: arr16[0], sparkleStarPointed: arr16[1], sparkleStarPointed3: arr16[2] } = tmp);
       obj16[1] = items14;
-      items9[4] = tmp13(tmp7(1297).Icon, obj16);
+      items9[4] = tmp13(tmp7(1296).Icon, obj16);
       const obj17 = { source: null, style: null };
-      obj17[0] = tmp2(13251);
+      obj17[0] = tmp2(13473);
       const items15 = [, , ];
       ({ sparkleStar: arr17[0], sparkleStarElongated: arr17[1], sparkleStarElongated1: arr17[2] } = tmp);
       obj17[1] = items15;
-      items9[5] = tmp13(tmp7(1297).Icon, obj17);
+      items9[5] = tmp13(tmp7(1296).Icon, obj17);
       obj11[0] = items9;
       tmp11Result = tmp11(closure_11, obj11);
       const tmp7Result5 = tmp7(4326);
@@ -912,13 +912,13 @@ let closure_16 = importAllResult.forwardRef((onCardPress, ref) => {
   } else {
     const obj18 = { angle: 3, angleCenter: null, colors: null, locations: null, style: null, useAngle: true, children: null };
     obj18[1] = { x: 0.5, y: 0.2 };
-    const items16 = [tmp2(712).unsafe_rawColors.GUILD_BOOSTING_BLUE, tmp2(712).unsafe_rawColors.GUILD_BOOSTING_PURPLE];
+    const items16 = [tmp2(709).unsafe_rawColors.GUILD_BOOSTING_BLUE, tmp2(709).unsafe_rawColors.GUILD_BOOSTING_PURPLE];
     obj18[2] = items16;
     obj18[3] = [0, 1];
     obj18[4] = tmp.cardTierBadge;
     let obj19 = { color: "text-overlay-light", style: null, variant: "text-xs/bold", children: null };
     obj19[1] = tmp.cardTierBadgeCopy;
-    const intl3 = tmp7(1236).intl;
+    const intl3 = tmp7(1233).intl;
     const string2 = intl3.string;
     if (tmp15) {
       let string2Result = string2(_9NBo7c);
@@ -979,5 +979,5 @@ export default function GuildBoostingMarketingTierCards(guild) {
     const tier = features.tier;
     return closure_1_9(closure_1_16, { features: features.features, guild: closure_0, isExpanded: closure_2, onCardPress: handleCardPress, tier }, tier);
   });
-  return closure_9(_require(12128).MarketingCardsScroller, obj);
+  return closure_9(_require(12352).MarketingCardsScroller, obj);
 };

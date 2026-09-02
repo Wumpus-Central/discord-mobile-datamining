@@ -1,8 +1,8 @@
-// === Module 5125: _shouldConvertToWebP ===
+// === Module 5133: _shouldConvertToWebP ===
 
-// Module 5125 (_shouldConvertToWebP)
+// Module 5133 (_shouldConvertToWebP)
 import timestampDefault from "timestamp" /* 3 */;
-import MurmurHashV3Default from "MurmurHashV3" /* 1217 */;
+import MurmurHashV3Default from "MurmurHashV3" /* 1214 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;

@@ -1,6 +1,6 @@
-// === Module 7010: metadata ===
+// === Module 7019: metadata ===
 
-// Module 7010 (metadata)
+// Module 7019 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ShopIllocon-2x.png.js");

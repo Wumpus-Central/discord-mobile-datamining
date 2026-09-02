@@ -1,27 +1,27 @@
-// === Module 7220: getDeviceMetadata ===
+// === Module 7229: getDeviceMetadata ===
 
-// Module 7220 (getDeviceMetadata)
+// Module 7229 (getDeviceMetadata)
 import isTracingDefault from "isTracing" /* 10 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import _modDef1208 from "module_1208" /* 1208 */;
-import getConstantsAll from "getConstants" /* 1625 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
+import _modDef1205 from "module_1205" /* 1205 */;
+import getConstantsAll from "getConstants" /* 1624 */;
 import coerceMainRoute from "coerceMainRoute" /* 4332 */;
 import getRootNavigationRef from "getRootNavigationRef" /* 4333 */;
 import DCDDeviceManager from "DCDDeviceManager" /* 4457 */;
-import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 7415 */;
-import AppStartInfo2 from "AppStartInfo" /* 7416 */;
+import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 7424 */;
+import AppStartInfo2 from "AppStartInfo" /* 7425 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleClearCaches" /* 7221 */;
+import closure_4 from "handleClearCaches" /* 7230 */;
 import closure_5 from "getHash" /* 4391 */;
-import closure_6 from "handleThemeChange" /* 1302 */;
-import closure_7 from "fetchFingerprint" /* 1218 */;
-import closure_8 from "ensureGuildLoaded" /* 1387 */;
-import closure_9 from "refreshSourceMapCookie" /* 706 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { ACCEPT_INVITE_MODAL_KEY } from "ACCEPT_INVITE_MODAL_KEY" /* 7414 */;
-import { StaticChannelRoutes } from "set" /* 1394 */;
+import closure_6 from "handleThemeChange" /* 1301 */;
+import closure_7 from "fetchFingerprint" /* 1215 */;
+import closure_8 from "ensureGuildLoaded" /* 1386 */;
+import closure_9 from "refreshSourceMapCookie" /* 703 */;
+import { AnalyticEvents } from "ME" /* 673 */;
+import { ACCEPT_INVITE_MODAL_KEY } from "ACCEPT_INVITE_MODAL_KEY" /* 7423 */;
+import { StaticChannelRoutes } from "set" /* 1393 */;
 import { jsx } from "jsxProd" /* 21 */;
-import v1 from "v1" /* 514 */;
+import v1 from "v1" /* 511 */;
 import set from "set" /* 2 */;
 
 require = arg1;
@@ -184,7 +184,7 @@ function _trackAppUIViewedAsync() {
             const obj7 = callback2(10);
             callback2(10).markAt("\u{1F3C3}", "app_opened", closure_4);
             const obj8 = callback2(10);
-            callback(7418).ttiRecorded(closure_5);
+            callback(7427).ttiRecorded(closure_5);
             let _setTimeout = setTimeout;
             let timerId = setTimeout(() => {
               let str = closure_0;
@@ -206,10 +206,10 @@ function _trackAppUIViewedAsync() {
               if (null == timeout) {
                 let _setTimeout = setTimeout;
                 timeout = setTimeout(() => {
-                  callback(9).setTTICallback(/* F122881 */ function() { ... });
+                  callback(9).setTTICallback(/* F124735 */ function() { ... });
                   callback3();
                   c25 = null;
-                }, 15 * callback(687).Millis.SECOND);
+                }, 15 * callback(684).Millis.SECOND);
                 callback(9).setTTICallback(() => {
                   const tmp = callback2();
                   let flag = false;
@@ -347,7 +347,7 @@ function _logLegacyAppUiViewed() {
             obj2.duration_ms_since_required_js_bundle_parsed = callback - JSBundleParsedTimestamp;
             obj2.theme = theme.theme;
             const merged2 = Object.assign(closure_0);
-            callback(698).track(constants.APP_UI_VIEWED, obj2, { logEventProperties: true });
+            callback(695).track(constants.APP_UI_VIEWED, obj2, { logEventProperties: true });
             c8 = 3;
             return { value: "HermesInternal", done: null };
           }
@@ -684,8 +684,8 @@ export const trackAppOpened = function trackAppOpened(launcher) {
   let obj = isTracingDefault;
   obj.mark("\u{1F3C3}", "Track app_opened");
   obj = { openFrom: launcher };
-  _modDef1208.addBreadcrumb({ category: "lifecycle", message: "App opened", data: obj });
-  const obj2 = _modDef1208;
+  _modDef1205.addBreadcrumb({ category: "lifecycle", message: "App opened", data: obj });
+  const obj2 = _modDef1205;
   obj = {};
   const merged = Object.assign(getDeviceMetadata());
   obj.opened_from = launcher;

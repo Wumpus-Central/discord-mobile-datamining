@@ -1,6 +1,6 @@
-// === Module 8507: SAMPLE_PROFILE_ASPECT_RATIO ===
+// === Module 8520: SAMPLE_PROFILE_ASPECT_RATIO ===
 
-// Module 8507 (SAMPLE_PROFILE_ASPECT_RATIO)
+// Module 8520 (SAMPLE_PROFILE_ASPECT_RATIO)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/collectibles/native/CollectiblesPreviewConstants.tsx");

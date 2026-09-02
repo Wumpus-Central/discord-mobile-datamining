@@ -1,13 +1,13 @@
-// === Module 14196: _terminate ===
+// === Module 14419: _terminate ===
 
-// Module 14196 (_terminate)
+// Module 14419 (_terminate)
 import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 import initializeDefault from "initialize" /* 4662 */;
-import enforcingDefault from "enforcing" /* 14197 */;
+import enforcingDefault from "enforcing" /* 14420 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_6 from "handleConnectionOpen" /* 1981 */;
+import closure_6 from "handleConnectionOpen" /* 1980 */;
 
 ({ AppState: c3, NativeModules: c4 } = get_ActivityIndicator);
 initializeDefault;
@@ -23,21 +23,21 @@ class VoiceMessagesPlaybackManager extends tmp3 {
       id = id.id;
       if (id.channelId === currentlySelectedChannelId.getCurrentlySelectedChannelId()) {
         if (obj.isAndroid()) {
-          const result = callback(14197).handleVoiceMessageDeleted(id);
-          const obj2 = callback(14197);
+          const result = callback(14420).handleVoiceMessageDeleted(id);
+          const obj2 = callback(14420);
         } else {
           const DCDAudioPlayerManager = closure_4.DCDAudioPlayerManager;
           if (DCDAudioPlayerManager != null) {
             const result1 = DCDAudioPlayerManager.handleVoiceMessageDeleted(id);
           }
         }
-        obj = applyArgumentsResult(500);
+        obj = applyArgumentsResult(1234);
       }
     };
     applyArgumentsResult.handleLogout = function handleLogout() {
       if (obj.isAndroid()) {
-        callback(14197).pauseCurrentPlayer(false);
-        const obj2 = callback(14197);
+        callback(14420).pauseCurrentPlayer(false);
+        const obj2 = callback(14420);
       } else {
         const DCDAudioPlayerManager = closure_4.DCDAudioPlayerManager;
         if (DCDAudioPlayerManager != null) {

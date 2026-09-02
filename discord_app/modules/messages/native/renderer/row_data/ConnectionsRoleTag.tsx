@@ -1,11 +1,11 @@
-// === Module 8138: createConnectionsRoleTag ===
+// === Module 8146: createConnectionsRoleTag ===
 
-// Module 8138 (createConnectionsRoleTag)
+// Module 8146 (createConnectionsRoleTag)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
-import int2hslRaw from "int2hslRaw" /* 688 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ME from "ME" /* 673 */;
+import int2hslRaw from "int2hslRaw" /* 685 */;
+import ThemesDefault from "Themes" /* 709 */;
 
 const processColor = get_ActivityIndicator.processColor;
 const DEFAULT_ROLE_COLOR_HEX = ME.DEFAULT_ROLE_COLOR_HEX;

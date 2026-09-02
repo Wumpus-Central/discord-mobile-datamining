@@ -1,14 +1,14 @@
-// === Module 14505: FamilyCenterActivitySectionHeader ===
+// === Module 14728: FamilyCenterActivitySectionHeader ===
 
-// Module 14505 (FamilyCenterActivitySectionHeader)
-import ThemesDefault from "Themes" /* 712 */;
-import getEmptyActivityFormatter from "getEmptyActivityFormatter" /* 7338 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8773 */;
-import useActionsForDisplayType from "useActionsForDisplayType" /* 14500 */;
+// Module 14728 (FamilyCenterActivitySectionHeader)
+import ThemesDefault from "Themes" /* 709 */;
+import getEmptyActivityFormatter from "getEmptyActivityFormatter" /* 7347 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8788 */;
+import useActionsForDisplayType from "useActionsForDisplayType" /* 14723 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import items from "items" /* 7283 */;
+import items from "items" /* 7292 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -83,11 +83,11 @@ export default function FamilyCenterActivitySection(displayType) {
   let loadMore;
   dependencyMap = undefined;
   let loadMoreButton = callback4();
-  let obj = displayType(14500);
+  let obj = displayType(14723);
   const actionsForDisplayType = obj.useActionsForDisplayType(displayType);
-  obj1 = displayType(14500);
+  obj1 = displayType(14723);
   const actionTotalsForDisplayType = obj1.useActionTotalsForDisplayType(displayType);
-  let obj2 = displayType(11489);
+  let obj2 = displayType(11712);
   const familyCenterActions = obj2.useFamilyCenterActions({});
   loadMore = familyCenterActions.loadMore;
   const tmp6 = callback(React.useState(closure_7), 2);
@@ -97,16 +97,16 @@ export default function FamilyCenterActivitySection(displayType) {
   if (0 === actionsForDisplayType.length) {
     return null;
   } else {
-    const intl = tmp(1236).intl;
+    const intl = tmp(1233).intl;
     obj = { pageSize: null };
     const _Math = Math;
     obj[0] = Math.min(actionTotalsForDisplayType - substr.length, closure_7);
-    const formatToPlainStringResult = intl.formatToPlainString(loadMore(2369)["7dMmJY"], obj);
+    const formatToPlainStringResult = intl.formatToPlainString(loadMore(2368)["7dMmJY"], obj);
     obj = { style: null, children: null };
     obj[0] = loadMoreButton.container;
     obj1 = { displayType: null };
     obj1[0] = displayType;
-    const items1 = [callback2(FamilyCenterActivitySectionHeader, obj1), substr.map((action) => callback(loadMore(14506), { action }, action.event_id)), ];
+    const items1 = [callback2(FamilyCenterActivitySectionHeader, obj1), substr.map((action) => callback(loadMore(14729), { action }, action.event_id)), ];
     if (substr.length >= actionTotalsForDisplayType) {
       items1[2] = null;
       obj[1] = items1;
@@ -131,7 +131,7 @@ export default function FamilyCenterActivitySection(displayType) {
         obj6[0] = loadMoreButton.loadMoreButton;
         obj6[3] = formatToPlainStringResult;
         obj5[4] = tmp17(tmp(4474).Text, obj6);
-        tmp17Result = tmp17(tmp(5068).PressableOpacity, obj5);
+        tmp17Result = tmp17(tmp(5076).PressableOpacity, obj5);
       }
       obj2[1] = tmp17Result;
       tmp17Result = tmp17(tmp16, obj2);

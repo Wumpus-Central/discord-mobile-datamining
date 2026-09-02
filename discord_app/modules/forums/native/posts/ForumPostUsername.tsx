@@ -1,13 +1,13 @@
-// === Module 11577: ForumPostUsername ===
+// === Module 11800: ForumPostUsername ===
 
-// Module 11577 (ForumPostUsername)
+// Module 11800 (ForumPostUsername)
 import noopAll from "noop" /* 19 */;
-import set from "set" /* 1397 */;
-import useLoadForumUnreadCounts from "useLoadForumUnreadCounts" /* 7628 */;
-import useChatWidthDefault from "useChatWidth" /* 11125 */;
+import set from "set" /* 1396 */;
+import useLoadForumUnreadCounts from "useLoadForumUnreadCounts" /* 7638 */;
+import useChatWidthDefault from "useChatWidth" /* 11346 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import { useForumChannelStore } from "set" /* 11573 */;
+import { useForumChannelStore } from "set" /* 11796 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -20,8 +20,8 @@ function ForumPostUsername(arg0) {
   if (useForumChannelStore(thread.parent_id).layoutType === set.ForumLayout.GRID) {
     num = 72;
   }
-  const diff = useChatWidthDefault() - tmp2(11578).GRID_HORIZONTAL_PADDING - num;
-  let tmp2Result = tmp2(589);
+  const diff = useChatWidthDefault() - tmp2(11801).GRID_HORIZONTAL_PADDING - num;
+  let tmp2Result = tmp2(586);
   const items = [closure_4];
   const stateFromStores = tmp2Result.useStateFromStores(items, () => roleStyle.roleStyle);
   if ("username" === stateFromStores) {
@@ -29,9 +29,9 @@ function ForumPostUsername(arg0) {
       let obj = { color: null };
       obj[0] = authorColor;
     }
-    tmp2Result = tmp2(7870);
+    tmp2Result = tmp2(7879);
     const processColorStringsArray = tmp2Result.useProcessColorStringsArray(authorColors);
-    const tmp2Result1 = tmp2(7870);
+    const tmp2Result1 = tmp2(7879);
     const useIsRoleStyleAndRoleColorsEligibleForERC = tmp2Result1.useIsRoleStyleAndRoleColorsEligibleForERC;
     const guild_id = thread.guild_id;
     let tmp19Result = null;
@@ -50,7 +50,7 @@ function ForumPostUsername(arg0) {
         const obj3 = { size: "small", color: null, colors: null };
         obj3[1] = authorColor;
         obj3[2] = authorColors;
-        obj2[1] = callback(tmp2(1297).RoleDot, obj3);
+        obj2[1] = callback(tmp2(1296).RoleDot, obj3);
         tmp23 = callback(tmp20, obj2);
       }
       const items3 = [tmp23, ];

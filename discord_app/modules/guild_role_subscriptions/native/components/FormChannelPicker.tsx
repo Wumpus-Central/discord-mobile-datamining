@@ -1,8 +1,8 @@
-// === Module 17338: FormChannelPicker ===
+// === Module 17574: FormChannelPicker ===
 
-// Module 17338 (FormChannelPicker)
+// Module 17574 (FormChannelPicker)
 import noopAll from "noop" /* 19 */;
-import closure_3 from "ensureGuildLoaded" /* 1387 */;
+import closure_3 from "ensureGuildLoaded" /* 1386 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

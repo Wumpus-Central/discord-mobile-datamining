@@ -1,9 +1,9 @@
-// === Module 8908: useUserProfileBannerHeight ===
+// === Module 8923: useUserProfileBannerHeight ===
 
-// Module 8908 (useUserProfileBannerHeight)
+// Module 8923 (useUserProfileBannerHeight)
 import set from "set" /* 2 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
-import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 6001 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1492 */;
+import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 6009 */;
 
 const BANNER_ASPECT_RATIO = ARBITRARY_LARGE_OFFSET.BANNER_ASPECT_RATIO;
 const result = set.fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileBannerHeight.tsx");

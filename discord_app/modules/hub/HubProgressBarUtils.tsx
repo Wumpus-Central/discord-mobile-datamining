@@ -1,30 +1,30 @@
-// === Module 12207: getHubProgressTitleForStep ===
+// === Module 12431: getHubProgressTitleForStep ===
 
-// Module 12207 (getHubProgressTitleForStep)
-import create from "create" /* 1306 */;
+// Module 12431 (getHubProgressTitleForStep)
+import create from "create" /* 1305 */;
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_4 from "set" /* 5225 */;
-import { HUB_PROGRESS_STEP_ORDER } from "items" /* 9920 */;
-import { PlatformTypes } from "ME" /* 676 */;
+import closure_3 from "handleConnectionClosedOrResumed" /* 1339 */;
+import closure_4 from "set" /* 5233 */;
+import { HUB_PROGRESS_STEP_ORDER } from "items" /* 9942 */;
+import { PlatformTypes } from "ME" /* 673 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/hub/HubProgressBarUtils.tsx");
 
 export const getHubProgressTitleForStep = function getHubProgressTitleForStep(nextHubProgressStep) {
   if (create.HubProgressStep.JOIN_GUILD === nextHubProgressStep) {
-    const intl3 = tmp(1236).intl;
-    return intl3.string(tmp(1236).t.iNR25n);
-  } else if (tmp(1306).HubProgressStep.INVITE_USER === nextHubProgressStep) {
-    const intl2 = tmp(1236).intl;
-    return intl2.string(tmp(1236).t["3NlTYU"]);
-  } else if (tmp(1306).HubProgressStep.CONTACT_SYNC === nextHubProgressStep) {
-    const intl = tmp(1236).intl;
-    return intl.string(tmp(1236).t.HFvFte);
-  } else if (tmp(1306).HubProgressStep.NO_PROGRESS === nextHubProgressStep) {
+    const intl3 = tmp(1233).intl;
+    return intl3.string(tmp(1233).t.iNR25n);
+  } else if (tmp(1305).HubProgressStep.INVITE_USER === nextHubProgressStep) {
+    const intl2 = tmp(1233).intl;
+    return intl2.string(tmp(1233).t["3NlTYU"]);
+  } else if (tmp(1305).HubProgressStep.CONTACT_SYNC === nextHubProgressStep) {
+    const intl = tmp(1233).intl;
+    return intl.string(tmp(1233).t.HFvFte);
+  } else if (tmp(1305).HubProgressStep.NO_PROGRESS === nextHubProgressStep) {
     return null;
   } else {
-    tmp(1471).assertNever(nextHubProgressStep);
+    tmp(1470).assertNever(nextHubProgressStep);
   }
 };
 export const useHubProgressBarCompletedSteps = function useHubProgressBarCompletedSteps(guild) {

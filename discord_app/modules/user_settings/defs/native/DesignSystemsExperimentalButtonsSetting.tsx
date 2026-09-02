@@ -1,10 +1,10 @@
-// === Module 15364: route ===
+// === Module 15592: route ===
 
-// Module 15364 (route)
+// Module 15592 (route)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import MobileUserSettings from "MobileUserSettings" /* 7884 */;
-import createToggle from "createToggle" /* 11068 */;
+import ME from "ME" /* 673 */;
+import MobileUserSettings from "MobileUserSettings" /* 7893 */;
+import createToggle from "createToggle" /* 11288 */;
 
 obj = {
   useTitle() {
@@ -16,7 +16,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.DESIGN_SYSTEM_EXPERIMENTAL_BUTTONS,
   getComponent() {
-    return require(15365) /* UserSettingsDesignSystemExperimentalButtons */.default;
+    return require(15593) /* UserSettingsDesignSystemExperimentalButtons */.default;
   }
 };
 const route = createToggle.createRoute(obj);

@@ -1,6 +1,6 @@
-// === Module 13613: ActivateDeviceModal ===
+// === Module 13836: ActivateDeviceModal ===
 
-// Module 13613 (ActivateDeviceModal)
+// Module 13836 (ActivateDeviceModal)
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -37,7 +37,7 @@ export default function ActivateDeviceModal(userCode) {
     };
   }, items);
   let obj = { screens: memo, initialRouteName: constants.ACTIVATE_DEVICE, headerBackTitle: null };
-  let intl = userCode(1236).intl;
-  obj[2] = intl.string(userCode(1236).t["13/7kX"]);
-  return jsx(userCode(6008).Navigator, { screens: memo, initialRouteName: constants.ACTIVATE_DEVICE, headerBackTitle: null });
+  let intl = userCode(1233).intl;
+  obj[2] = intl.string(userCode(1233).t["13/7kX"]);
+  return jsx(userCode(6016).Navigator, { screens: memo, initialRouteName: constants.ACTIVATE_DEVICE, headerBackTitle: null });
 };

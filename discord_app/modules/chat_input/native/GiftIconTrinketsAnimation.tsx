@@ -1,12 +1,12 @@
-// === Module 11817: GiftIconTrinketsAnimation ===
+// === Module 12040: GiftIconTrinketsAnimation ===
 
-// Module 11817 (GiftIconTrinketsAnimation)
-import set from "set" /* 500 */;
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
+// Module 12040 (GiftIconTrinketsAnimation)
+import initialize from "initialize" /* 586 */;
+import ThemesDefault from "Themes" /* 709 */;
+import set from "set" /* 1234 */;
 import map from "map" /* 4197 */;
-import preloadDefault from "preload" /* 5493 */;
-import useAPNGPlayerControls from "useAPNGPlayerControls" /* 8517 */;
+import preloadDefault from "preload" /* 5501 */;
+import useAPNGPlayerControls from "useAPNGPlayerControls" /* 8530 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import { jsx } from "jsxProd" /* 21 */;

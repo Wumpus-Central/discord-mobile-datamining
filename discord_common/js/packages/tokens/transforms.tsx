@@ -1,8 +1,8 @@
-// === Module 808: interpolate ===
+// === Module 805: interpolate ===
 
-// Module 808 (interpolate)
+// Module 805 (interpolate)
 import set2 from "set" /* 2 */;
-import nDefault from "n" /* 689 */;
+import nDefault from "n" /* 686 */;
 
 function interpolate(arg0, arg1, arg2) {
   [tmp, tmp2] = arg0;

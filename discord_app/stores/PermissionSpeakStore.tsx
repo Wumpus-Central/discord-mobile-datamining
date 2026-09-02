@@ -1,11 +1,11 @@
-// === Module 13405: initialize ===
+// === Module 13628: initialize ===
 
-// Module 13405 (initialize)
-import initializeDefault from "initialize" /* 589 */;
-import Storage2 from "Storage" /* 595 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_4 from "ensureGuildLoaded" /* 1387 */;
-import closure_5 from "createGuildRecordFromRust" /* 1909 */;
+// Module 13628 (initialize)
+import initializeDefault from "initialize" /* 586 */;
+import Storage2 from "Storage" /* 592 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import closure_4 from "ensureGuildLoaded" /* 1386 */;
+import closure_5 from "createGuildRecordFromRust" /* 1908 */;
 
 require = arg1;
 const hideSuppressWarning = "hideSuppressWarning";

@@ -1,8 +1,8 @@
-// === Module 6076: STOREFRONT_MARKETING_GUILD_ID ===
+// === Module 6084: STOREFRONT_MARKETING_GUILD_ID ===
 
-// Module 6076 (STOREFRONT_MARKETING_GUILD_ID)
+// Module 6084 (STOREFRONT_MARKETING_GUILD_ID)
 import set from "set" /* 2 */;
-import Environments2 from "Environments" /* 1934 */;
+import Environments2 from "Environments" /* 1933 */;
 
 const Environments = Environments2.Environments;
 let str = "1193841000108531764";

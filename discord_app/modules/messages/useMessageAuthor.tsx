@@ -3,12 +3,12 @@
 // Module 4746 (useNullableMessageAuthor)
 import _modDef38 from "module_38" /* 38 */;
 import nameFromUserDefault from "nameFromUser" /* 4322 */;
-import closure_3 from "ensureGuildLoaded" /* 1387 */;
-import closure_4 from "trackCommunicationDisabled" /* 1992 */;
-import closure_5 from "createGuildRoleRecordFromRust" /* 1985 */;
-import closure_6 from "createGuildRecordFromRust" /* 1909 */;
+import closure_3 from "ensureGuildLoaded" /* 1386 */;
+import closure_4 from "trackCommunicationDisabled" /* 1991 */;
+import closure_5 from "createGuildRoleRecordFromRust" /* 1984 */;
+import closure_6 from "createGuildRecordFromRust" /* 1908 */;
 import closure_7 from "markAllUserIdListsStale" /* 4130 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import closure_8 from "mergeGuildAvatar" /* 1921 */;
 
 const require = arg1;
 function useNullableMessageAuthor(message) {

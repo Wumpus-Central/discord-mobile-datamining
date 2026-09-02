@@ -1,7 +1,7 @@
-// === Module 10138: ? ===
+// === Module 10160: ? ===
 
-// Module 10138
-import getIsScreenLandscape from "getIsScreenLandscape" /* 5071 */;
+// Module 10160
+import getIsScreenLandscape from "getIsScreenLandscape" /* 5079 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -20,11 +20,11 @@ const memoResult = importAllResult.memo((row) => {
     num = participants.length;
   }
   if (1 === num) {
-    THIRD = tmp2(10130).StageTileSize.FULL;
+    THIRD = tmp2(10152).StageTileSize.FULL;
   } else if (2 === num) {
-    THIRD = tmp2(10130).StageTileSize.HALF;
+    THIRD = tmp2(10152).StageTileSize.HALF;
   } else {
-    THIRD = tmp2(10130).StageTileSize.THIRD;
+    THIRD = tmp2(10152).StageTileSize.THIRD;
   }
   const items = [tmp.container, ];
   if (containerLandscape) {

@@ -1,6 +1,6 @@
-// === Module 13569: openGuildLimitedAccessInfoModal ===
+// === Module 13792: openGuildLimitedAccessInfoModal ===
 
-// Module 13569 (openGuildLimitedAccessInfoModal)
+// Module 13792 (openGuildLimitedAccessInfoModal)
 import noopAll from "noop" /* 19 */;
 import _modDef4858 from "module_4858" /* 4858 */;
 import { Keyboard } from "get ActivityIndicator" /* 17 */;

@@ -1,12 +1,12 @@
-// === Module 9900: createStageChannelForEvent ===
+// === Module 9922: createStageChannelForEvent ===
 
-// Module 9900 (createStageChannelForEvent)
+// Module 9922 (createStageChannelForEvent)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { createChannelRecordFromServer as closure_4 } from "createChannelRecord" /* 1391 */;
-import closure_5 from "ensureGuildLoaded" /* 1387 */;
-import closure_6 from "createGuildRecordFromRust" /* 1909 */;
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1393 */;
-import { ChannelTypes } from "ME" /* 676 */;
+import { createChannelRecordFromServer as closure_4 } from "createChannelRecord" /* 1390 */;
+import closure_5 from "ensureGuildLoaded" /* 1386 */;
+import closure_6 from "createGuildRecordFromRust" /* 1908 */;
+import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1392 */;
+import { ChannelTypes } from "ME" /* 673 */;
 
 const require = arg1;
 function createStageChannelForEvent(guild, name, arg2) {
@@ -64,7 +64,7 @@ function _createStageChannelForEvent() {
               lib2 = undefined;
               c5 = 1;
               c6 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -267,7 +267,7 @@ function _setEventAsActive() {
               let guild_id;
               name = 1;
               id = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else {
             if (1 === tmp5) {

@@ -1,8 +1,8 @@
-// === Module 8808: getSimilarGames ===
+// === Module 8823: getSimilarGames ===
 
-// Module 8808 (getSimilarGames)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 8823 (getSimilarGames)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 let closure_0 = {};
 let closure_1 = {};

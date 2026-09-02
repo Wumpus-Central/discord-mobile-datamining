@@ -1,11 +1,11 @@
-// === Module 13065: useBuyNitroPlanLabelRenderer ===
+// === Module 13287: useBuyNitroPlanLabelRenderer ===
 
-// Module 13065 (useBuyNitroPlanLabelRenderer)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 13287 (useBuyNitroPlanLabelRenderer)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "_getSystemLocale" /* 1996 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import closure_5 from "_getSystemLocale" /* 1995 */;
+import GuildFeatures from "GuildFeatures" /* 1923 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

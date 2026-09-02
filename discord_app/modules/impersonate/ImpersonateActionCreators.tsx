@@ -1,21 +1,21 @@
-// === Module 5473: updateImpersonating ===
+// === Module 5481: updateImpersonating ===
 
-// Module 5473 (updateImpersonating)
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import transitionTo from "transitionTo" /* 1222 */;
-import ImpersonateType from "ImpersonateType" /* 1990 */;
+// Module 5481 (updateImpersonating)
+import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import transitionTo from "transitionTo" /* 1219 */;
+import ImpersonateType from "ImpersonateType" /* 1989 */;
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4700 */;
-import closure_3 from "ensureGuildLoaded" /* 1387 */;
-import closure_4 from "comparator" /* 1982 */;
-import closure_5 from "trackCommunicationDisabled" /* 1992 */;
-import closure_6 from "createGuildRoleRecordFromRust" /* 1985 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4121 */;
-import closure_8 from "handleConnectionOpen" /* 1981 */;
+import closure_3 from "ensureGuildLoaded" /* 1386 */;
+import closure_4 from "comparator" /* 1981 */;
+import closure_5 from "trackCommunicationDisabled" /* 1991 */;
+import closure_6 from "createGuildRoleRecordFromRust" /* 1984 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4120 */;
+import closure_8 from "handleConnectionOpen" /* 1980 */;
 import closure_9 from "updateUserGuildSettingsInternal" /* 4701 */;
-import closure_10 from "initialize" /* 1984 */;
-import ME from "ME" /* 676 */;
-import { isStaticChannelRoute } from "set" /* 1394 */;
+import closure_10 from "initialize" /* 1983 */;
+import ME from "ME" /* 673 */;
+import { isStaticChannelRoute } from "set" /* 1393 */;
 
 require = arg1;
 function updateImpersonating(closure_0, type) {
@@ -42,8 +42,8 @@ function updateImpersonating(closure_0, type) {
       if (!closure_7.can(constants.VIEW_CHANNEL, tmp21)) {
         const defaultChannel = store.getDefaultChannel(closure_0);
         if (null != defaultChannel) {
-          tmp7(1222).transitionTo(closure_12.CHANNEL(closure_0, defaultChannel.id));
-          const tmp7Result = tmp7(1222);
+          tmp7(1219).transitionTo(closure_12.CHANNEL(closure_0, defaultChannel.id));
+          const tmp7Result = tmp7(1219);
         }
       }
     }
@@ -84,7 +84,7 @@ export const updateImpersonatedChannels = function updateImpersonatedChannels(gu
   const set = new Set(optedInChannels.getOptedInChannels(guildId1));
   const item = items1.forEach((arg0) => set.add(arg0));
   const item1 = items2.forEach((arg0) => set.delete(arg0));
-  updateImpersonating(guildId1, { type: set(1990).ImpersonateType.NEW_MEMBER, optInChannels: set });
+  updateImpersonating(guildId1, { type: set(1989).ImpersonateType.NEW_MEMBER, optInChannels: set });
 };
 export const updateImpersonatedRoles = function updateImpersonatedRoles(guildId, c2) {
   (function optIntoPrivateChannelsForGrantedRolesForPreview(guildId, c2) {

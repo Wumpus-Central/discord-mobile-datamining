@@ -1,8 +1,8 @@
-// === Module 8865: getDisplayedInviteCode ===
+// === Module 8880: getDisplayedInviteCode ===
 
-// Module 8865 (getDisplayedInviteCode)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 8880 (getDisplayedInviteCode)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 let c1 = null;
 let c2 = null;

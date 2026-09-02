@@ -1,11 +1,11 @@
-// === Module 17411: prototype ===
+// === Module 17647: prototype ===
 
-// Module 17411 (prototype)
-import initializeDefault from "initialize" /* 5486 */;
+// Module 17647 (prototype)
+import initializeDefault from "initialize" /* 5494 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "map" /* 13356 */;
-import { DISCOVERY_ALL_CATEGORIES_ID as closure_6 } from "DEFAULT_DISCOVERY_CATEGORY_ID" /* 9730 */;
-import { Endpoints } from "ME" /* 676 */;
+import closure_5 from "map" /* 13580 */;
+import { DISCOVERY_ALL_CATEGORIES_ID as closure_6 } from "DEFAULT_DISCOVERY_CATEGORY_ID" /* 9752 */;
+import { Endpoints } from "ME" /* 673 */;
 
 const require = arg1;
 initializeDefault;
@@ -83,21 +83,21 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
                 obj1 = { categoryId: null };
                 obj1[0] = c6;
                 if (!total) {
-                  let obj6 = lib(17412);
+                  let obj6 = lib(17648);
                 }
-                let obj7 = closure_1_1(709);
+                let obj7 = closure_1_1(706);
                 const obj2 = { type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_START", categoryId: null, reset: true };
                 obj2[1] = c6;
                 obj7.dispatch(obj2);
                 c5 = 1;
-                const HTTP = lib(530).HTTP;
+                const HTTP = lib(527).HTTP;
                 let obj3 = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
                 obj3[0] = constants.GUILD_DISCOVERY;
                 const obj4 = { offset: 0, limit: null };
-                obj4[1] = lib(17413).GlobalDiscoveryServersLimits.FEATURED_DEFAULT_LIMIT;
-                obj3[1] = closure_1_1(1483).stringify(obj4);
-                const obj11 = closure_1_1(1483);
-                obj3[3] = lib(530).rejectWithMigratedError();
+                obj4[1] = lib(17649).GlobalDiscoveryServersLimits.FEATURED_DEFAULT_LIMIT;
+                obj3[1] = closure_1_1(1482).stringify(obj4);
+                const obj11 = closure_1_1(1482);
+                obj3[3] = lib(527).rejectWithMigratedError();
                 c6 = 2;
                 constants = 1;
                 const obj5 = { value: null, done: false };
@@ -112,12 +112,12 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
             if (1 === tmp7) {
               c5 = 0;
               dependencyMap = closure_4;
-              obj1 = closure_1_1(709);
+              obj1 = closure_1_1(706);
               obj6 = { type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE", categoryId: null, error: null };
               obj6[1] = c6;
               obj6[2] = dependencyMap;
               obj1.dispatch(obj6);
-              obj3 = closure_1_2(6185);
+              obj3 = closure_1_2(6194);
               obj7 = { categoryId: null };
               obj7[0] = c6;
               const result = obj3.trackGuildDiscoveryGetFeaturedGuildsFailed(obj7);
@@ -128,14 +128,14 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
               lib = arg1;
               total = lib.body.total;
               const guilds = lib.body.guilds;
-              closure_2 = guilds.map(lib(17412).fromDiscoverableGuildServer);
+              closure_2 = guilds.map(lib(17648).fromDiscoverableGuildServer);
               const obj8 = { type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS", categoryId: null, guilds: null, total: null };
               obj8[1] = c6;
               obj8[2] = closure_2;
               obj8[3] = total;
-              closure_1_1(709).dispatch(obj8);
+              closure_1_1(706).dispatch(obj8);
               c5 = 0;
-              const obj17 = closure_1_1(709);
+              const obj17 = closure_1_1(706);
             }
             c5 = 0;
             constants = 3;
@@ -214,7 +214,7 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
               lastFetchTimestamp = undefined;
               lastFetchTimestamp = 1;
               c6 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else {
             if (1 === tmp7) {

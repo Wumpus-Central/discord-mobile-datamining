@@ -1,7 +1,7 @@
-// === Module 9798: isVideoBackgroundSupported ===
+// === Module 9820: isVideoBackgroundSupported ===
 
-// Module 9798 (isVideoBackgroundSupported)
-import apexExperimentDefault from "apexExperiment" /* 9799 */;
+// Module 9820 (isVideoBackgroundSupported)
+import apexExperimentDefault from "apexExperiment" /* 9821 */;
 import closure_3 from "_detectH265HardwareDecode" /* 4529 */;
 import { Features } from "DesktopSources" /* 4542 */;
 

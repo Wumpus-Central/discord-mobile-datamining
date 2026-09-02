@@ -1,15 +1,15 @@
-// === Module 11758: ChannelIcon ===
+// === Module 11981: ChannelIcon ===
 
-// Module 11758 (ChannelIcon)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 11981 (ChannelIcon)
+import ThemesDefault from "Themes" /* 709 */;
 import Text from "Text" /* 4474 */;
 import computeChannelNameDefault from "computeChannelName" /* 4674 */;
-import TextIcon3 from "TextIcon" /* 5029 */;
-import TableRowInner from "TableRowInner" /* 5599 */;
-import stylesDefault from "styles" /* 11749 */;
+import TextIcon3 from "TextIcon" /* 5033 */;
+import TableRowInner from "TableRowInner" /* 5607 */;
+import stylesDefault from "styles" /* 11972 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "createGuildRecordFromRust" /* 1909 */;
+import closure_5 from "createGuildRecordFromRust" /* 1908 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

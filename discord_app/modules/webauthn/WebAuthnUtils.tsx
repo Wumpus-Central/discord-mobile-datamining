@@ -1,6 +1,6 @@
-// === Module 6058: encodeUserIdForWebAuthn ===
+// === Module 6066: encodeUserIdForWebAuthn ===
 
-// Module 6058 (encodeUserIdForWebAuthn)
+// Module 6066 (encodeUserIdForWebAuthn)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/webauthn/WebAuthnUtils.tsx");

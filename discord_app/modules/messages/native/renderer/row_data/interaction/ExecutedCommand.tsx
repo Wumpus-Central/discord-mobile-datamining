@@ -1,21 +1,21 @@
-// === Module 8142: createExecutedCommand ===
+// === Module 8150: createExecutedCommand ===
 
-// Module 8142 (createExecutedCommand)
+// Module 8150 (createExecutedCommand)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1431 */;
-import ensureAvatarSource from "ensureAvatarSource" /* 1434 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
+import ME from "ME" /* 673 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
+import ensureAvatarSource from "ensureAvatarSource" /* 1433 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
 import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4746 */;
-import buildCommand from "buildCommand" /* 7266 */;
-import processColorStrings from "processColorStrings" /* 7870 */;
-import createDisplayNameStylesMobile from "createDisplayNameStylesMobile" /* 7872 */;
-import canViewInteractionInfo from "canViewInteractionInfo" /* 8143 */;
-import closure_4 from "createdAt" /* 1935 */;
-import closure_5 from "ensureGuildLoaded" /* 1387 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import buildCommand from "buildCommand" /* 7275 */;
+import processColorStrings from "processColorStrings" /* 7879 */;
+import createDisplayNameStylesMobile from "createDisplayNameStylesMobile" /* 7881 */;
+import canViewInteractionInfo from "canViewInteractionInfo" /* 8151 */;
+import closure_4 from "createdAt" /* 1934 */;
+import closure_5 from "ensureGuildLoaded" /* 1386 */;
+import closure_6 from "mergeGuildAvatar" /* 1921 */;
 
 const processColor = get_ActivityIndicator.processColor;
 const MessageTypes = ME.MessageTypes;
@@ -88,7 +88,7 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
         guildId = channel.getGuildId();
       }
       id = message.interaction.user.id;
-      tmp16Result = tmp16(7870);
+      tmp16Result = tmp16(7879);
       const result1 = tmp16Result.isNativeMessageEligibleForEnhancedRoleColors(guildId, id);
       let id1;
       if (tmp24 != null) {
@@ -97,13 +97,13 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
       let processColorStringsResult = null;
       const result2 = processColorStrings.isNativeMessageEligibleForEnhancedRoleColors(guildId, id1);
       if (result1) {
-        processColorStringsResult = tmp16(7870).processColorStrings(userAuthor.colorStrings);
-        const tmp16Result2 = tmp16(7870);
+        processColorStringsResult = tmp16(7879).processColorStrings(userAuthor.colorStrings);
+        const tmp16Result2 = tmp16(7879);
       }
       let processColorStringsResult1 = null;
       if (result2) {
-        processColorStringsResult1 = tmp16(7870).processColorStrings(userAuthor1.colorStrings);
-        const tmp16Result3 = tmp16(7870);
+        processColorStringsResult1 = tmp16(7879).processColorStrings(userAuthor1.colorStrings);
+        const tmp16Result3 = tmp16(7879);
       }
       user = obj.getUser(id);
       if (user == null) {
@@ -117,13 +117,13 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
         if (user2 == null) {
           user2 = tmp24;
         }
-        const displayNameFontIdForMobileUser1 = tmp16(7872).getDisplayNameFontIdForMobileUser(user2, guildId);
-        const tmp16Result5 = tmp16(7872);
+        const displayNameFontIdForMobileUser1 = tmp16(7881).getDisplayNameFontIdForMobileUser(user2, guildId);
+        const tmp16Result5 = tmp16(7881);
       }
       obj = { username: null, usernameOnClick: null };
       const tmp16Result4 = createDisplayNameStylesMobile;
       obj[0] = useNullableMessageAuthor.getUserAuthor(message.interaction.user, channel).nick;
-      obj = { name: "usernameOnClick", action: "bindUserMenu", userId: null, messageChannelId: null, linkColor: null, roleColor: null, roleColors: null, shouldShowRoleDot: null };
+      obj = { name: "usernameOnClick", action: "bindUserMenu", userId: null, messageChannelId: null, linkColor: null, roleColor: null, roleColors: null, shouldShowRoleDot: null, fontId: null };
       obj[2] = id;
       obj[3] = message.channel_id;
       obj[4] = tmp37;
@@ -139,106 +139,92 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
         tmp55 = null != colorString;
       }
       obj[7] = tmp55;
-      if (null != displayNameFontIdForMobileUser) {
-        obj1 = { fontId: null };
-        obj1[0] = displayNameFontIdForMobileUser;
-        let obj2 = obj1;
-      } else {
-        obj2 = {};
-      }
-      const merged = Object.assign(obj2);
+      obj[8] = displayNameFontIdForMobileUser;
       obj[1] = obj;
       if (tmp) {
         if (!result) {
-          const result3 = tmp16(8144).isActivitiesInTextEnabled(channel);
-          const intl = tmp16(1236).intl;
+          const result3 = tmp16(8152).isActivitiesInTextEnabled(channel);
+          const intl = tmp16(1233).intl;
           const formatToParts = intl.formatToParts;
-          const t = tmp16(1236).t;
+          const t = tmp16(1233).t;
           if (result3) {
+            obj1 = {};
+            const merged = Object.assign(obj);
+            const obj2 = { action: "bindTapActivityText", applicationUserId: null, messageChannelId: null };
+            obj2[1] = message.author.id;
+            obj2[2] = message.channel_id;
+            obj1.activityTextOnClick = obj2;
+            let formatToPartsResult = formatToParts(t["R/mrBi"], obj1);
+          } else {
             let obj3 = {};
             const merged1 = Object.assign(obj);
-            let obj4 = { action: "bindTapActivityText", applicationUserId: null, messageChannelId: null };
-            obj4[1] = message.author.id;
-            obj4[2] = message.channel_id;
-            obj3.activityTextOnClick = obj4;
-            let formatToPartsResult = formatToParts(t["R/mrBi"], obj3);
-          } else {
-            obj5 = {};
-            const merged2 = Object.assign(obj);
-            formatToPartsResult = formatToParts(t.k964Wm, obj5);
+            formatToPartsResult = formatToParts(t.k964Wm, obj3);
           }
-          const tmp16Result7 = tmp16(8144);
+          const tmp16Result7 = tmp16(8152);
         }
-        obj6 = { userId: null, username: null, usernameColor: null, avatarURL: null, targetUsernameColor: null, content: null, commandNameBackgroundStyles: null, showAppsIcon: true };
-        obj6[0] = message.interaction.user.id;
-        obj6[1] = obj.username;
-        obj6[2] = tmp37;
-        obj6[3] = undefined;
-        obj6[4] = tmp33;
-        obj6[5] = formatToPartsResult;
-        obj7 = { color: null, borderRadius: 4, spaceAround: true };
-        obj7[0] = tmp51(semanticColor);
-        obj6[6] = obj7;
-        return obj6;
+        let obj4 = { userId: null, username: null, usernameColor: null, avatarURL: null, targetUsernameColor: null, content: null, commandNameBackgroundStyles: null, showAppsIcon: true };
+        obj4[0] = message.interaction.user.id;
+        obj4[1] = obj.username;
+        obj4[2] = tmp37;
+        obj4[3] = undefined;
+        obj4[4] = tmp33;
+        obj4[5] = formatToPartsResult;
+        obj5 = { color: null, borderRadius: 4, spaceAround: true };
+        obj5[0] = tmp51(semanticColor);
+        obj4[6] = obj5;
+        return obj4;
       }
       let result4 = displayName;
       if (result) {
-        result4 = tmp16(8145).formatPrimaryEntryPointCommandName(displayName);
-        const tmp16Result8 = tmp16(8145);
+        result4 = tmp16(8153).formatPrimaryEntryPointCommandName(displayName);
+        const tmp16Result8 = tmp16(8153);
       }
-      const intl2 = tmp16(1236).intl;
-      const obj8 = {};
-      const merged3 = Object.assign(obj);
-      obj8.commandName = result4;
+      const intl2 = tmp16(1233).intl;
+      obj6 = {};
+      const merged2 = Object.assign(obj);
+      obj6.commandName = result4;
       if (null == channel) {
-        let obj9 = {};
+        obj7 = {};
       } else {
-        const obj10 = { name: "commandNameOnClick", action: "bindTapCommandName", userId: null, messageId: null, applicationUserId: null, messageType: null, messageChannelId: null };
-        obj10[2] = message.interaction.user.id;
-        obj10[3] = message.id;
-        obj10[4] = message.author.id;
-        ({ type: obj28[5], channel_id: obj28[6] } = message);
-        obj9 = obj10;
+        const obj8 = { name: "commandNameOnClick", action: "bindTapCommandName", userId: null, messageId: null, applicationUserId: null, messageType: null, messageChannelId: null };
+        obj8[2] = message.interaction.user.id;
+        obj8[3] = message.id;
+        obj8[4] = message.author.id;
+        ({ type: obj26[5], channel_id: obj26[6] } = message);
+        obj7 = obj8;
       }
-      obj8.commandNameOnClick = obj9;
-      formatToPartsResult = intl2.formatToParts(tmp16(1236).t.SSrolr, obj8);
+      obj6.commandNameOnClick = obj7;
+      formatToPartsResult = intl2.formatToParts(tmp16(1233).t.SSrolr, obj6);
       if (null != tmp24) {
-        const intl3 = tmp16(1236).intl;
-        const obj11 = {};
-        const merged4 = Object.assign(obj);
-        obj11.commandName = result4;
-        obj11.commandNameOnClick = {};
-        obj11.targetUsername = tmp16(4746).getUserAuthor(tmp24, channel).nick;
+        const intl3 = tmp16(1233).intl;
+        const obj9 = {};
+        const merged3 = Object.assign(obj);
+        obj9.commandName = result4;
+        obj9.commandNameOnClick = {};
+        obj9.targetUsername = tmp16(4746).getUserAuthor(tmp24, channel).nick;
         let id2;
         if (tmp24 != null) {
           id2 = tmp24.id;
         }
-        const obj12 = { name: "targetUsernameOnClick", action: "bindUserMenu", userId: null, messageChannelId: null, linkColor: null, roleColor: null, roleColors: null, shouldShowRoleDot: null };
-        obj12[2] = id2;
-        obj12[3] = message.channel_id;
-        obj12[4] = tmp33;
+        const obj10 = { name: "targetUsernameOnClick", action: "bindUserMenu", userId: null, messageChannelId: null, linkColor: null, roleColor: null, roleColors: null, shouldShowRoleDot: null, fontId: null };
+        obj10[2] = id2;
+        obj10[3] = message.channel_id;
+        obj10[4] = tmp33;
         tmp51Result = tmp51(colorString2);
         if (tmp51Result == null) {
           tmp51Result = null;
         }
-        obj12[5] = tmp51Result;
-        obj12[6] = processColorStringsResult1;
+        obj10[5] = tmp51Result;
+        obj10[6] = processColorStringsResult1;
         if (tmp54) {
           tmp54 = null != colorString2;
         }
-        obj12[7] = tmp54;
-        if (null != displayNameFontIdForMobileUser1) {
-          const obj13 = { fontId: null };
-          obj13[0] = displayNameFontIdForMobileUser1;
-          let obj14 = obj13;
-        } else {
-          obj14 = {};
-        }
-        const merged5 = Object.assign(obj14);
-        obj11.targetUsernameOnClick = obj12;
-        intl3.formatToParts(tmp16(1236).t.mqKdCM, obj11);
+        obj10[7] = tmp54;
+        obj10[8] = displayNameFontIdForMobileUser1;
+        obj9.targetUsernameOnClick = obj10;
+        formatToPartsResult = intl3.formatToParts(tmp16(1233).t.mqKdCM, obj9);
         const tmp16Result9 = tmp16(4746);
-        const tmp72 = colorString2;
+        const tmp69 = colorString2;
       }
       const tmp16Result6 = useNullableMessageAuthor;
       const tmp52 = colorString;
@@ -246,7 +232,7 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
       if (channel == null) {
         channel = channel.getChannel(message.getChannelId());
       }
-      let obj15 = dependencyMap;
+      let obj11 = dependencyMap;
       obj3 = useNullableMessageAuthor;
       const guildMemberAvatar = obj3.getUserAuthor(user1, channel).guildMemberAvatar;
       let guildId1;
@@ -259,11 +245,11 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
         const uri = tmp10(avatarSource).uri;
       }
       obj4 = getAvatarURLDefault;
-      obj15 = { userId: null, avatar: null, guildId: null };
-      obj15[0] = user1.id;
-      obj15[1] = guildMemberAvatar;
-      obj15[2] = guildId1;
-      avatarSource = obj4.getGuildMemberAvatarSource(obj15, user1);
+      obj11 = { userId: null, avatar: null, guildId: null };
+      obj11[0] = user1.id;
+      obj11[1] = guildMemberAvatar;
+      obj11[2] = guildId1;
+      avatarSource = obj4.getGuildMemberAvatarSource(obj11, user1);
       const tmp7 = require;
     }
   }

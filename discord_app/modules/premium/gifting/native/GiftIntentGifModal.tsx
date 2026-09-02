@@ -1,13 +1,13 @@
-// === Module 11389: _sendGiftIntentGif ===
+// === Module 11612: _sendGiftIntentGif ===
 
-// Module 11389 (_sendGiftIntentGif)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 11612 (_sendGiftIntentGif)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "ensureGuildLoaded" /* 1387 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import closure_7 from "ensureGuildLoaded" /* 1386 */;
+import { AnalyticEvents } from "ME" /* 673 */;
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4471 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -56,7 +56,7 @@ function _sendGiftIntentGif() {
               c4 = undefined;
               url = 1;
               c4 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else {
             if (1 === tmp5) {

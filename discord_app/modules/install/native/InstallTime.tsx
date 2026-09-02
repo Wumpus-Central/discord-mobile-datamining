@@ -1,10 +1,10 @@
-// === Module 13351: getFirstInstallTimeMillis ===
+// === Module 13575: getFirstInstallTimeMillis ===
 
-// Module 13351 (getFirstInstallTimeMillis)
-import Storage4 from "Storage" /* 595 */;
+// Module 13575 (getFirstInstallTimeMillis)
+import Storage4 from "Storage" /* 592 */;
 import sleep from "sleep" /* 4558 */;
-import enforcingDefault from "enforcing" /* 13352 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
+import enforcingDefault from "enforcing" /* 13576 */;
+import closure_3 from "fetchFingerprint" /* 1215 */;
 
 require = arg1;
 function getFirstInstallTimeMillis(arg0) {
@@ -31,7 +31,7 @@ function getFirstInstallTimeMillis(arg0) {
     if (authenticated.isAuthenticated()) {
       const _Date2 = Date;
       const timestamp = Date.now();
-      const Storage3 = tmp4(595).Storage;
+      const Storage3 = tmp4(592).Storage;
       const result = Storage3.set(str, timestamp);
       num2 = timestamp;
     }
@@ -41,7 +41,7 @@ function getFirstInstallTimeMillis(arg0) {
       const _Date = Date;
       num2 = Date.now();
     }
-    const Storage2 = tmp4(595).Storage;
+    const Storage2 = tmp4(592).Storage;
     const result1 = Storage2.set(str, num2);
   }
 }

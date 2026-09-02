@@ -1,11 +1,11 @@
-// === Module 15404: route ===
+// === Module 15632: route ===
 
-// Module 15404 (route)
+// Module 15632 (route)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ShopIcon from "ShopIcon" /* 11709 */;
-import createToggle from "createToggle" /* 11068 */;
+import ME from "ME" /* 673 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import ShopIcon from "ShopIcon" /* 11932 */;
+import createToggle from "createToggle" /* 11288 */;
 
 obj = {
   useTitle() {
@@ -17,11 +17,11 @@ obj = {
   screen: obj,
   usePreNavigationAction() {
     return () => {
-      let obj = callback(7286);
+      let obj = callback(7295);
       obj = { analyticsLocations: null, analyticsSource: null };
-      const items = [callback2(5973).USER_SETTINGS];
+      const items = [callback2(5981).USER_SETTINGS];
       obj[0] = items;
-      obj[1] = callback2(5973).USER_SETTINGS;
+      obj[1] = callback2(5981).USER_SETTINGS;
       const result = obj.openCollectiblesShopMobile(obj);
       return false;
     };
@@ -30,7 +30,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.COLLECTIBLES_SHOP,
   getComponent() {
-    return require(15405) /* CollectiblesShopScreen */.default;
+    return require(15633) /* CollectiblesShopScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

@@ -1,7 +1,7 @@
-// === Module 14651: BountiesAutoScrollOverlayNuxGradient ===
+// === Module 14876: BountiesAutoScrollOverlayNuxGradient ===
 
-// Module 14651 (BountiesAutoScrollOverlayNuxGradient)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 14876 (BountiesAutoScrollOverlayNuxGradient)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;

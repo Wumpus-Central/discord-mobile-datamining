@@ -1,12 +1,12 @@
-// === Module 9539: usePipVideoOrStream ===
+// === Module 9552: usePipVideoOrStream ===
 
-// Module 9539 (usePipVideoOrStream)
-import closure_3 from "participantFromServer" /* 1386 */;
+// Module 9552 (usePipVideoOrStream)
+import closure_3 from "participantFromServer" /* 1385 */;
 import closure_4 from "getParticipants" /* 4494 */;
-import closure_5 from "updateSpeaker" /* 9540 */;
+import closure_5 from "updateSpeaker" /* 9553 */;
 import closure_6 from "reset" /* 4500 */;
-import closure_7 from "fetchFingerprint" /* 1218 */;
-import closure_8 from "ensureGuildLoaded" /* 1387 */;
+import closure_7 from "fetchFingerprint" /* 1215 */;
+import closure_8 from "ensureGuildLoaded" /* 1386 */;
 import closure_9 from "_detectH265HardwareDecode" /* 4529 */;
 import closure_10 from "createRTCConnection" /* 4554 */;
 import ParticipantTypes from "ParticipantTypes" /* 4499 */;
@@ -19,7 +19,7 @@ export default function usePipVideoOrStream(arg0) {
   const _require = arg0;
   const items = [closure_4, closure_5, closure_6];
   const items1 = [arg0];
-  return _require(589).useStateFromStores(items, () => {
+  return _require(586).useStateFromStores(items, () => {
     if (null != c0) {
       let videoParticipants = closure_1_4.getVideoParticipants(tmp);
     } else {

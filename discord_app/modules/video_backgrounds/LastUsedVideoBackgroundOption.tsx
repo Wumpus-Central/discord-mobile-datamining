@@ -1,11 +1,11 @@
-// === Module 9791: getLastUsedVideoBackgroundOption ===
+// === Module 9813: getLastUsedVideoBackgroundOption ===
 
-// Module 9791 (getLastUsedVideoBackgroundOption)
+// Module 9813 (getLastUsedVideoBackgroundOption)
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4139 */;
-import isAnimatedBackgroundOption from "isAnimatedBackgroundOption" /* 9788 */;
+import isAnimatedBackgroundOption from "isAnimatedBackgroundOption" /* 9810 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import closure_4 from "handleConnectionClosedOrResumed" /* 1339 */;
+import closure_5 from "mergeGuildAvatar" /* 1921 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/video_backgrounds/LastUsedVideoBackgroundOption.tsx");
@@ -35,10 +35,10 @@ export const getLastUsedVideoBackgroundOption = function getLastUsedVideoBackgro
 };
 export const useLastUsedVideoBackgroundOption = function useLastUsedVideoBackgroundOption() {
   const items = [closure_4];
-  const stateFromStores = stateFromStores1(589).useStateFromStores(items, () => settings.settings);
-  let obj = stateFromStores1(589);
+  const stateFromStores = stateFromStores1(586).useStateFromStores(items, () => settings.settings);
+  let obj = stateFromStores1(586);
   const items1 = [closure_5];
-  stateFromStores1 = stateFromStores1(589).useStateFromStores(items1, () => currentUser.getCurrentUser());
+  stateFromStores1 = stateFromStores1(586).useStateFromStores(items1, () => currentUser.getCurrentUser());
   const voiceAndVideo = stateFromStores.voiceAndVideo;
   let prop;
   if (voiceAndVideo != null) {

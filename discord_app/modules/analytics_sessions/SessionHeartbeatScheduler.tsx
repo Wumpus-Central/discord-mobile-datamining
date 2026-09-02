@@ -1,24 +1,24 @@
-// === Module 7207: trackHeartbeat ===
+// === Module 7216: trackHeartbeat ===
 
-// Module 7207 (trackHeartbeat)
+// Module 7216 (trackHeartbeat)
 import timestampDefault from "timestamp" /* 3 */;
-import initializeDefault from "initialize" /* 589 */;
-import Storage2 from "Storage" /* 595 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import _modDef1208 from "module_1208" /* 1208 */;
-import isForegrounded2 from "isForegrounded" /* 7208 */;
-import isActiveUserRoute2 from "isActiveUserRoute" /* 7209 */;
-import monotonicNowMs from "monotonicNowMs" /* 7210 */;
-import result2 from "result" /* 7217 */;
+import initializeDefault from "initialize" /* 586 */;
+import Storage2 from "Storage" /* 592 */;
+import setDefault from "set" /* 684 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import _modDef1205 from "module_1205" /* 1205 */;
+import isForegrounded2 from "isForegrounded" /* 7217 */;
+import isActiveUserRoute2 from "isActiveUserRoute" /* 7218 */;
+import monotonicNowMs from "monotonicNowMs" /* 7219 */;
+import result2 from "result" /* 7226 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_handleConnectionOpen" /* 5221 */;
-import importDefaultResult from "fetchFingerprint" /* 1218 */;
-import closure_6 from "checkIdleAFK" /* 5354 */;
+import closure_4 from "_handleConnectionOpen" /* 5229 */;
+import importDefaultResult from "fetchFingerprint" /* 1215 */;
+import closure_6 from "checkIdleAFK" /* 5362 */;
 import importDefaultResult1 from "createRTCConnection" /* 4554 */;
-import ME from "ME" /* 676 */;
-import isForegrounded from "isForegrounded" /* 7208 */;
-import isActiveUserRoute from "isActiveUserRoute" /* 7209 */;
+import ME from "ME" /* 673 */;
+import isForegrounded from "isForegrounded" /* 7217 */;
+import isActiveUserRoute from "isActiveUserRoute" /* 7218 */;
 
 require = arg1;
 function trackHeartbeat() {
@@ -91,7 +91,7 @@ function _trackHeartbeat() {
           dependencyMap = Date.now();
           let track = null;
           if (null != lib) {
-            obj1 = lib(1208);
+            obj1 = lib(1205);
             const obj3 = { category: null, message: "Tracking Heartbeat", data: null };
             obj3[0] = closure_14;
             const obj4 = { initialized: null };
@@ -100,7 +100,7 @@ function _trackHeartbeat() {
             obj1.addBreadcrumb(obj3);
             let obj5 = { client_heartbeat_initialization_timestamp: null, client_heartbeat_version: 31 };
             obj5[0] = lib.createdAtTimestamp;
-            obj5 = num2(7214);
+            obj5 = num2(7223);
             const merged = Object.assign(obj5.getClientHeartbeatPiggybackProperties());
             const idleSince = store.getIdleSince();
             num2 = idleSince;
@@ -114,15 +114,15 @@ function _trackHeartbeat() {
             obj6[4] = store.getSystemLocked();
             const merged1 = Object.assign(obj6);
             c4 = obj5;
-            tmp40 = lib(698);
+            tmp40 = lib(695);
             track = tmp40.track;
             track(constants.CLIENT_HEARTBEAT, c4);
-            closure_19 = num2(7210).monotonicNowMs();
-            const obj8 = num2(7210);
-            num2 = num2(7211).drainClickstream();
-            const obj9 = num2(7211);
+            closure_19 = num2(7219).monotonicNowMs();
+            const obj8 = num2(7219);
+            num2 = num2(7220).drainClickstream();
+            const obj9 = num2(7220);
           } else {
-            obj = lib(1208);
+            obj = lib(1205);
             const _Error = Error;
             const _HermesInternal = HermesInternal;
             obj.captureException(Error("Null session when tracking session heartbeat. Waited " + dependencyMap - num2 + "ms"));
@@ -157,7 +157,7 @@ function isActive() {
   return items.length > 0;
 }
 function scheduleHeartbeatTracking() {
-  let obj = _modDef1208;
+  let obj = _modDef1205;
   obj = { message: `Heartbeat Track State Parameters Changed. Foregrounded ${closure_22}, Connection State: ${closure_21}` };
   obj.addBreadcrumb(obj);
   const items = [];
@@ -179,7 +179,7 @@ function scheduleHeartbeatTracking() {
       obj = { message: null };
       const _HermesInternal = HermesInternal;
       obj[0] = "Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: " + num / 1000 + " seconds. Scheduling Heartbeat";
-      _modDef1208.addBreadcrumb(obj);
+      _modDef1205.addBreadcrumb(obj);
       obj1 = { type: "timeout", id: null };
       const _setTimeout = setTimeout;
       obj1[1] = setTimeout(() => {
@@ -192,7 +192,7 @@ function scheduleHeartbeatTracking() {
         };
       }, num);
       _null = obj1;
-      const tmpResult = _modDef1208;
+      const tmpResult = _modDef1205;
     }
   } else if (null == _null) {
     // // eliminated: always false
@@ -235,7 +235,7 @@ function validateClientSession(version) {
     let tmp4 = version;
     if (version.version !== result2.CLIENT_SESSION_STORAGE_VERSION) {
       const _HermesInternal = HermesInternal;
-      logger.warn("Throwing away client session with invalid version: " + version.version + ", expected " + tmp2(7217).CLIENT_SESSION_STORAGE_VERSION);
+      logger.warn("Throwing away client session with invalid version: " + version.version + ", expected " + tmp2(7226).CLIENT_SESSION_STORAGE_VERSION);
       tmp4 = null;
     }
     tmp = tmp4;
@@ -399,121 +399,170 @@ function _getSession() {
     c7 = 0;
     c4 = 0;
     const iter = (function*() {
-      uuid = tmp3;
-      if (flag === undefined) {
-        flag = true;
-      }
-      yield "PX_16";
-      if (1 === tmp7) {
+      if (c7 === 2) {
+        c7 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
         if (arg0 === 1) {
-          c7 = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          c7 = 3;
-          obj1 = { value: null, done: true };
-          obj1[0] = arg1;
-          return obj1;
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
         } else {
-          uuid = null;
-          let tmp21 = null;
-          if ("loaded" === obj4.state) {
-            const session = obj4.session;
-            uuid = undefined;
-            if (session != null) {
-              uuid = session.uuid;
-            }
-            tmp21 = uuid;
-          }
-          uuid = tmp21;
-          let socket = 1;
-          if ("uninitialized" === obj4.state) {
-            let callback2 = closure_1_29;
-            let Storage = callback(closure_1_2[16]).Storage;
-            c6 = 3;
-            c7 = 1;
-            let obj2 = { value: null, done: false };
-            obj2[0] = Storage.getAfterRefresh(closure_1_13);
-            return obj2;
-          } else {
-            uuid = obj4.session;
-            socket = 0;
-          }
+          return { value: "HermesInternal", done: null };
         }
-      } else if (2 === tmp7) {
-        socket = 0;
-        socket = closure_5;
-        obj1 = callback2(uuid[11]);
-        obj1.captureException(socket);
-        const _Date = Date;
-        callback2 = Date.now();
-        if (callback3()) {
-          let isSessionExpiredResult = null == tmp30;
-          if (!isSessionExpiredResult) {
-            let obj3 = flag(uuid[17]);
-            isSessionExpiredResult = obj3.isSessionExpired(uuid);
-          }
-          if (isSessionExpiredResult) {
-            obj3 = { uuid: null, createdAtTimestamp: null, lastUsedTimestamp: null, version: null };
-            let obj5 = flag(uuid[21]);
-            obj3[0] = obj5.v4();
-            obj3[1] = callback2;
-            obj3[2] = callback2;
-            obj3[3] = flag(uuid[17]).CLIENT_SESSION_STORAGE_VERSION;
-            uuid = obj3;
-            c18 = 0;
-          }
-          uuid.lastUsedTimestamp = callback2;
-          (function maybeFlushSessionToStorage(c2) {
-            const monotonicNowMsResult = flag(_null[10]).monotonicNowMs();
-            if (monotonicNowMsResult - c18 >= closure_12) {
-              try {
-                const Storage = flag(_null[16]).Storage;
-                const result = Storage.set(closure_13, c2);
-                c18 = monotonicNowMsResult;
-              } catch (tmp9) {
-                callback(tmp2[11]).captureException(tmp9);
-                const obj2 = callback(tmp2[11]);
+      } else {
+        try {
+          c7 = 2;
+          if (0 === c6) {
+            if (arg0 === 1) {
+              c7 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c7 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              uuid = tmp3;
+              uuid = tmp7;
+              let flag;
+              if (flag === undefined) {
+                flag = true;
               }
+              let callback2;
+              uuid = undefined;
+              uuid = undefined;
+              c6 = 1;
+              c7 = 1;
+              return { value: "PX_16", done: true };
             }
-          })(uuid);
-        } else {
-          let isSessionExpiredResult1 = null != tmp30;
-          if (isSessionExpiredResult1) {
-            obj2 = flag(uuid[17]);
-            isSessionExpiredResult1 = obj2.isSessionExpired(uuid);
+          } else {
+            if (1 === tmp7) {
+              if (arg0 === 1) {
+                c7 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c7 = 3;
+                obj1 = { value: null, done: true };
+                obj1[0] = arg1;
+                return obj1;
+              } else {
+                uuid = null;
+                let tmp21 = null;
+                if ("loaded" === obj4.state) {
+                  const session = obj4.session;
+                  uuid = undefined;
+                  if (session != null) {
+                    uuid = session.uuid;
+                  }
+                  tmp21 = uuid;
+                }
+                uuid = tmp21;
+                let socket = 1;
+                if ("uninitialized" === obj4.state) {
+                  callback2 = closure_1_29;
+                  let Storage = callback(closure_1_2[16]).Storage;
+                  c6 = 3;
+                  c7 = 1;
+                  let obj2 = { value: null, done: false };
+                  obj2[0] = Storage.getAfterRefresh(closure_1_13);
+                  return obj2;
+                } else {
+                  uuid = obj4.session;
+                  socket = 0;
+                }
+              }
+            } else if (2 === tmp7) {
+              socket = 0;
+              socket = closure_5;
+              obj1 = callback2(uuid[11]);
+              obj1.captureException(socket);
+              const _Date = Date;
+              callback2 = Date.now();
+              if (callback3()) {
+                let isSessionExpiredResult = null == tmp30;
+                if (!isSessionExpiredResult) {
+                  let obj3 = flag(uuid[17]);
+                  isSessionExpiredResult = obj3.isSessionExpired(uuid);
+                }
+                if (isSessionExpiredResult) {
+                  obj3 = { uuid: null, createdAtTimestamp: null, lastUsedTimestamp: null, version: null };
+                  let obj5 = flag(uuid[21]);
+                  obj3[0] = obj5.v4();
+                  obj3[1] = callback2;
+                  obj3[2] = callback2;
+                  obj3[3] = flag(uuid[17]).CLIENT_SESSION_STORAGE_VERSION;
+                  uuid = obj3;
+                  c18 = 0;
+                }
+                uuid.lastUsedTimestamp = callback2;
+                (function maybeFlushSessionToStorage(c2) {
+                  const monotonicNowMsResult = flag(_null[10]).monotonicNowMs();
+                  if (monotonicNowMsResult - c18 >= closure_12) {
+                    try {
+                      const Storage = flag(_null[16]).Storage;
+                      const result = Storage.set(closure_13, c2);
+                      c18 = monotonicNowMsResult;
+                    } catch (tmp9) {
+                      callback(tmp2[11]).captureException(tmp9);
+                      const obj2 = callback(tmp2[11]);
+                    }
+                  }
+                })(uuid);
+              } else {
+                let isSessionExpiredResult1 = null != tmp30;
+                if (isSessionExpiredResult1) {
+                  obj2 = flag(uuid[17]);
+                  isSessionExpiredResult1 = obj2.isSessionExpired(uuid);
+                }
+                if (isSessionExpiredResult1) {
+                  uuid = null;
+                }
+              }
+              obj4 = { state: "loaded", session: null };
+              obj4[1] = closure_1_2;
+              let tmp61 = null != closure_1_2;
+              if (tmp61) {
+                tmp61 = uuid !== uuid.uuid;
+              }
+              if (tmp61) {
+                tmp61 = flag;
+              }
+              if (tmp61) {
+                socket = socket.getSocket();
+                if (socket != null) {
+                  ({ createdAtTimestamp, uuid } = uuid);
+                  let result = socket.handleUpdateTimeSpentSessionId(createdAtTimestamp, uuid, callback(closure_1_2[18]).clientLaunchId);
+                }
+              }
+              c7 = 3;
+              obj5 = { value: null, done: true };
+              obj5[0] = closure_1_2;
+              return obj5;
+            } else if (arg0 === 1) {
+              c7 = 3;
+              throw arg1;
+            } else if (arg0 !== 2) {
+              callback2(arg1);
+            }
+            socket = 0;
+            c7 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
           }
-          if (isSessionExpiredResult1) {
-            uuid = null;
+        } catch (tmp81) {
+          closure_5 = tmp81;
+          if (tmp4 === socket) {
+            c7 = tmp2;
+            throw tmp81;
+          } else {
+            c6 = tmp;
           }
         }
-        obj4 = { state: "loaded", session: null };
-        obj4[1] = closure_1_2;
-        let tmp61 = null != closure_1_2;
-        if (tmp61) {
-          tmp61 = uuid !== uuid.uuid;
-        }
-        if (tmp61) {
-          tmp61 = flag;
-        }
-        if (tmp61) {
-          socket = socket.getSocket();
-          if (socket != null) {
-            ({ createdAtTimestamp, uuid } = uuid);
-            let result = socket.handleUpdateTimeSpentSessionId(createdAtTimestamp, uuid, callback(closure_1_2[18]).clientLaunchId);
-          }
-        }
-        c7 = 3;
-        obj5 = { value: null, done: true };
-        obj5[0] = closure_1_2;
-        return obj5;
-      } else if (arg0 === 1) {
-        c7 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        callback2(arg1);
       }
-      socket = 0;
-      return arg1;
     })();
     iter.next();
     return iter;
@@ -547,7 +596,7 @@ const tmp3 = new timestampDefault("SessionHeartbeatScheduler");
 let result = require("set").fileFinishedImporting("modules/analytics_sessions/SessionHeartbeatScheduler.tsx");
 
 export const initSessionHeartbeatScheduler = function initSessionHeartbeatScheduler() {
-  let obj = _modDef1208;
+  let obj = _modDef1205;
   obj.addBreadcrumb({ message: "Initializing SessionHeartbeatScheduler" });
   importDefaultResult1.addChangeListener(handleRTCStateChange);
   importDefaultResult.addChangeListener(handleAuthenticationChange);
@@ -566,15 +615,15 @@ export const initSessionHeartbeatScheduler = function initSessionHeartbeatSchedu
     obj[0] = setInterval(() => {
       let result = null != closure_24;
       if (result) {
-        result = callback(7215).shouldLogClientHeartbeatSkipped();
-        obj = callback(7215);
+        result = callback(7224).shouldLogClientHeartbeatSkipped();
+        obj = callback(7224);
       }
       if (result) {
         if (obj2.monotonicNowMs() - closure_19 > closure_11) {
-          callback2(698).track(constants.CLIENT_HEARTBEAT_SKIPPED, { client_heartbeat_version: 31 });
-          const obj3 = callback2(698);
+          callback2(695).track(constants.CLIENT_HEARTBEAT_SKIPPED, { client_heartbeat_version: 31 });
+          const obj3 = callback2(695);
         }
-        obj2 = callback(7210);
+        obj2 = callback(7219);
       }
     }, closure_11);
   }
@@ -589,9 +638,9 @@ export const getActiveSessionUnsafe = function getActiveSessionUnsafe() {
     let tmp7 = null;
     if (null != value) {
       let tmp8 = value;
-      if (value.version !== tmp2(7217).CLIENT_SESSION_STORAGE_VERSION) {
+      if (value.version !== tmp2(7226).CLIENT_SESSION_STORAGE_VERSION) {
         const _HermesInternal = HermesInternal;
-        logger.warn("Throwing away client session with invalid version: " + value.version + ", expected " + tmp2(7217).CLIENT_SESSION_STORAGE_VERSION);
+        logger.warn("Throwing away client session with invalid version: " + value.version + ", expected " + tmp2(7226).CLIENT_SESSION_STORAGE_VERSION);
         tmp8 = null;
       }
       tmp7 = tmp8;

@@ -1,9 +1,9 @@
-// === Module 10743: useCollectiblesExternalGatewayFacet ===
+// === Module 10964: useCollectiblesExternalGatewayFacet ===
 
-// Module 10743 (useCollectiblesExternalGatewayFacet)
+// Module 10964 (useCollectiblesExternalGatewayFacet)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "mergeGuildAvatar" /* 1921 */;
 
 const useMemo = noop.useMemo;
 const result = set.fileFinishedImporting("modules/collectibles/native/hooks/useCollectiblesExternalGatewayFacet.android.tsx");

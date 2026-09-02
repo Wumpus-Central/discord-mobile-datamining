@@ -1,9 +1,9 @@
-// === Module 1988: extractColorStringsFromServerColors ===
+// === Module 1987: extractColorStringsFromServerColors ===
 
-// Module 1988 (extractColorStringsFromServerColors)
+// Module 1987 (extractColorStringsFromServerColors)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import int2hslRaw from "int2hslRaw" /* 688 */;
+import ME from "ME" /* 673 */;
+import int2hslRaw from "int2hslRaw" /* 685 */;
 
 const DEFAULT_ROLE_COLOR_HEX = ME.DEFAULT_ROLE_COLOR_HEX;
 const result = set.fileFinishedImporting("modules/premium/enhanced_role_colors/EnhancedRoleColorUtils.tsx");

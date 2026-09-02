@@ -1,15 +1,15 @@
-// === Module 17216: GuildSettingsRoleEditPermission ===
+// === Module 17452: GuildSettingsRoleEditPermission ===
 
-// Module 17216 (GuildSettingsRoleEditPermission)
-import ThemesDefault from "Themes" /* 712 */;
-import applyOverwritesAll from "applyOverwrites" /* 4126 */;
+// Module 17452 (GuildSettingsRoleEditPermission)
+import ThemesDefault from "Themes" /* 709 */;
+import applyOverwritesAll from "applyOverwrites" /* 4125 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { isGuildOwner } from "GuildNSFWContentLevel" /* 1430 */;
-import closure_10 from "getUncachedChannelPermissions" /* 4121 */;
-import closure_11 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import { isGuildOwner } from "GuildNSFWContentLevel" /* 1429 */;
+import closure_10 from "getUncachedChannelPermissions" /* 4120 */;
+import closure_11 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -74,7 +74,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
   }
   if (tmp18Result) {
     obj = { variant: "text-sm/medium", color: "text-muted", children: null };
-    const intl = guild(1236).intl;
+    const intl = guild(1233).intl;
     obj1 = { onTemplateOpen: null };
     obj1[0] = function onTemplateOpen() {
       first.dismiss();
@@ -82,12 +82,12 @@ export default function GuildSettingsRoleEditPermission(guild) {
       obj = { permissionsEdited: c9, onPermissionsChanged: closure_3, guildId: guild.id };
       obj.openLazy(guild(closure_1_3[16])(closure_1_3[15], closure_1_3.paths), "role-permission-templates-" + guild.id + "-" + role.id, obj);
     };
-    obj[2] = intl.format(guild(1236).t.ZhSOBy, obj1);
+    obj[2] = intl.format(guild(1233).t.ZhSOBy, obj1);
     tmp18Result = tmp18(guild(4474).Text, obj);
   }
   tmp18Result = tmp18(tmp19, { children: tmp18Result });
   canResult = applyOverwritesAll.can(obj);
-  const guildPermissionSpec = role(16410).generateGuildPermissionSpec(guild);
+  const guildPermissionSpec = role(16645).generateGuildPermissionSpec(guild);
   const mapped = guildPermissionSpec.map((permissions) => {
     const obj = {};
     const merged = Object.assign(permissions);
@@ -100,12 +100,12 @@ export default function GuildSettingsRoleEditPermission(guild) {
   });
   const found = mapped.filter((permissions) => permissions.permissions.length > 0);
   const mapped1 = found.map((title) => ({ title: title.title, data: title.permissions }));
-  const children = [closure_14(role(17214), { role }), , , ];
-  const tmp14Result = role(16410);
+  const children = [closure_14(role(17450), { role }), , , ];
+  const tmp14Result = role(16645);
   const tmp24 = mapped1.length > 0;
   const tmp25 = closure_16;
   const tmp26 = closure_15;
-  children[1] = closure_14(closure_6, { children: closure_14(guild(6221).SearchField, obj3) });
+  children[1] = closure_14(closure_6, { children: closure_14(guild(6230).SearchField, obj3) });
   children[2] = tmp18Result;
   if (tmp24) {
     const obj4 = { sections: null, stickySectionHeadersEnabled: false, renderItem: null, renderSectionHeader: null, SectionSeparatorComponent: null, ItemSeparatorComponent: null, keyExtractor: null, keyboardDismissMode: "on-drag", contentContainerStyle: null };
@@ -178,13 +178,13 @@ export default function GuildSettingsRoleEditPermission(guild) {
     let tmp18Result1 = tmp18(closure_8, obj4);
   } else {
     let obj5 = { Illustration: null, style: null, bodyStyle: null, body: null };
-    obj5[0] = tmp27(9721).NoResultsAlt;
+    obj5[0] = tmp27(9743).NoResultsAlt;
     ({ emptyState: obj10[1], emptyStateText: obj10[2] } = tmp);
-    const intl2 = tmp27(1236).intl;
+    const intl2 = tmp27(1233).intl;
     const obj6 = { query: null };
     obj6[0] = first;
-    obj5[3] = intl2.format(tmp27(1236).t.Psh5OO, obj6);
-    tmp18Result1 = tmp18(tmp27(1297).EmptyState, obj5);
+    obj5[3] = intl2.format(tmp27(1233).t.Psh5OO, obj6);
+    tmp18Result1 = tmp18(tmp27(1296).EmptyState, obj5);
   }
   children[3] = tmp18Result1;
   return tmp25(tmp26, { children });

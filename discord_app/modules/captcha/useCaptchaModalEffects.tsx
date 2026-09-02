@@ -1,8 +1,8 @@
-// === Module 16866: useCaptchaModalEffects ===
+// === Module 17102: useCaptchaModalEffects ===
 
-// Module 16866 (useCaptchaModalEffects)
+// Module 17102 (useCaptchaModalEffects)
 import closure_3 from "noop" /* 19 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import { AnalyticEvents } from "ME" /* 673 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/captcha/useCaptchaModalEffects.tsx");

@@ -1,6 +1,6 @@
-// === Module 7336: CollectiblesMarketingReleaseType ===
+// === Module 7345: CollectiblesMarketingReleaseType ===
 
-// Module 7336 (CollectiblesMarketingReleaseType)
+// Module 7345 (CollectiblesMarketingReleaseType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/CollectiblesMarketingReleaseType.tsx");

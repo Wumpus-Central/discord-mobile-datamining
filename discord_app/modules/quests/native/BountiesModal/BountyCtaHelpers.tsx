@@ -1,8 +1,8 @@
-// === Module 14643: getBountyCtaInfo ===
+// === Module 14868: getBountyCtaInfo ===
 
-// Module 14643 (getBountyCtaInfo)
+// Module 14868 (getBountyCtaInfo)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 
 const result = set.fileFinishedImporting("modules/quests/native/BountiesModal/BountyCtaHelpers.tsx");
 

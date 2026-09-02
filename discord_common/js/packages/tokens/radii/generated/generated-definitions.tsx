@@ -1,6 +1,6 @@
-// === Module 806: Radius ===
+// === Module 803: Radius ===
 
-// Module 806 (Radius)
+// Module 803 (Radius)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/tokens/radii/generated/generated-definitions.tsx");

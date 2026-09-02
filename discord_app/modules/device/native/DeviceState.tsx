@@ -1,6 +1,6 @@
-// === Module 7495: _getDeviceState ===
+// === Module 7505: _getDeviceState ===
 
-// Module 7495 (_getDeviceState)
+// Module 7505 (_getDeviceState)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
@@ -50,7 +50,7 @@ function _getDeviceState() {
               fallback = obj1.fallback;
               c5 = 1;
               c6 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp8) {
             if (arg0 === 1) {

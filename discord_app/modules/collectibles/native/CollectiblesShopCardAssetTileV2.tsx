@@ -1,25 +1,25 @@
-// === Module 12622: PurchasedAssetOverlay ===
+// === Module 12846: PurchasedAssetOverlay ===
 
-// Module 12622 (PurchasedAssetOverlay)
-import ThemesDefault from "Themes" /* 712 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1950 */;
+// Module 12846 (PurchasedAssetOverlay)
+import ThemesDefault from "Themes" /* 709 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
 import map from "map" /* 4197 */;
 import hexToRgba from "hexToRgba" /* 4326 */;
-import LockIcon from "LockIcon" /* 5044 */;
-import preloadDefault from "preload" /* 5493 */;
-import getProductOrbPrice from "getProductOrbPrice" /* 7298 */;
-import BundleStaticPreviewContentDefault from "BundleStaticPreviewContent" /* 8506 */;
-import ProfileEffectSampleDefault from "ProfileEffectSample" /* 8508 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8519 */;
-import useDefaultVariantIndex from "useDefaultVariantIndex" /* 8888 */;
-import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9860 */;
-import filterLayerDefault from "filterLayer" /* 10749 */;
-import metadataDefault from "metadata" /* 10752 */;
-import NameplateCardPreviewDefault from "NameplateCardPreview" /* 10782 */;
+import LockIcon from "LockIcon" /* 5048 */;
+import preloadDefault from "preload" /* 5501 */;
+import getProductOrbPrice from "getProductOrbPrice" /* 7307 */;
+import BundleStaticPreviewContentDefault from "BundleStaticPreviewContent" /* 8519 */;
+import ProfileEffectSampleDefault from "ProfileEffectSample" /* 8521 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8532 */;
+import useDefaultVariantIndex from "useDefaultVariantIndex" /* 8903 */;
+import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9882 */;
+import filterLayerDefault from "filterLayer" /* 10969 */;
+import metadataDefault from "metadata" /* 10972 */;
+import NameplateCardPreviewDefault from "NameplateCardPreview" /* 11002 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { EXTERNAL_PRODUCT_SKU_IDS } from "items" /* 678 */;
+import { EXTERNAL_PRODUCT_SKU_IDS } from "items" /* 675 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -43,7 +43,7 @@ function ProductPreview(arg0) {
   let obj = getProductOrbPrice;
   const productType = obj.getProductType(product);
   if (productType !== CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT) {
-    if (productType !== tmp2(1950).CollectiblesItemType.PROFILE_FRAME) {
+    if (productType !== tmp2(1949).CollectiblesItemType.PROFILE_FRAME) {
       let str = "75%";
     }
     const items = [tmp.overlayContainer, , ];
@@ -73,7 +73,7 @@ function ProductPreviewInner(arg0) {
   ({ product, cardWidth } = arg0);
   ({ disableBundleStaticBackground, muteBundleStaticBackground } = arg0);
   const tmp = callback3();
-  let obj = cardWidth(8493);
+  let obj = cardWidth(8506);
   const shopProductItems = obj.useShopProductItems(product);
   const items = [cardWidth];
   ({ firstProfileEffect, firstAvatarDecoration, firstNameplate } = shopProductItems);
@@ -84,7 +84,7 @@ function ProductPreviewInner(arg0) {
     }
     return { width: COLLECTIBLES_SHOP_CARD_WIDTH, height: cardWidth(closure_1_2[5]).COLLECTIBLES_SHOP_CARD_HEIGHT };
   }, items);
-  if (product.type === cardWidth(1950).CollectiblesItemType.BUNDLE) {
+  if (product.type === cardWidth(1949).CollectiblesItemType.BUNDLE) {
     obj = { deco: null, pfx: null, nameplate: null, size: "small", previewAssets: null, disableStaticBackground: null, mutedStaticBackground: null, targetSize: null };
     obj[0] = firstAvatarDecoration;
     obj[1] = firstProfileEffect;
@@ -102,41 +102,41 @@ function ProductPreviewInner(arg0) {
     obj[1] = tmp.externalProductImage;
     return callback2(preloadDefault, obj);
   } else {
-    const ALL = tmp2(679).FractionalPremiumSKUsSets.ALL;
+    const ALL = tmp2(676).FractionalPremiumSKUsSets.ALL;
     if (ALL.has(product.skuId)) {
       const obj2 = { skuId: null, width: null, height: null };
       obj2[0] = product.skuId;
-      obj2[1] = tmp2(10751).FRACTIONAL_NITRO_COIN_SIZE.CARD;
-      obj2[2] = tmp2(10751).FRACTIONAL_NITRO_COIN_SIZE.CARD;
-      return callback2(tmp2(10751).FractionalNitroCoinIllustration, obj2);
+      obj2[1] = tmp2(10971).FRACTIONAL_NITRO_COIN_SIZE.CARD;
+      obj2[2] = tmp2(10971).FRACTIONAL_NITRO_COIN_SIZE.CARD;
+      return callback2(tmp2(10971).FractionalNitroCoinIllustration, obj2);
     } else {
       const first = callback(product.items, 1)[0];
       let type;
       if (first != null) {
         type = first.type;
       }
-      if (tmp2(1950).CollectiblesItemType.AVATAR_DECORATION === type) {
+      if (tmp2(1949).CollectiblesItemType.AVATAR_DECORATION === type) {
         const obj3 = { item: null, size: 100 };
         obj3[0] = first;
         return callback2(AvatarDecorationSampleV2Default, obj3);
-      } else if (tmp2(1950).CollectiblesItemType.PROFILE_EFFECT === type) {
+      } else if (tmp2(1949).CollectiblesItemType.PROFILE_EFFECT === type) {
         const obj4 = { style: null, children: null };
         obj4[0] = tmp.profileEffectContainer;
         const obj5 = { item: null, hideBackground: true };
         obj5[0] = first;
         obj4[1] = callback2(ProfileEffectSampleDefault, obj5);
         return callback2(closure_5, obj4);
-      } else if (tmp2(1950).CollectiblesItemType.PROFILE_FRAME === type) {
+      } else if (tmp2(1949).CollectiblesItemType.PROFILE_FRAME === type) {
         const obj6 = { style: null, children: null };
         obj6[0] = tmp.profileFrameContainer;
         const obj7 = { profileFrame: null, previewWidth: null, previewHeight: null, profileBackgroundColor: null };
         obj7[0] = first;
-        obj7[1] = tmp2(8887).COLLECTIBLES_SHOP_CARD_WIDTH - ThemesDefault.space.PX_32;
+        obj7[1] = tmp2(8902).COLLECTIBLES_SHOP_CARD_WIDTH - ThemesDefault.space.PX_32;
         obj7[2] = closure_9;
         obj7[3] = ThemesDefault.colors.BACKGROUND_BASE_LOW;
         obj6[1] = callback2(filterLayerDefault, obj7);
         return callback2(closure_5, obj6);
-      } else if (tmp2(1950).CollectiblesItemType.NAMEPLATE === type) {
+      } else if (tmp2(1949).CollectiblesItemType.NAMEPLATE === type) {
         const obj8 = { item: null };
         obj8[0] = first;
         return callback2(NameplateCardPreviewDefault, obj8);

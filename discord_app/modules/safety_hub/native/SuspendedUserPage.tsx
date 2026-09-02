@@ -1,16 +1,16 @@
-// === Module 16487: SuspendedUserSafetyHubPage ===
+// === Module 16722: SuspendedUserSafetyHubPage ===
 
-// Module 16487 (SuspendedUserSafetyHubPage)
+// Module 16722 (SuspendedUserSafetyHubPage)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Text from "Text" /* 4474 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5553 */;
-import registerAssetDefault from "registerAsset" /* 7764 */;
-import IconButton from "IconButton" /* 8006 */;
-import AutomatedUnderageAppealStatusDefault from "AutomatedUnderageAppealStatus" /* 14355 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5561 */;
+import registerAssetDefault from "registerAsset" /* 7773 */;
+import IconButton from "IconButton" /* 8015 */;
+import AutomatedUnderageAppealStatusDefault from "AutomatedUnderageAppealStatus" /* 14578 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { SafetyHubLinks } from "SafetyHubView" /* 8690 */;
+import { SafetyHubLinks } from "SafetyHubView" /* 8705 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -37,7 +37,7 @@ export default function SuspendedUserSafetyHubPage() {
   const intl = getSystemLocale.intl;
   obj1[1] = intl.string(getSystemLocale.t.cpT0Cq);
   obj1[2] = function onPress() {
-    callback(6052).closeSuspendedUser();
+    callback(6060).closeSuspendedUser();
   };
   obj1[3] = registerAssetDefault;
   const items = [callback(IconButton.IconButton, obj1), ];

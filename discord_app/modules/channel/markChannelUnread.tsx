@@ -1,7 +1,7 @@
-// === Module 10323: markChannelUnread ===
+// === Module 10345: markChannelUnread ===
 
-// Module 10323 (markChannelUnread)
-import _markUnreadDefault from "_markUnread" /* 10324 */;
+// Module 10345 (markChannelUnread)
+import _markUnreadDefault from "_markUnread" /* 10346 */;
 import closure_3 from "generateOldThreadCutoff" /* 4493 */;
 import { ReadState } from "generateOldThreadCutoff" /* 4493 */;
 
@@ -17,5 +17,5 @@ export default function markChannelUnread(arg0) {
 export const useCanMarkChannelUnread = function useCanMarkChannelUnread(channel) {
   const _require = channel;
   const items = [closure_3];
-  return _require(589).useStateFromStores(items, () => closure_1_3.canBeUnread(id.id) && closure_1_3.hasLastMessage(id.id) && !id.isCategory());
+  return _require(586).useStateFromStores(items, () => closure_1_3.canBeUnread(id.id) && closure_1_3.hasLastMessage(id.id) && !id.isCategory());
 };

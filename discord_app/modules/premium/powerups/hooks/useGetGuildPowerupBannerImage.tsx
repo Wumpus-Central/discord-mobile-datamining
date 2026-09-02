@@ -1,7 +1,7 @@
-// === Module 12084: useGetGuildPowerupBannerImage ===
+// === Module 12308: useGetGuildPowerupBannerImage ===
 
-// Module 12084 (useGetGuildPowerupBannerImage)
-import initialize from "initialize" /* 589 */;
+// Module 12308 (useGetGuildPowerupBannerImage)
+import initialize from "initialize" /* 586 */;
 import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 
 require = arg1;

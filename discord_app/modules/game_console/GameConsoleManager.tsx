@@ -1,17 +1,17 @@
-// === Module 16946: syncLocalState ===
+// === Module 17182: syncLocalState ===
 
-// Module 16946 (syncLocalState)
+// Module 17182 (syncLocalState)
 import timestampDefault from "timestamp" /* 3 */;
 import start from "start" /* 4362 */;
-import initializeDefault from "initialize" /* 5486 */;
+import initializeDefault from "initialize" /* 5494 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_4 from "fetchFingerprint" /* 1215 */;
 import closure_5 from "_detectH265HardwareDecode" /* 4529 */;
 import closure_6 from "createRTCConnection" /* 4554 */;
 import closure_7 from "handleUpdate" /* 4496 */;
 import closure_8 from "updateVoiceState" /* 4497 */;
 import closure_9 from "set" /* 4495 */;
-import XBOX_URL_BASE from "XBOX_URL_BASE" /* 9313 */;
+import XBOX_URL_BASE from "XBOX_URL_BASE" /* 9326 */;
 import { MediaEngineContextTypes } from "DesktopSources" /* 4542 */;
 
 require = arg1;
@@ -237,13 +237,13 @@ let prototype = function GameConsoleManager() {
   applyArgumentsResult.handleWaitForRemoteSession = function handleWaitForRemoteSession() {
     const awaitRemoteTimeout = applyArgumentsResult.awaitRemoteTimeout;
     awaitRemoteTimeout.start(60000, () => {
-      let obj = callback(9878);
+      let obj = callback(9900);
       obj.disconnectRemote();
       obj = { title: null, body: null };
-      const intl = callback(1236).intl;
-      obj[0] = intl.string(callback(1236).t.wGMxr3);
-      const intl2 = callback(1236).intl;
-      obj[1] = intl2.string(callback(1236).t.i5k8b5);
+      const intl = callback(1233).intl;
+      obj[0] = intl.string(callback(1233).t.wGMxr3);
+      const intl2 = callback(1233).intl;
+      obj[1] = intl2.string(callback(1233).t.i5k8b5);
       callback2(4857).show(obj);
     });
   };

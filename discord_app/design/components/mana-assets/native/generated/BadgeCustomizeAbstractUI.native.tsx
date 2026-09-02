@@ -1,10 +1,10 @@
-// === Module 6345: BadgeCustomizeAbstractUI ===
+// === Module 6354: BadgeCustomizeAbstractUI ===
 
-// Module 6345 (BadgeCustomizeAbstractUI)
+// Module 6354 (BadgeCustomizeAbstractUI)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5493 */;
-import metadataDefault from "metadata" /* 6346 */;
+import preloadDefault from "preload" /* 5501 */;
+import metadataDefault from "metadata" /* 6355 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/BadgeCustomizeAbstractUI.native.tsx");

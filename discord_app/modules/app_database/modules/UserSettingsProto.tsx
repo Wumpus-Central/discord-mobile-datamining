@@ -1,10 +1,10 @@
-// === Module 7234: getAll ===
+// === Module 7243: getAll ===
 
-// Module 7234 (getAll)
+// Module 7243 (getAll)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "handleConnectionClosedOrResumed" /* 1339 */;
+import closure_4 from "fetchFingerprint" /* 1215 */;
 import importDefaultResult from "apply" /* 12 */;
 
 let obj = importDefault;
@@ -34,7 +34,7 @@ class UserSettingsProto {
       if (databaseResult != null) {
         databaseResult.transaction((database) => {
           const state = closure_3.computeState();
-          obj = callback(1956);
+          obj = callback(1955);
           const result = obj.userSettingsTransaction(database);
           for (const key10014 in state) {
             let tmp3 = key10014;
@@ -53,7 +53,7 @@ class UserSettingsProto {
           if (num == null) {
             num = -1;
           }
-          const result1 = callback(1956).nonGuildVersionsTransaction(database);
+          const result1 = callback(1955).nonGuildVersionsTransaction(database);
           result1.put({ id: "user_settings_version", version: num });
         }, "handleUserSettingsProtoChange");
       }
@@ -204,7 +204,7 @@ obj.handleUserSettingsProtoChange = function handleUserSettingsProtoChange() {
   if (databaseResult != null) {
     databaseResult.transaction((database) => {
       const state = closure_3.computeState();
-      obj = callback(1956);
+      obj = callback(1955);
       const result = obj.userSettingsTransaction(database);
       for (const key10014 in state) {
         let tmp3 = key10014;
@@ -223,7 +223,7 @@ obj.handleUserSettingsProtoChange = function handleUserSettingsProtoChange() {
       if (num == null) {
         num = -1;
       }
-      const result1 = callback(1956).nonGuildVersionsTransaction(database);
+      const result1 = callback(1955).nonGuildVersionsTransaction(database);
       result1.put({ id: "user_settings_version", version: num });
     }, "handleUserSettingsProtoChange");
   }

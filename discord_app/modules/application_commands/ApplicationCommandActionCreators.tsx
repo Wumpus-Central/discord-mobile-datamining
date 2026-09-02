@@ -1,15 +1,15 @@
-// === Module 7522: setActiveCommand ===
+// === Module 7532: setActiveCommand ===
 
-// Module 7522 (setActiveCommand)
+// Module 7532 (setActiveCommand)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import _modDef38 from "module_38" /* 38 */;
-import sendRequest from "sendRequest" /* 530 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
-import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 7268 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "handleInit" /* 7523 */;
-import { Endpoints } from "ME" /* 676 */;
+import sendRequest from "sendRequest" /* 527 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
+import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 7277 */;
+import closure_3 from "fetchFingerprint" /* 1215 */;
+import closure_4 from "handleInit" /* 7533 */;
+import { Endpoints } from "ME" /* 673 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/application_commands/ApplicationCommandActionCreators.tsx");

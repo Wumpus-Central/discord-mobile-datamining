@@ -1,10 +1,10 @@
-// === Module 6499: EmojiCatStarsExample ===
+// === Module 6508: EmojiCatStarsExample ===
 
-// Module 6499 (EmojiCatStarsExample)
+// Module 6508 (EmojiCatStarsExample)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5493 */;
-import metadataDefault from "metadata" /* 6500 */;
+import preloadDefault from "preload" /* 5501 */;
+import metadataDefault from "metadata" /* 6509 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/EmojiCatStarsExample.native.tsx");

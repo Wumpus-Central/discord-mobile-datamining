@@ -1,20 +1,20 @@
-// === Module 1342: b64ToProto ===
+// === Module 1341: b64ToProto ===
 
-// Module 1342 (b64ToProto)
+// Module 1341 (b64ToProto)
 import applyDefault from "apply" /* 12 */;
-import create from "create" /* 1306 */;
-import _mod1307 from "module_1307" /* 1307 */;
-import create2 from "create" /* 1335 */;
-import create3 from "create" /* 1341 */;
+import create from "create" /* 1305 */;
+import _mod1306 from "module_1306" /* 1306 */;
+import create2 from "create" /* 1334 */;
+import create3 from "create" /* 1340 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import { ZERO_STRING_GUILD_ID } from "ME" /* 676 */;
+import { ZERO_STRING_GUILD_ID } from "ME" /* 673 */;
 
 require = arg1;
 function b64ToProto(ProtoClass, settings) {
   if (null == settings) {
     return null;
   } else {
-    _mod1307;
+    _mod1306;
     try {
       return ProtoClass.fromBinary(tmp4, obj);
     } catch (tmp7) {
@@ -28,7 +28,7 @@ function b64ToProto(ProtoClass, settings) {
 let obj = {
   readerFactory(buf) {
     const textDecoder = new TextDecoder("utf-8");
-    const binaryReader = new _mod1307.BinaryReader(buf, textDecoder);
+    const binaryReader = new _mod1306.BinaryReader(buf, textDecoder);
     return binaryReader;
   }
 };
@@ -53,10 +53,10 @@ export const b64ToPreloadedUserSettingsProto = function b64ToPreloadedUserSettin
   return b64ToProto(create.PreloadedUserSettings, settings);
 };
 export const protoToB64WithType = function protoToB64WithType(arg0, favoriteGifs) {
-  return _mod1307.base64encode(obj[arg0].toBinary(favoriteGifs));
+  return _mod1306.base64encode(obj[arg0].toBinary(favoriteGifs));
 };
 export const protoToB64 = function protoToB64(ProtoClass, protoToSave) {
-  return _mod1307.base64encode(ProtoClass.toBinary(protoToSave));
+  return _mod1306.base64encode(ProtoClass.toBinary(protoToSave));
 };
 export const mergeTopLevelFields = function mergeTopLevelFields(ProtoClass, proto, proto2) {
   obj = {};
@@ -89,7 +89,7 @@ export const mutateUserGuildSettings = function mutateUserGuildSettings(guilds) 
   }
   return arg2(guilds.guilds[tmp3]);
 };
-export const mutateUserGuildSettingsInternal = function mutateUserGuildSettingsInternal(guilds, closure_0, f71535) {
+export const mutateUserGuildSettingsInternal = function mutateUserGuildSettingsInternal(guilds, closure_0, f72398) {
   let tmp = closure_0;
   let tmp2 = null != closure_0;
   if (tmp2) {
@@ -102,7 +102,7 @@ export const mutateUserGuildSettingsInternal = function mutateUserGuildSettingsI
     const GuildSettings = create.GuildSettings;
     guilds.guilds[tmp] = GuildSettings.create();
   }
-  return f71535(guilds.guilds[tmp]);
+  return f72398(guilds.guilds[tmp]);
 };
 export const mutateUserChannelSettings = function mutateUserChannelSettings(guilds, arg1, id, arg3) {
   if (null == guilds.guilds) {
@@ -128,12 +128,12 @@ export const mutateUserChannelSettings = function mutateUserChannelSettings(guil
   }
   return arg3(guilds.guilds[tmp3].channels[id]);
 };
-export const mutateUserChannelSettingsInternal = function mutateUserChannelSettingsInternal(channels, closure_0, f71535) {
+export const mutateUserChannelSettingsInternal = function mutateUserChannelSettingsInternal(channels, closure_0, f72398) {
   if (!(closure_0 in channels.channels)) {
     const ChannelSettings = create.ChannelSettings;
     channels.channels[closure_0] = ChannelSettings.create();
   }
-  return f71535(channels.channels[closure_0]);
+  return f72398(channels.channels[closure_0]);
 };
 export const runMigrations = function runMigrations(closure_1, closure_2) {
   if (null == closure_1.versions) {

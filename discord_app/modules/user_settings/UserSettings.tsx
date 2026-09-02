@@ -2,17 +2,17 @@
 
 // Module 4166 (explicitContentFromProto)
 import apply from "apply" /* 12 */;
-import initialize from "initialize" /* 589 */;
-import shallowEqualDefault from "shallowEqual" /* 643 */;
-import create from "create" /* 1306 */;
-import defineProperty from "defineProperty" /* 1337 */;
+import initialize from "initialize" /* 586 */;
+import shallowEqualDefault from "shallowEqual" /* 640 */;
+import create from "create" /* 1305 */;
+import defineProperty from "defineProperty" /* 1336 */;
 import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 4171 */;
 import isFeatureAgeGated from "isFeatureAgeGated" /* 4172 */;
 import SettingsDefaultFeature from "SettingsDefaultFeature" /* 4179 */;
 import closure_2 from "updateExistingSettings" /* 4167 */;
-import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
+import MAX_FAVORITES from "MAX_FAVORITES" /* 682 */;
 import items from "items" /* 4168 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 import { StickerAnimationSettings } from "STICKER_PICKER_TAB_PANEL_ID" /* 4169 */;
 import set from "defineProtoSetting" /* 4170 */;
 import defineProtoSetting from "defineProtoSetting" /* 4170 */;
@@ -1355,9 +1355,9 @@ definePropertyResult = set.defineProtoSetting("safetySettings", "ignoreProfileSp
 definePropertyResult = set.defineProtoSetting("appearance", "uiDensity", (arg0) => {
   let DEFAULT = arg0;
   if (arg0 === create.UIDensity.UNSET_UI_DENSITY) {
-    DEFAULT = tmp(1306).UIDensity.DEFAULT;
+    DEFAULT = tmp(1305).UIDensity.DEFAULT;
   } else if (DEFAULT == null) {
-    DEFAULT = tmp(1306).UIDensity.DEFAULT;
+    DEFAULT = tmp(1305).UIDensity.DEFAULT;
   }
   return DEFAULT;
 }, (arg0) => arg0);

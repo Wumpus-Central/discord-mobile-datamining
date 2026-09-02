@@ -1,11 +1,11 @@
-// === Module 6190: VoiceChannelEffectSentLocation ===
+// === Module 6199: VoiceChannelEffectSentLocation ===
 
-// Module 6190 (VoiceChannelEffectSentLocation)
-import closure_3 from "getEmojiToGroupId" /* 5401 */;
-import closure_4 from "handleConnectionOpen" /* 1981 */;
-import closure_5 from "initialize" /* 6191 */;
-import { VoiceChannelEffectAnimationType as closure_6 } from "VoiceChannelEffectAnimationType" /* 6192 */;
-import ME from "ME" /* 676 */;
+// Module 6199 (VoiceChannelEffectSentLocation)
+import closure_3 from "getEmojiToGroupId" /* 5409 */;
+import closure_4 from "handleConnectionOpen" /* 1980 */;
+import closure_5 from "initialize" /* 6200 */;
+import { VoiceChannelEffectAnimationType as closure_6 } from "VoiceChannelEffectAnimationType" /* 6201 */;
+import ME from "ME" /* 673 */;
 import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME" /* 4967 */;
 
 const require = arg1;
@@ -27,16 +27,16 @@ export const sendVoiceChannelCustomCallSoundEffect = function sendVoiceChannelCu
       abortController.abort();
     }
   }, 1000);
-  obj[1] = abortController(6193).sampleAnimationId(BASIC, abortController(6193).CUSTOM_CALL_SOUND_ANIMATION_RANGE);
-  const HTTP = tmp2(530).HTTP;
+  obj[1] = abortController(6202).sampleAnimationId(BASIC, abortController(6202).CUSTOM_CALL_SOUND_ANIMATION_RANGE);
+  const HTTP = tmp2(527).HTTP;
   obj = { url: closure_7.CUSTOM_CALL_SOUNDS(id), body: obj, signal: abortController.signal, onRequestProgress: throttleResult, rejectWithError: true };
-  const tmp2Result = abortController(6193);
+  const tmp2Result = abortController(6202);
   HTTP.post(obj).then(closure_8, () => {
 
   });
   const postResult = HTTP.post(obj);
-  const items = [abortController(5973).CHANNEL_CALL];
-  abortController(6216)(items, arg2, c4, abortController(4973).AnalyticsSoundType.ENTRY);
+  const items = [abortController(5981).CHANNEL_CALL];
+  abortController(6225)(items, arg2, c4, abortController(4973).AnalyticsSoundType.ENTRY);
 };
 export const sendVoiceChannelSoundboardEffect = function sendVoiceChannelSoundboardEffect(channelId, emojiId, arg2, arg3, arg4) {
   let customEmojiById = null;
@@ -60,7 +60,7 @@ export const sendVoiceChannelSoundboardEffect = function sendVoiceChannelSoundbo
     obj.source_guild_id = emojiId.guildId;
   }
   let items = arg3;
-  const HTTP = tmp4(530).HTTP;
+  const HTTP = tmp4(527).HTTP;
   obj = {
     url: closure_7.SEND_SOUNDBOARD_SOUND(channelId),
     body: obj,
@@ -84,5 +84,5 @@ export const sendVoiceChannelSoundboardEffect = function sendVoiceChannelSoundbo
   if (arg3 == null) {
     items = [];
   }
-  abortController(6216)(items, arg2, emojiId, abortController(4973).AnalyticsSoundType.DEFAULT, arg4);
+  abortController(6225)(items, arg2, emojiId, abortController(4973).AnalyticsSoundType.DEFAULT, arg4);
 };

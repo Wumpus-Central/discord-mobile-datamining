@@ -2,7 +2,7 @@
 
 // Module 4650 (sanitizeDevices)
 import set from "set" /* 2 */;
-import formatDefault from "format" /* 669 */;
+import formatDefault from "format" /* 666 */;
 import AudioSubsystems from "AudioSubsystems" /* 4581 */;
 
 ({ DEFAULT_DEVICE_ID: c3, DeviceTypes: c4 } = AudioSubsystems);

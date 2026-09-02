@@ -2,8 +2,8 @@
 
 // Module 4321 (useDcfNewUserCooldown)
 import set from "set" /* 2 */;
-import setDefault from "set" /* 687 */;
-import ApexExperiment from "ApexExperiment" /* 1468 */;
+import setDefault from "set" /* 684 */;
+import ApexExperiment from "ApexExperiment" /* 1467 */;
 
 let obj = { name: "2026-08-dcf-new-user-cooldown", kind: "user", defaultConfig: null, variations: null };
 obj = { newUserCooldownMs: setDefault.Millis.DAY };

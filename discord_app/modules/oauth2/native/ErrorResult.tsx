@@ -1,11 +1,11 @@
-// === Module 9280: error ===
+// === Module 9293: error ===
 
-// Module 9280 (error)
+// Module 9293 (error)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import Text from "Text" /* 4474 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5553 */;
-import registerAssetDefault from "registerAsset" /* 9281 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5561 */;
+import registerAssetDefault from "registerAsset" /* 9294 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -33,8 +33,8 @@ export default function ErrorResult(error) {
   const items = [callback(closure_3, obj), ];
   obj1 = { style: tmp.text, variant: "text-md/medium", children: null };
   if (error == null) {
-    const intl = tmp3(1236).intl;
-    error = intl.string(tmp3(1236).t.mqn873);
+    const intl = tmp3(1233).intl;
+    error = intl.string(tmp3(1233).t.mqn873);
   }
   obj1[2] = error;
   items[1] = callback(Text.Text, obj1);
@@ -43,8 +43,8 @@ export default function ErrorResult(error) {
   let tmp6Result = null;
   if (!error.hideFooter) {
     const obj2 = { size: "lg", text: null, onPress: null };
-    const intl2 = tmp3(1236).intl;
-    obj2[1] = intl2.string(tmp3(1236).t.cpT0Cq);
+    const intl2 = tmp3(1233).intl;
+    obj2[1] = intl2.string(tmp3(1233).t.cpT0Cq);
     obj2[2] = function onPress() {
       return callback(table[10]).pop();
     };

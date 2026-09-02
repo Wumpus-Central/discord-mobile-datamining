@@ -1,9 +1,9 @@
-// === Module 16881: DEFAULT_EXPIRATION_DAYS ===
+// === Module 17117: DEFAULT_EXPIRATION_DAYS ===
 
-// Module 16881 (DEFAULT_EXPIRATION_DAYS)
-import dispatcherDefault from "dispatcher" /* 709 */;
-import generateAcceptInviteOptionsDefault from "generateAcceptInviteOptions" /* 8649 */;
-import closure_3 from "ensureGuildLoaded" /* 1387 */;
+// Module 17117 (DEFAULT_EXPIRATION_DAYS)
+import dispatcherDefault from "dispatcher" /* 706 */;
+import generateAcceptInviteOptionsDefault from "generateAcceptInviteOptions" /* 8664 */;
+import closure_3 from "ensureGuildLoaded" /* 1386 */;
 import closure_4 from "markAllUserIdListsStale" /* 4130 */;
 
 const require = arg1;
@@ -16,9 +16,9 @@ export const revokeAllFriendInvites = function revokeAllFriendInvites() {
   generateAcceptInviteOptionsDefault.revokeFriendInvites().then(() => {
     let obj = callback2(4194);
     obj = { key: "TOAST_FRIEND_INVITES_REVOKED", content: null, icon: null };
-    const intl = callback(1236).intl;
-    obj[1] = intl.string(callback(1236).t.jSHEOQ);
-    obj[2] = callback2(9518);
+    const intl = callback(1233).intl;
+    obj[1] = intl.string(callback(1233).t.jSHEOQ);
+    obj[2] = callback2(9531);
     obj.open(obj);
   });
 };

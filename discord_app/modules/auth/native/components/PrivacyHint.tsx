@@ -1,15 +1,15 @@
-// === Module 15575: PrivacyPolicyDescription ===
+// === Module 15806: PrivacyPolicyDescription ===
 
-// Module 15575 (PrivacyPolicyDescription)
+// Module 15806 (PrivacyPolicyDescription)
 import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4205 */;
 import Text from "Text" /* 4474 */;
-import PromotionalEmailCheckBoxDefault from "PromotionalEmailCheckBox" /* 15576 */;
+import PromotionalEmailCheckBoxDefault from "PromotionalEmailCheckBox" /* 15807 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { usePromoEmailConsentStore } from "setPromoEmailConsentState" /* 6053 */;
-import { useRegistrationUIStore } from "useRegistrationUIStore" /* 15537 */;
-import { MarketingURLs } from "ME" /* 676 */;
+import { usePromoEmailConsentStore } from "setPromoEmailConsentState" /* 6061 */;
+import { useRegistrationUIStore } from "useRegistrationUIStore" /* 15768 */;
+import { MarketingURLs } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -30,24 +30,24 @@ function PrivacyPolicyCheckbox(onToggleConsent) {
   let obj = useCheckboxA11yNative;
   const checkboxA11yNative = obj.useCheckboxA11yNative({ checked: consent });
   obj = { style: asCheckbox ? tmp.checkbox : tmp.radio, accessibilityState: checkboxA11yNative.accessibilityState, accessibilityRole: checkboxA11yNative.accessibilityRole, accessibilityLabel: null, onPress: null, hitSlop: null, children: null };
-  const intl = tmp2(1236).intl;
+  const intl = tmp2(1233).intl;
   obj[3] = intl.string(getSystemLocale.t.Y7Kgvf);
   obj[4] = onToggleConsent.onToggleConsent;
   obj[5] = { top: 11, bottom: 11, left: 11 };
   if (asCheckbox) {
     obj = { checked: null };
     obj[0] = consent;
-    let tmp7Result = tmp7(tmp2(7684).FormCheckbox, obj);
+    let tmp7Result = tmp7(tmp2(7693).FormCheckbox, obj);
     let tmp9 = tmp7;
   } else {
     obj1 = { selected: null };
     obj1[0] = consent;
-    tmp7Result = tmp7(tmp2(8363).FormRow.Radio, obj1);
+    tmp7Result = tmp7(tmp2(8372).FormRow.Radio, obj1);
     tmp9 = tmp7;
   }
   const items = [tmp7Result, ];
   const obj2 = { variant: "text-xs/medium", color: "text-muted", style: tmp.checkboxLabel, children: null };
-  const intl2 = tmp2(1236).intl;
+  const intl2 = tmp2(1233).intl;
   obj2[3] = intl2.format(getSystemLocale.t.qMDAP0, { termsURL: MarketingURLs.TERMS, privacyURL: MarketingURLs.PRIVACY });
   items[1] = tmp9(Text.Text, obj2);
   obj[6] = items;

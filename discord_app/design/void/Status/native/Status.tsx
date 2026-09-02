@@ -1,15 +1,15 @@
-// === Module 13748: Status ===
+// === Module 13971: Status ===
 
-// Module 13748 (Status)
+// Module 13971 (Status)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getAnimatedTypingTranslateX from "getAnimatedTypingTranslateX" /* 13746 */;
-import STATUS_PADDINGDefault from "STATUS_PADDING" /* 13747 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getAnimatedTypingTranslateX from "getAnimatedTypingTranslateX" /* 13969 */;
+import STATUS_PADDINGDefault from "STATUS_PADDING" /* 13970 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { STATUS_PADDING } from "STATUS_PADDING" /* 1298 */;
-import { StatusTypes } from "ME" /* 676 */;
-import n from "n" /* 9429 */;
+import { STATUS_PADDING } from "STATUS_PADDING" /* 1297 */;
+import { StatusTypes } from "ME" /* 673 */;
+import n from "n" /* 9442 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -45,7 +45,7 @@ let closure_14 = createCacheKey.createStyles((items) => {
     tmp5 = importDefault;
   }
   obj = { ellipsis: { backgroundColor: PRIMARY_400, borderRadius: height, height, width: statusTypingDimensions.width, paddingStart: 4, paddingEnd: 2, marginRight: 0 }, ellipsisDot: null };
-  obj = { width: dotSize, height: dotSize, backgroundColor: tmp5(712).colors.WHITE };
+  obj = { width: dotSize, height: dotSize, backgroundColor: tmp5(709).colors.WHITE };
   obj[1] = obj;
   return obj;
 });
@@ -71,23 +71,23 @@ export default function Status(isMobileOnline) {
   obj[0] = items;
   obj = { style: callback2().statusIcon, source: null, resizeMode: "stretch" };
   if (streaming) {
-    let tmp4Result = tmp4(13749);
+    let tmp4Result = tmp4(13972);
   } else if (flag2) {
-    tmp4Result = tmp4(13750);
+    tmp4Result = tmp4(13973);
   } else if (flag) {
-    tmp4Result = tmp4(13751);
+    tmp4Result = tmp4(13974);
   } else if (StatusTypes.IDLE === status) {
-    tmp4Result = tmp4(13752);
+    tmp4Result = tmp4(13975);
   } else if (tmp7.DND === status) {
-    tmp4Result = tmp4(13753);
+    tmp4Result = tmp4(13976);
   } else {
     if (tmp7.OFFLINE !== status) {
       if (tmp7.INVISIBLE !== status) {
         const ONLINE = tmp7.ONLINE;
-        tmp4Result = tmp4(13755);
+        tmp4Result = tmp4(13978);
       }
     }
-    tmp4Result = tmp4(13754);
+    tmp4Result = tmp4(13977);
   }
   obj[1] = tmp4Result;
   obj[1] = closure_11(closure_4, obj);

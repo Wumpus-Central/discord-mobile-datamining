@@ -1,9 +1,9 @@
-// === Module 8684: AgeVerificationModalEntryPoint ===
+// === Module 8699: AgeVerificationModalEntryPoint ===
 
-// Module 8684 (AgeVerificationModalEntryPoint)
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import closure_2 from "ensureGuildLoaded" /* 1387 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+// Module 8699 (AgeVerificationModalEntryPoint)
+import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
+import closure_2 from "ensureGuildLoaded" /* 1386 */;
+import { AnalyticEvents } from "ME" /* 673 */;
 
 const result = require("set").fileFinishedImporting("modules/age_assurance/AgeVerificationAnalyticsUtils.tsx");
 

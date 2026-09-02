@@ -1,8 +1,8 @@
-// === Module 14260: _updateBadgeSettings ===
+// === Module 14483: _updateBadgeSettings ===
 
-// Module 14260 (_updateBadgeSettings)
+// Module 14483 (_updateBadgeSettings)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 676 */;
+import { Endpoints } from "ME" /* 673 */;
 
 const require = arg1;
 function _updateBadgeSettings() {
@@ -48,7 +48,7 @@ function _updateBadgeSettings() {
               let body;
               c5 = 1;
               c6 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -97,52 +97,34 @@ function _updateBadgeSettings() {
           } else if (2 === tmp7) {
             constants = 0;
             constants = body;
-            obj6 = callback2(obj4[5]);
-            obj6.captureException(constants);
+            obj3 = callback2(obj4[4]);
+            obj3.captureException(constants);
             c6 = 3;
             return { value: false, done: true };
-          } else if (3 === tmp7) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              constants = 0;
-              c6 = 3;
-              const obj9 = { value: null, done: true };
-              obj9[0] = arg1;
-              return obj9;
-            } else {
-              body = arg1;
-              obj1 = callback2(obj4[3]);
-              const obj10 = { type: "BADGE_SETTINGS_UPDATE", settings: null };
-              obj10[1] = body.body;
-              obj1.dispatch(obj10);
-              obj3 = callback(obj4[4]);
-              c5 = 4;
-              c6 = 1;
-              const obj11 = { value: null, done: false };
-              obj11[0] = obj3.fetchBadgeDirectory();
-              return obj11;
-            }
           } else if (arg0 === 1) {
             c6 = 3;
             throw arg1;
           } else if (arg0 === 2) {
             constants = 0;
             c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            const obj9 = { value: null, done: true };
+            obj9[0] = arg1;
+            return obj9;
           } else {
+            body = arg1;
+            obj = callback2(obj4[3]);
+            const obj10 = { type: "BADGE_SETTINGS_UPDATE", settings: null };
+            obj10[1] = body.body;
+            obj.dispatch(obj10);
             constants = 0;
             c6 = 3;
             return { value: true, done: true };
           }
-        } catch (tmp45) {
-          body = tmp45;
+        } catch (tmp43) {
+          body = tmp43;
           if (tmp4 === constants) {
             c6 = tmp2;
-            throw tmp45;
+            throw tmp43;
           } else {
             c5 = tmp;
           }

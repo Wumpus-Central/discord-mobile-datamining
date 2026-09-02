@@ -1,15 +1,15 @@
-// === Module 16958: updateSoundpack ===
+// === Module 17194: updateSoundpack ===
 
-// Module 16958 (updateSoundpack)
-import initializeDefault from "initialize" /* 5486 */;
-import getSoundPackDefault from "getSoundPack" /* 9996 */;
-import HolidayEmojiAnimationTypeDefault from "HolidayEmojiAnimationType" /* 16959 */;
-import HolidayEmojiAnimationTypeDefault2 from "HolidayEmojiAnimationType" /* 16962 */;
-import setSoundpack from "setSoundpack" /* 16963 */;
-import setIncomingRingtone from "setIncomingRingtone" /* 16964 */;
-import closure_3 from "initialize" /* 1212 */;
-import closure_4 from "Soundpacks" /* 9994 */;
-import { Soundpacks } from "Soundpacks" /* 9995 */;
+// Module 17194 (updateSoundpack)
+import initializeDefault from "initialize" /* 5494 */;
+import getSoundPackDefault from "getSoundPack" /* 10018 */;
+import HolidayEmojiAnimationTypeDefault from "HolidayEmojiAnimationType" /* 17195 */;
+import HolidayEmojiAnimationTypeDefault2 from "HolidayEmojiAnimationType" /* 17198 */;
+import setSoundpack from "setSoundpack" /* 17199 */;
+import setIncomingRingtone from "setIncomingRingtone" /* 17200 */;
+import closure_3 from "initialize" /* 1209 */;
+import closure_4 from "Soundpacks" /* 10016 */;
+import { Soundpacks } from "Soundpacks" /* 10017 */;
 
 require = arg1;
 initializeDefault;
@@ -40,16 +40,16 @@ prototype["updateSoundpack"] = function updateSoundpack() {
   let isEligibleResult = HolidayEmojiAnimationTypeDefault2.isEligible();
   if (isEligibleResult) {
     if (isEligibleResult) {
-      isEligibleResult = null != tmp3(16959).soundpack;
+      isEligibleResult = null != tmp3(17195).soundpack;
     }
     if (isEligibleResult) {
       isEligibleResult = name !== lastSoundpackExperimentId;
     }
     if (isEligibleResult) {
-      isEligibleResult = soundpack !== tmp3(16959).soundpack;
+      isEligibleResult = soundpack !== tmp3(17195).soundpack;
     }
     if (isEligibleResult) {
-      setSoundpack.setSoundpack(tmp3(16959).soundpack, name);
+      setSoundpack.setSoundpack(tmp3(17195).soundpack, name);
       const obj3 = setSoundpack;
     }
   } else {

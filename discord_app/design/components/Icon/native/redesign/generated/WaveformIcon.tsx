@@ -1,10 +1,10 @@
-// === Module 10216: WaveformIcon ===
+// === Module 10238: WaveformIcon ===
 
-// Module 10216 (WaveformIcon)
+// Module 10238 (WaveformIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 10217 */;
+import registerAsset from "registerAsset" /* 10239 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

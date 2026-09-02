@@ -1,9 +1,9 @@
-// === Module 15117: UserSettingsCommunityNotifications ===
+// === Module 15346: UserSettingsCommunityNotifications ===
 
-// Module 15117 (UserSettingsCommunityNotifications)
+// Module 15346 (UserSettingsCommunityNotifications)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import noopAll from "noop" /* 19 */;
-import closure_3 from "computeAlertSettings" /* 10163 */;
+import closure_3 from "computeAlertSettings" /* 10185 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -14,7 +14,7 @@ let closure_6 = createCacheKey.createStyles({ container: { paddingHorizontal: 16
 let result = require("set").fileFinishedImporting("modules/user_settings/notifications/native/UserSettingsCommunityNotifications.tsx");
 
 export default function UserSettingsCommunityNotifications() {
-  let obj = stateFromStores(589);
+  let obj = stateFromStores(586);
   let items = [closure_3];
   stateFromStores = obj.useStateFromStores(items, () => guildAlertSettings.getGuildAlertSettings());
   const tmp = callback2();
@@ -51,7 +51,7 @@ export default function UserSettingsCommunityNotifications() {
       return closure_1_5(stateFromStores(closure_1_2[8]).TableRowGroup, obj, arg0);
     });
     obj[0] = callback(tmp2(4926).Stack, obj);
-    tmp5 = callback(tmp2(8363).Form, obj);
+    tmp5 = callback(tmp2(8372).Form, obj);
   }
   return tmp5;
 };

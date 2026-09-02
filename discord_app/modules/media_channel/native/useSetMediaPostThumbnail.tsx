@@ -1,6 +1,6 @@
-// === Module 10874: useSetMediaPostThumbnail ===
+// === Module 11094: useSetMediaPostThumbnail ===
 
-// Module 10874 (useSetMediaPostThumbnail)
+// Module 11094 (useSetMediaPostThumbnail)
 import closure_3 from "noop" /* 19 */;
 import { DraftType } from "handleChanged" /* 4854 */;
 import closure_5 from "map" /* 4853 */;

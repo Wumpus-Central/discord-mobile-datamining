@@ -1,21 +1,21 @@
-// === Module 10188: NotificationWrapper ===
+// === Module 10210: NotificationWrapper ===
 
-// Module 10188 (NotificationWrapper)
-import _modDef10189 from "module_10189" /* 10189 */;
-import _modDef10264 from "module_10264" /* 10264 */;
-import ForumThreadCreatedNotificationDefault from "ForumThreadCreatedNotification" /* 10265 */;
-import BugReporterNotification from "BugReporterNotification" /* 10266 */;
-import AlertNotificationDefault from "AlertNotification" /* 10299 */;
-import ReactionNotificationBodyDefault from "ReactionNotificationBody" /* 10300 */;
-import NotificationAvatarDefault from "NotificationAvatar" /* 10955 */;
-import _modDef10956 from "module_10956" /* 10956 */;
-import MessageRequestInAppNotificationDefault from "MessageRequestInAppNotification" /* 10959 */;
+// Module 10210 (NotificationWrapper)
+import _modDef10211 from "module_10211" /* 10211 */;
+import _modDef10286 from "module_10286" /* 10286 */;
+import ForumThreadCreatedNotificationDefault from "ForumThreadCreatedNotification" /* 10287 */;
+import BugReporterNotification from "BugReporterNotification" /* 10288 */;
+import AlertNotificationDefault from "AlertNotification" /* 10321 */;
+import ReactionNotificationBodyDefault from "ReactionNotificationBody" /* 10322 */;
+import NotificationAvatarDefault from "NotificationAvatar" /* 11175 */;
+import _modDef11176 from "module_11176" /* 11176 */;
+import MessageRequestInAppNotificationDefault from "MessageRequestInAppNotification" /* 11179 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initialize" /* 9654 */;
-import set from "set" /* 10178 */;
-import ME from "ME" /* 676 */;
+import closure_6 from "initialize" /* 9667 */;
+import set from "set" /* 10200 */;
+import ME from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
 import { Easing } from "module_4217" /* 4217 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -27,11 +27,11 @@ function NotificationWrapper(notification) {
   if (constants.MESSAGE === type) {
     obj = { notification: null };
     obj[0] = notification;
-    return jsx(_modDef10189, { notification: null });
+    return jsx(_modDef10211, { notification: null });
   } else if (tmp.MESSAGE_FAILED_TO_SEND === type) {
     obj = { notification: null };
     obj[0] = notification;
-    return jsx(_modDef10264, { notification: null });
+    return jsx(_modDef10286, { notification: null });
   } else if (tmp.FORUM_THREAD_CREATED === type) {
     obj1 = { notification: null };
     obj1[0] = notification;
@@ -66,7 +66,7 @@ function NotificationWrapper(notification) {
     }
     const obj6 = { notification: null };
     obj6[0] = notification;
-    return jsx(_modDef10956, { notification: null });
+    return jsx(_modDef11176, { notification: null });
   }
 }
 ({ DEFAULT_ANIMATION_TIMING: error, extrapolateConfig: closure_8, MIN_SWIPE_DISTANCE: c9, MIN_SWIPE_VELOCITY: c10, PAN_INPUT_RANGE: unpackModuleId, NOTIFICATION_CONTAINER_MARGIN } = set);

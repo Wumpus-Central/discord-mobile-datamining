@@ -1,9 +1,9 @@
-// === Module 10588: useMobileSocialLayerPurchaseSKU ===
+// === Module 10809: useMobileSocialLayerPurchaseSKU ===
 
-// Module 10588 (useMobileSocialLayerPurchaseSKU)
-import useMobilePurchaseSKUDefault from "useMobilePurchaseSKU" /* 10589 */;
+// Module 10809 (useMobileSocialLayerPurchaseSKU)
+import useMobilePurchaseSKUDefault from "useMobilePurchaseSKU" /* 10810 */;
 import closure_3 from "noop" /* 19 */;
-import { PriceSetAssignmentPurchaseTypes as closure_4 } from "ME" /* 676 */;
+import { PriceSetAssignmentPurchaseTypes as closure_4 } from "ME" /* 673 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/slayer_storefront/native/hooks/useMobileSocialLayerPurchaseSKU.android.tsx");

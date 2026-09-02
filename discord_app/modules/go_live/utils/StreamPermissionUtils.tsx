@@ -1,16 +1,16 @@
-// === Module 7471: canStreamInChannel ===
+// === Module 7481: canStreamInChannel ===
 
-// Module 7471 (canStreamInChannel)
+// Module 7481 (canStreamInChannel)
 import allowChannelAccess from "allowChannelAccess" /* 4666 */;
 import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 4731 */;
-import canJoinVoiceChannelDefault from "canJoinVoiceChannel" /* 5360 */;
+import canJoinVoiceChannelDefault from "canJoinVoiceChannel" /* 5368 */;
 import closure_3 from "set" /* 4495 */;
-import { ChannelRecordBase } from "createChannelRecord" /* 1391 */;
-import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1982 */;
-import closure_6 from "createGuildRecordFromRust" /* 1909 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4121 */;
+import { ChannelRecordBase } from "createChannelRecord" /* 1390 */;
+import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1981 */;
+import closure_6 from "createGuildRecordFromRust" /* 1908 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_8 from "updateVoiceState" /* 4497 */;
-import { Permissions } from "ME" /* 676 */;
+import { Permissions } from "ME" /* 673 */;
 
 require = arg1;
 function canStreamInChannel(channel, closure_1_2, closure_1_3, arg3) {
@@ -114,7 +114,7 @@ export { canWatchStream };
 export const useCanWatchStream = function useCanWatchStream(stateFromStores) {
   const _require = stateFromStores;
   const items = [closure_8, closure_6, closure_7, closure_3];
-  return _require(589).useStateFromStoresArray(items, () => closure_1_12(closure_0, closure_1_8, closure_1_6, closure_1_7, closure_1_3));
+  return _require(586).useStateFromStoresArray(items, () => closure_1_12(closure_0, closure_1_8, closure_1_6, closure_1_7, closure_1_3));
 };
 export const getStreamEligibleChannels = function getStreamEligibleChannels(arg0, closure_1_2, closure_1_3) {
   const items = [];

@@ -1,13 +1,13 @@
-// === Module 8428: canToggleCommunicationDisableOnUser ===
+// === Module 8437: canToggleCommunicationDisableOnUser ===
 
-// Module 8428 (canToggleCommunicationDisableOnUser)
+// Module 8437 (canToggleCommunicationDisableOnUser)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1430 */;
-import applyOverwritesAll from "applyOverwrites" /* 4126 */;
-import closure_4 from "createGuildRecordFromRust" /* 1909 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4121 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 673 */;
+import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1429 */;
+import applyOverwritesAll from "applyOverwrites" /* 4125 */;
+import closure_4 from "createGuildRecordFromRust" /* 1908 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4120 */;
+import closure_6 from "mergeGuildAvatar" /* 1921 */;
 
 function canToggleCommunicationDisableOnUser(id, id2, items) {
   let tmp = items;
@@ -51,7 +51,7 @@ export default function useCanToggleCommunicationDisableOnUser(arg0, arg1) {
   closure_1 = arg1;
   let items = [closure_6, closure_4, closure_5];
   const items1 = [arg0, arg1];
-  return _require(589).useStateFromStores(items, () => {
+  return _require(586).useStateFromStores(items, () => {
     const items = [closure_1_6, closure_1_4, closure_1_5];
     return closure_1_8(closure_0, closure_1, items);
   }, items1);

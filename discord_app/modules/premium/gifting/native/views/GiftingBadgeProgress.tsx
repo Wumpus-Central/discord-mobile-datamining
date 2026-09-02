@@ -1,14 +1,14 @@
-// === Module 10775: GiftingBadgeProgressBar ===
+// === Module 10995: GiftingBadgeProgressBar ===
 
-// Module 10775 (GiftingBadgeProgressBar)
+// Module 10995 (GiftingBadgeProgressBar)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2465 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import messagesProxyDefault from "messagesProxy" /* 2464 */;
 import Text from "Text" /* 4474 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10522 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10743 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { getSingleRequirementThreshold as closure_4 } from "initialize" /* 8560 */;
+import { getSingleRequirementThreshold as closure_4 } from "initialize" /* 8573 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

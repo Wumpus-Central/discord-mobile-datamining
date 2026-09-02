@@ -1,8 +1,8 @@
-// === Module 15549: initialize ===
+// === Module 15780: initialize ===
 
-// Module 15549 (initialize)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 15780 (initialize)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 let c0 = false;
 const PersistedStore = initializeDefault.PersistedStore;

@@ -1,13 +1,13 @@
-// === Module 14922: items ===
+// === Module 15151: items ===
 
-// Module 14922 (items)
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 6251 */;
+// Module 15151 (items)
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 6260 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1384 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 11068 */;
+import createToggle from "createToggle" /* 11288 */;
 
 require = arg1;
 let items = [require("DismissibleContent").DismissibleContent.MOBILE_ACCESSIBILITY_COLOR_SETTINGS];
@@ -30,15 +30,15 @@ createToggle = {
       tmp5 = null;
       if (hasItem) {
         obj = { text: null };
-        const intl = tmp(1236).intl;
-        obj[0] = intl.string(tmp(1236).t.y2b7CA);
-        tmp5 = jsx(tmp(1297).TextBadge, { text: null });
+        const intl = tmp(1233).intl;
+        obj[0] = intl.string(tmp(1233).t.y2b7CA);
+        tmp5 = jsx(tmp(1296).TextBadge, { text: null });
       }
     }
     return tmp5;
   },
   usePreNavigationAction() {
-    const tmp = callback(first(6251).useSelectedDismissibleContent(items), 2);
+    const tmp = callback(first(6260).useSelectedDismissibleContent(items), 2);
     first = tmp[0];
     dependencyMap = tmp3;
     items = [tmp[1], first];
@@ -63,7 +63,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.ACCESSIBILITY,
   getComponent() {
-    return require(14925) /* SettingsAccessibilityScreen */.default;
+    return require(15154) /* SettingsAccessibilityScreen */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

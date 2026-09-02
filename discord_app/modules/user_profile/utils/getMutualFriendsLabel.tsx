@@ -1,8 +1,8 @@
-// === Module 9261: getMutualFriendsLabel ===
+// === Module 9274: getMutualFriendsLabel ===
 
-// Module 9261 (getMutualFriendsLabel)
+// Module 9274 (getMutualFriendsLabel)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 
 const result = set.fileFinishedImporting("modules/user_profile/utils/getMutualFriendsLabel.tsx");
 

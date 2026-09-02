@@ -1,13 +1,13 @@
-// === Module 13257: items ===
+// === Module 13479: items ===
 
-// Module 13257 (items)
+// Module 13479 (items)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import playDefault from "play" /* 5944 */;
-import registerAssetDefault from "registerAsset" /* 13258 */;
-import _mod13259 from "module_13259" /* 13259 */;
-import registerAssetDefault2 from "registerAsset" /* 13260 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import playDefault from "play" /* 5952 */;
+import registerAssetDefault from "registerAsset" /* 13480 */;
+import _mod13481 from "module_13481" /* 13481 */;
+import registerAssetDefault2 from "registerAsset" /* 13482 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -49,7 +49,7 @@ let items = [
       return intl.string(getSystemLocale.t.wOYbTv);
     },
     getGraphic(arg0) {
-      const obj = { source: _mod13259, autoPlay: !useReducedMotion.useReducedMotion, style: arg0 };
+      const obj = { source: _mod13481, autoPlay: !useReducedMotion.useReducedMotion, style: arg0 };
       return callback(playDefault, obj);
     }
   },
@@ -88,8 +88,8 @@ export default function GuildBoostingMarketingTopPerksCards() {
   const _require = tmp;
   let obj = { style: tmp.wrapper, children: null };
   obj = { style: tmp.heading, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = _require(1236).intl;
-  obj[3] = intl.string(_require(1236).t.aGdB3E);
+  const intl = _require(1233).intl;
+  obj[3] = intl.string(_require(1233).t.aGdB3E);
   items = [callback(_require(4474).Heading, obj), ];
   obj = {
     itemCount: items.length,
@@ -113,7 +113,7 @@ export default function GuildBoostingMarketingTopPerksCards() {
       return closure_1_7(closure_1_4, obj, arg1);
     })
   };
-  items[1] = callback(_require(12128).MarketingCardsScroller, obj);
+  items[1] = callback(_require(12352).MarketingCardsScroller, obj);
   obj[1] = items;
   return callback2(closure_4, obj);
 };

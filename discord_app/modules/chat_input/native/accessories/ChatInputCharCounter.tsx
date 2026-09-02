@@ -1,11 +1,11 @@
-// === Module 11994: ChatInputCharCounter ===
+// === Module 12218: ChatInputCharCounter ===
 
-// Module 11994 (ChatInputCharCounter)
+// Module 12218 (ChatInputCharCounter)
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import { UpsellTypes } from "ME" /* 676 */;
-import { PremiumUpsellTypes } from "GuildFeatures" /* 1924 */;
+import closure_5 from "mergeGuildAvatar" /* 1921 */;
+import { UpsellTypes } from "ME" /* 673 */;
+import { PremiumUpsellTypes } from "GuildFeatures" /* 1923 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -18,12 +18,12 @@ const forwardRefResult = importAllResult.forwardRef((analyticsLocations, ref) =>
   let stateFromStores;
   dependencyMap = undefined;
   let callback;
-  let obj = analyticsLocations(589);
+  let obj = analyticsLocations(586);
   const items = [closure_5];
   stateFromStores = obj.useStateFromStores(items, () => stateFromStores(_undefined[8]).canUseIncreasedMessageLength(currentUser.getCurrentUser()));
   const tmp = callback4();
   [tmp6, c2] = callback(importAllResult.useState(0), 2);
-  const tmp7 = stateFromStores(8160)();
+  const tmp7 = stateFromStores(8168)();
   callback = tmp7;
   const imperativeHandle = importAllResult.useImperativeHandle(ref, () => ({
     onMessageLengthChanged(length) {
@@ -39,9 +39,9 @@ const forwardRefResult = importAllResult.forwardRef((analyticsLocations, ref) =>
     obj = { color: "text-feedback-critical", lineClamp: 1, variant: "text-xs/medium", children: null };
     const _HermesInternal = HermesInternal;
     obj[3] = "-" + tmp6;
-    const items2 = [callback2(tmp2(4474).Text, obj), callback2(tmp2(8096).NitroWheelIcon, { size: "sm" })];
+    const items2 = [callback2(tmp2(4474).Text, obj), callback2(tmp2(8104).NitroWheelIcon, { size: "sm" })];
     obj[2] = items2;
-    tmp10 = callback3(tmp2(5068).PressableOpacity, obj);
+    tmp10 = callback3(tmp2(5076).PressableOpacity, obj);
   }
   return tmp10;
 });

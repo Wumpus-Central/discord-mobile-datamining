@@ -1,10 +1,10 @@
-// === Module 16502: MobileSurvey ===
+// === Module 16737: MobileSurvey ===
 
-// Module 16502 (MobileSurvey)
+// Module 16737 (MobileSurvey)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "fetchSurveyIfNeeded" /* 4711 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import { AnalyticEvents } from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -14,7 +14,7 @@ const result = require("set").fileFinishedImporting("components_native/MobileSur
 
 export default function MobileSurvey() {
   const _require = callback();
-  let obj = _require(589);
+  let obj = _require(586);
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => currentSurvey.getCurrentSurvey());
   const items1 = [stateFromStores];
@@ -102,8 +102,8 @@ export default function MobileSurvey() {
   if (null != stateFromStores) {
     obj = { body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, renderConfirmRightIcon: null };
     ({ prompt: obj2[0], cta: obj2[1] } = stateFromStores);
-    const intl = tmp(1236).intl;
-    obj[2] = intl.string(tmp(1236).t.f3Pet9);
+    const intl = tmp(1233).intl;
+    obj[2] = intl.string(tmp(1233).t.f3Pet9);
     obj[3] = function onConfirm() {
       stateFromStores(closure_1_2[11]).openURL(stateFromStores.url);
       const obj = stateFromStores(closure_1_2[11]);

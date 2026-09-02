@@ -1,6 +1,6 @@
-// === Module 648: attach ===
+// === Module 645: attach ===
 
-// Module 648 (attach)
+// Module 645 (attach)
 import set from "set" /* 2 */;
 
 let result = set.fileFinishedImporting("../discord_common/js/packages/flux/BatchedStoreListener.tsx");

@@ -1,15 +1,15 @@
-// === Module 16221: NoSearchResultsScreen ===
+// === Module 16453: NoSearchResultsScreen ===
 
-// Module 16221 (NoSearchResultsScreen)
-import _modDef11927 from "module_11927" /* 11927 */;
-import _modDef16222 from "module_16222" /* 16222 */;
+// Module 16453 (NoSearchResultsScreen)
+import _modDef12150 from "module_12150" /* 12150 */;
+import _modDef16454 from "module_16454" /* 16454 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "handleReaction" /* 6128 */;
-import closure_6 from "prototype" /* 11906 */;
-import closure_7 from "handleSearchQuery" /* 11931 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 7622 */;
-import { ComponentActions } from "ME" /* 676 */;
+import closure_5 from "handleReaction" /* 6136 */;
+import closure_6 from "prototype" /* 12129 */;
+import closure_7 from "handleSearchQuery" /* 12154 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 7632 */;
+import { ComponentActions } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 import apply from "apply" /* 12 */;
@@ -24,16 +24,16 @@ function NoSearchResultsScreen(searchContext) {
     const result = obj.trackSearchEmptyResult(obj);
   }, items);
   let obj = { text: null };
-  const intl = searchContext(1236).intl;
-  obj[0] = intl.string(searchContext(1236).t.V6nAfF);
-  return callback(_modDef16222, obj);
+  const intl = searchContext(1233).intl;
+  obj[0] = intl.string(searchContext(1233).t.V6nAfF);
+  return callback(_modDef16454, obj);
 }
 let c3 = importAllResult;
 ({ MESSAGE_SEARCH_RESULT_TABS_SET: closure_8, SEARCH_MESSAGE_TAB_SENTINEL: c9, SearchTabs: c10 } = MessageEmbedTypes);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 let closure_15 = createCacheKey.createStyles({ controls: { flex: 0, minHeight: 32 }, pages: { flex: 1 } });
 let closure_16 = apply.debounce((searchContext) => {
-  let obj = _modDef11927;
+  let obj = _modDef12150;
   obj = { searchContext };
   return obj.trackSearchTabSelected(obj);
 }, 500);
@@ -65,9 +65,9 @@ let closure_21 = importAllResult.memo((searchContext) => {
   const memo = width.useMemo(() => {
     const items = [];
     const item = setActiveIndex.forEach((tab) => {
-      let obj = { label: visibleTabs(11907).getTabTitle(tab), id: tab, page: null, count: null };
+      let obj = { label: visibleTabs(12130).getTabTitle(tab), id: tab, page: null, count: null };
       obj = { tab, searchContext: items, width: closure_1_3 };
-      obj[2] = sharedValue(setActiveIndex(16223), obj);
+      obj[2] = sharedValue(setActiveIndex(16455), obj);
       let tmp2;
       if (closure_1_2 != null) {
         tmp2 = closure_1_2[tab];
@@ -101,7 +101,7 @@ let closure_21 = importAllResult.memo((searchContext) => {
       const tmpResult = tmp(tmp2[16]);
     }
   }, items1);
-  obj1 = visibleTabs(16298);
+  obj1 = visibleTabs(16530);
   const searchSegmentedControlState = obj1.useSearchSegmentedControlState({ items: memo, visibleTabs, onSelectedTabChange: callback, width });
   ({ segmentedControlState, selectedTab } = searchSegmentedControlState);
   setActiveIndex = segmentedControlState.setActiveIndex;
@@ -117,7 +117,7 @@ let closure_21 = importAllResult.memo((searchContext) => {
   callback1 = width.useCallback(() => ref.current(), []);
   const items3 = [callback1, selectedTab];
   const memo1 = width.useMemo(() => ({ selectedTab, selectMediaTab: callback1 }), items3);
-  context = width.useContext(visibleTabs(16207).SwipeForMemberListContext);
+  context = width.useContext(visibleTabs(16439).SwipeForMemberListContext);
   obj = context;
   if (context == null) {
     obj = {};
@@ -227,10 +227,10 @@ let closure_21 = importAllResult.memo((searchContext) => {
     obj1[0] = tmp.controls;
     let obj2 = { state: null };
     obj2[0] = segmentedControlState;
-    const items11 = [sharedValue(setActiveIndex(16299), obj2), ];
+    const items11 = [sharedValue(setActiveIndex(16531), obj2), ];
     let obj3 = { state: null };
     obj3[0] = segmentedControlState;
-    items11[1] = sharedValue(setActiveIndex(16300), obj3);
+    items11[1] = sharedValue(setActiveIndex(16532), obj3);
     obj1[1] = items11;
     const items12 = [callback5(selectedTab, obj1), ];
     let obj4 = { style: null, children: null };
@@ -257,8 +257,8 @@ let closure_21 = importAllResult.memo((searchContext) => {
     }
     const obj7 = { children: null };
     obj6[5] = tmp21;
-    obj5[1] = sharedValue(tmp4(9268).SegmentedControlPages, obj6);
-    obj4[1] = sharedValue(tmp4(16223).SearchTabsPageContext.Provider, obj5);
+    obj5[1] = sharedValue(tmp4(9281).SegmentedControlPages, obj6);
+    obj4[1] = sharedValue(tmp4(16455).SearchTabsPageContext.Provider, obj5);
     items12[1] = sharedValue(selectedTab, obj4);
     obj7[0] = items12;
     tmp25Result = callback5(closure_14, obj7);
@@ -275,17 +275,17 @@ export default function ConnectedSearchTabsLayout(width) {
   candidateTabs = undefined;
   const items = [closure_7];
   const items1 = [searchContext];
-  const stateFromStoresObject = searchContext(589).useStateFromStoresObject(items, () => ({ visibleTabs: closure_1_7.getVisibleTabs(searchContext), visibleTabCounts: closure_1_7.getVisibleTabCounts(searchContext), candidateTabs: closure_1_7.getCandidateTabs(searchContext) }), items1);
+  const stateFromStoresObject = searchContext(586).useStateFromStoresObject(items, () => ({ visibleTabs: closure_1_7.getVisibleTabs(searchContext), visibleTabCounts: closure_1_7.getVisibleTabCounts(searchContext), candidateTabs: closure_1_7.getCandidateTabs(searchContext) }), items1);
   ({ visibleTabs, visibleTabCounts, candidateTabs } = stateFromStoresObject);
   const items2 = [candidateTabs];
   const memo = importAllResult.useMemo(() => new Set(candidateTabs), items2);
-  const obj = searchContext(589);
-  const autoSearchGuildChannelTab = searchContext(16301).useAutoSearchGuildChannelTab(searchContext, !memo.has(constants.GUILD_CHANNELS));
-  const obj3 = searchContext(16301);
-  const autoSearchMembersTab = searchContext(16302).useAutoSearchMembersTab(searchContext, !memo.has(constants.MEMBERS));
-  const obj4 = searchContext(16302);
-  const autoSearchPeopleTab = searchContext(16303).useAutoSearchPeopleTab(searchContext, !memo.has(constants.PEOPLE));
-  const obj5 = searchContext(16303);
-  const autoTrackSearchTabCountsViewedAnalytics = searchContext(16304).useAutoTrackSearchTabCountsViewedAnalytics({ searchContext, visibleTabCounts, visibleTabs });
+  const obj = searchContext(586);
+  const autoSearchGuildChannelTab = searchContext(16533).useAutoSearchGuildChannelTab(searchContext, !memo.has(constants.GUILD_CHANNELS));
+  const obj3 = searchContext(16533);
+  const autoSearchMembersTab = searchContext(16534).useAutoSearchMembersTab(searchContext, !memo.has(constants.MEMBERS));
+  const obj4 = searchContext(16534);
+  const autoSearchPeopleTab = searchContext(16535).useAutoSearchPeopleTab(searchContext, !memo.has(constants.PEOPLE));
+  const obj5 = searchContext(16535);
+  const autoTrackSearchTabCountsViewedAnalytics = searchContext(16536).useAutoTrackSearchTabCountsViewedAnalytics({ searchContext, visibleTabCounts, visibleTabs });
   return callback(closure_21, { searchContext, visibleTabs, visibleTabCounts, width: width.width });
 };

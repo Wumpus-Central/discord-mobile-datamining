@@ -1,6 +1,6 @@
-// === Module 13349: _showAndroidRatingRequest ===
+// === Module 13573: _showAndroidRatingRequest ===
 
-// Module 13349 (_showAndroidRatingRequest)
+// Module 13573 (_showAndroidRatingRequest)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;

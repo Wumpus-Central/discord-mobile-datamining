@@ -1,9 +1,9 @@
-// === Module 12472: getUserProfileLiveActivities ===
+// === Module 12696: getUserProfileLiveActivities ===
 
-// Module 12472 (getUserProfileLiveActivities)
+// Module 12696 (getUserProfileLiveActivities)
 import set from "set" /* 2 */;
 import apply from "apply" /* 12 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 
 const ActivityTypes = ME.ActivityTypes;
 const result = set.fileFinishedImporting("modules/user_profile/utils/UserProfileStackedActivityCardUtils.tsx");

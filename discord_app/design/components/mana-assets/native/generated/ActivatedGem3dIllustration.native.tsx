@@ -1,10 +1,10 @@
-// === Module 6297: ActivatedGem3dIllustration ===
+// === Module 6306: ActivatedGem3dIllustration ===
 
-// Module 6297 (ActivatedGem3dIllustration)
+// Module 6306 (ActivatedGem3dIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5493 */;
-import metadataDefault from "metadata" /* 6298 */;
+import preloadDefault from "preload" /* 5501 */;
+import metadataDefault from "metadata" /* 6307 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ActivatedGem3dIllustration.native.tsx");

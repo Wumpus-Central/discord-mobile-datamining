@@ -1,21 +1,21 @@
-// === Module 6114: useCanManageGuildOfficialMessages ===
+// === Module 6122: useCanManageGuildOfficialMessages ===
 
-// Module 6114 (useCanManageGuildOfficialMessages)
-import int2hslRaw from "int2hslRaw" /* 688 */;
-import nDefault from "n" /* 689 */;
+// Module 6122 (useCanManageGuildOfficialMessages)
+import int2hslRaw from "int2hslRaw" /* 685 */;
+import nDefault from "n" /* 686 */;
 import hexToRgba from "hexToRgba" /* 4326 */;
-import experimentDefault from "experiment" /* 6115 */;
-import useCanUnarchiveThread from "useCanUnarchiveThread" /* 6116 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6117 */;
-import closure_3 from "createGuildRecordFromRust" /* 1909 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4121 */;
+import experimentDefault from "experiment" /* 6123 */;
+import useCanStartPrivateThread from "useCanStartPrivateThread" /* 6124 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6125 */;
+import closure_3 from "createGuildRecordFromRust" /* 1908 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4120 */;
 import { GUILD_OFFICIAL_HIGHLIGHT_ALPHA as closure_5 } from "MESSAGE_GROUP_SPACING" /* 4471 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 
 require = arg1;
 function useCanManageGuildOfficialMessages(arg0, arg1, location) {
   const _require = arg0;
-  let obj = _require(589);
+  let obj = _require(586);
   const items = [closure_3];
   const items1 = [arg0];
   const stateFromStores = obj.useStateFromStores(items, () => {
@@ -68,7 +68,7 @@ export const getAccessibleGuildOfficialTextColor = function getAccessibleGuildOf
     tmp5 = mixResult;
   }
   obj4 = nDefault;
-  obj = { foreground: tmp6, background: tmp5, ratio: tmp2(1363).WCAGContrastRatios.Text, saturationFactor: num };
+  obj = { foreground: tmp6, background: tmp5, ratio: tmp2(1362).WCAGContrastRatios.Text, saturationFactor: num };
   return hexToRgba.getAccessibleForegroundColor(obj);
 };
 export function showGuildOfficialMessageGradient(officialMessageStyle) {
@@ -102,7 +102,7 @@ export const isGuildOfficialMessagesEnabled = function isGuildOfficialMessagesEn
 };
 export const useIsGuildOfficialMessagesEnabled = function useIsGuildOfficialMessagesEnabled(id, useGuildActionRows) {
   const _require = id;
-  let obj = _require(589);
+  let obj = _require(586);
   const items = [closure_3];
   const items1 = [id];
   const stateFromStores = obj.useStateFromStores(items, () => {
@@ -152,13 +152,13 @@ export const useCanToggleGuildOfficialMessages = function useCanToggleGuildOffic
   if (tmp3) {
     return !tmp3;
   } else if (message.hasFlag(constants3.IS_GUILD_OFFICIAL)) {
-    let isActiveChannelOrUnarchivableThread = useCanUnarchiveThread.getIsActiveChannelOrUnarchivableThread(channel);
-    const obj2 = useCanUnarchiveThread;
+    let isActiveChannelOrUnarchivableThread = useCanStartPrivateThread.getIsActiveChannelOrUnarchivableThread(channel);
+    const obj2 = useCanStartPrivateThread;
   } else {
     isActiveChannelOrUnarchivableThread = null != channel && !channel.isPrivate();
     if (isActiveChannelOrUnarchivableThread) {
-      isActiveChannelOrUnarchivableThread = useCanUnarchiveThread.getIsActiveChannelOrUnarchivableThread(channel);
-      const obj = useCanUnarchiveThread;
+      isActiveChannelOrUnarchivableThread = useCanStartPrivateThread.getIsActiveChannelOrUnarchivableThread(channel);
+      const obj = useCanStartPrivateThread;
     }
     if (isActiveChannelOrUnarchivableThread) {
       isActiveChannelOrUnarchivableThread = channel.type !== constants.GUILD_VOICE;
@@ -187,8 +187,8 @@ export const canSendGuildOfficialMessages = function canSendGuildOfficialMessage
   if (enabled) {
     let isActiveChannelOrUnarchivableThread = null != throwTypeErrorResult2 && !throwTypeErrorResult2.isPrivate();
     if (isActiveChannelOrUnarchivableThread) {
-      isActiveChannelOrUnarchivableThread = useCanUnarchiveThread.getIsActiveChannelOrUnarchivableThread(throwTypeErrorResult2);
-      const obj3 = useCanUnarchiveThread;
+      isActiveChannelOrUnarchivableThread = useCanStartPrivateThread.getIsActiveChannelOrUnarchivableThread(throwTypeErrorResult2);
+      const obj3 = useCanStartPrivateThread;
     }
     if (isActiveChannelOrUnarchivableThread) {
       isActiveChannelOrUnarchivableThread = throwTypeErrorResult2.type !== constants.GUILD_VOICE;

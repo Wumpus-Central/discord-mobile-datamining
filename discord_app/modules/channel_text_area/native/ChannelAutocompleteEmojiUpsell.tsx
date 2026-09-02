@@ -1,10 +1,10 @@
-// === Module 11958: ChannelAutocompleteEmojiUpsell ===
+// === Module 12181: ChannelAutocompleteEmojiUpsell ===
 
-// Module 11958 (ChannelAutocompleteEmojiUpsell)
+// Module 12181 (ChannelAutocompleteEmojiUpsell)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { EMOJI_URL_BASE_SIZE } from "set" /* 1925 */;
+import { EMOJI_URL_BASE_SIZE } from "set" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -46,9 +46,9 @@ export default function ChannelAutocompleteEmojiUpsell(results) {
   });
   const result = 24 * substr.length;
   obj = { style: tmp.title, accessibilityRole: "header", variant: "text-sm/medium", children: null };
-  const intl = _require(1236).intl;
+  const intl = _require(1233).intl;
   obj = { count: results.length };
-  obj[3] = intl.format(_require(1236).t.uEky42, obj);
+  obj[3] = intl.format(_require(1233).t.uEky42, obj);
   let items = [callback(_require(4474).Text, obj), ];
   const items1 = [tmp.emojis, { width: result + 16 }];
   items[1] = callback(View, { style: items1, children: mapped });

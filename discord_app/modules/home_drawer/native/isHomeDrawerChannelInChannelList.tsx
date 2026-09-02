@@ -1,7 +1,7 @@
-// === Module 15909: useIsHomeDrawerChannelInChannelList ===
+// === Module 16140: useIsHomeDrawerChannelInChannelList ===
 
-// Module 15909 (useIsHomeDrawerChannelInChannelList)
-import initialize from "initialize" /* 589 */;
+// Module 16140 (useIsHomeDrawerChannelInChannelList)
+import initialize from "initialize" /* 586 */;
 import closure_2 from "updateUserGuildSettingsInternal" /* 4701 */;
 
 require = arg1;

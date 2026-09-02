@@ -1,6 +1,6 @@
-// === Module 10910: __INTERNAL_VIEW_CONFIG ===
+// === Module 11130: __INTERNAL_VIEW_CONFIG ===
 
-// Module 10910 (__INTERNAL_VIEW_CONFIG)
+// Module 11130 (__INTERNAL_VIEW_CONFIG)
 import set from "set" /* 2 */;
 import result2 from "result" /* 26 */;
 import renderElement from "renderElement" /* 114 */;

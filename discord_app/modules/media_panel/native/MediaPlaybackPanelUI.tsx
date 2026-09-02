@@ -1,14 +1,14 @@
-// === Module 16802: MediaPlaybackPanelUI ===
+// === Module 17038: MediaPlaybackPanelUI ===
 
-// Module 16802 (MediaPlaybackPanelUI)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 17038 (MediaPlaybackPanelUI)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { useContext } from "noop" /* 19 */;
-import closure_6 from "module_9627" /* 9627 */;
-import MediaPlaybackPanelModes from "MediaPlaybackPanelModes" /* 14191 */;
-import { IS_IOS } from "MIN_PAN_GESTURE_MOVE" /* 11841 */;
-import { BORDER_RADIUS_PHYSICS } from "VoicePanelModes" /* 11840 */;
+import closure_6 from "module_9640" /* 9640 */;
+import MediaPlaybackPanelModes from "MediaPlaybackPanelModes" /* 14414 */;
+import { IS_IOS } from "MIN_PAN_GESTURE_MOVE" /* 12064 */;
+import { BORDER_RADIUS_PHYSICS } from "VoicePanelModes" /* 12063 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -37,9 +37,9 @@ let result = require("set").fileFinishedImporting("modules/media_panel/native/Me
 export default function MediaPlaybackPanelUI() {
   const tmp = sharedValue3();
   wrapperDimensions = tmp;
-  const tmp4 = wrapperOffset(1493)();
+  const tmp4 = wrapperOffset(1492)();
   wrapperOffset = tmp4;
-  ({ wrapperDimensions, wrapperOffset } = mode(wrapperOffset(16801)));
+  ({ wrapperDimensions, wrapperOffset } = mode(wrapperOffset(17037)));
   let obj = wrapperDimensions(4217);
   const fn = function p() {
     return { position: "absolute", top: 0, left: 0, width: wrapperOffset.width, height: wrapperOffset.height, overflow: "hidden" };
@@ -67,12 +67,12 @@ export default function MediaPlaybackPanelUI() {
   const animatedStyle = obj.useAnimatedStyle(fn);
   let tmp8 = sharedValue3();
   dependencyMap = tmp8;
-  let tmp9 = wrapperOffset(1628)();
+  let tmp9 = wrapperOffset(1627)();
   callback = tmp9;
-  let tmp10 = wrapperOffset(1493)();
+  let tmp10 = wrapperOffset(1492)();
   React = tmp10;
   obj1 = React;
-  const context = React.useContext(wrapperOffset(16801));
+  const context = React.useContext(wrapperOffset(17037));
   mode = context.mode;
   pipState = context.pipState;
   pipAvoidanceSpecs = context.pipAvoidanceSpecs;
@@ -105,7 +105,7 @@ export default function MediaPlaybackPanelUI() {
       }
     }
   };
-  obj = { cheapWorkletShallowEqual: wrapperDimensions(9209).cheapWorkletShallowEqual, MediaPlaybackPanelModes: canShowPIP, updateSharedValueIfChanged: wrapperOffset(10991), wrapperDimensions, wrapperOffset };
+  obj = { cheapWorkletShallowEqual: wrapperDimensions(9223).cheapWorkletShallowEqual, MediaPlaybackPanelModes: canShowPIP, updateSharedValueIfChanged: wrapperOffset(11211), wrapperDimensions, wrapperOffset };
   fn3.__closure = obj;
   fn3.__workletHash = 5458787116551;
   fn3.__initData = maskEmptyElevation;
@@ -202,7 +202,7 @@ export default function MediaPlaybackPanelUI() {
       return;
     }
   }
-  obj = { cheapWorkletShallowEqual: wrapperDimensions(9209).cheapWorkletShallowEqual, MediaPlaybackPanelModes: canShowPIP, getClampedPIPPosition: wrapperDimensions(16600).getClampedPIPPosition, safeArea: tmp9, disableHorizontalSafeAreas: tmp18, wrapperOpacity: sharedValue2, animateWrapperTranslation: sharedValue3, wrapperTranslationX: sharedValue, wrapperTranslationY: sharedValue1 };
+  obj = { cheapWorkletShallowEqual: wrapperDimensions(9223).cheapWorkletShallowEqual, MediaPlaybackPanelModes: canShowPIP, getClampedPIPPosition: wrapperDimensions(16835).getClampedPIPPosition, safeArea: tmp9, disableHorizontalSafeAreas: tmp18, wrapperOpacity: sharedValue2, animateWrapperTranslation: sharedValue3, wrapperTranslationX: sharedValue, wrapperTranslationY: sharedValue1 };
   C.__closure = obj;
   C.__workletHash = 10793489581273;
   C.__initData = animatedStyle1;
@@ -271,7 +271,7 @@ export default function MediaPlaybackPanelUI() {
       L.__workletHash = 11049335639852;
       L.__initData = xl;
       animatedStyle1 = tmp6Result.useAnimatedStyle(L);
-      xl = tmp2(712).radii.xl;
+      xl = tmp2(709).radii.xl;
       tmp6Result = tmp6(4217);
       class B {
         constructor() {
@@ -317,14 +317,14 @@ export default function MediaPlaybackPanelUI() {
       fn4.__workletHash = 8557652955267;
       fn4.__initData = closure_20;
       const animatedStyle3 = tmp6(4217).useAnimatedStyle(fn4);
-      const context1 = obj1.useContext(tmp2(16801));
+      const context1 = obj1.useContext(tmp2(17037));
       ({ wrapperOffset: wrapperOffset2, pipState: pipState2 } = context1);
       obj4 = { panGestureEnabled: true, mode: null, pipState: null, wrapperOffset: null };
       const tmp6Result1 = tmp6(4217);
-      obj4[1] = tmp6(16602).MorphablePanelModes.PIP;
+      obj4[1] = tmp6(16837).MorphablePanelModes.PIP;
       obj4[2] = pipState2;
       obj4[3] = wrapperOffset2;
-      const tmp2Result = tmp2(16602);
+      const tmp2Result = tmp2(16837);
       obj5 = { children: null };
       obj6 = { style: null, pointerEvents: "box-none", children: null };
       obj6[0] = animatedStyle;
@@ -334,13 +334,13 @@ export default function MediaPlaybackPanelUI() {
       obj8 = { style: null, children: null };
       obj8[0] = tmp31;
       const obj9 = { gesture: null, children: null };
-      obj9[0] = tmp2(16602)(obj4);
+      obj9[0] = tmp2(16837)(obj4);
       const obj10 = { style: null, children: null };
       const items3 = [tmp.content, animatedStyle3];
       obj10[0] = items3;
-      obj10[1] = sharedValue2(tmp2(16803), {});
+      obj10[1] = sharedValue2(tmp2(17039), {});
       obj9[1] = sharedValue2(tmp2(4217).View, obj10);
-      obj8[1] = sharedValue2(tmp6(5652).GestureDetector, obj9);
+      obj8[1] = sharedValue2(tmp6(5660).GestureDetector, obj9);
       obj7[1] = sharedValue2(tmp2(4217).View, obj8);
       class R {
         constructor() {
@@ -349,7 +349,7 @@ export default function MediaPlaybackPanelUI() {
         }
       }
       obj5[0] = sharedValue2(tmp2(4217).View, obj6);
-      return sharedValue2(tmp6(5940).LayerScope, obj5);
+      return sharedValue2(tmp6(5948).LayerScope, obj5);
     }
   }
   maskEmptyElevation = tmp8.maskEmptyElevation;

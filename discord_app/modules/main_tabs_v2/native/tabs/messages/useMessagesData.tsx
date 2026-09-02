@@ -1,12 +1,12 @@
-// === Module 15636: useMessagesData ===
+// === Module 15867: useMessagesData ===
 
-// Module 15636 (useMessagesData)
+// Module 15867 (useMessagesData)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "_handleConnectionOpen" /* 5221 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "_handleConnectionOpen" /* 5229 */;
+import closure_6 from "fetchFingerprint" /* 1215 */;
 import closure_7 from "markAllUserIdListsStale" /* 4130 */;
-import closure_8 from "makeSortedChannel" /* 6065 */;
+import closure_8 from "makeSortedChannel" /* 6073 */;
 
 const require = arg1;
 let obj = { HappeningNow: 0, [0]: "HappeningNow", EmptyState: 1, [1]: "EmptyState" };

@@ -1,6 +1,6 @@
-// === Module 7227: next ===
+// === Module 7236: next ===
 
-// Module 7227 (next)
+// Module 7236 (next)
 import set from "set" /* 2 */;
 
 class Chained {

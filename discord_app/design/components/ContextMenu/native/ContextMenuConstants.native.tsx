@@ -1,8 +1,8 @@
-// === Module 8794: CONTEXT_MENU_LONG_PRESS_DURATION_MS ===
+// === Module 8809: CONTEXT_MENU_LONG_PRESS_DURATION_MS ===
 
-// Module 8794 (CONTEXT_MENU_LONG_PRESS_DURATION_MS)
+// Module 8809 (CONTEXT_MENU_LONG_PRESS_DURATION_MS)
 import HapticFeedbackTypes2 from "HapticFeedbackTypes" /* 4446 */;
-import set from "set" /* 500 */;
+import set from "set" /* 1234 */;
 
 set = set.isIOS();
 const HapticFeedbackTypes = HapticFeedbackTypes2.HapticFeedbackTypes;

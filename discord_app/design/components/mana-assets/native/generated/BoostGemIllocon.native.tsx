@@ -1,10 +1,10 @@
-// === Module 6363: BoostGemIllocon ===
+// === Module 6372: BoostGemIllocon ===
 
-// Module 6363 (BoostGemIllocon)
+// Module 6372 (BoostGemIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5493 */;
-import metadataDefault from "metadata" /* 6364 */;
+import preloadDefault from "preload" /* 5501 */;
+import metadataDefault from "metadata" /* 6373 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/BoostGemIllocon.native.tsx");

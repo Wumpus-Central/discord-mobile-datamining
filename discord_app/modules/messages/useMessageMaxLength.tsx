@@ -1,10 +1,10 @@
-// === Module 8160: useMessageMaxLength ===
+// === Module 8168: useMessageMaxLength ===
 
-// Module 8160 (useMessageMaxLength)
-import initialize from "initialize" /* 589 */;
+// Module 8168 (useMessageMaxLength)
+import initialize from "initialize" /* 586 */;
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4139 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import closure_3 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
 
 require = arg1;
 ({ MAX_MESSAGE_LENGTH_PREMIUM: c4, MAX_MESSAGE_LENGTH: c5 } = ME);

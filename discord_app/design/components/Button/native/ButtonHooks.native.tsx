@@ -1,7 +1,7 @@
 // === Module 4934: styleProperties ===
 
 // Module 4934 (styleProperties)
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import map from "map" /* 4197 */;
 import closure_3 from "noop" /* 19 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -12,7 +12,7 @@ let closure_5 = createCacheKey.experimental_createToken(() => "#161CBB");
 let closure_6 = createCacheKey.experimental_createToken(() => "#1318A0");
 createCacheKey = { primary: ThemesDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT, "experimental_welcome-secondary": ThemesDefault.unsafe_rawColors.WHITE, secondary: ThemesDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, tertiary: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT, destructive: ThemesDefault.colors.CONTROL_CRITICAL_PRIMARY_TEXT_DEFAULT, "critical-primary": ThemesDefault.colors.CONTROL_CRITICAL_PRIMARY_TEXT_DEFAULT, "critical-secondary": ThemesDefault.colors.CONTROL_CRITICAL_SECONDARY_TEXT_DEFAULT, active: ThemesDefault.colors.CONTROL_CONNECTED_TEXT_DEFAULT, "primary-overlay": ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT, "secondary-overlay": ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT, "experimental_premium-primary": ThemesDefault.colors.WHITE, "experimental_premium-basic": ThemesDefault.colors.WHITE, "experimental_premium-secondary": ThemesDefault.colors.TEXT_BRAND, "icon-only": ThemesDefault.colors.CONTROL_ICON_ONLY_ICON_DEFAULT, expressive: ThemesDefault.colors.CONTROL_EXPRESSIVE_TEXT_DEFAULT };
 const styleProperties = createCacheKey.createStyleProperties((arg0) => {
-  const obj = { backgroundInactive: null, backgroundPressed: null, borderInactive: null, borderPressed: null };
+  let obj = { backgroundInactive: null, backgroundPressed: null, borderInactive: null, borderPressed: null };
   switch (obj) {
     case "HTTP":
     break;
@@ -132,6 +132,8 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "apply":
     break;
+    case "assign":
+    break;
     case "backgroundColor":
     break;
     case "round":
@@ -145,8 +147,6 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     case "bottom":
     break;
     case "call":
-    break;
-    case "category":
     break;
     case "channel":
     break;
@@ -171,6 +171,8 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     case "colors":
     break;
     case "concat":
+    break;
+    case "construct":
     break;
     case "constructor":
     break;
@@ -256,8 +258,6 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "getCurrentUser":
     break;
-    case "getGuild":
-    break;
     case "guild":
     break;
     case "guildId":
@@ -328,6 +328,8 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "marginBottom":
     break;
+    case "match":
+    break;
     case "max":
     break;
     case "memo":
@@ -343,8 +345,6 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     case "withTiming":
     break;
     case "min":
-    break;
-    case "ml":
     break;
     case "mn":
     break;
@@ -452,6 +452,8 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "toCharArray$esjava$1":
     break;
+    case "toLowerCase":
+    break;
     case "toString":
     break;
     case "top":
@@ -486,8 +488,6 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "variant":
     break;
-    case "warn":
-    break;
     case "width":
     break;
     case "window":
@@ -502,9 +502,9 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "ay":
     break;
-    case "guildIconContainer":
+    case "guildRoomLocalDisconnect":
     break;
-    case "dragOffsetFromRight":
+    case "extraBottomHeight":
     break;
     case "$ZodBoolean":
     break;
@@ -522,8 +522,6 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "ActionBarPrimaryButton":
     break;
-    case "ary":
-    break;
     case "u":
     break;
     case "tt":
@@ -536,13 +534,21 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "D":
     break;
-    case "DateParser":
+    case "DateToSystemTimezoneSetter":
     break;
     case "at":
     break;
     case "te":
     break;
-    case "serializeEnd":
+    case "mez":
+    break;
+    case "Setter":
+    break;
+    case "useDefaultSendStartStageNotificationToggle":
+    break;
+    case "NotificationToggle":
+    break;
+    case "onToggleReplyMention":
     break;
     case "MarkupParserNodeTypeError":
     break;
@@ -553,8 +559,6 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     case "ro":
     break;
     case "or":
-    break;
-    case "SEMANTIC_ATTRIBUTE_SENTRY_SOURCE":
     break;
     case "BOT_HTTP_INTERACTIONS":
     break;
@@ -568,17 +572,17 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "INTERACTIONS":
     break;
-    case "NSFW_SERVER_INVITE":
+    case "NSFW_SERVER":
     break;
-    case "NSFW_SERVER_INVITE_EMBED":
+    case "NSFW_SERVER_AGE_RESTRICTION":
     break;
-    case "SERVER_INVITE":
+    case "AGE_RESTRICTION_STATUS_RESTRICTIVENESS_ORDERING":
     break;
-    case "INVITE_EMBED":
+    case "RING_CALL_ACCEPTED":
     break;
-    case "INVITE_EMBED_ACTIONED":
+    case "CALL_ACCEPT":
     break;
-    case "waitForSession":
+    case "ForumSpoilerIcon":
     break;
     case "rm":
     break;
@@ -602,11 +606,15 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "perGuildMaxCount":
     break;
-    case "wkst":
+    case "parseUrl":
     break;
-    case "FeDistantLight":
+    case "parseUrlencoded":
     break;
-    case "LightSource":
+    case "encodedBodySize":
+    break;
+    case "platformProfilers":
+    break;
+    case "isFetchingSounds":
     break;
     case "getChannelIcon":
     break;
@@ -658,9 +666,9 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "mit":
     break;
-    case "with_bundled_skus":
+    case "withTouchEventBoundary":
     break;
-    case "purchaseUpdatedListener":
+    case "TouchEventBoundary":
     break;
     case "$ZodMap":
     break;
@@ -670,7 +678,7 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "ap":
     break;
-    case "$ZodCheckGreaterThan":
+    case "AbortCodes":
     break;
     case "ToIntlMathematicalValue":
     break;
@@ -690,10 +698,6 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "be":
     break;
-    case "role_connections_verification_url":
-    break;
-    case "baseType":
-    break;
     case "$ZodObject":
     break;
     case "$ZodObjectJIT":
@@ -708,6 +712,10 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "IT":
     break;
+    case "toolCallSpanMap":
+    break;
+    case "getPendingChanges":
+    break;
     case "MEDIA_PICKER_SEND_BUTTON_SPRING":
     break;
     case "marginHorizontal":
@@ -716,15 +724,21 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "rect":
     break;
-    case "GAME_EVENT":
+    case "QUEST_HOME_SEARCH_CLOSED":
+    break;
+    case "SEARCH_CLOSED":
+    break;
+    case "CHANNEL_NOTICE_SHOW_DELAY":
+    break;
+    case "DELAYED":
     break;
     case "PX_80":
     break;
     case "_":
     break;
-    case "tabContainer":
+    case "createForumPostActions":
     break;
-    case "tabContainerSelected":
+    case "suppressRowAnimationSequenceId":
     break;
     case "AUTO_MODERATION_REMOVE_REGEX_PATTERNS":
     break;
@@ -746,21 +760,13 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "perUserFpsWindow":
     break;
-    case "woman_and_man_holding_hands_tone2":
+    case "woman_and_man_holding_hands_tone1_tone4":
     break;
-    case "woman_and_man_holding_hands_tone2_tone1":
+    case "CHANNEL_CALL":
     break;
-    case "PREMIUM_PLANS":
+    case "CHANNEL_CALL_ACTION_BAR":
     break;
-    case "ANSWER_HAS":
-    break;
-    case "HAS_APPLICATION":
-    break;
-    case "APPLICATION_COMMAND_INDEX_CHANNEL":
-    break;
-    case "CHANNEL_ACTION_BANNER_HEIGHT":
-    break;
-    case "BANNER_HEIGHT":
+    case "CALL_ACTION_BAR_HEIGHT":
     break;
     case "fgClip":
     break;
@@ -792,14 +798,6 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "et":
     break;
-    case "sok":
-    break;
-    case "commandType":
-    break;
-    case "commandTypes":
-    break;
-    case "splatter":
-    break;
     case "postformat":
     break;
     case "form":
@@ -826,7 +824,9 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "g":
     break;
-    case "RTC_REGION_RANKING":
+    case "VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE":
+    break;
+    case "MESSAGE_LONG_PRESS_MENU":
     break;
     case "$ZodSymbol":
     break;
@@ -838,23 +838,15 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "bol":
     break;
-    case "QUEST_BAR_RENDER_DELAY":
+    case "QUEST_BAR_RENDERED":
     break;
-    case "LAYER_POP_START":
+    case "RED_NEW_45":
     break;
-    case "RTC_CONNECTION_FLAGS":
+    case "hasConnection":
     break;
-    case "useExistingPin":
+    case "hasConnectionEntrypointUrl":
     break;
-    case "PinPMove":
-    break;
-    case "MoveToAudienceButton":
-    break;
-    case "onAutocompleterResultsChange":
-    break;
-    case "getApplicationIdFromDetectableId":
-    break;
-    case "tableId":
+    case "gameClaimMarkAsDismissed":
     break;
     case "ActionSheetHeaderPressableText":
     break;
@@ -864,7 +856,7 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "ext":
     break;
-    case "isSearchLocked":
+    case "isProfileFrameRecord":
     break;
     case "AccessibilityFocusView":
     break;
@@ -1036,6 +1028,10 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "redBoxV2Android":
     break;
+    case "getExperimentBucketName":
+    break;
+    case "di":
+    break;
     case "dist":
     break;
     case "distance":
@@ -1048,19 +1044,9 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "ce":
     break;
-    case "ACTIVITY_SESSION_JOIN_FAILED":
+    case "NoResults":
     break;
-    case "FAIL":
-    break;
-    case "FAILED":
-    break;
-    case "FAILED_ACTIVITY_LAUNCH_CHECKS":
-    break;
-    case "CHECKS_REQUIRED":
-    break;
-    case "REQUIRED_OPTIONS_FOR_START_PAYMENT":
-    break;
-    case "PAYMENT_FLOW_SUCCEEDED":
+    case "NoResultsAlt":
     break;
     case "access":
     break;
@@ -1082,23 +1068,19 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "bel":
     break;
-    case "isWishlistableCollectiblesProduct":
+    case "PREMIUM_TIER_2_PINK":
     break;
-    case "INVALID_TYPE":
+    case "PREMIUM_TIER_2_PINK_FOR_GRADIENTS":
     break;
-    case "PREMIUM_TIER_2_PURPLE":
-    break;
-    case "PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS":
-    break;
-    case "PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS_2":
+    case "PREMIUM_TIER_2_PINK_FOR_GRADIENTS_2":
     break;
     case "Role":
     break;
     case "RoleFlags":
     break;
-    case "scrollToQuestId":
+    case "scrollToItem":
     break;
-    case "AgeAssuranceMethod":
+    case "embedUrl":
     break;
     case "accessibleDismiss":
     break;
@@ -1124,15 +1106,41 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "z":
     break;
+    case "zo":
+    break;
+    case "zon":
+    break;
     case "tal":
     break;
     case "collapseText":
     break;
     case "paddingVertical":
     break;
-    case "UNKNOWN_PAYMENT_SOURCE":
+    case "initializeRouterUtils":
     break;
-    case "PAYMENT_SOURCE_REQUIRED":
+    case "GUILD_MEMBER_REQUEST_TO_JOIN":
+    break;
+    case "REQUEST_TO_JOIN_USER_INELIGIBLE":
+    break;
+    case "INELIGIBLE":
+    break;
+    case "INELIGIBLE_FOR_FAMILY_CENTER":
+    break;
+    case "FAMILY_CENTER":
+    break;
+    case "FAMILY_CENTER_ACTION":
+    break;
+    case "CENTER":
+    break;
+    case "ENTER":
+    break;
+    case "TWITTER_LEGACY":
+    break;
+    case "LEGACY_AUDIO_SUBSYSTEM":
+    break;
+    case "SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES":
+    break;
+    case "PAYPAL_FLOW_OPTION_REQUIRED":
     break;
     case "RED_NEW_34":
     break;
@@ -1150,13 +1158,31 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "ms":
     break;
+    case "flag_sk":
+    break;
+    case "spade_suit":
+    break;
+    case "DARK_BRAND_260_LIGHT_BRAND_200":
+    break;
+    case "BRAND_260":
+    break;
+    case "BRAND_200":
+    break;
     case "GuildEntityDao":
     break;
     case "EntityDao":
     break;
     case "Dao":
     break;
-    case "renderOptions":
+    case "kiss_woman_woman_dark_skin_tone_medium_skin_tone":
+    break;
+    case "isTrustedProtocol":
+    break;
+    case "collapsable":
+    break;
+    case "collapsableChildren":
+    break;
+    case "renderCodedLinks":
     break;
     case "app":
     break;
@@ -1174,13 +1200,39 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "io":
     break;
-    case "showHeader":
-    break;
-    case "showHeaderCloseButton":
+    case "showHidden":
     break;
     case "_applyCombination":
     break;
     case "ly":
+    break;
+    case "backoffTimeSec":
+    break;
+    case "../../../../lib/assign":
+    break;
+    case "../../../lib/assign":
+    break;
+    case "../../lib/assign":
+    break;
+    case "../lib/assign":
+    break;
+    case ".":
+    break;
+    case "./":
+    break;
+    case "lib":
+    break;
+    case "assignSimilarDate":
+    break;
+    case "sign":
+    break;
+    case "gn":
+    break;
+    case "mapViewabilityValues":
+    break;
+    case "stickySectionHeadersEnabled":
+    break;
+    case "huit":
     break;
     case "foi":
     break;
@@ -1198,27 +1250,33 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "gr":
     break;
+    case "un":
+    break;
     case "und":
     break;
     case "Color":
     break;
-    case "ACTIVITY_LAUNCH_UNKNOWN_CHANNEL":
+    case "ACTIVITY_LAUNCH_NOT_IN_EXPERIMENT":
     break;
-    case "UNKNOWN":
+    case "EXPERIMENT":
     break;
-    case "UNKNOWN_CHANNEL":
+    case "EXPERIMENTAL_HIGH_ELEVATION_SHADOW_PARAMS":
     break;
-    case "DISCORD_CONSENT":
+    case "SPECTATOR_MODE":
     break;
     case "FormSubmitErrorType":
     break;
-    case "person_walking_facing_right_tone5":
+    case "person_walking_facing_right_tone3":
     break;
-    case "AvatarLockeExample":
+    case "numHours":
     break;
-    case "otherUser":
+    case "giftReminderCoachmark":
     break;
-    case "otherUserId":
+    case "view_seek_duration":
+    break;
+    case "durationV":
+    break;
+    case "onVerified":
     break;
     case "_bodyArrayBuffer":
     break;
@@ -1238,8 +1296,6 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "iu":
     break;
-    case "canUseMoreQuestOrbs":
-    break;
     case "overflow_bottom":
     break;
     case "_bottom":
@@ -1249,6 +1305,8 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     case "bottom-right":
     break;
     case "ott":
+    break;
+    case "otto":
     break;
     case "tom":
     break;
@@ -1263,16 +1321,6 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     case "all":
     break;
     case "ll":
-    break;
-    case "discord_protos.discord_experimentation.v1.filter_category":
-    break;
-    case "_category":
-    break;
-    case "categoryContainer":
-    break;
-    case "go":
-    break;
-    case "ry":
     break;
     case "_channelId":
     break;
@@ -1294,8 +1342,6 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "_id":
     break;
-    case "hasSocialLayerStorefront":
-    break;
     case "family_adult_adult_child":
     break;
     case "family_adult_adult_child_child":
@@ -1312,6 +1358,8 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "ren":
     break;
+    case "reversed_hand_with_middle_finger_extended_tone4":
+    break;
     case "_longestInteractionMap":
     break;
     case "applicationTopWrapperScrollView":
@@ -1322,11 +1370,11 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "ix8XIj":
     break;
-    case "remoteClipId":
+    case "ClientOutdatedAcceptGiftError":
     break;
-    case "GuildActivityStatusRestrictionDefault":
+    case "td":
     break;
-    case "GuildActivityStatusRestrictionDefaultV2":
+    case "Accept":
     break;
     case "uni":
     break;
@@ -1348,17 +1396,15 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "concatSettings":
     break;
-    case "substreams":
+    case "subtitleTrailing":
     break;
-    case "streams":
+    case "getLicense":
     break;
     case "$constructor":
     break;
     case "const":
     break;
     case "constr":
-    break;
-    case "construct":
     break;
     case "ons":
     break;
@@ -1377,12 +1423,12 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     case "containerBorderColor":
     break;
     case "ai":
+      obj[0] = ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT;
+      obj[1] = ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE;
+      obj[2] = c4;
+      obj[3] = c4;
     break;
     case "ner":
-    break;
-    case "toy":
-    break;
-    case "getDebugState":
     break;
     case "creative_content":
     break;
@@ -1402,21 +1448,31 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "withAlphabeticalSections":
     break;
+    case "d+0vwo":
+    break;
+    case "wol":
+    break;
+    case "wolf":
+    break;
     case "AccountAgeTier10LargeBadge":
     break;
     case "cou":
     break;
     case "Badge":
     break;
-    case "getConnectedActivityChannelId":
+    case "disableBackgroundOverlay":
+    break;
+    case "refreshImpressions":
+    break;
+    case "topic":
+    break;
+    case "topicContainer":
+    break;
+    case "getAdDecisionByPlacementAndAdCreativeId":
     break;
     case "cr":
     break;
     case "les":
-    break;
-    case "_buildKeyCodeMapFromKeyMap":
-    break;
-    case "build":
     break;
     case "message_type":
     break;
@@ -1428,27 +1484,29 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "currentAppIcon":
     break;
-    case "containerIndex":
+    case "containerId":
     break;
-    case "expandEventProperties":
+    case "dispatchLazyCache":
     break;
-    case "addRelationship":
+    case "useGuildMemberOrUserPendingDisplayNameStyles":
     break;
-    case "TRAIN_SIMULATOR":
+    case "parallel":
     break;
-    case "getCurrentGuildSettings":
+    case "preparedTextCacheSize":
     break;
-    case "GuildSettingsSubsections":
-    break;
-    case "sections":
-    break;
-    case "sectionsContainer":
+    case "setGlobalHandler":
     break;
     case "_$esjava$cursor":
     break;
     case "cursorColor":
     break;
     case "so":
+    break;
+    case "MOBILE_UNREADBAR_TEXT_DEFAULT":
+    break;
+    case "DEFAULT_MEDIA_MAX_WIDTH":
+    break;
+    case "NitroPlatinumBadgeSmallBadge":
     break;
     case "_clientSdkMetadata":
     break;
@@ -1482,9 +1540,7 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "fin":
     break;
-    case "IsSanctionedSimpleUnitIdentifier":
-    break;
-    case "Identifier":
+    case "heroArtVideoLinkLightTheme":
     break;
     case "undelete":
     break;
@@ -1500,11 +1556,23 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "startMs":
     break;
-    case "shouldUseAnimatedObjectForTransform":
+    case "shouldUseCache":
     break;
-    case "formTitle":
+    case "checkViewableIndicesChanges":
     break;
-    case "connectOrLurkStage":
+    case "neutral_face":
+    break;
+    case "inputValue":
+    break;
+    case "inputValues":
+    break;
+    case "openid_params":
+    break;
+    case "leftSlot":
+    break;
+    case "two_hearts":
+    break;
+    case "renderChannelTitle":
     break;
     case "avatar_description":
     break;
@@ -1528,9 +1596,13 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "pt":
     break;
-    case "updateOwnerId":
+    case "INCIDENT_TIMESTAMP":
     break;
-    case "isArrayEqual":
+    case "TIMESTAMPS":
+    break;
+    case "maxBitrate":
+    break;
+    case "isOnReverseTrial":
     break;
     case "aria-disabled":
     break;
@@ -1546,17 +1618,11 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "internalBinaryRead":
     break;
-    case "blond_haired_woman_tone4":
+    case "proxy_icon_url":
     break;
-    case "woman_tone4":
+    case "icon_url":
     break;
-    case "woman_tone4_beard":
-    break;
-    case "man_tone4_beard":
-    break;
-    case "bearded_person_tone4":
-    break;
-    case "person_tone4_bald":
+    case "party_id":
     break;
     case "_dispatch":
     break;
@@ -1572,11 +1638,7 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "tc":
     break;
-    case "unsubscribeMembers":
-    break;
-    case "subscribeMembers":
-    break;
-    case "renderActivityInstanceEmbed":
+    case "renderActivityInviteEmbed":
     break;
     case "time_to_full_display":
     break;
@@ -1596,12 +1658,6 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "internalBinaryWrite":
     break;
-    case "GREEN_NEW_58":
-    break;
-    case "8Hvr3+":
-    break;
-    case "weekData":
-    break;
     case "div":
     break;
     case "diversityChildren":
@@ -1612,9 +1668,7 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "renderCommunicationDisabled":
     break;
-    case "InboxSettings":
-    break;
-    case "jpg":
+    case "SpendingLimitSettings":
     break;
     case "LhlgY9":
     break;
@@ -1652,7 +1706,15 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "enable":
     break;
-    case "shouldShowBlockedUsers":
+    case "shouldShowBlurredThumbnailImage":
+    break;
+    case "getAwaitingRemoteSessionInfo":
+    break;
+    case "forFractionalPremium":
+    break;
+    case "FractionalPremiumSKUs":
+    break;
+    case "FractionalPremiumSKUsSets":
     break;
     case "@braintree/extended-promise":
     break;
@@ -1682,7 +1744,7 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "referrerPolicy":
     break;
-    case "beforeAddRecordingEvent":
+    case "getGuildDefaults":
     break;
     case "../../../lib/braintree-error":
     break;
@@ -1738,7 +1800,11 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "dz":
     break;
-    case "useApplicationsInContext":
+    case "storeToken":
+    break;
+    case "enableIntegrityCheck":
+    break;
+    case "SceneView":
     break;
     case "EntitlementTenantFulfillmentStatus":
     break;
@@ -1746,31 +1812,34 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "__findAnimatedPropsNodes":
     break;
-    case "inputRow":
+    case "USE_NOW":
     break;
-    case "withSentryReactRouterV6Routing":
+    case "NOW_PLAYING_CONSENT_CARD":
     break;
-    case "getMaxScrollOffset":
+    case "CARD_MUTED_PRESSED_BG":
     break;
-    case "setAudioInputDevice":
+    case "BGR":
     break;
-    case "availableSounds":
+    case "GRABPAY_MY":
     break;
-    case "showListsAndHeaders":
+    case "MYR":
     break;
-    case "useHEVC":
+    case "ROLE_SUBSCRIPTION_SETTING":
+      obj = { backgroundInactive: null, backgroundPressed: null, borderInactive: null, borderPressed: null };
+      obj[0] = ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT;
+      obj[1] = ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_ACTIVE;
+      obj[2] = c4;
+      obj[3] = c4;
+      return obj;
+    case "SETTINGS_WINDOWS":
     break;
-    case "VC_TILE_ACTIVITY_SUGGESTION":
+    case "WINDOWS":
     break;
-    case "GUILD_ROOM_DISCONNECT":
+    case "WINDOWS_GRAPHICS_CAPTURE_BUILD":
     break;
-    case "DISCONNECTING":
+    case "BUILD_OVERRIDE_COOKIE_NAME":
     break;
-    case "CONNECTING":
-    break;
-    case "GIFT_INFO_OPTIONS_MISSING":
-    break;
-    case "MISSING_PERMISSIONS":
+    case "MEDIA_NUM_COLUMNS":
     break;
     case "system_channel_flags":
     break;
@@ -1792,13 +1861,15 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "oldestUnreadMessageIdStale":
     break;
-    case "USER_LOGIN":
+    case "addPendingAuthorizedState":
     break;
-    case "USER_LOGIN_FLOW":
+    case "logotype_dark":
     break;
-    case "/AXYnE":
+    case "darkAppearance":
     break;
-    case "nEOg1N":
+    case "woman_juggling_medium_skin_tone":
+    break;
+    case "man_juggling_medium_skin_tone":
     break;
     case "fo":
     break;
@@ -1806,15 +1877,7 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "forEachChannel":
     break;
-    case "flag_pe":
-    break;
-    case "_pendingRequests":
-    break;
-    case "pendingRequests":
-    break;
-    case "quests3PDataOptedOut":
-    break;
-    case "nei":
+    case "TranscriptOutlineIcon":
     break;
     case "DiscountsMegaphoneSpotIllustration":
     break;
@@ -1826,13 +1889,9 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "phone":
     break;
-    case "LoginRequiredActions":
+    case "QUICKSWITCHER_RESULT_SELECTED":
     break;
-    case "getCardProductName":
-    break;
-    case "q9n0Ta":
-    break;
-    case "coerceChannelRoute":
+    case "createScheduledMessage":
     break;
     case "getChannelA11yHint":
     break;
@@ -1856,31 +1915,19 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "StreamVolumeItem":
     break;
-    case "_getGuildState":
-    break;
-    case "getGuildState":
-    break;
-    case "G":
-    break;
-    case "Guild":
-    break;
     case "_guildId":
     break;
     case "gu":
     break;
     case "current_guild_id":
     break;
-    case "getContacts":
+    case "getContent":
     break;
-    case "woman_farmer_tone2":
+    case "getContentAvailable":
     break;
-    case "man_farmer_tone2":
+    case "getPrice":
     break;
-    case "farmer_tone2":
-    break;
-    case "FAMILY_CENTER_CONNECTION":
-    break;
-    case "FAMILY_CENTER_CONNECTION_PREREQUISITES":
+    case "getPriceForCollectiblesProduct":
     break;
     case "hasDiversity":
     break;
@@ -1894,31 +1941,23 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "DefaultGuildsRestrictedV2":
     break;
+    case "currentSubscription":
+    break;
     case "avatar_hash":
     break;
     case "_hash":
     break;
     case "hashKey":
     break;
-    case "backup":
-    break;
-    case "backup_codes":
-    break;
-    case "codes":
+    case "gek":
     break;
     case "bhd":
     break;
-    case "IN_APP_MESSAGE_SOUNDS":
+    case "INVITE_RESOLVE_SUCCESS":
     break;
-    case "SOUNDS_PER_ROW":
+    case "guild_monetization":
     break;
-    case "woman_gesturing_ok_tone3":
-    break;
-    case "man_gesturing_ok_tone3":
-    break;
-    case "isPrivate":
-    break;
-    case "isPrivateChannel":
+    case "monetizationDisclosureContainerStyle":
     break;
     case "_header":
     break;
@@ -1930,33 +1969,19 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "YsCuyF":
     break;
-    case "FALSE_OPTION_NAME":
+    case "FAMILY_CENTER_ERROR_CODE_TO_FAILURE":
     break;
-    case "OPTION_NAME_CONTAINS":
+    case "REACTIVATION_OFFER_REDEEM":
     break;
-    case "CONTAINS_SELF_HARM_CONTENT":
+    case "REDEEM_REWARD":
     break;
-    case "SELF_HARM":
+    case "IMAGE_VIDEO_DATA_SETTINGS_UPDATED":
     break;
-    case "SELF_HARM_CONTENT":
+    case "onOptionValueChange":
     break;
-    case "CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE":
+    case "onValueChange":
     break;
-    case "E2EE_STREAM_VERIFICATION_SHARE_CLICKED":
-    break;
-    case "ACCELEROMETER":
-    break;
-    case "ER":
-    break;
-    case "RO":
-    break;
-    case "PentaxModelID":
-    break;
-    case "tax":
-    break;
-    case "Model":
-    break;
-    case "originalEnabled":
+    case "onValueChanged":
     break;
     case "player_height":
     break;
@@ -1965,12 +1990,18 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     case "heightAverageWindow":
     break;
     case "eight":
-    break;
+      obj[0] = c4;
+      obj[1] = c4;
+      obj[2] = c4;
+      obj[3] = c4;
+      return obj;
     case "ht":
     break;
-    case "withMutualGuilds":
+    case "withMutualFriends":
     break;
-    case "errorTracker":
+    case "withMutualFriendsCount":
+    break;
+    case "num_words":
     break;
     case "FadeOutRight":
     break;
@@ -1995,11 +2026,7 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     case "inc":
     break;
     case "include":
-      obj[0] = c4;
-      obj[1] = c4;
-      obj[2] = c4;
-      obj[3] = c4;
-      return obj;
+    break;
     case "includesBounties":
     break;
     case "lu":
@@ -2010,7 +2037,13 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "origin_pane":
     break;
-    case "registerWebWorker":
+    case "relationsSnapshot":
+    break;
+    case "activityCustomId":
+    break;
+    case "disableFalsePositiveButton":
+    break;
+    case "onRecurrencePress":
     break;
     case "__internalInstanceHandle":
     break;
@@ -2046,17 +2079,7 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "tl":
     break;
-    case "getApexExperiments":
-    break;
-    case "ApexExperimentsMessage":
-    break;
-    case "MessageAttachmentFlags":
-    break;
-    case "attemptToShowTooltip":
-    break;
-    case "TooltipArrowDirections":
-    break;
-    case "shouldNotifyLoadEvents":
+    case "getAnyStreamForUser":
     break;
     case "activity_items":
     break;
@@ -2066,25 +2089,17 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "item":
     break;
-    case "bow_tone1":
+    case "open_hands":
     break;
-    case "dagger":
-    break;
-    case "dagger_knife":
-    break;
-    case "knife":
+    case "open_hands_tone1":
     break;
     case "activeUnjoinedThreads":
     break;
     case "jo":
     break;
-    case "MoreHorizontalIcon":
-    break;
     case "js":
     break;
     case "xs":
-    break;
-    case "PREMIUM_TIER_0_PURPLE_FOR_GRADIENTS":
     break;
     case "isRendered":
     break;
@@ -2106,25 +2121,19 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     break;
     case "Content":
     break;
+    case "getCommonClickEventProperties":
+    break;
     case "PasskeysSpotIllustration":
     break;
     case "ke":
     break;
-    case "parent_span_id":
+    case "getSizableOrigin":
     break;
-    case "isFileContaineJfiforExifHeader":
+    case "inExperiment":
     break;
-    case "toSearchListUserItem":
+    case "trailingItem":
     break;
     case "embedded_activity_location_kind":
-    break;
-    case "ki":
-    break;
-    case "kin":
-    break;
-    case "hasUnreadOrMentions":
-    break;
-    case "Backspace":
     break;
     default:
   }
@@ -2144,7 +2153,7 @@ export const useProfileThemedButtonStyles = function useProfileThemedButtonStyle
     if (null == memo) {
       return null;
     } else if ("primary" === variant) {
-      const WHITE = memo(712).unsafe_rawColors.WHITE;
+      const WHITE = memo(709).unsafe_rawColors.WHITE;
       let obj = { base: null, contrastRatio: null };
       obj[0] = WHITE;
       obj[1] = variant(4204).WCAGContrastRatios.HighContrastText;
@@ -2159,9 +2168,9 @@ export const useProfileThemedButtonStyles = function useProfileThemedButtonStyle
       obj[2] = WHITE;
       return obj;
     } else if ("secondary" === tmp45) {
-      const obj5 = variant(1363);
+      const obj5 = variant(1362);
       const tmp20 = dependencyMap;
-      const isThemeLightResult = variant(1363).isThemeLight(dependencyMap);
+      const isThemeLightResult = variant(1362).isThemeLight(dependencyMap);
       const setColorOpacity2 = variant(4204).setColorOpacity;
       if (isThemeLightResult) {
         let setColorOpacity2Result = setColorOpacity2("white", 0.72);
@@ -2170,8 +2179,8 @@ export const useProfileThemedButtonStyles = function useProfileThemedButtonStyle
       }
       const items2 = [setColorOpacity2Result, ];
       const tmp24 = variant(4204);
-      const obj6 = variant(1363);
-      const isThemeLightResult1 = variant(1363).isThemeLight(tmp20);
+      const obj6 = variant(1362);
+      const isThemeLightResult1 = variant(1362).isThemeLight(tmp20);
       const setColorOpacity3 = variant(4204).setColorOpacity;
       if (isThemeLightResult1) {
         let setColorOpacity3Result = setColorOpacity3("white", 0.62);
@@ -2185,7 +2194,7 @@ export const useProfileThemedButtonStyles = function useProfileThemedButtonStyle
       obj1[1] = items3;
       return obj1;
     } else if ("tertiary" === tmp45) {
-      obj = variant(1363);
+      obj = variant(1362);
       const isThemeLightResult2 = obj.isThemeLight(dependencyMap);
       const tmp4 = dependencyMap;
       const setColorOpacity = variant(4204).setColorOpacity;
@@ -2195,7 +2204,7 @@ export const useProfileThemedButtonStyles = function useProfileThemedButtonStyle
         setColorOpacityResult = setColorOpacity("white", 0.1);
       }
       const items4 = [setColorOpacityResult, ];
-      obj1 = variant(1363);
+      obj1 = variant(1362);
       const tmp8 = variant(4204);
       let obj2 = variant(4204);
       if (isThemeLightResult3) {
@@ -2228,7 +2237,7 @@ export const useButtonTextColorStyles = function useButtonTextColorStyles(style)
     if (null == memo) {
       return null;
     } else if ("primary" === variant) {
-      const WHITE = memo(712).unsafe_rawColors.WHITE;
+      const WHITE = memo(709).unsafe_rawColors.WHITE;
       let obj = { base: null, contrastRatio: null };
       obj[0] = WHITE;
       obj[1] = variant(4204).WCAGContrastRatios.HighContrastText;
@@ -2243,9 +2252,9 @@ export const useButtonTextColorStyles = function useButtonTextColorStyles(style)
       obj[2] = WHITE;
       return obj;
     } else if ("secondary" === tmp45) {
-      const obj5 = variant(1363);
+      const obj5 = variant(1362);
       const tmp20 = dependencyMap;
-      const isThemeLightResult = variant(1363).isThemeLight(dependencyMap);
+      const isThemeLightResult = variant(1362).isThemeLight(dependencyMap);
       const setColorOpacity2 = variant(4204).setColorOpacity;
       if (isThemeLightResult) {
         let setColorOpacity2Result = setColorOpacity2("white", 0.72);
@@ -2254,8 +2263,8 @@ export const useButtonTextColorStyles = function useButtonTextColorStyles(style)
       }
       const items2 = [setColorOpacity2Result, ];
       const tmp24 = variant(4204);
-      const obj6 = variant(1363);
-      const isThemeLightResult1 = variant(1363).isThemeLight(tmp20);
+      const obj6 = variant(1362);
+      const isThemeLightResult1 = variant(1362).isThemeLight(tmp20);
       const setColorOpacity3 = variant(4204).setColorOpacity;
       if (isThemeLightResult1) {
         let setColorOpacity3Result = setColorOpacity3("white", 0.62);
@@ -2269,7 +2278,7 @@ export const useButtonTextColorStyles = function useButtonTextColorStyles(style)
       obj1[1] = items3;
       return obj1;
     } else if ("tertiary" === tmp45) {
-      obj = variant(1363);
+      obj = variant(1362);
       const isThemeLightResult2 = obj.isThemeLight(dependencyMap);
       const tmp4 = dependencyMap;
       const setColorOpacity = variant(4204).setColorOpacity;
@@ -2279,7 +2288,7 @@ export const useButtonTextColorStyles = function useButtonTextColorStyles(style)
         setColorOpacityResult = setColorOpacity("white", 0.1);
       }
       const items4 = [setColorOpacityResult, ];
-      obj1 = variant(1363);
+      obj1 = variant(1362);
       const tmp8 = variant(4204);
       let obj2 = variant(4204);
       if (isThemeLightResult3) {
@@ -2318,7 +2327,7 @@ export const useIconTintStyles = function useIconTintStyles(arg0) {
     if (null == memo) {
       return null;
     } else if ("primary" === variant) {
-      const WHITE = memo(712).unsafe_rawColors.WHITE;
+      const WHITE = memo(709).unsafe_rawColors.WHITE;
       let obj = { base: null, contrastRatio: null };
       obj[0] = WHITE;
       obj[1] = variant(4204).WCAGContrastRatios.HighContrastText;
@@ -2333,9 +2342,9 @@ export const useIconTintStyles = function useIconTintStyles(arg0) {
       obj[2] = WHITE;
       return obj;
     } else if ("secondary" === tmp45) {
-      const obj5 = variant(1363);
+      const obj5 = variant(1362);
       const tmp20 = dependencyMap;
-      const isThemeLightResult = variant(1363).isThemeLight(dependencyMap);
+      const isThemeLightResult = variant(1362).isThemeLight(dependencyMap);
       const setColorOpacity2 = variant(4204).setColorOpacity;
       if (isThemeLightResult) {
         let setColorOpacity2Result = setColorOpacity2("white", 0.72);
@@ -2344,8 +2353,8 @@ export const useIconTintStyles = function useIconTintStyles(arg0) {
       }
       const items2 = [setColorOpacity2Result, ];
       const tmp24 = variant(4204);
-      const obj6 = variant(1363);
-      const isThemeLightResult1 = variant(1363).isThemeLight(tmp20);
+      const obj6 = variant(1362);
+      const isThemeLightResult1 = variant(1362).isThemeLight(tmp20);
       const setColorOpacity3 = variant(4204).setColorOpacity;
       if (isThemeLightResult1) {
         let setColorOpacity3Result = setColorOpacity3("white", 0.62);
@@ -2359,7 +2368,7 @@ export const useIconTintStyles = function useIconTintStyles(arg0) {
       obj1[1] = items3;
       return obj1;
     } else if ("tertiary" === tmp45) {
-      obj = variant(1363);
+      obj = variant(1362);
       const isThemeLightResult2 = obj.isThemeLight(dependencyMap);
       const tmp4 = dependencyMap;
       const setColorOpacity = variant(4204).setColorOpacity;
@@ -2369,7 +2378,7 @@ export const useIconTintStyles = function useIconTintStyles(arg0) {
         setColorOpacityResult = setColorOpacity("white", 0.1);
       }
       const items4 = [setColorOpacityResult, ];
-      obj1 = variant(1363);
+      obj1 = variant(1362);
       const tmp8 = variant(4204);
       let obj2 = variant(4204);
       if (isThemeLightResult3) {
@@ -2414,7 +2423,7 @@ export const useButtonPillStyles = function useButtonPillStyles(variant, pressed
     if (null == memo) {
       return null;
     } else if ("primary" === variant) {
-      const WHITE = memo(712).unsafe_rawColors.WHITE;
+      const WHITE = memo(709).unsafe_rawColors.WHITE;
       let obj = { base: null, contrastRatio: null };
       obj[0] = WHITE;
       obj[1] = variant(4204).WCAGContrastRatios.HighContrastText;
@@ -2429,9 +2438,9 @@ export const useButtonPillStyles = function useButtonPillStyles(variant, pressed
       obj[2] = WHITE;
       return obj;
     } else if ("secondary" === tmp45) {
-      const obj5 = variant(1363);
+      const obj5 = variant(1362);
       const tmp20 = dependencyMap;
-      const isThemeLightResult = variant(1363).isThemeLight(dependencyMap);
+      const isThemeLightResult = variant(1362).isThemeLight(dependencyMap);
       const setColorOpacity2 = variant(4204).setColorOpacity;
       if (isThemeLightResult) {
         let setColorOpacity2Result = setColorOpacity2("white", 0.72);
@@ -2440,8 +2449,8 @@ export const useButtonPillStyles = function useButtonPillStyles(variant, pressed
       }
       const items2 = [setColorOpacity2Result, ];
       const tmp24 = variant(4204);
-      const obj6 = variant(1363);
-      const isThemeLightResult1 = variant(1363).isThemeLight(tmp20);
+      const obj6 = variant(1362);
+      const isThemeLightResult1 = variant(1362).isThemeLight(tmp20);
       const setColorOpacity3 = variant(4204).setColorOpacity;
       if (isThemeLightResult1) {
         let setColorOpacity3Result = setColorOpacity3("white", 0.62);
@@ -2455,7 +2464,7 @@ export const useButtonPillStyles = function useButtonPillStyles(variant, pressed
       obj1[1] = items3;
       return obj1;
     } else if ("tertiary" === tmp45) {
-      obj = variant(1363);
+      obj = variant(1362);
       const isThemeLightResult2 = obj.isThemeLight(dependencyMap);
       const tmp4 = dependencyMap;
       const setColorOpacity = variant(4204).setColorOpacity;
@@ -2465,7 +2474,7 @@ export const useButtonPillStyles = function useButtonPillStyles(variant, pressed
         setColorOpacityResult = setColorOpacity("white", 0.1);
       }
       const items4 = [setColorOpacityResult, ];
-      obj1 = variant(1363);
+      obj1 = variant(1362);
       const tmp8 = variant(4204);
       let obj2 = variant(4204);
       if (isThemeLightResult3) {

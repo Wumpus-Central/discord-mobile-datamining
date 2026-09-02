@@ -1,9 +1,9 @@
-// === Module 7569: BurstReactionAnimationPreview ===
+// === Module 7579: BurstReactionAnimationPreview ===
 
-// Module 7569 (BurstReactionAnimationPreview)
+// Module 7579 (BurstReactionAnimationPreview)
 import noopAll from "noop" /* 19 */;
-import ReactionTypes from "ReactionTypes" /* 7507 */;
-import BurstReactionAnimationDefault from "BurstReactionAnimation" /* 7570 */;
+import ReactionTypes from "ReactionTypes" /* 7517 */;
+import BurstReactionAnimationDefault from "BurstReactionAnimation" /* 7580 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

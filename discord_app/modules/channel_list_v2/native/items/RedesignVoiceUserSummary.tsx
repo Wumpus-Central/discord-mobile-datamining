@@ -1,8 +1,8 @@
-// === Module 15720: RedesignVoiceUserSummary ===
+// === Module 15951: RedesignVoiceUserSummary ===
 
-// Module 15720 (RedesignVoiceUserSummary)
+// Module 15951 (RedesignVoiceUserSummary)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleConnectionOpen" /* 1981 */;
+import closure_4 from "handleConnectionOpen" /* 1980 */;
 import closure_5 from "getVoiceStatesForGuild" /* 4555 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -23,7 +23,7 @@ export default function RedesignVoiceUserSummary(channels) {
   const items3 = [channels, stateFromStores1, stateFromStores];
   const stageIcon = stateFromStores1.useMemo(() => channels(stateFromStores[5]).isAnyVoiceStateStage(channels, stateFromStores1, stateFromStores), items3);
   const obj2 = channels(stateFromStores[4]);
-  obj = { channels, selectedChannelId: "r", selectedVoiceChannelId: "PX_16", voiceStates: null };
+  obj = { channels, selectedChannelId: "r", selectedVoiceChannelId: "getChannelIcon", voiceStates: "landscape" };
   obj[2] = stateFromStores1;
   obj[3] = stateFromStores;
   const summarizedVoiceUsers = channels(stateFromStores[5]).computeSummarizedVoiceUsers(obj);

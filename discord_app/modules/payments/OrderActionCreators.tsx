@@ -1,10 +1,10 @@
-// === Module 6090: _signOrder ===
+// === Module 6098: _signOrder ===
 
-// Module 6090 (_signOrder)
+// Module 6098 (_signOrder)
 import timestampDefault from "timestamp" /* 3 */;
 import setDefault from "set" /* 4161 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 676 */;
+import { Endpoints } from "ME" /* 673 */;
 
 const require = arg1;
 function _signOrder() {
@@ -51,7 +51,7 @@ function _signOrder() {
               c4 = undefined;
               c5 = 1;
               c6 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -68,7 +68,7 @@ function _signOrder() {
                 c4.expected_revision = dependencyMap;
               }
               c4 = 1;
-              const HTTP = callback(530).HTTP;
+              const HTTP = callback(527).HTTP;
               const obj2 = { url: null, body: null, context: null, rejectWithError: true };
               obj2[0] = closure_3.ORDER_SIGN(callback);
               obj2[1] = c4;
@@ -90,7 +90,7 @@ function _signOrder() {
           } else if (2 === tmp7) {
             c4 = 0;
             c5 = closure_3;
-            if (c5 instanceof callback(530).HTTPResponseError) {
+            if (c5 instanceof callback(527).HTTPResponseError) {
               if (400 === c5.status) {
                 if ((function isOrderShape(body) {
                   let tmp = null != body && typeof body === "object";

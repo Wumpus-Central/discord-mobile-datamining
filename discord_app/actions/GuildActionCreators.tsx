@@ -1,29 +1,29 @@
-// === Module 5457: showTooManyUserGuildsAlert ===
+// === Module 5465: showTooManyUserGuildsAlert ===
 
-// Module 5457 (showTooManyUserGuildsAlert)
-import encodeProperties from "encodeProperties" /* 503 */;
-import sendRequest from "sendRequest" /* 530 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import transitionTo from "transitionTo" /* 1222 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 5465 (showTooManyUserGuildsAlert)
+import encodeProperties from "encodeProperties" /* 500 */;
+import sendRequest from "sendRequest" /* 527 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import transitionTo from "transitionTo" /* 1219 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import _modDef4713 from "module_4713" /* 4713 */;
 import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 4731 */;
 import setDefault from "set" /* 4857 */;
-import stopLurkingAll from "stopLurkingAll" /* 6166 */;
-import getPreviousSafeRouteForNsfwReturnDefault from "getPreviousSafeRouteForNsfwReturn" /* 6172 */;
+import stopLurkingAll from "stopLurkingAll" /* 6174 */;
+import getPreviousSafeRouteForNsfwReturnDefault from "getPreviousSafeRouteForNsfwReturn" /* 6180 */;
 import closure_5 from "_objectWithoutProperties" /* 109 */;
 import closure_6 from "asyncGeneratorStep" /* 5 */;
-import closure_7 from "set" /* 5458 */;
-import closure_8 from "fetchFingerprint" /* 1218 */;
-import closure_9 from "set" /* 5382 */;
-import closure_10 from "comparator" /* 1982 */;
-import closure_11 from "createGuildRecordFromRust" /* 1909 */;
-import closure_12 from "handleConnectionOpen" /* 1981 */;
+import closure_7 from "set" /* 5466 */;
+import closure_8 from "fetchFingerprint" /* 1215 */;
+import closure_9 from "set" /* 5390 */;
+import closure_10 from "comparator" /* 1981 */;
+import closure_11 from "createGuildRecordFromRust" /* 1908 */;
+import closure_12 from "handleConnectionOpen" /* 1980 */;
 import closure_13 from "handleConnectionOpen" /* 4299 */;
-import closure_14 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { AgeGateSource } from "result" /* 1221 */;
+import closure_14 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
+import { AgeGateSource } from "result" /* 1218 */;
 
 require = arg1;
 function showTooManyUserGuildsAlert(quantity) {
@@ -102,7 +102,7 @@ function _joinGuild() {
                 let channelId;
                 c7 = 1;
                 sessionId = 1;
-                return { value: "PX_16", done: null };
+                return { value: "PX_16", done: true };
               }
             } else if (1 === tmp7) {
               if (arg0 === 1) {
@@ -613,11 +613,11 @@ export default {
   kickUser(id, id1, c0) {
     const _require = id;
     closure_1 = id1;
-    const HTTP = _require(530).HTTP;
+    const HTTP = _require(527).HTTP;
     obj = { url: closure_16.GUILD_MEMBER(id, id1), query: obj, oldFormErrors: true, rejectWithError: null };
     obj = { reason: c0, moderator_report_id: arg3 };
-    obj[3] = _require(530).rejectWithMigratedError();
-    const obj3 = _require(530);
+    obj[3] = _require(527).rejectWithMigratedError();
+    const obj3 = _require(527);
     return HTTP.del(obj).then(() => {
       let obj = id1(closure_1_3[14]);
       obj = { type: "GUILD_MEMBER_REMOVE_LOCAL", guildId: closure_0, userId: id1 };
@@ -952,7 +952,7 @@ export default {
           startsWithResult = icon.startsWith("data:");
         }
       }
-      const HTTP = closure_1_0(530).HTTP;
+      const HTTP = closure_1_0(527).HTTP;
       obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
       obj1[0] = closure_1_16.GUILD_ROLE(closure_1_0, closure_1_1);
       const obj2 = {};
@@ -960,10 +960,10 @@ export default {
       obj2.icon = tmp13;
       obj2.unicode_emoji = c2.unicodeEmoji;
       obj1[1] = obj2;
-      const obj5 = closure_1_0(530);
+      const obj5 = closure_1_0(527);
       obj1[3] = obj5.rejectWithMigratedError();
       closure_0 = yield HTTP.patch(obj1);
-      const obj = closure_1_1(6168);
+      const obj = closure_1_1(6176);
       const result = obj.checkGuildTemplateDirty(closure_0);
       return closure_0;
     })();
@@ -977,7 +977,7 @@ export default {
   },
   deleteRole(closure_1_4, id) {
     const _require = closure_1_4;
-    const HTTP = _require(530).HTTP;
+    const HTTP = _require(527).HTTP;
     const obj = { url: closure_16.GUILD_ROLE(closure_1_4, id), oldFormErrors: true, rejectWithError: true };
     HTTP.del({ url: closure_16.GUILD_ROLE(closure_1_4, id), oldFormErrors: true, rejectWithError: true }).then(() => {
       const result = closure_1_1(closure_1_3[30]).checkGuildTemplateDirty(closure_0);
@@ -989,13 +989,13 @@ export default {
     return callback(function*() {
       closure_1 = tmp2;
       closure_0 = tmp5;
-      const HTTP = closure_1_0(530).HTTP;
+      const HTTP = closure_1_0(527).HTTP;
       obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
       obj1[0] = closure_1_16.GUILD_CHANNELS(closure_1_0);
       obj1[1] = closure_1_1;
-      obj1[3] = closure_1_0(530).rejectWithMigratedError();
+      obj1[3] = closure_1_0(527).rejectWithMigratedError();
       closure_0 = yield HTTP.patch(obj1);
-      const obj = closure_1_1(6168);
+      const obj = closure_1_1(6176);
       const result = obj.checkGuildTemplateDirty(closure_0);
       return closure_0;
     })();
@@ -1006,13 +1006,13 @@ export default {
     return callback(function*() {
       closure_1 = tmp2;
       closure_0 = tmp5;
-      const HTTP = closure_1_0(530).HTTP;
+      const HTTP = closure_1_0(527).HTTP;
       obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
       obj1[0] = closure_1_16.GUILD_ROLES(closure_1_0);
       obj1[1] = closure_1_1;
-      obj1[3] = closure_1_0(530).rejectWithMigratedError();
+      obj1[3] = closure_1_0(527).rejectWithMigratedError();
       closure_0 = yield HTTP.patch(obj1);
-      const obj = closure_1_1(6168);
+      const obj = closure_1_1(6176);
       const result = obj.checkGuildTemplateDirty(closure_0);
       return closure_0;
     })();
@@ -1144,9 +1144,9 @@ export default {
         const defaultChannel = store.getDefaultChannel(guildId);
         if (null != defaultChannel) {
           if (!obj3.isChannelContentGated(defaultChannel)) {
-            let tmp11Result = tmp11(6174);
+            let tmp11Result = tmp11(6182);
             if (!tmp11Result.isChannelSpoilerGated(defaultChannel)) {
-              tmp11Result = tmp11(1222);
+              tmp11Result = tmp11(1219);
               tmp11Result.transitionTo(closure_21.CHANNEL(guildId, defaultChannel.id));
             }
           }
@@ -1218,13 +1218,13 @@ export default {
               body = undefined;
               obj1 = { url: null, oldFormErrors: true, rejectWithError: null };
               obj1[0] = closure_1_16.GUILD_APPLICATIONS(closure_1_0);
-              obj1[2] = closure_1_0(530).rejectWithMigratedError();
+              obj1[2] = closure_1_0(527).rejectWithMigratedError();
               if (null != closure_1_1) {
                 const obj2 = { channel_id: null };
                 obj2[0] = tmp24;
                 obj1.query = obj2;
               }
-              const HTTP = closure_1_0(530).HTTP;
+              const HTTP = closure_1_0(527).HTTP;
               c2 = 1;
               dependencyMap = 1;
               const obj3 = { value: null, done: false };
@@ -1241,7 +1241,7 @@ export default {
             return obj4;
           } else {
             body = arg1.body;
-            obj = closure_1_1(709);
+            obj = closure_1_1(706);
             const obj5 = { type: "GUILD_APPLICATIONS_FETCH_SUCCESS", guildId: null, applications: null };
             obj5[1] = body;
             obj5[2] = body;
@@ -1487,8 +1487,8 @@ export default {
   },
   fetchGuildRoleConnectionsEligibility(guildId, id) {
     const _require = id;
-    const HTTP = _require(530).HTTP;
-    let obj = { url: closure_16.GUILD_ROLE_CONNECTIONS_ELIGIBILITY(guildId, id), oldFormErrors: true, rejectWithError: _require(530).rejectWithMigratedError() };
+    const HTTP = _require(527).HTTP;
+    let obj = { url: closure_16.GUILD_ROLE_CONNECTIONS_ELIGIBILITY(guildId, id), oldFormErrors: true, rejectWithError: _require(527).rejectWithMigratedError() };
     const value = HTTP.get(obj);
     return value.then((body) => {
       body = body.body;

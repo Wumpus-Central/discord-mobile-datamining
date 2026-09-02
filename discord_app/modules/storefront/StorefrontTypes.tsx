@@ -1,6 +1,6 @@
-// === Module 6080: StorefrontPromotionRewardType ===
+// === Module 6088: StorefrontPromotionRewardType ===
 
-// Module 6080 (StorefrontPromotionRewardType)
+// Module 6088 (StorefrontPromotionRewardType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/storefront/StorefrontTypes.tsx");

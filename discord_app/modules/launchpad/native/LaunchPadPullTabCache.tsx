@@ -1,11 +1,11 @@
-// === Module 16542: setLaunchPadPullTabExclusionRect ===
+// === Module 16777: setLaunchPadPullTabExclusionRect ===
 
-// Module 16542 (setLaunchPadPullTabExclusionRect)
+// Module 16777 (setLaunchPadPullTabExclusionRect)
 import set from "set" /* 2 */;
-import set2 from "set" /* 500 */;
-import Storage2 from "Storage" /* 595 */;
-import enforcingDefault from "enforcing" /* 5092 */;
-import LAUNCH_PAD_SPRING_CONFIG from "LAUNCH_PAD_SPRING_CONFIG" /* 11064 */;
+import Storage2 from "Storage" /* 592 */;
+import set2 from "set" /* 1234 */;
+import enforcingDefault from "enforcing" /* 5100 */;
+import LAUNCH_PAD_SPRING_CONFIG from "LAUNCH_PAD_SPRING_CONFIG" /* 11284 */;
 
 function setLaunchPadPullTabExclusionRect() {
   let tmp = arg0;
@@ -19,9 +19,9 @@ function setLaunchPadPullTabExclusionRect() {
   }
   let obj = set2;
   if (obj.isAndroid()) {
-    let tmp7Result = tmp7(1493);
+    let tmp7Result = tmp7(1492);
     const diff = tmp7Result.getWindowDimensions().width - closure_5;
-    tmp7Result = tmp7(1493);
+    tmp7Result = tmp7(1492);
     const width = tmp7Result.getWindowDimensions().width;
     const sum = tmp + closure_3;
     let left;

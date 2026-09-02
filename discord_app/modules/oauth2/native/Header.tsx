@@ -1,13 +1,13 @@
-// === Module 9377: Header ===
+// === Module 9390: Header ===
 
-// Module 9377 (Header)
+// Module 9390 (Header)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1431 */;
+import ThemesDefault from "Themes" /* 709 */;
+import Button from "Button" /* 1296 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
 import Text from "Text" /* 4474 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { UserFlags } from "ME" /* 676 */;
+import { UserFlags } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -34,7 +34,7 @@ export default function Header(accountScopes) {
   let userAvatarSource;
   const applicationIconSource = obj.getApplicationIconSource(obj);
   if (null != user) {
-    let tmp2Result = tmp2(1431);
+    let tmp2Result = tmp2(1430);
     userAvatarSource = tmp2Result.getUserAvatarSource(user);
   }
   obj = { style: tmp.header, children: null };
@@ -58,10 +58,10 @@ export default function Header(accountScopes) {
     const obj10 = { style: null, verified: null };
     obj10[0] = tmp.botTag;
     let hasFlagResult = null != bot.public_flags;
-    tmp2Result = tmp2(8933);
+    tmp2Result = tmp2(8947);
     if (hasFlagResult) {
-      hasFlagResult = tmp9(1399).hasFlag(bot.public_flags, UserFlags.VERIFIED_BOT);
-      const tmp9Result = tmp9(1399);
+      hasFlagResult = tmp9(1398).hasFlag(bot.public_flags, UserFlags.VERIFIED_BOT);
+      const tmp9Result = tmp9(1398);
     }
     obj10[1] = hasFlagResult;
     tmp8Result = tmp8(tmp2Result, obj10);
@@ -70,11 +70,11 @@ export default function Header(accountScopes) {
   obj8[1] = items3;
   items2[1] = callback2(View, obj8);
   if (accountScopes.accountScopes.length > 0) {
-    const intl2 = tmp9(1236).intl;
-    let stringResult = intl2.string(tmp9(1236).t.jFbDnJ);
+    const intl2 = tmp9(1233).intl;
+    let stringResult = intl2.string(tmp9(1233).t.jFbDnJ);
   } else {
-    const intl = tmp9(1236).intl;
-    stringResult = intl.string(tmp9(1236).t["X+Fdpo"]);
+    const intl = tmp9(1233).intl;
+    stringResult = intl.string(tmp9(1233).t["X+Fdpo"]);
   }
   items2[2] = callback(Text.Text, { variant: "heading-md/normal", color: "text-default", children: stringResult });
   obj[1] = items2;

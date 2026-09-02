@@ -1,17 +1,17 @@
-// === Module 8785: PersonalWidgetText ===
+// === Module 8800: PersonalWidgetText ===
 
-// Module 8785 (PersonalWidgetText)
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 8800 (PersonalWidgetText)
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import ManaContext from "ManaContext" /* 4204 */;
-import preloadDefault from "preload" /* 5493 */;
-import GifTagDefault from "GifTag" /* 8554 */;
-import PersonalWidgetExpandCollapseProvider from "PersonalWidgetExpandCollapseProvider" /* 8786 */;
+import preloadDefault from "preload" /* 5501 */;
+import GifTagDefault from "GifTag" /* 8567 */;
+import PersonalWidgetExpandCollapseProvider from "PersonalWidgetExpandCollapseProvider" /* 8801 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "fetchFingerprint" /* 1218 */;
-import { ThemeTypes } from "ME" /* 676 */;
+import closure_8 from "fetchFingerprint" /* 1215 */;
+import { ThemeTypes } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -48,8 +48,8 @@ function PersonalWidgetShowMoreButton() {
     accessibilityState: { expanded: isExpanded },
     children: null
   };
-  const intl = tmp(1236).intl;
-  let t = tmp(1236).t;
+  const intl = tmp(1233).intl;
+  let t = tmp(1233).t;
   obj = { variant: "text-sm/medium", color: "text-subtle", children: intl.string(isExpanded ? t["6MwJo/"] : t.lBeKY2) };
   t = tmp5(tmp(4474).Text, obj);
   obj[4] = t;
@@ -149,8 +149,8 @@ function CoverSection(section) {
       const obj3 = { style: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
       obj3[0] = closure_6.absoluteFill;
       obj3[1] = toggleAnimation;
-      const intl = tmp25(1236).intl;
-      obj3[3] = intl.string(tmp25(1236).t.MxXgrL);
+      const intl = tmp25(1233).intl;
+      obj3[3] = intl.string(tmp25(1233).t.MxXgrL);
       const obj4 = { source: null, style: null, resizeMode: "cover" };
       obj4[0] = source;
       obj4[1] = closure_6.absoluteFill;
@@ -185,7 +185,7 @@ function CoverSection(section) {
     if (showGifTag) {
       const obj7 = { style: null };
       obj7[0] = tmp.gifTag;
-      tmp24Result1 = tmp24(tmp14(8554), obj7);
+      tmp24Result1 = tmp24(tmp14(8567), obj7);
     }
     items2[3] = tmp24Result1;
     obj2[1] = items2;
@@ -269,13 +269,13 @@ function UserProfilePersonalWidgetCardContent(style) {
   if (disableInteraction === undefined) {
     disableInteraction = false;
   }
-  let obj = userId(589);
+  let obj = userId(586);
   const items = [closure_8];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getId() === userId);
   obj = { style: style.cardStyle, titleLeadingIcon: null, title: null, trailingAction: null, children: null };
   const tmp = callback3();
   const tmp5 = disableInteraction;
-  obj[1] = callback2(userId(8096).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
+  obj[1] = callback2(userId(8104).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
   obj[2] = widget.header;
   let tmp4Result = !stateFromStores;
   if (!stateFromStores) {
@@ -285,7 +285,7 @@ function UserProfilePersonalWidgetCardContent(style) {
     obj = { userId: null, widget: null };
     obj[0] = userId;
     obj[1] = widget;
-    tmp4Result = tmp4(tmp5(8789), obj);
+    tmp4Result = tmp4(tmp5(8804), obj);
   }
   obj[3] = tmp4Result;
   obj1 = { style: tmp.sectionsContainer, children: null };
@@ -318,7 +318,7 @@ function UserProfilePersonalWidgetCardContent(style) {
   items1[1] = tmp4Result;
   obj1[1] = items1;
   obj[4] = closure_11(closure_7, obj1);
-  return callback2(disableInteraction(6000), obj);
+  return callback2(disableInteraction(6008), obj);
 }
 ({ Pressable: c5, StyleSheet: closure_6, View: error } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);

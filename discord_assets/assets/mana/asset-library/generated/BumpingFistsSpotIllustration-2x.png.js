@@ -1,6 +1,6 @@
-// === Module 6380: metadata ===
+// === Module 6389: metadata ===
 
-// Module 6380 (metadata)
+// Module 6389 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/BumpingFistsSpotIllustration-2x.png.js");

@@ -1,16 +1,16 @@
-// === Module 15077: SystemNotificationsSubLabel ===
+// === Module 15306: SystemNotificationsSubLabel ===
 
-// Module 15077 (SystemNotificationsSubLabel)
-import ThemesDefault from "Themes" /* 712 */;
-import apexExperiment from "apexExperiment" /* 8004 */;
-import _requestPushNotificationPermission from "_requestPushNotificationPermission" /* 11980 */;
-import _modDef14340 from "module_14340" /* 14340 */;
-import apexExperimentDefault from "apexExperiment" /* 15079 */;
-import hasAndroidNotificationChannels from "hasAndroidNotificationChannels" /* 15080 */;
+// Module 15306 (SystemNotificationsSubLabel)
+import ThemesDefault from "Themes" /* 709 */;
+import apexExperiment from "apexExperiment" /* 8013 */;
+import _requestPushNotificationPermission from "_requestPushNotificationPermission" /* 12204 */;
+import _modDef14563 from "module_14563" /* 14563 */;
+import apexExperimentDefault from "apexExperiment" /* 15308 */;
+import hasAndroidNotificationChannels from "hasAndroidNotificationChannels" /* 15309 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { initializeAndroidNotificationSettingsStore as closure_5 } from "_initializeAndroidNotificationSettingsStore" /* 15078 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 7884 */;
+import { initializeAndroidNotificationSettingsStore as closure_5 } from "_initializeAndroidNotificationSettingsStore" /* 15307 */;
+import { MobileUserSettings } from "MobileUserSettings" /* 7893 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -31,8 +31,8 @@ function SystemNotificationsSubLabel() {
     }
     obj = { variant: null, color: "text-muted", children: null };
     obj[0] = str;
-    const intl = tmp2(1236).intl;
-    obj[2] = intl.string(tmp2(1236).t["/TZX1J"]);
+    const intl = tmp2(1233).intl;
+    obj[2] = intl.string(tmp2(1233).t["/TZX1J"]);
     result = callback(tmp2(4474).Text, obj);
     const tmp10 = callback;
   }
@@ -48,17 +48,17 @@ function SystemNotificationsSubLabel() {
     obj2[0] = tmp.cardContent;
     obj3 = { color: null };
     obj3[0] = ThemesDefault.unsafe_rawColors.YELLOW_300;
-    const items1 = [callback(tmp2(7708).CircleErrorIcon, obj3), ];
+    const items1 = [callback(tmp2(7717).CircleErrorIcon, obj3), ];
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.text;
     const obj5 = { color: "text-default", variant: "text-sm/medium", children: null };
-    const intl2 = tmp2(1236).intl;
-    obj5[2] = intl2.string(tmp2(1236).t.TAuasM);
+    const intl2 = tmp2(1233).intl;
+    obj5[2] = intl2.string(tmp2(1233).t.TAuasM);
     obj4[1] = callback(tmp2(4474).Text, obj5);
     items1[1] = callback(View, obj4);
     obj2[1] = items1;
     obj1[2] = tmp8(View, obj2);
-    obj[1] = callback(tmp2(5601).Card, obj1);
+    obj[1] = callback(tmp2(5609).Card, obj1);
     showReactivationPrompt = callback(View, obj);
   }
   children[1] = showReactivationPrompt;
@@ -73,8 +73,8 @@ obj[1] = { flexDirection: "row", alignItems: "center", gap: 8 };
 obj[2] = { flex: 1 };
 let closure_10 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(() => {
-  isFamilyCenterV3Enabled = isFamilyCenterV3Enabled(7339).useIsFamilyCenterV3Enabled({ location: "SettingsNotificationsScreen" });
-  let obj = isFamilyCenterV3Enabled(7339);
+  isFamilyCenterV3Enabled = isFamilyCenterV3Enabled(7348).useIsFamilyCenterV3Enabled({ location: "SettingsNotificationsScreen" });
+  let obj = isFamilyCenterV3Enabled(7348);
   let tmp2 = !apexExperimentDefault.useConfig({ location: "SettingsNotificationsScreen" }).inHoldout;
   importDefault = tmp2;
   let items = [tmp2];
@@ -161,7 +161,7 @@ const memoResult = importAllResult.memo(() => {
   const effect1 = importAllResult.useEffect(() => {
     const result = isFamilyCenterV3Enabled(closure_1_2[18]).prefetchFamilyCenterAgeGroupWhen(isFamilyCenterV3Enabled);
   }, items1);
-  return callback(_modDef14340, { node });
+  return callback(_modDef14563, { node });
 });
 let result = require("set").fileFinishedImporting("modules/user_settings/notifications/native/SettingsNotificationScreen.tsx");
 

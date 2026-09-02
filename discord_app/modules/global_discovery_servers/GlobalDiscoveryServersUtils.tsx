@@ -1,15 +1,15 @@
-// === Module 17412: _navigateToGuild ===
+// === Module 17648: _navigateToGuild ===
 
-// Module 17412 (_navigateToGuild)
-import v1 from "v1" /* 514 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1471 */;
-import prototypeDefault from "prototype" /* 17411 */;
+// Module 17648 (_navigateToGuild)
+import v1 from "v1" /* 511 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
+import prototypeDefault from "prototype" /* 17647 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_getSystemLocale" /* 1996 */;
-import closure_6 from "map" /* 13356 */;
-import DEFAULT_DISCOVERY_CATEGORY_ID from "DEFAULT_DISCOVERY_CATEGORY_ID" /* 9730 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import closure_5 from "_getSystemLocale" /* 1995 */;
+import closure_6 from "map" /* 13580 */;
+import DEFAULT_DISCOVERY_CATEGORY_ID from "DEFAULT_DISCOVERY_CATEGORY_ID" /* 9752 */;
+import { AnalyticEvents } from "ME" /* 673 */;
 
 require = arg1;
 function _navigateToGuild() {
@@ -57,7 +57,7 @@ function _navigateToGuild() {
               let obj2;
               dependencyMap = 1;
               c4 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -72,7 +72,7 @@ function _navigateToGuild() {
               obj2 = {};
               const merged = Object.assign(c5);
               obj2.loadId = c0;
-              let obj4 = callback2(6185);
+              let obj4 = callback2(6194);
               dependencyMap = 2;
               c4 = 1;
               const obj3 = { value: null, done: false };
@@ -88,7 +88,7 @@ function _navigateToGuild() {
             obj4[0] = arg1;
             return obj4;
           } else {
-            obj = callback(698);
+            obj = callback(695);
             const obj5 = { guild_id: null, load_id: null, card_index: null, category_id: null, location: null };
             obj5[0] = callback;
             obj5[1] = c0;

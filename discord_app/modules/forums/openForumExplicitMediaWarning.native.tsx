@@ -1,6 +1,6 @@
-// === Module 8395: openForumExplicitMediaWarning ===
+// === Module 8404: openForumExplicitMediaWarning ===
 
-// Module 8395 (openForumExplicitMediaWarning)
+// Module 8404 (openForumExplicitMediaWarning)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
 import _modDef4858 from "module_4858" /* 4858 */;

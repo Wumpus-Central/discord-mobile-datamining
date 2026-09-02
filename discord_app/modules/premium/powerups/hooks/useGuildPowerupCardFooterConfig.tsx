@@ -1,11 +1,11 @@
-// === Module 12097: useGuildPowerupCardFooterConfig ===
+// === Module 12321: useGuildPowerupCardFooterConfig ===
 
-// Module 12097 (useGuildPowerupCardFooterConfig)
-import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 12060 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12063 */;
-import closure_3 from "createGuildRecordFromRust" /* 1909 */;
+// Module 12321 (useGuildPowerupCardFooterConfig)
+import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 12284 */;
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12287 */;
+import closure_3 from "createGuildRecordFromRust" /* 1908 */;
 import BoostedGuildTiers from "BoostedGuildTiers" /* 4365 */;
-import { GuildFeatures } from "ME" /* 676 */;
+import { GuildFeatures } from "ME" /* 673 */;
 
 const require = arg1;
 ({ GUILD_POWERUP_CONFIGURABLE_SKUS_DESKTOP, GUILD_POWERUP_CONFIGURABLE_SKUS_MOBILE: c4, PowerupActiveStatusType: c5 } = BoostedGuildTiers);
@@ -14,7 +14,7 @@ const result = require("set").fileFinishedImporting("modules/premium/powerups/ho
 export default function useGuildPowerupCardFooterConfig(arg0, skuId) {
   const _require = arg0;
   const tmp3 = usePowerupActiveStatusDefault(arg0, skuId);
-  let obj = _require(589);
+  let obj = _require(586);
   const items = [closure_3];
   const items1 = [arg0];
   const stateFromStores = obj.useStateFromStores(items, () => {

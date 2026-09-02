@@ -1,8 +1,8 @@
-// === Module 7316: fromServer ===
+// === Module 7325: fromServer ===
 
-// Module 7316 (fromServer)
-import closure_2 from "fromServer" /* 7288 */;
-import { CountdownTimerBlockRecord, FeaturedBlockRecord, FeedBlockRecord, GameServerHostingBannerBlockRecord as closure_6, HeroBlockRecord, ImmersiveBannerBlockRecord as closure_8, RewardHeroBlockRecord, ShelfBlockRecord, SocialLayerStorefrontPromotionalBannerBlockRecord as closure_11, WideBannerBlockRecord } from "fromServer" /* 7317 */;
+// Module 7325 (fromServer)
+import closure_2 from "fromServer" /* 7297 */;
+import { CountdownTimerBlockRecord, FeaturedBlockRecord, FeedBlockRecord, GameServerHostingBannerBlockRecord as closure_6, HeroBlockRecord, ImmersiveBannerBlockRecord as closure_8, RewardHeroBlockRecord, ShelfBlockRecord, SocialLayerStorefrontPromotionalBannerBlockRecord as closure_11, WideBannerBlockRecord } from "fromServer" /* 7326 */;
 
 const require = arg1;
 let prototype;

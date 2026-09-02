@@ -1,8 +1,8 @@
-// === Module 13054: BuyNitroPerk ===
+// === Module 13276: BuyNitroPerk ===
 
-// Module 13054 (BuyNitroPerk)
+// Module 13276 (BuyNitroPerk)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -31,10 +31,10 @@ export default function BuyNitroPerk(perk) {
   let obj = { label: perk.label, subLabel: perk.subLabel, disabled: perk.disabled, icon: null, arrow: null, onPress: null, start: null, end: null };
   obj = { style: callback3().iconTile, children: null };
   obj = { selectedTier, nitroColors: perk.iconGradient, basicColors: perk.iconGradientBasic, start: closure_7, end: closure_8, style: absoluteFill.absoluteFill };
-  const items = [callback(onOpenDetails(13055), obj), ];
+  const items = [callback(onOpenDetails(13277), obj), ];
   const tmp = callback3();
   const tmp4 = callback;
-  items[1] = callback(perk.IconComponent, { size: "sm", color: onOpenDetails(712).colors.WHITE });
+  items[1] = callback(perk.IconComponent, { size: "sm", color: onOpenDetails(709).colors.WHITE });
   obj[1] = items;
   obj[3] = callback2(closure_4, obj);
   obj[4] = tmp2;
@@ -45,5 +45,5 @@ export default function BuyNitroPerk(perk) {
   obj[5] = fn;
   obj[6] = start;
   obj[7] = end;
-  return tmp4(perk(5599).TableRow, obj);
+  return tmp4(perk(5607).TableRow, obj);
 };

@@ -1,10 +1,10 @@
-// === Module 9718: VoidTextInput ===
+// === Module 9740: VoidTextInput ===
 
-// Module 9718 (VoidTextInput)
-import ThemesDefault from "Themes" /* 712 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
+// Module 9740 (VoidTextInput)
+import ThemesDefault from "Themes" /* 709 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1362 */;
 import { TextInput } from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 import importAllResult from "noop" /* 19 */;
@@ -27,10 +27,10 @@ const forwardRefResult = importAllResult.forwardRef((style, ref) => {
   const tmp6 = AccessibilityAnnouncer.isThemeDark(theme) ? unsafe_rawColors.PRIMARY_100 : unsafe_rawColors.PRIMARY_500;
   obj = { ref, style: items, keyboardAppearance: null, placeholderTextColor: null, selectionColor: null };
   items = [tmp2.input, style.style];
-  let tmp3Result = tmp3(1363);
+  let tmp3Result = tmp3(1362);
   obj[2] = tmp3Result.isThemeDark(theme) ? closure_4.DARK : closure_4.LIGHT;
   obj[3] = tmp2.placeholderTextColor.color;
-  tmp3Result = tmp3(500);
+  tmp3Result = tmp3(1234);
   let hexWithOpacityResult = tmp6;
   if (tmp3Result.isAndroid()) {
     hexWithOpacityResult = tmp3(4326).hexWithOpacity(tmp6, 0.5);

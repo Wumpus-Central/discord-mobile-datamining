@@ -1,8 +1,8 @@
-// === Module 11450: useUserIsConsideredAdult ===
+// === Module 11673: useUserIsConsideredAdult ===
 
-// Module 11450 (useUserIsConsideredAdult)
-import initialize from "initialize" /* 589 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+// Module 11673 (useUserIsConsideredAdult)
+import initialize from "initialize" /* 586 */;
+import closure_2 from "mergeGuildAvatar" /* 1921 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useUserIsConsideredAdult.tsx");

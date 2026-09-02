@@ -1,19 +1,19 @@
-// === Module 16085: MediaMosaicVideo ===
+// === Module 16316: MediaMosaicVideo ===
 
-// Module 16085 (MediaMosaicVideo)
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import VideoComponentDefault from "VideoComponent" /* 8602 */;
-import context2 from "context" /* 16041 */;
+// Module 16316 (MediaMosaicVideo)
+import initialize from "initialize" /* 586 */;
+import ThemesDefault from "Themes" /* 709 */;
+import VideoComponentDefault from "VideoComponent" /* 8617 */;
+import context2 from "context" /* 16272 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_8 from "ensureGuildLoaded" /* 1387 */;
+import closure_8 from "ensureGuildLoaded" /* 1386 */;
 import closure_9 from "markAllUserIdListsStale" /* 4130 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import closure_11 from "filterStaffGuild" /* 8606 */;
-import ME from "ME" /* 676 */;
+import closure_10 from "mergeGuildAvatar" /* 1921 */;
+import closure_11 from "filterStaffGuild" /* 8621 */;
+import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -69,12 +69,12 @@ function MediaMosaicImage(source) {
   const memo = React.useMemo(() => {
     if (null != source.placeholder) {
       const obj = { uri: null, width: null, height: null };
-      obj[0] = source(16086).createThumbhashImageFromPlaceholder(tmp.placeholder);
+      obj[0] = source(16317).createThumbhashImageFromPlaceholder(tmp.placeholder);
       ({ width: obj[1], height: obj[2] } = tmp);
       return obj;
     }
   }, items);
-  obj = { style: items1, children: callback2(first(5493), { source: memo, style: items2 }) };
+  obj = { style: items1, children: callback2(first(5501), { source: memo, style: items2 }) };
   items1 = [animatedStyle, tmp.thumbhashMedia];
   items2 = [style, tmp.media, dimensions];
   const items3 = [callback2(first(4217).View, obj), ];
@@ -363,7 +363,7 @@ function SingleImage(source) {
   ({ initialIndex, handlePressMedia, visible } = source);
   const tmp = callback4();
   let obj = React;
-  const context = React.useContext(source(16041).ICYMIContext);
+  const context = React.useContext(source(16272).ICYMIContext);
   if (null == widthOverride) {
     let width;
     if (context != null) {

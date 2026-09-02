@@ -2,8 +2,8 @@
 
 // Module 4340 (getBestActiveInput)
 import set from "set" /* 2 */;
-import KeyboardTypes from "KeyboardTypes" /* 1626 */;
-import dismissGlobalKeyboard from "dismissGlobalKeyboard" /* 1891 */;
+import KeyboardTypes from "KeyboardTypes" /* 1625 */;
+import dismissGlobalKeyboard from "dismissGlobalKeyboard" /* 1890 */;
 import zustandStore from "zustandStore" /* 4343 */;
 
 function getBestActiveInput() {
@@ -238,9 +238,9 @@ export const dismissKeyboard = function dismissKeyboard() {
   let tmpResult = tmp(4342);
   const keyboardType = tmpResult.getKeyboardType();
   if (keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM) {
-    tmpResult = tmp(1497);
+    tmpResult = tmp(1496);
     obj = { type: null };
-    obj[0] = tmp(1626).KeyboardTypes.SYSTEM;
+    obj[0] = tmp(1625).KeyboardTypes.SYSTEM;
     tmpResult.setKeyboardType(obj);
   }
   const result1 = zustandStore.closePortalKeyboardRequest();

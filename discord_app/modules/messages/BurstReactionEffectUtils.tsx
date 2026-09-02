@@ -1,6 +1,6 @@
-// === Module 7566: replaceAnimationColors ===
+// === Module 7576: replaceAnimationColors ===
 
-// Module 7566 (replaceAnimationColors)
+// Module 7576 (replaceAnimationColors)
 import set from "set" /* 2 */;
 import hexToRgba from "hexToRgba" /* 4326 */;
 import apply from "apply" /* 12 */;

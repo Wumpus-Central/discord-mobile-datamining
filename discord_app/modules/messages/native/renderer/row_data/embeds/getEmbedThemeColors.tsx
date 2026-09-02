@@ -1,8 +1,8 @@
-// === Module 7854: getEmbedThemeColors ===
+// === Module 7863: getEmbedThemeColors ===
 
-// Module 7854 (getEmbedThemeColors)
-import ThemesDefault from "Themes" /* 712 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
+// Module 7863 (getEmbedThemeColors)
+import ThemesDefault from "Themes" /* 709 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1362 */;
 import hexToRgba from "hexToRgba" /* 4326 */;
 import closure_3 from "noop" /* 19 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

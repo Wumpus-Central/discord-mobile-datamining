@@ -1,11 +1,11 @@
-// === Module 12001: useChangelogRenderedAnalytics ===
+// === Module 12225: useChangelogRenderedAnalytics ===
 
-// Module 12001 (useChangelogRenderedAnalytics)
+// Module 12225 (useChangelogRenderedAnalytics)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "_getSystemLocale" /* 1996 */;
+import closure_4 from "_getSystemLocale" /* 1995 */;
 import closure_5 from "generateOldThreadCutoff" /* 4493 */;
 import closure_6 from "handleUserSettingsProtoStoreChange" /* 4492 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import { AnalyticEvents } from "ME" /* 673 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/changelog/useChangelogRenderedAnalytics.tsx");

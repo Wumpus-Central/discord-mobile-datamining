@@ -1,8 +1,8 @@
-// === Module 16870: isLimitedAccessErrorCode ===
+// === Module 17106: isLimitedAccessErrorCode ===
 
-// Module 16870 (isLimitedAccessErrorCode)
+// Module 17106 (isLimitedAccessErrorCode)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 
 const AbortCodes = ME.AbortCodes;
 const result = set.fileFinishedImporting("modules/guild_limited_access/GuildLimitedAccessUtils.tsx");

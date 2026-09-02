@@ -1,14 +1,14 @@
-// === Module 9071: confirmCancelFriendRequest ===
+// === Module 9085: confirmCancelFriendRequest ===
 
-// Module 9071 (confirmCancelFriendRequest)
+// Module 9085 (confirmCancelFriendRequest)
 import noopAll from "noop" /* 19 */;
 import useAlertStore from "useAlertStore" /* 4859 */;
-import UserProfileConfirmCancelFriendRequestDefault from "UserProfileConfirmCancelFriendRequest" /* 9072 */;
-import UserProfileConfirmRemoveFriendDefault from "UserProfileConfirmRemoveFriend" /* 9073 */;
-import UserProfileConfirmRemoveGameFriendDefault from "UserProfileConfirmRemoveGameFriend" /* 9074 */;
-import UserProfileConfirmVideoUnstableConnectionDefault from "UserProfileConfirmVideoUnstableConnection" /* 9081 */;
-import UserProfileAlertUserReportedDefault from "UserProfileAlertUserReported" /* 9082 */;
-import UserProfileConfirmThreadRemoveDefault from "UserProfileConfirmThreadRemove" /* 9083 */;
+import UserProfileConfirmCancelFriendRequestDefault from "UserProfileConfirmCancelFriendRequest" /* 9086 */;
+import UserProfileConfirmRemoveFriendDefault from "UserProfileConfirmRemoveFriend" /* 9087 */;
+import UserProfileConfirmRemoveGameFriendDefault from "UserProfileConfirmRemoveGameFriend" /* 9088 */;
+import UserProfileConfirmVideoUnstableConnectionDefault from "UserProfileConfirmVideoUnstableConnection" /* 9095 */;
+import UserProfileAlertUserReportedDefault from "UserProfileAlertUserReported" /* 9096 */;
+import UserProfileConfirmThreadRemoveDefault from "UserProfileConfirmThreadRemove" /* 9097 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

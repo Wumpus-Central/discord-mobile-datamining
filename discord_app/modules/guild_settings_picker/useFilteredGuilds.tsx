@@ -1,10 +1,10 @@
-// === Module 13634: useFilteredGuilds ===
+// === Module 13857: useFilteredGuilds ===
 
-// Module 13634 (useFilteredGuilds)
+// Module 13857 (useFilteredGuilds)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "createGuildRecordFromRust" /* 1909 */;
-import closure_5 from "insertUnsortedGuilds" /* 5381 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import closure_4 from "createGuildRecordFromRust" /* 1908 */;
+import closure_5 from "insertUnsortedGuilds" /* 5389 */;
+import closure_6 from "mergeGuildAvatar" /* 1921 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_settings_picker/useFilteredGuilds.tsx");

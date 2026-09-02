@@ -1,9 +1,9 @@
-// === Module 11007: trackViewedEvent ===
+// === Module 11227: trackViewedEvent ===
 
-// Module 11007 (trackViewedEvent)
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+// Module 11227 (trackViewedEvent)
+import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
+import closure_2 from "mergeGuildAvatar" /* 1921 */;
+import { AnalyticEvents } from "ME" /* 673 */;
 
 const result = require("set").fileFinishedImporting("modules/self_mod/shared/SafetyWarningUtils.tsx");
 

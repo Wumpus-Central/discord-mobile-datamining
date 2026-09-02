@@ -1,6 +1,6 @@
-// === Module 16394: ChannelSettingsAutoFocusElement ===
+// === Module 16626: ChannelSettingsAutoFocusElement ===
 
-// Module 16394 (ChannelSettingsAutoFocusElement)
+// Module 16626 (ChannelSettingsAutoFocusElement)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("components_native/channel_settings/ChannelSettingsConstants.tsx");

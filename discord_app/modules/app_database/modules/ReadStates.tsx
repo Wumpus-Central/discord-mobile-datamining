@@ -1,9 +1,9 @@
-// === Module 7235: getAll ===
+// === Module 7244: getAll ===
 
-// Module 7235 (getAll)
+// Module 7244 (getAll)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "ensureGuildLoaded" /* 1387 */;
+import closure_3 from "ensureGuildLoaded" /* 1386 */;
 import closure_4 from "generateOldThreadCutoff" /* 4493 */;
 import set from "set" /* 2 */;
 
@@ -116,7 +116,7 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database) {
         }
         continue;
       }
-      obj1 = statesTransaction(1956);
+      obj1 = statesTransaction(1955);
       const result = obj1.nonGuildVersionsTransaction(database);
       let obj = { id: "highest_last_message_id", versionString: null };
       obj[1] = str2;
@@ -131,7 +131,7 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database) {
       const iter2 = sorted.reverse();
     }
   }
-  statesTransaction = statesTransaction(1956).readStatesTransaction(database);
+  statesTransaction = statesTransaction(1955).readStatesTransaction(database);
   statesTransaction.delete();
   const item = allReadStates.forEach((type) => statesTransaction.put("" + type.type + "-" + type.channelId, type));
 };

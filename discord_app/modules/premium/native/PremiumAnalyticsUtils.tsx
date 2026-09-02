@@ -1,11 +1,11 @@
-// === Module 10456: PaymentFlowStep ===
+// === Module 10677: PaymentFlowStep ===
 
-// Module 10456 (PaymentFlowStep)
+// Module 10677 (PaymentFlowStep)
 import set from "set" /* 2 */;
-import v1 from "v1" /* 514 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import v1 from "v1" /* 511 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
 import getPremiumPlanItem from "getPremiumPlanItem" /* 4139 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 
 ({ SubscriptionTypes: c3, PurchaseTypeToAnalyticsPaymentType: c4, PurchaseTypes: c5, AnalyticEvents: closure_6 } = ME);
 let obj = { WHAT_YOU_LOSE: 1, [1]: "WHAT_YOU_LOSE", CONFIRM: 2, [2]: "CONFIRM", PREVIEW: 3, [3]: "PREVIEW", DOWNGRADE_TO_TIER_0: 4, [4]: "DOWNGRADE_TO_TIER_0", MOBILE_SUBSCRIPTION_MANAGE: 5, [5]: "MOBILE_SUBSCRIPTION_MANAGE" };
@@ -26,8 +26,8 @@ export const getBasePurchaseFlowAnalyticsFields = function getBasePurchaseFlowAn
   obj[6] = section;
   return obj;
 };
-export const getPaymentFlowCompletedAnalyticsFields = function getPaymentFlowCompletedAnalyticsFields(arg0, arg1) {
-  const merged = Object.assign(arg0);
+export const getPaymentFlowCompletedAnalyticsFields = function getPaymentFlowCompletedAnalyticsFields(throwTypeErrorResult, arg1) {
+  const merged = Object.assign(throwTypeErrorResult);
   const merged1 = Object.assign(arg1);
   return {};
 };

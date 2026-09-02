@@ -1,9 +1,9 @@
-// === Module 15462: route ===
+// === Module 15692: route ===
 
-// Module 15462 (route)
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 15692 (route)
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import closure_2 from "noop" /* 19 */;
-import createToggle from "createToggle" /* 11068 */;
+import createToggle from "createToggle" /* 11288 */;
 
 require = arg1;
 createToggle = {
@@ -16,9 +16,9 @@ createToggle = {
   screen: createToggle,
   usePreNavigationAction() {
     return React.useCallback(() => {
-      const consents = callback(14461).fetchConsents();
-      const obj = callback(14461);
-      const harvestStatus = callback(14464).fetchHarvestStatus();
+      const consents = callback(14684).fetchConsents();
+      const obj = callback(14684);
+      const harvestStatus = callback(14687).fetchHarvestStatus();
       return true;
     }, []);
   }
@@ -26,7 +26,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.DATA_AND_PRIVACY,
   getComponent() {
-    return require(15463) /* DataAndPrivacySettings */.default;
+    return require(15693) /* DataAndPrivacySettings */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

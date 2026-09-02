@@ -1,12 +1,12 @@
-// === Module 15865: getAffineChannelId ===
+// === Module 16096: getAffineChannelId ===
 
-// Module 15865 (getAffineChannelId)
+// Module 16096 (getAffineChannelId)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "map" /* 15866 */;
-import closure_5 from "recomputeAffinities" /* 7404 */;
-import closure_6 from "ensureGuildLoaded" /* 1387 */;
-import { NO_SUGGESTIONS } from "items" /* 15791 */;
-import { isAllowedType } from "ALLOWED_TYPES" /* 10719 */;
+import closure_4 from "map" /* 16097 */;
+import closure_5 from "recomputeAffinities" /* 7413 */;
+import closure_6 from "ensureGuildLoaded" /* 1386 */;
+import { NO_SUGGESTIONS } from "items" /* 16022 */;
+import { isAllowedType } from "ALLOWED_TYPES" /* 10940 */;
 
 const require = arg1;
 function getAffineChannelId(channelId) {

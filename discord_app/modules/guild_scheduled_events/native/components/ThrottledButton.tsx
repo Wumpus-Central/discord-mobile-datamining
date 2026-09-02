@@ -1,6 +1,6 @@
-// === Module 9747: ThrottledButton ===
+// === Module 9769: ThrottledButton ===
 
-// Module 9747 (ThrottledButton)
+// Module 9769 (ThrottledButton)
 import closure_2 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 

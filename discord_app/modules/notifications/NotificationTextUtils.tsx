@@ -1,42 +1,42 @@
-// === Module 10168: shouldNotifyBase ===
+// === Module 10190: shouldNotifyBase ===
 
-// Module 10168 (shouldNotifyBase)
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import hasFlag from "hasFlag" /* 1399 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
+// Module 10190 (shouldNotifyBase)
+import initialize from "initialize" /* 586 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import hasFlag from "hasFlag" /* 1398 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
 import getRootNavigationRef from "getRootNavigationRef" /* 4333 */;
 import getNicknameDefault from "getNickname" /* 4673 */;
 import computeChannelName from "computeChannelName" /* 4674 */;
 import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 4731 */;
 import isMentioned from "isMentioned" /* 4751 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6117 */;
-import isForwardMessage from "isForwardMessage" /* 6147 */;
-import FSI from "FSI" /* 7429 */;
-import isChannelCurrentlyVisible from "isChannelCurrentlyVisible" /* 10170 */;
-import computeThreadNotificationSetting from "computeThreadNotificationSetting" /* 10171 */;
-import useFocusModeEnabled from "useFocusModeEnabled" /* 10173 */;
-import closure_3 from "participantFromServer" /* 1386 */;
-import closure_4 from "initialize" /* 4122 */;
-import closure_5 from "processChannel" /* 6066 */;
-import closure_6 from "storeThread" /* 4123 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6125 */;
+import isForwardMessage from "isForwardMessage" /* 6155 */;
+import FSI from "FSI" /* 7439 */;
+import isChannelCurrentlyVisible from "isChannelCurrentlyVisible" /* 10192 */;
+import computeThreadNotificationSetting from "computeThreadNotificationSetting" /* 10193 */;
+import useFocusModeEnabled from "useFocusModeEnabled" /* 10195 */;
+import closure_3 from "participantFromServer" /* 1385 */;
+import closure_4 from "initialize" /* 4121 */;
+import closure_5 from "processChannel" /* 6074 */;
+import closure_6 from "storeThread" /* 4122 */;
 import closure_7 from "withEqualityFn" /* 4728 */;
-import createChannelRecord from "createChannelRecord" /* 1391 */;
-import closure_10 from "ensureGuildLoaded" /* 1387 */;
-import closure_11 from "createGuildRecordFromRust" /* 1909 */;
+import createChannelRecord from "createChannelRecord" /* 1390 */;
+import closure_10 from "ensureGuildLoaded" /* 1386 */;
+import closure_11 from "createGuildRecordFromRust" /* 1908 */;
 import closure_12 from "createRTCConnection" /* 4554 */;
 import closure_13 from "markAllUserIdListsStale" /* 4130 */;
-import closure_14 from "handleConnectionOpen" /* 1981 */;
+import closure_14 from "handleConnectionOpen" /* 1980 */;
 import closure_15 from "handleConnectionOpen" /* 4299 */;
-import closure_16 from "filterPlayingActivities" /* 5223 */;
+import closure_16 from "filterPlayingActivities" /* 5231 */;
 import closure_17 from "updateUserGuildSettingsInternal" /* 4701 */;
-import closure_18 from "handleRequiredAction" /* 1381 */;
-import closure_19 from "mergeGuildAvatar" /* 1922 */;
-import closure_20 from "initialize" /* 10169 */;
-import ME from "ME" /* 676 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 9466 */;
-import { ThreadMemberFlags } from "AbortCodes" /* 1235 */;
+import closure_18 from "handleRequiredAction" /* 1380 */;
+import closure_19 from "mergeGuildAvatar" /* 1921 */;
+import closure_20 from "initialize" /* 10191 */;
+import ME from "ME" /* 673 */;
+import { ActivityPanelModes } from "ActivityPanelModes" /* 9479 */;
+import { ThreadMemberFlags } from "AbortCodes" /* 1232 */;
 
 require = arg1;
 function shouldNotifyBase(currentUser, user, channel, arg3) {
@@ -109,7 +109,7 @@ function renderTitle(channelName, channel, channel) {
   const tmp5 = closure_13;
   let str = "";
   if (null != channel) {
-    let tmpResult = tmp(7429);
+    let tmpResult = tmp(7439);
     tmpResult = tmp(4674);
     const _HermesInternal = HermesInternal;
     str = ", " + tmpResult.isolate(tmpResult.computeChannelName(channel, tmp4, tmp5));
@@ -118,17 +118,44 @@ function renderTitle(channelName, channel, channel) {
 }
 function getInviteEmbedFormatString(type, _TD0la, _TD0la2, _TD0la3) {
   type = type.type;
-  if (constants2.GUILD_ANNOUNCEMENT !== type) {
+  if (constants2.GROUP_DM === type) {
+    return _TD0la2;
+  } else if (tmp.DM === type) {
+    return _TD0la3;
+  } else {
     if (tmp.GUILD_TEXT !== type) {
-      if (tmp.GROUP_DM === type) {
-        return _TD0la2;
-      } else {
-        const DM = tmp.DM;
-        return _TD0la3;
+      if (tmp.GUILD_ANNOUNCEMENT !== type) {
+        if (tmp.GUILD_APP !== type) {
+          if (tmp.GUILD_FORUM !== type) {
+            if (tmp.GUILD_MEDIA !== type) {
+              if (tmp.GUILD_VOICE !== type) {
+                if (tmp.GUILD_STAGE_VOICE !== type) {
+                  if (tmp.ANNOUNCEMENT_THREAD !== type) {
+                    if (tmp.PUBLIC_THREAD !== type) {
+                      if (tmp.PRIVATE_THREAD !== type) {
+                        if (tmp.MEDIA_THREAD !== type) {
+                          if (tmp.GUILD_CATEGORY !== type) {
+                            if (tmp.GUILD_STORE !== type) {
+                              if (tmp.GUILD_DIRECTORY !== type) {
+                                if (tmp.GUILD_SPACE !== type) {
+                                  const UNKNOWN = tmp.UNKNOWN;
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
+    return _TD0la;
   }
-  return _TD0la;
 }
 ({ GUILD_VOCAL_CHANNEL_TYPES: closure_8, THREAD_CHANNEL_TYPES: c9 } = createChannelRecord);
 ({ ActivityActionTypes: closure_21, ChannelTypes: closure_22, MessageFlags: closure_23, MessageTypes: closure_24, MessageTypesSets: closure_25, StatusTypes: closure_26, UserFlags: closure_27 } = ME);
@@ -400,8 +427,8 @@ export const shouldIncludeSelectedChannel = function shouldIncludeSelectedChanne
       const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
       let tmp5 = null == rootNavigationRef || !rootNavigationRef.isReady();
       if (!tmp5) {
-        tmp5 = !tmp3(10172).isChannelFocused();
-        const tmp3Result = tmp3(10172);
+        tmp5 = !tmp3(10194).isChannelFocused();
+        const tmp3Result = tmp3(10194);
       }
       flag = tmp5;
       const obj3 = getRootNavigationRef;
@@ -420,219 +447,221 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
   const type = getGuildId.type;
   if (constants2.GUILD_ANNOUNCEMENT !== type) {
     if (tmp4.GUILD_TEXT !== type) {
-      if (tmp4.GUILD_VOICE !== type) {
-        if (tmp4.ANNOUNCEMENT_THREAD !== type) {
-          if (tmp4.PUBLIC_THREAD !== type) {
-            if (tmp4.PRIVATE_THREAD !== type) {
-              let tmp5 = name;
-              if (tmp4.GROUP_DM === type) {
-                let tmp6 = getGuildId.isManaged() && bot.bot;
-                if (tmp6) {
-                  obj1 = computeChannelName;
-                  tmp6 = name === obj1.computeChannelName(getGuildId, closure_19, closure_13);
-                }
-                tmp5 = name;
-                if (!tmp6) {
-                  tmp5 = renderTitle(name, getGuildId);
-                }
-              }
-            }
-            content = content.content;
-            if (tmp(6117)(content)) {
-              let tmpResult = tmp(7895);
-              content = tmpResult.stringify(content, getGuildId);
-              if (null == content) {
-                const obj15 = new tmp(3)("NotificationTextUtils");
-                obj = { message: null };
-                obj[0] = content;
-                obj15.warn("SystemMessageUtils.stringify(...) could not convert", obj);
-                const _Error = Error;
-                error = new Error("failed to stringify system message");
-                throw error;
-              }
-            }
-            if ("sticker_items" in content) {
-              let sticker_items = content.sticker_items;
-            } else {
-              sticker_items = "stickerItems" in content ? content.stickerItems : content.stickers;
-            }
-            if ("message_reference" in content) {
-              let obj4 = isForwardMessage;
-              let result = obj4.isForwardServerMessage(content);
-            } else {
-              result = tmp(6147)(content);
-            }
-            const items = [];
-            if (result) {
-              const intl8 = getSystemLocale.intl;
-              let stringResult = intl8.string(getSystemLocale.t["9ddYKt"]);
-              let tmp26 = items;
-            } else {
-              if (null != content.activity) {
-                if (null != content.application) {
-                  if (content.activity.type === constants.JOIN) {
-                    const intl7 = getSystemLocale.intl;
-                    obj = { user: null, game: null };
-                    obj[0] = name;
-                    obj[1] = content.application.name;
-                    let str7 = intl7.formatToPlainString(getInviteEmbedFormatString(getGuildId, getSystemLocale.t.E8CgCh, getSystemLocale.t.c6KHWJ, getSystemLocale.t.Fy7rJN), obj);
-                  } else {
-                    str7 = "";
-                    if (content.activity.type === tmp44.JOIN_REQUEST) {
-                      const intl9 = getSystemLocale.intl;
-                      obj1 = { user: null, game: null };
-                      obj1[0] = name;
-                      obj1[1] = content.application.name;
-                      str7 = intl9.formatToPlainString(getInviteEmbedFormatString(getGuildId, getSystemLocale.t["/TD0la"], getSystemLocale.t["/TD0la"], getSystemLocale.t["/TD0la"]), obj1);
-                    }
+      if (tmp4.GUILD_APP !== type) {
+        if (tmp4.GUILD_VOICE !== type) {
+          if (tmp4.ANNOUNCEMENT_THREAD !== type) {
+            if (tmp4.PUBLIC_THREAD !== type) {
+              if (tmp4.PRIVATE_THREAD !== type) {
+                let tmp5 = name;
+                if (tmp4.GROUP_DM === type) {
+                  let tmp6 = getGuildId.isManaged() && bot.bot;
+                  if (tmp6) {
+                    obj1 = computeChannelName;
+                    tmp6 = name === obj1.computeChannelName(getGuildId, closure_19, closure_13);
                   }
-                  stringResult = str7;
-                  tmp26 = items;
-                }
-              }
-              if (null != content.activity) {
-                if (content.activity.type === constants.LISTEN) {
-                  const intl6 = getSystemLocale.intl;
-                  let obj2 = { user: null };
-                  obj2[0] = name;
-                  stringResult = intl6.formatToPlainString(getInviteEmbedFormatString(getGuildId, getSystemLocale.t.SaDdmN, getSystemLocale.t.qsODhp, getSystemLocale.t.WeiMTW), obj2);
-                  tmp26 = items;
-                  const tmp43 = getInviteEmbedFormatString(getGuildId, getSystemLocale.t.SaDdmN, getSystemLocale.t.qsODhp, getSystemLocale.t.WeiMTW);
-                }
-              }
-              if (null != sticker_items) {
-                if (sticker_items.length > 0) {
-                  const intl5 = getSystemLocale.intl;
-                  const obj3 = { stickerName: null };
-                  obj3[0] = sticker_items[0].name;
-                  stringResult = intl5.formatToPlainString(getSystemLocale.t.zY4v1B, obj3);
-                  tmp26 = items;
-                }
-              }
-              if (content.type === constants4.PREMIUM_REFERRAL) {
-                const intl4 = getSystemLocale.intl;
-                obj4 = { username: null };
-                tmpResult = tmp(4322);
-                obj4[0] = tmpResult.getName(bot);
-                stringResult = intl4.formatToPlainString(getSystemLocale.t.lieTqU, obj4);
-                tmp26 = items;
-              } else if (null != content.poll) {
-                const intl3 = getSystemLocale.intl;
-                const obj5 = { question: null };
-                obj5[0] = content.poll.question.text;
-                stringResult = intl3.formatToPlainString(getSystemLocale.t.ImizdM, obj5);
-                tmp26 = items;
-              } else if (content.type === tmp23.POLL_RESULT) {
-                const embeds = content.embeds;
-                let found;
-                if (embeds != null) {
-                  let first = embeds[0];
-                  if (first != null) {
-                    const fields = first.fields;
-                    if (fields != null) {
-                      found = fields.find((name) => "poll_question_text" === ("name" in name ? name.name : name.rawName));
-                    }
+                  tmp5 = name;
+                  if (!tmp6) {
+                    tmp5 = renderTitle(name, getGuildId);
                   }
                 }
-                if (null == found) {
-                  let intl2 = getSystemLocale.intl;
-                  const obj6 = { question: null };
-                  obj6[0] = "";
-                  stringResult = intl2.formatToPlainString(getSystemLocale.t["9WrecI"], obj6);
-                  tmp26 = items;
+              }
+              content = content.content;
+              if (tmp(6125)(content)) {
+                let tmpResult = tmp(7904);
+                content = tmpResult.stringify(content, getGuildId);
+                if (null == content) {
+                  const obj15 = new tmp(3)("NotificationTextUtils");
+                  obj = { message: null };
+                  obj[0] = content;
+                  obj15.warn("SystemMessageUtils.stringify(...) could not convert", obj);
+                  const _Error = Error;
+                  error = new Error("failed to stringify system message");
+                  throw error;
                 }
+              }
+              if ("sticker_items" in content) {
+                let sticker_items = content.sticker_items;
               } else {
-                if (null != content.components) {
-                  if (content.components.length > 0) {
-                    if (content.components[0].type === PermissionOverwriteType.ComponentType.CHECKPOINT_CARD) {
-                      let intl = tmp24(1236).intl;
-                      stringResult = intl.string(tmp24(1236).t.HWnMTQ);
-                      tmp26 = items;
+                sticker_items = "stickerItems" in content ? content.stickerItems : content.stickers;
+              }
+              if ("message_reference" in content) {
+                let obj4 = isForwardMessage;
+                let result = obj4.isForwardServerMessage(content);
+              } else {
+                result = tmp(6155)(content);
+              }
+              const items = [];
+              if (result) {
+                const intl8 = getSystemLocale.intl;
+                let stringResult = intl8.string(getSystemLocale.t["9ddYKt"]);
+                let tmp26 = items;
+              } else {
+                if (null != content.activity) {
+                  if (null != content.application) {
+                    if (content.activity.type === constants.JOIN) {
+                      const intl7 = getSystemLocale.intl;
+                      obj = { user: null, game: null };
+                      obj[0] = name;
+                      obj[1] = content.application.name;
+                      let str7 = intl7.formatToPlainString(getInviteEmbedFormatString(getGuildId, getSystemLocale.t.E8CgCh, getSystemLocale.t.c6KHWJ, getSystemLocale.t.Fy7rJN), obj);
+                    } else {
+                      str7 = "";
+                      if (content.activity.type === tmp44.JOIN_REQUEST) {
+                        const intl9 = getSystemLocale.intl;
+                        obj1 = { user: null, game: null };
+                        obj1[0] = name;
+                        obj1[1] = content.application.name;
+                        str7 = intl9.formatToPlainString(getInviteEmbedFormatString(getGuildId, getSystemLocale.t["/TD0la"], getSystemLocale.t["/TD0la"], getSystemLocale.t["/TD0la"]), obj1);
+                      }
                     }
+                    stringResult = str7;
+                    tmp26 = items;
                   }
                 }
-                const tmpResult1 = tmp(7427);
-                ({ content, emoji } = tmp(7427).unparseWithMeta(content, getGuildId.id, true));
-                tmp26 = emoji;
-                stringResult = content;
-                if (0 !== content.length) {
+                if (null != content.activity) {
+                  if (content.activity.type === constants.LISTEN) {
+                    const intl6 = getSystemLocale.intl;
+                    let obj2 = { user: null };
+                    obj2[0] = name;
+                    stringResult = intl6.formatToPlainString(getInviteEmbedFormatString(getGuildId, getSystemLocale.t.SaDdmN, getSystemLocale.t.qsODhp, getSystemLocale.t.WeiMTW), obj2);
+                    tmp26 = items;
+                    const tmp43 = getInviteEmbedFormatString(getGuildId, getSystemLocale.t.SaDdmN, getSystemLocale.t.qsODhp, getSystemLocale.t.WeiMTW);
+                  }
+                }
+                if (null != sticker_items) {
+                  if (sticker_items.length > 0) {
+                    const intl5 = getSystemLocale.intl;
+                    const obj3 = { stickerName: null };
+                    obj3[0] = sticker_items[0].name;
+                    stringResult = intl5.formatToPlainString(getSystemLocale.t.zY4v1B, obj3);
+                    tmp26 = items;
+                  }
+                }
+                if (content.type === constants4.PREMIUM_REFERRAL) {
+                  const intl4 = getSystemLocale.intl;
+                  obj4 = { username: null };
+                  tmpResult = tmp(4322);
+                  obj4[0] = tmpResult.getName(bot);
+                  stringResult = intl4.formatToPlainString(getSystemLocale.t.lieTqU, obj4);
+                  tmp26 = items;
+                } else if (null != content.poll) {
+                  const intl3 = getSystemLocale.intl;
+                  const obj5 = { question: null };
+                  obj5[0] = content.poll.question.text;
+                  stringResult = intl3.formatToPlainString(getSystemLocale.t.ImizdM, obj5);
+                  tmp26 = items;
+                } else if (content.type === tmp23.POLL_RESULT) {
+                  const embeds = content.embeds;
+                  let found;
+                  if (embeds != null) {
+                    let first = embeds[0];
+                    if (first != null) {
+                      const fields = first.fields;
+                      if (fields != null) {
+                        found = fields.find((name) => "poll_question_text" === ("name" in name ? name.name : name.rawName));
+                      }
+                    }
+                  }
+                  if (null == found) {
+                    let intl2 = getSystemLocale.intl;
+                    const obj6 = { question: null };
+                    obj6[0] = "";
+                    stringResult = intl2.formatToPlainString(getSystemLocale.t["9WrecI"], obj6);
+                    tmp26 = items;
+                  }
+                } else {
+                  if (null != content.components) {
+                    if (content.components.length > 0) {
+                      if (content.components[0].type === PermissionOverwriteType.ComponentType.CHECKPOINT_CARD) {
+                        let intl = tmp24(1233).intl;
+                        stringResult = intl.string(tmp24(1233).t.HWnMTQ);
+                        tmp26 = items;
+                      }
+                    }
+                  }
+                  const tmpResult1 = tmp(7436);
+                  ({ content, emoji } = tmp(7436).unparseWithMeta(content, getGuildId.id, true));
                   tmp26 = emoji;
                   stringResult = content;
-                  if (getGuildId.type === tmp4.DM) {
+                  if (0 !== content.length) {
                     tmp26 = emoji;
                     stringResult = content;
-                    if (!bot.bot) {
+                    if (getGuildId.type === tmp4.DM) {
                       tmp26 = emoji;
                       stringResult = content;
-                      if (content.startsWith("> -# *")) {
-                        const substr = content.substring(0, 1);
-                        const sum = substr + content.substring(4);
-                        const iter = emoji[Symbol.iterator]();
-                        const nextResult = iter.next();
+                      if (!bot.bot) {
                         tmp26 = emoji;
-                        stringResult = sum;
-                        while (iter !== undefined) {
-                          nextResult.position = nextResult.position - 2;
-                          continue;
+                        stringResult = content;
+                        if (content.startsWith("> -# *")) {
+                          const substr = content.substring(0, 1);
+                          const sum = substr + content.substring(4);
+                          const iter = emoji[Symbol.iterator]();
+                          const nextResult = iter.next();
+                          tmp26 = emoji;
+                          stringResult = sum;
+                          while (iter !== undefined) {
+                            nextResult.position = nextResult.position - 2;
+                            continue;
+                          }
                         }
                       }
                     }
                   }
+                  const unparseWithMetaResult = tmp(7436).unparseWithMeta(content, getGuildId.id, true);
                 }
-                const unparseWithMetaResult = tmp(7427).unparseWithMeta(content, getGuildId.id, true);
               }
-            }
-            if (0 === stringResult.length) {
-              stringResult = (function getContentlessNotificationBody(embeds) {
-                if (undefined !== embeds.embeds) {
-                  if (embeds.embeds.length > 0) {
-                    const first = embeds.embeds[0];
-                    const tmp2 = "description" in first ? first.description : first.rawDescription;
-                    const tmp3 = "title" in first ? first.title : first.rawTitle;
-                    if (null != tmp2) {
-                      let combined = tmp2;
-                      if (null != tmp3) {
-                        const _HermesInternal2 = HermesInternal;
-                        combined = "" + tmp3 + " " + tmp2;
-                      }
-                      return combined;
-                    } else if (null != tmp3) {
-                      return tmp3;
-                    } else if (null != first.fields) {
-                      if (first.fields.length > 0) {
-                        const _HermesInternal = HermesInternal;
-                        return "" + "name" in first.fields[0] ? first.fields[0].name : first.fields[0].rawName + " " + "value" in first.fields[0] ? first.fields[0].value : first.fields[0].rawValue;
+              if (0 === stringResult.length) {
+                stringResult = (function getContentlessNotificationBody(embeds) {
+                  if (undefined !== embeds.embeds) {
+                    if (embeds.embeds.length > 0) {
+                      const first = embeds.embeds[0];
+                      const tmp2 = "description" in first ? first.description : first.rawDescription;
+                      const tmp3 = "title" in first ? first.title : first.rawTitle;
+                      if (null != tmp2) {
+                        let combined = tmp2;
+                        if (null != tmp3) {
+                          const _HermesInternal2 = HermesInternal;
+                          combined = "" + tmp3 + " " + tmp2;
+                        }
+                        return combined;
+                      } else if (null != tmp3) {
+                        return tmp3;
+                      } else if (null != first.fields) {
+                        if (first.fields.length > 0) {
+                          const _HermesInternal = HermesInternal;
+                          return "" + "name" in first.fields[0] ? first.fields[0].name : first.fields[0].rawName + " " + "value" in first.fields[0] ? first.fields[0].value : first.fields[0].rawValue;
+                        }
                       }
                     }
                   }
-                }
-                let obj = callback(table[22]);
-                let num2 = embeds.flags;
-                if (num2 == null) {
-                  num2 = 0;
-                }
-                if (obj.hasFlag(num2, constants.IS_VOICE_MESSAGE)) {
-                  const intl2 = tmp5(tmp6[30]).intl;
-                  return intl2.string(tmp5(tmp6[30]).t.slFYgi);
-                } else {
-                  if (undefined !== embeds.attachments) {
-                    if (embeds.attachments.length > 0) {
-                      const intl = tmp5(tmp6[30]).intl;
-                      obj = { filename: null };
-                      obj[0] = callback2(tmp6[31])(embeds.attachments[0]);
-                      return intl.formatToPlainString(tmp5(tmp6[30]).t["51OkwL"], obj);
-                    }
+                  let obj = callback(table[22]);
+                  let num2 = embeds.flags;
+                  if (num2 == null) {
+                    num2 = 0;
                   }
-                  return "";
-                }
-              })(content);
+                  if (obj.hasFlag(num2, constants.IS_VOICE_MESSAGE)) {
+                    const intl2 = tmp5(tmp6[30]).intl;
+                    return intl2.string(tmp5(tmp6[30]).t.slFYgi);
+                  } else {
+                    if (undefined !== embeds.attachments) {
+                      if (embeds.attachments.length > 0) {
+                        const intl = tmp5(tmp6[30]).intl;
+                        obj = { filename: null };
+                        obj[0] = callback2(tmp6[31])(embeds.attachments[0]);
+                        return intl.formatToPlainString(tmp5(tmp6[30]).t["51OkwL"], obj);
+                      }
+                    }
+                    return "";
+                  }
+                })(content);
+              }
+              const obj7 = { icon: null, title: null, body: null, emoji: null };
+              obj7[0] = bot.getAvatarURL(getGuildId.guild_id, 128);
+              obj7[1] = tmp5;
+              obj7[2] = stringResult;
+              obj7[3] = tmp26;
+              return obj7;
             }
-            const obj7 = { icon: null, title: null, body: null, emoji: null };
-            obj7[0] = bot.getAvatarURL(getGuildId.guild_id, 128);
-            obj7[1] = tmp5;
-            obj7[2] = stringResult;
-            obj7[3] = tmp26;
-            return obj7;
           }
         }
       }

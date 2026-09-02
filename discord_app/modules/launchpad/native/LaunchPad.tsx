@@ -1,30 +1,30 @@
-// === Module 16549: TabButton ===
+// === Module 16784: TabButton ===
 
-// Module 16549 (TabButton)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 16784 (TabButton)
+import ThemesDefault from "Themes" /* 709 */;
 import Text from "Text" /* 4474 */;
-import PressableBase from "PressableBase" /* 5068 */;
-import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 9935 */;
+import PressableBase from "PressableBase" /* 5076 */;
+import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 9957 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "setContent" /* 4186 */;
-import closure_7 from "handleReset" /* 7270 */;
-import getIdFromHistoryItem from "getIdFromHistoryItem" /* 6173 */;
-import closure_11 from "getIdFromHistoryItem" /* 6173 */;
-import closure_12 from "rebuild" /* 5448 */;
-import createChannelRecord from "createChannelRecord" /* 1391 */;
-import closure_15 from "fetchFingerprint" /* 1218 */;
-import closure_16 from "ensureGuildLoaded" /* 1387 */;
-import closure_17 from "init" /* 7465 */;
-import closure_18 from "updateGuildUnreadSentinel" /* 7381 */;
-import closure_19 from "createGuildRecordFromRust" /* 1909 */;
-import closure_20 from "rebuildUnreads" /* 13407 */;
+import closure_7 from "handleReset" /* 7279 */;
+import getIdFromHistoryItem from "getIdFromHistoryItem" /* 6181 */;
+import closure_11 from "getIdFromHistoryItem" /* 6181 */;
+import closure_12 from "rebuild" /* 5456 */;
+import createChannelRecord from "createChannelRecord" /* 1390 */;
+import closure_15 from "fetchFingerprint" /* 1215 */;
+import closure_16 from "ensureGuildLoaded" /* 1386 */;
+import closure_17 from "init" /* 7475 */;
+import closure_18 from "updateGuildUnreadSentinel" /* 7390 */;
+import closure_19 from "createGuildRecordFromRust" /* 1908 */;
+import closure_20 from "rebuildUnreads" /* 13630 */;
 import closure_21 from "generateOldThreadCutoff" /* 4493 */;
-import closure_22 from "insertUnsortedGuilds" /* 5381 */;
+import closure_22 from "insertUnsortedGuilds" /* 5389 */;
 import closure_23 from "updateUserGuildSettingsInternal" /* 4701 */;
 import closure_24 from "updateVoiceState" /* 4497 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

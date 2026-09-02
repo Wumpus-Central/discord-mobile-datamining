@@ -1,11 +1,11 @@
-// === Module 11756: ? ===
+// === Module 11979: ? ===
 
-// Module 11756
+// Module 11979
 import importAllResult from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1387 */;
+import closure_4 from "ensureGuildLoaded" /* 1386 */;
 import closure_5 from "markAllUserIdListsStale" /* 4130 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import closure_6 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

@@ -1,13 +1,13 @@
-// === Module 9178: useEmojiAndSource ===
+// === Module 9192: useEmojiAndSource ===
 
-// Module 9178 (useEmojiAndSource)
+// Module 9192 (useEmojiAndSource)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "createGuildRecordFromRust" /* 1909 */;
-import closure_6 from "getEmojiToGroupId" /* 5401 */;
-import getEmojiSourceData from "getEmojiSourceData" /* 6005 */;
-import { GuildFeatures } from "ME" /* 676 */;
+import closure_5 from "createGuildRecordFromRust" /* 1908 */;
+import closure_6 from "getEmojiToGroupId" /* 5409 */;
+import getEmojiSourceData from "getEmojiSourceData" /* 6013 */;
+import { GuildFeatures } from "ME" /* 673 */;
 
 const require = arg1;
 ({ ExpressionSourceGuildRecord: error, EmojiSourceDataTypes: closure_8, getEmojiSourceData: c9 } = getEmojiSourceData);

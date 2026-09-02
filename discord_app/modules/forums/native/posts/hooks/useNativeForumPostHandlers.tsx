@@ -1,15 +1,15 @@
-// === Module 10302: useNativeForumPostHandlers ===
+// === Module 10324: useNativeForumPostHandlers ===
 
-// Module 10302 (useNativeForumPostHandlers)
+// Module 10324 (useNativeForumPostHandlers)
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "setContent" /* 4186 */;
-import closure_6 from "ensureGuildLoaded" /* 1387 */;
+import closure_6 from "ensureGuildLoaded" /* 1386 */;
 import closure_7 from "markAllUserIdListsStale" /* 4130 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import closure_9 from "handleLoadThreadsSuccess" /* 6124 */;
-import closure_10 from "handleLoadThreadsSuccess" /* 6153 */;
-import ME from "ME" /* 676 */;
-import { OpenThreadAnalyticsLocations as closure_15 } from "AbortCodes" /* 1235 */;
+import closure_8 from "mergeGuildAvatar" /* 1921 */;
+import closure_9 from "handleLoadThreadsSuccess" /* 6132 */;
+import closure_10 from "handleLoadThreadsSuccess" /* 6161 */;
+import ME from "ME" /* 673 */;
+import { OpenThreadAnalyticsLocations as closure_15 } from "AbortCodes" /* 1232 */;
 
 const require = arg1;
 ({ AnalyticsObjectTypes: unpackModuleId, AnalyticsPages: closure_12, AnalyticsSections: map1, EMPTY_STRING_SNOWFLAKE_ID: closure_14 } = ME);
@@ -19,7 +19,7 @@ export default function useNativeForumPostHandlers(threadId) {
   threadId = threadId.threadId;
   let NORMAL = threadId.reactionType;
   if (NORMAL === undefined) {
-    NORMAL = threadId(7507).ReactionTypes.NORMAL;
+    NORMAL = threadId(7517).ReactionTypes.NORMAL;
   }
   let callback1;
   const items = [threadId];

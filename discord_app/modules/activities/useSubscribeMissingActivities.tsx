@@ -1,9 +1,9 @@
-// === Module 11070: useSubscribeMissingActivities ===
+// === Module 11290: useSubscribeMissingActivities ===
 
-// Module 11070 (useSubscribeMissingActivities)
+// Module 11290 (useSubscribeMissingActivities)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleConnectionOpenOrResumed" /* 11071 */;
+import closure_4 from "handleConnectionOpenOrResumed" /* 11291 */;
 import closure_5 from "sortActivity" /* 4569 */;
 
 const require = arg1;
@@ -45,7 +45,7 @@ export default function useSubscribeMissingActivities(arg0, arg1) {
   first = tmp[0];
   let items1 = [closure_5];
   const items2 = [first];
-  stateFromStoresArray = _require(589).useStateFromStoresArray(items1, () => {
+  stateFromStoresArray = _require(586).useStateFromStoresArray(items1, () => {
     let items = [];
     const item = first.forEach((author) => {
       items = author;

@@ -1,27 +1,27 @@
-// === Module 14504: GuildRow ===
+// === Module 14727: GuildRow ===
 
-// Module 14504 (GuildRow)
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2369 */;
+// Module 14727 (GuildRow)
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import messagesProxyDefault from "messagesProxy" /* 2368 */;
 import Text from "Text" /* 4474 */;
-import ActionSheet from "ActionSheet" /* 5989 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5992 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 6004 */;
-import closure_3 from "freshTeenActivityWithMap" /* 7282 */;
+import ActionSheet from "ActionSheet" /* 5997 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 6000 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 6012 */;
+import closure_3 from "freshTeenActivityWithMap" /* 7291 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function GuildRow(guildActivity) {
   guildActivity = guildActivity.guildActivity;
-  let obj = guildActivity(589);
+  let obj = guildActivity(586);
   const items = [closure_3];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getGuild(guildActivity.guild_id));
   if (null == stateFromStores) {
     return null;
   } else {
-    const topUserOrGuildDescription = tmp2(7338).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
+    const topUserOrGuildDescription = tmp2(7347).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
     obj = { label: null, subLabel: null, icon: null };
     obj[0] = stateFromStores.name;
     obj[1] = topUserOrGuildDescription;
@@ -29,7 +29,7 @@ function GuildRow(guildActivity) {
     obj[0] = stateFromStores;
     obj[1] = tmp.guildIcon;
     obj[2] = callback(GuildIconSizesDefault, obj);
-    return callback(tmp2(5599).TableRow, obj);
+    return callback(tmp2(5607).TableRow, obj);
   }
   tmp = callback3();
 }

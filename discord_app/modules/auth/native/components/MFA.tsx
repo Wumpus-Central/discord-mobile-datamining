@@ -1,9 +1,9 @@
-// === Module 15567: statesAreEqual ===
+// === Module 15798: statesAreEqual ===
 
-// Module 15567 (statesAreEqual)
+// Module 15798 (statesAreEqual)
 import applyDefault from "apply" /* 12 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_4 from "fetchFingerprint" /* 1215 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -20,11 +20,11 @@ export default function ConnectedMFA() {
   }
   ({ inContainer, isMultiAccount } = obj);
   let navigation;
-  navigation = isMultiAccount(1499).useNavigation();
+  navigation = isMultiAccount(1498).useNavigation();
   if (inContainer) {
-    inContainer = navigation(7717)();
+    inContainer = navigation(7726)();
   }
-  let tmpResult = tmp(589);
+  let tmpResult = tmp(586);
   const items = [closure_4];
   const items1 = [isMultiAccount];
   const stateFromStores = tmpResult.useStateFromStores(items, () => ({ ticket: store.getMFATicket(), methods: store.getMFAMethods() }), [], statesAreEqual);
@@ -54,19 +54,19 @@ export default function ConnectedMFA() {
     let tmp13;
     if (inContainer) {
       obj = { paddingRight: null, paddingTop: null, marginLeft: 0 };
-      obj[0] = tmp4(712).space.PX_16;
-      obj[1] = tmp4(712).space.PX_12;
+      obj[0] = tmp4(709).space.PX_16;
+      obj[1] = tmp4(709).space.PX_12;
       tmp13 = obj;
     }
     obj[7] = tmp13;
-    return jsx(tmp(15265).MFAModal, obj);
+    return jsx(tmp(15494).MFAModal, obj);
   } else {
-    tmpResult = tmp(501);
-    let space = tmp4(712).space;
+    tmpResult = tmp(1235);
+    let space = tmp4(709).space;
     const isAndroidResult = tmpResult.isAndroid();
     space = { paddingLeft: null, paddingTop: null };
     space[0] = tmpResult.isAndroid() ? space.PX_8 : space.PX_16;
-    space[1] = tmp4(712).space.PX_12;
+    space[1] = tmp4(709).space.PX_12;
     const tmp11 = tmpResult.isAndroid() ? space.PX_8 : space.PX_16;
   }
 };

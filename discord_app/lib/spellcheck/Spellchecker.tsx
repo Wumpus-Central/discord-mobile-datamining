@@ -1,12 +1,12 @@
-// === Module 5571: _install ===
+// === Module 5579: _install ===
 
-// Module 5571 (_install)
+// Module 5579 (_install)
 import timestampDefault from "timestamp" /* 3 */;
-import set from "set" /* 1905 */;
+import set from "set" /* 1904 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "_getSystemLocale" /* 1996 */;
-import importDefaultResult from "set" /* 4104 */;
+import closure_5 from "_getSystemLocale" /* 1995 */;
+import importDefaultResult from "set" /* 4103 */;
 import importDefaultResult1 from "apply" /* 12 */;
 
 require = arg1;
@@ -256,7 +256,7 @@ prototype["applyLanguages"] = function applyLanguages(locale) {
     }
     closure_1_6.error("" + str2 + " is not a valid locale.");
   });
-  const arr = Array.from(new Set(mapped.filter(mapped1(1471).isNotNullish)));
+  const arr = Array.from(new Set(mapped.filter(mapped1(1470).isNotNullish)));
   if (0 !== arr.length) {
     mapped1 = arr.map((arg0) => {
       let tmp = self.rawLocaleByNormalized[arg0];
@@ -308,9 +308,9 @@ let closure_9 = importDefaultResult1.debounce((detectLanguage, hasAttribute) => 
   let textContent = null;
   if (null != hasAttribute) {
     if (!obj.isElement(hasAttribute, globalThis.HTMLInputElement)) {
-      let tmp2Result = tmp2(1905);
+      let tmp2Result = tmp2(1904);
       if (!tmp2Result.isElement(hasAttribute, globalThis.HTMLTextAreaElement)) {
-        tmp2Result = tmp2(1905);
+        tmp2Result = tmp2(1904);
         if (tmp2Result.isElement(hasAttribute)) {
           if (hasAttribute.hasAttribute("contenteditable")) {
             textContent = hasAttribute.textContent;

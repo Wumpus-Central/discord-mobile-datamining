@@ -1,6 +1,6 @@
-// === Module 12844: useMediaViewerPanGestureConfig ===
+// === Module 13066: useMediaViewerPanGestureConfig ===
 
-// Module 12844 (useMediaViewerPanGestureConfig)
+// Module 13066 (useMediaViewerPanGestureConfig)
 import closure_3 from "noop" /* 19 */;
 
 const require = arg1;

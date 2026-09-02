@@ -1,9 +1,9 @@
-// === Module 10683: InviteRolesDisplay ===
+// === Module 10904: InviteRolesDisplay ===
 
-// Module 10683 (InviteRolesDisplay)
+// Module 10904 (InviteRolesDisplay)
 import noopAll from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "createGuildRoleRecordFromRust" /* 1985 */;
+import closure_4 from "createGuildRoleRecordFromRust" /* 1984 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -17,7 +17,7 @@ export default function InviteRolesDisplay(roleIds) {
   roleIds = roleIds.roleIds;
   const guildId = roleIds.guildId;
   const tmp = callback3();
-  let obj = roleIds(589);
+  let obj = roleIds(586);
   const items = [closure_4];
   const items1 = [roleIds, guildId];
   const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
@@ -30,8 +30,8 @@ export default function InviteRolesDisplay(roleIds) {
     obj[0] = tmp.container;
     obj = { variant: "text-xs/semibold", color: "text-muted", style: null, children: null };
     obj[2] = tmp.label;
-    const intl = tmp2(1236).intl;
-    obj[3] = intl.string(tmp2(1236).t.stcSfI);
+    const intl = tmp2(1233).intl;
+    obj[3] = intl.string(tmp2(1233).t.stcSfI);
     const items2 = [callback(tmp2(4474).Text, obj), ];
     obj1 = { style: null, children: null };
     obj1[0] = tmp.rolesRow;

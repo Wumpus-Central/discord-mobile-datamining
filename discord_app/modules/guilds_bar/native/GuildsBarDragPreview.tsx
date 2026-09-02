@@ -1,11 +1,11 @@
-// === Module 15951: PreviewItem ===
+// === Module 16182: PreviewItem ===
 
-// Module 15951 (PreviewItem)
-import isIterable from "isIterable" /* 4106 */;
+// Module 16182 (PreviewItem)
+import isIterable from "isIterable" /* 4105 */;
 import importAllResult from "noop" /* 19 */;
-import { GuildsNodeType } from "insertUnsortedGuilds" /* 5381 */;
-import closure_5 from "withEqualityFn" /* 15875 */;
-import { GUILD_ITEM_INSET_LEFT } from "GUILD_ITEM_SIZE" /* 15876 */;
+import { GuildsNodeType } from "insertUnsortedGuilds" /* 5389 */;
+import closure_5 from "withEqualityFn" /* 16106 */;
+import { GUILD_ITEM_INSET_LEFT } from "GUILD_ITEM_SIZE" /* 16107 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -134,7 +134,7 @@ function PreviewItem(dragRegion) {
   const memo = gestureState.useMemo(() => {
     if ("convert-after" === overState) {
       if (null != overNode) {
-        const obj = { type: null, id: -1, parentId: "PX_16", name: "Array", color: "HermesInternal", expanded: 15, children: "variations" };
+        const obj = { type: null, id: -1, parentId: "PX_16", name: "Array", color: "paddingHorizontal", expanded: true, children: true };
         obj[0] = listInsets.FOLDER;
         const items = [tmp2];
         obj[6] = items;
@@ -338,7 +338,7 @@ const memoResult = importAllResult.memo(function GuildsBarDragPreview() {
       if (null != dragSpecs) {
         if (null != overSpecs) {
           const state = overSpecs.state;
-          obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "b\u1EA3n \u0111\u1ED3", scrollPosition: "b\u1EA3n \u0111\u1ED3 th\u1EBF gi\u1EDBi", dragRegion: "th\u1EBF gi\u1EDBi", windowSize: "b\u1EA3n \u0111\u1ED3", dropComplete: "b\u1EA3n \u0111\u1ED3 Nh\u1EADt B\u1EA3n", listInsets: "nh\u1EADt b\u1EA3n" };
+          obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: true, scrollPosition: "light-content", dragRegion: null, windowSize: "PAYPAL_POPUP_OPEN_FAILED", dropComplete: "PayPal popup failed to open, make sure to tokenize in response to a user action.", listInsets: "text-md/semibold" };
           ({ node: obj[0], itemSize: obj[1] } = dragSpecs);
           obj[2] = state;
           let node;

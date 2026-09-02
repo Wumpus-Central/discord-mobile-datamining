@@ -1,15 +1,15 @@
-// === Module 17344: BaseBenefitRow ===
+// === Module 17580: BaseBenefitRow ===
 
-// Module 17344 (BaseBenefitRow)
+// Module 17580 (BaseBenefitRow)
 import noopAll from "noop" /* 19 */;
-import Button from "Button" /* 1297 */;
+import Button from "Button" /* 1296 */;
 import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4134 */;
 import Text from "Text" /* 4474 */;
-import registerAssetDefault from "registerAsset" /* 10030 */;
-import getUsedTemplateChannelsForGuild from "getUsedTemplateChannelsForGuild" /* 14829 */;
-import EmojiIconDefault from "EmojiIcon" /* 14836 */;
+import registerAssetDefault from "registerAsset" /* 10052 */;
+import getUsedTemplateChannelsForGuild from "getUsedTemplateChannelsForGuild" /* 15058 */;
+import EmojiIconDefault from "EmojiIcon" /* 15065 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { GuildRoleSubscriptionBenefitTypes as closure_4 } from "MAX_SUBSCRIPTION_TIERS" /* 14801 */;
+import { GuildRoleSubscriptionBenefitTypes as closure_4 } from "MAX_SUBSCRIPTION_TIERS" /* 15030 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -73,9 +73,9 @@ function ChannelBenefitRow(benefit) {
   }
   if (null == channelWithTemplateFallback) {
     obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-    const intl = tmp2(1236).intl;
+    const intl = tmp2(1233).intl;
     const _HermesInternal = HermesInternal;
-    obj[2] = "[" + intl.string(tmp2(1236).t.bz1PZX) + "]";
+    obj[2] = "[" + intl.string(tmp2(1233).t.bz1PZX) + "]";
     let tmp9 = callback(tmp2(4474).Text, obj);
   } else {
     obj = { benefit: null, guildId: null, isInteractive: null, children: null };
@@ -86,9 +86,9 @@ function ChannelBenefitRow(benefit) {
     obj1[0] = tmp.channelRow;
     const obj2 = { style: null, size: null, source: null };
     obj2[0] = tmp.channelIcon;
-    obj2[1] = tmp2(1297).Icon.Sizes.CUSTOM;
+    obj2[1] = tmp2(1296).Icon.Sizes.CUSTOM;
     obj2[2] = channelIcon;
-    const items = [callback(tmp2(1297).Icon, obj2), ];
+    const items = [callback(tmp2(1296).Icon, obj2), ];
     const obj3 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj3[2] = tmp5;
     items[1] = callback(tmp2(4474).Text, obj3);

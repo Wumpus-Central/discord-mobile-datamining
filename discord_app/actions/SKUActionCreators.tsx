@@ -1,11 +1,11 @@
-// === Module 10590: _fetchSKU ===
+// === Module 10811: _fetchSKU ===
 
-// Module 10590 (_fetchSKU)
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 10811 (_fetchSKU)
+import dispatcherDefault from "dispatcher" /* 706 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "getPromotionIdOverride" /* 8496 */;
+import closure_4 from "getPromotionIdOverride" /* 8509 */;
 import closure_5 from "addSku" /* 4527 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 
 const require = arg1;
 function _fetchSKU() {
@@ -66,7 +66,7 @@ function _fetchSKU() {
             }
           } else if (1 === tmp7) {
             c4 = 0;
-            obj3 = lib(709);
+            obj3 = lib(706);
             const obj4 = { type: "SKU_FETCH_FAIL", skuId: null };
             obj4[1] = callback;
             obj3.dispatch(obj4);
@@ -79,7 +79,7 @@ function _fetchSKU() {
             throw arg1;
           } else if (arg0 !== 2) {
             lib = arg1;
-            obj = lib(709);
+            obj = lib(706);
             obj5 = { type: "SKU_FETCH_SUCCESS", sku: null };
             obj5[1] = lib.body;
             obj.dispatch(obj5);
@@ -260,30 +260,95 @@ function _fetchTestSKUsForApplication() {
     c4 = 0;
     c5 = 0;
     const iter = (function*(arg0, body) {
-      body = tmp2;
-      if (flag === undefined) {
-        flag = true;
-      }
-      yield "PX_16";
-      if (!obj12.isTestModeForApplication(callback)) {
-        if (flag) {
-          const _Error = Error;
-          error = new Error("this should only be used in test mode");
-          throw error;
+      if (c5 === 2) {
+        c5 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw body;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = body;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c5 = 2;
+          if (0 === c4) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw body;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              obj = { value: null, done: true };
+              obj[0] = body;
+              return obj;
+            } else {
+              closure_3 = tmp5;
+              body = tmp2;
+              let flag;
+              if (flag === undefined) {
+                flag = true;
+              }
+              body = undefined;
+              c4 = 1;
+              c5 = 1;
+              return { value: "PX_16", done: true };
+            }
+          } else if (1 === tmp5) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw body;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              obj1 = { value: null, done: true };
+              obj1[0] = body;
+              return obj1;
+            } else {
+              if (!obj12.isTestModeForApplication(callback)) {
+                if (flag) {
+                  const _Error = Error;
+                  error = new Error("this should only be used in test mode");
+                  throw error;
+                }
+              }
+              let obj4 = callback(body[5]);
+              const obj2 = { url: null, rejectWithError: null };
+              obj2[0] = closure_7.APPLICATION_SKUS(callback);
+              let obj6 = callback(body[6]);
+              obj2[1] = obj6.rejectWithMigratedError();
+              c4 = 2;
+              c5 = 1;
+              const obj3 = { value: null, done: false };
+              obj3[0] = obj4.httpGetWithCountryCodeQuery(obj2);
+              return obj3;
+            }
+          } else if (arg0 === 1) {
+            c5 = 3;
+            throw body;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            obj4 = { value: null, done: true };
+            obj4[0] = body;
+            return obj4;
+          } else {
+            body = body.body;
+            obj = flag(body[4]);
+            const obj5 = { type: "SKUS_FETCH_SUCCESS", skus: null };
+            obj5[1] = body;
+            obj.dispatch(obj5);
+            c5 = 3;
+            obj6 = { value: null, done: true };
+            obj6[0] = body;
+            return obj6;
+          }
+        } catch (tmp28) {
+          c5 = tmp;
+          throw tmp28;
         }
       }
-      const obj4 = callback(body[5]);
-      const obj2 = { url: null, rejectWithError: null };
-      obj2[0] = closure_7.APPLICATION_SKUS(callback);
-      const obj6 = callback(body[6]);
-      obj2[1] = obj6.rejectWithMigratedError();
-      yield obj4.httpGetWithCountryCodeQuery(obj2);
-      body = body.body;
-      const obj = flag(body[4]);
-      const obj5 = { type: "SKUS_FETCH_SUCCESS", skus: null };
-      obj5[1] = body;
-      obj.dispatch(obj5);
-      return body;
     })();
     iter.next();
     return iter;
@@ -344,7 +409,7 @@ function _previewPurchaseSku() {
               let billingError;
               c5 = 1;
               promotionIdOverride2 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -373,7 +438,7 @@ function _previewPurchaseSku() {
               const obj3 = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
               obj3[0] = billingError.STORE_SKU_PURCHASE(c1);
               obj3[1] = c5;
-              let obj4 = callback(530);
+              let obj4 = callback(527);
               obj3[3] = obj4.rejectWithMigratedError();
               c5 = 3;
               promotionIdOverride2 = 1;
@@ -591,7 +656,7 @@ function _orderSKU() {
               closure_5 = tmp5;
               body = undefined;
               let id;
-              callback2(709).dispatch({ type: "ORDER_CREATE_START" });
+              callback2(706).dispatch({ type: "ORDER_CREATE_START" });
               c8 = 1;
               obj1 = { order_line_items: null, billing_facet: null, location_facet: null };
               const obj2 = { sku_id: null, quantity: 1, purchase_type: 1 };
@@ -611,11 +676,11 @@ function _orderSKU() {
                 obj1.gifting_facet = obj5;
                 const obj6 = { recipient_id: null, gift_style: null, emoji_id: null, emoji_name: null, sound_id: null, reward_sku_ids: null, custom_message_contents: null };
               }
-              const HTTP = callback(530).HTTP;
+              const HTTP = callback(527).HTTP;
               const obj7 = { url: null, body: null, rejectWithError: null };
               obj7[0] = closure_1_7.ORDER_CREATE;
               obj7[1] = obj1;
-              let obj8 = callback(530);
+              let obj8 = callback(527);
               obj7[2] = obj8.rejectWithMigratedError();
               c9 = 2;
               c10 = 1;
@@ -626,7 +691,7 @@ function _orderSKU() {
           } else if (1 === tmp8) {
             c8 = 0;
             dependencyMap = closure_7;
-            obj4 = id(709);
+            obj4 = id(706);
             obj4.dispatch({ type: "ORDER_CREATE_FAIL" });
             const _HermesInternal = HermesInternal;
             const billingError = new body(4376).BillingError("Failed to create order: " + dependencyMap);
@@ -643,7 +708,7 @@ function _orderSKU() {
           } else {
             body = body.body;
             id = body.id;
-            obj = id(709);
+            obj = id(706);
             const obj10 = { type: "ORDER_CREATE_SUCCESS", orderId: null, order: null };
             obj10[1] = id;
             obj10[2] = body;
@@ -748,20 +813,20 @@ function _purchaseSKU() {
                 ({ giftInfoOptions: c7, loadId: c8, countryCode: c9, quantity: c10 } = obj1);
                 throwTypeErrorResult = callback2;
                 throwTypeErrorResult = dependencyMap;
-                throwTypeErrorResult = callback2(709).wait(() => {
+                throwTypeErrorResult = callback2(706).wait(() => {
                   let obj = callback(paymentSource[4]);
                   obj = { type: "SKU_PURCHASE_START", applicationId: closure_0, skuId: callback };
                   obj.dispatch(obj);
                 });
                 throwTypeErrorResult = callback;
                 throwTypeErrorResult = dependencyMap;
-                const obj27 = callback2(709);
-                c11 = callback(8497).isTestModeForApplication(callback);
+                const obj27 = callback2(706);
+                c11 = callback(8510).isTestModeForApplication(callback);
                 c8 = 1;
                 obj2 = { gift: isGift, sku_subscription_plan_id: obj1.subscriptionPlanId };
                 throwTypeErrorResult = callback;
                 throwTypeErrorResult = dependencyMap;
-                const obj28 = callback(8497);
+                const obj28 = callback(8510);
                 c10 = 2;
                 c11 = 1;
                 const obj3 = { value: null, done: false };

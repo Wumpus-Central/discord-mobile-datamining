@@ -1,12 +1,12 @@
-// === Module 5078: getUploadFileSizeSum ===
+// === Module 5086: getUploadFileSizeSum ===
 
-// Module 5078 (getUploadFileSizeSum)
+// Module 5086 (getUploadFileSizeSum)
 import applyDefault from "apply" /* 12 */;
-import noConflictDefault from "noConflict" /* 5079 */;
-import closure_3 from "createGuildRecordFromRust" /* 1909 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import noConflictDefault from "noConflict" /* 5087 */;
+import closure_3 from "createGuildRecordFromRust" /* 1908 */;
+import closure_4 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
+import GuildFeatures from "GuildFeatures" /* 1923 */;
 
 const require = arg1;
 function getUploadFileSizeSum(arg0) {
@@ -250,18 +250,18 @@ export const fileUploadLimitRoadblockDescription = function fileUploadLimitRoadb
   const formatSizeResult = obj.formatSize(maxSize / 1024, { useKibibytes: true });
   const formatSizeResult1 = _Math(4372).formatSize(closure_7 / 1024, { useKibibytes: true });
   if (true === hideLearnMore) {
-    const intl2 = tmp(1236).intl;
+    const intl2 = tmp(1233).intl;
     obj = { maxSize: null, premiumMaxSize: null };
     obj[0] = formatSizeResult;
     obj[1] = formatSizeResult1;
-    let formatResult = intl2.format(tmp(1236).t["+R2TzS"], obj);
+    let formatResult = intl2.format(tmp(1233).t["+R2TzS"], obj);
   } else {
-    const intl = tmp(1236).intl;
+    const intl = tmp(1233).intl;
     obj = { maxSize: null, premiumMaxSize: null, onClick: null };
     obj[0] = formatSizeResult;
     obj[1] = formatSizeResult1;
     obj[2] = onClick;
-    formatResult = intl.format(tmp(1236).t.tRuxk9, obj);
+    formatResult = intl.format(tmp(1233).t.tRuxk9, obj);
   }
   return formatResult;
 };

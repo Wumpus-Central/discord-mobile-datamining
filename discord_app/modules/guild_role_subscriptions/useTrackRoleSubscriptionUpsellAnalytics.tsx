@@ -1,9 +1,9 @@
-// === Module 16124: useTrackRoleSubscriptionUpsellAnalytics ===
+// === Module 16355: useTrackRoleSubscriptionUpsellAnalytics ===
 
-// Module 16124 (useTrackRoleSubscriptionUpsellAnalytics)
+// Module 16355 (useTrackRoleSubscriptionUpsellAnalytics)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "makeGroupListingIndexSubscriptionListingTag" /* 4115 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import closure_4 from "makeGroupListingIndexSubscriptionListingTag" /* 4114 */;
+import { AnalyticEvents } from "ME" /* 673 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useTrackRoleSubscriptionUpsellAnalytics.tsx");

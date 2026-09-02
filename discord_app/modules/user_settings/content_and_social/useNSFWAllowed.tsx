@@ -1,8 +1,8 @@
-// === Module 8153: useNSFWAllowed ===
+// === Module 8161: useNSFWAllowed ===
 
-// Module 8153 (useNSFWAllowed)
-import initialize from "initialize" /* 589 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+// Module 8161 (useNSFWAllowed)
+import initialize from "initialize" /* 586 */;
+import closure_2 from "mergeGuildAvatar" /* 1921 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_settings/content_and_social/useNSFWAllowed.tsx");

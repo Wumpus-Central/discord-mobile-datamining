@@ -1,9 +1,9 @@
-// === Module 16385: BadgeCustomizationProfileCoachmark ===
+// === Module 16617: BadgeCustomizationProfileCoachmark ===
 
-// Module 16385 (BadgeCustomizationProfileCoachmark)
+// Module 16617 (BadgeCustomizationProfileCoachmark)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1384 */;
+import closure_4 from "mergeGuildAvatar" /* 1921 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_profile/native/BadgeCustomizationProfileCoachmark.tsx");

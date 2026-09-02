@@ -1,8 +1,8 @@
-// === Module 7452: frozen ===
+// === Module 7462: frozen ===
 
-// Module 7452 (frozen)
+// Module 7462 (frozen)
 import set from "set" /* 2 */;
-import Storage2 from "Storage" /* 595 */;
+import Storage2 from "Storage" /* 592 */;
 
 const frozen = Object.freeze({
   getItem(arg0) {

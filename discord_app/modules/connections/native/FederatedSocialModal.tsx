@@ -1,11 +1,11 @@
-// === Module 9352: FederatedSocialModal ===
+// === Module 9365: FederatedSocialModal ===
 
-// Module 9352 (FederatedSocialModal)
-import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5227 */;
+// Module 9365 (FederatedSocialModal)
+import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5235 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import { WebBrowserType } from "ME" /* 676 */;
+import { WebBrowserType } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -23,14 +23,14 @@ export default function FederatedSocialModal(platformType) {
     name = value.name;
   }
   if (name == null) {
-    let intl = _require(1236).intl;
-    name = intl.string(_require(1236).t["bU/GZm"]);
+    let intl = _require(1233).intl;
+    name = intl.string(_require(1233).t["bU/GZm"]);
   }
   screens = { root: null };
   let obj = { headerTitle: null, headerLeft: null, render: null };
-  let intl2 = _require(1236).intl;
-  obj[0] = intl2.formatToPlainString(_require(1236).t["ImMhq+"], { serviceName: name });
-  obj[1] = _require(5495).getHeaderBackButton(platformType.onClose);
+  let intl2 = _require(1233).intl;
+  obj[0] = intl2.formatToPlainString(_require(1233).t["ImMhq+"], { serviceName: name });
+  obj[1] = _require(5503).getHeaderBackButton(platformType.onClose);
   obj[2] = function render() {
     ({ location: closure_0, successRedirect: closure_1, platformType } = platformType);
     const onClose = platformType.onClose;
@@ -190,5 +190,5 @@ export default function FederatedSocialModal(platformType) {
     return closure_1_8(platformType(closure_1_2[11]).SafeAreaPaddingView, obj);
   };
   screens[0] = obj;
-  return callback(_require(6008).Navigator, { initialRouteName: "root", screens });
+  return callback(_require(6016).Navigator, { initialRouteName: "root", screens });
 };

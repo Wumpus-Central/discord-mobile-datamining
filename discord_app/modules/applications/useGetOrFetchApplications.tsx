@@ -1,6 +1,6 @@
-// === Module 5959: useGetOrFetchApplications ===
+// === Module 5967: useGetOrFetchApplications ===
 
-// Module 5959 (useGetOrFetchApplications)
+// Module 5967 (useGetOrFetchApplications)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "addApplication" /* 4519 */;
 
@@ -32,7 +32,7 @@ export default function useGetOrFetchApplications(arg0) {
     }
   }, items);
   const items1 = [closure_4];
-  return _require(589).useStateFromStoresArray(items1, () => items1.map((arg0) => {
+  return _require(586).useStateFromStoresArray(items1, () => items1.map((arg0) => {
     let application;
     if (null != arg0) {
       application = application.getApplication(arg0);
@@ -73,7 +73,7 @@ export const useGetOrFetchApplication = function useGetOrFetchApplication(applic
     }
   }, items2);
   const items3 = [closure_4];
-  return items1(589).useStateFromStoresArray(items3, () => items1.map((arg0) => {
+  return items1(586).useStateFromStoresArray(items3, () => items1.map((arg0) => {
     let application;
     if (null != arg0) {
       application = application.getApplication(arg0);

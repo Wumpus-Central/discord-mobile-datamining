@@ -1,6 +1,6 @@
-// === Module 16696: ? ===
+// === Module 16931: ? ===
 
-// Module 16696
+// Module 16931
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -17,15 +17,15 @@ const memoResult = importAllResult.memo(function VoicePanelChannelOptInNotice(ch
   }, items);
   let obj = { style: channel.style, children: null };
   obj = { label: null, subLabel: null, icon: null, onPress: null, start: true, end: true, arrow: true };
-  const intl = channel(1236).intl;
-  obj[0] = intl.string(channel(1236).t["9mysCh"]);
-  const intl2 = channel(1236).intl;
-  obj[1] = intl2.string(channel(1236).t.PDUCIN);
-  obj = { IconComponent: channel(13582).ChannelListMagnifyingGlassIcon };
-  obj[2] = jsx(channel(5605).TableRowIcon, { IconComponent: channel(13582).ChannelListMagnifyingGlassIcon });
+  const intl = channel(1233).intl;
+  obj[0] = intl.string(channel(1233).t["9mysCh"]);
+  const intl2 = channel(1233).intl;
+  obj[1] = intl2.string(channel(1233).t.PDUCIN);
+  obj = { IconComponent: channel(13805).ChannelListMagnifyingGlassIcon };
+  obj[2] = jsx(channel(5613).TableRowIcon, { IconComponent: channel(13805).ChannelListMagnifyingGlassIcon });
   obj[3] = callback;
-  obj[1] = jsx(channel(5599).TableRow, { IconComponent: channel(13582).ChannelListMagnifyingGlassIcon });
-  return jsx(analyticsSection(6006), { IconComponent: channel(13582).ChannelListMagnifyingGlassIcon });
+  obj[1] = jsx(channel(5607).TableRow, { IconComponent: channel(13805).ChannelListMagnifyingGlassIcon });
+  return jsx(analyticsSection(6014), { IconComponent: channel(13805).ChannelListMagnifyingGlassIcon });
 });
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelChannelOptInNotice.tsx");
 

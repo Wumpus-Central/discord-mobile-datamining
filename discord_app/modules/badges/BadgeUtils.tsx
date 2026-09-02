@@ -1,10 +1,10 @@
-// === Module 9005: isPinnedBadge ===
+// === Module 9019: isPinnedBadge ===
 
-// Module 9005 (isPinnedBadge)
+// Module 9019 (isPinnedBadge)
 import set from "set" /* 2 */;
-import USER_PROFILE_TOOLTIP_DELAY from "USER_PROFILE_TOOLTIP_DELAY" /* 8556 */;
-import BadgeId from "BadgeId" /* 8557 */;
-import set2 from "set" /* 8561 */;
+import USER_PROFILE_TOOLTIP_DELAY from "USER_PROFILE_TOOLTIP_DELAY" /* 8569 */;
+import BadgeId from "BadgeId" /* 8570 */;
+import items2 from "items" /* 8574 */;
 
 function isPinnedBadge(badge_id) {
   return badge_id === BadgeId.BadgeId.STAFF;
@@ -71,7 +71,7 @@ export const getLegacyIconUrlByBadgeId = function getLegacyIconUrlByBadgeId(badg
     let tmp3 = require;
     let tmp4 = dependencyMap;
     let tmp2 = nextResult;
-    let obj2 = set2;
+    let obj2 = items2;
     let profileBadgeId = obj2.resolveProfileBadgeId(nextResult.id);
     let tmp6 = profileBadgeId;
     let hasItem = null == profileBadgeId;

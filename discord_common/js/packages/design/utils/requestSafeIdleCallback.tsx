@@ -1,8 +1,8 @@
-// === Module 696: setOriginWindow ===
+// === Module 693: setOriginWindow ===
 
-// Module 696 (setOriginWindow)
+// Module 693 (setOriginWindow)
 import set from "set" /* 2 */;
-import getGlobalObject from "getGlobalObject" /* 697 */;
+import getGlobalObject from "getGlobalObject" /* 694 */;
 
 const globalObject = getGlobalObject.getGlobalObject();
 const result = set.fileFinishedImporting("../discord_common/js/packages/design/utils/requestSafeIdleCallback.tsx");

@@ -1,8 +1,8 @@
 // === Module 4966: initialize ===
 
 // Module 4966 (initialize)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 let obj = { topSoundboardSoundsByGuildId: {} };
 let closure_2 = {};

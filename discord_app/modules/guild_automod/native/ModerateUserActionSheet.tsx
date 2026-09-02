@@ -1,12 +1,12 @@
-// === Module 11407: ? ===
+// === Module 11630: ? ===
 
-// Module 11407
+// Module 11630
 import importAllResult from "noop" /* 19 */;
-import closure_4 from "trackCommunicationDisabled" /* 1992 */;
-import closure_5 from "createGuildRecordFromRust" /* 1909 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4121 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { Permissions } from "ME" /* 676 */;
+import closure_4 from "trackCommunicationDisabled" /* 1991 */;
+import closure_5 from "createGuildRecordFromRust" /* 1908 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4120 */;
+import closure_7 from "mergeGuildAvatar" /* 1921 */;
+import { Permissions } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

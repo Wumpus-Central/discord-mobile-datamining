@@ -1,13 +1,13 @@
-// === Module 16747: VoicePanelSecondaryPIPContent ===
+// === Module 16982: VoicePanelSecondaryPIPContent ===
 
-// Module 16747 (VoicePanelSecondaryPIPContent)
+// Module 16982 (VoicePanelSecondaryPIPContent)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "participantFromServer" /* 1386 */;
-import closure_5 from "map" /* 9464 */;
-import closure_6 from "ensureGuildLoaded" /* 1387 */;
+import closure_4 from "participantFromServer" /* 1385 */;
+import closure_5 from "map" /* 9477 */;
+import closure_6 from "ensureGuildLoaded" /* 1386 */;
 import { ActivityLayoutMode } from "items3" /* 4506 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 9466 */;
-import FrameLayoutModes from "FrameLayoutModes" /* 9465 */;
+import { ActivityPanelModes } from "ActivityPanelModes" /* 9479 */;
+import FrameLayoutModes from "FrameLayoutModes" /* 9478 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

@@ -1,7 +1,7 @@
-// === Module 1365: WCAGContrastRatios ===
+// === Module 1364: WCAGContrastRatios ===
 
-// Module 1365 (WCAGContrastRatios)
-import nDefault from "n" /* 689 */;
+// Module 1364 (WCAGContrastRatios)
+import nDefault from "n" /* 686 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 
 let obj = { NonText: 3, Text: 4.5, HighContrastText: 7 };
@@ -26,7 +26,7 @@ export const getContrastingColor = function getContrastingColor(arg0, arg1) {
     base = arg0;
   }
   const tmp4Result = nDefault(base);
-  let obj3 = tmp2(689)(arg0);
+  let obj3 = tmp2(686)(arg0);
   const tmp4 = nDefault;
   const luminanceResult = tmp4Result.luminance();
   let contrastResult = nDefault.contrast(tmp4Result, obj3);

@@ -1,10 +1,10 @@
-// === Module 7483: _findPlayingActivity ===
+// === Module 7493: _findPlayingActivity ===
 
-// Module 7483 (_findPlayingActivity)
-import shallowEqualDefault from "shallowEqual" /* 643 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7484 */;
+// Module 7493 (_findPlayingActivity)
+import shallowEqualDefault from "shallowEqual" /* 640 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7494 */;
 import closure_3 from "sortActivity" /* 4569 */;
-import { ActivityTypes } from "ME" /* 676 */;
+import { ActivityTypes } from "ME" /* 673 */;
 
 const require = arg1;
 function _findPlayingActivity(type) {
@@ -58,7 +58,7 @@ export const useGetStreamApplication = function useGetStreamApplication(stream) 
   const _require = stream;
   const items = [closure_3];
   const items1 = [stream];
-  return _require(589).useStateFromStores(items, () => {
+  return _require(586).useStateFromStores(items, () => {
     let obj = closure_1_3;
     let tmp2 = null;
     if (null != closure_0) {

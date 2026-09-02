@@ -1,9 +1,9 @@
-// === Module 10414: useHorizontalAutocompleteResults ===
+// === Module 10436: useHorizontalAutocompleteResults ===
 
-// Module 10414 (useHorizontalAutocompleteResults)
+// Module 10436 (useHorizontalAutocompleteResults)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 
 const require = arg1;
 ({ AutoCompleteResultTypes: c4, ChannelTypes: c5 } = ME);
@@ -31,7 +31,7 @@ export const useHorizontalAutocompleteResults = function useHorizontalAutocomple
   let items = [channel];
   memo = first.useMemo(() => channel(selection[3]).getAutocompleteOptions(channel, false, false), items);
   let obj = { text, selectionStart: selection.start, selectionEnd: selection.end };
-  const tmp4 = callback(first.useState(obj), 2);
+  let tmp4 = callback(first.useState(obj), 2);
   const first1 = tmp4[0];
   text2 = first1.text;
   selectionStart = first1.selectionStart;
@@ -48,9 +48,6 @@ export const useHorizontalAutocompleteResults = function useHorizontalAutocomple
   }, items1);
   const items2 = [selectionStart, selectionEnd, text2, memo];
   const memo1 = first.useMemo(() => {
-    let tmp11;
-    let tmp12;
-    let tmp13;
     let tmp = selectionStart;
     closure_2 = selectionStart;
     if (null != text2) {
@@ -58,22 +55,34 @@ export const useHorizontalAutocompleteResults = function useHorizontalAutocomple
         while (true) {
           let tmp2 = channel;
           let tmp3 = selection;
-          let WHITESPACE_RE = channel(selection[4]).WHITESPACE_RE;
+          let obj = channel(selection[4]);
           let arr = text2;
-          let tmp5 = tmp;
-          let tmp6 = tmp15;
-          let found = tmp16;
-          if (0 === tmp) {
-            let tmp8 = selectionEnd;
-            if (selectionEnd == null) {
-              tmp8 = tmp;
+          let tmp4 = tmp;
+          let tmp5 = tmp14;
+          let found = tmp15;
+          if (!obj.isAutocompleteSeparatingBoundary(text2, tmp)) {
+            let diff = tmp - 1;
+            closure_2 = diff;
+            tmp14 = tmp5;
+            tmp15 = found;
+            tmp = diff;
+            let tmp11 = tmp5;
+            let tmp12 = found;
+            let tmp10 = diff;
+            if (diff < 0) {
+              break;
             }
-            let substr = arr.slice(tmp, tmp8);
+          } else {
+            let tmp7 = selectionEnd;
+            if (selectionEnd == null) {
+              tmp7 = tmp;
+            }
+            let substr = arr.slice(tmp, tmp7);
             closure_0 = substr[0];
             let str2 = substr.slice(1);
             let formatted = str2.toLowerCase();
             let _Object = Object;
-            let tmp10 = memo;
+            let tmp9 = memo;
             let keys = Object.keys(memo);
             found = keys.find((arg0) => {
               let matchesResult = undefined !== closure_0;
@@ -85,36 +94,26 @@ export const useHorizontalAutocompleteResults = function useHorizontalAutocomple
               }
               return matchesResult;
             });
-            tmp6 = formatted;
-            tmp11 = tmp;
-            tmp12 = formatted;
-            tmp13 = found;
+            tmp5 = formatted;
+            tmp10 = tmp;
+            tmp11 = formatted;
+            tmp12 = found;
             if (null != found) {
               break;
             }
           }
-          let diff = tmp - 1;
-          closure_2 = diff;
-          tmp15 = tmp6;
-          tmp16 = found;
-          tmp = diff;
-          tmp12 = tmp6;
-          tmp13 = found;
-          tmp11 = diff;
-          if (diff < 0) {
-            break;
-          }
+          obj = { query: null, autocompleteType: null, autocompleteSelectionStart: null, queryOptions: null };
+          obj[0] = tmp11;
+          obj[1] = tmp12;
+          obj[2] = tmp10;
+          obj = { includeEmojiPremiumUpsell: false, channelTypes: null };
+          let tmp16 = memo;
+          let items = [, , , ];
+          ({ GUILD_FORUM: arr4[0], GUILD_MEDIA: arr4[1], GUILD_TEXT: arr4[2], GUILD_ANNOUNCEMENT: arr4[3] } = memo);
+          obj[1] = items;
+          obj[3] = obj;
+          return obj;
         }
-        let obj = { query: null, autocompleteType: null, autocompleteSelectionStart: null, queryOptions: null };
-        obj[0] = tmp12;
-        obj[1] = tmp13;
-        obj[2] = tmp11;
-        obj = { includeEmojiPremiumUpsell: false, channelTypes: null };
-        const items = [, , , ];
-        ({ GUILD_FORUM: arr4[0], GUILD_MEDIA: arr4[1], GUILD_TEXT: arr4[2], GUILD_ANNOUNCEMENT: arr4[3] } = memo);
-        obj[1] = items;
-        obj[3] = obj;
-        return obj;
       }
     }
     return { query: null, autocompleteType: null, autocompleteSelectionStart: null };

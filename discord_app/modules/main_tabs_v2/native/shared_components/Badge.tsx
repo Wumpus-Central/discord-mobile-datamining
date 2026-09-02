@@ -1,7 +1,7 @@
-// === Module 7613: DEFAULT_BADGE_SIZE ===
+// === Module 7623: DEFAULT_BADGE_SIZE ===
 
-// Module 7613 (DEFAULT_BADGE_SIZE)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 7623 (DEFAULT_BADGE_SIZE)
+import ThemesDefault from "Themes" /* 709 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

@@ -1,6 +1,6 @@
-// === Module 6468: metadata ===
+// === Module 6477: metadata ===
 
-// Module 6468 (metadata)
+// Module 6477 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DiscordQuestsLockupLogo-2x.png.js");

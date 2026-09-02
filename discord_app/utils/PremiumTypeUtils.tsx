@@ -1,8 +1,8 @@
-// === Module 1946: isPremiumAtLeast ===
+// === Module 1945: isPremiumAtLeast ===
 
-// Module 1946 (isPremiumAtLeast)
+// Module 1945 (isPremiumAtLeast)
 import set from "set" /* 2 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import GuildFeatures from "GuildFeatures" /* 1923 */;
 
 function isPremiumAtLeast(premiumType, TIER_2) {
   let tmp = null == TIER_2;

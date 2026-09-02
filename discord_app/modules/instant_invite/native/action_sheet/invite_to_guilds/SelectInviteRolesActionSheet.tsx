@@ -1,6 +1,6 @@
-// === Module 17382: SelectInviteRolesActionSheet ===
+// === Module 17618: SelectInviteRolesActionSheet ===
 
-// Module 17382 (SelectInviteRolesActionSheet)
+// Module 17618 (SelectInviteRolesActionSheet)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

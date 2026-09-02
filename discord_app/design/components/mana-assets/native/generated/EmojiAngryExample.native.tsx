@@ -1,10 +1,10 @@
-// === Module 6497: EmojiAngryExample ===
+// === Module 6506: EmojiAngryExample ===
 
-// Module 6497 (EmojiAngryExample)
+// Module 6506 (EmojiAngryExample)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5493 */;
-import metadataDefault from "metadata" /* 6498 */;
+import preloadDefault from "preload" /* 5501 */;
+import metadataDefault from "metadata" /* 6507 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/EmojiAngryExample.native.tsx");

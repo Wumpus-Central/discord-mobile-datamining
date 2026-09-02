@@ -1,12 +1,12 @@
-// === Module 6059: useShouldShowInlineGuildCapUpsell ===
+// === Module 6067: useShouldShowInlineGuildCapUpsell ===
 
-// Module 6059 (useShouldShowInlineGuildCapUpsell)
-import initialize from "initialize" /* 589 */;
+// Module 6067 (useShouldShowInlineGuildCapUpsell)
+import initialize from "initialize" /* 586 */;
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4139 */;
-import HotspotStore2 from "HotspotStore" /* 6060 */;
-import closure_3 from "createGuildRecordFromRust" /* 1909 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import { MAX_USER_GUILDS } from "ME" /* 676 */;
+import HotspotStore2 from "HotspotStore" /* 6068 */;
+import closure_3 from "createGuildRecordFromRust" /* 1908 */;
+import closure_4 from "mergeGuildAvatar" /* 1921 */;
+import { MAX_USER_GUILDS } from "ME" /* 673 */;
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/premium/GuildCapUpsellHooks.tsx");
@@ -17,8 +17,8 @@ export const useShouldShowInlineGuildCapUpsell = function useShouldShowInlineGui
   const obj = initialize;
   const items1 = [HotspotStore2.HotspotStore];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => {
-    const HotspotStore = callback(6060).HotspotStore;
-    return HotspotStore.hasHotspot(callback(6060).HotspotLocations.GUILD_CAP_INLINE_UPSELL);
+    const HotspotStore = callback(6068).HotspotStore;
+    return HotspotStore.hasHotspot(callback(6068).HotspotLocations.GUILD_CAP_INLINE_UPSELL);
   });
   const obj2 = initialize;
   const items2 = [closure_4];

@@ -1,12 +1,12 @@
-// === Module 14161: RPC_LOCAL_SCOPE ===
+// === Module 14384: RPC_LOCAL_SCOPE ===
 
-// Module 14161 (RPC_LOCAL_SCOPE)
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9506 */;
+// Module 14384 (RPC_LOCAL_SCOPE)
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9519 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "handleSoundCreateOrUpdate" /* 4965 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "mergeGuildAvatar" /* 1921 */;
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4380 */;
-import sum from "sum" /* 505 */;
+import sum from "sum" /* 502 */;
 
 const require = arg1;
 ({ RPC_SCOPE_CONFIG, RPC_LOCAL_SCOPE } = RPC_SCOPE_CONFIG);

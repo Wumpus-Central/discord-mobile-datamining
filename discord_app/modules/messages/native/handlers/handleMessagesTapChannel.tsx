@@ -1,18 +1,18 @@
-// === Module 11147: maybeStartLurking ===
+// === Module 11368: maybeStartLurking ===
 
-// Module 11147 (maybeStartLurking)
+// Module 11368 (maybeStartLurking)
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import { isGuildVocalChannelType } from "createChannelRecord" /* 1391 */;
-import { isGuildLurker } from "GuildNSFWContentLevel" /* 1430 */;
-import closure_7 from "ensureGuildLoaded" /* 1387 */;
-import closure_8 from "trackCommunicationDisabled" /* 1992 */;
-import closure_9 from "createGuildRoleRecordFromRust" /* 1985 */;
-import closure_10 from "createGuildRecordFromRust" /* 1909 */;
-import closure_11 from "getUncachedChannelPermissions" /* 4121 */;
-import ME from "ME" /* 676 */;
-import { StaticChannelRoute } from "set" /* 1394 */;
-import { GuildOnboardingTab } from "serverPromptToClientPrompt" /* 5468 */;
-import { CHANNELS_AND_ROLES_MODAL_KEY as closure_18 } from "GUILD_ONBOARDING_MODAL_KEY" /* 5464 */;
+import { isGuildVocalChannelType } from "createChannelRecord" /* 1390 */;
+import { isGuildLurker } from "GuildNSFWContentLevel" /* 1429 */;
+import closure_7 from "ensureGuildLoaded" /* 1386 */;
+import closure_8 from "trackCommunicationDisabled" /* 1991 */;
+import closure_9 from "createGuildRoleRecordFromRust" /* 1984 */;
+import closure_10 from "createGuildRecordFromRust" /* 1908 */;
+import closure_11 from "getUncachedChannelPermissions" /* 4120 */;
+import ME from "ME" /* 673 */;
+import { StaticChannelRoute } from "set" /* 1393 */;
+import { GuildOnboardingTab } from "serverPromptToClientPrompt" /* 5476 */;
+import { CHANNELS_AND_ROLES_MODAL_KEY as closure_18 } from "GUILD_ONBOARDING_MODAL_KEY" /* 5472 */;
 
 const require = arg1;
 function maybeStartLurking() {
@@ -169,7 +169,7 @@ function _handleMessagesTapChannel() {
                 let role2;
                 v0 = 1;
                 channelId = 1;
-                return { value: "PX_16", done: null };
+                return { value: "PX_16", done: true };
               }
             } else {
               if (1 === tmp5) {

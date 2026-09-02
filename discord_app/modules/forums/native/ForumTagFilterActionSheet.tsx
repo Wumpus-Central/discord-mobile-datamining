@@ -1,14 +1,14 @@
-// === Module 12302: EmojiIcon ===
+// === Module 12526: EmojiIcon ===
 
-// Module 12302 (EmojiIcon)
-import initialize from "initialize" /* 589 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1431 */;
-import EmojiDefault from "Emoji" /* 5585 */;
+// Module 12526 (EmojiIcon)
+import initialize from "initialize" /* 586 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
+import EmojiDefault from "Emoji" /* 5593 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "getEmojiToGroupId" /* 5401 */;
-import set from "set" /* 11573 */;
-import ME from "ME" /* 676 */;
+import closure_5 from "getEmojiToGroupId" /* 5409 */;
+import set from "set" /* 11796 */;
+import ME from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

@@ -2,8 +2,8 @@
 
 // Module 4572 (ApplicationStreamPresets)
 import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 import DesktopSources from "DesktopSources" /* 4542 */;
 import RESOLUTION_720 from "RESOLUTION_720" /* 4537 */;
 

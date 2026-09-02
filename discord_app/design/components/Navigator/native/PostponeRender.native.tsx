@@ -1,9 +1,9 @@
-// === Module 6045: PostponeRender ===
+// === Module 6053: PostponeRender ===
 
-// Module 6045 (PostponeRender)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 6053 (PostponeRender)
+import ThemesDefault from "Themes" /* 709 */;
 import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4945 */;
-import _modDef6049 from "module_6049" /* 6049 */;
+import _modDef6057 from "module_6057" /* 6057 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -44,12 +44,12 @@ export const PostponeRender = function PostponeRender(children) {
     }
   });
   if (first) {
-    children = jsx(first(6047).SceneLoadingIndicator, {});
+    children = jsx(first(6055).SceneLoadingIndicator, {});
   }
   if (ignoreKeyboard) {
     let tmp4Result = closure_5;
   } else {
-    tmp4Result = _modDef6049;
+    tmp4Result = _modDef6057;
   }
   const style = [callback2().view, viewStyle];
   return <tmp4Result style={style}>{children}</tmp4Result>;

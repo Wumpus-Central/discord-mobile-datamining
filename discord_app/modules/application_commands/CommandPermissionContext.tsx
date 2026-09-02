@@ -1,20 +1,20 @@
-// === Module 8151: computePermissions ===
+// === Module 8159: computePermissions ===
 
-// Module 8151 (computePermissions)
-import fromStringAll from "fromString" /* 506 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
-import resolveNsfwTogglesWithDefaults from "resolveNsfwTogglesWithDefaults" /* 8152 */;
+// Module 8159 (computePermissions)
+import fromStringAll from "fromString" /* 503 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
+import resolveNsfwTogglesWithDefaults from "resolveNsfwTogglesWithDefaults" /* 8160 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "initialize" /* 1984 */;
-import { ChannelRecordBase } from "createChannelRecord" /* 1391 */;
-import { isGuildNSFW } from "GuildNSFWContentLevel" /* 1430 */;
-import closure_7 from "fetchFingerprint" /* 1218 */;
-import closure_8 from "ensureGuildLoaded" /* 1387 */;
-import closure_9 from "trackCommunicationDisabled" /* 1992 */;
-import closure_10 from "createGuildRecordFromRust" /* 1909 */;
-import closure_11 from "getUncachedChannelPermissions" /* 4121 */;
-import closure_12 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import closure_4 from "initialize" /* 1983 */;
+import { ChannelRecordBase } from "createChannelRecord" /* 1390 */;
+import { isGuildNSFW } from "GuildNSFWContentLevel" /* 1429 */;
+import closure_7 from "fetchFingerprint" /* 1215 */;
+import closure_8 from "ensureGuildLoaded" /* 1386 */;
+import closure_9 from "trackCommunicationDisabled" /* 1991 */;
+import closure_10 from "createGuildRecordFromRust" /* 1908 */;
+import closure_11 from "getUncachedChannelPermissions" /* 4120 */;
+import closure_12 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
 
 require = arg1;
 function computePermissions(isPrivate) {
@@ -25,22 +25,22 @@ function computePermissions(isPrivate) {
       let flag = true;
       let flag2 = true;
       if (!obj6.has(permissions, constants2.ADMINISTRATOR)) {
-        let tmp13Result = tmp13(506);
+        let tmp13Result = tmp13(503);
         const hasItem = tmp13Result.has(permissions, SEND_MESSAGES_IN_THREADS.VIEW_CHANNEL);
         if (tmp3) {
           let hasItem1 = hasItem;
           if (hasItem) {
-            tmp13Result = tmp13(506);
+            tmp13Result = tmp13(503);
             hasItem1 = tmp13Result.has(permissions, SEND_MESSAGES_IN_THREADS.USE_APPLICATION_COMMANDS);
           }
-          const has = tmp13(506).has;
+          const has = tmp13(503).has;
           if (arg1) {
             SEND_MESSAGES_IN_THREADS = SEND_MESSAGES_IN_THREADS.SEND_MESSAGES_IN_THREADS;
             let hasItem2 = has(permissions, SEND_MESSAGES_IN_THREADS);
           } else {
             hasItem2 = has(permissions, SEND_MESSAGES_IN_THREADS.SEND_MESSAGES);
           }
-          const tmp13Result1 = tmp13(506);
+          const tmp13Result1 = tmp13(503);
         } else {
           flag = true;
           flag2 = hasItem;

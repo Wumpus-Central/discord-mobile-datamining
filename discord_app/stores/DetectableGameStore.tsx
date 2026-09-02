@@ -2,18 +2,18 @@
 
 // Module 4514 (gameFromServer)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initializeDefault from "initialize" /* 589 */;
-import Storage2 from "Storage" /* 595 */;
-import ME from "ME" /* 676 */;
-import setDefault from "set" /* 687 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "initialize" /* 586 */;
+import Storage2 from "Storage" /* 592 */;
+import ME from "ME" /* 673 */;
+import setDefault from "set" /* 684 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
 import createExecutable2 from "createExecutable" /* 4504 */;
 import ApplicationTypes2 from "ApplicationTypes" /* 4507 */;
 import keysDefault from "keys" /* 4515 */;
 import GameTheme from "GameTheme" /* 4516 */;
-import set from "set" /* 500 */;
+import set from "set" /* 1234 */;
 
 function gameFromServer(id) {
   ({ executables, aliases, third_party_skus } = id);
@@ -255,13 +255,13 @@ prototype["findGame"] = function findGame(nextResult) {
     }
     if (null != nextResult.exePath) {
       let parts = nextResult.exePath.split("/");
-      let found = parts.filter(_require(1471).isNotNullish);
+      let found = parts.filter(_require(1470).isNotNullish);
       const gameByExecutable = self.getGameByExecutable(found.pop());
       if (null != gameByExecutable) {
         return gameByExecutable;
       } else {
         const parts1 = nextResult.exePath.split("/");
-        const found1 = parts1.filter(tmp15(1471).isNotNullish);
+        const found1 = parts1.filter(tmp15(1470).isNotNullish);
         const substr = found1.slice(-2);
         const gameByExecutable1 = self.getGameByExecutable(substr.join("/"));
         if (null != gameByExecutable1) {

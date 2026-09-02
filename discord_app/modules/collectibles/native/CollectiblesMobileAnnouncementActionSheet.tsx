@@ -1,24 +1,24 @@
-// === Module 16524: CatEarsBackdrop ===
+// === Module 16759: CatEarsBackdrop ===
 
-// Module 16524 (CatEarsBackdrop)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 16759 (CatEarsBackdrop)
+import ThemesDefault from "Themes" /* 709 */;
 import Text from "Text" /* 4474 */;
-import metadataDefault from "metadata" /* 16527 */;
+import metadataDefault from "metadata" /* 16762 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { CollectiblesMobileShopScreen as closure_6 } from "items" /* 678 */;
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5623 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1384 */;
+import { CollectiblesMobileShopScreen as closure_6 } from "items" /* 675 */;
+import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5631 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function CatEarsBackdrop() {
   const tmp = callback3();
-  const width = top(1493)().width;
-  let obj = animatedPosition(5624);
+  const width = top(1492)().width;
+  let obj = animatedPosition(5632);
   animatedPosition = obj.useBottomSheet().animatedPosition;
-  top = top(1628)().top;
+  top = top(1627)().top;
   const bound = Math.min(width, ACTION_SHEET_MAX_WIDTH);
   const result = (width - bound) / 2;
   const result1 = bound / 1200;
@@ -40,7 +40,7 @@ function CatEarsBackdrop() {
   items1 = [tmp.mascotLayer, ];
   obj1 = { top: -138 * result1, left: tmp6, right: tmp6 };
   items1[1] = obj1;
-  const obj2 = { source: { uri: top(16525) }, style: tmp.mascotImage, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
+  const obj2 = { source: { uri: top(16760) }, style: tmp.mascotImage, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
   obj[1] = callback(closure_4, obj2);
   obj[1] = callback(closure_5, obj);
   return callback(top(4217).View, obj);
@@ -84,10 +84,10 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   importDefault = undefined;
   dependencyMap = undefined;
   const tmp = callback3();
-  let obj = markAsDismissed(16526);
-  const intl = markAsDismissed(1236).intl;
+  let obj = markAsDismissed(16761);
+  const intl = markAsDismissed(1233).intl;
   const string = intl.string;
-  const t = markAsDismissed(1236).t;
+  const t = markAsDismissed(1233).t;
   if (obj.useProfileFramesMarketing("CollectiblesMobileAnnouncementActionSheet").showGiftingMarketing) {
     let stringResult = string(t["/4bQuG"]);
   } else {
@@ -109,8 +109,8 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   const callback = React.useCallback(() => {
     callback.current = true;
     markAsDismissed(closure_1_8.PRIMARY);
-    let obj = markAsDismissed(7286);
-    obj = { screen: closure_1_6.FEATURED_PAGE, analyticsLocations: [], analyticsSource: callback(5973).ACTION_SHEET };
+    let obj = markAsDismissed(7295);
+    obj = { screen: closure_1_6.FEATURED_PAGE, analyticsLocations: [], analyticsSource: callback(5981).ACTION_SHEET };
     const result = obj.openCollectiblesShopMobile(obj);
   }, items1);
   const callback1 = React.useCallback(() => {
@@ -123,28 +123,28 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   obj1 = { source: { uri: metadataDefault }, style: tmp.framePreviewImage, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
   const items3 = [callback(closure_4, obj1), , , ];
   const obj3 = { variant: "heading-xl/bold", color: "text-strong", accessibilityRole: "header", style: tmp.headerText, children: null };
-  const intl2 = tmp2(1236).intl;
-  obj3[4] = intl2.string(markAsDismissed(1236).t.vRCvqo);
+  const intl2 = tmp2(1233).intl;
+  obj3[4] = intl2.string(markAsDismissed(1233).t.vRCvqo);
   items3[1] = callback(markAsDismissed(4474).Text, obj3);
   const obj4 = { style: tmp.featureRows, children: null };
-  const obj5 = { icon: callback(markAsDismissed(6256).PaintIllocon, { size: 32 }), text: null };
-  const intl3 = tmp2(1236).intl;
-  obj5[1] = intl3.string(markAsDismissed(1236).t["6ZWB0C"]);
+  const obj5 = { icon: callback(markAsDismissed(6265).PaintIllocon, { size: 32 }), text: null };
+  const intl3 = tmp2(1233).intl;
+  obj5[1] = intl3.string(markAsDismissed(1233).t["6ZWB0C"]);
   const items4 = [callback(FeatureRow, obj5), , ];
-  const obj6 = { icon: callback(markAsDismissed(6256).HeartIllocon, { size: 32 }), text: null };
-  const intl4 = tmp2(1236).intl;
-  obj6[1] = intl4.string(markAsDismissed(1236).t.MkVbBY);
+  const obj6 = { icon: callback(markAsDismissed(6265).HeartIllocon, { size: 32 }), text: null };
+  const intl4 = tmp2(1233).intl;
+  obj6[1] = intl4.string(markAsDismissed(1233).t.MkVbBY);
   items4[1] = callback(FeatureRow, obj6);
   const obj2 = { uri: metadataDefault };
-  items4[2] = callback(FeatureRow, { icon: callback(markAsDismissed(6256).ShopIllocon, { size: 32 }), text: stringResult });
+  items4[2] = callback(FeatureRow, { icon: callback(markAsDismissed(6265).ShopIllocon, { size: 32 }), text: stringResult });
   obj4[1] = items4;
   items3[2] = callback2(closure_5, obj4);
   const obj8 = { size: "lg", text: null, onPress: null };
-  const intl5 = tmp2(1236).intl;
-  obj8[1] = intl5.string(markAsDismissed(1236).t.S9hXPI);
+  const intl5 = tmp2(1233).intl;
+  obj8[1] = intl5.string(markAsDismissed(1233).t.S9hXPI);
   obj8[2] = callback;
   items3[3] = callback(markAsDismissed(4928).Button, obj8);
   obj[1] = items3;
   obj[2] = callback2(closure_5, obj);
-  return callback(markAsDismissed(5622).BottomSheet, obj);
+  return callback(markAsDismissed(5630).BottomSheet, obj);
 };

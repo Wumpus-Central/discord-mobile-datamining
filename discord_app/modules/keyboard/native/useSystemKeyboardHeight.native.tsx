@@ -1,9 +1,9 @@
-// === Module 1894: useSystemKeyboardHeight ===
+// === Module 1893: useSystemKeyboardHeight ===
 
-// Module 1894 (useSystemKeyboardHeight)
+// Module 1893 (useSystemKeyboardHeight)
 import set from "set" /* 2 */;
-import context from "context" /* 1496 */;
-import computeEntryStateDefault from "computeEntryState" /* 1497 */;
+import context from "context" /* 1495 */;
+import computeEntryStateDefault from "computeEntryState" /* 1496 */;
 
 let closure_3 = { excludeSafeAreaInsets: false };
 const result = set.fileFinishedImporting("modules/keyboard/native/useSystemKeyboardHeight.native.tsx");
@@ -18,7 +18,7 @@ export default function useSystemKeyboardHeight() {
     flag = false;
   }
   importDefault = undefined;
-  importDefault = flag(1496).useAppEntryKey();
+  importDefault = flag(1495).useAppEntryKey();
   return computeEntryStateDefault((arg0) => flag ? arg0.byAppEntry[closure_1].keyboardHeightExcludingSafeAreaInsets : arg0.byAppEntry[closure_1].keyboardHeight);
 };
 export const getSystemKeyboardHeight = function getSystemKeyboardHeight(arg0) {

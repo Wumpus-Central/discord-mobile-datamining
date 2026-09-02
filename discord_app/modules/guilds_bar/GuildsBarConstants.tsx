@@ -1,9 +1,9 @@
-// === Module 15881: DEFAULT_FOLDER_COLOR ===
+// === Module 16112: DEFAULT_FOLDER_COLOR ===
 
-// Module 15881 (DEFAULT_FOLDER_COLOR)
+// Module 16112 (DEFAULT_FOLDER_COLOR)
 import set from "set" /* 2 */;
-import int2hslRaw from "int2hslRaw" /* 688 */;
-import unsafe_getRawColor from "unsafe_getRawColor" /* 711 */;
+import int2hslRaw from "int2hslRaw" /* 685 */;
+import unsafe_getRawColor from "unsafe_getRawColor" /* 708 */;
 
 const hex2intResult = int2hslRaw.hex2int(unsafe_getRawColor.unsafe_getResolvedRawColor("BRAND_500", { saturation: 1 }));
 const result = set.fileFinishedImporting("modules/guilds_bar/GuildsBarConstants.tsx");

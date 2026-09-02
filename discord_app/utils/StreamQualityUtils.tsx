@@ -1,17 +1,17 @@
-// === Module 9588: isPremiumResolution ===
+// === Module 9601: isPremiumResolution ===
 
-// Module 9588 (isPremiumResolution)
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 9601 (isPremiumResolution)
+import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "ApplicationStreamPresets" /* 4572 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "createGuildRecordFromRust" /* 1909 */;
+import closure_5 from "fetchFingerprint" /* 1215 */;
+import closure_6 from "createGuildRecordFromRust" /* 1908 */;
 import closure_7 from "createRTCConnection" /* 4554 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import closure_8 from "mergeGuildAvatar" /* 1921 */;
+import { AnalyticEvents } from "ME" /* 673 */;
 import RESOLUTION_720 from "RESOLUTION_720" /* 4537 */;
-import { StreamQualitiesToPremiumType as closure_15 } from "GuildFeatures" /* 1924 */;
+import { StreamQualitiesToPremiumType as closure_15 } from "GuildFeatures" /* 1923 */;
 import { ResolutionTypes } from "DesktopSources" /* 4542 */;
 
 require = arg1;

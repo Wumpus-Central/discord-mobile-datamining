@@ -1,9 +1,9 @@
-// === Module 8720: MethodPathIcon ===
+// === Module 8735: MethodPathIcon ===
 
-// Module 8720 (MethodPathIcon)
+// Module 8735 (MethodPathIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import inlineStylesDefault from "inlineStyles" /* 8241 */;
+import ThemesDefault from "Themes" /* 709 */;
+import inlineStylesDefault from "inlineStyles" /* 8250 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

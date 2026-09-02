@@ -1,17 +1,17 @@
-// === Module 14503: UserRow ===
+// === Module 14726: UserRow ===
 
-// Module 14503 (UserRow)
+// Module 14726 (UserRow)
 import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import messagesProxyDefault from "messagesProxy" /* 2369 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import Button from "Button" /* 1296 */;
+import messagesProxyDefault from "messagesProxy" /* 2368 */;
 import nameFromUserDefault from "nameFromUser" /* 4322 */;
 import Text from "Text" /* 4474 */;
-import TableRowInner from "TableRowInner" /* 5599 */;
-import ActionSheet from "ActionSheet" /* 5989 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5992 */;
-import getEmptyActivityFormatter from "getEmptyActivityFormatter" /* 7338 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import TableRowInner from "TableRowInner" /* 5607 */;
+import ActionSheet from "ActionSheet" /* 5997 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 6000 */;
+import getEmptyActivityFormatter from "getEmptyActivityFormatter" /* 7347 */;
+import closure_3 from "mergeGuildAvatar" /* 1921 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

@@ -1,9 +1,9 @@
-// === Module 8575: nativeEventEmitter ===
+// === Module 8590: nativeEventEmitter ===
 
-// Module 8575 (nativeEventEmitter)
+// Module 8590 (nativeEventEmitter)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import keys from "keys" /* 644 */;
+import keys from "keys" /* 641 */;
 
 ({ NativeEventEmitter, NativeModules } = get_ActivityIndicator);
 const obj = keys.create(() => ({ isMuted: false }));

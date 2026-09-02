@@ -1,10 +1,10 @@
-// === Module 15672: TypingIndicator ===
+// === Module 15903: TypingIndicator ===
 
-// Module 15672 (TypingIndicator)
+// Module 15903 (TypingIndicator)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
+import ThemesDefault from "Themes" /* 709 */;
+import Button from "Button" /* 1296 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1362 */;
 import useThemeDefault from "useTheme" /* 4413 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;

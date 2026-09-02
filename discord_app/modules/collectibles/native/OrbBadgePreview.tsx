@@ -1,11 +1,11 @@
-// === Module 12550: OrbBadgePreview ===
+// === Module 12774: OrbBadgePreview ===
 
-// Module 12550 (OrbBadgePreview)
+// Module 12774 (OrbBadgePreview)
 import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import filterLayerDefault from "filterLayer" /* 8527 */;
-import useCurrentUser from "useCurrentUser" /* 8891 */;
-import hasAtLeastOneGPlaySynced from "hasAtLeastOneGPlaySynced" /* 10744 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import filterLayerDefault from "filterLayer" /* 8540 */;
+import useCurrentUser from "useCurrentUser" /* 8906 */;
+import hasAtLeastOneGPlaySynced from "hasAtLeastOneGPlaySynced" /* 10965 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

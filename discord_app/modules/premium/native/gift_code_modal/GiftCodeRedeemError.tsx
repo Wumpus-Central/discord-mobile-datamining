@@ -1,13 +1,13 @@
-// === Module 12855: GiftCodeRedeemError ===
+// === Module 13077: GiftCodeRedeemError ===
 
-// Module 12855 (GiftCodeRedeemError)
+// Module 13077 (GiftCodeRedeemError)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1500 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1499 */;
 import Text from "Text" /* 4474 */;
 import Button from "Button" /* 4928 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5553 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5561 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -33,13 +33,13 @@ export default function GiftCodeRedeemError(children) {
   obj = { bottom: true, style: tmp.container, children: null };
   obj = { contentContainerStyle: tmp.body, alwaysBounceVertical: false, children: null };
   if (theme.dark) {
-    let tmp9Result = tmp9(11368);
+    let tmp9Result = tmp9(11591);
   } else {
-    tmp9Result = tmp9(11370);
+    tmp9Result = tmp9(11593);
   }
   const items = [closure_6(closure_3, { source: tmp9Result }), , ];
   obj1 = { variant: "heading-xl/bold", style: tmp.header, children: null };
-  const intl = tmp2(1236).intl;
+  const intl = tmp2(1233).intl;
   obj1[2] = intl.formatToMarkdownString(getSystemLocale.t.JUvC0s, {});
   items[1] = closure_6(Text.Text, obj1);
   items[2] = closure_6(Text.Text, { variant: "text-lg/medium", style: tmp.message, children: children.message });
@@ -47,7 +47,7 @@ export default function GiftCodeRedeemError(children) {
   const items1 = [closure_7(closure_5, obj), ];
   const obj3 = { style: tmp.footer, children: null };
   const obj4 = { text: null, size: "md", onPress: null };
-  const intl2 = tmp2(1236).intl;
+  const intl2 = tmp2(1233).intl;
   obj4[0] = intl2.string(getSystemLocale.t.cpT0Cq);
   obj4[2] = function onPress() {
     return callback(table[12]).pop();

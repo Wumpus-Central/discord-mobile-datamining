@@ -1,8 +1,8 @@
-// === Module 8907: getFetchState ===
+// === Module 8922: getFetchState ===
 
-// Module 8907 (getFetchState)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 8922 (getFetchState)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 let closure_0 = {};
 let closure_1 = {};

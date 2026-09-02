@@ -2,9 +2,9 @@
 
 // Module 4217
 import set from "set" /* 2 */;
-import cancelAnimationDefault from "cancelAnimation" /* 1653 */;
+import cancelAnimationDefault from "cancelAnimation" /* 1652 */;
 import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4218 */;
-import PlatformTypes from "PlatformTypes" /* 501 */;
+import PlatformTypes from "PlatformTypes" /* 1235 */;
 
 if (PlatformTypes.isAndroid()) {
   const _Object = Object;

@@ -1,6 +1,6 @@
-// === Module 8691: ContentIdType ===
+// === Module 8706: ContentIdType ===
 
-// Module 8691 (ContentIdType)
+// Module 8706 (ContentIdType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/safety_hub/SafetyHubModels.tsx");

@@ -1,8 +1,8 @@
-// === Module 6105: useGuildEligibleForGuildProducts ===
+// === Module 6113: useGuildEligibleForGuildProducts ===
 
-// Module 6105 (useGuildEligibleForGuildProducts)
-import closure_2 from "createGuildRecordFromRust" /* 1909 */;
-import { GuildFeatures } from "ME" /* 676 */;
+// Module 6113 (useGuildEligibleForGuildProducts)
+import closure_2 from "createGuildRecordFromRust" /* 1908 */;
+import { GuildFeatures } from "ME" /* 673 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_products/GuildProductsEligibility.tsx");
@@ -11,7 +11,7 @@ export const useGuildEligibleForGuildProducts = function useGuildEligibleForGuil
   const _require = id;
   const items = [closure_2];
   const items1 = [id];
-  return _require(589).useStateFromStores(items, () => {
+  return _require(586).useStateFromStores(items, () => {
     if (null == closure_0) {
       return false;
     } else {

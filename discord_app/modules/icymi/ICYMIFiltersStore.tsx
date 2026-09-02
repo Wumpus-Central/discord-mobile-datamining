@@ -1,9 +1,9 @@
-// === Module 8618: initialize ===
+// === Module 8633: initialize ===
 
-// Module 8618 (initialize)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 8619 */;
+// Module 8633 (initialize)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 8634 */;
 
 require = arg1;
 let closure_2 = {};

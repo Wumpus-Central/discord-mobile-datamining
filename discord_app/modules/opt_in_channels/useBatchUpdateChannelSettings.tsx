@@ -1,17 +1,17 @@
-// === Module 11156: useBatchUpdateChannelSettings ===
+// === Module 11377: useBatchUpdateChannelSettings ===
 
-// Module 11156 (useBatchUpdateChannelSettings)
+// Module 11377 (useBatchUpdateChannelSettings)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "incrementVersion" /* 5485 */;
+import closure_4 from "incrementVersion" /* 5493 */;
 import closure_5 from "updateUserGuildSettingsInternal" /* 4701 */;
-import { AnalyticsSections } from "ME" /* 676 */;
+import { AnalyticsSections } from "ME" /* 673 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/opt_in_channels/useBatchUpdateChannelSettings.tsx");
 
 export default function useBatchUpdateChannelSettings(arg0) {
   const _require = arg0;
-  let obj = _require(589);
+  let obj = _require(586);
   let items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getPendingChannelUpdates(closure_0));
   let items1 = [arg0];
@@ -43,13 +43,13 @@ export default function useBatchUpdateChannelSettings(arg0) {
         isCollapsedResult = null != id;
       }
       if (isCollapsedResult) {
-        let obj = callback(11157);
+        let obj = callback(11378);
         obj.categoryExpand(id);
       }
-      obj1 = callback(11154);
+      obj1 = callback(11375);
       if (obj1.hasNotSetUpChannelOptIn(closure_0)) {
         if (id === id) {
-          let tmp8Result = tmp8(11154);
+          let tmp8Result = tmp8(11375);
           obj = { include: null };
           const _Set2 = Set;
           const items = [id];
@@ -57,7 +57,7 @@ export default function useBatchUpdateChannelSettings(arg0) {
           obj[0] = set;
           const result = tmp8Result.optIntoAllChannelsForExistingMember(closure_0, obj);
         } else {
-          tmp8Result = tmp8(11154);
+          tmp8Result = tmp8(11375);
           obj = { exclude: null };
           const _Set = Set;
           const items1 = [id];
@@ -66,7 +66,7 @@ export default function useBatchUpdateChannelSettings(arg0) {
           const result1 = tmp8Result.optIntoAllChannelsForExistingMember(closure_0, obj);
         }
       } else {
-        const tmp8Result1 = tmp8(5481);
+        const tmp8Result1 = tmp8(5489);
         obj1 = { section: null };
         obj1[0] = constants.CHANNEL_BROWSER;
         const result2 = tmp8Result1.updateOptInChannelsImmediate(closure_0, id, !isChannelOptedInResult, obj1);

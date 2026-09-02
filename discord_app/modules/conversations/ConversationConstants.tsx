@@ -1,6 +1,6 @@
-// === Module 7343: CONVERSATION_COLORS ===
+// === Module 7352: CONVERSATION_COLORS ===
 
-// Module 7343 (CONVERSATION_COLORS)
+// Module 7352 (CONVERSATION_COLORS)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/conversations/ConversationConstants.tsx");

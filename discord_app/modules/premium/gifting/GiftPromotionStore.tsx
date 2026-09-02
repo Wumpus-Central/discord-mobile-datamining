@@ -1,8 +1,8 @@
-// === Module 7165: initialize ===
+// === Module 7174: initialize ===
 
-// Module 7165 (initialize)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 7174 (initialize)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 let closure_0 = { giftOptionsReceiptMap: {} };
 const PersistedStore = initializeDefault.PersistedStore;

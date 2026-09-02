@@ -1,13 +1,13 @@
-// === Module 7370: initialize ===
+// === Module 7379: initialize ===
 
-// Module 7370 (initialize)
+// Module 7379 (initialize)
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1471 */;
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "createUserWidgetFromServer" /* 7366 */;
+import closure_4 from "mergeGuildAvatar" /* 1921 */;
+import closure_5 from "createUserWidgetFromServer" /* 7375 */;
 
 require = arg1;
 let c6 = null;

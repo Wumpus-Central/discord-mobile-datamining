@@ -1,10 +1,10 @@
-// === Module 11378: ? ===
+// === Module 11601: ? ===
 
-// Module 11378
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "_handleConnectionOpen" /* 5221 */;
-import closure_4 from "createGuildRecordFromRust" /* 1909 */;
-import { Endpoints } from "ME" /* 676 */;
+// Module 11601
+import dispatcherDefault from "dispatcher" /* 706 */;
+import closure_3 from "_handleConnectionOpen" /* 5229 */;
+import closure_4 from "createGuildRecordFromRust" /* 1908 */;
+import { Endpoints } from "ME" /* 673 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/guild_templates/AcceptGuildTemplateActionCreators.tsx");
@@ -20,14 +20,14 @@ export default {
     return new Promise((closure_0) => {
       code = closure_0;
       closure_1 = arg1;
-      const HTTP = code(530).HTTP;
+      const HTTP = code(527).HTTP;
       obj = { url: closure_1_5.UNRESOLVED_GUILD_TEMPLATE(code), body: obj, oldFormErrors: true, rejectWithError: null };
       obj = { name: closure_1, icon: dependencyMap };
-      obj[3] = code(530).rejectWithMigratedError();
-      let obj3 = code(530);
+      obj[3] = code(527).rejectWithMigratedError();
+      let obj3 = code(527);
       HTTP.post(obj).then((body) => {
         body = body.body;
-        let obj = callback2(709);
+        let obj = callback2(706);
         obj = { type: "GUILD_TEMPLATE_ACCEPT_SUCCESS", code: callback, guild: body };
         obj.dispatch(obj);
         if (closure_2_3.isConnected()) {
@@ -39,12 +39,12 @@ export default {
             }
           });
         } else {
-          callback(6186).transitionToGuild(body.id);
+          callback(6195).transitionToGuild(body.id);
           body(body);
-          const obj3 = callback(6186);
+          const obj3 = callback(6195);
         }
       }, (body) => {
-        let obj = callback2(709);
+        let obj = callback2(706);
         obj = { type: "GUILD_TEMPLATE_ACCEPT_FAILURE", code: closure_0 };
         obj.dispatch(obj);
         callback2(body.body);

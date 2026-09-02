@@ -1,9 +1,9 @@
-// === Module 11745: AttachmentPreviewAppLauncher ===
+// === Module 11968: AttachmentPreviewAppLauncher ===
 
-// Module 11745 (AttachmentPreviewAppLauncher)
-import ThemesDefault from "Themes" /* 712 */;
-import FileIcon from "FileIcon" /* 10218 */;
-import AttachmentIconDefault from "AttachmentIcon" /* 10279 */;
+// Module 11968 (AttachmentPreviewAppLauncher)
+import ThemesDefault from "Themes" /* 709 */;
+import FileIcon from "FileIcon" /* 10240 */;
+import AttachmentIconDefault from "AttachmentIcon" /* 10301 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { DraftType } from "handleChanged" /* 4854 */;

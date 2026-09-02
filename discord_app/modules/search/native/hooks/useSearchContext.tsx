@@ -1,10 +1,10 @@
-// === Module 11866: useGuildSearchContext ===
+// === Module 12089: useGuildSearchContext ===
 
-// Module 11866 (useGuildSearchContext)
+// Module 12089 (useGuildSearchContext)
 import _modDef38 from "module_38" /* 38 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1387 */;
-import { SearchTypes } from "ME" /* 676 */;
+import closure_4 from "ensureGuildLoaded" /* 1386 */;
+import { SearchTypes } from "ME" /* 673 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/search/native/hooks/useSearchContext.tsx");

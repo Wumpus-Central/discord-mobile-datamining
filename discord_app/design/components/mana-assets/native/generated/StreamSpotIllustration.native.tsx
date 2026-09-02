@@ -1,10 +1,10 @@
-// === Module 7039: StreamSpotIllustration ===
+// === Module 7048: StreamSpotIllustration ===
 
-// Module 7039 (StreamSpotIllustration)
+// Module 7048 (StreamSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5493 */;
-import metadataDefault from "metadata" /* 7040 */;
+import preloadDefault from "preload" /* 5501 */;
+import metadataDefault from "metadata" /* 7049 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/StreamSpotIllustration.native.tsx");

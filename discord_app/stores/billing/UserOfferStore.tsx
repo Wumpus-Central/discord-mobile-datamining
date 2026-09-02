@@ -1,19 +1,19 @@
-// === Module 7195: emitChanges ===
+// === Module 7204: emitChanges ===
 
-// Module 7195 (emitChanges)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 7204 (emitChanges)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 import getPremiumPlanItem from "getPremiumPlanItem" /* 4139 */;
-import apexExperiment from "apexExperiment" /* 12958 */;
-import closure_2 from "createFromServer" /* 7196 */;
-import closure_3 from "emitChanges" /* 7197 */;
-import closure_4 from "createFromServer" /* 7972 */;
-import closure_5 from "createFromServer" /* 7199 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import closure_7 from "addEntitlement" /* 7142 */;
+import apexExperiment from "apexExperiment" /* 13180 */;
+import closure_2 from "createFromServer" /* 7205 */;
+import closure_3 from "emitChanges" /* 7206 */;
+import closure_4 from "createFromServer" /* 7981 */;
+import closure_5 from "createFromServer" /* 7208 */;
+import closure_6 from "mergeGuildAvatar" /* 1921 */;
+import closure_7 from "addEntitlement" /* 7151 */;
 import closure_8 from "reset" /* 4145 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import { OfferTriggerTypes } from "sum" /* 505 */;
+import GuildFeatures from "GuildFeatures" /* 1923 */;
+import { OfferTriggerTypes } from "sum" /* 502 */;
 
 require = arg1;
 function emitChanges() {
@@ -86,7 +86,7 @@ function handleReferralTrialStoreUpdate() {
 }
 ({ ANNUAL_DISCOUNT_IDS: c9, DISCOUNT_OFFERS_REQUIRES_REMINDER_ROLLOUT: c10, PREMIUM_TIER_2_CHURN_1_MONTH_DISCOUNT_ID: unpackModuleId, PREMIUM_TIER_2_CHURN_3_MONTH_DISCOUNT_ID: closure_12, SubscriptionPlanInfo: map1, SubscriptionTrials: closure_14, TRIAL_OFFERS_REQUIRES_REMINDER_ROLLOUT: closure_15 } = GuildFeatures);
 let closure_17 = performance.now();
-let obj = { userOffersLastFetchedAtDate: "r", userTrialOffers: "flexDirection", userDiscountOffers: null, userDiscounts: "\u{1F443}\u{1F3FC}", isFetching: true, lastFetchSuccessful: null, shouldTriggerOffer: 8, cooldownExpirationTimestamps: "TRANSPARENT" };
+let obj = { userOffersLastFetchedAtDate: "r", userTrialOffers: "flexDirection", userDiscountOffers: null, userDiscounts: "\u{1F466}\u{1F3FE}", isFetching: true, lastFetchSuccessful: null, shouldTriggerOffer: 8, cooldownExpirationTimestamps: "TRANSPARENT" };
 obj[1] = {};
 obj[2] = {};
 obj[7] = { [OfferTriggerTypes.CHANNEL_OPENED]: 0, [OfferTriggerTypes.JOIN_VOICE_CHANNEL]: 0, [OfferTriggerTypes.PREMIUM_UPSELL_VIEWED]: 0, [OfferTriggerTypes.USER_PROFILE_ACTION]: 0, [OfferTriggerTypes.VIDEO_STREAM_ENDED]: 0 };

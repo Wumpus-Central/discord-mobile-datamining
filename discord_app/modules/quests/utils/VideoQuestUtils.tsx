@@ -1,16 +1,16 @@
-// === Module 11111: getVideoQuestWatchCtaText ===
+// === Module 11332: getVideoQuestWatchCtaText ===
 
-// Module 11111 (getVideoQuestWatchCtaText)
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 11332 (getVideoQuestWatchCtaText)
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import coerceMainRoute from "coerceMainRoute" /* 4332 */;
-import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement" /* 7443 */;
-import trackQuestEvent from "trackQuestEvent" /* 7463 */;
-import getApplicationIdsByTaskTypes from "getApplicationIdsByTaskTypes" /* 7469 */;
-import _manuallyStartConsoleQuest from "_manuallyStartConsoleQuest" /* 10913 */;
+import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement" /* 7453 */;
+import trackQuestEvent from "trackQuestEvent" /* 7473 */;
+import getApplicationIdsByTaskTypes from "getApplicationIdsByTaskTypes" /* 7479 */;
+import _manuallyStartConsoleQuest from "_manuallyStartConsoleQuest" /* 11133 */;
 import closure_2 from "handleConnectionInfoChange" /* 4574 */;
-import closure_3 from "initializeState" /* 7448 */;
-import closure_4 from "_toPropertyKey" /* 7450 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import closure_3 from "initializeState" /* 7458 */;
+import closure_4 from "_toPropertyKey" /* 7460 */;
+import { AnalyticEvents } from "ME" /* 673 */;
 
 require = arg1;
 const portrait = "portrait";
@@ -57,36 +57,36 @@ export const getVideoOrientation = function getVideoOrientation(assets) {
 };
 export const getVideoQuestProgressRemainingAccessibilityLabel = function getVideoQuestProgressRemainingAccessibilityLabel(questTaskDetails, arg1) {
   if (arg1) {
-    const intl5 = tmp(1236).intl;
-    return intl5.string(tmp(1236).t["ij5E/5"]);
+    const intl5 = tmp(1233).intl;
+    return intl5.string(tmp(1233).t["ij5E/5"]);
   } else {
-    const remainingTaskTime = tmp(7469).getRemainingTaskTime(questTaskDetails);
+    const remainingTaskTime = tmp(7479).getRemainingTaskTime(questTaskDetails);
     ({ minutes, seconds } = remainingTaskTime);
     if (minutes > 0) {
       if (seconds > 0) {
-        const intl3 = tmp(1236).intl;
+        const intl3 = tmp(1233).intl;
         let obj = { minutes: null, seconds: null };
         obj[0] = minutes;
         obj[1] = seconds;
-        let formatToPlainStringResult = intl3.formatToPlainString(tmp(1236).t["lW/66D"], obj);
+        let formatToPlainStringResult = intl3.formatToPlainString(tmp(1233).t["lW/66D"], obj);
       }
-      const intl4 = tmp(1236).intl;
+      const intl4 = tmp(1233).intl;
       obj = { remainingTime: null };
       obj[0] = formatToPlainStringResult;
-      return intl4.formatToPlainString(tmp(1236).t.nzYZrt, obj);
+      return intl4.formatToPlainString(tmp(1233).t.nzYZrt, obj);
     }
     if (minutes > 0) {
-      const intl2 = tmp(1236).intl;
+      const intl2 = tmp(1233).intl;
       obj1 = { count: null };
       obj1[0] = minutes;
-      formatToPlainStringResult = intl2.formatToPlainString(tmp(1236).t["SxnF/O"], obj1);
+      formatToPlainStringResult = intl2.formatToPlainString(tmp(1233).t["SxnF/O"], obj1);
     } else {
-      const intl = tmp(1236).intl;
+      const intl = tmp(1233).intl;
       const obj2 = { count: null };
       obj2[0] = seconds;
-      formatToPlainStringResult = intl.formatToPlainString(tmp(1236).t["0BZpdi"], obj2);
+      formatToPlainStringResult = intl.formatToPlainString(tmp(1233).t["0BZpdi"], obj2);
     }
-    const tmpResult = tmp(7469);
+    const tmpResult = tmp(7479);
   }
 };
 export const formatVideoProgressRatio = function formatVideoProgressRatio(bound, current) {
@@ -158,8 +158,8 @@ export const handleVideoQuestModalClose = function handleVideoQuestModalClose(ar
         isQuestExpiredResult = null != completedAt1;
       }
       if (!isQuestExpiredResult) {
-        tmp6(10913).updateVideoProgress(quest.id, videoProgress.maxTimestampSec);
-        const tmp6Result = tmp6(10913);
+        tmp6(11133).updateVideoProgress(quest.id, videoProgress.maxTimestampSec);
+        const tmp6Result = tmp6(11133);
       }
       tmp6 = require;
     }

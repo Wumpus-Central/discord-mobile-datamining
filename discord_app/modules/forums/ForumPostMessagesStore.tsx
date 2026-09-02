@@ -1,12 +1,12 @@
-// === Module 6124: handleLoadThreadsSuccess ===
+// === Module 6132: handleLoadThreadsSuccess ===
 
-// Module 6124 (handleLoadThreadsSuccess)
+// Module 6132 (handleLoadThreadsSuccess)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4737 */;
-import closure_3 from "handleConnectionOpenOrResumed" /* 6125 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "handleConnectionOpenOrResumed" /* 6133 */;
+import closure_4 from "mergeGuildAvatar" /* 1921 */;
 
 require = arg1;
 function handleLoadThreadsSuccess(arg0) {

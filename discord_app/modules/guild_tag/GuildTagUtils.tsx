@@ -1,12 +1,12 @@
-// === Module 8075: guildHasTag ===
+// === Module 8083: guildHasTag ===
 
-// Module 8075 (guildHasTag)
-import GuildMemberFlags from "GuildMemberFlags" /* 4127 */;
-import closure_2 from "trackCommunicationDisabled" /* 1992 */;
-import closure_3 from "createGuildRecordFromRust" /* 1909 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import items from "items" /* 7853 */;
-import { GuildFeatures } from "ME" /* 676 */;
+// Module 8083 (guildHasTag)
+import GuildMemberFlags from "GuildMemberFlags" /* 4126 */;
+import closure_2 from "trackCommunicationDisabled" /* 1991 */;
+import closure_3 from "createGuildRecordFromRust" /* 1908 */;
+import closure_4 from "mergeGuildAvatar" /* 1921 */;
+import items from "items" /* 7862 */;
+import { GuildFeatures } from "ME" /* 673 */;
 
 require = arg1;
 ({ GuildTagBadgeMediaProxySizes, GuildTagBadgeMediaProxySizesMobile: c5, GuildTagBadgeSize: closure_6 } = items);
@@ -50,7 +50,7 @@ export const getUserPrimaryGuild = function getUserPrimaryGuild(primaryGuild) {
 export const useUserPrimaryGuild = function useUserPrimaryGuild(arg0) {
   let tmp = arg0;
   const _require = arg0;
-  let obj = _require(589);
+  let obj = _require(586);
   const items = [closure_3];
   const items1 = [arg0];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getGuild(closure_0), items1);
@@ -80,13 +80,13 @@ export const useShouldDisplayGuildTag = function useShouldDisplayGuildTag(arg0, 
   const _require = arg0;
   dependencyMap = arg1;
   let tmp = arg2;
-  let obj = _require(589);
+  let obj = _require(586);
   const items = [closure_4];
   const items1 = [arg0];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getUser(closure_0), items1);
   const items2 = [closure_2];
   const items3 = [arg1, arg0];
-  const stateFromStores1 = _require(589).useStateFromStores(items2, () => {
+  const stateFromStores1 = _require(586).useStateFromStores(items2, () => {
     if (null != table) {
       if (null != callback) {
         const member = closure_1_2.getMember(tmp, tmp2);

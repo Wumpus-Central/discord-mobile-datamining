@@ -1,13 +1,13 @@
-// === Module 7145: _handleBoostPress ===
+// === Module 7154: _handleBoostPress ===
 
-// Module 7145 (_handleBoostPress)
+// Module 7154 (_handleBoostPress)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "handleGuildBoostsUpdate" /* 4370 */;
-import ME from "ME" /* 676 */;
-import { PremiumGuildSubscribeModalScenes as closure_11 } from "PremiumGuildSubscribeModalScenes" /* 5379 */;
-import { FractionalPremiumStates } from "GuildFeatures" /* 1924 */;
+import ME from "ME" /* 673 */;
+import { PremiumGuildSubscribeModalScenes as closure_11 } from "PremiumGuildSubscribeModalScenes" /* 5387 */;
+import { FractionalPremiumStates } from "GuildFeatures" /* 1923 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -62,7 +62,7 @@ function _handleBoostPress() {
               c4 = 1;
               c5 = 1;
               const obj3 = { value: null, done: false };
-              obj3[0] = callback(7146).launchGuildBoostFlowOrAlert(obj1);
+              obj3[0] = callback(7155).launchGuildBoostFlowOrAlert(obj1);
               return obj3;
             }
           } else if (arg0 === 1) {
@@ -74,7 +74,7 @@ function _handleBoostPress() {
             obj4[0] = arg1;
             return obj4;
           } else {
-            obj = callback(5377);
+            obj = callback(5385);
             obj.closeApplyBoostModal();
             c5 = 3;
             return { value: "HermesInternal", done: null };

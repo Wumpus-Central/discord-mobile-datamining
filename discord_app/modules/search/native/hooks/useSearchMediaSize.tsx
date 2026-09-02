@@ -1,8 +1,8 @@
-// === Module 16229: useSearchMediaSize ===
+// === Module 16461: useSearchMediaSize ===
 
-// Module 16229 (useSearchMediaSize)
+// Module 16461 (useSearchMediaSize)
 import set from "set" /* 2 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 7622 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 7632 */;
 
 ({ SEARCH_LIST_HORIZONTAL_PADDING: c0, MEDIA_NUM_COLUMNS: closure_1, MEDIA_ITEM_GAP_WIDTH: obj1 } = MessageEmbedTypes);
 const result = set.fileFinishedImporting("modules/search/native/hooks/useSearchMediaSize.tsx");

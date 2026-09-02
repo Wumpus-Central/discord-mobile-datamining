@@ -1,12 +1,12 @@
-// === Module 16706: getConsoleInfo ===
+// === Module 16941: getConsoleInfo ===
 
-// Module 16706 (getConsoleInfo)
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useGameConsoleAccountsDefault from "useGameConsoleAccounts" /* 9875 */;
-import getConsoleIconDefault from "getConsoleIcon" /* 9892 */;
+// Module 16941 (getConsoleInfo)
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import useGameConsoleAccountsDefault from "useGameConsoleAccounts" /* 9897 */;
+import getConsoleIconDefault from "getConsoleIcon" /* 9914 */;
 import closure_3 from "noop" /* 19 */;
-import { PlatformTypes } from "ME" /* 676 */;
+import { PlatformTypes } from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -61,6 +61,6 @@ export default function VoicePanelConsoleFacepile() {
     obj[1] = closure_1_5(lib(closure_1_2[10]).Icon, obj);
     return closure_1_5(lib2(closure_1_2[9]), obj);
   }, items1);
-  return jsx(_require(1297).SummarizedIconRow, { items, renderItem, offsetAmount: -3 });
+  return jsx(_require(1296).SummarizedIconRow, { items, renderItem, offsetAmount: -3 });
 };
 export { getConsoleInfo };

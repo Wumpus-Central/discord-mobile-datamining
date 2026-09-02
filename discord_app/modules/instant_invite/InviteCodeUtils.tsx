@@ -2,7 +2,7 @@
 
 // Module 4463 (readSnowflake)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import parseDefault from "parse" /* 1483 */;
+import parseDefault from "parse" /* 1482 */;
 import getFirstQueryStringValue from "getFirstQueryStringValue" /* 4464 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 

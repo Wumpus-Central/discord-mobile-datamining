@@ -1,12 +1,12 @@
-// === Module 13710: initialize ===
+// === Module 13933: initialize ===
 
-// Module 13710 (initialize)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "getMemberListId" /* 6126 */;
-import closure_1 from "ensureGuildLoaded" /* 1387 */;
+// Module 13933 (initialize)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import closure_0 from "getMemberListId" /* 6134 */;
+import closure_1 from "ensureGuildLoaded" /* 1386 */;
 import closure_2 from "handleInviteData" /* 4398 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "mergeGuildAvatar" /* 1921 */;
 import closure_4 from "updateVoiceState" /* 4497 */;
 
 let obj = {};
@@ -55,21 +55,21 @@ obj = {
   GUILD_HEADER_MEMBER_COUNT: function handleMemberCount(guildId) {
     guildId = guildId.guildId;
     if (null == obj[guildId]) {
-      obj[guildId] = { activeChannelsCount: "method", onlineCount: "T", memberCount: "Map" };
+      obj[guildId] = { activeChannelsCount: "items", onlineCount: "call", memberCount: "Promise" };
     }
     obj[guildId].memberCount = guildId.count;
   },
   GUILD_HEADER_ONLINE_COUNT: function handleOnlineCount(guildId) {
     guildId = guildId.guildId;
     if (null == obj[guildId]) {
-      obj[guildId] = { activeChannelsCount: "method", onlineCount: "T", memberCount: "Map" };
+      obj[guildId] = { activeChannelsCount: "items", onlineCount: "call", memberCount: "Promise" };
     }
     obj[guildId].onlineCount = guildId.count;
   },
   GUILD_HEADER_ACTIVE_CHANNELS_COUNT: function handleActiveChannelsCount(guildId) {
     guildId = guildId.guildId;
     if (null == obj[guildId]) {
-      obj[guildId] = { activeChannelsCount: "method", onlineCount: "T", memberCount: "Map" };
+      obj[guildId] = { activeChannelsCount: "items", onlineCount: "call", memberCount: "Promise" };
     }
     obj[guildId].activeChannelsCount = guildId.count;
   }

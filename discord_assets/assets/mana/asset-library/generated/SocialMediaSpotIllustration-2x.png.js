@@ -1,9 +1,9 @@
-// === Module 7024: metadata ===
+// === Module 7033: metadata ===
 
-// Module 7024 (metadata)
+// Module 7033 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SocialMediaSpotIllustration-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/3a14f4bdb4509a70bd10f59834e9074595e6fbc722c7eec99c7df1022fbecffe.png";
-export const metadata = { fileBytes: 16401 };
+export default "https://cdn.discordapp.com/assets/content/2c7b7d0038a8db0d6c403a40c44befe9e99cdf1278a91ec9036465884b1ba9dd.png";
+export const metadata = { fileBytes: 16404 };

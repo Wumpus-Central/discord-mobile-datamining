@@ -1,9 +1,9 @@
-// === Module 14926: getSettingsOverrideReason ===
+// === Module 15155: getSettingsOverrideReason ===
 
-// Module 14926 (getSettingsOverrideReason)
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 15155 (getSettingsOverrideReason)
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import closure_2 from "updateExistingSettings" /* 4167 */;
-import { SettingsOverrideReasonKeys as closure_3 } from "MAX_FAVORITES" /* 685 */;
+import { SettingsOverrideReasonKeys as closure_3 } from "MAX_FAVORITES" /* 682 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_settings/accessibility/getSettingsOverrideReason.tsx");
@@ -20,7 +20,7 @@ export default function getSettingsOverrideReason(arg0) {
 export const useSettingsOverrideReason = function useSettingsOverrideReason(arg0) {
   const _require = arg0;
   const items = [closure_2];
-  return _require(589).useStateFromStores(items, () => {
+  return _require(586).useStateFromStores(items, () => {
     const appliedOverrideReasonKey = closure_1_2.getAppliedOverrideReasonKey(callback);
     if (closure_1_3.REDUCED_MOTION === appliedOverrideReasonKey) {
       const intl2 = callback(closure_1_1[2]).intl;

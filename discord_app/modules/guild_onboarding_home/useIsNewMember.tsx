@@ -1,11 +1,11 @@
-// === Module 6070: useIsNewMember ===
+// === Module 6078: useIsNewMember ===
 
-// Module 6070 (useIsNewMember)
-import setDefault from "set" /* 687 */;
-import hasFlag from "hasFlag" /* 1399 */;
-import closure_3 from "initialize" /* 1984 */;
-import closure_4 from "trackCommunicationDisabled" /* 1992 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4109 */;
+// Module 6078 (useIsNewMember)
+import setDefault from "set" /* 684 */;
+import hasFlag from "hasFlag" /* 1398 */;
+import closure_3 from "initialize" /* 1983 */;
+import closure_4 from "trackCommunicationDisabled" /* 1991 */;
+import { GuildMemberFlags } from "GuildMemberFlags" /* 4108 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/useIsNewMember.tsx");
@@ -13,7 +13,7 @@ const result = require("set").fileFinishedImporting("modules/guild_onboarding_ho
 export default function useIsNewMember(arg0) {
   const _require = arg0;
   const items = [closure_4, closure_3];
-  return _require(589).useStateFromStores(items, () => {
+  return _require(586).useStateFromStores(items, () => {
     let flag = true;
     if (!closure_1_3.isFullServerPreview(callback)) {
       const selfMember = obj.getSelfMember(tmp);

@@ -1,9 +1,9 @@
-// === Module 16024: ForYouRecentActivitySectionHeader ===
+// === Module 16255: ForYouRecentActivitySectionHeader ===
 
-// Module 16024 (ForYouRecentActivitySectionHeader)
+// Module 16255 (ForYouRecentActivitySectionHeader)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Text from "Text" /* 4474 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;

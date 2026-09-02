@@ -1,8 +1,8 @@
-// === Module 16535: ToastStore ===
+// === Module 16770: ToastStore ===
 
-// Module 16535 (ToastStore)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 16770 (ToastStore)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 let c0 = null;
 const Store = initializeDefault.Store;

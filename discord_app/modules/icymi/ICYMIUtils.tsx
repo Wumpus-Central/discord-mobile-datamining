@@ -1,23 +1,23 @@
-// === Module 8621: generateHydrationId ===
+// === Module 8636: generateHydrationId ===
 
-// Module 8621 (generateHydrationId)
+// Module 8636 (generateHydrationId)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4737 */;
-import isMediaAttachment from "isMediaAttachment" /* 7639 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8039 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 8619 */;
-import apexExperiment from "apexExperiment" /* 8623 */;
-import ContentInventoryAuthorType from "ContentInventoryAuthorType" /* 8627 */;
+import isMediaAttachment from "isMediaAttachment" /* 7648 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8048 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 8634 */;
+import apexExperiment from "apexExperiment" /* 8638 */;
+import ContentInventoryAuthorType from "ContentInventoryAuthorType" /* 8642 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "scheduledEventSort" /* 7271 */;
-import { ThreadChannelRecord } from "createChannelRecord" /* 1391 */;
-import closure_6 from "ensureGuildLoaded" /* 1387 */;
-import closure_7 from "createGuildRecordFromRust" /* 1909 */;
+import closure_4 from "scheduledEventSort" /* 7280 */;
+import { ThreadChannelRecord } from "createChannelRecord" /* 1390 */;
+import closure_6 from "ensureGuildLoaded" /* 1386 */;
+import closure_7 from "createGuildRecordFromRust" /* 1908 */;
 import closure_8 from "reinjectEphemerals" /* 4735 */;
 import closure_9 from "generateOldThreadCutoff" /* 4493 */;
-import closure_10 from "filterStaffGuild" /* 8606 */;
-import closure_11 from "initialize" /* 8620 */;
-import ME from "ME" /* 676 */;
+import closure_10 from "filterStaffGuild" /* 8621 */;
+import closure_11 from "initialize" /* 8635 */;
+import ME from "ME" /* 673 */;
 
 require = arg1;
 function generateHydrationId(messageItems, activityItems) {
@@ -71,13 +71,13 @@ function _hydrateItems() {
               const arr = closure_1_10.getHydratedItems();
               const substr = arr.slice(callback, dependencyMap);
               if (0 !== substr.length) {
-                obj1 = callback(8622);
+                obj1 = callback(8637);
                 const hydratedAttempt = obj1.loadHydratedAttempt(closure_1_14(tmp24, tmp25));
                 const found = substr.filter((arg0) => null == dependencyMap[arg0.id]);
-                const found1 = found.filter((type) => type.type === dependencyMap(8619).ICYMIItemTypes.MESSAGE);
+                const found1 = found.filter((type) => type.type === dependencyMap(8634).ICYMIItemTypes.MESSAGE);
                 const mapped = found1.map((channel_id) => ({ channel_id: channel_id.data.channel_id, message_id: channel_id.data.message_id }));
                 const mapped1 = found.map((type) => {
-                  if (type.type === dependencyMap(8619).ICYMIItemTypes.MESSAGE) {
+                  if (type.type === dependencyMap(8634).ICYMIItemTypes.MESSAGE) {
                     const message_context = type.data.message_context;
                     let reply_message_id;
                     if (message_context != null) {
@@ -119,7 +119,7 @@ function _hydrateItems() {
                 });
                 const _Boolean = Boolean;
                 const found2 = mapped1.flat().filter(Boolean);
-                const found3 = found.filter((type) => type.type === dependencyMap(8619).ICYMIItemTypes.ACTIVITY);
+                const found3 = found.filter((type) => type.type === dependencyMap(8634).ICYMIItemTypes.ACTIVITY);
                 const mapped2 = found3.map((data) => ({ user_id: data.data.user_id, content_id: data.data.content_id }));
                 const flatResult = mapped1.flat();
                 obj1 = { messageItems: null, activityItems: null };
@@ -130,7 +130,7 @@ function _hydrateItems() {
                 c4 = 1;
                 c3 = 1;
                 const obj2 = { value: null, done: false };
-                obj2[0] = callback(8622).fetchHydrated(tmp24, tmp25, obj1);
+                obj2[0] = callback(8637).fetchHydrated(tmp24, tmp25, obj1);
                 return obj2;
               }
             }
@@ -487,7 +487,7 @@ export const useGravityMessage = function useGravityMessage(message) {
   const _require = message;
   const items = [closure_8, closure_10];
   const items1 = [message];
-  return _require(589).useStateFromStores(items, () => {
+  return _require(586).useStateFromStores(items, () => {
     message = closure_1_8.getMessage(message.getChannelId(), message.id);
     if (message == null) {
       const hydratedItem = closure_1_10.getHydratedItem(tmp.id);
@@ -507,14 +507,14 @@ export const useGravityMessageItem = function useGravityMessageItem(id) {
   const _require = id;
   const items = [closure_10];
   const items1 = [id.id];
-  return _require(589).useStateFromStores(items, () => closure_1_10.getHydratedItem(id.id), items1);
+  return _require(586).useStateFromStores(items, () => closure_1_10.getHydratedItem(id.id), items1);
 };
 export const useICYMIMessage = function useICYMIMessage(id, before_message_id) {
   const _require = id;
   closure_1 = before_message_id;
   const items = [closure_8, closure_10];
   const items1 = [id, before_message_id];
-  return _require(589).useStateFromStores(items, () => {
+  return _require(586).useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != closure_1) {
       let message = closure_1_8.getMessage(closure_0, tmp);
@@ -591,7 +591,7 @@ export const getViewableFeedItemsArray = function getViewableFeedItemsArray(view
       if (null != tmp3) {
         let tmp5 = id;
         let tmp6 = dependencyMap;
-        let NON_ELIGIBLE_SCROLL_ITEMS = id(8628).NON_ELIGIBLE_SCROLL_ITEMS;
+        let NON_ELIGIBLE_SCROLL_ITEMS = id(8643).NON_ELIGIBLE_SCROLL_ITEMS;
         if (!NON_ELIGIBLE_SCROLL_ITEMS.has(tmp3.item.data.kind)) {
           break;
         }
@@ -734,13 +734,13 @@ export const determineContentType = function determineContentType(channel, messa
     if (message.attachments.length > 0) {
       let ContentType = dependencyMap;
       if (obj.isValidImageAttachment(message.attachments[0])) {
-        ContentType = tmp6(8619).ContentType;
+        ContentType = tmp6(8634).ContentType;
         let IMAGE = ContentType.IMAGE;
       } else {
-        const result = tmp6(7639).isValidVideoAttachment(message.attachments[0]);
-        const ContentType2 = tmp6(8619).ContentType;
+        const result = tmp6(7648).isValidVideoAttachment(message.attachments[0]);
+        const ContentType2 = tmp6(8634).ContentType;
         IMAGE = result ? ContentType2.VIDEO : ContentType2.FILE;
-        const tmp6Result = tmp6(7639);
+        const tmp6Result = tmp6(7648);
       }
       obj = isMediaAttachment;
     } else {
@@ -759,42 +759,42 @@ export const contentTypeToText = function contentTypeToText(arg0) {
     flag = false;
   }
   if (MessageEmbedTypes.ContentType.POPULAR_MESSAGE === arg0) {
-    const intl10 = tmp(1236).intl;
-    return intl10.string(tmp(1236).t["H/2+cl"]);
-  } else if (tmp(8619).ContentType.IMAGE === arg0) {
-    const intl9 = tmp(1236).intl;
-    return intl9.string(tmp(1236).t.gmOWAo);
-  } else if (tmp(8619).ContentType.VIDEO === arg0) {
-    const intl8 = tmp(1236).intl;
-    return intl8.string(tmp(1236).t.swhcPM);
-  } else if (tmp(8619).ContentType.LINK === arg0) {
-    const intl7 = tmp(1236).intl;
-    return intl7.string(tmp(1236).t.oj5yvD);
-  } else if (tmp(8619).ContentType.THREAD === arg0) {
-    const intl6 = tmp(1236).intl;
-    return intl6.string(tmp(1236).t.DwLrLK);
-  } else if (tmp(8619).ContentType.FORUM_POST === arg0) {
-    const intl5 = tmp(1236).intl;
-    return intl5.string(tmp(1236).t["Q9/6BS"]);
-  } else if (tmp(8619).ContentType.CHANGED_STATUS === arg0) {
-    const intl4 = tmp(1236).intl;
-    return intl4.string(tmp(1236).t.TGrUmi);
-  } else if (tmp(8619).ContentType.INTERESTING === arg0) {
-    const intl3 = tmp(1236).intl;
-    return intl3.string(tmp(1236).t["TahE/i"]);
-  } else if (tmp(8619).ContentType.ANNOUNCEMENT === arg0) {
-    const intl2 = tmp(1236).intl;
+    const intl10 = tmp(1233).intl;
+    return intl10.string(tmp(1233).t["H/2+cl"]);
+  } else if (tmp(8634).ContentType.IMAGE === arg0) {
+    const intl9 = tmp(1233).intl;
+    return intl9.string(tmp(1233).t.gmOWAo);
+  } else if (tmp(8634).ContentType.VIDEO === arg0) {
+    const intl8 = tmp(1233).intl;
+    return intl8.string(tmp(1233).t.swhcPM);
+  } else if (tmp(8634).ContentType.LINK === arg0) {
+    const intl7 = tmp(1233).intl;
+    return intl7.string(tmp(1233).t.oj5yvD);
+  } else if (tmp(8634).ContentType.THREAD === arg0) {
+    const intl6 = tmp(1233).intl;
+    return intl6.string(tmp(1233).t.DwLrLK);
+  } else if (tmp(8634).ContentType.FORUM_POST === arg0) {
+    const intl5 = tmp(1233).intl;
+    return intl5.string(tmp(1233).t["Q9/6BS"]);
+  } else if (tmp(8634).ContentType.CHANGED_STATUS === arg0) {
+    const intl4 = tmp(1233).intl;
+    return intl4.string(tmp(1233).t.TGrUmi);
+  } else if (tmp(8634).ContentType.INTERESTING === arg0) {
+    const intl3 = tmp(1233).intl;
+    return intl3.string(tmp(1233).t["TahE/i"]);
+  } else if (tmp(8634).ContentType.ANNOUNCEMENT === arg0) {
+    const intl2 = tmp(1233).intl;
     const string = intl2.string;
-    const t = tmp(1236).t;
+    const t = tmp(1233).t;
     if (flag) {
       let stringResult = string(t.E0MW8I);
     } else {
       stringResult = string(t["2ih63V"]);
     }
     return stringResult;
-  } else if (tmp(8619).ContentType.FILE === arg0) {
-    const intl = tmp(1236).intl;
-    return intl.string(tmp(1236).t.pYrnTY);
+  } else if (tmp(8634).ContentType.FILE === arg0) {
+    const intl = tmp(1233).intl;
+    return intl.string(tmp(1233).t.pYrnTY);
   }
 };
 export const regenerateFeedAndClearReadStates = function regenerateFeedAndClearReadStates(ACK_GRAVITY_REGENERATE_FEED_AND_CLEAR_READ_STATES_BUTTON) {

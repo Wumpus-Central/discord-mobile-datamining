@@ -1,12 +1,12 @@
-// === Module 8120: getProfileTheme ===
+// === Module 8128: getProfileTheme ===
 
-// Module 8120 (getProfileTheme)
+// Module 8128 (getProfileTheme)
 import apply2 from "apply" /* 12 */;
-import int2hslRaw from "int2hslRaw" /* 688 */;
-import nDefault from "n" /* 689 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
+import int2hslRaw from "int2hslRaw" /* 685 */;
+import nDefault from "n" /* 686 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1362 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import { ThemeTypes } from "ME" /* 676 */;
+import { ThemeTypes } from "ME" /* 673 */;
 import apply from "apply" /* 12 */;
 
 require = arg1;
@@ -66,7 +66,7 @@ export const getValueInColorGradientByPercentage = function getValueInColorGradi
   return items;
 };
 export const calculateOverlayedColor = function calculateOverlayedColor(secondaryColor, overlay) {
-  const obj = items1(688);
+  const obj = items1(685);
   const tmp = items1;
   if (null == overlay) {
     return 0;
@@ -83,11 +83,11 @@ export const calculateOverlayedColor = function calculateOverlayedColor(secondar
       [tmp8, tmp9, tmp10] = callback(items.map((arg0, arg1) => Math.floor(alpha * arg0 + (1 - alpha) * items1[arg1])), 3);
       const tmp7 = callback(items.map((arg0, arg1) => Math.floor(alpha * arg0 + (1 - alpha) * items1[arg1])), 3);
       const _HermesInternal = HermesInternal;
-      return tmp(688).rgb2int("rgba(" + tmp8 + ", " + tmp9 + ", " + tmp10 + ")");
+      return tmp(685).rgb2int("rgba(" + tmp8 + ", " + tmp9 + ", " + tmp10 + ")");
     }
     const obj2 = alpha(4327);
   }
-  int2rgbArrayResult = items1(688).int2rgbArray(secondaryColor);
+  int2rgbArrayResult = items1(685).int2rgbArray(secondaryColor);
 };
 export const calculateButtonColor = memoizeResult;
 export const calculateModalV2BackgroundColor = memoizeResult1;

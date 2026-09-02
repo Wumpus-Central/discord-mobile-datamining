@@ -1,8 +1,8 @@
 // === Module 4738: createFromServer ===
 
 // Module 4738 (createFromServer)
-import toJSDefault from "toJS" /* 1936 */;
-import closure_0 from "createdAt" /* 1935 */;
+import toJSDefault from "toJS" /* 1935 */;
+import closure_0 from "createdAt" /* 1934 */;
 
 toJSDefault;
 let prototype;

@@ -1,16 +1,16 @@
-// === Module 9128: trackOnEmojiPickerOpened ===
+// === Module 9142: trackOnEmojiPickerOpened ===
 
-// Module 9128 (trackOnEmojiPickerOpened)
+// Module 9142 (trackOnEmojiPickerOpened)
 import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4700 */;
-import useTopAndNewlyAddedEmojis from "useTopAndNewlyAddedEmojis" /* 9106 */;
-import useEmojiHotrail from "useEmojiHotrail" /* 9107 */;
+import useTopAndNewlyAddedEmojis from "useTopAndNewlyAddedEmojis" /* 9120 */;
+import useEmojiHotrail from "useEmojiHotrail" /* 9121 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "getEmojiToGroupId" /* 5401 */;
-import closure_5 from "ensureGuildLoaded" /* 1387 */;
-import closure_6 from "handleConnectionOpen" /* 1981 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { EmojiIntention } from "set" /* 1925 */;
-import { ExpressionPickerViewType } from "ExpressionPickerViewType" /* 1338 */;
+import closure_4 from "getEmojiToGroupId" /* 5409 */;
+import closure_5 from "ensureGuildLoaded" /* 1386 */;
+import closure_6 from "handleConnectionOpen" /* 1980 */;
+import { AnalyticEvents } from "ME" /* 673 */;
+import { EmojiIntention } from "set" /* 1924 */;
+import { ExpressionPickerViewType } from "ExpressionPickerViewType" /* 1337 */;
 
 require = arg1;
 function trackOnEmojiPickerOpened(arg0) {

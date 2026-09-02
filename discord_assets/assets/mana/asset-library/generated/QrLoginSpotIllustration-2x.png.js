@@ -1,9 +1,9 @@
-// === Module 6930: metadata ===
+// === Module 6939: metadata ===
 
-// Module 6930 (metadata)
+// Module 6939 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/QrLoginSpotIllustration-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/3d63fa03e0ee03454a118207a740abe0565c9ab263b12bfeeba4ebde1df5417a.png";
-export const metadata = { fileBytes: 65532 };
+export default "https://cdn.discordapp.com/assets/content/34ae2896f537d7877956fcd2bd9dac3797b960658dc525de6a8216c33f82d565.png";
+export const metadata = { fileBytes: 67818 };

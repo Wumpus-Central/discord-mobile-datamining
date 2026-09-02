@@ -1,6 +1,6 @@
-// === Module 13291: Opcode ===
+// === Module 13513: Opcode ===
 
-// Module 13291 (Opcode)
+// Module 13513 (Opcode)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/gateway/GatewaySocketOpcode.tsx");

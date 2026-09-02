@@ -1,7 +1,7 @@
-// === Module 15277: isValidClipboardCode ===
+// === Module 15505: isValidClipboardCode ===
 
-// Module 15277 (isValidClipboardCode)
-import finishMFACheck from "finishMFACheck" /* 15275 */;
+// Module 15505 (isValidClipboardCode)
+import finishMFACheck from "finishMFACheck" /* 15503 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
@@ -18,22 +18,29 @@ function isValidClipboardCode(arg0) {
 ({ jsxs: closure_6, jsx: error, Fragment: closure_8 } = jsxProd);
 const result = require("set").fileFinishedImporting("modules/mfa/native/screens/BackupScreen.tsx");
 
-export default function BackupScreen() {
-  let obj = _require(first[7]);
-  const finish = obj.useMfaChallenge().finish;
-  _require = finish;
-  const tmp4 = importDefault(first[8])();
-  [tmp6, importDefault] = callback2(React.useState(false), 2);
-  const tmp7 = callback2(React.useState(""), 2);
-  first = tmp7[0];
-  const callback = tmp7[1];
-  const tmp5 = callback2(React.useState(false), 2);
-  [tmp9, closure_4] = callback2(React.useState(undefined), 2);
-  const tmp8 = callback2(React.useState(undefined), 2);
-  [tmp11, closure_5] = callback2(React.useState(false), 2);
-  const tmp12 = callback2(React.useState(10), 2);
-  const first1 = tmp12[0];
-  closure_7 = tmp12[1];
+export default function BackupScreen(finish) {
+  finish = finish.finish;
+  let _require = finish;
+  importDefault = undefined;
+  let first;
+  let callback;
+  let callback2;
+  let React;
+  let first1;
+  closure_7 = undefined;
+  closure_8 = undefined;
+  const tmp3 = importDefault(first[7])();
+  [tmp5, c1] = callback2(React.useState(false), 2);
+  const tmp6 = callback2(React.useState(""), 2);
+  first = tmp6[0];
+  callback = tmp6[1];
+  const tmp4 = callback2(React.useState(false), 2);
+  [tmp8, c4] = callback2(React.useState(undefined), 2);
+  const tmp7 = callback2(React.useState(undefined), 2);
+  [tmp10, c5] = callback2(React.useState(false), 2);
+  const tmp11 = callback2(React.useState(10), 2);
+  first1 = tmp11[0];
+  closure_7 = tmp11[1];
   const items = [first1];
   const effect = React.useEffect(() => {
     if (first1 > 0) {
@@ -97,76 +104,77 @@ export default function BackupScreen() {
     }
     return applyArgumentsResult;
   }, items1);
-  obj = { headerText: null, subtitle: null, input: null, submit: null, mfaMethod: "backup" };
-  const tmp10 = callback2(React.useState(false), 2);
+  let obj = { headerText: null, subtitle: null, input: null, submit: null, screenProps: null, mfaMethod: "backup" };
+  const tmp9 = callback2(React.useState(false), 2);
   const intl = _require(first[6]).intl;
   obj[0] = intl.string(_require(first[6]).t.B2T1HD);
   const intl2 = _require(first[6]).intl;
   obj[1] = intl2.string(_require(first[6]).t.c5J7O0);
   if (first1 > 0) {
     obj = { variant: "text-md/normal", children: null };
-    const intl3 = tmp(tmp2[6]).intl;
-    const items2 = [intl3.string(tmp(tmp2[6]).t.RRtlLg), ];
-    const intl4 = tmp(tmp2[6]).intl;
-    obj1 = { countdown: null };
-    obj1[0] = first1;
-    items2[1] = intl4.format(tmp(tmp2[6]).t.tsWkAE, obj1);
+    const intl3 = tmp16(tmp2[6]).intl;
+    const items2 = [intl3.string(tmp16(tmp2[6]).t.RRtlLg), ];
+    const intl4 = tmp16(tmp2[6]).intl;
+    obj = { countdown: null };
+    obj[0] = first1;
+    items2[1] = intl4.format(tmp16(tmp2[6]).t.tsWkAE, obj);
     obj[1] = items2;
-    let obj2 = obj;
+    obj1 = obj;
   } else {
-    obj2 = { variant: "text-md/normal", children: null };
-    const intl8 = tmp(tmp2[6]).intl;
-    const items3 = [intl8.string(tmp(tmp2[6]).t.RRtlLg), ];
-    const intl9 = tmp(tmp2[6]).intl;
-    items3[1] = intl9.string(tmp(tmp2[6]).t.v3a6Pd);
-    obj2[1] = items3;
+    obj1 = { variant: "text-md/normal", children: null };
+    const intl8 = tmp16(tmp2[6]).intl;
+    const items3 = [intl8.string(tmp16(tmp2[6]).t.RRtlLg), ];
+    const intl9 = tmp16(tmp2[6]).intl;
+    items3[1] = intl9.string(tmp16(tmp2[6]).t.v3a6Pd);
+    obj1[1] = items3;
   }
-  const items4 = [first1(_require(first[5]).Text, obj2), ];
-  const obj3 = { label: null, placeholder: null, isValidClipboardCode: null, maxLength: null, onChangeCode: null, error: null, isDisabled: null, autoFocus: null };
-  let tmp3Result = tmp3(tmp2[10]);
-  const intl5 = tmp(tmp2[6]).intl;
-  obj3[0] = intl5.string(_require(first[6]).t["C/ZAw/"]);
-  const intl6 = tmp(tmp2[6]).intl;
-  obj3[1] = intl6.string(_require(first[6]).t.fZSi1D);
-  obj3[2] = isValidClipboardCode;
-  obj3[3] = _require(first[4]).BACKUP_CODE_MAX_LENGTH;
-  obj3[4] = function onChangeCode(arg0) {
+  const items4 = [first1(_require(first[5]).Text, obj1), ];
+  const obj2 = { label: null, placeholder: null, isValidClipboardCode: null, maxLength: null, onChangeCode: null, error: null, isDisabled: null, autoFocus: null };
+  let tmpResult = tmp(tmp2[9]);
+  const intl5 = tmp16(tmp2[6]).intl;
+  obj2[0] = intl5.string(_require(first[6]).t["C/ZAw/"]);
+  const intl6 = tmp16(tmp2[6]).intl;
+  obj2[1] = intl6.string(_require(first[6]).t.fZSi1D);
+  obj2[2] = isValidClipboardCode;
+  obj2[3] = _require(first[4]).BACKUP_CODE_MAX_LENGTH;
+  obj2[4] = function onChangeCode(arg0) {
     callback(arg0);
-    callback2(undefined);
+    _undefined(undefined);
   };
-  obj3[5] = tmp9;
-  let tmp20 = tmp6;
-  if (!tmp6) {
-    tmp20 = tmp11;
+  obj2[5] = tmp8;
+  let tmp20 = tmp5;
+  if (!tmp5) {
+    tmp20 = tmp10;
   }
-  const obj4 = { children: null };
-  obj3[6] = tmp20;
-  obj3[7] = !tmp4;
-  items4[1] = closure_7(tmp3Result, obj3);
-  obj4[0] = items4;
-  obj[2] = first1(closure_8, obj4);
-  const obj5 = { variant: "primary", text: null, loading: null, onPress: null, disabled: null };
-  tmp3Result = tmp3(tmp2[11]);
-  const intl7 = tmp(tmp2[6]).intl;
-  obj5[1] = intl7.string(_require(first[6]).t.geKm7t);
-  let tmp22 = tmp6;
-  if (!tmp6) {
-    tmp22 = tmp11;
+  const obj3 = { children: null };
+  obj2[6] = tmp20;
+  obj2[7] = !tmp3;
+  items4[1] = closure_7(tmpResult, obj2);
+  obj3[0] = items4;
+  obj[2] = first1(closure_8, obj3);
+  const obj4 = { variant: "primary", text: null, loading: null, onPress: null, disabled: null };
+  tmpResult = tmp(tmp2[10]);
+  const intl7 = tmp16(tmp2[6]).intl;
+  obj4[1] = intl7.string(_require(first[6]).t.geKm7t);
+  let tmp22 = tmp5;
+  if (!tmp5) {
+    tmp22 = tmp10;
   }
-  obj5[2] = tmp22;
-  obj5[3] = function onPress() {
-    return callback3(first);
+  obj4[2] = tmp22;
+  obj4[3] = function onPress() {
+    return callback2(first);
   };
-  if (!tmp6) {
-    tmp6 = tmp11;
+  if (!tmp5) {
+    tmp5 = tmp10;
   }
-  if (!tmp6) {
-    tmp6 = first.length < tmp(tmp2[4]).BACKUP_CODE_MIN_LENGTH;
+  if (!tmp5) {
+    tmp5 = first.length < tmp16(tmp2[4]).BACKUP_CODE_MIN_LENGTH;
   }
-  if (!tmp6) {
-    tmp6 = first1 > 0;
+  if (!tmp5) {
+    tmp5 = first1 > 0;
   }
-  obj5[4] = tmp6;
-  obj[3] = closure_7(tmp3Result, obj5);
-  return closure_7(importDefault(first[9]), obj);
+  obj4[4] = tmp5;
+  obj[3] = closure_7(tmpResult, obj4);
+  obj[4] = { mfaChallenge: finish.mfaChallenge, finish };
+  return closure_7(importDefault(first[8]), obj);
 };

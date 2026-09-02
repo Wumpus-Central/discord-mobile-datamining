@@ -1,13 +1,13 @@
-// === Module 13294: set ===
+// === Module 13517: set ===
 
-// Module 13294 (set)
+// Module 13517 (set)
 import timestampDefault from "timestamp" /* 3 */;
 import sleep from "sleep" /* 4558 */;
-import prettyPrintTrace_ from "prettyPrintTrace_" /* 13299 */;
-import isVoiceServerUpdateImmediateEnabled from "isVoiceServerUpdateImmediateEnabled" /* 13300 */;
-import CLOSEDDefault from "CLOSED" /* 13301 */;
+import prettyPrintTrace_ from "prettyPrintTrace_" /* 13522 */;
+import isVoiceServerUpdateImmediateEnabled from "isVoiceServerUpdateImmediateEnabled" /* 13523 */;
+import CLOSEDDefault from "CLOSED" /* 13524 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import { DISPATCHER_IDEAL_TIME_LIMIT_MS as closure_4 } from "DISPATCHER_STANDARD_TIMEOUT_MS" /* 13295 */;
+import { DISPATCHER_IDEAL_TIME_LIMIT_MS as closure_4 } from "DISPATCHER_STANDARD_TIMEOUT_MS" /* 13518 */;
 import set from "set" /* 2 */;
 
 require = arg1;
@@ -227,15 +227,15 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
     const none = "none";
     c4 = false;
     const telemetry2 = self.scheduler.telemetry;
-    telemetry2.measure(_require(13298).WorkSchedulerTelemetryMeasurement.COUNT_INITIAL_DISPATCHS_LENGTH, items.length);
+    telemetry2.measure(_require(13521).WorkSchedulerTelemetryMeasurement.COUNT_INITIAL_DISPATCHS_LENGTH, items.length);
     try {
       closure_5 = [];
       if (self.socket.connectionState === CLOSEDDefault.RESUMING) {
-        const Emitter = tmp2(589).Emitter;
+        const Emitter = tmp2(586).Emitter;
         Emitter.pause(150);
       }
       _require = 0;
-      const Emitter2 = tmp2(589).Emitter;
+      const Emitter2 = tmp2(586).Emitter;
       Emitter2.batched(() => {
         let arr;
         let obj;
@@ -302,19 +302,19 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
           closure_5 = arr.slice(sum);
           if (tmp18) {
             const telemetry = tmp6.scheduler.telemetry;
-            telemetry.timeTrack(v0(13298).WorkSchedulerTelemetryTiming.TIME_OVER_DEADLINE, obj.timeSinceExpiration);
+            telemetry.timeTrack(v0(13521).WorkSchedulerTelemetryTiming.TIME_OVER_DEADLINE, obj.timeSinceExpiration);
           }
           tmp18 = null != obj && obj.timeRemaining() <= 0;
         }
-        items(13302).flush();
+        items(13525).flush();
       });
       if (c4) {
-        const Emitter3 = tmp2(589).Emitter;
+        const Emitter3 = tmp2(586).Emitter;
         Emitter3.resume();
       }
       if (closure_5.length > 0) {
         let telemetry = self.scheduler.telemetry;
-        telemetry.measure(tmp21(13298).WorkSchedulerTelemetryMeasurement.COUNT_DISPATCHES_LEFT_AFTER_YIELD, closure_5.length);
+        telemetry.measure(tmp21(13521).WorkSchedulerTelemetryMeasurement.COUNT_DISPATCHES_LEFT_AFTER_YIELD, closure_5.length);
         const queue = self.queue;
         const unshift = queue.unshift;
         items = [];
@@ -341,7 +341,7 @@ prototype["dispatchOne"] = function dispatchOne(arg0) {
   ({ data, type, compressionAnalytics, preloadedData, receivedAt } = arg0);
   const nowResult = performance.now();
   if (this.socket.connectionState !== CLOSEDDefault.RESUMING) {
-    tmp2(13302).flush(type, data);
+    tmp2(13525).flush(type, data);
     if ("READY" === type) {
       const readyPayloadByteSizeAnalytics = prettyPrintTrace_.getReadyPayloadByteSizeAnalytics(data);
       const dispatchHandler = self.getDispatchHandler(type);
@@ -369,7 +369,7 @@ prototype["dispatchOne"] = function dispatchOne(arg0) {
         dispatchHandler2.dispatch(data, type, preloadedData, receivedAt);
       }
     }
-    if (self.socket.connectionState === tmp2(13301).RESUMING) {
+    if (self.socket.connectionState === tmp2(13524).RESUMING) {
       const resumeAnalytics3 = self.resumeAnalytics;
       const _performance = performance;
       resumeAnalytics3.dispatchTime = resumeAnalytics3.dispatchTime + (performance.now() - nowResult);

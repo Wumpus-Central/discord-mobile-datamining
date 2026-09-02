@@ -1,10 +1,10 @@
-// === Module 11586: ForumPostTimestamp ===
+// === Module 11809: ForumPostTimestamp ===
 
-// Module 11586 (ForumPostTimestamp)
+// Module 11809 (ForumPostTimestamp)
 import noopAll from "noop" /* 19 */;
 import Text from "Text" /* 4474 */;
-import useLoadForumUnreadCounts from "useLoadForumUnreadCounts" /* 7628 */;
-import { useForumChannelStore } from "set" /* 11573 */;
+import useLoadForumUnreadCounts from "useLoadForumUnreadCounts" /* 7638 */;
+import { useForumChannelStore } from "set" /* 11796 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

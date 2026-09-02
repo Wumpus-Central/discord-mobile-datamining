@@ -1,14 +1,14 @@
-// === Module 15448: UserListItem ===
+// === Module 15678: UserListItem ===
 
-// Module 15448 (UserListItem)
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 15678 (UserListItem)
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Text from "Text" /* 4474 */;
-import getCurrentUserSigningKey from "getCurrentUserSigningKey" /* 9839 */;
+import getCurrentUserSigningKey from "getCurrentUserSigningKey" /* 9861 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import { UserSettingsSections } from "ME" /* 676 */;
+import closure_5 from "mergeGuildAvatar" /* 1921 */;
+import { UserSettingsSections } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -39,7 +39,7 @@ function UserListItem(userId) {
   }, items3);
   let tmp8Result = null != stateFromStores;
   if (tmp8Result) {
-    obj = { user: null, guildId: "Array", size: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000055359227687093 };
+    obj = { user: null, guildId: "Array", size: true };
     obj[0] = stateFromStores;
     obj[2] = tmp(tmp2[14]).AvatarSizes.REFRESH_MEDIUM_32;
     tmp8Result = tmp8(tmp(tmp2[14]).Avatar, obj);

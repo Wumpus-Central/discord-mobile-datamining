@@ -1,12 +1,12 @@
-// === Module 8485: GiftCodeRedeemModal ===
+// === Module 8498: GiftCodeRedeemModal ===
 
-// Module 8485 (GiftCodeRedeemModal)
+// Module 8498 (GiftCodeRedeemModal)
 import noopAll from "noop" /* 19 */;
-import useGiftCodeErrorMessageDefault from "useGiftCodeErrorMessage" /* 8487 */;
-import closure_3 from "updateGiftCode" /* 8447 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import useGiftCodeErrorMessageDefault from "useGiftCodeErrorMessage" /* 8500 */;
+import closure_3 from "updateGiftCode" /* 8456 */;
+import closure_4 from "mergeGuildAvatar" /* 1921 */;
 import { jsx } from "jsxProd" /* 21 */;
-import HeaderBackImage from "HeaderBackImage" /* 5495 */;
+import HeaderBackImage from "HeaderBackImage" /* 5503 */;
 
 const require = arg1;
 noopAll;
@@ -18,10 +18,10 @@ export default function GiftCodeRedeemModal(code) {
   code = code.code;
   let stateFromStores1 = code;
   let merged = Object.assign(code, Object.create(null));
-  obj = stateFromStores1(589);
+  obj = stateFromStores1(586);
   const items = [closure_3];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_3.get(stateFromStores1));
-  obj1 = stateFromStores1(589);
+  obj1 = stateFromStores1(586);
   const items1 = [closure_4];
   stateFromStores1 = obj1.useStateFromStores(items1, () => currentUser.getCurrentUser());
   const tmp6 = useGiftCodeErrorMessageDefault(code, stateFromStores1);
@@ -32,7 +32,7 @@ export default function GiftCodeRedeemModal(code) {
     let items2 = obj;
     obj = { headerTitle: null, headerLeft: null, render: null };
     obj[0] = closure_7;
-    let tmp2Result = tmp2(5495);
+    let tmp2Result = tmp2(5503);
     obj[1] = tmp2Result.getHeaderCloseButton(() => callback(4723).pop());
     obj[2] = function render(arg0) {
       obj = {};
@@ -43,7 +43,7 @@ export default function GiftCodeRedeemModal(code) {
     obj[obj.START] = obj;
     obj1 = { headerTitle: null, headerLeft: null, render: null };
     obj1[0] = closure_7;
-    tmp2Result = tmp2(5495);
+    tmp2Result = tmp2(5503);
     obj1[1] = tmp2Result.getHeaderCloseButton(() => callback(4723).pop());
     obj1[2] = function render(arg0) {
       obj = {};
@@ -54,10 +54,10 @@ export default function GiftCodeRedeemModal(code) {
     obj[obj.SUCCESS] = obj1;
     const obj2 = { headerTitle: null, headerLeft: null, render: null };
     obj2[0] = closure_7;
-    obj2[1] = tmp2(5495).getHeaderCloseButton(() => callback(4723).pop());
+    obj2[1] = tmp2(5503).getHeaderCloseButton(() => callback(4723).pop());
     obj2[2] = function render(arg0) {
       const merged = Object.assign(arg0);
-      return callback2(callback(12855), {});
+      return callback2(callback(13077), {});
     };
     obj[obj.ERROR] = obj2;
     if (null == stateFromStores) {
@@ -84,10 +84,10 @@ export default function GiftCodeRedeemModal(code) {
         items3 = [obj6];
       }
       obj3[1] = items3;
-      jsx(tmp2(6008).Navigator, { screens: null, initialRouteStack: null });
+      jsx(tmp2(6016).Navigator, { screens: null, initialRouteStack: null });
       const tmp7 = jsx;
     }
-    const tmp2Result1 = tmp2(5495);
+    const tmp2Result1 = tmp2(5503);
   }
 };
 export const GiftCodeModalScreens = obj;

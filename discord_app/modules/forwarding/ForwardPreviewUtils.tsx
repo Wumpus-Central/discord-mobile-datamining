@@ -1,7 +1,7 @@
-// === Module 11278: useForwardPreviewContent ===
+// === Module 11501: useForwardPreviewContent ===
 
-// Module 11278 (useForwardPreviewContent)
-import closure_2 from "getUncachedChannelPermissions" /* 4121 */;
+// Module 11501 (useForwardPreviewContent)
+import closure_2 from "getUncachedChannelPermissions" /* 4120 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/forwarding/ForwardPreviewUtils.tsx");
@@ -32,7 +32,7 @@ export const useForwardPreviewContent = function useForwardPreviewContent(messag
     attachments = [];
   }
   const items = [];
-  let obj = message(589);
+  let obj = message(586);
   const items1 = [onlyAttachmentIds];
   if (obj.useStateFromStores(items1, () => {
     let shouldStripEmbedsResult = null != closure_1;

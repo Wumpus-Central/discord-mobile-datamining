@@ -1,11 +1,11 @@
-// === Module 8036: set ===
+// === Module 8045: set ===
 
-// Module 8036 (set)
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1486 */;
-import _modDef8037 from "module_8037" /* 8037 */;
+// Module 8045 (set)
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1485 */;
+import _modDef8046 from "module_8046" /* 8046 */;
 import set from "set" /* 2 */;
 
-let set = new Set(_modDef8037);
+let set = new Set(_modDef8046);
 let obj = { "github.com": null, "bitbucket.org": null, "gitlab.com": null };
 const regExp = new RegExp("/releases\\S*/download|archive/refs/\\S*|/i/raw/i/\\S*|/user-attachments\\S*");
 obj[0] = regExp;

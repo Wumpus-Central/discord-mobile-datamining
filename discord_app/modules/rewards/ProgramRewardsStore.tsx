@@ -1,12 +1,12 @@
-// === Module 13378: updateTtl ===
+// === Module 13601: updateTtl ===
 
-// Module 13378 (updateTtl)
-import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import canFetchNitroProgramReward from "canFetchNitroProgramReward" /* 13380 */;
+// Module 13601 (updateTtl)
+import initializeDefault from "initialize" /* 586 */;
+import setDefault from "set" /* 684 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import canFetchNitroProgramReward from "canFetchNitroProgramReward" /* 13603 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_4 from "mergeGuildAvatar" /* 1921 */;
 
 require = arg1;
 function updateTtl() {

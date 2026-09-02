@@ -1,11 +1,11 @@
-// === Module 5446: parseServerPackSticker ===
+// === Module 5454: parseServerPackSticker ===
 
-// Module 5446 (parseServerPackSticker)
-import setDefault from "set" /* 687 */;
-import StickerFormat from "StickerFormat" /* 5212 */;
+// Module 5454 (parseServerPackSticker)
+import setDefault from "set" /* 684 */;
+import StickerFormat from "StickerFormat" /* 5220 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import { TypeTag } from "TypeTag" /* 1428 */;
-import { LibdiscoreStore } from "identity" /* 1910 */;
+import { TypeTag } from "TypeTag" /* 1427 */;
+import { LibdiscoreStore } from "identity" /* 1909 */;
 
 require = arg1;
 function parseServerPackSticker(id) {

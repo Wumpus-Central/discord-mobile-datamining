@@ -1,10 +1,10 @@
-// === Module 6679: GiftBagFlyingSpotIllustration ===
+// === Module 6688: GiftBagFlyingSpotIllustration ===
 
-// Module 6679 (GiftBagFlyingSpotIllustration)
+// Module 6688 (GiftBagFlyingSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5493 */;
-import metadataDefault from "metadata" /* 6680 */;
+import preloadDefault from "preload" /* 5501 */;
+import metadataDefault from "metadata" /* 6689 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/GiftBagFlyingSpotIllustration.native.tsx");

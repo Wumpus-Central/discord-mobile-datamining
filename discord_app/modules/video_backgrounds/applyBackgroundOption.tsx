@@ -1,14 +1,14 @@
-// === Module 9786: _getFilterBlob ===
+// === Module 9808: _getFilterBlob ===
 
-// Module 9786 (_getFilterBlob)
-import _fetchVideoFilterAssets from "_fetchVideoFilterAssets" /* 9789 */;
-import getLastUsedVideoBackgroundOption from "getLastUsedVideoBackgroundOption" /* 9791 */;
-import isVideoBackgroundSupportedDefault from "isVideoBackgroundSupported" /* 9798 */;
+// Module 9808 (_getFilterBlob)
+import _fetchVideoFilterAssets from "_fetchVideoFilterAssets" /* 9811 */;
+import getLastUsedVideoBackgroundOption from "getLastUsedVideoBackgroundOption" /* 9813 */;
+import isVideoBackgroundSupportedDefault from "isVideoBackgroundSupported" /* 9820 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "handleSyncedStoresUpdate" /* 9787 */;
-import VideoFilterType from "VideoFilterType" /* 7759 */;
-import { NOOP } from "ME" /* 676 */;
+import closure_4 from "mergeGuildAvatar" /* 1921 */;
+import closure_5 from "handleSyncedStoresUpdate" /* 9809 */;
+import VideoFilterType from "VideoFilterType" /* 7768 */;
+import { NOOP } from "ME" /* 673 */;
 
 require = arg1;
 function _getFilterBlob() {
@@ -105,20 +105,20 @@ function _applyBackgroundOption() {
                 if (typeof tmp61 !== "string") {
                   if (typeof tmp61 !== "number") {
                     const asset = tmp61.asset;
-                    let isAnimatedIconHashResult = callback(1431).isAnimatedIconHash(asset);
+                    let isAnimatedIconHashResult = callback(1430).isAnimatedIconHash(asset);
                     if (!isAnimatedIconHashResult) {
-                      let obj3 = callback(1431);
+                      let obj3 = callback(1430);
                       isAnimatedIconHashResult = obj3.isVideoAssetHash(asset);
                     }
                     closure_3 = isAnimatedIconHashResult;
-                    let obj4 = callback(1431);
+                    let obj4 = callback(1430);
                     obj1 = { userId: null, assetId: null, assetHash: null, size: null };
                     ({ user_id: obj6[0], id: obj6[1] } = tmp61);
                     obj1[2] = asset;
                     obj1[3] = closure_1_6.width;
                     let videoFilterAssetURL = obj4.getVideoFilterAssetURL(obj1);
                     source = videoFilterAssetURL;
-                    const obj11 = callback(1431);
+                    const obj11 = callback(1430);
                   }
                   if (null != videoFilterAssetURL) {
                     c7 = 1;
@@ -149,12 +149,12 @@ function _applyBackgroundOption() {
                       c8 = 2;
                       c9 = 1;
                       obj3 = { value: null, done: false };
-                      obj3[0] = callback2(9797)(videoFilterAssetURL);
+                      obj3[0] = callback2(9819)(videoFilterAssetURL);
                       return obj3;
                     }
                   }
                 }
-                const tmp24 = callback2(9792)()[tmp61];
+                const tmp24 = callback2(9814)()[tmp61];
                 const isVideo = tmp24.isVideo;
                 closure_3 = isVideo;
                 if (isVideo == null) {
@@ -273,7 +273,7 @@ function _applyBackgroundOptionLive() {
               location = flag.location;
               c4 = 1;
               c5 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -309,9 +309,9 @@ function _applyBackgroundOptionLive() {
             c5 = 3;
             return { value: "HermesInternal", done: null };
           }
-        } catch (tmp16) {
+        } catch (tmp24) {
           c5 = tmp;
-          throw tmp16;
+          throw tmp24;
         }
       }
     })();
@@ -373,7 +373,7 @@ function _applyBackgroundOptionPreview() {
               location = flag.location;
               c5 = 1;
               c6 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {

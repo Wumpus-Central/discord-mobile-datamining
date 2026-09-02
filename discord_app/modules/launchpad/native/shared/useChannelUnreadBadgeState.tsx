@@ -1,7 +1,7 @@
-// === Module 15934: useChannelUnreadBadgeState ===
+// === Module 16165: useChannelUnreadBadgeState ===
 
-// Module 15934 (useChannelUnreadBadgeState)
-import closure_2 from "guildHasCommunity" /* 7277 */;
+// Module 16165 (useChannelUnreadBadgeState)
+import closure_2 from "guildHasCommunity" /* 7286 */;
 import closure_3 from "generateOldThreadCutoff" /* 4493 */;
 import closure_4 from "updateUserGuildSettingsInternal" /* 4701 */;
 
@@ -11,7 +11,7 @@ const result = require("set").fileFinishedImporting("modules/launchpad/native/sh
 export const useChannelUnreadBadgeState = function useChannelUnreadBadgeState(channel, flag) {
   const _require = channel;
   dependencyMap = flag;
-  let obj = _require(589);
+  let obj = _require(586);
   const items = [closure_3];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     const obj = { ackMessageId: closure_1_3.ackMessageId(user.id), unread: null, mentionCount: null, isMentionLowImportance: null };
@@ -28,13 +28,13 @@ export const useChannelUnreadBadgeState = function useChannelUnreadBadgeState(ch
   const items1 = [closure_2];
   const items2 = [, ];
   ({ guild_id: arr3[0], id: arr3[1] } = channel);
-  const stateFromStores = _require(589).useStateFromStores(items1, () => closure_1_2.shouldIndicateNewChannel(user.guild_id, user.id), items2);
-  const obj2 = _require(589);
+  const stateFromStores = _require(586).useStateFromStores(items1, () => closure_1_2.shouldIndicateNewChannel(user.guild_id, user.id), items2);
+  const obj2 = _require(586);
   obj = { unread, resolvedUnreadSetting: null, newChannel: null, optInEnabled: null, mentionCount: null, isMentionLowImportance: null };
-  const optInEnabledForGuild = _require(7280).useOptInEnabledForGuild(channel.guild_id);
-  const obj3 = _require(7280);
+  const optInEnabledForGuild = _require(7289).useOptInEnabledForGuild(channel.guild_id);
+  const obj3 = _require(7289);
   const items3 = [closure_4];
-  obj[1] = _require(589).useStateFromStores(items3, () => closure_1_4.resolveUnreadSetting(closure_0));
+  obj[1] = _require(586).useStateFromStores(items3, () => closure_1_4.resolveUnreadSetting(closure_0));
   obj[2] = stateFromStores;
   obj[3] = optInEnabledForGuild;
   obj[4] = mentionCount;
@@ -45,7 +45,7 @@ export const useBaseChannelUnreadBadgeState = function useBaseChannelUnreadBadge
   const _require = channel;
   dependencyMap = muted;
   const items = [closure_3];
-  return _require(589).useStateFromStoresObject(items, () => {
+  return _require(586).useStateFromStoresObject(items, () => {
     const obj = { ackMessageId: closure_1_3.ackMessageId(user.id), unread: null, mentionCount: null, isMentionLowImportance: null };
     let hasUnreadResult = !closure_1;
     if (!closure_1) {

@@ -1,6 +1,6 @@
-// === Module 10790: useGiftingPromotionDefaultSelectionV2 ===
+// === Module 11010: useGiftingPromotionDefaultSelectionV2 ===
 
-// Module 10790 (useGiftingPromotionDefaultSelectionV2)
+// Module 11010 (useGiftingPromotionDefaultSelectionV2)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/premium/gifting/hooks/useGiftingPromotionDefaultSelection.tsx");

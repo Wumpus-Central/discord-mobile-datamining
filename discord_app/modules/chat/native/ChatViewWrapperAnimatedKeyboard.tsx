@@ -1,8 +1,8 @@
-// === Module 10988: ChatViewWrapperAnimatedKeyboard ===
+// === Module 11208: ChatViewWrapperAnimatedKeyboard ===
 
-// Module 10988 (ChatViewWrapperAnimatedKeyboard)
-import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5597 */;
-import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 10994 */;
+// Module 11208 (ChatViewWrapperAnimatedKeyboard)
+import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5605 */;
+import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 11214 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;

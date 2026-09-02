@@ -1,12 +1,12 @@
-// === Module 13345: handleConnectionOpen ===
+// === Module 13569: handleConnectionOpen ===
 
-// Module 13345 (handleConnectionOpen)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcher from "dispatcher" /* 709 */;
-import commonTriggerPointConfiguration from "commonTriggerPointConfiguration" /* 13346 */;
+// Module 13569 (handleConnectionOpen)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcher from "dispatcher" /* 706 */;
+import commonTriggerPointConfiguration from "commonTriggerPointConfiguration" /* 13570 */;
 import closure_3 from "getHash" /* 4391 */;
-import closure_4 from "initialize" /* 1212 */;
-import importDefaultResult from "dispatcher" /* 709 */;
+import closure_4 from "initialize" /* 1209 */;
+import importDefaultResult from "dispatcher" /* 706 */;
 
 require = arg1;
 function handleConnectionOpen() {

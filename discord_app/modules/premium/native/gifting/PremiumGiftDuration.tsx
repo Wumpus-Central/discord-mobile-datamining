@@ -1,10 +1,10 @@
-// === Module 10791: PremiumGiftDurationButton ===
+// === Module 11011: PremiumGiftDurationButton ===
 
-// Module 10791 (PremiumGiftDurationButton)
+// Module 11011 (PremiumGiftDurationButton)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import GuildFeatures from "GuildFeatures" /* 1923 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -12,14 +12,14 @@ const require = arg1;
 function PremiumGiftDurationButton(arg0) {
   ({ selected, planInterval } = arg0);
   let setPlanInterval;
-  let obj = planInterval(10477);
+  let obj = planInterval(10698);
   const nativeGiftContext = obj.useNativeGiftContext();
   setPlanInterval = nativeGiftContext.setPlanInterval;
   const tmp4 = callback3();
   if (selected) {
-    let RowButton = tmp(5599).TableRow;
+    let RowButton = tmp(5607).TableRow;
   } else {
-    RowButton = tmp(8365).RowButton;
+    RowButton = tmp(8374).RowButton;
   }
   let combined = null;
   if (planInterval === SubscriptionIntervalTypes.YEAR) {
@@ -27,7 +27,7 @@ function PremiumGiftDurationButton(arg0) {
     combined = "" + closure_4 + "%";
   }
   const tmp5 = SubscriptionIntervalTypes;
-  const tmp9 = setPlanInterval(10525)(nativeGiftContext.premiumType, planInterval);
+  const tmp9 = setPlanInterval(10746)(nativeGiftContext.premiumType, planInterval);
   const radioA11yNative = planInterval(4205).useRadioA11yNative({ selected });
   items = [tmp4.container, ];
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
@@ -38,11 +38,11 @@ function PremiumGiftDurationButton(arg0) {
   items[1] = selected;
   obj = { style: tmp4.labelContainer, children: null };
   if (planInterval === tmp5.MONTH) {
-    const intl2 = tmp(1236).intl;
-    let stringResult = intl2.string(tmp(1236).t.Mh9bTt);
+    const intl2 = tmp(1233).intl;
+    let stringResult = intl2.string(tmp(1233).t.Mh9bTt);
   } else {
-    const intl = tmp(1236).intl;
-    stringResult = intl.string(tmp(1236).t.DRgqMo);
+    const intl = tmp(1233).intl;
+    stringResult = intl.string(tmp(1233).t.DRgqMo);
   }
   const items1 = [closure_6(planInterval(4474).Text, { variant: "text-md/semibold", children: stringResult }), ];
   let tmp11Result = null != combined;
@@ -50,13 +50,13 @@ function PremiumGiftDurationButton(arg0) {
     obj1 = { style: null, children: null };
     obj1[0] = tmp4.labelPromo;
     const obj2 = { variant: "text-md/bold", color: "text-overlay-light", children: null };
-    const intl3 = tmp(1236).intl;
+    const intl3 = tmp(1233).intl;
     const obj3 = { discount: null };
     obj3[0] = combined;
-    obj2[2] = intl3.formatToPlainString(tmp(1236).t.IAybsG, obj3).toUpperCase();
+    obj2[2] = intl3.formatToPlainString(tmp(1233).t.IAybsG, obj3).toUpperCase();
     obj1[1] = tmp11(tmp(4474).Text, obj2);
     tmp11Result = tmp11(tmp12, obj1);
-    const str3 = intl3.formatToPlainString(tmp(1236).t.IAybsG, obj3);
+    const str3 = intl3.formatToPlainString(tmp(1233).t.IAybsG, obj3);
   }
   const tmp13 = closure_7;
   const tmpResult = planInterval(4205);
@@ -100,12 +100,12 @@ const result = require("set").fileFinishedImporting("modules/premium/native/gift
 
 export default function PremiumGiftDuration() {
   const tmp = callback4();
-  let obj = planInterval(10477);
+  let obj = planInterval(10698);
   planInterval = obj.useNativeGiftContext().planInterval;
   obj = { style: tmp.durationContainer, children: null };
   obj = { style: tmp.durationTitle, variant: "text-sm/semibold", children: null };
-  const intl = planInterval(1236).intl;
-  obj[2] = intl.string(planInterval(1236).t["8XT6Nf"]);
+  const intl = planInterval(1233).intl;
+  obj[2] = intl.string(planInterval(1233).t["8XT6Nf"]);
   items = [callback(planInterval(4474).Text, obj), ];
   items[1] = items.map((planInterval) => closure_1_6(closure_1_10, { selected: planInterval === planInterval, planInterval }, arg1));
   obj[1] = items;

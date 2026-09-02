@@ -1,16 +1,16 @@
-// === Module 16604: BaseActivityPanelFocusedView ===
+// === Module 16839: BaseActivityPanelFocusedView ===
 
-// Module 16604 (BaseActivityPanelFocusedView)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 16839 (BaseActivityPanelFocusedView)
+import ThemesDefault from "Themes" /* 709 */;
 import importAllResult from "noop" /* 19 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_5 from "ensureGuildLoaded" /* 1387 */;
-import closure_6 from "participantFromServer" /* 1386 */;
+import closure_5 from "ensureGuildLoaded" /* 1386 */;
+import closure_6 from "participantFromServer" /* 1385 */;
 import { ActivityLayoutMode } from "items3" /* 4506 */;
-import ActivityPanelModes from "ActivityPanelModes" /* 9466 */;
-import DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG from "DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG" /* 16599 */;
-import { ThemeTypes } from "ME" /* 676 */;
-import { IS_IOS } from "VoicePanelModes" /* 11840 */;
+import ActivityPanelModes from "ActivityPanelModes" /* 9479 */;
+import DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG from "DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG" /* 16834 */;
+import { ThemeTypes } from "ME" /* 673 */;
+import { IS_IOS } from "VoicePanelModes" /* 12063 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -304,7 +304,7 @@ export default memoResult;
 export const useBaseActivityPanelFocusedView = function useBaseActivityPanelFocusedView(context) {
   closure_0 = undefined;
   let isWindowLandscape;
-  const tmp = isWindowLandscape(1628)();
+  const tmp = isWindowLandscape(1627)();
   closure_0 = tmp;
   let obj = importAllResult;
   const wrapperDimensions = importAllResult.useContext(context.context).wrapperDimensions;

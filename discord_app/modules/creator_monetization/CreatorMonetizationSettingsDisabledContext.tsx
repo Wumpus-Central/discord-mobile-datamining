@@ -1,7 +1,7 @@
-// === Module 17309: context ===
+// === Module 17545: context ===
 
-// Module 17309 (context)
-import useShouldHideGuildPurchaseEntryPoints from "useShouldHideGuildPurchaseEntryPoints" /* 6100 */;
+// Module 17545 (context)
+import useShouldHideGuildPurchaseEntryPoints from "useShouldHideGuildPurchaseEntryPoints" /* 6108 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 

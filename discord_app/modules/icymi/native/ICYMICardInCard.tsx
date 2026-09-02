@@ -1,20 +1,20 @@
-// === Module 16081: CutoutGuildIconWithUserCustom ===
+// === Module 16312: CutoutGuildIconWithUserCustom ===
 
-// Module 16081 (CutoutGuildIconWithUserCustom)
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import GuildIconSizes from "GuildIconSizes" /* 6004 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 6004 */;
-import SolidCutout from "SolidCutout" /* 8098 */;
-import SolidCutoutDefault from "SolidCutout" /* 8098 */;
+// Module 16312 (CutoutGuildIconWithUserCustom)
+import ThemesDefault from "Themes" /* 709 */;
+import Button from "Button" /* 1296 */;
+import GuildIconSizes from "GuildIconSizes" /* 6012 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 6012 */;
+import SolidCutout from "SolidCutout" /* 8106 */;
+import SolidCutoutDefault from "SolidCutout" /* 8106 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "ensureGuildLoaded" /* 1387 */;
-import closure_6 from "trackCommunicationDisabled" /* 1992 */;
-import closure_7 from "createGuildRecordFromRust" /* 1909 */;
-import { DEFAULT_ROLE_COLOR_HEX } from "ME" /* 676 */;
+import closure_5 from "ensureGuildLoaded" /* 1386 */;
+import closure_6 from "trackCommunicationDisabled" /* 1991 */;
+import closure_7 from "createGuildRecordFromRust" /* 1908 */;
+import { DEFAULT_ROLE_COLOR_HEX } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createICYMIStyles from "createICYMIStyles" /* 16040 */;
+import createICYMIStyles from "createICYMIStyles" /* 16271 */;
 
 require = arg1;
 function CutoutGuildIconWithUserCustom(guild) {

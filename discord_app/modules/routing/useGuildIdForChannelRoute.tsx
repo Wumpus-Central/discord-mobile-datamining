@@ -1,10 +1,10 @@
 // === Module 4490: useGuildIdForChannelRoute ===
 
 // Module 4490 (useGuildIdForChannelRoute)
-import initialize from "initialize" /* 589 */;
-import closure_2 from "initializeFromUserSettings" /* 1390 */;
+import initialize from "initialize" /* 586 */;
+import closure_2 from "initializeFromUserSettings" /* 1389 */;
 import closure_3 from "handleConnectionOpen" /* 4299 */;
-import { FAVORITES } from "ME" /* 676 */;
+import { FAVORITES } from "ME" /* 673 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/routing/useGuildIdForChannelRoute.tsx");

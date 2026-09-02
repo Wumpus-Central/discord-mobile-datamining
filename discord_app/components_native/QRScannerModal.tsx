@@ -1,19 +1,19 @@
-// === Module 13607: DCDQRScanner ===
+// === Module 13830: DCDQRScanner ===
 
-// Module 13607 (DCDQRScanner)
-import ThemesDefault from "Themes" /* 712 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
+// Module 13830 (DCDQRScanner)
+import ThemesDefault from "Themes" /* 709 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _modDef4723 from "module_4723" /* 4723 */;
-import registerAssetDefault from "registerAsset" /* 7812 */;
-import renderDefault from "render" /* 9067 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 13608 */;
+import registerAssetDefault from "registerAsset" /* 7821 */;
+import renderDefault from "render" /* 9081 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 13831 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { UserSettingsSections } from "ME" /* 676 */;
-import { FAMILY_CENTER_LINK_REQUEST_REGEX as closure_7 } from "items" /* 7283 */;
+import { UserSettingsSections } from "ME" /* 673 */;
+import { FAMILY_CENTER_LINK_REQUEST_REGEX as closure_7 } from "items" /* 7292 */;
 import jsxProd from "jsxProd" /* 21 */;
-import set from "set" /* 500 */;
+import set from "set" /* 1234 */;
 
 const require = arg1;
 function DCDQRScanner(arg0) {
@@ -127,8 +127,8 @@ export default function QRScannerModal(showHelp) {
   obj1 = { accessibilityRole: "button", accessibilityLabel: null, source: null, style: null, onPress: null };
   const tmp7 = useSafeAreaInsetsDefault();
   let tmp8 = closure_9;
-  let intl = onScanSuccess(1236).intl;
-  obj1[1] = intl.string(onScanSuccess(1236).t.cpT0Cq);
+  let intl = onScanSuccess(1233).intl;
+  obj1[1] = intl.string(onScanSuccess(1233).t.cpT0Cq);
   obj1[2] = registerAssetDefault;
   const items2 = [tmp12.closeButton, { marginTop: top }];
   obj1[3] = items2;
@@ -146,9 +146,9 @@ export default function QRScannerModal(showHelp) {
       obj2[0] = items3;
       const obj4 = { style: null, children: null };
       obj4[0] = tmp12.text;
-      let intl2 = tmp17(1236).intl;
-      obj4[1] = intl2.string(tmp17(1236).t.dklV0G);
-      obj2[1] = tmp14(tmp17(1297).LegacyText, obj4);
+      let intl2 = tmp17(1233).intl;
+      obj4[1] = intl2.string(tmp17(1233).t.dklV0G);
+      obj2[1] = tmp14(tmp17(1296).LegacyText, obj4);
       tmp14Result = tmp14(tmp9, obj2);
     }
   }

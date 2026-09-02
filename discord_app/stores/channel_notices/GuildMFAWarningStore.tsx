@@ -1,11 +1,11 @@
-// === Module 13411: handleUserStoreUpdates ===
+// === Module 13634: handleUserStoreUpdates ===
 
-// Module 13411 (handleUserStoreUpdates)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "comparator" /* 1982 */;
-import closure_1 from "mergeGuildAvatar" /* 1922 */;
-import { MFALevels } from "ME" /* 676 */;
+// Module 13634 (handleUserStoreUpdates)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import closure_0 from "comparator" /* 1981 */;
+import closure_1 from "mergeGuildAvatar" /* 1921 */;
+import { MFALevels } from "ME" /* 673 */;
 
 function handleUserStoreUpdates() {
   currentUser = currentUser.getCurrentUser();

@@ -3,21 +3,21 @@
 // Module 4666 (allowChannelAccess)
 import set from "set" /* 2 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import fromStringAll from "fromString" /* 506 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
-import applyOverwritesAll from "applyOverwrites" /* 4126 */;
+import fromStringAll from "fromString" /* 503 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import GuildFeatures from "GuildFeatures" /* 1923 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
+import applyOverwritesAll from "applyOverwrites" /* 4125 */;
 import hasStream from "hasStream" /* 4667 */;
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4668 */;
 import sanitizeGuildTextChannelNameDefault from "sanitizeGuildTextChannelName" /* 4676 */;
-import createChannelRecord from "createChannelRecord" /* 1391 */;
-import closure_7 from "ensureGuildLoaded" /* 1387 */;
-import closure_8 from "comparator" /* 1982 */;
-import closure_9 from "getUncachedChannelPermissions" /* 4121 */;
-import closure_10 from "handleConnectionOpen" /* 1981 */;
+import createChannelRecord from "createChannelRecord" /* 1390 */;
+import closure_7 from "ensureGuildLoaded" /* 1386 */;
+import closure_8 from "comparator" /* 1981 */;
+import closure_9 from "getUncachedChannelPermissions" /* 4120 */;
+import closure_10 from "handleConnectionOpen" /* 1980 */;
 import closure_11 from "getVoiceStatesForGuild" /* 4555 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 
 function allowChannelAccess(id, channelType, MEMBER) {
   const NONE = applyOverwritesAll.NONE;
@@ -27,7 +27,7 @@ function allowChannelAccess(id, channelType, MEMBER) {
   }
   let addResult = NONE;
   if (tmp3) {
-    let tmpResult = tmp(506);
+    let tmpResult = tmp(503);
     addResult = tmpResult.add(NONE, constants.VIEW_CHANNEL);
   }
   let tmp7 = channelType === closure_21;
@@ -43,10 +43,10 @@ function allowChannelAccess(id, channelType, MEMBER) {
   }
   let addResult2 = addResult;
   if (tmp7) {
-    tmpResult = tmp(506);
+    tmpResult = tmp(503);
     const addResult1 = tmpResult.add(addResult, constants.VIEW_CHANNEL);
-    addResult2 = tmp(506).add(addResult1, constants.CONNECT);
-    const tmpResult1 = tmp(506);
+    addResult2 = tmp(503).add(addResult1, constants.CONNECT);
+    const tmpResult1 = tmp(503);
   }
   return { id, type: MEMBER, deny: applyOverwritesAll.NONE, allow: addResult2 };
 }
@@ -89,7 +89,7 @@ export const permissionOverwritesForRoles = function permissionOverwritesForRole
     }
     let addResult = NONE;
     if (tmp6) {
-      let tmp4Result = tmp4(506);
+      let tmp4Result = tmp4(503);
       addResult = tmp4Result.add(NONE, constants.VIEW_CHANNEL);
     }
     let tmp11 = channelType === closure_21;
@@ -98,14 +98,14 @@ export const permissionOverwritesForRoles = function permissionOverwritesForRole
     }
     let addResult2 = addResult;
     if (tmp11) {
-      tmp4Result = tmp4(506);
+      tmp4Result = tmp4(503);
       const addResult1 = tmp4Result.add(addResult, constants.VIEW_CHANNEL);
-      addResult2 = tmp4(506).add(addResult1, constants.CONNECT);
-      const tmp4Result1 = tmp4(506);
+      addResult2 = tmp4(503).add(addResult1, constants.CONNECT);
+      const tmp4Result1 = tmp4(503);
     }
     const obj = { id: null, type: null, allow: null, deny: null };
     obj[0] = guildId;
-    obj[1] = _require(1955).PermissionOverwriteType.ROLE;
+    obj[1] = _require(1954).PermissionOverwriteType.ROLE;
     obj[2] = applyOverwritesAll.NONE;
     obj[3] = addResult2;
     items.push(obj);
@@ -286,37 +286,62 @@ export const isAnyVoiceStateStage = function isAnyVoiceStateStage(channels, stat
 export const channelTypeString = function channelTypeString(channel) {
   const type = channel.type;
   if (ChannelTypes.DM === type) {
-    const intl10 = getSystemLocale.intl;
-    return intl10.string(getSystemLocale.t.jN2DfZ);
+    const intl13 = getSystemLocale.intl;
+    return intl13.string(getSystemLocale.t.jN2DfZ);
   } else if (tmp.GROUP_DM === type) {
-    const intl9 = getSystemLocale.intl;
-    return intl9.string(getSystemLocale.t["e5y+gm"]);
+    const intl12 = getSystemLocale.intl;
+    return intl12.string(getSystemLocale.t["e5y+gm"]);
   } else if (tmp.GUILD_TEXT === type) {
-    const intl8 = getSystemLocale.intl;
-    return intl8.string(getSystemLocale.t.Pnajj0);
+    const intl11 = getSystemLocale.intl;
+    return intl11.string(getSystemLocale.t.Pnajj0);
   } else if (tmp.GUILD_FORUM === type) {
-    const intl7 = getSystemLocale.intl;
-    return intl7.string(getSystemLocale.t.GbryDd);
+    const intl10 = getSystemLocale.intl;
+    return intl10.string(getSystemLocale.t.GbryDd);
   } else if (tmp.GUILD_MEDIA === type) {
-    const intl6 = getSystemLocale.intl;
-    return intl6.string(getSystemLocale.t.seKITE);
+    const intl9 = getSystemLocale.intl;
+    return intl9.string(getSystemLocale.t.seKITE);
   } else if (tmp.GUILD_VOICE === type) {
-    const intl5 = getSystemLocale.intl;
-    return intl5.string(getSystemLocale.t.BVZqJl);
+    const intl8 = getSystemLocale.intl;
+    return intl8.string(getSystemLocale.t.BVZqJl);
   } else if (tmp.GUILD_STAGE_VOICE === type) {
-    const intl4 = getSystemLocale.intl;
-    return intl4.string(getSystemLocale.t.EErMzA);
+    const intl7 = getSystemLocale.intl;
+    return intl7.string(getSystemLocale.t.EErMzA);
   } else if (tmp.GUILD_ANNOUNCEMENT === type) {
-    const intl3 = getSystemLocale.intl;
-    return intl3.string(getSystemLocale.t.l1dkSD);
+    const intl6 = getSystemLocale.intl;
+    return intl6.string(getSystemLocale.t.l1dkSD);
   } else if (tmp.GUILD_STORE === type) {
-    const intl2 = getSystemLocale.intl;
-    return intl2.string(getSystemLocale.t["P1/Erq"]);
+    const intl5 = getSystemLocale.intl;
+    return intl5.string(getSystemLocale.t["P1/Erq"]);
   } else if (tmp.GUILD_CATEGORY === type) {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.vHCZwr);
+    const intl4 = getSystemLocale.intl;
+    return intl4.string(getSystemLocale.t.vHCZwr);
+  } else if (tmp.PRIVATE_THREAD === type) {
+    const intl3 = getSystemLocale.intl;
+    return intl3.string(getSystemLocale.t.F1zyvU);
   } else {
-    return null;
+    if (tmp.ANNOUNCEMENT_THREAD !== type) {
+      if (tmp.PUBLIC_THREAD !== type) {
+        if (tmp.MEDIA_THREAD !== type) {
+          if (tmp.GUILD_APP === type) {
+            const intl = getSystemLocale.intl;
+            return intl.string(getSystemLocale.t.ZkcrC2);
+          } else {
+            if (tmp.GUILD_DIRECTORY !== type) {
+              if (tmp.LOBBY !== type) {
+                if (tmp.DM_SDK !== type) {
+                  if (tmp.GUILD_SPACE !== type) {
+                    const UNKNOWN = tmp.UNKNOWN;
+                  }
+                }
+              }
+            }
+            return null;
+          }
+        }
+      }
+    }
+    const intl2 = getSystemLocale.intl;
+    return intl2.string(getSystemLocale.t["7Xm5QI"]);
   }
 };
 export const getPrivateChannelUserTagsString = function getPrivateChannelUserTagsString(recipients, closure_1_7) {
@@ -375,60 +400,70 @@ export const getMentionIconType = function getMentionIconType(channel) {
     const isNSFWResult = channel.isNSFW();
     const isSpoilerChannelResult = channel.isSpoilerChannel();
     if (channel.type === ChannelTypes.GUILD_VOICE) {
-      let str11 = "voice-locked";
+      let str13 = "voice-locked";
       if (closure_9.can(constants.CONNECT, channel)) {
-        let str12 = "voice-nsfw";
+        let str14 = "voice-nsfw";
         if (!isNSFWResult) {
-          let str13 = "voice";
+          let str15 = "voice";
           if (isSpoilerChannelResult) {
-            str13 = "voice-spoiler";
+            str15 = "voice-spoiler";
           }
-          str12 = str13;
+          str14 = str15;
         }
-        str11 = str12;
+        str13 = str14;
       }
-      let tmp2 = str11;
+      let tmp2 = str13;
     } else if (channel.type === tmp11.GUILD_STAGE_VOICE) {
-      let str10 = "stage-locked";
+      let str12 = "stage-locked";
       if (closure_9.can(constants.CONNECT, channel)) {
-        str10 = "stage";
+        str12 = "stage";
       }
-      tmp2 = str10;
+      tmp2 = str12;
     } else if (set2.has(channel.type)) {
-      let str9 = "thread";
+      let str11 = "thread";
       if (channel.isForumPost()) {
-        str9 = "post";
+        str11 = "post";
       }
-      tmp2 = str9;
+      tmp2 = str11;
     } else if (channel.type === tmp11.GUILD_FORUM) {
       if (tmp10) {
-        let str8 = "media";
+        let str10 = "media";
         if (isNSFWResult) {
-          str8 = "media-nsfw";
+          str10 = "media-nsfw";
         }
-        let str6 = str8;
+        let str8 = str10;
       } else {
-        str6 = "forum-nsfw";
+        str8 = "forum-nsfw";
         if (!isNSFWResult) {
-          let str7 = "forum";
+          let str9 = "forum";
           if (isSpoilerChannelResult) {
-            str7 = "forum-spoiler";
+            str9 = "forum-spoiler";
           }
-          str6 = str7;
+          str8 = str9;
         }
       }
     } else if (channel.type === tmp11.GUILD_MEDIA) {
-      let str5 = "media";
+      let str7 = "media";
       if (isNSFWResult) {
-        str5 = "media-nsfw";
+        str7 = "media-nsfw";
+      }
+      tmp2 = str7;
+    } else if (channel.type === tmp11.GUILD_ANNOUNCEMENT) {
+      let str5 = "announcement-nsfw";
+      if (!isNSFWResult) {
+        let str6 = "announcement";
+        if (isSpoilerChannelResult) {
+          str6 = "announcement-spoiler";
+        }
+        str5 = str6;
       }
       tmp2 = str5;
-    } else if (channel.type === tmp11.GUILD_ANNOUNCEMENT) {
-      let str3 = "announcement-nsfw";
+    } else if (channel.type === tmp11.GUILD_APP) {
+      let str3 = "app-nsfw";
       if (!isNSFWResult) {
-        let str4 = "announcement";
+        let str4 = "app";
         if (isSpoilerChannelResult) {
-          str4 = "announcement-spoiler";
+          str4 = "app-spoiler";
         }
         str3 = str4;
       }
@@ -527,12 +562,14 @@ export const getChannelAnalyticsPage = function getChannelAnalyticsPage(type) {
       if (tmp.GUILD_TEXT !== type) {
         if (tmp.GUILD_FORUM !== type) {
           if (tmp.GUILD_MEDIA !== type) {
-            if (tmp.GROUP_DM !== type) {
-              if (tmp.DM !== type) {
-                return null;
+            if (tmp.GUILD_APP !== type) {
+              if (tmp.GROUP_DM !== type) {
+                if (tmp.DM !== type) {
+                  return null;
+                }
               }
+              return constants3.DM_CHANNEL;
             }
-            return constants3.DM_CHANNEL;
           }
         }
       }

@@ -1,12 +1,12 @@
-// === Module 14791: ? ===
+// === Module 15017: ? ===
 
-// Module 14791
+// Module 15017
 import Text from "Text" /* 4474 */;
-import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 5390 */;
-import useQuests from "useQuests" /* 11083 */;
-import _getQuestsInstructionsToWinReward from "_getQuestsInstructionsToWinReward" /* 11342 */;
-import getQuestDockMenuAdCreative from "getQuestDockMenuAdCreative" /* 14703 */;
-import COMPLETION_GLOW_SHADOW_RADIUSDefault from "COMPLETION_GLOW_SHADOW_RADIUS" /* 14732 */;
+import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 5398 */;
+import useQuests from "useQuests" /* 11303 */;
+import _getQuestsInstructionsToWinReward from "_getQuestsInstructionsToWinReward" /* 11565 */;
+import getCreativeAnalyticsParams from "getCreativeAnalyticsParams" /* 14929 */;
+import COMPLETION_GLOW_SHADOW_RADIUSDefault from "COMPLETION_GLOW_SHADOW_RADIUS" /* 14958 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -17,19 +17,19 @@ require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ wrapper: { alignItems: "center", display: "flex", flexDirection: "row", flexGrow: 1, flexShrink: 1, gap: 8, justifyContent: "center", padding: 8 }, progressIndicatorWrapper: { flexGrow: 0, flexShrink: 0 }, copy: { flexGrow: 1, flexShrink: 1 } });
 const memoResult = importAllResult.memo(function QuestDockEnrolledHeader() {
-  let obj = getQuestDockMenuAdCreative;
-  const questCreative = obj.useQuestCreative();
+  let obj = getCreativeAnalyticsParams;
+  const questDockQuest = obj.useQuestDockQuest();
   const tmp2 = callback4();
   obj1 = useQuests;
-  const questTaskDetails = obj1.useQuestTaskDetails(questCreative);
+  const questTaskDetails = obj1.useQuestTaskDetails(questDockQuest);
   let obj2 = useQuests;
   let obj3 = _getQuestsInstructionsToWinReward;
-  const questBarTitle = obj3.useQuestBarTitle(questCreative);
-  obj = { quest: questCreative, isExpanded: false, activeScreen: callback(obj2.useTaskPlatformScreen(questCreative, questTaskDetails), 1)[0], sourceQuestContent: QuestsVisibleMessagesChangedSource.QuestContent.QUEST_BAR_MOBILE };
+  const questBarTitle = obj3.useQuestBarTitle(questDockQuest);
+  obj = { quest: questDockQuest, isExpanded: false, activeScreen: callback(obj2.useTaskPlatformScreen(questDockQuest, questTaskDetails), 1)[0], sourceQuestContent: QuestsVisibleMessagesChangedSource.QuestContent.QUEST_BAR_MOBILE };
   obj = { style: tmp2.wrapper, children: null };
   obj1 = { style: tmp2.progressIndicatorWrapper, children: null };
   const questBarSubtitle = _getQuestsInstructionsToWinReward.useQuestBarSubtitle(obj);
-  obj2 = { quest: questCreative, size: "x-sm", progress: questTaskDetails.percentComplete, loading: false, hasConfetti: true };
+  obj2 = { quest: questDockQuest, size: "x-sm", progress: questTaskDetails.percentComplete, loading: false, hasConfetti: true };
   obj1[1] = callback2(COMPLETION_GLOW_SHADOW_RADIUSDefault, obj2);
   const items = [callback2(View, obj1), ];
   obj3 = { style: tmp2.copy, children: null };

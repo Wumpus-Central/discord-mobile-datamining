@@ -1,13 +1,13 @@
-// === Module 16651: useSoundButtonStyleConfig ===
+// === Module 16886: useSoundButtonStyleConfig ===
 
-// Module 16651 (useSoundButtonStyleConfig)
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
+// Module 16886 (useSoundButtonStyleConfig)
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1492 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_6 from "handleThemeChange" /* 1302 */;
-import SOUND_BUTTON_HEIGHT from "SOUND_BUTTON_HEIGHT" /* 16643 */;
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5623 */;
+import closure_6 from "handleThemeChange" /* 1301 */;
+import SOUND_BUTTON_HEIGHT from "SOUND_BUTTON_HEIGHT" /* 16878 */;
+import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5631 */;
 
 const require = arg1;
 ({ SOUNDS_PER_ROW: error, SOUND_ROW_PADDING: closure_8 } = SOUND_BUTTON_HEIGHT);
@@ -19,10 +19,10 @@ export const useSoundButtonStyleConfig = function useSoundButtonStyleConfig() {
 export const useMaybeFetchSoundboardSounds = function useMaybeFetchSoundboardSounds(shouldFetch) {
   shouldFetch = shouldFetch.shouldFetch;
   const items = [closure_5];
-  const stateFromStores = shouldFetch(589).useStateFromStores(items, () => saturation.saturation);
-  let obj = shouldFetch(589);
+  const stateFromStores = shouldFetch(586).useStateFromStores(items, () => saturation.saturation);
+  let obj = shouldFetch(586);
   const items1 = [closure_6];
-  const items2 = [stateFromStores, shouldFetch(589).useStateFromStores(items1, () => shouldFetch(table[8]).isThemeDark(theme.theme)), shouldFetch];
+  const items2 = [stateFromStores, shouldFetch(586).useStateFromStores(items1, () => shouldFetch(table[8]).isThemeDark(theme.theme)), shouldFetch];
   const effect = React.useEffect(() => {
     function _fetchAndHydrateColors() {
       const self = this;

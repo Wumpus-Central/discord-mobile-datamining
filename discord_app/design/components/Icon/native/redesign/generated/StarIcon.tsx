@@ -1,10 +1,10 @@
-// === Module 9181: StarIcon ===
+// === Module 9195: StarIcon ===
 
-// Module 9181 (StarIcon)
+// Module 9195 (StarIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 9182 */;
+import registerAsset from "registerAsset" /* 9196 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,11 +1,11 @@
-// === Module 13406: initialize ===
+// === Module 13629: initialize ===
 
-// Module 13406 (initialize)
+// Module 13629 (initialize)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
+import initializeDefault from "initialize" /* 586 */;
+import setDefault from "set" /* 684 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import closure_2 from "fetchFingerprint" /* 1215 */;
 import closure_3 from "markAllUserIdListsStale" /* 4130 */;
 
 let closure_4 = 180 * setDefault.Millis.DAY;

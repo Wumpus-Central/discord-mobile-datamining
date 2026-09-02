@@ -1,10 +1,10 @@
-// === Module 17409: _fetchBasicGuild ===
+// === Module 17645: _fetchBasicGuild ===
 
-// Module 17409 (_fetchBasicGuild)
+// Module 17645 (_fetchBasicGuild)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createGuildRecordFromRust" /* 1909 */;
-import closure_5 from "getGuild" /* 7864 */;
-import { Endpoints } from "ME" /* 676 */;
+import closure_4 from "createGuildRecordFromRust" /* 1908 */;
+import closure_5 from "getGuild" /* 7873 */;
+import { Endpoints } from "ME" /* 673 */;
 import set from "set" /* 2 */;
 
 const require = arg1;
@@ -70,7 +70,7 @@ function _fetchBasicGuild() {
           } else if (1 !== tmp8) {
             if (2 === tmp8) {
               guild = 1;
-              obj3 = body(709);
+              obj3 = body(706);
               const obj4 = { type: "BASIC_GUILD_FETCH_FAILURE", guildId: null };
               obj4[1] = callback;
               obj3.dispatch(obj4);
@@ -86,7 +86,7 @@ function _fetchBasicGuild() {
               return obj5;
             } else {
               body = body.body;
-              obj = body(709);
+              obj = body(706);
               const obj6 = { type: "BASIC_GUILD_FETCH_SUCCESS", guildId: null, guildInfo: null };
               obj6[1] = callback;
               obj6[2] = body;

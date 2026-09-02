@@ -1,22 +1,22 @@
-// === Module 15534: getInitialAuthRouteStack ===
+// === Module 15765: getInitialAuthRouteStack ===
 
-// Module 15534 (getInitialAuthRouteStack)
-import ThemesDefault from "Themes" /* 712 */;
-import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1642 */;
-import createStackNavigator from "createStackNavigator" /* 6010 */;
-import useWideAuthViewDefault from "useWideAuthView" /* 7717 */;
-import BackgroundImageDefault from "BackgroundImage" /* 7748 */;
-import setRegistrationHandoff from "setRegistrationHandoff" /* 15535 */;
-import useIsHCaptchaModalOpenTracking from "useIsHCaptchaModalOpenTracking" /* 15586 */;
-import registerAsset from "registerAsset" /* 15587 */;
-import usePortraitOrientationOnlyDefault from "usePortraitOrientationOnly" /* 15592 */;
+// Module 15765 (getInitialAuthRouteStack)
+import ThemesDefault from "Themes" /* 709 */;
+import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1641 */;
+import createStackNavigator from "createStackNavigator" /* 6018 */;
+import useWideAuthViewDefault from "useWideAuthView" /* 7726 */;
+import BackgroundImageDefault from "BackgroundImage" /* 7757 */;
+import setRegistrationHandoff from "setRegistrationHandoff" /* 15766 */;
+import useIsHCaptchaModalOpenTracking from "useIsHCaptchaModalOpenTracking" /* 15817 */;
+import registerAsset from "registerAsset" /* 15818 */;
+import usePortraitOrientationOnlyDefault from "usePortraitOrientationOnly" /* 15823 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "initialize" /* 11982 */;
-import { AuthStates } from "ME" /* 676 */;
+import closure_7 from "initialize" /* 12206 */;
+import { AuthStates } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
-import headerTitle from "headerTitle" /* 15536 */;
+import headerTitle from "headerTitle" /* 15767 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
@@ -117,28 +117,28 @@ function NavigatorWithCaptchaHook() {
     obj6[9] = tmp10[0] ? tmp6.wideHeader : tmp6.wideHeaderFlat;
     let num2 = 20;
     if (tmpResult.isAndroid()) {
-      num2 = tmp4(712).space.PX_12;
+      num2 = tmp4(709).space.PX_12;
     }
     const obj7 = { paddingLeft: null, paddingTop: null, paddingBottom: null };
     obj7[0] = num2;
-    obj7[1] = tmp4(712).space.PX_24;
-    obj7[2] = tmp4(712).space.PX_16;
+    obj7[1] = tmp4(709).space.PX_24;
+    obj7[2] = tmp4(709).space.PX_16;
     obj6[10] = obj7;
-    obj5[1] = tmp17(tmp(6008).Navigator, obj6);
+    obj5[1] = tmp17(tmp(6016).Navigator, obj6);
     obj2[1] = tmp17(closure_6, obj5);
     obj[1] = tmp17(closure_6, obj2);
-    let tmp17Result = tmp17(tmp(7746).WideAuthScrollContext.Provider, obj);
-    tmpResult = tmp(501);
+    let tmp17Result = tmp17(tmp(7755).WideAuthScrollContext.Provider, obj);
+    tmpResult = tmp(1235);
   } else {
     const obj8 = { screens: null, viewStyle: null, containerStyle: null, headerBackTitle: null, initialRouteStack: null, onWillFocus: null, headerStyle: null };
     obj8[0] = headerTitle;
     ({ transparent: obj4[1], transparent: obj4[2] } = tmp6);
-    const intl = tmp(1236).intl;
-    obj8[3] = intl.string(tmp(1236).t["13/7kX"]);
+    const intl = tmp(1233).intl;
+    obj8[3] = intl.string(tmp(1233).t["13/7kX"]);
     obj8[4] = first;
     obj8[5] = closure_5.dismiss;
     obj8[6] = { borderBottomWidth: 0 };
-    tmp17Result = tmp17(tmp(6008).Navigator, obj8);
+    tmp17Result = tmp17(tmp(6016).Navigator, obj8);
   }
   children[1] = tmp17Result;
   return tmp15(tmp16, { children });
@@ -218,10 +218,10 @@ const context = importAllResult.createContext(() => {
 let obj2 = { borderBottomWidth: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 const memoResult = importAllResult.memo(function Auth() {
   const effect = importAllResult.useEffect(() => {
-    callback2(15588).initialize();
+    callback2(15819).initialize();
     return () => callback(table[23]).terminate();
   }, []);
-  const layoutEffect = importAllResult.useLayoutEffect(() => callback(7220).trackAppUIViewed(), []);
+  const layoutEffect = importAllResult.useLayoutEffect(() => callback(7229).trackAppUIViewed(), []);
   usePortraitOrientationOnlyDefault();
   closure_0 = importAllResult.useRef(undefined);
   return callback2(context.Provider, { value: importAllResult.useCallback(() => callback(closure_1_2[9]).getTrackRegTransition(callback), [])(), children: callback2(NavigatorWithCaptchaHook, {}) });

@@ -1,16 +1,16 @@
-// === Module 1346: reset ===
+// === Module 1345: reset ===
 
-// Module 1346 (reset)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import create from "create" /* 1306 */;
-import getThemeForColor from "getThemeForColor" /* 1347 */;
-import isPerModeThemingActive from "isPerModeThemingActive" /* 1366 */;
-import closure_6 from "initialize" /* 1303 */;
-import closure_7 from "handleThemeChange" /* 1302 */;
-import closure_8 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
-import closure_9 from "handleConnectionClosedOrResumed" /* 1340 */;
-import { UserSettingsTypes } from "MAX_FAVORITES" /* 685 */;
+// Module 1345 (reset)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import create from "create" /* 1305 */;
+import getThemeForColor from "getThemeForColor" /* 1346 */;
+import isPerModeThemingActive from "isPerModeThemingActive" /* 1365 */;
+import closure_6 from "initialize" /* 1302 */;
+import closure_7 from "handleThemeChange" /* 1301 */;
+import closure_8 from "CHANNEL_SIDEBAR_WIDTH" /* 1303 */;
+import closure_9 from "handleConnectionClosedOrResumed" /* 1339 */;
+import { UserSettingsTypes } from "MAX_FAVORITES" /* 682 */;
 
 require = arg1;
 function reset() {
@@ -101,7 +101,7 @@ prototype["getState"] = function getState() {
     obj[0] = closure_3;
     obj[1] = closure_4;
   } else {
-    obj = { theme: "children", customTheme: "c" };
+    obj = { theme: "disabled", customTheme: "Date" };
   }
   return obj;
 };
@@ -190,8 +190,8 @@ prototype["getCustomThemeDisplaySettings"] = function getCustomThemeDisplaySetti
       if (null == prop) {
         let theme = obj.theme;
       } else {
-        theme = tmp10(1347).getCustomThemeBaseTheme(obj.theme);
-        const tmp10Result = tmp10(1347);
+        theme = tmp10(1346).getCustomThemeBaseTheme(obj.theme);
+        const tmp10Result = tmp10(1346);
       }
       obj = { baseTheme: null, customTheme: null };
       obj[0] = theme;

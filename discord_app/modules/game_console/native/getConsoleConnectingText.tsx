@@ -1,9 +1,9 @@
-// === Module 16756: getConsoleConnectingText ===
+// === Module 16991: getConsoleConnectingText ===
 
-// Module 16756 (getConsoleConnectingText)
+// Module 16991 (getConsoleConnectingText)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import ME from "ME" /* 673 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 
 const PlatformTypes = ME.PlatformTypes;
 const result = set.fileFinishedImporting("modules/game_console/native/getConsoleConnectingText.tsx");

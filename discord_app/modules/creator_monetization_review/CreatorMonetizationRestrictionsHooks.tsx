@@ -1,12 +1,12 @@
-// === Module 6100: useShouldHideGuildPurchaseEntryPoints ===
+// === Module 6108: useShouldHideGuildPurchaseEntryPoints ===
 
-// Module 6100 (useShouldHideGuildPurchaseEntryPoints)
-import useUnmountAbortSignalDefault from "useUnmountAbortSignal" /* 6101 */;
+// Module 6108 (useShouldHideGuildPurchaseEntryPoints)
+import useUnmountAbortSignalDefault from "useUnmountAbortSignal" /* 6109 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "makeGroupListingIndexSubscriptionListingTag" /* 4115 */;
-import { FetchState } from "makeGroupListingIndexSubscriptionListingTag" /* 4115 */;
-import closure_7 from "createGuildRecordFromRust" /* 1909 */;
-import ME from "ME" /* 676 */;
+import closure_5 from "makeGroupListingIndexSubscriptionListingTag" /* 4114 */;
+import { FetchState } from "makeGroupListingIndexSubscriptionListingTag" /* 4114 */;
+import closure_7 from "createGuildRecordFromRust" /* 1908 */;
+import ME from "ME" /* 673 */;
 
 const require = arg1;
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_8, GuildFeatures: c9 } = ME);
@@ -14,7 +14,7 @@ let result = require("set").fileFinishedImporting("modules/creator_monetization_
 
 export const useShouldHideGuildPurchaseEntryPoints = function useShouldHideGuildPurchaseEntryPoints(id2) {
   let has = id2;
-  let obj = has(589);
+  let obj = has(586);
   const items = [closure_7];
   const items1 = [id2];
   has = obj.useStateFromStores(items, () => closure_1_7.getGuild(has), items1);
@@ -43,7 +43,7 @@ export const useShouldHideGuildPurchaseEntryPoints = function useShouldHideGuild
   if (has != null) {
     id = has.id;
   }
-  let tmpResult = tmp(589);
+  let tmpResult = tmp(586);
   const items3 = [closure_5];
   const stateFromStoresArray = tmpResult.useStateFromStoresArray(items3, () => {
     let tmp2 = id;
@@ -56,7 +56,7 @@ export const useShouldHideGuildPurchaseEntryPoints = function useShouldHideGuild
     }
     return monetizationRestrictions;
   });
-  tmpResult = tmp(589);
+  tmpResult = tmp(586);
   const items4 = [closure_5];
   const stateFromStores = tmpResult.useStateFromStores(items4, () => {
     let tmp2 = id;
@@ -103,13 +103,13 @@ export const useShouldHideGuildPurchaseEntryPoints = function useShouldHideGuild
     }
     let result = flag;
   } else {
-    result = tmp(4114).isRestrictedFromShowingGuildPurchaseEntryPoints(stateFromStoresArray);
-    const tmpResult1 = tmp(4114);
+    result = tmp(4113).isRestrictedFromShowingGuildPurchaseEntryPoints(stateFromStoresArray);
+    const tmpResult1 = tmp(4113);
   }
 };
 export const useShouldRestrictUpdatingCreatorMonetizationSettings = function useShouldRestrictUpdatingCreatorMonetizationSettings(guildId) {
   let stateFromStores = guildId;
-  let obj = stateFromStores(589);
+  let obj = stateFromStores(586);
   const items = [closure_7];
   const items1 = [guildId];
   stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getGuild(stateFromStores), items1);
@@ -138,7 +138,7 @@ export const useShouldRestrictUpdatingCreatorMonetizationSettings = function use
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  let tmpResult = tmp(589);
+  let tmpResult = tmp(586);
   const items3 = [closure_5];
   const stateFromStoresArray = tmpResult.useStateFromStoresArray(items3, () => {
     let tmp2 = id;
@@ -151,7 +151,7 @@ export const useShouldRestrictUpdatingCreatorMonetizationSettings = function use
     }
     return monetizationRestrictions;
   });
-  tmpResult = tmp(589);
+  tmpResult = tmp(586);
   const items4 = [closure_5];
   const stateFromStores1 = tmpResult.useStateFromStores(items4, () => {
     let tmp2 = id;
@@ -171,8 +171,8 @@ export const useShouldRestrictUpdatingCreatorMonetizationSettings = function use
     }
     let result = flag;
   } else {
-    result = tmp(4114).isRestrictedFromUpdatingCreatorMonetizationSettings(stateFromStoresArray);
-    const tmpResult1 = tmp(4114);
+    result = tmp(4113).isRestrictedFromUpdatingCreatorMonetizationSettings(stateFromStoresArray);
+    const tmpResult1 = tmp(4113);
   }
   if (stateFromStores != null) {
     const features2 = stateFromStores.features;
@@ -187,7 +187,7 @@ export const useShouldRestrictUpdatingCreatorMonetizationSettings = function use
 };
 export const useIsMonetizationReapplicationDisabled = function useIsMonetizationReapplicationDisabled(id2) {
   let stateFromStores = id2;
-  let obj = stateFromStores(589);
+  let obj = stateFromStores(586);
   const items = [closure_7];
   const items1 = [id2];
   stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getGuild(stateFromStores), items1);
@@ -216,7 +216,7 @@ export const useIsMonetizationReapplicationDisabled = function useIsMonetization
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  let tmpResult = tmp(589);
+  let tmpResult = tmp(586);
   const items3 = [closure_5];
   const stateFromStoresArray = tmpResult.useStateFromStoresArray(items3, () => {
     let tmp2 = id;
@@ -229,7 +229,7 @@ export const useIsMonetizationReapplicationDisabled = function useIsMonetization
     }
     return monetizationRestrictions;
   });
-  tmpResult = tmp(589);
+  tmpResult = tmp(586);
   const items4 = [closure_5];
   obj = { isMonetizationReapplicationDisabled: null, restrictionsLoading: null };
   const stateFromStores1 = tmpResult.useStateFromStores(items4, () => {
@@ -239,7 +239,7 @@ export const useIsMonetizationReapplicationDisabled = function useIsMonetization
     }
     return closure_1_5.getMonetizationRestrictionsFetchState(tmp2) === closure_1_6.FETCHING;
   });
-  obj[0] = stateFromStores(4114).isRestrictedFromMonetizationReapplication(stateFromStoresArray);
+  obj[0] = stateFromStores(4113).isRestrictedFromMonetizationReapplication(stateFromStoresArray);
   obj[1] = stateFromStores1;
   return obj;
 };

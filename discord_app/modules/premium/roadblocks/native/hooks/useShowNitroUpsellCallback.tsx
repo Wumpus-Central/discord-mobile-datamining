@@ -1,6 +1,6 @@
-// === Module 9153: useShowNitroUpsellCallback ===
+// === Module 9167: useShowNitroUpsellCallback ===
 
-// Module 9153 (useShowNitroUpsellCallback)
+// Module 9167 (useShowNitroUpsellCallback)
 import closure_2 from "noop" /* 19 */;
 
 const require = arg1;

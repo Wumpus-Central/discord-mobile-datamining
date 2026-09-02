@@ -1,6 +1,6 @@
-// === Module 15713: VoiceUserNameItem ===
+// === Module 15944: VoiceUserNameItem ===
 
-// Module 15713 (VoiceUserNameItem)
+// Module 15944 (VoiceUserNameItem)
 import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 4747 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -22,7 +22,7 @@ export default function VoiceUserNameItem(arg0) {
   ({ guildId, color, variant } = arg0);
   const tmp = callback3();
   let obj = { userId: user.id, guildId };
-  obj1 = _require(8926);
+  obj1 = _require(8940);
   const displayNameStylesFont = obj1.useDisplayNameStylesFont({ displayNameStyles: useDisplayNameStylesDefault(obj) });
   const tmp4 = useDisplayNameStylesDefault(obj);
   [tmp8, c0] = callback(React.useState(0), 2);
@@ -69,8 +69,8 @@ export default function VoiceUserNameItem(arg0) {
   const items1 = [nick, ];
   if (isGuest) {
     const obj2 = { variant: "text-sm/normal", lineClamp: 1, color: "status-positive", children: null };
-    const intl = tmp5(1236).intl;
-    const items2 = ["\u00A0", intl.string(tmp5(1236).t["pFO/Ph"])];
+    const intl = tmp5(1233).intl;
+    const items2 = ["\u00A0", intl.string(tmp5(1233).t["pFO/Ph"])];
     obj2[3] = items2;
     isGuest = tmp18(tmp5(4474).Text, obj2);
   }
@@ -87,7 +87,7 @@ export default function VoiceUserNameItem(arg0) {
     obj3[1] = tmp.tag;
     const obj4 = { userId: null };
     obj4[0] = user.id;
-    obj3[2] = callback2(tmp2(15714), obj4);
+    obj3[2] = callback2(tmp2(15945), obj4);
     tmp12 = callback2(tmp19, obj3);
   }
   items3[1] = tmp12;

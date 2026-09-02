@@ -1,7 +1,7 @@
-// === Module 9867: useIsVoiceChannelGamesExperimentEnabled ===
+// === Module 9889: useIsVoiceChannelGamesExperimentEnabled ===
 
-// Module 9867 (useIsVoiceChannelGamesExperimentEnabled)
-import getUnitIdDefault from "getUnitId" /* 1469 */;
+// Module 9889 (useIsVoiceChannelGamesExperimentEnabled)
+import getUnitIdDefault from "getUnitId" /* 1468 */;
 
 const tmp2 = getUnitIdDefault({ kind: "user", name: "2026-08-mobile-voice-channel-games", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 let closure_0 = tmp2;

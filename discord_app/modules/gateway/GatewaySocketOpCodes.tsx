@@ -1,10 +1,10 @@
-// === Module 13290: presenceUpdate ===
+// === Module 13512: presenceUpdate ===
 
-// Module 13290 (presenceUpdate)
+// Module 13512 (presenceUpdate)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import Opcode from "Opcode" /* 13291 */;
+import Opcode from "Opcode" /* 13513 */;
 import closure_3 from "initialize" /* 4575 */;
-import { EventEmitter } from "EventEmitter" /* 652 */;
+import { EventEmitter } from "EventEmitter" /* 649 */;
 
 require = arg1;
 class GatewaySocketOpCodes extends EventEmitter {
@@ -112,7 +112,7 @@ prototype["updateGuildSubscriptions"] = function updateGuildSubscriptions(subscr
   if (_require > 0) {
     obj = { subscriptions: null };
     obj[0] = dependencyMap;
-    self.send(_require(13291).Opcode.GUILD_SUBSCRIPTIONS_BULK, obj);
+    self.send(_require(13513).Opcode.GUILD_SUBSCRIPTIONS_BULK, obj);
   }
 };
 prototype["callConnect"] = function callConnect(channel_id) {

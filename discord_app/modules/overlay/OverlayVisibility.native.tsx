@@ -1,6 +1,6 @@
-// === Module 13574: isOverlayCurrentlyVisibleAndUnlocked ===
+// === Module 13797: isOverlayCurrentlyVisibleAndUnlocked ===
 
-// Module 13574 (isOverlayCurrentlyVisibleAndUnlocked)
+// Module 13797 (isOverlayCurrentlyVisibleAndUnlocked)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/overlay/OverlayVisibility.native.tsx");

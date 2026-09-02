@@ -1,10 +1,10 @@
-// === Module 13451: OnGoingCallTimer ===
+// === Module 13674: OnGoingCallTimer ===
 
-// Module 13451 (OnGoingCallTimer)
+// Module 13674 (OnGoingCallTimer)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import noopAll from "noop" /* 19 */;
-import componentDidMountDefault from "componentDidMount" /* 13452 */;
-import closure_3 from "callConnect" /* 5222 */;
+import componentDidMountDefault from "componentDidMount" /* 13675 */;
+import closure_3 from "callConnect" /* 5230 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -15,7 +15,7 @@ export default function OnGoingCallTimer(style) {
   const channelId = style.channelId;
   const items = [closure_3];
   const items1 = [channelId];
-  const stateFromStores = channelId(589).useStateFromStores(items, () => {
+  const stateFromStores = channelId(586).useStateFromStores(items, () => {
     const call = closure_1_3.getCall(channelId);
     let messageId;
     if (call != null) {

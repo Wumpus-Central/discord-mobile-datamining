@@ -1,13 +1,13 @@
-// === Module 12895: updateParty ===
+// === Module 13117: updateParty ===
 
-// Module 12895 (updateParty)
+// Module 13117 (updateParty)
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import closure_2 from "fetchFingerprint" /* 1215 */;
 import closure_3 from "markAllUserIdListsStale" /* 4130 */;
-import closure_4 from "filterPlayingActivities" /* 5223 */;
-import ME from "ME" /* 676 */;
+import closure_4 from "filterPlayingActivities" /* 5231 */;
+import ME from "ME" /* 673 */;
 
 function updateParty(closure_6, id, activities, status) {
   const found = activities.find((party) => {

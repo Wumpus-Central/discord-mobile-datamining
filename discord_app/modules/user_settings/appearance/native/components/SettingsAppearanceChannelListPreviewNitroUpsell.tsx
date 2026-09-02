@@ -1,16 +1,16 @@
-// === Module 14897: SettingsAppearanceChannelListPreviewNitroUpsellComponent ===
+// === Module 15126: SettingsAppearanceChannelListPreviewNitroUpsellComponent ===
 
-// Module 14897 (SettingsAppearanceChannelListPreviewNitroUpsellComponent)
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
+// Module 15126 (SettingsAppearanceChannelListPreviewNitroUpsellComponent)
+import initialize from "initialize" /* 586 */;
+import ThemesDefault from "Themes" /* 709 */;
 import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4927 */;
 import SUBTLE_SPRING from "SUBTLE_SPRING" /* 4931 */;
 import LinearGradientDefault from "LinearGradient" /* 4940 */;
-import AnimatedRenderItemDefault from "AnimatedRenderItem" /* 8979 */;
+import AnimatedRenderItemDefault from "AnimatedRenderItem" /* 8993 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 import importDefaultResult from "module_4217" /* 4217 */;
@@ -36,7 +36,7 @@ function SettingsAppearanceChannelListPreviewNitroUpsellComponent(theme) {
   fn.__workletHash = 16911565077998;
   fn.__initData = closure_18;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  analyticsLocations = analyticsLocations(5953)(analyticsLocations(5973).CLIENT_THEMES_EDITOR).analyticsLocations;
+  analyticsLocations = analyticsLocations(5961)(analyticsLocations(5981).CLIENT_THEMES_EDITOR).analyticsLocations;
   const items = [analyticsLocations];
   obj = { style: tmp.nitroUpsell, children: null };
   const callback = importAllResult.useCallback(() => {
@@ -48,9 +48,9 @@ function SettingsAppearanceChannelListPreviewNitroUpsellComponent(theme) {
   }, items);
   const items1 = [callback(closure_12, { style: animatedStyle, importantForAccessibility: "no-hide-descendants", colors: closure_13 }), ];
   const obj2 = { text: null, icon: null, variant: "active", onPress: null, size: "md" };
-  const intl = theme(1236).intl;
-  obj2[0] = intl.string(theme(1236).t.pj0XBN);
-  obj2[1] = callback(theme(1297).NitroWheel, { style: tmp.nitroWheelIcon });
+  const intl = theme(1233).intl;
+  obj2[0] = intl.string(theme(1233).t.pj0XBN);
+  obj2[1] = callback(theme(1296).NitroWheel, { style: tmp.nitroWheelIcon });
   obj2[3] = callback;
   items1[1] = callback(theme(4928).Button, obj2);
   obj[1] = items1;

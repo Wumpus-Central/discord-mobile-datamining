@@ -1,6 +1,6 @@
-// === Module 7913: getNumSubscriptionsPurchasedFromSystemMessage ===
+// === Module 7922: getNumSubscriptionsPurchasedFromSystemMessage ===
 
-// Module 7913 (getNumSubscriptionsPurchasedFromSystemMessage)
+// Module 7922 (getNumSubscriptionsPurchasedFromSystemMessage)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/premium/getNumSubscriptionsPurchasedFromSystemMessage.tsx");

@@ -1,8 +1,8 @@
-// === Module 9233: getMutualGuildsLabel ===
+// === Module 9247: getMutualGuildsLabel ===
 
-// Module 9233 (getMutualGuildsLabel)
+// Module 9247 (getMutualGuildsLabel)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 
 const result = set.fileFinishedImporting("modules/user_profile/utils/getMutualGuildsLabel.tsx");
 

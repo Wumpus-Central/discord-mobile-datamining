@@ -1,19 +1,19 @@
-// === Module 15907: GuildRowWrapper ===
+// === Module 16138: GuildRowWrapper ===
 
-// Module 15907 (GuildRowWrapper)
+// Module 16138 (GuildRowWrapper)
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "storeThread" /* 4123 */;
-import { isThread } from "createChannelRecord" /* 1391 */;
-import closure_7 from "ensureGuildLoaded" /* 1387 */;
-import closure_8 from "comparator" /* 1982 */;
-import closure_9 from "updateGuildUnreadSentinel" /* 7381 */;
-import closure_10 from "createGuildRecordFromRust" /* 1909 */;
+import closure_5 from "storeThread" /* 4122 */;
+import { isThread } from "createChannelRecord" /* 1390 */;
+import closure_7 from "ensureGuildLoaded" /* 1386 */;
+import closure_8 from "comparator" /* 1981 */;
+import closure_9 from "updateGuildUnreadSentinel" /* 7390 */;
+import closure_10 from "createGuildRecordFromRust" /* 1908 */;
 import closure_11 from "generateOldThreadCutoff" /* 4493 */;
 import closure_12 from "markAllUserIdListsStale" /* 4130 */;
 import closure_13 from "updateUserGuildSettingsInternal" /* 4701 */;
-import closure_14 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import closure_14 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
 import { UnreadSetting } from "ReadStateTypes" /* 4702 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -158,7 +158,7 @@ function GuildRowWrapper(guild) {
     const tmp = unreadChannel.getMutableGuildStates()[guild.id];
     guild = tmp;
     if (null == tmp) {
-      return { mentionChannel: "disabled", mentionChannelName: "isArray", mentionChannelCount: null };
+      return { mentionChannel: "ip", mentionChannelName: "isArray", mentionChannelCount: true };
     } else {
       const keys = disableSubtitle(onActiveHookChange[25]).keys(tmp.mentionCounts);
       const found = keys.filter((id) => {
@@ -338,7 +338,7 @@ const result = require("set").fileFinishedImporting("modules/home_drawer/native/
 export default function HomeDrawerGuildRow(guildId) {
   guildId = guildId.guildId;
   ({ disableSubtitle, onActiveHookChange } = guildId);
-  obj = guildId(589);
+  obj = guildId(586);
   const items = [closure_10];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_10.getGuild(guildId));
   const MobileHomeDrawerExperiment = guildId(4338).MobileHomeDrawerExperiment;

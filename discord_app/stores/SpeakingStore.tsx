@@ -1,16 +1,16 @@
-// === Module 5363: anyoneHasFlagInContext ===
+// === Module 5371: anyoneHasFlagInContext ===
 
-// Module 5363 (anyoneHasFlagInContext)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import applyOverwritesAll from "applyOverwrites" /* 4126 */;
-import getUnitIdDefault from "getUnitId" /* 5364 */;
+// Module 5371 (anyoneHasFlagInContext)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import applyOverwritesAll from "applyOverwrites" /* 4125 */;
+import getUnitIdDefault from "getUnitId" /* 5372 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "ensureGuildLoaded" /* 1387 */;
+import closure_4 from "ensureGuildLoaded" /* 1386 */;
 import closure_5 from "_detectH265HardwareDecode" /* 4529 */;
 import closure_6 from "createRTCConnection" /* 4554 */;
-import closure_7 from "handleConnectionOpen" /* 1981 */;
-import { Permissions } from "ME" /* 676 */;
+import closure_7 from "handleConnectionOpen" /* 1980 */;
+import { Permissions } from "ME" /* 673 */;
 import DesktopSources from "DesktopSources" /* 4542 */;
 
 function anyoneHasFlagInContext(DEFAULT, VOICE, arg2) {

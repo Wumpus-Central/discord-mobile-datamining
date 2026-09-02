@@ -1,8 +1,8 @@
-// === Module 16599: DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG ===
+// === Module 16834: DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG ===
 
-// Module 16599 (DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG)
+// Module 16834 (DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG)
 import set from "set" /* 2 */;
-import ActivityPanelModes from "ActivityPanelModes" /* 9466 */;
+import ActivityPanelModes from "ActivityPanelModes" /* 9479 */;
 
 let obj = { top: null };
 obj = { disable: false, override: ActivityPanelModes.ACTIVITY_PANEL_PORTRAIT_HEADER_HEIGHT };

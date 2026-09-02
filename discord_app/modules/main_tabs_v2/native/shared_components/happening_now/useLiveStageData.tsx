@@ -1,9 +1,9 @@
-// === Module 15660: useLiveStageData ===
+// === Module 15891: useLiveStageData ===
 
-// Module 15660 (useLiveStageData)
+// Module 15891 (useLiveStageData)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "getActiveStageChannelIds" /* 5362 */;
-import closure_5 from "ensureGuildLoaded" /* 1387 */;
+import closure_4 from "getActiveStageChannelIds" /* 5370 */;
+import closure_5 from "ensureGuildLoaded" /* 1386 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/useLiveStageData.tsx");

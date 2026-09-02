@@ -1,7 +1,7 @@
-// === Module 12044: GuildPowerupsModal ===
+// === Module 12268: GuildPowerupsModal ===
 
-// Module 12044 (GuildPowerupsModal)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 12268 (GuildPowerupsModal)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import BoostedGuildTiers from "BoostedGuildTiers" /* 4365 */;

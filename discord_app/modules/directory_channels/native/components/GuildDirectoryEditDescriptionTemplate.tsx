@@ -1,12 +1,12 @@
-// === Module 11884: GuildDirectoryEditDescriptionTemplate ===
+// === Module 12107: GuildDirectoryEditDescriptionTemplate ===
 
-// Module 11884 (GuildDirectoryEditDescriptionTemplate)
+// Module 12107 (GuildDirectoryEditDescriptionTemplate)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "isFetching" /* 11879 */;
-import DirectoryEntryTypes from "DirectoryEntryTypes" /* 11872 */;
+import closure_8 from "isFetching" /* 12102 */;
+import DirectoryEntryTypes from "DirectoryEntryTypes" /* 12095 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

@@ -1,8 +1,8 @@
-// === Module 10229: MutedUntilText ===
+// === Module 10251: MutedUntilText ===
 
-// Module 10229 (MutedUntilText)
+// Module 10251 (MutedUntilText)
 import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -34,11 +34,11 @@ export default function MutedUntilText(arg0) {
       }
       obj = { style: null, variant: "text-sm/medium", color: "text-muted", children: null };
       obj[0] = tmp.formHintText;
-      const intl5 = tmp15(1236).intl;
+      const intl5 = tmp15(1233).intl;
       obj = { endTime: null, endTimeHook: null };
       const _Date = Date;
       const date = new Date(muteConfig.end_time);
-      obj[0] = date.toLocaleString(tmp15(1236).intl.currentLocale, { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" });
+      obj[0] = date.toLocaleString(tmp15(1233).intl.currentLocale, { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" });
       obj[1] = function endTimeHook(children) {
         return callback2(callback(table[4]).Text, { variant: "text-sm/medium", color: "control-brand-foreground", children }, "muted");
       };

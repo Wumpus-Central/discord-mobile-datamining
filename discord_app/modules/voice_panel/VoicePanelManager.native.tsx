@@ -1,7 +1,7 @@
-// === Module 17384: prototype ===
+// === Module 17620: prototype ===
 
-// Module 17384 (prototype)
-import initializeDefault from "initialize" /* 5486 */;
+// Module 17620 (prototype)
+import initializeDefault from "initialize" /* 5494 */;
 import closure_0 from "createRTCConnection" /* 4554 */;
 import closure_1 from "withEqualityFn" /* 4728 */;
 

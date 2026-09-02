@@ -1,8 +1,8 @@
-// === Module 9734: getDefaultGuildSettingsSection ===
+// === Module 9756: getDefaultGuildSettingsSection ===
 
-// Module 9734 (getDefaultGuildSettingsSection)
+// Module 9756 (getDefaultGuildSettingsSection)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 
 const GuildSettingsSections = ME.GuildSettingsSections;
 const result = set.fileFinishedImporting("modules/guild_settings/utils/getDefaultGuildSettingsSection.tsx");

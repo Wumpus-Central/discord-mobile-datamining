@@ -1,14 +1,14 @@
-// === Module 7841: setOptions ===
+// === Module 7850: setOptions ===
 
-// Module 7841 (setOptions)
+// Module 7850 (setOptions)
 import applyDefault from "apply" /* 12 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1471 */;
-import generateBlockedGroupRowData from "generateBlockedGroupRowData" /* 7844 */;
-import generateMessageRowData from "generateMessageRowData" /* 7846 */;
-import generateSeparatorRowData from "generateSeparatorRowData" /* 12914 */;
-import generateLoadingRowData from "generateLoadingRowData" /* 12915 */;
-import closure_3 from "handleThemeChange" /* 1302 */;
-import Changeset from "Changeset" /* 7842 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
+import generateBlockedGroupRowData from "generateBlockedGroupRowData" /* 7853 */;
+import generateMessageRowData from "generateMessageRowData" /* 7855 */;
+import generateSeparatorRowData from "generateSeparatorRowData" /* 13136 */;
+import generateLoadingRowData from "generateLoadingRowData" /* 13137 */;
+import closure_3 from "handleThemeChange" /* 1301 */;
+import Changeset from "Changeset" /* 7851 */;
 
 require = arg1;
 ({ RowType: c4, SeparatorType: c5, LoadingType: closure_6 } = Changeset);

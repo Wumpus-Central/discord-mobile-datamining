@@ -1,10 +1,10 @@
-// === Module 7872: createDisplayNameStylesMobile ===
+// === Module 7881: createDisplayNameStylesMobile ===
 
-// Module 7872 (createDisplayNameStylesMobile)
-import DisplayNameFont from "DisplayNameFont" /* 1941 */;
+// Module 7881 (createDisplayNameStylesMobile)
+import DisplayNameFont from "DisplayNameFont" /* 1940 */;
 import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_3 from "trackCommunicationDisabled" /* 1992 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "trackCommunicationDisabled" /* 1991 */;
+import closure_4 from "mergeGuildAvatar" /* 1921 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/display_name_styles/native/createDisplayNameStylesMobile.tsx");

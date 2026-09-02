@@ -1,17 +1,17 @@
-// === Module 15869: EmptyBody ===
+// === Module 16100: EmptyBody ===
 
-// Module 15869 (EmptyBody)
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 3179 */;
+// Module 16100 (EmptyBody)
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import messagesProxyDefault from "messagesProxy" /* 3178 */;
 import Text from "Text" /* 4474 */;
 import Stack from "Stack" /* 4926 */;
-import ChatIcon from "ChatIcon" /* 5020 */;
-import TextIcon from "TextIcon" /* 5029 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 5050 */;
+import ChatIcon from "ChatIcon" /* 5024 */;
+import TextIcon from "TextIcon" /* 5033 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 5054 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { useHasFavoritesGuildSuggestions as closure_5 } from "items" /* 15791 */;
+import { useHasFavoritesGuildSuggestions as closure_5 } from "items" /* 16022 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -90,9 +90,9 @@ export default function FavoritesGuildSidebarHeader() {
     tmp7 = callback2(View, obj);
   }
   const items = [tmp7, , ];
-  obj = { spacing: tmp6(712).space.PX_8, style: tmp.copy, children: null };
+  obj = { spacing: tmp6(709).space.PX_8, style: tmp.copy, children: null };
   obj1 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = tmp4(1236).intl;
+  const intl = tmp4(1233).intl;
   obj1[2] = intl.string(messagesProxyDefault["1n0TGE"]);
   const items1 = [callback2(Text.Heading, obj1), callback2(EmptyBody, {})];
   obj[2] = items1;

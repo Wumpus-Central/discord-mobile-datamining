@@ -1,6 +1,6 @@
-// === Module 9619: allowPopups ===
+// === Module 9632: allowPopups ===
 
-// Module 9619 (allowPopups)
+// Module 9632 (allowPopups)
 import set from "set" /* 2 */;
 import items3 from "items3" /* 4506 */;
 

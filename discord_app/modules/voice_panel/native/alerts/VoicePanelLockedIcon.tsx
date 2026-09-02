@@ -1,11 +1,11 @@
-// === Module 16768: VoicePanelLockedIcon ===
+// === Module 17004: VoicePanelLockedIcon ===
 
-// Module 16768 (VoicePanelLockedIcon)
+// Module 17004 (VoicePanelLockedIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import setDefault from "set" /* 6006 */;
-import registerAssetDefault from "registerAsset" /* 16769 */;
+import ThemesDefault from "Themes" /* 709 */;
+import Button from "Button" /* 1296 */;
+import setDefault from "set" /* 6014 */;
+import registerAssetDefault from "registerAsset" /* 17005 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

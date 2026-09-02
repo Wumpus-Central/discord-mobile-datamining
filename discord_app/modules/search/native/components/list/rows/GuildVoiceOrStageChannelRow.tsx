@@ -1,12 +1,12 @@
-// === Module 16239: GuildVoiceChannelSubtitle ===
+// === Module 16471: GuildVoiceChannelSubtitle ===
 
-// Module 16239 (GuildVoiceChannelSubtitle)
-import useStageParticipants from "useStageParticipants" /* 5374 */;
-import _modDef16241 from "module_16241" /* 16241 */;
+// Module 16471 (GuildVoiceChannelSubtitle)
+import useStageParticipants from "useStageParticipants" /* 5382 */;
+import _modDef16473 from "module_16473" /* 16473 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "handleStageInstanceCreateOrUpdate" /* 1392 */;
-import { CHANNEL_LIST_SEARCH_LAYOUT as closure_6 } from "MessageEmbedTypes" /* 7622 */;
+import closure_5 from "handleStageInstanceCreateOrUpdate" /* 1391 */;
+import { CHANNEL_LIST_SEARCH_LAYOUT as closure_6 } from "MessageEmbedTypes" /* 7632 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -289,7 +289,7 @@ function GuildVoiceChannelExtras(arg0) {
     obj[2] = channel.guild_id;
     obj[3] = closure_6;
     obj[4] = tmp4;
-    obj[1] = tmp5(_modDef16241, obj);
+    obj[1] = tmp5(_modDef16473, obj);
     tmp5Result = tmp5(tmp6, obj);
   }
   obj[1] = tmp5Result;
@@ -317,12 +317,12 @@ const memoResult = importAllResult.memo(function GuildVoiceChannelRow(channel) {
     obj = { channel: null, voiceStates: null };
     obj[0] = channel;
     obj[1] = voiceStates;
-    obj[1] = tmp4(channel(11858).VocalChannelJoinButton, obj);
+    obj[1] = tmp4(channel(12081).VocalChannelJoinButton, obj);
     trailing = tmp4(View, obj);
   }
   obj[4] = trailing;
   obj[5] = <GuildVoiceChannelExtras channel={channel} voiceStates={voiceStates} users={mapped} />;
-  return jsx(onPress(16243), { onPress: callback, voiceStates, channel, subtitle: null, trailing: null, extras: null });
+  return jsx(onPress(16475), { onPress: callback, voiceStates, channel, subtitle: null, trailing: null, extras: null });
 });
 const result = require("set").fileFinishedImporting("modules/search/native/components/list/rows/GuildVoiceOrStageChannelRow.tsx");
 

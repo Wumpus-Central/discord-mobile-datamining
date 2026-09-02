@@ -1,8 +1,8 @@
-// === Module 16730: useActivityUsers ===
+// === Module 16965: useActivityUsers ===
 
-// Module 16730 (useActivityUsers)
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import closure_3 from "participantFromServer" /* 1386 */;
+// Module 16965 (useActivityUsers)
+import closure_2 from "mergeGuildAvatar" /* 1921 */;
+import closure_3 from "participantFromServer" /* 1385 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/activities/useActivityUsers.tsx");
@@ -12,7 +12,7 @@ export default function useActivityUsers(arg0, arg1) {
   dependencyMap = arg1;
   let items = [closure_3, closure_2];
   const items1 = [arg1, arg0];
-  return _require(647).useStateFromStoresArray(items, () => {
+  return _require(644).useStateFromStoresArray(items, () => {
     if (null == closure_1) {
       return [];
     } else {

@@ -1,10 +1,10 @@
-// === Module 11999: usePendingGameProfileReturn ===
+// === Module 12223: usePendingGameProfileReturn ===
 
-// Module 11999 (usePendingGameProfileReturn)
+// Module 12223 (usePendingGameProfileReturn)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "handleLoadMessages" /* 4502 */;
-import closure_5 from "getSimilarGames" /* 8808 */;
-import { AVATAR_SIZE } from "ME" /* 676 */;
+import closure_5 from "getSimilarGames" /* 8823 */;
+import { AVATAR_SIZE } from "ME" /* 673 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/game_profile/hooks/usePendingGameProfileReturn.tsx");

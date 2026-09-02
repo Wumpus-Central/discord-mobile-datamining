@@ -1,11 +1,11 @@
-// === Module 14590: route ===
+// === Module 14813: route ===
 
-// Module 14590 (route)
+// Module 14813 (route)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import MobileUserSettings from "MobileUserSettings" /* 7884 */;
-import createToggle from "createToggle" /* 11068 */;
+import ME from "ME" /* 673 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import MobileUserSettings from "MobileUserSettings" /* 7893 */;
+import createToggle from "createToggle" /* 11288 */;
 
 obj = {
   useTitle() {
@@ -18,7 +18,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.PREMIUM_MANAGE_PLAN,
   getComponent() {
-    return require(14591) /* PremiumPlanSelectSettingScreen */.default;
+    return require(14814) /* PremiumPlanSelectSettingScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

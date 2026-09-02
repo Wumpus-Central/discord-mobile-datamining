@@ -1,21 +1,21 @@
-// === Module 17374: MessagePreview ===
+// === Module 17610: MessagePreview ===
 
-// Module 17374 (MessagePreview)
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
+// Module 17610 (MessagePreview)
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import Button from "Button" /* 1296 */;
 import _modDef4217 from "module_4217" /* 4217 */;
 import Text from "Text" /* 4474 */;
-import useCanManageGuildOfficialMessages from "useCanManageGuildOfficialMessages" /* 6114 */;
-import registerAssetDefault from "registerAsset" /* 14878 */;
+import useCanManageGuildOfficialMessages from "useCanManageGuildOfficialMessages" /* 6122 */;
+import registerAssetDefault from "registerAsset" /* 15107 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_7 from "createGuildRecordFromRust" /* 1909 */;
-import closure_8 from "handleFormInit" /* 9729 */;
+import closure_7 from "createGuildRecordFromRust" /* 1908 */;
+import closure_8 from "handleFormInit" /* 9751 */;
 import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4471 */;
-import { ThemeTypes } from "sum" /* 505 */;
+import { ThemeTypes } from "sum" /* 502 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -35,7 +35,7 @@ function MessagePreview(theme) {
   }
   let obj = useCanManageGuildOfficialMessages;
   const accessibleGuildOfficialTextColor = obj.getAccessibleGuildOfficialTextColor(selectedColor, semanticColor, num);
-  let obj2 = tmp3(689)(selectedColor);
+  let obj2 = tmp3(686)(selectedColor);
   const hexResult = accessibleGuildOfficialTextColor.hex();
   const alphaResult = obj2.alpha(closure_10);
   obj = { style: items, pointerEvents: "none", children: null };

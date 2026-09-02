@@ -1,31 +1,31 @@
-// === Module 16692: VoicePanelSettingsOverviewHeader ===
+// === Module 16927: VoicePanelSettingsOverviewHeader ===
 
-// Module 16692 (VoicePanelSettingsOverviewHeader)
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 16927 (VoicePanelSettingsOverviewHeader)
+import initialize from "initialize" /* 586 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Text from "Text" /* 4474 */;
-import TableRowInner from "TableRowInner" /* 5599 */;
-import TableRowIcon from "TableRowIcon" /* 5605 */;
-import TableRowArrow from "TableRowArrow" /* 5606 */;
-import TableSwitchRow from "TableSwitchRow" /* 5993 */;
-import registerAssetDefault from "registerAsset" /* 8754 */;
-import useIsUserSecureFramesVerified from "useIsUserSecureFramesVerified" /* 9820 */;
-import useIsSecureFramesUIEnabled from "useIsSecureFramesUIEnabled" /* 9859 */;
-import WrenchIcon from "WrenchIcon" /* 15161 */;
+import TableRowInner from "TableRowInner" /* 5607 */;
+import TableRowIcon from "TableRowIcon" /* 5613 */;
+import TableRowArrow from "TableRowArrow" /* 5614 */;
+import TableSwitchRow from "TableSwitchRow" /* 6001 */;
+import registerAssetDefault from "registerAsset" /* 8769 */;
+import useIsUserSecureFramesVerified from "useIsUserSecureFramesVerified" /* 9842 */;
+import useIsSecureFramesUIEnabled from "useIsSecureFramesUIEnabled" /* 9881 */;
+import WrenchIcon from "WrenchIcon" /* 15390 */;
 import importAllResult from "noop" /* 19 */;
-import closure_4 from "participantFromServer" /* 1386 */;
+import closure_4 from "participantFromServer" /* 1385 */;
 import closure_5 from "getParticipants" /* 4494 */;
-import closure_6 from "initialize" /* 9535 */;
-import closure_7 from "fetchFingerprint" /* 1218 */;
-import closure_8 from "ensureGuildLoaded" /* 1387 */;
+import closure_6 from "initialize" /* 9548 */;
+import closure_7 from "fetchFingerprint" /* 1215 */;
+import closure_8 from "ensureGuildLoaded" /* 1386 */;
 import closure_9 from "_detectH265HardwareDecode" /* 4529 */;
-import closure_10 from "getUncachedChannelPermissions" /* 4121 */;
-import closure_11 from "mergeGuildAvatar" /* 1922 */;
+import closure_10 from "getUncachedChannelPermissions" /* 4120 */;
+import closure_11 from "mergeGuildAvatar" /* 1921 */;
 import closure_12 from "getVoiceStatesForGuild" /* 4555 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 import { isStreamParticipant } from "ParticipantTypes" /* 4499 */;
-import { SECURE_FRAMES_CALL_VERIFICATION_BOTTOM_SHEET_KEY as closure_17 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9841 */;
+import { SECURE_FRAMES_CALL_VERIFICATION_BOTTOM_SHEET_KEY as closure_17 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9863 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

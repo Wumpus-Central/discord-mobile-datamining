@@ -1,13 +1,13 @@
-// === Module 12144: useMaybeGetSortedBoosts ===
+// === Module 12368: useMaybeGetSortedBoosts ===
 
-// Module 12144 (useMaybeGetSortedBoosts)
+// Module 12368 (useMaybeGetSortedBoosts)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "handleModifyingAppliedBoostStart" /* 12126 */;
-import closure_6 from "handleConnectionReset" /* 5369 */;
-import closure_7 from "trackCommunicationDisabled" /* 1992 */;
-import closure_8 from "createGuildRecordFromRust" /* 1909 */;
+import closure_5 from "handleModifyingAppliedBoostStart" /* 12350 */;
+import closure_6 from "handleConnectionReset" /* 5377 */;
+import closure_7 from "trackCommunicationDisabled" /* 1991 */;
+import closure_8 from "createGuildRecordFromRust" /* 1908 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useMaybeGetSortedBoosts.tsx");
@@ -97,7 +97,7 @@ export const useGetBoostUserConfig = function useGetBoostUserConfig(boost) {
   const date = new Date(obj.extractTimestamp(boost.id));
   const items = [closure_7];
   const items1 = [boost];
-  const stateFromStoresObject = _require(589).useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = _require(586).useStateFromStoresObject(items, () => {
     const member = closure_1_7.getMember(boost.guildId, boost.userId);
     let nick = closure_1_7.getNick(boost.guildId, boost.userId);
     if (nick == null) {

@@ -1,10 +1,10 @@
-// === Module 10437: ? ===
+// === Module 10658: ? ===
 
-// Module 10437
+// Module 10658
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getDeviceMediaPhotosDefault from "getDeviceMediaPhotos" /* 10438 */;
-import keys from "keys" /* 644 */;
+import ME from "ME" /* 673 */;
+import getDeviceMediaPhotosDefault from "getDeviceMediaPhotos" /* 10659 */;
+import keys from "keys" /* 641 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
 let closure_4 = keys.create(() => ({ assets: null, page: 0, hasReachedEnd: false, lastAssetIndex: 0 }));
@@ -27,7 +27,7 @@ export default {
             const image = node.image;
           }
         }
-        let obj = assets(500);
+        let obj = assets(1234);
         if (!obj.isIOS()) {
           dependencyMap = tmp2 + 1;
           obj = { batchSize: null, endCursor: null, lastAssetIndex: null, lastNodeImageUri: null, extensions: null, onFetched: null };
@@ -93,7 +93,7 @@ export default {
             obj = { page: table, has_reached_end: tmp12 };
             lastAssetIndex(table[2]).track(closure_1_3.MEDIA_PICKER_INFINITE_SCROLL_PAGED, obj);
           };
-          lastAssetIndex(10438)(obj);
+          lastAssetIndex(10659)(obj);
         }
       }
     }

@@ -1,23 +1,23 @@
-// === Module 10523: PremiumGiftPlanSelectPromotionDetails ===
+// === Module 10744: PremiumGiftPlanSelectPromotionDetails ===
 
-// Module 10523 (PremiumGiftPlanSelectPromotionDetails)
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 10744 (PremiumGiftPlanSelectPromotionDetails)
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import ManaContext from "ManaContext" /* 4204 */;
 import Button from "Button" /* 4928 */;
 import LinearGradientDefault from "LinearGradient" /* 4940 */;
-import createTextStyleDefault from "createTextStyle" /* 5461 */;
-import usePremiumFeaturesDefault from "usePremiumFeatures" /* 8225 */;
-import useThemeAndReducedMotionAwareAssetUrl from "useThemeAndReducedMotionAwareAssetUrl" /* 10524 */;
-import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10525 */;
-import useShouldShowGiftingPromotionDecoDefault from "useShouldShowGiftingPromotionDeco" /* 10526 */;
-import AnimatedImageDefault from "AnimatedImage" /* 10530 */;
+import createTextStyleDefault from "createTextStyle" /* 5469 */;
+import usePremiumFeaturesDefault from "usePremiumFeatures" /* 8234 */;
+import useThemeAndReducedMotionAwareAssetUrl from "useThemeAndReducedMotionAwareAssetUrl" /* 10745 */;
+import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10746 */;
+import useShouldShowGiftingPromotionDecoDefault from "useShouldShowGiftingPromotionDeco" /* 10747 */;
+import AnimatedImageDefault from "AnimatedImage" /* 10751 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "createEmptyPromotionsByType" /* 10475 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import { Fonts } from "sum" /* 505 */;
+import closure_6 from "createEmptyPromotionsByType" /* 10696 */;
+import GuildFeatures from "GuildFeatures" /* 1923 */;
+import { Fonts } from "sum" /* 502 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -116,7 +116,7 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
   }
   const merged = Object.assign(variant, Object.create(null));
   let _require;
-  obj = _require(589);
+  obj = _require(586);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => {
     marketingComponentByType = marketingComponentByType.getMarketingComponentByType(_undefined(table[11]).MarketingComponentType.GIFT_PLAN_SELECTION_CARD_BANNER);
@@ -129,7 +129,7 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
     }
     return prop;
   });
-  obj1 = _require(10524);
+  obj1 = _require(10745);
   let cardAsset;
   if (stateFromStores != null) {
     cardAsset = stateFromStores.cardAsset;
@@ -139,20 +139,20 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
   if (stateFromStores != null) {
     backgroundAsset = stateFromStores.backgroundAsset;
   }
-  const themeAndReducedMotionAwareAssetUrl1 = _require(10524).useThemeAndReducedMotionAwareAssetUrl(backgroundAsset);
+  const themeAndReducedMotionAwareAssetUrl1 = _require(10745).useThemeAndReducedMotionAwareAssetUrl(backgroundAsset);
   let tmp9 = null != claimableRewards;
   if (tmp9) {
     tmp9 = 1 === claimableRewards.length;
   }
   const tmp10 = callback4(tmp9);
-  const tmp2Result = _require(10524);
+  const tmp2Result = _require(10745);
   const tmp12 = usePremiumFeaturesDefault(premiumType);
   const tmp13 = usePremiumProductPricingStringDefault(premiumType, constants.MONTH);
   let enabled = useShouldShowGiftingPromotionDecoDefault(premiumType) && null != claimableRewards;
   if (enabled) {
     enabled = claimableRewards.length > 0;
   }
-  let tmp11Result = tmp11(10513);
+  let tmp11Result = tmp11(10734);
   const config = tmp11Result.useConfig({ location: "PremiumGiftFeaturesCard" });
   let promotionalButton = enabled;
   if (enabled) {
@@ -184,12 +184,12 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
     obj1 = { uri: null };
     obj1[0] = themeAndReducedMotionAwareAssetUrl;
     obj[2] = obj1;
-    tmp22 = callback2(tmp11(5493), obj);
+    tmp22 = callback2(tmp11(5501), obj);
   }
   const items2 = [tmp22, ];
   obj2 = { premiumType, opacity: null, style: null };
   let num3 = 1;
-  tmp11Result = tmp11(8095);
+  tmp11Result = tmp11(8103);
   if (tmp16) {
     num3 = 0.82;
   }
@@ -210,7 +210,7 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
       obj3[1] = claimableRewards;
       obj3[2] = isSelected;
       obj3[3] = callback;
-      tmp29 = callback2(tmp11(10527), obj3);
+      tmp29 = callback2(tmp11(10748), obj3);
     }
     const items4 = [tmp29, ];
     let tmp31 = null != themeAndReducedMotionAwareAssetUrl1;
@@ -224,7 +224,7 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
       obj6 = { uri: null };
       obj6[0] = themeAndReducedMotionAwareAssetUrl1;
       obj4[2] = obj6;
-      tmp31 = callback2(tmp11(5493), obj4);
+      tmp31 = callback2(tmp11(5501), obj4);
     }
     const obj7 = { children: null };
     items4[1] = tmp31;
@@ -234,7 +234,7 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
   } else {
     const obj8 = { premiumType: null };
     obj8[0] = premiumType;
-    tmp20Result = callback2(tmp11(8355), obj8);
+    tmp20Result = callback2(tmp11(8364), obj8);
   }
   const items6 = [tmp20Result, , , , , , ];
   const items7 = [tmp10.logo, , ];
@@ -255,24 +255,24 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
     obj10 = { style: null, variant: "text-sm/medium", color: "text-overlay-light", children: null };
     const items8 = [tmp10.pricing, obj6[str]];
     obj10[0] = items8;
-    const intl = tmp2(1236).intl;
+    const intl = tmp2(1233).intl;
     const obj11 = { monthlyPrice: null, yearlyPrice: null };
     obj11[0] = tmp13;
     obj11[1] = tmp14;
-    obj10[3] = intl.format(tmp2(1236).t.Ob6fwp, obj11);
+    obj10[3] = intl.format(tmp2(1233).t.Ob6fwp, obj11);
     items6[2] = tmp33(tmp2(4474).Text, obj10);
     const obj12 = { style: null, variant: "heading-sm/bold", color: "text-overlay-light", children: null };
     const items9 = [tmp10.featureTitle, obj2[str]];
     obj12[0] = items9;
-    const intl2 = tmp2(1236).intl;
-    obj12[3] = intl2.string(tmp2(1236).t.JgsVht);
+    const intl2 = tmp2(1233).intl;
+    obj12[3] = intl2.string(tmp2(1233).t.JgsVht);
     items6[3] = tmp33(tmp2(4474).Text, obj12);
     const obj13 = { style: null, features: null, iconStyle: null, labelStyle: null, rowStyle: null };
     obj13[0] = tmp10.features;
     obj13[1] = tmp12;
     ({ featureIcon: obj19[2], featureText: obj19[3] } = tmp10);
     obj13[4] = obj[str];
-    items6[4] = tmp33(tmp11(8362), obj13);
+    items6[4] = tmp33(tmp11(8371), obj13);
     const obj14 = { style: null };
     obj14[0] = { flexGrow: 1 };
     items6[5] = tmp33(tmp21, obj14);
@@ -301,11 +301,11 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
     items10[2] = promotionalButton;
     obj16[0] = items10;
     if (premiumType === closure_7.TIER_0) {
-      const intl4 = tmp2(1236).intl;
-      let stringResult = intl4.string(tmp2(1236).t.rk4Uu8);
+      const intl4 = tmp2(1233).intl;
+      let stringResult = intl4.string(tmp2(1233).t.rk4Uu8);
     } else {
-      const intl3 = tmp2(1236).intl;
-      stringResult = intl3.string(tmp2(1236).t.Ve9Ge6);
+      const intl3 = tmp2(1233).intl;
+      stringResult = intl3.string(tmp2(1233).t.Ve9Ge6);
     }
     const obj17 = { variant: "primary-overlay", text: null, onPress: null };
     obj17[1] = stringResult;

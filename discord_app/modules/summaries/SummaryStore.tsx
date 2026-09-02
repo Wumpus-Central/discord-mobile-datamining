@@ -1,21 +1,21 @@
-// === Module 10982: handleQuickSwitcherUpdate ===
+// === Module 11202: handleQuickSwitcherUpdate ===
 
-// Module 10982 (handleQuickSwitcherUpdate)
+// Module 11202 (handleQuickSwitcherUpdate)
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import canSeeChannelSummaries from "canSeeChannelSummaries" /* 10984 */;
+import initializeDefault from "initialize" /* 586 */;
+import setDefault from "set" /* 684 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import canSeeChannelSummaries from "canSeeChannelSummaries" /* 11204 */;
 import closure_7 from "_slicedToArray" /* 32 */;
 import closure_8 from "getHash" /* 4391 */;
-import closure_9 from "handleConnectionOpen" /* 9923 */;
-import closure_10 from "ensureGuildLoaded" /* 1387 */;
-import closure_11 from "createGuildRecordFromRust" /* 1909 */;
+import closure_9 from "handleConnectionOpen" /* 9945 */;
+import closure_10 from "ensureGuildLoaded" /* 1386 */;
+import closure_11 from "createGuildRecordFromRust" /* 1908 */;
 import closure_12 from "generateOldThreadCutoff" /* 4493 */;
-import closure_13 from "handleConnectionOpen" /* 1981 */;
+import closure_13 from "handleConnectionOpen" /* 1980 */;
 import closure_14 from "updateUserGuildSettingsInternal" /* 4701 */;
-import closure_15 from "mergeGuildAvatar" /* 1922 */;
-import { SUMMARY_POLL_INTERVAL } from "result" /* 10983 */;
+import closure_15 from "mergeGuildAvatar" /* 1921 */;
+import { SUMMARY_POLL_INTERVAL } from "result" /* 11203 */;
 
 require = arg1;
 function handleQuickSwitcherUpdate() {
@@ -69,7 +69,7 @@ prototype["topSummaries"] = function topSummaries() {
       obj = callback(11);
       const date = new Date();
       const time = date.getTime();
-      tmp = callback(11).extractTimestamp(people.endId) > time - 5 * callback(687).Millis.HOUR;
+      tmp = callback(11).extractTimestamp(people.endId) > time - 5 * callback(684).Millis.HOUR;
       const extractTimestampResult = callback(11).extractTimestamp(people.endId);
     }
     return tmp;
@@ -272,7 +272,7 @@ obj = {
     if (null != summary) {
       const _Object = Object;
       if (Object.keys(summary).length > 0) {
-        obj = summaryFromServer(10985);
+        obj = summaryFromServer(11205);
         summaryFromServer = obj.createSummaryFromServer(summary, channelId);
         let items = dependencyMap2[channelId];
         if (items == null) {

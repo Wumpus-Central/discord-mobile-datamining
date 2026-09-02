@@ -1,13 +1,13 @@
-// === Module 5387: QuestsExperimentLocations ===
+// === Module 5395: QuestsExperimentLocations ===
 
-// Module 5387 (QuestsExperimentLocations)
-import setDefault from "set" /* 687 */;
-import QuestVariants from "QuestVariants" /* 5388 */;
-import Quests from "Quests" /* 5389 */;
-import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 5390 */;
-import set4 from "set" /* 5394 */;
-import DismissibleQuestContentFlags from "DismissibleQuestContentFlags" /* 5395 */;
-import sendRequest from "sendRequest" /* 530 */;
+// Module 5395 (QuestsExperimentLocations)
+import setDefault from "set" /* 684 */;
+import QuestVariants from "QuestVariants" /* 5396 */;
+import Quests from "Quests" /* 5397 */;
+import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 5398 */;
+import set4 from "set" /* 5402 */;
+import DismissibleQuestContentFlags from "DismissibleQuestContentFlags" /* 5403 */;
+import sendRequest from "sendRequest" /* 527 */;
 import apply from "apply" /* 12 */;
 import set from "set" /* 2 */;
 
@@ -62,8 +62,7 @@ export const MIN_SEC_NOISE_PROGRESS_UPDATE = 2;
 export const QuestTaskPlatform = { CONSOLE: "CONSOLE", DESKTOP: "DESKTOP" };
 export const QuestAuthMethod = { IN_GAME: "in_game", WEB: "web" };
 export const QUEST_SPLIT_MODAL_PANEL_WIDTH = 454;
-export const QUEST_SPLIT_MODAL_HERO_DISPLAY_MAX_HEIGHT = 190;
-export const QUEST_SPLIT_MODAL_HERO_IMAGE_DENSITY = 2;
+export const QUEST_HERO_ASSET_ASPECT_RATIO = 3.5675675675675675;
 export const CDN_URL_BASE = str2;
 export const QUESTS_CDN_URL_BASE = text;
 export const QuestDockMode = { COLLAPSED: "collapsed", EXPANDED: "expanded", CLOSED: "closed", SOFT_DISMISSED: "soft-dismissed", RESET_TO_PREVIOUS: "reset-to-previous" };

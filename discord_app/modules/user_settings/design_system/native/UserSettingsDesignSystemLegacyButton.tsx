@@ -1,9 +1,9 @@
-// === Module 15359: ComparisonRow ===
+// === Module 15587: ComparisonRow ===
 
-// Module 15359 (ComparisonRow)
+// Module 15587 (ComparisonRow)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
+import ThemesDefault from "Themes" /* 709 */;
+import Button from "Button" /* 1296 */;
 import Text from "Text" /* 4474 */;
 import Stack from "Stack" /* 4926 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -19,8 +19,8 @@ function ComparisonRow(entry) {
   const combined = "" + entry.color;
   let redesignVariant = null;
   if (entry.look !== Button.ButtonLooks.LINK) {
-    redesignVariant = tmp4(1297).getRedesignVariant(entry.color);
-    const tmp4Result = tmp4(1297);
+    redesignVariant = tmp4(1296).getRedesignVariant(entry.color);
+    const tmp4Result = tmp4(1296);
   }
   items = [tmp.comparisonRow, ];
   let darkBg = hasItem;
@@ -49,7 +49,7 @@ function ComparisonRow(entry) {
   let darkText = null;
   if (hasItem) {
     darkText = null;
-    if (entry.look === tmp4(1297).ButtonLooks.FILLED) {
+    if (entry.look === tmp4(1296).ButtonLooks.FILLED) {
       darkText = tmp.darkText;
     }
   }
@@ -112,7 +112,7 @@ function ComboRow(combo) {
   let darkText = null;
   if (hasItem) {
     darkText = null;
-    if (combo.look === tmp6(1297).ButtonLooks.FILLED) {
+    if (combo.look === tmp6(1296).ButtonLooks.FILLED) {
       darkText = tmp.darkText;
     }
   }
@@ -294,7 +294,7 @@ export default function UserSettingsDesignSystemLegacyButton() {
   const entries = Object.entries(obj);
   items1[1] = entries.map((arg0) => {
     [tmp, arr] = arg0;
-    return callback2(callback(8363).FormSection, { title: tmp, children: arr.map((entry) => callback(closure_8, { entry }, arg1)) }, "cmp-" + tmp);
+    return callback2(callback(8372).FormSection, { title: tmp, children: arr.map((entry) => callback(closure_8, { entry }, arg1)) }, "cmp-" + tmp);
   });
   obj1 = { spacing: 4, style: tmp.header, children: null };
   const items2 = [callback2(Text.Text, { variant: "heading-xl/bold", children: "Legacy Button Audit" }), callback2(Text.Text, { variant: "text-sm/normal", color: "text-muted", children: "41 combinations across 185 importers" })];
@@ -303,7 +303,7 @@ export default function UserSettingsDesignSystemLegacyButton() {
   const entries1 = Object.entries(tmp2);
   items1[3] = entries1.map((arg0) => {
     [tmp, arr] = arg0;
-    return callback2(callback(8363).FormSection, { title: "" + tmp + " (" + arr.reduce((arg0, count) => arg0 + count.count, 0) + " usages)", children: arr.map((combo) => callback(closure_9, { combo }, arg1)) }, tmp);
+    return callback2(callback(8372).FormSection, { title: "" + tmp + " (" + arr.reduce((arg0, count) => arg0 + count.count, 0) + " usages)", children: arr.map((combo) => callback(closure_9, { combo }, arg1)) }, tmp);
   });
   obj[1] = items1;
   return callback(closure_2, obj);

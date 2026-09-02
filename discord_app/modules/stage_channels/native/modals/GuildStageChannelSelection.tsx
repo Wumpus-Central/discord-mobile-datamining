@@ -1,9 +1,9 @@
-// === Module 9906: GuildStageChannelSelection ===
+// === Module 9928: GuildStageChannelSelection ===
 
-// Module 9906 (GuildStageChannelSelection)
+// Module 9928 (GuildStageChannelSelection)
 import noopAll from "noop" /* 19 */;
 import closure_4 from "markAllUserIdListsStale" /* 4130 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "mergeGuildAvatar" /* 1921 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

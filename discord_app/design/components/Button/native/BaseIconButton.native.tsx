@@ -1,6 +1,6 @@
-// === Module 8007: BaseIconButton ===
+// === Module 8016: BaseIconButton ===
 
-// Module 8007 (BaseIconButton)
+// Module 8016 (BaseIconButton)
 import _mod4217 from "module_4217" /* 4217 */;
 import IconSizesDefault from "IconSizes" /* 4930 */;
 import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4933 */;

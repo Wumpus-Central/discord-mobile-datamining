@@ -1,13 +1,13 @@
-// === Module 13638: onClose ===
+// === Module 13861: onClose ===
 
-// Module 13638 (onClose)
+// Module 13861 (onClose)
 import timestampDefault from "timestamp" /* 3 */;
 import _modDef4723 from "module_4723" /* 4723 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import closure_6 from "ensureGuildLoaded" /* 1387 */;
-import { SHARE_SCREEN_MODAL_KEY } from "SHARE_SCREEN_MODAL_KEY" /* 13590 */;
+import closure_6 from "ensureGuildLoaded" /* 1386 */;
+import { SHARE_SCREEN_MODAL_KEY } from "SHARE_SCREEN_MODAL_KEY" /* 13813 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 let require = arg1;

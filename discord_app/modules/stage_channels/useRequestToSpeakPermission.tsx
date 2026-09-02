@@ -1,10 +1,10 @@
-// === Module 10007: useRequestToSpeakPermission ===
+// === Module 10029: useRequestToSpeakPermission ===
 
-// Module 10007 (useRequestToSpeakPermission)
+// Module 10029 (useRequestToSpeakPermission)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "ensureGuildLoaded" /* 1387 */;
-import { Permissions } from "ME" /* 676 */;
+import closure_5 from "ensureGuildLoaded" /* 1386 */;
+import { Permissions } from "ME" /* 673 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/stage_channels/useRequestToSpeakPermission.tsx");
@@ -13,10 +13,10 @@ export const useRequestToSpeakPermission = function useRequestToSpeakPermission(
   const _require = id;
   const items = [closure_5];
   const items1 = [id];
-  const stateFromStores = _require(589).useStateFromStores(items, () => closure_1_5.getChannel(closure_0), items1);
-  let obj = _require(589);
-  const canEveryoneRoleResult = stateFromStores(4126).canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
-  const obj2 = stateFromStores(4126);
+  const stateFromStores = _require(586).useStateFromStores(items, () => closure_1_5.getChannel(closure_0), items1);
+  let obj = _require(586);
+  const canEveryoneRoleResult = stateFromStores(4125).canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
+  const obj2 = stateFromStores(4125);
   [tmp4, tmp5] = callback(React.useState(canEveryoneRoleResult), 2);
   dependencyMap = tmp5;
   if (canEveryoneRoleResult !== tmp4) {

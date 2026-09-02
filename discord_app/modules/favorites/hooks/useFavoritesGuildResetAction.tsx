@@ -1,12 +1,12 @@
-// === Module 15728: useFavoritesGuildResetAction ===
+// === Module 15959: useFavoritesGuildResetAction ===
 
-// Module 15728 (useFavoritesGuildResetAction)
-import messagesProxyDefault from "messagesProxy" /* 3179 */;
+// Module 15959 (useFavoritesGuildResetAction)
+import messagesProxyDefault from "messagesProxy" /* 3178 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import useFavoritesAccess from "useFavoritesAccess" /* 10307 */;
+import useFavoritesAccess from "useFavoritesAccess" /* 10329 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "handleConnectionOpen" /* 4299 */;
-import { Routes } from "ME" /* 676 */;
+import { Routes } from "ME" /* 673 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildResetAction.tsx");
@@ -27,9 +27,9 @@ export default function useFavoritesGuildResetAction() {
     hasAccess = obj.useFavoritesAccess().hasAccess;
   }
   obj = { isAvailable: hasAccess, label: null, subLabel: null, perform: null };
-  const intl = tmp(1236).intl;
+  const intl = tmp(1233).intl;
   obj[1] = intl.string(messagesProxyDefault.YkET6R);
-  const intl2 = tmp(1236).intl;
+  const intl2 = tmp(1233).intl;
   obj[2] = intl2.string(messagesProxyDefault.ZzcwNk);
   obj[3] = callback;
   return obj;

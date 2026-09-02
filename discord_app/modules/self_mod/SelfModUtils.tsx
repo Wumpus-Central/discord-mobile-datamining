@@ -1,7 +1,7 @@
-// === Module 6137: isCurrentUserTeen ===
+// === Module 6145: isCurrentUserTeen ===
 
-// Module 6137 (isCurrentUserTeen)
-import closure_0 from "mergeGuildAvatar" /* 1922 */;
+// Module 6145 (isCurrentUserTeen)
+import closure_0 from "mergeGuildAvatar" /* 1921 */;
 
 const result = require("set").fileFinishedImporting("modules/self_mod/SelfModUtils.tsx");
 

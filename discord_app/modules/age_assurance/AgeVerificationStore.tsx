@@ -1,10 +1,10 @@
-// === Module 8715: initialize ===
+// === Module 8730: initialize ===
 
-// Module 8715 (initialize)
-import initializeDefault from "initialize" /* 589 */;
-import Storage2 from "Storage" /* 595 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+// Module 8730 (initialize)
+import initializeDefault from "initialize" /* 586 */;
+import Storage2 from "Storage" /* 592 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import closure_2 from "mergeGuildAvatar" /* 1921 */;
 
 require = arg1;
 let c3 = 86400000;

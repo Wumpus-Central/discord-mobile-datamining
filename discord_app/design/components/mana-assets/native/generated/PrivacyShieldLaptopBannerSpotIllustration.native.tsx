@@ -1,10 +1,10 @@
-// === Module 6915: PrivacyShieldLaptopBannerSpotIllustration ===
+// === Module 6924: PrivacyShieldLaptopBannerSpotIllustration ===
 
-// Module 6915 (PrivacyShieldLaptopBannerSpotIllustration)
+// Module 6924 (PrivacyShieldLaptopBannerSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5493 */;
-import metadataDefault from "metadata" /* 6916 */;
+import preloadDefault from "preload" /* 5501 */;
+import metadataDefault from "metadata" /* 6925 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/PrivacyShieldLaptopBannerSpotIllustration.native.tsx");

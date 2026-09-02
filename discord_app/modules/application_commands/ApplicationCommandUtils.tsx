@@ -1,20 +1,20 @@
-// === Module 7266: buildCommand ===
+// === Module 7275: buildCommand ===
 
-// Module 7266 (buildCommand)
+// Module 7275 (buildCommand)
 import set from "set" /* 2 */;
 import applyDefault from "apply" /* 12 */;
 import IntegerDefault from "Integer" /* 14 */;
-import sum2 from "sum" /* 505 */;
-import createChannelRecord from "createChannelRecord" /* 1391 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
+import sum2 from "sum" /* 502 */;
+import createChannelRecord from "createChannelRecord" /* 1390 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4700 */;
 import handleChanged from "handleChanged" /* 4854 */;
-import commandPermissions from "commandPermissions" /* 7267 */;
-import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 7268 */;
+import commandPermissions from "commandPermissions" /* 7276 */;
+import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 7277 */;
 import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 4952 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 import deserializeResult from "module_0" /* 0 */;
-import importAllResult from "fromString" /* 506 */;
+import importAllResult from "fromString" /* 503 */;
 
 function buildCommand(arg0) {
   ({ rootCommand, command, subCommandPath } = arg0);
@@ -47,10 +47,10 @@ function buildCommand(arg0) {
     obj[5] = applicationId;
     let CHAT = rootCommand.type;
     if (CHAT == null) {
-      CHAT = obj(1955).ApplicationCommandType.CHAT;
+      CHAT = obj(1954).ApplicationCommandType.CHAT;
     }
     obj[6] = CHAT;
-    obj[7] = obj(7268).ApplicationCommandInputType.BOT;
+    obj[7] = obj(7277).ApplicationCommandInputType.BOT;
     ({ description: obj3[8], options } = command);
     let mapped2;
     if (options != null) {
@@ -325,10 +325,10 @@ function buildCommand(arg0) {
     ({ nsfw: obj3[17], contexts: obj3[18], integration_types: obj3[19], global_popularity_rank: obj3[20], handler: obj3[21] } = rootCommand);
     return obj;
   } else if (useKeyedPermissions) {
-    const keyPermissionsResult = obj(7267).keyPermissions(rootCommand.permissions);
+    const keyPermissionsResult = obj(7276).keyPermissions(rootCommand.permissions);
     obj = keyPermissionsResult;
     obj = keyPermissionsResult;
-    const obj2 = obj(7267);
+    const obj2 = obj(7276);
   } else {
     obj = {};
     const permissions = rootCommand.permissions;
@@ -350,7 +350,7 @@ function buildSubCommands(arg0) {
     return items;
   } else {
     if (command.type !== PermissionOverwriteType.ApplicationCommandOptionType.SUB_COMMAND) {
-      if (command.type !== tmp(1955).ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
+      if (command.type !== tmp(1954).ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
         obj = { rootCommand: null, command: null, applicationId: null, subCommandPath: null, useKeyedPermissions: null };
         obj[0] = rootCommand;
         obj[1] = command;
@@ -368,7 +368,7 @@ function buildSubCommands(arg0) {
     return items2;
   } else {
     const options = command.options;
-    const found = options.filter((type) => type.type === callback(1955).ApplicationCommandOptionType.SUB_COMMAND_GROUP);
+    const found = options.filter((type) => type.type === callback(1954).ApplicationCommandOptionType.SUB_COMMAND_GROUP);
     for (let num3 = 0; num3 < found.length; num3 = num3 + 1) {
       let push = items2.push;
       obj = { rootCommand: null, command: null, applicationId: null, subCommandPath: null, useKeyedPermissions: null };
@@ -404,7 +404,7 @@ function buildSubCommands(arg0) {
       let applyResult = HermesBuiltin.apply(items5, items2);
     }
     const options1 = command.options;
-    const found1 = options1.filter((type) => type.type === callback(1955).ApplicationCommandOptionType.SUB_COMMAND);
+    const found1 = options1.filter((type) => type.type === callback(1954).ApplicationCommandOptionType.SUB_COMMAND);
     for (let num4 = 0; num4 < found1.length; num4 = num4 + 1) {
       let obj2 = { rootCommand: null, command: null, applicationId: null, subCommandPath: null, useKeyedPermissions: null };
       obj2[0] = rootCommand;
@@ -493,9 +493,7 @@ export const buildApplicationCommands = function buildApplicationCommands(applic
   closure_0 = arg1;
   return applyDefault.flatMap(application_commands, (id) => {
     closure_1_1(closure_1_3[10])(null != id.id, "Missing command id");
-    const obj = { rootCommand: id, command: id, applicationId: id.application_id, subCommandPath: "Array", useKeyedPermissions: 284111.8291016036 };
-    obj[4] = closure_0;
-    return closure_1_12(obj);
+    return closure_1_12({ rootCommand: id, command: id, applicationId: id.application_id, subCommandPath: "Array", useKeyedPermissions: closure_0 });
   });
 };
 export const applicationPermissionsList = function applicationPermissionsList(arr) {
@@ -537,11 +535,11 @@ export const getMatchingGroupCommands = function getMatchingGroupCommands(contex
 export const getApplicationCommandOptionQueryOptions = function getApplicationCommandOptionQueryOptions(option) {
   let tmp3 = option.type === PermissionOverwriteType.ApplicationCommandOptionType.USER;
   if (!tmp3) {
-    tmp3 = option.type === tmp(1955).ApplicationCommandOptionType.MENTIONABLE;
+    tmp3 = option.type === tmp(1954).ApplicationCommandOptionType.MENTIONABLE;
   }
-  let tmp4 = option.type === tmp(1955).ApplicationCommandOptionType.ROLE;
+  let tmp4 = option.type === tmp(1954).ApplicationCommandOptionType.ROLE;
   if (!tmp4) {
-    tmp4 = option.type === tmp(1955).ApplicationCommandOptionType.MENTIONABLE;
+    tmp4 = option.type === tmp(1954).ApplicationCommandOptionType.MENTIONABLE;
   }
   const tmp5 = option.type === PermissionOverwriteType.ApplicationCommandOptionType.STRING;
   let tmp6 = tmp5;
@@ -679,7 +677,7 @@ export const extractInteractionDataProps = function extractInteractionDataProps(
   ({ id, options } = parsed);
   let found;
   if (interactionOptions != null) {
-    found = interactionOptions.find((type) => type.type === callback(1955).ApplicationCommandOptionType.SUB_COMMAND_GROUP);
+    found = interactionOptions.find((type) => type.type === callback(1954).ApplicationCommandOptionType.SUB_COMMAND_GROUP);
   }
   let sum = id;
   if (null != found) {
@@ -689,7 +687,7 @@ export const extractInteractionDataProps = function extractInteractionDataProps(
   }
   let found1;
   if (interactionOptions != null) {
-    found1 = interactionOptions.find((type) => type.type === callback(1955).ApplicationCommandOptionType.SUB_COMMAND);
+    found1 = interactionOptions.find((type) => type.type === callback(1954).ApplicationCommandOptionType.SUB_COMMAND);
   }
   let commandKey = sum;
   if (null != found1) {

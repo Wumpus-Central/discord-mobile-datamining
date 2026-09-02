@@ -1,6 +1,6 @@
-// === Module 8515: allowableMinInterval ===
+// === Module 8528: allowableMinInterval ===
 
-// Module 8515 (allowableMinInterval)
+// Module 8528 (allowableMinInterval)
 import closure_2 from "noop" /* 19 */;
 
 const result = require("set").fileFinishedImporting("modules/collectibles/profile_effects/useClock.tsx");

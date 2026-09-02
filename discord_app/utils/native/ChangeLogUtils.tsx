@@ -1,11 +1,11 @@
-// === Module 8003: ChangeLogLink ===
+// === Module 8012: ChangeLogLink ===
 
-// Module 8003 (ChangeLogLink)
+// Module 8012 (ChangeLogLink)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import tDefault from "t" /* 4192 */;
 import Text from "Text" /* 4474 */;
-import apexExperiment from "apexExperiment" /* 8004 */;
+import apexExperiment from "apexExperiment" /* 8013 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -94,10 +94,10 @@ function ChangeLogStrong(arg0) {
     }
     obj = { variant: "experimental/body-sm/semibold", color: null, children: null };
     obj[1] = str;
-    obj[2] = tmp(8005).smartOutput(node, output, state);
+    obj[2] = tmp(8014).smartOutput(node, output, state);
     let reactResult = jsx(tmp(4474).Text, { variant: "experimental/body-sm/semibold", color: null, children: null });
     const tmp5 = jsx;
-    const tmpResult = tmp(8005);
+    const tmpResult = tmp(8014);
   } else {
     const strong = rules.strong;
     reactResult = strong.react(node, output, state);

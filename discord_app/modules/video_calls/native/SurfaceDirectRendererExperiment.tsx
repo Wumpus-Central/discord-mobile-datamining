@@ -1,8 +1,8 @@
-// === Module 9574: ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT ===
+// === Module 9587: ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT ===
 
-// Module 9574 (ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT)
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import ApexExperiment from "ApexExperiment" /* 1468 */;
+// Module 9587 (ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT)
+import closure_2 from "fetchFingerprint" /* 1215 */;
+import ApexExperiment from "ApexExperiment" /* 1467 */;
 
 const require = arg1;
 ApexExperiment = { 1: null };
@@ -18,6 +18,6 @@ export const useSurfaceDirectRendererExperiment = function useSurfaceDirectRende
   const _require = userId;
   const items = [closure_2];
   const items1 = [userId];
-  const obj = _require(589);
-  return null != userId && !_require(589).useStateFromStores(items, () => closure_0 === closure_1_2.getId(), items1) && closure_3.useConfig(location).enableSurfaceDirectRenderer;
+  const obj = _require(586);
+  return null != userId && !_require(586).useStateFromStores(items, () => closure_0 === closure_1_2.getId(), items1) && closure_3.useConfig(location).enableSurfaceDirectRenderer;
 };

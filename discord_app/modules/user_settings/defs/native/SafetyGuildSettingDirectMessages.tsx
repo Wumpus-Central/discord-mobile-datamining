@@ -1,17 +1,17 @@
-// === Module 15473: toggle ===
+// === Module 15703: toggle ===
 
-// Module 15473 (toggle)
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 15703 (toggle)
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
 import setDefault from "set" /* 4857 */;
 import componentDidMountDefault from "componentDidMount" /* 4947 */;
-import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14430 */;
-import useDefaultGuildsRestricted from "useDefaultGuildsRestricted" /* 15474 */;
-import useAllowFriendsFromMutualGuildsOnly from "useAllowFriendsFromMutualGuildsOnly" /* 15475 */;
-import closure_3 from "createGuildRecordFromRust" /* 1909 */;
-import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 15467 */;
-import { GUILD_SELECT_ALL_SERVERS_OPTION_ID as closure_6 } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 11069 */;
-import createToggle from "createToggle" /* 11068 */;
+import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14653 */;
+import useDefaultGuildsRestricted from "useDefaultGuildsRestricted" /* 15704 */;
+import useAllowFriendsFromMutualGuildsOnly from "useAllowFriendsFromMutualGuildsOnly" /* 15705 */;
+import closure_3 from "createGuildRecordFromRust" /* 1908 */;
+import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 15697 */;
+import { GUILD_SELECT_ALL_SERVERS_OPTION_ID as closure_6 } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 11289 */;
+import createToggle from "createToggle" /* 11288 */;
 
 require = arg1;
 ({ getSelectedGuildId: c4, useUserSafetySettingsSelectedGuildStore: c5 } = GUILD_SELECT_ALL_SERVERS_OPTION_ID);
@@ -31,9 +31,9 @@ createToggle = {
   useDescription() {
     const allowFriendsFromMutualGuildsOnly = useAllowFriendsFromMutualGuildsOnly.useAllowFriendsFromMutualGuildsOnly();
     if (callback2().selectedGuildId === closure_6) {
-      const intl2 = tmp(1236).intl;
+      const intl2 = tmp(1233).intl;
       const string2 = intl2.string;
-      let XXGmuB = tmp(1236).t;
+      let XXGmuB = tmp(1233).t;
       if (allowFriendsFromMutualGuildsOnly) {
         XXGmuB = XXGmuB.XXGmuB;
         let string2Result = string2(XXGmuB);
@@ -41,9 +41,9 @@ createToggle = {
         string2Result = string2(XXGmuB.wbYDfT);
       }
     } else {
-      const intl = tmp(1236).intl;
+      const intl = tmp(1233).intl;
       const string = intl.string;
-      const t = tmp(1236).t;
+      const t = tmp(1233).t;
       if (allowFriendsFromMutualGuildsOnly) {
         let stringResult = string(t.F9WY3f);
       } else {
@@ -69,14 +69,14 @@ createToggle = {
     if (tmp === closure_6) {
       const _require = !arg0;
       let obj = { title: null, body: null, confirmText: null, cancelText: null, confirmColor: null, onConfirm: null, onCancel: null };
-      const intl = _require(1236).intl;
-      obj[0] = intl.string(_require(1236).t.Hq4ApA);
-      const intl2 = _require(1236).intl;
-      obj[1] = intl2.string(_require(1236).t.qTCYun);
-      const intl3 = _require(1236).intl;
-      obj[2] = intl3.string(_require(1236).t.p89ACt);
-      const intl4 = _require(1236).intl;
-      obj[3] = intl4.string(_require(1236).t.gm1Vej);
+      const intl = _require(1233).intl;
+      obj[0] = intl.string(_require(1233).t.Hq4ApA);
+      const intl2 = _require(1233).intl;
+      obj[1] = intl2.string(_require(1233).t.qTCYun);
+      const intl3 = _require(1233).intl;
+      obj[2] = intl3.string(_require(1233).t.p89ACt);
+      const intl4 = _require(1233).intl;
+      obj[3] = intl4.string(_require(1233).t.gm1Vej);
       obj[4] = componentDidMountDefault.Colors.RED;
       obj[5] = function onConfirm() {
         const DefaultGuildsRestrictedV2 = callback(closure_1_2[6]).DefaultGuildsRestrictedV2;
@@ -96,7 +96,7 @@ createToggle = {
       setDefault.show(obj);
       const obj3 = setDefault;
     } else {
-      obj = _require(6242);
+      obj = _require(6251);
       const sanitizedRestrictedGuilds = obj.getSanitizedRestrictedGuilds();
       if (arg0) {
         sanitizedRestrictedGuilds.delete(tmp);

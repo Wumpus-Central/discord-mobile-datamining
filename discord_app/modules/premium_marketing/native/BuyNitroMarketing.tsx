@@ -1,10 +1,10 @@
-// === Module 13010: BuyNitroMarketing ===
+// === Module 13232: BuyNitroMarketing ===
 
-// Module 13010 (BuyNitroMarketing)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 13232 (BuyNitroMarketing)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
+import { PremiumTypes } from "GuildFeatures" /* 1923 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -46,7 +46,7 @@ export default function BuyNitroMarketing(onPaymentDismiss) {
   let obj3 = applicationId(onPaymentDismiss[9]);
   let tmp7;
   if (null != initialTier) {
-    obj = { tier: null, productId: "Array" };
+    obj = { tier: null, productId: "r" };
     obj[0] = initialTier;
     tmp7 = obj;
   }

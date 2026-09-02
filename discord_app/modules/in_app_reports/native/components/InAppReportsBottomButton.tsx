@@ -1,9 +1,9 @@
-// === Module 12789: InAppReportsBottomButton ===
+// === Module 13010: InAppReportsBottomButton ===
 
-// Module 12789 (InAppReportsBottomButton)
+// Module 13010 (InAppReportsBottomButton)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import messagesProxyDefault from "messagesProxy" /* 2501 */;
+import ThemesDefault from "Themes" /* 709 */;
+import messagesProxyDefault from "messagesProxy" /* 2500 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -28,35 +28,35 @@ export default function InAppReportsBottomButton(button) {
   if (null == button) {
     return null;
   } else {
-    const string3 = button(1236).intl.string;
+    const string3 = button(1233).intl.string;
     if ("submit" === button.type) {
-      const intl2 = tmp17(1236).intl;
+      const intl2 = tmp17(1233).intl;
       const string = intl2.string;
       if (isModeratorReport) {
         let stringResult = string(messagesProxyDefault.ZUyreS);
       } else {
-        const intl3 = tmp17(1236).intl;
-        const stringResult1 = string(tmp17(1236).t["G+vU89"]);
+        const intl3 = tmp17(1233).intl;
+        const stringResult1 = string(tmp17(1233).t["G+vU89"]);
         stringResult = stringResult1;
-        const formatResult = intl3.format(tmp17(1236).t.Q0tSKT, {});
+        const formatResult = intl3.format(tmp17(1233).t.Q0tSKT, {});
       }
     } else {
       if ("next" === button.type) {
-        const intl = tmp17(1236).intl;
-        let stringResult2 = intl.string(tmp17(1236).t.PDTjLN);
+        const intl = tmp17(1233).intl;
+        let stringResult2 = intl.string(tmp17(1233).t.PDTjLN);
       } else {
         stringResult2 = tmp19;
         if ("cancel" === button.type) {
-          const intl5 = tmp17(1236).intl;
-          stringResult2 = intl5.string(tmp17(1236).t["ETE/oC"]);
+          const intl5 = tmp17(1233).intl;
+          stringResult2 = intl5.string(tmp17(1233).t["ETE/oC"]);
         }
       }
-      const intl4 = tmp17(1236).intl;
+      const intl4 = tmp17(1233).intl;
       const string2 = intl4.string;
       if (isModeratorReport) {
         let string2Result = string2(messagesProxyDefault.psKFdJ);
       } else {
-        string2Result = string2(tmp17(1236).t.h6D8Vy);
+        string2Result = string2(tmp17(1233).t.h6D8Vy);
       }
       let obj = { style: null, children: null };
       obj[0] = tmp.container;
@@ -86,7 +86,7 @@ export default function InAppReportsBottomButton(button) {
         const obj3 = { style: null, children: null };
         obj3[0] = tmp.errorText;
         obj3[1] = string2Result;
-        tmp14Result = tmp14(tmp17(1297).LegacyText, obj3);
+        tmp14Result = tmp14(tmp17(1296).LegacyText, obj3);
       }
       items1[2] = tmp14Result;
       obj[1] = items1;

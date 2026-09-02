@@ -1,8 +1,8 @@
-// === Module 9654: initialize ===
+// === Module 9667: initialize ===
 
-// Module 9654 (initialize)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 9667 (initialize)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 let c0 = null;
 let c1 = null;

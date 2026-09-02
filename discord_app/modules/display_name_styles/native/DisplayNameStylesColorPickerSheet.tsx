@@ -1,12 +1,12 @@
-// === Module 14948: DisplayNameStylesColorPickerSheet ===
+// === Module 15177: DisplayNameStylesColorPickerSheet ===
 
-// Module 14948 (DisplayNameStylesColorPickerSheet)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 15177 (DisplayNameStylesColorPickerSheet)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { getColorPresetsForEffect } from "items3" /* 1939 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import { getColorPresetsForEffect } from "items3" /* 1938 */;
+import { AnalyticEvents } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

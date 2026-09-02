@@ -1,8 +1,8 @@
-// === Module 8674: getSystemLocale ===
+// === Module 8689: getSystemLocale ===
 
-// Module 8674 (getSystemLocale)
+// Module 8689 (getSystemLocale)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 
 const result = set.fileFinishedImporting("modules/text_in_voice/GuildTiVPlatformUtils.native.tsx");
 

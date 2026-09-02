@@ -1,6 +1,6 @@
-// === Module 10100: useMuteAwareLocalVolume ===
+// === Module 10122: useMuteAwareLocalVolume ===
 
-// Module 10100 (useMuteAwareLocalVolume)
+// Module 10122 (useMuteAwareLocalVolume)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "_detectH265HardwareDecode" /* 4529 */;
 
@@ -11,7 +11,7 @@ export default function useMuteAwareLocalVolume(arg0, arg1) {
   const _require = arg0;
   closure_1 = arg1;
   let obj = {
-    effectiveVolume: _require(589).useStateFromStores(items, () => {
+    effectiveVolume: _require(586).useStateFromStores(items, () => {
       let num = 0;
       if (null != closure_0) {
         num = 0;

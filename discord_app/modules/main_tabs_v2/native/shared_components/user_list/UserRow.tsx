@@ -1,19 +1,19 @@
-// === Module 10640: UserRowSubLabel ===
+// === Module 10861: UserRowSubLabel ===
 
-// Module 10640 (UserRowSubLabel)
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import ActivityStatusDefault from "ActivityStatus" /* 9239 */;
+// Module 10861 (UserRowSubLabel)
+import initialize from "initialize" /* 586 */;
+import ThemesDefault from "Themes" /* 709 */;
+import ActivityStatusDefault from "ActivityStatus" /* 9253 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import closure_6 from "addApplication" /* 4519 */;
-import closure_7 from "initialize" /* 7407 */;
-import closure_8 from "ensureGuildLoaded" /* 1387 */;
+import closure_7 from "initialize" /* 7416 */;
+import closure_8 from "ensureGuildLoaded" /* 1386 */;
 import closure_9 from "sortActivity" /* 4569 */;
 import closure_10 from "markAllUserIdListsStale" /* 4130 */;
-import { UserRowModes } from "UserRowModes" /* 10632 */;
-import ME from "ME" /* 676 */;
+import { UserRowModes } from "UserRowModes" /* 10853 */;
+import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -60,7 +60,7 @@ function UserRowSubLabel(arg0) {
     const obj4 = { uri: null };
     obj4[0] = str;
     obj3[2] = obj4;
-    const items1 = [callback(tmp(1297).Icon, obj3, stateFromStores.id), ];
+    const items1 = [callback(tmp(1296).Icon, obj3, stateFromStores.id), ];
     const obj5 = { lineClamp: 1, variant: "text-xs/medium", color: "text-subtle", children: null };
     obj5[3] = stateFromStores.name;
     items1[1] = callback(tmp(4474).Text, obj5);
@@ -188,7 +188,7 @@ const memoResult = importAllResult.memo(function UserRow(type) {
   const memo = flag2.useMemo(() => {
     const items = [];
     if (NONE !== guildId.ACTIONS) {
-      let obj = { accessibilityActions: null, actions: "Array" };
+      let obj = { accessibilityActions: null, actions: "r" };
       obj[0] = items;
       return obj;
     } else {
@@ -368,17 +368,17 @@ const memoResult = importAllResult.memo(function UserRow(type) {
             const channel = closure_1_8.getChannel(arg0);
             if (null != channel) {
               closure_1_1(closure_1_2[14])(channel.isPrivate(), "must be a DM");
-              const obj4 = closure_1_1(closure_1_2[15])(channel, false);
-              if (!obj4.inCall) {
-                obj4.onPress();
+              const obj2 = closure_1_1(closure_1_2[15])(channel, false);
+              if (!obj2.inCall) {
+                obj2.onPress();
               }
-              const tmp4 = closure_1_1;
-              const tmp5 = closure_1_2;
-              const tmp6 = closure_1_1(closure_1_2[14]);
+              const tmp = closure_1_1;
+              const tmp2 = closure_1_2;
+              const tmp3 = closure_1_1(closure_1_2[14]);
               const obj = { recipientIds: null };
               obj[0] = current.id;
               closure_1_1(closure_1_2[13]).openPrivateChannel(obj);
-              const tmp4Result = closure_1_1(closure_1_2[13]);
+              const tmpResult = closure_1_1(closure_1_2[13]);
             }
           });
         };
@@ -427,17 +427,17 @@ const memoResult = importAllResult.memo(function UserRow(type) {
         const channel = closure_1_8.getChannel(arg0);
         if (null != channel) {
           closure_1_1(closure_1_2[14])(channel.isPrivate(), "must be a DM");
-          const obj4 = closure_1_1(closure_1_2[15])(channel, false);
-          if (!obj4.inCall) {
-            obj4.onPress();
+          const obj2 = closure_1_1(closure_1_2[15])(channel, false);
+          if (!obj2.inCall) {
+            obj2.onPress();
           }
-          const tmp4 = closure_1_1;
-          const tmp5 = closure_1_2;
-          const tmp6 = closure_1_1(closure_1_2[14]);
+          const tmp = closure_1_1;
+          const tmp2 = closure_1_2;
+          const tmp3 = closure_1_1(closure_1_2[14]);
           const obj = { recipientIds: null };
           obj[0] = current.id;
           closure_1_1(closure_1_2[13]).openPrivateChannel(obj);
-          const tmp4Result = closure_1_1(closure_1_2[13]);
+          const tmpResult = closure_1_1(closure_1_2[13]);
         }
       });
     } else if (tmp.MESSAGE === actionName) {

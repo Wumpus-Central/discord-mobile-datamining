@@ -1,11 +1,11 @@
-// === Module 7574: updatePoggermodeSettings ===
+// === Module 7584: updatePoggermodeSettings ===
 
-// Module 7574 (updatePoggermodeSettings)
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getScreenshakeLocationNameDefault from "getScreenshakeLocationName" /* 7577 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "initialize" /* 7423 */;
-import closure_4 from "updateCombo" /* 7575 */;
+// Module 7584 (updatePoggermodeSettings)
+import dispatcherDefault from "dispatcher" /* 706 */;
+import getScreenshakeLocationNameDefault from "getScreenshakeLocationName" /* 7587 */;
+import closure_2 from "fetchFingerprint" /* 1215 */;
+import closure_3 from "initialize" /* 7432 */;
+import closure_4 from "updateCombo" /* 7585 */;
 
 const result = require("set").fileFinishedImporting("modules/poggermode/PoggermodeActionCreators.tsx");
 

@@ -1,8 +1,8 @@
-// === Module 16512: onInitializeSync ===
+// === Module 16747: onInitializeSync ===
 
-// Module 16512 (onInitializeSync)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 16747 (onInitializeSync)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 import closure_2 from "reset" /* 4145 */;
 import set from "set" /* 2 */;
 

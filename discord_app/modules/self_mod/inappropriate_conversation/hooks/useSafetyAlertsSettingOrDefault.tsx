@@ -1,10 +1,10 @@
-// === Module 10707: useSafetyAlertsSettingOrDefault ===
+// === Module 10928: useSafetyAlertsSettingOrDefault ===
 
-// Module 10707 (useSafetyAlertsSettingOrDefault)
-import initialize from "initialize" /* 589 */;
-import useUserIsTeen from "useUserIsTeen" /* 8771 */;
-import closure_2 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+// Module 10928 (useSafetyAlertsSettingOrDefault)
+import initialize from "initialize" /* 586 */;
+import useUserIsTeen from "useUserIsTeen" /* 8786 */;
+import closure_2 from "handleConnectionClosedOrResumed" /* 1339 */;
+import closure_3 from "mergeGuildAvatar" /* 1921 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useSafetyAlertsSettingOrDefault.tsx");

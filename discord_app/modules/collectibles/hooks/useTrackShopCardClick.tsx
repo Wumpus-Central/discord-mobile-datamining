@@ -1,9 +1,9 @@
-// === Module 12620: useTrackShopCardClick ===
+// === Module 12844: useTrackShopCardClick ===
 
-// Module 12620 (useTrackShopCardClick)
+// Module 12844 (useTrackShopCardClick)
 import closure_3 from "noop" /* 19 */;
-import { useSelectedVariantIndex } from "useSelectedVariantIndex" /* 12621 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import { useSelectedVariantIndex } from "useSelectedVariantIndex" /* 12845 */;
+import { AnalyticEvents } from "ME" /* 673 */;
 
 let require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useTrackShopCardClick.tsx");

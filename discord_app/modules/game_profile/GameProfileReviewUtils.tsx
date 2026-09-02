@@ -1,6 +1,6 @@
-// === Module 8850: getSteamReviewScoreDescriptionColor ===
+// === Module 8865: getSteamReviewScoreDescriptionColor ===
 
-// Module 8850 (getSteamReviewScoreDescriptionColor)
+// Module 8865 (getSteamReviewScoreDescriptionColor)
 import set from "set" /* 2 */;
 import GameTheme from "GameTheme" /* 4516 */;
 
@@ -37,35 +37,35 @@ export const getSteamReviewScoreDescriptionColor = function getSteamReviewScoreD
 };
 export const getSteamReviewScoreDescriptionIntl = function getSteamReviewScoreDescriptionIntl(result) {
   if (GameTheme.SteamReviewScoreDescription.NO_USER_REVIEWS === result) {
-    const intl10 = tmp(1236).intl;
-    return intl10.string(tmp(1236).t.CLMt8J);
+    const intl10 = tmp(1233).intl;
+    return intl10.string(tmp(1233).t.CLMt8J);
   } else if (tmp(4516).SteamReviewScoreDescription.OVERWHELMINGLY_POSITIVE === result) {
-    const intl9 = tmp(1236).intl;
-    return intl9.string(tmp(1236).t["75sx1S"]);
+    const intl9 = tmp(1233).intl;
+    return intl9.string(tmp(1233).t["75sx1S"]);
   } else if (tmp(4516).SteamReviewScoreDescription.VERY_POSITIVE === result) {
-    const intl8 = tmp(1236).intl;
-    return intl8.string(tmp(1236).t["EkOVg+"]);
+    const intl8 = tmp(1233).intl;
+    return intl8.string(tmp(1233).t["EkOVg+"]);
   } else if (tmp(4516).SteamReviewScoreDescription.POSITIVE === result) {
-    const intl7 = tmp(1236).intl;
-    return intl7.string(tmp(1236).t.ZUkFtr);
+    const intl7 = tmp(1233).intl;
+    return intl7.string(tmp(1233).t.ZUkFtr);
   } else if (tmp(4516).SteamReviewScoreDescription.MOSTLY_POSITIVE === result) {
-    const intl6 = tmp(1236).intl;
-    return intl6.string(tmp(1236).t.M7Z09a);
+    const intl6 = tmp(1233).intl;
+    return intl6.string(tmp(1233).t.M7Z09a);
   } else if (tmp(4516).SteamReviewScoreDescription.MIXED === result) {
-    const intl5 = tmp(1236).intl;
-    return intl5.string(tmp(1236).t.c8yuHR);
+    const intl5 = tmp(1233).intl;
+    return intl5.string(tmp(1233).t.c8yuHR);
   } else if (tmp(4516).SteamReviewScoreDescription.MOSTLY_NEGATIVE === result) {
-    const intl4 = tmp(1236).intl;
-    return intl4.string(tmp(1236).t.H0MSjG);
+    const intl4 = tmp(1233).intl;
+    return intl4.string(tmp(1233).t.H0MSjG);
   } else if (tmp(4516).SteamReviewScoreDescription.NEGATIVE === result) {
-    const intl3 = tmp(1236).intl;
-    return intl3.string(tmp(1236).t.vpLrgz);
+    const intl3 = tmp(1233).intl;
+    return intl3.string(tmp(1233).t.vpLrgz);
   } else if (tmp(4516).SteamReviewScoreDescription.VERY_NEGATIVE === result) {
-    const intl2 = tmp(1236).intl;
-    return intl2.string(tmp(1236).t["5spYuX"]);
+    const intl2 = tmp(1233).intl;
+    return intl2.string(tmp(1233).t["5spYuX"]);
   } else if (tmp(4516).SteamReviewScoreDescription.OVERWHELMINGLY_NEGATIVE === result) {
-    const intl = tmp(1236).intl;
-    return intl.string(tmp(1236).t.A8uk5J);
+    const intl = tmp(1233).intl;
+    return intl.string(tmp(1233).t.A8uk5J);
   } else {
     return null;
   }

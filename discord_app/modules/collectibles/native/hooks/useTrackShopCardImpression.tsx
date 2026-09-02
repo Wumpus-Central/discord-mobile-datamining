@@ -1,140 +1,53 @@
-// === Module 8889: useTrackShopCardImpression ===
+// === Module 8904: useTrackShopCardImpression ===
 
-// Module 8889 (useTrackShopCardImpression)
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4139 */;
-import contextDefault from "context" /* 5953 */;
+// Module 8904 (useTrackShopCardImpression)
 import closure_3 from "noop" /* 19 */;
-import { AnalyticEvents } from "ME" /* 676 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/collectibles/native/hooks/useTrackShopCardImpression.tsx");
 
-export const useTrackShopCardImpression = function useTrackShopCardImpression(product, selectedProduct, flag2) {
+export const useTrackShopCardImpression = function useTrackShopCardImpression(product, selectedProduct) {
   const _require = product;
   importDefault = selectedProduct;
-  dependencyMap = flag2;
-  const collectiblesAnalyticsContext = _require(8890).useCollectiblesAnalyticsContext();
-  const analyticsLocations = contextDefault().analyticsLocations;
-  const size = useWindowDimensionsDefault();
-  const width = size.width;
-  const height = size.height;
-  let obj = _require(8890);
-  const currentUser = _require(8891).useCurrentUser();
-  let obj2 = _require(8891);
-  const canUseCollectiblesResult = getPremiumPlanItemDefault.canUseCollectibles(currentUser);
-  closure_7 = canUseCollectiblesResult;
-  const obj3 = getPremiumPlanItemDefault;
-  const shopDiscountSource = _require(7299).getShopDiscountSource(currentUser);
-  const ref = collectiblesAnalyticsContext.useRef(null);
-  closure_10 = collectiblesAnalyticsContext.useRef(null);
-  closure_11 = collectiblesAnalyticsContext.useRef({ windowWidth: width, windowHeight: height });
-  closure_12 = collectiblesAnalyticsContext.useRef(false);
-  closure_13 = collectiblesAnalyticsContext.useRef(false);
-  closure_14 = collectiblesAnalyticsContext.useRef(false);
-  closure_15 = collectiblesAnalyticsContext.useRef(false);
-  const items = [width, height];
-  const effect = collectiblesAnalyticsContext.useEffect(() => {
-    closure_11.current = { windowWidth: width, windowHeight: height };
+  collectiblesAnalyticsContext = _require(collectiblesAnalyticsContext[1]).useCollectiblesAnalyticsContext();
+  const analyticsLocations = importDefault(collectiblesAnalyticsContext[2])().analyticsLocations;
+  let obj = _require(collectiblesAnalyticsContext[1]);
+  const tmp = collectiblesAnalyticsContext;
+  const tmp3 = importDefault;
+  ({ width: closure_4, height: closure_5 } = importDefault(collectiblesAnalyticsContext[3])());
+  const tmp4 = importDefault(collectiblesAnalyticsContext[3])();
+  const currentUser = _require(collectiblesAnalyticsContext[4]).useCurrentUser();
+  const obj2 = _require(collectiblesAnalyticsContext[4]);
+  const shopDiscountSource = _require(collectiblesAnalyticsContext[5]).getShopDiscountSource(currentUser);
+  const ref = analyticsLocations.useRef(null);
+  closure_8 = analyticsLocations.useRef(false);
+  closure_9 = analyticsLocations.useRef(false);
+  const items = [selectedProduct.skuId];
+  const effect = analyticsLocations.useEffect(() => {
+    closure_8.current = false;
+    closure_9.current = false;
   }, items);
-  const items1 = [canUseCollectiblesResult, , , , , , ];
-  let sessionId;
-  if (collectiblesAnalyticsContext != null) {
-    sessionId = collectiblesAnalyticsContext.sessionId;
-  }
-  items1[1] = sessionId;
-  let tilePosition;
-  if (collectiblesAnalyticsContext != null) {
-    tilePosition = collectiblesAnalyticsContext.tilePosition;
-  }
-  items1[2] = tilePosition;
-  let pageCategory;
-  if (collectiblesAnalyticsContext != null) {
-    pageCategory = collectiblesAnalyticsContext.pageCategory;
-  }
-  items1[3] = pageCategory;
-  let pageSection;
-  if (collectiblesAnalyticsContext != null) {
-    pageSection = collectiblesAnalyticsContext.pageSection;
-  }
-  items1[4] = pageSection;
-  let categoryPosition;
-  if (collectiblesAnalyticsContext != null) {
-    categoryPosition = collectiblesAnalyticsContext.categoryPosition;
-  }
-  items1[5] = categoryPosition;
-  items1[6] = product;
-  const callback = collectiblesAnalyticsContext.useCallback(() => {
-    let priceForCollectiblesProduct = null;
-    if (null != product) {
-      let obj = product(7299);
-      priceForCollectiblesProduct = obj.getPriceForCollectiblesProduct(tmp, closure_7, true);
-    }
-    let strikeThroughPriceAmountForCollectiblesProduct;
-    if (null != product) {
-      strikeThroughPriceAmountForCollectiblesProduct = product(7299).getStrikeThroughPriceAmountForCollectiblesProduct(tmp, closure_7, true);
-      const obj2 = product(7299);
-    }
-    let sessionId;
-    if (collectiblesAnalyticsContext != null) {
-      sessionId = tmp10.sessionId;
-    }
-    obj = { collectibles_shop_session_id: sessionId, sku_id: tmp.skuId, display_price: null, display_price_currency: null, display_price_strikethrough: null, position: null, page_category: null, page_section: null, category_position: null, type: "product" };
-    let amount;
-    if (priceForCollectiblesProduct != null) {
-      amount = priceForCollectiblesProduct.amount;
-    }
-    obj[2] = amount;
-    let str;
-    if (priceForCollectiblesProduct != null) {
-      str = priceForCollectiblesProduct.currency;
-      str = str.toString();
-    }
-    obj[3] = str;
-    obj[4] = strikeThroughPriceAmountForCollectiblesProduct;
-    let tilePosition;
-    if (collectiblesAnalyticsContext != null) {
-      tilePosition = tmp10.tilePosition;
-    }
-    obj[5] = tilePosition;
-    let pageCategory;
-    if (collectiblesAnalyticsContext != null) {
-      pageCategory = tmp10.pageCategory;
-    }
-    obj[6] = pageCategory;
-    let pageSection;
-    if (collectiblesAnalyticsContext != null) {
-      pageSection = tmp10.pageSection;
-    }
-    obj[7] = pageSection;
-    let categoryPosition;
-    if (collectiblesAnalyticsContext != null) {
-      categoryPosition = tmp10.categoryPosition;
-    }
-    obj[8] = categoryPosition;
-    selectedProduct(698).track(analyticsLocations.COLLECTIBLES_TILE_IMPRESSION, obj);
-  }, items1);
-  const items2 = [product, selectedProduct, , , , , ];
+  const items1 = [product, selectedProduct, , , , , ];
   let cardId;
   if (collectiblesAnalyticsContext != null) {
     cardId = collectiblesAnalyticsContext.cardId;
   }
-  items2[2] = cardId;
-  let sessionId1;
+  items1[2] = cardId;
+  let sessionId;
   if (collectiblesAnalyticsContext != null) {
-    sessionId1 = collectiblesAnalyticsContext.sessionId;
+    sessionId = collectiblesAnalyticsContext.sessionId;
   }
-  items2[3] = sessionId1;
-  let tilePosition1;
+  items1[3] = sessionId;
+  let tilePosition;
   if (collectiblesAnalyticsContext != null) {
-    tilePosition1 = collectiblesAnalyticsContext.tilePosition;
+    tilePosition = collectiblesAnalyticsContext.tilePosition;
   }
-  items2[4] = tilePosition1;
-  items2[5] = analyticsLocations;
-  items2[6] = shopDiscountSource;
-  const callback1 = obj5.useCallback(() => {
-    let obj = product(8892);
-    obj = { name: product(503).ImpressionNames.SHOP_CARD, type: product(503).ImpressionTypes.VIEW, properties: null };
+  items1[4] = tilePosition;
+  items1[5] = analyticsLocations;
+  items1[6] = shopDiscountSource;
+  closure_10 = analyticsLocations.useCallback(() => {
+    let obj = product(collectiblesAnalyticsContext[6]);
+    obj = { name: product(collectiblesAnalyticsContext[7]).ImpressionNames.SHOP_CARD, type: product(collectiblesAnalyticsContext[7]).ImpressionTypes.VIEW, properties: null };
     obj = { sku_id: selectedProduct.skuId, card_id: null, shop_session_id: null, position_in_section: null, product_sku_ids: null, location_stack: null, discount_source: null };
     let cardId;
     if (collectiblesAnalyticsContext != null) {
@@ -151,72 +64,40 @@ export const useTrackShopCardImpression = function useTrackShopCardImpression(pr
       tilePosition = tmp3.tilePosition;
     }
     obj[3] = tilePosition;
-    let tmpResult = tmp(7298);
+    let tmpResult = tmp(tmp2[8]);
     obj[4] = tmpResult.getProductSkuIds(product);
     obj[5] = analyticsLocations;
-    tmpResult = tmp(7299);
+    tmpResult = tmp(tmp2[5]);
     obj[6] = tmpResult.getAnalyticsShopDiscountSource(shopDiscountSource);
     obj[2] = obj;
     obj.trackImpression(obj, false, true);
-  }, items2);
-  const items3 = [flag2, callback, callback1];
-  const effect1 = obj5.useEffect(() => {
-    if (closure_2) {
-      const _setInterval = setInterval;
-      closure_10.current = setInterval(() => {
-        if (null != ref.current) {
-          const current = ref.current;
-          current.measure((arg0, arg1, arg2, arg3, arg4, arg5) => {
-            ({ windowWidth, windowHeight } = ref.current);
-            const bound = Math.min(arg5 + arg3, windowHeight);
-            const bound1 = Math.max(0, bound - Math.max(arg5, 0));
-            const bound2 = Math.min(arg4 + arg2, windowWidth);
-            const result = bound1 * Math.max(0, bound2 - Math.max(arg4, 0));
-            const result1 = arg2 * arg3;
-            const bound3 = Math.min(arg5 + arg3, windowHeight);
-            const bound4 = Math.max(0, bound3 - Math.max(arg5, 0));
-            const bound5 = Math.min(arg4 + arg2, windowWidth);
-            const result2 = bound4 * Math.max(0, bound5 - Math.max(arg4, 0));
-            const result3 = arg2 * arg3;
-            let tmp12 = result3 > 0 && result2 > 0;
-            if (tmp12) {
-              tmp12 = result2 / result3 >= 0.5;
-            }
-            if (result1 > 0 && result > 0 && result / result1 >= 0) {
-              if (tmp16) {
-                tmp15();
-                tmp14.current = true;
-              }
-              tmp16 = tmp13.current && !tmp14.current;
-            } else {
-              tmp14.current = false;
-            }
-            closure_12.current = result1 > 0 && result > 0 && result / result1 >= 0;
-            if (tmp12) {
-              if (tmp21) {
-                tmp20();
-                tmp19.current = true;
-              }
-              tmp21 = tmp18.current && !tmp19.current;
-            } else {
-              tmp19.current = false;
-            }
-            closure_14.current = tmp12;
-          });
+  }, items1);
+  tmp3(tmp[9])(() => {
+    const current = ref.current;
+    if (current != null) {
+      current.measure((arg0, arg1, arg2, arg3, arg4, arg5) => {
+        const bound = Math.min(arg4 + arg2, closure_4);
+        const bound1 = Math.max(0, bound - Math.max(arg4, 0));
+        const bound2 = Math.min(arg5 + arg3, closure_5);
+        const result = arg2 * arg3;
+        let num = 0;
+        if (result > 0) {
+          num = bound1 * Math.max(0, bound2 - Math.max(arg5, 0)) / result;
         }
-      }, 1000);
-      return () => {
-        if (null !== ref2.current) {
-          const _clearInterval = clearInterval;
-          clearInterval(tmp.current);
-          tmp.current = null;
+        if (num >= 0.5) {
+          if (ref.current) {
+            if (!ref2.current) {
+              callback();
+              tmp7.current = true;
+            }
+            ref.current = tmp5;
+          }
         }
-        closure_12.current = false;
-        closure_13.current = false;
-        closure_14.current = false;
-        closure_15.current = false;
-      };
+        if (num < 0.5) {
+          ref2.current = false;
+        }
+      });
     }
-  }, items3);
+  }, 1000);
   return ref;
 };

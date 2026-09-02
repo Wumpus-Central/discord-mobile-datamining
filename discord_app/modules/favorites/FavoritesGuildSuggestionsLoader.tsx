@@ -1,9 +1,9 @@
-// === Module 15864: FavoritesGuildSuggestionsLoaderInner ===
+// === Module 16095: FavoritesGuildSuggestionsLoaderInner ===
 
-// Module 15864 (FavoritesGuildSuggestionsLoaderInner)
-import getAffineChannelIdDefault from "getAffineChannelId" /* 15865 */;
+// Module 16095 (FavoritesGuildSuggestionsLoaderInner)
+import getAffineChannelIdDefault from "getAffineChannelId" /* 16096 */;
 import importAllResult from "noop" /* 19 */;
-import items from "items" /* 15791 */;
+import items from "items" /* 16022 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 function FavoritesGuildSuggestionsLoaderInner() {

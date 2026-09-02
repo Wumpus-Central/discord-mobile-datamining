@@ -1,10 +1,10 @@
-// === Module 7275: handleChange ===
+// === Module 7284: handleChange ===
 
-// Module 7275 (handleChange)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "ensureGuildLoaded" /* 1387 */;
-import closure_1 from "handleConnectionOpen" /* 1981 */;
+// Module 7284 (handleChange)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import closure_0 from "ensureGuildLoaded" /* 1386 */;
+import closure_1 from "handleConnectionOpen" /* 1980 */;
 import closure_2 from "updateUserGuildSettingsInternal" /* 4701 */;
 
 function handleChange() {

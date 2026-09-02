@@ -1,11 +1,11 @@
-// === Module 10696: _acceptMessageRequest ===
+// === Module 10917: _acceptMessageRequest ===
 
-// Module 10696 (_acceptMessageRequest)
-import sendRequest from "sendRequest" /* 530 */;
-import handleLogoutDefault from "handleLogout" /* 6052 */;
-import MessageRequestConsentStatusTypes from "MessageRequestConsentStatusTypes" /* 10697 */;
+// Module 10917 (_acceptMessageRequest)
+import sendRequest from "sendRequest" /* 527 */;
+import handleLogoutDefault from "handleLogout" /* 6060 */;
+import MessageRequestConsentStatusTypes from "MessageRequestConsentStatusTypes" /* 10918 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 676 */;
+import { Endpoints } from "ME" /* 673 */;
 
 require = arg1;
 function _acceptMessageRequest() {

@@ -1,8 +1,8 @@
-// === Module 10524: useThemeAndReducedMotionAwareAssetUrl ===
+// === Module 10745: useThemeAndReducedMotionAwareAssetUrl ===
 
-// Module 10524 (useThemeAndReducedMotionAwareAssetUrl)
-import initialize from "initialize" /* 589 */;
-import isThemeLight from "isThemeLight" /* 1364 */;
+// Module 10745 (useThemeAndReducedMotionAwareAssetUrl)
+import initialize from "initialize" /* 586 */;
+import isThemeLight from "isThemeLight" /* 1363 */;
 import useThemeDefault from "useTheme" /* 4413 */;
 import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 

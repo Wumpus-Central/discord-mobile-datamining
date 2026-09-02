@@ -1,10 +1,10 @@
-// === Module 17471: isLikelyControl ===
+// === Module 17707: isLikelyControl ===
 
-// Module 17471 (isLikelyControl)
-import _modDef1208 from "module_1208" /* 1208 */;
-import initializeDefault from "initialize" /* 5486 */;
+// Module 17707 (isLikelyControl)
+import _modDef1205 from "module_1205" /* 1205 */;
+import initializeDefault from "initialize" /* 5494 */;
 import closure_2 from "getHash" /* 4391 */;
-import closure_3 from "initialize" /* 1212 */;
+import closure_3 from "initialize" /* 1209 */;
 import closure_4 from "handleConnectionOpen" /* 4299 */;
 import set from "set" /* 2 */;
 
@@ -30,7 +30,7 @@ function flushFlags(items, set) {
     let tmp4 = importDefault;
     let tmp5 = dependencyMap;
     let tmp3 = nextResult;
-    let obj = _modDef1208;
+    let obj = _modDef1205;
     let addFeatureFlagResult = obj.addFeatureFlag(nextResult, true);
     if (set != null) {
       let tmp7 = nextResult;

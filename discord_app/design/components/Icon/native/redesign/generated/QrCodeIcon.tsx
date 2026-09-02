@@ -1,10 +1,10 @@
-// === Module 14488: QrCodeIcon ===
+// === Module 14711: QrCodeIcon ===
 
-// Module 14488 (QrCodeIcon)
+// Module 14711 (QrCodeIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 9953 */;
+import registerAsset from "registerAsset" /* 9975 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

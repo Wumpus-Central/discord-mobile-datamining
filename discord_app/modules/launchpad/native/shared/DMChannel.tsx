@@ -1,7 +1,7 @@
-// === Module 16572: ? ===
+// === Module 16807: ? ===
 
-// Module 16572
-import ThemesDefault from "Themes" /* 712 */;
+// Module 16807
+import ThemesDefault from "Themes" /* 709 */;
 import importAllResult from "noop" /* 19 */;
 import { UnreadSetting } from "ReadStateTypes" /* 4702 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -23,10 +23,10 @@ const memoResult = importAllResult.memo(function DMChannel(navigationReplace) {
     flag = false;
   }
   const tmp = callback();
-  let obj = channel(15934);
+  let obj = channel(16165);
   const baseChannelUnreadBadgeState = obj.useBaseChannelUnreadBadgeState(channel, muted);
   ({ unread, mentionCount } = baseChannelUnreadBadgeState);
-  const tmp7 = flag(14913)(channel, { unread });
+  const tmp7 = flag(15142)(channel, { unread });
   let extractTimestampResult;
   if (null != tmp7) {
     let tmp2Result = tmp2(11);
@@ -39,9 +39,9 @@ const memoResult = importAllResult.memo(function DMChannel(navigationReplace) {
       str = "text-default";
     }
   }
-  const tmp4 = flag(16558)();
+  const tmp4 = flag(16793)();
   const fontScale = channel(4935).useFontScale();
-  tmp2Result = tmp2(16559);
+  tmp2Result = tmp2(16794);
   obj = { style: items, underlayColor: tmp.pressableUnderlayColor.backgroundColor };
   items = [tmp.pressable, { borderRadius: tmp4.container.borderRadius }];
   obj = {
@@ -57,7 +57,7 @@ const memoResult = importAllResult.memo(function DMChannel(navigationReplace) {
   const merged = Object.assign(obj);
   obj1 = { channel, unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted, mentionCount, unreadBadge: null, subtitle: null, latestMessageTimestamp: null, channelName: null, fontScale: null };
   const tmp5Result = channel(4935);
-  obj1[5] = jsx(flag(16562), { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted });
+  obj1[5] = jsx(flag(16797), { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted });
   let tmp11Result = null != tmp7;
   if (tmp11Result) {
     const obj3 = { channel: null, message: null, color: null, muted: null, layout: null };
@@ -66,14 +66,14 @@ const memoResult = importAllResult.memo(function DMChannel(navigationReplace) {
     obj3[2] = str;
     obj3[3] = muted;
     obj3[4] = tmp5(4171).ChannelListLayoutTypes.COMPACT;
-    tmp11Result = tmp11(tmp5(10192).ChannelRowPreview, obj3);
+    tmp11Result = tmp11(tmp5(10214).ChannelRowPreview, obj3);
   }
   obj1[6] = tmp11Result;
   obj1[7] = extractTimestampResult;
   obj1[8] = flag(4674)(channel);
   obj1[9] = fontScale;
-  obj.children = flag(16571)(obj1);
-  return tmp2Result(jsx(channel(5068).PressableHighlight, {
+  obj.children = flag(16806)(obj1);
+  return tmp2Result(jsx(channel(5076).PressableHighlight, {
     onPress: importAllResult.useCallback(() => {
       let obj = channel(closure_1_2[3]);
       obj = { navigationReplace: flag };

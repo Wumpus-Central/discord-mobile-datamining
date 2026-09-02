@@ -1,12 +1,12 @@
-// === Module 10137: UserSummaryItem ===
+// === Module 10159: UserSummaryItem ===
 
-// Module 10137 (UserSummaryItem)
+// Module 10159 (UserSummaryItem)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1431 */;
+import ThemesDefault from "Themes" /* 709 */;
+import Button from "Button" /* 1296 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "trackCommunicationDisabled" /* 1992 */;
+import closure_4 from "trackCommunicationDisabled" /* 1991 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

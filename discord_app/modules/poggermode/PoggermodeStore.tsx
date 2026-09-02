@@ -1,14 +1,14 @@
-// === Module 7575: updateCombo ===
+// === Module 7585: updateCombo ===
 
-// Module 7575 (updateCombo)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getComboShakeIntensity from "getComboShakeIntensity" /* 7576 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "handleConnectionOpen" /* 1981 */;
-import closure_4 from "initialize" /* 7423 */;
-import ConfettiLocation from "ConfettiLocation" /* 7424 */;
-import { ComponentActions } from "ME" /* 676 */;
+// Module 7585 (updateCombo)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import getComboShakeIntensity from "getComboShakeIntensity" /* 7586 */;
+import closure_2 from "fetchFingerprint" /* 1215 */;
+import closure_3 from "handleConnectionOpen" /* 1980 */;
+import closure_4 from "initialize" /* 7432 */;
+import ConfettiLocation from "ConfettiLocation" /* 7433 */;
+import { ComponentActions } from "ME" /* 673 */;
 import set from "set" /* 2 */;
 
 require = arg1;
@@ -215,17 +215,17 @@ const poggermodeStore = new PoggermodeStore(dispatcherDefault, {
             if (null != mentions) {
               if (null != mentions.find((id) => id.id === id)) {
                 if (null != value) {
-                  let num2 = id(7576).getComboShakeIntensity(value, LEVEL_4.LEVEL_4);
+                  let num2 = id(7586).getComboShakeIntensity(value, LEVEL_4.LEVEL_4);
                   if (num2 == null) {
                     num2 = 0.001;
                   }
                   let result = num2;
-                  const obj2 = id(7576);
+                  const obj2 = id(7586);
                 } else {
                   const _Math = Math;
                   result = 4 * Math.random();
                 }
-                const ComponentDispatch = id(1231).ComponentDispatch;
+                const ComponentDispatch = id(1228).ComponentDispatch;
                 obj = { duration: 1000, intensity: null };
                 obj[1] = result;
                 ComponentDispatch.dispatch(ComponentActions.SHAKE_APP, obj);

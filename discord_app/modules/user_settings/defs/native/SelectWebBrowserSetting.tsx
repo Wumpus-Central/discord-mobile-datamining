@@ -1,11 +1,11 @@
-// === Module 15074: useWebBrowserSettingOptions ===
+// === Module 15303: useWebBrowserSettingOptions ===
 
-// Module 15074 (useWebBrowserSettingOptions)
+// Module 15303 (useWebBrowserSettingOptions)
 import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import NativeModules from "NativeModules" /* 4443 */;
-import MobileUserSettings from "MobileUserSettings" /* 7884 */;
-import createToggle from "createToggle" /* 11068 */;
+import MobileUserSettings from "MobileUserSettings" /* 7893 */;
+import createToggle from "createToggle" /* 11288 */;
 
 function useWebBrowserSettingOptions() {
   let CHROME = dependencyMap;
@@ -15,26 +15,26 @@ function useWebBrowserSettingOptions() {
   obj1 = NativeModules;
   if (obj1.useBrowserManagerSupportsInAppBrowser()) {
     obj = { label: null, value: null };
-    const intl = tmp(1236).intl;
-    obj[0] = intl.string(tmp(1236).t.YayR6P);
-    obj[1] = tmp(691).WebBrowserType.IN_APP;
+    const intl = tmp(1233).intl;
+    obj[0] = intl.string(tmp(1233).t.YayR6P);
+    obj[1] = tmp(688).WebBrowserType.IN_APP;
     items.push(obj);
   }
-  let tmpResult = tmp(500);
+  let tmpResult = tmp(1234);
   if (!tmpResult.isAndroid()) {
     obj = { label: null, value: null };
-    const intl2 = tmp(1236).intl;
-    obj[0] = intl2.string(tmp(1236).t.kEfv89);
-    obj[1] = tmp(691).WebBrowserType.SAFARI;
+    const intl2 = tmp(1233).intl;
+    obj[0] = intl2.string(tmp(1233).t.kEfv89);
+    obj[1] = tmp(688).WebBrowserType.SAFARI;
     items.push(obj);
   }
   if (!browserManagerIsChromeInstalled) {
     return items;
   } else {
-    tmpResult = tmp(500);
-    const intl3 = tmp(1236).intl;
+    tmpResult = tmp(1234);
+    const intl3 = tmp(1233).intl;
     const string = intl3.string;
-    let t = tmp(1236).t;
+    let t = tmp(1233).t;
     if (isAndroidResult) {
       let stringResult = string(t.kEfv89);
     } else {
@@ -42,7 +42,7 @@ function useWebBrowserSettingOptions() {
     }
     obj1 = { label: null, value: null };
     obj1[0] = stringResult;
-    CHROME = tmp(691).WebBrowserType.CHROME;
+    CHROME = tmp(688).WebBrowserType.CHROME;
     obj1[1] = CHROME;
     t = items.push(obj1);
     isAndroidResult = tmpResult.isAndroid();

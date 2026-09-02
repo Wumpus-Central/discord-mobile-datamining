@@ -1,18 +1,18 @@
-// === Module 11809: EnteringAnimation ===
+// === Module 12032: EnteringAnimation ===
 
-// Module 11809 (EnteringAnimation)
+// Module 12032 (EnteringAnimation)
 import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
+import initialize from "initialize" /* 586 */;
+import ThemesDefault from "Themes" /* 709 */;
 import _modDef4217 from "module_4217" /* 4217 */;
 import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING" /* 4479 */;
 import timingNone from "timingNone" /* 4482 */;
 import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4933 */;
-import playDefault from "play" /* 5944 */;
-import useGradientBottom from "useGradientBottom" /* 7616 */;
-import useAppLauncherOnboardingContentDefault from "useAppLauncherOnboardingContent" /* 11609 */;
-import _mod11634 from "module_11634" /* 11634 */;
-import _mod11810 from "module_11810" /* 11810 */;
+import playDefault from "play" /* 5952 */;
+import useGradientBottom from "useGradientBottom" /* 7626 */;
+import useAppLauncherOnboardingContentDefault from "useAppLauncherOnboardingContent" /* 11832 */;
+import _mod11857 from "module_11857" /* 11857 */;
+import _mod12033 from "module_12033" /* 12033 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -76,7 +76,7 @@ export const AppLauncherOnboardingChatInputButtonAnimation = function AppLaunche
   obj = { children: null };
   obj = { entering: EnteringAnimation, exiting: ExitingAnimation, style: items1, collapsable: false, children: null };
   items1 = [absoluteFill.absoluteFill, tmp.glowAnimation];
-  obj1 = { collapsable: false, style: tmp.glowLottie, source: _mod11810, autoPlay: !stateFromStores };
+  obj1 = { collapsable: false, style: tmp.glowLottie, source: _mod12033, autoPlay: !stateFromStores };
   const items2 = [callback(playDefault, obj1), , ];
   const items3 = [tmp.glowMask, gradientBottom];
   items2[1] = callback(closure_3, { collapsable: false, style: items3 });
@@ -86,7 +86,7 @@ export const AppLauncherOnboardingChatInputButtonAnimation = function AppLaunche
   const obj3 = { collapsable: false, style: tmp.trinketsLottie, source: null, autoPlay: null };
   const obj2 = { collapsable: false, style: tmp.fakeButton };
   const tmp5 = playDefault;
-  obj3[2] = _mod11634;
+  obj3[2] = _mod11857;
   obj3[3] = !stateFromStores;
   items4[1] = callback(playDefault, obj3);
   obj[0] = items4;

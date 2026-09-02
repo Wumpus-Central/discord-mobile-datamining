@@ -1,10 +1,10 @@
-// === Module 17037: onPostConnectionOpen ===
+// === Module 17273: onPostConnectionOpen ===
 
-// Module 17037 (onPostConnectionOpen)
-import initializeDefault from "initialize" /* 5486 */;
+// Module 17273 (onPostConnectionOpen)
+import initializeDefault from "initialize" /* 5494 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import closure_4 from "mergeGuildAvatar" /* 1921 */;
+import { AnalyticEvents } from "ME" /* 673 */;
 
 let require = arg1;
 let c6 = 26;
@@ -231,11 +231,11 @@ prototype["collectAgeSignal"] = function collectAgeSignal() {
         } else if (1 === tmp7) {
           c3 = 0;
           callback = dependencyMap;
-          let obj2 = callback2(1208);
+          let obj2 = callback2(1205);
           obj2 = { tags: null };
           obj2[0] = { source: "parental_consent_manager", step: "collect_age_signal" };
           obj2.captureException(callback, obj2);
-          let obj4 = callback(500);
+          let obj4 = callback(1234);
           let str = "android";
           if (obj4.isIOS()) {
             str = "ios";

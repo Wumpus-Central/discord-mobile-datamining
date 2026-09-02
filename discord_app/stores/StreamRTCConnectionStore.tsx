@@ -3,19 +3,19 @@
 // Module 4568 (initialize)
 import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
-import initializeDefault from "initialize" /* 589 */;
+import initializeDefault from "initialize" /* 586 */;
 import isStreamKey from "isStreamKey" /* 4544 */;
 import isOwnerDefault from "isOwner" /* 4571 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4579 */;
-import canSpectateDefault from "canSpectate" /* 13455 */;
+import canSpectateDefault from "canSpectate" /* 13678 */;
 import closure_4 from "initialize" /* 4501 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "fetchFingerprint" /* 1215 */;
 import importDefaultResult from "_detectH265HardwareDecode" /* 4529 */;
 import closure_7 from "sortActivity" /* 4569 */;
 import closure_8 from "createRTCConnection" /* 4554 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 import { StreamTypes } from "StreamIssueReportReasons" /* 4545 */;
-import importDefaultResult1 from "dispatcher" /* 709 */;
+import importDefaultResult1 from "dispatcher" /* 706 */;
 
 require = arg1;
 ({ RTCConnectionQuality: c9, StreamLayouts } = ME);
@@ -289,7 +289,7 @@ if (importDefaultResult.isSupported()) {
   obj[9] = function handleStreamStop(appContext) {
     appContext = appContext.appContext;
     const streamKey = appContext.streamKey;
-    closure_11[streamKey] = { appContext, analyticsLocations: "Array" };
+    closure_11[streamKey] = { appContext, analyticsLocations: "r" };
     const item = applyDefault.forEach(closure_18, (analyticsContext) => {
       analyticsContext = analyticsContext.analyticsContext;
       analyticsContext.setActionContext(appContext);
@@ -319,15 +319,15 @@ if (importDefaultResult.isSupported()) {
         tmp11 = null == dependencyMap2[streamKey];
       }
       if (tmp11) {
-        tmp10[streamKey] = tmp4(7483).getStreamerApplication(decodeStreamKeyResult, closure_7);
-        const tmp4Result = tmp4(7483);
+        tmp10[streamKey] = tmp4(7493).getStreamerApplication(decodeStreamKeyResult, closure_7);
+        const tmp4Result = tmp4(7493);
       }
       obj = { streamRegion: null, streamApplication: null, streamSourceType: null, actionContext: null, numViewers: null, goLiveModalDurationMs: null, analyticsLocations: null };
       obj[0] = region;
       obj[1] = dependencyMap[streamKey];
       let str2 = "unknown";
       if (null != dependencyMap2[streamKey]) {
-        if (!tmp4(500).isPlatformEmbedded) {
+        if (!tmp4(1234).isPlatformEmbedded) {
           let name;
           if (globalThis.platform != null) {
             name = globalThis.platform.name;

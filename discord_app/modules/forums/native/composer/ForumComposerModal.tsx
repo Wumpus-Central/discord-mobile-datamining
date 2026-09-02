@@ -1,15 +1,15 @@
-// === Module 10329: ForumComposerModal ===
+// === Module 10351: ForumComposerModal ===
 
-// Module 10329 (ForumComposerModal)
+// Module 10351 (ForumComposerModal)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "initialize" /* 9654 */;
-import closure_6 from "ensureGuildLoaded" /* 1387 */;
+import closure_5 from "initialize" /* 9667 */;
+import closure_6 from "ensureGuildLoaded" /* 1386 */;
 import closure_7 from "handleChanged" /* 4854 */;
 import { DraftType } from "handleChanged" /* 4854 */;
 import closure_9 from "map" /* 4853 */;
-import closure_10 from "handleLoadThreadsSuccess" /* 6124 */;
+import closure_10 from "handleLoadThreadsSuccess" /* 6132 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

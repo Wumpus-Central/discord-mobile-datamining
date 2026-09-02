@@ -1,8 +1,8 @@
-// === Module 4120: createFavoritesGuildChannelRecord ===
+// === Module 4119: createFavoritesGuildChannelRecord ===
 
-// Module 4120 (createFavoritesGuildChannelRecord)
+// Module 4119 (createFavoritesGuildChannelRecord)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 
 const ChannelTypes = ME.ChannelTypes;
 const result = set.fileFinishedImporting("modules/favorites/utils/createFavoritesGuildChannelRecord.tsx");

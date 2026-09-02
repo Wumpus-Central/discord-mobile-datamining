@@ -1,7 +1,7 @@
-// === Module 14657: BouncingArrow ===
+// === Module 14883: BouncingArrow ===
 
-// Module 14657 (BouncingArrow)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 14883 (BouncingArrow)
+import ThemesDefault from "Themes" /* 709 */;
 import _modDef4217 from "module_4217" /* 4217 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -60,12 +60,12 @@ export default function BountiesAutoScrollIndicator(showProgressRing) {
   let obj = _require(4197);
   const token = obj.useToken(ThemesDefault.colors.WHITE);
   obj = { size: "md", color: ThemesDefault.colors.WHITE };
-  const tmp6 = callback(_require(14658).ArrowSmallUpIcon, obj);
+  const tmp6 = callback(_require(14884).ArrowSmallUpIcon, obj);
   _require = tmp6;
   obj = { style: tmp.root, children: null };
   obj1 = { variant: "text-md/semibold", color: "text-default", children: null };
-  const intl = _require(1236).intl;
-  obj1[2] = intl.string(_require(1236).t.eafsh4);
+  const intl = _require(1233).intl;
+  obj1[2] = intl.string(_require(1233).t.eafsh4);
   const items = [callback(_require(4474).Text, obj1), ];
   const obj2 = { style: tmp.ringContainer, children: null };
   if (flag) {
@@ -75,7 +75,7 @@ export default function BountiesAutoScrollIndicator(showProgressRing) {
     obj3[8] = function children() {
       return closure_0;
     };
-    let tmp5Result = tmp5(_require(14660).AnimatedCircularProgress, obj3);
+    let tmp5Result = tmp5(_require(14886).AnimatedCircularProgress, obj3);
   } else {
     const obj4 = { children: null };
     obj4[0] = tmp6;

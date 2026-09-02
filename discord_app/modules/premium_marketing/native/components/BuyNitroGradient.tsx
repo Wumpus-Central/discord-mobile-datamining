@@ -1,9 +1,9 @@
-// === Module 13055: BuyNitroGradient ===
+// === Module 13277: BuyNitroGradient ===
 
-// Module 13055 (BuyNitroGradient)
+// Module 13277 (BuyNitroGradient)
 import noopAll from "noop" /* 19 */;
 import LinearGradientDefault from "LinearGradient" /* 4940 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
+import { PremiumTypes } from "GuildFeatures" /* 1923 */;
 import jsxProd from "jsxProd" /* 21 */;
 import importDefaultResult from "module_4217" /* 4217 */;
 

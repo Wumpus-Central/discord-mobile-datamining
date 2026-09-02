@@ -1,11 +1,11 @@
-// === Module 7431: setCooldown ===
+// === Module 7441: setCooldown ===
 
-// Module 7431 (setCooldown)
-import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "ensureGuildLoaded" /* 1387 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4121 */;
+// Module 7441 (setCooldown)
+import initializeDefault from "initialize" /* 586 */;
+import setDefault from "set" /* 684 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import closure_3 from "ensureGuildLoaded" /* 1386 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4120 */;
 
 const require = arg1;
 function setCooldown(channel, SendMessage, arg2) {
@@ -17,7 +17,7 @@ function setCooldown(channel, SendMessage, arg2) {
     const id = channel.id;
     delete tmp2[tmp];
   }
-  obj = _require(7432);
+  obj = _require(7442);
   if (!obj.canBypassSlowmode(channel)) {
     if (arg2 > 0) {
       const _Date = Date;

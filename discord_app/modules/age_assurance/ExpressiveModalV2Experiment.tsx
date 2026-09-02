@@ -1,10 +1,10 @@
-// === Module 8700: useIsExpressiveModalV2Enabled ===
+// === Module 8715: useIsExpressiveModalV2Enabled ===
 
-// Module 8700 (useIsExpressiveModalV2Enabled)
-import initialize from "initialize" /* 589 */;
-import parseMessageEmbedForProps from "parseMessageEmbedForProps" /* 8689 */;
-import closure_2 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8701 */;
-import ApexExperiment from "ApexExperiment" /* 1468 */;
+// Module 8715 (useIsExpressiveModalV2Enabled)
+import initialize from "initialize" /* 586 */;
+import parseMessageEmbedForProps from "parseMessageEmbedForProps" /* 8704 */;
+import closure_2 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8716 */;
+import ApexExperiment from "ApexExperiment" /* 1467 */;
 
 require = arg1;
 ApexExperiment = { 1: null, 2: { enabled: true } };

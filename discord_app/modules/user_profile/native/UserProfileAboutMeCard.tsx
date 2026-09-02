@@ -1,24 +1,24 @@
-// === Module 9036: Heading ===
+// === Module 9050: Heading ===
 
-// Module 9036 (Heading)
+// Module 9050 (Heading)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import Button from "Button" /* 1296 */;
 import map from "map" /* 4197 */;
 import Text from "Text" /* 4474 */;
-import UserProfileCardDefault from "UserProfileCard" /* 6000 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 6004 */;
-import LinkButtonDefault from "LinkButton" /* 9037 */;
-import useFriendsSinceDate from "useFriendsSinceDate" /* 9041 */;
+import UserProfileCardDefault from "UserProfileCard" /* 6008 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 6012 */;
+import LinkButtonDefault from "LinkButton" /* 9051 */;
+import useFriendsSinceDate from "useFriendsSinceDate" /* 9055 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "_getSystemLocale" /* 1996 */;
-import closure_6 from "trackCommunicationDisabled" /* 1992 */;
-import closure_7 from "createGuildRecordFromRust" /* 1909 */;
-import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 6001 */;
-import { Routes } from "ME" /* 676 */;
-import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1498 */;
+import closure_5 from "_getSystemLocale" /* 1995 */;
+import closure_6 from "trackCommunicationDisabled" /* 1991 */;
+import closure_7 from "createGuildRecordFromRust" /* 1908 */;
+import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 6009 */;
+import { Routes } from "ME" /* 673 */;
+import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1497 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -102,10 +102,10 @@ function MemberJoinDates(userId) {
     tmp2 = closure_14;
   }
   ({ textVariant, columnGap } = tmp2);
-  let obj = userId(589);
+  let obj = userId(586);
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
-  obj1 = userId(589);
+  obj1 = userId(586);
   const items1 = [closure_7];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => {
     let guild = null;
@@ -114,7 +114,7 @@ function MemberJoinDates(userId) {
     }
     return guild;
   });
-  let obj2 = userId(589);
+  let obj2 = userId(586);
   const items2 = [closure_6];
   const stateFromStores2 = obj2.useStateFromStores(items2, () => {
     let member = null;
@@ -123,24 +123,24 @@ function MemberJoinDates(userId) {
     }
     return member;
   });
-  let obj3 = userId(5351);
+  let obj3 = userId(5359);
   let obj4 = DISCORD_EPOCHDefault;
   const createdAtDate = obj3.getCreatedAtDate(obj4.extractTimestamp(userId), stateFromStores);
-  let obj5 = userId(5351);
+  let obj5 = userId(5359);
   let joinedAt;
   if (stateFromStores2 != null) {
     joinedAt = stateFromStores2.joinedAt;
   }
   const createdAtDate1 = obj5.getCreatedAtDate(joinedAt, stateFromStores);
   obj = { themeType, children: null };
-  const intl = tmp4(1236).intl;
-  obj[1] = intl.string(userId(1236).t.a6XYD9);
+  const intl = tmp4(1233).intl;
+  obj[1] = intl.string(userId(1233).t.a6XYD9);
   const items3 = [callback(Heading, obj), ];
   obj = { style: items4, children: null };
   items4 = [callback3().memberJoinDates, { columnGap }];
-  obj1 = { themeType, icon: callback(tmp4(9039).ClydeIcon, { size: "xs" }), accessibilityLabel: null, children: null };
-  const intl2 = tmp4(1236).intl;
-  obj1[2] = intl2.formatToPlainString(userId(1236).t["9t7w53"], { date: createdAtDate });
+  obj1 = { themeType, icon: callback(tmp4(9053).ClydeIcon, { size: "xs" }), accessibilityLabel: null, children: null };
+  const intl2 = tmp4(1233).intl;
+  obj1[2] = intl2.formatToPlainString(userId(1233).t["9t7w53"], { date: createdAtDate });
   obj1[3] = createdAtDate;
   const items5 = [callback(TextWithIcon, obj1), ];
   let tmp13Result = null != stateFromStores1 && null != createdAtDate1;
@@ -154,13 +154,13 @@ function MemberJoinDates(userId) {
     obj4[0] = themeType;
     obj5 = { guild: null, size: null };
     obj5[0] = stateFromStores1;
-    obj5[1] = tmp4(6004).GuildIconSizes.XXSMALL;
+    obj5[1] = tmp4(6012).GuildIconSizes.XXSMALL;
     obj4[1] = tmp15(GuildIconSizesDefault, obj5);
-    const intl3 = tmp4(1236).intl;
+    const intl3 = tmp4(1233).intl;
     const obj6 = { guildName: null, date: null };
     obj6[0] = stateFromStores1.name;
     obj6[1] = createdAtDate1;
-    obj4[2] = intl3.formatToPlainString(tmp4(1236).t.FdLNDK, obj6);
+    obj4[2] = intl3.formatToPlainString(tmp4(1233).t.FdLNDK, obj6);
     obj4[3] = createdAtDate1;
     items6[1] = tmp15(TextWithIcon, obj4);
     obj2[0] = items6;
@@ -190,8 +190,8 @@ function FriendsSinceDate(themeType) {
     obj = { children: null };
     obj = { themeType: null, children: null };
     obj[0] = themeType;
-    const intl = tmp3(1236).intl;
-    obj[1] = intl.string(tmp3(1236).t.wlTO8v);
+    const intl = tmp3(1233).intl;
+    obj[1] = intl.string(tmp3(1233).t.wlTO8v);
     const items = [callback(Heading, obj), ];
     obj1 = { variant: null, color: "text-default", children: null };
     obj1[0] = tmp.textVariant;
@@ -216,8 +216,8 @@ function PolicyLinks(arg0) {
     if (tmp5Result) {
       obj = { url: null, label: null, themeType: null };
       obj[0] = termsOfServiceUrl;
-      const intl2 = tmp7(1236).intl;
-      obj[1] = intl2.string(tmp7(1236).t.s7STcY);
+      const intl2 = tmp7(1233).intl;
+      obj[1] = intl2.string(tmp7(1233).t.s7STcY);
       obj[2] = themeType;
       tmp5Result = tmp5(PolicyLink, obj);
     }
@@ -226,8 +226,8 @@ function PolicyLinks(arg0) {
     if (tmp5Result) {
       obj1 = { url: null, label: null, themeType: null };
       obj1[0] = privacyPolicyUrl;
-      const intl3 = tmp7(1236).intl;
-      obj1[1] = intl3.string(tmp7(1236).t.kH3JR5);
+      const intl3 = tmp7(1233).intl;
+      obj1[1] = intl3.string(tmp7(1233).t.kH3JR5);
       obj1[2] = themeType;
       tmp5Result = tmp5(PolicyLink, obj1);
     }

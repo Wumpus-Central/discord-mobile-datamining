@@ -1,11 +1,11 @@
-// === Module 10297: showNotification ===
+// === Module 10319: showNotification ===
 
-// Module 10297 (showNotification)
-import initializeDefault from "initialize" /* 5486 */;
+// Module 10319 (showNotification)
+import initializeDefault from "initialize" /* 5494 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "refreshSourceMapCookie" /* 706 */;
-import { InAppNotificationTypes } from "ME" /* 676 */;
+import closure_6 from "refreshSourceMapCookie" /* 703 */;
+import { InAppNotificationTypes } from "ME" /* 673 */;
 import { NativePermissionStatus } from "NativePermissionStatus" /* 4730 */;
 
 const require = arg1;
@@ -129,7 +129,7 @@ function showNotification(uri) {
               obj1[0] = tmp36;
               let tmp7 = obj1;
             } else {
-              obj1 = obj1(500);
+              obj1 = obj1(1234);
               if (!obj1.isIOS()) {
                 c2 = 1;
                 c3 = 1;
@@ -149,13 +149,13 @@ function showNotification(uri) {
             }
             obj1 = tmp7;
             BUG_REPORTER = closure_1_7.BUG_REPORTER;
-            dependencyMap = obj1(10177).getNotificationDuration(BUG_REPORTER);
-            const obj5 = obj1(10177);
+            dependencyMap = obj1(10199).getNotificationDuration(BUG_REPORTER);
+            const obj5 = obj1(10199);
             const obj3 = { type: null, duration: null, key: null, image: null, imageUri: null, onDismiss: null, inAppNotificationId: null };
             obj3[0] = BUG_REPORTER;
             obj3[1] = dependencyMap;
-            const obj6 = BUG_REPORTER(10179);
-            obj3[2] = obj1(514).v4();
+            const obj6 = BUG_REPORTER(10201);
+            obj3[2] = obj1(511).v4();
             obj3[3] = obj1;
             uri = undefined;
             if (obj1 != null) {
@@ -165,8 +165,8 @@ function showNotification(uri) {
             obj3[5] = function onDismiss() {
               _undefined(table[7]).clearNotification();
             };
-            const obj8 = obj1(514);
-            obj3[6] = obj1(514).v4();
+            const obj8 = obj1(511);
+            obj3[6] = obj1(511).v4();
             obj6.enqueueNotification(obj3);
             c3 = 3;
             return { value: "HermesInternal", done: null };

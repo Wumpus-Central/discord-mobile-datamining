@@ -1,13 +1,13 @@
-// === Module 17075: prototype ===
+// === Module 17311: prototype ===
 
-// Module 17075 (prototype)
-import initializeDefault from "initialize" /* 5486 */;
+// Module 17311 (prototype)
+import initializeDefault from "initialize" /* 5494 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "mergeGuildAvatar" /* 1921 */;
 import closure_4 from "handlePaymentSourceCreateEnd" /* 4141 */;
 import closure_5 from "reset" /* 4145 */;
-import closure_6 from "addEntitlement" /* 7142 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import closure_6 from "addEntitlement" /* 7151 */;
+import GuildFeatures from "GuildFeatures" /* 1923 */;
 
 let require = arg1;
 ({ PREMIUM_SUBSCRIPTION_APPLICATION: error, PremiumTypes: closure_8 } = GuildFeatures);

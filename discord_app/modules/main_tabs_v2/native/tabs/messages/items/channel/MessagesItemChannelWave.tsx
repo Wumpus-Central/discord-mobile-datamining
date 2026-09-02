@@ -1,7 +1,7 @@
-// === Module 15630: ? ===
+// === Module 15861: ? ===
 
-// Module 15630
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 15861
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Text from "Text" /* 4474 */;
 import Button from "Button" /* 4928 */;
 import { jsx } from "jsxProd" /* 21 */;

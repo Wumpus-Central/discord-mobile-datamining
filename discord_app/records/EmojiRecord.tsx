@@ -1,8 +1,8 @@
-// === Module 17147: prototype ===
+// === Module 17383: prototype ===
 
-// Module 17147 (prototype)
-import toJSDefault from "toJS" /* 1936 */;
-import closure_0 from "createdAt" /* 1935 */;
+// Module 17383 (prototype)
+import toJSDefault from "toJS" /* 1935 */;
+import closure_0 from "createdAt" /* 1934 */;
 
 toJSDefault;
 const result = require("set").fileFinishedImporting("records/EmojiRecord.tsx");

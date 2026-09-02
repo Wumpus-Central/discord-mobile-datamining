@@ -1,6 +1,6 @@
-// === Module 10827: createUseCollectiblesShopStyles ===
+// === Module 11047: createUseCollectiblesShopStyles ===
 
-// Module 10827 (createUseCollectiblesShopStyles)
+// Module 11047 (createUseCollectiblesShopStyles)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 

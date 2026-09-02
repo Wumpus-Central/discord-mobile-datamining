@@ -1,11 +1,11 @@
-// === Module 12631: useFetchCollectiblesProducts ===
+// === Module 12852: useFetchCollectiblesProducts ===
 
-// Module 12631 (useFetchCollectiblesProducts)
+// Module 12852 (useFetchCollectiblesProducts)
 import closure_2 from "_slicedToArray" /* 32 */;
 import { useEffect } from "noop" /* 19 */;
 import closure_4 from "addSku" /* 4527 */;
-import closure_5 from "updateCategoriesAndProducts" /* 7287 */;
-import { SKUProductLines } from "ME" /* 676 */;
+import closure_5 from "updateCategoriesAndProducts" /* 7296 */;
+import { SKUProductLines } from "ME" /* 673 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesProducts.tsx");
@@ -14,16 +14,16 @@ export const useFetchCollectiblesProducts = function useFetchCollectiblesProduct
   const _require = first;
   dependencyMap = arg1;
   const items = [stateFromStoresArray2];
-  const stateFromStoresArray = _require(647).useStateFromStoresArray(items, () => lib.map((arg0) => closure_4.get(arg0)));
-  let obj = _require(647);
+  const stateFromStoresArray = _require(644).useStateFromStoresArray(items, () => lib.map((arg0) => closure_4.get(arg0)));
+  let obj = _require(644);
   const items1 = [stateFromStoresArray3];
-  const stateFromStoresArray1 = _require(647).useStateFromStoresArray(items1, () => lib.map((arg0) => product.getProduct(arg0)));
-  const obj2 = _require(647);
+  const stateFromStoresArray1 = _require(644).useStateFromStoresArray(items1, () => lib.map((arg0) => product.getProduct(arg0)));
+  const obj2 = _require(644);
   const items2 = [stateFromStoresArray3];
-  stateFromStoresArray2 = _require(647).useStateFromStoresArray(items2, () => lib.map((closure_0) => productFetch.getProductFetch(closure_0)));
-  const obj4 = _require(647);
+  stateFromStoresArray2 = _require(644).useStateFromStoresArray(items2, () => lib.map((closure_0) => productFetch.getProductFetch(closure_0)));
+  const obj4 = _require(644);
   const items3 = [stateFromStoresArray3];
-  stateFromStoresArray3 = _require(647).useStateFromStoresArray(items3, () => lib.map((closure_0) => productFetchBackedOff.isProductFetchBackedOff(closure_0)));
+  stateFromStoresArray3 = _require(644).useStateFromStoresArray(items3, () => lib.map((closure_0) => productFetchBackedOff.isProductFetchBackedOff(closure_0)));
   const items4 = [first, stateFromStoresArray, stateFromStoresArray2, stateFromStoresArray1, arg1, stateFromStoresArray3];
   stateFromStoresArray1(() => {
     const entries = lib.entries();
@@ -48,7 +48,7 @@ export const useFetchCollectiblesProducts = function useFetchCollectiblesProduct
         }
         let tmp19 = lib;
         let tmp20 = dependencyMap;
-        tmp16 = type === lib(1950).CollectiblesItemType.BUNDLE;
+        tmp16 = type === lib(1949).CollectiblesItemType.BUNDLE;
       }
       if (tmp16) {
         let tmp21 = tmp12;
@@ -86,7 +86,7 @@ export const useFetchCollectiblesProducts = function useFetchCollectiblesProduct
       if (!tmp24) {
         let tmp34 = lib;
         let tmp35 = dependencyMap;
-        let obj = lib(7286);
+        let obj = lib(7295);
         let tmp36 = tmp8;
         obj = { includeBundles: null };
         obj[0] = tmp15;

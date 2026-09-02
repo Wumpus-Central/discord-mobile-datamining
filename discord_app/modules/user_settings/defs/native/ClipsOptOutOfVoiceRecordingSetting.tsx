@@ -1,9 +1,9 @@
-// === Module 14581: _updateClipsAllowVoiceRecording ===
+// === Module 14804: _updateClipsAllowVoiceRecording ===
 
-// Module 14581 (_updateClipsAllowVoiceRecording)
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 14804 (_updateClipsAllowVoiceRecording)
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import createToggle from "createToggle" /* 11068 */;
+import createToggle from "createToggle" /* 11288 */;
 
 require = arg1;
 function _updateClipsAllowVoiceRecording() {
@@ -56,7 +56,7 @@ function _updateClipsAllowVoiceRecording() {
             obj2[0] = arg1;
             return obj2;
           } else {
-            obj = callback2(709);
+            obj = callback2(706);
             obj.dispatch({ type: "CLIPS_ALLOW_VOICE_RECORDING_UPDATE" });
             c3 = 3;
             return { value: "HermesInternal", done: null };

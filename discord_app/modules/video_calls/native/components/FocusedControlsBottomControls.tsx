@@ -1,20 +1,20 @@
-// === Module 9661: FocusedControlsExpanded ===
+// === Module 9674: FocusedControlsExpanded ===
 
-// Module 9661 (FocusedControlsExpanded)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 9674 (FocusedControlsExpanded)
+import ThemesDefault from "Themes" /* 709 */;
 import _mod4217 from "module_4217" /* 4217 */;
 import _modDef4217 from "module_4217" /* 4217 */;
 import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING" /* 4479 */;
-import CallPTTButtonLooksDefault from "CallPTTButtonLooks" /* 9665 */;
+import CallPTTButtonLooksDefault from "CallPTTButtonLooks" /* 9678 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import VoiceChatDrawerState from "VoiceChatDrawerState" /* 9520 */;
-import BOX_MODE_ACTIONSHEET_WIDTH from "BOX_MODE_ACTIONSHEET_WIDTH" /* 9521 */;
-import ME from "ME" /* 676 */;
+import VoiceChatDrawerState from "VoiceChatDrawerState" /* 9533 */;
+import BOX_MODE_ACTIONSHEET_WIDTH from "BOX_MODE_ACTIONSHEET_WIDTH" /* 9534 */;
+import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
-import importDefaultResult from "createTextStyle" /* 5461 */;
+import importDefaultResult from "createTextStyle" /* 5469 */;
 
 require = arg1;
 function FocusedControlsExpanded(children) {
@@ -59,8 +59,8 @@ function FocusedControlsExpanded(children) {
 function FocusedControlsBottomDrawerTooltip(positionY) {
   positionY = positionY.positionY;
   const tmp = callback3();
-  let obj = positionY(9662);
-  const canShowTooltip = obj.useCanShowTooltip(positionY(691).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS, true);
+  let obj = positionY(9675);
+  const canShowTooltip = obj.useCanShowTooltip(positionY(688).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS, true);
   positionY(4217);
   const fn = function o() {
     return { opacity: 1 - Math.min(-1 * positionY.get() / closure_1_15, 1) };
@@ -75,12 +75,12 @@ function FocusedControlsBottomDrawerTooltip(positionY) {
     obj[0] = tmp6;
     obj1 = { style: null, arrowPosition: null, arrowDirection: null, arrowWidth: 8, arrowHeight: 4, containerStyle: null, labelStyle: null, label: null };
     obj1[0] = tmp.tooltipStyle;
-    obj1[1] = tmp2(1297).TooltipArrowPositions.CENTER;
-    obj1[2] = tmp2(1297).TooltipArrowDirections.DOWN;
+    obj1[1] = tmp2(1296).TooltipArrowPositions.CENTER;
+    obj1[2] = tmp2(1296).TooltipArrowDirections.DOWN;
     ({ containerStyle: obj4[5], labelStyle: obj4[6] } = tmp);
-    const intl = tmp2(1236).intl;
-    obj1[7] = intl.string(tmp2(1236).t.zYzy2i);
-    obj[1] = callback2(tmp2(1297).Tooltip, obj1);
+    const intl = tmp2(1233).intl;
+    obj1[7] = intl.string(tmp2(1233).t.zYzy2i);
+    obj[1] = callback2(tmp2(1296).Tooltip, obj1);
     tmp7 = callback2(_modDef4217.View, obj);
   }
   return tmp7;
@@ -102,7 +102,7 @@ function FocusedControlsAboveActionBarView(positionY) {
   obj = { accessible: true, onPress: onPressHeader, accessibilityRole: "button", accessibilityLabel: "Group DM", accessibilityHint: "Press to start a new conversation", accessibilityState: { expanded: isExpanded }, children: null };
   obj1 = { style: tmp.aboveActionBarContainer, children: null };
   const animatedStyle = obj.useAnimatedStyle(fn);
-  const items = [callback2(FocusedControlsBottomDrawerTooltip, { positionY }), callback2(positionY(5937).ActionSheetHeaderBar, {}), ];
+  const items = [callback2(FocusedControlsBottomDrawerTooltip, { positionY }), callback2(positionY(5945).ActionSheetHeaderBar, {}), ];
   let tmp4Result = null != aboveActionBar;
   if (tmp4Result) {
     const obj2 = { style: null, children: null };
@@ -616,7 +616,7 @@ export default function FocusedControlsBottomControls(omitPTT) {
   let tmp4Result = null;
   if (!flag) {
     obj = { look: null, style: null, sendCallback: null, stopCallback: null };
-    obj[0] = _require(9665).CallPTTButtonLooks.BLUR;
+    obj[0] = _require(9678).CallPTTButtonLooks.BLUR;
     obj[1] = tmp.ptbButton;
     obj[2] = closure_8;
     obj[3] = closure_9;

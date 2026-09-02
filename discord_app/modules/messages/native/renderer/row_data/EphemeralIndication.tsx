@@ -1,11 +1,11 @@
-// === Module 7994: createEphemeralIndication ===
+// === Module 8003: createEphemeralIndication ===
 
-// Module 7994 (createEphemeralIndication)
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import combinedDefault from "combined" /* 1995 */;
-import getEphemeralReasonMessage from "getEphemeralReasonMessage" /* 7995 */;
-import closure_3 from "handleMessageSendFailedAutomod" /* 7847 */;
-import ME from "ME" /* 676 */;
+// Module 8003 (createEphemeralIndication)
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import combinedDefault from "combined" /* 1994 */;
+import getEphemeralReasonMessage from "getEphemeralReasonMessage" /* 8004 */;
+import closure_3 from "handleMessageSendFailedAutomod" /* 7856 */;
+import ME from "ME" /* 673 */;
 
 require = arg1;
 ({ HelpdeskArticles: c4, MessageFlags: c5 } = ME);
@@ -27,7 +27,7 @@ export const createEphemeralIndication = function createEphemeralIndication(mess
       }
       let obj = { content: null, helpArticleLink: null, helpButtonAccessibilityLabel: null };
       const ephemeralReasonMessage = obj1.getEphemeralReasonMessage(ephemerality_reason1);
-      const intl2 = tmp3(1236).intl;
+      const intl2 = tmp3(1233).intl;
       obj = { handleDelete: null, reason: null };
       obj1 = { action: "bindDismissMessage", message: null };
       obj1[1] = message;
@@ -35,7 +35,7 @@ export const createEphemeralIndication = function createEphemeralIndication(mess
       obj[1] = ephemeralReasonMessage;
       obj[0] = intl2.formatToParts(getSystemLocale.t.xgCMRQ, obj);
       obj[1] = combinedDefault.getArticleURL(constants.USING_APPS_FAQ);
-      const intl3 = tmp3(1236).intl;
+      const intl3 = tmp3(1233).intl;
       obj[2] = intl3.string(getSystemLocale.t.OIWSJe);
       return obj;
     } else {
@@ -51,8 +51,8 @@ export const createEphemeralIndication = function createEphemeralIndication(mess
       obj2[2] = intl5.string(getSystemLocale.t.htHOrp);
       if (null != message.getMessage(message.id)) {
         obj2.helpArticleLink = combinedDefault.getArticleURL(constants.GUILD_AUTOMOD_BLOCKED_MESSAGE);
-        const intl = tmp9(1236).intl;
-        obj2.helpButtonAccessibilityLabel = intl.string(tmp9(1236).t.OiCBhP);
+        const intl = tmp9(1233).intl;
+        obj2.helpButtonAccessibilityLabel = intl.string(tmp9(1233).t.OiCBhP);
         const tmp11Result = combinedDefault;
       }
       return obj2;

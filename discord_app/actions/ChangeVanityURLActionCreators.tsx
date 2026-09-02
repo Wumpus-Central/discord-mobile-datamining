@@ -1,10 +1,10 @@
-// === Module 17228: ? ===
+// === Module 17464: ? ===
 
-// Module 17228
+// Module 17464
 import set from "set" /* 2 */;
-import sendRequest from "sendRequest" /* 530 */;
-import ME from "ME" /* 676 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import sendRequest from "sendRequest" /* 527 */;
+import ME from "ME" /* 673 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 const Endpoints = ME.Endpoints;
 const result = set.fileFinishedImporting("actions/ChangeVanityURLActionCreators.tsx");
@@ -29,7 +29,7 @@ export default {
     const self = this;
     let obj = dispatcherDefault;
     obj.dispatch({ type: "CHANGE_VANITY_URL_MODAL_SUBMIT" });
-    const HTTP = self(530).HTTP;
+    const HTTP = self(527).HTTP;
     obj = { url: Endpoints.GUILD_VANITY_URL(id), body: obj, oldFormErrors: true, rejectWithError: true };
     obj = { code: vanityURLCode };
     return HTTP.patch(obj).then((body) => {
@@ -51,9 +51,9 @@ export default {
     const obj3 = sendRequest;
     return HTTP.patch(obj).then((body) => {
       ({ code, uses } = body.body);
-      callback(709).dispatch({ type: "GUILD_SETTINGS_SET_VANITY_URL", code, uses });
+      callback(706).dispatch({ type: "GUILD_SETTINGS_SET_VANITY_URL", code, uses });
     }, (body) => {
-      let obj = callback(709);
+      let obj = callback(706);
       obj = { type: "CHANGE_VANITY_URL_MODAL_SUBMIT_FAILURE", error: body.body, hasError: true };
       obj.dispatch(obj);
       return body;

@@ -1,15 +1,15 @@
-// === Module 15992: BadgedIcon ===
+// === Module 16223: BadgedIcon ===
 
-// Module 15992 (BadgedIcon)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 16223 (BadgedIcon)
+import ThemesDefault from "Themes" /* 709 */;
 import map from "map" /* 4197 */;
 import useThemeDefault from "useTheme" /* 4413 */;
 import styleProperties from "styleProperties" /* 4934 */;
-import SavedMessageSortTypes from "SavedMessageSortTypes" /* 7604 */;
-import SolidCutoutDefault from "SolidCutout" /* 8098 */;
+import SavedMessageSortTypes from "SavedMessageSortTypes" /* 7614 */;
+import SolidCutoutDefault from "SolidCutout" /* 8106 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "getTimeSafe" /* 11243 */;
+import closure_5 from "getTimeSafe" /* 11466 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -24,7 +24,7 @@ function BadgedIcon(arg0) {
   if (type === SavedMessageSortTypes.SavedMessageSortTypes.REMINDER) {
     let BookmarkIcon = tmp4(4441).ClockIcon;
   } else {
-    BookmarkIcon = tmp4(11290).BookmarkIcon;
+    BookmarkIcon = tmp4(11513).BookmarkIcon;
   }
   obj = { style: items, children: null };
   items = [tmp6.container, iconSizeStyles];

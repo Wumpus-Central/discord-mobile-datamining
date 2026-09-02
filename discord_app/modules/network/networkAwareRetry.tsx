@@ -1,8 +1,8 @@
-// === Module 13575: _networkAwareRetry ===
+// === Module 13798: _networkAwareRetry ===
 
-// Module 13575 (_networkAwareRetry)
+// Module 13798 (_networkAwareRetry)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_4 from "fetchFingerprint" /* 1215 */;
 
 const require = arg1;
 function _networkAwareRetry() {
@@ -50,7 +50,7 @@ function _networkAwareRetry() {
               closure_3 = undefined;
               c6 = 1;
               c7 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else {
             if (1 === tmp7) {
@@ -110,7 +110,7 @@ function _networkAwareRetry() {
                 obj5[0] = arg1;
                 return obj5;
               } else {
-                obj1 = num14(1473);
+                obj1 = num14(1472);
                 c6 = 5;
                 c7 = 1;
                 obj6 = { value: null, done: false };

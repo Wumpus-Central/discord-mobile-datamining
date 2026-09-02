@@ -1,8 +1,8 @@
-// === Module 13818: StepPill ===
+// === Module 14041: StepPill ===
 
-// Module 13818 (StepPill)
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2011 */;
+// Module 14041 (StepPill)
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import messagesProxyDefault from "messagesProxy" /* 2010 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;

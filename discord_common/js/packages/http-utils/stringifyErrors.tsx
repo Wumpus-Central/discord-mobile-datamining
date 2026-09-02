@@ -1,6 +1,6 @@
-// === Module 587: stringifyErrors ===
+// === Module 584: stringifyErrors ===
 
-// Module 587 (stringifyErrors)
+// Module 584 (stringifyErrors)
 import set from "set" /* 2 */;
 
 function stringifyErrors(str) {

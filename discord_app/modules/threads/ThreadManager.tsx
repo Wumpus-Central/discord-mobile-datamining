@@ -1,10 +1,10 @@
-// === Module 17078: handleChannelDelete ===
+// === Module 17314: handleChannelDelete ===
 
-// Module 17078 (handleChannelDelete)
-import initializeDefault from "initialize" /* 5486 */;
-import withErrorHandlingDefault from "withErrorHandling" /* 7640 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "ensureGuildLoaded" /* 1387 */;
+// Module 17314 (handleChannelDelete)
+import initializeDefault from "initialize" /* 5494 */;
+import withErrorHandlingDefault from "withErrorHandling" /* 7649 */;
+import closure_2 from "fetchFingerprint" /* 1215 */;
+import closure_3 from "ensureGuildLoaded" /* 1386 */;
 
 initializeDefault;
 class ThreadManager extends tmp2 {
@@ -21,7 +21,7 @@ prototype["handleChannelDelete"] = function handleChannelDelete(channel) {
   if (null != channel.guild_id) {
     allThreadsForParent = store.getAllThreadsForParent(channel.id);
     if (allThreadsForParent.length > 0) {
-      const Emitter = allThreadsForParent(589).Emitter;
+      const Emitter = allThreadsForParent(586).Emitter;
       Emitter.batched(() => {
         for (const item10005 of allThreadsForParent) {
           let tmp = allThreadsForParent;
@@ -73,7 +73,7 @@ prototype["handleGuildDelete"] = function handleGuildDelete(guild) {
   if (!guild.unavailable) {
     allThreadsForGuild = store.getAllThreadsForGuild(guild.id);
     if (0 !== allThreadsForGuild.length) {
-      const Emitter = allThreadsForGuild(589).Emitter;
+      const Emitter = allThreadsForGuild(586).Emitter;
       Emitter.batched(() => {
         for (const item10005 of allThreadsForGuild) {
           let tmp = allThreadsForGuild;

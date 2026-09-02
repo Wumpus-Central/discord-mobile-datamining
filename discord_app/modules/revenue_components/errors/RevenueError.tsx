@@ -1,6 +1,6 @@
-// === Module 8490: prototype ===
+// === Module 8503: prototype ===
 
-// Module 8490 (prototype)
+// Module 8503 (prototype)
 import set from "set" /* 2 */;
 
 const prototype = function RevenueError(errorHandlingBehavior) {

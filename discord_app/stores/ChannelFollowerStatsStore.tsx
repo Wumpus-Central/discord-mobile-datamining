@@ -1,8 +1,8 @@
-// === Module 11255: getFollowerStatsForChannel ===
+// === Module 11478: getFollowerStatsForChannel ===
 
-// Module 11255 (getFollowerStatsForChannel)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 11478 (getFollowerStatsForChannel)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 let closure_0 = { FAILED: "failed", SUCCEEDED: "succeeded" };
 let closure_1 = {};

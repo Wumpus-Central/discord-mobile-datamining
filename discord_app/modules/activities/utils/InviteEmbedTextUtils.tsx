@@ -1,11 +1,11 @@
-// === Module 12898: getAskToJoinText ===
+// === Module 13120: getAskToJoinText ===
 
-// Module 12898 (getAskToJoinText)
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2855 */;
+// Module 13120 (getAskToJoinText)
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import messagesProxyDefault from "messagesProxy" /* 2854 */;
 import getNickname from "getNickname" /* 4673 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import { ActivityActionTypes } from "ME" /* 676 */;
+import closure_3 from "mergeGuildAvatar" /* 1921 */;
+import { ActivityActionTypes } from "ME" /* 673 */;
 
 require = arg1;
 function getAskToJoinText(author, name_override, isPrivate, id1, arg4) {

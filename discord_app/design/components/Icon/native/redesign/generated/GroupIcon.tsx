@@ -1,10 +1,10 @@
-// === Module 5038: GroupIcon ===
+// === Module 5042: GroupIcon ===
 
-// Module 5038 (GroupIcon)
+// Module 5042 (GroupIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 4986 */;
+import registerAsset from "registerAsset" /* 4987 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

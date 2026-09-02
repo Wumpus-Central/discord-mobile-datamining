@@ -1,10 +1,10 @@
-// === Module 6377: BuildingBlocksSpotIllustration ===
+// === Module 6386: BuildingBlocksSpotIllustration ===
 
-// Module 6377 (BuildingBlocksSpotIllustration)
+// Module 6386 (BuildingBlocksSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5493 */;
-import metadataDefault from "metadata" /* 6378 */;
+import preloadDefault from "preload" /* 5501 */;
+import metadataDefault from "metadata" /* 6387 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/BuildingBlocksSpotIllustration.native.tsx");

@@ -1,16 +1,16 @@
-// === Module 11995: LeftSlot ===
+// === Module 12219: LeftSlot ===
 
-// Module 11995 (LeftSlot)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 12219 (LeftSlot)
+import ThemesDefault from "Themes" /* 709 */;
 import ManaContext from "ManaContext" /* 4204 */;
 import _modDef4217 from "module_4217" /* 4217 */;
-import renderChatInputActionButtonGiftAndThreadDefault from "renderChatInputActionButtonGiftAndThread" /* 11812 */;
-import FadeTransitionItem from "FadeTransitionItem" /* 11813 */;
-import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 11814 */;
+import renderChatInputActionButtonGiftAndThreadDefault from "renderChatInputActionButtonGiftAndThread" /* 12035 */;
+import FadeTransitionItem from "FadeTransitionItem" /* 12036 */;
+import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 12037 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS as closure_6 } from "TextAreaCta" /* 11535 */;
+import { CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS as closure_6 } from "TextAreaCta" /* 11758 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -24,7 +24,7 @@ function LeftSlot(state) {
   items = [wrapperStyle, { width: slotWidth }, animatedStyle];
   const tmp = useChatInputFloatingBounceDefault(obj);
   const merged = Object.assign(FadeTransitionItem.interactivityProps(isInteractive));
-  obj.children = callback2(renderChatInputActionButtonGiftAndThreadDefault, { canStartThreads: false, channel, onPress, styleButton: "PX_16", shouldShowThread: "lifecycle" });
+  obj.children = callback2(renderChatInputActionButtonGiftAndThreadDefault, { canStartThreads: false, channel, onPress, styleButton: "PX_16", shouldShowThread: "cowboy" });
   return callback2(_modDef4217.View, obj);
 }
 let c4 = importAllResult;
@@ -44,9 +44,9 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   importAllResult = undefined;
   ({ keyboardType, showKeyboardIcon, shouldShowGiftButton, onPressExpression } = channel);
   let obj = channel(4197);
-  const token = obj.useToken(onPressAction(712).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
+  const token = obj.useToken(onPressAction(709).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
   obj1 = channel(4197);
-  const sum = token + 2 * obj1.useToken(onPressAction(712).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
+  const sum = token + 2 * obj1.useToken(onPressAction(709).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
   dependencyMap = sum;
   const tmp6 = callback3();
   callback = tmp6;
@@ -76,8 +76,8 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
     const tmp14 = callback2;
   }
   const items1 = [tmp14Result, ];
-  obj1 = { active: keyboardType === channel(1626).KeyboardTypes.EXPRESSION, showKeyboardIcon, onPress: onPressExpression };
-  items1[1] = callback2(onPressAction(11744), obj1);
+  obj1 = { active: keyboardType === channel(1625).KeyboardTypes.EXPRESSION, showKeyboardIcon, onPress: onPressExpression };
+  items1[1] = callback2(onPressAction(11967), obj1);
   obj[1] = items1;
   return closure_8(View, obj);
 });

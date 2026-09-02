@@ -1,9 +1,9 @@
-// === Module 17208: AsyncFromSyncIterator ===
+// === Module 17444: AsyncFromSyncIterator ===
 
-// Module 17208 (AsyncFromSyncIterator)
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 17444 (AsyncFromSyncIterator)
+import dispatcherDefault from "dispatcher" /* 706 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 
 const require = arg1;
 function AsyncFromSyncIterator(arg0) {
@@ -158,7 +158,7 @@ function _saveRoleSettings() {
                   closure_14 = undefined;
                   c20 = 1;
                   c21 = 1;
-                  return { value: "PX_16", done: null };
+                  return { value: "PX_16", done: true };
                 }
               break;
               case 1:

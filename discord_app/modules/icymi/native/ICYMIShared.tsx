@@ -1,24 +1,24 @@
-// === Module 16079: Separator ===
+// === Module 16310: Separator ===
 
-// Module 16079 (Separator)
-import set from "set" /* 500 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import GuildIconSizes from "GuildIconSizes" /* 6004 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 6004 */;
-import _safeTransitionToDefault from "_safeTransitionTo" /* 6091 */;
-import SolidCutout from "SolidCutout" /* 8098 */;
-import SolidCutoutDefault from "SolidCutout" /* 8098 */;
+// Module 16310 (Separator)
+import ThemesDefault from "Themes" /* 709 */;
+import set from "set" /* 1234 */;
+import Button from "Button" /* 1296 */;
+import GuildIconSizes from "GuildIconSizes" /* 6012 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 6012 */;
+import _safeTransitionToDefault from "_safeTransitionTo" /* 6099 */;
+import SolidCutout from "SolidCutout" /* 8106 */;
+import SolidCutoutDefault from "SolidCutout" /* 8106 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "updateState" /* 6151 */;
-import closure_6 from "ensureGuildLoaded" /* 1387 */;
-import closure_7 from "trackCommunicationDisabled" /* 1992 */;
-import closure_8 from "getUncachedChannelPermissions" /* 4121 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import closure_5 from "updateState" /* 6159 */;
+import closure_6 from "ensureGuildLoaded" /* 1386 */;
+import closure_7 from "trackCommunicationDisabled" /* 1991 */;
+import closure_8 from "getUncachedChannelPermissions" /* 4120 */;
+import closure_9 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createICYMIStyles from "createICYMIStyles" /* 16040 */;
+import createICYMIStyles from "createICYMIStyles" /* 16271 */;
 
 require = arg1;
 class Separator {
@@ -195,14 +195,14 @@ export const navigateToPost = function navigateToPost(id, id2, id3) {
   }, 1500);
   _safeTransitionToDefault(closure_17.CHANNEL(id2, id, id3), { openChannel: true, navigationReplace: false });
   if (null != id3) {
-    _require(6046).runAfterInteractions(() => {
+    _require(6054).runAfterInteractions(() => {
       let obj = id3(closure_1_2[17]);
       obj = { channelId: id, limit: closure_1_14, jump: null };
       obj = { messageId: id3, flash: true, jumpType: id(closure_1_2[18]).JumpType.ANIMATED };
       obj[2] = obj;
       const messages = obj.fetchMessages(obj);
     }, 150);
-    let obj = _require(6046);
+    let obj = _require(6054);
   }
 };
 export { Separator };
@@ -482,9 +482,9 @@ export const SimplePost = function SimplePost(arg0) {
   let sharedValue;
   const tmp = callback3();
   let obj = highlight(4197);
-  token = obj.useToken(token(712).colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT, token(4413)());
+  token = obj.useToken(token(709).colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT, token(4413)());
   obj1 = highlight(4326);
-  const hexWithOpacityResult = obj1.hexWithOpacity(token(712).unsafe_rawColors.BRAND_360, 0.25);
+  const hexWithOpacityResult = obj1.hexWithOpacity(token(709).unsafe_rawColors.BRAND_360, 0.25);
   dependencyMap = hexWithOpacityResult;
   let obj2 = highlight(4217);
   sharedValue = obj2.useSharedValue(0);

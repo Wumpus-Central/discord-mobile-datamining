@@ -1,20 +1,20 @@
-// === Module 5555: PromptHeader ===
+// === Module 5563: PromptHeader ===
 
-// Module 5555 (PromptHeader)
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1431 */;
+// Module 5563 (PromptHeader)
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
 import Text2 from "Text" /* 4474 */;
-import EmojiDefault from "Emoji" /* 5585 */;
+import EmojiDefault from "Emoji" /* 5593 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "getEmojiToGroupId" /* 5401 */;
-import closure_10 from "get" /* 5490 */;
-import closure_11 from "createGuildRecordFromRust" /* 1909 */;
-import closure_12 from "handleUpdate" /* 5467 */;
-import { GuildOnboardingModalStates as closure_13 } from "GUILD_ONBOARDING_MODAL_KEY" /* 5464 */;
-import { EMOJI_URL_BASE_SIZE } from "set" /* 1925 */;
+import closure_9 from "getEmojiToGroupId" /* 5409 */;
+import closure_10 from "get" /* 5498 */;
+import closure_11 from "createGuildRecordFromRust" /* 1908 */;
+import closure_12 from "handleUpdate" /* 5475 */;
+import { GuildOnboardingModalStates as closure_13 } from "GUILD_ONBOARDING_MODAL_KEY" /* 5472 */;
+import { EMOJI_URL_BASE_SIZE } from "set" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -40,8 +40,8 @@ function PromptHeader(currentPrompt) {
     obj2[0] = tmp.requiredSeparator;
     const items1 = [tmp5(tmp4, obj2), ];
     const obj3 = { variant: "text-sm/medium", color: "text-brand", children: null };
-    const intl2 = tmp6(1236).intl;
-    obj3[2] = intl2.string(tmp6(1236).t.Ur8Vrt);
+    const intl2 = tmp6(1233).intl;
+    obj3[2] = intl2.string(tmp6(1233).t.Ur8Vrt);
     items1[1] = tmp5(tmp6(4474).Text, obj3);
     obj1[0] = items1;
     tmp2Result = tmp2(tmp3, obj1);
@@ -174,7 +174,7 @@ function formattedNameHighlight(children) {
 function DropdownOption(option) {
   option = option.option;
   const tmp = callback4();
-  let obj = option(589);
+  let obj = option(586);
   const items = [closure_9];
   const stateFromStores = obj.useStateFromStores(items, () => {
     const emoji = option.emoji;

@@ -1,12 +1,12 @@
-// === Module 16167: JoinRequestActionSheet ===
+// === Module 16398: JoinRequestActionSheet ===
 
-// Module 16167 (JoinRequestActionSheet)
+// Module 16398 (JoinRequestActionSheet)
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_6 from "createdAt" /* 1935 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
+import closure_6 from "createdAt" /* 1934 */;
+import closure_7 from "mergeGuildAvatar" /* 1921 */;
+import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

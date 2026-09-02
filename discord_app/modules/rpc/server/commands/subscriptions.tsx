@@ -1,9 +1,9 @@
-// === Module 14155: ? ===
+// === Module 14378: ? ===
 
-// Module 14155
-import prototypeDefault from "prototype" /* 9503 */;
+// Module 14378
+import prototypeDefault from "prototype" /* 9516 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 
 const require = arg1;
 ({ AnalyticEvents: c4, RPCCommands, RPCErrors: c5 } = ME);
@@ -48,10 +48,10 @@ let obj = {
                 obj1 = { errorCode: null };
                 obj1[0] = closure_1_5.INVALID_EVENT;
                 const _HermesInternal = HermesInternal;
-                let tmp35 = closure_1_1(9503);
+                let tmp35 = closure_1_1(9516);
                 tmp35 = new tmp35(obj1, "Invalid event: " + dependencyMap);
                 throw tmp35;
-              } else if (closure_1_1(14156)(closure_1_1.authorization.scopes, tmp67.scope)) {
+              } else if (closure_1_1(14379)(closure_1_1.authorization.scopes, tmp67.scope)) {
                 const obj2 = { event: null, scope: null, application_id: null, socket_scope: null };
                 obj2[0] = dependencyMap;
                 if (typeof tmp67.scope === "object") {
@@ -63,7 +63,7 @@ let obj = {
                 obj2[1] = scope;
                 obj2[2] = closure_1_1.application.id;
                 obj2[3] = closure_1_1.authorization.scopes.toString();
-                tmp72(698).track(closure_1_4.RPC_SUBSCRIPTION_REQUESTED, obj2);
+                tmp72(695).track(closure_1_4.RPC_SUBSCRIPTION_REQUESTED, obj2);
                 if (null != tmp67.validation) {
                   closure_2 = 1;
                   initialSubscriptionPayload = 1;
@@ -72,11 +72,11 @@ let obj = {
                   return obj3;
                 }
                 const str2 = closure_1_1.authorization.scopes;
-                const tmp72Result = tmp72(698);
+                const tmp72Result = tmp72(695);
               } else {
                 const obj4 = { errorCode: null };
                 obj4[0] = closure_1_5.INVALID_PERMISSIONS;
-                const tmp10 = new tmp72(9503)(obj4, "Not authenticated or invalid scope");
+                const tmp10 = new tmp72(9516)(obj4, "Not authenticated or invalid scope");
                 throw tmp10;
               }
               obj13 = closure_1_0;
@@ -94,7 +94,7 @@ let obj = {
             if (null != closure_1.validate(initialSubscriptionPayload, closure_0.validation(closure_1), { convert: false }).error) {
               let obj5 = { errorCode: null };
               obj5[0] = closure_1_5.INVALID_PAYLOAD;
-              const tmp64 = new closure_1_1(9503)(obj5, "Invalid subscription parameters provided");
+              const tmp64 = new closure_1_1(9516)(obj5, "Invalid subscription parameters provided");
               throw tmp64;
             }
           }
@@ -102,7 +102,7 @@ let obj = {
           obj6[0] = initialSubscriptionPayload;
           obj6[1] = closure_1;
           closure_2 = closure_0.handler(obj6);
-          obj5 = closure_1_0(14157);
+          obj5 = closure_1_0(14380);
           initialSubscriptionPayload = obj5.getInitialSubscriptionPayload(closure_1, closure_2, initialSubscriptionPayload);
           const promise = new Promise((arg0) => {
             setImmediate(() => {

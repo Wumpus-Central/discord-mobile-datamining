@@ -1,11 +1,11 @@
-// === Module 16725: FocusedActivityAccessibilityLayer ===
+// === Module 16960: FocusedActivityAccessibilityLayer ===
 
-// Module 16725 (FocusedActivityAccessibilityLayer)
+// Module 16960 (FocusedActivityAccessibilityLayer)
 import SCREEN_READER_ENABLED_GETTER from "SCREEN_READER_ENABLED_GETTER" /* 4915 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { IS_IOS } from "VoicePanelModes" /* 11840 */;
+import { IS_IOS } from "VoicePanelModes" /* 12063 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

@@ -1,13 +1,13 @@
-// === Module 9113: EducationCoachmarkImg ===
+// === Module 9127: EducationCoachmarkImg ===
 
-// Module 9113 (EducationCoachmarkImg)
-import ThemesDefault from "Themes" /* 712 */;
-import SuperReactionIcon from "SuperReactionIcon" /* 8230 */;
+// Module 9127 (EducationCoachmarkImg)
+import ThemesDefault from "Themes" /* 709 */;
+import SuperReactionIcon from "SuperReactionIcon" /* 8239 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1384 */;
+import closure_6 from "mergeGuildAvatar" /* 1921 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -27,15 +27,15 @@ const result = require("set").fileFinishedImporting("modules/reactions/native/us
 
 export default function useBurstToggleCoachmark(targetRef) {
   const items = [closure_6];
-  const stateFromStores = first(589).useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj = first(589);
+  const stateFromStores = first(586).useStateFromStores(items, () => currentUser.getCurrentUser());
+  let obj = first(586);
   if (obj2.isPremium(stateFromStores)) {
     const items1 = [closure_9];
     let items2 = items1;
   } else {
     items2 = [];
   }
-  let tmpResult = tmp(6251);
+  let tmpResult = tmp(6260);
   const tmp5 = callback(tmpResult.useSelectedDismissibleContent(items2), 2);
   first = tmp5[0];
   closure_1 = tmp7;
@@ -55,7 +55,7 @@ export default function useBurstToggleCoachmark(targetRef) {
     obj[5] = first === closure_1_9;
     return obj;
   }, items3);
-  tmpResult = tmp(8973);
+  tmpResult = tmp(8987);
   const coachmark = tmpResult.useCoachmark(targetRef, memo);
   return tmp5[1];
 };

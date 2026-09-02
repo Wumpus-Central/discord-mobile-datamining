@@ -1,11 +1,11 @@
-// === Module 14049: checkForNewerBuild ===
+// === Module 14272: checkForNewerBuild ===
 
-// Module 14049 (checkForNewerBuild)
+// Module 14272 (checkForNewerBuild)
 import set from "set" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import _checkForNewerBuild from "_checkForNewerBuild" /* 13645 */;
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import _checkForNewerBuild from "_checkForNewerBuild" /* 13868 */;
 import UPDATE_CHECK_INTERVAL from "UPDATE_CHECK_INTERVAL" /* 4459 */;
 
 ({ UPDATE_CONFIG: c3, UPDATE_CHECK_INTERVAL: c4 } = UPDATE_CHECK_INTERVAL);
@@ -27,11 +27,11 @@ prototype["checkForNewerBuild"] = function checkForNewerBuild() {
     let obj = dispatcherDefault;
     const obj2 = _checkForNewerBuild;
     _checkForNewerBuild.checkForNewerBuild().then((newBuild) => {
-      let obj = callback(709);
+      let obj = callback(706);
       obj = { type: "MOBILE_NATIVE_UPDATE_CHECK_FINISHED", newBuild };
       obj.dispatch(obj);
     }, () => {
-      callback(709).dispatch({ type: "MOBILE_NATIVE_UPDATE_CHECK_FAILED" });
+      callback(706).dispatch({ type: "MOBILE_NATIVE_UPDATE_CHECK_FAILED" });
     });
     const checkForNewerBuildResult = _checkForNewerBuild.checkForNewerBuild();
   }

@@ -1,8 +1,8 @@
-// === Module 11060: getMediaPostEmbed ===
+// === Module 11280: getMediaPostEmbed ===
 
-// Module 11060 (getMediaPostEmbed)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 11280 (getMediaPostEmbed)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 let obj = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED", FAILED: 3, [3]: "FAILED" };
 let closure_1 = {};

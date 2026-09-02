@@ -1,9 +1,9 @@
-// === Module 9206: useExpressionPickerCategoriesPlaceholderConfig ===
+// === Module 9220: useExpressionPickerCategoriesPlaceholderConfig ===
 
-// Module 9206 (useExpressionPickerCategoriesPlaceholderConfig)
-import ThemesDefault from "Themes" /* 712 */;
+// Module 9220 (useExpressionPickerCategoriesPlaceholderConfig)
+import ThemesDefault from "Themes" /* 709 */;
 import closure_2 from "noop" /* 19 */;
-import { CATEGORY_ICON_SIZE } from "ME" /* 676 */;
+import { CATEGORY_ICON_SIZE } from "ME" /* 673 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
 const require = arg1;

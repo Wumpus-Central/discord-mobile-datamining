@@ -1,8 +1,8 @@
-// === Module 13488: HdrCaptureMode ===
+// === Module 13711: HdrCaptureMode ===
 
-// Module 13488 (HdrCaptureMode)
+// Module 13711 (HdrCaptureMode)
 import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1468 */;
+import ApexExperiment from "ApexExperiment" /* 1467 */;
 
 let obj = { Never: "never", Always: "always", PermittedDevicesOnly: "permittedDevicesOnly" };
 obj = { hdrCaptureMode: obj.Never };

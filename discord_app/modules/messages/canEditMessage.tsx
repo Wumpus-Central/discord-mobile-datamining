@@ -1,10 +1,10 @@
-// === Module 11323: canEditMessage ===
+// === Module 11546: canEditMessage ===
 
-// Module 11323 (canEditMessage)
+// Module 11546 (canEditMessage)
 import set from "set" /* 2 */;
 import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4737 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6117 */;
-import ME from "ME" /* 676 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6125 */;
+import ME from "ME" /* 673 */;
 
 ({ MessageFlags: c3, MessageStates: c4, MessageTypes: c5 } = ME);
 let result = set.fileFinishedImporting("modules/messages/canEditMessage.tsx");
@@ -29,7 +29,7 @@ export default function canEditMessage(author) {
                 const isPollResult = author.isPoll();
                 let tmp17 = !isPollResult;
                 if (!isPollResult) {
-                  const tmp18 = tmp6(6147)(author);
+                  const tmp18 = tmp6(6155)(author);
                   let tmp19 = !tmp18;
                   if (!tmp18) {
                     tmp19 = author.type !== constants3.MEDIA_MENTION_MESSAGE;

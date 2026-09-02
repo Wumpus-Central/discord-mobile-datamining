@@ -1,11 +1,11 @@
-// === Module 15265: MFAModal ===
+// === Module 15494: MFAModal ===
 
-// Module 15265 (MFAModal)
+// Module 15494 (MFAModal)
 import _modDef4723 from "module_4723" /* 4723 */;
 import _modDef4858 from "module_4858" /* 4858 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
-import { Keyboard } from "get ActivityIndicator" /* 17 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -78,7 +78,7 @@ class MFAModal {
                 ({ mfaType: c0, data: c1 } = c0);
                 c3 = 1;
                 c4 = 1;
-                return { value: "PX_16", done: null };
+                return { value: "PX_16", done: true };
               }
             } else if (1 === tmp5) {
               if (arg0 === 1) {
@@ -155,27 +155,35 @@ class MFAModal {
       }
     }, items2);
     closure_7 = callback1;
-    items3 = [];
-    items3[0] = memo.methods;
+    items3 = [, ];
+    items3[0] = memo;
+    items3[1] = callback;
     items4 = [, , ];
     items4[0] = callback1;
     items4[1] = memo.methods;
     items4[2] = flag;
     memo1 = c4.useMemo(() => {
+      obj = { name: callback(cancel[7]).MfaScreens.SELECT, params: obj };
+      obj = { mfaChallenge: memo, finish: callback };
       const first = memo.methods[0];
       let type;
       if (first != null) {
         type = first.type;
       }
-      if (type == null) {
-        type = callback(cancel[7]).MfaScreens.SELECT;
+      if (undefined === type) {
+        const items = [obj];
+        let items1 = items;
+      } else {
+        obj = { name: null, params: null };
+        obj[0] = type;
+        obj1 = { mfaChallenge: null, finish: null };
+        obj1[0] = memo;
+        obj1[1] = callback;
+        obj[1] = obj1;
+        items1 = [obj];
       }
-      const items = [{ name: type }];
-      return items;
+      return items1;
     }, items3);
-    items5 = [, ];
-    items5[0] = memo;
-    items5[1] = callback;
     memo2 = c4.useMemo(() => {
       function headerRight() {
         const obj = { accessibilityLabel: null, onPress: null, source: null };
@@ -188,12 +196,13 @@ class MFAModal {
       let obj = { fullscreen: true, ignoreKeyboard: flag, headerTitle: "" };
       obj = {};
       obj = {};
-      const merged = Object.assign(obj);
+      let merged = Object.assign(obj);
       let obj3 = callback(cancel[10]);
       obj.headerLeft = obj3.getHeaderBackButton();
       obj.headerRight = headerRight;
-      obj.render = function render() {
-        return callback2(callback(15267), {});
+      obj.render = function render(arg0) {
+        const merged = Object.assign(arg0);
+        return callback2(callback(15496), {});
       };
       obj[callback(cancel[7]).MfaScreens.SELECT] = obj;
       obj1 = {};
@@ -221,8 +230,9 @@ class MFAModal {
         tmp12 = headerRight;
       }
       obj1.headerRight = tmp12;
-      obj1.render = function render() {
-        return callback2(callback(15269), {});
+      obj1.render = function render(arg0) {
+        const merged = Object.assign(arg0);
+        return callback2(callback(15497), {});
       };
       obj[callback(cancel[7]).MfaScreens.WEBAUTHN] = obj1;
       const obj2 = {};
@@ -250,8 +260,9 @@ class MFAModal {
         tmp20 = headerRight;
       }
       obj2.headerRight = tmp20;
-      obj2.render = function render() {
-        return callback2(callback(15274), {});
+      obj2.render = function render(arg0) {
+        const merged = Object.assign(arg0);
+        return callback2(callback(15502), {});
       };
       obj[callback(cancel[7]).MfaScreens.TOTP] = obj2;
       obj3 = {};
@@ -279,8 +290,9 @@ class MFAModal {
         tmp28 = headerRight;
       }
       obj3.headerRight = tmp28;
-      obj3.render = function render() {
-        return callback2(callback(15277), {});
+      obj3.render = function render(arg0) {
+        const merged = Object.assign(arg0);
+        return callback2(callback(15505), {});
       };
       obj[callback(cancel[7]).MfaScreens.BACKUP] = obj3;
       const obj4 = {};
@@ -308,8 +320,9 @@ class MFAModal {
         tmp36 = headerRight;
       }
       obj4.headerRight = tmp36;
-      obj4.render = function render() {
-        return callback2(callback(15278), {});
+      obj4.render = function render(arg0) {
+        const merged = Object.assign(arg0);
+        return callback2(callback(15506), {});
       };
       obj[callback(cancel[7]).MfaScreens.SMS] = obj4;
       const obj5 = {};
@@ -337,20 +350,20 @@ class MFAModal {
         tmp44 = headerRight;
       }
       obj5.headerRight = tmp44;
-      obj5.render = function render() {
-        return callback2(callback(15279), {});
+      obj5.render = function render(arg0) {
+        const merged = Object.assign(arg0);
+        return callback2(callback(15507), {});
       };
       obj[callback(cancel[7]).MfaScreens.PASSWORD] = obj5;
       return obj;
     }, items4);
-    memo3 = c4.useMemo(() => ({ mfaChallenge: memo, finish: callback }), items5);
-    obj = { value: memo3, children: null };
     obj = { screens: memo2, initialRouteStack: memo1, onWillFocus: closure_5.dismiss };
     merged1 = Object.assign(merged);
-    obj[1] = closure_6(require("NavigationStack").Navigator, obj);
-    return closure_6(require("context").MfaChallengeContext.Provider, obj);
+    return closure_6(require("NavigationStack").Navigator, obj);
   }
 }
+({ Keyboard: c5, LogBox } = get_ActivityIndicator);
+LogBox.ignoreLogs(["Non-serializable values were found in the navigation state"]);
 const MFA_MODAL_KEY = "MFA_MODAL_KEY";
 const result = require("set").fileFinishedImporting("modules/mfa/native/MFAModal.tsx");
 

@@ -1,8 +1,8 @@
-// === Module 11013: SafetyTipsContainer ===
+// === Module 11233: SafetyTipsContainer ===
 
-// Module 11013 (SafetyTipsContainer)
+// Module 11233 (SafetyTipsContainer)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -21,13 +21,13 @@ export default function SafetyTipsContainer(children) {
   const safetyTips = children.safetyTips;
   let showHeader = children.showHeader;
   const tmp = callback2();
-  let obj = { style: tmp.image, children: callback(safetyTips(6256).SafetyBookletSpotIllustration, {}) };
+  let obj = { style: tmp.image, children: callback(safetyTips(6265).SafetyBookletSpotIllustration, {}) };
   const items = [callback(View, obj), , ];
   if (showHeader) {
     obj = { style: null, variant: "heading-xl/semibold", children: null };
     obj[0] = tmp.text;
-    const intl = tmp3(1236).intl;
-    obj[2] = intl.string(tmp3(1236).t.eAbVfS);
+    const intl = tmp3(1233).intl;
+    obj[2] = intl.string(tmp3(1233).t.eAbVfS);
     showHeader = tmp5(tmp3(4474).Text, obj);
   }
   obj = { spacing: 16, children: null };

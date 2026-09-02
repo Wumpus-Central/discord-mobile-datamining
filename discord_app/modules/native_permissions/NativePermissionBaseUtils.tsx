@@ -1,10 +1,10 @@
-// === Module 5087: requestAuthorization ===
+// === Module 5095: requestAuthorization ===
 
-// Module 5087 (requestAuthorization)
+// Module 5095 (requestAuthorization)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 5088 */;
+import closure_4 from "initialize" /* 5096 */;
 import NativePermissionStatus from "NativePermissionStatus" /* 4730 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import { AnalyticEvents } from "ME" /* 673 */;
 
 const require = arg1;
 ({ NativePermissionTypes: c5, NativePermissionStates: closure_6, NativePermissionStatus: error } = NativePermissionStatus);
@@ -72,38 +72,38 @@ prototype["showAlert"] = function showAlert(closure_1_0, arg1, arg2) {
   let self = this;
   self = this;
   const _require = closure_1_0;
-  const intl = _require(1236).intl;
-  const intl2 = _require(1236).intl;
-  const combined = "" + intl.string(_require(1236).t["68G7fD"]) + ". " + intl2.string(_require(1236).t["5Jvu1R"]);
+  const intl = _require(1233).intl;
+  const intl2 = _require(1233).intl;
+  const combined = "" + intl.string(_require(1233).t["68G7fD"]) + ". " + intl2.string(_require(1233).t["5Jvu1R"]);
   let obj = { [closure_5.CAMERA]: combined, [closure_5.HEADSET_CAMERA]: combined };
-  const intl3 = _require(1236).intl;
-  const stringResult = intl.string(_require(1236).t["68G7fD"]);
-  const intl4 = _require(1236).intl;
-  obj[constants.AUDIO] = "" + intl3.string(_require(1236).t.xisTfe) + ". " + intl4.string(_require(1236).t["5Jvu1R"]);
-  const intl5 = _require(1236).intl;
-  const stringResult1 = intl3.string(_require(1236).t.xisTfe);
-  const intl6 = _require(1236).intl;
-  obj[constants.PHOTOS] = "" + intl5.string(_require(1236).t.jQHU4M) + ". " + intl6.string(_require(1236).t["5Jvu1R"]);
-  const intl7 = _require(1236).intl;
-  const stringResult2 = intl5.string(_require(1236).t.jQHU4M);
-  const intl8 = _require(1236).intl;
-  obj[constants.INPUT_MONITORING] = "" + intl7.string(_require(1236).t.UIBqsS) + ". " + intl8.string(_require(1236).t["5Jvu1R"]);
-  const intl9 = _require(1236).intl;
-  const stringResult3 = intl7.string(_require(1236).t.UIBqsS);
-  const intl10 = _require(1236).intl;
-  obj[constants.CONTACTS] = "" + intl9.string(_require(1236).t.kTtf7o) + ". " + intl10.string(_require(1236).t["5Jvu1R"]);
+  const intl3 = _require(1233).intl;
+  const stringResult = intl.string(_require(1233).t["68G7fD"]);
+  const intl4 = _require(1233).intl;
+  obj[constants.AUDIO] = "" + intl3.string(_require(1233).t.xisTfe) + ". " + intl4.string(_require(1233).t["5Jvu1R"]);
+  const intl5 = _require(1233).intl;
+  const stringResult1 = intl3.string(_require(1233).t.xisTfe);
+  const intl6 = _require(1233).intl;
+  obj[constants.PHOTOS] = "" + intl5.string(_require(1233).t.jQHU4M) + ". " + intl6.string(_require(1233).t["5Jvu1R"]);
+  const intl7 = _require(1233).intl;
+  const stringResult2 = intl5.string(_require(1233).t.jQHU4M);
+  const intl8 = _require(1233).intl;
+  obj[constants.INPUT_MONITORING] = "" + intl7.string(_require(1233).t.UIBqsS) + ". " + intl8.string(_require(1233).t["5Jvu1R"]);
+  const intl9 = _require(1233).intl;
+  const stringResult3 = intl7.string(_require(1233).t.UIBqsS);
+  const intl10 = _require(1233).intl;
+  obj[constants.CONTACTS] = "" + intl9.string(_require(1233).t.kTtf7o) + ". " + intl10.string(_require(1233).t["5Jvu1R"]);
   if (null != obj[closure_1_0]) {
     obj = { title: null, body: null, onConfirm: null, cancelText: null, confirmText: null };
-    const intl11 = tmp(1236).intl;
-    obj[0] = intl11.string(tmp(1236).t.u1Gxpu);
+    const intl11 = tmp(1233).intl;
+    obj[0] = intl11.string(tmp(1233).t.u1Gxpu);
     obj[1] = tmp9;
     obj[2] = function onConfirm() {
       return self.openSettings(closure_0);
     };
-    const intl12 = tmp(1236).intl;
-    obj[3] = intl12.string(tmp(1236).t["ETE/oC"]);
-    const intl13 = tmp(1236).intl;
-    obj[4] = intl13.string(tmp(1236).t["XgZk+u"]);
+    const intl12 = tmp(1233).intl;
+    obj[3] = intl12.string(tmp(1233).t["ETE/oC"]);
+    const intl13 = tmp(1233).intl;
+    obj[4] = intl13.string(tmp(1233).t["XgZk+u"]);
     self.openAlertModal(obj);
   }
 };

@@ -1,12 +1,12 @@
-// === Module 14599: route ===
+// === Module 14822: route ===
 
-// Module 14599 (route)
+// Module 14822 (route)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getIsEligibleForQuests from "getIsEligibleForQuests" /* 11084 */;
-import QuestsIcon from "QuestsIcon" /* 14600 */;
-import createToggle from "createToggle" /* 11068 */;
+import ME from "ME" /* 673 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import getIsEligibleForQuests from "getIsEligibleForQuests" /* 11304 */;
+import QuestsIcon from "QuestsIcon" /* 14823 */;
+import createToggle from "createToggle" /* 11288 */;
 
 obj = {
   useTitle() {
@@ -21,8 +21,8 @@ obj = {
   screen: obj,
   usePreNavigationAction() {
     return () => {
-      let obj = callback(7467);
-      obj = { fromContent: callback(5392).QuestContent.USER_SETTINGS };
+      let obj = callback(7477);
+      obj = { fromContent: callback(5400).QuestContent.USER_SETTINGS };
       const result = obj.setQuestHomeUtmContext(obj);
       return true;
     };
@@ -31,7 +31,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.QUESTS,
   getComponent() {
-    return require(14602) /* QuestHomeSetting */.default;
+    return require(14825) /* QuestHomeSetting */.default;
   }
 };
 const route = createToggle.createRoute(obj);

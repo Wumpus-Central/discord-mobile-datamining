@@ -1,15 +1,15 @@
-// === Module 15429: PersonalizationDisclaimerActionSheet ===
+// === Module 15659: PersonalizationDisclaimerActionSheet ===
 
-// Module 15429 (PersonalizationDisclaimerActionSheet)
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+// Module 15659 (PersonalizationDisclaimerActionSheet)
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Text from "Text" /* 4474 */;
 import Button from "Button" /* 4928 */;
-import ButtonGroup from "ButtonGroup" /* 5376 */;
-import Background from "Background" /* 5622 */;
-import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8728 */;
+import ButtonGroup from "ButtonGroup" /* 5384 */;
+import Background from "Background" /* 5630 */;
+import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8743 */;
 import closure_3 from "noop" /* 19 */;
-import { HelpdeskArticles } from "ME" /* 676 */;
+import { HelpdeskArticles } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -27,7 +27,7 @@ export default function PersonalizationDisclaimerActionSheet() {
   const tmp = callback3();
   const callback = React.useCallback(() => {
     const obj = callback(4190);
-    obj.openURL(callback(1995).getArticleURL(constants.DATA_USED_FOR_RECOMMENDED));
+    obj.openURL(callback(1994).getArticleURL(constants.DATA_USED_FOR_RECOMMENDED));
   }, []);
   let obj = { contentStyles: tmp.container, children: null };
   obj = { variant: "heading-md/medium", color: "mobile-text-heading-primary", accessibilityRole: "header", style: tmp.header, children: null };

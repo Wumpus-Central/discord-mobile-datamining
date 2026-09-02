@@ -1,9 +1,9 @@
-// === Module 7512: initialize ===
+// === Module 7522: initialize ===
 
-// Module 7512 (initialize)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "ensureGuildLoaded" /* 1387 */;
+// Module 7522 (initialize)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import closure_0 from "ensureGuildLoaded" /* 1386 */;
 
 let closure_1 = {};
 const Store = initializeDefault.Store;

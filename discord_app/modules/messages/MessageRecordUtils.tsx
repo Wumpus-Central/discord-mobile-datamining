@@ -2,7 +2,7 @@
 
 // Module 4737 (createMinimalMessageRecord)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import hooksDefault from "hooks" /* 4075 */;
+import hooksDefault from "hooks" /* 4074 */;
 import getPathsFromURLDefault from "getPathsFromURL" /* 4461 */;
 import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4746 */;
 import isMentionedDefault from "isMentioned" /* 4751 */;
@@ -12,11 +12,11 @@ import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType
 import closure_3 from "createFromServer" /* 4738 */;
 import hasFlag from "hasFlag" /* 4131 */;
 import closure_6 from "hasFlag" /* 4131 */;
-import importDefaultResult from "createdAt" /* 1935 */;
-import closure_8 from "fetchFingerprint" /* 1218 */;
+import importDefaultResult from "createdAt" /* 1934 */;
+import closure_8 from "fetchFingerprint" /* 1215 */;
 import closure_9 from "markAllUserIdListsStale" /* 4130 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import closure_10 from "mergeGuildAvatar" /* 1921 */;
+import ME from "ME" /* 673 */;
 
 require = arg1;
 function createMinimalMessageRecord(timestamp) {

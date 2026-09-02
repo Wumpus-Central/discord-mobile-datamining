@@ -1,12 +1,12 @@
-// === Module 6185: _startLurking ===
+// === Module 6194: _startLurking ===
 
-// Module 6185 (_startLurking)
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+// Module 6194 (_startLurking)
+import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 4122 */;
+import closure_4 from "initialize" /* 4121 */;
 import closure_5 from "handleInviteData" /* 4398 */;
-import closure_6 from "createGuildRecordFromRust" /* 1909 */;
-import ME from "ME" /* 676 */;
+import closure_6 from "createGuildRecordFromRust" /* 1908 */;
+import ME from "ME" /* 673 */;
 
 const require = arg1;
 function _startLurking() {
@@ -71,7 +71,7 @@ function _startLurking() {
                 closure_13 = undefined;
                 loadId = 1;
                 shouldNavigate = 1;
-                return { value: "PX_16", done: null };
+                return { value: "PX_16", done: true };
               }
             } else {
               if (1 === tmp5) {

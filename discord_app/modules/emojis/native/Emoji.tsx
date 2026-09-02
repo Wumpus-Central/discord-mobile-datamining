@@ -1,12 +1,12 @@
-// === Module 5585: Emoji ===
+// === Module 5593: Emoji ===
 
-// Module 5585 (Emoji)
+// Module 5593 (Emoji)
 import noopAll from "noop" /* 19 */;
-import set from "set" /* 500 */;
+import set from "set" /* 1234 */;
 import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4138 */;
-import preloadDefault from "preload" /* 5493 */;
+import preloadDefault from "preload" /* 5501 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "handleThemeChange" /* 1302 */;
+import closure_4 from "handleThemeChange" /* 1301 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -33,9 +33,9 @@ export default function Emoji(arg0) {
         obj[1] = fastImageStyle;
         const tmp10 = preloadDefault;
         if (tmpResult.isThemeDark(theme.theme)) {
-          let tmp9Result = tmp9(5586);
+          let tmp9Result = tmp9(5594);
         } else {
-          tmp9Result = tmp9(5587);
+          tmp9Result = tmp9(5595);
         }
         obj[2] = tmp9Result;
         obj1 = { uri: null };
@@ -43,11 +43,11 @@ export default function Emoji(arg0) {
         obj[3] = obj1;
         obj[4] = onError;
         let tmp6Result = tmp6(tmp10, obj);
-        tmpResult = tmp(1363);
+        tmpResult = tmp(1362);
       }
       obj[1] = tmp6Result;
       return tmp6(tmp7, obj);
     }
   }
-  tmp6Result = tmp6(tmp(1297).LegacyText, { style: textEmojiStyle, allowFontScaling: false, adjustsFontSizeToFit, children: name });
+  tmp6Result = tmp6(tmp(1296).LegacyText, { style: textEmojiStyle, allowFontScaling: false, adjustsFontSizeToFit, children: name });
 };

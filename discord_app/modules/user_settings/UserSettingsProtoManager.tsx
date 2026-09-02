@@ -1,23 +1,23 @@
-// === Module 14108: handleConnectionOpen ===
+// === Module 14331: handleConnectionOpen ===
 
-// Module 14108 (handleConnectionOpen)
+// Module 14331 (handleConnectionOpen)
 import applyDefault from "apply" /* 12 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import MAX_FAVORITESDefault from "MAX_FAVORITES" /* 1343 */;
-import updateUserGuildSettings from "updateUserGuildSettings" /* 1370 */;
-import migrateHotspotLocationDefault from "migrateHotspotLocation" /* 14109 */;
-import readFavoriteGIFsDefault from "readFavoriteGIFs" /* 14110 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
-import { UserSettingsTypes } from "MAX_FAVORITES" /* 685 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import MAX_FAVORITESDefault from "MAX_FAVORITES" /* 1342 */;
+import updateUserGuildSettings from "updateUserGuildSettings" /* 1369 */;
+import migrateHotspotLocationDefault from "migrateHotspotLocation" /* 14332 */;
+import readFavoriteGIFsDefault from "readFavoriteGIFs" /* 14333 */;
+import closure_3 from "handleConnectionClosedOrResumed" /* 1339 */;
+import { UserSettingsTypes } from "MAX_FAVORITES" /* 682 */;
 
 require = arg1;
 function handleConnectionOpen() {
   fullState = fullState.getFullState();
   if (fullState[UserSettingsTypes.PRELOADED_USER_SETTINGS].editInfo.triggeredMigrations) {
-    const PreloadedUserSettingsActionCreators = fullState(1370).PreloadedUserSettingsActionCreators;
+    const PreloadedUserSettingsActionCreators = fullState(1369).PreloadedUserSettingsActionCreators;
     let result = PreloadedUserSettingsActionCreators.markDirtyFromMigration(tmp2.proto, tmp2.editInfo.cleanupFuncs);
   }
-  const item = applyDefault.forEach(fullState(1370).UserSettingsActionCreatorsByType, (scheduleSaveFromOfflineEdit) => {
+  const item = applyDefault.forEach(fullState(1369).UserSettingsActionCreatorsByType, (scheduleSaveFromOfflineEdit) => {
     const tmp = fullState[Number(undefined, arg1)];
     if (tmp2) {
       const result = scheduleSaveFromOfflineEdit.scheduleSaveFromOfflineEdit();

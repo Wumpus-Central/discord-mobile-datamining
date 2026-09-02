@@ -1,9 +1,9 @@
-// === Module 15922: logger ===
+// === Module 16153: logger ===
 
-// Module 15922 (logger)
-import addAll from "add" /* 594 */;
-import _modDef1208 from "module_1208" /* 1208 */;
-import closure_3 from "markAllStale" /* 13359 */;
+// Module 16153 (logger)
+import addAll from "add" /* 591 */;
+import _modDef1205 from "module_1205" /* 1205 */;
+import closure_3 from "markAllStale" /* 13583 */;
 import set from "set" /* 2 */;
 
 const logger = new require("log").Logger("GuildMediaStateShadowCompare");
@@ -105,9 +105,9 @@ export const compareGuildMediaState = function compareGuildMediaState(closure_0,
       obj[0] = obj1;
       ({ guildId: obj7[0], mismatchedFields: obj7[1], fromHook: obj7[2], fromStore: obj7[3] } = obj);
       obj[1] = { guildId: null, mismatchedFields: null, fromHook: null, fromStore: null };
-      _modDef1208.captureMessage(sum, obj);
+      _modDef1205.captureMessage(sum, obj);
       const obj2 = { guildId: null, mismatchedFields: null, fromHook: null, fromStore: null };
-      const obj4 = _modDef1208;
+      const obj4 = _modDef1205;
     }
     const obj8 = addAll;
   }

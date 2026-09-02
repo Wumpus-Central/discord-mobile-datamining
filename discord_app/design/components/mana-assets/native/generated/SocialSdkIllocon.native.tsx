@@ -1,10 +1,10 @@
-// === Module 7025: SocialSdkIllocon ===
+// === Module 7034: SocialSdkIllocon ===
 
-// Module 7025 (SocialSdkIllocon)
+// Module 7034 (SocialSdkIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5493 */;
-import metadataDefault from "metadata" /* 7026 */;
+import preloadDefault from "preload" /* 5501 */;
+import metadataDefault from "metadata" /* 7035 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/SocialSdkIllocon.native.tsx");

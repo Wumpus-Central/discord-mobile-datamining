@@ -1,15 +1,15 @@
-// === Module 17004: push ===
+// === Module 17240: push ===
 
-// Module 17004 (push)
+// Module 17240 (push)
 import set from "set" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
-import setDefault from "set" /* 687 */;
+import setDefault from "set" /* 684 */;
 import dispatcherDefault from "dispatcher" /* 4194 */;
 import _modDef4723 from "module_4723" /* 4723 */;
-import MAX_ACCOUNTS from "MAX_ACCOUNTS" /* 11983 */;
-import _initializeDefault from "_initialize" /* 17006 */;
-import registerAssetDefault from "registerAsset" /* 17007 */;
-import ME from "ME" /* 676 */;
+import MAX_ACCOUNTS from "MAX_ACCOUNTS" /* 12207 */;
+import _initializeDefault from "_initialize" /* 17242 */;
+import registerAssetDefault from "registerAsset" /* 17243 */;
+import ME from "ME" /* 673 */;
 
 let obj = require;
 const SWITCH_ACCOUNTS_MODAL_KEY = MAX_ACCOUNTS.SWITCH_ACCOUNTS_MODAL_KEY;
@@ -108,7 +108,7 @@ prototype["onSwitchStart"] = function onSwitchStart() {
 prototype["onSwitchSuccess"] = function onSwitchSuccess(currentUser, navigateHome) {
   obj = currentUser;
   if (navigateHome) {
-    obj = obj(1222);
+    obj = obj(1219);
     obj.transitionTo(constants.ME, { navigationReplace: true });
     const MobileHomeDrawerExperiment = obj(4338).MobileHomeDrawerExperiment;
     if (MobileHomeDrawerExperiment.getConfig({ location: "multi-account" }).enableHome) {
@@ -130,8 +130,8 @@ prototype["onSwitchSuccess"] = function onSwitchSuccess(currentUser, navigateHom
 prototype["onSwitchError"] = function onSwitchError(currentUser) {
   obj = dispatcherDefault;
   obj = { key: "SWITCH_ACCOUNTS_TOAST_LOGIN_ERROR", content: null, icon: null };
-  const intl = obj(1236).intl;
-  obj[1] = intl.string(obj(1236).t.pqvKWA);
+  const intl = obj(1233).intl;
+  obj[1] = intl.string(obj(1233).t.pqvKWA);
   obj[2] = registerAssetDefault;
   obj.open(obj);
 };

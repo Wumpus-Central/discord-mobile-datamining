@@ -1,23 +1,23 @@
-// === Module 15924: getMediaIcon ===
+// === Module 16155: getMediaIcon ===
 
-// Module 15924 (getMediaIcon)
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
+// Module 16155 (getMediaIcon)
+import ThemesDefault from "Themes" /* 709 */;
+import Button from "Button" /* 1296 */;
 import map from "map" /* 4197 */;
-import StageIcon from "StageIcon" /* 5046 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 5050 */;
-import setDefault from "set" /* 6006 */;
-import registerAssetDefault from "registerAsset" /* 8048 */;
-import registerAssetDefault2 from "registerAsset" /* 8749 */;
-import AppsIcon from "AppsIcon" /* 9250 */;
-import registerAssetDefault3 from "registerAsset" /* 9753 */;
-import CalendarIcon from "CalendarIcon" /* 9755 */;
-import VideoIcon from "VideoIcon" /* 10193 */;
-import ScreenIcon from "ScreenIcon" /* 12636 */;
-import useGuildsBarGuildMediaStateDefault from "useGuildsBarGuildMediaState" /* 15920 */;
-import registerAssetDefault4 from "registerAsset" /* 15925 */;
-import registerAssetDefault5 from "registerAsset" /* 15926 */;
-import registerAssetDefault6 from "registerAsset" /* 15927 */;
+import registerAssetDefault from "registerAsset" /* 4986 */;
+import StageIcon from "StageIcon" /* 5050 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 5054 */;
+import AppsIcon from "AppsIcon" /* 5059 */;
+import setDefault from "set" /* 6014 */;
+import registerAssetDefault2 from "registerAsset" /* 8764 */;
+import registerAssetDefault3 from "registerAsset" /* 9775 */;
+import CalendarIcon from "CalendarIcon" /* 9777 */;
+import VideoIcon from "VideoIcon" /* 10215 */;
+import ScreenIcon from "ScreenIcon" /* 12857 */;
+import useGuildsBarGuildMediaStateDefault from "useGuildsBarGuildMediaState" /* 16151 */;
+import registerAssetDefault4 from "registerAsset" /* 16156 */;
+import registerAssetDefault5 from "registerAsset" /* 16157 */;
+import registerAssetDefault6 from "registerAsset" /* 16158 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -88,7 +88,7 @@ const memoResult = importAllResult.memo((arg0) => {
   obj = { style: items1, children: null };
   items1[1] = prop;
   if (null != IconComponent) {
-    let colors = tmp3(712).colors;
+    let colors = tmp3(709).colors;
     colors = { color: null, size: "xxs", style: null };
     colors[0] = isCurrentUserConnected ? colors.WHITE : colors.ICON_DEFAULT;
     activityIcon = activityIcon.activityIcon;
@@ -99,7 +99,7 @@ const memoResult = importAllResult.memo((arg0) => {
     obj1 = { source: null, color: null, style: null };
     obj1[0] = source;
     if (isCurrentUserConnected) {
-      WHITE = tmp3(712).unsafe_rawColors.WHITE;
+      WHITE = tmp3(709).unsafe_rawColors.WHITE;
     }
     obj1[1] = WHITE;
     obj1[2] = activityIcon.activityIcon;

@@ -1,11 +1,11 @@
-// === Module 7724: _crypto ===
+// === Module 7733: _crypto ===
 
-// Module 7724 (_crypto)
+// Module 7733 (_crypto)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import _modDef1208 from "module_1208" /* 1208 */;
-import isMetaQuest from "isMetaQuest" /* 1624 */;
-import encodeDefault from "encode" /* 7725 */;
+import _modDef1205 from "module_1205" /* 1205 */;
+import isMetaQuest from "isMetaQuest" /* 1623 */;
+import encodeDefault from "encode" /* 7734 */;
 
 let _crypto;
 if (window != null) {
@@ -59,7 +59,7 @@ export const encodeTotpSecretAsUrl = function encodeTotpSecretAsUrl(arg0, str) {
   return "otpauth://totp/" + encodeURIResult + ":" + encodeURIResult1 + "?secret=" + formatted + "&issuer=" + encodeURIComponent(str);
 };
 export const captureWebAuthnException = function captureWebAuthnException(closure_1, tags) {
-  let obj = _modDef1208;
+  let obj = _modDef1205;
   obj = {};
   const merged = Object.assign(tags);
   tags = undefined;

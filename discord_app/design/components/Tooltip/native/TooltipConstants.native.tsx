@@ -1,6 +1,6 @@
-// === Module 8978: tooltipEnterExitAnimation ===
+// === Module 8992: tooltipEnterExitAnimation ===
 
-// Module 8978 (tooltipEnterExitAnimation)
+// Module 8992 (tooltipEnterExitAnimation)
 import set from "set" /* 2 */;
 
 let closure_2 = { overshootClamping: true, damping: 35, stiffness: 450, mass: 0.5, restDisplacementThreshold: 0.001 };

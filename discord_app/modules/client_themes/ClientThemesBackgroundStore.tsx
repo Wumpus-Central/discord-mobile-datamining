@@ -1,22 +1,22 @@
 // === Module 4297: reset ===
 
 // Module 4297 (reset)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getThemeForColor from "getThemeForColor" /* 1347 */;
-import DismissibleContent from "DismissibleContent" /* 1373 */;
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import getThemeForColor from "getThemeForColor" /* 1346 */;
+import DismissibleContent from "DismissibleContent" /* 1372 */;
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4139 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
 import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4298 */;
-import closure_5 from "initialize" /* 1303 */;
-import closure_6 from "handleThemeChange" /* 1302 */;
-import closure_7 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
-import closure_8 from "handleConnectionClosedOrResumed" /* 1340 */;
-import { isGuildTextChannelType } from "createChannelRecord" /* 1391 */;
-import closure_10 from "ensureGuildLoaded" /* 1387 */;
-import closure_11 from "mergeGuildAvatar" /* 1922 */;
-import { BACKGROUND_GRADIENT_PRESETS_MAP as closure_12 } from "ThemeTypes" /* 1348 */;
-import { SystemThemeState } from "SystemThemeState" /* 1305 */;
+import closure_5 from "initialize" /* 1302 */;
+import closure_6 from "handleThemeChange" /* 1301 */;
+import closure_7 from "CHANNEL_SIDEBAR_WIDTH" /* 1303 */;
+import closure_8 from "handleConnectionClosedOrResumed" /* 1339 */;
+import { isGuildTextChannelType } from "createChannelRecord" /* 1390 */;
+import closure_10 from "ensureGuildLoaded" /* 1386 */;
+import closure_11 from "mergeGuildAvatar" /* 1921 */;
+import { BACKGROUND_GRADIENT_PRESETS_MAP as closure_12 } from "ThemeTypes" /* 1347 */;
+import { SystemThemeState } from "SystemThemeState" /* 1304 */;
 
 require = arg1;
 function reset() {
@@ -52,7 +52,7 @@ function handleSelectivelySyncedStoreChange() {
   }
 }
 function handleSyncedModeChange() {
-  return require(1366) /* isPerModeThemingActive */.isPerModeThemingActive();
+  return require(1365) /* isPerModeThemingActive */.isPerModeThemingActive();
 }
 function handleSameAsDeviceThemeToggle() {
   return true;
@@ -65,7 +65,7 @@ function handleUserSettingsProtoStoreUpdate() {
     result = null == backgroundGradientPresetId;
   }
   if (!result) {
-    let tmpResult = tmp(1366);
+    let tmpResult = tmp(1365);
     result = tmpResult.isPerModeThemingActive();
   }
   if (!result) {
@@ -168,7 +168,7 @@ Object.defineProperty(prototype, "gradientPreset", {
     } else {
       return closure_3;
     }
-    obj = require(1366) /* isPerModeThemingActive */;
+    obj = require(1365) /* isPerModeThemingActive */;
   },
   set: undefined
 });

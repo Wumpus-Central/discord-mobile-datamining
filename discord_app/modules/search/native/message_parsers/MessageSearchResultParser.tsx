@@ -1,8 +1,8 @@
-// === Module 16291: prototype ===
+// === Module 16523: prototype ===
 
-// Module 16291 (prototype)
+// Module 16523 (prototype)
 import closure_2 from "hasFlag" /* 4131 */;
-import { EMBED_TYPES_WITHOUT_DESCRIPTION as closure_3 } from "MessageEmbedTypes" /* 7622 */;
+import { EMBED_TYPES_WITHOUT_DESCRIPTION as closure_3 } from "MessageEmbedTypes" /* 7632 */;
 
 const require = arg1;
 require("CachedSearchResultParser").CachedSearchResultParser;
@@ -105,11 +105,11 @@ const prototype = function SearchResultMessageParser(searchQueryString, lineClam
     }
     return content;
   };
-  let obj = _require(11907);
-  const tokenizeQueryResult = _require(11907).tokenizeQuery(searchQueryString);
-  const searchQueryFromTokens = _require(11907).getSearchQueryFromTokens(tokenizeQueryResult);
-  const obj2 = _require(11907);
-  const str = _require(11907).getQueryContentString(searchQueryFromTokens);
+  let obj = _require(12130);
+  const tokenizeQueryResult = _require(12130).tokenizeQuery(searchQueryString);
+  const searchQueryFromTokens = _require(12130).getSearchQueryFromTokens(tokenizeQueryResult);
+  const obj2 = _require(12130);
+  const str = _require(12130).getQueryContentString(searchQueryFromTokens);
   let str2;
   if (str != null) {
     str2 = str.trim();

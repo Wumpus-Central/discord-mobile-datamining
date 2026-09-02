@@ -1,8 +1,8 @@
-// === Module 9313: XBOX_URL_BASE ===
+// === Module 9326: XBOX_URL_BASE ===
 
-// Module 9313 (XBOX_URL_BASE)
-import ME from "ME" /* 676 */;
-import set2 from "set" /* 8610 */;
+// Module 9326 (XBOX_URL_BASE)
+import ME from "ME" /* 673 */;
+import set2 from "set" /* 8625 */;
 import set from "set" /* 2 */;
 
 const items = [set2.OAuth2Scopes.VOICE, set2.OAuth2Scopes.DM_CHANNELS_READ, set2.OAuth2Scopes.GUILDS, set2.OAuth2Scopes.GUILDS_MEMBERS_READ, set2.OAuth2Scopes.IDENTIFY, set2.OAuth2Scopes.CONNECTIONS, set2.OAuth2Scopes.ACTIVITIES_READ];

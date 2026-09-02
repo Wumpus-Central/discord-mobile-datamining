@@ -1,15 +1,15 @@
-// === Module 15933: HomeDrawerDMExpandedChildren ===
+// === Module 16164: HomeDrawerDMExpandedChildren ===
 
-// Module 15933 (HomeDrawerDMExpandedChildren)
+// Module 16164 (HomeDrawerDMExpandedChildren)
 import MobileHomeDrawerExperiment2 from "MobileHomeDrawerExperiment" /* 4338 */;
-import useMessagePreviewDefault from "useMessagePreview" /* 14913 */;
+import useMessagePreviewDefault from "useMessagePreview" /* 15142 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { isMultiUserDM } from "createChannelRecord" /* 1391 */;
+import { isMultiUserDM } from "createChannelRecord" /* 1390 */;
 import closure_6 from "markAllUserIdListsStale" /* 4130 */;
 import closure_7 from "updateUserGuildSettingsInternal" /* 4701 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import { NOOP } from "sum" /* 505 */;
+import closure_8 from "mergeGuildAvatar" /* 1921 */;
+import { NOOP } from "sum" /* 502 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -25,10 +25,10 @@ function HomeDrawerDMExpandedChildren(channel) {
   const tmp = callback2();
   importDefault = tmp;
   let items = [closure_8];
-  dependencyMap = channel(589).useStateFromStores(items, () => closure_1_8.getUser(channel.getRecipientId()));
-  let obj = channel(589);
+  dependencyMap = channel(586).useStateFromStores(items, () => closure_1_8.getUser(channel.getRecipientId()));
+  let obj = channel(586);
   const items1 = [closure_8, memo];
-  stateFromStores = channel(589).useStateFromStores(items1, () => {
+  stateFromStores = channel(586).useStateFromStores(items1, () => {
     let tmp2 = null;
     if (null != channel) {
       if (stateFromStores1(tmp.type)) {
@@ -41,12 +41,12 @@ function HomeDrawerDMExpandedChildren(channel) {
     }
     return tmp2;
   });
-  const obj2 = channel(589);
-  const tmp3 = useMessagePreviewDefault(channel, { unread: channel(15934).useBaseChannelUnreadBadgeState(channel, false).unread });
+  const obj2 = channel(586);
+  const tmp3 = useMessagePreviewDefault(channel, { unread: channel(16165).useBaseChannelUnreadBadgeState(channel, false).unread });
   closure_4 = tmp3;
-  const obj3 = channel(15934);
+  const obj3 = channel(16165);
   const items2 = [closure_7];
-  stateFromStores1 = channel(589).useStateFromStores(items2, () => closure_1_7.getChannelMuteConfig(channel.guild_id, channel.id));
+  stateFromStores1 = channel(586).useStateFromStores(items2, () => closure_1_7.getChannelMuteConfig(channel.guild_id, channel.id));
   const items3 = [stateFromStores1];
   memo = stateFromStores.useMemo(() => {
     if (null == stateFromStores1) {
@@ -81,10 +81,10 @@ function HomeDrawerDMExpandedChildren(channel) {
       }
       let tmp5Result = dependencyMap;
       if (isTemporary) {
-        tmp5Result = tmp5(12948);
+        tmp5Result = tmp5(13170);
         let BellSlashIcon = tmp5Result.BellZIcon;
       } else {
-        BellSlashIcon = tmp5(10238).BellSlashIcon;
+        BellSlashIcon = tmp5(10260).BellSlashIcon;
       }
     } else {
       let obj = { style: null, children: null };
@@ -105,11 +105,11 @@ function HomeDrawerDMExpandedChildren(channel) {
       obj[1] = tmp;
       obj[4] = channel(4171).ChannelListLayoutTypes.COZY;
       obj[5] = memo.isMuted;
-      tmp2 = closure_1_10(channel(10192).ChannelRowPreview, obj);
+      tmp2 = closure_1_10(channel(10214).ChannelRowPreview, obj);
     }
     return tmp2;
   }, items5);
-  return callback(channel(15896).HomeDrawerSharedItem, { title, subtitle });
+  return callback(channel(16127).HomeDrawerSharedItem, { title, subtitle });
 }
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles({ title: { flexDirection: "row", alignItems: "center", gap: 4 }, titleText: { flexShrink: 1 } });

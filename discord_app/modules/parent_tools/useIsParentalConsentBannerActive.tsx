@@ -1,9 +1,9 @@
-// === Module 14471: useIsParentalConsentBannerActive ===
+// === Module 14694: useIsParentalConsentBannerActive ===
 
-// Module 14471 (useIsParentalConsentBannerActive)
+// Module 14694 (useIsParentalConsentBannerActive)
 import set from "set" /* 2 */;
-import useParentalConsentWarning from "useParentalConsentWarning" /* 14472 */;
-import frozen from "frozen" /* 14474 */;
+import useParentalConsentWarning from "useParentalConsentWarning" /* 14695 */;
+import frozen from "frozen" /* 14697 */;
 
 const result = set.fileFinishedImporting("modules/parent_tools/useIsParentalConsentBannerActive.tsx");
 

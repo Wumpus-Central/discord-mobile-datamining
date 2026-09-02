@@ -1,9 +1,9 @@
-// === Module 11275: useShareChatInputActions ===
+// === Module 11498: useShareChatInputActions ===
 
-// Module 11275 (useShareChatInputActions)
+// Module 11498 (useShareChatInputActions)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
-import { EmojiIntention } from "set" /* 1925 */;
+import { EmojiIntention } from "set" /* 1924 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/share/native/useShareChatInputActions.tsx");

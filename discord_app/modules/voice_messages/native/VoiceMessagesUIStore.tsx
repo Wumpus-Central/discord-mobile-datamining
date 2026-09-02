@@ -1,16 +1,16 @@
-// === Module 11533: VoiceMessageRecordingStatus ===
+// === Module 11756: VoiceMessageRecordingStatus ===
 
-// Module 11533 (VoiceMessageRecordingStatus)
+// Module 11756 (VoiceMessageRecordingStatus)
 import set from "set" /* 2 */;
-import batchUpdates from "batchUpdates" /* 705 */;
+import batchUpdates from "batchUpdates" /* 702 */;
 import _mod4217 from "module_4217" /* 4217 */;
 import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4927 */;
-import VoiceMessageAnimationState from "VoiceMessageAnimationState" /* 11534 */;
-import keys from "keys" /* 644 */;
+import VoiceMessageAnimationState from "VoiceMessageAnimationState" /* 11757 */;
+import keys from "keys" /* 641 */;
 
 ({ VoiceMessageAnimationState: obj1, WAVEFORM_WAVE_MAX_VALUE: c3 } = VoiceMessageAnimationState);
 let obj = keys.create(() => {
-  obj = { voiceMessageAnimationState: _mod4217.makeMutable(items), recordingStatus: null, recordingId: null, currWaveHeight: "PX_16", showRecordingOverlay: "Array", startTimeMillis: 0, waveform: false, waveformVersion: "flex", showVoiceMessagesTooltip: "M4 2H3v1h1V2Z", savedVoiceMessageUploadData: null, isVoiceMessageButtonMounted: 0.75, isUsingHoldGesture: null };
+  obj = { voiceMessageAnimationState: _mod4217.makeMutable(items), recordingStatus: null, recordingId: null, currWaveHeight: "PX_16", showRecordingOverlay: "Array", startTimeMillis: 0, waveform: false, waveformVersion: "flex", showVoiceMessagesTooltip: "M5 2H4v1h1V2Z", savedVoiceMessageUploadData: null, isVoiceMessageButtonMounted: 0.75, isUsingHoldGesture: null };
   items = [, ];
   ({ SENDING: arr[0], SENDING: arr[1] } = closure_2);
   obj[6] = [];
@@ -22,31 +22,31 @@ export const VoiceMessageRecordingStatus = { REQUESTED: 0, [0]: "REQUESTED", STA
 export const useVoiceMessagesUIStore = obj;
 export const setShowRecordingOverlay = function setShowRecordingOverlay(arg0) {
   const _require = arg0;
-  _require(705).batchUpdates(() => {
+  _require(702).batchUpdates(() => {
     closure_1_4.setState({ showRecordingOverlay: closure_0 });
   });
 };
 export const setVoiceMessageRecordingState = function setVoiceMessageRecordingState(arg0) {
   const _require = arg0;
-  _require(705).batchUpdates(() => {
+  _require(702).batchUpdates(() => {
     closure_1_4.setState({ recordingStatus: closure_0 });
   });
 };
 export const setVoiceMessageRecordingId = function setVoiceMessageRecordingId(arg0) {
   const _require = arg0;
-  _require(705).batchUpdates(() => {
+  _require(702).batchUpdates(() => {
     closure_1_4.setState({ recordingId: closure_0 });
   });
 };
 export const setVoiceMessageStartTimeMillis = function setVoiceMessageStartTimeMillis(arg0) {
   const _require = arg0;
-  _require(705).batchUpdates(() => {
+  _require(702).batchUpdates(() => {
     closure_1_4.setState({ startTimeMillis: closure_0 });
   });
 };
 export const setVoiceMessageAnimationState = function setVoiceMessageAnimationState(arg0) {
   const _require = arg0;
-  _require(705).batchUpdates(() => {
+  _require(702).batchUpdates(() => {
     const merged = Object.assign(closure_0);
     closure_1_4.setState({});
   });
@@ -61,7 +61,7 @@ export const addVoiceMessageWave = function addVoiceMessageWave(arg0) {
   }
   const items = [arg0, waveformVersion];
   waveform.push(items);
-  waveformVersion(705).batchUpdates(() => {
+  waveformVersion(702).batchUpdates(() => {
     closure_1_4.setState({ waveformVersion: waveformVersion + 1 });
   });
 };
@@ -78,7 +78,7 @@ export const hideVoiceMessagesTooltip = function hideVoiceMessagesTooltip() {
 export const resetVoiceMessageState = function resetVoiceMessageState() {
   obj = batchUpdates;
   obj.batchUpdates(() => {
-    state.setState({ waveform: [], waveformVersion: 0, showRecordingOverlay: false, startTimeMillis: "Boolean", savedVoiceMessageUploadData: "accessible" });
+    state.setState({ waveform: [], waveformVersion: 0, showRecordingOverlay: false, startTimeMillis: "Boolean", savedVoiceMessageUploadData: "call" });
   });
   const currWaveHeight = obj.getState().currWaveHeight;
   if (null != currWaveHeight) {
@@ -88,19 +88,19 @@ export const resetVoiceMessageState = function resetVoiceMessageState() {
 };
 export const setSavedVoiceMessageUploadData = function setSavedVoiceMessageUploadData(arg0) {
   const _require = arg0;
-  _require(705).batchUpdates(() => {
+  _require(702).batchUpdates(() => {
     closure_1_4.setState({ savedVoiceMessageUploadData: closure_0 });
   });
 };
 export const setIsVoiceMessageButtonMounted = function setIsVoiceMessageButtonMounted(arg0) {
   const _require = arg0;
-  _require(705).batchUpdates(() => {
+  _require(702).batchUpdates(() => {
     closure_1_4.setState({ isVoiceMessageButtonMounted: closure_0 });
   });
 };
 export const setIsUsingHoldGesture = function setIsUsingHoldGesture(arg0) {
   const _require = arg0;
-  _require(705).batchUpdates(() => {
+  _require(702).batchUpdates(() => {
     closure_1_4.setState({ isUsingHoldGesture: closure_0 });
   });
 };

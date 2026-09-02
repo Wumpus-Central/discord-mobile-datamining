@@ -1,20 +1,20 @@
-// === Module 16323: Loading ===
+// === Module 16555: Loading ===
 
-// Module 16323 (Loading)
-import ThemesDefault from "Themes" /* 712 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import ActivityIndicator from "ActivityIndicator" /* 6048 */;
-import _modDef6049 from "module_6049" /* 6049 */;
-import MemberVerificationModalDefault from "MemberVerificationModal" /* 7648 */;
+// Module 16555 (Loading)
+import ThemesDefault from "Themes" /* 709 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
+import ActivityIndicator from "ActivityIndicator" /* 6056 */;
+import _modDef6057 from "module_6057" /* 6057 */;
+import MemberVerificationModalDefault from "MemberVerificationModal" /* 7657 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "comparator" /* 1982 */;
-import closure_7 from "createGuildRecordFromRust" /* 1909 */;
+import closure_6 from "comparator" /* 1981 */;
+import closure_7 from "createGuildRecordFromRust" /* 1908 */;
 import closure_8 from "handleGatewayJoinRequestUpdate" /* 4300 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
-import makeAuthenticated from "makeAuthenticated" /* 16324 */;
+import makeAuthenticated from "makeAuthenticated" /* 16556 */;
 
 require = arg1;
 function Loading() {
@@ -165,9 +165,9 @@ const authenticated = makeAuthenticated.makeAuthenticated(function MemberVerific
     obj1[0] = guildId;
     obj1[1] = callback;
     obj[1] = <MemberVerificationRouteView guildId={null} onClose={null} />;
-    obj[2] = jsx(_modDef6049, { marginLeft: null, marginRight: null });
+    obj[2] = jsx(_modDef6057, { marginLeft: null, marginRight: null });
     tmp10 = <ExistingJoinRequestHandler marginLeft={null} marginRight={null} />;
-    const tmp3Result = _modDef6049;
+    const tmp3Result = _modDef6057;
   }
   return tmp10;
 });

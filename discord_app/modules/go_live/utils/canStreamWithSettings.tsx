@@ -1,9 +1,9 @@
-// === Module 10046: canStreamWithSettings ===
+// === Module 10068: canStreamWithSettings ===
 
-// Module 10046 (canStreamWithSettings)
+// Module 10068 (canStreamWithSettings)
 import set from "set" /* 2 */;
-import getGoLiveAutoQualityExperimentConfig from "getGoLiveAutoQualityExperimentConfig" /* 10047 */;
-import canUseStreamSettingDefault from "canUseStreamSetting" /* 10048 */;
+import getGoLiveAutoQualityExperimentConfig from "getGoLiveAutoQualityExperimentConfig" /* 10069 */;
+import canUseStreamSettingDefault from "canUseStreamSetting" /* 10070 */;
 import RESOLUTION_720 from "RESOLUTION_720" /* 4537 */;
 
 ({ ApplicationStreamSettingRequirements: c3, ApplicationStreamPresets: c4 } = RESOLUTION_720);

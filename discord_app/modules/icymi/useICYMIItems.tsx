@@ -1,9 +1,9 @@
-// === Module 16074: createItem ===
+// === Module 16305: createItem ===
 
-// Module 16074 (createItem)
-import MessageEmbedTypes from "MessageEmbedTypes" /* 8619 */;
+// Module 16305 (createItem)
+import MessageEmbedTypes from "MessageEmbedTypes" /* 8634 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "filterStaffGuild" /* 8606 */;
+import closure_4 from "filterStaffGuild" /* 8621 */;
 
 require = arg1;
 function createItem(id, type, arg2) {
@@ -42,9 +42,9 @@ function createItem(id, type, arg2) {
     obj1[5] = JSON.stringify(id.score_components);
     obj1[6] = arg2;
   } else {
-    if (tmp(8619).ICYMIItemTypes.ACTIVITY !== type) {
-      if (tmp(8619).ICYMIItemTypes.CUSTOM_STATUS !== type) {
-        if (tmp(8619).ICYMIItemTypes.GUILD_EVENT === type) {
+    if (tmp(8634).ICYMIItemTypes.ACTIVITY !== type) {
+      if (tmp(8634).ICYMIItemTypes.CUSTOM_STATUS !== type) {
+        if (tmp(8634).ICYMIItemTypes.GUILD_EVENT === type) {
           const obj3 = { id: null, timestamp: null, data: null, score: null, debugScore: null, unread: null };
           obj3[0] = id.id;
           const _Date2 = Date;
@@ -57,7 +57,7 @@ function createItem(id, type, arg2) {
           obj3[4] = JSON.stringify(id.score_components);
           obj3[5] = arg2;
           return obj3;
-        } else if (tmp(8619).ICYMIItemTypes.RECOMMENDED_GUILDS === type) {
+        } else if (tmp(8634).ICYMIItemTypes.RECOMMENDED_GUILDS === type) {
           obj = { id: null, timestamp: null, data: null, score: null, debugScore: null, unread: null };
           obj[0] = id.id;
           const _Date = Date;
@@ -90,20 +90,20 @@ function createItem(id, type, arg2) {
 const result = require("set").fileFinishedImporting("modules/icymi/useICYMIItems.tsx");
 
 export default function useICYMIItems() {
-  let obj = stateFromStores1(589);
+  let obj = stateFromStores1(586);
   const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => store.getUnreadDisplayItems());
   const items1 = [closure_4];
-  stateFromStores1 = stateFromStores1(589).useStateFromStores(items1, () => store.getReadDisplayItems());
-  const obj2 = stateFromStores1(589);
+  stateFromStores1 = stateFromStores1(586).useStateFromStores(items1, () => store.getReadDisplayItems());
+  const obj2 = stateFromStores1(586);
   const items2 = [closure_4];
-  const stateFromStores2 = stateFromStores1(589).useStateFromStores(items2, () => store.getNextIndexToHydrate());
-  const obj3 = stateFromStores1(589);
+  const stateFromStores2 = stateFromStores1(586).useStateFromStores(items2, () => store.getNextIndexToHydrate());
+  const obj3 = stateFromStores1(586);
   const items3 = [closure_4];
-  const stateFromStoresObject = stateFromStores1(589).useStateFromStoresObject(items3, () => store.getHydratedItems());
-  const obj4 = stateFromStores1(589);
+  const stateFromStoresObject = stateFromStores1(586).useStateFromStoresObject(items3, () => store.getHydratedItems());
+  const obj4 = stateFromStores1(586);
   const items4 = [closure_4];
-  const stateFromStores3 = stateFromStores1(589).useStateFromStores(items4, () => store.getMissingItems());
+  const stateFromStores3 = stateFromStores1(586).useStateFromStores(items4, () => store.getMissingItems());
   const items5 = [stateFromStores1];
   const effect = React.useEffect(() => {
     stateFromStores1 = Date.now() + stateFromStores1.length;
@@ -129,7 +129,7 @@ export default function useICYMIItems() {
           if (tmp10) {
             let tmp11 = stateFromStores1;
             let tmp12 = dependencyMap;
-            tmp10 = tmp6.type === stateFromStores1(8619).ICYMIItemTypes.MESSAGE;
+            tmp10 = tmp6.type === stateFromStores1(8634).ICYMIItemTypes.MESSAGE;
           }
           if (tmp10) {
             let message_context = tmp6.data.message_context;
@@ -180,7 +180,7 @@ export default function useICYMIItems() {
           if (tmp23) {
             let tmp24 = stateFromStores1;
             let tmp25 = dependencyMap;
-            tmp23 = tmp19.type === stateFromStores1(8619).ICYMIItemTypes.MESSAGE;
+            tmp23 = tmp19.type === stateFromStores1(8634).ICYMIItemTypes.MESSAGE;
           }
           if (tmp23) {
             let message_context2 = tmp19.data.message_context;

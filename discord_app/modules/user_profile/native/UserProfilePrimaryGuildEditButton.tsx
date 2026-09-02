@@ -1,10 +1,10 @@
-// === Module 14294: UserProfilePrimaryGuildEditButton ===
+// === Module 14517: UserProfilePrimaryGuildEditButton ===
 
-// Module 14294 (UserProfilePrimaryGuildEditButton)
+// Module 14517 (UserProfilePrimaryGuildEditButton)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "createGuildRecordFromRust" /* 1909 */;
-import { GuildTagBadgeSize } from "items" /* 7853 */;
+import ThemesDefault from "Themes" /* 709 */;
+import closure_3 from "createGuildRecordFromRust" /* 1908 */;
+import { GuildTagBadgeSize } from "items" /* 7862 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

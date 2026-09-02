@@ -1,8 +1,8 @@
-// === Module 9164: useEmojiPickerViewableItemsChanged ===
+// === Module 9178: useEmojiPickerViewableItemsChanged ===
 
-// Module 9164 (useEmojiPickerViewableItemsChanged)
+// Module 9178 (useEmojiPickerViewableItemsChanged)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_4 from "mergeGuildAvatar" /* 1921 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/premium/roadblocks/native/hooks/useEmojiPickerViewableItemsCallback.tsx");

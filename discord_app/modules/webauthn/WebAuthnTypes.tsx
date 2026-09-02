@@ -1,6 +1,6 @@
-// === Module 7723: prototype ===
+// === Module 7732: prototype ===
 
-// Module 7723 (prototype)
+// Module 7732 (prototype)
 import set from "set" /* 2 */;
 
 const prototype = function IgnorableWebAuthnError() {

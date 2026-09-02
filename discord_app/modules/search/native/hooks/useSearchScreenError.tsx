@@ -1,10 +1,10 @@
-// === Module 16267: useMessageSearchErrorScreen ===
+// === Module 16499: useMessageSearchErrorScreen ===
 
-// Module 16267 (useMessageSearchErrorScreen)
+// Module 16499 (useMessageSearchErrorScreen)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleReaction" /* 6128 */;
-import closure_5 from "prototype" /* 11906 */;
-import { SEARCH_MESSAGE_TAB_SENTINEL as closure_6 } from "MessageEmbedTypes" /* 7622 */;
+import closure_4 from "handleReaction" /* 6136 */;
+import closure_5 from "prototype" /* 12129 */;
+import { SEARCH_MESSAGE_TAB_SENTINEL as closure_6 } from "MessageEmbedTypes" /* 7632 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/search/native/hooks/useSearchScreenError.tsx");
@@ -53,7 +53,7 @@ export const useMessageSearchErrorScreen = function useMessageSearchErrorScreen(
 export const useMessageTabCountsErrorText = function useMessageTabCountsErrorText(searchContext) {
   searchContext = searchContext.searchContext;
   const items = [closure_5, closure_4];
-  return searchContext(589).useStateFromStores(items, () => {
+  return searchContext(586).useStateFromStores(items, () => {
     const searchResultsQuery = closure_1_5.getSearchResultsQuery(searchContext);
     const searchTabFetchId = searchContext(closure_1_2[5]).getSearchTabFetchId(searchContext, closure_1_6, searchResultsQuery);
     if (closure_1_4.getIsInitialFetchComplete(searchTabFetchId)) {

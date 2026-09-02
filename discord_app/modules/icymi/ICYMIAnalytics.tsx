@@ -1,9 +1,9 @@
-// === Module 8630: DEFAULT_UX_VARIATION ===
+// === Module 8645: DEFAULT_UX_VARIATION ===
 
-// Module 8630 (DEFAULT_UX_VARIATION)
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import closure_3 from "filterStaffGuild" /* 8606 */;
-import ME from "ME" /* 676 */;
+// Module 8645 (DEFAULT_UX_VARIATION)
+import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
+import closure_3 from "filterStaffGuild" /* 8621 */;
+import ME from "ME" /* 673 */;
 
 const require = arg1;
 ({ ChannelTypes: c4, AnalyticEvents: c5 } = ME);

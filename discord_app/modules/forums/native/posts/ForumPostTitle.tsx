@@ -1,11 +1,11 @@
-// === Module 11588: ForumPostTitle ===
+// === Module 11811: ForumPostTitle ===
 
-// Module 11588 (ForumPostTitle)
+// Module 11811 (ForumPostTitle)
 import noopAll from "noop" /* 19 */;
 import Text from "Text" /* 4474 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
-import PlatformTypes from "PlatformTypes" /* 501 */;
+import PlatformTypes from "PlatformTypes" /* 1235 */;
 
 require = arg1;
 noopAll;

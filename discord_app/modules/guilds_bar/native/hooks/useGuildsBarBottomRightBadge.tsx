@@ -1,6 +1,6 @@
-// === Module 15887: useGuildsBarBottomRightBadge ===
+// === Module 16118: useGuildsBarBottomRightBadge ===
 
-// Module 15887 (useGuildsBarBottomRightBadge)
+// Module 16118 (useGuildsBarBottomRightBadge)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -93,7 +93,7 @@ export default function useGuildsBarBottomRightBadge(mentionCount) {
       obj5[2] = items2;
       return obj5;
     } else {
-      return { badge: null, cutout: "Array", cutouts: "accessible" };
+      return { badge: null, cutout: "Array", cutouts: "alignItems" };
     }
   }, items1);
 };

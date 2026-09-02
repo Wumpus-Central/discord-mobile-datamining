@@ -1,9 +1,9 @@
-// === Module 12166: ApplicationIconAndName ===
+// === Module 12390: ApplicationIconAndName ===
 
-// Module 12166 (ApplicationIconAndName)
+// Module 12390 (ApplicationIconAndName)
 import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
+import ThemesDefault from "Themes" /* 709 */;
+import Button from "Button" /* 1296 */;
 import Text from "Text" /* 4474 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

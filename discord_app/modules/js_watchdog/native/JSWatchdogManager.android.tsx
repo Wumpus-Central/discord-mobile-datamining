@@ -1,13 +1,13 @@
-// === Module 16990: handleAppStateUpdate ===
+// === Module 17226: handleAppStateUpdate ===
 
-// Module 16990 (handleAppStateUpdate)
+// Module 17226 (handleAppStateUpdate)
 import timestampDefault from "timestamp" /* 3 */;
-import setDefault from "set" /* 687 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import initializeDefault from "initialize" /* 5486 */;
-import getDeviceMetadata from "getDeviceMetadata" /* 7220 */;
+import setDefault from "set" /* 684 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
+import initializeDefault from "initialize" /* 5494 */;
+import getDeviceMetadata from "getDeviceMetadata" /* 7229 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import ME from "ME" /* 676 */;
+import ME from "ME" /* 673 */;
 
 require = arg1;
 ({ AppStates: c4, AnalyticEvents: c5 } = ME);
@@ -102,11 +102,11 @@ prototype["ping"] = function ping() {
         } else {
           if (2 === tmp8) {
             c3 = 1;
-            checkForStallReportResult(1208).captureException(dependencyMap);
+            checkForStallReportResult(1205).captureException(dependencyMap);
             c3 = 0;
             checkForStallReportResult._pingCompleted = true;
             c5 = 3;
-            const obj8 = checkForStallReportResult(1208);
+            const obj8 = checkForStallReportResult(1205);
           } else if (3 === tmp8) {
             if (arg0 === 1) {
               c5 = 3;
@@ -133,7 +133,7 @@ prototype["ping"] = function ping() {
                 obj3[0] = undefined;
                 return obj3;
               } else {
-                obj3 = checkForStallReportResult(16991);
+                obj3 = checkForStallReportResult(17227);
                 let pingResult;
                 if (obj3 != null) {
                   const _Date = Date;
@@ -151,7 +151,7 @@ prototype["ping"] = function ping() {
             throw arg1;
           } else if (arg0 !== 2) {
             if (arg1) {
-              obj = checkForStallReportResult(16991);
+              obj = checkForStallReportResult(17227);
               checkForStallReportResult = undefined;
               if (obj != null) {
                 checkForStallReportResult = obj.checkForStallReport();
@@ -167,7 +167,7 @@ prototype["ping"] = function ping() {
                 }
                 if (0 === checkForStallReportResult._analyticsReportsRemaining) {
                   checkForStallReportResult.stopWatchdog();
-                  obj1 = checkForStallReportResult(16991);
+                  obj1 = checkForStallReportResult(17227);
                   if (obj1 != null) {
                     obj1.disable();
                   }
@@ -235,7 +235,7 @@ prototype["startWatchdog"] = function startWatchdog() {
             closure_0 = undefined;
             c1 = undefined;
             if (null == closure_1_0._timeoutId) {
-              if (null != checkForStallReportResult(16991)) {
+              if (null != checkForStallReportResult(17227)) {
                 dependencyMap = 1;
                 c3 = 1;
                 obj1 = { value: null, done: false };
@@ -256,7 +256,7 @@ prototype["startWatchdog"] = function startWatchdog() {
               closure_0._enabled = true;
               if (closure_0._pingCompleted) {
                 checkForStallReportResult = undefined;
-                obj = checkForStallReportResult(16991);
+                obj = checkForStallReportResult(17227);
                 if (obj != null) {
                   checkForStallReportResult = obj.checkForStallReport();
                 }
@@ -334,7 +334,7 @@ prototype["getCurrentSessionId"] = function getCurrentSessionId() {
             closure_0 = tmp2;
             closure_0 = undefined;
             if (null != closure_1_0._cachedSession) {
-              obj1 = closure_1_0(7217);
+              obj1 = closure_1_0(7226);
               if (!obj1.isSessionExpired(closure_1_0._cachedSession)) {
                 const uuid = closure_1_0._cachedSession.uuid;
                 c3 = 3;
@@ -343,7 +343,7 @@ prototype["getCurrentSessionId"] = function getCurrentSessionId() {
             dependencyMap = 1;
             c3 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = closure_1_0(7207).getSession();
+            obj1[0] = closure_1_0(7216).getSession();
             return obj1;
           }
         } else if (arg0 === 1) {

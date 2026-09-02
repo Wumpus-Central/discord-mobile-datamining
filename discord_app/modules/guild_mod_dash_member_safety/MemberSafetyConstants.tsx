@@ -1,9 +1,9 @@
-// === Module 4125: MemberSafetyPagePermissions ===
+// === Module 4124: MemberSafetyPagePermissions ===
 
-// Module 4125 (MemberSafetyPagePermissions)
+// Module 4124 (MemberSafetyPagePermissions)
 import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import importAllResult from "fromString" /* 506 */;
+import ME from "ME" /* 673 */;
+import importAllResult from "fromString" /* 503 */;
 
 const Permissions = ME.Permissions;
 const combineResult = importAllResult.combine(Permissions.ADMINISTRATOR, Permissions.MANAGE_GUILD, Permissions.BAN_MEMBERS, Permissions.KICK_MEMBERS, Permissions.MODERATE_MEMBERS, Permissions.MANAGE_ROLES, Permissions.MANAGE_NICKNAMES);

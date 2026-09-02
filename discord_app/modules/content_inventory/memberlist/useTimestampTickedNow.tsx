@@ -1,7 +1,7 @@
-// === Module 9398: useTimestampTickedNow ===
+// === Module 9411: useTimestampTickedNow ===
 
-// Module 9398 (useTimestampTickedNow)
-import setDefault from "set" /* 687 */;
+// Module 9411 (useTimestampTickedNow)
+import setDefault from "set" /* 684 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
@@ -22,12 +22,12 @@ export const useTimestampTickedNow = function useTimestampTickedNow() {
   importDefault = undefined;
   const now = callback(React.useState(() => {
     const timestamp = Date.now();
-    const rounded = Math.floor(timestamp / _undefined(687).Millis.SECOND);
-    return rounded * _undefined(687).Millis.SECOND;
+    const rounded = Math.floor(timestamp / _undefined(684).Millis.SECOND);
+    return rounded * _undefined(684).Millis.SECOND;
   }), 2);
   _require = now[1];
   const items = [closure_5];
-  let stateFromStores = _require(589).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  let stateFromStores = _require(586).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let slowTickMode = !isAppFocused;
   if (isAppFocused) {
     if (stateFromStores) {

@@ -1,9 +1,9 @@
-// === Module 8716: mapMethodsV2Response ===
+// === Module 8731: mapMethodsV2Response ===
 
-// Module 8716 (mapMethodsV2Response)
+// Module 8731 (mapMethodsV2Response)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import { Endpoints } from "ME" /* 676 */;
+import closure_3 from "fetchFingerprint" /* 1215 */;
+import { Endpoints } from "ME" /* 673 */;
 
 const require = arg1;
 function mapMethodsV2Response(methods) {

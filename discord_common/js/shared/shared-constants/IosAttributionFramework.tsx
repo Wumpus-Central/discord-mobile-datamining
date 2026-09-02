@@ -1,6 +1,6 @@
-// === Module 11094: IosAttributionFramework ===
+// === Module 11314: IosAttributionFramework ===
 
-// Module 11094 (IosAttributionFramework)
+// Module 11314 (IosAttributionFramework)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/IosAttributionFramework.tsx");

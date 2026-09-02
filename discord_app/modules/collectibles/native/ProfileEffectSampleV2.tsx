@@ -1,13 +1,13 @@
-// === Module 8508: ProfileEffectSample ===
+// === Module 8521: ProfileEffectSample ===
 
-// Module 8508 (ProfileEffectSample)
+// Module 8521 (ProfileEffectSample)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 712 */;
-import preloadDefault from "preload" /* 5493 */;
-import SAMPLE_PROFILE_ASPECT_RATIO from "SAMPLE_PROFILE_ASPECT_RATIO" /* 8507 */;
-import metadataDefault from "metadata" /* 8509 */;
-import StaticEffectDefault from "StaticEffect" /* 8510 */;
+import ThemesDefault from "Themes" /* 709 */;
+import preloadDefault from "preload" /* 5501 */;
+import SAMPLE_PROFILE_ASPECT_RATIO from "SAMPLE_PROFILE_ASPECT_RATIO" /* 8520 */;
+import metadataDefault from "metadata" /* 8522 */;
+import StaticEffectDefault from "StaticEffect" /* 8523 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

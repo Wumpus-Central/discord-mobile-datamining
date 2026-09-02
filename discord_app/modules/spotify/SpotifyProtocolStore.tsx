@@ -1,8 +1,8 @@
-// === Module 9391: isProtocolRegistered ===
+// === Module 9404: isProtocolRegistered ===
 
-// Module 9391 (isProtocolRegistered)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 9404 (isProtocolRegistered)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 let c0 = false;
 const Store = initializeDefault.Store;

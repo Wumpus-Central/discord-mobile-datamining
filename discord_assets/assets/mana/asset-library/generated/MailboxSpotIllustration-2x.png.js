@@ -1,6 +1,6 @@
-// === Module 6788: metadata ===
+// === Module 6797: metadata ===
 
-// Module 6788 (metadata)
+// Module 6797 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/MailboxSpotIllustration-2x.png.js");

@@ -1,6 +1,6 @@
-// === Module 14680: useIsCarouselInView ===
+// === Module 14906: useIsCarouselInView ===
 
-// Module 14680 (useIsCarouselInView)
+// Module 14906 (useIsCarouselInView)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 

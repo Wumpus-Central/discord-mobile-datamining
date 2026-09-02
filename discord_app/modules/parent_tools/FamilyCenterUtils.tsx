@@ -1,12 +1,12 @@
-// === Module 7338: getEmptyActivityFormatter ===
+// === Module 7347: getEmptyActivityFormatter ===
 
-// Module 7338 (getEmptyActivityFormatter)
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2369 */;
-import hooksDefault from "hooks" /* 4075 */;
-import maybeFetchCollectiblesForInvoicesDefault from "maybeFetchCollectiblesForInvoices" /* 7284 */;
-import closure_3 from "freshTeenActivityWithMap" /* 7282 */;
-import items from "items" /* 7283 */;
+// Module 7347 (getEmptyActivityFormatter)
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import messagesProxyDefault from "messagesProxy" /* 2368 */;
+import hooksDefault from "hooks" /* 4074 */;
+import maybeFetchCollectiblesForInvoicesDefault from "maybeFetchCollectiblesForInvoices" /* 7293 */;
+import closure_3 from "freshTeenActivityWithMap" /* 7291 */;
+import items from "items" /* 7292 */;
 
 require = arg1;
 ({ ACTION_TO_TEXT: c4, FAMILY_CENTER_ERROR_CODE_TO_FAILURE: c5, FamilyCenterFailureCode: closure_6, TeenActionDisplayType: error, UserLinkStatus: closure_8, UserLinkType: c9 } = items);
@@ -30,15 +30,15 @@ export const getActivityWindowTimestampFormatter = function getActivityWindowTim
   const tmp4 = messagesProxyDefault;
   if (arg0) {
     obj[0] = string(tmp4["2AtcIs"]);
-    const intl3 = tmp(1236).intl;
-    obj[1] = intl3.string(tmp3(2369).stOECr);
-    obj[2] = tmp3(2369).n8n5Ba;
+    const intl3 = tmp(1233).intl;
+    obj[1] = intl3.string(tmp3(2368).stOECr);
+    obj[2] = tmp3(2368).n8n5Ba;
     let tmp5 = obj;
   } else {
     obj[0] = string(tmp4.g1ZX6m);
-    const intl2 = tmp(1236).intl;
-    obj[1] = intl2.string(tmp3(2369).s3qSVt);
-    obj[2] = tmp3(2369).f1UJiC;
+    const intl2 = tmp(1233).intl;
+    obj[1] = intl2.string(tmp3(2368).s3qSVt);
+    obj[2] = tmp3(2368).f1UJiC;
     tmp5 = obj;
   }
   return tmp5;

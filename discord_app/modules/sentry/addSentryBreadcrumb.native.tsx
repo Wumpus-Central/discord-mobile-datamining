@@ -1,8 +1,8 @@
-// === Module 809: addSentryBreadcrumb ===
+// === Module 806: addSentryBreadcrumb ===
 
-// Module 809 (addSentryBreadcrumb)
+// Module 806 (addSentryBreadcrumb)
 import set from "set" /* 2 */;
-import addBreadcrumbAll from "addBreadcrumb" /* 810 */;
+import addBreadcrumbAll from "addBreadcrumb" /* 807 */;
 
 const result = set.fileFinishedImporting("modules/sentry/addSentryBreadcrumb.native.tsx");
 

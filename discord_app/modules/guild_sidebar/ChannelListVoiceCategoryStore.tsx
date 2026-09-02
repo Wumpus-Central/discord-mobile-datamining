@@ -1,8 +1,8 @@
-// === Module 7278: handleChange ===
+// === Module 7287: handleChange ===
 
-// Module 7278 (handleChange)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+// Module 7287 (handleChange)
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 function handleChange(expand) {
   if (expand.expand) {

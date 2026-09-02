@@ -1,9 +1,9 @@
-// === Module 6161: createHandoffTokenWithLoadingModal ===
+// === Module 6169: createHandoffTokenWithLoadingModal ===
 
-// Module 6161 (createHandoffTokenWithLoadingModal)
+// Module 6169 (createHandoffTokenWithLoadingModal)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import ME from "ME" /* 676 */;
+import closure_4 from "fetchFingerprint" /* 1215 */;
+import ME from "ME" /* 673 */;
 
 const require = arg1;
 function createHandoffTokenWithLoadingModal(arg0) {
@@ -92,7 +92,7 @@ function _redirectWithHandoffToken() {
               uRL = undefined;
               uRL = 1;
               c6 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -222,7 +222,7 @@ function _redirectDeveloperPortalWithHandoffToken() {
               uRL = undefined;
               c5 = 1;
               c6 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {

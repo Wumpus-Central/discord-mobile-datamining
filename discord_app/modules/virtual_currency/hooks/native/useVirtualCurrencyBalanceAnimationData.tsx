@@ -1,6 +1,6 @@
-// === Module 10841: useVirtualCurrencyBalanceAnimationData ===
+// === Module 11061: useVirtualCurrencyBalanceAnimationData ===
 
-// Module 10841 (useVirtualCurrencyBalanceAnimationData)
+// Module 11061 (useVirtualCurrencyBalanceAnimationData)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;

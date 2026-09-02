@@ -1,12 +1,12 @@
-// === Module 8906: _maybeFetchProductsWithSkus ===
+// === Module 8921: _maybeFetchProductsWithSkus ===
 
-// Module 8906 (_maybeFetchProductsWithSkus)
-import setDefault from "set" /* 687 */;
+// Module 8921 (_maybeFetchProductsWithSkus)
+import setDefault from "set" /* 684 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_getSystemLocale" /* 1996 */;
-import closure_5 from "getFetchState" /* 8907 */;
-import closure_6 from "fromServer" /* 7308 */;
-import { Endpoints } from "ME" /* 676 */;
+import closure_4 from "_getSystemLocale" /* 1995 */;
+import closure_5 from "getFetchState" /* 8922 */;
+import closure_6 from "fromServer" /* 7317 */;
+import { Endpoints } from "ME" /* 673 */;
 
 const require = arg1;
 function _maybeFetchProductsWithSkus() {
@@ -55,7 +55,7 @@ function _maybeFetchProductsWithSkus() {
               let body;
               c5 = 1;
               fromServer = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else {
             if (1 === tmp7) {
@@ -227,7 +227,7 @@ function _maybeFetchProductsBySkuIds() {
               let body;
               c5 = 1;
               fromServer = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else {
             if (1 === tmp7) {

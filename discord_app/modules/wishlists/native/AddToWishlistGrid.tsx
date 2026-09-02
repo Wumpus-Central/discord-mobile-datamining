@@ -1,6 +1,6 @@
-// === Module 12586: AddToWishlistGrid ===
+// === Module 12810: AddToWishlistGrid ===
 
-// Module 12586 (AddToWishlistGrid)
+// Module 12810 (AddToWishlistGrid)
 import noopAll from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;

@@ -1,14 +1,14 @@
-// === Module 17023: TouchableUploadAvatar ===
+// === Module 17259: TouchableUploadAvatar ===
 
-// Module 17023 (TouchableUploadAvatar)
+// Module 17259 (TouchableUploadAvatar)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import PressableBase from "PressableBase" /* 5068 */;
-import preloadDefault from "preload" /* 5493 */;
-import registerAssetDefault from "registerAsset" /* 12311 */;
-import registerAssetDefault2 from "registerAsset" /* 13601 */;
+import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
+import Button from "Button" /* 1296 */;
+import PressableBase from "PressableBase" /* 5076 */;
+import preloadDefault from "preload" /* 5501 */;
+import registerAssetDefault from "registerAsset" /* 12535 */;
+import registerAssetDefault2 from "registerAsset" /* 13824 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

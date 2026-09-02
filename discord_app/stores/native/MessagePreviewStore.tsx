@@ -1,9 +1,9 @@
-// === Module 8631: messages ===
+// === Module 8646: messages ===
 
-// Module 8631 (messages)
+// Module 8646 (messages)
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
 
 const require = arg1;
 let c3 = null;

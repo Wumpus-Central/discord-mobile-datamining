@@ -1,10 +1,10 @@
-// === Module 9471: tryLaunchAsFrame ===
+// === Module 9484: tryLaunchAsFrame ===
 
-// Module 9471 (tryLaunchAsFrame)
-import _launchFrameOnNativeDefault from "_launchFrameOnNative" /* 9461 */;
-import canLaunchFrame from "canLaunchFrame" /* 9470 */;
+// Module 9484 (tryLaunchAsFrame)
+import _launchFrameOnNativeDefault from "_launchFrameOnNative" /* 9474 */;
+import canLaunchFrame from "canLaunchFrame" /* 9483 */;
 import closure_3 from "addApplication" /* 4519 */;
-import { MAIN_SURFACE } from "FrameLayoutModes" /* 9465 */;
+import { MAIN_SURFACE } from "FrameLayoutModes" /* 9478 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/activities/utils/tryLaunchAsFrame.tsx");

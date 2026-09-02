@@ -1,8 +1,8 @@
-// === Module 17292: useHighlightedCreatorGuildDetails ===
+// === Module 17528: useHighlightedCreatorGuildDetails ===
 
-// Module 17292 (useHighlightedCreatorGuildDetails)
+// Module 17528 (useHighlightedCreatorGuildDetails)
 import closure_2 from "noop" /* 19 */;
-import { MarketingURLs } from "ME" /* 676 */;
+import { MarketingURLs } from "ME" /* 673 */;
 
 let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useHighlightedCreatorGuildDetails.tsx");
 

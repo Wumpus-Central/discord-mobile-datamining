@@ -1,18 +1,18 @@
-// === Module 7467: isSponsoredPlayQuest ===
+// === Module 7477: isSponsoredPlayQuest ===
 
-// Module 7467 (isSponsoredPlayQuest)
-import getApplicationIdsByTaskTypes from "getApplicationIdsByTaskTypes" /* 7469 */;
-import QuestSharePolicy from "QuestSharePolicy" /* 7470 */;
-import canStreamInChannel from "canStreamInChannel" /* 7471 */;
-import QuestType2 from "QuestType" /* 7472 */;
-import getQuestContentName from "getQuestContentName" /* 7473 */;
+// Module 7477 (isSponsoredPlayQuest)
+import getApplicationIdsByTaskTypes from "getApplicationIdsByTaskTypes" /* 7479 */;
+import QuestSharePolicy from "QuestSharePolicy" /* 7480 */;
+import canStreamInChannel from "canStreamInChannel" /* 7481 */;
+import QuestType2 from "QuestType" /* 7482 */;
+import getQuestContentName from "getQuestContentName" /* 7483 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "set" /* 4495 */;
-import closure_4 from "createGuildRecordFromRust" /* 1909 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4121 */;
+import closure_4 from "createGuildRecordFromRust" /* 1908 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_6 from "updateVoiceState" /* 4497 */;
-import closure_7 from "keys" /* 7468 */;
-import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5387 */;
+import closure_7 from "keys" /* 7478 */;
+import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5395 */;
 
 require = arg1;
 function isSponsoredPlayQuest(quest) {

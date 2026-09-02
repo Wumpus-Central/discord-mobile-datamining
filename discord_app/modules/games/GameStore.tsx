@@ -1,9 +1,9 @@
 // === Module 4502: handleLoadMessages ===
 
 // Module 4502 (handleLoadMessages)
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1486 */;
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1485 */;
 import closure_2 from "getOfficialApplicationId" /* 4503 */;
 import set from "set" /* 2 */;
 

@@ -1,8 +1,8 @@
-// === Module 6179: useGuildOnboardingAvailable ===
+// === Module 6188: useGuildOnboardingAvailable ===
 
-// Module 6179 (useGuildOnboardingAvailable)
-import closure_2 from "initialize" /* 1984 */;
-import { GuildFeatures } from "ME" /* 676 */;
+// Module 6188 (useGuildOnboardingAvailable)
+import closure_2 from "initialize" /* 1983 */;
+import { GuildFeatures } from "ME" /* 673 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_onboarding/useGuildOnboardingAvailable.tsx");
@@ -10,7 +10,7 @@ const result = require("set").fileFinishedImporting("modules/guild_onboarding/us
 export default function useGuildOnboardingAvailable(features) {
   const _require = features;
   const items = [closure_2];
-  let stateFromStores = _require(589).useStateFromStores(items, () => {
+  let stateFromStores = _require(586).useStateFromStores(items, () => {
     let id;
     if (closure_0 != null) {
       id = tmp.id;

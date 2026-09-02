@@ -1,12 +1,12 @@
-// === Module 8830: MinecraftNeutralIcon ===
+// === Module 8845: MinecraftNeutralIcon ===
 
-// Module 8830 (MinecraftNeutralIcon)
+// Module 8845 (MinecraftNeutralIcon)
 import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 8831 */;
-import registerAsset2 from "registerAsset" /* 8832 */;
-import registerAsset3 from "registerAsset" /* 8833 */;
+import registerAsset from "registerAsset" /* 8846 */;
+import registerAsset2 from "registerAsset" /* 8847 */;
+import registerAsset3 from "registerAsset" /* 8848 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 

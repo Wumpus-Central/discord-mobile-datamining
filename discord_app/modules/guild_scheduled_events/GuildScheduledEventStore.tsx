@@ -1,12 +1,12 @@
-// === Module 7271: scheduledEventSort ===
+// === Module 7280: scheduledEventSort ===
 
-// Module 7271 (scheduledEventSort)
+// Module 7280 (scheduledEventSort)
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "trackCommunicationDisabled" /* 1992 */;
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1393 */;
+import initializeDefault from "initialize" /* 586 */;
+import dispatcherDefault from "dispatcher" /* 706 */;
+import closure_2 from "fetchFingerprint" /* 1215 */;
+import closure_3 from "trackCommunicationDisabled" /* 1991 */;
+import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1392 */;
 
 function scheduledEventSort(status) {
   ({ id, scheduled_start_time } = status);

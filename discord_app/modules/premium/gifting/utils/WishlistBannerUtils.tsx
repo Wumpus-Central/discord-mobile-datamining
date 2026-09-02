@@ -1,9 +1,9 @@
-// === Module 10571: getSubtitle ===
+// === Module 10792: getSubtitle ===
 
-// Module 10571 (getSubtitle)
+// Module 10792 (getSubtitle)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 
 const useMemo = noop.useMemo;
 let obj = { FULL_WISHLIST: "FULL_WISHLIST", MIXED: "MIXED", SHOP_ONLY: "SHOP_ONLY", SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_ONLY: "SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_ONLY" };

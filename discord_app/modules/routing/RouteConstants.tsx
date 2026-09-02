@@ -1,11 +1,11 @@
-// === Module 677: INVITE ===
+// === Module 674: INVITE ===
 
-// Module 677 (INVITE)
+// Module 674 (INVITE)
 import set from "set" /* 2 */;
-import items2 from "items" /* 678 */;
-import CONFERENCE_MODE_ENABLED from "CONFERENCE_MODE_ENABLED" /* 683 */;
-import GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID from "GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID" /* 684 */;
-import getAuthenticationPath from "getAuthenticationPath" /* 507 */;
+import items2 from "items" /* 675 */;
+import CONFERENCE_MODE_ENABLED from "CONFERENCE_MODE_ENABLED" /* 680 */;
+import GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID from "GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID" /* 681 */;
+import getAuthenticationPath from "getAuthenticationPath" /* 504 */;
 
 const CollectibleShopTab = items2.CollectibleShopTab;
 ({ ApplicationDirectoryProfileSections: closure_1, GlobalDiscoveryAppsSections: obj1 } = GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID);
