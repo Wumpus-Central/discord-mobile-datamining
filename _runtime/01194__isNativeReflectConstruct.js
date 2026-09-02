@@ -1,15 +1,13 @@
 // === Module 1194: _isNativeReflectConstruct ===
 
 // Module 1194 (_isNativeReflectConstruct)
-import _inheritsDefault from "_inherits" /* 98 */;
-import closure_2 from "_classCallCheck" /* 41 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
-import importDefaultResult from "_createClass" /* 42 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_2 from "_possibleConstructorReturn" /* 93 */;
+import closure_3 from "_getPrototypeOf" /* 95 */;
+import importDefaultResult from "_inherits" /* 98 */;
+import closure_4 from "_classCallCheck" /* 41 */;
+import importDefaultResult1 from "_createClass" /* 42 */;
 
-const TouchEventBoundary = arg1;
+let ScreenshotButtonManager = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,20 +27,81 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let c5 = importAllResult;
-({ StyleSheet, View: closure_6 } = get_ActivityIndicator);
-const styles = StyleSheet.create({ wrapperView: { flex: 1 } });
-let c9 = "sentry-label";
-let c10 = "data-sentry-component";
-let c11 = "data-sentry-element";
-let c12 = "data-sentry-source-file";
-class TouchEventBoundary {
+function NOOP_SET_VISIBILITY() {
+
+}
+class FeedbackManager {
+  constructor() {
+    tmp = closure_4(this, ScreenshotButtonManager);
+    return;
+  }
+}
+ScreenshotButtonManager = FeedbackManager;
+let obj = {
+  key: "_feedbackComponentName",
+  get() {
+    error = new Error("Subclasses must override feedbackComponentName");
+    throw error;
+  }
+};
+const items = [
+  obj,
+  {
+    key: "initialize",
+    value: function initialize(_setVisibility) {
+      this._setVisibility = _setVisibility;
+    }
+  },
+  {
+    key: "reset",
+    value: function reset() {
+
+    }
+  },
+  {
+    key: "show",
+    value: function show() {
+      const self = this;
+      if (this._setVisibility !== NOOP_SET_VISIBILITY) {
+        self._isVisible = true;
+        self._setVisibility(true);
+      } else {
+        const _console = console;
+        const _HermesInternal = HermesInternal;
+        console.warn("[Sentry] " + self._feedbackComponentName + " requires 'Sentry.wrap(RootComponent)' to be called before 'show" + self._feedbackComponentName + "()'.");
+      }
+    }
+  },
+  {
+    key: "hide",
+    value: function hide() {
+      const self = this;
+      if (this._setVisibility !== NOOP_SET_VISIBILITY) {
+        self._isVisible = false;
+        self._setVisibility(false);
+      } else {
+        const _console = console;
+        const _HermesInternal = HermesInternal;
+        console.warn("[Sentry] " + self._feedbackComponentName + " requires 'Sentry.wrap(RootComponent)' before interacting with the widget.");
+      }
+    }
+  },
+  {
+    key: "isFormVisible",
+    value: function isFormVisible() {
+      return this._isVisible;
+    }
+  }
+];
+const importDefaultResult1Result = importDefaultResult1(FeedbackManager, null, items);
+importDefaultResult1Result._isVisible = false;
+class FeedbackWidgetManager {
   constructor() {
     self = this;
-    tmp = closure_2(this, TouchEventBoundary);
-    tmp2 = closure_4;
-    obj = closure_4(TouchEventBoundary);
-    tmp3 = closure_3;
+    tmp = closure_4(this, ScreenshotButtonManager);
+    tmp2 = closure_3;
+    obj = closure_3(ScreenshotButtonManager);
+    tmp3 = closure_2;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -53,306 +112,116 @@ class TouchEventBoundary {
       tmp5 = arguments;
       constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.name = "TouchEventBoundary";
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(TouchEventBoundary, importAllResult.Component);
-let items = [
-  {
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      const client = TouchEventBoundary(817).getClient();
-      let addIntegration;
-      if (null != client) {
-        addIntegration = client.addIntegration;
-      }
-      if (!tmp5) {
-        const self = this;
-        const call = addIntegration.call;
-        const integration = TouchEventBoundary(1192).createIntegration(this.name);
-        if (typeof call === "unknown") {
-          addIntegration(integration);
-        } else {
-          call(client, integration);
-        }
-        const tmpResult = TouchEventBoundary(1192);
-      }
+ScreenshotButtonManager = FeedbackWidgetManager;
+importDefaultResult(FeedbackWidgetManager, importDefaultResult1Result);
+obj = {
+  key: "_feedbackComponentName",
+  get() {
+    return "FeedbackWidget";
+  }
+};
+const items1 = [obj];
+const importDefaultResult1Result1 = importDefaultResult1(FeedbackWidgetManager, null, items1);
+class FeedbackButtonManager {
+  constructor() {
+    self = this;
+    tmp = closure_4(this, ScreenshotButtonManager);
+    tmp2 = closure_3;
+    obj = closure_3(ScreenshotButtonManager);
+    tmp3 = closure_2;
+    if (_isNativeReflectConstruct()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-  },
-  {
-    key: "render",
-    value: function render() {
-      const _onTouchStart = this._onTouchStart;
-      return <closure_6 style={wrapperView.wrapperView} onTouchStart={_onTouchStart.bind(this)}>{this.props.children}</closure_6>;
+    return tmp3(self, constructResult);
+  }
+}
+ScreenshotButtonManager = FeedbackButtonManager;
+importDefaultResult(FeedbackButtonManager, importDefaultResult1Result);
+obj = {
+  key: "_feedbackComponentName",
+  get() {
+    return "FeedbackButton";
+  }
+};
+const items2 = [obj];
+const importDefaultResult1Result2 = importDefaultResult1(FeedbackButtonManager, null, items2);
+class ScreenshotButtonManager {
+  constructor() {
+    self = this;
+    tmp = closure_4(this, ScreenshotButtonManager);
+    tmp2 = closure_3;
+    obj = closure_3(ScreenshotButtonManager);
+    tmp3 = closure_2;
+    if (_isNativeReflectConstruct()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-  },
+    return tmp3(self, constructResult);
+  }
+}
+importDefaultResult(ScreenshotButtonManager, importDefaultResult1Result);
+const items3 = [
   {
-    key: "_logTouchEvent",
-    value: function _logTouchEvent(items, label) {
-      const first = items[0];
-      if (first) {
-        let combined = label;
-        if (!label) {
-          let str3 = "";
-          if (first.file) {
-            const _HermesInternal = HermesInternal;
-            str3 = " (" + first.file + ")";
-          }
-          const _HermesInternal2 = HermesInternal;
-          combined = "" + first.name + str3;
-        }
-        const self = this;
-        let obj = { category: null, data: null, level: "info", message: null, type: null };
-        obj[0] = this.props.breadcrumbCategory;
-        obj = { path: null };
-        obj[0] = items;
-        obj[1] = obj;
-        const _HermesInternal3 = HermesInternal;
-        obj[3] = "Touch event within element: " + combined;
-        obj[4] = this.props.breadcrumbType;
-        TouchEventBoundary(817).addBreadcrumb(obj);
-        const debug2 = TouchEventBoundary(817).debug;
-        const _HermesInternal4 = HermesInternal;
-        debug2.log("[TouchEvents] " + obj.message);
-        const obj3 = TouchEventBoundary(817);
-      } else {
-        const debug = TouchEventBoundary(817).debug;
-        debug.warn("[TouchEvents] No root component found in touch path.");
-      }
-    }
-  },
-  {
-    key: "_isNameIgnored",
-    value: function _isNameIgnored(label) {
-      const self = this;
-      closure_0 = label;
-      let tmp = this.props.ignoreNames || [];
-      let obj = tmp;
-      if (self.props.ignoredDisplayNames) {
-        const items = [];
-        HermesBuiltin.arraySpread(self.props.ignoredDisplayNames, HermesBuiltin.arraySpread(tmp, 0));
-        obj = items;
-      }
-      return obj.some((str) => {
-        let tmp = typeof str === "string";
-        if (typeof str === "string") {
-          tmp = label === str;
-        }
-        if (!tmp) {
-          const _RegExp = RegExp;
-          let match = str instanceof RegExp;
-          if (match) {
-            match = label.match(str);
-          }
-          tmp = match;
-        }
-        return tmp;
-      });
-    }
-  },
-  {
-    key: "_onTouchStart",
-    value: function _onTouchStart(_targetInst) {
-      let labelName;
-      if (_targetInst._targetInst) {
-        const self = this;
-        _targetInst = _targetInst._targetInst;
-        const items = [];
-        if (_targetInst) {
-          if (self.props.maxComponentTreeSize) {
-            if (items.length < self.props.maxComponentTreeSize) {
-              const elementType3 = _targetInst.elementType;
-              let displayName;
-              if (null !== elementType3) {
-                if (undefined !== elementType3) {
-                  displayName = elementType3.displayName;
-                }
-              }
-              if (displayName !== TouchEventBoundary.displayName) {
-                while (true) {
-                  labelName = self.props.labelName;
-                  let elementType = _targetInst.elementType;
-                  let tmp3 = _targetInst;
-                  if (null !== elementType) {
-                    if (undefined !== elementType) {
-                      displayName = elementType.displayName;
-                    }
-                  }
-                  if (_targetInst.memoizedProps) {
-                    break;
-                  } else {
-                    let tmp5;
-                    if (displayName) {
-                      let obj = { name: null };
-                      obj[0] = displayName;
-                      tmp5 = obj;
-                    }
-                    let _pushIfNotIgnoredResult = self._pushIfNotIgnored(items, tmp5);
-                    let _return = _targetInst.return;
-                    if (_return) {
-                      if (self.props.maxComponentTreeSize) {
-                        if (items.length < self.props.maxComponentTreeSize) {
-                          let elementType2 = _return.elementType;
-                          let displayName1;
-                          if (null !== elementType2) {
-                            if (undefined !== elementType2) {
-                              displayName1 = elementType2.displayName;
-                            }
-                          }
-                          let tmp22 = TouchEventBoundary;
-                          _targetInst = _return;
-                        }
-                      }
-                    }
-                  }
-                }
-                let tmp10 = typeof tmp9 === "string";
-                if (typeof tmp4[c10] === "string") {
-                  tmp10 = tmp4[tmp8].length > 0;
-                }
-                if (tmp10) {
-                  tmp10 = "unknown" !== tmp4[tmp8];
-                }
-                if (tmp10) {
-                  tmp10 = tmp4[tmp8];
-                }
-                if (!tmp10) {
-                  tmp10 = displayName;
-                }
-                obj = { name: null, element: null, file: null, label: null };
-                obj[0] = tmp10;
-                let tmp13 = typeof tmp12 === "string";
-                if (typeof tmp4[c11] === "string") {
-                  tmp13 = tmp4[tmp11].length > 0;
-                }
-                if (tmp13) {
-                  tmp13 = "unknown" !== tmp4[tmp11];
-                }
-                if (tmp13) {
-                  tmp13 = tmp4[tmp11];
-                }
-                obj[1] = tmp13;
-                let tmp16 = typeof tmp15 === "string";
-                if (typeof tmp4[c12] === "string") {
-                  tmp16 = tmp4[tmp14].length > 0;
-                }
-                if (tmp16) {
-                  tmp16 = "unknown" !== tmp4[tmp14];
-                }
-                if (tmp16) {
-                  tmp16 = tmp4[tmp14];
-                }
-                obj[2] = tmp16;
-                if (typeof tmp4[c9] !== "string") {
-                  let tmp18;
-                  if (typeof labelName === "string") {
-                    if (typeof tmp4[labelName] === "string") {
-                      if (tmp4[labelName].length > 0) {
-                        tmp18 = tmp4[labelName];
-                      }
-                    }
-                  }
-                  obj[3] = tmp18;
-                  obj2.dropUndefinedKeys(obj);
-                }
-                tmp18 = tmp4[tmp17];
-                obj2 = TouchEventBoundary(817);
-              }
-            }
-          }
-        }
-        const found = items.find((label) => label.label);
-        let label;
-        if (null !== found) {
-          if (undefined !== found) {
-            label = found.label;
-          }
-        }
-        if (items.length > 0) {
-          self._logTouchEvent(items, label);
-        }
-        obj = { elementId: null, op: null };
-        obj[0] = label;
-        obj[1] = TouchEventBoundary(1155).UI_ACTION_TOUCH;
-        const result = TouchEventBoundary(1165).startUserInteractionSpan(obj);
-        if (result) {
-          const attr = result.setAttribute(TouchEventBoundary(817).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, TouchEventBoundary(1158).SPAN_ORIGIN_AUTO_INTERACTION);
-        }
-        const obj4 = TouchEventBoundary(1165);
-      }
-    }
-  },
-  {
-    key: "_pushIfNotIgnored",
-    value: function _pushIfNotIgnored(items, name) {
-      let tmp = name;
-      if (tmp) {
-        name = name.name;
-        let tmp2 = !name;
-        if (!name) {
-          tmp2 = !name.label;
-        }
-        let tmp3 = !tmp2;
-        if (!tmp2) {
-          const self = this;
-          const name2 = name.name;
-          let tmp4 = !name2;
-          if (name2) {
-            tmp4 = !self._isNameIgnored(name.name);
-          }
-          if (tmp4) {
-            const label = name.label;
-            let tmp5 = !label;
-            if (label) {
-              tmp5 = !self._isNameIgnored(name.label);
-            }
-            if (tmp5) {
-              let tmp7 = items.length > 0;
-              if (tmp7) {
-                const _JSON = JSON;
-                const _JSON2 = JSON;
-                const json = JSON.stringify(items[items.length - 1]);
-                tmp7 = json === JSON.stringify(name);
-              }
-              let flag = !tmp7;
-              if (!tmp7) {
-                items.push(name);
-                flag = true;
-              }
-              tmp5 = flag;
-            }
-            tmp4 = tmp5;
-          }
-          tmp3 = tmp4;
-        }
-        tmp = tmp3;
-      }
-      return tmp;
+    key: "_feedbackComponentName",
+    get() {
+      return "ScreenshotButton";
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(TouchEventBoundary, items);
-importDefaultResultResult.displayName = "__Sentry.TouchEventBoundary";
-importDefaultResultResult.defaultProps = { breadcrumbCategory: "touch", breadcrumbType: "user", ignoreNames: [], maxComponentTreeSize: 20 };
+const importDefaultResult1Result3 = importDefaultResult1(ScreenshotButtonManager, null, items3);
 
-export const TouchEventBoundary = importDefaultResultResult;
-export const withTouchEventBoundary = (arg0, arg1) => {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  class WrappedComponent {
-    constructor(arg0) {
-      obj = closure_1_5;
-      obj = closure_1;
-      tmp = closure_1_13;
-      if (null == closure_1) {
-        obj = {};
-      }
-      merged = Object.assign({}, obj);
-      return closure_1_5.createElement(tmp, merged, obj.createElement(closure_0, Object.assign({}, arg0)));
-    }
+export const PULL_DOWN_CLOSE_THRESHOLD = 200;
+export const SLIDE_ANIMATION_DURATION = 200;
+export const BACKGROUND_ANIMATION_DURATION = 200;
+export const FeedbackWidgetManager = importDefaultResult1Result1;
+export const FeedbackButtonManager = importDefaultResult1Result2;
+export const ScreenshotButtonManager = importDefaultResult1Result3;
+export const showFeedbackButton = () => {
+  const result = ScreenshotButtonManager(1195).lazyLoadAutoInjectFeedbackButtonIntegration();
+  importDefaultResult1Result2.show();
+};
+export const hideFeedbackButton = () => {
+  importDefaultResult1Result2.hide();
+};
+export const showFeedbackWidget = () => {
+  const result = ScreenshotButtonManager(1195).lazyLoadAutoInjectFeedbackIntegration();
+  importDefaultResult1Result1.show();
+};
+export const showScreenshotButton = () => {
+  if (obj.isWeb()) {
+    const debug = tmp(814).debug;
+    debug.warn("ScreenshotButton is not supported on Web.");
+  } else {
+    const result = tmp(1195).lazyLoadAutoInjectScreenshotButtonIntegration();
+    importDefaultResult1Result3.show();
+    const tmpResult = tmp(1195);
   }
-  WrappedComponent.displayName = "WithTouchEventBoundary";
-  return WrappedComponent;
+};
+export const hideScreenshotButton = () => {
+  importDefaultResult1Result3.hide();
+};
+export const resetFeedbackButtonManager = () => {
+  importDefaultResult1Result2.reset();
+};
+export const resetFeedbackWidgetManager = () => {
+  importDefaultResult1Result1.reset();
+};
+export const resetScreenshotButtonManager = () => {
+  importDefaultResult1Result3.reset();
 };

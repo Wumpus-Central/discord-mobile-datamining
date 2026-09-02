@@ -1,7 +1,7 @@
 // === Module 8208: registerAsset ===
 
 // Module 8208 (registerAsset)
-import registerAsset from "registerAsset" /* 1241 */;
+import registerAsset from "registerAsset" /* 1240 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/stickers/native/images", width: 77.5, height: 72, scales: [2, 3], hash: "215c6cf6cc2b74cad508b12b0e602266", name: "empty", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/HoloWavesIcon", width: 60, height: 60, scales: [2, 3], hash: "88fd60fc6961a4cc52d32c54b3209f38", name: "HoloWavesIcon", type: "png" });

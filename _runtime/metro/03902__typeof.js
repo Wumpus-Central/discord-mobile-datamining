@@ -1,7 +1,7 @@
 // === Module 3902: _typeof ===
 
 // Module 3902 (_typeof)
-import Parser2 from "Parser" /* 3878 */;
+import Parser2 from "Parser" /* 3877 */;
 
 let _createSuperInternal = require;
 let closure_1 = dependencyMap;
@@ -30,15 +30,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(AMPMMidnightParser, Parser) {
+function _setPrototypeOf(DayPeriodParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(AMPMMidnightParser, Parser) {
-      AMPMMidnightParser.__proto__ = Parser;
-      return AMPMMidnightParser;
+    _setPrototypeOf = function _setPrototypeOf(DayPeriodParser, Parser) {
+      DayPeriodParser.__proto__ = Parser;
+      return DayPeriodParser;
     };
   }
-  return _setPrototypeOf(AMPMMidnightParser, Parser);
+  return _setPrototypeOf(DayPeriodParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -58,7 +58,7 @@ function _getPrototypeOf(arg0) {
 }
 const Parser = Parser2.Parser;
 _createSuperInternal = undefined;
-class AMPMMidnightParser {
+class DayPeriodParser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -108,7 +108,7 @@ class AMPMMidnightParser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["a", "B", "H", "k", "t", "T"];
+          items1 = ["a", "b", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -132,7 +132,7 @@ class AMPMMidnightParser {
     }
   }
 }
-closure_1 = AMPMMidnightParser;
+closure_1 = DayPeriodParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -144,12 +144,12 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-let obj = { value: AMPMMidnightParser, writable: true, configurable: true };
-AMPMMidnightParser.prototype = Object.create(prototype, { constructor: obj });
+let obj = { value: DayPeriodParser, writable: true, configurable: true };
+DayPeriodParser.prototype = Object.create(prototype, { constructor: obj });
 if (Parser) {
-  _setPrototypeOf(AMPMMidnightParser, Parser);
+  _setPrototypeOf(DayPeriodParser, Parser);
 }
-_createSuperInternal = AMPMMidnightParser;
+_createSuperInternal = DayPeriodParser;
 let num = 0;
 closure_1 = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
@@ -210,10 +210,10 @@ _createSuperInternal = function _createSuperInternal() {
 obj = {
   key: "parse",
   value: function parse(arg0, arg1, dayPeriod) {
-    if ("b" !== arg1) {
-      if ("bb" !== arg1) {
-        if ("bbb" !== arg1) {
-          if ("bbbbb" === arg1) {
+    if ("B" !== arg1) {
+      if ("BB" !== arg1) {
+        if ("BBB" !== arg1) {
+          if ("BBBBB" === arg1) {
             return dayPeriod.dayPeriod(arg0, { width: "narrow", context: "formatting" });
           } else {
             return dayPeriod.dayPeriod(arg0, { width: "wide", context: "formatting" }) || dayPeriod.dayPeriod(arg0, { width: "abbreviated", context: "formatting" }) || dayPeriod.dayPeriod(arg0, { width: "narrow", context: "formatting" });
@@ -253,4 +253,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { AMPMMidnightParser };
+export { DayPeriodParser };

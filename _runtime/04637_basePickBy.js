@@ -1,7 +1,7 @@
 // === Module 4637: basePickBy ===
 
 // Module 4637 (basePickBy)
-import baseGet from "baseGet" /* 727 */;
+import baseGet from "baseGet" /* 724 */;
 
 
 export default function basePickBy(arg0, arg1, arg2) {
@@ -14,7 +14,7 @@ export default function basePickBy(arg0, arg1, arg2) {
     let tmp5 = num;
     if (arg2(tmp4, tmp)) {
       let tmp2Result = tmp2(4638);
-      let tmp2ResultResult = tmp2Result(obj, tmp2(728)(tmp, arg0), tmp4);
+      let tmp2ResultResult = tmp2Result(obj, tmp2(725)(tmp, arg0), tmp4);
     }
   }
   return obj;

@@ -1,7 +1,7 @@
 // === Module 15663: registerAsset ===
 
 // Module 15663 (registerAsset)
-import registerAsset from "registerAsset" /* 1241 */;
+import registerAsset from "registerAsset" /* 1240 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/main_tabs_v2/native/images", width: 64, height: 64, scales: [1], hash: "cfc308b460ac1d3ba90f4c87676a03fe", name: "game-empty-state", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/collectibles/native/images", width: 375, height: 162, scales: [1], hash: "bda37cc0de8c36fb8217439574ac2fe2", name: "featured_page_footer_light", type: "png" });

@@ -2,4 +2,4 @@
 
 // Module 567
 
-export default Math.max;
+export default Math.round;

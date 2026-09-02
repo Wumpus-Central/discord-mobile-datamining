@@ -1,7 +1,7 @@
 // === Module 4827: getEvalledConstructor ===
 
 // Module 4827 (getEvalledConstructor)
-import getEvalledConstructor from "getEvalledConstructor" /* 540 */;
+import getEvalledConstructor from "getEvalledConstructor" /* 537 */;
 import isPrimitive from "isPrimitive" /* 4775 */;
 
 let closure_2 = getEvalledConstructor("%Object.isExtensible%", true);

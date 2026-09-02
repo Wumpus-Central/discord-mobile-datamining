@@ -1,7 +1,7 @@
 // === Module 4791: isFinite ===
 
 // Module 4791 (isFinite)
-import isNaN from "isNaN" /* 572 */;
+import isNaN from "isNaN" /* 569 */;
 
 
 export default function isFinite(num) {

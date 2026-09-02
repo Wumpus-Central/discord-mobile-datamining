@@ -8,12 +8,12 @@ import closure_2 from "_slicedToArray" /* 32 */;
 
 require = arg1;
 require("noop").useCallback;
-const f29675 = (colorProperty) => colorProperty.colorProperty(arg1);
+const f29915 = (colorProperty) => colorProperty.colorProperty(arg1);
 
 export const useRiveColor = function useRiveColor(FillColor, instance) {
   let obj = c;
   const cResult = obj.c(8);
-  const tmp4 = callback(useRiveProperty.useRiveProperty(instance, FillColor, f29675), 3);
+  const tmp4 = callback(useRiveProperty.useRiveProperty(instance, FillColor, f29915), 3);
   [tmp5, tmp6] = tmp4;
   require = tmp6;
   if (cResult[0] !== tmp5) {

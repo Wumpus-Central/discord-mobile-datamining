@@ -1,7 +1,7 @@
 // === Module 3907: _typeof ===
 
 // Module 3907 (_typeof)
-import Parser2 from "Parser" /* 3878 */;
+import Parser2 from "Parser" /* 3877 */;
 
 let _createSuperInternal = require;
 let closure_1 = dependencyMap;
@@ -30,15 +30,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(Hour1To24Parser, Parser) {
+function _setPrototypeOf(MinuteParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(Hour1To24Parser, Parser) {
-      Hour1To24Parser.__proto__ = Parser;
-      return Hour1To24Parser;
+    _setPrototypeOf = function _setPrototypeOf(MinuteParser, Parser) {
+      MinuteParser.__proto__ = Parser;
+      return MinuteParser;
     };
   }
-  return _setPrototypeOf(Hour1To24Parser, Parser);
+  return _setPrototypeOf(MinuteParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -58,7 +58,7 @@ function _getPrototypeOf(arg0) {
 }
 const Parser = Parser2.Parser;
 _createSuperInternal = undefined;
-class Hour1To24Parser {
+class MinuteParser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -94,10 +94,10 @@ class Hour1To24Parser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 70, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 60, enumerable: true, configurable: true, writable: true });
         } else {
-          num3 = 70;
-          applyResult.priority = 70;
+          num3 = 60;
+          applyResult.priority = 60;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
@@ -108,7 +108,7 @@ class Hour1To24Parser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["a", "b", "h", "H", "K", "t", "T"];
+          items1 = ["t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -132,7 +132,7 @@ class Hour1To24Parser {
     }
   }
 }
-closure_1 = Hour1To24Parser;
+closure_1 = MinuteParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -144,12 +144,12 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-let obj = { value: Hour1To24Parser, writable: true, configurable: true };
-Hour1To24Parser.prototype = Object.create(prototype, { constructor: obj });
+let obj = { value: MinuteParser, writable: true, configurable: true };
+MinuteParser.prototype = Object.create(prototype, { constructor: obj });
 if (Parser) {
-  _setPrototypeOf(Hour1To24Parser, Parser);
+  _setPrototypeOf(MinuteParser, Parser);
 }
-_createSuperInternal = Hour1To24Parser;
+_createSuperInternal = MinuteParser;
 let num = 0;
 closure_1 = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
@@ -210,12 +210,12 @@ _createSuperInternal = function _createSuperInternal() {
 obj = {
   key: "parse",
   value: function parse(arg0, arg1, ordinalNumber) {
-    if ("k" === arg1) {
-      return _createSuperInternal(3880).parseNumericPattern(_createSuperInternal(3881).numericPatterns.hour24h, arg0);
-    } else if ("ko" === arg1) {
-      return ordinalNumber.ordinalNumber(arg0, { unit: "hour" });
+    if ("m" === arg1) {
+      return _createSuperInternal(3879).parseNumericPattern(_createSuperInternal(3880).numericPatterns.minute, arg0);
+    } else if ("mo" === arg1) {
+      return ordinalNumber.ordinalNumber(arg0, { unit: "minute" });
     } else {
-      return _createSuperInternal(3880).parseNDigits(arg1.length, arg0);
+      return _createSuperInternal(3879).parseNDigits(arg1.length, arg0);
     }
   }
 };
@@ -224,22 +224,18 @@ let items = [
   {
     key: "validate",
     value: function validate(arg0, arg1) {
-      let tmp = arg1 >= 1;
+      let tmp = arg1 >= 0;
       if (tmp) {
-        tmp = arg1 <= 24;
+        tmp = arg1 <= 59;
       }
       return tmp;
     }
   },
   {
     key: "set",
-    value: function set(setUTCHours) {
-      let result = arg2;
-      if (arg2 <= 24) {
-        result = arg2 % 24;
-      }
-      setUTCHours.setUTCHours(result, 0, 0, 0);
-      return setUTCHours;
+    value: function set(setUTCMinutes) {
+      setUTCMinutes.setUTCMinutes(arg2, 0, 0);
+      return setUTCMinutes;
     }
   }
 ];
@@ -262,4 +258,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { Hour1To24Parser };
+export { MinuteParser };

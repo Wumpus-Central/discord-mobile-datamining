@@ -1,7 +1,7 @@
 // === Module 3911: _typeof ===
 
 // Module 3911 (_typeof)
-import Parser2 from "Parser" /* 3878 */;
+import Parser2 from "Parser" /* 3877 */;
 
 let _createSuperInternal = require;
 let closure_1 = dependencyMap;
@@ -30,15 +30,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(ISOTimezoneWithZParser, Parser) {
+function _setPrototypeOf(ISOTimezoneParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(ISOTimezoneWithZParser, Parser) {
-      ISOTimezoneWithZParser.__proto__ = Parser;
-      return ISOTimezoneWithZParser;
+    _setPrototypeOf = function _setPrototypeOf(ISOTimezoneParser, Parser) {
+      ISOTimezoneParser.__proto__ = Parser;
+      return ISOTimezoneParser;
     };
   }
-  return _setPrototypeOf(ISOTimezoneWithZParser, Parser);
+  return _setPrototypeOf(ISOTimezoneParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -58,7 +58,7 @@ function _getPrototypeOf(arg0) {
 }
 const Parser = Parser2.Parser;
 _createSuperInternal = undefined;
-class ISOTimezoneWithZParser {
+class ISOTimezoneParser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -108,7 +108,7 @@ class ISOTimezoneWithZParser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["t", "T", "x"];
+          items1 = ["t", "T", "X"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -132,7 +132,7 @@ class ISOTimezoneWithZParser {
     }
   }
 }
-closure_1 = ISOTimezoneWithZParser;
+closure_1 = ISOTimezoneParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -144,12 +144,12 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-let obj = { value: ISOTimezoneWithZParser, writable: true, configurable: true };
-ISOTimezoneWithZParser.prototype = Object.create(prototype, { constructor: obj });
+let obj = { value: ISOTimezoneParser, writable: true, configurable: true };
+ISOTimezoneParser.prototype = Object.create(prototype, { constructor: obj });
 if (Parser) {
-  _setPrototypeOf(ISOTimezoneWithZParser, Parser);
+  _setPrototypeOf(ISOTimezoneParser, Parser);
 }
-_createSuperInternal = ISOTimezoneWithZParser;
+_createSuperInternal = ISOTimezoneParser;
 let num = 0;
 closure_1 = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
@@ -210,16 +210,16 @@ _createSuperInternal = function _createSuperInternal() {
 obj = {
   key: "parse",
   value: function parse(arg0, arg1) {
-    if ("X" === arg1) {
-      return _createSuperInternal(3880).parseTimezonePattern(_createSuperInternal(3881).timezonePatterns.basicOptionalMinutes, arg0);
-    } else if ("XX" === arg1) {
-      return _createSuperInternal(3880).parseTimezonePattern(_createSuperInternal(3881).timezonePatterns.basic, arg0);
-    } else if ("XXXX" === arg1) {
-      return _createSuperInternal(3880).parseTimezonePattern(_createSuperInternal(3881).timezonePatterns.basicOptionalSeconds, arg0);
-    } else if ("XXXXX" === arg1) {
-      return _createSuperInternal(3880).parseTimezonePattern(_createSuperInternal(3881).timezonePatterns.extendedOptionalSeconds, arg0);
+    if ("x" === arg1) {
+      return _createSuperInternal(3879).parseTimezonePattern(_createSuperInternal(3880).timezonePatterns.basicOptionalMinutes, arg0);
+    } else if ("xx" === arg1) {
+      return _createSuperInternal(3879).parseTimezonePattern(_createSuperInternal(3880).timezonePatterns.basic, arg0);
+    } else if ("xxxx" === arg1) {
+      return _createSuperInternal(3879).parseTimezonePattern(_createSuperInternal(3880).timezonePatterns.basicOptionalSeconds, arg0);
+    } else if ("xxxxx" === arg1) {
+      return _createSuperInternal(3879).parseTimezonePattern(_createSuperInternal(3880).timezonePatterns.extendedOptionalSeconds, arg0);
     } else {
-      return _createSuperInternal(3880).parseTimezonePattern(_createSuperInternal(3881).timezonePatterns.extended, arg0);
+      return _createSuperInternal(3879).parseTimezonePattern(_createSuperInternal(3880).timezonePatterns.extended, arg0);
     }
   }
 };
@@ -256,4 +256,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { ISOTimezoneWithZParser };
+export { ISOTimezoneParser };

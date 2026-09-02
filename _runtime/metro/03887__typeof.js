@@ -1,7 +1,7 @@
 // === Module 3887: _typeof ===
 
 // Module 3887 (_typeof)
-import Parser2 from "Parser" /* 3878 */;
+import Parser2 from "Parser" /* 3877 */;
 
 let _createSuperInternal = require;
 let closure_1 = dependencyMap;
@@ -30,15 +30,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(MonthParser, Parser) {
+function _setPrototypeOf(StandAloneMonthParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(MonthParser, Parser) {
-      MonthParser.__proto__ = Parser;
-      return MonthParser;
+    _setPrototypeOf = function _setPrototypeOf(StandAloneMonthParser, Parser) {
+      StandAloneMonthParser.__proto__ = Parser;
+      return StandAloneMonthParser;
     };
   }
-  return _setPrototypeOf(MonthParser, Parser);
+  return _setPrototypeOf(StandAloneMonthParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -58,7 +58,7 @@ function _getPrototypeOf(arg0) {
 }
 const Parser = Parser2.Parser;
 _createSuperInternal = undefined;
-class MonthParser {
+class StandAloneMonthParser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -91,15 +91,13 @@ class MonthParser {
         tmp23 = referenceError;
         throw referenceError;
       } else {
-        items1 = ["Y", "R", "q", "Q", "L", "w", "I", "D", "i", "e", "c", "t", "T"];
-        str2 = "incompatibleTokens";
-        if ("incompatibleTokens" in applyResult) {
+        str2 = "priority";
+        if ("priority" in applyResult) {
           _Object = Object;
-          obj = { value: null, enumerable: true, configurable: true, writable: true };
-          obj[0] = items1;
-          definePropertyResult = Object.defineProperty(applyResult, "incompatibleTokens", obj);
+          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 110, enumerable: true, configurable: true, writable: true });
         } else {
-          applyResult.incompatibleTokens = items1;
+          num3 = 110;
+          applyResult.priority = 110;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
@@ -110,13 +108,15 @@ class MonthParser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          str3 = "priority";
-          if ("priority" in applyResult) {
+          items1 = ["Y", "R", "q", "Q", "M", "w", "I", "D", "i", "e", "c", "t", "T"];
+          str3 = "incompatibleTokens";
+          if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
-            definePropertyResult1 = Object.defineProperty(applyResult, "priority", { value: 110, enumerable: true, configurable: true, writable: true });
+            obj = { value: null, enumerable: true, configurable: true, writable: true };
+            obj[0] = items1;
+            definePropertyResult1 = Object.defineProperty(applyResult, "incompatibleTokens", obj);
           } else {
-            num3 = 110;
-            applyResult.priority = 110;
+            applyResult.incompatibleTokens = items1;
           }
           return applyResult;
         }
@@ -132,7 +132,7 @@ class MonthParser {
     }
   }
 }
-closure_1 = MonthParser;
+closure_1 = StandAloneMonthParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -144,12 +144,12 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-let obj = { value: MonthParser, writable: true, configurable: true };
-MonthParser.prototype = Object.create(prototype, { constructor: obj });
+let obj = { value: StandAloneMonthParser, writable: true, configurable: true };
+StandAloneMonthParser.prototype = Object.create(prototype, { constructor: obj });
 if (Parser) {
-  _setPrototypeOf(MonthParser, Parser);
+  _setPrototypeOf(StandAloneMonthParser, Parser);
 }
-_createSuperInternal = MonthParser;
+_createSuperInternal = StandAloneMonthParser;
 let num = 0;
 closure_1 = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
@@ -213,18 +213,18 @@ obj = {
     function valueCallback(arg0) {
       return arg0 - 1;
     }
-    if ("M" === arg1) {
-      return _createSuperInternal(3880).mapValue(_createSuperInternal(3880).parseNumericPattern(_createSuperInternal(3881).numericPatterns.month, arg0), valueCallback);
-    } else if ("MM" === arg1) {
-      return _createSuperInternal(3880).mapValue(_createSuperInternal(3880).parseNDigits(2, arg0), valueCallback);
-    } else if ("Mo" === arg1) {
-      return _createSuperInternal(3880).mapValue(ordinalNumber.ordinalNumber(arg0, { unit: "month" }), valueCallback);
-    } else if ("MMM" === arg1) {
-      return ordinalNumber.month(arg0, { width: "abbreviated", context: "formatting" }) || ordinalNumber.month(arg0, { width: "narrow", context: "formatting" });
-    } else if ("MMMMM" === arg1) {
-      return ordinalNumber.month(arg0, { width: "narrow", context: "formatting" });
+    if ("L" === arg1) {
+      return _createSuperInternal(3879).mapValue(_createSuperInternal(3879).parseNumericPattern(_createSuperInternal(3880).numericPatterns.month, arg0), valueCallback);
+    } else if ("LL" === arg1) {
+      return _createSuperInternal(3879).mapValue(_createSuperInternal(3879).parseNDigits(2, arg0), valueCallback);
+    } else if ("Lo" === arg1) {
+      return _createSuperInternal(3879).mapValue(ordinalNumber.ordinalNumber(arg0, { unit: "month" }), valueCallback);
+    } else if ("LLL" === arg1) {
+      return ordinalNumber.month(arg0, { width: "abbreviated", context: "standalone" }) || ordinalNumber.month(arg0, { width: "narrow", context: "standalone" });
+    } else if ("LLLLL" === arg1) {
+      return ordinalNumber.month(arg0, { width: "narrow", context: "standalone" });
     } else {
-      return ordinalNumber.month(arg0, { width: "wide", context: "formatting" }) || ordinalNumber.month(arg0, { width: "abbreviated", context: "formatting" }) || ordinalNumber.month(arg0, { width: "narrow", context: "formatting" });
+      return ordinalNumber.month(arg0, { width: "wide", context: "standalone" }) || ordinalNumber.month(arg0, { width: "abbreviated", context: "standalone" }) || ordinalNumber.month(arg0, { width: "narrow", context: "standalone" });
     }
   }
 };
@@ -268,4 +268,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { MonthParser };
+export { StandAloneMonthParser };

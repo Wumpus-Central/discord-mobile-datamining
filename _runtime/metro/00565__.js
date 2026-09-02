@@ -2,4 +2,4 @@
 
 // Module 565
 
-export default Math.abs;
+export default Math.min;

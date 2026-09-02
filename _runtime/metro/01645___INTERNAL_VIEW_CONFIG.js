@@ -1,9 +1,20 @@
 // === Module 1645: __INTERNAL_VIEW_CONFIG ===
 
 // Module 1645 (__INTERNAL_VIEW_CONFIG)
+import renderElement from "renderElement" /* 114 */;
+import weakSet from "weakSet" /* 106 */;
 import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
 
-const obj = { uiViewClassName: "KeyboardGestureArea", validAttributes: { interpolator: true, showOnSwipeUp: true, enableSwipeToDismiss: true, offset: true, textInputNativeID: true } };
+let obj = { uiViewClassName: "KeyboardControllerView", directEventTypes: { topKeyboardMoveStart: { registrationName: "onKeyboardMoveStart" }, topKeyboardMove: { registrationName: "onKeyboardMove" }, topKeyboardMoveEnd: { registrationName: "onKeyboardMoveEnd" }, topKeyboardMoveInteractive: { registrationName: "onKeyboardMoveInteractive" }, topFocusedInputLayoutChanged: { registrationName: "onFocusedInputLayoutChanged" }, topFocusedInputTextChanged: { registrationName: "onFocusedInputTextChanged" }, topFocusedInputSelectionChanged: { registrationName: "onFocusedInputSelectionChanged" } }, validAttributes: null };
+obj = { enabled: true, statusBarTranslucent: true, navigationBarTranslucent: true, preserveEdgeToEdge: true };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onKeyboardMoveStart: true, onKeyboardMove: true, onKeyboardMoveEnd: true, onKeyboardMoveInteractive: true, onFocusedInputLayoutChanged: true, onFocusedInputTextChanged: true, onFocusedInputSelectionChanged: true }));
+obj[2] = obj;
+obj = {
+  synchronizeFocusedInputLayout(current) {
+    renderElement.dispatchCommand(current, "synchronizeFocusedInputLayout", []);
+  }
+};
 
-export default setRuntimeConfigProvider.get("KeyboardGestureArea", () => obj);
+export default setRuntimeConfigProvider.get("KeyboardControllerView", () => obj);
 export const __INTERNAL_VIEW_CONFIG = obj;
+export const Commands = obj;

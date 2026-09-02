@@ -1,14 +1,18 @@
 // === Module 8304: _isNativeReflectConstruct ===
 
 // Module 8304 (_isNativeReflectConstruct)
+import noopDefault from "noop" /* 19 */;
 import _inheritsDefault from "_inherits" /* 98 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8280 */;
-import closure_2 from "_classCallCheck" /* 41 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
+import extractFeFloodDefault from "extractFeFlood" /* 8288 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8289 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8305 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const FeSpecularLighting = arg1;
+const FeFlood = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,13 +32,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeSpecularLighting {
+noopDefault;
+class FeFlood {
   constructor() {
     self = this;
-    tmp = closure_2(this, FeSpecularLighting);
-    tmp2 = closure_4;
-    obj = closure_4(FeSpecularLighting);
-    tmp3 = closure_3;
+    tmp = closure_3(this, FeFlood);
+    tmp2 = closure_5;
+    obj = closure_5(FeFlood);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -48,19 +53,31 @@ class FeSpecularLighting {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(FeSpecularLighting, _isNativeReflectConstructDefault);
+_inheritsDefault(FeFlood, _isNativeReflectConstructDefault);
 let obj = {
   key: "render",
   value: function render() {
-    const result = FeSpecularLighting(8257).warnUnimplementedFilter();
-    return null;
+    const self = this;
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const tmp = __INTERNAL_VIEW_CONFIGDefault;
+    const merged = Object.assign(self(8288).extractFilter(this.props));
+    const merged1 = Object.assign(extractFeFloodDefault(this.props));
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
 };
 const items = [obj];
-const importDefaultResultResult = importDefaultResult(FeSpecularLighting, items);
-importDefaultResultResult.displayName = "FeSpecularLighting";
+const importDefaultResultResult = importDefaultResult(FeFlood, items);
+importDefaultResultResult.displayName = "FeFlood";
 obj = {};
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.floodColor = "black";
+obj.floodOpacity = 1;
 importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

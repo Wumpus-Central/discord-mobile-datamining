@@ -1,8 +1,8 @@
 // === Module 4772: isString ===
 
 // Module 4772 (isString)
-import callBoundIntrinsic from "callBoundIntrinsic" /* 574 */;
-import hasToStringTagShams from "hasToStringTagShams" /* 1408 */;
+import callBoundIntrinsic from "callBoundIntrinsic" /* 571 */;
+import hasToStringTagShams from "hasToStringTagShams" /* 1407 */;
 
 let closure_0 = callBoundIntrinsic("String.prototype.valueOf");
 let closure_1 = callBoundIntrinsic("Object.prototype.toString");

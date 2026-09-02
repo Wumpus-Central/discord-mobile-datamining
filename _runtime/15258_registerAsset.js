@@ -1,7 +1,7 @@
 // === Module 15258: registerAsset ===
 
 // Module 15258 (registerAsset)
-import registerAsset from "registerAsset" /* 1241 */;
+import registerAsset from "registerAsset" /* 1240 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "aa6654f8bc64e9c09fd740f0157dd47b", name: "ClipboardCheckIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/../discord_common/js/shared/images/flags", width: 70, height: 47, scales: [1], hash: "e6d6b255259ac878d00819a9555072ad", name: "en-US", type: "png" });

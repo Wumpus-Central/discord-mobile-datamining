@@ -9,19 +9,19 @@ export default function ValidateAndApplyPropertyDescriptor(arg0, arg1, flag, __C
   const tmp3 = Type(arg0);
   if (undefined !== arg0) {
     if (!tmp(4762)(arg0)) {
-      const tmp6 = new tmp(541)("Assertion failed: O must be undefined or an Object");
+      const tmp6 = new tmp(538)("Assertion failed: O must be undefined or an Object");
       throw tmp6;
     }
   }
   if (isPropertyKey(arg1)) {
     if (typeof flag !== "boolean") {
-      const tmp87 = new tmp(541)("Assertion failed: extensible must be a Boolean");
+      const tmp87 = new tmp(538)("Assertion failed: extensible must be a Boolean");
       throw tmp87;
     } else if (tmp(4813)(__Configurable__)) {
       __Set__ = arg4;
       if (undefined !== arg4) {
         if (!tmp(4813)(__Set__)) {
-          const tmp19 = new tmp(541)("Assertion failed: current must be a Property Descriptor, or undefined");
+          const tmp19 = new tmp(538)("Assertion failed: current must be a Property Descriptor, or undefined");
           throw tmp19;
         }
       }
@@ -163,17 +163,17 @@ export default function ValidateAndApplyPropertyDescriptor(arg0, arg1, flag, __C
             const tmpResult12 = tmp(4816);
           }
         } else {
-          const tmp23 = new tmp(541)("`current`, when present, must be a fully populated and valid Property Descriptor");
+          const tmp23 = new tmp(538)("`current`, when present, must be a fully populated and valid Property Descriptor");
           throw tmp23;
         }
         tmpResult3 = tmp(4830);
       }
     } else {
-      const tmp15 = new tmp(541)("Assertion failed: Desc must be a Property Descriptor");
+      const tmp15 = new tmp(538)("Assertion failed: Desc must be a Property Descriptor");
       throw tmp15;
     }
   } else {
-    const tmp10 = new tmp(541)("Assertion failed: P must be a Property Key");
+    const tmp10 = new tmp(538)("Assertion failed: P must be a Property Key");
     throw tmp10;
   }
 };

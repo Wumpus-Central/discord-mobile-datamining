@@ -1,7 +1,7 @@
 // === Module 15249: registerAsset ===
 
 // Module 15249 (registerAsset)
-import registerAsset from "registerAsset" /* 1241 */;
+import registerAsset from "registerAsset" /* 1240 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs", scales: [1], hash: "8c77483d016b7729efcf93770a3062e1", name: "uk.messages.8c77483d016b7729efcf93770a3062e1.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "26310276feb1290ca5d9d3ec8d0b1231", name: "LanguageIcon", type: "png" });

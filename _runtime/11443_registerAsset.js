@@ -1,7 +1,7 @@
 // === Module 11443: registerAsset ===
 
 // Module 11443 (registerAsset)
-import registerAsset from "registerAsset" /* 1241 */;
+import registerAsset from "registerAsset" /* 1240 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_automod/images", width: 32, height: 32, scales: [1, 2, 3], hash: "c1e94f3a9063956a896dc2a0d96e8ae1", name: "ic_blocked_chat_bubble_icon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/stream_feedback/light-theme-desaturated", width: 64, height: 64, scales: [2, 3], hash: "11d1f1c27d6ce094f9dea47191c76875", name: "feedback-modal-sad-desaturated", type: "png" });

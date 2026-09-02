@@ -1,7 +1,7 @@
 // === Module 12864: registerAsset ===
 
 // Module 12864 (registerAsset)
-import registerAsset from "registerAsset" /* 1241 */;
+import registerAsset from "registerAsset" /* 1240 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/gifting/seasonal", width: 144, height: 150, scales: [1], hash: "2428d071b75d8fac57234ccab81c5c37", name: "cake_idle", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "b04e363869889767a126da0fcdcaf9c8", name: "AppleNeutralIcon", type: "png" });

@@ -1,7 +1,7 @@
 // === Module 13222: registerAsset ===
 
 // Module 13222 (registerAsset)
-import registerAsset from "registerAsset" /* 1241 */;
+import registerAsset from "registerAsset" /* 1240 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 158, height: 32, scales: [1, 2, 3], hash: "18951c7ea15f41ff544471dfa4f446f0", name: "img_logo_premium_tier_0_full", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 180.5, height: 88, scales: [2, 3], hash: "170926482058c89c2a2a9d537ff237a4", name: "img_what_you_lose_emojis", type: "png" });

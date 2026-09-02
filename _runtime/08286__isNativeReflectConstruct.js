@@ -1,14 +1,17 @@
 // === Module 8286: _isNativeReflectConstruct ===
 
 // Module 8286 (_isNativeReflectConstruct)
+import noopDefault from "noop" /* 19 */;
 import _inheritsDefault from "_inherits" /* 98 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8280 */;
-import closure_2 from "_classCallCheck" /* 41 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8287 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8289 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const FeConvolveMatrix = arg1;
+const FeBlend = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,13 +31,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeConvolveMatrix {
+noopDefault;
+class FeBlend {
   constructor() {
     self = this;
-    tmp = closure_2(this, FeConvolveMatrix);
-    tmp2 = closure_4;
-    obj = closure_4(FeConvolveMatrix);
-    tmp3 = closure_3;
+    tmp = closure_3(this, FeBlend);
+    tmp2 = closure_5;
+    obj = closure_5(FeBlend);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -48,19 +52,33 @@ class FeConvolveMatrix {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(FeConvolveMatrix, _isNativeReflectConstructDefault);
+_inheritsDefault(FeBlend, _isNativeReflectConstructDefault);
 let obj = {
   key: "render",
   value: function render() {
-    const result = FeConvolveMatrix(8257).warnUnimplementedFilter();
-    return null;
+    const self = this;
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const tmp = __INTERNAL_VIEW_CONFIGDefault;
+    const merged = Object.assign(self(8288).extractFilter(this.props));
+    const obj2 = self(8288);
+    const merged1 = Object.assign(self(8288).extractIn(this.props));
+    const obj3 = self(8288);
+    const merged2 = Object.assign(self(8288).extractFeBlend(this.props));
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
 };
 const items = [obj];
-const importDefaultResultResult = importDefaultResult(FeConvolveMatrix, items);
-importDefaultResultResult.displayName = "FeConvolveMatrix";
+const importDefaultResultResult = importDefaultResult(FeBlend, items);
+importDefaultResultResult.displayName = "FeBlend";
 obj = {};
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.mode = "normal";
 importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

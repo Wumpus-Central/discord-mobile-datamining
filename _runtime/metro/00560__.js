@@ -2,4 +2,4 @@
 
 // Module 560
 
-export default RangeError;
+export default URIError;

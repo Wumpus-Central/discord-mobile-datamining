@@ -1,8 +1,8 @@
 // === Module 4786: defineProperty ===
 
 // Module 4786 (defineProperty)
-import hasPropertyDescriptors from "hasPropertyDescriptors" /* 1420 */;
-import defineDataProperty from "defineDataProperty" /* 1421 */;
+import hasPropertyDescriptors from "hasPropertyDescriptors" /* 1419 */;
+import defineDataProperty from "defineDataProperty" /* 1420 */;
 import keys from "keys" /* 4787 */;
 
 let tmp = typeof Symbol === "function";

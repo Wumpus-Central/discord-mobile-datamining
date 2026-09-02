@@ -25,7 +25,7 @@ export default function copyObject(arg0, arg1, arg2, arg3) {
     if (arg2) {
       let tmp10 = tmp7(4606)(obj, tmp, tmp3);
     } else {
-      let tmp9 = tmp7(804)(obj, tmp, tmp3);
+      let tmp9 = tmp7(801)(obj, tmp, tmp3);
     }
   }
   return obj;

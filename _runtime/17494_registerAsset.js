@@ -1,7 +1,7 @@
 // === Module 17494: registerAsset ===
 
 // Module 17494 (registerAsset)
-import registerAsset from "registerAsset" /* 1241 */;
+import registerAsset from "registerAsset" /* 1240 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "3cfafdcd8589d496d2b3358a1b5ec72d", name: "ImageBrokenIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/guild_settings/community_settings", width: 88, height: 80, scales: [2, 3], hash: "d16693419c73a203fe410baf14480d7e", name: "finishing_touches", type: "png" });

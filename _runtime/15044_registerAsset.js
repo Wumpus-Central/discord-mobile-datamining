@@ -1,7 +1,7 @@
 // === Module 15044: registerAsset ===
 
 // Module 15044 (registerAsset)
-import registerAsset from "registerAsset" /* 1241 */;
+import registerAsset from "registerAsset" /* 1240 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/../discord_common/js/shared/images/flags", width: 70, height: 47, scales: [1], hash: "7beab7b17eaa9ff7ceed3e5b1af274c2", name: "pt-BR", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images", width: 87, height: 87, scales: [2, 3], hash: "d299e9311da17e9393089ebfa8d667b1", name: "resubscribed_alert_header", type: "png" });

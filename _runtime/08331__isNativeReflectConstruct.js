@@ -3,14 +3,16 @@
 // Module 8331 (_isNativeReflectConstruct)
 import noopAll from "noop" /* 19 */;
 import _inheritsDefault from "_inherits" /* 98 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8265 */;
-import closure_2 from "_classCallCheck" /* 41 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8274 */;
+import _modDef8328 from "module_8328" /* 8328 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8333 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const Polyline = importDefault;
+const Mask = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -31,60 +33,78 @@ function _isNativeReflectConstruct() {
   }
 }
 noopAll;
-class Polyline {
+class Mask {
   constructor() {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_2(this, closure_0);
-    items1 = [...items];
-    tmp2 = closure_4;
-    obj = closure_4(closure_0);
-    tmp3 = closure_3;
+    tmp = closure_3(this, Mask);
+    tmp2 = closure_5;
+    obj = closure_5(Mask);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = (points) => {
-      points = points.points;
-      if (points) {
-        const _HermesInternal = HermesInternal;
-        points.d = "M" + lib(closure_1_1[7])(points);
-      }
-      if (lib.root) {
-        const root = lib.root;
-        root.setNativeProps(points);
-      }
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(Polyline, _isNativeReflectConstructDefault);
-let items = [
+_inheritsDefault(Mask, _isNativeReflectConstructDefault);
+const items = [
   {
     key: "render",
     value: function render() {
+      const self = this;
       const props = this.props;
-      const points = props.points;
-      const obj = { ref: this.refMethod, d: null };
-      let combined = points;
-      if (points) {
-        const _HermesInternal = HermesInternal;
-        combined = "M" + Polyline(8330)(points);
+      ({ maskUnits, maskContentUnits, style } = props);
+      let obj = { x: props.x, y: props.y, width: props.width, height: props.height, maskUnits: null, maskContentUnits: null, maskType: null };
+      let num = 0;
+      if (undefined !== maskUnits) {
+        num = _modDef8328[maskUnits];
       }
-      obj[1] = combined;
-      const merged = Object.assign(props);
-      return jsx(Polyline(8325), { ref: this.refMethod, d: null });
+      obj[4] = num;
+      let num2 = 1;
+      if (undefined !== maskContentUnits) {
+        num2 = _modDef8328[maskContentUnits];
+      }
+      obj[5] = num2;
+      let str;
+      if (props != null) {
+        str = props.maskType;
+      }
+      if (!str) {
+        let maskType;
+        if (style != null) {
+          maskType = style.maskType;
+        }
+        str = maskType;
+      }
+      if (!str) {
+        str = "luminance";
+      }
+      obj[6] = self(8332).maskType[str];
+      obj = {
+        ref(arg0) {
+          return self.refMethod(arg0);
+        }
+      };
+      const tmp5 = self;
+      const tmp8 = __INTERNAL_VIEW_CONFIGDefault;
+      const merged = Object.assign(self(8265).withoutXY(this, props));
+      const merged1 = Object.assign(obj);
+      obj.children = props.children;
+      return <tmp8 ref={function ref(arg0) {
+        return self.refMethod(arg0);
+      }} />;
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(Polyline, items);
-importDefaultResultResult.displayName = "Polyline";
-importDefaultResultResult.defaultProps = { points: "" };
+const importDefaultResultResult = importDefaultResult(Mask, items);
+importDefaultResultResult.displayName = "Mask";
+importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
 
 export default importDefaultResultResult;

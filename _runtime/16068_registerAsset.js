@@ -1,7 +1,7 @@
 // === Module 16068: registerAsset ===
 
 // Module 16068 (registerAsset)
-import registerAsset from "registerAsset" /* 1241 */;
+import registerAsset from "registerAsset" /* 1240 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "2bf7738cbb1d2827663b492fedbd65fb", name: "MedalIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images", width: 375, height: 120, scales: [2, 3], hash: "5ac140c0ecf6d86d0e8c0b66480112aa", name: "IAP_feature_education", type: "png" });

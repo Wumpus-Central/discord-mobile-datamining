@@ -1,17 +1,12 @@
 // === Module 8345: _isNativeReflectConstruct ===
 
 // Module 8345 (_isNativeReflectConstruct)
-import noopAll from "noop" /* 19 */;
 import _inheritsDefault from "_inherits" /* 98 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8265 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8346 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import closure_4 from "_possibleConstructorReturn" /* 93 */;
-import closure_5 from "_getPrototypeOf" /* 95 */;
+import Stop from "_classCallCheck" /* 41 */;
+import closure_1 from "_possibleConstructorReturn" /* 93 */;
+import closure_2 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
-import { jsx } from "jsxProd" /* 21 */;
 
-const Use = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -31,69 +26,44 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-noopAll;
-class Use {
+class Stop {
   constructor() {
     self = this;
-    tmp = closure_3(this, Use);
-    tmp2 = closure_5;
-    obj = closure_5(Use);
-    tmp3 = closure_4;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = Stop(this, closure_0);
+    items1 = [...items];
+    tmp2 = closure_2;
+    obj = closure_2(closure_0);
+    tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items1);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.setNativeProps = () => {
+      const parent = props.props.parent;
+      if (parent) {
+        parent.forceUpdate();
+      }
+    };
+    return tmp3Result;
   }
 }
-_inheritsDefault(Use, _isNativeReflectConstructDefault);
-const items = [
+_inheritsDefault(Stop, require("noop").Component);
+let items = [
   {
     key: "render",
     value: function render() {
-      const self = this;
-      const props = this.props;
-      let str = props.href;
-      ({ children, x, y, width, height } = props);
-      if (undefined === str) {
-        str = props.xlinkHref;
-      }
-      let match = str;
-      if (str) {
-        match = str.match(self(8257).idPattern);
-      }
-      let tmp4 = match;
-      if (match) {
-        tmp4 = match[1];
-      }
-      if (!tmp4) {
-        const _console = console;
-        console.warn(`Invalid \`href\` prop for \`Use\` element, expected a href like "#id", but got: "${str}"`);
-      }
-      let obj = { href: tmp4, x, y, width, height };
-      obj = {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      };
-      const tmp7 = __INTERNAL_VIEW_CONFIGDefault;
-      const merged = Object.assign(self(8256).withoutXY(this, props));
-      const merged1 = Object.assign(obj);
-      obj.children = children;
-      return <tmp7 ref={function ref(arg0) {
-        return self.refMethod(arg0);
-      }} />;
+      return null;
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(Use, items);
-importDefaultResultResult.displayName = "Use";
-importDefaultResultResult.defaultProps = { x: 0, y: 0, width: 0, height: 0 };
+const importDefaultResultResult = importDefaultResult(Stop, items);
+importDefaultResultResult.displayName = "Stop";
 
 export default importDefaultResultResult;

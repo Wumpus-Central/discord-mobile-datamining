@@ -1,10 +1,10 @@
 // === Module 4781: StringToNumber ===
 
 // Module 4781 (StringToNumber)
-import getEvalledConstructor from "getEvalledConstructor" /* 540 */;
-import _mod541 from "module_541" /* 541 */;
-import callBoundIntrinsic from "callBoundIntrinsic" /* 574 */;
-import regexTester from "regexTester" /* 1410 */;
+import getEvalledConstructor from "getEvalledConstructor" /* 537 */;
+import _mod538 from "module_538" /* 538 */;
+import callBoundIntrinsic from "callBoundIntrinsic" /* 571 */;
+import regexTester from "regexTester" /* 1409 */;
 import trim from "trim" /* 4782 */;
 
 let tmp = getEvalledConstructor("%RegExp%");
@@ -24,7 +24,7 @@ class StringToNumber {
       tmp15 = new.target;
       str = "Assertion failed: `argument` is not a String";
       tmp16 = new.target;
-      tmp17 = new require("module_541")("Assertion failed: `argument` is not a String");
+      tmp17 = new require("module_538")("Assertion failed: `argument` is not a String");
       tmp18 = tmp17;
       throw tmp17;
     } else {

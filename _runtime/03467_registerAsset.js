@@ -1,7 +1,7 @@
 // === Module 3467: registerAsset ===
 
 // Module 3467 (registerAsset)
-import registerAsset from "registerAsset" /* 1241 */;
+import registerAsset from "registerAsset" /* 1240 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9nYW1lX2ludml0ZV9jaGFubmVscw==", scales: [1], hash: "48afe3dbb1ff70ab6b2bec57d51dbd7e", name: "zh-TW.messages.48afe3dbb1ff70ab6b2bec57d51dbd7e.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/game_invite_channels", scales: [1], hash: "1f9ab1ee6385662cdd6891a4feb70a40", name: "GameInviteChannels.compiled.messages", type: "jsona" });

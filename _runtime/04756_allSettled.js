@@ -5,7 +5,7 @@ import requirePromise from "requirePromise" /* 4757 */;
 import getPolyfill from "getPolyfill" /* 4758 */;
 import allSettled2 from "allSettled" /* 4759 */;
 import shimAllSettled from "shimAllSettled" /* 4834 */;
-import callBind from "callBind" /* 1418 */;
+import callBind from "callBind" /* 1417 */;
 import defineProperty from "defineProperty" /* 4786 */;
 
 requirePromise();

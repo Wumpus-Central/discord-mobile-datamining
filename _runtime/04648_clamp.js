@@ -1,7 +1,7 @@
 // === Module 4648: clamp ===
 
 // Module 4648 (clamp)
-import toNumber from "toNumber" /* 637 */;
+import toNumber from "toNumber" /* 634 */;
 import baseClamp from "baseClamp" /* 4649 */;
 
 

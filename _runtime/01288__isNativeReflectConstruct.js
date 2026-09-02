@@ -1,13 +1,15 @@
 // === Module 1288: _isNativeReflectConstruct ===
 
 // Module 1288 (_isNativeReflectConstruct)
-import _isNativeReflectConstruct2 from "_isNativeReflectConstruct" /* 1278 */;
-import StringBuilder from "_classCallCheck" /* 41 */;
+import noop from "noop" /* 19 */;
+import _isNativeReflectConstruct2 from "_isNativeReflectConstruct" /* 1277 */;
+import closure_2 from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import closure_1 from "_possibleConstructorReturn" /* 93 */;
-import closure_2 from "_getPrototypeOf" /* 95 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
+let _class = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,78 +29,153 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-function formatToPlainString(k2UNz_, maxSettingsForPreset) {
-  let first = k2UNz_;
-  if (typeof k2UNz_ !== "string") {
+function formatReact(str) {
+  let bindFormatValuesResult = str;
+  if (typeof str !== "string") {
     const self = this;
-    first = this.bindFormatValues(closure_4, k2UNz_, maxSettingsForPreset)[0];
+    bindFormatValuesResult = this.bindFormatValues(arg2, str, arg1);
   }
-  return first;
+  return bindFormatValuesResult;
 }
-class StringBuilder {
-  constructor() {
-    self = this;
-    tmp = StringBuilder(this, StringBuilder);
-    tmp2 = closure_2;
-    obj = closure_2(StringBuilder);
-    tmp3 = closure_1;
-    if (_isNativeReflectConstruct()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.result = "";
-    return tmp3Result;
+const createElement = noop.createElement;
+let obj = { format: formatReact, builder: null };
+_class = exports.DEFAULT_REACT_RICH_TEXT_ELEMENTS;
+_class = function _class(arg0) {
+  const self = this;
+  callback(this, _class);
+  const obj = callback2(_class);
+  if (_isNativeReflectConstruct()) {
+    const _Reflect = Reflect;
+    let constructResult = Reflect.construct(obj, arguments, callback2(self).constructor);
+  } else {
+    constructResult = obj(...arguments);
   }
-}
-_inherits(StringBuilder, _isNativeReflectConstruct2.FormatBuilder);
+  const tmp3Result = closure_4(self, constructResult);
+  tmp3Result._nodeKey = 0;
+  tmp3Result.result = [];
+  return tmp3Result;
+};
+_inherits(_class, _isNativeReflectConstruct2.FormatBuilder);
+obj = {
+  key: "pushRichTextTag",
+  value: function pushRichTextTag(arg0, arg1, arg2) {
+    const result = this.result;
+    this._nodeKey = +this._nodeKey + 1;
+    result.push(_class[arg0](arg1, "" + this.context.keyPrefix + ".tag-" + +this._nodeKey, arg2));
+  }
+};
 let items = [
-  {
-    key: "pushRichTextTag",
-    value: function pushRichTextTag(arg0, arg1, arg2) {
-      const self = this;
-      while (tmp !== undefined) {
-        self.result = self.result + tmp2;
-        continue;
-      }
-    }
-  },
+  obj,
   {
     key: "pushLiteralText",
     value: function pushLiteralText(arg0) {
-      this.result = this.result + arg0;
+      const self = this;
+      if (typeof this.result[this.result.length - 1] === "string") {
+        let result = self.result;
+        const diff = self.result.length - 1;
+        result[diff] = result[diff] + arg0;
+      } else {
+        result = self.result;
+        result.push(arg0);
+      }
     }
   },
   {
     key: "pushObject",
     value: function pushObject(arg0) {
-      let tmp = null != arg0;
-      if (tmp) {
-        tmp = "toString" in arg0;
-      }
-      if (tmp) {
-        const self = this;
-        this.result = this.result + arg0.toString();
-      }
+      const result = this.result;
+      result.push(arg0);
     }
   },
   {
     key: "finish",
     value: function finish() {
-      const items = [this.result];
-      return items;
+      return this.result;
     }
   }
 ];
-const _moduleResult = _createClass(StringBuilder, items);
-let c4 = _moduleResult;
+obj[1] = _createClass(_class, items);
 
-export { formatToPlainString };
-export const StringBuilder = _moduleResult;
-export const stringFormatter = { format: formatToPlainString, builder: _moduleResult };
+export { formatReact };
+export const makeReactFormatter = function makeReactFormatter(arg0) {
+  let obj = { format: formatReact, builder: null };
+  _class = arg0;
+  _class = function _class(arg0) {
+    const self = this;
+    callback(this, _class);
+    const obj = callback2(_class);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      let constructResult = Reflect.construct(obj, arguments, callback2(self).constructor);
+    } else {
+      constructResult = obj(...arguments);
+    }
+    const tmp3Result = closure_4(self, constructResult);
+    tmp3Result._nodeKey = 0;
+    tmp3Result.result = [];
+    return tmp3Result;
+  };
+  _inherits(_class, _class(1277).FormatBuilder);
+  obj = {
+    key: "pushRichTextTag",
+    value: function pushRichTextTag(arg0, arg1, arg2) {
+      const result = this.result;
+      this._nodeKey = +this._nodeKey + 1;
+      result.push(_class[arg0](arg1, "" + this.context.keyPrefix + ".tag-" + +this._nodeKey, arg2));
+    }
+  };
+  const items = [
+    obj,
+    {
+      key: "pushLiteralText",
+      value: function pushLiteralText(arg0) {
+        const self = this;
+        if (typeof this.result[this.result.length - 1] === "string") {
+          let result = self.result;
+          const diff = self.result.length - 1;
+          result[diff] = result[diff] + arg0;
+        } else {
+          result = self.result;
+          result.push(arg0);
+        }
+      }
+    },
+    {
+      key: "pushObject",
+      value: function pushObject(arg0) {
+        const result = this.result;
+        result.push(arg0);
+      }
+    },
+    {
+      key: "finish",
+      value: function finish() {
+        return this.result;
+      }
+    }
+  ];
+  obj[1] = _createClass(_class, items);
+  return obj;
+};
+export const DEFAULT_REACT_RICH_TEXT_ELEMENTS = {
+  $b(arg0, key) {
+    return <strong key={arg1}>{arg0}</strong>;
+  },
+  $i(arg0, key) {
+    return <em key={arg1}>{arg0}</em>;
+  },
+  $del(arg0, key) {
+    return <del key={arg1}>{arg0}</del>;
+  },
+  $code(arg0, key) {
+    return <code key={arg1}>{arg0}</code>;
+  },
+  $link(arg0, key) {
+    [tmp] = arg2;
+    return <a href={tmp} key={arg1}>{arg0}</a>;
+  },
+  $p(arg0, key) {
+    return <p key={arg1}>{arg0}</p>;
+  }
+};
+export const reactFormatter = obj;

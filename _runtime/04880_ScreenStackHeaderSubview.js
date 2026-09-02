@@ -182,7 +182,7 @@ const forwardRefResult = noopDefault.forwardRef((disableLeftInsetApplication, re
   return jsx(result1(4883), {});
 });
 forwardRefResult.displayName = "ScreenStackHeaderConfig";
-const styles = StyleSheet.create({ headerSubview: { flexDirection: "row", alignItems: "center", justifyContent: "center" }, headerSubviewCenter: { flexDirection: "row", alignItems: "center", justifyContent: "center", flexShrink: 1 }, headerConfig: { position: "absolute", width: "100%", flexDirection: "row", justifyContent: "space-between", alignItems: "category" } });
+const styles = StyleSheet.create({ headerSubview: { flexDirection: "row", alignItems: "center", justifyContent: "center" }, headerSubviewCenter: { flexDirection: "row", alignItems: "center", justifyContent: "center", flexShrink: 1 }, headerConfig: { position: "absolute", width: "100%", flexDirection: "row", justifyContent: "space-between", alignItems: "call" } });
 
 export const ScreenStackHeaderSubview = __INTERNAL_VIEW_CONFIGDefault;
 export const ScreenStackHeaderConfig = forwardRefResult;

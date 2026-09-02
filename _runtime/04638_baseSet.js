@@ -1,9 +1,9 @@
 // === Module 4638: baseSet ===
 
 // Module 4638 (baseSet)
-import isObject from "isObject" /* 606 */;
-import toKey from "toKey" /* 725 */;
-import castPath from "castPath" /* 728 */;
+import isObject from "isObject" /* 603 */;
+import toKey from "toKey" /* 722 */;
+import castPath from "castPath" /* 725 */;
 
 
 export default function baseSet(arg0, arg1, arg2, arg3) {
@@ -29,10 +29,10 @@ export default function baseSet(arg0, arg1, arg2, arg3) {
               }
               tmp13 = tmp12;
               if (undefined === tmp12) {
-                if (tmp6(606)(tmp11)) {
+                if (tmp6(603)(tmp11)) {
                   tmp13 = tmp11;
                 } else {
-                  let tmp14 = tmp6(628)(arr[num2 + 1]) ? [] : {};
+                  let tmp14 = tmp6(625)(arr[num2 + 1]) ? [] : {};
                 }
               }
             }

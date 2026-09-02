@@ -1,7 +1,7 @@
 // === Module 4601: initCloneObject ===
 
 // Module 4601 (initCloneObject)
-import isPrototype from "isPrototype" /* 630 */;
+import isPrototype from "isPrototype" /* 627 */;
 
 
 export default function initCloneObject(arg0) {

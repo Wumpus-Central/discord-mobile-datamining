@@ -1,7 +1,7 @@
 // === Module 1451: registerAsset ===
 
 // Module 1451 (registerAsset)
-import registerAsset from "registerAsset" /* 1241 */;
+import registerAsset from "registerAsset" /* 1240 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/provisional_account_avatars", width: 320, height: 320, scales: [1], hash: "ffe52daac60a8380b844bea02dece12e", name: "default_provisional_avatar_4", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/provisional_account_avatars", width: 320, height: 320, scales: [1], hash: "fb3b5529cfb55c06f1bdff816af8a17a", name: "default_provisional_avatar_5", type: "png" });

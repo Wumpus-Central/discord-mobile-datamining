@@ -8,13 +8,13 @@ let c1 = importDefault;
 const RN$LegacyInterop_UIManager_getConstants = global.RN$LegacyInterop_UIManager_getConstants;
 let c3 = false;
 let closure_4 = {};
-const f17932 = () => {
+const f18168 = () => {
 
 };
 ({ RN$LegacyInterop_UIManager_getConstantsForViewManager: error, RN$LegacyInterop_UIManager_getDefaultEventTypes: closure_8 } = global);
 c0 = false;
 c1 = null;
-const f67616 = () => {
+const f68479 = () => {
 
 };
 let obj = {};
@@ -50,7 +50,7 @@ obj = {
   },
   getDefaultEventTypes() {
     if (closure_8) {
-      if (typeof f67616 !== "function") {
+      if (typeof f68479 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       if (!c0) {
@@ -120,7 +120,7 @@ const merged2 = Object.assign({
 });
 obj.getViewManagerConfig = function getViewManagerConfig(arg0) {
   if (RN$LegacyInterop_UIManager_getConstants) {
-    if (typeof f17932 !== "function") {
+    if (typeof f18168 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     if (!c3) {
@@ -156,7 +156,7 @@ obj.hasViewManagerConfig = function hasViewManagerConfig(arg0) {
 };
 obj.getConstants = function getConstants() {
   if (RN$LegacyInterop_UIManager_getConstants) {
-    if (typeof f17932 !== "function") {
+    if (typeof f18168 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     if (!c3) {
@@ -234,7 +234,7 @@ if (RN$LegacyInterop_UIManager_getConstants) {
   }
   const keys = Object.keys(closure_4);
   const item = keys.forEach((arg0) => {
-    if (typeof f17932 !== "function") {
+    if (typeof f18168 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     if (!c3) {

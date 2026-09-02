@@ -1,7 +1,7 @@
 // === Module 2853: registerAsset ===
 
 // Module 2853 (registerAsset)
-import registerAsset from "registerAsset" /* 1241 */;
+import registerAsset from "registerAsset" /* 1240 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9nYW1lX3NlcnZlcg==", scales: [1], hash: "c3eb569a5201ad64dbfd2283a1eedf2b", name: "zh-TW.messages.c3eb569a5201ad64dbfd2283a1eedf2b.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/game_server", scales: [1], hash: "0627c3400eb57edf9f5bbd28fa95a9c1", name: "GameServer.compiled.messages", type: "jsona" });

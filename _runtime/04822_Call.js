@@ -1,9 +1,9 @@
 // === Module 4822: Call ===
 
 // Module 4822 (Call)
-import getEvalledConstructor from "getEvalledConstructor" /* 540 */;
-import _mod541 from "module_541" /* 541 */;
-import callBoundIntrinsic from "callBoundIntrinsic" /* 574 */;
+import getEvalledConstructor from "getEvalledConstructor" /* 537 */;
+import _mod538 from "module_538" /* 538 */;
+import callBoundIntrinsic from "callBoundIntrinsic" /* 571 */;
 import getEvalledConstructor2 from "getEvalledConstructor" /* 4800 */;
 
 let tmp = getEvalledConstructor("%Reflect.apply%", true);
@@ -17,7 +17,7 @@ export default function Call(arg0, arg1) {
   if (getEvalledConstructor2(tmp)) {
     return callback(arg0, arg1, tmp);
   } else {
-    const tmp6 = new _mod541("Assertion failed: optional `argumentsList`, if provided, must be a List");
+    const tmp6 = new _mod538("Assertion failed: optional `argumentsList`, if provided, must be a List");
     throw tmp6;
   }
   const tmp2 = require;

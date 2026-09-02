@@ -1,7 +1,7 @@
 // === Module 16018: registerAsset ===
 
 // Module 16018 (registerAsset)
-import registerAsset from "registerAsset" /* 1241 */;
+import registerAsset from "registerAsset" /* 1240 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/main_tabs", width: 24, height: 24, scales: [2, 3], hash: "afec4e7bfe67c8da93450ca26af6a62e", name: "NotificationCenter", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [1, 2, 3], hash: "734b87c0c83fffbdb266c05473eedb57", name: "ic_wand", type: "png" });

@@ -1,7 +1,7 @@
 // === Module 13249: registerAsset ===
 
 // Module 13249 (registerAsset)
-import registerAsset from "registerAsset" /* 1241 */;
+import registerAsset from "registerAsset" /* 1240 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "3cb1cd2fa7a6da13fc0880992d84830f", name: "ChevronLargeDownIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 324, height: 187, scales: [2, 3], hash: "c300172c07e69fb8041898afe2aa282d", name: "img_tier_0_marketing_boosting", type: "png" });

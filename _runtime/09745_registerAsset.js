@@ -1,7 +1,7 @@
 // === Module 9745: registerAsset ===
 
 // Module 9745 (registerAsset)
-import registerAsset from "registerAsset" /* 1241 */;
+import registerAsset from "registerAsset" /* 1240 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "13168e0700737564714d8e4fc44106f6", name: "ShareIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 160, height: 160, scales: [2, 3], hash: "85840ade8b69557ffa30f1445cbffe12", name: "img_no_results_alt_darker", type: "png" });

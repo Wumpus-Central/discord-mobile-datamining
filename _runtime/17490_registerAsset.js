@@ -1,7 +1,7 @@
 // === Module 17490: registerAsset ===
 
 // Module 17490 (registerAsset)
-import registerAsset from "registerAsset" /* 1241 */;
+import registerAsset from "registerAsset" /* 1240 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "f1884e5c4915e02981c5e72330110f57", name: "CircleErrorIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/guild_settings/community_settings", width: 88, height: 80, scales: [2, 3], hash: "47e53f4c1a010a8a023be6a3f87eb4e2", name: "channel_setup", type: "png" });

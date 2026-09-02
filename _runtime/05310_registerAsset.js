@@ -1,7 +1,7 @@
 // === Module 5310: registerAsset ===
 
 // Module 5310 (registerAsset)
-import registerAsset from "registerAsset" /* 1241 */;
+import registerAsset from "registerAsset" /* 1240 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 256, height: 256, scales: [1], hash: "5de31cd2c9db12c0dfd39e4c1dd0eb1f", name: "img_roblox_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "f0c9d04e77af1368c39d93a975075c0b", name: "img_account_sync_epic_dark_and_white", type: "png" });

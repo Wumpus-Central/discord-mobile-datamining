@@ -1,8 +1,8 @@
 // === Module 4780: isDateObject ===
 
 // Module 4780 (isDateObject)
-import callBoundIntrinsic from "callBoundIntrinsic" /* 574 */;
-import hasToStringTagShams from "hasToStringTagShams" /* 1408 */;
+import callBoundIntrinsic from "callBoundIntrinsic" /* 571 */;
+import hasToStringTagShams from "hasToStringTagShams" /* 1407 */;
 
 let closure_0 = callBoundIntrinsic("Date.prototype.getDay");
 let closure_1 = callBoundIntrinsic("Object.prototype.toString");

@@ -1,7 +1,7 @@
 // === Module 14892: registerAsset ===
 
 // Module 14892 (registerAsset)
-import registerAsset from "registerAsset" /* 1241 */;
+import registerAsset from "registerAsset" /* 1240 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "2847796c0590926d37bd1a974db48307", name: "ic_controller_24px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 375, height: 229, scales: [1, 2, 3], hash: "33688e5a17ba6d5d12db0d817e82285c", name: "empty_quest_home", type: "png" });

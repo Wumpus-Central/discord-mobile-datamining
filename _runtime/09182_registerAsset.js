@@ -1,7 +1,7 @@
 // === Module 9182: registerAsset ===
 
 // Module 9182 (registerAsset)
-import registerAsset from "registerAsset" /* 1241 */;
+import registerAsset from "registerAsset" /* 1240 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "43b86c9ce273868bacca6aeb06ae392b", name: "StarIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 16, height: 16, scales: [2, 3], hash: "31757ea45ee4fb60779fd700caf7d93e", name: "ic_nitro_wheel_gradient_purple", type: "png" });

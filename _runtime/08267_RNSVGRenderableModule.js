@@ -1,8 +1,0 @@
-// === Module 8267: RNSVGRenderableModule ===
-
-// Module 8267 (RNSVGRenderableModule)
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-
-const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
-
-export default TurboModuleRegistry.getEnforcing("RNSVGRenderableModule");

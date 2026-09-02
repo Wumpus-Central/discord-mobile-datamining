@@ -1,7 +1,7 @@
 // === Module 16735: registerAsset ===
 
 // Module 16735 (registerAsset)
-import registerAsset from "registerAsset" /* 1241 */;
+import registerAsset from "registerAsset" /* 1240 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/voice_panel/native/images", width: 24, height: 24, scales: [2, 3], hash: "e57414c7a7beaf43becfa6bd320e5461", name: "vr", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 60, height: 60, scales: [2, 3], hash: "063292ce4c9cf6ef0db464edc768d34e", name: "icon-server-muted", type: "png" });

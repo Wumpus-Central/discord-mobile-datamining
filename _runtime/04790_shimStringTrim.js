@@ -1,8 +1,8 @@
 // === Module 4790: shimStringTrim ===
 
 // Module 4790 (shimStringTrim)
-import hasPropertyDescriptors from "hasPropertyDescriptors" /* 1420 */;
-import defineDataProperty from "defineDataProperty" /* 1421 */;
+import hasPropertyDescriptors from "hasPropertyDescriptors" /* 1419 */;
+import defineDataProperty from "defineDataProperty" /* 1420 */;
 import getPolyfill from "getPolyfill" /* 4783 */;
 
 let closure_2 = hasPropertyDescriptors();

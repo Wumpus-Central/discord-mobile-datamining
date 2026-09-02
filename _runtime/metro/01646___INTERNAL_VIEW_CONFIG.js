@@ -1,20 +1,9 @@
 // === Module 1646: __INTERNAL_VIEW_CONFIG ===
 
 // Module 1646 (__INTERNAL_VIEW_CONFIG)
-import renderElement from "renderElement" /* 114 */;
-import weakSet from "weakSet" /* 106 */;
 import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
 
-let obj = { uiViewClassName: "KeyboardControllerView", directEventTypes: { topKeyboardMoveStart: { registrationName: "onKeyboardMoveStart" }, topKeyboardMove: { registrationName: "onKeyboardMove" }, topKeyboardMoveEnd: { registrationName: "onKeyboardMoveEnd" }, topKeyboardMoveInteractive: { registrationName: "onKeyboardMoveInteractive" }, topFocusedInputLayoutChanged: { registrationName: "onFocusedInputLayoutChanged" }, topFocusedInputTextChanged: { registrationName: "onFocusedInputTextChanged" }, topFocusedInputSelectionChanged: { registrationName: "onFocusedInputSelectionChanged" } }, validAttributes: null };
-obj = { enabled: true, statusBarTranslucent: true, navigationBarTranslucent: true, preserveEdgeToEdge: true };
-const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onKeyboardMoveStart: true, onKeyboardMove: true, onKeyboardMoveEnd: true, onKeyboardMoveInteractive: true, onFocusedInputLayoutChanged: true, onFocusedInputTextChanged: true, onFocusedInputSelectionChanged: true }));
-obj[2] = obj;
-obj = {
-  synchronizeFocusedInputLayout(current) {
-    renderElement.dispatchCommand(current, "synchronizeFocusedInputLayout", []);
-  }
-};
+const obj = { uiViewClassName: "OverKeyboardView", validAttributes: { visible: true } };
 
-export default setRuntimeConfigProvider.get("KeyboardControllerView", () => obj);
+export default setRuntimeConfigProvider.get("OverKeyboardView", () => obj);
 export const __INTERNAL_VIEW_CONFIG = obj;
-export const Commands = obj;

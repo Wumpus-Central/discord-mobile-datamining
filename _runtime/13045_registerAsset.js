@@ -1,7 +1,7 @@
 // === Module 13045: registerAsset ===
 
 // Module 13045 (registerAsset)
-import registerAsset from "registerAsset" /* 1241 */;
+import registerAsset from "registerAsset" /* 1240 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "49797bf2e9feeabeb3ed3af5b9cf8473", name: "SparklesIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/media_viewer/native/images", width: 24, height: 24, scales: [2, 3], hash: "87391322b2483c883b3f5fd1ac4080a9", name: "ic_eye", type: "png" });

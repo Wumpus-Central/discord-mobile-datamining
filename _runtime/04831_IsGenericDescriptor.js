@@ -15,7 +15,7 @@ export default function IsGenericDescriptor(arg0) {
     }
     return tmp8;
   } else {
-    const tmp5 = new tmp(541)("Assertion failed: `Desc` must be a Property Descriptor");
+    const tmp5 = new tmp(538)("Assertion failed: `Desc` must be a Property Descriptor");
     throw tmp5;
   }
 };

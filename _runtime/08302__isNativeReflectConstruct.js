@@ -1,14 +1,17 @@
 // === Module 8302: _isNativeReflectConstruct ===
 
 // Module 8302 (_isNativeReflectConstruct)
+import noopDefault from "noop" /* 19 */;
 import _inheritsDefault from "_inherits" /* 98 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8280 */;
-import closure_2 from "_classCallCheck" /* 41 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8289 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8303 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const FeMorphology = arg1;
+const FeOffset = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,13 +31,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeMorphology {
+noopDefault;
+class FeOffset {
   constructor() {
     self = this;
-    tmp = closure_2(this, FeMorphology);
-    tmp2 = closure_4;
-    obj = closure_4(FeMorphology);
-    tmp3 = closure_3;
+    tmp = closure_3(this, FeOffset);
+    tmp2 = closure_5;
+    obj = closure_5(FeOffset);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -48,19 +52,33 @@ class FeMorphology {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(FeMorphology, _isNativeReflectConstructDefault);
+_inheritsDefault(FeOffset, _isNativeReflectConstructDefault);
 let obj = {
   key: "render",
   value: function render() {
-    const result = FeMorphology(8257).warnUnimplementedFilter();
-    return null;
+    const self = this;
+    const merged = Object.assign(this.props);
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const tmp = __INTERNAL_VIEW_CONFIGDefault;
+    const merged1 = Object.assign(self(8288).extractFilter(this.props));
+    const obj2 = self(8288);
+    const merged2 = Object.assign(self(8288).extractIn(this.props));
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
 };
 const items = [obj];
-const importDefaultResultResult = importDefaultResult(FeMorphology, items);
-importDefaultResultResult.displayName = "FeMorphology";
+const importDefaultResultResult = importDefaultResult(FeOffset, items);
+importDefaultResultResult.displayName = "FeOffset";
 obj = {};
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.dx = 0;
+obj.dy = 0;
 importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

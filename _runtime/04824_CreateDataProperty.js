@@ -11,11 +11,11 @@ export default function CreateDataProperty(arg0, arg1, arg2) {
       obj[2] = arg2;
       return tmp(4825)(arg0, arg1, obj);
     } else {
-      const tmp10 = new tmp(541)("Assertion failed: P is not a Property Key");
+      const tmp10 = new tmp(538)("Assertion failed: P is not a Property Key");
       throw tmp10;
     }
   } else {
-    const tmp5 = new tmp(541)("Assertion failed: Type(O) is not Object");
+    const tmp5 = new tmp(538)("Assertion failed: Type(O) is not Object");
     throw tmp5;
   }
 };

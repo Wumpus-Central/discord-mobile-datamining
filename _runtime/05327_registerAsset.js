@@ -1,7 +1,7 @@
 // === Module 5327: registerAsset ===
 
 // Module 5327 (registerAsset)
-import registerAsset from "registerAsset" /* 1241 */;
+import registerAsset from "registerAsset" /* 1240 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "659ba58a5945e0a8efee29d8d7d906ca", name: "img_account_sync_tiktok_dark", type: "svg" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "6cc805e0c42759b2e2dd9cbde8874a15", name: "img_account_sync_paypal_white", type: "svg" });

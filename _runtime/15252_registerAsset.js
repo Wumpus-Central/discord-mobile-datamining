@@ -1,7 +1,7 @@
 // === Module 15252: registerAsset ===
 
 // Module 15252 (registerAsset)
-import registerAsset from "registerAsset" /* 1241 */;
+import registerAsset from "registerAsset" /* 1240 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs", scales: [1], hash: "69729bb923b51734340337d311da1203", name: "zh-TW.messages.69729bb923b51734340337d311da1203.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/../discord_common/js/shared/images/flags", width: 70, height: 47, scales: [1], hash: "d24e290703f8b31b56744a69df613fcb", name: "bg", type: "png" });

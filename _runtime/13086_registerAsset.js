@@ -1,7 +1,7 @@
 // === Module 13086: registerAsset ===
 
 // Module 13086 (registerAsset)
-import registerAsset from "registerAsset" /* 1241 */;
+import registerAsset from "registerAsset" /* 1240 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/native/images/perks", width: 300, height: 175, scales: [2, 3], hash: "fac2e3b3b87c5c331642c571eab831c9", name: "sticker", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/gifting/seasonal", width: 144, height: 150, scales: [1], hash: "2428d071b75d8fac57234ccab81c5c37", name: "cake_idle", type: "png" });

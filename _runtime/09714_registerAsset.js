@@ -1,7 +1,7 @@
 // === Module 9714: registerAsset ===
 
 // Module 9714 (registerAsset)
-import registerAsset from "registerAsset" /* 1241 */;
+import registerAsset from "registerAsset" /* 1240 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 16, height: 16, scales: [2, 3], hash: "04a2168426a5392d149f48315e795b77", name: "ic_crown_16px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_scheduled_events/native/images", width: 216, height: 80, scales: [2, 3], hash: "0e2ac412c416f1e5e277ac37a8dd593a", name: "stage-channel-upsell", type: "png" });

@@ -1,10 +1,10 @@
 // === Module 4816: result ===
 
 // Module 4816 (result)
-import flag from "flag" /* 564 */;
-import callBoundIntrinsic from "callBoundIntrinsic" /* 574 */;
+import flag from "flag" /* 561 */;
+import callBoundIntrinsic from "callBoundIntrinsic" /* 571 */;
 import getEvalledConstructor from "getEvalledConstructor" /* 4801 */;
-import hasPropertyDescriptors from "hasPropertyDescriptors" /* 1420 */;
+import hasPropertyDescriptors from "hasPropertyDescriptors" /* 1419 */;
 
 hasPropertyDescriptors = hasPropertyDescriptors.hasArrayLengthDefineBug();
 if (hasPropertyDescriptors) {

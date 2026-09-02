@@ -3,8 +3,8 @@
 // Module 4306 (_extends)
 import noop from "noop" /* 19 */;
 import emptyFunction from "emptyFunction" /* 4307 */;
-import warning from "warning" /* 1229 */;
-import invariant from "invariant" /* 1230 */;
+import warning from "warning" /* 1226 */;
+import invariant from "invariant" /* 1227 */;
 
 let Component2 = require;
 function _extends() {

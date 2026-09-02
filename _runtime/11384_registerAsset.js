@@ -1,7 +1,7 @@
 // === Module 11384: registerAsset ===
 
 // Module 11384 (registerAsset)
-import registerAsset from "registerAsset" /* 1241 */;
+import registerAsset from "registerAsset" /* 1240 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "c4aafc313c19c8dfb2febbf6a9f3f39c", name: "ScienceIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "2f45b451ee0748e991b61a955627143c", name: "ic_check_24px", type: "png" });

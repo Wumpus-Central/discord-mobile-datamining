@@ -1,8 +1,8 @@
 // === Module 4801: getEvalledConstructor ===
 
 // Module 4801 (getEvalledConstructor)
-import getEvalledConstructor from "getEvalledConstructor" /* 540 */;
-import callBoundIntrinsic from "callBoundIntrinsic" /* 574 */;
+import getEvalledConstructor from "getEvalledConstructor" /* 537 */;
+import callBoundIntrinsic from "callBoundIntrinsic" /* 571 */;
 
 const tmp = getEvalledConstructor("%Array%");
 const isArray = tmp.isArray;

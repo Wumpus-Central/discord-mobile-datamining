@@ -2,4 +2,4 @@
 
 // Module 556
 
-export default Function.prototype.call;
+export default EvalError;

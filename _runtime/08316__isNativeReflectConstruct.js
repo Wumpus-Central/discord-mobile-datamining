@@ -1,16 +1,14 @@
 // === Module 8316: _isNativeReflectConstruct ===
 
 // Module 8316 (_isNativeReflectConstruct)
-import noopAll from "noop" /* 19 */;
 import _inheritsDefault from "_inherits" /* 98 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8265 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8289 */;
 import closure_2 from "_classCallCheck" /* 41 */;
 import closure_3 from "_possibleConstructorReturn" /* 93 */;
 import closure_4 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
-import { jsx } from "jsxProd" /* 21 */;
 
-const LinearGradient = importDefault;
+const FeTurbulence = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,13 +28,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-noopAll;
-class LinearGradient {
+class FeTurbulence {
   constructor() {
     self = this;
-    tmp = closure_2(this, LinearGradient);
+    tmp = closure_2(this, FeTurbulence);
     tmp2 = closure_4;
-    obj = closure_4(LinearGradient);
+    obj = closure_4(FeTurbulence);
     tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -51,31 +48,19 @@ class LinearGradient {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(LinearGradient, _isNativeReflectConstructDefault);
-const items = [
-  {
-    key: "render",
-    value: function render() {
-      const self = this;
-      const props = this.props;
-      let obj = { x1: props.x1, y1: props.y1, x2: props.x2, y2: props.y2 };
-      obj = {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      };
-      const merged = Object.assign(obj);
-      const merged1 = Object.assign(self(8318)(props, this));
-      return jsx(self(8317), {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      });
-    }
+_inheritsDefault(FeTurbulence, _isNativeReflectConstructDefault);
+let obj = {
+  key: "render",
+  value: function render() {
+    const result = FeTurbulence(8266).warnUnimplementedFilter();
+    return null;
   }
-];
-const importDefaultResultResult = importDefaultResult(LinearGradient, items);
-importDefaultResultResult.displayName = "LinearGradient";
-importDefaultResultResult.defaultProps = { x1: "0%", y1: "0%", x2: "100%", y2: "0%" };
+};
+const items = [obj];
+const importDefaultResultResult = importDefaultResult(FeTurbulence, items);
+importDefaultResultResult.displayName = "FeTurbulence";
+obj = {};
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

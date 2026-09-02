@@ -1,7 +1,7 @@
 // === Module 3909: _typeof ===
 
 // Module 3909 (_typeof)
-import Parser2 from "Parser" /* 3878 */;
+import Parser2 from "Parser" /* 3877 */;
 
 let _createSuperInternal = require;
 let closure_1 = dependencyMap;
@@ -30,15 +30,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(SecondParser, Parser) {
+function _setPrototypeOf(FractionOfSecondParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(SecondParser, Parser) {
-      SecondParser.__proto__ = Parser;
-      return SecondParser;
+    _setPrototypeOf = function _setPrototypeOf(FractionOfSecondParser, Parser) {
+      FractionOfSecondParser.__proto__ = Parser;
+      return FractionOfSecondParser;
     };
   }
-  return _setPrototypeOf(SecondParser, Parser);
+  return _setPrototypeOf(FractionOfSecondParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -58,7 +58,7 @@ function _getPrototypeOf(arg0) {
 }
 const Parser = Parser2.Parser;
 _createSuperInternal = undefined;
-class SecondParser {
+class FractionOfSecondParser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -94,10 +94,10 @@ class SecondParser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 50, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 30, enumerable: true, configurable: true, writable: true });
         } else {
-          num3 = 50;
-          applyResult.priority = 50;
+          num3 = 30;
+          applyResult.priority = 30;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
@@ -132,7 +132,7 @@ class SecondParser {
     }
   }
 }
-closure_1 = SecondParser;
+closure_1 = FractionOfSecondParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -144,12 +144,12 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-let obj = { value: SecondParser, writable: true, configurable: true };
-SecondParser.prototype = Object.create(prototype, { constructor: obj });
+let obj = { value: FractionOfSecondParser, writable: true, configurable: true };
+FractionOfSecondParser.prototype = Object.create(prototype, { constructor: obj });
 if (Parser) {
-  _setPrototypeOf(SecondParser, Parser);
+  _setPrototypeOf(FractionOfSecondParser, Parser);
 }
-_createSuperInternal = SecondParser;
+_createSuperInternal = FractionOfSecondParser;
 let num = 0;
 closure_1 = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
@@ -209,33 +209,20 @@ _createSuperInternal = function _createSuperInternal() {
 };
 obj = {
   key: "parse",
-  value: function parse(arg0, arg1, ordinalNumber) {
-    if ("s" === arg1) {
-      return _createSuperInternal(3880).parseNumericPattern(_createSuperInternal(3881).numericPatterns.second, arg0);
-    } else if ("so" === arg1) {
-      return ordinalNumber.ordinalNumber(arg0, { unit: "second" });
-    } else {
-      return _createSuperInternal(3880).parseNDigits(arg1.length, arg0);
-    }
+  value: function parse(arg0, arg1) {
+    _createSuperInternal = arg1;
+    return _createSuperInternal(3879).mapValue(_createSuperInternal(3879).parseNDigits(arg1.length, arg0), function valueCallback(arg0) {
+      return Math.floor(arg0 * Math.pow(10, 3 - length.length));
+    });
   }
 };
 let items = [
   obj,
   {
-    key: "validate",
-    value: function validate(arg0, arg1) {
-      let tmp = arg1 >= 0;
-      if (tmp) {
-        tmp = arg1 <= 59;
-      }
-      return tmp;
-    }
-  },
-  {
     key: "set",
-    value: function set(setUTCSeconds) {
-      setUTCSeconds.setUTCSeconds(arg2, 0);
-      return setUTCSeconds;
+    value: function set(setUTCMilliseconds) {
+      setUTCMilliseconds.setUTCMilliseconds(arg2);
+      return setUTCMilliseconds;
     }
   }
 ];
@@ -258,4 +245,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { SecondParser };
+export { FractionOfSecondParser };

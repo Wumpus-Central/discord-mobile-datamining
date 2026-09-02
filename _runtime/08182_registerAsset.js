@@ -1,7 +1,7 @@
 // === Module 8182: registerAsset ===
 
 // Module 8182 (registerAsset)
-import registerAsset from "registerAsset" /* 1241 */;
+import registerAsset from "registerAsset" /* 1240 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/MidnightPrismIcon", width: 60, height: 60, scales: [2, 3], hash: "44efb56cf36c8202533bcbc557ebf8e5", name: "MidnightPrismIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/upsell", width: 120, height: 80, scales: [2, 3], hash: "ff5825c454c175379e6be98cbe46511a", name: "img_nitro_badge", type: "png" });

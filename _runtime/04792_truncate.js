@@ -1,14 +1,14 @@
 // === Module 4792: truncate ===
 
 // Module 4792 (truncate)
-import _mod541 from "module_541" /* 541 */;
+import _mod538 from "module_538" /* 538 */;
 import floor from "floor" /* 4793 */;
 
 
 export default function truncate(num) {
   if (typeof num !== "number") {
     if (typeof num !== "bigint") {
-      const tmp10 = new _mod541("argument must be a Number or a BigInt");
+      const tmp10 = new _mod538("argument must be a Number or a BigInt");
       throw tmp10;
     }
   }

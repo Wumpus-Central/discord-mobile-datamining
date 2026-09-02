@@ -1,7 +1,7 @@
 // === Module 5301: registerAsset ===
 
 // Module 5301 (registerAsset)
-import registerAsset from "registerAsset" /* 1241 */;
+import registerAsset from "registerAsset" /* 1240 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "083817c43b3689d5baeb4ee0ef9714bc", name: "img_account_sync_epic_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "be629a43a1506b7ff0f25b34b78ebb11", name: "img_account_sync_github_light", type: "png" });

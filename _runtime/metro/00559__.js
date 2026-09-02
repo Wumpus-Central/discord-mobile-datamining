@@ -2,4 +2,4 @@
 
 // Module 559
 
-export default EvalError;
+export default SyntaxError;

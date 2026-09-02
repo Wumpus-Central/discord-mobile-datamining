@@ -1,7 +1,7 @@
 // === Module 4643: isEqual ===
 
 // Module 4643 (isEqual)
-import baseIsEqual from "baseIsEqual" /* 768 */;
+import baseIsEqual from "baseIsEqual" /* 765 */;
 
 
 export default function isEqual(arg0, arg1) {

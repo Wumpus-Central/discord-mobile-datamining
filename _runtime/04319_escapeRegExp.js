@@ -1,7 +1,7 @@
 // === Module 4319: escapeRegExp ===
 
 // Module 4319 (escapeRegExp)
-import toString from "toString" /* 762 */;
+import toString from "toString" /* 759 */;
 
 const tmp = /[\\^$.*+?()[\]{}|]/g;
 const re2 = tmp;

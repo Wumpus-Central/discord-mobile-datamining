@@ -1,7 +1,7 @@
 // === Module 4813: isPropertyDescriptor ===
 
 // Module 4813 (isPropertyDescriptor)
-import bind from "bind" /* 573 */;
+import bind from "bind" /* 570 */;
 
 let closure_2 = Object.create(null);
 
@@ -27,15 +27,15 @@ export default function isPropertyDescriptor(obj) {
       }
       let tmp4 = bind(obj, "[[Value]]");
       if (!tmp4) {
-        tmp4 = tmp2(573)(obj, "[[Writable]]");
+        tmp4 = tmp2(570)(obj, "[[Writable]]");
       }
-      let tmp5 = tmp2(573)(obj, "[[Get]]");
+      let tmp5 = tmp2(570)(obj, "[[Get]]");
       if (!tmp5) {
-        tmp5 = tmp2(573)(obj, "[[Set]]");
+        tmp5 = tmp2(570)(obj, "[[Set]]");
       }
       if (tmp4) {
         if (tmp5) {
-          const tmp8 = new tmp2(541)("Property Descriptors may not be both accessor and data descriptors");
+          const tmp8 = new tmp2(538)("Property Descriptors may not be both accessor and data descriptors");
           throw tmp8;
         }
       }

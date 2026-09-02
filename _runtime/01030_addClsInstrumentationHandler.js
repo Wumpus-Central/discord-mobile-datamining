@@ -1,0 +1,44 @@
+// === Module 1030: addClsInstrumentationHandler ===
+
+// Module 1030 (addClsInstrumentationHandler)
+import triggerHandlers from "triggerHandlers" /* 1031 */;
+import _addMeasureSpans from "_addMeasureSpans" /* 1055 */;
+import extractNetworkProtocol from "extractNetworkProtocol" /* 1056 */;
+import resourceTimingToSpanAttributes from "resourceTimingToSpanAttributes" /* 1060 */;
+import _onElementTiming from "_onElementTiming" /* 1061 */;
+import instrumentDOM from "instrumentDOM" /* 1062 */;
+import instrumentHistory from "instrumentHistory" /* 1063 */;
+import getNativeImplementation from "getNativeImplementation" /* 1064 */;
+import instrumentXHR from "instrumentXHR" /* 1065 */;
+import serializeFormData from "serializeFormData" /* 1066 */;
+import map from "map" /* 1067 */;
+
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+
+export const addClsInstrumentationHandler = triggerHandlers.addClsInstrumentationHandler;
+export const addInpInstrumentationHandler = triggerHandlers.addInpInstrumentationHandler;
+export const addLcpInstrumentationHandler = triggerHandlers.addLcpInstrumentationHandler;
+export const addPerformanceInstrumentationHandler = triggerHandlers.addPerformanceInstrumentationHandler;
+export const addTtfbInstrumentationHandler = triggerHandlers.addTtfbInstrumentationHandler;
+export const addPerformanceEntries = _addMeasureSpans.addPerformanceEntries;
+export const startTrackingInteractions = _addMeasureSpans.startTrackingInteractions;
+export const startTrackingLongAnimationFrames = _addMeasureSpans.startTrackingLongAnimationFrames;
+export const startTrackingLongTasks = _addMeasureSpans.startTrackingLongTasks;
+export const startTrackingWebVitals = _addMeasureSpans.startTrackingWebVitals;
+export const startTrackingElementTiming = _onElementTiming.startTrackingElementTiming;
+export const extractNetworkProtocol = extractNetworkProtocol.extractNetworkProtocol;
+export const addClickKeypressInstrumentationHandler = instrumentDOM.addClickKeypressInstrumentationHandler;
+export const addHistoryInstrumentationHandler = instrumentHistory.addHistoryInstrumentationHandler;
+export const clearCachedImplementation = getNativeImplementation.clearCachedImplementation;
+export const fetch = getNativeImplementation.fetch;
+export const getNativeImplementation = getNativeImplementation.getNativeImplementation;
+export const setTimeout = getNativeImplementation.setTimeout;
+export const SENTRY_XHR_DATA_KEY = instrumentXHR.SENTRY_XHR_DATA_KEY;
+export const addXhrInstrumentationHandler = instrumentXHR.addXhrInstrumentationHandler;
+export const getBodyString = serializeFormData.getBodyString;
+export const getFetchRequestArgBody = serializeFormData.getFetchRequestArgBody;
+export const parseXhrResponseHeaders = serializeFormData.parseXhrResponseHeaders;
+export const serializeFormData = serializeFormData.serializeFormData;
+export const resourceTimingToSpanAttributes = resourceTimingToSpanAttributes.resourceTimingToSpanAttributes;
+export const registerInpInteractionListener = map.registerInpInteractionListener;
+export const startTrackingINP = map.startTrackingINP;

@@ -2,4 +2,4 @@
 
 // Module 566
 
-export default Math.floor;
+export default Math.pow;

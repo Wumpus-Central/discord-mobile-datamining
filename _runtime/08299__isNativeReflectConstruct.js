@@ -2,12 +2,15 @@
 
 // Module 8299 (_isNativeReflectConstruct)
 import _inheritsDefault from "_inherits" /* 98 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8280 */;
-import FeMergeNode from "_classCallCheck" /* 41 */;
-import closure_1 from "_possibleConstructorReturn" /* 93 */;
-import closure_2 from "_getPrototypeOf" /* 95 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8289 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
+import closure_5 from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
 
+const FeDropShadow = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,44 +30,57 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeMergeNode {
+({ jsx: closure_6, jsxs: error } = jsxProd);
+class FeDropShadow {
   constructor() {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = FeMergeNode(this, closure_0);
-    items1 = [...items];
-    tmp2 = closure_2;
-    obj = closure_2(closure_0);
-    tmp3 = closure_1;
+    tmp = closure_2(this, FeDropShadow);
+    tmp2 = closure_4;
+    obj = closure_4(FeDropShadow);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = () => {
-      const parent = props.props.parent;
-      if (parent) {
-        parent.forceUpdate();
-      }
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(FeMergeNode, _isNativeReflectConstructDefault);
-let items = [
-  {
-    key: "render",
-    value: function render() {
-      return null;
+_inheritsDefault(FeDropShadow, _isNativeReflectConstructDefault);
+let obj = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    const _in = props.in;
+    let str = "SourceGraphic";
+    if (undefined !== _in) {
+      str = _in;
     }
+    let obj = { children: null };
+    ({ dx, dy, result } = props);
+    const items = [callback3(FeDropShadow(8300), { in: str, stdDeviation: props.stdDeviation }), callback3(FeDropShadow(8302), { dx, dy, result: "offsetblur" }), , , ];
+    obj = { floodColor: self.props.floodColor, floodOpacity: self.props.floodOpacity };
+    items[2] = callback3(FeDropShadow(8304), obj);
+    items[3] = callback3(FeDropShadow(8293), { in2: "offsetblur", operator: "in" });
+    obj = { result, children: null };
+    const items1 = [callback3(FeDropShadow(8308), {}), callback3(FeDropShadow(8308), { in: str })];
+    obj[1] = items1;
+    items[4] = callback4(FeDropShadow(8306), obj);
+    obj[0] = items;
+    return callback4(React.Fragment, obj);
   }
-];
-const importDefaultResultResult = importDefaultResult(FeMergeNode, items);
-importDefaultResultResult.displayName = "FeMergeNode";
+};
+let items = [obj];
+const importDefaultResultResult = importDefaultResult(FeDropShadow, items);
+importDefaultResultResult.displayName = "FeDropShadow";
+obj = {};
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

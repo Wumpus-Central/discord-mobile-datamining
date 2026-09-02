@@ -16,18 +16,67 @@ function _fromURL() {
     c5 = 0;
     c6 = 0;
     const iter = (function*(arg0, arg1) {
-      closure_4 = tmp5;
-      closure_3 = tmp2;
-      if (flag === undefined) {
-        flag = true;
+      if (c6 === 2) {
+        c6 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c6 = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_4 = tmp5;
+              closure_3 = tmp2;
+              let flag;
+              if (flag === undefined) {
+                flag = true;
+              }
+              c5 = 1;
+              c6 = 1;
+              return { value: "PX_16", done: true };
+            }
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            obj1 = { value: null, done: true };
+            obj1[0] = arg1;
+            return obj1;
+          } else {
+            let tmp12;
+            if (closure_1) {
+              obj = { data: null };
+              obj[0] = closure_1;
+              tmp12 = obj;
+            }
+            c6 = 3;
+            const obj2 = { value: null, done: true };
+            obj2[0] = closure_1_3.fromURL(closure_0, flag, tmp12);
+            return obj2;
+          }
+        } catch (tmp17) {
+          c6 = tmp;
+          throw tmp17;
+        }
       }
-      yield "PX_16";
-      if (closure_1) {
-        const obj = { data: null };
-        obj[0] = closure_1;
-        const tmp12 = obj;
-      }
-      return closure_1_3.fromURL(closure_0, flag, tmp12);
     })();
     iter.next();
     return iter;
@@ -50,18 +99,68 @@ _fromFileURL = function _fromFileURL(arg0) {
     c5 = 0;
     c6 = 0;
     const iter = (function*(arg0) {
-      closure_4 = tmp5;
-      closure_3 = tmp2;
-      if (flag === undefined) {
-        flag = true;
+      if (c6 === 2) {
+        c6 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c6 = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_4 = tmp5;
+              closure_3 = tmp2;
+              closure_1 = undefined;
+              let flag;
+              if (flag === undefined) {
+                flag = true;
+              }
+              c5 = 1;
+              c6 = 1;
+              return { value: "PX_16", done: true };
+            }
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            obj1 = { value: null, done: true };
+            obj1[0] = arg1;
+            return obj1;
+          } else {
+            let tmp12;
+            if (closure_1) {
+              obj = { data: null };
+              obj[0] = closure_1;
+              tmp12 = obj;
+            }
+            c6 = 3;
+            const obj2 = { value: null, done: true };
+            obj2[0] = closure_1_3.fromFileURL(closure_0, flag, tmp12);
+            return obj2;
+          }
+        } catch (tmp17) {
+          c6 = tmp;
+          throw tmp17;
+        }
       }
-      yield "PX_16";
-      if (closure_1) {
-        const obj = { data: null };
-        obj[0] = closure_1;
-        const tmp12 = obj;
-      }
-      return closure_1_3.fromFileURL(closure_0, flag, tmp12);
     })();
     iter.next();
     return iter;
@@ -84,18 +183,67 @@ _fromResource = function _fromResource() {
     c5 = 0;
     c6 = 0;
     const iter = (function*(arg0, arg1) {
-      closure_4 = tmp5;
-      closure_3 = tmp2;
-      if (flag === undefined) {
-        flag = true;
+      if (c6 === 2) {
+        c6 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c6 = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_4 = tmp5;
+              closure_3 = tmp2;
+              let flag;
+              if (flag === undefined) {
+                flag = true;
+              }
+              c5 = 1;
+              c6 = 1;
+              return { value: "PX_16", done: true };
+            }
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            obj1 = { value: null, done: true };
+            obj1[0] = arg1;
+            return obj1;
+          } else {
+            let tmp12;
+            if (closure_1) {
+              obj = { data: null };
+              obj[0] = closure_1;
+              tmp12 = obj;
+            }
+            c6 = 3;
+            const obj2 = { value: null, done: true };
+            obj2[0] = closure_1_3.fromResource(closure_0, flag, tmp12);
+            return obj2;
+          }
+        } catch (tmp17) {
+          c6 = tmp;
+          throw tmp17;
+        }
       }
-      yield "PX_16";
-      if (closure_1) {
-        const obj = { data: null };
-        obj[0] = closure_1;
-        const tmp12 = obj;
-      }
-      return closure_1_3.fromResource(closure_0, flag, tmp12);
     })();
     iter.next();
     return iter;
@@ -118,18 +266,67 @@ _fromBytes = function _fromBytes() {
     c5 = 0;
     c6 = 0;
     const iter = (function*(arg0, arg1) {
-      closure_4 = tmp5;
-      closure_3 = tmp2;
-      if (flag === undefined) {
-        flag = true;
+      if (c6 === 2) {
+        c6 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c6 = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_4 = tmp5;
+              closure_3 = tmp2;
+              let flag;
+              if (flag === undefined) {
+                flag = true;
+              }
+              c5 = 1;
+              c6 = 1;
+              return { value: "PX_16", done: true };
+            }
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            obj1 = { value: null, done: true };
+            obj1[0] = arg1;
+            return obj1;
+          } else {
+            let tmp12;
+            if (closure_1) {
+              obj = { data: null };
+              obj[0] = closure_1;
+              tmp12 = obj;
+            }
+            c6 = 3;
+            const obj2 = { value: null, done: true };
+            obj2[0] = closure_1_3.fromBytes(closure_0, flag, tmp12);
+            return obj2;
+          }
+        } catch (tmp17) {
+          c6 = tmp;
+          throw tmp17;
+        }
       }
-      yield "PX_16";
-      if (closure_1) {
-        const obj = { data: null };
-        obj[0] = closure_1;
-        const tmp12 = obj;
-      }
-      return closure_1_3.fromBytes(closure_0, flag, tmp12);
     })();
     iter.next();
     return iter;
@@ -191,7 +388,7 @@ function _fromSource() {
               message = undefined;
               message = 1;
               c8 = 1;
-              return { value: "PX_16", done: null };
+              return { value: "PX_16", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {

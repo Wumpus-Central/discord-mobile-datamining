@@ -1,8 +1,8 @@
 // === Module 4798: ArraySpeciesCreate ===
 
 // Module 4798 (ArraySpeciesCreate)
-import getEvalledConstructor from "getEvalledConstructor" /* 540 */;
-import _mod541 from "module_541" /* 541 */;
+import getEvalledConstructor from "getEvalledConstructor" /* 537 */;
+import _mod538 from "module_538" /* 538 */;
 import isInteger from "isInteger" /* 4799 */;
 
 let closure_2 = getEvalledConstructor("%Symbol.species%", true);
@@ -28,7 +28,7 @@ export default function ArraySpeciesCreate(arg0, arg1) {
           tmp6 = new tmp6(arg1);
           return tmp6;
         } else {
-          const tmp11 = new tmp(541)("C must be a constructor");
+          const tmp11 = new tmp(538)("C must be a constructor");
           throw tmp11;
         }
         tmp4 = closure_2;
@@ -37,5 +37,5 @@ export default function ArraySpeciesCreate(arg0, arg1) {
       }
     }
   }
-  throw new _mod541("Assertion failed: length must be an integer >= 0");
+  throw new _mod538("Assertion failed: length must be an integer >= 0");
 };
