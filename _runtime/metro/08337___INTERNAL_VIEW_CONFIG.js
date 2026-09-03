@@ -1,8 +1,13 @@
 // _runtime/metro/08337___INTERNAL_VIEW_CONFIG.js
 import result from "../00026_result.js";
+import weakSet from "../00106_weakSet.js";
 import setRuntimeConfigProvider from "../00065_setRuntimeConfigProvider.js";
 
-let obj = { uiViewClassName: "RNSVGPattern", validAttributes: null };
+let obj = {
+  uiViewClassName: "RNSVGMask",
+  directEventTypes: { topSvgLayout: { registrationName: "onSvgLayout" } },
+  validAttributes: null,
+};
 obj = {
   name: true,
   opacity: true,
@@ -38,17 +43,12 @@ obj = {
   y: true,
   height: true,
   width: true,
-  patternUnits: true,
-  patternContentUnits: true,
-  patternTransform: true,
-  minX: true,
-  minY: true,
-  vbWidth: true,
-  vbHeight: true,
-  align: true,
-  meetOrSlice: true,
+  maskUnits: true,
+  maskContentUnits: true,
+  maskType: true,
 };
-obj[1] = obj;
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSvgLayout: true }));
+obj[2] = obj;
 
-export default setRuntimeConfigProvider.get("RNSVGPattern", () => obj);
+export default setRuntimeConfigProvider.get("RNSVGMask", () => obj);
 export const __INTERNAL_VIEW_CONFIG = obj;

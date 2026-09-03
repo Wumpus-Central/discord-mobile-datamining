@@ -3,11 +3,11 @@ import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/empties",
+  width: 128,
+  height: 128,
   scales: [2, 3],
-  hash: "5dd78d279cf4e486538a5a399b9d186a",
-  name: "PlusMediumIcon",
+  hash: "e383fc0d018f183d68f1f643b1d8ed25",
+  name: "app_dock_not_found_light",
   type: "png",
 });

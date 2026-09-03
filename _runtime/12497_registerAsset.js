@@ -3,11 +3,11 @@ import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/hub/native/images",
-  width: 88,
+  httpServerLocation: "/assets/images/native",
+  width: 121,
   height: 80,
-  scales: [2, 3],
-  hash: "d719145f0510a722efd9724a4e3cf026",
-  name: "verify-email",
+  scales: [1, 2, 3],
+  hash: "dc39c8debe144867da8663a97ac0ae70",
+  name: "link_expired_light",
   type: "png",
 });

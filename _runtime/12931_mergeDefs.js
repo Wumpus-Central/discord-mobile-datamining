@@ -1,5 +1,5 @@
 // _runtime/12931_mergeDefs.js
-import mergeDefs from "12903_mergeDefs.js";
+import mergeDefs from "12915_mergeDefs.js";
 
 const self = this;
 let self2 = this;
@@ -59,16 +59,16 @@ if (self2) {
         HermesBuiltin.throwTypeError();
       }
       closure_0 = {
-        string: { unit: "\u6587\u5B57", verb: "\u3067\u3042\u308B" },
-        file: { unit: "\u30D0\u30A4\u30C8", verb: "\u3067\u3042\u308B" },
-        array: { unit: "\u8981\u7D20", verb: "\u3067\u3042\u308B" },
-        set: { unit: "\u8981\u7D20", verb: "\u3067\u3042\u308B" },
+        string: { unit: "karaktrojn", verb: "havi" },
+        file: { unit: "bajtojn", verb: "havi" },
+        array: { unit: "elementojn", verb: "havi" },
+        set: { unit: "elementojn", verb: "havi" },
       };
       closure_1 = {
-        regex: "\u5165\u529B\u5024",
-        email: "\u30E1\u30FC\u30EB\u30A2\u30C9\u30EC\u30B9",
+        regex: "enigo",
+        email: "retadreso",
         url: "URL",
-        emoji: "\u7D75\u6587\u5B57",
+        emoji: "emo\u011Dio",
         uuid: "UUID",
         uuidv4: "UUIDv4",
         uuidv6: "UUIDv6",
@@ -79,23 +79,23 @@ if (self2) {
         ulid: "ULID",
         xid: "XID",
         ksuid: "KSUID",
-        datetime: "ISO\u65E5\u6642",
-        date: "ISO\u65E5\u4ED8",
-        time: "ISO\u6642\u523B",
-        duration: "ISO\u671F\u9593",
-        ipv4: "IPv4\u30A2\u30C9\u30EC\u30B9",
-        ipv6: "IPv6\u30A2\u30C9\u30EC\u30B9",
-        cidrv4: "IPv4\u7BC4\u56F2",
-        cidrv6: "IPv6\u7BC4\u56F2",
-        base64: "base64\u30A8\u30F3\u30B3\u30FC\u30C9\u6587\u5B57\u5217",
-        base64url: "base64url\u30A8\u30F3\u30B3\u30FC\u30C9\u6587\u5B57\u5217",
-        json_string: "JSON\u6587\u5B57\u5217",
-        e164: "E.164\u756A\u53F7",
+        datetime: "ISO-datotempo",
+        date: "ISO-dato",
+        time: "ISO-tempo",
+        duration: "ISO-da\u016Dro",
+        ipv4: "IPv4-adreso",
+        ipv6: "IPv6-adreso",
+        cidrv4: "IPv4-rango",
+        cidrv6: "IPv6-rango",
+        base64: "64-ume kodita karaktraro",
+        base64url: "URL-64-ume kodita karaktraro",
+        json_string: "JSON-karaktraro",
+        e164: "E.164-nombro",
         jwt: "JWT",
-        template_literal: "\u5165\u529B\u5024",
+        template_literal: "enigo",
       };
-      closure_2 = { nan: "NaN", number: "\u6570\u5024", array: "\u914D\u5217" };
-      return { localeError: (arg0) => "" + tmp.origin + "\u5185\u306E\u7121\u52B9\u306A\u5024" };
+      closure_2 = { nan: "NaN", number: "nombro", array: "tabelo", null: "senvalora" };
+      return { localeError: (arg0) => "Nevalida valoro en " + tmp.origin };
     };
     let closure_2 = fn(mergeDefs);
     function error() {}

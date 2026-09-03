@@ -2,9 +2,22 @@
 import setRuntimeConfigProvider from "../00065_setRuntimeConfigProvider.js";
 
 const obj = {
-  uiViewClassName: "RNSVGFeBlend",
-  validAttributes: { x: true, y: true, width: true, height: true, result: true, in1: true, in2: true, mode: true },
+  uiViewClassName: "RNSVGDefs",
+  validAttributes: {
+    name: true,
+    opacity: true,
+    matrix: true,
+    mask: true,
+    markerStart: true,
+    markerMid: true,
+    markerEnd: true,
+    clipPath: true,
+    clipRule: true,
+    responsible: true,
+    display: true,
+    pointerEvents: true,
+  },
 };
 
-export default setRuntimeConfigProvider.get("RNSVGFeBlend", () => obj);
+export default setRuntimeConfigProvider.get("RNSVGDefs", () => obj);
 export const __INTERNAL_VIEW_CONFIG = obj;

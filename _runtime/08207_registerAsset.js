@@ -3,11 +3,11 @@ import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/CircuitIcon",
+  httpServerLocation: "/assets/images/native/custom_app_icons/Y2KIcon",
   width: 60,
   height: 60,
   scales: [2, 3],
-  hash: "68832d737c55ed046c40e8d11571a54e",
-  name: "CircuitIcon",
+  hash: "0e26d39cd35df5b70db021fff662c44e",
+  name: "Y2KIcon",
   type: "png",
 });

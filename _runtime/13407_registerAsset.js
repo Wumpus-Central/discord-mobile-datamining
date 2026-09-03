@@ -3,11 +3,11 @@ import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting/perks",
+  httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/colored",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "6ce9cfa41f5b080fb1f9fac04190337a",
-  name: "emoji",
+  hash: "8f9077e5b37bff7706de677d0f3debbe",
+  name: "tier_2_32px",
   type: "png",
 });

@@ -1,13 +1,11 @@
 // _runtime/10563__isNativeReflectConstruct.js
-import AbstractParserWithWordBoundaryChecking from "10453_AbstractParserWithWordBoundaryChecking.js";
-import zhStringToNumber from "10561_zhStringToNumber.js";
-import closure_2 from "metro/00041__classCallCheck.js";
+import AbstractParserWithWordBoundaryChecking from "10457_AbstractParserWithWordBoundaryChecking.js";
+import ZHHantCasualDateParser from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
-import closure_3 from "metro/00093__possibleConstructorReturn.js";
-import closure_4 from "00095__getPrototypeOf.js";
+import closure_1 from "metro/00093__possibleConstructorReturn.js";
+import closure_2 from "00095__getPrototypeOf.js";
 import _inherits from "00098__inherits.js";
 
-const ZHHantRelationWeekdayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,19 +24,13 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const keys = Object.keys(zhStringToNumber.WEEKDAY_OFFSET);
-const regExp = new RegExp(
-  "(?<prefix>\u4E0A|\u4ECA|\u4E0B|\u9019|\u5462)(?:\u500B)?(?:\u661F\u671F|\u79AE\u62DC|\u9031)(?<weekday>" +
-    keys.join("|") +
-    ")",
-);
-class ZHHantRelationWeekdayParser {
+class ZHHantCasualDateParser {
   constructor() {
     self = this;
-    tmp = closure_2(this, ZHHantRelationWeekdayParser);
-    tmp2 = closure_4;
-    obj = closure_4(ZHHantRelationWeekdayParser);
-    tmp3 = closure_3;
+    tmp = ZHHantCasualDateParser(this, ZHHantCasualDateParser);
+    tmp2 = closure_2;
+    obj = closure_2(ZHHantCasualDateParser);
+    tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -52,11 +44,15 @@ class ZHHantRelationWeekdayParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ZHHantRelationWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ZHHantCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const items = [
   {
     key: "innerPattern",
-    value: function innerPattern() {
+    value: function innerPattern(arg0) {
+      const regExp = new RegExp(
+        "(\u800C\u5BB6|\u7ACB(?:\u523B|\u5373)|\u5373\u523B)|(\u4ECA|\u660E|\u524D|\u5927\u524D|\u5F8C|\u5927\u5F8C|\u807D|\u6628|\u5C0B|\u7434)(\u65E9|\u671D|\u665A)|(\u4E0A(?:\u5348|\u665D)|\u671D(?:\u65E9)|\u65E9(?:\u4E0A)|\u4E0B(?:\u5348|\u665D)|\u664F(?:\u665D)|\u665A(?:\u4E0A)|\u591C(?:\u665A)?|\u4E2D(?:\u5348)|\u51CC(?:\u6668))|(\u4ECA|\u660E|\u524D|\u5927\u524D|\u5F8C|\u5927\u5F8C|\u807D|\u6628|\u5C0B|\u7434)(?:\u65E5|\u5929)(?:[\\s|,|\uFF0C]*)(?:(\u4E0A(?:\u5348|\u665D)|\u671D(?:\u65E9)|\u65E9(?:\u4E0A)|\u4E0B(?:\u5348|\u665D)|\u664F(?:\u665D)|\u665A(?:\u4E0A)|\u591C(?:\u665A)?|\u4E2D(?:\u5348)|\u51CC(?:\u6668)))?",
+        "i",
+      );
       return regExp;
     },
   },
@@ -64,83 +60,162 @@ const items = [
     key: "innerExtract",
     value: function innerExtract(createParsingResult, index) {
       const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
-      const tmp2 = ZHHantRelationWeekdayParser(10561).WEEKDAY_OFFSET[index.groups.weekday];
-      if (undefined === tmp2) {
-        return null;
-      } else {
-        const prefix = index.groups.prefix;
-        let str2 = "last";
-        if ("\u4E0A" != prefix) {
-          str2 = "next";
-          if ("\u4E0B" != prefix) {
-            let tmp3 = "\u4ECA" != prefix;
-            if (tmp3) {
-              tmp3 = "\u9019" != prefix;
+      const refDate = createParsingResult.refDate;
+      const date = new Date(refDate.getTime());
+      if (index[1]) {
+        const start16 = parsingResult.start;
+        start16.imply("hour", refDate.getHours());
+        const start17 = parsingResult.start;
+        start17.imply("minute", refDate.getMinutes());
+        const start18 = parsingResult.start;
+        start18.imply("second", refDate.getSeconds());
+        const start19 = parsingResult.start;
+        start19.imply("millisecond", refDate.getMilliseconds());
+      } else if (index[2]) {
+        if ("\u660E" != index[2]) {
+          if ("\u807D" != tmp25) {
+            if ("\u6628" != tmp25) {
+              if ("\u5C0B" != tmp25) {
+                if ("\u7434" != tmp25) {
+                  if ("\u524D" == tmp25) {
+                    date.setDate(date.getDate() - 2);
+                  } else if ("\u5927\u524D" == tmp25) {
+                    date.setDate(date.getDate() - 3);
+                  } else if ("\u5F8C" == tmp25) {
+                    date.setDate(date.getDate() + 2);
+                  } else if ("\u5927\u5F8C" == tmp25) {
+                    date.setDate(date.getDate() + 3);
+                  }
+                }
+              }
             }
-            if (tmp3) {
-              tmp3 = "\u5462" != prefix;
+            date.setDate(date.getDate() - 1);
+          }
+          if ("\u65E9" != tmp26) {
+            if ("\u671D" != tmp26) {
+              if ("\u665A" == tmp26) {
+                const start25 = parsingResult.start;
+                start25.imply("hour", 22);
+                const start26 = parsingResult.start;
+                start26.imply("meridiem", 1);
+              }
             }
-            str2 = null;
-            if (!tmp3) {
-              str2 = "this";
+          }
+          const start15 = parsingResult.start;
+          start15.imply("hour", 6);
+        }
+        if (refDate.getHours() > 1) {
+          date.setDate(date.getDate() + 1);
+        }
+      } else if (index[4]) {
+        const first = index[4][0];
+        if ("\u65E9" != first) {
+          if ("\u671D" != first) {
+            if ("\u4E0A" != first) {
+              if ("\u4E0B" != first) {
+                if ("\u664F" != first) {
+                  if ("\u4E2D" == first) {
+                    const start10 = parsingResult.start;
+                    start10.imply("hour", 12);
+                    const start11 = parsingResult.start;
+                    start11.imply("meridiem", 1);
+                  } else {
+                    if ("\u591C" != first) {
+                      if ("\u665A" != first) {
+                        if ("\u51CC" == first) {
+                          const start24 = parsingResult.start;
+                          start24.imply("hour", 0);
+                        }
+                      }
+                    }
+                    const start8 = parsingResult.start;
+                    start8.imply("hour", 22);
+                    const start9 = parsingResult.start;
+                    start9.imply("meridiem", 1);
+                  }
+                }
+              }
+              const start12 = parsingResult.start;
+              start12.imply("hour", 15);
+              const start13 = parsingResult.start;
+              start13.imply("meridiem", 1);
             }
           }
         }
-        const _Date = Date;
-        const refDate = createParsingResult.refDate;
-        const date = new Date(refDate.getTime());
-        const day = date.getDay();
-        if ("last" != str2) {
-          if ("past" != str2) {
-            if ("next" == str2) {
-              date.setDate(date.getDate() + (tmp2 + 7 - day));
-              let flag = true;
-            } else if ("this" == str2) {
-              date.setDate(date.getDate() + (tmp2 - day));
-              flag = false;
-            } else {
-              const diff = tmp2 - day;
-              const _Math3 = Math;
-              const _Math4 = Math;
-              const absolute = Math.abs(diff - 7);
-              let diff1 = diff;
-              if (absolute < Math.abs(diff)) {
-                diff1 = diff - 7;
+        const start14 = parsingResult.start;
+        start14.imply("hour", 6);
+      } else if (index[5]) {
+        if ("\u660E" != index[5]) {
+          if ("\u807D" != tmp2) {
+            if ("\u6628" != tmp2) {
+              if ("\u5C0B" != tmp2) {
+                if ("\u7434" != tmp2) {
+                  if ("\u524D" == tmp2) {
+                    date.setDate(date.getDate() - 2);
+                  } else if ("\u5927\u524D" == tmp2) {
+                    date.setDate(date.getDate() - 3);
+                  } else if ("\u5F8C" == tmp2) {
+                    date.setDate(date.getDate() + 2);
+                  } else if ("\u5927\u5F8C" == tmp2) {
+                    date.setDate(date.getDate() + 3);
+                  }
+                }
               }
-              const _Math = Math;
-              const _Math2 = Math;
-              const absolute1 = Math.abs(diff1 + 7);
-              let sum = diff1;
-              if (absolute1 < Math.abs(diff1)) {
-                sum = diff1 + 7;
-              }
-              date.setDate(date.getDate() + sum);
-              flag = false;
             }
+            date.setDate(date.getDate() - 1);
           }
-          const start = parsingResult.start;
-          start.assign("weekday", tmp2);
-          const start2 = parsingResult.start;
-          if (flag) {
-            start2.assign("day", date.getDate());
-            const start5 = parsingResult.start;
-            start5.assign("month", date.getMonth() + 1);
-            const start6 = parsingResult.start;
-            start6.assign("year", date.getFullYear());
-          } else {
-            start2.imply("day", date.getDate());
-            const start3 = parsingResult.start;
-            start3.imply("month", date.getMonth() + 1);
-            const start4 = parsingResult.start;
-            start4.imply("year", date.getFullYear());
+          if (index[6]) {
+            const first1 = tmp8[0];
+            if ("\u65E9" != first1) {
+              if ("\u671D" != first1) {
+                if ("\u4E0A" != first1) {
+                  if ("\u4E0B" != first1) {
+                    if ("\u664F" != first1) {
+                      if ("\u4E2D" == first1) {
+                        const start3 = parsingResult.start;
+                        start3.imply("hour", 12);
+                        const start4 = parsingResult.start;
+                        start4.imply("meridiem", 1);
+                      } else {
+                        if ("\u591C" != first1) {
+                          if ("\u665A" != first1) {
+                            if ("\u51CC" == first1) {
+                              const start23 = parsingResult.start;
+                              start23.imply("hour", 0);
+                            }
+                          }
+                        }
+                        const start = parsingResult.start;
+                        start.imply("hour", 22);
+                        const start2 = parsingResult.start;
+                        start2.imply("meridiem", 1);
+                      }
+                    }
+                  }
+                  const start5 = parsingResult.start;
+                  start5.imply("hour", 15);
+                  const start6 = parsingResult.start;
+                  start6.imply("meridiem", 1);
+                }
+              }
+            }
+            const start7 = parsingResult.start;
+            start7.imply("hour", 6);
           }
-          return parsingResult;
         }
-        date.setDate(date.getDate() + (tmp2 - 7 - day));
-        flag = true;
+        if (refDate.getHours() > 1) {
+          date.setDate(date.getDate() + 1);
+        }
       }
+      const start20 = parsingResult.start;
+      start20.assign("day", date.getDate());
+      const start21 = parsingResult.start;
+      start21.assign("month", date.getMonth() + 1);
+      const start22 = parsingResult.start;
+      start22.assign("year", date.getFullYear());
+      return parsingResult;
     },
   },
 ];
 
-export default _createClass(ZHHantRelationWeekdayParser, items);
+export default _createClass(ZHHantCasualDateParser, items);

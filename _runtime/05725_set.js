@@ -1,2 +1,2 @@
 // _runtime/05725_set.js
-arg5.HoverNativeProperties = new Set(["hoverEffect"]);
+arg5.FlingNativeProperties = new Set(["direction", "numberOfPointers"]);

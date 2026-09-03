@@ -1,10 +1,24 @@
 // _runtime/14198_call.js
-import call from "14182_call.js";
-import _mod14199 from "metro/14199__.js";
+import 14199__ from "metro/14199__.js";
 
-let closure_2 = call({}.hasOwnProperty);
-
-export default Object.hasOwn ||
-  function hasOwn(arg0, arg1) {
-    return callback(_mod14199(arg0), arg1);
+const call = prototype.call;
+if (module_14199) {
+  const bind = prototype.bind;
+  module_14199 = bind.bind(call, call);
+}
+if (!module_14199) {
+  module_14199 = (arg0) => {
+    closure_0 = arg0;
+    return () => {
+      const apply = closure_0.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(tmp2);
+      } else {
+        applyArgumentsResult = apply(tmp2, arguments);
+      }
+      return applyArgumentsResult;
+    };
   };
+}
+
+export default module_14199;

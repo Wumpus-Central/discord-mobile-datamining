@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "49797bf2e9feeabeb3ed3af5b9cf8473",
-  name: "SparklesIcon",
+  hash: "d287ab85d54506fcfae6aa3f9742222f",
+  name: "DoorEnterIcon",
   type: "png",
 });

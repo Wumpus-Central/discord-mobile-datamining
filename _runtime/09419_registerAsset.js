@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "ad50b5e2cb199dc282a7ce82f2fb5245",
-  name: "FlashIcon",
+  hash: "17f7b21a5b26889a6dffe34b080f6103",
+  name: "TimerIcon",
   type: "png",
 });

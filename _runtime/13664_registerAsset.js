@@ -3,11 +3,11 @@ import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "81937e526a0dd862a80691425a7cb222",
-  name: "ic_mic_muted_dark_24px",
+  httpServerLocation: "/assets/modules/nuf_channels/native/images",
+  width: 120,
+  height: 120,
+  scales: [1],
+  hash: "b269fec2e8135bbc2e2d49cb182b352b",
+  name: "amanda",
   type: "png",
 });

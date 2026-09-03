@@ -4,10 +4,10 @@ import registerAsset from "01240_registerAsset.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/icons",
-  width: 6,
-  height: 6,
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "96f4f50193c5df13e000233d90f42a59",
-  name: "ic_sparkle2",
+  hash: "3a0a739d09631e39e6913327bffa2600",
+  name: "ic_volume",
   type: "png",
 });

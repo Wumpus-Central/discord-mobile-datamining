@@ -4,7 +4,7 @@ import weakSet from "../00106_weakSet.js";
 import setRuntimeConfigProvider from "../00065_setRuntimeConfigProvider.js";
 
 let obj = {
-  uiViewClassName: "RNSVGEllipse",
+  uiViewClassName: "RNSVGClipPath",
   directEventTypes: { topSvgLayout: { registrationName: "onSvgLayout" } },
   validAttributes: null,
 };
@@ -36,13 +36,12 @@ obj = {
   vectorEffect: true,
   propList: true,
   filter: true,
-  cx: true,
-  cy: true,
-  rx: true,
-  ry: true,
+  fontSize: true,
+  fontWeight: true,
+  font: true,
 };
 const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSvgLayout: true }));
 obj[2] = obj;
 
-export default setRuntimeConfigProvider.get("RNSVGEllipse", () => obj);
+export default setRuntimeConfigProvider.get("RNSVGClipPath", () => obj);
 export const __INTERNAL_VIEW_CONFIG = obj;

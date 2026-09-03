@@ -4,10 +4,10 @@ import registerAsset from "01240_registerAsset.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
+  width: 500,
+  height: 500,
   scales: [1],
-  hash: "e827a9aa91787067eeb0248dd9424f71",
-  name: "img_domain_light",
-  type: "png",
+  hash: "537a5a5a0fd47a14c531a6a53114ce50",
+  name: "img_account_sync_crunchyroll_white",
+  type: "svg",
 });

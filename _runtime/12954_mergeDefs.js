@@ -1,5 +1,5 @@
 // _runtime/12954_mergeDefs.js
-import mergeDefs from "12903_mergeDefs.js";
+import mergeDefs from "12915_mergeDefs.js";
 
 const self = this;
 let self2 = this;
@@ -59,16 +59,16 @@ if (self2) {
         HermesBuiltin.throwTypeError();
       }
       closure_0 = {
-        string: { unit: "belgi", verb: "bo\u2018lishi kerak" },
-        file: { unit: "bayt", verb: "bo\u2018lishi kerak" },
-        array: { unit: "element", verb: "bo\u2018lishi kerak" },
-        set: { unit: "element", verb: "bo\u2018lishi kerak" },
+        string: { unit: "\u062A\u0648\u06A9\u064A", verb: "\u0648\u0644\u0631\u064A" },
+        file: { unit: "\u0628\u0627\u06CC\u067C\u0633", verb: "\u0648\u0644\u0631\u064A" },
+        array: { unit: "\u062A\u0648\u06A9\u064A", verb: "\u0648\u0644\u0631\u064A" },
+        set: { unit: "\u062A\u0648\u06A9\u064A", verb: "\u0648\u0644\u0631\u064A" },
       };
       closure_1 = {
-        regex: "kirish",
-        email: "elektron pochta manzili",
-        url: "URL",
-        emoji: "emoji",
+        regex: "\u0648\u0631\u0648\u062F\u064A",
+        email: "\u0628\u0631\u06CC\u069A\u0646\u0627\u0644\u06CC\u06A9",
+        url: "\u06CC\u0648 \u0622\u0631 \u0627\u0644",
+        emoji: "\u0627\u06CC\u0645\u0648\u062C\u064A",
         uuid: "UUID",
         uuidv4: "UUIDv4",
         uuidv6: "UUIDv6",
@@ -79,24 +79,26 @@ if (self2) {
         ulid: "ULID",
         xid: "XID",
         ksuid: "KSUID",
-        datetime: "ISO sana va vaqti",
-        date: "ISO sana",
-        time: "ISO vaqt",
-        duration: "ISO davomiylik",
-        ipv4: "IPv4 manzil",
-        ipv6: "IPv6 manzil",
-        mac: "MAC manzil",
-        cidrv4: "IPv4 diapazon",
-        cidrv6: "IPv6 diapazon",
-        base64: "base64 kodlangan satr",
-        base64url: "base64url kodlangan satr",
-        json_string: "JSON satr",
-        e164: "E.164 raqam",
+        datetime: "\u0646\u06CC\u067C\u0647 \u0627\u0648 \u0648\u062E\u062A",
+        date: "\u0646\u06D0\u067C\u0647",
+        time: "\u0648\u062E\u062A",
+        duration: "\u0645\u0648\u062F\u0647",
+        ipv4: "\u062F IPv4 \u067E\u062A\u0647",
+        ipv6: "\u062F IPv6 \u067E\u062A\u0647",
+        cidrv4: "\u062F IPv4 \u0633\u0627\u062D\u0647",
+        cidrv6: "\u062F IPv6 \u0633\u0627\u062D\u0647",
+        base64: "base64-encoded \u0645\u062A\u0646",
+        base64url: "base64url-encoded \u0645\u062A\u0646",
+        json_string: "JSON \u0645\u062A\u0646",
+        e164: "\u062F E.164 \u0634\u0645\u06D0\u0631\u0647",
         jwt: "JWT",
-        template_literal: "kirish",
+        template_literal: "\u0648\u0631\u0648\u062F\u064A",
       };
-      closure_2 = { nan: "NaN", number: "raqam", array: "massiv" };
-      return { localeError: (arg0) => "" + tmp.origin + " da noto\u2018g\u2018ri qiymat" };
+      closure_2 = { nan: "NaN", number: "\u0639\u062F\u062F", array: "\u0627\u0631\u06D0" };
+      return {
+        localeError: (arg0) =>
+          "\u0646\u0627\u0633\u0645 \u0639\u0646\u0635\u0631 \u067E\u0647 " + tmp.origin + " \u06A9\u06D0",
+      };
     };
     let closure_2 = fn(mergeDefs);
     function error() {}

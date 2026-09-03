@@ -1,11 +1,8 @@
 // _runtime/05767_useCompetingGestures.js
-import ComposedGestureName from "05719_ComposedGestureName.js";
-import useComposedGesture from "05768_useComposedGesture.js";
+import useCompetingGestures from "05768_useCompetingGestures.js";
+import useExclusiveGestures from "05770_useExclusiveGestures.js";
+import useSimultaneousGestures from "05771_useSimultaneousGestures.js";
 
-require = arg1;
-const dependencyMap = arg6;
-arg5.useCompetingGestures = function useCompetingGestures() {
-  const items = [...arguments];
-  const items1 = [ComposedGestureName.ComposedGestureName.Race, ...items];
-  return useComposedGesture.useComposedGesture.apply(items1);
-};
+export const useCompetingGestures = useCompetingGestures.useCompetingGestures;
+export const useExclusiveGestures = useExclusiveGestures.useExclusiveGestures;
+export const useSimultaneousGestures = useSimultaneousGestures.useSimultaneousGestures;

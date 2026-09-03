@@ -1,14 +1,14 @@
 // _runtime/08329__isNativeReflectConstruct.js
 import noopAll from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
-import _isNativeReflectConstructDefault from "08274__isNativeReflectConstruct.js";
+import _isNativeReflectConstructDefault from "08278__isNativeReflectConstruct.js";
 import closure_2 from "metro/00041__classCallCheck.js";
 import closure_3 from "metro/00093__possibleConstructorReturn.js";
 import closure_4 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const Marker = importDefault;
+const LinearGradient = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,12 +28,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 noopAll;
-class Marker {
+class LinearGradient {
   constructor() {
     self = this;
-    tmp = closure_2(this, Marker);
+    tmp = closure_2(this, LinearGradient);
     tmp2 = closure_4;
-    obj = closure_4(Marker);
+    obj = closure_4(LinearGradient);
     tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -48,31 +48,21 @@ class Marker {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(Marker, _isNativeReflectConstructDefault);
+_inheritsDefault(LinearGradient, _isNativeReflectConstructDefault);
 const items = [
   {
     key: "render",
     value: function render() {
       const self = this;
       const props = this.props;
-      let obj = {
-        name: props.id,
-        refX: props.refX,
-        refY: props.refY,
-        markerUnits: props.markerUnits,
-        orient: String(props.orient),
-        markerWidth,
-        markerHeight,
-      };
-      ({ viewBox, preserveAspectRatio, markerWidth, markerHeight, children } = props);
+      let obj = { x1: props.x1, y1: props.y1, x2: props.x2, y2: props.y2 };
       obj = {
         ref(arg0) {
           return self.refMethod(arg0);
         },
       };
       const merged = Object.assign(obj);
-      const merged1 = Object.assign(self(8263)({ viewBox, preserveAspectRatio }));
-      obj.children = children;
+      const merged1 = Object.assign(self(8331)(props, this));
       return jsx(self(8330), {
         ref(arg0) {
           return self.refMethod(arg0);
@@ -81,15 +71,8 @@ const items = [
     },
   },
 ];
-const importDefaultResultResult = importDefaultResult(Marker, items);
-importDefaultResultResult.displayName = "Marker";
-importDefaultResultResult.defaultProps = {
-  refX: 0,
-  refY: 0,
-  orient: "0",
-  markerWidth: 3,
-  markerHeight: 3,
-  markerUnits: "strokeWidth",
-};
+const importDefaultResultResult = importDefaultResult(LinearGradient, items);
+importDefaultResultResult.displayName = "LinearGradient";
+importDefaultResultResult.defaultProps = { x1: "0%", y1: "0%", x2: "100%", y2: "0%" };
 
 export default importDefaultResultResult;

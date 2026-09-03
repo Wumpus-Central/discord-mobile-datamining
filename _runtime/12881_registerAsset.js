@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "8d9a4a6e9caf6cfaa5505c9d5954c20b",
-  name: "ThumbsUpIcon",
+  hash: "dcae1df15663c479951183ad5f2fe3dd",
+  name: "RedditNeutralIcon",
   type: "png",
 });

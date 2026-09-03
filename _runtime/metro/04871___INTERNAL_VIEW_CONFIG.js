@@ -6,7 +6,7 @@ import setRuntimeConfigProvider from "../00065_setRuntimeConfigProvider.js";
 
 const codegenNativeComponent = get_ActivityIndicator.codegenNativeComponent;
 let obj = {
-  uiViewClassName: "RNSModalScreen",
+  uiViewClassName: "RNSScreen",
   directEventTypes: {
     topAppear: { registrationName: "onAppear" },
     topDisappear: { registrationName: "onDisappear" },
@@ -57,7 +57,13 @@ obj = {
   navigationBarTranslucent: true,
   navigationBarHidden: true,
   nativeBackButtonDismissalEnabled: true,
+  bottomScrollEdgeEffect: true,
+  leftScrollEdgeEffect: true,
+  rightScrollEdgeEffect: true,
+  topScrollEdgeEffect: true,
   synchronousShadowStateUpdatesEnabled: true,
+  androidResetScreenShadowStateOnOrientationChangeEnabled: true,
+  ios26AllowInteractionsDuringTransition: true,
 };
 const merged = Object.assign(
   weakSet.ConditionallyIgnoredEventHandlers({
@@ -76,5 +82,5 @@ const merged = Object.assign(
 );
 obj[2] = obj;
 
-export default setRuntimeConfigProvider.get("RNSModalScreen", () => obj);
+export default setRuntimeConfigProvider.get("RNSScreen", () => obj);
 export const __INTERNAL_VIEW_CONFIG = obj;

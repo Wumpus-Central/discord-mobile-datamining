@@ -3,11 +3,11 @@ import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
+  httpServerLocation: "/assets/modules/video_calls/native/images",
   width: 24,
   height: 24,
-  scales: [1, 2, 3],
-  hash: "d7e806908635ad007fa68ad7fb2ccc9f",
-  name: "ic_warning_24px",
+  scales: [2, 3],
+  hash: "a2b44ab2faf9e7aa1dac11a1e1d9c4d6",
+  name: "fullscreen",
   type: "png",
 });

@@ -3,11 +3,11 @@ import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/badge",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/stream_feedback/light-theme-desaturated",
+  width: 64,
+  height: 64,
   scales: [2, 3],
-  hash: "bfaa24ee9d14df63fd4c31531ca2dc70",
-  name: "ic_badge_staff",
+  hash: "9b2f923b8e946c7e2b9908f52890f136",
+  name: "feedback-modal-happy-desaturated",
   type: "png",
 });

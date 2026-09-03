@@ -1,18 +1,18 @@
 // _runtime/08352__isNativeReflectConstruct.js
 import noopAll from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
-import extractFontDefault from "08272_extractFont.js";
-import _isNativeReflectConstructDefault from "08274__isNativeReflectConstruct.js";
-import _isNativeReflectConstructDefault2 from "08349__isNativeReflectConstruct.js";
-import __INTERNAL_VIEW_CONFIGDefault from "metro/08353___INTERNAL_VIEW_CONFIG.js";
-import closure_4 from "metro/00109__objectWithoutProperties.js";
-import closure_5 from "metro/00041__classCallCheck.js";
-import closure_6 from "metro/00093__possibleConstructorReturn.js";
-import closure_7 from "00095__getPrototypeOf.js";
+import extractPropsDefault from "08269_extractProps.js";
+import extractFontDefault from "08276_extractFont.js";
+import _isNativeReflectConstructDefault from "08278__isNativeReflectConstruct.js";
+import __INTERNAL_VIEW_CONFIGDefault from "metro/08355___INTERNAL_VIEW_CONFIG.js";
+import closure_3 from "metro/00041__classCallCheck.js";
+import closure_4 from "metro/00093__possibleConstructorReturn.js";
+import closure_5 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
+import _isNativeReflectConstruct from "08353__isNativeReflectConstruct.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const TextPath = arg1;
+const Text = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -31,28 +31,17 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let closure_3 = [
-  "children",
-  "xlinkHref",
-  "href",
-  "startOffset",
-  "method",
-  "spacing",
-  "side",
-  "alignmentBaseline",
-  "midLine",
-];
 noopAll;
-class TextPath {
+class Text {
   constructor() {
     self = this;
     items = [...arguments];
     closure_0 = undefined;
-    tmp = closure_5(this, closure_0);
+    tmp = closure_3(this, closure_0);
     items1 = [...items];
-    tmp2 = closure_7;
-    obj = closure_7(closure_0);
-    tmp3 = closure_6;
+    tmp2 = closure_5;
+    obj = closure_5(closure_0);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -63,88 +52,52 @@ class TextPath {
     tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
     tmp3Result.setNativeProps = (matrix) => {
-      matrix = matrix.matrix;
-      let tmp = !matrix;
-      if (!matrix) {
+      let tmp = matrix;
+      if (matrix) {
+        tmp = !matrix.matrix;
+      }
+      if (tmp) {
         tmp = closure_1_1(closure_1_2[8])(matrix);
       }
       if (tmp) {
         matrix.matrix = tmp;
       }
-      const merged = Object.assign(matrix, lib(closure_1_2[9]).pickNotNil(closure_1_1(closure_1_2[10])(matrix, true)));
+      const propsAndStylesResult = lib(closure_1_2[9]).propsAndStyles(matrix);
+      const obj = lib(closure_1_2[9]);
+      const merged = Object.assign(
+        propsAndStylesResult,
+        lib(closure_1_2[10]).pickNotNil(closure_1_1(closure_1_2[11])(propsAndStylesResult, true)),
+      );
       if (lib.root) {
         const root = lib.root;
-        root.setNativeProps(matrix);
+        root.setNativeProps(propsAndStylesResult);
       }
     };
     return tmp3Result;
   }
 }
-_inheritsDefault(TextPath, _isNativeReflectConstructDefault);
+_inheritsDefault(Text, _isNativeReflectConstructDefault);
 let items = [
   {
     key: "render",
     value: function render() {
-      const self = this;
-      const props = this.props;
-      ({ children, href } = props);
-      if (undefined === href) {
-        href = props.xlinkHref;
-      }
-      const startOffset = props.startOffset;
-      let num = 0;
-      if (undefined !== startOffset) {
-        num = startOffset;
-      }
-      ({ method, spacing, side, alignmentBaseline, midLine } = props);
-      let match = href;
-      if (href) {
-        match = href.match(TextPath(8266).idPattern);
-      }
-      let tmp5 = match;
-      if (match) {
-        tmp5 = match[1];
-      }
-      if (tmp5) {
-        obj1 = TextPath(8265);
-        const withoutXYResult = obj1.withoutXY(self, tmp);
-        const _Object = Object;
-        let obj = { children: null };
-        obj[0] = children;
-        obj = {
-          href: null,
-          startOffset: null,
-          method: null,
-          spacing: null,
-          side: null,
-          alignmentBaseline: null,
-          midLine: null,
-        };
-        obj[0] = tmp5;
-        obj[1] = num;
-        obj[2] = method;
-        obj[3] = spacing;
-        obj[4] = side;
-        obj[5] = alignmentBaseline;
-        obj[6] = midLine;
-        const merged = Object.assign(withoutXYResult, extractFontDefault(obj, true), obj);
-        withoutXYResult.ref = self.refMethod;
-        obj1 = {};
-        const merged1 = Object.assign(withoutXYResult);
-        return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
-      } else {
-        const _console = console;
-        console.warn(`Invalid \`href\` prop for \`TextPath\` element, expected a href like "#id", but got: "${href}"`);
-        obj = { ref: null, children: null };
-        obj[0] = self.refMethod;
-        obj[1] = children;
-        return jsx(_isNativeReflectConstructDefault2, { ref: null, children: null });
-      }
-      tmp = callback(props, closure_3);
+      let obj = Text(8269);
+      const propsAndStylesResult = obj.propsAndStyles(this.props);
+      obj = {};
+      const merged = Object.assign(propsAndStylesResult);
+      obj.x = null;
+      obj.y = null;
+      const tmp2Result = extractPropsDefault(obj, this);
+      const merged1 = Object.assign(tmp2Result, extractFontDefault(propsAndStylesResult, true));
+      tmp2Result.ref = this.refMethod;
+      obj = {};
+      const tmp2 = extractPropsDefault;
+      const merged2 = Object.assign(tmp2Result);
+      return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
     },
   },
 ];
-const importDefaultResultResult = importDefaultResult(TextPath, items);
-importDefaultResultResult.displayName = "TextPath";
+const importDefaultResultResult = importDefaultResult(Text, items);
+importDefaultResultResult.displayName = "Text";
 
 export default importDefaultResultResult;

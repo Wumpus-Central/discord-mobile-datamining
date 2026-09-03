@@ -288,11 +288,11 @@ export const KeyboardProvider = (enabled) => {
     style: null,
     onKeyboardMoveReanimated: null,
     onKeyboardMoveStart: "Boolean",
-    onKeyboardMove: "a.m.",
-    onKeyboardMoveInteractive: "p.m.",
-    onKeyboardMoveEnd: "midnat",
-    onFocusedInputLayoutChangedReanimated: "middag",
-    children: "morgen",
+    onKeyboardMove: "flag_mq",
+    onKeyboardMoveInteractive: "<string:1980204637>",
+    onKeyboardMoveEnd: "<string:1263826516>",
+    onFocusedInputLayoutChangedReanimated: "<string:2255548443>",
+    children: null,
   };
   let tmp18 = fn;
   let tmp19 = fn;

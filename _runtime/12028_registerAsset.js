@@ -3,11 +3,11 @@ import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/images/native/icons",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "6ce1232e9332fee016b7141f4a140af2",
-  name: "ThreadPlusIcon",
+  hash: "d69e45ebad9f40b8957190ed86104514",
+  name: "ic_application_command_24px",
   type: "png",
 });

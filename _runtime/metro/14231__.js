@@ -1,11 +1,24 @@
 // _runtime/metro/14231__.js
-import getOwnPropertyDescriptor from "../14178_getOwnPropertyDescriptor.js";
-import _mod14212 from "14212__.js";
-import defineProperty from "../14229_defineProperty.js";
+import call from "../14214_call.js";
+import _mod14232 from "14232__.js";
 
-export default getOwnPropertyDescriptor
-  ? (arg0, arg1, arg2) => defineProperty.f(arg0, arg1, _mod14212(1, arg2))
-  : (arg0, arg1, arg2) => {
-      arg0[arg1] = arg2;
-      return arg0;
-    };
+export default (arg0, arg1, arg2) => {
+  const arr = _mod14232(arg1);
+  for (let num = 0; num < arr.length; num = num + 1) {
+    let tmp3 = arr[num];
+    let tmp4 = require;
+    let tmp5 = dependencyMap;
+    let tmp6 = call(arg0, tmp3);
+    let tmp7 = num;
+    if (!tmp6) {
+      let tmp8 = arg2;
+      if (arg2) {
+        tmp8 = tmp4(14214)(arg2, tmp3);
+      }
+      tmp6 = tmp8;
+    }
+    if (!tmp6) {
+      let tmpResult = tmp(arg0, tmp3, tmp2(arg1, tmp3));
+    }
+  }
+};

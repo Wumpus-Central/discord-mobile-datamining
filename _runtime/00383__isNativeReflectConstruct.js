@@ -72,17 +72,17 @@ let items = [
     key: "__getValue",
     value: function __getValue() {
       const _transforms = this._transforms;
-      const f106670 = (__getValue) => __getValue.__getValue();
+      const f106887 = (__getValue) => __getValue.__getValue();
       return _transforms.map((obj) => {
         obj = {};
         for (const key10006 in arg0) {
           let tmp5 = key10006;
           let arr = arg0[key10006];
-          let tmp6 = f106673;
+          let tmp6 = f106890;
           let tmp7 = closure_1_1;
-          if (arr instanceof f106673(closure_1_1[6])) {
-            let tmp4 = f106673;
-            obj[key10006] = f106673(arr);
+          if (arr instanceof f106890(closure_1_1[6])) {
+            let tmp4 = f106890;
+            obj[key10006] = f106890(arr);
             continue;
           } else {
             let _Array = Array;
@@ -102,12 +102,12 @@ let items = [
                 for (const key10013 in arr) {
                   let tmp8 = key10013;
                   let tmp9 = arr[key10013];
-                  let tmp10 = f106673;
+                  let tmp10 = f106890;
                   let tmp11 = closure_1_1;
                   let tmp3 = tmp9;
-                  if (tmp9 instanceof f106673(closure_1_1[6])) {
-                    let tmp2 = f106673;
-                    tmp3 = f106673(tmp9);
+                  if (tmp9 instanceof f106890(closure_1_1[6])) {
+                    let tmp2 = f106890;
+                    tmp3 = f106890(tmp9);
                   }
                   obj[key10013] = tmp3;
                   continue;
@@ -131,21 +131,21 @@ let items = [
   {
     key: "__getValueWithStaticTransforms",
     value: function __getValueWithStaticTransforms(arr) {
-      let f106672 = [];
+      let f106889 = [];
       const _transforms = this._transforms;
-      f106672 = (__getValue) => {
-        f106672.push(__getValue.__getValue());
+      f106889 = (__getValue) => {
+        f106889.push(__getValue.__getValue());
       };
       const mapped = _transforms.map((obj) => {
         obj = {};
         for (const key10006 in arg0) {
           let tmp5 = key10006;
           let arr = arg0[key10006];
-          let tmp6 = f106673;
+          let tmp6 = f106890;
           let tmp7 = closure_1_1;
-          if (arr instanceof f106673(closure_1_1[6])) {
-            let tmp4 = f106673;
-            obj[key10006] = f106673(arr);
+          if (arr instanceof f106890(closure_1_1[6])) {
+            let tmp4 = f106890;
+            obj[key10006] = f106890(arr);
             continue;
           } else {
             let _Array = Array;
@@ -165,12 +165,12 @@ let items = [
                 for (const key10013 in arr) {
                   let tmp8 = key10013;
                   let tmp9 = arr[key10013];
-                  let tmp10 = f106673;
+                  let tmp10 = f106890;
                   let tmp11 = closure_1_1;
                   let tmp3 = tmp9;
-                  if (tmp9 instanceof f106673(closure_1_1[6])) {
-                    let tmp2 = f106673;
-                    tmp3 = f106673(tmp9);
+                  if (tmp9 instanceof f106890(closure_1_1[6])) {
+                    let tmp2 = f106890;
+                    tmp3 = f106890(tmp9);
                   }
                   obj[key10013] = tmp3;
                   continue;
@@ -189,17 +189,17 @@ let items = [
         }
         return obj;
       });
-      f106672 = () => f106672.shift();
+      f106889 = () => f106889.shift();
       return arr.map((obj) => {
         obj = {};
         for (const key10006 in arg0) {
           let tmp5 = key10006;
           let arr = arg0[key10006];
-          let tmp6 = f106673;
+          let tmp6 = f106890;
           let tmp7 = closure_1_1;
-          if (arr instanceof f106673(closure_1_1[6])) {
-            let tmp4 = f106673;
-            obj[key10006] = f106673(arr);
+          if (arr instanceof f106890(closure_1_1[6])) {
+            let tmp4 = f106890;
+            obj[key10006] = f106890(arr);
             continue;
           } else {
             let _Array = Array;
@@ -219,12 +219,12 @@ let items = [
                 for (const key10013 in arr) {
                   let tmp8 = key10013;
                   let tmp9 = arr[key10013];
-                  let tmp10 = f106673;
+                  let tmp10 = f106890;
                   let tmp11 = closure_1_1;
                   let tmp3 = tmp9;
-                  if (tmp9 instanceof f106673(closure_1_1[6])) {
-                    let tmp2 = f106673;
-                    tmp3 = f106673(tmp9);
+                  if (tmp9 instanceof f106890(closure_1_1[6])) {
+                    let tmp2 = f106890;
+                    tmp3 = f106890(tmp9);
                   }
                   obj[key10013] = tmp3;
                   continue;
@@ -249,17 +249,17 @@ let items = [
     key: "__getAnimatedValue",
     value: function __getAnimatedValue() {
       const _transforms = this._transforms;
-      const f106673 = (__getAnimatedValue) => __getAnimatedValue.__getAnimatedValue();
+      const f106890 = (__getAnimatedValue) => __getAnimatedValue.__getAnimatedValue();
       return _transforms.map((obj) => {
         obj = {};
         for (const key10006 in arg0) {
           let tmp5 = key10006;
           let arr = arg0[key10006];
-          let tmp6 = f106673;
+          let tmp6 = f106890;
           let tmp7 = closure_1_1;
-          if (arr instanceof f106673(closure_1_1[6])) {
-            let tmp4 = f106673;
-            obj[key10006] = f106673(arr);
+          if (arr instanceof f106890(closure_1_1[6])) {
+            let tmp4 = f106890;
+            obj[key10006] = f106890(arr);
             continue;
           } else {
             let _Array = Array;
@@ -279,12 +279,12 @@ let items = [
                 for (const key10013 in arr) {
                   let tmp8 = key10013;
                   let tmp9 = arr[key10013];
-                  let tmp10 = f106673;
+                  let tmp10 = f106890;
                   let tmp11 = closure_1_1;
                   let tmp3 = tmp9;
-                  if (tmp9 instanceof f106673(closure_1_1[6])) {
-                    let tmp2 = f106673;
-                    tmp3 = f106673(tmp9);
+                  if (tmp9 instanceof f106890(closure_1_1[6])) {
+                    let tmp2 = f106890;
+                    tmp3 = f106890(tmp9);
                   }
                   obj[key10013] = tmp3;
                   continue;

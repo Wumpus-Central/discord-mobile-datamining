@@ -3,11 +3,11 @@ import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 275,
-  height: 150,
-  scales: [1, 2, 3],
-  hash: "bbcef4a2b8c5f48f13fd62c2f6250775",
-  name: "img_group_dm_illustration",
+  httpServerLocation: "/assets/modules/main_tabs_v2/native/shared_components/user_list/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3, 4],
+  hash: "a7182f0f94a36e3c4d169065a673c788",
+  name: "icon-new-group",
   type: "png",
 });

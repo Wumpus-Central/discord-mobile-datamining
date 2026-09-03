@@ -5,7 +5,7 @@ export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties",
   scales: [1],
-  hash: "3b38f8bf8ac6605b344df2f05c37673a",
-  name: "NitroGem9",
+  hash: "e6321d3eee6babc8e6acf553c6eec250",
+  name: "ServerTab",
   type: "lottie",
 });

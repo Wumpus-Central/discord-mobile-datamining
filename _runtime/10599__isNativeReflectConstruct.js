@@ -1,13 +1,13 @@
 // _runtime/10599__isNativeReflectConstruct.js
-import AbstractParserWithWordBoundaryChecking from "10453_AbstractParserWithWordBoundaryChecking.js";
-import REGEX_PARTS from "10600_REGEX_PARTS.js";
-import closure_2 from "metro/00041__classCallCheck.js";
+import AbstractParserWithWordBoundaryChecking from "10457_AbstractParserWithWordBoundaryChecking.js";
+import now from "10474_now.js";
+import ESCasualDateParser from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
-import closure_3 from "metro/00093__possibleConstructorReturn.js";
-import closure_4 from "00095__getPrototypeOf.js";
+import closure_1 from "metro/00093__possibleConstructorReturn.js";
+import closure_2 from "00095__getPrototypeOf.js";
 import _inherits from "00098__inherits.js";
 
-const UKTimeUnitWithinFormatParser = require;
+let self = this;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,65 +26,118 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let closure_6 =
-  "(?:(?:\u043F\u0440\u0438\u0431\u043B\u0438\u0437\u043D\u043E|\u043E\u0440\u0456\u0454\u043D\u0442\u043E\u0432\u043D\u043E)\\s*(?:~\\s*)?)?(" +
-  REGEX_PARTS.TIME_UNITS_PATTERN +
-  ")" +
-  REGEX_PARTS.REGEX_PARTS.rightBoundary;
-class UKTimeUnitWithinFormatParser {
-  constructor() {
-    self = this;
-    tmp = closure_2(this, UKTimeUnitWithinFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(UKTimeUnitWithinFormatParser);
-    tmp3 = closure_3;
-    if (_isNativeReflectConstruct()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
+let self2 = this;
+if (this) {
+  self2 = self.__createBinding;
 }
-_inherits(UKTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-const items = [
-  {
-    key: "patternLeftBoundary",
-    value: function patternLeftBoundary() {
-      return UKTimeUnitWithinFormatParser(10600).REGEX_PARTS.leftBoundary;
-    },
-  },
-  {
-    key: "innerPattern",
-    value: function innerPattern(option) {
-      let _RegExp = RegExp;
-      if (option.option.forwardDate) {
-        _RegExp = new _RegExp(tmp, "i");
-      } else {
-        const _HermesInternal = HermesInternal;
-        const combined =
-          "(?:\u043F\u0440\u043E\u0442\u044F\u0433\u043E\u043C|\u043D\u0430 \u043F\u0440\u043E\u0442\u044F\u0437\u0456|\u043F\u0440\u043E\u0442\u044F\u0433\u043E\u043C|\u0443\u043F\u0440\u043E\u0434\u043E\u0432\u0436|\u0432\u043F\u0440\u043E\u0434\u043E\u0432\u0436)\\s*" +
-          tmp;
-        _RegExp = new _RegExp(combined, UKTimeUnitWithinFormatParser(10600).REGEX_PARTS.flags);
+if (self2) {
+  let __setModuleDefault = self;
+  if (self) {
+    __setModuleDefault = self.__setModuleDefault;
+  }
+  if (__setModuleDefault) {
+    let fn = self;
+    if (self) {
+      fn = self.__importStar;
+    }
+    if (!fn) {
+      function o(arg0) {
+        let fn = Object.getOwnPropertyNames;
+        if (!fn) {
+          fn = (obj) => {
+            const items = [];
+            for (const key10005 in arg0) {
+              let tmp2 = key10005;
+              let _Object = Object;
+              let call = hasOwnProperty.call;
+              if (typeof call === "unknown") {
+                let hasOwnPropertyResult = hasOwnProperty(key10005);
+              } else {
+                hasOwnPropertyResult = call(arg0, key10005);
+              }
+              if (!hasOwnPropertyResult) {
+                continue;
+              } else {
+                items[items.length] = key10005;
+                continue;
+              }
+              continue;
+            }
+            return items;
+          };
+        }
+        return fn(arg0);
       }
-      return _RegExp;
-    },
-  },
-  {
-    key: "innerExtract",
-    value: function innerExtract(reference) {
-      const ParsingComponents = UKTimeUnitWithinFormatParser(10449).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(
-        reference.reference,
-        UKTimeUnitWithinFormatParser(10600).parseDuration(arg1[1]),
-      );
-    },
-  },
-];
-
-export default _createClass(UKTimeUnitWithinFormatParser, items);
+      fn = (__esModule) => {
+        if (__esModule) {
+          if (__esModule.__esModule) {
+            return __esModule;
+          }
+        }
+        const obj = {};
+        if (null != __esModule) {
+          const arr = o(__esModule);
+          for (let num = 0; num < arr.length; num = num + 1) {
+            let tmp2 = num;
+            if ("default" !== arr[num]) {
+              let tmp3 = self2;
+              let tmp4 = self2(obj, __esModule, arr[num]);
+            }
+          }
+        }
+        __setModuleDefault(obj, __esModule);
+        return obj;
+      };
+    }
+    const _Object3 = Object;
+    let closure_7 = fn(now);
+    class ESCasualDateParser {
+      constructor() {
+        self = this;
+        tmp = ESCasualDateParser(this, ESCasualDateParser);
+        tmp2 = closure_2;
+        obj = closure_2(ESCasualDateParser);
+        tmp3 = closure_1;
+        if (_isNativeReflectConstruct()) {
+          tmp7 = globalThis;
+          _Reflect = Reflect;
+          tmp8 = arguments;
+          constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+        } else {
+          tmp4 = arguments;
+          tmp5 = arguments;
+          constructResult = obj(...arguments);
+        }
+        return tmp3(self, constructResult);
+      }
+    }
+    _inherits(ESCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+    let obj = { key: "innerPattern", value: null };
+    obj[1] = function innerPattern(arg0) {
+      return /(ahora|hoy|mañana|ayer)(?=\W|$)/i;
+    };
+    let items = [obj];
+    obj = { key: "innerExtract", value: null };
+    obj[1] = function innerExtract(reference) {
+      const formatted = arg1[0].toLowerCase();
+      if ("ahora" === formatted) {
+        return closure_7.now(reference.reference);
+      } else if ("hoy" === formatted) {
+        return closure_7.today(reference.reference);
+      } else if ("ma\u00F1ana" === formatted) {
+        return closure_7.tomorrow(reference.reference);
+      } else if ("ayer" === formatted) {
+        return closure_7.yesterday(reference.reference);
+      } else {
+        return tmp2;
+      }
+      const str = arg1[0];
+    };
+    items[1] = obj;
+    exports.default = _createClass(ESCasualDateParser, items);
+  } else {
+    const _Object2 = Object;
+  }
+} else {
+  let _Object = Object;
+}

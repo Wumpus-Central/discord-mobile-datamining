@@ -1,12 +1,11 @@
 // _runtime/10539__isNativeReflectConstruct.js
-import AbstractParserWithWordBoundaryChecking from "10453_AbstractParserWithWordBoundaryChecking.js";
-import closure_2 from "metro/00041__classCallCheck.js";
+import _isNativeReflectConstruct2 from "10468__isNativeReflectConstruct.js";
+import NLMergeDateRangeRefiner from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
-import closure_3 from "metro/00093__possibleConstructorReturn.js";
-import closure_4 from "00095__getPrototypeOf.js";
+import closure_1 from "metro/00093__possibleConstructorReturn.js";
+import closure_2 from "00095__getPrototypeOf.js";
 import _inherits from "00098__inherits.js";
 
-const NLTimeUnitWithinFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,13 +24,29 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class NLTimeUnitWithinFormatParser {
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: null };
+      obj[0] = __esModule;
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+class NLMergeDateRangeRefiner {
   constructor() {
     self = this;
-    tmp = closure_2(this, NLTimeUnitWithinFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(NLTimeUnitWithinFormatParser);
-    tmp3 = closure_3;
+    tmp = NLMergeDateRangeRefiner(this, NLMergeDateRangeRefiner);
+    tmp2 = closure_2;
+    obj = closure_2(NLMergeDateRangeRefiner);
+    tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -45,28 +60,14 @@ class NLTimeUnitWithinFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(NLTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(NLMergeDateRangeRefiner, fn(_isNativeReflectConstruct2).default);
 const items = [
   {
-    key: "innerPattern",
-    value: function innerPattern() {
-      const regExp = new RegExp(
-        "(?:binnen|in|binnen de|voor)\\s*(" + NLTimeUnitWithinFormatParser(10540).TIME_UNITS_PATTERN + ")(?=\\W|$)",
-        "i",
-      );
-      return regExp;
-    },
-  },
-  {
-    key: "innerExtract",
-    value: function innerExtract(reference) {
-      const ParsingComponents = NLTimeUnitWithinFormatParser(10449).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(
-        reference.reference,
-        NLTimeUnitWithinFormatParser(10540).parseDuration(arg1[1]),
-      );
+    key: "patternBetween",
+    value: function patternBetween() {
+      return /^\s*(tot|-)\s*$/i;
     },
   },
 ];
 
-export default _createClass(NLTimeUnitWithinFormatParser, items);
+export default _createClass(NLMergeDateRangeRefiner, items);

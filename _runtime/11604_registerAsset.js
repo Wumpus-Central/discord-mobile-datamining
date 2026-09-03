@@ -3,11 +3,11 @@ import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 50,
-  height: 50,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 19,
+  height: 19,
   scales: [2, 3],
-  hash: "9fa4b907ff6d9b977fcf6802f2937622",
-  name: "img_poop_dark",
+  hash: "77f70d67a495166d7b55949a3fa57226",
+  name: "ic_channel_arrow",
   type: "png",
 });

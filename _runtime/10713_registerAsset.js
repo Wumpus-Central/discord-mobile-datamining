@@ -3,11 +3,11 @@ import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 87,
-  height: 100,
+  httpServerLocation: "/assets/images/native/premium/backgrounds",
+  width: 411,
+  height: 134,
   scales: [2, 3],
-  hash: "fea63c35d752daa1f371f2069e1b5793",
-  name: "img_wumpus_lightro",
+  hash: "68fc474265691715b1946d199d680a26",
+  name: "img_classic_subheader_mobile",
   type: "png",
 });

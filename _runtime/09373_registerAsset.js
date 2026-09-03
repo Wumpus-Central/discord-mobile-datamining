@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "04e956cfab49d64a3f8a18b66aa5fc1e",
-  name: "ChatSmileIcon",
+  hash: "5bfdb70bf70b33af737927fefb52cdba",
+  name: "ServerIcon",
   type: "png",
 });

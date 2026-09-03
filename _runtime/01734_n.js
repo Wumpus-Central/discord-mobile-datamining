@@ -22,7 +22,7 @@ let fn = function n(toValue, userConfig, callback) {
       duration: 2000,
       dampingRatio: 0.5,
       reduceMotion: "call",
-      clamp: "withSpring",
+      clamp: "description",
     };
     const merged = Object.assign(userConfig);
     let duration;

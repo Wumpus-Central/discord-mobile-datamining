@@ -3,11 +3,11 @@ import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/forums/native/images",
-  width: 120,
-  height: 80,
+  httpServerLocation: "/assets/modules/hub/native/images",
+  width: 200,
+  height: 139.5,
   scales: [2, 3],
-  hash: "80a29bcae35fa62f1f957cb01201db17",
-  name: "img_forum_empty_state_light",
+  hash: "42c68794718ccb3cc57c33bf57ed6d23",
+  name: "hub-header",
   type: "png",
 });

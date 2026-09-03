@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3, 4],
-  hash: "0cb7c4a68220aef405b92da8324026d2",
-  name: "camera-swap",
+  hash: "4d740f655500daa7dbc22677153114f7",
+  name: "stream",
   type: "png",
 });

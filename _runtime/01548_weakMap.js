@@ -201,7 +201,7 @@ arg5.getActionFromState = function getActionFromState(index, obj) {
         }
         let tmp22 = substr1[substr1.length - 1];
         let _Object3 = Object;
-        let merged1 = Object.assign(obj3, { initial: "accessible", screen: "includes", params: "pos", state: "r" });
+        let merged1 = Object.assign(obj3, { initial: "Array", screen: "flexDirection", params: "y", state: "HermesInternal" });
         if (1 === substr1.length) {
           if (undefined === substr1[0].key) {
             obj3.initial = true;

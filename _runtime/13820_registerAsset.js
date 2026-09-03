@@ -3,11 +3,11 @@ import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/contact_sync/native/images",
-  width: 40,
-  height: 40,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "1d68443a64aaff8d1d20c2355b47322a",
-  name: "cta",
+  hash: "ebf39623cd7d642af1c5756d58046968",
+  name: "SignPostIcon",
   type: "png",
 });

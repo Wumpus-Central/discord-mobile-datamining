@@ -1,7 +1,7 @@
 // _runtime/08284__isNativeReflectConstruct.js
 import noopAll from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
-import _isNativeReflectConstructDefault from "08274__isNativeReflectConstruct.js";
+import _isNativeReflectConstructDefault from "08278__isNativeReflectConstruct.js";
 import __INTERNAL_VIEW_CONFIGDefault from "metro/08285___INTERNAL_VIEW_CONFIG.js";
 import closure_3 from "metro/00041__classCallCheck.js";
 import closure_4 from "metro/00093__possibleConstructorReturn.js";
@@ -9,7 +9,7 @@ import closure_5 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const Ellipse = arg1;
+const ClipPath = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,12 +29,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 noopAll;
-class Ellipse {
+class ClipPath {
   constructor() {
     self = this;
-    tmp = closure_3(this, Ellipse);
+    tmp = closure_3(this, ClipPath);
     tmp2 = closure_5;
-    obj = closure_5(Ellipse);
+    obj = closure_5(ClipPath);
     tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -49,37 +49,21 @@ class Ellipse {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(Ellipse, _isNativeReflectConstructDefault);
+_inheritsDefault(ClipPath, _isNativeReflectConstructDefault);
 const items = [
   {
     key: "render",
     value: function render() {
-      const self = this;
       const props = this.props;
-      let obj = {};
-      ({ cx, cy, rx, ry } = props);
-      const merged = Object.assign(self(8265).extract(this, props));
-      obj.cx = cx;
-      obj.cy = cy;
-      obj.rx = rx;
-      obj.ry = ry;
-      obj = {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        },
-      };
-      const obj2 = self(8265);
-      const merged1 = Object.assign(obj);
-      return jsx(__INTERNAL_VIEW_CONFIGDefault, {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        },
-      });
+      const obj = { ref: this.refMethod };
+      const tmp = __INTERNAL_VIEW_CONFIGDefault;
+      const merged = Object.assign(ClipPath(8269).extract(this, props));
+      obj.children = props.children;
+      return <tmp ref={this.refMethod} />;
     },
   },
 ];
-const importDefaultResultResult = importDefaultResult(Ellipse, items);
-importDefaultResultResult.displayName = "Ellipse";
-importDefaultResultResult.defaultProps = { cx: 0, cy: 0, rx: 0, ry: 0 };
+const importDefaultResultResult = importDefaultResult(ClipPath, items);
+importDefaultResultResult.displayName = "ClipPath";
 
 export default importDefaultResultResult;

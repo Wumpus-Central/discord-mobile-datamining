@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "80139ae0e2b501617462c705b80c97d5",
-  name: "ScreenStreamIcon",
+  hash: "816d3367ed7ad398b85a9db798abd14c",
+  name: "ReactionIcon",
   type: "png",
 });

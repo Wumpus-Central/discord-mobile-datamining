@@ -4,10 +4,10 @@ import registerAsset from "01240_registerAsset.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 128,
-  height: 128,
+  width: 256,
+  height: 256,
   scales: [1],
-  hash: "43cb25124fca194b4a6cf3676f39faf2",
-  name: "img_meta_quest_light",
-  type: "png",
+  hash: "85e85e0480cc3ad94f292bfe35b1a958",
+  name: "img_amazon_music",
+  type: "svg",
 });

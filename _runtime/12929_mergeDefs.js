@@ -1,5 +1,5 @@
 // _runtime/12929_mergeDefs.js
-import mergeDefs from "12903_mergeDefs.js";
+import mergeDefs from "12915_mergeDefs.js";
 
 const self = this;
 let self2 = this;
@@ -59,16 +59,16 @@ if (self2) {
         HermesBuiltin.throwTypeError();
       }
       closure_0 = {
-        string: { unit: "stafi", verb: "a\u00F0 hafa" },
-        file: { unit: "b\u00E6ti", verb: "a\u00F0 hafa" },
-        array: { unit: "hluti", verb: "a\u00F0 hafa" },
-        set: { unit: "hluti", verb: "a\u00F0 hafa" },
+        string: { unit: "Zeichen", verb: "zu haben" },
+        file: { unit: "Bytes", verb: "zu haben" },
+        array: { unit: "Elemente", verb: "zu haben" },
+        set: { unit: "Elemente", verb: "zu haben" },
       };
       closure_1 = {
-        regex: "gildi",
-        email: "netfang",
-        url: "vefsl\u00F3\u00F0",
-        emoji: "emoji",
+        regex: "Eingabe",
+        email: "E-Mail-Adresse",
+        url: "URL",
+        emoji: "Emoji",
         uuid: "UUID",
         uuidv4: "UUIDv4",
         uuidv6: "UUIDv6",
@@ -79,23 +79,23 @@ if (self2) {
         ulid: "ULID",
         xid: "XID",
         ksuid: "KSUID",
-        datetime: "ISO dagsetning og t\u00EDmi",
-        date: "ISO dagsetning",
-        time: "ISO t\u00EDmi",
-        duration: "ISO t\u00EDmalengd",
-        ipv4: "IPv4 address",
-        ipv6: "IPv6 address",
-        cidrv4: "IPv4 range",
-        cidrv6: "IPv6 range",
-        base64: "base64-encoded strengur",
-        base64url: "base64url-encoded strengur",
-        json_string: "JSON strengur",
-        e164: "E.164 t\u00F6lugildi",
+        datetime: "ISO-Datum und -Uhrzeit",
+        date: "ISO-Datum",
+        time: "ISO-Uhrzeit",
+        duration: "ISO-Dauer",
+        ipv4: "IPv4-Adresse",
+        ipv6: "IPv6-Adresse",
+        cidrv4: "IPv4-Bereich",
+        cidrv6: "IPv6-Bereich",
+        base64: "Base64-codierter String",
+        base64url: "Base64-URL-codierter String",
+        json_string: "JSON-String",
+        e164: "E.164-Nummer",
         jwt: "JWT",
-        template_literal: "gildi",
+        template_literal: "Eingabe",
       };
-      closure_2 = { nan: "NaN", number: "n\u00FAmer", array: "fylki" };
-      return { localeError: (arg0) => "Rangt gildi \u00ED " + tmp.origin };
+      closure_2 = { nan: "NaN", number: "Zahl", array: "Array" };
+      return { localeError: (arg0) => "Ung\u00FCltiger Wert in " + tmp.origin };
     };
     let closure_2 = fn(mergeDefs);
     function error() {}

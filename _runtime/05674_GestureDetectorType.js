@@ -1,17 +1,10 @@
 // _runtime/05674_GestureDetectorType.js
-import __INTERNAL_VIEW_CONFIGDefault from "metro/05675___INTERNAL_VIEW_CONFIG.js";
-import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import GestureDetectorType from "05675_GestureDetectorType.js";
+import GestureDetector from "05678_GestureDetector.js";
+import InterceptingGestureDetector from "05738_InterceptingGestureDetector.js";
+import VirtualDetector from "05740_VirtualDetector.js";
 
-({ Animated, StyleSheet } = get_ActivityIndicator);
-const animatedComponent = Animated.createAnimatedComponent(__INTERNAL_VIEW_CONFIGDefault);
-
-export const GestureDetectorType = {
-  Native: 0,
-  [0]: "Native",
-  Virtual: 1,
-  [1]: "Virtual",
-  Intercepting: 2,
-  [2]: "Intercepting",
-};
-export const AnimatedNativeDetector = animatedComponent;
-export const nativeDetectorStyles = StyleSheet.create({ detector: { display: "contents" } });
+export const GestureDetectorType = GestureDetectorType.GestureDetectorType;
+export const GestureDetector = GestureDetector.GestureDetector;
+export const InterceptingGestureDetector = InterceptingGestureDetector.InterceptingGestureDetector;
+export const VirtualGestureDetector = VirtualDetector.VirtualDetector;

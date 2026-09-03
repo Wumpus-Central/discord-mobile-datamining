@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "4e1581119cf1ddaae8c3aa4ebdd90f99",
-  name: "StickerIcon",
+  hash: "b001972a2062de923c0ef45fb0f2ab23",
+  name: "VideoIcon",
   type: "png",
 });

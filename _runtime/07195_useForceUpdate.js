@@ -1,10 +1,10 @@
 // _runtime/07195_useForceUpdate.js
-import closure_0 from "metro/00032__slicedToArray.js";
-import noop from "00019_noop.js";
+import useForceUpdateDefault from "07196_useForceUpdate.js";
+import useStableMemoDefault from "07197_useStableMemo.js";
+import areHookInputsEqualDefault from "07198_areHookInputsEqual.js";
+import useLazyValueDefault from "07199_useLazyValue.js";
 
-({ useCallback: closure_1, useState: obj1 } = noop);
-
-export default function useForceUpdate() {
-  callback = callback(callback3({}), 2)[1];
-  return callback2(() => callback({}), []);
-}
+export const useForceUpdate = useForceUpdateDefault;
+export const useStableMemo = useStableMemoDefault;
+export const useLazyValue = useLazyValueDefault;
+export const areHookInputsEqual = areHookInputsEqualDefault;

@@ -3,11 +3,11 @@ import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 16,
-  height: 16,
+  httpServerLocation: "/assets/images/native/guild_settings/community_settings",
+  width: 88,
+  height: 80,
   scales: [2, 3],
-  hash: "0ddefd9d8828364a18e4207ffcdf1e76",
-  name: "ic_close_circle",
+  hash: "bfb98edbbbdba844f1779b23cfef0afa",
+  name: "finishing_touches_light",
   type: "png",
 });

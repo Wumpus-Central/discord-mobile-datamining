@@ -89,8 +89,8 @@ let fn = function n(userConfig, callback) {
       initialVelocity: 0,
       current: "disabled",
       lastTimestamp: null,
-      startTimestamp: "DELETE_PENDING_REPLY",
-      reduceMotion: null,
+      startTimestamp: "text-xs/semibold",
+      reduceMotion: "mobile-text-heading-primary",
     };
     let num = obj.velocity;
     if (num == null) {

@@ -3,11 +3,11 @@ import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/SunsetIcon",
+  httpServerLocation: "/assets/images/native/custom_app_icons/MatteLightIcon",
   width: 60,
   height: 60,
   scales: [2, 3],
-  hash: "9f9f6665c181624b81b98f40c0532d57",
-  name: "SunsetIcon",
+  hash: "766fd7e004517bb3fbea8bf5121a6049",
+  name: "MatteLightIcon",
   type: "png",
 });

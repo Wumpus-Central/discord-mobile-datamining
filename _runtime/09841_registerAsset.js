@@ -3,11 +3,11 @@ import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/voice_panel/native/images",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
-  scales: [2, 3, 4],
-  hash: "a9d9f17a82c0681a83d7c3c4c21e6009",
-  name: "video",
+  scales: [2, 3],
+  hash: "8eff9dfff49daa7d4f9dac9b9f964c2a",
+  name: "MicrophoneDenyIcon",
   type: "png",
 });

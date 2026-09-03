@@ -1,5 +1,5 @@
 // _runtime/12940_mergeDefs.js
-import mergeDefs from "12903_mergeDefs.js";
+import mergeDefs from "12915_mergeDefs.js";
 
 const self = this;
 let self2 = this;
@@ -59,14 +59,14 @@ if (self2) {
         HermesBuiltin.throwTypeError();
       }
       closure_0 = {
-        string: { unit: "tegn", verb: "\u00E5 ha" },
-        file: { unit: "bytes", verb: "\u00E5 ha" },
-        array: { unit: "elementer", verb: "\u00E5 inneholde" },
-        set: { unit: "elementer", verb: "\u00E5 inneholde" },
+        string: { unit: "karakter", verb: "memiliki" },
+        file: { unit: "byte", verb: "memiliki" },
+        array: { unit: "item", verb: "memiliki" },
+        set: { unit: "item", verb: "memiliki" },
       };
       closure_1 = {
         regex: "input",
-        email: "e-postadresse",
+        email: "alamat email",
         url: "URL",
         emoji: "emoji",
         uuid: "UUID",
@@ -79,23 +79,23 @@ if (self2) {
         ulid: "ULID",
         xid: "XID",
         ksuid: "KSUID",
-        datetime: "ISO dato- og klokkeslett",
-        date: "ISO-dato",
-        time: "ISO-klokkeslett",
-        duration: "ISO-varighet",
-        ipv4: "IPv4-omr\u00E5de",
-        ipv6: "IPv6-omr\u00E5de",
-        cidrv4: "IPv4-spekter",
-        cidrv6: "IPv6-spekter",
-        base64: "base64-enkodet streng",
-        base64url: "base64url-enkodet streng",
-        json_string: "JSON-streng",
-        e164: "E.164-nummer",
+        datetime: "tanggal dan waktu format ISO",
+        date: "tanggal format ISO",
+        time: "jam format ISO",
+        duration: "durasi format ISO",
+        ipv4: "alamat IPv4",
+        ipv6: "alamat IPv6",
+        cidrv4: "rentang alamat IPv4",
+        cidrv6: "rentang alamat IPv6",
+        base64: "string dengan enkode base64",
+        base64url: "string dengan enkode base64url",
+        json_string: "string JSON",
+        e164: "angka E.164",
         jwt: "JWT",
         template_literal: "input",
       };
-      closure_2 = { nan: "NaN", number: "tall", array: "liste" };
-      return { localeError: (arg0) => "Ugyldig verdi i " + tmp.origin };
+      closure_2 = { nan: "NaN" };
+      return { localeError: (arg0) => "Nilai tidak valid di " + tmp.origin };
     };
     let closure_2 = fn(mergeDefs);
     function error() {}

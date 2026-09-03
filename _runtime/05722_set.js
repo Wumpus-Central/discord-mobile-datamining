@@ -1,10 +1,20 @@
 // _runtime/05722_set.js
-arg5.TapNativeProperties = new Set([
+arg5.PanNativeProperties = new Set([
+  "minDist",
+  "avgTouches",
+  "enableTrackpadTwoFingerGesture",
   "minPointers",
-  "numberOfTaps",
-  "maxDeltaX",
-  "maxDeltaY",
-  "maxDurationMs",
-  "maxDelayMs",
-  "maxDist",
+  "maxPointers",
+  "minVelocity",
+  "minVelocityX",
+  "minVelocityY",
+  "activateAfterLongPress",
+  "activeOffsetYStart",
+  "activeOffsetYEnd",
+  "activeOffsetXStart",
+  "activeOffsetXEnd",
+  "failOffsetYStart",
+  "failOffsetYEnd",
+  "failOffsetXStart",
+  "failOffsetXEnd",
 ]);

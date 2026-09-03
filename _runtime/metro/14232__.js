@@ -1,45 +1,19 @@
 // _runtime/metro/14232__.js
-import all from "../14201_all.js";
+import call from "../14198_call.js";
+import all from "../14219_all.js";
+import f2 from "../14233_f.js";
+import all2 from "../14243_all.js";
+import _mod14244 from "14244__.js";
 
-export default (arg0, arg1, arg2, arg3) => {
-  let obj = arg3;
-  if (!arg3) {
-    obj = {};
-  }
-  let flag = obj.enumerable;
-  let name = arg1;
-  if (undefined !== obj.name) {
-    name = obj.name;
-  }
-  if (all(arg2)) {
-    tmp3(14233)(arg2, name, obj);
-  }
-  if (obj.global) {
-    if (flag) {
-      arg0[arg1] = arg2;
-    } else {
-      tmp3(14176)(arg1, arg2);
+let closure_2 = call([].concat);
+
+export default all("Reflect", "ownKeys") ||
+  function ownKeys(arg0) {
+    const fResult = f2.f(all2(arg0));
+    const f = _mod14244.f;
+    let tmp2 = fResult;
+    if (f) {
+      tmp2 = callback(fResult, f(arg0));
     }
-  } else {
-    try {
-      if (obj.unsafe) {
-        if (arg0[arg1]) {
-          flag = true;
-        }
-      } else {
-        delete tmp[tmp2];
-      }
-      if (flag) {
-        arg0[arg1] = arg2;
-      } else {
-        obj = { value: null, enumerable: false, configurable: null, writable: null };
-        obj[0] = arg2;
-        obj[2] = !obj.nonConfigurable;
-        obj[3] = !obj.nonWritable;
-        tmp3(14229).f(arg0, arg1, obj);
-        const tmp3Result = tmp3(14229);
-      }
-    } catch (err) {}
-  }
-  return arg0;
-};
+    return tmp2;
+  };

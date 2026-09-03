@@ -4,10 +4,10 @@ import registerAsset from "01240_registerAsset.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/premium/upsell",
-  width: 240,
-  height: 152,
+  width: 247.5,
+  height: 194,
   scales: [2, 3],
-  hash: "99a0c83db7ec93ecc4f9138bd68cba05",
-  name: "img_guild_cap_upsell_dark",
+  hash: "ea30e86096b674f657e18d24dc0df08d",
+  name: "img_profile_upsell",
   type: "png",
 });

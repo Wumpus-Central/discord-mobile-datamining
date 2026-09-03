@@ -3,11 +3,11 @@ import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "c6de0a8018201efe397c6bc1961474a0",
-  name: "ic_minus_circle_24px",
+  hash: "1cda1329ef5dd669ec53160c74e5d945",
+  name: "ArrowSmallRightIcon",
   type: "png",
 });

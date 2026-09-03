@@ -1,4 +1,12 @@
 // _runtime/metro/14199__.js
-import _mod14185 from "14185__.js";
+import _mod14195 from "14195__.js";
 
-export default (arg0) => Object(_mod14185(arg0));
+export default !_mod14195(() => {
+  const fn = () => {};
+  const bindResult = fn.bind();
+  let hasOwnPropertyResult = typeof bindResult !== "function";
+  if (typeof bindResult === "function") {
+    hasOwnPropertyResult = bindResult.hasOwnProperty("prototype");
+  }
+  return hasOwnPropertyResult;
+});

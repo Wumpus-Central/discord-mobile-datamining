@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "abe3edaf4092c8b2f7e822b6a96655d7",
-  name: "InboxIcon",
+  hash: "cc9053b1cd7f0215ee3d9ba69e2b389a",
+  name: "PinIcon",
   type: "png",
 });

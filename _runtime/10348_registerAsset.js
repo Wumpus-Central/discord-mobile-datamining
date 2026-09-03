@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "faa248a786366f008b1ac80b3ae581a2",
-  name: "LockUnlockedIcon",
+  hash: "a97ebd26f28acc69dba8dec170283378",
+  name: "ChatMarkUnreadIcon",
   type: "png",
 });

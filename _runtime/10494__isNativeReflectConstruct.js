@@ -1,9 +1,10 @@
 // _runtime/10494__isNativeReflectConstruct.js
-import _isNativeReflectConstruct2 from "10464__isNativeReflectConstruct.js";
-import DEMergeDateRangeRefiner from "metro/00041__classCallCheck.js";
+import AbstractTimeExpressionParser from "10464_AbstractTimeExpressionParser.js";
+import DETimeExpressionParser from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 import closure_1 from "metro/00093__possibleConstructorReturn.js";
 import closure_2 from "00095__getPrototypeOf.js";
+import closure_3 from "metro/00096__get.js";
 import _inherits from "00098__inherits.js";
 
 function _isNativeReflectConstruct() {
@@ -24,28 +25,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: null };
-      obj[0] = __esModule;
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-class DEMergeDateRangeRefiner {
+class DETimeExpressionParser {
   constructor() {
     self = this;
-    tmp = DEMergeDateRangeRefiner(this, DEMergeDateRangeRefiner);
+    tmp = DETimeExpressionParser(this, DETimeExpressionParser);
     tmp2 = closure_2;
-    obj = closure_2(DEMergeDateRangeRefiner);
+    obj = closure_2(DETimeExpressionParser);
     tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -60,14 +45,37 @@ class DEMergeDateRangeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_inherits(DEMergeDateRangeRefiner, fn(_isNativeReflectConstruct2).default);
-const items = [
+_inherits(DETimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
+let items = [
   {
-    key: "patternBetween",
-    value: function patternBetween() {
-      return /^\s*(bis(?:\s*(?:am|zum))?|-)\s*$/i;
+    key: "primaryPrefix",
+    value: function primaryPrefix() {
+      return "(?:(?:um|von)\\s*)?";
+    },
+  },
+  {
+    key: "followingPhase",
+    value: function followingPhase() {
+      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|bis)\\s*";
+    },
+  },
+  {
+    key: "extractPrimaryTimeComponents",
+    value: function extractPrimaryTimeComponents(arg0, arg1) {
+      let fnResult = null;
+      if (!str.match(/^\s*\d{4}\s*$/)) {
+        let self = this;
+        self = this;
+        let fn = callback2(callback(self.prototype), "extractPrimaryTimeComponents", this);
+        if (typeof fn === "function") {
+          fn = (items) => fn.apply(self, items);
+        }
+        const items = [arg0, arg1];
+        fnResult = fn(items);
+      }
+      return fnResult;
     },
   },
 ];
 
-export default _createClass(DEMergeDateRangeRefiner, items);
+export default _createClass(DETimeExpressionParser, items);

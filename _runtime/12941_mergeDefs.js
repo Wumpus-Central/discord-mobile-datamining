@@ -1,5 +1,5 @@
 // _runtime/12941_mergeDefs.js
-import mergeDefs from "12903_mergeDefs.js";
+import mergeDefs from "12915_mergeDefs.js";
 
 const self = this;
 let self2 = this;
@@ -59,15 +59,15 @@ if (self2) {
         HermesBuiltin.throwTypeError();
       }
       closure_0 = {
-        string: { unit: "harf", verb: "olmal\u0131d\u0131r" },
-        file: { unit: "bayt", verb: "olmal\u0131d\u0131r" },
-        array: { unit: "unsur", verb: "olmal\u0131d\u0131r" },
-        set: { unit: "unsur", verb: "olmal\u0131d\u0131r" },
+        string: { unit: "stafi", verb: "a\u00F0 hafa" },
+        file: { unit: "b\u00E6ti", verb: "a\u00F0 hafa" },
+        array: { unit: "hluti", verb: "a\u00F0 hafa" },
+        set: { unit: "hluti", verb: "a\u00F0 hafa" },
       };
       closure_1 = {
-        regex: "giren",
-        email: "epostag\u00E2h",
-        url: "URL",
+        regex: "gildi",
+        email: "netfang",
+        url: "vefsl\u00F3\u00F0",
         emoji: "emoji",
         uuid: "UUID",
         uuidv4: "UUIDv4",
@@ -79,23 +79,23 @@ if (self2) {
         ulid: "ULID",
         xid: "XID",
         ksuid: "KSUID",
-        datetime: "ISO heng\u00E2m\u0131",
-        date: "ISO tarihi",
-        time: "ISO zaman\u0131",
-        duration: "ISO m\u00FCddeti",
-        ipv4: "IPv4 ni\u015F\u00E2n\u0131",
-        ipv6: "IPv6 ni\u015F\u00E2n\u0131",
-        cidrv4: "IPv4 menzili",
-        cidrv6: "IPv6 menzili",
-        base64: "base64-\u015Fifreli metin",
-        base64url: "base64url-\u015Fifreli metin",
-        json_string: "JSON metin",
-        e164: "E.164 say\u0131s\u0131",
+        datetime: "ISO dagsetning og t\u00EDmi",
+        date: "ISO dagsetning",
+        time: "ISO t\u00EDmi",
+        duration: "ISO t\u00EDmalengd",
+        ipv4: "IPv4 address",
+        ipv6: "IPv6 address",
+        cidrv4: "IPv4 range",
+        cidrv6: "IPv6 range",
+        base64: "base64-encoded strengur",
+        base64url: "base64url-encoded strengur",
+        json_string: "JSON strengur",
+        e164: "E.164 t\u00F6lugildi",
         jwt: "JWT",
-        template_literal: "giren",
+        template_literal: "gildi",
       };
-      closure_2 = { nan: "NaN", number: "numara", array: "saf", null: "gayb" };
-      return { localeError: (arg0) => "" + tmp.origin + " i\u00E7in tan\u0131nmayan k\u0131ymet var." };
+      closure_2 = { nan: "NaN", number: "n\u00FAmer", array: "fylki" };
+      return { localeError: (arg0) => "Rangt gildi \u00ED " + tmp.origin };
     };
     let closure_2 = fn(mergeDefs);
     function error() {}

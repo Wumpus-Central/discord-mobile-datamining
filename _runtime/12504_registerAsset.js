@@ -4,10 +4,10 @@ import registerAsset from "01240_registerAsset.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/hub/native/images",
-  width: 120,
-  height: 80,
-  scales: [2, 3],
-  hash: "8a1b4cbcf69c94f39bb256787c4e1df8",
-  name: "search_empty_state",
+  width: 48,
+  height: 48,
+  scales: [1, 2, 3],
+  hash: "2d94b588ee7f10b120a153b69fc9d641",
+  name: "conversation",
   type: "png",
 });

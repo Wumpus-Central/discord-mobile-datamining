@@ -1,16 +1,14 @@
 // _runtime/08321__isNativeReflectConstruct.js
-import noopAll from "00019_noop.js";
+import noopDefault from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
-import _isNativeReflectConstructDefault from "08274__isNativeReflectConstruct.js";
-import __INTERNAL_VIEW_CONFIGDefault from "metro/08322___INTERNAL_VIEW_CONFIG.js";
-import closure_3 from "metro/00041__classCallCheck.js";
-import closure_4 from "metro/00093__possibleConstructorReturn.js";
-import closure_5 from "00095__getPrototypeOf.js";
+import _isNativeReflectConstructDefault from "08278__isNativeReflectConstruct.js";
+import closure_2 from "metro/00041__classCallCheck.js";
+import closure_3 from "metro/00093__possibleConstructorReturn.js";
+import closure_4 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
-import { Image } from "00017_get_ActivityIndicator.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const SvgImage = arg1;
+const Filter = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,15 +27,14 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-noopAll;
-const re9 = /\s+/;
-class SvgImage {
+noopDefault;
+class Filter {
   constructor() {
     self = this;
-    tmp = closure_3(this, SvgImage);
-    tmp2 = closure_5;
-    obj = closure_5(SvgImage);
-    tmp3 = closure_4;
+    tmp = closure_2(this, Filter);
+    tmp2 = closure_4;
+    obj = closure_4(Filter);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -51,69 +48,46 @@ class SvgImage {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(SvgImage, _isNativeReflectConstructDefault);
+_inheritsDefault(Filter, _isNativeReflectConstructDefault);
 const items = [
   {
     key: "render",
     value: function render() {
       const self = this;
       const props = this.props;
-      ({ preserveAspectRatio, href } = props);
-      ({ x, y, width, height } = props);
-      if (undefined === href) {
-        href = props.xlinkHref;
-      }
-      if (preserveAspectRatio) {
-        let parts = preserveAspectRatio.trim().split(closure_9);
-        const str = preserveAspectRatio.trim();
-      } else {
-        parts = [];
-      }
       let obj = {
-        x,
-        y,
-        width,
-        height,
-        onLoad: props.onLoad,
-        meetOrSlice: self(8263).meetOrSliceTypes[tmp3] || 0,
-        align: null,
-        src: null,
+        name: props.id,
+        x: props.x,
+        y: props.y,
+        width: props.width,
+        height: props.height,
+        filterUnits: props.filterUnits,
+        primitiveUnits: props.primitiveUnits,
       };
-      [tmp2, tmp3] = parts;
-      const tmp6 = self(8263).meetOrSliceTypes[tmp3] || 0;
-      obj[6] = self(8263).alignEnum[tmp2] || "xMidYMid";
-      let assetSource = null;
-      if (href) {
-        let tmp10 = href;
-        if (typeof href === "string") {
-          obj = { uri: null };
-          obj[0] = href;
-          tmp10 = obj;
-        }
-        assetSource = Image.resolveAssetSource(tmp10);
-      }
-      obj[7] = assetSource;
       obj = {
         ref(arg0) {
           return self.refMethod(arg0);
         },
       };
-      const tmp7 = self(8263).alignEnum[tmp2] || "xMidYMid";
-      const tmp11 = __INTERNAL_VIEW_CONFIGDefault;
-      const merged = Object.assign(self(8265).withoutXY(this, props));
-      const merged1 = Object.assign(obj);
-      return (
-        <tmp11
-          ref={function ref(arg0) {
-            return self.refMethod(arg0);
-          }}
-        />
-      );
+      const merged = Object.assign(obj);
+      obj.children = this.props.children;
+      return jsx(self(8322), {
+        ref(arg0) {
+          return self.refMethod(arg0);
+        },
+      });
     },
   },
 ];
-const importDefaultResultResult = importDefaultResult(SvgImage, items);
-importDefaultResultResult.displayName = "Image";
-importDefaultResultResult.defaultProps = { x: 0, y: 0, width: 0, height: 0, preserveAspectRatio: "xMidYMid meet" };
+const importDefaultResultResult = importDefaultResult(Filter, items);
+importDefaultResultResult.displayName = "Filter";
+importDefaultResultResult.defaultProps = {
+  x: "-10%",
+  y: "-10%",
+  width: "120%",
+  height: "120%",
+  filterUnits: "objectBoundingBox",
+  primitiveUnits: "userSpaceOnUse",
+};
 
 export default importDefaultResultResult;

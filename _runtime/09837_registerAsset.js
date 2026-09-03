@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "8eff9dfff49daa7d4f9dac9b9f964c2a",
-  name: "MicrophoneDenyIcon",
+  hash: "0d58e61e562c5031f46b78cbe36725ec",
+  name: "HeadphonesDenyIcon",
   type: "png",
 });

@@ -1,15 +1,15 @@
 // _runtime/08290__isNativeReflectConstruct.js
 import noopDefault from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
-import _isNativeReflectConstructDefault from "08289__isNativeReflectConstruct.js";
 import __INTERNAL_VIEW_CONFIGDefault from "metro/08291___INTERNAL_VIEW_CONFIG.js";
+import _isNativeReflectConstructDefault from "08293__isNativeReflectConstruct.js";
 import closure_3 from "metro/00041__classCallCheck.js";
 import closure_4 from "metro/00093__possibleConstructorReturn.js";
 import closure_5 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const FeColorMatrix = arg1;
+const FeBlend = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,12 +29,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 noopDefault;
-class FeColorMatrix {
+class FeBlend {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeColorMatrix);
+    tmp = closure_3(this, FeBlend);
     tmp2 = closure_5;
-    obj = closure_5(FeColorMatrix);
+    obj = closure_5(FeBlend);
     tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -49,7 +49,7 @@ class FeColorMatrix {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(FeColorMatrix, _isNativeReflectConstructDefault);
+_inheritsDefault(FeBlend, _isNativeReflectConstructDefault);
 let obj = {
   key: "render",
   value: function render() {
@@ -60,11 +60,11 @@ let obj = {
       },
     };
     const tmp = __INTERNAL_VIEW_CONFIGDefault;
-    const merged = Object.assign(self(8288).extractFilter(this.props));
-    const obj2 = self(8288);
-    const merged1 = Object.assign(self(8288).extractIn(this.props));
-    const obj3 = self(8288);
-    const merged2 = Object.assign(self(8288).extractFeColorMatrix(this.props));
+    const merged = Object.assign(self(8292).extractFilter(this.props));
+    const obj2 = self(8292);
+    const merged1 = Object.assign(self(8292).extractIn(this.props));
+    const obj3 = self(8292);
+    const merged2 = Object.assign(self(8292).extractFeBlend(this.props));
     return (
       <tmp
         ref={function ref(arg0) {
@@ -75,12 +75,11 @@ let obj = {
   },
 };
 const items = [obj];
-const importDefaultResultResult = importDefaultResult(FeColorMatrix, items);
-importDefaultResultResult.displayName = "FeColorMatrix";
+const importDefaultResultResult = importDefaultResult(FeBlend, items);
+importDefaultResultResult.displayName = "FeBlend";
 obj = {};
 let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.type = "matrix";
-obj.values = "";
+obj.mode = "normal";
 importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

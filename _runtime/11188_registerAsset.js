@@ -3,11 +3,11 @@ import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "bc68703a8162a8cd77c8d9dee0d592a8",
-  name: "ic_input_clear_24px",
+  httpServerLocation: "/assets/images/channel_following",
+  width: 400,
+  height: 96,
+  scales: [1, 2, 3],
+  hash: "6d4af89335f89fb4d2742f6a0658e9cc",
+  name: "channel-following-backdrop-dark",
   type: "png",
 });

@@ -1,12 +1,15 @@
 // _runtime/08297__isNativeReflectConstruct.js
+import noopDefault from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
-import _isNativeReflectConstructDefault from "08289__isNativeReflectConstruct.js";
-import closure_2 from "metro/00041__classCallCheck.js";
-import closure_3 from "metro/00093__possibleConstructorReturn.js";
-import closure_4 from "00095__getPrototypeOf.js";
+import _isNativeReflectConstructDefault from "08293__isNativeReflectConstruct.js";
+import __INTERNAL_VIEW_CONFIGDefault from "metro/08298___INTERNAL_VIEW_CONFIG.js";
+import closure_3 from "metro/00041__classCallCheck.js";
+import closure_4 from "metro/00093__possibleConstructorReturn.js";
+import closure_5 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
+import { jsx } from "react/00021_jsxProd.js";
 
-const FeDisplacementMap = arg1;
+const FeComposite = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,13 +28,14 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class FeDisplacementMap {
+noopDefault;
+class FeComposite {
   constructor() {
     self = this;
-    tmp = closure_2(this, FeDisplacementMap);
-    tmp2 = closure_4;
-    obj = closure_4(FeDisplacementMap);
-    tmp3 = closure_3;
+    tmp = closure_3(this, FeComposite);
+    tmp2 = closure_5;
+    obj = closure_5(FeComposite);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -45,19 +49,38 @@ class FeDisplacementMap {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(FeDisplacementMap, _isNativeReflectConstructDefault);
+_inheritsDefault(FeComposite, _isNativeReflectConstructDefault);
 let obj = {
   key: "render",
   value: function render() {
-    const result = FeDisplacementMap(8266).warnUnimplementedFilter();
-    return null;
+    const self = this;
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    };
+    const tmp = __INTERNAL_VIEW_CONFIGDefault;
+    const merged = Object.assign(self(8292).extractFilter(this.props));
+    const obj2 = self(8292);
+    const merged1 = Object.assign(self(8292).extractFeComposite(this.props));
+    return (
+      <tmp
+        ref={function ref(arg0) {
+          return self.refMethod(arg0);
+        }}
+      />
+    );
   },
 };
 const items = [obj];
-const importDefaultResultResult = importDefaultResult(FeDisplacementMap, items);
-importDefaultResultResult.displayName = "FeDisplacementMap";
+const importDefaultResultResult = importDefaultResult(FeComposite, items);
+importDefaultResultResult.displayName = "FeComposite";
 obj = {};
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.k1 = 0;
+obj.k2 = 0;
+obj.k3 = 0;
+obj.k4 = 0;
 importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

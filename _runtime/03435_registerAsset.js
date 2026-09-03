@@ -5,7 +5,7 @@ export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/spatial_audio",
   scales: [1],
-  hash: "3d1a75c972ac0602a167f63fd159ff4e",
+  hash: "6bc7a3c8d247122e749a7d0311c681e0",
   name: "SpatialAudio.compiled.messages",
   type: "jsona",
 });

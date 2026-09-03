@@ -1,6 +1,6 @@
 // _runtime/10571__isNativeReflectConstruct.js
-import _isNativeReflectConstruct2 from "10464__isNativeReflectConstruct.js";
-import ZHHansMergeDateRangeRefiner from "metro/00041__classCallCheck.js";
+import _isNativeReflectConstruct2 from "10471__isNativeReflectConstruct.js";
+import ZHHantMergeDateTimeRefiner from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 import closure_1 from "metro/00093__possibleConstructorReturn.js";
 import closure_2 from "00095__getPrototypeOf.js";
@@ -40,12 +40,12 @@ if (!fn) {
     return tmp;
   };
 }
-class ZHHansMergeDateRangeRefiner {
+class ZHHantMergeDateTimeRefiner {
   constructor() {
     self = this;
-    tmp = ZHHansMergeDateRangeRefiner(this, ZHHansMergeDateRangeRefiner);
+    tmp = ZHHantMergeDateTimeRefiner(this, ZHHantMergeDateTimeRefiner);
     tmp2 = closure_2;
-    obj = closure_2(ZHHansMergeDateRangeRefiner);
+    obj = closure_2(ZHHantMergeDateTimeRefiner);
     tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -60,14 +60,14 @@ class ZHHansMergeDateRangeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ZHHansMergeDateRangeRefiner, fn(_isNativeReflectConstruct2).default);
+_inherits(ZHHantMergeDateTimeRefiner, fn(_isNativeReflectConstruct2).default);
 const items = [
   {
     key: "patternBetween",
     value: function patternBetween() {
-      return /^\s*(至|到|-|~|～|－|ー)\s*$/i;
+      return /^\s*$/i;
     },
   },
 ];
 
-export default _createClass(ZHHansMergeDateRangeRefiner, items);
+export default _createClass(ZHHantMergeDateTimeRefiner, items);

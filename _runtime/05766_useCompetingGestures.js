@@ -1,8 +1,11 @@
 // _runtime/05766_useCompetingGestures.js
-import useCompetingGestures from "05767_useCompetingGestures.js";
-import useExclusiveGestures from "05769_useExclusiveGestures.js";
-import useSimultaneousGestures from "05770_useSimultaneousGestures.js";
-
-export const useCompetingGestures = useCompetingGestures.useCompetingGestures;
-export const useExclusiveGestures = useExclusiveGestures.useExclusiveGestures;
-export const useSimultaneousGestures = useSimultaneousGestures.useSimultaneousGestures;
+for (const key10013 in require("useCompetingGestures")) {
+  let tmp2 = key10013;
+  arg5[key10013] = require("useCompetingGestures")[key10013];
+  continue;
+}
+for (const key10017 in require("useTapGesture")) {
+  let tmp3 = key10017;
+  arg5[key10017] = require("useTapGesture")[key10017];
+  continue;
+}

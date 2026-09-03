@@ -3,11 +3,11 @@ import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
+  httpServerLocation: "/assets/modules/icymi/native/images",
+  width: 24.5,
   height: 24,
   scales: [2, 3],
-  hash: "2bf7738cbb1d2827663b492fedbd65fb",
-  name: "MedalIcon",
+  hash: "684bf0782561b9ed2466dcb8144cf582",
+  name: "emoji-neutral",
   type: "png",
 });

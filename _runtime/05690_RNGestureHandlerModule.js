@@ -1,6 +1,4 @@
 // _runtime/05690_RNGestureHandlerModule.js
-import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import RNGestureHandlerModuleDefault from "05691_RNGestureHandlerModule.js";
 
-const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
-
-export default TurboModuleRegistry.getEnforcing("RNGestureHandlerModule");
+export default RNGestureHandlerModuleDefault;

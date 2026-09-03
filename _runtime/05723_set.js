@@ -1,7 +1,10 @@
 // _runtime/05723_set.js
-arg5.NativeHandlerNativeProperties = new Set([
-  "shouldActivateOnStart",
-  "disallowInterruption",
-  "yieldsToContinuousGestures",
-  "delaysChildPressedState",
+arg5.TapNativeProperties = new Set([
+  "minPointers",
+  "numberOfTaps",
+  "maxDeltaX",
+  "maxDeltaY",
+  "maxDurationMs",
+  "maxDelayMs",
+  "maxDist",
 ]);

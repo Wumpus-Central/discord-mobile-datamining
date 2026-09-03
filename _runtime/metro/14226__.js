@@ -1,12 +1,19 @@
 // _runtime/metro/14226__.js
-import _mod14224 from "14224__.js";
+import _mod14195 from "14195__.js";
+import element from "../14227_element.js";
+import getOwnPropertyDescriptor from "../14194_getOwnPropertyDescriptor.js";
 
-export default (arg0, arg1) => {
-  const tmp = _mod14224(arg0);
-  if (tmp < 0) {
-    let tmp3 = max(tmp + arg1, 0);
-  } else {
-    tmp3 = min(tmp, arg1);
-  }
-  return tmp3;
-};
+let tmp2 = !getOwnPropertyDescriptor;
+if (!getOwnPropertyDescriptor) {
+  tmp2 = !_mod14195(
+    () =>
+      7 !==
+      Object.defineProperty(element("div"), "a", {
+        get() {
+          return 7;
+        },
+      }).a,
+  );
+}
+
+export default tmp2;

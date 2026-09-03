@@ -2,9 +2,9 @@
 import setRuntimeConfigProvider from "../00065_setRuntimeConfigProvider.js";
 
 const obj = {
-  uiViewClassName: "RNSVGFeMerge",
-  validAttributes: { x: true, y: true, width: true, height: true, result: true, nodes: true },
+  uiViewClassName: "RNSVGFeOffset",
+  validAttributes: { x: true, y: true, width: true, height: true, result: true, in1: true, dx: true, dy: true },
 };
 
-export default setRuntimeConfigProvider.get("RNSVGFeMerge", () => obj);
+export default setRuntimeConfigProvider.get("RNSVGFeOffset", () => obj);
 export const __INTERNAL_VIEW_CONFIG = obj;

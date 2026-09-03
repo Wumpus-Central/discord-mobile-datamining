@@ -3,11 +3,11 @@ import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "24a38b74eed4b16cf7662ebd8e1be84d",
-  name: "ic_message_retry",
+  hash: "d596d6fe17dcf89145bacf83df3826b6",
+  name: "PuzzlePieceIcon",
   type: "png",
 });

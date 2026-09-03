@@ -1,5 +1,5 @@
 // _runtime/12957_mergeDefs.js
-import mergeDefs from "12903_mergeDefs.js";
+import mergeDefs from "12915_mergeDefs.js";
 
 const self = this;
 let self2 = this;
@@ -59,16 +59,44 @@ if (self2) {
         HermesBuiltin.throwTypeError();
       }
       closure_0 = {
-        string: { unit: "\u5B57\u5143", verb: "\u64C1\u6709" },
-        file: { unit: "\u4F4D\u5143\u7D44", verb: "\u64C1\u6709" },
-        array: { unit: "\u9805\u76EE", verb: "\u64C1\u6709" },
-        set: { unit: "\u9805\u76EE", verb: "\u64C1\u6709" },
+        string: {
+          unit: {
+            one: "\u0441\u0438\u043C\u0432\u043E\u043B",
+            few: "\u0441\u0438\u043C\u0432\u043E\u043B\u0430",
+            many: "\u0441\u0438\u043C\u0432\u043E\u043B\u043E\u0432",
+          },
+          verb: "\u0438\u043C\u0435\u0442\u044C",
+        },
+        file: {
+          unit: {
+            one: "\u0431\u0430\u0439\u0442",
+            few: "\u0431\u0430\u0439\u0442\u0430",
+            many: "\u0431\u0430\u0439\u0442",
+          },
+          verb: "\u0438\u043C\u0435\u0442\u044C",
+        },
+        array: {
+          unit: {
+            one: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442",
+            few: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442\u0430",
+            many: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442\u043E\u0432",
+          },
+          verb: "\u0438\u043C\u0435\u0442\u044C",
+        },
+        set: {
+          unit: {
+            one: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442",
+            few: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442\u0430",
+            many: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442\u043E\u0432",
+          },
+          verb: "\u0438\u043C\u0435\u0442\u044C",
+        },
       };
       closure_1 = {
-        regex: "\u8F38\u5165",
-        email: "\u90F5\u4EF6\u5730\u5740",
+        regex: "\u0432\u0432\u043E\u0434",
+        email: "email \u0430\u0434\u0440\u0435\u0441",
         url: "URL",
-        emoji: "emoji",
+        emoji: "\u044D\u043C\u043E\u0434\u0437\u0438",
         uuid: "UUID",
         uuidv4: "UUIDv4",
         uuidv6: "UUIDv6",
@@ -79,23 +107,31 @@ if (self2) {
         ulid: "ULID",
         xid: "XID",
         ksuid: "KSUID",
-        datetime: "ISO \u65E5\u671F\u6642\u9593",
-        date: "ISO \u65E5\u671F",
-        time: "ISO \u6642\u9593",
-        duration: "ISO \u671F\u9593",
-        ipv4: "IPv4 \u4F4D\u5740",
-        ipv6: "IPv6 \u4F4D\u5740",
-        cidrv4: "IPv4 \u7BC4\u570D",
-        cidrv6: "IPv6 \u7BC4\u570D",
-        base64: "base64 \u7DE8\u78BC\u5B57\u4E32",
-        base64url: "base64url \u7DE8\u78BC\u5B57\u4E32",
-        json_string: "JSON \u5B57\u4E32",
-        e164: "E.164 \u6578\u503C",
+        datetime: "ISO \u0434\u0430\u0442\u0430 \u0438 \u0432\u0440\u0435\u043C\u044F",
+        date: "ISO \u0434\u0430\u0442\u0430",
+        time: "ISO \u0432\u0440\u0435\u043C\u044F",
+        duration: "ISO \u0434\u043B\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u044C",
+        ipv4: "IPv4 \u0430\u0434\u0440\u0435\u0441",
+        ipv6: "IPv6 \u0430\u0434\u0440\u0435\u0441",
+        cidrv4: "IPv4 \u0434\u0438\u0430\u043F\u0430\u0437\u043E\u043D",
+        cidrv6: "IPv6 \u0434\u0438\u0430\u043F\u0430\u0437\u043E\u043D",
+        base64: "\u0441\u0442\u0440\u043E\u043A\u0430 \u0432 \u0444\u043E\u0440\u043C\u0430\u0442\u0435 base64",
+        base64url: "\u0441\u0442\u0440\u043E\u043A\u0430 \u0432 \u0444\u043E\u0440\u043C\u0430\u0442\u0435 base64url",
+        json_string: "JSON \u0441\u0442\u0440\u043E\u043A\u0430",
+        e164: "\u043D\u043E\u043C\u0435\u0440 E.164",
         jwt: "JWT",
-        template_literal: "\u8F38\u5165",
+        template_literal: "\u0432\u0432\u043E\u0434",
       };
-      closure_2 = { nan: "NaN" };
-      return { localeError: (arg0) => "" + tmp.origin + " \u4E2D\u6709\u7121\u6548\u7684\u503C" };
+      closure_2 = {
+        nan: "NaN",
+        number: "\u0447\u0438\u0441\u043B\u043E",
+        array: "\u043C\u0430\u0441\u0441\u0438\u0432",
+      };
+      return {
+        localeError: (arg0) =>
+          "\u041D\u0435\u0432\u0435\u0440\u043D\u043E\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 \u0432 " +
+          tmp.origin,
+      };
     };
     let closure_2 = fn(mergeDefs);
     function error() {}

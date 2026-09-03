@@ -4,7 +4,7 @@ import weakSet from "../00106_weakSet.js";
 import setRuntimeConfigProvider from "../00065_setRuntimeConfigProvider.js";
 
 let obj = {
-  uiViewClassName: "RNSVGLine",
+  uiViewClassName: "RNSVGForeignObject",
   directEventTypes: { topSvgLayout: { registrationName: "onSvgLayout" } },
   validAttributes: null,
 };
@@ -36,13 +36,16 @@ obj = {
   vectorEffect: true,
   propList: true,
   filter: true,
-  x1: true,
-  y1: true,
-  x2: true,
-  y2: true,
+  fontSize: true,
+  fontWeight: true,
+  font: true,
+  x: true,
+  y: true,
+  height: true,
+  width: true,
 };
 const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSvgLayout: true }));
 obj[2] = obj;
 
-export default setRuntimeConfigProvider.get("RNSVGLine", () => obj);
+export default setRuntimeConfigProvider.get("RNSVGForeignObject", () => obj);
 export const __INTERNAL_VIEW_CONFIG = obj;

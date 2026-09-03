@@ -3,11 +3,11 @@ import registerAsset from "01240_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/upsell",
-  width: 247.5,
-  height: 194,
+  httpServerLocation: "/assets/images/native/custom_app_icons/ControllerIcon",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "ea30e86096b674f657e18d24dc0df08d",
-  name: "img_profile_upsell",
+  hash: "6f32787e0c52eb22e7f564f5312dfb32",
+  name: "ControllerIcon",
   type: "png",
 });
